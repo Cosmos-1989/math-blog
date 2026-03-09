@@ -37,6 +37,31 @@ jobs:
           eval $(opam env)
           forester build forest.toml
 
+      - name: Fix paths for GitHub Pages
+        run: |
+          # Fix root index.html redirect
+          echo '<!DOCTYPE html>
+          <html>
+            <head>
+              <meta http-equiv="refresh" content="0;url=./index/" />
+            </head>
+          </html>' > output/index.html
+
+          # Fix all subdirectory index.html redirects to use relative paths
+          for dir in output/*/; do
+            if [ -f "${dir}index.html" ]; then
+              # Extract the directory name
+              dirname=$(basename "$dir")
+              # Create relative redirect
+              echo "<!DOCTYPE html>
+          <html>
+            <head>
+              <meta http-equiv=\"refresh\" content=\"0;url=./${dirname}/index.xml\" />
+            </head>
+          </html>" > "${dir}index.html"
+            fi
+          done
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
