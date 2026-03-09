@@ -1,0 +1,21 @@
+\title{群的基本定义}
+\date{2025-03-09}
+\taxon{Definition}
+\author{author}
+
+\p{群是数学中最基本的代数结构之一，广泛应用于几何、数论和物理学中。}
+
+\def\G{#{
+\mathcal{G}}}
+\def\op[x][y]{#{\x \cdot \y}}
+
+\p{一个\strong{群}（Group）是一个集合 \G 配备一个二元运算 #{
+\cdot : \mathcal{G} \times \mathcal{G} \to \mathcal{G}}，满足以下三条公理：}
+
+\ol{
+  \li{\strong{结合律}：对于所有 #{a, b, c \in \G}，有 \op{\op{a}{b}}{c} = \op{a}{\op{b}{c}}。}
+  \li{\strong{单位元}：存在元素 #{e \in \G}，使得对所有 #{a \in \G}，有 \op{e}{a} = \op{a}{e} = a。}
+  \li{\strong{逆元}：对每个 #{a \in \G}，存在 #{a^{-1} \in \G}，使得 \op{a}{a^{-1}} = \op{a^{-1}}{a} = e。}
+}
+
+\p{如果群还满足交换律（即对所有 #{a, b \in \G}，有 \op{a}{b} = \op{b}{a}），则称之为\strong{阿贝尔群}或\strong{交换群}。}

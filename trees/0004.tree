@@ -1,0 +1,36 @@
+\title{范畴论入门}
+\date{2025-03-09}
+\taxon{Definition}
+\author{author}
+
+\p{范畴论是现代数学的通用语言，它提供了一种统一的方式来研究不同数学结构之间的关系。}
+
+\def\CCat{#{
+\mathcal{C}}}
+
+\p{一个\strong{范畴}（Category）\CCat 由以下数据组成：}
+
+\ol{
+  \li{一个类 #{\mathrm{ob}(\mathcal{C})}，其元素称为 \strong{对象}（objects）。}
+  \li{对每一对对象 #{X, Y \in \mathrm{ob}(\mathcal{C})}，一个集合 #{\mathrm{Hom}_{\mathcal{C}}(X, Y)}，其元素称为从 #{X} 到 #{Y} 的\strong{态射}（morphisms）。}
+  \li{对每三个对象 #{X, Y, Z}，一个复合映射：
+    ##{\circ : \mathrm{Hom}(Y, Z) \times \mathrm{Hom}(X, Y) \to \mathrm{Hom}(X, Z)}
+    记作 #{g \circ f} 或简写为 #{gf}。}
+  \li{对每个对象 #{X}，一个单位态射 #{\mathrm{id}_X \in \mathrm{Hom}(X, X)}。}
+}
+
+\p{这些数据需满足以下公理：}
+
+\ul{
+  \li{\strong{结合律}：#{(h \circ g) \circ f = h \circ (g \circ f)}（当复合有定义时）。}
+  \li{\strong{单位律}：#{\mathrm{id}_Y \circ f = f = f \circ \mathrm{id}_X} 对所有 #{f \in \mathrm{Hom}(X, Y)} 成立。}
+}
+
+\p{常见的范畴例子包括：}
+
+\ul{
+  \li{#{\mathbf{Set}}：集合与函数}
+  \li{#{\mathbf{Grp}}：群与群同态}
+  \li{#{\mathbf{Top}}：拓扑空间与连续映射}
+  \li{#{\mathbf{Vect}_k}：域 #{k} 上的向量空间与线性映射}
+}

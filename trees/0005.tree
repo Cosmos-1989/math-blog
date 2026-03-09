@@ -1,0 +1,31 @@
+\title{拓扑空间的基本概念}
+\date{2025-03-09}
+\taxon{Definition}
+\author{author}
+
+\p{拓扑学是研究空间在连续变形下保持不变的性质的数学分支。拓扑空间是这一理论的基本概念。}
+
+\def\X{#{
+\mathcal{X}}}
+\def\TT{#{
+\mathcal{T}}}
+
+\p{设 \X 是一个集合。\X 上的一个\strong{拓扑}是一个子集族 \TT \subseteq \mathcal{P}(\X)，满足：}
+
+\ol{
+  \li{#{\emptyset \in \mathcal{T}} 且 \X \in \TT。}
+  \li{对任意 #{U, V \in \mathcal{T}}，有 #{U \cap V \in \mathcal{T}}（有限交封闭）。}
+  \li{对任意一族 #{\{U_i\}_{i \in I} \subseteq \mathcal{T}}，有 #{\bigcup_{i \in I} U_i \in \mathcal{T}}（任意并封闭）。}
+}
+
+\p{对 #{U \in \mathcal{T}}，称 #{U} 为一个\strong{开集}。对偶地，若 #{\X \setminus F \in \mathcal{T}}，则称 #{F} 为\strong{闭集}。}
+
+\p{\strong{例子}：}
+
+\ul{
+  \li{\strong{离散拓扑}：\TT = \mathcal{P}(\X)，即所有子集都是开集。这是 \X 上最细的拓扑。}
+  \li{\strong{平凡拓扑}：\TT = #{\{\emptyset, \mathcal{X}\}}。这是 \X 上最粗的拓扑。}
+  \li{\strong{标准拓扑}（在 #{\mathbb{R}^n} 上）：开集是开球的任意并。这是欧几里得空间的通常拓扑。}
+}
+
+\p{拓扑空间之间的映射 #{f : \X \to \mathcal{Y}} 称为\strong{连续的}，如果对 \mathcal{Y} 中每个开集 #{V}，其原像 #{f^{-1}(V)} 是 \X 中的开集。}
