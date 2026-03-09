@@ -39,26 +39,44 @@ jobs:
 
       - name: Fix paths for GitHub Pages
         run: |
-          # Fix root index.html redirect
-          echo '<!DOCTYPE html>
+          # Create a proper root index.html that redirects to index/index.xml
+          cat > output/index.html << 'EOF'
+          <!DOCTYPE html>
           <html>
             <head>
-              <meta http-equiv="refresh" content="0;url=./index/" />
+              <meta charset="UTF-8">
+              <meta http-equiv="refresh" content="0;url=./index/index.xml">
+              <title>Math Blog</title>
             </head>
-          </html>' > output/index.html
+            <body>
+              <p>Redirecting to <a href="./index/index.xml">Math Blog</a>...</p>
+            </body>
+          </html>
+          EOF
 
-          # Fix all subdirectory index.html redirects to use relative paths
-          for dir in output/*/; do
-            if [ -f "${dir}index.html" ]; then
-              # Extract the directory name
-              dirname=$(basename "$dir")
-              # Create relative redirect
-              echo "<!DOCTYPE html>
+          # Fix the index/index.html to use relative path
+          cat > output/index/index.html << 'EOF'
+          <!DOCTYPE html>
           <html>
             <head>
-              <meta http-equiv=\"refresh\" content=\"0;url=./${dirname}/index.xml\" />
+              <meta charset="UTF-8">
+              <meta http-equiv="refresh" content="0;url=./index.xml">
             </head>
-          </html>" > "${dir}index.html"
+          </html>
+          EOF
+
+          # Fix all tree directories to have proper index.html
+          for dir in output/000*/ output/author/; do
+            if [ -d "$dir" ]; then
+              cat > "${dir}index.html" << EOF
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8">
+              <meta http-equiv="refresh" content="0;url=./index.xml">
+            </head>
+          </html>
+          EOF
             fi
           done
 
