@@ -37,10 +37,15 @@ jobs:
           eval $(opam env)
           forester build forest.toml
 
-      - name: Fix paths for GitHub Pages
+      - name: Prepare for GitHub Pages
         run: |
-          # Create a proper root index.html that redirects to index/index.xml
-          cat > output/index.html << 'EOF'
+          # Forester outputs to output/math-blog/ due to URL path
+          # Move content to deploy directory
+          mkdir -p deploy
+          cp -r output/math-blog/* deploy/
+
+          # Create root index.html with redirect
+          cat > deploy/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
             <head>
@@ -54,39 +59,13 @@ jobs:
           </html>
           EOF
 
-          # Fix the index/index.html to use relative path
-          cat > output/index/index.html << 'EOF'
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="UTF-8">
-              <meta http-equiv="refresh" content="0;url=./index.xml">
-            </head>
-          </html>
-          EOF
-
-          # Fix all tree directories to have proper index.html
-          for dir in output/000*/ output/author/; do
-            if [ -d "$dir" ]; then
-              cat > "${dir}index.html" << EOF
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="UTF-8">
-              <meta http-equiv="refresh" content="0;url=./index.xml">
-            </head>
-          </html>
-          EOF
-            fi
-          done
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./output
+          path: ./deploy
 
   deploy:
     environment:
