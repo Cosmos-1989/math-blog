@@ -1,0 +1,64 @@
+\title{量子逻辑的代数语义学：格与正交模格}
+\date{2025-03-09}
+\taxon{Definition}
+\author{author}
+
+\p{量子逻辑的代数语义学基于格论，特别是正交模格。这为我们提供了比经典布尔代数更一般的逻辑框架。}
+
+\strong{偏序集}
+
+\p{一个\strong{偏序集}（partially ordered set）是一个二元组 #{P = (P, \leq)}，其中 #{P \neq \emptyset}，且 #{\leq} 满足：}
+
+\ol{
+  \li{自反性：#{a \leq a}}
+  \li{传递性：#{a \leq b} 且 #{b \leq c} 蕴含 #{a \leq c}}
+  \li{反对称性：#{a \leq b} 且 #{b \leq a} 蕴含 #{a = b}}
+}
+
+\p{例子：对于任意集合 #{A}，#{(\mathcal{P}(A), \subseteq)} 是偏序集。}
+
+\strong{格}
+
+\p{一个\strong{格}（lattice）是一个偏序集 #{L = (L, \leq)}，其中任意两个元素 #{a, b \in L} 都有：}
+
+\ul{
+  \li{\strong{下确界}（meet）：#{a \wedge b}}
+  \li{\strong{上确界}（join）：#{a \vee b}}
+}
+
+\p{例子：幂集 #{(\mathcal{P}(A), \subseteq)} 是格，其中交为 #{\cap}，并为 #{\cup}。}
+
+\strong{有界格与正交补}
+
+\p{一个\strong{有界格}是一个五元组 #{L = (L, \leq, ()', O, I)}，其中 #{O} 是最小元，#{I} 是最大元。}
+
+\p{一个\strong{正交补}是一个函数 #{' : L \to L} 满足：}
+
+\ol{
+  \li{#{a \wedge a' = O} 且 #{a \vee a' = I}}
+  \li{#{a \leq b} 蕴含 #{b' \leq a'}}
+  \li{#{(a')' = a}}
+}
+
+\p{带有正交补的有界格称为\strong{正交格}（ortho-lattice）。}
+
+\strong{德摩根定律}
+
+\p{在正交格中，德摩根定律成立：}
+
+##{(a \wedge b)' = a' \vee b'}
+##{(a \vee b)' = a' \wedge b'}
+
+\strong{分配性与布尔代数}
+
+\p{一个格是\strong{分配格}，如果对任意 #{a, b, c}：}
+
+##{a \wedge (b \vee c) = (a \wedge b) \vee (a \wedge c)}
+
+\p{一个\strong{布尔代数}是分配的正交格。经典逻辑的语义基于布尔代数。}
+
+\strong{关键区别}
+
+\p{量子逻辑与经典逻辑的根本区别在于：量子逻辑对应的格\strong{不是}分配格。}
+
+\p{对于量子Kripke框架 #{F}，其双正交闭集构成的格 #{(\mathcal{L}_F, \subseteq, \sim(\cdot), \emptyset, \Sigma)} 不是布尔代数。}

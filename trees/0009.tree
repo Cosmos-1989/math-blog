@@ -1,0 +1,49 @@
+\title{正交模格：量子逻辑的核心结构}
+\date{2025-03-09}
+\taxon{Definition}
+\author{author}
+
+\p{正交模格是量子逻辑的代数基础。虽然量子逻辑不满足分配律，但它满足一个较弱的条件——正交模律。}
+
+\strong{正交模律}
+
+\p{一个正交格 #{L = (L, \leq, ()', O, I)} 称为\strong{正交模格}（orthomodular lattice），如果满足正交模律：}
+
+##{a \wedge (a' \vee (a \wedge b)) \leq b, \quad \text{对所有 } a, b \in L}
+
+\p{这个定律可以直观地理解为：如果 #{a} 成立，那么在 #{a} 的框架下考虑 #{a' \vee (a \wedge b)} 就等价于考虑 #{b}。}
+
+\strong{等价的刻画}
+
+\p{Mittelstaedt (1978) 证明了在正交格中，以下条件等价：}
+
+\ol{
+  \li{正交模律：#{a \wedge (a' \vee (a \wedge b)) \leq b}}
+  \li{若 #{a \leq b}，则 #{a = b \wedge (a \vee b')}}
+  \li{若 #{a \leq b}，则 #{b = a \vee (a' \wedge b)}}
+  \li{若 #{a \leq b} 且 #{c \leq b'}，则 #{b \wedge (a \vee c) = (b \wedge a) \vee (b \wedge c)}}
+}
+
+\strong{关键例子}
+
+\ol{
+  \li{\strong{布尔代数}：每个布尔代数都是正交模格。这说明正交模格是布尔代数的推广。}
+
+  \li{\strong{希尔伯特空间的投影格}：设 #{\mathcal{H}} 是复希尔伯特空间，#{\mathcal{L}(\mathcal{H})} 是 #{\mathcal{H}} 的闭子空间（或投影算子）的集合，则 #{\mathcal{L}(\mathcal{H})} 构成正交模格。这是量子力学的标准数学框架。}
+
+  \li{\strong{量子Kripke框架的双正交闭集}：对于任意量子Kripke框架 #{F}，其双正交闭集 #{(\mathcal{L}_F, \subseteq, \sim(\cdot), \emptyset, \Sigma)} 构成正交模格。}
+}
+
+\strong{非分配性的证明}
+
+\p{存在一个量子Kripke框架 #{F} 使得 #{(\mathcal{L}_F, \subseteq)} 不是分配格。考虑以下框架：}
+
+\p{设 #{\Sigma = \{1, 2, 3, 4\}}，连通关系如图所示。此时：}
+
+##{\mathcal{L}_F = \{\emptyset, \{1\}, \{2\}, \{3\}, \{4\}, \Sigma\}}
+
+\p{可以验证：#{(\{1\} \cap \{2\}) \sqcup \{3\} = \{3\} \neq \Sigma = (\{1\} \sqcup \{3\}) \cap (\{2\} \sqcup \{3\})}，其中 #{\sqcup} 是正交并。}
+
+\strong{一个著名的开放问题}
+
+\p{能否将每个正交模格嵌入到一个完备的正交模格中？这是量子逻辑领域的一个重要开放问题。}

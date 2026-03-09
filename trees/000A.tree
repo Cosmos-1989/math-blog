@@ -1,0 +1,63 @@
+\title{量子Kripke框架：关系语义学}
+\date{2025-03-09}
+\taxon{Definition}
+\author{author}
+
+\p{Kripke框架是模态逻辑和关系语义学的基本工具。量子Kripke框架是专为量子逻辑设计的一类特殊Kripke框架。}
+
+\strong{Kripke框架}
+
+\p{一个\strong{Kripke框架}是一个二元组 #{F = (\Sigma, \to)}，其中：}
+
+\ul{
+  \li{#{\Sigma \neq \emptyset} 是状态集合}
+  \li{#{\to \subseteq \Sigma \times \Sigma} 是一个二元关系}
+}
+
+\strong{量子Kripke框架}
+
+\p{一个\strong{量子Kripke框架}是满足以下五个条件的Kripke框架：}
+
+\ol{
+  \li{\strong{自反性}：对所有 #{s \in \Sigma}，有 #{s \to s}}
+
+  \li{\strong{对称性}：#{s \not\to t} 蕴含 #{t \not\to s}（等价于：若 #{s \to t} 则 #{t \to s}）}
+
+  \li{\strong{分离性}：若 #{s \neq t}，则存在 #{w \in \Sigma} 使得 #{w \not\to s} 且 #{w \to t}}
+
+  \li{\strong{叠加性}：对任意 #{s, t \in \Sigma}，存在 #{w \in \Sigma} 使得 #{w \to s} 且 #{w \to t}}
+
+  \li{\strong{表示性}：若 #{P = \sim\sim P}（双正交闭）且 #{s \notin \sim P}，则 #{s} 在 #{P} 中有代表元}
+}
+
+\strong{正交补的定义}
+
+\p{对于 #{P \subseteq \Sigma}，其正交补定义为：}
+
+##{\sim P = \{s \in \Sigma \mid s \to t \Rightarrow t \notin P, \text{ 对所有 } t \in \Sigma\}}
+
+\p{等价地，在自反和对称条件下：#{\sim P = \{s \in \Sigma \mid s \not\to t \text{ 对所有 } t \in P\}}。}
+
+\strong{非垂直关系的性质}
+
+\p{在玩具模型（三维空间直线）中，非垂直关系 #{\not\perp} 满足：}
+
+\ol{
+  \li{自反性：#{s \not\perp s}（直线不与自身垂直）}
+  \li{对称性：#{s \not\perp t \Rightarrow t \not\perp s}}
+  \li{分离性：不同直线可以被区分}
+  \li{叠加性：任意两条直线有共同的不垂直的直线}
+  \li{存在代表元：在双正交闭子集中可以找到代表元}
+}
+
+\strong{为什么叫"量子"？}
+
+\p{从数学角度看，这个结构可以推广：}
+
+\ul{
+  \li{#{\mathbb{E}^3} 对应 #{\mathbb{R}^3}，理论是实数上的线性代数}
+  \li{推广到 #{\mathbb{C}^n}，理论是复数上的线性代数——这是量子计算和量子信息的数学}
+  \li{进一步推广到无穷维希尔伯特空间，这是量子物理学的数学}
+}
+
+\p{从每个复希尔伯特空间都可以提取一个量子Kripke框架。}
