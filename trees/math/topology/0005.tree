@@ -10,7 +10,7 @@
 \def\TT{#{
 \mathcal{T}}}
 
-\p{设 \X 是一个集合。\X 上的一个\strong{拓扑}是一个子集族 \TT \subseteq \mathcal{P}(\X)，满足：}
+\p{设 \X 是一个集合。\X 上的一个\strong{拓扑}是一个子集族 #{\mathcal{T} \subseteq \mathcal{P}(\mathcal{X})}，满足：}
 
 \ol{
   \li{#{\emptyset \in \mathcal{T}} 且 \X \in \TT。}
@@ -18,14 +18,21 @@
   \li{对任意一族 #{\{U_i\}_{i \in I} \subseteq \mathcal{T}}，有 #{\bigcup_{i \in I} U_i \in \mathcal{T}}（任意并封闭）。}
 }
 
-\p{对 #{U \in \mathcal{T}}，称 #{U} 为一个\strong{开集}。对偶地，若 #{\X \setminus F \in \mathcal{T}}，则称 #{F} 为\strong{闭集}。}
+\p{这里默认 #{\bigcup \emptyset = \emptyset}、#{\bigcap \emptyset = \mathcal{X}}，所以任一拓扑都会自动包含空集与全集。若把一族集合写成 #{\mathcal{S}}，也常记
+#{\bigcup \mathcal{S} = \bigcup_{U \in \mathcal{S}} U}，以及对有限族 #{\mathcal{F}} 记 #{\bigcap \mathcal{F} = \bigcap_{A \in \mathcal{F}} A}。}
+
+\p{对 #{U \in \mathcal{T}}，称 #{U} 为一个\strong{开集}。对偶地，若 #{\X \setminus F \in \mathcal{T}}，则称 #{F} 为\strong{闭集}。对任意子集 #{B \subseteq \mathcal{X}}，其\strong{内部}记作 #{\operatorname{int}(B)}，定义为所有包含于 #{B} 的开集之并；其\strong{闭包}记作 #{\overline{B}}，定义为所有包含 #{B} 的闭集之交。}
+
+\p{若两个拓扑 #{\sigma \subseteq \tau} 定义在同一集合上，则称 #{\tau} 比 #{\sigma} \strong{更细}（finer），也称 #{\sigma} 比 #{\tau} \strong{更粗}（coarser）。离散拓扑是最细拓扑，平凡拓扑是最粗拓扑。}
 
 \p{\strong{例子}：}
 
 \ul{
-  \li{\strong{离散拓扑}：\TT = \mathcal{P}(\X)，即所有子集都是开集。这是 \X 上最细的拓扑。}
+  \li{\strong{离散拓扑}：#{\mathcal{T} = \mathcal{P}(\mathcal{X})}，即所有子集都是开集。这是 \X 上最细的拓扑。}
   \li{\strong{平凡拓扑}：\TT = #{\{\emptyset, \mathcal{X}\}}。这是 \X 上最粗的拓扑。}
   \li{\strong{标准拓扑}（在 #{\mathbb{R}^n} 上）：开集是开球的任意并。这是欧几里得空间的通常拓扑。}
 }
 
-\p{拓扑空间之间的映射 #{f : \X \to \mathcal{Y}} 称为\strong{连续的}，如果对 \mathcal{Y} 中每个开集 #{V}，其原像 #{f^{-1}(V)} 是 \X 中的开集。}
+\p{拓扑空间之间的映射 #{f : \mathcal{X} \to \mathcal{Y}} 称为\strong{连续的}，如果对 #{\mathcal{Y}} 中每个开集 #{V}，其原像 #{f^{-1}(V)} 是 \X 中的开集。若 #{f} 还是双射，并且逆映射 #{f^{-1} : \mathcal{Y} \to \mathcal{X}} 也连续，则称 #{f} 为\strong{同胚}。同胚的两个空间在拓扑上可以视为“相同”。}
+
+\p{进一步阅读：关于邻域、内部与闭包，见 [邻域、内部与闭包](0033)；关于基与子基，见 [基、子基与生成拓扑](0034)；关于度量诱导的拓扑，见 [度量空间与可度量化](0035)。}

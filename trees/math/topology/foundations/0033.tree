@@ -1,0 +1,46 @@
+\title{邻域、内部与闭包}
+\date{2026-04-09}
+\taxon{Definition}
+\author{author}
+
+\p{在拓扑空间里，“开集”给出的是全局结构；而“邻域”“内部”“闭包”则提供了描述局部行为和逼近关系的语言。}
+
+\p{设 #{\mathcal{X}} 是拓扑空间，#{x \in \mathcal{X}}。若子集 #{U \subseteq \mathcal{X}} 满足 #{x \in \operatorname{int}(U)}，则称 #{U} 是 #{x} 的一个\strong{邻域}。所有 #{x} 的邻域组成的集合常记作 #{\mathcal{U}_x}。}
+
+\p{若 #{\mathcal{B}_x \subseteq \mathcal{U}_x} 满足：对每个 #{x} 的邻域 #{V}，总存在 #{B \in \mathcal{B}_x} 使得 #{B \subseteq V}，则称 #{\mathcal{B}_x} 为 #{x} 的\strong{邻域基}。注意邻域本身不必是开集；只要它包含一个以 #{x} 为中心的开集即可。}
+
+\p{对任意子集 #{A \subseteq \mathcal{X}}，其\strong{内部}定义为
+#{\operatorname{int}(A) = \bigcup\{U \subseteq \mathcal{X} : U \text{ 开且 } U \subseteq A\}}。
+它是包含于 #{A} 的最大开集。}
+
+\p{同样，#{A} 的\strong{闭包}定义为
+#{\overline{A} = \bigcap\{F \subseteq \mathcal{X} : A \subseteq F,\ F \text{ 闭}\}}。
+它是包含 #{A} 的最小闭集。}
+
+\strong{等价理解}
+
+\ul{
+  \li{#{x \in \operatorname{int}(A)} 当且仅当存在开集 #{U} 使得 #{x \in U \subseteq A}}
+  \li{#{x \in \overline{A}} 当且仅当 #{x} 的每个邻域都与 #{A} 相交}
+  \li{因此闭包描述的是“可以被 #{A} 中点任意逼近到”的所有点}
+}
+
+\strong{为什么重要}
+
+\ul{
+  \li{邻域语言是 [Hausdorff 空间](002B)、[第一可数空间](0023) 等概念的共同基础}
+  \li{内部衡量一个集合中“真正开着”的部分，闭包衡量其极限点补全后的范围}
+  \li{连续性、稠密性和收敛性都可以用邻域与闭包来改写}
+}
+
+\strong{例子}
+
+\ul{
+  \li{在通常拓扑下，#{(0,1)} 的内部是它自身，而其在 #{\mathbb{R}} 中的闭包是 #{[0,1]}}
+  \li{有理数集 #{\mathbb{Q} \subseteq \mathbb{R}} 的内部为空，但其闭包是整个 #{\mathbb{R}}}
+  \li{在离散空间中，每个集合都是开闭集，因此内部与闭包都等于它自身}
+}
+
+\p{若想进一步系统地组织邻域，通常需要基与子基；见 [基、子基与生成拓扑](0034)。}
+
+\p{[返回拓扑入口](001E)}

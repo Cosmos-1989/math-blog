@@ -1,0 +1,38 @@
+\title{基、子基与生成拓扑}
+\date{2026-04-09}
+\taxon{Definition}
+\author{author}
+
+\p{拓扑往往不是直接逐个写出所有开集，而是通过较小的数据生成出来的。最常见的生成工具就是\strong{基}与\strong{子基}。}
+
+\p{设 #{X} 是一个集合，#{\Gamma \subseteq \mathcal{P}(\mathcal{P}(X))} 是一族拓扑。则 #{\bigcap_{\tau \in \Gamma} \tau} 仍是 #{X} 上的一个拓扑。利用这一点，对任意集合族 #{\mathcal{S} \subseteq \mathcal{P}(X)}，可以定义由 #{\mathcal{S}} \strong{生成的拓扑}为
+#{\operatorname{top}(\mathcal{S}) = \bigcap\{\tau : \tau \text{ 是 } X \text{ 上的拓扑且 } \mathcal{S} \subseteq \tau\}}。
+它是包含 #{\mathcal{S}} 的最粗拓扑。}
+
+\p{若 #{\mathcal{S} \subseteq \tau}，并且 #{\tau = \operatorname{top}(\mathcal{S})}，则称 #{\mathcal{S}} 是拓扑 #{\tau} 的一个\strong{子基}。}
+
+\p{若 #{\mathcal{B} \subseteq \tau} 满足：对每个开集 #{U \in \tau} 和每个 #{x \in U}，都存在 #{B \in \mathcal{B}} 使得 #{x \in B \subseteq U}，则称 #{\mathcal{B}} 是 #{\tau} 的一个\strong{基}。等价地，#{\tau} 中每个开集都可写成基元素的并。}
+
+\p{若 #{\mathcal{S}} 是一个子基，则有限交族
+#{\mathcal{B} = \{\bigcap \mathcal{F} : \mathcal{F} \subseteq \mathcal{S},\ \mathcal{F} \text{ 有限}\}}
+构成 #{\operatorname{top}(\mathcal{S})} 的一个基。也就是说：\strong{子基先取有限交，再取任意并，就生成了整个拓扑。}}
+
+\strong{为什么重要}
+
+\ul{
+  \li{它把“描述所有开集”的任务压缩为“描述足够多的基本开集”}
+  \li{[第二可数空间](0024) 正是要求存在一个可数基}
+  \li{很多自然拓扑，例如积拓扑和初始拓扑，最方便的写法都是先给子基}
+}
+
+\strong{典型例子}
+
+\ul{
+  \li{#{\mathbb{R}} 的通常拓扑可以由所有开区间组成的族作为基}
+  \li{甚至只用端点为有理数的开区间，也已经是一个可数基}
+  \li{积拓扑常由各坐标投影的原像族给出子基；见 [初始拓扑与积拓扑](0036)}
+}
+
+\p{基与子基体现了“先给局部可控的数据，再自动闭包成完整拓扑”的思想。}
+
+\p{[返回拓扑入口](001E)}
