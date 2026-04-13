@@ -1,0 +1,73 @@
+\title{对偶对、弱拓扑与连续对偶}
+\date{2026-04-09}
+\taxon{Definition}
+\author{author}
+
+\p{对偶理论是拓扑向量空间中的核心主题之一。它把向量空间与线性泛函联系起来，并由此产生最常用的弱拓扑。}
+
+\p{设 #{E,F} 是同一域 #{\mathbb{K}} 上的向量空间，且给定双线性配对
+#{\langle \cdot,\cdot \rangle : E \times F \to \mathbb{K}}。
+则称 #{\langle E,F \rangle} 为一个\strong{对偶对}。这个配对对应于映射
+#{b_1 : E \to F^\ast,\quad b_1(x)=\langle x,\cdot\rangle}
+和
+#{b_2 : F \to E^\ast,\quad b_2(y)=\langle \cdot,y\rangle}，
+其中 #{E^\ast,F^\ast} 表示代数对偶空间。}
+
+\p{若 #{x \in E} 且 #{\langle x,y\rangle =0} 对所有 #{y \in F} 都成立时只能推出 #{x=0}，则称该对偶对在 #{E} 中\strong{可分离}；对 #{F} 同理。若对 #{E} 与 #{F} 都可分离，就称它是一个\strong{可分离对偶对}。}
+
+\strong{弱拓扑}
+
+\p{对偶对 #{\langle E,F \rangle} 在 #{E} 上诱导一个自然拓扑，称为 #{E} 关于 #{F} 的\strong{弱拓扑}，记作 #{\sigma(E,F)}。它定义为关于函数族
+#{\{\langle \cdot,y\rangle : E \to \mathbb{K}\}_{y \in F}}
+的初始拓扑。也就是说，#{\sigma(E,F)} 是使所有坐标泛函 #{x \mapsto \langle x,y\rangle} 连续的最粗拓扑。}
+
+\p{若 #{B \subseteq F} 有限，则集合
+#{U_B=\{x \in E : |\langle x,y\rangle|<1 \text{ 对所有 } y \in B\}}
+是 #{0} 的一个 #{\sigma(E,F)}-邻域。事实上，这类集合构成 #{\sigma(E,F)} 在零点的一个邻域基。}
+
+\strong{弱拓扑下的连续泛函}
+
+\p{按定义，对每个 #{y \in F}，线性泛函 #{x \mapsto \langle x,y\rangle} 都对弱拓扑 #{\sigma(E,F)} 连续。更重要的是，反过来一切连续线性泛函都来自这种形式。}
+
+\p{具体地说，若 #{\eta \in (E,\sigma(E,F))'}，则存在 #{y \in F} 使得
+#{\eta(x)=\langle x,y\rangle \quad (x \in E)}。
+等价地，
+#{(E,\sigma(E,F))' = b_2(F)}。
+这说明：\strong{弱拓扑恰好是使给定对偶空间 #{F} 中泛函全部连续、且除此之外不再引入更多连续线性泛函的最粗线性拓扑。}}
+
+\p{证明的关键是一个线性代数引理：若 #{\eta,\eta_1,\ldots,\eta_n \in E^\ast} 且
+#{\bigcap_{j=1}^n \ker \eta_j \subseteq \ker \eta}，
+则存在标量 #{c_1,\ldots,c_n \in \mathbb{K}} 使得
+#{\eta=\sum_{j=1}^n c_j \eta_j}。
+而对弱拓扑中的连续泛函 #{\eta}，由连续性可知存在有限集 #{B \subseteq F} 使得 #{U_B} 被 #{\eta} 控制，于是可推出
+#{\bigcap_{y \in B}\ker \langle \cdot,y\rangle \subseteq \ker \eta}。
+应用这个引理，就得到 #{\eta} 是有限多个坐标泛函 #{\langle \cdot,y\rangle} 的线性组合，因此仍来自某个 #{y \in F}。}
+
+\strong{为什么重要}
+
+\ul{
+  \li{弱拓扑把“由哪些线性泛函来观测向量”变成一个拓扑结构}
+  \li{因为它是初始拓扑，所以它天然适合用 [初始拓扑与积拓扑](0036) 的一般理论来分析}
+  \li{由 [拓扑向量空间](0037) 的稳定性可知，弱拓扑总是一个拓扑向量空间上的线性拓扑}
+}
+
+\strong{典型例子}
+
+\ul{
+  \li{对任意对偶对 #{\langle E,F \rangle}，弱拓扑 #{\sigma(E,F)} 与 #{\sigma(F,E)} 都是线性拓扑}
+  \li{若 #{I} 是指标集，则 #{\mathbb{K}^I} 在乘积拓扑下可视为关于 #{c_c(I)} 的弱拓扑，其中 #{c_c(I)} 表示只有有限个非零坐标的函数空间}
+  \li{因此乘积拓扑、弱拓扑与由坐标半范数生成的拓扑，常常是同一结构的不同表述}
+  \li{在 #{E=\mathbb{K}^I} 的例子中，上述定理进一步给出连续对偶 #{E' = c_c(I)}}
+}
+
+\strong{连续对偶}
+
+\p{若 #{(E,\tau)} 是拓扑向量空间，则其\strong{连续对偶}或\strong{对偶空间}记作 #{E'}，定义为所有连续线性泛函 #{f : E \to \mathbb{K}} 所成的向量空间。它依赖于 #{E} 上选定的拓扑：同一个底层向量空间在不同拓扑下，连续对偶可能完全不同。}
+
+\p{弱拓扑的一个重要思想正是：先选定一族线性泛函，再取使它们全部连续的最粗拓扑。反过来说，连续对偶刻画了一个拓扑向量空间“允许哪些连续线性观测”。}
+
+\p{从这个角度看，弱拓扑 #{\sigma(E,F)} 的特色就在于：它把连续对偶精确地压缩到预先指定的那一族泛函，也就是 #{b_2(F)}。因此弱拓扑既保留了配对信息，又尽量少地引入额外拓扑结构。}
+
+\p{在后续泛函分析中，局部凸空间、弱收敛、Banach 空间与分布理论都会围绕这个观点展开。}
+
+\p{[返回分析入口](001D)}
