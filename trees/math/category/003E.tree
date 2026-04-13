@@ -1,0 +1,30 @@
+\title{群论的等式公理化}
+\date{2026-04-14}
+\taxon{Example}
+\author{author}
+
+\p{群论展示了如何把一阶逻辑中带有存在量词的公理改写为 [代数理论](003C) 中的纯方程。}
+
+\p{在一阶逻辑中，一个群可以先被描述为集合 #{G} 和二元运算 #{\cdot:G\times G\to G}，满足结合律，并存在单位元与逆元：}
+
+##{\forall x,y,z\in G,\ (x\cdot y)\cdot z=x\cdot(y\cdot z)}
+
+##{\exists e\in G,\ \forall x\in G,\ \exists y\in G,\ e\cdot x=x\cdot e=x\ \wedge\ x\cdot y=y\cdot x=e}
+
+\p{第二条公理含有嵌套量词。对于群，这些量词可以通过扩充签名消去：把单位元作为常元 #{e}，把逆元作为一元运算 #{(-)^{-1}:G\to G}。于是群论可写成纯方程：}
+
+##{x\cdot(y\cdot z)=(x\cdot y)\cdot z}
+
+##{x\cdot e=x,\qquad e\cdot x=x}
+
+##{x\cdot x^{-1}=e,\qquad x^{-1}\cdot x=e}
+
+\p{变量默认全称量化，所以方程外面的全称量词通常省略。常元也可看作零元运算，即从单点集合到载体的函数。}
+
+\strong{相关页面}
+
+\ul{
+  \li{[群的基本定义](0001)}
+  \li{[签名与项](003D)}
+  \li{[有限积范畴中的内部群](003J)}
+}

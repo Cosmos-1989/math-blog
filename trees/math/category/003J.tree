@@ -1,0 +1,45 @@
+\title{有限积范畴中的内部群}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{\mathcal{C}} 是一个有有限积的范畴。#{\mathcal{C}} 中的\strong{内部群}，也称为 #{\mathcal{C}} 中的\strong{群对象}，是 [群论的等式公理化](003E) 在 #{\mathcal{C}} 中的一个 [模型](003I)。}
+
+\p{具体地，一个内部群由对象 #{G\in\mathcal{C}} 和三个态射组成：}
+
+##{e:1\to G,\qquad m:G\times G\to G,\qquad i:G\to G.}
+
+\p{这里 #{1} 是终对象，#{e} 解释单位元，#{m} 解释乘法，#{i} 解释逆元。它们必须满足结合律、单位律和逆元律对应的交换条件。}
+
+\p{结合律可以写成下面的交换图，其中 #{\pi_0,\pi_2} 表示从三重积到相应因子的投影。}
+
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+G\times G\times G \arrow[r,"m\times \pi_2"] \arrow[d,"\pi_0\times m"'] & G\times G \arrow[d,"m"] \\
+G\times G \arrow[r,"m"'] & G
+\end{tikzcd}
+}}
+
+\p{这张图表示两条从 #{G\times G\times G} 到 #{G} 的复合相等：}
+
+##{m\circ(m\times\pi_2)=m\circ(\pi_0\times m).}
+
+\p{严格地说，若所选有限积不是严格结合的，还要插入典范结合同构 #{G\times(G\times G)\cong (G\times G)\times G}。在范畴论写作中，这类典范同构常被省略。}
+
+\p{单位律要求乘以单位不改变元素，其态射表达为}
+
+##{m\circ(1_G\times e)=\pi_0,\qquad m\circ(e\times 1_G)=\pi_1.}
+
+\p{逆元律要求左右逆都给出单位，其态射表达为}
+
+##{m\circ\langle 1_G,i\rangle=e\circ !_G,\qquad m\circ\langle i,1_G\rangle=e\circ !_G.}
+
+\p{这里 #{!_G:G\to 1} 是到终对象的唯一态射，#{\langle 1_G,i\rangle} 和 #{\langle i,1_G\rangle} 是由积的泛性质给出的配对态射。}
+
+\strong{相关页面}
+
+\ul{
+  \li{[内部群同态](003K)}
+  \li{[代数理论的模型范畴](003L)}
+  \li{[群中的群与 Eckmann-Hilton 论证](003N)}
+}

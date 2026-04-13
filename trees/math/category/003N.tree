@@ -1,0 +1,31 @@
+\title{群中的群与 Eckmann-Hilton 论证}
+\date{2026-04-14}
+\taxon{Example}
+\author{author}
+
+\p{一个容易误判的例子是 #{\mathbf{Grp}} 中的 [内部群](003J)。按照定义，#{\mathbf{Grp}} 中的内部群是在群范畴里再放一套群结构，并要求新结构的乘法、逆元和单位都是群同态。Eckmann-Hilton 论证说明，这种结构自动交换，因此等价于阿贝尔群。}
+
+\p{核心代数引理如下。设集合 #{A} 上有两个幺半群运算 #{\ast} 与 #{\circ}，它们有共同单位元 #{e}，并满足互换律}
+
+##{(a\ast b)\circ(c\ast d)=(a\circ c)\ast(b\circ d).}
+
+\p{则两个运算相同且交换。首先有}
+
+##{a\ast b=(a\circ e)\ast(e\circ b)=(a\ast e)\circ(e\ast b)=a\circ b.}
+
+\p{再交换中间两个元素，得到}
+
+##{a\ast b=(e\circ a)\ast(b\circ e)=(e\ast b)\circ(a\ast e)=b\circ a=b\ast a.}
+
+\p{在 #{\mathbf{Grp}} 中，内部乘法 #{m:G\times G\to G} 是群同态，正是给出这种互换律。因此 #{\mathbf{Grp}} 中的群对象自然等价于阿贝尔群：}
+
+##{\mathbf{Group}(\mathbf{Grp})\simeq \mathbf{Ab}.}
+
+\p{这个例子说明，#{\operatorname{Mod}(\mathbb{T},\mathcal{C})} 中再次取模型时，环境范畴 #{\mathcal{C}} 的结构会强烈约束所得对象。}
+
+\strong{相关页面}
+
+\ul{
+  \li{[代数理论的模型范畴](003L)}
+  \li{[内部群同态](003K)}
+}

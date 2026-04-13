@@ -1,0 +1,38 @@
+\title{代数理论的模型}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{\mathbb{T}} 是一个 [代数理论](003C)，其签名为 #{\Sigma_{\mathbb{T}}}。设 #{\mathcal{C}} 是一个有有限积的范畴。#{\mathbb{T}} 在 #{\mathcal{C}} 中的一个\strong{模型}，也称为 #{\mathbb{T}}-\strong{代数}，是在 #{\mathcal{C}} 中解释签名的方式，并且满足 #{\mathbb{T}} 的所有方程公理。}
+
+\p{更具体地，一个模型 #{I} 包含一个对象 #{I\in\mathcal{C}}，并且对每个 #{k} 元基本运算 #{f\in\Sigma_{\mathbb{T},k}} 给出一个态射}
+
+##{f^I:I^k\to I.}
+
+\p{这里 #{I^k} 表示 #{k} 个 #{I} 的有限积。特别地，常元是 #{0} 元运算，因此解释为态射 #{1\to I}，其中 #{1} 是 #{\mathcal{C}} 的终对象。}
+
+\p{为了把方程解释为态射相等，需要先解释 [项](003D)。若项 #{t} 的变量都出现在无重复上下文 #{x_1,\ldots,x_n} 中，记作}
+
+##{x_1,\ldots,x_n\mid t.}
+
+\p{该项在模型 #{I} 中解释为态射}
+
+##{[x_1,\ldots,x_n\mid t]^I:I^n\to I.}
+
+\p{解释按归纳定义：变量 #{x_j} 解释为第 #{j} 个投影 #{\pi_j:I^n\to I}；若 #{t=f(t_1,\ldots,t_k)}，则 #{t} 的解释是复合}
+
+##{I^n\xrightarrow{\ ([x_1,\ldots,x_n\mid t_1]^I,\ldots,[x_1,\ldots,x_n\mid t_k]^I)\ }I^k\xrightarrow{\ f^I\ }I.}
+
+\p{若 #{u,v} 是同一上下文中的项，则模型 #{I} 满足方程 #{u=v}，记作 #{I\models u=v}，当且仅当}
+
+##{[x_1,\ldots,x_n\mid u]^I=[x_1,\ldots,x_n\mid v]^I:I^n\to I.}
+
+\p{因此，代数理论的语义把每条方程公理翻译成“两个平行复合相等”的交换图。这个观点把普通集合中的代数结构推广到任何有有限积的范畴中。}
+
+\strong{相关页面}
+
+\ul{
+  \li{[签名与项](003D)}
+  \li{[有限积范畴中的内部群](003J)}
+  \li{[代数理论的模型范畴](003L)}
+}
