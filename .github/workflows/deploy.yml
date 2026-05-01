@@ -29,6 +29,17 @@ jobs:
           ocaml-compiler: "5.3.0"
           opam-depext: false
 
+      - name: Install LaTeX (for tikz-cd diagrams)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-pictures \
+            texlive-fonts-recommended \
+            dvisvgm
+
       - name: Install Forester
         run: opam install forester -y
 
