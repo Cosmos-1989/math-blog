@@ -1,0 +1,36 @@
+\title{Riemann 联络与 Levi-Civita 联络}
+\date{2026-04-14}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{M} 带有 Riemann 度量 #{g=\langle\cdot,\cdot\rangle}。一个 [仿射联络](004F) #{\nabla} 称为\strong{Riemann 联络}或\strong{度量相容联络}，如果它满足度量乘积法则}
+
+##{Z\langle V,W\rangle
+=\langle\nabla_ZV,W\rangle+\langle V,\nabla_ZW\rangle.}
+
+\p{对任意 Riemann 度量 #{g}，存在唯一的无挠 Riemann 联络，称为\strong{Levi-Civita 联络}，记作 #{\nabla^g}。它由 Koszul 公式给出：}
+
+##{\langle\nabla^g_VW,Z\rangle
+=\frac12\{V\langle W,Z\rangle-Z\langle V,W\rangle+W\langle Z,V\rangle
+-\langle V,[W,Z]\rangle+\langle Z,[V,W]\rangle+\langle W,[Z,V]\rangle\}.}
+
+\p{在局部坐标中，令}
+
+##{g_{ij}=\left\langle\frac{\partial}{\partial x^i},
+\frac{\partial}{\partial x^j}\right\rangle,\qquad
+g_{ij,k}:=\frac{\partial g_{ij}}{\partial x^k}.}
+
+\p{Levi-Civita 联络的 Christoffel 符号为}
+
+##{\Gamma^k_{ij}=\frac12 g^{kl}(g_{il,j}+g_{jl,i}-g_{ij,l}).}
+
+\p{等价地，度量相容性可写作}
+
+##{g_{ij,k}=g_{jl}\Gamma^l_{ik}+g_{il}\Gamma^l_{jk}
+=\Gamma_{ikj}+\Gamma_{jki}.}
+
+\p{Levi-Civita 联络保持度量：若 #{V(t)} 和 #{W(t)} 都沿曲线 #{c(t)} 平行，则}
+
+##{\langle V(t),W(t)\rangle\equiv\operatorname{const}.}
+
+\p{也就是说，平行移动保持切向量之间的内积。}

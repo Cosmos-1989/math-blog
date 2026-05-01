@@ -1,0 +1,24 @@
+\title{绕数与 Jordan 多边形}
+\date{2026-04-24}
+\taxon{Definition}
+\author{author}
+
+\p{若 #{P\subseteq \mathbb R^2} 是简单闭多边形，取一点 #{z\notin P} 以及一条不穿顶点并横截各边的 generic 射线 #{r_z=z+\mathbb R_{\ge 0}v}，则可定义奇偶指标}
+
+##{\pi_P(z):=\#(r_z\cap P)\pmod 2\in \{0,1\}.}
+
+\p{这个指标与射线方向无关；当 #{z} 在同一面内移动时保持不变，而穿过一条边时恰好翻转。于是简单闭多边形把平面分成一个有界区和一个无界区。}
+
+\p{对一般连续闭曲线，更适合使用\strong{绕数}。若 #{\Gamma=\gamma(S^1)} 且 #{z\notin \Gamma}，定义}
+
+##{\nu_z(t):=\frac{\gamma(t)-z}{\|\gamma(t)-z\|}:S^1\to S^1.}
+
+\p{其度数称为 #{\gamma} 绕 #{z} 的指数：}
+
+##{\operatorname{Ind}_\gamma(z):=\deg(\nu_z)\in \mathbb Z.}
+
+\p{绕数只要求曲线连续并避开 #{z}，不需要可微性。若 #{\gamma} 分段 #{C^1}，则还有熟悉的积分公式}
+
+##{\operatorname{Ind}_\gamma(z)=\frac{1}{2\pi i}\int_\gamma \frac{d\zeta}{\zeta-z}.}
+
+\p{绕数有三个关键性质：它在补空间的每个连通分支上局部常值；当 #{z} 足够远离曲线时为零；而在局部跨越一条无自交弧段时只跳一次。对正向 Jordan 多边形，内部绕数为 #{1}，外部绕数为 #{0}，其模 #{2} 信息正是奇偶交点法。}

@@ -1,0 +1,38 @@
+\title{测地线、指数映射与全测地子流形}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{\nabla} 是流形 #{M} 上的 [仿射联络](004F)。一条曲线 #{c(t)} 称为\strong{自平行曲线}或\strong{测地线}，如果}
+
+##{\nabla_{\dot c}\dot c=0.}
+
+\p{在局部坐标中，测地线方程是二阶常微分方程组}
+
+##{\ddot c^k(t)+\Gamma^k_{ij}(c(t))\dot c^i(t)\dot c^j(t)=0,
+\qquad k=1,\ldots,d.}
+
+\p{给定 #{x_0\in M} 和初速度 #{V\in T_{x_0}M}，存在包含 #{0} 的极大区间 #{I_V\subset\mathbb{R}} 以及测地线}
+
+##{c_V:I_V\to M}
+
+\p{满足}
+
+##{c_V(0)=x_0,\qquad \dot c_V(0)=V.}
+
+\p{于是可在 #{T_{x_0}M} 中某个关于 #{0} 星形的邻域上定义指数映射}
+
+##{\exp_{x_0}:\{V\in T_{x_0}M:1\in I_V\}\to M,\qquad
+V\mapsto c_V(1).}
+
+\p{并且对 #{0\le t\le 1} 有}
+
+##{\exp_{x_0}(tV)=c_V(t).}
+
+\p{子流形 #{S\subset M} 称为\strong{自平行}或\strong{全测地}，如果对所有 #{x_0\in S} 和所有使指数映射有定义的 #{V\in T_{x_0}S}，都有}
+
+##{\exp_{x_0}V\in S.}
+
+\p{它的无穷小条件是：若 #{W} 是沿 #{S} 切于 #{S} 的向量场，且 #{V\in T_xS}，则}
+
+##{\nabla_VW(x)\in T_xS.}

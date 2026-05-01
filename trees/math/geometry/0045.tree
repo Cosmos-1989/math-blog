@@ -1,0 +1,26 @@
+\title{切向量的坐标变换与推前}
+\date{2026-04-14}
+\taxon{Construction}
+\author{author}
+
+\p{设同一局部区域有两组坐标 #{x} 与 #{y}，并且 #{x=f(y)}。同一个 [切向量](0044) 的坐标表达必须满足：它作用在函数上的结果与坐标选择无关。由链式法则得到}
+
+##{V=v^i\frac{\partial}{\partial x^i}
+=v^i\frac{\partial y^k}{\partial x^i}\frac{\partial}{\partial y^k}.}
+
+\p{因此，切向量分量按反变方式变换。等价地，对函数 #{\phi} 有}
+
+##{v^i\frac{\partial y^k}{\partial x^i}
+\frac{\partial}{\partial y^k}\phi(f(y))
+=v^i\frac{\partial x^j}{\partial x^i}\frac{\partial\phi}{\partial x^j}
+=v^i\frac{\partial\phi}{\partial x^i}.}
+
+\p{更抽象地，若 #{W=w^k\frac{\partial}{\partial y^k}} 是用 #{y} 坐标写出的切向量，则坐标变换 #{f} 将它推前为}
+
+##{f_*W=w^k\frac{\partial x^i}{\partial y^k}\frac{\partial}{\partial x^i}.}
+
+\p{推前与函数拉回相容：若 #{f^*\phi(y)=\phi(f(y))}，则}
+
+##{(f_*W)(\phi)=W(f^*\phi).}
+
+\p{对于任意光滑映射 #{f:M\to N}，总可以把函数和余切向量拉回，也总可以把切向量推前；反方向通常需要额外条件。}

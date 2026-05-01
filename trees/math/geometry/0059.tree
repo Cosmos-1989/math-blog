@@ -1,0 +1,32 @@
+\title{Gauss 方程与高斯曲率的内蕴公式}
+\date{2026-04-24}
+\taxon{Theorem}
+\author{author}
+
+\p{设曲面的 [第一基本形式](0057) 为 #{(g_{ij})}，记逆矩阵为 #{(g^{ij})}。由度量唯一决定的 [Levi-Civita 联络](004L) 在局部坐标中给出 Christoffel 符号}
+
+##{\Gamma^k_{ij}=\frac12 g^{k\ell}(\partial_i g_{j\ell}+\partial_j g_{i\ell}-\partial_\ell g_{ij}).}
+
+\p{相应的曲率张量坐标表达式为}
+
+##{R^\ell{}_{ijk}=\partial_j\Gamma^\ell_{ik}-\partial_i\Gamma^\ell_{jk}+\Gamma^m_{ik}\Gamma^\ell_{jm}-\Gamma^m_{jk}\Gamma^\ell_{im}.}
+
+\p{二维情形下，唯一的本质分量满足}
+
+##{R_{1212}=K(EG-F^2).}
+
+\p{另一方面，把曲面的二阶导数用 Gauss 公式分解为切向部分与法向部分，并比较混合二阶导数，可得\strong{Gauss 方程}}
+
+##{R_{1212}=eg-f^2.}
+
+\p{结合二式便得到}
+
+##{K=\frac{R_{1212}}{EG-F^2}=\frac{eg-f^2}{EG-F^2}.}
+
+\p{这里左边的表达只涉及度量 #{g_{ij}} 及其一、二阶导数，而不再显式出现法向量 #{N} 或 [第二基本形式](0058) 的系数 #{e,f,g}。这正是高斯曲率内蕴性的计算核心。}
+
+\p{在等温坐标 #{I=e^{2\phi(x,y)}(dx^2+dy^2)} 下，还可进一步化简为}
+
+##{K=-e^{-2\phi}\Delta \phi.}
+
+\p{这是一条完全不提嵌入的显式内蕴公式。}

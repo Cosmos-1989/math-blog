@@ -1,0 +1,22 @@
+\title{不变子空间的投影落在交换子里}
+\date{2026-04-24}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{A\subseteq B(H)} 是含幺 #{*}-子代数，#{K\subseteq H} 是闭子空间，并且对每个 #{S\in A} 都有 #{SK\subseteq K}。则 #{K^\perp} 也对 #{A} 不变；换言之，#{K} 是 #{A} 的一个 reducing subspace。}
+
+\p{证明很直接。取 #{y\in K^\perp} 与 #{x\in K}，则对任意 #{S\in A} 有}
+
+##{\langle Sy,x\rangle = \langle y,S^*x\rangle = 0,}
+
+\p{因为 #{S^*\in A} 且 #{S^*x\in K}。故 #{Sy\in K^\perp}。因此分解 #{H=K\oplus K^\perp} 同时被所有 #{S\in A} 保持。}
+
+\p{记 #{P_K} 为到 #{K} 的正交投影。由于直和分解被 #{A} 保持，#{P_K} 与每个 #{S\in A} 对易，即}
+
+##{P_KS=SP_K\qquad (\forall S\in A).}
+
+\p{于是}
+
+##{P_K\in A'.}
+
+\p{特别地，对任意向量 #{\xi\in H}，由 #{A\xi} 生成的循环子空间 #{[A\xi]} 的正交投影属于 [交换子](004V) #{A'}。这个观察是证明 [von Neumann 双交换子定理](004X) 中困难方向的第一块砖。}

@@ -1,0 +1,34 @@
+\title{内积空间中的 Pythagoras 定理}
+\date{2026-04-14}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{V} 是 [内积空间](004M)，#{\{x_n\}_{n=1}^N} 是 #{V} 中的 [标准正交集](004P)。则对任意 #{x\in V}，有}
+
+##{\|x\|^2
+=\sum_{n=1}^N |(x_n,x)|^2
++\left\|x-\sum_{n=1}^N (x_n,x)x_n\right\|^2.}
+
+\p{证明的关键是把 #{x} 分解为}
+
+##{x=\sum_{n=1}^N (x_n,x)x_n
++\left(x-\sum_{n=1}^N (x_n,x)x_n\right).}
+
+\p{直接利用内积的性质和标准正交性可验证两部分正交：}
+
+##{\sum_{n=1}^N (x_n,x)x_n
+\quad\perp\quad
+x-\sum_{n=1}^N (x_n,x)x_n.}
+
+\p{因此}
+
+##{(x,x)
+=\left\|\sum_{n=1}^N (x_n,x)x_n\right\|^2
++\left\|x-\sum_{n=1}^N (x_n,x)x_n\right\|^2.}
+
+\p{而第一项由标准正交性化简为}
+
+##{\left\|\sum_{n=1}^N (x_n,x)x_n\right\|^2
+=\sum_{n=1}^N |(x_n,x)|^2.}
+
+\p{于是得到结论。这个公式表达了：向量 #{x} 的平方长度等于其在标准正交方向上的投影平方和，加上剩余正交分量的平方长度。}

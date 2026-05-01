@@ -1,0 +1,24 @@
+\title{对角放大与关键逼近引理}
+\date{2026-04-24}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{A\subseteq B(H)} 是含幺 #{*}-子代数，#{T\in A''}。若给定有限个向量 #{\xi_1,\ldots,\xi_n\in H} 和 #{\varepsilon>0}，则存在 #{S\in A} 使得}
+
+##{\|(S-T)\xi_j\|<\varepsilon,\qquad j=1,\ldots,n.}
+
+\p{证明思想是把有限个向量同时装入一个循环子空间。先在直和空间 #{H^{\oplus n}} 上考虑对角放大代数}
+
+##{\widetilde A:=\{A^{(n)}=\operatorname{diag}(A,\ldots,A):A\in A\}.}
+
+\p{令 #{\widetilde\xi=(\xi_1,\ldots,\xi_n)}，并记 #{K=[\widetilde A\widetilde\xi]}。由 [不变子空间的投影落在交换子里](004Y)，到 #{K} 的正交投影 #{P_K} 属于 #{\widetilde A'}。}
+
+\p{另一方面，若 #{R=(R_{ij})\in \widetilde A'}，则每个块 #{R_{ij}} 都与 #{A} 中所有元素对易，因此 #{R_{ij}\in A'}。因为 #{T\in A''}，故 #{T} 与每个 #{R_{ij}} 对易，从而}
+
+##{T^{(n)}:=\operatorname{diag}(T,\ldots,T)\in \widetilde A''.}
+
+\p{现在 #{P_K\in \widetilde A'} 且 #{T^{(n)}\in \widetilde A''}，于是 #{T^{(n)}P_K=P_KT^{(n)}}。由于 #{\widetilde\xi\in K}，有 #{P_K\widetilde\xi=\widetilde\xi}，故 #{T^{(n)}\widetilde\xi\in K=[\widetilde A\widetilde\xi]}。因此可取某个 #{S\in A} 使}
+
+##{\|S^{(n)}\widetilde\xi-T^{(n)}\widetilde\xi\|<\varepsilon.}
+
+\p{展开坐标便得到每个 #{\|(S-T)\xi_j\|<\varepsilon}。这就证明了 #{T\in \overline A^{\mathrm{SOT}}}，从而完成 [von Neumann 双交换子定理](004X) 的困难方向。}

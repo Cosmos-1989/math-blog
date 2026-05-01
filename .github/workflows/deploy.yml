@@ -32,6 +32,9 @@ jobs:
       - name: Install Forester
         run: opam install forester -y
 
+      - name: Apply theme localization
+        run: cp theme-overrides/tree.xsl theme/tree.xsl
+
       - name: Build forest
         run: |
           eval $(opam env)

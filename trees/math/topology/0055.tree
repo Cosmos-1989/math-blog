@@ -1,0 +1,24 @@
+\title{Jordan 曲线定理}
+\date{2026-04-24}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{\Gamma\subseteq \mathbb R^2} 是一条 [Jordan 曲线](0052)。则其补空间恰有两个连通分支：}
+
+##{\mathbb R^2\setminus \Gamma = U_{\mathrm{in}}\sqcup U_{\mathrm{out}},}
+
+\p{其中 #{U_{\mathrm{in}}} 有界，#{U_{\mathrm{out}}} 无界，并且二者的边界都等于 #{\Gamma}：}
+
+##{\partial U_{\mathrm{in}}=\partial U_{\mathrm{out}}=\Gamma.}
+
+\p{证明思路是用 [绕数](0053) 把补空间分成两类点：}
+
+##{U_0:=\{z\notin \Gamma:\operatorname{Ind}_\gamma(z)=0\},\qquad U_1:=\{z\notin \Gamma:\operatorname{Ind}_\gamma(z)=1\}.}
+
+\p{借助 [多边形逼近](0054)，可知任意补空间点的绕数只能取 #{0} 或 #{1}，而且这两类点都非空。再利用多边形区域中的路径连通性，把 #{U_0} 与 #{U_1} 各自证明为连通。最后由曲线的局部两侧性可知，#{\Gamma} 的任意邻域都同时碰到 #{U_0} 与 #{U_1}，因此}
+
+##{\Gamma\subseteq \partial U_0\cap \partial U_1.}
+
+\p{结合显然的反向包含，就得到主结论。}
+
+\p{一个直接推论是路径分离性质：若 #{p\in U_{\mathrm{in}}}、#{q\in U_{\mathrm{out}}}，则任何连接 #{p} 与 #{q} 的连续路径都必须与 #{\Gamma} 相交。}

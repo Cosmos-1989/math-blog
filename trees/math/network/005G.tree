@@ -1,0 +1,28 @@
+\title{Erdős-Rényi 随机图的连通性阈值}
+\date{2026-04-24}
+\taxon{Theorem}
+\author{author}
+
+\p{Erdős-Rényi 随机图从“不连通”到“连通”的过渡发生在尺度}
+
+##{p=\frac{\log n + c}{n},\qquad c\in \mathbb R\ \text{固定}.}
+
+\p{记孤立点个数为}
+
+##{Y_n:=\#\{v:\deg(v)=0\}.}
+
+\p{则有}
+
+##{\mathbb E Y_n = n(1-p)^{n-1}\to e^{-c}.}
+
+\p{进一步计算阶乘矩可得分布收敛}
+
+##{Y_n \Rightarrow \operatorname{Poisson}(e^{-c}).}
+
+\p{在这一尺度下，图不连通的主要原因正是仍有孤立点存在，因此}
+
+##{\mathbb P\bigl(G(n,p)\ \text{连通}\bigr)\to \mathbb P(Y_n=0)=e^{-e^{-c}}.}
+
+\p{特别地，若 #{p=(\log n+\omega(n))/n} 且 #{\omega(n)\to +\infty}，则 #{G(n,p)} 以高概率连通；若 #{\omega(n)\to -\infty}，则以高概率不连通。}
+
+\p{因此 #{\log n/n} 是 Erdős-Rényi 随机图的连通性阈值。}

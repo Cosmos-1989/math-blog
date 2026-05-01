@@ -1,0 +1,20 @@
+\title{强算子拓扑与弱算子拓扑}
+\date{2026-04-24}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{H} 是复 Hilbert 空间。对 #{B(H)} 中的网 #{(T_\lambda)} 与算子 #{T}，定义\strong{强算子拓扑}与\strong{弱算子拓扑}收敛如下：}
+
+##{T_\lambda \xrightarrow{\mathrm{SOT}} T \iff \|T_\lambda\xi-T\xi\|\to 0\quad \forall \xi\in H,}
+
+##{T_\lambda \xrightarrow{\mathrm{WOT}} T \iff \langle T_\lambda\xi,\eta\rangle \to \langle T\xi,\eta\rangle\quad \forall \xi,\eta\in H.}
+
+\p{强算子拓扑比弱算子拓扑更强，因此对任意 #{A\subseteq B(H)} 都有闭包链}
+
+##{\overline A^{\|\cdot\|}\subseteq \overline A^{\mathrm{SOT}}\subseteq \overline A^{\mathrm{WOT}}.}
+
+\p{固定算子的左乘与右乘在 #{\mathrm{WOT}} 下连续。若 #{R\in B(H)}，则}
+
+##{\langle (RT_\lambda)\xi,\eta\rangle = \langle T_\lambda\xi,R^*\eta\rangle,\qquad \langle (T_\lambda R)\xi,\eta\rangle = \langle T_\lambda(R\xi),\eta\rangle.}
+
+\p{因此若 #{A} 是算子集合，则其 [交换子](004V) #{A'} 是 #{\mathrm{WOT}}-闭集；同理 #{A''} 也是 #{\mathrm{WOT}}-闭集。von Neumann 双交换子定理的一个核心断言，正是这些拓扑闭包与双交换子的 coincidence。}

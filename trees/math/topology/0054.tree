@@ -1,0 +1,18 @@
+\title{Jordan 曲线的多边形逼近}
+\date{2026-04-24}
+\taxon{Lemma}
+\author{author}
+
+\p{Jordan 曲线定理的一个技术核心是：任意 Jordan 曲线都可以由简单闭多边形逼近，而且这种逼近不会改变离曲线足够远的点的绕数。}
+
+\p{更准确地说，对任意 #{\varepsilon>0}，存在一个 Jordan 多边形 #{P_\varepsilon}，满足 Hausdorff 距离}
+
+##{d_H(P_\varepsilon,\Gamma)<\varepsilon,}
+
+\p{并且对每个满足 #{\operatorname{dist}(z,\Gamma)>2\varepsilon} 的点，都有}
+
+##{\operatorname{Ind}_{P_\varepsilon}(z)=\operatorname{Ind}_\gamma(z).}
+
+\p{构造方法是把参数圆周 #{S^1} 取足够细的分点，按曲线的循环顺序连接相邻采样点。细分足够细时，这些线段只会与相邻线段接触，于是得到简单闭多边形。}
+
+\p{每条小弧都可以在一个狭窄邻域内同伦到对应线段。若 #{z} 与原曲线保持距离大于 #{2\varepsilon}，则整个同伦过程中不会穿过 #{z}，因此 [绕数](0053) 不变。正是这个引理把多边形的“内外分区”传递给一般 Jordan 曲线。}

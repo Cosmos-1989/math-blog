@@ -1,0 +1,42 @@
+\title{外微分}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{外微分是把 #{p}-形式送到 #{p+1}-形式的线性算子}
+
+##{d:\Omega^p(M)\to\Omega^{p+1}(M),\qquad p=0,\ldots,\dim M.}
+
+\p{在局部坐标中，它由公式定义：}
+
+##{d\left(\eta(x)dx^{i_1}\wedge\cdots\wedge dx^{i_p}\right)
+=\frac{\partial\eta(x)}{\partial x^j}
+dx^j\wedge dx^{i_1}\wedge\cdots\wedge dx^{i_p},}
+
+\p{然后由线性性扩张到所有 #{p}-形式。}
+
+\p{外微分满足乘积法则。若 #{\omega\in\Omega^p(M)}、#{\vartheta\in\Omega^q(M)}，则}
+
+##{d(\omega\wedge\vartheta)=d\omega\wedge\vartheta+(-1)^p\omega\wedge d\vartheta.}
+
+\p{在坐标变换 #{x=f(y)} 下，#{p}-形式}
+
+##{\omega(x)=\eta(x)dx^{i_1}\wedge\cdots\wedge dx^{i_p}}
+
+\p{拉回为}
+
+##{f^*\omega(y)=\eta(f(y))
+\frac{\partial x^{i_1}}{\partial y^{\alpha_1}}dy^{\alpha_1}
+\wedge\cdots\wedge
+\frac{\partial x^{i_p}}{\partial y^{\alpha_p}}dy^{\alpha_p}.}
+
+\p{外微分与拉回相容：}
+
+##{d(f^*\omega)=f^*(d\omega).}
+
+\p{这个自然性来自一阶微分的坐标不变性}
+
+##{\frac{\partial\eta(x)}{\partial x^j}dx^j
+=\frac{\partial\eta(f(y))}{\partial x^j}
+\frac{\partial f^j}{\partial y^\alpha}dy^\alpha
+=\frac{\partial\eta(f(y))}{\partial y^\alpha}dy^\alpha.}

@@ -1,0 +1,32 @@
+\title{von Neumann 双交换子定理}
+\date{2026-04-24}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{H} 是复 Hilbert 空间，#{A\subseteq B(H)} 是含幺 #{*}-子代数。则 von Neumann 双交换子定理断言}
+
+##{A''=\overline A^{\mathrm{SOT}}=\overline A^{\mathrm{WOT}}.}
+
+\p{因此以下三件事彼此等价：}
+
+\ol{
+  \li{#{A=A''}；}
+  \li{#{A} 在强算子拓扑下闭；}
+  \li{#{A} 在弱算子拓扑下闭。}
+}
+
+\p{这一定理给出 [von Neumann 代数](0050) 的三种等价定义：#{B(H)} 中的含幺 #{*}-子代数 #{M}，满足 #{M=M''}；或者等价地，#{M} 是 #{\mathrm{SOT}}-闭或 #{\mathrm{WOT}}-闭的含幺 #{*}-子代数。}
+
+\p{容易方向是}
+
+##{\overline A^{\mathrm{WOT}}\subseteq A''.}
+
+\p{因为若 #{T_\lambda\to T} 在 #{\mathrm{WOT}} 下收敛且 #{R\in A'}，则对任意 #{\xi,\eta\in H} 有}
+
+##{\langle TR\xi,\eta\rangle = \lim_\lambda \langle T_\lambda R\xi,\eta\rangle = \lim_\lambda \langle RT_\lambda\xi,\eta\rangle = \langle RT\xi,\eta\rangle.}
+
+\p{故 #{TR=RT}，从而 #{T\in A''}。困难方向是}
+
+##{A''\subseteq \overline A^{\mathrm{SOT}},}
+
+\p{其证明核心依赖于 [不变子空间的投影落在交换子里](004Y) 与 [对角放大和关键逼近引理](004Z)。}

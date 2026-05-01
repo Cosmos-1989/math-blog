@@ -1,0 +1,33 @@
+\title{张量与度量张量}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{张量的指标位置记录其坐标变换行为：下指标表示协变变换，上指标表示反变变换。度量张量是最重要的协变二阶张量。}
+
+\p{在局部坐标中，Riemann 度量写作}
+
+##{g=g_{ij}\,dx^i\otimes dx^j,}
+
+\p{其中}
+
+##{g_{ij}=\left\langle\frac{\partial}{\partial x^i},
+\frac{\partial}{\partial x^j}\right\rangle.}
+
+\p{在坐标变换 #{x=f(y)} 下，它按双协变方式变换：}
+
+##{g_{ij}(f(y))\frac{\partial x^i}{\partial y^\alpha}
+\frac{\partial x^j}{\partial y^\beta}\,dy^\alpha\otimes dy^\beta.}
+
+\p{度量张量的目的，是给切向量提供内积。若}
+
+##{V=v^i\frac{\partial}{\partial x^i},\qquad
+W=w^j\frac{\partial}{\partial x^j},}
+
+\p{则}
+
+##{\langle V,W\rangle=g_{ij}v^i w^j.}
+
+\p{由于 #{v^i,w^j} 反变而 #{g_{ij}} 双协变，上式为坐标不变量。逆度量 #{g^{ij}} 给余切向量内积：若 #{\omega=\omega_i dx^i}、#{\alpha=\alpha_j dx^j}，则}
+
+##{\langle\omega,\alpha\rangle=g^{ij}\omega_i\alpha_j.}

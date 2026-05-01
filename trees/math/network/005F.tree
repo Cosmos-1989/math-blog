@@ -1,0 +1,30 @@
+\title{Erdős-Rényi 随机图的巨分支相变}
+\date{2026-04-24}
+\taxon{Theorem}
+\author{author}
+
+\p{在稀疏尺度 #{p=c/n} 下，随机图的连通分支大小会随着参数 #{c} 穿过临界值 #{1} 而发生相变。}
+
+\p{\strong{亚临界区 #{0<c<1}。} 此时对应的 #{\operatorname{Poi}(c)} 分枝过程几乎必然灭绝，且总后代数具有指数尾。因此最大连通分支只达到对数级：}
+
+##{|C_{\max}|=O(\log n)\qquad \text{whp}.}
+
+\p{\strong{超临界区 #{c>1}。} 设 #{q\in(0,1)} 是方程}
+
+##{q=e^{-c(1-q)}}
+
+\p{的最小解，并令 #{\rho(c):=1-q}。则 #{\rho(c)>0} 正是 Poisson 分枝过程的生存概率。于是以高概率存在唯一一个线性规模的巨分支 #{C_1}，满足}
+
+##{|C_1|=\rho(c)n+o_p(n),\qquad |C_2|=O(\log n).}
+
+\p{当 #{c\downarrow 1} 时，有}
+
+##{\rho(c)\sim 2(c-1),}
+
+\p{说明相变刚越过临界值时，巨分支以线性但很小的比例出现。}
+
+\p{\strong{临界窗口。} 真正的精细相变发生在}
+
+##{p=\frac{1+\lambda n^{-1/3}}{n},\qquad \lambda\in\mathbb R\ \text{固定},}
+
+\p{此时最大若干个连通分支都具有 #{\Theta_p(n^{2/3})} 的规模，而不再是 #{O(\log n)} 或 #{\Theta(n)}。}

@@ -1,0 +1,32 @@
+\title{平行移动与平行向量场}
+\date{2026-04-14}
+\taxon{Construction}
+\author{author}
+
+\p{设 #{c(t)} 是流形 #{M} 中的光滑曲线，切向量场记作 #{\dot c(t)}。若 #{W(t)\in T_{c(t)}M} 是沿曲线的向量场，局部写作}
+
+##{W(t)=\mu^i(t)\frac{\partial}{\partial x^i}(c(t)),}
+
+\p{则沿曲线的协变导数为}
+
+##{\nabla_{\dot c(t)}W(t)
+=\dot\mu^i(t)\frac{\partial}{\partial x^i}
++\dot c^i(t)\mu^j(t)\Gamma^k_{ij}(c(t))
+\frac{\partial}{\partial x^k}.}
+
+\p{这只依赖于 #{W} 沿曲线的值，而不需要知道它在曲线邻域中的延拓。给定初值 #{W(0)}，一阶线性常微分方程}
+
+##{\nabla_{\dot c(t)}W(t)=0}
+
+\p{有唯一解。这个解称为 #{W(0)} 沿曲线 #{c(t)} 的\strong{平行移动}；也称 #{W(t)} 沿曲线协变常值。}
+
+\p{若 #{W} 是某个开集 #{U} 上的向量场，并且对 #{U} 中任意曲线 #{c(t)}，#{W(c(t))} 都沿 #{c} 平行，则称 #{W} 为\strong{平行向量场}。这等价于}
+
+##{\nabla_VW=0\qquad\text{for all tangent vectors }V\text{ in }U.}
+
+\p{局部坐标中，若 #{W=W^i\frac{\partial}{\partial x^i}}，则平行条件是}
+
+##{\frac{\partial W^k}{\partial x^i}+W^j\Gamma^k_{ij}=0
+\qquad\text{for all }i,k.}
+
+\p{这是关于 #{d} 个未知函数 #{W^k} 的 #{d^2} 个一阶方程，通常过定，因此一般联络下局部平行向量场未必存在。Euclidean 联络中，坐标向量场是平行的。}

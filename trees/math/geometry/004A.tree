@@ -1,0 +1,20 @@
+\title{Riemann 度量的体积形式与积分}
+\date{2026-04-14}
+\taxon{Construction}
+\author{author}
+
+\p{设 #{M} 是带有 Riemann 度量 #{g=g_{ij}dx^i\otimes dx^j} 的 #{d} 维流形。局部坐标中的体积形式定义为}
+
+##{d\operatorname{vol}_g:=\sqrt{\det(g_{ij})}\,dx^1\wedge\cdots\wedge dx^d.}
+
+\p{由于外积反对称，坐标指标顺序发生奇置换时体积形式变号。若坐标变换 #{x=f(y)} 的 Jacobian 行列式为负，体积形式也变号；若 Jacobian 行列式为正，则体积形式不变。}
+
+\p{因此，为了得到全局定义的体积形式，需要排除负 Jacobian 的坐标变换。若 #{M} 可以由坐标图覆盖，且任意坐标变换的 Jacobian 行列式为正，则称 #{M} 是\strong{有向}的。}
+
+\p{在有向 Riemann 流形上，可以定义函数 #{\phi} 的积分}
+
+##{\int_M \phi(x)\,d\operatorname{vol}_g(x).}
+
+\p{还可以定义 #{p}-形式 #{\omega,\alpha\in\Omega^p(M)} 的 #{L^2} 内积：}
+
+##{(\omega,\alpha):=\int_M\langle\omega(x),\alpha(x)\rangle\,d\operatorname{vol}_g(x).}

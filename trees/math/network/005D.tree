@@ -1,0 +1,24 @@
+\title{Erdős-Rényi 随机图的定义与基本统计量}
+\date{2026-04-24}
+\taxon{Definition}
+\author{author}
+
+\p{在顶点集 #{[n]:=\{1,\ldots,n\}} 上，让每条无向边 #{(i,j)}（#{i<j}）独立地以概率 #{p} 出现，得到的随机图称为\strong{Erdős-Rényi 随机图}，记作 #{G(n,p)}。}
+
+\p{若用边指示变量 #{X_{ij}\sim \mathrm{Bernoulli}(p)} 表示边是否出现，则总边数}
+
+##{|E|=\sum_{1\le i<j\le n} X_{ij}}
+
+\p{满足}
+
+##{\mathbb E|E|=\binom{n}{2}p,\qquad \operatorname{Var}(|E|)=\binom{n}{2}p(1-p).}
+
+\p{固定一个顶点 #{v}，其度数服从二项分布}
+
+##{\deg(v)\sim \operatorname{Bin}(n-1,p),\qquad \mathbb E\deg(v)=(n-1)p.}
+
+\p{当平均度 #{(n-1)p} 较大时，Chernoff 不等式说明度数围绕均值集中：对任意 #{\varepsilon\in(0,1)}，存在只依赖于 #{\varepsilon} 的常数 #{c_\varepsilon>0}，使得}
+
+##{\mathbb P\bigl(|\deg(v)-(n-1)p|>\varepsilon(n-1)p\bigr)\le 2e^{-c_\varepsilon np}.}
+
+\p{因此 #{G(n,p)} 已经能解释边数、度数等最基本的统计量，但真正有趣的现象出现在稀疏尺度 #{p=c/n} 及其临界窗口附近。}

@@ -1,0 +1,39 @@
+\title{Christoffel 符号}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{\nabla} 是 [仿射联络](004F)，#{x^1,\ldots,x^d} 是坐标图上的局部坐标。联络的 Christoffel 符号由坐标向量场上的协变导数定义：}
+
+##{\nabla_{\frac{\partial}{\partial x^i}}
+\frac{\partial}{\partial x^j}
+:=\Gamma^k_{ij}\frac{\partial}{\partial x^k}.}
+
+\p{因此，对向量场}
+
+##{V=V^i\frac{\partial}{\partial x^i},\qquad
+W=W^j\frac{\partial}{\partial x^j},}
+
+\p{有}
+
+##{\nabla_VW
+=V^i\frac{\partial W^j}{\partial x^i}\frac{\partial}{\partial x^j}
++V^iW^j\Gamma^k_{ij}\frac{\partial}{\partial x^k}.}
+
+\p{如果把 #{V} 留出来，#{\nabla W} 可看作取值于切丛的 #{1}-形式。局部记为}
+
+##{\nabla W=W^j{}_{;i}\,dx^i\frac{\partial}{\partial x^j},\qquad
+W^j{}_{;i}:=\frac{\partial W^j}{\partial x^i}+W^k\Gamma^j_{ik}.}
+
+\p{在坐标变换 #{x=x(y)} 下，新坐标的 Christoffel 符号 #{\widetilde{\Gamma}^n_{lm}} 与旧符号满足}
+
+##{\widetilde{\Gamma}^n_{lm}(y)
+=\left(
+\Gamma^k_{ij}(x(y))
+\frac{\partial x^i}{\partial y^l}
+\frac{\partial x^j}{\partial y^m}
++\frac{\partial^2x^k}{\partial y^l\partial y^m}
+\right)
+\frac{\partial y^n}{\partial x^k}.}
+
+\p{这个公式中出现二阶导数项，所以 Christoffel 符号本身不是张量。不过，两个联络的 Christoffel 符号之差会按张量方式变换。因此，流形上所有联络组成一个仿射空间。}

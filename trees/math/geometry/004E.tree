@@ -1,0 +1,29 @@
+\title{被动坐标变换与主动变分}
+\date{2026-04-14}
+\taxon{Principle}
+\author{author}
+
+\p{几何变换有两种常见视角。数学家的被动观点是固定同一个点 #{p}，改用不同坐标 #{x} 和 #{y} 表示它；物理文献中常用的主动观点是在固定坐标 #{x} 中移动点，并考察张量表达式的变分。}
+
+\p{以 #{1}-形式 #{\omega=\omega_i(x)dx^i} 为例。主动变分把点移动为}
+
+##{x\mapsto x+\varepsilon\xi(x)=x+\delta x,}
+
+\p{其中 #{\xi} 是向量场，#{\varepsilon} 是小参数。诱导的 #{1}-形式变为}
+
+##{\omega_i(x+\varepsilon\xi(x))\,d(x^i+\varepsilon\xi^i(x)).}
+
+\p{一阶 Taylor 展开给出}
+
+##{\omega_i(x+\varepsilon\xi(x))\,d(x^i+\varepsilon\xi^i(x))
+=\left(\omega_i+\varepsilon\frac{\partial\omega_i}{\partial x^k}\xi^k\right)
+\left(dx^i+\varepsilon\frac{\partial\xi^i}{\partial x^k}dx^k\right)
++O(\varepsilon^2).}
+
+\p{因此令 #{\varepsilon\to 0} 得到变分}
+
+##{\delta\omega
+=\frac{\partial\omega_i}{\partial x^k}\xi^k dx^i
++\omega_i\frac{\partial\xi^i}{\partial x^k}dx^k.}
+
+\p{第二项中的 #{\frac{\partial\xi^i}{\partial x^k}dx^k=d\xi^i} 与余切向量坐标变换中的项相同。被动观点适合识别不变量，例如曲率张量；主动观点适合计算作用量中的变分。}

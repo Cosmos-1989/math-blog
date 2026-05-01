@@ -1,0 +1,36 @@
+\title{仿射联络与协变导数}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{在一般光滑流形上，没有唯一的坐标无关方式来微分向量场。一个\strong{仿射联络}，也称为\strong{协变导数}，是在向量场上指定这种微分方式的结构。}
+
+\p{设 #{M} 是光滑流形，#{\Gamma(TM)} 是 [向量场](0046) 的空间。仿射联络是一个映射}
+
+##{\nabla:\Gamma(TM)\otimes_{\mathbb{R}}\Gamma(TM)\to\Gamma(TM),\qquad
+(V,W)\mapsto \nabla_VW}
+
+\p{满足以下性质。首先，#{\nabla} 在第一个变量上是张量性的：}
+
+##{\nabla_{V_1+V_2}W=\nabla_{V_1}W+\nabla_{V_2}W,\qquad
+\nabla_{fV}W=f\nabla_VW.}
+
+\p{这里 #{f\in C^\infty(M)}。其次，#{\nabla} 在第二个变量上是 #{\mathbb{R}}-线性的，并满足 Leibniz 法则：}
+
+##{\nabla_V(W_1+W_2)=\nabla_VW_1+\nabla_VW_2,}
+
+##{\nabla_V(fW)=V(f)W+f\nabla_VW.}
+
+\p{#{\nabla_VW} 称为 #{W} 沿 #{V} 方向的协变导数。由于第一变量张量性，#{(\nabla_VW)(x_0)} 只依赖于 #{V(x_0)}；但作为导数，它依赖 #{W} 在 #{x_0} 附近的值。}
+
+\p{Euclidean 空间中的标准导数给出模型例子：若}
+
+##{V=V^i\frac{\partial}{\partial x^i},\qquad
+W=W^j\frac{\partial}{\partial x^j},}
+
+\p{则}
+
+##{\nabla^{\operatorname{eucl}}_VW
+=V^i\frac{\partial W^j}{\partial x^i}\frac{\partial}{\partial x^j}.}
+
+\p{这个公式在非线性坐标变换下并不保持同形，因此一般流形上需要抽象的联络概念。}

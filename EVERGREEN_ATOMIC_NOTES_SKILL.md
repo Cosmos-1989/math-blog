@@ -65,7 +65,7 @@ Do not link every common word. Prefer linking:
 - Nonstandard notation
 - Pages that decode a recurring symbol
 
-If inline linking would be noisy, add a "相关页面" section.
+If inline linking would be noisy, rely on Forester's generated bottom "Related" and "Backlinks" sections rather than adding a manual "相关页面" block in the main text.
 
 ## Decodable Notation
 
@@ -142,16 +142,10 @@ Use this shape by default:
 \p{Local context and definition.}
 
 \p{One or two consequences, examples, or decoding remarks.}
-
-\strong{相关页面}
-
-\ul{
-  \li{[Dependency](0000)}
-  \li{[Neighboring idea](0001)}
-}
 ```
 
 Prefer short prose paragraphs over textbook-style long exposition.
+Do not add a manual "相关页面" section immediately after the main text; the rendered site already provides bottom navigation through generated backlinks and related notes.
 
 ## Responsibility And Authorship
 
@@ -170,5 +164,5 @@ Avoid:
 - Long "chapter" pages containing many definitions and examples.
 - Hard-coded hierarchical assumptions like "above", "previous section", or "later chapter" unless the note is explicitly an outline.
 - Repeating entire definitions instead of linking to atomic notes.
+- Manual "相关页面" blocks that duplicate generated backlinks or related notes.
 - Prematurely deep folder or outline structures.
-

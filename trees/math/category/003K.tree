@@ -11,17 +11,11 @@
 
 \p{第一条等式表示乘法相容性，也就是下面的方块交换：}
 
-##{\begin{array}{ccc}
-M\times M & \xrightarrow{\ h\times h\ } & N\times N\\
-{\scriptstyle m^M}\downarrow & & \downarrow{\scriptstyle m^N}\\
-M & \xrightarrow{\ h\ } & N
-\end{array}}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+M\times M \arrow[r,"h\times h"] \arrow[d,"m^M"'] & N\times N \arrow[d,"m^N"] \\
+M \arrow[r,"h"'] & N
+\end{tikzcd}
+}}
 
 \p{这一定义是一般 [代数理论的模型范畴](003L) 中“模型同态”概念在群理论上的特例。所有 #{\mathcal{C}} 中的内部群及其同态构成范畴，记作 #{\mathbf{Group}(\mathcal{C})}。}
-
-\strong{相关页面}
-
-\ul{
-  \li{[有限积范畴中的内部群](003J)}
-  \li{[代数理论的模型范畴](003L)}
-}

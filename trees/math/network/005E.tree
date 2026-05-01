@@ -1,0 +1,20 @@
+\title{稀疏随机图与 Poisson 分枝过程近似}
+\date{2026-04-24}
+\taxon{Construction}
+\author{author}
+
+\p{当 #{p=c/n} 且 #{c>0} 固定时，Erdős-Rényi 随机图 #{G(n,p)} 的平均度约为 #{c}。从某个顶点 #{v} 出发做广度优先搜索，若已探索的顶点数仍是 #{o(n)}，则新发现邻居数近似服从}
+
+##{\operatorname{Bin}(n,c/n)\approx \operatorname{Poi}(c).}
+
+\p{因此，随机顶点附近的局部探索过程近似于 offspring 分布为 #{\operatorname{Poi}(c)} 的 Galton-Watson 分枝过程。}
+
+\p{这带来几个关键图像：}
+
+\ul{
+  \li{随机顶点所在连通分支的大小，近似于该 Poisson 分枝过程的总后代数；}
+  \li{局部结构近似无环，所以随机图在小尺度上“看起来像树”；}
+  \li{是否出现线性规模的巨分支，可转化为该分枝过程是否具有正的生存概率。}
+}
+
+\p{因此，随机图的相变理论和经典分枝过程理论在稀疏尺度上紧密相连。}

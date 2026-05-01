@@ -1,0 +1,27 @@
+\title{Einstein 求和约定与指标升降}
+\date{2026-04-14}
+\taxon{Convention}
+\author{author}
+
+\p{Einstein 求和约定规定：当一个指标在同一乘积中出现两次，且一次为上指标、一次为下指标时，省略对该指标的求和号。例如}
+
+##{a^i b_i:=\sum_{i=1}^d a^i b_i.}
+
+\p{即使还有其他指标存在，重复指标仍然求和。例如}
+
+##{a^{ij}b_j:=\sum_{j=1}^d a^{ij}b_j.}
+
+\p{若 #{G=(g_{ij})} 是度量张量，其逆矩阵写作 #{G^{-1}=(g^{ij})}，也就是通过升指标表示逆度量。二者满足}
+
+##{g^{ij}g_{jk}=\delta^i_k,\qquad
+\delta^i_k=\begin{cases}1,&i=k,\\0,&i\ne k.\end{cases}}
+
+\p{其中 #{\delta^i_k} 是 Kronecker 符号。度量及逆度量用于在向量分量和余向量分量之间升降指标：}
+
+##{v^i=g^{ij}v_j,\qquad v_i=g_{ij}v^j.}
+
+\p{对于 #{d} 维标量数组 #{(\phi^1,\ldots,\phi^d)}，若使用 Euclidean 度量 #{\delta_{ij}}，则可自由升降指标：}
+
+##{\phi_i=\delta_{ij}\phi^j=\phi^i.}
+
+\p{求和约定只是记号约定，但它与协变/反变指标的区分一起决定了后续张量公式的可读性。}

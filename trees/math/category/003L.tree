@@ -13,11 +13,12 @@
 
 \p{其中 #{h^k:I^k\to J^k} 是由 #{k} 个 #{h} 诱导出的积态射。等价地，下面的方块交换：}
 
-##{\begin{array}{ccc}
-I^k & \xrightarrow{\ h^k\ } & J^k\\
-{\scriptstyle f^I}\downarrow & & \downarrow{\scriptstyle f^J}\\
-I & \xrightarrow{\ h\ } & J
-\end{array}}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+I^k \arrow[r,"h^k"] \arrow[d,"f^I"'] & J^k \arrow[d,"f^J"] \\
+I \arrow[r,"h"'] & J
+\end{tikzcd}
+}}
 
 \p{若 #{\mathbb{T}_0} 是没有运算也没有方程的平凡理论，则模型只是 #{\mathcal{C}} 的对象，同态只是 #{\mathcal{C}} 的态射，因此}
 
@@ -30,10 +31,3 @@ I & \xrightarrow{\ h\ } & J
 \p{特别地，在集合范畴中，群论的模型范畴就是通常的群范畴：}
 
 ##{\operatorname{Mod}(\mathbb{T}_{\mathrm{Group}},\mathbf{Set})=\mathbf{Grp}.}
-
-\strong{相关页面}
-
-\ul{
-  \li{[代数理论的模型](003I)}
-  \li{[函子范畴中的逐点模型](003M)}
-}

@@ -1,0 +1,36 @@
+\title{第二基本形式与形算子}
+\date{2026-04-24}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{X:U\to \mathbb R^3} 是 regular patch。单位法向量定义为}
+
+##{N:=\frac{X_u\times X_v}{\|X_u\times X_v\|}.}
+
+\p{曲面的\strong{第二基本形式}是二次型}
+
+##{II=e\,du^2+2f\,du\,dv+g\,dv^2,}
+
+\p{其中}
+
+##{e=\langle X_{uu},N\rangle,\qquad f=\langle X_{uv},N\rangle,\qquad g=\langle X_{vv},N\rangle.}
+
+\p{若 #{v=aX_u+bX_v} 是切向量，则}
+
+##{II(v,v)=ea^2+2fab+gb^2,}
+
+\p{它刻画曲面沿 #{v} 方向的二阶法向弯曲。}
+
+\p{由法向量场的微分定义\strong{形算子}（Weingarten map）}
+
+##{S:T_pM\to T_pM,\qquad S(v):=-dN(v).}
+
+\p{在基底 #{(X_u,X_v)} 下，其矩阵是}
+
+##{[S]=(g^{ij})^{-1}\begin{pmatrix}e & f\\ f & g\end{pmatrix},}
+
+\p{其中 #{(g^{ij})=(g_{ij})^{-1}} 是第一基本形式矩阵的逆。于是高斯曲率可写成外在公式}
+
+##{K=\det S=\frac{eg-f^2}{EG-F^2}.}
+
+\p{这个公式看上去依赖法向量 #{N} 和曲面如何嵌入 #{\mathbb R^3}，而 [高斯绝妙定理](005A) 的惊人之处正在于：#{K} 最终其实只由 [第一基本形式](0057) 决定。}

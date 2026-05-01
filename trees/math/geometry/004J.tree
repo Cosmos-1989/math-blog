@@ -1,0 +1,27 @@
+\title{曲率张量}
+\date{2026-04-14}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{\nabla} 是流形 #{M} 上的 [仿射联络](004F)。它的\strong{曲率张量}定义为}
+
+##{R(V,W)Z:=\nabla_V\nabla_WZ-\nabla_W\nabla_VZ-\nabla_{[V,W]}Z.}
+
+\p{曲率测量协变导数沿不同方向交换的失败。局部坐标中，定义分量}
+
+##{R\left(\frac{\partial}{\partial x^i},
+\frac{\partial}{\partial x^j}\right)
+\frac{\partial}{\partial x^l}
+=R^k{}_{lij}\frac{\partial}{\partial x^k}.}
+
+\p{用 Christoffel 符号可写为}
+
+##{R^k{}_{lij}
+=\frac{\partial\Gamma^k_{jl}}{\partial x^i}
+-\frac{\partial\Gamma^k_{il}}{\partial x^j}
++\Gamma^k_{im}\Gamma^m_{jl}
+-\Gamma^k_{jm}\Gamma^m_{il}.}
+
+\p{虽然联络的 Christoffel 符号不是张量，但由它们组成的曲率 #{R} 是张量。这意味着若某个参数向量场乘以光滑函数，该函数可直接提出，而不会产生额外导数项。}
+
+\p{指标位置也反映变换行为：上指标 #{k} 对应反变向量分量，下指标 #{l,i,j} 对应协变分量。}
