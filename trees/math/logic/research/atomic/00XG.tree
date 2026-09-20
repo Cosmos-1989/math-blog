@@ -1,0 +1,15 @@
+\title{非周期单块的数独编码}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Greenfeld，平移铺砌综述](007K)}
+
+\p{存在有限阿贝尔群 #{G_0} 和有限 #{F\subseteq\mathbb Z^2\times G_0}，使[单块铺砌方程非周期](00X6)。进一步，足够高维 #{\mathbb Z^d} 中也存在这种有限单块。}
+\figure{\tex{\usepackage{amsmath,amssymb,tikz-cd}}{
+\begin{tikzcd}[column sep=large]
+p\text{-adic constraints} \arrow[r] & \text{Sudoku} \arrow[r] &
+F\oplus A=\mathbb Z^2\times G_0
+\end{tikzcd}
+}}
+\p{图中的两次编码保持解的存在，且把周期铺砌反向送回周期配置。结合[数独刚性](00XF)与[着色编码](00XD)便排除周期解；再用群与几何编码移到足够高维整数格。}
+\p{关键限定：奇素数版本先编码到 #{\mathbb Z^2\times E}，其中 #{E} 只是有限群的子集。要铺满整个 #{\mathbb Z^2\times G_0}，原构造改用 2 的足够大幂，并处理额外技术细节；不能从奇素数示意图直接省略这一步。这不是 #{\mathbb Z^2} 的反例。}

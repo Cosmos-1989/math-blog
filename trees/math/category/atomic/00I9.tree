@@ -1,0 +1,14 @@
+\title{代数理论的模型同态}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{I,J} 是代数理论 #{\mathbb T} 在有[有限积](00I4)的范畴 #{\mathcal C} 中的[模型](00I8)。模型同态是态射 #{h:I\to J}，使每个 #{k} 元基本运算 #{f} 满足}
+##{h\circ f^I=f^J\circ h^k.}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+I^k \arrow[r,"h^k"] \arrow[d,"f^I"'] & J^k \arrow[d,"f^J"] \\
+I \arrow[r,"h"'] & J
+\end{tikzcd}
+}}
+\p{此图等价于上式。#{k=0} 时 #{h^0=\mathrm{id}_1}，条件是 #{h\circ f^I=f^J}，即保持常元。对项的构造归纳可得 #{h\circ[\Gamma\mid t]^I=[\Gamma\mid t]^J\circ h^n}，所以保持基本运算便保持所有项运算。}

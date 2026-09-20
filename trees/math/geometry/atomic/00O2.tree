@@ -1,0 +1,17 @@
+\title{第二基本形式与形算子的对偶描述}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{X:U\to\mathbb R^3} 是[正则参数曲面](00O1)，记其局部像为 #{M}，#{p=X(u,v)}，选单位法向 #{N=(X_u\times X_v)/\|X_u\times X_v\|}。第二基本形式为对称双线性形式，坐标记为}
+##{II=e\,du^2+2f\,du\,dv+g\,dv^2,\qquad
+e=\langle X_{uu},N\rangle,\quad
+f=\langle X_{uv},N\rangle,\quad
+g=\langle X_{vv},N\rangle.}
+\p{这里系数 #{g} 不是整个度量张量。对 #{v=aX_u+bX_v}，#{II(v,v)=ea^2+2fab+gb^2}，刻画二阶法向弯曲。}
+\p{形算子是法向映射的[微分](0045)取负：}
+##{S:T_pM\to T_pM,\qquad S(v)=-dN(v).}
+\p{微分 #{\langle N,N\rangle=1} 保证其像切于曲面；微分 #{\langle N,X_i\rangle=0} 得 #{II(v,w)=I(Sv,w)}，所以这两个对象通过[第一基本形式](0057)互相确定。若度量矩阵记为 #{G_0=(g_{ij})=\begin{pmatrix}E&F\\F&G\end{pmatrix}}，则}
+##{[S]=G_0^{-1}\begin{pmatrix}e&f\\f&g\end{pmatrix}
+=(g^{ij})\begin{pmatrix}e&f\\f&g\end{pmatrix}.}
+\p{原式对 #{(g^{ij})} 再取逆是错误的；逆度量只取一次。翻转 #{N} 同时使 #{II,S} 变号。}

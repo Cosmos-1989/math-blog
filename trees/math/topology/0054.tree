@@ -3,16 +3,10 @@
 \taxon{Lemma}
 \author{author}
 
-\p{Jordan 曲线定理的一个技术核心是：任意 Jordan 曲线都可以由简单闭多边形逼近，而且这种逼近不会改变离曲线足够远的点的绕数。}
-
-\p{更准确地说，对任意 #{\varepsilon>0}，存在一个 Jordan 多边形 #{P_\varepsilon}，满足 Hausdorff 距离}
-
-##{d_H(P_\varepsilon,\Gamma)<\varepsilon,}
-
-\p{并且对每个满足 #{\operatorname{dist}(z,\Gamma)>2\varepsilon} 的点，都有}
-
-##{\operatorname{Ind}_{P_\varepsilon}(z)=\operatorname{Ind}_\gamma(z).}
-
-\p{构造方法是把参数圆周 #{S^1} 取足够细的分点，按曲线的循环顺序连接相邻采样点。细分足够细时，这些线段只会与相邻线段接触，于是得到简单闭多边形。}
-
-\p{每条小弧都可以在一个狭窄邻域内同伦到对应线段。若 #{z} 与原曲线保持距离大于 #{2\varepsilon}，则整个同伦过程中不会穿过 #{z}，因此 [绕数](0053) 不变。正是这个引理把多边形的“内外分区”传递给一般 Jordan 曲线。}
+\p{设 #{\gamma:S^1\to\mathbb R^2} 参数化一条 [Jordan 曲线](0052)，#{\varepsilon>0}。可以选择参数化的简单闭多边形 #{p_\varepsilon:S^1\to\mathbb R^2}，使}
+##{\sup_{t\in S^1}\|p_\varepsilon(t)-\gamma(t)\|<\varepsilon.}
+\p{其像 #{P_\varepsilon} 与 #{\Gamma=\gamma(S^1)} 的 [Hausdorff 距离](00FN)也小于 #{\varepsilon}。}
+\p{这是简单曲线的实质性逼近引理；任意细分后直接连接采样点，并不能只靠一致连续性排除线段交叉。必须另外构造保持简单性和参数次序的多边形，不能略过这一拓扑步骤。}
+\p{一旦取得上述参数化估计，若 #{\operatorname{dist}(z,\Gamma)>\varepsilon}，则直线[同伦](00FO) #{H(t,s)=(1-s)\gamma(t)+sp_\varepsilon(t)} 不经过 #{z}，因此[绕数](00FK)满足}
+##{\operatorname{Ind}_{p_\varepsilon}(z)=\operatorname{Ind}_{\gamma}(z).}
+\p{特别地，原有较弱条件 #{\operatorname{dist}(z,\Gamma)>2\varepsilon} 也充分。仅有像的 Hausdorff 逼近而无参数控制，则不能这样断言绕数相同。}

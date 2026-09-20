@@ -54,7 +54,7 @@ When using a notion defined elsewhere, link it.
 Examples:
 
 - Use `[代数理论](003C)` instead of assuming the reader remembers what `T` means.
-- Use `[签名与项](003D)` before discussing equations between terms.
+- Use `[签名](00DF)` and `[项](00DG)` before discussing equations between terms.
 - Use `[有限积范畴中的内部群](003J)` before discussing internal group homomorphisms.
 
 Do not link every common word. Prefer linking:
@@ -102,7 +102,8 @@ Good outline note shape:
 
 \ol{
   \li{[代数理论](003C)}
-  \li{[签名与项](003D)}
+  \li{[代数签名](00DF)}
+  \li{[签名上的项](00DG)}
   \li{[群论的等式公理化](003E)}
 }
 ```
@@ -166,3 +167,41 @@ Avoid:
 - Repeating entire definitions instead of linking to atomic notes.
 - Manual "相关页面" blocks that duplicate generated backlinks or related notes.
 - Prematurely deep folder or outline structures.
+
+## Semantic Acceptance Gate
+
+A successful Forester build only checks syntax and rendering. It is not evidence that a note is atomic or that its mathematical prerequisites are present.
+
+Before marking a refactoring complete:
+
+1. Name the single question answered by each permanent note. Split independent definitions, examples and correspondence theorems even when they fit in three short paragraphs.
+2. Check the destination of every prerequisite link. A link labelled "Coxeter system" must land on the definition of a Coxeter system, not a BN-pair overview which uses buildings.
+3. Follow the prerequisite chain down to explicitly stated baseline knowledge. For example, buildings require Coxeter complexes, parabolic subgroups, cosets, subgroups and groups. Do not stop after adding one more layer of links.
+4. Separate prerequisite edges from examples, consequences and navigation. The prerequisite graph should be acyclic; ordinary related-page links need not be.
+5. Preserve old IDs as outlines, but retarget terminology links in other notes to the new atomic definitions. Keeping all incoming links aimed at the old outline does not finish the migration.
+6. Record which pages received explicit page-by-page semantic review, the review scope, and which remain unreviewed. Never describe the whole forest as atomic because a subset or a rendering check passed.
+
+## Whole-Site Review Register
+
+`research/site-evergreen-audit.json` is the current whole-site register. It records the original IDs, per-page editorial decisions, necessary prerequisite edges, split mappings, terminology migrations, and any deferred reviews. The discipline-level records are `research/site-review-*.json`. Keep these records in sync when changing an audited dependency or splitting a page.
+
+`research/evergreen-audit.json` is a historical record of the earlier partial review, not the current acceptance scope. `EVERGREEN_REFACTOR_AUDIT.md` describes the current scope and limitations.
+
+Run these checks after editing:
+
+```sh
+node scripts/check-site-notes.mjs --source-only
+forester build forest.toml
+node scripts/check-site-notes.mjs --katex /path/to/katex/dist/katex.js
+node scripts/check-logic-notes.mjs --katex /path/to/katex/dist/katex.js
+```
+
+`check-evergreen-notes.mjs` is a compatibility entry point for the whole-site check. The logic check separately verifies the research-source manifest. Neither tool replaces mathematical reading.
+
+- A Definition, Construction, or Theorem may supply a real prerequisite. A navigation Outline may not.
+- Preserve named structures and their assumptions, formulas, examples, proof arguments, counterexamples, and source references when splitting. Correct errors explicitly rather than preserving a false claim.
+- Similar words do not always denote the same concept. Resolve such cases in context, for example real versus p-adic semialgebraic sets and Coxeter versus BN-pair parabolic subgroups.
+- Retarget terminology links to definitions, but keep a clearly labelled topic/reading-entry link to the old outline so that no historical page becomes unreachable.
+- Do not create duplicate definitions merely to make a prerequisite chain look complete. Reuse the canonical note and keep applications separate.
+- The baseline is elementary set operations, natural/real/complex arithmetic, and finite algebraic manipulation. Named structures beyond this baseline need a local definition or a link. State any additional background needed for a proof.
+- Proof sketches and open problems must remain labelled as such. Reviewing their organization does not upgrade them to complete proofs.

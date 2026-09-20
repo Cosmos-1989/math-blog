@@ -1,0 +1,11 @@
+\title{完备离散赋值域满足 Hensel 性}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Johnson，§2](007L)}
+
+\p{设 #{(K,v)} 为值群同构于 #{\mathbb Z} 的非平凡[赋值域](00SF)，并对[赋值度量](00SI) [完备](00ET)。则 #{\mathcal O_v} 满足 [Hensel 单根提升](00SJ)。}
+\p{证明要点：设 #{f\in\mathcal O_v[X]} 首一，#{\bar a} 为其剩余多项式的单根。选提升 #{a_0\in\mathcal O_v} 使 #{v(f(a_0))>0}、#{v(f'(a_0))=0}。Newton 迭代}
+##{a_{n+1}=a_n-\frac{f(a_n)}{f'(a_n)}}
+\p{保持 #{a_n\in\mathcal O_v} 和导数为单位，并使 #{v(f(a_{n+1}))\geq2v(f(a_n))}。于是修正量赋值趋于无穷，#{a_n} 是 Cauchy 序列；完备性给极限 #{a}，多项式连续性给 #{f(a)=0}，且 #{a\equiv a_0\bmod\mathfrak m_v}。}
+\p{#{\mathbb Q_p} 与 #{k((t))} 都适用。一般高秩赋值的“完备”不能直接替代此处离散值群假设；反过来 Hensel 域也不必完备。}

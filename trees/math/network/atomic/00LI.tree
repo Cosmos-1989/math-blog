@@ -1,0 +1,12 @@
+\title{Poisson 分枝过程的灭绝概率}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{设[分枝过程](00LH)的后代数服从 #{\operatorname{Poi}(c)} [分布](00L6)，#{c>0}。灭绝概率 #{q} 是 #{[0,1]} 中方程的最小解：}
+##{q=e^{-c(1-q)}.}
+\p{证明：令 #{q_r} 为第 #{r} 代已灭绝的概率，#{q_0=0}。按第一代后代数条件化及各家系独立性，得 #{q_{r+1}=\mathbb E q_r^\xi=e^{c(q_r-1)}}。递增极限为最小不动点。由严格凸性，当 #{c\leq1} 时仅有解 #{q=1}；当 #{c>1} 时还有唯一解 #{q\in(0,1)}，生存概率 #{\rho(c)=1-q>0}。}
+\p{在 #{c\downarrow1} 的超临界侧，}
+##{1-\rho=e^{-c\rho},\qquad
+\log(1-\rho)=-c\rho,\qquad \rho(c)\sim2(c-1).}
+\p{最后一步由 #{\log(1-\rho)=-\rho-\rho^2/2+O(\rho^3)} 得到。若 #{0<c<1}，总个体数还有指数尾：探索前 #{k-1} 个个体未结束要求其后代和至少 #{k-1}，而该和为 #{\operatorname{Poi}(c(k-1))}，指数矩界给出 #{\mathbb P(T\geq k)\leq Ce^{-\alpha k}}，其中 #{C,\alpha>0} 只依赖 #{c}。}

@@ -1,0 +1,17 @@
+\title{一阶公式的满足关系}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+
+\p{固定[一阶结构](00GD) #{M} 和给所有变量取值的赋值 #{s:\mathrm{Var}\to M}。先递归计算[项](00DG)：#{x^M[s]=s(x)}，#{c^M[s]=c^M}，以及}
+##{f(t_1,\ldots,t_k)^M[s]=f^M(t_1^M[s],\ldots,t_k^M[s]).}
+\p{对[公式](00CC)，满足关系 #{M,s\models\varphi} 由以下规则递归确定，其中 #{s[x\mapsto b]} 只把变量 #{x} 的赋值改为 #{b}。}
+\ul{
+\li{#{M,s\models t=u} 当且仅当 #{t^M[s]=u^M[s]}。}
+\li{#{M,s\models R(t_1,\ldots,t_k)} 当且仅当 #{(t_1^M[s],\ldots,t_k^M[s])\in R^M}。}
+\li{#{M,s\models\neg\varphi} 当且仅当 #{M,s\not\models\varphi}。}
+\li{#{M,s\models\varphi\wedge\psi} 当且仅当两者都满足；#{\varphi\vee\psi} 当且仅当至少一者满足。}
+\li{#{M,s\models\exists x\,\varphi} 当且仅当存在 #{b\in M} 使 #{M,s[x\mapsto b]\models\varphi}。}
+\li{#{M,s\models\forall x\,\varphi} 当且仅当每个 #{b\in M} 都使 #{M,s[x\mapsto b]\models\varphi}。}
+}
+\p{归纳可见，真值只依赖自由变量的赋值。若 #{x=(x_1,\ldots,x_n)} 包含全部自由变量，常写 #{M\models\varphi(a)} 代替 #{s(x_i)=a_i} 时的判断；句子不依赖赋值。带参数的 #{\varphi(x;b)} 则固定参数变量取值 #{b}，只让 #{x} 变化。}

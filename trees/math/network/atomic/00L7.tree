@@ -1,0 +1,9 @@
+\title{二项分布的 Poisson 极限}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{m_n\to\infty}，#{p_n\to0}，#{m_np_n\to\lambda\geq0}。若 #{X_n\sim\operatorname{Bin}(m_n,p_n)} 为[二项变量](00L5)，则它[依分布收敛](00LA)到 #{\operatorname{Poi}(\lambda)} [变量](00L6)。}
+\p{对于固定 #{k} 且 #{\lambda>0}，}
+##{\binom{m_n}{k}p_n^k(1-p_n)^{m_n-k}\longrightarrow e^{-\lambda}\frac{\lambda^k}{k!}.}
+\p{极限概率之和为 1，故点概率收敛给出分布收敛。#{\lambda=0} 时 #{\mathbb P(X_n>0)\leq\mathbb EX_n=m_np_n\to0}。特别地 #{\operatorname{Bin}(n,c/n)\Rightarrow\operatorname{Poi}(c)}，#{c>0} 固定。}

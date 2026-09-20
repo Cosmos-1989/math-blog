@@ -1,0 +1,11 @@
+\title{范畴}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+
+\p{本文采用局部小范畴的约定。范畴 #{\mathcal C} 包含一类对象 #{\operatorname{Ob}(\mathcal C)}，以及每对对象 #{X,Y} 的态射集合 #{\operatorname{Hom}_{\mathcal C}(X,Y)}。态射带有指定的源和靶，并配备复合与单位态射}
+##{\circ:\operatorname{Hom}_{\mathcal C}(Y,Z)\times\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal C}(X,Z),\qquad \mathrm{id}_X:X\to X.}
+\p{公理是：对于可复合的 #{f:X\to Y,g:Y\to Z,h:Z\to W}，}
+##{(h\circ g)\circ f=h\circ(g\circ f),\qquad \mathrm{id}_Y\circ f=f=f\circ\mathrm{id}_X.}
+\p{对象与所有态射都构成集合时称小范畴。态射 #{f:X\to Y} 若有 #{g:Y\to X} 满足 #{gf=\mathrm{id}_X,fg=\mathrm{id}_Y}，称同构；#{g} 是其唯一逆态射。}
+\p{例子包括：集合与函数的 #{\mathbf{Set}}；[群](0001)与[群同态](00BH)的 #{\mathbf{Grp}}；[拓扑空间](00E0)与[连续映射](00E2)的 #{\mathbf{Top}}；域 #{k} 上[向量空间](00D3)与线性映射的 #{\mathbf{Vect}_k}。这里线性映射指满足 #{f(ax+by)=af(x)+bf(y)} 的函数。各例的复合都是函数复合。这些例子不是范畴定义的前置。}

@@ -1,0 +1,12 @@
+\title{度量空间的完备化}
+\date{2026-09-20}
+\taxon{Construction}
+\author{author}
+
+\p{[度量空间](00EK) #{X} 的\strong{完备化}是一个[完备度量空间](00ET) #{\widehat X} 连同[等距嵌入](00EV) #{j:X\to\widehat X}，使 #{j(X)} [稠密](00EB)。每个度量空间都有完备化，且在固定 #{j} 后唯一到等距同构。}
+\p{构造：在 #{X} 中所有 [Cauchy 序列](00ER)上定义 #{(x_n)\sim(y_n)} 当且仅当 #{d(x_n,y_n)\to0}。令 #{\widehat X} 为等价类的集合，并置}
+##{\widehat d([(x_n)],[(y_n)])=\lim_n d(x_n,y_n).}
+\p{不等式 #{|d(x_n,y_n)-d(x_m,y_m)|\le d(x_n,x_m)+d(y_n,y_m)} 说明实数极限存在；同样的不等式说明换代表元不影响极限。其余度量公理逐项取极限得到，零距离的等价类恰好相同。}
+\p{映射 #{j(x)=[(x,x,\ldots)]} 等距。对 #{\xi=[(x_n)]}，有 #{j(x_n)\to\xi}，故像稠密。}
+\p{完备性：若 #{(\xi_n)} 在 #{\widehat X} 中 Cauchy，由稠密性选 #{a_n\in X} 使 #{\widehat d(j(a_n),\xi_n)<1/n}。三角不等式说明 #{(a_n)} 是 Cauchy 序列。令 #{\xi=[(a_n)]}，则 #{j(a_n)\to\xi}，再次用三角不等式得 #{\xi_n\to\xi}。}
+\p{若 #{Y} 是另一个完备化，将 #{[(x_n)]} 送到 #{Y} 中 #{j_Y(x_n)} 的极限，就得到唯一延续原嵌入的等距同构。例如 #{\mathbb Q} 的完备化是 #{\mathbb R}。}

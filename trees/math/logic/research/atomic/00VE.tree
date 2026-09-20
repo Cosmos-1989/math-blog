@@ -1,0 +1,19 @@
+\title{局部可解性类别的一般包含关系}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bernshteyn，§5](007H)}
+
+\p{固定[局部标记问题](009B)，不同[群](0001)给出不同的正则性存在类别。一般成立 CONTINUOUS 包含于 BOREL，后者包含于 MEASURE 和 BAIRE；CONTINUOUS 也包含于 COMPUTABLE。}
+
+\figure{\tex{\usepackage{amsmath,amssymb,tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathrm{CONTINUOUS} \arrow[r,hook] \arrow[d,hook] &
+\mathrm{BOREL} \arrow[d,hook] \\
+\mathrm{COMPUTABLE} & \mathrm{MEASURE}\cap\mathrm{BAIRE}
+\end{tikzcd}
+}}
+
+\p{图中的箭头仅表示已知包含，不表示没有画出的箭头不存在；它是关系图，不是两个路径终点相同的交换方块。}
+
+\p{符号分别采用 [CONTINUOUS](00V3)、[BOREL](00V4)、[MEASURE](00V5)、[BAIRE](00V6)、[COMPUTABLE](00V7) 的定义。文字等式为 #{\mathrm{CONTINUOUS}\subseteq\mathrm{BOREL}\subseteq\mathrm{MEASURE}\cap\mathrm{BAIRE}} 与 #{\mathrm{CONTINUOUS}\subseteq\mathrm{COMPUTABLE}}。}

@@ -1,0 +1,12 @@
+\title{G(n,p) 的连通阈值}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{固定 #{c\in\mathbb R}，设[随机图](00LD) #{G_n=G(n,p_n)}，#{p_n=(\log n+c)/n}。则}
+##{\mathbb P(G_n\text{ 连通})\longrightarrow e^{-e^{-c}}.}
+\p{[连通](00LC)必然没有孤立点，而在此尺度}
+##{\mathbb P(G_n\text{ 不连通且没有孤立点})=o(1).}
+\p{后一个估计排除了大小在 #{2} 与 #{n/2} 之间的分支，不是单靠孤立点计数可以证明的事实。结合[孤立点极限](00LM)，}
+##{\mathbb P(G_n\text{ 连通})=\mathbb P(Y_n=0)+o(1)\longrightarrow e^{-e^{-c}}.}
+\p{完整分支估计见 [Frieze–Karoński, Theorem 4.1](https://www.math.cmu.edu/~af1p/Teaching/RandomGraphs/Undergraduate/BOOK.pdf)。若 #{p_n=(\log n+\omega(n))/n\in[0,1]}，单调性给出：#{\omega(n)\to+\infty} 时[以高概率](00L8)连通，#{\omega(n)\to-\infty} 时以高概率不连通。因此阈值尺度为 #{\log n/n}。}

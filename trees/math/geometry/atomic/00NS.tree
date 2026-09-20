@@ -1,0 +1,14 @@
+\title{沿曲线的平行移动}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{M} 带[仿射联络](00OD) #{\nabla}，#{c:I\to M} 为[光滑曲线](00N9)，#{0\in I}。沿曲线的向量场局部写为}
+##{W(t)=\mu^i(t)\frac{\partial}{\partial x^i}(c(t)).}
+\p{利用[Christoffel 符号](00OE)，沿曲线协变导数为}
+##{\nabla_{\dot c(t)}W(t)=
+\dot\mu^i(t)\frac{\partial}{\partial x^i}
++\dot c^i(t)\mu^j(t)\Gamma^k_{ij}(c(t))\frac{\partial}{\partial x^k}.}
+\p{这只依赖 #{W} 沿 #{c} 的值，不需要选择邻域延拓。给定 #{W(0)}，线性常微分方程}
+##{\nabla_{\dot c(t)}W(t)=0}
+\p{在曲线定义区间上有唯一解，见[常微分方程存在唯一性](00OB)。称此解为初始向量沿 #{c} 的平行移动；端点取值给出切空间之间的线性同构。}

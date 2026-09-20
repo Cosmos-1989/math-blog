@@ -1,0 +1,14 @@
+\title{自然变换}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+
+\p{给定[函子](00I1) #{F,G:\mathcal C\to\mathcal D}，自然变换 #{\eta:F\Rightarrow G} 为每个对象 #{X} 指定态射 #{\eta_X:F(X)\to G(X)}，使每个 #{f:X\to Y} 都满足自然性：}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+F(X) \arrow[r,"\eta_X"] \arrow[d,"F(f)"'] & G(X) \arrow[d,"G(f)"] \\
+F(Y) \arrow[r,"\eta_Y"'] & G(Y)
+\end{tikzcd}
+}}
+##{G(f)\circ\eta_X=\eta_Y\circ F(f).}
+\p{若每个分量 #{\eta_X} 都是同构，则称自然同构。自然性不是逐对象任意选择态射，而是要求这些选择与所有结构箭头相容。}

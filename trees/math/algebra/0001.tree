@@ -3,19 +3,11 @@
 \taxon{Definition}
 \author{author}
 
-\p{群是数学中最基本的代数结构之一，广泛应用于几何、数论和物理学中。}
-
-\def\G{#{
-\mathcal{G}}}
-\def\op[x][y]{#{\x \cdot \y}}
-
-\p{一个\strong{群}（Group）是一个集合 \G 配备一个二元运算 #{
-\cdot : \mathcal{G} \times \mathcal{G} \to \mathcal{G}}，满足以下三条公理：}
-
+\p{本页以初等集合、函数及整数算术为基础约定，不以模型论中的形式化集合论为前置。群是集合 #{G} 配备二元运算 #{\cdot:G\times G\to G}，满足以下公理。}
 \ol{
-  \li{\strong{结合律}：对于所有 #{a, b, c \in \G}，有 \op{\op{a}{b}}{c} = \op{a}{\op{b}{c}}。}
-  \li{\strong{单位元}：存在元素 #{e \in \G}，使得对所有 #{a \in \G}，有 \op{e}{a} = \op{a}{e} = a。}
-  \li{\strong{逆元}：对每个 #{a \in \G}，存在 #{a^{-1} \in \G}，使得 \op{a}{a^{-1}} = \op{a^{-1}}{a} = e。}
+\li{结合律：对所有 #{a,b,c\in G}，有 #{(a\cdot b)\cdot c=a\cdot(b\cdot c)}。}
+\li{单位元：存在 #{e\in G}，对所有 #{a\in G} 有 #{e\cdot a=a\cdot e=a}。}
+\li{逆元：对每个 #{a\in G}，存在 #{a^{-1}\in G}，满足 #{a\cdot a^{-1}=a^{-1}\cdot a=e}。}
 }
-
-\p{如果群还满足交换律（即对所有 #{a, b \in \G}，有 \op{a}{b} = \op{b}{a}），则称之为\strong{阿贝尔群}或\strong{交换群}。}
+\p{单位元唯一，因为两个单位元 #{e,e'} 满足 #{e=e\cdot e'=e'}；逆元也唯一，因为 #{b\cdot a=e=a\cdot c} 蕴含 #{b=b\cdot(a\cdot c)=(b\cdot a)\cdot c=c}。因此通常把单位元写成 #{1}，乘法简写成 #{ab}；加法记号下则写 #{0,-a}。群必非空。}
+\p{群用于描述可逆运算与对称性，在几何、数论和物理中均有应用。若另有 #{ab=ba}，则称[阿贝尔群](00G3)；交换律不是一般群的公理。}

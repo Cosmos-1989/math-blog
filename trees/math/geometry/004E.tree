@@ -3,13 +3,13 @@
 \taxon{Principle}
 \author{author}
 
-\p{几何变换有两种常见视角。数学家的被动观点是固定同一个点 #{p}，改用不同坐标 #{x} 和 #{y} 表示它；物理文献中常用的主动观点是在固定坐标 #{x} 中移动点，并考察张量表达式的变分。}
+\p{几何变换有两种常见视角。被动观点是固定同一个点 #{p}，改用不同坐标 #{x} 和 #{y} 表示它；主动观点是在固定坐标 #{x} 中移动点，并考察张量表达式的变分。}
 
-\p{以 #{1}-形式 #{\omega=\omega_i(x)dx^i} 为例。主动变分把点移动为}
+\p{设 #{M} 为[光滑流形](0043)。以[一形式](00NK) #{\omega=\omega_i(x)dx^i} 为例。主动变分把点移动为}
 
 ##{x\mapsto x+\varepsilon\xi(x)=x+\delta x,}
 
-\p{其中 #{\xi} 是向量场，#{\varepsilon} 是小参数。诱导的 #{1}-形式变为}
+\p{其中 #{\xi} 是[光滑向量场](00NC)，#{\varepsilon} 是小参数。在固定坐标中用映射 #{F_\varepsilon(x)=x+\varepsilon\xi(x)}（局部定义）作[拉回](00NQ)，得到}
 
 ##{\omega_i(x+\varepsilon\xi(x))\,d(x^i+\varepsilon\xi^i(x)).}
 
@@ -20,7 +20,7 @@
 \left(dx^i+\varepsilon\frac{\partial\xi^i}{\partial x^k}dx^k\right)
 +O(\varepsilon^2).}
 
-\p{因此令 #{\varepsilon\to 0} 得到变分}
+\p{因此把变分定义为 #{\delta\omega=\left.\frac{d}{d\varepsilon}\right|_{\varepsilon=0}F_\varepsilon^*\omega}，即沿 #{\xi} 的 Lie 导数，得到}
 
 ##{\delta\omega
 =\frac{\partial\omega_i}{\partial x^k}\xi^k dx^i

@@ -1,0 +1,8 @@
+\title{度量连续性与序列判据}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{f:(X,d)\to(Y,\rho)} 是[度量空间](00EK)之间的映射，#{x\in X}。以下条件等价：}
+\ol{\li{对每个 #{\varepsilon>0}，存在 #{\delta>0}，使 #{d(x,x')<\delta} 蕴含 #{\rho(f(x),f(x'))<\varepsilon}。}\li{每个[收敛序列](00EP) #{x_n\to x} 都满足 #{f(x_n)\to f(x)}。}\li{#{f} 在点 #{x} 关于[度量拓扑](00EN)[连续](00E2)。}}
+\p{证明：第一条件直接推出第二条件；若第一条件失败，固定某个 #{\varepsilon>0}，对每个 #{n} 选 #{x_n} 使 #{d(x_n,x)<1/n} 而像的距离至少为 #{\varepsilon}，即反驳第二条件。第一与第三条件等价，因为开球是邻域基。全局连续就是这些条件在每一点成立。}

@@ -1,0 +1,10 @@
+\title{带整数叶标签的自由二叉树模型}
+\date{2026-09-20}
+\taxon{Construction}
+\author{author}
+
+\p{取[签名](00DF)：每个整数 #{n\in\mathbb Z} 一个常元 #{\operatorname{Leaf}_n}，以及一个二元运算 #{\operatorname{Node}}，不加方程。其所有无变量[项](00DG)组成集合 #{T}，即所有有限有序满二叉树，叶子带整数标签。左右子树的次序是结构的一部分。}
+\p{用造叶与接树解释这些符号，就得到[模型](00I8) #{T}。对任意模型 #{A}，递归定义}
+##{h(\operatorname{Leaf}_n)=\operatorname{Leaf}_n^A,\qquad
+h(\operatorname{Node}(s,t))=\operatorname{Node}^A(h(s),h(t)).}
+\p{对项归纳证明它是唯一[模型同态](00I9) #{T\to A}。因此 #{T} 是自由于空生成集的模型，也就是初始模型；它不是任意解释该签名的模型。}

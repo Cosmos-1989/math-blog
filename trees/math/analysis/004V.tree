@@ -3,15 +3,15 @@
 \taxon{Definition}
 \author{author}
 
-\p{设 #{H} 是复 [内积空间](004M) 中完备的情形，即复 Hilbert 空间，#{B(H)} 表示 #{H} 上全部有界线性算子所成的代数。若 #{A\subseteq B(H)} 是任意集合，则其\strong{交换子}定义为}
+\p{设 #{H} 是复 [Hilbert 空间](00MQ)，#{B(H)} 表示其全部[有界线性算子](00M4)所成的代数。若 #{A\subseteq B(H)} 是任意集合，则其\strong{交换子}定义为}
 
-##{A' := \{T\in B(H): TA=AT\ \forall A\in A\}.}
+##{A' := \{T\in B(H): TS=ST\ \forall S\in A\}.}
 
 \p{进一步定义\strong{双交换子}}
 
 ##{A'' := (A')'.}
 
-\p{交换子总是含幺、对 #{*} 封闭，并且对任意族的交稳定。若 #{A\subseteq M}，则包含关系在交换子下反向：}
+\p{交换子总是含幺子代数，且 #{(\bigcup_i A_i)'=\bigcap_i A_i'}。只有在 #{A} 对[伴随](00MU)封闭等额外条件下，才能保证 #{A'} 对伴随封闭：从 #{TS^*=S^*T} 取伴随得 #{ST^*=T^*S}。任意算子集合的交换子不一定是星子代数。若 #{A\subseteq M}，则包含关系在交换子下反向：}
 
 ##{M' \subseteq A'.}
 
@@ -19,4 +19,6 @@
 
 ##{A\subseteq A''.}
 
-\p{在讨论 von Neumann 双交换子定理时，通常假定 #{A} 是 #{B(H)} 中的含幺 #{*}-子代数，也就是说 #{\operatorname{Id}\in A}，且若 #{S\in A} 则 #{S^*\in A}。在这个设定下，#{A''} 是由代数 #{A} 自身决定的一个更刚性的算子代数候选。}
+\p{反例：在 #{\mathbb C^2} 上令 #{N=\begin{pmatrix}0&1\\0&0\end{pmatrix}}，#{A=\{N\}}。#{N\in A'}，但 #{N^*\notin A'}，因为 #{NN^*\ne N^*N}。}
+
+\p{在讨论 von Neumann 双交换子定理时，通常假定 #{A} 是 #{B(H)} 中的[含幺星子代数](00MV)，也就是说 #{\operatorname{Id}\in A}，且若 #{S\in A} 则 #{S^*\in A}。在这个设定下，#{A''} 是由代数 #{A} 自身决定的一个更刚性的算子代数候选。}

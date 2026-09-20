@@ -1,0 +1,16 @@
+\title{dp 极小整环的剩余环拉回分类}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Johnson，定理 A.12](007L)}
+
+\p{设 #{R_0} 为 [dp 极小](00T8) [赋值环](00SG)，#{I} 为[真理想](00CT)，#{S\subseteq R_0/I} 为与商环共用单位元的有限[子环](00GA)。令 #{q:R_0\to R_0/I} 为[商映射](00CU)，定义 #{R=q^{-1}(S)}。若 #{R} 无限，则它是 dp 极小整环。}
+\figure{\tex{\usepackage{amsmath,amssymb,tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+R \arrow[r,hook] \arrow[d] & R_0 \arrow[d,"q"] \\
+S \arrow[r,hook] & R_0/I
+\end{tikzcd}
+}}
+\p{方块表示 #{R=\{x\in R_0:q(x)\in S\}}。无限性不能省略：若 #{I=0}，则 #{R=S} 有限，dp 秩为零而不是一。在此无限整环 #{R_0} 背景中，非零理想 #{I} 已无限，所以 #{I\ne0} 保证所需无限性。}
+\p{反过来，每个无限 dp 极小整环都是 dp 极小域、dp 极小赋值环，或上述无限拉回形式。赋值环与对应赋值域的 dp 极小性相符，详见[分式域的秩传递](00XW)。}
+\p{[导子环](00YM)说明有限秩大于一时会出现不能由此单赋值分类直接覆盖的结构。}

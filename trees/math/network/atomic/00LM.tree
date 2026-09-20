@@ -1,0 +1,12 @@
+\title{连通阈值处的孤立点 Poisson 极限}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{固定 #{c\in\mathbb R}，设[随机图](00LD) #{G_n=G(n,p_n)}，其中 #{p_n=(\log n+c)/n}，只考虑足够大而使 #{p_n\in[0,1]} 的 #{n}。令[孤立点](00LB)数为}
+##{Y_n=\#\{v:\deg(v)=0\}.}
+\p{顶点孤立当且仅当其 #{n-1} 条候选边全不存在，故}
+##{\mathbb E Y_n=n(1-p_n)^{n-1}\longrightarrow e^{-c}.}
+\p{对每个固定 #{k}，选定的 #{k} 个不同顶点都孤立，要求它们内部及通向外部的边全部缺失。因此}
+##{\mathbb E(Y_n)_k=(n)_k(1-p_n)^{k(n-k)+\binom k2}\longrightarrow e^{-ck}.}
+\p{由[阶乘矩判据](00LR)，有[分布收敛](00LA) #{Y_n\Rightarrow\operatorname{Poi}(e^{-c})}，并且 #{\mathbb P(Y_n=0)\to e^{-e^{-c}}}。}

@@ -1,0 +1,10 @@
+\title{一阶公式与自由变量}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Johnson，§3](007L)；[Ben Yaacov，§1、4](007G)}
+
+\p{固定[一阶语言](00CB) #{L}。[项](00DG)由变量、常元和有限次函数符号应用形成。原子公式是项的等式 #{t=u} 或关系式 #{R(t_1,\ldots,t_k)}。}
+\p{从原子公式施加有限次布尔联结词 #{\neg,\wedge,\vee} 与量词 #{\exists x,\forall x}，得到一阶公式。自由变量指没有被对应量词约束的变量出现；没有自由变量的公式称句子。}
+\p{例如 #{\exists y\,(x\cdot y=1)} 的自由变量为 #{x}；再在外面加 #{\forall x} 就是句子。量词只遍历底集的元素，不遍历任意子集或任意函数。}
+\p{自由变量集可递归计算：原子公式取其中所有项的变量，#{\mathrm{FV}(\neg\varphi)=\mathrm{FV}(\varphi)}，二元联结词取两边自由变量集的并，而 #{\mathrm{FV}(Qx\,\varphi)=\mathrm{FV}(\varphi)\setminus\{x\}}（#{Q=\exists,\forall}）。蕴含 #{\varphi\to\psi} 是 #{\neg\varphi\vee\psi} 的缩写。}

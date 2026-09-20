@@ -1,0 +1,21 @@
+\title{圆周符号系统的拼接算子}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.3、2.5](007J)}
+
+\p{从有限字母表 #{\Sigma} 的单字集合 #{\mathcal W_0=\Sigma} 开始，取[唯一可读](00WT)的输入字元组，并使用下列带边界符号的拼接。}
+
+\p{圆周构造增加边界符号 #{b,e}。设 #{q_0=1,p_0=0}，并取整数 #{k_n\geq2,l_n\geq2}、#{\sum_n1/l_n<\infty}，令}
+
+##{q_{n+1}=k_nl_nq_n^2,\qquad p_{n+1}=p_nk_nl_nq_n+1.}
+
+\p{令 #{j_i} 为 #{p_nj_i\equiv i\pmod{q_n}} 的代表（初始层取零），用算子}
+
+##{\mathcal C_n(w_0,\ldots,w_{k_n-1})=
+\prod_{i=0}^{q_n-1}\prod_{j=0}^{k_n-1}
+b^{q_n-j_i}w_j^{\,l_n-1}e^{j_i}}
+
+\p{将旧拼接改为圆周拼接。长度变成 #{q_{n+1}}，圆周旋转成为时钟因子。}
+
+\p{#{w_j} 的长度为 #{q_n}，#{j_i\in\{0,\ldots,q_n-1\}}；递推保证 #{\gcd(p_n,q_n)=1}。所生成子移位称圆周系统；极限 #{\alpha=\lim p_n/q_n} 的圆周旋转记录其时钟。}

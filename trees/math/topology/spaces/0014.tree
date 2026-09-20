@@ -1,12 +1,9 @@
 \title{Zariski 拓扑}
 \date{2026-03-24}
-\taxon{Example}
+\taxon{Definition}
 \author{author}
 
-\p{设 R 是有单位元的交换环。令 #{\operatorname{Spec} R} 表示 R 的所有素理想的集合。}
-
-\p{\strong{Zariski 拓扑}定义如下：}
-
-\p{闭集是形如 #{V(E) = \{p \in \operatorname{Spec} R \mid E \subseteq p\}} 的集合，其中 E 是 R 的任意子集。}
-
-\p{Zariski 拓扑是代数几何中的基本拓扑结构，它反映了代数集的几何性质。}
+\p{设 #{R} 是[交换含幺环](00CS)，在其[素谱](00FW) #{\operatorname{Spec}R} 上，以以下集合为全部闭集，定义\strong{Zariski 拓扑}：}
+##{V(E)=\{\mathfrak p\in\operatorname{Spec}R:E\subseteq\mathfrak p\},\qquad E\subseteq R.}
+\p{如果 #{I=(E)} 是 #{E} 生成的[理想](00CT)，则 #{V(E)=V(I)}。有 #{V(0)=\operatorname{Spec}R}、#{V(R)=\varnothing}、#{\bigcap_\alpha V(I_\alpha)=V(\sum_\alpha I_\alpha)} 及 #{V(I)\cup V(J)=V(IJ)}，所以满足[闭集公理](00E1)。}
+\p{其中 #{IJ} 是由所有乘积 #{ab}（#{a\in I,b\in J}）生成的理想。这个拓扑把理想包含关系转化为空间的闭集包含关系。}

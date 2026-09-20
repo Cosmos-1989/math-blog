@@ -1,0 +1,9 @@
+\title{二项变量的 Chernoff 集中界}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{若 #{X\sim\operatorname{Bin}(m,p)} 为[二项变量](00L5)，记 #{\mu=mp}。对任意 #{0<\varepsilon<1}，}
+##{\mathbb P(|X-\mu|>\varepsilon\mu)\leq2\exp(-\varepsilon^2\mu /3).}
+\p{证明要点：独立性给出指数[期望](00L1) #{\mathbb E e^{tX}=(1-p+pe^t)^m\leq\exp(\mu(e^t-1))}。对非负变量 #{Z}，#{\mathbb P(Z\geq a)\leq\mathbb EZ/a}，因为 #{Z\geq a1_{\{Z\geq a\}}}。将此用于 #{e^{tX}} 并对 #{t>0} 优化得到上尾，#{t<0} 得下尾；用 #{(1+\varepsilon)\log(1+\varepsilon)-\varepsilon\geq\varepsilon^2/3} 及对应下尾界即可。}
+\p{代入 #{m=n-1} 得单顶点度的集中界；若 #{n\geq2}，也有 #{2e^{-c_\varepsilon np}}，可取 #{c_\varepsilon=\varepsilon^2/6}。不需“平均度较大”才能成立，但均值增大才使相对误差概率趋零。全体顶点同时集中还需再做联合概率估计。}

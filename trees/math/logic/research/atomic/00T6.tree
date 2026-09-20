@@ -1,0 +1,10 @@
+\title{Sauer–Shelah 迹数界}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Johnson，§3](007L)}
+
+\p{若 #{\mathcal F\subseteq\mathcal P(X)} 的 [VC 维数](00T4)不超过非负整数 #{d}，且 #{A\subseteq X} 有 #{n} 个元素，则}
+##{|\{F\cap A:F\in\mathcal F\}|\leq\sum_{i=0}^{d}\binom ni,}
+\p{约定 #{i>n} 时二项式系数为零。证明可对 #{n,d} 归纳：删去一个点后，把迹分为有唯一提升的和有两种提升的；后一部分的 VC 维数至多 #{d-1}，于是得到递推 #{m(n,d)\leq m(n-1,d)+m(n-1,d-1)}。}
+\p{当 #{d} 固定时，右边按 #{n} 至多多项式增长，而全部二进制模式有 #{2^n} 种。这把禁止任意编码转化为有限样本上的组合复杂性控制。}

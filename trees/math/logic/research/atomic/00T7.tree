@@ -1,0 +1,12 @@
+\title{有限 dp 秩}
+\date{2026-09-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Johnson，§3.4](007L)}
+
+\p{设 #{M} 是可数语言的 [NIP 结构](00T5)，#{D} 是非空[可定义集](00CF)。本文采用 Johnson 综述 §3.4 的有限秩刻画：对正整数 #{n}，#{\operatorname{dp-rk}(D)\geq n} 当且仅当某个[初等扩张](00CK)中存在不可数族 #{\mathcal F} 的可定义子集，使任意 #{n} 个不同成员交非空，而任意 #{n+1} 个不同成员交为空。}
+\p{每个成员都在 #{D} 内，允许参数；不能删去可数语言、NIP 和扩张中的解释。非空有限集秩为零，有有限上界时取最大的 #{n}，否则这里统一记 #{\infty}，不细分无限 dp 秩。}
+\p{对同一 NIP 结构中的非空可定义集 #{X,Y}，并集情形要求二者位于同一个笛卡尔幂内，有}
+##{\operatorname{dp-rk}(X\cup Y)=\max(\operatorname{dp-rk}X,\operatorname{dp-rk}Y),\qquad
+\operatorname{dp-rk}(X\times Y)=\operatorname{dp-rk}X+\operatorname{dp-rk}Y.}
+\p{对可定义单射 #{f:X\to Y} 有 #{\operatorname{dp-rk}X\leq\operatorname{dp-rk}Y}；对可定义满射有反向不等式。此处采用有限秩及 #{\infty} 的约定。原始刻画和这些性质见 [Johnson，Definition 3.4](https://epubs.siam.org/doi/10.1137/25M1805412)。}

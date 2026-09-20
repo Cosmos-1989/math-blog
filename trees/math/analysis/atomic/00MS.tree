@@ -1,0 +1,12 @@
+\title{Hilbert 空间的正交投影定理}
+\date{2026-09-20}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{K} 是[Hilbert 空间](00MQ) #{H} 的[闭线性子空间](00MR)。每个 #{x\in H} 唯一分解为 #{x=k+u}，其中 #{k\in K,u\in K^\perp}。定义 #{P_Kx=k}，便得到[有界线性算子](00M4)，满足}
+##{H=K\oplus K^\perp,\qquad P_K^2=P_K,\qquad\|P_Kx\|\le\|x\|,\qquad
+\langle P_Kx,y\rangle=\langle x,P_Ky\rangle.}
+\p{证明：取 #{k_n\in K} 使 #{\|x-k_n\|\to d=\inf_{k\in K}\|x-k\|}。内积展开的平行四边形恒等式给出}
+##{\|k_n-k_m\|^2
+=2\|x-k_n\|^2+2\|x-k_m\|^2-4\left\|x-\frac{k_n+k_m}{2}\right\|^2\to0.}
+\p{闭性与完备性给出极限 #{k\in K}。最小性对 #{k+tv}（实 #{t}，#{v\in K}）求二次式最小值，得 #{\operatorname{Re}\langle x-k,v\rangle=0}；复数情形再用 #{iv} 得正交。#{K\cap K^\perp=\{0\}} 给唯一性；由唯一性得线性，再由正交分解得有界性及显示的内积等式。}

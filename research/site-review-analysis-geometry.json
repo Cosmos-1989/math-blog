@@ -1,0 +1,1785 @@
+{
+  "scope": "analysis-geometry",
+  "prerequisites": {
+    "004M": [
+      "00D3"
+    ],
+    "004N": [
+      "004M"
+    ],
+    "004O": [
+      "004M",
+      "00Q5"
+    ],
+    "004P": [
+      "004M"
+    ],
+    "004Q": [
+      "004M",
+      "004P"
+    ],
+    "004R": [
+      "004M",
+      "004P",
+      "004Q"
+    ],
+    "004S": [
+      "004M",
+      "004R"
+    ],
+    "004V": [
+      "00MQ",
+      "00M4",
+      "00MU"
+    ],
+    "004X": [
+      "00MQ",
+      "00MV",
+      "004V",
+      "00MW",
+      "00MX",
+      "00MY",
+      "004Y",
+      "004Z"
+    ],
+    "004Y": [
+      "00MQ",
+      "00MV",
+      "00MR",
+      "00MS",
+      "00MU",
+      "004V"
+    ],
+    "004Z": [
+      "00MQ",
+      "00MV",
+      "004V",
+      "004Y",
+      "00MW"
+    ],
+    "0041": [
+      "0043",
+      "00N9"
+    ],
+    "0043": [
+      "002B",
+      "0024",
+      "00E3",
+      "00N8"
+    ],
+    "0044": [
+      "0043",
+      "00N9",
+      "00NA",
+      "00D3",
+      "00GL"
+    ],
+    "0045": [
+      "00N9",
+      "0044"
+    ],
+    "004B": [
+      "00NI",
+      "00NM",
+      "00NK",
+      "00NN",
+      "00NP"
+    ],
+    "004D": [
+      "00OA"
+    ],
+    "004E": [
+      "0043",
+      "00NK",
+      "00NC",
+      "00NQ"
+    ],
+    "004H": [
+      "00OD",
+      "00ND",
+      "00OE",
+      "00NG"
+    ],
+    "004J": [
+      "00OD",
+      "00ND",
+      "00OE",
+      "00NG"
+    ],
+    "0057": [
+      "00O1",
+      "00NI"
+    ],
+    "005A": [
+      "00O1",
+      "0057",
+      "00NF",
+      "00O3",
+      "00NZ",
+      "00OF"
+    ]
+  },
+  "reviewed": [
+    {
+      "id": "0015",
+      "title": "赋范向量空间",
+      "action": "split",
+      "reason": "范数、有界算子、连续性判据、Banach、完备化及延拓、有限维等价定理分开；保留有限维与函数范数例子，补零定义域算子范数约定。"
+    },
+    {
+      "id": "0016",
+      "title": "序列空间 ℓ^p",
+      "action": "split",
+      "reason": "拆出有限 p、无穷范数及同胚定理；限制1≤p<∞，核验Kadets原论文，补可分性区别和积拓扑反例。"
+    },
+    {
+      "id": "001D",
+      "title": "分析入口",
+      "action": "updated",
+      "reason": "保留分析导读角色，加入Hilbert与投影基础并链接拓扑实际定义；显式保留004N、004O两个内积例子和004T旧专题入口，保证从学科Outline可达。"
+    },
+    {
+      "id": "0037",
+      "title": "拓扑向量空间",
+      "action": "split",
+      "reason": "拓扑向量空间定义、零点邻域结构、初始拓扑稳定性分别成页；补标量拓扑与不默认Hausdorff的约定，纠正吸收性叙述。"
+    },
+    {
+      "id": "0038",
+      "title": "半范数与局部凸拓扑",
+      "action": "split",
+      "reason": "拆分半范数、生成拓扑、局部凸空间和紧收敛拓扑；保留全部公式并给出真实局部凸定义及等价刻画。"
+    },
+    {
+      "id": "0039",
+      "title": "对偶对、弱拓扑与连续对偶",
+      "action": "split",
+      "reason": "分别处理代数对偶、配对、弱拓扑、连续对偶与弱对偶定理；补核引理证明并保留乘积空间例子，区分分离配对与拓扑可分。"
+    },
+    {
+      "id": "004M",
+      "title": "内积空间",
+      "action": "updated",
+      "reason": "内积定义本身单一；保留复共轭与第二变量线性约定，加入向量空间链接和实内积版本。"
+    },
+    {
+      "id": "004N",
+      "title": "复 Euclidean 空间的标准内积",
+      "action": "retained",
+      "reason": "已逐句核对标准复内积及诱导范数，公式与第二变量线性约定一致，且直接链接内积定义，无需拆分。"
+    },
+    {
+      "id": "004O",
+      "title": "连续函数空间的积分内积",
+      "action": "updated",
+      "reason": "单一积分内积例子保留；补a<b以保证正定性，并链接积分基础。"
+    },
+    {
+      "id": "004P",
+      "title": "内积空间中的正交与标准正交集",
+      "action": "updated",
+      "reason": "已核对正交关系与正交单位向量族定义，两者是同一正交几何概念的自然组织，保留同页；范数记号在正文解码，诱导范数链接重定向至实际定理00OC，后续不等式链接仅是后果。"
+    },
+    {
+      "id": "004Q",
+      "title": "内积空间中的 Pythagoras 定理",
+      "action": "retained",
+      "reason": "完整核对有限正交分解与平方长度展开，第二变量线性下投影系数正确；保留全部证明，无需拆分。"
+    },
+    {
+      "id": "004R",
+      "title": "Bessel 不等式",
+      "action": "retained",
+      "reason": "已读并核对Bessel是Pythagoras中余项非负的单一推论，假设和直接前置链接完整。"
+    },
+    {
+      "id": "004S",
+      "title": "Schwarz 不等式",
+      "action": "retained",
+      "reason": "已读并核对y=0分支、归一化向量及共轭模长步骤；单一不等式证明保持原样。"
+    },
+    {
+      "id": "004T",
+      "title": "内积诱导范数",
+      "action": "split",
+      "reason": "改为Outline；诱导范数全部证明迁00OC，平行四边形恒等式迁00O9；范围内术语引用全部指向实际定理。"
+    },
+    {
+      "id": "004U",
+      "title": "泛函分析：von Neumann 双交换子定理",
+      "action": "updated",
+      "reason": "补Hilbert、有界算子、伴随、投影的阅读入口，保留双交换子证明路线。"
+    },
+    {
+      "id": "004V",
+      "title": "交换子与双交换子",
+      "action": "updated",
+      "reason": "订正任意集合的交换子不必伴随封闭；补星封闭假设及2×2反例，保留反单调性和双交换子。"
+    },
+    {
+      "id": "004W",
+      "title": "强算子拓扑与弱算子拓扑",
+      "action": "split",
+      "reason": "强弱算子拓扑分别定义，比较和交换子闭性独立成定理；保留网收敛和左右乘公式。"
+    },
+    {
+      "id": "004X",
+      "title": "von Neumann 双交换子定理",
+      "action": "updated",
+      "reason": "补Hilbert、含幺星代数、交换子、两种算子拓扑直接定义；保留容易方向和困难方向证明入口，不把结论当作引理前置。"
+    },
+    {
+      "id": "004Y",
+      "title": "不变子空间的投影落在交换子里",
+      "action": "updated",
+      "reason": "补闭子空间、伴随与正交投影基础，局部定义循环子空间的范数闭包；完整保留reducing及对易证明。"
+    },
+    {
+      "id": "004Z",
+      "title": "对角放大与关键逼近引理",
+      "action": "updated",
+      "reason": "补Hilbert直和、有界星代数和循环空间闭包语义；保留块矩阵对角放大及有限向量同时逼近的全部证明。"
+    },
+    {
+      "id": "0050",
+      "title": "von Neumann 代数与两个典型例子",
+      "action": "split",
+      "reason": "von Neumann定义、最小性定理、对角例子和乘法例子分开；乘法代数添加σ-有限假设及证明，复用00Q基础。"
+    },
+    {
+      "id": "0040",
+      "title": "几何与物理：微分几何基础",
+      "action": "updated",
+      "reason": "重排坐标、张量、形式、联络和曲面的阅读路线，直接列出全部新增几何入口；保留0042、0047、004F、004G、004I、0059等旧专题ID作为导航，不继承全局取向假设。"
+    },
+    {
+      "id": "0041",
+      "title": "微分几何的对象与坐标观点",
+      "action": "updated",
+      "reason": "保留坐标不变性这一单一原则；取消对所有页面隐含的连通、有向假设，具体术语直链定义。"
+    },
+    {
+      "id": "0042",
+      "title": "Einstein 求和约定与指标升降",
+      "action": "split",
+      "reason": "求和记号与度量升降指标分开；保留Kronecker、逆矩阵、Euclidean特例及全部坐标公式。"
+    },
+    {
+      "id": "0043",
+      "title": "光滑流形的局部坐标",
+      "action": "updated",
+      "reason": "补Hausdorff、第二可数、坐标同胚、光滑过渡和最大图册；用Euclidean光滑性作无环前置。"
+    },
+    {
+      "id": "0044",
+      "title": "切向量与切空间",
+      "action": "updated",
+      "reason": "补函数芽上的导子定义，保留全部局部求导与基公式；基链接改到代数代理新原子00GL。"
+    },
+    {
+      "id": "0045",
+      "title": "切向量的坐标变换与推前",
+      "action": "updated",
+      "reason": "补任意光滑映射的微分定义与基点，保留坐标变换、链式法则和推前拉回配对；区分单个切向量和整个向量场推前。"
+    },
+    {
+      "id": "0046",
+      "title": "向量场与 Lie 括号",
+      "action": "split",
+      "reason": "向量场与Lie括号分开；保留模结构、局部公式和坐标向量场交换公式。"
+    },
+    {
+      "id": "0047",
+      "title": "余切向量与拉回",
+      "action": "split",
+      "reason": "余切定义与任意光滑映射的拉回分开；修正系数必须复合f，保留协变律和配对公式。"
+    },
+    {
+      "id": "0048",
+      "title": "张量与度量张量",
+      "action": "split",
+      "reason": "补一般张量定义，区分非退化伪Riemann与正定Riemann；保留所有度量变换、向量配对和逆度量公式。"
+    },
+    {
+      "id": "0049",
+      "title": "外形式与外积",
+      "action": "split",
+      "reason": "外幂外积、光滑形式、度量诱导内积分开；补外积规范化，保留原有行列式内积公式。"
+    },
+    {
+      "id": "004A",
+      "title": "Riemann 度量的体积形式与积分",
+      "action": "split",
+      "reason": "取向、体积形式和L²积分分开；说明可定向与选定取向区别、体积密度及积分收敛假设。"
+    },
+    {
+      "id": "004B",
+      "title": "四维流形上的自对偶与反自对偶二形式",
+      "action": "updated",
+      "reason": "保留自对偶的等价外积刻画在同页；补Hodge星、投影公式和正交分解证明，明确正定四维有向实形式假设，排除Lorentz误用。"
+    },
+    {
+      "id": "004C",
+      "title": "外微分",
+      "action": "split",
+      "reason": "外微分定义、形式拉回与自然性分开；保留乘积法则及所有坐标公式，修正链式法则的导数取值记号。"
+    },
+    {
+      "id": "004D",
+      "title": "外微分满足平方为零",
+      "action": "updated",
+      "reason": "补流形和形式上下文，外微分直链00OA；完整保留混合偏导与外积反对称证明。"
+    },
+    {
+      "id": "004E",
+      "title": "被动坐标变换与主动变分",
+      "action": "updated",
+      "reason": "主动变分明确为拉回的一阶参数导数而非直接取极限；保留Taylor展开和完整坐标公式，补向量场及形式前置。"
+    },
+    {
+      "id": "004F",
+      "title": "仿射联络与协变导数",
+      "action": "split",
+      "reason": "改为Outline；联络公理、张量性及张量积等价表述迁00OD，Euclidean例子迁00O7；全范围术语重定向。"
+    },
+    {
+      "id": "004G",
+      "title": "Christoffel 符号",
+      "action": "split",
+      "reason": "改为Outline；全部协变导数与非张量坐标变换公式迁00OE，联络差张量定理迁00O8；全范围术语重定向。"
+    },
+    {
+      "id": "004H",
+      "title": "联络的挠率张量",
+      "action": "updated",
+      "reason": "保留挠率定义、无挠等价条件和坐标式；补Lie括号、Christoffel及张量定义链接。"
+    },
+    {
+      "id": "004I",
+      "title": "平行移动与平行向量场",
+      "action": "split",
+      "reason": "沿曲线平行移动和开集上的平行场分开；保留两种方程，订正为非零给定初值的局部平行场未必存在。"
+    },
+    {
+      "id": "004J",
+      "title": "曲率张量",
+      "action": "updated",
+      "reason": "曲率定义及所有分量公式保留，统一R(∂i,∂j)∂l约定，补向量场、括号、张量及Christoffel直接依赖。"
+    },
+    {
+      "id": "004K",
+      "title": "测地线、指数映射与全测地子流形",
+      "action": "split",
+      "reason": "测地线、指数映射、子流形、全测地分开；保留ODE与缩放式，将错误的全局留在子流形要求改为局部，并补无挠假设保证等价。"
+    },
+    {
+      "id": "004L",
+      "title": "Riemann 联络与 Levi-Civita 联络",
+      "action": "split",
+      "reason": "度量相容定义、Levi-Civita定理和配对保持定理分开；保留Koszul与全部坐标公式，纠正一般联络下下指标交换，区分正定与不定。"
+    },
+    {
+      "id": "0056",
+      "title": "微分几何：高斯绝妙定理",
+      "action": "updated",
+      "reason": "高斯绝妙定理路线保持Outline；补正则曲面和高斯曲率的实际定义入口。"
+    },
+    {
+      "id": "0057",
+      "title": "第一基本形式",
+      "action": "updated",
+      "reason": "补正则性和光滑性前置，保留E,F,G及全部长度公式，补取向相关的面积形式与无取向密度。"
+    },
+    {
+      "id": "0058",
+      "title": "第二基本形式与形算子",
+      "action": "split",
+      "reason": "第二基本形式和形算子是由度量互定的同一概念，合并迁到00O2；高斯曲率迁00O3。修正形算子矩阵多取一次逆。"
+    },
+    {
+      "id": "0059",
+      "title": "Gauss 方程与高斯曲率的内蕴公式",
+      "action": "split",
+      "reason": "改为Outline；Gauss推导及所有坐标公式迁00OF，统一曲率下标顺序与正号约定；等温坐标公式及推导迁00O4。"
+    },
+    {
+      "id": "005A",
+      "title": "高斯绝妙定理",
+      "action": "updated",
+      "reason": "补正则曲面及局部微分同胚假设；修正Christoffel并非坐标不变量的证明措辞，保留内蕴曲率论证。"
+    },
+    {
+      "id": "005B",
+      "title": "平面、圆柱与球面上的高斯曲率",
+      "action": "split",
+      "reason": "平面与圆柱作为局部等距这一共同现象保留同页，球面另页；全部度量和曲率公式保留，明确r>0与坐标域。"
+    }
+  ],
+  "newNotes": [
+    {
+      "id": "00M1",
+      "title": "范数与赋范向量空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00D3",
+        "00EK",
+        "00EN"
+      ],
+      "path": "trees/math/analysis/atomic/00M1.tree"
+    },
+    {
+      "id": "00M2",
+      "title": "有限维坐标空间的 p 范数",
+      "taxon": "Example",
+      "prerequisites": [
+        "00M1"
+      ],
+      "path": "trees/math/analysis/atomic/00M2.tree"
+    },
+    {
+      "id": "00M3",
+      "title": "连续函数的一致范数与积分范数",
+      "taxon": "Example",
+      "prerequisites": [
+        "00M1",
+        "00E2"
+      ],
+      "path": "trees/math/analysis/atomic/00M3.tree"
+    },
+    {
+      "id": "00M4",
+      "title": "有界线性算子与算子范数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00GC",
+        "00M1"
+      ],
+      "path": "trees/math/analysis/atomic/00M4.tree"
+    },
+    {
+      "id": "00M5",
+      "title": "线性映射连续当且仅当有界",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00M4",
+        "00E2"
+      ],
+      "path": "trees/math/analysis/atomic/00M5.tree"
+    },
+    {
+      "id": "00M6",
+      "title": "Banach 空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00M1",
+        "00ET"
+      ],
+      "path": "trees/math/analysis/atomic/00M6.tree"
+    },
+    {
+      "id": "00M7",
+      "title": "赋范空间的完备化",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00M1",
+        "00M6",
+        "00EW"
+      ],
+      "path": "trees/math/analysis/atomic/00M7.tree"
+    },
+    {
+      "id": "00M8",
+      "title": "有界线性算子的完备化延拓",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00M4",
+        "00M6",
+        "00M7"
+      ],
+      "path": "trees/math/analysis/atomic/00M8.tree"
+    },
+    {
+      "id": "00M9",
+      "title": "有限维向量空间上的范数等价",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00M1",
+        "00GM",
+        "00F3"
+      ],
+      "path": "trees/math/analysis/atomic/00M9.tree"
+    },
+    {
+      "id": "00MA",
+      "title": "拓扑向量空间的定义",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00D3",
+        "00E0",
+        "00E2",
+        "00EI"
+      ],
+      "path": "trees/math/analysis/atomic/00MA.tree"
+    },
+    {
+      "id": "00MB",
+      "title": "拓扑向量空间由零点邻域决定",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MA",
+        "00E7",
+        "00E3"
+      ],
+      "path": "trees/math/analysis/atomic/00MB.tree"
+    },
+    {
+      "id": "00MC",
+      "title": "线性映射诱导的初始拓扑仍是线性拓扑",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MA",
+        "00EG",
+        "00EH",
+        "00E8"
+      ],
+      "path": "trees/math/analysis/atomic/00MC.tree"
+    },
+    {
+      "id": "00MD",
+      "title": "半范数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00D3",
+        "00EL"
+      ],
+      "path": "trees/math/analysis/atomic/00MD.tree"
+    },
+    {
+      "id": "00ME",
+      "title": "半范数族生成的拓扑",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MD",
+        "00MA",
+        "00EG",
+        "00E8"
+      ],
+      "path": "trees/math/analysis/atomic/00ME.tree"
+    },
+    {
+      "id": "00MF",
+      "title": "局部凸空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MA",
+        "00E8",
+        "00ME"
+      ],
+      "path": "trees/math/analysis/atomic/00MF.tree"
+    },
+    {
+      "id": "00MG",
+      "title": "连续函数空间的紧收敛拓扑",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00E2",
+        "00F3",
+        "00MD",
+        "00ME"
+      ],
+      "path": "trees/math/analysis/atomic/00MG.tree"
+    },
+    {
+      "id": "00MH",
+      "title": "代数对偶空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00GC"
+      ],
+      "path": "trees/math/analysis/atomic/00MH.tree"
+    },
+    {
+      "id": "00MI",
+      "title": "双线性配对与对偶对",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MH"
+      ],
+      "path": "trees/math/analysis/atomic/00MI.tree"
+    },
+    {
+      "id": "00MJ",
+      "title": "配对诱导的弱拓扑",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MI",
+        "00EG",
+        "00ME"
+      ],
+      "path": "trees/math/analysis/atomic/00MJ.tree"
+    },
+    {
+      "id": "00MK",
+      "title": "拓扑向量空间的连续对偶",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MA",
+        "00MH",
+        "00E2"
+      ],
+      "path": "trees/math/analysis/atomic/00MK.tree"
+    },
+    {
+      "id": "00ML",
+      "title": "弱拓扑的连续对偶恰为给定配对的像",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MJ",
+        "00MK"
+      ],
+      "path": "trees/math/analysis/atomic/00ML.tree"
+    },
+    {
+      "id": "00MM",
+      "title": "积拓扑是有限支撑配对的弱拓扑",
+      "taxon": "Example",
+      "prerequisites": [
+        "00MJ",
+        "00ML",
+        "00EI"
+      ],
+      "path": "trees/math/analysis/atomic/00MM.tree"
+    },
+    {
+      "id": "00MN",
+      "title": "序列空间 ℓ^p 的定义",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00M1",
+        "00M6"
+      ],
+      "path": "trees/math/analysis/atomic/00MN.tree"
+    },
+    {
+      "id": "00MO",
+      "title": "有界序列空间 ℓ^∞",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00M1",
+        "00M6"
+      ],
+      "path": "trees/math/analysis/atomic/00MO.tree"
+    },
+    {
+      "id": "00MP",
+      "title": "有限 p 的序列空间彼此同胚",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MN",
+        "00MO",
+        "00E3",
+        "00M6"
+      ],
+      "path": "trees/math/analysis/atomic/00MP.tree"
+    },
+    {
+      "id": "00MQ",
+      "title": "Hilbert 空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "004M",
+        "00OC",
+        "00ET"
+      ],
+      "path": "trees/math/analysis/atomic/00MQ.tree"
+    },
+    {
+      "id": "00MR",
+      "title": "正交补与闭 Hilbert 子空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MQ",
+        "00D7",
+        "00E1",
+        "004P"
+      ],
+      "path": "trees/math/analysis/atomic/00MR.tree"
+    },
+    {
+      "id": "00MS",
+      "title": "Hilbert 空间的正交投影定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MQ",
+        "00MR",
+        "00M4"
+      ],
+      "path": "trees/math/analysis/atomic/00MS.tree"
+    },
+    {
+      "id": "00MT",
+      "title": "Hilbert 空间的 Riesz 表示定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MQ",
+        "00MK",
+        "00MS",
+        "004S"
+      ],
+      "path": "trees/math/analysis/atomic/00MT.tree"
+    },
+    {
+      "id": "00MU",
+      "title": "Hilbert 空间算子的伴随",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MQ",
+        "00M4",
+        "00MT"
+      ],
+      "path": "trees/math/analysis/atomic/00MU.tree"
+    },
+    {
+      "id": "00MV",
+      "title": "有界算子的含幺星子代数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MQ",
+        "00M4",
+        "00MU"
+      ],
+      "path": "trees/math/analysis/atomic/00MV.tree"
+    },
+    {
+      "id": "00MW",
+      "title": "强算子拓扑",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MQ",
+        "00M4",
+        "00ME"
+      ],
+      "path": "trees/math/analysis/atomic/00MW.tree"
+    },
+    {
+      "id": "00MX",
+      "title": "弱算子拓扑",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MQ",
+        "00M4",
+        "00ME"
+      ],
+      "path": "trees/math/analysis/atomic/00MX.tree"
+    },
+    {
+      "id": "00MY",
+      "title": "算子范数、强算子与弱算子拓扑的比较",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00M4",
+        "00MW",
+        "00MX",
+        "004S",
+        "00EA"
+      ],
+      "path": "trees/math/analysis/atomic/00MY.tree"
+    },
+    {
+      "id": "00MZ",
+      "title": "交换子在弱算子拓扑中闭",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "004V",
+        "00MX",
+        "00MU"
+      ],
+      "path": "trees/math/analysis/atomic/00MZ.tree"
+    },
+    {
+      "id": "00N0",
+      "title": "von Neumann 代数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MV",
+        "00MX"
+      ],
+      "path": "trees/math/analysis/atomic/00N0.tree"
+    },
+    {
+      "id": "00N1",
+      "title": "双交换子生成最小 von Neumann 代数",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00MV",
+        "00N0",
+        "004V",
+        "004X"
+      ],
+      "path": "trees/math/analysis/atomic/00N1.tree"
+    },
+    {
+      "id": "00N2",
+      "title": "对角算子构成极大交换 von Neumann 代数",
+      "taxon": "Example",
+      "prerequisites": [
+        "00MN",
+        "00MO",
+        "004V",
+        "00N0",
+        "004X"
+      ],
+      "path": "trees/math/analysis/atomic/00N2.tree"
+    },
+    {
+      "id": "00N7",
+      "title": "乘法算子构成极大交换 von Neumann 代数",
+      "taxon": "Example",
+      "prerequisites": [
+        "00Q2",
+        "00Q6",
+        "00Q9",
+        "004V",
+        "004X",
+        "00N0"
+      ],
+      "path": "trees/math/analysis/atomic/00N7.tree"
+    },
+    {
+      "id": "00N8",
+      "title": "Euclidean 开集上的光滑映射",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00E2"
+      ],
+      "path": "trees/math/geometry/atomic/00N8.tree"
+    },
+    {
+      "id": "00N9",
+      "title": "光滑流形间的光滑映射",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0043",
+        "00N8"
+      ],
+      "path": "trees/math/geometry/atomic/00N9.tree"
+    },
+    {
+      "id": "00NA",
+      "title": "Einstein 求和约定",
+      "taxon": "Definition",
+      "prerequisites": [],
+      "path": "trees/math/geometry/atomic/00NA.tree"
+    },
+    {
+      "id": "00NB",
+      "title": "度量的指标升降",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NH",
+        "00NE",
+        "00NA"
+      ],
+      "path": "trees/math/geometry/atomic/00NB.tree"
+    },
+    {
+      "id": "00NC",
+      "title": "光滑向量场",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0044",
+        "00N9"
+      ],
+      "path": "trees/math/geometry/atomic/00NC.tree"
+    },
+    {
+      "id": "00ND",
+      "title": "向量场的 Lie 括号",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NC"
+      ],
+      "path": "trees/math/geometry/atomic/00ND.tree"
+    },
+    {
+      "id": "00NE",
+      "title": "余切向量与余切空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0044",
+        "00MH",
+        "00NA"
+      ],
+      "path": "trees/math/geometry/atomic/00NE.tree"
+    },
+    {
+      "id": "00NF",
+      "title": "光滑映射的余切拉回",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00N9",
+        "0045",
+        "00NE"
+      ],
+      "path": "trees/math/geometry/atomic/00NF.tree"
+    },
+    {
+      "id": "00NG",
+      "title": "流形上的张量场",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0044",
+        "00NE",
+        "00N9"
+      ],
+      "path": "trees/math/geometry/atomic/00NG.tree"
+    },
+    {
+      "id": "00NH",
+      "title": "伪 Riemann 度量",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NG"
+      ],
+      "path": "trees/math/geometry/atomic/00NH.tree"
+    },
+    {
+      "id": "00NI",
+      "title": "Riemann 度量",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NH",
+        "004M"
+      ],
+      "path": "trees/math/geometry/atomic/00NI.tree"
+    },
+    {
+      "id": "00NJ",
+      "title": "外幂与外积",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00MH"
+      ],
+      "path": "trees/math/geometry/atomic/00NJ.tree"
+    },
+    {
+      "id": "00NK",
+      "title": "光滑微分形式",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NE",
+        "00NJ",
+        "00N9"
+      ],
+      "path": "trees/math/geometry/atomic/00NK.tree"
+    },
+    {
+      "id": "00NL",
+      "title": "度量诱导的外形式内积",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NI",
+        "00NB",
+        "00NK"
+      ],
+      "path": "trees/math/geometry/atomic/00NL.tree"
+    },
+    {
+      "id": "00NM",
+      "title": "光滑流形的取向",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0043",
+        "00N8"
+      ],
+      "path": "trees/math/geometry/atomic/00NM.tree"
+    },
+    {
+      "id": "00NN",
+      "title": "有向 Riemann 流形的体积形式",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NI",
+        "00NM",
+        "00NK"
+      ],
+      "path": "trees/math/geometry/atomic/00NN.tree"
+    },
+    {
+      "id": "00NO",
+      "title": "Riemann 流形上形式的 L² 内积",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NN",
+        "00NL",
+        "00Q5"
+      ],
+      "path": "trees/math/geometry/atomic/00NO.tree"
+    },
+    {
+      "id": "00NP",
+      "title": "Hodge 星算子",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NL",
+        "00NN"
+      ],
+      "path": "trees/math/geometry/atomic/00NP.tree"
+    },
+    {
+      "id": "00NQ",
+      "title": "微分形式的拉回",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00N9",
+        "00NF",
+        "00NK"
+      ],
+      "path": "trees/math/geometry/atomic/00NQ.tree"
+    },
+    {
+      "id": "00NR",
+      "title": "外微分与拉回交换",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00OA",
+        "00NQ"
+      ],
+      "path": "trees/math/geometry/atomic/00NR.tree"
+    },
+    {
+      "id": "00NS",
+      "title": "沿曲线的平行移动",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00N9",
+        "00OD",
+        "00OE",
+        "00OB"
+      ],
+      "path": "trees/math/geometry/atomic/00NS.tree"
+    },
+    {
+      "id": "00NT",
+      "title": "开集上的平行向量场",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NC",
+        "00OD",
+        "00OE",
+        "00NS"
+      ],
+      "path": "trees/math/geometry/atomic/00NT.tree"
+    },
+    {
+      "id": "00NU",
+      "title": "仿射联络的测地线",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00OD",
+        "00OE",
+        "00NS",
+        "00OB"
+      ],
+      "path": "trees/math/geometry/atomic/00NU.tree"
+    },
+    {
+      "id": "00NV",
+      "title": "仿射联络的指数映射",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NU",
+        "00OB"
+      ],
+      "path": "trees/math/geometry/atomic/00NV.tree"
+    },
+    {
+      "id": "00NW",
+      "title": "嵌入子流形",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0043",
+        "00N9",
+        "0044"
+      ],
+      "path": "trees/math/geometry/atomic/00NW.tree"
+    },
+    {
+      "id": "00NX",
+      "title": "无挠联络的全测地子流形",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NW",
+        "00OD",
+        "004H",
+        "00NU",
+        "00NV"
+      ],
+      "path": "trees/math/geometry/atomic/00NX.tree"
+    },
+    {
+      "id": "00NY",
+      "title": "度量相容联络",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NH",
+        "00OD",
+        "00OE",
+        "00NC"
+      ],
+      "path": "trees/math/geometry/atomic/00NY.tree"
+    },
+    {
+      "id": "00NZ",
+      "title": "Levi-Civita 联络定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00NH",
+        "00NY",
+        "004H",
+        "00ND",
+        "00OE",
+        "00NB"
+      ],
+      "path": "trees/math/geometry/atomic/00NZ.tree"
+    },
+    {
+      "id": "00O0",
+      "title": "度量相容联络的平行移动保持配对",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00NY",
+        "00NS"
+      ],
+      "path": "trees/math/geometry/atomic/00O0.tree"
+    },
+    {
+      "id": "00O1",
+      "title": "正则参数曲面",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00N8",
+        "0045"
+      ],
+      "path": "trees/math/geometry/atomic/00O1.tree"
+    },
+    {
+      "id": "00O2",
+      "title": "第二基本形式与形算子的对偶描述",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00O1",
+        "0057",
+        "0045"
+      ],
+      "path": "trees/math/geometry/atomic/00O2.tree"
+    },
+    {
+      "id": "00O3",
+      "title": "曲面的高斯曲率",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00O2",
+        "0057"
+      ],
+      "path": "trees/math/geometry/atomic/00O3.tree"
+    },
+    {
+      "id": "00O4",
+      "title": "等温坐标中的高斯曲率公式",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00OF",
+        "00NZ"
+      ],
+      "path": "trees/math/geometry/atomic/00O4.tree"
+    },
+    {
+      "id": "00O5",
+      "title": "平面与圆柱局部等距且高斯曲率为零",
+      "taxon": "Example",
+      "prerequisites": [
+        "0057",
+        "00O3",
+        "005A"
+      ],
+      "path": "trees/math/geometry/atomic/00O5.tree"
+    },
+    {
+      "id": "00O6",
+      "title": "圆球面的高斯曲率",
+      "taxon": "Example",
+      "prerequisites": [
+        "0057",
+        "00O3",
+        "005A"
+      ],
+      "path": "trees/math/geometry/atomic/00O6.tree"
+    },
+    {
+      "id": "00O7",
+      "title": "Euclidean 空间的标准联络",
+      "taxon": "Example",
+      "prerequisites": [
+        "00OD",
+        "00NC"
+      ],
+      "path": "trees/math/geometry/atomic/00O7.tree"
+    },
+    {
+      "id": "00O8",
+      "title": "两个联络之差是张量",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00OD",
+        "00OE",
+        "00NG"
+      ],
+      "path": "trees/math/geometry/atomic/00O8.tree"
+    },
+    {
+      "id": "00O9",
+      "title": "内积范数的平行四边形恒等式",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "004M",
+        "00OC"
+      ],
+      "path": "trees/math/analysis/atomic/00O9.tree"
+    },
+    {
+      "id": "00OA",
+      "title": "外微分的定义与乘积法则",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00NK",
+        "00NA"
+      ],
+      "path": "trees/math/geometry/atomic/00OA.tree"
+    },
+    {
+      "id": "00OB",
+      "title": "光滑常微分方程的存在唯一性",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00N8"
+      ],
+      "path": "trees/math/analysis/atomic/00OB.tree"
+    },
+    {
+      "id": "00OC",
+      "title": "内积诱导范数定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "004M",
+        "00M1",
+        "004S"
+      ],
+      "path": "trees/math/analysis/atomic/00OC.tree"
+    },
+    {
+      "id": "00OD",
+      "title": "仿射联络的定义",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0043",
+        "00NC"
+      ],
+      "path": "trees/math/geometry/atomic/00OD.tree"
+    },
+    {
+      "id": "00OE",
+      "title": "联络的 Christoffel 符号",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00OD",
+        "00NK",
+        "00NG"
+      ],
+      "path": "trees/math/geometry/atomic/00OE.tree"
+    },
+    {
+      "id": "00OF",
+      "title": "曲面的 Gauss 方程",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00O1",
+        "0057",
+        "00O2",
+        "00NZ",
+        "004J",
+        "00O3"
+      ],
+      "path": "trees/math/geometry/atomic/00OF.tree"
+    }
+  ],
+  "splits": {
+    "0015": [
+      "00M1",
+      "00M2",
+      "00M3",
+      "00M4",
+      "00M5",
+      "00M6",
+      "00M7",
+      "00M8",
+      "00M9"
+    ],
+    "0016": [
+      "00MN",
+      "00MO",
+      "00MP"
+    ],
+    "0037": [
+      "00MA",
+      "00MB",
+      "00MC"
+    ],
+    "0038": [
+      "00MD",
+      "00ME",
+      "00MF",
+      "00MG"
+    ],
+    "0039": [
+      "00MH",
+      "00MI",
+      "00MJ",
+      "00MK",
+      "00ML",
+      "00MM"
+    ],
+    "004W": [
+      "00MW",
+      "00MX",
+      "00MY",
+      "00MZ"
+    ],
+    "0050": [
+      "00N0",
+      "00N1",
+      "00N2",
+      "00N7"
+    ],
+    "004T": [
+      "00OC",
+      "00O9"
+    ],
+    "0042": [
+      "00NA",
+      "00NB"
+    ],
+    "0046": [
+      "00NC",
+      "00ND"
+    ],
+    "0047": [
+      "00NE",
+      "00NF"
+    ],
+    "0048": [
+      "00NG",
+      "00NH",
+      "00NI",
+      "00NB"
+    ],
+    "0049": [
+      "00NJ",
+      "00NK",
+      "00NL"
+    ],
+    "004A": [
+      "00NM",
+      "00NN",
+      "00NO"
+    ],
+    "004C": [
+      "00OA",
+      "00NQ",
+      "00NR"
+    ],
+    "004I": [
+      "00NS",
+      "00NT"
+    ],
+    "004K": [
+      "00NU",
+      "00NV",
+      "00NW",
+      "00NX"
+    ],
+    "004L": [
+      "00NY",
+      "00NZ",
+      "00O0"
+    ],
+    "0058": [
+      "00O2",
+      "00O3"
+    ],
+    "005B": [
+      "00O5",
+      "00O6"
+    ],
+    "004F": [
+      "00OD",
+      "00O7"
+    ],
+    "004G": [
+      "00OE",
+      "00O8"
+    ],
+    "0059": [
+      "00OF",
+      "00O4"
+    ]
+  },
+  "retarget": {
+    "0015": [
+      {
+        "term": "赋范向量空间",
+        "actualID": "00M1"
+      },
+      {
+        "term": "范数",
+        "actualID": "00M1"
+      },
+      {
+        "term": "有界线性变换",
+        "actualID": "00M4"
+      },
+      {
+        "term": "有界算子",
+        "actualID": "00M4"
+      },
+      {
+        "term": "算子范数",
+        "actualID": "00M4"
+      },
+      {
+        "term": "Banach 空间",
+        "actualID": "00M6"
+      },
+      {
+        "term": "完备化",
+        "actualID": "00M7"
+      },
+      {
+        "term": "有界线性变换延拓定理",
+        "actualID": "00M8"
+      }
+    ],
+    "0016": [
+      {
+        "term": "ℓ^p",
+        "actualID": "00MN"
+      },
+      {
+        "term": "ℓ^∞",
+        "actualID": "00MO"
+      },
+      {
+        "term": "Kadets 定理",
+        "actualID": "00MP"
+      }
+    ],
+    "0037": [
+      {
+        "term": "拓扑向量空间",
+        "actualID": "00MA"
+      },
+      {
+        "term": "零点邻域",
+        "actualID": "00MB"
+      },
+      {
+        "term": "初始拓扑稳定性",
+        "actualID": "00MC"
+      }
+    ],
+    "0038": [
+      {
+        "term": "半范数",
+        "actualID": "00MD"
+      },
+      {
+        "term": "半范数族生成的拓扑",
+        "actualID": "00ME"
+      },
+      {
+        "term": "局部凸空间",
+        "actualID": "00MF"
+      },
+      {
+        "term": "紧收敛拓扑",
+        "actualID": "00MG"
+      }
+    ],
+    "0039": [
+      {
+        "term": "代数对偶",
+        "actualID": "00MH"
+      },
+      {
+        "term": "对偶对",
+        "actualID": "00MI"
+      },
+      {
+        "term": "弱拓扑",
+        "actualID": "00MJ"
+      },
+      {
+        "term": "连续对偶",
+        "actualID": "00MK"
+      },
+      {
+        "term": "弱拓扑的连续泛函",
+        "actualID": "00ML"
+      }
+    ],
+    "004W": [
+      {
+        "term": "强算子拓扑",
+        "actualID": "00MW"
+      },
+      {
+        "term": "弱算子拓扑",
+        "actualID": "00MX"
+      },
+      {
+        "term": "算子拓扑闭包关系",
+        "actualID": "00MY"
+      },
+      {
+        "term": "交换子弱闭性",
+        "actualID": "00MZ"
+      }
+    ],
+    "0050": [
+      {
+        "term": "von Neumann 代数",
+        "actualID": "00N0"
+      },
+      {
+        "term": "最小 von Neumann 代数",
+        "actualID": "00N1"
+      },
+      {
+        "term": "对角算子代数",
+        "actualID": "00N2"
+      },
+      {
+        "term": "乘法算子代数",
+        "actualID": "00N7"
+      }
+    ],
+    "0042": [
+      {
+        "term": "Einstein 求和约定",
+        "actualID": "00NA"
+      },
+      {
+        "term": "指标升降",
+        "actualID": "00NB"
+      }
+    ],
+    "0046": [
+      {
+        "term": "向量场",
+        "actualID": "00NC"
+      },
+      {
+        "term": "Lie 括号",
+        "actualID": "00ND"
+      }
+    ],
+    "0047": [
+      {
+        "term": "余切向量",
+        "actualID": "00NE"
+      },
+      {
+        "term": "余切空间",
+        "actualID": "00NE"
+      },
+      {
+        "term": "余切拉回",
+        "actualID": "00NF"
+      }
+    ],
+    "0048": [
+      {
+        "term": "张量",
+        "actualID": "00NG"
+      },
+      {
+        "term": "度量张量",
+        "actualID": "00NI"
+      },
+      {
+        "term": "Riemann 度量",
+        "actualID": "00NI"
+      },
+      {
+        "term": "伪 Riemann 度量",
+        "actualID": "00NH"
+      },
+      {
+        "term": "Lorentz 度量",
+        "actualID": "00NH"
+      }
+    ],
+    "0049": [
+      {
+        "term": "外幂",
+        "actualID": "00NJ"
+      },
+      {
+        "term": "外积",
+        "actualID": "00NJ"
+      },
+      {
+        "term": "外形式",
+        "actualID": "00NK"
+      },
+      {
+        "term": "微分形式",
+        "actualID": "00NK"
+      },
+      {
+        "term": "外形式内积",
+        "actualID": "00NL"
+      }
+    ],
+    "004A": [
+      {
+        "term": "取向",
+        "actualID": "00NM"
+      },
+      {
+        "term": "体积形式",
+        "actualID": "00NN"
+      },
+      {
+        "term": "L² 内积",
+        "actualID": "00NO"
+      }
+    ],
+    "004C": [
+      {
+        "term": "外微分",
+        "actualID": "00OA"
+      },
+      {
+        "term": "微分形式拉回",
+        "actualID": "00NQ"
+      },
+      {
+        "term": "外微分自然性",
+        "actualID": "00NR"
+      }
+    ],
+    "004I": [
+      {
+        "term": "平行移动",
+        "actualID": "00NS"
+      },
+      {
+        "term": "平行向量场",
+        "actualID": "00NT"
+      }
+    ],
+    "004K": [
+      {
+        "term": "测地线",
+        "actualID": "00NU"
+      },
+      {
+        "term": "指数映射",
+        "actualID": "00NV"
+      },
+      {
+        "term": "子流形",
+        "actualID": "00NW"
+      },
+      {
+        "term": "全测地子流形",
+        "actualID": "00NX"
+      }
+    ],
+    "004L": [
+      {
+        "term": "Riemann 联络",
+        "actualID": "00NY"
+      },
+      {
+        "term": "度量相容联络",
+        "actualID": "00NY"
+      },
+      {
+        "term": "Levi-Civita 联络",
+        "actualID": "00NZ"
+      }
+    ],
+    "0058": [
+      {
+        "term": "第二基本形式",
+        "actualID": "00O2"
+      },
+      {
+        "term": "形算子",
+        "actualID": "00O2"
+      },
+      {
+        "term": "高斯曲率",
+        "actualID": "00O3"
+      }
+    ],
+    "005B": [
+      {
+        "term": "平面与圆柱的高斯曲率",
+        "actualID": "00O5"
+      },
+      {
+        "term": "球面高斯曲率",
+        "actualID": "00O6"
+      }
+    ],
+    "004T": [
+      {
+        "term": "内积诱导范数",
+        "actualID": "00OC"
+      },
+      {
+        "term": "内积范数",
+        "actualID": "00OC"
+      }
+    ],
+    "004F": [
+      {
+        "term": "仿射联络",
+        "actualID": "00OD"
+      },
+      {
+        "term": "协变导数",
+        "actualID": "00OD"
+      }
+    ],
+    "004G": [
+      {
+        "term": "Christoffel 符号",
+        "actualID": "00OE"
+      }
+    ],
+    "0059": [
+      {
+        "term": "Gauss 方程",
+        "actualID": "00OF"
+      },
+      {
+        "term": "高斯曲率的内蕴公式",
+        "actualID": "00OF"
+      }
+    ]
+  }
+}
