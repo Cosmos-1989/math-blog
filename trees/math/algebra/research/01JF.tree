@@ -1,0 +1,14 @@
+\title{交换两个坐标的 Glauberman 对应计算}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Navarro，§2.1](016Z)的独立有限阿贝尔例子}
+\meta{proof-status}{全部群元素与特征标显式计算。}
+
+\p{取 #{K=(\mathbb Z/3\mathbb Z)^2}，#{A=\langle s\rangle} 为二阶群，#{s(x,y)=(y,x)}。这是[互素作用](01J8)。固定点 #{C=\{(t,t)\}}，而 #{[A,K]=\{(t,-t)\}}；[平均投影](01J9)为}
+##{E(x,y)=(2(x+y),2(x+y)),}
+\p{因为 #{2^{-1}=2} 在模三下成立。令 #{\zeta=e^{2\pi i/3}}。#{K} 的九个[线性特征标](01JA)为 #{\lambda_{a,b}(x,y)=\zeta^{ax+by}}，#{a,b\in\mathbb Z/3\mathbb Z}；在 #{s} 下不变当且仅当 #{a=b}。}
+\p{#{C} 的特征标为 #{\mu_c(t,t)=\zeta^{ct}}。因此[限制对应](01JB)及其逆具体为}
+##{\lambda_{a,a}\longmapsto\mu_{2a},\qquad
+\mu_c\longmapsto\lambda_{2c,2c}.}
+\p{这同时核对了三个不变特征标对应三个固定点群特征标。特别地不能把参数 #{a} 原样送到 #{\mu_a}；限制必须实际代入两份坐标。}

@@ -1,0 +1,12 @@
+\title{整数特殊线性群的词宽度局部整体上界}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Avni–Meiri，定理4.9](0161)；[词宽度论文，定理1.4](01I0)}
+\meta{proof-status}{相对于01I3这一已发表无条件输入的完整推论；不是从初等公理重证01I3。}
+
+\p{设 #{\widehat{\mathbb Z}=\varprojlim_{d\geq1}\mathbb Z/d\mathbb Z} 为整数的[profinite 完备化](0168)，#{\Gamma_n=\operatorname{SL}_n(\mathbb Z)}，#{K_n=\operatorname{SL}_n(\widehat{\mathbb Z})}，其中 #{n\geq3}。存在与 #{n} 及[词](01I1) #{w} 无关的常数 #{c}，使}
+##{\operatorname{wid}_{\Gamma_n}(w(\Gamma_n))
+\leq c+\operatorname{wid}_{K_n}(w(K_n)).}
+\p{证明：#{w=1} 时左端为零；右端无限时结论自动成立。否则令右端宽度为有限整数 #{m}，对非平凡 #{w} 使用[统一同余词值输入](01I3)选 #{d}，令 #{N=\Gamma_n[d\mathbb Z]}。给定 #{g\in W_w(\Gamma_n)}，在 #{K_n} 中可写成 #{m} 个对称词值的乘积。把该表达式模 #{d} 约化后，逐个提升其中词的自变量，就得到 #{h\in X_w(\Gamma_n)^m} 且 #{h\equiv g\pmod d}。于是 #{h^{-1}g\in N\subseteq X_w(\Gamma_n)^c}，应用[核长度引理](01I2)得结论。}
+\p{这里逐个提升确实可行：#{\operatorname{SL}_n(\mathbb Z)\to\operatorname{SL}_n(\mathbb Z/d\mathbb Z)} 满射，见[有限系数环的初等消元](01I8)。不需要假设任意稠密子群自动保持词宽度，也不需要证明 #{K_n} 的每个词值本身来自 #{\Gamma_n}。此推论没有给出右端宽度的数值，更没有给出所有 #{n,w} 共同的总宽度上界。}

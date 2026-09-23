@@ -1,0 +1,14 @@
+\title{Ext 在第二变量的长正合列}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks，00LU](https://stacks.math.columbia.edu/tag/00LU)}
+
+\p{固定含幺环 #{R} 上的左模 #{M}。每个[短正合列](0129) #{0\to A\to B\to C\to0} 诱导长正合列}
+##{0\to\operatorname{Hom}_R(M,A)\to\operatorname{Hom}_R(M,B)\to\operatorname{Hom}_R(M,C)
+\to\operatorname{Ext}^1_R(M,A)\to\operatorname{Ext}^1_R(M,B)\to\cdots.}
+\p{证明：取 #{M} 的[投射分解](012D) #{P_\bullet}。在每个次数应用[投射 Hom 的正合性](01SH)，得到上链复形的短正合列}
+##{0\to\operatorname{Hom}_R(P_\bullet,A)\to\operatorname{Hom}_R(P_\bullet,B)
+\to\operatorname{Hom}_R(P_\bullet,C)\to0.}
+\p{由[复形长正合列及其连接映射构造](01SG)取上同调，结合[Ext 定义](012E)及零次项 #{\operatorname{Ext}^0=\operatorname{Hom}}，即为所需序列。连接映射可以具体计算：把代表 #{P_n\to C} 提升到 #{B}，与 #{d_{n+1}} 复合，再经 #{A\cong\ker(B\to C)} 分解。}
+\p{比较分解时，链映射对三个 Hom 复形同时给出交换图；连接映射的自然性及[比较映射的同伦唯一性](01S2)说明结果不依赖分解。}

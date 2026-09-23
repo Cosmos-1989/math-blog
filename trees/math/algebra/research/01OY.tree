@@ -1,0 +1,11 @@
+\title{六个稳定量子多项式的双端截断极限}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Rietsch，Theorem 2.16 的 S₃ 截断特例](01C3)；[Fomin--Gelfand--Postnikov，Theorem 10.1](01OZ)}
+
+\p{设 #{u^{[N]}} 是同一个无限全正 Toeplitz 矩阵的标准截断，所有 Schoenberg 参数为正，且 #{\alpha_1>\alpha_2,\beta_1>\beta_2}。把[六项量子多项式](01ON)作为固定的 #{F}，对每个 #{N\ge3} 代入截断的 #{x_1,x_2,q_1}。由[固定多项式极限](01OW)，其按 #{123,213,132,231,312,321} 排列的极限为}
+##{1,\quad\alpha_1^{-1},\quad\alpha_1^{-1}+\alpha_2^{-1},\quad
+(\alpha_1\alpha_2)^{-1},\quad\alpha_1^{-2},\quad\alpha_1^{-2}\alpha_2^{-1}.}
+\p{反向代入 #{(-x_N,-x_{N-1},q_{N-1})} 则把整表中的 #{\alpha} 换成 #{\beta}。推导完整可见：这里只有 #{q_1}（反向为 #{q_{N-1}}）需要趋零，其余项逐一令 #{q=0}；故不必额外要求全部相邻参数都严格不等。}
+\p{把这些“固定多项式取值”解释为大旗中的 Schubert 函数，需要外部的 Fomin--Gelfand--Postnikov 稳定代表元定理以及 Peterson 识别；反向还需要最长置换的共轭对称。本文不证明这三个几何识别。也不能把[三阶正函数表](01OU)的 #{1/b,1/c} 原样用到 #{N>3}：它们用到了特定三阶商环关系。}

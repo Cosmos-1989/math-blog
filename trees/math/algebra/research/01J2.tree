@@ -1,0 +1,12 @@
+\title{特征标内积等于交织空间维数}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Etingof 等，§3.4–3.5，定理3.8](013C)}
+\meta{proof-status}{完整证明，包含特征标判别表示同构的理由。}
+
+\p{设 #{G} 为有限群，#{V,W} 为有限维复表示，#{\chi_V,\chi_W} 为其[特征标](0170)。对复函数定义 #{\langle f,h\rangle_G=|G|^{-1}\sum_{g\in G}f(g)\overline{h(g)}}。则}
+##{\langle\chi_V,\chi_W\rangle_G
+=\dim_{\mathbb C}\operatorname{Hom}_G(W,V).}
+\p{证明：在全部线性映射空间 #{L=\operatorname{Hom}_{\mathbb C}(W,V)} 上令 #{g\cdot T=\rho_V(g)T\rho_W(g)^{-1}}。平均算子 #{Q=|G|^{-1}\sum_g(g\cdot-)} 的像恰为[交织空间](013A)，且 #{Q^2=Q}，故其迹等于像的维数。对矩阵单位逐项计算可得左乘 #{A}、右乘 #{B} 在矩阵空间上的迹为 #{\operatorname{tr}(A)\operatorname{tr}(B)}。而 #{\rho_W(g)} 的特征值是单位根，故 #{\chi_W(g^{-1})=\overline{\chi_W(g)}}。取 #{Q} 的迹即得公式。}
+\p{由[Schur 引理](017X)，不可约表示之间非零交织映射必为同构，同一不可约表示的自交织空间是一维。因此不可约特征标两两正交且范数平方为一。由[完全可约性](01J0)，#{\langle\chi_V,\theta\rangle_G} 正是不可约特征标 #{\theta} 的重数；所以特征标相同当且仅当表示同构，且 #{V\ne0} 不可约当且仅当 #{\langle\chi_V,\chi_V\rangle_G=1}。}

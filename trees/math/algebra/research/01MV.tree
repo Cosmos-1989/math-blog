@@ -1,0 +1,10 @@
+\title{把幂等元杀成边界的 DG 代数模型}
+\date{2026-09-23}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Booth，命题 4.1.11](01M2)}
+
+\p{设 #{A} 是域 #{k} 上的含幺[结合代数](0123)，#{e\in A} 满足 #{e^2=e}。从 #{A} 添加一个非交换变量 #{h}，取次数 #{|A|=0,|h|=-1}，定义 [DG 代数](019A)}
+##{D(A,e)=\frac{A\langle h\rangle}{(eh-h,he-h)},\qquad d(a)=0\ (a\in A),\quad d(h)=e.}
+\p{微分按 #{d(uv)=d(u)v+(-1)^{|u|}u\,d(v)} 延拓。关系稳定，因为 #{d(eh-h)=e^2-e=0=d(he-h)}；微分平方在生成元上零，Leibniz 法则使其处处零。因此这确实是显式 DG 代数，并使 #{e} 成为边界。}
+\p{Booth 引用 Braun–Chuang–Lazarev 的定理，把此模型识别为导出商 #{A/^{\mathbb L}AeA}。本页使用该识别作外部输入，不声称从 #{dh=e} 单独证明全部同伦普适性质；在几何场景得到[导出收缩代数](01BM)。}

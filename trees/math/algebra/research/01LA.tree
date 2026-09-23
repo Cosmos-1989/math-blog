@@ -1,0 +1,12 @@
+\title{一阶结合律的三因子展开证明}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Barmeier–Schroll–Wang，§3.3](01LZ)，独立代数计算}
+
+\p{设 #{A} 是域 #{k} 上[含幺结合代数](0123)，#{\mu} 为归一化双线性映射，#{\epsilon^2=0}。证明[一阶结合律判据](01L9)。对[候选乘法](01L8)，直接展开得到}
+##{\begin{aligned}
+(a*b)*c&=(ab)c+\epsilon\bigl(\mu(a,b)c+\mu(ab,c)\bigr),\\
+a*(b*c)&=a(bc)+\epsilon\bigl(a\mu(b,c)+\mu(a,bc)\bigr).
+\end{aligned}}
+\p{零次项因 #{A} 结合而相等；一次项之差为 #{-(\delta\mu)(a,b,c)}，其中 #{\delta} 为[Hochschild 微分](01L4)。所以在 #{A} 中所有三元组上结合，当且仅当 #{\delta\mu=0}。结合子是 #{D=k[\epsilon]/(\epsilon^2)} 三线性的，而 #{A_D} 由 #{A} 在 #{D} 上生成，故检验这些三元组已经检验了整个 #{A_D}。单位条件由 #{\mu(1,a)=\mu(a,1)=0} 保证。}

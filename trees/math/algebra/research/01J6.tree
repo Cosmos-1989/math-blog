@@ -1,0 +1,12 @@
+\title{交织算子构造关联投射表示}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Navarro，§3.2(a)–(c)](016Z)的存在性，独立展开}
+\meta{proof-status}{完整证明。}
+
+\p{设 #{(G,N,\theta)} 为[特征标三元组](0173)，#{D:N\to\operatorname{GL}(U)} 是给出 #{\theta} 的不可约复表示。则存在与此三元组[关联的投射表示](0176)，且因子集来自 #{L=G/N}。}
+\p{证明：对每个 #{q\in L} 选代表 #{t_q\in G}，#{t_1=1}。因为 #{\theta} 在 #{G} 下不变，由[特征标判别同构](01J2)，可选可逆算子 #{T_q} 满足 #{T_qD(n)T_q^{-1}=D(t_qnt_q^{-1})}，取 #{T_1=I}。每个 #{g} 唯一写成 #{nt_q}，定义 #{P(nt_q)=D(n)T_q}。}
+\p{写 #{c(q,r)=t_qt_rt_{qr}^{-1}\in N}。算子 #{T_qT_r} 与 #{D(c(q,r))T_{qr}} 都实现由 #{t_qt_r} 引起的共轭作用，因此由[Schur 引理](017X)存在唯一非零标量 #{\alpha(q,r)} 使}
+##{T_qT_r=\alpha(q,r)D(c(q,r))T_{qr}.}
+\p{对 #{g=nt_q,h=mt_r}，把 #{T_qD(m)=D(t_qmt_q^{-1})T_q} 代入，得 #{P(g)P(h)=\alpha(q,r)P(gh)}。三次相乘的结合律给出[因子集恒等式](0175)，而 #{T_1=I} 保证 #{\alpha(1,q)=\alpha(q,1)=1}。于是 #{P|_N=D} 且与 #{N} 混合的因子为一，正好满足关联条件。}

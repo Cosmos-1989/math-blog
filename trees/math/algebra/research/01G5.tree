@@ -1,0 +1,22 @@
+\title{群上玻色化的全部 Hopf 公理验证}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Angiono，§2.1；非阿贝尔群次序的独立计算](0141)}
+
+\p{设 #{G} 为群、#{k} 为域、#{R} 为群分次 Yetter–Drinfeld 范畴中的编织 Hopf 代数；使用[显式玻色化定理](01G4)的记号及全部假设。以下各余乘法项均拆成齐次张量。对 #{r,s,t\in R} 和 #{g,h,\ell\in G}，两种乘法结合顺序都给出 #{r(g\cdot s)((gh)\cdot t)\#gh\ell}，故乘法结合且 #{1\#e} 是单位。}
+\p{由 #{\Delta_R} 的余结合，两个三重余乘法同为}
+##{\sum(r_1\#|r_2||r_3|g)\otimes(r_2\#|r_3|g)\otimes(r_3\#g).}
+\p{左余单位直接由 #{\sum\varepsilon_R(r_1)r_2=r} 给出；右余单位中凡 #{\varepsilon_R(r_2)\ne0} 都有 #{|r_2|=e}，因而给出 #{r\#g}。}
+\p{验证乘余相容时，令 #{c=|r_2|}、#{d=|s_2|}。由于 #{|g\cdot s_2|=gdg^{-1}}，编织乘法公式给出}
+##{\Delta((r\#g)(s\#h))
+=\sum\bigl(r_1(cg\cdot s_1)\#cgd h\bigr)\otimes\bigl(r_2(g\cdot s_2)\#gh\bigr).
+}
+\p{这正是 #{\Delta(r\#g)\Delta(s\#h)}，因为第一张量因子的群乘积为 #{(cg)(dh)=cgdh}。此外 #{\Delta(1\#e)=(1\#e)\otimes(1\#e)}；#{\varepsilon_R} 的乘法性与 #{G}-不变性给出 #{\varepsilon((r\#g)(s\#h))=\varepsilon_R(r)\varepsilon_R(s)}，且单位的余单位为 #{1}。双代数公理全部成立。}
+\p{最后取齐次 #{r\in R_a}，在各项写 #{|r_1|=b,|r_2|=c}，于是 #{bc=a}。右对极恒等式为}
+##{\sum(r_1\#cg)S(r_2\#g)=\sum r_1S_R(r_2)\#e=\varepsilon_R(r)(1\#e).}
+\p{左对极恒等式中 #{(cg)^{-1}b^{-1}=g^{-1}a^{-1}} 与求和项无关，故}
+##{\sum S(r_1\#cg)(r_2\#g)
+=\left(g^{-1}a^{-1}\cdot\sum S_R(r_1)r_2\right)\#g^{-1}a^{-1}g
+=\varepsilon_R(r)(1\#e).}
+\p{最后一个等号分两种情形：#{a=e} 时群因子为 #{e}；#{a\ne e} 时 #{\varepsilon_R(r)=0}。线性延拓即得全部[对极公理](0143)，证明完成。}

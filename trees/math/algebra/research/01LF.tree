@@ -1,0 +1,18 @@
+\title{对偶数的二次 Hochschild 上同调显式计算}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Chaparro 等，第三章的平方零环例](01LY)；[Barmeier–Schroll–Wang，§3.3](01LZ)，独立计算}
+
+\p{设 #{A=k[x]/(x^2)}，#{k} 为任意域。用[二次归一化引理](01LC)，二余循环只需指定 #{\mu(x,x)=a+bx}，遇单位的输入均取零。对唯一不含单位的基三元组，}
+##{(\delta\mu)(x,x,x)=x(a+bx)-(a+bx)x=0.}
+\p{若某个输入为 #{1}，Hochschild 公式中相邻两项抵消；故任意 #{a,b} 都是[二余循环](01L4)。归一化一次上链由 #{f(x)=c+dx,\ f(1)=0} 决定，而}
+##{(\delta f)(x,x)=xf(x)+f(x)x=2cx.}
+\p{所以完整的商空间计算给出}
+##{HH^2(A)\cong A/(2xA)\cong
+\begin{cases}
+k\cdot[\mu_0],&\operatorname{char}k\ne2,\\
+k\cdot[\mu_0]\oplus k\cdot[\mu_1],&\operatorname{char}k=2,
+\end{cases}
+\quad \mu_0(x,x)=1,\quad\mu_1(x,x)=x.}
+\p{此处 #{[\mu_i]} 表示上同调类，右侧是向量空间分解；本页没有计算整个 Hochschild 环的乘法。}

@@ -1,0 +1,10 @@
+\title{无限生成模的支持公式可以失败}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Stacks，§10.40 的有限性条件](https://stacks.math.columbia.edu/tag/00L0)，独立反例}
+
+\p{把 #{E=\mathbb Q/\mathbb Z} 看作整数环的[商模](012R)。任何非零整数 #{n} 都不能消去 #{E}：取不整除 #{n} 的素数 #{\ell}，则 #{n(1/\ell+\mathbb Z)\ne0}。故[湮灭理想](01K0)为零。}
+\p{在素理想 #{(0)} 处[局部化](0139)，每个元素都被某个非零整数消去，因此 #{E_{(0)}=0}。在 #{(p)} 处，#{1/p+\mathbb Z} 不被任何不属于 #{(p)} 的整数消去，故 #{E_{(p)}\ne0}。所以}
+##{\operatorname{Supp}_{\mathbb Z}(E)=\{(p):p\text{ 为素数}\}\ne V_{\mathbb Z}(0)=\operatorname{Spec}\mathbb Z.}
+\p{这不违背[有限模支持公式](01K2)：#{E} 不有限生成，因为有限多个有理数的分母有公倍数，而整个 #{E} 没有统一分母。取 #{S=\mathbb Z\setminus\{0\}} 还得到 #{S^{-1}E=0}，其在 #{\mathbb Q} 中的湮灭理想是 #{\mathbb Q}，却有 #{S^{-1}\operatorname{Ann}_{\mathbb Z}E=0}。}

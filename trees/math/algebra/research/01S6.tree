@@ -1,0 +1,13 @@
+\title{一阶 Ext 分类短正合扩张}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks：Ext 与 Yoneda 扩张](https://stacks.math.columbia.edu/tag/06XP)；以下限于模并给出直接证明}
+
+\p{对同一含幺环 #{R} 上的左模 #{M,N}，#{\operatorname{Ext}^1_R(M,N)} 的元素与 #{M} 被 #{N} 的[扩张等价类](01S4)一一对应，零元素对应分裂扩张。}
+\p{取短正合列 #{0\to K\xrightarrow{i}P\xrightarrow{\varepsilon}M\to0}，其中 #{P} 投射。[维数移位](01S3)把 Ext 写成 #{\operatorname{Hom}(K,N)} 模掉从 #{P} 延伸来的映射。将 #{\varphi:K\to N} 送到[商模扩张](01S5) #{E_\varphi}。}
+\p{若 #{\psi=\varphi+a i}，映射 #{[n,p]\mapsto[n-a(p),p]} 给出 #{E_\varphi\cong E_\psi}，在两端是恒等，故上述赋值下降到商群。}
+\p{反向构造：对任意扩张 #{0\to N\xrightarrow{j}E\xrightarrow{q}M\to0}，由 #{P} 投射可取 #{t:P\to E} 使 #{qt=\varepsilon}。因 #{ti} 落入 #{\ker q=j(N)}，唯一确定 #{\varphi:K\to N} 使 #{ti=j\varphi}。映射}
+##{E_\varphi\longrightarrow E,\qquad[n,p]\longmapsto j(n)+t(p)}
+\p{为等价：满性由先提升 #{q(e)} 得到；若像为零，则 #{p=i(k)}，进而 #{n=-\varphi(k)}，恰好是被商去的关系。另一个提升 #{t'} 与 #{t} 的差为某个 #{ja}，所得 #{\varphi'} 与 #{\varphi} 相差 #{ai}。扩张的等价也保持此商类。两种构造互逆，故为双射。}
+\p{当 #{\varphi=0} 时，#{E_0=N\oplus(P/iK)\cong N\oplus M}；反之，分裂扩张可选 #{t=s\varepsilon}，于是 #{ti=0}。零类与分裂的对应得证。加法与[Baer 和](01SE)的相容性另作显式验证。}

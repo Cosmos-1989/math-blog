@@ -1,0 +1,11 @@
+\title{二项复形的零同伦障碍计算}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Brochard–Iyengar–Khare，例 2.2](01M1)；补出不能导出提升的链级障碍。}
+
+\p{证明[同调作用反例](01MR)。设 #{k} 为域，#{A=\frac{k\lbrack\lbrack x,y\rbrack\rbrack}{(x^2,xy)}}，#{B=A/(x)}，#{F_1=A^2,F_0=A,d_1=[x\ y]}。每个 #{a\in A} 唯一写成 #{f(y)+cx}，#{f(y)\in k\lbrack\lbrack y\rbrack\rbrack,c\in k}；这是因为商去的单项式恰含 #{x^2} 或 #{xy}。}
+\p{若 #{(a,b)\in\ker d_1}，写 #{a=f(y)+cx,b=g(y)+dx}，则 #{ax+by=f(0)x+yg(y)=0}，故 #{f(0)=0,g(y)=0}。于是 #{a\in(x,y),b\in(x)}，所以 #{x(a,b)=0}。另外 #{H_0(F)=A/(x,y)=k}，也被 #{x} 杀死。#{y\ne0} 在 #{B=k\lbrack\lbrack y\rbrack\rbrack} 上乘法单射，却杀死非零的 #{k}，故 #{k} 不自由。#{x,y} 模 #{\mathfrak m_A^2} 独立，故嵌入维数差为 #{2-1=1}。}
+\p{若存在导出 #{B} 作用，#{x} 在[链同伦](012T)意义下必须作用为零。任一零同伦只能有 #{h_0:A\to A^2}，记 #{h_0(1)=(u,v)}。在次数 #{1} 的条件为}
+##{h_0d_1=\begin{pmatrix}ux&uy\\vx&vy\end{pmatrix}=xI_2.}
+\p{右下角要求 #{vy=x}，不可能，因为 #{x\notin(y)}。所以不存在这样的同伦。这里采用[导出作用定义](01AI)中有限自由复形的同伦自同态环，不需要借助未证明的自由性主定理来否定导出作用。}

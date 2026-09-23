@@ -1,0 +1,22 @@
+\title{四元数群的非平凡因子集与二次特征标}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Navarro，§3.2](016Z)的延拓障碍；[Etingof 等，§3.3的四元数表示](013C)；独立因子集计算}
+\meta{proof-status}{完整矩阵、因子集、不可约性与唯一性计算。}
+
+\p{设 #{G=Q_8=\{\pm1,\pm i,\pm j,\pm ij\}}，乘法满足 #{i^2=j^2=-1}、#{ji=-ij}。令 #{N=\{\pm1\}}，#{\theta(-1)=-1}，这是中心子群的一次特征标，形成[特征标三元组](0173)。商群 #{L=G/N\cong(\mathbb Z/2\mathbb Z)^2} 的代表选 #{s(a,b)=i^aj^b}，#{a,b\in\{0,1\}}。}
+\p{定义一维[关联投射表示](0176) #{P((-1)^\varepsilon i^aj^b)=(-1)^\varepsilon}。计算交换 #{j^b} 与 #{i^{a'}} 及两次平方得到}
+##{s(a,b)s(a',b')=(-1)^{aa'+bb'+ba'}s(a+a',b+b'),\qquad
+\alpha((a,b),(a',b'))=(-1)^{aa'+bb'+ba'},}
+\p{其中代表的两个坐标加法按模二处理。因 #{P(g)P(h)=\alpha(gN,hN)P(gh)}，这确实是该关联表示的因子集，且 #{\alpha^{-1}=\alpha}。}
+\p{令 #{\mathrm i=\sqrt{-1}} 为复数，取}
+##{A=\begin{pmatrix}\mathrm i&0\\0&-\mathrm i\end{pmatrix},\qquad
+B=\begin{pmatrix}0&1\\-1&0\end{pmatrix},\qquad
+R(a,b)=A^aB^b.}
+\p{#{A^2=B^2=-I}、#{BA=-AB}，所以 #{R} 的因子集正是 #{\alpha^{-1}}。[反因子集分类](01J7)恢复普通表示 #{\rho((-1)^\varepsilon i^aj^b)=(-1)^\varepsilon A^aB^b}。#{A} 的两条特征直线被 #{B} 互换，没有共同不变直线，因此表示不可约。}
+\p{它还是 #{\theta} 上方唯一不可约表示：任意反因子集表示的矩阵 #{A',B'} 满足相同平方及反交换关系。#{A'} 有特征值 #{\mathrm i} 或 #{-\mathrm i}，#{B'} 交换两特征空间，故可选 #{A'e=\mathrm i e}。#{\operatorname{span}(e,B'e)} 是二维不变子空间；不可约性迫使它是全空间。在基 #{e,-B'e} 下矩阵正是 #{A,B}。所以特征标唯一，值为}
+##{\chi(1)=2,\quad\chi(-1)=-2,\quad
+\chi(\pm i)=\chi(\pm j)=\chi(\pm ij)=0,\qquad
+\langle\chi,\chi\rangle_{Q_8}=(4+4)/8=1.}
+\p{最后 #{[i,j]=-1}。任意一维普通表示都把换位子送到一，因此 #{\theta} 不可能普通延拓到 #{G}。这说明“不变”不等于“可延拓”；也说明此因子集不能通过重新乘标量变成恒一，否则就会产生这种延拓。[内积验证](01J2)与矩阵证明一致。}

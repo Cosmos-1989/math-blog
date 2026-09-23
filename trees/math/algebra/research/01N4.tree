@@ -1,0 +1,12 @@
+\title{交换子理想的显式基计算}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Donovan–Wemyss，例 3.14](01M3)；补出商空间的线性无关性。}
+
+\p{证明[Laufer 交换化公式](01N3)。设 #{m\geq3} 奇，#{Q_m} 具有[已证词基](01N0)并满足 #{yx=-xy,x^2=y^m}。由于 #{x,y} 生成整个代数，把 #{xy-yx=2xy} 杀掉就使整个商交换。因此交换子理想恰为双边理想 #{(xy)}。}
+\p{在已知词基中令}
+##{W=\operatorname{span}_{\mathbb C}\{xy^j:1\leq j<m\}
+\oplus\operatorname{span}_{\mathbb C}\{y^{m+j}:1\leq j<m\}.}
+\p{此空间在左右乘 #{x,y} 下稳定：乘 #{y} 只提升指数或给符号，乘 #{x} 把 #{xy^j} 变成 #{\pm y^{m+j}}，把 #{y^{m+j}} 变成零。因此 #{W} 是包含 #{xy} 的双边理想。反向 #{xy^j=(xy)y^{j-1}}，#{y^{m+j}=x(xy^j)}，故 #{W=(xy)}。}
+\p{商掉这 #{2m-2} 个独立基向量，恰剩 #{1,y,\ldots,y^m,x}，所以维数为 #{3m-(2m-2)=m+2}。在交换商中 #{x^2=y^m,xy=0} 推出 #{y^{m+1}=0}，故形式级数与多项式表示相同，得到所述交换代数同构。}

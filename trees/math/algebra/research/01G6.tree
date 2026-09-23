@@ -1,0 +1,14 @@
+\title{余模代数作用的函子性与一致性验证}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Angiono，§3.3；作用构造的完整验证](0141)}
+
+\p{设 #{k} 为域，#{H} 为有限维 Hopf 代数，#{A} 为有限维左[#{H}-余模代数](014Q)。证明[表示范畴作用构造](014R)。对左 #{H}-模 #{X} 和左 #{A}-模 #{M}，定义 #{X\odot M=X\otimes_kM}，作用为 #{a(x\otimes m)=\sum a_{(-1)}x\otimes a_{(0)}m}。余作用的乘法性给出}
+##{a\bigl(b(x\otimes m)\bigr)=\sum a_{(-1)}b_{(-1)}x\otimes a_{(0)}b_{(0)}m=(ab)(x\otimes m).}
+\p{单位由 #{\delta(1)=1\otimes1} 得到。若 #{f:X\to X'}、#{q:M\to M'} 分别为模同态，则 #{f\otimes q} 保持此作用；恒等映射与复合也由通常张量积保持，故确实定义双线性函子。}
+\p{对另一个左 #{H}-模 #{Y}，通常结合映射 #{(x\otimes y)\otimes m\mapsto x\otimes(y\otimes m)} 保持 #{A}-作用，因为两侧分别用到}
+##{\sum a_{(-1)(1)}\otimes a_{(-1)(2)}\otimes a_{(0)}
+=\sum a_{(-1)}\otimes a_{(0)(-1)}\otimes a_{(0)(0)}.}
+\p{这是余结合公理。单位对象 #{k} 上的 #{H}-作用是 #{h z=\varepsilon(h)z}，所以单位识别 #{k\otimes M\to M} 的 #{A}-线性性恰是 #{\sum\varepsilon(a_{(-1)})a_{(0)}=a}。这些映射的自然性由纯张量上的公式直接给出。}
+\p{[模范畴](014P)的五边形两路都把 #{((x\otimes y)\otimes z)\otimes m} 送到 #{x\otimes(y\otimes(z\otimes m))}；单位一致性的两路都做标量乘法。纯张量张成各空间，故所需映射相等。有限维模范畴的核、余核及有限直和在向量空间中取并带诱导作用，故它是线性阿贝尔范畴。这样所需公理均已验证，但没有由此证明模范畴的不可分解性、射影正合性或 Morita 分类。}

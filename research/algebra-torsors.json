@@ -1,0 +1,2214 @@
+{
+  "papers": [
+    {
+      "authors": [
+        "Anastasia Stavrova"
+      ],
+      "title": "Elementary Subgroups in Isotropic Reductive Groups",
+      "outline": "01E0",
+      "reference": "01E1",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1806399",
+      "doi": "10.1137/25M1806399",
+      "pages": "293-304",
+      "license": "CC BY 4.0",
+      "full_text_read": true,
+      "coverage": {
+        "venue": "Proceedings of the International Congress of Mathematicians 2026, Volume 3: Invited Lectures (Sections 1-4), SIAM",
+        "reading": "Read the complete mathematical body, Sections 1, 2.1, 2.2, 3.1 and 3.2, pp. 293-300, including proofs of Theorems 2.1 and 3.6; checked the bibliography on pp. 300-304. Official HTML and official PDF text extraction were cross-checked.",
+        "integrated_results": [
+          "Theorem 2.1(i)-(iii)",
+          "Corollary 2.2",
+          "Lemma 2.3",
+          "Theorem 2.4(i)-(ii)",
+          "Theorem 3.1",
+          "Theorem 3.2",
+          "Proposition 3.3",
+          "Theorem 3.4 (all three alternatives)",
+          "Theorem 3.5 (affine-group specialization of the stated KV_1 conclusion)",
+          "Theorem 3.6"
+        ],
+        "proof_coverage": [
+          "Expanded the conjugation proof of Corollary 2.2.",
+          "Expanded the opposite-parabolic independence argument, conditional on the Levi conjugacy theorem.",
+          "Preserved the semilocal argument of Theorem 2.1(ii), explicitly depending on minimal-parabolic existence and conjugacy.",
+          "Expanded the contraction and endpoint-evaluation arguments relating K_1 and KV_1, conditional on the vector-scheme structure theorem.",
+          "Preserved the two-map proof of Theorem 3.6, conditional on A^1-invariance of torsors and affine representability.",
+          "Theorem 2.4 is accompanied only by the reported level-computation/generic-element proof route, not an invented proof."
+        ],
+        "background": "Added local definitions for reductive-group torsor and K-theory prerequisites, reusing parent canonical scheme/module nodes and the concurrent Achar-Riche root-data node 0187.",
+        "local_extraction": "/tmp/stavrova-icm2026-extracted.txt",
+        "raw_web_extraction": "/tmp/stavrova-icm2026-web-extraction.json",
+        "deepening": {
+          "date": "2026-09-23",
+          "outline": "01Q0",
+          "supporting_reference": "01QS",
+          "new_pages": 30,
+          "complete_proof_ids": [
+            "01Q3",
+            "01Q4",
+            "01Q5",
+            "01Q6",
+            "01Q8",
+            "01Q9",
+            "01QA",
+            "01QB",
+            "01QD",
+            "01QE",
+            "01QF",
+            "01QG",
+            "01QH",
+            "01QI",
+            "01QK",
+            "01QL",
+            "01QM",
+            "01QO",
+            "01QP",
+            "01QQ",
+            "01QR",
+            "01QT"
+          ],
+          "summary": "Historical first-pass coverage above is preserved. Added fully written split-matrix proofs for commutators, semilocal SL=E and normality, Jacobson-level relative SL=E and commutators, stable Whitehead, determinant K1/stabilization and reduction maps, plus explicit polynomial paths and rank/normal-closure/lifting counterexamples.",
+          "generalization_boundary": "No claim to complete the general relative-root/local-global/A1-torsor proofs or arbitrary stable-range theory."
+        }
+      },
+      "limitations": [
+        "Direct download of the official PDF binary to /tmp was attempted through /doi/pdf and /doi/epdf, including an approved unsandboxed attempt; every curl request returned HTTP 403. The actual official full text was nevertheless read through the web tool, which extracted the 12-page PDF, and via the publisher's full HTML. No local PDF binary or successful pdftotext run is claimed.",
+        "No arXiv version of this exact ICM2026 report was located; older Stavrova papers were not substituted.",
+        "Reading a survey statement is not reading the proofs in its bibliography. The proofs of the root calculations, local-global principle, sandwich classification, affine Horrocks theorem, injectivity, Henselian rigidity, polynomial invariance, torsor invariance and affine representability are not exhaustively reproduced or independently verified.",
+        "First-pass limitation (historical): relative root subschemes, general Weil restriction, LG-rings, stabilization, congruence kernels and higher Karoubi-Villamayor groups were not developed into complete prerequisite networks. Current deepening resolves the concrete split matrix commutator, semilocal/Jacobson congruence, stable Whitehead and explicitly bounded K1 branches recorded in deepening; all general/non-split and higher-degree gaps remain.",
+        "The Kneser-Tits/abelianity question is recorded with the status given by the report, not a claim that all later literature up to the run date was exhaustively surveyed.",
+        "The source's parenthetical identification of groups without proper parabolics with tori is not adopted: anisotropic semisimple groups provide another possibility.",
+        "The contraction paragraph's h(X)=g endpoint typo is corrected to h(1)=g; Theorem 3.5's unused quantified n is not converted into an unsupported higher-degree theorem.",
+        "Shared foundations and root navigation remain the parent's responsibility. Only allocated files were edited; no whole-site build, root audit or navigation update was performed."
+      ],
+      "notes": [
+        "01E2",
+        "01E3",
+        "01E4",
+        "01E5",
+        "01E6",
+        "01E7",
+        "01E8",
+        "01E9",
+        "01EA",
+        "01EB",
+        "01EC",
+        "01ED",
+        "01EE",
+        "01EF",
+        "01EG",
+        "01EH",
+        "01EI",
+        "01EJ",
+        "01EK",
+        "01EL",
+        "01EM",
+        "01EN",
+        "01EO",
+        "01EP",
+        "01EQ",
+        "01ER",
+        "01ES",
+        "01ET",
+        "01EU",
+        "01EV",
+        "01EW",
+        "01EX",
+        "01EY",
+        "01EZ",
+        "01F0",
+        "01F1",
+        "01F2",
+        "01F3",
+        "01F4",
+        "01F5",
+        "01F6",
+        "01F7",
+        "01F8",
+        "01F9",
+        "01FA",
+        "01FB",
+        "01FC",
+        "01FD",
+        "01FE",
+        "01FF",
+        "01FG",
+        "01FH",
+        "01FI",
+        "01FJ",
+        "01FK",
+        "01FL",
+        "01FM",
+        "01FN",
+        "01FO",
+        "01FP",
+        "01FQ",
+        "01FR",
+        "01FS",
+        "01FT",
+        "01FU",
+        "01FV",
+        "01FW",
+        "01FX",
+        "01FY",
+        "01FZ",
+        "01Q1",
+        "01Q2",
+        "01Q3",
+        "01Q4",
+        "01Q5",
+        "01Q6",
+        "01Q7",
+        "01Q8",
+        "01Q9",
+        "01QA",
+        "01QB",
+        "01QC",
+        "01QD",
+        "01QE",
+        "01QF",
+        "01QG",
+        "01QH",
+        "01QI",
+        "01QJ",
+        "01QK",
+        "01QL",
+        "01QM",
+        "01QN",
+        "01QO",
+        "01QP",
+        "01QQ",
+        "01QR",
+        "01QT"
+      ]
+    }
+  ],
+  "reviews": {
+    "01E2": {
+      "action": "added",
+      "reason": "single mathematical question answered: 分裂环面与环面；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E3": {
+      "action": "added",
+      "reason": "single mathematical question answered: 半单群概形；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E4": {
+      "action": "added",
+      "reason": "single mathematical question answered: 约化群概形的抛物子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E5": {
+      "action": "added",
+      "reason": "single mathematical question answered: 抛物子群的幺幂根基；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E6": {
+      "action": "added",
+      "reason": "single mathematical question answered: 抛物子群的 Levi 子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E7": {
+      "action": "added",
+      "reason": "single mathematical question answered: 相反抛物子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E8": {
+      "action": "added",
+      "reason": "single mathematical question answered: 严格真抛物子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E9": {
+      "action": "added",
+      "reason": "single mathematical question answered: 约化群的各向同性秩下界；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EA": {
+      "action": "added",
+      "reason": "single mathematical question answered: 由相反抛物子群定义初等子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EC": {
+      "action": "added",
+      "reason": "single mathematical question answered: 半局部环；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EL": {
+      "action": "added",
+      "reason": "single mathematical question answered: 带抛物选择的非稳定 K₁ 函子；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EQ": {
+      "action": "added",
+      "reason": "single mathematical question answered: 正则交换环；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01ER": {
+      "action": "added",
+      "reason": "single mathematical question answered: 分裂约化群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01ES": {
+      "action": "added",
+      "reason": "single mathematical question answered: Dedekind 环的局部刻画；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01ET": {
+      "action": "added",
+      "reason": "single mathematical question answered: 非分歧正则局部环；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EV": {
+      "action": "added",
+      "reason": "single mathematical question answered: Hensel 对；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EW": {
+      "action": "added",
+      "reason": "single mathematical question answered: 半单群概形的单连通性；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EY": {
+      "action": "added",
+      "reason": "single mathematical question answered: 群概形的多项式路径子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EZ": {
+      "action": "added",
+      "reason": "single mathematical question answered: 第一 Karoubi–Villamayor 群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F2": {
+      "action": "added",
+      "reason": "single mathematical question answered: fppf 覆盖；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F3": {
+      "action": "added",
+      "reason": "single mathematical question answered: 群概形的挠子；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F4": {
+      "action": "added",
+      "reason": "single mathematical question answered: 挠子的非阿贝尔 H¹；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F5": {
+      "action": "added",
+      "reason": "single mathematical question answered: 平展态射与平展覆盖；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F6": {
+      "action": "added",
+      "reason": "single mathematical question answered: Nisnevich 覆盖；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FQ": {
+      "action": "added",
+      "reason": "single mathematical question answered: 有限生成射影模的向量概形；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FZ": {
+      "action": "added",
+      "reason": "single mathematical question answered: 固有态射；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EB": {
+      "action": "added",
+      "reason": "single mathematical question answered: 初等矩阵是抛物初等子群的例子；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Retargeted elementary-matrix terminology to canonical 01Q2 and supplied triangular-factor generation argument."
+      }
+    },
+    "01ED": {
+      "action": "added",
+      "reason": "single mathematical question answered: 嵌套严格真抛物子群给出相同初等函子；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EE": {
+      "action": "added",
+      "reason": "single mathematical question answered: 半局部底上的初等函子与抛物选择无关；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EF": {
+      "action": "added",
+      "reason": "single mathematical question answered: 局部秩至少二时的抛物选择无关性；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EG": {
+      "action": "added",
+      "reason": "single mathematical question answered: 初等子群的正规性；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EH": {
+      "action": "added",
+      "reason": "single mathematical question answered: 由抛物选择无关性推出正规性；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EI": {
+      "action": "added",
+      "reason": "single mathematical question answered: 半局部环上的 Gauss 分解；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Explicit external-input label; matrix SL=E is not misidentified with a prescribed four-factor Gauss decomposition."
+      }
+    },
+    "01EJ": {
+      "action": "added",
+      "reason": "single mathematical question answered: Suslin 型初等子群局部整体原理；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Explicit external-input label and unproved dilation/denominator-clearing boundary; semilocal scalar gluing is not polynomial local-global."
+      }
+    },
+    "01EK": {
+      "action": "added",
+      "reason": "single mathematical question answered: 半局部抛物选择无关性的证明路线；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EM": {
+      "action": "added",
+      "reason": "single mathematical question answered: 秩至少二使非稳定 K₁ 成为群值函子；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EN": {
+      "action": "added",
+      "reason": "single mathematical question answered: 正则局部环的 K₁ 嵌入分式域的 K₁；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EO": {
+      "action": "added",
+      "reason": "single mathematical question answered: 首一多项式局部化不杀死 K₁ 类；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EP": {
+      "action": "added",
+      "reason": "single mathematical question answered: 非稳定 K₁ 的多项式不变性；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Explicit external-input label; finite-rank semilocal elimination is not polynomial invariance."
+      }
+    },
+    "01EU": {
+      "action": "added",
+      "reason": "single mathematical question answered: 秩一时的 Horrocks 单射失败；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01EX": {
+      "action": "added",
+      "reason": "single mathematical question answered: Hensel 对上的非稳定 K₁ 刚性；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F0": {
+      "action": "added",
+      "reason": "single mathematical question answered: 幺幂根基的收缩产生初等路径；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F1": {
+      "action": "added",
+      "reason": "single mathematical question answered: 多项式不变性识别 K₁ 与 KV₁；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F7": {
+      "action": "added",
+      "reason": "single mathematical question answered: Grothendieck–Serre 的挠子平凡性问题；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F8": {
+      "action": "added",
+      "reason": "single mathematical question answered: 含域正则底上的 Nisnevich 挠子同伦不变性；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Explicit external-input label; element paths do not prove torsor invariance."
+      }
+    },
+    "01FM": {
+      "action": "added",
+      "reason": "single mathematical question answered: 整数多项式环上的特殊线性群由初等矩阵生成；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FU": {
+      "action": "added",
+      "reason": "single mathematical question answered: 域上一变量的秩一多项式不变性；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FV": {
+      "action": "added",
+      "reason": "single mathematical question answered: K₁ 比较同构的端点求值证明；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FD": {
+      "action": "added",
+      "reason": "single mathematical question answered: 主同余子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FE": {
+      "action": "added",
+      "reason": "single mathematical question answered: 全同余子群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FF": {
+      "action": "added",
+      "reason": "single mathematical question answered: 相对初等子群；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Added finite-matrix specialization for every n>=2, preserving the general reductive rank assumptions and canonical normal-closure definition."
+      }
+    },
+    "01FG": {
+      "action": "added",
+      "reason": "single mathematical question answered: 几何纤维根系不可约的条件；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FI": {
+      "action": "added",
+      "reason": "single mathematical question answered: 根系结构常数的可逆性条件；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FJ": {
+      "action": "added",
+      "reason": "single mathematical question answered: 相对初等子群的交换子公式；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "General arbitrary-ideal formula retains external-input label; links the narrower completely proved Jacobson-level matrix case."
+      }
+    },
+    "01FK": {
+      "action": "added",
+      "reason": "single mathematical question answered: E 正规化子群的唯一级别 sandwich 分类；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FL": {
+      "action": "added",
+      "reason": "single mathematical question answered: sandwich 分类中的级别与中心性证明路线；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FN": {
+      "action": "added",
+      "reason": "single mathematical question answered: 代数群点的 R 等价；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FO": {
+      "action": "added",
+      "reason": "single mathematical question answered: 单连通群的 Whitehead 群等于 R 等价类群；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FP": {
+      "action": "added",
+      "reason": "single mathematical question answered: 域上 Whitehead 群的交换性问题；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FX": {
+      "action": "added",
+      "reason": "single mathematical question answered: 单纯集合；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FR": {
+      "action": "added",
+      "reason": "single mathematical question answered: 单纯集合的几何实现；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FS": {
+      "action": "added",
+      "reason": "single mathematical question answered: 光滑概形上的单纯预层；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FT": {
+      "action": "added",
+      "reason": "single mathematical question answered: Nisnevich 局部弱等价；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01F9": {
+      "action": "added",
+      "reason": "single mathematical question answered: 不稳定 A¹ 同伦范畴；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FA": {
+      "action": "added",
+      "reason": "single mathematical question answered: Nisnevich 挠子不变性推出仿射可表性；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Explicit external-input label for Nisnevich descent and affine A1 representability."
+      }
+    },
+    "01FB": {
+      "action": "added",
+      "reason": "single mathematical question answered: 正则环上非稳定 K₁ 的 A¹ 可表性；已核对局部对象、假设、记号与直接前置依赖。",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Explicit conditional-proof label referring to existing two-map route 01FC."
+      }
+    },
+    "01FC": {
+      "action": "added",
+      "reason": "single mathematical question answered: 非稳定 K₁ 仿射可表性的两步证明；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FH": {
+      "action": "added",
+      "reason": "single mathematical question answered: 各向同性秩条件保证严格真抛物子群存在；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FY": {
+      "action": "added",
+      "reason": "single mathematical question answered: 更换相反抛物子群不改变初等函子；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01FW": {
+      "action": "added",
+      "reason": "single mathematical question answered: 挠子平凡等价于存在全局截面；已核对局部对象、假设、记号与直接前置依赖。"
+    },
+    "01E0": {
+      "action": "added",
+      "reason": "Navigation only: one reading route links every allocated atomic note; not registered as a mathematical prerequisite.",
+      "deepening_review": {
+        "date": "2026-09-23",
+        "action": "revised",
+        "reason": "Added a reachable concrete split-matrix route without altering root navigation."
+      }
+    },
+    "01E1": {
+      "action": "added",
+      "reason": "Bibliographic identity and access conditions of the exact ICM2026 report; not registered as a mathematical prerequisite."
+    },
+    "01Q0": {
+      "action": "added",
+      "reason": "Navigation only. Orders all 28 new mathematical nodes and one supporting reference; explicitly separates concrete proofs from general reductive local-global and torsor results.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01Q1": {
+      "action": "added",
+      "reason": "Extends the existing field-only GL definition 00DD to commutative rings without redefining rings/modules; defines SL and decodes determinant, adjugate, units and matrix multiplication locally.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01Q2": {
+      "action": "added",
+      "reason": "Canonical elementary-matrix definition extracted from the older parabolic example 01EB, whose terminology now directly links here; includes inverse, determinant, row/column and functorial conventions.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01Q3": {
+      "action": "added",
+      "reason": "Checked every index case by matrix-unit multiplication, including the negative sign and the excluded opposite-root case; complete proof in the node.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01Q4": {
+      "action": "added",
+      "reason": "Complete perfectness proof with an explicit third index; matrix size n>=3 distinguished from semisimple rank n-1.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01Q5": {
+      "action": "added",
+      "reason": "Six-element computation and faithful action on the three nonzero F2-vectors prove E2=SL2=S3 and nonperfectness; does not falsely claim nonnormality.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01Q6": {
+      "action": "added",
+      "reason": "Six-factor unit diagonal formula checked by two-stage multiplication; all coordinate indices and invertibility hypotheses introduced.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01Q7": {
+      "action": "added",
+      "reason": "Defines unimodularity through the already canonical generated ideal 00GB and explains inverse-row coefficients; no duplicate module definition.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01Q8": {
+      "action": "added",
+      "reason": "Complete finite residue-field coefficient gluing, including explicit separating elements for pairwise comaximal maximal ideals and the unit test; not a polynomial local-global proof.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01Q9": {
+      "action": "added",
+      "reason": "Precise finite-rank semilocal SL=E statement, with standalone proof 01QA; does not claim the prescribed four-factor general Gauss decomposition.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QA": {
+      "action": "added",
+      "reason": "Assumptions and target theorem restated. Unit pivot, left/right clearing, paired unit normalization and the n=2 terminal case all checked.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QB": {
+      "action": "added",
+      "reason": "Normality proved from the determinant kernel after SL=E, not assumed to form the quotient; injectivity and surjectivity of the determinant quotient both proved.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QC": {
+      "action": "added",
+      "reason": "New canonical Jacobson-radical definition, reusing maximal ideals and local rings; distinguishes containment in J(R) from a radical ideal in the commutative-algebra sense.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01QD": {
+      "action": "added",
+      "reason": "Both directions of the maximal-ideal unit criterion, subgroup property of 1+I and lifting quotient units are proved explicitly; no Hensel input.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QE": {
+      "action": "added",
+      "reason": "Compares the six factors in E_n/E_n(R,I), whose denominator is normal by definition; does not assume the relative reduction-kernel equality it will help prove.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QF": {
+      "action": "added",
+      "reason": "Exact assumptions I subset J(R), n>=2, arbitrary commutative R; links standalone proof 01QG and derives ambient GL normality from two kernels.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QG": {
+      "action": "added",
+      "reason": "Assumptions and theorem restated; every clearing coefficient stays in I and the diagonal step uses 01QE. No circular quotient argument or external commutator theorem.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QH": {
+      "action": "added",
+      "reason": "Mod-four invariant of the subgroup generated without normal closure and an explicit conjugated 2x2 matrix prove strict containment.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QI": {
+      "action": "added",
+      "reason": "Complete Jacobson-level relative commutator proof via determinant/reduction kernels and the third-index identity; arbitrary-ideal general reductive theorem remains external.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QJ": {
+      "action": "added",
+      "reason": "Stable groups defined as eventual-identity matrices with finite-size representatives, explicitly distinguishing stable E(R) from fixed reductive-group notation.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01QK": {
+      "action": "added",
+      "reason": "All off-diagonal blocks factored into ordinary elementary matrices, then six block factors multiplied; no unproved block-to-elementary step.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QL": {
+      "action": "added",
+      "reason": "Stable Whitehead equality stated with finite-size meaning; separate complete proof 01QM. No unsupported finite-rank stability conclusion.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QM": {
+      "action": "added",
+      "reason": "Assumptions and target theorem restated; both subgroup inclusions proved by a third index and a verified three-diagonal-block identity.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QN": {
+      "action": "added",
+      "reason": "Stable K1 is a group by Whitehead; finite-rank quotients remain pointed sets until normality is established; comparison maps are justified on representatives.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01QO": {
+      "action": "added",
+      "reason": "Both finite and stable semilocal quotients computed by determinant; explicit n>=2 scope and optional trivial n=1 convention avoid claiming a sharp bound.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QP": {
+      "action": "added",
+      "reason": "Relative finite and stable quotients computed as 1+I using the proved relative kernel equality; R need not be semilocal and arbitrary ideals are excluded.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QQ": {
+      "action": "added",
+      "reason": "Exactness proved by identifying all three maps with units, inclusion and quotient reduction; quotient semilocality and unit surjectivity justified.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QR": {
+      "action": "added",
+      "reason": "Absolute and relative paths given as finite products, including conjugators and ideal parameters; no inverse of a polynomial interpolation is assumed and no torsor/A1-representability claim made.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    },
+    "01QS": {
+      "action": "added",
+      "reason": "Supporting primary-author exposition, not a replacement for the exact Stavrova report; read scope and terminology restriction recorded.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "definition-or-navigation"
+    },
+    "01QT": {
+      "action": "added",
+      "reason": "Generator lifting proves E-surjectivity only; mod-five determinant gives a complete GL-surjectivity counterexample in every size.",
+      "scope": "algebra-torsors split-matrix deepening",
+      "proof_status": "complete within explicitly stated hypotheses"
+    }
+  },
+  "prerequisites": {
+    "01E2": [
+      "012L",
+      "01F5"
+    ],
+    "01E3": [
+      "012M",
+      "0133"
+    ],
+    "01E4": [
+      "012M",
+      "012L",
+      "012Z",
+      "0133",
+      "01FZ"
+    ],
+    "01E5": [
+      "01E4",
+      "0132",
+      "0133"
+    ],
+    "01E6": [
+      "01E4",
+      "01E5",
+      "012M"
+    ],
+    "01E7": [
+      "01E6",
+      "01E4"
+    ],
+    "01E8": [
+      "01E4",
+      "01E3"
+    ],
+    "01E9": [
+      "012M",
+      "01E3",
+      "01E2",
+      "012Q"
+    ],
+    "01EA": [
+      "01E5",
+      "01E7",
+      "00BA",
+      "00I1"
+    ],
+    "01EC": [
+      "00CS",
+      "00CT"
+    ],
+    "01EL": [
+      "01EA",
+      "00I1"
+    ],
+    "01EQ": [
+      "00D1",
+      "012P",
+      "012Q"
+    ],
+    "01ER": [
+      "012M",
+      "0187",
+      "012X"
+    ],
+    "01ES": [
+      "01EQ",
+      "00D2"
+    ],
+    "01ET": [
+      "012P",
+      "00SH"
+    ],
+    "01EV": [
+      "00CS",
+      "00CT",
+      "00CU"
+    ],
+    "01EW": [
+      "01E3",
+      "0133",
+      "0138"
+    ],
+    "01EY": [
+      "012L",
+      "00BF"
+    ],
+    "01EZ": [
+      "01EY",
+      "00BG"
+    ],
+    "01F2": [
+      "012J",
+      "0138",
+      "0130"
+    ],
+    "01F3": [
+      "012L",
+      "012X",
+      "01F2"
+    ],
+    "01F4": [
+      "01F3",
+      "01F2",
+      "01F5",
+      "01F6"
+    ],
+    "01F5": [
+      "012Z",
+      "0133",
+      "00D2"
+    ],
+    "01F6": [
+      "01F5",
+      "012V",
+      "00CU"
+    ],
+    "01FQ": [
+      "012C",
+      "0128",
+      "0122",
+      "012I"
+    ],
+    "01FZ": [
+      "012K",
+      "012X",
+      "0131"
+    ],
+    "01EB": [
+      "01EA",
+      "01E7",
+      "01Q1",
+      "01Q2"
+    ],
+    "01ED": [
+      "01E8",
+      "01EA"
+    ],
+    "01EE": [
+      "01EC",
+      "01EA",
+      "01E8"
+    ],
+    "01EF": [
+      "01E9",
+      "01E8",
+      "01EA"
+    ],
+    "01EG": [
+      "01EA",
+      "01E8",
+      "01EC",
+      "01E9",
+      "00BF"
+    ],
+    "01EH": [
+      "01EE",
+      "01EF",
+      "01EA",
+      "00BF"
+    ],
+    "01EI": [
+      "01EC",
+      "01E7",
+      "01E5",
+      "01E6"
+    ],
+    "01EJ": [
+      "01E9",
+      "01E8",
+      "01EA",
+      "012Q",
+      "00CT"
+    ],
+    "01EK": [
+      "01ED",
+      "01EA",
+      "01EC",
+      "01E8"
+    ],
+    "01EM": [
+      "01EL",
+      "01EF",
+      "01EG",
+      "00BG"
+    ],
+    "01EN": [
+      "012P",
+      "00CZ",
+      "01E9",
+      "01EM"
+    ],
+    "01EO": [
+      "01E9",
+      "01EM",
+      "012Q"
+    ],
+    "01EP": [
+      "01E9",
+      "01EM",
+      "01EQ",
+      "01ER",
+      "01ES",
+      "01ET"
+    ],
+    "01EU": [
+      "01EB",
+      "01EL",
+      "012Q",
+      "00SG"
+    ],
+    "01EX": [
+      "01EC",
+      "01EW",
+      "01E8",
+      "01EV",
+      "01EL"
+    ],
+    "01F0": [
+      "01EA",
+      "01EY",
+      "01FQ"
+    ],
+    "01F1": [
+      "01EM",
+      "01EZ",
+      "01F0"
+    ],
+    "01F7": [
+      "012P",
+      "012M",
+      "00CZ",
+      "01F4"
+    ],
+    "01F8": [
+      "01EQ",
+      "01E9",
+      "01F4",
+      "012Z",
+      "0130"
+    ],
+    "01FM": [
+      "01EP",
+      "01EB"
+    ],
+    "01FU": [
+      "00D0",
+      "01E8",
+      "01EL"
+    ],
+    "01FV": [
+      "01F0",
+      "01EY",
+      "01EM",
+      "01EZ"
+    ],
+    "01FD": [
+      "012L",
+      "00CT",
+      "00CU",
+      "00G5"
+    ],
+    "01FE": [
+      "01FD",
+      "00G8"
+    ],
+    "01FF": [
+      "01EA",
+      "01E8",
+      "01E9",
+      "01FD",
+      "010W",
+      "01Q2",
+      "00CT"
+    ],
+    "01FG": [
+      "012M",
+      "0133",
+      "0187"
+    ],
+    "01FI": [
+      "0187",
+      "00CS"
+    ],
+    "01FJ": [
+      "01E9",
+      "01FG",
+      "01FI",
+      "01FF",
+      "01FD"
+    ],
+    "01FK": [
+      "01E9",
+      "01FG",
+      "01FI",
+      "01FJ",
+      "01FE",
+      "00BA"
+    ],
+    "01FL": [
+      "01FK",
+      "01FF",
+      "01FE"
+    ],
+    "01FN": [
+      "012L",
+      "012K",
+      "00D0"
+    ],
+    "01FO": [
+      "01EW",
+      "01E8",
+      "01EL",
+      "01FN"
+    ],
+    "01FP": [
+      "01EW",
+      "01E8",
+      "01EL",
+      "00G3"
+    ],
+    "01FX": [
+      "00I0",
+      "00I1"
+    ],
+    "01FR": [
+      "01FX",
+      "00F8"
+    ],
+    "01FS": [
+      "01FX",
+      "00I1",
+      "012Z",
+      "0130"
+    ],
+    "01FT": [
+      "01FS",
+      "01F6",
+      "01FR",
+      "00FO"
+    ],
+    "01F9": [
+      "01FS",
+      "01FT",
+      "012U",
+      "012X"
+    ],
+    "01FA": [
+      "0134",
+      "00D2",
+      "012Z",
+      "0130",
+      "01F4",
+      "01EZ",
+      "01F9",
+      "0135"
+    ],
+    "01FB": [
+      "01EQ",
+      "00D2",
+      "01E9",
+      "01EM",
+      "01F9"
+    ],
+    "01FC": [
+      "01EP",
+      "01F1",
+      "01F8",
+      "01FA",
+      "01FB"
+    ],
+    "01FH": [
+      "01E9",
+      "01E2",
+      "01E8"
+    ],
+    "01FY": [
+      "01EA",
+      "01E6",
+      "01E7"
+    ],
+    "01FW": [
+      "01F3",
+      "012X"
+    ],
+    "01Q1": [
+      "00CS",
+      "00DD",
+      "01D2",
+      "00BH"
+    ],
+    "01Q2": [
+      "00CS",
+      "00BB",
+      "01Q1",
+      "00G9"
+    ],
+    "01Q3": [
+      "01Q2",
+      "016H"
+    ],
+    "01Q4": [
+      "01Q2",
+      "016I",
+      "01Q3"
+    ],
+    "01Q5": [
+      "00GF",
+      "01Q1",
+      "00DC",
+      "01Q2",
+      "016I"
+    ],
+    "01Q6": [
+      "01Q1",
+      "01Q2"
+    ],
+    "01Q7": [
+      "00CS",
+      "00GB",
+      "01Q1"
+    ],
+    "01Q8": [
+      "01EC",
+      "01Q7",
+      "00CW",
+      "00GU",
+      "01Q2"
+    ],
+    "01Q9": [
+      "01EC",
+      "01Q1",
+      "01Q2"
+    ],
+    "01QA": [
+      "01Q9",
+      "01Q7",
+      "01Q8",
+      "01Q6"
+    ],
+    "01QB": [
+      "01EC",
+      "01Q2",
+      "01Q1",
+      "01Q9",
+      "00BF",
+      "00BG"
+    ],
+    "01QC": [
+      "00CS",
+      "00CW",
+      "00CX"
+    ],
+    "01QD": [
+      "00CT",
+      "00CU",
+      "00GU",
+      "01QC"
+    ],
+    "01QE": [
+      "01Q6",
+      "01FF"
+    ],
+    "01QF": [
+      "01QC",
+      "01Q1",
+      "01FD",
+      "01FF"
+    ],
+    "01QG": [
+      "01QF",
+      "01FF",
+      "01QD",
+      "01QE"
+    ],
+    "01QH": [
+      "010W",
+      "01FF"
+    ],
+    "01QI": [
+      "01FD",
+      "01Q2",
+      "01FF",
+      "01QF",
+      "01Q3"
+    ],
+    "01QJ": [
+      "01Q1",
+      "01Q2"
+    ],
+    "01QK": [
+      "01Q2"
+    ],
+    "01QL": [
+      "01QJ",
+      "016H"
+    ],
+    "01QM": [
+      "01QL",
+      "01QJ",
+      "01Q3",
+      "01QK"
+    ],
+    "01QN": [
+      "01QL",
+      "01QB",
+      "01EL"
+    ],
+    "01QO": [
+      "01EC",
+      "01QN",
+      "01QB"
+    ],
+    "01QP": [
+      "01QF",
+      "01QD"
+    ],
+    "01QQ": [
+      "01QP",
+      "01QN",
+      "01QB",
+      "01QD",
+      "01QO"
+    ],
+    "01QR": [
+      "01Q2",
+      "01FF",
+      "01QF",
+      "01EY",
+      "012Q"
+    ],
+    "01QT": [
+      "01Q2",
+      "01Q1",
+      "01QD"
+    ]
+  },
+  "source_checks": [
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/25M1806399",
+      "accessed": "2026-09-23",
+      "kind": "primary publisher full text",
+      "verified": [
+        "Exact title",
+        "Sole author Anastasia Stavrova",
+        "ICM2026 Volume 3",
+        "Pages 293-304",
+        "Online publication 2026-07-13",
+        "Copyright IMU; CC BY 4.0",
+        "Complete mathematical text, Sections 1-3.2"
+      ]
+    },
+    {
+      "url": "https://epubs.siam.org/doi/epdf/10.1137/25M1806399",
+      "accessed": "2026-09-23",
+      "kind": "primary publisher PDF via web extraction",
+      "status": "12 pages, 778 indexed extraction lines; body and bibliography read. Local binary download and screenshots failed.",
+      "saved": "/tmp/stavrova-icm2026-web-extraction.json"
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1137/25M1806399",
+      "accessed": "2026-09-23",
+      "kind": "publisher-deposited DOI metadata",
+      "verified": [
+        "title",
+        "author",
+        "SIAM publisher",
+        "ICM2026 event",
+        "volume title",
+        "page range",
+        "published-online date"
+      ]
+    },
+    {
+      "kind": "deduplication",
+      "checked": "Existing titles and body searches for torsor, Grothendieck-Serre, Whitehead, parabolic, split torus, etale, Henselian pair and nonstable K-theory; existing ring/group/category nodes reused. 0187 reused for root data; 0138 used for flat morphisms instead of flat modules 012Y."
+    },
+    {
+      "kind": "source_not_substitution",
+      "status": "The 2021 Laurent-polynomial torsor paper and 2009 elementary-subgroup article were search leads/background references only, not substituted for the exact 2026 chapter."
+    },
+    {
+      "kind": "scoped_validation",
+      "checked": "2026-09-23",
+      "notes": 72,
+      "atomic_notes": 70,
+      "direct_links": "All allocated-page targets resolve in the live repository; every declared prerequisite is linked; no Outline or Reference used as a prerequisite.",
+      "prerequisite_graph": "No cycle in the allocated prerequisite graph; all 70 atomic notes and the reference are reachable from 01E0.",
+      "source_formulas_katex": 512,
+      "rendered_formulas_katex": 512,
+      "isolated_forester_build": "Successful in /tmp/stavrova-torsors-scope using the 72 actual pages and 43 external test placeholders. This checks the owned syntax, not shared-node mathematical content.",
+      "sterling_diagrams": "One diagram, 01FC: compiled by Forester, SVG generated, rendered on white background and visually checked; textual composite equality retained.",
+      "errors": [],
+      "not_run": "Whole-site build, root navigation modification and root audit merge."
+    },
+    {
+      "kind": "deepening_full_text_read",
+      "reference": "01E1",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1806399",
+      "date": "2026-09-23",
+      "read": "Reopened the exact publisher full text and reread the GL_n introductory paragraphs, Theorem 2.1, Corollary 2.2, Lemma 2.3, relative-group section and K1 conventions relevant to this expansion. The historical full-report reading remains recorded separately.",
+      "type": "exact ICM2026 primary publisher report",
+      "local_existing_extract": "/tmp/stavrova-icm2026-extracted.txt"
+    },
+    {
+      "kind": "deepening_full_text_read",
+      "reference": "01QS",
+      "url": "https://sites.math.rutgers.edu/~weibel/Kbook/Kbook.III.pdf",
+      "date": "2026-09-23",
+      "read": "Read full relevant mathematical text and proofs in chapter-internal pp.2-5 and 13-14: Definition 1.2, 1.2.1-1.2.3, 1.3.1-1.3.3, Lemma 1.4, relative definitions, Lemma 2.1, Proposition 2.3 and Lemma 2.4. Locally extracted the six pages and visually inspected p.14 after rasterization.",
+      "type": "primary author-hosted mathematical exposition",
+      "local_pdf": "/tmp/stavrova-deepening-kbook-III.pdf",
+      "extracts": [
+        "/tmp/stavrova-deepening-kbook-basics.txt",
+        "/tmp/stavrova-deepening-kbook-relative.txt"
+      ],
+      "scope_boundary": "Not a full-book reading. General stability results and cited bibliography are not counted as fully proved. Independent Chinese matrix arguments, no wholesale translation."
+    }
+  ],
+  "notes": [
+    {
+      "id": "01E0",
+      "title": "初等子群、非稳定 K₁ 与挠子的同伦不变性",
+      "path": "trees/math/algebra/research/01E0.tree",
+      "taxon": "Outline"
+    },
+    {
+      "id": "01E1",
+      "title": "Elementary Subgroups in Isotropic Reductive Groups",
+      "path": "trees/references/01E1.tree",
+      "taxon": "Reference"
+    },
+    {
+      "id": "01E2",
+      "title": "分裂环面与环面",
+      "path": "trees/math/algebra/research/01E2.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E3",
+      "title": "半单群概形",
+      "path": "trees/math/algebra/research/01E3.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E4",
+      "title": "约化群概形的抛物子群",
+      "path": "trees/math/algebra/research/01E4.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E5",
+      "title": "抛物子群的幺幂根基",
+      "path": "trees/math/algebra/research/01E5.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E6",
+      "title": "抛物子群的 Levi 子群",
+      "path": "trees/math/algebra/research/01E6.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E7",
+      "title": "相反抛物子群",
+      "path": "trees/math/algebra/research/01E7.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E8",
+      "title": "严格真抛物子群",
+      "path": "trees/math/algebra/research/01E8.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01E9",
+      "title": "约化群的各向同性秩下界",
+      "path": "trees/math/algebra/research/01E9.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EA",
+      "title": "由相反抛物子群定义初等子群",
+      "path": "trees/math/algebra/research/01EA.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EB",
+      "title": "初等矩阵是抛物初等子群的例子",
+      "path": "trees/math/algebra/research/01EB.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01EC",
+      "title": "半局部环",
+      "path": "trees/math/algebra/research/01EC.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01ED",
+      "title": "嵌套严格真抛物子群给出相同初等函子",
+      "path": "trees/math/algebra/research/01ED.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EE",
+      "title": "半局部底上的初等函子与抛物选择无关",
+      "path": "trees/math/algebra/research/01EE.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EF",
+      "title": "局部秩至少二时的抛物选择无关性",
+      "path": "trees/math/algebra/research/01EF.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EG",
+      "title": "初等子群的正规性",
+      "path": "trees/math/algebra/research/01EG.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EH",
+      "title": "由抛物选择无关性推出正规性",
+      "path": "trees/math/algebra/research/01EH.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01EI",
+      "title": "半局部环上的 Gauss 分解",
+      "path": "trees/math/algebra/research/01EI.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EJ",
+      "title": "Suslin 型初等子群局部整体原理",
+      "path": "trees/math/algebra/research/01EJ.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EK",
+      "title": "半局部抛物选择无关性的证明路线",
+      "path": "trees/math/algebra/research/01EK.tree",
+      "taxon": "Proof sketch"
+    },
+    {
+      "id": "01EL",
+      "title": "带抛物选择的非稳定 K₁ 函子",
+      "path": "trees/math/algebra/research/01EL.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EM",
+      "title": "秩至少二使非稳定 K₁ 成为群值函子",
+      "path": "trees/math/algebra/research/01EM.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EN",
+      "title": "正则局部环的 K₁ 嵌入分式域的 K₁",
+      "path": "trees/math/algebra/research/01EN.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EO",
+      "title": "首一多项式局部化不杀死 K₁ 类",
+      "path": "trees/math/algebra/research/01EO.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EP",
+      "title": "非稳定 K₁ 的多项式不变性",
+      "path": "trees/math/algebra/research/01EP.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EQ",
+      "title": "正则交换环",
+      "path": "trees/math/algebra/research/01EQ.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01ER",
+      "title": "分裂约化群",
+      "path": "trees/math/algebra/research/01ER.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01ES",
+      "title": "Dedekind 环的局部刻画",
+      "path": "trees/math/algebra/research/01ES.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01ET",
+      "title": "非分歧正则局部环",
+      "path": "trees/math/algebra/research/01ET.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EU",
+      "title": "秩一时的 Horrocks 单射失败",
+      "path": "trees/math/algebra/research/01EU.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01EV",
+      "title": "Hensel 对",
+      "path": "trees/math/algebra/research/01EV.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EW",
+      "title": "半单群概形的单连通性",
+      "path": "trees/math/algebra/research/01EW.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EX",
+      "title": "Hensel 对上的非稳定 K₁ 刚性",
+      "path": "trees/math/algebra/research/01EX.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01EY",
+      "title": "群概形的多项式路径子群",
+      "path": "trees/math/algebra/research/01EY.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01EZ",
+      "title": "第一 Karoubi–Villamayor 群",
+      "path": "trees/math/algebra/research/01EZ.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01F0",
+      "title": "幺幂根基的收缩产生初等路径",
+      "path": "trees/math/algebra/research/01F0.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01F1",
+      "title": "多项式不变性识别 K₁ 与 KV₁",
+      "path": "trees/math/algebra/research/01F1.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01F2",
+      "title": "fppf 覆盖",
+      "path": "trees/math/algebra/research/01F2.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01F3",
+      "title": "群概形的挠子",
+      "path": "trees/math/algebra/research/01F3.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01F4",
+      "title": "挠子的非阿贝尔 H¹",
+      "path": "trees/math/algebra/research/01F4.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01F5",
+      "title": "平展态射与平展覆盖",
+      "path": "trees/math/algebra/research/01F5.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01F6",
+      "title": "Nisnevich 覆盖",
+      "path": "trees/math/algebra/research/01F6.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01F7",
+      "title": "Grothendieck–Serre 的挠子平凡性问题",
+      "path": "trees/math/algebra/research/01F7.tree",
+      "taxon": "Conjecture"
+    },
+    {
+      "id": "01F8",
+      "title": "含域正则底上的 Nisnevich 挠子同伦不变性",
+      "path": "trees/math/algebra/research/01F8.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01F9",
+      "title": "不稳定 A¹ 同伦范畴",
+      "path": "trees/math/algebra/research/01F9.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "01FA",
+      "title": "Nisnevich 挠子不变性推出仿射可表性",
+      "path": "trees/math/algebra/research/01FA.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FB",
+      "title": "正则环上非稳定 K₁ 的 A¹ 可表性",
+      "path": "trees/math/algebra/research/01FB.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FC",
+      "title": "非稳定 K₁ 仿射可表性的两步证明",
+      "path": "trees/math/algebra/research/01FC.tree",
+      "taxon": "Proof sketch"
+    },
+    {
+      "id": "01FD",
+      "title": "主同余子群",
+      "path": "trees/math/algebra/research/01FD.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FE",
+      "title": "全同余子群",
+      "path": "trees/math/algebra/research/01FE.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FF",
+      "title": "相对初等子群",
+      "path": "trees/math/algebra/research/01FF.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FG",
+      "title": "几何纤维根系不可约的条件",
+      "path": "trees/math/algebra/research/01FG.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FH",
+      "title": "各向同性秩条件保证严格真抛物子群存在",
+      "path": "trees/math/algebra/research/01FH.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FI",
+      "title": "根系结构常数的可逆性条件",
+      "path": "trees/math/algebra/research/01FI.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FJ",
+      "title": "相对初等子群的交换子公式",
+      "path": "trees/math/algebra/research/01FJ.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FK",
+      "title": "E 正规化子群的唯一级别 sandwich 分类",
+      "path": "trees/math/algebra/research/01FK.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FL",
+      "title": "sandwich 分类中的级别与中心性证明路线",
+      "path": "trees/math/algebra/research/01FL.tree",
+      "taxon": "Proof sketch"
+    },
+    {
+      "id": "01FM",
+      "title": "整数多项式环上的特殊线性群由初等矩阵生成",
+      "path": "trees/math/algebra/research/01FM.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01FN",
+      "title": "代数群点的 R 等价",
+      "path": "trees/math/algebra/research/01FN.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FO",
+      "title": "单连通群的 Whitehead 群等于 R 等价类群",
+      "path": "trees/math/algebra/research/01FO.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FP",
+      "title": "域上 Whitehead 群的交换性问题",
+      "path": "trees/math/algebra/research/01FP.tree",
+      "taxon": "Question"
+    },
+    {
+      "id": "01FQ",
+      "title": "有限生成射影模的向量概形",
+      "path": "trees/math/algebra/research/01FQ.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FR",
+      "title": "单纯集合的几何实现",
+      "path": "trees/math/algebra/research/01FR.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "01FS",
+      "title": "光滑概形上的单纯预层",
+      "path": "trees/math/algebra/research/01FS.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FT",
+      "title": "Nisnevich 局部弱等价",
+      "path": "trees/math/algebra/research/01FT.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FU",
+      "title": "域上一变量的秩一多项式不变性",
+      "path": "trees/math/algebra/research/01FU.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FV",
+      "title": "K₁ 比较同构的端点求值证明",
+      "path": "trees/math/algebra/research/01FV.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01FW",
+      "title": "挠子平凡等价于存在全局截面",
+      "path": "trees/math/algebra/research/01FW.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01FX",
+      "title": "单纯集合",
+      "path": "trees/math/algebra/research/01FX.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01FY",
+      "title": "更换相反抛物子群不改变初等函子",
+      "path": "trees/math/algebra/research/01FY.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01FZ",
+      "title": "固有态射",
+      "path": "trees/math/algebra/research/01FZ.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01Q0",
+      "title": "分裂矩阵群：从消元到相对 K₁",
+      "path": "trees/math/algebra/research/01Q0.tree",
+      "taxon": "Outline"
+    },
+    {
+      "id": "01Q1",
+      "title": "交换环上的一般线性群与特殊线性群",
+      "path": "trees/math/algebra/research/01Q1.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01Q2",
+      "title": "交换环上的初等矩阵群",
+      "path": "trees/math/algebra/research/01Q2.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01Q3",
+      "title": "初等矩阵的交换子恒等式",
+      "path": "trees/math/algebra/research/01Q3.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01Q4",
+      "title": "三阶起初等矩阵群是完美群",
+      "path": "trees/math/algebra/research/01Q4.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01Q5",
+      "title": "二阶初等群不必完美：二元域反例",
+      "path": "trees/math/algebra/research/01Q5.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01Q6",
+      "title": "单位与逆单位组成的对角块是初等矩阵乘积",
+      "path": "trees/math/algebra/research/01Q6.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01Q7",
+      "title": "交换环上的幺模列",
+      "path": "trees/math/algebra/research/01Q7.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01Q8",
+      "title": "半局部环的幺模列可制造单位主元",
+      "path": "trees/math/algebra/research/01Q8.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01Q9",
+      "title": "交换半局部环上的特殊线性群等于初等群",
+      "path": "trees/math/algebra/research/01Q9.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QA",
+      "title": "半局部特殊线性群初等生成的消元证明",
+      "path": "trees/math/algebra/research/01QA.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01QB",
+      "title": "半局部初等群的正规性与行列式商",
+      "path": "trees/math/algebra/research/01QB.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QC",
+      "title": "交换环的 Jacobson 根基",
+      "path": "trees/math/algebra/research/01QC.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01QD",
+      "title": "Jacobson 根基的单位判据与单位提升",
+      "path": "trees/math/algebra/research/01QD.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QE",
+      "title": "同余于一的单位给出相对初等对角块",
+      "path": "trees/math/algebra/research/01QE.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QF",
+      "title": "Jacobson 级别的特殊线性同余群等于相对初等群",
+      "path": "trees/math/algebra/research/01QF.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QG",
+      "title": "Jacobson 级别相对消元的完整证明",
+      "path": "trees/math/algebra/research/01QG.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01QH",
+      "title": "理想系数的初等生成不能替代正规闭包",
+      "path": "trees/math/algebra/research/01QH.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01QI",
+      "title": "Jacobson 级别的矩阵相对交换子公式",
+      "path": "trees/math/algebra/research/01QI.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QJ",
+      "title": "稳定一般线性群与稳定初等群",
+      "path": "trees/math/algebra/research/01QJ.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01QK",
+      "title": "矩阵与逆矩阵的对角块在加倍大小后初等",
+      "path": "trees/math/algebra/research/01QK.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QL",
+      "title": "稳定 Whitehead 引理",
+      "path": "trees/math/algebra/research/01QL.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QM",
+      "title": "稳定 Whitehead 引理的有限块证明",
+      "path": "trees/math/algebra/research/01QM.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01QN",
+      "title": "稳定 K₁ 与有限矩阵大小的比较映射",
+      "path": "trees/math/algebra/research/01QN.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "01QO",
+      "title": "交换半局部环的 K₁ 比较从二阶起是同构",
+      "path": "trees/math/algebra/research/01QO.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QP",
+      "title": "Jacobson 级别的相对 K₁ 与稳定范围",
+      "path": "trees/math/algebra/research/01QP.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QQ",
+      "title": "半局部 Jacobson 约化的 K₁ 短正合列",
+      "path": "trees/math/algebra/research/01QQ.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QR",
+      "title": "初等及相对初等矩阵的显式多项式路径",
+      "path": "trees/math/algebra/research/01QR.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01QS",
+      "title": "The K-book：初等矩阵与相对 K₁",
+      "path": "trees/references/01QS.tree",
+      "taxon": "Reference"
+    },
+    {
+      "id": "01QT",
+      "title": "初等矩阵总能约化提升但可逆矩阵未必",
+      "path": "trees/math/algebra/research/01QT.tree",
+      "taxon": "Example"
+    }
+  ],
+  "deepening": {
+    "date": "2026-09-23",
+    "scope": "Coherent split GL/SL elementary-matrix branch, with complete finite computations, semilocal and Jacobson-level elimination, stable Whitehead and precise K1 comparison ranges.",
+    "new_ids": [
+      "01Q0",
+      "01Q1",
+      "01Q2",
+      "01Q3",
+      "01Q4",
+      "01Q5",
+      "01Q6",
+      "01Q7",
+      "01Q8",
+      "01Q9",
+      "01QA",
+      "01QB",
+      "01QC",
+      "01QD",
+      "01QE",
+      "01QF",
+      "01QG",
+      "01QH",
+      "01QI",
+      "01QJ",
+      "01QK",
+      "01QL",
+      "01QM",
+      "01QN",
+      "01QO",
+      "01QP",
+      "01QQ",
+      "01QR",
+      "01QS",
+      "01QT"
+    ],
+    "revised_ids": [
+      "01E0",
+      "01EB",
+      "01EI",
+      "01EJ",
+      "01EP",
+      "01F8",
+      "01FA",
+      "01FB",
+      "01FF",
+      "01FJ"
+    ],
+    "complete_proofs": [
+      {
+        "ids": [
+          "01Q3"
+        ],
+        "scope": "Complete elementary multiplication/commutator identities over commutative rings, with all index restrictions."
+      },
+      {
+        "ids": [
+          "01Q4"
+        ],
+        "scope": "E_n(R) perfect for n>=3; no perfectness claim for n=2."
+      },
+      {
+        "ids": [
+          "01Q5"
+        ],
+        "scope": "Explicit E_2(F_2)=SL_2(F_2)=S_3 nonperfectness counterexample."
+      },
+      {
+        "ids": [
+          "01Q6"
+        ],
+        "scope": "Six elementary factors for diag(u,u^-1), u a unit."
+      },
+      {
+        "ids": [
+          "01Q8"
+        ],
+        "scope": "Complete semilocal unimodular-column unit-pivot lemma, including finite maximal-ideal gluing."
+      },
+      {
+        "ids": [
+          "01Q9",
+          "01QA"
+        ],
+        "scope": "SL_n(R)=E_n(R), R commutative semilocal, n>=2, proved by finite-rank elimination."
+      },
+      {
+        "ids": [
+          "01QB"
+        ],
+        "scope": "Semilocal finite-rank normality and determinant quotient GL_n/E_n=R^x, n>=2."
+      },
+      {
+        "ids": [
+          "01QD"
+        ],
+        "scope": "Jacobson unit criterion, 1+I subgroup and unit lifting for I subset J(R)."
+      },
+      {
+        "ids": [
+          "01QE"
+        ],
+        "scope": "Relative elementary diagonal block for u-1 in I, arbitrary ideal, u invertible."
+      },
+      {
+        "ids": [
+          "01QF",
+          "01QG"
+        ],
+        "scope": "SL_n(R,I)=E_n(R,I), arbitrary commutative R, I subset J(R), n>=2."
+      },
+      {
+        "ids": [
+          "01QH"
+        ],
+        "scope": "Strict difference between ideal-parameter generation and its elementary normal closure, modulo 4."
+      },
+      {
+        "ids": [
+          "01QI"
+        ],
+        "scope": "[GL_n(R,I),E_n(R)]=E_n(R,I)=[E_n(R,I),E_n(R)], I subset J(R), n>=3."
+      },
+      {
+        "ids": [
+          "01QK"
+        ],
+        "scope": "diag(g,g^-1) belongs to E_2n(R) by complete six-block factorization."
+      },
+      {
+        "ids": [
+          "01QL",
+          "01QM"
+        ],
+        "scope": "Stable E(R)=[GL(R),GL(R)] and resulting normality/abelian quotient; no finite-size stability inferred."
+      },
+      {
+        "ids": [
+          "01QO"
+        ],
+        "scope": "All finite comparison maps are isomorphisms to R^x for semilocal R and n>=2; n=1 convention explicitly separated."
+      },
+      {
+        "ids": [
+          "01QP"
+        ],
+        "scope": "Relative finite and stable K1 equal 1+I for arbitrary commutative R, I subset J(R), n>=2."
+      },
+      {
+        "ids": [
+          "01QQ"
+        ],
+        "scope": "Short exact finite and stable K1 reduction sequence for semilocal R and I subset J(R), all maps identified."
+      },
+      {
+        "ids": [
+          "01QR"
+        ],
+        "scope": "Explicit absolute and relative elementary polynomial paths; application to Jacobson-level SL congruence points only."
+      },
+      {
+        "ids": [
+          "01QT"
+        ],
+        "scope": "E reduction surjectivity by lifting generators and GL reduction failure over Z mod 5 by determinant."
+      }
+    ],
+    "conditional_arguments": [
+      {
+        "ids": [
+          "01EI",
+          "01EK",
+          "01FY"
+        ],
+        "status": "external structural inputs retained",
+        "scope": "General reductive Gauss decomposition, minimal-parabolic existence/conjugacy and opposite-parabolic independence are not proved by the split matrix calculations."
+      },
+      {
+        "ids": [
+          "01EJ"
+        ],
+        "status": "external theorem, not completed",
+        "scope": "General reductive polynomial local-global theorem; 01Q8 does not supply dilation or denominator clearing."
+      },
+      {
+        "ids": [
+          "01FJ",
+          "01FK",
+          "01FL"
+        ],
+        "status": "general theorem/existing proof route retained",
+        "scope": "Only the narrower Jacobson-level matrix commutator statement 01QI is now fully proved."
+      },
+      {
+        "ids": [
+          "01EP",
+          "01FM"
+        ],
+        "status": "external polynomial-invariance input retained",
+        "scope": "The integer-polynomial SL generation example still depends on the deep polynomial-invariance theorem."
+      },
+      {
+        "ids": [
+          "01F8",
+          "01FA",
+          "01FB",
+          "01FC"
+        ],
+        "status": "external inputs and conditional two-map deduction retained",
+        "scope": "Nisnevich torsor invariance and affine representability not reproved; explicit matrix paths 01QR do not prove these theorems."
+      }
+    ],
+    "sources_read": [
+      {
+        "reference": "01E1",
+        "url": "https://epubs.siam.org/doi/10.1137/25M1806399",
+        "date": "2026-09-23",
+        "read": "Reopened the exact publisher full text and reread the GL_n introductory paragraphs, Theorem 2.1, Corollary 2.2, Lemma 2.3, relative-group section and K1 conventions relevant to this expansion. The historical full-report reading remains recorded separately.",
+        "type": "exact ICM2026 primary publisher report",
+        "local_existing_extract": "/tmp/stavrova-icm2026-extracted.txt"
+      },
+      {
+        "reference": "01QS",
+        "url": "https://sites.math.rutgers.edu/~weibel/Kbook/Kbook.III.pdf",
+        "date": "2026-09-23",
+        "read": "Read full relevant mathematical text and proofs in chapter-internal pp.2-5 and 13-14: Definition 1.2, 1.2.1-1.2.3, 1.3.1-1.3.3, Lemma 1.4, relative definitions, Lemma 2.1, Proposition 2.3 and Lemma 2.4. Locally extracted the six pages and visually inspected p.14 after rasterization.",
+        "type": "primary author-hosted mathematical exposition",
+        "local_pdf": "/tmp/stavrova-deepening-kbook-III.pdf",
+        "extracts": [
+          "/tmp/stavrova-deepening-kbook-basics.txt",
+          "/tmp/stavrova-deepening-kbook-relative.txt"
+        ],
+        "scope_boundary": "Not a full-book reading. General stability results and cited bibliography are not counted as fully proved. Independent Chinese matrix arguments, no wholesale translation."
+      }
+    ],
+    "remaining_gaps": [
+      "General reductive and arbitrary-commutative-ring polynomial local-global principle 01EJ still lacks a complete linked dilation/denominator-clearing proof.",
+      "General relative root subschemes, non-split root commutator calculations, Weil restriction and LG-rings are not developed into a complete prerequisite network.",
+      "Arbitrary-ideal relative commutator/sandwich theorems 01FJ-01FL remain external or proof routes; this expansion proves only the I subset J(R) matrix branch.",
+      "Finite-rank Suslin normality for arbitrary commutative rings (n>=3), general Bass stable-range bounds and stabilization outside the proved semilocal/Jacobson cases are not proved here.",
+      "General four-factor Gauss decomposition 01EI and parabolic conjugacy are still external; arbitrary-length matrix elimination does not prove that prescribed factor order.",
+      "Polynomial invariance 01EP, Nisnevich torsor invariance 01F8, affine representability 01FA and the conditional comparison 01FB/01FC are not upgraded by elementary point paths.",
+      "No explicit nontrivial torsor classification/trivialization or higher Karoubi-Villamayor proof was added.",
+      "Whole-site audit merge, full Forester build, generated output and publishing are deferred to the parent; no Git operations performed."
+    ],
+    "deduplication": "Searched the entire existing .tree title inventory for matrix groups, elementary matrices, normal/commutator groups, ideals, local/semilocal rings, determinants, stable rank, unimodularity and Jacobson radical. Reused 00CS/00CT/00CU/00CW/00CX, 00DD, 00GB, 00GU, 010W, 016H/016I, 01D2, 01EC and 01FD. Matrix-ring extension 01Q1 links the field-only 00DD; 01Q2 is now the canonical definition linked by the older example 01EB; relative matrices extend the existing 01FF rather than duplicate it.",
+    "validation": {
+      "status": "passed scoped source, prerequisite, formula and finite-ring sanity checks; no full build",
+      "checked_on": "2026-09-23",
+      "owned_pages": 102,
+      "new_pages": 30,
+      "reachable_owned_pages": 102,
+      "directly_linked_prerequisite_edges": 338,
+      "prerequisite_closure_nodes_checked": 219,
+      "prerequisite_cycles": 0,
+      "source_formulas_katex": 963,
+      "new_source_formulas_katex": 438,
+      "odd_trailing_backslashes": 0,
+      "parser_fix": "Parent prebuild found 01QO:8 ending in a single TeX-space backslash. Removed it and scanned all owned pages; only legitimate double-backslash row breaks remain.",
+      "finite_ring_checks": {
+        "moduli": [2, 3, 4, 5, 6, 8, 9, 12],
+        "exhaustive_SL2_equals_E2": true,
+        "jacobson_relative_pairs_checked": 13,
+        "commutator_instances": 4548,
+        "block_factorization_instances": 307,
+        "unimodular_pivot_columns": 287,
+        "status": "passed",
+        "limitation": "Finite examples are additional sanity checks, not substitutes for the complete written proofs."
+      },
+      "commands": [
+        "node /tmp/stavrova-deepening-validate.cjs",
+        "node /tmp/stavrova-deepening-matrix-check.cjs"
+      ],
+      "full_forest_build": "Not run by this worker; parent owns final build and merged audit.",
+      "files_boundary": "Only owned 01E0-01FZ, new 01Q0-01QT and research/algebra-torsors.json changed in the repository; source downloads and validation scripts are in /tmp."
+    }
+  }
+}

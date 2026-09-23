@@ -1,0 +1,13 @@
+\title{平衡张量积保持右正合列}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks：张量积](https://stacks.math.columbia.edu/tag/00CV)；以下按右模与左模直接验证}
+
+\p{设 #{R} 为含幺环，#{M} 为右 #{R} 模，#{L\xrightarrow{a}N\xrightarrow{b}Q\to0} 为左模的[正合列](0129)。则[平衡张量积](0122)给出阿贝尔群的正合列}
+##{M\otimes_R L\xrightarrow{1\otimes a}M\otimes_R N
+\xrightarrow{1\otimes b}M\otimes_R Q\to0.}
+\p{证明：#{b} 满，所以每个纯张量 #{m\otimes q} 都可提升；这些纯张量生成目标。令 #{B} 为 #{1\otimes a} 的像，则它由 #{m\otimes a(l)} 生成。因 #{Q=N/\operatorname{im}a}，赋值}
+##{(m,[n])\longmapsto[m\otimes n]\in(M\otimes_R N)/B}
+\p{不依赖 #{n} 的选择，且对加法和 #{R} 作用平衡。因此泛性质给出 #{M\otimes_R Q\to(M\otimes_R N)/B}。它与 #{1\otimes b} 诱导的反向映射在纯张量上互逆，故 #{\ker(1\otimes b)=B}。右模变量的证明相同。}
+\p{这并不保证保持左端单射；这一差异正是[平坦性](012Y)的内容，可见[整数商模反例](01S9)。}

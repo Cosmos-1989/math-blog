@@ -1,0 +1,1798 @@
+{
+  "date": "2026-09-23",
+  "deepening": {
+    "date": "2026-09-23",
+    "revised_ids": ["012B", "012C", "012D", "012E", "012Y", "013Y"],
+    "integration": "原有定义链接新增证明与应用；定义不反向依赖证明，避免把知识叙述中的互链误登记为必要前置循环。",
+    "new_ids": ["01S0", "01S1", "01S2", "01S3", "01S4", "01S5", "01S6", "01S7", "01S8", "01S9", "01SA", "01SB", "01SC", "01SD", "01SE", "01SF", "01SG", "01SH", "01SI", "01SJ", "01SK"],
+    "independent_proof_review": {
+      "scope": "Read all 21 new nodes; checked signs, sidedness over noncommutative rings, homotopies, Ext classification and addition, Tor, long exact sequences and Horseshoe construction.",
+      "finding": "01SK first-variable connecting morphism is the negative of the pushout class under the conventions of 01SG, 01SJ and 01S5/01S6.",
+      "resolution": "Corrected 01SK and included the explicit off-diagonal differential computation ab=-theta; other conventions unchanged. No other substantive issue found in this independent review.",
+      "limitation": "Editorial mathematical cross-review, not formal verification."
+    },
+    "complete_arguments": [
+      "逐次投射提升构造分解比较映射，并逐次构造同伦以证明唯一性",
+      "Hom 后的同伦计算与 Ext 的选择无关性；拼接分解的维数移位",
+      "显式商模构造扩张、证明一阶 Ext 分类并计算 Baer 和",
+      "自由直和因子与一阶 Ext 消失的投射性判据",
+      "平衡张量的右正合性、Tor 的选择无关性与商环的一阶 Tor 核公式",
+      "整数循环群的 Ext/Tor 完整计算与非平坦反例",
+      "复形连接映射的良定义、自然性与三处正合性；投射 Hom 的正合性",
+      "逐次核构造的马蹄引理，及 Ext 两变量的长正合列"
+    ],
+    "sources": [
+      "https://stacks.math.columbia.edu/tag/0643",
+      "https://stacks.math.columbia.edu/tag/06XP",
+      "https://stacks.math.columbia.edu/tag/010I",
+      "https://stacks.math.columbia.edu/tag/05CD",
+      "https://stacks.math.columbia.edu/tag/00CV",
+      "https://stacks.math.columbia.edu/tag/00LY",
+      "https://stacks.math.columbia.edu/tag/0117",
+      "https://stacks.math.columbia.edu/tag/00LU",
+      "https://stacks.math.columbia.edu/tag/065P"
+    ],
+    "scope": "采用模的显式论证；不是一般阿贝尔范畴中无足够投射条件的完整推导，也不是任意高阶 Yoneda 扩张的证明。原 independent review 数据保留为首轮快照。"
+  },
+  "papers": [],
+  "notes": [
+    {
+      "id": "01SG",
+      "title": "短正合复形的上同调长正合列",
+      "path": "trees/math/algebra/research/01SG.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01SH",
+      "title": "投射模的 Hom 函子保持短正合列",
+      "path": "trees/math/algebra/research/01SH.tree",
+      "taxon": "Lemma"
+    },
+    {
+      "id": "01SI",
+      "title": "Ext 在第二变量的长正合列",
+      "path": "trees/math/algebra/research/01SI.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01SJ",
+      "title": "投射分解的马蹄引理",
+      "path": "trees/math/algebra/research/01SJ.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01SK",
+      "title": "Ext 在第一变量的长正合列",
+      "path": "trees/math/algebra/research/01SK.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01S0",
+      "title": "投射分解之间的比较映射",
+      "path": "trees/math/algebra/research/01S0.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01S1",
+      "title": "比较映射在链同伦下唯一",
+      "path": "trees/math/algebra/research/01S1.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01S2",
+      "title": "Ext 不依赖投射分解的选择",
+      "path": "trees/math/algebra/research/01S2.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01S3",
+      "title": "Ext 的维数移位",
+      "path": "trees/math/algebra/research/01S3.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01S4",
+      "title": "模的短正合扩张及其等价",
+      "path": "trees/math/algebra/research/01S4.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "01S5",
+      "title": "由核上的映射构造模扩张",
+      "path": "trees/math/algebra/research/01S5.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "01S6",
+      "title": "一阶 Ext 分类短正合扩张",
+      "path": "trees/math/algebra/research/01S6.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01S7",
+      "title": "投射性的一阶 Ext 消失判据",
+      "path": "trees/math/algebra/research/01S7.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01S8",
+      "title": "平衡张量积保持右正合列",
+      "path": "trees/math/algebra/research/01S8.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01S9",
+      "title": "张量积不保持单射的整数反例",
+      "path": "trees/math/algebra/research/01S9.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01SA",
+      "title": "由投射分解定义 Tor",
+      "path": "trees/math/algebra/research/01SA.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "01SB",
+      "title": "商环的一阶 Tor 与张量核",
+      "path": "trees/math/algebra/research/01SB.tree",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "01SC",
+      "title": "整数商模的一阶 Tor 是挠子群",
+      "path": "trees/math/algebra/research/01SC.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "01SD",
+      "title": "投射模恰是自由模的直和因子",
+      "path": "trees/math/algebra/research/01SD.tree",
+      "taxon": "Proof"
+    },
+    {
+      "id": "01SE",
+      "title": "Baer 和对应一阶 Ext 的加法",
+      "path": "trees/math/algebra/research/01SE.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "01SF",
+      "title": "整数循环群的一阶 Ext 计算",
+      "path": "trees/math/algebra/research/01SF.tree",
+      "taxon": "Example"
+    },
+    {
+      "id": "0120",
+      "title": "含幺结合环",
+      "path": "trees/math/algebra/research/0120.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0121",
+      "title": "模同态",
+      "path": "trees/math/algebra/research/0121.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0122",
+      "title": "模的平衡张量积",
+      "path": "trees/math/algebra/research/0122.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "0123",
+      "title": "域上的含幺结合代数",
+      "path": "trees/math/algebra/research/0123.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0124",
+      "title": "群的线性表示",
+      "path": "trees/math/algebra/research/0124.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0125",
+      "title": "子模",
+      "path": "trees/math/algebra/research/0125.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0126",
+      "title": "单模",
+      "path": "trees/math/algebra/research/0126.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0127",
+      "title": "模的直和",
+      "path": "trees/math/algebra/research/0127.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "0128",
+      "title": "有限生成模",
+      "path": "trees/math/algebra/research/0128.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0129",
+      "title": "模的正合列",
+      "path": "trees/math/algebra/research/0129.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012A",
+      "title": "模的链复形",
+      "path": "trees/math/algebra/research/012A.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012B",
+      "title": "链复形的同调",
+      "path": "trees/math/algebra/research/012B.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012C",
+      "title": "投射模的提升性质",
+      "path": "trees/math/algebra/research/012C.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012D",
+      "title": "模的投射分解",
+      "path": "trees/math/algebra/research/012D.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012E",
+      "title": "模之间的 Ext 群",
+      "path": "trees/math/algebra/research/012E.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "012F",
+      "title": "模的导出范畴",
+      "path": "trees/math/algebra/research/012F.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "012G",
+      "title": "幺半范畴",
+      "path": "trees/math/algebra/research/012G.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012H",
+      "title": "编织幺半范畴",
+      "path": "trees/math/algebra/research/012H.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012I",
+      "title": "仿射概形的结构层",
+      "path": "trees/math/algebra/research/012I.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "012J",
+      "title": "概形",
+      "path": "trees/math/algebra/research/012J.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012K",
+      "title": "概形态射",
+      "path": "trees/math/algebra/research/012K.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012L",
+      "title": "群概形",
+      "path": "trees/math/algebra/research/012L.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012M",
+      "title": "约化群概形",
+      "path": "trees/math/algebra/research/012M.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012N",
+      "title": "代数群的有理表示",
+      "path": "trees/math/algebra/research/012N.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012O",
+      "title": "经典仿射代数簇",
+      "path": "trees/math/algebra/research/012O.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012P",
+      "title": "正则局部环",
+      "path": "trees/math/algebra/research/012P.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012Q",
+      "title": "交换环的局部化",
+      "path": "trees/math/algebra/research/012Q.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "012R",
+      "title": "商模",
+      "path": "trees/math/algebra/research/012R.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "012S",
+      "title": "复形的拟同构",
+      "path": "trees/math/algebra/research/012S.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012T",
+      "title": "链映射之间的同伦",
+      "path": "trees/math/algebra/research/012T.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012U",
+      "title": "范畴关于态射类的局部化",
+      "path": "trees/math/algebra/research/012U.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012V",
+      "title": "层在一点的茎",
+      "path": "trees/math/algebra/research/012V.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012W",
+      "title": "局部环空间",
+      "path": "trees/math/algebra/research/012W.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012X",
+      "title": "概形的纤维积",
+      "path": "trees/math/algebra/research/012X.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "012Y",
+      "title": "平坦模",
+      "path": "trees/math/algebra/research/012Y.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "012Z",
+      "title": "光滑概形态射",
+      "path": "trees/math/algebra/research/012Z.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0130",
+      "title": "局部有限表示的概形态射",
+      "path": "trees/math/algebra/research/0130.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0131",
+      "title": "有限型概形态射",
+      "path": "trees/math/algebra/research/0131.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0132",
+      "title": "幺幂代数群",
+      "path": "trees/math/algebra/research/0132.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0133",
+      "title": "概形态射的几何纤维",
+      "path": "trees/math/algebra/research/0133.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0134",
+      "title": "Noether 概形",
+      "path": "trees/math/algebra/research/0134.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0135",
+      "title": "仿射态射",
+      "path": "trees/math/algebra/research/0135.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0136",
+      "title": "含幺环上的左模",
+      "path": "trees/math/algebra/research/0136.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0137",
+      "title": "自由模",
+      "path": "trees/math/algebra/research/0137.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0138",
+      "title": "概形态射的平坦性",
+      "path": "trees/math/algebra/research/0138.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0139",
+      "title": "模的局部化",
+      "path": "trees/math/algebra/research/0139.tree",
+      "taxon": "Construction"
+    },
+    {
+      "id": "013A",
+      "title": "表示之间的交织映射",
+      "path": "trees/math/algebra/research/013A.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "013B",
+      "title": "不可约线性表示",
+      "path": "trees/math/algebra/research/013B.tree",
+      "taxon": "Definition"
+    },
+    {
+      "id": "013C",
+      "title": "Introduction to Representation Theory",
+      "path": "trees/references/013C.tree",
+      "taxon": "Reference"
+    },
+    {
+      "id": "013W",
+      "title": "代数、同调与概形的基础文献",
+      "path": "trees/references/013W.tree",
+      "taxon": "Reference"
+    },
+    {
+      "id": "013X",
+      "title": "Tensor Categories",
+      "path": "trees/references/013X.tree",
+      "taxon": "Reference"
+    },
+    {
+      "id": "013Y",
+      "title": "模、同调与概形的基础路线",
+      "path": "trees/math/algebra/research/013Y.tree",
+      "taxon": "Outline"
+    }
+  ],
+  "reviews": {
+    "01SG": {
+      "action": "added",
+      "reason": "完整验证连接同态的良定义和逐点正合性，或通过显式核递归构造分解；区分逐次分裂与链分裂",
+      "title": "短正合复形的上同调长正合列",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SH": {
+      "action": "added",
+      "reason": "完整验证连接同态的良定义和逐点正合性，或通过显式核递归构造分解；区分逐次分裂与链分裂",
+      "title": "投射模的 Hom 函子保持短正合列",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SI": {
+      "action": "added",
+      "reason": "完整验证连接同态的良定义和逐点正合性，或通过显式核递归构造分解；区分逐次分裂与链分裂",
+      "title": "Ext 在第二变量的长正合列",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SJ": {
+      "action": "added",
+      "reason": "完整验证连接同态的良定义和逐点正合性，或通过显式核递归构造分解；区分逐次分裂与链分裂",
+      "title": "投射分解的马蹄引理",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SK": {
+      "action": "added",
+      "reason": "完整验证连接同态的良定义和逐点正合性，或通过显式核递归构造分解；区分逐次分裂与链分裂",
+      "title": "Ext 在第一变量的长正合列",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S0": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "投射分解之间的比较映射",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S1": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "比较映射在链同伦下唯一",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S2": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "Ext 不依赖投射分解的选择",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S3": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "Ext 的维数移位",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S4": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "模的短正合扩张及其等价",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S5": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "由核上的映射构造模扩张",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S6": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "一阶 Ext 分类短正合扩张",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S7": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "投射性的一阶 Ext 消失判据",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S8": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "平衡张量积保持右正合列",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01S9": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "张量积不保持单射的整数反例",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SA": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "由投射分解定义 Tor",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SB": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "商环的一阶 Tor 与张量核",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SC": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "整数商模的一阶 Tor 是挠子群",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SD": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "投射模恰是自由模的直和因子",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SE": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "Baer 和对应一阶 Ext 的加法",
+      "scope": "algebra-foundation-proofs"
+    },
+    "01SF": {
+      "action": "added",
+      "reason": "逐页核对源靶、符号和前置；以显式提升、商模或两项分解给出完整论证，不依赖专题深层黑箱",
+      "title": "整数循环群的一阶 Ext 计算",
+      "scope": "algebra-foundation-proofs"
+    },
+    "0120": {
+      "action": "added",
+      "reason": "独立说明“含幺结合环”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "在本页定义一般含幺环同态，避免以仅涵盖交换环的 00G9 代替非交换定义。"
+      }
+    },
+    "0121": {
+      "action": "added",
+      "reason": "独立说明“模同态”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验同一环上左模同态、阿贝尔群 Hom 与模范畴约定。"
+      }
+    },
+    "0122": {
+      "action": "added",
+      "reason": "独立说明“模的平衡张量积”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确右模与左模的输入、阿贝尔群的输出，并写出交换情形的标量作用。"
+      }
+    },
+    "0123": {
+      "action": "added",
+      "reason": "独立说明“域上的含幺结合代数”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验双线性含幺结合乘法与标量映入中心的等价约定。"
+      }
+    },
+    "0124": {
+      "action": "added",
+      "reason": "独立说明“群的线性表示”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验任意群的线性表示与可逆线性映射群，未附加有限群或有限维条件。"
+      }
+    },
+    "0125": {
+      "action": "added",
+      "reason": "独立说明“子模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验子模的差与标量封闭条件以及核像例子的对象类型。"
+      }
+    },
+    "0126": {
+      "action": "added",
+      "reason": "独立说明“单模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "删去未指定群代数的表示论旁支，保持单模定义原子性。"
+      }
+    },
+    "0127": {
+      "action": "added",
+      "reason": "独立说明“模的直和”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验有限支撑及余积延伸性质；区分无限直和与直积。"
+      }
+    },
+    "0128": {
+      "action": "added",
+      "reason": "独立说明“有限生成模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "补自由模链接；不把有限生成与无关系或有限集合混淆。"
+      }
+    },
+    "0129": {
+      "action": "added",
+      "reason": "独立说明“模的正合列”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "显式固定全列共用的含幺环及左模约定，核像条件与商模解释保持不变。"
+      }
+    },
+    "012A": {
+      "action": "added",
+      "reason": "独立说明“模的链复形”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确左模和整数分次约定。"
+      }
+    },
+    "012B": {
+      "action": "added",
+      "reason": "独立说明“链复形的同调”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验边界包含于闭链、同调商及上链索引。"
+      }
+    },
+    "012C": {
+      "action": "added",
+      "reason": "独立说明“投射模的提升性质”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "在既有提升图后补合成等式，并链接直和。"
+      }
+    },
+    "012D": {
+      "action": "added",
+      "reason": "独立说明“模的投射分解”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "补投射分解中使用的同调前置链接。"
+      }
+    },
+    "012E": {
+      "action": "added",
+      "reason": "独立说明“模之间的 Ext 群”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "指明 Hom 复形及 Ext 在非交换情形是阿贝尔群，并限定比较映射提升同一个恒等态射。"
+      }
+    },
+    "012F": {
+      "action": "added",
+      "reason": "独立说明“模的导出范畴”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "区分上同调有界、代表逐项有界及有限投射维数；明确小写 mod 所需的左 Noether 假设和有限生成对象。"
+      }
+    },
+    "012G": {
+      "action": "added",
+      "reason": "独立说明“幺半范畴”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "核验原五边形正确，补自然同构链接、单位约束自然性和复合源靶；修正六元组定义的准确出处。"
+      }
+    },
+    "012H": {
+      "action": "added",
+      "reason": "独立说明“编织幺半范畴”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "把原省略结合子的六边形写成完整且可逐箭头检查源靶的形式；保留同一编织定义页。"
+      }
+    },
+    "012I": {
+      "action": "added",
+      "reason": "独立说明“仿射概形的结构层”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确环约定，并写出基本开集包含对应的局部化限制映射。"
+      }
+    },
+    "012J": {
+      "action": "added",
+      "reason": "独立说明“概形”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验局部仿射的局部环空间定义；所需同构定义已补入012W。"
+      }
+    },
+    "012K": {
+      "action": "added",
+      "reason": "独立说明“概形态射”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确概形态射来自局部环空间范畴、开集量词及保持单位条件。"
+      }
+    },
+    "012L": {
+      "action": "added",
+      "reason": "独立说明“群概形”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "单独链接基概形与相对概形，避免标签仅指向态射页。"
+      }
+    },
+    "012M": {
+      "action": "added",
+      "reason": "独立说明“约化群概形”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "补几何纤维的连通性与线性群前置，并区分 reductive 与 reduced。"
+      }
+    },
+    "012N": {
+      "action": "added",
+      "reason": "独立说明“代数群的有理表示”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确有限维范围并补仿射、维数、代数和张量积链接，不将所有抽象点群表示视为有理表示。"
+      }
+    },
+    "012O": {
+      "action": "added",
+      "reason": "独立说明“经典仿射代数簇”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "在本页定义经典点集拓扑，不让素谱拓扑链接冒充同一底空间；补理想、商环及整环前置。"
+      }
+    },
+    "012P": {
+      "action": "added",
+      "reason": "独立说明“正则局部环”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "解码余切空间的商模及剩余域向量空间结构，补维数链接。"
+      }
+    },
+    "012Q": {
+      "action": "added",
+      "reason": "独立说明“交换环的局部化”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验带零因子的分式等同关系、含单位乘法集和零环约定。"
+      }
+    },
+    "012R": {
+      "action": "added",
+      "reason": "独立说明“商模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验子模条件保证商运算良定义及商映射泛性质。"
+      }
+    },
+    "012S": {
+      "action": "added",
+      "reason": "独立说明“复形的拟同构”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验逐次数同调同构，不误认作逐项同构；分解例子不是前置边。"
+      }
+    },
+    "012T": {
+      "action": "added",
+      "reason": "独立说明“链映射之间的同伦”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "补局部环变量、左右模约定及同伦范畴的范畴前置。"
+      }
+    },
+    "012U": {
+      "action": "added",
+      "reason": "独立说明“范畴关于态射类的局部化”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "加强局部化泛性质为函子范畴层面的等价，覆盖自然变换的唯一延伸。"
+      }
+    },
+    "012V": {
+      "action": "added",
+      "reason": "独立说明“层在一点的茎”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验芽的邻域等价关系、限制与茎环结构。"
+      }
+    },
+    "012W": {
+      "action": "added",
+      "reason": "独立说明“局部环空间”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "在概形定义之前补足局部环空间态射与同构，消除不可解码的同构约定及概形态射的潜在循环前置。"
+      }
+    },
+    "012X": {
+      "action": "added",
+      "reason": "独立说明“概形的纤维积”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "将仿射公式写作典范同构，明确交换代数张量积的乘法与单位。"
+      }
+    },
+    "012Y": {
+      "action": "added",
+      "reason": "独立说明“平坦模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "统一非交换平坦性的左右约定及函子值域；环同态平坦仍明确限定交换情形。"
+      }
+    },
+    "012Z": {
+      "action": "added",
+      "reason": "独立说明“光滑概形态射”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "保留正确的光滑判据，增加准确来源并说明无需基底 Noether 或额外全局拟紧假设。"
+      }
+    },
+    "0130": {
+      "action": "added",
+      "reason": "独立说明“局部有限表示的概形态射”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "显式指定任意交换基环的代数结构，解码关系理想；就地补有限表示区别中必要的拟紧、拟分离定义。"
+      }
+    },
+    "0131": {
+      "action": "added",
+      "reason": "独立说明“有限型概形态射”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确基环及代数结构，避免把任意基环的代数误解成仅域上的代数。"
+      }
+    },
+    "0132": {
+      "action": "added",
+      "reason": "独立说明“幺幂代数群”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "明确代数闭域、矩阵大小和根基的光滑闭正规子群条件，忠实表示按闭子群而非仅点群理解。"
+      }
+    },
+    "0133": {
+      "action": "added",
+      "reason": "独立说明“概形态射的几何纤维”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "解码剩余域所用的茎和极大理想，补几何连通所需链接。"
+      }
+    },
+    "0134": {
+      "action": "added",
+      "reason": "独立说明“Noether 概形”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验局部 Noether 加拟紧，而非仅底空间 Noether。"
+      }
+    },
+    "0135": {
+      "action": "added",
+      "reason": "独立说明“仿射态射”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验相对仿射是仿射开集的逆像仿射，不要求基底全局仿射。"
+      }
+    },
+    "0136": {
+      "action": "added",
+      "reason": "独立说明“含幺环上的左模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验含幺左模的四个公理、右作用顺序及交换环左右识别。"
+      }
+    },
+    "0137": {
+      "action": "added",
+      "reason": "独立说明“自由模”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验有限支撑自由模及映射延伸泛性质。"
+      }
+    },
+    "0138": {
+      "action": "added",
+      "reason": "独立说明“概形态射的平坦性”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验茎上模平坦性及仿射局部判据，与012Y的交换特例相容。"
+      }
+    },
+    "0139": {
+      "action": "added",
+      "reason": "独立说明“模的局部化”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "补乘法集含单位的遗漏、分式分子分母范围及张量积和素理想前置。"
+      }
+    },
+    "013A": {
+      "action": "added",
+      "reason": "独立说明“表示之间的交织映射”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "revised",
+        "reason": "补表示范畴的直接前置链接，并在使用 Rep_k(G) 前显式指定标量域 k。"
+      }
+    },
+    "013B": {
+      "action": "added",
+      "reason": "独立说明“不可约线性表示”；已核对局部变量、必要定义及语义边界",
+      "scope": "algebra-foundations",
+      "independent_review": {
+        "date": "2026-09-23",
+        "scope": "0120-013B: mathematical correctness, atomicity and necessary prerequisite links",
+        "action": "retained",
+        "reason": "核验非零条件、不变子空间和不可分解的区别。"
+      }
+    },
+    "013C": {
+      "action": "added",
+      "reason": "基础出处及版本链接；未镜像教材",
+      "scope": "algebra-foundations"
+    },
+    "013W": {
+      "action": "added",
+      "reason": "基础出处及版本链接；未镜像教材",
+      "scope": "algebra-foundations"
+    },
+    "013X": {
+      "action": "added",
+      "reason": "基础出处及版本链接；未镜像教材",
+      "scope": "algebra-foundations"
+    },
+    "013Y": {
+      "action": "added",
+      "reason": "仅组织共同基础的阅读路线，定义由独立节点承载",
+      "scope": "algebra-foundations"
+    },
+    "00IE": {
+      "action": "revise",
+      "reason": "保留等式理论问题，通常左模与含幺环公理改为引用0136与0120，避免重复定义",
+      "scope": "algebra-foundations"
+    }
+  },
+  "prerequisites": {
+    "01SG": [
+      "012A",
+      "0129",
+      "012B"
+    ],
+    "01SH": [
+      "012C",
+      "0129",
+      "0121"
+    ],
+    "01SI": [
+      "0129",
+      "012D",
+      "01SH",
+      "01SG",
+      "012E",
+      "01S2"
+    ],
+    "01SJ": [
+      "0129",
+      "012D",
+      "012C",
+      "0127"
+    ],
+    "01SK": [
+      "0129",
+      "01SJ",
+      "01SG",
+      "012E",
+      "01S5",
+      "01S6"
+    ],
+    "01S0": [
+      "012D",
+      "0121",
+      "012A",
+      "012C",
+      "0129"
+    ],
+    "01S1": [
+      "012D",
+      "012A",
+      "012T",
+      "01S0"
+    ],
+    "01S2": [
+      "012E",
+      "01S0",
+      "01S1",
+      "012A",
+      "012B"
+    ],
+    "01S3": [
+      "0129",
+      "012C",
+      "012D",
+      "01S2"
+    ],
+    "01S4": [
+      "0136",
+      "0129"
+    ],
+    "01S5": [
+      "0129",
+      "0127",
+      "012R",
+      "01S4"
+    ],
+    "01S6": [
+      "01S4",
+      "01S3",
+      "01S5"
+    ],
+    "01S7": [
+      "012C",
+      "01S6",
+      "01SD"
+    ],
+    "01S8": [
+      "0129",
+      "0122"
+    ],
+    "01S9": [
+      "0129",
+      "0122",
+      "012Y"
+    ],
+    "01SA": [
+      "012D",
+      "0122",
+      "012B",
+      "01S0",
+      "01S1",
+      "01S8"
+    ],
+    "01SB": [
+      "012D",
+      "01SA",
+      "01S8"
+    ],
+    "01SC": [
+      "012D",
+      "01SA"
+    ],
+    "01SD": [
+      "012C",
+      "0137",
+      "0127"
+    ],
+    "01SE": [
+      "01S4",
+      "01S6"
+    ],
+    "01SF": [
+      "012E",
+      "01S6"
+    ],
+    "0120": [
+      "00G3"
+    ],
+    "0136": [
+      "0120",
+      "00G3"
+    ],
+    "0121": [
+      "0136",
+      "00I0"
+    ],
+    "0125": [
+      "0136",
+      "0121"
+    ],
+    "012R": [
+      "0125",
+      "00BC",
+      "0121"
+    ],
+    "0126": [
+      "0136",
+      "0125"
+    ],
+    "0127": [
+      "0136",
+      "0121"
+    ],
+    "0137": [
+      "0120",
+      "0127",
+      "0121"
+    ],
+    "0128": [
+      "0136",
+      "0121"
+    ],
+    "0122": [
+      "0120",
+      "0136",
+      "00G3",
+      "00CS"
+    ],
+    "0123": [
+      "00D0",
+      "00D3",
+      "0120"
+    ],
+    "0124": [
+      "0001",
+      "00D3",
+      "00BH",
+      "00GC"
+    ],
+    "0129": [
+      "0121",
+      "0125",
+      "012R"
+    ],
+    "012A": [
+      "0136",
+      "0121"
+    ],
+    "012B": [
+      "012A",
+      "012R",
+      "0129"
+    ],
+    "012C": [
+      "0136",
+      "0121",
+      "0137",
+      "0127"
+    ],
+    "012D": [
+      "0129",
+      "012C",
+      "012A",
+      "0137",
+      "012B"
+    ],
+    "012E": [
+      "012D",
+      "0121",
+      "012B",
+      "012T",
+      "012A"
+    ],
+    "012S": [
+      "012A",
+      "012B"
+    ],
+    "012T": [
+      "012A",
+      "012B",
+      "00I0"
+    ],
+    "012U": [
+      "00I0",
+      "00I1",
+      "00I2"
+    ],
+    "012F": [
+      "012T",
+      "012S",
+      "012U",
+      "012A",
+      "012B",
+      "0128",
+      "0125"
+    ],
+    "012G": [
+      "00I0",
+      "00I1",
+      "00I2"
+    ],
+    "012H": [
+      "012G",
+      "00I2"
+    ],
+    "012Q": [
+      "00CS",
+      "00CV",
+      "00CX"
+    ],
+    "012P": [
+      "00D1",
+      "00CX",
+      "00D2",
+      "012R",
+      "00GM"
+    ],
+    "012V": [
+      "0110"
+    ],
+    "012W": [
+      "00E0",
+      "0110",
+      "012V",
+      "00CX",
+      "00CS",
+      "00G9"
+    ],
+    "012I": [
+      "00FW",
+      "012Q",
+      "0110",
+      "012V",
+      "012W",
+      "00CS"
+    ],
+    "012J": [
+      "012W",
+      "012I"
+    ],
+    "012K": [
+      "012J",
+      "012V",
+      "012W"
+    ],
+    "012X": [
+      "012K",
+      "0122"
+    ],
+    "012L": [
+      "012K",
+      "003J",
+      "012X",
+      "012J"
+    ],
+    "012Y": [
+      "0136",
+      "0129",
+      "0122",
+      "0120",
+      "00I1",
+      "00CS"
+    ],
+    "0138": [
+      "012K",
+      "012Y"
+    ],
+    "0130": [
+      "012K",
+      "00CS",
+      "00G9",
+      "00CU",
+      "00GB",
+      "012X"
+    ],
+    "0131": [
+      "0130",
+      "012K",
+      "00CS",
+      "00G9"
+    ],
+    "0133": [
+      "012K",
+      "012X",
+      "00SO",
+      "012V",
+      "00CX",
+      "00F4"
+    ],
+    "012Z": [
+      "012K",
+      "0130",
+      "0138",
+      "0133",
+      "012P"
+    ],
+    "0132": [
+      "012Z",
+      "00Z4",
+      "00F4",
+      "00BF",
+      "00SO"
+    ],
+    "0135": [
+      "012K",
+      "012I"
+    ],
+    "012M": [
+      "012L",
+      "012Z",
+      "0135",
+      "0133",
+      "0132",
+      "00F4",
+      "00Z4"
+    ],
+    "012N": [
+      "012L",
+      "012K",
+      "0135",
+      "00GM",
+      "00GL",
+      "00CU",
+      "0123",
+      "0122"
+    ],
+    "012O": [
+      "00SO",
+      "00CT",
+      "00CU",
+      "00CY",
+      "0123"
+    ],
+    "0134": [
+      "012J",
+      "00D1"
+    ],
+    "0139": [
+      "0136",
+      "012Q",
+      "00CS",
+      "0122",
+      "00CV"
+    ],
+    "013A": [
+      "0124",
+      "00GC",
+      "00I0"
+    ],
+    "013B": [
+      "0124",
+      "00D7"
+    ],
+    "00IE": [
+      "0120",
+      "0136",
+      "003C"
+    ]
+  },
+  "source_checks": [
+    {
+      "url": "https://stacks.math.columbia.edu/tag/00AO",
+      "scope": "modules, localization and projective/flat modules; standard definitions independently formulated"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/05QI",
+      "scope": "complexes, homotopy and localization"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/01HR",
+      "scope": "affine structure sheaf"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/022R",
+      "scope": "group schemes"
+    },
+    {
+      "url": "https://math.mit.edu/~etingof/egnobookfinal.pdf",
+      "scope": "definitions 2.1 and 8.1, not a reproduction of the book"
+    },
+    {
+      "url": "https://math.stanford.edu/~conrad/papers/luminysga3.pdf",
+      "scope": "reductive group convention in Definition3.1.1"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/09LL",
+      "scope": "Right-module/left-module tensor product and right exactness; ordinary modules are the degree-zero special case.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "0122"
+      ]
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/18-706-noncommutative-algebra-spring-2023/mit18_706_s23_notes_by_michael_artin.pdf",
+      "scope": "Michael Artin, Noncommutative Rings: III.5 first two paragraphs, PDF p.29, checked left flatness via right modules; not a full-book reading.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012Y"
+      ]
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/05RR",
+      "scope": "Definition 13.11.3 and Lemmas 13.11.5-6: bounded cohomology versus bounded representatives; not finite projective dimension.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012F"
+      ]
+    },
+    {
+      "url": "https://math.mit.edu/~etingof/egnobookfinal.pdf",
+      "scope": "Definitions 2.1.1, 2.2.8 and 8.1.1: checked pentagon, triangle and both hexagons with associators, PDF pp.38,42,212; not a full-book reading.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012G",
+        "012H"
+      ]
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/01HA",
+      "scope": "Definition 26.2.1 and morphism/stalk conventions.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012W",
+        "012J",
+        "012K"
+      ]
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/01TO",
+      "scope": "Definition 29.22.1 and Lemma 29.22.2: local finite presentation, quasi-compactness and quasi-separatedness.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "0130"
+      ]
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/01V4",
+      "scope": "Smoothness: flat, locally finitely presented, smooth fibres; no Noetherian base hypothesis.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012Z"
+      ]
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/038X",
+      "scope": "Lemma 33.12.6: geometric regularity and smoothness over a field, with local finite-type hypothesis.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012Z"
+      ]
+    },
+    {
+      "url": "https://math.stanford.edu/~conrad/papers/luminysga3.pdf",
+      "scope": "Definition 3.1.1 (PDF p.81) and connectedness convention: smooth affine group scheme with connected reductive geometric fibres.",
+      "checked_on": "2026-09-23",
+      "review": "bounded independent review",
+      "notes": [
+        "012M",
+        "0132"
+      ]
+    }
+  ],
+  "independent_review": {
+    "date": "2026-09-23",
+    "scope": [
+      "0120",
+      "0121",
+      "0122",
+      "0123",
+      "0124",
+      "0125",
+      "0126",
+      "0127",
+      "0128",
+      "0129",
+      "012A",
+      "012B",
+      "012C",
+      "012D",
+      "012E",
+      "012F",
+      "012G",
+      "012H",
+      "012I",
+      "012J",
+      "012K",
+      "012L",
+      "012M",
+      "012N",
+      "012O",
+      "012P",
+      "012Q",
+      "012R",
+      "012S",
+      "012T",
+      "012U",
+      "012V",
+      "012W",
+      "012X",
+      "012Y",
+      "012Z",
+      "0130",
+      "0131",
+      "0132",
+      "0133",
+      "0134",
+      "0135",
+      "0136",
+      "0137",
+      "0138",
+      "0139",
+      "013A",
+      "013B"
+    ],
+    "reviewed_count": 48,
+    "revised_ids": [
+      "0120",
+      "0122",
+      "0126",
+      "0128",
+      "0129",
+      "012A",
+      "012C",
+      "012D",
+      "012E",
+      "012F",
+      "012G",
+      "012H",
+      "012I",
+      "012K",
+      "012L",
+      "012M",
+      "012N",
+      "012O",
+      "012P",
+      "012T",
+      "012U",
+      "012W",
+      "012X",
+      "012Y",
+      "012Z",
+      "0130",
+      "0131",
+      "0132",
+      "0133",
+      "0139",
+      "013A"
+    ],
+    "retained_ids": [
+      "0121",
+      "0123",
+      "0124",
+      "0125",
+      "0127",
+      "012B",
+      "012J",
+      "012Q",
+      "012R",
+      "012S",
+      "012V",
+      "0134",
+      "0135",
+      "0136",
+      "0137",
+      "0138",
+      "013B"
+    ],
+    "scope_boundary": "Only 0120-013B tree files and this manifest; no new IDs, root/navigation/audit edits or site build.",
+    "atomicity": "Kept tightly coupled structure/morphism conventions and coherence axioms together; removed the unspecified group-algebra aside from 0126.",
+    "limitations": [
+      "Review checks statements and hypotheses, not full proofs of comparison theorems, derived localization, structure-sheaf existence, or the smoothness criterion.",
+      "Finite-dimensional rational representations only in 012N; infinite-dimensional rational representations are outside this page's stated scope.",
+      "Db(R-mod) here uses a left Noetherian sufficient hypothesis; coherent-ring and exact-category generalizations are not introduced.",
+      "Unipotent groups in 0132 are smooth over an algebraically closed field; non-smooth group schemes and imperfect-field descent are outside scope.",
+      "Primary sources were checked at the listed sections/pages only, not read cover to cover.",
+      "No whole-site build or rendered SVG verification; root audit registers and out-of-scope reference-node prose were intentionally left unchanged."
+    ],
+    "prerequisite_policy": "Only mathematical inputs to the definition/construction are registered. Examples, contrasts and forward applications remain ordinary body links: e.g. 0128->0137, 012G->0122, 012N->0124, 012O->0014/012I and 012S->012D are not required prerequisite edges.",
+    "validation": {
+      "reviewed_tree_count": 48,
+      "revised_tree_count": 31,
+      "retained_tree_count": 17,
+      "title_taxon_manifest_sync": true,
+      "katex_formulas_checked": 476,
+      "katex_errors": 0,
+      "internal_links_checked": 223,
+      "unresolved_internal_links": 0,
+      "missing_prerequisite_body_links": 0,
+      "recursive_registered_nodes_visited": 104,
+      "prerequisite_cycles": [],
+      "outline_reachability": "All 48 foundation IDs remain directly reachable from existing 013Y; outline was not edited.",
+      "coherence_checks": "Pentagon, triangle, and both explicit associator hexagons passed independent composable-arrow source/target checks; this is typing verification, not a proof of coherence.",
+      "prohibited_syntax_found": [],
+      "site_build_run": false,
+      "svg_render_check_run": false,
+      "scope_check": "Only 31 allocated existing tree files plus research/algebra-foundations.json were patched; no new IDs, title/taxon changes, or root/navigation/audit edits."
+    }
+  }
+}

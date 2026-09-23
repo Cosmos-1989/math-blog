@@ -198,6 +198,8 @@ node scripts/check-logic-notes.mjs --katex /path/to/katex/dist/katex.js
 
 `check-evergreen-notes.mjs` is a compatibility entry point for the whole-site check. The logic check separately verifies the research-source manifest. Neither tool replaces mathematical reading.
 
+For the algebra report integration, keep `research/algebra-*.json` synchronized with edited pages. Run `node scripts/sync-algebra-audit.mjs` before the checks above, then `node scripts/check-algebra-notes.mjs --source-only` (and omit `--source-only` after building). This verifies the official speaker/report roster and source manifest in addition to the whole-site acceptance gate. Keep the distinction between full-text reading, integrated results, and deferred branches explicit in `ICM2026_ALGEBRA_SOURCE_AUDIT.md`; a report having an outline does not mean all of its proofs have been imported.
+
 - A Definition, Construction, or Theorem may supply a real prerequisite. A navigation Outline may not.
 - Preserve named structures and their assumptions, formulas, examples, proof arguments, counterexamples, and source references when splitting. Correct errors explicitly rather than preserving a false claim.
 - Similar words do not always denote the same concept. Resolve such cases in context, for example real versus p-adic semialgebraic sets and Coxeter versus BN-pair parabolic subgroups.

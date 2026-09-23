@@ -1,0 +1,15 @@
+\title{对角参数渐近的对数平均证明}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Rietsch，Theorem 2.7 的截断部分证明](01C3)}
+
+\p{在[截断渐近定理](01DA)的假设下，固定 #{i}。由[子式比值](01D8)望远镜消去得到}
+##{d_i^{[n+1]}=
+\frac{\prod_{r=1}^{n-i+1}m_{ir}}{\prod_{h=1}^{i-1}m_{h,n-i+2}}.}
+\p{令 #{\mu_{ij}=\log m_{ij}}。[行极限](01D9)及 #{\alpha_h>0} 给出 #{\mu_{hj}\to\log\alpha_h}。故}
+##{\frac{\log d_i^{[n+1]}}n
+=\frac1n\sum_{r=1}^{n-i+1}\mu_{ir}
+-\frac1n\sum_{h=1}^{i-1}\mu_{h,n-i+2}
+\longrightarrow\log\alpha_i.}
+\p{第一项是收敛序列的算术平均，第二项只有固定个有界项。取指数得到第一个结论。交换标准坐标指标 #{m_{ij}\leftrightarrow m_{ji}} 时，对角参数变为 #{d_a\leftrightarrow d_{n+2-a}^{-1}}；使用列极限得到第二个结论。这是以 Edrei 坐标极限定理为前提的完整截断论证。}

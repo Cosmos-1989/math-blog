@@ -1,0 +1,13 @@
+\title{双顶点 DG 商的全部微分与乘法计算}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Booth，§4.2](01M2)；显式代数例的独立证明。}
+
+\p{证明[双顶点计算](01MY)。设 #{A=kQ/(ab,ba)}，#{a:1\to2,b:2\to1}，路径从右向左复合，#{e=e_2}，#{D=D(A,e)}。基为 #{e_1,e_2,a,b}，且}
+##{Ae=ke\oplus kb,\qquad eA=ke\oplus ka,\qquad R=eAe=ke.}
+\p{乘法 #{Ae\otimes_R eA\to A} 把基 #{e\otimes e,b\otimes e,e\otimes a,b\otimes a} 分别送到 #{e,b,a,0}。因此[低次公式](01MW)给 #{H^0(D)=ke_1}、#{H^{-1}(D)=k[bha]}。}
+\p{还需检查全部更低次。每个 #{n\geq1} 有 #{D^{-n}=Ae\otimes_k R^{\otimes_k(n-1)}\otimes_k eA}。因 #{R=ke}，它们都与同一四维空间 #{V=Ae\otimes_k eA} 同构。对 #{n\geq2}，微分把词 #{u h e h\cdots e h v} 送到去掉一个 #{h} 的交替和，所以对应映射为}
+##{d^{-n}=\left(\sum_{i=0}^{n-1}(-1)^i\right)\operatorname{id}_V
+=\begin{cases}0&n\text{ 偶},\\\operatorname{id}_V&n\text{ 奇}.\end{cases}}
+\p{这在任意特征都成立。因此所有次数 #{\leq-2} 正合。最后 #{d(bha)=ba=0}，且 #{(bha)^2=bh(ab)ha=0}；所以 #{\eta\mapsto bha} 定义含幺 DG 代数映射，并在仅有的两项非零上同调上是同构。这证明全部拟同构结论，而非仅比较维数。}

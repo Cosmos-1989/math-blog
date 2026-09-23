@@ -1,0 +1,19 @@
+\title{三阶作用在四元阿贝尔核上的全部特征标}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Navarro，§2.1](016Z)的可解分支；[表示论基础](013C)；独立计算}
+\meta{proof-status}{完整计算及不可约性验证。}
+
+\p{令 #{K=(\mathbb Z/2\mathbb Z)^2}，#{P=\langle s\rangle\cong C_3}，#{s(x,y)=(y,x+y)}。矩阵平方加矩阵加单位矩阵为零，故 #{s^3=1}；它循环置换 #{K} 的三个非零元。设 #{G=K\rtimes P} 为[半直积](00BO)，则 #{C_K(P)=\{0\}}，#{N_G(P)=P}。}
+\p{#{K} 的四个[线性特征标](01JA)为 #{\lambda_{a,b}(x,y)=(-1)^{ax+by}}。其中平凡特征标固定，其余三个组成一个轨道。因此由[阿贝尔核分类](01JG)，#{G} 恰有三个一次特征标 #{\beta_j(ks^r)=\omega^{jr}}，#{j=0,1,2}，#{\omega=e^{2\pi i/3}}；另有一个三次不可约特征标 #{\chi=\operatorname{Ind}_K^G\lambda_{1,0}}。}
+\p{由[诱导迹公式](01J4)，#{\chi(1)=3}，在非零 #{k\in K} 上为所有非平凡 #{\lambda} 的和，等于 #{-1}，在 #{G\setminus K} 上为零。特征标表按四个共轭类可写为}
+##{\begin{array}{c|rrrr}
+ &1&K\setminus\{0\}&Ks&Ks^2\\
+\text{类大小}&1&3&4&4\\
+\beta_0&1&1&1&1\\
+\beta_1&1&1&\omega&\omega^2\\
+\beta_2&1&1&\omega^2&\omega\\
+\chi&3&-1&0&0
+\end{array}}
+\p{类大小的理由是：#{P} 在三个非零核元素上传递，而映射 #{1-s:K\to K} 无核，故用 #{K} 共轭 #{s} 得整个 #{Ks}；#{s^2} 同理，商群 #{G/K} 阿贝尔使两个陪集不会混合。由[内积公式](01J2)，#{\langle\chi,\chi\rangle=(9+3)/12=1}，与三个一次特征标的内积均为 #{(3-3)/12=0}。在 #{p=3} 时，McKay 双射正是 #{\beta_j\mapsto\beta_j|_P}；三次特征标不属于 #{\operatorname{Irr}_{3'}(G)}。}

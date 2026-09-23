@@ -1,0 +1,12 @@
+\title{权重平均极限的误差估计}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Rietsch，Theorem 3.18 的平均值证明路线](01C3)}
+
+\p{在[热带极限定理](01DU)的假设下，先对 #{M^\infty} 的三角截断计算固定坐标 #{i} 的[权重](01DO)：}
+##{\frac{\lambda_i^{[n+1]}}n=
+\frac1n\sum_{j=1}^{n+1-i}M^\infty_{ij}
+-\frac1n\sum_{h=1}^{i-1}M^\infty_{h,n+2-i}.}
+\p{第一项的行序列收敛到 #{A_i}，其算术平均亦然；第二项只有固定数量、分别趋于有限 #{A_h} 的项，除以 #{n} 后趋零。}
+\p{该权重共有 #{n} 个带符号条目，所以替换成 #{M^{(n+1)}} 后，#{|\lambda_i^{(n+1)}-\lambda_i^{[n+1]}|/n\le\varepsilon_n}。交换行列并反转权重坐标给出 #{B_j} 公式。本页在明确的一致误差假设下给出完整估计，不涉及正函数提升。}

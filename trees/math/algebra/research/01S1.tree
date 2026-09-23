@@ -1,0 +1,14 @@
+\title{比较映射在链同伦下唯一}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Stacks：投射分解](https://stacks.math.columbia.edu/tag/0643)；模情形的显式归纳}
+
+\p{设 #{P_\bullet\to M}、#{Q_\bullet\to N} 为[投射分解](012D)，#{f,g:P_\bullet\to Q_\bullet} 是提升同一模同态 #{u:M\to N} 的[链映射](012A)。则 #{f,g} [链同伦](012T)。}
+\p{令 #{h_{-1}=0}。因为 #{\varepsilon_Q(f_0-g_0)=0}，投射性与目标分解的正合性给出 #{h_0:P_0\to Q_1}，使 #{d^Q_1h_0=f_0-g_0}。若已构造到 #{h_{n-1}}，令}
+##{t_n=f_n-g_n-h_{n-1}d^P_n.}
+\p{利用 #{f,g} 是链映射及上一阶归纳式，得到}
+##{d^Q_nt_n=(f_{n-1}-g_{n-1}-d^Q_nh_{n-1})d^P_n
+=h_{n-2}d^P_{n-1}d^P_n=0.}
+\p{因此可沿 #{Q_{n+1}\twoheadrightarrow\ker d^Q_n} 提升 #{t_n}，得到 #{h_n}。于是所有 #{n\ge0} 均有 #{f_n-g_n=d^Q_{n+1}h_n+h_{n-1}d^P_n}，正是所需同伦。}
+\p{特别地，若两分解都解析 #{M}，双向[比较映射](01S0)的复合与恒等映射都提升 #{1_M}，故两者同伦。这给出分解之间的同伦等价，而不是任意选择下逐项相等。}

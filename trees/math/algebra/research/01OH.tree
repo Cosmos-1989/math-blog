@@ -1,0 +1,13 @@
+\title{三变量交替和证明差商辫关系}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Fomin--Gelfand--Postnikov，式(2.3)--(2.4)；独立算子展开](01OZ)}
+
+\p{证明[差商关系定理](01OG)，系数为整数，#{s_i} 交换相邻变量。#{s_i(\partial_i f)=\partial_i f}，因为分子和分母在交换下同时变号，所以再次取差商为零。不相邻的两算子分别交换互不相交的变量对，且保持对方分母，故交换。乘积法则由 #{fg-(s_if)(s_ig)=(f-s_if)g+(s_if)(g-s_ig)} 直接得到。}
+\p{辫关系只涉及三个相邻变量，其余变量可视为系数。把它们记为 #{x,y,z}，置 #{a=x-y,b=y-z,c=x-z=a+b,D=abc}，#{s_1} 交换 #{x,y}，#{s_2} 交换 #{y,z}。在有理函数中展开可得}
+##{\partial_2\partial_1f=\frac{N}{D},\quad
+N=c(f-s_1f)-a(s_2f-s_2s_1f).}
+\p{因 #{s_1D=-D,s_1c=b,s_1a=-a}，再次作用 #{\partial_1} 得 #{(N+s_1N)/(aD)}。直接合并六项有}
+##{N+s_1N=a\bigl(f-s_1f-s_2f+s_2s_1f+s_1s_2f-s_1s_2s_1f\bigr).}
+\p{另一方面，#{\partial_1\partial_2f=N'/D}，其中 #{N'=c(f-s_2f)-b(s_1f-s_1s_2f)}。用 #{s_2D=-D,s_2c=a,s_2b=-b}，得到 #{N'+s_2N'=b} 乘同一个六项括号；这里 #{s_1s_2s_1=s_2s_1s_2} 都只是交换 #{x,z}。故两种三重差商都等于括号除以 #{D}。每一步差商本来就是多项式，因而有理函数中的相等也是整系数多项式的相等。}

@@ -1,0 +1,14 @@
+\title{矩阵与逆矩阵的对角块在加倍大小后初等}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Weibel，第三章](01QS)，例1.2.1；完整块矩阵乘法}
+
+\p{设 #{R} 为交换环，#{n\geq1}，#{g\in\operatorname{GL}_n(R)}。则}
+##{\operatorname{diag}(g,g^{-1})\in E_{2n}(R).}
+\p{证明：对 #{A\in M_n(R)} 定义 #{U(A)=\begin{pmatrix}1_n&A\\0&1_n\end{pmatrix}} 与 #{L(A)=\begin{pmatrix}1_n&0\\A&1_n\end{pmatrix}}。#{U(A)=\prod_{i,j}x_{i,n+j}(a_{ij})}，因为任意两个非恒等矩阵单位的乘积为零；#{L(A)} 同理，所以两者均属[初等群](01Q2)。}
+\p{直接乘三个块矩阵，得到}
+##{W(g):=U(g)L(-g^{-1})U(g)
+=\begin{pmatrix}0&g\\-g^{-1}&0\end{pmatrix},\qquad
+W(g)W(-1_n)=\begin{pmatrix}g&0\\0&g^{-1}\end{pmatrix}.}
+\p{所有六个因子都是上述初等块，结论成立。注意只证明了 #{2n} 阶的这个成对矩阵初等，没有断言原来的 #{g} 初等。}

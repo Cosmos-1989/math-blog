@@ -1,0 +1,12 @@
+\title{Ext 不依赖投射分解的选择}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Stacks：Ext](https://stacks.math.columbia.edu/tag/06XP)；采用比较映射的直接证明}
+
+\p{固定含幺环 #{R} 上的左模 #{M,N}。[Ext 的定义](012E)使用 #{M} 的投射分解。若 #{P_\bullet,Q_\bullet} 是两种选择，[比较映射](01S0) #{f:P\to Q} 诱导上链映射}
+##{f^*:\operatorname{Hom}_R(Q_\bullet,N)\longrightarrow\operatorname{Hom}_R(P_\bullet,N),\qquad c\longmapsto c f_n.}
+\p{若 #{f-g=dh+hd}，在次数 #{n} 定义 #{H(c)=c h_{n-1}}，次数为 #{-1}。按[上链复形](012A)的微分 #{\delta c=c d} 直接计算得}
+##{(f^*-g^*)(c)=\delta H(c)+H(\delta c).}
+\p{所以[同伦唯一性](01S1)保证诱导的[上同调](012B)映射不依赖比较映射的选择。双向比较的复合同伦于恒等，故在上同调上互为逆。三种分解之间的比较也满足复合相容性，因为两个复合都提升 #{1_M}。这就是“典范同构”的含义。}
+\p{同样地，同态 #{M'\to M} 通过比较映射给出第一变量的反变性；同态 #{N\to N'} 通过后复合给出第二变量的协变性。这些作用相互交换。整个论证只用阿贝尔群的 Hom 复形，不要求 #{R} 交换。}

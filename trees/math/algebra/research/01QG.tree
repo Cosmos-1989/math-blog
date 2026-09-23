@@ -1,0 +1,10 @@
+\title{Jacobson 级别相对消元的完整证明}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Weibel，第三章](01QS)，引理2.4；保留有限秩与理想系数的逐步论证}
+
+\p{证明[相对特殊线性群等式](01QF)。设 #{R} 为交换环，#{I\subseteq J(R)}，#{n\geq2}，#{g\in\operatorname{SL}_n(R,I)}。记[相对初等群](01FF)为 #{N=E_n(R,I)}。每个相对生成元模 #{I} 为单位矩阵且行列式为一，这两性质在乘积与共轭下不变，故 #{N\subseteq\operatorname{SL}_n(R,I)}。}
+\p{反向使用归纳。#{u=g_{11}\in1+I} 由[单位判据](01QD)可逆；第一列其余项 #{g_{i1}\in I}。左乘 #{x_{i1}(-g_{i1}u^{-1})} 把它们消为零，这些因子全在 #{N} 中。所得首行尾部 #{r_j} 仍在 #{I} 中，故右乘 #{x_{1j}(-u^{-1}r_j)} 也在 #{N} 中，并消去它们。所得为 #{\operatorname{diag}(u,B)}，且 #{B\equiv1_{n-1}\pmod I}。}
+\p{由[相对对角块引理](01QE)，#{D_{12}(u^{-1})\in N}。左乘它后得到 #{\operatorname{diag}(1,B')}，其中 #{B'\equiv1_{n-1}\pmod I} 且 #{\det B'=1}。#{n=2} 时 #{B'=(1)}；#{n>2} 时归纳给出 #{B'\in E_{n-1}(R,I)}。后者的每个正规闭包生成元嵌入后 #{n-1} 个坐标，都在 #{N} 中。}
+\p{因此有限个左、右相对初等乘法把 #{g} 化为 #{1_n}，把这些因子逆序移回，得到 #{g\in N}。整个证明没有在尚未证明的 #{\operatorname{GL}_n(R,I)/N} 中运算，也没有使用一般相对交换子公式。}

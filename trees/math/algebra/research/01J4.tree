@@ -1,0 +1,14 @@
+\title{有限群的诱导表示与陪集迹公式}
+\date{2026-09-23}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Etingof 等，§4.8](013C)；[Navarro，§3.1](016Z)}
+
+\p{设 #{H\leq G} 为有限群的子群，#{U} 为复 #{H}-表示。用[群代数](017J)和[平衡张量积](0122)定义}
+##{\operatorname{Ind}_H^G U=\mathbb C[G]\otimes_{\mathbb C[H]}U.}
+\p{#{G} 左乘第一因子；关系 #{gh\otimes u=g\otimes hu} 使定义良好。若 #{T} 是左陪集 #{G/H} 的代表集，则诱导空间作为向量空间是 #{\bigoplus_{t\in T}t\otimes U}，维数为 #{[G:H]\dim U}。作用规则是：若 #{gt=t'h}，则 #{g(t\otimes u)=t'\otimes hu}。}
+\p{设 #{\psi} 为 #{U} 的[特征标](0170)。仅被 #{g} 固定的陪集对迹有贡献，故}
+##{\chi_{\operatorname{Ind}U}(g)
+=\sum_{\substack{t\in T\\t^{-1}gt\in H}}\psi(t^{-1}gt)
+=\frac1{|H|}\sum_{\substack{x\in G\\x^{-1}gx\in H}}\psi(x^{-1}gx).}
+\p{第二式中每个陪集有 #{|H|} 个代表，它们的 #{H} 内共轭不会改变 #{\psi}。该公式包括非正规子群，不要求表示不可约。}

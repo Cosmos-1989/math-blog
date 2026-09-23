@@ -1,0 +1,16 @@
+\title{非稳定 K₁ 仿射可表性的两步证明}
+\date{2026-09-23}
+\taxon{Proof sketch}
+\author{author}
+\meta{source}{[Stavrova：初等子群与非稳定 K₁](01E1)，定理3.6 的证明展开；深层输入未重证}
+
+\p{设 #{A} 含域、正则且有限维，#{G/A} 各向同性秩至少二。[多项式不变性](01EP)先给出 #{K_1^G(A[t])\cong K_1^G(A)}，再用[端点比较定理](01F1)得到第一支箭头。}
+\p{另一方面，[Nisnevich 挠子同伦不变性](01F8)满足[仿射可表性判据](01FA)的假设，给出第二支箭头：}
+\figure{\tex{\usepackage{amsmath,amssymb,tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+K_1^G(A) \arrow[r,"\sim"] \arrow[dr,"\eta"'] & KV_1^G(A) \arrow[d,"\sim"] \\
+& \left[\operatorname{Spec}A,G\right]_{\mathbb A^1,A}
+\end{tikzcd}
+}}
+##{\eta=\bigl(KV_1^G(A)\longrightarrow[\operatorname{Spec}A,G]_{\mathbb A^1,A}\bigr)\circ\bigl(K_1^G(A)\longrightarrow KV_1^G(A)\bigr).}
+\p{两支箭头均为双射，复合就是[目标可表性](01FB)的自然映射。该推导没有重证挠子不变性或仿射可表性判据；后者含有下降与同伦论输入，不能把这张交换图本身称为它们的证明。}

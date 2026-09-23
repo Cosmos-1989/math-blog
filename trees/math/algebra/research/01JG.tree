@@ -1,0 +1,13 @@
+\title{阿贝尔核与阿贝尔 Sylow 补群的 McKay 对应}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Navarro，§2.1–2.3](016Z)的可解特例；独立完整推导}
+\meta{proof-status}{完整证明，限阿贝尔正规 p' 核及阿贝尔 Sylow p 补群。}
+
+\p{设 #{p} 为素数，#{K} 为有限阿贝尔群且 #{p\nmid|K|}，#{P} 为有限阿贝尔 #{p}-群，通过自同构作用于 #{K}。令 #{G=K\rtimes P} 为[半直积](00BO)，#{C=C_K(P)} 为[固定点子群](01J8)。则 #{P} 是 #{G} 的[Sylow 子群](0171)，#{N_G(P)=C\times P}，并有显式[McKay 对应](017D)}
+##{\operatorname{Irr}_{p'}(G)\longrightarrow\operatorname{Irr}_{p'}(N_G(P)),
+\qquad\widetilde\lambda\,\beta\longmapsto(\lambda|_C)\,\beta,}
+\p{其中 #{\lambda\in\operatorname{Irr}_P(K)}，#{\beta\in\operatorname{Irr}(P)}，#{\widetilde\lambda(kh)=\lambda(k)}，#{\beta} 沿 #{G\to P} 膨胀。}
+\p{证明：对任意 #{\lambda\in\operatorname{Irr}(K)}，由[阿贝尔特征标定理](01JA)知 #{\lambda} 一维。其惯性群为 #{T=K\rtimes P_\lambda}。#{\lambda} 延拓到 #{T} 的公式仍为 #{\widetilde\lambda(kh)=\lambda(k)}：乘法中的 #{h(k')} 不改变 #{\lambda(k')}，故确实是同态。由[Gallagher 对应](017B)及[Clifford 诱导对应](01J5)，#{G} 的全部不可约表示按 #{P} 在 #{\operatorname{Irr}(K)} 上的轨道，由 #{\operatorname{Ind}_T^G(\widetilde\lambda\,\beta)} 给出，其中 #{\beta\in\operatorname{Irr}(P_\lambda)}。因 #{P_\lambda} 阿贝尔，次数为 #{[P:P_\lambda]}，所以不被 #{p} 整除当且仅当 #{P_\lambda=P}。}
+\p{用 #{K} 的加法记号，#{k h k^{-1}=(k-h(k),h)}。因此 #{k} 正规化 #{P} 当且仅当 #{k\in C}，于是 #{N_G(P)=C\times P}。这个群阿贝尔；它的任意线性特征标唯一是两因子限制的乘积。由[阿贝尔 Glauberman 双射](01JB)，#{\lambda\mapsto\lambda|_C} 是双射，保持第二参数 #{\beta} 就给出所需双射。两端全部次数为一，基数均为 #{|C||P|}。这不证明一般 #{p}-可解群的 McKay 定理。}

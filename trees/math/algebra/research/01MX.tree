@@ -1,0 +1,13 @@
+\title{DG 商的负二次边界恰给张量平衡关系}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Booth，命题 4.2.1 的词模型](01M2)；低次计算完全展开。}
+
+\p{证明[低次上同调公式](01MW)。设 #{A} 为域 #{k} 上代数，#{e^2=e}，#{R=eAe}，#{D=D(A,e)}。按词中 #{h} 的个数分次，关系 #{eh=he=h} 恰使每个含 #{h} 的词具有如下张量正规形式：}
+##{D^0=A,\qquad D^{-1}=Ae\otimes_k eA,\qquad
+D^{-2}=Ae\otimes_k R\otimes_k eA.}
+\p{这里 #{a\otimes b} 对应 #{ahb}；#{a\otimes r\otimes b} 对应 #{ahrhb}。没有额外线性关系：用这些张量空间及词拼接定义乘法，可构造上述对应的逆映射，所需关系仅是 #{A} 内乘法与 #{eh=he=h}。}
+\p{微分为 #{d(ahb)=ab}，所以零次边界恰为 #{AeA}，给 #{H^0(D)=A/AeA}。又}
+##{d(ahrhb)=arhb-ahrb.}
+\p{故负二次边界是全部 #{ar\otimes b-a\otimes rb} 的张成空间。这正是把 #{Ae\otimes_k eA} 商成[平衡张量积](0122) #{Ae\otimes_R eA} 的关系。乘法杀死这些关系，因此负一次循环模边界等于诱导乘法 #{\mu} 的核。整个计算只用了次数 #{0,-1,-2}，没有把更低次数的 Tor 消失当作前提。}

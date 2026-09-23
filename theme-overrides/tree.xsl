@@ -230,6 +230,15 @@
       <xsl:when test="$label = 'Context'">上下文</xsl:when>
       <xsl:when test="$label = 'Definition'">定义</xsl:when>
       <xsl:when test="$label = 'Theorem'">定理</xsl:when>
+      <xsl:when test="$label = 'Proposition'">命题</xsl:when>
+      <xsl:when test="$label = 'Proof'">证明</xsl:when>
+      <xsl:when test="$label = 'Proof route'">证明路线</xsl:when>
+      <xsl:when test="$label = 'Proof sketch'">证明纲要</xsl:when>
+      <xsl:when test="$label = 'Conjecture'">猜想</xsl:when>
+      <xsl:when test="$label = 'Question'">问题</xsl:when>
+      <xsl:when test="$label = 'Open problem'">开放问题</xsl:when>
+      <xsl:when test="$label = 'Reference'">文献</xsl:when>
+      <xsl:when test="$label = 'Remark'">注记</xsl:when>
       <xsl:when test="$label = 'Lemma'">引理</xsl:when>
       <xsl:when test="$label = 'Corollary'">推论</xsl:when>
       <xsl:when test="$label = 'Example'">例</xsl:when>

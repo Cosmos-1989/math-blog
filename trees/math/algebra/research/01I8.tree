@@ -1,0 +1,17 @@
+\title{整数特殊线性群到有限系数环的满射}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Avni–Meiri，词宽度论文§4](01I0)所用约化映射；独立消元证明}
+\meta{proof-status}{完整证明。}
+
+\p{设 #{n\geq2,d\geq1}。[一般线性群](00DD)中行列式为一的矩阵组成 #{\operatorname{SL}_n}，约化同态}
+##{\operatorname{SL}_n(\mathbb Z)\longrightarrow
+\operatorname{SL}_n(\mathbb Z/d\mathbb Z)}
+\p{是满射。证明只需把目标中的矩阵写成初等矩阵 #{e_{ij}(a)=I+ aE_{ij}} 的乘积，因为每个 #{a} 都可提升成整数。}
+\p{先设 #{d=p^r}。可逆矩阵首列至少有一个不被 #{p} 整除的元素，否则行列式也被 #{p} 整除。这个元素在 #{R=\mathbb Z/p^r\mathbb Z} 中可逆。带符号的行交换可把它移到左上角，再用加行消去其下方元素。归一化所需的对角矩阵也由初等矩阵组成：对于 #{u\in R^\times}，令}
+##{W(u)=e_{12}(u)e_{21}(-u^{-1})e_{12}(u)
+=\begin{pmatrix}0&u\\-u^{-1}&0\end{pmatrix},\qquad
+W(u)W(-1)=\operatorname{diag}(u,u^{-1}).}
+\p{在前两行使用此式把首项化为一，再用加列清空首行其余项。对余下行列式为一的块递归，最后一维块为一。这证明局部系数环情形。一般 #{d=\prod p_i^{r_i}} 时，整数中国剩余同构 #{\mathbb Z/d\mathbb Z\cong\prod_i\mathbb Z/p_i^{r_i}\mathbb Z} 将矩阵分成这些分量；每次初等操作的参数取为目标分量的参数、其他分量为零，便提升为乘积环上的初等操作。#{d=1} 时目标为平凡群。}
+\p{上述整数中国剩余步骤也可直接构造：写 #{q_i=p_i^{r_i}}、#{d_i=d/q_i}，由互素性选 #{u_id_i\equiv1\pmod{q_i}}。系数 #{u_id_i} 在第 #{i} 个分量为一、其余分量为零，所以 #{\sum_i a_i u_id_i} 提升任意余数向量 #{(a_i)}；同时在全部分量为零的整数必被两两互素的 #{q_i} 的乘积 #{d} 整除。这证明所用同构而无需另引一个未证输入。}

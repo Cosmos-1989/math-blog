@@ -1,0 +1,14 @@
+\title{短正合复形的上同调长正合列}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks，0117](https://stacks.math.columbia.edu/tag/0117)；以下给出模复形的直接元素追踪}
+
+\p{设 #{R} 为含幺环，#{0\to A^\bullet\xrightarrow{j}B^\bullet\xrightarrow{p}C^\bullet\to0} 是左模的[上链复形](012A)序列，并在每个次数上[短正合](0129)。则其[上同调](012B)组成长正合列}
+##{\cdots\to H^n(A)\xrightarrow{j_*}H^n(B)\xrightarrow{p_*}H^n(C)
+\xrightarrow{\delta}H^{n+1}(A)\to\cdots.}
+\p{构造连接映射：取闭链 #{c\in C^n}，提升为 #{b\in B^n}。因为 #{p(db)=dc=0}，唯一存在 #{a\in A^{n+1}} 使 #{j(a)=db}。由 #{j(da)=d^2b=0} 及 #{j} 单得 #{da=0}，定义 #{\delta[c]=[a]}。}
+\p{若提升改为 #{b+j(x)}，则 #{a} 改为 #{a+dx}；若代表改为 #{c+dy}，提升 #{y} 为 #{z} 后可将 #{b} 改为 #{b+dz}，此时 #{a} 不变。因此 #{\delta} 良定义且可加。对复形短正合列的交换图，把已选提升送到目标即可验证连接映射的自然性。}
+\p{在 #{H^n(B)} 处：若闭链 #{b} 的像为边界 #{p(b)=dc}，提升 #{c} 为 #{z\in B^{n-1}}，则 #{b-dz=j(a)}，而 #{a} 是闭链。因此 #{[b]} 来自 #{H^n(A)}。反向包含由 #{pj=0} 立即得到。}
+\p{在 #{H^n(C)} 处：若 #{\delta[c]=0}，上述 #{a} 可写成 #{dx}，于是 #{b-j(x)} 是提升 #{c} 的闭链，故 #{[c]} 来自 #{H^n(B)}。若 #{c} 原本有闭链提升，则连接映射为零。}
+\p{在 #{H^{n+1}(A)} 处：若 #{j_*[a]=0}，写 #{j(a)=db}，则 #{p(b)} 是闭链且 #{\delta[p(b)]=[a]}。反向包含由连接映射的构造成立。这证明每一处的正合性，不必另外把蛇引理当作黑箱。}

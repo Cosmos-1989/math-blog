@@ -29,6 +29,11 @@ jobs:
           ocaml-compiler: "5.3.0"
           opam-depext: false
 
+      - name: Check note sources and prerequisite graph
+        run: |
+          node scripts/check-site-notes.mjs --source-only
+          node scripts/check-algebra-notes.mjs --source-only
+
       - name: Install LaTeX (for tikz-cd diagrams)
         run: |
           sudo apt-get update
@@ -50,6 +55,12 @@ jobs:
         run: |
           eval $(opam env)
           forester build forest.toml
+
+      - name: Check generated pages and research manifests
+        run: |
+          node scripts/check-site-notes.mjs
+          node scripts/check-logic-notes.mjs
+          node scripts/check-algebra-notes.mjs
 
       - name: Prepare for GitHub Pages
         run: |

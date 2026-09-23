@@ -1,0 +1,17 @@
+\title{重数空间完整分类三元组上方的表示}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Navarro，§3.2](016Z)的投射 Clifford 机制，独立完整推导}
+\meta{proof-status}{完整证明；不调用未展开的投射 Clifford 分类。}
+
+\p{设 #{(G,N,\theta)} 为[特征标三元组](0173)，#{P:G\to\operatorname{GL}(U)} 为[关联投射表示](0176)，其因子集为 #{L=G/N} 上的 #{\alpha}。称投射表示不可约，指不存在同时被所有表示矩阵保持的非零真子空间。则 #{L} 上因子集为 #{\alpha^{-1}} 的不可约[投射表示](0175)的同构类，与 #{\operatorname{Irr}(G\mid\theta)} 一一对应，对应方式为 #{R\mapsto P\otimes R}。}
+\p{证明：先取普通 #{G}-表示 #{\rho:G\to\operatorname{GL}(V)}，使 #{V|_N} 只有 #{\theta} 类型。在[重数空间](01J1) #{E=\operatorname{Hom}_N(U,V)} 上定义}
+##{R(g)f=\rho(g)fP(g)^{-1}.}
+\p{由 #{P(g)P(n)P(g)^{-1}=P(gng^{-1})} 可直接核对 #{R(g)f} 仍是 #{N}-交织映射。若 #{n\in N}，交织关系给出 #{R(n)f=f}。进一步}
+##{R(g)R(h)f
+=\rho(gh)f(P(g)P(h))^{-1}
+=\alpha(gN,hN)^{-1}R(gh)f.}
+\p{所以 #{R} 只依赖陪集 #{gN}，并有反因子集。评价同构 #{U\otimes E\to V} 满足 #{\operatorname{ev}(P(g)u\otimes R(g)f)=\rho(g)f(u)}，因而是 #{G}-同构。}
+\p{反向给定任一具有反因子集的 #{R:L\to\operatorname{GL}(E)}，#{\rho(g)=P(g)\otimes R(gN)} 的两个标量因子相消，成为普通 #{G}-表示；限制到 #{N} 是 #{\dim E} 个 #{U}。#{N}-子表示恰为 #{U\otimes F}，其中 #{F\subseteq E}，由[评价同构的子空间结论](01J1)可知它在 #{G} 下不变当且仅当 #{F} 在所有 #{R(q)} 下不变。因此 #{\rho} 不可约当且仅当 #{R} 不可约。}
+\p{任意 #{N}-交织映射 #{U\otimes E\to U\otimes E'} 由[Schur 引理](017X)逐块写成 #{I_U\otimes S}；它是 #{G}-交织映射当且仅当 #{S R(q)=R'(q)S}。因此上述构造不仅满射，也不会把两个不同的投射同构类识别。最后由[Clifford 限制定理](0174)，每个 #{\operatorname{Irr}(G\mid\theta)} 的限制都是纯 #{\theta} 类型，故没有遗漏。对应次数为 #{\chi(1)=\theta(1)\dim E}。}

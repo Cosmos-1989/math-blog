@@ -1,0 +1,11 @@
+\title{乘法群的 Frobenius 核区分两种支持}
+\date{2026-09-23}
+\taxon{Example}
+\author{author}
+\meta{source}{[Friedlander–Suslin，§1 的表示约定](01KY)，独立显式计算}
+
+\p{设 #{k} 为特征 #{p>0} 的域，#{\mu_p=\operatorname{Spec}C}，其中 #{C=k[t]/(t^p-1)}，[Hopf 余乘法](0143)为 #{\Delta(t)=t\otimes t}，余单位为 #{1}，对极为 #{t^{p-1}}。这是[有限群概形](01K9)，坐标环虽满足 #{(t-1)^p=0}，表示代数却是 #{B=C^*} 而非 #{C}。}
+\p{取基 #{1,t,\ldots,t^{p-1}} 的对偶基 #{e_0,\ldots,e_{p-1}}。直接按卷积计算得 #{e_i e_j=\delta_{ij}e_i}，且 #{1_B=\sum e_i}。故 #{B\cong k^p}，任意 #{B} 模 #{M} 分解为 #{\bigoplus_i e_iM}。每个有限维模都是[投射](012C)的：对满模同态 #{U\to W} 及 #{M\to W}，在每个向量空间 #{e_iM} 选[基](00GL)，逐个把其像提升到 #{e_iU}，再线性延拓；各分量的提升之和就是所需的 #{B} 模提升。}
+\p{令 #{L_i} 为 #{e_i} 作用为 #{1}、其余 #{e_j} 作用为零的一维模。平凡模是 #{L_0}。于是 #{R=H^{\mathrm{ev}}(\mu_p;k)=k}，若 #{i\ne0}，则 #{\operatorname{Hom}_B(L_0,L_i)=0}，所有正次 Ext 也为零，而 #{\operatorname{Hom}_B(L_i,L_i)=k}。故[两种支持](01KC)分别为}
+##{\overline V_{\mu_p}(L_i)=\varnothing,\qquad V_{\mu_p}(L_i)=\operatorname{Spec}k.}
+\p{这也说明群概形仅有一个几何点，并不意味着它只有平凡表示。}

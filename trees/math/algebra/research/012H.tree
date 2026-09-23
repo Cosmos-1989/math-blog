@@ -1,0 +1,19 @@
+\title{编织幺半范畴}
+\date{2026-09-23}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tensor Categories](013X)，§8.1}
+
+\p{设 #{(\mathcal C,\otimes,\mathbf1,a,l,r)} 为[幺半范畴](012G)，其中 #{a_{X,Y,Z}:(X\otimes Y)\otimes Z\to X\otimes(Y\otimes Z)}。编织是[自然同构](00I2)族 #{c_{X,Y}:X\otimes Y\to Y\otimes X}，满足两个六边形公理。保留所有结合子，第一式为}
+##{\begin{aligned}
+c_{X,Y\otimes Z}
+={}&a^{-1}_{Y,Z,X}\circ(1_Y\otimes c_{X,Z})\\
+&\circ a_{Y,X,Z}\circ(c_{X,Y}\otimes1_Z)\circ a^{-1}_{X,Y,Z}.
+\end{aligned}}
+\p{第二式为}
+##{\begin{aligned}
+c_{X\otimes Y,Z}
+={}&a_{Z,X,Y}\circ(c_{X,Z}\otimes1_Y)\\
+&\circ a^{-1}_{X,Z,Y}\circ(1_X\otimes c_{Y,Z})\circ a_{X,Y,Z}.
+\end{aligned}}
+\p{复合从右向左读，两式的源靶分别是 #{X\otimes(Y\otimes Z)\to(Y\otimes Z)\otimes X} 与 #{(X\otimes Y)\otimes Z\to Z\otimes(X\otimes Y)}。只有在略去结合子的约定下才能省略这些 #{a}；一般不要求 #{c_{Y,X}\circ c_{X,Y}=1_{X\otimes Y}}，加上此条件才称为对称编织。}

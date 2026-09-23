@@ -1,0 +1,12 @@
+\title{Profinite 群的词宽度由有限商检测}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Avni–Meiri，词宽度论文§4的有限商观点](01I0)；独立紧性论证}
+\meta{proof-status}{完整证明；词子群按抽象生成而非先取闭包定义。}
+
+\p{设 #{K} 为有限群逆极限，赋予[profinite 拓扑](0168)，#{w} 为[词](01I1)。令 #{N} 遍历 #{K} 的开正规子群，则在允许无穷大的整数中}
+##{\operatorname{wid}_K(w(K))
+=\sup_N\operatorname{wid}_{K/N}(w(K/N)).}
+\p{证明：满射保持词值，每个有限商的宽度不大于左端。反之，设所有有限商宽度均不超过同一整数 #{m}。词映射连续，#{K} 是[紧 Hausdorff 空间](00F3)，故 #{X=X_w(K)} 以及 #{X^m} 都紧而闭。对 #{g\in W_w(K)}，其在每个商中的像属于 #{\pi_N(X)^m}，所以 #{X^m\cap gN\ne\varnothing}。有限多个这样的闭集仍有交点，因为可改用这些 #{N} 的交。紧性给出 #{x\in X^m\cap\bigcap_N gN=\{g\}}，故 #{g\in X^m}。}
+\p{当统一有限界存在时，#{W_w(K)=X^m} 因而自动闭。证明的关键是有限商上有同一个 #{m}；仅知道每个有限商各自具有有限宽度毫无约束，因为有限群中的任意生成集都有有限宽度。}

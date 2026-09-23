@@ -1,0 +1,12 @@
+\title{核的有界长度给出宽度的加法上界}
+\date{2026-09-23}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Avni–Meiri，定理4.9的商群步骤](0161)；独立抽出的群论论证}
+\meta{proof-status}{完整证明；不含算术输入。}
+
+\p{设 #{G} 为群，#{X\subseteq G} 包含单位元且 #{X=X^{-1}}，#{W=\langle X\rangle}。设 #{N\trianglelefteq G} 且存在整数 #{c\geq0} 使 #{N\subseteq X^c}。令 #{\pi:G\to G/N} 为[商映射](00BG)，若 #{\langle\pi(X)\rangle=\pi(X)^m}，则}
+##{W=X^{m+c},\qquad
+\operatorname{wid}_G(X)\leq m+c.}
+\p{证明：对 #{g\in W}，选 #{x_1,\ldots,x_m\in X} 使 #{\pi(g)=\pi(x_1\cdots x_m)}。令 #{h=x_1\cdots x_m}，则 #{h^{-1}g\in N\subseteq X^c}，故 #{g\in X^{m+c}}。反向包含由 #{X\subseteq W} 得到。这里使用的正是[宽度](0163)相对于生成子群的约定。}
+\p{不能只假设商群宽度有限而忽略核：#{\mathbb Z\to\{0\}} 的商宽度为零，但 #{X=\{-1,0,1\}} 在加法群 #{\mathbb Z} 中宽度无限。}

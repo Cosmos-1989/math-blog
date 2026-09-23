@@ -1,0 +1,12 @@
+\title{群代数余模与群分次的等价证明}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Angiono，§2.1.1、例2.1；系数比较的独立展开](0141)}
+
+\p{设 #{G} 为群、#{k} 为域。证明[群分次的 Yetter–Drinfeld 描述](0148)：先只取[群代数](014T) #{kG} 的左[余模](0144) #{V}。把余作用唯一写成 #{\delta(v)=\sum_{g\in G}g\otimes p_g(v)}，其中对每个 #{v} 仅有限多个系数非零。余结合与余单位分别给出}
+##{p_h p_g=\begin{cases}p_g&h=g,\\0&h\ne g,\end{cases}\qquad \sum_g p_g(v)=v.}
+\p{第一式由比较 #{g\otimes h} 的系数得到。因此 #{V=\bigoplus_gV_g}，其中 #{V_g=\operatorname{im}p_g}；直和性可对任一有限零和施加各投影检验。反之，任一这样的直和定义 #{\delta(v)=g\otimes v}（#{v\in V_g}），直接满足余模两公理。余模同态恰为保持每一分次的线性映射。}
+\p{再给 #{V} 一个 #{G}-线性作用。[Yetter–Drinfeld 条件](0147)对群基元素 #{h} 与 #{v\in V_g} 成为}
+##{\delta(h\cdot v)=hgh^{-1}\otimes h\cdot v.}
+\p{故该条件等价于 #{hV_g\subseteq V_{hgh^{-1}}}；施加 #{h^{-1}} 得等号。由于原条件对 #{h,v} 线性，在群基及齐次向量上检验已充分。这证明对象和同态两方面的等价，不要求 #{G} 阿贝尔、有限，亦不要求特征零。}

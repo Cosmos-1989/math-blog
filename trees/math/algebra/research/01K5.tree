@@ -1,0 +1,10 @@
+\title{有限模的湮灭理想与局部化交换}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks，§10.40](https://stacks.math.columbia.edu/tag/00L0)，共同分母计算}
+
+\p{设 #{R} 是[交换含幺环](00CS)，#{E} 为[有限生成](0128) #{R} 模，#{S\subseteq R} 含 #{1} 且乘法封闭。则[湮灭理想](01K0)满足}
+##{S^{-1}\operatorname{Ann}_R(E)=\operatorname{Ann}_{S^{-1}R}(S^{-1}E).}
+\p{完整证明：左侧包含于右侧显然。对右侧元素 #{r/s}，取生成元 #{e_1,\ldots,e_n}。由 #{re_i/s=0}，存在 #{t_i\in S} 使 #{t_i re_i=0}。令 #{t=\prod_i t_i}，则 #{tr\in\operatorname{Ann}_R(E)}，且 #{r/s=tr/(ts)}，故属于左侧。[分式零判据](0139)并不要求环是整环。}
+\p{因此若 #{\mathfrak p} 与 #{S} 不交，对应素理想 #{S^{-1}\mathfrak p} 处的再局部化就是 #{E_{\mathfrak p}}；[支持](01K1)在此基变换下只保留与 #{S} 不交的那些素理想。后一描述直接来自分式定义，本身不要求有限生成。}

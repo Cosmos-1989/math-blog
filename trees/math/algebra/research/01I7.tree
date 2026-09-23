@@ -1,0 +1,14 @@
+\title{两个词值制造初等矩阵的全部整数幂}
+\date{2026-09-23}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Avni–Meiri，词宽度论文§3首段](01I0)；显式块矩阵补算}
+\meta{proof-status}{完整条件引理；假设给定非单位词值，不在此证明其存在。}
+
+\p{设 #{w} 是[词](01I1)，给定 #{A\in w(\operatorname{SL}_2(\mathbb Z))} 且 #{A\ne I_2}。令 #{g=\operatorname{diag}(A,1)}。取整数列向量 #{v\in\mathbb Z^2} 使 #{z=(A-I_2)v\ne0}，写 #{q=\gcd(z_1,z_2)>0}。则对每个 #{t\in\mathbb Z}，}
+##{e_{13}(tq)\in X_w(\operatorname{SL}_3(\mathbb Z))^2,}
+\p{其中 #{e_{13}(a)=I_3+aE_{13}}，#{E_{13}} 只有第 #{(1,3)} 项为一。}
+\p{证明：令 #{u(v)=\begin{pmatrix}I_2&v\\0&1\end{pmatrix}}，使用[换位子](016H)约定 #{[g,h]=ghg^{-1}h^{-1}}，直接相乘得}
+##{g u(tv)g^{-1}=u(tAv),\qquad
+[g,u(tv)]=u(tz)=g\bigl(u(tv)g^{-1}u(tv)^{-1}\bigr).}
+\p{最后两个因子是一个词值和一个逆词值的共轭，故乘积在 #{X_w^2} 中。写 #{z/q=(a,b)^T}，选整数 #{r,s} 使 #{ra+sb=1}；则 #{B=\begin{pmatrix}r&s\\-b&a\end{pmatrix}\in\operatorname{SL}_2(\mathbb Z)} 且 #{Bz=(q,0)^T}。用 #{\operatorname{diag}(B,1)} 共轭 #{u(tz)} 得 #{e_{13}(tq)}。词值集对共轭封闭，结论成立。}

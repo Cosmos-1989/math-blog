@@ -1,0 +1,21 @@
+\title{投射分解的马蹄引理}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks，065P 中的同步分解构造](https://stacks.math.columbia.edu/tag/065P)；逐次核的直接证明}
+
+\p{设 #{R} 为含幺环，#{0\to A\xrightarrow{i}B\xrightarrow{q}C\to0} 是[短正合列](0129)。给定 #{A,C} 的[投射分解](012D) #{P_\bullet,Q_\bullet}，可构造 #{B} 的投射分解 #{L_\bullet}，使 #{L_n=P_n\oplus Q_n}，并组成逐次分裂的短正合复形序列 #{0\to P_\bullet\to L_\bullet\to Q_\bullet\to0}。}
+\p{归纳的单步如下。记增广满射为 #{a:P_0\to A}、#{c:Q_0\to C}。由 #{Q_0} 的[投射性](012C)，取 #{t:Q_0\to B} 使 #{qt=c}。定义}
+##{\ell:P_0\oplus Q_0\to B,\qquad\ell(p,z)=i(a(p))+t(z).}
+\p{此映射满：先用 #{z} 匹配 #{q(b)}，再用 #{p} 匹配 #{b-t(z)}。设 #{A_1=\ker a}、#{B_1=\ker\ell}、#{C_1=\ker c}。投影诱导 #{0\to A_1\to B_1\to C_1\to0}：其核恰为 #{(p,0)} 且 #{a(p)=0}；对 #{z\in C_1}，#{t(z)} 在 #{i(A)} 中，选择 #{p} 使 #{i(a(p))=-t(z)}，即得 #{(p,z)\in B_1}，证明满性。}
+\p{现在对这条核序列重复同一构造，使用既定分解的满射 #{P_1\to A_1}、#{Q_1\to C_1}，得到 #{L_1\to B_1}。递归构造 #{L_n\twoheadrightarrow B_n}，微分取它与 #{B_n\hookrightarrow L_{n-1}} 的复合。由构造，微分平方为零，像等于下一映射的核；同时各次包含 #{P_n\hookrightarrow L_n} 与投影 #{L_n\to Q_n} 和微分相容。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+P_1\arrow[r,hook]\arrow[d]&L_1\arrow[r,two heads]\arrow[d]&Q_1\arrow[d]\\
+P_0\arrow[r,hook]\arrow[d,"a"']&L_0\arrow[r,two heads]\arrow[d,"\ell"]&Q_0\arrow[d,"c"]\\
+A\arrow[r,"i"']&B\arrow[r,"q"']&C
+\end{tikzcd}
+}}
+##{L_n=P_n\oplus Q_n,\qquad q\ell=c\,\operatorname{pr}_{Q_0},\qquad
+\ell\,\operatorname{in}_{P_0}=ia.}
+\p{有限[直和](0127)的投射性可把两分量分别提升后相加来验证，故各 #{L_n} 投射。逐次分裂不表示整个复形序列在链映射意义下分裂；非对角微分正可能记录原扩张。}

@@ -1,0 +1,13 @@
+\title{插入单位证明 bar 分解正合}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Barmeier–Schroll–Wang，§3.1](01LZ)，独立写出收缩}
+
+\p{设 #{A} 为域 #{k} 上[含幺结合代数](0123)，#{B_n,d_n} 为[增广 bar 复形](01L1)。证明[自由分解定理](01L2)。首先作为左[包络代数](01L0)模，}
+##{B_n\cong A^e\otimes_k A^{\otimes_k n},\qquad
+(a\otimes b^{\mathrm{op}})\otimes w\longmapsto a\otimes w\otimes b.}
+\p{为中间向量空间选一组[基](00GL)，即得一组 #{A^e} 自由基。无限维时采用 [Zorn 引理](00GT)：线性无关子集的链之并仍无关，因为每个有限关系已在链的某个成员中；极大无关子集必张成，否则可加入一个不在其张成中的向量。有限维 #{A} 时只需有限维线性代数。}
+\p{令 #{s_{-1}(a)=1\otimes a}，#{s_n(a_0\otimes\cdots\otimes a_{n+1})=1\otimes a_0\otimes\cdots\otimes a_{n+1}}。这些是 #{k} 线性映射。对 #{n\ge0}，#{d_{n+1}s_n} 的第零项是原张量，其余合并项恰为 #{-s_{n-1}d_n}，故}
+##{d_{n+1}s_n+s_{n-1}d_n=1_{B_n},\qquad d_0s_{-1}=1_A.}
+\p{若 #{d_nz=0}，等式给出 #{z=d_{n+1}s_nz}，所以核等于像，且增广满射。这是底向量空间的[正合性](0129)，也就是底双模的正合性。收缩不为 #{A^e} 线性无妨：我们只用它验证元素在像中，并没有声称这组双模序列分裂。}

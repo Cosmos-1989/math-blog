@@ -1,0 +1,13 @@
+\title{Laufer 词基的生成与线性无关性证明}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Donovan–Wemyss，例 3.14](01M3)；用显式表示补出基验证。}
+
+\p{证明 [Laufer 型词基定理](01N0)。设 #{m\geq3} 奇，#{Q_m=\frac{\mathbb C\langle\langle x,y\rangle\rangle}{\overline{(xy+yx,x^2-y^m)}}}。势 #{g=x^2y-y^{m+1}/(m+1)} 的[循环偏导](01BS)为 #{\delta_xg=xy+yx}、#{\delta_yg=x^2-y^m}。}
+\p{由 #{yx=-xy}，可把词中所有 #{x} 移到左边。又 #{x^2=y^m}，所以 #{x^3=xy^m=y^mx}；但 #{m} 为奇数给 #{xy^m=-y^mx}。特征零遂给 #{x^3=xy^m=0}，进而 #{y^{2m}=x^4=0}。每个词化为所列 #{3m} 个词的线性组合。长度至少 #{2m} 的词全零：化成 #{x^iy^j} 后，偶数 #{i} 给 #{y^{im/2+j}}，奇数 #{i} 给 #{xy^{(i-1)m/2+j}}，分别超出上述界。因此形式级数也截成有限和。}
+\p{为证独立，构造 #{3m} 维向量空间 #{V}，基为 #{u_0,\ldots,u_{2m-1},v_0,\ldots,v_{m-1}}。定义线性算子 #{X,Y}，所有越界项规定为零：}
+##{Yu_j=u_{j+1},\quad Yv_j=-v_{j+1},\quad
+Xu_j=\begin{cases}v_j&j<m,\\0&j\geq m,\end{cases}\quad Xv_j=u_{m+j}.}
+\p{在 #{u_j} 上，#{XY+YX} 的两项为 #{v_{j+1}} 与 #{-v_{j+1}}，#{X^2u_j=Y^mu_j=u_{m+j}}（越界为零）；在 #{v_j} 上，前两项为 #{-u_{m+j+1}} 与 #{u_{m+j+1}}，且 #{X^2v_j=Y^mv_j=0}。故关系成立。这些算子生成的正词理想的 #{2m} 次幂为零，所以作用也对词长完备化良定义。}
+\p{让所列词作用于 #{u_0}，分别得到 #{u_j} 与 #{v_j}，即全部互异基向量。若原词线性组合为零，作用于 #{u_0} 就迫使所有系数为零。这补出了有限维结论所必需的线性无关性，不仅给出生成上界。}

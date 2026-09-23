@@ -1,0 +1,11 @@
+\title{Koszul 正合性的逐个循环消去}
+\date{2026-09-23}
+\taxon{Proof}
+\author{author}
+\meta{source}{[Stacks，062F](https://stacks.math.columbia.edu/tag/062F)；展开映射锥的循环计算。}
+
+\p{证明[正则序列的 Koszul 分解](01MK)。设 #{A} Noether 局部，#{f_1,\ldots,f_c\in\mathfrak m} 为 #{A} 正则序列。对 #{c} 归纳；空序列的复形仅有 #{A}。令 #{K'=K(f_1,\ldots,f_{c-1})}、#{f=f_c}。调整外基的符号后，#{K(f)_i=K'_i\oplus K'_{i-1}} 且}
+##{d(u,v)=(d'u+fv,-d'v).}
+\p{由归纳，#{K'} 只在零次有同调 #{A/(f_1,\ldots,f_{c-1})}。设 #{i\geq1} 且 #{(u,v)} 是循环。若 #{i\geq2}，#{d'v=0} 及正次同调消失给 #{v=d'w}。若 #{i=1}，#{d'u+fv=0} 给 #{f[v]=0}；正则性使 #{[v]=0}，仍可写 #{v=d'w}。}
+\p{减去边界 #{d(0,-w)=(-fw,v)}，循环化为 #{(u+fw,0)}。第一分量是 #{K'_i} 中正次循环，故为 #{d't}。于是原循环为 #{d((t,0)+(0,-w))}，证明正次同调全零。零次像理想恰为 #{(f_1,\ldots,f_c)}。}
+\p{[外代数](01AG)的标准外基给 #{K_i} 秩 #{\binom ci}，微分系数均在 #{\mathfrak m} 内，故分解极小。顶次 #{K_c=A\ne0}，由 [Tor 检测投射维数](01MC)得到 #{\operatorname{pd}_AB=c}。}

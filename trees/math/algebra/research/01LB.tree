@@ -1,0 +1,15 @@
+\title{一阶换坐标恰好改变一个 Hochschild 余边界}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Barmeier–Schroll–Wang，§3.3](01LZ)，独立 gauge 计算}
+
+\p{设 #{A} 为域 #{k} 上[含幺结合代数](0123)，#{\mu,\nu} 为[归一化二余循环](01L9)，定义一阶乘法 #{*_\mu,*_\nu}。对[单位保持的换坐标](01L8) #{F=\mathrm{id}+\epsilon f}，有}
+##{F:(A_D,*_\mu)\longrightarrow(A_D,*_\nu)\text{ 为代数同构}
+\quad\Longleftrightarrow\quad \nu=\mu-\delta f.}
+\p{完整证明：在 #{a,b\in A} 上，}
+##{\begin{aligned}
+F(a*_\mu b)&=ab+\epsilon\bigl(\mu(a,b)+f(ab)\bigr),\\
+F(a)*_\nu F(b)&=ab+\epsilon\bigl(\nu(a,b)+f(a)b+af(b)\bigr).
+\end{aligned}}
+\p{相等正好等价于上述公式，因为[微分](01L4)为 #{(\delta f)(a,b)=af(b)-f(ab)+f(a)b}。两边都 #{D} 双线性，故充分性也成立；#{F} 自动可逆，逆为 #{\mathrm{id}-\epsilon f}。符号依赖指定的同构方向，这里方向已固定。}

@@ -1,0 +1,16 @@
+\title{寡轨群测度的基变换公理}
+\date{2026-09-23}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Snowden，定义3.3](0150)}
+
+\p{设 #{G} 为[寡轨群](0151)，#{k} 为[交换含幺环](00CS)。一个 #{k}-值测度 #{\mu} 给每个传递[光滑有限轨道集合](0152)之间的映射 #{f:Y\to X} 指定 #{\mu(f)\in k}，满足同构取值 #{1}、#{\mu(gf)=\mu(g)\mu(f)}，以及下述基变换公理。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+Y'=Y\times_X X' \arrow[r] \arrow[d,"f'"'] & Y \arrow[d,"f"] \\
+X' \arrow[r] & X
+\end{tikzcd}
+}}
+\p{图中 #{X'} 传递，而 #{Y'} 不必传递。若其轨道分解为 #{Y'=\coprod_{i=1}^rY'_i}，且 #{f'_i=f'|_{Y'_i}}，则要求}
+##{\mu(f)=\sum_{i=1}^r\mu(f'_i).}
+\p{这是“纤维大小不因拉回而改变”的代数版本。测度不要求取非负实数，也不要求可列可加，因此不能直接当作概率测度。}

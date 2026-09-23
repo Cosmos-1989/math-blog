@@ -1,0 +1,15 @@
+\title{投射模的提升性质}
+\date{2026-09-23}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Stacks：投射模](https://stacks.math.columbia.edu/tag/00NV)}
+
+\p{左 #{R} [模](0136) #{P} 称为投射模，如果对于每个满的[模同态](0121) #{q:M\to N} 及每个 #{f:P\to N}，存在 #{g:P\to M} 使 #{qg=f}。提升不要求唯一。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+& P \arrow[d,"f"] \arrow[dl,dashed,"g"'] \\
+M \arrow[r,"q"'] & N
+\end{tikzcd}
+}}
+##{q\circ g=f.}
+\p{等价地，#{P} 是某个[自由模](0137)的[直和](0127)因子，即存在模 #{Q} 使 #{P\oplus Q} 自由。这一刻画有[逐步证明](01SD)；它不意味着 #{P} 自身一定自由。另一种刻画是[一阶 Ext 消失判据](01S7)。}

@@ -1,0 +1,11 @@
+\title{投射分解之间的比较映射}
+\date{2026-09-23}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks：投射分解](https://stacks.math.columbia.edu/tag/0643)；以下给出模情形的逐次提升证明}
+
+\p{设 #{R} 是含幺环，#{P_\bullet\xrightarrow{\varepsilon_P}M}、#{Q_\bullet\xrightarrow{\varepsilon_Q}N} 是左模的[投射分解](012D)。每个[模同态](0121) #{u:M\to N} 都能提升为[链映射](012A) #{f:P_\bullet\to Q_\bullet}，满足 #{\varepsilon_Q f_0=u\varepsilon_P}。}
+\p{证明：由 #{Q_0\twoheadrightarrow N} 满及 #{P_0} 的[投射性](012C)，先提升得到 #{f_0}。设已构造到 #{f_{n-1}}。当 #{n=1} 时，#{\varepsilon_Q f_0d^P_1=u\varepsilon_Pd^P_1=0}；当 #{n\ge2} 时，链映射条件给出}
+##{d^Q_{n-1}f_{n-1}d^P_n=f_{n-2}d^P_{n-1}d^P_n=0.}
+\p{因此 #{f_{n-1}d^P_n} 落入 #{Q_{n-1}} 的闭链子模，其中零次闭链取 #{\ker\varepsilon_Q}。由[正合性](0129)，#{d^Q_n} 满射到这个子模；投射的 #{P_n} 允许再提升为 #{f_n}，使 #{d^Q_nf_n=f_{n-1}d^P_n}。归纳即构成整个链映射。}
+\p{这个证明只使用源各项的投射性与目标增广复形的正合性；目标各项不必投射。提升的非唯一性由[链同伦唯一性](01S1)控制。}

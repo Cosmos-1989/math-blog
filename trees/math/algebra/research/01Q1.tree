@@ -1,0 +1,11 @@
+\title{交换环上的一般线性群与特殊线性群}
+\date{2026-09-23}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Weibel，第三章](01QS)，§1；交换环矩阵记号补足}
+
+\p{设 #{R} 是[交换含幺环](00CS)，#{n\geq1}。令 #{M_n(R)} 为 #{n\times n} 矩阵的集合，乘法为 #{(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}}，单位矩阵记 #{1_n}。定义}
+##{\operatorname{GL}_n(R)=\{A:\exists B,\ AB=BA=1_n\},\qquad
+\operatorname{SL}_n(R)=\{A\in\operatorname{GL}_n(R):\det A=1\}.}
+\p{这是[域上一般线性群](00DD)的交换环版本。行列式采用[子式](01D2)中的同一有限公式 #{\det A=\sum_{\sigma\in S_n}\operatorname{sgn}(\sigma)\prod_i a_{i,\sigma(i)}}；交换性保证各项可重排。展开 #{\det(AB)} 后，重复中间指标的项按交换两个相同指标配对消去，互异指标则组成置换，得到 #{\det(AB)=\det A\det B}。}
+\p{按行展开行列式给出 #{A\operatorname{adj}(A)=\operatorname{adj}(A)A=(\det A)1_n}，其中伴随矩阵的第 #{(i,j)} 项是删去第 #{j} 行、第 #{i} 列的子式乘 #{(-1)^{i+j}}；非对角项是具有两行或两列相同的行列式，故为零。因此 #{A} 可逆当且仅当 #{\det A} 是单位，即在 #{R} 中有乘法逆元。单位组成的乘法群记 #{R^\times}，行列式给出到它的[群同态](00BH)。}
