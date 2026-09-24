@@ -1,0 +1,213 @@
+/* Reading theme. Loaded after the upstream Forester and KaTeX styles. */
+:root {
+  color-scheme: light;
+  --ink: #242c32;
+  --muted: #697780;
+  --blue: #0879ab;
+  --blue-dark: #075e86;
+  --line: #e4e9ec;
+  --definition-ink: #a64d08;
+  --definition-paper: #fffcf1;
+  --definition-rule: #f0ce80;
+  --theorem-paper: #f2faff;
+  --theorem-rule: #9ad7ed;
+  --body-font: "Inria Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --heading-font: "Iowan Old Style", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --secondary: var(--muted);
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 2rem; }
+body {
+  margin: 0;
+  padding: 0 40px 72px;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f7fafb 0, #fff 220px);
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.9;
+  hyphens: none;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #d9eef7; color: #153e51; }
+a { color: var(--blue); text-decoration: none; }
+a.link.local, .link.local a, a.slug { text-decoration: none; box-shadow: none; }
+a:hover { color: var(--blue-dark); text-decoration: underline; text-underline-offset: .22em; }
+a.slug:hover, a.bullet:hover, .edit-button:hover, .link:hover { background: transparent; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 100; padding: 8px 20px; background: #fff; }
+.skip-link:focus { top: 8px; }
+.header { max-width: 1220px; margin: 0 auto 52px; border-bottom: 1px solid var(--line); }
+.nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { font-size: 19px; font-weight: 600; letter-spacing: .06em; }
+.logo a { display: inline-flex; gap: 13px; align-items: center; color: var(--ink); }
+.logo a:hover { color: var(--blue); text-decoration: none; }
+.site-mark { font-family: var(--heading-font); color: var(--blue); font-size: 27px; font-style: italic; font-weight: 400; letter-spacing: -.08em; }
+.nav-actions { display: flex; gap: 30px; align-items: center; font-size: 14px; }
+.nav-actions > a { color: var(--muted); }
+.search-trigger {
+  font: inherit; color: var(--muted); background: #fff; border: 1px solid var(--line);
+  padding: 7px 13px; min-height: 38px; cursor: pointer; border-radius: 4px;
+}
+.search-trigger span { margin-left: 20px; color: #9aa5ac; }
+.search-trigger:hover { border-color: #8fc4da; color: var(--blue); }
+.search-trigger:disabled { opacity: .45; cursor: wait; }
+#grid-wrapper { display: grid; grid-template-columns: minmax(0, 860px); max-width: 1220px; margin: 0 auto; justify-content: center; gap: 64px; }
+#grid-wrapper:has(> #toc) { grid-template-columns: minmax(0, 860px) minmax(180px, 252px); }
+#grid-wrapper > article { min-width: 0; max-width: none; width: 100%; margin: 0; grid-column: 1; }
+#main-content:focus { outline: none; }
+.block { padding: 0; border-radius: 0; overflow: visible; }
+.block:hover, .enclosing.macro-scope > .enclosing:hover { background: transparent; }
+section.block > details, section.block > details[open] { margin-bottom: 0; }
+details > summary { cursor: pointer; }
+details > summary > header { display: block; }
+details h1, section .block[data-taxon] details > summary > header > h1 { font-size: 1.05em; display: inline; line-height: 1.75; }
+article > .block > details > summary > header { margin: 0 0 30px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+article > .block > details > summary > header > h1 { display: block; margin: 0; font-family: var(--heading-font); font-size: clamp(29px, 3vw, 38px); font-weight: 600; line-height: 1.5; letter-spacing: .015em; }
+article > .block > details > summary > header > h1 > .taxon { display: block; padding: 0; margin: 0 0 10px; color: var(--blue); font: 600 13px/1.5 var(--body-font); letter-spacing: .13em; }
+.taxon { color: var(--blue); font-weight: 700; }
+.taxon:empty { display: none; }
+.slug { color: #79868e; font: 400 12px/1.6 var(--body-font); letter-spacing: .03em; white-space: nowrap; }
+article > .block > details > summary .slug { vertical-align: middle; margin-left: 9px; }
+.edit-button { font: 400 12px var(--body-font); }
+.metadata { margin-top: 9px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.metadata a { color: inherit; }
+.metadata address { font-style: normal; }
+.metadata li::after { content: " / "; color: #bec7cd; padding: 0 5px; }
+.metadata li:last-child::after { content: ""; padding: 0; }
+.tree-content > :first-child { margin-top: 0; }
+.tree-content > :last-child { margin-bottom: 0; }
+p { margin: 0 0 1.35em; }
+strong { font-weight: 700; }
+.tree-content > strong { display: block; margin: 2em 0 .8em; color: var(--ink); font-size: .86em; letter-spacing: .07em; }
+ul, ol { padding-left: 1.6em; padding-bottom: 0; margin: .8em 0 1.5em; }
+li { margin: .4em 0; padding-left: .15em; }
+li::marker { color: #8b9da7; font-size: .85em; }
+li > p { margin-bottom: .5em; }
+
+/* Outlines are quiet reading lists, not a wall of cards. */
+article > section[data-taxon="Outline"] > details > .tree-content > :is(ul, ol) { padding-left: 1.4em; }
+article > section[data-taxon="Outline"] > details > .tree-content > :is(ul, ol) > li {
+  margin: 0; padding: 14px 0 14px 7px; border-bottom: 1px solid var(--line); line-height: 1.8;
+}
+article > section[data-taxon="Outline"] > details > .tree-content > :is(ul, ol) > li:first-child { border-top: 1px solid var(--line); }
+body[data-page="index"] article > section > details > .tree-content > ol,
+body[data-page="0060"] article > section > details > .tree-content > ol {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; padding: 0; list-style: none; counter-reset: subjects;
+}
+body[data-page="index"] article > section > details > .tree-content > ol > li,
+body[data-page="0060"] article > section > details > .tree-content > ol > li { border-bottom: 1px solid var(--line); border-top: 0; padding: 13px 0; margin: 0; }
+body[data-page="index"] article > section > details > .tree-content > ol > li { display: flex; gap: 18px; counter-increment: subjects; }
+body[data-page="index"] article > section > details > .tree-content > ol > li::before { content: counter(subjects, decimal-leading-zero); color: #8b9da7; font-size: 12px; padding-top: 5px; }
+body[data-page="index"] article > section > details > .tree-content > ol a,
+body[data-page="0060"] article > section > details > .tree-content > ol a { color: var(--ink); font-weight: 500; }
+body[data-page="index"] article > section > details > .tree-content > ol a:hover,
+body[data-page="0060"] article > section > details > .tree-content > ol a:hover { color: var(--blue); }
+
+/* Color encodes the kind of mathematical statement; labels remain explicit. */
+article .block { --statement-paper: transparent; --statement-rule: var(--line); --statement-ink: var(--ink); }
+article .block:is([data-taxon="Definition"], [data-taxon="Convention"], [data-taxon="Construction"]) { --statement-paper: var(--definition-paper); --statement-rule: var(--definition-rule); --statement-ink: var(--definition-ink); }
+article .block:is([data-taxon="Theorem"], [data-taxon="Proposition"], [data-taxon="Lemma"], [data-taxon="Corollary"]) { --statement-paper: var(--theorem-paper); --statement-rule: var(--theorem-rule); --statement-ink: var(--blue); }
+article > .block:is([data-taxon="Definition"], [data-taxon="Convention"], [data-taxon="Construction"], [data-taxon="Theorem"], [data-taxon="Proposition"], [data-taxon="Lemma"], [data-taxon="Corollary"]) > details > .tree-content {
+  padding: 26px 30px; background: var(--statement-paper); border-left: 3px solid var(--statement-rule);
+}
+article > .block > details > summary > header > h1 > .taxon { color: var(--statement-ink, var(--blue)); }
+article > .block .tree-content .block { margin: 30px 0; border-left: 3px solid var(--statement-rule); padding: 22px 26px; background: var(--statement-paper); }
+article > .block .tree-content .block > details > summary { margin-bottom: 14px; }
+article > .block .tree-content .block > details:not([open]) > summary { margin-bottom: 0; }
+article > .block .tree-content .block > details > summary .taxon { color: var(--statement-ink); }
+article > .block .tree-content .block > details > summary .metadata { font-size: 11px; margin-top: 4px; }
+article > .block .tree-content .block[data-taxon="Proof"] { border-left: 1px solid var(--line); padding-top: 10px; padding-bottom: 10px; }
+article > .block .tree-content .block[data-taxon="Proof"] > details > summary .taxon { color: var(--muted); }
+article > .block .tree-content .block[data-taxon="Example"] { background: #f7faf8; --statement-rule: #bfd1c7; }
+details[id] { scroll-margin-top: 24px; }
+.block.highlighted { border: 0; outline: 2px solid #8fc4da; outline-offset: 5px; }
+
+/* Keep KaTeX's absolutely positioned MathML inside the local formula scroller. */
+.katex { font-size: 1.08em !important; position: relative; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 10px 2px; margin: 1.4em 0; max-width: 100%; }
+.katex-display > .katex { min-width: max-content; }
+math { font-size: 1.08em; }
+mrow:hover { background: transparent; }
+figure { margin: 28px 0; padding: 12px 0; overflow-x: auto; }
+figure img { max-width: 100%; height: auto; object-fit: contain; }
+figcaption { color: var(--muted); font-size: .82em; font-style: normal; margin-top: 10px; }
+pre { background: #f5f7f8; border: 1px solid var(--line); border-radius: 3px; padding: 18px; font-size: .82em; line-height: 1.65; }
+code { background: #f1f5f7; border-radius: 2px; padding: .1em .3em; }
+pre code { padding: 0; background: none; }
+blockquote { margin: 1.5em 0; padding: 4px 0 4px 22px; border-left: 2px solid #c7d8df; color: #52616b; font-style: normal; }
+table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .9em; }
+th, td { padding: 10px 16px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; background: #f7f9fa; }
+hr { height: 1px; background: var(--line); margin: 28px 0; }
+
+#grid-wrapper > nav#toc { display: block; grid-column: 2; margin: 0; min-width: 0; align-self: start; position: sticky; top: 30px; max-height: calc(100vh - 60px); overflow-y: auto; font-size: 13px; line-height: 1.7; }
+.toc-panel > summary { color: var(--muted); font-size: 12px; letter-spacing: .1em; padding: 0 0 15px; border-bottom: 1px solid var(--line); }
+.toc-panel > summary::after { content: "+"; float: right; }
+.toc-panel[open] > summary::after { content: "−"; }
+nav#toc ul { padding: 0; margin: 14px 0 0; }
+nav#toc li { margin: 10px 0; padding: 0; }
+nav#toc li > ul { padding-left: 12px; border-left: 1px solid var(--line); margin-left: 4px; }
+nav#toc a { color: var(--muted); }
+nav#toc a:hover { color: var(--blue); }
+nav#toc .taxon { font-weight: 400; color: inherit; }
+nav#toc a.bullet { font-size: 8px; margin: 0 6px 0 0; padding: 0; vertical-align: 2px; color: #b0c5cf; }
+
+article > footer { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+footer > section { margin-bottom: 30px; }
+footer .block { background: transparent; }
+footer > section > details > summary { margin-bottom: 12px; }
+footer > section > details > summary h1 { font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--muted); }
+footer .tree-content > section { padding: 10px 0; border-bottom: 1px solid #f0f3f5; }
+footer .tree-content > section > details > summary h1 { font-size: 14px; font-weight: 500; line-height: 1.8; }
+footer .taxon { font-size: 11px; color: var(--muted); font-weight: 400; }
+footer .metadata { margin-top: 3px; font-size: 11px; }
+footer .slug { font-size: 11px; }
+ninja-keys { --ninja-font-family: var(--body-font); --ninja-accent-color: var(--blue); --ninja-z-index: 200; }
+ninja-keys::part(ninja-action) { white-space: normal; }
+.search-help { display: flex; gap: 22px; padding: 12px 20px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+
+@keyframes page-arrive { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) { #grid-wrapper { animation: page-arrive .3s ease-out both; } }
+@media (max-width: 1050px) {
+  body { padding: 0 30px 48px; }
+  .header { margin-bottom: 36px; }
+  #grid-wrapper, #grid-wrapper:has(> #toc) { grid-template-columns: minmax(0, 860px); gap: 26px; }
+  #grid-wrapper > nav#toc { grid-column: 1; grid-row: 1; position: static; max-height: none; }
+  #grid-wrapper:has(> #toc) > article { grid-row: 2; }
+  .toc-panel > ul { max-height: 40vh; overflow-y: auto; }
+}
+@media (max-width: 600px) {
+  body { padding: 0 20px 36px; font-size: 16px; line-height: 1.85; }
+  .nav { min-height: 72px; gap: 12px; }
+  .logo { font-size: 16px; letter-spacing: .02em; }
+  .logo a { gap: 8px; }
+  .site-mark { font-size: 23px; }
+  .nav-actions { gap: 16px; font-size: 12px; }
+  .search-trigger { padding: 5px 9px; }
+  .search-trigger span { display: none; }
+  .header { margin-bottom: 28px; }
+  article > .block > details > summary > header { margin-bottom: 24px; padding-bottom: 22px; }
+  article > .block > details > summary > header > h1 { font-size: 28px; }
+  article > .block > details > summary .slug { margin-left: 0; }
+  article > .block > details > .tree-content { padding-inline: 0; }
+  article > .block:is([data-taxon="Definition"], [data-taxon="Convention"], [data-taxon="Construction"], [data-taxon="Theorem"], [data-taxon="Proposition"], [data-taxon="Lemma"], [data-taxon="Corollary"]) > details > .tree-content { padding: 20px 17px; }
+  article > .block .tree-content .block { padding: 18px 15px; margin: 24px 0; }
+  body[data-page="index"] article > section > details > .tree-content > ol,
+  body[data-page="0060"] article > section > details > .tree-content > ol { grid-template-columns: minmax(0, 1fr); }
+  article > footer { margin-top: 44px; }
+}
+@media print {
+  body { background: #fff; padding: 0; font-size: 11pt; color: #000; }
+  .header, .skip-link, #grid-wrapper > nav#toc, ninja-keys { display: none; }
+  #grid-wrapper, #grid-wrapper:has(> #toc) { display: block; max-width: none; }
+  article > footer { break-before: auto; }
+  a { color: inherit; }
+  .tree-content .block { break-inside: avoid; }
+  .katex-display { overflow: visible; }
+}

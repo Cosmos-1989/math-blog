@@ -50,15 +50,15 @@ papers.push({
 
 for (const [id, file, reason] of [
   ["013Z", "trees/math/algebra/research/013Z.tree", "按数学问题组织十二条研究路线；同一报告与知识节点只出现一次"],
-  ["0062", "trees/0062.tree", "代数主页加入新研究路线与共用基础，保留已有入口"],
+  ["0062", "trees/0062.tree", "代数主页直接列出十二个报告专题，范畴逻辑等另列；基础工具留在专题内部"],
   ["001C", "trees/math/algebra/001C.tree", "代数基础导航连接模、同调与概形，不改动原有群论节点"],
 ]) {
   const source = fs.readFileSync(path.join(root, file), "utf8");
   const title = source.match(/\\title\{([^}]+)\}/)[1];
-  audit.reviews[id] = { action: id === "013Z" ? "added" : "revise", reason, scope: "algebra-integration", title };
+  audit.reviews[id] = { ...audit.reviews[id], action: id === "013Z" ? "added" : "revise", reason, scope: "algebra-integration", title };
   if (id === "013Z") notes.set(id, { id, path: file, title, taxon: "Outline" });
 }
-audit.date = "2026-09-23";
+audit.date = [audit.date ?? "", "2026-09-23"].sort().at(-1);
 audit.scope = "Whole forest, with ICM2026 Algebra report integrations and their separately recorded coverage limits";
 const manifest = {
   checked_on: "2026-09-23",

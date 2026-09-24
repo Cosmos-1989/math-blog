@@ -118,6 +118,19 @@ Prefer relative, explicit, and flat hierarchy.
 
 Avoid deep nesting unless the nesting itself is mathematically meaningful.
 
+## Subject Landing Pages
+
+The subject pages `0061` through `0074` are topic selectors, not prerequisite courses.
+
+- List the integrated ICM2026 report topics directly on the corresponding subject page. Logic and Algebra must expose every report in their source manifests without requiring a visit to an intermediate overview.
+- Use ordinary mathematical labels such as "研究专题" on the public site, not "ICM 学科结构". Keep source/conference accounting in the research manifests.
+- Put independent directions such as categorical logic and quantum logic in a separate "其他专题" group.
+- Link topics to their existing outlines. Definitions and foundation-tool outlines belong inside those topics, not at the start of a subject landing page.
+- Reuse a topic across relevant subjects. For subjects not yet fully integrated, list only available relevant topics; do not imply complete conference coverage or add dead report placeholders.
+- Preserve foundation pages and stable IDs. Removing a foundation link from a landing page must not make the underlying notes unreachable.
+
+Run `node scripts/check-subject-navigation.mjs` after changing subject navigation, in addition to the whole-site checks.
+
 ## Reorganization Workflow
 
 When refactoring existing notes:

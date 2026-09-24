@@ -7,11 +7,13 @@
   <xsl:key name="tree-with-uri" match="/f:tree/f:mainmatter//f:tree" use="f:frontmatter/f:uri/text()" />
 
   <xsl:template match="/">
-    <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" data-base-url="{/f:tree/@base-url}">
       <head>
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}reading.css?v=20260924" />
         <script type="text/javascript">
           <xsl:if test="/f:tree/f:frontmatter/f:source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -20,33 +22,40 @@
           </xsl:if>
         </script>
         <script type="module" src="{/f:tree/@base-url}forester.js"></script>
+        <script type="module" src="{/f:tree/@base-url}reading.js?v=20260924"></script>
         <title>
           <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
         </title>
       </head>
-      <body>
-        <ninja-keys placeholder="输入笔记标题或编号"></ninja-keys>
-        <xsl:if test="not(/f:tree[@root = 'true'])">
+      <body data-page="{/f:tree/f:frontmatter/f:display-uri}">
+        <a class="skip-link" href="#main-content">跳至正文</a>
+        <ninja-keys placeholder="输入笔记标题或编号">
+          <div slot="footer" class="search-help">↑ ↓ 选择 <span>Enter 打开</span><span>Esc 关闭</span></div>
+        </ninja-keys>
           <header class="header">
-            <nav class="nav">
+            <nav class="nav" aria-label="主导航">
               <div class="logo">
-                <a href="{/f:tree/@base-url}index.html" title="首页">
-                  <xsl:text>« 首页</xsl:text>
+                <a href="{/f:tree/@base-url}index/" title="数学博客首页">
+                  <span class="site-mark" aria-hidden="true">M</span>
+                  <xsl:text>数学博客</xsl:text>
                 </a>
+              </div>
+              <div class="nav-actions">
+                <a href="{/f:tree/@base-url}0060/">学科目录</a>
+                <button class="search-trigger" type="button" disabled="disabled" aria-label="搜索笔记">搜索<span aria-hidden="true"> /</span></button>
               </div>
             </nav>
           </header>
-        </xsl:if>
         <div id="grid-wrapper">
-          <article>
+          <article id="main-content" tabindex="-1">
             <xsl:apply-templates select="f:tree" />
           </article>
           <xsl:if test="f:tree/f:mainmatter/f:tree[not(@toc='false')] and not(/f:tree/f:frontmatter/f:meta[@name = 'toc']/.='false')">
-            <nav id="toc">
-              <div class="block">
-                <h1>目录</h1>
+            <nav id="toc" aria-label="本页目录">
+              <details class="toc-panel" open="open">
+                <summary>本页目录</summary>
                 <xsl:apply-templates select="f:tree/f:mainmatter" mode="toc" />
-              </div>
+              </details>
             </nav>
           </xsl:if>
         </div>
@@ -160,7 +169,7 @@
           </xsl:choose>
           <xsl:text>■</xsl:text>
         </a>
-        <span class="link local" data-target="#{generate-id(..)}">
+        <a class="toc-anchor" href="#{generate-id(..)}">
           <span class="taxon">
             <xsl:apply-templates select=".." mode="tree-taxon-with-number">
               <xsl:with-param name="suffix">.&#160;</xsl:with-param>
@@ -168,7 +177,7 @@
           </span>
 
           <xsl:apply-templates select="f:title" />
-        </span>
+        </a>
       </xsl:for-each>
       <xsl:apply-templates select="f:mainmatter" mode="toc" />
     </li>
@@ -187,7 +196,13 @@
   </xsl:template>
 
   <xsl:template match="f:mainmatter">
-     <xsl:apply-templates />
+    <div class="tree-content"><xsl:apply-templates /></div>
+  </xsl:template>
+
+  <xsl:template match="f:date" mode="date-inner">
+    <xsl:value-of select="f:year" /><xsl:text>年</xsl:text>
+    <xsl:if test="f:month"><xsl:value-of select="f:month" /><xsl:text>月</xsl:text></xsl:if>
+    <xsl:if test="f:day"><xsl:value-of select="f:day" /><xsl:text>日</xsl:text></xsl:if>
   </xsl:template>
 
   <xsl:template match="f:display-uri[../f:route]">
@@ -262,7 +277,12 @@
           </xsl:apply-templates>
         </span>
 
-        <xsl:apply-templates select="f:title" />
+        <xsl:choose>
+          <xsl:when test="ancestor::f:backmatter and f:route">
+            <a class="heading-link" href="{f:route}"><xsl:apply-templates select="f:title" /></a>
+          </xsl:when>
+          <xsl:otherwise><xsl:apply-templates select="f:title" /></xsl:otherwise>
+        </xsl:choose>
         <xsl:text>&#032;</xsl:text>
         <xsl:apply-templates select="f:display-uri" />
         <xsl:text>&#032;</xsl:text>
@@ -388,7 +408,7 @@
           <xsl:when test="f:frontmatter/f:meta[@name='lang']">
             <xsl:value-of select="f:frontmatter/f:meta[@name='lang']" />
           </xsl:when>
-          <xsl:otherwise>en</xsl:otherwise>
+          <xsl:otherwise>zh-CN</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
 
