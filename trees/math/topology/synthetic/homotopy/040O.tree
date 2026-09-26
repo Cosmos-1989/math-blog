@@ -1,0 +1,17 @@
+\title{映射路径分解的终点评价是纤维化}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 5 章；[Hatcher](0213)}
+
+\p{设 #{f:X\to Y}，令 #{E_f} 为[映射路径空间](040M)、#{q(x,p)=p(1)}。则 #{q} 是[Hurewicz 纤维化](040H)。取任意参数空间 #{T}，其中 #{a\in T}、#{s,t\in I=[0,1]}。}
+
+\p{为了证明纤维化，给定初值 #{u(a)=(x_a,p_a)} 和底同伦 #{H(a,s)}，其中 #{H(a,0)=p_a(1)}。令 #{\widetilde H(a,s)=(x_a,p_{a,s})}，其中}
+
+##{p_{a,s}(t)=
+\begin{cases}
+p_a((1+s)t),&(1+s)t\le 1,\\
+H(a,(1+s)t-1),&(1+s)t\ge 1.
+\end{cases}}
+
+\p{两条公式在交界处相等，因而连续；#{s=0} 时恢复 #{p_a}；始点始终是 #{f(x_a)}，终点为 #{H(a,s)}。由[紧开指数律](0A9E)得到 #{\widetilde H} 连续，故为提升。}

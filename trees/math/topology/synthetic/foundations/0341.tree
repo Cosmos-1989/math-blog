@@ -1,0 +1,41 @@
+\title{普通协变 Yoneda 引理}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 4 章}
+
+\p{固定局部小范畴 #{C}、对象 #{c\in C} 和集合值函子 #{F}。#{\operatorname{Nat}} 表示[自然变换](00I2)，源函子为[协变同态函子](0319)。在需要时固定容纳这些数据的宇宙；本引理直接把这里的自然变换全体识别为集合 #{F(c)}。}
+
+\p{设 #{C} 为局部小范畴，#{F:C\to\mathbf{Set}}。评价映射}
+
+##{\operatorname{ev}_{\mathrm{id}_c}:\operatorname{Nat}(\operatorname{Hom}_C(c,-),F)\longrightarrow F(c),
+\quad\alpha\longmapsto\alpha_c(\mathrm{id}_c)}
+
+\p{为双射，且对 #{c,F} 自然。}
+
+\p{\strong{证明。}给定 #{u\in F(c)}，对每个 #{x} 定义}
+
+##{\alpha^u_x:\operatorname{Hom}_C(c,x)\to F(x),
+\qquad \alpha^u_x(f)=F(f)(u).}
+
+\p{若 #{g:x\to y}，则}
+
+##{F(g)\alpha^u_x(f)=F(g)F(f)(u)=F(gf)(u)=\alpha^u_y(gf),}
+
+\p{故 #{\alpha^u} 自然。其在恒等态射上的值为 #{F(\mathrm{id}_c)(u)=u}。}
+
+\p{反之，给定自然变换 #{\alpha} 和 #{f:c\to x}，把自然性用在 #{f} 上：}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Hom}(c,c)\arrow[r,"\alpha_c"]\arrow[d,"f\circ-"']&F(c)\arrow[d,"F(f)"]\\
+\operatorname{Hom}(c,x)\arrow[r,"\alpha_x"']&F(x).
+\end{tikzcd}
+}}
+
+\p{将 #{\mathrm{id}_c} 代入，得到 #{\alpha_x(f)=F(f)(\alpha_c(\mathrm{id}_c))}。因此 #{\alpha=\alpha^{\alpha_c(\mathrm{id}_c)}}，两个构造互逆。对 #{F} 的自然性由自然变换的复合直接验证；对 #{c} 的自然性由前复合与 #{F} 的函子律验证。}
+
+\p{恒等态射与自然性决定了双射及其逆。相应的[高阶 Yoneda 等价](063B)使用[箭头归纳](0635)与可缩提升，保留自然变换类型中的全部高阶路径。}
+
+\p{具体地，若 #{a:c\to d}，预复合 #{\operatorname{Hom}_C(d,-)\to\operatorname{Hom}_C(c,-)} 把 #{\alpha} 送成的变换在 #{\mathrm{id}_d} 处取值为 #{F(a)(\alpha_c(\mathrm{id}_c))}；若 #{\beta:F\Rightarrow G}，对应值为 #{\beta_c(\alpha_c(\mathrm{id}_c))}。图的交换等式是 #{F(f)\circ\alpha_c=\alpha_x\circ(f\circ -)}。}

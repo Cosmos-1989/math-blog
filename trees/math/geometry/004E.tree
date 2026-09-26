@@ -3,9 +3,9 @@
 \taxon{Principle}
 \author{author}
 
-\p{几何变换有两种常见视角。被动观点是固定同一个点 #{p}，改用不同坐标 #{x} 和 #{y} 表示它；主动观点是在固定坐标 #{x} 中移动点，并考察张量表达式的变分。}
+\p{设 #{M} 为[光滑流形](0043)，#{p\in M}。被动坐标变换固定点 #{p}，改用不同坐标 #{x} 和 #{y} 表示它；主动变分在固定坐标 #{x} 中移动点，并考察张量表达式的变化。}
 
-\p{设 #{M} 为[光滑流形](0043)。以[一形式](00NK) #{\omega=\omega_i(x)dx^i} 为例。主动变分把点移动为}
+\p{以[一形式](00NK) #{\omega=\omega_i(x)dx^i} 为例。主动变分把点移动为}
 
 ##{x\mapsto x+\varepsilon\xi(x)=x+\delta x,}
 
@@ -13,7 +13,7 @@
 
 ##{\omega_i(x+\varepsilon\xi(x))\,d(x^i+\varepsilon\xi^i(x)).}
 
-\p{一阶 Taylor 展开给出}
+\p{对 #{\varepsilon\mapsto\omega_i(x+\varepsilon\xi(x))} 使用[微积分基本定理](0A3C)两次，二阶导数在小闭区间上有界，故一阶展开的余项为 #{O(\varepsilon^2)}，这里使用[大 O 记号](0A30)。于是}
 
 ##{\omega_i(x+\varepsilon\xi(x))\,d(x^i+\varepsilon\xi^i(x))
 =\left(\omega_i+\varepsilon\frac{\partial\omega_i}{\partial x^k}\xi^k\right)

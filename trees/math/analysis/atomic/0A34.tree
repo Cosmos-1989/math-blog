@@ -1,0 +1,10 @@
+\title{全微分的链式法则}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{U\subseteq\mathbb R^m}、#{V\subseteq\mathbb R^n} 为开集，#{f:U\to V} 在 #{a} [可微](0A33)，#{g:V\to\mathbb R^r} 在 #{b=f(a)} 可微。则}
+##{D(g\circ f)_a=Dg_b\circ Df_a.}
+\p{\strong{证明。}令 #{A=Df_a}、#{B=Dg_b}，写 #{f(a+h)=b+Ah+r(h)}、#{g(b+k)=g(b)+Bk+s(k)}，其中 #{r(h)=o(\|h\|)}、#{s(k)=o(\|k\|)}，并令 #{s(0)=0}。有界性给出 #{k=Ah+r(h)=O(\|h\|)}，因此 #{s(k)=o(\|h\|)}。代入得到}
+##{g(f(a+h))=g(b)+BAh+Br(h)+s(Ah+r(h)).}
+\p{末两项都是 #{o(\|h\|)}，故复合可微且微分为 #{BA}。小量记号采用[极限定义](0A30)。}

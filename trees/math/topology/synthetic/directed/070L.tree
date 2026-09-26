@@ -1,0 +1,24 @@
+\title{有向粘合的端点与协变传输}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 20 章；[引用](0211)；[引用](021G)}
+
+\p{设 #{f:A\to B} 为小空间函数，#{\mathsf{Gl}_f} 为[粘合族](070I)，并假设[空间宇宙封闭性](070J)。#{\mathsf{refl}} 是自反路径；证明用同一性类型的路径归纳：允许终点和路径一起变化，归约到自反路径。 所用基础为[路径归纳](050G)。}
+
+\p{有等价 #{\mathsf{Gl}_f(0)\simeq A}、#{\mathsf{Gl}_f(1)\simeq B}，沿该族的协变传输对应 #{f}。}
+
+\p{\strong{证明。}在 #{i=0} 时，命题 #{[0=0]} 等价于单位类型，故}
+
+##{\mathsf{Gl}_f(0)
+\simeq\sum_{b:B}{\mathsf{fib}}_f(b)
+=\sum_{b:B}\sum_{a:A}(f(a)=b)
+\simeq A.}
+
+\p{最后一个等价将 #{(b,a,p)} 送到 #{a}，逆为 #{a\mapsto(f(a),a,{\mathsf{refl}})}，逆同伦由路径归纳给出。在 #{i=1} 时，#{[1=0]} 为空，因此从它到任意类型的函数类型可缩，得到 #{\mathsf{Gl}_f(1)\simeq B}。}
+
+\p{对于 #{a:A}，沿全部 #{i} 定义元素}
+
+##{\bigl(f(a),\lambda\phi.(a,{\mathsf{refl}})\bigr):\mathsf{Gl}_f(i).}
+
+\p{它在初始端对应 #{a}，在终端对应 #{f(a)}。提升唯一性将其终点与协变传输识别，故传输为 #{f}。}

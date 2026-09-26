@@ -4,6 +4,6 @@
 \author{author}
 \meta{source}{[Rietsch，Theorem 2.16；独立展开有限变量步骤](01C3)}
 
-\p{证明[固定多项式极限定理](01OW)。假设 #{u^{[N]}} 是同一无限全正矩阵的标准截断，参数为正，且 #{F} 涉及的 #{q_j} 满足 #{\alpha_{j+1}<\alpha_j}。由[根极限](01DC)，对每个 #{j\le s} 可选 #{\rho_j} 严格介于 #{\alpha_{j+1}/\alpha_j} 与一之间；充分大的 #{N} 下 #{(q_j^{[N]})^{1/(N-1)}<\rho_j}，所以 #{0<q_j^{[N]}<\rho_j^{N-1}\to0}。有限多个 #{j} 可取共同起点。}
-\p{由[除子极限](01DK)，#{x_i^{[N]}\to\alpha_i^{-1}}。写 #{F=\sum_{\mu,\nu}c_{\mu,\nu}X^\mu Q^\nu}，求和只有有限项，#{\mu,\nu} 是非负整数指数向量。若 #{\nu\ne0}，则对应项趋零，因为至少有一个趋零量子因子，而其余因子均有界；若 #{\nu=0}，则该项趋向 #{c_{\mu,0}\prod_i\alpha_i^{-\mu_i}}。}
-\p{有限乘积的极限可用恒等式 #{\prod_{i=1}^m a_i-\prod_{i=1}^m b_i=\sum_{k=1}^m(a_k-b_k)(\prod_{i<k}a_i)(\prod_{i>k}b_i)} 逐项估计，重复因子覆盖任意非负整数次幂。因此有限求和后得到恰好 #{F(\alpha^{-1},0)}。反向输入的证明相同，使用 #{-x_{N+1-i}^{[N]}\to\beta_i^{-1}} 和 #{(q_{N-j}^{[N]})^{1/(N-1)}\to\beta_{j+1}/\beta_j}。没有在增长区间上互换无穷求和与极限。}
+\p{设 #{u^{[N]}} 是同一无限全正 [Toeplitz 矩阵](01D4)的标准截断，其 [Schoenberg 参数](01D5) #{\alpha_i,\beta_i} 均为正。固定 #{F\in\mathbb R[X_1,\ldots,X_r,Q_1,\ldots,Q_s]}，其中 #{r,s\ge 1}；取 #{N\ge\max\{r,s+1\}}，并设 #{\alpha_{j+1}<\alpha_j} 对 #{1\le j\le s} 成立。为证明[固定多项式极限](01OW)，由[根极限](01DC)，对每个 #{j\le s} 可选 #{\rho_j} 严格介于 #{\alpha_{j+1}/\alpha_j} 与一之间；充分大的 #{N} 下 #{(q_j^{[N]})^{1/(N-1)}<\rho_j}，所以 #{0<q_j^{[N]}<\rho_j^{N-1}\to 0}。有限多个 #{j} 可取共同起点。这里若 #{0<\rho<1}，写 #{\rho=(1+\delta)^{-1}}，#{\delta>0}，由归纳得 #{(1+\delta)^m\ge 1+m\delta}，所以 #{\rho^m\le(1+m\delta)^{-1}\to 0}。}
+\p{由[除子极限](01DK)，#{x_i^{[N]}\to\alpha_i^{-1}}。写 #{F=\sum_{\mu,\nu}c_{\mu,\nu}X^\mu Q^\nu}，求和只有有限项，#{\mu,\nu} 是非负整数指数向量。若 #{\nu\ne 0}，则对应项趋零，因为至少有一个趋零量子因子，而其余因子均有界；若 #{\nu=0}，则该项趋向 #{c_{\mu,0}\prod_i\alpha_i^{-\mu_i}}。}
+\p{有限乘积的极限可用恒等式 #{\prod_{i=1}^m a_i-\prod_{i=1}^m b_i=\sum_{k=1}^m(a_k-b_k)(\prod_{i<k}a_i)(\prod_{i>k}b_i)} 逐项估计，重复因子覆盖任意非负整数次幂。因此有限求和后得到恰好 #{F(\alpha^{-1},0)}。若 #{\beta_{j+1}<\beta_j} 对 #{1\le j\le s} 成立，反向输入的证明相同，使用 #{-x_{N+1-i}^{[N]}\to\beta_i^{-1}} 和 #{(q_{N-j}^{[N]})^{1/(N-1)}\to\beta_{j+1}/\beta_j}。}

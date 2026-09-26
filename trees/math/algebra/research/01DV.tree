@@ -4,9 +4,9 @@
 \author{author}
 \meta{source}{[Rietsch，Theorem 3.18 的平均值证明路线](01C3)}
 
-\p{在[热带极限定理](01DU)的假设下，先对 #{M^\infty} 的三角截断计算固定坐标 #{i} 的[权重](01DO)：}
+\p{设 #{M^\infty\in\operatorname{IM}_\infty} 是无限 [min-ideal 填充](01DN)，行、列上确界 #{A_i=\sup_jM^\infty_{ij}}、#{B_j=\sup_iM^\infty_{ij}} 均有限。设 #{M^{(n+1)}\in\operatorname{IM}_{n+1}} 且 #{\varepsilon_n=\max_{i+j\le n+1}|M^{(n+1)}_{ij}-M^\infty_{ij}|\to 0}。记两种三角阵列的[权重](01DO)分别为 #{\lambda^{(n+1)}} 与 #{\lambda^{[n+1]}}。对固定 #{i}，有}
 ##{\frac{\lambda_i^{[n+1]}}n=
-\frac1n\sum_{j=1}^{n+1-i}M^\infty_{ij}
--\frac1n\sum_{h=1}^{i-1}M^\infty_{h,n+2-i}.}
-\p{第一项的行序列收敛到 #{A_i}，其算术平均亦然；第二项只有固定数量、分别趋于有限 #{A_h} 的项，除以 #{n} 后趋零。}
-\p{该权重共有 #{n} 个带符号条目，所以替换成 #{M^{(n+1)}} 后，#{|\lambda_i^{(n+1)}-\lambda_i^{[n+1]}|/n\le\varepsilon_n}。交换行列并反转权重坐标给出 #{B_j} 公式。本页在明确的一致误差假设下给出完整估计，不涉及正函数提升。}
+\frac 1n\sum_{j=1}^{n+1-i}M^\infty_{ij}
+-\frac 1n\sum_{h=1}^{i-1}M^\infty_{h,n+2-i}.}
+\p{\strong{证明。}min-ideal 关系使每行弱递增，故第一项的行序列收敛到有限上确界 #{A_i}。其算术平均也收敛到 #{A_i}：给定 #{\epsilon>0}，取足够远的尾部使每项与 #{A_i} 的差小于 #{\epsilon}，有限个首项的误差除以 #{n} 后趋零，而尾部的平均误差至多为 #{\epsilon}。第二项只有固定数量、分别趋于有限 #{A_h} 的项，除以 #{n} 后趋零。}
+\p{该权重共有 #{n} 个带符号条目，所以替换成 #{M^{(n+1)}} 后，#{|\lambda_i^{(n+1)}-\lambda_i^{[n+1]}|/n\le\varepsilon_n}。于是 #{\lambda_i^{(n+1)}/n\to A_i}。交换行列并反转权重坐标，同理得到 #{-\lambda_{n+2-j}^{(n+1)}/n\to B_j}，即[热带极限定理](01DU)的两个极限。}

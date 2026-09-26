@@ -1,0 +1,25 @@
+\title{先解码后编码恢复整数编码}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[圆周路径的编码](090C)；[圆周解码函数的相容性计算](090E)；[整数编码族沿环路的传输](090A)；[圆周编码族的纤维都是集合](090B)；[命题值族上的圆周归纳](0902)；[命题族的封闭性](0587)。}
+
+\p{设 #{\mathsf{Code}:S^1\to\mathcal U} 为整数编码族，#{\mathsf{encode}} 和 #{\mathsf{decode}} 为相应编码与解码函数。}
+
+\p{对 #{x:S^1} 和 #{n:\mathsf{Code}(x)}，有}
+
+##{\mathsf{encode}_x(\mathsf{decode}_x(n))=n.}
+
+\p{\strong{证明。}在基点处，由整数覆盖族的传输计算，}
+
+##{\mathsf{encode}_b(\mathsf{decode}_b(n))
+ =\operatorname{tr}^{\mathsf{Code}}_{\ell^n}(0)=n.}
+
+\p{令}
+
+##{P(x)=\prod_{n:\mathsf{Code}(x)}
+ \bigl(\mathsf{encode}_x(\mathsf{decode}_x(n))=n\bigr).}
+
+\p{因为 #{\mathsf{Code}(x)} 是集合，括号中的同一性类型为命题；命题的依赖积仍是命题。因此 #{P} 是命题值族。刚证明的基点情形通过圆周归纳延拓到全部 #{x}。}

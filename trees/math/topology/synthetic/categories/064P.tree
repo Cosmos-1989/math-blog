@@ -1,0 +1,25 @@
+\title{右伴随保持高阶极限}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 19 章；[RiehlContext](0212)，[RiehlVerity](021F)}
+
+\p{设 #{L:C\to D} 与 #{R:D\to C} 伴随，且所用小图表及函数类型存在；保持极限指把普遍锥送到普遍锥。}
+
+\p{所需前置：[伴随的自然映射空间等价](064I)、[极限是锥族的表示](064C)、[高阶图表的锥类型](064B)。}
+
+\p{若 #{L\dashv R}，则 #{R} 保持所有相关范畴中存在的极限。}
+
+\p{\strong{证明。}
+设图表 #{D_0:K\to D} 有极限 #{M}。对 #{c:C}，伴随等价与极限性质给出}
+
+##{\operatorname{Hom}_C(c,RM)
+\simeq\operatorname{Hom}_D(Lc,M)
+\simeq\mathsf{Cone}_{D_0}(Lc).}
+
+\p{逐分量应用伴随等价，并使用它在两个变量中的自然性，得到}
+
+##{\mathsf{Cone}_{D_0}(Lc)
+\simeq\mathsf{Cone}_{R D_0}(c).}
+
+\p{这里锥的每个相容单形也被自然等价传送，所以该比较保留全部高阶锥数据。于是 #{RM} 表示右边的锥族，因而是 #{R D_0} 的极限。}

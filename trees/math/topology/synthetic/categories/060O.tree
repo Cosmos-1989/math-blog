@@ -1,0 +1,25 @@
+\title{有向二维单纯形的内角与长边}
+\date{2026-09-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 15 章；[RiehlShulman](021D)，[RiehlICM](0211)}
+
+\p{设 #{x,y,z:C} 是有向类型中的点，#{f:x\to y}、#{g:y\to z}、#{h:x\to z} 是箭头。下图是 #{\Delta^2\to C} 的边界与一个二维单形 #{\sigma}。}
+
+\p{所需前置：[有向区间中的单纯形坐标](060N)、[有向同态类型](060D)。}
+
+\p{\strong{例。}
+#{\Delta^2} 的顶点为 #{(0,0),(1,0),(1,1)}。内角 #{\Lambda_1^2} 是边 #{t_2=0} 与边 #{t_1=1} 的并。剩余边 #{t_1=t_2} 是长边 #{h}。}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzpicture}[scale=1.8]
+\draw[->] (0,0)--(1,0) node[midway,below]{$f$};
+\draw[->] (1,0)--(1,1) node[midway,right]{$g$};
+\draw[->] (0,0)--(1,1) node[midway,above left]{$h$};
+\node[below left] at (0,0){$x$};\node[below right] at (1,0){$y$};\node[above] at (1,1){$z$};
+\node at (.72,.28){$\sigma$};
+\end{tikzpicture}
+}}
+
+\p{三角形 #{\sigma} 给出以 #{f,g} 为短边、#{h} 为长边的二维数据。在满足[内部 Segal 条件](0611)时，这些数据把 #{h} 识别为先 #{f} 后 #{g} 的一个复合。}

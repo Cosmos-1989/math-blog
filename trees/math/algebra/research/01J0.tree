@@ -3,10 +3,9 @@
 \taxon{Theorem}
 \author{author}
 \meta{source}{[Etingof 等，§3.1，Maschke 定理](013C)}
-\meta{proof-status}{完整证明，限有限维复表示。}
 
 \p{设 #{G} 为有限群，#{\rho:G\to\operatorname{GL}(V)} 为有限维复[表示](0124)。称它完全可约，如果 #{V} 是有限个[不可约子表示](013B)的[直和](0127)。每个这样的 #{V} 都完全可约。}
-\p{证明：给定不变子空间 #{U\subseteq V}，扩充 #{U} 的基，得到一个线性投影 #{p:V\to U}，满足 #{p|_U=I_U}。令}
-##{P=\frac1{|G|}\sum_{g\in G}\rho(g)p\rho(g)^{-1}.}
+\p{\strong{证明。}给定不变子空间 #{U\subseteq V}，扩充 #{U} 的基，得到一个线性投影 #{p:V\to U}，满足 #{p|_U=I_U}。令}
+##{P=\frac 1{|G|}\sum_{g\in G}\rho(g)p\rho(g)^{-1}.}
 \p{每项把 #{V} 映入 #{U} 并在 #{U} 上为恒等，所以 #{P(V)\subseteq U}、#{P|_U=I_U}，从而 #{P^2=P}。对任意 #{h\in G}，重新编号 #{g\mapsto hg} 得 #{\rho(h)P\rho(h)^{-1}=P}。因此 #{\ker P} 不变，且 #{V=U\oplus\ker P}。反复对真子表示取补空间，并对维数归纳，就得到不可约分解。}
-\p{平均中使用了 #{|G|^{-1}\in\mathbb C}；这不是模素数表示完全可约的证明。}
+\p{平均使用了 #{|G|^{-1}\in\mathbb C}；同一证明适用于群阶在底域中可逆的情形。}

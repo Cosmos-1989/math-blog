@@ -4,6 +4,6 @@
 \author{author}
 \meta{source}{[Bernshteyn，§4](007H)}
 
-\p{迭代对数 #{\log^*n} 是把对数反复作用直到不超过固定常数所需的次数。#{O(\log^*n)} 不是常数时间，但增长非常慢；#{o(\log n)} 指运行轮数除以 #{\log n} 趋于零。}
+\p{设 #{T(n)\geq 0} 为轮数函数，#{g(n)>0} 为比较函数。取以二为底的对数，#{\log^*n} 是对 #{n} 反复取对数直到不超过 #{1} 所需的次数。它无界但增长缓慢；#{o(\log n)} 指运行轮数除以 #{\log n} 趋于零。}
 
-\p{#{T(n)=O(g(n))} 指充分大 #{n} 时 #{T(n)\leq Cg(n)}，#{T(n)=o(g(n))} 指比值趋于零。对 [LOCAL](009E) 的两类算法，#{\mathrm{DetLOCAL}(g)}、#{\mathrm{RandLOCAL}(g)} 分别表示具有相应轮数界的 [LCL](009B) 存在性类别。}
+\p{#{T(n)=O(g(n))} 指存在常数 #{C>0}，使充分大 #{n} 时 #{T(n)\leq Cg(n)}；#{T(n)=o(g(n))} 指比值趋于零。对 [LOCAL](009E) 的两类算法，#{\mathrm{DetLOCAL}(O(g))}、#{\mathrm{RandLOCAL}(O(g))} 分别表示存在相应渐近轮数界算法的 [LCL](009B) 类别；用 #{o(g)} 替换 #{O(g)} 得到相应的小量类别。}

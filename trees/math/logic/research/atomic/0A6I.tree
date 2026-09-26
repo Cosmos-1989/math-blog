@@ -1,0 +1,12 @@
+\title{首次返回时间的 Kac 公式}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1–2.2](007J)}
+
+\p{设 #{T} 为概率空间 #{(X,\mu)} 的[保测自同构](00RS)，#{A} 可测且 #{\mu(A)>0}，#{r_A} 为[首次返回时间](00S6)。令 #{C=\bigcup_{j\in\mathbb Z}T^jA}。则}
+##{\int_A r_A\,d\mu=\mu(C).}
+\p{若 #{T} [遍历](00RW)，则 #{\mu(C)=1}，故积分为 #{1}；对归一化测度 #{\mu_A}，相应积分为 #{1/\mu(A)}。}
+\p{\strong{证明。}令 #{A_n=\{x\in A:r_A(x)=n\}}。双向[Poincaré 复归](0A6H)使各层 #{T^jA_n}（#{n\geq 1,\ 0\leq j<n}）模零两两不交并覆盖 #{C}：每个点有唯一最近的过去访问 #{A} 及随后的首次返回。由可数可加性和[非负积分](00Q5)的简单函数逼近，}
+##{\mu(C)=\sum_{n\geq 1}\sum_{j=0}^{n-1}\mu(T^jA_n)
+=\sum_{n\geq 1}n\mu(A_n)=\int_A r_A\,d\mu.}

@@ -1,0 +1,20 @@
+\title{同伦类型论术语定位}
+\date{2026-09-25}
+\taxon{Outline}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 B}
+
+\p{“类型”采用同伦类型论的含义，由形成、引入和消去规则描述；模型论的完备类型则是另一种由公式组成的对象。下列短释按同伦类型论的概念组织。}
+\ul{
+\li{[语境（context）](0500)是按依赖顺序排列的变量声明，语义中是参数空间；[代入（substitution）](0502)将参数函数代入依赖表达式，语义中对应拉回。}
+\li{[依赖和（dependent sum）](0507) #{\sum_{x:A}B(x)} 是总空间，元素为 #{(x,b)}、#{b:B(x)}；[依赖积（dependent product）](0505) #{\prod_{x:A}B(x)} 是相容截面的空间。}
+\li{[同一性类型（identity type）](050G) #{x=_Ay} 不预设为命题，具有 #{\operatorname{refl}_x} 与[路径归纳（path induction）](050H)；基点形式要求终点和路径共同变化。}
+\li{[传输（transport）](0548)沿 #{p:x=y} 给出 #{B(x)\simeq B(y)}；[函数外延性（function extensionality）](050K)将函数路径与逐点路径的依赖积比较为等价。}
+\li{[可缩类型（contractible type）](0580)有中心及到每点的路径：#{\sum_{a:A}\prod_{x:A}(a=x)}。[命题（proposition）](0585)中任意两点相等，可以为空；有元素则可缩。}
+\li{[集合类型（set, 0-type）](05Z2)的路径类型都是命题，不要求自身只有一个点；[n 型（n-type）](0589)递归地要求路径类型为上一截断层次。}
+\li{[命题截断（propositional truncation）](058B) #{\lVert A\rVert} 保留存在性，不选择元素，只能无条件消去到命题目标。}
+\li{[同伦纤维（homotopy fiber）](058E) #{\operatorname{fib}_f(b)=\sum_{a:A}(f(a)=b)} 保留像的比较路径；[等价（equivalence）](05Z3)要求全部纤维可缩，具有同伦逆且等价性是命题。}
+\li{[单价性（univalence）](05C6)要求 #{(A=B)\to(A\simeq B)} 为等价；[宇宙（universe）](05C0)按尺度分类小类型与小空间族，大小问题需要宇宙层级。}
+\li{[分类空间（classifying space）](05G8) #{BG} 是满足 #{\Omega BG\simeq G} 的带基点连通一型；[挠子（torsor）](05GA)为截断非空且自由传递的群作用集合，不选基点。}
+\li{[高阶群（higher group）](05K0)由带基点连通类型 #{BG} 表示，底层类型是 #{\Omega BG}；[高阶归纳类型（higher inductive type）的圆周实例](0900)允许点与更高路径层次的构造元。}
+}

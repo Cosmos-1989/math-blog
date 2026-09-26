@@ -1,0 +1,12 @@
+\title{动机积分的变量替换因子}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cluckers–Loeser，定理4.2.1](https://webusers.imj-prg.fr/~francois.loeser/aom_cl.pdf)}
+
+\p{设 #{h:X\to Y} 为两个同维可定义族间的可定义同构，赋值域维数为 #{d}，令 #{F\in\mathcal C^{\leq d}(Y)^{\exp}}。用[支撑分次](0ACS)中的括号 #{[F]} 表示忽略低维集合后的 #{d} 维类，#{h^*F=F\circ h}。设 #{\operatorname{ordjac}h} 为局部体积形式在 #{h} 下的倍数的赋值，则[积分推前](0ACT)满足}
+##{h_*[h^*F]=\mathbb L^{(\operatorname{ordjac}h)\circ h^{-1}}[F].}
+\p{在赋值域开集间的可微坐标表示上，该倍数是 #{\det Dh}；低维支撑采用[坐标体积的 Jacobian 比值](0ACZ)。可定义同构在舍去低维集合后具有所需坐标表示及非零 Jacobian；这一正则性和变换公式均属所引定理。}
+\p{在可积范围内，等价的积分形式为}
+##{\int_Y F(y)\,dy=\int_X F(h(x))\mathbb L^{-\operatorname{ordjac}h(x)}\,dx.}
+\p{经[局部域专门化](0ACU)，#{\mathbb L^{-\operatorname{ordjac}h}} 变为 #{|\det Dh|}。例如 #{h(x)=ax}、#{a\ne 0} 时，代入因子为 #{|a|}，而未加权函数的积分推前因子为 #{|a|^{-1}}。两个公式的正负号因此不同。}

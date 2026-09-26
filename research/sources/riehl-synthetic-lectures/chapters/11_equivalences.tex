@@ -1,0 +1,243 @@
+\chapter{可缩性、截断层次与等价}
+\section{可缩类型及其路径}
+\begin{definition}[可缩性]
+定义
+\[
+\isContr(A)=\sum_{a:A}\prod_{x:A}(a=x).
+\]
+一个元素 $(a,h)$ 称为收缩数据：$a$ 是中心，$h(x)$ 是从中心到 $x$ 的路径。若此类型有元素，则称 $A$ 可缩。
+\end{definition}
+\begin{example}
+单位类型 $\one$ 可缩，中心为 $*$，收缩由单位类型的消去规则给出。对任意 $a:A$，类型 $\sum_{x:A}(a=x)$ 可缩，已经在命题\ref{prop:based-contractible}中证明。空类型不可能可缩，因为收缩数据首先要求给出一个中心。
+\end{example}
+\begin{lemma}[可缩类型的路径类型]
+若 $A$ 可缩，则对每个 $x,y:A$，类型 $x=y$ 可缩。
+\end{lemma}
+\begin{proof}
+取收缩 $(a,h)$，令候选中心为
+\[
+c_{x,y}=h(x)^{-1}\cdot h(y):x=y.
+\]
+对任意 $p:x=y$，把 $h$ 视为常值函数 $a$ 到恒等函数的同伦。由同伦自然性，$h(x)\cdot p=h(y)$。左复合 $h(x)^{-1}$ 并用群胚律，得到 $p=c_{x,y}$。取逆路径便得到从中心到 $p$ 的收缩，且全部公式依赖 $x,y,p$，故确实给出一个依赖函数。
+\end{proof}
+\begin{proposition}[可缩纤维的积]
+若每个 $B(x)$ 可缩，则 $\prod_{x:A}B(x)$ 可缩。
+\end{proposition}
+\begin{proof}
+记纤维的中心为 $b_x$，收缩为 $h_x$。取中心截面 $b(x)=b_x$。对任意 $s$，逐点路径 $h_x(s(x))$ 经函数外延性得到 $b=s$。
+\end{proof}
+\begin{proposition}[可缩底与可缩纤维]
+若 $A$ 可缩且每个 $B(x)$ 可缩，则 $\sum_xB(x)$ 可缩。
+\end{proposition}
+\begin{proof}
+取 $A$ 的中心 $a$ 与 $B(a)$ 的中心 $b$。对任意 $(x,u)$，底中有路径 $p:a=x$。纤维 $B(x)$ 可缩，因此有路径 $\tr_B(p)(b)=u$。由依赖和路径公式得到 $(a,b)=(x,u)$。
+\end{proof}
+
+\section{命题、集合与高阶截断}
+\begin{definition}[命题与集合]
+定义
+\[
+\isProp(A)=\prod_{x,y:A}(x=y),
+\qquad
+\isSet(A)=\prod_{x,y:A}\isProp(x=y).
+\]
+满足第一条件的类型称为命题，满足第二条件的类型称为集合或零截断类型。
+\end{definition}
+\begin{lemma}
+命题一旦有元素便可缩。反之，可缩类型是命题。
+\end{lemma}
+\begin{proof}
+若 $a:A$ 且 $h:\isProp(A)$，则 $(a,h(a,-))$ 是收缩。若 $(a,h)$ 是收缩，则 $h(x)^{-1}\cdot h(y)$ 给出任意 $x,y$ 间的路径。
+\end{proof}
+\begin{proposition}[命题的封闭性]
+命题族的依赖积是命题。若 $A$ 是命题，且每个 $B(x)$ 是命题，则 $\sum_xB(x)$ 是命题。
+\end{proposition}
+\begin{proof}
+对两个依赖函数 $f,g$，纤维的命题性给出逐点路径，函数外延性给出 $f=g$。对依赖和中的两个点，底的命题性给出 $p:x=y$，纤维命题性给出 $\tr_B(p)(u)=v$，再用依赖和路径公式。
+\end{proof}
+\begin{proposition}[性质的证明无关性]
+$\isProp(A)$、$\isContr(A)$ 和 $\isSet(A)$ 都是命题。
+\end{proposition}
+\begin{proof}
+若给定 $h,k:\isProp(A)$，在语境 $x,y:A$ 中，$h$ 和 $x$ 给出 $A$ 的收缩，故路径类型 $x=y$ 可缩。于是 $h(x,y)=k(x,y)$，两次函数外延性给出 $h=k$。
+
+对 $c=(a,h)$、$d=(b,k):\isContr(A)$，取底路径 $p=h(b):a=b$。依赖和路径公式把 $c=d$ 化为传输后的 $h$ 与 $k$ 相等。$c$ 已给出 $A$ 可缩，故每个 $b=x$ 可缩；相应依赖积是命题，因此这两个收缩函数相等。最后，$\isSet(A)$ 是命题族 $\isProp(x=y)$ 的依赖积，因而也是命题。
+\end{proof}
+\begin{definition}[截断层次]
+$(-2)$-截断类型定义为可缩类型。递归地，$A$ 为 $(n+1)$-截断，若对每个 $x,y:A$，类型 $x=y$ 为 $n$-截断。由此 $(-1)$-截断等同于命题，$0$-截断等同于集合，$1$-截断类型的路径类型是集合。
+\end{definition}
+\begin{example}
+普通群胚所对应的同伦类型是 $1$-截断的：对象之间的同构组成集合。一个群的分类空间通常是 $1$-类型，但其环路类型是一个可能有很多元素的集合。
+\end{example}
+\begin{remark}
+这里“集合”描述同一性类型的层次，未规定底层点的具体编码。两个同伦类型等价时，截断层次相同。此性质稍后由等价对路径空间的作用证明。
+\end{remark}
+
+\section{命题截断}
+\begin{definition}[命题截断规则]
+对类型 $A$，命题截断为命题 $\trunc A$，带映射 $|-|:A\to\trunc A$，满足：对任意命题 $P$，前复合给出等价
+\[
+(\trunc A\to P)\simeq(A\to P).
+\]
+依赖消去也成立：若 $P:\trunc A\to\U$ 的每个纤维是命题，则给出 $\prod_{a:A}P(|a|)$ 足以得到 $\prod_{z:\trunc A}P(z)$。
+\end{definition}
+\begin{example}
+$\trunc{\sum_{x:A}B(x)}$ 表示存在某个 $x$ 及其见证，但不记录具体是哪一个。定义 $A\lor B=\trunc{A+B}$ 后，析取的结果是命题；未经截断的 $A+B$ 则仍保留所选择的分支。
+\end{example}
+\begin{proposition}
+若 $P$ 已是命题，则 $P\to\trunc P$ 为等价。
+\end{proposition}
+\begin{proof}
+由截断消去，恒等映射 $P\to P$ 延拓为 $r:\trunc P\to P$。一个复合由计算规则等于恒等；另一个复合由于 $\trunc P$ 是命题，逐点等于恒等。故有拟逆。
+\end{proof}
+\begin{remark}
+不能把 $\trunc A$ 的元素任意消去到一般 $A$。合法的目标必须是命题，或必须有额外的截断消去结构。分类空间的连通性证明会利用命题目标完成消去，而不会选择每个对象的具体同构。
+\end{remark}
+
+\section{同伦纤维与等价的定义}
+\begin{definition}[同伦纤维与等价]
+对 $f:A\to B$，定义
+\[
+\fib_f(b)=\sum_{a:A}(f(a)=b),
+\qquad
+\isEquiv(f)=\prod_{b:B}\isContr(\fib_f(b)).
+\]
+等价类型为
+\[
+A\simeq B=\sum_{f:A\to B}\isEquiv(f).
+\]
+\end{definition}
+\begin{proposition}
+$\isEquiv(f)$ 是命题。恒等函数是等价。
+\end{proposition}
+\begin{proof}
+第一式为命题 $\isContr(\fib_f(b))$ 的依赖积。恒等的纤维 $\sum_a(a=b)$ 是以 $b$ 为终点的路径总空间，与基点路径总空间通过路径反向等价，或直接用路径归纳证明其可缩。
+\end{proof}
+\begin{proposition}[等价给出拟逆]
+若 $f$ 的全部同伦纤维可缩，则存在 $g:B\to A$ 及同伦
+\[
+\eta:gf\sim\id_A,
+\qquad\varepsilon:fg\sim\id_B.
+\]
+\end{proposition}
+\begin{proof}
+取 $\fib_f(b)$ 的中心 $(g(b),\varepsilon_b)$。在 $b=f(a)$ 的纤维内，收缩比较中心 $(g(f(a)),\varepsilon_{f(a)})$ 与 $(a,\refl_{f(a)})$。对这一有序对路径施加第一投影，得到 $\eta_a:g(f(a))=a$。所有中心来自依赖函数，故 $g,\eta,\varepsilon$ 在参数中相容。
+\end{proof}
+
+\section{拟逆与纤维可缩性的等价}
+\begin{lemma}[修正余单位]\label{lem:adjointify}
+假设 $f:A\to B$、$g:B\to A$ 以及 $\eta:gf\sim\id_A$、$\varepsilon:fg\sim\id_B$。可将 $\varepsilon$ 替换为 $\varepsilon'$，使
+\[
+\ap_f(\eta_a)=\varepsilon'_{f(a)}
+\]
+对每个 $a$ 成立。
+\end{lemma}
+\begin{proof}
+定义
+\[
+\varepsilon'_b
+=\varepsilon_{f(g(b))}^{-1}
+\cdot\ap_f(\eta_{g(b)})\cdot\varepsilon_b.
+\]
+三个因子的始终点依次为
+\[
+fgb\longrightarrow fgfgb\longrightarrow fgb\longrightarrow b,
+\]
+所以公式有类型 $fgb=b$。
+
+把同伦 $\eta$ 的自然性用在路径 $\eta_a:gfa=a$ 上，得到
+\[
+\ap_{gf}(\eta_a)\cdot\eta_a=\eta_{gfa}\cdot\eta_a.
+\]
+右消去给出 $\ap_{gf}(\eta_a)=\eta_{gfa}$。对两边施加 $f$，得到
+$\ap_{fg}(\ap_f\eta_a)=\ap_f\eta_{gfa}$。
+再把 $\varepsilon$ 的自然性用在 $t=\ap_f\eta_a:fgfa=fa$ 上：
+\[
+\ap_{fg}(t)\cdot\varepsilon_{fa}=\varepsilon_{fgfa}\cdot t.
+\]
+左复合 $\varepsilon_{fgfa}^{-1}$，并代入前一等式，右边恰化为 $t$，左边恰为 $\varepsilon'_{fa}$，得到三角相容。
+\end{proof}
+\begin{theorem}[等价的拟逆判据]\label{thm:equiv-qinv}
+$f:A\to B$ 是等价，当且仅当它有拟逆及两侧逆同伦。
+\end{theorem}
+\begin{proof}
+一个方向已证明。反向先由引理\ref{lem:adjointify}取得相容的 $\varepsilon'$。固定 $b$，选中心 $(g(b),\varepsilon'_b)$。对 $(a,p):\fib_f(b)$，令
+\[
+q=(\ap_g(p))^{-1}\cdot\eta_a:g(b)=a.
+\]
+依赖和路径公式要求检验
+\[
+\ap_f(q)^{-1}\cdot\varepsilon'_b=p,
+\]
+等价地，$\varepsilon'_b=\ap_f(q)\cdot p$。由路径作用的复合、逆公式及三角相容，
+\[
+\ap_f(q)\cdot p
+=(\ap_{fg}(p))^{-1}\cdot\varepsilon'_{fa}\cdot p.
+\]
+而 $\varepsilon'$ 在 $p:fa=b$ 上的自然性正给出该表达式等于 $\varepsilon'_b$。因此 $(q,\text{上述比较})$ 构成中心到任意纤维点的路径，证明纤维可缩。
+\end{proof}
+\begin{remark}
+单纯给出两个逆同伦后，若直接写纤维收缩，很容易漏掉三角相容。上一引理明确修正这一问题。等价的性质 $\isEquiv(f)$ 是命题，而“任选一个拟逆连同两个同伦”的完整数据类型一般不是命题。
+\end{remark}
+
+\section{等价的封闭性与路径检测}
+\begin{proposition}[逆、复合及二取三]
+等价的拟逆为等价，等价的复合为等价。对 $A\xrightarrow fB\xrightarrow gC$，若 $f,g,gf$ 中任意两个为等价，则第三个为等价。
+\end{proposition}
+\begin{proof}
+拟逆的两侧同伦互换即可。复合的逆为 $f^{-1}g^{-1}$，两侧同伦由各自逆同伦和函数的路径作用复合。若 $f$ 与 $gf$ 可逆，则 $f\circ(gf)^{-1}$ 是 $g$ 的拟逆，检验一侧直接使用 $gf$ 的逆，另一侧使用 $f$ 的逆将等式消去。$g$ 与 $gf$ 可逆的情形对偶。由定理\ref{thm:equiv-qinv}完成证明。
+\end{proof}
+\begin{proposition}[等价作用于路径类型]
+若 $f:A\to B$ 为等价，则
+\[
+\ap_f:(x=y)\longrightarrow(f(x)=f(y))
+\]
+为等价。
+\end{proposition}
+\begin{proof}
+取拟逆 $g$ 和 $\eta:gf\sim\id$。一个候选逆为
+\[
+r\longmapsto\eta_x^{-1}\cdot\ap_g(r)\cdot\eta_y.
+\]
+其与 $\ap_f$ 的一侧复合由 $\eta$ 的自然性等于恒等。为了检验另一侧，可使用引理\ref{lem:adjointify}修正后的余单位，使 $\ap_f\eta=\varepsilon'_f$；随后余单位自然性把相应共轭化为原路径 $r$。故得到两侧逆同伦。
+\end{proof}
+\begin{proposition}[截断性在等价下不变]
+若 $A\simeq B$，则 $A$ 可缩、为命题、为集合或为给定阶数的截断类型，当且仅当 $B$ 具有相同性质。
+\end{proposition}
+\begin{proof}
+可缩情形将中心通过等价送过去，并利用拟逆及逆同伦传递收缩。命题情形使用两个点的拟逆像之间的路径，再作用等价并拼接余单位。更高截断层次由上一命题对路径类型的等价递归得到。
+\end{proof}
+
+\section{总空间与逐纤维等价}
+\begin{theorem}[总空间等价判据]\label{thm:fiberwise}
+给定 $u:\prod_{a:A}(B(a)\to C(a))$，令
+\[
+T:\sum_aB(a)\to\sum_aC(a),\qquad T(a,b)=(a,u_a(b)).
+\]
+则 $T$ 是等价，当且仅当每个 $u_a$ 是等价。
+\end{theorem}
+\begin{proof}
+固定 $(a,c)$。由依赖和路径公式，$\fib_T(a,c)$ 的元素等价于
+\[
+\sum_{a':A}\sum_{b:B(a')}\sum_{p:a'=a}
+\bigl(\tr_C(p)(u_{a'}b)=c\bigr).
+\]
+对 $p$ 进行基点路径归纳，底点 $a'$ 与路径 $p$ 一起消去，得到等价
+\[
+\fib_T(a,c)\simeq\sum_{b:B(a)}(u_a(b)=c)=\fib_{u_a}(c).
+\]
+等价保持可缩性，故所有总空间纤维可缩恰等价于全部纤维映射的纤维可缩。
+\end{proof}
+\begin{proposition}[命题子类型中的路径]
+若 $P:A\to\U$ 的纤维全为命题，则投影 $\sum_aP(a)\to A$ 在任意两点之间诱导路径类型的等价。
+\end{proposition}
+\begin{proof}
+对 $(a,u),(b,v)$，依赖和路径公式给出
+\[
+((a,u)=(b,v))\simeq\sum_{p:a=b}(\tr_P(p)u=v).
+\]
+由于 $P(b)$ 为命题且有元素，其路径类型可缩。因此投影到 $p$ 的纤维可缩，故为等价。
+\end{proof}
+\begin{remark}
+该命题意味着附加一个“性质”不改变对象间已有的路径。附加一个“结构”则通常会增加路径必须满足的相容条件。有限对象的分类空间与群结构的单价性会分别用到这两种情形。
+\end{remark}

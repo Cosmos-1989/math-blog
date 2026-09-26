@@ -1,0 +1,8 @@
+\title{完备度量空间的 Baire 纲定理}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{(X,d)} 是[完备度量空间](00ET)，采用[度量拓扑](00EN)。若 #{U_1,U_2,\ldots} 都是开且[稠密](00EB)的子集，则 #{\bigcap_{n\geq 1}U_n} 在 #{X} 中稠密。}
+\p{\strong{证明。}给定非空开集 #{V}，由稠密性在 #{V\cap U_1} 中取[闭球](00EM) #{F_1=\overline B(x_1,r_1)}，使 #{0<r_1\leq 2^{-1}} 且 #{F_1\subseteq V\cap U_1}。这是可行的：在非空开集内先取开球，再将半径缩小一半。递归在非空开集 #{B(x_n,r_n)\cap U_{n+1}} 内取闭球 #{F_{n+1}=\overline B(x_{n+1},r_{n+1})}，满足 #{0<r_{n+1}\leq 2^{-n-1}} 及 #{F_{n+1}\subseteq B(x_n,r_n)\cap U_{n+1}}。}
+\p{当 #{k\geq n} 时 #{x_k\in F_n}，所以 #{d(x_k,x_n)\leq r_n\to 0}。于是 #{(x_n)} 是 Cauchy 序列，完备性给出极限 #{x}。对固定 #{n}，由三角不等式取极限得 #{d(x,x_n)\leq r_n}，故 #{x\in F_n}。因此 #{x\in V\cap\bigcap_n U_n}，证明了稠密性。}

@@ -44,10 +44,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .skip-link:focus { top: 8px; }
 .header { max-width: 1220px; margin: 0 auto 52px; border-bottom: 1px solid var(--line); }
 .nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { font-size: 19px; font-weight: 600; letter-spacing: .06em; }
+.logo { flex-shrink: 0; font-size: 23px; font-weight: 600; letter-spacing: .12em; }
 .logo a { display: inline-flex; gap: 13px; align-items: center; color: var(--ink); }
 .logo a:hover { color: var(--blue); text-decoration: none; }
-.site-mark { font-family: var(--heading-font); color: var(--blue); font-size: 27px; font-style: italic; font-weight: 400; letter-spacing: -.08em; }
+.site-mark { display: block; width: 40px; height: 40px; flex: 0 0 auto; }
+.site-name { font-family: "Songti TC", "Songti SC", "Noto Serif CJK TC", var(--heading-font); white-space: nowrap; line-height: 1.4; }
 .nav-actions { display: flex; gap: 30px; align-items: center; font-size: 14px; }
 .nav-actions > a { color: var(--muted); }
 .search-trigger {
@@ -185,9 +186,9 @@ ninja-keys::part(ninja-action) { white-space: normal; }
 @media (max-width: 600px) {
   body { padding: 0 20px 36px; font-size: 16px; line-height: 1.85; }
   .nav { min-height: 72px; gap: 12px; }
-  .logo { font-size: 16px; letter-spacing: .02em; }
+  .logo { font-size: 19px; letter-spacing: .07em; }
   .logo a { gap: 8px; }
-  .site-mark { font-size: 23px; }
+  .site-mark { width: 32px; height: 32px; }
   .nav-actions { gap: 16px; font-size: 12px; }
   .search-trigger { padding: 5px 9px; }
   .search-trigger span { display: none; }
@@ -201,6 +202,12 @@ ninja-keys::part(ninja-action) { white-space: normal; }
   body[data-page="index"] article > section > details > .tree-content > ol,
   body[data-page="0060"] article > section > details > .tree-content > ol { grid-template-columns: minmax(0, 1fr); }
   article > footer { margin-top: 44px; }
+}
+@media (max-width: 360px) {
+  .nav { gap: 8px; }
+  .nav-actions { gap: 8px; }
+  .logo { font-size: 18px; letter-spacing: .03em; }
+  .site-mark { width: 28px; height: 28px; }
 }
 @media print {
   body { background: #fff; padding: 0; font-size: 11pt; color: #000; }

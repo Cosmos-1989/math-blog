@@ -4,7 +4,8 @@
 \author{author}
 
 \p{设 #{E} 是实或复向量空间，#{E_i} 是同一标量域上的[拓扑向量空间](00MA)，#{f_i:E\to E_i} 是线性映射。关于 #{(f_i)_{i\in I}} 的[初始拓扑](00EG)使 #{E} 成为拓扑向量空间。}
-\p{证明：对加法 #{a} 有 #{f_i\circ a=a_i\circ(f_i\times f_i)}；对数乘 #{m} 有 #{f_i\circ m=m_i\circ(\operatorname{id}_{\mathbb K}\times f_i)}。右端连续，用[初始拓扑的连续性判据](00EH)即得结论。}
+\p{\strong{证明。}对加法 #{a} 有 #{f_i\circ a=a_i\circ(f_i\times f_i)}；对数乘 #{m} 有 #{f_i\circ m=m_i\circ(\operatorname{id}_{\mathbb K}\times f_i)}。右端连续，用[初始拓扑的连续性判据](00EH)即得结论。}
 \p{若 #{\mathcal U_i} 是 #{E_i} 在零点的[邻域基](00E8)，则 #{E} 的零点邻域基为}
 ##{\left\{\bigcap_{i\in F}f_i^{-1}(U_i): F\subseteq I\text{ 有限},\ U_i\in\mathcal U_i\right\}.}
-\p{特别地，取 #{E=\prod_iE_i}、#{f_i} 为坐标投影，就得到拓扑向量空间乘积仍是拓扑向量空间。若要求 Hausdorff，还需各坐标共同分离点。}
+\p{若每个 #{E_i} 都是 [Hausdorff 空间](002B)，则初始拓扑为 Hausdorff 当且仅当 #{\bigcap_i\ker f_i=\{0\}}。充分性来自两个不同向量在某个坐标中的不同像可用不交开集分离；必要性来自核交中的向量与零具有相同的全部初始开邻域。目标空间的 Hausdorff 假设是充分性论证的条件。}
+\p{特别地，取 #{E=\prod_iE_i}、#{f_i} 为坐标投影，就得到拓扑向量空间乘积仍是拓扑向量空间；若各因子 Hausdorff，则乘积也 Hausdorff。}

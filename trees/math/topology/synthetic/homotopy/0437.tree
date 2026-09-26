@@ -1,0 +1,20 @@
+\title{预层依赖积的广义纤维公式}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 8 章}
+
+\p{设 #{D} 为小[范畴](00I0)，#{\widehat D=[D^{\mathrm{op}},\mathbf{Set}]} 为[普通预层](0344)组成的[函子范畴](00I5)，态射为[自然变换](00I2)。对固定的预层 #{B}，[切片](031J) #{\widehat D/B} 中的对象为预层映射 #{Z\to B}，态射与到 #{B} 的结构映射交换。记 #{y(d)=\operatorname{Hom}_D(-,d)} 为[Yoneda 嵌入](0345)的可表预层；由[反变 Yoneda 引理](0343)，元素 #{x\in X(d)} 对应的 #{y(d)\to X} 把 #{u:c\to d} 送到 #{X(u)x}。沿 #{f:A\to B} 的[拉回函子](032T) #{f^*} 把 #{Y\to B} 送到 #{Y\times_B A\to A}，逐对象取集合拉回。}
+
+\p{设 #{f:A\to B}、#{p:E\to A} 为预层映射。对 #{b\in B(d)}，令 #{b:y(d)\to B} 为对应的[广义元素](0430)。#{\Pi_fE} 在 #{b} 处的广义纤维可定义为截面集合}
+
+##{(\Pi_fE)_b(d)=
+\operatorname{Hom}_{\widehat D/A}(y(d)\times_BA,E).}
+
+\p{由这些集合与前复合限制得到 #{B} 上的预层，并满足 #{f^*\dashv\Pi_f}。}
+
+\p{\strong{证明。}把所有 #{b\in B(d)} 的截面集合做不交并，得到 #{(\Pi_fE)(d)}。沿 #{u:c\to d}，由映射 #{y(c)\times_BA\to y(d)\times_BA} 前复合，定义限制。单位和复合由前复合的相应等式保证。}
+
+\p{给定 #{q:Y\to B} 与 #{A} 上的映射 #{h:Y\times_BA\to E}，对每个 #{y\in Y(d)}，限制 #{h} 到 #{y(d)\times_BA}，得到 #{(\Pi_fE)_{q_d(y)}(d)} 的元素，于是得到 #{Y\to\Pi_fE}。反向在广义元素 #{a\in A(d)} 上评价相应截面，得到 #{Y\times_BA\to E}。两种构造互逆，并对参数自然。}
+
+\p{[右伴随](032K)的含义为自然双射 #{\operatorname{Hom}_{/B}(Y,\Pi_fE)\cong\operatorname{Hom}_{/A}(f^*Y,E)}。公式中的“截面集合”准确说是拉回族在 #{y(d)\times_BA} 上的截面，等价于显示的切片态射集合。}

@@ -1,0 +1,40 @@
+\title{自然三角比较恢复伴随等价}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 19 章；[RiehlContext](0212)，[RiehlVerity](021F)}
+
+\p{设 #{L:C\to D}、#{R:D\to C} 为内部函子。假设三角路径 #{\varepsilon_{Lc}\circ L(\eta_c)=\operatorname{id}_{Lc}} 与 #{R(\varepsilon_d)\circ\eta_{Rd}=\operatorname{id}_{Rd}} 都作为自然的内部比较给出。使用拟逆判据把两侧逆同伦提升为等价。}
+
+\p{所需前置：[伴随的自然映射空间等价](064I)、[平方三角剖分给出自然性路径](061C)、[内部函子自动保持相容合成](061A)、[四面体给出复合的结合路径](0616)、[等价的拟逆判据](058I)。}
+
+\p{若给定函子 #{L,R}、自然变换 #{\eta:\operatorname{id}_C\to RL}、#{\varepsilon:LR\to\operatorname{id}_D}，以及自然的三角比较，则公式}
+
+##{\Phi(f)=R(f)\eta_c,
+\qquad
+\Psi(g)=\varepsilon_dL(g)}
+
+\p{给出映射空间之间的自然等价。}
+
+\p{\strong{证明。}
+首先计算 #{\Psi\Phi(f)}。由函子保持合成、结合律及余单位自然性，}
+
+##{\begin{aligned}
+\Psi\Phi(f)
+&=\varepsilon_d\circ L(R(f)\circ\eta_c)\\
+&=\varepsilon_d\circ LR(f)\circ L(\eta_c)\\
+&=f\circ\varepsilon_{Lc}\circ L(\eta_c)\\
+&=f.
+\end{aligned}}
+
+\p{最后一步使用第一三角比较。对另一个复合，单位在 #{g:c\to Rd} 上的自然性给出}
+
+##{\begin{aligned}
+\Phi\Psi(g)
+&=R(\varepsilon_d\circ L(g))\circ\eta_c\\
+&=R(\varepsilon_d)\circ RL(g)\circ\eta_c\\
+&=R(\varepsilon_d)\circ\eta_{Rd}\circ g\\
+&=g.
+\end{aligned}}
+
+\p{所列比较在对象与箭头参数中都是内部项，因此给出自然的两侧逆同伦。等价的拟逆判据完成证明。}

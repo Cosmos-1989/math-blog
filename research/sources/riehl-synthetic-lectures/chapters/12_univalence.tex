@@ -1,0 +1,283 @@
+\chapter{宇宙、单价性与结构同一性}
+\section{小类型的宇宙}
+\begin{definition}[宇宙与解码]
+一个宇宙由类型 $\U$ 及依赖类型 $\mathsf{El}:\U\to\mathsf{Type}$ 组成。$A:\U$ 是一个代码，$\mathsf{El}(A)$ 是它表示的类型。称能够这样表示的类型为 $\U$-小类型。通常省略解码符号，直接把 $A:\U$ 读作“小类型 $A$”。
+\end{definition}
+\begin{remark}
+宇宙本身不要求是其所分类的小类型。为容纳宇宙、函数族及结构类型，可使用层次
+\[
+\U_0:\U_1:\U_2:\cdots.
+\]
+本讲义每次在一个固定宇宙内进行构造，必要时到更大的宇宙讨论所有这样的对象。写 $A,B:\U$ 并不等于断言 $\U:\U$。
+\end{remark}
+\begin{definition}[宇宙对类型构造的封闭性]
+称 $\U$ 对依赖和与依赖积封闭，若对于 $A:\U$ 和 $B:A\to\U$，类型 $\sum_{a:A}B(a)$ 与 $\prod_{a:A}B(a)$ 仍有 $\U$ 中的代码。同样要求所用的同一性类型、有限和、自然数及命题截断具有小代码。
+\end{definition}
+\begin{example}[普遍族]
+解码族的总空间为
+\[
+\widetilde\U=\sum_{A:\U}A,
+\qquad \pi:\widetilde\U\to\U.
+\]
+给定 $B:\Gamma\to\U$，其拉回的元素为 $(\gamma,A,a,p)$，其中 $p:B(\gamma)=A$。消去 $p$ 后得到 $\sum_{\gamma:\Gamma}B(\gamma)$。于是有同伦拉回图
+\[
+\begin{tikzcd}
+\sum_{\gamma:\Gamma}B(\gamma)\ar[r]\ar[d]&\widetilde\U\ar[d,"\pi"]\\
+\Gamma\ar[r,"B"']&\U.
+\end{tikzcd}
+\]
+宇宙把依赖类型写成一个普通的分类映射。
+\end{example}
+\begin{remark}
+在集合论中可以将一些集合的代码组成集合，但这还没有给出同伦论所需的宇宙：还要确定代码之间的路径。单价性规定的正是这部分同一性结构。严格模型中的分类与替换相容还涉及选择过的纤维化结构，不能仅靠写出上述总空间就证明全部语义存在性。
+\end{remark}
+
+\section{类型的同一性诱导等价}
+\begin{definition}[同一性到等价的比较]
+设 $A,B:\U$。宇宙中的路径 $p:A=B$ 作用于普遍族，给出
+\[
+\tr_{\mathsf{El}}(p):A\to B.
+\]
+路径归纳把此函数的等价性化为恒等函数的等价性。因此有典范映射
+\[
+\idtoequiv_{A,B}:(A=B)\longrightarrow(A\simeq B).
+\]
+在 $p=\refl_A$ 时，其底层函数定义相等于 $\id_A$。
+\end{definition}
+\begin{proposition}[比较映射的复合相容]
+对于 $p:A=B$ 和 $q:B=C$，有
+\[
+\idtoequiv(p\cdot q)
+=\idtoequiv(q)\circ\idtoequiv(p).
+\]
+此外，$\idtoequiv(p^{-1})$ 是 $\idtoequiv(p)$ 的逆。
+\end{proposition}
+\begin{proof}
+对 $p,q$ 依次作路径归纳。恒等路径的情形化为恒等函数的复合与逆。底层函数的同一性通过函数外延性表达；附带的等价性证明属于命题，故不增加比较条件。
+\end{proof}
+\begin{example}
+若 $P:\U\to\U$ 是某个已定义的类型构造，则每条 $p:A=B$ 还给出传输
+\[
+\tr_P(p):P(A)\to P(B).
+\]
+当 $P(X)=X\times X$ 时，这个传输逐分量作用为 $\idtoequiv(p)$；当 $P(X)=X\to X$ 时，它是共轭变换。后一公式将在本章具体计算。
+\end{example}
+
+\section{单价公理及其运算规则}
+\begin{definition}[单价宇宙]\label{def:univalence}
+宇宙 $\U$ 称为单价的，若对任意 $A,B:\U$，映射
+\[
+\idtoequiv_{A,B}:(A=B)\to(A\simeq B)
+\]
+是等价。其逆记为
+\[
+\ua:(A\simeq B)\to(A=B).
+\]
+本讲义使用一个对所述类型构造封闭的单价宇宙。
+\end{definition}
+\begin{proposition}[单价性的计算与唯一性]
+对 $e:A\simeq B$、$p:A=B$，存在路径
+\[
+\idtoequiv(\ua(e))=e,
+\qquad
+\ua(\idtoequiv(p))=p.
+\]
+特别地，对每个 $a:A$，
+\[
+\tr_{\mathsf{El}}(\ua(e))(a)=e(a).
+\]
+\end{proposition}
+\begin{proof}
+前两式是等价与其所选逆的两侧逆同伦。对第一式先施加底层函数投影，再在 $a$ 处求值，得到第三式。一般的单价公理只给出这里的路径相等，不把第三式规定为判断层面的归约规则。
+\end{proof}
+\begin{proposition}[单价性与复合]
+若 $e:A\simeq B$、$d:B\simeq C$，则
+\[
+\ua(e)\cdot\ua(d)=\ua(d\circ e),
+\qquad
+\ua(e^{-1})=\ua(e)^{-1}.
+\]
+\end{proposition}
+\begin{proof}
+向两端施加 $\idtoequiv$。上一节的复合相容与单价计算式表明所得等价相同。因为等价诱导路径类型的等价，$\idtoequiv$ 检测这两个路径是否相等。逆的公式相同。
+\end{proof}
+\begin{remark}
+单价性没有把所有不同代码在语法层面合并。它给出同一性类型的内容。例如 $A=A$ 可以含有多个不同的环路，分别对应 $A$ 的不同自等价。把“路径相等”误读成“代码完全相同”，就会丢失这些环路。
+\end{remark}
+
+\section{沿等价归纳}
+\begin{lemma}[等价总空间可缩]
+固定 $A:\U$。类型
+\[
+\sum_{B:\U}(A\simeq B)
+\]
+可缩，中心可取 $(A,\id_A)$。
+\end{lemma}
+\begin{proof}
+单价性与逐纤维等价判据给出
+\[
+\left(\sum_{B:\U}(A=B)\right)
+\simeq
+\left(\sum_{B:\U}(A\simeq B)\right).
+\]
+左边是基点路径总空间，已经证明可缩。比较映射将其标准中心送到 $(A,\id_A)$，因此得到所述收缩。
+\end{proof}
+\begin{theorem}[等价归纳]
+设 $P$ 是依赖于 $A,B:\U$ 及 $e:A\simeq B$ 的类型族。如果给定
+\[
+ d:\prod_{A:\U}P(A,A,\id_A),
+\]
+则可以构造
+\[
+ D:\prod_{A,B:\U}\prod_{e:A\simeq B}P(A,B,e).
+\]
+在恒等等价处，$D$ 与给定的 $d$ 有指定比较路径。
+\end{theorem}
+\begin{proof}
+首先对 $p:A=B$ 定义族
+\[
+Q(A,B,p)=P(A,B,\idtoequiv(p)).
+\]
+路径归纳由 $d$ 给出所有 $Q(A,B,p)$ 的元素。对于一般 $e$，取 $p=\ua(e)$，得到 $P(A,B,\idtoequiv(\ua(e)))$ 中的元素。再沿单价计算路径传输，得到 $P(A,B,e)$ 的元素。恒等处的比较由路径归纳的计算与等价逆同伦给出。
+\end{proof}
+\begin{remark}
+等价归纳允许目标依赖于等价本身。它不宣称所有自等价都等于恒等。其归纳过程中，目标类型 $B$ 也随之变化，正如路径归纳同时改变路径的终点。固定 $B=A$ 后企图只在环路内部作这种归纳，通常不合法。
+\end{remark}
+\begin{proposition}[可定义构造保持等价]
+给定 $F:\U\to\U$，每个 $e:A\simeq B$ 诱导等价
+\[
+F(e):F(A)\simeq F(B).
+\]
+这个作用保持恒等与复合，保持的意义是存在由路径演算给出的相容同伦。
+\end{proposition}
+\begin{proof}
+定义 $F(e)=\idtoequiv(\ap_F(\ua(e)))$。函数的路径作用保持路径合成，$\ua$ 与 $\idtoequiv$ 保持合成，因而得到相容公式。所需更高比较来自同一套路径归纳。
+\end{proof}
+\begin{example}
+取 $F(A)=A\to A$。等价 $e:A\simeq B$ 诱导
+\[
+F(e)(u)=e\circ u\circ e^{-1}.
+\]
+该公式可由等价归纳证明：在 $e=\id_A$ 处，两端都等于 $u$。因此这种构造记录的是自映射空间的共轭等价，绝非无条件把一个任意函数 $A\to B$ 推成自映射空间之间的函数。
+\end{example}
+
+\section{一个非平凡的宇宙环路}
+\begin{definition}[二元素类型]
+记 $\mathbf2=\one+\one$，其两点为 $0$ 和 $1$。交换函数 $s:\mathbf2\to\mathbf2$ 由 $s(0)=1$、$s(1)=0$ 给出。因为 $s\circ s=\id$，它确定自等价。
+\end{definition}
+\begin{lemma}
+$0=_{\mathbf2}1$ 为空类型。
+\end{lemma}
+\begin{proof}
+定义族 $P:\mathbf2\to\U$，使 $P(0)=\one$、$P(1)=\zero$。若有 $p:0=1$，沿 $p$ 传输 $*:\one$ 将产生空类型中的元素。因此该路径类型到空类型有函数，即没有这样的路径。
+\end{proof}
+\begin{proposition}
+宇宙中环路 $\ua(s):\mathbf2=\mathbf2$ 不等于 $\refl_{\mathbf2}$。因此含有二元素类型的单价宇宙不是集合。
+\end{proposition}
+\begin{proof}
+如果两条环路相等，施加 $\idtoequiv$ 得到 $s=\id$。在点 $0$ 处求值得到 $1=0$，与上一引理矛盾。一个集合的任意路径类型必须是命题，而这里同一路径类型有两个可区分的元素。
+\end{proof}
+\begin{remark}
+这个例子展示了宇宙中的“同一对象的对称性”。单价性保留对称性，并把它表示成环路。若只保留每个同构类的一个代表，再将全部同构遗忘，则得到的离散分类集合无法表示这一信息。
+\end{remark}
+
+\section{带基点结构的同一性}
+\begin{definition}[带基点类型]
+定义
+\[
+\U_\bullet=\sum_{A:\U}A.
+\]
+其中的元素写作 $(A,a)$。两个带基点类型之间的带基点等价数据为
+\[
+\Eq_\bullet((A,a),(B,b))
+=\sum_{e:A\simeq B}(e(a)=b).
+\]
+\end{definition}
+\begin{theorem}[带基点结构同一性]
+在单价宇宙中有自然等价
+\[
+((A,a)=(B,b))\simeq
+\sum_{e:A\simeq B}(e(a)=b).
+\]
+\end{theorem}
+\begin{proof}
+依赖和路径公式先给出
+\[
+((A,a)=(B,b))\simeq
+\sum_{p:A=B}(\tr_{\mathsf{El}}(p)(a)=b).
+\]
+用单价性把底 $p$ 换成 $e$。具体地，选 $p=\ua(e)$ 后，单价计算公式把纤维中的传输替换为 $e(a)$。这给出总空间之间的等价，逆向则将 $e$ 变成 $\ua(e)$ 并传回相应纤维路径。
+\end{proof}
+\begin{example}
+取 $(A,a)=(\mathbf2,0)$。其自等价必须固定 $0$，因此交换函数被排除。自等价只剩恒等。这说明附加结构会约束宇宙中的环路；其作用可以直接由上述路径公式读出。
+\end{example}
+
+\section{二元运算的传输}
+\begin{definition}[二元运算结构]
+令 $M(A)=A\times A\to A$，并定义
+\[
+\mathsf{Mag}_{\U}=\sum_{A:\U}M(A).
+\]
+一个元素 $(A,\mu)$ 为一个类型及其二元运算。本节只研究这样的对象之间的路径，尚未定义一般的非可逆同态箭头。
+\end{definition}
+\begin{lemma}[共轭传输公式]
+若 $p:A=B$、$e=\idtoequiv(p)$，则
+\[
+\tr_M(p)(\mu)(b_1,b_2)
+=e\bigl(\mu(e^{-1}b_1,e^{-1}b_2)\bigr).
+\]
+等式是函数之间的路径，右边的逆选取由 $e$ 的等价结构给出。
+\end{lemma}
+\begin{proof}
+对 $p$ 作路径归纳。此时 $A=B$，$e$ 为恒等，传输也是恒等，公式逐点化为 $\mu(b_1,b_2)=\mu(b_1,b_2)$。函数外延性把逐点计算合成函数路径。不同等价逆之间有相容路径，故公式不依赖非本质的逆选择。
+\end{proof}
+\begin{proposition}[运算结构同一性]
+有等价
+\[
+((A,\mu)=(B,\nu))
+\simeq
+\sum_{e:A\simeq B}\prod_{x,y:A}
+\bigl(e(\mu(x,y))=\nu(e(x),e(y))\bigr).
+\]
+\end{proposition}
+\begin{proof}
+依赖和路径公式与单价性把左边变成
+\[
+\sum_{e:A\simeq B}(\tr_M(\ua(e))(\mu)=\nu).
+\]
+由共轭传输公式，纤维要求
+$e\mu(e^{-1}b_1,e^{-1}b_2)=\nu(b_1,b_2)$。
+前复合等价 $e\times e$ 将该函数等式等价地化为
+$e\mu(x,y)=\nu(ex,ey)$。函数外延性给出所述依赖积。
+\end{proof}
+\begin{remark}
+对一般空间，等式见证本身可能有非平凡高阶路径，因此右边必须保留完整的同伦相容数据。若 $A,B$ 是集合，则逐点等式是命题，这些相容见证也成为命题。
+\end{remark}
+
+\section{代数公理作为性质}
+\begin{definition}[集合上的幺半群]
+一个小幺半群包含集合 $A$、元素 $1_A:A$、运算 $\mu:A^2\to A$，以及单位律与结合律
+\[
+\prod_x\mu(1_A,x)=x,\qquad
+\prod_x\mu(x,1_A)=x,
+\]
+\[
+\prod_{x,y,z}\mu(\mu(x,y),z)=\mu(x,\mu(y,z)).
+\]
+\end{definition}
+\begin{lemma}
+固定集合 $A$ 及运算、单位元素后，幺半群公理的数据类型是命题。
+\end{lemma}
+\begin{proof}
+$A$ 是集合，所以每个等式类型是命题。命题的依赖积与有限乘积仍是命题。因此单位律和结合律的见证合在一起也是命题。
+\end{proof}
+\begin{theorem}[幺半群的结构同一性]
+在单价宇宙中，两个小幺半群之间的同一性类型，等价于它们的幺半群同构类型。
+\end{theorem}
+\begin{proof}
+先对承载类型、单位和运算应用依赖和路径公式。承载类型的路径变成等价；单位的传输给出 $e(1_A)=1_B$；运算的传输给出上一节的乘法相容。剩余公理是命题，因此由命题子类型路径定理，不再增加新的路径条件。承载类型是集合，等价就是双射。于是得到的正是保单位、保乘法的双射，即幺半群同构。
+\end{proof}
+\begin{remark}
+这一论证的关键是先区分结构与性质，再逐项计算传输。对含有高阶同伦的承载类型，结合律的见证一般不再是命题；若要定义同伦相容的高阶幺半群，还必须控制更高相容性。单价性本身不会把缺少的相容数据补成定义中的一部分。
+\end{remark}
+\source{本章的单价性是 Riehl 报告定义 4.6 的内部形式。等价归纳、宇宙环路及结构同一性的系统论述见\cite{HoTT,Rijke,RiehlICM}。}

@@ -1,0 +1,10 @@
+\title{闭区间上的 Riemann 积分}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{a<b}，#{f:[a,b]\to\mathbb R} 有界，#{P=(a=x_0<\cdots<x_N=b)} 为有限分割。利用[上下确界](0A37)定义下和与上和}
+##{L(f,P)=\sum_{i=1}^N\inf_{[x_{i-1},x_i]}f\,(x_i-x_{i-1}),\qquad
+U(f,P)=\sum_{i=1}^N\sup_{[x_{i-1},x_i]}f\,(x_i-x_{i-1}).}
+\p{若 #{\sup_P L(f,P)=\inf_P U(f,P)}，称 #{f} Riemann 可积，共同的值记 #{\int_a^b f(x)\,dx}。复值和有限维向量值函数逐实分量积分；约定 #{\int_b^a f=-\int_a^b f}、#{\int_a^a f=0}。}
+\p{等价的可积判据是：对每个 #{\varepsilon>0}，存在分割 #{P} 使 #{U(f,P)-L(f,P)<\varepsilon}。因为加细分割使下和增大、上和减小，两个分割有共同加细，这与上下积分相等等价。可积函数的积分保持线性与次序，并对相邻区间可加；这些性质由共同加细分割后的有限和取极限得到。特别地，#{|\int_a^b f|\le\int_a^b|f|}。}

@@ -1,0 +1,35 @@
+\title{协变族的依赖箭头归纳}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
+
+\p{设 #{C} 为合成预范畴，#{c:C}；以下 #{P} 是余切片上的内部依赖族，并满足协变性条件。}
+
+\p{所需前置：[余切片的截短箭头有向收缩](0634)、[有向收缩底上的截面由基点决定](062E)、[内部截面沿箭头自动自然](062C)、[函数外延性是路径层面的原则](050K)。}
+
+\p{设 #{P} 是余切片 #{c/C} 上的协变族。求值}
+
+##{\operatorname{ev}_{\operatorname{id}_c}:
+\left(\prod_{(x,f):c/C}P(x,f)\right)
+\longrightarrow P(c,\operatorname{id}_c)}
+
+\p{是等价。}
+
+\p{\strong{证明。}
+把命题[余切片的截短箭头有向收缩](0634)的显式有向收缩代入定理[有向收缩底上的截面由基点决定](062E)。为写出构造，记标准余切片箭头为}
+
+##{a_{x,f}:(c,\operatorname{id}_c)\longrightarrow(x,f).}
+
+\p{给定 #{u:P(c,\operatorname{id}_c)}，定义}
+
+##{J_{\to}(u)(x,f)=(a_{x,f})_*u.}
+
+\p{在恒等箭头处，#{a_{c,\operatorname{id}_c}} 为恒等，因此
+#{J_{\to}(u)(c,\operatorname{id}_c)=u}。}
+
+\p{若已有截面 #{s}，对每条 #{a_{x,f}} 使用截面自然性，得到}
+
+##{(a_{x,f})_*s(c,\operatorname{id}_c)=s(x,f).}
+
+\p{依赖函数外延性将它组装成 #{J_{\to}(s(c,\operatorname{id}_c))=s}。于是两种操作互为拟逆，求值为等价。}

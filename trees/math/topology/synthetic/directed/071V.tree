@@ -1,0 +1,23 @@
+\title{有限字折叠保持连接与单位}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 21 章；[引用](0211)}
+
+\p{取集合 #{X}、幺半群 #{M}、函数 #{f:X\to M}，令 #{\widehat f} 为[递归折叠映射](071U)；字上的运算是[连接](071S)。幺半群同态采用[保单位与乘法条件](071K)。}
+
+\p{#{\widehat f} 是幺半群同态，且 #{\widehat f([x])=f(x)}。}
+
+\p{\strong{证明。}单位保持由定义。用第一个字 #{u} 的长度归纳证明
+#{\widehat f(uv)=\widehat f(u)\widehat f(v)}。#{u=\epsilon} 时化为单位律。若 #{u=[x]u'}，则}
+
+##{\begin{aligned}
+\widehat f(uv)
+&=\widehat f(\lbrack x\rbrack(u'v))\\
+&=f(x)\widehat f(u'v)\\
+&=f(x)(\widehat f(u')\widehat f(v))\\
+&=(f(x)\widehat f(u'))\widehat f(v)\\
+&=\widehat f(u)\widehat f(v).
+\end{aligned}}
+
+\p{单字母公式由右单位律给出。}

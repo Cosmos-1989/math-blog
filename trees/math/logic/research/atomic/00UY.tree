@@ -6,10 +6,10 @@
 
 \p{设 #{T} 为可数语言中的完备[度量理论](00UK)，#{p\in S_n(T)}。#{p} 在每个模型中实现，当且仅当 #{p} [拓扑度量孤立](00UW)。}
 
-\p{关键步骤不是一般拓扑事实。若非空逻辑开集 #{\{\varphi>0\}} 包含于[类型距离](00UU)球 #{B(p,\varepsilon)}，把公式缩放到 #{\sup\varphi=1}，置}
+\p{\strong{证明概要。}先证明类型空间的如下估计。若非空逻辑开集 #{\{\varphi>0\}} 包含于[类型距离](00UU)球 #{B(p,\varepsilon)}，把公式缩放到 #{\sup\varphi=1}，置}
 ##{\psi(x)=\sup_y\bigl(\varphi(y)-d(x,y)/\varepsilon\bigr).}
 \p{取 #{\varphi(q_0)=1} 的类型，可得 #{\psi(p)>0}；若 #{\psi(q)>0}，一个近似见证 #{b} 同时满足 #{\varphi(b)>0}、#{d(a,b)<\varepsilon}，其中 #{a\models q}，故 #{q\in B(p,2\varepsilon)}。因此 #{\{\psi>0\}} 是包含 #{p} 且落在大球中的逻辑开集。}
 
-\p{若 #{p} 不孤立，选 #{\varepsilon>0} 使 #{B(p,2\varepsilon)} 不是逻辑邻域。由上一步 #{B(p,\varepsilon)} 无内点。再取 #{0<r<\varepsilon}；闭球 #{\{q:d(p,q)\leq r\}} 在逻辑拓扑下闭且无内点，包含小球 #{B(p,r)}。所以该小球第一纲且度量开，[遗漏定理](00UX)给出遗漏 #{p} 的模型。仅从“不是邻域”直接断言小球闭包无内点是不充分的。}
+\p{若 #{p} 不孤立，选 #{\varepsilon>0} 使 #{B(p,2\varepsilon)} 不是逻辑邻域。由该估计，#{B(p,\varepsilon)} 无内点。再取 #{0<r<\varepsilon}；闭球 #{\{q:d(p,q)\leq r\}} 在逻辑拓扑下闭且无内点，包含小球 #{B(p,r)}。所以该小球第一纲且度量开，[遗漏定理](00UX)给出遗漏 #{p} 的模型。}
 
-\p{反之，孤立时在任意模型内选 #{a_k} 使 #{d(\operatorname{tp}(a_k),p)<\varepsilon_k}。以上确界公式把“下一步的类型更接近 #{p}”和 #{d(a_k,a_{k+1})<\varepsilon_k} 同时实现；取可求和的 #{\varepsilon_k\to0}，模型的完备性给出极限 #{a}，其类型为 #{p}。}
+\p{反之，孤立时在任意模型内选 #{a_k} 使 #{d(\operatorname{tp}(a_k),p)<\varepsilon_k}。以上确界公式把“下一步的类型更接近 #{p}”和 #{d(a_k,a_{k+1})<\varepsilon_k} 同时实现；取可求和的 #{\varepsilon_k\to 0}，模型的完备性给出极限 #{a}，其类型为 #{p}。具体构造及类型距离的性质见 [Ben Yaacov，§4.3–4.5](007G)。}

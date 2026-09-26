@@ -1,0 +1,11 @@
+\title{诱导变换保持测度与遍历性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1–2.2](007J)}
+
+\p{设 #{T} 为概率空间 #{(X,\mu)} 的[保测自同构](00RS)，#{A} 可测且 #{\mu(A)>0}。其[首次返回映射](00S6) #{T_A} 是 #{(A,\mu_A)} 的保测自同构，其中 #{\mu_A(B)=\mu(B)/\mu(A)}。若 #{T} [遍历](00RW)，则 #{T_A} 也遍历。}
+\p{\strong{证明。}在共同满足双向[复归](0A6H)的满测集合上，#{T_A} 的逆为沿 #{T^{-1}} 的首次返回。令 #{A_n=\{x\in A:r_A(x)=n\}}。集合 #{T^nA_n} 两两不交且模零覆盖 #{A}，因为每个返回点有唯一紧邻的前一次访问。于是对可测 #{B\subseteq A}，}
+##{\mu(T_A^{-1}B)=\sum_{n\geq 1}\mu(A_n\cap T^{-n}B)
+=\sum_{n\geq 1}\mu(T^nA_n\cap B)=\mu(B).}
+\p{若 #{B\subseteq A} 模零 #{T_A}-不变，先删去其可数次迭代的零测例外。令 #{C=\bigcup_{j\in\mathbb Z}T^jB}，则 #{C} 模零 #{T}-不变且 #{C\cap A=B} 模零；后一个等式因为同一轨道对 #{A} 的各次访问由 #{T_A} 串联。#{T} 遍历时 #{\mu(C)=0} 或 #{1}，遂有 #{\mu_A(B)=0} 或 #{1}。}

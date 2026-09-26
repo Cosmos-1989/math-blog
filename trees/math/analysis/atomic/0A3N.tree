@@ -1,0 +1,14 @@
+\title{有限和的 Minkowski 不等式}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{1\le p<\infty}，#{a,b\in\mathbb C^n}。则}
+##{\left(\sum_j|a_j+b_j|^p\right)^{1/p}\le
+\left(\sum_j|a_j|^p\right)^{1/p}+
+\left(\sum_j|b_j|^p\right)^{1/p}.}
+\p{\strong{证明。}#{p=1} 时逐项用三角不等式。若 #{p>1}，记左端为 #{S}；#{S=0} 时直接成立。否则以 #{q=p/(p-1)} 应用 [Hölder 不等式](0A3M)，得到}
+##{S^p\le\sum_j(|a_j|+|b_j|)|a_j+b_j|^{p-1}
+\le\left[\left(\sum_j|a_j|^p\right)^{1/p}
++\left(\sum_j|b_j|^p\right)^{1/p}\right]S^{p-1}.}
+\p{除以 #{S^{p-1}} 即得结论。取最大值的版本 #{\max_j|a_j+b_j|\le\max_j|a_j|+\max_j|b_j|} 直接来自三角不等式。}

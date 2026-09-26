@@ -1,0 +1,10 @@
+\title{零阶 Fitting 理想零化模}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks：Fitting 理想](https://stacks.math.columbia.edu/tag/07Z6)}
+
+\p{设 #{M} 为交换环 #{A} 上的有限表示模。则}
+##{\operatorname{Fitt}_0^A(M)\subseteq\operatorname{Ann}_A(M)
+=\{a\in A:am=0\text{ 对每个 }m\in M\}.}
+\p{\strong{证明。}取[有限表示](0ALO) #{A^s\xrightarrow{Q}A^r\to M\to 0}。任取 #{Q} 的 #{r} 列组成方阵 #{B}；定义 #{\operatorname{adj}(B)_{ij}=(-1)^{i+j}\det B_{\widehat j,\widehat i}}，下标表示删去对应行、列。[行列式](01D2)按行或列展开给出 #{B\operatorname{adj}(B)=\det(B)I_r}。因此 #{\det(B)A^r\subseteq\operatorname{im}B\subseteq\operatorname{im}Q}，故 #{\det(B)} 零化商模 #{M}。这些子式生成[零阶 Fitting 理想](01BL)。若 #{s<r}，该理想为零；若 #{r=0}，则 #{M=0}，结论仍成立。}

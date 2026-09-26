@@ -1,0 +1,11 @@
+\title{指数 Toeplitz 矩阵的连续子式}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rietsch，Remark 2.10 的子式计算](01C3)}
+
+\p{令 #{u_{ab}=1/(b-a)!}（#{b\geq a}），并令 #{u_{ab}=0}（#{b<a}）。对 #{i\geq 1,j\geq 0}，连续[子式](01D2)满足}
+##{D_{ij}=\det\left(\frac 1{(j+b-a)!}\right)_{a,b=1}^i
+=\prod_{r=0}^{i-1}\frac{r!}{(j+r)!}.}
+\p{\strong{证明。}从第 #{b} 列提出 #{1/(j+b-1)!} 后，第 #{a} 行剩下首一多项式 #{(x_b)_{a-1}}，其中 #{x_b=j+b-1}，#{(x)_q=x(x-1)\cdots(x-q+1)}，#{(x)_0=1}。当阶乘指标为负时，下降乘积含零因子，仍对应约定的零元。}
+\p{首一多项式基变换为单项式基的矩阵是对角为一的三角矩阵，故余下行列式等于 Vandermonde 行列式 #{\det(x_b^{a-1})=\prod_{b<c}(x_c-x_b)}。后一个恒等式可由相等两列时为零、总次数为 #{i(i-1)/2} 及最高次系数归纳为一得到。此处 #{x_c-x_b=c-b}，故分子为 #{\prod_{r=0}^{i-1}r!}。}

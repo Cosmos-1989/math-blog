@@ -1,0 +1,22 @@
+\title{前复合与后复合都检测可逆性}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 19 章；[RiehlContext](0212)，[RiehlVerity](021F)}
+
+\p{设 #{C} 为合成预范畴，#{a:c\to_C d}。两类测试必须分别量化所有源对象或所有靶对象。}
+
+\p{所需前置：[通过后复合等价定义可逆箭头](061D)、[两侧逆箭头蕴含可逆性](061E)、[由可逆性提取两侧逆箭头](061F)、[四面体给出复合的结合路径](0616)。}
+
+\p{箭头 #{a:c\to d} 可逆，当且仅当对所有 #{x}，后复合}
+
+##{\operatorname{Hom}_C(x,c)\longrightarrow\operatorname{Hom}_C(x,d)}
+
+\p{是等价。它也等价于对所有 #{y}，前复合}
+
+##{\operatorname{Hom}_C(d,y)\longrightarrow\operatorname{Hom}_C(c,y)}
+
+\p{为等价。}
+
+\p{\strong{证明。}
+后复合条件就是已采用的可逆性定义。若 #{a} 可逆，则前复合其逆提供前复合 #{a} 的拟逆。反向，取 #{y=c}，得到 #{b:d\to c} 满足 #{ba=\operatorname{id}_c}；再取 #{y=d}，利用[等价在路径类型上诱导等价](058K)，从 #{(ab)a=a=\operatorname{id}_d a} 推出 #{ab=\operatorname{id}_d}。}

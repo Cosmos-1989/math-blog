@@ -1,0 +1,24 @@
+\title{路径连接的群胚律}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 10 章}
+
+\p{设 #{p:x=y,q:y=z,r:z=w} 是类型 #{A} 中依次可连接的路径。下列等式是路径之间的高阶路径。}
+
+\p{前置：[路径的反向](0540)、[路径连接及右单位计算](0541)。}
+
+\p{存在自然的高阶路径}
+
+##{\begin{gathered}
+\mathsf{refl}_x\cdot p=p,
+\qquad p^{-1}\cdot p=\mathsf{refl}_y,
+\qquad p\cdot p^{-1}=\mathsf{refl}_x,\\
+(p^{-1})^{-1}=p,
+\qquad(p\cdot q)^{-1}=q^{-1}\cdot p^{-1},\\
+(p\cdot q)\cdot r=p\cdot(q\cdot r).
+\end{gathered}}
+
+\p{\strong{证明。}第一式对 #{p} 归纳，在自反情形由计算规则得到自反路径。逆的两条等式同样对 #{p} 归纳，因为自反路径的逆和复合均化简为自反路径。双重逆和复合逆分别对其中的路径逐次归纳。}
+
+\p{结合律可对最后一条路径 #{r:z=w} 归纳。在 #{r=\mathsf{refl}_z} 时，左侧化为 #{p\cdot q}，右侧也化为 #{p\cdot q}，故取自反路径。需要附加参数时，把 #{p,q} 保留在语境中，归纳规则仍然适用。}

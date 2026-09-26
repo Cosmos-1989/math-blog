@@ -1,0 +1,11 @@
+\title{完备度量空间的超积仍完备}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ben Yaacov，§3](007G)}
+
+\p{设 #{(M_i,d_i)} 为非空[完备度量空间](00ET)，直径有统一有限界，#{\mathcal U} 为[超滤子](00CO)。在[度量超积](00UL)的零距离商中，每个 Cauchy 序列都收敛。}
+\p{\strong{证明。}取原序列的子列 #{a^1,a^2,\ldots}，使 #{d_{\mathcal U}(a^j,a^{j+1})<2^{-j}}，并选坐标代表 #{a_i^j}。令}
+##{E_m=\bigcap_{j=1}^m\{i:d_i(a_i^j,a_i^{j+1})<2^{-j}\}\in\mathcal U.}
+\p{这些集合递降。对每个 #{i}，令 #{k(i)=\sup\{m:i\in E_m\}}，无此 #{m} 时取零。若 #{k(i)<\infty}，取 #{b_i=a_i^{\max(1,k(i))}}；若 #{k(i)=\infty}，则各相邻距离被可求和级数控制，由 #{M_i} 完备性取 #{b_i=\lim_j a_i^j}。}
+\p{当 #{i\in E_m} 时，#{k(i)\geq m}，三角不等式给 #{d_i(a_i^m,b_i)\leq\sum_{j\geq m}2^{-j}=2^{1-m}}。故 #{d_{\mathcal U}(a^m,[b_i])\leq 2^{1-m}\to 0}。子列收敛与原序列的 Cauchy 性一起给出整列收敛。此证明同时处理可数完备及可数不完备的超滤子。}

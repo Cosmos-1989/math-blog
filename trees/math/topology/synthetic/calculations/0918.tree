@@ -1,0 +1,20 @@
+\title{单纯对象与合成范畴术语定位}
+\date{2026-09-25}
+\taxon{Outline}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 B}
+
+\p{以下 #{C} 为相应的范畴或合成预范畴，#{c:C}，#{F} 为 #{C} 上的协变族；#{\mathcal S} 表示空间分类对象，#{A,B} 是其中的小空间。标准单形的维数为 #{n}，角索引满足 #{0\le k\le n}。空间中的路径与范畴中的有向箭头不可混同。}
+\ul{
+\li{[单纯集合（simplicial set）](01FX)是 #{\Delta^{\mathrm{op}}\to\operatorname{Set}} 的函子，具有面与退化映射。[单纯空间（simplicial space）](0600)是 #{\Delta^{\mathrm{op}}\to\mathbf{Spaces}} 的函子，此处以双单纯集合建模，两方向角色不同。}
+\li{[角（horn）](0419)#{\Lambda^n_k} 是标准单形所有余维一面中除第 #{k} 面以外的面的并，编码部分数据。[Kan 复形（Kan complex）](0422)填充所有角；[Kan 纤维化（Kan fibration）](0421)对角包含满足右提升性质，提升底单形上已给的部分数据。}
+\li{[模型范畴（model category）](0429)有弱等价、余纤维化、纤维化及分解和提升公理。[Reedy 纤维性（Reedy fibrancy）](0605)要求逐维到匹配对象的映射为纤维化。}
+\li{[扩张类型（extension type）](060P)为固定边界取值的形状映射类型，是限制映射的纤维。[Segal 条件（Segal condition）](0612)要求到可复合脊线的限制为等价，因而复合填充数据可缩。}
+\li{[Rezk 完备性（Rezk completeness）](061H)把对象路径比较到可逆箭头的映射规定为等价。[群胚型（groupoidal type）](061K)要求路径到一般箭头为等价；仍可具有任意高阶同伦，并不等于集合。}
+\li{[协变族（covariant family）](0622)要求给定底箭头和起点纤维元素后的提升空间可缩。[左纤维化作为协变族的外部模型（left fibration）](0622)是其外部模型，每个底单形的提升由初始顶点的纤维数据决定到可缩选择。}
+\li{[可表族（representable family）](062N)是 #{x\mapsto\operatorname{Hom}_C(c,x)} 或逆变对偶。[余切片范畴（coslice category）](0630)#{c/C=\sum_x\operatorname{Hom}_C(c,x)} 的初始对象为 #{\operatorname{id}_c}。}
+\li{[箭头归纳（arrow induction）](0635)说 #{c/C} 上协变族的截面由恒等箭头处的值决定到可缩选择。[Yoneda 引理（Yoneda lemma）](063B)通过恒等箭头处求值，将从可表族到协变族 #{F} 的自然变换空间等价于 #{F(c)}。}
+\li{[有向单价性（directed univalence）](0704)比较空间分类对象中的箭头与函数：#{\operatorname{Hom}_{\mathcal S}(A,B)\simeq(A\to B)}。}
+\li{[结构同一性原理的运算实例（structure identity principle）](05CL)用保持结构的等价描述结构对象间路径，依赖普通单价性。[结构同态原理的函子代数实例（structure homomorphism principle）](071D)用保持结构的一般函数描述箭头，需要相关结构构造的协变性。}
+\li{[加权极限（weighted limit）](080H)用权重指定锥的参数化方式，单纯权重还记录高阶相容性。}
+}

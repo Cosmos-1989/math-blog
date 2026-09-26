@@ -1,0 +1,20 @@
+\title{函数路径作用保持单位、逆与连接}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 10 章}
+
+\p{设 #{f:A\to B,g:B\to C}，#{p:x=y,q:y=z} 是 #{A} 中路径；#{\operatorname{id}} 为恒等函数。}
+
+\p{前置：[函数对路径的作用](0544)、[路径连接的群胚律](0542)、[函数外延性是路径层面的原则](050K)。}
+
+\p{有}
+
+##{\begin{gathered}
+\mathsf{ap}_{\operatorname{id}}(p)=p,
+\qquad\mathsf{ap}_{g\circ f}(p)=\mathsf{ap}_g(\mathsf{ap}_f(p)),\\
+\mathsf{ap}_f(p\cdot q)=\mathsf{ap}_f(p)\cdot\mathsf{ap}_f(q),
+\qquad\mathsf{ap}_f(p^{-1})=\mathsf{ap}_f(p)^{-1}.
+\end{gathered}}
+
+\p{\strong{证明。}对每条待处理的路径归纳。第一、第二及第四式在 #{p=\mathsf{refl}} 处都是自反路径。第三式可先对 #{q} 归纳；在 #{q=\mathsf{refl}} 时两侧化简为 #{\mathsf{ap}_f(p)}。由路径归纳与函数外延性，所得关系在全部参数中相容。}

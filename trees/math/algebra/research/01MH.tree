@@ -4,6 +4,6 @@
 \author{author}
 \meta{source}{[Stacks，00NS 的提升步骤](https://stacks.math.columbia.edu/tag/00NS)}
 
-\p{证明[模正则元素上的自由性提升](01MG)。设 #{A} Noether 局部，#{M} 有限生成，#{x\in\mathfrak m} 在 #{M} 上单射，且 #{M/xM\cong(A/xA)^r}。提升一组基得到映射 #{f:A^r\to M}。其像 #{L} 满足 #{M=L+xM}，由 [Nakayama 引理](01M4)得 #{f} 满。}
+\p{设 #{(A,\mathfrak m)} 为 [Noether](00D1)[局部环](00CX)，#{M} 是[有限生成模](0128)，#{x\in\mathfrak m} 在 #{M} 上的乘法单射，且 #{M/xM\cong(A/xA)^r}。提升一组[自由模](0137)的基得到映射 #{f:A^r\to M}。其像 #{L} 满足 #{M=L+xM}，由 [Nakayama 引理](01M4)得 #{f} 满。以下证明 #{f} 单射，从而得到[自由性提升](01MG)。}
 \p{令 #{K=\ker f}，它因 Noether 性有限生成。模掉 #{x} 后 #{\bar f} 是同构，故任何 #{v\in K} 都可写成 #{v=xw}，#{w\in A^r}。又 #{0=f(v)=xf(w)}，由 #{x} 在 #{M} 上单射，#{f(w)=0}，即 #{w\in K}。所以 #{K=xK\subseteq\mathfrak mK}，再用 Nakayama 得 #{K=0}。}
-\p{这里没有把张量积当成左正合；核的控制来自 #{M} 上的非零因子条件，正是不能省略的地方。}
+\p{关系模等式 #{K=xK} 使用了 #{x} 在 #{M} 上乘法单射这一假设。}

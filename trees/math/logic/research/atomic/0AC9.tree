@@ -1,0 +1,13 @@
+\title{事件零测商是完备度量空间}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ben Yaacov，§3.6](007G)}
+
+\p{设 #{(\Omega,\mathcal A,\mu)} 是[概率空间](00Q3)。在事件族上令 #{A\sim B} 当且仅当 #{\mu(A\triangle B)=0}，其中 #{A\triangle B=(A\setminus B)\cup(B\setminus A)}。则[商集合](00G2)上的 #{d([A],[B])=\mu(A\triangle B)} 是[完备度量](00ET)。}
+\p{\strong{证明。}包含关系 #{A\triangle C\subseteq(A\triangle B)\cup(B\triangle C)} 和测度次可加性给出三角不等式，因此零距离是等价关系，且距离与代表元无关。对称性与非负性直接成立，商集合上的零距离只发生在同一点。}
+\p{给定该度量中的 Cauchy 序列 #{[A_n]}，取子列 #{A_{n_k}} 使 #{\mu(A_{n_k}\triangle A_{n_{k+1}})<2^{-k}}。令}
+##{A=\bigcup_{m\geq 1}\bigcap_{k\geq m}A_{n_k}.}
+\p{集合 #{A} 可测。如果一点在所有 #{j\geq k} 时都不属于 #{A_{n_j}\triangle A_{n_{j+1}}}，则从第 #{k} 项开始它的成员状态不变，因而属于 #{A} 当且仅当属于 #{A_{n_k}}。所以}
+##{A\triangle A_{n_k}\subseteq\bigcup_{j\geq k}(A_{n_j}\triangle A_{n_{j+1}}),\qquad d([A],[A_{n_k}])\leq\sum_{j\geq k}2^{-j}\longrightarrow 0.}
+\p{子列收敛与原序列的 Cauchy 性结合，由三角不等式推出整个序列收敛到 #{[A]}。}

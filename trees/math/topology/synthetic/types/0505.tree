@@ -1,0 +1,17 @@
+\title{依赖积的引入、消去与计算规则}
+\date{2026-09-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 9 章；[引用](0217)；[引用](0218)；[引用](0219)；[引用](021A)}
+
+\p{前置：[依赖类型的语境与判断](0500)、[依赖类型的代入规则](0502)、[定义相等与路径相等的区别](0503)。}
+
+\p{若 #{\Gamma\vdash A} 且 #{\Gamma,x:A\vdash B(x)}，则有类型 #{\prod_{x:A}B(x)}。给定 #{\Gamma,x:A\vdash b(x):B(x)}，可形成}
+
+##{\lambda x.b(x):\prod_{x:A}B(x).}
+
+\p{若 #{f:\prod_xB(x)}、#{a:A}，则有 #{f(a):B(a)}。计算规则为}
+
+##{(\lambda x.b(x))(a)\equiv b(a).}
+
+\p{当 #{B} 不依赖 #{x} 时，记为函数类型 #{A\to B}。}

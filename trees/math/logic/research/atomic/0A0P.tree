@@ -1,0 +1,12 @@
+\title{上单位三角矩阵群是幂零群}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tent，§3](007M)；标准 BN 对的上单位三角子群}
+
+\p{设 #{K} 为[域](00D0)，#{n\geq 2}。在[矩阵乘法](00GK)下，对角线全为 #{1} 的上三角矩阵构成[一般线性群](00DD)的[子群](00BA) #{U}。它是[幂零群](00BP)，上中心列至多 #{n-1} 步到达 #{U}。}
+\p{\strong{证明。}令 #{A_r} 为矩阵空间中满足 #{a_{ij}=0} 除非 #{j-i\geq r} 的矩阵集合，#{r\geq 1}。矩阵乘法公式给出 #{A_rA_s\subseteq A_{r+s}}，而 #{A_n=0}。设 #{U_r=I_n+A_r}，则 #{U_1=U}、#{U_n=\{I_n\}}；有限几何和}
+##{(I_n+A)^{-1}=I_n-A+A^2-\cdots+(-A)^{n-1}}
+\p{说明每个 #{U_r} 对取逆和乘法封闭。若 #{a=I_n+A\in U_r}、#{b=I_n+B\in U_s}，则 #{ab-ba=AB-BA\in A_{r+s}}，所以}
+##{aba^{-1}b^{-1}-I_n=(ab-ba)a^{-1}b^{-1}\in A_{r+s}.}
+\p{最后的包含使用 #{A_tA_1\subseteq A_{t+1}\subseteq A_t}。记 #{Z_i} 为 #{U} 的上中心列。#{U_n=1\subseteq Z_0}；若 #{U_{r+1}\subseteq Z_i}，则 #{U_r} 与 #{U} 的交换子属于 #{U_{r+1}}，故 #{U_r\subseteq Z_{i+1}}。归纳得到 #{U=U_1\subseteq Z_{n-1}}。}

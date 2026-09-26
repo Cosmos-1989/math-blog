@@ -1,0 +1,279 @@
+\chapter{协变族与可表族}
+\section{依赖箭头及其提升}
+\begin{definition}[依赖箭头]
+设 $E:B\to\mathsf{Type}$ 是有向类型族，总空间记为 $\widetilde E=\sum_{x:B}E(x)$。对 $f:x\to_B y$、$u:E(x)$ 和 $v:E(y)$，定义
+\[
+\Hom_E^f(u,v)
+\]
+为 $\widetilde E$ 中从 $(x,u)$ 到 $(y,v)$ 且投影为 $f$ 的箭头类型。等价地，它是一条沿 $f$ 的依赖形状函数，并固定两个端点。
+\end{definition}
+\begin{definition}[固定源的提升类型]
+定义
+\[
+\mathsf{Lift}_E(f,u)=\sum_{v:E(y)}\Hom_E^f(u,v).
+\]
+它保留提升的终点与整条提升箭头。若不固定源，则沿 $f$ 的所有依赖函数构成 $\prod_{t:\Delta^1}E(f(t))$，求源映射为
+\[
+\ev_0:\prod_{t:\Delta^1}E(f(t))\to E(x).
+\]
+\end{definition}
+\begin{definition}[协变族]\label{def:covariant}
+称 $E$ 为协变族，若对所有 $f:x\to y$、$u:E(x)$，类型 $\mathsf{Lift}_E(f,u)$ 可缩，且这一条件在任意参数语境中成立。等价地，上述 $\ev_0$ 是内部等价。
+\end{definition}
+\begin{remark}
+协变性要求终点由源和底箭头确定到可缩选择。它没有要求反向提升一个任意终点。因此协变族可以沿不可逆箭头产生非可逆函数，与普通空间族沿路径的可逆传输有根本区别。
+\end{remark}
+\begin{example}[集合值函子的元素范畴]
+若 $F:\mathcal C\to\Set$，元素范畴 $\int F\to\mathcal C$ 中，给定 $u\in F(x)$ 和 $f:x\to y$ 后，唯一提升为
+\[
+(x,u)\xrightarrow{f}(y,F(f)u).
+\]
+其神经给出离散协变族。这里的“唯一”在高阶版本中替换为“提升类型可缩”。
+\end{example}
+
+\section{协变作用及其基本计算}
+\begin{definition}[沿箭头的作用]
+若 $E$ 协变，取提升类型的中心
+\[
+(f_*u,\ell_{f,u}):\mathsf{Lift}_E(f,u).
+\]
+由此得到函数 $f_*:E(x)\to E(y)$，并有典范提升箭头 $\ell_{f,u}$。
+\end{definition}
+\begin{proposition}[恒等箭头的作用]
+对 $u:E(x)$，有 $(\id_x)_*u=u$。
+\end{proposition}
+\begin{proof}
+总空间的恒等箭头提供提升 $(u,\id_{(x,u)})$。它与可缩提升类型的中心有路径，投影到终点得到所述等式。
+\end{proof}
+\begin{lemma}[可缩总空间的纤维公式]\label{lem:singleton-fiber}
+若 $\sum_{v:V}P(v)$ 可缩，且指定中心 $(v_0,p_0)$，则对每个 $v$，有等价
+\[
+(v_0=v)\simeq P(v),
+\qquad q\longmapsto\tr_P(q)(p_0).
+\]
+\end{lemma}
+\begin{proof}
+该函数在总空间上给出一个保底映射
+\[
+\sum_{v:V}(v_0=v)\longrightarrow\sum_{v:V}P(v).
+\]
+两边都可缩，所以任意这样的函数都是等价：选中心作常值拟逆，并使用两边的收缩给出逆同伦。由逐纤维等价判据，每个纤维映射均为等价。
+\end{proof}
+\begin{proposition}[依赖箭头的端点公式]\label{prop:dependent-arrow}
+对协变族有等价
+\[
+\Hom_E^f(u,v)\simeq(f_*u=v).
+\]
+\end{proposition}
+\begin{proof}
+将引理\ref{lem:singleton-fiber}用于可缩类型
+$\sum_v\Hom_E^f(u,v)$，中心为 $(f_*u,\ell_{f,u})$。所得等价的逆给出这里所写方向。它在标准提升处对应常路径。
+\end{proof}
+\begin{remark}
+同一公式也说明，固定终点后提升类型未必可缩。其同伦类型等于纤维内两个点之间的路径空间，可能有非平凡高阶同伦。协变条件可缩的是把终点一并允许变化的总提升类型。
+\end{remark}
+
+\section{协变族的纤维是群胚}
+\begin{theorem}[纤维群胚性]\label{thm:covariant-groupoid}
+若 $E$ 协变，则每个纤维 $E(x)$ 在有向方向上是群胚，即
+\[
+(u=v)\longrightarrow\Hom_{E(x)}(u,v)
+\]
+是等价。
+\end{theorem}
+\begin{proof}
+纤维中的箭头恰好是位于底中恒等箭头上方的依赖箭头。于是
+\[
+\sum_{v:E(x)}\Hom_{E(x)}(u,v)
+=\mathsf{Lift}_E(\id_x,u)
+\]
+可缩。标准点为恒等提升 $(u,\id_u)$。引理\ref{lem:singleton-fiber}给出
+$(u=v)\simeq\Hom_{E(x)}(u,v)$，其函数是从恒等箭头沿端点路径传输，恰为路径归纳定义的典范比较。
+\end{proof}
+\begin{example}
+设底为单位类型。协变族就是一个有向类型 $A$，使每个基点箭头总空间 $\sum_b\Hom_A(a,b)$ 可缩。上一证明表明这等价于 $A$ 的箭头就是路径。因此协变族在一点上的纤维可以是任意空间，并不局限于集合。
+\end{example}
+\begin{remark}
+在这里，群胚性是从协变性的全语境提升条件推出来的。仅在外部顶点上选择一个集合纤维，再规定某些传输函数，不能保证已经构造了这个高阶族。
+\end{remark}
+
+\section{族映射的自动自然性}
+\begin{definition}[纤维映射]
+设 $E,F$ 是同一底 $B$ 上的协变族。一个纤维映射为内部项
+\[
+\alpha:\prod_{x:B}(E(x)\to F(x)).
+\]
+它在总空间上给出保底函数 $(x,u)\mapsto(x,\alpha_xu)$。
+\end{definition}
+\begin{theorem}[自动自然性]\label{thm:automatic-naturality}
+对 $f:x\to y$、$u:E(x)$，有自然比较
+\[
+\alpha_y(f_*^E u)=f_*^F(\alpha_xu).
+\]
+所有较高自然性由同一内部项给出。
+\end{theorem}
+\begin{proof}
+将 $E$ 中的典范提升 $\ell_{f,u}$ 后复合总空间映射，得到 $F$ 中位于 $f$ 上方、源为 $\alpha_xu$、终点为 $\alpha_y(f_*^Eu)$ 的提升。这个提升与 $F$ 中的中心提升位于同一可缩类型，因此有比较。投影到终点给出公式。因为映射作用于任意参数中的形状函数，比较也随参数变化；更高自然性由提升类型中的更高唯一性给出。
+\end{proof}
+\begin{example}[截面的自然性]
+取 $E$ 为常值单位族。一个纤维映射 $\one\to F(x)$ 等价于截面 $s:\prod_xF(x)$。自动自然性成为
+\[
+f_*s(x)=s(y).
+\]
+这不是对任意离散选点族成立的结论，而是对定义在有向底上的内部截面成立的结论。
+\end{example}
+\begin{remark}
+在普通集合论里，$\prod_{x\in\Ob\mathcal C}(E(x)\to F(x))$ 包含许多不自然的分量族。这里的依赖积在单纯语义中解释，它保留外方向中的相容。自动自然性依赖这一解释，不能从符号外观上的相似性推出。
+\end{remark}
+
+\section{具有收缩箭头的底}
+\begin{definition}[有向收缩]
+设 $K$ 为一个有向类型，$k_0:K$。一个有向收缩是内部函数
+\[
+H:K\times\Delta^1\to K
+\]
+满足 $H(k,0)=k_0$、$H(k,1)=k$，并且 $H(k_0,t)=k_0$。记其在 $k$ 处的箭头为 $a_k:k_0\to k$。
+\end{definition}
+\begin{theorem}[收缩底上的截面]\label{thm:directed-contraction}
+若 $K$ 有上述收缩，$E:K\to\mathsf{Type}$ 协变，则求值
+\[
+\ev_{k_0}:\left(\prod_{k:K}E(k)\right)\to E(k_0)
+\]
+是等价。
+\end{theorem}
+\begin{proof}
+给定 $u:E(k_0)$，定义 $s^u(k)=(a_k)_*u$。这是内部项，因为 $H$ 与协变作用都在参数 $k$ 中定义。在 $k_0$ 处，$a_{k_0}$ 为恒等，故 $s^u(k_0)=u$。
+
+反过来，给定截面 $s$，截面自然性用于 $a_k$ 得到
+$(a_k)_*s(k_0)=s(k)$。函数外延性给出 $s^{s(k_0)}=s$。因此构造出的函数与求值互为拟逆，求值为等价。
+\end{proof}
+\begin{example}[单纯形的初始顶点]
+在坐标 $\Delta^n=\{1\ge t_1\ge\cdots\ge t_n\ge0\}$ 中，
+\[
+H((t_1,\ldots,t_n),r)
+=(r\wedge t_1,\ldots,r\wedge t_n)
+\]
+给出从初始顶点 $(0,\ldots,0)$ 到恒等的有向收缩。它使用形状区间中的交运算，并保持坐标次序。因此单纯形上的协变族的截面由初始顶点的值决定到等价。
+\end{example}
+
+\section{协变作用的复合律}
+\begin{proposition}[三角形中的复合传输]
+设 $\sigma:\Delta^2\to B$ 的边为 $f:x\to y$、$g:y\to z$、$h:x\to z$。对协变族 $E$，有
+\[
+h_*u=g_*(f_*u).
+\]
+\end{proposition}
+\begin{proof}
+拉回得到 $\Delta^2$ 上的协变族。由上一节的收缩定理，在初始顶点指定 $u$ 后，存在截面且截面类型的相应纤维可缩。记三个顶点的值为 $u,v,w$。在三条边上应用截面自然性，得到
+\[
+v=f_*u,\qquad w=g_*v,\qquad w=h_*u.
+\]
+拼接这些等式即得公式。
+\end{proof}
+\begin{proposition}[函子性]
+若底 $B$ 是预范畴，则协变族的作用满足
+\[
+(g\circ f)_*u=g_*(f_*u),
+\qquad(\id_x)_*u=u.
+\]
+较高复合相容来自相应单纯形上的同一截面。
+\end{proposition}
+\begin{proof}
+取表示 $g\circ f$ 的所选三角形，应用上一命题。单位已证明。对任意 $n$-单形，固定初始顶点后的截面类型可缩，故各种沿边链得到的比较都来自同一个相容单形，且具有所需的高阶唯一性。
+\end{proof}
+
+\section{拉回与总空间}
+\begin{proposition}[协变性对拉回稳定]
+若 $E$ 在 $B$ 上协变，$k:A\to B$，则 $k^*E$ 在 $A$ 上协变。
+\end{proposition}
+\begin{proof}
+沿 $f:a\to a'$ 的提升类型就是原族沿 $k(f)$ 的提升类型，源元素相同。因此其可缩性直接继承。这个识别与参数替换相容。
+\end{proof}
+\begin{theorem}[协变族的总空间]
+若 $B$ 为预范畴，$E$ 为协变族，则 $\widetilde E=\sum_xE(x)$ 为预范畴。如果 $B$ 为合成范畴，则 $\widetilde E$ 也为合成范畴。
+\end{theorem}
+\begin{proof}
+固定一个 $\Delta^n\to B$ 后，它在 $\widetilde E$ 中的提升等价于拉回族的截面。单纯形上的收缩定理表明，提升由初始顶点的元素决定到等价。对脊柱 $I[n]$，依次应用每条边的提升可缩性，也得到同样的初始元素描述。因此图
+\[
+\begin{tikzcd}
+\widetilde E^{\Delta^n}\ar[r]\ar[d]&\widetilde E^{I[n]}\ar[d]\\
+B^{\Delta^n}\ar[r]&B^{I[n]}
+\end{tikzcd}
+\]
+逐纤维比较后由同一个初始纤维参数化。底部是等价，所以顶部也是等价，给出预范畴条件。
+
+对于完备性，先观察总空间箭头若可逆，其底箭头必可逆，因为投影保持合成。反之，若底箭头 $f$ 可逆，则 $f_*$ 由 $f^{-1}_*$ 给出拟逆。位于 $f$ 上方的箭头等价于纤维路径 $f_*u=v$，故可用 $f^{-1}$ 的提升和这条路径构造逆箭头，两侧逆律由协变复合律与纤维群胚性得到。
+
+于是可逆箭头类型等价于
+\[
+\sum_{f:x\cong_B y}(f_*u=v).
+\]
+$B$ 的完备性将 $f$ 替换为路径 $p:x=y$。对这样的路径，$f_*$ 与普通族传输相同，这由路径归纳及恒等作用律证明。所得类型正是
+\[
+\sum_{p:x=y}(\tr_E(p)(u)=v),
+\]
+而依赖和路径公式将它识别为 $(x,u)=(y,v)$。因此总空间完备。
+\end{proof}
+
+\section{三角形纤维与固定复合}
+\begin{definition}[固定长边的三角形]
+在预范畴 $C$ 中，以 $\mathsf{Tri}(f,g;h)$ 表示三条边分别为 $f,g,h$ 的三角形类型。于是
+\[
+\Comp_C(f,g)=\sum_h\mathsf{Tri}(f,g;h).
+\]
+\end{definition}
+\begin{lemma}\label{lem:triangle-path}
+有自然等价
+\[
+\mathsf{Tri}(f,g;h)\simeq(g\circ f=h).
+\]
+特别地，$\mathsf{Tri}(\id_c,h;k)\simeq(h=k)$。
+\end{lemma}
+\begin{proof}
+将引理\ref{lem:singleton-fiber}用于可缩的合成数据总空间，其中心为 $(g\circ f,\sigma_{f,g})$。第二式再使用单位律。该等价保留完整的三角形同伦类型，不仅识别它的连通分支。
+\end{proof}
+
+\section{可表族的协变性}
+\begin{definition}[协变可表族]
+固定预范畴 $C$ 的对象 $c$，定义
+\[
+R_c(x)=\Hom_C(c,x).
+\]
+其总空间为 $\sum_x\Hom_C(c,x)$。
+\end{definition}
+\begin{theorem}[可表族协变]\label{thm:representable-covariant}
+$R_c$ 是协变族。沿 $g:x\to y$ 的作用等于后复合
+\[
+g_*f=g\circ f.
+\]
+\end{theorem}
+\begin{proof}
+固定 $f:c\to x$。沿 $g$ 的一个提升是一个平方，左边为 $\id_c$，下边为 $f$，右边为 $g$，上边为某条 $h:c\to y$。平方沿从左下到右上的对角线分成两个三角形。以 $k:c\to y$ 记对角线，提升总类型为
+\[
+\sum_h\sum_k
+\mathsf{Tri}(f,g;k)\times
+\mathsf{Tri}(\id_c,h;k).
+\]
+这个等价来自形状的推合分解
+$\Delta^1\times\Delta^1=\Delta^2\cup_{\Delta^1}\Delta^2$：到 $C$ 的映射对应两个在对角线上相符的三角形，边界条件逐项保留。
+
+由引理\ref{lem:triangle-path}，第二个因子等价于 $h=k$。重新排列依赖和，得到
+\[
+\sum_k\mathsf{Tri}(f,g;k)\times
+\left(\sum_h(h=k)\right).
+\]
+括号内可缩，可将它消去，余下 $\Comp_C(f,g)$ 也可缩。故固定源的提升类型可缩，证明协变性。该比较在全部参数中成立，因为它只用形状推合、内部 Segal 条件与依赖类型的等价运算。
+
+标准合成中心给出上边 $g\circ f$，所以协变作用与后复合相同，比较由提升类型的可缩性给出。
+\end{proof}
+\begin{proposition}[固定终点的平方公式]\label{prop:coslice-square}
+固定 $f:c\to x$、$h:c\to y$ 与 $g:x\to y$，上述平方类型等价于
+\[
+(g\circ f=h).
+\]
+\end{proposition}
+\begin{proof}
+保持 $h$ 固定，三角分解给出
+$\sum_k\mathsf{Tri}(f,g;k)\times(h=k)$。沿 $h=k$ 消去 $k$，得到 $\mathsf{Tri}(f,g;h)$，再用引理\ref{lem:triangle-path}。
+\end{proof}
+\source{本章给出了协变族、自动自然性及可表族协变性的具体推导，对应\cite[第6节]{RiehlICM}。协变族在单纯空间语义中称为左纤维化，术语中的“左”对应固定初始端点的提升条件。}

@@ -1,0 +1,22 @@
+\title{小幺半群的类型论编码}
+\date{2026-09-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 12 章；[引用](0217)；[引用](0218)；[引用](0211)}
+
+\p{设 #{\mathcal U} 是宇宙。普通 [幺半群](00II) 的集合、单位和乘法可打包为依赖和；相应公理的类型用于区分结构数据与性质见证。}
+
+\p{前置：[幺半群](00II)、[集合是零截断类型](05Z2)、[类型宇宙与解码](05C0)、[依赖和的引入、投影与消去规则](0507)。}
+
+\p{一个小幺半群包含集合 #{A}、元素 #{1_A:A}、运算 #{\mu:A^2\to A}，以及单位律与结合律}
+
+##{\prod_x\mu(1_A,x)=x,\qquad
+\prod_x\mu(x,1_A)=x,}
+
+##{\prod_{x,y,z}\mu(\mu(x,y),z)=\mu(x,\mu(y,z)).}
+
+\p{若把两条单位律与结合律的公理类型的乘积记为 #{\mathsf{MonAx}(A,u,\mu)}，则小幺半群的结构类型写成}
+
+##{\mathsf{Mon}_{\mathcal U}=\sum_{A:\mathcal U}\sum_{s:\mathsf{isSet}(A)}\sum_{u:A}\sum_{\mu:A\times A\to A}\mathsf{MonAx}(A,u,\mu).}
+
+\p{这里 #{s} 记录集合性的证明，#{u} 与 #{\mu} 是结构数据；公理的证明无关性另行证明。}

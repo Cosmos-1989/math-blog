@@ -1,0 +1,292 @@
+\chapter{箭头归纳与合成 Yoneda 引理}
+\section{余切片中的对象和箭头}
+\begin{definition}[余切片]
+对预范畴 $C$ 及对象 $c$，定义
+\[
+c/C=\sum_{x:C}\Hom_C(c,x).
+\]
+对象为以 $c$ 为源的箭头。把对象 $(x,f)$ 简写为 $f:c\to x$。投影 $\pi:c/C\to C$ 为可表协变族的总空间映射。
+\end{definition}
+\begin{proposition}
+$c/C$ 是预范畴；若 $C$ 完备，则 $c/C$ 完备。其映射类型满足
+\[
+\Hom_{c/C}((x,f),(y,h))
+\simeq\sum_{g:\Hom_C(x,y)}(g\circ f=h).
+\]
+\end{proposition}
+\begin{proof}
+总空间的预范畴性与完备性来自可表族的协变性及上一章的总空间定理。映射类型先按投影到 $C$ 的箭头 $g$ 分解，再对每个 $g$ 使用固定终点平方公式\ref{prop:coslice-square}。
+\end{proof}
+\begin{example}
+在普通范畴中，$(g,q)$ 就是交换三角形
+\[
+\begin{tikzcd}
+&c\ar[dl,"f"']\ar[dr,"h"]&\\
+x\ar[rr,"g"']&&y.
+\end{tikzcd}
+\]
+在高阶范畴中，$q:g\circ f=h$ 属于映射空间的路径类型；它连同自己的高阶路径都是余切片态射结构的一部分。
+\end{example}
+
+\section{恒等箭头的初始性}
+\begin{definition}[初始对象]
+预范畴 $B$ 中的对象 $i$ 称为初始对象，若对每个 $b:B$，类型 $\Hom_B(i,b)$ 可缩。其可缩性须作为随 $b$ 变化的内部项给出。
+\end{definition}
+\begin{proposition}[余切片的初始对象]\label{prop:coslice-initial}
+$(c,\id_c)$ 是 $c/C$ 的初始对象。
+\end{proposition}
+\begin{proof}
+对于 $(y,h)$，余切片映射公式给出
+\[
+\Hom_{c/C}((c,\id_c),(y,h))
+\simeq\sum_{g:c\to y}(g\circ\id_c=h).
+\]
+单位律把右边化为 $\sum_g(g=h)$，这是以 $h$ 为终点的路径总空间，因而可缩。其标准中心对应三角形 $(h,\text{单位律})$。
+\end{proof}
+\begin{remark}
+初始性是对整个映射类型的可缩性作要求。只知道在同伦范畴中有唯一态射，意味着映射空间的连通分支只有一个，不能排除非平凡的高阶同伦；这比初始性弱。
+\end{remark}
+
+\section{余切片的显式有向收缩}
+\begin{proposition}[基于恒等箭头的收缩]\label{prop:coslice-contraction}
+余切片 $c/C$ 有一个从常值 $(c,\id_c)$ 到恒等函数的有向收缩。
+\end{proposition}
+\begin{proof}
+把 $f:c\to x$ 写成形状函数 $f:\Delta^1\to C$。对 $t:\Delta^1$，定义截短箭头
+\[
+f_t(s)=f(s\wedge t).
+\]
+它的源为 $f(0)=c$，终点为 $f(t)$，所以给出对象 $(f(t),f_t):c/C$。当 $t=0$ 时，$f_t$ 为恒等箭头；当 $t=1$ 时，$f_t=f$。这给出所需的形状函数
+\[
+H:(c/C)\times\Delta^1\longrightarrow c/C.
+\]
+若 $f=\id_c$，全部截短箭头仍为恒等，因此基点在收缩中固定。构造只使用形状的交运算与函数求值，所以它随 $f$ 及所有高阶参数相容。
+\end{proof}
+\begin{example}[收缩的平方]
+连接 $\id_c$ 与 $f$ 的余切片箭头由平方
+\[
+(s,t)\longmapsto f(s\wedge t)
+\]
+表示。其左边与下边均为常值 $c$，右边与上边都是 $f$。将平方三角剖分，就得到上一节初始性中的标准三角形。
+\end{example}
+\begin{remark}
+此收缩是有向收缩。一般不存在反向的余切片箭头 $f\to\id_c$，也不能据此断言余切片的对象空间作为普通同伦类型可缩。收缩使用的区间是外形状 $\Delta^1$，不是同一性类型的路径区间。
+\end{remark}
+
+\section{依赖箭头归纳}
+\begin{theorem}[箭头归纳]\label{thm:arrow-induction}
+设 $P$ 是余切片 $c/C$ 上的协变族。求值
+\[
+\ev_{\id_c}:
+\left(\prod_{(x,f):c/C}P(x,f)\right)
+\longrightarrow P(c,\id_c)
+\]
+是等价。
+\end{theorem}
+\begin{proof}
+把命题\ref{prop:coslice-contraction}的显式有向收缩代入定理\ref{thm:directed-contraction}。为写出构造，记标准余切片箭头为
+\[
+a_{x,f}:(c,\id_c)\longrightarrow(x,f).
+\]
+给定 $u:P(c,\id_c)$，定义
+\[
+J_{\to}(u)(x,f)=(a_{x,f})_*u.
+\]
+在恒等箭头处，$a_{c,\id_c}$ 为恒等，因此
+$J_{\to}(u)(c,\id_c)=u$。
+
+若已有截面 $s$，对每条 $a_{x,f}$ 使用截面自然性，得到
+\[
+(a_{x,f})_*s(c,\id_c)=s(x,f).
+\]
+依赖函数外延性将它组装成 $J_{\to}(s(c,\id_c))=s$。于是两种操作互为拟逆，求值为等价。
+\end{proof}
+\begin{proposition}[箭头归纳的唯一性]
+给定 $u:P(c,\id_c)$，带有比较 $s(c,\id_c)=u$ 的全部截面 $s$ 构成可缩类型。
+\end{proposition}
+\begin{proof}
+该类型正是等价 $\ev_{\id_c}$ 在 $u$ 处的同伦纤维。等价的定义保证它可缩。
+\end{proof}
+\begin{remark}
+存在性部分允许把恒等箭头处的数据沿标准余切片箭头推出去。唯一性部分说明所有这样延拓的比较也被控制。后一部分对 Yoneda 引理尤为重要，因为 Yoneda 要求的是类型的等价，而不只是构造一个从右到左的函数。
+\end{remark}
+
+\section{与路径归纳的比较}
+\begin{proposition}[两类基点总空间]
+路径归纳使用的总空间为
+\[
+\sum_{x:A}(a=x),
+\]
+它在同伦意义下可缩。箭头归纳使用的总空间为
+\[
+\sum_{x:C}\Hom_C(c,x),
+\]
+它具有以恒等箭头为起点的有向收缩。
+\end{proposition}
+\begin{proof}
+第一项的收缩由同一性类型的归纳规则给出。第二项的有向收缩已经显式构造。第一种收缩沿可逆路径传输任意依赖族；第二种收缩沿有向箭头作用，需要族的协变性。
+\end{proof}
+\begin{example}[没有协变性时的失败]
+取底范畴 $[1]=(0\to1)$。令总范畴有三个对象 $e,a,b$，仅有两个非恒等箭头 $e\to a$、$e\to b$。将 $e$ 送到 $0$，将 $a,b$ 送到 $1$。底中箭头从 $e$ 出发有两个提升，因此这不是协变族。
+
+该投影有两个截面，分别选择 $e\to a$ 与 $e\to b$，而在初始对象 $0$ 上的纤维只有 $e$ 一个点。故截面到初始纤维的求值不是等价。这说明箭头归纳的协变假设具有实际数学内容。
+\end{example}
+\begin{remark}
+路径归纳也不能在固定端点后任意消去所有环路。两种归纳都要求同时保留正确的依赖对象和允许变化的参数。比较它们的形式时，不能遗漏各自的适用条件。
+\end{remark}
+
+\section{自然变换类型}
+\begin{definition}[协变族之间的自然变换]
+对 $C$ 上的协变族 $E,F$，定义
+\[
+\Nat_C(E,F)=\prod_{x:C}(E(x)\to F(x)).
+\]
+这是有向内部语言中的依赖函数类型。其自然性由定理\ref{thm:automatic-naturality}给出。
+\end{definition}
+\begin{example}
+取 $E=R_c=\Hom_C(c,-)$。一个元素 $\alpha:\Nat_C(R_c,F)$ 对每个 $x$ 给出
+\[
+\alpha_x:\Hom_C(c,x)\to F(x),
+\]
+并对 $g:x\to y$、$f:c\to x$ 满足
+\[
+\alpha_y(g\circ f)=g_*\alpha_x(f).
+\]
+自然性不是额外遗漏的假设，它已经由“$\alpha$ 是内部依赖函数”保证。
+\end{example}
+\begin{definition}[在恒等箭头处求值]
+定义
+\[
+\mathsf{Yev}:\Nat_C(R_c,F)\to F(c),
+\qquad \alpha\longmapsto\alpha_c(\id_c).
+\]
+\end{definition}
+
+\section{合成 Yoneda 引理及其完整证明}
+\begin{theorem}[协变 Yoneda 引理]\label{thm:synthetic-yoneda}
+对预范畴 $C$、对象 $c:C$ 和协变族 $F$，有等价
+\[
+\Nat_C(\Hom_C(c,-),F)\simeq F(c).
+\]
+这个等价由在恒等箭头处求值给出。
+\end{theorem}
+\begin{proof}
+首先，把 $F$ 沿 $\pi:c/C\to C$ 拉回，得到协变族
+\[
+P(x,f)=F(x).
+\]
+依赖函数的柯里化给出等价
+\[
+\prod_{x:C}(\Hom_C(c,x)\to F(x))
+\simeq
+\prod_{(x,f):c/C}F(x).
+\]
+箭头归纳将右边等价地送到 $F(c)$，其求值点正是 $(c,\id_c)$。所以复合等价即 $\mathsf{Yev}$。
+
+为给出两个方向的具体计算，对 $u:F(c)$ 定义
+\[
+\mathsf{Yinv}(u)_x(f)=f_*u.
+\]
+恒等作用律给出
+\[
+\mathsf{Yev}(\mathsf{Yinv}(u))
+=(\id_c)_*u=u.
+\]
+反向，取 $\alpha:\Nat_C(R_c,F)$。对箭头 $f:c\to x$，自动自然性用于源纤维中的 $\id_c$，得到
+\[
+\alpha_x(f\circ\id_c)=f_*\alpha_c(\id_c).
+\]
+单位律将左边化为 $\alpha_x(f)$，因此
+\[
+\mathsf{Yinv}(\mathsf{Yev}(\alpha))_x(f)=\alpha_x(f).
+\]
+两次依赖函数外延性得到自然变换类型中的路径，证明另一侧复合也等于恒等。故求值为等价，而不仅是连通分支上的双射。
+\end{proof}
+\begin{remark}
+证明中普通的“把自然性方形代入恒等箭头”仍然可见，但自动自然性与可缩提升保证这一计算包含全部高阶相容。箭头归纳给出的是这一现象的依赖形式。
+\end{remark}
+
+\section{Yoneda 等价的自然性}
+\begin{proposition}[关于族的自然性]
+若 $\beta:F\to G$ 是协变族间的自然变换，则图
+\[
+\begin{tikzcd}
+\Nat_C(R_c,F)\ar[r,"\mathsf{Yev}"]\ar[d,"\beta\circ-"']&F(c)\ar[d,"\beta_c"]\\
+\Nat_C(R_c,G)\ar[r,"\mathsf{Yev}"']&G(c)
+\end{tikzcd}
+\]
+相容交换。
+\end{proposition}
+\begin{proof}
+两条路线把 $\alpha$ 都送到 $\beta_c(\alpha_c(\id_c))$，因此求值方向直接相同。逆方向的相容为
+$\beta_x(f_*u)=f_*\beta_c(u)$，这是 $\beta$ 的自动自然性。
+\end{proof}
+\begin{proposition}[关于表示对象的自然性]
+若 $a:c'\to c$，前复合给出 $R_c\to R_{c'}$。由此诱导
+\[
+\Nat_C(R_{c'},F)\to\Nat_C(R_c,F).
+\]
+在 Yoneda 等价下，该函数对应 $a_*:F(c')\to F(c)$。
+\end{proposition}
+\begin{proof}
+若 $u:F(c')$ 对应 $\alpha_x(f)=f_*u$，则复合后的变换在 $g:c\to x$ 处为
+\[
+\alpha_x(g\circ a)=(g\circ a)_*u=g_*(a_*u).
+\]
+因此它对应的元素正是 $a_*u$。特别在 $x=c$、$g=\id_c$ 处求值，即得到 $a_*u$。
+\end{proof}
+
+\section{可表族之间的变换}
+\begin{proposition}[协变可表的全忠实形式]\label{prop:covariant-yoneda-ff}
+对 $c,d:C$，有等价
+\[
+\Nat_C(\Hom_C(c,-),\Hom_C(d,-))
+\simeq\Hom_C(d,c).
+\]
+箭头 $a:d\to c$ 对应变换 $f\mapsto f\circ a$。
+\end{proposition}
+\begin{proof}
+令 $F=R_d$，应用 Yoneda 引理。其右边为 $R_d(c)=\Hom_C(d,c)$。逆方向为协变作用，而可表族中的协变作用是后复合，因此得到所述公式。
+\end{proof}
+\begin{remark}
+箭头方向在这里反转。协变可表族 $c\mapsto\Hom_C(c,-)$ 给出的是反变的嵌入。通常写作 $c\mapsto\Hom_C(-,c)$ 的 Yoneda 嵌入则使用反变预层；两种约定应分别核对。
+\end{remark}
+
+\section{反变形式}
+\begin{definition}[反变族]
+将协变定义中的求源改为求靶，得到反变族：沿 $f:x\to y$，给定 $v:E(y)$ 后，带此终点的提升类型可缩。其作用写为 $f^*:E(y)\to E(x)$。
+\end{definition}
+\begin{theorem}[反变 Yoneda 引理]
+若 $P$ 为 $C$ 上的反变族，则
+\[
+\Nat_C(\Hom_C(-,c),P)\simeq P(c).
+\]
+\end{theorem}
+\begin{proof}
+反转外单纯方向，把 $C$ 替换为反范畴 $C^{\op}$，则反变族成为协变族。应用协变 Yoneda 得到结论。其逆的显式公式为
+\[
+u\longmapsto\bigl(f:x\to c\longmapsto f^*u\bigr).
+\]
+两侧逆检验分别使用恒等拉回作用与自然性在 $f$、$\id_c$ 上的代入，完全对应前面的计算。
+\end{proof}
+\begin{remark}
+反范畴在单纯空间语义中由反转有限线序的自同构构造。若只使用某种尚未扩充反向操作的内部语法，则上述对偶可在其语义中进行；这不要求在普通同伦类型的宇宙里凭空为任意类型赋予一个反范畴操作。
+\end{remark}
+
+\section{两个具体计算}
+\begin{example}[单一箭头上的 Yoneda]
+令 $C=[1]$。协变集合族是一个函数 $u:A\to B$。$R_0$ 在两个对象上的值均为单位集合，其结构映射为恒等。因此一个自然变换 $R_0\to F$ 是元素 $a:A$ 与 $b:B$，满足 $u(a)=b$。这个数据类型
+\[
+\sum_{a:A}\sum_{b:B}(u(a)=b)
+\]
+等价于 $A$，正是 Yoneda 在 $c=0$ 的结论。$R_1$ 在 $0$ 处为空、在 $1$ 处为单位，变换类型等价于 $B$，对应 $c=1$。
+\end{example}
+\begin{example}[幺半群的正则作用]
+把幺半群 $M$ 看成单对象范畴。一个协变集合族为左 $M$-集合 $X$，可表族是正则左作用 $M$。自然变换即等变函数 $\varphi:M\to X$。Yoneda 给出
+\[
+\Hom_M(M,X)\cong X,
+\qquad \varphi\longmapsto\varphi(1).
+\]
+其逆为 $x\mapsto(m\mapsto m\cdot x)$。等变性给出 $\varphi(m)=m\cdot\varphi(1)$，所以整个函数由单位处的值决定。
+\end{example}
+\source{定理\ref{thm:arrow-induction}与定理\ref{thm:synthetic-yoneda}分别达到 Riehl 报告命题 6.6 与 6.7。其形式化与类型论推导见\cite{RiehlShulman,YonedaFormal,RiehlICM}。}

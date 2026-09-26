@@ -1,0 +1,12 @@
+\title{筛与预层范畴的子对象分类子}
+\date{2026-09-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Category Theory in Context](0212)}
+
+\p{设 #{C} 为小范畴。对象 #{c} 上的筛是以 #{c} 为靶的箭头的集合 #{S}，满足：若 #{f:d\to c} 属于 #{S}，则每个可复合箭头 #{g:e\to d} 都使 #{fg} 属于 #{S}。}
+\p{定义[预层](0344) #{\Omega(c)} 为 #{c} 上所有筛的集合。对 #{u:d\to c}，限制为 #{u^*S=\{v:e\to d\mid uv\in S\}}。恒等与复合的预层公理直接由这个公式得到。最大筛组成自然变换 #{\mathsf{true}:1\to\Omega}。}
+\p{此映射是预层范畴的[子对象分类子](0A90)。}
+\p{\strong{证明。}由[反变 Yoneda 引理](0343)，预层的单态射逐对象为单射，可把子对象写为子预层 #{A\subseteq P}。对 #{x\in P(c)} 定义}
+##{\chi_c(x)=\{f:d\to c\mid P(f)(x)\in A(d)\}.}
+\p{子预层的限制封闭性保证这是筛，函子性保证 #{\chi} 自然。#{\chi_c(x)} 为最大筛当且仅当 #{x\in A(c)}，所以相应方块逐对象为拉回，从而是[预层范畴中的拉回](0435)。若 #{\psi:P\to\Omega} 也分类 #{A}，则 #{f\in\psi_c(x)} 当且仅当 #{\psi_d(P(f)x)} 为最大筛，当且仅当 #{P(f)x\in A(d)}；故 #{\psi=\chi}。}

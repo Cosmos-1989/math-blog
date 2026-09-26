@@ -1,0 +1,22 @@
+\title{协变可表族的反变全忠实形式}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
+
+\p{设 #{C} 为合成预范畴，#{c,d:C}，#{\operatorname{Nat}_C} 表示内部纤维映射类型。}
+
+\p{所需前置：[协变合成 Yoneda 引理](063B)、[可表族的协变性及后复合作用](062M)。}
+
+\p{对 #{c,d:C}，有等价}
+
+##{\operatorname{Nat}_C(\operatorname{Hom}_C(c,-),\operatorname{Hom}_C(d,-))
+\simeq\operatorname{Hom}_C(d,c).}
+
+\p{箭头 #{a:d\to c} 对应变换 #{f\mapsto f\circ a}。}
+
+\p{\strong{证明。}
+令 #{F=R_d}，应用 Yoneda 引理。其右边为 #{R_d(c)=\operatorname{Hom}_C(d,c)}。逆方向为协变作用，而可表族中的协变作用是后复合，因此得到所述公式。}
+
+\p{\strong{说明。}
+箭头方向在这里反转。协变可表族 #{c\mapsto\operatorname{Hom}_C(c,-)} 给出的是反变的嵌入。通常写作 #{c\mapsto\operatorname{Hom}_C(-,c)} 的 Yoneda 嵌入则使用反变预层；两种约定应分别核对。}

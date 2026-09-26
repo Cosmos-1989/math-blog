@@ -1,0 +1,11 @@
+\title{指数函数及其导数}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+
+\p{指数函数 #{\exp:\mathbb R\to\mathbb R_{>0}} 定义为[自然对数](0A45)的反函数。记 #{e=\exp 1}，并以 #{e^t} 表示 #{\exp t}。它严格递增，满足 #{\exp 0=1}、#{\exp(s+t)=\exp s\exp t}；后一个等式由对数的乘积公式及单射性得到。}
+\p{它连续：固定 #{x=\exp t>0}，对 #{0<\varepsilon<x}，数 #{\log(x-\varepsilon)} 与 #{\log(x+\varepsilon)} 严格夹住 #{t}，单调性便把 #{t} 附近的自变量送入 #{(x-\varepsilon,x+\varepsilon)}。}
+\p{\strong{求导。}令 #{k=\exp(t+h)-x}。连续性给出 #{k\to 0}，并且 #{h=\log(x+k)-\log x}。当 #{h\ne 0} 时 #{k\ne 0}，所以}
+##{\lim_{h\to 0}\frac{\exp(t+h)-\exp t}{h}
+=\lim_{k\to 0}\frac{k}{\log(x+k)-\log x}=x.}
+\p{因此按[导数定义](0A31)，#{\exp'(t)=\exp t}。}

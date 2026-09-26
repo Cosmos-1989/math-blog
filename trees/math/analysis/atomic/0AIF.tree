@@ -1,0 +1,19 @@
+\title{Minkowski 泛函与凸平衡集的半范数}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{E} 为实或复向量空间，#{U\subseteq E} 为非空[凸集](00TK)及[平衡集](0AID)，且吸收：对每个 #{x\in E}，存在 #{R>0}，使所有 #{r\ge R} 都满足 #{x\in rU}。复空间的凸性按底层实向量空间理解。定义 Minkowski 泛函}
+##{p_U(x)=\inf\{r>0:x\in rU\}.}
+\p{则 #{p_U} 是有限值[半范数](00MD)，并满足}
+##{\{x:p_U(x)<1\}\subseteq U\subseteq\{x:p_U(x)\le 1\}.}
+\p{\strong{证明。}吸收性使下确界中的集合非空，故 #{0\le p_U(x)<\infty}。平衡性给出 #{0\in U}，因而 #{p_U(0)=0}。若 #{x\in rU} 且 #{s\ge r}，则 #{x/s=(r/s)(x/r)\in U}；于是每个 #{r>p_U(x)} 都满足 #{x\in rU}。对非零标量 #{\lambda}，由单位模标量保持 #{U}，有}
+##{\lambda x\in rU\ \Longleftrightarrow\ x\in (r/|\lambda|)U,\qquad
+p_U(\lambda x)=|\lambda|p_U(x).}
+\p{对 #{r>p_U(x)}、#{s>p_U(y)}，凸性给出}
+##{\frac{x+y}{r+s}=\frac r{r+s}\frac xr+\frac s{r+s}\frac ys\in U.}
+\p{所以 #{p_U(x+y)\le r+s}。令 #{r,s} 分别从上方趋近 #{p_U(x),p_U(y)}，即得次可加性。若 #{p_U(x)<1}，可取 #{p_U(x)<r<1}，于是 #{x\in rU\subseteq U}；若 #{x\in U}，则 #{1} 是下确界的候选，故 #{p_U(x)\le 1}。}
+\p{若 #{E} 还带有[拓扑向量空间](00MA)拓扑，且 #{U} 开，则}
+##{U=\{x:p_U(x)<1\},\qquad
+\{x:p_U(x)<\eta\}=\eta U\quad(\eta>0),}
+\p{并且 #{p_U:E\to\mathbb R} 连续。事实上，对 #{x\in U}，映射 #{t\mapsto tx} 在 #{t=1} 连续，故存在 #{t>1} 使 #{tx\in U}，从而 #{p_U(x)\le 1 /t<1}。齐次性给出一般半径等式；由[伸缩同胚](00MB)，这些球都是开零点邻域。最后半范数不等式给出 #{|p_U(x)-p_U(y)|\le p_U(x-y)}，结合平移同胚即得每一点的连续性。}

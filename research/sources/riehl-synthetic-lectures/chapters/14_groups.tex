@@ -1,0 +1,273 @@
+\chapter{高阶群、作用与同伦商}
+\section{由带基点空间得到群结构}
+\begin{definition}[高阶群]
+一个高阶群由带基点的连通类型 $(BG,*)$ 表示，其承载类型定义为
+\[
+G=\Omega BG=(*=_{BG}*).
+\]
+这里的乘法、单位和逆来自路径连接、常路径和路径反向，全部高阶相容关系来自路径归纳。
+\end{definition}
+\begin{remark}
+此定义把高阶群的退悬空间 $BG$ 作为结构的一部分。一个带乘法的空间即使满足某些低维的群律，也尚未自动提供这样的退悬空间。普通群的挠子构造表明，每个普通群都能纳入这个定义。
+\end{remark}
+\begin{proposition}[普通群所在的层次]
+若 $BG$ 是连通 $1$-类型，则 $G=\Omega BG$ 是普通群。若 $BG$ 允许更高路径，则 $G$ 的乘法律本身也可以有非平凡的高阶相容。
+\end{proposition}
+\begin{proof}
+$1$-截断意味着环路类型是集合。路径群胚律给出结合、单位、逆等式；集合中的等式为命题，不需要继续选择更高的证明。没有 $1$-截断条件时，路径律仍成立，但同一条律的见证间可能存在非平凡路径，故必须保留由路径演算产生的全部相容结构。
+\end{proof}
+\begin{definition}[高阶群同态]
+从 $(BG,*)$ 到 $(BH,*)$ 的高阶群同态定义为一个带基点映射，即数据
+\[
+(F,\epsilon):\sum_{F:BG\to BH}(F(*)=*).
+\]
+它诱导环路映射
+\[
+p\longmapsto\epsilon^{-1}\cdot\ap_F(p)\cdot\epsilon.
+\]
+\end{definition}
+\begin{proposition}
+上述环路映射保持乘法、单位与逆，并具有相应的高阶相容。
+\end{proposition}
+\begin{proof}
+函数的路径作用保持连接。对两个环路 $p,q$，其像的连接为
+\[
+\epsilon^{-1}\cdot\ap_F(p)\cdot\epsilon
+\cdot\epsilon^{-1}\cdot\ap_F(q)\cdot\epsilon.
+\]
+消去中间的 $\epsilon\cdot\epsilon^{-1}$，再应用连接的结合比较，得到 $\epsilon^{-1}\cdot\ap_F(p\cdot q)\cdot\epsilon$。单位与逆同理。这里采用的比较全部由路径群胚律组成，因此其高阶相容也由路径归纳控制。
+\end{proof}
+
+\section{路径纤维化与普遍主族}
+\begin{definition}[基点路径族]
+对带基点类型 $(X,x_0)$，定义
+\[
+P_{x_0}(x)=(x_0=x),
+\qquad
+E_{x_0}X=\sum_{x:X}(x_0=x).
+\]
+投影 $E_{x_0}X\to X$ 称为基点路径族的总空间。
+\end{definition}
+\begin{proposition}
+$E_{x_0}X$ 可缩，而它在 $x_0$ 上的纤维是 $\Omega X$。
+\end{proposition}
+\begin{proof}
+中心为 $(x_0,\refl)$，收缩由基点路径归纳给出。纤维定义上就是 $x_0=x_0$。因此一个可缩总空间可以有非可缩纤维；底空间记录了纤维的单值变换。
+\end{proof}
+\begin{example}
+取 $X=\Tors(G)$。基点路径族的纤维 $G=T$，由结构同一性等价于等变等价 $G\simeq_G T$，再由在 $1$ 处求值等价于 $T$。于是路径族等价于挠子类型上的普遍挠子族
+\[
+\sum_{T:\Tors(G)}T\longrightarrow\Tors(G).
+\]
+其总空间可缩。
+\end{example}
+\begin{proposition}[带点挠子总空间可缩]
+类型 $\sum_{T:\Tors(G)}T$ 的中心可取 $(G,1)$。
+\end{proposition}
+\begin{proof}
+给定 $(T,t)$，映射 $q_t(g)=t\cdot g$ 是等变等价，且 $q_t(1)=t$。结构同一性与依赖和路径公式给出 $(G,1)=(T,t)$。这个公式依赖于给定的 $t$，因此形成全局收缩；这里不需要为没有指定点的挠子选择点。
+\end{proof}
+\begin{remark}
+普遍主族的总空间可缩，与它在底空间每点上的纤维为 $G$ 并不矛盾。可缩性只对总空间的同伦类型作断言。将总空间替换成一点时，投影及纤维化结构不能同时任意遗忘。
+\end{remark}
+
+\section{群作用作为依赖族}
+\begin{definition}[高阶群作用]
+设高阶群由 $(BG,*)$ 表示。$G$ 对空间的一个作用定义为函数
+\[
+A:BG\longrightarrow\U.
+\]
+被作用的承载空间为 $A(*)$。一个环路 $g:*=*$ 通过传输给出自等价
+\[
+\rho_g=\tr_A(g):A(*)\simeq A(*).
+\]
+\end{definition}
+\begin{proposition}[作用律]
+有同伦
+\[
+\rho_{\refl}=\id,
+\qquad
+\rho_{g\cdot h}=\rho_h\circ\rho_g,
+\qquad
+\rho_{g^{-1}}=\rho_g^{-1}.
+\]
+这些同伦的相容关系继承自依赖传输。
+\end{proposition}
+\begin{proof}
+分别应用恒等传输、复合传输和逆传输公式。因为整个作用由一个类型族给出，公式在所有路径参数中成立；对这些参数的高阶路径再次应用依赖函数的路径作用，即得到下一层的相容。
+\end{proof}
+\begin{example}[平凡作用]
+若 $A(z)\equiv X$ 为常值族，则所有 $\rho_g$ 均与恒等等价相同。常值族仍然定义在整个 $BG$ 上，因此其截面空间可能保留从 $BG$ 到 $X$ 的非平凡映射，而不只是选取 $X$ 的一个点。
+\end{example}
+\begin{remark}
+当 $G$ 是普通群、$X$ 是集合时，传统作用由同态 $G\to\Aut(X)$ 给出。上式中的连接约定可能把左作用写成右作用；只要固定群乘法与路径连接的对应，二者完全一致。对一般空间，单独列出一组自等价与乘法同伦还不等于给出完整作用，因为仍有更高相容条件。函数 $BG\to\U$ 同时保存这些条件。
+\end{remark}
+
+\section{从普通群作用构造挠子上的族}
+\begin{definition}[与挠子相联系的集合]
+设 $X$ 带左 $G$-作用，$T$ 是右 $G$-挠子。定义
+\[
+A_X(T)=\left\{\varphi:T\to X\ \middle|\ 
+\varphi(t\cdot g)=g^{-1}\cdot\varphi(t)\right\}.
+\]
+等式条件是命题，故该类型为集合。
+\end{definition}
+\begin{lemma}[求值平凡化]
+给定 $t:T$，求值 $\ev_t:A_X(T)\to X$ 是等价。
+\end{lemma}
+\begin{proof}
+因为 $q_t:G\to T$ 是双射，每个 $u:T$ 唯一写成 $t\cdot g$。对 $x:X$，定义
+\[
+\varphi_x(t\cdot g)=g^{-1}\cdot x.
+\]
+定义不依赖额外选择，因为 $g$ 唯一。对 $h:G$，
+\[
+\varphi_x((t\cdot g)\cdot h)
+=(gh)^{-1}\cdot x
+=h^{-1}\cdot(g^{-1}\cdot x),
+\]
+所以它满足所需相容。显然 $\varphi_x(t)=x$。反之，任何相容的 $\varphi$ 都由 $\varphi(t)$ 按同一公式确定，因此两种构造互逆。
+\end{proof}
+\begin{proposition}[挠子同构上的传输]
+若 $e:T\simeq_G U$，则对应的族传输为
+\[
+A_X(e):A_X(T)\to A_X(U),
+\qquad \varphi\longmapsto\varphi\circ e^{-1}.
+\]
+在标准挠子 $G$ 上，借助 $\ev_1$ 识别纤维与 $X$ 后，左乘自同构 $L_h$ 的传输正是 $x\mapsto h\cdot x$。
+\end{proposition}
+\begin{proof}
+前复合 $e^{-1}$ 保持相容关系，因为 $e$ 等变。与前复合 $e$ 互为逆，且结构同一性把这个函数识别为传输；可用等价归纳验证。最后，
+\[
+(\varphi\circ L_h^{-1})(1)=\varphi(h^{-1})
+=(h^{-1})^{-1}\cdot\varphi(1)=h\cdot\varphi(1).
+\]
+于是原普通群作用被准确地恢复。
+\end{proof}
+\begin{remark}
+该构造没有使用商集合。它利用“满足等变条件的函数”表示与挠子相关联的纤维，因此仅凭依赖积、同一性类型和挠子的自由传递性就足够。若另有集合商，也可用通常的关联集合 $T\times_G X$ 给出等价构造。
+\end{remark}
+
+\section{同伦不动点与同伦轨道}
+\begin{definition}
+对于 $A:BG\to\U$，定义同伦不动点类型与同伦轨道类型为
+\[
+A^{hG}=\prod_{z:BG}A(z),
+\qquad
+A_{hG}=\sum_{z:BG}A(z).
+\]
+前者是族的截面类型，后者是族的总空间。
+\end{definition}
+\begin{proposition}[不动点的相容条件]
+若 $s:A^{hG}$，则 $x=s(*)$ 对每个 $g:*=*$ 带有路径
+\[
+\rho_g(x)=x.
+\]
+这些路径随 $g$ 及其高阶路径相容。
+\end{proposition}
+\begin{proof}
+依赖路径作用 $\apd_s(g)$ 正是 $\tr_A(g)(s(*))=s(*)$。对环路复合的相容来自依赖函数的路径作用与传输的复合律。更高相容同样由同一依赖函数 $s$ 给出。
+\end{proof}
+\begin{remark}
+一般情形下，只给出每个群元素的一个不动路径不足以给出截面，还需它们的相容性。符号 $A^{hG}$ 中的上标 $h$ 强调这些同伦数据。对于集合上的普通群作用，因为相关等式都是命题，相容性不再增加非平凡的高阶选择。
+\end{remark}
+\begin{proposition}[平凡作用的计算]
+若 $A(z)\equiv X$，则
+\[
+A_{hG}\simeq BG\times X,
+\qquad
+A^{hG}\simeq(BG\to X).
+\]
+\end{proposition}
+\begin{proof}
+常值族的依赖和就是乘积，依赖积就是函数类型。这是两种类型构造的定义性特例。
+\end{proof}
+\begin{example}
+对单位类型的唯一作用，有 $\one_{hG}\simeq BG$、$\one^{hG}\simeq\one$。因此“只有一个轨道”的普通集合论结论不意味着同伦轨道类型可缩。群的自同构信息在 $BG$ 中完整保留。
+\end{example}
+\begin{proposition}[连通底到集合的函数]
+若 $(B,b_0)$ 连通，且 $X$ 是集合，则求值
+\[
+(B\to X)\longrightarrow X,
+\qquad f\longmapsto f(b_0)
+\]
+是等价。
+\end{proposition}
+\begin{proof}
+逆为常值函数。一个复合定义上是恒等。对另一个复合，需要证明 $f(b_0)=f(b)$。目标是命题，因为 $X$ 是集合；于是可消去连通性提供的 $\trunc{b_0=b}$，并将一条代表路径送入 $f$。函数外延性得到常值函数与 $f$ 的同伦。因此求值是等价。
+\end{proof}
+\begin{remark}
+若 $X$ 不是集合，上述命题通常不成立。例如 $B=X=BG$，恒等映射与常值映射未必同伦。连通性只给出截断的路径存在性，不能据此消去到非命题的路径空间。
+\end{remark}
+
+\section{作用群胚与同伦轨道}
+\begin{definition}[作用群胚]
+对于普通群 $G$ 对集合 $X$ 的左作用，作用群胚 $G\ltimes X$ 的对象为 $x:X$，从 $x$ 到 $y$ 的态射为满足 $g\cdot x=y$ 的群元素 $g$。合成使用群乘法，逆由 $g^{-1}$ 给出。
+\end{definition}
+\begin{proposition}
+作用群胚中 $x$ 的自同构群为稳定子
+\[
+G_x=\{g:G\mid g\cdot x=x\}.
+\]
+两个对象在同一连通分支内，当且仅当它们位于同一轨道。
+\end{proposition}
+\begin{proof}
+第一断言直接来自态射的定义。态射存在等价于有群元素把一个对象送到另一个。因为所有态射可逆，一条由若干态射组成的折线可合成为一个态射，因此群胚连通分支恰为轨道。
+\end{proof}
+\begin{proposition}[传递作用]
+若作用传递，且指定 $x:X$，则作用群胚等价于单对象群胚 $BG_x$。因此其同伦类型是稳定子的分类空间。
+\end{proposition}
+\begin{proof}
+将单一对象送到 $x$，自同态群送到 $x$ 的自同构群，得到全忠实函子。传递性保证每个对象与 $x$ 同构，所以函子本质满。普通范畴的等价判据给出结论。在构造显式拟逆时可以逐对象选同构；若不作这些选择，仍可由全忠实且本质满描述同一等价性质。
+\end{proof}
+\begin{example}
+$G$ 在自身上左乘的作用是自由传递的，稳定子为平凡群。因此作用群胚的同伦类型可缩。平凡作用在一点上的稳定子是整个 $G$，因而得到 $BG$。这两个例子有相同的普通轨道集合，却有不同的同伦轨道类型。
+\end{example}
+\begin{remark}
+在群胚或单纯集合语义中，作用族的总空间由作用群胚的神经表示。它在每个对象上的纤维是 $X$，沿群箭头的传输是给定作用。故这里的群胚计算与 $\sum_{z:BG}A(z)$ 的内部定义相容。
+\end{remark}
+
+\section{同伦商的映射性质}
+\begin{theorem}[总空间的映射性质]
+对任意族 $A:B\to\U$ 和类型 $Y$，有等价
+\[
+\left(\sum_{b:B}A(b)\to Y\right)
+\simeq
+\prod_{b:B}(A(b)\to Y).
+\]
+应用于群作用时，右边是随 $BG$ 中所有路径相容的纤维映射族。
+\end{theorem}
+\begin{proof}
+正向把 $F$ 送到 $b\mapsto(a\mapsto F(b,a))$；反向把 $\varphi$ 送到 $(b,a)\mapsto\varphi_b(a)$。两种操作逐点互逆，函数外延性得到函数类型间的等价。这就是依赖和的消去性质。
+\end{proof}
+\begin{proposition}[基点处的相容公式]
+设 $\varphi:\prod_{z:BG}(A(z)\to Y)$。对每个 $g:*=*$、$a:A(*)$，有
+\[
+\varphi_*(\rho_g(a))=\varphi_*(a).
+\]
+\end{proposition}
+\begin{proof}
+族 $z\mapsto(A(z)\to Y)$ 的传输是对输入作逆传输。依赖路径作用给出 $\varphi_*\circ\rho_g^{-1}=\varphi_*$。再前复合 $\rho_g$ 并用逆同伦，得到所述公式。
+\end{proof}
+\begin{remark}
+因而同伦商上的函数对应于同伦相容的作用不变映射。只要求逐个等式而不保存其相容性，通常只得到不完整的数据。依赖积的表达式把这些相容性包含在一个类型之中。
+\end{remark}
+
+\section{乘法空间与高阶相容的边界}
+\begin{definition}[带单位的乘法空间]
+带基点类型 $(X,e)$ 若配有 $\mu:X\times X\to X$ 及同伦 $\mu(e,x)=x$、$\mu(x,e)=x$，称为带单位的乘法空间。根据具体用途，可能还要求两条单位同伦在 $e$ 处相容。
+\end{definition}
+\begin{example}
+环路类型 $\Omega B$ 具有这样的结构，并且还有结合律及所有更高相容。普通拓扑中所谓 $H$-空间通常只规定乘法与单位的低阶同伦；其定义并不自动包含完整的高阶群结构。
+\end{example}
+\begin{proposition}[乘法空间结构的等价不变性]
+若 $e:X\simeq Y$，则可将 $X$ 上的带单位乘法结构传输到 $Y$。具体乘法为
+\[
+\mu_Y(y_1,y_2)=e\bigl(\mu_X(e^{-1}y_1,e^{-1}y_2)\bigr),
+\]
+单位为 $e(e_X)$，单位同伦由原同伦与逆同伦复合而得。
+\end{proposition}
+\begin{proof}
+这是单价性与结构传输的应用。也可直接计算左单位：把 $e^{-1}(e(e_X))$ 用逆同伦化为 $e_X$，再应用 $\mu_X$ 的左单位同伦，最后使用 $e\circ e^{-1}\sim\id_Y$。右单位同理。已给定的额外相容在同一传输过程中一起保留。
+\end{proof}
+\source{高阶群与作用的依赖族描述可见\cite{RiehlICM,HoTT}。本章始终把具体的结构数据与对这些数据的公理分开，以便在后文比较结构同一性与结构同态。}

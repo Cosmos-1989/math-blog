@@ -1,0 +1,21 @@
+\title{依赖和投影的同伦纤维}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[依赖和](0507)；[传输](0548)；[基点路径归纳](050H)；[同伦纤维](058E)；[同伦逆判据](058I)。}
+
+\p{给定类型 #{B}、类型族 #{E:B\to\mathcal U} 及点 #{b:B}。#{\operatorname{fib}_p(b)=\sum_{z:\sum_xE(x)}(p(z)=b)} 记录总空间点及到指定底点的路径。}
+
+\p{设 #{E:B\to\mathcal U}，#{p:\sum_{x:B}E(x)\to B} 为第一投影。则}
+
+##{\operatorname{fib}_p(b)\simeq E(b).}
+
+\p{\strong{证明。}左侧展开为 #{\sum_{x:B}\sum_{u:E(x)}(x=b)}。定义}
+
+##{((x,u),q)\longmapsto\operatorname{tr}^E_q(u),
+ \qquad
+ v\longmapsto((b,v),\operatorname{refl}_b).}
+
+\p{先取第二个映射再取第一个，由恒等路径的传输规则得到 #{v}。对另一个复合，元素 #{((x,u),q)} 中的 #{x,q} 可同时作路径归纳。只需计算 #{x=b,q=\operatorname{refl}_b}，此时复合为恒等。故两个映射互逆。}

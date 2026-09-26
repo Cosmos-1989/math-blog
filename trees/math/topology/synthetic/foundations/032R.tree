@@ -1,0 +1,17 @@
+\title{右伴随保持已有的极限}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 3 章}
+
+\p{设 #{L:C\to D} 左伴随 #{R:D\to C}，#{J} 为小范畴，#{H:J\to D} 为图表。若其[极限](0329) #{\lim_JH} 存在，则 #{R(\lim_JH)} 及像锥是 #{RH} 的极限。}
+
+\p{对任意 #{c\in C}，使用[伴随](032K)双射与极限泛性质：}
+
+##{\begin{aligned}
+\operatorname{Hom}_C(c,R\lim_JH)&\cong\operatorname{Hom}_D(Lc,\lim_JH)\\
+&\cong\operatorname{Nat}(\Delta Lc,H)\\
+&\cong\operatorname{Nat}(\Delta c,RH).
+\end{aligned}}
+
+\p{最后一步逐分量转置，伴随双射的自然性保证锥的所有相容方程一同转置。这些双射对 #{c} 自然，故给出所需极限的泛性质。}

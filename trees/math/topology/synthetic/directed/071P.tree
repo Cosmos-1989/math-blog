@@ -1,0 +1,29 @@
+\title{统一有限元空间运算恰为坐标投影}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 21 章；[引用](0211)；[引用](021G)}
+
+\p{固定有限离散空间 #{\mathbf n=\{0,\ldots,n-1\}}，#{A^{\mathbf n}=(\mathbf n\to A)}。依赖积在[有向空间范畴](070Q)内部解释；使用[自动自然性](062B)，这里应用于元组协变族到普遍族的纤维映射，公式为 #{\alpha_B(f\circ x)=f(\alpha_A(x))}。 两侧逆的函数路径使用[函数外延性](050K)。}
+
+\p{元组族的协变性可逐坐标验证：给定底箭头和起点元组，每个坐标的提升类型由[协变性](0622)可缩；元组提升类型是这些可缩类型的依赖积，因而由[可缩依赖积定理](0583)可缩。}
+
+\p{固定 #{n\ge 0}。有等价}
+
+##{\left(\prod_{A:{\mathcal{S}}}(A^{\mathbf n}\to A)\right)
+\simeq\mathbf n.}
+
+\p{#{i:\mathbf n} 对应取第 #{i} 个坐标的投影。}
+
+\p{\strong{证明。}给定 #{\alpha}，令}
+
+##{i_\alpha=\alpha_{\mathbf n}({\operatorname{id}}_{\mathbf n}).}
+
+\p{对任意元组 #{x:\mathbf n\to A}，把 #{x} 本身看成空间间函数。自动自然性给出}
+
+##{\alpha_A(x\circ{\operatorname{id}}_{\mathbf n})
+=x(\alpha_{\mathbf n}({\operatorname{id}}_{\mathbf n})).}
+
+\p{左边就是 #{\alpha_A(x)}，右边为 #{x(i_\alpha)}。因此 #{\alpha} 是相应投影。反之，在标准元组 #{{\operatorname{id}}_{\mathbf n}} 上对第 #{i} 个投影求值，得到 #{i}。两次函数外延性把逐点计算组装成两侧逆同伦。}
+
+\p{这也可按 Yoneda 的可表函子原则理解：#{A\mapsto A^{\mathbf n}} 是由有限空间 #{\mathbf n} 表示的函子，#{A\mapsto A} 由单位空间表示。统一运算完全由标准输入上的一个值决定。}

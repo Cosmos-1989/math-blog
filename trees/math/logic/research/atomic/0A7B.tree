@@ -1,0 +1,12 @@
+\title{有限分割熵的次可加性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{在概率空间上，设 #{\mathcal P=\{P_i\}}、#{\mathcal Q=\{Q_j\}} 为[有限可测分割](00S1)。则}
+##{H(\mathcal P\vee\mathcal Q)\leq H(\mathcal P)+H(\mathcal Q).}
+\p{\strong{证明。}记 #{r_{ij}=\mu(P_i\cap Q_j)}、#{a_i=\mu(P_i)}、#{b_j=\mu(Q_j)}。对 #{r_{ij}>0}，有 #{a_ib_j>0}；利用[对数](0A47)不等式 #{\log t\leq t-1} 得}
+##{\sum_{r_{ij}>0}r_{ij}\log\frac{a_ib_j}{r_{ij}}
+\leq\sum_{r_{ij}>0}(a_ib_j-r_{ij})\leq 0.}
+\p{移项并用 #{\sum_jr_{ij}=a_i}、#{\sum_ir_{ij}=b_j} 得到结论。#{\log t\leq t-1} 由差函数导数 #{1-1/t} 在 #{t=1} 两侧变号得到。所有零概率项按 #{0\log 0=0} 解释。}

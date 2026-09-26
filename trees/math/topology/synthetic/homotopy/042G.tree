@@ -1,0 +1,24 @@
+\title{恒定路径上的部分截面可以延拓}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 7 章；[Quillen](0215)；[GoerssJardine](0216)}
+
+\p{设 #{A} 为 Kan 复形，#{r:A\to A^{\Delta^1}} 为[路径对象](042E)的恒定路径包含。截面 #{s} 指满足 #{ps=\mathrm{id}} 的映射。}
+
+\p{若 #{p:E\to A^{\Delta^1}} 为纤维化，且给定 #{d:A\to E} 满足 #{pd=r}，则存在截面 #{J(d):A^{\Delta^1}\to E}，使 #{J(d)r=d}。}
+
+\p{\strong{证明。}对平凡上纤维化 #{r} 与纤维化 #{p} 使用[左提升性质](0420)：}
+
+\figure{\tex{\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}
+A\arrow[r,"d"]\arrow[d,"r"']&E\arrow[d,"p"]\\
+A^{\Delta^1}\arrow[r,"\mathrm{id}"']\arrow[ur,dashed,"J(d)"]&A^{\Delta^1}.
+\end{tikzcd}
+}}
+
+\p{两个三角形分别表达计算规则和截面条件。}
+
+\p{两条等式为 #{pJ(d)=\mathrm{id}_{A^{\Delta^1}}} 与 #{J(d)r=d}。存在一个选择不表示已选的所有延拓对任意基变换严格相容。}

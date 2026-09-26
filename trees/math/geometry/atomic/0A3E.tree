@@ -1,0 +1,10 @@
+\title{切空间的坐标导子基}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{M} 为[光滑流形](0043)，#{p\in M}，#{x=(x^1,\ldots,x^d)} 为 #{p} 附近的坐标。按[函数芽导子](0044)定义的切空间 #{T_pM} 以 #{\left.\frac{\partial}{\partial x^i}\right|_p} 为基；每个导子 #{V} 唯一表示为 #{V=\sum_i V(x^i)\left.\frac{\partial}{\partial x^i}\right|_p}。}
+\p{\strong{证明。}平移坐标令 #{x(p)=0}，并把坐标域缩成以零为中心的凸开球。对光滑函数芽 #{f}，[微积分基本定理](0A3C)与[链式法则](0A34)给出}
+##{f(x)-f(0)=\sum_i x^i g_i(x),\qquad
+g_i(x)=\int_0^1\partial_i f(tx)\,dt.}
+\p{[参数积分求导](0A3H)说明 #{g_i} 光滑，并且 #{g_i(0)=\partial_i f(0)}。Leibniz 法则给出 #{V(1)=2V(1)}，故 #{V} 消去常数。把 #{V} 作用于分解式，得到 #{V(f)=\sum_iV(x^i)\partial_i f(0)}。各坐标偏导本身满足 Leibniz 法则，因而是导子；将线性关系作用于每个坐标函数 #{x^j} 即知它们线性无关。}

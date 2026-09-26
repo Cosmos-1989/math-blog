@@ -52,6 +52,7 @@ for (const [id, tree] of trees) {
   if (/\(@[\w-]+\)/.test(tree.text)) errors.push(`${id}: unresolved symbolic link`);
   if (/\\strong\{相关页面\}|\\title\{相关页面\}/.test(tree.text)) errors.push(`${id}: manual related-pages section`);
   if (/\\!/.test(tree.text)) errors.push(`${id}: unsupported Forester TeX escape`);
+  if (/\\[A-Za-z][A-Za-z0-9_-]*\/[A-Za-z0-9\\]/.test(tree.text)) errors.push(`${id}: TeX command adjacent to slash; separate it with whitespace or use \\frac to avoid Forester path syntax`);
   for (const { label, target } of links(tree.text)) {
     const expected = audit?.terminology_targets?.[target]?.[label];
     if (expected) errors.push(`${id}: '${label}' still links ${target}, expected ${expected}`);

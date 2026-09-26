@@ -1,0 +1,291 @@
+\chapter{可表性、极限与伴随}
+\section{可表族的普遍元素}
+\begin{definition}[普遍元素]
+设 $F$ 为预范畴 $C$ 上的协变族。元素 $u:F(c)$ 称为普遍元素，若对每个 $x:C$，函数
+\[
+\psi_{u,x}:\Hom_C(c,x)\to F(x),
+\qquad f\longmapsto f_*u
+\]
+是等价。此时称 $(c,u)$ 表示 $F$。
+\end{definition}
+\begin{proposition}
+给出普遍元素 $(c,u)$，等价于给出逐纤维为等价的自然变换
+\[
+\Hom_C(c,-)\simeq F.
+\]
+\end{proposition}
+\begin{proof}
+Yoneda 引理把全部自然变换等价地识别为 $F(c)$，逆方向恰为 $u\mapsto\psi_u$。逐纤维为等价是自然变换的一项性质，即命题。将 Yoneda 等价限制到满足此性质的子类型，便得到所述等价。
+\end{proof}
+\begin{remark}
+在普通范畴论中，普遍元素常被写成“任意元素唯一地由 $u$ 推出”。这里“唯一”指原像同伦纤维可缩，而不只指某个同伦类唯一。因此普遍元素同时确定全部较高比较。
+\end{remark}
+
+\section{元素范畴中的初始对象}
+\begin{theorem}[可表性的初始对象判据]\label{thm:universal-element}
+设 $F$ 协变。$(c,u)$ 是 $F$ 的普遍元素，当且仅当它是总空间范畴 $\widetilde F=\sum_xF(x)$ 的初始对象。
+\end{theorem}
+\begin{proof}
+由依赖箭头端点公式，
+\[
+\Hom_{\widetilde F}((c,u),(x,v))
+\simeq\sum_{f:\Hom_C(c,x)}(f_*u=v).
+\]
+右边恰为 $\psi_{u,x}$ 在 $v$ 处的同伦纤维。初始性要求对每个 $(x,v)$ 此类型可缩；等价的定义则要求对每个 $x$，$\psi_{u,x}$ 的全部纤维可缩。两个条件逐项相同。
+\end{proof}
+\begin{example}
+取 $F=\Hom_C(c,-)$，元素 $\id_c$ 是普遍元素，因为后复合恒等等价于恒等函数。对应的元素范畴就是余切片 $c/C$，其初始对象为恒等箭头。这恢复了前一章的初始性结论。
+\end{example}
+\begin{example}[自由对象的普通情形]
+令 $U:\mathcal A\to\Set$ 为一个遗忘函子。若对象 $L$ 上的元素 $u\in U(L)$ 满足
+\[
+\Hom_{\mathcal A}(L,A)\cong U(A),
+\qquad f\longmapsto U(f)(u),
+\]
+则 $L$ 是一个生成元上的自由对象。其普遍元素在元素范畴中初始。对群，$(\Z,1)$ 满足该性质，因为群同态由 $1$ 的像唯一确定。
+\end{example}
+
+\section{表示对象的唯一性}
+\begin{lemma}[自然等价的逐纤维逆]
+若 $\alpha:E\to F$ 是协变族间的纤维映射，且每个 $\alpha_x$ 为等价，则所选逆函数组成纤维映射 $\beta:F\to E$，并有两侧自然逆同伦。
+\end{lemma}
+\begin{proof}
+等价的纤维中心构造给出依赖于 $x$ 的逆，因此 $\beta$ 本身就是内部依赖函数。它自动自然。两侧逐点逆同伦经依赖函数外延性组装成纤维映射类型中的同伦。
+\end{proof}
+\begin{theorem}[表示唯一到等价]
+若 $F$ 被 $c$ 与 $d$ 表示，则 $c$ 与 $d$ 之间存在可逆箭头。
+\end{theorem}
+\begin{proof}
+设 $\alpha:R_c\simeq F$、$\beta:R_d\simeq F$。复合
+\[
+\alpha^{-1}\beta:R_d\to R_c,
+\qquad
+\beta^{-1}\alpha:R_c\to R_d
+\]
+互为逆。由可表族间的 Yoneda 等价，前者对应 $a:c\to d$，后者对应 $b:d\to c$。两种变换复合分别为恒等，Yoneda 等价保持复合的显式公式将其变为 $ba=\id_c$ 与 $ab=\id_d$。因此 $a$ 可逆。
+\end{proof}
+\begin{proposition}[带普遍结构的唯一性]
+若 $C$ 完备，则表示数据类型
+\[
+\mathsf{Rep}(F)=
+\sum_{c:C}\sum_{u:F(c)}
+\prod_{x:C}\isEquiv(\psi_{u,x})
+\]
+是命题；一旦有元素便可缩。
+\end{proposition}
+\begin{proof}
+由定理\ref{thm:universal-element}，表示数据等价于 $\widetilde F$ 的初始对象及其初始性证明。总空间 $\widetilde F$ 完备。任意两个初始对象之间有箭头 $a,b$，两个复合都与各自恒等箭头相等，因为相应映射类型可缩。故 $a$ 可逆，完备性把它变成两个对象之间的路径。初始性为命题，因为它是可缩性命题的依赖积；因此该路径提升为初始对象数据之间的路径。任意两点相等，说明数据类型是命题。
+\end{proof}
+\begin{remark}
+这一定理说明，普遍性质所确定的不仅是一个对象的等价类。在完备的环境中，对象连同其普遍结构形成命题，存在时形成可缩类型。因而不同构造之间的比较不需要额外任意的全局选择。
+\end{remark}
+
+\section{Yoneda 如何检测箭头}
+\begin{proposition}[由测试映射检测同一性]
+若 $a,b:c\to d$ 诱导相同的后复合自然变换
+\[
+\Hom_C(-,c)\longrightarrow\Hom_C(-,d),
+\]
+则 $a=b$。更准确地，箭头类型到这一自然变换类型的典范映射是等价，所以它在所有较高路径类型上也为等价。
+\end{proposition}
+\begin{proof}
+这是反变 Yoneda 引理在 $P=\Hom_C(-,d)$ 上的应用。求值于 $\id_c$ 的逆检验直接恢复 $a$。由于整个映射是等价，等价作用于路径类型的定理给出较高路径层的结论。
+\end{proof}
+\begin{proposition}[由映射空间检测可逆性]
+箭头 $a:c\to d$ 可逆，当且仅当对所有 $x$，后复合
+\[
+\Hom_C(x,c)\longrightarrow\Hom_C(x,d)
+\]
+是等价。它也等价于对所有 $y$，前复合
+\[
+\Hom_C(d,y)\longrightarrow\Hom_C(c,y)
+\]
+为等价。
+\end{proposition}
+\begin{proof}
+后复合条件就是已采用的可逆性定义。若 $a$ 可逆，则前复合其逆提供前复合 $a$ 的拟逆。反向，取 $y=c$，得到 $b:d\to c$ 满足 $ba=\id_c$；再取 $y=d$，利用前复合 $a$ 的路径检测性，从 $(ab)a=a=\id_d a$ 推出 $ab=\id_d$。
+\end{proof}
+\begin{example}
+普通集合中的函数 $f:A\to B$ 若对每个集合 $X$ 诱导 $\Hom(X,A)\to\Hom(X,B)$ 双射，则取 $X=B$ 得到右逆，再取 $X=A$ 得到左逆。高阶版本使用相同测试，但双射升级为等价，唯一性升级为纤维可缩。
+\end{example}
+
+\section{锥与极限的定义}
+\begin{definition}[锥]
+设 $K$ 为索引范畴，$D:K\to C$ 为图表。顶点为 $x$ 的锥类型定义为
+\[
+\mathsf{Cone}_D(x)=\Hom_{C^K}(\Delta x,D),
+\]
+其中 $\Delta x$ 为常值图表。锥包含从 $x$ 到各 $D(k)$ 的箭头，及沿索引箭头和较高单形的全部相容。
+\end{definition}
+\begin{definition}[极限]
+一个极限为对象 $L$ 及锥 $\lambda:\Delta L\to D$，使对每个 $x$，复合诱导
+\[
+\Hom_C(x,L)\longrightarrow\mathsf{Cone}_D(x),
+\qquad f\longmapsto\lambda\circ\Delta f
+\]
+是等价。记 $L=\limm D$，但这个记号总连同所选普遍锥理解。
+\end{definition}
+\begin{proposition}
+若 $C$ 完备，则一个固定图表的极限数据类型是命题，存在时可缩。
+\end{proposition}
+\begin{proof}
+锥类型对 $x$ 反变，构成反变族。极限正是该反变族的表示数据。把表示唯一性命题对偶到 $C^{\op}$，得到结论。
+\end{proof}
+\begin{remark}
+普通极限要求唯一的中介态射，高阶极限要求中介态射连同指定锥比较的类型可缩。若仅要求普通同伦范畴中的普遍性，通常不能恢复这一较强的高阶极限性质。
+\end{remark}
+
+\section{终对象、乘积与同伦拉回}
+\begin{example}[终对象]
+当 $K$ 为空索引时，锥类型为单位类型。因此 $1_C$ 是终对象恰好表示
+\[
+\Hom_C(x,1_C)\simeq\one
+\]
+对每个 $x$ 成立。
+\end{example}
+\begin{example}[二元乘积]
+索引为两个离散点时，$\mathsf{Cone}(x)=\Hom_C(x,A)\times\Hom_C(x,B)$。因此乘积由投影 $P\to A,P\to B$ 及自然等价
+\[
+\Hom_C(x,P)\simeq
+\Hom_C(x,A)\times\Hom_C(x,B)
+\]
+刻画。
+\end{example}
+\begin{definition}[同伦拉回]
+对余跨度 $A\xrightarrow f Z\xleftarrow g B$，拉回对象 $P$ 配有 $p:P\to A$、$q:P\to B$ 及路径 $fp=gq$，并要求
+\[
+\Hom_C(x,P)\simeq
+\sum_{a:\Hom_C(x,A)}\sum_{b:\Hom_C(x,B)}
+(fa=gb).
+\]
+\end{definition}
+\begin{remark}
+右边的等式属于 $\Hom_C(x,Z)$，因此保留两个复合之间的同伦。将它换成严格相等的集合约束，除非另有纤维性条件保证模型正确，否则会得到错误的同伦拉回。
+\end{remark}
+\begin{proposition}[空间中的拉回公式]
+对空间函数 $f:A\to Z$、$g:B\to Z$，类型
+\[
+P=\sum_{a:A}\sum_{b:B}(f(a)=g(b))
+\]
+具有上述映射性质。
+\end{proposition}
+\begin{proof}
+将一个函数 $h:X\to P$ 逐分量写为 $a:X\to A$、$b:X\to B$ 及 $q:\prod_{x:X}(f(a(x))=g(b(x)))$。函数外延性把最后一个依赖积等价地写成 $f\circ a=g\circ b$。依赖和与函数类型的交换给出两方向的显式等价，并且与 $X$ 的前复合相容。
+\end{proof}
+
+\section{伴随的映射空间定义}
+\begin{definition}[伴随]
+函子 $L:C\to D$ 与 $R:D\to C$ 构成伴随 $L\dashv R$，若有在 $c,d$ 两变量中自然的等价
+\[
+\Phi_{c,d}:\Hom_D(Lc,d)\simeq\Hom_C(c,Rd).
+\]
+自然性在第一个变量中反变，在第二个变量中协变。
+\end{definition}
+\begin{definition}[单位与余单位]
+给定上述伴随，定义
+\[
+\eta_c=\Phi_{c,Lc}(\id_{Lc}):c\to RLc,
+\]
+\[
+\varepsilon_d=\Phi^{-1}_{Rd,d}(\id_{Rd}):LRd\to d.
+\]
+\end{definition}
+\begin{lemma}[转置公式]\label{lem:transpose}
+对 $f:Lc\to d$、$g:c\to Rd$，有
+\[
+\Phi(f)=R(f)\circ\eta_c,
+\qquad
+\Phi^{-1}(g)=\varepsilon_d\circ L(g).
+\]
+\end{lemma}
+\begin{proof}
+将 $f$ 看成第二变量中的箭头 $Lc\to d$。$\Phi$ 在第二变量中的自然性把 $\id_{Lc}$ 的像 $\eta_c$ 送到 $R(f)\circ\eta_c$，而另一条路线得到 $\Phi(f)$。对逆转置，使用第一变量的自然性及 $\varepsilon_d$ 的定义即可。
+\end{proof}
+\begin{proposition}[三角恒等式]
+单位与余单位满足
+\[
+\varepsilon_{Lc}\circ L(\eta_c)=\id_{Lc},
+\qquad
+R(\varepsilon_d)\circ\eta_{Rd}=\id_{Rd}.
+\]
+\end{proposition}
+\begin{proof}
+第一式左边由引理\ref{lem:transpose}等于 $\Phi^{-1}(\eta_c)$，再由单位的定义等于 $\id_{Lc}$。第二式同样等于 $\Phi(\varepsilon_d)=\id_{Rd}$。这些等式属于相应映射类型，且随对象自然。
+\end{proof}
+
+\section{从单位与余单位恢复伴随}
+\begin{theorem}[伴随的单位余单位判据]
+若给定函子 $L,R$、自然变换 $\eta:\id_C\to RL$、$\varepsilon:LR\to\id_D$，以及自然的三角比较，则公式
+\[
+\Phi(f)=R(f)\eta_c,
+\qquad
+\Psi(g)=\varepsilon_dL(g)
+\]
+给出映射空间之间的自然等价。
+\end{theorem}
+\begin{proof}
+首先计算 $\Psi\Phi(f)$。由函子保持合成、结合律及余单位自然性，
+\begin{align*}
+\Psi\Phi(f)
+&=\varepsilon_d\circ L(R(f)\circ\eta_c)\\
+&=\varepsilon_d\circ LR(f)\circ L(\eta_c)\\
+&=f\circ\varepsilon_{Lc}\circ L(\eta_c)\\
+&=f.
+\end{align*}
+最后一步使用第一三角比较。对另一个复合，单位在 $g:c\to Rd$ 上的自然性给出
+\begin{align*}
+\Phi\Psi(g)
+&=R(\varepsilon_d\circ L(g))\circ\eta_c\\
+&=R(\varepsilon_d)\circ RL(g)\circ\eta_c\\
+&=R(\varepsilon_d)\circ\eta_{Rd}\circ g\\
+&=g.
+\end{align*}
+所列比较在对象与箭头参数中都是内部项，因此给出自然的两侧逆同伦。等价的拟逆判据完成证明。
+\end{proof}
+\begin{example}[乘积与函数空间]
+在空间范畴中，柯里化等价
+\[
+\Map(X\times A,B)\simeq\Map(X,B^A)
+\]
+表示 $-\times A\dashv(-)^A$。单位在 $X$ 处把 $x$ 送到函数 $a\mapsto(x,a)$；余单位为求值 $(u,a)\mapsto u(a)$。两条三角恒等式分别是函数的 $\beta$ 与 $\eta$ 比较。
+\end{example}
+
+\section{从可表性构造右伴随}
+\begin{proposition}
+设 $L:C\to D$，$C$ 完备。若对每个 $d$，反变族
+\[
+c\longmapsto\Hom_D(Lc,d)
+\]
+可表，则可由其表示数据构造右伴随 $R$。
+\end{proposition}
+\begin{proof}
+取表示对象 $Rd$ 与表示等价。表示数据是命题，因此若仅给出其命题截断的存在，也可消去到表示数据本身。对箭头 $a:d\to d'$，后复合产生反变族之间的自然变换。通过表示等价与 Yoneda 全忠实性，它对应唯一到可缩选择的箭头 $R(a):Rd\to Rd'$。
+
+恒等与复合的相容从自然变换的恒等与复合，经 Yoneda 等价传回；其高阶相容同样来自映射类型间的等价。于是形成函子 $R$，表示等价正是所需的伴随等价。
+\end{proof}
+\begin{remark}
+这段论证中“可表”必须理解为相容的内部条件。以命题截断表达存在时，使用表示数据的命题性可以恢复表示，无需额外在所有对象上进行任意选取。
+\end{remark}
+
+\section{右伴随保持极限}
+\begin{theorem}
+若 $L\dashv R$，则 $R$ 保持所有相关范畴中存在的极限。
+\end{theorem}
+\begin{proof}
+设图表 $D_0:K\to D$ 有极限 $M$。对 $c:C$，伴随等价与极限性质给出
+\[
+\Hom_C(c,RM)
+\simeq\Hom_D(Lc,M)
+\simeq\mathsf{Cone}_{D_0}(Lc).
+\]
+逐分量应用伴随等价，并使用它在两个变量中的自然性，得到
+\[
+\mathsf{Cone}_{D_0}(Lc)
+\simeq\mathsf{Cone}_{R D_0}(c).
+\]
+这里锥的每个相容单形也被自然等价传送，所以该比较保留全部高阶锥数据。于是 $RM$ 表示右边的锥族，因而是 $R D_0$ 的极限。
+\end{proof}
+\begin{remark}
+可表性是本章各结论的共同机制。Yoneda 使对象通过映射类型被检测，普遍元素使可表性成为元素范畴中的初始性，极限与伴随则是不同变量安排下的同一表示原理。
+\end{remark}
+\source{本章将合成 Yoneda 引理用于普遍性质。普通版本见\cite{RiehlContext}，高阶映射空间与伴随的系统理论见\cite{RiehlVerity}。}

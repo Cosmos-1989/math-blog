@@ -1,0 +1,8 @@
+\title{序列空间 ℓ^p 的完备性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{1\le p<\infty}，#{\mathbb K=\mathbb R} 或 #{\mathbb C}。[序列空间](00MN) #{\ell^p(\mathbb N;\mathbb K)} 在其 #{p}-范数下为 [Banach 空间](00M6)。}
+\p{\strong{证明。}设 #{(x^{(m)})} 为范数 Cauchy 列。由 #{|x_j^{(m)}-x_j^{(k)}|\le\|x^{(m)}-x^{(k)}\|_p} 以及[标量完备性](0A37)，各坐标存在极限 #{x_j}。Cauchy 列范数有界，设界为 #{C}；对每个有限 #{N}，逐坐标取极限给出 #{\sum_{j=1}^N|x_j|^p\le C^p}。由[非负项级数判据](0A38)，#{x\in\ell^p}。}
+\p{给定 #{\varepsilon>0}，取 #{M} 使 #{m,k\ge M} 时 #{\|x^{(m)}-x^{(k)}\|_p\le\varepsilon}。固定 #{m\ge M}，先在前 #{N} 个坐标上令 #{k\to\infty}，得 #{\sum_{j=1}^N|x_j^{(m)}-x_j|^p\le\varepsilon^p}，再令 #{N\to\infty} 得 #{\|x^{(m)}-x\|_p\le\varepsilon}。}

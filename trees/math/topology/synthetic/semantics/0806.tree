@@ -1,0 +1,18 @@
+\title{由提升性质实现路径归纳}
+\date{2026-09-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[从同伦类型到合成高阶范畴](0210)，第22章}
+
+\p{在一个[模型范畴](0429)中，平凡余纤维化指同时为余纤维化和弱等价的映射；它对所有纤维化有[左提升性质](0420)。设 #{A\to\Gamma} 是[显示映射](0803)，#{P_\Gamma A} 是[相对路径对象](042I)，#{r} 将点送到常路径。}
+\p{设每个显示映射为模型范畴中的纤维化，并且对角有分解}
+##{A\xrightarrow{r}P_\Gamma A\longrightarrow A\times_\Gamma A,}
+\p{其中 #{r} 为平凡余纤维化。若 #{D\to P_\Gamma A} 为纤维化，则沿 #{r} 给定的截面可延拓到整个 #{P_\Gamma A}。这实现[路径归纳](050G)的消去操作及其在常路径处的计算。}
+\subtree{\taxon{Proof}
+\p{沿 #{r} 的截面就是提升图的顶部映射：}
+\figure{\tex{\usepackage{amsmath,amssymb,tikz-cd}}{\begin{tikzcd}
+A\ar[r,"d"]\ar[d,"r"']&D\ar[d]\\
+P_\Gamma A\ar[r,"\operatorname{id}"']\ar[ur,dashed]&P_\Gamma A.
+\end{tikzcd}}}
+\p{平凡余纤维化对纤维化有左提升性质，故存在虚线。这条虚线是延拓截面，并在常路径处与 #{d} 相容。}
+}

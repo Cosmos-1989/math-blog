@@ -1,0 +1,14 @@
+\title{赋值域坐标中的 Jacobian 体积因子}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Cluckers–Loeser，§4.2、8.2–8.3、9.1.3](https://webusers.imj-prg.fr/~francois.loeser/aom_cl.pdf)}
+
+\p{设 #{K} 为[非阿基米德局部域](00W2)，剩余域大小为 #{q}，归一化[赋值](00SF)绝对值为 #{|a|=q^{-\operatorname{ord}(a)}}。在 #{K^d} 上取最大范数。开集间映射 #{h} 在 #{x} 可微，指存在 #{K}-线性映射 #{Dh_x}，使}
+##{\frac{\|h(x+v)-h(x)-Dh_x(v)\|}{\|v\|}\longrightarrow 0\qquad(v\to 0,\ v\ne 0).}
+\p{若源与目标都为 #{d} 维且 #{Dh_x} 可逆，Jacobian 是 #{\det Dh_x}，其赋值记作 #{\operatorname{ordjac}h(x)}，体积因子为 #{|\det Dh_x|}。行列式及其子式采用[有限求和定义](01D2)。}
+\p{低维支撑可在正则部分用解析参数图 #{\phi : U\subseteq K^d\to X\subseteq K^m} 描述，解析指局部由收敛幂级数给出，且 #{D\phi} 的秩为 #{d}。令 #{\phi_I} 为任选 #{d} 个目标坐标组成的映射，置}
+##{J_\phi(u)=\max_{|I|=d}|\det D\phi_I(u)|.}
+\p{该坐标片的 #{d} 维体积由 #{J_\phi(u)\,du} 给出，其中 #{du} 为[归一化 Haar 测度](00T1)。若源、目标图分别为 #{\phi_X,\phi_Y}，且 #{h=\phi_Y\circ h_{\mathrm{loc}}\circ\phi_X^{-1}}，则相对于这两个体积的 Jacobian 绝对值为}
+##{|\operatorname{Jac}h|(\phi_X(u))=\frac{J_{\phi_Y}(h_{\mathrm{loc}}(u))\,|\det Dh_{\mathrm{loc}}(u)|}{J_{\phi_X}(u)}.}
+\p{重参数化的行列式因子保证这些体积在交叠上相容。对于可定义集合，在正则片上使用此测度，并在相应维数的积分中忽略较低维部分；正则分解与测度拼合采用所引局部域几何结果。形式 Laurent 级数域上使用同样的导数与子式赋值，得到动机变量替换中的整数值 #{\operatorname{ordjac}h}。}

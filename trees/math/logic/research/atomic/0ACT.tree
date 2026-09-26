@@ -1,0 +1,19 @@
+\title{动机积分的相对可积类}
+\date{2026-09-26}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Cluckers–Loeser，§3.3、3.8、4.1、4.3及定理9.1.4的证明](https://webusers.imj-prg.fr/~francois.loeser/aom_cl.pdf)}
+
+\p{设 #{p:X\to\Lambda} 为 [Denef–Pas 可定义映射](0ACQ)。在[相对维数分次](0ACS)上，非指数相对可积群 #{I_\Lambda C(X\to\Lambda)} 及其积分 #{\mu_\Lambda} 由单元分解的递归积分构造给出。单元分解把每次消去一个赋值域坐标的步骤化为图形 #{z=c(y)} 或球层}
+##{\operatorname{ord}(z-c(y))=\alpha(y),\qquad\operatorname{ac}(z-c(y))=\xi(y)\ne 0.}
+\p{#{c,\alpha,\xi} 分别是赋值域、整数和非零剩余域值的可定义函数；#{\operatorname{ord},\operatorname{ac}} 是[赋值与角分量](00W2)。在与被积函数相适应的单元上，非指数积分按以下三种坐标运算递归计算。}
+\ol{
+\li{剩余域坐标用族的 Grothendieck 类求和；整数坐标用 Presburger 求和，即在有序加法及同余语言中，把[系数环](0ACP)里的 #{\mathbb L} 换成每个实数 #{q>1} 后检验绝对可求和性，并把几何级数重新写回形式系数。}
+\li{球层的相对体积是 #{\mathbb L^{-\alpha(y)-1}}，因此消去该坐标时乘这个因子。}
+\li{图形坐标在相应支撑维数内通过投影消去；坐标重参数化同时带入 [Jacobian 体积因子](0ACZ)。可积性与积分值随递归步骤一起定义，积分的定义域是构造所得的可积子群。}
+}
+\p{这一递归构造的存在、与分解选择无关性及各支撑维数上的坐标相容性采用所引积分理论。它给出指定的子群 #{I_\Lambda C(X\to\Lambda)\subseteq C(X\to\Lambda)}。指数可积群定义为沿[零相位嵌入](0ACR)的系数扩张：}
+##{I_\Lambda C(X\to\Lambda)^{\exp}=I_\Lambda C(X\to\Lambda)\otimes_{K_0(\operatorname{RDef}_X)}K_0(\operatorname{RDef}^{\exp}_X).}
+\p{所引定理4.1.1、4.3.1将非指数积分延拓为}
+##{\mu_\Lambda : I_\Lambda C(X\to\Lambda)^{\exp}\longrightarrow\mathcal C^{\exp}(\Lambda).}
+\p{指数积分还满足剩余域特征和关系，以及在 #{\alpha<0} 的球层上对形式相位 #{E(z)} 积分为零的规则。动机可积性是这个构造中的代数条件；它与局部域绝对可积性的联系由专门化定理给出。}

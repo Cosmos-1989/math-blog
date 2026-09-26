@@ -1,0 +1,25 @@
+\title{Yoneda 等价关于协变族自然}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
+
+\p{设 #{C} 为合成预范畴、#{c:C}，#{F,G} 为协变族，#{R_c=\operatorname{Hom}_C(c,-)}，#{\mathsf{Yev}} 为恒等箭头求值。}
+
+\p{所需前置：[协变合成 Yoneda 引理](063B)、[纤维映射的自动自然性](062B)。}
+
+\p{若 #{\beta:F\to G} 是协变族间的自然变换，则图}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Nat}_C(R_c,F)\arrow[r,"\mathsf{Yev}"]\arrow[d,"\beta\circ-"']&F(c)\arrow[d,"\beta_c"]\\
+\operatorname{Nat}_C(R_c,G)\arrow[r,"\mathsf{Yev}"']&G(c)
+\end{tikzcd}
+}}
+
+\p{相容交换。}
+
+\p{\strong{证明。}
+两条路线把 #{\alpha} 都送到 #{\beta_c(\alpha_c(\operatorname{id}_c))}，因此求值方向直接相同。逆方向的相容为
+#{\beta_x(f_*u)=f_*\beta_c(u)}，这是 #{\beta} 的自动自然性。}

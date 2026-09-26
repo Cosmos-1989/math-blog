@@ -4,6 +4,7 @@
 \author{author}
 \meta{source}{[Gerber–Kunde，§2.1–2.2](007J)}
 
-\p{设 #{T} 是概率空间 #{(X,\mu)} 的[保测自同构](00RS)，#{A} 可测且 #{\mu(A)>0}。定义首次返回时间及诱导变换}
-##{r_A(x)=\min\{n\geq1:T^n x\in A\},\qquad T_Ax=T^{r_A(x)}x\quad(x\in A).}
-\p{Poincaré 复归保证 #{r_A} 在 #{A} 上几乎处处有限；由集合 #{\{r_A=n\}} 的可测性可见 #{T_A} 可测。它保持归一化测度 #{\mu_A(B)=\mu(B)/\mu(A)}（#{B\subseteq A}）。若 #{T} [遍历](00RW)，则 #{T_A} 也遍历，并且返回时间满足 #{\int_A r_A\,d\mu=1}。}
+\p{设 #{T} 是概率空间 #{(X,\mu)} 的[保测自同构](00RS)，#{A} 可测且 #{\mu(A)>0}。对 #{x\in A}，定义首次返回时间与诱导变换}
+##{r_A(x)=\min\{n\geq 1:T^nx\in A\},\qquad T_Ax=T^{r_A(x)}x.}
+\p{没有返回时令 #{r_A(x)=\infty}，并只在有限返回时间的点定义 #{T_A}。[Poincaré 复归](0A6H)保证该定义域在 #{A} 中满测。集合 #{\{r_A=n\}=A\cap T^{-n}A\cap\bigcap_{1\leq j<n}T^{-j}(X\setminus A)} 可测，因而按这些片定义的 #{T_A} 可测。}
+\p{取 #{\mu_A(B)=\mu(B)/\mu(A)} 后，诱导变换[保测并继承遍历性](0A6U)；首次返回时间满足[Kac 公式](0A6I)。}

@@ -1,0 +1,191 @@
+\chapter{有限类型、对称群与分类空间}
+\section{有限基数的同伦分类}
+\begin{definition}[有限类型]
+对自然数 $n$，记标准 $n$ 元类型为 $\mathbf n$。递归规定 $\mathbf0=\zero$、$\mathbf{n+1}=\mathbf n+\one$。定义
+\[
+\Fin_n=\sum_{A:\U}\trunc{\mathbf n\simeq A}.
+\]
+第二分量只断言 $A$ 有 $n$ 个元素，不选定一个编号。标准基点为 $(\mathbf n,|\id|)$。
+\end{definition}
+\begin{lemma}
+每个 $A:\Fin_n$ 的承载类型是集合。
+\end{lemma}
+\begin{proof}
+标准有限类型是集合，这可以由有限和的路径类型逐步验证：同一分支中的路径归约到该分支的路径，不同分支之间没有路径。集合性是命题，因此可以消去 $\trunc{\mathbf n\simeq A}$ 到目标 $\isSet(A)$。一旦给定等价，等价保持截断性就证明 $A$ 为集合。
+\end{proof}
+\begin{definition}[连通类型]
+类型 $X$ 称为连通，若 $\trunc X$ 有元素，且
+\[
+\prod_{x,y:X}\trunc{x=y}
+\]
+有元素。对于已指定基点 $x_0$ 的类型，等价地只需对每个 $x$ 给出 $\trunc{x_0=x}$。
+\end{definition}
+\begin{proposition}
+$\Fin_n$ 是带基点的连通 $1$-类型。
+\end{proposition}
+\begin{proof}
+第二分量是命题。命题子类型路径公式与单价性给出
+\[
+((A,a)=(B,b))\simeq(A=B)\simeq(A\simeq B).
+\]
+这里 $A,B$ 都是集合，函数类型 $A\to B$ 也是集合：其路径类型由函数外延性等价于命题的依赖积。等价性附加数据为命题，故 $A\simeq B$ 是集合。因此 $\Fin_n$ 的路径类型是集合。
+
+为了证明连通，固定 $(A,a)$。目标 $\trunc{(\mathbf n,|\id|)=(A,a)}$ 是命题，所以可消去 $a:\trunc{\mathbf n\simeq A}$。对给定的等价 $e$，单价性产生承载类型的路径，命题子类型路径公式将它提升到 $\Fin_n$ 中。最后作命题截断即可。
+\end{proof}
+\begin{remark}
+如果使用 $\sum_A(\mathbf n\simeq A)$，而不是将第二分量截断，那么得到的是可缩类型。它分类“带有一个指定编号的 $n$ 元类型”。忘掉编号但保留所有编号间的同伦关系，才得到具有对称性的 $\Fin_n$。
+\end{remark}
+
+\section{环路空间与对称群}
+\begin{definition}[基点环路]
+对带基点类型 $(X,x_0)$，定义
+\[
+\Omega(X,x_0)=(x_0=_Xx_0).
+\]
+它具有路径连接、逆及常路径。若 $X$ 是 $1$-类型，则 $\Omega X$ 是集合，群胚律给出一个普通群。
+\end{definition}
+\begin{definition}[对称群]
+$\Sigma_n$ 是 $\mathbf n$ 的自双射群，群运算采用函数复合。我们用 $d\circ e$ 表示先执行 $e$ 再执行 $d$。
+\end{definition}
+\begin{theorem}[有限类型的环路计算]\label{thm:finite-loops}
+有等价
+\[
+\Omega(\Fin_n,\mathbf n)\simeq\Sigma_n.
+\]
+在路径按“先 $p$ 后 $q$”连接的约定下，比较将 $p\cdot q$ 送到 $e_q\circ e_p$。
+\end{theorem}
+\begin{proof}
+命题子类型路径公式先忘掉有限性见证，单价性再给出
+\[
+(\mathbf n=_{\Fin_n}\mathbf n)
+\simeq(\mathbf n=_{\U}\mathbf n)
+\simeq(\mathbf n\simeq\mathbf n).
+\]
+有限集合的等价就是自双射。复合相容是 $\idtoequiv$ 的复合公式。若希望把两端都写成通常的左乘群运算，可将环路群的乘法定义为 $p*q=q\cdot p$；也可在比较后取逆得到通常约定的群同构。两种约定表达同一几何内容。
+\end{proof}
+\begin{example}
+$\Fin_0$ 和 $\Fin_1$ 可缩。证明如下：它们连通，任意两个承载类型之间的等价类型为命题，而且由有限性可截断地证明存在这样的等价。消去截断到这个命题后，得到实际路径。选标准基点即得到收缩。
+
+当 $n=2$ 时，自双射只有恒等与交换。因此 $\Fin_2$ 的基点有两个环路，非平凡环路的平方等于恒等。它的环路类型已经是集合，所以没有更高的非平凡路径层次。
+\end{example}
+\begin{definition}[群的分类空间]
+普通群 $G$ 的一个分类空间是带基点的连通 $1$-类型 $BG$，并带有其环路群与 $G$ 的指定同构。约定环路群的乘法与该同构相容。
+\end{definition}
+\begin{remark}
+定理\ref{thm:finite-loops}表明 $\Fin_n$ 是 $\Sigma_n$ 的一个分类空间。这里记号 $B\Sigma_n$ 可以选为这个具体构造。不能仅由两个未说明截断性的空间有同构的基本群，就推断它们等价；连通性与 $1$-截断性在此都不可缺少。
+\end{remark}
+
+\section{群作用与挠子}
+\begin{definition}[右群作用]
+设 $G$ 是群，$X$ 是集合。一个右作用为函数 $X\times G\to X$，记为 $x\cdot g$，满足
+\[
+x\cdot1=x,
+\qquad
+(x\cdot g)\cdot h=x\cdot(gh).
+\]
+作用间的等变映射 $f:X\to Y$ 满足 $f(x\cdot g)=f(x)\cdot g$。
+\end{definition}
+\begin{definition}[$G$-挠子]
+一个右 $G$-挠子是带右作用的集合 $T$，满足 $\trunc T$，并且对每个 $t:T$，函数
+\[
+q_t:G\to T,\qquad g\longmapsto t\cdot g
+\]
+为等价。记所有小右 $G$-挠子的类型为 $\Tors(G)$。
+\end{definition}
+\begin{lemma}
+后一条件等价于作用自由且传递：对任意 $t,u:T$，存在唯一 $g:G$ 使 $t\cdot g=u$。
+\end{lemma}
+\begin{proof}
+$\fib_{q_t}(u)=\sum_{g:G}(t\cdot g=u)$ 可缩，恰好表达存在唯一这样的 $g$。这里 $G,T$ 是集合，故同伦纤维是集合；其可缩性就是集合论的唯一存在。
+\end{proof}
+\begin{example}
+$G$ 以右乘作用于自身，构成标准挠子。对于固定 $t$，$q_t$ 的逆为 $u\mapsto t^{-1}u$。
+
+群 $\Z$ 作用于整数格点的任意无标记平移副本，得到一个 $\Z$-挠子。选定一个格点便可将它编号为整数；不选格点时，编号之间相差整体平移。
+\end{example}
+\begin{proposition}[挠子的局部平凡化]
+若给定 $t:T$，则 $q_t:G\to T$ 是等变等价。改变基点 $t$ 会改变这一等价，但所有选择均属于挠子的结构本身。
+\end{proposition}
+\begin{proof}
+等价性由定义。等变性由作用律：
+\[
+q_t(gh)=t\cdot(gh)=(t\cdot g)\cdot h=q_t(g)\cdot h.
+\]
+若 $u=t\cdot k$，则 $q_u(g)=q_t(kg)$，所以两种平凡化之间的变化为左乘 $k$。
+\end{proof}
+
+\section{挠子的结构同一性}
+\begin{lemma}
+对于右 $G$-集合 $T,U$，它们的结构同一性类型等价于等变等价类型。
+\end{lemma}
+\begin{proof}
+对承载集合的路径应用单价性，得到等价 $e:T\simeq U$。作用函数的传输公式要求
+\[
+e(t\cdot g)=e(t)\cdot g.
+\]
+可将作用看作 $T\to(G\to T)$ 的函数，逐项使用函数族传输公式得到该条件。作用律与集合性是命题，因此不再增加路径数据。对于挠子，非空截断与 $q_t$ 等价性也都是命题，同一公式仍成立。
+\end{proof}
+\begin{theorem}[挠子分类空间]\label{thm:torsor-BG}
+$\Tors(G)$ 是带基点的连通 $1$-类型，基点为标准挠子 $G$。其基点环路类型等价于 $G$。
+\end{theorem}
+\begin{proof}
+两个挠子间的等变等价组成集合，因为底层函数类型是集合，等变性与等价性是命题。因此结构同一性表明挠子类型为 $1$-类型。
+
+对任意挠子 $T$，目标 $\trunc{G=T}$ 是命题。可用 $\trunc T$ 消去：给定 $t:T$ 后，$q_t$ 是等变等价，结构同一性便给出 $G=T$。所以挠子类型连通。
+
+最后计算标准挠子的等变自等价。若 $f:G\to G$ 等变，则
+\[
+f(g)=f(1\cdot g)=f(1)g.
+\]
+故 $f$ 由 $h=f(1)$ 决定。反之，左乘 $L_h(g)=hg$ 是等变双射，逆为 $L_{h^{-1}}$。于是
+\[
+\Aut_G(G)\simeq G,
+\qquad f\longmapsto f(1).
+\]
+结构同一性将左边识别为基点环路。复合满足 $L_k\circ L_h=L_{kh}$，与先后路径约定相容。
+\end{proof}
+\begin{remark}
+证明没有为所有挠子选择一个点。连通性的目标已截断，故局部选点仅发生在合法的命题消去之内。若把这些局部点拼成一个全局的选点函数，将额外引入不属于本论证的选择要求。
+\end{remark}
+
+\section{挠子族的分类}
+\begin{definition}[参数化挠子]
+在类型 $X$ 上的 $G$-挠子族是一个依赖类型 $T:X\to\U$，逐纤维配备右 $G$-挠子结构。其总空间为 $\sum_{x:X}T(x)$。
+\end{definition}
+\begin{proposition}
+函数 $X\to\Tors(G)$ 与 $X$ 上的小 $G$-挠子族具有等价的数据。两个这样的函数之间的路径，等价于逐纤维等变等价族。
+\end{proposition}
+\begin{proof}
+第一部分只是依赖和与依赖积的交换：函数 $x\mapsto(T_x,\rho_x,\ldots)$ 恰好提供逐纤维结构。第二部分由函数外延性把路径化为逐点结构路径，再用挠子的结构同一性。全部等价都保留 $x$ 的依赖关系。
+\end{proof}
+\begin{example}[双覆盖的单值变换]
+在普通拓扑模型中，映射 $S^1\to S^1$，$z\mapsto z^2$ 的每条纤维有两个点。沿底空间的一周移动，纤维的两点交换。分类映射把这一周的环路送到 $\Fin_2$ 中的交换环路。这个模型说明，同一有限基数的纤维仍然可以组成非平凡的族；非平凡性记录在分类映射的路径作用中。
+\end{example}
+\begin{remark}
+一般拓扑空间上的纤维丛分类还需要对所用空间范畴、局部平凡性与基空间作条件。此处的分类命题是在同伦类型内部关于依赖族的精确陈述，不以任意点集拓扑上的朴素纤维族替代纤维化。
+\end{remark}
+
+\section{带标记的有限类型}
+\begin{definition}
+当 $n\ge1$ 时，令
+\[
+\Fin_{n,\bullet}=\sum_{A:\Fin_n}A.
+\]
+其元素是一个 $n$ 元类型和其中一个标记点。忘掉标记点得到 $\Fin_{n,\bullet}\to\Fin_n$。
+\end{definition}
+\begin{proposition}
+$\Fin_{n,\bullet}$ 是连通 $1$-类型，其基点环路群为固定一个指定元素的置换群，因而同构于 $\Sigma_{n-1}$。
+\end{proposition}
+\begin{proof}
+依赖和路径公式和单价性给出
+\[
+((A,a)=(B,b))\simeq\sum_{e:A\simeq B}(e(a)=b).
+\]
+右边是集合，所以总空间是 $1$-类型。为了证明连通，有限性允许在命题目标中选一个编号 $e:\mathbf n\simeq A$。若指定标准点为 $0$，将 $e^{-1}(a)$ 与 $0$ 交换后再施加 $e$，便得到把标准点送到 $a$ 的双射。于是总空间连通。
+
+基点环路对应固定 $0$ 的置换。这样的置换限制到补集 $\{1,\ldots,n-1\}$ 得到一个 $n-1$ 元集合的置换；反向将任一补集置换延拓为固定 $0$ 的置换。两种操作互逆并保持复合。
+\end{proof}
+\begin{example}
+当 $n=2$ 时，带标记的二元素类型的分类空间可缩，而未标记版本有一个阶为二的非平凡环路。忘记标记点产生的族正体现“自同构群取稳定子”的一般机制。
+\end{example}
+\source{有限类型与分类空间是 Riehl 报告第 5 节的重要例子。挠子构造避免先选群的某种几何实现，可与经典群胚的神经构造比较，参见\cite{RiehlICM,HoTT}。}

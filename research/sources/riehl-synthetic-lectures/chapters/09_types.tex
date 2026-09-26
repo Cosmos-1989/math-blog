@@ -1,0 +1,185 @@
+\chapter{依赖类型的基本演算}
+\section{语境、判断与代入}
+\begin{definition}[语境与项]
+一个语境为有限变量列
+\[
+\Gamma=(x_1:A_1,\ x_2:A_2(x_1),\ldots,\ x_n:A_n(x_1,\ldots,x_{n-1})).
+\]
+判断 $\Gamma\vdash A\ \mathsf{type}$ 表示在该语境中有类型 $A$；判断 $\Gamma\vdash a:A$ 表示项 $a$ 属于类型 $A$。空语境中的类型和项称为闭类型和闭项。
+\end{definition}
+\begin{example}
+判断 $n:\N\vdash\R^n$ 表示维数依赖 $n$ 的空间。判断 $A:\U,\ x:A\vdash(x=_Ax)$ 表示在类型 $A$ 及其元素 $x$ 的语境中，有一个同一性类型。后一个表达式的意义将在本章后面精确规定。
+\end{example}
+\begin{definition}[代入规则]
+若 $\Gamma,x:A\vdash B(x)$ 且 $\Gamma\vdash a:A$，则可形成 $\Gamma\vdash B(a)$。项也可代入。代入保持类型形成、项形成及定义相等，并满足结合律。
+\end{definition}
+\begin{remark}
+同一个字母可在不同位置表示不同的依赖对象，因而必须检查语境。例如 $b:B(a)$ 不能直接被视为 $B(a')$ 的元素；需要先有从 $a$ 到 $a'$ 的路径，再沿该路径传输。
+\end{remark}
+\begin{definition}[定义相等]
+符号 $a\equiv b:A$ 表示表达式经定义展开和计算规则化简后相同。它是对表达式的判断，不是一个另需给出元素的类型。后文的 $a=_Ab$ 则是同一性类型，其元素是路径。
+\end{definition}
+\begin{example}
+函数应用满足 $(\lambda x.t)(a)\equiv t[a/x]$。而两条任意路径的复合结合律通常表现为某个同一性类型的元素，不能通过简单化简认定两边定义相等。
+\end{example}
+
+\section{依赖积的规则}
+\begin{definition}[依赖积]
+若 $\Gamma\vdash A$ 且 $\Gamma,x:A\vdash B(x)$，则有类型 $\prod_{x:A}B(x)$。给定 $\Gamma,x:A\vdash b(x):B(x)$，可形成
+\[
+\lambda x.b(x):\prod_{x:A}B(x).
+\]
+若 $f:\prod_xB(x)$、$a:A$，则有 $f(a):B(a)$。计算规则为
+\[
+(\lambda x.b(x))(a)\equiv b(a).
+\]
+当 $B$ 不依赖 $x$ 时，记为函数类型 $A\to B$。
+\end{definition}
+\begin{proposition}[复合与柯里化]
+函数复合可定义为 $(g\circ f)(x)\equiv g(f(x))$。依赖函数之间有互逆的柯里化运算
+\[
+\left(\prod_{x:A}\prod_{y:B(x)}C(x,y)\right)
+\longleftrightarrow
+\left(\prod_{z:\sum_xB(x)}C(\pi_1z,\pi_2z)\right).
+\]
+\end{proposition}
+\begin{proof}
+正方向把 $f$ 送到 $z\mapsto f(\pi_1z)(\pi_2z)$；反方向把 $g$ 送到 $x\mapsto(y\mapsto g(x,y))$。在有序对上，计算规则给出互逆；任意 $z$ 的情形由依赖和的消去规则得到。将逐点恒等提升为函数间路径时，使用本章后面列出的函数外延性。
+\end{proof}
+
+\section{依赖和的规则}
+\begin{definition}[依赖和]
+若 $A$ 是类型，$B(x)$ 是依赖于 $x:A$ 的类型，则有 $\sum_{x:A}B(x)$。它的引入项为 $(a,b)$，其中 $a:A$、$b:B(a)$；投影满足
+\[
+\pi_1(a,b)\equiv a,\qquad \pi_2(a,b)\equiv b.
+\]
+更一般地，要定义 $\prod_{z:\sum_xB(x)}D(z)$，只需给出 $\prod_{x:A}\prod_{y:B(x)}D(x,y)$。这一规则称为依赖和消去。
+\end{definition}
+\begin{example}
+带基点类型的对象可写为 $\sum_{A:\U}A$。其元素同时记录一个类型与其中一个点。带二元运算的对象可写为 $\sum_{A:\U}(A\times A\to A)$。在引入单价性前，这些表达式已能定义，但它们的路径类型尚未被解释为结构同构。
+\end{example}
+\begin{proposition}[依赖和的泛性质]
+对于不依赖于 $z$ 的类型 $C$，有等价
+\[
+\left(\sum_{x:A}B(x)\to C\right)
+\simeq\prod_{x:A}(B(x)\to C).
+\]
+\end{proposition}
+\begin{proof}
+正向取 $h\mapsto(x\mapsto(y\mapsto h(x,y)))$。逆向用依赖和消去，定义 $k\mapsto((x,y)\mapsto k(x)(y))$。逐个有序对应用计算规则，两种复合均恒等。函数外延性给出函数类型中的所需路径。
+\end{proof}
+\begin{proposition}[依赖选择公式]
+有自然等价
+\[
+\prod_{x:A}\sum_{y:B(x)}C(x,y)
+\simeq
+\sum_{f:\prod_xB(x)}\prod_{x:A}C(x,f(x)).
+\]
+\end{proposition}
+\begin{proof}
+给定 $u$，令 $f(x)=\pi_1u(x)$、$v(x)=\pi_2u(x)$。反向把 $(f,v)$ 送到 $x\mapsto(f(x),v(x))$。有序对消去和函数外延性验证两次复合恒等。这个结论处理显式的见证数据，不允许从截断后的存在性中无条件提取 $f$。
+\end{proof}
+
+\section{基本类型与归纳规则}
+\begin{definition}[空类型、单位类型与余和]
+空类型 $\zero$ 没有引入构造，并允许从 $z:\zero$ 消去到任意类型。单位类型 $\one$ 有项 $*:\one$；定义其上的依赖函数只需指定在 $*$ 处的值。余和 $A+B$ 有引入项 $\mathsf{inl}(a)$、$\mathsf{inr}(b)$，其依赖消去由两个分支给出。
+\end{definition}
+\begin{example}
+否定类型写为 $\neg A=(A\to\zero)$。它记录从 $A$ 的任意元素导出矛盾的方法。$A+B$ 记录选择了左支或右支；因此它比只声称两者之一存在包含更多数据。
+\end{example}
+\begin{definition}[自然数类型]
+自然数类型 $\N$ 有构造 $0:\N$ 与 $\mathsf{succ}:\N\to\N$。给定类型族 $P:\N\to\U$、$z:P(0)$ 及
+\[
+s:\prod_{n:\N}(P(n)\to P(\mathsf{succ}(n))),
+\]
+归纳原则产生 $\mathsf{ind}(z,s):\prod_nP(n)$，满足在 $0$ 与后继处的计算规则。
+\end{definition}
+\begin{example}[递归定义加法]
+固定 $m$，对第二个变量递归定义
+\[
+m+0\equiv m,
+\qquad m+\mathsf{succ}(n)\equiv\mathsf{succ}(m+n).
+\]
+这种定义明确区分了计算方向。等式 $0+n=n$ 需要归纳证明，不能仅由右变量的计算规则在一般 $n$ 处直接化简。
+\end{example}
+\begin{proposition}[加法的左单位]
+存在 $\prod_{n:\N}(0+n=n)$。
+\end{proposition}
+\begin{proof}
+在 $n=0$ 时，两边定义相等，取自反路径。若给定 $p:0+n=n$，应用后继函数对路径的作用，得到
+$\mathsf{succ}(0+n)=\mathsf{succ}(n)$，这就是后继情形。路径上的函数作用将在下一章由同一性消去构造。
+\end{proof}
+
+\section{同一性类型与路径归纳}
+\begin{definition}[同一性类型]
+给定 $x,y:A$，有类型 $(x=_Ay)$，简称 $x=y$。引入项为 $\refl_x:x=x$。其消去规则如下：若
+\[
+P:\prod_{x,y:A}(x=y)\to\U,
+\qquad d:\prod_{x:A}P(x,x,\refl_x),
+\]
+则有
+\[
+J(d):\prod_{x,y:A}\prod_{p:x=y}P(x,y,p),
+\]
+且 $J(d)(x,x,\refl_x)\equiv d(x)$。该规则称为路径归纳。
+\end{definition}
+\begin{remark}
+归纳并不声称每条 $p:x=y$ 都等于某个固定端点的自反路径。它允许终点 $y$ 与路径 $p$ 一起变化。若先把终点固定为 $x$，一般不能据此把所有环路都化为 $\refl_x$。
+\end{remark}
+\begin{definition}[基点固定的路径归纳]
+固定 $a:A$。若 $P:\prod_{x:A}(a=x)\to\U$ 且 $d:P(a,\refl_a)$，则路径归纳给出
+\[
+J_a(d):\prod_{x:A}\prod_{p:a=x}P(x,p).
+\]
+参数可出现在 $P$ 中，并可依赖于 $x,p$。
+\end{definition}
+\begin{proposition}[两种路径归纳的关系]
+全变量形式与基点固定形式可互相导出。
+\end{proposition}
+\begin{proof}
+从基点固定形式出发，对每个 $x$ 取 $a=x$，再用依赖积抽象，即得全变量形式。从全变量形式导出固定基点形式时，把所需结论在起点变量中一般化，再在起点 $a$ 处评价。等价地，使用允许附加依赖参数的 $J$ 规则；其语义已由上一编的相对路径对象证明。
+\end{proof}
+
+\section{函数外延性}
+\begin{definition}[逐点同伦]
+对 $f,g:\prod_{x:A}B(x)$，定义
+\[
+f\sim g:=\prod_{x:A}(f(x)=g(x)).
+\]
+路径归纳给出典范函数 $\happly:(f=g)\to(f\sim g)$，在自反路径处取逐点自反路径。
+\end{definition}
+\begin{definition}[函数外延性规则]
+本讲义使用函数外延性：$\happly$ 是等价。记其逆为 $\funext$。因此给出依赖函数之间的路径，等价于给出逐点路径。
+\end{definition}
+\begin{remark}
+函数外延性作为内部演算的基础原则使用。它可以从适当的单价宇宙推出，但在单价性之前单独列出，能够使路径与等价的基本理论不依赖后续宇宙构造。它不把所有函数判为定义相等，只给出函数类型中的路径。
+\end{remark}
+\begin{proposition}[函数的 eta 规则]
+对 $f:\prod_xB(x)$，存在路径 $(\lambda x.f(x))=f$。
+\end{proposition}
+\begin{proof}
+每个 $x$ 处两边计算后相同，给出 $\refl_{f(x)}$。应用 $\funext$ 即得。
+\end{proof}
+\begin{proposition}[逐点等价诱导积上的等价]
+若对每个 $x$，$u_x:B(x)\to C(x)$ 有逆 $v_x$ 及两个逆同伦，则
+\[
+\left(\prod_xB(x)\right)\to\left(\prod_xC(x)\right),
+\quad b\mapsto(x\mapsto u_x(b(x)))
+\]
+也有逆及两个逆同伦。
+\end{proposition}
+\begin{proof}
+逆逐点定义为 $c\mapsto(x\mapsto v_x(c(x)))$。对两种复合，纤维中的逆同伦给出逐点路径；函数外延性将它们提升为依赖函数之间的路径。
+\end{proof}
+
+\section{内部与外部的对应}
+\begin{proposition}[类型规则的纤维化解释]
+语境解释为底对象，类型解释为其上的纤维化，项解释为截面。依赖和、依赖积、代入分别解释为 $\Sigma$、$\Pi$、拉回。同一性类型解释为相对路径对象的纤维。
+\end{proposition}
+\begin{proof}
+依赖和的引入和消去是总空间有序对及其泛性质；依赖积是截面对象的泛性质；代入由拉回得到。相对路径对象中恒定路径给出 $\refl$，平凡上纤维化对纤维化的提升给出 $J$。所有构造在语境中稳定的性质由 Beck--Chevalley 公式及相对路径分解保证。把自然同构严格化为语法中的严格代入属于最后一章列出的语义基础定理。
+\end{proof}
+\begin{remark}
+从本章起，除专门讨论语义的段落外，$A$ 直接表示类型或空间，等式 $x=y$ 表示路径类型。函数和依赖函数都是内部项，所以它们自动携带相应的参数相容性。
+\end{remark}
+\source{本章规则采用\cite{HoTT,Rijke}的同伦类型论记号；路径语义参见\cite{AwodeyWarren,RiehlSemantics}。}

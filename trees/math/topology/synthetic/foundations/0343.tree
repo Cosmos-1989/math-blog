@@ -1,0 +1,15 @@
+\title{普通反变 Yoneda 引理}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 4 章}
+
+\p{设 #{C} 为局部小范畴，固定 #{c\in C}。函子 #{P:C^{\mathrm{op}}\to\mathbf{Set}} 使用[对偶范畴](0318)，可表函子是[反变同态函子](031A)。}
+
+\p{若 #{P:C^\mathrm{op}\to\mathbf{Set}}，则}
+
+##{\operatorname{Nat}(\operatorname{Hom}_C(-,c),P)\cong P(c).}
+
+\p{对应于 #{u\in P(c)} 的自然变换为 #{f:x\to c\mapsto P(f)(u)}。}
+
+\p{\strong{证明。}将定理[普通协变 Yoneda 引理](0341)应用于 #{C^\mathrm{op}}。也可直接计算：自然性中的后复合变为前复合，而 #{P(gf)=P(f)P(g)} 保证方块交换。逆映射仍为在 #{\mathrm{id}_c} 处评价。}

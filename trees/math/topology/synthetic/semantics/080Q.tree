@@ -1,0 +1,15 @@
+\title{参数化左纤维化与函子图表的语义比较}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[从同伦类型到合成高阶范畴](0210)，第22章；[Cavallo–Riehl–Sattler](021H)，定义2.2.1、2.2.5及定理4.4.4}
+
+\p{设 #{\mathcal E} 为[类型论模型拓扑斯](0A9Q)，并假设其纤维化对任意小[余积](032B)封闭：对集合 #{I} 指标的纤维化 #{p_i:Y_i\to X_i}，#{\coprod_{i\in I}p_i} 仍是纤维化。此附加条件称为 fibration-extensive。令 #{s\mathcal E=[\Delta^{\mathrm{op}},\mathcal E]}，取任意 #{\Gamma\in s\mathcal E} 和普通小范畴 #{\mathcal C}。}
+\p{把[神经](041G) #{N\mathcal C} 离散地放入 #{s\mathcal E}，即第 #{n} 层为以 #{(N\mathcal C)_n} 为指标的终对象余积。以下两个范畴分别采用[协变模型结构及其项目图表结构](0A9X)：}
+##{s\mathcal E/(N\mathcal C\times\Gamma),
+\qquad(s\mathcal E/\Gamma)^{\mathcal C}.}
+\p{存在比较函子 #{A_\Gamma=\operatorname{arr-fun}_\Gamma} 从左边到右边，及 #{B_\Gamma=\operatorname{fun-arr}_\Gamma} 从右边到左边。它们各自是[右 Quillen 函子](0A94)。因此其在纤维对象上的值，分别是逐对象的[左纤维化](0A9W)图表与 #{N\mathcal C\times\Gamma} 上的左纤维化。}
+\p{对纤维对象 #{D}，有自然弱等价 #{D\to A_\Gamma B_\Gamma D}；对纤维对象 #{P}，有自然的弱等价之字形 #{B_\Gamma A_\Gamma P\leftarrow M_\Gamma P\to P}，其中 #{M_\Gamma} 是比较构造中的中间函子。因此两种族描述在纤维对象上互逆到弱等价。}
+\p{对任意 #{t:\Phi\to\Gamma} 与函子 #{F:\mathcal C\to\mathcal D}，#{B} 与基变换及图表限制相容到自然同构；#{A} 有相应自然比较，其在纤维对象上的分量为弱等价。两者的相容程度分别为伪自然和松自然：前者的比较可逆，后者的比较一般只在所述纤维对象上成为弱等价。}
+\p{证明见[Cavallo–Riehl–Sattler，定理4.4.4](021H)，其中用带权极限转置单纯集合中的提升计算。这里 #{\Gamma} 无须是纤维对象，也无须满足 Segal 或完备性条件。定理4.4.4比较的是整个切片中的族，没有预先固定一个分类小宇宙。}
+\p{取 #{\mathcal C=[n]}，就得到 #{\Delta^n\times\Gamma} 上的族与 #{\Gamma} 上函数链的比较。分类对象层面的比较还固定一个[正则基数](00RD) #{\kappa}，要求同时存在分类[相对 #{\kappa}-可呈现映射](0A9P)的纤维化宇宙与左纤维化宇宙，且两者单价、底对象纤维。这里分类指每个所述映射均为相应普遍映射的拉回。来源定理2.3.15、命题5.1.4保证可选取这样的大小界；第6.1节验证有限链比较保持相对 #{\kappa}-可呈现性。在这些宇宙选定后，[同文定理6.2.5](021H)给出分类对象层面的有向单价比较。这些额外选择用于宇宙层面的结论，定理4.4.4的整个切片比较不依赖它们。}

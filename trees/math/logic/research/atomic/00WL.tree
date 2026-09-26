@@ -4,8 +4,6 @@
 \author{author}
 \meta{source}{[Gerber–Kunde，§3.6](007J)}
 
-\p{树是有限自然数序列的集合 #{T\subseteq\mathbb N^{<\mathbb N}}，对初段封闭。无穷分支是 #{b\in\mathbb N^{\mathbb N}}，满足每个有限初段 #{b|_n\in T}。把树用特征函数嵌入 Cantor 空间，则树空间为闭子空间。}
-
-\p{具体环境是 #{2^{\mathbb N^{<\mathbb N}}} 的[积拓扑](00EI)；违反初段封闭由有限坐标即可见，故树空间闭。树族 #{\mathrm{IF}} 由存在无穷分支的树组成。}
-
-\p{反分类归约常用子空间 #{\mathcal T_\infty=\{T:\forall n\ \exists s\in T\ (|s|\geq n)\}}。它是树空间的 #{G_\delta} 子集（可数个开集的交），因此 Polish；具有任意长有限节点仍不保证存在无穷分支，因为此处树不必有限分叉。}
+\p{记 #{\mathbb N^{<\mathbb N}=\bigcup_{n\geq 0}\mathbb N^n} 为全体有限自然数序列，#{s|_k} 为 #{s} 的前 #{k} 项。树是子集 #{T\subseteq\mathbb N^{<\mathbb N}}，满足 #{s\in T}、#{k\leq|s|} 蕴含 #{s|_k\in T}。无穷分支是 #{b\in\mathbb N^{\mathbb N}}，满足每个有限初段 #{b|_n\in T}。}
+\p{有无穷分支的树族记为 #{\mathrm{IF}}。节点 #{s} 的直接后继为形如 #{s^\frown(k)} 的节点，即在末尾添一个自然数。每个节点只有有限多个直接后继时称有限分支树；在此假设下，[任意长节点保证无穷分支](0AC8)。}
+\p{以特征函数编码赋予树空间拓扑，可得[闭的 Polish 树空间](0ACI)。其中[具有任意长节点的树](0ACJ)组成 #{G_\delta} 子空间，但一般树的任意长节点未必给出无穷分支。}

@@ -1,0 +1,20 @@
+\title{相对路径分解及其基变换相容性}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 7 章；[Quillen](0215)；[GoerssJardine](0216)}
+
+\p{设 #{p:A\to\Gamma} 为 Kan 纤维化，#{P_\Gamma(A)} 为[纤维内路径对象](042I)。#{r_\Gamma} 取恒定路径，右侧取两个端点，且不要求 #{\Gamma} 为 Kan 复形。}
+
+\p{存在分解}
+
+##{A\xrightarrow{r_\Gamma}P_\Gamma(A)
+\longrightarrow A\times_\Gamma A,}
+
+\p{左侧为平凡上纤维化，右侧为纤维化，并且构造在基变换下自然同构。}
+
+\p{\strong{证明。}对 #{p:A\to\Gamma} 及边界包含使用命题[指数提升性质](042C)，再沿常值底路径拉回，得到右侧纤维化。对端点包含使用该命题，得到 #{\operatorname{ev}_0:P_\Gamma(A)\to A} 为平凡纤维化。#{r_\Gamma} 是其截面且为单射，故由二取三为平凡上纤维化。}
+
+\p{沿 #{u:\Delta\to\Gamma} 拉回后，两边都表示“#{A} 的一条路径及其在 #{\Gamma} 上固定的值，并选择该值在 #{\Delta} 中的提升”。由拉回泛性质得到自然同构。严格代入的语法还需选择相容的表达方式，把这些自然同构落实为判断相等。}
+
+\p{基变换公式明确为 #{u^*P_\Gamma(A)\cong P_T(u^*A)}，其中 #{u:T\to\Gamma} 任意；证明中的 #{\Delta} 表示基变换的参数单纯集合。此同构由所有广义单形上的相同描述得到，包含每个单纯次数及其结构映射的相容性。}

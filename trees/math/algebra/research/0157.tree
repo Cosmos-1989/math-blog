@@ -1,12 +1,11 @@
-\title{Fubini 与积分矩阵结合律的证明}
+\title{积分矩阵复合的结合律与单位}
 \date{2026-09-23}
-\taxon{Proof}
+\taxon{Theorem}
 \author{author}
 \meta{source}{[Snowden，§3.4–3.5的展开](0150)}
 
-\p{设 #{G} 为[寡轨群](0151)，#{\mu} 为交换含幺环 #{k} 中的[测度](0153)，#{X,Y} 为[光滑有限轨道集合](0152)，#{\varphi} 为 #{X\times Y} 上的[Schwartz 函数](0154)。为证[Fubini 恒等式](0155)，选取固定 #{\varphi} 的开子群 #{U}。由线性性，只需处理 #{\varphi=1_O}，其中 #{O} 是 #{X\times Y} 的一个 #{U}-轨道。其投影像 #{P\subset X} 也是单个 #{U}-轨道。}
-\p{对 #{x\in P}，纤维 #{F_x=\{y:(x,y)\in O\}} 为 #{U_x}-传递集合；不同 #{x} 的纤维互为共轭，测度相同，记为 #{\mu(F)}。于是迭代积分为 #{\mu(P)\mu(F)}。测度的复合公理给出 #{\mu(O)=\mu(P)\mu(F)}，即所需等式。对 #{P} 外的点内积分为零，故亦证明内积分是 Schwartz 函数。}
-\p{对[积分矩阵](0156) #{A:Y\times X\to k}、#{B:Z\times Y\to k}、#{C:W\times Z\to k}，共同细分使所有函数被同一开子群固定，应用已证等式得}
+\p{设 #{G} 为[寡轨群](0151)，#{\mu} 为交换含幺环 #{k} 中的[测度](0153)，#{X,Y,Z,W} 为[光滑有限轨道集合](0152)。对[积分矩阵](0156) #{A:Y\times X\to k}、#{B:Z\times Y\to k}、#{C:W\times Z\to k}，复合满足 #{(CB)A=C(BA)}，对角核 #{I_X} 为单位。}
+\p{\strong{证明。}对固定 #{w,x}，取同时固定参数与三个矩阵的开子群，应用[Fubini 恒等式](0155)得}
 ##{((CB)A)(w,x)=\int_Y\int_Z C(w,z)B(z,y)A(y,x)\,d\mu(z)d\mu(y)
 =(C(BA))(w,x).}
 \p{单位矩阵的核在单点取值，且单点测度为 #{1}，故 #{I_YA=A=AI_X}。}

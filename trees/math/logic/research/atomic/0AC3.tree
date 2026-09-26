@@ -1,0 +1,10 @@
+\title{确定性图灵机与有限输入计算}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Greenfeld，§2、6.5](007K)；[Bernshteyn，§2、4](007H)}
+
+\p{固定有限输入字母表 #{\Sigma}。确定性图灵机有有限状态集 #{Q}、有限纸带字母表 #{\Gamma\supseteq\Sigma}、空白符 #{\square\in\Gamma\setminus\Sigma}、初始状态 #{q_0} 和两个停机状态 #{q_{\mathrm{acc}},q_{\mathrm{rej}}}。纸带格以整数编号，读写头每步只访问一个格子。转移函数为}
+##{\delta : (Q\setminus\{q_{\mathrm{acc}},q_{\mathrm{rej}}\})\times\Gamma\longrightarrow Q\times\Gamma\times\{-1,0,1\}.}
+\p{若 #{\delta(q,a)=(q',b,e)}，就在当前格将 #{a} 改写为 #{b}，状态改为 #{q'}，读写头移动 #{e} 格。输入为有限字 #{x=x_0\cdots x_{n-1}} 时，它占据第 #{0,\ldots,n-1} 格，其余格为空白，读写头从第零格开始。机器到达接受或拒绝状态便停机，分别输出 #{1} 或 #{0}；也可能无限运行。}
+\p{每台机器的转移表是有限数据，而输入长度和运行步数可以任意大。讨论有限字判定问题时，以这种机器为算法的形式模型。}

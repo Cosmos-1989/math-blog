@@ -1,0 +1,11 @@
+\title{亚临界 Poisson 分枝树的总个体数有指数尾}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设[分枝过程](00LH)的后代数服从[Poisson 分布](00L6) #{\operatorname{Poi}(c)}，其中 #{0<c<1}。令总个体数为 #{T}，包含祖先。存在仅依赖 #{c} 的常数 #{C,\alpha>0}，使每个整数 #{k\geq 1} 满足}
+##{\mathbb P(T\geq k)\leq Ce^{-\alpha k}.}
+\p{\strong{证明。}预先取独立后代数序列 #{\xi_1,\xi_2,\ldots}，依探索次序赋给个体。若 #{T\geq k}，处理前 #{k-1} 个个体后队列仍非空，故 #{S_{k-1}=\sum_{i=1}^{k-1}\xi_i\geq k-1}。独立性与 Poisson 的指数矩给出 #{\mathbb E e^{tS_{k-1}}=\exp(c(k-1)(e^t-1))}。}
+\p{用[Markov 不等式](0A02)并取 #{t=\log(1/c)>0}，得到}
+##{\mathbb P(T\geq k)\leq\exp\bigl((k-1)(1-c+\log c)\bigr).}
+\p{因为 #{\log c<c-1}，可取 #{\alpha=c-1-\log c>0} 和 #{C=e^\alpha}。}

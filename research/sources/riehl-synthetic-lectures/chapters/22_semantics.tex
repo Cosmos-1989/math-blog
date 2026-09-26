@@ -1,0 +1,238 @@
+\chapter{语义基础与模型中的实现}
+\section{形式规则、内部定理与模型定理}
+\begin{definition}[类型论的模型]
+一个类型论模型把语境解释为某类对象，把依赖类型解释为语境上的纤维化，把项解释为截面，并将替换解释为拉回。模型还须为各类型构造及其形成、引入、消去、计算规则提供相容解释。
+\end{definition}
+\begin{example}
+在集合族模型中，语境为集合，类型为映射，项为截面，依赖和为总空间，依赖积为纤维乘积。这一模型的同一性类型只有通常的相等性，不能直接表示具有非平凡环路的单价宇宙。
+\end{example}
+\begin{definition}[内部推导]
+一个内部定理是在已列明的类型规则下构造某个类型的元素，或构造两个类型之间的等价。模型定理则在外部元数学中验证这些规则确实可以同时解释于某个数学环境。
+\end{definition}
+\begin{remark}
+例如路径归纳可以作为形式规则使用，也可以在单纯集合模型中用提升性质验证。前者负责内部推导的起点，后者负责将推导解释为空间同伦论。单价性和有向单价性也有同样的两个层次。把二者区分开，才能准确指出一个证明用了哪些公理、哪些语义存在结果。
+\end{remark}
+
+\section{依赖类型的显示映射}
+\begin{definition}[显示映射]
+设 $\mathcal M$ 为带终对象的范畴，选定一类拉回稳定的映射作为显示映射。一个类型 $A$ 在语境 $\Gamma$ 中的解释为显示映射 $p:A\to\Gamma$。扩充语境由总空间 $A$ 表示，项为 $p$ 的截面。
+\end{definition}
+\begin{proposition}[替换的相容]
+若 $f:\Delta\to\Gamma$，类型 $A\to\Gamma$ 沿 $f$ 的替换为 $f^*A\to\Delta$。若再给 $g:\Theta\to\Delta$，存在自然同构
+\[
+g^*(f^*A)\cong(fg)^*A.
+\]
+\end{proposition}
+\begin{proof}
+两端都满足同一个拉回普遍性质：到它们的映射等价于一个到 $A$ 的映射及一个到 $\Theta$ 的映射，使投影经过 $fg$ 相容。由拉回的唯一性得到自然同构。
+\end{proof}
+\begin{remark}
+自然同构尚不是形式替换所要求的判断相等。若语法规定连续替换严格结合，而模型只给出典范同构，还需要严格化安排。这一细节说明，即使各个类型构造分别能定义，也不能立即宣称得到一个完全严格的类型论模型。
+\end{remark}
+
+\section{从同伦模型验证路径归纳}
+\begin{proposition}[提升形式的路径归纳]
+设每个显示映射为模型范畴中的纤维化，并且对角有分解
+\[
+A\xrightarrow{r}P_\Gamma A\longrightarrow A\times_\Gamma A,
+\]
+其中 $r$ 为平凡余纤维化。若 $D\to P_\Gamma A$ 为纤维化，则沿 $r$ 给定的截面可延拓到整个 $P_\Gamma A$。
+\end{proposition}
+\begin{proof}
+沿 $r$ 的截面就是提升图的顶部映射：
+\[
+\begin{tikzcd}
+A\ar[r,"d"]\ar[d,"r"']&D\ar[d]\\
+P_\Gamma A\ar[r,"\id"']\ar[ur,dashed]&P_\Gamma A.
+\end{tikzcd}
+\]
+平凡余纤维化对纤维化有左提升性质，故存在虚线。这条虚线是延拓截面，并在常路径处与 $d$ 相容。
+\end{proof}
+\begin{proposition}[依赖语境扩充]
+若模型满足 Frobenius 性质，即平凡余纤维化沿纤维化拉回后仍为平凡余纤维化，则上述路径归纳在进一步依赖语境中保持成立。
+\end{proposition}
+\begin{proof}
+额外依赖变量由一条纤维化表示。将 $r$ 沿这条纤维化拉回，Frobenius 性质保证所得左边仍为平凡余纤维化。对新的目标纤维化再次使用提升，即得到扩充语境中的归纳。由于比较通过拉回定义，所构造规则与依赖变量的替换相容到模型所指定的严格化程度。
+\end{proof}
+\begin{remark}
+单纯集合模型的右真性及单射余纤维化使这个论证成立。具体的相对路径对象已经在前文给出。模型提供的提升通常是存在性的；若要解释计算规则与严格替换，还需选取相容结构。这正是后述严格宇宙定理所处理的问题之一。
+\end{remark}
+
+\section{预层、层与拓扑斯}
+\begin{definition}[预层拓扑斯]
+对小范畴 $\mathcal C$，预层范畴 $\Set^{\mathcal C^{\op}}$ 是一个基本的拓扑斯。其对象是随测试对象反变的集合族，态射为自然变换。
+\end{definition}
+\begin{example}
+单纯集合为 $\Set^{\Delta^{\op}}$。一个开集偏序上的预层把每个开集送到某类局部数据，并为包含关系给出限制映射。
+\end{example}
+\begin{definition}[层的粘合条件]
+在具有覆盖概念的测试范畴上，预层若对每个覆盖满足局部数据存在唯一相容粘合，则称为层。对于拓扑空间上的开覆盖 $U=\bigcup_iU_i$，条件可写成均衡子
+\[
+F(U)\longrightarrow\prod_iF(U_i)
+\rightrightarrows\prod_{i,j}F(U_i\cap U_j).
+\]
+\end{definition}
+\begin{remark}
+集合值情形的相容只需相等条件。空间值预层要把相等换成路径，并在三重、四重及更高交叠上保存相容。因此其粘合由覆盖的整个单纯图表的同伦极限表达，这称为下降。
+\end{remark}
+\begin{definition}[高阶拓扑斯]
+一个高阶拓扑斯是空间值预层高阶范畴的可达、保有限极限的反射局部化。这里“反射”表示包含函子有左伴随；“保有限极限”规定该左伴随与有限同伦极限相容；“可达”是控制大小、保证由一组小生成对象组织该构造的条件。
+\end{definition}
+\begin{remark}
+此定义供理解模型定理的适用范围。前面的内部证明只使用已列明的类型规则，并不要求读者先完成高阶拓扑斯的一般理论。普通空间高阶范畴是本讲义的基本模型；空间值层及其适当局部化提供进一步实例\cite{LurieHTT,RiehlSemantics}。
+\end{remark}
+
+\section{严格单价宇宙的存在}
+\begin{definition}[带结构的纤维化]
+裸映射 $p:E\to B$ 可以附带指定的提升操作、分解或其他与拉回相容的结构。这些结构连同保结构同构组成纤维化结构的群胚。结构应当在局部测试对象上可表示，并受一个固定大小界控制。
+\end{definition}
+\begin{remark}
+引入结构的目的不是改变所表示的同伦类型，而是把“可以选择某个提升”转换为可在替换中追踪的数据。在适当构造中，不同结构选择之间的空间受到控制，分类宇宙仍准确表示原本关心的纤维族及其等价。
+\end{remark}
+\begin{theorem}[严格单价宇宙，语义基础定理]
+在适当的元集合论大小假设下，每个高阶拓扑斯都有支持依赖类型论的严格模型，并具有对所需类型构造封闭的单价宇宙。可选取足够大的大小界，使普遍小纤维化及其替换、依赖构造满足模型要求的严格相容。
+\end{theorem}
+\begin{remark}
+本定理是 Shulman 的严格单价宇宙结果，见\cite{ShulmanUniverses}；背景与类型论解释见\cite{RiehlSemantics}。大小界通常用足够大的强不可达基数组织，因而这不是一个不加元理论假设的“所有类型组成一个小类型”的断言。
+\end{remark}
+\begin{proposition}[模型中的单价性含义]
+对这样的普遍族，两条分类映射的同伦恰好对应它们所分类的族之间的纤维等价。
+\end{proposition}
+\begin{proof}
+将普遍族的单价比较沿两个分类映射拉回，得到路径族与纤维等价族之间的等价。再取截面，函数外延性把分类映射的路径识别为逐参数路径；这正与纤维等价的截面对应。
+\end{proof}
+
+\section{为什么所有 Reedy 族不组成所需空间范畴}
+\begin{example}[任意二部关系]
+取集合 $A,B$ 及关系集合 $R$，配有 $s:R\to A$、$t:R\to B$。构造普通范畴 $E_R$，其对象为 $A\sqcup B$，同层只保留恒等态射，从 $a\in A$ 到 $b\in B$ 的箭头为满足 $s(r)=a,t(r)=b$ 的元素 $r$。没有反向跨层箭头。投影到 $[1]$ 得到一条 Reedy 纤维化的离散神经模型。
+\end{example}
+\begin{proposition}
+该投影为左纤维化，当且仅当 $s:R\to A$ 是双射。此时 $t\circ s^{-1}:A\to B$ 为其传输函数。
+\end{proposition}
+\begin{proof}
+给定 $a$ 和底中唯一非恒等箭头，其全部提升正是 $s^{-1}(a)$。离散情形的可缩性意味着该集合恰有一个元素。因此左纤维化条件等价于 $s$ 的每个纤维为单元素，即 $s$ 双射。其提升终点由 $t$ 给出，故传输如所述。
+\end{proof}
+\begin{remark}
+一般的 Reedy 族允许某个源没有提升，也允许有多个不同提升。它们记录关系或对应，而非一个函数。故在有向宇宙中必须选择协变纤维化，不能把所有 Reedy 纤维化的宇宙直接命名为具有函数箭头的空间范畴。
+\end{remark}
+
+\section{带权极限的普通定义}
+\begin{definition}[带权极限]
+设 $\mathcal C$ 小，$F:\mathcal C\to\mathcal V$，$W:\mathcal C\to\Set$。若 $\mathcal V$ 有集合指数和所需极限，带权极限 $\{W,F\}$ 由自然同构
+\[
+\Hom_{\mathcal V}(X,\{W,F\})
+\cong\Nat\bigl(W,\Hom_{\mathcal V}(X,F(-))\bigr)
+\]
+刻画。
+\end{definition}
+\begin{proposition}[均衡子公式]
+带权极限可由
+\[
+\{W,F\}\longrightarrow\prod_cF(c)^{W(c)}
+\rightrightarrows\prod_{u:c\to d}F(d)^{W(c)}
+\]
+构造。两条平行箭头分别使用 $F(u)$ 的后复合与 $W(u)$ 的前复合。
+\end{proposition}
+\begin{proof}
+从 $X$ 到中间乘积的映射，逐分量等价于函数
+$W(c)\to\Hom(X,F(c))$。落入均衡子恰要求对每条 $u:c\to d$，
+\[
+F(u)\circ\alpha_c(w)=\alpha_d(W(u)w).
+\]
+这正是自然变换的自然性条件，因此均衡子具有定义中的普遍性质。
+\end{proof}
+\begin{example}[普通极限与求值]
+常值单位权 $W=\one$ 给出普通极限。若 $W=\Hom_{\mathcal C}(c_0,-)$，则普通 Yoneda 引理给出
+\[
+\{W,F\}\cong F(c_0).
+\]
+这说明“从一个图表选定一个对象求值”本身就是带权极限的一种特殊情形。
+\end{example}
+
+\section{同伦带权极限}
+\begin{definition}[单纯权]
+将权 $W$ 换成单纯集合值函子 $W:\mathcal C\to\sSet$，将指数换成单纯映射对象，就得到富集带权极限。为了得到同伦不变的构造，需令权为适当的余纤维对象，图表为纤维对象。
+\end{definition}
+\begin{proposition}[提升检测]
+在具有项目模型结构的图表范畴中，若 $W$ 为项目余纤维的权，$F$ 为逐对象纤维的图表，则富集自然变换对象 $\Nat(W,F)$ 是 Kan 复形。它对 $F$ 的弱等价保持同伦不变。
+\end{proposition}
+\begin{proof}
+测试 $\Nat(W,F)$ 的一个角填充，通过张量与映射对象的伴随，等价于把图表映射
+\[
+W\times\Lambda_k^n\longrightarrow F
+\]
+延拓到 $W\times\Delta^n$。权的余纤维性与单纯模型结构的推积公理保证左边的包含为项目平凡余纤维化，而 $F\to\one$ 为项目纤维化，故存在提升。弱等价不变性是同一右 Quillen 映射对象在纤维对象上的保持性质；可先分解弱等价并用提升性质及同伦逆验证。
+\end{proof}
+\begin{remark}
+项目模型结构中弱等价与纤维化逐对象检测。其存在在这里由单纯集合的余纤维生成性保证，具体构造可采用逐表示对象附着生成余纤维化。带权方法由此把复杂图表的同伦性质转化为权本身的组合性质。
+\end{remark}
+
+\section{切片神经给出的权}
+\begin{definition}
+对普通小范畴 $\mathcal C$，定义权
+\[
+W(c)=N(\mathcal C/c).
+\]
+若 $u:c\to d$，后复合给出 $\mathcal C/c\to\mathcal C/d$，因此 $W$ 协变。
+\end{definition}
+\begin{proposition}
+每个 $W(c)$ 可缩，且 $W$ 是常值单位权的一个项目余纤维替换。
+\end{proposition}
+\begin{proof}
+切片 $\mathcal C/c$ 有终对象 $\id_c$。其神经的每个对象到终对象有唯一箭头，给出恒等函子到常值函子的自然变换，因而神经可缩。
+
+为验证权的余纤维性，观察其 $n$-单形由链
+\[
+c_0\to c_1\to\cdots\to c_n\to c
+\]
+给出。因此固定前 $n$ 条箭头后，最后一条箭头组成协变表示函子 $\Hom(c_n,-)$。权可按单形维数构造：每条非退化链贡献一个表示函子乘以 $\Delta^n$，沿表示函子乘以 $\partial\Delta^n$ 附着；退化链已由低维部分产生。这是项目余纤维化的胞腔构造。逐对象可缩性又使 $W\to\one$ 为弱等价，故它是所述替换。
+\end{proof}
+\begin{example}[单箭头图表的同伦极限]
+取 $\mathcal C=[1]$，图表为 $A\xrightarrow fB$。权在 $0$ 处是一点，在 $1$ 处是 $\Delta^1$。带权极限由 $a:A$ 与一条从 $f(a)$ 出发的 $B$ 中路径组成。终点可以变化，因此整个类型等价于 $A$。这恢复了“单箭头图表的极限为源”的同伦版本。
+\end{example}
+
+\section{左纤维化与图表的语义比较}
+\begin{theorem}[参数化图表比较，引用的语义定理]
+令 $\mathcal E$ 为一个适当的类型论模型拓扑斯，$\Gamma$ 为其单纯对象，$\mathcal C$ 为普通小范畴。$N\mathcal C\times\Gamma$ 上的左纤维化，与 $\Gamma$ 上左纤维化的 $\mathcal C$ 形图表，存在在纤维对象上互逆到弱等价的比较。比较对 $\Gamma$ 的替换及 $\mathcal C$ 的函子相容。
+\end{theorem}
+\begin{remark}
+这一表述保留了有向单价性所需的参数。取 $\mathcal C=[n]$，就比较 $\Delta^n\times\Gamma$ 上的族与 $\Gamma$ 上的函数链。其证明使用与切片神经有关的权，把提升与等价的检验降到单纯集合中的有限形状计算，见\cite[定理4.4.4与6.2.5]{CavalloRiehlSattler}。
+\end{remark}
+\begin{proposition}[从族比较到宇宙比较]
+若两种参数化族分别由 $X$ 与 $Y$ 分类，并且上述比较在任意 $\Gamma$ 中自然成立，则得到分类对象间的等价 $X\simeq Y$。
+\end{proposition}
+\begin{proof}
+分类性质将比较写成对每个 $\Gamma$ 的自然等价
+\[
+\Map(\Gamma,X)\simeq\Map(\Gamma,Y).
+\]
+取 $\Gamma=X$，恒等映射给出 $f:X\to Y$；取 $\Gamma=Y$，逆自然等价在恒等处给出 $g:Y\to X$。自然性与两侧逆比较分别给出 $gf\simeq\id_X$、$fg\simeq\id_Y$。因此 $f$ 为等价。这是可表函子的 Yoneda 检测原理。
+\end{proof}
+\begin{remark}
+仅在无参数的点上建立双射，不能应用此命题。一般空间可能有相同的点集而不同的路径结构；高阶分类对象还要记录更高参数。因此语义证明必须保留所有测试语境。
+\end{remark}
+
+\section{基础结果的依赖关系}
+\begin{proposition}[内部结论的依赖]
+在本讲义列出的规则与基础定理下，有如下依赖关系。
+\end{proposition}
+\begin{proof}
+路径的逆、连接、传输和依赖和路径公式由同一性归纳推出；函数之间的逐点比较还使用函数外延性。等价的拟逆判据由这些路径公式及收缩定义推出。单价公理随后把结构传输转换为结构等价，产生有限类型和挠子分类空间。
+
+加入外单纯形状与 Segal 条件后，平方的三角剖分给出可表族的协变性。协变提升产生作用及自动自然性；余切片的显式有向收缩再给出箭头归纳，继而给出 Yoneda 引理。这一部分无须先构造空间范畴。
+
+最后，普遍左纤维化与有限单纯形比较提供有向宇宙。高阶比较推出 Segal 条件，普通单价性推出 Rezk 完备性，从而得到空间范畴。带结构范畴则由总空间、箭头范畴和拉回构造。
+\end{proof}
+\begin{remark}
+相应的基础引用范围为：Quillen 与 Reedy 模型结构负责同伦模型；严格单价宇宙定理负责宇宙与替换的严格相容；内部形状比较定理负责二次 Segal 定义与全部脊柱定义的等价；普遍左纤维化比较负责有向宇宙的存在。正文对这些结果均以基础定理注明，不将其一般模型论证明与后续内部推导混写。
+\end{remark}
+
+\section{与 Riehl 报告的结果对应}
+\begin{remark}
+报告命题 3.6 的任意语境路径归纳，在本讲义的相对路径对象、Frobenius 性质与同一性类型规则中得到解释；报告定义 4.6 对应定义\ref{def:univalence}；报告中的有限空间、挠子和高阶群作用，在有限类型与高阶群两章展开。
+
+报告命题 6.6 对应定理\ref{thm:arrow-induction}，其证明在本讲义中通过 $f_t(s)=f(s\wedge t)$ 的显式收缩完成。报告命题 6.7 对应定理\ref{thm:synthetic-yoneda}。报告定义 7.1 对应定义\ref{def:directed-univalence}，报告推论 7.2 对应定理\ref{thm:spaces-category}。带基点映射与二元运算同态则分别见定理\ref{thm:pointed-maps}与定理\ref{thm:magma-hom}。
+\end{remark}
+\begin{remark}
+合成方法的数学内容在于选择足够强且相容的基本规则，使空间与范畴中的常用不变性成为内部推导的一部分。模型论验证这些规则的共同可实现性；内部论证则利用规则直接计算路径、映射与普遍性质。两部分相互支持，同时保持各自明确的证明责任。
+\end{remark}

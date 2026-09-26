@@ -1,0 +1,9 @@
+\title{Hausdorff 第二可数流形的仿紧性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{采用 Hausdorff、第二可数约定的[光滑流形](0043) #{M} 是[仿紧空间](0A3U)。}
+\p{\strong{证明。}空流形的结论直接成立。非空时，每点可在坐标图内取一个小开球，其闭球仍包含于图域。由 [Heine--Borel 定理](0A39)及[连续像保紧](0A3T)，对应邻域的闭包紧。第二可数性给出可数个这样的邻域 #{U_1,U_2,\ldots} 覆盖 #{M}：对每个被某个邻域包含的基元素选一个这样的邻域即可；有限覆盖可重复列项。}
+\p{构造紧集 #{K_n}，使 #{K_n\subseteq\operatorname{int}K_{n+1}} 且 #{\bigcup_nK_n=M}。从 #{K_1=\overline{U_1}} 开始；用有限个预紧开邻域覆盖 #{K_n}，把它们的闭包与 #{\overline{U_1},\ldots,\overline{U_{n+1}}} 的并作为 #{K_{n+1}}。有限并紧，且所选开邻域使 #{K_n} 包含于新紧集的内部。}
+\p{给定任意开覆盖 #{\mathcal U}，令 #{K_0=K_{-1}=\varnothing}。每个紧层 #{L_n=K_n\setminus\operatorname{int}K_{n-1}} 都包含于开带 #{\operatorname{int}K_{n+1}\setminus K_{n-2}}，在此开带内取有限多个开集覆盖 #{L_n}，每个又包含于某个 #{\mathcal U} 成员。所有这些开集覆盖 #{M}。若点位于 #{\operatorname{int}K_m}，则 #{n\ge m+2} 的开带均避开该邻域，故它只遇到有限多个开集。这给出局部有限开加细。紧集在 Hausdorff 空间中闭的事实见[紧集闭性论证](00FD)。}

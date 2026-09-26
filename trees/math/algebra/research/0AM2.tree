@@ -1,0 +1,11 @@
+\title{拟阵闭包的保秩性与幂等性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Braden--Proudfoot，§3 的拟阵背景；秩公理推导](01C1)}
+
+\p{设 #{M=(E,r)} 为有限[拟阵](01C8)，定义 #{\operatorname{cl}(A)=\{e\in E:r(A\cup\{e\})=r(A)\}}。则 #{A\subseteq\operatorname{cl}(A)}，且闭包单调、满足 #{r(\operatorname{cl}(A))=r(A)}，并且 #{\operatorname{cl}(\operatorname{cl}(A))=\operatorname{cl}(A)}。}
+\p{\strong{证明。}对 #{A\subseteq B} 及 #{e\notin B}，次模性给出}
+##{r(B\cup\{e\})-r(B)\leq r(A\cup\{e\})-r(A).}
+\p{所以在 #{A} 上不增秩的元素，在 #{B} 上也不增秩；#{e\in B} 时结论直接成立。这证明闭包单调。把 #{\operatorname{cl}(A)\setminus A} 的元素逐个加入，每步由相同不等式不增秩，得到保秩性。}
+\p{若 #{e\notin\operatorname{cl}(A)}，则 #{r(A\cup\{e\})>r(A)}，故 #{r(\operatorname{cl}(A)\cup\{e\})>r(\operatorname{cl}(A))}，所以再次闭包不添加元素。由单调性，#{\operatorname{cl}(A)} 是包含 #{A} 的最小闭集。两个闭集的交仍闭，因为其闭包同时包含于两者。}

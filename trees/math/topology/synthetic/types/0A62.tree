@@ -1,0 +1,16 @@
+\title{余和类型的路径编码}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 13 章；[引用](0217)}
+
+\p{设 #{A,B} 为类型，#{\mathsf{inl}:A\to A+B}、#{\mathsf{inr}:B\to A+B} 为[余和](05Z1)的两种引入映射。利用余和消去定义类型族 #{C(x,y)}，其中 #{x,y:A+B}：}
+##{\begin{aligned}
+C(\mathsf{inl}(a),\mathsf{inl}(a'))&=(a=_A a'),\\
+C(\mathsf{inr}(b),\mathsf{inr}(b'))&=(b=_B b'),\\
+C(\mathsf{inl}(a),\mathsf{inr}(b))&=\mathbf 0,\\
+C(\mathsf{inr}(b),\mathsf{inl}(a))&=\mathbf 0.
+\end{aligned}}
+\p{则有等价 #{(x=_{A+B}y)\simeq C(x,y)}。同分支保留原类型的路径；跨分支路径类型等价于[空类型](050B)。}
+\p{\strong{证明。}先按 #{x} 的分支定义 #{c_x:C(x,x)} 为对应的自反路径。对 #{p:x=y} 作[路径归纳](050G)，令 #{\mathsf{encode}(\mathsf{refl}_x)=c_x}。反向函数 #{\mathsf{decode}:C(x,y)\to(x=y)} 由双重分支消去定义：同分支用[引入映射的路径作用](0544)，异分支用空类型消去。}
+\p{对 #{p:x=y} 作路径归纳，随后分解 #{x}，即可验证 #{\mathsf{decode}(\mathsf{encode}(p))=p}。另一个复合先按 #{x,y} 分支消去：异分支由空消去成立；同分支再对输入路径归纳，化为自反路径的计算。两侧逆同伦及[拟逆判据](058I)给出所述等价。}

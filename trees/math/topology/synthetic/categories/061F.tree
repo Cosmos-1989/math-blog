@@ -1,0 +1,22 @@
+\title{由可逆性提取两侧逆箭头}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 16 章；[RiehlShulman](021D)，[Rezk](021C)，[RiehlICM](0211)}
+
+\p{设 #{C} 为合成预范畴，#{f:x\to_C y}。消去后复合时使用等价在路径类型上仍为等价这一性质。}
+
+\p{所需前置：[通过后复合等价定义可逆箭头](061D)、[合成预范畴的单位路径](0615)、[四面体给出复合的结合路径](0616)、[可缩同伦纤维给出拟逆](058G)、[等价在路径类型上仍是等价](058K)。}
+
+\p{若 #{\mathsf{isIso}(f)}，则存在 #{g:y\to x} 及路径 #{fg=\operatorname{id}_y}、#{gf=\operatorname{id}_x}。}
+
+\p{\strong{证明。}
+取 #{z=y}，后复合 #{f} 的等价性使 #{\operatorname{id}_y} 有唯一到可缩选择的原像 #{g}，并给出 #{fg=\operatorname{id}_y}。取 #{z=x}，该后复合等价检测路径。因为}
+
+##{f\circ(g\circ f)=(f\circ g)\circ f
+=\operatorname{id}_y\circ f=f=f\circ\operatorname{id}_x,}
+
+\p{故消去后复合 #{f} 得到 #{gf=\operatorname{id}_x}。}
+
+\p{\strong{说明。}
+[可逆性是命题](0A9H)，而指定逆箭头及两条逆同伦的数据可以带有额外的高阶信息；这是拟逆数据与等价性质在箭头情形下的区别。}

@@ -1,0 +1,15 @@
+\title{余切片上的依赖 Yoneda 公式}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 4 章}
+
+\p{设 #{C} 为小范畴，固定 #{c\in C}，#{K:c/C\to\mathbf{Set}} 为[余切片](031K)上的协变函子。使用[始对象](031M)及[相容截面定理](034E)。}
+
+\p{给定 #{K:c/C\to\mathbf{Set}}，有}
+
+##{\lim_{f\in c/C}K(f)\cong K(\mathrm{id}_c).}
+
+\p{\strong{证明。}应用[始对象上的截面定理](034E)，因为 #{\mathrm{id}_c} 是余切片的始对象。特别地，给定 #{F:C\to\mathbf{Set}}，若 #{K(f:c\to x)=F(x)}，相容截面等同于自然变换 #{\operatorname{Hom}(c,-)\Rightarrow F}，于是恢复普通 Yoneda 引理。}
+
+\p{具体地，在特殊情形固定 #{F:C\to\mathbf{Set}}，令 #{K} 为它沿目标投影 #{c/C\to C} 的复合。截面给出每个 #{f:c\to x} 的元素 #{s_f\in F(x)}；方程 #{F(h)s_f=s_{hf}} 正是 #{\alpha_x(f)=s_f} 的自然性，从而恢复[普通 Yoneda](0341)。}

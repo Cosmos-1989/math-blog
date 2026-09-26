@@ -1,0 +1,11 @@
+\title{偏序集的 Möbius 反演}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Braden--Proudfoot，§3](01C1)}
+
+\p{设 #{P} 为有限[偏序集](00DE)，在[区间卷积代数](0ALA)中令 #{\zeta_{xy}=1}。它有双侧逆 #{\mu}，递归式为}
+##{\mu_{xx}=1,\qquad
+\mu_{xz}=-\sum_{x\leq y<z}\mu_{xy}\quad(x<z).}
+\p{\strong{证明。}令 #{N=\zeta -\delta}。严格链长度至多 #{|P|-1}，所以 #{N^{*|P|}=0}。有限和 #{\mu=\sum_{j=0}^{|P|-1}(-N)^{*j}} 同时满足 #{\mu*\zeta=\delta=\zeta*\mu}。第一式按区间展开即递归式，并逐区间确定唯一解。}
+\p{例如若 #{G(x)=\sum_{y\leq x}F(y)}，则 #{F(x)=\sum_{y\leq x}\mu_{yx}G(y)}；代入并交换有限求和，内和由 #{\zeta*\mu=\delta} 消去。}

@@ -1,0 +1,21 @@
+\title{路径作用的纤维是纤维中的路径}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[依赖和路径公式](054H)；[双端点传输](054D)；[同伦纤维](058E)；[路径的单位、逆与结合律](0542)。}
+
+\p{设 #{f:A\to B} 为函数。记 #{\operatorname{ap}_f} 为它在同一性类型上的作用，#{\operatorname{fib}_f(b)=\sum_{a:A}(f(a)=b)}。以下等价保留高阶路径，不只是两边同时有元素。}
+
+\p{固定 #{x,y:A}、#{q:f(x)=f(y)}。则 #{\operatorname{ap}_f:(x=y)\to(f(x)=f(y))} 在 #{q} 处的同伦纤维等价于}
+
+##{\bigl((x,q)=(y,\operatorname{refl}_{f(y)})\bigr)
+ \quad\text{在 }\operatorname{fib}_f(f(y))\text{ 中的同一性类型}.}
+
+\p{\strong{证明。}依赖和的路径公式将右侧写成}
+
+##{\sum_{p:x=y}
+ \left(\operatorname{tr}^{z\mapsto(f(z)=f(y))}_p(q)=\operatorname{refl}_{f(y)}\right).}
+
+\p{传输公式给出 #{\operatorname{tr}_p(q)=(\operatorname{ap}_f p)^{-1}\cdot q}。于是括号中的条件等价于 #{\operatorname{ap}_f(p)=q}：正向可先左乘 #{\operatorname{ap}_f(p)}，反向用路径逆律。各次乘法都是路径空间之间的等价，故这些转换的复合给出路径类型之间的等价，并带有两侧逆同伦。这正是左侧同伦纤维的定义。}

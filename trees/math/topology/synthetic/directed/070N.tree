@@ -1,0 +1,26 @@
+\title{高阶有向单价性推出空间宇宙的 Segal 条件}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 20 章；[引用](0211)}
+
+\p{令 #{{\mathcal{S}}} 为[高阶比较定理](070G)的宇宙；#{I[n]\subseteq\Delta^n} 是相邻边 #{0\to 1\to\cdots\to n} 的并，即脊柱。内部脊柱条件要求在所有参数语境中限制 #{C^{\Delta^n}\to C^{I[n]}} 为等价；满足这些条件的类型称合成预范畴。#{\mathsf{Fun}_n} 采用[函数链分类对象](070F)。 所验证的规范条件是[参数化脊柱条件](0612)。零维和一维限制为恒等；方形论证用于 #{n\geq 2}。}
+
+\p{定理[高阶有向单价性的有限单纯形比较](070G)中的 #{{\mathcal{S}}} 满足全部内部脊柱条件，因而是合成预范畴。}
+
+\p{\strong{证明。}对于每个 #{n\geq 2}，考虑图}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large]
+{\mathcal{S}}^{\Delta^n}\arrow[r]\arrow[d,"\theta_n"',"\simeq"]&{\mathcal{S}}^{I[n]}\arrow[d,"\simeq"]\\
+\mathsf{Fun}_n\arrow[r,"\cong"']&
+\mathsf{Fun}_1\times_{{\mathcal{S}}}\cdots\times_{{\mathcal{S}}}\mathsf{Fun}_1.
+\end{tikzcd}
+}}
+
+\p{右侧竖映射由一维比较在脊柱各边上取拉回获得。底部只是把函数链拆成相邻函数，逆向将这些函数按相同端点重新组成链，因此为等价。比较定理在面映射中的相容性保证方形同伦交换。其余三条边为等价，故顶部为等价。}
+
+\p{所有比较都在任意语境中成立，所以得到内部条件，而不仅是外部对象空间上的等价。}
+
+\p{图的相容式为 #{r\circ\theta_n\simeq\rho\circ\operatorname{res}}：#{r} 将链拆为相邻函数，#{\rho} 在脊柱各边应用一维比较，#{\operatorname{res}} 为限制。此相容式给出两条复合之间的同伦，表达方形的同伦交换。}

@@ -1,0 +1,1751 @@
+{
+  "group": "calculations",
+  "status": "stable",
+  "crosslinkResolution": {
+    "status": "resolved",
+    "formalSourceLabels": 12,
+    "unresolvedLabels": [],
+    "pendingPublicLinks": [],
+    "glossaryCanonicalSplitsApplied": [
+      "05Z2",
+      "05Z3",
+      "05Z4",
+      "05Z6"
+    ],
+    "lastManualRefinements": [
+      "0914: canonical pullback0326 and colimit032B linked",
+      "0915: ordinary0341 and synthetic063B Yoneda related links added without prerequisite edges",
+      "091C: external model-category input wording clarified"
+    ],
+    "generatorPolicy": "Pages finalized with manual refinements. Do not regenerate; the conversion helper is frozen. Read-only checks remain available."
+  },
+  "date": "2026-09-25",
+  "sourceDirectory": "/Users/sunzy/Downloads/riehl_synthetic_lectures_source/chapters",
+  "readCompletely": [
+    "a_calculations.tex:1-598",
+    "b_glossary.tex:1-129",
+    "../references.tex"
+  ],
+  "labels": {
+    "chap:calculations": "020N",
+    "chap:glossary": "020O",
+    "thm:circle-encode": "090G",
+    "prop:composite-fiber": "090R"
+  },
+  "concepts": {
+    "圆周的高阶归纳规则": "0900",
+    "圆周递归把环路指定为函数数据": "0901",
+    "命题值族上的圆周归纳": "0902",
+    "圆周连通但不选择逐点路径": "0903",
+    "环路的整数幂": "0904",
+    "环路整数幂的加法与反演公式": "0905",
+    "变动定义域时函数传输是前复合": "0908",
+    "圆周上的整数编码族": "0909",
+    "整数编码族沿环路的传输": "090A",
+    "圆周编码族的纤维都是集合": "090B",
+    "圆周路径的编码": "090C",
+    "圆周的不同环路整数幂可区分": "090D",
+    "圆周解码函数的相容性计算": "090E",
+    "先编码后解码恢复圆周路径": "090F",
+    "先解码后编码恢复整数编码": "090H",
+    "圆周的编码解码等价": "090G",
+    "圆周是一型且高阶环路可缩": "090I",
+    "整数编码族的总空间可缩": "090J",
+    "圆周映射由一个点与一条环路分类": "090K",
+    "带基点圆周映射等价于环路": "090M",
+    "带基点圆周映射的次数": "090N",
+    "圆周映射次数的乘法公式": "090O",
+    "二维环面的环路群计算": "090P",
+    "圆周上的空间族由自等价分类": "090Q",
+    "依赖和投影的同伦纤维": "090S",
+    "复合映射的同伦纤维分解": "090R",
+    "后复合等价只重定位同伦纤维": "090T",
+    "同伦拉回粘合的路径计算": "090U",
+    "同伦嵌入由命题纤维定义": "090V",
+    "路径作用的纤维是纤维中的路径": "090W",
+    "同伦嵌入的路径等价判据": "090X",
+    "忘记命题性质是同伦嵌入": "090Y",
+    "沿等价重标记依赖和": "090Z",
+    "单形乘积中的格路径": "0910",
+    "单形乘积的格路径三角剖分": "0911",
+    "单纯正方形的两个三角形": "0912",
+    "单纯三角柱的三个四面体": "0913",
+    "映出形状的并等于相容映射的拉回": "0914",
+    "Reedy 纤维目标中的形状粘合": "091C",
+    "自然线性算子族由一个矩阵恢复": "0915",
+    "五类关系与路径复合方向": "0916",
+    "同伦类型论术语定位": "0917",
+    "单纯对象与合成范畴术语定位": "0918",
+    "空间部分的公式定位": "0919",
+    "合成范畴部分的公式定位": "091A",
+    "讲义理论前提与归纳规则定位": "091B",
+    "高阶归纳圆周": "0900",
+    "圆周整数覆盖族": "0909",
+    "圆周环路空间": "090G",
+    "同伦嵌入": "090V",
+    "同伦嵌入路径判据": "090X",
+    "单形乘积格路径剖分": "0911"
+  },
+  "reviews": {
+    "0900": {
+      "title": "圆周的高阶归纳规则",
+      "action": "split-and-integrate",
+      "reason": "逐项核对点、环路、依赖消去与命题路径计算规则；模型实现只作外部解释。",
+      "scope": "a_calculations.tex:8-22; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0901": {
+      "title": "圆周递归把环路指定为函数数据",
+      "action": "split-and-integrate",
+      "reason": "以常值族导出递归，点的定义计算与环路的路径计算没有混同。",
+      "scope": "a_calculations.tex:24-32; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0902": {
+      "title": "命题值族上的圆周归纳",
+      "action": "split-and-integrate",
+      "reason": "命题性提供生成环路相容路径；截面唯一性另使用函数外延性。",
+      "scope": "a_calculations.tex:34-39; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0903": {
+      "title": "圆周连通但不选择逐点路径",
+      "action": "split-and-integrate",
+      "reason": "命题截断归纳只给截断路径；不可缩性链接为后续结论，不进入本证明前置。",
+      "scope": "a_calculations.tex:41-50; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0904": {
+      "title": "环路的整数幂",
+      "action": "split-and-integrate",
+      "reason": "仅定义环路整数幂，负数通过逆路径处理；运算定理独立分出。",
+      "scope": "a_calculations.tex:54-60; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0905": {
+      "title": "环路整数幂的加法与反演公式",
+      "action": "split-and-integrate",
+      "reason": "核对负指数后继、交换逆幂与正负方向加法归纳，保留全部三式及证明。",
+      "scope": "a_calculations.tex:62-85; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0908": {
+      "title": "变动定义域时函数传输是前复合",
+      "action": "split-and-integrate",
+      "reason": "定义域逆传输与值域正传输方向核对，消除族名和宇宙点名冲突。",
+      "scope": "a_calculations.tex:99-105; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0909": {
+      "title": "圆周上的整数编码族",
+      "action": "split-and-integrate",
+      "reason": "单价性仅在后继等价变成宇宙环路处使用；圆周递归确定整个族。",
+      "scope": "a_calculations.tex:109-119; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090A": {
+      "title": "整数编码族沿环路的传输",
+      "action": "split-and-integrate",
+      "reason": "后继、逆后继及任意整数环路幂的传输分步核对。",
+      "scope": "a_calculations.tex:121-140; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090B": {
+      "title": "圆周编码族的纤维都是集合",
+      "action": "split-and-integrate",
+      "reason": "集合性是命题，使用命题值圆周归纳而不是逐点选择整数编号。",
+      "scope": "a_calculations.tex:142-147; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090C": {
+      "title": "圆周路径的编码",
+      "action": "split-and-integrate",
+      "reason": "编码是把基点纤维的零沿指定路径传输；函数的源靶局部明确。",
+      "scope": "a_calculations.tex:149-156; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090D": {
+      "title": "圆周的不同环路整数幂可区分",
+      "action": "split-and-integrate",
+      "reason": "对幂路径施编码得到整数相等；非可缩反证依赖可缩类型的路径定理。",
+      "scope": "a_calculations.tex:158-160; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090E": {
+      "title": "圆周解码函数的相容性计算",
+      "action": "split-and-integrate",
+      "reason": "完整保留 n→n−1→ℓ^(n−1)·ℓ→ℓ^n 计算，并用函数外延性提供消去相容。",
+      "scope": "a_calculations.tex:164-188; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090F": {
+      "title": "先编码后解码恢复圆周路径",
+      "action": "split-and-integrate",
+      "reason": "终点与路径共同变化的基点路径归纳合法，不对固定端点环路直接归纳。",
+      "scope": "a_calculations.tex:190-204; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090H": {
+      "title": "先解码后编码恢复整数编码",
+      "action": "split-and-integrate",
+      "reason": "基点整数计算与集合值纤维的命题性分别核对，使用命题依赖积封闭性。",
+      "scope": "a_calculations.tex:206-224; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090G": {
+      "title": "圆周的编码解码等价",
+      "action": "split-and-integrate",
+      "reason": "两侧逆同伦经拟逆判据给等价；加法保持通过解码整数幂公式检验。",
+      "scope": "a_calculations.tex:226-245; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090I": {
+      "title": "圆周是一型且高阶环路可缩",
+      "action": "split-and-integrate",
+      "reason": "截断路径只消去到集合性命题；二重环路有点且是命题，高阶可缩递归。",
+      "scope": "a_calculations.tex:247-258; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090J": {
+      "title": "整数编码族的总空间可缩",
+      "action": "split-and-integrate",
+      "reason": "逐纤维等价诱导总空间等价；路径总空间可缩不误作整数纤维可缩。",
+      "scope": "a_calculations.tex:260-275; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090K": {
+      "title": "圆周映射由一个点与一条环路分类",
+      "action": "split-and-integrate",
+      "reason": "评价与递归两方向完整保留；函数唯一性的环路相容使用双端点共轭公式。",
+      "scope": "a_calculations.tex:279-295; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090M": {
+      "title": "带基点圆周映射等价于环路",
+      "action": "split-and-integrate",
+      "reason": "评价的同伦纤维对应带基点映射；q^(-1)·ap_f(ℓ)·q 方向正确；0711仅作数据语义联系。",
+      "scope": "a_calculations.tex:305-318; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090N": {
+      "title": "带基点圆周映射的次数",
+      "action": "split-and-integrate",
+      "reason": "次数定义对指定基点路径 q 共轭后编码，不把 q 无声删除。",
+      "scope": "a_calculations.tex:320-322; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090O": {
+      "title": "圆周映射次数的乘法公式",
+      "action": "split-and-integrate",
+      "reason": "补明复合基点路径 ap_g(q)·r，核对整数幂的幂及次数乘法顺序 nm。",
+      "scope": "a_calculations.tex:324-340; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090P": {
+      "title": "二维环面的环路群计算",
+      "action": "split-and-integrate",
+      "reason": "乘积路径公式逐坐标保持环路合成，两条坐标环路及交换关系保留。",
+      "scope": "a_calculations.tex:342-350; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090Q": {
+      "title": "圆周上的空间族由自等价分类",
+      "action": "split-and-integrate",
+      "reason": "宇宙大小、单价性与自等价分类明确；保留后继族、交换二元素族及高阶数据。",
+      "scope": "a_calculations.tex:352-358; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090S": {
+      "title": "依赖和投影的同伦纤维",
+      "action": "split-and-integrate",
+      "reason": "两个显式函数与两次复合检查保留，反向路径归纳同时移动底点。",
+      "scope": "a_calculations.tex:362-376; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090R": {
+      "title": "复合映射的同伦纤维分解",
+      "action": "split-and-integrate",
+      "reason": "复合纤维两映射的源靶与 ap_g(p)·q 方向核对，逆同伦依赖和路径数据保留。",
+      "scope": "a_calculations.tex:378-397; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090T": {
+      "title": "后复合等价只重定位同伦纤维",
+      "action": "split-and-integrate",
+      "reason": "可缩底上依赖和压缩到中心纤维，提供传输映射，中心收缩数据唯一性不误作外部选择。",
+      "scope": "a_calculations.tex:399-401; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090U": {
+      "title": "同伦拉回粘合的路径计算",
+      "action": "split-and-integrate",
+      "reason": "粘合函数使用 p·ap_g(q)，两侧复合归纳和单位律保留，区别普通集合拉回。",
+      "scope": "a_calculations.tex:403-427; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090V": {
+      "title": "同伦嵌入由命题纤维定义",
+      "action": "split-and-integrate",
+      "reason": "嵌入是命题同伦纤维，不与具体拓扑子空间嵌入混同。",
+      "scope": "a_calculations.tex:431-433; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090W": {
+      "title": "路径作用的纤维是纤维中的路径",
+      "action": "split-and-integrate",
+      "reason": "依赖和路径经左端点逆传输化为 ap 的纤维；变换是类型等价而非逻辑双向蕴涵。",
+      "scope": "a_calculations.tex:435-449; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090X": {
+      "title": "同伦嵌入的路径等价判据",
+      "action": "split-and-integrate",
+      "reason": "命题纤维到路径等价及逆方向完整核对，反方向使用 r·s^(-1) 原像。",
+      "scope": "a_calculations.tex:451-472; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090Y": {
+      "title": "忘记命题性质是同伦嵌入",
+      "action": "split-and-integrate",
+      "reason": "命题子类型路径复用058N；新增解释是同伦嵌入应用及增加基点结构的对比。",
+      "scope": "a_calculations.tex:474-480; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "090Z": {
+      "title": "沿等价重标记依赖和",
+      "action": "split-and-integrate",
+      "reason": "等价归纳同时变动底和类型族；不要求逐纤维选取元素。",
+      "scope": "a_calculations.tex:482-491; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0910": {
+      "title": "单形乘积中的格路径",
+      "action": "split-and-integrate",
+      "reason": "格路径是积偏序中的饱和最大链，p,q非负、步长与边数明确。",
+      "scope": "a_calculations.tex:495-497; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0911": {
+      "title": "单形乘积的格路径三角剖分",
+      "action": "split-and-integrate",
+      "reason": "严格链延长、共同顶点面与二项式计数三步骤保留，神经保持积在本例逐链说明。",
+      "scope": "a_calculations.tex:499-519; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0912": {
+      "title": "单纯正方形的两个三角形",
+      "action": "split-and-integrate",
+      "reason": "两三角形的共同对角边和独立编译图保留；严格复合等式仅限普通范畴神经。",
+      "scope": "a_calculations.tex:521-536; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0913": {
+      "title": "单纯三角柱的三个四面体",
+      "action": "split-and-integrate",
+      "reason": "三个四面体顶点、两个三角公共面和非相邻交边均核对。",
+      "scope": "a_calculations.tex:538-553; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0914": {
+      "title": "映出形状的并等于相容映射的拉回",
+      "action": "split-and-integrate",
+      "reason": "逐参数映出推出是严格拉回，独立于纤维性；同伦论断拆到091C。",
+      "scope": "a_calculations.tex:555-566; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "091C": {
+      "title": "Reedy 纤维目标中的形状粘合",
+      "action": "split-and-integrate",
+      "reason": "仅在Reedy纤维目标与形状单射下使用限制纤维化；明确调用外部模型理论而非声称重证。",
+      "scope": "a_calculations.tex:560-565; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0915": {
+      "title": "自然线性算子族由一个矩阵恢复",
+      "action": "split-and-integrate",
+      "reason": "固定域及线性Hom集合；评价恢复M、反向自然性、自动线性与矩阵尺寸完整核对。",
+      "scope": "a_calculations.tex:570-594; source and generated page read; local variables, proof steps, source scope, formulas and canonical prerequisite destinations checked."
+    },
+    "0916": {
+      "title": "五类关系与路径复合方向",
+      "action": "linked-guide",
+      "reason": "五种关系逐项定位，路径连接与函数复合方向及共轭公式保留。",
+      "scope": "b_glossary.tex:6-29; source rows/formulas individually compared; not a prerequisite atom."
+    },
+    "0917": {
+      "title": "同伦类型论术语定位",
+      "action": "linked-guide",
+      "reason": "全部21项同伦类型术语以规范链接和短释保留，集合性/命题性和轨道/不动点拆分目标准确。",
+      "scope": "b_glossary.tex:31-60; source rows/formulas individually compared; not a prerequisite atom."
+    },
+    "0918": {
+      "title": "单纯对象与合成范畴术语定位",
+      "action": "linked-guide",
+      "reason": "全部21项单纯范畴术语保留，已有定义只作链接式定位，未建立重复定义。",
+      "scope": "b_glossary.tex:63-92; source rows/formulas individually compared; not a prerequisite atom."
+    },
+    "0919": {
+      "title": "空间部分的公式定位",
+      "action": "linked-guide",
+      "reason": "逐个保留8个空间公式及5个源结果定位；Sigma对称群与依赖和符号明确区分。",
+      "scope": "b_glossary.tex:96-110; source rows/formulas individually compared; not a prerequisite atom."
+    },
+    "091A": {
+      "title": "合成范畴部分的公式定位",
+      "action": "linked-guide",
+      "reason": "5个范畴公式保留全部类型与协变假设，脊线与空间宇宙符号区分，正式源标签全部解析。",
+      "scope": "b_glossary.tex:112-123; source rows/formulas individually compared; not a prerequisite atom."
+    },
+    "091B": {
+      "title": "讲义理论前提与归纳规则定位",
+      "action": "linked-guide",
+      "reason": "理论假设层次完整保留，路径归纳与协变箭头归纳区别明确，导航排除于前置DAG。",
+      "scope": "b_glossary.tex:125-129; source rows/formulas individually compared; not a prerequisite atom."
+    },
+    "020N": {
+      "title": "圆周、同伦纤维与单形乘积的计算",
+      "action": "retain-outline",
+      "reason": "Short linked narrative; no independent prerequisite role.",
+      "scope": "a_calculations.tex editorial framing and navigation"
+    },
+    "020O": {
+      "title": "术语、符号与主要结果索引",
+      "action": "retain-outline",
+      "reason": "Short linked narrative; no independent prerequisite role.",
+      "scope": "b_glossary.tex editorial framing and navigation"
+    }
+  },
+  "prerequisites": {
+    "0900": [
+      "050G",
+      "0505",
+      "0548",
+      "054A",
+      "05C0"
+    ],
+    "0901": [
+      "0900",
+      "050H",
+      "0544"
+    ],
+    "0902": [
+      "0900",
+      "0585",
+      "050K"
+    ],
+    "0903": [
+      "0902",
+      "058B",
+      "05G2"
+    ],
+    "0904": [
+      "0542",
+      "05G4"
+    ],
+    "0905": [
+      "0904",
+      "050H"
+    ],
+    "0908": [
+      "054F",
+      "05C3"
+    ],
+    "0909": [
+      "0901",
+      "05C6"
+    ],
+    "090A": [
+      "0909",
+      "0905",
+      "0549",
+      "054B",
+      "05C7"
+    ],
+    "090B": [
+      "0909",
+      "0902",
+      "0588",
+      "05Z2"
+    ],
+    "090C": [
+      "0909",
+      "0548"
+    ],
+    "090D": [
+      "090C",
+      "090A",
+      "0905",
+      "0582"
+    ],
+    "090E": [
+      "0900",
+      "0909",
+      "0905",
+      "090A",
+      "054F",
+      "054C",
+      "050K"
+    ],
+    "090F": [
+      "090C",
+      "090E",
+      "050H"
+    ],
+    "090H": [
+      "090C",
+      "090E",
+      "090A",
+      "090B",
+      "0902",
+      "0587"
+    ],
+    "090G": [
+      "090F",
+      "090H",
+      "0905",
+      "058I"
+    ],
+    "090I": [
+      "090G",
+      "090B",
+      "0903",
+      "0589",
+      "058L",
+      "0586",
+      "0582",
+      "0588"
+    ],
+    "090J": [
+      "090G",
+      "058M",
+      "054J",
+      "058L"
+    ],
+    "090K": [
+      "0901",
+      "0900",
+      "054D",
+      "050K",
+      "058I"
+    ],
+    "090M": [
+      "090K",
+      "054H",
+      "054D",
+      "058E"
+    ],
+    "090N": [
+      "090M",
+      "090G"
+    ],
+    "090O": [
+      "090N",
+      "090M",
+      "0905",
+      "0545"
+    ],
+    "090P": [
+      "090G",
+      "054G"
+    ],
+    "090Q": [
+      "090K",
+      "05C6",
+      "05CD"
+    ],
+    "090S": [
+      "0507",
+      "0548",
+      "050H",
+      "058E",
+      "058I"
+    ],
+    "090R": [
+      "058E",
+      "0544",
+      "054H",
+      "050H",
+      "058I"
+    ],
+    "090T": [
+      "090R",
+      "0580",
+      "058E",
+      "0588",
+      "0582",
+      "0549",
+      "054H",
+      "05Z4"
+    ],
+    "090U": [
+      "0507",
+      "0544",
+      "050H",
+      "058I"
+    ],
+    "090V": [
+      "058E",
+      "0585"
+    ],
+    "090W": [
+      "054H",
+      "054D",
+      "058E",
+      "0542"
+    ],
+    "090X": [
+      "090V",
+      "090W",
+      "0582",
+      "0586",
+      "054H",
+      "05Z3"
+    ],
+    "090Y": [
+      "090S",
+      "090X",
+      "058N"
+    ],
+    "090Z": [
+      "0507",
+      "05CA"
+    ],
+    "0910": [
+      "00DE"
+    ],
+    "0911": [
+      "0910",
+      "01FX",
+      "0415",
+      "041G"
+    ],
+    "0912": [
+      "0911"
+    ],
+    "0913": [
+      "0911"
+    ],
+    "0914": [
+      "01FX",
+      "042B",
+      "0326",
+      "032B"
+    ],
+    "091C": [
+      "0914",
+      "0605",
+      "0609",
+      "060A",
+      "060C"
+    ],
+    "0915": [
+      "00D3",
+      "00GM",
+      "00I2",
+      "00GC",
+      "00GK"
+    ]
+  },
+  "sourceCoverage": [
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        8,
+        22
+      ],
+      "ids": [
+        "0900"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        24,
+        32
+      ],
+      "ids": [
+        "0901"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        34,
+        39
+      ],
+      "ids": [
+        "0902"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        41,
+        50
+      ],
+      "ids": [
+        "0903"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        54,
+        60
+      ],
+      "ids": [
+        "0904"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        62,
+        85
+      ],
+      "ids": [
+        "0905"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        99,
+        105
+      ],
+      "ids": [
+        "0908"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        109,
+        119
+      ],
+      "ids": [
+        "0909"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        121,
+        140
+      ],
+      "ids": [
+        "090A"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        142,
+        147
+      ],
+      "ids": [
+        "090B"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        149,
+        156
+      ],
+      "ids": [
+        "090C"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        158,
+        160
+      ],
+      "ids": [
+        "090D"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        164,
+        188
+      ],
+      "ids": [
+        "090E"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        190,
+        204
+      ],
+      "ids": [
+        "090F"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        206,
+        224
+      ],
+      "ids": [
+        "090H"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        226,
+        245
+      ],
+      "ids": [
+        "090G"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        247,
+        258
+      ],
+      "ids": [
+        "090I"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        260,
+        275
+      ],
+      "ids": [
+        "090J"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        279,
+        295
+      ],
+      "ids": [
+        "090K"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        305,
+        318
+      ],
+      "ids": [
+        "090M"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        320,
+        322
+      ],
+      "ids": [
+        "090N"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        324,
+        340
+      ],
+      "ids": [
+        "090O"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        342,
+        350
+      ],
+      "ids": [
+        "090P"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        352,
+        358
+      ],
+      "ids": [
+        "090Q"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        362,
+        376
+      ],
+      "ids": [
+        "090S"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        378,
+        397
+      ],
+      "ids": [
+        "090R"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        399,
+        401
+      ],
+      "ids": [
+        "090T"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        403,
+        427
+      ],
+      "ids": [
+        "090U"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        431,
+        433
+      ],
+      "ids": [
+        "090V"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        435,
+        449
+      ],
+      "ids": [
+        "090W"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        451,
+        472
+      ],
+      "ids": [
+        "090X"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        474,
+        480
+      ],
+      "ids": [
+        "090Y"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        482,
+        491
+      ],
+      "ids": [
+        "090Z"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        495,
+        497
+      ],
+      "ids": [
+        "0910"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        499,
+        519
+      ],
+      "ids": [
+        "0911"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        521,
+        536
+      ],
+      "ids": [
+        "0912"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        538,
+        553
+      ],
+      "ids": [
+        "0913"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        555,
+        566
+      ],
+      "ids": [
+        "0914"
+      ],
+      "notes": "Strict gluing component; homotopy interpretation split to 091C."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        560,
+        565
+      ],
+      "ids": [
+        "091C"
+      ],
+      "notes": "Reedy-fibrant homotopy component of same source theorem, with model hypotheses made explicit."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        570,
+        594
+      ],
+      "ids": [
+        "0915"
+      ],
+      "notes": "Full statement, proof where present, formulas and associated remarks retained; local context added."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        6,
+        29
+      ],
+      "ids": [
+        "0916"
+      ],
+      "notes": "Every source table entry/formula retained as a notation guide; canonical links are reused, navigation is excluded from prerequisite DAG."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        31,
+        60
+      ],
+      "ids": [
+        "0917"
+      ],
+      "notes": "Every source table entry/formula retained as a notation guide; canonical links are reused, navigation is excluded from prerequisite DAG."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        63,
+        92
+      ],
+      "ids": [
+        "0918"
+      ],
+      "notes": "Every source table entry/formula retained as a notation guide; canonical links are reused, navigation is excluded from prerequisite DAG."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        96,
+        110
+      ],
+      "ids": [
+        "0919"
+      ],
+      "notes": "Every source table entry/formula retained as a notation guide; canonical links are reused, navigation is excluded from prerequisite DAG."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        112,
+        123
+      ],
+      "ids": [
+        "091A"
+      ],
+      "notes": "Every source table entry/formula retained as a notation guide; canonical links are reused, navigation is excluded from prerequisite DAG."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        125,
+        129
+      ],
+      "ids": [
+        "091B"
+      ],
+      "notes": "Every source table entry/formula retained as a notation guide; canonical links are reused, navigation is excluded from prerequisite DAG."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        1,
+        6
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        52,
+        52
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        107,
+        107
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        162,
+        162
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        277,
+        277
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        360,
+        360
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        429,
+        429
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        493,
+        493
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        568,
+        568
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        596,
+        598
+      ],
+      "ids": [
+        "020N"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        1,
+        4
+      ],
+      "ids": [
+        "020O"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        62,
+        62
+      ],
+      "ids": [
+        "020O"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        94,
+        94
+      ],
+      "ids": [
+        "020O"
+      ],
+      "notes": "Source framing/section heading/navigation preserved through linked narrative; purely typesetting commands have no mathematical content."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        87,
+        97
+      ],
+      "ids": [
+        "054F",
+        "054C"
+      ],
+      "notes": "Deduplicated against chapter 10 function-family and endpoint transport, including their path-induction proofs."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        297,
+        303
+      ],
+      "ids": [
+        "0711",
+        "090M"
+      ],
+      "notes": "Same dependent-sum data formula as the canonical pointed-space mapping theorem 0711, recalled locally in 090M; no duplicate definition. The elementary circle calculation does not require the directed categorical interpretation of 0711, so this related link is not an extra prerequisite."
+    }
+  ],
+  "crossrefs": [
+    {
+      "from": "090G",
+      "sourceLabel": "thm:equiv-qinv",
+      "target": "058I",
+      "status": "resolved"
+    },
+    {
+      "from": "090J",
+      "sourceLabel": "prop:based-contractible",
+      "target": "054J",
+      "status": "resolved"
+    },
+    {
+      "from": "0919",
+      "sourceLabel": "thm:sigma-path",
+      "target": "054H",
+      "status": "resolved"
+    },
+    {
+      "from": "0919",
+      "sourceLabel": "thm:equiv-qinv",
+      "target": "058I",
+      "status": "resolved"
+    },
+    {
+      "from": "0919",
+      "sourceLabel": "thm:finite-loops",
+      "target": "05G6",
+      "status": "resolved"
+    },
+    {
+      "from": "0919",
+      "sourceLabel": "thm:torsor-BG",
+      "target": "05GF",
+      "status": "resolved"
+    },
+    {
+      "from": "0919",
+      "sourceLabel": "thm:circle-encode",
+      "target": "090G",
+      "status": "resolved"
+    },
+    {
+      "from": "091A",
+      "sourceLabel": "prop:dependent-arrow",
+      "target": "0627",
+      "status": "resolved",
+      "notes": "Canonical destination read and formula/context checked."
+    },
+    {
+      "from": "091A",
+      "sourceLabel": "thm:representable-covariant",
+      "target": "062M",
+      "status": "resolved",
+      "notes": "Canonical destination read and formula/context checked."
+    },
+    {
+      "from": "091A",
+      "sourceLabel": "thm:arrow-induction",
+      "target": "0635",
+      "status": "resolved",
+      "notes": "Canonical destination read and formula/context checked."
+    },
+    {
+      "from": "091A",
+      "sourceLabel": "thm:synthetic-yoneda",
+      "target": "063B",
+      "status": "resolved",
+      "notes": "Canonical destination read and formula/context checked."
+    },
+    {
+      "from": "091A",
+      "sourceLabel": "thm:spaces-category",
+      "target": "070Q",
+      "status": "resolved",
+      "notes": "Canonical destination read and formula/context checked."
+    }
+  ],
+  "corrections": [
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        6,
+        21
+      ],
+      "ids": [
+        "0916"
+      ],
+      "change": "The source says four equality relations but lists five; retitled five kinds of relation, not five interchangeable equalities."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        99,
+        104
+      ],
+      "ids": [
+        "0908"
+      ],
+      "change": "Use D,E for function-domain/codomain families to avoid collision with A,B as universe elements."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        555,
+        565
+      ],
+      "ids": [
+        "0914",
+        "091C"
+      ],
+      "change": "Separate simplicial-set exponential identity from Reedy-fibrant simplicial-space mapping-space homotopy claim; preserve external model-theoretic inputs."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        324,
+        340
+      ],
+      "ids": [
+        "090O"
+      ],
+      "change": "Explicit composite pointed-map witness ap_g(q)·r and loop-map conjugation; do not silently discard basepoint paths."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        528,
+        535
+      ],
+      "ids": [
+        "0912"
+      ],
+      "change": "Strict composite equality is stated only for ordinary category nerves; general targets retain triangle/coherence data."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        71,
+        84
+      ],
+      "ids": [
+        "0905"
+      ],
+      "change": "Expanded the natural-power commutation and negative-direction induction steps; preserved homotopical rather than definitional equality."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        375,
+        375
+      ],
+      "ids": [
+        "090S"
+      ],
+      "change": "Replaced source typo vector with element for a dependent-sum element."
+    },
+    {
+      "file": "a_calculations.tex",
+      "sourceLines": [
+        538,
+        552
+      ],
+      "ids": [
+        "0913"
+      ],
+      "change": "Specified the nonadjacent intersection edge by its two endpoints."
+    },
+    {
+      "file": "b_glossary.tex",
+      "sourceLines": [
+        38,
+        90
+      ],
+      "ids": [
+        "0917",
+        "0918",
+        "0919"
+      ],
+      "change": "Retargeted split canonical definitions: set type05Z2, equivalence05Z3/05Z4, homotopy orbit05Z6. All known cross-group glossary entries now link exact concept pages."
+    }
+  ],
+  "deferred": [],
+  "existingAugmentations": [],
+  "citationAliases": {
+    "HoTTBook": "HoTT",
+    "RiehlCatHo": "RiehlCatHomotopy",
+    "KudasovRiehlWeinberger": "YonedaFormal",
+    "Lurie": "LurieHTT",
+    "Shulman": "ShulmanUniverses"
+  },
+  "verification": {
+    "semanticReview": "Manual source and generated-page reading, with the concrete per-page findings recorded in reviews; mechanical conversion/checks are not semantic review.",
+    "pages": 48,
+    "formulas": 598,
+    "standaloneDiagrams": 1,
+    "coverage": {
+      "a_calculations.tex": {
+        "nonblankLines": 532,
+        "unmappedNonblankLines": []
+      },
+      "b_glossary.tex": {
+        "nonblankLines": 116,
+        "unmappedNonblankLines": []
+      }
+    },
+    "localPrerequisiteDAG": "acyclic",
+    "errors": [],
+    "scope": "Calculations only; no full forest build or global audit update; formula checks do not establish semantic review.",
+    "fullForestBuild": "not-run-by-instruction",
+    "gitCommit": "not-run-by-instruction"
+  },
+  "citationKeys": {
+    "RiehlICM": "0211",
+    "RiehlContext": "0212",
+    "Hatcher": "0213",
+    "Friedman": "0214",
+    "Quillen": "0215",
+    "GoerssJardine": "0216",
+    "HoTT": "0217",
+    "Rijke": "0218",
+    "AwodeyWarren": "0219",
+    "RiehlSemantics": "021A",
+    "RiehlCatHomotopy": "021B",
+    "Rezk": "021C",
+    "RiehlShulman": "021D",
+    "YonedaFormal": "021E",
+    "RiehlVerity": "021F",
+    "GratzerWeinbergerBuchholtz": "021G",
+    "CavalloRiehlSattler": "021H",
+    "LurieHTT": "021I",
+    "ShulmanUniverses": "021J"
+  },
+  "canonicalInspection": [
+    "0326",
+    "032B",
+    "0341",
+    "050G",
+    "0505",
+    "0548",
+    "054A",
+    "05C0",
+    "050H",
+    "0544",
+    "0585",
+    "050K",
+    "058B",
+    "05G2",
+    "0542",
+    "05G4",
+    "054F",
+    "05C3",
+    "05C6",
+    "0549",
+    "054B",
+    "05C7",
+    "0588",
+    "05Z2",
+    "0582",
+    "054C",
+    "0587",
+    "058I",
+    "0589",
+    "058L",
+    "0586",
+    "058M",
+    "054J",
+    "054D",
+    "054H",
+    "058E",
+    "0545",
+    "054G",
+    "05CD",
+    "0507",
+    "0580",
+    "05Z4",
+    "05Z3",
+    "058N",
+    "05CA",
+    "00DE",
+    "01FX",
+    "0415",
+    "041G",
+    "042B",
+    "0605",
+    "0609",
+    "060A",
+    "060C",
+    "00D3",
+    "00GM",
+    "00I2",
+    "00GC",
+    "00GK"
+  ],
+  "canonicalReuse": [
+    {
+      "ids": [
+        "054F",
+        "054C"
+      ],
+      "sourceLines": [
+        87,
+        97
+      ],
+      "reason": "The full function-family and endpoint transport statements and proofs are already covered in chapter10."
+    },
+    {
+      "ids": [
+        "058N",
+        "090Y"
+      ],
+      "sourceLines": [
+        474,
+        480
+      ],
+      "reason": "The subtype path equivalence is reused; the new note is its embedding interpretation and structure/property comparison."
+    },
+    {
+      "ids": [
+        "0711",
+        "090M"
+      ],
+      "sourceLines": [
+        297,
+        318
+      ],
+      "reason": "Pointed mapping data are recalled for the circle application without importing stronger directed-theory assumptions."
+    },
+    {
+      "ids": [
+        "01FX",
+        "00DE",
+        "00D3",
+        "00GC",
+        "00GK",
+        "00GM",
+        "00I2"
+      ],
+      "reason": "Existing canonical elementary definitions/results read and reused without changes."
+    }
+  ],
+  "semanticReview": {
+    "method": "Full reading of assigned source files, explicit source-unit allocation, manual reading of all 48 generated pages, and concrete mathematical corrections listed above. Formula/diagram checks are separate.",
+    "reviewedIds": [
+      "0900",
+      "0901",
+      "0902",
+      "0903",
+      "0904",
+      "0905",
+      "0908",
+      "0909",
+      "090A",
+      "090B",
+      "090C",
+      "090D",
+      "090E",
+      "090F",
+      "090H",
+      "090G",
+      "090I",
+      "090J",
+      "090K",
+      "090M",
+      "090N",
+      "090O",
+      "090P",
+      "090Q",
+      "090S",
+      "090R",
+      "090T",
+      "090U",
+      "090V",
+      "090W",
+      "090X",
+      "090Y",
+      "090Z",
+      "0910",
+      "0911",
+      "0912",
+      "0913",
+      "0914",
+      "091C",
+      "0915",
+      "0916",
+      "0917",
+      "0918",
+      "0919",
+      "091A",
+      "091B",
+      "020N",
+      "020O"
+    ],
+    "scope": "Only calculations atoms and glossary/navigation pages; direct prerequisite destinations read. No whole-forest semantic acceptance or external model theorem proofs claimed.",
+    "baseline": "Elementary arithmetic and finite manipulations; type rules, truncation, univalence and model structures are explicit linked assumptions.",
+    "excludedPrerequisiteLinks": [
+      {
+        "from": "0903",
+        "to": "090D",
+        "reason": "Later noncontractibility consequence, not needed for connectivity proof."
+      },
+      {
+        "from": "090M",
+        "to": "0711",
+        "reason": "Directed interpretation of the same data, not required for elementary pointed-circle mapping calculation."
+      },
+      {
+        "from": "0914",
+        "to": "091C",
+        "reason": "Stronger homotopy interpretation; strict gluing proof does not assume it."
+      }
+    ]
+  },
+  "changedFiles": [
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0900.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0901.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0902.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0903.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0904.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0905.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0908.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0909.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090A.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090B.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090C.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090D.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090E.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090F.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090H.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090G.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090I.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090J.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090K.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090M.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090N.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090O.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090P.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090Q.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090S.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090R.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090T.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090U.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090V.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090W.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090X.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090Y.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/090Z.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0910.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0911.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0912.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0913.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0914.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/091C.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0915.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0916.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0917.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0918.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/0919.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/091A.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/091B.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/020N.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/topology/synthetic/calculations/020O.tree",
+    "/Users/sunzy/claude_test/forester2/research/riehl-calculations.json",
+    "/Users/sunzy/claude_test/forester2/scripts/riehl-calculations.mjs"
+  ]
+}

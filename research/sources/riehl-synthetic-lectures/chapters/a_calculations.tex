@@ -1,0 +1,598 @@
+\chapter{圆周、同伦纤维与单形乘积的计算}
+\label{chap:calculations}
+
+本附录用几个完整计算说明前面出现的规则如何共同工作。圆周的计算需要增加一种高阶归纳类型；其生成元、消去规则与计算规则在下节明确给出。同伦纤维和单形乘积的计算则只使用正文已经建立的规则。
+
+\section{由一个点和一条环路生成圆周}
+
+\begin{definition}[圆周的高阶归纳规则]
+圆周类型 $S^1$ 由一个点和一条环路生成：
+\[
+ b:S^1,\qquad \ell:(b=_{S^1}b).
+\]
+它的依赖消去规则如下。给定类型族 $P:S^1\to\U$，若有
+\[
+ d:P(b),\qquad q:\tr^P_\ell(d)=d,
+\]
+则存在截面 $s:\Pi_{x:S^1}P(x)$，满足 $s(b)\equiv d$，而 $s$ 沿 $\ell$ 的依赖作用等于 $q$。在环路上的计算可以是同一性类型中的等式，不要求成为定义相等。
+\end{definition}
+
+\begin{remark}
+这是一条关于新类型的生成与消去规则。普通自然数的构造元位于点的层次；这里的第二个构造元位于路径的层次。在空间模型中，这个类型表示通常圆周的同伦类型。高阶归纳类型及此模型解释见 \cite{HoTT,Rijke}；以下计算从刚列出的规则出发。
+\end{remark}
+
+\begin{proposition}[圆周的递归规则]
+给定 $x_0:X$ 和 $p:x_0=x_0$，存在函数 $f:S^1\to X$，使得
+\[
+ f(b)\equiv x_0,\qquad \ap_f(\ell)=p.
+\]
+\end{proposition}
+\begin{proof}
+取常值族 $P(x)\equiv X$。常值族沿任何路径的传输都等于恒等函数，这是对路径作归纳的结果。因此给出消去规则要求的 $\tr^P_\ell(x_0)=x_0$ 等价于给出 $p:x_0=x_0$。依赖消去得到的截面就是所求函数。
+\end{proof}
+
+\begin{lemma}[命题值族上的圆周归纳]
+设每个 $P(x)$ 都是命题。给出 $d:P(b)$ 就足以构造 $\Pi_xP(x)$。
+\end{lemma}
+\begin{proof}
+由于 $P(b)$ 是命题，$\tr^P_\ell(d)$ 与 $d$ 之间存在路径。此路径提供依赖消去所需的第二项数据。若有两个所构造的截面，它们逐点相等；函数外延性又给出截面之间的相等。
+\end{proof}
+
+\begin{proposition}[圆周的连通性]
+$S^1$ 是连通的，即 $\Pi_{x:S^1}\trunc{b=x}$ 有元素。
+\end{proposition}
+\begin{proof}
+取 $P(x)=\trunc{b=x}$。这是命题值族，在 $b$ 处有 $|\refl_b|$。应用上一引理。
+\end{proof}
+
+\begin{remark}
+此证明只产生被命题截断的路径存在性。它没有选择每个 $x$ 到基点的具体路径。若能相容地选择全部具体路径，$S^1$ 就会可缩；下面的环路计算表明这不成立。
+\end{remark}
+
+\section{整数幂与路径的传输公式}
+
+\begin{definition}[环路的整数幂]
+设 $p:a=a$。对非负整数定义
+\[
+ p^0=\refl_a,\qquad p^{n+1}=p^n\cdot p.
+\]
+对 $n>0$ 定义 $p^{-n}=(p^n)^{-1}$。整数在这里使用其通常的集合结构；也可以由零、正自然数与负自然数构造同一个集合类型。
+\end{definition}
+
+\begin{lemma}[整数幂的运算]
+对于 $m,n\in\Z$，有
+\[
+ p^{n+1}=p^n\cdot p,\qquad
+ p^{m+n}=p^m\cdot p^n,\qquad
+ (p^n)^{-1}=p^{-n}.
+\]
+\end{lemma}
+\begin{proof}
+第一式在 $n\geq0$ 时由定义成立。若 $n=-k$ 且 $k>0$，由 $p^k=p^{k-1}\cdot p$ 及反演公式，得到
+\[
+ p^{-k}\cdot p
+ =(p^{k-1}\cdot p)^{-1}\cdot p
+ =p^{-1}\cdot(p^{k-1})^{-1}\cdot p.
+\]
+为消去末端的 $p$，先由自然数归纳证明 $p\cdot p^r=p^r\cdot p$，再反演可得 $p$ 与 $p^{-r}$ 也交换。因此上式等于 $p^{-(k-1)}$。在 $k=1$ 时，结果为 $\refl_a$。
+
+第二式先对 $n\geq0$ 作归纳。$n=0$ 是右单位律，归纳步骤为
+\[
+ p^{m+n+1}=(p^m\cdot p^n)\cdot p
+ =p^m\cdot(p^n\cdot p).
+\]
+对负整数的步骤使用第一式的等价形式 $p^{r-1}=p^r\cdot p^{-1}$。第三式在 $n>0$ 时为定义，在 $n<0$ 时由双重反演律得到，在零处为恒等路径的反演律。每个等式均指路径演算中的等式，其相容性由正文的路径归纳提供。
+\end{proof}
+
+\begin{lemma}[函数族中的传输]
+设 $A,B:X\to\U$，$r:x=y$，以及 $h:A(x)\to B(x)$。则
+\[
+ \tr^{z\mapsto(A(z)\to B(z))}_r(h)
+ =\tr^B_r\circ h\circ\tr^A_{r^{-1}}.
+\]
+若 $B(z)=(a=z)$，则 $\tr^B_r(q)=q\cdot r$。
+\end{lemma}
+\begin{proof}
+分别对 $r$ 作路径归纳。在 $r\equiv\refl_x$ 时，第一式两边均为 $h$，第二式两边均为 $q$，其中需要使用恒等函数合成的单位律与路径的右单位律。归纳原理给出一般情形。
+\end{proof}
+
+\begin{example}
+取 $X=\U$，$A$ 为恒等族，$B$ 为常值类型 $Z$。一个函数 $h:A\to Z$ 沿 $p:A=B$ 的传输为
+\[
+ h\circ\idtoequiv(p)^{-1}:B\to Z.
+\]
+若定义域不变而值域变化，则传输为后复合。定义域的逆变性与值域的协变性因此直接反映在传输公式中。
+\end{example}
+
+\section{整数覆盖族}
+
+\begin{definition}[编码族]
+令 $\mathsf{succ}:\Z\simeq\Z$ 为等价 $n\mapsto n+1$，其逆为 $n\mapsto n-1$。由圆周递归与单价性定义
+\[
+ \mathsf{Code}:S^1\to\U,
+\]
+使得
+\[
+ \mathsf{Code}(b)\equiv\Z,\qquad
+ \ap_{\mathsf{Code}}(\ell)=\ua(\mathsf{succ}).
+\]
+\end{definition}
+
+\begin{proposition}[沿生成环路的传输]
+对于 $n:\Z$，有
+\[
+ \tr^{\mathsf{Code}}_\ell(n)=n+1,
+ \qquad
+ \tr^{\mathsf{Code}}_{\ell^{-1}}(n)=n-1.
+\]
+更一般地，$\tr^{\mathsf{Code}}_{\ell^m}(n)=n+m$。
+\end{proposition}
+\begin{proof}
+族中的传输等于沿分类映射所给宇宙路径的传输。第一式因而由 $\idtoequiv(\ua(\mathsf{succ}))=\mathsf{succ}$ 得到。反向路径的传输是正向传输的逆等价，给出第二式。
+
+对于非负 $m$，用 $\ell^{m+1}=\ell^m\cdot\ell$ 和传输的合成律作归纳：
+\[
+ \tr_{\ell^{m+1}}(n)
+ =\tr_\ell(\tr_{\ell^m}(n))
+ =(n+m)+1.
+\]
+负整数使用反向路径以及递减函数的迭代。$m=0$ 是恒等路径的计算规则。
+\end{proof}
+
+\begin{lemma}
+每个 $\mathsf{Code}(x)$ 都是集合。
+\end{lemma}
+\begin{proof}
+性质 $\isSet(\mathsf{Code}(x))$ 是命题。它在基点处成立，因为整数是集合。命题值族上的圆周归纳将此证明延拓到每个 $x$。
+\end{proof}
+
+\begin{definition}[编码]
+对 $x:S^1$ 定义
+\[
+ \mathsf{encode}_x:(b=x)\to\mathsf{Code}(x),
+ \qquad
+ \mathsf{encode}_x(q)=\tr^{\mathsf{Code}}_q(0).
+\]
+\end{definition}
+
+\begin{example}
+在基点处，$\mathsf{encode}_b(\ell^n)=n$。因此不同整数幂不可能相等：如果 $\ell^m=\ell^n$，对该等式应用 $\mathsf{encode}_b$ 就得到 $m=n$。
+\end{example}
+
+\section{解码与圆周的环路空间}
+
+\begin{proposition}[解码的构造]
+存在依赖函数
+\[
+ \mathsf{decode}_x:\mathsf{Code}(x)\to(b=x),
+\]
+在 $x=b$ 处满足 $\mathsf{decode}_b(n)=\ell^n$。
+\end{proposition}
+\begin{proof}
+对族
+\[
+ D(x)=\bigl(\mathsf{Code}(x)\to(b=x)\bigr)
+\]
+应用圆周的依赖消去规则。取 $d(n)=\ell^n$ 作为 $D(b)$ 的元素。需要给出 $\tr^D_\ell(d)=d$。
+
+由函数族中的传输公式，对每个整数 $n$ 有
+\begin{align*}
+ \tr^D_\ell(d)(n)
+ &=\tr^{x\mapsto(b=x)}_\ell
+     \bigl(d(\tr^{\mathsf{Code}}_{\ell^{-1}}(n))\bigr)\\
+ &=d(n-1)\cdot\ell\\
+ &=\ell^{n-1}\cdot\ell\\
+ &=\ell^n=d(n).
+\end{align*}
+函数外延性将这些逐点等式组合为所需的路径。依赖消去即给出 $\mathsf{decode}$。
+\end{proof}
+
+\begin{lemma}[先编码后解码]
+对 $x:S^1$ 和 $q:b=x$，有
+\[
+ \mathsf{decode}_x(\mathsf{encode}_x(q))=q.
+\]
+\end{lemma}
+\begin{proof}
+这里的 $x$ 与 $q$ 一起变化，因而可以对 $q$ 作基点路径归纳。只需计算 $x\equiv b$、$q\equiv\refl_b$。此时
+\[
+ \mathsf{encode}_b(\refl_b)=0,
+ \qquad
+ \mathsf{decode}_b(0)=\ell^0=\refl_b.
+\]
+这正是归纳所需的基始情形。
+\end{proof}
+
+\begin{lemma}[先解码后编码]
+对 $x:S^1$ 和 $n:\mathsf{Code}(x)$，有
+\[
+ \mathsf{encode}_x(\mathsf{decode}_x(n))=n.
+\]
+\end{lemma}
+\begin{proof}
+在基点处，由整数覆盖族的传输计算，
+\[
+ \mathsf{encode}_b(\mathsf{decode}_b(n))
+ =\tr^{\mathsf{Code}}_{\ell^n}(0)=n.
+\]
+令
+\[
+ P(x)=\Pi_{n:\mathsf{Code}(x)}
+ \bigl(\mathsf{encode}_x(\mathsf{decode}_x(n))=n\bigr).
+\]
+因为 $\mathsf{Code}(x)$ 是集合，括号中的同一性类型为命题；命题的依赖积仍是命题。因此 $P$ 是命题值族。刚证明的基点情形通过圆周归纳延拓到全部 $x$。
+\end{proof}
+
+\begin{theorem}[圆周的编码—解码等价]\label{thm:circle-encode}
+对于每个 $x:S^1$，存在等价
+\[
+ (b=x)\simeq\mathsf{Code}(x).
+\]
+特别地，
+\[
+ \Omega(S^1,b)\simeq\Z.
+\]
+在该等价下，环路合成对应整数加法，生成环路 $\ell$ 对应整数 $1$。
+\end{theorem}
+\begin{proof}
+两个引理说明 $\mathsf{encode}$ 与 $\mathsf{decode}$ 互为同伦逆，因而由定理~\ref{thm:equiv-qinv} 构成等价。整数幂公式给出
+\[
+ \mathsf{decode}_b(m+n)
+ =\ell^{m+n}
+ =\ell^m\cdot\ell^n.
+\]
+因此逆等价保持群运算；原等价也保持运算。$\ell^1=\ell$ 给出最后一个断言。
+\end{proof}
+
+\begin{proposition}[圆周的高阶路径]
+$S^1$ 是 $1$-型，其基点处的二重环路空间可缩。
+\end{proposition}
+\begin{proof}
+定理说明 $(b=x)$ 等价于集合，故它是集合。对任意 $x,y:S^1$，性质 $\isSet(x=y)$ 是命题。由连通性得到被截断的路径 $b=x$；由于目标是命题，可消去这个截断，将 $x$ 化为 $b$。这说明所有同一性类型 $(x=y)$ 都是集合，所以 $S^1$ 是 $1$-型。
+
+二重环路空间为
+\[
+ (\refl_b=_{(b=b)}\refl_b).
+\]
+由于 $(b=b)$ 是集合，上式是命题，又有恒等路径作为元素，因此可缩。更高的迭代环路空间也可缩。
+\end{proof}
+
+\begin{proposition}[编码族的总空间]
+$\Sigma_{x:S^1}\mathsf{Code}(x)$ 可缩。
+\end{proposition}
+\begin{proof}
+逐纤维的解码等价诱导总空间等价
+\[
+ \Sigma_{x:S^1}\mathsf{Code}(x)
+ \simeq
+ \Sigma_{x:S^1}(b=x).
+\]
+右边是以 $b$ 为起点的路径总空间，由命题~\ref{prop:based-contractible} 可缩。可缩性沿等价传递，故左边也可缩。
+\end{proof}
+
+\begin{remark}
+编码族因而具有三个相互相容的描述：纤维是整数集合；绕圆周一次的传输为 $n\mapsto n+1$；总空间可缩。这些性质正是圆周普遍覆盖的同伦论特征。计算中真正使用单价性的地方，是把后继等价变成宇宙中的路径，以便定义 $\mathsf{Code}$。
+\end{remark}
+
+\section{圆周映射与次数}
+
+\begin{theorem}[圆周的映射空间]
+对于任意类型 $X$，存在等价
+\[
+ (S^1\to X)\simeq\Sigma_{x:X}(x=x).
+\]
+正向映射为 $f\mapsto(f(b),\ap_f(\ell))$。
+\end{theorem}
+\begin{proof}
+递归规则对每一对 $(x,p)$ 给出函数，形成反向映射。递归的点与路径计算规则说明，先递归再评价返回 $(x,p)$。
+
+还需证明一个已有函数 $f$ 与由 $(f(b),\ap_f\ell)$ 递归得到的函数 $g$ 相等。构造 $\Pi_{z:S^1}(g(z)=f(z))$。基点处取恒等路径。沿 $\ell$ 的相容条件由同一性族的传输公式写成
+\[
+ (\ap_g\ell)^{-1}\cdot\refl_{f(b)}\cdot\ap_f\ell
+ =\refl_{f(b)}.
+\]
+递归的路径计算规则给出 $\ap_g\ell=\ap_f\ell$，所以此条件由逆律成立。依赖消去得到逐点同伦，函数外延性再将其变为 $g=f$。两个方向互为同伦逆。
+\end{proof}
+
+\begin{definition}[带基点映射]
+从 $(A,a)$ 到 $(X,x)$ 的带基点映射类型为
+\[
+ \Map_*((A,a),(X,x))
+ =\Sigma_{f:A\to X}(f(a)=x).
+\]
+\end{definition}
+
+\begin{proposition}
+存在等价
+\[
+ \Map_*((S^1,b),(X,x))\simeq(x=x).
+\]
+它将 $(f,q)$ 送到 $q^{-1}\cdot\ap_f(\ell)\cdot q$。
+\end{proposition}
+\begin{proof}
+上一映射空间等价与在基点处评价相容。取该等价在 $x$ 处的同伦纤维，右侧变为
+\[
+ \Sigma_{y:X}\Sigma_{p:y=y}(y=x).
+\]
+对最后一条路径作归纳，将 $y$ 改为 $x$，就得到 $(x=x)$。在一般 $q:y=x$ 处，此搬运将环路 $p$ 送到 $q^{-1}\cdot p\cdot q$，由同一性类型的传输公式可得。
+\end{proof}
+
+\begin{definition}[圆周映射的次数]
+带基点映射 $(f,q):(S^1,b)\to(S^1,b)$ 的次数为相应环路在等价 $\Omega S^1\simeq\Z$ 下的像，记为 $\deg(f,q)$。
+\end{definition}
+
+\begin{proposition}[次数的乘法公式]
+恒等带基点映射的次数为 $1$，常值带基点映射的次数为 $0$。若带基点映射 $f,g$ 的次数分别为 $m,n$，则
+\[
+ \deg(g\circ f)=nm.
+\]
+\end{proposition}
+\begin{proof}
+由映射空间等价，每个带基点映射都等于将生成环路送到某个整数幂的递归映射。因此只需计算 $f_*(\ell)=\ell^m$ 与 $g_*(\ell)=\ell^n$ 的情形。路径上的函数作用保持合成和反演，故
+\[
+ (g\circ f)_*(\ell)
+ =g_*(\ell^m)
+ =(g_*\ell)^m
+ =(\ell^n)^m
+ =\ell^{nm}.
+\]
+最后一式对整数幂作归纳得到。恒等映射与常值映射分别送 $\ell$ 到 $\ell$ 与 $\refl_b$，给出前两个断言。
+\end{proof}
+
+\begin{example}[二维环面]
+设 $T^2=S^1\times S^1$，基点为 $(b,b)$。乘积类型的路径公式给出
+\[
+ \Omega(T^2,(b,b))
+ \simeq\Omega(S^1,b)\times\Omega(S^1,b)
+ \simeq\Z\times\Z.
+\]
+此等价保持群运算，因为路径在各坐标中分别合成。两条坐标环路分别对应 $(1,0)$ 与 $(0,1)$，它们交换由整数加法的交换律可知。
+\end{example}
+
+\begin{example}[圆周上的空间族]
+取 $X=\U$。圆周映射空间定理与单价性给出
+\[
+ (S^1\to\U)\simeq\Sigma_{A:\U}(A\simeq A).
+\]
+因此在圆周上给出一个小空间族，等价于给出一个纤维 $A$ 和该纤维的一个自等价。取 $A=\Z$、自等价为后继，得到上面的编码族；取 $A=\mathbf2$、自等价交换两个元素，得到二重覆盖的族。这里的分类保留了自等价之间的全部高阶路径。
+\end{example}
+
+\section{同伦纤维的三个变换公式}
+
+\begin{proposition}[依赖和投影的纤维]
+设 $E:B\to\U$，$p:\Sigma_{x:B}E(x)\to B$ 为第一投影。则
+\[
+ \fib_p(b)\simeq E(b).
+\]
+\end{proposition}
+\begin{proof}
+左侧展开为 $\Sigma_{x:B}\Sigma_{u:E(x)}(x=b)$。定义
+\[
+ ((x,u),q)\longmapsto\tr^E_q(u),
+ \qquad
+ v\longmapsto((b,v),\refl_b).
+\]
+先取第二个映射再取第一个，由恒等路径的传输规则得到 $v$。对另一个复合，向量 $((x,u),q)$ 中的 $x,q$ 可同时作路径归纳。只需计算 $x=b,q=\refl_b$，此时复合为恒等。故两个映射互逆。
+\end{proof}
+
+\begin{proposition}[复合映射的纤维]\label{prop:composite-fiber}
+给定 $A\xrightarrow f B\xrightarrow g C$ 及 $c:C$，有等价
+\[
+ \fib_{g\circ f}(c)
+ \simeq
+ \Sigma_{(b,q):\fib_g(c)}\fib_f(b).
+\]
+\end{proposition}
+\begin{proof}
+左侧元素为 $(a,r:g(f(a))=c)$。将它送到
+\[
+ ((f(a),r),(a,\refl_{f(a)})).
+\]
+右侧元素可写作 $((b,q),(a,p))$，其中 $q:g(b)=c$、$p:f(a)=b$。反向映射定义为
+\[
+ ((b,q),(a,p))\longmapsto
+ (a,\ap_g(p)\cdot q).
+\]
+左侧上的复合等于 $(a,\refl\cdot r)$，由单位律回到 $(a,r)$。右侧上的复合先将 $b$ 改成 $f(a)$。对 $p:f(a)=b$ 作路径归纳后，$b=f(a)$ 且 $p=\refl$，此时结果与原元素仅相差路径的左单位律。依赖和的路径公式将该计算组成总空间中的路径。
+\end{proof}
+
+\begin{example}
+若 $g$ 是等价，则 $\fib_g(c)$ 可缩。上式表明 $\fib_{gf}(c)$ 等价于 $\fib_f(b_0)$，其中 $(b_0,q_0)$ 为该可缩纤维的中心。这给出“复合等价保持纤维性质”的直接计算。选择中心不会带来歧义，因为中心及其收缩数据的类型也是命题。
+\end{example}
+
+\begin{proposition}[同伦拉回的粘合]
+给定 $A\xrightarrow f C\xleftarrow g B$ 和 $k:D\to B$。令
+\[
+ P=\Sigma_{a:A}\Sigma_{b:B}(f(a)=g(b)).
+\]
+将 $P$ 投影到 $B$，再沿 $k$ 取同伦拉回，所得类型等价于
+\[
+ \Sigma_{a:A}\Sigma_{d:D}(f(a)=g(k(d))).
+\]
+\end{proposition}
+\begin{proof}
+迭代拉回的元素为 $(a,b,p,d,q)$，其中
+\[
+ p:f(a)=g(b),\qquad q:b=k(d).
+\]
+正向映射定义为
+\[
+ (a,b,p,d,q)\longmapsto(a,d,p\cdot\ap_g(q)).
+\]
+逆映射将 $(a,d,r)$ 送到 $(a,k(d),r,d,\refl)$。一个复合由右单位律回到原元素。另一个复合对 $q$ 作归纳后也化为右单位律。因而两映射互为同伦逆。
+\end{proof}
+
+\begin{remark}
+普通拉回的粘合公式只保留相等条件；同伦拉回公式还必须记录相等条件之间的路径。上面的 $p\cdot\ap_g(q)$ 正是两个相容条件的合成。省去这项数据，会把同伦拉回误写成普通集合纤维积。
+\end{remark}
+
+\section{嵌入与路径空间}
+
+\begin{definition}[同伦意义下的嵌入]
+函数 $f:A\to B$ 称为嵌入，如果每个同伦纤维 $\fib_f(b)$ 都是命题。这个定义推广集合之间的单射，不要求 $f$ 在某个具体拓扑模型中是子空间嵌入。
+\end{definition}
+
+\begin{lemma}
+固定 $x,y:A$、$q:f(x)=f(y)$。则 $\ap_f:(x=y)\to(f(x)=f(y))$ 在 $q$ 处的同伦纤维等价于
+\[
+ \bigl((x,q)=(y,\refl_{f(y)})\bigr)
+ \quad\text{在 }\fib_f(f(y))\text{ 中的同一性类型}.
+\]
+\end{lemma}
+\begin{proof}
+依赖和的路径公式将右侧写成
+\[
+ \Sigma_{p:x=y}
+ \left(\tr^{z\mapsto(f(z)=f(y))}_p(q)=\refl_{f(y)}\right).
+\]
+传输公式给出 $\tr_p(q)=(\ap_f p)^{-1}\cdot q$。于是括号中的条件等价于 $\ap_f(p)=q$：正向可先左乘 $\ap_f(p)$，反向用路径逆律。各次乘法都是路径空间之间的等价，故上述转换本身给出等价，而非仅给出逻辑蕴涵。这正是左侧同伦纤维的定义。
+\end{proof}
+
+\begin{theorem}[嵌入的路径判据]
+函数 $f:A\to B$ 是嵌入，当且仅当对所有 $x,y:A$，映射
+\[
+ \ap_f:(x=y)\longrightarrow(f(x)=f(y))
+\]
+都是等价。
+\end{theorem}
+\begin{proof}
+若 $f$ 是嵌入，$\fib_f(f(y))$ 是命题；该类型有 $(y,\refl)$，所以可缩。可缩类型中任意两点的同一性类型可缩。上一引理因而说明 $\ap_f$ 的每个纤维可缩，故 $\ap_f$ 为等价。
+
+反过来，设所有 $\ap_f$ 都是等价。取纤维 $\fib_f(b)$ 中两点 $(x,r)$、$(y,s)$。路径 $r\cdot s^{-1}:f(x)=f(y)$ 有唯一到可缩选择的原像 $p:x=y$，并满足
+\[
+ \ap_f(p)=r\cdot s^{-1}.
+\]
+于是
+\[
+ \tr^{z\mapsto(f(z)=b)}_p(r)
+ =(\ap_f p)^{-1}\cdot r
+ =(r\cdot s^{-1})^{-1}\cdot r=s.
+\]
+依赖和的路径公式给出 $(x,r)=(y,s)$。任意两点相等，故该纤维是命题。
+\end{proof}
+
+\begin{example}[命题性质的遗忘映射]
+若每个 $P(a)$ 是命题，投影 $\Sigma_{a:A}P(a)\to A$ 的同伦纤维等价于 $P(a)$，所以是嵌入。因此
+\[
+ ((a,u)=(b,v))\simeq(a=b).
+\]
+这解释了为何给数学结构增加一个命题性质通常不改变已经存在的同一性数据。相反，给空间指定一个基点是增加结构；遗忘映射的纤维为原空间，通常不是命题。
+\end{example}
+
+\begin{proposition}[重标记依赖和]
+若 $e:A\simeq B$ 且 $P:B\to\U$，则
+\[
+ \Sigma_{a:A}P(e(a))\simeq\Sigma_{b:B}P(b).
+\]
+其正向映射为 $(a,u)\mapsto(e(a),u)$。
+\end{proposition}
+\begin{proof}
+由单价性，可以对等价 $e$ 作等价归纳，将 $B$ 化为 $A$、$e$ 化为恒等等价。在这个情形，给出的映射是恒等函数，显然为等价。等价归纳同时保持族 $P$ 的依赖，因此所得结论涵盖任意 $P$。此证明也表明，重标记不要求从每个纤维另行选择元素。
+\end{proof}
+
+\section{单形乘积的三角剖分}
+
+\begin{definition}[格路径]
+在有限偏序集 $[p]\times[q]$ 中，从 $(0,0)$ 到 $(p,q)$、每一步只将一个坐标增加 $1$ 的链称为格路径。它有 $p+q$ 条边，包含 $p$ 个水平步和 $q$ 个竖直步。
+\end{definition}
+
+\begin{proposition}[单形乘积的格路径分解]
+单纯集合 $\Delta^p\times\Delta^q$ 是所有格路径所确定的 $(p+q)$-单形的并。两个这样的单形的交是它们共同顶点所确定的面。最大维单形的个数为
+\[
+ \binom{p+q}{p}.
+\]
+\end{proposition}
+\begin{proof}
+由神经保持乘积，
+\[
+ \Delta^p\times\Delta^q=N([p]\times[q]).
+\]
+其中一个非退化 $r$-单形是一条严格递增链
+\[
+ (i_0,j_0)<\cdots<(i_r,j_r).
+\]
+在链首补入从 $(0,0)$ 到 $(i_0,j_0)$ 的单坐标步，在相邻两项间补入所有缺少的单坐标步，在链尾补到 $(p,q)$，便得到一条格路径。原单形于是成为某个格路径单形的面，证明这些单形覆盖乘积。
+
+若一个单形同时位于两条最大链所给的单形中，其所有顶点必定属于两链的公共顶点。反过来，两条全序链的公共顶点继承同一个次序，形成双方的共同面。这证明交的描述。
+
+一个格路径由其 $p$ 个水平步在 $p+q$ 个位置中的分布唯一决定，因此路径数是二项式系数。
+\end{proof}
+
+\begin{example}[正方形的两个三角形]
+$p=q=1$ 时，两条格路径的顶点列为
+\[
+ (0,0),(1,0),(1,1),
+ \qquad
+ (0,0),(0,1),(1,1).
+\]
+它们交于对角边 $(0,0)\to(1,1)$。图中两块三角形记录复合的两种分解。
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+ (0,0)\arrow[r]\arrow[d]\arrow[dr]&(1,0)\arrow[d]\\
+ (0,1)\arrow[r]&(1,1)
+\end{tikzcd}
+\]
+一个映射 $\Delta^1\times\Delta^1\to C$ 因而给出两组三角形数据，其长边相同。这正是自然性等式和可表族协变性的计算所使用的正方形。
+\end{example}
+
+\begin{example}[三角柱的三个四面体]
+$p=2,q=1$ 时有三条格路径，对应下列四面体：
+\begin{align*}
+ T_0&=[(0,0),(0,1),(1,1),(2,1)],\\
+ T_1&=[(0,0),(1,0),(1,1),(2,1)],\\
+ T_2&=[(0,0),(1,0),(2,0),(2,1)].
+\end{align*}
+相邻四面体的公共面分别为
+\[
+ T_0\cap T_1=[(0,0),(1,1),(2,1)],
+\]
+\[
+ T_1\cap T_2=[(0,0),(1,0),(2,1)].
+\]
+$T_0$ 与 $T_2$ 交于对角边。因而在三角形中连续移动一组复合数据，可以逐个四面体检查。每个四面体表达一次结合律相容条件，共同面保证这些条件能够粘合。
+\end{example}
+
+\begin{proposition}[从并到相容映射]
+设单纯集合 $K=K_1\cup K_2$，交为 $L$。则对任意 $C$ 有自然同构
+\[
+ C^K\cong C^{K_1}\times_{C^L}C^{K_2}.
+\]
+若 $C$ Reedy 纤维且上述包含为单射，对所得到的映射空间取纤维时，右侧的普通拉回也计算相应同伦拉回。
+\end{proposition}
+\begin{proof}
+$K$ 是 $K_1\leftarrow L\to K_2$ 的推出。映出一个推出等于给出两个在交上一致的映射，故指数化把该推出送为拉回。该论证在每个参数单形上成立，所以给出指数对象的同构。
+
+纤维性使沿单射的限制映射成为纤维化。沿纤维化的拉回具有同伦拉回的正确同伦类型，因而这里可以用严格一致的映射计算同伦相容的映射。若缺少这个纤维性条件，不能直接作后一解释。
+\end{proof}
+
+\section{线性代数中的 Yoneda 计算}
+
+\begin{example}[由一族线性算子恢复一个矩阵]
+固定有限维向量空间 $V,W$。设对于每个向量空间 $X$ 给出函数
+\[
+ \alpha_X:\Hom(V,X)\to\Hom(W,X),
+\]
+且对每个线性映射 $T:X\to Y$ 有
+\[
+ T\circ\alpha_X(A)=\alpha_Y(T\circ A).
+\]
+不预先假设 $\alpha_X$ 是线性映射。取
+\[
+ M=\alpha_V(\id_V):W\to V.
+\]
+在自然性式中令 $X=V$、$T=A:V\to Y$、输入为 $\id_V$，得到
+\[
+ \alpha_Y(A)=A\circ M.
+\]
+因此整族 $\alpha$ 完全由一个线性映射 $M$ 决定，而且每个 $\alpha_Y$ 自动是线性的。
+
+取 $V=k^n$、$W=k^m$、$Y=k^r$。则 $M$ 是 $n\times m$ 矩阵，$A$ 是 $r\times n$ 矩阵，$\alpha_Y(A)=AM$ 是 $r\times m$ 矩阵。此计算直接展示
+\[
+ \Nat(\Hom(V,-),\Hom(W,-))\cong\Hom(W,V)
+\]
+中的方向反转。在合成 Yoneda 引理中，相同的评价公式仍然成立，但其自然性由内部依赖函数的定义保证。
+\end{example}
+
+\begin{remark}
+本附录的三个核心操作分别是沿路径传输、在同伦纤维中保留相容数据，以及把参数形状分解为可以粘合的单形。它们在正文中的对应位置依次是单价性、依赖和与协变族、Segal 复合与箭头归纳。圆周的整数计算、纤维的变换公式和格路径剖分因而属于同一套演算的不同应用。
+\end{remark}

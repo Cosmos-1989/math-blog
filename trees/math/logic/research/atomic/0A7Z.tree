@@ -1,0 +1,15 @@
+\title{概率空间的测度代数与对称差度量}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{设 #{(X,\mathcal A,\mu)} 为[概率空间](00Q3)。以 #{A\sim B\iff\mu(A\triangle B)=0} 定义可测集的[等价关系](00G2)，其中 #{A\triangle B=(A\setminus B)\cup(B\setminus A)}。商集合 #{\mathfrak M_\mu=\mathcal A/{\sim}} 称测度代数；记 #{[A]} 为 #{A} 的类。}
+\p{交、并、补与测度下降为 #{[A]\wedge[B]=[A\cap B]}、#{[A]\vee[B]=[A\cup B]}、#{[A]^c=[X\setminus A]} 及 #{\bar\mu([A])=\mu(A)}。这些布尔运算满足集合运算的恒等式，其零、一分别为 #{[\varnothing]}、#{[X]}。定义[度量](00EK)}
+##{\delta([A],[B])=\mu(A\triangle B)\in[0,1].}
+\p{对称差的包含关系 #{A\triangle C\subseteq(A\triangle B)\cup(B\triangle C)} 给出三角不等式；零距离恰是同一等价类，故该式良定义且为度量。改变任一代表只改变零测集合，所以布尔运算与测度也良定义。}
+\p{对 #{a,b,c,d\in\mathfrak M_\mu}，集合包含关系给出}
+##{\delta(a^c,b^c)=\delta(a,b),\qquad
+\delta(a\wedge c,b\wedge d)\leq\delta(a,b)+\delta(c,d),\qquad
+|\bar\mu(a)-\bar\mu(b)|\leq\delta(a,b).}
+\p{并运算满足同样的双变量估计。这些估计说明布尔运算与测度在 #{\delta} 下连续。}

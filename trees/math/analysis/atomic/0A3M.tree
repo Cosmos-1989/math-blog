@@ -1,0 +1,10 @@
+\title{有限和的 Hölder 不等式}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{p,q>1} 是共轭指数，#{a_j,b_j\in\mathbb C}，#{1\le j\le n}。则}
+##{\sum_{j=1}^n|a_jb_j|\le
+\left(\sum_j|a_j|^p\right)^{1/p}
+\left(\sum_j|b_j|^q\right)^{1/q}.}
+\p{\strong{证明。}若右端任一因子为零则结论成立。否则分别用这两个因子归一化，得非负数列 #{u_j,v_j}，满足 #{\sum_j u_j^p=\sum_jv_j^q=1}。逐项应用 [Young 不等式](0A3L)，再相加得 #{\sum_j u_jv_j\le 1/p+1/q=1}。恢复归一化因子即得。端点形式为 #{\sum_j|a_jb_j|\le(\sum_j|a_j|)\max_j|b_j|}。}

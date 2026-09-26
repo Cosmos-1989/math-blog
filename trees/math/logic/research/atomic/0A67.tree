@@ -1,0 +1,9 @@
+\title{Lp 空间的完备性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{对任意测度空间 #{(X,\mu)} 及 #{1\leq p\leq\infty}，[#{L^p}](00Q6)（#{p<\infty}）与 [#{L^\infty}](0A66) 在各自范数下都是 [Banach 空间](00M6)。}
+\p{\strong{证明概要。}若 #{p<\infty}，从 Cauchy 序列 #{f_n} 中取子列 #{f_{n_k}}，使 #{\|f_{n_{k+1}}-f_{n_k}\|_p\leq 2^{-k}}。记 #{g_k=|f_{n_{k+1}}-f_{n_k}|}。[Minkowski 不等式](0A69)给出 #{\|\sum_{k=1}^N g_k\|_p\leq 1}。[单调收敛定理](0A7A)使 #{g=\sum_k g_k} 的 #{p} 次积分有限，故它几乎处处有限，子列逐点收敛到可测函数 #{f}。对尾和再次应用同一估计，得 #{\|f-f_{n_k}\|_p\leq\sum_{j\geq k}2^{-j}}，原 Cauchy 序列也收敛到 #{f}。}
+\p{若 #{p=\infty}，对同样的子列，将所有差值界的可数个零测例外集合并后，子列在其补集上一致收敛；一致极限的本质范数尾差至多 #{\sum_{j\geq k}2^{-j}}，再由 Cauchy 性得到整列收敛。}

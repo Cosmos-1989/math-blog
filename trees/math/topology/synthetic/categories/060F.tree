@@ -1,0 +1,21 @@
+\title{路径归纳产生有向箭头}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 15 章；[RiehlShulman](021D)，[RiehlICM](0211)}
+
+\p{设 #{C} 为有向类型，#{x,y:C}。应用同一性类型的路径归纳，不对 #{C} 预设箭头复合。}
+
+\p{所需前置：[有向同态类型](060D)、[常值外形状给出恒等箭头](060E)、[同一性类型及路径归纳](050G)。}
+
+\p{有典范函数}
+
+##{\mathsf{pathToArrow}:(x=y)\to\operatorname{Hom}_C(x,y),}
+
+\p{在常路径处取恒等箭头。}
+
+\p{\strong{证明。}
+在族 #{P(x,y,p)=\operatorname{Hom}_C(x,y)} 中使用路径归纳，恒等情形给出 #{\operatorname{id}_x}。此构造不需要预先假设 #{C} 有箭头合成。}
+
+\p{\strong{说明。}
+在任意有向类型中，一般没有从 #{\operatorname{Hom}_C(x,y)} 回到 #{x=y} 的函数。即使类型满足[Rezk 完备性](061H)，也只会将可逆箭头识别为路径。[群胚条件](061K)则进一步识别全部箭头与路径。}

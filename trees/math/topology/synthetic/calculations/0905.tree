@@ -1,0 +1,32 @@
+\title{环路整数幂的加法与反演公式}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[环路的整数幂](0904)；[基点路径归纳](050H)。}
+
+\p{固定类型 #{A} 中的点 #{a} 与环路 #{p:a=a}。下列等式均表示同一性类型中的路径；定义相等专指由展开和计算规则成立的判断。}
+
+\p{对于 #{m,n\in\mathbb Z}，有}
+
+##{p^{n+1}=p^n\cdot p,\qquad
+ p^{m+n}=p^m\cdot p^n,\qquad
+ (p^n)^{-1}=p^{-n}.}
+
+\p{\strong{证明。}第一式在 #{n\geq 0} 时由定义成立。若 #{n=-k} 且 #{k>0}，由 #{p^k=p^{k-1}\cdot p} 及反演公式，得到}
+
+##{p^{-k}\cdot p
+ =(p^{k-1}\cdot p)^{-1}\cdot p
+ =p^{-1}\cdot(p^{k-1})^{-1}\cdot p.}
+
+\p{为消去末端的 #{p}，先由自然数归纳证明 #{p\cdot p^r=p^r\cdot p}，再反演可得 #{p} 与 #{p^{-r}} 也交换。因此上式等于 #{p^{-(k-1)}}。在 #{k=1} 时，结果为 #{\operatorname{refl}_a}。}
+
+\p{第二式先对 #{n\geq 0} 作归纳。#{n=0} 是右单位律，归纳步骤为}
+
+##{p^{m+n+1}=(p^m\cdot p^n)\cdot p
+ =p^m\cdot(p^n\cdot p).}
+
+\p{对负整数的步骤使用第一式的等价形式 #{p^{r-1}=p^r\cdot p^{-1}}。第三式在 #{n>0} 时为定义，在 #{n<0} 时由双重反演律得到，在零处为恒等路径的反演律。每个等式均指路径演算中的等式，其相容性由[路径归纳](050H)提供。}
+
+\p{自然数交换归纳的步骤可显式写为 #{p\cdot p^{r+1}=(p\cdot p^r)\cdot p=(p^r\cdot p)\cdot p=p^{r+1}\cdot p}。若 #{p\cdot u=u\cdot p}，在两边适当乘 #{u^{-1}} 得 #{p\cdot u^{-1}=u^{-1}\cdot p}，故上述交换也适用于负幂。负向加法归纳为 #{p^{m+n-1}=p^{m+n}\cdot p^{-1}=p^m\cdot(p^n\cdot p^{-1})=p^m\cdot p^{n-1}}。}

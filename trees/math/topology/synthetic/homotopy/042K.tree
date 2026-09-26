@@ -1,0 +1,19 @@
+\title{带路径依赖参数的路径归纳提升}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 7 章；[Quillen](0215)；[GoerssJardine](0216)；[RiehlICM](0211)}
+
+\p{设 #{A\to\Gamma} 为 Kan 纤维化，#{P_\Gamma(A)} 使用[相对路径对象](042I)。使用[相对分解](042J)、[Frobenius 性质](042D)及[指数提升性质](042C)。}
+
+\p{设 #{A\to\Gamma} 为纤维化，并给定纤维化}
+
+##{Q\xrightarrow\chi P\xrightarrow\rho P_\Gamma(A).}
+
+\p{令 #{P_0=P\times_{P_\Gamma(A)}A}。则 #{\chi} 在 #{P_0} 上的任一部分截面可延拓为在 #{P} 上的截面，且固定部分截面的延拓空间可缩。}
+
+\p{\strong{证明。}由命题[相对路径分解](042J)，#{A\to P_\Gamma(A)} 为平凡上纤维化。沿纤维化 #{\rho} 拉回，由 Frobenius 性质得到 #{P_0\to P} 仍为平凡上纤维化。用它对 #{\chi} 求提升，得到所需截面。映射对象的平凡纤维化性质给出提升空间可缩。}
+
+\p{附加参数可以依赖路径本身，这由 #{P\to P_\Gamma(A)} 表示。该一般性使路径复合、依赖传输和高阶相容等式都能由同一个归纳原理构造。}
+
+\p{部分截面是 #{s_0:P_0\to Q} 且 #{\chi s_0} 等于包含 #{P_0\to P}；所求 #{s:P\to Q} 满足 #{\chi s=\mathrm{id}_P} 及 #{s|_{P_0}=s_0}。提升空间是映射对象映射 #{Q^P\to Q^{P_0}\times_{P^{P_0}}P^P} 在 #{(s_0,\mathrm{id}_P)} 处的纤维。该映射平凡纤维化，纤维的收缩可按[固定边界延拓空间](042H)的边界提升论证构造。}

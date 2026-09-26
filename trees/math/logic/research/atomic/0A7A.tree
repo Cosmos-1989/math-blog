@@ -1,0 +1,9 @@
+\title{非负可测函数的单调收敛定理}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[测度论背景](007J)}
+
+\p{在[测度空间](00Q2)上，设 #{0\leq f_1\leq f_2\leq\cdots} 为可测函数，逐点极限为 #{f}，允许取值 #{\infty}。则其[Lebesgue 积分](00Q5)满足}
+##{\int f\,d\mu=\lim_{n\to\infty}\int f_n\,d\mu.}
+\p{\strong{证明。}单调性给出右侧不超过左侧。任取非负简单函数 #{s\leq f} 及 #{0<c<1}，集合 #{E_n=\{f_n\geq cs\}} 递增且并为全空间。测度对递增集的下连续性由可数可加性应用于不交差集得到，因此对简单函数的有限各片有 #{\int s1_{E_n}\to\int s}。于是 #{\lim_n\int f_n\geq c\int s}。令 #{c\uparrow 1}，再对所有 #{s\leq f} 取上确界，便得反向不等式；无穷积分同样适用。}

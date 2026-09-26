@@ -1,0 +1,13 @@
+\title{路径连接及右单位计算}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 10 章}
+
+\p{设 #{x,y,z:A}；#{p\cdot q} 的顺序是先行 #{p}，再行 #{q}。}
+
+\p{前置：[固定起点的路径归纳](050H)。}
+
+\p{给定 #{p:x=y}、#{q:y=z}，可构造 #{p\cdot q:x=z}，满足 #{p\cdot\mathsf{refl}_y\equiv p}。}
+
+\p{\strong{证明。}固定 #{p}，对 #{q} 使用以 #{y} 为基点的路径归纳。目标为 #{x=z}。在 #{q=\mathsf{refl}_y} 时目标为 #{x=y}，使用已有的 #{p}。由归纳得到复合及计算规则。}

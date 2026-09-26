@@ -1,0 +1,138 @@
+\documentclass[12pt,oneside,openany,fontset=none]{ctexbook}
+\usepackage[b5paper,left=20mm,right=18mm,top=21mm,bottom=21mm,headheight=14pt,headsep=7mm]{geometry}
+\IfFontExistsTF{Noto Serif CJK SC}{
+  \setCJKmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold},ItalicFont={Noto Serif CJK SC},BoldItalicFont={Noto Serif CJK SC Bold}]
+  \setCJKsansfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold},ItalicFont={Noto Serif CJK SC},BoldItalicFont={Noto Serif CJK SC Bold}]
+  \setCJKmonofont{Noto Sans Mono CJK SC}
+}{
+  \setCJKmainfont{FandolSong-Regular.otf}[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolSong-Regular.otf,BoldItalicFont=FandolSong-Bold.otf]
+  \setCJKsansfont{FandolHei-Regular.otf}[BoldFont=FandolHei-Bold.otf,ItalicFont=FandolHei-Regular.otf,BoldItalicFont=FandolHei-Bold.otf]
+  \setCJKmonofont{FandolFang-Regular.otf}
+}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing}
+\usepackage{booktabs,longtable,array,enumitem,microtype,etoolbox,needspace}
+\usepackage[unicode,hidelinks,bookmarksnumbered,pdftitle={从同伦类型到合成高阶范畴},pdfauthor={}]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\nouppercase{\leftmark}}\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad #1}{}}
+\makeatletter
+\let\CTEX@chapter@break\relax
+\makeatother
+\ctexset{chapter={format=\Large\bfseries,beforeskip=22pt,afterskip=14pt},section={format=\large\bfseries,beforeskip=16pt,afterskip=8pt},subsection={format=\normalsize\bfseries,beforeskip=10pt,afterskip=5pt}}
+\linespread{1.14}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\abovedisplayskip}{8pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{8pt plus 2pt minus 2pt}
+\allowdisplaybreaks[2]
+\setlist{nosep,leftmargin=2em}
+\newtheoremstyle{cn}{7pt}{7pt}{\normalfont}{0pt}{\bfseries}{\quad}{0pt}{}
+\theoremstyle{cn}
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{example}[definition]{例}
+\newtheorem{lemma}[definition]{引理}
+\newtheorem{proposition}[definition]{命题}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{remark}[definition]{注记}
+\renewcommand{\proofname}{证明}
+\numberwithin{equation}{chapter}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Top}{\mathbf{Top}}
+\newcommand{\Cat}{\mathbf{Cat}}
+\newcommand{\sSet}{\mathbf{sSet}}
+\newcommand{\sSp}{\mathbf{sSp}}
+\newcommand{\Sp}{\mathcal S}
+\newcommand{\U}{\mathcal U}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Map}{\operatorname{Map}}
+\newcommand{\Nat}{\operatorname{Nat}}
+\newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\Ob}{\operatorname{Ob}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\refl}{\mathsf{refl}}
+\newcommand{\ap}{\mathsf{ap}}
+\newcommand{\apd}{\mathsf{apd}}
+\newcommand{\tr}{\mathsf{tr}}
+\newcommand{\isContr}{\mathsf{isContr}}
+\newcommand{\isProp}{\mathsf{isProp}}
+\newcommand{\isSet}{\mathsf{isSet}}
+\newcommand{\isEquiv}{\mathsf{isEquiv}}
+\newcommand{\isIso}{\mathsf{isIso}}
+\newcommand{\fib}{\mathsf{fib}}
+\newcommand{\happly}{\mathsf{happly}}
+\newcommand{\funext}{\mathsf{funext}}
+\newcommand{\ua}{\mathsf{ua}}
+\newcommand{\idtoequiv}{\mathsf{idtoequiv}}
+\newcommand{\idtoiso}{\mathsf{idtoiso}}
+\newcommand{\ev}{\operatorname{ev}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Eq}{\operatorname{Eq}}
+\newcommand{\Seg}{\mathsf{Seg}}
+\newcommand{\Cov}{\mathsf{Cov}}
+\newcommand{\LFib}{\mathsf{LFib}}
+\newcommand{\Ext}{\mathsf{Ext}}
+\newcommand{\Comp}{\mathsf{Comp}}
+\newcommand{\Fin}{\mathsf{Fin}}
+\newcommand{\Magma}{\mathsf{Magma}}
+\newcommand{\Mon}{\mathsf{Mon}}
+\newcommand{\Grp}{\mathsf{Grp}}
+\newcommand{\Tors}{\mathsf{Tors}}
+\newcommand{\Int}{\mathbb I}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\trunc}[1]{\left\|#1\right\|}
+\newcommand{\colim}{\operatorname*{colim}}
+\newcommand{\limm}{\operatorname*{lim}}
+\newcommand{\hlim}{\operatorname*{holim}}
+\newcommand{\hcolim}{\operatorname*{hocolim}}
+\newcommand{\source}[1]{\par\smallskip{\small #1}\par}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 从同伦类型到合成高阶范畴\par}
+\vspace{6pt}
+{\large 空间、路径归纳、Yoneda 引理与有向单价性\par}
+\end{center}
+\vspace{8pt}
+\noindent 本讲义从集合、函数、初等代数与拓扑出发，建立依赖类型的基本演算，研究单价宇宙中的空间，再引入单纯方向并发展合成范畴论。中心结果为路径归纳、结构同一性原理、箭头归纳、合成 Yoneda 引理，以及由有向单价宇宙构造空间范畴和代数结构范畴。Riehl 的报告\cite{RiehlICM}给出了这些主题的统一视角。
+
+\noindent 本文以 $(x=_A y)$ 表示同一类型中的同一性类型，以 $x\to_C y$ 表示范畴中的有向箭头。符号 $\equiv$ 表示定义相等，$\cong$ 表示普通范畴中的同构，$\simeq$ 表示同伦等价。路径合成 $p\cdot q$ 先行 $p$ 后行 $q$；态射合成 $g\circ f$ 先行 $f$ 后行 $g$。
+
+\noindent 基础规则与语义定理各有不同作用。依赖和、依赖积、同一性类型、函数外延性及所用宇宙的规则会在正文逐项列出；其后的内部结论依这些规则证明。Quillen 模型结构、严格单价宇宙的存在，以及任意高阶拓扑斯中普遍左纤维化的存在，作为注明来源的语义基础定理使用。末章说明这些定理如何支持前面的演算，并给出有向单价性证明所需的比较构造。
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\input{chapters/01_sets}
+\input{chapters/02_categories}
+\input{chapters/03_universal}
+\input{chapters/04_yoneda}
+\input{chapters/05_topology}
+\input{chapters/06_simplicial}
+\input{chapters/07_kan}
+\input{chapters/08_families}
+\input{chapters/09_types}
+\input{chapters/10_paths}
+\input{chapters/11_equivalences}
+\input{chapters/12_univalence}
+\input{chapters/13_classifying}
+\input{chapters/14_groups}
+\input{chapters/15_simplicial_spaces}
+\input{chapters/16_segal}
+\input{chapters/17_covariant}
+\input{chapters/18_arrow_yoneda}
+\input{chapters/19_representability}
+\input{chapters/20_directed}
+\input{chapters/21_structures}
+\input{chapters/22_semantics}
+\appendix
+\input{chapters/a_calculations}
+\input{chapters/b_glossary}
+\input{references}
+\end{document}

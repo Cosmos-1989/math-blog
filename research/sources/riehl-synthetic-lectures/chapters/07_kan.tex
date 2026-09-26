@@ -1,0 +1,177 @@
+\chapter{Kan 复形、模型结构与路径对象}
+\section{提升性质与 Kan 条件}
+\begin{definition}[提升性质]
+给定映射 $i:A\to B$、$p:E\to F$。若每个交换方块
+\[
+\begin{tikzcd}
+A\ar[r,"u"]\ar[d,"i"']&E\ar[d,"p"]\\
+B\ar[r,"v"']\ar[ur,dashed,"\ell"]&F
+\end{tikzcd}
+\]
+均有提升，称 $i$ 对 $p$ 具有左提升性质，或 $p$ 对 $i$ 具有右提升性质，记 $i\perp p$。
+\end{definition}
+\begin{definition}[Kan 纤维化与 Kan 复形]
+单纯映射 $p:E\to B$ 为 Kan 纤维化，若对全部 $n\ge1$、$0\le k\le n$，有 $\Lambda_k^n\hookrightarrow\Delta^n\perp p$。若 $X\to\Delta^0$ 为 Kan 纤维化，则称 $X$ 为 Kan 复形。
+\end{definition}
+\begin{proposition}[纤维化的稳定性]
+Kan 纤维化在复合、拉回和收缩项下封闭。其在任意顶点上的纤维为 Kan 复形。
+\end{proposition}
+\begin{proof}
+复合情形，先对下层映射提升，再对上层映射提升。拉回情形，将提升问题投影到原方块，提升后由拉回泛性质恢复。若 $p$ 是 $q$ 在箭头范畴中的收缩项，把 $p$ 的方块嵌入 $q$ 的方块，取得提升后投影回来。纤维是沿顶点映射的拉回，故纤维到点为 Kan 纤维化。
+\end{proof}
+\begin{example}[外角恢复逆]
+对 Kan 复形 $X$ 的边 $f:x\to y$，外角填充给出 $g:y\to x$ 及一个把 $gf$ 与恒等边联系起来的二维单形。另一个外角提供另一侧的逆条件。这些条件是二维比较，而非单纯映射之间的字面等式。
+\end{example}
+\begin{remark}
+Kan 条件要求填充存在，通常不要求严格唯一。高阶填充提供不同选择之间的比较。这与普通群胚神经中由代数等式确定的唯一高维填充有明显差别。
+\end{remark}
+
+\section{弱因子分解与胞腔添附}
+\begin{definition}[弱因子分解系统]
+范畴中的两个映射类 $(\mathcal L,\mathcal R)$ 构成弱因子分解系统，若每个映射分解为 $ri$，其中 $i\in\mathcal L$、$r\in\mathcal R$，且
+\[
+\mathcal L={}^\perp\mathcal R,
+\qquad \mathcal R=\mathcal L^\perp.
+\]
+\end{definition}
+\begin{definition}[角添附]
+把一个角映射 $\Lambda_k^n\to X$ 延拓到新单形，得到推出
+\[
+\begin{tikzcd}
+\Lambda_k^n\ar[r]\ar[d,hook]&X\ar[d]\\
+\Delta^n\ar[r]&X\amalg_{\Lambda_k^n}\Delta^n.
+\end{tikzcd}
+\]
+由这样的推出、序数复合及收缩项生成的映射称为由角生成的平凡上纤维化，通常也称 anodyne 扩张。
+\end{definition}
+\begin{proposition}[添附填充的因子分解]
+每个单纯映射 $f:X\to Y$ 可以分解为角添附的序列后接 Kan 纤维化。
+\end{proposition}
+\begin{proof}
+令 $X_0=X$。给定 $X_r\to Y$，对所有交换方块 $\Lambda_k^n\to X_r$、$\Delta^n\to Y$，同时添入一个 $\Delta^n$，得到 $X_{r+1}\to Y$。取 $X_\infty=\colim_{r<\omega}X_r$。一个角只有有限个非退化单形，因此到 $X_\infty$ 的角映射已经经过某个 $X_r$；其填充在 $X_{r+1}$ 中已添入。故 $X_\infty\to Y$ 为 Kan 纤维化。
+
+复合 $X\to X_\infty$ 由角添附生成。对任意 Kan 纤维化求提升时，可逐级扩展映射；极限级取兼容映射的并。因此它对所有 Kan 纤维化具有左提升性质。
+\end{proof}
+\begin{remark}
+这个构造解释了填充为何能够系统地补齐。它本身还没有证明哪些映射在几何实现后是弱同伦等价，也没有证明模型结构的全部相容性；这些属于下一条基础定理的内容。
+\end{remark}
+
+\section{Quillen 模型结构}
+\begin{definition}[模型范畴]
+具有所有小极限和余极限的范畴 $M$，连同弱等价 $\mathcal W$、上纤维化 $\mathcal C$、纤维化 $\mathcal F$ 三类映射，称为模型范畴，若弱等价满足二取三及收缩项封闭，且
+\[
+(\mathcal C,\mathcal F\cap\mathcal W),
+\qquad(\mathcal C\cap\mathcal W,\mathcal F)
+\]
+构成弱因子分解系统。“平凡”表示同时属于弱等价类。对象 $X$ 为纤维性的，是指 $X\to1$ 为纤维化；为上纤维性的，是指 $0\to X$ 为上纤维化。
+\end{definition}
+\begin{theorem}[Quillen 模型结构，基础定理]\label{thm:quillen}
+单纯集合范畴具有右适当的单纯模型结构，其中上纤维化为单射，纤维化为 Kan 纤维化，弱等价为几何实现后的弱同伦等价。平凡纤维化恰对全部边界包含 $\partial\Delta^n\hookrightarrow\Delta^n$ 具有右提升性质。全部对象均为上纤维性的。
+\end{theorem}
+\begin{remark}
+这里“右适当”表示沿纤维化拉回弱等价仍为弱等价。“单纯”表示映射单纯集、张量和余张量与模型结构相容。定理\ref{thm:quillen}是本讲义引用的模型存在定理，见\cite{Quillen,GoerssJardine}。下文使用的具体相容性质会逐项写出。
+\end{remark}
+\begin{definition}[单纯映射对象]
+对单纯集合 $K,X$，定义指数对象
+\[
+(X^K)_n=\Hom_{\sSet}(\Delta^n\times K,X).
+\]
+它满足自然伴随 $\Hom(L,X^K)\cong\Hom(L\times K,X)$。特别地，$\Map(K,X)=X^K$。
+\end{definition}
+\begin{proposition}[指数映射的提升性质]\label{prop:SM7}
+若 $i:K\hookrightarrow L$ 为单射，$p:X\to Y$ 为 Kan 纤维化，则
+\[
+X^L\longrightarrow X^K\times_{Y^K}Y^L
+\]
+为 Kan 纤维化。当 $i$ 或 $p$ 为弱等价时，该映射为平凡纤维化。
+\end{proposition}
+\begin{proof}
+这是定理\ref{thm:quillen}中单纯相容公理的指数形式。它与推出积形式通过指数伴随互相转换：一个对角提升问题转置为对
+\[
+(K\times\Delta^n)\cup_{K\times\Lambda_j^n}(L\times\Lambda_j^n)
+\longrightarrow L\times\Delta^n
+\]
+的提升问题。相容公理保证推出积属于所需的上纤维化类，故原指数映射属于相应的纤维化类。
+\end{proof}
+\begin{proposition}[Frobenius 性质]
+平凡上纤维化沿纤维化的拉回仍为平凡上纤维化。
+\end{proposition}
+\begin{proof}
+单射在任意拉回下保持，故拉回仍为上纤维化。右适当性保证其仍为弱等价。两者合起来即为平凡上纤维化。
+\end{proof}
+
+\section{绝对路径对象}
+\begin{proposition}[路径对象分解]
+若 $A$ 为 Kan 复形，则其对角映射分解为
+\[
+A\xrightarrow{r}A^{\Delta^1}
+\xrightarrow{(\ev_0,\ev_1)}A\times A,
+\]
+其中 $r$ 把点送到恒定路径，为平凡上纤维化；端点映射为 Kan 纤维化。
+\end{proposition}
+\begin{proof}
+对单射 $\partial\Delta^1\hookrightarrow\Delta^1$ 和纤维化 $A\to1$ 使用命题\ref{prop:SM7}，得到端点映射为纤维化。端点包含 $\{0\}\hookrightarrow\Delta^1$ 是角包含，故是平凡上纤维化；同一命题给出 $\ev_0:A^{\Delta^1}\to A$ 为平凡纤维化。由于 $\ev_0r=\id_A$，二取三给出 $r$ 为弱等价。又因 $r$ 有左逆，它是单射，所以是平凡上纤维化。
+\end{proof}
+\begin{definition}[路径纤维]
+给定 $x,y\in A_0$，路径空间 $\operatorname{Path}_A(x,y)$ 为端点映射在 $(x,y)$ 上的纤维。其点为路径，其边为固定端点的路径之间的同伦。
+\end{definition}
+\begin{proposition}[从恒定路径延拓]
+若 $p:E\to A^{\Delta^1}$ 为纤维化，且给定 $d:A\to E$ 满足 $pd=r$，则存在截面 $J(d):A^{\Delta^1}\to E$，使 $J(d)r=d$。
+\end{proposition}
+\begin{proof}
+对平凡上纤维化 $r$ 与纤维化 $p$ 使用左提升性质：
+\[
+\begin{tikzcd}
+A\ar[r,"d"]\ar[d,"r"']&E\ar[d,"p"]\\
+A^{\Delta^1}\ar[r,"\id"']\ar[ur,dashed,"J(d)"]&A^{\Delta^1}.
+\end{tikzcd}
+\]
+两个三角形分别表达计算规则和截面条件。
+\end{proof}
+\begin{proposition}[延拓空间的可缩性]
+在上一个提升问题中，所有满足边界条件的提升组成可缩 Kan 复形。
+\end{proposition}
+\begin{proof}
+命题\ref{prop:SM7}表明从映射对象到交换方块对象的映射
+\[
+\Map(A^{\Delta^1},E)\to
+\Map(A,E)\times_{\Map(A,A^{\Delta^1})}
+\Map(A^{\Delta^1},A^{\Delta^1})
+\]
+为平凡纤维化。固定方块 $(d,\id)$ 后，其纤维为平凡纤维化到点，因而是非空且弱等价于点的 Kan 复形；对 Kan 复形，这给出可缩性。该纤维恰记录全部提升及其高阶同伦。
+\end{proof}
+
+\section{任意语境中的路径对象}
+\begin{definition}[纤维内路径对象]
+给定 Kan 纤维化 $p:A\to\Gamma$，不要求 $\Gamma$ 为 Kan 复形，定义
+\[
+P_\Gamma(A)=A^{\Delta^1}\times_{\Gamma^{\Delta^1}}\Gamma,
+\]
+其中 $\Gamma\to\Gamma^{\Delta^1}$ 取恒定路径。它只允许 $A$ 中投影到 $\Gamma$ 后恒定的路径。
+\end{definition}
+\begin{proposition}[相对路径分解]\label{prop:relativepath}
+存在分解
+\[
+A\xrightarrow{r_\Gamma}P_\Gamma(A)
+\longrightarrow A\times_\Gamma A,
+\]
+左侧为平凡上纤维化，右侧为纤维化，并且构造在基变换下自然同构。
+\end{proposition}
+\begin{proof}
+对 $p:A\to\Gamma$ 及边界包含使用命题\ref{prop:SM7}，再沿常值底路径拉回，得到右侧纤维化。对端点包含使用该命题，得到 $\ev_0:P_\Gamma(A)\to A$ 为平凡纤维化。$r_\Gamma$ 是其截面且为单射，故由二取三为平凡上纤维化。
+
+沿 $u:\Delta\to\Gamma$ 拉回后，两边都表示“$A$ 的一条路径及其在 $\Gamma$ 上固定的值，并选择该值在 $\Delta$ 中的提升”。由拉回泛性质得到自然同构。这里只声称所用范畴构造的自然同构；严格代入的语法需要另行选择相容的表达方式。
+\end{proof}
+\begin{theorem}[带附加依赖的路径归纳，语义形式]
+设 $A\to\Gamma$ 为纤维化，并给定纤维化
+\[
+Q\xrightarrow\chi P\xrightarrow\rho P_\Gamma(A).
+\]
+令 $P_0=P\times_{P_\Gamma(A)}A$。则 $\chi$ 在 $P_0$ 上的任一部分截面可延拓为在 $P$ 上的截面，且固定部分截面的延拓空间可缩。
+\end{theorem}
+\begin{proof}
+由命题\ref{prop:relativepath}，$A\to P_\Gamma(A)$ 为平凡上纤维化。沿纤维化 $\rho$ 拉回，由 Frobenius 性质得到 $P_0\to P$ 仍为平凡上纤维化。用它对 $\chi$ 求提升，得到所需截面。映射对象的平凡纤维化性质给出提升空间可缩。
+\end{proof}
+\begin{remark}
+附加参数可以依赖路径本身，这由 $P\to P_\Gamma(A)$ 表示。该一般性使路径复合、依赖传输和高阶相容等式都能由同一个归纳原理构造。这是 Riehl 报告 Proposition 3.6 的语义内容\cite{RiehlICM}。
+\end{remark}

@@ -1,0 +1,166 @@
+\chapter{单纯集合与范畴的神经}
+\section{单纯范畴与生成映射}
+\begin{definition}[单纯范畴]
+记 $[n]=\{0<1<\cdots<n\}$。单纯范畴 $\Delta$ 的对象为 $[n]$，态射为保序映射。对 $0\le i\le n$，余面映射 $\delta^i:[n-1]\to[n]$ 跳过 $i$；对 $0\le i\le n$，余退化映射 $\sigma^i:[n+1]\to[n]$ 合并相邻的 $i,i+1$。
+\end{definition}
+\begin{lemma}[保序映射的分解]
+每个 $\alpha:[m]\to[n]$ 唯一分解为保序满射后接保序单射。
+\end{lemma}
+\begin{proof}
+将像按顺序写为 $a_0<\cdots<a_r$。单射 $\iota:[r]\to[n]$ 必须为 $j\mapsto a_j$；定义满射 $e:[m]\to[r]$ 为 $\alpha(k)=a_{e(k)}$。因为 $\alpha$ 保序，$e$ 保序。像集合与其中的顺序均由 $\alpha$ 确定，故分解唯一。
+\end{proof}
+\begin{proposition}
+所有 $\Delta$ 态射均可由余面与余退化映射复合得到。
+\end{proposition}
+\begin{proof}
+保序单射由逐个插入其像中缺少的元素获得，所以为余面复合。若一个满射不是双射，必有相邻两个点取相同值；先通过合并该相邻对的 $\sigma^i$ 因子化，降低定义域长度，再归纳。结合上一引理即得结论。
+\end{proof}
+
+\section{单纯集合及其面、退化}
+\begin{definition}[单纯集合]
+单纯集合为函子 $X:\Delta^\op\to\Set$。记 $X_n=X([n])$。其元素称为 $n$-单形。面映射 $d_i=X(\delta^i)$，退化映射 $s_i=X(\sigma^i)$。单纯映射为这些函子之间的自然变换。
+\end{definition}
+\begin{proposition}[单纯恒等式]
+面与退化映射满足
+\begin{align*}
+d_i d_j&=d_{j-1}d_i &&(i<j),\\
+s_i s_j&=s_{j+1}s_i &&(i\le j),\\
+d_i s_j&=
+\begin{cases}
+s_{j-1}d_i,&i<j,\\
+\id,&i=j\text{ 或 }i=j+1,\\
+s_jd_{i-1},&i>j+1.
+\end{cases}
+\end{align*}
+\end{proposition}
+\begin{proof}
+这些等式对偶于 $\Delta$ 中插入与合并坐标的等式。例如先删第 $j$ 个顶点，再删其前面的第 $i$ 个顶点，与先删第 $i$ 个顶点、再删原来第 $j$ 个顶点现在对应的第 $j-1$ 个顶点相同。余退化的验证同样逐点进行。混合式中，删除刚刚重复的两个顶点之一会恢复原序列，产生恒等映射；删除其他顶点则只改变退化位置的编号。
+\end{proof}
+\begin{example}[零维至二维数据]
+$X_0$ 为顶点集合。$a\in X_1$ 有始点 $d_1a$ 与终点 $d_0a$。若 $\sigma\in X_2$ 的顶点为 $x_0,x_1,x_2$，则 $d_2\sigma$ 为 $x_0\to x_1$，$d_0\sigma$ 为 $x_1\to x_2$，$d_1\sigma$ 为 $x_0\to x_2$。退化 $s_0x$ 表示顶点处的恒等边。
+\end{example}
+\begin{definition}[标准单形]
+标准 $n$-单形为可表预层
+\[
+\Delta^n=\Hom_\Delta(-,[n]).
+\]
+于是 $(\Delta^n)_m$ 是从 $[m]$ 到 $[n]$ 的所有保序映射。
+\end{definition}
+\begin{proposition}[单形的表示性质]
+对任意单纯集合 $X$，有自然双射
+\[
+\Hom_{\sSet}(\Delta^n,X)\cong X_n.
+\]
+\end{proposition}
+\begin{proof}
+这是预层范畴上的 Yoneda 引理。具体地，$\sigma\in X_n$ 对应的单纯映射把 $\alpha:[m]\to[n]$ 送到 $X(\alpha)(\sigma)$。逆方向是在 $\id_{[n]}$ 处评价。
+\end{proof}
+\begin{example}[有方向的组合区间]
+$\Delta^1$ 的非退化边只有 $0\to1$。若有交换两个端点的单纯自映射，由表示性质和 Yoneda 全忠实性，它对应一个保序自映射 $[1]\to[1]$ 交换 $0,1$，这是不可能的。故单纯区间没有反向对称性。
+\end{example}
+
+\section{边界、角与脊}
+\begin{definition}[边界与角]
+$\partial\Delta^n$ 是 $\Delta^n$ 中所有真面生成的单纯子集。第 $k$ 个角 $\Lambda_k^n$ 是除第 $k$ 个余维一面外，其余余维一面生成的子集。对 $0<k<n$ 称内角，其余称外角。
+\end{definition}
+\begin{example}[二维内角]
+$\Lambda_1^2$ 包含边 $0\to1$ 与 $1\to2$，不含边 $0\to2$ 及三角形内部。映射 $\Lambda_1^2\to X$ 指定两条可合成的边。延拓至 $\Delta^2$ 同时指定第三条边及一个二维比较单形。
+\[
+\begin{tikzcd}[column sep=large]
+&1\ar[dr,"g"]&\\
+0\ar[ur,"f"]\ar[rr,dashed,"h"']&&2
+\end{tikzcd}
+\]
+\end{example}
+\begin{definition}[脊]
+$\operatorname{Sp}^n\subset\Delta^n$ 为相邻边
+\[
+0\longrightarrow1\longrightarrow\cdots\longrightarrow n
+\]
+的并。特别地，$\operatorname{Sp}^2=\Lambda_1^2$。
+\end{definition}
+\begin{remark}
+角与边界不同。$\partial\Delta^2$ 已有三条边，延拓要求这三条边满足一个二维关系；内角只有两条边，延拓还允许选择第三条边。高阶范畴的复合对应后一种问题。
+\end{remark}
+
+\section{几何实现与奇异复形}
+\begin{definition}[拓扑标准单形]
+令
+\[
+|\Delta^n|=\{(t_0,\ldots,t_n)\in\R^{n+1}\mid t_i\ge0,\ \sum_i t_i=1\}.
+\]
+保序映射 $\alpha:[m]\to[n]$ 诱导仿射映射 $|\alpha|$，将第 $i$ 个顶点送到第 $\alpha(i)$ 个顶点。
+\end{definition}
+\begin{definition}[几何实现]
+单纯集合 $X$ 的几何实现为商空间
+\[
+|X|=\left(\coprod_{n\ge0}X_n\times|\Delta^n|\right)\big/\sim,
+\]
+其中对 $\alpha:[m]\to[n]$，识别
+\[
+(X(\alpha)(\sigma),t)\sim(\sigma,|\alpha|(t)).
+\]
+\end{definition}
+\begin{definition}[奇异单纯集合]
+拓扑空间 $Y$ 的奇异单纯集合 $\operatorname{Sing}Y$ 定义为
+\[
+(\operatorname{Sing}Y)_n=\Hom_{\Top}(|\Delta^n|,Y),
+\]
+其面、退化通过前复合相应仿射映射给出。
+\end{definition}
+\begin{theorem}[实现与奇异复形的伴随]
+存在自然双射
+\[
+\Hom_{\Top}(|X|,Y)\cong\Hom_{\sSet}(X,\operatorname{Sing}Y).
+\]
+\end{theorem}
+\begin{proof}
+一个 $|X|\to Y$ 的连续映射等价于对每个 $\sigma\in X_n$ 给出连续映射 $h_\sigma:|\Delta^n|\to Y$，并满足商关系要求的相容性
+\[
+h_{X(\alpha)(\sigma)}=h_\sigma\circ|\alpha|.
+\]
+这正是给每个 $n$ 指定函数 $X_n\to(\operatorname{Sing}Y)_n$，且这些函数构成自然变换。两种解释互逆，连续性由商拓扑的泛性质保证。
+\end{proof}
+\begin{proposition}[单形拼装]
+任意单纯集合 $X$ 是其所有单形图表的余极限：
+\[
+X\cong\colim_{(\Delta^n\to X)}\Delta^n.
+\]
+\end{proposition}
+\begin{proof}
+将定理\ref{thm:density}应用于小范畴 $\Delta$。元素范畴的对象为 $\sigma\in X_n$，由单形表示性质等同于映射 $\Delta^n\to X$，故得到上述表达式。
+\end{proof}
+
+\section{范畴的神经}
+\begin{definition}[神经]
+普通范畴 $C$ 的神经 $NC$ 为单纯集合
+\[
+(NC)_n=\Fun([n],C).
+\]
+一个 $n$-单形等价于可复合序列
+$x_0\xrightarrow{f_1}x_1\to\cdots\xrightarrow{f_n}x_n$。内部面复合相邻态射，首尾面删除首尾对象，退化插入恒等态射。
+\end{definition}
+\begin{proposition}[神经的全忠实性]
+函子 $C\to D$ 与单纯映射 $NC\to ND$ 一一对应。
+\end{proposition}
+\begin{proof}
+函子逐维作用得到单纯映射。反之，一个单纯映射在零维给出对象函数，在一维给出保持始终点的态射函数。它保持退化，故保持恒等；它把二维单形送到二维单形，故保持复合。因 $NC$ 中高维单形由连续的一维边唯一确定，所得函子恢复原单纯映射。
+\end{proof}
+\begin{proposition}[神经的内角填充]
+对任意范畴 $C$，$NC$ 的每个内角都有唯一填充。
+\end{proposition}
+\begin{proof}
+二维内角给出 $f:x\to y$、$g:y\to z$；第三条边必须为 $gf$，因此存在且唯一。对 $n\ge3$，角中包含所有相邻边。它们确定唯一函子 $[n]\to C$。需要检验其各个已给面与角一致。每个已给面中的长边由相邻边的复合确定；在三维，所需一致性是 $(h\circ g)\circ f=h\circ(g\circ f)$，即结合律。更高维的一致性由反复使用结合律得到，故唯一候选确实填充原角。
+\end{proof}
+\begin{theorem}[群胚的神经判据]
+$NC$ 满足所有角的填充条件，当且仅当 $C$ 为群胚。
+\end{theorem}
+\begin{proof}
+若所有角可填，对 $f:x\to y$，外角 $\Lambda_0^2$ 可指定 $x\xrightarrow f y$ 与 $x\xrightarrow{\id_x}x$，填充给出 $g:y\to x$ 使 $gf=\id_x$。另一外角给出右逆 $h:y\to x$。于是 $g=g(fh)=(gf)h=h$，故 $f$ 可逆。
+
+若 $C$ 为群胚，二维外角中缺失的边可用已知态射与逆唯一求出。对高维外角，所有相邻边除至多一条外都已知；缺失边同样由某个三角形关系及逆求出。随后相邻边决定整个单形，其他面的一致性由角中已有的关系与可逆消去保证。故每个角可填。
+\end{proof}
+\begin{example}
+$N[1]=\Delta^1$ 具有内角填充，但不具有所有外角填充；这反映 $0\to1$ 不可逆。群 $G$ 的单对象神经是 Kan 复形，而其几何实现通常具有非平凡基本群。
+\end{example}
+\source{关于单纯集合的组合与几何入门，可对照\cite{Friedman}；本章所需的表示公式与伴随已在正文证明。}

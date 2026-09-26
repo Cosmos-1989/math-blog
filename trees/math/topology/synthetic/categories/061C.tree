@@ -1,0 +1,24 @@
+\title{平方三角剖分给出自然性路径}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 16 章；[RiehlShulman](021D)，[Rezk](021C)，[RiehlICM](0211)}
+
+\p{设 #{F,G:C\to D} 为内部函子，#{\alpha:C\times\Delta^1\to D} 是两端为 #{F,G} 的自然变换，#{f:x\to_C y}。}
+
+\p{所需前置：[内部自然变换是有向形状同伦](061B)、[合成预范畴中选定复合的构造](0614)、[单形乘积的格路径三角剖分](0911)。}
+
+\p{对每个 #{f:x\to y}，有相容方形}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+F(x)\arrow[r,"F(f)"]\arrow[d,"\alpha_x"']&F(y)\arrow[d,"\alpha_y"]\\
+G(x)\arrow[r,"G(f)"']&G(y).
+\end{tikzcd}
+}}
+
+\p{因而在映射空间中有 #{G(f)\circ\alpha_x=\alpha_y\circ F(f)}。}
+
+\p{\strong{证明。}
+将 #{\alpha} 限制到 #{f\times\Delta^1}，得到 #{\Delta^1\times\Delta^1} 形图表。平方分成两个三角形，两种复合都与公共对角线比较，得到所述路径。其较高自然性由同一个参数化形状函数的更高单形给出。}

@@ -1,0 +1,19 @@
+\title{路径的分段复合}
+\date{2026-09-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 5 章；[Hatcher](0213)}
+
+\p{在空间 #{X} 中，设 #{p,q} 为[道路](00F5)，下式约定先走 #{p} 再走 #{q}，参数 #{t} 属于 #{I=[0,1]}。}
+
+\p{若 #{p:x\to y}、#{q:y\to z}，定义}
+
+##{(p*q)(t)=
+\begin{cases}
+p(2t),&t\le 1/2,\\
+q(2t-1),&t\ge 1/2.
+\end{cases}}
+
+\p{它是从 #{x} 到 #{z} 的路径。}
+
+\p{两段在 #{t=1/2} 同为 #{y}，由[有限闭覆盖的粘贴引理](0A9I)连续。}

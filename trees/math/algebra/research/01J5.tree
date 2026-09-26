@@ -3,10 +3,9 @@
 \taxon{Theorem}
 \author{author}
 \meta{source}{[Navarro，§3.1的 Clifford correspondence](016Z)}
-\meta{proof-status}{完整证明，使用已证明的完全可约性与同型分量。}
 
 \p{设 #{N\trianglelefteq G} 为有限群，#{\theta\in\operatorname{Irr}(N)}，令 #{T=G_\theta} 为[稳定子](0172)，称惯性子群。记 #{\operatorname{Irr}(G\mid\theta)} 为限制到 #{N} 后含 #{\theta} 的不可约特征标。则[诱导](01J4)给出双射}
 ##{\operatorname{Irr}(T\mid\theta)\longrightarrow
 \operatorname{Irr}(G\mid\theta),\qquad\psi\longmapsto\operatorname{Ind}_T^G\psi.}
-\p{证明：若 #{U} 不可约且属于左端，由[Clifford 限制公式](0174)及 #{T} 固定 #{\theta}，#{U|_N} 是 #{\theta} 的若干副本。在诱导空间 #{\bigoplus_{gT}g\otimes U} 中，各陪集块的 #{N} 类型为互异的 #{g\cdot\theta}。任一非零 #{G}-子表示 #{Y} 按[同型分量](01J1)分解，因而与某块的交非零。该交在该块的稳定群 #{gTg^{-1}} 下不变；块作为这个群的表示不可约，所以整个块包含于 #{Y}。用 #{G} 平移所有块，得到 #{Y=\operatorname{Ind}_T^G U}。}
+\p{\strong{证明。}若 #{U} 不可约且属于左端，由[Clifford 限制公式](0174)及 #{T} 固定 #{\theta}，#{U|_N} 是 #{\theta} 的若干副本。在诱导空间 #{\bigoplus_{gT}g\otimes U} 中，各陪集块的 #{N} 类型为互异的 #{g\cdot\theta}。任一非零 #{G}-子表示 #{Y} 按[同型分量](01J1)分解，因而与某块的交非零。该交在该块的稳定群 #{gTg^{-1}} 下不变；块作为这个群的表示不可约，所以整个块包含于 #{Y}。用 #{G} 平移所有块，得到 #{Y=\operatorname{Ind}_T^G U}。}
 \p{反向取 #{V\in\operatorname{Irr}(G\mid\theta)}，其 #{\theta} 同型分量 #{V_\theta} 在 #{T} 下不变。若 #{0\ne U\subseteq V_\theta} 是 #{T}-子表示，则各 #{gU} 位于互异同型分量，直和为非零 #{G}-子表示，必须等于 #{V}；取 #{\theta} 分量即得 #{U=V_\theta}。所以 #{V_\theta} 在 #{T} 下不可约，映射 #{g\otimes u\mapsto gu} 给出 #{\operatorname{Ind}_T^G V_\theta\cong V}。诱导再取 #{\theta} 分量恰恢复 #{U}，故两个构造互逆，次数公式为 #{\chi(1)=[G:T]\psi(1)}。}

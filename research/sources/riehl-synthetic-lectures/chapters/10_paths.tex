@@ -1,0 +1,244 @@
+\chapter{路径演算与依赖传输}
+\section{逆、复合与基本群胚律}
+\begin{proposition}[路径逆]
+对 $p:x=y$，可以构造 $p^{-1}:y=x$，并使 $(\refl_x)^{-1}\equiv\refl_x$。
+\end{proposition}
+\begin{proof}
+对 $p$ 作路径归纳。目标族为 $P(x,y,p)=(y=x)$。在 $y=x$、$p=\refl_x$ 时，取 $\refl_x$，归纳规则给出全部情形。
+\end{proof}
+\begin{proposition}[路径复合]
+给定 $p:x=y$、$q:y=z$，可构造 $p\cdot q:x=z$，满足 $p\cdot\refl_y\equiv p$。
+\end{proposition}
+\begin{proof}
+固定 $p$，对 $q$ 使用以 $y$ 为基点的路径归纳。目标为 $x=z$。在 $q=\refl_y$ 时目标为 $x=y$，使用已有的 $p$。由归纳得到复合及计算规则。
+\end{proof}
+\begin{proposition}[单位、逆与结合律]\label{prop:pathlaws}
+存在自然的高阶路径
+\begin{gather*}
+\refl_x\cdot p=p,
+\qquad p^{-1}\cdot p=\refl_y,
+\qquad p\cdot p^{-1}=\refl_x,\\
+(p^{-1})^{-1}=p,
+\qquad(p\cdot q)^{-1}=q^{-1}\cdot p^{-1},\\
+(p\cdot q)\cdot r=p\cdot(q\cdot r).
+\end{gather*}
+\end{proposition}
+\begin{proof}
+第一式对 $p$ 归纳，在自反情形由计算规则得到自反路径。逆的两条等式同样对 $p$ 归纳，因为自反路径的逆和复合均化简为自反路径。双重逆和复合逆分别对其中的路径逐次归纳。
+
+结合律可对最后一条路径 $r:z=w$ 归纳。在 $r=\refl_z$ 时，左侧化为 $p\cdot q$，右侧也化为 $p\cdot q$，故取自反路径。需要附加参数时，把 $p,q$ 保留在语境中，归纳规则仍然适用。
+\end{proof}
+\begin{lemma}[左右消去]
+若 $p\cdot q=p\cdot r$，则 $q=r$；若 $q\cdot p=r\cdot p$，则 $q=r$。
+\end{lemma}
+\begin{proof}
+在第一种情形，对给定高阶路径施加前复合 $p^{-1}$ 的函数作用，再用结合律、逆律和单位律，将两端分别化为 $q$、$r$。第二种情形后复合 $p^{-1}$。这里的化简通过命题\ref{prop:pathlaws}中的路径完成，并不要求所有单位律定义成立。
+\end{proof}
+\begin{remark}
+路径的等式自身仍是路径。以上命题给出二阶路径，比较这些等式需要三阶路径。路径归纳可在更高同一性类型中重复使用。
+\end{remark}
+
+\section{函数对路径的作用}
+\begin{definition}[路径作用]
+给定 $f:A\to B$，对 $p:x=y$ 定义
+\[
+\ap_f(p):f(x)=f(y)
+\]
+为路径归纳所得函数，规定 $\ap_f(\refl_x)\equiv\refl_{f(x)}$。
+\end{definition}
+\begin{proposition}[路径作用的函子律]
+有
+\begin{gather*}
+\ap_{\id}(p)=p,
+\qquad\ap_{g\circ f}(p)=\ap_g(\ap_f(p)),\\
+\ap_f(p\cdot q)=\ap_f(p)\cdot\ap_f(q),
+\qquad\ap_f(p^{-1})=\ap_f(p)^{-1}.
+\end{gather*}
+\end{proposition}
+\begin{proof}
+对每条待处理的路径归纳。第一、第二及第四式在 $p=\refl$ 处都是自反路径。第三式可先对 $q$ 归纳；在 $q=\refl$ 时两侧化简为 $\ap_f(p)$。由路径归纳与函数外延性，所得关系在全部参数中相容。
+\end{proof}
+\begin{proposition}[同伦的自然性方块]\label{prop:homotopy-naturality}
+若 $H:\prod_{x:A}(f(x)=g(x))$，则对 $p:x=y$，有
+\[
+\ap_f(p)\cdot H(y)=H(x)\cdot\ap_g(p).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳。在自反情形，左侧为 $\refl\cdot H(x)$，右侧为 $H(x)\cdot\refl$，通过单位律比较二者。归纳给出任意 $p$ 的方块。
+\end{proof}
+\begin{example}
+若 $f=g=\id_A$，则一个自同伦 $H$ 必须满足 $p\cdot H(y)=H(x)\cdot p$。在取基本群后，这说明这样的环路族受共轭相容性约束。它不等于对每个点任意挑选一个环路。
+\end{example}
+
+\section{依赖传输}
+\begin{definition}[传输]
+给定 $B:A\to\U$ 及 $p:x=y$，定义
+\[
+\tr_B(p):B(x)\to B(y)
+\]
+为路径归纳所得映射，规定 $\tr_B(\refl_x)\equiv\id_{B(x)}$。
+\end{definition}
+\begin{proposition}[传输的复合与逆]
+有
+\[
+\tr_B(p\cdot q)=\tr_B(q)\circ\tr_B(p),
+\qquad
+\tr_B(p^{-1})\circ\tr_B(p)=\id.
+\]
+另一侧的逆关系同样成立。
+\end{proposition}
+\begin{proof}
+复合公式对 $q$ 归纳，在自反情形逐点定义相等；函数外延性给出函数路径。逆关系由复合公式和 $p\cdot p^{-1}=\refl$ 得到，也可直接对 $p$ 归纳。因此沿任意路径的传输具有拟逆。
+\end{proof}
+\begin{definition}[依赖路径作用]
+对截面 $s:\prod_{x:A}B(x)$，路径归纳给出
+\[
+\apd_s(p):\tr_B(p)(s(x))=s(y).
+\]
+在 $p=\refl_x$ 时取自反路径。
+\end{definition}
+\begin{remark}
+$\apd_s(p)$ 的左侧必须先传输，因为 $s(x)$ 与 $s(y)$ 原先位于不同纤维。只有在常值族中，才能把它直接写成 $s(x)=s(y)$。
+\end{remark}
+\begin{proposition}[拉回族的传输]
+若 $f:A\to C$、$D:C\to\U$，则
+\[
+\tr_{D\circ f}(p)=\tr_D(\ap_f(p)).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳，自反情形两边都为恒等函数。函数外延性给出函数层面的等式。
+\end{proof}
+
+\section{路径族中的传输公式}
+\begin{proposition}[端点变化]
+固定 $a:A$。对于 $p:x=y$，有
+\[
+\tr_{z\mapsto(a=z)}(p)(q)=q\cdot p,
+\qquad q:a=x;
+\]
+以及
+\[
+\tr_{z\mapsto(z=a)}(p)(q)=p^{-1}\cdot q,
+\qquad q:x=a.
+\]
+\end{proposition}
+\begin{proof}
+第一式对 $p$ 归纳后，左边为 $q$，右边为 $q\cdot\refl\equiv q$。第二式在自反情形需要左单位律 $\refl\cdot q=q$。由路径归纳得结论。
+\end{proof}
+\begin{proposition}[同时变化两个端点]\label{prop:transport-equality}
+设 $f,g:A\to B$，$p:x=y$，$q:f(x)=g(x)$。则
+\[
+\tr_{z\mapsto(f(z)=g(z))}(p)(q)
+=\ap_f(p)^{-1}\cdot q\cdot\ap_g(p).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳。自反情形左侧为 $q$，右侧通过自反路径的逆、左右单位律化为 $q$。归纳给出一般公式。括号之间的差异用结合律识别。
+\end{proof}
+\begin{example}[环路族的共轭]
+对族 $B(z)=(z=z)$，沿 $p:x=y$ 的传输为
+\[
+\Omega_xA\to\Omega_yA,
+\qquad q\mapsto p^{-1}\cdot q\cdot p.
+\]
+这与第五章由拓扑方块得到的基点变化公式相符，只是此处使用了内部路径方向的统一约定。
+\end{example}
+\begin{proposition}[函数族中的传输]
+给定 $B,C:A\to\U$，对 $p:x=y$ 及 $u:B(x)\to C(x)$，有
+\[
+\tr_{z\mapsto(B(z)\to C(z))}(p)(u)
+=\tr_C(p)\circ u\circ\tr_B(p^{-1}).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳。自反情形，传输均为恒等，右側与 $u$ 逐点相同。函数外延性给出所需路径。归纳完成证明。
+\end{proof}
+
+\section{积与依赖和的同一性类型}
+\begin{theorem}[积中的路径]
+对 $(a,b),(a',b'):A\times B$，有自然等价
+\[
+((a,b)=(a',b'))\simeq(a=a')\times(b=b').
+\]
+\end{theorem}
+\begin{proof}
+正向施加两个投影的路径作用。逆向先对 $p:a=a'$ 归纳，再对 $q:b=b'$ 归纳，最终取 $(a,b)$ 的自反路径。正向再逆向的复合对原有序对路径归纳，逆向再正向的复合对 $p,q$ 归纳，两者都在自反情形计算为自反路径。
+\end{proof}
+\begin{theorem}[依赖和中的路径]\label{thm:sigma-path}
+设 $B:A\to\U$。对 $(a,b),(a',b'):\sum_xB(x)$，有等价
+\[
+((a,b)=(a',b'))
+\simeq\sum_{p:a=a'}(\tr_B(p)(b)=b').
+\]
+\end{theorem}
+\begin{proof}
+对左侧路径作归纳。在自反情形，定义其像为 $(\refl_a,\refl_b)$。这得到正向映射。
+
+逆向给定 $(p,q)$，先对 $p$ 归纳，使 $a'=a$、$p=\refl_a$，此时 $q:b=b'$。再对 $q$ 归纳，取有序对的自反路径。检查复合时，左侧只需对原路径归纳，右侧只需对 $p,q$ 逐次归纳；每种情形均化为自反构造。故两者互为拟逆，进而是等价。
+\end{proof}
+\begin{example}[同伦纤维中的路径]
+对 $f:A\to B$，同伦纤维中的点为 $(x,p)$，其中 $p:f(x)=b$。两点 $(x,p)$、$(x',p')$ 之间的路径等价于
+\[
+\sum_{q:x=x'}\bigl(\ap_f(q)^{-1}\cdot p=p'\bigr).
+\]
+等价地，可把第二个条件写为 $p=\ap_f(q)\cdot p'$。这个公式同时控制原像的变化和到目标点的比较路径。
+\end{example}
+\begin{proposition}[基点路径总空间可缩]\label{prop:based-contractible}
+固定 $a:A$，类型 $\sum_{x:A}(a=x)$ 可缩，其中心为 $(a,\refl_a)$。
+\end{proposition}
+\begin{proof}
+要对每个 $(x,p)$ 构造从中心出发的路径，使用依赖和路径公式。第一分量取 $p$。第二分量要求
+\[
+\tr_{z\mapsto(a=z)}(p)(\refl_a)=p.
+\]
+由端点传输公式，左边等于 $\refl_a\cdot p$，再用单位律即可。也可直接对 $p$ 作基点路径归纳。
+\end{proof}
+\begin{remark}
+这一可缩性不会导致 $a=a$ 可缩，因为投影到底 $A$ 的纤维与整个总空间不同。总空间允许终点 $x$ 随路径一起变化，而环路空间把终点固定为 $a$。
+\end{remark}
+
+\section{高阶相容与二维交换}
+\begin{definition}[二阶路径的复合]
+若 $p,q,r:x=y$，且 $\alpha:p=q$、$\beta:q=r$，它们在同一性类型 $x=y$ 中的复合称为竖直复合。对另一组路径 $p',q':y=z$，复合函数 $(-)\cdot(-)$ 对高阶路径的作用给出横向复合。
+\end{definition}
+\begin{proposition}[交换律]
+在边界匹配时，先横向复合再竖直复合，与先竖直复合再横向复合之间存在典范高阶路径。
+\end{proposition}
+\begin{proof}
+横向复合是路径复合函数对积路径的作用。函数对路径的作用保持复合，而积路径按分量复合，因此两种构造相等。更直接地，对参与的四个二阶路径依次使用路径归纳，最终所有比较都变为自反路径，所需高阶路径取自反即可。
+\end{proof}
+\begin{theorem}[Eckmann--Hilton 论证]
+对基点 $a:A$，二重环路类型
+\[
+\Omega^2(A,a)=(\refl_a=_{a=a}\refl_a)
+\]
+的复合在同伦意义下交换。因此其连通分支上的群运算为交换运算。
+\end{theorem}
+\begin{proof}
+二重环路同时有竖直复合 $\circ_v$ 与横向复合 $\circ_h$。两者的单位由自反二阶路径给出；横向复合的端点先通过路径单位律与 $\refl_a$ 识别。上一命题给出交换律。记公共单位为 $e$，则
+\begin{align*}
+\alpha\circ_h\beta
+&=(\alpha\circ_ve)\circ_h(e\circ_v\beta)\\
+&=(\alpha\circ_he)\circ_v(e\circ_h\beta)
+=\alpha\circ_v\beta.
+\end{align*}
+再将同一个表达式改写为
+\begin{align*}
+\alpha\circ_h\beta
+&=(e\circ_v\alpha)\circ_h(\beta\circ_ve)\\
+&=(e\circ_h\beta)\circ_v(\alpha\circ_he)
+=\beta\circ_v\alpha.
+\end{align*}
+每一步在类型内由单位、交换的高阶路径实现。取连通分支后这些路径成为等式，故运算交换。
+\end{proof}
+\begin{proposition}[结合子的五边形相容]
+由路径归纳选取的路径结合子可以配备五边形相容的高阶路径。
+\end{proposition}
+\begin{proof}
+对四条依次可复合路径 $p,q,r,s$，五种括号给出五个同端点路径；两种沿结合子比较最左与最右括号的方式形成一对二阶路径。对 $s,r,q,p$ 依次归纳。此时所有路径为自反，若每一步的结合子按命题\ref{prop:pathlaws}选取，则两条二阶路径都化为自反，取自反三阶路径。归纳返回一般情形。
+\end{proof}
+\begin{remark}
+高阶相容来自对具体边界问题反复使用归纳。它不表示任意给定边界都存在唯一填充，也不表示空间的高阶同伦群消失。
+\end{remark}

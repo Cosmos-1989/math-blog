@@ -4,7 +4,8 @@
 \author{author}
 \meta{source}{[Rietsch，Remark 2.10（指标重新计算）](01C3)}
 
-\p{取 #{c_k=1/k!}，生成函数为 #{e^x}，于是[Edrei 参数](01D5)为 #{\alpha_i=\beta_i=0,\gamma=1}。这是全正 Toeplitz 矩阵。其 #{(n+1)} 阶截断的[参数](01D6)为}
+\p{取 #{c_k=1/k!}，[复指数](0ACK)生成函数为 #{e^x}，于是[Edrei 参数](01D5)为 #{\alpha_i=\beta_i=0,\gamma=1}。这是全正 Toeplitz 矩阵，见 [Rietsch，Remark 2.10](01C3)。其 #{(n+1)} 阶截断的[参数](01D6)为}
 ##{d_i^{[n+1]}=\frac{(i-1)!}{(n+1-i)!}\quad(1\le i\le n+1),\qquad
 q_i^{[n+1]}=i(n+1-i).}
-\p{因此固定 #{i} 时 #{q_i^{[n+1]}\to\infty}，但 #{(q_i^{[n+1]})^{1/n}\to1}。全为零的 Schoenberg 参数不满足[根极限定理](01DC)中的严格正性假设，不能把 #{\alpha_{i+1}/\alpha_i} 当成可定义的零比零。}
+\p{\strong{证明。}由[连续子式公式](0AM1)，右上子式为 #{\Delta_i=\prod_{r=0}^{i-1}r!/(n+1-i+r)!}。相邻两个子式相除，公共阶乘约去，得所列 #{d_i}；再由 #{q_i=d_{i+1}/d_i} 得到 #{q_i=i(n+1-i)}。}
+\p{因此固定 #{i} 时 #{q_i^{[n+1]}\to\infty}，但 #{(q_i^{[n+1]})^{1/n}\to 1}。全为零的 Schoenberg 参数不满足[根极限定理](01DC)中的严格正性假设，此时比值 #{\alpha_{i+1}/\alpha_i} 的分母为零。}

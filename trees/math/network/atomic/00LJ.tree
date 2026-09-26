@@ -6,6 +6,6 @@
 \p{固定 #{0<c<1}，令 #{G_n\sim G(n,c/n)} 为[随机图](00LD)。其最大[连通分支](00LC)满足}
 ##{|C_{\max}|=O(\log n)\qquad\text{whp},}
 \p{其中[whp](00L8)的常数可依赖 #{c}。}
-\p{证明思路：逐个处理待探索顶点时，新邻居数可用独立 #{\operatorname{Bin}(n,c/n)} 变量支配，故分支大小由相应[分枝过程](00LH)的总个体数支配。其均值为固定的 #{c<1}，指数矩给出对 #{n} 一致的指数尾。若单个顶点满足 #{\mathbb P(|C(v)|\geq k)\leq Ae^{-\alpha k}}，则}
-##{\mathbb P(|C_{\max}|\geq k)\leq nAe^{-\alpha k}\longrightarrow0}
+\p{\strong{证明概要。}逐个处理待探索顶点时，新邻居数可用独立 #{\operatorname{Bin}(n,c/n)} 变量支配，故分支大小由相应[分枝过程](00LH)的总个体数支配。后代数 #{\xi_n} 的指数矩满足 #{\mathbb E e^{t\xi_n}\leq\exp(c(e^t-1))}。取充分小的 #{t>0} 使 #{c(e^t-1)<t}，用[Markov 不等式](0A02)控制探索队列，得到对 #{n} 一致的指数尾。若单个顶点满足 #{\mathbb P(|C(v)|\geq k)\leq Ae^{-\alpha k}}，则}
+##{\mathbb P(|C_{\max}|\geq k)\leq nAe^{-\alpha k}\longrightarrow 0}
 \p{只需取 #{k=K\log n} 且 #{K>1/\alpha}。详细随机图论证见 [Frieze–Karoński, 第 2.1 节](https://www.math.cmu.edu/~af1p/Teaching/RandomGraphs/Undergraduate/BOOK.pdf)。}

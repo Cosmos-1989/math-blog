@@ -1,0 +1,10 @@
+\title{有限偏序集的区间卷积代数}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Braden--Proudfoot，§3](01C1)}
+
+\p{设 #{P} 为有限[偏序集](00DE)，#{R} 为[交换含幺环](00CS)。取所有区间 #{x\leq y} 上的函数族 #{a_{xy}\in R}，逐项相加并定义卷积}
+##{(a*b)_{xz}=\sum_{x\leq y\leq z}a_{xy}b_{yz}.}
+\p{这给出区间代数。结合律两边都等于 #{\sum_{x\leq y\leq z\leq w}a_{xy}b_{yz}c_{zw}}，单位为 #{\delta_{xx}=1}、#{\delta_{xy}=0}（#{x<y}）。}
+\p{若 #{R=\mathbb Z[t,t^{-1}]}，且 #{r:P\to\mathbb Z} 严格保序，置 #{r_{xy}=r(y)-r(x)}。运算 #{\overline a_{xy}(t)=t^{r_{xy}}a_{xy}(t^{-1})} 满足 #{\overline{\overline a}=a} 及 #{\overline{a*b}=\overline a*\overline b}，后式由 #{r_{xy}+r_{yz}=r_{xz}} 得到。}

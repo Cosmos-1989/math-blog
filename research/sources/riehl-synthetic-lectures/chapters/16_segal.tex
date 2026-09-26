@@ -1,0 +1,222 @@
+\chapter{合成范畴与相容合成}
+\section{合成的延拓类型}
+\begin{definition}[二元合成数据]
+设 $f:x\to_Cy$、$g:y\to_Cz$。定义
+\[
+\Comp_C(f,g)=\Ext_{\Lambda_1^2\subseteq\Delta^2}(f,g).
+\]
+其元素可表示为 $(h,\sigma)$，其中 $h:x\to_Cz$，而 $\sigma$ 为以 $f,g,h$ 为边的三角形。
+\end{definition}
+\begin{definition}[内部二次 Segal 条件]
+称有向类型 $C$ 满足内部二次 Segal 条件，若限制
+\[
+C^{\Delta^2}\longrightarrow C^{\Lambda_1^2}
+\]
+是内部等价。等价地，在任意参数语境中，每个 $\Comp_C(f,g)$ 都可缩。
+\end{definition}
+\begin{remark}
+可缩性包含复合数据的存在、唯一到路径以及所有更高唯一性。只说“复合箭头存在”不充分；即使箭头 $h$ 在同伦类意义下唯一，选择三角形的空间仍可能不具有所需的高阶唯一性。
+\end{remark}
+\begin{definition}[合成预范畴]
+在本讲义的内部发展中，将满足全部参数化脊柱条件
+\[
+C^{\Delta^n}\longrightarrow C^{I[n]}
+\quad(n\ge2)
+\]
+的有向类型称为合成预范畴。映射必须是内部等价，因而在所有语境中稳定。下一定理把这个条件与报告采用的二次定义相联系。
+\end{definition}
+\begin{theorem}[内部形状比较，引用的基础定理]\label{thm:internal-segal}
+在 Riehl--Shulman 单纯类型论中，内部二次 Segal 条件等价于全部参数化脊柱条件。它还保证内部箭头类型的群胚性，以及用内角描述的相容合成延拓。
+\end{theorem}
+\begin{remark}
+这一定理是关于形状延拓的专门结果，证明利用平方的三角剖分、指数对象中的二次条件及其反复拉回；完整证明见\cite[第5节]{RiehlShulman}。这里将全部脊柱条件直接列入内部发展的假设，以便清楚使用较高单形。后一条件到二次条件只需 $I[2]=\Lambda_1^2$；反向不能由上一章的外部 $n=2$ 条件推出。定理的引用只负责这两个定义的比较，以下合成、可逆性、协变族和 Yoneda 的推导都明确列出其使用条件。
+\end{remark}
+
+\section{复合与单位律}
+\begin{definition}[选定的复合]
+在预范畴 $C$ 中，取可缩类型 $\Comp_C(f,g)$ 的中心，记为
+\[
+(g\circ f,\sigma_{f,g}).
+\]
+这个中心作为依赖函数随 $(f,g)$ 变化。不同中心选择之间有可缩的比较空间。
+\end{definition}
+\begin{proposition}[单位律]
+对 $f:x\to y$，有路径
+\[
+f\circ\id_x=f,
+\qquad \id_y\circ f=f.
+\]
+\end{proposition}
+\begin{proof}
+退化单形 $s_0f$ 和 $s_1f$ 分别给出以 $(\id_x,f)$ 与 $(f,\id_y)$ 为相邻边、以 $f$ 为长边的三角形。把这些三角形与对应合成类型的所选中心比较，投影到长边即得到单位路径。由于整个合成类型可缩，比较在所有参数中相容。
+\end{proof}
+\begin{proposition}[结合律]
+对 $f:x\to y$、$g:y\to z$、$h:z\to w$，有路径
+\[
+h\circ(g\circ f)=(h\circ g)\circ f.
+\]
+\end{proposition}
+\begin{proof}
+三条相邻边给出一个 $I[3]$ 形图表。脊柱条件为它提供一个 $\Delta^3$ 延拓，而且延拓类型可缩。记其边为 $u_{ij}$。面 $012$ 比较 $u_{02}$ 与 $g\circ f$，面 $123$ 比较 $u_{13}$ 与 $h\circ g$；面 $023$ 比较 $u_{03}$ 与 $h\circ u_{02}$，面 $013$ 比较 $u_{03}$ 与 $u_{13}\circ f$。将四个比较按方向拼接，得到两种括号方式之间的路径。
+
+具体地，先把 $h\circ(g\circ f)$ 沿 $u_{02}=g\circ f$ 的逆传输到 $h\circ u_{02}$，再到 $u_{03}$，继而到 $u_{13}\circ f$，最后到 $(h\circ g)\circ f$。各步都属于同一映射类型 $\Hom_C(x,w)$。
+\end{proof}
+\begin{example}[四面体中的比较]
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+x\ar[r,"f"]\ar[d,"u_{02}"']\ar[dr,"u_{03}" description]&y\ar[d,"u_{13}"]\\
+z\ar[r,"h"']&w
+\end{tikzcd}
+\]
+此平面图只显示四面体的若干边；未画出的边 $g:y\to z$ 与四个二维面共同给出上面的结合比较。交换方形的标签表示相容单形，而非严格等式。
+\end{example}
+
+\section{高阶相容与唯一性}
+\begin{proposition}[较高合成数据的可缩性]
+固定 $n$ 条可合成箭头后，包含全部长边、三角形和较高面的 $n$-单形延拓类型可缩。因此由同一条箭头链得到的任意两套完整合成数据之间有可缩的比较空间。
+\end{proposition}
+\begin{proof}
+这是 $C^{\Delta^n}\to C^{I[n]}$ 为等价的逐纤维形式。可缩类型中的路径类型可缩，故第一层比较、比较之间的比较等都具有同样的唯一性。
+\end{proof}
+\begin{remark}
+此命题的“固定”只固定脊柱上的原始箭头，不随意固定可能互不相容的所有低维面。正确的结论是由同一可缩延拓类型产生的比较相容。不能据此断言任意预先挑选的一组高阶同伦都一定能共同填入一个高阶单形。
+\end{remark}
+\begin{proposition}[同伦范畴]
+对预范畴 $C$，以其对象为对象，以映射空间的连通分支 $\pi_0\Hom_C(x,y)$ 为态射集合，可形成普通范畴 $hC$。
+\end{proposition}
+\begin{proof}
+箭头复合是类型中的函数，因此将路径相关的输入送到路径相关的输出，从而下降到连通分支。单位律和结合律在原映射空间中是路径，取连通分支后变成严格等式。故普通范畴公理成立。
+\end{proof}
+\begin{remark}
+$hC$ 一般遗忘大量信息。比如一个空间作为群胚型高阶范畴时，其同伦范畴只保留点与路径同伦类；二阶及更高同伦不能从这一普通范畴重新恢复。
+\end{remark}
+
+\section{函数自动给出函子}
+\begin{definition}[内部函子]
+预范畴 $C,D$ 之间的内部函子就是有向类型中的函数 $F:C\to D$。它对箭头的作用为形状函数的后复合：$f\mapsto F\circ f$。
+\end{definition}
+\begin{proposition}[保持恒等与合成]
+内部函数 $F:C\to D$ 满足
+\[
+F(\id_x)=\id_{F(x)},
+\qquad
+F(g\circ f)=F(g)\circ F(f),
+\]
+并保持由单形给出的全部较高相容。
+\end{proposition}
+\begin{proof}
+后复合保持常值形状函数，所以保持恒等。给定 $C$ 中表示复合的三角形，后复合 $F$ 得到 $D$ 中相同形状的三角形。它与 $D$ 中选定的复合中心处于同一可缩合成类型，故长边有比较路径。对 $n$-单形同样后复合，得到较高比较的相容。
+\end{proof}
+\begin{remark}
+“内部函数”包含在整个单纯语义中的相容性，不能替换成任意对象集合上的函数。一个只规定 $x\mapsto F(x)$ 的外部函数，通常没有箭头作用，更无从保证保持合成。
+\end{remark}
+\begin{definition}[自然变换]
+两个内部函子 $F,G:C\to D$ 之间的自然变换为形状函数
+\[
+\alpha:C\times\Delta^1\longrightarrow D,
+\]
+其两端限制分别为 $F,G$。对每个 $x$，限制到 $\{x\}\times\Delta^1$ 得到分量 $\alpha_x:F(x)\to G(x)$。
+\end{definition}
+\begin{proposition}[自然性方形]
+对每个 $f:x\to y$，有相容方形
+\[
+\begin{tikzcd}
+F(x)\ar[r,"F(f)"]\ar[d,"\alpha_x"']&F(y)\ar[d,"\alpha_y"]\\
+G(x)\ar[r,"G(f)"']&G(y).
+\end{tikzcd}
+\]
+因而在映射空间中有 $G(f)\circ\alpha_x=\alpha_y\circ F(f)$。
+\end{proposition}
+\begin{proof}
+将 $\alpha$ 限制到 $f\times\Delta^1$，得到 $\Delta^1\times\Delta^1$ 形图表。平方分成两个三角形，两种复合都与公共对角线比较，得到所述路径。其较高自然性由同一个参数化形状函数的更高单形给出。
+\end{proof}
+
+\section{可逆箭头}
+\begin{definition}[可逆性]
+对 $f:x\to_Cy$，定义
+\[
+\isIso(f)=\prod_{z:C}\isEquiv
+\bigl(f\circ-:\Hom_C(z,x)\to\Hom_C(z,y)\bigr).
+\]
+可逆箭头类型为
+\[
+x\cong_Cy=\sum_{f:\Hom_C(x,y)}\isIso(f).
+\]
+\end{definition}
+\begin{proposition}
+$\isIso(f)$ 是命题。若 $f$ 具有两侧逆箭头，则 $f$ 可逆。
+\end{proposition}
+\begin{proof}
+每个等价性类型是命题，依赖积仍是命题。若 $g:y\to x$ 满足 $gf=\id_x$、$fg=\id_y$，则后复合 $g$ 为后复合 $f$ 的拟逆，两个逆同伦由结合律和单位律给出。因而每个后复合函数为等价。
+\end{proof}
+\begin{proposition}[可逆性给出两侧逆]
+若 $\isIso(f)$，则存在 $g:y\to x$ 及路径 $fg=\id_y$、$gf=\id_x$。
+\end{proposition}
+\begin{proof}
+取 $z=y$，后复合 $f$ 的等价性使 $\id_y$ 有唯一到可缩选择的原像 $g$，并给出 $fg=\id_y$。取 $z=x$，该后复合等价检测路径。因为
+\[
+f\circ(g\circ f)=(f\circ g)\circ f
+=\id_y\circ f=f=f\circ\id_x,
+\]
+故消去后复合 $f$ 得到 $gf=\id_x$。
+\end{proof}
+\begin{remark}
+把可逆性定义为等价性的命题，避免将任意两侧逆同伦的数据错误地当成一个命题。上一章关于拟逆数据与等价性质的区别，在范畴的可逆箭头中同样重要。
+\end{remark}
+
+\section{Rezk 完备性}
+\begin{proposition}[路径给出可逆箭头]
+典范映射 $(x=y)\to\Hom_C(x,y)$ 的像可逆，因此提升为
+\[
+\idtoiso:(x=y)\to(x\cong_Cy).
+\]
+\end{proposition}
+\begin{proof}
+路径归纳只需证明恒等箭头可逆，而它的后复合函数由单位律等价于恒等函数。
+\end{proof}
+\begin{definition}[合成范畴]\label{def:rezk}
+合成预范畴 $C$ 若对所有 $x,y$ 满足
+\[
+\idtoiso:(x=y)\longrightarrow(x\cong_Cy)
+\]
+为等价，则称为合成范畴，也称 Rezk 类型。它表示一个 $(\infty,1)$-范畴：非可逆信息位于箭头层，箭头之间的较高比较属于同伦方向。
+\end{definition}
+\begin{example}
+一个偏序集的神经是完备的。因为可逆箭头要求同时有 $x\le y$ 与 $y\le x$，反对称性给出 $x=y$。其对象类型离散，故路径与可逆箭头完全一致。
+
+一个非平凡群视为单对象普通范畴，其离散神经不完备。对象的路径类型只有恒等，而该对象有多个可逆自箭头。
+\end{example}
+\begin{remark}
+后一例的完备模型将对象空间扩为 $BG$，以便自同构成为环路。这与前半部用单价性把结构自同构表示为宇宙环路是一致的。
+\end{remark}
+
+\section{群胚类型}
+\begin{definition}[群胚或有向离散类型]
+若有向类型 $A$ 中的典范比较
+\[
+(a=b)\longrightarrow\Hom_A(a,b)
+\]
+是等价，则称 $A$ 为群胚类型，或在有向方向上离散。
+\end{definition}
+\begin{proposition}
+对于合成范畴 $C$，群胚条件等价于所有箭头可逆。
+\end{proposition}
+\begin{proof}
+若路径到箭头为等价，每个箭头等价于一条路径产生的箭头，所以可逆。反向，所有箭头可逆意味着忘却映射 $(x\cong_Cy)\to\Hom_C(x,y)$ 的纤维为有元素的命题，因而可缩。它是等价，再与完备性等价复合即可。
+\end{proof}
+\begin{remark}
+“有向离散”不等于零截断。一个球面的同伦类型可以有高阶同伦群，同时在有向方向上是群胚。它的箭头都是路径，但路径之间仍有任意高阶的同伦。
+\end{remark}
+\begin{proposition}[函数空间的封闭性]
+若 $D$ 是预范畴，则 $D^X$ 也是预范畴；若 $D$ 还是完备的，则 $D^X$ 在相应内部函数类型语义中完备。
+\end{proposition}
+\begin{proof}
+指数交换给出
+\[
+(D^X)^{\Delta^n}\simeq(D^{\Delta^n})^X,
+\qquad
+(D^X)^{I[n]}\simeq(D^{I[n]})^X.
+\]
+函数空间保持等价，故脊柱条件成立。完备性方面，自然变换可逆当且仅当其各分量可逆；逆分量及相容性由逐点可缩的逆选择组成。$D$ 的完备性把这些分量变成路径，函数外延性把逐点路径组装成函数路径。因此函数路径与可逆自然变换等价。
+\end{proof}
+\source{本章到达 Riehl 报告中的预范畴、范畴与群胚定义。形状比较定理与内部函数类型的模型解释见\cite{RiehlShulman,Rezk,RiehlICM}。}

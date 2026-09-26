@@ -18,6 +18,10 @@ later visual revisions, so cached styles do not conceal updates.
 
 ## Design
 
+- The site name is 數林廣記; its author entry is 依然范德彪.
+- `shulin-mark.svg` is the shared header mark and favicon: a blue-green square
+  seal with two trees above an open-book contour. Its vector paths need no font
+  or remote image service. The adjacent traditional-Chinese wordmark uses Songti.
 - White reading surface, generous margins, blue links, quiet metadata.
 - Chinese serif headings and sans-serif text; Latin Inria Sans is self-hosted by
   the upstream theme. No external font or analytics requests are added.

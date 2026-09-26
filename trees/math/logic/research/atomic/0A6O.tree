@@ -1,0 +1,10 @@
+\title{遍历性的相关平均判据}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1–2.2](007J)}
+
+\p{设 #{T} 为概率空间 #{(X,\mu)} 的[保测自同构](00RS)。则 #{T} [遍历](00RW)，当且仅当对所有可测 #{A,B} 有}
+##{\frac 1N\sum_{j=0}^{N-1}\bigl(\mu(T^{-j}A\cap B)-\mu(A)\mu(B)\bigr)\longrightarrow 0.}
+\p{\strong{证明概要。}平均遍历定理断言，#{N^{-1}\sum_{j<N}U_T^j} 在每个 [L²](0A6A) 向量上收敛到 [Koopman 算子](00RZ)不变向量空间的正交投影。遍历时不变函数几乎处处为常数，故将此结论用于示性函数 #{1_A} 并与 #{1_B} 配对即可。平均遍历定理作为外部输入引用，见[Gerber–Kunde，§2.1](007J)。}
+\p{反之，若 #{A} 模零不变，取 #{B=A}，平均中的每项均为 #{\mu(A)-\mu(A)^2}；极限为零迫使 #{\mu(A)\in\{0,1\}}。此判据平均带符号的相关差。}

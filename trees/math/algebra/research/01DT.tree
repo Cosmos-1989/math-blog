@@ -4,7 +4,8 @@
 \author{author}
 \meta{source}{[Rietsch，Theorem 3.16 的组合部分（独立展开）](01C3)}
 
-\p{为证明[参数化定理](01DS)，设 #{M\in\operatorname{IM}_\infty}。递归关系首先使各行、列弱递增。对 #{N>i,K>j} 沿矩形递推到右边及上边，并利用边上单调性，得到}
+\p{设 #{M\in\operatorname{IM}_\infty} 是无限 [min-ideal 填充](01DN)。则 #{A_i=\sup_jM_{ij}}、#{B_j=\sup_iM_{ij}} 构成[弱交错参数](01DR)，且 #{M_{ij}=\min(A_i,B_j)}，给出[参数化定理](01DS)。}
+\p{\strong{证明。}递归关系首先使各行、列弱递增。对正整数 #{N>i,K>j} 沿矩形递推到右边及上边，并利用边上单调性，得到}
 ##{M_{ij}=\min(M_{N,j},M_{i,K}).}
 \p{令 #{N,K\to\infty}，可得 #{M_{ij}=\min(B_j,A_i)}，其中 #{A_i=\sup_KM_{iK}}，#{B_j=\sup_NM_{Nj}}。二者的总上确界同为 #{\sup_{i,j}M_{ij}}，且对角条目有限，所以属于 #{\Omega_\star}。}
 \p{反过来，若 #{(A,B)\in\Omega_\star}，#{M_{ij}=\min(A_i,B_j)} 满足递归。由共同上确界可得 #{\sup_jM_{ij}=A_i}、#{\sup_iM_{ij}=B_j}，故逆唯一。}

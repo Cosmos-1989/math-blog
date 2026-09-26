@@ -1,0 +1,29 @@
+\title{同伦嵌入的路径等价判据}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[同伦嵌入由命题纤维定义](090V)；[路径作用的纤维是纤维中的路径](090W)；[可缩类型的路径](0582)；[有元素命题可缩](0586)；[依赖和路径公式](054H)；[函数等价性](05Z3)。}
+
+\p{设 #{f:A\to B} 为类型间函数，#{\operatorname{ap}_f} 是路径作用；等价采用“每个同伦纤维可缩”的定义。}
+
+\p{函数 #{f:A\to B} 是嵌入，当且仅当对所有 #{x,y:A}，映射}
+
+##{\operatorname{ap}_f:(x=y)\longrightarrow(f(x)=f(y))}
+
+\p{都是等价。}
+
+\p{\strong{证明。}若 #{f} 是嵌入，#{\operatorname{fib}_f(f(y))} 是命题；该类型有 #{(y,\operatorname{refl})}，所以可缩。可缩类型中任意两点的同一性类型可缩。[路径作用的纤维公式](090W)因而说明 #{\operatorname{ap}_f} 的每个纤维可缩，故 #{\operatorname{ap}_f} 为等价。}
+
+\p{反过来，设所有 #{\operatorname{ap}_f} 都是等价。取纤维 #{\operatorname{fib}_f(b)} 中两点 #{(x,r)}、#{(y,s)}。路径 #{r\cdot s^{-1}:f(x)=f(y)} 有唯一到可缩选择的原像 #{p:x=y}，并满足}
+
+##{\operatorname{ap}_f(p)=r\cdot s^{-1}.}
+
+\p{于是}
+
+##{\operatorname{tr}^{z\mapsto(f(z)=b)}_p(r)
+ =(\operatorname{ap}_f p)^{-1}\cdot r
+ =(r\cdot s^{-1})^{-1}\cdot r=s.}
+
+\p{依赖和的路径公式给出 #{(x,r)=(y,s)}。任意两点相等，故该纤维是命题。}

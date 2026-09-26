@@ -1,0 +1,25 @@
+\title{分类图表中的路径是可逆交换方形}
+\date{2026-09-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 15 章；[RiehlShulman](021D)，[RiehlICM](0211)，[Rezk](021C)}
+
+\p{固定普通范畴 #{\mathcal C}，记其分类图表为 #{\mathsf R\mathcal C}；#{f:x\to y} 与 #{f':x'\to y'} 是态射，#{u,v} 为所示对象同构。}
+
+\p{所需前置：[普通范畴的分类图表](060H)、[自然变换](00I2)。}
+
+\p{\strong{例。}
+#{\mathsf{R}\mathcal C_0=N(\mathcal C^\simeq)}，所以对象之间的同构已成为对象空间中的路径。#{\mathsf{R}\mathcal C_1} 中，一个路径是两条态射间的可逆交换方形：}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+x\arrow[r,"f"]\arrow[d,"u"',"\cong"]&y\arrow[d,"v","\cong"']\\
+x'\arrow[r,"f'"']&y'.
+\end{tikzcd}
+}}
+
+\p{交换条件为 #{v\circ f=f'\circ u}。}
+
+\p{\strong{说明。}
+分类图表连同所需的 Reedy 纤维模型，是将普通范畴放入完备 Segal 空间的标准方式。它保留对象的同构信息，而离散神经只在箭头层记录这些同构。二者的区别由[Rezk 完备性](061H)精确表达。}

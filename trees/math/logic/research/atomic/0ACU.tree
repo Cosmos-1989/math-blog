@@ -1,0 +1,15 @@
+\title{动机指数函数的局部域专门化}
+\date{2026-09-26}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Cluckers–Loeser，§9.1.1–9.1.2](https://webusers.imj-prg.fr/~francois.loeser/aom_cl.pdf)}
+
+\p{固定数域 #{k}，即 #{\mathbb Q} 的有限扩张，令 #{\mathcal O} 为 #{\mathbb Z} 在 #{k} 中的[整闭包](0102)。考虑 [Denef–Pas 公式](00W2)，其赋值域系数取自 #{\mathcal O[ [t] ]}，剩余域系数取自 #{k}。在带相容 #{\mathcal O}-代数结构的非阿基米德局部域 #{K} 中，选择一致化元 #{\varpi_K}，用 #{t\mapsto\varpi_K} 解释系数；形式幂级数按收敛和解释。固定表达式只涉及有限多个剩余域系数，除去其分母所涉及的素数。}
+\p{记 #{\mathcal O_K}、#{\mathfrak m_K}、#{k_K} 为赋值环、极大理想及[剩余域](00SH)，#{q_K=|k_K|}。对[非指数构造函数](0ACQ)，专门化规定}
+##{\mathbb L\longmapsto q_K,\qquad [Y\to X]\longmapsto\bigl(x\longmapsto\#Y_{K,x}\bigr).}
+\p{整数值函数及其指数照同一公式解释。这里 #{Y_{K,x}} 只含有限多个剩余域坐标，因此是有限集。对 #{p=\operatorname{char}k_K}、#{q_K=p^f}，取有限域加法特征}
+##{\chi_K(u)=\exp\left(\frac{2\pi i}{p}\operatorname{Tr}(u)\right),\qquad\operatorname{Tr}(u)=u+u^p+\cdots+u^{p^{f-1}}\in\mathbb F_p.}
+\p{#{\mathbb F_p} 用整数模 #{p} 的类解释，[复指数](0ACK)使选择整数代表无关。取连续加法特征 #{\psi : K\to\mathbb C^\times}，满足 #{\psi(a)=\chi_K(\bar a)}（#{a\in\mathcal O_K}）；它平凡于 #{\mathfrak m_K}，在 #{\mathcal O_K} 上非平凡。}
+\p{对[带相位的类](0ACR)，专门化为}
+##{[Y\to X,\xi,g]_{K,\psi}(x)=\sum_{y\in Y_{K,x}}\chi_K(\xi_K(y))\psi(g_K(y)).}
+\p{通过加法、乘法及平衡关系延拓，得到复值函数 #{F_{K,\psi}}。固定定义数据后，充分大的剩余特征保证等价公式及等价形式表达式给出相同函数；这是所引§9.1.2的良定义性结果。特征的限制比任取一个导子为 #{\mathfrak m_K} 的特征更具体：其在赋值环上的剩余域特征已经固定。}

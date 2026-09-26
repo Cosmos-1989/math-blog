@@ -1,0 +1,19 @@
+\title{同伦是与复合相容的等价关系}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 5 章；[Hatcher](0213)}
+
+\p{固定空间 #{X,Y}，并用[映射同伦](00FO)比较连续映射 #{X\to Y}；[等价关系](00G2)指自反、对称、传递。}
+
+\p{同伦是连续映射集合上的等价关系，且与前复合、后复合相容。}
+
+\p{\strong{证明。}反身性由恒定于时间的映射给出。对称性用 #{H(x,1-t)}。若 #{H:f\simeq g}、#{K:g\simeq h}，定义}
+
+##{L(x,t)=
+\begin{cases}
+H(x,2t),&0\le t\le\frac 12,\\
+K(x,2t-1),&\frac 12\le t\le 1.
+\end{cases}}
+
+\p{两块在 #{t=1/2} 处均为 #{g(x)}，由[有限闭覆盖的粘贴引理](0A9I)连续。若另有 #{a:W\to X}、#{b:Y\to Z}，则 #{bH(a(-),t)} 给出 #{bfa\simeq bga}。固定子空间的情形同理。}

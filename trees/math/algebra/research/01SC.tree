@@ -4,8 +4,8 @@
 \author{author}
 \meta{source}{[Stacks：Tor](https://stacks.math.columbia.edu/tag/00LY)；显式计算}
 
-\p{设 #{n\ge1} 为整数，#{A} 为阿贝尔群，视为 #{\mathbb Z} 模。用自由[投射分解](012D) #{0\to\mathbb Z\xrightarrow{n}\mathbb Z\to\mathbb Z/n\mathbb Z\to0} 计算[Tor](01SA)，张量后仅有 #{A\xrightarrow{n}A}，因此}
+\p{设 #{n\ge 1} 为整数，#{A} 为[阿贝尔群](00G3)，视为 #{\mathbb Z} 模。用自由[投射分解](012D) #{0\to\mathbb Z\xrightarrow{n}\mathbb Z\to\mathbb Z/n\mathbb Z\to 0} 计算[Tor](01SA)，张量后仅有 #{A\xrightarrow{n}A}，因此}
 ##{\operatorname{Tor}^{\mathbb Z}_1(\mathbb Z/n\mathbb Z,A)=A[n]:=\{a\in A:na=0\},}
 ##{\operatorname{Tor}^{\mathbb Z}_0(\mathbb Z/n\mathbb Z,A)=A/nA,\qquad
-\operatorname{Tor}^{\mathbb Z}_i(\mathbb Z/n\mathbb Z,A)=0\quad(i\ge2).}
-\p{特别地取 #{A=\mathbb Z/m\mathbb Z}，核恰有 #{\gcd(n,m)} 个元素并为循环群，故一阶 Tor 同构于 #{\mathbb Z/\gcd(n,m)\mathbb Z}。这项计算只证明第一变量为循环整数商模的情形，不以此断言一般环的高阶 Tor 都消失。}
+\operatorname{Tor}^{\mathbb Z}_i(\mathbb Z/n\mathbb Z,A)=0\quad(i\ge 2).}
+\p{特别地取正整数 #{m\ge 1}、#{A=\mathbb Z/m\mathbb Z}。令 #{d=\gcd(n,m)}，写 #{n=dn'}、#{m=dm'}。因 #{n',m'} 互素，[Bézout 等式](0AF0)给出 #{m\mid na} 当且仅当 #{m'\mid a}。故核由 #{m'} 的剩余类生成，阶为 #{d}，从而一阶 Tor 同构于 #{\mathbb Z/d\mathbb Z}。高阶消失来自循环整数商模所具有的这条长度一自由分解。}

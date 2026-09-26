@@ -1,0 +1,19 @@
+\title{普遍元素的总空间初始对象判据}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 19 章；[RiehlContext](0212)，[RiehlVerity](021F)}
+
+\p{设 #{C} 为合成预范畴，#{F:C\to\mathsf{Type}} 协变，#{c:C}、#{u:F(c)}；#{\psi_{u,x}(f)=f_*u} 为普遍元素测试函数。}
+
+\p{所需前置：[协变族的普遍元素](0640)、[合成预范畴的初始对象](0632)、[协变依赖箭头的端点路径公式](0627)、[协变族的总空间继承预范畴性与完备性](062J)。}
+
+\p{设 #{F} 协变。#{(c,u)} 是 #{F} 的普遍元素，当且仅当它是总空间范畴 #{\widetilde F=\sum_xF(x)} 的初始对象。}
+
+\p{\strong{证明。}
+由依赖箭头端点公式，}
+
+##{\operatorname{Hom}_{\widetilde F}((c,u),(x,v))
+\simeq\sum_{f:\operatorname{Hom}_C(c,x)}(f_*u=v).}
+
+\p{右边恰为 #{\psi_{u,x}} 在 #{v} 处的同伦纤维。初始性要求对每个 #{(x,v)} 此类型可缩；等价的定义则要求对每个 #{x}，#{\psi_{u,x}} 的全部纤维可缩。两个条件逐项相同。}

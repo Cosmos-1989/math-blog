@@ -1,0 +1,362 @@
+\chapter{带结构空间与结构同态}
+\section{带基点空间的范畴}
+\begin{definition}[带基点空间范畴]
+普遍协变族的总空间
+\[
+\Sp_\bullet=\sum_{A:\Sp}A
+\]
+称为带基点空间范畴。对象为 $(A,a)$。由协变族总空间定理，它是合成范畴。
+\end{definition}
+\begin{theorem}[带基点映射的公式]\label{thm:pointed-maps}
+对 $(A,a),(B,b):\Sp_\bullet$，有等价
+\[
+\Hom_{\Sp_\bullet}((A,a),(B,b))
+\simeq\sum_{f:A\to B}(f(a)=b).
+\]
+\end{theorem}
+\begin{proof}
+总空间箭头先按底箭头 $\alpha:A\to_\Sp B$ 分解。依赖箭头端点公式把其纤维识别为 $\alpha_*a=b$。有向单价性将 $\alpha$ 替换为函数 $f:A\to B$，并将 $\alpha_*$ 识别为 $f$。因此得到所述依赖和。
+\end{proof}
+\begin{proposition}[带基点映射的复合]
+若 $(f,p):(A,a)\to(B,b)$、$(g,q):(B,b)\to(C,c)$，则复合对应
+\[
+(g\circ f,\ \ap_g(p)\cdot q).
+\]
+恒等对应 $(\id_A,\refl_a)$。
+\end{proposition}
+\begin{proof}
+底函数复合由空间范畴的合成给出。基点路径先从 $g(f(a))$ 沿 $\ap_g(p)$ 到 $g(b)$，再沿 $q$ 到 $c$，所以类型正确。总空间的复合比较与依赖提升的拼接相容，因而识别为该公式。恒等情形直接来自总空间恒等箭头。
+\end{proof}
+\begin{remark}
+$\sum_f(f(a)=b)$ 保留基点相容的具体路径。对一般空间，把它换成“存在某条基点路径”的命题截断会改变映射空间。因此高阶带基点映射不应只记成一个满足模糊保点条件的底层函数。
+\end{remark}
+
+\section{带基点空间作为余切片}
+\begin{proposition}
+带基点空间范畴等价于空间范畴中单位空间的余切片 $\one/\Sp$。
+\end{proposition}
+\begin{proof}
+一个函数 $\one\to A$ 等价于点 $a:A$，由在 $*$ 处求值给出。余切片映射公式为
+\[
+\sum_{f:A\to B}(f\circ a=b),
+\]
+其中 $a,b$ 被看成单位空间上的函数。函数外延性把第二分量等价地写成 $f(a(*))=b(*)$，与定理\ref{thm:pointed-maps}相同。对象和映射上的比较保持复合，因此得到范畴等价。
+\end{proof}
+\begin{example}
+单位带基点空间 $(\one,*)$ 既初始又终止。到 $(A,a)$ 的带基点映射类型为
+\[
+\sum_{x:A}(x=a),
+\]
+它可缩；从 $(A,a)$ 到 $(\one,*)$ 的函数和基点路径也都可缩。因此带基点空间范畴有零对象。
+\end{example}
+\begin{proposition}[带基点乘积]
+$(A\times B,(a,b))$ 是 $(A,a)$ 与 $(B,b)$ 的乘积。
+\end{proposition}
+\begin{proof}
+带基点映射 $X\to A\times B$ 的底函数等价于一对函数 $X\to A,X\to B$。乘积路径公式把基点比较分成两个分量比较，因此映射类型是两个带基点映射类型的乘积，满足普遍性质。
+\end{proof}
+
+\section{箭头范畴中的交换方形}
+\begin{definition}[箭头范畴]
+对合成范畴 $C$，定义 $\mathsf{Arr}(C)=C^{\Delta^1}$。它的对象为 $C$ 中的箭头，有源靶函子
+\[
+(s,t):\mathsf{Arr}(C)\to C\times C.
+\]
+\end{definition}
+\begin{lemma}[方形类型]\label{lem:arrow-square}
+对于 $\mu:X_0\to X_1$、$\nu:Y_0\to Y_1$，有等价
+\[
+\Hom_{\mathsf{Arr}(C)}(\mu,\nu)
+\simeq
+\sum_{u:X_0\to Y_0}\sum_{v:X_1\to Y_1}
+(v\circ\mu=\nu\circ u).
+\]
+\end{lemma}
+\begin{proof}
+箭头范畴中的箭头是一个平方。固定四条边后，沿对角线 $k:X_0\to Y_1$ 三角剖分，平方类型变成
+\[
+\sum_k\mathsf{Tri}(\mu,v;k)\times\mathsf{Tri}(u,\nu;k).
+\]
+由三角形纤维公式，右边等价于
+\[
+\sum_k(v\mu=k)\times(\nu u=k).
+\]
+消去第一个路径及 $k$，得到 $\nu u=v\mu$，再取逆得到所写方向。最后将四边中未固定的 $u,v$ 重新作依赖和，即得到完整映射类型。
+\end{proof}
+\begin{remark}
+方形的交换是映射空间中的路径。其所有更高路径继续保留在上述等价中，因而“交换方形”在这里具有完整的高阶含义。
+\end{remark}
+
+\section{合成范畴的拉回}
+\begin{proposition}[拉回的映射类型]
+给定合成范畴之间的函子 $A\to C\leftarrow B$，其同伦拉回范畴 $P$ 的对象可写成 $(a,b,e)$，其中 $e$ 是两像之间的等价。$P$ 中映射类型由 $A,B$ 中映射及它们在 $C$ 中相容的方形组成。
+\end{proposition}
+\begin{proof}
+在完备 Segal 空间模型中逐层取同伦拉回。Segal 映射中的有限同伦极限彼此交换，因此拉回仍满足 Segal 条件。完备性通过路径与可逆箭头的比较在同伦拉回下保持。对源靶映射取纤维，得到对应映射空间的同伦拉回，恰好记录两侧箭头及相容方形。
+\end{proof}
+\begin{remark}
+若其中一个源靶映射已是模型中的纤维化，则严格拉回计算所需同伦拉回。下面的结构范畴可以采用这种表示，因此对象公式简化为端点严格指定的箭头类型。不同表示由等价联系。
+\end{remark}
+
+\section{二元运算的范畴}
+\begin{definition}[乘法空间范畴]
+记 $F_2:\Sp\to\Sp$ 为平方函子 $A\mapsto A\times A$。定义范畴拉回
+\[
+\begin{tikzcd}
+\Magma\ar[r]\ar[d]&\mathsf{Arr}(\Sp)\ar[d,"{(s,t)}"]\\
+\Sp\ar[r,"{(F_2,\id)}"']&\Sp\times\Sp.
+\end{tikzcd}
+\]
+其对象可写为 $(A,\mu)$，其中 $\mu:A\times A\to A$。
+\end{definition}
+\begin{theorem}[二元运算同态]\label{thm:magma-hom}
+$\Magma$ 为合成范畴，且
+\[
+\Hom_{\Magma}((A,\mu),(B,\nu))
+\simeq
+\sum_{f:A\to B}\prod_{x,y:A}
+\bigl(f(\mu(x,y))=\nu(fx,fy)\bigr).
+\]
+\end{theorem}
+\begin{proof}
+它是合成范畴的同伦拉回，因此为合成范畴。取映射空间后，拉回条件要求箭头范畴中的方形，其左边为 $f\times f$，右边为 $f$：
+\[
+\begin{tikzcd}
+A\times A\ar[r,"\mu"]\ar[d,"f\times f"']&A\ar[d,"f"]\\
+B\times B\ar[r,"\nu"']&B.
+\end{tikzcd}
+\]
+由引理\ref{lem:arrow-square}，其相容类型为 $f\mu=\nu(f\times f)$。函数外延性把该函数等式等价地写成逐点的依赖积。因此得到所述公式。
+\end{proof}
+\begin{proposition}[同态的复合相容]
+若 $(f,p):(A,\mu)\to(B,\nu)$ 与 $(g,q):(B,\nu)\to(C,\omega)$ 为同态，则复合的相容在 $(x,y)$ 处为
+\[
+\ap_g(p_{x,y})\cdot q_{f(x),f(y)}.
+\]
+\end{proposition}
+\begin{proof}
+第一条路径从 $g(f(\mu(x,y)))$ 到 $g(\nu(fx,fy))$，第二条路径从后者到 $\omega(gfx,gfy)$。它们的连接给出复合函数的保乘法比较。方形拼接与此公式相同，故与范畴复合相容。
+\end{proof}
+\begin{remark}
+这里的对象公式虽然与普通宇宙中的 $\sum_A(A^2\to A)$ 相似，箭头的正确含义却来自箭头范畴的拉回。这个推导明确检验了输入变量与输出变量的变化，不能仅凭一个对象集合的表达式猜测其态射。
+\end{remark}
+
+\section{结构同态的一般形式}
+\begin{definition}[函子代数]
+给定函子 $F:\Sp\to\Sp$，定义
+\[
+\mathsf{Alg}(F)=
+\Sp\times_{\Sp\times\Sp}\mathsf{Arr}(\Sp),
+\]
+其中底部函子为 $(F,\id)$。对象为 $(A,\mu:FA\to A)$。
+\end{definition}
+\begin{theorem}[结构同态公式]
+有等价
+\[
+\Hom_{\mathsf{Alg}(F)}((A,\mu),(B,\nu))
+\simeq
+\sum_{f:A\to B}(f\circ\mu=\nu\circ Ff).
+\]
+\end{theorem}
+\begin{proof}
+与二元运算的证明相同：拉回把交换方形的两条竖边固定为 $Ff$ 与 $f$，箭头范畴的方形公式给出其唯一剩余的相容类型。全部等价均在映射空间层面成立。
+\end{proof}
+\begin{example}[有限运算符号]
+设 $J$ 为运算符号集合，$n_j$ 为符号 $j$ 的元数。多项式函子
+\[
+F(A)=\sum_{j:J}A^{\mathbf{n_j}}
+\]
+的代数结构等价于为每个 $j$ 给出一个 $n_j$ 元运算。函子作用把一个函数 $f:A\to B$ 后复合到每个输入元组。结构同态公式逐符号给出
+\[
+f(\mu_j(a_1,\ldots,a_{n_j}))
+=\nu_j(fa_1,\ldots,fa_{n_j}).
+\]
+零元符号对应一个指定常元。
+\end{example}
+\begin{remark}
+这一原理适用于已给出正确方差的函子 $F$。例如 $A\mapsto A\to A$ 不会由任意函数 $A\to B$ 自然产生一个前向函数，因此不能不加说明地把它当成协变函子。对混合方差结构，需要同时使用反范畴、箭头范畴或相应的模态构造。
+\end{remark}
+
+\section{全子范畴与代数公理}
+\begin{definition}[按对象性质取全子范畴]
+若 $C$ 是合成范畴，$Q$ 为其对象上的等价不变性质，定义全子范畴 $C_Q$：对象为满足 $Q$ 的对象，两个所选对象之间的映射类型与 $C$ 中相同。在完备 Segal 模型中，可在每个 $n$ 次取所有顶点都满足 $Q$ 的单形。
+\end{definition}
+\begin{proposition}
+$C_Q$ 是合成范畴，包含 $C_Q\to C$ 全忠实。
+\end{proposition}
+\begin{proof}
+$n$-单形的所有顶点满足 $Q$，当且仅当其脊柱的所有顶点满足 $Q$。因此原 Segal 等价限制为子范畴的 Segal 等价。对象间路径与可逆箭头的比较同样限制，因为 $Q$ 对对象等价稳定。固定两个已选择的对象后，所有端点性质见证属于命题，不增加映射条件，故映射类型保持不变。
+\end{proof}
+\begin{remark}
+本定义指定的是全子范畴的全部单形。不能对任意有向类型中的命题族 $Q$，仅写出一个没有分析其单纯方向的依赖和，就自动断言得到全子范畴。全性要求没有删去端点已合格的箭头，这一点由上述逐顶点构造明确保证。
+\end{remark}
+\begin{definition}[集合范畴]
+令 $\Sp_{\le0}$ 为承载空间是集合的对象所构成的全子范畴。其映射类型为普通函数的集合，故表示普通集合范畴的单价形式。
+\end{definition}
+\begin{definition}[幺半群范畴]
+在 $\Sp_{\le0}$ 中取多项式函子 $F(A)=\one+A\times A$ 的代数范畴，再取满足单位律与结合律的对象所构成的全子范畴，记为 $\Mon$。
+\end{definition}
+\begin{proposition}
+$\Mon$ 的对象是普通小幺半群，箭头是保单位与保乘法的函数。
+\end{proposition}
+\begin{proof}
+结构映射 $\one+A^2\to A$ 等价于单位元素与二元运算。集合上的单位律、结合律是命题，并在同构下保持。全子范畴保留原代数范畴的映射，其相容正是零元与二元运算的保持条件。
+\end{proof}
+
+\section{群同态中的逆运算}
+\begin{definition}[群范畴]
+在幺半群范畴中取每个元素可逆的对象所构成的全子范畴，得到 $\Grp$。在集合中，每个元素的逆一旦存在便唯一，所以“每个元素可逆”是性质。
+\end{definition}
+\begin{proposition}
+任何保单位、保乘法的函数 $f:G\to H$ 自动保持逆，即
+\[
+f(x^{-1})=f(x)^{-1}.
+\]
+\end{proposition}
+\begin{proof}
+由乘法和单位的保持，
+\[
+f(x^{-1})f(x)=f(x^{-1}x)=1,
+\qquad
+f(x)f(x^{-1})=f(xx^{-1})=1.
+\]
+因此 $f(x^{-1})$ 是 $f(x)$ 的两侧逆。群中逆唯一：若 $u,v$ 都是 $y$ 的逆，则 $u=u(yv)=(uy)v=v$。所以得到所述等式。
+\end{proof}
+\begin{remark}
+群可以被定义为带有显式逆运算的代数，也可以被定义为所有元素可逆的幺半群。由于逆在集合层唯一，这两种对象结构等价，所得同态也相同。对更高乘法空间，类似唯一性必须在恰当的同伦类型层面验证。
+\end{remark}
+
+\section{结构同一性与结构同态的比较}
+\begin{proposition}
+带基点空间和二元运算空间的结构同一性，分别由其结构同态中的可逆箭头给出。具体地，把定理\ref{thm:pointed-maps}与定理\ref{thm:magma-hom}中的底函数限制为等价，即得到前半部的结构同一性公式。
+\end{proposition}
+\begin{proof}
+若一个结构同态可逆，忘却后得到底函数的逆，因此底函数为等价。反向，若底函数等价且保持结构，把结构相容沿底函数的逆传输，得到逆函数的相容。比如二元运算情形，对 $b_1,b_2:B$ 取 $a_i=f^{-1}b_i$，由 $f\mu(a_1,a_2)=\nu(fa_1,fa_2)$ 及逆同伦得到逆函数保运算。两侧复合的相容由相同方形拼接给出。范畴完备性再把可逆结构箭头识别为对象路径。
+\end{proof}
+\begin{remark}
+普通单价性把结构同一性识别为结构等价；有向单价性把一般结构箭头识别为结构保持函数。后一原理保留非可逆映射，所以它能够组织整个范畴，而不仅是对象及其对称性的群胚。
+\end{remark}
+
+\section{自然性对统一构造的限制}
+\begin{theorem}[统一自映射必为恒等]\label{thm:polymorphic-id}
+设给定内部项
+\[
+\alpha:\prod_{A:\Sp}(A\to A).
+\]
+则 $\alpha_A(a)=a$ 对全部 $A,a$ 成立；这样的统一自映射构成可缩类型。
+\end{theorem}
+\begin{proof}
+对任意函数 $f:A\to B$，有向单价性把它看成 $\Sp$ 的箭头，自动自然性给出
+\[
+\alpha_B\circ f=f\circ\alpha_A.
+\]
+固定 $a:A$，取 $f:\one\to A$ 为常值 $a$。因为 $\alpha_\one(*)=*$，自然性在 $*$ 处求值给出
+\[
+\alpha_A(a)=f(\alpha_\one(*))=a.
+\]
+依赖函数外延性证明任一 $\alpha$ 等于恒等族。恒等族存在，因此整个类型可缩。
+\end{proof}
+\begin{remark}
+定理量化的是一个在有向宇宙内部统一定义的函数族。若在外部元语言中对每个集合随意选择一个自映射，这些选择未必自然，也未必构成上述依赖积的元素。因此结论不会排除具体集合上的非恒等自映射。
+\end{remark}
+
+\section{全部统一有限元运算}
+\begin{theorem}[统一运算的投影分类]\label{thm:uniform-projections}
+固定 $n\ge0$。有等价
+\[
+\left(\prod_{A:\Sp}(A^{\mathbf n}\to A)\right)
+\simeq\mathbf n.
+\]
+$i:\mathbf n$ 对应取第 $i$ 个坐标的投影。
+\end{theorem}
+\begin{proof}
+给定 $\alpha$，令
+\[
+i_\alpha=\alpha_{\mathbf n}(\id_{\mathbf n}).
+\]
+对任意元组 $x:\mathbf n\to A$，把 $x$ 本身看成空间间函数。自动自然性给出
+\[
+\alpha_A(x\circ\id_{\mathbf n})
+=x(\alpha_{\mathbf n}(\id_{\mathbf n})).
+\]
+左边就是 $\alpha_A(x)$，右边为 $x(i_\alpha)$。因此 $\alpha$ 是相应投影。反之，在标准元组 $\id_{\mathbf n}$ 上对第 $i$ 个投影求值，得到 $i$。两次函数外延性把逐点计算组装成两侧逆同伦。
+\end{proof}
+\begin{example}
+当 $n=1$ 时，只有恒等操作；当 $n=2$ 时，只有第一与第二投影。$n=0$ 时右边为空，说明不存在对每个空间统一选择一个点的内部操作。这也可直接把空间取为空类型看出。
+\end{example}
+\begin{remark}
+这是 Yoneda 原理的一个直接计算：$A\mapsto A^{\mathbf n}$ 是由有限空间 $\mathbf n$ 表示的函子，$A\mapsto A$ 由单位空间表示。统一运算完全由标准输入上的一个值决定。
+\end{remark}
+
+\section{自由幺半群的构造}
+\begin{definition}[有限字]
+对集合 $X$，定义有限字集合
+\[
+X^*=\sum_{n:\N}X^{\mathbf n}.
+\]
+元素 $(n,a)$ 表示长度为 $n$ 的字 $a_0a_1\cdots a_{n-1}$。空字为 $\epsilon$，长度为一的字记为 $[x]$。
+\end{definition}
+\begin{definition}[连接]
+对长度分别为 $m,n$ 的字 $u,v$，定义 $uv$ 为长度 $m+n$ 的字：前 $m$ 个位置取 $u$，后 $n$ 个位置取 $v$。其位置函数为
+\[
+(uv)_i=
+\begin{cases}
+u_i,&i<m,\\
+v_{i-m},&m\le i<m+n.
+\end{cases}
+\]
+
+\end{definition}
+\begin{proposition}
+$X^*$ 在连接下为幺半群，单位为空字。
+\end{proposition}
+\begin{proof}
+空字连接不增加任何坐标，故左右单位律逐位置成立。对长度 $\ell,m,n$ 的三个字 $u,v,w$，$(uv)w$ 与 $u(vw)$ 的长度经自然数结合律识别，且在三个区间
+\[
+0\le i<\ell,\quad
+\ell\le i<\ell+m,\quad
+\ell+m\le i<\ell+m+n
+\]
+分别取 $u_i,v_{i-\ell},w_{i-\ell-m}$。因此位置函数相等，函数外延性与依赖和路径公式给出字的相等。这证明结合律。
+\end{proof}
+\begin{definition}[折叠映射]
+设 $M$ 为幺半群，$f:X\to M$。定义
+\[
+\widehat f:X^*\to M,
+\qquad
+\widehat f(\epsilon)=1,
+\qquad
+\widehat f([x]w)=f(x)\,\widehat f(w).
+\]
+它可按字长作自然数递归构造：非空字唯一分解成首字母与其余尾字。
+\end{definition}
+\begin{proposition}
+$\widehat f$ 是幺半群同态，且 $\widehat f([x])=f(x)$。
+\end{proposition}
+\begin{proof}
+单位保持由定义。用第一个字 $u$ 的长度归纳证明
+$\widehat f(uv)=\widehat f(u)\widehat f(v)$。$u=\epsilon$ 时化为单位律。若 $u=[x]u'$，则
+\begin{align*}
+\widehat f(uv)
+&=\widehat f([x](u'v))\\
+&=f(x)\widehat f(u'v)\\
+&=f(x)(\widehat f(u')\widehat f(v))\\
+&=(f(x)\widehat f(u'))\widehat f(v)\\
+&=\widehat f(u)\widehat f(v).
+\end{align*}
+单字母公式由右单位律给出。
+\end{proof}
+\begin{theorem}[自由幺半群的普遍性质]
+限制到单字母给出自然双射
+\[
+\Hom_{\Mon}(X^*,M)\cong\Hom_{\Set}(X,U(M)).
+\]
+\end{theorem}
+\begin{proof}
+逆方向为 $f\mapsto\widehat f$。若 $h:X^*\to M$ 保单位和连接，则 $h(\epsilon)=1$，并有
+$h([x]w)=h([x])h(w)$。按字长归纳，$h$ 被它在单字母上的值唯一确定，所以 $h=\widehat{(h|_X)}$。另一侧逆已经由单字母公式证明。两个方向均由复合、求值和递归构造，因此对 $X$ 与 $M$ 自然。
+\end{proof}
+\begin{remark}
+将普通集合与幺半群放入各自单价范畴后，上述双射就是映射类型的等价，给出自由幺半群函子与遗忘函子的伴随。这个例子把本科代数中的自由对象、普通 Yoneda、合成可表性与结构同态联系在一起。
+\end{remark}
+\source{带基点空间、二元运算范畴及结构同态原理对应\cite[第7.2节]{RiehlICM}。统一操作的自然性后果见\cite[第7节]{GratzerWeinbergerBuchholtz}。本章通过箭头范畴与拉回明确计算结构映射，而不只从对象公式推测其含义。}

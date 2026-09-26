@@ -4,8 +4,9 @@
 \author{author}
 \meta{source}{[Gerber–Kunde，§3.6](007J)}
 
-\p{在[自然数序列树空间](00WL)中，#{\mathrm{IF}} 是[完全解析集](00QL)。解析性由投影表示 #{T\in\mathrm{IF}\iff\exists b\in\mathbb N^{\mathbb N}\ \forall n\ (b|_n\in T)} 给出，括号内是闭条件。}
+\p{在[自然数序列树空间](0ACI)中，#{\mathrm{IF}} 是[完全解析集](00QL)。解析性由投影表示 #{T\in\mathrm{IF}\iff\exists b\in\mathbb N^{\mathbb N}\ \forall n\ (b|_n\in T)} 给出，括号内是闭条件。完全解析性定理见 [Gerber–Kunde，§3.6](007J)。}
 
 \p{完全性指每个标准 Borel 空间中的解析集，都能通过 Borel 映射归约到 #{\mathrm{IF}}；在 Baire 空间的标准呈现中也有连续归约；它不是等价关系的双变量归约。}
 
-\p{限制到具有任意长有限节点的子空间 #{\mathcal T_\infty} 时，完全解析性仍成立。可给任意树另添彼此分离、长度无界而各自有限的枝：该连续增广保证有限高度无界，却不增添无穷分支。因此限制没有降低此集合归约的复杂度。}
+\p{限制到[具有任意长节点的子空间](0ACJ) #{\mathcal T_\infty} 时，完全解析性仍成立。具体地，把输入树 #{T} 放到首项为零的子树中，即加入全部 #{(0)^\frown s}（#{s\in T}）；再加入所有形如 #{(1,n,0,\ldots,0)}、总长度至多 #{n+2} 的节点，并补齐这些节点的初段。得到的树记为 #{\widehat T}。}
+\p{每个输出坐标只依赖一个输入坐标或为固定值，所以 #{T\mapsto\widehat T} 连续。新加入的首项为一的部分有任意长节点，却没有无穷分支；首项为零的部分有无穷分支当且仅当 #{T} 有。因此 #{\widehat T\in\mathcal T_\infty} 且 #{T\in\mathrm{IF}\iff\widehat T\in\mathrm{IF}}，给出所需归约。}

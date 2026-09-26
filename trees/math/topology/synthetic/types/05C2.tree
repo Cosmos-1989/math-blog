@@ -1,0 +1,30 @@
+\title{宇宙的普遍解码族}
+\date{2026-09-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 12 章；[引用](0217)；[引用](0218)；[引用](0211)}
+
+\p{设 #{\Gamma} 是类型。同伦拉回在此由带比较路径的依赖和表示；它与所述总空间的等价由路径归纳构造。}
+
+\p{前置：[类型宇宙与解码](05C0)、[依赖和的引入、投影与消去规则](0507)、[同一性类型及路径归纳](050G)。}
+
+\p{解码族的总空间为}
+
+##{\widetilde{\mathcal U}=\sum_{A:\mathcal U}A,
+\qquad \pi:\widetilde{\mathcal U}\to\mathcal U.}
+
+\p{给定 #{B:\Gamma\to\mathcal U}，其拉回的元素为 #{(\gamma,A,a,p)}，其中 #{p:B(\gamma)=A}。消去 #{p} 后得到 #{\sum_{\gamma:\Gamma}B(\gamma)}。于是有同伦拉回图}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\sum_{\gamma:\Gamma}B(\gamma)\ar[r]\ar[d]&\widetilde{\mathcal U}\ar[d,"\pi"]\\
+\Gamma\ar[r,"B"']&\mathcal U.
+\end{tikzcd}
+}}
+
+\p{宇宙把依赖类型写成一个普通的分类映射。}
+
+\p{图中上边为 #{j(\gamma,b)=(B(\gamma),b)}，左边为第一投影 #{\pi_1}，交换等式为 #{\pi\circ j=B\circ\pi_1}。同伦拉回的额外比较路径通过路径归纳消去，给出所述总空间等价。}
+
+\p{\strong{注记。}在集合论中可以将一些集合的代码组成集合，但这还没有给出同伦论所需的宇宙：还要确定代码之间的路径。单价性规定的正是这部分同一性结构。带结构纤维化的严格分类与代入相容性由[严格宇宙模型定理](080D)给出。}

@@ -5,6 +5,7 @@
 \meta{source}{[Gerber–Kunde，§2.1、4.4.3](007J)}
 
 \p{设 #{T} 为概率空间的[保测自同构](00RS)，#{\mathcal P} 为[有限可测分割](00S1)。系统相对于分割的熵为}
-##{h_\mu(T,\mathcal P)=\lim_{n\to\infty}\frac1nH_\mu\left(\bigvee_{j=0}^{n-1}T^{-j}\mathcal P\right),\qquad
+##{h_\mu(T,\mathcal P)=\lim_{n\to\infty}\frac 1nH_\mu\left(\bigvee_{j=0}^{n-1}T^{-j}\mathcal P\right),\qquad
 h_\mu(T)=\sup_{\mathcal P\text{ 有限}}h_\mu(T,\mathcal P).}
-\p{极限由块熵的次可加性存在，可能的系统熵为 #{[0,\infty]}。Kolmogorov–Sinai 生成分割定理说：若 #{\mathcal P} 及其全部整数次迭代生成整个 σ-代数模零，则 #{h_\mu(T)=h_\mu(T,\mathcal P)}；可数分割时还须 #{H_\mu(\mathcal P)<\infty}。熵是测度共轭不变量，但不是任意系统的完整不变量。}
+\p{记块熵为 #{a_n}。[分割熵的次可加性](0A7B)给出 #{H(\mathcal P\vee\mathcal Q)\leq H(\mathcal P)+H(\mathcal Q)}，保测性遂给 #{a_{m+n}\leq a_m+a_n}。固定 #{k} 并写 #{n=qk+r}（#{0\leq r<k}），得 #{a_n\leq qa_k+a_r}，故 #{\limsup_n a_n/n\leq a_k/k}；对 #{k} 取下确界，即得极限 #{\inf_k a_k/k} 存在。系统熵可为 #{\infty}。}
+\p{[生成分割定理](0A6J)给出用一份生成分割计算系统熵的条件。熵是[测度共轭](00RT)不变量：共轭按相同测度搬运分割及全部迭代分割，因此保持每项块熵和上确界。}

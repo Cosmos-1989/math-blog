@@ -1,0 +1,13 @@
+\title{内部自然变换的可逆性逐分量检测}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第16章；[Riehl–Shulman](021D)，命题10.3与推论10.4}
+
+\p{设 #{D} 为合成预范畴、#{X} 为有向类型、#{F,G:X\to D} 为内部函数。由[函数类型的 Segal 封闭性](0A9J)，#{D^X} 是预范畴。对箭头 #{\alpha:F\to_{D^X}G}，求值给出等价}
+##{\mathsf{isIso}(\alpha)\simeq\prod_{x:X}\mathsf{isIso}(\alpha_x),
+\qquad (F\cong_{D^X}G)\simeq\prod_{x:X}(F(x)\cong_DG(x)).}
+\p{这里 #{\alpha_x(t)=\alpha(t)(x)}；[指数伴随](060B)把 #{\operatorname{Hom}_{D^X}(F,G)} 识别为 #{\prod_x\operatorname{Hom}_D(F(x),G(x))}，端点条件在这个识别下逐点保持。}
+\p{\strong{证明。}求值是内部函数，因而[保持恒等与复合](061A)，把可逆箭头送到可逆箭头。反之，给定内部项 #{u:\prod_x\mathsf{isIso}(\alpha_x)}，对每个 #{x} 用[可逆性提取两侧逆](061F)，得到 #{\beta_x:G(x)\to F(x)} 及两条逆路径。这个提取是由等价的可缩纤维给出的依赖函数，所以 #{\beta(t)(x)=\beta_x(t)} 是内部箭头 #{G\to F}。}
+\p{求值保持复合，因此 #{(\beta\circ\alpha)_x=\beta_x\circ\alpha_x=\operatorname{id}_{F(x)}}，同样 #{(\alpha\circ\beta)_x=\operatorname{id}_{G(x)}}。[函数外延性](050K)及箭头类型的指数识别将这些路径组装为两侧逆路径；由[两侧逆判据](061E)，#{\alpha} 可逆。两边的[可逆性均为命题](0A9H)，右边的命题性由[依赖积封闭性](0587)给出，因此这两个方向构成等价。}
+\p{最后，把逐分量可逆箭头写为箭头与可逆性证明的[依赖和](0507)，将分量箭头组装为 #{\alpha}，再应用第一式，就得到第二式。}

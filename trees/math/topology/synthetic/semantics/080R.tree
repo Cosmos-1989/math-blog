@@ -1,0 +1,14 @@
+\title{对所有参数自然的族比较给出分类对象等价}
+\date{2026-09-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[从同伦类型到合成高阶范畴](0210)，第22章}
+
+\p{设高阶范畴 #{C} 中的对象 #{X,Y} 分类两种参数化族，#{\operatorname{Map}_C(\Gamma,X)} 与 #{\operatorname{Map}_C(\Gamma,Y)} 为对应的可表空间值函子。合成预范畴中的对应对象为[同态类型](060D)。假设对\em{每个}测试对象 #{\Gamma\in C}，两种族之间有关于 #{\Gamma} 的自然等价。}
+\p{若两种参数化族分别由 #{X} 与 #{Y} 分类，并且上述比较在任意 #{\Gamma} 中自然成立，则得到分类对象间的等价 #{X\simeq Y}。}
+\subtree{\taxon{Proof}
+\p{分类性质将比较写成对每个 #{\Gamma} 的自然等价}
+##{\operatorname{Map}(\Gamma,X)\simeq\operatorname{Map}(\Gamma,Y).}
+\p{取 #{\Gamma=X}，恒等映射给出 #{f:X\to Y}；取 #{\Gamma=Y}，逆自然等价在恒等处给出 #{g:Y\to X}。自然性与两侧逆比较分别给出 #{gf\simeq\operatorname{id}_X}、#{fg\simeq\operatorname{id}_Y}。因此 #{f} 为等价。这是可表函子的 [Yoneda 检测原理](0648)。}
+}
+\p{该假设涉及全部测试对象及其映射空间，包含路径与高阶参数。点集的双射允许两端具有不同的路径结构，因而弱于所需的自然等价。}

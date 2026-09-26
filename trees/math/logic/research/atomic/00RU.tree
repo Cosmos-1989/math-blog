@@ -4,8 +4,12 @@
 \author{author}
 \meta{source}{[Gerber–Kunde，§2.1](007J)}
 
-\p{在[标准无原子概率空间](00Q8) #{(X,\mu)} 上，给[保测自同构群](00RS)赋弱拓扑，使收敛条件为}
+\p{设 #{(X,\mathcal A,\mu)} 为[标准概率空间](00Q8)，且 #{\mu} [无原子](00Q7)。则[保测自同构群](00RS) #{G=\operatorname{Aut}(X,\mu)} 配备[弱拓扑](0A83)后是 [Polish 空间](00QC)，并且复合与取逆连续，即它是 Polish 拓扑群。该拓扑的收敛条件为}
 ##{T_n\longrightarrow T\quad\Longleftrightarrow\quad
-\forall A\in\mathcal A\ \mu(T_nA\triangle TA)\longrightarrow0.}
-\p{因为像在模零意义下定义，上式不依赖代表。取一族在距离 #{\mu(A\triangle B)} 下稠密的可数可测集 #{A_k}，可用对 #{T A_k} 与 #{T^{-1}A_k} 的加权对称差构造相容完备度量。此拓扑使群成为 [Polish 空间](00QC)，复合与取逆连续。}
-\p{“弱”不指逐点收敛，也不指在每个点上有连续动力学。这一拓扑把分类问题放进描述集合论可研究的参数空间。}
+\forall A\in\mathcal A\ \ \mu(T_nA\triangle TA)\longrightarrow 0.}
+\p{\strong{证明。}在测度代数中固定可数稠密列 #{(a_k)}，使用弱拓扑的相容度量}
+##{D(S,T)=\sum_{k=1}^{\infty}2^{-k}
+\bigl(\delta(Sa_k,Ta_k)+\delta(S^{-1}a_k,T^{-1}a_k)\bigr),
+\qquad \delta([A],[B])=\mu(A\triangle B).}
+\p{[双向弱度量完备性](0A84)证明每个 #{D}-Cauchy 序列都收敛到实际的模零保测自同构；[可分性定理](0A85)通过正逆求值坐标的可数基给出可数稠密子集。因此 #{D} 是相容的完备可分度量，按定义 #{G} 为 Polish 空间。[群运算连续性](0A86)给出复合与取逆在同一弱拓扑下连续。}
+\p{这里比较的是可测集像在对称差测度中的距离；变换及集合像均在模零意义下解释。这与逐点收敛不同，也不要求变换在空间的某个给定拓扑下连续。}

@@ -1,0 +1,27 @@
+\title{整数编码族沿环路的传输}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[圆周上的整数编码族](0909)；[环路整数幂的加法与反演公式](0905)；[传输的复合与逆](0549)；[拉回族传输](054B)；[单价性计算规则](05C7)。}
+
+\p{令 #{\mathsf{Code}:S^1\to\mathcal U} 为纤维 #{\mathsf{Code}(b)=\mathbb Z}、生成环路对应后继等价的整数编码族；#{\operatorname{tr}} 表示该族的传输。}
+
+\p{对于 #{n:\mathbb Z}，有}
+
+##{\operatorname{tr}^{\mathsf{Code}}_\ell(n)=n+1,
+ \qquad
+ \operatorname{tr}^{\mathsf{Code}}_{\ell^{-1}}(n)=n-1.}
+
+\p{更一般地，#{\operatorname{tr}^{\mathsf{Code}}_{\ell^m}(n)=n+m}。}
+
+\p{\strong{证明。}族中的传输等于沿分类映射所给宇宙路径的传输。第一式因而由 #{\operatorname{idtoequiv}(\operatorname{ua}(\mathsf{succ}))=\mathsf{succ}} 得到。反向路径的传输是正向传输的逆等价，给出第二式。}
+
+\p{对于非负 #{m}，用 #{\ell^{m+1}=\ell^m\cdot\ell} 和传输的合成律作归纳：}
+
+##{\operatorname{tr}_{\ell^{m+1}}(n)
+ =\operatorname{tr}_\ell(\operatorname{tr}_{\ell^m}(n))
+ =(n+m)+1.}
+
+\p{负整数使用反向路径以及递减函数的迭代。#{m=0} 是恒等路径的计算规则。}

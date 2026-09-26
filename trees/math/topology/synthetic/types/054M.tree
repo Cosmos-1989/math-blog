@@ -1,0 +1,35 @@
+\title{二重环路的 Eckmann--Hilton 交换性}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 10 章}
+
+\p{设 #{A} 是类型，#{a:A}。这里先在类型内构造交换同伦，再在连通分支集合上得到普通交换群；集合版互换引理见 [Eckmann--Hilton 引理](00IG)。}
+
+\p{前置：[二阶路径的横向与竖向复合](054K)、[二阶路径的互换律](054L)、[路径连接的群胚律](0542)。}
+
+\p{对基点 #{a:A}，二重环路类型}
+
+##{\Omega^2(A,a)=(\mathsf{refl}_a=_{a=a}\mathsf{refl}_a)}
+
+\p{的复合在同伦意义下交换。因此其连通分支上的群运算为交换运算。}
+
+\p{\strong{证明。}二重环路同时有竖直复合 #{\circ_v} 与横向复合 #{\circ_h}。两者的单位由自反二阶路径给出；横向复合的端点先通过路径单位律与 #{\mathsf{refl}_a} 识别。[二阶路径互换律](054L) 给出所需比较。记公共单位为 #{e}，则}
+
+##{\begin{aligned}
+\alpha\circ_h\beta
+&=(\alpha\circ_ve)\circ_h(e\circ_v\beta)\\
+&=(\alpha\circ_he)\circ_v(e\circ_h\beta)
+=\alpha\circ_v\beta.
+\end{aligned}}
+
+\p{再将同一个表达式改写为}
+
+##{\begin{aligned}
+\alpha\circ_h\beta
+&=(e\circ_v\alpha)\circ_h(\beta\circ_ve)\\
+&=(e\circ_h\beta)\circ_v(\alpha\circ_he)
+=\beta\circ_v\alpha.
+\end{aligned}}
+
+\p{每一步在类型内由单位、交换的高阶路径实现。取连通分支后这些路径成为等式，故运算交换。}

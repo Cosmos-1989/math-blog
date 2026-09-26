@@ -1,0 +1,10 @@
+\title{凸零点邻域中的开凸平衡邻域}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{E} 为实或复[拓扑向量空间](00MA)，#{C} 为零点的[凸邻域](00TK)；复向量空间的凸性按底层实向量空间理解。存在开、凸、[平衡](0AID)的零点邻域 #{U\subseteq C}。#{U} 还具有[吸收性](00MB)：每个 #{x\in E} 都属于充分大的正实数 #{r} 所给出的 #{rU}。}
+\p{\strong{证明。}取开零点邻域 #{O\subseteq C}。数乘在 #{(0,0)} 连续，故存在 #{\varepsilon>0} 及开零点邻域 #{V}，使 #{|\lambda|<\varepsilon}、#{v\in V} 蕴含 #{\lambda v\in O}。取 #{0<\delta<\varepsilon}，置}
+##{B=\bigcup_{|\lambda|\le 1}\lambda(\delta V).}
+\p{由 #{|\lambda\delta|<\varepsilon}，得 #{B\subseteq O}；#{B} 包含 #{\delta V} 且平衡。对非零 #{\lambda}，#{\lambda\delta V} 由[非零伸缩同胚](00MB)知是开集；零标量只增加已经属于 #{\delta V} 的零点。因此 #{B} 是开零点邻域。}
+\p{令 #{U=\operatorname{conv}(B)} 为[凸包](00TK)。凸性给出 #{B\subseteq U\subseteq C}。若 #{|\lambda|\le 1}，则 #{\lambda\sum_i t_i b_i=\sum_i t_i(\lambda b_i)\in U}，所以 #{U} 平衡。对任一固定的有限权重族 #{t_i\ge 0}、#{\sum_i t_i=1}，集合 #{\sum_i t_i B} 是开集：至少一项 #{t_i>0}，该项是开集，其与其他集合之和为其平移的并。#{U} 是这些开集之并，故开，且包含零点邻域 #{B}。吸收性由零点邻域的吸收性得到。}

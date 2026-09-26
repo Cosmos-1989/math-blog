@@ -1,0 +1,17 @@
+\title{非可积屋顶给出的无穷测度塔}
+\date{2026-09-26}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Gerber–Kunde，§4.4.1](007J)}
+
+\p{设 #{T} 为概率空间 #{(X,\mu)} 上的[保测自同构](00RS)，#{f:X\to\mathbb Z_{>0}} 可测、处处有限，且 #{\int f\,d\mu=\infty}。定义}
+##{X^f=\{(x,j)\in X\times\mathbb Z_{\ge 0}:j<f(x)\},\qquad
+T^f(x,j)=\begin{cases}(x,j+1)&j+1<f(x),\\(Tx,0)&j+1=f(x).\end{cases}}
+\p{将[乘积测度](00QB) #{\mu\otimes\#} 限制于 #{X^f}，其中 #{\#} 是计数测度，所得测度记为 #{\nu}。每层的测度至多为 #{1}，故 #{\nu} [#{\sigma}-有限](00Q9)；由[非负函数积分](00Q5)，}
+##{\nu(X^f)=\sum_{j\ge 0}\mu(f>j)=\int_X f\,d\mu=\infty.}
+\p{对任意非负可测函数 #{H}，逐层求和得}
+##{\int H\circ T^f\,d\nu
+=\int_X\sum_{j=1}^{f(x)-1}H(x,j)\,d\mu(x)+\int_XH(Tx,0)\,d\mu(x)
+=\int H\,d\nu.}
+\p{因此 #{T^f} 保测。第零层上的[首次返回映射](00S6)为 #{T}，返回时间为 #{f}。若 #{T} [遍历](00RW)，则 #{T^f} 的不变可测集在同一塔柱上有相同示性函数，而其第零层截面是 #{T} 不变集。因此该集合为零测或余零，#{T^f} 在无穷测度意义下遍历。}
+\p{可积屋顶对应[归一化的概率塔](00S8)。此处采用未归一化测度；屋顶的值有限，但其取值集合必然无界。}

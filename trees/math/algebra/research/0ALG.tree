@@ -1,0 +1,12 @@
+\title{收敛数列的 Cesàro 平均}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rietsch，截断渐近证明的基础步骤](01C3)}
+
+\p{设实数列 #{a_n} 收敛于 #{a}，即对每个 #{\varepsilon>0}，充分大的 #{n} 都有 #{|a_n-a|<\varepsilon}。则}
+##{\frac 1n\sum_{j=1}^n a_j\longrightarrow a.}
+\p{\strong{证明。}给定 #{\varepsilon>0}，取 #{N} 使 #{j>N} 时 #{|a_j-a|<\varepsilon}。对 #{n>N}，}
+##{\left|\frac 1n\sum_{j=1}^n a_j-a\right|
+\leq\frac 1n\sum_{j=1}^N|a_j-a|+\varepsilon.}
+\p{右侧有限初段除以 #{n} 趋于零，再令 #{\varepsilon} 任意小即可。删除固定个末项或另加固定个有界项并除以 #{n}，不会改变极限。}

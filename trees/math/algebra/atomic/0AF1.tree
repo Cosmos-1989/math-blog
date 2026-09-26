@@ -1,0 +1,10 @@
+\title{正首项的热带赋值}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rietsch，§3.1](01C3)}
+
+\p{设实函数 #{f,g} 在充分小的 #{t>0} 处为正，且 #{f(t)\sim ct^a}、#{g(t)\sim dt^b}，其中 #{a,b\in\mathbb R}、#{c,d>0}。记号 #{f(t)\sim ct^a} 意为 #{\lim_{t\to 0^+}f(t)/(ct^a)=1}。定义 #{\operatorname{Val}(f)=a}，则}
+##{\operatorname{Val}(fg)=a+b,\qquad \operatorname{Val}(f+g)=\min(a,b).}
+\p{\strong{证明。}两首项相乘得到 #{fg\sim cd\,t^{a+b}}。若 #{a<b}，则 #{g(t)/t^a=(g(t)/t^b)t^{b-a}\to 0}，故 #{f+g\sim ct^a}；#{b<a} 的情形对称。若 #{a=b}，则 #{f+g\sim(c+d)t^a}，正性保证 #{c+d>0}。}
+\p{所以 #{\operatorname{Val}} 把通常乘积和求和分别送到 [min-plus 运算](01DM)的乘法和加法。减法可能发生首项抵消，例如 #{f(t)=1+t}、#{g(t)=1} 的赋值均为零，而 #{\operatorname{Val}(f-g)=1}。}

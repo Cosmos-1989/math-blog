@@ -5,8 +5,9 @@
 \meta{source}{[Iyengar，命题 2.1 的证明](01A1)}
 \meta{status}{相对于 Auslander–Buchsbaum 公式、标准深度不等式及正则环同调刻画的推导；末步有限投射模自由已单独证明。}
 
-\p{证明[正则底环自由性判据](01AB)。设 #{A\to B} 是 Noether 局部环的局部同态，#{A} 正则，#{N\ne0} 为 #{B} 模且作为 #{A} 模有限生成，并满足 #{\operatorname{pd}_AN\leq\operatorname{edim}A-\operatorname{edim}B}。正则性给 #{\operatorname{depth}A=\operatorname{edim}A}。[Auslander–Buchsbaum 公式](01AA)因而推出下面第一项不等式：}
+\p{设 #{\varphi:A\to B} 是 [Noether](00D1) [局部环](00CX)间的局部同态，即 #{\varphi(\mathfrak m_A)\subseteq\mathfrak m_B}。设 #{A} [正则](012P)，#{N\ne 0} 为 #{B} 模且作为 #{A} 模[有限生成](0128)，并满足 #{\operatorname{pd}_AN\leq\operatorname{edim}A-\operatorname{edim}B}。这里 #{\operatorname{pd}}、#{\operatorname{edim}} 分别是[投射维数](01A7)和[嵌入维数](01A9)。则 #{B} 正则且 #{N} 是自由 #{B} 模，即[正则底环自由性判据](01AB)。}
+\p{\strong{证明。}正则性给 #{\operatorname{depth}A=\operatorname{edim}A}。[Auslander–Buchsbaum 公式](01AA)因而推出下面第一项不等式：}
 ##{\operatorname{edim}B\leq\operatorname{depth}_AN
 \leq\operatorname{depth}_BN\leq\dim B\leq\operatorname{edim}B.}
 \p{中间使用局部同态下的深度比较、有限非零模深度不超过底环 [Krull 维数](00D2)，以及局部环维数不超过嵌入维数。这些是此证明依赖的标准深度不等式。全部不等式必为等式，故 #{B} 正则且 #{\operatorname{depth}_BN=\dim B}，即 #{N} 为[极大 Cohen–Macaulay 模](01AZ)。}
-\p{正则局部环上的有限生成模有有限投射维数，再对 #{B,N} 应用该公式，得到 #{\operatorname{pd}_BN=0}。由[局部环上有限投射模自由](01M8)，结论成立。满射情形中两种深度相同另有[正则序列证明](01MM)，但这不替代本页一般局部同态的深度输入。}
+\p{正则局部环上的有限生成模有有限投射维数，再对 #{B,N} 应用该公式，得到 #{\operatorname{pd}_BN=0}。由[局部环上有限投射模自由](01M8)，结论成立。所用深度不等式及正则局部环的同调刻画见 [Iyengar，命题 2.1 的证明](01A1)。满射情形还有更强的[深度相等结论](01MM)。}

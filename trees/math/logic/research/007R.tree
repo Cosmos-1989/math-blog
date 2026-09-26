@@ -4,6 +4,6 @@
 \author{author}
 \meta{source}{[Ben Yaacov，§1](007G)；[Johnson，§3](007L)}
 
-\p{[一阶理论](00CE) #{T} 有模型，当且仅当它的每个有限子集有模型。后者称有限可满足性。紧致性讨论逻辑条件，不要求所有模型底集是紧拓扑空间。}
-\p{证明：以 #{T} 的有限子集 #{\Delta} 为指标，选 #{M_\Delta\models\Delta}。包含固定有限子集的那些指标形成的集合有有限交性质，因而可扩为[超滤子](00CO)。[Łoś 定理](00CQ)使相应超积满足每个 #{\sigma\in T}。另一方向直接限制公理即可。}
-\p{例如对无限结构 #{M} 的每个元素 #{a} 加一个常元名 #{c_a}，保留全部在 #{M} 中为真的带这些常元的句子，再添加新常元 #{c} 及所有 #{c\ne c_a}。每个有限部分都在 #{M} 中可满足。紧致性给出的模型包含 #{M} 的[初等嵌入](00CK)，且 #{c} 不在其像中，因而得到带新元素的初等扩张。保留全部真实参数句子是保证初等性的关键。}
+\p{设 #{T} 为[一阶理论](00CE)。#{T} 有模型，当且仅当它的每个有限子集有模型；后者称有限可满足性。这里采用选择公理。}
+\p{\strong{证明。}以 #{T} 的有限子集 #{\Delta} 为指标，选 #{M_\Delta\models\Delta}。对有限 #{\Delta_0\subseteq T}，令 #{I_{\Delta_0}=\{\Delta\mid\Delta_0\subseteq\Delta\}}。这些指标集具有有限交性质，因为 #{I_{\Delta_1}\cap\cdots\cap I_{\Delta_n}=I_{\Delta_1\cup\cdots\cup\Delta_n}\ne\varnothing}。[超滤子扩张引理](00GO)给出包含它们的超滤子 #{\mathcal U}。[Łoś 定理](00CQ)使 #{(\prod_{\Delta} M_{\Delta})/\mathcal U} 满足每个 #{\sigma\in T}，因为包含 #{\sigma} 的指标集属于 #{\mathcal U}。另一方向直接限制公理即可。}
+\p{一个应用是[每个无限结构都有真初等扩张](0AC1)。}

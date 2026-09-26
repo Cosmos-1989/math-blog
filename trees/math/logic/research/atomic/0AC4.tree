@@ -1,0 +1,10 @@
+\title{无原子有限测度的任意测度切分}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ben Yaacov，§3.6](007G)}
+
+\p{设 #{\mu} 是[无原子](00Q7)的[有限测度](00Q2)，#{A} 可测，#{0\leq t\leq\mu(A)}。则存在可测 #{B\subseteq A}，使 #{\mu(B)=t}。}
+\p{\strong{证明。}先注意每个正测集 #{E} 都含任意小的正测子集：将它分为两个正测部分，保留测度较小的一部分；反复进行时，测度每步至少减半。}
+\p{若 #{t=0}，取空集。否则从 #{B_0=\varnothing} 开始。已取 #{B_n\subseteq A} 且 #{\mu(B_n)<t} 时，令 #{s_n} 为所有满足 #{C\subseteq A\setminus B_n}、#{C} 可测、#{\mu(C)\leq t-\mu(B_n)} 的集合之测度的[上确界](0A37)。小正测子集的存在保证 #{s_n>0}，故可取这样的 #{C_n} 使 #{\mu(C_n)>s_n/2}，并令 #{B_{n+1}=B_n\cup C_n}。若达到测度 #{t} 则停止。}
+\p{若过程不停止，取 #{B=\bigcup_n B_n}。可数可加性给出 #{b=\mu(B)=\lim_n\mu(B_n)\leq t}。假设 #{b<t}，则 #{A\setminus B} 含一个正测子集 #{C}，满足 #{0<c=\mu(C)\leq t-b}。这个 #{C} 对每一步的上确界均可用，所以 #{s_n\geq c}，继而 #{\mu(C_n)>c/2} 对所有 #{n} 成立。这与两两不交的 #{C_n} 的测度和至多 #{t} 矛盾。因此 #{b=t}。}

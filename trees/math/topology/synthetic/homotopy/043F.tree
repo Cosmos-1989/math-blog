@@ -1,0 +1,16 @@
+\title{空间族依赖积的柯里化}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 8 章}
+
+\p{设 #{g:A\to 1}、#{f:B\to A}、#{C\to B} 为 Kan 纤维化，按[空间族记号](043C)写作 #{A,B_a,C_{a,b}}，依赖积使用[右伴随](0437)。}
+
+\p{有自然同构}
+
+##{\prod_{a:A}\prod_{b:B_a}C_{a,b}
+\cong\prod_{(a,b):\sum_aB_a}C_{a,b}.}
+
+\p{\strong{证明。}复合拉回函子满足 #{(gf)^*\cong f^*g^*}；其右伴随因此满足 #{\Pi_{gf}\cong\Pi_g\Pi_f}。这是右伴随唯一性的应用，也可在广义元素上用 #{s(a)(b)\leftrightarrow s(a,b)} 验证。}
+
+\p{右伴随唯一性是指同一函子的两个右伴随由其自然 Hom 双射决定唯一相容自然同构；因此这一重排由伴随结构唯一确定，无须额外的选择公理。}

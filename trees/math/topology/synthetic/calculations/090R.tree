@@ -1,0 +1,26 @@
+\title{复合映射的同伦纤维分解}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[同伦纤维](058E)；[路径作用](0544)；[依赖和路径公式](054H)；[基点路径归纳](050H)；[同伦逆判据](058I)。}
+
+\p{给定类型 #{A,B,C}、函数 #{f:A\to B}、#{g:B\to C}。同伦纤维记为 #{\operatorname{fib}_h(y)=\sum_x(h(x)=y)}，路径乘积按先左后右的顺序复合。}
+
+\p{给定 #{A\xrightarrow f B\xrightarrow g C} 及 #{c:C}，有等价}
+
+##{\operatorname{fib}_{g\circ f}(c)
+ \simeq
+ \sum_{(b,q):\operatorname{fib}_g(c)}\operatorname{fib}_f(b).}
+
+\p{\strong{证明。}左侧元素为 #{(a,r:g(f(a))=c)}。将它送到}
+
+##{((f(a),r),(a,\operatorname{refl}_{f(a)})).}
+
+\p{右侧元素可写作 #{((b,q),(a,p))}，其中 #{q:g(b)=c}、#{p:f(a)=b}。反向映射定义为}
+
+##{((b,q),(a,p))\longmapsto
+ (a,\operatorname{ap}_g(p)\cdot q).}
+
+\p{左侧上的复合等于 #{(a,\operatorname{refl}\cdot r)}，由单位律回到 #{(a,r)}。右侧上的复合先将 #{b} 改成 #{f(a)}。对 #{p:f(a)=b} 作路径归纳后，#{b=f(a)} 且 #{p=\operatorname{refl}}，此时结果与原元素仅相差路径的左单位律。依赖和的路径公式将该计算组成总空间中的路径。}

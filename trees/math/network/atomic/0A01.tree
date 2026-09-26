@@ -1,0 +1,9 @@
+\title{给定离散随机变量的条件期望}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{X} 为可积[随机变量](00L0)，#{Y} 为取有限或可数个值的可测函数，两者定义在同一概率空间上。对 #{\mathbb P(Y=y)>0}，定义}
+##{\mathbb E[X\mid Y=y]=\frac{\mathbb E[X1_{\{Y=y\}}]}{\mathbb P(Y=y)}.}
+\p{其中 #{\mathbb E} 是[期望](00L1)。函数 #{g(y)=\mathbb E[X\mid Y=y]} 在零概率取值处可任意指定，随机变量 #{g(Y)} 记为 #{\mathbb E[X\mid Y]}。对于离散的 #{X}，也有 #{g(y)=\sum_x x\mathbb P(X=x\mid Y=y)}，使用[条件概率](0A00)。}
+\p{按事件 #{\{Y=y\}} 分拆积分，得到全期望公式 #{\mathbb E[\mathbb E[X\mid Y]]=\mathbb EX}。条件期望的有限线性性同样由分子积分的线性性得到。邻居集合等有限组合对象可作为 #{Y} 的取值。}

@@ -1,0 +1,18 @@
+\title{概率保测自同构群的弱拓扑与双向度量}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{设 #{(X,\mathcal A,\mu)} 为[标准概率空间](00Q8)，且测度[无原子](00Q7)，#{G=\operatorname{Aut}(X,\mu)} 为[保测自同构群](00RS)。每个 #{T\in G} 在[测度代数](0A7Z)上作用为 #{T[A]=[TA]}；它保持布尔运算、测度和距离 #{\delta}。}
+\p{弱[拓扑](00E0)定义为使每个求值 #{T\mapsto Ta}（#{a\in\mathfrak M_\mu}）连续的最粗拓扑。因此 #{T} 的基本邻域由有限多个条件 #{\delta(Sa_i,Ta_i)<\varepsilon_i} 给出，其中 #{a_i\in\mathfrak M_\mu}、#{\varepsilon_i>0}。特别地，#{T_n\to T} 当且仅当对全部可测集 #{A} 有 #{\mu(T_nA\triangle TA)\to 0}。}
+\p{由[测度代数可分性](0A81)，固定可数稠密列 #{(a_k)_{k\geq 1}}。定义}
+##{D(S,T)=\sum_{k=1}^{\infty}2^{-k}
+\bigl(\delta(Sa_k,Ta_k)+\delta(S^{-1}a_k,T^{-1}a_k)\bigr).}
+\p{这是与弱拓扑相容的[度量](00EK)。每项非负且括号内至多2，故级数收敛；对称性和三角不等式逐项成立。若 #{D(S,T)=0}，则 #{Sa_k=Ta_k} 对所有 #{k} 成立。因为作用等距，有}
+##{\delta(Sa,Ta)\leq 2\delta(a,a_k)+\delta(Sa_k,Ta_k),}
+\p{从而 #{Sa=Ta} 对所有 #{a} 成立。[测度代数作用的忠实性](0A82)给出 #{S=T}，所以度量正定。}
+\p{\strong{证明。}为核对拓扑相容性，固定中心 #{T}。对有限多个给定 #{a}，先以稠密列逼近，再用等距性给出的逼近不等式；#{D(S,T)} 足够小便使这些求值距离都足够小。反方向使用恒等式}
+##{\delta(S^{-1}a,T^{-1}a)=\delta(a,ST^{-1}a)
+=\delta(T(T^{-1}a),S(T^{-1}a)).}
+\p{先选 #{N} 使 #{2\sum_{k>N}2^{-k}} 小于所需误差的一半，再对有限多个集合 #{a_k,T^{-1}a_k}（#{k\leq N}）施加弱邻域条件，便控制 #{D(S,T)} 的前 #{N} 项。故两种拓扑的邻域相同，也等于正向、逆向求值坐标共同给出的逐点收敛拓扑。}

@@ -1,0 +1,11 @@
+\title{可测可解的局部问题有独立同分布因子解}
+\date{2026-09-26}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Bernshteyn，§3](007H)}
+
+\p{设 #{\Gamma} 为有限生成群，#{\Pi} 为其上的[局部标记问题](009B)。若 #{\Pi\in\mathrm{MEASURE}}，则 #{\Pi\in\mathrm{FIID}}；这两个类分别见[可测可解性](00V5)与[独立同分布因子](009H)。}
+\p{\strong{证明。}给 #{X=[0,1]^\Gamma} 配独立均匀坐标的[乘积概率测度](00QB)，采用移位 #{(\gamma\cdot x)(h)=x(h\gamma)}。对 #{\gamma\ne e}，固定点条件蕴含 #{x(e)=x(\gamma)}。两个独立均匀实随机变量相等的概率为零，所以 #{\gamma} 的固定点集为零测集。#{\Gamma} 可数，故稳定子平凡的点组成的[自由部分](00SD)是一个不变余零 Borel 集。}
+\p{在自由部分应用 MEASURE 的定义，得到可测合法标记 #{f}。令 #{F(x)(g)=f(g\cdot x)}，则}
+##{F(\gamma\cdot x)(g)=f((g\gamma)\cdot x)=(\gamma\cdot F(x))(g).}
+\p{于是 #{F} 等变。对各位置的合法性取可数交，得到不变余零集合，#{F} 在其上给出合法标记。因此 #{F} 是 FIID 解。}

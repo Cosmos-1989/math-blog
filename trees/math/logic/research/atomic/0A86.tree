@@ -1,0 +1,16 @@
+\title{保测自同构群弱拓扑下的群运算连续性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{设 #{G} 为标准无原子概率空间 #{(X,\mathcal A,\mu)} 的保测自同构群。[弱拓扑](0A83)使复合 #{G\times G\to G} 与取逆 #{G\to G} 都[连续](00E2)，其中 #{G\times G} 取[积拓扑](00EI)。}
+\p{\strong{证明。}使用[测度代数](0A7Z)上的距离 #{\delta}。给定中心 #{(T,S)} 与任意 #{a\in\mathfrak M_\mu}，等距性和三角不等式给出}
+##{\delta(T'S'a,TSa)
+\leq\delta(T'S'a,T'Sa)+\delta(T'Sa,TSa)
+=\delta(S'a,Sa)+\delta(T'(Sa),T(Sa)).}
+\p{目标的基本邻域只要求有限多个 #{a} 的距离足够小。对第一项在 #{S} 处施加相应弱邻域条件，对第二项在 #{T} 处对固定元素 #{Sa} 施加弱邻域条件，即得到其原像中的积邻域，所以复合连续。}
+\p{对取逆，固定 #{T} 与 #{a}，有}
+##{\delta(S^{-1}a,T^{-1}a)=\delta(a,ST^{-1}a)
+=\delta(T(T^{-1}a),S(T^{-1}a)).}
+\p{因此逆像坐标在 #{T^{-1}} 处的每个有限邻域条件，都由 #{S} 在 #{T} 处对固定集合 #{T^{-1}a} 的弱邻域条件保证。取逆连续得证。}

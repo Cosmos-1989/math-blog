@@ -1,0 +1,7 @@
+\title{连续偏导数保证全微分存在}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{U\subseteq\mathbb R^m} 开，#{f:U\to\mathbb R^n} 的一阶[偏导数](0A32)在 #{a} 的某邻域内存在且在 #{a} 连续。则 #{f} 在 #{a} [全可微](0A33)，且 #{Df_a(h)=\sum_{i=1}^m\partial_i f(a)h_i}。}
+\p{\strong{证明。}对每个实分量逐坐标改变 #{a} 到 #{a+h}，把函数增量拆成 #{m} 项。对第 #{i} 项应用[中值定理](0A35)，得 #{h_i\partial_i f(\xi_i)}，其中 #{\xi_i\to a} 当 #{h\to 0}。减去 #{\sum_i\partial_i f(a)h_i} 后，余项的每个分量由 #{\sum_i|h_i|\,|\partial_i f(\xi_i)-\partial_i f(a)|} 控制。偏导连续以及 #{|h_i|\le\|h\|_2} 表明余项为 #{o(\|h\|_2)}。}

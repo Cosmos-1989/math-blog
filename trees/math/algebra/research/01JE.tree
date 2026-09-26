@@ -3,8 +3,7 @@
 \taxon{Theorem}
 \author{author}
 \meta{source}{[Navarro，§2.3](016Z)的固定成分共轭性；独立 Sylow 证明}
-\meta{proof-status}{完整证明，使用站内 Sylow 共轭定理。}
 
 \p{设有限群 #{G} [传递地作用](00BM)于集合 #{X}，#{p} 为素数，#{P\in\operatorname{Syl}_p(G)} 为[Sylow 子群](0171)。令 #{X^P=\{x:ax=x\text{ 对每个 }a\in P\}}，假设此集合非空。则[正规化子](010Y) #{N_G(P)} 在 #{X^P} 上传递。}
-\p{证明：先有 #{nX^P\subseteq X^P}，因为 #{n\in N_G(P)} 时 #{a(nx)=n(n^{-1}an)x=nx}。任取 #{x,y\in X^P}，选 #{g\in G} 使 #{gx=y}。在稳定子 #{G_x=\{h:hx=x\}} 中同时有 #{P\leq G_x} 和 #{g^{-1}Pg\leq G_x}；它们已经是 #{G} 的 Sylow 子群，因此也是 #{G_x} 的 Sylow 子群。由[Sylow 共轭性](017Z)，存在 #{t\in G_x} 使 #{tPt^{-1}=g^{-1}Pg}。于是 #{n=gt\in N_G(P)} 且 #{nx=y}。}
-\p{应用到[Clifford 限制](0174)中一个不可约特征标的共轭成分轨道，得到所有 #{P}-不变成分都由 #{N_G(P)} 联系。这正是从固定点存在推进到正规化子轨道参数化所需的一步。}
+\p{\strong{证明。}先有 #{nX^P\subseteq X^P}，因为 #{n\in N_G(P)} 时 #{a(nx)=n(n^{-1}an)x=nx}。任取 #{x,y\in X^P}，选 #{g\in G} 使 #{gx=y}。在稳定子 #{G_x=\{h:hx=x\}} 中同时有 #{P\leq G_x} 和 #{g^{-1}Pg\leq G_x}；它们已经是 #{G} 的 Sylow 子群，因此也是 #{G_x} 的 Sylow 子群。由[Sylow 共轭性](017Z)，存在 #{t\in G_x} 使 #{tPt^{-1}=g^{-1}Pg}。于是 #{n=gt\in N_G(P)} 且 #{nx=y}。}
+\p{应用到[Clifford 限制](0174)中一个不可约特征标的共轭成分轨道，得到所有 #{P}-不变成分构成一个 #{N_G(P)} 轨道。}

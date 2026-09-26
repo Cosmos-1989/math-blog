@@ -1,0 +1,21 @@
+\title{先编码后解码恢复圆周路径}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[圆周路径的编码](090C)；[圆周解码函数的相容性计算](090E)；[基点路径归纳](050H)。}
+
+\p{固定圆周生成点 #{b} 及[编码](090C)、[解码](090E)。这里归纳时终点 #{x} 必须与 #{q:b=x} 一起变化；不能只对固定端点的任意环路套用基点路径归纳。}
+
+\p{对 #{x:S^1} 和 #{q:b=x}，有}
+
+##{\mathsf{decode}_x(\mathsf{encode}_x(q))=q.}
+
+\p{\strong{证明。}这里的 #{x} 与 #{q} 一起变化，因而可以对 #{q} 作基点路径归纳。只需计算 #{x\equiv b}、#{q\equiv\operatorname{refl}_b}。此时}
+
+##{\mathsf{encode}_b(\operatorname{refl}_b)=0,
+ \qquad
+ \mathsf{decode}_b(0)=\ell^0=\operatorname{refl}_b.}
+
+\p{这正是归纳所需的基始情形。}

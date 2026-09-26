@@ -1,0 +1,175 @@
+\chapter{预层中的空间族与依赖运算}
+\section{广义元素}
+\begin{definition}[广义元素]
+在具有终对象的范畴 $C$ 中，普通点为态射 $1\to A$。更一般地，$A$ 的 $\Gamma$-广义元素是态射 $a:\Gamma\to A$。把 $\Gamma$ 称为语境或参数对象。
+\end{definition}
+\begin{example}
+在 $\Set$ 中，$\Gamma\to A$ 是 $\Gamma$-指标的元素族。在 $\Top$ 中，它是连续参数化的一族点。在 $\sSet$ 中，$\Delta^n\to A$ 是一个 $n$-单形。因此仅观察普通顶点会丢失很多单纯信息。
+\end{example}
+\begin{proposition}[广义元素辨别态射]
+两个态射 $f,g:A\to B$ 相等，当且仅当对所有 $a:\Gamma\to A$，有 $fa=ga$。
+\end{proposition}
+\begin{proof}
+必要性由复合得到。充分性取 $\Gamma=A$、$a=\id_A$ 即可。
+\end{proof}
+\begin{remark}
+“任取 $a:A$”在依赖语言中通常表示在语境 $A$ 中推理，因而包括所有广义元素。它不应被缩减为逐个全局顶点进行的集合论推理。
+\end{remark}
+
+\section{预层范畴的切片}
+\begin{definition}[预层的元素范畴]
+设 $D$ 为小范畴，$B:D^\op\to\Set$。元素范畴 $\int B$ 的对象为 $(d,b)$，其中 $b\in B(d)$；态射 $(d,b)\to(e,c)$ 为 $u:d\to e$，满足 $B(u)(c)=b$。
+\end{definition}
+\begin{proposition}[切片仍是预层范畴]
+存在范畴等价
+\[
+\widehat D/B\simeq\widehat{\int B}.
+\]
+\end{proposition}
+\begin{proof}
+给定 $p:E\to B$，在 $(d,b)$ 上取纤维
+\[
+E_b(d)=\{e\in E(d)\mid p_d(e)=b\}.
+\]
+自然性保证沿 $u:(d,b)\to(e,c)$ 的限制映射 $E(u)$ 把 $E_c(e)$ 送到 $E_b(d)$，故得到预层。
+
+反之，给定 $Q:(\int B)^\op\to\Set$，定义
+\[
+E(d)=\coprod_{b\in B(d)}Q(d,b),
+\]
+投影到 $B(d)$。沿 $u:d\to e$，把 $(c,q)$ 送到 $(B(u)c,Q(u)q)$。这定义预层和自然变换 $E\to B$。在态射上取逐纤维映射，得到互逆的函子，至少在自然同构意义下互逆。
+\end{proof}
+\begin{remark}
+此等价把“随一个预层元素变化的族”转换为“更细指标范畴上的普通预层”。因此预层范畴在切片后仍保留良好的函数对象结构。
+\end{remark}
+
+\section{预层指数的明确公式}
+\begin{proposition}[预层指数]
+对 $A,B\in\widehat D$，令
+\[
+(B^A)(d)=\Nat(y(d)\times A,B).
+\]
+沿 $u:c\to d$ 的限制由 $y(u)\times\id_A$ 的前复合给出。这个预层满足指数对象的泛性质。
+\end{proposition}
+\begin{proof}
+设 $h:X\times A\to B$。给定 $x\in X(d)$，由 Yoneda 对应得到 $y(d)\to X$；与 $A$ 取积后复合 $h$，得到 $y(d)\times A\to B$。这定义 $X\to B^A$，且对 $d$ 自然。
+
+反之，设 $k:X\to B^A$。对 $x\in X(d)$、$a\in A(d)$，定义
+\[
+h_d(x,a)=k_d(x)_d(\id_d,a).
+\]
+自然性保证这些 $h_d$ 构成自然变换。两次构造互逆：一次由恒等处评价，另一次由 Yoneda 引理的唯一性。
+\end{proof}
+\begin{theorem}[预层范畴局部笛卡尔闭]
+每个预层范畴都有小极限和小余极限，且局部笛卡尔闭。特别地，$\sSet$ 局部笛卡尔闭。
+\end{theorem}
+\begin{proof}
+极限与余极限逐对象在 $\Set$ 中计算，限制映射由泛性质诱导。上一条命题给出笛卡尔闭性。切片等价于另一预层范畴，故每个切片也笛卡尔闭，从而有依赖积右伴随。为避免只使用存在性，下一节给出其直接公式。
+\end{proof}
+
+\section{依赖积的广义纤维公式}
+\begin{proposition}[依赖积的表示]
+设 $f:A\to B$、$p:E\to A$ 为预层映射。对 $b\in B(d)$，令 $b:y(d)\to B$ 为对应的广义元素。$\Pi_fE$ 在 $b$ 处的广义纤维可定义为截面集合
+\[
+(\Pi_fE)_b(d)=
+\Hom_{\widehat D/A}(y(d)\times_BA,E).
+\]
+由这些集合与前复合限制得到 $B$ 上的预层，并满足 $f^*\dashv\Pi_f$。
+\end{proposition}
+\begin{proof}
+把所有 $b\in B(d)$ 的上述集合做不交并，得到 $(\Pi_fE)(d)$。沿 $u:c\to d$，由映射 $y(c)\times_BA\to y(d)\times_BA$ 前复合，定义限制。单位和复合由前复合的相应等式保证。
+
+给定 $Y\to B$ 与 $A$ 上的映射 $h:Y\times_BA\to E$，对每个 $y\in Y(d)$，限制 $h$ 到 $y(d)\times_BA$，得到 $(\Pi_fE)_{p(y)}(d)$ 的元素，于是得到 $Y\to\Pi_fE$。反向在广义元素 $a\in A(d)$ 上评价相应截面，得到 $Y\times_BA\to E$。两种构造互逆，并对参数自然。
+\end{proof}
+\begin{example}
+当 $D$ 只有一个对象和恒等态射时，预层就是集合，上式退化为
+\[
+(\Pi_fE)_b=\prod_{a\in f^{-1}(b)}E_a.
+\]
+对于一般预层，公式必须记录到 $d$ 的所有态射上的相容性，不能只对普通点纤维作互不相关的乘积。
+\end{example}
+
+\section{Beck--Chevalley 变换}
+\begin{theorem}[基变换公式]\label{thm:beck}
+设下图为拉回：
+\[
+\begin{tikzcd}
+A'\ar[r,"v"]\ar[d,"f'"']&A\ar[d,"f"]\\
+B'\ar[r,"u"']&B.
+\end{tikzcd}
+\]
+在局部笛卡尔闭范畴中，存在自然同构
+\[
+u^*\Sigma_f\cong\Sigma_{f'}v^*,
+\qquad u^*\Pi_f\cong\Pi_{f'}v^*.
+\]
+\end{theorem}
+\begin{proof}
+第一式由拉回粘贴得到。证明第二式时，对任意 $Y\to B'$ 计算
+\begin{align*}
+\Hom_{B'}(Y,u^*\Pi_fE)
+&\cong\Hom_B(\Sigma_uY,\Pi_fE)\\
+&\cong\Hom_A(f^*\Sigma_uY,E)\\
+&\cong\Hom_A(\Sigma_v(f')^*Y,E)\\
+&\cong\Hom_{A'}((f')^*Y,v^*E)\\
+&\cong\Hom_{B'}(Y,\Pi_{f'}v^*E).
+\end{align*}
+第三步同样使用拉回粘贴。所有双射对 $Y$ 自然，由 Yoneda 引理得到对象同构。
+\end{proof}
+\begin{remark}
+基变换公式说明先作依赖运算再代入参数，与先代入再作同样的依赖运算相容。类型论把这种相容性表现为代入规则；语义中则首先得到自然同构。
+\end{remark}
+
+\section{为什么纤维性得到保持}
+\begin{proposition}[依赖和、拉回与依赖积保持纤维化]
+在 $\sSet$ 中，若 $f:A\to B$ 是 Kan 纤维化，则 $\Sigma_f$、$f^*$、$\Pi_f$ 都把切片中的纤维化送到纤维化。
+\end{proposition}
+\begin{proof}
+$\Sigma_f$ 保持纤维性来自纤维化的复合封闭；一般切片之间的纤维化态射在复合函子下底层映射不变。拉回保持纤维化已证明。
+
+对 $\Pi_f$，设 $p:E\to F$ 为 $A$ 上的纤维化。需要证明 $\Pi_fp$ 对 $B$ 上的平凡上纤维化有右提升性质。由伴随，每个提升问题转置为 $p$ 对 $f^*i$ 的提升问题。$f^*i$ 是沿纤维化的拉回，Frobenius 性质说明它仍为平凡上纤维化，故存在提升。转置回来得到结论。
+\end{proof}
+\begin{definition}[空间族的记号]
+一个 Kan 纤维化 $A\to\Gamma$ 写成 $\gamma:\Gamma\vdash A_\gamma$。若 $B\to A$ 也是纤维化，则分别记其复合与依赖积为
+\[
+\gamma:\Gamma\vdash\sum_{a:A_\gamma}B_a,
+\qquad
+\gamma:\Gamma\vdash\prod_{a:A_\gamma}B_a.
+\]
+\end{definition}
+\begin{proposition}[纤维计算]
+对广义元素 $\gamma:\Delta\to\Gamma$，依赖和、依赖积的拉回分别为
+\[
+\sum_{a:A_\gamma}B_a,
+\qquad\prod_{a:A_\gamma}B_a,
+\]
+其中右边在切片 $\sSet/\Delta$ 内计算。
+\end{proposition}
+\begin{proof}
+直接应用定理\ref{thm:beck}。广义元素的定义域 $\Delta$ 任意，因此结论不仅对顶点成立，也对连续变化或单纯变化的参数成立。
+\end{proof}
+
+\section{依赖运算的组合律}
+\begin{proposition}[依赖和的结合律]
+对空间族 $A$、$B_a$、$C_{a,b}$，存在自然同构
+\[
+\sum_{a:A}\sum_{b:B_a}C_{a,b}
+\cong\sum_{(a,b):\sum_aB_a}C_{a,b}.
+\]
+\end{proposition}
+\begin{proof}
+两侧都由相同的纤维化复合 $C\to B\to A\to1$ 给出，其广义元素分别写为 $(a,(b,c))$ 与 $((a,b),c)$。重加括号给出保持投影的互逆映射。
+\end{proof}
+\begin{proposition}[依赖积的柯里化]
+有自然同构
+\[
+\prod_{a:A}\prod_{b:B_a}C_{a,b}
+\cong\prod_{(a,b):\sum_aB_a}C_{a,b}.
+\]
+\end{proposition}
+\begin{proof}
+复合拉回函子满足 $(gf)^*\cong f^*g^*$；其右伴随因此满足 $\Pi_{gf}\cong\Pi_g\Pi_f$。这是右伴随唯一性的应用，也可在广义元素上用 $s(a)(b)\leftrightarrow s(a,b)$ 验证。
+\end{proof}
+\begin{remark}
+至此已具备依赖类型论最重要的语义操作。下一章转而把它们写成形式规则。此后许多证明可以完全在内部演算中进行，读者无需在每一步重新展开预层和纤维化。
+\end{remark}

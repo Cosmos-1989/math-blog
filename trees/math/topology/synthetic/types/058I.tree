@@ -1,0 +1,28 @@
+\title{等价的拟逆判据}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 11 章}
+
+\p{设 #{f:A\to B}；“拟逆”是函数 #{g:B\to A} 连同 #{gf\sim\operatorname{id}_A}、#{fg\sim\operatorname{id}_B}。}
+
+\p{前置：[函数等价性的可缩纤维定义](05Z3)、[可缩同伦纤维给出拟逆](058G)、[拟逆的余单位可修正为三角相容](058H)、[依赖和中的路径与传输比较](054H)、[两个端点同时变化时的路径族传输](054D)。}
+
+\p{#{f:A\to B} 是等价，当且仅当它有拟逆及两侧逆同伦。}
+
+\p{\strong{证明。}从等价得到拟逆的方向见 [可缩纤维给出拟逆](058G)。反向先由引理[拟逆的余单位可修正为三角相容](058H)取得相容的 #{\varepsilon'}。固定 #{b}，选中心 #{(g(b),\varepsilon'_b)}。对 #{(a,p):\mathsf{fib}_f(b)}，令}
+
+##{q=(\mathsf{ap}_g(p))^{-1}\cdot\eta_a:g(b)=a.}
+
+\p{依赖和路径公式要求检验}
+
+##{\mathsf{ap}_f(q)^{-1}\cdot\varepsilon'_b=p,}
+
+\p{等价地，#{\varepsilon'_b=\mathsf{ap}_f(q)\cdot p}。由路径作用的复合、逆公式及三角相容，}
+
+##{\mathsf{ap}_f(q)\cdot p
+=(\mathsf{ap}_{fg}(p))^{-1}\cdot\varepsilon'_{fa}\cdot p.}
+
+\p{而 #{\varepsilon'} 在 #{p:fa=b} 上的自然性正给出该表达式等于 #{\varepsilon'_b}。因此 #{(q,\text{上述比较})} 构成中心到任意纤维点的路径，证明纤维可缩。}
+
+\p{\strong{注记。}从拟逆数据构造纤维收缩时，所需的三角相容性由[余单位修正引理](058H)提供。等价的性质 #{\mathsf{isEquiv}(f)} 是命题，而“任选一个拟逆连同两个同伦”的完整数据类型一般不是命题。}

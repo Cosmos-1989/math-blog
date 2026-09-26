@@ -1,0 +1,13 @@
+\title{测度代数的对称差度量完备性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{任意概率空间的[测度代数](0A7Z) #{(\mathfrak M_\mu,\delta)} 都是[完备度量空间](00ET)，不要求原测度空间本身已作测度完备化。}
+\p{\strong{证明。}设 #{a_n=[A_n]} 为 #{\delta}-Cauchy 序列。选子列使 #{\delta(a_{n_k},a_{n_{k+1}})\leq 2^{-k}}，并取可测代表 #{A_{n_k}}。令}
+##{E_m=\bigcup_{k\geq m}(A_{n_k}\triangle A_{n_{k+1}}),
+\qquad
+A=\bigcup_{m\geq 1}\bigcap_{k\geq m}A_{n_k}.}
+\p{#{A} 可测，且 #{\mu(E_m)\leq\sum_{k\geq m}2^{-k}=2^{1-m}}。在 #{E_m} 外，子列从第 #{m} 项开始的成员关系不再改变，因而 #{A\triangle A_{n_m}\subseteq E_m}。于是 #{\delta([A],a_{n_m})\leq 2^{1-m}\to 0}。}
+\p{给定 #{\varepsilon>0}，先由 Cauchy 性选 #{N} 使 #{n,l\geq N} 时 #{\delta(a_n,a_l)<\varepsilon /2}，再选 #{n_m\geq N} 且 #{\delta(a_{n_m},[A])<\varepsilon /2}。三角不等式给全部 #{n\geq N} 的 #{\delta(a_n,[A])<\varepsilon}，故整列收敛。}

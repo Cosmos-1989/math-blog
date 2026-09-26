@@ -4,8 +4,8 @@
 \author{author}
 \meta{source}{[Stacks：Tor 与平坦性](https://stacks.math.columbia.edu/tag/00LY)；直接拼接分解}
 
-\p{设 #{R} 为交换含幺环，#{I} 为理想，#{N} 为 #{R} 模。则}
+\p{设 #{R} 为[交换含幺环](00CS)，#{I} 为[理想](00CT)，#{N} 为 #{R} [模](0136)。则}
 ##{\operatorname{Tor}^R_1(R/I,N)\cong
 \ker(I\otimes_RN\xrightarrow{\mu}N),\qquad\mu(i\otimes n)=in.}
-\p{证明：取 #{I} 的[投射分解](012D) #{\cdots\to Q_1\to Q_0\to I\to0}，接上 #{I\hookrightarrow R} 得到 #{R/I} 的分解。按[Tor 定义](01SA)，所求群是 #{\ker(Q_0\otimes N\to R\otimes N)} 模掉 #{Q_1\otimes N} 的像。由[张量右正合性](01S8)，#{I\otimes N} 正是 #{Q_0\otimes N} 模掉同一个像；通过 #{R\otimes N\cong N}，诱导映射就是 #{\mu}。取核即得同构。}
-\p{例如 #{N=R/I} 时，#{\mu=0}，且 #{I\otimes_RR/I\cong I/I^2}。后者由 #{i\otimes\bar r\mapsto ir\bmod I^2} 及逆映射 #{\bar i\mapsto i\otimes1} 给出，故 #{\operatorname{Tor}^R_1(R/I,R/I)\cong I/I^2}。}
+\p{\strong{证明。}取 #{I} 的[投射分解](012D) #{\cdots\to Q_1\to Q_0\to I\to 0}，接上 #{I\hookrightarrow R} 得到 #{R/I} 的分解。按[Tor 定义](01SA)，所求群是 #{\ker(Q_0\otimes N\to R\otimes N)} 模掉 #{Q_1\otimes N} 的像。由[张量右正合性](01S8)，#{I\otimes N} 正是 #{Q_0\otimes N} 模掉同一个像；通过 #{R\otimes N\cong N}，诱导映射就是 #{\mu}。取核即得同构。}
+\p{例如 #{N=R/I} 时，#{\mu=0}，且 #{I\otimes_R(R/I)\cong I/I^2}。后者由 #{i\otimes\bar r\mapsto ir\bmod I^2} 及逆映射 #{\bar i\mapsto i\otimes 1} 给出，故 #{\operatorname{Tor}^R_1(R/I,R/I)\cong I/I^2}。}

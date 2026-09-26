@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {prose, normalizeFormat, normalizeMathPaths, styleRules} from './note-editorial-lib.mjs';
+
+const math = 'a #{x^{2}+\\{x\\}} b';
+assert.equal(prose(math), 'a' + ' '.repeat(math.length - 2) + 'b');
+assert(!prose('\\tex{preamble}{\\begin{tikzcd} A\\arrow[r] & B \\end{tikzcd}}').trim());
+assert(prose('\\p{理想满足升链条件。}').includes('升链条件'));
+assert.equal(prose('##{a\n+b}').split('\n').length, 2);
+assert(!prose('[文献](https://example.org/profile)').includes('profile'));
+assert(!styleRules.some(([, re]) => [...'scheme 是概形的英文名称。'.matchAll(re)].length));
+const input='\\title{例}\n\\taxon{Theorem}\n\\date{2026-09-26}\n\n\\author{author}\n\n\\p{\\strong{证明。}}\n\n\\p{设 #{x} 为实数。}\n';
+const output=normalizeFormat(input);
+assert(output.startsWith('\\title{例}\n\\date{2026-09-26}\n\\taxon{Theorem}\n\\author{author}\n\n'));
+assert(output.includes('\\p{\\strong{证明。}设 #{x} 为实数。}'));
+assert.equal(normalizeFormat(output),output);
+const separateProof=normalizeFormat('\\title{例}\n\n\\p{证明。}\n\n\\p{取 #{x}。}');
+assert.equal(normalizeFormat(separateProof),separateProof);
+assert(separateProof.includes('\\strong{证明。}取'));
+assert(normalizeFormat('\\p{完整证明：取 #{x}.}').includes('\\strong{证明。}取 #{x}'));
+assert(normalizeFormat('\\p{证明概要：取 #{x}.}').includes('\\strong{证明概要。}取 #{x}'));
+assert(normalizeFormat('\\p{证明纲要：取 #{x}.}').includes('\\strong{证明纲要。}取 #{x}'));
+assert.equal(normalizeMathPaths('#{\\varepsilon/3+\\rho/2}'), '#{\\varepsilon /3+\\rho /2}');
+assert.equal(normalizeMathPaths('#{\\le2a/3}'), '#{\\le 2a /3}');
+assert.equal(normalizeMathPaths('#{\\lambda_1/2}'), '#{\\lambda_1 /2}');
+assert.equal(normalizeMathPaths('\\tex{p}{\\rho/2} https://a/b'), '\\tex{p}{\\rho/2} https://a/b');
+console.log('Editorial masking and formatting tests passed.');

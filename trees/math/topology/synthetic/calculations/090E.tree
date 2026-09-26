@@ -1,0 +1,34 @@
+\title{圆周解码函数的相容性计算}
+\date{2026-09-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[圆周的高阶归纳规则](0900)；[圆周上的整数编码族](0909)；[环路整数幂的加法与反演公式](0905)；[整数编码族沿环路的传输](090A)；[函数族传输](054F)；[端点传输](054C)；[函数外延性](050K)。}
+
+\p{设 #{b,\ell} 为圆周的生成元，#{\mathsf{Code}} 为整数编码族。依赖消去需要的不只是基点函数，还需要它绕生成环路传输后保持不变。}
+
+\p{对每个 #{x:S^1}，存在相容的依赖函数}
+
+##{\mathsf{decode}_x:\mathsf{Code}(x)\to(b=x),}
+
+\p{在 #{x=b} 处满足 #{\mathsf{decode}_b(n)=\ell^n}。}
+
+\p{\strong{证明。}对族}
+
+##{D(x)=\bigl(\mathsf{Code}(x)\to(b=x)\bigr)}
+
+\p{应用圆周的依赖消去规则。取 #{d(n)=\ell^n} 作为 #{D(b)} 的元素。需要给出 #{\operatorname{tr}^D_\ell(d)=d}。}
+
+\p{由函数族中的传输公式，对每个整数 #{n} 有}
+
+##{\begin{aligned}
+\operatorname{tr}^D_\ell(d)(n)
+ &=\operatorname{tr}^{x\mapsto(b=x)}_\ell
+     \bigl(d(\operatorname{tr}^{\mathsf{Code}}_{\ell^{-1}}(n))\bigr)\\
+ &=d(n-1)\cdot\ell\\
+ &=\ell^{n-1}\cdot\ell\\
+ &=\ell^n=d(n).
+\end{aligned}}
+
+\p{函数外延性将这些逐点等式组合为所需的路径。依赖消去即给出 #{\mathsf{decode}}。}

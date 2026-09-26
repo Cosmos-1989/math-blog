@@ -1,0 +1,30 @@
+\title{余切片的映射类型与范畴结构}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
+
+\p{设 #{C} 为合成预范畴，#{c:C}，#{f:c\to x}、#{h:c\to y} 为余切片对象。下式中的 #{g} 及比较路径 #{q} 都是态射数据的一部分。}
+
+\p{所需前置：[合成预范畴的余切片](0630)、[余切片中的固定终点平方公式](062O)、[协变族的总空间继承预范畴性与完备性](062J)。}
+
+\p{#{c/C} 是预范畴；若 #{C} 完备，则 #{c/C} 完备。其映射类型满足}
+
+##{\operatorname{Hom}_{c/C}((x,f),(y,h))
+\simeq\sum_{g:\operatorname{Hom}_C(x,y)}(g\circ f=h).}
+
+\p{\strong{证明。}
+总空间的预范畴性与完备性来自可表族的协变性及[协变族总空间定理](062J)。映射类型先按投影到 #{C} 的箭头 #{g} 分解，再对每个 #{g} 使用固定终点平方公式[余切片中的固定终点平方公式](062O)。}
+
+\p{\strong{例。}
+在普通范畴中，#{(g,q)} 就是交换三角形}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+&c\arrow[dl,"f"']\arrow[dr,"h"]&\\
+x\arrow[rr,"g"']&&y.
+\end{tikzcd}
+}}
+
+\p{在高阶范畴中，#{q:g\circ f=h} 属于映射空间的路径类型；它连同自己的高阶路径都是余切片态射结构的一部分。}

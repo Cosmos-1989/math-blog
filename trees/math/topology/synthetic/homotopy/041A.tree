@@ -1,0 +1,20 @@
+\title{二维内角同时选择合成边和比较单形}
+\date{2026-09-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 6 章；[Friedman](0214)}
+
+\p{设 #{X} 为单纯集合，使用[角及其填充](0419)。图中顶点 #{0,1,2} 经映射成为 #{X} 中的顶点。}
+
+\p{#{\Lambda_1^2} 包含边 #{0\to 1} 与 #{1\to 2}，不含边 #{0\to 2} 及三角形内部。映射 #{\Lambda_1^2\to X} 指定两条可合成的边。延拓至 #{\Delta^2} 同时指定第三条边及一个二维比较单形。}
+
+\figure{\tex{\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large]
+&1\arrow[dr,"g"]&\\
+0\arrow[ur,"f"]\arrow[rr,dashed,"h"']&&2
+\end{tikzcd}
+}}
+
+\p{图中的虚线是待选择的第三条边 #{h}。填充是一个 #{\sigma\in X_2}，其三条面边满足 #{d_2\sigma=f}、#{d_0\sigma=g}、#{d_1\sigma=h}。严格复合等式 #{h=gf} 需要额外的范畴结构，例如 #{X} 是[普通范畴的神经](041G)时，三角形由范畴中的复合决定。}

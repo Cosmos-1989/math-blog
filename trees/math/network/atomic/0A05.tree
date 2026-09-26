@@ -1,0 +1,11 @@
+\title{Poisson 分枝过程在临界点附近的生存概率}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{\rho(c)} 是后代数为 #{\operatorname{Poi}(c)} 的[分枝过程生存概率](00LI)，#{c>1}。当 #{c\downarrow 1} 时，}
+##{\rho(c)\sim 2(c-1),}
+\p{其中 #{f(c)\sim g(c)} 表示两者的比趋于 #{1}。}
+\p{\strong{证明。}生存概率满足 #{1-\rho=e^{-c\rho}}，且 #{0<\rho<1}。取对数得 #{c=-\log(1-\rho)/\rho}。有限几何和的余项在 #{[0,\rho]} 上一致趋零，结合[微积分基本定理](0A3C)，积分后得到收敛的[级数](0A38)：}
+##{-\log(1-\rho)=\sum_{j\geq 1}\frac{\rho^j}{j}=\rho+\frac{\rho^2}{2}+R(\rho),\qquad 0\leq R(\rho)\leq\frac{\rho^3}{1-\rho}.}
+\p{非负余项先给出 #{0<\rho\leq 2(c-1)}，所以 #{c\downarrow 1} 时 #{\rho\to 0}。余项界再给出 #{c-1=\rho /2+O(\rho^2)}，两边除以 #{\rho} 并令 #{\rho\to 0} 即得结论。}

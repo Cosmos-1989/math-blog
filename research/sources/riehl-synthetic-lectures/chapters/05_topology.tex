@@ -1,0 +1,171 @@
+\chapter{路径、同伦与纤维化}
+\section{路径与端点固定的同伦}
+\begin{definition}[路径]
+令 $I=[0,1]$。空间 $X$ 中从 $x$ 到 $y$ 的路径是连续映射 $p:I\to X$，满足 $p(0)=x$、$p(1)=y$。恒定路径记为 $e_x(t)=x$。反向路径定义为 $\overline p(t)=p(1-t)$。
+\end{definition}
+\begin{definition}[映射之间的同伦]
+连续映射 $f,g:X\to Y$ 之间的同伦为连续映射 $H:X\times I\to Y$，满足 $H(x,0)=f(x)$、$H(x,1)=g(x)$。记作 $f\simeq g$。若给定子空间 $A\subseteq X$，且 $H(a,t)=f(a)=g(a)$ 对所有 $a\in A$ 成立，称为相对于 $A$ 的同伦。
+\end{definition}
+\begin{proposition}
+同伦是连续映射集合上的等价关系，且与前复合、后复合相容。
+\end{proposition}
+\begin{proof}
+反身性由恒定于时间的映射给出。对称性用 $H(x,1-t)$。若 $H:f\simeq g$、$K:g\simeq h$，定义
+\[
+L(x,t)=
+\begin{cases}
+H(x,2t),&0\le t\le\frac12,\\
+K(x,2t-1),&\frac12\le t\le1.
+\end{cases}
+\]
+两块在 $t=1/2$ 处均为 $g(x)$，由闭集粘贴引理连续。若另有 $a:W\to X$、$b:Y\to Z$，则 $bH(a(-),t)$ 给出 $bfa\simeq bga$。固定子空间的情形同理。
+\end{proof}
+\begin{definition}[路径复合]
+若 $p:x\to y$、$q:y\to z$，定义
+\[
+(p*q)(t)=
+\begin{cases}
+p(2t),&t\le1/2,\\
+q(2t-1),&t\ge1/2.
+\end{cases}
+\]
+它是从 $x$ 到 $z$ 的路径。
+\end{definition}
+\begin{lemma}[重新参数化]
+若 $r:I\to I$ 连续并满足 $r(0)=0$、$r(1)=1$，则 $p\circ r$ 与 $p$ 相对于端点同伦。
+\end{lemma}
+\begin{proof}
+令 $r_s(t)=(1-s)r(t)+st$。因为 $I$ 是凸集，$r_s(t)\in I$；且 $r_s(0)=0$、$r_s(1)=1$。于是 $H(t,s)=p(r_s(t))$ 为所要求的同伦。
+\end{proof}
+\begin{proposition}[路径群胚的基本等式]
+在端点固定的同伦类中，路径复合满足结合律，恒定路径为单位，反向路径为逆。
+\end{proposition}
+\begin{proof}
+$(p*q)*r$ 与 $p*(q*r)$ 沿相同三段路径运动，只是分段点分别为 $(1/4,1/2)$ 与 $(1/2,3/4)$。把两处分段点线性移动，或者分别与三等分参数化比较，即得到端点固定的同伦。$e_x*p$ 与 $p*e_y$ 分别在开头或末尾停顿，可由上一条引理去掉。
+
+对 $p*\overline p$，定义收缩
+\[
+H(t,s)=
+\begin{cases}
+p(2t(1-s)),&t\le1/2,\\
+p(2(1-t)(1-s)),&t\ge1/2.
+\end{cases}
+\]
+在 $s=0$ 时它是先行 $p$ 再返回的路径；在 $s=1$ 时恒为 $p(0)$。两段在 $t=1/2$ 相接，且始终保持端点。对 $\overline p*p$ 同理。
+\end{proof}
+\begin{definition}[基本群胚与基本群]
+基本群胚 $\Pi_1X$ 的对象是 $X$ 中的点，态射是端点固定的路径同伦类。固定基点 $x$ 后，其自同构群称为基本群，记为 $\pi_1(X,x)$。
+\end{definition}
+\begin{remark}
+通过取同伦类，结合律变为严格等式，但我们同时遗忘了两个路径同伦之间的同伦。高阶同伦论保留这些信息，因而不能只使用基本群胚代替全部空间。
+\end{remark}
+
+\section{同伦等价与基点变化}
+\begin{definition}[同伦等价]
+连续映射 $f:X\to Y$ 为同伦等价，若存在 $g:Y\to X$，使 $gf\simeq\id_X$、$fg\simeq\id_Y$。空间 $X$ 可缩，是指恒等映射同伦于某个常值映射。
+\end{definition}
+\begin{example}
+若 $X\subseteq\R^n$ 为非空凸集，固定 $x_0\in X$，则 $H(x,t)=(1-t)x+tx_0$ 给出收缩。圆柱 $S^1\times I$ 与 $S^1$ 同伦等价，投影的同伦逆是 $z\mapsto(z,0)$，收缩第二坐标给出所需同伦。
+\end{example}
+\begin{proposition}[同伦引起的基点共轭]
+设 $H:f\simeq g:X\to Y$，固定 $x\in X$，令 $a(t)=H(x,t)$。对以 $x$ 为基点的环路 $p$，$f\circ p$ 与
+\[
+a*(g\circ p)*\overline a
+\]
+在 $f(x)$ 处代表同一基本群元素。
+\end{proposition}
+\begin{proof}
+考虑正方形映射 $(s,t)\mapsto H(p(s),t)$。下边是 $f\circ p$，上边是 $g\circ p$，左右两边均为 $a$。沿方形边界比较从左下角出发的两条边路径，一条走下边，另一条依次走左边、上边和右边的反向。方形内部给出这两条路径的端点固定同伦。
+\end{proof}
+\begin{definition}[高阶同伦群与弱同伦等价]
+对 $n\ge1$，$\pi_n(X,x)$ 是基点保持映射 $(S^n,*)\to(X,x)$ 的基点保持同伦类，并带有标准的球面拼接运算。$\pi_0(X)$ 为路径连通分支集合。映射 $f:X\to Y$ 为弱同伦等价，若它在 $\pi_0$ 上为双射，并在每个基点处的全部 $\pi_n$ 上诱导同构。
+\end{definition}
+\begin{remark}
+同伦等价总是弱同伦等价。逆命题对具有适当胞腔结构的空间成立，是 Whitehead 定理。本文使用单纯集合的模型结构组织弱同伦等价，不需要把任意点集拓扑空间的弱等价都提升为同伦等价。
+\end{remark}
+
+\section{映射空间与连续参数}
+\begin{definition}[路径空间]
+记 $X^I$ 为从 $I$ 到 $X$ 的连续映射空间，赋予紧开拓扑。端点评价为
+\[
+(\ev_0,\ev_1):X^I\longrightarrow X\times X.
+\]
+对局部紧 Hausdorff 参数空间 $K$，紧开拓扑的指数律把 $T\to X^K$ 与 $T\times K\to X$ 的连续性联系起来。我们在 $K=I$ 时使用此律。
+\end{definition}
+\begin{example}
+一个元素 $p\in X^I$ 是一条路径；一个连续映射 $I\to X^I$ 是连续的一族路径，等价于 $I^2\to X$。若路径的端点固定，这就是路径之间的同伦。更高次的参数给出更高阶同伦。
+\end{example}
+\begin{remark}
+“每个点都有一条路径”与“存在连续的一族路径”不同。后者为一个映射空间中的点，要求随全部参数连续变化。依赖类型论中的项将直接表达这种相容的参数化数据。
+\end{remark}
+
+\section{纤维化与路径提升}
+\begin{definition}[Hurewicz 纤维化]
+连续映射 $p:E\to B$ 称为 Hurewicz 纤维化，若对任意空间 $T$ 及交换图
+\[
+\begin{tikzcd}
+T\times\{0\}\ar[r,"u"]\ar[d,hook]&E\ar[d,"p"]\\
+T\times I\ar[r,"H"']\ar[ur,dashed,"\widetilde H"]&B
+\end{tikzcd}
+\]
+都存在虚线提升，使两个三角形交换。
+\end{definition}
+\begin{example}
+投影 $B\times F\to B$ 是纤维化。若初值为 $u(t)=(H(t,0),v(t))$，则 $\widetilde H(t,s)=(H(t,s),v(t))$ 给出提升。覆盖映射也具有同伦提升性质；对路径提升，离散纤维使提升具有更强的唯一性。
+\end{example}
+\begin{proposition}[拉回稳定性]
+纤维化的任意拉回仍为纤维化。
+\end{proposition}
+\begin{proof}
+设 $E'=A\times_BE\to A$ 是 $p$ 沿 $f:A\to B$ 的拉回。一个到 $E'$ 的初值映射等价于到 $A$、$E$ 的相容初值。将底同伦 $H:T\times I\to A$ 复合 $f$，在 $E$ 中提升，得到 $\widetilde H_E$。有序对 $(H,\widetilde H_E)$ 取值于拉回，并满足所需初值。
+\end{proof}
+\begin{remark}
+一般纤维化不要求每条路径的提升严格唯一。同伦论中相应的唯一性通常以“某个提升空间可缩”表达。仅有提升存在性也不足以自动得到一个在所有输入中连续的全局选择。
+\end{remark}
+
+\section{映射路径分解与同伦纤维}
+\begin{definition}[映射路径空间]
+给定 $f:X\to Y$，令
+\[
+E_f=\{(x,p)\in X\times Y^I\mid p(0)=f(x)\},
+\qquad q(x,p)=p(1).
+\]
+定义 $i:X\to E_f$ 为 $i(x)=(x,e_{f(x)})$。则 $f=q\circ i$。
+\end{definition}
+\begin{proposition}
+映射 $i$ 是同伦等价，$q:E_f\to Y$ 是 Hurewicz 纤维化。
+\end{proposition}
+\begin{proof}
+投影 $r:E_f\to X$ 满足 $ri=\id_X$。同伦
+\[
+K_s(x,p)=(x,t\mapsto p((1-s)t))
+\]
+把 $\id_{E_f}$ 收缩到 $ir$。
+
+为了证明纤维化，给定初值 $u(a)=(x_a,p_a)$ 和底同伦 $H(a,s)$，其中 $H(a,0)=p_a(1)$。令 $\widetilde H(a,s)=(x_a,p_{a,s})$，其中
+\[
+p_{a,s}(t)=
+\begin{cases}
+p_a((1+s)t),&(1+s)t\le1,\\
+H(a,(1+s)t-1),&(1+s)t\ge1.
+\end{cases}
+\]
+两条公式在交界处相等，因而连续；$s=0$ 时恢复 $p_a$；始点始终是 $f(x_a)$，终点为 $H(a,s)$。由指数律得到 $\widetilde H$ 连续，故为提升。
+\end{proof}
+\begin{definition}[同伦纤维]
+$f:X\to Y$ 在 $y\in Y$ 处的同伦纤维为
+\[
+\operatorname{hofib}_f(y)=\{(x,p)\mid p(0)=f(x),\ p(1)=y\}.
+\]
+它是上述纤维化 $q$ 的通常纤维。
+\end{definition}
+\begin{example}
+若 $X=\{x\}$ 且 $f(x)=y$，则同伦纤维为环路空间 $\Omega_yY$。但通常纤维只有一个点。这说明同伦纤维保存了底空间中路径的多重性。
+\end{example}
+\begin{example}
+对恒等映射 $\id_Y$，同伦纤维为所有以 $y$ 为终点的路径。它可缩：沿路径把起点逐渐移向终点即可。与之相对，固定始点和终点均为 $y$ 的环路空间一般不可缩。
+\end{example}
+\begin{remark}
+后文公式 $\fib_f(y)=\sum_x(f(x)=y)$ 正是映射路径纤维的内在版本。相等条件中包含一条路径，因此依赖和同时记录原像和它到目标点的比较。
+\end{remark}
+\source{本章提供几何直观；系统的代数拓扑背景见\cite{Hatcher}。同伦纤维与依赖和的关系将于第十一章在类型规则内重新证明。}

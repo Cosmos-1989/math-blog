@@ -1,0 +1,309 @@
+\chapter{有向单价宇宙与空间范畴}
+\section{从一个族到分类对象}
+\begin{definition}[普遍协变族]
+一个普遍小协变族为协变纤维化
+\[
+\varrho:\Sp_\bullet\longrightarrow\Sp
+\]
+及其分类性质：在任意语境 $\Gamma$ 中，一个 $\Gamma\to\Sp$ 的映射分类一个 $\Gamma$ 上的小协变族，拉回 $\varrho$ 恢复该族。等价协变族对应分类映射间的路径。
+\end{definition}
+\begin{remark}
+分类性质在同伦意义下表述：它比较映射空间与协变族及其等价组成的分类空间。在严格模型中，为了得到与替换严格相容的分类映射，还要给纤维化配备适当结构。不能把这个定义读成“所有裸纤维化组成的集合被一个集合严格表示”。
+\end{remark}
+\begin{example}[分类拉回图]
+设 $A:\Gamma\to\Sp$。有图
+\[
+\begin{tikzcd}
+\sum_{\gamma:\Gamma}A_\gamma\ar[r]\ar[d]&\Sp_\bullet\ar[d,"\varrho"]\\
+\Gamma\ar[r,"A"']&\Sp.
+\end{tikzcd}
+\]
+由于普遍族协变，每个纤维 $A_\gamma$ 是群胚类型。于是 $\Sp$ 的对象表示空间，尽管在这一阶段尚未证明 $\Sp$ 自己满足范畴公理。
+\end{example}
+\begin{definition}[普遍族的普通单价性]
+要求普遍族满足普通单价性，即
+\[
+(A=_\Sp B)\simeq(A\simeq B),
+\]
+右边是其解码纤维之间的等价。此处仍只比较路径与等价，没有比较一般有向箭头与一般函数。
+\end{definition}
+\begin{remark}
+前半部的 $\U$ 用于普通同伦类型的单价语言。本章的 $\Sp$ 是处于单纯语义中的有向分类对象。其对象空间与小空间的分类空间相联系，但额外外方向还可能记录不可逆函数。二者不应当在引入这些结构之前被直接混同。
+\end{remark}
+
+\section{箭头到函数的典范比较}
+\begin{definition}
+对 $A,B:\Sp$，将普遍族拉回到箭头 $a:A\to_\Sp B$ 上。协变作用给出函数
+\[
+a_*:A\to B.
+\]
+因此有典范比较
+\[
+\mathsf{arrfun}_{A,B}:\Hom_\Sp(A,B)\to(A\to B).
+\]
+\end{definition}
+\begin{definition}[有向单价性]\label{def:directed-univalence}
+若上述比较对每个 $A,B$ 是等价，则称普遍协变族有向单价，即
+\[
+\Hom_\Sp(A,B)\simeq(A\to B).
+\]
+条件在所有语境中成立，因而也适用于带参数的空间族之间的函数。
+\end{definition}
+\begin{remark}
+比较映射的定义只需要普遍族协变，无须预先假设 $\Sp$ 已是范畴。先用协变提升得到函数，再证明比较为等价，最后推导合成与完备性，可以避免把“空间范畴已经存在”作为证明自身存在性的前提。
+\end{remark}
+\begin{example}
+若 $A=\zero$、$B=\one$，函数类型 $A\to B$ 可缩。因此有向单价性给出唯一到可缩选择的箭头 $\zero\to_\Sp\one$。反向函数类型 $\one\to\zero$ 为空，所以不存在反向箭头。这表明 $\Sp$ 不能只是一个所有箭头均可逆的宇宙群胚。
+\end{example}
+
+\section{单一函数的离散提升模型}
+\begin{definition}[一个函数的元素范畴]
+给定集合函数 $f:A\to B$，构造范畴 $E_f$。对象分为 $(0,a)$ 与 $(1,b)$。同层只保留恒等态射，跨层态射
+\[
+(0,a)\longrightarrow(1,b)
+\]
+存在当且仅当 $f(a)=b$，并在存在时唯一。投影 $p_f:E_f\to[1]$ 忘掉第二分量。
+\end{definition}
+\begin{proposition}
+$p_f$ 是离散余纤维化，其在两个顶点上的纤维为 $A,B$，沿唯一非恒等箭头的传输为 $f$。
+\end{proposition}
+\begin{proof}
+给定源 $(0,a)$，唯一提升的终点为 $(1,f(a))$。底中的恒等箭头由恒等提升。不存在其他需要提升的底箭头，故条件成立。
+\end{proof}
+\begin{proposition}[离散的一维分类]
+从 $[1]$ 上的离散余纤维化恢复两个纤维及其传输，与 $f\mapsto p_f$ 互逆到保纤维同构。
+\end{proposition}
+\begin{proof}
+由余纤维化的唯一提升，每个源元素决定唯一终点，得到 $f:A\to B$。任意跨层箭头都必须是该唯一提升，所以箭头存在性恰由 $f(a)=b$ 决定。同层位于恒等上的箭头只能是恒等，因为其源已有唯一恒等提升。因此恢复的范畴与 $E_f$ 同构。
+\end{proof}
+\begin{remark}
+这已经说明有向单价性的基本几何机制：一条宇宙箭头分类有向区间上的族，而区间上的协变族由两个纤维和一个前向函数描述。空间情形将同层离散性替换为群胚，并把唯一提升替换为可缩提升。
+\end{remark}
+
+\section{有限函数链的离散模型}
+\begin{definition}[函数链]
+一个长度 $n$ 的空间函数链为
+\[
+A_0\xrightarrow{f_1}A_1\xrightarrow{f_2}\cdots
+\xrightarrow{f_n}A_n.
+\]
+记 $f_{ij}=f_j\circ\cdots\circ f_{i+1}$，并规定 $f_{ii}=\id$。
+\end{definition}
+\begin{proposition}[集合链的元素范畴]
+若各 $A_i$ 是集合，则令对象为 $(i,a)$，从 $(i,a)$ 到 $(j,b)$ 的态射在 $i\le j$ 且 $f_{ij}(a)=b$ 时唯一存在。由此得到 $[n]$ 上的离散余纤维化。
+\end{proposition}
+\begin{proof}
+恒等来自 $f_{ii}=\id$。若 $f_{ij}(a)=b$、$f_{jk}(b)=c$，则 $f_{ik}(a)=c$，所以可以合成，结合律由函数复合的结合律给出。固定底箭头 $i\to j$ 和源 $(i,a)$ 后，唯一终点为 $(j,f_{ij}(a))$，证明余纤维化条件。
+\end{proof}
+\begin{proposition}
+在上述模型中，取面对应删除函数链中的一个对象：删除内部对象时合成相邻两个函数；取退化对应插入恒等函数。
+\end{proposition}
+\begin{proof}
+沿保序映射 $\theta:[m]\to[n]$ 拉回，得到纤维 $A_{\theta(0)},\ldots,A_{\theta(m)}$ 和相邻传输 $f_{\theta(i-1),\theta(i)}$。单射删去顶点时，相邻传输正是原函数的复合；满射重复顶点时，重复处的传输为恒等。
+\end{proof}
+
+\section{空间链的单纯替换}
+\begin{definition}[严格函数链的单纯替换]
+设各 $A_i$ 由 Kan 复形表示，相邻函数为实际的单纯映射。定义单纯空间
+\[
+(E_F)_m=\coprod_{\sigma:[m]\to[n]}A_{\sigma(0)}.
+\]
+对于保序映射 $\theta:[k]\to[m]$，把 $(\sigma,a)$ 送到
+\[
+\bigl(\sigma\theta,
+ f_{\sigma(0),\sigma(\theta(0))}(a)\bigr).
+\]
+投影到 $\sigma$ 给出 $E_F\to\Delta^n$。
+\end{definition}
+\begin{proposition}
+上述面与退化满足单纯恒等式。对每个 $m$，初始顶点给出的比较
+\[
+(E_F)_m\longrightarrow
+(\Delta^n)_m\times_{(\Delta^n)_0}(E_F)_0
+\]
+是同构。
+\end{proposition}
+\begin{proof}
+连续两次限制时，纤维坐标先作用
+$f_{\sigma(0),\sigma(\theta(0))}$，再作用
+$f_{\sigma(\theta(0)),\sigma(\theta(\psi(0)))}$。
+严格函数链的复合律使其等于一次限制对应的函数。因此单纯恒等式成立。后一比较把 $(\sigma,a)$ 送到 $(\sigma,(\sigma(0),a))$，其逆显然存在。
+\end{proof}
+\begin{remark}
+该对象未必已是 Reedy 纤维的。取相对 Reedy 纤维替换后，初始顶点方形仍同伦笛卡尔：替换在每层是弱等价，而此处底的各层为离散集合，拉回保留相应弱等价。于是得到表示同一空间链的左纤维化。
+\end{remark}
+\begin{remark}
+反方向从任意左纤维化恢复一条严格函数链，需要处理提升的选择与全部同伦相容。只逐点选几个箭头的提升，并不能自动证明与原族相容等价。下面的有限单纯形比较定理精确解决这一语义问题。
+\end{remark}
+
+\section{有限单纯形比较定理}
+\begin{definition}[函数链分类对象]
+记 $\mathsf{Fun}_n$ 为如下数据的分类对象：$n+1$ 个小协变族及它们之间依次可合成的 $n$ 个纤维函数。在内部记号中，其对象数据写成
+\[
+\mathsf{Fun}_n=
+\sum_{A_0,\ldots,A_n:\Sp}
+\prod_{i=1}^n(A_{i-1}\to A_i).
+\]
+面运算合成相邻函数，退化插入恒等函数。这里的分类对象还保留这些数据随语境变化的全部同伦结构。
+\end{definition}
+\begin{theorem}[普遍左纤维化与高阶有向单价性，语义基础定理]\label{thm:higher-directed}
+在单纯空间中，存在普通单价的普遍小左纤维化 $\Sp_\bullet\to\Sp$，并有在 $n$ 与任意语境中同伦相容的等价
+\[
+\theta_n:\Sp^{\Delta^n}\simeq\mathsf{Fun}_n
+\qquad(n\ge0).
+\]
+比较在 $n=1$ 时取两个端点纤维及协变传输；一般 $n$ 时取相邻边上的传输。相同结论成立于任意高阶拓扑斯中的单纯对象，采用适当大小与严格模型条件。
+\end{theorem}
+\begin{remark}
+本定理的严格语义证明由普遍纤维化构造、带权极限和单纯形上的纤维化比较组成，见\cite[定理6.2.5]{CavalloRiehlSattler}。上一节提供了“函数链到族”方向的具体模型；任意语境中的逆比较及其相容性属于该基础定理。下一节以后不再使用未说明的分类结论，而直接由本定理及已经建立的类型运算推导空间范畴。
+\end{remark}
+\begin{proposition}[一维有向单价性]
+定理\ref{thm:higher-directed}蕴含定义\ref{def:directed-univalence}。
+\end{proposition}
+\begin{proof}
+$n=1$ 的比较为
+\[
+\Sp^{\Delta^1}\simeq
+\sum_{A,B:\Sp}(A\to B),
+\]
+并且保持端点映射到 $\Sp\times\Sp$。对固定端点 $(A,B)$ 取同伦纤维，等价在拉回下保持，于是得到
+$\Hom_\Sp(A,B)\simeq(A\to B)$。比较的定义正是沿普遍族的协变作用。
+\end{proof}
+
+\section{有向粘合的内部公式}
+\begin{definition}[粘合族]
+在具备有向单纯模态结构的扩充类型论中，对 $f:A\to B$ 定义
+\[
+\mathsf{Gl}_f(i)
+=\sum_{b:B}\bigl([i=0]\to\fib_f(b)\bigr),
+\qquad i:\Int.
+\]
+$[i=0]$ 为与初始端面相关的命题；在初始端它为真，在终端它为空。
+\end{definition}
+\begin{remark}
+这里使用的是\cite{GratzerWeinbergerBuchholtz}的扩充语义。其封闭性定理保证 $\mathsf{Gl}_f$ 的值仍在相应空间宇宙中，其顶点检测定理保证空间值族的纤维映射可在单纯形顶点检测等价性。这两条是该扩充体系的定理，不能将它们作为任意有向类型的无条件规则。下文把这两个输入固定后，完整计算粘合的核心逆比较。
+\end{remark}
+\begin{proposition}[粘合的端点]
+有等价 $\mathsf{Gl}_f(0)\simeq A$、$\mathsf{Gl}_f(1)\simeq B$，沿该族的协变传输对应 $f$。
+\end{proposition}
+\begin{proof}
+在 $i=0$ 时，命题 $[0=0]$ 等价于单位类型，故
+\[
+\mathsf{Gl}_f(0)
+\simeq\sum_{b:B}\fib_f(b)
+=\sum_{b:B}\sum_{a:A}(f(a)=b)
+\simeq A.
+\]
+最后一个等价将 $(b,a,p)$ 送到 $a$，逆为 $a\mapsto(f(a),a,\refl)$，逆同伦由路径归纳给出。在 $i=1$ 时，$[1=0]$ 为空，因此从它到任意类型的函数类型可缩，得到 $\mathsf{Gl}_f(1)\simeq B$。
+
+对于 $a:A$，沿全部 $i$ 定义元素
+\[
+\bigl(f(a),\lambda\phi.(a,\refl)\bigr):\mathsf{Gl}_f(i).
+\]
+它在初始端对应 $a$，在终端对应 $f(a)$。提升唯一性将其终点与协变传输识别，故传输为 $f$。
+\end{proof}
+
+\section{粘合重建任意区间族}
+\begin{theorem}[粘合逆比较]
+在上述封闭性与顶点检测条件下，一个空间值族 $F:\Int\to\Sp$ 等价于 $\mathsf{Gl}_f$，其中 $f:F(0)\to F(1)$ 为其协变传输。
+\end{theorem}
+\begin{proof}
+固定 $i:\Int$ 与 $z:F(i)$。形状函数 $r\mapsto r\vee i$ 从 $i$ 走到 $1$，其上的传输记作 $t_i:F(i)\to F(1)$。令 $b=t_i(z)$。
+
+还需构造 $[i=0]\to\fib_f(b)$。在假设 $i=0$ 下，$z:F(0)$，$t_i=f$，因此 $(z,\refl)$ 是 $f$ 在 $b=f(z)$ 处的纤维点。由此得到纤维映射
+\[
+\alpha_i:F(i)\to\mathsf{Gl}_f(i),
+\qquad z\longmapsto\bigl(t_i(z),\lambda\phi.(z,\refl)\bigr).
+\]
+式中第二分量仅在端面假设下使用 $z$ 的初始纤维类型，因而类型正确。
+
+在 $i=0$ 处，$\alpha_0$ 是映射
+$z\mapsto(f(z),z,\refl)$，前一命题已证明它为等价。在 $i=1$ 处，$t_1$ 为恒等传输，而第二分量唯一，所以 $\alpha_1$ 也为等价。顶点检测定理于是给出每个 $\alpha_i$ 为等价。普通单价性与函数外延性将逐纤维等价识别为族之间的路径。
+\end{proof}
+\begin{remark}
+这给出有向单价性的一维内部证明：从箭头取传输，再对函数粘合，恢复原族；从函数粘合再取传输，也恢复原函数。需要三角形上的相容时，还必须使用三空间、两函数的粘合或高阶比较定理。仅完成区间上的逆比较，尚不足以证明 Segal 条件。
+\end{remark}
+
+\section{空间宇宙的 Segal 条件}
+\begin{theorem}[空间对象的相容合成]\label{thm:spaces-segal}
+定理\ref{thm:higher-directed}中的 $\Sp$ 满足全部内部脊柱条件，因而是合成预范畴。
+\end{theorem}
+\begin{proof}
+对于每个 $n$，考虑图
+\[
+\begin{tikzcd}[column sep=large]
+\Sp^{\Delta^n}\ar[r]\ar[d,"\theta_n"',"\simeq"]&\Sp^{I[n]}\ar[d,"\simeq"]\\
+\mathsf{Fun}_n\ar[r,"\cong"']&
+\mathsf{Fun}_1\times_{\Sp}\cdots\times_{\Sp}\mathsf{Fun}_1.
+\end{tikzcd}
+\]
+右侧竖映射由一维比较在脊柱各边上取拉回获得。底部只是把函数链拆成相邻函数，逆向将这些函数按相同端点重新组成链，因此为等价。比较定理在面映射中的相容性保证方形同伦交换。其余三条边为等价，故顶部为等价。
+
+所有比较都在任意语境中成立，所以得到内部条件，而不仅是外部对象空间上的等价。
+\end{proof}
+\begin{proposition}[合成对应函数复合]
+若箭头 $a:A\to_\Sp B$、$b:B\to_\Sp C$ 分别对应函数 $f,g$，则 $b\circ a$ 对应 $g\circ f$。恒等箭头对应恒等函数。
+\end{proposition}
+\begin{proof}
+在 $n=2$ 的比较下，一个三角形对应两个相邻函数。限制到长边对应删除中间顶点，因此按函数链的面运算得到复合 $g\circ f$。退化插入恒等，给出第二断言。
+\end{proof}
+
+\section{空间宇宙的完备性}
+\begin{lemma}[可逆箭头与等价函数]
+在 $\Sp$ 中，箭头可逆当且仅当对应函数为等价。
+\end{lemma}
+\begin{proof}
+若箭头有逆，复合对应函数复合，故对应函数有两侧拟逆。反之，若 $f:A\to B$ 是等价，取其拟逆 $g$，有向单价性将 $g$ 变成箭头。两侧函数复合与恒等的同伦，通过映射类型等价的逆传回箭头复合与恒等之间的路径。因此原箭头有两侧逆。
+\end{proof}
+\begin{theorem}[空间范畴]\label{thm:spaces-category}
+普遍协变族的底 $\Sp$ 是合成范畴，其对象为小空间，且
+\[
+\Hom_\Sp(A,B)\simeq(A\to B).
+\]
+\end{theorem}
+\begin{proof}
+Segal 条件由定理\ref{thm:spaces-segal}给出。可逆箭头与等价函数的引理给出
+\[
+(A\cong_\Sp B)\simeq(A\simeq B).
+\]
+普遍族的普通单价性又给出 $(A=_\Sp B)\simeq(A\simeq B)$。两条比较与典范 $\idtoiso$ 相容：在常路径处它们都给出恒等函数，路径归纳保证一般相容。因此 $\idtoiso$ 是等价，$\Sp$ 完备。
+\end{proof}
+\begin{remark}
+证明分别使用了高阶有向单价性与普通单价性。前者建立合成及其相容，后者把可逆箭头识别为对象路径。遗漏其中任一部分，都不能得到完整的合成范畴结论。
+\end{remark}
+
+\section{直化与反直化}
+\begin{definition}
+将 $B$ 上的小协变族分类为函数 $B\to\Sp$，称为直化。将函数 $B\to\Sp$ 拉回普遍族，称为反直化。
+\end{definition}
+\begin{proposition}
+若 $B$ 是合成范畴，直化得到的内部函数自动是函子。其在箭头 $f:x\to y$ 上的作用，就是原族的协变函数 $f_*:E(x)\to E(y)$。
+\end{proposition}
+\begin{proof}
+$B$ 与 $\Sp$ 均为合成范畴，所以内部函数自动保持单形及其合成。分类拉回图把普遍族沿对应箭头的提升识别为原族沿 $f$ 的提升，故有向单价性下的函数恰为 $f_*$。
+\end{proof}
+\begin{remark}
+该对应解释了为什么左纤维化表示空间值协变函子。它同时规定对象、箭头与全部相容，而不只是建立底对象集到空间集合的一一对应。
+\end{remark}
+
+\section{空间范畴中的基本普遍构造}
+\begin{proposition}[终对象、乘积与指数]
+$\Sp$ 的终对象为单位空间，乘积由类型乘积给出，指数对象为函数类型：
+\[
+\Hom_\Sp(X,B^A)\simeq\Hom_\Sp(X\times A,B).
+\]
+\end{proposition}
+\begin{proof}
+有向单价性把映射类型换成函数类型。$X\to\one$ 可缩；函数到乘积等价于两个分量函数；柯里化给出指数公式。它们在参数中自然，所以分别满足终对象、乘积和指数的普遍性质。
+\end{proof}
+\begin{proposition}[空间中的同伦拉回]
+对于函数 $f:A\to Z$、$g:B\to Z$，类型
+\[
+\sum_{a:A}\sum_{b:B}(f(a)=g(b))
+\]
+为 $\Sp$ 中的拉回。
+\end{proposition}
+\begin{proof}
+上一章已经逐分量证明该类型的函数空间满足同伦拉回的锥公式。再用有向单价性将函数空间换为 $\Sp$ 中的映射类型，即得范畴论的拉回性质。
+\end{proof}
+\source{本章定义\ref{def:directed-univalence}与定理\ref{thm:spaces-category}分别对应 Riehl 报告定义 7.1 与推论 7.2。两种证明路线分别见\cite{CavalloRiehlSattler,GratzerWeinbergerBuchholtz}；其前提与内部计算在本章中分开列明。}

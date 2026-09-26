@@ -1,0 +1,8 @@
+\title{闭区间上的连续函数 Riemann 可积}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{f:[a,b]\to\mathbb R} [连续](00E2)，#{a<b}。则 #{f} [Riemann 可积](0A3B)。}
+\p{\strong{证明。}由[极值定理](0A3A)，#{f} 有界。先证它一致连续：给定 #{\varepsilon>0}，在每个 #{x} 处取 #{r_x>0}，使 #{|y-x|<2r_x} 时 #{|f(y)-f(x)|<\varepsilon /2}。利用[闭区间紧性](0A39)，有限个 #{B(x_j,r_{x_j})} 覆盖区间，令 #{\delta=\min_jr_{x_j}}。若 #{|u-v|<\delta}，选含 #{u} 的一个球，则 #{u,v} 均落在对应的二倍球中，故 #{|f(u)-f(v)|<\varepsilon}。}
+\p{取网格长度小于 #{\delta} 的分割，每段上的振幅至多 #{\varepsilon}，于是上和与下和之差至多 #{\varepsilon(b-a)}。应用积分的可积判据即可。}

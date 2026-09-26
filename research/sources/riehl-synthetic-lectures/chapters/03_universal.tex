@@ -1,0 +1,175 @@
+\chapter{泛性质、极限与伴随}
+\section{用映射刻画对象}
+\begin{definition}[始对象与终对象]
+范畴 $C$ 中的对象 $0$ 为始对象，是指每个集合 $\Hom_C(0,x)$ 恰有一个元素。对象 $1$ 为终对象，是指每个 $\Hom_C(x,1)$ 恰有一个元素。
+\end{definition}
+\begin{lemma}[泛对象的唯一性]
+任意两个始对象之间存在唯一同构；任意两个终对象之间也存在唯一同构。
+\end{lemma}
+\begin{proof}
+设 $i,j$ 均始。分别取唯一态射 $u:i\to j$、$v:j\to i$。由于 $\Hom(i,i)$ 只有一个元素，$vu=\id_i$；同理 $uv=\id_j$。任一同构的正向映射也必须等于 $u$。终对象的论证对偶。
+\end{proof}
+\begin{definition}[积与余积]
+对象 $x,y$ 的积为带投影 $p_x:p\to x$、$p_y:p\to y$ 的对象 $p$，使映射
+\[
+\Hom_C(t,p)\longrightarrow\Hom_C(t,x)\times\Hom_C(t,y)
+\]
+对每个 $t$ 是双射。余积通过反转箭头定义，通常记为 $x\amalg y$。
+\end{definition}
+\begin{example}
+集合的积是笛卡尔积，余积是不交并。群的积是直积，但余积一般为自由积，不能把集合的不交并直接当作群。泛性质确定我们要保持哪些映射关系，而非预先规定底层对象的具体形状。
+\end{example}
+\begin{proposition}
+积在保持投影的同构意义下唯一。
+\end{proposition}
+\begin{proof}
+设 $(p,p_x,p_y)$、$(q,q_x,q_y)$ 均满足泛性质。由 $p$ 的泛性质得到唯一 $a:q\to p$，由 $q$ 的泛性质得到唯一 $b:p\to q$，分别保持投影。于是 $ab$ 与 $\id_p$ 具有相同的两个投影，由唯一性 $ab=\id_p$；同理 $ba=\id_q$。
+\end{proof}
+
+\section{拉回与一般极限}
+\begin{definition}[范畴中的拉回]
+给定 $f:x\to z$、$g:y\to z$，其拉回为交换方块
+\[
+\begin{tikzcd}
+p\ar[r,"q"]\ar[d,"r"']&y\ar[d,"g"]\\
+x\ar[r,"f"']&z
+\end{tikzcd}
+\]
+使每对满足 $fu=gv$ 的态射 $u:t\to x$、$v:t\to y$ 唯一经过 $p$。等价地，对每个 $t$，有自然双射
+\[
+\Hom(t,p)\cong\Hom(t,x)\times_{\Hom(t,z)}\Hom(t,y).
+\]
+\end{definition}
+\begin{lemma}[拉回的粘贴]
+考虑两个横向相接的交换方块。若右方块和左方块都是拉回，则外矩形为拉回；若右方块和外矩形为拉回，则左方块为拉回。
+\end{lemma}
+\begin{proof}
+把图中的每个对象 $w$ 替换成 $\Hom(t,w)$。拉回泛性质把结论归结为集合拉回的有序对运算。第一种情形，先由外侧的相容数据唯一恢复右方块左上角，再唯一恢复左方块左上角。第二种情形，给定左方块下侧与右侧数据，先组成外矩形的相容数据，通过外矩形取得唯一提升；其经右上侧的值由右方块的唯一性确定，因而恰为所要求的右侧数据。对每个 $t$ 都成立，所以原图满足相同泛性质。
+\end{proof}
+\begin{definition}[锥与极限]
+设 $J$ 为小范畴，$D:J\to C$ 为图表。顶点为 $t$ 的锥是自然变换 $\Delta t\Rightarrow D$，其中 $\Delta t$ 为常值函子。极限为代表锥函子的对象 $L$，即
+\[
+\Hom_C(t,L)\cong\Nat(\Delta t,D)
+\]
+对 $t$ 自然成立。余极限对偶地代表从 $D$ 出发的余锥。
+\end{definition}
+\begin{example}
+离散二对象图表的极限是积。图表 $x\to z\leftarrow y$ 的极限是拉回。两个平行态射 $f,g:x\rightrightarrows y$ 的极限是等化子，具体在集合中为 $\{a\in x\mid f(a)=g(a)\}$。
+\end{example}
+\begin{proposition}[积与等化子构造极限]
+若 $C$ 有小积与等化子，则有所有小极限。
+\end{proposition}
+\begin{proof}
+对 $D:J\to C$ 构造
+\[
+P=\prod_{j\in\Ob J}D(j),
+\qquad Q=\prod_{\alpha:i\to j}D(j).
+\]
+有两个映射 $P\rightrightarrows Q$：在 $\alpha:i\to j$ 分量上，分别为 $D(\alpha)\pi_i$ 与 $\pi_j$。令 $L$ 为其等化子。一个 $t\to L$ 等同于一族 $u_j:t\to D(j)$，满足每个 $D(\alpha)u_i=u_j$，这正是锥。因此 $L$ 满足极限的泛性质。
+\end{proof}
+
+\section{指数对象}
+\begin{definition}[笛卡尔闭范畴]
+一个有有限积的范畴称为笛卡尔闭，若每个 $A,B$ 有指数对象 $B^A$，配备评价映射 $\ev:B^A\times A\to B$，使
+\[
+\Hom(X,B^A)\cong\Hom(X\times A,B)
+\]
+对 $X$ 自然成立。
+\end{definition}
+\begin{proposition}
+$\Set$ 是笛卡尔闭范畴，$B^A$ 为函数集合。
+\end{proposition}
+\begin{proof}
+给 $f:X\to B^A$ 配上 $\widehat f(x,a)=f(x)(a)$。反之，给 $h:X\times A\to B$ 配上 $\lambda h(x)(a)=h(x,a)$。两者互逆，并与对 $X$ 的前复合交换。
+\end{proof}
+\begin{remark}
+普通拓扑空间配上任意集合函数的紧开拓扑并不总形成笛卡尔闭范畴。选择紧生成空间可以修正笛卡尔闭性，但后文还需要所有切片的笛卡尔闭性。单纯集合作为预层范畴同时提供这些结构。
+\end{remark}
+
+\section{伴随与单位、余单位}
+\begin{definition}[伴随]
+函子 $L:C\to D$ 与 $R:D\to C$ 构成伴随 $L\dashv R$，若有对 $c,d$ 自然的双射
+\[
+\Phi_{c,d}:\Hom_D(Lc,d)\cong\Hom_C(c,Rd).
+\]
+$L$ 称左伴随，$R$ 称右伴随。
+\end{definition}
+\begin{example}
+自由群函子 $F:\Set\to\mathbf{Grp}$ 左伴随于遗忘函子 $U$，因为从自由群 $F(X)$ 到群 $G$ 的同态由生成元 $X$ 的像唯一确定。指数对象则表达伴随 $-\times A\dashv(-)^A$。
+\end{example}
+\begin{definition}[单位与余单位]
+由伴随双射定义
+\[
+\eta_c=\Phi_{c,Lc}(\id_{Lc}):c\to RLc,
+\qquad
+\varepsilon_d=\Phi^{-1}_{Rd,d}(\id_{Rd}):LRd\to d.
+\]
+它们分别称为单位与余单位。
+\end{definition}
+\begin{proposition}[伴随的转置公式]
+对 $f:Lc\to d$、$g:c\to Rd$，有
+\[
+\Phi(f)=Rf\circ\eta_c,
+\qquad
+\Phi^{-1}(g)=\varepsilon_d\circ Lg.
+\]
+此外，三角恒等式成立：
+\[
+\varepsilon_{Lc}\circ L\eta_c=\id_{Lc},
+\qquad R\varepsilon_d\circ\eta_{Rd}=\id_{Rd}.
+\]
+\end{proposition}
+\begin{proof}
+第一式由 $\Phi$ 对 $d$ 的自然性应用于 $\id_{Lc}$ 得到。第二式对偶。将 $f=\id_{Lc}$ 代入 $\Phi^{-1}\Phi(f)=f$ 得到第一条三角恒等式；对 $g=\id_{Rd}$ 使用另一复合得到第二条。单位和余单位的自然性同样来自双射对两个变量的自然性。
+\end{proof}
+\begin{proposition}[右伴随保持极限]
+若 $L\dashv R$，且 $D:J\to D$ 的极限存在，则 $R(\limm D)$ 是 $RD$ 的极限。
+\end{proposition}
+\begin{proof}
+对任意 $c$，依次使用伴随和极限泛性质，得到
+\begin{align*}
+\Hom_C(c,R\limm D)
+&\cong\Hom_D(Lc,\limm D)\\
+&\cong\Nat(\Delta Lc,D)\\
+&\cong\Nat(\Delta c,RD).
+\end{align*}
+最后一步逐分量转置；自然性保证图表相容条件也被转置。于是得到所要求的表示关系。
+\end{proof}
+
+\section{切片中的三个伴随}
+\begin{definition}[复合与基变换]
+若范畴 $C$ 有拉回，映射 $f:A\to B$ 给出函子
+\[
+\Sigma_f:C/A\to C/B,
+\qquad (E\xrightarrow pA)\mapsto(E\xrightarrow{fp}B),
+\]
+以及拉回函子 $f^*:C/B\to C/A$。
+\end{definition}
+\begin{proposition}
+总有伴随 $\Sigma_f\dashv f^*$。
+\end{proposition}
+\begin{proof}
+一个 $B$ 上的态射 $E\to Y$，其中 $E\to B$ 为 $fp$，正是满足交换三角形的映射。由拉回泛性质，它唯一对应一个 $A$ 上的态射 $E\to A\times_BY$。这一对应对 $E,Y$ 的映射自然。
+\end{proof}
+\begin{definition}[局部笛卡尔闭性]
+范畴 $C$ 称为局部笛卡尔闭，若有有限极限，且每个拉回函子 $f^*$ 还有右伴随 $\Pi_f$。于是
+\[
+\Sigma_f\dashv f^*\dashv\Pi_f.
+\]
+\end{definition}
+\begin{proposition}[集合中的依赖积右伴随]
+在集合范畴中，若 $E\to A$ 对应族 $(E_a)$，则 $\Pi_fE\to B$ 的 $b$-纤维为
+\[
+(\Pi_fE)_b=\prod_{a\in f^{-1}(b)}E_a.
+\]
+\end{proposition}
+\begin{proof}
+设 $Y\to B$ 的纤维为 $Y_b$。$A$ 上的映射 $f^*Y\to E$ 给出函数 $Y_{f(a)}\to E_a$。按相同 $b$ 分组，再柯里化，等价于
+\[
+Y_b\to\prod_{a\in f^{-1}(b)}E_a.
+\]
+这正是 $B$ 上的映射 $Y\to\Pi_fE$。各步都是自然双射，故给出右伴随。
+\end{proof}
+\begin{remark}
+这三个伴随把第一章中的依赖和、代入、依赖积统一起来。以后把集合替换为空间时，公式形状保持不变，但产品、纤维和相等必须按同伦意义解释。
+\end{remark}

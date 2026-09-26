@@ -1,0 +1,15 @@
+\title{依赖积与依赖和的有序对重组}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 1 章}
+
+\p{设 #{A} 为集合，#{B_a} 为 #{A}-指标集合族，#{C_{a,b}} 为依赖于 #{a\in A}、#{b\in B_a} 的集合族。下式使用[依赖和](0304)及[依赖积](030A)。}
+
+\p{存在自然双射}
+
+##{\prod_{a\in A}\sum_{b\in B_a}C_{a,b}
+\cong
+\sum_{f\in\prod_a B_a}\prod_{a\in A} C_{a,f(a)}.}
+
+\p{\strong{证明。}若 #{u(a)=(b_a,c_a)}，令 #{f(a)=b_a}，#{v(a)=c_a}，得到 #{(f,v)}。反之，由 #{(f,v)} 得到 #{a\mapsto(f(a),v(a))}。两次拆分和重新组合后，各个坐标保持不变。这一双射本身不需要选择公理，因为左边已给出对每个 #{a} 的具体有序对。}

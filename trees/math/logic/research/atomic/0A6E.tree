@@ -1,0 +1,9 @@
+\title{Cantor–Schröder–Bernstein 定理}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[基数背景](007F)}
+
+\p{设集合间有[单射](00G0) #{f:A\to B} 与 #{g:B\to A}，则 #{A,B} 间存在双射。}
+\p{\strong{证明。}令 #{A_0=A\setminus g(B)}、#{A_{n+1}=g(f(A_n))}，并令 #{C=\bigcup_{n\geq 0}A_n}。定义 #{h:A\to B}：在 #{C} 上取 #{h=f}，在 #{A\setminus C} 上取 #{h=g^{-1}}。后者有意义，因为 #{A\setminus C\subseteq g(B)} 且 #{g} 单射。}
+\p{有 #{g(f(C))=C\setminus A_0}，故 #{g} 将 #{B\setminus f(C)} 双射到 #{A\setminus C}。因此两段分别双射到不交的 #{f(C)} 与 #{B\setminus f(C)}，合起来就是所求双射。}

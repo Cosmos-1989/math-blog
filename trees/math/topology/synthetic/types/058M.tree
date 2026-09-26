@@ -1,0 +1,26 @@
+\title{同底总空间映射的逐纤维等价判据}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 11 章}
+
+\p{设 #{B,C:A\to\mathcal U} 是同一底类型上的类型族。}
+
+\p{前置：[函数等价性的可缩纤维定义](05Z3)、[依赖和中的路径与传输比较](054H)、[等价保持截断层次](058L)。}
+
+\p{给定 #{u:\prod_{a:A}(B(a)\to C(a))}，令}
+
+##{T:\sum_aB(a)\to\sum_aC(a),\qquad T(a,b)=(a,u_a(b)).}
+
+\p{则 #{T} 是等价，当且仅当每个 #{u_a} 是等价。}
+
+\p{\strong{证明。}固定 #{(a,c)}。由依赖和路径公式，#{\mathsf{fib}_T(a,c)} 的元素等价于}
+
+##{\sum_{a':A}\sum_{b:B(a')}\sum_{p:a'=a}
+\bigl(\mathsf{tr}_C(p)(u_{a'}b)=c\bigr).}
+
+\p{对 #{p} 进行基点路径归纳，底点 #{a'} 与路径 #{p} 一起消去，得到等价}
+
+##{\mathsf{fib}_T(a,c)\simeq\sum_{b:B(a)}(u_a(b)=c)=\mathsf{fib}_{u_a}(c).}
+
+\p{等价保持可缩性，故所有总空间纤维可缩恰等价于全部纤维映射的纤维可缩。}

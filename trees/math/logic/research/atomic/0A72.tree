@@ -1,0 +1,13 @@
+\title{力迫关系的递归定义}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Asperó–Schindler，§3.3](007F)}
+
+\p{固定传递 ZFC 模型 #{M}、其中的[力迫偏序](00R4) #{\mathbb P}，并取 #{M} 中的[名字](00R9) #{\tau,\sigma}。以下递归与量词均在 #{M} 中进行。原子力迫关系由名字秩的同时递归给出：}
+\ul{
+\li{#{p\Vdash\tau\in\sigma}，若集合 #{\{q\leq p:\exists(\rho,r)\in\sigma\ (q\leq r\ \land\ q\Vdash\tau=\rho)\}} 在 #{p} 以下[稠密](00R5)。}
+\li{#{p\Vdash\tau=\sigma}，若对每个 #{(\rho,r)\in\tau} 及 #{q\leq p,r} 都有 #{q\Vdash\rho\in\sigma}，且交换 #{\tau,\sigma} 后同样成立。}
+}
+\p{按[公式](00CC)复杂度继续递归：#{p\Vdash\varphi\wedge\psi} 指两者都被 #{p} 力迫；#{p\Vdash\neg\varphi} 指没有 #{q\leq p} 力迫 #{\varphi}；#{p\Vdash\forall x\,\varphi(x)} 指对每个名字 #{\rho\in M} 都有 #{p\Vdash\varphi(\rho)}。其他联结词和存在量词通过经典逻辑等价式消去。}
+\p{名字是集合，名字层级可为真类；“对全部名字”是集合论公式的内部量词。与泛型扩张满足关系的对应由[真值引理](00RA)给出。}

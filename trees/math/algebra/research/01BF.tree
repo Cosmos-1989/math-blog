@@ -4,12 +4,8 @@
 \author{author}
 \meta{source}{[Wemyss，§2.3.2 的极小模型背景](01A3)}
 
-\p{固定域 #{k}，设 #{V} 是分次[向量空间](00D3)。#{A_\infty} 结构由次数 #{2-n} 的多线性映射 #{m_n:V^{\otimes n}\to V}（#{n\geq1}）给出，满足 Stasheff 恒等式}
-##{\sum_{\substack{r+s+t=n\\s\geq1}}(-1)^{r+st}
-m_{r+1+t}(1^{\otimes r}\otimes m_s\otimes1^{\otimes t})=0.}
-\p{[张量运算](0122)采用 Koszul 符号：交换次数 #{a,b} 的齐次算子产生 #{(-1)^{ab}}。极小指 #{m_1=0}。严格含幺指存在 #{1\in V^0}，满足 #{m_2(1,x)=x=m_2(x,1)}，且 #{n\ne2} 时含单位输入的 #{m_n} 全为零。}
-\p{[DG 代数](019A)是 #{m_1=d,m_2=\text{乘法},m_n=0\ (n\geq3)} 的特例。#{A_\infty} 态射由次数 #{1-n} 的分量 #{f_n} 组成，遵守与上述乘法兼容的恒等式；具体地，从 #{(V,m)} 到 #{(V',m')} 的兼容式为}
-##{\sum_{\substack{r+s+t=n\\s\geq1}}(-1)^{r+st}f_{r+1+t}(1^{\otimes r}\otimes m_s\otimes1^{\otimes t})
-=\sum_{\substack{k\geq1\\i_1+\cdots+i_k=n}}(-1)^{\sum_{j=1}^k(k-j)(i_j-1)}
-m'_k(f_{i_1}\otimes\cdots\otimes f_{i_k}).}
-\p{严格含幺态射还要求 #{f_1(1)=1}，且 #{n>1} 时含单位输入的 #{f_n} 为零。其线性分量 #{f_1} 诱导上同调同构时称拟同构。}
+\p{固定域 #{k}，设 #{V=\bigoplus_{j\in\mathbb Z}V^j} 是分次[向量空间](00D3)，#{V^j} 中的元素称次数 #{j} 的齐次元素。#{A_\infty} 结构由次数 #{2-n} 的多线性映射 #{m_n:V^{\otimes n}\to V}（#{n\geq 1}）给出，即齐次输入的输出次数为输入次数之和加 #{2-n}；这些运算满足 Stasheff 恒等式}
+##{\sum_{\substack{r+s+t=n\\s\geq 1}}(-1)^{r+st}
+m_{r+1+t}(1^{\otimes r}\otimes m_s\otimes 1^{\otimes t})=0.}
+\p{[张量运算](0122)采用 Koszul 符号：交换次数 #{a,b} 的齐次算子产生 #{(-1)^{ab}}。极小指 #{m_1=0}。严格含幺指存在 #{1\in V^0}，满足 #{m_2(1,x)=x=m_2(x,1)}，且 #{n\ne 2} 时含单位输入的 #{m_n} 全为零。}
+\p{[DG 代数](019A)是 #{m_1=d,m_2=\text{乘法},m_n=0\ (n\geq 3)} 的特例。与全部高阶乘法相容的映射见[严格含幺 #{A_\infty} 态射](0AL9)。}

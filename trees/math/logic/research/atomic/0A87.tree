@@ -1,0 +1,10 @@
+\title{有限测度由生成集合代数唯一确定}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{设 #{\mathcal C} 是 #{X} 上的集合代数，即包含 #{X} 且对有限并和补封闭。若两项有限[测度](00Q2) #{\mu,\nu} 在 #{\mathcal C} 上相等，则它们在生成的[σ-代数](00Q0) #{\sigma(\mathcal C)} 上相等。}
+\p{\strong{证明。}称集合族为 λ-系统，若含 #{X}、对补封闭、对两两不交的可数并封闭。令 #{\mathcal D} 为包含 #{\mathcal C} 的最小 λ-系统。λ-系统对嵌套差封闭：若 #{A\subseteq B} 都在其中，则 #{B\setminus A=(B^c\cup A)^c} 也在其中。}
+\p{固定 #{A\in\mathcal C}，集合族 #{\{B:A\cap B\in\mathcal D\}} 是 λ-系统：补集步骤使用 #{A\setminus(A\cap B)}，不交并步骤逐项取交。它包含 #{\mathcal C}，因为集合代数对交封闭，故它包含 #{\mathcal D}。再固定 #{B\in\mathcal D}，同理 #{\{A:A\cap B\in\mathcal D\}} 是包含 #{\mathcal C} 的 λ-系统，遂包含 #{\mathcal D}。因此 #{\mathcal D} 对交封闭。结合补及不交可数并，把任意可数并逐项扣除此前各项，便知 #{\mathcal D} 是 σ-代数，故 #{\mathcal D=\sigma(\mathcal C)}。}
+\p{最后，#{\{A\in\sigma(\mathcal C):\mu(A)=\nu(A)\}} 是 λ-系统：两者有相同有限总质量，保证补集步骤；可数可加性保证不交并步骤。它包含 #{\mathcal C}，因而包含 #{\mathcal D}，结论成立。}

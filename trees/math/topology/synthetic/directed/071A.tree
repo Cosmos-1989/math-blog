@@ -1,0 +1,26 @@
+\title{二元运算空间的结构同态公式}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 21 章；[引用](0211)}
+
+\p{令 #{\mathsf{Magma}} 为[二元运算空间范畴](0719)，使用[箭头方形公式](0717)和[同伦拉回映射公式](0718)。此处不施加结合律或单位律。 所用基础为[函数外延性](050K)。}
+
+\p{#{{\mathsf{Magma}}} 为合成范畴，且}
+
+##{{\operatorname{Hom}}_{{\mathsf{Magma}}}((A,\mu),(B,\nu))
+\simeq
+\sum_{f:A\to B}\prod_{x,y:A}
+\bigl(f(\mu(x,y))=\nu(fx,fy)\bigr).}
+
+\p{\strong{证明。}它是合成范畴的同伦拉回，因此为合成范畴。取映射空间后，拉回条件要求箭头范畴中的方形，其左边为 #{f\times f}，右边为 #{f}：}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}
+A\times A\arrow[r,"\mu"]\arrow[d,"f\times f"']&A\arrow[d,"f"]\\
+B\times B\arrow[r,"\nu"']&B.
+\end{tikzcd}
+}}
+
+\p{由引理[箭头范畴的映射是高阶交换方形](0717)，其相容类型为 #{f\mu=\nu(f\times f)}。函数外延性把该函数等式等价地写成逐点的依赖积。因此得到所述公式。}

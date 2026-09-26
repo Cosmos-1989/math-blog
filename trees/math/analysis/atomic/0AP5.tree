@@ -1,0 +1,10 @@
+\title{一致 Cauchy 实函数列的一致极限}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{S} 为集合，#{f_n:S\to\mathbb R} 为函数列。称其一致 Cauchy，若对每个 #{\varepsilon>0}，存在 #{N}，使所有 #{m,n\ge N} 及 #{s\in S} 都满足 #{|f_n(s)-f_m(s)|<\varepsilon}。这样的函数列存在一致极限 #{f:S\to\mathbb R}，即对每个 #{\varepsilon>0}，存在 #{N}，使 #{n\ge N}、#{s\in S} 时 #{|f_n(s)-f(s)|<\varepsilon}。}
+\p{\strong{证明。}由[实数的 Cauchy 完备性](0A37)，对每个 #{s} 可定义 #{f(s)=\lim_n f_n(s)}。在一致 Cauchy 条件中取误差 #{\varepsilon /2}，再对固定的 #{n\ge N} 和 #{s} 令 #{m\to\infty}，得到 #{|f_n(s)-f(s)|\le\varepsilon /2<\varepsilon}。#{N} 与 #{s} 无关，故收敛一致。}
+\p{特别地，若 #{|f_{n+1}(s)-f_n(s)|\le 2^{-n}} 对所有 #{n,s} 成立，则三角不等式与几何级数给出}
+##{|f_m(s)-f_n(s)|\le\sum_{j=n}^{m-1}2^{-j}\le 2^{1-n}\qquad(m>n).}
+\p{这同时给出一致 Cauchy 性及极限误差界 #{|f(s)-f_n(s)|\le 2^{1-n}}。}

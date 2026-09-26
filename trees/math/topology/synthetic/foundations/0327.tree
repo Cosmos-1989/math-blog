@@ -1,0 +1,23 @@
+\title{拉回方块的横向粘贴}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 3 章}
+
+\p{在范畴 #{\mathcal C} 中考虑下列交换图；使用[拉回](0326)的唯一提升性质。}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+A\arrow[r,"u"]\arrow[d,"p"']&B\arrow[r,"v"]\arrow[d,"q"']&C\arrow[d,"r"]\\
+D\arrow[r,"s"']&E\arrow[r,"t"']&F
+\end{tikzcd}
+}}
+
+\p{交换等式为 #{qu=sp}、#{rv=tq}。若左右两个方块均为拉回，则外矩形为拉回；若右方块和外矩形为拉回，则左方块为拉回。}
+
+\p{证明第一项：给定 #{d:T\to D}、#{c:T\to C}，满足 #{tsd=rc}。右方块给出唯一 #{b:T\to B}，使 #{qb=sd}、#{vb=c}；左方块再给出唯一 #{a:T\to A}，使 #{pa=d}、#{ua=b}。因此 #{vua=c}，且任何外矩形提升都经过这两个唯一步骤。}
+
+\p{证明第二项：给定 #{d:T\to D}、#{b:T\to B}，满足 #{sd=qb}。令 #{c=vb}，外矩形给出唯一 #{a:T\to A}，使 #{pa=d}、#{vua=vb}。由交换性 #{qua=sd=qb}，而右方块的唯一性推出 #{ua=b}。任何左方块提升都是此外矩形提升，故唯一。}
+
+\p{等价的测试对象证明是：把每个对象 #{W} 替换成 #{\operatorname{Hom}_{\mathcal C}(T,W)} 后，就是集合拉回中相容有序对的恢复；对每个 #{T} 成立即是原图的泛性质。}

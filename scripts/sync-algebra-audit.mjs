@@ -73,3 +73,4 @@ const manifest = {
 write("research/icm2026-algebra.json", manifest);
 write("research/site-evergreen-audit.json", audit);
 console.log(JSON.stringify({ reports: papers.length, trackedPages: notes.size, reviews: Object.keys(audit.reviews).length }));
+await import('./sync-note-polish.mjs');

@@ -1,0 +1,12 @@
+\title{模型同态保持全部项运算}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{h:I\to J} 为有限积范畴中同一代数理论的[模型同态](00I9)，#{t} 为语境 #{\Gamma=(x_1,\ldots,x_n)} 中的项。对[语境项解释](00I7)，有}
+##{h\circ[\Gamma\mid t]^I=[\Gamma\mid t]^J\circ h^n.}
+\p{\strong{证明。}对项的构造归纳。变量情形由 #{h\pi_j=\pi_jh^n} 成立。若 #{t=f(t_1,\ldots,t_k)}，对每个子项使用归纳假设及配对的唯一性，再使用 #{h f^I=f^J h^k}，得到}
+##{h f^I\langle t_1^I,\ldots,t_k^I\rangle
+=f^J\langle h t_1^I,\ldots,h t_k^I\rangle
+=f^J\langle t_1^J,\ldots,t_k^J\rangle h^n.}
+\p{这里 #{t_j^I=[\Gamma\mid t_j]^I}。#{k=0} 时配对是到终对象的唯一态射，等式归结为同态保持常元。}

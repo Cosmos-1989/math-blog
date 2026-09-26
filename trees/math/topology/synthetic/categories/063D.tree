@@ -1,0 +1,22 @@
+\title{Yoneda 等价关于表示对象的变性}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
+
+\p{设 #{C} 为合成预范畴，#{F} 协变，#{c,c':C}；#{R_c=\operatorname{Hom}_C(c,-)}。可表族随表示对象反变，最终元素作用则协变。}
+
+\p{所需前置：[协变合成 Yoneda 引理](063B)、[预范畴上的协变作用满足函子律](062H)。}
+
+\p{若 #{a:c'\to c}，前复合给出 #{R_c\to R_{c'}}。由此诱导}
+
+##{\operatorname{Nat}_C(R_{c'},F)\to\operatorname{Nat}_C(R_c,F).}
+
+\p{在 Yoneda 等价下，该函数对应 #{a_*:F(c')\to F(c)}。}
+
+\p{\strong{证明。}
+若 #{u:F(c')} 对应 #{\alpha_x(f)=f_*u}，则复合后的变换在 #{g:c\to x} 处为}
+
+##{\alpha_x(g\circ a)=(g\circ a)_*u=g_*(a_*u).}
+
+\p{因此它对应的元素正是 #{a_*u}。特别在 #{x=c}、#{g=\operatorname{id}_c} 处求值，即得到 #{a_*u}。}

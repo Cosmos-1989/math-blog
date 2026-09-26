@@ -4,6 +4,13 @@
 \author{author}
 \meta{source}{[Braden--Proudfoot，§3，例3.3](01C1)}
 
-\p{设 #{\mathcal L} 是无环拟阵平坦格，给定多项式族 #{f_{FH}}，满足 #{f_{FF}=1} 及 #{\deg f_{FH}<(r(H)-r(F))/2}。则该族是[拟阵 KL 族](01CC)，当且仅当每个区间的[Z 多项式](01CD)满足}
+\p{设 #{\mathcal L} 是无环拟阵平坦格，给定多项式族 #{f_{FH}}，满足 #{f_{FF}=1} 及 #{\deg f_{FH}<(r(H)-r(F))/2}（#{F<H}）。则该族是[拟阵 KL 族](01CC)，当且仅当每个区间的[Z 多项式](01CD)满足}
 ##{t^{r(H)-r(F)}Z_{FH}(t^{-1})=Z_{FH}(t).}
-\p{“回文”在这里指以指定的区间秩为对称中心反演，而不只是忽略前后零项后系数对称。需要所有区间的条件；只检查整个格不足以替代完整递归数据。}
+\p{\strong{证明。}在[区间代数](0ALA)中令 #{\zeta_{FH}=1}，#{\mu=\zeta^{-1}} 为 [Möbius 函数](0ALB)。由定义 #{Z=\overline\zeta*f}，而 #{\chi=\mu*\overline\zeta}。因此}
+##{\overline Z=Z
+\quad\Longleftrightarrow\quad
+\zeta*\overline f=\overline\zeta*f
+\quad\Longleftrightarrow\quad
+\overline f=\mu*\overline\zeta*f=\chi*f.}
+\p{这正是 KL 递归；给定对角值和严格半秩次数界后，由[唯一性](01C6)确定该族。}
+\p{“回文”以指定的区间秩为反演次数，条件施加于每个区间。}

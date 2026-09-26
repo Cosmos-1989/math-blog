@@ -1,0 +1,19 @@
+\title{全忠实且本质满的范畴等价判据}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 2 章；[引用](0212)}
+
+\p{设 #{F:C\to D} 为函子。[等价](031H)、[全忠实](031B)及[本质满](031C)按各自定义理解；反映同构使用[全忠实函子的性质](031D)。}
+
+\p{在可作所需对象选择的集合论基础中，函子是等价，当且仅当它全忠实且本质满。}
+
+\p{\strong{证明。}先设 #{F} 有拟逆 #{G}，取自然同构 #{\theta:GF\Rightarrow\mathrm{id}_C}、#{\varepsilon:FG\Rightarrow\mathrm{id}_D}。若 #{Ff=Fg}，则 #{GFf=GFg}，由 #{\theta} 的自然性和可逆性得 #{f=g}，故 #{F} 忠实；同理由 #{\varepsilon} 得 #{G} 忠实。给定 #{u:Fx\to Fy}，令 #{v=\theta_y\circ Gu\circ\theta_x^{-1}:x\to y}。对 #{v} 的自然性给出 #{\theta_y\circ GFv=v\circ\theta_x=\theta_y\circ Gu}，消去 #{\theta_y} 得 #{GFv=Gu}，再由 #{G} 忠实得到 #{Fv=u}。所以 #{F} 全。本质满由 #{\varepsilon_d:FGd\cong d} 得到。}
+
+\p{反之，对每个 #{d\in D} 选定 #{Gd\in C} 及同构 #{\varepsilon_d:F(Gd)\to d}。对 #{v:d\to d'}，由全忠实性，存在唯一 #{Gv:Gd\to Gd'}，满足}
+
+##{F(Gv)=\varepsilon_{d'}^{-1}v\varepsilon_d.}
+
+\p{对恒等和复合代入此公式，再用忠实性，得到函子律。公式本身说明 #{\varepsilon:FG\Rightarrow\mathrm{id}_D} 自然。对 #{c\in C}，由全忠实性提升 #{\varepsilon_{Fc}:F(GFc)\to Fc}，得到同构 #{GFc\to c}。自然性同样由忠实性反映，故 #{GF\cong\mathrm{id}_C}。}
+
+\p{本质满只断言每个目标对象与像中的某个对象同构；构造拟逆需要把这些对象组织成一个选择。在使用[可缩数据](0580)的高阶语境中，唯一性连同高阶唯一性能够直接给出相容构造，不需要把任意选择强行视为自然选择。}

@@ -1,0 +1,10 @@
+\title{Euclidean 空间中的全微分}
+\date{2026-09-26}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{U\subseteq\mathbb R^m} 为开集，#{f:U\to\mathbb R^n}，#{a\in U}。若存在[线性映射](00GC) #{L:\mathbb R^m\to\mathbb R^n} 使}
+##{\lim_{h\to 0}\frac{\|f(a+h)-f(a)-Lh\|}{\|h\|}=0,}
+\p{则称 #{f} 在 #{a} 可微，全微分记为 #{Df_a=L}。此处使用 Euclidean 范数与[函数极限](0A30)，也可写成 #{f(a+h)=f(a)+Lh+o(\|h\|)}。}
+\p{\strong{唯一性。}若 #{L,M} 都满足条件，令 #{h=tv} 并取 #{t\to 0}，得到 #{(L-M)v=0}。对每个 #{v} 成立，故 #{L=M}。取 #{v=e_i} 还得到 #{Df_a(e_i)=\partial_i f(a)}，所以全微分的矩阵为[偏导数](0A32)组成的 Jacobian 矩阵。}
+\p{可微蕴含连续：若 #{e_i} 是标准坐标基，三角不等式给出 #{\|Lh\|\le\sum_i|h_i|\|Le_i\|\le(\sum_i\|Le_i\|)\|h\|_2}，故 #{Lh+o(\|h\|)\to 0}。}

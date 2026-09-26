@@ -1,0 +1,27 @@
+\title{集合拉回及其泛性质}
+\date{2026-09-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 1 章}
+
+\p{以下函数均为[集合函数](00G0)，复合从右向左读。}
+
+\p{给定 #{f:X\to A}、#{p:E\to A}，定义}
+
+##{X\times_AE=\{(x,e)\in X\times E\mid f(x)=p(e)\}.}
+
+\p{其投影组成交换方块}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+X\times_AE\arrow[r,"\pi_E"]\arrow[d,"\pi_X"']&E\arrow[d,"p"]\\
+X\arrow[r,"f"']&A.
+\end{tikzcd}
+}}
+
+\p{若 #{u:T\to X}、#{v:T\to E} 满足 #{fu=pv}，则存在唯一 #{w:T\to X\times_AE}，使得 #{\pi_Xw=u}、#{\pi_Ew=v}。}
+
+\p{\strong{证明。}只能定义 #{w(t)=(u(t),v(t))}。条件 #{fu=pv} 保证这个点属于拉回。两个投影条件成立；任一满足投影条件的映射都具有相同的两个坐标，故唯一。}
+
+\p{图的交换等式为 #{p\circ\pi_E=f\circ\pi_X}。}

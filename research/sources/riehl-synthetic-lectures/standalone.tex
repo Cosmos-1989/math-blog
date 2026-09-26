@@ -1,0 +1,6019 @@
+\documentclass[12pt,oneside,openany,fontset=none]{ctexbook}
+\usepackage[b5paper,left=20mm,right=18mm,top=21mm,bottom=21mm,headheight=14pt,headsep=7mm]{geometry}
+\IfFontExistsTF{Noto Serif CJK SC}{
+  \setCJKmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold},ItalicFont={Noto Serif CJK SC},BoldItalicFont={Noto Serif CJK SC Bold}]
+  \setCJKsansfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold},ItalicFont={Noto Serif CJK SC},BoldItalicFont={Noto Serif CJK SC Bold}]
+  \setCJKmonofont{Noto Sans Mono CJK SC}
+}{
+  \setCJKmainfont{FandolSong-Regular.otf}[BoldFont=FandolSong-Bold.otf,ItalicFont=FandolSong-Regular.otf,BoldItalicFont=FandolSong-Bold.otf]
+  \setCJKsansfont{FandolHei-Regular.otf}[BoldFont=FandolHei-Bold.otf,ItalicFont=FandolHei-Regular.otf,BoldItalicFont=FandolHei-Bold.otf]
+  \setCJKmonofont{FandolFang-Regular.otf}
+}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing}
+\usepackage{booktabs,longtable,array,enumitem,microtype,etoolbox,needspace}
+\usepackage[unicode,hidelinks,bookmarksnumbered,pdftitle={从同伦类型到合成高阶范畴},pdfauthor={}]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\nouppercase{\leftmark}}\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad #1}{}}
+\makeatletter
+\let\CTEX@chapter@break\relax
+\makeatother
+\ctexset{chapter={format=\Large\bfseries,beforeskip=22pt,afterskip=14pt},section={format=\large\bfseries,beforeskip=16pt,afterskip=8pt},subsection={format=\normalsize\bfseries,beforeskip=10pt,afterskip=5pt}}
+\linespread{1.14}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\abovedisplayskip}{8pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{8pt plus 2pt minus 2pt}
+\allowdisplaybreaks[2]
+\setlist{nosep,leftmargin=2em}
+\newtheoremstyle{cn}{7pt}{7pt}{\normalfont}{0pt}{\bfseries}{\quad}{0pt}{}
+\theoremstyle{cn}
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{example}[definition]{例}
+\newtheorem{lemma}[definition]{引理}
+\newtheorem{proposition}[definition]{命题}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{remark}[definition]{注记}
+\renewcommand{\proofname}{证明}
+\numberwithin{equation}{chapter}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Top}{\mathbf{Top}}
+\newcommand{\Cat}{\mathbf{Cat}}
+\newcommand{\sSet}{\mathbf{sSet}}
+\newcommand{\sSp}{\mathbf{sSp}}
+\newcommand{\Sp}{\mathcal S}
+\newcommand{\U}{\mathcal U}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Map}{\operatorname{Map}}
+\newcommand{\Nat}{\operatorname{Nat}}
+\newcommand{\Fun}{\operatorname{Fun}}
+\newcommand{\Ob}{\operatorname{Ob}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\refl}{\mathsf{refl}}
+\newcommand{\ap}{\mathsf{ap}}
+\newcommand{\apd}{\mathsf{apd}}
+\newcommand{\tr}{\mathsf{tr}}
+\newcommand{\isContr}{\mathsf{isContr}}
+\newcommand{\isProp}{\mathsf{isProp}}
+\newcommand{\isSet}{\mathsf{isSet}}
+\newcommand{\isEquiv}{\mathsf{isEquiv}}
+\newcommand{\isIso}{\mathsf{isIso}}
+\newcommand{\fib}{\mathsf{fib}}
+\newcommand{\happly}{\mathsf{happly}}
+\newcommand{\funext}{\mathsf{funext}}
+\newcommand{\ua}{\mathsf{ua}}
+\newcommand{\idtoequiv}{\mathsf{idtoequiv}}
+\newcommand{\idtoiso}{\mathsf{idtoiso}}
+\newcommand{\ev}{\operatorname{ev}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Eq}{\operatorname{Eq}}
+\newcommand{\Seg}{\mathsf{Seg}}
+\newcommand{\Cov}{\mathsf{Cov}}
+\newcommand{\LFib}{\mathsf{LFib}}
+\newcommand{\Ext}{\mathsf{Ext}}
+\newcommand{\Comp}{\mathsf{Comp}}
+\newcommand{\Fin}{\mathsf{Fin}}
+\newcommand{\Magma}{\mathsf{Magma}}
+\newcommand{\Mon}{\mathsf{Mon}}
+\newcommand{\Grp}{\mathsf{Grp}}
+\newcommand{\Tors}{\mathsf{Tors}}
+\newcommand{\Int}{\mathbb I}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\trunc}[1]{\left\|#1\right\|}
+\newcommand{\colim}{\operatorname*{colim}}
+\newcommand{\limm}{\operatorname*{lim}}
+\newcommand{\hlim}{\operatorname*{holim}}
+\newcommand{\hcolim}{\operatorname*{hocolim}}
+\newcommand{\source}[1]{\par\smallskip{\small #1}\par}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 从同伦类型到合成高阶范畴\par}
+\vspace{6pt}
+{\large 空间、路径归纳、Yoneda 引理与有向单价性\par}
+\end{center}
+\vspace{8pt}
+\noindent 本讲义从集合、函数、初等代数与拓扑出发，建立依赖类型的基本演算，研究单价宇宙中的空间，再引入单纯方向并发展合成范畴论。中心结果为路径归纳、结构同一性原理、箭头归纳、合成 Yoneda 引理，以及由有向单价宇宙构造空间范畴和代数结构范畴。Riehl 的报告\cite{RiehlICM}给出了这些主题的统一视角。
+
+\noindent 本文以 $(x=_A y)$ 表示同一类型中的同一性类型，以 $x\to_C y$ 表示范畴中的有向箭头。符号 $\equiv$ 表示定义相等，$\cong$ 表示普通范畴中的同构，$\simeq$ 表示同伦等价。路径合成 $p\cdot q$ 先行 $p$ 后行 $q$；态射合成 $g\circ f$ 先行 $f$ 后行 $g$。
+
+\noindent 基础规则与语义定理各有不同作用。依赖和、依赖积、同一性类型、函数外延性及所用宇宙的规则会在正文逐项列出；其后的内部结论依这些规则证明。Quillen 模型结构、严格单价宇宙的存在，以及任意高阶拓扑斯中普遍左纤维化的存在，作为注明来源的语义基础定理使用。末章说明这些定理如何支持前面的演算，并给出有向单价性证明所需的比较构造。
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+% ===== chapters/01_sets =====
+\chapter{集合、函数与依赖关系}
+\section{对象、元素与函数}
+\begin{definition}[函数及其复合]
+设 $A,B$ 为集合。函数 $f:A\to B$ 给每个 $a\in A$ 指定唯一的元素 $f(a)\in B$。若 $g:B\to C$，复合 $g\circ f:A\to C$ 由 $(g\circ f)(a)=g(f(a))$ 定义。恒等函数 $\id_A:A\to A$ 由 $\id_A(a)=a$ 定义。
+\end{definition}
+\begin{proposition}
+函数复合满足结合律及单位律：
+\[
+h\circ(g\circ f)=(h\circ g)\circ f,
+\qquad \id_B\circ f=f=f\circ\id_A.
+\]
+\end{proposition}
+\begin{proof}
+在任意 $a\in A$ 处，两边分别取值为 $h(g(f(a)))$，所以第一式成立。后两式在 $a$ 处的值均为 $f(a)$。这里使用了集合论中的函数外延原则，即两个定义域和陪域相同的函数相等，当且仅当它们逐点相等。
+\end{proof}
+\begin{definition}[纤维]
+函数 $f:A\to B$ 在 $b\in B$ 上的纤维为
+\[
+f^{-1}(b)=\{a\in A\mid f(a)=b\}.
+\]
+函数 $f$ 为单射，是指每个纤维至多有一个元素；为满射，是指每个纤维至少有一个元素；为双射，是指每个纤维恰有一个元素。
+\end{definition}
+\begin{lemma}[双射的纤维判据]
+函数 $f:A\to B$ 有双侧逆函数，当且仅当每个纤维恰有一个元素。
+\end{lemma}
+\begin{proof}
+若 $g$ 为逆函数，则 $g(b)$ 属于 $f^{-1}(b)$。任意 $a\in f^{-1}(b)$ 满足 $a=g(f(a))=g(b)$。反之，取 $g(b)$ 为该纤维的唯一元素。唯一性保证这一定义不涉及任意选择。由定义 $f(g(b))=b$，而 $a$ 和 $g(f(a))$ 属于同一单元素纤维，故 $g(f(a))=a$。
+\end{proof}
+\begin{remark}
+后文将把“单元素集合”替换为“可缩空间”。因此，“等价映射具有可缩的同伦纤维”直接推广了上述双射判据。理解这种替换时，必须保留纤维内的全部路径信息。
+\end{remark}
+
+\section{集合族与依赖和}
+\begin{definition}[集合族]
+以集合 $A$ 为指标的集合族记作 $(B_a)_{a\in A}$。其依赖和为
+\[
+\sum_{a\in A}B_a=\{(a,b)\mid a\in A,\ b\in B_a\}.
+\]
+它配备投影 $\pi(a,b)=a$。符号“依赖”表示第二个分量的取值范围可以随着第一个分量改变。
+\end{definition}
+\begin{example}
+令 $A=\N$，$B_n=\{0,1,\ldots,n\}$，则
+\[
+\sum_{n\in\N} B_n=\{(n,k)\in\N^2\mid k\le n\}.
+\]
+若 $B_a=B$ 与 $a$ 无关，则依赖和等于笛卡尔积 $A\times B$。若每个 $B_a$ 为单元素集合，则其依赖和自然同构于 $A$。
+\end{example}
+\begin{proposition}[映射与纤维族]
+每个函数 $p:E\to A$ 确定一个纤维族 $(E_a)_{a\in A}$，其中 $E_a=p^{-1}(a)$；存在与投影相容的自然双射
+\[
+E\cong\sum_{a\in A} E_a.
+\]
+\end{proposition}
+\begin{proof}
+定义 $\Phi(e)=(p(e),e)$。因为 $e\in E_{p(e)}$，这是合法的有序对。逆映射为 $\Psi(a,e)=e$。有 $\Psi\Phi(e)=e$；若 $e\in E_a$，则 $p(e)=a$，所以 $\Phi\Psi(a,e)=(a,e)$。此外，两侧投影在 $e$ 上的值均为 $p(e)$。
+\end{proof}
+\begin{definition}[族之间的映射]
+两个 $A$-指标族 $(B_a)$、$(C_a)$ 之间的逐纤维映射为一族函数 $u_a:B_a\to C_a$。它对应于一个总空间映射
+\[
+u:\sum_a B_a\longrightarrow\sum_a C_a,
+\qquad u(a,b)=(a,u_a(b)),
+\]
+且与到 $A$ 的投影交换。
+\end{definition}
+\begin{remark}
+“在同一底空间之上”会成为一种重要约束。它要求保持参数 $a$，并允许在该参数对应的纤维内部变化。若没有这一约束，总空间映射可以把不同参数的纤维混在一起。
+\end{remark}
+
+\section{依赖积与截面}
+\begin{definition}[依赖积]
+集合族 $(B_a)_{a\in A}$ 的依赖积为
+\[
+\prod_{a\in A}B_a
+=\{s\mid s\text{ 是函数，且对每个 }a,\ s(a)\in B_a\}.
+\]
+这样的 $s$ 称为依赖函数。若所有 $B_a$ 都等于 $B$，则依赖积为函数集合 $B^A$。
+\end{definition}
+\begin{definition}[截面]
+映射 $p:E\to A$ 的截面为函数 $s:A\to E$，满足 $p\circ s=\id_A$。
+\end{definition}
+\begin{proposition}
+依赖积 $\prod_a B_a$ 自然等同于投影 $\sum_a B_a\to A$ 的截面集合。
+\end{proposition}
+\begin{proof}
+依赖函数 $s$ 给出截面 $a\mapsto(a,s(a))$。反之，任一截面的第一坐标必为 $a$，故有唯一表达式 $a\mapsto(a,s(a))$，其中 $s(a)\in B_a$。两种构造互逆。
+\end{proof}
+\begin{example}[空指标]
+空依赖和为 $\sum_{a\in\varnothing}B_a=\varnothing$。空依赖积则是单元素集合，因为从空集合出发恰有一个函数。这个差别将在“存在量词”和“全称量词”的解释中反复出现。
+\end{example}
+\begin{proposition}[依赖柯里化]
+设 $C_{a,b}$ 为依赖于 $a\in A$、$b\in B_a$ 的集合族。存在双射
+\[
+\prod_{(a,b)\in\sum_aB_a}C_{a,b}
+\cong \prod_{a\in A}\prod_{b\in B_a}C_{a,b}.
+\]
+\end{proposition}
+\begin{proof}
+左侧函数 $h$ 对应于右侧函数 $a\mapsto(b\mapsto h(a,b))$。逆方向把 $k$ 送到 $(a,b)\mapsto k(a)(b)$。逐点代入验证两者互逆。参数之间的依赖顺序没有改变，故所有表达式都具有确定的定义域。
+\end{proof}
+\begin{proposition}[依赖选择的有序对公式]
+存在自然双射
+\[
+\prod_{a\in A}\sum_{b\in B_a}C_{a,b}
+\cong
+\sum_{f\in\prod_a B_a}\prod_{a\in A} C_{a,f(a)}.
+\]
+\end{proposition}
+\begin{proof}
+若 $u(a)=(b_a,c_a)$，令 $f(a)=b_a$，$v(a)=c_a$，得到 $(f,v)$。反之，由 $(f,v)$ 得到 $a\mapsto(f(a),v(a))$。两次拆分和重新组合后，各个坐标保持不变。这一双射本身不需要选择公理，因为左边已给出对每个 $a$ 的具体有序对。
+\end{proof}
+\begin{remark}
+必须区别“每个纤维非空”与“给定一个截面”。在经典集合论中，一般非空集合族存在截面是选择公理的内容；上述命题则只是已有数据的重组。类型论中的 $\sum$ 会记录见证，因此也必须保持这一区别。
+\end{remark}
+
+\section{代入、拉回与交换图}
+\begin{definition}[拉回]
+给定 $f:X\to A$、$p:E\to A$，定义
+\[
+X\times_AE=\{(x,e)\in X\times E\mid f(x)=p(e)\}.
+\]
+其投影组成交换方块
+\[
+\begin{tikzcd}
+X\times_AE\ar[r,"\pi_E"]\ar[d,"\pi_X"']&E\ar[d,"p"]\\
+X\ar[r,"f"']&A.
+\end{tikzcd}
+\]
+\end{definition}
+\begin{proposition}[拉回的泛性质]
+若 $u:T\to X$、$v:T\to E$ 满足 $fu=pv$，则存在唯一 $w:T\to X\times_AE$，使得 $\pi_Xw=u$、$\pi_Ew=v$。
+\end{proposition}
+\begin{proof}
+只能定义 $w(t)=(u(t),v(t))$。条件 $fu=pv$ 保证这个点属于拉回。两个投影条件成立；任一满足投影条件的映射都具有相同的两个坐标，故唯一。
+\end{proof}
+\begin{proposition}[拉回是参数代入]
+若 $E=\sum_{a\in A}B_a$，则作为 $X$ 上的族，$X\times_AE$ 自然同构于
+\[
+\sum_{x\in X}B_{f(x)}.
+\]
+\end{proposition}
+\begin{proof}
+拉回中的元素形如 $(x,(a,b))$，且 $f(x)=a$。删去由 $x$ 确定的 $a$，得到 $(x,b)$，其中 $b\in B_{f(x)}$。逆方向插入 $a=f(x)$。两种映射都保持到 $X$ 的投影。
+\end{proof}
+\begin{example}
+把 $B_n=\R^n$ 沿 $f:\N\to\N$、$f(k)=2k$ 拉回，得到 $(\R^{2k})_{k\in\N}$。这里没有增加新的纤维运算，只改变了参数如何进入原有的族。
+\end{example}
+
+\section{命题与证明数据}
+\begin{definition}[命题的集合解释]
+一个命题可以用空集合或单元素集合表示，分别对应假和真。若 $P(a)$ 是关于 $a\in A$ 的命题，令 $B_a$ 为其真值集合，则 $\prod_aB_a$ 表示对所有 $a$ 成立，而 $\sum_aB_a$ 记录一个使 $P(a)$ 成立的 $a$。
+\end{definition}
+\begin{remark}
+依赖和可能有多个元素。因此它记录的内容多于单纯的“存在”。例如 $\sum_{n\in\N}\{\text{$n$ 为偶数的证明}\}$ 还记录具体偶数。后文的命题截断将保留存在性并遗忘具体见证。
+\end{remark}
+\begin{proposition}[单元素纤维的截面]
+如果每个 $B_a$ 恰有一个元素，则 $\prod_aB_a$ 恰有一个元素。
+\end{proposition}
+\begin{proof}
+给 $a$ 指定 $B_a$ 的唯一元素，得到一个依赖函数。任意两个这样的函数在每个 $a$ 处取值相同，故由函数外延性相等。
+\end{proof}
+\begin{remark}
+上述命题的同伦版本是“可缩空间族的依赖积可缩”。它会保证很多构造在全部参数中同时成立，而不仅是在逐个参数上存在。由具体集合过渡到空间时，这种整体参数依赖是最需要注意的部分。
+\end{remark}
+
+
+
+% ===== chapters/02_categories =====
+\chapter{范畴、函子与自然变换}
+\section{范畴的定义及基本例子}
+\begin{definition}[普通范畴]
+一个范畴 $C$ 由对象类 $\Ob(C)$、每对对象 $x,y$ 的态射集合 $\Hom_C(x,y)$、恒等态射 $\id_x$，以及复合函数
+\[
+\Hom_C(y,z)\times\Hom_C(x,y)\to\Hom_C(x,z)
+\]
+组成。复合满足结合律和单位律。对象和态射均组成集合时称为小范畴；只要求每个态射类为集合时称为局部小范畴。
+\end{definition}
+\begin{example}
+集合与函数组成范畴 $\Set$；拓扑空间与连续映射组成范畴 $\Top$；群与群同态组成范畴；固定域上的向量空间与线性映射也组成范畴。复合由对应的函数复合给出。需要检验的是复合仍保持所要求的结构。
+\end{example}
+\begin{example}[偏序与幺半群]
+偏序集 $(P,\le)$ 决定一个范畴：当 $x\le y$ 时，$\Hom(x,y)$ 为单元素集合，否则为空。传递性给出复合。幺半群 $(M,\cdot,1)$ 决定单对象范畴，其自态射集合为 $M$，复合为乘法。若 $M$ 是群，则所有态射可逆。
+\end{example}
+\begin{definition}[同构与群胚]
+态射 $f:x\to y$ 是同构，若存在 $g:y\to x$ 使 $gf=\id_x$、$fg=\id_y$。每个态射均为同构的范畴称为群胚。
+\end{definition}
+\begin{lemma}
+同构的逆唯一，同构的复合仍为同构。
+\end{lemma}
+\begin{proof}
+若 $g,h$ 均为 $f$ 的逆，则
+\[
+g=g\id_y=g(fh)=(gf)h=h.
+\]
+若 $f:x\to y$、$k:y\to z$ 可逆，则 $f^{-1}k^{-1}$ 是 $kf$ 的逆；直接复合并使用结合律即可验证两个单位等式。
+\end{proof}
+\begin{remark}
+同构对象不必在原定义中是同一个对象。例如 $\R^2$ 与二维多项式子空间 $\{a+bt\}$ 是线性同构的对象。范畴论强调通过映射及其复合比较对象。后文的单价性将在特定宇宙内部把对象间的同一性与适当等价联系起来。
+\end{remark}
+
+\section{函子与对偶}
+\begin{definition}[函子]
+函子 $F:C\to D$ 给每个对象 $x$ 指定对象 $Fx$，给每个态射 $f:x\to y$ 指定 $Ff:Fx\to Fy$，并满足
+\[
+F(\id_x)=\id_{Fx},\qquad F(gf)=F(g)F(f).
+\]
+\end{definition}
+\begin{example}
+从群范畴到 $\Set$ 的遗忘函子忘掉乘法，但把同态视为函数。从向量空间范畴到阿贝尔群范畴的函子忘掉数乘。偏序之间的函子正是保序映射；单对象幺半群范畴之间的函子正是幺半群同态。
+\end{example}
+\begin{definition}[对偶范畴]
+$C^\op$ 与 $C$ 有相同对象，且
+\[
+\Hom_{C^\op}(x,y)=\Hom_C(y,x).
+\]
+其复合次序反转。函子 $C^\op\to D$ 也称从 $C$ 到 $D$ 的反变函子。
+\end{definition}
+\begin{example}[同态函子]
+固定 $c\in C$。函子 $\Hom_C(c,-):C\to\Set$ 将 $f:x\to y$ 送到后复合函数
+\[
+\Hom(c,x)\to\Hom(c,y),\qquad u\mapsto f\circ u.
+\]
+函子 $\Hom_C(-,c):C^\op\to\Set$ 则通过前复合变换。函子律恰由原范畴的单位律与结合律给出。
+\end{example}
+\begin{definition}[全忠实与本质满]
+函子 $F:C\to D$ 称为忠实或全，若每个
+\[
+\Hom_C(x,y)\to\Hom_D(Fx,Fy)
+\]
+分别为单射或满射；两者兼有时称为全忠实。若 $D$ 中每个对象都同构于某个 $Fx$，则称 $F$ 本质满。
+\end{definition}
+\begin{lemma}
+全忠实函子反映同构：若 $Ff$ 为同构，则 $f$ 为同构。
+\end{lemma}
+\begin{proof}
+由全性，把 $(Ff)^{-1}$ 写成 $Fg$。于是 $F(gf)=\id=F(\id)$，忠实性给出 $gf=\id$。同理 $fg=\id$。
+\end{proof}
+
+\section{自然变换及其演算}
+\begin{definition}[自然变换]
+给定 $F,G:C\to D$，自然变换 $\alpha:F\Rightarrow G$ 为一族态射 $\alpha_x:Fx\to Gx$，使每个 $f:x\to y$ 的方块交换：
+\[
+\begin{tikzcd}
+Fx\ar[r,"\alpha_x"]\ar[d,"Ff"']&Gx\ar[d,"Gf"]\\
+Fy\ar[r,"\alpha_y"']&Gy.
+\end{tikzcd}
+\]
+即 $Gf\circ\alpha_x=\alpha_y\circ Ff$。
+\end{definition}
+\begin{example}[双对偶映射]
+对向量空间 $V$，令 $V^*=\Hom_k(V,k)$。映射 $\eta_V:V\to V^{**}$ 由
+\[
+\eta_V(v)(\lambda)=\lambda(v)
+\]
+定义。对线性映射 $f:V\to W$，有 $f^{**}\eta_V=\eta_Wf$，因为在 $\mu\in W^*$ 上，两边都取值 $\mu(f(v))$。故 $\eta$ 是恒等函子到双对偶函子的自然变换。
+\end{example}
+\begin{proposition}[自然变换的逐点复合]
+若 $\alpha:F\Rightarrow G$、$\beta:G\Rightarrow H$，则 $(\beta\alpha)_x=\beta_x\alpha_x$ 定义自然变换。函子 $C\to D$ 与自然变换组成范畴 $[C,D]$。
+\end{proposition}
+\begin{proof}
+对 $f:x\to y$，计算
+\[
+Hf\,\beta_x\alpha_x
+=\beta_yGf\,\alpha_x
+=\beta_y\alpha_yFf.
+\]
+所以复合自然。单位自然变换逐点取恒等。结合律和单位律逐点由 $D$ 中相应等式得到。
+\end{proof}
+\begin{proposition}
+自然变换 $\alpha:F\Rightarrow G$ 是函子范畴中的同构，当且仅当每个 $\alpha_x$ 是同构。
+\end{proposition}
+\begin{proof}
+一个自然逆逐点提供逆，因此必要性成立。反之，在自然性等式
+$Gf\alpha_x=\alpha_yFf$ 两侧分别复合逆，得到
+\[
+Ff\alpha_x^{-1}=\alpha_y^{-1}Gf.
+\]
+故逐点逆构成自然变换，且是双侧逆。
+\end{proof}
+\begin{example}[逐点给定尚不保证自然]
+令 $C=[1]$ 为仅含一个非恒等态射 $0\to1$ 的范畴。取两个常值函子，值均为 $\{0,1\}$，连接映射为恒等。取 $\alpha_0=\id$、$\alpha_1$ 为交换两个元素的置换。它们逐点都是双射，但不构成自然变换，因为自然性要求 $\alpha_0=\alpha_1$。
+\end{example}
+\begin{remark}
+合成范畴论中会出现“逐纤维映射自动自然”的命题。那里所谓逐纤维映射是整个单纯语境中的一个项，它已随有向参数一致变化。它不等同于本例中仅对对象集合任意选择的函数族。
+\end{remark}
+
+\section{范畴等价}
+\begin{definition}[范畴等价]
+函子 $F:C\to D$ 是等价，若存在 $G:D\to C$ 及自然同构
+\[
+GF\cong\id_C,\qquad FG\cong\id_D.
+\]
+函子 $G$ 称为拟逆。
+\end{definition}
+\begin{theorem}[等价的判据]
+在可作所需对象选择的集合论基础中，函子是等价，当且仅当它全忠实且本质满。
+\end{theorem}
+\begin{proof}
+先设 $F$ 有拟逆。自然同构 $GF\cong\id_C$ 表明 $F$ 忠实；同理 $G$ 忠实。给定 $u:Fx\to Fy$，利用 $GF\cong\id_C$ 将 $Gu$ 共轭为 $x\to y$，再由自然性及 $G$ 的忠实性验证其经 $F$ 后为 $u$，从而 $F$ 全。本质满由 $FG\cong\id_D$ 直接得到。
+
+反之，对每个 $d\in D$ 选定 $Gd\in C$ 及同构 $\varepsilon_d:F(Gd)\to d$。对 $v:d\to d'$，由全忠实性，存在唯一 $Gv:Gd\to Gd'$，满足
+\[
+F(Gv)=\varepsilon_{d'}^{-1}v\varepsilon_d.
+\]
+对恒等和复合代入此公式，再用忠实性，得到函子律。公式本身说明 $\varepsilon:FG\Rightarrow\id_D$ 自然。对 $c\in C$，由全忠实性提升 $\varepsilon_{Fc}:F(GFc)\to Fc$，得到同构 $GFc\to c$。自然性同样由忠实性反映，故 $GF\cong\id_C$。
+\end{proof}
+\begin{remark}
+本质满只断言每个目标对象与像中的某个对象同构；构造拟逆需要把这些对象组织成一个选择。后文使用可缩数据时，唯一性连同高阶唯一性能够直接给出相容构造，不需要把任意选择强行视为自然选择。
+\end{remark}
+
+\section{切片与余切片}
+\begin{definition}[切片范畴]
+固定 $c\in C$。切片 $C/c$ 的对象是态射 $p:x\to c$；从 $p:x\to c$ 到 $q:y\to c$ 的态射为 $h:x\to y$，满足 $qh=p$。余切片 $c/C$ 的对象为 $p:c\to x$，其态射满足 $hp=q$。
+\end{definition}
+\begin{proposition}
+$\id_c$ 是 $C/c$ 的终对象，并且是 $c/C$ 的始对象。
+\end{proposition}
+\begin{proof}
+从 $p:x\to c$ 到 $\id_c:c\to c$ 的切片态射必须满足 $\id_ch=p$，所以唯一可能为 $h=p$。余切片的对偶论证给出从 $\id_c$ 到任意 $p:c\to x$ 的唯一态射。
+\end{proof}
+\begin{example}
+$\Set/A$ 的对象就是集合族的总空间投影，态射为逐纤维映射。因此第一章中的族运算可在一个普通范畴中表达。对群 $G$ 的单对象范畴，余切片的对象是 $G$ 的元素，任意两个对象之间恰有一个态射。这也解释了“一个对象连同一条指定出发箭头”为什么往往是可缩的数据。
+\end{example}
+\source{本章普通范畴论的进一步背景见\cite{RiehlContext}。}
+
+
+
+% ===== chapters/03_universal =====
+\chapter{泛性质、极限与伴随}
+\section{用映射刻画对象}
+\begin{definition}[始对象与终对象]
+范畴 $C$ 中的对象 $0$ 为始对象，是指每个集合 $\Hom_C(0,x)$ 恰有一个元素。对象 $1$ 为终对象，是指每个 $\Hom_C(x,1)$ 恰有一个元素。
+\end{definition}
+\begin{lemma}[泛对象的唯一性]
+任意两个始对象之间存在唯一同构；任意两个终对象之间也存在唯一同构。
+\end{lemma}
+\begin{proof}
+设 $i,j$ 均始。分别取唯一态射 $u:i\to j$、$v:j\to i$。由于 $\Hom(i,i)$ 只有一个元素，$vu=\id_i$；同理 $uv=\id_j$。任一同构的正向映射也必须等于 $u$。终对象的论证对偶。
+\end{proof}
+\begin{definition}[积与余积]
+对象 $x,y$ 的积为带投影 $p_x:p\to x$、$p_y:p\to y$ 的对象 $p$，使映射
+\[
+\Hom_C(t,p)\longrightarrow\Hom_C(t,x)\times\Hom_C(t,y)
+\]
+对每个 $t$ 是双射。余积通过反转箭头定义，通常记为 $x\amalg y$。
+\end{definition}
+\begin{example}
+集合的积是笛卡尔积，余积是不交并。群的积是直积，但余积一般为自由积，不能把集合的不交并直接当作群。泛性质确定我们要保持哪些映射关系，而非预先规定底层对象的具体形状。
+\end{example}
+\begin{proposition}
+积在保持投影的同构意义下唯一。
+\end{proposition}
+\begin{proof}
+设 $(p,p_x,p_y)$、$(q,q_x,q_y)$ 均满足泛性质。由 $p$ 的泛性质得到唯一 $a:q\to p$，由 $q$ 的泛性质得到唯一 $b:p\to q$，分别保持投影。于是 $ab$ 与 $\id_p$ 具有相同的两个投影，由唯一性 $ab=\id_p$；同理 $ba=\id_q$。
+\end{proof}
+
+\section{拉回与一般极限}
+\begin{definition}[范畴中的拉回]
+给定 $f:x\to z$、$g:y\to z$，其拉回为交换方块
+\[
+\begin{tikzcd}
+p\ar[r,"q"]\ar[d,"r"']&y\ar[d,"g"]\\
+x\ar[r,"f"']&z
+\end{tikzcd}
+\]
+使每对满足 $fu=gv$ 的态射 $u:t\to x$、$v:t\to y$ 唯一经过 $p$。等价地，对每个 $t$，有自然双射
+\[
+\Hom(t,p)\cong\Hom(t,x)\times_{\Hom(t,z)}\Hom(t,y).
+\]
+\end{definition}
+\begin{lemma}[拉回的粘贴]
+考虑两个横向相接的交换方块。若右方块和左方块都是拉回，则外矩形为拉回；若右方块和外矩形为拉回，则左方块为拉回。
+\end{lemma}
+\begin{proof}
+把图中的每个对象 $w$ 替换成 $\Hom(t,w)$。拉回泛性质把结论归结为集合拉回的有序对运算。第一种情形，先由外侧的相容数据唯一恢复右方块左上角，再唯一恢复左方块左上角。第二种情形，给定左方块下侧与右侧数据，先组成外矩形的相容数据，通过外矩形取得唯一提升；其经右上侧的值由右方块的唯一性确定，因而恰为所要求的右侧数据。对每个 $t$ 都成立，所以原图满足相同泛性质。
+\end{proof}
+\begin{definition}[锥与极限]
+设 $J$ 为小范畴，$D:J\to C$ 为图表。顶点为 $t$ 的锥是自然变换 $\Delta t\Rightarrow D$，其中 $\Delta t$ 为常值函子。极限为代表锥函子的对象 $L$，即
+\[
+\Hom_C(t,L)\cong\Nat(\Delta t,D)
+\]
+对 $t$ 自然成立。余极限对偶地代表从 $D$ 出发的余锥。
+\end{definition}
+\begin{example}
+离散二对象图表的极限是积。图表 $x\to z\leftarrow y$ 的极限是拉回。两个平行态射 $f,g:x\rightrightarrows y$ 的极限是等化子，具体在集合中为 $\{a\in x\mid f(a)=g(a)\}$。
+\end{example}
+\begin{proposition}[积与等化子构造极限]
+若 $C$ 有小积与等化子，则有所有小极限。
+\end{proposition}
+\begin{proof}
+对 $D:J\to C$ 构造
+\[
+P=\prod_{j\in\Ob J}D(j),
+\qquad Q=\prod_{\alpha:i\to j}D(j).
+\]
+有两个映射 $P\rightrightarrows Q$：在 $\alpha:i\to j$ 分量上，分别为 $D(\alpha)\pi_i$ 与 $\pi_j$。令 $L$ 为其等化子。一个 $t\to L$ 等同于一族 $u_j:t\to D(j)$，满足每个 $D(\alpha)u_i=u_j$，这正是锥。因此 $L$ 满足极限的泛性质。
+\end{proof}
+
+\section{指数对象}
+\begin{definition}[笛卡尔闭范畴]
+一个有有限积的范畴称为笛卡尔闭，若每个 $A,B$ 有指数对象 $B^A$，配备评价映射 $\ev:B^A\times A\to B$，使
+\[
+\Hom(X,B^A)\cong\Hom(X\times A,B)
+\]
+对 $X$ 自然成立。
+\end{definition}
+\begin{proposition}
+$\Set$ 是笛卡尔闭范畴，$B^A$ 为函数集合。
+\end{proposition}
+\begin{proof}
+给 $f:X\to B^A$ 配上 $\widehat f(x,a)=f(x)(a)$。反之，给 $h:X\times A\to B$ 配上 $\lambda h(x)(a)=h(x,a)$。两者互逆，并与对 $X$ 的前复合交换。
+\end{proof}
+\begin{remark}
+普通拓扑空间配上任意集合函数的紧开拓扑并不总形成笛卡尔闭范畴。选择紧生成空间可以修正笛卡尔闭性，但后文还需要所有切片的笛卡尔闭性。单纯集合作为预层范畴同时提供这些结构。
+\end{remark}
+
+\section{伴随与单位、余单位}
+\begin{definition}[伴随]
+函子 $L:C\to D$ 与 $R:D\to C$ 构成伴随 $L\dashv R$，若有对 $c,d$ 自然的双射
+\[
+\Phi_{c,d}:\Hom_D(Lc,d)\cong\Hom_C(c,Rd).
+\]
+$L$ 称左伴随，$R$ 称右伴随。
+\end{definition}
+\begin{example}
+自由群函子 $F:\Set\to\mathbf{Grp}$ 左伴随于遗忘函子 $U$，因为从自由群 $F(X)$ 到群 $G$ 的同态由生成元 $X$ 的像唯一确定。指数对象则表达伴随 $-\times A\dashv(-)^A$。
+\end{example}
+\begin{definition}[单位与余单位]
+由伴随双射定义
+\[
+\eta_c=\Phi_{c,Lc}(\id_{Lc}):c\to RLc,
+\qquad
+\varepsilon_d=\Phi^{-1}_{Rd,d}(\id_{Rd}):LRd\to d.
+\]
+它们分别称为单位与余单位。
+\end{definition}
+\begin{proposition}[伴随的转置公式]
+对 $f:Lc\to d$、$g:c\to Rd$，有
+\[
+\Phi(f)=Rf\circ\eta_c,
+\qquad
+\Phi^{-1}(g)=\varepsilon_d\circ Lg.
+\]
+此外，三角恒等式成立：
+\[
+\varepsilon_{Lc}\circ L\eta_c=\id_{Lc},
+\qquad R\varepsilon_d\circ\eta_{Rd}=\id_{Rd}.
+\]
+\end{proposition}
+\begin{proof}
+第一式由 $\Phi$ 对 $d$ 的自然性应用于 $\id_{Lc}$ 得到。第二式对偶。将 $f=\id_{Lc}$ 代入 $\Phi^{-1}\Phi(f)=f$ 得到第一条三角恒等式；对 $g=\id_{Rd}$ 使用另一复合得到第二条。单位和余单位的自然性同样来自双射对两个变量的自然性。
+\end{proof}
+\begin{proposition}[右伴随保持极限]
+若 $L\dashv R$，且 $D:J\to D$ 的极限存在，则 $R(\limm D)$ 是 $RD$ 的极限。
+\end{proposition}
+\begin{proof}
+对任意 $c$，依次使用伴随和极限泛性质，得到
+\begin{align*}
+\Hom_C(c,R\limm D)
+&\cong\Hom_D(Lc,\limm D)\\
+&\cong\Nat(\Delta Lc,D)\\
+&\cong\Nat(\Delta c,RD).
+\end{align*}
+最后一步逐分量转置；自然性保证图表相容条件也被转置。于是得到所要求的表示关系。
+\end{proof}
+
+\section{切片中的三个伴随}
+\begin{definition}[复合与基变换]
+若范畴 $C$ 有拉回，映射 $f:A\to B$ 给出函子
+\[
+\Sigma_f:C/A\to C/B,
+\qquad (E\xrightarrow pA)\mapsto(E\xrightarrow{fp}B),
+\]
+以及拉回函子 $f^*:C/B\to C/A$。
+\end{definition}
+\begin{proposition}
+总有伴随 $\Sigma_f\dashv f^*$。
+\end{proposition}
+\begin{proof}
+一个 $B$ 上的态射 $E\to Y$，其中 $E\to B$ 为 $fp$，正是满足交换三角形的映射。由拉回泛性质，它唯一对应一个 $A$ 上的态射 $E\to A\times_BY$。这一对应对 $E,Y$ 的映射自然。
+\end{proof}
+\begin{definition}[局部笛卡尔闭性]
+范畴 $C$ 称为局部笛卡尔闭，若有有限极限，且每个拉回函子 $f^*$ 还有右伴随 $\Pi_f$。于是
+\[
+\Sigma_f\dashv f^*\dashv\Pi_f.
+\]
+\end{definition}
+\begin{proposition}[集合中的依赖积右伴随]
+在集合范畴中，若 $E\to A$ 对应族 $(E_a)$，则 $\Pi_fE\to B$ 的 $b$-纤维为
+\[
+(\Pi_fE)_b=\prod_{a\in f^{-1}(b)}E_a.
+\]
+\end{proposition}
+\begin{proof}
+设 $Y\to B$ 的纤维为 $Y_b$。$A$ 上的映射 $f^*Y\to E$ 给出函数 $Y_{f(a)}\to E_a$。按相同 $b$ 分组，再柯里化，等价于
+\[
+Y_b\to\prod_{a\in f^{-1}(b)}E_a.
+\]
+这正是 $B$ 上的映射 $Y\to\Pi_fE$。各步都是自然双射，故给出右伴随。
+\end{proof}
+\begin{remark}
+这三个伴随把第一章中的依赖和、代入、依赖积统一起来。以后把集合替换为空间时，公式形状保持不变，但产品、纤维和相等必须按同伦意义解释。
+\end{remark}
+
+
+
+% ===== chapters/04_yoneda =====
+\chapter{普通 Yoneda 引理与元素范畴}
+\section{协变形式的 Yoneda 引理}
+\begin{definition}[可表函子]
+函子 $F:C\to\Set$ 称为可表，若存在 $c\in C$ 和自然同构 $\Hom_C(c,-)\cong F$。对反变函子，使用 $\Hom_C(-,c)$。
+\end{definition}
+\begin{theorem}[协变 Yoneda 引理]\label{thm:ordinary-yoneda}
+设 $C$ 为局部小范畴，$F:C\to\Set$。评价映射
+\[
+\ev_{\id_c}:\Nat(\Hom_C(c,-),F)\longrightarrow F(c),
+\quad\alpha\longmapsto\alpha_c(\id_c)
+\]
+为双射，且对 $c,F$ 自然。
+\end{theorem}
+\begin{proof}
+给定 $u\in F(c)$，对每个 $x$ 定义
+\[
+\alpha^u_x:\Hom_C(c,x)\to F(x),
+\qquad \alpha^u_x(f)=F(f)(u).
+\]
+若 $g:x\to y$，则
+\[
+F(g)\alpha^u_x(f)=F(g)F(f)(u)=F(gf)(u)=\alpha^u_y(gf),
+\]
+故 $\alpha^u$ 自然。其在恒等态射上的值为 $F(\id_c)(u)=u$。
+
+反之，给定自然变换 $\alpha$ 和 $f:c\to x$，把自然性用在 $f$ 上：
+\[
+\begin{tikzcd}
+\Hom(c,c)\ar[r,"\alpha_c"]\ar[d,"f\circ-"']&F(c)\ar[d,"F(f)"]\\
+\Hom(c,x)\ar[r,"\alpha_x"']&F(x).
+\end{tikzcd}
+\]
+将 $\id_c$ 代入，得到 $\alpha_x(f)=F(f)(\alpha_c(\id_c))$。因此 $\alpha=\alpha^{\alpha_c(\id_c)}$，两个构造互逆。对 $F$ 的自然性由自然变换的复合直接验证；对 $c$ 的自然性由前复合与 $F$ 的函子律验证。
+\end{proof}
+\begin{example}
+令 $C$ 为单对象幺半群 $M$，函子 $F$ 就是一个左 $M$-集合 $X$。可表函子为左正则作用 $M$。定理断言每个 $M$-等变映射 $M\to X$ 都由 $1\in M$ 的像决定，公式为 $m\mapsto m\cdot x$。
+\end{example}
+\begin{remark}
+证明的关键既不是元素个数，也不是特殊的集合运算，而是恒等态射与自然性。后文将以箭头归纳代替自然性方块中的逐元素论证，并把双射提升为映射空间的等价。
+\end{remark}
+
+\section{反变形式与 Yoneda 嵌入}
+\begin{theorem}[反变 Yoneda 引理]
+若 $P:C^\op\to\Set$，则
+\[
+\Nat(\Hom_C(-,c),P)\cong P(c).
+\]
+对应于 $u\in P(c)$ 的自然变换为 $f:x\to c\mapsto P(f)(u)$。
+\end{theorem}
+\begin{proof}
+将定理\ref{thm:ordinary-yoneda}应用于 $C^\op$。也可直接计算：自然性中的后复合变为前复合，而 $P(gf)=P(f)P(g)$ 保证方块交换。逆映射仍为在 $\id_c$ 处评价。
+\end{proof}
+\begin{definition}[预层与 Yoneda 嵌入]
+小范畴 $C$ 上的预层为函子 $C^\op\to\Set$。预层范畴记为 $\widehat C=[C^\op,\Set]$。Yoneda 嵌入为
+\[
+y:C\to\widehat C,
+\qquad c\mapsto y(c)=\Hom_C(-,c).
+\]
+态射 $u:c\to d$ 通过后复合定义 $y(u)$。
+\end{definition}
+\begin{proposition}[全忠实性]
+Yoneda 嵌入全忠实：
+\[
+\Hom_C(c,d)\cong\Nat(y(c),y(d)).
+\]
+\end{proposition}
+\begin{proof}
+在反变 Yoneda 引理中令 $P=y(d)$，右边为 $y(d)(c)=\Hom_C(c,d)$。对应映射恰为后复合，所以所得双射就是 $y$ 在态射集合上的作用。
+\end{proof}
+\begin{proposition}[表示对象的唯一性]
+若 $y(c)\cong y(d)$，则 $c\cong d$。给定自然同构后，这个对象同构由 Yoneda 双射唯一确定。
+\end{proposition}
+\begin{proof}
+把自然同构及其逆分别对应为 $u:c\to d$、$v:d\to c$。Yoneda 嵌入保持复合且忠实，因此从 $y(v)y(u)=\id$ 推得 $vu=\id_c$，另一侧同理。
+\end{proof}
+\begin{example}[通过所有测试对象辨别映射]
+两个态射 $f,g:c\to d$ 相等，当且仅当对每个 $x$，它们诱导的函数 $\Hom(x,c)\to\Hom(x,d)$ 相等。充分性事实上只需取 $x=c$ 并代入 $\id_c$。允许所有 $x$ 的表述更适合在高阶情形保留全部映射空间。
+\end{example}
+
+\section{元素范畴与 Grothendieck 构造}
+\begin{definition}[协变元素范畴]
+对 $F:C\to\Set$，定义 $\int_C F$。对象是 $(c,u)$，其中 $u\in F(c)$；态射 $(c,u)\to(d,v)$ 为 $f:c\to d$，满足 $F(f)(u)=v$。投影 $p:\int_CF\to C$ 忘掉第二分量。
+\end{definition}
+\begin{proposition}[唯一的起点提升]
+给定 $(c,u)$ 和 $f:c\to d$，在 $\int_CF$ 中恰有一条以 $(c,u)$ 为起点、投影为 $f$ 的态射，其终点为 $(d,F(f)(u))$。
+\end{proposition}
+\begin{proof}
+态射定义要求终点的第二分量等于 $F(f)(u)$，所以终点被确定；态射本身由 $f$ 确定。函子律保证这些提升与恒等、复合相容。
+\end{proof}
+\begin{definition}[离散上纤维化]
+函子 $p:E\to C$ 称为离散上纤维化，若每个 $e\in E$ 及每个 $f:p(e)\to c$ 都存在唯一以 $e$ 为起点、投影为 $f$ 的态射。
+\end{definition}
+\begin{theorem}[集合值函子与离散上纤维化]
+集合值协变函子与离散上纤维化可相互恢复；在态射层面，自然变换对应于底范畴之上的函子。
+\end{theorem}
+\begin{proof}
+从 $F$ 出发，上述元素范畴给出离散上纤维化。反之，令 $F(c)$ 为 $p$ 在 $c$ 上的对象集合。给定 $f:c\to d$，把 $e\in F(c)$ 送到 $f$ 的唯一提升的终点。恒等态射的提升必为恒等。两条可复合提升的复合也是复合底态射的提升，所以由唯一性，$F(gf)=F(g)F(f)$。
+
+给定自然变换 $\alpha:F\Rightarrow G$，定义 $(c,u)\mapsto(c,\alpha_c(u))$。自然性恰保证态射被送到合法态射。反之，一个底范畴之上的函子保持唯一提升，因此其在纤维上的函数满足自然性。两组构造互逆，至多差一个保持投影的自然同构。
+\end{proof}
+\begin{example}[可表函子的总空间]
+若 $F=\Hom_C(c,-)$，则 $\int_CF$ 恰为余切片 $c/C$。对象是 $f:c\to x$，态射是使三角形交换的后复合。恒等态射 $\id_c$ 是这个总空间的始对象。
+\end{example}
+
+\section{依赖的普通 Yoneda 引理}
+\begin{theorem}[始对象上的截面]
+设范畴 $J$ 有始对象 $j_0$，$F:J\to\Set$。相容截面集合
+\[
+\limm_J F=\{(s_j)_j\mid F(a)(s_j)=s_k\text{ 对每个 }a:j\to k\}
+\]
+在 $j_0$ 处的评价给出双射 $\limm_JF\cong F(j_0)$。
+\end{theorem}
+\begin{proof}
+记唯一态射 $j_0\to j$ 为 $u_j$。给定 $v\in F(j_0)$，令 $s_j=F(u_j)(v)$。若 $a:j\to k$，始对象性质给出 $au_j=u_k$，所以 $F(a)(s_j)=s_k$。反之，任意相容截面满足 $s_j=F(u_j)(s_{j_0})$，故由初始值唯一确定。
+\end{proof}
+\begin{proposition}[余切片上的依赖形式]
+给定 $K:c/C\to\Set$，有
+\[
+\limm_{f\in c/C}K(f)\cong K(\id_c).
+\]
+\end{proposition}
+\begin{proof}
+应用上一条定理，因为 $\id_c$ 是余切片的始对象。特别地，若 $K(f:c\to x)=F(x)$，相容截面等同于自然变换 $\Hom(c,-)\Rightarrow F$，于是恢复普通 Yoneda 引理。
+\end{proof}
+\begin{remark}
+上式的左侧是相容截面，而不是对象集合上的任意笛卡尔积 $\prod_fK(f)$。在合成语言中，同一个相容截面可以写为依赖积，因为依赖积的语义已经包含对底范畴箭头的相容性。忽略这一区别会把 Yoneda 引理误写成一个明显错误的集合论断言。
+\end{remark}
+
+\section{每个预层由可表预层组成}
+\begin{definition}[反变元素范畴]
+对 $P:C^\op\to\Set$，$\int P$ 的对象为 $(c,u)$，态射 $(c,u)\to(d,v)$ 为 $a:c\to d$，满足 $P(a)(v)=u$。每个 $(c,u)$ 由 Yoneda 引理给出自然变换 $y(c)\to P$。
+\end{definition}
+\begin{theorem}[Yoneda 稠密性]\label{thm:density}
+有自然同构
+\[
+P\cong\colim_{(c,u)\in\int P}y(c).
+\]
+\end{theorem}
+\begin{proof}
+逐对象 $x$ 计算余极限。左侧余极限中的代表元为三元组 $(c,u,f)$，其中 $u\in P(c)$、$f:x\to c$。定义映射
+\[
+[c,u,f]\longmapsto P(f)(u)\in P(x).
+\]
+若 $a:(c,u)\to(d,v)$，则 $P(a)(v)=u$，而
+$P(af)(v)=P(f)P(a)(v)=P(f)(u)$，故映射尊重余极限关系。
+
+每个 $w\in P(x)$ 都由 $(x,w,\id_x)$ 表示，所以满射。任一 $(c,u,f)$ 与 $(x,P(f)(u),\id_x)$ 通过元素范畴中的态射 $f$ 具有相同的余极限类，因此映射也单射。这一描述与对 $x$ 的前复合相容，给出预层自然同构。
+\end{proof}
+\begin{remark}
+单纯集合正是某个小范畴上的预层。上述定理将说明，每个单纯集合都可以由标准单形通过余极限拼装。这一结论来自明确的代表元与等价关系，不需要预先具有单纯同伦论知识。
+\end{remark}
+
+
+
+% ===== chapters/05_topology =====
+\chapter{路径、同伦与纤维化}
+\section{路径与端点固定的同伦}
+\begin{definition}[路径]
+令 $I=[0,1]$。空间 $X$ 中从 $x$ 到 $y$ 的路径是连续映射 $p:I\to X$，满足 $p(0)=x$、$p(1)=y$。恒定路径记为 $e_x(t)=x$。反向路径定义为 $\overline p(t)=p(1-t)$。
+\end{definition}
+\begin{definition}[映射之间的同伦]
+连续映射 $f,g:X\to Y$ 之间的同伦为连续映射 $H:X\times I\to Y$，满足 $H(x,0)=f(x)$、$H(x,1)=g(x)$。记作 $f\simeq g$。若给定子空间 $A\subseteq X$，且 $H(a,t)=f(a)=g(a)$ 对所有 $a\in A$ 成立，称为相对于 $A$ 的同伦。
+\end{definition}
+\begin{proposition}
+同伦是连续映射集合上的等价关系，且与前复合、后复合相容。
+\end{proposition}
+\begin{proof}
+反身性由恒定于时间的映射给出。对称性用 $H(x,1-t)$。若 $H:f\simeq g$、$K:g\simeq h$，定义
+\[
+L(x,t)=
+\begin{cases}
+H(x,2t),&0\le t\le\frac12,\\
+K(x,2t-1),&\frac12\le t\le1.
+\end{cases}
+\]
+两块在 $t=1/2$ 处均为 $g(x)$，由闭集粘贴引理连续。若另有 $a:W\to X$、$b:Y\to Z$，则 $bH(a(-),t)$ 给出 $bfa\simeq bga$。固定子空间的情形同理。
+\end{proof}
+\begin{definition}[路径复合]
+若 $p:x\to y$、$q:y\to z$，定义
+\[
+(p*q)(t)=
+\begin{cases}
+p(2t),&t\le1/2,\\
+q(2t-1),&t\ge1/2.
+\end{cases}
+\]
+它是从 $x$ 到 $z$ 的路径。
+\end{definition}
+\begin{lemma}[重新参数化]
+若 $r:I\to I$ 连续并满足 $r(0)=0$、$r(1)=1$，则 $p\circ r$ 与 $p$ 相对于端点同伦。
+\end{lemma}
+\begin{proof}
+令 $r_s(t)=(1-s)r(t)+st$。因为 $I$ 是凸集，$r_s(t)\in I$；且 $r_s(0)=0$、$r_s(1)=1$。于是 $H(t,s)=p(r_s(t))$ 为所要求的同伦。
+\end{proof}
+\begin{proposition}[路径群胚的基本等式]
+在端点固定的同伦类中，路径复合满足结合律，恒定路径为单位，反向路径为逆。
+\end{proposition}
+\begin{proof}
+$(p*q)*r$ 与 $p*(q*r)$ 沿相同三段路径运动，只是分段点分别为 $(1/4,1/2)$ 与 $(1/2,3/4)$。把两处分段点线性移动，或者分别与三等分参数化比较，即得到端点固定的同伦。$e_x*p$ 与 $p*e_y$ 分别在开头或末尾停顿，可由上一条引理去掉。
+
+对 $p*\overline p$，定义收缩
+\[
+H(t,s)=
+\begin{cases}
+p(2t(1-s)),&t\le1/2,\\
+p(2(1-t)(1-s)),&t\ge1/2.
+\end{cases}
+\]
+在 $s=0$ 时它是先行 $p$ 再返回的路径；在 $s=1$ 时恒为 $p(0)$。两段在 $t=1/2$ 相接，且始终保持端点。对 $\overline p*p$ 同理。
+\end{proof}
+\begin{definition}[基本群胚与基本群]
+基本群胚 $\Pi_1X$ 的对象是 $X$ 中的点，态射是端点固定的路径同伦类。固定基点 $x$ 后，其自同构群称为基本群，记为 $\pi_1(X,x)$。
+\end{definition}
+\begin{remark}
+通过取同伦类，结合律变为严格等式，但我们同时遗忘了两个路径同伦之间的同伦。高阶同伦论保留这些信息，因而不能只使用基本群胚代替全部空间。
+\end{remark}
+
+\section{同伦等价与基点变化}
+\begin{definition}[同伦等价]
+连续映射 $f:X\to Y$ 为同伦等价，若存在 $g:Y\to X$，使 $gf\simeq\id_X$、$fg\simeq\id_Y$。空间 $X$ 可缩，是指恒等映射同伦于某个常值映射。
+\end{definition}
+\begin{example}
+若 $X\subseteq\R^n$ 为非空凸集，固定 $x_0\in X$，则 $H(x,t)=(1-t)x+tx_0$ 给出收缩。圆柱 $S^1\times I$ 与 $S^1$ 同伦等价，投影的同伦逆是 $z\mapsto(z,0)$，收缩第二坐标给出所需同伦。
+\end{example}
+\begin{proposition}[同伦引起的基点共轭]
+设 $H:f\simeq g:X\to Y$，固定 $x\in X$，令 $a(t)=H(x,t)$。对以 $x$ 为基点的环路 $p$，$f\circ p$ 与
+\[
+a*(g\circ p)*\overline a
+\]
+在 $f(x)$ 处代表同一基本群元素。
+\end{proposition}
+\begin{proof}
+考虑正方形映射 $(s,t)\mapsto H(p(s),t)$。下边是 $f\circ p$，上边是 $g\circ p$，左右两边均为 $a$。沿方形边界比较从左下角出发的两条边路径，一条走下边，另一条依次走左边、上边和右边的反向。方形内部给出这两条路径的端点固定同伦。
+\end{proof}
+\begin{definition}[高阶同伦群与弱同伦等价]
+对 $n\ge1$，$\pi_n(X,x)$ 是基点保持映射 $(S^n,*)\to(X,x)$ 的基点保持同伦类，并带有标准的球面拼接运算。$\pi_0(X)$ 为路径连通分支集合。映射 $f:X\to Y$ 为弱同伦等价，若它在 $\pi_0$ 上为双射，并在每个基点处的全部 $\pi_n$ 上诱导同构。
+\end{definition}
+\begin{remark}
+同伦等价总是弱同伦等价。逆命题对具有适当胞腔结构的空间成立，是 Whitehead 定理。本文使用单纯集合的模型结构组织弱同伦等价，不需要把任意点集拓扑空间的弱等价都提升为同伦等价。
+\end{remark}
+
+\section{映射空间与连续参数}
+\begin{definition}[路径空间]
+记 $X^I$ 为从 $I$ 到 $X$ 的连续映射空间，赋予紧开拓扑。端点评价为
+\[
+(\ev_0,\ev_1):X^I\longrightarrow X\times X.
+\]
+对局部紧 Hausdorff 参数空间 $K$，紧开拓扑的指数律把 $T\to X^K$ 与 $T\times K\to X$ 的连续性联系起来。我们在 $K=I$ 时使用此律。
+\end{definition}
+\begin{example}
+一个元素 $p\in X^I$ 是一条路径；一个连续映射 $I\to X^I$ 是连续的一族路径，等价于 $I^2\to X$。若路径的端点固定，这就是路径之间的同伦。更高次的参数给出更高阶同伦。
+\end{example}
+\begin{remark}
+“每个点都有一条路径”与“存在连续的一族路径”不同。后者为一个映射空间中的点，要求随全部参数连续变化。依赖类型论中的项将直接表达这种相容的参数化数据。
+\end{remark}
+
+\section{纤维化与路径提升}
+\begin{definition}[Hurewicz 纤维化]
+连续映射 $p:E\to B$ 称为 Hurewicz 纤维化，若对任意空间 $T$ 及交换图
+\[
+\begin{tikzcd}
+T\times\{0\}\ar[r,"u"]\ar[d,hook]&E\ar[d,"p"]\\
+T\times I\ar[r,"H"']\ar[ur,dashed,"\widetilde H"]&B
+\end{tikzcd}
+\]
+都存在虚线提升，使两个三角形交换。
+\end{definition}
+\begin{example}
+投影 $B\times F\to B$ 是纤维化。若初值为 $u(t)=(H(t,0),v(t))$，则 $\widetilde H(t,s)=(H(t,s),v(t))$ 给出提升。覆盖映射也具有同伦提升性质；对路径提升，离散纤维使提升具有更强的唯一性。
+\end{example}
+\begin{proposition}[拉回稳定性]
+纤维化的任意拉回仍为纤维化。
+\end{proposition}
+\begin{proof}
+设 $E'=A\times_BE\to A$ 是 $p$ 沿 $f:A\to B$ 的拉回。一个到 $E'$ 的初值映射等价于到 $A$、$E$ 的相容初值。将底同伦 $H:T\times I\to A$ 复合 $f$，在 $E$ 中提升，得到 $\widetilde H_E$。有序对 $(H,\widetilde H_E)$ 取值于拉回，并满足所需初值。
+\end{proof}
+\begin{remark}
+一般纤维化不要求每条路径的提升严格唯一。同伦论中相应的唯一性通常以“某个提升空间可缩”表达。仅有提升存在性也不足以自动得到一个在所有输入中连续的全局选择。
+\end{remark}
+
+\section{映射路径分解与同伦纤维}
+\begin{definition}[映射路径空间]
+给定 $f:X\to Y$，令
+\[
+E_f=\{(x,p)\in X\times Y^I\mid p(0)=f(x)\},
+\qquad q(x,p)=p(1).
+\]
+定义 $i:X\to E_f$ 为 $i(x)=(x,e_{f(x)})$。则 $f=q\circ i$。
+\end{definition}
+\begin{proposition}
+映射 $i$ 是同伦等价，$q:E_f\to Y$ 是 Hurewicz 纤维化。
+\end{proposition}
+\begin{proof}
+投影 $r:E_f\to X$ 满足 $ri=\id_X$。同伦
+\[
+K_s(x,p)=(x,t\mapsto p((1-s)t))
+\]
+把 $\id_{E_f}$ 收缩到 $ir$。
+
+为了证明纤维化，给定初值 $u(a)=(x_a,p_a)$ 和底同伦 $H(a,s)$，其中 $H(a,0)=p_a(1)$。令 $\widetilde H(a,s)=(x_a,p_{a,s})$，其中
+\[
+p_{a,s}(t)=
+\begin{cases}
+p_a((1+s)t),&(1+s)t\le1,\\
+H(a,(1+s)t-1),&(1+s)t\ge1.
+\end{cases}
+\]
+两条公式在交界处相等，因而连续；$s=0$ 时恢复 $p_a$；始点始终是 $f(x_a)$，终点为 $H(a,s)$。由指数律得到 $\widetilde H$ 连续，故为提升。
+\end{proof}
+\begin{definition}[同伦纤维]
+$f:X\to Y$ 在 $y\in Y$ 处的同伦纤维为
+\[
+\operatorname{hofib}_f(y)=\{(x,p)\mid p(0)=f(x),\ p(1)=y\}.
+\]
+它是上述纤维化 $q$ 的通常纤维。
+\end{definition}
+\begin{example}
+若 $X=\{x\}$ 且 $f(x)=y$，则同伦纤维为环路空间 $\Omega_yY$。但通常纤维只有一个点。这说明同伦纤维保存了底空间中路径的多重性。
+\end{example}
+\begin{example}
+对恒等映射 $\id_Y$，同伦纤维为所有以 $y$ 为终点的路径。它可缩：沿路径把起点逐渐移向终点即可。与之相对，固定始点和终点均为 $y$ 的环路空间一般不可缩。
+\end{example}
+\begin{remark}
+后文公式 $\fib_f(y)=\sum_x(f(x)=y)$ 正是映射路径纤维的内在版本。相等条件中包含一条路径，因此依赖和同时记录原像和它到目标点的比较。
+\end{remark}
+\source{本章提供几何直观；系统的代数拓扑背景见\cite{Hatcher}。同伦纤维与依赖和的关系将于第十一章在类型规则内重新证明。}
+
+
+
+% ===== chapters/06_simplicial =====
+\chapter{单纯集合与范畴的神经}
+\section{单纯范畴与生成映射}
+\begin{definition}[单纯范畴]
+记 $[n]=\{0<1<\cdots<n\}$。单纯范畴 $\Delta$ 的对象为 $[n]$，态射为保序映射。对 $0\le i\le n$，余面映射 $\delta^i:[n-1]\to[n]$ 跳过 $i$；对 $0\le i\le n$，余退化映射 $\sigma^i:[n+1]\to[n]$ 合并相邻的 $i,i+1$。
+\end{definition}
+\begin{lemma}[保序映射的分解]
+每个 $\alpha:[m]\to[n]$ 唯一分解为保序满射后接保序单射。
+\end{lemma}
+\begin{proof}
+将像按顺序写为 $a_0<\cdots<a_r$。单射 $\iota:[r]\to[n]$ 必须为 $j\mapsto a_j$；定义满射 $e:[m]\to[r]$ 为 $\alpha(k)=a_{e(k)}$。因为 $\alpha$ 保序，$e$ 保序。像集合与其中的顺序均由 $\alpha$ 确定，故分解唯一。
+\end{proof}
+\begin{proposition}
+所有 $\Delta$ 态射均可由余面与余退化映射复合得到。
+\end{proposition}
+\begin{proof}
+保序单射由逐个插入其像中缺少的元素获得，所以为余面复合。若一个满射不是双射，必有相邻两个点取相同值；先通过合并该相邻对的 $\sigma^i$ 因子化，降低定义域长度，再归纳。结合上一引理即得结论。
+\end{proof}
+
+\section{单纯集合及其面、退化}
+\begin{definition}[单纯集合]
+单纯集合为函子 $X:\Delta^\op\to\Set$。记 $X_n=X([n])$。其元素称为 $n$-单形。面映射 $d_i=X(\delta^i)$，退化映射 $s_i=X(\sigma^i)$。单纯映射为这些函子之间的自然变换。
+\end{definition}
+\begin{proposition}[单纯恒等式]
+面与退化映射满足
+\begin{align*}
+d_i d_j&=d_{j-1}d_i &&(i<j),\\
+s_i s_j&=s_{j+1}s_i &&(i\le j),\\
+d_i s_j&=
+\begin{cases}
+s_{j-1}d_i,&i<j,\\
+\id,&i=j\text{ 或 }i=j+1,\\
+s_jd_{i-1},&i>j+1.
+\end{cases}
+\end{align*}
+\end{proposition}
+\begin{proof}
+这些等式对偶于 $\Delta$ 中插入与合并坐标的等式。例如先删第 $j$ 个顶点，再删其前面的第 $i$ 个顶点，与先删第 $i$ 个顶点、再删原来第 $j$ 个顶点现在对应的第 $j-1$ 个顶点相同。余退化的验证同样逐点进行。混合式中，删除刚刚重复的两个顶点之一会恢复原序列，产生恒等映射；删除其他顶点则只改变退化位置的编号。
+\end{proof}
+\begin{example}[零维至二维数据]
+$X_0$ 为顶点集合。$a\in X_1$ 有始点 $d_1a$ 与终点 $d_0a$。若 $\sigma\in X_2$ 的顶点为 $x_0,x_1,x_2$，则 $d_2\sigma$ 为 $x_0\to x_1$，$d_0\sigma$ 为 $x_1\to x_2$，$d_1\sigma$ 为 $x_0\to x_2$。退化 $s_0x$ 表示顶点处的恒等边。
+\end{example}
+\begin{definition}[标准单形]
+标准 $n$-单形为可表预层
+\[
+\Delta^n=\Hom_\Delta(-,[n]).
+\]
+于是 $(\Delta^n)_m$ 是从 $[m]$ 到 $[n]$ 的所有保序映射。
+\end{definition}
+\begin{proposition}[单形的表示性质]
+对任意单纯集合 $X$，有自然双射
+\[
+\Hom_{\sSet}(\Delta^n,X)\cong X_n.
+\]
+\end{proposition}
+\begin{proof}
+这是预层范畴上的 Yoneda 引理。具体地，$\sigma\in X_n$ 对应的单纯映射把 $\alpha:[m]\to[n]$ 送到 $X(\alpha)(\sigma)$。逆方向是在 $\id_{[n]}$ 处评价。
+\end{proof}
+\begin{example}[有方向的组合区间]
+$\Delta^1$ 的非退化边只有 $0\to1$。若有交换两个端点的单纯自映射，由表示性质和 Yoneda 全忠实性，它对应一个保序自映射 $[1]\to[1]$ 交换 $0,1$，这是不可能的。故单纯区间没有反向对称性。
+\end{example}
+
+\section{边界、角与脊}
+\begin{definition}[边界与角]
+$\partial\Delta^n$ 是 $\Delta^n$ 中所有真面生成的单纯子集。第 $k$ 个角 $\Lambda_k^n$ 是除第 $k$ 个余维一面外，其余余维一面生成的子集。对 $0<k<n$ 称内角，其余称外角。
+\end{definition}
+\begin{example}[二维内角]
+$\Lambda_1^2$ 包含边 $0\to1$ 与 $1\to2$，不含边 $0\to2$ 及三角形内部。映射 $\Lambda_1^2\to X$ 指定两条可合成的边。延拓至 $\Delta^2$ 同时指定第三条边及一个二维比较单形。
+\[
+\begin{tikzcd}[column sep=large]
+&1\ar[dr,"g"]&\\
+0\ar[ur,"f"]\ar[rr,dashed,"h"']&&2
+\end{tikzcd}
+\]
+\end{example}
+\begin{definition}[脊]
+$\operatorname{Sp}^n\subset\Delta^n$ 为相邻边
+\[
+0\longrightarrow1\longrightarrow\cdots\longrightarrow n
+\]
+的并。特别地，$\operatorname{Sp}^2=\Lambda_1^2$。
+\end{definition}
+\begin{remark}
+角与边界不同。$\partial\Delta^2$ 已有三条边，延拓要求这三条边满足一个二维关系；内角只有两条边，延拓还允许选择第三条边。高阶范畴的复合对应后一种问题。
+\end{remark}
+
+\section{几何实现与奇异复形}
+\begin{definition}[拓扑标准单形]
+令
+\[
+|\Delta^n|=\{(t_0,\ldots,t_n)\in\R^{n+1}\mid t_i\ge0,\ \sum_i t_i=1\}.
+\]
+保序映射 $\alpha:[m]\to[n]$ 诱导仿射映射 $|\alpha|$，将第 $i$ 个顶点送到第 $\alpha(i)$ 个顶点。
+\end{definition}
+\begin{definition}[几何实现]
+单纯集合 $X$ 的几何实现为商空间
+\[
+|X|=\left(\coprod_{n\ge0}X_n\times|\Delta^n|\right)\big/\sim,
+\]
+其中对 $\alpha:[m]\to[n]$，识别
+\[
+(X(\alpha)(\sigma),t)\sim(\sigma,|\alpha|(t)).
+\]
+\end{definition}
+\begin{definition}[奇异单纯集合]
+拓扑空间 $Y$ 的奇异单纯集合 $\operatorname{Sing}Y$ 定义为
+\[
+(\operatorname{Sing}Y)_n=\Hom_{\Top}(|\Delta^n|,Y),
+\]
+其面、退化通过前复合相应仿射映射给出。
+\end{definition}
+\begin{theorem}[实现与奇异复形的伴随]
+存在自然双射
+\[
+\Hom_{\Top}(|X|,Y)\cong\Hom_{\sSet}(X,\operatorname{Sing}Y).
+\]
+\end{theorem}
+\begin{proof}
+一个 $|X|\to Y$ 的连续映射等价于对每个 $\sigma\in X_n$ 给出连续映射 $h_\sigma:|\Delta^n|\to Y$，并满足商关系要求的相容性
+\[
+h_{X(\alpha)(\sigma)}=h_\sigma\circ|\alpha|.
+\]
+这正是给每个 $n$ 指定函数 $X_n\to(\operatorname{Sing}Y)_n$，且这些函数构成自然变换。两种解释互逆，连续性由商拓扑的泛性质保证。
+\end{proof}
+\begin{proposition}[单形拼装]
+任意单纯集合 $X$ 是其所有单形图表的余极限：
+\[
+X\cong\colim_{(\Delta^n\to X)}\Delta^n.
+\]
+\end{proposition}
+\begin{proof}
+将定理\ref{thm:density}应用于小范畴 $\Delta$。元素范畴的对象为 $\sigma\in X_n$，由单形表示性质等同于映射 $\Delta^n\to X$，故得到上述表达式。
+\end{proof}
+
+\section{范畴的神经}
+\begin{definition}[神经]
+普通范畴 $C$ 的神经 $NC$ 为单纯集合
+\[
+(NC)_n=\Fun([n],C).
+\]
+一个 $n$-单形等价于可复合序列
+$x_0\xrightarrow{f_1}x_1\to\cdots\xrightarrow{f_n}x_n$。内部面复合相邻态射，首尾面删除首尾对象，退化插入恒等态射。
+\end{definition}
+\begin{proposition}[神经的全忠实性]
+函子 $C\to D$ 与单纯映射 $NC\to ND$ 一一对应。
+\end{proposition}
+\begin{proof}
+函子逐维作用得到单纯映射。反之，一个单纯映射在零维给出对象函数，在一维给出保持始终点的态射函数。它保持退化，故保持恒等；它把二维单形送到二维单形，故保持复合。因 $NC$ 中高维单形由连续的一维边唯一确定，所得函子恢复原单纯映射。
+\end{proof}
+\begin{proposition}[神经的内角填充]
+对任意范畴 $C$，$NC$ 的每个内角都有唯一填充。
+\end{proposition}
+\begin{proof}
+二维内角给出 $f:x\to y$、$g:y\to z$；第三条边必须为 $gf$，因此存在且唯一。对 $n\ge3$，角中包含所有相邻边。它们确定唯一函子 $[n]\to C$。需要检验其各个已给面与角一致。每个已给面中的长边由相邻边的复合确定；在三维，所需一致性是 $(h\circ g)\circ f=h\circ(g\circ f)$，即结合律。更高维的一致性由反复使用结合律得到，故唯一候选确实填充原角。
+\end{proof}
+\begin{theorem}[群胚的神经判据]
+$NC$ 满足所有角的填充条件，当且仅当 $C$ 为群胚。
+\end{theorem}
+\begin{proof}
+若所有角可填，对 $f:x\to y$，外角 $\Lambda_0^2$ 可指定 $x\xrightarrow f y$ 与 $x\xrightarrow{\id_x}x$，填充给出 $g:y\to x$ 使 $gf=\id_x$。另一外角给出右逆 $h:y\to x$。于是 $g=g(fh)=(gf)h=h$，故 $f$ 可逆。
+
+若 $C$ 为群胚，二维外角中缺失的边可用已知态射与逆唯一求出。对高维外角，所有相邻边除至多一条外都已知；缺失边同样由某个三角形关系及逆求出。随后相邻边决定整个单形，其他面的一致性由角中已有的关系与可逆消去保证。故每个角可填。
+\end{proof}
+\begin{example}
+$N[1]=\Delta^1$ 具有内角填充，但不具有所有外角填充；这反映 $0\to1$ 不可逆。群 $G$ 的单对象神经是 Kan 复形，而其几何实现通常具有非平凡基本群。
+\end{example}
+\source{关于单纯集合的组合与几何入门，可对照\cite{Friedman}；本章所需的表示公式与伴随已在正文证明。}
+
+
+
+% ===== chapters/07_kan =====
+\chapter{Kan 复形、模型结构与路径对象}
+\section{提升性质与 Kan 条件}
+\begin{definition}[提升性质]
+给定映射 $i:A\to B$、$p:E\to F$。若每个交换方块
+\[
+\begin{tikzcd}
+A\ar[r,"u"]\ar[d,"i"']&E\ar[d,"p"]\\
+B\ar[r,"v"']\ar[ur,dashed,"\ell"]&F
+\end{tikzcd}
+\]
+均有提升，称 $i$ 对 $p$ 具有左提升性质，或 $p$ 对 $i$ 具有右提升性质，记 $i\perp p$。
+\end{definition}
+\begin{definition}[Kan 纤维化与 Kan 复形]
+单纯映射 $p:E\to B$ 为 Kan 纤维化，若对全部 $n\ge1$、$0\le k\le n$，有 $\Lambda_k^n\hookrightarrow\Delta^n\perp p$。若 $X\to\Delta^0$ 为 Kan 纤维化，则称 $X$ 为 Kan 复形。
+\end{definition}
+\begin{proposition}[纤维化的稳定性]
+Kan 纤维化在复合、拉回和收缩项下封闭。其在任意顶点上的纤维为 Kan 复形。
+\end{proposition}
+\begin{proof}
+复合情形，先对下层映射提升，再对上层映射提升。拉回情形，将提升问题投影到原方块，提升后由拉回泛性质恢复。若 $p$ 是 $q$ 在箭头范畴中的收缩项，把 $p$ 的方块嵌入 $q$ 的方块，取得提升后投影回来。纤维是沿顶点映射的拉回，故纤维到点为 Kan 纤维化。
+\end{proof}
+\begin{example}[外角恢复逆]
+对 Kan 复形 $X$ 的边 $f:x\to y$，外角填充给出 $g:y\to x$ 及一个把 $gf$ 与恒等边联系起来的二维单形。另一个外角提供另一侧的逆条件。这些条件是二维比较，而非单纯映射之间的字面等式。
+\end{example}
+\begin{remark}
+Kan 条件要求填充存在，通常不要求严格唯一。高阶填充提供不同选择之间的比较。这与普通群胚神经中由代数等式确定的唯一高维填充有明显差别。
+\end{remark}
+
+\section{弱因子分解与胞腔添附}
+\begin{definition}[弱因子分解系统]
+范畴中的两个映射类 $(\mathcal L,\mathcal R)$ 构成弱因子分解系统，若每个映射分解为 $ri$，其中 $i\in\mathcal L$、$r\in\mathcal R$，且
+\[
+\mathcal L={}^\perp\mathcal R,
+\qquad \mathcal R=\mathcal L^\perp.
+\]
+\end{definition}
+\begin{definition}[角添附]
+把一个角映射 $\Lambda_k^n\to X$ 延拓到新单形，得到推出
+\[
+\begin{tikzcd}
+\Lambda_k^n\ar[r]\ar[d,hook]&X\ar[d]\\
+\Delta^n\ar[r]&X\amalg_{\Lambda_k^n}\Delta^n.
+\end{tikzcd}
+\]
+由这样的推出、序数复合及收缩项生成的映射称为由角生成的平凡上纤维化，通常也称 anodyne 扩张。
+\end{definition}
+\begin{proposition}[添附填充的因子分解]
+每个单纯映射 $f:X\to Y$ 可以分解为角添附的序列后接 Kan 纤维化。
+\end{proposition}
+\begin{proof}
+令 $X_0=X$。给定 $X_r\to Y$，对所有交换方块 $\Lambda_k^n\to X_r$、$\Delta^n\to Y$，同时添入一个 $\Delta^n$，得到 $X_{r+1}\to Y$。取 $X_\infty=\colim_{r<\omega}X_r$。一个角只有有限个非退化单形，因此到 $X_\infty$ 的角映射已经经过某个 $X_r$；其填充在 $X_{r+1}$ 中已添入。故 $X_\infty\to Y$ 为 Kan 纤维化。
+
+复合 $X\to X_\infty$ 由角添附生成。对任意 Kan 纤维化求提升时，可逐级扩展映射；极限级取兼容映射的并。因此它对所有 Kan 纤维化具有左提升性质。
+\end{proof}
+\begin{remark}
+这个构造解释了填充为何能够系统地补齐。它本身还没有证明哪些映射在几何实现后是弱同伦等价，也没有证明模型结构的全部相容性；这些属于下一条基础定理的内容。
+\end{remark}
+
+\section{Quillen 模型结构}
+\begin{definition}[模型范畴]
+具有所有小极限和余极限的范畴 $M$，连同弱等价 $\mathcal W$、上纤维化 $\mathcal C$、纤维化 $\mathcal F$ 三类映射，称为模型范畴，若弱等价满足二取三及收缩项封闭，且
+\[
+(\mathcal C,\mathcal F\cap\mathcal W),
+\qquad(\mathcal C\cap\mathcal W,\mathcal F)
+\]
+构成弱因子分解系统。“平凡”表示同时属于弱等价类。对象 $X$ 为纤维性的，是指 $X\to1$ 为纤维化；为上纤维性的，是指 $0\to X$ 为上纤维化。
+\end{definition}
+\begin{theorem}[Quillen 模型结构，基础定理]\label{thm:quillen}
+单纯集合范畴具有右适当的单纯模型结构，其中上纤维化为单射，纤维化为 Kan 纤维化，弱等价为几何实现后的弱同伦等价。平凡纤维化恰对全部边界包含 $\partial\Delta^n\hookrightarrow\Delta^n$ 具有右提升性质。全部对象均为上纤维性的。
+\end{theorem}
+\begin{remark}
+这里“右适当”表示沿纤维化拉回弱等价仍为弱等价。“单纯”表示映射单纯集、张量和余张量与模型结构相容。定理\ref{thm:quillen}是本讲义引用的模型存在定理，见\cite{Quillen,GoerssJardine}。下文使用的具体相容性质会逐项写出。
+\end{remark}
+\begin{definition}[单纯映射对象]
+对单纯集合 $K,X$，定义指数对象
+\[
+(X^K)_n=\Hom_{\sSet}(\Delta^n\times K,X).
+\]
+它满足自然伴随 $\Hom(L,X^K)\cong\Hom(L\times K,X)$。特别地，$\Map(K,X)=X^K$。
+\end{definition}
+\begin{proposition}[指数映射的提升性质]\label{prop:SM7}
+若 $i:K\hookrightarrow L$ 为单射，$p:X\to Y$ 为 Kan 纤维化，则
+\[
+X^L\longrightarrow X^K\times_{Y^K}Y^L
+\]
+为 Kan 纤维化。当 $i$ 或 $p$ 为弱等价时，该映射为平凡纤维化。
+\end{proposition}
+\begin{proof}
+这是定理\ref{thm:quillen}中单纯相容公理的指数形式。它与推出积形式通过指数伴随互相转换：一个对角提升问题转置为对
+\[
+(K\times\Delta^n)\cup_{K\times\Lambda_j^n}(L\times\Lambda_j^n)
+\longrightarrow L\times\Delta^n
+\]
+的提升问题。相容公理保证推出积属于所需的上纤维化类，故原指数映射属于相应的纤维化类。
+\end{proof}
+\begin{proposition}[Frobenius 性质]
+平凡上纤维化沿纤维化的拉回仍为平凡上纤维化。
+\end{proposition}
+\begin{proof}
+单射在任意拉回下保持，故拉回仍为上纤维化。右适当性保证其仍为弱等价。两者合起来即为平凡上纤维化。
+\end{proof}
+
+\section{绝对路径对象}
+\begin{proposition}[路径对象分解]
+若 $A$ 为 Kan 复形，则其对角映射分解为
+\[
+A\xrightarrow{r}A^{\Delta^1}
+\xrightarrow{(\ev_0,\ev_1)}A\times A,
+\]
+其中 $r$ 把点送到恒定路径，为平凡上纤维化；端点映射为 Kan 纤维化。
+\end{proposition}
+\begin{proof}
+对单射 $\partial\Delta^1\hookrightarrow\Delta^1$ 和纤维化 $A\to1$ 使用命题\ref{prop:SM7}，得到端点映射为纤维化。端点包含 $\{0\}\hookrightarrow\Delta^1$ 是角包含，故是平凡上纤维化；同一命题给出 $\ev_0:A^{\Delta^1}\to A$ 为平凡纤维化。由于 $\ev_0r=\id_A$，二取三给出 $r$ 为弱等价。又因 $r$ 有左逆，它是单射，所以是平凡上纤维化。
+\end{proof}
+\begin{definition}[路径纤维]
+给定 $x,y\in A_0$，路径空间 $\operatorname{Path}_A(x,y)$ 为端点映射在 $(x,y)$ 上的纤维。其点为路径，其边为固定端点的路径之间的同伦。
+\end{definition}
+\begin{proposition}[从恒定路径延拓]
+若 $p:E\to A^{\Delta^1}$ 为纤维化，且给定 $d:A\to E$ 满足 $pd=r$，则存在截面 $J(d):A^{\Delta^1}\to E$，使 $J(d)r=d$。
+\end{proposition}
+\begin{proof}
+对平凡上纤维化 $r$ 与纤维化 $p$ 使用左提升性质：
+\[
+\begin{tikzcd}
+A\ar[r,"d"]\ar[d,"r"']&E\ar[d,"p"]\\
+A^{\Delta^1}\ar[r,"\id"']\ar[ur,dashed,"J(d)"]&A^{\Delta^1}.
+\end{tikzcd}
+\]
+两个三角形分别表达计算规则和截面条件。
+\end{proof}
+\begin{proposition}[延拓空间的可缩性]
+在上一个提升问题中，所有满足边界条件的提升组成可缩 Kan 复形。
+\end{proposition}
+\begin{proof}
+命题\ref{prop:SM7}表明从映射对象到交换方块对象的映射
+\[
+\Map(A^{\Delta^1},E)\to
+\Map(A,E)\times_{\Map(A,A^{\Delta^1})}
+\Map(A^{\Delta^1},A^{\Delta^1})
+\]
+为平凡纤维化。固定方块 $(d,\id)$ 后，其纤维为平凡纤维化到点，因而是非空且弱等价于点的 Kan 复形；对 Kan 复形，这给出可缩性。该纤维恰记录全部提升及其高阶同伦。
+\end{proof}
+
+\section{任意语境中的路径对象}
+\begin{definition}[纤维内路径对象]
+给定 Kan 纤维化 $p:A\to\Gamma$，不要求 $\Gamma$ 为 Kan 复形，定义
+\[
+P_\Gamma(A)=A^{\Delta^1}\times_{\Gamma^{\Delta^1}}\Gamma,
+\]
+其中 $\Gamma\to\Gamma^{\Delta^1}$ 取恒定路径。它只允许 $A$ 中投影到 $\Gamma$ 后恒定的路径。
+\end{definition}
+\begin{proposition}[相对路径分解]\label{prop:relativepath}
+存在分解
+\[
+A\xrightarrow{r_\Gamma}P_\Gamma(A)
+\longrightarrow A\times_\Gamma A,
+\]
+左侧为平凡上纤维化，右侧为纤维化，并且构造在基变换下自然同构。
+\end{proposition}
+\begin{proof}
+对 $p:A\to\Gamma$ 及边界包含使用命题\ref{prop:SM7}，再沿常值底路径拉回，得到右侧纤维化。对端点包含使用该命题，得到 $\ev_0:P_\Gamma(A)\to A$ 为平凡纤维化。$r_\Gamma$ 是其截面且为单射，故由二取三为平凡上纤维化。
+
+沿 $u:\Delta\to\Gamma$ 拉回后，两边都表示“$A$ 的一条路径及其在 $\Gamma$ 上固定的值，并选择该值在 $\Delta$ 中的提升”。由拉回泛性质得到自然同构。这里只声称所用范畴构造的自然同构；严格代入的语法需要另行选择相容的表达方式。
+\end{proof}
+\begin{theorem}[带附加依赖的路径归纳，语义形式]
+设 $A\to\Gamma$ 为纤维化，并给定纤维化
+\[
+Q\xrightarrow\chi P\xrightarrow\rho P_\Gamma(A).
+\]
+令 $P_0=P\times_{P_\Gamma(A)}A$。则 $\chi$ 在 $P_0$ 上的任一部分截面可延拓为在 $P$ 上的截面，且固定部分截面的延拓空间可缩。
+\end{theorem}
+\begin{proof}
+由命题\ref{prop:relativepath}，$A\to P_\Gamma(A)$ 为平凡上纤维化。沿纤维化 $\rho$ 拉回，由 Frobenius 性质得到 $P_0\to P$ 仍为平凡上纤维化。用它对 $\chi$ 求提升，得到所需截面。映射对象的平凡纤维化性质给出提升空间可缩。
+\end{proof}
+\begin{remark}
+附加参数可以依赖路径本身，这由 $P\to P_\Gamma(A)$ 表示。该一般性使路径复合、依赖传输和高阶相容等式都能由同一个归纳原理构造。这是 Riehl 报告 Proposition 3.6 的语义内容\cite{RiehlICM}。
+\end{remark}
+
+
+
+% ===== chapters/08_families =====
+\chapter{预层中的空间族与依赖运算}
+\section{广义元素}
+\begin{definition}[广义元素]
+在具有终对象的范畴 $C$ 中，普通点为态射 $1\to A$。更一般地，$A$ 的 $\Gamma$-广义元素是态射 $a:\Gamma\to A$。把 $\Gamma$ 称为语境或参数对象。
+\end{definition}
+\begin{example}
+在 $\Set$ 中，$\Gamma\to A$ 是 $\Gamma$-指标的元素族。在 $\Top$ 中，它是连续参数化的一族点。在 $\sSet$ 中，$\Delta^n\to A$ 是一个 $n$-单形。因此仅观察普通顶点会丢失很多单纯信息。
+\end{example}
+\begin{proposition}[广义元素辨别态射]
+两个态射 $f,g:A\to B$ 相等，当且仅当对所有 $a:\Gamma\to A$，有 $fa=ga$。
+\end{proposition}
+\begin{proof}
+必要性由复合得到。充分性取 $\Gamma=A$、$a=\id_A$ 即可。
+\end{proof}
+\begin{remark}
+“任取 $a:A$”在依赖语言中通常表示在语境 $A$ 中推理，因而包括所有广义元素。它不应被缩减为逐个全局顶点进行的集合论推理。
+\end{remark}
+
+\section{预层范畴的切片}
+\begin{definition}[预层的元素范畴]
+设 $D$ 为小范畴，$B:D^\op\to\Set$。元素范畴 $\int B$ 的对象为 $(d,b)$，其中 $b\in B(d)$；态射 $(d,b)\to(e,c)$ 为 $u:d\to e$，满足 $B(u)(c)=b$。
+\end{definition}
+\begin{proposition}[切片仍是预层范畴]
+存在范畴等价
+\[
+\widehat D/B\simeq\widehat{\int B}.
+\]
+\end{proposition}
+\begin{proof}
+给定 $p:E\to B$，在 $(d,b)$ 上取纤维
+\[
+E_b(d)=\{e\in E(d)\mid p_d(e)=b\}.
+\]
+自然性保证沿 $u:(d,b)\to(e,c)$ 的限制映射 $E(u)$ 把 $E_c(e)$ 送到 $E_b(d)$，故得到预层。
+
+反之，给定 $Q:(\int B)^\op\to\Set$，定义
+\[
+E(d)=\coprod_{b\in B(d)}Q(d,b),
+\]
+投影到 $B(d)$。沿 $u:d\to e$，把 $(c,q)$ 送到 $(B(u)c,Q(u)q)$。这定义预层和自然变换 $E\to B$。在态射上取逐纤维映射，得到互逆的函子，至少在自然同构意义下互逆。
+\end{proof}
+\begin{remark}
+此等价把“随一个预层元素变化的族”转换为“更细指标范畴上的普通预层”。因此预层范畴在切片后仍保留良好的函数对象结构。
+\end{remark}
+
+\section{预层指数的明确公式}
+\begin{proposition}[预层指数]
+对 $A,B\in\widehat D$，令
+\[
+(B^A)(d)=\Nat(y(d)\times A,B).
+\]
+沿 $u:c\to d$ 的限制由 $y(u)\times\id_A$ 的前复合给出。这个预层满足指数对象的泛性质。
+\end{proposition}
+\begin{proof}
+设 $h:X\times A\to B$。给定 $x\in X(d)$，由 Yoneda 对应得到 $y(d)\to X$；与 $A$ 取积后复合 $h$，得到 $y(d)\times A\to B$。这定义 $X\to B^A$，且对 $d$ 自然。
+
+反之，设 $k:X\to B^A$。对 $x\in X(d)$、$a\in A(d)$，定义
+\[
+h_d(x,a)=k_d(x)_d(\id_d,a).
+\]
+自然性保证这些 $h_d$ 构成自然变换。两次构造互逆：一次由恒等处评价，另一次由 Yoneda 引理的唯一性。
+\end{proof}
+\begin{theorem}[预层范畴局部笛卡尔闭]
+每个预层范畴都有小极限和小余极限，且局部笛卡尔闭。特别地，$\sSet$ 局部笛卡尔闭。
+\end{theorem}
+\begin{proof}
+极限与余极限逐对象在 $\Set$ 中计算，限制映射由泛性质诱导。上一条命题给出笛卡尔闭性。切片等价于另一预层范畴，故每个切片也笛卡尔闭，从而有依赖积右伴随。为避免只使用存在性，下一节给出其直接公式。
+\end{proof}
+
+\section{依赖积的广义纤维公式}
+\begin{proposition}[依赖积的表示]
+设 $f:A\to B$、$p:E\to A$ 为预层映射。对 $b\in B(d)$，令 $b:y(d)\to B$ 为对应的广义元素。$\Pi_fE$ 在 $b$ 处的广义纤维可定义为截面集合
+\[
+(\Pi_fE)_b(d)=
+\Hom_{\widehat D/A}(y(d)\times_BA,E).
+\]
+由这些集合与前复合限制得到 $B$ 上的预层，并满足 $f^*\dashv\Pi_f$。
+\end{proposition}
+\begin{proof}
+把所有 $b\in B(d)$ 的上述集合做不交并，得到 $(\Pi_fE)(d)$。沿 $u:c\to d$，由映射 $y(c)\times_BA\to y(d)\times_BA$ 前复合，定义限制。单位和复合由前复合的相应等式保证。
+
+给定 $Y\to B$ 与 $A$ 上的映射 $h:Y\times_BA\to E$，对每个 $y\in Y(d)$，限制 $h$ 到 $y(d)\times_BA$，得到 $(\Pi_fE)_{p(y)}(d)$ 的元素，于是得到 $Y\to\Pi_fE$。反向在广义元素 $a\in A(d)$ 上评价相应截面，得到 $Y\times_BA\to E$。两种构造互逆，并对参数自然。
+\end{proof}
+\begin{example}
+当 $D$ 只有一个对象和恒等态射时，预层就是集合，上式退化为
+\[
+(\Pi_fE)_b=\prod_{a\in f^{-1}(b)}E_a.
+\]
+对于一般预层，公式必须记录到 $d$ 的所有态射上的相容性，不能只对普通点纤维作互不相关的乘积。
+\end{example}
+
+\section{Beck--Chevalley 变换}
+\begin{theorem}[基变换公式]\label{thm:beck}
+设下图为拉回：
+\[
+\begin{tikzcd}
+A'\ar[r,"v"]\ar[d,"f'"']&A\ar[d,"f"]\\
+B'\ar[r,"u"']&B.
+\end{tikzcd}
+\]
+在局部笛卡尔闭范畴中，存在自然同构
+\[
+u^*\Sigma_f\cong\Sigma_{f'}v^*,
+\qquad u^*\Pi_f\cong\Pi_{f'}v^*.
+\]
+\end{theorem}
+\begin{proof}
+第一式由拉回粘贴得到。证明第二式时，对任意 $Y\to B'$ 计算
+\begin{align*}
+\Hom_{B'}(Y,u^*\Pi_fE)
+&\cong\Hom_B(\Sigma_uY,\Pi_fE)\\
+&\cong\Hom_A(f^*\Sigma_uY,E)\\
+&\cong\Hom_A(\Sigma_v(f')^*Y,E)\\
+&\cong\Hom_{A'}((f')^*Y,v^*E)\\
+&\cong\Hom_{B'}(Y,\Pi_{f'}v^*E).
+\end{align*}
+第三步同样使用拉回粘贴。所有双射对 $Y$ 自然，由 Yoneda 引理得到对象同构。
+\end{proof}
+\begin{remark}
+基变换公式说明先作依赖运算再代入参数，与先代入再作同样的依赖运算相容。类型论把这种相容性表现为代入规则；语义中则首先得到自然同构。
+\end{remark}
+
+\section{为什么纤维性得到保持}
+\begin{proposition}[依赖和、拉回与依赖积保持纤维化]
+在 $\sSet$ 中，若 $f:A\to B$ 是 Kan 纤维化，则 $\Sigma_f$、$f^*$、$\Pi_f$ 都把切片中的纤维化送到纤维化。
+\end{proposition}
+\begin{proof}
+$\Sigma_f$ 保持纤维性来自纤维化的复合封闭；一般切片之间的纤维化态射在复合函子下底层映射不变。拉回保持纤维化已证明。
+
+对 $\Pi_f$，设 $p:E\to F$ 为 $A$ 上的纤维化。需要证明 $\Pi_fp$ 对 $B$ 上的平凡上纤维化有右提升性质。由伴随，每个提升问题转置为 $p$ 对 $f^*i$ 的提升问题。$f^*i$ 是沿纤维化的拉回，Frobenius 性质说明它仍为平凡上纤维化，故存在提升。转置回来得到结论。
+\end{proof}
+\begin{definition}[空间族的记号]
+一个 Kan 纤维化 $A\to\Gamma$ 写成 $\gamma:\Gamma\vdash A_\gamma$。若 $B\to A$ 也是纤维化，则分别记其复合与依赖积为
+\[
+\gamma:\Gamma\vdash\sum_{a:A_\gamma}B_a,
+\qquad
+\gamma:\Gamma\vdash\prod_{a:A_\gamma}B_a.
+\]
+\end{definition}
+\begin{proposition}[纤维计算]
+对广义元素 $\gamma:\Delta\to\Gamma$，依赖和、依赖积的拉回分别为
+\[
+\sum_{a:A_\gamma}B_a,
+\qquad\prod_{a:A_\gamma}B_a,
+\]
+其中右边在切片 $\sSet/\Delta$ 内计算。
+\end{proposition}
+\begin{proof}
+直接应用定理\ref{thm:beck}。广义元素的定义域 $\Delta$ 任意，因此结论不仅对顶点成立，也对连续变化或单纯变化的参数成立。
+\end{proof}
+
+\section{依赖运算的组合律}
+\begin{proposition}[依赖和的结合律]
+对空间族 $A$、$B_a$、$C_{a,b}$，存在自然同构
+\[
+\sum_{a:A}\sum_{b:B_a}C_{a,b}
+\cong\sum_{(a,b):\sum_aB_a}C_{a,b}.
+\]
+\end{proposition}
+\begin{proof}
+两侧都由相同的纤维化复合 $C\to B\to A\to1$ 给出，其广义元素分别写为 $(a,(b,c))$ 与 $((a,b),c)$。重加括号给出保持投影的互逆映射。
+\end{proof}
+\begin{proposition}[依赖积的柯里化]
+有自然同构
+\[
+\prod_{a:A}\prod_{b:B_a}C_{a,b}
+\cong\prod_{(a,b):\sum_aB_a}C_{a,b}.
+\]
+\end{proposition}
+\begin{proof}
+复合拉回函子满足 $(gf)^*\cong f^*g^*$；其右伴随因此满足 $\Pi_{gf}\cong\Pi_g\Pi_f$。这是右伴随唯一性的应用，也可在广义元素上用 $s(a)(b)\leftrightarrow s(a,b)$ 验证。
+\end{proof}
+\begin{remark}
+至此已具备依赖类型论最重要的语义操作。下一章转而把它们写成形式规则。此后许多证明可以完全在内部演算中进行，读者无需在每一步重新展开预层和纤维化。
+\end{remark}
+
+
+
+% ===== chapters/09_types =====
+\chapter{依赖类型的基本演算}
+\section{语境、判断与代入}
+\begin{definition}[语境与项]
+一个语境为有限变量列
+\[
+\Gamma=(x_1:A_1,\ x_2:A_2(x_1),\ldots,\ x_n:A_n(x_1,\ldots,x_{n-1})).
+\]
+判断 $\Gamma\vdash A\ \mathsf{type}$ 表示在该语境中有类型 $A$；判断 $\Gamma\vdash a:A$ 表示项 $a$ 属于类型 $A$。空语境中的类型和项称为闭类型和闭项。
+\end{definition}
+\begin{example}
+判断 $n:\N\vdash\R^n$ 表示维数依赖 $n$ 的空间。判断 $A:\U,\ x:A\vdash(x=_Ax)$ 表示在类型 $A$ 及其元素 $x$ 的语境中，有一个同一性类型。后一个表达式的意义将在本章后面精确规定。
+\end{example}
+\begin{definition}[代入规则]
+若 $\Gamma,x:A\vdash B(x)$ 且 $\Gamma\vdash a:A$，则可形成 $\Gamma\vdash B(a)$。项也可代入。代入保持类型形成、项形成及定义相等，并满足结合律。
+\end{definition}
+\begin{remark}
+同一个字母可在不同位置表示不同的依赖对象，因而必须检查语境。例如 $b:B(a)$ 不能直接被视为 $B(a')$ 的元素；需要先有从 $a$ 到 $a'$ 的路径，再沿该路径传输。
+\end{remark}
+\begin{definition}[定义相等]
+符号 $a\equiv b:A$ 表示表达式经定义展开和计算规则化简后相同。它是对表达式的判断，不是一个另需给出元素的类型。后文的 $a=_Ab$ 则是同一性类型，其元素是路径。
+\end{definition}
+\begin{example}
+函数应用满足 $(\lambda x.t)(a)\equiv t[a/x]$。而两条任意路径的复合结合律通常表现为某个同一性类型的元素，不能通过简单化简认定两边定义相等。
+\end{example}
+
+\section{依赖积的规则}
+\begin{definition}[依赖积]
+若 $\Gamma\vdash A$ 且 $\Gamma,x:A\vdash B(x)$，则有类型 $\prod_{x:A}B(x)$。给定 $\Gamma,x:A\vdash b(x):B(x)$，可形成
+\[
+\lambda x.b(x):\prod_{x:A}B(x).
+\]
+若 $f:\prod_xB(x)$、$a:A$，则有 $f(a):B(a)$。计算规则为
+\[
+(\lambda x.b(x))(a)\equiv b(a).
+\]
+当 $B$ 不依赖 $x$ 时，记为函数类型 $A\to B$。
+\end{definition}
+\begin{proposition}[复合与柯里化]
+函数复合可定义为 $(g\circ f)(x)\equiv g(f(x))$。依赖函数之间有互逆的柯里化运算
+\[
+\left(\prod_{x:A}\prod_{y:B(x)}C(x,y)\right)
+\longleftrightarrow
+\left(\prod_{z:\sum_xB(x)}C(\pi_1z,\pi_2z)\right).
+\]
+\end{proposition}
+\begin{proof}
+正方向把 $f$ 送到 $z\mapsto f(\pi_1z)(\pi_2z)$；反方向把 $g$ 送到 $x\mapsto(y\mapsto g(x,y))$。在有序对上，计算规则给出互逆；任意 $z$ 的情形由依赖和的消去规则得到。将逐点恒等提升为函数间路径时，使用本章后面列出的函数外延性。
+\end{proof}
+
+\section{依赖和的规则}
+\begin{definition}[依赖和]
+若 $A$ 是类型，$B(x)$ 是依赖于 $x:A$ 的类型，则有 $\sum_{x:A}B(x)$。它的引入项为 $(a,b)$，其中 $a:A$、$b:B(a)$；投影满足
+\[
+\pi_1(a,b)\equiv a,\qquad \pi_2(a,b)\equiv b.
+\]
+更一般地，要定义 $\prod_{z:\sum_xB(x)}D(z)$，只需给出 $\prod_{x:A}\prod_{y:B(x)}D(x,y)$。这一规则称为依赖和消去。
+\end{definition}
+\begin{example}
+带基点类型的对象可写为 $\sum_{A:\U}A$。其元素同时记录一个类型与其中一个点。带二元运算的对象可写为 $\sum_{A:\U}(A\times A\to A)$。在引入单价性前，这些表达式已能定义，但它们的路径类型尚未被解释为结构同构。
+\end{example}
+\begin{proposition}[依赖和的泛性质]
+对于不依赖于 $z$ 的类型 $C$，有等价
+\[
+\left(\sum_{x:A}B(x)\to C\right)
+\simeq\prod_{x:A}(B(x)\to C).
+\]
+\end{proposition}
+\begin{proof}
+正向取 $h\mapsto(x\mapsto(y\mapsto h(x,y)))$。逆向用依赖和消去，定义 $k\mapsto((x,y)\mapsto k(x)(y))$。逐个有序对应用计算规则，两种复合均恒等。函数外延性给出函数类型中的所需路径。
+\end{proof}
+\begin{proposition}[依赖选择公式]
+有自然等价
+\[
+\prod_{x:A}\sum_{y:B(x)}C(x,y)
+\simeq
+\sum_{f:\prod_xB(x)}\prod_{x:A}C(x,f(x)).
+\]
+\end{proposition}
+\begin{proof}
+给定 $u$，令 $f(x)=\pi_1u(x)$、$v(x)=\pi_2u(x)$。反向把 $(f,v)$ 送到 $x\mapsto(f(x),v(x))$。有序对消去和函数外延性验证两次复合恒等。这个结论处理显式的见证数据，不允许从截断后的存在性中无条件提取 $f$。
+\end{proof}
+
+\section{基本类型与归纳规则}
+\begin{definition}[空类型、单位类型与余和]
+空类型 $\zero$ 没有引入构造，并允许从 $z:\zero$ 消去到任意类型。单位类型 $\one$ 有项 $*:\one$；定义其上的依赖函数只需指定在 $*$ 处的值。余和 $A+B$ 有引入项 $\mathsf{inl}(a)$、$\mathsf{inr}(b)$，其依赖消去由两个分支给出。
+\end{definition}
+\begin{example}
+否定类型写为 $\neg A=(A\to\zero)$。它记录从 $A$ 的任意元素导出矛盾的方法。$A+B$ 记录选择了左支或右支；因此它比只声称两者之一存在包含更多数据。
+\end{example}
+\begin{definition}[自然数类型]
+自然数类型 $\N$ 有构造 $0:\N$ 与 $\mathsf{succ}:\N\to\N$。给定类型族 $P:\N\to\U$、$z:P(0)$ 及
+\[
+s:\prod_{n:\N}(P(n)\to P(\mathsf{succ}(n))),
+\]
+归纳原则产生 $\mathsf{ind}(z,s):\prod_nP(n)$，满足在 $0$ 与后继处的计算规则。
+\end{definition}
+\begin{example}[递归定义加法]
+固定 $m$，对第二个变量递归定义
+\[
+m+0\equiv m,
+\qquad m+\mathsf{succ}(n)\equiv\mathsf{succ}(m+n).
+\]
+这种定义明确区分了计算方向。等式 $0+n=n$ 需要归纳证明，不能仅由右变量的计算规则在一般 $n$ 处直接化简。
+\end{example}
+\begin{proposition}[加法的左单位]
+存在 $\prod_{n:\N}(0+n=n)$。
+\end{proposition}
+\begin{proof}
+在 $n=0$ 时，两边定义相等，取自反路径。若给定 $p:0+n=n$，应用后继函数对路径的作用，得到
+$\mathsf{succ}(0+n)=\mathsf{succ}(n)$，这就是后继情形。路径上的函数作用将在下一章由同一性消去构造。
+\end{proof}
+
+\section{同一性类型与路径归纳}
+\begin{definition}[同一性类型]
+给定 $x,y:A$，有类型 $(x=_Ay)$，简称 $x=y$。引入项为 $\refl_x:x=x$。其消去规则如下：若
+\[
+P:\prod_{x,y:A}(x=y)\to\U,
+\qquad d:\prod_{x:A}P(x,x,\refl_x),
+\]
+则有
+\[
+J(d):\prod_{x,y:A}\prod_{p:x=y}P(x,y,p),
+\]
+且 $J(d)(x,x,\refl_x)\equiv d(x)$。该规则称为路径归纳。
+\end{definition}
+\begin{remark}
+归纳并不声称每条 $p:x=y$ 都等于某个固定端点的自反路径。它允许终点 $y$ 与路径 $p$ 一起变化。若先把终点固定为 $x$，一般不能据此把所有环路都化为 $\refl_x$。
+\end{remark}
+\begin{definition}[基点固定的路径归纳]
+固定 $a:A$。若 $P:\prod_{x:A}(a=x)\to\U$ 且 $d:P(a,\refl_a)$，则路径归纳给出
+\[
+J_a(d):\prod_{x:A}\prod_{p:a=x}P(x,p).
+\]
+参数可出现在 $P$ 中，并可依赖于 $x,p$。
+\end{definition}
+\begin{proposition}[两种路径归纳的关系]
+全变量形式与基点固定形式可互相导出。
+\end{proposition}
+\begin{proof}
+从基点固定形式出发，对每个 $x$ 取 $a=x$，再用依赖积抽象，即得全变量形式。从全变量形式导出固定基点形式时，把所需结论在起点变量中一般化，再在起点 $a$ 处评价。等价地，使用允许附加依赖参数的 $J$ 规则；其语义已由上一编的相对路径对象证明。
+\end{proof}
+
+\section{函数外延性}
+\begin{definition}[逐点同伦]
+对 $f,g:\prod_{x:A}B(x)$，定义
+\[
+f\sim g:=\prod_{x:A}(f(x)=g(x)).
+\]
+路径归纳给出典范函数 $\happly:(f=g)\to(f\sim g)$，在自反路径处取逐点自反路径。
+\end{definition}
+\begin{definition}[函数外延性规则]
+本讲义使用函数外延性：$\happly$ 是等价。记其逆为 $\funext$。因此给出依赖函数之间的路径，等价于给出逐点路径。
+\end{definition}
+\begin{remark}
+函数外延性作为内部演算的基础原则使用。它可以从适当的单价宇宙推出，但在单价性之前单独列出，能够使路径与等价的基本理论不依赖后续宇宙构造。它不把所有函数判为定义相等，只给出函数类型中的路径。
+\end{remark}
+\begin{proposition}[函数的 eta 规则]
+对 $f:\prod_xB(x)$，存在路径 $(\lambda x.f(x))=f$。
+\end{proposition}
+\begin{proof}
+每个 $x$ 处两边计算后相同，给出 $\refl_{f(x)}$。应用 $\funext$ 即得。
+\end{proof}
+\begin{proposition}[逐点等价诱导积上的等价]
+若对每个 $x$，$u_x:B(x)\to C(x)$ 有逆 $v_x$ 及两个逆同伦，则
+\[
+\left(\prod_xB(x)\right)\to\left(\prod_xC(x)\right),
+\quad b\mapsto(x\mapsto u_x(b(x)))
+\]
+也有逆及两个逆同伦。
+\end{proposition}
+\begin{proof}
+逆逐点定义为 $c\mapsto(x\mapsto v_x(c(x)))$。对两种复合，纤维中的逆同伦给出逐点路径；函数外延性将它们提升为依赖函数之间的路径。
+\end{proof}
+
+\section{内部与外部的对应}
+\begin{proposition}[类型规则的纤维化解释]
+语境解释为底对象，类型解释为其上的纤维化，项解释为截面。依赖和、依赖积、代入分别解释为 $\Sigma$、$\Pi$、拉回。同一性类型解释为相对路径对象的纤维。
+\end{proposition}
+\begin{proof}
+依赖和的引入和消去是总空间有序对及其泛性质；依赖积是截面对象的泛性质；代入由拉回得到。相对路径对象中恒定路径给出 $\refl$，平凡上纤维化对纤维化的提升给出 $J$。所有构造在语境中稳定的性质由 Beck--Chevalley 公式及相对路径分解保证。把自然同构严格化为语法中的严格代入属于最后一章列出的语义基础定理。
+\end{proof}
+\begin{remark}
+从本章起，除专门讨论语义的段落外，$A$ 直接表示类型或空间，等式 $x=y$ 表示路径类型。函数和依赖函数都是内部项，所以它们自动携带相应的参数相容性。
+\end{remark}
+\source{本章规则采用\cite{HoTT,Rijke}的同伦类型论记号；路径语义参见\cite{AwodeyWarren,RiehlSemantics}。}
+
+
+
+% ===== chapters/10_paths =====
+\chapter{路径演算与依赖传输}
+\section{逆、复合与基本群胚律}
+\begin{proposition}[路径逆]
+对 $p:x=y$，可以构造 $p^{-1}:y=x$，并使 $(\refl_x)^{-1}\equiv\refl_x$。
+\end{proposition}
+\begin{proof}
+对 $p$ 作路径归纳。目标族为 $P(x,y,p)=(y=x)$。在 $y=x$、$p=\refl_x$ 时，取 $\refl_x$，归纳规则给出全部情形。
+\end{proof}
+\begin{proposition}[路径复合]
+给定 $p:x=y$、$q:y=z$，可构造 $p\cdot q:x=z$，满足 $p\cdot\refl_y\equiv p$。
+\end{proposition}
+\begin{proof}
+固定 $p$，对 $q$ 使用以 $y$ 为基点的路径归纳。目标为 $x=z$。在 $q=\refl_y$ 时目标为 $x=y$，使用已有的 $p$。由归纳得到复合及计算规则。
+\end{proof}
+\begin{proposition}[单位、逆与结合律]\label{prop:pathlaws}
+存在自然的高阶路径
+\begin{gather*}
+\refl_x\cdot p=p,
+\qquad p^{-1}\cdot p=\refl_y,
+\qquad p\cdot p^{-1}=\refl_x,\\
+(p^{-1})^{-1}=p,
+\qquad(p\cdot q)^{-1}=q^{-1}\cdot p^{-1},\\
+(p\cdot q)\cdot r=p\cdot(q\cdot r).
+\end{gather*}
+\end{proposition}
+\begin{proof}
+第一式对 $p$ 归纳，在自反情形由计算规则得到自反路径。逆的两条等式同样对 $p$ 归纳，因为自反路径的逆和复合均化简为自反路径。双重逆和复合逆分别对其中的路径逐次归纳。
+
+结合律可对最后一条路径 $r:z=w$ 归纳。在 $r=\refl_z$ 时，左侧化为 $p\cdot q$，右侧也化为 $p\cdot q$，故取自反路径。需要附加参数时，把 $p,q$ 保留在语境中，归纳规则仍然适用。
+\end{proof}
+\begin{lemma}[左右消去]
+若 $p\cdot q=p\cdot r$，则 $q=r$；若 $q\cdot p=r\cdot p$，则 $q=r$。
+\end{lemma}
+\begin{proof}
+在第一种情形，对给定高阶路径施加前复合 $p^{-1}$ 的函数作用，再用结合律、逆律和单位律，将两端分别化为 $q$、$r$。第二种情形后复合 $p^{-1}$。这里的化简通过命题\ref{prop:pathlaws}中的路径完成，并不要求所有单位律定义成立。
+\end{proof}
+\begin{remark}
+路径的等式自身仍是路径。以上命题给出二阶路径，比较这些等式需要三阶路径。路径归纳可在更高同一性类型中重复使用。
+\end{remark}
+
+\section{函数对路径的作用}
+\begin{definition}[路径作用]
+给定 $f:A\to B$，对 $p:x=y$ 定义
+\[
+\ap_f(p):f(x)=f(y)
+\]
+为路径归纳所得函数，规定 $\ap_f(\refl_x)\equiv\refl_{f(x)}$。
+\end{definition}
+\begin{proposition}[路径作用的函子律]
+有
+\begin{gather*}
+\ap_{\id}(p)=p,
+\qquad\ap_{g\circ f}(p)=\ap_g(\ap_f(p)),\\
+\ap_f(p\cdot q)=\ap_f(p)\cdot\ap_f(q),
+\qquad\ap_f(p^{-1})=\ap_f(p)^{-1}.
+\end{gather*}
+\end{proposition}
+\begin{proof}
+对每条待处理的路径归纳。第一、第二及第四式在 $p=\refl$ 处都是自反路径。第三式可先对 $q$ 归纳；在 $q=\refl$ 时两侧化简为 $\ap_f(p)$。由路径归纳与函数外延性，所得关系在全部参数中相容。
+\end{proof}
+\begin{proposition}[同伦的自然性方块]\label{prop:homotopy-naturality}
+若 $H:\prod_{x:A}(f(x)=g(x))$，则对 $p:x=y$，有
+\[
+\ap_f(p)\cdot H(y)=H(x)\cdot\ap_g(p).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳。在自反情形，左侧为 $\refl\cdot H(x)$，右侧为 $H(x)\cdot\refl$，通过单位律比较二者。归纳给出任意 $p$ 的方块。
+\end{proof}
+\begin{example}
+若 $f=g=\id_A$，则一个自同伦 $H$ 必须满足 $p\cdot H(y)=H(x)\cdot p$。在取基本群后，这说明这样的环路族受共轭相容性约束。它不等于对每个点任意挑选一个环路。
+\end{example}
+
+\section{依赖传输}
+\begin{definition}[传输]
+给定 $B:A\to\U$ 及 $p:x=y$，定义
+\[
+\tr_B(p):B(x)\to B(y)
+\]
+为路径归纳所得映射，规定 $\tr_B(\refl_x)\equiv\id_{B(x)}$。
+\end{definition}
+\begin{proposition}[传输的复合与逆]
+有
+\[
+\tr_B(p\cdot q)=\tr_B(q)\circ\tr_B(p),
+\qquad
+\tr_B(p^{-1})\circ\tr_B(p)=\id.
+\]
+另一侧的逆关系同样成立。
+\end{proposition}
+\begin{proof}
+复合公式对 $q$ 归纳，在自反情形逐点定义相等；函数外延性给出函数路径。逆关系由复合公式和 $p\cdot p^{-1}=\refl$ 得到，也可直接对 $p$ 归纳。因此沿任意路径的传输具有拟逆。
+\end{proof}
+\begin{definition}[依赖路径作用]
+对截面 $s:\prod_{x:A}B(x)$，路径归纳给出
+\[
+\apd_s(p):\tr_B(p)(s(x))=s(y).
+\]
+在 $p=\refl_x$ 时取自反路径。
+\end{definition}
+\begin{remark}
+$\apd_s(p)$ 的左侧必须先传输，因为 $s(x)$ 与 $s(y)$ 原先位于不同纤维。只有在常值族中，才能把它直接写成 $s(x)=s(y)$。
+\end{remark}
+\begin{proposition}[拉回族的传输]
+若 $f:A\to C$、$D:C\to\U$，则
+\[
+\tr_{D\circ f}(p)=\tr_D(\ap_f(p)).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳，自反情形两边都为恒等函数。函数外延性给出函数层面的等式。
+\end{proof}
+
+\section{路径族中的传输公式}
+\begin{proposition}[端点变化]
+固定 $a:A$。对于 $p:x=y$，有
+\[
+\tr_{z\mapsto(a=z)}(p)(q)=q\cdot p,
+\qquad q:a=x;
+\]
+以及
+\[
+\tr_{z\mapsto(z=a)}(p)(q)=p^{-1}\cdot q,
+\qquad q:x=a.
+\]
+\end{proposition}
+\begin{proof}
+第一式对 $p$ 归纳后，左边为 $q$，右边为 $q\cdot\refl\equiv q$。第二式在自反情形需要左单位律 $\refl\cdot q=q$。由路径归纳得结论。
+\end{proof}
+\begin{proposition}[同时变化两个端点]\label{prop:transport-equality}
+设 $f,g:A\to B$，$p:x=y$，$q:f(x)=g(x)$。则
+\[
+\tr_{z\mapsto(f(z)=g(z))}(p)(q)
+=\ap_f(p)^{-1}\cdot q\cdot\ap_g(p).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳。自反情形左侧为 $q$，右侧通过自反路径的逆、左右单位律化为 $q$。归纳给出一般公式。括号之间的差异用结合律识别。
+\end{proof}
+\begin{example}[环路族的共轭]
+对族 $B(z)=(z=z)$，沿 $p:x=y$ 的传输为
+\[
+\Omega_xA\to\Omega_yA,
+\qquad q\mapsto p^{-1}\cdot q\cdot p.
+\]
+这与第五章由拓扑方块得到的基点变化公式相符，只是此处使用了内部路径方向的统一约定。
+\end{example}
+\begin{proposition}[函数族中的传输]
+给定 $B,C:A\to\U$，对 $p:x=y$ 及 $u:B(x)\to C(x)$，有
+\[
+\tr_{z\mapsto(B(z)\to C(z))}(p)(u)
+=\tr_C(p)\circ u\circ\tr_B(p^{-1}).
+\]
+\end{proposition}
+\begin{proof}
+对 $p$ 归纳。自反情形，传输均为恒等，右側与 $u$ 逐点相同。函数外延性给出所需路径。归纳完成证明。
+\end{proof}
+
+\section{积与依赖和的同一性类型}
+\begin{theorem}[积中的路径]
+对 $(a,b),(a',b'):A\times B$，有自然等价
+\[
+((a,b)=(a',b'))\simeq(a=a')\times(b=b').
+\]
+\end{theorem}
+\begin{proof}
+正向施加两个投影的路径作用。逆向先对 $p:a=a'$ 归纳，再对 $q:b=b'$ 归纳，最终取 $(a,b)$ 的自反路径。正向再逆向的复合对原有序对路径归纳，逆向再正向的复合对 $p,q$ 归纳，两者都在自反情形计算为自反路径。
+\end{proof}
+\begin{theorem}[依赖和中的路径]\label{thm:sigma-path}
+设 $B:A\to\U$。对 $(a,b),(a',b'):\sum_xB(x)$，有等价
+\[
+((a,b)=(a',b'))
+\simeq\sum_{p:a=a'}(\tr_B(p)(b)=b').
+\]
+\end{theorem}
+\begin{proof}
+对左侧路径作归纳。在自反情形，定义其像为 $(\refl_a,\refl_b)$。这得到正向映射。
+
+逆向给定 $(p,q)$，先对 $p$ 归纳，使 $a'=a$、$p=\refl_a$，此时 $q:b=b'$。再对 $q$ 归纳，取有序对的自反路径。检查复合时，左侧只需对原路径归纳，右侧只需对 $p,q$ 逐次归纳；每种情形均化为自反构造。故两者互为拟逆，进而是等价。
+\end{proof}
+\begin{example}[同伦纤维中的路径]
+对 $f:A\to B$，同伦纤维中的点为 $(x,p)$，其中 $p:f(x)=b$。两点 $(x,p)$、$(x',p')$ 之间的路径等价于
+\[
+\sum_{q:x=x'}\bigl(\ap_f(q)^{-1}\cdot p=p'\bigr).
+\]
+等价地，可把第二个条件写为 $p=\ap_f(q)\cdot p'$。这个公式同时控制原像的变化和到目标点的比较路径。
+\end{example}
+\begin{proposition}[基点路径总空间可缩]\label{prop:based-contractible}
+固定 $a:A$，类型 $\sum_{x:A}(a=x)$ 可缩，其中心为 $(a,\refl_a)$。
+\end{proposition}
+\begin{proof}
+要对每个 $(x,p)$ 构造从中心出发的路径，使用依赖和路径公式。第一分量取 $p$。第二分量要求
+\[
+\tr_{z\mapsto(a=z)}(p)(\refl_a)=p.
+\]
+由端点传输公式，左边等于 $\refl_a\cdot p$，再用单位律即可。也可直接对 $p$ 作基点路径归纳。
+\end{proof}
+\begin{remark}
+这一可缩性不会导致 $a=a$ 可缩，因为投影到底 $A$ 的纤维与整个总空间不同。总空间允许终点 $x$ 随路径一起变化，而环路空间把终点固定为 $a$。
+\end{remark}
+
+\section{高阶相容与二维交换}
+\begin{definition}[二阶路径的复合]
+若 $p,q,r:x=y$，且 $\alpha:p=q$、$\beta:q=r$，它们在同一性类型 $x=y$ 中的复合称为竖直复合。对另一组路径 $p',q':y=z$，复合函数 $(-)\cdot(-)$ 对高阶路径的作用给出横向复合。
+\end{definition}
+\begin{proposition}[交换律]
+在边界匹配时，先横向复合再竖直复合，与先竖直复合再横向复合之间存在典范高阶路径。
+\end{proposition}
+\begin{proof}
+横向复合是路径复合函数对积路径的作用。函数对路径的作用保持复合，而积路径按分量复合，因此两种构造相等。更直接地，对参与的四个二阶路径依次使用路径归纳，最终所有比较都变为自反路径，所需高阶路径取自反即可。
+\end{proof}
+\begin{theorem}[Eckmann--Hilton 论证]
+对基点 $a:A$，二重环路类型
+\[
+\Omega^2(A,a)=(\refl_a=_{a=a}\refl_a)
+\]
+的复合在同伦意义下交换。因此其连通分支上的群运算为交换运算。
+\end{theorem}
+\begin{proof}
+二重环路同时有竖直复合 $\circ_v$ 与横向复合 $\circ_h$。两者的单位由自反二阶路径给出；横向复合的端点先通过路径单位律与 $\refl_a$ 识别。上一命题给出交换律。记公共单位为 $e$，则
+\begin{align*}
+\alpha\circ_h\beta
+&=(\alpha\circ_ve)\circ_h(e\circ_v\beta)\\
+&=(\alpha\circ_he)\circ_v(e\circ_h\beta)
+=\alpha\circ_v\beta.
+\end{align*}
+再将同一个表达式改写为
+\begin{align*}
+\alpha\circ_h\beta
+&=(e\circ_v\alpha)\circ_h(\beta\circ_ve)\\
+&=(e\circ_h\beta)\circ_v(\alpha\circ_he)
+=\beta\circ_v\alpha.
+\end{align*}
+每一步在类型内由单位、交换的高阶路径实现。取连通分支后这些路径成为等式，故运算交换。
+\end{proof}
+\begin{proposition}[结合子的五边形相容]
+由路径归纳选取的路径结合子可以配备五边形相容的高阶路径。
+\end{proposition}
+\begin{proof}
+对四条依次可复合路径 $p,q,r,s$，五种括号给出五个同端点路径；两种沿结合子比较最左与最右括号的方式形成一对二阶路径。对 $s,r,q,p$ 依次归纳。此时所有路径为自反，若每一步的结合子按命题\ref{prop:pathlaws}选取，则两条二阶路径都化为自反，取自反三阶路径。归纳返回一般情形。
+\end{proof}
+\begin{remark}
+高阶相容来自对具体边界问题反复使用归纳。它不表示任意给定边界都存在唯一填充，也不表示空间的高阶同伦群消失。
+\end{remark}
+
+
+
+% ===== chapters/11_equivalences =====
+\chapter{可缩性、截断层次与等价}
+\section{可缩类型及其路径}
+\begin{definition}[可缩性]
+定义
+\[
+\isContr(A)=\sum_{a:A}\prod_{x:A}(a=x).
+\]
+一个元素 $(a,h)$ 称为收缩数据：$a$ 是中心，$h(x)$ 是从中心到 $x$ 的路径。若此类型有元素，则称 $A$ 可缩。
+\end{definition}
+\begin{example}
+单位类型 $\one$ 可缩，中心为 $*$，收缩由单位类型的消去规则给出。对任意 $a:A$，类型 $\sum_{x:A}(a=x)$ 可缩，已经在命题\ref{prop:based-contractible}中证明。空类型不可能可缩，因为收缩数据首先要求给出一个中心。
+\end{example}
+\begin{lemma}[可缩类型的路径类型]
+若 $A$ 可缩，则对每个 $x,y:A$，类型 $x=y$ 可缩。
+\end{lemma}
+\begin{proof}
+取收缩 $(a,h)$，令候选中心为
+\[
+c_{x,y}=h(x)^{-1}\cdot h(y):x=y.
+\]
+对任意 $p:x=y$，把 $h$ 视为常值函数 $a$ 到恒等函数的同伦。由同伦自然性，$h(x)\cdot p=h(y)$。左复合 $h(x)^{-1}$ 并用群胚律，得到 $p=c_{x,y}$。取逆路径便得到从中心到 $p$ 的收缩，且全部公式依赖 $x,y,p$，故确实给出一个依赖函数。
+\end{proof}
+\begin{proposition}[可缩纤维的积]
+若每个 $B(x)$ 可缩，则 $\prod_{x:A}B(x)$ 可缩。
+\end{proposition}
+\begin{proof}
+记纤维的中心为 $b_x$，收缩为 $h_x$。取中心截面 $b(x)=b_x$。对任意 $s$，逐点路径 $h_x(s(x))$ 经函数外延性得到 $b=s$。
+\end{proof}
+\begin{proposition}[可缩底与可缩纤维]
+若 $A$ 可缩且每个 $B(x)$ 可缩，则 $\sum_xB(x)$ 可缩。
+\end{proposition}
+\begin{proof}
+取 $A$ 的中心 $a$ 与 $B(a)$ 的中心 $b$。对任意 $(x,u)$，底中有路径 $p:a=x$。纤维 $B(x)$ 可缩，因此有路径 $\tr_B(p)(b)=u$。由依赖和路径公式得到 $(a,b)=(x,u)$。
+\end{proof}
+
+\section{命题、集合与高阶截断}
+\begin{definition}[命题与集合]
+定义
+\[
+\isProp(A)=\prod_{x,y:A}(x=y),
+\qquad
+\isSet(A)=\prod_{x,y:A}\isProp(x=y).
+\]
+满足第一条件的类型称为命题，满足第二条件的类型称为集合或零截断类型。
+\end{definition}
+\begin{lemma}
+命题一旦有元素便可缩。反之，可缩类型是命题。
+\end{lemma}
+\begin{proof}
+若 $a:A$ 且 $h:\isProp(A)$，则 $(a,h(a,-))$ 是收缩。若 $(a,h)$ 是收缩，则 $h(x)^{-1}\cdot h(y)$ 给出任意 $x,y$ 间的路径。
+\end{proof}
+\begin{proposition}[命题的封闭性]
+命题族的依赖积是命题。若 $A$ 是命题，且每个 $B(x)$ 是命题，则 $\sum_xB(x)$ 是命题。
+\end{proposition}
+\begin{proof}
+对两个依赖函数 $f,g$，纤维的命题性给出逐点路径，函数外延性给出 $f=g$。对依赖和中的两个点，底的命题性给出 $p:x=y$，纤维命题性给出 $\tr_B(p)(u)=v$，再用依赖和路径公式。
+\end{proof}
+\begin{proposition}[性质的证明无关性]
+$\isProp(A)$、$\isContr(A)$ 和 $\isSet(A)$ 都是命题。
+\end{proposition}
+\begin{proof}
+若给定 $h,k:\isProp(A)$，在语境 $x,y:A$ 中，$h$ 和 $x$ 给出 $A$ 的收缩，故路径类型 $x=y$ 可缩。于是 $h(x,y)=k(x,y)$，两次函数外延性给出 $h=k$。
+
+对 $c=(a,h)$、$d=(b,k):\isContr(A)$，取底路径 $p=h(b):a=b$。依赖和路径公式把 $c=d$ 化为传输后的 $h$ 与 $k$ 相等。$c$ 已给出 $A$ 可缩，故每个 $b=x$ 可缩；相应依赖积是命题，因此这两个收缩函数相等。最后，$\isSet(A)$ 是命题族 $\isProp(x=y)$ 的依赖积，因而也是命题。
+\end{proof}
+\begin{definition}[截断层次]
+$(-2)$-截断类型定义为可缩类型。递归地，$A$ 为 $(n+1)$-截断，若对每个 $x,y:A$，类型 $x=y$ 为 $n$-截断。由此 $(-1)$-截断等同于命题，$0$-截断等同于集合，$1$-截断类型的路径类型是集合。
+\end{definition}
+\begin{example}
+普通群胚所对应的同伦类型是 $1$-截断的：对象之间的同构组成集合。一个群的分类空间通常是 $1$-类型，但其环路类型是一个可能有很多元素的集合。
+\end{example}
+\begin{remark}
+这里“集合”描述同一性类型的层次，未规定底层点的具体编码。两个同伦类型等价时，截断层次相同。此性质稍后由等价对路径空间的作用证明。
+\end{remark}
+
+\section{命题截断}
+\begin{definition}[命题截断规则]
+对类型 $A$，命题截断为命题 $\trunc A$，带映射 $|-|:A\to\trunc A$，满足：对任意命题 $P$，前复合给出等价
+\[
+(\trunc A\to P)\simeq(A\to P).
+\]
+依赖消去也成立：若 $P:\trunc A\to\U$ 的每个纤维是命题，则给出 $\prod_{a:A}P(|a|)$ 足以得到 $\prod_{z:\trunc A}P(z)$。
+\end{definition}
+\begin{example}
+$\trunc{\sum_{x:A}B(x)}$ 表示存在某个 $x$ 及其见证，但不记录具体是哪一个。定义 $A\lor B=\trunc{A+B}$ 后，析取的结果是命题；未经截断的 $A+B$ 则仍保留所选择的分支。
+\end{example}
+\begin{proposition}
+若 $P$ 已是命题，则 $P\to\trunc P$ 为等价。
+\end{proposition}
+\begin{proof}
+由截断消去，恒等映射 $P\to P$ 延拓为 $r:\trunc P\to P$。一个复合由计算规则等于恒等；另一个复合由于 $\trunc P$ 是命题，逐点等于恒等。故有拟逆。
+\end{proof}
+\begin{remark}
+不能把 $\trunc A$ 的元素任意消去到一般 $A$。合法的目标必须是命题，或必须有额外的截断消去结构。分类空间的连通性证明会利用命题目标完成消去，而不会选择每个对象的具体同构。
+\end{remark}
+
+\section{同伦纤维与等价的定义}
+\begin{definition}[同伦纤维与等价]
+对 $f:A\to B$，定义
+\[
+\fib_f(b)=\sum_{a:A}(f(a)=b),
+\qquad
+\isEquiv(f)=\prod_{b:B}\isContr(\fib_f(b)).
+\]
+等价类型为
+\[
+A\simeq B=\sum_{f:A\to B}\isEquiv(f).
+\]
+\end{definition}
+\begin{proposition}
+$\isEquiv(f)$ 是命题。恒等函数是等价。
+\end{proposition}
+\begin{proof}
+第一式为命题 $\isContr(\fib_f(b))$ 的依赖积。恒等的纤维 $\sum_a(a=b)$ 是以 $b$ 为终点的路径总空间，与基点路径总空间通过路径反向等价，或直接用路径归纳证明其可缩。
+\end{proof}
+\begin{proposition}[等价给出拟逆]
+若 $f$ 的全部同伦纤维可缩，则存在 $g:B\to A$ 及同伦
+\[
+\eta:gf\sim\id_A,
+\qquad\varepsilon:fg\sim\id_B.
+\]
+\end{proposition}
+\begin{proof}
+取 $\fib_f(b)$ 的中心 $(g(b),\varepsilon_b)$。在 $b=f(a)$ 的纤维内，收缩比较中心 $(g(f(a)),\varepsilon_{f(a)})$ 与 $(a,\refl_{f(a)})$。对这一有序对路径施加第一投影，得到 $\eta_a:g(f(a))=a$。所有中心来自依赖函数，故 $g,\eta,\varepsilon$ 在参数中相容。
+\end{proof}
+
+\section{拟逆与纤维可缩性的等价}
+\begin{lemma}[修正余单位]\label{lem:adjointify}
+假设 $f:A\to B$、$g:B\to A$ 以及 $\eta:gf\sim\id_A$、$\varepsilon:fg\sim\id_B$。可将 $\varepsilon$ 替换为 $\varepsilon'$，使
+\[
+\ap_f(\eta_a)=\varepsilon'_{f(a)}
+\]
+对每个 $a$ 成立。
+\end{lemma}
+\begin{proof}
+定义
+\[
+\varepsilon'_b
+=\varepsilon_{f(g(b))}^{-1}
+\cdot\ap_f(\eta_{g(b)})\cdot\varepsilon_b.
+\]
+三个因子的始终点依次为
+\[
+fgb\longrightarrow fgfgb\longrightarrow fgb\longrightarrow b,
+\]
+所以公式有类型 $fgb=b$。
+
+把同伦 $\eta$ 的自然性用在路径 $\eta_a:gfa=a$ 上，得到
+\[
+\ap_{gf}(\eta_a)\cdot\eta_a=\eta_{gfa}\cdot\eta_a.
+\]
+右消去给出 $\ap_{gf}(\eta_a)=\eta_{gfa}$。对两边施加 $f$，得到
+$\ap_{fg}(\ap_f\eta_a)=\ap_f\eta_{gfa}$。
+再把 $\varepsilon$ 的自然性用在 $t=\ap_f\eta_a:fgfa=fa$ 上：
+\[
+\ap_{fg}(t)\cdot\varepsilon_{fa}=\varepsilon_{fgfa}\cdot t.
+\]
+左复合 $\varepsilon_{fgfa}^{-1}$，并代入前一等式，右边恰化为 $t$，左边恰为 $\varepsilon'_{fa}$，得到三角相容。
+\end{proof}
+\begin{theorem}[等价的拟逆判据]\label{thm:equiv-qinv}
+$f:A\to B$ 是等价，当且仅当它有拟逆及两侧逆同伦。
+\end{theorem}
+\begin{proof}
+一个方向已证明。反向先由引理\ref{lem:adjointify}取得相容的 $\varepsilon'$。固定 $b$，选中心 $(g(b),\varepsilon'_b)$。对 $(a,p):\fib_f(b)$，令
+\[
+q=(\ap_g(p))^{-1}\cdot\eta_a:g(b)=a.
+\]
+依赖和路径公式要求检验
+\[
+\ap_f(q)^{-1}\cdot\varepsilon'_b=p,
+\]
+等价地，$\varepsilon'_b=\ap_f(q)\cdot p$。由路径作用的复合、逆公式及三角相容，
+\[
+\ap_f(q)\cdot p
+=(\ap_{fg}(p))^{-1}\cdot\varepsilon'_{fa}\cdot p.
+\]
+而 $\varepsilon'$ 在 $p:fa=b$ 上的自然性正给出该表达式等于 $\varepsilon'_b$。因此 $(q,\text{上述比较})$ 构成中心到任意纤维点的路径，证明纤维可缩。
+\end{proof}
+\begin{remark}
+单纯给出两个逆同伦后，若直接写纤维收缩，很容易漏掉三角相容。上一引理明确修正这一问题。等价的性质 $\isEquiv(f)$ 是命题，而“任选一个拟逆连同两个同伦”的完整数据类型一般不是命题。
+\end{remark}
+
+\section{等价的封闭性与路径检测}
+\begin{proposition}[逆、复合及二取三]
+等价的拟逆为等价，等价的复合为等价。对 $A\xrightarrow fB\xrightarrow gC$，若 $f,g,gf$ 中任意两个为等价，则第三个为等价。
+\end{proposition}
+\begin{proof}
+拟逆的两侧同伦互换即可。复合的逆为 $f^{-1}g^{-1}$，两侧同伦由各自逆同伦和函数的路径作用复合。若 $f$ 与 $gf$ 可逆，则 $f\circ(gf)^{-1}$ 是 $g$ 的拟逆，检验一侧直接使用 $gf$ 的逆，另一侧使用 $f$ 的逆将等式消去。$g$ 与 $gf$ 可逆的情形对偶。由定理\ref{thm:equiv-qinv}完成证明。
+\end{proof}
+\begin{proposition}[等价作用于路径类型]
+若 $f:A\to B$ 为等价，则
+\[
+\ap_f:(x=y)\longrightarrow(f(x)=f(y))
+\]
+为等价。
+\end{proposition}
+\begin{proof}
+取拟逆 $g$ 和 $\eta:gf\sim\id$。一个候选逆为
+\[
+r\longmapsto\eta_x^{-1}\cdot\ap_g(r)\cdot\eta_y.
+\]
+其与 $\ap_f$ 的一侧复合由 $\eta$ 的自然性等于恒等。为了检验另一侧，可使用引理\ref{lem:adjointify}修正后的余单位，使 $\ap_f\eta=\varepsilon'_f$；随后余单位自然性把相应共轭化为原路径 $r$。故得到两侧逆同伦。
+\end{proof}
+\begin{proposition}[截断性在等价下不变]
+若 $A\simeq B$，则 $A$ 可缩、为命题、为集合或为给定阶数的截断类型，当且仅当 $B$ 具有相同性质。
+\end{proposition}
+\begin{proof}
+可缩情形将中心通过等价送过去，并利用拟逆及逆同伦传递收缩。命题情形使用两个点的拟逆像之间的路径，再作用等价并拼接余单位。更高截断层次由上一命题对路径类型的等价递归得到。
+\end{proof}
+
+\section{总空间与逐纤维等价}
+\begin{theorem}[总空间等价判据]\label{thm:fiberwise}
+给定 $u:\prod_{a:A}(B(a)\to C(a))$，令
+\[
+T:\sum_aB(a)\to\sum_aC(a),\qquad T(a,b)=(a,u_a(b)).
+\]
+则 $T$ 是等价，当且仅当每个 $u_a$ 是等价。
+\end{theorem}
+\begin{proof}
+固定 $(a,c)$。由依赖和路径公式，$\fib_T(a,c)$ 的元素等价于
+\[
+\sum_{a':A}\sum_{b:B(a')}\sum_{p:a'=a}
+\bigl(\tr_C(p)(u_{a'}b)=c\bigr).
+\]
+对 $p$ 进行基点路径归纳，底点 $a'$ 与路径 $p$ 一起消去，得到等价
+\[
+\fib_T(a,c)\simeq\sum_{b:B(a)}(u_a(b)=c)=\fib_{u_a}(c).
+\]
+等价保持可缩性，故所有总空间纤维可缩恰等价于全部纤维映射的纤维可缩。
+\end{proof}
+\begin{proposition}[命题子类型中的路径]
+若 $P:A\to\U$ 的纤维全为命题，则投影 $\sum_aP(a)\to A$ 在任意两点之间诱导路径类型的等价。
+\end{proposition}
+\begin{proof}
+对 $(a,u),(b,v)$，依赖和路径公式给出
+\[
+((a,u)=(b,v))\simeq\sum_{p:a=b}(\tr_P(p)u=v).
+\]
+由于 $P(b)$ 为命题且有元素，其路径类型可缩。因此投影到 $p$ 的纤维可缩，故为等价。
+\end{proof}
+\begin{remark}
+该命题意味着附加一个“性质”不改变对象间已有的路径。附加一个“结构”则通常会增加路径必须满足的相容条件。有限对象的分类空间与群结构的单价性会分别用到这两种情形。
+\end{remark}
+
+
+
+% ===== chapters/12_univalence =====
+\chapter{宇宙、单价性与结构同一性}
+\section{小类型的宇宙}
+\begin{definition}[宇宙与解码]
+一个宇宙由类型 $\U$ 及依赖类型 $\mathsf{El}:\U\to\mathsf{Type}$ 组成。$A:\U$ 是一个代码，$\mathsf{El}(A)$ 是它表示的类型。称能够这样表示的类型为 $\U$-小类型。通常省略解码符号，直接把 $A:\U$ 读作“小类型 $A$”。
+\end{definition}
+\begin{remark}
+宇宙本身不要求是其所分类的小类型。为容纳宇宙、函数族及结构类型，可使用层次
+\[
+\U_0:\U_1:\U_2:\cdots.
+\]
+本讲义每次在一个固定宇宙内进行构造，必要时到更大的宇宙讨论所有这样的对象。写 $A,B:\U$ 并不等于断言 $\U:\U$。
+\end{remark}
+\begin{definition}[宇宙对类型构造的封闭性]
+称 $\U$ 对依赖和与依赖积封闭，若对于 $A:\U$ 和 $B:A\to\U$，类型 $\sum_{a:A}B(a)$ 与 $\prod_{a:A}B(a)$ 仍有 $\U$ 中的代码。同样要求所用的同一性类型、有限和、自然数及命题截断具有小代码。
+\end{definition}
+\begin{example}[普遍族]
+解码族的总空间为
+\[
+\widetilde\U=\sum_{A:\U}A,
+\qquad \pi:\widetilde\U\to\U.
+\]
+给定 $B:\Gamma\to\U$，其拉回的元素为 $(\gamma,A,a,p)$，其中 $p:B(\gamma)=A$。消去 $p$ 后得到 $\sum_{\gamma:\Gamma}B(\gamma)$。于是有同伦拉回图
+\[
+\begin{tikzcd}
+\sum_{\gamma:\Gamma}B(\gamma)\ar[r]\ar[d]&\widetilde\U\ar[d,"\pi"]\\
+\Gamma\ar[r,"B"']&\U.
+\end{tikzcd}
+\]
+宇宙把依赖类型写成一个普通的分类映射。
+\end{example}
+\begin{remark}
+在集合论中可以将一些集合的代码组成集合，但这还没有给出同伦论所需的宇宙：还要确定代码之间的路径。单价性规定的正是这部分同一性结构。严格模型中的分类与替换相容还涉及选择过的纤维化结构，不能仅靠写出上述总空间就证明全部语义存在性。
+\end{remark}
+
+\section{类型的同一性诱导等价}
+\begin{definition}[同一性到等价的比较]
+设 $A,B:\U$。宇宙中的路径 $p:A=B$ 作用于普遍族，给出
+\[
+\tr_{\mathsf{El}}(p):A\to B.
+\]
+路径归纳把此函数的等价性化为恒等函数的等价性。因此有典范映射
+\[
+\idtoequiv_{A,B}:(A=B)\longrightarrow(A\simeq B).
+\]
+在 $p=\refl_A$ 时，其底层函数定义相等于 $\id_A$。
+\end{definition}
+\begin{proposition}[比较映射的复合相容]
+对于 $p:A=B$ 和 $q:B=C$，有
+\[
+\idtoequiv(p\cdot q)
+=\idtoequiv(q)\circ\idtoequiv(p).
+\]
+此外，$\idtoequiv(p^{-1})$ 是 $\idtoequiv(p)$ 的逆。
+\end{proposition}
+\begin{proof}
+对 $p,q$ 依次作路径归纳。恒等路径的情形化为恒等函数的复合与逆。底层函数的同一性通过函数外延性表达；附带的等价性证明属于命题，故不增加比较条件。
+\end{proof}
+\begin{example}
+若 $P:\U\to\U$ 是某个已定义的类型构造，则每条 $p:A=B$ 还给出传输
+\[
+\tr_P(p):P(A)\to P(B).
+\]
+当 $P(X)=X\times X$ 时，这个传输逐分量作用为 $\idtoequiv(p)$；当 $P(X)=X\to X$ 时，它是共轭变换。后一公式将在本章具体计算。
+\end{example}
+
+\section{单价公理及其运算规则}
+\begin{definition}[单价宇宙]\label{def:univalence}
+宇宙 $\U$ 称为单价的，若对任意 $A,B:\U$，映射
+\[
+\idtoequiv_{A,B}:(A=B)\to(A\simeq B)
+\]
+是等价。其逆记为
+\[
+\ua:(A\simeq B)\to(A=B).
+\]
+本讲义使用一个对所述类型构造封闭的单价宇宙。
+\end{definition}
+\begin{proposition}[单价性的计算与唯一性]
+对 $e:A\simeq B$、$p:A=B$，存在路径
+\[
+\idtoequiv(\ua(e))=e,
+\qquad
+\ua(\idtoequiv(p))=p.
+\]
+特别地，对每个 $a:A$，
+\[
+\tr_{\mathsf{El}}(\ua(e))(a)=e(a).
+\]
+\end{proposition}
+\begin{proof}
+前两式是等价与其所选逆的两侧逆同伦。对第一式先施加底层函数投影，再在 $a$ 处求值，得到第三式。一般的单价公理只给出这里的路径相等，不把第三式规定为判断层面的归约规则。
+\end{proof}
+\begin{proposition}[单价性与复合]
+若 $e:A\simeq B$、$d:B\simeq C$，则
+\[
+\ua(e)\cdot\ua(d)=\ua(d\circ e),
+\qquad
+\ua(e^{-1})=\ua(e)^{-1}.
+\]
+\end{proposition}
+\begin{proof}
+向两端施加 $\idtoequiv$。上一节的复合相容与单价计算式表明所得等价相同。因为等价诱导路径类型的等价，$\idtoequiv$ 检测这两个路径是否相等。逆的公式相同。
+\end{proof}
+\begin{remark}
+单价性没有把所有不同代码在语法层面合并。它给出同一性类型的内容。例如 $A=A$ 可以含有多个不同的环路，分别对应 $A$ 的不同自等价。把“路径相等”误读成“代码完全相同”，就会丢失这些环路。
+\end{remark}
+
+\section{沿等价归纳}
+\begin{lemma}[等价总空间可缩]
+固定 $A:\U$。类型
+\[
+\sum_{B:\U}(A\simeq B)
+\]
+可缩，中心可取 $(A,\id_A)$。
+\end{lemma}
+\begin{proof}
+单价性与逐纤维等价判据给出
+\[
+\left(\sum_{B:\U}(A=B)\right)
+\simeq
+\left(\sum_{B:\U}(A\simeq B)\right).
+\]
+左边是基点路径总空间，已经证明可缩。比较映射将其标准中心送到 $(A,\id_A)$，因此得到所述收缩。
+\end{proof}
+\begin{theorem}[等价归纳]
+设 $P$ 是依赖于 $A,B:\U$ 及 $e:A\simeq B$ 的类型族。如果给定
+\[
+ d:\prod_{A:\U}P(A,A,\id_A),
+\]
+则可以构造
+\[
+ D:\prod_{A,B:\U}\prod_{e:A\simeq B}P(A,B,e).
+\]
+在恒等等价处，$D$ 与给定的 $d$ 有指定比较路径。
+\end{theorem}
+\begin{proof}
+首先对 $p:A=B$ 定义族
+\[
+Q(A,B,p)=P(A,B,\idtoequiv(p)).
+\]
+路径归纳由 $d$ 给出所有 $Q(A,B,p)$ 的元素。对于一般 $e$，取 $p=\ua(e)$，得到 $P(A,B,\idtoequiv(\ua(e)))$ 中的元素。再沿单价计算路径传输，得到 $P(A,B,e)$ 的元素。恒等处的比较由路径归纳的计算与等价逆同伦给出。
+\end{proof}
+\begin{remark}
+等价归纳允许目标依赖于等价本身。它不宣称所有自等价都等于恒等。其归纳过程中，目标类型 $B$ 也随之变化，正如路径归纳同时改变路径的终点。固定 $B=A$ 后企图只在环路内部作这种归纳，通常不合法。
+\end{remark}
+\begin{proposition}[可定义构造保持等价]
+给定 $F:\U\to\U$，每个 $e:A\simeq B$ 诱导等价
+\[
+F(e):F(A)\simeq F(B).
+\]
+这个作用保持恒等与复合，保持的意义是存在由路径演算给出的相容同伦。
+\end{proposition}
+\begin{proof}
+定义 $F(e)=\idtoequiv(\ap_F(\ua(e)))$。函数的路径作用保持路径合成，$\ua$ 与 $\idtoequiv$ 保持合成，因而得到相容公式。所需更高比较来自同一套路径归纳。
+\end{proof}
+\begin{example}
+取 $F(A)=A\to A$。等价 $e:A\simeq B$ 诱导
+\[
+F(e)(u)=e\circ u\circ e^{-1}.
+\]
+该公式可由等价归纳证明：在 $e=\id_A$ 处，两端都等于 $u$。因此这种构造记录的是自映射空间的共轭等价，绝非无条件把一个任意函数 $A\to B$ 推成自映射空间之间的函数。
+\end{example}
+
+\section{一个非平凡的宇宙环路}
+\begin{definition}[二元素类型]
+记 $\mathbf2=\one+\one$，其两点为 $0$ 和 $1$。交换函数 $s:\mathbf2\to\mathbf2$ 由 $s(0)=1$、$s(1)=0$ 给出。因为 $s\circ s=\id$，它确定自等价。
+\end{definition}
+\begin{lemma}
+$0=_{\mathbf2}1$ 为空类型。
+\end{lemma}
+\begin{proof}
+定义族 $P:\mathbf2\to\U$，使 $P(0)=\one$、$P(1)=\zero$。若有 $p:0=1$，沿 $p$ 传输 $*:\one$ 将产生空类型中的元素。因此该路径类型到空类型有函数，即没有这样的路径。
+\end{proof}
+\begin{proposition}
+宇宙中环路 $\ua(s):\mathbf2=\mathbf2$ 不等于 $\refl_{\mathbf2}$。因此含有二元素类型的单价宇宙不是集合。
+\end{proposition}
+\begin{proof}
+如果两条环路相等，施加 $\idtoequiv$ 得到 $s=\id$。在点 $0$ 处求值得到 $1=0$，与上一引理矛盾。一个集合的任意路径类型必须是命题，而这里同一路径类型有两个可区分的元素。
+\end{proof}
+\begin{remark}
+这个例子展示了宇宙中的“同一对象的对称性”。单价性保留对称性，并把它表示成环路。若只保留每个同构类的一个代表，再将全部同构遗忘，则得到的离散分类集合无法表示这一信息。
+\end{remark}
+
+\section{带基点结构的同一性}
+\begin{definition}[带基点类型]
+定义
+\[
+\U_\bullet=\sum_{A:\U}A.
+\]
+其中的元素写作 $(A,a)$。两个带基点类型之间的带基点等价数据为
+\[
+\Eq_\bullet((A,a),(B,b))
+=\sum_{e:A\simeq B}(e(a)=b).
+\]
+\end{definition}
+\begin{theorem}[带基点结构同一性]
+在单价宇宙中有自然等价
+\[
+((A,a)=(B,b))\simeq
+\sum_{e:A\simeq B}(e(a)=b).
+\]
+\end{theorem}
+\begin{proof}
+依赖和路径公式先给出
+\[
+((A,a)=(B,b))\simeq
+\sum_{p:A=B}(\tr_{\mathsf{El}}(p)(a)=b).
+\]
+用单价性把底 $p$ 换成 $e$。具体地，选 $p=\ua(e)$ 后，单价计算公式把纤维中的传输替换为 $e(a)$。这给出总空间之间的等价，逆向则将 $e$ 变成 $\ua(e)$ 并传回相应纤维路径。
+\end{proof}
+\begin{example}
+取 $(A,a)=(\mathbf2,0)$。其自等价必须固定 $0$，因此交换函数被排除。自等价只剩恒等。这说明附加结构会约束宇宙中的环路；其作用可以直接由上述路径公式读出。
+\end{example}
+
+\section{二元运算的传输}
+\begin{definition}[二元运算结构]
+令 $M(A)=A\times A\to A$，并定义
+\[
+\mathsf{Mag}_{\U}=\sum_{A:\U}M(A).
+\]
+一个元素 $(A,\mu)$ 为一个类型及其二元运算。本节只研究这样的对象之间的路径，尚未定义一般的非可逆同态箭头。
+\end{definition}
+\begin{lemma}[共轭传输公式]
+若 $p:A=B$、$e=\idtoequiv(p)$，则
+\[
+\tr_M(p)(\mu)(b_1,b_2)
+=e\bigl(\mu(e^{-1}b_1,e^{-1}b_2)\bigr).
+\]
+等式是函数之间的路径，右边的逆选取由 $e$ 的等价结构给出。
+\end{lemma}
+\begin{proof}
+对 $p$ 作路径归纳。此时 $A=B$，$e$ 为恒等，传输也是恒等，公式逐点化为 $\mu(b_1,b_2)=\mu(b_1,b_2)$。函数外延性把逐点计算合成函数路径。不同等价逆之间有相容路径，故公式不依赖非本质的逆选择。
+\end{proof}
+\begin{proposition}[运算结构同一性]
+有等价
+\[
+((A,\mu)=(B,\nu))
+\simeq
+\sum_{e:A\simeq B}\prod_{x,y:A}
+\bigl(e(\mu(x,y))=\nu(e(x),e(y))\bigr).
+\]
+\end{proposition}
+\begin{proof}
+依赖和路径公式与单价性把左边变成
+\[
+\sum_{e:A\simeq B}(\tr_M(\ua(e))(\mu)=\nu).
+\]
+由共轭传输公式，纤维要求
+$e\mu(e^{-1}b_1,e^{-1}b_2)=\nu(b_1,b_2)$。
+前复合等价 $e\times e$ 将该函数等式等价地化为
+$e\mu(x,y)=\nu(ex,ey)$。函数外延性给出所述依赖积。
+\end{proof}
+\begin{remark}
+对一般空间，等式见证本身可能有非平凡高阶路径，因此右边必须保留完整的同伦相容数据。若 $A,B$ 是集合，则逐点等式是命题，这些相容见证也成为命题。
+\end{remark}
+
+\section{代数公理作为性质}
+\begin{definition}[集合上的幺半群]
+一个小幺半群包含集合 $A$、元素 $1_A:A$、运算 $\mu:A^2\to A$，以及单位律与结合律
+\[
+\prod_x\mu(1_A,x)=x,\qquad
+\prod_x\mu(x,1_A)=x,
+\]
+\[
+\prod_{x,y,z}\mu(\mu(x,y),z)=\mu(x,\mu(y,z)).
+\]
+\end{definition}
+\begin{lemma}
+固定集合 $A$ 及运算、单位元素后，幺半群公理的数据类型是命题。
+\end{lemma}
+\begin{proof}
+$A$ 是集合，所以每个等式类型是命题。命题的依赖积与有限乘积仍是命题。因此单位律和结合律的见证合在一起也是命题。
+\end{proof}
+\begin{theorem}[幺半群的结构同一性]
+在单价宇宙中，两个小幺半群之间的同一性类型，等价于它们的幺半群同构类型。
+\end{theorem}
+\begin{proof}
+先对承载类型、单位和运算应用依赖和路径公式。承载类型的路径变成等价；单位的传输给出 $e(1_A)=1_B$；运算的传输给出上一节的乘法相容。剩余公理是命题，因此由命题子类型路径定理，不再增加新的路径条件。承载类型是集合，等价就是双射。于是得到的正是保单位、保乘法的双射，即幺半群同构。
+\end{proof}
+\begin{remark}
+这一论证的关键是先区分结构与性质，再逐项计算传输。对含有高阶同伦的承载类型，结合律的见证一般不再是命题；若要定义同伦相容的高阶幺半群，还必须控制更高相容性。单价性本身不会把缺少的相容数据补成定义中的一部分。
+\end{remark}
+\source{本章的单价性是 Riehl 报告定义 4.6 的内部形式。等价归纳、宇宙环路及结构同一性的系统论述见\cite{HoTT,Rijke,RiehlICM}。}
+
+
+
+% ===== chapters/13_classifying =====
+\chapter{有限类型、对称群与分类空间}
+\section{有限基数的同伦分类}
+\begin{definition}[有限类型]
+对自然数 $n$，记标准 $n$ 元类型为 $\mathbf n$。递归规定 $\mathbf0=\zero$、$\mathbf{n+1}=\mathbf n+\one$。定义
+\[
+\Fin_n=\sum_{A:\U}\trunc{\mathbf n\simeq A}.
+\]
+第二分量只断言 $A$ 有 $n$ 个元素，不选定一个编号。标准基点为 $(\mathbf n,|\id|)$。
+\end{definition}
+\begin{lemma}
+每个 $A:\Fin_n$ 的承载类型是集合。
+\end{lemma}
+\begin{proof}
+标准有限类型是集合，这可以由有限和的路径类型逐步验证：同一分支中的路径归约到该分支的路径，不同分支之间没有路径。集合性是命题，因此可以消去 $\trunc{\mathbf n\simeq A}$ 到目标 $\isSet(A)$。一旦给定等价，等价保持截断性就证明 $A$ 为集合。
+\end{proof}
+\begin{definition}[连通类型]
+类型 $X$ 称为连通，若 $\trunc X$ 有元素，且
+\[
+\prod_{x,y:X}\trunc{x=y}
+\]
+有元素。对于已指定基点 $x_0$ 的类型，等价地只需对每个 $x$ 给出 $\trunc{x_0=x}$。
+\end{definition}
+\begin{proposition}
+$\Fin_n$ 是带基点的连通 $1$-类型。
+\end{proposition}
+\begin{proof}
+第二分量是命题。命题子类型路径公式与单价性给出
+\[
+((A,a)=(B,b))\simeq(A=B)\simeq(A\simeq B).
+\]
+这里 $A,B$ 都是集合，函数类型 $A\to B$ 也是集合：其路径类型由函数外延性等价于命题的依赖积。等价性附加数据为命题，故 $A\simeq B$ 是集合。因此 $\Fin_n$ 的路径类型是集合。
+
+为了证明连通，固定 $(A,a)$。目标 $\trunc{(\mathbf n,|\id|)=(A,a)}$ 是命题，所以可消去 $a:\trunc{\mathbf n\simeq A}$。对给定的等价 $e$，单价性产生承载类型的路径，命题子类型路径公式将它提升到 $\Fin_n$ 中。最后作命题截断即可。
+\end{proof}
+\begin{remark}
+如果使用 $\sum_A(\mathbf n\simeq A)$，而不是将第二分量截断，那么得到的是可缩类型。它分类“带有一个指定编号的 $n$ 元类型”。忘掉编号但保留所有编号间的同伦关系，才得到具有对称性的 $\Fin_n$。
+\end{remark}
+
+\section{环路空间与对称群}
+\begin{definition}[基点环路]
+对带基点类型 $(X,x_0)$，定义
+\[
+\Omega(X,x_0)=(x_0=_Xx_0).
+\]
+它具有路径连接、逆及常路径。若 $X$ 是 $1$-类型，则 $\Omega X$ 是集合，群胚律给出一个普通群。
+\end{definition}
+\begin{definition}[对称群]
+$\Sigma_n$ 是 $\mathbf n$ 的自双射群，群运算采用函数复合。我们用 $d\circ e$ 表示先执行 $e$ 再执行 $d$。
+\end{definition}
+\begin{theorem}[有限类型的环路计算]\label{thm:finite-loops}
+有等价
+\[
+\Omega(\Fin_n,\mathbf n)\simeq\Sigma_n.
+\]
+在路径按“先 $p$ 后 $q$”连接的约定下，比较将 $p\cdot q$ 送到 $e_q\circ e_p$。
+\end{theorem}
+\begin{proof}
+命题子类型路径公式先忘掉有限性见证，单价性再给出
+\[
+(\mathbf n=_{\Fin_n}\mathbf n)
+\simeq(\mathbf n=_{\U}\mathbf n)
+\simeq(\mathbf n\simeq\mathbf n).
+\]
+有限集合的等价就是自双射。复合相容是 $\idtoequiv$ 的复合公式。若希望把两端都写成通常的左乘群运算，可将环路群的乘法定义为 $p*q=q\cdot p$；也可在比较后取逆得到通常约定的群同构。两种约定表达同一几何内容。
+\end{proof}
+\begin{example}
+$\Fin_0$ 和 $\Fin_1$ 可缩。证明如下：它们连通，任意两个承载类型之间的等价类型为命题，而且由有限性可截断地证明存在这样的等价。消去截断到这个命题后，得到实际路径。选标准基点即得到收缩。
+
+当 $n=2$ 时，自双射只有恒等与交换。因此 $\Fin_2$ 的基点有两个环路，非平凡环路的平方等于恒等。它的环路类型已经是集合，所以没有更高的非平凡路径层次。
+\end{example}
+\begin{definition}[群的分类空间]
+普通群 $G$ 的一个分类空间是带基点的连通 $1$-类型 $BG$，并带有其环路群与 $G$ 的指定同构。约定环路群的乘法与该同构相容。
+\end{definition}
+\begin{remark}
+定理\ref{thm:finite-loops}表明 $\Fin_n$ 是 $\Sigma_n$ 的一个分类空间。这里记号 $B\Sigma_n$ 可以选为这个具体构造。不能仅由两个未说明截断性的空间有同构的基本群，就推断它们等价；连通性与 $1$-截断性在此都不可缺少。
+\end{remark}
+
+\section{群作用与挠子}
+\begin{definition}[右群作用]
+设 $G$ 是群，$X$ 是集合。一个右作用为函数 $X\times G\to X$，记为 $x\cdot g$，满足
+\[
+x\cdot1=x,
+\qquad
+(x\cdot g)\cdot h=x\cdot(gh).
+\]
+作用间的等变映射 $f:X\to Y$ 满足 $f(x\cdot g)=f(x)\cdot g$。
+\end{definition}
+\begin{definition}[$G$-挠子]
+一个右 $G$-挠子是带右作用的集合 $T$，满足 $\trunc T$，并且对每个 $t:T$，函数
+\[
+q_t:G\to T,\qquad g\longmapsto t\cdot g
+\]
+为等价。记所有小右 $G$-挠子的类型为 $\Tors(G)$。
+\end{definition}
+\begin{lemma}
+后一条件等价于作用自由且传递：对任意 $t,u:T$，存在唯一 $g:G$ 使 $t\cdot g=u$。
+\end{lemma}
+\begin{proof}
+$\fib_{q_t}(u)=\sum_{g:G}(t\cdot g=u)$ 可缩，恰好表达存在唯一这样的 $g$。这里 $G,T$ 是集合，故同伦纤维是集合；其可缩性就是集合论的唯一存在。
+\end{proof}
+\begin{example}
+$G$ 以右乘作用于自身，构成标准挠子。对于固定 $t$，$q_t$ 的逆为 $u\mapsto t^{-1}u$。
+
+群 $\Z$ 作用于整数格点的任意无标记平移副本，得到一个 $\Z$-挠子。选定一个格点便可将它编号为整数；不选格点时，编号之间相差整体平移。
+\end{example}
+\begin{proposition}[挠子的局部平凡化]
+若给定 $t:T$，则 $q_t:G\to T$ 是等变等价。改变基点 $t$ 会改变这一等价，但所有选择均属于挠子的结构本身。
+\end{proposition}
+\begin{proof}
+等价性由定义。等变性由作用律：
+\[
+q_t(gh)=t\cdot(gh)=(t\cdot g)\cdot h=q_t(g)\cdot h.
+\]
+若 $u=t\cdot k$，则 $q_u(g)=q_t(kg)$，所以两种平凡化之间的变化为左乘 $k$。
+\end{proof}
+
+\section{挠子的结构同一性}
+\begin{lemma}
+对于右 $G$-集合 $T,U$，它们的结构同一性类型等价于等变等价类型。
+\end{lemma}
+\begin{proof}
+对承载集合的路径应用单价性，得到等价 $e:T\simeq U$。作用函数的传输公式要求
+\[
+e(t\cdot g)=e(t)\cdot g.
+\]
+可将作用看作 $T\to(G\to T)$ 的函数，逐项使用函数族传输公式得到该条件。作用律与集合性是命题，因此不再增加路径数据。对于挠子，非空截断与 $q_t$ 等价性也都是命题，同一公式仍成立。
+\end{proof}
+\begin{theorem}[挠子分类空间]\label{thm:torsor-BG}
+$\Tors(G)$ 是带基点的连通 $1$-类型，基点为标准挠子 $G$。其基点环路类型等价于 $G$。
+\end{theorem}
+\begin{proof}
+两个挠子间的等变等价组成集合，因为底层函数类型是集合，等变性与等价性是命题。因此结构同一性表明挠子类型为 $1$-类型。
+
+对任意挠子 $T$，目标 $\trunc{G=T}$ 是命题。可用 $\trunc T$ 消去：给定 $t:T$ 后，$q_t$ 是等变等价，结构同一性便给出 $G=T$。所以挠子类型连通。
+
+最后计算标准挠子的等变自等价。若 $f:G\to G$ 等变，则
+\[
+f(g)=f(1\cdot g)=f(1)g.
+\]
+故 $f$ 由 $h=f(1)$ 决定。反之，左乘 $L_h(g)=hg$ 是等变双射，逆为 $L_{h^{-1}}$。于是
+\[
+\Aut_G(G)\simeq G,
+\qquad f\longmapsto f(1).
+\]
+结构同一性将左边识别为基点环路。复合满足 $L_k\circ L_h=L_{kh}$，与先后路径约定相容。
+\end{proof}
+\begin{remark}
+证明没有为所有挠子选择一个点。连通性的目标已截断，故局部选点仅发生在合法的命题消去之内。若把这些局部点拼成一个全局的选点函数，将额外引入不属于本论证的选择要求。
+\end{remark}
+
+\section{挠子族的分类}
+\begin{definition}[参数化挠子]
+在类型 $X$ 上的 $G$-挠子族是一个依赖类型 $T:X\to\U$，逐纤维配备右 $G$-挠子结构。其总空间为 $\sum_{x:X}T(x)$。
+\end{definition}
+\begin{proposition}
+函数 $X\to\Tors(G)$ 与 $X$ 上的小 $G$-挠子族具有等价的数据。两个这样的函数之间的路径，等价于逐纤维等变等价族。
+\end{proposition}
+\begin{proof}
+第一部分只是依赖和与依赖积的交换：函数 $x\mapsto(T_x,\rho_x,\ldots)$ 恰好提供逐纤维结构。第二部分由函数外延性把路径化为逐点结构路径，再用挠子的结构同一性。全部等价都保留 $x$ 的依赖关系。
+\end{proof}
+\begin{example}[双覆盖的单值变换]
+在普通拓扑模型中，映射 $S^1\to S^1$，$z\mapsto z^2$ 的每条纤维有两个点。沿底空间的一周移动，纤维的两点交换。分类映射把这一周的环路送到 $\Fin_2$ 中的交换环路。这个模型说明，同一有限基数的纤维仍然可以组成非平凡的族；非平凡性记录在分类映射的路径作用中。
+\end{example}
+\begin{remark}
+一般拓扑空间上的纤维丛分类还需要对所用空间范畴、局部平凡性与基空间作条件。此处的分类命题是在同伦类型内部关于依赖族的精确陈述，不以任意点集拓扑上的朴素纤维族替代纤维化。
+\end{remark}
+
+\section{带标记的有限类型}
+\begin{definition}
+当 $n\ge1$ 时，令
+\[
+\Fin_{n,\bullet}=\sum_{A:\Fin_n}A.
+\]
+其元素是一个 $n$ 元类型和其中一个标记点。忘掉标记点得到 $\Fin_{n,\bullet}\to\Fin_n$。
+\end{definition}
+\begin{proposition}
+$\Fin_{n,\bullet}$ 是连通 $1$-类型，其基点环路群为固定一个指定元素的置换群，因而同构于 $\Sigma_{n-1}$。
+\end{proposition}
+\begin{proof}
+依赖和路径公式和单价性给出
+\[
+((A,a)=(B,b))\simeq\sum_{e:A\simeq B}(e(a)=b).
+\]
+右边是集合，所以总空间是 $1$-类型。为了证明连通，有限性允许在命题目标中选一个编号 $e:\mathbf n\simeq A$。若指定标准点为 $0$，将 $e^{-1}(a)$ 与 $0$ 交换后再施加 $e$，便得到把标准点送到 $a$ 的双射。于是总空间连通。
+
+基点环路对应固定 $0$ 的置换。这样的置换限制到补集 $\{1,\ldots,n-1\}$ 得到一个 $n-1$ 元集合的置换；反向将任一补集置换延拓为固定 $0$ 的置换。两种操作互逆并保持复合。
+\end{proof}
+\begin{example}
+当 $n=2$ 时，带标记的二元素类型的分类空间可缩，而未标记版本有一个阶为二的非平凡环路。忘记标记点产生的族正体现“自同构群取稳定子”的一般机制。
+\end{example}
+\source{有限类型与分类空间是 Riehl 报告第 5 节的重要例子。挠子构造避免先选群的某种几何实现，可与经典群胚的神经构造比较，参见\cite{RiehlICM,HoTT}。}
+
+
+
+% ===== chapters/14_groups =====
+\chapter{高阶群、作用与同伦商}
+\section{由带基点空间得到群结构}
+\begin{definition}[高阶群]
+一个高阶群由带基点的连通类型 $(BG,*)$ 表示，其承载类型定义为
+\[
+G=\Omega BG=(*=_{BG}*).
+\]
+这里的乘法、单位和逆来自路径连接、常路径和路径反向，全部高阶相容关系来自路径归纳。
+\end{definition}
+\begin{remark}
+此定义把高阶群的退悬空间 $BG$ 作为结构的一部分。一个带乘法的空间即使满足某些低维的群律，也尚未自动提供这样的退悬空间。普通群的挠子构造表明，每个普通群都能纳入这个定义。
+\end{remark}
+\begin{proposition}[普通群所在的层次]
+若 $BG$ 是连通 $1$-类型，则 $G=\Omega BG$ 是普通群。若 $BG$ 允许更高路径，则 $G$ 的乘法律本身也可以有非平凡的高阶相容。
+\end{proposition}
+\begin{proof}
+$1$-截断意味着环路类型是集合。路径群胚律给出结合、单位、逆等式；集合中的等式为命题，不需要继续选择更高的证明。没有 $1$-截断条件时，路径律仍成立，但同一条律的见证间可能存在非平凡路径，故必须保留由路径演算产生的全部相容结构。
+\end{proof}
+\begin{definition}[高阶群同态]
+从 $(BG,*)$ 到 $(BH,*)$ 的高阶群同态定义为一个带基点映射，即数据
+\[
+(F,\epsilon):\sum_{F:BG\to BH}(F(*)=*).
+\]
+它诱导环路映射
+\[
+p\longmapsto\epsilon^{-1}\cdot\ap_F(p)\cdot\epsilon.
+\]
+\end{definition}
+\begin{proposition}
+上述环路映射保持乘法、单位与逆，并具有相应的高阶相容。
+\end{proposition}
+\begin{proof}
+函数的路径作用保持连接。对两个环路 $p,q$，其像的连接为
+\[
+\epsilon^{-1}\cdot\ap_F(p)\cdot\epsilon
+\cdot\epsilon^{-1}\cdot\ap_F(q)\cdot\epsilon.
+\]
+消去中间的 $\epsilon\cdot\epsilon^{-1}$，再应用连接的结合比较，得到 $\epsilon^{-1}\cdot\ap_F(p\cdot q)\cdot\epsilon$。单位与逆同理。这里采用的比较全部由路径群胚律组成，因此其高阶相容也由路径归纳控制。
+\end{proof}
+
+\section{路径纤维化与普遍主族}
+\begin{definition}[基点路径族]
+对带基点类型 $(X,x_0)$，定义
+\[
+P_{x_0}(x)=(x_0=x),
+\qquad
+E_{x_0}X=\sum_{x:X}(x_0=x).
+\]
+投影 $E_{x_0}X\to X$ 称为基点路径族的总空间。
+\end{definition}
+\begin{proposition}
+$E_{x_0}X$ 可缩，而它在 $x_0$ 上的纤维是 $\Omega X$。
+\end{proposition}
+\begin{proof}
+中心为 $(x_0,\refl)$，收缩由基点路径归纳给出。纤维定义上就是 $x_0=x_0$。因此一个可缩总空间可以有非可缩纤维；底空间记录了纤维的单值变换。
+\end{proof}
+\begin{example}
+取 $X=\Tors(G)$。基点路径族的纤维 $G=T$，由结构同一性等价于等变等价 $G\simeq_G T$，再由在 $1$ 处求值等价于 $T$。于是路径族等价于挠子类型上的普遍挠子族
+\[
+\sum_{T:\Tors(G)}T\longrightarrow\Tors(G).
+\]
+其总空间可缩。
+\end{example}
+\begin{proposition}[带点挠子总空间可缩]
+类型 $\sum_{T:\Tors(G)}T$ 的中心可取 $(G,1)$。
+\end{proposition}
+\begin{proof}
+给定 $(T,t)$，映射 $q_t(g)=t\cdot g$ 是等变等价，且 $q_t(1)=t$。结构同一性与依赖和路径公式给出 $(G,1)=(T,t)$。这个公式依赖于给定的 $t$，因此形成全局收缩；这里不需要为没有指定点的挠子选择点。
+\end{proof}
+\begin{remark}
+普遍主族的总空间可缩，与它在底空间每点上的纤维为 $G$ 并不矛盾。可缩性只对总空间的同伦类型作断言。将总空间替换成一点时，投影及纤维化结构不能同时任意遗忘。
+\end{remark}
+
+\section{群作用作为依赖族}
+\begin{definition}[高阶群作用]
+设高阶群由 $(BG,*)$ 表示。$G$ 对空间的一个作用定义为函数
+\[
+A:BG\longrightarrow\U.
+\]
+被作用的承载空间为 $A(*)$。一个环路 $g:*=*$ 通过传输给出自等价
+\[
+\rho_g=\tr_A(g):A(*)\simeq A(*).
+\]
+\end{definition}
+\begin{proposition}[作用律]
+有同伦
+\[
+\rho_{\refl}=\id,
+\qquad
+\rho_{g\cdot h}=\rho_h\circ\rho_g,
+\qquad
+\rho_{g^{-1}}=\rho_g^{-1}.
+\]
+这些同伦的相容关系继承自依赖传输。
+\end{proposition}
+\begin{proof}
+分别应用恒等传输、复合传输和逆传输公式。因为整个作用由一个类型族给出，公式在所有路径参数中成立；对这些参数的高阶路径再次应用依赖函数的路径作用，即得到下一层的相容。
+\end{proof}
+\begin{example}[平凡作用]
+若 $A(z)\equiv X$ 为常值族，则所有 $\rho_g$ 均与恒等等价相同。常值族仍然定义在整个 $BG$ 上，因此其截面空间可能保留从 $BG$ 到 $X$ 的非平凡映射，而不只是选取 $X$ 的一个点。
+\end{example}
+\begin{remark}
+当 $G$ 是普通群、$X$ 是集合时，传统作用由同态 $G\to\Aut(X)$ 给出。上式中的连接约定可能把左作用写成右作用；只要固定群乘法与路径连接的对应，二者完全一致。对一般空间，单独列出一组自等价与乘法同伦还不等于给出完整作用，因为仍有更高相容条件。函数 $BG\to\U$ 同时保存这些条件。
+\end{remark}
+
+\section{从普通群作用构造挠子上的族}
+\begin{definition}[与挠子相联系的集合]
+设 $X$ 带左 $G$-作用，$T$ 是右 $G$-挠子。定义
+\[
+A_X(T)=\left\{\varphi:T\to X\ \middle|\ 
+\varphi(t\cdot g)=g^{-1}\cdot\varphi(t)\right\}.
+\]
+等式条件是命题，故该类型为集合。
+\end{definition}
+\begin{lemma}[求值平凡化]
+给定 $t:T$，求值 $\ev_t:A_X(T)\to X$ 是等价。
+\end{lemma}
+\begin{proof}
+因为 $q_t:G\to T$ 是双射，每个 $u:T$ 唯一写成 $t\cdot g$。对 $x:X$，定义
+\[
+\varphi_x(t\cdot g)=g^{-1}\cdot x.
+\]
+定义不依赖额外选择，因为 $g$ 唯一。对 $h:G$，
+\[
+\varphi_x((t\cdot g)\cdot h)
+=(gh)^{-1}\cdot x
+=h^{-1}\cdot(g^{-1}\cdot x),
+\]
+所以它满足所需相容。显然 $\varphi_x(t)=x$。反之，任何相容的 $\varphi$ 都由 $\varphi(t)$ 按同一公式确定，因此两种构造互逆。
+\end{proof}
+\begin{proposition}[挠子同构上的传输]
+若 $e:T\simeq_G U$，则对应的族传输为
+\[
+A_X(e):A_X(T)\to A_X(U),
+\qquad \varphi\longmapsto\varphi\circ e^{-1}.
+\]
+在标准挠子 $G$ 上，借助 $\ev_1$ 识别纤维与 $X$ 后，左乘自同构 $L_h$ 的传输正是 $x\mapsto h\cdot x$。
+\end{proposition}
+\begin{proof}
+前复合 $e^{-1}$ 保持相容关系，因为 $e$ 等变。与前复合 $e$ 互为逆，且结构同一性把这个函数识别为传输；可用等价归纳验证。最后，
+\[
+(\varphi\circ L_h^{-1})(1)=\varphi(h^{-1})
+=(h^{-1})^{-1}\cdot\varphi(1)=h\cdot\varphi(1).
+\]
+于是原普通群作用被准确地恢复。
+\end{proof}
+\begin{remark}
+该构造没有使用商集合。它利用“满足等变条件的函数”表示与挠子相关联的纤维，因此仅凭依赖积、同一性类型和挠子的自由传递性就足够。若另有集合商，也可用通常的关联集合 $T\times_G X$ 给出等价构造。
+\end{remark}
+
+\section{同伦不动点与同伦轨道}
+\begin{definition}
+对于 $A:BG\to\U$，定义同伦不动点类型与同伦轨道类型为
+\[
+A^{hG}=\prod_{z:BG}A(z),
+\qquad
+A_{hG}=\sum_{z:BG}A(z).
+\]
+前者是族的截面类型，后者是族的总空间。
+\end{definition}
+\begin{proposition}[不动点的相容条件]
+若 $s:A^{hG}$，则 $x=s(*)$ 对每个 $g:*=*$ 带有路径
+\[
+\rho_g(x)=x.
+\]
+这些路径随 $g$ 及其高阶路径相容。
+\end{proposition}
+\begin{proof}
+依赖路径作用 $\apd_s(g)$ 正是 $\tr_A(g)(s(*))=s(*)$。对环路复合的相容来自依赖函数的路径作用与传输的复合律。更高相容同样由同一依赖函数 $s$ 给出。
+\end{proof}
+\begin{remark}
+一般情形下，只给出每个群元素的一个不动路径不足以给出截面，还需它们的相容性。符号 $A^{hG}$ 中的上标 $h$ 强调这些同伦数据。对于集合上的普通群作用，因为相关等式都是命题，相容性不再增加非平凡的高阶选择。
+\end{remark}
+\begin{proposition}[平凡作用的计算]
+若 $A(z)\equiv X$，则
+\[
+A_{hG}\simeq BG\times X,
+\qquad
+A^{hG}\simeq(BG\to X).
+\]
+\end{proposition}
+\begin{proof}
+常值族的依赖和就是乘积，依赖积就是函数类型。这是两种类型构造的定义性特例。
+\end{proof}
+\begin{example}
+对单位类型的唯一作用，有 $\one_{hG}\simeq BG$、$\one^{hG}\simeq\one$。因此“只有一个轨道”的普通集合论结论不意味着同伦轨道类型可缩。群的自同构信息在 $BG$ 中完整保留。
+\end{example}
+\begin{proposition}[连通底到集合的函数]
+若 $(B,b_0)$ 连通，且 $X$ 是集合，则求值
+\[
+(B\to X)\longrightarrow X,
+\qquad f\longmapsto f(b_0)
+\]
+是等价。
+\end{proposition}
+\begin{proof}
+逆为常值函数。一个复合定义上是恒等。对另一个复合，需要证明 $f(b_0)=f(b)$。目标是命题，因为 $X$ 是集合；于是可消去连通性提供的 $\trunc{b_0=b}$，并将一条代表路径送入 $f$。函数外延性得到常值函数与 $f$ 的同伦。因此求值是等价。
+\end{proof}
+\begin{remark}
+若 $X$ 不是集合，上述命题通常不成立。例如 $B=X=BG$，恒等映射与常值映射未必同伦。连通性只给出截断的路径存在性，不能据此消去到非命题的路径空间。
+\end{remark}
+
+\section{作用群胚与同伦轨道}
+\begin{definition}[作用群胚]
+对于普通群 $G$ 对集合 $X$ 的左作用，作用群胚 $G\ltimes X$ 的对象为 $x:X$，从 $x$ 到 $y$ 的态射为满足 $g\cdot x=y$ 的群元素 $g$。合成使用群乘法，逆由 $g^{-1}$ 给出。
+\end{definition}
+\begin{proposition}
+作用群胚中 $x$ 的自同构群为稳定子
+\[
+G_x=\{g:G\mid g\cdot x=x\}.
+\]
+两个对象在同一连通分支内，当且仅当它们位于同一轨道。
+\end{proposition}
+\begin{proof}
+第一断言直接来自态射的定义。态射存在等价于有群元素把一个对象送到另一个。因为所有态射可逆，一条由若干态射组成的折线可合成为一个态射，因此群胚连通分支恰为轨道。
+\end{proof}
+\begin{proposition}[传递作用]
+若作用传递，且指定 $x:X$，则作用群胚等价于单对象群胚 $BG_x$。因此其同伦类型是稳定子的分类空间。
+\end{proposition}
+\begin{proof}
+将单一对象送到 $x$，自同态群送到 $x$ 的自同构群，得到全忠实函子。传递性保证每个对象与 $x$ 同构，所以函子本质满。普通范畴的等价判据给出结论。在构造显式拟逆时可以逐对象选同构；若不作这些选择，仍可由全忠实且本质满描述同一等价性质。
+\end{proof}
+\begin{example}
+$G$ 在自身上左乘的作用是自由传递的，稳定子为平凡群。因此作用群胚的同伦类型可缩。平凡作用在一点上的稳定子是整个 $G$，因而得到 $BG$。这两个例子有相同的普通轨道集合，却有不同的同伦轨道类型。
+\end{example}
+\begin{remark}
+在群胚或单纯集合语义中，作用族的总空间由作用群胚的神经表示。它在每个对象上的纤维是 $X$，沿群箭头的传输是给定作用。故这里的群胚计算与 $\sum_{z:BG}A(z)$ 的内部定义相容。
+\end{remark}
+
+\section{同伦商的映射性质}
+\begin{theorem}[总空间的映射性质]
+对任意族 $A:B\to\U$ 和类型 $Y$，有等价
+\[
+\left(\sum_{b:B}A(b)\to Y\right)
+\simeq
+\prod_{b:B}(A(b)\to Y).
+\]
+应用于群作用时，右边是随 $BG$ 中所有路径相容的纤维映射族。
+\end{theorem}
+\begin{proof}
+正向把 $F$ 送到 $b\mapsto(a\mapsto F(b,a))$；反向把 $\varphi$ 送到 $(b,a)\mapsto\varphi_b(a)$。两种操作逐点互逆，函数外延性得到函数类型间的等价。这就是依赖和的消去性质。
+\end{proof}
+\begin{proposition}[基点处的相容公式]
+设 $\varphi:\prod_{z:BG}(A(z)\to Y)$。对每个 $g:*=*$、$a:A(*)$，有
+\[
+\varphi_*(\rho_g(a))=\varphi_*(a).
+\]
+\end{proposition}
+\begin{proof}
+族 $z\mapsto(A(z)\to Y)$ 的传输是对输入作逆传输。依赖路径作用给出 $\varphi_*\circ\rho_g^{-1}=\varphi_*$。再前复合 $\rho_g$ 并用逆同伦，得到所述公式。
+\end{proof}
+\begin{remark}
+因而同伦商上的函数对应于同伦相容的作用不变映射。只要求逐个等式而不保存其相容性，通常只得到不完整的数据。依赖积的表达式把这些相容性包含在一个类型之中。
+\end{remark}
+
+\section{乘法空间与高阶相容的边界}
+\begin{definition}[带单位的乘法空间]
+带基点类型 $(X,e)$ 若配有 $\mu:X\times X\to X$ 及同伦 $\mu(e,x)=x$、$\mu(x,e)=x$，称为带单位的乘法空间。根据具体用途，可能还要求两条单位同伦在 $e$ 处相容。
+\end{definition}
+\begin{example}
+环路类型 $\Omega B$ 具有这样的结构，并且还有结合律及所有更高相容。普通拓扑中所谓 $H$-空间通常只规定乘法与单位的低阶同伦；其定义并不自动包含完整的高阶群结构。
+\end{example}
+\begin{proposition}[乘法空间结构的等价不变性]
+若 $e:X\simeq Y$，则可将 $X$ 上的带单位乘法结构传输到 $Y$。具体乘法为
+\[
+\mu_Y(y_1,y_2)=e\bigl(\mu_X(e^{-1}y_1,e^{-1}y_2)\bigr),
+\]
+单位为 $e(e_X)$，单位同伦由原同伦与逆同伦复合而得。
+\end{proposition}
+\begin{proof}
+这是单价性与结构传输的应用。也可直接计算左单位：把 $e^{-1}(e(e_X))$ 用逆同伦化为 $e_X$，再应用 $\mu_X$ 的左单位同伦，最后使用 $e\circ e^{-1}\sim\id_Y$。右单位同理。已给定的额外相容在同一传输过程中一起保留。
+\end{proof}
+\source{高阶群与作用的依赖族描述可见\cite{RiehlICM,HoTT}。本章始终把具体的结构数据与对这些数据的公理分开，以便在后文比较结构同一性与结构同态。}
+
+
+
+% ===== chapters/15_simplicial_spaces =====
+\chapter{单纯空间与有向类型}
+\section{同伦方向之外的单纯方向}
+\begin{definition}[单纯空间]
+单纯空间是一个函子
+\[
+C:\Delta^{\op}\longrightarrow\mathsf{Spaces}.
+\]
+为了使用已建立的模型，可将每个空间再表示为单纯集合，因而把 $C$ 写成双单纯集合 $C_{n,m}$。指标 $n$ 称为外单纯方向，指标 $m$ 称为内同伦方向。
+\end{definition}
+\begin{example}
+固定外次数 $n$ 后，$m\mapsto C_{n,m}$ 表示一个空间 $C_n$。其中的路径与更高同伦由内方向编码。外方向的 $C_0,C_1,C_2$ 则分别将用于记录对象、箭头和三角形。这两种方向有不同的几何作用。
+\end{example}
+\begin{definition}[离散外形状]
+若 $K$ 是单纯集合，将其每层集合视为离散空间，得到单纯空间，仍记作 $K$。特别地，$\Delta^n$、$\partial\Delta^n$、$\Lambda_k^n$ 和脊柱 $I[n]$ 都可以作为外形状。
+\end{definition}
+\begin{remark}
+外形状 $\Delta^1$ 记录 $0\to1$。它的几何实现虽然是可缩区间，但在有向类型中不能因此把它等同于一个点。模型采用逐层弱等价；$\Delta^1$ 有两个外顶点，而一点只有一个，二者不是逐层等价。
+\end{remark}
+\begin{example}[两种不同的“路径”]
+单纯空间 $C$ 的 $C_0$ 中的路径 $p:x=y$ 属于内同伦方向。一个外 $1$-单形 $f\in C_1$ 则具有源与靶 $x,y$。前者总能反向，后者未必能反向。后文用 $p:x=y$ 与 $f:x\to_Cy$ 分别表示它们。
+\end{example}
+
+\section{边界匹配对象}
+\begin{definition}[匹配对象]
+对单纯空间 $C$，$n$ 次匹配对象 $M_nC$ 由一个 $n$-单形的全部真面及其相容关系组成。形式上，它是所有单射 $[k]\hookrightarrow[n]$、$k<n$ 所给出的有限图表的极限。
+\end{definition}
+\begin{example}
+低维情形为
+\[
+M_0C=\one,
+\qquad M_1C=C_0\times C_0.
+\]
+$M_2C$ 的一点由三个对象和三条边组成，边的端点与这些对象相符。它记录三角形的边界，但尚未包含三角形内部的单形。
+\end{example}
+\begin{definition}[Reedy 纤维性]
+称单纯空间 $C$ 为 Reedy 纤维的，若每个边界限制
+\[
+C_n\longrightarrow M_nC
+\]
+都是 Kan 纤维化。一个映射 $p:C\to D$ 为 Reedy 纤维化，若
+\[
+C_n\longrightarrow M_nC\times_{M_nD}D_n
+\]
+对所有 $n$ 都是 Kan 纤维化。
+\end{definition}
+\begin{proposition}
+若 $C$ 为 Reedy 纤维的，则 $C_0$ 是 Kan 复形，且端点映射
+\[
+(d_1,d_0):C_1\to C_0\times C_0
+\]
+是 Kan 纤维化。因而其严格纤维表示所需的同伦映射空间。
+\end{proposition}
+\begin{proof}
+分别取 $n=0,1$。$C_0\to\one$ 是 Kan 纤维化恰说明 $C_0$ 是 Kan 复形。端点映射的纤维由纤维化的拉回给出，因此也是 Kan 复形，并且计算同伦纤维。
+\end{proof}
+\begin{example}[离散单纯空间]
+任意两个离散单纯集合之间的函数都是 Kan 纤维化。因为一个角及其填充单形到离散集合的映射都是常值，选定上方角的值后便唯一延拓。因此任意将每层看作离散空间的单纯集合都是 Reedy 纤维的。
+\end{example}
+\begin{remark}
+把同一个 Kan 复形 $K$ 在外方向重复，并不一般给出 Reedy 纤维对象。它的 $1$ 次匹配映射是对角 $K\to K\times K$，而这一映射通常不是 Kan 纤维化。若需要把一个空间放入单纯空间模型，应使用合适的 Reedy 纤维替换或一个同伦常值的纤维模型。
+\end{remark}
+
+\section{单纯空间的模型结构}
+\begin{theorem}[Reedy 模型结构，语义基础定理]
+单纯空间具有 Reedy 模型结构：弱等价为逐层弱同伦等价，纤维化由上节的匹配映射条件给出，余纤维化为双单纯集合的单射。这个模型结构与内同伦方向的单纯富集相容。
+\end{theorem}
+\begin{remark}
+这是 Reedy 模型结构在单纯集合上的具体应用。其证明沿次数递归，分别在每层使用边界的匹配对象与退化单形的闩锁对象，再应用单纯集合中的分解与提升。完整的一般定理见\cite{RiehlCatHomotopy,GoerssJardine}。本章以后使用该定理保证路径、依赖族和形状延拓在单纯参数中都有正确的纤维性。
+\end{remark}
+\begin{definition}[形状上的映射对象]
+对有限外形状 $K$ 和单纯空间 $C$，以 $C^K$ 表示内部指数对象。它在外次数 $r$ 的空间为
+\[
+(C^K)_r=\Map_{\sSp}(\Delta^r\times K,C),
+\]
+其中右边的映射空间使用内同伦方向的富集。
+\end{definition}
+\begin{proposition}[带参数的形状图表]
+从 $\Gamma$ 到 $C^K$ 的映射等价于从 $\Gamma\times K$ 到 $C$ 的映射。故 $C^K$ 记录所有参数中的 $K$ 形图表，而不只记录不带参数的图表。
+\end{proposition}
+\begin{proof}
+这是指数对象的伴随关系。逐个内单纯次数应用预层范畴的指数公式，再检查外面映射与退化映射，得到自然双射。该双射随内单形变化，因而组成映射空间的同构。
+\end{proof}
+\begin{proposition}[限制映射的纤维性]
+若 $C$ 为 Reedy 纤维的，$K\hookrightarrow L$ 为外形状的单射，则 $C^L\to C^K$ 是 Reedy 纤维化。
+\end{proposition}
+\begin{proof}
+这是 Reedy 单纯模型结构的推积与指数相容性。把一个待解的提升图通过指数伴随转到 $C$ 一侧，左边成为形状单射与测试的平凡余纤维化的推积。该推积仍是平凡余纤维化，因而可对 $C\to\one$ 提升。再转回指数伴随即可。
+\end{proof}
+
+\section{同一性类型与有向同态类型}
+\begin{definition}[有向同态类型]
+对于有向类型 $C$ 中的 $x,y:C$，定义
+\[
+\Hom_C(x,y)=
+\fib_{(\ev_0,\ev_1)}(x,y),
+\qquad
+C^{\Delta^1}\to C\times C.
+\]
+等价地，一个元素是函数 $f:\Delta^1\to C$，并固定端点 $f(0)=x$、$f(1)=y$。形状的边界条件在语法中可严格指定，在语义中由相应限制映射的纤维解释。
+\end{definition}
+\begin{definition}[恒等箭头]
+常值形状函数 $\Delta^1\to C$ 给出 $\id_x:\Hom_C(x,x)$。
+\end{definition}
+\begin{proposition}[路径给出箭头]
+有典范函数
+\[
+\mathsf{pathToArrow}:(x=y)\to\Hom_C(x,y),
+\]
+在常路径处取恒等箭头。
+\end{proposition}
+\begin{proof}
+在族 $P(x,y,p)=\Hom_C(x,y)$ 中使用路径归纳，恒等情形给出 $\id_x$。此构造不需要预先假设 $C$ 有箭头合成。
+\end{proof}
+\begin{remark}
+在任意有向类型中，一般没有从 $\Hom_C(x,y)$ 回到 $x=y$ 的函数。即使类型以后满足范畴公理，也只会将可逆箭头识别为路径。群胚条件则会进一步识别全部箭头与路径。
+\end{remark}
+
+\section{普通范畴的两种神经}
+\begin{example}[离散神经]
+对普通范畴 $\mathcal C$，其神经 $N\mathcal C$ 的每层作为离散空间，可看成单纯空间。其中 $C_0$ 是对象集合，$C_1$ 是态射集合，$C_n$ 是 $n$ 条可合成态射组成的链。箭头合成由普通合成给出。
+\end{example}
+\begin{remark}
+如果 $\mathcal C$ 有两个不同但同构的对象，离散神经的对象空间内仍没有连接它们的路径。因此它可以满足合成条件，却不满足“对象路径恰好是对象同构”的完备性条件。
+\end{remark}
+\begin{definition}[分类图表]
+对普通范畴 $\mathcal C$，令 $\mathcal C^\simeq$ 为保留全部对象和全部同构的群胚。定义单纯空间
+\[
+\mathsf{R}\mathcal C_n
+=N\bigl(\Fun([n],\mathcal C)^\simeq\bigr).
+\]
+这里内方向的神经取在群胚上，外方向由预复合 $[k]\to[n]$ 给出。
+\end{definition}
+\begin{example}
+$\mathsf{R}\mathcal C_0=N(\mathcal C^\simeq)$，所以对象之间的同构已成为对象空间中的路径。$\mathsf{R}\mathcal C_1$ 中，一个路径是两条态射间的可逆交换方形：
+\[
+\begin{tikzcd}
+x\ar[r,"f"]\ar[d,"u"',"\cong"]&y\ar[d,"v","\cong"']\\
+x'\ar[r,"f'"']&y'.
+\end{tikzcd}
+\]
+交换条件为 $v\circ f=f'\circ u$。
+\end{example}
+\begin{remark}
+分类图表连同所需的 Reedy 纤维模型，是将普通范畴放入完备 Segal 空间的标准方式。它保留对象的同构信息，而离散神经只在箭头层记录这些同构。二者的区别正是随后完备性条件要处理的内容\cite{Rezk}。
+\end{remark}
+
+\section{外部 Segal 映射}
+\begin{definition}[脊柱]
+$I[n]\subseteq\Delta^n$ 是由连续边
+\[
+0\to1\to\cdots\to n
+\]
+组成的子单纯集合。一个 $I[n]$ 形图表只指定 $n$ 条可合成箭头，不指定长边与较高单形。
+\end{definition}
+\begin{definition}[外部 Segal 条件]
+Reedy 纤维单纯空间 $C$ 称为 Segal 空间，若对每个 $n\ge2$，映射
+\[
+C_n\longrightarrow
+\underbrace{C_1\times_{C_0}\cdots\times_{C_0}C_1}_{n\text{ 个因子}}
+\]
+是空间的等价。由于端点映射为纤维化，所写拉回同时计算同伦拉回。
+\end{definition}
+\begin{example}
+普通范畴的离散神经满足全部 Segal 条件，而且 Segal 映射是双射。因为一个函子 $[n]\to\mathcal C$ 由相邻边完全决定，所有长边都是相邻边的复合。
+\end{example}
+\begin{proposition}[只检验外部二次条件不足]
+存在 Reedy 纤维单纯空间，其 $n=2$ 的外部 Segal 映射为等价，而 $n=3$ 的外部 Segal 映射不是等价。
+\end{proposition}
+\begin{proof}
+将 $\partial\Delta^3$ 看作逐层离散的单纯空间。它与 $\Delta^3=N[3]$ 在 $0,1,2$ 次完全相同，因此 $n=2$ 的 Segal 映射为双射。链
+\[
+0\to1\to2\to3
+\]
+属于三重箭头拉回，却没有相应的非退化 $3$-单形，因为 $\partial\Delta^3$ 恰好删去了该内部单形。因此 $n=3$ 的映射不满射，不是等价。
+\end{proof}
+\begin{remark}
+这个反例说明，后文 Riehl--Shulman 的内部二次条件不能读作这里只在外次数零检验的一条等价。内部条件要求指数对象间的等价，在每个参数语境中成立。这一更强的要求才足以控制全部较高合成。
+\end{remark}
+
+\section{单纯形的有向坐标}
+\begin{definition}[有向区间与形状]
+内部语言中用有向区间 $\Int$ 表示外 $\Delta^1$。在形状层允许次序关系与有限的交、并，由此写
+\[
+\Delta^n=\{(t_1,\ldots,t_n)\mid
+1\ge t_1\ge\cdots\ge t_n\ge0\}.
+\]
+这些条件属于形状的边界语言，不等于断言每个内部类型都有一个这样的线性序。
+\end{definition}
+\begin{example}
+$\Delta^2$ 的顶点为 $(0,0),(1,0),(1,1)$。内角 $\Lambda_1^2$ 是边 $t_2=0$ 与边 $t_1=1$ 的并。剩余边 $t_1=t_2$ 将表示复合箭头。
+\[
+\begin{tikzpicture}[scale=1.8]
+\draw[->] (0,0)--(1,0) node[midway,below]{$f$};
+\draw[->] (1,0)--(1,1) node[midway,right]{$g$};
+\draw[->] (0,0)--(1,1) node[midway,above left]{$h$};
+\node[below left] at (0,0){$x$};\node[below right] at (1,0){$y$};\node[above] at (1,1){$z$};
+\node at (.72,.28){$\sigma$};
+\end{tikzpicture}
+\]
+三角形 $\sigma$ 将 $h$ 与先 $f$ 后 $g$ 的合成联系起来。
+\end{example}
+\begin{definition}[延拓类型]
+对于形状包含 $K\hookrightarrow L$ 和边界图表 $a:K\to C$，延拓类型为
+\[
+\Ext_{K\subseteq L}(a)
+=\fib_{C^L\to C^K}(a).
+\]
+其元素包含完整的 $L$ 形图表及与指定边界的相容。由于限制映射为纤维化，可在语法中把边界固定而无须每次重写等价的端点数据。
+\end{definition}
+\source{单纯空间语义与形状层的具体规则见\cite{RiehlShulman,RiehlICM}。本章先给出外部图表，再引入内部形状，以明确“所有语境中的等价”所包含的参数。
+}
+
+
+
+% ===== chapters/16_segal =====
+\chapter{合成范畴与相容合成}
+\section{合成的延拓类型}
+\begin{definition}[二元合成数据]
+设 $f:x\to_Cy$、$g:y\to_Cz$。定义
+\[
+\Comp_C(f,g)=\Ext_{\Lambda_1^2\subseteq\Delta^2}(f,g).
+\]
+其元素可表示为 $(h,\sigma)$，其中 $h:x\to_Cz$，而 $\sigma$ 为以 $f,g,h$ 为边的三角形。
+\end{definition}
+\begin{definition}[内部二次 Segal 条件]
+称有向类型 $C$ 满足内部二次 Segal 条件，若限制
+\[
+C^{\Delta^2}\longrightarrow C^{\Lambda_1^2}
+\]
+是内部等价。等价地，在任意参数语境中，每个 $\Comp_C(f,g)$ 都可缩。
+\end{definition}
+\begin{remark}
+可缩性包含复合数据的存在、唯一到路径以及所有更高唯一性。只说“复合箭头存在”不充分；即使箭头 $h$ 在同伦类意义下唯一，选择三角形的空间仍可能不具有所需的高阶唯一性。
+\end{remark}
+\begin{definition}[合成预范畴]
+在本讲义的内部发展中，将满足全部参数化脊柱条件
+\[
+C^{\Delta^n}\longrightarrow C^{I[n]}
+\quad(n\ge2)
+\]
+的有向类型称为合成预范畴。映射必须是内部等价，因而在所有语境中稳定。下一定理把这个条件与报告采用的二次定义相联系。
+\end{definition}
+\begin{theorem}[内部形状比较，引用的基础定理]\label{thm:internal-segal}
+在 Riehl--Shulman 单纯类型论中，内部二次 Segal 条件等价于全部参数化脊柱条件。它还保证内部箭头类型的群胚性，以及用内角描述的相容合成延拓。
+\end{theorem}
+\begin{remark}
+这一定理是关于形状延拓的专门结果，证明利用平方的三角剖分、指数对象中的二次条件及其反复拉回；完整证明见\cite[第5节]{RiehlShulman}。这里将全部脊柱条件直接列入内部发展的假设，以便清楚使用较高单形。后一条件到二次条件只需 $I[2]=\Lambda_1^2$；反向不能由上一章的外部 $n=2$ 条件推出。定理的引用只负责这两个定义的比较，以下合成、可逆性、协变族和 Yoneda 的推导都明确列出其使用条件。
+\end{remark}
+
+\section{复合与单位律}
+\begin{definition}[选定的复合]
+在预范畴 $C$ 中，取可缩类型 $\Comp_C(f,g)$ 的中心，记为
+\[
+(g\circ f,\sigma_{f,g}).
+\]
+这个中心作为依赖函数随 $(f,g)$ 变化。不同中心选择之间有可缩的比较空间。
+\end{definition}
+\begin{proposition}[单位律]
+对 $f:x\to y$，有路径
+\[
+f\circ\id_x=f,
+\qquad \id_y\circ f=f.
+\]
+\end{proposition}
+\begin{proof}
+退化单形 $s_0f$ 和 $s_1f$ 分别给出以 $(\id_x,f)$ 与 $(f,\id_y)$ 为相邻边、以 $f$ 为长边的三角形。把这些三角形与对应合成类型的所选中心比较，投影到长边即得到单位路径。由于整个合成类型可缩，比较在所有参数中相容。
+\end{proof}
+\begin{proposition}[结合律]
+对 $f:x\to y$、$g:y\to z$、$h:z\to w$，有路径
+\[
+h\circ(g\circ f)=(h\circ g)\circ f.
+\]
+\end{proposition}
+\begin{proof}
+三条相邻边给出一个 $I[3]$ 形图表。脊柱条件为它提供一个 $\Delta^3$ 延拓，而且延拓类型可缩。记其边为 $u_{ij}$。面 $012$ 比较 $u_{02}$ 与 $g\circ f$，面 $123$ 比较 $u_{13}$ 与 $h\circ g$；面 $023$ 比较 $u_{03}$ 与 $h\circ u_{02}$，面 $013$ 比较 $u_{03}$ 与 $u_{13}\circ f$。将四个比较按方向拼接，得到两种括号方式之间的路径。
+
+具体地，先把 $h\circ(g\circ f)$ 沿 $u_{02}=g\circ f$ 的逆传输到 $h\circ u_{02}$，再到 $u_{03}$，继而到 $u_{13}\circ f$，最后到 $(h\circ g)\circ f$。各步都属于同一映射类型 $\Hom_C(x,w)$。
+\end{proof}
+\begin{example}[四面体中的比较]
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+x\ar[r,"f"]\ar[d,"u_{02}"']\ar[dr,"u_{03}" description]&y\ar[d,"u_{13}"]\\
+z\ar[r,"h"']&w
+\end{tikzcd}
+\]
+此平面图只显示四面体的若干边；未画出的边 $g:y\to z$ 与四个二维面共同给出上面的结合比较。交换方形的标签表示相容单形，而非严格等式。
+\end{example}
+
+\section{高阶相容与唯一性}
+\begin{proposition}[较高合成数据的可缩性]
+固定 $n$ 条可合成箭头后，包含全部长边、三角形和较高面的 $n$-单形延拓类型可缩。因此由同一条箭头链得到的任意两套完整合成数据之间有可缩的比较空间。
+\end{proposition}
+\begin{proof}
+这是 $C^{\Delta^n}\to C^{I[n]}$ 为等价的逐纤维形式。可缩类型中的路径类型可缩，故第一层比较、比较之间的比较等都具有同样的唯一性。
+\end{proof}
+\begin{remark}
+此命题的“固定”只固定脊柱上的原始箭头，不随意固定可能互不相容的所有低维面。正确的结论是由同一可缩延拓类型产生的比较相容。不能据此断言任意预先挑选的一组高阶同伦都一定能共同填入一个高阶单形。
+\end{remark}
+\begin{proposition}[同伦范畴]
+对预范畴 $C$，以其对象为对象，以映射空间的连通分支 $\pi_0\Hom_C(x,y)$ 为态射集合，可形成普通范畴 $hC$。
+\end{proposition}
+\begin{proof}
+箭头复合是类型中的函数，因此将路径相关的输入送到路径相关的输出，从而下降到连通分支。单位律和结合律在原映射空间中是路径，取连通分支后变成严格等式。故普通范畴公理成立。
+\end{proof}
+\begin{remark}
+$hC$ 一般遗忘大量信息。比如一个空间作为群胚型高阶范畴时，其同伦范畴只保留点与路径同伦类；二阶及更高同伦不能从这一普通范畴重新恢复。
+\end{remark}
+
+\section{函数自动给出函子}
+\begin{definition}[内部函子]
+预范畴 $C,D$ 之间的内部函子就是有向类型中的函数 $F:C\to D$。它对箭头的作用为形状函数的后复合：$f\mapsto F\circ f$。
+\end{definition}
+\begin{proposition}[保持恒等与合成]
+内部函数 $F:C\to D$ 满足
+\[
+F(\id_x)=\id_{F(x)},
+\qquad
+F(g\circ f)=F(g)\circ F(f),
+\]
+并保持由单形给出的全部较高相容。
+\end{proposition}
+\begin{proof}
+后复合保持常值形状函数，所以保持恒等。给定 $C$ 中表示复合的三角形，后复合 $F$ 得到 $D$ 中相同形状的三角形。它与 $D$ 中选定的复合中心处于同一可缩合成类型，故长边有比较路径。对 $n$-单形同样后复合，得到较高比较的相容。
+\end{proof}
+\begin{remark}
+“内部函数”包含在整个单纯语义中的相容性，不能替换成任意对象集合上的函数。一个只规定 $x\mapsto F(x)$ 的外部函数，通常没有箭头作用，更无从保证保持合成。
+\end{remark}
+\begin{definition}[自然变换]
+两个内部函子 $F,G:C\to D$ 之间的自然变换为形状函数
+\[
+\alpha:C\times\Delta^1\longrightarrow D,
+\]
+其两端限制分别为 $F,G$。对每个 $x$，限制到 $\{x\}\times\Delta^1$ 得到分量 $\alpha_x:F(x)\to G(x)$。
+\end{definition}
+\begin{proposition}[自然性方形]
+对每个 $f:x\to y$，有相容方形
+\[
+\begin{tikzcd}
+F(x)\ar[r,"F(f)"]\ar[d,"\alpha_x"']&F(y)\ar[d,"\alpha_y"]\\
+G(x)\ar[r,"G(f)"']&G(y).
+\end{tikzcd}
+\]
+因而在映射空间中有 $G(f)\circ\alpha_x=\alpha_y\circ F(f)$。
+\end{proposition}
+\begin{proof}
+将 $\alpha$ 限制到 $f\times\Delta^1$，得到 $\Delta^1\times\Delta^1$ 形图表。平方分成两个三角形，两种复合都与公共对角线比较，得到所述路径。其较高自然性由同一个参数化形状函数的更高单形给出。
+\end{proof}
+
+\section{可逆箭头}
+\begin{definition}[可逆性]
+对 $f:x\to_Cy$，定义
+\[
+\isIso(f)=\prod_{z:C}\isEquiv
+\bigl(f\circ-:\Hom_C(z,x)\to\Hom_C(z,y)\bigr).
+\]
+可逆箭头类型为
+\[
+x\cong_Cy=\sum_{f:\Hom_C(x,y)}\isIso(f).
+\]
+\end{definition}
+\begin{proposition}
+$\isIso(f)$ 是命题。若 $f$ 具有两侧逆箭头，则 $f$ 可逆。
+\end{proposition}
+\begin{proof}
+每个等价性类型是命题，依赖积仍是命题。若 $g:y\to x$ 满足 $gf=\id_x$、$fg=\id_y$，则后复合 $g$ 为后复合 $f$ 的拟逆，两个逆同伦由结合律和单位律给出。因而每个后复合函数为等价。
+\end{proof}
+\begin{proposition}[可逆性给出两侧逆]
+若 $\isIso(f)$，则存在 $g:y\to x$ 及路径 $fg=\id_y$、$gf=\id_x$。
+\end{proposition}
+\begin{proof}
+取 $z=y$，后复合 $f$ 的等价性使 $\id_y$ 有唯一到可缩选择的原像 $g$，并给出 $fg=\id_y$。取 $z=x$，该后复合等价检测路径。因为
+\[
+f\circ(g\circ f)=(f\circ g)\circ f
+=\id_y\circ f=f=f\circ\id_x,
+\]
+故消去后复合 $f$ 得到 $gf=\id_x$。
+\end{proof}
+\begin{remark}
+把可逆性定义为等价性的命题，避免将任意两侧逆同伦的数据错误地当成一个命题。上一章关于拟逆数据与等价性质的区别，在范畴的可逆箭头中同样重要。
+\end{remark}
+
+\section{Rezk 完备性}
+\begin{proposition}[路径给出可逆箭头]
+典范映射 $(x=y)\to\Hom_C(x,y)$ 的像可逆，因此提升为
+\[
+\idtoiso:(x=y)\to(x\cong_Cy).
+\]
+\end{proposition}
+\begin{proof}
+路径归纳只需证明恒等箭头可逆，而它的后复合函数由单位律等价于恒等函数。
+\end{proof}
+\begin{definition}[合成范畴]\label{def:rezk}
+合成预范畴 $C$ 若对所有 $x,y$ 满足
+\[
+\idtoiso:(x=y)\longrightarrow(x\cong_Cy)
+\]
+为等价，则称为合成范畴，也称 Rezk 类型。它表示一个 $(\infty,1)$-范畴：非可逆信息位于箭头层，箭头之间的较高比较属于同伦方向。
+\end{definition}
+\begin{example}
+一个偏序集的神经是完备的。因为可逆箭头要求同时有 $x\le y$ 与 $y\le x$，反对称性给出 $x=y$。其对象类型离散，故路径与可逆箭头完全一致。
+
+一个非平凡群视为单对象普通范畴，其离散神经不完备。对象的路径类型只有恒等，而该对象有多个可逆自箭头。
+\end{example}
+\begin{remark}
+后一例的完备模型将对象空间扩为 $BG$，以便自同构成为环路。这与前半部用单价性把结构自同构表示为宇宙环路是一致的。
+\end{remark}
+
+\section{群胚类型}
+\begin{definition}[群胚或有向离散类型]
+若有向类型 $A$ 中的典范比较
+\[
+(a=b)\longrightarrow\Hom_A(a,b)
+\]
+是等价，则称 $A$ 为群胚类型，或在有向方向上离散。
+\end{definition}
+\begin{proposition}
+对于合成范畴 $C$，群胚条件等价于所有箭头可逆。
+\end{proposition}
+\begin{proof}
+若路径到箭头为等价，每个箭头等价于一条路径产生的箭头，所以可逆。反向，所有箭头可逆意味着忘却映射 $(x\cong_Cy)\to\Hom_C(x,y)$ 的纤维为有元素的命题，因而可缩。它是等价，再与完备性等价复合即可。
+\end{proof}
+\begin{remark}
+“有向离散”不等于零截断。一个球面的同伦类型可以有高阶同伦群，同时在有向方向上是群胚。它的箭头都是路径，但路径之间仍有任意高阶的同伦。
+\end{remark}
+\begin{proposition}[函数空间的封闭性]
+若 $D$ 是预范畴，则 $D^X$ 也是预范畴；若 $D$ 还是完备的，则 $D^X$ 在相应内部函数类型语义中完备。
+\end{proposition}
+\begin{proof}
+指数交换给出
+\[
+(D^X)^{\Delta^n}\simeq(D^{\Delta^n})^X,
+\qquad
+(D^X)^{I[n]}\simeq(D^{I[n]})^X.
+\]
+函数空间保持等价，故脊柱条件成立。完备性方面，自然变换可逆当且仅当其各分量可逆；逆分量及相容性由逐点可缩的逆选择组成。$D$ 的完备性把这些分量变成路径，函数外延性把逐点路径组装成函数路径。因此函数路径与可逆自然变换等价。
+\end{proof}
+\source{本章到达 Riehl 报告中的预范畴、范畴与群胚定义。形状比较定理与内部函数类型的模型解释见\cite{RiehlShulman,Rezk,RiehlICM}。}
+
+
+
+% ===== chapters/17_covariant =====
+\chapter{协变族与可表族}
+\section{依赖箭头及其提升}
+\begin{definition}[依赖箭头]
+设 $E:B\to\mathsf{Type}$ 是有向类型族，总空间记为 $\widetilde E=\sum_{x:B}E(x)$。对 $f:x\to_B y$、$u:E(x)$ 和 $v:E(y)$，定义
+\[
+\Hom_E^f(u,v)
+\]
+为 $\widetilde E$ 中从 $(x,u)$ 到 $(y,v)$ 且投影为 $f$ 的箭头类型。等价地，它是一条沿 $f$ 的依赖形状函数，并固定两个端点。
+\end{definition}
+\begin{definition}[固定源的提升类型]
+定义
+\[
+\mathsf{Lift}_E(f,u)=\sum_{v:E(y)}\Hom_E^f(u,v).
+\]
+它保留提升的终点与整条提升箭头。若不固定源，则沿 $f$ 的所有依赖函数构成 $\prod_{t:\Delta^1}E(f(t))$，求源映射为
+\[
+\ev_0:\prod_{t:\Delta^1}E(f(t))\to E(x).
+\]
+\end{definition}
+\begin{definition}[协变族]\label{def:covariant}
+称 $E$ 为协变族，若对所有 $f:x\to y$、$u:E(x)$，类型 $\mathsf{Lift}_E(f,u)$ 可缩，且这一条件在任意参数语境中成立。等价地，上述 $\ev_0$ 是内部等价。
+\end{definition}
+\begin{remark}
+协变性要求终点由源和底箭头确定到可缩选择。它没有要求反向提升一个任意终点。因此协变族可以沿不可逆箭头产生非可逆函数，与普通空间族沿路径的可逆传输有根本区别。
+\end{remark}
+\begin{example}[集合值函子的元素范畴]
+若 $F:\mathcal C\to\Set$，元素范畴 $\int F\to\mathcal C$ 中，给定 $u\in F(x)$ 和 $f:x\to y$ 后，唯一提升为
+\[
+(x,u)\xrightarrow{f}(y,F(f)u).
+\]
+其神经给出离散协变族。这里的“唯一”在高阶版本中替换为“提升类型可缩”。
+\end{example}
+
+\section{协变作用及其基本计算}
+\begin{definition}[沿箭头的作用]
+若 $E$ 协变，取提升类型的中心
+\[
+(f_*u,\ell_{f,u}):\mathsf{Lift}_E(f,u).
+\]
+由此得到函数 $f_*:E(x)\to E(y)$，并有典范提升箭头 $\ell_{f,u}$。
+\end{definition}
+\begin{proposition}[恒等箭头的作用]
+对 $u:E(x)$，有 $(\id_x)_*u=u$。
+\end{proposition}
+\begin{proof}
+总空间的恒等箭头提供提升 $(u,\id_{(x,u)})$。它与可缩提升类型的中心有路径，投影到终点得到所述等式。
+\end{proof}
+\begin{lemma}[可缩总空间的纤维公式]\label{lem:singleton-fiber}
+若 $\sum_{v:V}P(v)$ 可缩，且指定中心 $(v_0,p_0)$，则对每个 $v$，有等价
+\[
+(v_0=v)\simeq P(v),
+\qquad q\longmapsto\tr_P(q)(p_0).
+\]
+\end{lemma}
+\begin{proof}
+该函数在总空间上给出一个保底映射
+\[
+\sum_{v:V}(v_0=v)\longrightarrow\sum_{v:V}P(v).
+\]
+两边都可缩，所以任意这样的函数都是等价：选中心作常值拟逆，并使用两边的收缩给出逆同伦。由逐纤维等价判据，每个纤维映射均为等价。
+\end{proof}
+\begin{proposition}[依赖箭头的端点公式]\label{prop:dependent-arrow}
+对协变族有等价
+\[
+\Hom_E^f(u,v)\simeq(f_*u=v).
+\]
+\end{proposition}
+\begin{proof}
+将引理\ref{lem:singleton-fiber}用于可缩类型
+$\sum_v\Hom_E^f(u,v)$，中心为 $(f_*u,\ell_{f,u})$。所得等价的逆给出这里所写方向。它在标准提升处对应常路径。
+\end{proof}
+\begin{remark}
+同一公式也说明，固定终点后提升类型未必可缩。其同伦类型等于纤维内两个点之间的路径空间，可能有非平凡高阶同伦。协变条件可缩的是把终点一并允许变化的总提升类型。
+\end{remark}
+
+\section{协变族的纤维是群胚}
+\begin{theorem}[纤维群胚性]\label{thm:covariant-groupoid}
+若 $E$ 协变，则每个纤维 $E(x)$ 在有向方向上是群胚，即
+\[
+(u=v)\longrightarrow\Hom_{E(x)}(u,v)
+\]
+是等价。
+\end{theorem}
+\begin{proof}
+纤维中的箭头恰好是位于底中恒等箭头上方的依赖箭头。于是
+\[
+\sum_{v:E(x)}\Hom_{E(x)}(u,v)
+=\mathsf{Lift}_E(\id_x,u)
+\]
+可缩。标准点为恒等提升 $(u,\id_u)$。引理\ref{lem:singleton-fiber}给出
+$(u=v)\simeq\Hom_{E(x)}(u,v)$，其函数是从恒等箭头沿端点路径传输，恰为路径归纳定义的典范比较。
+\end{proof}
+\begin{example}
+设底为单位类型。协变族就是一个有向类型 $A$，使每个基点箭头总空间 $\sum_b\Hom_A(a,b)$ 可缩。上一证明表明这等价于 $A$ 的箭头就是路径。因此协变族在一点上的纤维可以是任意空间，并不局限于集合。
+\end{example}
+\begin{remark}
+在这里，群胚性是从协变性的全语境提升条件推出来的。仅在外部顶点上选择一个集合纤维，再规定某些传输函数，不能保证已经构造了这个高阶族。
+\end{remark}
+
+\section{族映射的自动自然性}
+\begin{definition}[纤维映射]
+设 $E,F$ 是同一底 $B$ 上的协变族。一个纤维映射为内部项
+\[
+\alpha:\prod_{x:B}(E(x)\to F(x)).
+\]
+它在总空间上给出保底函数 $(x,u)\mapsto(x,\alpha_xu)$。
+\end{definition}
+\begin{theorem}[自动自然性]\label{thm:automatic-naturality}
+对 $f:x\to y$、$u:E(x)$，有自然比较
+\[
+\alpha_y(f_*^E u)=f_*^F(\alpha_xu).
+\]
+所有较高自然性由同一内部项给出。
+\end{theorem}
+\begin{proof}
+将 $E$ 中的典范提升 $\ell_{f,u}$ 后复合总空间映射，得到 $F$ 中位于 $f$ 上方、源为 $\alpha_xu$、终点为 $\alpha_y(f_*^Eu)$ 的提升。这个提升与 $F$ 中的中心提升位于同一可缩类型，因此有比较。投影到终点给出公式。因为映射作用于任意参数中的形状函数，比较也随参数变化；更高自然性由提升类型中的更高唯一性给出。
+\end{proof}
+\begin{example}[截面的自然性]
+取 $E$ 为常值单位族。一个纤维映射 $\one\to F(x)$ 等价于截面 $s:\prod_xF(x)$。自动自然性成为
+\[
+f_*s(x)=s(y).
+\]
+这不是对任意离散选点族成立的结论，而是对定义在有向底上的内部截面成立的结论。
+\end{example}
+\begin{remark}
+在普通集合论里，$\prod_{x\in\Ob\mathcal C}(E(x)\to F(x))$ 包含许多不自然的分量族。这里的依赖积在单纯语义中解释，它保留外方向中的相容。自动自然性依赖这一解释，不能从符号外观上的相似性推出。
+\end{remark}
+
+\section{具有收缩箭头的底}
+\begin{definition}[有向收缩]
+设 $K$ 为一个有向类型，$k_0:K$。一个有向收缩是内部函数
+\[
+H:K\times\Delta^1\to K
+\]
+满足 $H(k,0)=k_0$、$H(k,1)=k$，并且 $H(k_0,t)=k_0$。记其在 $k$ 处的箭头为 $a_k:k_0\to k$。
+\end{definition}
+\begin{theorem}[收缩底上的截面]\label{thm:directed-contraction}
+若 $K$ 有上述收缩，$E:K\to\mathsf{Type}$ 协变，则求值
+\[
+\ev_{k_0}:\left(\prod_{k:K}E(k)\right)\to E(k_0)
+\]
+是等价。
+\end{theorem}
+\begin{proof}
+给定 $u:E(k_0)$，定义 $s^u(k)=(a_k)_*u$。这是内部项，因为 $H$ 与协变作用都在参数 $k$ 中定义。在 $k_0$ 处，$a_{k_0}$ 为恒等，故 $s^u(k_0)=u$。
+
+反过来，给定截面 $s$，截面自然性用于 $a_k$ 得到
+$(a_k)_*s(k_0)=s(k)$。函数外延性给出 $s^{s(k_0)}=s$。因此构造出的函数与求值互为拟逆，求值为等价。
+\end{proof}
+\begin{example}[单纯形的初始顶点]
+在坐标 $\Delta^n=\{1\ge t_1\ge\cdots\ge t_n\ge0\}$ 中，
+\[
+H((t_1,\ldots,t_n),r)
+=(r\wedge t_1,\ldots,r\wedge t_n)
+\]
+给出从初始顶点 $(0,\ldots,0)$ 到恒等的有向收缩。它使用形状区间中的交运算，并保持坐标次序。因此单纯形上的协变族的截面由初始顶点的值决定到等价。
+\end{example}
+
+\section{协变作用的复合律}
+\begin{proposition}[三角形中的复合传输]
+设 $\sigma:\Delta^2\to B$ 的边为 $f:x\to y$、$g:y\to z$、$h:x\to z$。对协变族 $E$，有
+\[
+h_*u=g_*(f_*u).
+\]
+\end{proposition}
+\begin{proof}
+拉回得到 $\Delta^2$ 上的协变族。由上一节的收缩定理，在初始顶点指定 $u$ 后，存在截面且截面类型的相应纤维可缩。记三个顶点的值为 $u,v,w$。在三条边上应用截面自然性，得到
+\[
+v=f_*u,\qquad w=g_*v,\qquad w=h_*u.
+\]
+拼接这些等式即得公式。
+\end{proof}
+\begin{proposition}[函子性]
+若底 $B$ 是预范畴，则协变族的作用满足
+\[
+(g\circ f)_*u=g_*(f_*u),
+\qquad(\id_x)_*u=u.
+\]
+较高复合相容来自相应单纯形上的同一截面。
+\end{proposition}
+\begin{proof}
+取表示 $g\circ f$ 的所选三角形，应用上一命题。单位已证明。对任意 $n$-单形，固定初始顶点后的截面类型可缩，故各种沿边链得到的比较都来自同一个相容单形，且具有所需的高阶唯一性。
+\end{proof}
+
+\section{拉回与总空间}
+\begin{proposition}[协变性对拉回稳定]
+若 $E$ 在 $B$ 上协变，$k:A\to B$，则 $k^*E$ 在 $A$ 上协变。
+\end{proposition}
+\begin{proof}
+沿 $f:a\to a'$ 的提升类型就是原族沿 $k(f)$ 的提升类型，源元素相同。因此其可缩性直接继承。这个识别与参数替换相容。
+\end{proof}
+\begin{theorem}[协变族的总空间]
+若 $B$ 为预范畴，$E$ 为协变族，则 $\widetilde E=\sum_xE(x)$ 为预范畴。如果 $B$ 为合成范畴，则 $\widetilde E$ 也为合成范畴。
+\end{theorem}
+\begin{proof}
+固定一个 $\Delta^n\to B$ 后，它在 $\widetilde E$ 中的提升等价于拉回族的截面。单纯形上的收缩定理表明，提升由初始顶点的元素决定到等价。对脊柱 $I[n]$，依次应用每条边的提升可缩性，也得到同样的初始元素描述。因此图
+\[
+\begin{tikzcd}
+\widetilde E^{\Delta^n}\ar[r]\ar[d]&\widetilde E^{I[n]}\ar[d]\\
+B^{\Delta^n}\ar[r]&B^{I[n]}
+\end{tikzcd}
+\]
+逐纤维比较后由同一个初始纤维参数化。底部是等价，所以顶部也是等价，给出预范畴条件。
+
+对于完备性，先观察总空间箭头若可逆，其底箭头必可逆，因为投影保持合成。反之，若底箭头 $f$ 可逆，则 $f_*$ 由 $f^{-1}_*$ 给出拟逆。位于 $f$ 上方的箭头等价于纤维路径 $f_*u=v$，故可用 $f^{-1}$ 的提升和这条路径构造逆箭头，两侧逆律由协变复合律与纤维群胚性得到。
+
+于是可逆箭头类型等价于
+\[
+\sum_{f:x\cong_B y}(f_*u=v).
+\]
+$B$ 的完备性将 $f$ 替换为路径 $p:x=y$。对这样的路径，$f_*$ 与普通族传输相同，这由路径归纳及恒等作用律证明。所得类型正是
+\[
+\sum_{p:x=y}(\tr_E(p)(u)=v),
+\]
+而依赖和路径公式将它识别为 $(x,u)=(y,v)$。因此总空间完备。
+\end{proof}
+
+\section{三角形纤维与固定复合}
+\begin{definition}[固定长边的三角形]
+在预范畴 $C$ 中，以 $\mathsf{Tri}(f,g;h)$ 表示三条边分别为 $f,g,h$ 的三角形类型。于是
+\[
+\Comp_C(f,g)=\sum_h\mathsf{Tri}(f,g;h).
+\]
+\end{definition}
+\begin{lemma}\label{lem:triangle-path}
+有自然等价
+\[
+\mathsf{Tri}(f,g;h)\simeq(g\circ f=h).
+\]
+特别地，$\mathsf{Tri}(\id_c,h;k)\simeq(h=k)$。
+\end{lemma}
+\begin{proof}
+将引理\ref{lem:singleton-fiber}用于可缩的合成数据总空间，其中心为 $(g\circ f,\sigma_{f,g})$。第二式再使用单位律。该等价保留完整的三角形同伦类型，不仅识别它的连通分支。
+\end{proof}
+
+\section{可表族的协变性}
+\begin{definition}[协变可表族]
+固定预范畴 $C$ 的对象 $c$，定义
+\[
+R_c(x)=\Hom_C(c,x).
+\]
+其总空间为 $\sum_x\Hom_C(c,x)$。
+\end{definition}
+\begin{theorem}[可表族协变]\label{thm:representable-covariant}
+$R_c$ 是协变族。沿 $g:x\to y$ 的作用等于后复合
+\[
+g_*f=g\circ f.
+\]
+\end{theorem}
+\begin{proof}
+固定 $f:c\to x$。沿 $g$ 的一个提升是一个平方，左边为 $\id_c$，下边为 $f$，右边为 $g$，上边为某条 $h:c\to y$。平方沿从左下到右上的对角线分成两个三角形。以 $k:c\to y$ 记对角线，提升总类型为
+\[
+\sum_h\sum_k
+\mathsf{Tri}(f,g;k)\times
+\mathsf{Tri}(\id_c,h;k).
+\]
+这个等价来自形状的推合分解
+$\Delta^1\times\Delta^1=\Delta^2\cup_{\Delta^1}\Delta^2$：到 $C$ 的映射对应两个在对角线上相符的三角形，边界条件逐项保留。
+
+由引理\ref{lem:triangle-path}，第二个因子等价于 $h=k$。重新排列依赖和，得到
+\[
+\sum_k\mathsf{Tri}(f,g;k)\times
+\left(\sum_h(h=k)\right).
+\]
+括号内可缩，可将它消去，余下 $\Comp_C(f,g)$ 也可缩。故固定源的提升类型可缩，证明协变性。该比较在全部参数中成立，因为它只用形状推合、内部 Segal 条件与依赖类型的等价运算。
+
+标准合成中心给出上边 $g\circ f$，所以协变作用与后复合相同，比较由提升类型的可缩性给出。
+\end{proof}
+\begin{proposition}[固定终点的平方公式]\label{prop:coslice-square}
+固定 $f:c\to x$、$h:c\to y$ 与 $g:x\to y$，上述平方类型等价于
+\[
+(g\circ f=h).
+\]
+\end{proposition}
+\begin{proof}
+保持 $h$ 固定，三角分解给出
+$\sum_k\mathsf{Tri}(f,g;k)\times(h=k)$。沿 $h=k$ 消去 $k$，得到 $\mathsf{Tri}(f,g;h)$，再用引理\ref{lem:triangle-path}。
+\end{proof}
+\source{本章给出了协变族、自动自然性及可表族协变性的具体推导，对应\cite[第6节]{RiehlICM}。协变族在单纯空间语义中称为左纤维化，术语中的“左”对应固定初始端点的提升条件。}
+
+
+
+% ===== chapters/18_arrow_yoneda =====
+\chapter{箭头归纳与合成 Yoneda 引理}
+\section{余切片中的对象和箭头}
+\begin{definition}[余切片]
+对预范畴 $C$ 及对象 $c$，定义
+\[
+c/C=\sum_{x:C}\Hom_C(c,x).
+\]
+对象为以 $c$ 为源的箭头。把对象 $(x,f)$ 简写为 $f:c\to x$。投影 $\pi:c/C\to C$ 为可表协变族的总空间映射。
+\end{definition}
+\begin{proposition}
+$c/C$ 是预范畴；若 $C$ 完备，则 $c/C$ 完备。其映射类型满足
+\[
+\Hom_{c/C}((x,f),(y,h))
+\simeq\sum_{g:\Hom_C(x,y)}(g\circ f=h).
+\]
+\end{proposition}
+\begin{proof}
+总空间的预范畴性与完备性来自可表族的协变性及上一章的总空间定理。映射类型先按投影到 $C$ 的箭头 $g$ 分解，再对每个 $g$ 使用固定终点平方公式\ref{prop:coslice-square}。
+\end{proof}
+\begin{example}
+在普通范畴中，$(g,q)$ 就是交换三角形
+\[
+\begin{tikzcd}
+&c\ar[dl,"f"']\ar[dr,"h"]&\\
+x\ar[rr,"g"']&&y.
+\end{tikzcd}
+\]
+在高阶范畴中，$q:g\circ f=h$ 属于映射空间的路径类型；它连同自己的高阶路径都是余切片态射结构的一部分。
+\end{example}
+
+\section{恒等箭头的初始性}
+\begin{definition}[初始对象]
+预范畴 $B$ 中的对象 $i$ 称为初始对象，若对每个 $b:B$，类型 $\Hom_B(i,b)$ 可缩。其可缩性须作为随 $b$ 变化的内部项给出。
+\end{definition}
+\begin{proposition}[余切片的初始对象]\label{prop:coslice-initial}
+$(c,\id_c)$ 是 $c/C$ 的初始对象。
+\end{proposition}
+\begin{proof}
+对于 $(y,h)$，余切片映射公式给出
+\[
+\Hom_{c/C}((c,\id_c),(y,h))
+\simeq\sum_{g:c\to y}(g\circ\id_c=h).
+\]
+单位律把右边化为 $\sum_g(g=h)$，这是以 $h$ 为终点的路径总空间，因而可缩。其标准中心对应三角形 $(h,\text{单位律})$。
+\end{proof}
+\begin{remark}
+初始性是对整个映射类型的可缩性作要求。只知道在同伦范畴中有唯一态射，意味着映射空间的连通分支只有一个，不能排除非平凡的高阶同伦；这比初始性弱。
+\end{remark}
+
+\section{余切片的显式有向收缩}
+\begin{proposition}[基于恒等箭头的收缩]\label{prop:coslice-contraction}
+余切片 $c/C$ 有一个从常值 $(c,\id_c)$ 到恒等函数的有向收缩。
+\end{proposition}
+\begin{proof}
+把 $f:c\to x$ 写成形状函数 $f:\Delta^1\to C$。对 $t:\Delta^1$，定义截短箭头
+\[
+f_t(s)=f(s\wedge t).
+\]
+它的源为 $f(0)=c$，终点为 $f(t)$，所以给出对象 $(f(t),f_t):c/C$。当 $t=0$ 时，$f_t$ 为恒等箭头；当 $t=1$ 时，$f_t=f$。这给出所需的形状函数
+\[
+H:(c/C)\times\Delta^1\longrightarrow c/C.
+\]
+若 $f=\id_c$，全部截短箭头仍为恒等，因此基点在收缩中固定。构造只使用形状的交运算与函数求值，所以它随 $f$ 及所有高阶参数相容。
+\end{proof}
+\begin{example}[收缩的平方]
+连接 $\id_c$ 与 $f$ 的余切片箭头由平方
+\[
+(s,t)\longmapsto f(s\wedge t)
+\]
+表示。其左边与下边均为常值 $c$，右边与上边都是 $f$。将平方三角剖分，就得到上一节初始性中的标准三角形。
+\end{example}
+\begin{remark}
+此收缩是有向收缩。一般不存在反向的余切片箭头 $f\to\id_c$，也不能据此断言余切片的对象空间作为普通同伦类型可缩。收缩使用的区间是外形状 $\Delta^1$，不是同一性类型的路径区间。
+\end{remark}
+
+\section{依赖箭头归纳}
+\begin{theorem}[箭头归纳]\label{thm:arrow-induction}
+设 $P$ 是余切片 $c/C$ 上的协变族。求值
+\[
+\ev_{\id_c}:
+\left(\prod_{(x,f):c/C}P(x,f)\right)
+\longrightarrow P(c,\id_c)
+\]
+是等价。
+\end{theorem}
+\begin{proof}
+把命题\ref{prop:coslice-contraction}的显式有向收缩代入定理\ref{thm:directed-contraction}。为写出构造，记标准余切片箭头为
+\[
+a_{x,f}:(c,\id_c)\longrightarrow(x,f).
+\]
+给定 $u:P(c,\id_c)$，定义
+\[
+J_{\to}(u)(x,f)=(a_{x,f})_*u.
+\]
+在恒等箭头处，$a_{c,\id_c}$ 为恒等，因此
+$J_{\to}(u)(c,\id_c)=u$。
+
+若已有截面 $s$，对每条 $a_{x,f}$ 使用截面自然性，得到
+\[
+(a_{x,f})_*s(c,\id_c)=s(x,f).
+\]
+依赖函数外延性将它组装成 $J_{\to}(s(c,\id_c))=s$。于是两种操作互为拟逆，求值为等价。
+\end{proof}
+\begin{proposition}[箭头归纳的唯一性]
+给定 $u:P(c,\id_c)$，带有比较 $s(c,\id_c)=u$ 的全部截面 $s$ 构成可缩类型。
+\end{proposition}
+\begin{proof}
+该类型正是等价 $\ev_{\id_c}$ 在 $u$ 处的同伦纤维。等价的定义保证它可缩。
+\end{proof}
+\begin{remark}
+存在性部分允许把恒等箭头处的数据沿标准余切片箭头推出去。唯一性部分说明所有这样延拓的比较也被控制。后一部分对 Yoneda 引理尤为重要，因为 Yoneda 要求的是类型的等价，而不只是构造一个从右到左的函数。
+\end{remark}
+
+\section{与路径归纳的比较}
+\begin{proposition}[两类基点总空间]
+路径归纳使用的总空间为
+\[
+\sum_{x:A}(a=x),
+\]
+它在同伦意义下可缩。箭头归纳使用的总空间为
+\[
+\sum_{x:C}\Hom_C(c,x),
+\]
+它具有以恒等箭头为起点的有向收缩。
+\end{proposition}
+\begin{proof}
+第一项的收缩由同一性类型的归纳规则给出。第二项的有向收缩已经显式构造。第一种收缩沿可逆路径传输任意依赖族；第二种收缩沿有向箭头作用，需要族的协变性。
+\end{proof}
+\begin{example}[没有协变性时的失败]
+取底范畴 $[1]=(0\to1)$。令总范畴有三个对象 $e,a,b$，仅有两个非恒等箭头 $e\to a$、$e\to b$。将 $e$ 送到 $0$，将 $a,b$ 送到 $1$。底中箭头从 $e$ 出发有两个提升，因此这不是协变族。
+
+该投影有两个截面，分别选择 $e\to a$ 与 $e\to b$，而在初始对象 $0$ 上的纤维只有 $e$ 一个点。故截面到初始纤维的求值不是等价。这说明箭头归纳的协变假设具有实际数学内容。
+\end{example}
+\begin{remark}
+路径归纳也不能在固定端点后任意消去所有环路。两种归纳都要求同时保留正确的依赖对象和允许变化的参数。比较它们的形式时，不能遗漏各自的适用条件。
+\end{remark}
+
+\section{自然变换类型}
+\begin{definition}[协变族之间的自然变换]
+对 $C$ 上的协变族 $E,F$，定义
+\[
+\Nat_C(E,F)=\prod_{x:C}(E(x)\to F(x)).
+\]
+这是有向内部语言中的依赖函数类型。其自然性由定理\ref{thm:automatic-naturality}给出。
+\end{definition}
+\begin{example}
+取 $E=R_c=\Hom_C(c,-)$。一个元素 $\alpha:\Nat_C(R_c,F)$ 对每个 $x$ 给出
+\[
+\alpha_x:\Hom_C(c,x)\to F(x),
+\]
+并对 $g:x\to y$、$f:c\to x$ 满足
+\[
+\alpha_y(g\circ f)=g_*\alpha_x(f).
+\]
+自然性不是额外遗漏的假设，它已经由“$\alpha$ 是内部依赖函数”保证。
+\end{example}
+\begin{definition}[在恒等箭头处求值]
+定义
+\[
+\mathsf{Yev}:\Nat_C(R_c,F)\to F(c),
+\qquad \alpha\longmapsto\alpha_c(\id_c).
+\]
+\end{definition}
+
+\section{合成 Yoneda 引理及其完整证明}
+\begin{theorem}[协变 Yoneda 引理]\label{thm:synthetic-yoneda}
+对预范畴 $C$、对象 $c:C$ 和协变族 $F$，有等价
+\[
+\Nat_C(\Hom_C(c,-),F)\simeq F(c).
+\]
+这个等价由在恒等箭头处求值给出。
+\end{theorem}
+\begin{proof}
+首先，把 $F$ 沿 $\pi:c/C\to C$ 拉回，得到协变族
+\[
+P(x,f)=F(x).
+\]
+依赖函数的柯里化给出等价
+\[
+\prod_{x:C}(\Hom_C(c,x)\to F(x))
+\simeq
+\prod_{(x,f):c/C}F(x).
+\]
+箭头归纳将右边等价地送到 $F(c)$，其求值点正是 $(c,\id_c)$。所以复合等价即 $\mathsf{Yev}$。
+
+为给出两个方向的具体计算，对 $u:F(c)$ 定义
+\[
+\mathsf{Yinv}(u)_x(f)=f_*u.
+\]
+恒等作用律给出
+\[
+\mathsf{Yev}(\mathsf{Yinv}(u))
+=(\id_c)_*u=u.
+\]
+反向，取 $\alpha:\Nat_C(R_c,F)$。对箭头 $f:c\to x$，自动自然性用于源纤维中的 $\id_c$，得到
+\[
+\alpha_x(f\circ\id_c)=f_*\alpha_c(\id_c).
+\]
+单位律将左边化为 $\alpha_x(f)$，因此
+\[
+\mathsf{Yinv}(\mathsf{Yev}(\alpha))_x(f)=\alpha_x(f).
+\]
+两次依赖函数外延性得到自然变换类型中的路径，证明另一侧复合也等于恒等。故求值为等价，而不仅是连通分支上的双射。
+\end{proof}
+\begin{remark}
+证明中普通的“把自然性方形代入恒等箭头”仍然可见，但自动自然性与可缩提升保证这一计算包含全部高阶相容。箭头归纳给出的是这一现象的依赖形式。
+\end{remark}
+
+\section{Yoneda 等价的自然性}
+\begin{proposition}[关于族的自然性]
+若 $\beta:F\to G$ 是协变族间的自然变换，则图
+\[
+\begin{tikzcd}
+\Nat_C(R_c,F)\ar[r,"\mathsf{Yev}"]\ar[d,"\beta\circ-"']&F(c)\ar[d,"\beta_c"]\\
+\Nat_C(R_c,G)\ar[r,"\mathsf{Yev}"']&G(c)
+\end{tikzcd}
+\]
+相容交换。
+\end{proposition}
+\begin{proof}
+两条路线把 $\alpha$ 都送到 $\beta_c(\alpha_c(\id_c))$，因此求值方向直接相同。逆方向的相容为
+$\beta_x(f_*u)=f_*\beta_c(u)$，这是 $\beta$ 的自动自然性。
+\end{proof}
+\begin{proposition}[关于表示对象的自然性]
+若 $a:c'\to c$，前复合给出 $R_c\to R_{c'}$。由此诱导
+\[
+\Nat_C(R_{c'},F)\to\Nat_C(R_c,F).
+\]
+在 Yoneda 等价下，该函数对应 $a_*:F(c')\to F(c)$。
+\end{proposition}
+\begin{proof}
+若 $u:F(c')$ 对应 $\alpha_x(f)=f_*u$，则复合后的变换在 $g:c\to x$ 处为
+\[
+\alpha_x(g\circ a)=(g\circ a)_*u=g_*(a_*u).
+\]
+因此它对应的元素正是 $a_*u$。特别在 $x=c$、$g=\id_c$ 处求值，即得到 $a_*u$。
+\end{proof}
+
+\section{可表族之间的变换}
+\begin{proposition}[协变可表的全忠实形式]\label{prop:covariant-yoneda-ff}
+对 $c,d:C$，有等价
+\[
+\Nat_C(\Hom_C(c,-),\Hom_C(d,-))
+\simeq\Hom_C(d,c).
+\]
+箭头 $a:d\to c$ 对应变换 $f\mapsto f\circ a$。
+\end{proposition}
+\begin{proof}
+令 $F=R_d$，应用 Yoneda 引理。其右边为 $R_d(c)=\Hom_C(d,c)$。逆方向为协变作用，而可表族中的协变作用是后复合，因此得到所述公式。
+\end{proof}
+\begin{remark}
+箭头方向在这里反转。协变可表族 $c\mapsto\Hom_C(c,-)$ 给出的是反变的嵌入。通常写作 $c\mapsto\Hom_C(-,c)$ 的 Yoneda 嵌入则使用反变预层；两种约定应分别核对。
+\end{remark}
+
+\section{反变形式}
+\begin{definition}[反变族]
+将协变定义中的求源改为求靶，得到反变族：沿 $f:x\to y$，给定 $v:E(y)$ 后，带此终点的提升类型可缩。其作用写为 $f^*:E(y)\to E(x)$。
+\end{definition}
+\begin{theorem}[反变 Yoneda 引理]
+若 $P$ 为 $C$ 上的反变族，则
+\[
+\Nat_C(\Hom_C(-,c),P)\simeq P(c).
+\]
+\end{theorem}
+\begin{proof}
+反转外单纯方向，把 $C$ 替换为反范畴 $C^{\op}$，则反变族成为协变族。应用协变 Yoneda 得到结论。其逆的显式公式为
+\[
+u\longmapsto\bigl(f:x\to c\longmapsto f^*u\bigr).
+\]
+两侧逆检验分别使用恒等拉回作用与自然性在 $f$、$\id_c$ 上的代入，完全对应前面的计算。
+\end{proof}
+\begin{remark}
+反范畴在单纯空间语义中由反转有限线序的自同构构造。若只使用某种尚未扩充反向操作的内部语法，则上述对偶可在其语义中进行；这不要求在普通同伦类型的宇宙里凭空为任意类型赋予一个反范畴操作。
+\end{remark}
+
+\section{两个具体计算}
+\begin{example}[单一箭头上的 Yoneda]
+令 $C=[1]$。协变集合族是一个函数 $u:A\to B$。$R_0$ 在两个对象上的值均为单位集合，其结构映射为恒等。因此一个自然变换 $R_0\to F$ 是元素 $a:A$ 与 $b:B$，满足 $u(a)=b$。这个数据类型
+\[
+\sum_{a:A}\sum_{b:B}(u(a)=b)
+\]
+等价于 $A$，正是 Yoneda 在 $c=0$ 的结论。$R_1$ 在 $0$ 处为空、在 $1$ 处为单位，变换类型等价于 $B$，对应 $c=1$。
+\end{example}
+\begin{example}[幺半群的正则作用]
+把幺半群 $M$ 看成单对象范畴。一个协变集合族为左 $M$-集合 $X$，可表族是正则左作用 $M$。自然变换即等变函数 $\varphi:M\to X$。Yoneda 给出
+\[
+\Hom_M(M,X)\cong X,
+\qquad \varphi\longmapsto\varphi(1).
+\]
+其逆为 $x\mapsto(m\mapsto m\cdot x)$。等变性给出 $\varphi(m)=m\cdot\varphi(1)$，所以整个函数由单位处的值决定。
+\end{example}
+\source{定理\ref{thm:arrow-induction}与定理\ref{thm:synthetic-yoneda}分别达到 Riehl 报告命题 6.6 与 6.7。其形式化与类型论推导见\cite{RiehlShulman,YonedaFormal,RiehlICM}。}
+
+
+
+% ===== chapters/19_representability =====
+\chapter{可表性、极限与伴随}
+\section{可表族的普遍元素}
+\begin{definition}[普遍元素]
+设 $F$ 为预范畴 $C$ 上的协变族。元素 $u:F(c)$ 称为普遍元素，若对每个 $x:C$，函数
+\[
+\psi_{u,x}:\Hom_C(c,x)\to F(x),
+\qquad f\longmapsto f_*u
+\]
+是等价。此时称 $(c,u)$ 表示 $F$。
+\end{definition}
+\begin{proposition}
+给出普遍元素 $(c,u)$，等价于给出逐纤维为等价的自然变换
+\[
+\Hom_C(c,-)\simeq F.
+\]
+\end{proposition}
+\begin{proof}
+Yoneda 引理把全部自然变换等价地识别为 $F(c)$，逆方向恰为 $u\mapsto\psi_u$。逐纤维为等价是自然变换的一项性质，即命题。将 Yoneda 等价限制到满足此性质的子类型，便得到所述等价。
+\end{proof}
+\begin{remark}
+在普通范畴论中，普遍元素常被写成“任意元素唯一地由 $u$ 推出”。这里“唯一”指原像同伦纤维可缩，而不只指某个同伦类唯一。因此普遍元素同时确定全部较高比较。
+\end{remark}
+
+\section{元素范畴中的初始对象}
+\begin{theorem}[可表性的初始对象判据]\label{thm:universal-element}
+设 $F$ 协变。$(c,u)$ 是 $F$ 的普遍元素，当且仅当它是总空间范畴 $\widetilde F=\sum_xF(x)$ 的初始对象。
+\end{theorem}
+\begin{proof}
+由依赖箭头端点公式，
+\[
+\Hom_{\widetilde F}((c,u),(x,v))
+\simeq\sum_{f:\Hom_C(c,x)}(f_*u=v).
+\]
+右边恰为 $\psi_{u,x}$ 在 $v$ 处的同伦纤维。初始性要求对每个 $(x,v)$ 此类型可缩；等价的定义则要求对每个 $x$，$\psi_{u,x}$ 的全部纤维可缩。两个条件逐项相同。
+\end{proof}
+\begin{example}
+取 $F=\Hom_C(c,-)$，元素 $\id_c$ 是普遍元素，因为后复合恒等等价于恒等函数。对应的元素范畴就是余切片 $c/C$，其初始对象为恒等箭头。这恢复了前一章的初始性结论。
+\end{example}
+\begin{example}[自由对象的普通情形]
+令 $U:\mathcal A\to\Set$ 为一个遗忘函子。若对象 $L$ 上的元素 $u\in U(L)$ 满足
+\[
+\Hom_{\mathcal A}(L,A)\cong U(A),
+\qquad f\longmapsto U(f)(u),
+\]
+则 $L$ 是一个生成元上的自由对象。其普遍元素在元素范畴中初始。对群，$(\Z,1)$ 满足该性质，因为群同态由 $1$ 的像唯一确定。
+\end{example}
+
+\section{表示对象的唯一性}
+\begin{lemma}[自然等价的逐纤维逆]
+若 $\alpha:E\to F$ 是协变族间的纤维映射，且每个 $\alpha_x$ 为等价，则所选逆函数组成纤维映射 $\beta:F\to E$，并有两侧自然逆同伦。
+\end{lemma}
+\begin{proof}
+等价的纤维中心构造给出依赖于 $x$ 的逆，因此 $\beta$ 本身就是内部依赖函数。它自动自然。两侧逐点逆同伦经依赖函数外延性组装成纤维映射类型中的同伦。
+\end{proof}
+\begin{theorem}[表示唯一到等价]
+若 $F$ 被 $c$ 与 $d$ 表示，则 $c$ 与 $d$ 之间存在可逆箭头。
+\end{theorem}
+\begin{proof}
+设 $\alpha:R_c\simeq F$、$\beta:R_d\simeq F$。复合
+\[
+\alpha^{-1}\beta:R_d\to R_c,
+\qquad
+\beta^{-1}\alpha:R_c\to R_d
+\]
+互为逆。由可表族间的 Yoneda 等价，前者对应 $a:c\to d$，后者对应 $b:d\to c$。两种变换复合分别为恒等，Yoneda 等价保持复合的显式公式将其变为 $ba=\id_c$ 与 $ab=\id_d$。因此 $a$ 可逆。
+\end{proof}
+\begin{proposition}[带普遍结构的唯一性]
+若 $C$ 完备，则表示数据类型
+\[
+\mathsf{Rep}(F)=
+\sum_{c:C}\sum_{u:F(c)}
+\prod_{x:C}\isEquiv(\psi_{u,x})
+\]
+是命题；一旦有元素便可缩。
+\end{proposition}
+\begin{proof}
+由定理\ref{thm:universal-element}，表示数据等价于 $\widetilde F$ 的初始对象及其初始性证明。总空间 $\widetilde F$ 完备。任意两个初始对象之间有箭头 $a,b$，两个复合都与各自恒等箭头相等，因为相应映射类型可缩。故 $a$ 可逆，完备性把它变成两个对象之间的路径。初始性为命题，因为它是可缩性命题的依赖积；因此该路径提升为初始对象数据之间的路径。任意两点相等，说明数据类型是命题。
+\end{proof}
+\begin{remark}
+这一定理说明，普遍性质所确定的不仅是一个对象的等价类。在完备的环境中，对象连同其普遍结构形成命题，存在时形成可缩类型。因而不同构造之间的比较不需要额外任意的全局选择。
+\end{remark}
+
+\section{Yoneda 如何检测箭头}
+\begin{proposition}[由测试映射检测同一性]
+若 $a,b:c\to d$ 诱导相同的后复合自然变换
+\[
+\Hom_C(-,c)\longrightarrow\Hom_C(-,d),
+\]
+则 $a=b$。更准确地，箭头类型到这一自然变换类型的典范映射是等价，所以它在所有较高路径类型上也为等价。
+\end{proposition}
+\begin{proof}
+这是反变 Yoneda 引理在 $P=\Hom_C(-,d)$ 上的应用。求值于 $\id_c$ 的逆检验直接恢复 $a$。由于整个映射是等价，等价作用于路径类型的定理给出较高路径层的结论。
+\end{proof}
+\begin{proposition}[由映射空间检测可逆性]
+箭头 $a:c\to d$ 可逆，当且仅当对所有 $x$，后复合
+\[
+\Hom_C(x,c)\longrightarrow\Hom_C(x,d)
+\]
+是等价。它也等价于对所有 $y$，前复合
+\[
+\Hom_C(d,y)\longrightarrow\Hom_C(c,y)
+\]
+为等价。
+\end{proposition}
+\begin{proof}
+后复合条件就是已采用的可逆性定义。若 $a$ 可逆，则前复合其逆提供前复合 $a$ 的拟逆。反向，取 $y=c$，得到 $b:d\to c$ 满足 $ba=\id_c$；再取 $y=d$，利用前复合 $a$ 的路径检测性，从 $(ab)a=a=\id_d a$ 推出 $ab=\id_d$。
+\end{proof}
+\begin{example}
+普通集合中的函数 $f:A\to B$ 若对每个集合 $X$ 诱导 $\Hom(X,A)\to\Hom(X,B)$ 双射，则取 $X=B$ 得到右逆，再取 $X=A$ 得到左逆。高阶版本使用相同测试，但双射升级为等价，唯一性升级为纤维可缩。
+\end{example}
+
+\section{锥与极限的定义}
+\begin{definition}[锥]
+设 $K$ 为索引范畴，$D:K\to C$ 为图表。顶点为 $x$ 的锥类型定义为
+\[
+\mathsf{Cone}_D(x)=\Hom_{C^K}(\Delta x,D),
+\]
+其中 $\Delta x$ 为常值图表。锥包含从 $x$ 到各 $D(k)$ 的箭头，及沿索引箭头和较高单形的全部相容。
+\end{definition}
+\begin{definition}[极限]
+一个极限为对象 $L$ 及锥 $\lambda:\Delta L\to D$，使对每个 $x$，复合诱导
+\[
+\Hom_C(x,L)\longrightarrow\mathsf{Cone}_D(x),
+\qquad f\longmapsto\lambda\circ\Delta f
+\]
+是等价。记 $L=\limm D$，但这个记号总连同所选普遍锥理解。
+\end{definition}
+\begin{proposition}
+若 $C$ 完备，则一个固定图表的极限数据类型是命题，存在时可缩。
+\end{proposition}
+\begin{proof}
+锥类型对 $x$ 反变，构成反变族。极限正是该反变族的表示数据。把表示唯一性命题对偶到 $C^{\op}$，得到结论。
+\end{proof}
+\begin{remark}
+普通极限要求唯一的中介态射，高阶极限要求中介态射连同指定锥比较的类型可缩。若仅要求普通同伦范畴中的普遍性，通常不能恢复这一较强的高阶极限性质。
+\end{remark}
+
+\section{终对象、乘积与同伦拉回}
+\begin{example}[终对象]
+当 $K$ 为空索引时，锥类型为单位类型。因此 $1_C$ 是终对象恰好表示
+\[
+\Hom_C(x,1_C)\simeq\one
+\]
+对每个 $x$ 成立。
+\end{example}
+\begin{example}[二元乘积]
+索引为两个离散点时，$\mathsf{Cone}(x)=\Hom_C(x,A)\times\Hom_C(x,B)$。因此乘积由投影 $P\to A,P\to B$ 及自然等价
+\[
+\Hom_C(x,P)\simeq
+\Hom_C(x,A)\times\Hom_C(x,B)
+\]
+刻画。
+\end{example}
+\begin{definition}[同伦拉回]
+对余跨度 $A\xrightarrow f Z\xleftarrow g B$，拉回对象 $P$ 配有 $p:P\to A$、$q:P\to B$ 及路径 $fp=gq$，并要求
+\[
+\Hom_C(x,P)\simeq
+\sum_{a:\Hom_C(x,A)}\sum_{b:\Hom_C(x,B)}
+(fa=gb).
+\]
+\end{definition}
+\begin{remark}
+右边的等式属于 $\Hom_C(x,Z)$，因此保留两个复合之间的同伦。将它换成严格相等的集合约束，除非另有纤维性条件保证模型正确，否则会得到错误的同伦拉回。
+\end{remark}
+\begin{proposition}[空间中的拉回公式]
+对空间函数 $f:A\to Z$、$g:B\to Z$，类型
+\[
+P=\sum_{a:A}\sum_{b:B}(f(a)=g(b))
+\]
+具有上述映射性质。
+\end{proposition}
+\begin{proof}
+将一个函数 $h:X\to P$ 逐分量写为 $a:X\to A$、$b:X\to B$ 及 $q:\prod_{x:X}(f(a(x))=g(b(x)))$。函数外延性把最后一个依赖积等价地写成 $f\circ a=g\circ b$。依赖和与函数类型的交换给出两方向的显式等价，并且与 $X$ 的前复合相容。
+\end{proof}
+
+\section{伴随的映射空间定义}
+\begin{definition}[伴随]
+函子 $L:C\to D$ 与 $R:D\to C$ 构成伴随 $L\dashv R$，若有在 $c,d$ 两变量中自然的等价
+\[
+\Phi_{c,d}:\Hom_D(Lc,d)\simeq\Hom_C(c,Rd).
+\]
+自然性在第一个变量中反变，在第二个变量中协变。
+\end{definition}
+\begin{definition}[单位与余单位]
+给定上述伴随，定义
+\[
+\eta_c=\Phi_{c,Lc}(\id_{Lc}):c\to RLc,
+\]
+\[
+\varepsilon_d=\Phi^{-1}_{Rd,d}(\id_{Rd}):LRd\to d.
+\]
+\end{definition}
+\begin{lemma}[转置公式]\label{lem:transpose}
+对 $f:Lc\to d$、$g:c\to Rd$，有
+\[
+\Phi(f)=R(f)\circ\eta_c,
+\qquad
+\Phi^{-1}(g)=\varepsilon_d\circ L(g).
+\]
+\end{lemma}
+\begin{proof}
+将 $f$ 看成第二变量中的箭头 $Lc\to d$。$\Phi$ 在第二变量中的自然性把 $\id_{Lc}$ 的像 $\eta_c$ 送到 $R(f)\circ\eta_c$，而另一条路线得到 $\Phi(f)$。对逆转置，使用第一变量的自然性及 $\varepsilon_d$ 的定义即可。
+\end{proof}
+\begin{proposition}[三角恒等式]
+单位与余单位满足
+\[
+\varepsilon_{Lc}\circ L(\eta_c)=\id_{Lc},
+\qquad
+R(\varepsilon_d)\circ\eta_{Rd}=\id_{Rd}.
+\]
+\end{proposition}
+\begin{proof}
+第一式左边由引理\ref{lem:transpose}等于 $\Phi^{-1}(\eta_c)$，再由单位的定义等于 $\id_{Lc}$。第二式同样等于 $\Phi(\varepsilon_d)=\id_{Rd}$。这些等式属于相应映射类型，且随对象自然。
+\end{proof}
+
+\section{从单位与余单位恢复伴随}
+\begin{theorem}[伴随的单位余单位判据]
+若给定函子 $L,R$、自然变换 $\eta:\id_C\to RL$、$\varepsilon:LR\to\id_D$，以及自然的三角比较，则公式
+\[
+\Phi(f)=R(f)\eta_c,
+\qquad
+\Psi(g)=\varepsilon_dL(g)
+\]
+给出映射空间之间的自然等价。
+\end{theorem}
+\begin{proof}
+首先计算 $\Psi\Phi(f)$。由函子保持合成、结合律及余单位自然性，
+\begin{align*}
+\Psi\Phi(f)
+&=\varepsilon_d\circ L(R(f)\circ\eta_c)\\
+&=\varepsilon_d\circ LR(f)\circ L(\eta_c)\\
+&=f\circ\varepsilon_{Lc}\circ L(\eta_c)\\
+&=f.
+\end{align*}
+最后一步使用第一三角比较。对另一个复合，单位在 $g:c\to Rd$ 上的自然性给出
+\begin{align*}
+\Phi\Psi(g)
+&=R(\varepsilon_d\circ L(g))\circ\eta_c\\
+&=R(\varepsilon_d)\circ RL(g)\circ\eta_c\\
+&=R(\varepsilon_d)\circ\eta_{Rd}\circ g\\
+&=g.
+\end{align*}
+所列比较在对象与箭头参数中都是内部项，因此给出自然的两侧逆同伦。等价的拟逆判据完成证明。
+\end{proof}
+\begin{example}[乘积与函数空间]
+在空间范畴中，柯里化等价
+\[
+\Map(X\times A,B)\simeq\Map(X,B^A)
+\]
+表示 $-\times A\dashv(-)^A$。单位在 $X$ 处把 $x$ 送到函数 $a\mapsto(x,a)$；余单位为求值 $(u,a)\mapsto u(a)$。两条三角恒等式分别是函数的 $\beta$ 与 $\eta$ 比较。
+\end{example}
+
+\section{从可表性构造右伴随}
+\begin{proposition}
+设 $L:C\to D$，$C$ 完备。若对每个 $d$，反变族
+\[
+c\longmapsto\Hom_D(Lc,d)
+\]
+可表，则可由其表示数据构造右伴随 $R$。
+\end{proposition}
+\begin{proof}
+取表示对象 $Rd$ 与表示等价。表示数据是命题，因此若仅给出其命题截断的存在，也可消去到表示数据本身。对箭头 $a:d\to d'$，后复合产生反变族之间的自然变换。通过表示等价与 Yoneda 全忠实性，它对应唯一到可缩选择的箭头 $R(a):Rd\to Rd'$。
+
+恒等与复合的相容从自然变换的恒等与复合，经 Yoneda 等价传回；其高阶相容同样来自映射类型间的等价。于是形成函子 $R$，表示等价正是所需的伴随等价。
+\end{proof}
+\begin{remark}
+这段论证中“可表”必须理解为相容的内部条件。以命题截断表达存在时，使用表示数据的命题性可以恢复表示，无需额外在所有对象上进行任意选取。
+\end{remark}
+
+\section{右伴随保持极限}
+\begin{theorem}
+若 $L\dashv R$，则 $R$ 保持所有相关范畴中存在的极限。
+\end{theorem}
+\begin{proof}
+设图表 $D_0:K\to D$ 有极限 $M$。对 $c:C$，伴随等价与极限性质给出
+\[
+\Hom_C(c,RM)
+\simeq\Hom_D(Lc,M)
+\simeq\mathsf{Cone}_{D_0}(Lc).
+\]
+逐分量应用伴随等价，并使用它在两个变量中的自然性，得到
+\[
+\mathsf{Cone}_{D_0}(Lc)
+\simeq\mathsf{Cone}_{R D_0}(c).
+\]
+这里锥的每个相容单形也被自然等价传送，所以该比较保留全部高阶锥数据。于是 $RM$ 表示右边的锥族，因而是 $R D_0$ 的极限。
+\end{proof}
+\begin{remark}
+可表性是本章各结论的共同机制。Yoneda 使对象通过映射类型被检测，普遍元素使可表性成为元素范畴中的初始性，极限与伴随则是不同变量安排下的同一表示原理。
+\end{remark}
+\source{本章将合成 Yoneda 引理用于普遍性质。普通版本见\cite{RiehlContext}，高阶映射空间与伴随的系统理论见\cite{RiehlVerity}。}
+
+
+
+% ===== chapters/20_directed =====
+\chapter{有向单价宇宙与空间范畴}
+\section{从一个族到分类对象}
+\begin{definition}[普遍协变族]
+一个普遍小协变族为协变纤维化
+\[
+\varrho:\Sp_\bullet\longrightarrow\Sp
+\]
+及其分类性质：在任意语境 $\Gamma$ 中，一个 $\Gamma\to\Sp$ 的映射分类一个 $\Gamma$ 上的小协变族，拉回 $\varrho$ 恢复该族。等价协变族对应分类映射间的路径。
+\end{definition}
+\begin{remark}
+分类性质在同伦意义下表述：它比较映射空间与协变族及其等价组成的分类空间。在严格模型中，为了得到与替换严格相容的分类映射，还要给纤维化配备适当结构。不能把这个定义读成“所有裸纤维化组成的集合被一个集合严格表示”。
+\end{remark}
+\begin{example}[分类拉回图]
+设 $A:\Gamma\to\Sp$。有图
+\[
+\begin{tikzcd}
+\sum_{\gamma:\Gamma}A_\gamma\ar[r]\ar[d]&\Sp_\bullet\ar[d,"\varrho"]\\
+\Gamma\ar[r,"A"']&\Sp.
+\end{tikzcd}
+\]
+由于普遍族协变，每个纤维 $A_\gamma$ 是群胚类型。于是 $\Sp$ 的对象表示空间，尽管在这一阶段尚未证明 $\Sp$ 自己满足范畴公理。
+\end{example}
+\begin{definition}[普遍族的普通单价性]
+要求普遍族满足普通单价性，即
+\[
+(A=_\Sp B)\simeq(A\simeq B),
+\]
+右边是其解码纤维之间的等价。此处仍只比较路径与等价，没有比较一般有向箭头与一般函数。
+\end{definition}
+\begin{remark}
+前半部的 $\U$ 用于普通同伦类型的单价语言。本章的 $\Sp$ 是处于单纯语义中的有向分类对象。其对象空间与小空间的分类空间相联系，但额外外方向还可能记录不可逆函数。二者不应当在引入这些结构之前被直接混同。
+\end{remark}
+
+\section{箭头到函数的典范比较}
+\begin{definition}
+对 $A,B:\Sp$，将普遍族拉回到箭头 $a:A\to_\Sp B$ 上。协变作用给出函数
+\[
+a_*:A\to B.
+\]
+因此有典范比较
+\[
+\mathsf{arrfun}_{A,B}:\Hom_\Sp(A,B)\to(A\to B).
+\]
+\end{definition}
+\begin{definition}[有向单价性]\label{def:directed-univalence}
+若上述比较对每个 $A,B$ 是等价，则称普遍协变族有向单价，即
+\[
+\Hom_\Sp(A,B)\simeq(A\to B).
+\]
+条件在所有语境中成立，因而也适用于带参数的空间族之间的函数。
+\end{definition}
+\begin{remark}
+比较映射的定义只需要普遍族协变，无须预先假设 $\Sp$ 已是范畴。先用协变提升得到函数，再证明比较为等价，最后推导合成与完备性，可以避免把“空间范畴已经存在”作为证明自身存在性的前提。
+\end{remark}
+\begin{example}
+若 $A=\zero$、$B=\one$，函数类型 $A\to B$ 可缩。因此有向单价性给出唯一到可缩选择的箭头 $\zero\to_\Sp\one$。反向函数类型 $\one\to\zero$ 为空，所以不存在反向箭头。这表明 $\Sp$ 不能只是一个所有箭头均可逆的宇宙群胚。
+\end{example}
+
+\section{单一函数的离散提升模型}
+\begin{definition}[一个函数的元素范畴]
+给定集合函数 $f:A\to B$，构造范畴 $E_f$。对象分为 $(0,a)$ 与 $(1,b)$。同层只保留恒等态射，跨层态射
+\[
+(0,a)\longrightarrow(1,b)
+\]
+存在当且仅当 $f(a)=b$，并在存在时唯一。投影 $p_f:E_f\to[1]$ 忘掉第二分量。
+\end{definition}
+\begin{proposition}
+$p_f$ 是离散余纤维化，其在两个顶点上的纤维为 $A,B$，沿唯一非恒等箭头的传输为 $f$。
+\end{proposition}
+\begin{proof}
+给定源 $(0,a)$，唯一提升的终点为 $(1,f(a))$。底中的恒等箭头由恒等提升。不存在其他需要提升的底箭头，故条件成立。
+\end{proof}
+\begin{proposition}[离散的一维分类]
+从 $[1]$ 上的离散余纤维化恢复两个纤维及其传输，与 $f\mapsto p_f$ 互逆到保纤维同构。
+\end{proposition}
+\begin{proof}
+由余纤维化的唯一提升，每个源元素决定唯一终点，得到 $f:A\to B$。任意跨层箭头都必须是该唯一提升，所以箭头存在性恰由 $f(a)=b$ 决定。同层位于恒等上的箭头只能是恒等，因为其源已有唯一恒等提升。因此恢复的范畴与 $E_f$ 同构。
+\end{proof}
+\begin{remark}
+这已经说明有向单价性的基本几何机制：一条宇宙箭头分类有向区间上的族，而区间上的协变族由两个纤维和一个前向函数描述。空间情形将同层离散性替换为群胚，并把唯一提升替换为可缩提升。
+\end{remark}
+
+\section{有限函数链的离散模型}
+\begin{definition}[函数链]
+一个长度 $n$ 的空间函数链为
+\[
+A_0\xrightarrow{f_1}A_1\xrightarrow{f_2}\cdots
+\xrightarrow{f_n}A_n.
+\]
+记 $f_{ij}=f_j\circ\cdots\circ f_{i+1}$，并规定 $f_{ii}=\id$。
+\end{definition}
+\begin{proposition}[集合链的元素范畴]
+若各 $A_i$ 是集合，则令对象为 $(i,a)$，从 $(i,a)$ 到 $(j,b)$ 的态射在 $i\le j$ 且 $f_{ij}(a)=b$ 时唯一存在。由此得到 $[n]$ 上的离散余纤维化。
+\end{proposition}
+\begin{proof}
+恒等来自 $f_{ii}=\id$。若 $f_{ij}(a)=b$、$f_{jk}(b)=c$，则 $f_{ik}(a)=c$，所以可以合成，结合律由函数复合的结合律给出。固定底箭头 $i\to j$ 和源 $(i,a)$ 后，唯一终点为 $(j,f_{ij}(a))$，证明余纤维化条件。
+\end{proof}
+\begin{proposition}
+在上述模型中，取面对应删除函数链中的一个对象：删除内部对象时合成相邻两个函数；取退化对应插入恒等函数。
+\end{proposition}
+\begin{proof}
+沿保序映射 $\theta:[m]\to[n]$ 拉回，得到纤维 $A_{\theta(0)},\ldots,A_{\theta(m)}$ 和相邻传输 $f_{\theta(i-1),\theta(i)}$。单射删去顶点时，相邻传输正是原函数的复合；满射重复顶点时，重复处的传输为恒等。
+\end{proof}
+
+\section{空间链的单纯替换}
+\begin{definition}[严格函数链的单纯替换]
+设各 $A_i$ 由 Kan 复形表示，相邻函数为实际的单纯映射。定义单纯空间
+\[
+(E_F)_m=\coprod_{\sigma:[m]\to[n]}A_{\sigma(0)}.
+\]
+对于保序映射 $\theta:[k]\to[m]$，把 $(\sigma,a)$ 送到
+\[
+\bigl(\sigma\theta,
+ f_{\sigma(0),\sigma(\theta(0))}(a)\bigr).
+\]
+投影到 $\sigma$ 给出 $E_F\to\Delta^n$。
+\end{definition}
+\begin{proposition}
+上述面与退化满足单纯恒等式。对每个 $m$，初始顶点给出的比较
+\[
+(E_F)_m\longrightarrow
+(\Delta^n)_m\times_{(\Delta^n)_0}(E_F)_0
+\]
+是同构。
+\end{proposition}
+\begin{proof}
+连续两次限制时，纤维坐标先作用
+$f_{\sigma(0),\sigma(\theta(0))}$，再作用
+$f_{\sigma(\theta(0)),\sigma(\theta(\psi(0)))}$。
+严格函数链的复合律使其等于一次限制对应的函数。因此单纯恒等式成立。后一比较把 $(\sigma,a)$ 送到 $(\sigma,(\sigma(0),a))$，其逆显然存在。
+\end{proof}
+\begin{remark}
+该对象未必已是 Reedy 纤维的。取相对 Reedy 纤维替换后，初始顶点方形仍同伦笛卡尔：替换在每层是弱等价，而此处底的各层为离散集合，拉回保留相应弱等价。于是得到表示同一空间链的左纤维化。
+\end{remark}
+\begin{remark}
+反方向从任意左纤维化恢复一条严格函数链，需要处理提升的选择与全部同伦相容。只逐点选几个箭头的提升，并不能自动证明与原族相容等价。下面的有限单纯形比较定理精确解决这一语义问题。
+\end{remark}
+
+\section{有限单纯形比较定理}
+\begin{definition}[函数链分类对象]
+记 $\mathsf{Fun}_n$ 为如下数据的分类对象：$n+1$ 个小协变族及它们之间依次可合成的 $n$ 个纤维函数。在内部记号中，其对象数据写成
+\[
+\mathsf{Fun}_n=
+\sum_{A_0,\ldots,A_n:\Sp}
+\prod_{i=1}^n(A_{i-1}\to A_i).
+\]
+面运算合成相邻函数，退化插入恒等函数。这里的分类对象还保留这些数据随语境变化的全部同伦结构。
+\end{definition}
+\begin{theorem}[普遍左纤维化与高阶有向单价性，语义基础定理]\label{thm:higher-directed}
+在单纯空间中，存在普通单价的普遍小左纤维化 $\Sp_\bullet\to\Sp$，并有在 $n$ 与任意语境中同伦相容的等价
+\[
+\theta_n:\Sp^{\Delta^n}\simeq\mathsf{Fun}_n
+\qquad(n\ge0).
+\]
+比较在 $n=1$ 时取两个端点纤维及协变传输；一般 $n$ 时取相邻边上的传输。相同结论成立于任意高阶拓扑斯中的单纯对象，采用适当大小与严格模型条件。
+\end{theorem}
+\begin{remark}
+本定理的严格语义证明由普遍纤维化构造、带权极限和单纯形上的纤维化比较组成，见\cite[定理6.2.5]{CavalloRiehlSattler}。上一节提供了“函数链到族”方向的具体模型；任意语境中的逆比较及其相容性属于该基础定理。下一节以后不再使用未说明的分类结论，而直接由本定理及已经建立的类型运算推导空间范畴。
+\end{remark}
+\begin{proposition}[一维有向单价性]
+定理\ref{thm:higher-directed}蕴含定义\ref{def:directed-univalence}。
+\end{proposition}
+\begin{proof}
+$n=1$ 的比较为
+\[
+\Sp^{\Delta^1}\simeq
+\sum_{A,B:\Sp}(A\to B),
+\]
+并且保持端点映射到 $\Sp\times\Sp$。对固定端点 $(A,B)$ 取同伦纤维，等价在拉回下保持，于是得到
+$\Hom_\Sp(A,B)\simeq(A\to B)$。比较的定义正是沿普遍族的协变作用。
+\end{proof}
+
+\section{有向粘合的内部公式}
+\begin{definition}[粘合族]
+在具备有向单纯模态结构的扩充类型论中，对 $f:A\to B$ 定义
+\[
+\mathsf{Gl}_f(i)
+=\sum_{b:B}\bigl([i=0]\to\fib_f(b)\bigr),
+\qquad i:\Int.
+\]
+$[i=0]$ 为与初始端面相关的命题；在初始端它为真，在终端它为空。
+\end{definition}
+\begin{remark}
+这里使用的是\cite{GratzerWeinbergerBuchholtz}的扩充语义。其封闭性定理保证 $\mathsf{Gl}_f$ 的值仍在相应空间宇宙中，其顶点检测定理保证空间值族的纤维映射可在单纯形顶点检测等价性。这两条是该扩充体系的定理，不能将它们作为任意有向类型的无条件规则。下文把这两个输入固定后，完整计算粘合的核心逆比较。
+\end{remark}
+\begin{proposition}[粘合的端点]
+有等价 $\mathsf{Gl}_f(0)\simeq A$、$\mathsf{Gl}_f(1)\simeq B$，沿该族的协变传输对应 $f$。
+\end{proposition}
+\begin{proof}
+在 $i=0$ 时，命题 $[0=0]$ 等价于单位类型，故
+\[
+\mathsf{Gl}_f(0)
+\simeq\sum_{b:B}\fib_f(b)
+=\sum_{b:B}\sum_{a:A}(f(a)=b)
+\simeq A.
+\]
+最后一个等价将 $(b,a,p)$ 送到 $a$，逆为 $a\mapsto(f(a),a,\refl)$，逆同伦由路径归纳给出。在 $i=1$ 时，$[1=0]$ 为空，因此从它到任意类型的函数类型可缩，得到 $\mathsf{Gl}_f(1)\simeq B$。
+
+对于 $a:A$，沿全部 $i$ 定义元素
+\[
+\bigl(f(a),\lambda\phi.(a,\refl)\bigr):\mathsf{Gl}_f(i).
+\]
+它在初始端对应 $a$，在终端对应 $f(a)$。提升唯一性将其终点与协变传输识别，故传输为 $f$。
+\end{proof}
+
+\section{粘合重建任意区间族}
+\begin{theorem}[粘合逆比较]
+在上述封闭性与顶点检测条件下，一个空间值族 $F:\Int\to\Sp$ 等价于 $\mathsf{Gl}_f$，其中 $f:F(0)\to F(1)$ 为其协变传输。
+\end{theorem}
+\begin{proof}
+固定 $i:\Int$ 与 $z:F(i)$。形状函数 $r\mapsto r\vee i$ 从 $i$ 走到 $1$，其上的传输记作 $t_i:F(i)\to F(1)$。令 $b=t_i(z)$。
+
+还需构造 $[i=0]\to\fib_f(b)$。在假设 $i=0$ 下，$z:F(0)$，$t_i=f$，因此 $(z,\refl)$ 是 $f$ 在 $b=f(z)$ 处的纤维点。由此得到纤维映射
+\[
+\alpha_i:F(i)\to\mathsf{Gl}_f(i),
+\qquad z\longmapsto\bigl(t_i(z),\lambda\phi.(z,\refl)\bigr).
+\]
+式中第二分量仅在端面假设下使用 $z$ 的初始纤维类型，因而类型正确。
+
+在 $i=0$ 处，$\alpha_0$ 是映射
+$z\mapsto(f(z),z,\refl)$，前一命题已证明它为等价。在 $i=1$ 处，$t_1$ 为恒等传输，而第二分量唯一，所以 $\alpha_1$ 也为等价。顶点检测定理于是给出每个 $\alpha_i$ 为等价。普通单价性与函数外延性将逐纤维等价识别为族之间的路径。
+\end{proof}
+\begin{remark}
+这给出有向单价性的一维内部证明：从箭头取传输，再对函数粘合，恢复原族；从函数粘合再取传输，也恢复原函数。需要三角形上的相容时，还必须使用三空间、两函数的粘合或高阶比较定理。仅完成区间上的逆比较，尚不足以证明 Segal 条件。
+\end{remark}
+
+\section{空间宇宙的 Segal 条件}
+\begin{theorem}[空间对象的相容合成]\label{thm:spaces-segal}
+定理\ref{thm:higher-directed}中的 $\Sp$ 满足全部内部脊柱条件，因而是合成预范畴。
+\end{theorem}
+\begin{proof}
+对于每个 $n$，考虑图
+\[
+\begin{tikzcd}[column sep=large]
+\Sp^{\Delta^n}\ar[r]\ar[d,"\theta_n"',"\simeq"]&\Sp^{I[n]}\ar[d,"\simeq"]\\
+\mathsf{Fun}_n\ar[r,"\cong"']&
+\mathsf{Fun}_1\times_{\Sp}\cdots\times_{\Sp}\mathsf{Fun}_1.
+\end{tikzcd}
+\]
+右侧竖映射由一维比较在脊柱各边上取拉回获得。底部只是把函数链拆成相邻函数，逆向将这些函数按相同端点重新组成链，因此为等价。比较定理在面映射中的相容性保证方形同伦交换。其余三条边为等价，故顶部为等价。
+
+所有比较都在任意语境中成立，所以得到内部条件，而不仅是外部对象空间上的等价。
+\end{proof}
+\begin{proposition}[合成对应函数复合]
+若箭头 $a:A\to_\Sp B$、$b:B\to_\Sp C$ 分别对应函数 $f,g$，则 $b\circ a$ 对应 $g\circ f$。恒等箭头对应恒等函数。
+\end{proposition}
+\begin{proof}
+在 $n=2$ 的比较下，一个三角形对应两个相邻函数。限制到长边对应删除中间顶点，因此按函数链的面运算得到复合 $g\circ f$。退化插入恒等，给出第二断言。
+\end{proof}
+
+\section{空间宇宙的完备性}
+\begin{lemma}[可逆箭头与等价函数]
+在 $\Sp$ 中，箭头可逆当且仅当对应函数为等价。
+\end{lemma}
+\begin{proof}
+若箭头有逆，复合对应函数复合，故对应函数有两侧拟逆。反之，若 $f:A\to B$ 是等价，取其拟逆 $g$，有向单价性将 $g$ 变成箭头。两侧函数复合与恒等的同伦，通过映射类型等价的逆传回箭头复合与恒等之间的路径。因此原箭头有两侧逆。
+\end{proof}
+\begin{theorem}[空间范畴]\label{thm:spaces-category}
+普遍协变族的底 $\Sp$ 是合成范畴，其对象为小空间，且
+\[
+\Hom_\Sp(A,B)\simeq(A\to B).
+\]
+\end{theorem}
+\begin{proof}
+Segal 条件由定理\ref{thm:spaces-segal}给出。可逆箭头与等价函数的引理给出
+\[
+(A\cong_\Sp B)\simeq(A\simeq B).
+\]
+普遍族的普通单价性又给出 $(A=_\Sp B)\simeq(A\simeq B)$。两条比较与典范 $\idtoiso$ 相容：在常路径处它们都给出恒等函数，路径归纳保证一般相容。因此 $\idtoiso$ 是等价，$\Sp$ 完备。
+\end{proof}
+\begin{remark}
+证明分别使用了高阶有向单价性与普通单价性。前者建立合成及其相容，后者把可逆箭头识别为对象路径。遗漏其中任一部分，都不能得到完整的合成范畴结论。
+\end{remark}
+
+\section{直化与反直化}
+\begin{definition}
+将 $B$ 上的小协变族分类为函数 $B\to\Sp$，称为直化。将函数 $B\to\Sp$ 拉回普遍族，称为反直化。
+\end{definition}
+\begin{proposition}
+若 $B$ 是合成范畴，直化得到的内部函数自动是函子。其在箭头 $f:x\to y$ 上的作用，就是原族的协变函数 $f_*:E(x)\to E(y)$。
+\end{proposition}
+\begin{proof}
+$B$ 与 $\Sp$ 均为合成范畴，所以内部函数自动保持单形及其合成。分类拉回图把普遍族沿对应箭头的提升识别为原族沿 $f$ 的提升，故有向单价性下的函数恰为 $f_*$。
+\end{proof}
+\begin{remark}
+该对应解释了为什么左纤维化表示空间值协变函子。它同时规定对象、箭头与全部相容，而不只是建立底对象集到空间集合的一一对应。
+\end{remark}
+
+\section{空间范畴中的基本普遍构造}
+\begin{proposition}[终对象、乘积与指数]
+$\Sp$ 的终对象为单位空间，乘积由类型乘积给出，指数对象为函数类型：
+\[
+\Hom_\Sp(X,B^A)\simeq\Hom_\Sp(X\times A,B).
+\]
+\end{proposition}
+\begin{proof}
+有向单价性把映射类型换成函数类型。$X\to\one$ 可缩；函数到乘积等价于两个分量函数；柯里化给出指数公式。它们在参数中自然，所以分别满足终对象、乘积和指数的普遍性质。
+\end{proof}
+\begin{proposition}[空间中的同伦拉回]
+对于函数 $f:A\to Z$、$g:B\to Z$，类型
+\[
+\sum_{a:A}\sum_{b:B}(f(a)=g(b))
+\]
+为 $\Sp$ 中的拉回。
+\end{proposition}
+\begin{proof}
+上一章已经逐分量证明该类型的函数空间满足同伦拉回的锥公式。再用有向单价性将函数空间换为 $\Sp$ 中的映射类型，即得范畴论的拉回性质。
+\end{proof}
+\source{本章定义\ref{def:directed-univalence}与定理\ref{thm:spaces-category}分别对应 Riehl 报告定义 7.1 与推论 7.2。两种证明路线分别见\cite{CavalloRiehlSattler,GratzerWeinbergerBuchholtz}；其前提与内部计算在本章中分开列明。}
+
+
+
+% ===== chapters/21_structures =====
+\chapter{带结构空间与结构同态}
+\section{带基点空间的范畴}
+\begin{definition}[带基点空间范畴]
+普遍协变族的总空间
+\[
+\Sp_\bullet=\sum_{A:\Sp}A
+\]
+称为带基点空间范畴。对象为 $(A,a)$。由协变族总空间定理，它是合成范畴。
+\end{definition}
+\begin{theorem}[带基点映射的公式]\label{thm:pointed-maps}
+对 $(A,a),(B,b):\Sp_\bullet$，有等价
+\[
+\Hom_{\Sp_\bullet}((A,a),(B,b))
+\simeq\sum_{f:A\to B}(f(a)=b).
+\]
+\end{theorem}
+\begin{proof}
+总空间箭头先按底箭头 $\alpha:A\to_\Sp B$ 分解。依赖箭头端点公式把其纤维识别为 $\alpha_*a=b$。有向单价性将 $\alpha$ 替换为函数 $f:A\to B$，并将 $\alpha_*$ 识别为 $f$。因此得到所述依赖和。
+\end{proof}
+\begin{proposition}[带基点映射的复合]
+若 $(f,p):(A,a)\to(B,b)$、$(g,q):(B,b)\to(C,c)$，则复合对应
+\[
+(g\circ f,\ \ap_g(p)\cdot q).
+\]
+恒等对应 $(\id_A,\refl_a)$。
+\end{proposition}
+\begin{proof}
+底函数复合由空间范畴的合成给出。基点路径先从 $g(f(a))$ 沿 $\ap_g(p)$ 到 $g(b)$，再沿 $q$ 到 $c$，所以类型正确。总空间的复合比较与依赖提升的拼接相容，因而识别为该公式。恒等情形直接来自总空间恒等箭头。
+\end{proof}
+\begin{remark}
+$\sum_f(f(a)=b)$ 保留基点相容的具体路径。对一般空间，把它换成“存在某条基点路径”的命题截断会改变映射空间。因此高阶带基点映射不应只记成一个满足模糊保点条件的底层函数。
+\end{remark}
+
+\section{带基点空间作为余切片}
+\begin{proposition}
+带基点空间范畴等价于空间范畴中单位空间的余切片 $\one/\Sp$。
+\end{proposition}
+\begin{proof}
+一个函数 $\one\to A$ 等价于点 $a:A$，由在 $*$ 处求值给出。余切片映射公式为
+\[
+\sum_{f:A\to B}(f\circ a=b),
+\]
+其中 $a,b$ 被看成单位空间上的函数。函数外延性把第二分量等价地写成 $f(a(*))=b(*)$，与定理\ref{thm:pointed-maps}相同。对象和映射上的比较保持复合，因此得到范畴等价。
+\end{proof}
+\begin{example}
+单位带基点空间 $(\one,*)$ 既初始又终止。到 $(A,a)$ 的带基点映射类型为
+\[
+\sum_{x:A}(x=a),
+\]
+它可缩；从 $(A,a)$ 到 $(\one,*)$ 的函数和基点路径也都可缩。因此带基点空间范畴有零对象。
+\end{example}
+\begin{proposition}[带基点乘积]
+$(A\times B,(a,b))$ 是 $(A,a)$ 与 $(B,b)$ 的乘积。
+\end{proposition}
+\begin{proof}
+带基点映射 $X\to A\times B$ 的底函数等价于一对函数 $X\to A,X\to B$。乘积路径公式把基点比较分成两个分量比较，因此映射类型是两个带基点映射类型的乘积，满足普遍性质。
+\end{proof}
+
+\section{箭头范畴中的交换方形}
+\begin{definition}[箭头范畴]
+对合成范畴 $C$，定义 $\mathsf{Arr}(C)=C^{\Delta^1}$。它的对象为 $C$ 中的箭头，有源靶函子
+\[
+(s,t):\mathsf{Arr}(C)\to C\times C.
+\]
+\end{definition}
+\begin{lemma}[方形类型]\label{lem:arrow-square}
+对于 $\mu:X_0\to X_1$、$\nu:Y_0\to Y_1$，有等价
+\[
+\Hom_{\mathsf{Arr}(C)}(\mu,\nu)
+\simeq
+\sum_{u:X_0\to Y_0}\sum_{v:X_1\to Y_1}
+(v\circ\mu=\nu\circ u).
+\]
+\end{lemma}
+\begin{proof}
+箭头范畴中的箭头是一个平方。固定四条边后，沿对角线 $k:X_0\to Y_1$ 三角剖分，平方类型变成
+\[
+\sum_k\mathsf{Tri}(\mu,v;k)\times\mathsf{Tri}(u,\nu;k).
+\]
+由三角形纤维公式，右边等价于
+\[
+\sum_k(v\mu=k)\times(\nu u=k).
+\]
+消去第一个路径及 $k$，得到 $\nu u=v\mu$，再取逆得到所写方向。最后将四边中未固定的 $u,v$ 重新作依赖和，即得到完整映射类型。
+\end{proof}
+\begin{remark}
+方形的交换是映射空间中的路径。其所有更高路径继续保留在上述等价中，因而“交换方形”在这里具有完整的高阶含义。
+\end{remark}
+
+\section{合成范畴的拉回}
+\begin{proposition}[拉回的映射类型]
+给定合成范畴之间的函子 $A\to C\leftarrow B$，其同伦拉回范畴 $P$ 的对象可写成 $(a,b,e)$，其中 $e$ 是两像之间的等价。$P$ 中映射类型由 $A,B$ 中映射及它们在 $C$ 中相容的方形组成。
+\end{proposition}
+\begin{proof}
+在完备 Segal 空间模型中逐层取同伦拉回。Segal 映射中的有限同伦极限彼此交换，因此拉回仍满足 Segal 条件。完备性通过路径与可逆箭头的比较在同伦拉回下保持。对源靶映射取纤维，得到对应映射空间的同伦拉回，恰好记录两侧箭头及相容方形。
+\end{proof}
+\begin{remark}
+若其中一个源靶映射已是模型中的纤维化，则严格拉回计算所需同伦拉回。下面的结构范畴可以采用这种表示，因此对象公式简化为端点严格指定的箭头类型。不同表示由等价联系。
+\end{remark}
+
+\section{二元运算的范畴}
+\begin{definition}[乘法空间范畴]
+记 $F_2:\Sp\to\Sp$ 为平方函子 $A\mapsto A\times A$。定义范畴拉回
+\[
+\begin{tikzcd}
+\Magma\ar[r]\ar[d]&\mathsf{Arr}(\Sp)\ar[d,"{(s,t)}"]\\
+\Sp\ar[r,"{(F_2,\id)}"']&\Sp\times\Sp.
+\end{tikzcd}
+\]
+其对象可写为 $(A,\mu)$，其中 $\mu:A\times A\to A$。
+\end{definition}
+\begin{theorem}[二元运算同态]\label{thm:magma-hom}
+$\Magma$ 为合成范畴，且
+\[
+\Hom_{\Magma}((A,\mu),(B,\nu))
+\simeq
+\sum_{f:A\to B}\prod_{x,y:A}
+\bigl(f(\mu(x,y))=\nu(fx,fy)\bigr).
+\]
+\end{theorem}
+\begin{proof}
+它是合成范畴的同伦拉回，因此为合成范畴。取映射空间后，拉回条件要求箭头范畴中的方形，其左边为 $f\times f$，右边为 $f$：
+\[
+\begin{tikzcd}
+A\times A\ar[r,"\mu"]\ar[d,"f\times f"']&A\ar[d,"f"]\\
+B\times B\ar[r,"\nu"']&B.
+\end{tikzcd}
+\]
+由引理\ref{lem:arrow-square}，其相容类型为 $f\mu=\nu(f\times f)$。函数外延性把该函数等式等价地写成逐点的依赖积。因此得到所述公式。
+\end{proof}
+\begin{proposition}[同态的复合相容]
+若 $(f,p):(A,\mu)\to(B,\nu)$ 与 $(g,q):(B,\nu)\to(C,\omega)$ 为同态，则复合的相容在 $(x,y)$ 处为
+\[
+\ap_g(p_{x,y})\cdot q_{f(x),f(y)}.
+\]
+\end{proposition}
+\begin{proof}
+第一条路径从 $g(f(\mu(x,y)))$ 到 $g(\nu(fx,fy))$，第二条路径从后者到 $\omega(gfx,gfy)$。它们的连接给出复合函数的保乘法比较。方形拼接与此公式相同，故与范畴复合相容。
+\end{proof}
+\begin{remark}
+这里的对象公式虽然与普通宇宙中的 $\sum_A(A^2\to A)$ 相似，箭头的正确含义却来自箭头范畴的拉回。这个推导明确检验了输入变量与输出变量的变化，不能仅凭一个对象集合的表达式猜测其态射。
+\end{remark}
+
+\section{结构同态的一般形式}
+\begin{definition}[函子代数]
+给定函子 $F:\Sp\to\Sp$，定义
+\[
+\mathsf{Alg}(F)=
+\Sp\times_{\Sp\times\Sp}\mathsf{Arr}(\Sp),
+\]
+其中底部函子为 $(F,\id)$。对象为 $(A,\mu:FA\to A)$。
+\end{definition}
+\begin{theorem}[结构同态公式]
+有等价
+\[
+\Hom_{\mathsf{Alg}(F)}((A,\mu),(B,\nu))
+\simeq
+\sum_{f:A\to B}(f\circ\mu=\nu\circ Ff).
+\]
+\end{theorem}
+\begin{proof}
+与二元运算的证明相同：拉回把交换方形的两条竖边固定为 $Ff$ 与 $f$，箭头范畴的方形公式给出其唯一剩余的相容类型。全部等价均在映射空间层面成立。
+\end{proof}
+\begin{example}[有限运算符号]
+设 $J$ 为运算符号集合，$n_j$ 为符号 $j$ 的元数。多项式函子
+\[
+F(A)=\sum_{j:J}A^{\mathbf{n_j}}
+\]
+的代数结构等价于为每个 $j$ 给出一个 $n_j$ 元运算。函子作用把一个函数 $f:A\to B$ 后复合到每个输入元组。结构同态公式逐符号给出
+\[
+f(\mu_j(a_1,\ldots,a_{n_j}))
+=\nu_j(fa_1,\ldots,fa_{n_j}).
+\]
+零元符号对应一个指定常元。
+\end{example}
+\begin{remark}
+这一原理适用于已给出正确方差的函子 $F$。例如 $A\mapsto A\to A$ 不会由任意函数 $A\to B$ 自然产生一个前向函数，因此不能不加说明地把它当成协变函子。对混合方差结构，需要同时使用反范畴、箭头范畴或相应的模态构造。
+\end{remark}
+
+\section{全子范畴与代数公理}
+\begin{definition}[按对象性质取全子范畴]
+若 $C$ 是合成范畴，$Q$ 为其对象上的等价不变性质，定义全子范畴 $C_Q$：对象为满足 $Q$ 的对象，两个所选对象之间的映射类型与 $C$ 中相同。在完备 Segal 模型中，可在每个 $n$ 次取所有顶点都满足 $Q$ 的单形。
+\end{definition}
+\begin{proposition}
+$C_Q$ 是合成范畴，包含 $C_Q\to C$ 全忠实。
+\end{proposition}
+\begin{proof}
+$n$-单形的所有顶点满足 $Q$，当且仅当其脊柱的所有顶点满足 $Q$。因此原 Segal 等价限制为子范畴的 Segal 等价。对象间路径与可逆箭头的比较同样限制，因为 $Q$ 对对象等价稳定。固定两个已选择的对象后，所有端点性质见证属于命题，不增加映射条件，故映射类型保持不变。
+\end{proof}
+\begin{remark}
+本定义指定的是全子范畴的全部单形。不能对任意有向类型中的命题族 $Q$，仅写出一个没有分析其单纯方向的依赖和，就自动断言得到全子范畴。全性要求没有删去端点已合格的箭头，这一点由上述逐顶点构造明确保证。
+\end{remark}
+\begin{definition}[集合范畴]
+令 $\Sp_{\le0}$ 为承载空间是集合的对象所构成的全子范畴。其映射类型为普通函数的集合，故表示普通集合范畴的单价形式。
+\end{definition}
+\begin{definition}[幺半群范畴]
+在 $\Sp_{\le0}$ 中取多项式函子 $F(A)=\one+A\times A$ 的代数范畴，再取满足单位律与结合律的对象所构成的全子范畴，记为 $\Mon$。
+\end{definition}
+\begin{proposition}
+$\Mon$ 的对象是普通小幺半群，箭头是保单位与保乘法的函数。
+\end{proposition}
+\begin{proof}
+结构映射 $\one+A^2\to A$ 等价于单位元素与二元运算。集合上的单位律、结合律是命题，并在同构下保持。全子范畴保留原代数范畴的映射，其相容正是零元与二元运算的保持条件。
+\end{proof}
+
+\section{群同态中的逆运算}
+\begin{definition}[群范畴]
+在幺半群范畴中取每个元素可逆的对象所构成的全子范畴，得到 $\Grp$。在集合中，每个元素的逆一旦存在便唯一，所以“每个元素可逆”是性质。
+\end{definition}
+\begin{proposition}
+任何保单位、保乘法的函数 $f:G\to H$ 自动保持逆，即
+\[
+f(x^{-1})=f(x)^{-1}.
+\]
+\end{proposition}
+\begin{proof}
+由乘法和单位的保持，
+\[
+f(x^{-1})f(x)=f(x^{-1}x)=1,
+\qquad
+f(x)f(x^{-1})=f(xx^{-1})=1.
+\]
+因此 $f(x^{-1})$ 是 $f(x)$ 的两侧逆。群中逆唯一：若 $u,v$ 都是 $y$ 的逆，则 $u=u(yv)=(uy)v=v$。所以得到所述等式。
+\end{proof}
+\begin{remark}
+群可以被定义为带有显式逆运算的代数，也可以被定义为所有元素可逆的幺半群。由于逆在集合层唯一，这两种对象结构等价，所得同态也相同。对更高乘法空间，类似唯一性必须在恰当的同伦类型层面验证。
+\end{remark}
+
+\section{结构同一性与结构同态的比较}
+\begin{proposition}
+带基点空间和二元运算空间的结构同一性，分别由其结构同态中的可逆箭头给出。具体地，把定理\ref{thm:pointed-maps}与定理\ref{thm:magma-hom}中的底函数限制为等价，即得到前半部的结构同一性公式。
+\end{proposition}
+\begin{proof}
+若一个结构同态可逆，忘却后得到底函数的逆，因此底函数为等价。反向，若底函数等价且保持结构，把结构相容沿底函数的逆传输，得到逆函数的相容。比如二元运算情形，对 $b_1,b_2:B$ 取 $a_i=f^{-1}b_i$，由 $f\mu(a_1,a_2)=\nu(fa_1,fa_2)$ 及逆同伦得到逆函数保运算。两侧复合的相容由相同方形拼接给出。范畴完备性再把可逆结构箭头识别为对象路径。
+\end{proof}
+\begin{remark}
+普通单价性把结构同一性识别为结构等价；有向单价性把一般结构箭头识别为结构保持函数。后一原理保留非可逆映射，所以它能够组织整个范畴，而不仅是对象及其对称性的群胚。
+\end{remark}
+
+\section{自然性对统一构造的限制}
+\begin{theorem}[统一自映射必为恒等]\label{thm:polymorphic-id}
+设给定内部项
+\[
+\alpha:\prod_{A:\Sp}(A\to A).
+\]
+则 $\alpha_A(a)=a$ 对全部 $A,a$ 成立；这样的统一自映射构成可缩类型。
+\end{theorem}
+\begin{proof}
+对任意函数 $f:A\to B$，有向单价性把它看成 $\Sp$ 的箭头，自动自然性给出
+\[
+\alpha_B\circ f=f\circ\alpha_A.
+\]
+固定 $a:A$，取 $f:\one\to A$ 为常值 $a$。因为 $\alpha_\one(*)=*$，自然性在 $*$ 处求值给出
+\[
+\alpha_A(a)=f(\alpha_\one(*))=a.
+\]
+依赖函数外延性证明任一 $\alpha$ 等于恒等族。恒等族存在，因此整个类型可缩。
+\end{proof}
+\begin{remark}
+定理量化的是一个在有向宇宙内部统一定义的函数族。若在外部元语言中对每个集合随意选择一个自映射，这些选择未必自然，也未必构成上述依赖积的元素。因此结论不会排除具体集合上的非恒等自映射。
+\end{remark}
+
+\section{全部统一有限元运算}
+\begin{theorem}[统一运算的投影分类]\label{thm:uniform-projections}
+固定 $n\ge0$。有等价
+\[
+\left(\prod_{A:\Sp}(A^{\mathbf n}\to A)\right)
+\simeq\mathbf n.
+\]
+$i:\mathbf n$ 对应取第 $i$ 个坐标的投影。
+\end{theorem}
+\begin{proof}
+给定 $\alpha$，令
+\[
+i_\alpha=\alpha_{\mathbf n}(\id_{\mathbf n}).
+\]
+对任意元组 $x:\mathbf n\to A$，把 $x$ 本身看成空间间函数。自动自然性给出
+\[
+\alpha_A(x\circ\id_{\mathbf n})
+=x(\alpha_{\mathbf n}(\id_{\mathbf n})).
+\]
+左边就是 $\alpha_A(x)$，右边为 $x(i_\alpha)$。因此 $\alpha$ 是相应投影。反之，在标准元组 $\id_{\mathbf n}$ 上对第 $i$ 个投影求值，得到 $i$。两次函数外延性把逐点计算组装成两侧逆同伦。
+\end{proof}
+\begin{example}
+当 $n=1$ 时，只有恒等操作；当 $n=2$ 时，只有第一与第二投影。$n=0$ 时右边为空，说明不存在对每个空间统一选择一个点的内部操作。这也可直接把空间取为空类型看出。
+\end{example}
+\begin{remark}
+这是 Yoneda 原理的一个直接计算：$A\mapsto A^{\mathbf n}$ 是由有限空间 $\mathbf n$ 表示的函子，$A\mapsto A$ 由单位空间表示。统一运算完全由标准输入上的一个值决定。
+\end{remark}
+
+\section{自由幺半群的构造}
+\begin{definition}[有限字]
+对集合 $X$，定义有限字集合
+\[
+X^*=\sum_{n:\N}X^{\mathbf n}.
+\]
+元素 $(n,a)$ 表示长度为 $n$ 的字 $a_0a_1\cdots a_{n-1}$。空字为 $\epsilon$，长度为一的字记为 $[x]$。
+\end{definition}
+\begin{definition}[连接]
+对长度分别为 $m,n$ 的字 $u,v$，定义 $uv$ 为长度 $m+n$ 的字：前 $m$ 个位置取 $u$，后 $n$ 个位置取 $v$。其位置函数为
+\[
+(uv)_i=
+\begin{cases}
+u_i,&i<m,\\
+v_{i-m},&m\le i<m+n.
+\end{cases}
+\]
+
+\end{definition}
+\begin{proposition}
+$X^*$ 在连接下为幺半群，单位为空字。
+\end{proposition}
+\begin{proof}
+空字连接不增加任何坐标，故左右单位律逐位置成立。对长度 $\ell,m,n$ 的三个字 $u,v,w$，$(uv)w$ 与 $u(vw)$ 的长度经自然数结合律识别，且在三个区间
+\[
+0\le i<\ell,\quad
+\ell\le i<\ell+m,\quad
+\ell+m\le i<\ell+m+n
+\]
+分别取 $u_i,v_{i-\ell},w_{i-\ell-m}$。因此位置函数相等，函数外延性与依赖和路径公式给出字的相等。这证明结合律。
+\end{proof}
+\begin{definition}[折叠映射]
+设 $M$ 为幺半群，$f:X\to M$。定义
+\[
+\widehat f:X^*\to M,
+\qquad
+\widehat f(\epsilon)=1,
+\qquad
+\widehat f([x]w)=f(x)\,\widehat f(w).
+\]
+它可按字长作自然数递归构造：非空字唯一分解成首字母与其余尾字。
+\end{definition}
+\begin{proposition}
+$\widehat f$ 是幺半群同态，且 $\widehat f([x])=f(x)$。
+\end{proposition}
+\begin{proof}
+单位保持由定义。用第一个字 $u$ 的长度归纳证明
+$\widehat f(uv)=\widehat f(u)\widehat f(v)$。$u=\epsilon$ 时化为单位律。若 $u=[x]u'$，则
+\begin{align*}
+\widehat f(uv)
+&=\widehat f([x](u'v))\\
+&=f(x)\widehat f(u'v)\\
+&=f(x)(\widehat f(u')\widehat f(v))\\
+&=(f(x)\widehat f(u'))\widehat f(v)\\
+&=\widehat f(u)\widehat f(v).
+\end{align*}
+单字母公式由右单位律给出。
+\end{proof}
+\begin{theorem}[自由幺半群的普遍性质]
+限制到单字母给出自然双射
+\[
+\Hom_{\Mon}(X^*,M)\cong\Hom_{\Set}(X,U(M)).
+\]
+\end{theorem}
+\begin{proof}
+逆方向为 $f\mapsto\widehat f$。若 $h:X^*\to M$ 保单位和连接，则 $h(\epsilon)=1$，并有
+$h([x]w)=h([x])h(w)$。按字长归纳，$h$ 被它在单字母上的值唯一确定，所以 $h=\widehat{(h|_X)}$。另一侧逆已经由单字母公式证明。两个方向均由复合、求值和递归构造，因此对 $X$ 与 $M$ 自然。
+\end{proof}
+\begin{remark}
+将普通集合与幺半群放入各自单价范畴后，上述双射就是映射类型的等价，给出自由幺半群函子与遗忘函子的伴随。这个例子把本科代数中的自由对象、普通 Yoneda、合成可表性与结构同态联系在一起。
+\end{remark}
+\source{带基点空间、二元运算范畴及结构同态原理对应\cite[第7.2节]{RiehlICM}。统一操作的自然性后果见\cite[第7节]{GratzerWeinbergerBuchholtz}。本章通过箭头范畴与拉回明确计算结构映射，而不只从对象公式推测其含义。}
+
+
+
+% ===== chapters/22_semantics =====
+\chapter{语义基础与模型中的实现}
+\section{形式规则、内部定理与模型定理}
+\begin{definition}[类型论的模型]
+一个类型论模型把语境解释为某类对象，把依赖类型解释为语境上的纤维化，把项解释为截面，并将替换解释为拉回。模型还须为各类型构造及其形成、引入、消去、计算规则提供相容解释。
+\end{definition}
+\begin{example}
+在集合族模型中，语境为集合，类型为映射，项为截面，依赖和为总空间，依赖积为纤维乘积。这一模型的同一性类型只有通常的相等性，不能直接表示具有非平凡环路的单价宇宙。
+\end{example}
+\begin{definition}[内部推导]
+一个内部定理是在已列明的类型规则下构造某个类型的元素，或构造两个类型之间的等价。模型定理则在外部元数学中验证这些规则确实可以同时解释于某个数学环境。
+\end{definition}
+\begin{remark}
+例如路径归纳可以作为形式规则使用，也可以在单纯集合模型中用提升性质验证。前者负责内部推导的起点，后者负责将推导解释为空间同伦论。单价性和有向单价性也有同样的两个层次。把二者区分开，才能准确指出一个证明用了哪些公理、哪些语义存在结果。
+\end{remark}
+
+\section{依赖类型的显示映射}
+\begin{definition}[显示映射]
+设 $\mathcal M$ 为带终对象的范畴，选定一类拉回稳定的映射作为显示映射。一个类型 $A$ 在语境 $\Gamma$ 中的解释为显示映射 $p:A\to\Gamma$。扩充语境由总空间 $A$ 表示，项为 $p$ 的截面。
+\end{definition}
+\begin{proposition}[替换的相容]
+若 $f:\Delta\to\Gamma$，类型 $A\to\Gamma$ 沿 $f$ 的替换为 $f^*A\to\Delta$。若再给 $g:\Theta\to\Delta$，存在自然同构
+\[
+g^*(f^*A)\cong(fg)^*A.
+\]
+\end{proposition}
+\begin{proof}
+两端都满足同一个拉回普遍性质：到它们的映射等价于一个到 $A$ 的映射及一个到 $\Theta$ 的映射，使投影经过 $fg$ 相容。由拉回的唯一性得到自然同构。
+\end{proof}
+\begin{remark}
+自然同构尚不是形式替换所要求的判断相等。若语法规定连续替换严格结合，而模型只给出典范同构，还需要严格化安排。这一细节说明，即使各个类型构造分别能定义，也不能立即宣称得到一个完全严格的类型论模型。
+\end{remark}
+
+\section{从同伦模型验证路径归纳}
+\begin{proposition}[提升形式的路径归纳]
+设每个显示映射为模型范畴中的纤维化，并且对角有分解
+\[
+A\xrightarrow{r}P_\Gamma A\longrightarrow A\times_\Gamma A,
+\]
+其中 $r$ 为平凡余纤维化。若 $D\to P_\Gamma A$ 为纤维化，则沿 $r$ 给定的截面可延拓到整个 $P_\Gamma A$。
+\end{proposition}
+\begin{proof}
+沿 $r$ 的截面就是提升图的顶部映射：
+\[
+\begin{tikzcd}
+A\ar[r,"d"]\ar[d,"r"']&D\ar[d]\\
+P_\Gamma A\ar[r,"\id"']\ar[ur,dashed]&P_\Gamma A.
+\end{tikzcd}
+\]
+平凡余纤维化对纤维化有左提升性质，故存在虚线。这条虚线是延拓截面，并在常路径处与 $d$ 相容。
+\end{proof}
+\begin{proposition}[依赖语境扩充]
+若模型满足 Frobenius 性质，即平凡余纤维化沿纤维化拉回后仍为平凡余纤维化，则上述路径归纳在进一步依赖语境中保持成立。
+\end{proposition}
+\begin{proof}
+额外依赖变量由一条纤维化表示。将 $r$ 沿这条纤维化拉回，Frobenius 性质保证所得左边仍为平凡余纤维化。对新的目标纤维化再次使用提升，即得到扩充语境中的归纳。由于比较通过拉回定义，所构造规则与依赖变量的替换相容到模型所指定的严格化程度。
+\end{proof}
+\begin{remark}
+单纯集合模型的右真性及单射余纤维化使这个论证成立。具体的相对路径对象已经在前文给出。模型提供的提升通常是存在性的；若要解释计算规则与严格替换，还需选取相容结构。这正是后述严格宇宙定理所处理的问题之一。
+\end{remark}
+
+\section{预层、层与拓扑斯}
+\begin{definition}[预层拓扑斯]
+对小范畴 $\mathcal C$，预层范畴 $\Set^{\mathcal C^{\op}}$ 是一个基本的拓扑斯。其对象是随测试对象反变的集合族，态射为自然变换。
+\end{definition}
+\begin{example}
+单纯集合为 $\Set^{\Delta^{\op}}$。一个开集偏序上的预层把每个开集送到某类局部数据，并为包含关系给出限制映射。
+\end{example}
+\begin{definition}[层的粘合条件]
+在具有覆盖概念的测试范畴上，预层若对每个覆盖满足局部数据存在唯一相容粘合，则称为层。对于拓扑空间上的开覆盖 $U=\bigcup_iU_i$，条件可写成均衡子
+\[
+F(U)\longrightarrow\prod_iF(U_i)
+\rightrightarrows\prod_{i,j}F(U_i\cap U_j).
+\]
+\end{definition}
+\begin{remark}
+集合值情形的相容只需相等条件。空间值预层要把相等换成路径，并在三重、四重及更高交叠上保存相容。因此其粘合由覆盖的整个单纯图表的同伦极限表达，这称为下降。
+\end{remark}
+\begin{definition}[高阶拓扑斯]
+一个高阶拓扑斯是空间值预层高阶范畴的可达、保有限极限的反射局部化。这里“反射”表示包含函子有左伴随；“保有限极限”规定该左伴随与有限同伦极限相容；“可达”是控制大小、保证由一组小生成对象组织该构造的条件。
+\end{definition}
+\begin{remark}
+此定义供理解模型定理的适用范围。前面的内部证明只使用已列明的类型规则，并不要求读者先完成高阶拓扑斯的一般理论。普通空间高阶范畴是本讲义的基本模型；空间值层及其适当局部化提供进一步实例\cite{LurieHTT,RiehlSemantics}。
+\end{remark}
+
+\section{严格单价宇宙的存在}
+\begin{definition}[带结构的纤维化]
+裸映射 $p:E\to B$ 可以附带指定的提升操作、分解或其他与拉回相容的结构。这些结构连同保结构同构组成纤维化结构的群胚。结构应当在局部测试对象上可表示，并受一个固定大小界控制。
+\end{definition}
+\begin{remark}
+引入结构的目的不是改变所表示的同伦类型，而是把“可以选择某个提升”转换为可在替换中追踪的数据。在适当构造中，不同结构选择之间的空间受到控制，分类宇宙仍准确表示原本关心的纤维族及其等价。
+\end{remark}
+\begin{theorem}[严格单价宇宙，语义基础定理]
+在适当的元集合论大小假设下，每个高阶拓扑斯都有支持依赖类型论的严格模型，并具有对所需类型构造封闭的单价宇宙。可选取足够大的大小界，使普遍小纤维化及其替换、依赖构造满足模型要求的严格相容。
+\end{theorem}
+\begin{remark}
+本定理是 Shulman 的严格单价宇宙结果，见\cite{ShulmanUniverses}；背景与类型论解释见\cite{RiehlSemantics}。大小界通常用足够大的强不可达基数组织，因而这不是一个不加元理论假设的“所有类型组成一个小类型”的断言。
+\end{remark}
+\begin{proposition}[模型中的单价性含义]
+对这样的普遍族，两条分类映射的同伦恰好对应它们所分类的族之间的纤维等价。
+\end{proposition}
+\begin{proof}
+将普遍族的单价比较沿两个分类映射拉回，得到路径族与纤维等价族之间的等价。再取截面，函数外延性把分类映射的路径识别为逐参数路径；这正与纤维等价的截面对应。
+\end{proof}
+
+\section{为什么所有 Reedy 族不组成所需空间范畴}
+\begin{example}[任意二部关系]
+取集合 $A,B$ 及关系集合 $R$，配有 $s:R\to A$、$t:R\to B$。构造普通范畴 $E_R$，其对象为 $A\sqcup B$，同层只保留恒等态射，从 $a\in A$ 到 $b\in B$ 的箭头为满足 $s(r)=a,t(r)=b$ 的元素 $r$。没有反向跨层箭头。投影到 $[1]$ 得到一条 Reedy 纤维化的离散神经模型。
+\end{example}
+\begin{proposition}
+该投影为左纤维化，当且仅当 $s:R\to A$ 是双射。此时 $t\circ s^{-1}:A\to B$ 为其传输函数。
+\end{proposition}
+\begin{proof}
+给定 $a$ 和底中唯一非恒等箭头，其全部提升正是 $s^{-1}(a)$。离散情形的可缩性意味着该集合恰有一个元素。因此左纤维化条件等价于 $s$ 的每个纤维为单元素，即 $s$ 双射。其提升终点由 $t$ 给出，故传输如所述。
+\end{proof}
+\begin{remark}
+一般的 Reedy 族允许某个源没有提升，也允许有多个不同提升。它们记录关系或对应，而非一个函数。故在有向宇宙中必须选择协变纤维化，不能把所有 Reedy 纤维化的宇宙直接命名为具有函数箭头的空间范畴。
+\end{remark}
+
+\section{带权极限的普通定义}
+\begin{definition}[带权极限]
+设 $\mathcal C$ 小，$F:\mathcal C\to\mathcal V$，$W:\mathcal C\to\Set$。若 $\mathcal V$ 有集合指数和所需极限，带权极限 $\{W,F\}$ 由自然同构
+\[
+\Hom_{\mathcal V}(X,\{W,F\})
+\cong\Nat\bigl(W,\Hom_{\mathcal V}(X,F(-))\bigr)
+\]
+刻画。
+\end{definition}
+\begin{proposition}[均衡子公式]
+带权极限可由
+\[
+\{W,F\}\longrightarrow\prod_cF(c)^{W(c)}
+\rightrightarrows\prod_{u:c\to d}F(d)^{W(c)}
+\]
+构造。两条平行箭头分别使用 $F(u)$ 的后复合与 $W(u)$ 的前复合。
+\end{proposition}
+\begin{proof}
+从 $X$ 到中间乘积的映射，逐分量等价于函数
+$W(c)\to\Hom(X,F(c))$。落入均衡子恰要求对每条 $u:c\to d$，
+\[
+F(u)\circ\alpha_c(w)=\alpha_d(W(u)w).
+\]
+这正是自然变换的自然性条件，因此均衡子具有定义中的普遍性质。
+\end{proof}
+\begin{example}[普通极限与求值]
+常值单位权 $W=\one$ 给出普通极限。若 $W=\Hom_{\mathcal C}(c_0,-)$，则普通 Yoneda 引理给出
+\[
+\{W,F\}\cong F(c_0).
+\]
+这说明“从一个图表选定一个对象求值”本身就是带权极限的一种特殊情形。
+\end{example}
+
+\section{同伦带权极限}
+\begin{definition}[单纯权]
+将权 $W$ 换成单纯集合值函子 $W:\mathcal C\to\sSet$，将指数换成单纯映射对象，就得到富集带权极限。为了得到同伦不变的构造，需令权为适当的余纤维对象，图表为纤维对象。
+\end{definition}
+\begin{proposition}[提升检测]
+在具有项目模型结构的图表范畴中，若 $W$ 为项目余纤维的权，$F$ 为逐对象纤维的图表，则富集自然变换对象 $\Nat(W,F)$ 是 Kan 复形。它对 $F$ 的弱等价保持同伦不变。
+\end{proposition}
+\begin{proof}
+测试 $\Nat(W,F)$ 的一个角填充，通过张量与映射对象的伴随，等价于把图表映射
+\[
+W\times\Lambda_k^n\longrightarrow F
+\]
+延拓到 $W\times\Delta^n$。权的余纤维性与单纯模型结构的推积公理保证左边的包含为项目平凡余纤维化，而 $F\to\one$ 为项目纤维化，故存在提升。弱等价不变性是同一右 Quillen 映射对象在纤维对象上的保持性质；可先分解弱等价并用提升性质及同伦逆验证。
+\end{proof}
+\begin{remark}
+项目模型结构中弱等价与纤维化逐对象检测。其存在在这里由单纯集合的余纤维生成性保证，具体构造可采用逐表示对象附着生成余纤维化。带权方法由此把复杂图表的同伦性质转化为权本身的组合性质。
+\end{remark}
+
+\section{切片神经给出的权}
+\begin{definition}
+对普通小范畴 $\mathcal C$，定义权
+\[
+W(c)=N(\mathcal C/c).
+\]
+若 $u:c\to d$，后复合给出 $\mathcal C/c\to\mathcal C/d$，因此 $W$ 协变。
+\end{definition}
+\begin{proposition}
+每个 $W(c)$ 可缩，且 $W$ 是常值单位权的一个项目余纤维替换。
+\end{proposition}
+\begin{proof}
+切片 $\mathcal C/c$ 有终对象 $\id_c$。其神经的每个对象到终对象有唯一箭头，给出恒等函子到常值函子的自然变换，因而神经可缩。
+
+为验证权的余纤维性，观察其 $n$-单形由链
+\[
+c_0\to c_1\to\cdots\to c_n\to c
+\]
+给出。因此固定前 $n$ 条箭头后，最后一条箭头组成协变表示函子 $\Hom(c_n,-)$。权可按单形维数构造：每条非退化链贡献一个表示函子乘以 $\Delta^n$，沿表示函子乘以 $\partial\Delta^n$ 附着；退化链已由低维部分产生。这是项目余纤维化的胞腔构造。逐对象可缩性又使 $W\to\one$ 为弱等价，故它是所述替换。
+\end{proof}
+\begin{example}[单箭头图表的同伦极限]
+取 $\mathcal C=[1]$，图表为 $A\xrightarrow fB$。权在 $0$ 处是一点，在 $1$ 处是 $\Delta^1$。带权极限由 $a:A$ 与一条从 $f(a)$ 出发的 $B$ 中路径组成。终点可以变化，因此整个类型等价于 $A$。这恢复了“单箭头图表的极限为源”的同伦版本。
+\end{example}
+
+\section{左纤维化与图表的语义比较}
+\begin{theorem}[参数化图表比较，引用的语义定理]
+令 $\mathcal E$ 为一个适当的类型论模型拓扑斯，$\Gamma$ 为其单纯对象，$\mathcal C$ 为普通小范畴。$N\mathcal C\times\Gamma$ 上的左纤维化，与 $\Gamma$ 上左纤维化的 $\mathcal C$ 形图表，存在在纤维对象上互逆到弱等价的比较。比较对 $\Gamma$ 的替换及 $\mathcal C$ 的函子相容。
+\end{theorem}
+\begin{remark}
+这一表述保留了有向单价性所需的参数。取 $\mathcal C=[n]$，就比较 $\Delta^n\times\Gamma$ 上的族与 $\Gamma$ 上的函数链。其证明使用与切片神经有关的权，把提升与等价的检验降到单纯集合中的有限形状计算，见\cite[定理4.4.4与6.2.5]{CavalloRiehlSattler}。
+\end{remark}
+\begin{proposition}[从族比较到宇宙比较]
+若两种参数化族分别由 $X$ 与 $Y$ 分类，并且上述比较在任意 $\Gamma$ 中自然成立，则得到分类对象间的等价 $X\simeq Y$。
+\end{proposition}
+\begin{proof}
+分类性质将比较写成对每个 $\Gamma$ 的自然等价
+\[
+\Map(\Gamma,X)\simeq\Map(\Gamma,Y).
+\]
+取 $\Gamma=X$，恒等映射给出 $f:X\to Y$；取 $\Gamma=Y$，逆自然等价在恒等处给出 $g:Y\to X$。自然性与两侧逆比较分别给出 $gf\simeq\id_X$、$fg\simeq\id_Y$。因此 $f$ 为等价。这是可表函子的 Yoneda 检测原理。
+\end{proof}
+\begin{remark}
+仅在无参数的点上建立双射，不能应用此命题。一般空间可能有相同的点集而不同的路径结构；高阶分类对象还要记录更高参数。因此语义证明必须保留所有测试语境。
+\end{remark}
+
+\section{基础结果的依赖关系}
+\begin{proposition}[内部结论的依赖]
+在本讲义列出的规则与基础定理下，有如下依赖关系。
+\end{proposition}
+\begin{proof}
+路径的逆、连接、传输和依赖和路径公式由同一性归纳推出；函数之间的逐点比较还使用函数外延性。等价的拟逆判据由这些路径公式及收缩定义推出。单价公理随后把结构传输转换为结构等价，产生有限类型和挠子分类空间。
+
+加入外单纯形状与 Segal 条件后，平方的三角剖分给出可表族的协变性。协变提升产生作用及自动自然性；余切片的显式有向收缩再给出箭头归纳，继而给出 Yoneda 引理。这一部分无须先构造空间范畴。
+
+最后，普遍左纤维化与有限单纯形比较提供有向宇宙。高阶比较推出 Segal 条件，普通单价性推出 Rezk 完备性，从而得到空间范畴。带结构范畴则由总空间、箭头范畴和拉回构造。
+\end{proof}
+\begin{remark}
+相应的基础引用范围为：Quillen 与 Reedy 模型结构负责同伦模型；严格单价宇宙定理负责宇宙与替换的严格相容；内部形状比较定理负责二次 Segal 定义与全部脊柱定义的等价；普遍左纤维化比较负责有向宇宙的存在。正文对这些结果均以基础定理注明，不将其一般模型论证明与后续内部推导混写。
+\end{remark}
+
+\section{与 Riehl 报告的结果对应}
+\begin{remark}
+报告命题 3.6 的任意语境路径归纳，在本讲义的相对路径对象、Frobenius 性质与同一性类型规则中得到解释；报告定义 4.6 对应定义\ref{def:univalence}；报告中的有限空间、挠子和高阶群作用，在有限类型与高阶群两章展开。
+
+报告命题 6.6 对应定理\ref{thm:arrow-induction}，其证明在本讲义中通过 $f_t(s)=f(s\wedge t)$ 的显式收缩完成。报告命题 6.7 对应定理\ref{thm:synthetic-yoneda}。报告定义 7.1 对应定义\ref{def:directed-univalence}，报告推论 7.2 对应定理\ref{thm:spaces-category}。带基点映射与二元运算同态则分别见定理\ref{thm:pointed-maps}与定理\ref{thm:magma-hom}。
+\end{remark}
+\begin{remark}
+合成方法的数学内容在于选择足够强且相容的基本规则，使空间与范畴中的常用不变性成为内部推导的一部分。模型论验证这些规则的共同可实现性；内部论证则利用规则直接计算路径、映射与普遍性质。两部分相互支持，同时保持各自明确的证明责任。
+\end{remark}
+
+
+\appendix
+
+% ===== chapters/a_calculations =====
+\chapter{圆周、同伦纤维与单形乘积的计算}
+\label{chap:calculations}
+
+本附录用几个完整计算说明前面出现的规则如何共同工作。圆周的计算需要增加一种高阶归纳类型；其生成元、消去规则与计算规则在下节明确给出。同伦纤维和单形乘积的计算则只使用正文已经建立的规则。
+
+\section{由一个点和一条环路生成圆周}
+
+\begin{definition}[圆周的高阶归纳规则]
+圆周类型 $S^1$ 由一个点和一条环路生成：
+\[
+ b:S^1,\qquad \ell:(b=_{S^1}b).
+\]
+它的依赖消去规则如下。给定类型族 $P:S^1\to\U$，若有
+\[
+ d:P(b),\qquad q:\tr^P_\ell(d)=d,
+\]
+则存在截面 $s:\Pi_{x:S^1}P(x)$，满足 $s(b)\equiv d$，而 $s$ 沿 $\ell$ 的依赖作用等于 $q$。在环路上的计算可以是同一性类型中的等式，不要求成为定义相等。
+\end{definition}
+
+\begin{remark}
+这是一条关于新类型的生成与消去规则。普通自然数的构造元位于点的层次；这里的第二个构造元位于路径的层次。在空间模型中，这个类型表示通常圆周的同伦类型。高阶归纳类型及此模型解释见 \cite{HoTT,Rijke}；以下计算从刚列出的规则出发。
+\end{remark}
+
+\begin{proposition}[圆周的递归规则]
+给定 $x_0:X$ 和 $p:x_0=x_0$，存在函数 $f:S^1\to X$，使得
+\[
+ f(b)\equiv x_0,\qquad \ap_f(\ell)=p.
+\]
+\end{proposition}
+\begin{proof}
+取常值族 $P(x)\equiv X$。常值族沿任何路径的传输都等于恒等函数，这是对路径作归纳的结果。因此给出消去规则要求的 $\tr^P_\ell(x_0)=x_0$ 等价于给出 $p:x_0=x_0$。依赖消去得到的截面就是所求函数。
+\end{proof}
+
+\begin{lemma}[命题值族上的圆周归纳]
+设每个 $P(x)$ 都是命题。给出 $d:P(b)$ 就足以构造 $\Pi_xP(x)$。
+\end{lemma}
+\begin{proof}
+由于 $P(b)$ 是命题，$\tr^P_\ell(d)$ 与 $d$ 之间存在路径。此路径提供依赖消去所需的第二项数据。若有两个所构造的截面，它们逐点相等；函数外延性又给出截面之间的相等。
+\end{proof}
+
+\begin{proposition}[圆周的连通性]
+$S^1$ 是连通的，即 $\Pi_{x:S^1}\trunc{b=x}$ 有元素。
+\end{proposition}
+\begin{proof}
+取 $P(x)=\trunc{b=x}$。这是命题值族，在 $b$ 处有 $|\refl_b|$。应用上一引理。
+\end{proof}
+
+\begin{remark}
+此证明只产生被命题截断的路径存在性。它没有选择每个 $x$ 到基点的具体路径。若能相容地选择全部具体路径，$S^1$ 就会可缩；下面的环路计算表明这不成立。
+\end{remark}
+
+\section{整数幂与路径的传输公式}
+
+\begin{definition}[环路的整数幂]
+设 $p:a=a$。对非负整数定义
+\[
+ p^0=\refl_a,\qquad p^{n+1}=p^n\cdot p.
+\]
+对 $n>0$ 定义 $p^{-n}=(p^n)^{-1}$。整数在这里使用其通常的集合结构；也可以由零、正自然数与负自然数构造同一个集合类型。
+\end{definition}
+
+\begin{lemma}[整数幂的运算]
+对于 $m,n\in\Z$，有
+\[
+ p^{n+1}=p^n\cdot p,\qquad
+ p^{m+n}=p^m\cdot p^n,\qquad
+ (p^n)^{-1}=p^{-n}.
+\]
+\end{lemma}
+\begin{proof}
+第一式在 $n\geq0$ 时由定义成立。若 $n=-k$ 且 $k>0$，由 $p^k=p^{k-1}\cdot p$ 及反演公式，得到
+\[
+ p^{-k}\cdot p
+ =(p^{k-1}\cdot p)^{-1}\cdot p
+ =p^{-1}\cdot(p^{k-1})^{-1}\cdot p.
+\]
+为消去末端的 $p$，先由自然数归纳证明 $p\cdot p^r=p^r\cdot p$，再反演可得 $p$ 与 $p^{-r}$ 也交换。因此上式等于 $p^{-(k-1)}$。在 $k=1$ 时，结果为 $\refl_a$。
+
+第二式先对 $n\geq0$ 作归纳。$n=0$ 是右单位律，归纳步骤为
+\[
+ p^{m+n+1}=(p^m\cdot p^n)\cdot p
+ =p^m\cdot(p^n\cdot p).
+\]
+对负整数的步骤使用第一式的等价形式 $p^{r-1}=p^r\cdot p^{-1}$。第三式在 $n>0$ 时为定义，在 $n<0$ 时由双重反演律得到，在零处为恒等路径的反演律。每个等式均指路径演算中的等式，其相容性由正文的路径归纳提供。
+\end{proof}
+
+\begin{lemma}[函数族中的传输]
+设 $A,B:X\to\U$，$r:x=y$，以及 $h:A(x)\to B(x)$。则
+\[
+ \tr^{z\mapsto(A(z)\to B(z))}_r(h)
+ =\tr^B_r\circ h\circ\tr^A_{r^{-1}}.
+\]
+若 $B(z)=(a=z)$，则 $\tr^B_r(q)=q\cdot r$。
+\end{lemma}
+\begin{proof}
+分别对 $r$ 作路径归纳。在 $r\equiv\refl_x$ 时，第一式两边均为 $h$，第二式两边均为 $q$，其中需要使用恒等函数合成的单位律与路径的右单位律。归纳原理给出一般情形。
+\end{proof}
+
+\begin{example}
+取 $X=\U$，$A$ 为恒等族，$B$ 为常值类型 $Z$。一个函数 $h:A\to Z$ 沿 $p:A=B$ 的传输为
+\[
+ h\circ\idtoequiv(p)^{-1}:B\to Z.
+\]
+若定义域不变而值域变化，则传输为后复合。定义域的逆变性与值域的协变性因此直接反映在传输公式中。
+\end{example}
+
+\section{整数覆盖族}
+
+\begin{definition}[编码族]
+令 $\mathsf{succ}:\Z\simeq\Z$ 为等价 $n\mapsto n+1$，其逆为 $n\mapsto n-1$。由圆周递归与单价性定义
+\[
+ \mathsf{Code}:S^1\to\U,
+\]
+使得
+\[
+ \mathsf{Code}(b)\equiv\Z,\qquad
+ \ap_{\mathsf{Code}}(\ell)=\ua(\mathsf{succ}).
+\]
+\end{definition}
+
+\begin{proposition}[沿生成环路的传输]
+对于 $n:\Z$，有
+\[
+ \tr^{\mathsf{Code}}_\ell(n)=n+1,
+ \qquad
+ \tr^{\mathsf{Code}}_{\ell^{-1}}(n)=n-1.
+\]
+更一般地，$\tr^{\mathsf{Code}}_{\ell^m}(n)=n+m$。
+\end{proposition}
+\begin{proof}
+族中的传输等于沿分类映射所给宇宙路径的传输。第一式因而由 $\idtoequiv(\ua(\mathsf{succ}))=\mathsf{succ}$ 得到。反向路径的传输是正向传输的逆等价，给出第二式。
+
+对于非负 $m$，用 $\ell^{m+1}=\ell^m\cdot\ell$ 和传输的合成律作归纳：
+\[
+ \tr_{\ell^{m+1}}(n)
+ =\tr_\ell(\tr_{\ell^m}(n))
+ =(n+m)+1.
+\]
+负整数使用反向路径以及递减函数的迭代。$m=0$ 是恒等路径的计算规则。
+\end{proof}
+
+\begin{lemma}
+每个 $\mathsf{Code}(x)$ 都是集合。
+\end{lemma}
+\begin{proof}
+性质 $\isSet(\mathsf{Code}(x))$ 是命题。它在基点处成立，因为整数是集合。命题值族上的圆周归纳将此证明延拓到每个 $x$。
+\end{proof}
+
+\begin{definition}[编码]
+对 $x:S^1$ 定义
+\[
+ \mathsf{encode}_x:(b=x)\to\mathsf{Code}(x),
+ \qquad
+ \mathsf{encode}_x(q)=\tr^{\mathsf{Code}}_q(0).
+\]
+\end{definition}
+
+\begin{example}
+在基点处，$\mathsf{encode}_b(\ell^n)=n$。因此不同整数幂不可能相等：如果 $\ell^m=\ell^n$，对该等式应用 $\mathsf{encode}_b$ 就得到 $m=n$。
+\end{example}
+
+\section{解码与圆周的环路空间}
+
+\begin{proposition}[解码的构造]
+存在依赖函数
+\[
+ \mathsf{decode}_x:\mathsf{Code}(x)\to(b=x),
+\]
+在 $x=b$ 处满足 $\mathsf{decode}_b(n)=\ell^n$。
+\end{proposition}
+\begin{proof}
+对族
+\[
+ D(x)=\bigl(\mathsf{Code}(x)\to(b=x)\bigr)
+\]
+应用圆周的依赖消去规则。取 $d(n)=\ell^n$ 作为 $D(b)$ 的元素。需要给出 $\tr^D_\ell(d)=d$。
+
+由函数族中的传输公式，对每个整数 $n$ 有
+\begin{align*}
+ \tr^D_\ell(d)(n)
+ &=\tr^{x\mapsto(b=x)}_\ell
+     \bigl(d(\tr^{\mathsf{Code}}_{\ell^{-1}}(n))\bigr)\\
+ &=d(n-1)\cdot\ell\\
+ &=\ell^{n-1}\cdot\ell\\
+ &=\ell^n=d(n).
+\end{align*}
+函数外延性将这些逐点等式组合为所需的路径。依赖消去即给出 $\mathsf{decode}$。
+\end{proof}
+
+\begin{lemma}[先编码后解码]
+对 $x:S^1$ 和 $q:b=x$，有
+\[
+ \mathsf{decode}_x(\mathsf{encode}_x(q))=q.
+\]
+\end{lemma}
+\begin{proof}
+这里的 $x$ 与 $q$ 一起变化，因而可以对 $q$ 作基点路径归纳。只需计算 $x\equiv b$、$q\equiv\refl_b$。此时
+\[
+ \mathsf{encode}_b(\refl_b)=0,
+ \qquad
+ \mathsf{decode}_b(0)=\ell^0=\refl_b.
+\]
+这正是归纳所需的基始情形。
+\end{proof}
+
+\begin{lemma}[先解码后编码]
+对 $x:S^1$ 和 $n:\mathsf{Code}(x)$，有
+\[
+ \mathsf{encode}_x(\mathsf{decode}_x(n))=n.
+\]
+\end{lemma}
+\begin{proof}
+在基点处，由整数覆盖族的传输计算，
+\[
+ \mathsf{encode}_b(\mathsf{decode}_b(n))
+ =\tr^{\mathsf{Code}}_{\ell^n}(0)=n.
+\]
+令
+\[
+ P(x)=\Pi_{n:\mathsf{Code}(x)}
+ \bigl(\mathsf{encode}_x(\mathsf{decode}_x(n))=n\bigr).
+\]
+因为 $\mathsf{Code}(x)$ 是集合，括号中的同一性类型为命题；命题的依赖积仍是命题。因此 $P$ 是命题值族。刚证明的基点情形通过圆周归纳延拓到全部 $x$。
+\end{proof}
+
+\begin{theorem}[圆周的编码—解码等价]\label{thm:circle-encode}
+对于每个 $x:S^1$，存在等价
+\[
+ (b=x)\simeq\mathsf{Code}(x).
+\]
+特别地，
+\[
+ \Omega(S^1,b)\simeq\Z.
+\]
+在该等价下，环路合成对应整数加法，生成环路 $\ell$ 对应整数 $1$。
+\end{theorem}
+\begin{proof}
+两个引理说明 $\mathsf{encode}$ 与 $\mathsf{decode}$ 互为同伦逆，因而由定理~\ref{thm:equiv-qinv} 构成等价。整数幂公式给出
+\[
+ \mathsf{decode}_b(m+n)
+ =\ell^{m+n}
+ =\ell^m\cdot\ell^n.
+\]
+因此逆等价保持群运算；原等价也保持运算。$\ell^1=\ell$ 给出最后一个断言。
+\end{proof}
+
+\begin{proposition}[圆周的高阶路径]
+$S^1$ 是 $1$-型，其基点处的二重环路空间可缩。
+\end{proposition}
+\begin{proof}
+定理说明 $(b=x)$ 等价于集合，故它是集合。对任意 $x,y:S^1$，性质 $\isSet(x=y)$ 是命题。由连通性得到被截断的路径 $b=x$；由于目标是命题，可消去这个截断，将 $x$ 化为 $b$。这说明所有同一性类型 $(x=y)$ 都是集合，所以 $S^1$ 是 $1$-型。
+
+二重环路空间为
+\[
+ (\refl_b=_{(b=b)}\refl_b).
+\]
+由于 $(b=b)$ 是集合，上式是命题，又有恒等路径作为元素，因此可缩。更高的迭代环路空间也可缩。
+\end{proof}
+
+\begin{proposition}[编码族的总空间]
+$\Sigma_{x:S^1}\mathsf{Code}(x)$ 可缩。
+\end{proposition}
+\begin{proof}
+逐纤维的解码等价诱导总空间等价
+\[
+ \Sigma_{x:S^1}\mathsf{Code}(x)
+ \simeq
+ \Sigma_{x:S^1}(b=x).
+\]
+右边是以 $b$ 为起点的路径总空间，由命题~\ref{prop:based-contractible} 可缩。可缩性沿等价传递，故左边也可缩。
+\end{proof}
+
+\begin{remark}
+编码族因而具有三个相互相容的描述：纤维是整数集合；绕圆周一次的传输为 $n\mapsto n+1$；总空间可缩。这些性质正是圆周普遍覆盖的同伦论特征。计算中真正使用单价性的地方，是把后继等价变成宇宙中的路径，以便定义 $\mathsf{Code}$。
+\end{remark}
+
+\section{圆周映射与次数}
+
+\begin{theorem}[圆周的映射空间]
+对于任意类型 $X$，存在等价
+\[
+ (S^1\to X)\simeq\Sigma_{x:X}(x=x).
+\]
+正向映射为 $f\mapsto(f(b),\ap_f(\ell))$。
+\end{theorem}
+\begin{proof}
+递归规则对每一对 $(x,p)$ 给出函数，形成反向映射。递归的点与路径计算规则说明，先递归再评价返回 $(x,p)$。
+
+还需证明一个已有函数 $f$ 与由 $(f(b),\ap_f\ell)$ 递归得到的函数 $g$ 相等。构造 $\Pi_{z:S^1}(g(z)=f(z))$。基点处取恒等路径。沿 $\ell$ 的相容条件由同一性族的传输公式写成
+\[
+ (\ap_g\ell)^{-1}\cdot\refl_{f(b)}\cdot\ap_f\ell
+ =\refl_{f(b)}.
+\]
+递归的路径计算规则给出 $\ap_g\ell=\ap_f\ell$，所以此条件由逆律成立。依赖消去得到逐点同伦，函数外延性再将其变为 $g=f$。两个方向互为同伦逆。
+\end{proof}
+
+\begin{definition}[带基点映射]
+从 $(A,a)$ 到 $(X,x)$ 的带基点映射类型为
+\[
+ \Map_*((A,a),(X,x))
+ =\Sigma_{f:A\to X}(f(a)=x).
+\]
+\end{definition}
+
+\begin{proposition}
+存在等价
+\[
+ \Map_*((S^1,b),(X,x))\simeq(x=x).
+\]
+它将 $(f,q)$ 送到 $q^{-1}\cdot\ap_f(\ell)\cdot q$。
+\end{proposition}
+\begin{proof}
+上一映射空间等价与在基点处评价相容。取该等价在 $x$ 处的同伦纤维，右侧变为
+\[
+ \Sigma_{y:X}\Sigma_{p:y=y}(y=x).
+\]
+对最后一条路径作归纳，将 $y$ 改为 $x$，就得到 $(x=x)$。在一般 $q:y=x$ 处，此搬运将环路 $p$ 送到 $q^{-1}\cdot p\cdot q$，由同一性类型的传输公式可得。
+\end{proof}
+
+\begin{definition}[圆周映射的次数]
+带基点映射 $(f,q):(S^1,b)\to(S^1,b)$ 的次数为相应环路在等价 $\Omega S^1\simeq\Z$ 下的像，记为 $\deg(f,q)$。
+\end{definition}
+
+\begin{proposition}[次数的乘法公式]
+恒等带基点映射的次数为 $1$，常值带基点映射的次数为 $0$。若带基点映射 $f,g$ 的次数分别为 $m,n$，则
+\[
+ \deg(g\circ f)=nm.
+\]
+\end{proposition}
+\begin{proof}
+由映射空间等价，每个带基点映射都等于将生成环路送到某个整数幂的递归映射。因此只需计算 $f_*(\ell)=\ell^m$ 与 $g_*(\ell)=\ell^n$ 的情形。路径上的函数作用保持合成和反演，故
+\[
+ (g\circ f)_*(\ell)
+ =g_*(\ell^m)
+ =(g_*\ell)^m
+ =(\ell^n)^m
+ =\ell^{nm}.
+\]
+最后一式对整数幂作归纳得到。恒等映射与常值映射分别送 $\ell$ 到 $\ell$ 与 $\refl_b$，给出前两个断言。
+\end{proof}
+
+\begin{example}[二维环面]
+设 $T^2=S^1\times S^1$，基点为 $(b,b)$。乘积类型的路径公式给出
+\[
+ \Omega(T^2,(b,b))
+ \simeq\Omega(S^1,b)\times\Omega(S^1,b)
+ \simeq\Z\times\Z.
+\]
+此等价保持群运算，因为路径在各坐标中分别合成。两条坐标环路分别对应 $(1,0)$ 与 $(0,1)$，它们交换由整数加法的交换律可知。
+\end{example}
+
+\begin{example}[圆周上的空间族]
+取 $X=\U$。圆周映射空间定理与单价性给出
+\[
+ (S^1\to\U)\simeq\Sigma_{A:\U}(A\simeq A).
+\]
+因此在圆周上给出一个小空间族，等价于给出一个纤维 $A$ 和该纤维的一个自等价。取 $A=\Z$、自等价为后继，得到上面的编码族；取 $A=\mathbf2$、自等价交换两个元素，得到二重覆盖的族。这里的分类保留了自等价之间的全部高阶路径。
+\end{example}
+
+\section{同伦纤维的三个变换公式}
+
+\begin{proposition}[依赖和投影的纤维]
+设 $E:B\to\U$，$p:\Sigma_{x:B}E(x)\to B$ 为第一投影。则
+\[
+ \fib_p(b)\simeq E(b).
+\]
+\end{proposition}
+\begin{proof}
+左侧展开为 $\Sigma_{x:B}\Sigma_{u:E(x)}(x=b)$。定义
+\[
+ ((x,u),q)\longmapsto\tr^E_q(u),
+ \qquad
+ v\longmapsto((b,v),\refl_b).
+\]
+先取第二个映射再取第一个，由恒等路径的传输规则得到 $v$。对另一个复合，向量 $((x,u),q)$ 中的 $x,q$ 可同时作路径归纳。只需计算 $x=b,q=\refl_b$，此时复合为恒等。故两个映射互逆。
+\end{proof}
+
+\begin{proposition}[复合映射的纤维]\label{prop:composite-fiber}
+给定 $A\xrightarrow f B\xrightarrow g C$ 及 $c:C$，有等价
+\[
+ \fib_{g\circ f}(c)
+ \simeq
+ \Sigma_{(b,q):\fib_g(c)}\fib_f(b).
+\]
+\end{proposition}
+\begin{proof}
+左侧元素为 $(a,r:g(f(a))=c)$。将它送到
+\[
+ ((f(a),r),(a,\refl_{f(a)})).
+\]
+右侧元素可写作 $((b,q),(a,p))$，其中 $q:g(b)=c$、$p:f(a)=b$。反向映射定义为
+\[
+ ((b,q),(a,p))\longmapsto
+ (a,\ap_g(p)\cdot q).
+\]
+左侧上的复合等于 $(a,\refl\cdot r)$，由单位律回到 $(a,r)$。右侧上的复合先将 $b$ 改成 $f(a)$。对 $p:f(a)=b$ 作路径归纳后，$b=f(a)$ 且 $p=\refl$，此时结果与原元素仅相差路径的左单位律。依赖和的路径公式将该计算组成总空间中的路径。
+\end{proof}
+
+\begin{example}
+若 $g$ 是等价，则 $\fib_g(c)$ 可缩。上式表明 $\fib_{gf}(c)$ 等价于 $\fib_f(b_0)$，其中 $(b_0,q_0)$ 为该可缩纤维的中心。这给出“复合等价保持纤维性质”的直接计算。选择中心不会带来歧义，因为中心及其收缩数据的类型也是命题。
+\end{example}
+
+\begin{proposition}[同伦拉回的粘合]
+给定 $A\xrightarrow f C\xleftarrow g B$ 和 $k:D\to B$。令
+\[
+ P=\Sigma_{a:A}\Sigma_{b:B}(f(a)=g(b)).
+\]
+将 $P$ 投影到 $B$，再沿 $k$ 取同伦拉回，所得类型等价于
+\[
+ \Sigma_{a:A}\Sigma_{d:D}(f(a)=g(k(d))).
+\]
+\end{proposition}
+\begin{proof}
+迭代拉回的元素为 $(a,b,p,d,q)$，其中
+\[
+ p:f(a)=g(b),\qquad q:b=k(d).
+\]
+正向映射定义为
+\[
+ (a,b,p,d,q)\longmapsto(a,d,p\cdot\ap_g(q)).
+\]
+逆映射将 $(a,d,r)$ 送到 $(a,k(d),r,d,\refl)$。一个复合由右单位律回到原元素。另一个复合对 $q$ 作归纳后也化为右单位律。因而两映射互为同伦逆。
+\end{proof}
+
+\begin{remark}
+普通拉回的粘合公式只保留相等条件；同伦拉回公式还必须记录相等条件之间的路径。上面的 $p\cdot\ap_g(q)$ 正是两个相容条件的合成。省去这项数据，会把同伦拉回误写成普通集合纤维积。
+\end{remark}
+
+\section{嵌入与路径空间}
+
+\begin{definition}[同伦意义下的嵌入]
+函数 $f:A\to B$ 称为嵌入，如果每个同伦纤维 $\fib_f(b)$ 都是命题。这个定义推广集合之间的单射，不要求 $f$ 在某个具体拓扑模型中是子空间嵌入。
+\end{definition}
+
+\begin{lemma}
+固定 $x,y:A$、$q:f(x)=f(y)$。则 $\ap_f:(x=y)\to(f(x)=f(y))$ 在 $q$ 处的同伦纤维等价于
+\[
+ \bigl((x,q)=(y,\refl_{f(y)})\bigr)
+ \quad\text{在 }\fib_f(f(y))\text{ 中的同一性类型}.
+\]
+\end{lemma}
+\begin{proof}
+依赖和的路径公式将右侧写成
+\[
+ \Sigma_{p:x=y}
+ \left(\tr^{z\mapsto(f(z)=f(y))}_p(q)=\refl_{f(y)}\right).
+\]
+传输公式给出 $\tr_p(q)=(\ap_f p)^{-1}\cdot q$。于是括号中的条件等价于 $\ap_f(p)=q$：正向可先左乘 $\ap_f(p)$，反向用路径逆律。各次乘法都是路径空间之间的等价，故上述转换本身给出等价，而非仅给出逻辑蕴涵。这正是左侧同伦纤维的定义。
+\end{proof}
+
+\begin{theorem}[嵌入的路径判据]
+函数 $f:A\to B$ 是嵌入，当且仅当对所有 $x,y:A$，映射
+\[
+ \ap_f:(x=y)\longrightarrow(f(x)=f(y))
+\]
+都是等价。
+\end{theorem}
+\begin{proof}
+若 $f$ 是嵌入，$\fib_f(f(y))$ 是命题；该类型有 $(y,\refl)$，所以可缩。可缩类型中任意两点的同一性类型可缩。上一引理因而说明 $\ap_f$ 的每个纤维可缩，故 $\ap_f$ 为等价。
+
+反过来，设所有 $\ap_f$ 都是等价。取纤维 $\fib_f(b)$ 中两点 $(x,r)$、$(y,s)$。路径 $r\cdot s^{-1}:f(x)=f(y)$ 有唯一到可缩选择的原像 $p:x=y$，并满足
+\[
+ \ap_f(p)=r\cdot s^{-1}.
+\]
+于是
+\[
+ \tr^{z\mapsto(f(z)=b)}_p(r)
+ =(\ap_f p)^{-1}\cdot r
+ =(r\cdot s^{-1})^{-1}\cdot r=s.
+\]
+依赖和的路径公式给出 $(x,r)=(y,s)$。任意两点相等，故该纤维是命题。
+\end{proof}
+
+\begin{example}[命题性质的遗忘映射]
+若每个 $P(a)$ 是命题，投影 $\Sigma_{a:A}P(a)\to A$ 的同伦纤维等价于 $P(a)$，所以是嵌入。因此
+\[
+ ((a,u)=(b,v))\simeq(a=b).
+\]
+这解释了为何给数学结构增加一个命题性质通常不改变已经存在的同一性数据。相反，给空间指定一个基点是增加结构；遗忘映射的纤维为原空间，通常不是命题。
+\end{example}
+
+\begin{proposition}[重标记依赖和]
+若 $e:A\simeq B$ 且 $P:B\to\U$，则
+\[
+ \Sigma_{a:A}P(e(a))\simeq\Sigma_{b:B}P(b).
+\]
+其正向映射为 $(a,u)\mapsto(e(a),u)$。
+\end{proposition}
+\begin{proof}
+由单价性，可以对等价 $e$ 作等价归纳，将 $B$ 化为 $A$、$e$ 化为恒等等价。在这个情形，给出的映射是恒等函数，显然为等价。等价归纳同时保持族 $P$ 的依赖，因此所得结论涵盖任意 $P$。此证明也表明，重标记不要求从每个纤维另行选择元素。
+\end{proof}
+
+\section{单形乘积的三角剖分}
+
+\begin{definition}[格路径]
+在有限偏序集 $[p]\times[q]$ 中，从 $(0,0)$ 到 $(p,q)$、每一步只将一个坐标增加 $1$ 的链称为格路径。它有 $p+q$ 条边，包含 $p$ 个水平步和 $q$ 个竖直步。
+\end{definition}
+
+\begin{proposition}[单形乘积的格路径分解]
+单纯集合 $\Delta^p\times\Delta^q$ 是所有格路径所确定的 $(p+q)$-单形的并。两个这样的单形的交是它们共同顶点所确定的面。最大维单形的个数为
+\[
+ \binom{p+q}{p}.
+\]
+\end{proposition}
+\begin{proof}
+由神经保持乘积，
+\[
+ \Delta^p\times\Delta^q=N([p]\times[q]).
+\]
+其中一个非退化 $r$-单形是一条严格递增链
+\[
+ (i_0,j_0)<\cdots<(i_r,j_r).
+\]
+在链首补入从 $(0,0)$ 到 $(i_0,j_0)$ 的单坐标步，在相邻两项间补入所有缺少的单坐标步，在链尾补到 $(p,q)$，便得到一条格路径。原单形于是成为某个格路径单形的面，证明这些单形覆盖乘积。
+
+若一个单形同时位于两条最大链所给的单形中，其所有顶点必定属于两链的公共顶点。反过来，两条全序链的公共顶点继承同一个次序，形成双方的共同面。这证明交的描述。
+
+一个格路径由其 $p$ 个水平步在 $p+q$ 个位置中的分布唯一决定，因此路径数是二项式系数。
+\end{proof}
+
+\begin{example}[正方形的两个三角形]
+$p=q=1$ 时，两条格路径的顶点列为
+\[
+ (0,0),(1,0),(1,1),
+ \qquad
+ (0,0),(0,1),(1,1).
+\]
+它们交于对角边 $(0,0)\to(1,1)$。图中两块三角形记录复合的两种分解。
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+ (0,0)\arrow[r]\arrow[d]\arrow[dr]&(1,0)\arrow[d]\\
+ (0,1)\arrow[r]&(1,1)
+\end{tikzcd}
+\]
+一个映射 $\Delta^1\times\Delta^1\to C$ 因而给出两组三角形数据，其长边相同。这正是自然性等式和可表族协变性的计算所使用的正方形。
+\end{example}
+
+\begin{example}[三角柱的三个四面体]
+$p=2,q=1$ 时有三条格路径，对应下列四面体：
+\begin{align*}
+ T_0&=[(0,0),(0,1),(1,1),(2,1)],\\
+ T_1&=[(0,0),(1,0),(1,1),(2,1)],\\
+ T_2&=[(0,0),(1,0),(2,0),(2,1)].
+\end{align*}
+相邻四面体的公共面分别为
+\[
+ T_0\cap T_1=[(0,0),(1,1),(2,1)],
+\]
+\[
+ T_1\cap T_2=[(0,0),(1,0),(2,1)].
+\]
+$T_0$ 与 $T_2$ 交于对角边。因而在三角形中连续移动一组复合数据，可以逐个四面体检查。每个四面体表达一次结合律相容条件，共同面保证这些条件能够粘合。
+\end{example}
+
+\begin{proposition}[从并到相容映射]
+设单纯集合 $K=K_1\cup K_2$，交为 $L$。则对任意 $C$ 有自然同构
+\[
+ C^K\cong C^{K_1}\times_{C^L}C^{K_2}.
+\]
+若 $C$ Reedy 纤维且上述包含为单射，对所得到的映射空间取纤维时，右侧的普通拉回也计算相应同伦拉回。
+\end{proposition}
+\begin{proof}
+$K$ 是 $K_1\leftarrow L\to K_2$ 的推出。映出一个推出等于给出两个在交上一致的映射，故指数化把该推出送为拉回。该论证在每个参数单形上成立，所以给出指数对象的同构。
+
+纤维性使沿单射的限制映射成为纤维化。沿纤维化的拉回具有同伦拉回的正确同伦类型，因而这里可以用严格一致的映射计算同伦相容的映射。若缺少这个纤维性条件，不能直接作后一解释。
+\end{proof}
+
+\section{线性代数中的 Yoneda 计算}
+
+\begin{example}[由一族线性算子恢复一个矩阵]
+固定有限维向量空间 $V,W$。设对于每个向量空间 $X$ 给出函数
+\[
+ \alpha_X:\Hom(V,X)\to\Hom(W,X),
+\]
+且对每个线性映射 $T:X\to Y$ 有
+\[
+ T\circ\alpha_X(A)=\alpha_Y(T\circ A).
+\]
+不预先假设 $\alpha_X$ 是线性映射。取
+\[
+ M=\alpha_V(\id_V):W\to V.
+\]
+在自然性式中令 $X=V$、$T=A:V\to Y$、输入为 $\id_V$，得到
+\[
+ \alpha_Y(A)=A\circ M.
+\]
+因此整族 $\alpha$ 完全由一个线性映射 $M$ 决定，而且每个 $\alpha_Y$ 自动是线性的。
+
+取 $V=k^n$、$W=k^m$、$Y=k^r$。则 $M$ 是 $n\times m$ 矩阵，$A$ 是 $r\times n$ 矩阵，$\alpha_Y(A)=AM$ 是 $r\times m$ 矩阵。此计算直接展示
+\[
+ \Nat(\Hom(V,-),\Hom(W,-))\cong\Hom(W,V)
+\]
+中的方向反转。在合成 Yoneda 引理中，相同的评价公式仍然成立，但其自然性由内部依赖函数的定义保证。
+\end{example}
+
+\begin{remark}
+本附录的三个核心操作分别是沿路径传输、在同伦纤维中保留相容数据，以及把参数形状分解为可以粘合的单形。它们在正文中的对应位置依次是单价性、依赖和与协变族、Segal 复合与箭头归纳。圆周的整数计算、纤维的变换公式和格路径剖分因而属于同一套演算的不同应用。
+\end{remark}
+
+
+
+% ===== chapters/b_glossary =====
+\chapter{术语、符号与主要结果索引}
+\label{chap:glossary}
+
+\section{同一性、路径与箭头}
+
+\begin{remark}[四类相等关系]
+符号的层次决定了可以使用的推理规则。下表列出全文最容易混淆的四种关系。
+\end{remark}
+
+\begin{longtable}{@{}p{34mm}p{96mm}@{}}
+\toprule
+符号 & 含义与可用操作\\
+\midrule
+\endhead
+$a\equiv b$ & 定义相等。两项经计算与代入得到相同表达式。这是关于判断的关系，不是另一个需要给出元素的类型。\\[5pt]
+$p:a=_A b$ & 同一类型中的同一性数据，称为路径。可以对 $p$ 作路径归纳，也可以反演、合成和传输依赖数据。\\[5pt]
+$f:a\to_C b$ & 范畴中的有向箭头。一般不能反演。其归纳原理要求协变性等附加条件，不能直接套用路径归纳。\\[5pt]
+$e:A\simeq B$ & 类型间的等价，包括一个函数及其同伦纤维可缩的证明。单价性将它与宇宙中的路径对应。\\[5pt]
+$x\cong y$ & 普通范畴中的同构，或上下文明确指定的可逆箭头。在 Rezk 类型中，它与对象间的路径等价。\\
+\bottomrule
+\end{longtable}
+
+\begin{remark}[合成方向]
+路径记号 $p\cdot q$ 先行 $p$ 后行 $q$。函子或箭头记号 $g\circ f$ 先行 $f$ 后行 $g$。因此
+\[
+ \tr_{p\cdot q}=\tr_q\circ\tr_p.
+\]
+同一性类型的传输通常带有反演。例如将两端同时沿 $r:x=y$ 改变时，环路 $p:x=x$ 变成 $r^{-1}\cdot p\cdot r:y=y$。这种共轭关系来自依赖类型的路径公式。
+\end{remark}
+
+\section{类型论与同伦论术语}
+
+\begin{longtable}{@{}p{44mm}p{86mm}@{}}
+\toprule
+术语 & 本文中的含义\\
+\midrule
+\endhead
+语境\newline context & 一列有依赖次序的变量声明。它记录某个类型或元素可以依赖哪些参数。语义中对应参数空间。\\[5pt]
+代入\newline substitution & 将已给参数函数代入依赖表达式。语义中对应拉回，要求与类型构造相容。\\[5pt]
+依赖和\newline dependent sum & $\Sigma_{x:A}B(x)$。一个元素是 $(x,b)$，其中 $b:B(x)$。空间族的总空间。\\[5pt]
+依赖积\newline dependent product & $\Pi_{x:A}B(x)$。一个元素在每个参数处给出相容的 $B(x)$ 元素。空间族的截面空间。\\[5pt]
+同一性类型\newline identity type & $x=_A y$。其构造元为 $\refl_x$，消去规则为路径归纳；不预设它为命题。\\[5pt]
+路径归纳\newline path induction & 允许通过处理恒等路径构造一般路径上的依赖数据。基点形式中必须让终点与路径共同变化。\\[5pt]
+传输\newline transport & 路径 $p:x=y$ 在族 $B$ 中给出的等价 $\tr^B_p:B(x)\simeq B(y)$。\\[5pt]
+函数外延性\newline function extensionality & 将函数之间的同一性类型与逐点路径的依赖积等同为等价类型。\\[5pt]
+可缩类型\newline contractible type & 有中心且每个点都与中心相等的类型。形式上为 $\Sigma_a\Pi_x(a=x)$。\\[5pt]
+命题\newline proposition & 任意两点相等的类型。可以为空；有元素的命题可缩。也称 $(-1)$-截断类型。\\[5pt]
+集合类型\newline set, $0$-type & 任意两点之间的同一性类型都是命题。不要求类型本身只有一个元素。\\[5pt]
+$n$-型\newline $n$-type & 同一性类型是 $(n-1)$-型的类型。该递归从命题与可缩类型开始。\\[5pt]
+命题截断\newline propositional truncation & $\trunc{A}$ 保留 $A$ 的存在性而忘掉具体元素，只能无条件地消去到命题值目标。\\[5pt]
+同伦纤维\newline homotopy fiber & $\fib_f(b)=\Sigma_{a:A}(f(a)=b)$。不仅记录原像，还记录像与指定点相等的路径。\\[5pt]
+等价\newline equivalence & 每个同伦纤维可缩的函数。它有同伦逆，而且等价性本身是命题。\\[5pt]
+单价性\newline univalence & 宇宙中的标准映射 $(A=B)\to(A\simeq B)$ 是等价。它说明结构的同一性由适当等价描述。\\[5pt]
+宇宙\newline universe & 分类某一尺度的小类型或小空间族的类型。不同宇宙层级用来处理大小问题。\\[5pt]
+分类空间\newline classifying space & 对群 $G$，带基点连通 $1$-型 $BG$ 满足 $\Omega BG\simeq G$。挠子类型提供其构造。\\[5pt]
+挠子\newline torsor & 非空性被命题截断、且任意两点之间存在唯一群作用元素的群作用集合。无需指定基点。\\[5pt]
+高阶群\newline higher group & 由带基点连通空间 $BG$ 表示的群状同伦结构，底层空间为 $\Omega BG$。\\[5pt]
+高阶归纳类型\newline higher inductive type & 允许构造元位于路径及更高路径层次的归纳类型。附录中的圆周有一个点构造元与一个环路构造元。\\
+\bottomrule
+\end{longtable}
+
+\Needspace{8\baselineskip}
+\section{单纯与范畴论术语}
+
+\begin{longtable}{@{}p{44mm}p{86mm}@{}}
+\toprule
+术语 & 本文中的含义\\
+\midrule
+\endhead
+单纯集合\newline simplicial set & 函子 $\Delta^{\op}\to\Set$。各维单形由面映射和退化映射相连。\\[5pt]
+单纯空间\newline simplicial space & 函子 $\Delta^{\op}\to\mathbf{Spaces}$；在本文模型中是双单纯集合，其两个单纯方向承担不同角色。\\[5pt]
+角\newline horn & 标准单形去掉一个面内部后由其余面组成的子单纯集合 $\Lambda_k^n$。它编码部分复合数据。\\[5pt]
+Kan 复形\newline Kan complex & 所有角都可填充的单纯集合。它表示同伦类型，所有方向均可逆到高阶同伦。\\[5pt]
+Kan 纤维化\newline Kan fibration & 对角包含具有右提升性质的映射。它允许在底空间单形已给定时提升相容的部分数据。\\[5pt]
+模型范畴\newline model category & 带弱等价、余纤维化与纤维化三类映射，并满足分解及提升公理的范畴。\\[5pt]
+Reedy 纤维性\newline Reedy fibrancy & 逐维到匹配对象的映射为纤维化。它确保相容边界的空间具有所需同伦性质。\\[5pt]
+扩张类型\newline extension type & 在指定边界上固定取值的形状映射类型。它是限制映射的纤维，是复合和提升数据的统一记法。\\[5pt]
+Segal 条件\newline Segal condition & 高维单形到其可复合脊线的限制为等价。相应填充类型可缩，给出相容合成。\\[5pt]
+Rezk 完备性\newline Rezk completeness & 对象路径到可逆箭头的标准映射为等价。它把对象同一性与范畴等价相联系。\\[5pt]
+群胚型\newline groupoidal type & 在有向语言中，路径到箭头的标准映射为等价。它仍可具有任意高阶同伦，并不等于集合型。\\[5pt]
+协变族\newline covariant family & 给定底箭头及起点纤维元素后，其提升空间可缩的依赖族。它诱导沿箭头的协变传递。\\[5pt]
+左纤维化\newline left fibration & 协变族的外部模型。相对于每个底单形，其提升由初始顶点的纤维数据决定到可缩选择。\\[5pt]
+可表族\newline representable family & 固定对象 $c$ 后的 $x\mapsto\Hom_C(c,x)$，或其逆变对偶。复合给出相应作用。\\[5pt]
+余切片范畴\newline coslice category & $c/C=\Sigma_x\Hom_C(c,x)$，对象为起点固定于 $c$ 的箭头，初始对象为 $\id_c$。\\[5pt]
+箭头归纳\newline arrow induction & $c/C$ 上协变族的截面由它在 $\id_c$ 处的值唯一到可缩选择地决定。\\[5pt]
+Yoneda 引理\newline Yoneda lemma & 从可表族 $\Hom_C(c,-)$ 到协变族 $F$ 的自然变换空间等价于 $F(c)$，由恒等箭头处评价给出。\\[5pt]
+有向单价性\newline directed univalence & 空间分类对象中的箭头与纤维之间的函数等价，即 $\Hom_{\Sp}(A,B)\simeq(A\to B)$。\\[5pt]
+结构同一性原理\newline structure identity principle & 带结构对象间的路径由保持结构的等价描述。它使用普通单价性。\\[5pt]
+结构同态原理\newline structure homomorphism principle & 带结构对象间的箭头由保持结构的一般函数描述。它要求相应结构构造满足协变性。\\[5pt]
+加权极限\newline weighted limit & 用权重图表指定相容锥的参数化方式。单纯权重还能记录普通极限没有显式保留的高阶相容性。\\
+\bottomrule
+\end{longtable}
+
+\section{常用公式与定位}
+
+\begin{remark}[空间部分]
+同伦类型的主要计算可以沿下列公式查找：
+\begin{align*}
+ ((x,u)=(y,v))
+ &\simeq\Sigma_{p:x=y}(\tr_pu=v),\\
+ \fib_f(b)&=\Sigma_{a:A}(f(a)=b),\\
+ \isEquiv(f)&=\Pi_{b:B}\isContr(\fib_f(b)),\\
+ (A=_{\U}B)&\simeq(A\simeq B),\\
+ \Omega\Fin_n&\simeq\Sigma_n,\\
+ \Omega BG&\simeq G,\\
+ X^{hG}&=\Pi_{z:BG}X(z),\\
+ X_{hG}&=\Sigma_{z:BG}X(z).
+\end{align*}
+依赖和路径公式见定理~\ref{thm:sigma-path}，等价的同伦逆判据见定理~\ref{thm:equiv-qinv}，有限类型环路计算见定理~\ref{thm:finite-loops}，挠子分类空间见定理~\ref{thm:torsor-BG}，圆周计算见定理~\ref{thm:circle-encode}。
+\end{remark}
+
+\begin{remark}[范畴部分]
+合成范畴论的主要公式为
+\begin{align*}
+ C^{\Delta^n}&\simeq C^{\operatorname{Sp}^n},\\
+ \bigl(f_*u=v\bigr)&\simeq
+ \{\text{起点为 }u\text{、终点为 }v\text{ 的 }f\text{ 上方箭头}\},\\
+ \Pi_{f:c/C}P(f)&\simeq P(\id_c),\\
+ \Pi_{x:C}\bigl(\Hom_C(c,x)\to F(x)\bigr)&\simeq F(c),\\
+ \Hom_{\Sp}(A,B)&\simeq(A\to B).
+\end{align*}
+这里 $\operatorname{Sp}^n$ 表示 $n$ 维单形中的脊线，不同于表示空间范畴的花体 $\Sp$。协变族的纤维箭头公式见命题~\ref{prop:dependent-arrow}，可表族协变性见定理~\ref{thm:representable-covariant}，箭头归纳与 Yoneda 引理分别见定理~\ref{thm:arrow-induction}、\ref{thm:synthetic-yoneda}，空间范畴的构造见定理~\ref{thm:spaces-category}。
+\end{remark}
+
+\begin{remark}[理论前提的层次]
+集合、范畴与单纯对象的初步构造位于第 1--8 章。第 9--14 章使用依赖类型规则、函数外延性、命题截断和单价宇宙。第 15--19 章再加入有向形状与扩张类型，讨论 Segal 类型及协变族。第 20--21 章使用普遍左纤维化及高阶有向单价性。第 22 章解释这些前提的模型依据。附录 A 的圆周计算另行使用其开头列出的高阶归纳规则。
+
+路径归纳与箭头归纳的适用对象不同。前者适用于同一性类型上的任意依赖族，后者适用于余切片范畴上的协变族。普通单价性与有向单价性也各有不同内容：前者描述可逆关系，后者描述一般函数，并须与高维复合比较相容。
+\end{remark}
+
+
+
+% ===== references =====
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{参考文献}
+
+\bibitem{RiehlICM}
+Emily Riehl.
+Synthetic Perspectives on Spaces and Categories.
+\emph{Proceedings of the International Congress of Mathematicians 2026}, Vol.~4, Invited Lectures, Sections 5--8, 414--433. SIAM, 2026.
+\url{https://doi.org/10.1137/25M1806569}.
+
+\bibitem{RiehlContext}
+Emily Riehl.
+\emph{Category Theory in Context}.
+Dover Publications, 2016.
+\url{https://math.jhu.edu/~eriehl/context/}.
+
+\bibitem{Hatcher}
+Allen Hatcher.
+\emph{Algebraic Topology}.
+Cambridge University Press, 2002.
+\url{https://pi.math.cornell.edu/~hatcher/AT/ATpage.html}.
+
+\bibitem{Friedman}
+Greg Friedman.
+An elementary illustrated introduction to simplicial sets.
+\emph{Rocky Mountain Journal of Mathematics}, 42(2), 353--423, 2012.
+\url{https://arxiv.org/abs/0809.4221}.
+
+\bibitem{Quillen}
+Daniel G. Quillen.
+\emph{Homotopical Algebra}.
+Lecture Notes in Mathematics, Vol.~43. Springer, 1967.
+\url{https://doi.org/10.1007/BFb0097438}.
+
+\bibitem{GoerssJardine}
+Paul G. Goerss and John F. Jardine.
+\emph{Simplicial Homotopy Theory}.
+Progress in Mathematics, Vol.~174. Birkh\"auser, 1999; 2009 年重印.
+\url{https://doi.org/10.1007/978-3-0346-0189-4}.
+
+\bibitem{HoTT}
+The Univalent Foundations Program.
+\emph{Homotopy Type Theory: Univalent Foundations of Mathematics}.
+Institute for Advanced Study, 2013.
+\url{https://homotopytypetheory.org/book/}.
+
+\bibitem{Rijke}
+Egbert Rijke.
+\emph{Introduction to Homotopy Type Theory}.
+2022 年公开预印本.
+\url{https://arxiv.org/abs/2212.11082}.
+
+\bibitem{AwodeyWarren}
+Steve Awodey and Michael A. Warren.
+Homotopy theoretic models of identity types.
+\emph{Mathematical Proceedings of the Cambridge Philosophical Society}, 146(1), 45--55, 2009.
+\url{https://doi.org/10.1017/S0305004108001783}.
+预印本：\url{https://arxiv.org/abs/0709.0248}.
+
+\bibitem{RiehlSemantics}
+Emily Riehl.
+On the $\infty$-topos semantics of homotopy type theory.
+\emph{Bulletin of the London Mathematical Society}, 56(2), 461--517, 2024.
+\url{https://doi.org/10.1112/blms.12997}.
+预印本：\url{https://arxiv.org/abs/2212.06937}.
+
+\bibitem{RiehlCatHomotopy}
+Emily Riehl.
+\emph{Categorical Homotopy Theory}.
+New Mathematical Monographs, Vol.~24. Cambridge University Press, 2014.
+\url{https://math.jhu.edu/~eriehl/cathtpy/}.
+
+\bibitem{Rezk}
+Charles Rezk.
+A model for the homotopy theory of homotopy theory.
+\emph{Transactions of the American Mathematical Society}, 353(3), 973--1007, 2001.
+\url{https://arxiv.org/abs/math/9811037}.
+
+\bibitem{RiehlShulman}
+Emily Riehl and Michael Shulman.
+A type theory for synthetic $\infty$-categories.
+\emph{Higher Structures}, 1(1), 147--224, 2017.
+使用保留期刊编号并修订部分证明的第 5 版，2023 年 6 月 8 日.
+\url{https://arxiv.org/abs/1705.07442v5}.
+
+\bibitem{YonedaFormal}
+Nikolai Kudasov, Emily Riehl and Jonathan Weinberger.
+Formalizing the $\infty$-Categorical Yoneda Lemma.
+\emph{Proceedings of the 13th ACM SIGPLAN International Conference on Certified Programs and Proofs}, 274--290, 2024.
+\url{https://doi.org/10.1145/3636501.3636945}.
+预印本：\url{https://arxiv.org/abs/2309.08340}.
+
+\bibitem{RiehlVerity}
+Emily Riehl and Dominic Verity.
+\emph{Elements of $\infty$-Category Theory}.
+Cambridge Studies in Advanced Mathematics, Vol.~194. Cambridge University Press, 2022.
+\url{https://doi.org/10.1017/9781108936880}.
+
+\bibitem{GratzerWeinbergerBuchholtz}
+Daniel Gratzer, Jonathan Weinberger and Ulrik Buchholtz.
+Directed univalence in simplicial homotopy type theory.
+2024 年预印本，第 2 版修订于 2026 年 1 月 15 日.
+\url{https://arxiv.org/abs/2407.09146v2}.
+
+\bibitem{CavalloRiehlSattler}
+Evan Cavallo, Emily Riehl and Christian Sattler.
+Directed univalence for simplicial objects in an $\infty$-topos.
+2026 年 7 月 2 日预印本.
+\url{https://arxiv.org/abs/2607.02420}.
+
+\bibitem{LurieHTT}
+Jacob Lurie.
+\emph{Higher Topos Theory}.
+Annals of Mathematics Studies, Vol.~170. Princeton University Press, 2009.
+\url{https://arxiv.org/abs/math/0608040}.
+
+\bibitem{ShulmanUniverses}
+Michael Shulman.
+All $(\infty,1)$-toposes have strict univalent universes.
+2019 年预印本.
+\url{https://arxiv.org/abs/1904.07004}.
+
+\end{thebibliography}
+
+
+\end{document}

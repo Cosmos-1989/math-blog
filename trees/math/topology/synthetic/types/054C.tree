@@ -1,0 +1,21 @@
+\title{一个端点变化时的路径族传输}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 10 章}
+
+\p{设 #{x,y:A}。}
+
+\p{前置：[类型族沿路径的传输](0548)、[路径连接的群胚律](0542)。}
+
+\p{固定 #{a:A}。对于 #{p:x=y}，有}
+
+##{\mathsf{tr}_{z\mapsto(a=z)}(p)(q)=q\cdot p,
+\qquad q:a=x;}
+
+\p{以及}
+
+##{\mathsf{tr}_{z\mapsto(z=a)}(p)(q)=p^{-1}\cdot q,
+\qquad q:x=a.}
+
+\p{\strong{证明。}第一式对 #{p} 归纳后，左边为 #{q}，右边为 #{q\cdot\mathsf{refl}\equiv q}。第二式在自反情形需要左单位律 #{\mathsf{refl}\cdot q=q}。由路径归纳得结论。}

@@ -1,0 +1,29 @@
+\title{同伦拉回粘合的路径计算}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，附录 A}
+
+\p{前置：[依赖和](0507)；[路径作用](0544)；[基点路径归纳](050H)；[同伦逆判据](058I)。}
+
+\p{设 #{A,B,C,D} 为类型，#{f:A\to C}、#{g:B\to C}、#{k:D\to B}。同伦拉回以“两个点加一条像之间的路径”的依赖和表示；集合纤维积则以两个像相等为成员条件。}
+
+\p{给定 #{A\xrightarrow f C\xleftarrow g B} 和 #{k:D\to B}。令}
+
+##{P=\sum_{a:A}\sum_{b:B}(f(a)=g(b)).}
+
+\p{将 #{P} 投影到 #{B}，再沿 #{k} 取同伦拉回，所得类型等价于}
+
+##{\sum_{a:A}\sum_{d:D}(f(a)=g(k(d))).}
+
+\p{\strong{证明。}迭代拉回的元素为 #{(a,b,p,d,q)}，其中}
+
+##{p:f(a)=g(b),\qquad q:b=k(d).}
+
+\p{正向映射定义为}
+
+##{(a,b,p,d,q)\longmapsto(a,d,p\cdot\operatorname{ap}_g(q)).}
+
+\p{逆映射将 #{(a,d,r)} 送到 #{(a,k(d),r,d,\operatorname{refl})}。一个复合由右单位律回到原元素。另一个复合对 #{q} 作归纳后也化为右单位律。因而两映射互为同伦逆。}
+
+\p{说明。 普通拉回的粘合公式只保留相等条件；同伦拉回公式还必须记录相等条件之间的路径。上面的 #{p\cdot\operatorname{ap}_g(q)} 正是两个相容条件的合成。这项路径数据是同伦拉回元素的一部分。}

@@ -1,0 +1,37 @@
+\title{拟逆的余单位可修正为三角相容}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 11 章}
+
+\p{写 #{gf=g\circ f}、#{fg=f\circ g}，路径连接采用先左后右的约定。}
+
+\p{前置：[依赖函数的逐点同伦](050J)、[逐点同伦的自然性方块](0546)、[路径连接的左右消去](0543)、[函数路径作用保持单位、逆与连接](0545)。}
+
+\p{假设 #{f:A\to B}、#{g:B\to A} 以及 #{\eta:gf\sim\operatorname{id}_A}、#{\varepsilon:fg\sim\operatorname{id}_B}。可将 #{\varepsilon} 替换为 #{\varepsilon'}，使}
+
+##{\mathsf{ap}_f(\eta_a)=\varepsilon'_{f(a)}}
+
+\p{对每个 #{a} 成立。}
+
+\p{\strong{证明。}定义}
+
+##{\varepsilon'_b
+=\varepsilon_{f(g(b))}^{-1}
+\cdot\mathsf{ap}_f(\eta_{g(b)})\cdot\varepsilon_b.}
+
+\p{三个因子的始终点依次为}
+
+##{fgb\longrightarrow fgfgb\longrightarrow fgb\longrightarrow b,}
+
+\p{所以公式有类型 #{fgb=b}。}
+
+\p{把同伦 #{\eta} 的自然性用在路径 #{\eta_a:gfa=a} 上，得到}
+
+##{\mathsf{ap}_{gf}(\eta_a)\cdot\eta_a=\eta_{gfa}\cdot\eta_a.}
+
+\p{右消去给出 #{\mathsf{ap}_{gf}(\eta_a)=\eta_{gfa}}。对两边施加 #{f}，得到 #{\mathsf{ap}_{fg}(\mathsf{ap}_f\eta_a)=\mathsf{ap}_f\eta_{gfa}}。 再把 #{\varepsilon} 的自然性用在 #{t=\mathsf{ap}_f\eta_a:fgfa=fa} 上：}
+
+##{\mathsf{ap}_{fg}(t)\cdot\varepsilon_{fa}=\varepsilon_{fgfa}\cdot t.}
+
+\p{左复合 #{\varepsilon_{fgfa}^{-1}}，并代入 #{\mathsf{ap}_{fg}(\mathsf{ap}_f\eta_a)=\mathsf{ap}_f\eta_{gfa}}，右边恰化为 #{t}，左边恰为 #{\varepsilon'_{fa}}，得到三角相容。}

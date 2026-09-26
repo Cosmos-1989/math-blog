@@ -1,0 +1,23 @@
+\title{二元运算空间的范畴拉回定义}
+\date{2026-09-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 21 章；[引用](0211)}
+
+\p{采用[空间范畴](070Q)、[箭头范畴](0716)和[范畴同伦拉回](0718)。平方函子作用于函数为 #{F_2(f)=f\times f}；拉回取同伦意义，或先把源靶映射作纤维化表示。}
+
+\p{记 #{F_2:{\mathcal{S}}\to{\mathcal{S}}} 为平方函子 #{A\mapsto A\times A}。定义范畴拉回}
+
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}
+{\mathsf{Magma}}\arrow[r]\arrow[d]&\mathsf{Arr}({\mathcal{S}})\arrow[d,"{(s,t)}"]\\
+{\mathcal{S}}\arrow[r,"{(F_2,{\operatorname{id}})}"']&{\mathcal{S}}\times{\mathcal{S}}.
+\end{tikzcd}
+}}
+
+\p{其对象可写为 #{(A,\mu)}，其中 #{\mu:A\times A\to A}。}
+
+\p{对象类型为 #{\sum_A(A^2\to A)}；其箭头结构由上述函子拉回指定。输入函子在函数 #{f:A\to B} 上作用为 #{f\times f:A^2\to B^2}，输出函子作用为 #{f}，因此拉回方形恰比较运算的输入与输出变化。}
+
+\p{图表示 #{(s,t)\circ U=(F_2,\operatorname{id})\circ V}（一般为指定的相容等价），其中 #{V(A,\mu)=A}、#{U(A,\mu)=\mu}；对象的严格端点表示是 #{s(\mu)=A\times A}、#{t(\mu)=A}。}

@@ -1,0 +1,129 @@
+\chapter{术语、符号与主要结果索引}
+\label{chap:glossary}
+
+\section{同一性、路径与箭头}
+
+\begin{remark}[四类相等关系]
+符号的层次决定了可以使用的推理规则。下表列出全文最容易混淆的四种关系。
+\end{remark}
+
+\begin{longtable}{@{}p{34mm}p{96mm}@{}}
+\toprule
+符号 & 含义与可用操作\\
+\midrule
+\endhead
+$a\equiv b$ & 定义相等。两项经计算与代入得到相同表达式。这是关于判断的关系，不是另一个需要给出元素的类型。\\[5pt]
+$p:a=_A b$ & 同一类型中的同一性数据，称为路径。可以对 $p$ 作路径归纳，也可以反演、合成和传输依赖数据。\\[5pt]
+$f:a\to_C b$ & 范畴中的有向箭头。一般不能反演。其归纳原理要求协变性等附加条件，不能直接套用路径归纳。\\[5pt]
+$e:A\simeq B$ & 类型间的等价，包括一个函数及其同伦纤维可缩的证明。单价性将它与宇宙中的路径对应。\\[5pt]
+$x\cong y$ & 普通范畴中的同构，或上下文明确指定的可逆箭头。在 Rezk 类型中，它与对象间的路径等价。\\
+\bottomrule
+\end{longtable}
+
+\begin{remark}[合成方向]
+路径记号 $p\cdot q$ 先行 $p$ 后行 $q$。函子或箭头记号 $g\circ f$ 先行 $f$ 后行 $g$。因此
+\[
+ \tr_{p\cdot q}=\tr_q\circ\tr_p.
+\]
+同一性类型的传输通常带有反演。例如将两端同时沿 $r:x=y$ 改变时，环路 $p:x=x$ 变成 $r^{-1}\cdot p\cdot r:y=y$。这种共轭关系来自依赖类型的路径公式。
+\end{remark}
+
+\section{类型论与同伦论术语}
+
+\begin{longtable}{@{}p{44mm}p{86mm}@{}}
+\toprule
+术语 & 本文中的含义\\
+\midrule
+\endhead
+语境\newline context & 一列有依赖次序的变量声明。它记录某个类型或元素可以依赖哪些参数。语义中对应参数空间。\\[5pt]
+代入\newline substitution & 将已给参数函数代入依赖表达式。语义中对应拉回，要求与类型构造相容。\\[5pt]
+依赖和\newline dependent sum & $\Sigma_{x:A}B(x)$。一个元素是 $(x,b)$，其中 $b:B(x)$。空间族的总空间。\\[5pt]
+依赖积\newline dependent product & $\Pi_{x:A}B(x)$。一个元素在每个参数处给出相容的 $B(x)$ 元素。空间族的截面空间。\\[5pt]
+同一性类型\newline identity type & $x=_A y$。其构造元为 $\refl_x$，消去规则为路径归纳；不预设它为命题。\\[5pt]
+路径归纳\newline path induction & 允许通过处理恒等路径构造一般路径上的依赖数据。基点形式中必须让终点与路径共同变化。\\[5pt]
+传输\newline transport & 路径 $p:x=y$ 在族 $B$ 中给出的等价 $\tr^B_p:B(x)\simeq B(y)$。\\[5pt]
+函数外延性\newline function extensionality & 将函数之间的同一性类型与逐点路径的依赖积等同为等价类型。\\[5pt]
+可缩类型\newline contractible type & 有中心且每个点都与中心相等的类型。形式上为 $\Sigma_a\Pi_x(a=x)$。\\[5pt]
+命题\newline proposition & 任意两点相等的类型。可以为空；有元素的命题可缩。也称 $(-1)$-截断类型。\\[5pt]
+集合类型\newline set, $0$-type & 任意两点之间的同一性类型都是命题。不要求类型本身只有一个元素。\\[5pt]
+$n$-型\newline $n$-type & 同一性类型是 $(n-1)$-型的类型。该递归从命题与可缩类型开始。\\[5pt]
+命题截断\newline propositional truncation & $\trunc{A}$ 保留 $A$ 的存在性而忘掉具体元素，只能无条件地消去到命题值目标。\\[5pt]
+同伦纤维\newline homotopy fiber & $\fib_f(b)=\Sigma_{a:A}(f(a)=b)$。不仅记录原像，还记录像与指定点相等的路径。\\[5pt]
+等价\newline equivalence & 每个同伦纤维可缩的函数。它有同伦逆，而且等价性本身是命题。\\[5pt]
+单价性\newline univalence & 宇宙中的标准映射 $(A=B)\to(A\simeq B)$ 是等价。它说明结构的同一性由适当等价描述。\\[5pt]
+宇宙\newline universe & 分类某一尺度的小类型或小空间族的类型。不同宇宙层级用来处理大小问题。\\[5pt]
+分类空间\newline classifying space & 对群 $G$，带基点连通 $1$-型 $BG$ 满足 $\Omega BG\simeq G$。挠子类型提供其构造。\\[5pt]
+挠子\newline torsor & 非空性被命题截断、且任意两点之间存在唯一群作用元素的群作用集合。无需指定基点。\\[5pt]
+高阶群\newline higher group & 由带基点连通空间 $BG$ 表示的群状同伦结构，底层空间为 $\Omega BG$。\\[5pt]
+高阶归纳类型\newline higher inductive type & 允许构造元位于路径及更高路径层次的归纳类型。附录中的圆周有一个点构造元与一个环路构造元。\\
+\bottomrule
+\end{longtable}
+
+\Needspace{8\baselineskip}
+\section{单纯与范畴论术语}
+
+\begin{longtable}{@{}p{44mm}p{86mm}@{}}
+\toprule
+术语 & 本文中的含义\\
+\midrule
+\endhead
+单纯集合\newline simplicial set & 函子 $\Delta^{\op}\to\Set$。各维单形由面映射和退化映射相连。\\[5pt]
+单纯空间\newline simplicial space & 函子 $\Delta^{\op}\to\mathbf{Spaces}$；在本文模型中是双单纯集合，其两个单纯方向承担不同角色。\\[5pt]
+角\newline horn & 标准单形去掉一个面内部后由其余面组成的子单纯集合 $\Lambda_k^n$。它编码部分复合数据。\\[5pt]
+Kan 复形\newline Kan complex & 所有角都可填充的单纯集合。它表示同伦类型，所有方向均可逆到高阶同伦。\\[5pt]
+Kan 纤维化\newline Kan fibration & 对角包含具有右提升性质的映射。它允许在底空间单形已给定时提升相容的部分数据。\\[5pt]
+模型范畴\newline model category & 带弱等价、余纤维化与纤维化三类映射，并满足分解及提升公理的范畴。\\[5pt]
+Reedy 纤维性\newline Reedy fibrancy & 逐维到匹配对象的映射为纤维化。它确保相容边界的空间具有所需同伦性质。\\[5pt]
+扩张类型\newline extension type & 在指定边界上固定取值的形状映射类型。它是限制映射的纤维，是复合和提升数据的统一记法。\\[5pt]
+Segal 条件\newline Segal condition & 高维单形到其可复合脊线的限制为等价。相应填充类型可缩，给出相容合成。\\[5pt]
+Rezk 完备性\newline Rezk completeness & 对象路径到可逆箭头的标准映射为等价。它把对象同一性与范畴等价相联系。\\[5pt]
+群胚型\newline groupoidal type & 在有向语言中，路径到箭头的标准映射为等价。它仍可具有任意高阶同伦，并不等于集合型。\\[5pt]
+协变族\newline covariant family & 给定底箭头及起点纤维元素后，其提升空间可缩的依赖族。它诱导沿箭头的协变传递。\\[5pt]
+左纤维化\newline left fibration & 协变族的外部模型。相对于每个底单形，其提升由初始顶点的纤维数据决定到可缩选择。\\[5pt]
+可表族\newline representable family & 固定对象 $c$ 后的 $x\mapsto\Hom_C(c,x)$，或其逆变对偶。复合给出相应作用。\\[5pt]
+余切片范畴\newline coslice category & $c/C=\Sigma_x\Hom_C(c,x)$，对象为起点固定于 $c$ 的箭头，初始对象为 $\id_c$。\\[5pt]
+箭头归纳\newline arrow induction & $c/C$ 上协变族的截面由它在 $\id_c$ 处的值唯一到可缩选择地决定。\\[5pt]
+Yoneda 引理\newline Yoneda lemma & 从可表族 $\Hom_C(c,-)$ 到协变族 $F$ 的自然变换空间等价于 $F(c)$，由恒等箭头处评价给出。\\[5pt]
+有向单价性\newline directed univalence & 空间分类对象中的箭头与纤维之间的函数等价，即 $\Hom_{\Sp}(A,B)\simeq(A\to B)$。\\[5pt]
+结构同一性原理\newline structure identity principle & 带结构对象间的路径由保持结构的等价描述。它使用普通单价性。\\[5pt]
+结构同态原理\newline structure homomorphism principle & 带结构对象间的箭头由保持结构的一般函数描述。它要求相应结构构造满足协变性。\\[5pt]
+加权极限\newline weighted limit & 用权重图表指定相容锥的参数化方式。单纯权重还能记录普通极限没有显式保留的高阶相容性。\\
+\bottomrule
+\end{longtable}
+
+\section{常用公式与定位}
+
+\begin{remark}[空间部分]
+同伦类型的主要计算可以沿下列公式查找：
+\begin{align*}
+ ((x,u)=(y,v))
+ &\simeq\Sigma_{p:x=y}(\tr_pu=v),\\
+ \fib_f(b)&=\Sigma_{a:A}(f(a)=b),\\
+ \isEquiv(f)&=\Pi_{b:B}\isContr(\fib_f(b)),\\
+ (A=_{\U}B)&\simeq(A\simeq B),\\
+ \Omega\Fin_n&\simeq\Sigma_n,\\
+ \Omega BG&\simeq G,\\
+ X^{hG}&=\Pi_{z:BG}X(z),\\
+ X_{hG}&=\Sigma_{z:BG}X(z).
+\end{align*}
+依赖和路径公式见定理~\ref{thm:sigma-path}，等价的同伦逆判据见定理~\ref{thm:equiv-qinv}，有限类型环路计算见定理~\ref{thm:finite-loops}，挠子分类空间见定理~\ref{thm:torsor-BG}，圆周计算见定理~\ref{thm:circle-encode}。
+\end{remark}
+
+\begin{remark}[范畴部分]
+合成范畴论的主要公式为
+\begin{align*}
+ C^{\Delta^n}&\simeq C^{\operatorname{Sp}^n},\\
+ \bigl(f_*u=v\bigr)&\simeq
+ \{\text{起点为 }u\text{、终点为 }v\text{ 的 }f\text{ 上方箭头}\},\\
+ \Pi_{f:c/C}P(f)&\simeq P(\id_c),\\
+ \Pi_{x:C}\bigl(\Hom_C(c,x)\to F(x)\bigr)&\simeq F(c),\\
+ \Hom_{\Sp}(A,B)&\simeq(A\to B).
+\end{align*}
+这里 $\operatorname{Sp}^n$ 表示 $n$ 维单形中的脊线，不同于表示空间范畴的花体 $\Sp$。协变族的纤维箭头公式见命题~\ref{prop:dependent-arrow}，可表族协变性见定理~\ref{thm:representable-covariant}，箭头归纳与 Yoneda 引理分别见定理~\ref{thm:arrow-induction}、\ref{thm:synthetic-yoneda}，空间范畴的构造见定理~\ref{thm:spaces-category}。
+\end{remark}
+
+\begin{remark}[理论前提的层次]
+集合、范畴与单纯对象的初步构造位于第 1--8 章。第 9--14 章使用依赖类型规则、函数外延性、命题截断和单价宇宙。第 15--19 章再加入有向形状与扩张类型，讨论 Segal 类型及协变族。第 20--21 章使用普遍左纤维化及高阶有向单价性。第 22 章解释这些前提的模型依据。附录 A 的圆周计算另行使用其开头列出的高阶归纳规则。
+
+路径归纳与箭头归纳的适用对象不同。前者适用于同一性类型上的任意依赖族，后者适用于余切片范畴上的协变族。普通单价性与有向单价性也各有不同内容：前者描述可逆关系，后者描述一般函数，并须与高维复合比较相容。
+\end{remark}

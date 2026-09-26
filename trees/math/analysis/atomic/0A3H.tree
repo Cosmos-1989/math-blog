@@ -1,0 +1,8 @@
+\title{紧区间积分与光滑参数微分交换}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{U\subseteq\mathbb R^m} 开，#{g} 在 #{U\times[0,1]} 的一个开邻域上[光滑](00N8)。令 #{G(x)=\int_0^1g(x,t)\,dt}，积分取 [Riemann 积分](0A3B)。多重指标 #{\alpha=(\alpha_1,\ldots,\alpha_m)} 为非负整数元组，记 #{\partial_x^\alpha=\partial_1^{\alpha_1}\cdots\partial_m^{\alpha_m}}。则 #{G} 光滑，且}
+##{\partial_x^\alpha G(x)=\int_0^1\partial_x^\alpha g(x,t)\,dt.}
+\p{\strong{证明。}固定 #{x}，取闭小立方体 #{Q\subset U} 使 #{x} 在其内部。各阶偏导在 #{Q\times[0,1]} 上连续，因此有界且一致连续；这由[紧性](0A39)及[有限开球覆盖论证](0A3K)得到。对一个坐标方向，[中值定理](0A35)与 #{\partial_i g} 的一致连续性使差商 #{(g(x+he_i,t)-g(x,t))/h} 关于 #{t} 一致趋于 #{\partial_i g(x,t)}。积分误差不超过一致误差，故可交换这一次微分与积分。积分后的偏导仍连续，因为其增量也由被积函数的一致增量控制。对各阶偏导重复该论证即得光滑性及公式。}

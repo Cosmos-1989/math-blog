@@ -11,9 +11,10 @@
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
+        <link rel="icon" type="image/svg+xml" href="{/f:tree/@base-url}shulin-mark.svg?v=20260926" />
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
-        <link rel="stylesheet" href="{/f:tree/@base-url}reading.css?v=20260924" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}reading.css?v=20260926" />
         <script type="text/javascript">
           <xsl:if test="/f:tree/f:frontmatter/f:source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -35,9 +36,9 @@
           <header class="header">
             <nav class="nav" aria-label="主导航">
               <div class="logo">
-                <a href="{/f:tree/@base-url}index/" title="数学博客首页">
-                  <span class="site-mark" aria-hidden="true">M</span>
-                  <xsl:text>数学博客</xsl:text>
+                <a href="{/f:tree/@base-url}index/" title="數林廣記首頁">
+                  <img class="site-mark" src="{/f:tree/@base-url}shulin-mark.svg?v=20260926" width="40" height="40" alt="" />
+                  <span class="site-name" lang="zh-Hant">數林廣記</span>
                 </a>
               </div>
               <div class="nav-actions">

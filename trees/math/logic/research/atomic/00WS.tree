@@ -1,9 +1,10 @@
-\title{Odometer 加法系统}
+\title{可变基数 odometer 的进位编码}
 \date{2026-09-20}
-\taxon{Definition}
+\taxon{Construction}
 \author{author}
 \meta{source}{[Gerber–Kunde，§2.3、2.5](007J)}
 
-\p{取整数 #{k_n\geq2}，#{K_n=\prod_{j<n}k_j}。集合 #{\mathfrak O=\varprojlim\mathbb Z/K_n\mathbb Z} 由相容剩余类列组成，赋予子空间积拓扑及均匀测度的相容极限。加法映射 #{x\mapsto x+1} 称 [odometer](00S0)，低位溢出向高位进位。}
-
-\p{这是[保测自同构](00RS)。当所有 #{k_n=2} 时为二进 odometer；作为符号构造的因子，它记录不同层的分块起点。}
+\p{取整数 #{k_n\geq 2}（#{n\geq 0}），令 #{K_m=\prod_{j<m}k_j}。在数字空间 #{D=\prod_{n\geq 0}\{0,\ldots,k_n-1\}} 上取[积拓扑](00EI)及各数字独立均匀的概率测度。它与模数 #{K_m} 的 [odometer](00S0)相容剩余类模型对应，映射为}
+##{(a_n)_{n\geq 0}\longmapsto(r_m)_{m\geq 1},\qquad r_m=\sum_{j<m}a_jK_j\pmod{K_m}.}
+\p{每个剩余类选 #{0,\ldots,K_m-1} 中的代表。相容性给出 #{r_{m+1}=r_m+a_mK_m}，其中 #{0\leq a_m<k_m}，所以这些数字唯一恢复。正反映射的有限坐标都只依赖有限坐标，因而为相容的拓扑编码。每个前 #{m} 位数字串与模 #{K_m} 剩余类一一对应，故均匀乘积测度也被保持。}
+\p{加一变成通常进位：从低位开始，把连续的最大数字改成零，在首个未满位加一；全为最大数字时映到全零。由此得到[保测自同构](00RS)。取所有 #{k_n=2} 即二进制进位；在符号构造中，这些坐标记录不同层字块的位置。}

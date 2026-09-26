@@ -1,0 +1,17 @@
+\title{保测自同构群双向弱度量的完备性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gerber–Kunde，§2.1](007J)}
+
+\p{设 #{(X,\mathcal A,\mu)} 为标准无原子概率空间，将其测度代数记为 #{(\mathfrak M_\mu,\delta)}，固定可数稠密列 #{(a_k)_{k\geq 1}}。由正像和逆像定义的[双向弱度量](0A83) #{D} 是[完备的](00ET)。}
+\p{\strong{证明。}设 #{(T_n)} 为 #{D}-Cauchy 序列，记 #{\alpha_n(a)=T_na}、#{\beta_n(a)=T_n^{-1}a}。对每个稠密列成员 #{a_k}，度量的第 #{k} 项保证 #{\alpha_n(a_k)} 和 #{\beta_n(a_k)} 均为 #{\delta}-Cauchy 序列。对任意 #{a}，估计}
+##{\delta(\alpha_n(a),\alpha_m(a))
+\leq 2\delta(a,a_k)+\delta(\alpha_n(a_k),\alpha_m(a_k))}
+\p{把此结论推广到全部 #{a}，逆向同理。[测度代数完备性](0A80)遂给出 #{\alpha(a)=\lim_n\alpha_n(a)}、#{\beta(a)=\lim_n\beta_n(a)}。}
+\p{由[布尔运算与测度的连续性估计](0A7Z)，#{\alpha,\beta} 保持交、补及测度；距离取极限给出 #{\delta(\alpha(a),\alpha(b))=\delta(a,b)}，#{\beta} 同理。对固定 #{a}，}
+##{\delta(\alpha(\beta(a)),a)
+\leq\delta(\alpha(\beta(a)),\alpha_n(\beta(a)))
++\delta(\beta(a),\beta_n(a))\longrightarrow 0,}
+\p{其中使用了 #{\alpha_n\beta_n(a)=a} 及 #{\alpha_n} 等距。交换 #{\alpha,\beta} 得 #{\beta\alpha(a)=a}，所以二者互逆，均为保持测度的布尔自同构。}
+\p{由[测度代数自同构的空间实现](0A82)，存在模零保测自同构 #{T}，其像作用为 #{\alpha}，逆像作用为 #{\beta}。#{D(T_n,T)} 的每个固定坐标项趋零，而尾和统一不超过 #{2\sum_{k>N}2^{-k}}。先取 #{N} 控制尾和，再令 #{n} 足够大，得到 #{D(T_n,T)\to 0}。}

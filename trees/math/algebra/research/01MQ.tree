@@ -1,12 +1,13 @@
-\title{无拼接满射判据的公开证明及外部输入}
+\title{无拼接满射自由性判据的归纳证明}
 \date{2026-09-23}
 \taxon{Proof route}
 \author{author}
 \meta{source}{[Brochard–Iyengar–Khare，定理 3.1 的原始证明](01M0)}
-\meta{status}{相对于明示深输入的完整归纳推导；不是无外部依赖的完整证明。}
+\meta{proof-status}{以 Nagata 换环定理和消去子中的非零因子定理为前提的归纳证明；两项定理见[原论文定理 3.1 的证明及所引文献](01M0)。}
 
-\p{设 #{A\twoheadrightarrow B} 为 Noether 局部环满射，#{N\ne0} 是有限 #{B} 模，且 #{\operatorname{pd}_AN\leq c=\operatorname{edim}A-\operatorname{edim}B}。目标是[无拼接自由性判据](01AE)。这里明确保留两个外部输入：一是 [Nagata 换环定理](01AF)；二是原论文所引 Auslander–Buchsbaum 消去子定理与素回避的组合，即有限投射维数非零模的非零消去子若不含于 #{\mathfrak m_A^2}，则其中存在 #{A} 非零因子 #{x\notin\mathfrak m_A^2}。本页不证明第二输入。}
-\p{先假定 #{N} 忠实，即 #{\operatorname{Ann}_BN=\{b:bN=0\}=0}。若 #{c=0}，#{\operatorname{pd}_AN=0}，由[有限投射模自由](01M8)得 #{N\cong A^r}，#{r>0}；所以 #{\ker(A\to B)=\operatorname{Ann}_AN=0}。}
+\p{设 #{A\twoheadrightarrow B} 为 [Noether](00D1) [局部环](00CX)满射，极大理想分别为 #{\mathfrak m_A,\mathfrak m_B}，#{N\ne 0} 是[有限生成](0128) #{B} 模，且 #{\operatorname{pd}_AN\leq c=\operatorname{edim}A-\operatorname{edim}B}。这里使用[投射维数](01A7)与[嵌入维数](01A9)。则 #{N} 为自由 #{B} 模，#{A\to B} 是[例外完全交满射](01AD)。}
+\p{使用 [Nagata 换环定理](01AF)，以及 Auslander–Buchsbaum 消去子定理与素回避的以下推论：有限投射维数非零模的非零消去子若不含于 #{\mathfrak m_A^2}，则其中存在 #{A} 非零因子 #{x\notin\mathfrak m_A^2}。后一结果的证明文献见 [Brochard–Iyengar–Khare，定理 3.1 的证明](01M0)。}
+\p{\strong{证明。}先假定 #{N} 忠实，即 #{\operatorname{Ann}_BN=\{b:bN=0\}=0}。若 #{c=0}，#{\operatorname{pd}_AN=0}，由[有限投射模自由](01M8)得 #{N\cong A^r}，#{r>0}；所以 #{\ker(A\to B)=\operatorname{Ann}_AN=0}。}
 \p{若 #{c>0}，核 #{J=\operatorname{Ann}_AN} 不包含于 #{\mathfrak m_A^2}。第二输入给 #{x\in J\setminus\mathfrak m_A^2} 非零因子。Nagata 对 #{A\to A/xA} 给}
 ##{\operatorname{pd}_{A/xA}N=\operatorname{pd}_AN-1\leq c-1
 =\operatorname{edim}(A/xA)-\operatorname{edim}B.}
@@ -16,4 +17,4 @@
 =\operatorname{pd}_AC=\operatorname{pd}_AN
 \leq\operatorname{edim}A-\operatorname{edim}B
 \leq\operatorname{edim}A-\operatorname{edim}C.}
-\p{故各项相等。置 #{I=\ker(A\to B)}、#{J=\ker(A\to C)}；#{J} 有切向线性独立的生成列，且两个商的嵌入维数相等。[中间商刚性](01MO)给 #{I=J}，所以 #{B=C}，即 #{N} 在 #{B} 上自由。没有把忠实商自由误当成原环上自由。}
+\p{故各项相等。置 #{I=\ker(A\to B)}、#{J=\ker(A\to C)}；#{J} 有切向线性独立的生成列，且两个商的嵌入维数相等。[中间商刚性](01MO)给 #{I=J}，所以 #{B=C}，即 #{N} 在 #{B} 上自由，得到[无拼接满射判据](01AE)。}

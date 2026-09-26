@@ -3,8 +3,8 @@
 \taxon{Construction}
 \author{author}
 
-\p{取[签名](00DF)：每个整数 #{n\in\mathbb Z} 一个常元 #{\operatorname{Leaf}_n}，以及一个二元运算 #{\operatorname{Node}}，不加方程。其所有无变量[项](00DG)组成集合 #{T}，即所有有限有序满二叉树，叶子带整数标签。左右子树的次序是结构的一部分。}
+\p{在集合范畴中取[签名](00DF)：每个整数 #{n\in\mathbb Z} 一个常元 #{\operatorname{Leaf}_n}，以及一个二元运算 #{\operatorname{Node}}，不加方程。其所有无变量[项](00DG)组成集合 #{T}，即所有有限有序满二叉树，叶子带整数标签。每个非叶顶点有按左右排序的两个子女。}
 \p{用造叶与接树解释这些符号，就得到[模型](00I8) #{T}。对任意模型 #{A}，递归定义}
 ##{h(\operatorname{Leaf}_n)=\operatorname{Leaf}_n^A,\qquad
 h(\operatorname{Node}(s,t))=\operatorname{Node}^A(h(s),h(t)).}
-\p{对项归纳证明它是唯一[模型同态](00I9) #{T\to A}。因此 #{T} 是自由于空生成集的模型，也就是初始模型；它不是任意解释该签名的模型。}
+\p{\strong{证明。}递归公式保证 #{h} 保持基本运算，所以是[模型同态](00I9)。任意同态在叶子上的值由常元确定，在节点上的值由两个子树的值确定；对项归纳得唯一性。因此 #{T} 是[模型范畴](00IA)的[始对象](0320)，也称自由于空生成集的模型。}

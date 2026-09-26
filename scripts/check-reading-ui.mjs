@@ -7,7 +7,7 @@ import { execFileSync } from 'node:child_process';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'output/math-blog');
-for (const file of ['tree.xsl', 'reading.css', 'reading.js']) {
+for (const file of ['tree.xsl', 'reading.css', 'reading.js', 'shulin-mark.svg']) {
   assert.equal(fs.readFileSync(path.join(output, file), 'utf8'), fs.readFileSync(path.join(root, 'theme-overrides', file), 'utf8'), `Stale theme: ${file}`);
 }
 const pages = ['index', '0062', '013Z', '004M', '004R', '003J'];
@@ -17,6 +17,10 @@ for (const id of pages) {
     assert(html.includes(marker), `${id}: missing ${marker}`);
   }
   assert(!/September|April|March/.test(html), `${id}: unlocalized date`);
+  assert(html.includes('數林廣記'), `${id}: missing site name`);
+  assert(html.includes('shulin-mark.svg?v='), `${id}: missing site mark`);
+  assert(!/数学博客作者|数学博客首页/.test(html), `${id}: stale branding`);
+  if (id === 'index') assert(html.includes('依然范德彪'), 'Missing author name');
 }
 console.log('Reading theme: generated assets and six representative XSL transformations passed.');
 
@@ -36,6 +40,7 @@ if (process.env.PLAYWRIGHT_MODULE) {
         await page.goto(`${base}${id}/index.xml`, { waitUntil: 'commit' });
         await page.locator('.search-trigger:not([disabled])').waitFor();
         await page.evaluate(() => document.fonts.ready);
+        assert(await page.locator('.site-mark').evaluate(img => img.complete && img.naturalWidth > 0), 'Site mark failed to load');
         const geometry = await page.evaluate(() => ({ width: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth }));
         assert(geometry.scroll <= geometry.width + 1, `${id} at ${width}: page overflows horizontally ${JSON.stringify(geometry)}`);
         if (['004M', '004R', '003J'].includes(id)) assert(await page.locator('.katex').count() > 0, `${id}: formulas not rendered`);

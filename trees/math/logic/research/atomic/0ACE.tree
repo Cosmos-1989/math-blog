@@ -1,0 +1,12 @@
+\title{Polish 空间的 Gδ 子空间仍为 Polish 空间}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bernshteyn，§2](007H)；[Gerber–Kunde，§3](007J)}
+
+\p{设 #{X} 是 [Polish 空间](00QC)，#{G=\bigcap_{n\geq 1}U_n}，其中每个 #{U_n} 在 #{X} 中开。则 #{G} 赋予子空间拓扑也是 Polish 空间。特别地，开子空间仍是 Polish 空间。}
+\p{\strong{证明。}空子空间的情形直接成立。取 #{X} 上的相容完备度量 #{d}。令 #{F_n=X\setminus U_n}；若 #{F_n\ne\varnothing}，置 #{f_n(x)=1/d(x,F_n)}（#{x\in G}），其中 #{d(x,F_n)=\inf_{z\in F_n}d(x,z)}。闭性保证分母正，三角不等式给出距离函数的连续性。若 #{F_n=\varnothing}，置 #{f_n=0}。定义}
+##{D(x,y)=d(x,y)+\sum_{n\geq 1}2^{-n}\min\{1,|f_n(x)-f_n(y)|\}.}
+\p{这是度量：各项满足三角不等式，且第一项保证正定性。它与子空间拓扑相容。事实上 #{D\geq d}；反向连续性由有限多个 #{f_n} 的连续性及级数尾和可任意小得到。}
+\p{设 #{(x_k)} 为 #{D}-Cauchy 序列。它在 #{d} 下收敛到 #{x\in X}。对每个 #{n}，数列 #{f_n(x_k)} 也是实数 Cauchy 序列，由[实数的完备性](0A37)有有限极限。如果 #{x\in F_n}，则 #{d(x_k,F_n)\to 0}，导致 #{f_n(x_k)\to\infty}，矛盾。故 #{x\in G}。有限项连续性与统一尾和估计再次给出 #{D(x_k,x)\to 0}，证明完备性。}
+\p{由[度量空间的可数性等价](0117)，#{X} 有可数开基；与 #{G} 取交得到 #{G} 的可数开基。每个非空基元素选一点，得到可数稠密集。因此 #{G} 可分且可完全度量化。}

@@ -1,0 +1,8 @@
+\title{闭区间上连续函数的一致范数完备性}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{C[0,1]} 为实值或复值连续函数空间，赋予[一致范数](00M3) #{\|f\|_\infty=\max_{[0,1]}|f|}。它是 [Banach 空间](00M6)。}
+\p{\strong{证明。}若 #{(f_n)} 为一致范数下的 Cauchy 列，则在每个 #{x} 处，#{(f_n(x))} 是标量 Cauchy 列，由[实数完备性](0A37)逐实分量得到极限 #{f(x)}。给定 #{\varepsilon>0}，存在 #{N} 使 #{m,n\ge N} 时对所有 #{x} 有 #{|f_n(x)-f_m(x)|<\varepsilon}。令 #{m\to\infty} 得 #{|f_n(x)-f(x)|\le\varepsilon}，故收敛一致。}
+\p{固定 #{x_0}，选 #{n} 使 #{\sup_x|f_n(x)-f(x)|<\varepsilon /3}，再由 #{f_n} 连续取邻域使 #{|f_n(x)-f_n(x_0)|<\varepsilon /3}。三角不等式给出 #{|f(x)-f(x_0)|<\varepsilon}，故 #{f} 连续，且 #{\|f_n-f\|_\infty\to 0}。}

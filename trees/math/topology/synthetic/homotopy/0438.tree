@@ -1,0 +1,40 @@
+\title{依赖运算的 Beck–Chevalley 基变换公式}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 8 章}
+
+\p{设 #{\mathcal C} 为[局部笛卡尔闭范畴](032V)，即有有限极限且每个切片有指数对象。对 #{f:A\to B}，#{\Sigma_f} 把 #{E\to A} 后复合到 #{B}，#{f^*} 取拉回，由[局部笛卡尔闭性的伴随判据](0A9C)，#{\Pi_f} 是 #{f^*} 的右伴随，故 #{\Sigma_f\dashv f^*\dashv\Pi_f}。预层情形的存在性与公式见[局部笛卡尔闭性](0436)和[依赖积](0437)。左伴随 #{\Sigma_f\dashv f^*} 采用[复合与基变换伴随](032U)。}
+
+\p{设下图为拉回：}
+
+\figure{\tex{\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}}{
+\begin{tikzcd}
+A'\arrow[r,"v"]\arrow[d,"f'"']&A\arrow[d,"f"]\\
+B'\arrow[r,"u"']&B.
+\end{tikzcd}
+}}
+
+\p{在局部笛卡尔闭范畴中，存在[自然同构](00I2)}
+
+##{u^*\Sigma_f\cong\Sigma_{f'}v^*,
+\qquad u^*\Pi_f\cong\Pi_{f'}v^*.}
+
+\p{\strong{证明。}第一式由[拉回粘贴](0327)得到。证明第二式时，对任意 #{Y\to B'} 计算}
+
+##{\begin{aligned}
+\operatorname{Hom}_{B'}(Y,u^*\Pi_fE)
+&\cong\operatorname{Hom}_B(\Sigma_uY,\Pi_fE)\\
+&\cong\operatorname{Hom}_A(f^*\Sigma_uY,E)\\
+&\cong\operatorname{Hom}_A(\Sigma_v(f')^*Y,E)\\
+&\cong\operatorname{Hom}_{A'}((f')^*Y,v^*E)\\
+&\cong\operatorname{Hom}_{B'}(Y,\Pi_{f'}v^*E).
+\end{aligned}}
+
+\p{第三步同样使用拉回粘贴。所有双射对 #{Y} 自然，由[Yoneda 引理](0343)得到对象同构。}
+
+\p{基变换公式说明先作依赖运算再代入参数，与先代入再作同样的依赖运算相容。类型论把这种相容性表现为代入规则；语义中则首先得到自然同构。}
+
+\p{图中交换等式为 #{fv=uf^{\prime}}，且 #{A^{\prime}} 具有 #{B^{\prime}\times_BA} 的拉回泛性质。证明中 #{\operatorname{Hom}_B} 等下标均指对应切片的态射集合，#{E\to A} 任意。这些公式给出范畴语义中的自然同构；严格语法代入还涉及所选表达方式的相容性。}

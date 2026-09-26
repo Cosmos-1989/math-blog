@@ -1,0 +1,14 @@
+\title{空间范畴的指数由函数类型实现}
+\date{2026-09-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[系统讲义](0210)，第 20 章；[引用](0211)}
+
+\p{给定[空间范畴](070Q)中的 #{A,B}，记 #{B^A=(A\to B)}，并使用[类型乘积](070U)。指数对象指代表函子 #{X\mapsto{\operatorname{Hom}}_{{\mathcal{S}}}(X\times A,B)} 的对象。 下述比较是[依赖类型的柯里化](0506)在常值族上的情形，两侧逆的函数路径由[函数外延性](050K)给出。}
+
+\p{有在 #{X,A,B} 的适当变量中自然的等价}
+
+##{{\operatorname{Hom}}_{{\mathcal{S}}}(X,B^A)\simeq(X\to(A\to B))
+\simeq(X\times A\to B)\simeq{\operatorname{Hom}}_{{\mathcal{S}}}(X\times A,B).}
+
+\p{中间等价是柯里化：#{h} 送到 #{(x,a)\mapsto h(x)(a)}，逆向送 #{k} 到 #{x\mapsto(a\mapsto k(x,a))}。函数外延性给出逆同伦。故函数类型连同求值映射是所需指数。}

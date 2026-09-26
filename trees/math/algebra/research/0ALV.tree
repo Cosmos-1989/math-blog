@@ -1,0 +1,13 @@
+\title{可求和参数的无穷乘积收敛}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rietsch，Edrei 乘积的解析背景](01C3)}
+
+\p{设非负实数列 #{(\alpha_i),(\beta_i)} 满足[级数](0A38) #{\sum_i(\alpha_i+\beta_i)<\infty}，且 #{\alpha_i\leq\alpha_1}。给定 #{R>0} 且 #{R\alpha_1<1}，部分乘积}
+##{P_N(z)=\prod_{i=1}^N\frac{1+\beta_i z}{1-\alpha_i z}}
+\p{在 #{|z|\leq R} 上一致收敛，亦即存在函数 #{P} 使 #{\sup_{|z|\leq R}|P_N(z)-P(z)|\to 0}。无穷乘积符号表示这一部分乘积极限。}
+\p{\strong{证明。}写每个因子为 #{1+u_i(z)}，则}
+##{|u_i(z)|=\left|\frac{(\alpha_i+\beta_i)z}{1-\alpha_i z}\right|
+\leq\frac{R(\alpha_i+\beta_i)}{1-R\alpha_1}=b_i,\qquad \sum_i b_i<\infty.}
+\p{展开有限乘积并取绝对值，得 #{|\prod_{i=p}^q(1+u_i)-1|\leq\prod_{i=p}^q(1+b_i)-1\leq\exp(\sum_{i=p}^q b_i)-1}。所有前段乘积也一致有界于 #{\exp(\sum_i b_i)}，所以 #{(P_N)} 一致 Cauchy。[实数完备性](0A37)逐实部、虚部给出极限，且相同估计保证一致收敛。这里使用[指数函数](0A46)。}

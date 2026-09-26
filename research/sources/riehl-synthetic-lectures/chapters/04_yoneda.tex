@@ -1,0 +1,151 @@
+\chapter{普通 Yoneda 引理与元素范畴}
+\section{协变形式的 Yoneda 引理}
+\begin{definition}[可表函子]
+函子 $F:C\to\Set$ 称为可表，若存在 $c\in C$ 和自然同构 $\Hom_C(c,-)\cong F$。对反变函子，使用 $\Hom_C(-,c)$。
+\end{definition}
+\begin{theorem}[协变 Yoneda 引理]\label{thm:ordinary-yoneda}
+设 $C$ 为局部小范畴，$F:C\to\Set$。评价映射
+\[
+\ev_{\id_c}:\Nat(\Hom_C(c,-),F)\longrightarrow F(c),
+\quad\alpha\longmapsto\alpha_c(\id_c)
+\]
+为双射，且对 $c,F$ 自然。
+\end{theorem}
+\begin{proof}
+给定 $u\in F(c)$，对每个 $x$ 定义
+\[
+\alpha^u_x:\Hom_C(c,x)\to F(x),
+\qquad \alpha^u_x(f)=F(f)(u).
+\]
+若 $g:x\to y$，则
+\[
+F(g)\alpha^u_x(f)=F(g)F(f)(u)=F(gf)(u)=\alpha^u_y(gf),
+\]
+故 $\alpha^u$ 自然。其在恒等态射上的值为 $F(\id_c)(u)=u$。
+
+反之，给定自然变换 $\alpha$ 和 $f:c\to x$，把自然性用在 $f$ 上：
+\[
+\begin{tikzcd}
+\Hom(c,c)\ar[r,"\alpha_c"]\ar[d,"f\circ-"']&F(c)\ar[d,"F(f)"]\\
+\Hom(c,x)\ar[r,"\alpha_x"']&F(x).
+\end{tikzcd}
+\]
+将 $\id_c$ 代入，得到 $\alpha_x(f)=F(f)(\alpha_c(\id_c))$。因此 $\alpha=\alpha^{\alpha_c(\id_c)}$，两个构造互逆。对 $F$ 的自然性由自然变换的复合直接验证；对 $c$ 的自然性由前复合与 $F$ 的函子律验证。
+\end{proof}
+\begin{example}
+令 $C$ 为单对象幺半群 $M$，函子 $F$ 就是一个左 $M$-集合 $X$。可表函子为左正则作用 $M$。定理断言每个 $M$-等变映射 $M\to X$ 都由 $1\in M$ 的像决定，公式为 $m\mapsto m\cdot x$。
+\end{example}
+\begin{remark}
+证明的关键既不是元素个数，也不是特殊的集合运算，而是恒等态射与自然性。后文将以箭头归纳代替自然性方块中的逐元素论证，并把双射提升为映射空间的等价。
+\end{remark}
+
+\section{反变形式与 Yoneda 嵌入}
+\begin{theorem}[反变 Yoneda 引理]
+若 $P:C^\op\to\Set$，则
+\[
+\Nat(\Hom_C(-,c),P)\cong P(c).
+\]
+对应于 $u\in P(c)$ 的自然变换为 $f:x\to c\mapsto P(f)(u)$。
+\end{theorem}
+\begin{proof}
+将定理\ref{thm:ordinary-yoneda}应用于 $C^\op$。也可直接计算：自然性中的后复合变为前复合，而 $P(gf)=P(f)P(g)$ 保证方块交换。逆映射仍为在 $\id_c$ 处评价。
+\end{proof}
+\begin{definition}[预层与 Yoneda 嵌入]
+小范畴 $C$ 上的预层为函子 $C^\op\to\Set$。预层范畴记为 $\widehat C=[C^\op,\Set]$。Yoneda 嵌入为
+\[
+y:C\to\widehat C,
+\qquad c\mapsto y(c)=\Hom_C(-,c).
+\]
+态射 $u:c\to d$ 通过后复合定义 $y(u)$。
+\end{definition}
+\begin{proposition}[全忠实性]
+Yoneda 嵌入全忠实：
+\[
+\Hom_C(c,d)\cong\Nat(y(c),y(d)).
+\]
+\end{proposition}
+\begin{proof}
+在反变 Yoneda 引理中令 $P=y(d)$，右边为 $y(d)(c)=\Hom_C(c,d)$。对应映射恰为后复合，所以所得双射就是 $y$ 在态射集合上的作用。
+\end{proof}
+\begin{proposition}[表示对象的唯一性]
+若 $y(c)\cong y(d)$，则 $c\cong d$。给定自然同构后，这个对象同构由 Yoneda 双射唯一确定。
+\end{proposition}
+\begin{proof}
+把自然同构及其逆分别对应为 $u:c\to d$、$v:d\to c$。Yoneda 嵌入保持复合且忠实，因此从 $y(v)y(u)=\id$ 推得 $vu=\id_c$，另一侧同理。
+\end{proof}
+\begin{example}[通过所有测试对象辨别映射]
+两个态射 $f,g:c\to d$ 相等，当且仅当对每个 $x$，它们诱导的函数 $\Hom(x,c)\to\Hom(x,d)$ 相等。充分性事实上只需取 $x=c$ 并代入 $\id_c$。允许所有 $x$ 的表述更适合在高阶情形保留全部映射空间。
+\end{example}
+
+\section{元素范畴与 Grothendieck 构造}
+\begin{definition}[协变元素范畴]
+对 $F:C\to\Set$，定义 $\int_C F$。对象是 $(c,u)$，其中 $u\in F(c)$；态射 $(c,u)\to(d,v)$ 为 $f:c\to d$，满足 $F(f)(u)=v$。投影 $p:\int_CF\to C$ 忘掉第二分量。
+\end{definition}
+\begin{proposition}[唯一的起点提升]
+给定 $(c,u)$ 和 $f:c\to d$，在 $\int_CF$ 中恰有一条以 $(c,u)$ 为起点、投影为 $f$ 的态射，其终点为 $(d,F(f)(u))$。
+\end{proposition}
+\begin{proof}
+态射定义要求终点的第二分量等于 $F(f)(u)$，所以终点被确定；态射本身由 $f$ 确定。函子律保证这些提升与恒等、复合相容。
+\end{proof}
+\begin{definition}[离散上纤维化]
+函子 $p:E\to C$ 称为离散上纤维化，若每个 $e\in E$ 及每个 $f:p(e)\to c$ 都存在唯一以 $e$ 为起点、投影为 $f$ 的态射。
+\end{definition}
+\begin{theorem}[集合值函子与离散上纤维化]
+集合值协变函子与离散上纤维化可相互恢复；在态射层面，自然变换对应于底范畴之上的函子。
+\end{theorem}
+\begin{proof}
+从 $F$ 出发，上述元素范畴给出离散上纤维化。反之，令 $F(c)$ 为 $p$ 在 $c$ 上的对象集合。给定 $f:c\to d$，把 $e\in F(c)$ 送到 $f$ 的唯一提升的终点。恒等态射的提升必为恒等。两条可复合提升的复合也是复合底态射的提升，所以由唯一性，$F(gf)=F(g)F(f)$。
+
+给定自然变换 $\alpha:F\Rightarrow G$，定义 $(c,u)\mapsto(c,\alpha_c(u))$。自然性恰保证态射被送到合法态射。反之，一个底范畴之上的函子保持唯一提升，因此其在纤维上的函数满足自然性。两组构造互逆，至多差一个保持投影的自然同构。
+\end{proof}
+\begin{example}[可表函子的总空间]
+若 $F=\Hom_C(c,-)$，则 $\int_CF$ 恰为余切片 $c/C$。对象是 $f:c\to x$，态射是使三角形交换的后复合。恒等态射 $\id_c$ 是这个总空间的始对象。
+\end{example}
+
+\section{依赖的普通 Yoneda 引理}
+\begin{theorem}[始对象上的截面]
+设范畴 $J$ 有始对象 $j_0$，$F:J\to\Set$。相容截面集合
+\[
+\limm_J F=\{(s_j)_j\mid F(a)(s_j)=s_k\text{ 对每个 }a:j\to k\}
+\]
+在 $j_0$ 处的评价给出双射 $\limm_JF\cong F(j_0)$。
+\end{theorem}
+\begin{proof}
+记唯一态射 $j_0\to j$ 为 $u_j$。给定 $v\in F(j_0)$，令 $s_j=F(u_j)(v)$。若 $a:j\to k$，始对象性质给出 $au_j=u_k$，所以 $F(a)(s_j)=s_k$。反之，任意相容截面满足 $s_j=F(u_j)(s_{j_0})$，故由初始值唯一确定。
+\end{proof}
+\begin{proposition}[余切片上的依赖形式]
+给定 $K:c/C\to\Set$，有
+\[
+\limm_{f\in c/C}K(f)\cong K(\id_c).
+\]
+\end{proposition}
+\begin{proof}
+应用上一条定理，因为 $\id_c$ 是余切片的始对象。特别地，若 $K(f:c\to x)=F(x)$，相容截面等同于自然变换 $\Hom(c,-)\Rightarrow F$，于是恢复普通 Yoneda 引理。
+\end{proof}
+\begin{remark}
+上式的左侧是相容截面，而不是对象集合上的任意笛卡尔积 $\prod_fK(f)$。在合成语言中，同一个相容截面可以写为依赖积，因为依赖积的语义已经包含对底范畴箭头的相容性。忽略这一区别会把 Yoneda 引理误写成一个明显错误的集合论断言。
+\end{remark}
+
+\section{每个预层由可表预层组成}
+\begin{definition}[反变元素范畴]
+对 $P:C^\op\to\Set$，$\int P$ 的对象为 $(c,u)$，态射 $(c,u)\to(d,v)$ 为 $a:c\to d$，满足 $P(a)(v)=u$。每个 $(c,u)$ 由 Yoneda 引理给出自然变换 $y(c)\to P$。
+\end{definition}
+\begin{theorem}[Yoneda 稠密性]\label{thm:density}
+有自然同构
+\[
+P\cong\colim_{(c,u)\in\int P}y(c).
+\]
+\end{theorem}
+\begin{proof}
+逐对象 $x$ 计算余极限。左侧余极限中的代表元为三元组 $(c,u,f)$，其中 $u\in P(c)$、$f:x\to c$。定义映射
+\[
+[c,u,f]\longmapsto P(f)(u)\in P(x).
+\]
+若 $a:(c,u)\to(d,v)$，则 $P(a)(v)=u$，而
+$P(af)(v)=P(f)P(a)(v)=P(f)(u)$，故映射尊重余极限关系。
+
+每个 $w\in P(x)$ 都由 $(x,w,\id_x)$ 表示，所以满射。任一 $(c,u,f)$ 与 $(x,P(f)(u),\id_x)$ 通过元素范畴中的态射 $f$ 具有相同的余极限类，因此映射也单射。这一描述与对 $x$ 的前复合相容，给出预层自然同构。
+\end{proof}
+\begin{remark}
+单纯集合正是某个小范畴上的预层。上述定理将说明，每个单纯集合都可以由标准单形通过余极限拼装。这一结论来自明确的代表元与等价关系，不需要预先具有单纯同伦论知识。
+\end{remark}

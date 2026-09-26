@@ -1,0 +1,156 @@
+\chapter{范畴、函子与自然变换}
+\section{范畴的定义及基本例子}
+\begin{definition}[普通范畴]
+一个范畴 $C$ 由对象类 $\Ob(C)$、每对对象 $x,y$ 的态射集合 $\Hom_C(x,y)$、恒等态射 $\id_x$，以及复合函数
+\[
+\Hom_C(y,z)\times\Hom_C(x,y)\to\Hom_C(x,z)
+\]
+组成。复合满足结合律和单位律。对象和态射均组成集合时称为小范畴；只要求每个态射类为集合时称为局部小范畴。
+\end{definition}
+\begin{example}
+集合与函数组成范畴 $\Set$；拓扑空间与连续映射组成范畴 $\Top$；群与群同态组成范畴；固定域上的向量空间与线性映射也组成范畴。复合由对应的函数复合给出。需要检验的是复合仍保持所要求的结构。
+\end{example}
+\begin{example}[偏序与幺半群]
+偏序集 $(P,\le)$ 决定一个范畴：当 $x\le y$ 时，$\Hom(x,y)$ 为单元素集合，否则为空。传递性给出复合。幺半群 $(M,\cdot,1)$ 决定单对象范畴，其自态射集合为 $M$，复合为乘法。若 $M$ 是群，则所有态射可逆。
+\end{example}
+\begin{definition}[同构与群胚]
+态射 $f:x\to y$ 是同构，若存在 $g:y\to x$ 使 $gf=\id_x$、$fg=\id_y$。每个态射均为同构的范畴称为群胚。
+\end{definition}
+\begin{lemma}
+同构的逆唯一，同构的复合仍为同构。
+\end{lemma}
+\begin{proof}
+若 $g,h$ 均为 $f$ 的逆，则
+\[
+g=g\id_y=g(fh)=(gf)h=h.
+\]
+若 $f:x\to y$、$k:y\to z$ 可逆，则 $f^{-1}k^{-1}$ 是 $kf$ 的逆；直接复合并使用结合律即可验证两个单位等式。
+\end{proof}
+\begin{remark}
+同构对象不必在原定义中是同一个对象。例如 $\R^2$ 与二维多项式子空间 $\{a+bt\}$ 是线性同构的对象。范畴论强调通过映射及其复合比较对象。后文的单价性将在特定宇宙内部把对象间的同一性与适当等价联系起来。
+\end{remark}
+
+\section{函子与对偶}
+\begin{definition}[函子]
+函子 $F:C\to D$ 给每个对象 $x$ 指定对象 $Fx$，给每个态射 $f:x\to y$ 指定 $Ff:Fx\to Fy$，并满足
+\[
+F(\id_x)=\id_{Fx},\qquad F(gf)=F(g)F(f).
+\]
+\end{definition}
+\begin{example}
+从群范畴到 $\Set$ 的遗忘函子忘掉乘法，但把同态视为函数。从向量空间范畴到阿贝尔群范畴的函子忘掉数乘。偏序之间的函子正是保序映射；单对象幺半群范畴之间的函子正是幺半群同态。
+\end{example}
+\begin{definition}[对偶范畴]
+$C^\op$ 与 $C$ 有相同对象，且
+\[
+\Hom_{C^\op}(x,y)=\Hom_C(y,x).
+\]
+其复合次序反转。函子 $C^\op\to D$ 也称从 $C$ 到 $D$ 的反变函子。
+\end{definition}
+\begin{example}[同态函子]
+固定 $c\in C$。函子 $\Hom_C(c,-):C\to\Set$ 将 $f:x\to y$ 送到后复合函数
+\[
+\Hom(c,x)\to\Hom(c,y),\qquad u\mapsto f\circ u.
+\]
+函子 $\Hom_C(-,c):C^\op\to\Set$ 则通过前复合变换。函子律恰由原范畴的单位律与结合律给出。
+\end{example}
+\begin{definition}[全忠实与本质满]
+函子 $F:C\to D$ 称为忠实或全，若每个
+\[
+\Hom_C(x,y)\to\Hom_D(Fx,Fy)
+\]
+分别为单射或满射；两者兼有时称为全忠实。若 $D$ 中每个对象都同构于某个 $Fx$，则称 $F$ 本质满。
+\end{definition}
+\begin{lemma}
+全忠实函子反映同构：若 $Ff$ 为同构，则 $f$ 为同构。
+\end{lemma}
+\begin{proof}
+由全性，把 $(Ff)^{-1}$ 写成 $Fg$。于是 $F(gf)=\id=F(\id)$，忠实性给出 $gf=\id$。同理 $fg=\id$。
+\end{proof}
+
+\section{自然变换及其演算}
+\begin{definition}[自然变换]
+给定 $F,G:C\to D$，自然变换 $\alpha:F\Rightarrow G$ 为一族态射 $\alpha_x:Fx\to Gx$，使每个 $f:x\to y$ 的方块交换：
+\[
+\begin{tikzcd}
+Fx\ar[r,"\alpha_x"]\ar[d,"Ff"']&Gx\ar[d,"Gf"]\\
+Fy\ar[r,"\alpha_y"']&Gy.
+\end{tikzcd}
+\]
+即 $Gf\circ\alpha_x=\alpha_y\circ Ff$。
+\end{definition}
+\begin{example}[双对偶映射]
+对向量空间 $V$，令 $V^*=\Hom_k(V,k)$。映射 $\eta_V:V\to V^{**}$ 由
+\[
+\eta_V(v)(\lambda)=\lambda(v)
+\]
+定义。对线性映射 $f:V\to W$，有 $f^{**}\eta_V=\eta_Wf$，因为在 $\mu\in W^*$ 上，两边都取值 $\mu(f(v))$。故 $\eta$ 是恒等函子到双对偶函子的自然变换。
+\end{example}
+\begin{proposition}[自然变换的逐点复合]
+若 $\alpha:F\Rightarrow G$、$\beta:G\Rightarrow H$，则 $(\beta\alpha)_x=\beta_x\alpha_x$ 定义自然变换。函子 $C\to D$ 与自然变换组成范畴 $[C,D]$。
+\end{proposition}
+\begin{proof}
+对 $f:x\to y$，计算
+\[
+Hf\,\beta_x\alpha_x
+=\beta_yGf\,\alpha_x
+=\beta_y\alpha_yFf.
+\]
+所以复合自然。单位自然变换逐点取恒等。结合律和单位律逐点由 $D$ 中相应等式得到。
+\end{proof}
+\begin{proposition}
+自然变换 $\alpha:F\Rightarrow G$ 是函子范畴中的同构，当且仅当每个 $\alpha_x$ 是同构。
+\end{proposition}
+\begin{proof}
+一个自然逆逐点提供逆，因此必要性成立。反之，在自然性等式
+$Gf\alpha_x=\alpha_yFf$ 两侧分别复合逆，得到
+\[
+Ff\alpha_x^{-1}=\alpha_y^{-1}Gf.
+\]
+故逐点逆构成自然变换，且是双侧逆。
+\end{proof}
+\begin{example}[逐点给定尚不保证自然]
+令 $C=[1]$ 为仅含一个非恒等态射 $0\to1$ 的范畴。取两个常值函子，值均为 $\{0,1\}$，连接映射为恒等。取 $\alpha_0=\id$、$\alpha_1$ 为交换两个元素的置换。它们逐点都是双射，但不构成自然变换，因为自然性要求 $\alpha_0=\alpha_1$。
+\end{example}
+\begin{remark}
+合成范畴论中会出现“逐纤维映射自动自然”的命题。那里所谓逐纤维映射是整个单纯语境中的一个项，它已随有向参数一致变化。它不等同于本例中仅对对象集合任意选择的函数族。
+\end{remark}
+
+\section{范畴等价}
+\begin{definition}[范畴等价]
+函子 $F:C\to D$ 是等价，若存在 $G:D\to C$ 及自然同构
+\[
+GF\cong\id_C,\qquad FG\cong\id_D.
+\]
+函子 $G$ 称为拟逆。
+\end{definition}
+\begin{theorem}[等价的判据]
+在可作所需对象选择的集合论基础中，函子是等价，当且仅当它全忠实且本质满。
+\end{theorem}
+\begin{proof}
+先设 $F$ 有拟逆。自然同构 $GF\cong\id_C$ 表明 $F$ 忠实；同理 $G$ 忠实。给定 $u:Fx\to Fy$，利用 $GF\cong\id_C$ 将 $Gu$ 共轭为 $x\to y$，再由自然性及 $G$ 的忠实性验证其经 $F$ 后为 $u$，从而 $F$ 全。本质满由 $FG\cong\id_D$ 直接得到。
+
+反之，对每个 $d\in D$ 选定 $Gd\in C$ 及同构 $\varepsilon_d:F(Gd)\to d$。对 $v:d\to d'$，由全忠实性，存在唯一 $Gv:Gd\to Gd'$，满足
+\[
+F(Gv)=\varepsilon_{d'}^{-1}v\varepsilon_d.
+\]
+对恒等和复合代入此公式，再用忠实性，得到函子律。公式本身说明 $\varepsilon:FG\Rightarrow\id_D$ 自然。对 $c\in C$，由全忠实性提升 $\varepsilon_{Fc}:F(GFc)\to Fc$，得到同构 $GFc\to c$。自然性同样由忠实性反映，故 $GF\cong\id_C$。
+\end{proof}
+\begin{remark}
+本质满只断言每个目标对象与像中的某个对象同构；构造拟逆需要把这些对象组织成一个选择。后文使用可缩数据时，唯一性连同高阶唯一性能够直接给出相容构造，不需要把任意选择强行视为自然选择。
+\end{remark}
+
+\section{切片与余切片}
+\begin{definition}[切片范畴]
+固定 $c\in C$。切片 $C/c$ 的对象是态射 $p:x\to c$；从 $p:x\to c$ 到 $q:y\to c$ 的态射为 $h:x\to y$，满足 $qh=p$。余切片 $c/C$ 的对象为 $p:c\to x$，其态射满足 $hp=q$。
+\end{definition}
+\begin{proposition}
+$\id_c$ 是 $C/c$ 的终对象，并且是 $c/C$ 的始对象。
+\end{proposition}
+\begin{proof}
+从 $p:x\to c$ 到 $\id_c:c\to c$ 的切片态射必须满足 $\id_ch=p$，所以唯一可能为 $h=p$。余切片的对偶论证给出从 $\id_c$ 到任意 $p:c\to x$ 的唯一态射。
+\end{proof}
+\begin{example}
+$\Set/A$ 的对象就是集合族的总空间投影，态射为逐纤维映射。因此第一章中的族运算可在一个普通范畴中表达。对群 $G$ 的单对象范畴，余切片的对象是 $G$ 的元素，任意两个对象之间恰有一个态射。这也解释了“一个对象连同一条指定出发箭头”为什么往往是可缩的数据。
+\end{example}
+\source{本章普通范畴论的进一步背景见\cite{RiehlContext}。}

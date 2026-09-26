@@ -1,0 +1,9 @@
+\title{连续二阶混合偏导数的交换}
+\date{2026-09-26}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{U\subseteq\mathbb R^m} 开，#{f:U\to\mathbb R} 为 [#{C^2} 函数](0A32)。则 #{\partial_i\partial_j f=\partial_j\partial_i f}。}
+\p{\strong{证明。}固定 #{a\in U} 与两个不同坐标方向，取非零小量 #{h,k}，并设}
+##{Q(h,k)=\frac{f(a+he_i+ke_j)-f(a+he_i)-f(a+ke_j)+f(a)}{hk}.}
+\p{先对第 #{i} 方向应用[中值定理](0A35)，再对第 #{j} 方向应用该定理，得到 #{Q(h,k)=\partial_j\partial_i f(\xi_{h,k})}，其中 #{\xi_{h,k}} 位于以四个取值点为顶点的矩形中。交换两个应用次序得到 #{Q(h,k)=\partial_i\partial_j f(\eta_{h,k})}。令 #{h,k\to 0}，两个中间点均趋于 #{a}，二阶偏导连续给出结论。}
