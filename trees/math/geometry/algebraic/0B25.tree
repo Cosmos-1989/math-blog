@@ -1,0 +1,14 @@
+\title{群作用的双有理共轭}
+\date{2026-09-28}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Zimmermann 的综述](icm2026-zimmermann)，第 1.1 节}
+
+\p{设 #{G} 在复代数簇 #{X} 上[双有理作用](0B23)，记作用为 #{a_X}。给定[双有理映射](0B0B) #{\varphi:X\dashrightarrow Y}，在 #{Y} 上定义 #{a_Y(g,y)=\varphi(a_X(g,\varphi^{-1}(y)))}。这称为共轭作用。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+G\times X \arrow[r,dashed,"a_X"] \arrow[d,dashed,"\mathrm{id}_G\times\varphi"'] & X \arrow[d,dashed,"\varphi"] \\
+G\times Y \arrow[r,dashed,"a_Y"'] & Y
+\end{tikzcd}
+}}
+\p{交换图表达 #{\varphi\circ a_X=a_Y\circ(\operatorname{id}_G\times\varphi)}。每个 #{g} 的作用为 #{\varphi f_g\varphi^{-1}}，因 #{\varphi f_g\varphi^{-1}\varphi f_h\varphi^{-1}=\varphi f_{gh}\varphi^{-1}} 而满足群律。纤维中的双有理映射都占优，可缩小开集使复合有定义；忠实性也在共轭下保持。}
