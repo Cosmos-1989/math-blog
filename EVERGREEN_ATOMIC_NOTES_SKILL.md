@@ -85,27 +85,28 @@ When a symbol has multiple possible meanings, say which one is meant.
 
 Use outline notes to impose a narrative over atomic notes.
 
-An outline note should:
+Distinguish a subject selector from a research-topic survey. A subject selector stays short and lists topics. A research-topic outline tells a mathematical story over the atomic notes; a one-sentence introduction followed by a catalogue is insufficient.
 
-- Be relatively short.
-- List child notes in a purposeful reading order.
-- Explain why this narrative is useful.
-- Avoid duplicating the full content of child notes.
+A research-topic outline should:
 
-Good outline note shape:
+- Begin with the central mathematical question and why it arises.
+- Explain the ideas connecting the main constructions and results, including why each next step is needed.
+- Introduce a representative example or obstruction when it helps explain the problem.
+- State important hypotheses and distinguish established results from conjectures and proof sketches.
+- Link definitions, examples and proofs naturally within the prose. A terminology link should point to its atomic definition; label a subtopic link as a subtopic.
+- Use short thematic paragraphs or a few relative sections. Include a short reading list only when it adds navigation beyond the prose.
+- Keep full definitions, technical variants and proofs in their reusable atomic pages. A survey can be longer than an atomic note without becoming a replacement for those pages.
+- Preserve stable IDs and reachability when replacing an old catalogue. Changing navigation does not change prerequisite edges or expand the source-reading record.
+
+Example survey opening:
 
 ```forester
 \title{代数理论：语法与语义}
 \taxon{Outline}
 
-\p{这一页组织代数理论的语法侧内容。}
+\p{群、环和模都能用运算与等式描述。一个共同的问题是，如何把这种描述与它在不同范畴中的实现分开研究？[代数理论](003C)把运算记为[签名](00DF)，再用[项](00DG)表达等式。}
 
-\ol{
-  \li{[代数理论](003C)}
-  \li{[代数签名](00DF)}
-  \li{[签名上的项](00DG)}
-  \li{[群论的等式公理化](003E)}
-}
+\p{[群的等式公理化](003E)给出基本例子，单位元视为零元运算，求逆视为一元运算。这样，群公理就能写成运算之间的等式，为把群解释到其他具有有限积的范畴中作准备。}
 ```
 
 ## Hierarchy
@@ -130,6 +131,8 @@ The subject pages `0061` through `0074` are topic selectors, not prerequisite co
 - Preserve foundation pages and stable IDs. Removing a foundation link from a landing page must not make the underlying notes unreachable.
 
 Run `node scripts/check-subject-navigation.mjs` after changing subject navigation, in addition to the whole-site checks.
+
+For the 24 report-level surveys revised in September 2026, run `node scripts/check-topic-narratives.mjs`. It checks structural regressions and retained topic reachability; it does not judge the quality of the mathematical narrative.
 
 ## Reorganization Workflow
 
