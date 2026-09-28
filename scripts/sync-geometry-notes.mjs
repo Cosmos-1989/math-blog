@@ -7,8 +7,22 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const write = (file, value) => fs.writeFileSync(path.join(root, file), JSON.stringify(value, null, 2) + '\n');
 const record = read('research/site-polish-geometry.json');
+const continuation = read('research/geometry-moduli-hodge.json');
 const register = read('research/site-evergreen-audit.json');
 const manifest = read('research/icm2026-geometry.json');
+// Keep the old batch intact; merge only this continuation's explicit page reviews.
+for (const [id, prerequisites, reason] of continuation.entries) {
+  record.reviews[id] = {action: '逐页核对与前置关系登记', reason};
+  record.prerequisites[id] = prerequisites;
+}
+const addedIds = continuation.entries.map(([id]) => id)
+  .filter(id => !continuation.existing_note_ids.includes(id));
+manifest.new_note_ids = [...new Set([...manifest.new_note_ids, ...addedIds])];
+for (const paper of manifest.papers) Object.assign(paper, continuation.papers[paper.id] ?? {});
+for (const field of ['proofs_written', 'research_statements_without_local_proof']) {
+  manifest[field] = [...new Set([...manifest[field], ...continuation[field]])];
+}
+manifest.continuation_record = 'research/geometry-moduli-hodge.json';
 const files = new Map(fs.readdirSync(path.join(root, 'trees'), {recursive: true})
   .filter(file => file.endsWith('.tree')).map(file => [path.basename(file, '.tree'), `trees/${file}`]));
 const snapshots = new Map();

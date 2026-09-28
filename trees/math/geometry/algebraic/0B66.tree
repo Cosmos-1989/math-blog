@@ -1,0 +1,12 @@
+\title{固定滤过上的二次权重优化}
+\date{2026-09-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Alper 与 Halpern-Leistner](icm2026-alper-halpern-leistner)，式 3.12 与 Example 3.18}
+
+\p{设 #{E_\bullet} 是曲线丛 #{E} 的有限递减子丛滤过，#{G_i=E_i/E_{i+1}}、#{r_i=\operatorname{rk}G_i}、#{\delta_i=\mu(G_i)-\mu(E)}，斜率见[定义](0B60)。对实权 #{w_i} 定义}
+##{\nu(w)=\sum_i r_i\left(-w_i\delta_i+\frac 12w_i^2\right).}
+\p{\strong{配方。}逐项配方给出}
+##{\nu(w)=\frac 12\sum_ir_i(w_i-\delta_i)^2-\frac 12\sum_ir_i\delta_i^2.}
+\p{因此无约束极小点唯一，为 #{w_i=\delta_i}，且其权为有理数。若 #{\delta_i} 严格递增，该极小点满足加权滤过的权序。若它不属于闭锥 #{w_0\le\cdots\le w_p}，严格凸且趋于无穷的二次函数仍在闭锥上取得唯一极小值；该值必在边界，否则梯度为零会给出同一个不可行的无约束点。边界上相邻权相等，等于合并相邻滤过步骤。}
+\p{这证明固定滤过上的优化结论。跨所有子丛滤过的存在性还使用 [HN 定理](0B64)及有界性，不能仅由单个二次函数的配方推出。}

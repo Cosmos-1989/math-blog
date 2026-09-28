@@ -1,0 +1,17 @@
+\title{代数叠的 Θ 完备性}
+\date{2026-09-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Alper 与 Halpern-Leistner](icm2026-alper-halpern-leistner)，Definition 3.7}
+
+\p{设 #{\mathcal X} 为域 #{k} 上的[代数叠](0B45)。给定 [DVR](0ALJ) #{R} 及极大理想生成元 #{\pi}，置 #{\Theta_R=[\operatorname{Spec}R[t]/\mathbb G_m]}，其中 #{t} 权为 #{-1}。记 #{0} 为 #{(\pi,t)} 定义的闭子叠。}
+\p{称 #{\mathcal X} 为 Θ 完备，如果对每个这样的 #{R}，限制函子}
+##{\operatorname{Hom}(\Theta_R,\mathcal X)\longrightarrow\operatorname{Hom}(\Theta_R\setminus\{0\},\mathcal X)}
+\p{为[群胚等价](031H)。也就是说，每个穿孔参数族都可延拓，延拓连同固定的边界同构唯一到唯一同构。旧术语为 Θ-reductive。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\Theta_R\setminus\{0\} \arrow[r,"f"] \arrow[d,hook] & \mathcal X \\
+\Theta_R \arrow[ur,dashed,"\widetilde f"'] &
+\end{tikzcd}
+}}
+\p{图中要求 #{\widetilde f|_{\Theta_R\setminus\{0\}}\cong f}。}

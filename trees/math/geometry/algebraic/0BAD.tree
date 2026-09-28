@@ -1,0 +1,9 @@
+\title{圆盘上的 Cauchy 积分公式}
+\date{2026-09-28}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{f} 在闭圆盘 #{\{|z-a|\le r\}} 的邻域上[全纯](0B81)。若 #{|w-a|<r}，则正向圆周积分满足}
+##{f(w)=\frac{1}{2\pi i}\int_{|z-a|=r}\frac{f(z)}{z-w}\,dz.}
+\p{\strong{证明。}在圆盘中删去以 #{w} 为中心、半径为 #{\varepsilon} 的小圆盘。形式 #{f(z)\,dz/(z-w)} 在剩余区域闭，因为其系数全纯。由 [Stokes 公式](0BAC)，外圆周积分等于内圆周的正向积分。令 #{z=w+\varepsilon e^{it}}，内圆周积分成为 #{i\int_0^{2\pi}f(w+\varepsilon e^{it})\,dt}。当 #{\varepsilon\to 0} 时，由连续性一致收敛到 #{2\pi i f(w)}。}
+\p{特别地，取 #{w=a} 得到圆周平均公式 #{f(a)=(2\pi)^{-1}\int_0^{2\pi}f(a+re^{it})\,dt}。在积分中对 #{w} 求导还给出各阶导数公式；几何级数展开则给出圆盘内部的 Taylor 展开。}
