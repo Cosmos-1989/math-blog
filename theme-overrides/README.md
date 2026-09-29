@@ -9,6 +9,7 @@ submodule; do not commit local overrides there or rely on its dirty working copy
 node scripts/apply-theme.mjs
 forester build forest.toml
 node scripts/check-reading-ui.mjs
+node scripts/check-site-domain.mjs
 ```
 
 GitHub Pages uses the same application step. CSS and JS are copied as theme files,
@@ -49,6 +50,8 @@ Run a local server for `output/` on port 8083. With Playwright installed outside
 the repository, set `PLAYWRIGHT_MODULE` to its absolute `index.mjs` path and run
 `node scripts/check-reading-ui.mjs`. Optionally set `BROWSER_EXECUTABLE` to an
 installed Chromium executable and `PREVIEW_URL` to another local base URL.
+The default preview is `http://localhost:8083/`, matching the root path of
+`https://opetope.cc/`. Build checks derive their output path from `forest.toml`.
 
 This tests seven representative pages at 1440, 390 and 320 pixels: heading/body
 font consistency, title sizing, horizontal overflow, resource loading, math,

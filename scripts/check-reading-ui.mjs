@@ -4,9 +4,9 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { output, basePath } from './site-config.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const output = path.join(root, 'output/math-blog');
 for (const file of ['tree.xsl', 'reading.css', 'reading.js', 'shulin-mark.svg']) {
   assert.equal(fs.readFileSync(path.join(output, file), 'utf8'), fs.readFileSync(path.join(root, 'theme-overrides', file), 'utf8'), `Stale theme: ${file}`);
 }
@@ -33,7 +33,7 @@ console.log(`Reading theme: generated assets, heading typography and ${pages.len
 if (process.env.PLAYWRIGHT_MODULE) {
   const { chromium } = await import(process.env.PLAYWRIGHT_MODULE);
   const browser = await chromium.launch({ headless: true, ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}) });
-  const base = process.env.PREVIEW_URL || 'http://localhost:8083/math-blog/';
+  const base = process.env.PREVIEW_URL || `http://localhost:8083${basePath}`;
   const shots = fs.mkdtempSync(path.join(os.tmpdir(), 'forester-reading-'));
   const errors = [];
   try {
@@ -81,7 +81,7 @@ if (process.env.PLAYWRIGHT_MODULE) {
       assert.notEqual(await page.locator('article > section > details').getAttribute('open'), null);
       assert(await page.locator('footer a.heading-link').count() > 0, 'Related titles must be links');
       await page.route('**/__reading_fixture__/index.xml', route => route.fulfill({
-        contentType: 'text/xml', body: fs.readFileSync(path.join(root, 'scripts/fixtures/reading.xml'), 'utf8'),
+        contentType: 'text/xml', body: fs.readFileSync(path.join(root, 'scripts/fixtures/reading.xml'), 'utf8').replaceAll('/math-blog/', basePath),
       }));
       await page.goto(`${base}__reading_fixture__/index.xml`, { waitUntil: 'commit' });
       await page.locator('.search-trigger:not([disabled])').waitFor();

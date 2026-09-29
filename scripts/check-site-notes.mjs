@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
+import { output as siteOutput } from "./site-config.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -58,7 +59,7 @@ for (const [id, tree] of trees) {
     if (expected) errors.push(`${id}: '${label}' still links ${target}, expected ${expected}`);
   }
   if (sourceOnly) continue;
-  const output = path.join(root, "output/math-blog", id, "index.xml");
+  const output = path.join(siteOutput, id, "index.xml");
   if (!fs.existsSync(output)) { errors.push(`${id}: missing built XML`); continue; }
   const xml = fs.readFileSync(output, "utf8");
   const main = xml.match(/<fr:mainmatter>([\s\S]*?)<\/fr:mainmatter>/)?.[1] ?? "";

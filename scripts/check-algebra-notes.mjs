@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { output as siteOutput } from "./site-config.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
@@ -47,7 +48,7 @@ for (const note of manifest.notes) {
     errors.push(`${note.id}: missing source metadata`);
   }
   if (sourceOnly) continue;
-  const output = path.join(root, "output/math-blog", note.id, "index.xml");
+  const output = path.join(siteOutput, note.id, "index.xml");
   if (!fs.existsSync(output)) errors.push(`${note.id}: missing built page`);
   else if (!fs.readFileSync(output, "utf8").includes("<fr:mainmatter>")) errors.push(`${note.id}: no rendered mainmatter`);
 }

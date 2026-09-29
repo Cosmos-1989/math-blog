@@ -65,6 +65,7 @@ jobs:
 
       - name: Check generated pages and research manifests
         run: |
+          node scripts/check-site-domain.mjs
           node scripts/check-reading-ui.mjs
           node scripts/check-site-notes.mjs
           node scripts/check-logic-notes.mjs
@@ -72,10 +73,11 @@ jobs:
 
       - name: Prepare for GitHub Pages
         run: |
-          # Forester outputs to output/math-blog/ due to URL path
-          # Move content to deploy directory
+          # The custom domain is served at its root, with no repository prefix.
           mkdir -p deploy
-          cp -r output/math-blog/* deploy/
+          cp -r output/. deploy/
+          cp CNAME deploy/CNAME
+          touch deploy/.nojekyll
 
           # Create root index.html with redirect
           cat > deploy/index.html << 'EOF'
