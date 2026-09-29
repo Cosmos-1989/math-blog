@@ -3,26 +3,20 @@
 \taxon{Definition}
 \author{author}
 
-\p{设 #{f:M\to N} 是[光滑映射](00N9)，#{p\in M}。其微分或推前 #{df_p=f_*:T_pM\to T_{f(p)}N} 由 #{(df_pV)(\phi)=V(\phi\circ f)} 定义，其中 #{\phi} 是目标点附近的光滑函数。它总能推前单个切向量；若要把整个向量场推为目标上的向量场，则一般还需要可逆性等条件。}
+\p{设 #{f:M\to N} 是[光滑映射](00N9)，#{p\in M}。其微分或推前是[切空间](0044)之间的线性映射}
+##{df_p:T_pM\to T_{f(p)}N,\qquad (df_pV)(\phi)=V(\phi\circ f),}
+\p{其中 #{\phi} 是 #{f(p)} 附近的光滑函数。若将函数拉回记为 #{f^*\phi=\phi\circ f}，定义也写作 #{(f_*V)(\phi)=V(f^*\phi)}。}
 
-\p{另设同一局部区域有两组坐标 #{x} 与 #{y}，暂以 #{f} 表示坐标变换 #{x=f(y)}。同一个 [切向量](0044) 的坐标表达满足：它作用在函数上的结果与坐标选择无关。由[链式法则](0A34)得到}
+\p{取源坐标 #{x^1,\ldots,x^m} 和目标坐标 #{y^1,\ldots,y^n}，记 #{f^a=y^a\circ f\circ x^{-1}}。由[链式法则](0A34)，对 #{V=v^i\partial_{x^i}|_p} 有}
+##{df_pV=\sum_{a=1}^n\sum_{i=1}^m
+\frac{\partial f^a}{\partial x^i}(x(p))v^i\left.\frac{\partial}{\partial y^a}\right|_{f(p)}.}
+\p{也就是说，推前的分量由映射的 Jacobian 矩阵乘以原分量得到。}
 
+\p{特别地，在同一流形上换用坐标 #{x} 与 #{y}，恒等映射的微分不改变切向量，只改变它的表示。采用[求和约定](00NA)，有}
 ##{V=v^i\frac{\partial}{\partial x^i}
-=v^i\frac{\partial y^k}{\partial x^i}\frac{\partial}{\partial y^k}.}
+=w^a\frac{\partial}{\partial y^a},\qquad
+w^a=\frac{\partial y^a}{\partial x^i}v^i,\qquad
+v^i=\frac{\partial x^i}{\partial y^a}w^a.}
+\p{偏导均在同一点取值。这就是切向量分量的反变变换律；链式法则保证两种表达作用于任意函数时结果一致。}
 
-\p{因此，切向量分量按反变方式变换。等价地，对函数 #{\phi} 有}
-
-##{v^i\frac{\partial y^k}{\partial x^i}
-\frac{\partial}{\partial y^k}\phi(f(y))
-=v^i\frac{\partial x^j}{\partial x^i}\frac{\partial\phi}{\partial x^j}
-=v^i\frac{\partial\phi}{\partial x^i}.}
-
-\p{更抽象地，若 #{W=w^k\frac{\partial}{\partial y^k}} 是用 #{y} 坐标写出的切向量，则坐标变换 #{f} 将它推前为}
-
-##{f_*W=w^k\frac{\partial x^i}{\partial y^k}\frac{\partial}{\partial x^i}.}
-
-\p{推前与函数拉回相容：若 #{f^*\phi(y)=\phi(f(y))}，则}
-
-##{(f_*W)(\phi)=W(f^*\phi).}
-
-\p{对于任意光滑映射 #{f:M\to N}，总可以把函数和余切向量拉回，也总可以把切向量推前；反方向通常需要额外条件；[余切拉回](00NF)的系数须在映射像点处取值。}
+\p{任意光滑映射都能推前单个切向量，并能拉回函数及[余切向量](00NF)。要把整个向量场推成目标上的向量场，还须保证不同原像给出的向量相容；微分同胚是保证这一点的充分条件。}

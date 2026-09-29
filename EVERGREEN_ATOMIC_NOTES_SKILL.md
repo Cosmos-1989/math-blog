@@ -203,6 +203,15 @@ Before marking a refactoring complete:
 
 `research/evergreen-audit.json` is a historical record of the earlier partial review, not the current acceptance scope. `EVERGREEN_REFACTOR_AUDIT.md` describes the current scope and limitations.
 
+The September 29 readability pass is recorded in `research/readability-2026-09-29-*.json`.
+Each record distinguishes pages actually read from pages found by structural scans.
+After modifying one of these reviewed pages, update the relevant record and run
+`node scripts/sync-readability-review.mjs` before the checks below. If using an older
+subject synchronization script, run the readability synchronization afterward so
+that historical prerequisite edges do not overwrite a later split. The combined
+`research/readability-2026-09-29.json` contains both the full inventory and the
+explicitly unreviewed IDs; do not treat its inventory as a semantic certification.
+
 Run these checks after editing:
 
 ```sh

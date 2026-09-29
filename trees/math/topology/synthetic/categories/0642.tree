@@ -4,14 +4,10 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 19 章；[RiehlContext](0212)，[RiehlVerity](021F)}
 
-\p{设 #{C} 为合成预范畴，#{F:C\to\mathsf{Type}} 协变，#{c:C}、#{u:F(c)}；#{\psi_{u,x}(f)=f_*u} 为普遍元素测试函数。}
-
-\p{所需前置：[协变族的普遍元素](0640)、[合成预范畴的初始对象](0632)、[协变依赖箭头的端点路径公式](0627)、[协变族的总空间继承预范畴性与完备性](062J)。}
-
-\p{设 #{F} 协变。#{(c,u)} 是 #{F} 的普遍元素，当且仅当它是总空间范畴 #{\widetilde F=\sum_xF(x)} 的初始对象。}
+\p{设 #{C} 为合成预范畴，#{F:C\to\mathsf{Type}} 协变，#{c:C}、#{u:F(c)}；#{\psi_{u,x}(f)=f_*u} 为[普遍元素](0640)的测试函数。则 #{(c,u)} 是 #{F} 的普遍元素，当且仅当它是总空间 #{\widetilde F=\sum_{x:C}F(x)} 的[初始对象](0632)；这一判据无须假设 #{C} 完备。}
 
 \p{\strong{证明。}
-由依赖箭头端点公式，}
+由[协变族总空间定理](062J)，#{\widetilde F} 是预范畴。再由[依赖箭头的端点路径公式](0627)，}
 
 ##{\operatorname{Hom}_{\widetilde F}((c,u),(x,v))
 \simeq\sum_{f:\operatorname{Hom}_C(c,x)}(f_*u=v).}

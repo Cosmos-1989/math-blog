@@ -4,7 +4,7 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，附录 A}
 
-\p{前置：[向量空间](00D3)；[有限维数](00GM)；[自然变换](00I2)；[线性映射](00GC)；[线性映射的矩阵表示](00GK)。}
+\p{在固定域上的[向量空间](00D3)范畴中，考察Hom函子之间的[自然变换](00I2)。自然性会从恒等处恢复一个[线性映射](00GC)；承载空间[有限维](00GM)时，可将其写成[矩阵](00GK)。}
 
 \p{固定域 #{k}，所有向量空间与线性映射均在 #{k} 上。#{\operatorname{Hom}(V,X)} 表示线性映射集合，并有逐点线性空间结构；#{\operatorname{Nat}} 表示集合值函子间的自然变换。}
 
@@ -16,7 +16,7 @@
 
 ##{T\circ\alpha_X(A)=\alpha_Y(T\circ A).}
 
-\p{不预先假设 #{\alpha_X} 是线性映射。取}
+\p{\strong{恢复算子。}不预先假设 #{\alpha_X} 是线性映射。取}
 
 ##{M=\alpha_V(\operatorname{id}_V):W\to V.}
 
@@ -26,12 +26,12 @@
 
 \p{因此整族 #{\alpha} 完全由一个线性映射 #{M} 决定，而且每个 #{\alpha_Y} 自动是线性的。}
 
-\p{取 #{V=k^n}、#{W=k^m}、#{Y=k^r}。则 #{M} 是 #{n\times m} 矩阵，#{A} 是 #{r\times n} 矩阵，#{\alpha_Y(A)=AM} 是 #{r\times m} 矩阵。此计算直接展示}
+\p{\strong{由算子构造自然变换。}反向地，任意线性映射 #{M:W\to V} 给出 #{\alpha_X(A)=A\circ M}，因为结合律保证 #{T\circ(A\circ M)=(T\circ A)\circ M}。在 #{\operatorname{id}_V} 处评价又恢复 #{M}，从而所列对应确为双射。自动线性也可逐项检查：#{\alpha_X(aA+bB)=(aA+bB)M=aAM+bBM}。}
+
+\p{\strong{矩阵表示。}取 #{V=k^n}、#{W=k^m}、#{Y=k^r}。则 #{M} 是 #{n\times m} 矩阵，#{A} 是 #{r\times n} 矩阵，#{\alpha_Y(A)=AM} 是 #{r\times m} 矩阵。此计算直接展示}
 
 ##{\operatorname{Nat}(\operatorname{Hom}(V,-),\operatorname{Hom}(W,-))\cong\operatorname{Hom}(W,V)}
 
 \p{中的方向反转。在合成 Yoneda 引理中，相同的评价公式仍然成立，但其自然性由内部依赖函数的定义保证。}
 
 \p{这个直接计算是[普通协变 Yoneda 引理](0341)的线性代数实例；高阶推广见[合成 Yoneda 引理](063B)，它另有协变族等前提。}
-
-\p{反向地，任意线性映射 #{M:W\to V} 给出 #{\alpha_X(A)=A\circ M}，因为结合律保证 #{T\circ(A\circ M)=(T\circ A)\circ M}。在 #{\operatorname{id}_V} 处评价又恢复 #{M}，从而所列对应确为双射。自动线性也可逐项检查：#{\alpha_X(aA+bB)=(aA+bB)M=aAM+bBM}。}

@@ -4,7 +4,9 @@
 \author{author}
 \meta{source}{[Gerber–Kunde，§2.1](007J)}
 
-\p{设 #{(X,\mathcal A,\mu)} 为[测度空间](00Q2)，实值函数的[可测性](00Q1)采用实线由开区间生成的 σ-代数。对非负简单函数 #{s=\sum_{j=1}^m a_j1_{A_j}}，其中 #{A_j\in\mathcal A} 两两不交、#{a_j\geq 0}，定义}
-##{\int_X s\,d\mu=\sum_{j=1}^m a_j\mu(A_j),\qquad
-\int_X f\,d\mu=\sup_{0\leq s\leq f,\ s\text{ 简单}}\int_X s\,d\mu\quad(f\geq 0).}
-\p{约定 #{0\cdot\infty=0}；上确界采用[实数的完备序](0A37)，对无上界的非负积分值取 #{+\infty}。对可测实函数 #{f}，令 #{f^+=\max(f,0)}、#{f^-=\max(-f,0)}。若 #{\int|f|\,d\mu<\infty}，称 #{f} 可积，并置 #{\int f=\int f^+-\int f^-}。复值函数按实部、虚部分别积分。此处可积条件保证两项均有限。}
+\p{设 #{(X,\mathcal A,\mu)} 为[测度空间](00Q2)，实值或扩充非负实值函数的[可测性](00Q1)采用相应实线的 Borel 结构。对非负简单函数 #{s=\sum_{j=1}^m a_j1_{A_j}}，其中 #{A_j\in\mathcal A} 两两不交、#{a_j\geq 0}，定义}
+##{\int_X s\,d\mu=\sum_{j=1}^m a_j\mu(A_j),\qquad 0\cdot\infty=0.}
+\p{对非负可测函数 #{f:X\to[0,\infty]}，再定义}
+##{\int_X f\,d\mu=
+\sup_{0\leq s\leq f,\ s\text{ 非负简单}}\int_X s\,d\mu.}
+\p{上确界采用[实数的完备序](0A37)，无上界时取 #{+\infty}。对可测实函数 #{f}，令 #{f^+=\max(f,0)}、#{f^-=\max(-f,0)}。若 #{\int|f|\,d\mu<\infty}，称 #{f} 可积，并置 #{\int f=\int f^+-\int f^-}；可积条件保证两项均有限。复值函数按实部、虚部分别积分。}

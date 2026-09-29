@@ -1,0 +1,15 @@
+\title{多对象的含幺正次数部分}
+\date{2026-09-29}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Karmazyn–Lepri–Wemyss，§8.1，构造 8.5、引理 8.6、注 8.8](https://arxiv.org/html/2411.17359v2#S8.SS1)}
+
+\p{设 #{k=\mathbb C}，#{\mathcal C} 为对象集 #{\{1,\ldots,r\}} 的 DG 范畴：每个态射空间 #{\mathcal C(i,j)} 是 #{k}-向量空间的[上链复形](012A)，复合满足带符号的 Leibniz 规则。要求每个恒等态射 #{e_i} 的[上同调类](012B)非零。}
+\p{逐态射空间取严格含幺极小模型。它的高阶复合只作用于可衔接态射列，次数和恒等式采用 [#{A_\infty} 约定](01BF)，每个对象保留自己的严格单位 #{e_i}；模型存在性见所引命题 8.4。定义同对象集的含幺正次数部分 #{\mathcal N_{\mathcal C}}，其态射空间为}
+##{\mathcal N_{\mathcal C}(i,j)=
+\begin{cases}
+k e_i\oplus H^{>0}\mathcal C(i,i),&i=j,\\
+H^{>0}\mathcal C(i,j),&i\ne j.
+\end{cases}}
+\p{高阶复合限制在这些子空间上：#{n} 个正次输入经次数 #{2-n} 的操作后次数至少为二；含某个单位的高阶复合为零，二元复合则遵守单位律。这是[正次数封闭论证](01BJ)的逐对象版本。保持对象并在各态射复形上诱导拟同构的比较，也保持此构造的 #{A_\infty} 拟同构类型。}
+\p{把全部态射空间作有限直和，其零次部分为 #{\bigoplus_{i=1}^r k e_i\cong k^r}，且 #{e_ie_j=\delta_{ij}e_i}。只有 #{r=1} 时才退化为[单单位的正次数部分](01BH)；#{r>1} 时只保留总单位 #{\sum_i e_i} 会丢掉各对象的投影。}

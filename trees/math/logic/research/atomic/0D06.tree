@@ -1,0 +1,13 @@
+\title{p 进线性变换的体积因子}
+\date{2026-09-29}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cluckers，§1、3](007I)}
+
+\p{固定素数 #{p} 和整数 #{d\geq 1}。令 #{\mu} 为 [#{\mathbb Q_p} 上归一化的 Haar 测度](00T2)，#{\mu_d=\mu^{\otimes d}} 为 #{\mathbb Q_p^d} 上的[乘积测度](00QB)。对[可逆矩阵](00DD) #{A\in\mathrm{GL}_d(\mathbb Q_p)} 及 Borel 集 #{E\subseteq\mathbb Q_p^d}，有}
+##{\mu_d(AE)=|\det A|_p\,\mu_d(E),\qquad |a|_p=p^{-v_p(a)}.}
+\p{这里 #{\det A} 为[行列式](0A40)，体积因子用 p 进绝对值计算。}
+
+\p{\strong{证明。}一维中，乘以 #{a=p^k u}（#{u\in\mathbb Z_p^\times}）将球 #{b+p^n\mathbb Z_p} 映成 #{ab+p^{n+k}\mathbb Z_p}。球体积公式给出比值 #{p^{-k}=|a|_p}，再由测度唯一延拓得到 Borel 集的缩放公式。}
+
+\p{高维中，交换坐标保持乘积测度；向某坐标加另一坐标的倍数，对固定其余坐标的切片只是平移，也保持乘积测度。单坐标乘以非零 #{a} 则使体积乘以 #{|a|_p}。将可逆矩阵分解为这些初等变换，体积因子与行列式的乘法规则相同，遂得公式。}

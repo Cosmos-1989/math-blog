@@ -16,6 +16,7 @@ const expected = new Set([
   ...read('research/icm2026-logic.json').papers.map(p => p.outline),
   ...read('research/icm2026-algebra.json').papers.map(p => p.outline),
   ...read('research/icm2026-geometry.json').papers.map(p => p.outline).filter(Boolean),
+  ...read('research/icm2026-number-theory.json').papers.map(p => p.outline),
   '0200',
 ]);
 const reviewed = new Set(record.pages.map(p => p.id));

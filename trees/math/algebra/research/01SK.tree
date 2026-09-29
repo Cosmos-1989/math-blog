@@ -4,7 +4,7 @@
 \author{author}
 \meta{source}{[Stacks，065P](https://stacks.math.columbia.edu/tag/065P)}
 
-\p{设 #{R} 为含幺环，#{N} 为左模。给定[短正合列](0129) #{0\to A\to B\to C\to 0}，有}
+\p{设 #{R} 为含幺环，#{N} 为左 #{R} 模。给定左 #{R} 模的[短正合列](0129) #{0\to A\xrightarrow{i}B\xrightarrow{q}C\to 0}，有}
 ##{0\to\operatorname{Hom}_R(C,N)\to\operatorname{Hom}_R(B,N)\to\operatorname{Hom}_R(A,N)
 \to\operatorname{Ext}^1_R(C,N)\to\operatorname{Ext}^1_R(B,N)\to\cdots.}
 \p{\strong{证明。}用[马蹄引理](01SJ)选取逐次分裂的分解序列 #{0\to P\to L\to Q\to 0}，分别解析 #{A,B,C}。对任意 #{N}，#{L_n=P_n\oplus Q_n} 给出阿贝尔群短正合列}
@@ -12,4 +12,4 @@
 \to\operatorname{Hom}_R(P_n,N)\to 0.}
 \p{最右端的满射由把映射在 #{Q_n} 上补零得到，不需要 #{N} 投射或内射。因为分解之间的映射与微分相容，这些短正合列组成上链复形短正合列。应用[上同调长正合列](01SG)，按[Ext 定义](012E)识别三项的上同调，即得结果。第一变量反变，所以次序为 #{C,B,A}，不能照抄第二变量的次序。}
 \p{零次连接映射还有扩张解释，但必须核对符号。将原扩张沿 #{f:A\to N} 作[推出](01S5)，记所得类为 #{\xi_f\in\operatorname{Ext}^1_R(C,N)}。按上述提升后取微分的约定，#{\delta(f)=-\xi_f}。}
-\p{确切地，记增广为 #{a:P_0\to A}，提升为 #{t:Q_0\to B}，令 #{i\theta=t d_Q}。马蹄微分的非对角项 #{b:Q_1\to P_0} 满足 #{ab=-\theta}。把 #{fa} 提升为 #{F(p,z)=fa(p)}，则 #{F d_L=-f\theta}；而[扩张分类](01S6)中推出类由 #{f\theta} 表示。故确实相差负号。这个负号不影响正合性：#{\delta(f)=0} 仍等价于推出扩张分裂，也等价于 #{f} 能延伸到 #{B}。}
+\p{确切地，记增广为 #{a:P_0\to A}、#{c:Q_0\to C}，取提升 #{t:Q_0\to B} 使 #{qt=c}。对微分 #{d_Q:Q_1\to Q_0}，有 #{qtd_Q=cd_Q=0}，故唯一确定 #{\theta:Q_1\to A} 使 #{i\theta=td_Q}。马蹄微分的非对角项 #{b:Q_1\to P_0} 满足 #{ab=-\theta}。把 #{fa} 提升为 #{F:L_0=P_0\oplus Q_0\to N}，#{F(p,z)=fa(p)}，则 #{F d_L=-f\theta}；而[扩张分类](01S6)中推出类由 #{f\theta} 表示。故确实相差负号。这个负号不影响正合性：#{\delta(f)=0} 仍等价于推出扩张分裂，也等价于 #{f} 能延伸到 #{B}。}

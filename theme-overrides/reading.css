@@ -12,7 +12,7 @@
   --theorem-paper: #f2faff;
   --theorem-rule: #9ad7ed;
   --body-font: "Inria Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --heading-font: "Iowan Old Style", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --heading-font: var(--body-font);
   --secondary: var(--muted);
 }
 
@@ -48,7 +48,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .logo a { display: inline-flex; gap: 13px; align-items: center; color: var(--ink); }
 .logo a:hover { color: var(--blue); text-decoration: none; }
 .site-mark { display: block; width: 40px; height: 40px; flex: 0 0 auto; }
-.site-name { font-family: "Songti TC", "Songti SC", "Noto Serif CJK TC", var(--heading-font); white-space: nowrap; line-height: 1.4; }
+.site-name { font-family: "Songti TC", "Songti SC", "Noto Serif CJK TC", serif; white-space: nowrap; line-height: 1.4; }
 .nav-actions { display: flex; gap: 30px; align-items: center; font-size: 14px; }
 .nav-actions > a { color: var(--muted); }
 .search-trigger {
@@ -69,7 +69,11 @@ details > summary { cursor: pointer; }
 details > summary > header { display: block; }
 details h1, section .block[data-taxon] details > summary > header > h1 { font-size: 1.05em; display: inline; line-height: 1.75; }
 article > .block > details > summary > header { margin: 0 0 30px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
-article > .block > details > summary > header > h1 { display: block; margin: 0; font-family: var(--heading-font); font-size: clamp(29px, 3vw, 38px); font-weight: 600; line-height: 1.5; letter-spacing: .015em; }
+article > .block > details > summary > header > h1 {
+  display: block; margin: 0; font-family: var(--heading-font);
+  font-size: clamp(26px, 2.2vw, 32px); font-weight: 600; line-height: 1.55;
+  letter-spacing: 0; text-wrap: balance;
+}
 article > .block > details > summary > header > h1 > .taxon { display: block; padding: 0; margin: 0 0 10px; color: var(--blue); font: 600 13px/1.5 var(--body-font); letter-spacing: .13em; }
 .taxon { color: var(--blue); font-weight: 700; }
 .taxon:empty { display: none; }
@@ -194,7 +198,7 @@ ninja-keys::part(ninja-action) { white-space: normal; }
   .search-trigger span { display: none; }
   .header { margin-bottom: 28px; }
   article > .block > details > summary > header { margin-bottom: 24px; padding-bottom: 22px; }
-  article > .block > details > summary > header > h1 { font-size: 28px; }
+  article > .block > details > summary > header > h1 { font-size: 24px; }
   article > .block > details > summary .slug { margin-left: 0; }
   article > .block > details > .tree-content { padding-inline: 0; }
   article > .block:is([data-taxon="Definition"], [data-taxon="Convention"], [data-taxon="Construction"], [data-taxon="Theorem"], [data-taxon="Proposition"], [data-taxon="Lemma"], [data-taxon="Corollary"]) > details > .tree-content { padding: 20px 17px; }

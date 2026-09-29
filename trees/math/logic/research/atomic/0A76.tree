@@ -4,5 +4,5 @@
 \author{author}
 \meta{source}{[一阶逻辑背景](007G)}
 
-\p{设 #{N} 是[一阶结构](00GD) #{M} 的子结构，即常元属于 #{N}、函数在 #{N} 上封闭、关系取限制。则 #{N} 为[初等子结构](00CK)，当且仅当每当 #{\bar a\in N} 且 #{M\models\exists x\,\varphi(x,\bar a)}，都有 #{b\in N} 使 #{M\models\varphi(b,\bar a)}。这里 #{\models} 为[满足关系](00GE)。}
+\p{设 #{N} 是[一阶结构](00GD) #{M} 的非空子结构，即常元属于 #{N}、函数在 #{N} 上封闭、关系取限制。则 #{N} 为[初等子结构](00CK)，当且仅当对每个公式 #{\varphi(x,\bar y)} 和来自 #{N} 的有限参数元组 #{\bar a\in N^{|\bar y|}}，若 #{M\models\exists x\,\varphi(x,\bar a)}，就有 #{b\in N} 使 #{M\models\varphi(b,\bar a)}。这里 #{x} 为单个变量，#{\models} 为[满足关系](00GE)。}
 \p{\strong{证明。}初等性给出的方向直接对存在公式应用定义。反之，对公式复杂度归纳证明 #{N\models\psi(\bar a)\iff M\models\psi(\bar a)}。原子公式由子结构解释得出，布尔联结词按真值运算保持。若 #{M\models\exists x\,\varphi(x,\bar a)}，见证条件给 #{b\in N}，归纳假设使 #{N\models\varphi(b,\bar a)}；反向从 #{N} 中见证出发再用归纳假设。全称量词由否定与存在量词处理。}

@@ -4,7 +4,12 @@
 \author{author}
 \meta{source}{[Gerber–Kunde，§2.1–2.2](007J)}
 
-\p{设 #{T} 为概率空间 #{(X,\mu)} 的[保测自同构](00RS)。下列条件等价：#{T} [弱混合](00RX)；对所有可测 #{A,B} 有}
-##{\frac 1N\sum_{j=0}^{N-1}|\mu(T^{-j}A\cap B)-\mu(A)\mu(B)|\longrightarrow 0;}
-\p{以及 [Koopman 算子](00RZ) #{U_T} 在 #{L^2} 中没有非恒定特征函数。该条件对单位圆上每个特征值 #{\lambda} 都要求相应特征函数为常数，包含 #{\lambda=1} 及其余单位模特征值。该等价定理作为外部遍历论结果引用，定理与文献见[Gerber–Kunde，§2.1](007J)。}
+\p{设 #{T} 为概率空间 #{(X,\mu)} 的[保测自同构](00RS)，记 #{U_Tf=f\circ T} 为复函数空间 [#{L^2(X,\mu)}](0A6A)上的 [Koopman 算子](00RZ)。下列条件等价：}
+\ol{
+\li{#{T} [弱混合](00RX)。}
+\li{对所有可测集 #{A,B\subseteq X}，有
+##{\lim_{N\to\infty}\frac 1N\sum_{j=0}^{N-1}|\mu(T^{-j}A\cap B)-\mu(A)\mu(B)|=0.}}
+\li{#{U_T} 没有非恒定特征函数：若 #{0\ne f\in L^2(X,\mu)} 且 #{f\circ T=\lambda f}，则 #{f} 几乎处处为常数。}
+}
+\p{第三项对所有单位模特征值 #{\lambda} 要求成立，也包含 #{\lambda=1} 的不变函数。该等价定理作为外部遍历论结果引用，定理与文献见[Gerber–Kunde，§2.1](007J)。}
 \p{绝对平均控制带符号平均，故由[遍历性的相关判据](0A6O)推出弱混合必遍历。}

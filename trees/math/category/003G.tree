@@ -3,13 +3,14 @@
 \taxon{Example}
 \author{author}
 
-\p{设 #{S} 为非空集合。一个 meet 半格可以看作带有二元运算 #{\wedge} 的集合 #{S}，并满足下面三个方程：}
+\p{设 #{S} 为非空集合。[meet 半格](00J0)的最大下界运算 #{\wedge} 满足下面三个方程；反过来，满足这些方程的二元运算也能恢复一个 meet 半格：}
 
 ##{x\wedge x=x,\qquad x\wedge y=y\wedge x,\qquad x\wedge(y\wedge z)=(x\wedge y)\wedge z}
 
-\p{因此 meet 半格是 [代数理论](003C) 的模型。由 meet 运算可以反过来定义偏序：}
+\p{这三个方程给出一个[代数理论](003C)。由满足它们的运算定义次序：}
 
 ##{x\leq y\Longleftrightarrow x=x\wedge y}
 
 \p{此关系自反、反对称；若 #{x=x\wedge y,y=y\wedge z}，结合律给出 #{x=x\wedge z}，故为[偏序](00DE)。而 #{x\wedge y} 是共同下界，任意共同下界 #{z} 满足 #{z\wedge(x\wedge y)=(z\wedge x)\wedge y=z}，故它确为最大下界。}
 \p{所以一般 [偏序集不是直接的代数理论](003F)，但“带 meet 的偏序集”可以通过运算 #{\wedge} 被等式化。同理，使用 join 运算 #{\vee} 可以得到 join 半格的代数理论。}
+\p{这里采用半格非空的约定。若模型允许空载体，这个无常元的理论也有空模型；要求载体非空是另加的约定，不由上述三个方程保证。}

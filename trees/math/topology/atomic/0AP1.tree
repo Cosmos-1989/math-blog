@@ -3,6 +3,8 @@
 \taxon{Theorem}
 \author{author}
 
-\p{设 #{X} 为紧度量空间。非空紧集空间 #{\mathcal K(X)} 上的 [Vietoris 拓扑](0094)等于 [Hausdorff 距离](00FN) #{d_H} 诱导的拓扑。}
+\p{设 #{(X,d)} 为紧度量空间，#{\mathcal K(X)} 为其所有非空紧子集组成的集合。[Vietoris 拓扑](0094)等于 [Hausdorff 距离](00FN) #{d_H} 诱导的拓扑。记}
+##{\langle U_1,\ldots,U_n\rangle=\{K\in\mathcal K(X):K\subseteq\bigcup_iU_i,\ K\cap U_i\ne\varnothing\text{ 对每个 }i\},}
+\p{其中 #{n\geq 1}，各 #{U_i} 在 #{X} 中开。这些集合是 Vietoris 基本开集。}
 \p{\strong{证明。}设 #{K\in\langle U_1,\ldots,U_n\rangle}。由于 #{K} 紧且包含于开集 #{O=\bigcup_i U_i}，存在 #{\delta_0>0} 使 #{K} 的 #{\delta_0} 邻域包含于 #{O}。这可由覆盖 #{K} 的有限多个球得到，其中各球的两倍半径球仍在 #{O} 内。再为每个 #{i} 取 #{k_i\in K\cap U_i} 及 #{\delta_i>0}，使 #{B(k_i,\delta_i)\subseteq U_i}。若 #{d_H(K,L)<\min_i\delta_i} 且小于 #{\delta_0}，则 #{L\subseteq O} 且 #{L} 与每个 #{U_i} 相交。因此每个 Vietoris 基本开集是 #{d_H} 开集。}
 \p{反之，给定 #{\varepsilon>0}，由紧性取 #{k_1,\ldots,k_n\in K}，使 #{B(k_i,\varepsilon /3)} 覆盖 #{K}。相应的 Vietoris 基本邻域中，每个 #{L} 的点距 #{K} 小于 #{\varepsilon /3}，而每个 #{K} 的点距 #{L} 小于 #{2\varepsilon /3}。于是此基本邻域包含于 #{B_{d_H}(K,\varepsilon)}，两种拓扑相同。}

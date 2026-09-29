@@ -2,11 +2,18 @@
 \date{2026-04-24}
 \taxon{Lemma}
 \author{author}
+\meta{source}{[Boedihardjo–Geng, Simple Piecewise Geodesic Interpolation of Simple and Jordan Curves with Applications, 定理 2.2](https://arxiv.org/abs/1309.1576)}
 
 \p{设 #{\gamma:S^1\to\mathbb R^2} 参数化一条 [Jordan 曲线](0052)，#{\varepsilon>0}。可以选择参数化的简单闭多边形 #{p_\varepsilon:S^1\to\mathbb R^2}，使}
 ##{\sup_{t\in S^1}\|p_\varepsilon(t)-\gamma(t)\|<\varepsilon.}
 \p{其像 #{P_\varepsilon} 与 #{\Gamma=\gamma(S^1)} 的 [Hausdorff 距离](00FN)也小于 #{\varepsilon}。}
-\p{多边形逼近需同时保持简单性与参数次序。一致连续性控制采样点间的距离，但排除连接线段交叉还需要拓扑构造。}
-\p{一旦取得上述参数化估计，若 #{\operatorname{dist}(z,\Gamma)>\varepsilon}，则直线[同伦](00FO) #{H(t,s)=(1-s)\gamma(t)+sp_\varepsilon(t)} 不经过 #{z}，因此[绕数](00FK)满足}
+\p{\strong{证明（使用简单插值定理）。}把圆周参数写成首尾相同的区间参数。由紧区间上的连续性，存在 #{\delta>0}，使 #{|s-t|<\delta} 时 #{\|\gamma(s)-\gamma(t)\|<\varepsilon /2}。[Boedihardjo–Geng 的定理 2.2](https://arxiv.org/abs/1309.1576)保证存在网格小于 #{\delta} 的分割，使按该分割作线性插值所得的闭多边形仍简单。}
+\p{在相邻分点 #{t_i,t_{i+1}} 之间，设 #{t=(1-\lambda)t_i+\lambda t_{i+1}}，#{0\leq\lambda\leq 1}。插值给出}
+##{\|p_\varepsilon(t)-\gamma(t)\|
+\leq(1-\lambda)\|\gamma(t_i)-\gamma(t)\|
++\lambda\|\gamma(t_{i+1})-\gamma(t)\|
+\leq\varepsilon /2<\varepsilon.}
+\p{因此取得所需一致估计。这里简单性来自所引插值定理；任意选取足够密的采样点并连线，仅靠一致连续性不能排除交叉。}
+\p{一旦取得上述参数化估计，若[点到曲线的距离](0E02) #{\operatorname{dist}(z,\Gamma)>\varepsilon}，则直线[同伦](00FO) #{H(t,s)=(1-s)\gamma(t)+sp_\varepsilon(t)} 不经过 #{z}，因此[绕数](00FK)满足}
 ##{\operatorname{Ind}_{p_\varepsilon}(z)=\operatorname{Ind}_{\gamma}(z).}
 \p{特别地，较强条件 #{\operatorname{dist}(z,\Gamma)>2\varepsilon} 也充分。这里绕数相同依赖参数化的一致控制；Hausdorff 距离只比较两个像集。}

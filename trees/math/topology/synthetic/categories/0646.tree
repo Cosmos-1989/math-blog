@@ -4,17 +4,13 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 19 章；[RiehlContext](0212)，[RiehlVerity](021F)}
 
-\p{设 #{C} 为合成预范畴，#{F} 协变，#{R_c=\operatorname{Hom}_C(c,-)}。无需 Rezk 完备性即可得到表示对象之间的可逆箭头；将可逆箭头识别为对象路径还需完备性条件。}
-
-\p{所需前置：[普遍元素等价于可表族的自然等价](0641)、[逐纤维等价的逆自动组成自然变换](0645)、[协变可表族的反变全忠实形式](063E)、[两侧逆箭头蕴含可逆性](061E)。}
-
-\p{若 #{F} 被 #{c} 与 #{d} 表示，则 #{c} 与 #{d} 之间存在可逆箭头。}
+\p{设 #{C} 为合成预范畴，#{F:C\to\mathsf{Type}} 协变。若 #{F} 被 #{c,d:C} 表示，则 #{c} 与 #{d} 之间存在可逆箭头。此结论无需 Rezk 完备性；将可逆箭头识别为对象路径还需完备性条件。}
 
 \p{\strong{证明。}
-设 #{\alpha:R_c\simeq F}、#{\beta:R_d\simeq F}。复合}
+记 #{R_c=\operatorname{Hom}_C(c,-)}、#{R_d=\operatorname{Hom}_C(d,-)}。由[表示与自然等价的对应](0641)，有 #{\alpha:R_c\simeq F}、#{\beta:R_d\simeq F}；其[逐纤维逆自动自然](0645)，故复合}
 
 ##{\alpha^{-1}\beta:R_d\to R_c,
 \qquad
 \beta^{-1}\alpha:R_c\to R_d}
 
-\p{互为逆。由可表族间的 Yoneda 等价，前者对应 #{a:c\to d}，后者对应 #{b:d\to c}。两种变换复合分别为恒等，Yoneda 等价保持复合的显式公式将其变为 #{ba=\operatorname{id}_c} 与 #{ab=\operatorname{id}_d}。因此 #{a} 可逆。}
+\p{互为逆。由[可表族间的 Yoneda 等价](063E)，前者对应 #{a:c\to d}，后者对应 #{b:d\to c}。两种变换复合分别为恒等，Yoneda 等价保持复合的显式公式将其变为 #{ba=\operatorname{id}_c} 与 #{ab=\operatorname{id}_d}。由[两侧逆判据](061E)，#{a} 可逆。}

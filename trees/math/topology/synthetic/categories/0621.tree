@@ -4,14 +4,10 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 17 章；[RiehlICM](0211)，[RiehlShulman](021D)}
 
-\p{设 #{E:B\to\mathsf{Type}} 为有向类型族，#{f:x\to_B y}，#{u:E(x)}。求值 #{\operatorname{ev}_0} 取依赖形状函数在源端点的值。}
-
-\p{所需前置：[有向族的依赖箭头](0620)。}
-
-\p{定义}
+\p{设 #{E:B\to\mathsf{Type}} 为有向类型族，#{f:x\to_B y}，#{u:E(x)}。用[依赖箭头类型](0620)定义固定源的提升类型}
 
 ##{\mathsf{Lift}_E(f,u)=\sum_{v:E(y)}\operatorname{Hom}_E^f(u,v).}
 
-\p{它保留提升的终点与整条提升箭头。若不固定源，则沿 #{f} 的所有依赖函数构成 #{\prod_{t:\Delta^1}E(f(t))}，求源映射为}
+\p{它保留提升的终点与整条提升箭头。若不固定源，则沿 #{f} 的所有依赖函数构成 #{\prod_{t:\Delta^1}E(f(t))}；在源端点求值给出映射}
 
 ##{\operatorname{ev}_0:\prod_{t:\Delta^1}E(f(t))\to E(x).}

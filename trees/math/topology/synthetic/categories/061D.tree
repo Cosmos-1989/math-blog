@@ -4,11 +4,7 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 16 章；[RiehlShulman](021D)，[Rezk](021C)，[RiehlICM](0211)}
 
-\p{设 #{C} 为合成预范畴，#{x,y:C}。#{\mathsf{isEquiv}} 使用函数等价性的可缩纤维定义；箭头的可逆性由这些函数等价性条件定义；具体的逆箭头及两侧逆路径是相应的逆数据。}
-
-\p{所需前置：[合成预范畴中选定复合的构造](0614)、[内部二次 Segal 条件](0611)、[函数等价性的可缩纤维定义](05Z3)。}
-
-\p{对 #{f:x\to_Cy}，定义}
+\p{设 #{C} 为合成预范畴，#{x,y:C}。其[内部二次 Segal 条件](0611)允许[选定复合](0614)。对 #{f:x\to_Cy}，用[函数等价性](05Z3) #{\mathsf{isEquiv}} 定义可逆性：}
 
 ##{\mathsf{isIso}(f)=\prod_{z:C}\mathsf{isEquiv}
 \bigl(f\circ -:\operatorname{Hom}_C(z,x)\to\operatorname{Hom}_C(z,y)\bigr).}
@@ -16,3 +12,5 @@
 \p{可逆箭头类型为}
 
 ##{x\cong_Cy=\sum_{f:\operatorname{Hom}_C(x,y)}\mathsf{isIso}(f).}
+
+\p{可逆性要求上述后复合函数具有可缩纤维；具体的逆箭头及两侧逆路径则是相应的逆数据。}

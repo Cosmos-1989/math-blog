@@ -1,0 +1,12 @@
+\title{概率测度的 Choquet 次序}
+\date{2026-09-29}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ben Yaacov，§5](007G)；[Gerber–Kunde，§2.5](007J)}
+
+\p{设 #{K} 为[局部凸 Hausdorff 空间](00TJ)中的非空[紧](00F3)[凸集](00TK)，#{\mu,\nu} 为其正则 Borel 概率测度。连续函数 #{f:K\to\mathbb R} 凸，指对 #{x,y\in K} 和 #{0\leq t\leq 1} 有 #{f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)}。Choquet 次序定义为}
+##{\mu\preceq\nu\quad\Longleftrightarrow\quad
+\int_K f\,d\mu\leq\int_K f\,d\nu
+\quad\text{对每个连续凸函数 }f.}
+\p{这里使用 [Lebesgue 积分](00Q5)；正则测度采用[重心表示](00TN)中的约定。若对任意这样的 #{\nu}，都有 #{\mu\preceq\nu} 蕴含 #{\nu=\mu}，称 #{\mu} 在此序下极大；极大不要求它大于所有其他测度。}
+\p{可比较的两测度具有同一重心：连续仿射函数 #{f} 与 #{-f} 都凸，两次不等式给出相同积分，再由重心的唯一性得到结论。这解释了为何可以在固定重心的表示测度之间讨论极大性。}

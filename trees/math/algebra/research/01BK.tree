@@ -2,13 +2,13 @@
 \date{2026-09-23}
 \taxon{Proof route}
 \author{author}
-\meta{source}{[Wemyss，§2.3.2，式 (2.3) 与引理 2.5](01A3)}
+\meta{source}{[Wemyss，§2.3.2，式 (2.3) 与引理 2.5](01A3)；[Karmazyn–Lepri–Wemyss，§8.1–8.3，尤其定理 8.11](https://arxiv.org/html/2411.17359v2#S8)}
 
-\p{设 #{X\to\operatorname{Spec}R} 为[光滑三维收缩](01B3)，#{A=A_{\mathrm{con}}}、#{\Lambda=\operatorname{End}_R(R\oplus N)} 来自[收缩代数构造](01B7)。取例外曲线层 #{S=\bigoplus_i\mathcal O_{C_i}(-1)} 在 tilting 等价下对应的有限[投射分解](012D) #{\mathscr P}，置 #{P=\mathscr P\otimes_\Lambda A}。#{\mathcal O_{\mathbb P^1}(-1)} 是[射影直线的负一次线丛](0AM0)。}
+\p{设 #{X\to\operatorname{Spec}R} 为[光滑三维收缩](01B3)，#{A=A_{\mathrm{con}}}、#{\Lambda=\operatorname{End}_R(R\oplus N)} 来自[收缩代数构造](01B7)，#{k=\mathbb C}。设例外曲线为 #{C_1,\ldots,C_r}，记 #{S_i=\mathcal O_{C_i}(-1)}、#{S=\bigoplus_i S_i}；其中使用[射影直线的负一次线丛](0AM0)。对各 #{S_i} 在 tilting 等价下对应的单模取有限[投射分解](012D) #{\mathscr P_i}，置 #{P_i=\mathscr P_i\otimes_\Lambda A}、#{\mathscr P=\bigoplus_i\mathscr P_i}、#{P=\bigoplus_iP_i}。}
 \p{扩张标量的[张量积](0122)产生 [DG 自同态代数](01BE)间的映射}
 ##{\mathscr A=\operatorname{REnd}_\Lambda(\mathscr P)
 \longrightarrow\mathscr B=\operatorname{REnd}_A(P).}
-\p{\strong{证明概要。}重构路线使用两个特殊几何结果：#{P} 可由 #{A} 的单模极小投射分解的有限起始段恢复；并且上述映射及收缩的同调性质给出 #{\mathscr A\simeq\mathcal N_{\mathscr B}}。后一识别使用收缩的特殊同调性质。}
-\p{因此 #{A} 的同构类决定 #{\mathscr B} 的拟同构类，再由[含幺正次数部分不变性](01BI)决定 #{\mathscr A}。最后使用本收缩情形的 Koszul 对偶识别 #{A_{\mathrm{con}}^{\mathrm{der}}\simeq\operatorname{RHom}_{\mathscr A}(k^r,k^r)}，恢复[导出收缩代数](01BM)；#{k=\mathbb C}，#{r} 为例外曲线数。}
+\p{\strong{证明概要。}本收缩情形中，各 #{P_i} 可由相应单模的极小投射分解的有限起始段恢复。因此 #{A} 决定保留这些对象的 DG 范畴 #{\mathcal C}，其态射复形为 #{\mathcal C(i,j)=\operatorname{Hom}_A^\bullet(P_i,P_j)}。重构定理把 #{\operatorname{Hom}_\Lambda^\bullet(\mathscr P_i,\mathscr P_j)} 组成的 DG 范畴识别为[多对象的含幺正次数部分](0D82) #{\mathcal N_{\mathcal C}}，这里使用收缩的特殊同调性质，而非只用上同调单射性。}
+\p{当 #{r=1} 时，这正是 #{\mathscr A\simeq\mathcal N_{\mathscr B}}，可用[单单位版本的不变性](01BI)。当 #{r>1} 时则须保留每个 #{P_i} 的单位：重构对象的零次部分为 #{k^r}，不能改成 #{k\cdot 1}。多对象不变性由原论文 §8.1、重构由定理 8.11 给出。最后对恢复的 #{\mathscr A} 使用本收缩情形的 Koszul 对偶识别 #{A_{\mathrm{con}}^{\mathrm{der}}\simeq\operatorname{RHom}_{\mathscr A}(k^r,k^r)}，恢复[导出收缩代数](01BM)。}
 \p{从该导出对象再恢复 [Tjurina 代数](01BO)，并用 [Mather–Yau 判据](01BP)恢复同一维数的孤立超曲面底环。导出对象到 Tjurina 代数的恢复使用 [Wemyss，§2.3.1](01A3) 引用的重构定理。}
-\p{特殊几何识别、tilting 对应及 Koszul 对偶识别均作为外部结果使用，出处见 [Wemyss，§2.3.2](01A3)。其中的[次数封闭计算](01BJ)独立于这些几何识别。}
+\p{特殊几何识别、tilting 对应及 Koszul 对偶识别均作为外部结果使用，出处见 [Wemyss，§2.3.2](01A3)及上述原论文。多曲线所需的范畴升级不能从单单位代数的[次数封闭计算](01BJ)中省略。}

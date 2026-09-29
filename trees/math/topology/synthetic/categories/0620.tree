@@ -4,12 +4,8 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 17 章；[RiehlICM](0211)，[RiehlShulman](021D)}
 
-\p{设 #{E:B\to\mathsf{Type}} 为内部依赖类型族，总空间投影 #{(x,u)\mapsto x} 保留全部参数；#{\mathsf{Type}} 这里只表示类型层，不假设一个可任意操作的普通对象集合。}
-
-\p{所需前置：[有向同态类型](060D)、[依赖和的引入、投影与消去规则](0507)。}
-
-\p{设 #{E:B\to\mathsf{Type}} 是有向类型族，总空间记为 #{\widetilde E=\sum_{x:B}E(x)}。对 #{f:x\to_B y}、#{u:E(x)} 和 #{v:E(y)}，定义}
+\p{设 #{B} 为有向类型，#{E:B\to\mathsf{Type}} 为内部依赖族；#{\mathsf{Type}} 仅表示类型层。其[依赖和](0507) #{\widetilde E=\sum_{x:B}E(x)} 带投影 #{\pi(x,u)=x}。给定[有向箭头](060D) #{f:x\to_B y} 及 #{u:E(x)}、#{v:E(y)}，记沿 #{f} 的依赖箭头类型为}
 
 ##{\operatorname{Hom}_E^f(u,v)}
 
-\p{为 #{\widetilde E} 中从 #{(x,u)} 到 #{(y,v)} 且投影为 #{f} 的箭头类型。等价地，它是一条沿 #{f} 的依赖形状函数，并固定两个端点。}
+\p{它是总空间中从 #{(x,u)} 到 #{(y,v)}、投影为 #{f} 的箭头类型；投影条件按[同伦纤维](058E)理解。等价地，其元素是沿 #{f} 的依赖形状函数 #{t\mapsto\ell(t):E(f(t))}，并固定端点 #{\ell(0)=u}、#{\ell(1)=v}。这些数据均随内部参数变化。}

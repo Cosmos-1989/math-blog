@@ -10,7 +10,11 @@ const output = path.join(root, 'output/math-blog');
 for (const file of ['tree.xsl', 'reading.css', 'reading.js', 'shulin-mark.svg']) {
   assert.equal(fs.readFileSync(path.join(output, file), 'utf8'), fs.readFileSync(path.join(root, 'theme-overrides', file), 'utf8'), `Stale theme: ${file}`);
 }
-const pages = ['index', '0062', '013Z', '004M', '004R', '003J'];
+const css = fs.readFileSync(path.join(root, 'theme-overrides/reading.css'), 'utf8');
+assert(css.includes('--heading-font: var(--body-font)'), 'Page headings must share the body font family');
+assert(css.includes('font-size: clamp(26px, 2.2vw, 32px)'), 'Desktop heading scale changed');
+assert(css.includes('h1 { font-size: 24px; }'), 'Mobile heading scale changed');
+const pages = ['index', '0062', '013Z', '004M', '004R', '003J', '009E'];
 for (const id of pages) {
   const html = execFileSync('xsltproc', [path.join(output, 'default.xsl'), path.join(output, id, 'index.xml')], { encoding: 'utf8' });
   for (const marker of ['lang="zh-CN"', 'reading.css?v=', 'reading.js?v=', 'id="main-content"', 'class="tree-content"', 'class="search-trigger"']) {
@@ -20,9 +24,10 @@ for (const id of pages) {
   assert(html.includes('數林廣記'), `${id}: missing site name`);
   assert(html.includes('shulin-mark.svg?v='), `${id}: missing site mark`);
   assert(!/数学博客作者|数学博客首页/.test(html), `${id}: stale branding`);
+  assert(!/<span class="taxon">[^<]*\.\s*<\/span>/.test(html), `${id}: English full stop after Chinese taxon label`);
   if (id === 'index') assert(html.includes('依然范德彪'), 'Missing author name');
 }
-console.log('Reading theme: generated assets and six representative XSL transformations passed.');
+console.log(`Reading theme: generated assets, heading typography and ${pages.length} representative XSL transformations passed.`);
 
 // Browser checks are optional so CI can run the static checks without installing a browser.
 if (process.env.PLAYWRIGHT_MODULE) {
@@ -43,6 +48,13 @@ if (process.env.PLAYWRIGHT_MODULE) {
         assert(await page.locator('.site-mark').evaluate(img => img.complete && img.naturalWidth > 0), 'Site mark failed to load');
         const geometry = await page.evaluate(() => ({ width: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth }));
         assert(geometry.scroll <= geometry.width + 1, `${id} at ${width}: page overflows horizontally ${JSON.stringify(geometry)}`);
+        const typography = await page.locator('article > section > details > summary > header > h1').evaluate(el => ({
+          heading: getComputedStyle(el).fontFamily,
+          body: getComputedStyle(document.body).fontFamily,
+          size: parseFloat(getComputedStyle(el).fontSize),
+        }));
+        assert.equal(typography.heading, typography.body, `${id}: heading/body font mismatch`);
+        assert(typography.size <= (width <= 600 ? 24 : 32), `${id}: oversized title`);
         if (['004M', '004R', '003J'].includes(id)) assert(await page.locator('.katex').count() > 0, `${id}: formulas not rendered`);
         if (id === '003J') {
           const images = await page.locator('article figure img').evaluateAll(nodes => nodes.map(img => img.complete && img.naturalWidth > 0));

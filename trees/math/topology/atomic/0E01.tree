@@ -1,0 +1,10 @@
+\title{Hausdorff 空间中点与紧集的分离}
+\date{2026-09-29}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{X} 为[Hausdorff 空间](002B)，#{K\subseteq X} 为[紧子集](00F3)，#{x\notin K}。则有不交开集 #{U,V} 满足 #{x\in U}、#{K\subseteq V}。特别地，Hausdorff 空间的紧子集都是[闭集](00E1)。}
+
+\p{\strong{证明。}若 #{K=\varnothing}，取 #{U=X,V=\varnothing}。否则，对每个 #{y\in K}，用 Hausdorff 性选取不交开集 #{U_y,V_y}，分别包含 #{x,y}。由紧性，有有限多个 #{V_{y_1},\ldots,V_{y_n}} 覆盖 #{K}。令}
+##{U=\bigcap_{j=1}^nU_{y_j},\qquad V=\bigcup_{j=1}^nV_{y_j}.}
+\p{它们是所求开集，因为 #{U} 与每个 #{V_{y_j}} 不交。于是 #{K} 外的每个点都有避开 #{K} 的开邻域，故 #{X\setminus K} 开。}

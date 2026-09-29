@@ -5,4 +5,11 @@
 
 \p{[格](00J0) #{L} 称分配格，如果对全部 #{a,b,c\in L}，}
 ##{a\wedge(b\vee c)=(a\wedge b)\vee(a\wedge c).}
-\p{这等价于对偶式 #{a\vee(b\wedge c)=(a\vee b)\wedge(a\vee c)}。例如从第一式展开右边得 #{a\vee(c\wedge(a\vee b))=a\vee(b\wedge c)}；反向用对偶论证。幂集中的交并满足分配律。}
+\p{这等价于对偶式 #{a\vee(b\wedge c)=(a\vee b)\wedge(a\vee c)}。用上式两次展开，并用吸收律，可得}
+##{\begin{aligned}
+(a\vee b)\wedge(a\vee c)
+&=((a\vee b)\wedge a)\vee((a\vee b)\wedge c)\\
+&=a\vee(a\wedge c)\vee(b\wedge c)\\
+&=a\vee(b\wedge c).
+\end{aligned}}
+\p{这里吸收律 #{a\vee(a\wedge c)=a} 来自 #{a\wedge c\leq a}，对偶式同理。交换上下确界的角色即得反向推导。幂集中的交并满足分配律。}

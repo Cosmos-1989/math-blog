@@ -4,14 +4,10 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
 
-\p{设 #{C} 为合成预范畴、#{c:C}，#{P:c/C\to\mathsf{Type}} 协变，#{u:P(c,\operatorname{id}_c)}。截面类型保留在基点处等于 #{u} 的路径数据。}
-
-\p{所需前置：[协变族的依赖箭头归纳](0635)、[函数等价性的可缩纤维定义](05Z3)。}
-
-\p{给定 #{u:P(c,\operatorname{id}_c)}，带有比较 #{s(c,\operatorname{id}_c)=u} 的全部截面 #{s} 构成可缩类型。}
+\p{设 #{C} 为合成预范畴、#{c:C}，#{P:c/C\to\mathsf{Type}} 协变，#{u:P(c,\operatorname{id}_c)}。截面 #{s:\prod_{(x,f):c/C}P(x,f)} 连同基点比较路径 #{s(c,\operatorname{id}_c)=u} 构成可缩类型。}
 
 \p{\strong{证明。}
-该类型正是等价 #{\operatorname{ev}_{\operatorname{id}_c}} 在 #{u} 处的同伦纤维。等价的定义保证它可缩。}
+该类型正是[依赖箭头归纳等价](0635) #{\operatorname{ev}_{\operatorname{id}_c}} 在 #{u} 处的同伦纤维。[函数等价性的定义](05Z3)保证它可缩。}
 
 \p{\strong{说明。}
 存在性部分允许把恒等箭头处的数据沿标准余切片箭头推出去。唯一性部分说明所有这样延拓的比较也被控制。后一部分对 Yoneda 引理尤为重要，因为 Yoneda 要求的是类型的等价，而不只是构造一个从右到左的函数。}

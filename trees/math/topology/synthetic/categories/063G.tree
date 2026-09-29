@@ -4,16 +4,12 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
 
-\p{设 #{C} 为合成预范畴，#{c:C}；此处 #{\operatorname{Nat}_C(E,P)=\prod_x(E(x)\to P(x))} 为反变族间的内部依赖函数类型。反变可表族 #{\operatorname{Hom}_C(-,c)} 沿箭头的作用为前复合。}
-
-\p{所需前置：[反变族与固定靶的提升](063F)、[协变合成 Yoneda 引理](063B)、[对偶范畴与反变函子](0318)。}
-
-\p{若 #{P} 为 #{C} 上的反变族，则}
+\p{设 #{C} 为合成预范畴，#{c:C}，#{P:C\to\mathsf{Type}} 为[反变族](063F)。记 #{\operatorname{Nat}_C(E,P)=\prod_{x:C}(E(x)\to P(x))} 为反变族间的内部依赖函数类型。反变可表族 #{\operatorname{Hom}_C(-,c)} 沿箭头的作用为前复合，且有等价}
 
 ##{\operatorname{Nat}_C(\operatorname{Hom}_C(-,c),P)\simeq P(c).}
 
 \p{\strong{证明。}
-反转外单纯方向，把 #{C} 替换为反范畴 #{C^{\mathrm{op}}}，则反变族成为协变族。应用协变 Yoneda 得到结论。其逆的显式公式为}
+反转外单纯方向，把 #{C} 替换为[反范畴](0318) #{C^{\mathrm{op}}}，则反变族成为协变族。应用[协变 Yoneda 引理](063B)得到结论。其逆的显式公式为}
 
 ##{u\longmapsto\bigl(f:x\to c\longmapsto f^*u\bigr).}
 

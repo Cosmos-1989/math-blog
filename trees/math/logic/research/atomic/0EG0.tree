@@ -1,0 +1,13 @@
+\title{有限 Cayley 网络上的局部约束}
+\date{2026-09-29}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bernshteyn，§4](007H)}
+
+\p{设 #{\Gamma} 是群，#{S} 是不含单位元的有限对称[生成集](00BB)。取 [Cayley 图](00D4)中由有限顶点集 #{D\subseteq\Gamma} 诱导的子图，保留生成元边标签；它称为这里的有限 Cayley 网络。算法可见这些边标签，群元素本身的名称不作为额外输入。}
+
+\p{给定[局部可检验标记问题](009B) #{\Pi=(W,\Lambda,\mathcal F)}，标记 #{f:D\to\Lambda} 在 #{D} 上合法，指对每个满足 #{Wg\subseteq D} 的顶点 #{g\in D}，都有}
+##{\bigl(w\mapsto f(wg)\bigr)\notin\mathcal F.}
+\p{只在整个窗口落入 #{D} 时检查规则。若窗口伸出 #{D}，该顶点处不施加这条约束。例如 #{\Gamma=\mathbb Z}、#{W=\{-1,0,1\}}、#{D=\{1,\ldots,n\}} 时，只检查 #{2,\ldots,n-1} 处的完整三点窗口。}
+
+\p{这一边界约定使群上的局部问题成为有限网络上的输出任务，可据此定义[LOCAL 的轮数复杂度类别](0EG1)。}

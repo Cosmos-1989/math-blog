@@ -1,0 +1,14 @@
+\title{Mordell–Weil 筛的约化相容性}
+\date{2026-09-28}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Balakrishnan](icm2026-balakrishnan)，§2.2}
+
+\p{设 #{X/\mathbb Q} 是[光滑射影曲线](0C01)，有基点 #{b\in X(\mathbb Q)}，J 为其 [Jacobian](0C07)，M 为正整数，S 为有限个[良约化](0E81)素数组成的集合。[Abel–Jacobi 映射](0C09)和约化给出交换图。}
+\figure{\tex{\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}}{\begin{tikzcd}[column sep=large,row sep=large]
+X(\mathbb Q) \arrow[r,"\iota_b"] \arrow[d,"\operatorname{red}"'] & J(\mathbb Q)/MJ(\mathbb Q) \arrow[d,"\operatorname{red}"] \\
+\prod_{v\in S}X(\mathbb F_v) \arrow[r,"\prod\iota_{\bar b}"'] & \prod_{v\in S}J(\mathbb F_v)/MJ(\mathbb F_v)
+\end{tikzcd}}}
+\p{记上方群为 G，右下方群为 H，下方映射的像为 C。任意有理点的类必须属于 #{\operatorname{red}^{-1}(C)\subseteq G}。因此，不满足任一素数处局部条件的类均可排除。}
+\p{\strong{相容性的证明。}除子类的约化保持加法，并将 #{[x-b]} 送至 #{[\bar x-\bar b]}，故图交换。模 M 取商后仍交换。增加 S 只会增加必要条件，使候选集合缩小。若使用 #{J(\mathbb Q)} 的已知子群计算，须知道其指数，或证明遗漏的类不会影响所选模数。}

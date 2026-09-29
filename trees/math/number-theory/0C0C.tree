@@ -1,0 +1,9 @@
+\title{Strassmann 的 p 进零点定理}
+\date{2026-09-28}
+\taxon{Theorem}
+\author{author}
+
+\p{设 K 是 #{\mathbb Q_p} 的有限扩张，#{\mathcal O_K=\{t\in K:|t|\leq 1\}} 为其整数环。设 #{F(t)=\sum_{n\geq 0}a_nt^n\ne 0} 是 K 上的[限制幂级数](0C0B)，并令 #{N(F)=\max\{n:|a_n|=\max_j|a_j|\}}。则 #{\mathcal O_K} 中 F 的零点数按重数计算不超过 #{N(F)}。}
+\p{\strong{证明。}若 #{N(F)=0}，则常数项的绝对值严格大于其余各项，在单位闭圆盘中不能被抵消。若 #{\alpha} 是零点，定义}
+##{b_n=\sum_{j\geq 0}a_{n+1+j}\alpha^j,\qquad G(t)=\sum_{n\geq 0}b_nt^n.}
+\p{尾项估计说明 #{b_n\to 0}。由 #{F(\alpha)=0} 和 #{b_{n-1}-\alpha b_n=a_n} 得 #{F=(t-\alpha)G}。令 #{A=\max|a_n|}、#{N=N(F)}。则 #{|b_{N-1}|=A}，#{n\geq N} 时 #{|b_n|<A}，其余系数至多为 A，所以 #{N(G)=N-1}。逐次除去线性因子，零点数至多为 N。}

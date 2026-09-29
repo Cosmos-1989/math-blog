@@ -1,0 +1,8 @@
+\title{p 进单根的 Hensel 提升}
+\date{2026-09-28}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{f\in\mathbb Z_p[t]}，#{a_1\in\mathbb Z_p}，满足 #{f(a_1)\equiv 0\pmod p} 且 #{f'(a_1)\not\equiv 0\pmod p}。则在 #{a_1+p\mathbb Z_p} 中有唯一根 #{a}。这里 #{\mathbb Z_p} 是 [p 进整数环](00SM)。}
+\p{\strong{证明。}已取 #{a_n} 使 #{f(a_n)\equiv 0\pmod{p^n}}。令 #{a_{n+1}=a_n+p^nu}，Taylor 展开模 #{p^{n+1}} 给出 #{f(a_{n+1})\equiv f(a_n)+p^nu f'(a_n)}。导数模 p 可逆，故 u 模 p 唯一确定。这样得到相容序列，其极限 a 满足 #{f(a)=0}。}
+\p{若 a、b 在同一剩余类中都是根，则 #{f(a)-f(b)=(a-b)g(a,b)}，且 #{g(a,b)\equiv f'(a_1)\not\equiv 0\pmod p}。因此 #{a=b}。同样论证适用于整系数限制幂级数，其系数趋于零，保证展开与取极限合法。}

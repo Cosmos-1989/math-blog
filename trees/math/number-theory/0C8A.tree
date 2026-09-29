@@ -1,0 +1,12 @@
+\title{SL₂ 主同余矩阵的初等一致计数}
+\date{2026-09-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Blomer](icm2026-blomer)，§6}
+
+\p{设 #{q\geq 3,T\geq 1}，矩阵高度为各项绝对值的最大值。则[主同余子群](01FD)的计数满足}
+##{\#\{\gamma\in\Gamma(q):\|\gamma\|_\infty\leq T\}\ll_\varepsilon T^\varepsilon\left(\frac{T^2}{q^3}+\frac Tq+1\right).}
+\p{\strong{证明。}写 #{\gamma=\left(\begin{smallmatrix}1+aq&bq\\cq&1+dq\end{smallmatrix}\right)}。四个参数绝对值均为 #{O((T+1)/q)}，且行列式一等价于}
+##{a+d+(ad-bc)q=0,\qquad bc=ad+\frac{a+d}{q}.}
+\p{特别地 #{q\mid a+d}。先选 a，再选同余于 #{-a} 的 d，可选对数为 #{O((1+T/q)(1+T/q^2))}。若右侧非零，其绝对值为 #{O(T^2)}；[除数函数界](0C89)将每对 a、d 的选择数限制为 #{O_\varepsilon(T^\varepsilon)}，调整 ε 后吸收平方。}
+\p{若 #{bc=0}，则 #{(1+aq)(1+dq)=1}。两个整数因子均为 1 或均为 −1；第二种要求 q 整除 2，与 #{q\geq 3} 矛盾。因此 #{a=d=0}，而 b、c 至少一个为零，贡献 #{O(1+T/q)}。展开前面的乘积并吸收 #{T/q^2\leq T/q}，即得所述上界。}

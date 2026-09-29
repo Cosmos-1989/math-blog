@@ -3,9 +3,9 @@
 \taxon{Theorem}
 \author{author}
 
-\p{设 #{X} 为非空紧 Hausdorff 空间。所有非空紧子集组成的 [Vietoris 空间](0094) #{\mathcal K(X)} 也是紧 Hausdorff 空间。}
+\p{设 #{X} 为非空[紧](00F3) [Hausdorff](002B) 空间。所有非空紧子集组成的 [Vietoris 空间](0094) #{\mathcal K(X)} 也是紧 Hausdorff 空间。}
 \p{\strong{证明。}对开集 #{V\subseteq X} 记 #{V^- =\{K:K\cap V\ne\varnothing\}}，#{V^+=\{K:K\subseteq V\}}。给定 #{\mathcal K(X)} 上的超滤子 #{\mathcal U}，令}
 ##{L=\{x\in X:\text{每个含 }x\text{ 的开集 }V\text{ 都满足 }V^-\in\mathcal U\}.}
-\p{若 #{L} 为空，可为每个 #{x} 选 #{V_x} 使 #{V_x^-\notin\mathcal U}。紧性给出有限子覆盖，故相应 #{V_x^-} 的有限并是整个 #{\mathcal K(X)}，与超滤子性质矛盾。#{X\setminus L} 是这类 #{V_x} 的并，所以 #{L} 闭且非空，因而紧。}
+\p{若 #{L} 为空，可为每个 #{x} 选 #{V_x} 使 #{V_x^-\notin\mathcal U}。紧性给出有限子覆盖，故相应 #{V_x^-} 的有限并是整个 #{\mathcal K(X)}，与超滤子性质矛盾。#{X\setminus L} 是这类 #{V_x} 的并，所以 #{L} 闭且非空，由[闭子集保紧](0E00)知 #{L\in\mathcal K(X)}。}
 \p{若开集 #{O} 包含 #{L}，则 #{O^+\in\mathcal U}。否则 #{\{K:K\cap(X\setminus O)\ne\varnothing\}\in\mathcal U}。紧集 #{X\setminus O} 有上述 #{V_x} 的有限覆盖，而每个 #{V_x^-} 都不在 #{\mathcal U} 中，再次矛盾。若开集 #{V} 与 #{L} 相交，则定义直接给出 #{V^-\in\mathcal U}。因此 #{L} 的每个 Vietoris 基本邻域都在 #{\mathcal U} 中。由[超滤子收敛判据](0AP3)，#{\mathcal K(X)} 紧。}
-\p{若 #{A\ne B}，不妨取 #{x\in A\setminus B}。Hausdorff 空间中[点与不含它的紧集可由开集分离](00FD)，故有不交开集 #{U,V}，满足 #{x\in U}、#{B\subseteq V}。#{U^-} 与 #{V^+} 是分别含 #{A,B} 的不交开集，证明了 Hausdorff 性。}
+\p{若 #{A\ne B}，不妨取 #{x\in A\setminus B}。Hausdorff 空间中[点与不含它的紧集可由开集分离](0E01)，故有不交开集 #{U,V}，满足 #{x\in U}、#{B\subseteq V}。#{U^-} 与 #{V^+} 是分别含 #{A,B} 的不交开集，证明了 Hausdorff 性。}

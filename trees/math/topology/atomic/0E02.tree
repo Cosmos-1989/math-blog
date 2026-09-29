@@ -1,0 +1,12 @@
+\title{点到集合的距离}
+\date{2026-09-29}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{(X,d)} 为[度量空间](00EK)，#{A\subseteq X} 非空。点 #{x\in X} 到 #{A} 的距离定义为}
+##{d(x,A)=\inf_{a\in A}d(x,a).}
+\p{距离集合非空且以零为下界，所以[下确界](0A37)是有限非负实数。它不必由 #{A} 中某个点取到。}
+
+\p{函数 #{x\mapsto d(x,A)} 是 [#{1}-Lipschitz 映射](00FU)。事实上，对每个 #{a\in A}，有 #{d(x,a)\leq d(x,y)+d(y,a)}；取下确界并交换 #{x,y} 得}
+##{|d(x,A)-d(y,A)|\leq d(x,y).}
+\p{此外，#{d(x,A)=0} 当且仅当 #{x\in\overline A}：两者都等价于每个以 #{x} 为中心的[开球](00EM)与 #{A} 相交，见[闭包的邻域判据](00EA)。因此当 #{A} 闭且 #{x\notin A} 时，#{d(x,A)>0}。}

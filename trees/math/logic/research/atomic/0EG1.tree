@@ -1,0 +1,18 @@
+\title{LOCAL 的轮数复杂度类别}
+\date{2026-09-29}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bernshteyn，§4](007H)}
+
+\p{固定有限生成群 #{\Gamma} 及一个有限对称生成集。输入取带生成元边标签的[有限 Cayley 网络](0EG0)，计算遵循 [LOCAL 模型](009E)。设 #{T:\mathbb N\to\mathbb N} 为轮数上界。}
+
+\p{一个[局部可检验标记问题](009B) #{\Pi} 属于 #{\mathrm{DetLOCAL}(\Gamma,T)}，指存在确定性算法，使每个 #{n} 顶点输入、每一种合法的标识符分配都能在至多 #{T(n)} 轮内得到合法输出。}
+
+\p{相应地，#{\Pi\in\mathrm{RandLOCAL}(\Gamma,T)} 指存在随机算法，满足同样的轮数上界，并且对每个输入和标识符分配都有}
+##{\Pr(\text{整个输出违反至少一条局部规则})\leq\frac{1}{n}.}
+\p{这里的[概率](00Q3)来自各顶点的独立随机位。成功事件要求整个网络同时合法，逐顶点的成功概率须另行估计。}
+
+\p{若 #{\mathcal C} 是一族轮数函数，定义}
+##{\mathrm{DetLOCAL}(\Gamma,\mathcal C)
+=\bigcup_{T\in\mathcal C}\mathrm{DetLOCAL}(\Gamma,T),}
+\p{随机类别同理。群和生成集已固定时可以省略 #{\Gamma}。常用的 #{O(\log n)}、#{o(\log n)} 等函数族见[渐近轮数界](00VB)。}

@@ -14,7 +14,7 @@
         <link rel="icon" type="image/svg+xml" href="{/f:tree/@base-url}shulin-mark.svg?v=20260926" />
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
-        <link rel="stylesheet" href="{/f:tree/@base-url}reading.css?v=20260926" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}reading.css?v=20260929" />
         <script type="text/javascript">
           <xsl:if test="/f:tree/f:frontmatter/f:source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -173,7 +173,7 @@
         <a class="toc-anchor" href="#{generate-id(..)}">
           <span class="taxon">
             <xsl:apply-templates select=".." mode="tree-taxon-with-number">
-              <xsl:with-param name="suffix">.&#160;</xsl:with-param>
+              <xsl:with-param name="suffix">&#160;</xsl:with-param>
             </xsl:apply-templates>
           </span>
 
@@ -274,7 +274,7 @@
       <h1>
         <span class="taxon">
           <xsl:apply-templates select=".." mode="tree-taxon-with-number">
-            <xsl:with-param name="suffix">.&#160;</xsl:with-param>
+            <xsl:with-param name="suffix">&#160;</xsl:with-param>
           </xsl:apply-templates>
         </span>
 
