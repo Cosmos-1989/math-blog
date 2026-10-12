@@ -1,0 +1,11 @@
+\title{域系数上同调的 Künneth 定理}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hatcher，Algebraic Topology，§3.2，定理 3.15，印刷页 216](https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=225)}
+
+\p{设 #{k} 为[域](00D0)，#{X,Y} 为 [CW 复形](0A99)。假设对每个 #{q\geq 0}，[奇异上同调](0BLY) #{H^q(Y;k)} 都是有限维 #{k}-[向量空间](00D3)。不要求这些维数在所有次数上有统一界，也不要求只有有限多个非零次数。则对每个 #{n\geq 0}，外部杯积给出同构}
+##{\bigoplus_{p+q=n}H^p(X;k)\otimes_k H^q(Y;k)\xrightarrow{\ \cong\ }H^n(X\times Y;k),\qquad a\otimes b\longmapsto\operatorname{pr}_X^*a\smile\operatorname{pr}_Y^*b.}
+\p{其中 #{\otimes_k} 是[张量积](0122)，#{\oplus} 是[直和](0127)，#{\smile} 是[杯积](0F55)。投影的拉回在余链上由先复合投影定义。这里仅要求其中一个因子的各次上同调有限维；交换 #{X,Y} 后也可使用同一结论。特别地，有限个胞腔组成的 CW 复形满足这个假设。}
+\p{把所有次数合在一起，左侧采用乘法 #{(a\otimes b)(a'\otimes b')=(-1)^{qr}(a\smile a')\otimes(b\smile b')}，其中 #{q=\deg b}、#{r=\deg a'}；该同构保持此分次乘法。次数规则与[余链复形](012A)的张量积一致：总次数 #{n} 项为 #{\bigoplus_{p+q=n}C^p\otimes D^q}，微分为 #{d(c\otimes e)=dc\otimes e+(-1)^pc\otimes de}。其[上同调](012B)取核模像。}
+\p{定理及其乘法相容性引用上述来源。有限维条件控制余链对偶与张量积的比较，不能仅因系数是域就对任意空间删去它。例如两个无限离散空间的 #{H^0} 由全部函数组成，有限和的分离变量函数并不能表示乘积空间上的所有函数。}

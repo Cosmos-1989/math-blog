@@ -199,6 +199,31 @@ Before marking a refactoring complete:
 
 ## Whole-Site Review Register
 
+### Current Prerequisite Review
+
+The October 12 review is stored in `research/prerequisite-review-2026-10-12-*.json`.
+After changing one of these pages, update its discipline record and run
+`node scripts/sync-prerequisite-review.mjs` **after any older synchronization**.
+This latest pass replaces the relevant prerequisite edges while preserving earlier
+source and editorial records. Do not replay a historical synchronization afterward.
+
+Run `node scripts/test-note-prerequisites.mjs` and
+`node scripts/check-note-prerequisites.mjs --report /tmp/note-prerequisites.json`.
+The scanner looks for named definitions absent from prose links and for exact
+definition labels pointing elsewhere. A candidate needs a mathematical decision:
+it may be a missing link, a definition supplied locally, or a different meaning of
+the same words. Do not insert links or mark candidates resolved merely to reduce
+the count. Review decisions carry source hashes, so editing a page invalidates its
+earlier candidate decisions until they are reconsidered.
+
+`research/prerequisite-required-links.json` protects reviewed prerequisite links.
+Its source hashes must match the current files. Put explanatory links in prose,
+outside `#{...}`, `##{...}` and `\tex` blocks; a Markdown link inside a formula
+cannot be rendered as TeX by Forester and does not satisfy a prerequisite edge.
+The combined review distinguishes lexical scanning, full-text reading, repairs,
+and unresolved mathematical prerequisites. None of these counts alone establishes
+that the whole site is self-contained.
+
 `research/site-evergreen-audit.json` is the current whole-site register. It records the original IDs, per-page editorial decisions, necessary prerequisite edges, split mappings, terminology migrations, and any deferred reviews. The discipline-level records are `research/site-review-*.json`. Keep these records in sync when changing an audited dependency or splitting a page.
 
 `research/evergreen-audit.json` is a historical record of the earlier partial review, not the current acceptance scope. `EVERGREEN_REFACTOR_AUDIT.md` describes the current scope and limitations.

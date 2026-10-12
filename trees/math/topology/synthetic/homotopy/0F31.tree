@@ -1,0 +1,15 @@
+\title{Ken Brown 引理的纤维对象形式}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Riehl, Homotopical Categories: From Model Categories to (Infinity,1)-Categories](https://math.jhu.edu/~eriehl/homotopical.pdf)，引理4.2.2}
+
+\p{设 #{M} 为[模型范畴](0429)，记 #{M_{\mathrm{fib}}} 为纤维对象及其间全部态射组成的范畴。设[范畴](00I0) #{D} 中指定一类映射 #{W_D}，包含所有[同构](0A0E)，且满足二取三：对可复合的 #{u,v}，若 #{u,v,vu} 中任意两条属于 #{W_D}，第三条也属于 #{W_D}。}
+\p{若[函子](00I1) #{F:M_{\mathrm{fib}}\to D} 把纤维对象之间的平凡纤维化送入 #{W_D}，则它把纤维对象之间的所有弱等价送入 #{W_D}。这里平凡纤维化指同时是纤维化和弱等价的映射。}
+
+\p{\strong{证明。}给定纤维对象间的弱等价 #{f:X\to Y}。对到[积](00I4)的映射 #{(\operatorname{id}_X,f):X\to X\times Y} 使用模型分解，得到平凡余纤维化 #{j:X\to Z} 和纤维化 #{r:Z\to X\times Y}。记 #{p=\pi_Xr}、#{q=\pi_Yr}，则}
+##{pj=\operatorname{id}_X,\qquad qj=f.}
+\p{纤维化由对平凡余纤维化的[右提升性质](0420)刻画；逐次求提升、将方块投影到原方块，分别说明它对复合、拉回封闭。由于 #{X,Y} 纤维，积投影是到[终对象](00I3)的纤维化的[拉回](0326)，故 #{p,q} 都是纤维化，#{Z} 也纤维。由 #{j} 为弱等价及上面两式，二取三说明 #{p,q} 都是弱等价，因而平凡纤维化。}
+\p{假设给出 #{F(p),F(q)\in W_D}。由 #{F(p)F(j)=\operatorname{id}_{F(X)}} 再用二取三，得到 #{F(j)\in W_D}；随后 #{F(f)=F(q)F(j)\in W_D}。所有使用的对象均纤维，故即使 #{F} 只定义在 #{M_{\mathrm{fib}}} 上，论证仍成立。}
+
+\p{特别地，[右 Quillen 函子](0A94)保持纤维对象之间的弱等价：它保持平凡纤维化，取目标模型范畴的弱等价为 #{W_D} 即可。不需要假设它保持所有对象之间的弱等价。}

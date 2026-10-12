@@ -1,0 +1,12 @@
+\title{有限单纯复形的几何实现}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Hatcher, Algebraic Topology](https://pi.math.cornell.edu/~hatcher/AT/ATch2.pdf)，第107页的组合描述}
+
+\p{设 #{K} 是有限顶点集 #{V} 上的[抽象单纯复形](00BU)。其\strong{几何实现}是}
+##{|K|=\left\{(t_v)_{v\in V}\in\mathbb R^V:\ t_v\ge 0,\quad\sum_{v\in V}t_v=1,\quad\{v:t_v>0\}\in K\right\},}
+\p{赋予 #{\mathbb R^V} 的 [Euclidean 拓扑](00EN)所诱导的[子空间拓扑](00EJ)。坐标 #{t_v} 称为该点的重心坐标；标准坐标向量 #{e_v} 表示顶点 #{v}。}
+\p{对 #{\sigma\in K}，令 #{\Delta_\sigma} 为上述坐标中 #{t_v=0} 对所有 #{v\notin\sigma} 成立的点集。若 #{|\sigma|=k+1}，#{\Delta_\sigma} 是一个闭 #{k}-维单纯形：#{k=0,1,2} 时分别是点、线段和实心三角形。约定 #{\Delta_\varnothing=\varnothing}，则}
+##{|K|=\bigcup_{\sigma\in K}\Delta_\sigma,\qquad \Delta_\sigma\cap\Delta_\tau=\Delta_{\sigma\cap\tau}.}
+\p{因而不同单纯形只沿共同的面相交。例如三个顶点及它们的所有二元子集给出三角形的周界；再加入三元子集，几何实现才包含内部。这一定义限于有限复形，无需选择无限顶点集上的拓扑。}

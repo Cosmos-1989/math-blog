@@ -1,0 +1,10 @@
+\title{随机变量的随机支配}
+\date{2026-10-12}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Roch，Modern Discrete Probability，Definition 4.2.1](https://people.math.wisc.edu/~roch/mdp/roch-mdp-chap4.pdf)}
+
+\p{设 #{X,Y} 为实[随机变量](00L0)。称 #{Y} 随机支配 #{X}，记 #{X\preceq_{\mathrm{st}}Y}，如果}
+##{\mathbb P(X>t)\le\mathbb P(Y>t)\qquad\text{对每个 }t\in\mathbb R.}
+\p{这只比较分布，不要求 #{X,Y} 原本位于同一[概率空间](00Q3)。非负变量允许取值 #{+\infty} 时，仍可用同样的尾事件定义。对非负整数值变量，等价地可检查所有正整数 #{k} 的 #{\mathbb P(X\ge k)\le\mathbb P(Y\ge k)}。}
+\p{若有[耦合](0F63)满足 #{\widehat X\le\widehat Y} [几乎处处](00Q4)，则事件包含关系立即给出随机支配。例如用同一族[独立](00L3) Bernoulli 变量的前 #{m} 项与前 #{n} 项之和，可得 #{m\le n} 时 #{\operatorname{Bin}(m,p)\preceq_{\mathrm{st}}\operatorname{Bin}(n,p)}，这里使用[二项分布](00L5)的和表示。}

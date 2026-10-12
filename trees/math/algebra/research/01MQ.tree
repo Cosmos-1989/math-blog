@@ -5,13 +5,13 @@
 \meta{source}{[Brochard–Iyengar–Khare，定理 3.1 的原始证明](01M0)}
 \meta{proof-status}{以 Nagata 换环定理和消去子中的非零因子定理为前提的归纳证明；两项定理见[原论文定理 3.1 的证明及所引文献](01M0)。}
 
-\p{设 #{A\twoheadrightarrow B} 为 [Noether](00D1) [局部环](00CX)满射，极大理想分别为 #{\mathfrak m_A,\mathfrak m_B}，#{N\ne 0} 是[有限生成](0128) #{B} 模，且 #{\operatorname{pd}_AN\leq c=\operatorname{edim}A-\operatorname{edim}B}。这里使用[投射维数](01A7)与[嵌入维数](01A9)。则 #{N} 为自由 #{B} 模，#{A\to B} 是[例外完全交满射](01AD)。}
+\p{设 #{A\twoheadrightarrow B} 为 [Noether](00D1) [局部环](00CX)满射，[极大理想](00CW)分别为 #{\mathfrak m_A,\mathfrak m_B}，#{N\ne 0} 是[有限生成](0128) #{B} 模，且 #{\operatorname{pd}_AN\leq c=\operatorname{edim}A-\operatorname{edim}B}。这里使用[投射维数](01A7)与[嵌入维数](01A9)。则 #{N} 为自由 #{B} 模，#{A\to B} 是[例外完全交满射](01AD)。}
 \p{使用 [Nagata 换环定理](01AF)，以及 Auslander–Buchsbaum 消去子定理与素回避的以下推论：有限投射维数非零模的非零消去子若不含于 #{\mathfrak m_A^2}，则其中存在 #{A} 非零因子 #{x\notin\mathfrak m_A^2}。后一结果的证明文献见 [Brochard–Iyengar–Khare，定理 3.1 的证明](01M0)。}
 \p{\strong{证明。}先假定 #{N} 忠实，即 #{\operatorname{Ann}_BN=\{b:bN=0\}=0}。若 #{c=0}，#{\operatorname{pd}_AN=0}，由[有限投射模自由](01M8)得 #{N\cong A^r}，#{r>0}；所以 #{\ker(A\to B)=\operatorname{Ann}_AN=0}。}
 \p{若 #{c>0}，核 #{J=\operatorname{Ann}_AN} 不包含于 #{\mathfrak m_A^2}。第二输入给 #{x\in J\setminus\mathfrak m_A^2} 非零因子。Nagata 对 #{A\to A/xA} 给}
 ##{\operatorname{pd}_{A/xA}N=\operatorname{pd}_AN-1\leq c-1
 =\operatorname{edim}(A/xA)-\operatorname{edim}B.}
-\p{归纳得 #{N} 在 #{B} 上自由且 #{A/xA\to B} 例外完全交。提升后者核的正则生成列并在前面加 #{x}，即得 #{A\to B} 的正则生成列；其切向像仍线性无关，因为模去 #{x} 的像后原序列线性无关。这完成忠实情形。}
+\p{归纳得 #{N} 在 #{B} 上自由且 #{A/xA\to B} 例外完全交。提升后者核的正则生成列并在前面加 #{x}，即得 #{A\to B} 的正则生成列；其切向像仍[线性无关](00D9)，因为模去 #{x} 的像后原序列线性无关。这完成忠实情形。}
 \p{一般情形令 #{C=B/\operatorname{Ann}_BN}。忠实情形适用于 #{A\to C}，因为 #{\operatorname{edim}C\leq\operatorname{edim}B}。故 #{N\cong C^r}、#{r>0} 且 #{A\to C} 例外完全交。由 [Koszul 分解](01MK)与 [Tor 检测](01MC)，}
 ##{\operatorname{edim}A-\operatorname{edim}C
 =\operatorname{pd}_AC=\operatorname{pd}_AN

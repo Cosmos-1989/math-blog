@@ -1,0 +1,17 @@
+\title{宇宙上的短扩展子}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Steel，An Introduction to Iterated Ultrapowers，Lecture 4，定义 4.2、4.3、4.5、4.7](https://www.math.cmu.edu/users/jcumming/Appalachian/steel_cmu_2015_files/Iteration-Ultrapowers.pdf)；[Farah，§2.3](https://arxiv.org/abs/1005.4193)}
+
+\p{在 [ZFC](00QV) 的[宇宙](00RK) #{V} 中，固定不可数[基数](00QT) #{\kappa} 与[序数](00QS) #{\lambda>\kappa}。记 #{[\eta]^n} 为 #{\eta} 的 #{n} 元子集，按递增顺序写其元素 #{u_0<\cdots<u_{n-1}}；#{[\eta]^{<\omega}} 是全部有限子集。若 #{a\subseteq b} 且 #{a_i=b_{r_i}}，定义投影 #{\pi_{b,a}(u)=\{u_{r_i}:i<|a|\}}，并记 #{f^{a,b}=f\circ\pi_{b,a}}。}
+\p{本页采用宇宙 #{V} 上的、正规且共同可数完备的短 #{(\kappa,\lambda)} 扩展子约定。它是集合大小的系统 #{E=\langle E_a:a\in[\lambda]^{<\omega}\rangle}，满足以下条件。}
+\ol{
+\li{每个 #{E_a} 是 #{[\kappa]^{|a|}} 上的[超滤子](00CO)，且 #{\kappa}-完备，即少于 #{\kappa} 个成员的交仍属其中。若 #{a\subseteq\kappa}，它是在 #{a} 处的主超滤子；#{E_{\{\kappa\}}} 非主。空坐标的底集为 #{[\kappa]^0=\{\varnothing\}}，因此该坐标也为主超滤子。}
+\li{协调性：对 #{a\subseteq b} 及 #{X\subseteq[\kappa]^{|a|}}，有 #{X\in E_a\Longleftrightarrow\pi_{b,a}^{-1}(X)\in E_b}。}
+\li{正规性：若 #{f:[\kappa]^{|a|}\to\kappa}、#{i<|a|}，且 #{\{u:f(u)<u_i\}\in E_a}，则存在 #{\xi<a_i}。令 #{b=a\cup\{\xi\}}、#{\xi=b_r}，要求 #{\{u:f^{a,b}(u)=u_r\}\in E_b}。}
+\li{共同可数完备性：对任意 #{a_n\in[\lambda]^{<\omega}} 及 #{X_n\in E_{a_n}}，存在严格递增函数 #{h:\bigcup_n a_n\to\kappa}，使每个 #{h[a_n]\in X_n}。这比逐个坐标超滤子的可数完备性更强。}
+}
+\p{其[扩展子超幂](0F24)的良基性来自最后一项。若 #{j:V\to M} 是到[传递类](00QX)的[初等嵌入](00CK)，[临界点](00RI)为 #{\kappa}，且 #{\kappa<\lambda\leq j(\kappa)}，则}
+##{E_a=\{X\subseteq[\kappa]^{|a|}:a\in j(X)\}}
+\p{给出从 #{j} 导出的这一类型扩展子；这里的上界是“短”的长度限制。导出性质与上述内在条件的对应采用所引 Steel 讲义。上述长度限制对应短扩展子；内模型上的扩展子还须另行检查可用性和可迭代性。}

@@ -1,0 +1,13 @@
+\title{短扩展子的超幂}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Steel，An Introduction to Iterated Ultrapowers，Lecture 4，定义 4.3 后的构造、引理 4.6、4.8](https://www.math.cmu.edu/users/jcumming/Appalachian/steel_cmu_2015_files/Iteration-Ultrapowers.pdf)}
+
+\p{设 #{E=\langle E_a:a\in[\lambda]^{<\omega}\rangle} 为[宇宙上的短扩展子](0F23)，临界基数为 #{\kappa}。取有限坐标 #{a} 及集合函数 #{f:[\kappa]^{|a|}\to V}。对另一对 #{(b,g)}，令 #{c=a\cup b}，使用该定义中的坐标提升 #{f^{a,c},g^{b,c}}，规定[等价关系](00G2)及商上的成员关系：}
+##{(a,f)\sim_E(b,g)\quad\Longleftrightarrow\quad\{u:f^{a,c}(u)=g^{b,c}(u)\}\in E_c,}
+##{[a,f]_E\mathrel{\in_E}[b,g]_E\quad\Longleftrightarrow\quad\{u:f^{a,c}(u)\in g^{b,c}(u)\}\in E_c.}
+\p{协调性保证更换公共坐标不改变这些关系；[超滤子](00CO)的有限交封闭保证传递性及代表元无关性。#{\operatorname{Ult}(V,E)} 是所得类结构的传递塌缩，塌缩含义与[集合论超幂](0A74)相同。类等价类可用最低秩的代表对组成的集合编码，避免把真类本身充当集合元素。}
+\p{\strong{良基性。}若有下降链 #{[a_{n+1},f_{n+1}]_E\in_E[a_n,f_n]_E}，在每个公共坐标 #{a_n\cup a_{n+1}} 上取使成员关系成立的测度一集合。共同可数完备性给出同时满足这些条件的递增 #{h}，从而 #{f_{n+1}(h[a_{n+1}])\in f_n(h[a_n])} 对所有 #{n} 成立，与宇宙中的正则公理矛盾。}
+\p{常值函数给出 #{i_E(x)=[\varnothing,c_x]_E}，其中 #{c_x(\varnothing)=x}。扩展子版 Łoś 定理及传递塌缩定理保证 #{i_E:V\to\operatorname{Ult}(V,E)} 是[初等嵌入](00CK)，其[临界点](00RI)为 #{\kappa}，且 #{[a,\operatorname{id}]_E=a}、#{\lambda\leq i_E(\kappa)}。这些结论见所引 Steel 讲义；上段仅证明良基性。}
+\p{若 #{E} 从 #{j:V\to M} 导出，则因子映射 #{k([a,f]_E)=j(f)(a)} 满足 #{k\circ i_E=j} 并固定 #{\lambda} 以下的序数。长度 #{\lambda} 不自动保证包含整个[累积层级](00RK) #{V_\lambda}；某个高度 #{\beta} 的强性须另行要求 #{V_\beta\subseteq\operatorname{Ult}(V,E)}。}

@@ -32,6 +32,9 @@ jobs:
       - name: Check note sources and prerequisite graph
         run: |
           node scripts/test-note-editorial.mjs
+          node scripts/test-note-prerequisites.mjs
+          node scripts/test-subject-navigation.mjs
+          node scripts/check-note-prerequisites.mjs
           node scripts/check-note-editorial.mjs --strict-format
           node scripts/check-subject-navigation.mjs
           node scripts/check-topic-narratives.mjs

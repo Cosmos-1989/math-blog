@@ -1,0 +1,13 @@
+\title{有限 p 的 Lp 空间中简单函数稠密}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hunter，Measure Theory，Theorem 7.8](https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes.pdf)，此处取 #{1\le p<\infty}}
+
+\p{设 #{(X,\mathcal A,\mu)} 为[测度空间](00Q2)，#{1\le p<\infty}。属于 [#{L^p(X,\mu)}](00Q6)的[简单函数](00Q5)在其中[稠密](00EB)。等价地，每个 #{f\in L^p} 都能在 #{p}-范数下被有限和 #{\sum_{j=1}^m c_j1_{E_j}} 逼近，其中 #{E_j} 可测，且在 #{c_j\ne 0} 时 #{\mu(E_j)<\infty}。这里 #{1_E} 在 #{E} 上为一，在其余点为零。}
+\p{\strong{证明。}先取非负实值代表元 #{f}，并在必要的[零测集](00Q4)上置零使其处处有限。令}
+##{s_n(x)=2^{-n}\left\lfloor 2^n\min(f(x),n)\right\rfloor,}
+\p{其中 #{\lfloor t\rfloor} 是不超过 #{t} 的最大整数。每个 #{s_n} 只有有限个取值，其水平集可测，且 #{0\le s_n\le s_{n+1}\le f}、#{s_n(x)\to f(x)}。因此 #{s_n\in L^p}。}
+\p{函数 #{g_n=f^p-(f-s_n)^p} 非负递增并逐点趋于 #{f^p}。由[单调收敛定理](0A7A)，}
+##{\|f-s_n\|_p^p=\int f^p\,d\mu -\int g_n\,d\mu\longrightarrow 0.}
+\p{对复值 #{f}，将实部、虚部分别拆为正部与负部，应用上面的逼近，再由[Minkowski 不等式](0A69)相加控制误差。最后，若简单函数在可测片 #{E_j} 上取非零常数 #{c_j}，则 #{|c_j|^p\mu(E_j)\le\|s\|_p^p<\infty}，故各非零片均有有限测度。整个论证不要求 #{\sigma}-有限性。}

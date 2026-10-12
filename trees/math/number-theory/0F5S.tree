@@ -1,0 +1,13 @@
+\title{GL_n 的归一化 Harish-Chandra 同构}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Etingof，Representations of Lie Groups，§14.1，Theorem 14.1、Remark 14.2](https://ocw.mit.edu/courses/18-757-representations-of-lie-groups-fall-2023/mit18_757_f23_lec_full.pdf)}
+
+\p{固定整数 #{n\geq 2}。取复矩阵 [Lie 代数](0F00) #{\mathfrak g=M_n(\mathbb C)}，括号为 #{[X,Y]=XY-YX}；#{E_{ij}} 表示仅第 #{(i,j)} 项为一的矩阵。令 #{\mathfrak n_-}、#{\mathfrak h}、#{\mathfrak n_+} 分别为严格下三角、对角及严格上三角矩阵组成的子代数，#{H_i=E_{ii}}。记 #{U(\mathfrak g)} 为[泛包络代数](0F5A)，#{Z(\mathfrak g)} 为它的中心。}
+\p{PBW 定理给出由乘法诱导的线性同构}
+##{U(\mathfrak n_-)\otimes U(\mathfrak h)\otimes U(\mathfrak n_+)\xrightarrow{\sim}U(\mathfrak g),\qquad U(\mathfrak h)=\mathbb C[H_1,\ldots,H_n].}
+\p{此处使用复向量空间的[张量积](0122)和[多项式环](0ALH)。令 #{\varepsilon:U(\mathfrak n_\pm)\to\mathbb C} 为将单位元送到一、每个 #{\mathfrak n_\pm} 中元素送到零的[代数同态](0123)。定义线性投影 #{\beta:U(\mathfrak g)\to\mathbb C[x_1,\ldots,x_n]}：先通过上式逆映射，再把 #{a_-\otimes h\otimes a_+} 送到 #{\varepsilon(a_-)\varepsilon(a_+)h(x_1,\ldots,x_n)}。这里 #{h(x)} 表示将 #{H_i} 换成变量 #{x_i}。}
+\p{置 #{\rho_i=(n+1-2i)/2}、#{\rho=(\rho_1,\ldots,\rho_n)}。归一化 Harish-Chandra 映射是在中心上作如下平移：}
+##{\gamma:Z(\mathfrak g)\longrightarrow\mathbb C[\mu_1,\ldots,\mu_n]^{S_n},\qquad \gamma(z)(\mu)=\beta(z)(\mu -\rho).}
+\p{上标表示[对称群](00DC)置换变量后不变的多项式。Harish-Chandra 定理断言 #{\gamma} 是代数同构；来源的未平移映射记为 HC，本页的 #{\beta} 就是该映射。PBW 分解及此同构均采用所引结构定理，#{\mathfrak{gl}_n} 的情形由 Remark 14.2 的约化版本得到。特别地，单位矩阵作为 Lie 代数元素 #{I_n=\sum_i H_i} 满足 #{\gamma(I_n)=\sum_i\mu_i}，因为 #{\sum_i\rho_i=0}。}

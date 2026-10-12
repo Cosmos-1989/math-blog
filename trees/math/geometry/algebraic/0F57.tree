@@ -1,0 +1,13 @@
+\title{光滑射影曲线的 Serre 对偶}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks Project，曲线对偶，引理 53.4.1(5)(6)，Tag 0BS2](https://stacks.math.columbia.edu/tag/0BS2)；[固有概形上的完美配对，注记 48.27.6](https://stacks.math.columbia.edu/tag/0FVU)}
+
+\p{设 #{C/k} 为任意[域](00D0)上的[光滑射影几何整曲线](0C01)，#{E} 为[有限局部自由层](0AL7)，#{\omega_C=\Omega^1_{C/k}} 为[正则微分层](0C02)。记 #{E^\vee} 为局部的 #{\mathcal O_C} [模层同态](0AL5) #{E\to\mathcal O_C} 所成的层；对有限维 #{k}-[向量空间](00D3) #{V} 则记 #{V^*=\operatorname{Hom}_k(V,k)}。Serre 对偶给出自然同构}
+##{H^i(C,E)^*\cong H^{1-i}(C,E^\vee\otimes_{\mathcal O_C}\omega_C),\qquad i=0,1.}
+\p{这里 #{H^i} 是[模层上同调](0F53)，两侧有限维；#{\otimes_{\mathcal O_C}} 由局部[模张量积](0122)粘合。等价地，两个上同调空间之间有完美配对，即配对诱导每一方到另一方线性对偶的同构。}
+\p{对 #{i=1}，一个截面 #{s\in H^0(C,E^\vee\otimes\omega_C)} 等价于模层同态 #{s:E\to\omega_C}。它把 #{\xi\in H^1(C,E)} 送到 #{H^1(s)(\xi)\in H^1(C,\omega_C)}，再经迹映射 #{\operatorname{tr}_C:H^1(C,\omega_C)\to k} 得到配对值。迹映射由对偶定理和 #{\omega_C} 的恒等同态确定，不是选取基后的任意线性泛函。}
+\p{特别地，取 #{E=\omega_C}，由 #{\omega_C^\vee\otimes\omega_C\cong\mathcal O_C} 得}
+##{H^1(C,\omega_C)\cong H^0(C,\mathcal O_C)^*\cong k.}
+\p{最后一个同构使用光滑射影几何整曲线的全局正则函数均为常数，并把泛函送到它在 #{1} 上的值；所得同构正是 #{\operatorname{tr}_C}。因此该结论适用于 #{k=\mathbb F_q}，无需把基域换成复数。上述对偶与有限维性为引用定理，证明见所引文献；对奇异曲线应使用对偶化层，不能直接以正则微分层代替。}

@@ -1,0 +1,13 @@
+\title{GL_n 的未分歧 Satake 参数}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Gross，On the Satake Isomorphism，Proposition 3.6、式(3.14)、§6](https://people.math.harvard.edu/~gross/preprints/sat.pdf)；[Harris–Taylor，The Geometry and Cohomology of Some Simple Shimura Varieties，Lemma 2.1.1，页88](https://webusers.imj-prg.fr/~michael.harris/twug.pdf)}
+
+\p{固定整数 #{n\geq 1}。设 #{F} 是[非阿基米德局部域](0F52)，其整数环为 #{\mathcal O_F}，[剩余域](00SH)有 #{q} 个元素。记 #{v:F^\times\to\mathbb Z} 为其满射离散赋值，选取 #{v(\varpi)=1} 的元素 #{\varpi}，置[一般线性群](00DD) #{G=\operatorname{GL}_n(F)}、#{K=\operatorname{GL}_n(\mathcal O_F)}。令 #{\pi} 是[不可约光滑容许未分歧表示](0F5D)，并使用[球 Hecke 代数](0F5E)中 #{\operatorname{vol}(K)=1} 的归一化。}
+\p{Satake 定理给出 #{\dim\pi^K=1} 以及代数同构}
+##{\mathcal H(G,K)\simeq\mathbb C[X_1^{\pm 1},\ldots,X_n^{\pm 1}]^{S_n},\qquad T_j\longmapsto q^{j(n-j)/2}e_j(X_1,\ldots,X_n).}
+\p{这里 #{T_j=1_{K\operatorname{diag}(\varpi I_j,I_{n-j})K}}，#{1\leq j\leq n}；右端为在[对称群](00DC)置换变量下不变的 Laurent 多项式，#{e_j(X)=\sum_{i_1<\cdots<i_j}X_{i_1}\cdots X_{i_j}}。#{T_1,\ldots,T_n,T_n^{-1}} 生成此代数；上述同构及一维性使用所引定理。}
+\p{设 #{\lambda_j} 为 #{T_j} 在 #{\pi^K} 上的[特征值](0F0B)。Satake 参数是满足}
+##{e_j(\alpha_1,\ldots,\alpha_n)=q^{-j(n-j)/2}\lambda_j\quad(1\leq j\leq n)}
+\p{的非零复数无序组 #{\{\alpha_1,\ldots,\alpha_n\}}。等价地，它们是多项式 #{\sum_{j=0}^n(-1)^jq^{-j(n-j)/2}\lambda_jT^{n-j}} 的根，其中 #{\lambda_0=1}；#{T_n} 可逆保证常数项非零。这明确确定了参数及其归一化，而不需要选择复对数。若表示由 #{\operatorname{PGL}_n(F)} 拉回，则中心作用平凡，故 #{\lambda_n=1}、#{\prod_j\alpha_j=1}。}

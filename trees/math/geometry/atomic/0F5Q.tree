@@ -1,0 +1,13 @@
+\title{有向流形的 Spin 结构}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bär，Spin Geometry，§2.4，Definitions 2.4.1、2.4.3、2.4.5](https://www.math.uni-potsdam.de/fileadmin/user_upload/Prof-Geometrie/Dokumente/Lehre/Veranstaltungen/SS11/spingeo.pdf)；[Wernli，§1.3、§2.3.1](https://arxiv.org/pdf/1911.09766)}
+
+\p{设 #{M} 为维数 #{n\geq 1} 的[有向光滑流形](00NM)，配有[黎曼度量](00NI) #{g}。记 #{F_{\operatorname{SO}}(TM)} 为[切丛](0A3X)的正向正交标架丛：其 #{x} 处纤维是保持取向的线性等距同构 #{b:\mathbb R^n\to T_xM}。群 #{\operatorname{SO}(n)=\{A\in M_n(\mathbb R):A^{\mathsf T}A=I_n,\ \det A=1\}} 通过 #{b\cdot A=b\circ A} 作用，使它成为[光滑主丛](0F5P)。}
+\p{取正定二次型 #{q(v)=\sum_{j=1}^n v_j^2} 的 [Spin 群](016F)，记作 #{\operatorname{Spin}(n)}。采用[Clifford 代数](0AI8)的约定 #{v^2=q(v)1}，其作用给出群同态}
+##{\rho:\operatorname{Spin}(n)\longrightarrow\operatorname{SO}(n),\qquad \rho(u)(v)=uvu^{-1},\qquad \ker\rho=\{1,-1\}.}
+\p{#{\rho} 是满的二重[覆盖映射](0A9G)；这是实正定 Spin 群的结构定理。#{(M,g)} 上的 Spin 结构是一个光滑 #{\operatorname{Spin}(n)} 主丛 #{P\to M}，连同覆盖 #{M} 的恒等映射的光滑映射 #{\lambda:P\to F_{\operatorname{SO}}(TM)}，满足}
+##{\lambda(p\cdot u)=\lambda(p)\cdot\rho(u).}
+\p{在每个纤维上选基点作识别后，#{\lambda} 与 #{\rho} 相同，因而是二对一映射。两对数据 #{(P,\lambda)}、#{(P',\lambda')} 等价，指存在主丛同构 #{F:P\to P'} 使 #{\lambda'\circ F=\lambda}。取向是此定义的已选数据；Spin 结构还要求上述提升存在并选定其等价类。}
+\p{局部地，若正向正交标架 #{b_i} 在重叠处满足 #{b_j=b_i g_{ij}}，则 Spin 结构可由光滑映射 #{\widetilde g_{ij}:U_i\cap U_j\to\operatorname{Spin}(n)} 表示，要求 #{\rho(\widetilde g_{ij})=g_{ij}} 且 #{\widetilde g_{ij}\widetilde g_{jk}=\widetilde g_{ik}}。后一等式是三重重叠上的拼合条件；仅逐点选择 #{g_{ij}} 的原像还不足以定义 Spin 结构。}

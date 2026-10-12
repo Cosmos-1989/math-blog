@@ -1,0 +1,11 @@
+\title{群的逆极限}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Milne，Fields and Galois Theory](https://www.jmilne.org/math/Books/FT0.pdf)，第七章}
+
+\p{设 #{I} 为[有向偏序集](0A3Q)。对每个 #{i\in I} 给定[群](0001) #{G_i}，对 #{i\le j} 给定[同态](00BH) #{p_{ij}:G_j\to G_i}，满足 #{p_{ii}=1} 以及 #{p_{ij}p_{jk}=p_{ik}}。这些数据称为群的逆系统；映射由较大的指标指向较小的指标。}
+\p{其逆极限是所有相容元素族组成的群}
+##{\varprojlim_{i\in I}G_i=\{(g_i)\in\prod_{i\in I}G_i:p_{ij}(g_j)=g_i\text{ 对所有 }i\le j\}.}
+\p{乘法与逆元逐坐标计算。同态性保证计算后仍满足相容条件。若同态 #{f_i:H\to G_i} 满足 #{p_{ij}f_j=f_i}，则唯一的同态 #{f:H\to\varprojlim G_i} 为 #{f(h)=(f_i(h))}。这给出逆极限的泛性质。}
+\p{当各 #{G_i} 有限时，给它们[离散拓扑](00E5)，再给逆极限赋予[积拓扑](00EI)的[子空间拓扑](00EJ)。这样的拓扑群称为预有限群。典型例子为 #{\widehat{\mathbb Z}=\varprojlim_{n}\mathbb Z/n\mathbb Z}，指标按整除排列，转移映射为取余。}

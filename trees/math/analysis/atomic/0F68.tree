@@ -1,0 +1,22 @@
+\title{Banach 空间映射的 Fréchet 微分}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[J. Weber，Scale Calculus and M-Polyfold Theory: An Introduction](https://www.math.stonybrook.edu/~joa/PUBLICATIONS/POLYLEC-CBM32.pdf)，2019，§A.2.3，定义 A.2.22，印刷页 124}
+
+\p{设 #{X,Y} 为实 [Banach 空间](00M6)，#{U\subseteq X} 为[开集](00E0)，#{F:U\to Y}，#{a\in U}。若存在[有界线性算子](00M4) #{A:X\to Y} 使}
+##{\lim_{\substack{h\to 0\\h\ne 0,\ a+h\in U}}\frac{\|F(a+h)-F(a)-Ah\|_Y}{\|h\|_X}=0,}
+
+\p{则称 #{F} 在 #{a} 处 Fréchet 可微，记 #{DF(a)=A}。极限的含义是：每个 #{\varepsilon>0} 对应一个 #{\delta>0}，使所有满足 #{0<\|h\|_X<\delta} 及 #{a+h\in U} 的增量都满足 #{\|F(a+h)-F(a)-Ah\|_Y\le\varepsilon\|h\|_X}；同一个 #{\delta} 同时控制全部方向。}
+
+\p{记余项 #{r_a(h)=F(a+h)-F(a)-DF(a)h}，则}
+##{F(a+h)=F(a)+DF(a)h+r_a(h),\qquad r_a(h)=o(\|h\|_X).}
+
+\p{这里 #{o(\|h\|_X)} 表示 #{\|r_a(h)\|_Y/\|h\|_X\to 0}。算子 #{DF(a)} 称为 #{F} 在 #{a} 的线性化，#{F(a)+DF(a)h} 给出一阶近似。若 #{A,B} 均满足定义，对固定的非零 #{v\in X} 代入 #{h=tv}，两余项相减再除以 #{|t|\|v\|_X} 并令 #{t\to 0}，得 #{\|(A-B)v\|_Y/\|v\|_X=0}，故导数唯一。由 #{\|F(a+h)-F(a)\|_Y\le\|DF(a)\|\|h\|_X+\|r_a(h)\|_Y}，可微还蕴含在 #{a} [连续](00E2)。}
+
+\p{若 #{F} 在 #{U} 每点可微，且导数映射 #{DF:U\to B(X,Y)} 在算子范数下连续，就称 #{F} 为 #{C^1} 映射，记 #{F\in C^1(U,Y)}。明确地，对每个 #{a\in U} 要求}
+##{\lim_{x\to a}\|DF(x)-DF(a)\|_{B(X,Y)}=0.}
+
+\p{对 #{X=\mathbb R^m,Y=\mathbb R^n}，这就是 [Euclidean 空间中的全微分](0A33)。例如 #{F(s,t)=st} 满足 #{DF(s,t)(h,k)=th+sk}，余项为 #{hk}，且 #{|hk|\le(h^2+k^2)/2}；除以 #{\sqrt{h^2+k^2}} 后趋于零。又有 #{\|DF(s,t)-DF(s',t')\|\le|s-s'|+|t-t'|}，因此这个映射为 #{C^1}。}
+
+\p{上述定义使用实线性导数。对复 Banach 空间上的实微分问题，保留其加法、范数和实标量乘法后使用这个定义；要求导数复线性是额外条件。}

@@ -1,0 +1,10 @@
+\title{实数区间的连通性}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[J. Lebl, Basic Analysis I, 命题 7.2.16](https://www.jirka.org/ra/html/sec_mettop.html)}
+
+\p{设 #{I\subseteq\mathbb R} 是区间，即 #{a,b\in I}、#{a<t<b} 时有 #{t\in I}；允许空集、单点和无界区间。取通常[度量拓扑](00EN)的[子空间拓扑](00EJ)，则 #{I} [连通](00F4)。}
+\p{\strong{证明。}假设 #{I=U\cup V}，其中 #{U,V} 是不交非空相对开集。交换名称后可选 #{a\in U,b\in V} 且 #{a<b}。由[实数的上确界完备性](0A37)，存在 #{c=\sup(U\cap[a,b])}，且 #{a\le c\le b}，故 #{c\in I}。}
+\p{若 #{c\in U}，则 #{c<b}，相对开性给出 #{c<t\le b} 且 #{t\in U}，与 #{c} 是上界矛盾。若 #{c\in V}，则 #{c>a}，相对开性给出 #{\eta>0}，使 #{(c-\eta,c+\eta)\cap I\subseteq V}。上确界性质又给出 #{u\in U\cap[a,b]} 且 #{c-\eta<u\le c}，与 #{U\cap V=\varnothing} 矛盾。两种情况都不可能。}
+\p{反之，实数的连通子集必为区间：若含 #{a<b} 却漏掉中间的 #{t}，则与 #{(-\infty,t)}、#{(t,\infty)} 的交就给出不交非空相对开分离。}

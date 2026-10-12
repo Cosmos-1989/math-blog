@@ -1,0 +1,20 @@
+\title{多对象增广 DG 代数的 Koszul 对偶}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kalck–Yang，§2.7，尤其引理 2.6](https://www.pure.ed.ac.uk/ws/portalfiles/portal/27461881/Relative_singularity_categories_I_Auslander_resolutions.pdf)；[Keller，§3.5 的增广模型](https://webusers.imj-prg.fr/~bernhard.keller/publ/ioan.pdf)}
+
+\p{设 #{k} 为[域](00D0)，#{r\geq 1}，#{K=k^r=\bigoplus_{i=1}^r ke_i}，其中 #{e_ie_j=\delta_{ij}e_i}、#{\sum_i e_i=1}。一个在 #{K} 上带增广的 [DG 代数](019A)是带有 [DG 代数态射](01BD) #{K\xrightarrow{\eta}A\xrightarrow{\varepsilon}K} 的 #{A}，满足 #{\varepsilon\eta=\mathrm{id}_K}；#{K} 集中在零次且微分为零。这里不要求 #{\eta(K)} 位于 #{A} 的中心。以下仍用 #{e_i} 表示它在 #{A} 中的像，#{e_jAe_i} 保留从第 #{i} 个对象到第 #{j} 个对象的分量。}
+
+\p{经 #{x\cdot a=x\varepsilon(a)}，#{K} 成为右 [DG 模](019B)。其 Koszul 对偶定义为带复合乘法的[导出自同态代数](01BE)}
+##{A^!=\operatorname{REnd}_A(K)=\operatorname{RHom}_A(K,K).}
+\p{具体地，对每个 #{ke_i} 取右 DG 模的[同伦投射替换](0AL8) #{Q_i\to ke_i}，令 #{Q=\bigoplus_iQ_i}。此处同伦投射条件是：对任意上同调全零的右 DG 模 #{N}，#{\operatorname{Hom}_A^\bullet(Q_i,N)} 的[上同调](012B)也全零。取模型}
+##{A^!=\operatorname{Hom}_A^\bullet(Q,Q),\qquad
+d(f)=d_Qf-(-1)^{|f|}fd_Q,\qquad fg=f\circ g.}
+\p{次数 #{q} 的 #{f} 是所有次数映射 #{f^p:Q^p\to Q^{p+q}} 的族，满足 #{f(xa)=f(x)a}；允许无限多个 #{f^p} 非零，即使用逐次数直积而非有限支撑直和。取第 #{i} 个直和项的投影作为对偶侧的 #{e_i}，便有 #{e_jA^!e_i=\operatorname{Hom}_A^\bullet(Q_i,Q_j)}。改变合适的替换不改变 DG 拟同构类型；保持增广和各 #{e_i} 的拟同构也保持这一类型。引理 2.6 将它与文献采用的 Koszul 对偶模型识别。}
+
+\p{右模与乘法次序是定义的一部分。这里 #{fg} 先作用 #{g}，不再额外取反代数。对齐次元素，DG 反代数的乘法为 #{a\mathbin{\ast_{\mathrm{op}}}b=(-1)^{|a||b|}ba}，微分不变；左 #{A} 模可视为右 #{A^{\mathrm{op}}} 模，其作用为 #{x\cdot a^{\mathrm{op}}=(-1)^{|a||x|}ax}。因此若选用左模版本，应相应写成右 #{A^{\mathrm{op}}} 模的导出自同态，而不能省略约定。}
+
+\p{若给定的 DG 代数只有非负上同调，且零次上同调由指定的对象幂等元张成，可先作[严格增广模型构造](0F15)，再应用上述定义。}
+
+\p{[收缩代数的重构路线](01BK)使用这一多对象约定。其与导出收缩代数的几何识别另用该收缩情形的定理。}

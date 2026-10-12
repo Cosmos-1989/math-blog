@@ -1,0 +1,11 @@
+\title{紧度量空间上的连续映射一致连续}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[J. Lebl, Basic Analysis I, 定理 7.5.11](https://www.jirka.org/ra/html/sec_metcont.html)}
+
+\p{设 #{(X,d)} 为[紧](00F3)[度量空间](00EK)，#{(Y,\rho)} 为度量空间。每个[连续映射](00EX) #{f:X\to Y} 都[一致连续](0F40)。}
+\p{\strong{证明。}空空间的情形直接成立。设 #{X\ne\varnothing}，给定 #{\varepsilon>0}。对每个 #{a\in X}，由连续性取 #{r_a>0}，使 #{d(a,z)<2r_a} 时有 #{\rho(f(a),f(z))<\varepsilon /2}。}
+\p{[开球](00EM)族 #{\{B(a,r_a):a\in X\}} 是[开覆盖](00FP)。紧性给出有限子覆盖 #{B(a_1,r_{a_1}),\ldots,B(a_m,r_{a_m})}。令 #{\delta=\min_jr_{a_j}>0}。若 #{d(x,x')<\delta}，选 #{j} 使 #{x\in B(a_j,r_{a_j})}，则 #{d(a_j,x')<2r_{a_j}}。于是}
+##{\rho(f(x),f(x'))\le\rho(f(x),f(a_j))+\rho(f(a_j),f(x'))<\varepsilon.}
+\p{此 #{\delta} 不依赖于 #{x,x'}，即为一致连续性。}

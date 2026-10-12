@@ -1,0 +1,10 @@
+\title{事件并的概率上界}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{(A_j)_{j\ge 1}} 为同一[概率空间](00Q3)上的事件，则}
+##{\mathbb P\left(\bigcup_{j\ge 1}A_j\right)\le\sum_{j\ge 1}\mathbb P(A_j).}
+\p{右端是允许取 #{+\infty} 的非负项[级数](0A38)。有限事件族同样成立，且无需独立性。此不等式称并集上界，也称 Boole 不等式。}
+\p{\strong{证明。}令 #{B_1=A_1}，#{B_j=A_j\setminus\bigcup_{i<j}A_i}。各 #{B_j} 两两不交，且其并与 #{A_j} 的并相同。由概率[测度的可数可加性](00Q2)，有 #{\mathbb P(\bigcup_jA_j)=\sum_j\mathbb P(B_j)\le\sum_j\mathbb P(A_j)}。}
+\p{因此，若有 #{n} 个可能失败的事件，每个概率至多 #{\varepsilon_n}，则至少一个失败的概率至多 #{n\varepsilon_n}；要从单点控制推出同时成立，还须使此乘积趋于零。}

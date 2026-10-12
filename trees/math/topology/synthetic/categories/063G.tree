@@ -4,16 +4,16 @@
 \author{author}
 \meta{source}{[系统讲义](0210)，第 18 章；[RiehlShulman](021D)，[YonedaFormal](021E)，[RiehlICM](0211)}
 
-\p{设 #{C} 为合成预范畴，#{c:C}，#{P:C\to\mathsf{Type}} 为[反变族](063F)。记 #{\operatorname{Nat}_C(E,P)=\prod_{x:C}(E(x)\to P(x))} 为反变族间的内部依赖函数类型。反变可表族 #{\operatorname{Hom}_C(-,c)} 沿箭头的作用为前复合，且有等价}
+\p{设 #{C} 为[合成预范畴](0612)，#{c:C}，#{P:C\to\mathsf{Type}} 为[反变族](063F)。记 #{\operatorname{Nat}_C(E,P)=\prod_{x:C}(E(x)\to P(x))} 为反变族间的[内部依赖函数类型](0505)。反变可表族 #{\operatorname{Hom}_C(-,c)} 沿箭头的作用为前复合，且有等价}
 
 ##{\operatorname{Nat}_C(\operatorname{Hom}_C(-,c),P)\simeq P(c).}
 
 \p{\strong{证明。}
-反转外单纯方向，把 #{C} 替换为[反范畴](0318) #{C^{\mathrm{op}}}，则反变族成为协变族。应用[协变 Yoneda 引理](063B)得到结论。其逆的显式公式为}
+反转外单纯方向，把 #{C} 替换为下述有向对偶 #{C^{\mathrm{op}}}，则反变族成为[协变族](0622)。应用[协变 Yoneda 引理](063B)得到结论。其逆的显式公式为}
 
 ##{u\longmapsto\bigl(f:x\to c\longmapsto f^*u\bigr).}
 
 \p{两侧逆检验分别使用恒等拉回作用与自然性在 #{f}、#{\operatorname{id}_c} 上的代入。}
 
 \p{\strong{说明。}
-在单纯空间语义中，对单调映射 #{\alpha:[m]\to[n]} 定义 #{\alpha^{\mathrm{rev}}(i)=n-\alpha(m-i)}。这给出单纯指标范畴的对合自同构，预复合它便反转外方向，得到 #{C^{\mathrm{op}}}。它交换箭头的源与靶并保持形状乘积，故把固定靶提升转为固定源提升。这里的对偶操作作用于单纯模型中的有向类型。}
+在单纯空间语义中，对单调映射 #{\alpha:[m]\to[n]} 定义 #{\alpha^{\mathrm{rev}}(i)=n-\alpha(m-i)}。这给出单纯指标范畴的对合自同构，预复合它便反转外方向，得到 #{C^{\mathrm{op}}}。它交换箭头的源与靶并保持形状乘积，故把固定靶提升转为固定源提升。这里的对偶操作作用于单纯模型中的有向类型；普通[反范畴](0318)是其在逐层离散范畴神经上的实例。}

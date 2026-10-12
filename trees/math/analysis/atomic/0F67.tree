@@ -1,0 +1,20 @@
+\title{Fredholm 有界线性算子及指标}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[T. Mrowka，MIT 18.965，Lectures 16–17](https://ocw.mit.edu/courses/18-965-geometry-of-manifolds-fall-2004/8a7e4dd837d1bdd6988e0330babb8c5e_lecture16_17.pdf)，§16.3，定义 16.13（PDF 第 1 页）}
+
+\p{设 #{X,Y} 为同一标量域 #{\mathbb K=\mathbb R} 或 #{\mathbb C} 上的 [Banach 空间](00M6)，#{T:X\to Y} 为[有界线性算子](00M4)。它的核与像是[线性子空间](00D7)}
+##{\ker T=\{x\in X:T x=0\},\qquad \operatorname{im}T=\{T x:x\in X\}.}
+
+\p{余核定义为[商向量空间](00DB) #{\operatorname{coker}T=Y/(\operatorname{im}T)}。称 #{T} 为 Fredholm 算子，如果 #{\ker T} 与 #{\operatorname{coker}T} 都[有限维](00GM)，且 #{\operatorname{im}T} 在 #{Y} 的范数拓扑中为[闭集](00E1)。其 Fredholm 指标为整数}
+##{\operatorname{ind}_{\mathbb K}T=\dim_{\mathbb K}\ker T-\dim_{\mathbb K}\operatorname{coker}T.}
+
+\p{这里维数均取在指定的标量域上。#{T} 满射恰好等价于 #{\operatorname{coker}T=0}；对满射的 Fredholm 算子，指标等于核的维数。Fredholm 条件本身不要求满射。}
+
+\p{例如，在[序列空间](00MN) #{\ell^2(\mathbb N;\mathbb K)} 上定义右移算子}
+##{S(x_1,x_2,x_3,\ldots)=(0,x_1,x_2,\ldots).}
+
+\p{该空间的[完备性](0A3O)保证它是 Banach 空间。由 #{\|Sx\|_2=\|x\|_2} 可知 #{S} 有界，且 #{\ker S=0}。其像恰为首坐标为零的序列；若这些序列按范数收敛，由 #{|y_1-z_1|\le\|y-z\|_2}，极限的首坐标仍为零，故像闭。映射 #{[y]\mapsto y_1} 给出 #{\ell^2/(\operatorname{im}S)\cong\mathbb K}，所以 #{\operatorname{ind}_{\mathbb K}S=-1}。}
+
+\p{左移算子 #{L(x_1,x_2,\ldots)=(x_2,x_3,\ldots)} 满足 #{\|Lx\|_2\le\|x\|_2} 且 #{LS=I}，因而满射；其核是 #{\mathbb K e_1}，其中 #{e_1=(1,0,0,\ldots)}。因此 #{L} 也是 Fredholm 算子，且 #{\operatorname{ind}_{\mathbb K}L=1}。}

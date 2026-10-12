@@ -1,0 +1,15 @@
+\title{拉格朗日子流形的整数分次}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Seidel，Graded Lagrangian Submanifolds，§2a–2b，式(2.2)、Lemma 2.3](https://arxiv.org/pdf/math/9903049)}
+
+\p{设 #{(M^{2n},\omega)} 为[辛流形](0BL1)，固定[相容概复结构](0BL7) #{J}。将[切丛](0A3X)视为秩 #{n} 的复[光滑向量丛](0A3V)，用复[外幂](01AG)及[张量积](0122)构造复线丛，即秩一复光滑向量丛}
+##{\Delta=\left(\bigwedge_{\mathbb C}^n(TM,J)\right)^{\otimes 2}.}
+\p{各纤维作上述运算，局部平凡化的转移函数也作相同运算，便给出 #{\Delta} 的光滑结构。假设已选定复线丛平凡化 #{\tau:\Delta\xrightarrow{\sim}M\times\mathbb C}；记纤维线性同构为 #{\tau_x:\Delta_x\to\mathbb C}。这是环境中的附加数据，须在讨论所有对象时固定。}
+\p{对[拉格朗日子流形](0BL3) #{L\subset M}，在 #{x\in L} 取任意实基 #{v_1,\ldots,v_n}，定义平方相位}
+##{\alpha_L(x)=\frac{\tau_x((v_1\wedge\cdots\wedge v_n)^{\otimes 2})}{|\tau_x((v_1\wedge\cdots\wedge v_n)^{\otimes 2})|}\in S^1,\qquad S^1=\{z\in\mathbb C:|z|=1\}.}
+\p{相容性与拉格朗日条件给出 #{T_xL\cap J(T_xL)=0}，故此实基也是 #{(T_xM,J)} 的复基，分子非零。换实基时，分子乘以换基[行列式](01D2)的平方，这是正实数；因此 #{\alpha_L} 不依赖所取基。相对于 #{(J,\tau)} 的整数分次，是满足}
+##{\widetilde\alpha_L:L\longrightarrow\mathbb R,\qquad e^{2\pi i\widetilde\alpha_L(x)}=\alpha_L(x)}
+\p{的连续实值函数。称 #{(L,\widetilde\alpha_L)} 为分次拉格朗日子流形。两个提升之差是局部常值的整数函数，因此在每个[连通分支](0118)上可将分次平移任意整数。}
+\p{提升存在当且仅当每条[闭道路](00F6)在 #{\alpha_L} 下的圆值映射绕数为零；这里[绕数](00FK)取相位沿闭道路的总变化。这个提升判据是 Seidel Lemma 2.3 在已选平方行列式平凡化下的表述。整数分次要求环境平凡化和相位提升两项条件。}

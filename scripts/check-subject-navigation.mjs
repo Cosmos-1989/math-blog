@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { listedTopics as listed } from "./subject-navigation-lib.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = file => fs.readFileSync(path.join(root, file), "utf8");
@@ -16,7 +17,6 @@ function walk(dir) {
 walk(path.join(root, "trees"));
 
 const links = text => [...text.matchAll(/\[[^\]\n]+\]\(([^)\s]+)\)/g)].map(match => match[1]);
-const listed = text => [...text.matchAll(/\\li\{[^\n]*/g)].flatMap(match => links(match[0]));
 const subjects = links(trees.get("0060") ?? "");
 const foundations = new Set(["001C", "001D", "001E", "001F", "0076", "013Y"]);
 if (subjects.length !== 20 || new Set(subjects).size !== 20) errors.push("Expected 20 unique subject landing pages");

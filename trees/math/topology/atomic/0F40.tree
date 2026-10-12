@@ -1,0 +1,10 @@
+\title{度量空间之间的一致连续映射}
+\date{2026-10-12}
+\taxon{Definition}
+\author{author}
+\meta{source}{[J. Lebl, Basic Analysis I, 定义 7.5.10](https://www.jirka.org/ra/html/sec_metcont.html)}
+
+\p{设 #{(X,d)}、#{(Y,\rho)} 为[度量空间](00EK)。映射 #{f:X\to Y} 称为\strong{一致连续}，如果}
+##{\forall\varepsilon>0\ \exists\delta>0\ \forall x,x'\in X,\qquad d(x,x')<\delta\Longrightarrow\rho(f(x),f(x'))<\varepsilon.}
+\p{这里 #{\delta} 可以依赖 #{\varepsilon}，但须同时适用于所有 #{x,x'}。[逐点连续性](00EX)则允许 #{\delta} 依赖选定的点。一致连续因而蕴含连续。}
+\p{例如 #{f(x)=x^2} 在 #{\mathbb R} 上连续，却不一致连续。取 #{x_n=n}、#{y_n=n+1/n}，则 #{|x_n-y_n|\to 0}，但 #{|f(y_n)-f(x_n)|=2+1/n^2>2}，与 #{\varepsilon=1} 所需的统一 #{\delta} 矛盾。}

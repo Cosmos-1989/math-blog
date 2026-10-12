@@ -1,0 +1,14 @@
+\title{Fredholm 映射的正则点与正则值}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[J. Weber，Topological Methods in the Quest for Periodic Orbits](https://www.math.stonybrook.edu/~joa/PUBLICATIONS/TOPMETDYN-LEC.pdf)，2017，§3.3.2，习题 3.3.12 后的结论及注记 3.3.14，印刷页 76–77；取 Banach 空间开集上的 Fredholm 情形}
+
+\p{设 #{X,Y} 为实 [Banach 空间](00M6)，#{U\subseteq X} 为[开集](00E0)，#{F:U\to Y} 为 [Fredholm 映射](0F69)。点 #{a\in U} 称正则点，如果它的 [Fréchet 微分](0F68) #{DF(a):X\to Y} 满射。值 #{y\in Y} 称正则值，如果每个满足 #{F(a)=y} 的点 #{a} 都正则；没有原像的值也满足这个条件。特别地，#{0} 为正则值恰好要求每个零点处的线性化都满射。}
+
+\p{在正则点 #{a}，余核为零，因此线性化方程 #{DF(a)h=0} 的解空间维数等于 #{\operatorname{ind}_aF}。满射 Fredholm 算子还具有有界线性右逆，即存在[有界线性算子](00M4) #{Q:Y\to X} 使 #{DF(a)Q=I_Y}；这里引用 [Weber，习题 3.3.12 后的结论](https://www.math.stonybrook.edu/~joa/PUBLICATIONS/TOPMETDYN-LEC.pdf)，其有限维核假设由 Fredholm 性保证。}
+
+\p{例如 #{F:\mathbb R\to\mathbb R}，#{F(t)=t^2}，有 #{DF(t)h=2th}，余项 #{h^2} 满足一阶估计，且导数连续。在 #{t\ne 0} 时核与余核都为零，在 #{t=0} 时核与余核都为一维，所以 #{F} 处处 Fredholm，指标恒为零。但是 #{0} 不是正则值；正实数的原像为两个非零点，故都是正则值。}
+
+\p{无限维例子可取[序列空间](00MN) #{H=\ell^2(\mathbb N;\mathbb R)} 及固定 #{b\in H}，令 #{F:H\to H}，#{F(x)=Lx+b}，其中 #{L}、#{S} 分别为[左移和右移算子](0F67)。由 #{F(x+h)-F(x)=Lh} 得 #{DF(x)=L}；#{L} 满射且指标为一，故 #{F} 的每个值都正则。由于 #{LS=I} 且 #{\ker L=\mathbb R e_1}，其中 #{e_1=(1,0,0,\ldots)}，有精确的解集公式}
+##{F^{-1}(y)=\{S(y-b)+t e_1:t\in\mathbb R\}.}

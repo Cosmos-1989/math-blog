@@ -1,0 +1,12 @@
+\title{C_p 的倾斜整数环}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Brinon–Conrad，§4.2，式(4.2.1)；§4.3，Proposition 4.3.1](https://math.stanford.edu/~conrad/papers/notes.pdf)}
+
+\p{固定素数 #{p}，记 #{\mathcal O=\mathcal O_{\mathbb C_p}} 为 [#{\mathbb C_p}](0F5H) 的整数环。倾斜整数环是如下相容序列组成的环，环运算在[商环](00CU) #{\mathcal O/p\mathcal O} 中逐坐标进行：}
+##{R=\mathcal O_{\mathbb C_p}^{\flat}=\left\{(x_0,x_1,\ldots):x_i\in\mathcal O/p\mathcal O,\ x_{i+1}^{p}=x_i\right\}.}
+\p{其特征为 #{p}。Frobenius #{\varphi_R(x)=x^p} 是环自同构，逆为左移 #{(x_0,x_1,\ldots)\mapsto(x_1,x_2,\ldots)}；这种 Frobenius 可逆的特征 #{p} 交换环称为完美环。这里不要求 #{R} 是域。[绝对 Galois 群](0F0H) #{G_p=\operatorname{Gal}(\overline{\mathbb Q}_p/\mathbb Q_p)} 逐坐标作用，且与 Frobenius 交换。}
+\p{对 #{x\in R}，任取 #{x_m} 在 #{\mathcal O} 中的提升 #{\widetilde x_m}，定义}
+##{x^{\sharp}=\lim_{m\to\infty}\widetilde x_m^{p^m}\in\mathcal O.}
+\p{所引 Proposition 4.3.1 保证极限存在且与提升无关。该映射满足 #{(xy)^{\sharp}=x^{\sharp}y^{\sharp}}，并与 Galois 作用相容；它一般不保持加法。若 #{a_{m+1}^p=a_m} 是 #{\mathcal O} 中的序列，则 #{x=(a_m\bmod p)_m} 满足 #{x^{\sharp}=a_0}，所以每个 #{a_0\in\mathcal O} 都能通过选择相容的 #{p} 次根这样取得。}

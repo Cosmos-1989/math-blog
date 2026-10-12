@@ -4,11 +4,13 @@
 \author{author}
 \meta{source}{[Wemyss，§2.3.2，式 (2.3) 与引理 2.5](01A3)；[Karmazyn–Lepri–Wemyss，§8.1–8.3，尤其定理 8.11](https://arxiv.org/html/2411.17359v2#S8)}
 
-\p{设 #{X\to\operatorname{Spec}R} 为[光滑三维收缩](01B3)，#{A=A_{\mathrm{con}}}、#{\Lambda=\operatorname{End}_R(R\oplus N)} 来自[收缩代数构造](01B7)，#{k=\mathbb C}。设例外曲线为 #{C_1,\ldots,C_r}，记 #{S_i=\mathcal O_{C_i}(-1)}、#{S=\bigoplus_i S_i}；其中使用[射影直线的负一次线丛](0AM0)。对各 #{S_i} 在 tilting 等价下对应的单模取有限[投射分解](012D) #{\mathscr P_i}，置 #{P_i=\mathscr P_i\otimes_\Lambda A}、#{\mathscr P=\bigoplus_i\mathscr P_i}、#{P=\bigoplus_iP_i}。}
+\p{设 #{X\to\operatorname{Spec}R} 为[光滑三维收缩](01B3)，#{A=A_{\mathrm{con}}}、#{\Lambda=\operatorname{End}_R(R\oplus N)} 来自[收缩代数构造](01B7)，#{k=\mathbb C}。设例外曲线为 #{C_1,\ldots,C_r}，记 #{S_i=\mathcal O_{C_i}(-1)}、#{S=\bigoplus_i S_i}；其中使用[射影直线的负一次线丛](0AM0)。对各 #{S_i} 在 [tilting 丛](01B5)所给等价下对应的[单模](0126)取有限[投射分解](012D) #{\mathscr P_i}，置 #{P_i=\mathscr P_i\otimes_\Lambda A}、#{\mathscr P=\bigoplus_i\mathscr P_i}、#{P=\bigoplus_iP_i}。}
 \p{扩张标量的[张量积](0122)产生 [DG 自同态代数](01BE)间的映射}
 ##{\mathscr A=\operatorname{REnd}_\Lambda(\mathscr P)
 \longrightarrow\mathscr B=\operatorname{REnd}_A(P).}
 \p{\strong{证明概要。}本收缩情形中，各 #{P_i} 可由相应单模的极小投射分解的有限起始段恢复。因此 #{A} 决定保留这些对象的 DG 范畴 #{\mathcal C}，其态射复形为 #{\mathcal C(i,j)=\operatorname{Hom}_A^\bullet(P_i,P_j)}。重构定理把 #{\operatorname{Hom}_\Lambda^\bullet(\mathscr P_i,\mathscr P_j)} 组成的 DG 范畴识别为[多对象的含幺正次数部分](0D82) #{\mathcal N_{\mathcal C}}，这里使用收缩的特殊同调性质，而非只用上同调单射性。}
-\p{当 #{r=1} 时，这正是 #{\mathscr A\simeq\mathcal N_{\mathscr B}}，可用[单单位版本的不变性](01BI)。当 #{r>1} 时则须保留每个 #{P_i} 的单位：重构对象的零次部分为 #{k^r}，不能改成 #{k\cdot 1}。多对象不变性由原论文 §8.1、重构由定理 8.11 给出。最后对恢复的 #{\mathscr A} 使用本收缩情形的 Koszul 对偶识别 #{A_{\mathrm{con}}^{\mathrm{der}}\simeq\operatorname{RHom}_{\mathscr A}(k^r,k^r)}，恢复[导出收缩代数](01BM)。}
+\p{当 #{r=1} 时，这正是 #{\mathscr A\simeq\mathcal N_{\mathscr B}}，可用[单单位版本的不变性](01BI)。当 #{r>1} 时则须保留每个 #{P_i} 的单位：重构的极小模型的零次部分为 #{K=k^r}，不能改成 #{k\cdot 1}。多对象不变性由原论文 §8.1、重构由定理 8.11 给出。}
+\p{取右 #{\Lambda} 模分解的 DG 模型 #{C=\operatorname{Hom}_\Lambda^\bullet(\mathscr P,\mathscr P)}。它的上同调为 #{\operatorname{Ext}_\Lambda^\bullet(S,S)}，负次为零，零次为 #{K}；各 #{e_i} 是投影到 #{\mathscr P_i} 的闭幂等元。按[严格增广模型构造](0F15)，取 DG 子模型 #{U\to C}，再作[多对象 Koszul 对偶](0F14) #{C^!=\operatorname{REnd}_U(K)}，其中 #{K} 是经增广得到的右 #{U} 模，乘法采用复合。原论文 §8.3 在保留各 #{e_i} 的严格含幺极小模型上取 #{K} 上的 Koszul 对偶；上述 #{U} 给出同一带标记对象的 DG 实现。}
+\p{本收缩情形的识别 #{A_{\mathrm{con}}^{\mathrm{der}}\simeq C^!} 恢复[导出收缩代数](01BM)。这一几何识别引用 [Karmazyn–Lepri–Wemyss，定理 8.13 的证明](https://arxiv.org/html/2411.17359v2#S8.SS3)及其所用 [Hua–Keller，§2.2，定理 2.2](https://webusers.imj-prg.fr/~bernhard.keller/publ/HuaKellerClusterCategoriesAndRationalCurvesRev1.pdf)。}
 \p{从该导出对象再恢复 [Tjurina 代数](01BO)，并用 [Mather–Yau 判据](01BP)恢复同一维数的孤立超曲面底环。导出对象到 Tjurina 代数的恢复使用 [Wemyss，§2.3.1](01A3) 引用的重构定理。}
 \p{特殊几何识别、tilting 对应及 Koszul 对偶识别均作为外部结果使用，出处见 [Wemyss，§2.3.2](01A3)及上述原论文。多曲线所需的范畴升级不能从单单位代数的[次数封闭计算](01BJ)中省略。}

@@ -1,0 +1,12 @@
+\title{有限域曲线闭点处的局部域}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Stacks Project，曲线的局部环，引理 33.43.8](https://stacks.math.columbia.edu/tag/0A22)；[完备化保持离散赋值环，引理 15.44.5](https://stacks.math.columbia.edu/tag/07NU)}
+
+\p{设 #{X/\mathbb F_q} 为[光滑射影几何整曲线](0C01)，#{x} 为其[闭点](0BJ1)。[结构层的茎](012V) #{A=\mathcal O_{X,x}} 是离散赋值环；这一性质由曲线的光滑性及所引局部环定理给出。记其极大理想为 #{\mathfrak m_x}。先作[理想进完备化](01A4)，再取[分式域](00CZ)，定义}
+##{\mathcal O_x=\widehat A=\varprojlim_{r\geq 1}A/\mathfrak m_x^r,\qquad F_x=\operatorname{Frac}(\mathcal O_x).}
+\p{完备化定理保证 #{\mathcal O_x} 是[完备离散赋值环](01AN)，其剩余域仍为 #{\kappa(x)}。取极大理想的生成元 #{\varpi}，每个非零 #{a\in F_x} 唯一写为 #{a=u\varpi^m}，其中 #{u\in\mathcal O_x^\times}、#{m\in\mathbb Z}。置 #{v_x(a)=m}，并取绝对值}
+##{|a|_x=q_x^{-v_x(a)},\qquad q_x=|\kappa(x)|,\qquad |0|_x=0.}
+\p{每个商环 #{\mathcal O_x/(\varpi^r)} 都是有限集，且 #{\mathcal O_x} 是这些有限离散加法群的[逆极限](0F0G)，所以它是紧开单位球。#{F_x} 因而成为[非阿基米德局部域](0F52)。这里 #{\mathcal O_x^\times} 是单位球中的可逆元，即赋值为零的元素。}
+\p{例如射影直线上坐标 #{t=0} 处，#{A=\mathbb F_q[t]_{(t)}} 是在[素理想](00CV) #{(t)} 处的[局部化](012Q)，其完备化为[形式幂级数环](0AL0) #{\mathbb F_q\lbrack\lbrack t\rbrack\rbrack}，而 #{F_x=\mathbb F_q((t))} 为[形式 Laurent 级数域](00SN)。}

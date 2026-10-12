@@ -1,0 +1,12 @@
+\title{非交换环的 Jacobson 根基}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[MIT 18.706，Lecture 3，Definition 3.20 与 Lemma 3.21](https://ocw.mit.edu/courses/18-706-noncommutative-algebra-spring-2023/mit18_706_s23_lec03.pdf)}
+
+\p{设 #{R} 为[含幺结合环](0120)，不要求交换。把 #{R} 以左乘作用看作[左模](0136)，称为左正则模；其[子模](0125)称左理想。极大左理想是极大的真左理想，等价地，其[商模](012R) #{R/L} 是[单模](0126)。#{R} 的 Jacobson 根基定义为}
+##{J(R)=\bigcap_{L\text{ 为极大左理想}}L.}
+\p{零环没有极大左理想，此时空交约定为 #{R=0}。对左 #{R} 模 #{S}，记 #{\operatorname{Ann}_R(S)=\{a\in R:as=0\text{ 对所有 }s\in S\}}。同一定义也可写为}
+##{J(R)=\{a\in R:aS=0\text{ 对每个单左 }R\text{ 模 }S\}.}
+\p{这两种刻画等价：若 #{S} 为单模且 #{s\ne 0}，则[模同态](0121) #{R\to S,\ a\mapsto as} 满射，其核为极大左理想。因此 #{J(R)} 消去每个 #{s}。反之，若 #{a} 消去所有单左模，则对每个极大左理想 #{L}，在 #{R/L} 中有 #{a(1+L)=0}，故 #{a\in L}。}
+\p{每个 #{\operatorname{Ann}_R(S)} 都是双边理想：它是加法子群，且 #{(ra)s=r(as)=0}、#{(ar)s=a(rs)=0}。因此 #{J(R)} 也是双边理想。交换时它退化为[交换环的 Jacobson 根基](01QC)；一般环中不能把极大左理想误换成极大双边理想。有限维代数中根基的幂零性见[根基与半单商定理](0F13)。}

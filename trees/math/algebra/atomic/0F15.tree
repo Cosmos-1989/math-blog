@@ -1,0 +1,24 @@
+\title{非负上同调 DG 代数的严格增广模型}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Keller，增广模型背景，§3.5](https://webusers.imj-prg.fr/~bernhard.keller/publ/ioan.pdf)}
+
+\p{设 #{k} 为[域](00D0)，#{C} 为一个 [DG 代数](019A)。给定闭的零次元素 #{e_1,\ldots,e_r}，满足 #{e_ie_j=\delta_{ij}e_i} 及 #{\sum_i e_i=1}，置 #{K=\bigoplus_i ke_i\cong k^r}。假设[上同调](012B)满足 #{H^q(C)=0}（#{q<0}），且包含诱导的 #{K\to H^0(C)} 是同构。下面构造 DG 子代数 #{U\subseteq C}，使包含是[拟同构](01BD)，且 #{U} 带有严格增广 #{\varepsilon:U\to K}，即 DG 代数同态满足 #{\varepsilon|_K=\mathrm{id}_K}。}
+
+\p{因为 #{d(e_i)=0}，每个 #{e_jC^1e_i} 都包含[线性子空间](00D7) #{e_jd(C^0)e_i}。逐分量扩充它的[基](00GL)，选取补空间 #{W_{ji}}，并置 #{W=\bigoplus_{i,j}W_{ji}}。于是}
+##{C^1=d(C^0)\oplus W,\qquad W=\bigoplus_{i,j}e_jWe_i.}
+\p{取下列分次子空间，乘法和微分从 #{C} 限制：}
+##{U^q=\begin{cases}
+0,&q<0,\\
+K,&q=0,\\
+W,&q=1,\\
+C^q,&q\geq 2.
+\end{cases}}
+
+\p{\strong{证明。}#{K} 是子代数且微分为零；#{W} 对左右 #{K} 作用封闭；两个正次元素的乘积落在至少二次。因此 #{U} 对乘法和微分封闭，并含有 #{C} 的单位。把正次部分送到零、在 #{K} 上取恒等的投影 #{\varepsilon:U\to K} 保持乘法与微分，给出所需增广。}
+\p{逐次核对包含诱导的上同调映射。负次两边的上同调均为零。零次的映射是已假设的同构 #{K\to H^0(C)}。一次由 #{d^2=0} 得}
+##{\ker(d:C^1\to C^2)=d(C^0)\oplus\bigl(W\cap\ker d\bigr),}
+\p{所以 #{H^1(U)=W\cap\ker d\cong H^1(C)}。二次的闭链不变，而 #{d(W)=d(C^1)}，故边界也不变。三次及以上的相关分次空间和微分全部相同。因此 #{U\to C} 是 DG 拟同构。}
+
+\p{这给出了[多对象 Koszul 对偶](0F14)的一种计算模型。补空间的选择只用于构造模型，应用时保留每个已指定的对象幂等元。}

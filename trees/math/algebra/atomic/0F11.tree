@@ -1,0 +1,11 @@
+\title{线性阿贝尔范畴中的一阶扩张}
+\date{2026-10-12}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Stacks，Definitions 12.6.1--12.6.2、Lemma 12.6.3](https://stacks.math.columbia.edu/tag/010I)}
+
+\p{设 #{\mathcal A} 为[域](00D0) #{k} 上的[线性阿贝尔范畴](014V)，#{M,N} 为其中对象。#{M} 被 #{N} 的扩张是一列态射}
+##{0\longrightarrow N\xrightarrow{j}E\xrightarrow{q}M\longrightarrow 0,}
+\p{其中 #{j} 是 #{q} 的[核](0AI3)，#{q} 是 #{j} 的余核；这就是此处短正合的含义。两个扩张等价，指存在[同构](0A0E) #{v:E\to E'}，满足 #{vj=j'} 与 #{q'v=q}，两端对象上的映射必须是恒等态射。扩张等价类组成的集合记为 #{\operatorname{Ext}^1_{\mathcal A}(M,N)}。这里固定一个集合论宇宙，并要求这些等价类形成集合；有限维表示范畴满足这一大小条件。}
+\p{其加法称为 Baer 和，可直接用[双积](0AI1)、核与余核构造。对两个扩张 #{(E_a,j_a,q_a)}，先取 #{D=\ker((q_1,-q_2):E_1\oplus E_2\to M)}，再取映射 #{(j_1,-j_2):N\to D} 的余核 #{B}。映射 #{(j_1,0):N\to D} 及 #{D\to M} 的公共分量诱导扩张 #{0\to N\to B\to M\to 0}，其类定义为两类之和。这给出[阿贝尔群](00G3)结构；良定义性和群律采用所引 Lemma 12.6.3。零类是标准双积扩张 #{0\to N\to N\oplus M\to M\to 0}。}
+\p{扩张属于零类，当且仅当存在 #{s:M\to E} 使 #{qs=1_M}：此时 #{(j,s):N\oplus M\to E} 给出与两端恒等映射相容的同构。这个定义不要求范畴有足够投射对象。对环上模，它与投射分解定义的一阶 Ext 一致，见[模扩张的分类定理](01S6)；对有限维[有理表示](012N)，须在有理表示范畴内取扩张及其等价，不能仅保留抽象点群上的作用。}

@@ -1,0 +1,14 @@
+\title{Robertson 方差型不确定关系}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Robertson, The Uncertainty Principle](https://doi.org/10.1103/PhysRev.34.163)，Physical Review 34 (1929), 163至164页；[原文扫描](https://unicamp.br/~chibeni/textosdidaticos/robertson-1929.pdf)}
+
+\p{设 #{H} 是复[Hilbert 空间](00MQ)，#{A,B:H\to H} 为[有界线性算子](00M4)，且均[自伴](00MU)。对单位向量 #{\psi}，定义均值与标准差}
+##{a=\langle\psi,A\psi\rangle,\quad b=\langle\psi,B\psi\rangle,\qquad \sigma_\psi(A)=\|(A-aI)\psi\|,\quad\sigma_\psi(B)=\|(B-bI)\psi\|,}
+\p{其中 #{I} 是恒等算子；自伴性保证 #{a,b\in\mathbb R}。标准差的平方称为方差，例如 #{\sigma_\psi(A)^2=\langle\psi,A^2\psi\rangle -a^2}。令交换子 #{[A,B]=AB-BA}，则}
+##{\sigma_\psi(A)\sigma_\psi(B)\ge\frac 12\left|\langle\psi,[A,B]\psi\rangle\right|.}
+\p{\strong{证明。}置 #{x=(A-aI)\psi}、#{y=(B-bI)\psi}。在第二变量线性的内积约定下，自伴性给出}
+##{\langle\psi,[A,B]\psi\rangle=\langle x,y\rangle -\langle y,x\rangle=2i\operatorname{Im}\langle x,y\rangle.}
+\p{由 [Schwarz 不等式](004S)，#{\|x\|\|y\|\ge|\langle x,y\rangle|\ge|\operatorname{Im}\langle x,y\rangle|}，得到所述不等式。}
+\p{在量子模型中，这些方差描述固定[纯态](00JZ)下可观测量的统计离散度，不是测量误差与测量扰动的定义。上述版本限定于有界算子；位置和动量等无界算子的版本必须另行检查共同定义域及相关乘积的定义域。此处结论来自内积估计，不从命题格的非分配性推出。}

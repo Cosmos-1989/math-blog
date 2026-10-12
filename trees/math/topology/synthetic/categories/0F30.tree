@@ -1,0 +1,13 @@
+\title{单纯空间的闩锁对象}
+\date{2026-10-12}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Riehl--Verity, The Theory and Practice of Reedy Categories](https://math.jhu.edu/~eriehl/reedy.pdf)，观察3.23及例3.24}
+
+\p{设 #{C:\Delta^{\mathrm{op}}\to\mathbf{sSet}} 为[单纯空间](0600)。固定外次数 #{n}，定义索引[范畴](00I0) #{D_n}：对象是[单纯范畴](01FX)中的保序满射 #{\sigma:[n]\twoheadrightarrow[k]}，其中 #{k<n}；从 #{\sigma:[n]\twoheadrightarrow[k]} 到 #{\tau:[n]\twoheadrightarrow[l]} 的态射是满足 #{\sigma=\theta\circ\tau} 的保序满射 #{\theta:[l]\twoheadrightarrow[k]}。恒等与复合由这些保序映射给出。}
+
+\p{把 #{\sigma} 送到 #{C_k}，把上述态射送到 #{C(\theta):C_k\to C_l}，得到 #{D_n} 上的[图表](00I1)。第 #{n} 个闩锁对象定义为它在单纯集合范畴中的[余极限](032B)：}
+##{L_nC=\operatorname*{colim}_{\sigma\in D_n}C_{k(\sigma)}.}
+\p{此余极限存在，可在内单纯方向上[逐维计算](0435)。退化映射 #{C(\sigma):C_k\to C_n} 构成[余锥](032A)，因为 #{C(\sigma)=C(\tau)C(\theta)}；于是诱导闩锁映射 #{L_nC\to C_n}。余极限把不同退化表达的重合部分识别起来，不是只把所有低维层作不交并。}
+
+\p{当 #{n=0} 时，#{D_0} 为空，所以 #{L_0C} 是单纯集合范畴的[初对象](0320)，即空单纯集合。当 #{n=1} 时，索引只有 #{[1]\twoheadrightarrow[0]}，故 #{L_1C=C_0}，闩锁映射就是 #{s_0:C_0\to C_1}。定义不要求 #{C} 满足 [Reedy 纤维性](0605)或 [Segal 条件](060K)。}

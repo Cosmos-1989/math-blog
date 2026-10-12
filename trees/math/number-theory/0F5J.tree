@@ -1,0 +1,10 @@
+\title{完美环的 Witt 向量环}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Brinon–Conrad，§4.2，Definition 4.2.1、Lemma 4.2.2、Proposition 4.2.3](https://math.stanford.edu/~conrad/papers/notes.pdf)}
+
+\p{设 #{p} 为素数，#{R} 是特征 #{p} 的[交换含幺环](00CS)，并且 #{x\mapsto x^p} 为自同构，即 #{R} 完美。其 #{p} 典型 Witt 向量环 #{W(R)} 可由以下性质刻画：它是交换含幺环，乘以 #{p} 的映射单射，对理想 #{(p)} [分离且完备](01A4)，即自然映射 #{W(R)\to\varprojlim_r W(R)/p^rW(R)} 为同构，并配有指定的同构 #{W(R)/pW(R)\simeq R}。这些条件确定带此同构的 #{W(R)} 到唯一同构；其存在性与唯一性是 Witt 环构造定理。}
+\p{存在唯一保持乘法的截面 #{[\ ]:R\to W(R)}，称 Teichmüller 提升。具体地，对每个 #{a\in R}，任选 #{a^{p^{-m}}} 在 #{W(R)} 中的提升 #{b_m}，有 #{[a]=\lim_m b_m^{p^m}}。它满足 #{[ab]=[a][b]}、#{[1]=1}、#{[0]=0}；一般不满足 #{[a+b]=[a]+[b]}。每个元素唯一写为收敛展开}
+##{w=\sum_{n\geq 0}p^n[a_n],\qquad a_n\in R.}
+\p{这些是 Teichmüller 展开的系数，不是直接逐坐标加乘的坐标。若 #{f:R\to S} 为完美环之间的[环同态](00G9)，唯一提升为 #{W(f)}，并满足 #{W(f)(\sum p^n[a_n])=\sum p^n[f(a_n)]}。特别地，Frobenius 提升 #{\varphi} 将 #{\sum p^n[a_n]} 送到 #{\sum p^n[a_n^p]}。例如 #{W(\mathbb F_p)\simeq\mathbb Z_p}；这里使用[有限域](00GF)与 [#{p} 进整数](00SM)。}

@@ -1,0 +1,17 @@
+\title{有限维代数的根基与半单商}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[MIT 18.706，Lecture 5，Proposition 5.6 与 Corollary 5.7](https://ocw.mit.edu/courses/18-706-noncommutative-algebra-spring-2023/mit18_706_s23_lec05.pdf)；[Lecture 6，Lemma 6.1](https://ocw.mit.edu/courses/18-706-noncommutative-algebra-spring-2023/mit18_706_s23_lec06.pdf)；[Etingof 等，Theorem 3.5.4](https://math.mit.edu/~etingof/reprbook.pdf)}
+\meta{proof-status}{引用定理，证明见所列文献。}
+
+\p{设 #{k} 为[域](00D0)，#{A} 为[有限维](00GM)含幺[结合 #{k} 代数](0123)，记其[Jacobson 根基](0F12)为 #{J}。称一个左模半单，指它是[单模](0126)的[直和](0127)；称代数半单，指其左正则模半单。则有以下结构定理。}
+\ol{
+  \li{存在 #{N\ge 1} 使 #{J^N=0}，其中 #{J^N} 是所有 #{N} 个根基元素之乘积的有限和组成的双边理想。这比每个根基元素各自幂零更强。}
+  \li{商代数 #{A/J} 半单。它的加法群是[商模](012R)，乘法为 #{(a+J)(b+J)=ab+J}，由 #{J} 的双边性保证良定义。}
+  \li{#{J=0} 当且仅当左正则模 #{A} 是单模的有限直和，也当且仅当每个有限维左 #{A} 模半单。}
+}
+\p{以上三项不要求 #{k} 代数闭。所引 MIT 讲义在左理想降链必稳定的环上证明根基幂零与半单商结论；有限维 #{A} 满足此条件，因为真降链中的维数严格下降。}
+\p{若进一步 #{k} 是[代数闭域](00SO)，则存在有限多个正整数 #{n_i} 使}
+##{A/J\cong\prod_{i=1}^{r}\operatorname{Mat}_{n_i}(k).}
+\p{这里每一因子为全部 #{n_i\times n_i} 矩阵组成的代数，乘法为矩阵乘法。该附加结论采用 Etingof 等的 Theorem 3.5.4；书中 §2.2 的基域约定是代数闭域。#{A=0} 时取空积，即零代数。}

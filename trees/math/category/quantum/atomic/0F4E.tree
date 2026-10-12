@@ -1,0 +1,12 @@
+\title{Hilbert 空间的张量积}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Preskill, Quantum Information, Chapter 2](https://www.preskill.caltech.edu/ph219/chap2_15.pdf)，第6至7页，式(2.13)}
+
+\p{设 #{H_A,H_B} 为复[Hilbert 空间](00MQ)。先取它们在 #{\mathbb C} 上的[代数张量积](0122) #{H_A\otimes_{\mathbb C}H_B}。采用第二变量线性的[内积](004M)约定，在简单张量上规定}
+##{\langle x_1\otimes y_1,x_2\otimes y_2\rangle=\langle x_1,x_2\rangle_A\langle y_1,y_2\rangle_B,}
+\p{再按第一变量共轭线性、第二变量线性延拓到有限和。这与张量积的双线性关系相容。为看出正定性，在一个张量的有限和表示所涉及的两个[有限维](00GM)[张成空间](00D8)中，逐次减去已有正交分量并归一化，可选取[标准正交](004P)的[基](00GL) #{e_i,f_j}。于是}
+##{u=\sum_{i,j}c_{ij}e_i\otimes f_j\quad\Longrightarrow\quad\langle u,u\rangle=\sum_{i,j}|c_{ij}|^2.}
+\p{其[内积诱导范数](00OC)给出距离 #{d(u,v)=\|u-v\|}。对此作[完备化](00EW)，所得空间称为\strong{Hilbert 张量积}，记作 #{H_A\widehat\otimes H_B}。向量运算和内积沿逼近列延拓；内积延拓的良定义性由 [Schwarz 不等式](004S)的估计保证。}
+\p{简单张量满足 #{\|x\otimes y\|=\|x\|\|y\|}。一般元素是简单张量有限和的极限，不必本身是一个简单张量。若两个因子都有限维，上式将范数写为有限坐标的 Euclidean 范数，逐坐标取极限即知代数张量积已经完备，无需再添点。将一个复合量子系统用这样的张量积分解描述，是额外的物理建模选择。}
