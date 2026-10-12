@@ -1,0 +1,16 @@
+\title{曲面切割的 Fukaya 限制图表}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Auroux](icm2026-auroux)，Theorem 3.3，引用 Heather Lee}
+
+\p{设 #{\Sigma} 为带适当辛结构的曲面，沿一族两两不交且非零伦的简单闭曲线 #{\gamma} 切为 #{\Sigma_1,\Sigma_2}，交界领口记为圆柱并 #{C}。采用报告中的曲面[包裹 Fukaya 范畴](0BLH)，边界片段取 Liouville 完备化，则限制函子形成[同伦拉回](064G)图表。闭曲面采用未包裹的版本。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathcal W(\Sigma) \arrow[r] \arrow[d] & \mathcal W(\Sigma_1) \arrow[d] \\
+\mathcal W(\Sigma_2) \arrow[r] & \mathcal W(C)
+\end{tikzcd}
+}}
+##{\mathcal W(\Sigma)\simeq\mathcal W(\Sigma_1)\mathop{\times}^{h}_{\mathcal W(C)}\mathcal W(\Sigma_2).}
+\p{其含义是，整体对象由两侧对象以及它们在圆柱区域上的相容同构组成，态射也保留对应的同伦相容性。这里函子从整体限制到局部，与[扇区下降](0BLQ)中的协变包含不同。}
+\p{非零伦假设不能删去。若一条切割曲线围成圆盘，填回圆盘会增加全纯圆盘的贡献，从而改变高阶运算；仅凭未修正的局部范畴与普通限制便不能恢复整体。这个现象与[相对 Fukaya 变形](0BLS)相连。}

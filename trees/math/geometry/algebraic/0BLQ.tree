@@ -1,0 +1,17 @@
+\title{包裹 Fukaya 范畴的扇区下降}
+\date{2026-10-12}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Auroux](icm2026-auroux)，Theorem 3.1，引用 Ganatra–Pardon–Shende}
+
+\p{设 Liouville 流形或扇区 #{M} 由两个 [Liouville 扇区](0BLP) #{M_1,M_2} 沿共同扇区边界粘合，边界模型为 #{\mathbb R\times F}，且粘合满足扇区覆盖条件。则[包裹 Fukaya 范畴](0BLH)的包含函子给出以下同伦推出，取完美闭包后也成立。}
+\figure{\tex{\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+\mathcal W(F) \arrow[r] \arrow[d] & \mathcal W(M_1) \arrow[d] \\
+\mathcal W(M_2) \arrow[r] & \mathcal W(M)
+\end{tikzcd}
+}}
+##{\operatorname{Perf}\mathcal W(M)\simeq
+\operatorname{Perf}\bigl(\mathcal W(M_1)\mathop{\sqcup}^{h}_{\mathcal W(F)}\mathcal W(M_2)\bigr).}
+\p{#{\sqcup^h} 表示[高阶余极限](0A95)，保留局部范畴及它们在交界上的同伦相容数据。箭头使用包含产生的协变函子。因 #{F} 比 #{M_i} 少二维，具体先将它稳定化为 #{T^*[0,1]\times F}，再嵌入两侧边界的邻域。}
+\p{这一结果把整体范畴化为局部代数的粘合。它适用于扇区覆盖；任意开覆盖并不自动满足所需的全纯曲线控制条件。}
