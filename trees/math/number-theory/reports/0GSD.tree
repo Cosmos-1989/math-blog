@@ -1,0 +1,11 @@
+\title{微分算子怎样消去零特征值的谱权重}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§3.3，定理 3.4 后的测试函数构造}
+
+\p{设 #{h:\mathbb R\to\mathbb R} 是光滑紧支撑函数，采用[Fourier 变换](0H4G)约定 #{\widehat h(r)=\int_{\mathbb R}h(t)e^{-irt}\,dt}，并令 #{D=\tfrac 14-\tfrac{d^2}{dt^2}}。对每个整数 #{m\geq 1} 及复数 #{r}，有}
+##{\widehat{D^mh}(r)=(1/4+r^2)^m\widehat h(r).}
+\p{\strong{证明。}紧支撑使两次分部积分的边界项都为零，故 #{\widehat{h''}(r)=-r^2\widehat h(r)}；复数 #{r} 时同样成立，因为积分仍在固定紧区间上。于是 #{\widehat{Dh}=(1/4+r^2)\widehat h}，再归纳 #{m} 即可。}
+\p{把[拉普拉斯特征值](0GS2)写为 #{\lambda=1/4+r^2} 后，常数特征函数的 #{\lambda=0} 对应 #{r=i/2}。所以上式将测试权重乘以 #{\lambda^m}，精确消去零特征值。对任意 #{\lambda\geq 0}，这个因子非负，因而原先在谱上非负的权重仍非负。}
+\p{相同算子还会消去指数多项式：若 #{p} 是次数小于 #{m} 的多项式，则 #{D^m(e^{t/2}p(t))=0}。确实，#{D(e^{t/2}p)=-e^{t/2}(p''+p')}，每次作用至少使多项式次数降低一。这个计算解释了在几何侧分部积分时，某些主项为何能精确抵消。}

@@ -1,0 +1,12 @@
+\title{Lie 群单位元附近的符号算子}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Nelson 的轨道法讲义](icm2026-nelson)，第 20 张幻灯片；Bounds for standard L-functions，§13}
+
+\p{设 #{\pi} 为 [Lie 群](0H48) #{G} 的[酉表示](0H4C)。选 Lie 代数的线性坐标，取零点附近开集 #{U}，使 #{\exp:U\to G} 是坐标图；固定紧支撑在 #{U} 内且在零点附近恒为一的光滑函数 #{\chi}。若 [Haar 测度](00T1)在此坐标下为 #{dg=J(X)\,dX}，则 #{J(X)>0}。}
+\p{取 #{h>0}。对对偶空间上的 [Schwartz 符号](0H4F) #{a}，采用[负号 Fourier 核](0H4G)，定义 #{\widehat a_h(X)=(2\pi h)^{-d}\int a(\xi)e^{-i\xi(X)/h}\,d\xi}，其中 #{d=\dim G}。令群函数 #{f_{a,h}} 在坐标图外为零，在图内满足}
+##{f_{a,h}(\exp X)=\chi(X)J(X)^{-1}\widehat a_h(X).}
+\p{于是[卷积算子](0H4E)给出 #{\operatorname{Op}_{h,\pi}(a)=\pi(f_{a,h})}，并且弱积分可写成 #{\int_U\chi(X)\widehat a_h(X)\pi(\exp X)\,dX}。#{J(X)^{-1}} 抵消了坐标换元的密度。}
+\p{符号可用加法群检查。在 #{G=\mathbb R^d} 的全局坐标中不加截断，取一维表示 #{\pi_\eta(X)=e^{i\eta(X)}}，Fourier 反演给出 #{\int\widehat a_h(X)e^{i\eta(X)}\,dX=a(h\eta)}。因此参数 #{\eta} 对应正向的频率点 #{h\eta}。}
+\p{此构造明确说明符号如何作用到表示。随 #{h\to 0} 的一致算子界、复合展开和轨道上的迹渐近还需要符号导数的统一控制，属于所引微局部算子理论的结论。群乘法通过指数坐标中的非线性项进入算子复合。}

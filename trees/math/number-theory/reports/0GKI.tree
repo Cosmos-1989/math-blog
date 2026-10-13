@@ -1,0 +1,12 @@
+\title{随机 p 进矩阵怎样产生随机群}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Sawin，定义 4.1、4.2 的矩阵描述](icm2026-sawin-probability)}
+
+\p{固定素数 #{p}、整数 #{n\geq 1,u\geq 0}。取 #{n\times(n+u)} 矩阵 #{A_n}，所有矩阵元在 [#{\mathbb Z_p}](00SM) 中相互独立，服从 [p 进 Haar 体积](00T2)在 #{\mathbb Z_p} 上的限制，其总质量为 #{1}。它给出[自由模](0137)间的映射 #{A_n:\mathbb Z_p^{n+u}\to\mathbb Z_p^n}。定义随机模}
+##{C_n=\operatorname{coker}A_n=\mathbb Z_p^n/A_n\mathbb Z_p^{n+u}.}
+\p{这里的[余核](0F4A)具体就是目标模除以列向量生成的子模。矩阵的每一列是一条线性关系；增加列数保留生成元数目，却加入更多关系，所以 #{u} 会影响余核的分布。均匀 p 进整数模 #{p^a} 后是 #{\mathbb Z/p^a\mathbb Z} 上的均匀变量，这是 Haar 不变性对有限商的直接结果。}
+\p{例如 #{n=1,u=0}，矩阵只有一个元素 #{a}。若 #{v_p(a)=j<\infty}，则 #{C_1\cong\mathbb Z/p^j\mathbb Z}。由于 #{\mathbb P(a\in p^j\mathbb Z_p)=p^{-j}}，}
+##{\mathbb P(C_1\cong\mathbb Z/p^j\mathbb Z)=(1-p^{-1})p^{-j},\qquad j\geq 0.}
+\p{#{j=0} 对应平凡群；#{a=0} 的概率为零，因为它不超过每个 #{p^{-j}}。单个矩阵的余核分布与 #{n\to\infty} 的极限分布要分别计算。}

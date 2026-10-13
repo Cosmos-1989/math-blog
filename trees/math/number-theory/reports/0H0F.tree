@@ -1,0 +1,14 @@
+\title{二次多项式幂的相邻系数递推}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，引理 5.3；补充逐项系数比较}
+
+\p{设 #{F=x^2+bx+c\in\mathbb Z[x]}，#{c\ne 0}，#{p} 为奇素数，#{h=(p-1)/2}，令 #{G=F^h=\sum_n u_nx^n}，并约定负指标的 #{u_n} 为零。令 #{V_n^p=(u_n,u_{n-1})}。在有理数上，对 #{n\geq 1} 有}
+##{V_n^p=\frac 1{2cn}V_{n-1}^p A_n^p,\qquad
+A_n^p=\begin{pmatrix}b(p+1-2n)&2cn\\2(p+1-n)&0\end{pmatrix}.}
+\p{\strong{证明。}用[形式求导的乘法规则](0AL1)对 #{G=F^h} 求导，得到 #{FG'=hF'G}。比较两边 #{x^{n-1}} 的系数，得}
+##{cn u_n+b(n-1)u_{n-1}+(n-2)u_{n-2}
+=hb u_{n-1}+2h u_{n-2}.}
+\p{把后两项移到右边，并用 #{2h=p-1}，得到 #{2cn u_n=b(p+1-2n)u_{n-1}+2(p+1-n)u_{n-2}}。这正是向量递推的第一坐标；第二坐标为 #{(2cn)u_{n-1}/(2cn)=u_{n-1}}，所以两个坐标都成立。}
+\p{初值为 #{V_0^p=(c^h,0)}。若要模 #{p} 使用除法，须另有 #{p\nmid cn}；在 #{p\nmid c} 且 #{1\leq n\leq h<p} 时此条件自动满足。}

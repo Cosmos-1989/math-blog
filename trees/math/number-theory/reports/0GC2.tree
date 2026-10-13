@@ -1,0 +1,12 @@
+\title{Weil 高度在乘法、取逆和加法下的估计}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，第 1、4 节所用高度性质](nt-cdt-icm2026)；由位定义推导}
+
+\p{设 #{a,b\ne 0} 为代数数，#{n\in\mathbb Z}，使用[绝对 Weil 高度](0GC1)。则}
+##{h(a^{-1})=h(a),\quad h(a^n)=|n|h(a),\quad h(ab)\leq h(a)+h(b),\quad h(a+b)\leq h(a)+h(b)+\log 2.}
+\p{\strong{取逆。}对实数 #{t} 有 #{\max(0,t)-\max(0,-t)=t}。取 #{t=\log|a|_v} 并对所有位求和，乘积公式使右侧为零，得到取逆不变性。正整数幂的公式逐位成立，负幂再用取逆不变性。}
+\p{\strong{乘法。}由 #{\max(1,|ab|_v)\leq\max(1,|a|_v)\max(1,|b|_v)}，取对数并求和即得。特别地，写 #{a=(ab)b^{-1}}，还得到 #{|h(ab)-h(a)|\leq h(b)}。}
+\p{\strong{加法。}有限位的超度量不等式不给出额外常数。无穷位满足 #{|a+b|_v\leq 2^{n_v/d}\max(|a|_v,|b|_v)}。因为 #{\sum_{v\mid\infty}n_v=d}，额外项之和恰为 #{\log 2}。#{a+b=0} 时结论也成立。}
+\p{因此若 #{\alpha^r=a} 且 #{r\geq 1}，便有 #{h(\alpha)=h(a)/r}；不同根只相差高度为零的单位根。}

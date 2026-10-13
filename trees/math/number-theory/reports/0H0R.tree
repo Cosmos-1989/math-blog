@@ -1,0 +1,10 @@
+\title{固定算术概形的批量 ζ 函数定理}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，定理 7.1、注 7.2；所引 Computing zeta functions of arithmetic schemes，定理 1.1(c)}
+
+\p{固定一个算术概形 #{X}，即带有[有限型](0131)结构态射 #{X\to\operatorname{Spec}\mathbb Z} 的概形。令 #{X_p=X\times_{\mathbb Z}\mathbb F_p} 为[纤维积](012X)定义的约化。Harvey 的定理断言：给定 #{N}，所有 #{p<N} 的[局部 ζ 函数](0H0K) #{Z_{X_p}(T)} 可在 #{O_X(N\log^3N)} 位操作内计算。这里的输出是整数系数多项式之比。}
+\p{这是引用定理，原始证明见 Computing zeta functions of arithmetic schemes，Proceedings of the London Mathematical Society 111 (2015)，1379–1401，定理 1.1(c)。其方法先用容斥将点数化为超曲面点数，再用该文定理 3.1 的迹公式把模素数幂的点数化为选定的多项式幂系数，最后用定理 4.1 的系数递推和累积余数树批量计算。}
+\p{固定 #{X} 是复杂度陈述的关键量词。报告注 7.2 对维数参数为 #{n}、次数为 #{d} 的单个超曲面给出 #{d^{O(n^2)}} 的几何依赖；用容斥处理多个方程还会带来对方程数的指数依赖。因此该结论没有给出在维数、方程数、系数高度全部变化时统一的多项式时间保证。}
+\p{算法中的迹公式可处理奇异超曲面；这与要求光滑曲线的[Weil 系数界](0H0L)适用条件不同。对于一般 #{X}，所需有理性和重构界也属于所引定理的证明输入。}

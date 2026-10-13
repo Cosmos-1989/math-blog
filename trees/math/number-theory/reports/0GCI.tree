@@ -1,0 +1,11 @@
+\title{Dirichlet 抽屉原理给出可整除的共同分母}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，Lemma 4.1](nt-cdt-icm2026)，此处取 Q=M^t 的整数参数特例}
+
+\p{设 #{t,M,N} 为正整数，#{n_1,\ldots,n_t\in\mathbb Z}，令 #{Q=M^t}。存在 #{1\leq q\leq Q} 和整数 #{p_1,\ldots,p_t}，使 #{r=Q!N/q} 为正整数，且}
+##{|n_i-rp_i|\leq r/M\qquad(1\leq i\leq t).}
+\p{\strong{放入有限个盒子。}令 #{\alpha_i=n_i/(Q!N)}。考虑 #{j=0,1,\ldots,Q} 的 #{Q+1} 个点，其坐标为 #{j\alpha_i} 的小数部分。把单位立方体每条边等分为 #{M} 个半开小区间，得到恰好 #{M^t=Q} 个盒子。两个点落在同一盒内。}
+\p{\strong{相减。}设对应整数为 #{j_1<j_2}，取 #{q=j_2-j_1}。逐坐标相减给出整数 #{p_i}，使 #{|q\alpha_i-p_i|<1/M}。因为 #{q\leq Q}，它整除 #{Q!}，所以 #{r=Q!N/q} 是整数。两边乘 #{r} 得 #{|n_i-rp_i|<r/M}，蕴含所述不等式。}
+\p{阶乘的作用是确保最终 #{r} 整数。估计同时适用于全部指数，故能在[有限生成乘法群](0GCJ)中制造一个统一的高次幂。}

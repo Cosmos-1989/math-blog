@@ -1,0 +1,12 @@
+\title{双曲曲面的拉普拉斯谱隙}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§1.1.1、§1.1.3}
+
+\p{设 #{X} 为连通[紧双曲曲面](0GS1)，在[平方可积函数空间](00Q6)上取正拉普拉斯算子的[自伴实现](0GSP)。局部写法是 #{\Delta=-y^2(\partial_x^2+\partial_y^2)}。紧流形的椭圆谱定理给出按重数排列的离散[特征值](0F0B)}
+##{0=\lambda_0(X)<\lambda_1(X)\leq\lambda_2(X)\leq\cdots,\qquad\lambda_j(X)\to\infty.}
+\p{#{\lambda_1(X)} 称为谱隙。常数函数构成零特征空间；要求函数均值为零，就是去掉这部分。其变分表达为}
+##{\lambda_1(X)=\inf_{\substack{f\in C^\infty(X),\ f\ne 0\\\int_Xf\,d\mu=0}}\frac{\int_X|\nabla f|^2\,d\mu}{\int_X|f|^2\,d\mu}.}
+\p{梯度由度量确定，满足 #{\langle\nabla f,v\rangle=df(v)}；分子叫 Dirichlet 能量，分式叫 Rayleigh 商。在双曲坐标中分子是 #{\int(|f_x|^2+|f_y|^2)\,dx\,dy}。上述变分等式使用椭圆谱定理：按正交特征函数展开后，零均值删除常数项，余下能量与平方范数之比至少为 #{\lambda_1}，取对应特征函数达等号。}
+\p{若 #{X} 有限面积但非紧，其[算子谱](0GSQ)中的连续部分从 #{1/4} 开始。此时以 #{b(X)} 记常数函数正交补上的谱底，即该限制算子谱的下确界；它等于 #{1/4} 与所有位于 #{(0,1/4)} 的离散特征值的最小值，没有这种特征值时取 #{1/4}。因此在非紧情形中，谱底无需由一个非零平方可积特征函数达到。连续谱描述是这里引用的谱理论结论。}

@@ -1,0 +1,12 @@
+\title{有限步长集合上的 Gowers 盒范数}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，定义 3.1}
+
+\p{设 #{N>0}，#{s\geq 1} 为整数，#{H_1,\ldots,H_s\subseteq\mathbb Z} 有限非空，#{f:\mathbb Z\to\mathbb C} 有限支撑。以 #{\mathbb E_{h\in H}} 表示 #{|H|^{-1}\sum_{h\in H}}，使用[双平移乘法差分](0GO8)，定义}
+##{\|f\|_{\square^s_{H_1,\ldots,H_s}(N)}^{2^s}=\frac 1N\sum_x\mathbb E_{h_i,h_i'\in H_i}\Delta_{(h_1,h_1'),\ldots,(h_s,h_s')}f(x).}
+\p{当所有 #{H_i=H} 时，记为 #{\|f\|_{U_H^s(N)}}。#{N} 规定归一化尺度，#{H_i} 规定可以检测的平移；两者是不同数据。若 #{H=[M]}，重写成单平移差分时，每个平移参数服从[三角权重](0GO9) #{\mu_M}，不能直接改成 #{[M]} 上的均匀平均。}
+\p{\strong{非负性。}固定前 #{s-1} 对平移，记对应的迭代差分为 #{g}。最后一对平移的平均满足}
+##{\sum_x\mathbb E_{h,h'\in H_s}g(x+h)\overline{g(x+h')}=\sum_x\left|\mathbb E_{h\in H_s}g(x+h)\right|^2\geq 0.}
+\p{再对先前的平移取平均，得到定义右边非负，因此取唯一非负 #{2^s} 次根有意义。#{s=1} 时，它就是局部平均的平方和开方；更高阶量把这种相关检测施加于反复差分后的函数。}

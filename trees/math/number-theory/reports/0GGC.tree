@@ -1,0 +1,11 @@
+\title{低阶矩如何推出绝大多数特征标的额外消去}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，定理 1.2 后的推论](icm2026-harper-probability)}
+
+\p{让素数 #{r\to\infty}，选择实数 #{1\leq x_r\leq r}，满足 #{x_r\to\infty}、#{x_r/r\to 0}；权重 #{h_r} 对每个 #{r} 满足[低阶矩定理](0GGA)的假设。令 #{S_r(\chi)=\sum_{n\leq x_r}h_r(n)\chi(n)}，#{L_r=\min\{x_r,r/x_r\}}。对每个固定 #{\varepsilon>0}，有}
+##{\frac{\#\{\chi\bmod r:|S_r(\chi)|>\varepsilon\sqrt{x_r}\}}{r-1}\longrightarrow 0.}
+\p{\strong{证明。}定理取 #{q=1/2}，得 #{\mathbb E^{\rm char}|S_r|\leq C\sqrt{x_r}(1+\frac 12\sqrt{\log\log(10L_r)})^{-1/2}}。[Markov 不等式](0A02)将左侧概率控制为此期望除以 #{\varepsilon\sqrt{x_r}}。两项增长条件恰好保证 #{L_r\to\infty}，故此上界趋零。}
+\p{还可给出随 #{r} 缩小的尺度。设 #{B_r=(\log\log(10L_r))^{1/4}}，取任意正数列 #{\omega_r\to\infty}，则 #{\mathbb P^{\rm char}(|S_r|>\omega_r\sqrt{x_r}/B_r)\ll 1 /\omega_r}。选择 #{\omega_r=o(B_r)} 就同时得到概率趋一和阈值为 #{o(\sqrt{x_r})}。}
+\p{因此“绝大多数”具有明确的族计数量词，也等价于归一化和的模[依概率趋零](00L9)。它不指定任意一条特征标序列的逐点行为。}

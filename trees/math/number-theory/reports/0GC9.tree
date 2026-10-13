@@ -1,0 +1,11 @@
+\title{代数幂级数为何是 holonomic 的}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，Proposition 3.1 的代数函数背景](nt-cdt-icm2026)；有限扩张中的微分计算}
+
+\p{设 #{K} 为特征零域，#{f\in K\lbrack\lbrack x\rbrack\rbrack} 在 #{K(x)} 上代数，即满足非零多项式方程 #{P(x,f)=0}。则 #{f} 是 [holonomic 幂级数](0GC8)。}
+\p{\strong{导数仍在同一域中。}取 #{f} 在 #{K(x)} 上的[最小多项式](0D04)，清除分母后记为 #{P(x,Y)}。特征零保证它关于 #{Y} 可分，所以 #{P_Y(x,f)\ne 0}。对恒等式求导得到 #{P_x(x,f)+P_Y(x,f)f'=0}，即}
+##{f'=-\frac{P_x(x,f)}{P_Y(x,f)}\in K(x,f).}
+\p{和、积、商的求导法则于是说明微分保持整个域 #{K(x,f)}。归纳可知所有 #{f^{(j)}} 都在该域中。}
+\p{\strong{有限维产生方程。}若 #{[K(x,f):K(x)]=d}，则 #{d+1} 个元素 #{f,f',\ldots,f^{(d)}} 在 #{K(x)} 上线性相关。清除有限个有理函数的分母，得到多项式系数线性微分方程，正是 holonomic 条件。}

@@ -1,0 +1,11 @@
+\title{临界线右侧 zeta 平移的随机 Euler 乘积极限}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3；引 Bagchi 1981](icm2026-sawin-probability)；取开条带内紧集的特例}
+
+\p{令 #{D=\{s\in\mathbb C:1/2<\operatorname{Re}s<1\}}，#{K\subset D} 为固定非空[紧集](00F3)。令 #{C(K)} 为复连续函数空间，赋予一致范数 #{\|g\|_K=\sup_{s\in K}|g(s)|}，这正是紧集上的[紧收敛拓扑](00MG)。黎曼 zeta 函数在 #{\operatorname{Re}s>1} 由[级数](0H41) #{\zeta(s)=\sum n^{-s}} 定义，在 #{D} 上取其[全纯](0A3G)延拓。}
+\p{[随机 Euler 乘积](0GK6)在 #{\operatorname{Re}s>1/2} 上存在几乎处处局部一致的全纯版本，记为 #{L_f}。Bagchi 的极限定理在上述设定下断言：对任意有界连续函数 #{\Phi:C(K)\to\mathbb R}，}
+##{\lim_{T\to\infty}\frac 1T\int_T^{2T}\Phi\bigl(s\mapsto\zeta(s+it)|_K\bigr)\,dt=\mathbb E\Phi(L_f|_K).}
+\p{这是函数空间中以有界连续测试函数刻画的弱收敛；它推广了实变量的[依分布收敛](00LA)。随机全纯版本的构造与极限交换作为外部定理引用，来源为 B. Bagchi 1981 年博士论文，Sawin 第 3 节据此陈述模型的有效范围。}
+\p{#{K} 固定且位于临界线右侧是实质限制。定理不允许 #{K} 随 #{T} 逼近 #{\operatorname{Re}s=1/2}。测试函数也必须有界；例如 #{g\mapsto|g(s_0)|^{2k}} 无界，其期望收敛需要额外的尾部控制。}

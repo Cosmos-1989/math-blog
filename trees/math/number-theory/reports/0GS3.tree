@@ -1,0 +1,13 @@
+\title{双曲平面的能量下确界为何是四分之一}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§1.1.1 的阈值；此处给出能量计算}
+
+\p{在[双曲上半平面](0C81)上，对非零光滑紧支撑函数 #{f} 定义[Rayleigh 商](0GS2)。则}
+##{\inf_{0\ne f\in C_c^\infty(\mathbb H)}\frac{\int_{\mathbb H}(|f_x|^2+|f_y|^2)\,dx\,dy}{\int_{\mathbb H}|f|^2\,dx\,dy/y^2}=\frac 14.}
+\p{\strong{下界。}置 #{t=\log y}，写 #{f(x,y)=\sqrt y\,u(x,t)}。变量替换给出分母 #{\int|u|^2\,dx\,dt}，分子则等于}
+##{\int_{\mathbb R^2}\left(e^{2t}|u_x|^2+|u_t+u/2|^2\right)\,dx\,dt=\frac 14\int|u|^2+\int\left(|u_t|^2+e^{2t}|u_x|^2\right).}
+\p{最后一个等号中，交叉项是 #{\operatorname{Re}\int u_t\overline u=\tfrac 12\int\partial_t|u|^2=0}，因为支撑紧。因此所有 Rayleigh 商至少为 #{1/4}。}
+\p{\strong{逼近下界。}取非零光滑函数 #{\chi,\eta} 支撑于 #{(-1,1)}，令 #{u_L(x,t)=\chi(x/R)\eta(t/L)}，其中 #{R=e^{2L}}。竖直导数项除以平方范数为 #{L^{-2}\|\eta'\|_2^2/\|\eta\|_2^2}。由于支撑中 #{|t|\leq L}，水平导数项之比至多 #{e^{2L}R^{-2}\|\chi'\|_2^2/\|\chi\|_2^2}。两者均趋于零，所对应的 #{f_L=\sqrt y\,u_L(x,\log y)} 是合法紧支撑测试函数，故下确界恰为 #{1/4}。}
+\p{这里的紧支撑指函数在某个紧集之外为零。这一计算识别了正拉普拉斯算子的能量阈值；通过其自伴实现的变分原理，它就是双曲平面的谱底。}

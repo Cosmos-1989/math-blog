@@ -1,0 +1,12 @@
+\title{Dirichlet 核的一阶平均远小于平方平均}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§2 的加性特征标例子](icm2026-harper-probability)}
+
+\p{设整数 #{N\geq 2}，#{\theta} 在 #{[0,1]} 上均匀分布，定义 #{D_N(\theta)=\sum_{n=1}^N e^{2\pi in\theta}}。则}
+##{\int_0^1|D_N(\theta)|^2\,d\theta=N,\qquad\int_0^1|D_N(\theta)|\,d\theta\leq 1+\log N.}
+\p{\strong{平方平均。}展开平方，并计算 #{\int_0^1e^{2\pi i(n-m)\theta}\,d\theta=1_{n=m}}，只有 #{N} 个对角项留下。}
+\p{\strong{一阶平均。}当 #{\theta\notin\mathbb Z} 时，几何级数给出 #{D_N=e^{2\pi i\theta}(1-e^{2\pi iN\theta})/(1-e^{2\pi i\theta})}。令 #{\|\theta\|} 为到最近整数的距离。由 #{|1-e^{2\pi i\theta}|=2|\sin\pi\theta|\geq 4\|\theta\|}，并用三角不等式，得到 #{|D_N|\leq\min\{N,(2\|\theta\|)^{-1}\}}。于是}
+##{\int_0^1|D_N|\leq 2\int_0^{1/(2N)}N\,d\theta+2\int_{1/(2N)}^{1/2}\frac{d\theta}{2\theta}=1+\log N.}
+\p{由 [Markov 不等式](0A02)，对每个 #{\varepsilon>0}，#{\mathbb P(|D_N|>\varepsilon\sqrt N)\leq(1+\log N)/(\varepsilon\sqrt N)\to 0}。所以平方平均为 #{N} 与典型大小小于 #{\sqrt N} 完全相容；此处的原因可直接追溯到几何级数的加性结构。}

@@ -1,0 +1,12 @@
+\title{固定小素数后随机乘法和的二阶矩}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4 的小素数条件化](icm2026-harper-probability)}
+
+\p{设 #{f} 为[Steinhaus 随机乘法函数](0GG2)，#{x\geq P\geq 2}。称整数 #{a} 为 #{P} 光滑，如果其素因子全不超过 #{P}，其中 #{1} 也算光滑；称 #{b} 为 #{P} 粗糙，如果其素因子全大于 #{P}。每个整数唯一写成 #{ab}，其中 #{a} 光滑、#{b} 粗糙。令}
+##{R=\sum_{\substack{ab\leq x\\a\ P\text{ 光滑}\\b>1,\ b\ P\text{ 粗糙}}}f(a)f(b),\qquad A_b=\sum_{\substack{a\leq x/b\\a\ P\text{ 光滑}}}f(a).}
+\p{固定全部 #{f(p)}（#{p\leq P}）后，只对 #{P<p\leq x} 的相位积分，将该平均记为 #{\mathbb E_{>P}}。则}
+##{\mathbb E_{>P}|R|^2=\sum_{\substack{1<b\leq x\\b\ P\text{ 粗糙}}}|A_b|^2.}
+\p{\strong{证明。}唯一分解直接来自把素因数分解按 #{p\leq P} 与 #{p>P} 分组。固定小素数后，各个 #{A_b} 是常数。展开 #{|\sum_b f(b)A_b|^2}，不同粗糙整数 #{b,c} 在某个大素数的指数不同；按[圆周正交性](0GG5)积分便有 #{\mathbb E_{>P}f(b)\overline{f(c)}=1_{b=c}}。交叉项全部消失，得到等式。}
+\p{再对小素数平均，由[Hölder 不等式](0A68)，#{0<q\leq 1} 时有 #{\mathbb E|R|^{2q}\leq\mathbb E_{\leq P}(\sum_b|A_b|^2)^q}。这里只有有限个圆周变量；各次积分可按[乘积测度](00QB)迭代，亦可直接逐个积分有限展开式。关键在于求 #{q} 次幂之前保留小素数导致的随机变化。}

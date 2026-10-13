@@ -1,0 +1,13 @@
+\title{配置平均的对偶函数怎样由换元产生}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§4，式 (4.3)；复值情形保留配对所需共轭}
+
+\p{设 #{P_1,\ldots,P_m} 是整数多项式，#{M,N\geq 1} 为整数，记 #{[N]=\{1,\ldots,N\}}。设 #{f_0,\ldots,f_m:\mathbb Z\to\mathbb C} 支撑于 #{[N]} 且绝对值至多一。记 #{\mathbb E_y=M^{-1}\sum_{y=1}^M}，并令}
+##{\Lambda(f_0,\ldots,f_m)=\frac 1N\sum_x\mathbb E_y f_0(x)\prod_{i=1}^mf_i(x+P_i(y)).}
+\p{定义对偶平均 #{D} 为}
+##{D(t)=\mathbb E_y f_0(t-P_m(y))\prod_{i=1}^{m-1}f_i(t+P_i(y)-P_m(y)).}
+\p{换元 #{t=x+P_m(y)}，便得 #{\Lambda=N^{-1}\sum_t f_m(t)D(t)}。由[Schwarz 不等式](004S)与 #{\sum_t|f_m(t)|^2\leq N}，若 #{|\Lambda|\geq\delta}，则 #{N^{-1}\sum_t|D(t)|^2\geq\delta^2}。把最后一个函数换为 #{\overline D}，还得到精确恒等式}
+##{\Lambda(f_0,\ldots,f_{m-1},\overline D)=\frac 1N\sum_t|D(t)|^2.}
+\p{若多项式固定、最大次数为 #{d\geq 1}，且 #{M=\lfloor N^{1/d}\rfloor}，则 #{D} 支撑在长度 #{O_P(N)} 的区间并且 #{|D|\leq 1}。这个支持区间一般大于 #{[N]}，重新使用区间型估计时须相应扩大归一化尺度。对偶函数保留了原配置的代数关系，因此可以承受额外的降阶估计。}

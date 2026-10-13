@@ -1,0 +1,12 @@
+\title{Cramér 计数的期望方差与弱大数律}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§2](icm2026-sawin-probability)；计数集中的初等证明}
+
+\p{在 [Cramér 模型](0GK1)中，令 #{C_N=\sum_{n=2}^N X_n}、#{m_N=1+\sum_{n=3}^N1/\log n}。则}
+##{\mathbb EC_N=m_N,\qquad\operatorname{Var}(C_N)=\sum_{n=3}^N\frac 1{\log n}\left(1-\frac 1{\log n}\right)\leq m_N.}
+\p{\strong{证明。}[期望的线性性](00L1)给第一式。独立性使不同坐标的协方差为零；代入 [Bernoulli 方差](00L4)与[和的方差公式](00L2)，得到第二式。对非负变量 #{(C_N-m_N)^2} 用 [Markov 不等式](0A02)，对任意 #{\varepsilon>0} 得}
+##{\mathbb P(|C_N-m_N|>\varepsilon m_N)\leq\frac 1{\varepsilon^2m_N}\longrightarrow 0.}
+\p{最后的极限由 #{m_N\geq(N-2)/\log N\to\infty} 得到。实际上 #{m_N\sim N/\log N}：固定 #{0<\delta<1}，#{n\leq N^{1-\delta}} 的项总和为 #{O(N^{1-\delta})}；其余各项介于 #{1/\log N} 与 #{1/((1-\delta)\log N)}。除以 #{N/\log N} 后令 #{N\to\infty}，再令 #{\delta\downarrow 0}，上下界同趋 #{1}。}
+\p{所以 #{C_N/(N/\log N)} [依概率趋于 #{1}](00L9)。这是随机集合计数的结论；素数计数的对应渐近式需素数定理。}

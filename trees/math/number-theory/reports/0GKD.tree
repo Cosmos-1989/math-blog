@@ -1,0 +1,13 @@
+\title{有限域随机 Euler 乘积的对数系数}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Sawin，精化模型论文 §1，式 (1)](sawin-refined-model-probability)}
+
+\p{设 #{q} 为素数幂，#{\mathbb F_q} 为[有限域](00GF)。对[多项式环](0ALH) #{\mathbb F_q[u]} 的每个首一不可约多项式 #{\pi}，取相互独立的均匀圆周相位 #{\xi(\pi)}，如同[整数的 Steinhaus 构造](0GG2)。首一指最高次项系数为 #{1}，不可约指不能分解成两个正次数多项式之积。令 #{z} 为形式变量，定义}
+##{L_\xi(z)=\prod_{\pi\text{ 首一不可约}}(1-\xi(\pi)z^{\deg\pi})^{-1},\qquad\log L_\xi(z)=\sum_{n\geq 1}X_nz^n.}
+\p{这是[形式幂级数](0AL0)的逐系数定义：每个固定次数只涉及有限个次数不超过它的首一不可约多项式，因此无须先讨论解析收敛。展开 #{-\log(1-w)=\sum_{a\geq 1}w^a/a}，比较 #{z^n} 的系数，得到}
+##{X_n=\sum_{d\mid n}\frac dn\sum_{\substack{\pi\text{ 首一不可约}\\\deg\pi=d}}\xi(\pi)^{n/d}.}
+\p{令 #{I_q(d)} 为次数 #{d} 的首一不可约多项式的个数。[圆周正交性](0GG5)直接给出 #{\mathbb EX_n=0} 以及}
+##{\mathbb E X_n\overline{X_m}=1_{n=m}\sum_{d\mid n}\frac{d^2}{n^2}I_q(d).}
+\p{不同不可约多项式的项由独立性消失；同一个 #{\pi} 的两个幂只有在 #{n/d=m/d} 时才留下。这证明各个对数系数两两正交，但不证明它们独立。例如 #{X_2} 与 #{X_1} 都含一次不可约多项式的相位。}

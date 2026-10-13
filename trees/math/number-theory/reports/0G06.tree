@@ -1,0 +1,10 @@
+\title{奇素数处局部可解性递归为何终止}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll](icm2026-stoll-rational-points)，算法 3.4–3.5}
+
+\p{设 #{p} 为奇素数，#{f\in\mathbb Z_p[x]} 在 #{\mathbb Q_p[x]} 中无重根。要判断 #{y^2=f(x)} 是否有 #{x,y\in\mathbb Z_p} 的解，逐个检查 #{a\in\mathbb F_p}。若 #{\bar f(a)} 是非零平方，或 #{\bar f(a)=0,\bar f'(a)\ne 0}，则存在光滑剩余点，[Hensel 引理](0C10)给出解。非平方值排除该剩余类。}
+\p{只剩 #{\bar f(a)=\bar f'(a)=0}。取整数代表仍记 #{a}，代入 #{x=a+pt}。Taylor 展开说明 #{f(a+pt)\equiv f(a)\pmod {p^2}}。若 #{p^2\nmid f(a)}，所有可能值的赋值为一，不能是平方；否则 #{h(t)=p^{-2}f(a+pt)\in\mathbb Z_p[t]}，原解必有 #{y=pz}，恰对应 #{z^2=h(t)} 的整解。于是对这些有限分支递归。}
+\p{\strong{终止。}每层只有有限个分支。若树无限，逐层选择有无限后继的分支，得到嵌套圆盘及 #{a=\sum_{j\geq 0}p^ja_j\in\mathbb Z_p}。深度 #{n} 的多项式为 #{p^{-2n}f(b_n+p^nt)}。继续递归要求其在 #{a_n} 的值被 #{p^2} 整除、导数被 #{p} 整除，故 #{f(b_{n+1})\in p^{2n+2}\mathbb Z_p}、#{f'(b_{n+1})\in p^{n+1}\mathbb Z_p}。令 #{n\to\infty} 得 #{f(a)=f'(a)=0}，矛盾。}
+\p{判断整个射影曲线还须检查[无穷远图](0G01)。次数 #{2g+2} 时令 #{F(X,Z)=Z^{2g+2}f(X/Z)}；非整 #{x} 对应 #{u=1/x\in p\mathbb Z_p}，可在 #{v^2=F(1,pt)} 上调用同一整点递归。两张图覆盖全部 #{\mathbb Q_p} 点。}

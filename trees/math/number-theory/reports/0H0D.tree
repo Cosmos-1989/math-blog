@@ -1,0 +1,11 @@
+\title{有限素域上的幂和}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，引理 5.2 所用的有限域恒等式}
+
+\p{设 #{p} 为奇素数。在[有限域](00GF) #{\mathbb F_p} 中，对整数 #{k\geq 1} 有}
+##{\sum_{x\in\mathbb F_p}x^k=
+\begin{cases}-1,&p-1\mid k,\\0,&p-1\nmid k.\end{cases}}
+\p{\strong{乘法置换。}对 #{t\ne 0}，映射 #{x\mapsto tx} 置换全体非零元。比较这些元素的乘积并约去非零乘积，得到 #{t^{p-1}=1}。若 #{p-1\mid k}，每个非零元的 #{k} 次幂都是一，幂和为 #{p-1=-1}。}
+\p{若 #{p-1\nmid k}，将 #{k} 对 #{p-1} 取余为 #{r\in\{1,\ldots,p-2\}}。非零元的 #{k} 次幂等于其 #{r} 次幂。次数 #{r} 的[多项式](0ALH) #{X^r-1} 至多有 #{r} 个根：每取一个根可提出一次因子，反复使用带余除法即得此界。因此存在 #{t\ne 0} 使 #{t^r\ne 1}。令 #{S=\sum_{x\ne 0}x^r}，乘法置换给 #{S=t^rS}，故 #{S=0}。}

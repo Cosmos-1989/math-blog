@@ -1,0 +1,11 @@
+\title{相空间符号的半经典量子化}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+
+\p{取 #{h>0}，令 #{a(x,\xi)} 为 #{\mathbb R^d\times\mathbb R^d} 上的 [Schwartz 函数](0H4F)，称为符号。它的左量子化作用在 #{u\in\mathcal S(\mathbb R^d)} 上，定义为}
+##{(\operatorname{Op}_h(a)u)(x)=(2\pi h)^{-d}\int_{\mathbb R^d}\int_{\mathbb R^d}e^{i(x-y)\cdot\xi /h}a(x,\xi)u(y)\,dy\,d\xi.}
+\p{本定义中的衰减条件使积分绝对收敛。#{x} 指定观察位置，#{\xi} 通过 [Fourier 振荡](0H4G)筛选频率；两者构成欧氏空间的[余切相空间](0F51)。在更一般符号类中，同一表达式须按振荡积分解释。}
+\p{对可分离符号 #{a(x,\xi)=b(x)c(\xi)}，令 #{\check c(z)=(2\pi)^{-d}\int e^{iz\cdot\xi}c(\xi)\,d\xi}，直接先积 #{\xi} 得}
+##{(\operatorname{Op}_h(a)u)(x)=b(x)\int_{\mathbb R^d}h^{-d}\check c((x-y)/h)u(y)\,dy.}
+\p{这个公式把位置截断与频率截断分别表示为乘法和卷积。[高斯波包](0H4I)提供同时观察这两种截断的具体向量。}

@@ -1,0 +1,11 @@
+\title{积分首项如何隔离剩余圆盘中的有理点}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll](icm2026-stoll-rational-points)，§5、引理 5.5 中的局部论证}
+
+\p{设 #{p>3}，#{Q} 是曲线一个有理点，在其[剩余圆盘](0E82)选参数 #{t}，满足 #{t(Q)=0} 且圆盘内 #{t\in p\mathbb Z_p}。设一个[消去微分](0C0F)在此写成 #{\omega=t^m(a_0+a_1t+\cdots)\,dt}，其中 #{m\in\{0,1,2\}}、#{a_i\in\mathbb Z_p}、#{a_0\in\mathbb Z_p^\times}。则该圆盘内只有 #{Q} 能是有理点。}
+\p{\strong{证明。}任一有理点 #{Q'} 必满足[局部积分](0C0E)}
+##{0=\int_Q^{Q'}\omega=\sum_{j\geq 0}\frac{a_j}{m+j+1}t(Q')^{m+j+1}.}
+\p{若 #{t=t(Q')\ne 0}，首项赋值为 #{(m+1)v_p(t)}，因为 #{p>m+1}。第 #{j\geq 1} 项的赋值至少为 #{(m+j+1)v_p(t)-v_p(m+j+1)}。它严格大于首项：只需证明 #{j>v_p(m+j+1)}。若后者至少 #{j}，就有 #{5^j\leq p^j\leq m+j+1\leq j+3}，与 #{5^j>j+3} 矛盾。}
+\p{在非 Archimedean 赋值中，唯一最小赋值项不能被其他项抵消，故积分非零。矛盾说明 #{t=0}，即 #{Q'=Q}。#{m=0} 时同样论证只需 #{p>2}；#{m=1,2} 时积分在 #{Q} 有重零，但重数并不会产生第二个零点。}

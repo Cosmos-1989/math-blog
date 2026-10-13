@@ -1,0 +1,10 @@
+\title{Liouville 逼近界的有效证明}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，§2.2 的 Liouville 界背景](nt-cdt-icm2026)；多项式计算}
+
+\p{设 #{\alpha\in\mathbb R} 为次数 #{d\geq 2} 的代数数。将其[最小多项式](0D04)清除分母，得到不可约的整数系数多项式 #{P(X)=\sum_{j=0}^d a_jX^j}。存在由 #{P} 有效计算的 #{c>0}，使每个 #{p\in\mathbb Z,q\in\mathbb Z_{>0}} 都满足 #{|\alpha -p /q|\geq c q^{-d}}。}
+\p{\strong{算术下界。}因为 #{P} 不可约且次数至少二，#{P(p/q)\ne 0}。乘以 #{q^d} 得到非零整数，故 #{|P(p/q)|\geq q^{-d}}。}
+\p{\strong{解析上界。}可从系数取得有理数 #{R>|\alpha|+1}，例如由多项式根界选取更大的整数。令 #{B=\sum_{j=1}^d j|a_j|R^{j-1}>0}。当 #{|p/q-\alpha|<1} 时，两点之间的区间包含于 #{[-R,R]}，[实中值定理](0A35)给出 #{|P(p/q)-P(\alpha)|\leq B|p/q-\alpha|}。}
+\p{因此近距离情形有 #{|p/q-\alpha|\geq B^{-1}q^{-d}}。距离至少一的情形则直接满足 #{|p/q-\alpha|\geq q^{-d}}。取 #{c=\min(1,B^{-1})} 即得结论。常数在每一步都可由有限运算取得，所以这是[有效指数](0GC6)。}

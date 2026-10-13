@@ -1,0 +1,11 @@
+\title{有序乘积树的区间不变量}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§3.1、§3.3；统一有序指标}
+
+\p{给定 #{n=2^k} 个整数或同阶[方阵](00GK) #{A_1,\ldots,A_n}，其中 #{k\geq 0} 为整数。把指标区间 #{\lbrack 1,n+1\rparen} 反复平分。节点 #{I=\lbrack l,r\rparen} 存储按指标递增顺序排列的乘积 #{P_I=A_l\cdots A_{r-1}}；叶节点 #{\lbrack j,j+1\rparen} 存储 #{A_j}。}
+\p{若 #{s=(l+r)/2}，两个子节点为 #{L=\lbrack l,s\rparen}、#{R=\lbrack s,r\rparen}，则自下而上的递推为}
+##{P_I=P_LP_R.}
+\p{\strong{区间不变量。}叶节点已经满足定义。假定两个子节点满足定义，把两个相邻区间的有序乘积相接，结合律给出 #{P_LP_R=A_l\cdots A_{r-1}}。按树高归纳，每个节点都正确。此论证只用结合律，不要求交换律；矩阵情形不可将 #{P_LP_R} 改为 #{P_RP_L}。}
+\p{一般长度可在右端补单位元至下一个二的幂，新增叶数小于原长度。另一棵乘积树可同时存储正整数模数 #{m_j}，其节点为 #{M_I=\prod_{j\in I}m_j}；这棵模数树的乘法始终是整数乘法。}

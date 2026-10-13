@@ -1,0 +1,10 @@
+\title{长度限制下特征标矩与随机乘法矩相同}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4，式 (4.1)](icm2026-harper-probability)}
+
+\p{设 #{r} 为素数，#{N,k\geq 1} 为整数且 #{N^k<r}，#{a_1,\ldots,a_N\in\mathbb C}，#{f} 为[Steinhaus 随机乘法函数](0GG2)。则}
+##{\frac 1{r-1}\sum_{\chi\bmod r}\left|\sum_{n\leq N}a_n\chi(n)\right|^{2k}=\mathbb E\left|\sum_{n\leq N}a_nf(n)\right|^{2k}.}
+\p{\strong{证明。}展开左边，每一项的特征标部分形如 #{\chi(A)\overline{\chi(B)}}，其中 #{A=n_1\cdots n_k}、#{B=m_1\cdots m_k} 均小于 #{r}。[正交性](0GG7)将其平均变成 #{1_{A\equiv B\pmod r}}。由于 #{1\leq A,B<r}，这等于 #{1_{A=B}}，恰是[随机乘法矩公式](0GG5)中的指标。系数逐项相同，有限求和后即得结论。}
+\p{本证明也适用于任意有限线性组合的单项式 #{\chi(A)\overline{\chi(B)}}，只要每项都满足 #{A,B<r}。限制约束的是展开后整数乘积的大小。例如 #{A=r+1,B=1} 时，特征标平均为 #{1}，而随机平均为 #{0}。因此固定次数的匹配不能自动推出任意长和的分数阶矩匹配。}

@@ -1,0 +1,12 @@
+\title{莫比乌斯扭曲低阶矩的扩展范围猜想}
+\date{2026-10-13}
+\taxon{Conjecture}
+\author{author}
+\meta{source}{[Harper，猜想 1.3](icm2026-harper-probability)；仅写出 x 至少为 3 的范围}
+
+\p{设 #{\mu} 为[莫比乌斯函数](0GGI)。Harper 的猜想要求：对每个固定 #{A>0}，存在 #{C_A}，使充分大的素数 #{r}、#{3\leq x\leq r^A} 及 #{0\leq q\leq 1} 都满足}
+##{\frac 1{r-1}\sum_{\chi\bmod r}\left|\sum_{n\leq x}\mu(n)\chi(n)\right|^{2q}\leq C_A\left(\frac{x}{1+(1-q)\sqrt{\log\log x}}\right)^q.}
+\p{其连续版本要求对充分大的实数 #{T}、#{3\leq x\leq T^A} 有}
+##{\frac 1{2T}\int_{-T}^T\left|\sum_{n\leq x}\mu(n)n^{it}\right|^{2q}\,dt\leq C_A\left(\frac{x}{1+(1-q)\sqrt{\log\log x}}\right)^q.}
+\p{特征标按[全部模 #{r} 特征标](0GG6)平均；#{q=0} 时零次矩取 #{1}。范围允许 #{x} 超过 #{r} 或 #{T}，并把[无条件定理](0GGA)中的 #{\log\log(10\min\{x,r/x\})} 改为 #{\log\log x}。这两项加强都属于猜想内容。}
+\p{当固定 #{0<A<1} 时，无条件定理已给出相应结论：由 #{x\leq r^A} 得 #{r/x\geq x^{(1-A)/A}}，因此 #{\min\{x,r/x\}\geq x^{\min\{1,(1-A)/A\}}}。对数分母只相差依赖 #{A} 的可控量；有限的小 #{x} 可吸收到常数中。#{A\geq 1} 时这个比较失效，不能沿用同一推导。}

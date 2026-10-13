@@ -1,0 +1,12 @@
+\title{有限域点数的局部 ζ 函数}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§4}
+
+\p{设 #{X} 为[有限域](00GF) #{\mathbb F_q} 上的[有限型概形](0131)，记 #{N_r=\#X(\mathbb F_{q^r})} 为其扩域后的[有理点](0B0H)数。局部 ζ 函数定义为[形式幂级数](0AL0)}
+##{Z_X(T)=\exp\left(\sum_{r\geq 1}\frac{N_r}{r}T^r\right)\in\mathbb Q\lbrack\lbrack T\rbrack\rbrack.}
+\p{对常数项为零的级数 #{U}，这里 #{\exp U=\sum_{j\geq 0}U^j/j!}。每个固定次数只涉及有限项，因此定义不涉及解析收敛。用[形式求导](0AL1)得}
+##{T\frac{Z_X'(T)}{Z_X(T)}=\sum_{r\geq 1}N_rT^r.}
+\p{由于 #{Z_X(0)=1}，其倒数作为形式级数存在；这条恒等式说明所有扩域点数能从 #{Z_X} 恢复。比如仿射直线有 #{N_r=q^r}，于是 #{Z(T)=(1-qT)^{-1}}；射影直线另有一个无穷远点，故 #{N_r=q^r+1}，得到 #{Z(T)=((1-T)(1-qT))^{-1}}。}
+\p{对整数上给定的方程，可在各素数处约化并得到 #{Z_{X_p}(T)}。将这些局部函数代入 #{T=p^{-s}} 后形成整体 Euler 乘积，其形式展开给出 [Dirichlet 级数](0H41)的系数，是批量计算局部函数的一个动机。这里的形式展开不预先断言解析收敛。}

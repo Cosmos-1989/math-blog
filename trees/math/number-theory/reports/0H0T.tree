@@ -1,0 +1,10 @@
+\title{超椭圆曲线完整局部因子的批量计算}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，定理 6.4、§6.3；所引 Counting points on hyperelliptic curves in average polynomial time，定理 1}
+
+\p{固定[超椭圆曲线](0H0M) #{C/\mathbb Q}。Harvey 的批量点计数定理给出：所有允许的良约化素数 #{p<N} 的完整整数[局部多项式](0H0L) #{L_p(T)\in\mathbb Z[T]} 可在 #{O_C(N\log^3 N)} 位操作内求出。这是报告定理 6.4 在固定曲线时的陈述；其原始证明见 Annals of Mathematics 179 (2014)，783–803，定理 1。}
+\p{所引证明使用 Kedlaya 算法的上同调计算，并选择称为 reduction towards zero 的约化路径，使递推矩阵在所需素数幂精度下仍可共用。计算先给出 #{L_p(T)\bmod p^\lambda}，其中精度随亏格增长，再由 [Weil 系数界](0H0L)恢复整数系数。这部分上同调构造和精度控制属于引用定理。}
+\p{只求[Hasse–Witt 矩阵](0H0N)时，输出仅有模 #{p} 的信息。完整因子问题还须控制高次系数和[除法损失](0H0P)，所以不能直接将模 #{p} 算法的正确性证明用于整数多项式的恢复。}
+\p{报告 §6.3 还讨论把[形式素数参数](0H0Q)用于其他约化路径，并预计可改善亏格的幂次；该节将若干具体复杂度改善保留为待验证的设想。这里引用的定理是已经发表的第一种方法。}

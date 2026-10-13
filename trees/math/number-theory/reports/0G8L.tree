@@ -1,0 +1,9 @@
+\title{忠实模如何证明一个环满射为同构}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gee，第 5 节](nt-gee-icm2026)的环比较背景；初等模论推导}
+
+\p{设 #{q:R\twoheadrightarrow T} 为交换环满射，#{M} 为 #{T} 模，沿 #{q} 看作 #{R} 模。若 #{M} 忠实，即 #{\operatorname{Ann}_R(M)=\{r:rm=0\text{ 对所有 }m\in M\}=0}，则 #{q} 为同构。特别地，若 #{M} 为正秩[自由模](0137)，此条件成立。}
+\p{\strong{证明。}对 #{r\in\ker q} 和任意 #{m\in M}，有 #{rm=q(r)m=0}，故 #{\ker q\subseteq\operatorname{Ann}_R(M)=0}。满射又单射即为同构。若 #{M\cong R^d} 且 #{d\geq 1}，用第一个基向量 #{e_1} 检验 #{re_1=0} 即得 #{r=0}，所以它忠实。}
+\p{只知道 #{M} 作为 #{T} 模自由并不足够。例如 #{R=\mathbb Z_p\lbrack\lbrack x\rbrack\rbrack}，#{T=R/(x)}，#{M=T} 在 #{T} 上秩一自由，但 #{xM=0}，核 #{(x)} 非零。用于[变形环与 Hecke 商](0G8K)时，必须检查自由性或忠实性究竟是对哪一个环成立。}

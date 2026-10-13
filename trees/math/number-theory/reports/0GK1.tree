@@ -1,0 +1,10 @@
+\title{Cramér 模型怎样把素数密度随机化}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sawin，定义 2.1](icm2026-sawin-probability)}
+
+\p{对整数 #{n\geq 0}，令 #{X_n} 取值于 #{\{0,1\}}，令整个变量族[相互独立](00L3)，并规定}
+##{\mathbb P(X_n=1)=p_n=\begin{cases}0,&n=0,1,\\1,&n=2,\\1/\log n,&n\geq 3.\end{cases}}
+\p{这里 #{\log} 是[自然对数](0A45)，#{n\geq 3} 时 #{0<1/\log n<1}。各坐标是 [Bernoulli 变量](00L4)，[可数乘积测度](0A6B)保证这组分布有唯一的独立乘积实现。随机集合 #{S=\{n:X_n=1\}} 的分布称 Cramér 素数模型。}
+\p{例如对不同的 #{m,n\geq 3}，有 #{\mathbb P(m,n\in S)=1/(\log m\log n)}。这是模型内的概率等式；真正的素数集合是确定的，不能将它直接当作素数定理。选择 #{p_n} 的动机是匹配素数在大整数附近的平均密度。}

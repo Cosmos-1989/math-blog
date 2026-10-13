@@ -1,0 +1,10 @@
+\title{半单算子如何消去两步滤过的扩张障碍}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gee，§4.6，Theorems 4.8、4.10 的线性代数机制](nt-gee-icm2026)}
+
+\p{设 #{V} 为域 #{k} 上有限维[向量空间](00D3)，#{U\subset V}，#{T:V\to V} 满足 #{T(U)=0} 且在 #{V/U} 上诱导零算子。则 #{T} 诱导一个线性映射 #{\delta:V/U\to U}。若 #{T} 半单，即扩域后可对角化，则 #{\delta=0}。}
+\p{\strong{构造。}商上作用为零意味着 #{T(V)\subset U}；在 #{U} 上为零又使 #{T(v)} 只依赖 #{v+U}。因此可定义 #{\delta(v+U)=T(v)}，且 #{T^2(V)\subset T(U)=0}。}
+\p{\strong{消去。}每个[特征值](0F0B) #{\lambda} 满足 #{\lambda^2=0}，故均为零。若 #{T} 可对角化，它便是零矩阵，进而 #{\delta=0}。反过来，若 #{T=\left(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\right)}、#{U=ke_1}，两个分次上的作用均为零而 #{\delta\ne 0}。}
+\p{在 Gee 的经典性论证中，几何比较先把一个 Cousin 边界映射与 [Sen 算子](0G8C)诱导的映射识别到非零标量；Hodge–Tate 条件再提供半单性。上面的论证说明最后为何边界映射消失。几何识别本身是 Gee Theorem 4.8、原论文 Theorem 4.10.12 的内容。}

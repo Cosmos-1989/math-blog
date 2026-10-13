@@ -1,0 +1,11 @@
+\title{数域射影高度的归一化}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Yuan](icm2026-yuan-quantitativity)，§2.1.1}
+
+\p{设 #{K} 是[数域](0AI6)，#{M_K} 为其[位](0AI7)的集合。实、复位采用通常绝对值；有限位 #{v} 的剩余域大小为 #{q_v}，取 #{|a|_v=q_v^{-\operatorname{ord}_v(a)}}。令 #{\epsilon_v=2} 于复位，其余位为一。这些归一化满足乘积公式 #{\prod_v|a|_v^{\epsilon_v}=1}，#{a\in K^\times}。乘积公式是数域理论的引用定理。}
+\p{对射影点 #{P=[x_0:\cdots:x_n]\in\mathbb P^n(\overline{\mathbb Q})}，选择包含坐标的数域 #{F}，定义绝对对数高度}
+##{h(P)=\frac 1{[F:\mathbb Q]}\sum_{v\in M_F}\epsilon_v\log\max_i|x_i|_v.}
+\p{同时把坐标乘 #{a\ne 0}，右边增加 #{[F:\mathbb Q]^{-1}\sum_v\epsilon_v\log|a|_v=0}，故不依赖齐次坐标代表。若 #{F'/F} 为有限扩张，则每个位的局部扩张次数相加为 #{[F':F]}；有限位绝对值限制按相应局部次数变幂，复位由 #{\epsilon_v} 计权，故分子与分母同乘 #{[F':F]}。因此也不依赖定义域。}
+\p{对互素整数坐标，有限位的最大绝对值均为一，所以 #{h(P)=\log\max_i|x_i|}。这正是已有[有理射影高度](00WC) #{H(P)} 的对数。例如 #{h([2:3])=\log 3}。归一化因子使扩域后点的高度不变，随后与算术相交比较时要明确是否重新乘回 #{[K:\mathbb Q]}。}

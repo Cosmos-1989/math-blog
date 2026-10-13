@@ -1,0 +1,9 @@
+\title{Gamma 函数的积分与递推}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+
+\p{对 #{\operatorname{Re}s>0}，定义 #{\Gamma(s)=\int_0^\infty e^{-x}x^{s-1}\,dx}，其中 #{x^{s-1}=\exp((s-1)\log x)}。零点附近的收敛由 #{\operatorname{Re}s>0} 保证，无穷远处的收敛由指数衰减保证。}
+\p{在右半平面紧子集上，可用可积函数同时控制被积函数及其关于 #{s} 的各阶导数，所以该积分给出[全纯函数](0A3G)。分部积分得到}
+##{\Gamma(s+1)=s\Gamma(s),\qquad\Gamma(1)=1.}
+\p{这首先推出 #{\Gamma(m+1)=m!}。再用递推 #{\Gamma(s)=\Gamma(s+r)/(s(s+1)\cdots(s+r-1))}，可逐步将函数亚纯延拓到整个复平面；不同 #{r} 的表达式在共同定义域由递推相等。负整数与零处的[极点](0ALW)来自分母。自守 L 函数的无穷位因子使用归一化 #{\Gamma_{\mathbb R}(s)=\pi^{-s/2}\Gamma(s/2)}。}

@@ -1,0 +1,8 @@
+\title{有限群的平均算子投影到不变向量}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{H} 为有限群，#{\pi} 为它在 Hilbert 空间 #{V} 上的[酉表示](0H4C)。定义 #{P_H=|H|^{-1}\sum_{h\in H}\pi(h)}。则 #{P_H} 是到不变子空间 #{V^H=\{v:\pi(h)v=v\text{ 对所有 }h\in H\}} 的正交投影。}
+\p{\strong{证明。}左乘任一 #{k\in H} 置换求和项，所以 #{\pi(k)P_H=P_H}，得到 #{\operatorname{im}P_H\subset V^H}。对不变向量 #{v}，每项 #{\pi(h)v=v}，故 #{P_Hv=v}，从而 #{P_H^2=P_H}，且像等于 #{V^H}。又因 #{\pi(h)^*=\pi(h^{-1})}，逆元置换求和项给出 #{P_H^*=P_H}。自伴幂等算子是[正交投影](00MS)。}
+\p{因此 #{\|P_Hv\|^2=\langle v,P_Hv\rangle=|H|^{-1}\sum_h\langle v,\pi(h)v\rangle}。这一恒等式用矩阵系数的平均衡量向量在不变方向上的分量，是周期积分的有限模型。}

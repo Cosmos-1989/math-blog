@@ -1,0 +1,10 @@
+\title{Kurepa 猜想为何可归约到奇素数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§3.3；补充初等归约证明}
+
+\p{用[左阶乘](0H09) #{!n=\sum_{i=0}^{n-1}i!}。Kurepa 猜想断言对所有 #{n\geq 3} 有 #{n\nmid !n}。这个猜想等价于：对每个奇素数 #{p}，#{p\nmid !p}。}
+\p{\strong{证明。}全体整数的命题显然包含奇素数情形。反过来，假设奇素数情形成立。若 #{n} 有奇素因子 #{p}，则所有 #{i\geq p} 的 #{i!} 都被 #{p} 整除，故 #{!n\equiv!p\not\equiv 0\pmod p}，从而 #{n\nmid!n}。}
+\p{剩下 #{n=2^k\geq 4}。此时 #{!n\equiv 0!+1!+2!+3!=10\equiv 2\pmod 4}，因为 #{i!} 在 #{i\geq 4} 时均被四整除。#{4\mid n} 而 #{4\nmid!n}，仍有 #{n\nmid!n}。}
+\p{这证明了两个陈述的等价性。猜想本身在所引报告中仍属未解决问题；有限范围内没有找到奇素数反例，只能验证该有限范围。}

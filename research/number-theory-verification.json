@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-13",
+  "scope": "First integration of the ten remaining primary ICM2026 Number Theory report topics. Local build and checks only; not a certification of complete research proofs.",
+  "inventory": {
+    "primaryReportTopics": 12,
+    "newReportTopics": 10,
+    "newPages": 266,
+    "newOutlines": 10,
+    "newKnowledgeNotes": 244,
+    "newReferences": 12,
+    "numberTheoryTrackedPages": 336,
+    "sitePages": 3404,
+    "manifest": "research/icm2026-number-theory.json",
+    "sourceAndProofScope": "ICM2026_NUMBER_THEORY_SOURCE_AUDIT.md",
+    "sourceHashes": "The notes array in the number-theory manifest stores checked per-page SHA-256 values."
+  },
+  "build": {
+    "command": "opam exec -- forester build forest.toml",
+    "exitCode": 0,
+    "log": "/tmp/number-theory-build-final.log",
+    "preview": "http://localhost:8083/0063/index.xml"
+  },
+  "sourceChecks": [
+    {"command": "node scripts/test-note-prerequisites.mjs", "result": "pass", "regressionCases": 23},
+    {"command": "node scripts/test-note-editorial.mjs", "result": "pass"},
+    {"command": "node scripts/test-subject-navigation.mjs", "result": "pass", "regressionCases": 5},
+    {"command": "node scripts/check-note-prerequisites.mjs", "result": "pass", "requiredPages": 2182, "errors": 0, "termCandidates": 111, "targetCandidates": 74, "scope": "The current scanner consumes the October 12 decision register. Fifteen candidates in changed pages remain outside that historical register; their local-context decisions are listed below. Scanner counts are not a count of proved missing prerequisites."},
+    {"command": "node scripts/check-note-editorial.mjs --strict-format", "result": "pass", "errors": 0, "formatErrors": 0, "informationalCandidates": 1},
+    {"command": "node scripts/check-subject-navigation.mjs", "result": "pass", "subjectPages": 20},
+    {"command": "node scripts/check-topic-narratives.mjs", "result": "pass", "surveys": 42},
+    {"command": "node scripts/check-number-theory-notes.mjs", "result": "pass", "trackedNotes": 336, "matrixCases": 84, "finiteGroupCases": 4, "henselLifts": 3, "exponentialSumCases": 2869},
+    {"command": "git diff --check", "result": "pass"}
+  ],
+  "generatedChecks": {
+    "wholeSite": {
+      "command": "node scripts/check-site-notes.mjs --katex /private/tmp/forester-math-check/node_modules/katex",
+      "result": "pass",
+      "reachablePages": 3404,
+      "formulasChecked": 35990,
+      "diagrams": 46,
+      "errors": [],
+      "warnings": [],
+      "prerequisiteCycles": 0
+    },
+    "domain": {"command": "node scripts/check-site-domain.mjs", "result": "pass", "pageUris": 3404, "domain": "opetope.cc"},
+    "readingTheme": {"command": "node scripts/check-reading-ui.mjs", "result": "pass", "representativeXsltTransforms": 7},
+    "existingResearch": [
+      {"command": "node scripts/check-logic-notes.mjs --source-only", "result": "pass", "pages": 623},
+      {"command": "node scripts/check-algebra-notes.mjs --source-only", "result": "pass", "trackedPages": 714},
+      {"command": "node scripts/check-riehl-notes.mjs --source-only", "result": "pass", "mappedUnits": 955},
+      {"command": "node scripts/check-geometry-notes.mjs", "result": "pass", "reports": 15}
+    ]
+  },
+  "finiteComputationChecks": {
+    "test": "tests/number-theory-computation.test.mjs",
+    "result": "pass",
+    "ownedPages": 34,
+    "formulas": 686,
+    "randomizedMatrixCases": 300,
+    "wilsonAndLeftFactorialPrimeBound": 256,
+    "ellipticCurvePrimePairs": 924,
+    "ellipticMatrixAndScalarARTLeafPairs": 924,
+    "exactCoefficientRecurrenceIdentities": 20590,
+    "scope": "Numerical checks of explicit identities, not proofs of asymptotic complexity or research theorems."
+  },
+  "browserChecks": {
+    "test": "tests/number-theory-render.test.mjs",
+    "result": "pass",
+    "pages": ["0063", "0C00", "0C80", "0G00", "0G40", "0G80", "0GC0", "0GG0", "0GK0", "0GO0", "0GS0", "0H00", "0H40", "0H0J", "0H47", "0GC4", "0GS8"],
+    "viewportWidths": [1440, 390],
+    "pageViewportPairs": 34,
+    "formulaErrors": 0,
+    "horizontalOverflowCases": 0,
+    "pageErrors": [],
+    "httpErrors": [],
+    "visualInspection": ["0063 at 1440", "0G40 at 1440", "0H40 at 390", "0H0J at 1440", "0H0J at 390"],
+    "inspectedScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/number-theory-render-DMa7Co",
+    "knownCompatibilityIssue": "Chrome displays its XSLT deprecation notice above the existing XML-rendered site. Mathematical content and navigation render in the tested browser. Static HTML migration was not performed."
+  },
+  "independentMathematicalReview": [
+    {
+      "reviewer": "Arendt",
+      "scope": "Read-only review of the Nelson branch after its initial draft",
+      "resolved": [
+        "0H4K: negative Fourier phase matches positive pi(exp X); abelian multiplier check included",
+        "0H52: Whittaker construction restricted to the nonarchimedean setting in which the stated algebraic argument applies",
+        "0H47: n>=2, strict delta range, constant dependence and twist shift spelled out",
+        "0H4E: conjugation in the second-variable-linear Riesz convention clarified",
+        "0H51: invertibility of DF throughout the chosen ball derived explicitly"
+      ]
+    },
+    {
+      "reviewer": "Peirce",
+      "scope": "Read-only review of the Peluse and Monk-Naud branches",
+      "resolved": [
+        "0GO5 and 0GO7: integer q and N confirmed explicitly in final source",
+        "0GS8: formal commutation on compactly supported functions extended to the closed Laplacian domain using new notes 0GSM-0GSQ"
+      ],
+      "remainingExternalInput": "The essential self-adjointness theorem used in 0GSP is cited, not reproved."
+    }
+  ],
+  "remainingLexicalCandidates": [
+    {"ids": ["0BF1"], "term": "有限域", "decision": "The phrase lists examples of fields where the general definition applies. Finiteness is not a hypothesis or a proof input; the existing definition 00GF remains available."},
+    {"ids": ["0G43"], "term": "线丛", "decision": "The opening ample-line-bundle link 0BF1 leads to the underlying definition 0AL7. Retain the more specific link."},
+    {"ids": ["0G4A"], "term": "半范数", "decision": "Multiplicative nonarchimedean seminorms on algebras are specified locally; 00MD describes vector-space seminorms and is not the correct direct definition here."},
+    {"ids": ["0G4U"], "term": "Lebesgue 积分", "decision": "A terminology comparison, not a prerequisite of integrable adelic line bundles. The actual definition is a tensor quotient of two nef objects."},
+    {"ids": ["0GCG"], "term": "函数复合", "decision": "The composed function is explicitly displayed, with both inner and outer functions given. No hidden construction is required to decode the expression."},
+    {"ids": ["0GKB", "0GKE"], "term": "Haar 测度", "decision": "Both pages link 0GK9, which defines the normalized U(N) Haar model and links 00T1; retain that specific probability-model entry."},
+    {"ids": ["0GS0", "0GS8", "0GSA", "0GSB", "0GSC", "0GSD", "0GSH"], "term": "特征值", "decision": "The linked spectral definitions 0GS2 and 0GS8 lead to 0F0B and 0GSQ and specify the relevant Laplacian domain. A generic eigenvalue link would not supply additional missing assumptions."},
+    {"ids": ["0H40"], "term": "特征值", "decision": "The same outline links the exact matrix-spectrum condition 0H4P, which links 0F0B. These are narrative links rather than prerequisite edges of an outline."}
+  ],
+  "limitations": [
+    "All ten reports now have substantive linked surveys, but only the explicitly recorded branches and proofs are integrated.",
+    "Nelson's ICM2026 proceedings text remains unlocated; its topic is developed from identified author research text and an explicitly dated 2021 seminar, not an invented proceedings source.",
+    "Deep modularity, arithmetic intersection theory, random spectral gaps, full subconvexity and several algorithmic results retain cited proof inputs; per-report deferred arrays identify the unfinished branches.",
+    "Partial Banana Space access does not establish full terminology alignment.",
+    "No commit, push or production deployment was performed in this integration turn."
+  ]
+}

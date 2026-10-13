@@ -1,0 +1,12 @@
+\title{二次域类群的 Cohen–Lenstra 分布猜想}
+\date{2026-10-13}
+\taxon{Conjecture}
+\author{author}
+\meta{source}{[Sawin，§4 定义 4.1、4.2 后的分布预测](icm2026-sawin-probability)}
+
+\p{固定奇素数 #{p} 和有限阿贝尔 #{p} 群 #{G}。对无平方因子整数 #{d\ne 0,1}，令 #{K_d=\mathbb Q(\sqrt d)}，其域判别式为 #{D_d=d}（#{d\equiv 1\pmod 4}）或 #{D_d=4d}（#{d\equiv 2,3\pmod 4}）。令 #{\mathcal D_-(X)} 为 #{-X\leq D_d<0} 的这些判别式，#{\mathcal D_+(X)} 为 #{0<D_d\leq X} 的这些判别式，各不重复计数。}
+\p{对有限[理想类群](0GKG)，记 #{\operatorname{Cl}(K)[p^\infty]} 为被某个 #{p} 的幂杀死的元素所成的子群。猜想为}
+##{\lim_{X\to\infty}\frac{\#\{D_d\in\mathcal D_-(X):\operatorname{Cl}(K_d)[p^\infty]\cong G\}}{|\mathcal D_-(X)|}=\mu_{p,0}(G),}
+##{\lim_{X\to\infty}\frac{\#\{D_d\in\mathcal D_+(X):\operatorname{Cl}(K_d)[p^\infty]\cong G\}}{|\mathcal D_+(X)|}=\mu_{p,1}(G).}
+\p{右端是 [Cohen–Lenstra 权重](0GKH)。左端的随机选择是从相应有限判别式集合中均匀选一个数域；先固定 #{p,G}，再令 #{X\to\infty}。两个符号对应虚二次域与实二次域，不混合抽样。}
+\p{[随机矩阵余核的同一极限律](0GKK)是已证的模型内定理；将其用于这里的数域族是算术猜想。此表述排除 #{p=2}，也没有断言不同判别式的类群相互独立，后者会受到[反射原理](0GKN)的约束。}

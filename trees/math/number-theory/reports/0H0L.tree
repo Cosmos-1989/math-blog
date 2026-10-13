@@ -1,0 +1,14 @@
+\title{曲线局部多项式与 Weil 系数界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§4–6；曲线 Weil 定理的引用形式}
+
+\p{设 #{C/\mathbb F_q} 是[光滑射影几何整曲线](0C01)，[亏格](0C03)为 #{g}。曲线 Weil 定理断言其[局部 ζ 函数](0H0K)形如}
+##{Z_C(T)=\frac{L_C(T)}{(1-T)(1-qT)},\qquad
+L_C(T)=\prod_{i=1}^{2g}(1-\alpha_iT)\in\mathbb Z[T],\quad |\alpha_i|=\sqrt q.}
+\p{这是引用定理：报告 §4 指向 Hartshorne，Algebraic Geometry，附录 C；椭圆曲线情形另见 Silverman，The Arithmetic of Elliptic Curves，第 2 版，V.2.4。#{\alpha_i} 是倒根，即 #{L_C} 的根为 #{\alpha_i^{-1}}。}
+\p{\strong{点数与系数的推论。}形式对数求导并比较 #{T^r} 项，得到 #{\#C(\mathbb F_{q^r})=q^r+1-\sum_i\alpha_i^r}。特别地令 #{a_C=q+1-\#C(\mathbb F_q)}，则 #{a_C=\sum_i\alpha_i}，三角不等式给 #{|a_C|\leq 2g\sqrt q}。}
+\p{若 #{L_C(T)=\sum_{j=0}^{2g}c_jT^j}，则 #{c_j} 是 #{\alpha_i} 的 #{j} 阶初等对称式乘 #{(-1)^j}。它有 #{\binom{2g}{j}} 项，每项绝对值 #{q^{j/2}}，故}
+##{|c_j|\leq\binom{2g}{j}q^{j/2}.}
+\p{因此对整数 #{\lambda\geq 1}，若知道 #{c_j\bmod q^\lambda}，且 #{q^\lambda>2\binom{2g}{j}q^{j/2}}，则可在该界内唯一恢复 #{c_j}。这说明高亏格时只算模 #{p} 的局部多项式通常不足以恢复所有整数系数。}

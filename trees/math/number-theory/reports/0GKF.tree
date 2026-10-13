@@ -1,0 +1,12 @@
+\title{Sawin 精化模型的低次数比较定理}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，精化模型论文定理 1.2](sawin-refined-model-probability)}
+
+\p{固定 #{1/4<\beta<1/2}、素数幂 #{q>5}，令 #{k=\lfloor N^\beta\rfloor}，采用[精化测度](0GKE) #{\mu_{\rm ch}}、Euler 测度 #{\mu_{\rm ep}} 和 Haar 矩阵测度 #{\mu_{\rm rm}}。对形式幂级数 #{L(z)=1+\sum_{d\geq 1}c_dz^d}，给变量 #{c_d,\overline{c_d}} 都赋权 #{d}。设多项式 #{\varphi} 的每个单项式总权重不超过 #{k}，并令}
+##{\|\varphi\|_2=\left(\int|\varphi|^2\,d\mu_{\rm rm}\right)^{1/2}.}
+\p{当 #{N} 关于 #{\beta} 充分大时，Sawin 的定理给出}
+##{\int\varphi\,d\mu_{\rm ch}=\int\varphi\,d\mu_{\rm ep}+O_\beta\left(\exp\left[-\left(\frac 12-o_N(1)\right)N^{1-\beta}\log(N^{1-\beta})\right]\|\varphi\|_2\right).}
+\p{这里固定 #{\beta} 后 #{o_N(1)\to 0}；误差对符合次数条件的 #{\varphi} 以及 #{q>5} 一致。引用的证明位于该文第 3 节，特别是引理 3.5、3.6 与定理 1.2 的证明，使用矩阵迹的高斯近似及 Euler 系数密度估计。}
+\p{例如 #{\varphi=c_1\overline{c_1}} 的权重是 #{2}，当 #{k\geq 2} 时允许使用定理。Euler 模型中 #{c_1} 是 #{q} 个一次首一多项式的独立相位之和，故 #{\int|c_1|^2d\mu_{\rm ep}=q}。这说明定理能把可直接计算的素数系数矩传给一个保留酉矩阵结构的模型。公式两端都在概率模型内；它没有把同样误差赋予实际 Dirichlet L 函数族。}

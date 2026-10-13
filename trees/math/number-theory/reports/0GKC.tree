@@ -1,0 +1,12 @@
+\title{密度比加权何时精确改变统计量的分布}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3 的密度比构造](icm2026-sawin-probability)；有限维变换引理}
+
+\p{设 #{\mu} 是[概率测度](00Q3)，#{T:\Omega\to\mathbb R^d} 可测，#{T} 的分布对 Lebesgue 测度有密度 #{g}。设 #{f\geq 0} 满足 #{\int f=1}，且在 #{g=0} 的集合上 #{f=0} 几乎处处。定义 #{w=f/g}（#{g>0} 处），其余处令 #{w=0}。以}
+##{\nu(A)=\int_Aw(T(\omega))\,d\mu(\omega)}
+\p{定义测度，则 #{\nu} 是概率测度，且在 #{\nu} 下统计量 #{T} 的密度恰好为 #{f}。}
+\p{\strong{证明。}对任意有界可测函数 #{\varphi}，由分布的定义及[积分](00Q5)对简单函数的逼近，有}
+##{\int_\Omega\varphi(T)w(T)\,d\mu=\int_{\mathbb R^d}\varphi(t)w(t)g(t)\,dt=\int_{\mathbb R^d}\varphi(t)f(t)\,dt.}
+\p{取 #{\varphi=1} 得总质量为 #{1}，取集合的指示函数即得新分布。若分母用另一个正密度 #{g_0} 代替，则新分布只正比于 #{f g/g_0}，还须总质量有限且非零才能归一化。因而把高斯密度当作参考密度时，须另行比较 #{g} 与 #{g_0}；密度比形式本身不保证精确匹配。}

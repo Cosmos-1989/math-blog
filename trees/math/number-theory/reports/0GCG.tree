@@ -1,0 +1,13 @@
+\title{二面体解的二分之一阶增长拉回}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[CDT，Lemma 3.2(2)、式 (3.5)](nt-cdt-icm2026)，此处取 0<α<β}
+
+\p{设 #{0<\alpha<\beta}，令 #{u=\operatorname{arctanh}\sqrt{\alpha /\beta}>0}，即 #{\tanh^2u=\alpha /\beta}。定义}
+##{\varphi(z)=\alpha\left(1-\frac{\sinh^2\sqrt{u(u-z\tanh(u)/\alpha)}}{\sinh^2u}\right).}
+\p{这个表达式是单值[整函数](0A3G)，并满足 #{\varphi(0)=0}、#{\varphi'(0)=1}。虽然公式写有平方根，函数 #{\sinh^2\sqrt w=(\cosh(2\sqrt w)-1)/2} 只有 #{w} 的整数次幂，故对 #{w} 整，再与 #{z} 的仿射函数复合即可。}
+\p{\strong{原点归一化。}代入 #{z=0} 得 #{\sinh^2u}，故函数值为零。使用 #{(\sinh^2\sqrt w)'=\sinh(2\sqrt w)/(2\sqrt w)}，在 #{w=u^2} 处计算得到}
+##{\varphi'(0)=\frac{\sinh(2u)\tanh u}{2\sinh^2u}=1.}
+\p{\strong{增长。}在 #{|z|\leq R} 上，平方根的模长为 #{O(\sqrt R)}，双曲余弦的模长至多指数于它。因此 #{\log\max_{|z|\leq R}(1+|\varphi(z)|)=O(\sqrt R)}。这给出二分之一阶的增长上界。}
+\p{CDT Lemma 3.2(2)还断言：若零附近函数芽 #{f} 在去掉 #{\alpha,\beta,\infty} 的射影直线上可沿路径亚纯延拓，两处有限局部单值变换均为二阶，且所选分支在 #{\alpha} 正则，则适当选择 #{u} 的分支后 #{f\circ\varphi} 在整个复平面亚纯。对[根式的二面体方程](0GCF)，可取这里的实数 #{u}；这项延拓结论与上述初等增长计算共同提供 holonomy 方法的解析输入。}

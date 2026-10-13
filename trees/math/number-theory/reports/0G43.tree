@@ -1,0 +1,11 @@
+\title{Tate 极限如何消去高度的有界误差}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Yuan](icm2026-yuan-quantitativity)，§2.1.2}
+
+\p{设 #{A/K} 是[阿贝尔簇](0C06)，#{L} 为对称[丰沛线丛](0BF1)，#{h_L} 为其 [Weil 高度](0G42)。存在 #{B\geq 0} 使所有代数点满足 #{|h_L(2P)-4h_L(P)|\leq B}。定义 Néron–Tate 高度}
+##{\widehat h_L(P)=\lim_{n\to\infty}4^{-n}h_L(2^nP).}
+\p{\strong{收敛。}令 #{a_n=4^{-n}h_L(2^nP)}，则 #{|a_{n+1}-a_n|\leq B4^{-n-1}}。几何级数可求和，故 #{(a_n)} 为 Cauchy 列，且 #{|\widehat h_L(P)-h_L(P)|\leq B/3}。若换一个高度 #{h'_L=h_L+O(1)}，第 #{n} 项之差被 #{4^{-n}} 乘一个固定界，趋于零；极限独立于选择。}
+\p{指标平移直接给出 #{\widehat h_L(2P)=4\widehat h_L(P)}。若另一个函数 #{q} 满足同一伸缩关系且 #{q-h_L} 有界，则 #{q(P)-\widehat h_L(P)=4^{-n}(q(2^nP)-\widehat h_L(2^nP))\to 0}，故 #{q=\widehat h_L}。}
+\p{这给出规范高度的存在和唯一性。其完整二次性与正性还使用阿贝尔簇的线丛恒等式，见[高度配对](0G44)；仅由倍二伸缩关系，不能推出任意两点的平行四边形恒等式。}

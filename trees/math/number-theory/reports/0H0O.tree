@@ -1,0 +1,11 @@
+\title{Hasse–Witt 矩阵决定哪些点数信息}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§6.1；所引 Handbook of Elliptic and Hyperelliptic Curve Cryptography，命题 17.8}
+
+\p{设 #{C_p/\mathbb F_p} 为[Hasse–Witt 系数矩阵](0H0N)定义中的光滑超椭圆曲线，亏格为 #{g}，#{L_p(T)} 为其[局部多项式](0H0L)。引用的 Hasse–Witt 定理断言}
+##{L_p(T)\equiv\det(I_g-TW_p)\pmod p.}
+\p{其中 #{I_g} 为 #{g} 阶单位矩阵，#{\det} 为[行列式](01D2)。此式以逐项系数同余解释；右边次数至多 #{g}，左边次数为 #{2g}，因而还说明左边高次项在模 #{p} 后消失。定理的证明见所引手册命题 17.8，Harvey 报告 §6.1 将它作为点计数输入。}
+\p{\strong{点数差的恢复。}行列式的一次项是 #{-\operatorname{tr}(W_p)T}，其中[迹](0F0F)为对角项之和。因此 #{a_p=p+1-\#C_p(\mathbb F_p)} 满足 #{a_p\equiv\operatorname{tr}(W_p)\pmod p}。由 Weil 界 #{|a_p|\leq 2g\sqrt p}，当 #{p>16g^2} 时，同余的两个候选相差至多 #{4g\sqrt p<p}，故只有一个候选。}
+\p{对其他系数，Weil 界随次数呈 #{p^{j/2}} 增长。同余式本身只确定模 #{p} 的多项式；完整整数多项式需要[更高精度](0H0T)或另外的重构步骤。}

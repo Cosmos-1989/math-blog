@@ -1,0 +1,15 @@
+\title{最短闭测地线怎样使无限位能量估计一致}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Yuan，SIAM 版](icm2026-yuan-quantitativity)，§5.3 最后的三式}
+
+\p{设 #{X} 是亏格 #{g>1} 的紧连通 [Riemann 曲面](00FR)。取曲率为 #{-1} 的双曲度量，记 #{s(X)>0} 为最短非平凡闭测地线的长度。该度量的存在唯一性采用一致化定理。设 #{g_a(x,y)} 为[可容许 Green 函数](0G4B)，定义 Faltings–Elkies 能量}
+##{\operatorname{FE}(n,X)=\inf_{x_1,\ldots,x_n\text{ 两两不同}}\sum_{i<j}g_a(x_i,x_j),\qquad n\geq 2.}
+\p{Yu–Yuan–Zhou 的无限位估计在 SIAM 报告中为}
+##{\operatorname{FE}(n,X)\geq -\frac{401}{4}n\log n-400\pi^3(g-1)^3n\max\{1,s(X)^{-1}\},}
+##{\varphi(X)\geq\max\left\{\frac{g^{-1/3}}{15625},\frac{g^{-5/3}s(X)^{-1}}{343750}\right\}.}
+\p{#{\varphi(X)} 是[Zhang 不变量](0G4H)的复位形式。这两式是引用的解析定理。短闭测地线退化时，能量负下界会恶化，但 #{\varphi(X)} 同时增大，因而可以消去退化参数。}
+\p{具体地，第一项被 #{(401/4)15625g^{1/3}n\log n\,\varphi(X)} 控制，系数小于 #{2\cdot 10^6}。第二项分别用两个 #{\varphi} 下界控制 #{1} 与 #{s^{-1}}；因 #{400\pi^3\cdot 343750<5\cdot 10^9}、#{(g-1)^3\leq g^3}，得到}
+##{\operatorname{FE}(n,X)+\left(2\cdot 10^6g^{1/3}n\log n+5\cdot 10^9g^{14/3}n\right)\varphi(X)\geq 0.}
+\p{这个代数推导解释了一致性的来源。原始两项解析估计依赖紧 Riemann 曲面的热核与退化分析；加上有限位的度量图估计，再经[体积比较](0G4H)，才得到全球 Green 能量界。}

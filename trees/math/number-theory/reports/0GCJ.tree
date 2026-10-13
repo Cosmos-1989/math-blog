@@ -1,0 +1,12 @@
+\title{有限生成乘法群的低高度余类代表}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，第 4 节，式 (4.3)–(4.4)](nt-cdt-icm2026)；高度计算}
+
+\p{设 #{\Gamma\subset K^\times} [有限生成](00BB)，选取生成元使每个元素可写为 #{\gamma=\zeta\xi_1^{n_1}\cdots\xi_t^{n_t}}，其中 #{\zeta} 为单位根，#{n_i\in\mathbb Z}。给定整数 #{M,N\geq 1}，取[Dirichlet 引理](0GCI)给出的 #{r,p_i}，令}
+##{\eta=\prod_{i=1}^t\xi_i^{p_i},\qquad a_0=\zeta\prod_{i=1}^t\xi_i^{n_i-rp_i}.}
+\p{则 #{\gamma=a_0\eta^r}，且对 #{c_\Gamma=\sum_i h(\xi_i)} 有 #{h(a_0)\leq c_\Gamma r/M}。若另给 #{A\in K^\times} 并置 #{a=Aa_0}，则}
+##{A\gamma=a\eta^r,\qquad |h(a)-h(A)|\leq c_\Gamma r/M.}
+\p{\strong{证明。}第一项等式由指数相加直接得到。单位根高度为零，因为某个正整数幂为一。用[乘法与幂的高度公式](0GC2)逐项估计，得 #{h(a_0)\leq\sum_i|n_i-rp_i|h(\xi_i)\leq c_\Gamma r/M}。再用 #{|h(Aa_0)-h(A)|\leq h(a_0)} 即得。}
+\p{若 #{\Gamma} 全为挠元，群有限，可直接处理而无需此构造。非挠情形下，大的 #{M} 使余类代表相对于 #{r} 的高度较小。于是对 #{A\gamma} 接近一的问题，可选择 #{a^{1/r}} 的局部分支，与 #{\eta^{-1}} 比较。这个应用要求根式逼近界在 #{a} 的高度随参数变化时仍统一有效。}

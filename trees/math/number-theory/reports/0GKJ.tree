@@ -1,0 +1,12 @@
+\title{随机余核到固定有限群的满射矩}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§4 的满射矩描述](icm2026-sawin-probability)；有限矩阵计数的证明}
+
+\p{设 #{C_n} 为[随机 p 进矩阵的余核](0GKI)，固定有限阿贝尔 #{p} 群 #{H}，令 #{r=\dim_{\mathbb F_p}(H/pH)}。选取杀死 #{H} 的 #{p^a}，通过 #{\mathbb Z_p\to\mathbb Z/p^a\mathbb Z} 的作用把 #{H} 看作 #{\mathbb Z_p} 模。记 #{\operatorname{Sur}(C_n,H)} 为满射[模同态](0121)集合。对 #{n\geq r}，有}
+##{\mathbb E\#\operatorname{Sur}(C_n,H)=|H|^{-u}\prod_{j=0}^{r-1}(1-p^{j-n})\longrightarrow|H|^{-u}.}
+\p{\strong{固定一个满射。}给定满射 #{F:\mathbb Z_p^n\to H}，它能通过 #{C_n} 当且仅当 #{FA_n=0}。每个随机列向量在 #{F} 下均匀分布于 #{H}：核的各个陪集由平移得到且测度相等。各列独立，所以 #{FA_n=0} 的概率为 #{|H|^{-(n+u)}}。因 #{H} 有限，待数的 #{F} 只有有限个，故[期望线性性](00L1)给出}
+##{\mathbb E\#\operatorname{Sur}(C_n,H)=\#\operatorname{Sur}(\mathbb Z_p^n,H)\,|H|^{-(n+u)}.}
+\p{\strong{数生成元组。}#{n} 个元素生成 #{H} 当且仅当它们模 #{pH} 后生成 #{H/pH}。证明反向时，若所[生成子群](00BB)为 #{B}，模 #{p} 生成给 #{H/B=p(H/B)}；有限 #{p} 群被某个 #{p^a} 杀死，迭代等式就得 #{H/B=0}。}
+\p{在 #{r} 维 [#{\mathbb F_p} 向量空间](00D3)中，随机的 #{r\times n} 矩阵满秩概率为 #{\prod_{j=0}^{r-1}(1-p^{j-n})}：逐行选择[线性无关](00D9)行，第 #{j+1} 行须避开已选行张成的 #{p^j} 个向量，共有 #{p^n-p^j} 种选择。每个模 #{pH} 的元组有相同数量的提升，所以满射 #{F} 的个数为 #{|H|^n} 乘此概率。代回即证。#{H} 平凡时取空乘积 #{1}。}

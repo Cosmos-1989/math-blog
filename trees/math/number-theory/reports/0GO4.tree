@@ -1,0 +1,11 @@
+\title{重标度怎样改变非线性 Roth 配置}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§2，式 (2.4)、(2.5) 后的计算}
+
+\p{设 #{q,d,N'\geq 1} 为整数，#{a\in\mathbb Z}，#{A\subseteq\mathbb Z}。记 #{[N']=\{1,\ldots,N'\}}，并令 #{A'=\{n\in[N']:a+dn\in A\}}。若 #{A} 不含 #{x,x+y,x+qy^2}（#{y\ne 0}），则 #{A'} 不含 #{u,u+v,u+qdv^2}（#{v\ne 0}）。}
+\p{\strong{证明。}若后一配置在 #{A'} 中，将各点乘 #{d} 再加 #{a}，得到}
+##{a+du,\quad a+du+dv,\quad a+du+q(dv)^2.}
+\p{取 #{x=a+du,y=dv} 即得到 #{A} 中的禁止配置，且 #{y\ne 0}。反之，若 #{A\cap(a+d[N'])} 中有原配置，则第二点与第一点之差说明 #{y=dv}，减去 #{a} 再除以 #{d} 后恰得到 #{A'} 中的上述配置。因此这也是两个等差网格内配置的对应。}
+\p{特别地，若所选步长为 #{d=qq'}，新二次系数就是 #{q^2q'}。若 #{qd>N'-1}，则 #{u} 与 #{u+qdv^2} 无法同时落在 #{[N']}，任何集合都自动避开新配置。这说明密度增量必须同时限制步长；仅使局部密度增加还不够。}

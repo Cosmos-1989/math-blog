@@ -1,0 +1,10 @@
+\title{定量拼接如何给出全局均匀性控制}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§3，式 (3.3)；§4，式 (4.1)、(4.2)}
+
+\p{固定整数多项式 #{P_1,\ldots,P_m}，满足 #{1\leq\deg P_1<\cdots<\deg P_m=d}。设 #{0<\delta\leq 1}，#{f_0,\ldots,f_m} 支撑于 #{[N]}、绝对值至多一，#{M=\lfloor N^{1/d}\rfloor}。若[配置平均](0GOD)满足 #{|\Lambda(f_0,\ldots,f_m)|\geq\delta}，则在 #{N} 相对 #{\delta^{-1}} 充分大时，存在只依赖 #{d} 的整数 #{s}，使}
+##{\|f_m\|_{U^s_{[N]}(N)}\geq c_P\delta^{C_d}.}
+\p{左侧使用[成对平移平均定义的局部 Gowers 量](0GOA)，#{c_P>0} 允许依赖所有系数。这个结论是 PET 差分归纳与定量拼接合用的引用结果；报告的 PET 指 polynomial exhaustion technique，即反复差分并按多项式族的复杂度归纳。一般技术定理见文献 [30]。}
+\p{\strong{证明结构。}差分先产生沿 #{Q_i(\mathbf a)[L]} 的盒范数，其中辅助参数 #{\mathbf a} 也要平均。不同 #{\mathbf a} 给出不同方向。拼接估计再把整个方向平均控制为全局尺度 #{[N]} 上的一个均匀性量。对 #{y,y^2}，报告式 (3.4) 中出现三个方向 #{a[L],b[L],(a+b)[L]}，其定量拼接得到五阶全局控制。方向平均这一环节是深层估计；单独的盒范数非负性不能代替它。}

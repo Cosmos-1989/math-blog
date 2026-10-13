@@ -1,0 +1,13 @@
+\title{特征标正交性与短和的二阶矩}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§1.2，式 (1.1)](icm2026-harper-probability)}
+
+\p{设 #{r} 为素数，平均遍历所有[模 #{r} 的 Dirichlet 特征标](0GG6)。若 #{r\nmid mn}，则}
+##{\frac 1{r-1}\sum_{\chi\bmod r}\chi(n)\overline{\chi(m)}=1_{n\equiv m\pmod r}.}
+\p{\strong{证明。}令 #{a=nm^{-1}\in\mathbb F_r^\times}。若 #{a=1}，每项为 #{1}。若 #{a\ne 1}，存在特征标 #{\psi} 满足 #{\psi(a)\ne 1}：由[有限阿贝尔群的正则表示分解](01JA)，假如所有特征标都在 #{a} 处取 #{1}，则 #{a} 在正则表示上作用为恒等；但它把单位元对应的基向量送到 #{a} 对应的另一基向量，矛盾。}
+\p{对全部特征标重编号 #{\chi\mapsto\psi\chi}，得到 #{\sum_\chi\chi(a)=\psi(a)\sum_\chi\chi(a)}，因此该和为零。若 #{r\mid m} 或 #{r\mid n}，原平均为零，须单独处理。}
+\p{当 #{N<r} 且 #{a_1,\ldots,a_N\in\mathbb C} 时，展开平方，#{1\leq m,n\leq N} 内的同余恰好是相等，故}
+##{\frac 1{r-1}\sum_{\chi\bmod r}\left|\sum_{n\leq N}a_n\chi(n)\right|^2=\sum_{n\leq N}|a_n|^2.}
+\p{此处包括主特征标。将它删去后，归一化因子及二阶矩公式都会改变。}

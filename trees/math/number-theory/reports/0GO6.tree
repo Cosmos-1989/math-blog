@@ -1,0 +1,13 @@
+\title{小步长密度增量为何产生双重对数界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§2；引理 2.1 的数值推论}
+
+\p{假设[非线性 Roth 密度增量引理](0GO5)成立。则存在绝对常数 #{c_0,C_0>0}，每个不含 #{x,x+y,x+y^2}（#{y\ne 0}）的集合 #{A\subseteq[N]} 都满足 #{|A|/N\leq C_0(\log\log N)^{-c_0}}，当 #{N} 充分大时成立。以下只推导某个正指数，不计算报告中的特定指数。}
+\p{\strong{密度限制步数。}空集时结论直接成立，以下设 #{\alpha=|A|/N>0}，从 #{q_0=1,N_0=N,\alpha_0=\alpha} 开始应用引理。每一步 #{\alpha_i\geq\alpha}，故增益至少 #{c\alpha^C}。若能够进行 #{T=\lceil 2c^{-1}\alpha^{-C}\rceil} 步，密度会超过一，矛盾。}
+\p{\strong{控制系数。}由[重标度公式](0GO4)，#{q_{i+1}\leq C\alpha^{-C}q_i^2}。取充分大的常数 #{K} 并记 #{L=K\log(2/\alpha)}，可写成 #{\log q_{i+1}\leq 2\log q_i+L}，归纳得到 #{\log q_i\leq(2^i-1)L}。}
+\p{\strong{控制区间。}增量引理的长度下界给出，适当增大与引理常数有关的 #{K_1} 后，}
+##{\log N_{i+1}\geq\tfrac 12\log N_i-K_1 2^iL.}
+\p{展开递推，几何级数求和得到 #{\log N_i\geq 2^{-i}\log N-K_2 2^iL}。而第 #{i} 步的适用条件 #{N_i\geq C(q_i/\alpha_i)^C}，只要求 #{\log N_i\geq K_3 2^iL}。因此，若 #{\log N\geq K_4 4^T L}，这 #{T} 步全部可以进行，产生矛盾。}
+\p{于是 #{\log N<K_4 4^T L}。取一次对数得 #{\log\log N\leq O(T)+O(\log L)\leq K_5\alpha^{-C}}，这里对 #{0<\alpha\leq 1} 增大常数即可吸收 #{\log L}。移项便得所述结论，可取 #{c_0=1/C}。}

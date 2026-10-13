@@ -1,0 +1,13 @@
+\title{椭圆曲线的点数如何化为一个中心系数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，引理 5.2；展开其幂和证明}
+
+\p{设 #{b,c\in\mathbb Z}，#{c(b^2-4c)\ne 0}，#{p} 为不整除 #{2c(b^2-4c)} 的素数。令 #{E_p} 为方程 #{y^2=x^3+bx^2+cx} 的[光滑射影曲线](0C01)，#{a_p=p+1-\#E_p(\mathbb F_p)}。写 #{F(x)=x^2+bx+c}、#{h=(p-1)/2}，#{[x^j]G} 表示[多项式](0ALH) #{G} 中 #{x^j} 的系数。则}
+##{a_p\equiv[x^h]F(x)^h\pmod p.}
+\p{\strong{逐个横坐标计数。}这条[椭圆曲线](0C0P)有一个无穷远点。由[平方根计数公式](0H0W)，每个 #{x\in\mathbb F_p} 上有 #{1+\chi(xF(x))} 个点，故}
+##{\#E_p(\mathbb F_p)=1+p+\sum_x\chi(xF(x)),\qquad
+a_p\equiv -\sum_x x^hF(x)^h\pmod p.}
+\p{\strong{幂和提取系数。}多项式 #{x^hF(x)^h} 的各项次数介于 #{h} 和 #{3h} 之间。在这个范围内，#{p-1=2h} 的唯一正倍数是 #{2h}。[幂和公式](0H0D)消掉其他所有项，而 #{x^{2h}} 项求和得到负的系数。外面的负号再抵消一次，剩下 #{[x^{2h}]x^hF^h=[x^h]F^h}，命题成立。}
+\p{模 #{p} 的计算给出了点数差的一个剩余类；利用[Hasse 界恢复整数迹](0H0H)，当 #{p\geq 17} 时还能由此唯一恢复 #{a_p}。}

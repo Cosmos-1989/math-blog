@@ -1,0 +1,12 @@
+\title{非线性 Roth 相关迫使频率接近小分母有理数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，引理 4.2}
+
+\p{设 #{N\geq 1} 为整数，#{\xi\in\mathbb R}，令 #{M=\lfloor\sqrt N\rfloor}，#{g_0,g_1:\mathbb Z\to\mathbb C} 支撑于 #{[N]}，且 #{|g_i|\leq 1}。设 #{e(t)=\exp(2\pi it)}，#{0<\delta\leq 1}。若}
+##{\left|\sum_x\sum_{y=1}^M g_0(x)g_1(x+y)e(\xi(x+y^2))\right|\geq\delta N^{3/2},}
+\p{则存在整数 #{1\leq q\leq C\delta^{-C}}，使 #{\|q\xi\|_{\mathbb R/\mathbb Z}\leq C\delta^{-C}/N}，其中 #{\|t\|_{\mathbb R/\mathbb Z}=\min_{a\in\mathbb Z}|t-a|}，#{C} 为绝对常数。这是引用的主弧估计；报告指出其证明用两轮 [Schwarz](004S)、[van der Corput](0GO9) 及无对数损失的 Weyl 型估计。}
+\p{选择最近的整数 #{a}，得到 #{|\xi -a /q|\leq C\delta^{-C}/(qN)}。写 #{\xi=a/q+\beta}，在等差段 #{y=r+qt}（#{r,t\in\mathbb Z}）上，有理相位满足}
+##{e\bigl((a/q)(r+qt)^2\bigr)=e(ar^2/q),}
+\p{因为余下两项 #{2art+aqt^2} 都是整数。若 #{|y|,|y'|\leq\sqrt N}，则 #{|\beta(y^2-y'^2)|\leq 2|\beta|\sqrt N|y-y'|}。于是把等差段取得足够短，可使剩余相位变化很小。这一直接计算说明了小分母如何转化为小步长的局部平均。}

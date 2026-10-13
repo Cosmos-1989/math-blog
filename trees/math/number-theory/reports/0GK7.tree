@@ -1,0 +1,10 @@
+\title{固定素数相位的混合矩趋于独立圆周矩}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3 的 Weyl 平均动机](icm2026-sawin-probability)；单项式平均的直接证明}
+
+\p{固定不同素数 #{p_1,\ldots,p_d} 和整数 #{a_1,\ldots,a_d}。让 #{t} 在 #{[T,2T]} 上均匀分布。则}
+##{\lim_{T\to\infty}\frac 1T\int_T^{2T}\prod_{j=1}^d(p_j^{-it})^{a_j}\,dt=\begin{cases}1,&a_1=\cdots=a_d=0,\\0,&\text{其余情形}.\end{cases}}
+\p{\strong{证明。}令 #{\alpha=\sum_ja_j\log p_j}。若 #{\alpha=0}，则 #{\prod_jp_j^{a_j}=1}，将正负指数移至等式两边，唯一素因数分解强制全部 #{a_j=0}。在其余情形，积分等于 #{(e^{-2iT\alpha}-e^{-iT\alpha})/(-iT\alpha)}，其模至多为 #{2/(T|\alpha|)}，趋于零。}
+\p{这与[独立 Steinhaus 相位](0GG2)的期望完全一致，因为非零整数幂的圆周积分为零。对相位及其共轭的任何固定多项式，有限求和后也得到相同的极限。素数集合和次数在这里先固定；如果它们随 #{T} 增长，#{|\alpha|} 可能变小，就需新的定量估计。}

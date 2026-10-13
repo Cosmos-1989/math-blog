@@ -19,6 +19,21 @@ for (const paper of manifest.papers) {
   assert(home.includes(`](${paper.outline})`), `${paper.outline}: not on number theory page`);
   for (const targets of Object.values(paper.coverage)) for (const id of targets) assert(ids.has(id));
 }
+if (manifest.expansion_batches) {
+  assert.equal(manifest.papers.length, 12, 'Twelve primary Number Theory report topics expected');
+  assert.equal(new Set(manifest.papers.map(paper => paper.outline)).size, 12);
+  for (const file of manifest.expansion_batches) {
+    const batch = JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+    for (const [id] of batch.entries) assert(ids.has(id), `${id}: expansion note omitted`);
+    for (const paper of batch.papers) {
+      assert(paper.reading_scope, `${paper.outline}: primary reading scope missing`);
+      assert(Array.isArray(paper.deferred), `${paper.outline}: omitted branches must remain explicit`);
+      assert(ids.has(paper.reference), `${paper.outline}: reference note missing from reviewed notes`);
+    }
+  }
+  const nelson = manifest.papers.find(paper => paper.outline === '0H40');
+  assert.equal(nelson.status, 'report-theme-integrated-from-primary-literature');
+}
 for (const id of [...manifest.proofs_written, ...manifest.research_statements_without_local_proof]) assert(ids.has(id));
 
 // Compare the determinant parametrization with direct enumeration, including bc=0.

@@ -1,0 +1,9 @@
+\title{整数算法的位成本与快速算术输入}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§1、§3.2；文献 [45] 与 [72] 定理 9.8}
+
+\p{整数 #{a} 的位长记为 #{\ell(a)=1+\lceil\log_2(|a|+1)\rceil}，含一位符号开销。位复杂度按多带[确定性图灵机](0AC3)的步数计算：带数固定，每一步在每条带上读写常数个符号并移动常数格。多带版本保留原定义的有限状态控制，允许同时访问固定条数的带。任意长整数的加法不算一个单位操作。}
+\p{记 #{\mathsf M(b)} 为乘两个至多 #{b} 位整数所需的位操作数。逐位进位加法用 #{O(b)} 步；学校乘法用 #{O(b^2)} 步。以下快速算术结果作为外部输入：Harvey–van der Hoeven 的整数乘法定理给出 #{\mathsf M(b)=O(b\log(2b))}；由 Newton 迭代实现的整数带余除法也可在 #{O(b\log(2b))} 步内完成。除法的 #{b} 同时控制被除数和除数的位长。}
+\p{乘法结果见 Harvey–van der Hoeven，Integer multiplication in time O(n log n)，Annals of Mathematics 193 (2021)，563–617；除法归约见 von zur Gathen–Gerhard，Modern Computer Algebra，第 3 版，定理 9.8。两项结果也是 Harvey 报告复杂度估计所用的输入。这里 #{O(F)} 表示存在与增长参数无关的常数 #{C}，使成本最终不超过 #{CF}；对象固定时，可将其依赖写作 #{O_X(F)}。}

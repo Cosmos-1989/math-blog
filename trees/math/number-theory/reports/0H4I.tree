@@ -1,0 +1,9 @@
+\title{高斯波包的位置与半经典频率}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+
+\p{固定 #{x_0,\xi_0\in\mathbb R}，对 #{0<h\leq 1} 令}
+##{v_h(x)=c_h\exp\left(-\frac{(x-x_0)^2}{2h}+\frac{i\xi_0x}{h}\right),\qquad c_h=\left(\int_{\mathbb R}e^{-(x-x_0)^2/h}\,dx\right)^{-1/2}.}
+\p{于是 #{\|v_h\|_{L^2}=1}。其位置密度 #{|v_h(x)|^2} 在 #{x_0} 附近宽度约为 #{\sqrt h}。采用[Fourier 变换的平移与调制公式](0H4G)及[高斯计算](0H4H)，可知 #{|\widehat v_h(\eta)|} 正比于 #{\exp(-h(\eta -\xi_0 /h)^2/2)}。}
+\p{普通频率 #{\eta} 的宽度约为 #{h^{-1/2}}；半经典频率 #{\xi=h\eta} 的宽度则约为 #{\sqrt h}，中心为 #{\xi_0}。所以位置与半经典频率可以同时集中。定义 #{D_h=-ih\,d/dx}，直接求导得到 #{(D_h-\xi_0)v_h=i(x-x_0)v_h}；两边的范数均为 #{O(\sqrt h)}，这里的[估计常数](0H4U)与 #{h} 无关。}

@@ -1,0 +1,11 @@
+\title{Steinhaus 部分和的低阶矩定理}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§3，式 (3.1)，引文 [7]](icm2026-harper-probability)}
+
+\p{设 #{f} 为[Steinhaus 随机乘法函数](0GG2)，#{S_x=\sum_{n\leq x}f(n)}。存在绝对常数 #{c,C>0} 与 #{x_0>e}，使对所有实数 #{x\geq x_0} 及 #{0\leq q\leq 1}，有}
+##{c\left(\frac{x}{1+(1-q)\sqrt{\log\log x}}\right)^q\leq\mathbb E|S_x|^{2q}\leq C\left(\frac{x}{1+(1-q)\sqrt{\log\log x}}\right)^q.}
+\p{这里 #{q} 可以依赖 #{x}，常数不依赖两者；在 #{q=0} 时约定零次矩为 #{1}。这是引用的 Harper 定理，原证明见该报告引文 [7]，Forum of Mathematics, Pi 8 (2020), e1；其论证需要随机 Euler 乘积与临界乘法混沌的估计。}
+\p{代入 #{q=1/2}，得到 #{\mathbb E|S_x|\asymp\sqrt x/(\log\log x)^{1/4}}，其中 #{\asymp} 表示上下界相差绝对正常数倍。[二阶矩恒等式](0GG5)却仍为 #{\mathbb E|S_x|^2=\lfloor x\rfloor}。两式同时成立，是因为少量较大值对平方平均的贡献显著。}
+\p{再用 [Markov 不等式](0A02)，对每个固定 #{\varepsilon>0}，有 #{\mathbb P(|S_x|>\varepsilon\sqrt x)\leq\mathbb E|S_x|/(\varepsilon\sqrt x)\to 0}。即 #{S_x/\sqrt x} 的模[依概率趋于零](00L9)。一阶矩的数量级并不单独给出在该更小尺度上的极限分布。}

@@ -1,0 +1,11 @@
+\title{酉扭转把谱方向估计化为 t 方向估计}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Nelson](icm2026-nelson)，§1.2，Theorem 1 的推导}
+
+\p{固定 #{n\geq 2}、#{0<\delta<2/(3n^5-2n^4-n^2)}。设 #{\pi} 为 #{\operatorname{GL}_n/\mathbb Q} 的[酉尖点自守表示](0H4T)，#{t\in\mathbb R}。[伊代尔绝对值](0H50)给出特征标 #{g\mapsto|\det g|_{\mathbb A}^{it}}，其模为一。令 #{\pi_t(g)=|\det g|_{\mathbb A}^{it}\pi(g)}。这是表示与一维特征标的张量积，仍为酉尖点自守表示，并有}
+##{L(\pi_t,s)=L(\pi,s+it),\qquad q(\pi_t)=q(\pi),\qquad\mu_j(\pi_t)=\mu_j(\pi)+it.}
+\p{在[局部 zeta 积分](0H4Y)中，扭转把矩阵系数 #{c(g)} 替换为 #{|\det g|_p^{it}c(g)}，恰使参数 #{s} 变为 #{s+it}。取归一化生成元并乘起各有限位，得到[标准 L 函数](0H42)的第一项恒等式。有限位特征标在 #{\operatorname{GL}_n(\mathbb Z_p)} 上恒为一，故[导子的固定向量定义](0H4V)不变。无穷位的标准因子同样与此扭转相容，故 [Gamma 参数](0H4S)移为 #{\mu_j+it}；这一局部相容性见所引论文 §1.2、§2.14.3。}
+\p{\strong{推导。}固定 #{\pi}，取 #{T_0\geq 1+2\max_j|\mu_j(\pi)|}。若 #{|t|>T_0}，则 #{|t|/2\leq|\mu_j(\pi)+it|\leq 2|t|}。因此[参数均匀增长定理](0H46)可用于 #{\pi_t}，其中 #{T=|t|}、#{c_0=1/2}、#{C_0=2}。将固定的 #{q(\pi)^{1/2}} 吸收入常数，得到 #{|L(\pi,1/2+it)|\leq A_1(1+|t|)^{(1-\delta)n/4}}。}
+\p{对 #{|t|\leq T_0}，#{L(\pi,1/2+it)} 连续，因而在紧区间上有界。把此区间上 #{|L(\pi,1/2+it)|/(1+|t|)^{(1-\delta)n/4}} 的最大值与 #{A_1} 取大，即得到对全部 #{t} 有效、只依赖于 #{\pi,\delta} 的常数。}

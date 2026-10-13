@@ -1,0 +1,12 @@
+\title{随机 p 进矩阵余核的 Cohen–Lenstra 极限律}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，定义 4.1、4.2 三种描述的等价性](icm2026-sawin-probability)}
+
+\p{固定素数 #{p}，#{u\in\{0,1\}}。令 #{A_n} 为具有独立 Haar 均匀矩阵元的 #{n\times(n+u)} 个 [p 进整数构成的矩阵](0GKI)。则其余核以概率一是有限阿贝尔 #{p} 群，且对每个固定的此类群 #{G}，有}
+##{\lim_{n\to\infty}\mathbb P(\operatorname{coker}A_n\cong G)=\frac{\prod_{j=u+1}^{\infty}(1-p^{-j})}{|G|^u|\operatorname{Aut}(G)|}.}
+\p{右端即 [#{\mu_{p,u}}](0GKH)。其总和为 #{1}，所以这确实给出概率分布的极限，没有质量逃往无限群。进一步，对每个固定有限阿贝尔 #{p} 群 #{H}，此极限分布满足}
+##{\mathbb E_{G\sim\mu_{p,u}}\#\operatorname{Sur}(G,H)=|H|^{-u},}
+\p{且这些满射矩唯一确定该分布。矩阵极限、质量公式与矩唯一性的等价性作为外部概率群论定理引用。它们正是 Sawin 定义 4.1、4.2 所据的三种描述。}
+\p{[有限 #{n} 的满射矩计算](0GKJ)解释了右端 #{|H|^{-u}} 的来源，但仅凭这些有限矩的极限，尚不能交换无界观测量的期望与分布极限，也不能排除不同分布具有相同矩。这里的分布收敛与矩唯一性是额外的定理内容。}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-13",
+  "reader_scope": "Primary published SIAM chapter HTML, full body §§1–4 of both reports, including displayed formulas, theorem statements and proof sketches. Referenced research papers were not read in full.",
+  "sources": [
+    {"id": "10.1137/25M1806259", "url": "https://epubs.siam.org/doi/10.1137/25M1806259", "authors": ["Sarah Peluse"], "title": "Reasonable Bounds in the Polynomial Szemerédi Theorem", "edition": "ICM 2026 Proceedings vol. 3, pp.454–468, online 2026-07-13", "read": ["§1 complete", "§2 complete", "§3 complete", "§4 complete", "bibliographic entries used in notes"], "license": "IMU 2026, CC BY 4.0"},
+    {"id": "10.1137/25M1805527", "url": "https://epubs.siam.org/doi/10.1137/25M1805527", "authors": ["Laura Monk", "Frédéric Naud"], "title": "Spectral Gaps on Large Hyperbolic Surfaces", "edition": "ICM 2026 Proceedings vol. 3, pp.434–453, online 2026-07-13", "read": ["§1 complete", "§2 complete", "§3 complete", "§4 complete", "bibliographic entries used in notes"], "license": "IMU 2026, CC BY 4.0"}
+  ],
+  "downloaded_files": [],
+  "download_note": "未下载或复制大PDF、作者源码或全文到仓库；本文件是实际访问位置、版本、阅读范围和核对日志。",
+  "mathematical_cautions": [
+    {"source": "Peluse §4, eq4.3", "issue": "双线性配对在复值情形需保留共轭。", "handling": "0GOD定义D后使用Lambda(...,barD)=N^{-1}sum|D|²，直接换元核验；不把无共轭乘积等同平方绝对值。"},
+    {"source": "Peluse §4, eq4.4–4.5 and subsequent U3/U2 powers", "issue": "HTML中的normroot与N^{s+1}尺度记号不一致。", "handling": "0GOB单独定义E_s=||f||_{U^s}^{2^s}；0GOE将降阶陈述写成能量形式，符合展开求和及后文8次/4次幂。此为归一化一致化，未声称对照原始研究论文证明。"},
+    {"source": "Peluse §4, eq4.6", "issue": "HTML求和下标与函数内变量有z/y不一致。", "handling": "所有本地对偶平均使用同一个已声明的y。"},
+    {"source": "Peluse Definition3.1 and §3 expository simplifications", "issue": "成对平移产生三角差分权重，不能直接变成单平移均匀区间平均。", "handling": "0GOA保留Definition3.1精确定义，0GO9解释三角权重。"},
+    {"source": "Monk–Naud §3.1 eq3.1", "issue": "HTML几何侧似缺原始闭测地线长度因子，未核对PDF。", "handling": "不逐项重印迹公式，只证明非负谱权重概率步骤和Fourier乘子；精确迹公式延后。"},
+    {"source": "Monk–Naud §2.2.2", "issue": "HTML扭转参数商记号有R/ell_i R排印疑点；仅独立取模也不构成完整模空间。", "handling": "0GS5使用带标记tau_i属于R的FN坐标，并正确描述改变标记的群商。"},
+    {"source": "Monk–Naud Theorem4.2", "issue": "有限面积本身不推出基本群自由，需要非紧假设。", "handling": "0GSB明确非紧有限面积；紧曲面另列0GSA。"},
+    {"source": "Monk–Naud §1.1.1, §§4.2–4.3", "issue": "非紧有限面积可能没有首个小正离散特征值，旧谱也不会因取覆盖消失。", "handling": "0GS2定义常数正交补的谱底b(X)，0GS8保留旧/新子空间和重数。"}
+  ],
+  "proof_boundary": "所有未在本地展开的研究定理和技术步骤均逐项列于research/number-theory-combinatorics-spectra.json；阅读报告正文不等于读完其引用论文，也不等于补齐报告全部证明。"
+}

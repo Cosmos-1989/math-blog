@@ -1,0 +1,12 @@
+\title{有限区间上的 van der Corput 不等式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§3 所用差分工具；此处给出有限和版本}
+
+\p{设 #{M,H\geq 1} 为整数，复数序列 #{a_n} 在 #{1\leq n\leq M} 外为零。则}
+##{\left|\sum_{n=1}^M a_n\right|^2\leq\frac{M+H-1}{H^2}\left(H\sum_n|a_n|^2+2\sum_{h=1}^{H-1}(H-h)\operatorname{Re}\sum_n a_{n+h}\overline{a_n}\right).}
+\p{\strong{证明。}令 #{S=\sum_n a_n}。换元得 #{HS=\sum_n\sum_{j=1}^H a_{n+j}}，内层和仅在 #{M+H-1} 个整数 #{n} 上可能非零。[Schwarz 不等式](004S)因此给出}
+##{H^2|S|^2\leq(M+H-1)\sum_n\left|\sum_{j=1}^H a_{n+j}\right|^2.}
+\p{展开平方，对角项 #{j=k} 共 #{H} 个，贡献 #{H\sum_n|a_n|^2}。当 #{j-k=h>0} 时，有 #{H-h} 对指标；平移求和变量后，贡献 #{(H-h)\sum_n a_{n+h}\overline{a_n}}。负差项是相应共轭，相加便得公式。}
+\p{权重 #{\mu_H(h)=(H-|h|)_+/H^2} 恰是两个独立均匀整数 #{j,k\in[H]} 之差的分布；这里 #{t_+=\max(t,0)}。因此“大平均”可以由“大平移相关”检测，而相关中的[乘法差分](0GO8)适合继续降低多项式次数。}

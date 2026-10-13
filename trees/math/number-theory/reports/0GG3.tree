@@ -1,0 +1,10 @@
+\title{无平方因子支撑的 Rademacher 随机乘法函数}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Harper，§3](icm2026-harper-probability)}
+
+\p{在[可数乘积概率空间](0A6B)上，对各素数 #{p} 取[相互独立](00L3)的符号 #{\varepsilon_p}，每个符号以概率 #{1/2} 取 #{1} 和 #{-1}。称正整数无平方因子，如果没有素数 #{p} 满足 #{p^2\mid n}。定义}
+##{f(n)=\begin{cases}\prod_{p\mid n}\varepsilon_p,&n\text{ 无平方因子},\\0,&n\text{ 有平方因子}.\end{cases}}
+\p{空乘积给出 #{f(1)=1}。这称 Rademacher 随机乘法函数。对于互素的 #{m,n}，二者素因子集合不交，且 #{mn} 无平方因子当且仅当二者都无平方因子，因此 #{f} 是[乘法函数](0GG1)。它不完全乘法：#{f(p^2)=0}，而 #{f(p)^2=1}。}
+\p{若 #{m,n} 无平方因子且不同，总有一个素数只整除其中一个。对该符号求[期望](00L1)给零，再用独立性得 #{\mathbb E f(m)f(n)=0}；若 #{m=n} 无平方因子则期望为 #{1}。所以 #{\mathbb E|\sum_{n\leq N}f(n)|^2} 等于 #{N} 以下无平方因子整数的个数。此结论与完全乘法的随机符号模型须区分，后者在所有平方数处都取 #{1}。}

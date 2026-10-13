@@ -1,0 +1,12 @@
+\title{标量累积余数树的前缀不变量}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§3.2；一般标量形式}
+
+\p{设整数 #{a_1,\ldots,a_n} 和正整数 #{m_1,\ldots,m_n} 已给定，目标是同时求 #{c_j=a_1\cdots a_{j-1}\bmod m_j}。空乘积为一。建立[值乘积树和模数乘积树](0H02)，分别记节点值为 #{P_I,M_I}。在根 #{I=\lbrack 1,n+1\rparen} 置 #{C_I=\operatorname{rem}_{M_I}(1)}；若节点的左右子节点为 #{L,R}，定义}
+##{C_L=\operatorname{rem}_{M_L}(C_I),\qquad
+C_R=\operatorname{rem}_{M_R}(C_IP_L).}
+\p{则每个 #{I=\lbrack l,r\rparen} 满足 #{C_I\equiv a_1\cdots a_{l-1}\pmod{M_I}}，叶节点给出所求 #{c_j}。}
+\p{\strong{证明。}根节点的前缀为空，结论成立。若结论在 #{I} 成立，左孩子的左端点仍为 #{l}，由[沿整除约化](0H01)得到左孩子的不变量。右孩子的左端点为中点 #{s}；其前缀等于 #{(a_1\cdots a_{l-1})(a_l\cdots a_{s-1})}。第二个因子正是 #{P_L}，又有 #{M_R\mid M_I}，因此右孩子也满足不变量。对深度归纳证明全部叶节点正确。}
+\p{两种传递的差别恰是右转时补上整个左区间的乘积。这使前缀长度和模数可以同时变化。模数可重复，可不互素，也可等于一；任意输入长度用 #{a_j=m_j=1} 补齐即可。}

@@ -1,0 +1,10 @@
+\title{最小公倍数如何记录幂级数分母}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[CDT，Theorem 2.1，式 (2.1)–(2.3)](nt-cdt-icm2026)}
+
+\p{定义 #{D(t)=\operatorname{lcm}(1,2,\ldots,\lfloor t\rfloor)}，当 #{0\leq t<1} 时取 #{D(t)=1}。给定非负实数组 #{\mathbf b=(b_1,\ldots,b_r)}，称有理系数[形式幂级数](0AL0) #{f=\sum_{n\geq 0}c_nx^n} 具有分母型 #{\mathbf b}，若}
+##{c_n\prod_{j=1}^r D(b_jn)\in\mathbb Z\qquad(n\geq 0).}
+\p{它要求每个系数的分母整除一个统一的最小公倍数乘积。例如 #{-\log(1-x)=\sum_{n\geq 1}x^n/n} 具有分母型 #{(1)}，因为 #{n\mid D(n)}；整系数级数可取全部 #{b_j=0}。}
+\p{各函数的分母约束可以不同。CDT Theorem 2.1 用一个矩阵记录这些差别，再通过加权量 #{\tau(\mathbf b)} 计算代价。在[统一分母型的特例](0GCC)中，每一行相同，代价简化为 #{\sigma=b_1+\cdots+b_r}。这些参数控制分母；它们不直接控制系数的分子大小或解析增长。}

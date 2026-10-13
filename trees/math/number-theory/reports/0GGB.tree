@@ -1,0 +1,12 @@
+\title{连续乘法相位和的低阶矩上界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，定理 1.1、1.2 的连续相位部分](icm2026-harper-probability)}
+
+\p{设 #{T} 为充分大的正实数，#{1\leq x\leq T}，#{0\leq q\leq 1}，#{h} 为[乘法函数](0GG1)，且 #{|h(p)|=1}、#{|h(p^a)|\leq 1} 对所有素数 #{p}、整数 #{a\geq 1} 成立。令 #{L_T=\min\{x,T/x\}}，则}
+##{\frac 1T\int_0^T\left|\sum_{n\leq x}h(n)n^{it}\right|^{2q}\,dt\leq C\left(\frac{x}{1+(1-q)\sqrt{\log\log(10L_T)}}\right)^q.}
+\p{#{n^{it}=\exp(it\log n)}，常数 #{C} 对 #{T,x,q,h} 一致；零次矩取 #{1}。该积分也是在 #{[0,T]} 均匀选择实[随机变量](00L0) #{t} 后的[期望](00L1)。定理及其全范围一致性引用 Harper 的上述结果。}
+\p{支撑这一比较的初等计算是：对不同正整数 #{m,n}，}
+##{\frac 1T\int_0^T n^{it}m^{-it}\,dt=\frac{e^{iT\log(n/m)}-1}{iT\log(n/m)},\qquad\left|\frac 1T\int_0^T n^{it}m^{-it}\,dt\right|\leq\frac 2{T|\log(n/m)|}.}
+\p{当 #{m=n} 时积分为 #{1}。固定有限个整数再令 #{T\to\infty}，非对角项消失；若求和长度同时增长，非对角项的总误差还需估计。上述定理处理的是这种联合增长情形，不能只由逐项极限推出。}

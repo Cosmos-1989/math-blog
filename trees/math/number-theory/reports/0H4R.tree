@@ -1,0 +1,10 @@
+\title{乘法系数的欧拉乘积}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{a:\mathbb Z_{\geq 1}\to\mathbb C} 满足 #{a(1)=1}，且 #{\gcd(m,n)=1} 时 #{a(mn)=a(m)a(n)}，称为乘法函数。若[Dirichlet 级数](0H41) #{\sum_n a(n)n^{-s}} 绝对收敛，则}
+##{\sum_{n\geq 1}a(n)n^{-s}=\prod_{p\text{ 素数}}\left(\sum_{k\geq 0}a(p^k)p^{-ks}\right).}
+\p{\strong{证明。}先只对有限素数集 #{S} 作乘积。逐项展开并用[素因数分解的唯一性](0H4X)，得到所有素因数属于 #{S} 的整数所贡献的和，每个整数恰出现一次。乘法性保证对应系数等于 #{a(n)}。}
+\p{再令 #{S} 递增并最终包含每个素数。给定 #{\varepsilon>0}，绝对收敛允许选 #{N}，使 #{\sum_{n>N}|a(n)n^{-s}|<\varepsilon}。当 #{S} 已包含所有不超过 #{N} 的素数时，有限乘积与全部级数的差只涉及 #{n>N}，绝对值小于 #{\varepsilon}，所以极限等于左侧。}
+\p{取 #{a(n)=1}，局部级数为几何级数，得到 #{\zeta(s)=\prod_p(1-p^{-s})^{-1}}，适用于 #{\operatorname{Re}s>1}。一般乘法函数不一定完全乘法，局部因子需保留全部 #{a(p^k)}。}

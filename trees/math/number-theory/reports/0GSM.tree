@@ -1,0 +1,10 @@
+\title{闭算子的图范数与核心}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{H} 是[Hilbert 空间](00MQ)，#{D(A)\subset H} 为[线性子空间](00D7)，#{A:D(A)\to H} 为线性映射。算子的图为 #{\Gamma(A)=\{(u,Au):u\in D(A)\}\subset H\times H}。若此图是闭集，就称 #{A} 为闭算子。等价地，若 #{u_j\to u} 且 #{Au_j\to v}，则 #{u\in D(A)} 且 #{Au=v}。}
+\p{图上的距离可移到定义域，得到图范数}
+##{\|u\|_A=(\|u\|_H^2+\|Au\|_H^2)^{1/2}.}
+\p{因此 #{A} 闭，当且仅当 #{D(A)} 在此范数下[完备](00ET)。这个等价性直接来自映射 #{u\mapsto(u,Au)} 对图范数的等距性，以及完备空间的闭子空间仍完备。}
+\p{若图的[闭包](00EA)仍是一张线性算子的图，称 #{A} 可闭，并将对应的闭算子记为 #{\overline A}。对闭算子 #{A}，若线性子空间 #{\mathcal D\subset D(A)} 在图范数下[稠密](00EB)，就称 #{\mathcal D} 是 #{A} 的核心。具体地，每个 #{u\in D(A)} 都可由 #{u_j\in\mathcal D} 逼近，使 #{u_j\to u} 且 #{Au_j\to Au}。这等价于 #{\overline{A|_{\mathcal D}}=A}。}

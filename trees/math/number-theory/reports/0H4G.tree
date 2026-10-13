@@ -1,0 +1,9 @@
+\title{欧氏空间上的 Fourier 变换}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+
+\p{对 #{f\in\mathcal S(\mathbb R^d)}，即 [Schwartz 函数](0H4F)，取 Fourier 变换约定}
+##{\widehat f(\xi)=\int_{\mathbb R^d}f(x)e^{-ix\cdot\xi}\,dx,\qquad x\cdot\xi=\sum_jx_j\xi_j.}
+\p{积分采用 [Lebesgue 测度](00XV)。频率变量 #{\xi} 属于 #{\mathbb R^d} 的实线性对偶，选标准坐标后用向量表示。分部积分给出 #{\widehat{\partial_{x_j}f}(\xi)=i\xi_j\widehat f(\xi)}；衰减条件使边界项消失。}
+\p{平移与调制的公式可直接换元验证。若 #{g(x)=f(x-x_0)}，则 #{\widehat g(\xi)=e^{-ix_0\cdot\xi}\widehat f(\xi)}；若 #{g(x)=e^{i\xi_0\cdot x}f(x)}，则 #{\widehat g(\xi)=\widehat f(\xi -\xi_0)}。这两条公式分别描述位置移动与频率移动。}

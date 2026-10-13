@@ -1,0 +1,11 @@
+\title{Haar 不变性怎样确定酉矩阵元的二阶矩}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3 的 Haar 模型](icm2026-sawin-probability)；补充不变性计算}
+
+\p{设 #{M=(M_{ij})} 是 [#{U(N)} 的 Haar 随机矩阵](0GK9)，期望对归一化 Haar 测度取。则}
+##{\mathbb EM_{ij}=0,\qquad\mathbb E(M_{ij}\overline{M_{kl}})=\frac 1N1_{i=k}1_{j=l}.}
+\p{\strong{消去非对角项。}左乘对角酉矩阵可只将第 #{i} 行乘以任意单位相位。分布不变，故 #{\mathbb EM_{ij}} 必须等于该相位乘以自身，从而为零。同理，若 #{i\ne k}，二阶期望可只被一个行相位改变，因而为零。若 #{i=k,j\ne l}，改用右乘对角矩阵，对列做同样操作。}
+\p{\strong{确定对角项。}右乘置换矩阵说明固定一行的所有 #{\mathbb E|M_{ij}|^2} 相同。酉性给 #{\sum_j|M_{ij}|^2=1}，取[期望](00L1)后，每项只能等于 #{1/N}。}
+\p{于是对[迹](0F0F) #{\operatorname{tr}M=\sum_iM_{ii}}，有 #{\mathbb E\operatorname{tr}M=0}、#{\mathbb E|\operatorname{tr}M|^2=1}。这些精确矩来自群不变性，没有使用矩阵元独立性。}

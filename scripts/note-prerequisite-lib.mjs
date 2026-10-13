@@ -32,7 +32,9 @@ export function linksInsideMath(text) {
     const math = text.slice(i).match(/^##?\{/);
     if (!math) { i++; continue; }
     const end = groupEnd(text, i + math[0].length - 1);
-    for (const match of text.slice(i, end).matchAll(/\[([^\]\n]+)\]\(([^)\s]+)\)/g)) {
+    // Forester parses bracket-parenthesis pairs even when the apparent target
+    // is TeX containing spaces, e.g. A[p](\bar k), rather than a real link.
+    for (const match of text.slice(i, end).matchAll(/\[([^\]\n]+)\]\(([^)\n]+)\)/g)) {
       findings.push({label: match[1], target: match[2],
         line: text.slice(0, i + match.index).split('\n').length});
     }

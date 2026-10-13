@@ -1,0 +1,10 @@
+\title{非负谱权重的期望怎样排除小特征值}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§3.1 的概率论步骤}
+
+\p{设 #{X} 是随机紧双曲曲面，#{J_X} 是要检测的一族[拉普拉斯特征值](0GS2)的指标。给定非负权重 #{w(\lambda)}，假设在目标区间 #{I} 上有 #{w\geq A>0}，且非负谱和 #{S(X)=\sum_{j\in J_X}w(\lambda_j(X))} 可测、可积。则}
+##{\mathbb P\{\exists j\in J_X:\lambda_j(X)\in I\}\leq\frac{\mathbb E S(X)}A.}
+\p{\strong{证明。}[正谱权重计数](0C86)给出目标区间中的特征值个数 #{Z(X)\leq S(X)/A}。事件 #{Z\geq 1} 上必有 #{S\geq A}，再用 [Markov 不等式](0A02)即得结论。若参数变化时 #{\mathbb ES/A\to 0}，则目标区间以高概率没有被检测的特征值。}
+\p{在 Weil–Petersson 模型中可取 #{J_X=\{1,2,\ldots\}}，删除常数函数。在覆盖模型中则取新空间的特征值，删除全部旧谱。选择不同的 #{J_X} 是两个问题的实质差异；如果所用测试权重有负值，上述丢项和 Markov 论证便不能直接成立。}

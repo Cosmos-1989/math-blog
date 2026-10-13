@@ -1,0 +1,12 @@
+\title{有限随机 Euler 乘积的素数场协方差}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§3–4](icm2026-harper-probability)；有限素数和的直接计算}
+
+\p{设 #{f} 为[Steinhaus 随机乘法函数](0GG2)，#{P\geq 2}。将 [Euler 乘积](0H4R)的素数因子随机化，令 #{F_P(s)=\prod_{p\leq P}(1-f(p)p^{-s})^{-1}}。对 #{s=\sigma+it}、#{\sigma>0}，逐个因子的幂级数给出}
+##{\log|F_P(s)|=\operatorname{Re}\sum_{p\leq P}\sum_{a\geq 1}\frac{f(p)^a}{a p^{as}}.}
+\p{这里每个因子的级数绝对收敛，外层只有有限个素数。临界线上的一次素数项是实随机函数 #{X_P(t)=\operatorname{Re}\sum_{p\leq P}f(p)p^{-1/2-it}}。其均值为零，且}
+##{\mathbb E X_P(t)X_P(u)=\frac 12\sum_{p\leq P}\frac{\cos((t-u)\log p)}p.}
+\p{\strong{证明。}不同素数的项因独立且均值为零而不贡献。对同一素数，将 #{\operatorname{Re}z=(z+\bar z)/2} 展开，使用 #{\mathbb Ef(p)^2=0}、#{\mathbb E|f(p)|^2=1}，所得为 #{\frac 1{2p}\operatorname{Re}p^{-i(t-u)}}。对素数求和即得公式。}
+\p{特别地，[方差](00L2)为 #{\operatorname{Var}X_P(t)=\frac 12\sum_{p\leq P}p^{-1}}；若 #{|t-u|\log P\leq 1}，则每项余弦至少为 #{\cos 1}，协方差至少为 #{\cos 1} 倍的方差。这解释近邻 Euler 乘积为何不能按独立样本处理。对数的高次素数幂项仍在精确公式中；把它们删除以及估计整个积分的低阶矩，需要额外论证。}

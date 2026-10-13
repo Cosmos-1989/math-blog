@@ -1,0 +1,12 @@
+\title{二阶 Gowers 能量给出显著傅里叶系数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，引理 4.1；此处给出恒等式的证明}
+
+\p{设 #{N\geq 1} 为整数，#{0<\delta\leq 1}，记 #{[N]=\{1,\ldots,N\}}。设 #{f:\mathbb Z\to\mathbb C} 在 #{[N]} 外为零且 #{|f|\leq 1}，定义傅里叶多项式 #{\widehat f(\theta)=\sum_x f(x)e(-x\theta)}，其中 #{e(t)=\exp(2\pi it)}。若[二阶能量](0GOB)满足 #{E_2(f)\geq\delta N^3}，则某个 #{\theta\in[0,1]} 满足 #{|\widehat f(\theta)|\geq\sqrt\delta N}。}
+\p{\strong{正交积分。}整数 #{n} 满足 #{\int_0^1e(n\theta)\,d\theta=1}（#{n=0}）或 #{0}（#{n\ne 0}），可直接积分指数函数验证。展开有限和并逐项积分得到}
+##{\int_0^1|\widehat f(\theta)|^2\,d\theta=\sum_x|f(x)|^2\leq N.}
+\p{\strong{四次积分。}展开 #{|\widehat f|^4} 后，只有 #{a+d=b+c} 的四元组留下。以 #{a=x,b=x+h,c=x+k,d=x+h+k} 参数化这些四元组，得}
+##{\int_0^1|\widehat f(\theta)|^4\,d\theta=\sum_{x,h,k}f(x)\overline{f(x+h)f(x+k)}f(x+h+k)=E_2(f).}
+\p{因此 #{\delta N^3\leq\|\widehat f\|_\infty^2N}，移项开方即得结论。傅里叶多项式连续，在紧区间上达到最大值。这里的积分可取[Riemann 积分](0A3B)，整个证明只交换有限求和与积分。}

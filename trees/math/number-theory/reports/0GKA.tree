@@ -1,0 +1,11 @@
+\title{酉矩阵特征行列式的零点与反射恒等式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3](icm2026-sawin-probability)；矩阵恒等式的直接推导}
+
+\p{设 #{M\in U(N)} 为[酉矩阵](0GK9)，定义 #{L_M(s)=\det(I-e^{1/2-s}M)}，[行列式](01D2)按通常有限维定义取值。所有零点都在 #{\operatorname{Re}s=1/2} 上，且}
+##{L_M(s)=(-1)^N e^{N(1/2-s)}\det(M)L_{M^{-1}}(1-s).}
+\p{\strong{零点。}若 #{L_M(s)=0}，则存在非零向量 #{v} 使 #{Mv=e^{s-1/2}v}。酉矩阵保持内积范数，故 #{|e^{s-1/2}|=1}，即 #{\operatorname{Re}s=1/2}。反之，若 #{e^{i\theta}} 是 #{M} 的[特征值](0F0B)，对应零点为 #{s=1/2+i(\theta+2\pi k)}，#{k\in\mathbb Z}。}
+\p{\strong{反射恒等式。}写 #{a=e^{1/2-s}\ne 0}，直接相乘得到 #{I-aM=(-aM)(I-a^{-1}M^{-1})}。取行列式，利用 #{a^{-1}=e^{1/2-(1-s)}}，即得所述公式。}
+\p{此外 #{L_M(s+2\pi i)=L_M(s)}。这个精确周期是矩阵模型本身的结构。把 Haar 随机 #{M} 的局部零点统计用来预测 zeta 零点，属于模型预测；上述恒等式并不证明黎曼假设，也不把 #{L_M} 识别成 zeta 函数。}

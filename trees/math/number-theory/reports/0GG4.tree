@@ -1,0 +1,12 @@
+\title{独立符号的四阶矩保证平方根尺度}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§1.1](icm2026-harper-probability)；实系数情形的展开证明}
+
+\p{设 #{\varepsilon_1,\ldots,\varepsilon_N} 为[相互独立](00L3)的均匀正负符号，#{a_1,\ldots,a_N\in\mathbb R}，令 #{S=\sum_j a_j\varepsilon_j}、#{A=\sum_j a_j^2>0}。[期望](00L1)满足}
+##{\mathbb ES^2=A,\qquad \mathbb ES^4=3A^2-2\sum_j a_j^4\leq 3A^2.}
+\p{\strong{矩的计算。}展开平方，交叉项包含一个均值为零的独立符号，故只剩 #{a_j^2}。展开四次方时，只有每个指标出现偶数次的项不消失。四个指标全同贡献 #{\sum_j a_j^4}；两个不同指标各出现两次贡献 #{6\sum_{i<j}a_i^2a_j^2}。将它与 #{3(\sum a_j^2)^2} 比较就得到公式。}
+\p{令 #{E=\{|S|\geq\sqrt{A/2}\}}。在补事件上 #{S^2<A/2}，所以 #{\mathbb E(S^2 1_E)\geq A/2}。由[积分 Hölder 不等式](0A68)的平方情形，}
+##{(A/2)^2\leq\bigl(\mathbb E(S^2 1_E)\bigr)^2\leq\mathbb ES^4\,\mathbb P(E)\leq 3A^2\mathbb P(E).}
+\p{故 #{\mathbb P(E)\geq 1 /12}。另一方面，[Markov 不等式](0A02)给 #{\mathbb P(|S|\geq C\sqrt A)\leq C^{-2}}。特别地，#{S/\sqrt A} 不可能[依概率趋于零](00L9)，无论系数如何随 #{N} 改变，只要每次 #{A>0}。这个下界确实用了四阶矩，单有 #{\mathbb ES^2=A} 不足以推出。}

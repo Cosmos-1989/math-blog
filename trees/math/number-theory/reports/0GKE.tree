@@ -1,0 +1,13 @@
+\title{用 Euler 系数密度加权酉矩阵}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Sawin，ICM 报告 §3](icm2026-sawin-probability)；[精化模型论文 §1，式 (3)](sawin-refined-model-probability)}
+
+\p{固定素数幂 #{q>5} 与 #{1/4<\beta<1/2}，对充分大的整数 #{N} 令 #{k=\lfloor N^\beta\rfloor}。记 #{F_k} 为[随机 Euler 对数系数](0GKD) #{(X_1,\ldots,X_k)} 在 #{\mathbb C^k} 上的联合概率密度。该密度的存在是 Sawin 论文第 2 节的输入；此处采用该文构造的连续密度版本。}
+\p{对[酉矩阵](0GK9) #{M\in U(N)}，令 #{L_M(z)=\det(I-q^{1/2}zM)}。其形式对数系数为 #{T_j(M)=-q^{j/2}\operatorname{tr}(M^j)/j}。作为参考，取密度}
+##{g_k(x_1,\ldots,x_k)=\prod_{j=1}^k\frac{j}{\pi q^j}\exp\left(-\frac{j|x_j|^2}{q^j}\right).}
+\p{这是独立复高斯变量的联合密度；第 #{j} 个变量均值为零、#{\mathbb E|Z_j|^2=q^j/j}，这些性质也可用二维极坐标积分验证。相对于 #{U(N)} 的 Haar 概率测度定义}
+##{d\mu_{\rm w}(M)=\gamma\frac{F_k(T_1(M),\ldots,T_k(M))}{g_k(T_1(M),\ldots,T_k(M))}\,d\mu_N(M).}
+\p{#{\gamma} 是总质量的倒数。Sawin 的估计保证在上述充分大 #{N} 的范围中总质量有限且非零。令 #{\mu_{\rm ch}} 为 #{L_M(z)} 在此加权测度下的分布，#{\mu_{\rm rm}} 为同一多项式在 Haar 测度下的分布，#{\mu_{\rm ep}} 为 #{L_\xi(z)} 的分布。三者都视为常数项为 #{1} 的复形式幂级数空间上的测度。}
+\p{[密度比引理](0GKC)解释此式的设计：用 Euler 数据的密度补入素数信息，同时除去高斯参考密度。但 #{g_k} 并非有限 #{N} 时矩阵统计 #{T} 的精确密度，所以 #{T} 在新模型下与 Euler 系数的匹配仍需定量比较。}

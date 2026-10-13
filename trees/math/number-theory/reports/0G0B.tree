@@ -1,0 +1,10 @@
+\title{Mordell–Weil 筛与局部单射给出穷尽证书}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll](icm2026-stoll-rational-points)，§5，式 (5.1) 及其后的论证}
+
+\p{设 #{i:C\hookrightarrow J} 是定义在 #{\mathbb Q} 上的[Abel–Jacobi 嵌入](0G08)，#{N\geq 1}，#{S} 为有限个良约化素数。令 #{A_{N,S}\subset J(\mathbb Q)/NJ(\mathbb Q)} 为通过所有[约化筛条件](0C0I)的余类，#{\phi:C(\mathbb Q)\to J(\mathbb Q)/NJ(\mathbb Q)} 为复合映射。已知的有限点集 #{R\subseteq C(\mathbb Q)} 满足 #{\phi(R)=A_{N,S}}。}
+\p{再设某个良约化素数 #{p} 处，#{C(\mathbb Q)\to C(\mathbb F_p)} 已被证明为单射，且 #{N} 可被 #{J(\mathbb Q)} 在 #{J(\mathbb F_p)} 中像的指数所整除；这里群的指数指杀死该有限群的最小正整数。则 #{R=C(\mathbb Q)}。}
+\p{\strong{证明。}任取 #{Q\in C(\mathbb Q)}。筛的必要性给出 #{\phi(Q)\in A_{N,S}}，故存在 #{R_Q\in R} 使 #{i(Q)-i(R_Q)\in NJ(\mathbb Q)}。约化后右侧为零，于是两者在 #{J(\mathbb F_p)} 中像相同。Abel–Jacobi 映射在特殊纤维也是嵌入，所以 #{Q,R_Q} 约化相同。局部单射性给出 #{Q=R_Q}。}
+\p{常用的单射证据是非零消去微分在所有[有限域](00GF)点上不消失，此时[积分首项判据](0G0A)逐圆盘适用。分裂情形也可用[微分零点处的唯一性](0G0E)。若群商由有限指数子群代算，还需在 #{N} 的素因子处[饱和](0G04)。证书只使用已验证的有限数据，不要求先证明寻找证书的过程总会终止。}

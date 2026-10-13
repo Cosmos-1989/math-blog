@@ -1,0 +1,12 @@
+\title{曲线上的算术相交如何包含无穷位贡献}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Yuan](icm2026-yuan-quantitativity)，§2.2、§2.4.3}
+
+\p{设 #{C/K} 为光滑射影曲线，#{\bar L,\bar M} 为其[可积阿代尔线丛](0G4U)。算术相交是实数 #{\bar L\cdot\bar M}，对两个变量对称、双线性。其构造先在整模型上把有限位的除子相交乘以剩余域大小的对数，再加入无限位的度量积分，最后对模型度量取极限。}
+\p{若 #{s} 是 #{M} 的非零有理截面，递推公式为}
+##{\bar L\cdot\bar M=\bar L\cdot\operatorname{div}(s)-\sum_{v\in M_K}\epsilon_v\int_{C_v^{\mathrm{an}}}\log\|s\|_v\,c_1(\bar L)_v.}
+\p{第一项对闭点除子线性，是 #{\bar L} 在各点上的算术度。#{c_1(\bar L)_v} 是总质量为 #{\deg L} 的曲率测度：复位是第一 Chern 形式，非 Archimedean 位由模型特殊纤维各分支上的度形成离散测度，再对模型逼近取极限。这里 #{C_v^{\mathrm{an}}} 为局部解析化；非 Archimedean 情形包括由函数代数上的乘法半范数给出的 Berkovich 点，这里乘法半范数是函数代数上的映射 #{f\mapsto|f|\geq 0}，满足 #{|fg|=|f||g|}、#{|f+g|\leq\max(|f|,|g|)}，并延拓底域的绝对值。模型分支的赋值给出这样的点。}
+\p{相交数与 #{s} 的选择无关、极限存在以及对称性是算术相交理论的引用定理。它与普通[几何相交数](0BF4)维数不同：一条数域曲线上需要两个带度量[线丛](0AL7)，整模型是一个算术曲面。}
+\p{对代数点 #{x}，令 #{\tilde x} 是对应闭点，#{d=[K(x):K]}。定义 #{h_{\bar L,K}(x)=d^{-1}\bar L\cdot\tilde x}；除以 #{[K:\mathbb Q]} 后是 #{L} 的 [Weil 高度](0G42)。有限扩域将未归一化的相交数乘以扩张次数，这与 #{\widehat h_K} 的归一化一致。}

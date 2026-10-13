@@ -1,0 +1,11 @@
+\title{随机乘法函数的矩计数乘积相等关系}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§3 的正交性计算](icm2026-harper-probability)}
+
+\p{设 #{f} 为[Steinhaus 随机乘法函数](0GG2)。对正整数 #{m,n}，其[期望](00L1)满足 #{\mathbb E f(n)\overline{f(m)}=1_{n=m}}。因此对整数 #{N\geq 1}、复数 #{a_n} 及整数 #{k\geq 1}，有}
+##{\mathbb E\left|\sum_{n\leq N}a_nf(n)\right|^{2k}=\sum_{\substack{n_1,\ldots,n_k,m_1,\ldots,m_k\leq N\\n_1\cdots n_k=m_1\cdots m_k}}a_{n_1}\cdots a_{n_k}\overline{a_{m_1}\cdots a_{m_k}}.}
+\p{\strong{证明。}圆周积分给出 #{\mathbb EZ_p^j=(2\pi)^{-1}\int_0^{2\pi}e^{ij\theta}\,d\theta}，当整数 #{j=0} 时为 #{1}，否则为 #{0}。按素数独立性，#{\mathbb E f(n)\overline{f(m)}} 等于各素数处 #{\mathbb EZ_p^{v_p(n)-v_p(m)}} 的积。这个积为 #{1} 恰好当所有素数指数相同，即 #{n=m}。}
+\p{展开有限的 #{2k} 次方和，利用完全乘法性把每项化成 #{f(n_1\cdots n_k)\overline{f(m_1\cdots m_k)}}，再代入正交性即得一般式。取 #{k=1} 得 #{\mathbb E|\sum a_nf(n)|^2=\sum|a_n|^2}；取 #{a_n=1,k=2} 时四阶矩等于 #{ab=cd} 在 #{1\leq a,b,c,d\leq N} 中的解数。}
+\p{当 #{N\geq 6}，#{2\cdot 6=3\cdot 4} 已贡献一个非配对解。独立性发生在素数处，整数乘法带来的这些额外解会改变高阶矩。}

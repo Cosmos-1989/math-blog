@@ -1,0 +1,10 @@
+\title{模素数的 Dirichlet 特征标}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Harper，§1.2](icm2026-harper-probability)}
+
+\p{设 #{r} 为素数。[有限域](00GF) #{\mathbb F_r} 的非零元素在乘法下构成有限阿贝尔群 #{\mathbb F_r^\times}。一个模 #{r} 的 Dirichlet 特征标，是[该群的对偶群](01JA)中的同态 #{\chi:\mathbb F_r^\times\to\mathbb C^\times}，扩展到整数时规定}
+##{\chi(n)=\begin{cases}\chi(n\bmod r),&r\nmid n,\\0,&r\mid n.\end{cases}}
+\p{因每个非零剩余类的阶有限，其像是单位根，故在 #{r\nmid n} 时 #{|\chi(n)|=1}。该函数以 #{r} 为周期，并满足[完全乘法性](0GG1)。共有 #{r-1} 个这样的特征标；全体记为 #{\widehat{\mathbb F_r^\times}}，包含主特征标 #{\chi_0(n)=1_{r\nmid n}}。}
+\p{均匀随机选择特征标，指每个特征标的概率都是 #{1/(r-1)}。此时 #{\mathbb E^{\rm char}W=(r-1)^{-1}\sum_{\chi\bmod r}W(\chi)}。这是对确定性函数族的有限平均，并不预设各素数处的值独立。}

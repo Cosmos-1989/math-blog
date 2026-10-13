@@ -1,0 +1,11 @@
+\title{整数系数级数的收敛半径大于一时必为多项式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cauchy 积分公式](0BAD)；[CDT，§2 的算术与解析比较背景](nt-cdt-icm2026)}
+
+\p{设 #{f(z)=\sum_{n\geq 0}a_nz^n}，#{a_n\in\mathbb Z}，且级数收敛半径 #{R>1}。则仅有有限多个 #{a_n} 非零，因而 #{f} 是多项式。}
+\p{\strong{固定一个较大圆。}选 #{1<r<R}。#{f} 在 #{|z|\leq r} 全纯，圆周上存在有限上界 #{M=\max_{|z|=r}|f(z)|}。由 [Cauchy 积分公式](0BAD)的系数形式，}
+##{a_n=\frac 1{2\pi i}\int_{|z|=r}\frac{f(z)}{z^{n+1}}\,dz,\qquad |a_n|\leq Mr^{-n}.}
+\p{\strong{使用整性。}因为 #{r>1}，充分大时 #{Mr^{-n}<1}。唯一绝对值小于一的整数是零，所以从某项起 #{a_n=0}。}
+\p{一般的算术 holonomy 界面对有分母的函数及多值解析延拓，因此需要更精细的尺度和维数估计；这个例子把“算术离散性与解析小量冲突”的核心计算单独展示出来。}

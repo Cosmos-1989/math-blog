@@ -26,4 +26,6 @@ assert.deepEqual(linksInsideMath('\\p{正文。}\n##{\\text{[定义](target)}}')
   [{label: '定义', target: 'target', line: 2}]);
 assert.equal(linksInsideMath('#{[定义](target)}').length, 1);
 assert.equal(bodyLinks('[来源](https://example.com)及[定义](target)')[0].label, '定义');
-console.log('Prerequisite prose scanner: 21 regression cases passed.');
+assert.equal(linksInsideMath('#{A[p](\\bar k)}').length, 1);
+assert.equal(linksInsideMath('#{A\\lbrack p\\rbrack(\\bar k)}').length, 0);
+console.log('Prerequisite prose scanner: 23 regression cases passed.');

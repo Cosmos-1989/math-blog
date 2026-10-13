@@ -1,0 +1,11 @@
+\title{普通余数树为何能同时约化一个整数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§3.2}
+
+\p{给定整数 #{x} 和正整数 #{m_1,\ldots,m_n}，建立模数的[乘积树](0H02)，节点 #{I} 存储 #{M_I=\prod_{j\in I}m_j}。根节点取 #{r_I=\operatorname{rem}_{M_I}(x)}；向任一子节点 #{J} 传递}
+##{r_J=\operatorname{rem}_{M_J}(r_I).}
+\p{叶节点输出 #{\operatorname{rem}_{m_j}(x)}。\strong{证明。}根满足 #{r_I\equiv x\pmod{M_I}}。由于 #{M_J\mid M_I}，[约化恒等式](0H01)说明子节点仍满足 #{r_J\equiv x\pmod{M_J}}；对深度归纳即可。}
+\p{例如 #{x=100}、模数为 #{3,4,5,7}。根模数 #{420}，两个子模数为 #{12,35}，对应余数为 #{4,30}；再向下得到 #{1,0,0,2}。每次除法的被除数随层次缩小。}
+\p{模数之间无须互素。这里是从一个已知整数向多个模数约化；[整数中国剩余同构的构造](01I8)解决的反向重构问题需要互素假设。}

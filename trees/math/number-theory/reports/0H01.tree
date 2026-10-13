@@ -1,0 +1,11 @@
+\title{沿整除关系约化余数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§3.2 所用的约化恒等式}
+
+\p{设 #{m,M} 为正整数且 #{m\mid M}。记 #{\operatorname{rem}_m(x)} 为整数 #{x} 除以 #{m} 的唯一余数，满足 #{0\leq\operatorname{rem}_m(x)<m}。同余 #{x\equiv y\pmod m} 意味着 #{m\mid x-y}，也就是二者在[商环](00CU) #{\mathbb Z/m\mathbb Z} 中相等。则对任意整数 #{x,a}，}
+##{\operatorname{rem}_m(\operatorname{rem}_M(x))=\operatorname{rem}_m(x),\qquad
+\operatorname{rem}_m(a\operatorname{rem}_M(x))=\operatorname{rem}_m(ax).}
+\p{\strong{证明。}写 #{x=qM+r}，#{0\leq r<M}。由 #{m\mid M} 得 #{m\mid x-r}，所以 #{x,r} 有相同的模 #{m} 余数。再乘 #{a} 得 #{m\mid ax-ar}，第二式随之成立。}
+\p{因此，只保存模较大整数的余数，仍能向它的任意因数传递信息，并能在传递前继续乘整数。矩阵或行向量的逐项约化也满足此规律：矩阵乘法的每一项是整数乘积的有限和。#{m=1} 时唯一余数为零，上述公式仍成立。}

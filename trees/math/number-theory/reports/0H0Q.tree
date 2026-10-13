@@ -1,0 +1,12 @@
+\title{形式素数参数的截断与特化}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§6.3 的 generic prime 方法；特化相容性的初等部分}
+
+\p{固定整数 #{\lambda\geq 1}，在[多项式商环](00CU) #{R=\mathbb Z[P]/(P^\lambda)} 中保留形式变量 #{P}。对任意素数 #{p}，代入 #{P=p} 给出良定义的环同态}
+##{\phi_p:R\longrightarrow\mathbb Z/p^\lambda\mathbb Z,\qquad
+\sum_{i=0}^{\lambda -1}a_iP^i\longmapsto\sum_{i=0}^{\lambda -1}a_ip^i\bmod p^\lambda.}
+\p{\strong{证明。}两个多项式代表相差 #{P^\lambda Q(P)} 时，特化值相差 #{p^\lambda Q(p)}，故在目标商环中相同。多项式代入保持加法与乘法，所以 #{\phi_p} 保持这些运算。若再将每个系数模 #{p^\lambda} 约化，特化结果也不变。}
+\p{因此，对所有 #{p} 共用的多项式矩阵序列 #{A_n(P)}，可先在 #{R} 中建立[有序乘积树](0H02)，使用整数模数 #{p^\lambda} 的系数约化运行[矩阵累积余数树](0H08)，最后在相应素数叶子特化。每步等式经 #{\phi_p} 后仍成立，所以得到 #{A_1(p)\cdots A_j(p)\bmod p^\lambda}。模数仍是整数，值树节点则包含截断多项式矩阵。}
+\p{例如 #{\lambda=2}，矩阵可写成 #{B+PC}，乘法为 #{(B+PC)(D+PE)=BD+P(BE+CD)}，丢弃的 #{P^2CE} 特化后被 #{p^2} 整除。若先把 #{P} 置零再计算，则连一次项也会丢失。存在分母时，还须分别解决[除法的精度损失](0H0P)，这一特化等式并不提供不可逆元素的逆。}

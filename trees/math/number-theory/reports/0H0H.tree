@@ -1,0 +1,10 @@
+\title{Hasse 界何时允许从余数恢复点数差}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§5，式 (5.1)；所引 Silverman 第 2 版定理 V.2.4}
+
+\p{设 #{p} 为素数，#{E/\mathbb F_p} 为[椭圆曲线](0C0P)，#{a_p=p+1-\#E(\mathbb F_p)}。Hasse 定理给出 #{|a_p|\leq 2\sqrt p}。这是外部定理，也可视为[曲线 Weil 界](0H0L)在亏格一的情形。当 #{p\geq 17} 时，#{a_p\bmod p} 唯一确定整数 #{a_p}。}
+\p{\strong{恢复的证明。}若 #{a,a'} 都满足此界且 #{a\equiv a'\pmod p}，则 #{|a-a'|\leq 4\sqrt p<p}。被 #{p} 整除而绝对值小于 #{p} 的整数只能为零，所以 #{a=a'}。}
+\p{具体地，对余数 #{r\in\{0,\ldots,p-1\}}，取以零为中心的代表：#{r\leq(p-1)/2} 时取 #{r}，否则取 #{r-p}。当 #{p>16}，Hasse 区间包含在 #{(-p/2,p/2)} 中，所以该代表恰为 #{a_p}。最终点数为 #{p+1-a_p}。}
+\p{小素数需要额外处理。例如 #{p=5} 时，#{-4,1} 同余且都满足 Hasse 界，单靠界与余数无法区分。算法可以对有限个 #{p<17} 直接枚举曲线点。}

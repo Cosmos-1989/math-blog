@@ -1,0 +1,10 @@
+\title{高斯函数的 Fourier 变换仍为高斯函数}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{取 #{h>0}，令 #{f_h(x)=e^{-x^2/(2h)}}，并采用[Fourier 变换](0H4G)的约定。记 #{A_h=\int_{\mathbb R}e^{-x^2/(2h)}\,dx}。则}
+##{\widehat f_h(\xi)=A_h e^{-h\xi^2/2}.}
+\p{\strong{证明。}高斯衰减允许在积分号下求导。由于 #{xf_h=-hf_h'}，得到}
+##{\frac{d}{d\xi}\widehat f_h(\xi)=-i\widehat{xf_h}(\xi)=ih\widehat{f_h'}(\xi)=-h\xi\widehat f_h(\xi).}
+\p{乘以 #{e^{h\xi^2/2}} 后导数为零，所以 #{\widehat f_h(\xi)=\widehat f_h(0)e^{-h\xi^2/2}}。而 #{\widehat f_h(0)=A_h}，结论成立。换元 #{x=\sqrt h\,u} 还给出 #{A_h=\sqrt h\,A_1}。常数的具体值不影响位置尺度与频率尺度互为倒数的结论。}

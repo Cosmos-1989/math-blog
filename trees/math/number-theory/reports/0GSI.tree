@@ -1,0 +1,11 @@
+\title{沿非分离曲线构造小 Cheeger 常数的二重覆盖}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§1.1.5 的切开粘合论证}
+
+\p{设 #{X} 为[紧双曲曲面](0GS1)，#{\gamma} 是长度 #{L} 的简单闭测地线，并且切开 #{\gamma} 后所得曲面 #{Y} 连通。取 #{Y} 的两份副本，把一份的正侧边界与另一份的负侧边界相粘，另一对也交叉相粘，得到连通二重覆盖 #{\widetilde X\to X}。则}
+##{h(\widetilde X)\leq\frac{2L}{\operatorname{Area}(X)}.}
+\p{\strong{证明。}沿测地边界按原曲面的对应方式粘合，度量光滑延拓，且局部投影与 #{X} 等距。两份 #{Y} 均连通并互相粘合，因此覆盖连通。取一份 #{Y} 的内部为测试区域，其面积为 #{\operatorname{Area}(X)}，恰为覆盖总面积的一半，边界为两条长度 #{L} 的曲线。代入[Cheeger 常数定义](0GS4)即得。}
+\p{有限局部等距覆盖还满足 #{\operatorname{inj}_{\widetilde X}(\widetilde z)\geq\operatorname{inj}_X(z)}：底空间中可单射提升的圆盘，在进一步覆盖中仍可提升。因此若已有曲面序列的最小单射半径趋于无穷，同时存在 #{L=o(\operatorname{Area}(X))} 的上述曲线，二重覆盖保留[局部几何极限](0GSH)，而 Cheeger 常数及谱隙趋于零。}
+\p{报告用 Buser–Sarnak 的引用构造实现这些假设：在一列亏格趋于无穷的曲面上，最短闭测地线长度为 #{\log g} 量级，并有长度至多 #{2\log(4g-2)} 的非分离简单闭测地线。其存在性是外部输入；本计算解释从该输入到小谱隙的推导。}

@@ -1,0 +1,13 @@
+\title{多点高度的二次恒等式怎样分离 Green 能量}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Yuan](icm2026-yuan-quantitativity)，§5.3}
+
+\p{设 #{C/K} 亏格 #{g>1}，#{x_1,\ldots,x_n\in C(K)} 两两不同，#{n\geq 2}。取 #{\bar\alpha=\bar\omega_a /(2g-2)}，#{\bar x_i} 为[可容许点除子](0G4B)。记 #{T=\sum_i\bar\alpha\cdot x_i}、#{S=\sum_{i<j}\bar x_i\cdot\bar x_j}，以及 #{H=\widehat h_K(\sum_i x_i-n\alpha)}。则}
+##{\begin{aligned}\sum_{i<j}\widehat h_K(x_i-x_j)={}&\frac{(g-1)(n-1)}{n+g-1}H+\frac{gn}{n+g-1}S\\&+\frac{(g-1)(n-1)n^2}{2(n+g-1)}\bar\alpha^2.\end{aligned}}
+\p{\strong{证明。}由[负高度相交公式](0G4C)和[伴随公式](0G4D)，#{\widehat h_K(x_i-x_j)=(g-1)\bar\alpha\cdot x_i+(g-1)\bar\alpha\cdot x_j+\bar x_i\cdot\bar x_j}。每个 #{x_i} 出现 #{n-1} 次，求和得到 #{(g-1)(n-1)T+S}。}
+\p{另一方面，展开 #{-\tfrac 12(\sum_i\bar x_i-n\bar\alpha)^2} 得}
+##{H=(n+g-1)T-S-\frac{n^2}{2}\bar\alpha^2.}
+\p{从第二式解出 #{T} 并代回第一式；#{S} 的系数变为 #{1+(g-1)(n-1)/(n+g-1)=gn/(n+g-1)}，得到所述恒等式。}
+\p{若每个 #{|x_i-\beta|^2\leq t}，三角不等式给出每项 #{\widehat h_K(x_i-x_j)\leq 4t}，故左边至多 #{2n(n-1)t}。右边的 #{H\geq 0}，末项按 #{n^2\bar\alpha^2} 增长。只要能将 #{S} 的负部控制在 #{n\log n} 量级，足够小的 #{t} 就会限制 #{n}。这里的二次展开已给出，统一能量界则是[深层局部输入](0G4M)。}

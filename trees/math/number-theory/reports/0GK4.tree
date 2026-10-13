@@ -1,0 +1,11 @@
+\title{孪生素数常数来自哪些局部因子}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§2 定义 2.2 后的计算](icm2026-sawin-probability)}
+
+\p{令 #{W} 为包含 #{2} 的有限个不同素数的乘积，在[固定筛模型](0GK3)中记 #{T_N=\#\{n\leq N:n,n+2\in S_W\}}。固定 #{W} 后，#{N\to\infty} 时有}
+##{\mathbb ET_N\sim C_W\frac N{(\log N)^2},\qquad C_W=2\prod_{\substack{p\mid W\\p>2}}\frac{1-2/p}{(1-1/p)^2}.}
+\p{\strong{计算允许的剩余类。}模 #{2} 时须排除 #{n\equiv 0}，剩一半；模奇素数 #{p} 时须排除 #{0,-2} 两类，剩比例 #{1-2/p}。不同素数模数互素，选定各个剩余类后恰有一个模 #{W} 剩余类：逐次用 [Bézout 等式](0AF0)合并两个同余式即可证明这个对应。故同时互素的类所占比例为 #{\frac 12\prod_{p\mid W,p>2}(1-2/p)}。同样的计数给 #{\phi(W)/W=\prod_{p\mid W}(1-1/p)}。}
+\p{\strong{计算期望。}#{n} 与 #{n+2} 是不同坐标，独立性给出入选概率之积。除去只依赖 #{W} 的有限个小整数后，该积在允许的类上等于 #{(W/\phi(W))^2/(\log n\log(n+2))}，其余为零。每个固定剩余类在 #{1\leq n\leq N} 中有 #{N/W+O(1)} 项。把 #{n\leq N^{1-\delta}} 与其余项分开，再令 #{\delta\downarrow 0}，即得对数权重的渐近式。代入类比例得到 #{C_W}。}
+\p{对奇素数，局部因子等于 #{1-1/(p-1)^2}。因 #{\sum_{p>2}(p-1)^{-2}<\infty}，此乘积收敛到正数。让 #{W} 包含越来越多素数后，得到常数 #{C_2=2\prod_{p>2}(1-(p-1)^{-2})}。真正孪生素数的计数满足 #{\#\{n\leq N:n,n+2\text{ 均为素数}\}\sim C_2N/(\log N)^2} 是 Hardy–Littlewood 猜想；上述证明只计算模型的期望。}

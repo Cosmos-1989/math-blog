@@ -1,0 +1,10 @@
+\title{Maier 定理中的短区间密度偏差}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，定理 2.3；引 Maier 1985](icm2026-sawin-probability)}
+
+\p{固定任意实数 #{\lambda>1}，记 #{A_\lambda(x)} 为闭区间 #{[x,x+(\log x)^\lambda]} 中素数的个数。Maier 定理断言}
+##{\liminf_{x\to\infty}\frac{A_\lambda(x)}{(\log x)^{\lambda -1}}<1<\limsup_{x\to\infty}\frac{A_\lambda(x)}{(\log x)^{\lambda -1}}.}
+\p{[上极限与下极限](0F61)中的 #{x} 遍历实数。特别地，对每个固定 #{\lambda>1}，存在正数 #{\delta_-,\delta_+} 与两列趋于无穷的区间位置，使归一化计数分别不超过 #{1-\delta_-}、不小于 #{1+\delta_+}。这是引用的深层数论定理，证明见 H. Maier，Primes in short intervals，Michigan Mathematical Journal 32 (1985)，221–225。}
+\p{在 [Cramér 模型](0GK1)中，对一个给定位置 #{x} 的同长度区间，期望约为 #{(\log x)^{\lambda -1}}，方差不超过期望，故相对偏差概率趋零。这里用的是[计数集中的方差论证](0GK2)。它控制每个给定位置的概率，不能自动升级为以概率一同时控制所有充分大的位置。Maier 定理寻找的是特殊区间，极端位置与典型采样须分开比较。}

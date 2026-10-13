@@ -1,0 +1,11 @@
+\title{谱分离矩阵对的二阶横截计算}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Nelson 的轨道法讲义](icm2026-nelson)，第 36 张的二阶特例}
+
+\p{设 #{\tau=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)}，#{bc\ne 0}，即满足[谱分离](0H4P)。置 #{z=\operatorname{diag}(1,0)}。若矩阵 #{\gamma} 满足 #{[\gamma,\tau]=0}，且存在 #{y\in\mathbb C} 使 #{[\gamma,[z,\tau]]=[\operatorname{diag}(y,0),\tau]}，则 #{\gamma} 为标量矩阵。括号取[矩阵交换子](0F00)。}
+\p{\strong{证明。}写 #{\gamma=\left(\begin{smallmatrix}r&s\\u&v\end{smallmatrix}\right)}。由 #{[\gamma,\tau]=0} 的左上项和右上项，得到 #{sc=bu}、#{b(r-v)=s(a-d)}。又有}
+##{[z,\tau]=\begin{pmatrix}0&b\\-c&0\end{pmatrix},\qquad [\operatorname{diag}(y,0),\tau]=\begin{pmatrix}0&yb\\-yc&0\end{pmatrix}.}
+\p{二重交换子左上项为 #{-sc-bu=-2sc}，右侧左上项为零。因 #{c\ne 0} 且系数域为特征零，得到 #{s=0}。再由 #{sc=bu} 与 #{b\ne 0} 得 #{u=0}；由 #{b(r-v)=s(a-d)} 得 #{r=v}。故 #{\gamma=rI_2}。}
+\p{谱分离确实必要。例如 #{b=c=0} 时，#{\tau}、#{z} 及任意对角 #{\gamma} 相互交换，假设成立却不能推出 #{\gamma} 为标量。}

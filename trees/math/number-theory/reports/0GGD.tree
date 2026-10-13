@@ -1,0 +1,10 @@
+\title{非负权重分解保留条件二阶矩的信息}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4，式 (4.2) 之前的加权平均](icm2026-harper-probability)}
+
+\p{在[概率空间](00Q3)上，设 #{Y\geq 0} 可积，#{G_1,\ldots,G_J\geq 0} 可测，且 #{\sum_jG_j=1} 几乎处处。记 #{\sigma_j=\mathbb EG_j}；对 #{\sigma_j>0} 定义 #{\mathbb E_jY=\mathbb E(G_jY)/\sigma_j}。则对 #{0<q\leq 1} 有}
+##{\mathbb EY^q\leq\sum_{j:\sigma_j>0}\sigma_j(\mathbb E_jY)^q.}
+\p{\strong{证明。}#{G_j/\sigma_j} 是一个总积分为 #{1} 的非负密度，所以 #{\mathbb E_j} 是[期望](00L1)。当 #{0<q<1} 时，对该概率测度使用[积分 Hölder 不等式](0A68)，指数取 #{1/q} 和 #{1/(1-q)}，得到 #{\mathbb E_j(Y^q\cdot 1)\leq(\mathbb E_jY)^q}。乘以 #{\sigma_j} 后求和，左边为 #{\mathbb E(\sum_jG_j)Y^q=\mathbb EY^q}。#{\sigma_j=0} 的项几乎处处为零；#{q=1} 时是等式。}
+\p{若所有 #{G_j} 是互不相交事件的指示函数，这就是[给定离散变量的条件期望](0A01)。允许平滑且相互重叠的权重后，仍有同样的不等式。在特征标和问题中取 #{Y=|S|^2}，权重可由短素数和构造；保留各个 #{\mathbb E_j|S|^2} 的变化，比直接用 #{(\mathbb E|S|^2)^q} 更精细。}

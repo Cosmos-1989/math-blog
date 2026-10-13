@@ -1,0 +1,11 @@
+\title{整数序列的全局 Gowers 能量}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§4 的无约束差分记号}
+
+\p{设 #{s\geq 1} 为整数。对有限支撑的 #{f:\mathbb Z\to\mathbb C}，使用[乘法差分](0GO8)，定义 #{s} 阶能量与未归一化的 Gowers 量为}
+##{E_s(f)=\sum_{x,h_1,\ldots,h_s\in\mathbb Z}\Delta_{h_1,\ldots,h_s}f(x),\qquad \|f\|_{U^s}=E_s(f)^{1/2^s}.}
+\p{这些和式有限：非零乘积要求 #{x} 与每个 #{x+h_i} 都落在 #{f} 的支撑中。直接按最后一个差分参数分组，得}
+##{E_{s+1}(f)=\sum_h E_s(\Delta_hf),\qquad E_1(f)=\left|\sum_xf(x)\right|^2.}
+\p{第一式来自差分算子的交换性，第二式来自换元 #{y=x+h}。由第二式及归纳可知所有 #{E_s(f)\geq 0}。若 #{f} 支撑于长度 #{N} 的区间且 #{|f|\leq 1}，则 #{E_s(f)} 的自然尺度是 #{N^{s+1}}。因此以 #{E_s(f)\geq\delta N^{s+1}} 表示“大能量”，可以避免把能量与它的 #{2^s} 次根混用。}

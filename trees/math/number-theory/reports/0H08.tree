@@ -1,0 +1,10 @@
+\title{矩阵累积余数树为何保持乘法顺序}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey](icm2026-harvey-art)，§3.3；行向量形式的正确性证明}
+
+\p{给定整数 #{d\times d} [矩阵](00GK) #{A_1,\ldots,A_n}、整数行向量 #{v\in\mathbb Z^{1\times d}} 及正整数模数 #{m_j}。目标是逐项求 #{vA_1\cdots A_{j-1}\bmod m_j}。值树使用[有序矩阵乘积](0H02) #{P_I}，模数树使用整数乘积 #{M_I}。根向量是 #{C_I=v\bmod M_I}，递推为}
+##{C_L=C_I\bmod M_L,\qquad C_R=C_IP_L\bmod M_R.}
+\p{这里模运算逐项进行，#{C_IP_L} 是行向量右乘矩阵。\strong{证明。}设 #{I=\lbrack l,r\rparen}，中点为 #{s=(l+r)/2}，左右子区间为 #{L=\lbrack l,s\rparen}、#{R=\lbrack s,r\rparen}。若父向量同余于 #{vA_1\cdots A_{l-1}}，向左约化保持前缀；向右必须补上 #{A_l\cdots A_{s-1}=P_L}，而此因子在前缀的右边。[矩阵逐项约化相容性](0H01)和 #{M_R\mid M_I} 保证右孩子同余于 #{vA_1\cdots A_{s-1}}。根成立，故归纳至叶成立。}
+\p{例如 #{A_1=\begin{pmatrix}1&1\\0&1\end{pmatrix}}、#{A_2=\begin{pmatrix}2&1\\0&1\end{pmatrix}}，则 #{A_1A_2=\begin{pmatrix}2&2\\0&1\end{pmatrix}}，而 #{A_2A_1=\begin{pmatrix}2&3\\0&1\end{pmatrix}}。交换顺序会改变输出。若目标是整个前缀矩阵，可以把初值换为单位矩阵，逐行应用同一证明。}

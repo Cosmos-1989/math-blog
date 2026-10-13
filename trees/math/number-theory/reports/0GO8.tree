@@ -1,0 +1,10 @@
+\title{乘法差分降低多项式相位的次数}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§3 的差分记号}
+
+\p{对函数 #{f:\mathbb Z\to\mathbb C} 和整数 #{h}，定义乘法差分 #{\Delta_hf(x)=f(x)\overline{f(x+h)}}。迭代记为 #{\Delta_{h_1,\ldots,h_s}f=\Delta_{h_1}\cdots\Delta_{h_s}f}。这些算子彼此交换，因为}
+##{\Delta_{h,k}f(x)=f(x)\overline{f(x+h)f(x+k)}f(x+h+k).}
+\p{令 #{e(t)=\exp(2\pi it)}。若 #{f(x)=e(P(x))}，其中 #{P} 是实系数多项式，则 #{\Delta_hf(x)=e(P(x)-P(x+h))}。二项式展开说明，若 #{P} 的次数为 #{d\geq 1}，最高次项在相减时消去，剩余次数至多 #{d-1}。例如 #{\Delta_h e(\theta x^2)=e(-2\theta hx-\theta h^2)}，再差分一次得到常数相位。}
+\p{记录两个独立平移时，也可写 #{\Delta_{(a,b)}f(x)=f(x+a)\overline{f(x+b)}}。这是 #{\Delta_{b-a}f(x+a)}；在对 #{x} 求全体整数和时，平移 #{x} 不改变结果。两个记号对应的平均权重仍须分别保留。}
