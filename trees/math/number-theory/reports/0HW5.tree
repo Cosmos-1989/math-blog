@@ -1,0 +1,22 @@
+\title{已知二次主弧相位时的局部逆推导}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§4，引理4.2之后将二次相位分成短等差段的步骤；显式参数特例}
+
+\p{设 #{N,M,q,L\geq 1} 为整数，#{0<\delta\leq 1}，#{g_0,g_1:\mathbb Z\to\mathbb C} 支撑于 #{[N]=\{1,\ldots,N\}}，且 #{|g_i|\leq 1}。写 #{e(t)=\exp(2\pi it)}、#{\xi=a/q+\beta}，其中 #{a\in\mathbb Z}。假设}
+##{\left|\sum_x\sum_{y=1}^Mg_0(x)g_1(x+y)e\bigl(\xi(x+y^2)\bigr)\right|\geq\delta NM,\qquad qL\leq\frac{\delta M}{8},\qquad 4\pi|\beta|MqL\leq\frac\delta 4.}
+\p{则线性位置上的函数满足局部平均下界}
+##{\sum_{z\in\mathbb Z}\left|\sum_{j=1}^Lg_1(z+qj)\right|\geq\frac\delta 2NL.}
+
+\p{\strong{在参数区间分块。}把 #{\{1,\ldots,M\}} 按模 #{q} 的剩余类分成长度 #{L} 的整段 #{P=b_P+q\{1,\ldots,L\}} 和余点集 #{R}。有 #{|R|<qL}，整段数 #{K\leq M/L}。余点对原相关的贡献绝对值至多 #{NqL\leq\delta NM/8}。}
+
+\p{\strong{控制二次相位误差。}取每段首点 #{y_P}。同段内 #{y^2-y_P^2} 被 #{q} 整除，所以有理相位不变。又 #{1\leq y,y_P\leq M}，#{|y-y_P|<qL}，故}
+##{|e(\xi y^2)-e(\xi y_P^2)|\leq 2\pi|\beta|\,|y^2-y_P^2|\leq 4\pi|\beta|MqL\leq\delta /4.}
+\p{于是冻结每段相位的总误差至多 #{\delta NM/4}。去掉余点并冻结相位后的相关绝对值至少为 #{5\delta NM/8}。}
+
+\p{\strong{从相关抽取局部和。}用 #{|g_0|\leq 1} 及三角不等式，上述相关至多为}
+##{\sum_P\sum_{x\in[N]}\left|\sum_{j=1}^Lg_1(x+b_P+qj)\right|\leq K\sum_z\left|\sum_{j=1}^Lg_1(z+qj)\right|.}
+\p{右边的换元 #{z=x+b_P} 可以扩大为所有整数求和，因为被求和项非负。由 #{K\leq M/L} 得到至少 #{5\delta NL/8} 的下界，从而得到陈述中的 #{\delta NL/2}。}
+
+\p{若进一步 #{g_1=1_A-(|A|/N)1_{[N]}} 为某集合的平衡函数，且 #{qL\leq\delta N/16}，则[局部平均到密度增量](0HW0)以 #{\eta=\delta /2} 给出完整等差段上的密度增益 #{\delta /8}。这就从已知二次主弧相位的相关性得到密度增量；[一般局部逆定理](0GO7)还须从任意二次位置函数抽取这种相位信息。}

@@ -1,0 +1,11 @@
+\title{多变量 Taylor 公式的积分余项}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+
+\p{设整数 #{N\geq 1}，函数 #{f:U\to\mathbb C} 在开集 #{U\subseteq\mathbb R^d} 上有连续的 #{N} 阶[偏导数](0A32)，线段 #{\{x+tv:0\leq t\leq 1\}} 包含于 #{U}。对多重指标 #{\alpha=(\alpha_1,\ldots,\alpha_d)}，记 #{|\alpha|=\sum_j\alpha_j}、#{\alpha!=\prod_j\alpha_j!}、#{v^\alpha=\prod_jv_j^{\alpha_j}}。则}
+##{f(x+v)=\sum_{|\alpha|<N}\frac{v^\alpha}{\alpha!}\partial^\alpha f(x)+N\sum_{|\alpha|=N}\frac{v^\alpha}{\alpha!}\int_0^1(1-t)^{N-1}\partial^\alpha f(x+tv)\,dt.}
+
+\p{\strong{证明。}令 #{F(t)=f(x+tv)}。[链式法则](0A34)反复给出 #{F^{(j)}(t)=\sum_{|\alpha|=j}(j!/\alpha!)v^\alpha\partial^\alpha f(x+tv)}。由[微积分基本定理](0A3C)，#{F(1)=F(0)+\int_0^1F'(t)\,dt}。对导数反复应用此式，或对积分逐次分部积分，得到}
+##{F(1)=\sum_{j=0}^{N-1}\frac{F^{(j)}(0)}{j!}+\frac{1}{(N-1)!}\int_0^1(1-t)^{N-1}F^{(N)}(t)\,dt.}
+\p{代入导数公式即得结论。特别地，若线段上所有 #{N} 阶偏导的模不超过 #{M}，余项的模不超过 #{M(\sum_j|v_j|)^N/N!}。}

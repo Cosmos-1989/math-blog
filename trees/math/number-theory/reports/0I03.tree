@@ -1,0 +1,18 @@
+\title{小范数余项怎样把近似右逆变为预解算子}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§4.2；[Hide–Magee, Near optimal spectral gaps for hyperbolic surfaces](https://arxiv.org/pdf/2107.05292v3)，v3，2023-02-15，§1.2、§7，印刷页5–7、33–34}
+
+\p{设 #{A:D(A)\to H} 是复 Hilbert 空间上的[自伴算子](0GSN)，#{z\in\mathbb R}。设 #{Q:H\to H} 有界，#{QH\subseteq D(A)}，且对每个 #{v\in H} 有 #{(A-zI)Qv=v+Ev}，其中 #{E} 是[有界算子](00M4)，#{\|E\|\leq\kappa<1}。则 #{z} 属于[预解集](0GSQ)，且}
+##{(A-zI)^{-1}=Q\sum_{j=0}^\infty(-E)^j,\qquad\|(A-zI)^{-1}\|\leq\frac{\|Q\|}{1-\kappa}.}
+
+\p{\strong{在有界算子中消去余项。}由 #{\|E^j\|\leq\kappa^j}，级数的尾项在算子范数中至多为相应几何级数尾和。Hilbert 空间完备，逐向量取极限得到有界算子 #{B=\sum_{j\geq 0}(-E)^j}，且 #{\|B\|\leq(1-\kappa)^{-1}}。有限几何和的恒等式在算子范数下取极限，得到 #{(I+E)B=B(I+E)=I}。}
+
+\p{令 #{R=QB}。因为 #{QH\subseteq D(A)}，乘积有定义，且 #{(A-zI)R=(I+E)B=I}。所以 #{A-zI} 满射。这一步尚未证明单射。}
+
+\p{\strong{自伴性排除核。}若 #{u\in D(A)} 且 #{(A-zI)u=0}，对任意 #{v\in H} 可取 #{w=Rv\in D(A)}。由于 #{z} 为实数，自伴性给出}
+##{\langle u,v\rangle=\langle u,(A-zI)w\rangle=\langle(A-zI)u,w\rangle=0.}
+\p{取 #{v=u} 得 #{u=0}。因此右逆就是双边逆，且其有界性满足预解集定义。这里必须保留自伴性及实参数条件，任意非自伴算子有右逆时仍可能有非零核。}
+
+\p{还可检查[图范数](0GSM)：#{AQ=zQ+I+E}，故 #{Q} 实际上有界地映入 #{D(A)} 的图范数空间。这样，构造逆时既控制 Hilbert 空间范数，也没有遗漏无界算子的定义域。}

@@ -1,0 +1,20 @@
+\title{随机余核怎样证明 Cohen–Lenstra 无限质量公式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，定义 4.1、4.2](icm2026-sawin-probability)；[Wood，arXiv:1710.01350v1，§2 的一般 u 权重](https://arxiv.org/pdf/1710.01350v1)；以下用有限维质量与统一尾界证明归一化，对任意素数成立}
+
+\p{固定素数 #{p} 与整数 #{u\geq 0}，令 #{\mathcal A_p} 为有限阿贝尔 #{p} 群的同构类集合。置}
+##{c_u=\prod_{i=u+1}^\infty(1-p^{-i}),\qquad
+\mu_u(G)=\frac{c_u}{|G|^u|\operatorname{Aut}G|}.}
+\p{则 #{c_u>0}，且}
+##{\sum_{G\in\mathcal A_p}\frac 1{|G|^u|\operatorname{Aut}G|}=c_u^{-1}.}
+\p{进一步，[Haar 余核](0GKI)的分布 #{\nu_n(G)=\mathbb P(C_n\cong G)} 按全变差收敛到 #{\mu_u}，即 #{\frac 12\sum_G|\nu_n(G)-\mu_u(G)|\to 0}。}
+\p{\strong{乘积为正。}对 #{0\leq t\leq 1/2}，有 #{-\log(1-t)=\int_0^t(1-x)^{-1}dx\leq 2t}。因 #{\sum_{i>u}p^{-i}<\infty}，各负对数之和有限，故乘积收敛到正数。}
+\p{\strong{逐群求极限。}[有限维精确质量公式](0HT2)中，对固定 #{G}，秩 #{r(G)} 固定，所以 #{\prod_{j=0}^{r(G)-1}(1-p^{j-n})\to 1}，而另一乘积趋于 #{c_u}。于是 #{\nu_n(G)\to\mu_u(G)}。对每个有限集合 #{\mathcal F\subset\mathcal A_p}，有限求和给 #{\sum_{G\in\mathcal F}\mu_u(G)=\lim_n\nu_n(\mathcal F)\leq 1}。所有有限部分和的上确界因而至多为 #{1}。}
+\p{\strong{证明质量没有丢失。}由[统一秩与指数尾界](0HT3)，给定 #{\varepsilon>0}，存在有限 #{\mathcal F} 使所有 #{n} 都有 #{\nu_n(\mathcal F)\geq 1-\varepsilon}。取有限项极限便得 #{\sum_{G\in\mathcal F}\mu_u(G)\geq 1-\varepsilon}。让 #{\varepsilon\downarrow 0}，得到总质量至少为 #{1}，与上界合并即证质量公式。此步不能仅凭逐群收敛省略。}
+\p{\strong{全变差收敛。}对刚选的 #{\mathcal F}，有 #{\mu_u(\mathcal F)\geq 1-\varepsilon}，于是}
+##{\sum_G|\nu_n(G)-\mu_u(G)|\leq
+\sum_{G\in\mathcal F}|\nu_n(G)-\mu_u(G)|+\nu_n(\mathcal F^c)+\mu_u(\mathcal F^c)
+\leq\sum_{G\in\mathcal F}|\nu_n(G)-\mu_u(G)|+2\varepsilon.}
+\p{有限和趋于零，再令 #{\varepsilon\downarrow 0} 即得。这个概率模型定理也适用于 #{p=2}；把 #{u=0,1} 的权重解释为二次域类群分布，仍是具有另外算术限制的 [Cohen–Lenstra 猜想](0GKL)。全变差收敛控制有界观测量，并不自动允许交换无界满射计数的期望与极限。}

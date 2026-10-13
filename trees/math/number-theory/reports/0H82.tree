@@ -1,0 +1,16 @@
+\title{奇数次模型的约化除子为何存在且唯一}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，推论 4.14、引理 4.17；Riemann–Roch 输入为定理 4.12}
+
+\p{设 #{k} 为特征不为二的[完美域](00SQ)，#{C:y^2=f(x)} 无重根、#{\deg f=2g+1}，#{J} 为其 [Jacobian](0C07)。每个 #{P\in J(k)} 唯一写成 #{[D-d\infty]}，其中 #{D} 是次数 #{d\leq g} 的 #{k} 有理[半约化除子](0H81)。结合多项式编码，这证明[约化 Mumford 表示](0G02)的存在唯一性。}
+
+\p{\strong{最小次数代表。}先在 #{\bar k} 上取表示 #{P} 的零次[除子类](0C05)代表 #{E}。这里调用代数曲线的 Riemann–Roch 定理：#{\ell(F)-\ell(K_C-F)=\deg F+1-g}；#{L(F)} 按零极点约束定义，复解析版本见 [Riemann–Roch](00FJ)。于是 #{L(E+g\infty)\ne 0}。取使 #{L(E+d\infty)\ne 0} 的最小整数 #{d\geq 0}，则 #{d\leq g}。}
+
+\p{把允许的极点阶增加一，空间维数至多增加一：局部 Laurent 展开中最高允许项的系数给出 #{L(E+d\infty)/L(E+(d-1)\infty)} 到一维空间的单射。因此最小非零空间是一维。任选非零 #{h}，有效除子 #{D=E+d\infty+\operatorname{div}(h)} 与 #{h} 的常数倍无关，并且是该最小次数的唯一有效代表。}
+\p{若 #{D} 含 #{\infty}，可以删去它并把 #{d} 减一；若含 #{Q+\iota Q}，利用 #{\operatorname{div}(x-x(Q))=Q+\iota Q-2\infty} 可以删去这一对并把 #{d} 减二。这都违反最小性，故 #{D} 半约化。对每个 Galois 元素 #{\sigma}，#{\sigma D} 是同一类的最小次数代表，唯一性给出 #{\sigma D=D}，所以 #{D} 定义在 #{k} 上。}
+
+\p{\strong{任意低次数代表的唯一性。}若另有半约化 #{D'}，#{d'=\deg D'\leq g}，代表同一类，则}
+##{D'+\iota D\sim(d+d')\infty.}
+\p{因此存在函数，其零除子为 #{D'+\iota D}，极点除子为 #{(d+d')\infty}。由[极点空间计算](0H80)，因为 #{d+d'\leq 2g}，该函数只能是 #{x} 的多项式。它的每个非分歧零纤维在两点上的重数相等；由于 #{D'} 与 #{\iota D} 各自都不能含对合点，这迫使 #{D'} 在每点的重数等于 #{D} 的重数。分歧点处总重数须为偶数，而两者各至多一，结论相同。故 #{D'=D}。}

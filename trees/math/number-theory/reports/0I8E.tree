@@ -1,0 +1,11 @@
+\title{谱分离轨道的局部体积估计}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{固定实矩阵 #{\tau\in M_{n+1}(\mathbb R)}，其复[特征值](0F0B)与左上主子块的特征值[不相交](0H4P)。在 #{H=\operatorname{GL}_n(\mathbb R)} 上定义 #{F_\tau(h)=\operatorname{diag}(h,1)\tau\operatorname{diag}(h^{-1},1)}。则存在单位元邻域 #{U\subset H} 和常数 #{C}，对任意目标矩阵 #{z} 与 #{0<\varepsilon\leq 1}，}
+##{\mu_H\{h\in U:\|F_\tau(h)-z\|<\varepsilon\}\leq C\varepsilon^{n^2}.}
+\p{这里矩阵范数取各元素平方和的平方根，#{\mu_H} 为固定 [Haar 测度](00T1)。}
+
+\p{\strong{证明。}以 #{h=I+X} 为单位元附近的坐标，直接对逆矩阵求导，得到 #{DF_\tau(I)(X)=[\operatorname{diag}(X,0),\tau]}。此映射由[无穷小稳定子平凡性](0I8C)为单射。将[局部距离与体积估计](0I8D)应用于维数 #{m=n^2} 的矩阵空间，便得坐标 Lebesgue 体积上界。Haar 测度在此坐标中是常数倍的 #{|\det h|^{-n}\,dh}；这可由左乘 #{h_0} 对每列的 Jacobian 均为 #{|\det h_0|} 验证。在足够小的闭邻域中该密度有界，所以同一上界适用于 #{\mu_H}。}
+\p{若 #{\tau} 变化于一个固定的谱分离紧集，上述常数和邻域可统一选择。微分在单位球面上的最小模长依 #{\tau} 连续且处处为正，紧性给出共同正下界；二阶导数在共同小邻域内有界，从而距离估计的半径也可统一。这里控制的是单个轨道映射；周期估计中涉及两个相对轨道的横截问题还需要进一步的几何条件。}

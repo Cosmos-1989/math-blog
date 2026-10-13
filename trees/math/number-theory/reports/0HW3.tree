@@ -1,0 +1,18 @@
+\title{二次指数和的 Weyl 差分界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§3差分与引理4.2的背景；保留对数损失的纯二次和估计}
+
+\p{设 #{N\geq 1} 为整数，#{\alpha,\beta\in\mathbb R}，#{e(t)=\exp(2\pi it)}，并令 #{S=\sum_{n=1}^Ne(\alpha n^2+\beta n)}。若互素整数 #{a,q} 满足 #{q\geq 1} 和 #{|2\alpha -a /q|\leq q^{-2}}，则}
+##{|S|^2\leq 100\left(\frac{N^2}{q}+(N+q)\log(2q)\right).}
+\p{有理逼近的对象是二次项系数的两倍；这个因子来自一次差分。常数 #{100} 是下面估计允许的统一常数。}
+
+\p{\strong{平方后按差分组。}展开 #{|S|^2}，按两指标之差 #{h} 求和，得}
+##{|S|^2=N+2\operatorname{Re}\sum_{h=1}^{N-1}e(\alpha h^2+\beta h)\sum_{n=1}^{N-h}e(2\alpha hn).}
+\p{内层已是线性相位。对任意实数 #{t}，几何级数公式给出 #{|\sum_{n=1}^Ke(tn)|\leq\min\{K,1/(2\|t\|)\}}：当 #{t\notin\mathbb Z} 时分母 #{|1-e(t)|=2|\sin\pi t|\geq 4\|t\|}，分子至多二；整数情形取 #{K}。于是}
+##{|S|^2\leq N+2\sum_{h=1}^{N-1}\min\left\{N,\frac 1{2\|2\alpha h\|}\right\}.}
+
+\p{\strong{利用有理逼近。}#{q=1} 时，#{|S|\leq N} 已给出结论。设 #{q\geq 2}，把差分参数分成长度至多 #{\lfloor q/2\rfloor} 的连续块，块数至多 #{3(N/q+1)}。对每块应用[差分频率的间距估计](0HW2)，得到}
+##{|S|^2\leq N+24(N/q+1)\bigl(N+q(1+\log q)\bigr).}
+\p{展开右边，并用 #{1+\log q\leq 2\log(2q)} 及 #{\log(2q)\geq\log 4>1}，可将它控制在所述的 #{100} 倍内。因而当 #{q} 随 #{N} 增大且 #{q\log(2q)=o(N^2)} 时，这个界可产生抵消；例如 #{q} 与 #{N} 同阶时，#{|S|=O(\sqrt{N\log N})}。它只处理纯二次相位，不包含[非线性 Roth 主弧引理](0GOF)中的任意权函数。}

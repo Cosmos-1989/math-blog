@@ -1,0 +1,15 @@
+\title{Bernstein 逼近怎样保留非负权重分解}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4 的多项式转移机制](icm2026-harper-probability)；下述紧立方体上的 Bernstein 版本为初等推导，并非原文的最优平滑逼近}
+
+\p{设 #{J,D\geq 1} 为整数，#{F:[0,1]^J\to\mathbb R} 满足 [Lipschitz 条件](00FU) #{|F(x)-F(y)|\leq L\|x-y\|_2}。定义}
+##{B_DF(y)=\sum_{k_1=0}^D\cdots\sum_{k_J=0}^D F(k_1/D,\ldots,k_J/D)\prod_{j=1}^J\binom D{k_j}y_j^{k_j}(1-y_j)^{D-k_j}.}
+\p{这是总次数至多 #{JD} 的多项式，且}
+##{\sup_{y\in[0,1]^J}|B_DF(y)-F(y)|\leq\frac L2\sqrt{\frac JD}.}
+\p{\strong{把系数看成概率。}固定 #{y}，让 #{K_j} 是 #{D} 个参数为 #{y_j} 的[独立](00L3) [Bernoulli 变量](00L4)之和，不同 #{j} 也独立。选择哪些试验取值为 #{1}，给出 #{\mathbb P(K_j=k)=\binom Dk y_j^k(1-y_j)^{D-k}}，故 #{B_DF(y)=\mathbb EF(K/D)}。端点处采用 #{0^0=1} 的多项式取值约定。}
+\p{\strong{计算误差。}Bernoulli 的期望和方差给出 #{\mathbb EK_j=Dy_j}、#{\mathbb E(K_j-Dy_j)^2=Dy_j(1-y_j)}。因此}
+##{\mathbb E\|K/D-y\|_2^2=\frac 1D\sum_{j=1}^J y_j(1-y_j)\leq\frac J{4D}.}
+\p{由 Lipschitz 条件与[积分 Hölder 不等式](0A68)的平方情形，#{|\mathbb EF(K/D)-F(y)|\leq L\mathbb E\|K/D-y\|_2\leq (L/2)\sqrt{J/D}}。}
+\p{每个二项式权重都非负，且由二项式公式，它们的总和为 #{1}。所以 #{F\geq 0} 蕴含 #{B_DF\geq 0}；若有限个函数满足 #{\sum_vF_v=1}，则线性性还给出 #{\sum_vB_DF_v=B_D1=1}。逼近后仍是非负权重分解，这使它可以进入条件二阶矩的不等式。}

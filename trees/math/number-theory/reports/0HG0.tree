@@ -1,0 +1,14 @@
+\title{小扩张把矩阵乘法误差线性化}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Gee，Modularity lifting theorems，arXiv:2202.05818v1，§3.10–3.14](https://arxiv.org/html/2202.05818v1#S3.SS2)的障碍论背景；平方零计算}
+
+\p{设 #{A'\twoheadrightarrow A} 为有限交换[局部环](00CX)的满射，二者剩余域均为 #{k}，核为 #{I}。若 #{\mathfrak m_{A'}I=0}，称它为小扩张。由于 #{I\subseteq\mathfrak m_{A'}}，有 #{I^2=0}；且 #{A'} 对 #{I} 的乘法作用通过 #{k}，所以 #{I} 是有限维 #{k} 向量空间。例如 #{k[t]/(t^{r+1})\to k[t]/(t^r)} 的核为 #{kt^r}，其中 #{r\geq 1}。}
+
+\p{约化映射 #{\operatorname{GL}_n(A')\to\operatorname{GL}_n(A)} 满射。事实上，任意提升矩阵的行列式模极大理想仍非零，因而为单位。其核由 #{1+X} 组成，其中 #{X\in M_n(I)}；平方零性给出}
+##{(1+X)(1+Y)=1+X+Y,\qquad(1+X)^{-1}=1-X.}
+
+\p{于是核中的群运算就是矩阵加法。若 #{P\in\operatorname{GL}_n(A')}，则 #{PXP^{-1}} 只依赖 #{P} 模极大理想的像：系数中属于极大理想的差与 #{I} 相乘为零。这解释了为何提升问题的误差取值于剩余表示的伴随模，而不是一个新的非交换群。}
+
+\p{[对偶数](0F03)是 #{r=1} 的特例。小扩张允许把这个一阶计算用于一个已经非平凡的底层表示，而不只用于剩余表示本身。}

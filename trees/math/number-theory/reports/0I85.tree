@@ -1,0 +1,10 @@
+\title{量子化交换子的首项是 Poisson 括号}
+\date{2026-10-13}
+\taxon{Corollary}
+\author{author}
+
+\p{对固定 #{a,b\in\mathcal S(\mathbb R_x^d\times\mathbb R_\xi^d)}，采用坐标约定 #{\{a,b\}=\sum_j(\partial_{\xi_j}a\,\partial_{x_j}b-\partial_{x_j}a\,\partial_{\xi_j}b)}。这是[余切相空间](0BL2)上的 Poisson 括号，公式明确了此处的符号。用[左量子化](0H4J)及交换子 #{[A,B]=AB-BA}，有}
+##{[\operatorname{Op}_h(a),\operatorname{Op}_h(b)]=\frac h i\operatorname{Op}_h(\{a,b\})+R_h,\qquad \|R_h\|_{L^2\to L^2}\leq C_{a,b}h^2.}
+
+\p{\strong{证明。}在[二阶截断的复合公式](0I84)中，#{\operatorname{Op}_h(a)\operatorname{Op}_h(b)} 的符号为 #{ab+(h/i)\sum_j\partial_{\xi_j}a\partial_{x_j}b+h^2r_h}。交换 #{a,b} 后相减，零阶项消失，一阶项恰为所写括号。两项余符号均有一致 Schwartz 半范数，故算子余项满足所述界。}
+\p{例如取 #{a(x,\xi)=\xi}、#{b(x,\xi)=x} 作形式检验，对应微分算子为 #{(h/i)\partial_x} 与乘法 #{x}，其交换子为 #{h/i}。这两个多项式不属于上述 Schwartz 假设；检验只确认符号方向，不用于范数结论。}

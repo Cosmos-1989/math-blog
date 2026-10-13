@@ -1,0 +1,16 @@
+\title{分母校准的二次最优化产生行权节省}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Calegari–Dimitrov–Tang，arXiv:2408.15403v2，§7.3，式 (7.3.16) 后，印刷第 103 页](https://arxiv.org/abs/2408.15403v2)；二次式计算，中文改写，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)}
+
+\p{设 #{m\geq 1}、#{b_j>0}、#{0\leq u_j\leq m}，并令 #{\sigma=\sum_jb_j}。假设实数 #{L,I} 满足：对每组 #{0\leq y_j\leq mb_j}，都有}
+##{m^2(L-\sigma)\leq mI+\sum_j\left(\frac{y_j^2}{b_j}-2u_jy_j\right).}
+\p{令 #{\tau=\sigma -m^{-2}\sum_ju_j^2b_j}。若 #{L>\tau}，则 #{m\leq I/(L-\tau)}。}
+
+\p{\strong{逐列配方。}对每个 #{j}，有}
+##{\frac{y_j^2}{b_j}-2u_jy_j=\frac{(y_j-u_jb_j)^2}{b_j}-u_j^2b_j.}
+
+\p{允许区间包含 #{y_j=u_jb_j}，因此最小值恰为 #{-u_j^2b_j}。同时作这些选择，原不等式化为 #{m^2(L-\tau)\leq mI}；除以正数 #{m(L-\tau)} 即得。}
+
+\p{在 CDT §7.3 的斜率证明中，#{L=\log|\varphi'(0)|}，#{I} 为[双重圆周积分](0HK1)。第 #{j} 列之前有 #{u_j} 个零分母行，校准参数 #{y_j} 在格的体积项贡献线性收益 #{2u_jy_j}，在有限位求和中付出二次成本 #{y_j^2/b_j}。取平衡值 #{u_jb_j} 后，[行权公式](0HK0)的平方节省出现。上述起始不等式来自外部斜率、评价高度与消失阶估计；配方步骤完整解释了它怎样变成定理中的 #{\tau}。}

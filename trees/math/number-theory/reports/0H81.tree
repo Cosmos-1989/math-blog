@@ -1,0 +1,15 @@
+\title{Mumford 多项式为何唯一编码半约化除子}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，定义 4.15、引理 4.16}
+
+\p{设 #{k} 为特征不为二的[完美域](00SQ)，#{f\in k[x]} 无重根且 #{\deg f=2g+1}。令 #{C} 为 #{y^2=f(x)} 的[光滑射影模型](0C01)，#{\infty} 为唯一无穷远点，#{\iota(x,y)=(x,-y)}。称有效[除子](0C04) #{D} 半约化，是指其支撑不含 #{\infty}，且对任何几何点 #{P} 都没有 #{D\geq P+\iota P}。因此分歧点的重数至多一，非分歧点允许重数但不允许同时出现其对合点。次数 #{d} 的 #{k} 有理半约化除子与以下多项式对一一对应：}
+##{u\in k[x]\text{ 首一},\quad\deg u=d,\quad\deg v<d,\quad u\mid f-v^2.}
+\p{零除子对应 #{(1,0)}；其余情况下 #{D} 由 #{u(x)=0,\ y=v(x)} 连同重数决定。这扩展了[约化 Mumford 对](0G02)的表示，暂不要求 #{d\leq g}。}
+
+\p{\strong{构造局部数据。}在 #{\bar k} 上写 #{D=\sum_Pm_PP}，置 #{u=\prod_P(x-x(P))^{m_P}}。对非分歧点 #{P=(a,b)}，#{b\ne 0}。若多项式 #{v_r} 已满足 #{v_r^2\equiv f\bmod(x-a)^r} 且 #{v_r(a)=b}，令 #{v_{r+1}=v_r+c(x-a)^r}。比较下一次系数，得到系数为 #{2b\ne 0} 的一次方程，唯一确定 #{c}。逐次做到 #{r=m_P}。分歧点只需模 #{x-a} 取值零。}
+
+\p{\strong{拼接。}不同 #{a} 的幂两两互素。多项式带余除法的 Euclid 算法给出互素多项式 #{A,B} 的等式 #{sA+tB=1}，故 #{r_BsA+r_AtB} 同时实现模 #{B,A} 的指定余数。反复使用此式并取模 #{u} 的余式，得到唯一的 #{\deg v<d} 的 #{v}。构造对 Galois 作用不变，故 #{u,v} 的系数都在 #{k} 中。}
+
+\p{\strong{反向构造。}给定 #{(u,v)}，将每个根 #{a} 按重数配置在 #{(a,v(a))} 上。若 #{f(a)=v(a)=0}，则 #{f-v^2} 在 #{a} 的导数为 #{f'(a)\ne 0}，故 #{a} 在 #{u} 中只能是单根。其余根只选择两个点中的一个，因而得到半约化除子。局部构造与取值重数互为逆操作，证明一一对应。}

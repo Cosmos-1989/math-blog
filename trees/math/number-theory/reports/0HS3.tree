@@ -1,0 +1,17 @@
+\title{随机 Euler 乘积在半平面上的非零全纯构造}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3](icm2026-sawin-probability)；[Kowalski，作者 PDF，命题 3.2.9(1)，印刷页 45–46](https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf)；这里用二进正交估计证明素数项收敛}
+
+\p{令 #{f} 为 [Steinhaus 随机乘法函数](0GG2)。存在一个概率为 #{1} 的事件，使按素数递增排列的有限乘积}
+##{Z_P(s)=\prod_{p\leq P}(1-f(p)p^{-s})^{-1}}
+\p{在 #{H=\{s\in\mathbb C:\operatorname{Re}s>1/2\}} 的每个紧集上一致收敛，极限 #{Z_f} 全纯且处处非零。这里同一个概率一事件适用于全部紧集。}
+\p{\strong{素数一次项。}取 #{X_n=f(n)}（#{n} 为素数），其余 #{X_n=0}。[乘法正交性](0GG5)给出两两正交且二阶矩不超过 #{1}。由[几乎处处部分和界](0HS1)，在同一个概率一事件上，对每个 #{\varepsilon>0} 都有 #{|\sum_{p\leq x}f(p)|\leq C_{\omega,\varepsilon}x^{1/2+\varepsilon}}。给定 #{K\subset H} 紧，选 #{0<\varepsilon<\min_K\operatorname{Re}s-1/2}，再用[分部求和尾界](0HS2)，得到 #{\sum_p f(p)p^{-s}} 在 #{K} 上一致收敛且在 #{H} 全纯。}
+\p{\strong{素数高次项。}对 #{\sigma_0>1/2}，不论样本如何，都有}
+##{\sum_p\sum_{m\geq 2}\sup_{\operatorname{Re}s\geq\sigma_0}\left|\frac{f(p)^m}{mp^{ms}}\right|
+\leq\frac 1{1-2^{-\sigma_0}}\sum_{n=2}^\infty n^{-2\sigma_0}<\infty.}
+\p{因此高次项局部一致绝对收敛；由前述 Cauchy 积分论证，其和全纯。两部分相加，得到全纯函数}
+##{\ell_f(s)=\sum_p f(p)p^{-s}+\sum_p\sum_{m\geq 2}\frac{f(p)^m}{mp^{ms}}.}
+\p{\strong{回到乘积。}当 #{|z|<1}，几何级数逐项积分给 #{\sum_{m\geq 1}z^m/m=-\log(1-z)}，这里取在 #{z=0} 为零的解析支。故 #{Z_P(s)} 等于上述对数和在 #{p\leq P} 截断后的指数。对数和在紧集上一致收敛，且一致有界，指数函数因而也一致收敛到 #{\exp\ell_f(s)}。这证明极限全纯、非零，并避免为不同点任意选择对数支。}
+\p{临界边界 #{\operatorname{Re}s=1/2} 不在结论内：高次项的绝对值比较和及正的一致收敛余量，在此不再由上述估计保证。}

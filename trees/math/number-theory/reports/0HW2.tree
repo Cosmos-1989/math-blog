@@ -1,0 +1,16 @@
+\title{有理逼近怎样控制差分频率的集中}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，引理4.2所用 Weyl 差分背景；圆周间距估计的直接证明}
+
+\p{对实数 #{t} 记 #{\|t\|=\min_{m\in\mathbb Z}|t-m|}。设 #{q\geq 2}，#{\gcd(a,q)=1}，#{|\vartheta -a /q|\leq q^{-2}}。令 #{J} 为含至多 #{\lfloor q/2\rfloor} 个连续整数的区间。则对任意 #{N\geq 1}，}
+##{\sum_{h\in J}\min\left\{N,\frac 1{2\|h\vartheta\|}\right\}\leq 4N+4q(1+\log q),}
+\p{其中 #{\|h\vartheta\|=0} 时，被求和项按 #{N} 计。结论控制频率点可能靠近整数的总贡献。}
+
+\p{\strong{频率点分离。}取不同的 #{h,k\in J}。由 #{0<|h-k|<q} 和互素性，#{\|a(h-k)/q\|\geq 1/q}。圆周距离的三角不等式给出}
+##{\|(h-k)\vartheta\|\geq\frac 1q-\frac{|h-k|}{q^2}\geq\frac 1{2q}.}
+\p{所以 #{h\vartheta\bmod 1} 两两至少相隔 #{1/(2q)}。这里仅使用差 #{h-k}，因此 #{J} 不必从零开始。}
+
+\p{\strong{按到整数的距离分层。}把圆周上满足 #{k/(2q)\leq\|t\|<(k+1)/(2q)} 的点归入第 #{k} 层，#{0\leq k<q}。每层由至多两个长度 #{1/(2q)} 的弧组成。由上述间距，每层至多含四个频率点；端点 #{\|t\|=1/2} 可归入最后一层并沿用同一上界。}
+\p{第零层贡献至多 #{4N}。第 #{k\geq 1} 层中，每项至多 #{q/k}。故总和至多 #{4N+4q\sum_{k=1}^{q-1}1/k\leq 4N+4q(1+\log q)}，最后一步由对递减函数 #{1/t} 作积分比较得到。}

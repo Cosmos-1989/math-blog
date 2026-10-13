@@ -1,0 +1,13 @@
+\title{由平移模型的第一行恢复整张矩阵}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey–Sutherland II](https://math.mit.edu/~drew/conm13352.pdf)，§5、引理 5.3；先消去右侧平移再逐列插值的等价实现}
+
+\p{设 #{g\geq 1}，#{p} 为满足 #{p\geq g} 的奇素数，#{W\in M_g(\mathbb F_p)}。已知 #{g} 个两两不同的 #{a_i\in\mathbb F_p} 及 #{R_i=e_1^{\mathsf T}T(a_i)WT(-a_i)}，这里 #{e_1^{\mathsf T}=(1,0,\ldots,0)} 是行向量，#{T} 是[平移矩阵](0I46)。则这些行向量唯一决定 #{W}。在[Hasse–Witt 平移公式](0I47)中，#{R_i} 正是平移模型的第一行。}
+\p{\strong{去掉右侧基变换。}先计算 #{B_i=R_iT(a_i)}。因 #{T(-a_i)T(a_i)=I}，有}
+##{B_i=(1,a_i,\ldots,a_i^{g-1})W,\qquad
+(B_i)_j=\beta_j(a_i),\quad \beta_j(x)=\sum_{r=1}^gw_{rj}x^{r-1}.}
+\p{对每一列 #{j}，用同一组[插值权重](0I48)恢复 #{\beta_j}，它的系数就是 #{W} 的第 #{j} 列。次数均小于 #{g}，互异节点保证唯一性。这样无需解一个任意的 #{g^2\times g^2} 线性系统。}
+\p{\strong{运算数。}二项系数用 Pascal 递推预处理 #{O(g^2)} 次，各节点的幂也只需 #{O(g^2)} 次加乘。#{g} 次行向量乘上三角矩阵共 #{O(g^3)} 次；权重预处理为 #{O(g^2)} 次加乘和一次求逆；#{g} 列插值为 #{O(g^3)} 次。因此总计 #{O(g^3)} 次域加乘和一次求逆，存储 #{O(g^2)} 个域元素。}
+\p{若用[有限域恒等式](0H0D) #{u^{-1}=u^{p-2}} 实现最后的逆元，按二进制展开反复平方只需 #{O(\log p)} 次模乘。令 #{b=\lceil\log_2p\rceil}，用[快速整数算术](0H06)得到保守位成本 #{O((g^3+\log p)b\log(2b))}。原论文引理 5.3 使用更快的域求逆分析；这里无需该输入。}

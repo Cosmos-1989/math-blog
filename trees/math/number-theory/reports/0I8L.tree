@@ -1,0 +1,13 @@
+\title{高斯积分的归一化常数}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{对实数 #{a>0}，有}
+##{\int_{\mathbb R}e^{-ax^2}\,dx=\sqrt{\pi /a}.}
+
+\p{\strong{证明。}只须计算 #{I=\int_{\mathbb R}e^{-x^2}\,dx}，再换元 #{u=\sqrt a\,x}。它有限且为正，因为 #{|x|\geq 1} 时 #{e^{-x^2}\leq e^{-|x|}}。由 [Tonelli 定理](0H53)与偶性，}
+##{I^2=4\int_0^\infty\int_0^\infty e^{-x^2-y^2}\,dy\,dx.}
+\p{对固定 #{x>0} 作一变量换元 #{y=xt}，再交换两个非负积分的次序，得到}
+##{I^2=4\int_0^\infty\int_0^\infty xe^{-(1+t^2)x^2}\,dx\,dt=2\int_0^\infty\frac{dt}{1+t^2}=\pi.}
+\p{中间的积分由[微积分基本定理](0A3C)应用于 #{-e^{-(1+t^2)x^2}/(2(1+t^2))} 得到；最后用原函数 #{\arctan t} 及端点值 #{0,\pi /2}。因 #{I>0}，取正平方根即得结论。各变量的乘积版本再由 Tonelli 定理推出。}

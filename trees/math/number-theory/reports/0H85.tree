@@ -1,0 +1,15 @@
+\title{奇数次超椭圆 Jacobian 的二挠群如何由因式分解决定}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，引理 5.2}
+
+\p{设 #{k} 为特征不为二的[完美域](00SQ)，#{C:y^2=f(x)}，#{f=c f_1\cdots f_s} 无重根、次数 #{2g+1}，其中 #{f_i\in k[x]} 首一不可约，#{c\ne 0}。令 #{T_i} 为所有满足 #{f_i(x)=0,y=0} 的分歧点之和减去 #{(\deg f_i)\infty} 所代表的 [Jacobian](0C07) 点。则}
+##{J(k)[2]=\langle T_1,\ldots,T_s\rangle,\qquad T_1+\cdots+T_s=0,\qquad \dim_{\mathbb F_2}J(k)[2]=s-1.}
+\p{这里 #{\mathbb F_2} 是二元[有限域](00GF)。第一式中的每个生成元满足 #{2T_i=0}；除这些二阶关系外，第二式是唯一关系。}
+
+\p{\strong{所有二挠点。}若 #{P} 的[唯一约化 Mumford 对](0H82)为 #{(u,v)}，则 #{-P} 对应 #{(u,-v\bmod u)}。所以 #{P=-P} 等价于 #{v=0}，因为 #{2\ne 0} 且 #{\deg v<\deg u}。整除条件变为 #{u\mid f}。因此每个二挠点都是若干 #{T_i} 的和。}
+
+\p{\strong{关系与计数。}函数 #{y} 的[除子](0C04)给出 #{\sum_iT_i=0}。一个因子子集与其补集因而给出同一点。由于总次数为奇数 #{2g+1}，这两个子集中恰有一个的总次数至多 #{g}。低次数子集给出的 #{(u,0)} 已约化；不同的低次数子集由唯一性给出不同的点。因此全部 #{2^s} 个子集恰两两配对，得到 #{2^{s-1}} 个二挠点，没有其他关系。}
+
+\p{例如五次多项式在 #{k} 上完全分裂时维数为四，五次不可约时没有非零 #{k} 有理二挠点。这给[Selmer 秩上界](0G03)中须扣除的二挠维数提供了直接计算。}

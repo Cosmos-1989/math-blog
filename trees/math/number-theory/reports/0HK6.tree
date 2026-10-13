@@ -1,0 +1,22 @@
+\title{动态抽屉原理给出显式算术维数界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Calegari–Dimitrov–Tang，arXiv:2408.15403v2，附录 B.1–B.3，式 (B.3.5)](https://arxiv.org/abs/2408.15403v2)；取 u=1 的全纯参数映射版本，中文改写，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)}
+
+\p{设 #{f_1,\ldots,f_m\in\mathbb Q\lbrack\lbrack x\rbrack\rbrack} 在 #{\mathbb Q(x)} 上线性独立。设正整数 #{\Delta_n} 满足 #{\Delta_n\mid\Delta_{n+1}}、#{\Delta_n[x^n]f_i\in\mathbb Z}，并有 #{\limsup_{n\to\infty}n^{-1}\log\Delta_n\leq\sigma}。取闭单位圆盘邻域全纯的 #{\varphi}，使 #{\varphi(0)=0}，各 #{f_i\circ\varphi} 在该邻域单值亚纯。置}
+##{a=\log|\varphi'(0)|,\qquad B=\log\max\left(1,\max_{|z|=1}|\varphi(z)|\right).}
+\p{若 #{a>\sigma}，则 #{m\leq\frac{2B}{a-\sigma}}。}
+
+\p{\strong{有限维空间。}固定 #{D\geq 1}，考虑 #{\sum_iQ_if_i}，其中 #{\deg Q_i<D}。有理函数域上的独立性使系数映射单射，所以这个空间维数为 #{M=mD}。由[消失阶引理](0HK3)，它有跳点 #{n_1<\cdots<n_M}，且 #{\sum_jn_j\geq M(M-1)/2}。}
+
+\p{\strong{算术与解析比较。}把各 #{Q_i} 的整数系数限制在 #{0,\ldots,T-1}。整除链保证输出的第 #{n} 个系数属于 #{\Delta_n^{-1}\mathbb Z}，因为所用输入系数的次数均不超过 #{n}。[Cauchy 估计](0HK5)与[动态抽屉原理](0HK4)给出}
+##{0\leq\sum_{j=1}^{M}\bigl(\log(mDC)+BD-an_j+\log\Delta_{n_j}\bigr),}
+\p{其中 #{C} 与 #{D,T,n_j} 无关。这一步先固定 #{D}，再令 #{T\to\infty}。}
+
+\p{\strong{取得二次主项。}给定 #{0<\epsilon<a-\sigma}，存在常数 #{C_\epsilon} 使所有 #{n\geq 0} 均满足 #{\log\Delta_n\leq(\sigma+\epsilon)n+C_\epsilon}。因此}
+##{(a-\sigma -\epsilon)\frac{M(M-1)}2\leq M\bigl(BD+\log(mDC)+C_\epsilon\bigr).}
+
+\p{除以 #{MD}，令 #{D\to\infty}，得到 #{(a-\sigma -\epsilon)m/2\leq B}；最后令 #{\epsilon\downarrow 0} 即证。}
+
+\p{这个版本只用独立性、分母增长和解析延拓，不要求预先知道 holonomic 性。[最小公倍数的初等上界](0HK2)提供一个可直接代入的 #{\sigma}。它的分子为圆周上界 #{2B}，与[精细行权定理](0HK1)的双重积分分子和代价 #{\tau} 有不同的强度。}

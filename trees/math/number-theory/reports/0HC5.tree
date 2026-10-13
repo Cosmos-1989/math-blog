@@ -1,0 +1,19 @@
+\title{有限度量图的归一化 Green 核如何构造}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Baker–Faber，Metrized Graphs, Laplacian Operators, and Electrical Networks](https://www.math.ucdavis.edu/~saito/data/LapEig/baker-quantum_graphs.pdf)，§§5–6，定理 4、6–7；限于分片常密度与有限点质量}
+
+\p{设 #{\Gamma} 是有限连通[度量图](0HC4)，#{\mu} 是[概率测度](00Q3)，在每条边上具有常数密度并可含有限个点质量。存在唯一的核 #{g_\mu(x,y)}，使对每个 #{y}，函数 #{x\mapsto g_\mu(x,y)} 连续且分片二次，并满足}
+##{\Delta_xg_\mu(x,y)=\delta_y-\mu,\qquad\int_\Gamma g_\mu(x,y)\,d\mu(x)=0.}
+\p{该核对称：#{g_\mu(x,y)=g_\mu(y,x)}。}
+
+\p{\strong{先解零总质量方程。}给定总质量为零的测度 #{\nu=\sum_e a_e\,dt+\sum_p b_p\delta_p}，把所有点质量位置列为顶点。每条边上取 #{w_e(t)=a_et(\ell_e-t)/2}，端点均为零，故拼成连续函数 #{w}。其 Laplacian 的边密度为 #{a_e}。于是 #{\nu -\Delta w} 是总质量零的顶点测度。}
+
+\p{\strong{解顶点线性方程。}令 #{z_p} 为顶点未知值，沿边线性插值。其顶点 Laplacian 是矩阵 #{Q} 作用于 #{z}，其中对每条端点为 #{p,q} 的边加入 #{(z_p-z_q)/\ell_e} 到 #{(Qz)_p}。这个对称矩阵满足}
+##{z^{\mathsf T}Qz=\sum_{\{p,q\}=e}\frac{(z_p-z_q)^2}{\ell_e}.}
+\p{因图连通，核恰为常向量，故像恰为坐标和零的向量。剩余顶点测度正满足此条件，所以线性方程可解。将解的线性插值加到 #{w}，得到 #{\Delta u=\nu}。所有解只差常数，这是[能量恒等式](0HC4)的结论。}
+
+\p{\strong{归一化与对称性。}取 #{\nu=\delta_y-\mu}，最后减去 #{\int u\,d\mu} 即得到所需函数。记 #{u_x(t)=g_\mu(t,x)}、#{u_y(t)=g_\mu(t,y)}。分部积分给出}
+##{\int u_x\,d\Delta u_y=\int u_y\,d\Delta u_x.}
+\p{左边为 #{g_\mu(y,x)}，右边为 #{g_\mu(x,y)}，因为两函数的 #{\mu} 均值都为零，所以核对称。}

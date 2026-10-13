@@ -16,7 +16,24 @@
         "local_source": "research/sources/number-theory/rational-points/stoll-arxiv-v1.html",
         "sha256": "6885227ad21c61c3ee0151b929e0829cba48f25ee9075bb148b4e8b7468ce9eb",
         "date_discrepancy": "arXiv v1 submitted 2025-09-29; rendered HTML masthead displays 2026-08-24. Version ID and display date are kept separately; no invented version.",
-        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv v1 CC BY-NC-SA 4.0. Public exposition is grounded in the licensed formal edition and independently written derivations."
+        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv v1 CC BY-NC-SA 4.0. Public exposition is grounded in the licensed formal edition and independently written derivations.",
+        "proof_expansion_2026_10_13": {
+          "baseline": "164f927",
+          "report_recheck": "Revisited the primary report's Mumford/descent inputs; earlier full arXiv body reading and selective SIAM collation remain as recorded above.",
+          "additional_primary_texts": [
+            {
+              "author": "Michael Stoll",
+              "title": "Arithmetic of Hyperelliptic Curves",
+              "edition": "Summer Semester 2019 lecture notes; screen PDF dated July 8, 2020, 16:23; 46 PDF pages",
+              "url": "https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf",
+              "read": "Section 4 theorem 4.12 statement, example 4.13, corollary 4.14, definition 4.15, lemmas 4.16–4.17 and theorem 4.18 proofs; example 4.19 read as context. Section 5 opening delta formula, lemma 5.1 and its coprime-case proof, lemma 5.2, examples 5.3–5.5, lemma 5.6 proof, and example 5.9 local obstruction.",
+              "not_read_or_not_proved": "Riemann–Roch itself is an exact cited input. No reconstruction of lemma 5.1 global descent kernel or the branch-point extension proof. The notes describe a more involved non-coprime case without giving its full proof.",
+              "access": "Full primary PDF text read via browser. Direct curl archival download failed with SSL connection error; no source archive added in this ownership-restricted round.",
+              "licensing": "No open adaptation license verified for this lecture PDF. New notes give independently written mathematical arguments with source locations; no extended verbatim reproduction.",
+              "proof_variation": "0H84 uses compatible polynomial remainders plus a square-root lift, not the printed explicit Bezout numerator. 0H88 adds zero-evaluation cases so branch-point divisors are not incorrectly discarded."
+            }
+          ]
+        }
       },
       "coverage": {
         "1": [
@@ -28,7 +45,16 @@
           "0G02",
           "0G03",
           "0G04",
-          "0G0I"
+          "0G0I",
+          "0H80",
+          "0H81",
+          "0H82",
+          "0H83",
+          "0H84",
+          "0H85",
+          "0H86",
+          "0H87",
+          "0H88"
         ],
         "3": [
           "0G05",
@@ -55,10 +81,12 @@
         ]
       },
       "deferred": [
-        "No Magma computation or end-to-end rational-point certificate was executed on a concrete curve.",
-        "Selmer finiteness, computational descent, Weil finite-field bound, full Mumford uniqueness proof and the full explicit dual-Kummer/conic parametrization are cited, not reproved.",
+        "No Magma computation or end-to-end rational-point certificate was executed on a concrete rational curve. Finite-field Cantor tests do not establish an arithmetic rank or rational-point certificate.",
+        "Riemann–Roch over a perfect field is an exact cited input. Reduced Mumford existence/uniqueness and complete Cantor composition/reduction for odd-degree models are now proved in 0H80–0H84; arbitrary even-degree models are not covered by those proofs.",
+        "Selmer finiteness, the global well-definedness and kernel of explicit two-descent, moving divisors away from branch points, and the branch-point extension formula remain cited inputs. 0H86 proves the norm-square restriction, not the entire descent theorem.",
+        "0H88 excludes the one class (6,2,1,1,3) over Q2, including zero-evaluation cases; all other local images and the full Selmer group/rank calculation remain uncomputed.",
+        "Weil's finite-field bound and the full explicit dual-Kummer/conic parametrization remain cited. Quartic Kummer reconstruction, singular cases and quartic-search implementation are not reproved or implemented.",
         "Conjectures 5.1 and 5.2 remain conjectural termination inputs; successful certificate correctness is distinguished from universal termination.",
-        "The full proof of universal termination, singular Kummer reconstruction and the quartic-search implementation are not reproduced.",
         "Rank >1 methods and section 6 software examples are contextual reading, not new implementations or full proof coverage."
       ]
     },
@@ -77,7 +105,56 @@
         "local_source": "research/sources/number-theory/rational-points/yuan-arxiv-v1.html",
         "sha256": "45d1a46b9bdf55a4418a252bfed400e4455db126809f204dc28927504454da46",
         "related_paper": "Yu, Yuan and Zhou, Quantitativity on the number of rational points in the Mordell conjecture, arXiv:2602.01820. Identity/metadata checked; its complete proof was not read. SIAM bibliography labels the manuscript YYZ25, 2025.",
-        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv report CC BY-NC-ND 4.0. ND source is used for reading/cross-checking, not as adaptation authorization. Public exposition uses the formal CC BY edition and original explanations."
+        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv report CC BY-NC-ND 4.0. ND source is used for reading/cross-checking, not as adaptation authorization. Public exposition uses the formal CC BY edition and original explanations.",
+        "proof_expansion_2026_10_13": {
+          "baseline": "164f927",
+          "report_recheck": "Re-read arXiv:2606.27129v1 section 5.3 around the multi-point height identity and the finite/infinite-place energy passage; formal SIAM constants remain unchanged.",
+          "additional_primary_texts": [
+            {
+              "author": "Dan Abramovich",
+              "title": "Heights on Pn",
+              "edition": "MA254 lecture slides, January 29, 2016; 14 slides, distilled from Hindry–Silverman",
+              "url": "https://www.math.brown.edu/dabramov/MA/s1516/254/MA254-Heights.pdf",
+              "read": "Slides 1–9, especially absolute height, extension and Galois invariance, bounded-degree Northcott coefficient argument on slides 6–8, and Kronecker context on slide 9.",
+              "proof_variation": "0HC0 proves h(coefficients) <= d*h(alpha)+d*log(2) by the product of the individual local maxima. This sharper bound is proved in the note; it is not falsely quoted as the exact displayed bound in the slides (whose bound is weaker). Kronecker's theorem is not added as another branch.",
+              "licensing": "No open adaptation license verified; independent exposition and proof, with exact reading scope."
+            },
+            {
+              "author": "Matthew Baker and Xander Faber",
+              "title": "Metrized Graphs, Laplacian Operators, and Electrical Networks",
+              "edition": "19-page author PDF, masthead copyright 2005 American Mathematical Society; exact title of the accessed copy retained.",
+              "url": "https://www.math.ucdavis.edu/~saito/data/LapEig/baker-quantum_graphs.pdf",
+              "read": "Sections 2–3 (metric graphs, Laplacian, integration by parts theorem 1 and uniqueness theorem 3); sections 5–6 (vertex Laplacian, j-function, theorems 4, 6, 7 and effective resistance theorem 9); selected section 7 discussion of canonical measures.",
+              "temporary_reading_files": [
+                "/tmp/rational-points-baker-faber.pdf",
+                "/tmp/rational-points-baker-faber.txt"
+              ],
+              "proof_scope": "0HC4–0HC6 give complete elementary proofs for real continuous edgewise C2 functions and Green equations with edgewise constant densities plus finitely many atoms. General measure/analytic existence theorems are not claimed.",
+              "licensing": "No open adaptation license verified; no source PDF committed or copied into public notes."
+            },
+            {
+              "author": "Robin de Jong",
+              "title": "On the height of Gross–Schoen cycles in genus three",
+              "edition": "Research in Number Theory 4 (2018), article 38; DOI 10.1007/s40993-018-0131-0.",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6413647/",
+              "read": "Section 2 in full: polarized metric graph, genus, canonical divisor, normalized admissible Green kernel, formula (2.1) defining phi, and stable-curve dual graph. Section 5 circle/tau discussion and proposition 5.1 read as context.",
+              "not_read": "Main global height theorem proofs and all cited source papers were not read.",
+              "licensing": "CC BY 4.0 shown by the accessed primary article."
+            },
+            {
+              "author": "Shou-Wu Zhang",
+              "title": "Admissible pairing on a curve",
+              "edition": "Inventiones Mathematicae 112 (1993); scanned author-hosted primary PDF.",
+              "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/355/9111-apc.pdf",
+              "read": "Rendered PDF page 10 (printed p.179), theorem 3.2 characterization of the admissible measure; PDF page 11 (printed p.180), corollary 3.4 and identity (3.5.1), plus beginning of proof 3.2. Appendix theorem a.7 and surrounding matrix-rank/Green-existence passage on PDF pages 22–23 (printed pp.191–192) inspected. Also viewed pages 4, 7–8 for locating the relevant section.",
+              "not_read": "The complete proof of theorem 3.2 and the full global arithmetic admissible-intersection construction were not read in this round.",
+              "temporary_reading_file": "/tmp/rational-points-zhang-1993.pdf",
+              "licensing": "No open adaptation license verified. Only an exact theorem input and independently checked single-loop specialization are used."
+            }
+          ],
+          "archival_policy": "This round is restricted to allocated tree IDs and this JSON; additional source downloads were transient /tmp reading copies, not repository additions. Existing primary report HTML archives remain at the source paths recorded above.",
+          "unavailable_not_used": "Silverman MSRIHeightNotes PDF fetch failed; no claim relies on it. A MIT lecture checked during source search did not contain the required Northcott proof and was not used."
+        }
       },
       "coverage": {
         "1": [
@@ -103,7 +180,10 @@
           "0G43",
           "0G44",
           "0G45",
-          "0G4P"
+          "0G4P",
+          "0HC0",
+          "0HC1",
+          "0HC2"
         ],
         "2.2–2.4": [
           "0G49",
@@ -126,7 +206,12 @@
           "0G4K",
           "0G4L",
           "0G4M",
-          "0G4V"
+          "0G4V",
+          "0HC4",
+          "0HC5",
+          "0HC6",
+          "0HC7",
+          "0HC8"
         ],
         "5.4": [
           "0G4N",
@@ -136,11 +221,12 @@
       "deferred": [
         "Yu–Yuan–Zhou main explicit theorem is stated with exact SIAM constants and a coherent dependency pathway, not claimed locally proved.",
         "Full quantitative Vojta construction, auxiliary sections, arithmetic Hilbert–Samuel/Riemann–Roch estimates, parameter optimization and refined spherical-code bounds remain external.",
-        "Adelic intersection construction, admissible metrics, arithmetic Hodge index, adjunction, Zhang successive minima and positivity of admissible volume are precisely cited inputs, not reconstructed proofs.",
-        "The two original archimedean analytic inequalities, heat-kernel/degeneration analysis and finite-place metric-graph energy bounds are external. Only eliminating the systole parameter is proved locally.",
-        "Uniform Bogomolov theorem and comparison of stable Faltings height with admissible volume are cited; Northcott is proved only for rational projective points, not all bounded-degree algebraic points.",
-        "No effective coordinate-height bound or point-enumeration algorithm is deduced from the explicit cardinality bound.",
-        "The full related YYZ research article and all source papers referenced by the report were not read."
+        "Adelic intersection construction, the general admissible-measure theorem and comparison of graph kernels with curve metrics, arithmetic Hodge index, adjunction, Zhang successive minima and positivity of admissible volume remain cited inputs.",
+        "General bounded-degree Northcott is now proved for algebraic numbers and projective points (0HC0–0HC1,0G4P); extension to ample Weil heights (0HC2) is proved conditional on the exact height-machine properties and existence of a projective embedding.",
+        "0HC4–0HC6 prove the finite-graph energy mechanism with edgewise constant densities and finitely many atoms. 0HC7–0HC8 explicitly compute the polarized single-loop case and its 7n/8*phi energy bound. General graph diagonal/phi comparison is still an external theorem, not a consequence claimed from the single-loop calculation.",
+        "The two original archimedean analytic inequalities, heat-kernel/degeneration analysis and global uniform energy theorem remain external. Only the algebraic elimination of the systole parameter and the specified finite-graph branches are proved locally.",
+        "Uniform Bogomolov and the comparison of stable Faltings height with admissible volume remain cited. No effective coordinate-height bound or point-enumeration algorithm is deduced from the explicit cardinality bound.",
+        "The complete related YYZ research article and all papers referenced by the report were not read; Zhang theorem 3.2 statement was checked on the scanned primary page, but its complete proof was not read."
       ]
     }
   ],
@@ -164,11 +250,14 @@
     [
       "0G02",
       [
+        "00SQ",
         "0G01",
         "0C07",
-        "0C04"
+        "0C04",
+        "0H81",
+        "0H82"
       ],
-      "Mumford 表示以奇数次模型和 Jacobian 除子类为对象；不把同一表示无条件搬到偶数次模型。"
+      "在完美域上定义五次模型的 Mumford 表示，存在唯一性由半约化编码与约化定理支撑；合成、降次是后续算法链接。"
     ],
     [
       "0G03",
@@ -213,9 +302,10 @@
       "0G07",
       [
         "0C10",
-        "0G01"
+        "0G01",
+        "0H87"
       ],
-      "保留 y 一次项后二进 Hensel 与变量替换支持递归。"
+      "二进 Hensel、模型覆盖与单位平方判据支持递归及反例。"
     ],
     [
       "0G08",
@@ -372,9 +462,9 @@
         "0BF1",
         "0G43",
         "0C08",
-        "0G4P"
+        "0HC2"
       ],
-      "Tate 高度与 Northcott 定理说明零高度挠点及有限秩实空间上的正定性。"
+      "零高度挠点推论需要阿贝尔簇上丰沛高度的 Northcott；以0HC2取代旧的直接0G4P边，完整二次性仍引用。"
     ],
     [
       "0G45",
@@ -503,9 +593,10 @@
         "0G4A",
         "0G41",
         "0E81",
-        "00FR"
+        "00FR",
+        "0HC4"
       ],
-      "局部相交测度、好约化、复曲面和位权定义 phi 并陈述体积下界。"
+      "局部相交、位权、良约化、Riemann曲面及约化度量图明确phi对象；单环计算为例子，不反向作前置。"
     ],
     [
       "0G4I",
@@ -574,9 +665,9 @@
       "0G4P",
       [
         "0G41",
-        "0G42"
+        "0HC1"
       ],
-      "在绝对高度与丰沛 Weil 高度下陈述 Northcott；仅证明有理射影情形并给出次数反例。"
+      "将各射影坐标比归一化后，直接从有界次数代数数有限性证明全部有界次数射影点的Northcott；丰沛高度0HC2是应用，因此删除旧0G42前置。"
     ],
     [
       "0G4Q",
@@ -641,6 +732,168 @@
       "icm2026-yuan-quantitativity",
       [],
       "文献与版本、常数和版权许可记录；不设数学前置。"
+    ],
+    [
+      "0H80",
+      [
+        "00SQ",
+        "0C01",
+        "0B07",
+        "0G01"
+      ],
+      "有限点正则性与无穷远阶数给出极点空间基；0H82是应用，不是前置。"
+    ],
+    [
+      "0H81",
+      [
+        "00SQ",
+        "0C01",
+        "0C04"
+      ],
+      "声明半约化除子，局部平方根逐次提升和多项式余数拼接均在正文证明；0G02为应用导航，不设循环边。"
+    ],
+    [
+      "0H82",
+      [
+        "00SQ",
+        "0C07",
+        "0C05",
+        "0H81",
+        "0H80",
+        "00FJ"
+      ],
+      "半约化编码和低阶极点空间证明唯一性；存在性明确引用代数Riemann–Roch，00FJ仅提供其复解析原型，非冒称任意域版本已本地证明。"
+    ],
+    [
+      "0H83",
+      [
+        "00SQ",
+        "0H81",
+        "0H82"
+      ],
+      "半约化多项式对的零极点计算证明降次保持除子类，唯一终点调用约化唯一性。"
+    ],
+    [
+      "0H84",
+      [
+        "00SQ",
+        "0H81",
+        "0H83"
+      ],
+      "局部重数说明gcd恰消去对合纤维，余数拼接和一次平方根提升给出唯一合成，再调用严格降次。"
+    ],
+    [
+      "0H85",
+      [
+        "00SQ",
+        "00GF",
+        "0C07",
+        "0C04",
+        "0H82"
+      ],
+      "约化唯一性将二挠条件化为v=0；因子子集与补集计数给维数s-1，Selmer页面仅为应用。"
+    ],
+    [
+      "0H86",
+      [
+        "0C07",
+        "0A40",
+        "0H81"
+      ],
+      "Jacobian、行列式范数和Mumford坐标支持范数平方证明；下降核与全局良定义是精确引用输入。"
+    ],
+    [
+      "0H87",
+      [
+        "00SM",
+        "00ER"
+      ],
+      "二进完备化与Cauchy收敛支撑逐次平方根提升；局部下降例子不是前置。"
+    ],
+    [
+      "0H88",
+      [
+        "0C07",
+        "0H86",
+        "0H82",
+        "0H87"
+      ],
+      "唯一低次数代表、下降必要条件和二进平方判据逐项排除指定平方类，不推断整个Selmer群。"
+    ],
+    [
+      "0HC0",
+      [
+        "0D04",
+        "0G41",
+        "0AI6",
+        "00WC"
+      ],
+      "最小多项式、绝对位权与有理射影高度支持系数乘积估计；不依赖Northcott结论。"
+    ],
+    [
+      "0HC1",
+      [
+        "0G41",
+        "0HC0",
+        "00WC"
+      ],
+      "先界定最小多项式的整数坐标，再有限计数其根；射影Northcott是后续应用，禁止反向边。"
+    ],
+    [
+      "0HC2",
+      [
+        "0AI6",
+        "0BF1",
+        "0G42",
+        "0G4P"
+      ],
+      "丰沛嵌入及高度机器的一致有界误差把问题归于射影Northcott，并明确基域次数因子。"
+    ],
+    [
+      "0HC4",
+      [
+        "00LC",
+        "00LB",
+        "00EK",
+        "00Q2",
+        "0A3C",
+        "00Q3"
+      ],
+      "路径度量、实值函数的分部积分和概率零均值固定Laplacian解的常数；不依赖Green核构造。"
+    ],
+    [
+      "0HC5",
+      [
+        "0HC4",
+        "00Q3"
+      ],
+      "先用二次边函数消去密度，再解有限图矩阵方程；能量唯一性和概率归一化给出对称Green核。"
+    ],
+    [
+      "0HC6",
+      [
+        "00Q3",
+        "0HC5",
+        "0HC4"
+      ],
+      "加入对角项并积分势函数的导数平方，证明一般有限图的线性负部界；phi与单环页面都是应用。"
+    ],
+    [
+      "0HC7",
+      [
+        "0HC5",
+        "0HC6"
+      ],
+      "验证圆环Green方程、零均值和对角常数，继而计算有效电阻及能量界。"
+    ],
+    [
+      "0HC8",
+      [
+        "0HC7",
+        "0HC5",
+        "0HC6"
+      ],
+      "明确极化权重后直接计算可容许核和phi，并由对角上界消去边长；一般可容许测度刻画与图曲线比较仍引用。"
     ]
   ],
   "proofs_written": [
@@ -740,7 +993,60 @@
         "0G4S",
         "0G4T"
       ],
-      "scope": "Northcott for rational projective points, roots-of-unity degree counterexample; direction of height-volume comparison; Vojta-line-bundle intersection computation."
+      "scope": "Bounded-degree projective Northcott (the algebraic-number branch is supplied by 0HC0–0HC1), roots-of-unity degree counterexample; direction of height-volume comparison; Vojta-line-bundle intersection computation."
+    },
+    {
+      "ids": [
+        "0H80",
+        "0H81",
+        "0H82"
+      ],
+      "scope": "Full finite-regular-function/pole-space calculation; Mumford encoding including repeated roots and branch points; reduced divisor existence and uniqueness, conditional only on the stated algebraic Riemann–Roch input."
+    },
+    {
+      "ids": [
+        "0H83",
+        "0H84"
+      ],
+      "scope": "Cantor reduction preserves the divisor class and strictly lowers degree; complete composition handles coincident/opposite branches via gcd cancellation, compatible remainders, and a unique final square-root lift."
+    },
+    {
+      "ids": [
+        "0H85",
+        "0H86"
+      ],
+      "scope": "Two-torsion dimension from irreducible factor count and the norm-square restriction on explicit odd-degree descent. The descent homomorphism/kernel theorem itself is not proved."
+    },
+    {
+      "ids": [
+        "0H87",
+        "0H88"
+      ],
+      "scope": "Full Q2 square criterion by successive lifting; complete valuation and residue proof excluding (6,2,1,1,3) for y²=x(x−1)(x−2)(x−5)(x−6), including zero evaluations and nonintegral coefficients."
+    },
+    {
+      "ids": [
+        "0HC0",
+        "0HC1",
+        "0G4P",
+        "0HC2"
+      ],
+      "scope": "Local product estimate for coefficient height, integer-polynomial counting for bounded-degree algebraic numbers, normalized coordinate argument for projective points, and ample-height extension via the cited height machine. Degree/base-field dependencies and non-effective height error are explicit."
+    },
+    {
+      "ids": [
+        "0HC4",
+        "0HC5",
+        "0HC6"
+      ],
+      "scope": "Real-valued graph integration by parts and energy positivity; piecewise-quadratic Green construction, uniqueness and symmetry for constant edge densities plus finitely many atoms; full sum over point pairs >= −nM/2."
+    },
+    {
+      "ids": [
+        "0HC7",
+        "0HC8"
+      ],
+      "scope": "Exact circle Green kernel and resistance; polarized loop admissible-kernel verification, phi=(g−1)L/(6g), and sum over point pairs+(7n/8)phi>=0 uniformly in this graph's genus and edge length. Not the general graph theorem."
     }
   ],
   "research_statements_without_local_proof": [
@@ -752,11 +1058,10 @@
     },
     {
       "ids": [
-        "0G02",
         "0G09",
         "0G0F"
       ],
-      "statement": "Unique reduced Mumford representations, explicit odd-divisor dual-Kummer tests and the quartic Kummer model."
+      "statement": "Explicit odd-divisor dual-Kummer tests, singular reconstruction and the quartic Kummer model. Odd-degree reduced Mumford uniqueness is no longer deferred."
     },
     {
       "ids": [
@@ -775,10 +1080,9 @@
       "ids": [
         "0G42",
         "0G44",
-        "0G45",
-        "0G4P"
+        "0G45"
       ],
-      "statement": "Height machine, Néron–Tate quadraticity/positivity, theta polarization theorem and full bounded-degree Northcott."
+      "statement": "Height machine, Néron–Tate quadraticity/positivity and theta polarization theorem. Bounded-degree Northcott is now proved in the linked elementary branch."
     },
     {
       "ids": [
@@ -814,23 +1118,60 @@
         "0G4M",
         "0G4N"
       ],
-      "statement": "Archimedean heat-kernel/degeneration energy estimates, nonarchimedean graph estimates and refined spherical-code bounds."
+      "statement": "Archimedean heat-kernel/degeneration energy estimates, general nonarchimedean diagonal/phi comparisons, and refined spherical-code bounds. Finite-graph energy positivity and the specified single-loop comparison are now proved separately."
+    },
+    {
+      "ids": [
+        "0H82"
+      ],
+      "statement": "Algebraic Riemann–Roch for smooth projective curves over the perfect base field; exact statement supplied, theorem not reproved."
+    },
+    {
+      "ids": [
+        "0H86",
+        "0H88"
+      ],
+      "statement": "The global extension, well-definedness and kernel=2J(k) of the explicit odd-degree descent map, including moving away from finite branch points."
+    },
+    {
+      "ids": [
+        "0HC2"
+      ],
+      "statement": "Existence of a projective embedding for an ample line bundle and the height-machine functoriality/additivity with globally bounded error."
+    },
+    {
+      "ids": [
+        "0HC8"
+      ],
+      "statement": "Zhang theorem 3.2 uniquely characterizes the admissible measure; its theorem statement was checked in the scanned primary source. The single-loop kernel and constant condition are verified locally; the general theorem and arithmetic comparison are not reproved."
     }
   ],
   "existing_notes_reused": [
     "004M",
     "00BD",
     "00D0",
+    "00EK",
+    "00ER",
+    "00FJ",
     "00FR",
     "00G3",
     "00GF",
+    "00LB",
+    "00LC",
+    "00Q2",
+    "00Q3",
+    "00SM",
     "00SO",
+    "00SQ",
     "00WC",
     "00XV",
     "0138",
+    "0A3C",
+    "0A40",
     "0AI6",
     "0AI7",
     "0AL7",
+    "0B07",
     "0BF1",
     "0BF4",
     "0BGJ",
@@ -850,6 +1191,7 @@
     "0C0P",
     "0C10",
     "0C16",
+    "0D04",
     "0E81",
     "0E82",
     "0F0H"
@@ -866,6 +1208,10 @@
     {
       "id": "0BF4",
       "suggestion": "Canonical geometric intersection page is formulated for complex projective varieties. Consider adding the algebraic intersection formulation over general fields used in arithmetic surfaces/products."
+    },
+    {
+      "id": "00FJ",
+      "suggestion": "Canonical Riemann–Roch note is complex-analytic. 0H82 states and cites the algebraic perfect-field version explicitly; a future canonical algebraic-version expansion would remove this cited prerequisite boundary without duplicating the existing theorem."
     }
   ],
   "terminology": {
@@ -874,9 +1220,12 @@
       "attempted": [
         "https://banana-space.com/wiki/高度",
         "https://banana-space.com/wiki/阿贝尔簇",
-        "https://banana-space.com/wiki/Weil_高度"
+        "https://banana-space.com/wiki/Weil_高度",
+        "https://banana-space.com/wiki/Northcott_定理",
+        "https://banana-space.com/wiki/度量图"
       ],
-      "result": "Web tool returned Internal Error. No claim of verified Banana Space terminology; limitation recorded only here."
+      "result": "Web tool returned Internal Error. No claim of verified Banana Space terminology; limitation recorded only here.",
+      "proof_expansion_result": "Both additional fetches returned Internal Error. Terminology is not claimed Banana-verified; limitation stays in research metadata only."
     },
     "conventions": {
       "ample line bundle": "丰沛线丛，复用0BF1；其子串“线丛”不重复强加前置。",
@@ -884,7 +1233,13 @@
       "essential minimum": "本性最小值；正文明确给出删去有限集的定义。",
       "admissible": "可容许；用于 Zhang 规范度量与体积。",
       "integrable adelic line bundle": "可积阿代尔线丛，指两个 nef 阿代尔线丛的差，不是 Lebesgue 可积性。",
-      "multiplicative seminorm": "Berkovich 解析点的乘法半范数，在0G4A就地定义，不误链实向量空间半范数00MD。"
+      "multiplicative seminorm": "Berkovich 解析点的乘法半范数，在0G4A就地定义，不误链实向量空间半范数00MD。",
+      "perfect field": "完美域，0H80–0H85按实际假设复用00SQ。",
+      "semireduced divisor": "半约化除子：不含无穷远、不含一对对合点；分歧点至多一次。0H81给局部定义而非另建同义页。",
+      "metric graph": "度量图：有限连通图的边赋正长度；0HC4复用连通图00LC、简单图00LB、度量空间00EK。",
+      "Cauchy sequence": "Cauchy序列，0H87复用00ER；只使用二进完备性，不借用实数特有结论。",
+      "Green energy": "0HC4–0HC8的函数为实值；图核对角有限，不与复曲线对角对数奇性混用。",
+      "Northcott": "次数约束是[Q(P):Q]或[K(P):K]，不能误写为固定数域；丰沛高度推广所需误差常数未冒称有效。"
     },
     "edition_constants": {
       "policy": "All quantitative public formulas use SIAM formal edition.",
@@ -1072,34 +1427,90 @@
           "reason": "Model line bundles in nef definition."
         }
       ]
+    },
+    "proof_expansion_semantic_links": {
+      "linked": {
+        "00SQ": [
+          "0H80",
+          "0H81",
+          "0H82",
+          "0H83",
+          "0H84",
+          "0H85"
+        ],
+        "00ER": [
+          "0H87"
+        ],
+        "00EK": [
+          "0HC4"
+        ],
+        "00Q3": [
+          "0HC4",
+          "0HC5",
+          "0HC6"
+        ],
+        "0A3C": [
+          "0HC4"
+        ]
+      },
+      "deliberately_replaced": [
+        {
+          "from": "0G44",
+          "removed": "0G4P",
+          "added": "0HC2",
+          "reason": "The proof needs Northcott for an ample line bundle on A, not just projective coordinates."
+        },
+        {
+          "from": "0G4P",
+          "removed": "0G42",
+          "added": "0HC1",
+          "reason": "The rewritten projective theorem is proved from algebraic-number Northcott and does not use the height machine."
+        }
+      ],
+      "no_navigation_edges": [
+        "0H80→0H82",
+        "0H81→0G02",
+        "0H82→0G02",
+        "0H85→0G03",
+        "0HC1→0G4P",
+        "0G4P→0HC2",
+        "0HC6→0HC8",
+        "0HC6→0G4H"
+      ]
     }
   },
   "checks": [
     {
       "kind": "scope",
-      "result": "Only own allocated IDs, own unique references, own research JSON and two downloaded primary HTML sources were edited/added. No home/navigation, global manifest/audit/script, existing tree, global sync/build, commit or push."
+      "result": "Only own allocated IDs, own unique references, own research JSON and two downloaded primary HTML sources were edited/added. No home/navigation, global manifest/audit/script, existing tree, global sync/build, commit or push.",
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "source_syntax_and_links",
       "result": "Passed local read-only checker over 53 own trees: balanced braces with no negative prefix; all local links resolve against inventory of 3399 trees; no command/slash lexing hazards.",
-      "pages": 53
+      "pages": 53,
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "katex",
       "result": "945 own formulas rendered with the repository KaTeX runtime, throwOnError enabled, zero errors. No full site rendering/build performed.",
-      "runtime": "wu-bu-zhi-shu/assets/vendor/katex.js"
+      "runtime": "wu-bu-zhi-shu/assets/vendor/katex.js",
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "known_blockers",
-      "result": "0G05 corrected #{2(q-g)}>0} to #{2(q-g)>0}; all five undefined \\\\Sha tokens in 0G03 replaced by \\\\operatorname{Sha}."
+      "result": "0G05 corrected #{2(q-g)}>0} to #{2(q-g)>0}; all five undefined \\\\Sha tokens in 0G03 replaced by \\\\operatorname{Sha}.",
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "semantic_review",
-      "result": "Inspected actual final source of the two main theorem pages, both references, local bound, admissible volume, energy identity, angular bound, and all page titles/links/formulas. Elementary derivations reviewed separately from cited deep results. Outline links are narrative; prerequisite arrays exclude navigation/application back-links."
+      "result": "Inspected actual final source of the two main theorem pages, both references, local bound, admissible volume, energy identity, angular bound, and all page titles/links/formulas. Elementary derivations reviewed separately from cited deep results. Outline links are narrative; prerequisite arrays exclude navigation/application back-links.",
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "remaining_verification",
-      "result": "Full Forester parse/build, formatting, global parent-merge DAG check and rendered visual review are delegated to parent; no independent end-to-end software computation or formal proof verification."
+      "result": "Full Forester parse/build, formatting, global parent-merge DAG check and rendered visual review are delegated to parent; no independent end-to-end software computation or formal proof verification.",
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "final_dependency_and_metadata_check",
@@ -1110,7 +1521,8 @@
       "brace_errors": 0,
       "link_errors": 0,
       "katex_errors": 0,
-      "source_hashes_verified": 2
+      "source_hashes_verified": 2,
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "changed_paths",
@@ -1171,11 +1583,171 @@
         "research/number-theory-rational-points.json",
         "research/sources/number-theory/rational-points/stoll-arxiv-v1.html",
         "research/sources/number-theory/rational-points/yuan-arxiv-v1.html"
-      ]
+      ],
+      "phase": "published-164f927-baseline"
     },
     {
       "kind": "handoff",
-      "result": "Writing stopped after this ledger and local read-only verification. Parent owns formatting, integration and full build. No Nelson0H40–0H7Z overlap or new-agent spawning."
+      "result": "Writing stopped after this ledger and local read-only verification. Parent owns formatting, integration and full build. No Nelson0H40–0H7Z overlap or new-agent spawning.",
+      "phase": "published-164f927-baseline"
+    },
+    {
+      "kind": "proof_expansion_scope",
+      "phase": "post-164f927",
+      "result": "17 new atomic pages and 10 existing owned pages revised, plus this ledger. No new references, source archive files, global registries/scripts/nav, build/sync, commit, push or deployment. Other agents' work untouched. No additional branches after integration checkpoint.",
+      "new_ids": [
+        "0H80",
+        "0H81",
+        "0H82",
+        "0H83",
+        "0H84",
+        "0H85",
+        "0H86",
+        "0H87",
+        "0H88",
+        "0HC0",
+        "0HC1",
+        "0HC2",
+        "0HC4",
+        "0HC5",
+        "0HC6",
+        "0HC7",
+        "0HC8"
+      ],
+      "changed_existing_ids": [
+        "0G00",
+        "0G02",
+        "0G03",
+        "0G07",
+        "0G40",
+        "0G44",
+        "0G4H",
+        "0G4L",
+        "0G4M",
+        "0G4P"
+      ]
+    },
+    {
+      "kind": "cantor_finite_field_checks",
+      "phase": "post-164f927",
+      "status": "PASS",
+      "method": "Read-only ephemeral Node polynomial arithmetic using the 0H84 CRT/lift formula followed by 0H83 reduction. Enumerated every reduced pair for each curve; checked closure, identity, inverses, commutativity, and every associativity triple.",
+      "curves": [
+        {
+          "p": 7,
+          "f": "x^5+1",
+          "reduced_pairs": 50,
+          "compositions": 2500,
+          "associativity_triples": 125000,
+          "nontrivial_gcd_compositions": 613,
+          "reduction_steps": 2016
+        },
+        {
+          "p": 5,
+          "f": "x^5+x+1",
+          "reduced_pairs": 36,
+          "compositions": 1296,
+          "associativity_triples": 46656,
+          "nontrivial_gcd_compositions": 235,
+          "reduction_steps": 1070
+        },
+        {
+          "p": 11,
+          "f": "3*x^5+x+1",
+          "reduced_pairs": 126,
+          "compositions": 15876,
+          "associativity_triples": 2000376,
+          "nontrivial_gcd_compositions": 2469,
+          "reduction_steps": 14180
+        }
+      ],
+      "harness_note": "The first test invocation exposed a trailing-zero normalization bug in the finite-field test derivative at p=5. Correcting that harness normalization produced the complete pass; no theorem/code formula was changed on its account.",
+      "limitation": "Finite test evidence, not a replacement for written proofs, no Magma/rational-point certificate."
+    },
+    {
+      "kind": "exact_local_checks",
+      "phase": "post-164f927",
+      "status": "PASS",
+      "method": "Read-only Python Fraction arithmetic and exhaustive residue classes; no file writes.",
+      "phi_and_constant_identities": 49,
+      "genus_range": [
+        2,
+        50
+      ],
+      "rational_point_configurations": 980,
+      "loop_length": "7/3",
+      "random_seed": 20261013,
+      "points_per_configuration_range": [
+        1,
+        20
+      ],
+      "integral_q2_pairs_mod128": 16384,
+      "q2_survivors": 0,
+      "limitation": "Nonintegral Q2 cases are justified by the written valuation proof, not by finite residue enumeration. Graph samples do not prove the general theorem."
+    },
+    {
+      "kind": "proof_expansion_changed_paths",
+      "phase": "post-164f927",
+      "paths": [
+        "trees/math/number-theory/reports/0G00.tree",
+        "trees/math/number-theory/reports/0G02.tree",
+        "trees/math/number-theory/reports/0G03.tree",
+        "trees/math/number-theory/reports/0G07.tree",
+        "trees/math/number-theory/reports/0G40.tree",
+        "trees/math/number-theory/reports/0G44.tree",
+        "trees/math/number-theory/reports/0G4H.tree",
+        "trees/math/number-theory/reports/0G4L.tree",
+        "trees/math/number-theory/reports/0G4M.tree",
+        "trees/math/number-theory/reports/0G4P.tree",
+        "trees/math/number-theory/reports/0H80.tree",
+        "trees/math/number-theory/reports/0H81.tree",
+        "trees/math/number-theory/reports/0H82.tree",
+        "trees/math/number-theory/reports/0H83.tree",
+        "trees/math/number-theory/reports/0H84.tree",
+        "trees/math/number-theory/reports/0H85.tree",
+        "trees/math/number-theory/reports/0H86.tree",
+        "trees/math/number-theory/reports/0H87.tree",
+        "trees/math/number-theory/reports/0H88.tree",
+        "trees/math/number-theory/reports/0HC0.tree",
+        "trees/math/number-theory/reports/0HC1.tree",
+        "trees/math/number-theory/reports/0HC2.tree",
+        "trees/math/number-theory/reports/0HC4.tree",
+        "trees/math/number-theory/reports/0HC5.tree",
+        "trees/math/number-theory/reports/0HC6.tree",
+        "trees/math/number-theory/reports/0HC7.tree",
+        "trees/math/number-theory/reports/0HC8.tree",
+        "research/number-theory-rational-points.json"
+      ]
+    },
+    {
+      "kind": "proof_expansion_final_checks",
+      "phase": "post-164f927",
+      "status": "PASS",
+      "entry_count": 70,
+      "new_atomic_pages": 17,
+      "changed_existing_pages": 10,
+      "formulas_rendered": 1499,
+      "local_links_checked": 437,
+      "tree_inventory_at_check": 3515,
+      "ancestor_nodes": 375,
+      "source_hashes_verified": 2,
+      "brace_errors": 0,
+      "katex_errors": 0,
+      "missing_links": 0,
+      "unlinked_prerequisites": 0,
+      "outline_prerequisite_edges": 0,
+      "dependency_cycles": 0,
+      "command_slash_hazards": 0,
+      "method": "Read-only inventory/source checker and repository KaTeX renderToString with throwOnError. Every entry and prerequisite resolves; each prerequisite is an inline link; references/outlines have no prerequisite edges. Own dependencies override the published site-evergreen-audit graph. Added 0H81→0C01 reuses an already visited ancestor. Both archived report HTML SHA256 hashes match. git diff --check passed on owned tracked paths.",
+      "semantic_review": "Read all 17 new pages and all 10 changed existing pages. Checked perfect-field hypotheses, repeated roots, branch-point multiplicities, zero evaluations in local descent, base-field/degree factors in Northcott, real-valued graph integration, normalization uniqueness, polarized-loop genus and phi normalization. 0G4M explicitly retains the missing general graph diagonal/phi comparison.",
+      "corrections": "Removed command/slash lexing ambiguities in 0H86,0HC7,0HC8; 0HC4 explicitly uses real-valued functions and fixes constants by point value or probability zero mean; 0H81 explicitly declares its smooth projective model and infinity point. No remaining old 0G05 brace or unsupported Sha issue.",
+      "limitations": "Not a global Forester parse/build, visual rendering audit, formal proof verification, complete research theorem proof, or deployment. Parent performs integration and independent review."
+    },
+    {
+      "kind": "proof_expansion_handoff",
+      "phase": "post-164f927",
+      "status": "ready_for_independent_review",
+      "result": "The 17-node proof expansion and 70-entry batch are stable. Source reading, completed proofs, cited inputs and deferred branches are recorded separately. Writing stopped after local verification; parent owns independent review, global formatting/build and deployment. No additional branches or agents."
     }
   ]
 }

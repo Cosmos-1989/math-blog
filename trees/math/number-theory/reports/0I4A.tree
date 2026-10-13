@@ -1,0 +1,13 @@
+\title{超椭圆第一行的无素数参数矩阵递推}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey–Sutherland II](https://math.mit.edu/~drew/conm13352.pdf)，§2，式 (2)、(7) 与引理 2.4 的非零常数项情形}
+
+\p{设 #{f(x)=\sum_{j=0}^df_jx^j\in\mathbb Z[x]}，#{f_0\ne 0}，#{d\geq 2}。定义整数 #{d\times d} 矩阵 #{A_k}：其 #{(r+1,r)} 项为 #{2kf_0}，#{1\leq r<d}；其 #{(d-j+1,d)} 项为 #{(j-2k)f_j}，#{1\leq j\leq d}；其余项为零。令行向量 #{e_d=(0,\ldots,0,1)}。对奇素数 #{p\nmid f_0}，写 #{f^{(p-1)/2}=\sum c_tx^t}，则}
+##{(c_{p-d},\ldots,c_{p-1})\equiv -f_0^{(p-1)/2}e_dA_1\cdots A_{p-1}\pmod p.}
+\p{负指标的系数取零。若 #{f\bmod p} 是次数 #{d=2g+1} 或 #{2g+2} 的无重根多项式，末尾 #{g} 项倒序排列即为[Hasse–Witt 矩阵](0H0N)的第一行。矩阵 #{A_k} 只依赖整数多项式和 #{k}，不依赖待处理素数。}
+\p{\strong{从系数恒等式到矩阵。}暂设 #{n\geq 0}、#{f^n=\sum_tc_tx^t}。由[形式微分](0AL1) #{f(f^n)'=nf'f^n}，比较 #{x^{k-1}} 系数得}
+##{kf_0c_k=\sum_{j=1}^d((n+1)j-k)f_jc_{k-j}.}
+\p{取 #{n=(p-1)/2}，乘二并模 #{p}，右侧系数变为 #{j-2k}。若 #{v_k=(c_{k-d+1},\ldots,c_k)}，则 #{v_k=(2kf_0)^{-1}v_{k-1}A_k}。在 #{1\leq k\leq p-1} 范围，全部分母在 #{\mathbb F_p} 中可逆。}
+\p{初值为 #{v_0=f_0^{(p-1)/2}e_d}。迭代后的总分母为 #{(2f_0)^{p-1}(p-1)!}；由[Fermat 同余](0H0D)与[Wilson 同余](0H0B)，它模 #{p} 等于 #{-1}。这给出所列公式。[矩阵累积树](0H08)在叶子 #{j=p} 处恰好输出长度 #{p-1} 的积，因而可同时求所有这些第一行。}

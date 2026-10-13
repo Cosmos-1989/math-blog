@@ -1,0 +1,17 @@
+\title{共轭根的高度怎样控制最小多项式系数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Abramovich，Heights on Pn，2016-01-29](https://www.math.brown.edu/dabramov/MA/s1516/254/MA254-Heights.pdf)，幻灯片 5、7–8；采用逐项乘积估计}
+
+\p{设 #{\alpha\in\overline{\mathbb Q}} 的次数为 #{d}，共轭根为 #{\alpha_1,\ldots,\alpha_d}，其首一[最小多项式](0D04)为}
+##{F(T)=\prod_{i=1}^d(T-\alpha_i)=T^d+c_1T^{d-1}+\cdots+c_d\in\mathbb Q[T].}
+\p{对[绝对对数射影高度](0G41)，有}
+##{h([1:c_1:\cdots:c_d])\leq d\,h(\alpha)+d\log 2,\qquad h(\alpha)=h([1:\alpha]).}
+
+\p{\strong{局部估计。}取包含全部根的[数域](0AI6) #{L}。第 #{j} 个系数是 #{\binom dj} 个不同根乘积的带符号和。每个乘积的绝对值至多 #{\prod_i\max\{1,|\alpha_i|_v\}}。有限位的强三角不等式不增加因子；无限位的普通三角不等式最多增加 #{2^d}。于是}
+##{\log\max\{1,|c_1|_v,\ldots,|c_d|_v\}\leq\sum_{i=1}^d\log\max\{1,|\alpha_i|_v\}+\begin{cases}d\log 2,&v\mid\infty,\\0,&v\nmid\infty.\end{cases}}
+
+\p{\strong{对位求和。}按高度的权 #{\epsilon_v} 求和并除以 #{[L:\mathbb Q]}。无限位权之和为 #{[L:\mathbb Q]}，所以误差总计为 #{d\log 2}。Galois 共轭只置换各个位并保留局部次数，因此所有共轭根具有同一绝对高度 #{h(\alpha_i)=h(\alpha)}。所以上式给出所述界。}
+
+\p{关键在于左端是一个有理射影点的高度。即使根的定义域不断变化，它们的最小多项式系数仍落在固定的 #{\mathbb Q} 中，因此可以使用[有理射影高度的整数坐标表达](00WC)作整数计数。}

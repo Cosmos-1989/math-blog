@@ -2,9 +2,9 @@
 \date{2026-10-13}
 \taxon{Theorem}
 \author{author}
-\meta{source}{[Yuan](icm2026-yuan-quantitativity)，§1、§2.1 中的 Northcott 性质}
+\meta{source}{[Yuan](icm2026-yuan-quantitativity)，§1、§2.1 中的 Northcott 性质；[Abramovich，Heights on Pn，2016-01-29](https://www.math.brown.edu/dabramov/MA/s1516/254/MA254-Heights.pdf)，幻灯片 6–8}
 
-\p{固定整数 #{n,D\geq 1} 和实数 #{B}。Northcott 定理断言，[绝对射影高度](0G41)满足 #{h(P)\leq B}、且 #{[\mathbb Q(P):\mathbb Q]\leq D} 的点 #{P\in\mathbb P^n(\overline{\mathbb Q})} 只有有限多个。一般次数版本采用所引高度理论。}
-\p{在 #{D=1} 的情形可直接证明：取互素整数坐标 #{[x_0:\cdots:x_n]}，每个坐标满足 #{|x_i|\leq e^B}。这样的整数向量只有有限多个，取射影商后仍有限。对射影簇上的丰沛 [Weil 高度](0G42)，借助一个张量幂的射影嵌入及有界误差，得到同样的有限性。}
-\p{次数限制不可删除。所有单位根 #{\zeta} 在每个 Archimedean 位绝对值为一，在有限位也为单位，所以 #{h([1:\zeta])=0}。单位根无限多个，其次数不受统一限制。}
+\p{固定整数 #{n,D\geq 1} 和实数 #{B}。Northcott 定理断言，[绝对射影高度](0G41)满足 #{h(P)\leq B}、且 #{[\mathbb Q(P):\mathbb Q]\leq D} 的点 #{P\in\mathbb P^n(\overline{\mathbb Q})} 只有有限多个。其证明可以分成代数数和射影坐标两步。}
+\p{\strong{证明。}#{B<0} 时集合为空，因为归一化一个坐标为一后每个局部最大值至少为一。设 #{B\geq 0}。在非零坐标 #{x_j} 所在的图中，把它归一化为一，记其余坐标比为 #{\alpha_i=x_i/x_j}。逐位比较最大值，得到 #{h([1:\alpha_i])\leq h(P)\leq B}；又因 #{\mathbb Q(\alpha_i)\subset\mathbb Q(P)}，每个 #{\alpha_i} 的次数至多 #{D}。[有界次数代数数的证明](0HC1)说明每个坐标比只有有限种可能。共有 #{n+1} 张图，每张图中的有限坐标组合仍有限，故结论成立。}
+\p{当 #{D=1} 时，也可取互素整数坐标，每项绝对值至多 #{e^B} 而直接计数。对射影簇上的[丰沛 Weil 高度](0HC2)，用射影嵌入与有界误差得到同样的结论。次数限制不可删除。所有单位根 #{\zeta} 在每个 Archimedean 位绝对值为一，在有限位也为单位，所以 #{h([1:\zeta])=0}。单位根无限多个，其次数不受统一限制。}
 \p{因此固定数域内“有界高度点有限”与 [Bogomolov 的全部代数小点有限性](0G4G)不同。后者依靠曲线在 Jacobian 中的特殊几何，允许点的次数任意大。}

@@ -1,0 +1,15 @@
+\title{图上 Green 能量为何只有线性阶的负部}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Baker–Faber，Metrized Graphs, Laplacian Operators, and Electrical Networks](https://www.math.ucdavis.edu/~saito/data/LapEig/baker-quantum_graphs.pdf)，定理 1、7 的能量原理；[Yuan](icm2026-yuan-quantitativity)，§5.3 的局部能量问题}
+
+\p{设 #{\Gamma} 为有限连通度量图，#{\mu} 是分片常密度加有限点质量的[概率测度](00Q3)，#{g_\mu} 为其[归一化 Green 核](0HC5)。若一个常数 #{M} 满足 #{g_\mu(x,x)\leq M} 对所有 #{x\in\Gamma} 成立，则任意 #{n} 个点（允许重合）满足}
+##{\sum_{i<j}g_\mu(x_i,x_j)\geq -\frac{nM}{2}.}
+\p{虽然左边有 #{n(n-1)/2} 项，负下界只按 #{n} 增长。}
+
+\p{\strong{加入对角项。}令 #{u(t)=\sum_{i=1}^n g_\mu(t,x_i)}。它满足 #{\Delta u=\sum_i\delta_{x_i}-n\mu}，且 #{\int u\,d\mu=0}。由[分部积分](0HC4)，}
+##{0\leq\sum_e\int|u_e'|^2=\int_\Gamma u\,d\Delta u=\sum_{i,j}g_\mu(x_i,x_j).}
+\p{利用对称性，把右边分成 #{2\sum_{i<j}g_\mu(x_i,x_j)+\sum_i g_\mu(x_i,x_i)}；最后一项至多 #{nM}，即得结论。}
+
+\p{一般曲线的一致局部估计，还要把 #{M} 与[局部 φ 不变量](0G4H)作统一比较。在[带亏格权重的单环图](0HC8)上，两者可以直接计算；任意约化图的比较需要额外的图不等式。复曲线的 Green 核在对角线上具有对数奇性，不能直接把有限的 #{M} 套用于无限位。}

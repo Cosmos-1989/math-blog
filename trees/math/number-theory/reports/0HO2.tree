@@ -1,0 +1,16 @@
+\title{非多项式权重转移时怎样只付二阶矩尺度的误差}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4，式 (4.2) 的转移问题](icm2026-harper-probability)；有限 Bernstein 逼近的显式误差推导}
+
+\p{沿用[短素数统计量的定义](0HO1)：#{r} 为素数，#{P\geq 2}，#{N,J,D\geq 1} 为整数，#{NP^{JD}<r}，#{Y(g)\in[0,1]^J}，#{S(g)=\sum_{n\leq N}b_ng(n)}，#{V=\sum_{n\leq N}|b_n|^2}。设有限组非负函数 #{F_v} 在立方体上满足 #{\sum_vF_v=1}，各自的 Euclidean Lipschitz 常数为 #{L_v}。置}
+##{\varepsilon_v=\frac{L_v}{2}\sqrt{\frac JD},\qquad
+\sigma_v^{\rm char}=\mathbb E_{\rm char}F_v(Y(\chi)),\quad
+m_v^{\rm char}=\mathbb E_{\rm char}F_v(Y(\chi))|S(\chi)|^2,}
+\p{并用 #{\mathbb E_f,Y(f),S(f)} 定义 #{\sigma_v^f,m_v^f}。则}
+##{|\sigma_v^{\rm char}-\sigma_v^f|\leq 2\varepsilon_v,\qquad
+|m_v^{\rm char}-m_v^f|\leq 2\varepsilon_vV.}
+\p{\strong{证明。}[非负 Bernstein 逼近](0HO0)给出总次数不超过 #{JD} 的 #{Q_v=B_DF_v}，满足 #{|F_v-Q_v|\leq\varepsilon_v}。将两个模型的差拆成三项：#{F_v-Q_v} 在特征标侧的期望、#{Q_v} 的两侧期望之差，以及 #{Q_v-F_v} 在随机侧的期望。中间项由多项式精确转移为零，两端各不超过 #{\varepsilon_v}。}
+\p{对于加权二阶矩，仍作同样拆分。中间项再次为零，而每一端的绝对值至多 #{\varepsilon_v\mathbb E|S|^2=\varepsilon_vV}。这里先取期望再使用二阶矩恒等式；若先用 #{|S|\leq\sum|b_n|} 的逐点界，会不必要地损失一个与长度有关的因子。}
+\p{这些误差对整个权重集合的求和成本由 #{\sum_v\varepsilon_v} 决定，而非仅由单个权重的逼近精度决定。[网格帽函数的构造](0HO4)给出可直接代入的有限分解。}

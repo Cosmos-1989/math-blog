@@ -1,0 +1,14 @@
+\title{特征 p 的系数抽取为何与平移相容}
+\date{2026-10-13}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Harvey–Sutherland II](https://math.mit.edu/~drew/conm13352.pdf)，定理 5.1 的系数证明所需恒等式；此处直接作多项式计算}
+
+\p{设 #{p} 为奇素数，在[有限域](00GF) #{\mathbb F_p} 的[多项式环](0ALH)上定义线性算子}
+##{\mathcal E_p\left(\sum_{m\geq 0}c_mx^m\right)=\sum_{r\geq 0}c_{pr+p-1}x^r.}
+\p{它只保留指标模 #{p} 余 #{p-1} 的系数，再缩小指标。对 #{a\in\mathbb F_p} 和任意多项式 #{F}，有 #{\mathcal E_p(F(x+a))=(\mathcal E_pF)(x+a)}。}
+\p{\strong{提出 p 次幂。}首先，#{\mathcal E_p(P(x)^pQ(x))=P(x)\mathcal E_p(Q(x))}。写 #{P=\sum_ib_ix^i}；由二项展开，中间二项系数被素数 #{p} 整除，且 #{b_i^p=b_i}，所以 #{P^p=\sum_ib_ix^{pi}}。逐项比较定义中的系数即得等式。这里 #{b_i^p=b_i} 也可由[有限域乘法置换](0H0D)推出。}
+\p{\strong{逐个单项式检查。}将 #{m} 唯一写为 #{m=pt+r}，#{0\leq r<p}。由 #{a^p=a}，有 #{(x+a)^m=((x+a)^t)^p(x+a)^r}。若 #{r<p-1}，末因子的次数不足 #{p-1}，抽取结果为零；若 #{r=p-1}，末因子的最高项系数为一，抽取结果为一。因此}
+##{\mathcal E_p((x+a)^m)=
+\begin{cases}(x+a)^t,&r=p-1,\\0,&r<p-1,\end{cases}}
+\p{恰等于 #{(\mathcal E_px^m)(x+a)}。线性性给出一般结论。这个论证使用 #{a\in\mathbb F_p}；在扩域里不能直接把 #{a^p} 换成 #{a}。}

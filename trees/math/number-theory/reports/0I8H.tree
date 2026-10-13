@@ -1,0 +1,13 @@
+\title{局部群卷积定义符号的星积}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Nelson](icm2026-nelson)，§13.5.1、§13.6.1}
+
+\p{设 #{G} 是实[矩阵 Lie 群](0H48)，在 Lie 代数 #{\mathfrak g\cong\mathbb R^d} 中选足够小的零点邻域 #{U}。令 #{Z(X,Y)=\log(\exp X\exp Y)} 在 #{U\times U} 上有定义。对固定 Schwartz 符号 #{a,b}，置 #{A(X)=(2\pi)^{-d}\int a(\xi)e^{-iX\cdot\xi}\,d\xi}，#{B} 同样由 #{b} 得到。取 #{h>0}，选择紧支撑光滑截断 #{\chi_1,\chi_2\in C_c^\infty(U)}，并要求它们在零点附近为一。定义}
+##{(a\star_h b)(\zeta)=\iint\chi_1(hx)\chi_2(hy)A(x)B(y)\exp\left(\frac{i}{h}\zeta\bigl(Z(hx,hy)\bigr)\right)\,dx\,dy.}
+
+\p{该式是两项局部符号核推到群上作卷积后，再拉回指数坐标并作 [Fourier 变换](0I80)的表达式。确切地，令 #{k_h(Z)\,dZ} 是如下推前测度：将 #{\chi_1(X)h^{-d}A(X/h)\chi_2(Y)h^{-d}B(Y/h)\,dX\,dY} 经 #{(X,Y)\mapsto Z(X,Y)} 推前。对固定 #{X}，映射 #{Y\mapsto Z(X,Y)} 是群左平移在指数坐标中的微分同胚。用它换元后，密度成为关于 #{X} 的紧支撑光滑积分，各阶参数微分可由[支配收敛](0I8I)移入积分，故 #{k_h} 光滑且紧支撑。因此 #{a\star_h b} 对每个 #{h} 是 Schwartz 函数。换元 #{X=hx,Y=hy} 给出上式及 #{(a\star_h b)(\zeta)=\int k_h(Z)e^{i\zeta(Z)/h}\,dZ}。}
+\p{取在 #{k_h} 的支撑上恒为一的固定截断 #{\chi'}，则[群量子化](0H4K)有精确恒等式}
+##{\operatorname{Op}_{h,\pi}(a;\chi_1)\operatorname{Op}_{h,\pi}(b;\chi_2)=\operatorname{Op}_{h,\pi}(a\star_h b;\chi').}
+\p{证明只须在两个算子的绝对收敛弱积分中使用 #{\pi(\exp X)\pi(\exp Y)=\pi(\exp Z(X,Y))}，再用 [Fubini 定理](0H53)与推前定义。}

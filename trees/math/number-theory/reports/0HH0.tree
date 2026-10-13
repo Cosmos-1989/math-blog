@@ -1,0 +1,16 @@
+\title{两个特征标的扩张由比值特征标的一次上同调分类}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gee，§3.2 的普通表示滤过](nt-gee-icm2026)；[连续一次余循环](0C16)的矩阵实现}
+
+\p{设 #{E/\mathbb Q_p} 有限，#{G} 为[拓扑群](00TX)，#{\chi_1,\chi_2:G\to E^\times} 连续。考虑连续表示的短正合列 #{0\to E(\chi_1)\to V\to E(\chi_2)\to 0}，且同构要求在子对象与商上均为恒等。这里 #{E(\chi)} 是作用 #{g\cdot a=\chi(g)a} 的一维空间。这样的扩张由}
+##{H^1_{\mathrm{cts}}(G,E(\chi_1\chi_2^{-1}))}
+\p{分类。此处系数采用 #{E} 的 p 进拓扑；[连续上同调定义](0C16)同样适用。}
+
+\p{\strong{归一化非对角项。}选子空间的基 #{e_1} 与商基的提升 #{e_2}，则 #{\rho(g)=\left(\begin{smallmatrix}\chi_1(g)&b(g)\\0&\chi_2(g)\end{smallmatrix}\right)}。矩阵乘法给出 #{b(gh)=\chi_1(g)b(h)+b(g)\chi_2(h)}。置 #{c(g)=b(g)/\chi_2(g)}，便有}
+##{c(gh)=c(g)+(\chi_1\chi_2^{-1})(g)c(h).}
+
+\p{\strong{换基与分裂。}以 #{e_2+ae_1} 代替 #{e_2}，#{c(g)} 增加 #{a(\chi_1\chi_2^{-1})(g)-a}，即余边界。反过来，每个余循环按上述矩阵定义一个扩张。扩张分裂当且仅当能选 #{e_2} 使所有 #{b(g)=0}，等价于上同调类为零。}
+
+\p{因此[普通滤过](0G8B)的对角特征标只确定其组成因子，非对角项还有上同调参数。这些参数可以改变整个表示的 Hodge–Tate 性质。}

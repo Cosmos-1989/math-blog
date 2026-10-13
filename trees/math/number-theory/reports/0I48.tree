@@ -1,0 +1,12 @@
+\title{互异点值的插值公式与可复用权重}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey–Sutherland II](https://math.mit.edu/~drew/conm13352.pdf)，§5 的 Vandermonde 重构；插值权重的初等实现}
+
+\p{设 #{K} 为[域](00D0)，#{g\geq 1}，#{a_1,\ldots,a_g\in K} 两两不同。给定 #{b_1,\ldots,b_g}，唯一的次数小于 #{g} 的[多项式](0ALH) #{P} 满足 #{P(a_i)=b_i}，并且}
+##{P(x)=\sum_{i=1}^g b_i L_i(x),\qquad
+L_i(x)=\frac{Q_i(x)}{d_i},\quad Q_i(x)=\prod_{t\ne i}(x-a_t),\quad d_i=\prod_{t\ne i}(a_i-a_t).}
+\p{\strong{存在与唯一。}每个 #{d_i\ne 0}，所以 #{L_i(a_t)} 在 #{i=t} 时为一，其余为零，公式给出存在性。若两个解之差非零，它次数小于 #{g} 却有 #{g} 个互异根；每个根可提出一个一次因子，逐次因式分解与次数相加矛盾。因此解唯一。}
+\p{\strong{权重预处理。}先逐次乘一次因子求 #{Q(x)=\prod_i(x-a_i)}，共 #{O(g^2)} 次域加乘；每个 #{Q_i=Q/(x-a_i)} 用从最高次往下的系数递推作精确除法，需 #{O(g)} 次运算。代入 #{a_i} 求 #{d_i=Q_i(a_i)} 也需 #{O(g)} 次。故全部分子和分母花 #{O(g^2)} 次运算。}
+\p{所有分母只需一次求逆：置 #{D_0=1,D_i=D_{i-1}d_i}，先求 #{t=D_g^{-1}}，再按 #{i=g,g-1,\ldots,1} 输出 #{d_i^{-1}=tD_{i-1}}，并令 #{t\leftarrow td_i}。每一步开始时 #{t=D_i^{-1}}，所以公式和更新均正确。权重 #{L_i} 可重复用于多组点值；此后每组系数只需 #{O(g^2)} 次加乘，总存储为 #{O(g^2)} 个域元素。}

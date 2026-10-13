@@ -1,0 +1,12 @@
+\title{随机 Dirichlet 级数为何与全纯 Euler 乘积为同一个样本函数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§3](icm2026-sawin-probability)；[Kowalski，作者 PDF，命题 3.2.9(2)–(3)，印刷页 46–47](https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf)，正交级数构造及解析延拓}
+
+\p{令 #{f} 为 [Steinhaus 函数](0GG2)，#{H=\{s:\operatorname{Re}s>1/2\}}。在一个概率为 #{1} 的事件上，按整数递增顺序的级数 #{\sum_{n\geq 1}f(n)n^{-s}} 在 #{H} 局部一致收敛，并且其和等于[全纯随机 Euler 乘积](0HS3) #{Z_f(s)}。}
+\p{\strong{先构造级数。}[乘法正交性](0GG5)给 #{\mathbb E(f(n)\overline{f(m)})=\mathbf 1_{n=m}}。虽然整数处的值不独立，[正交部分和界](0HS1)仍适用。对同一个样本，#{\sum_{n\leq x}f(n)=O_{\omega,\varepsilon}(x^{1/2+\varepsilon})} 对所有 #{\varepsilon>0} 成立，故[分部求和](0HS2)给出 #{H} 上的局部一致收敛与全纯性。将这个概率一事件与 Euler 构造的事件取交。}
+\p{\strong{识别两个全纯函数。}在 #{\operatorname{Re}s>1}，[绝对收敛的 Euler 展开](0GK6)已经证明两者相等。为说明等式可延伸，令两者之差为 #{h}。由 [Cauchy 公式](0BAD)在小圆盘内展开核的几何级数，#{h} 有收敛 Taylor 展开。若其中第一个非零项次数为 #{m}，则 #{h(z)=(z-z_0)^m(c+O(z-z_0))}，#{c\ne 0}，所以 #{z_0} 附近没有其他零点。}
+\p{现在令 #{U} 为 #{h} 在某邻域恒零的点集。它非空且开；若 #{U} 中的点趋于半平面内的 #{z_0}，则要么 #{z_0\in U}，要么有不同零点趋于 #{z_0}，后一情形排除了上述第一个非零 Taylor 项，也推出 #{z_0\in U}。所以 #{U} 在 #{H} 内亦闭。半平面是[连通的](00F4)，因而 #{U=H}，等式处处成立。}
+\p{\strong{函数值随机变量的可测性。}取紧矩形 #{K_m=\{s:1/2+1/m\leq\operatorname{Re}s\leq m,\ |\operatorname{Im}s|\leq m\}}（#{m\geq 2}），它们穷竭 #{H}。全纯函数空间的[紧收敛拓扑](00MG)可由度量 #{d(g,h)=\sum_{m\geq 2}2^{-m}\min\{1,\sup_{K_m}|g-h|\}} 表示。有限 Dirichlet 和连续地依赖有限个可测素数坐标，因此是此空间中的[可测映射](00Q1)；在概率一事件外把所有部分和和极限均改为常函数 #{1} 后，它们处处按此[度量收敛](00EP)。到任意闭集的距离是连续函数，距离的逐点极限仍可测；极限落入该闭集恰好对应距离为零，故极限也是可测映射。}
+\p{这个构造只确定随机模型及其样本函数。真实 zeta 函数的竖直平移分布趋向此模型，是另外的 [Bagchi 极限定理](0GK8)，并非解析延拓的结论。}

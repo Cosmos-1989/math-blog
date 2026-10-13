@@ -1,0 +1,11 @@
+\title{加法群上符号量子化的精确乘法}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{\pi} 是加法群 #{\mathbb R^d} 的[强连续酉表示](0H4C)。对 #{a\in\mathcal S(\mathbb R^d)}，不取局部截断，定义 #{Q_h(a)=\int h^{-d}A(X/h)\pi(X)\,dX}，其中 #{A(X)=(2\pi)^{-d}\int a(\xi)e^{-iX\cdot\xi}\,d\xi}。则对任意 #{a,b\in\mathcal S} 有}
+##{Q_h(a)Q_h(b)=Q_h(ab).}
+
+\p{\strong{证明。}令 #{B} 为 #{b} 的同样变换。由[积分表示的卷积公式](0H4E)，乘积核为 #{h^{-d}(A*B)(X/h)}，其中 #{(A*B)(Z)=\int A(Y)B(Z-Y)\,dY}。用 [Fubini](0H53)和 [Fourier 反演](0I80)计算}
+##{\int (A*B)(Z)e^{iZ\cdot\xi}\,dZ=\left(\int A(Y)e^{iY\cdot\xi}\,dY\right)\left(\int B(W)e^{iW\cdot\xi}\,dW\right)=a(\xi)b(\xi).}
+\p{卷积是 Schwartz 函数，所以反演唯一性表明其正是 #{ab} 的核。对一维表示 #{\pi_\eta(X)=e^{i\eta\cdot X}}，还有 #{Q_h(a)=a(h\eta)}。这既给出乘法公式的点值模型，也解释一般 Lie 群中群乘法的非线性为何产生符号复合的修正项。}

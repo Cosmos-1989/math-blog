@@ -1,0 +1,16 @@
+\title{表示沿小扩张提升的二次上同调障碍}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Gee，arXiv:2202.05818v1，§3.10–3.14](https://arxiv.org/html/2202.05818v1#S3.SS2)的障碍论；乘法误差的逐项证明}
+
+\p{设 #{G} 为[预有限群](0F0G)，#{A'\twoheadrightarrow A} 为核 #{I} 的[小扩张](0HG0)，#{\rho:G\to\operatorname{GL}_n(A)} 为[连续](00E2)表示。记其剩余表示为 #{\bar\rho}。令 #{M=M_n(k)\otimes_k I}，作用为 #{g\cdot X=\bar\rho(g)X\bar\rho(g)^{-1}}。存在自然障碍类 #{o(\rho,A')\in H^2_{\mathrm{cts}}(G,M)}，它为零当且仅当 #{\rho} 可提升到 #{\operatorname{GL}_n(A')}。}
+
+\p{\strong{构造误差。}#{\rho} 的像有限，故可逐个选取矩阵提升，得到连续映射 #{R:G\to\operatorname{GL}_n(A')}，并取 #{R(1)=1}。它暂不必是同态。定义}
+##{R(g)R(h)=(1+c(g,h))R(gh),\qquad c(g,h)\in M_n(I)=M.}
+
+\p{\strong{结合律给出余循环。}先计算 #{(R(g)R(h))R(k)}，误差为 #{c(g,h)+c(gh,k)}；先计算 #{R(g)(R(h)R(k))}，误差为 #{g\cdot c(h,k)+c(g,hk)}。所有误差乘积均为零。两者相等正是[二余循环条件](0HG1)。}
+
+\p{\strong{改变选择。}另一组提升唯一形如 #{R_a(g)=(1+a(g))R(g)}。展开可得 #{c_a=c+\delta a}，所以 #{[c]} 与选择无关，定义为 #{o(\rho,A')}。若 #{R} 已为表示，则 #{c=0}。反之，若 #{[c]=0}，可写 #{c=\delta b}，取 #{a=-b} 便使 #{c_a=0}；此时 #{R_a} 是所需连续表示。}
+
+\p{这个结论把存在性问题化成一个准确的上同调类是否为零。[变形环](0G8K)的方程所记录的高阶约束，正来自这种不能消去的乘法误差。}

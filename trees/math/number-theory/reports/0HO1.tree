@@ -1,0 +1,13 @@
+\title{短素数多项式权重的特征标平均何时精确转移}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4](icm2026-harper-probability)；[The Typical Size of Character and Zeta Sums Is o(√x)，arXiv v1，命题 1 的主项展开](https://arxiv.org/pdf/2301.04390v1)，下述有限次数形式直接由正交性证明}
+
+\p{固定素数 #{r}、实数 #{P\geq 2} 和正整数 #{N,J,d}，假定 #{NP^d<r}。对每个 #{1\leq j\leq J}，给定复数 #{a_{jp}}（#{p\leq P} 为素数），并取 #{B_j>0} 满足 #{B_j\geq\sum_{p\leq P}|a_{jp}|}。对 [Steinhaus 函数](0GG2)或[模 #{r} 的特征标](0GG6) #{g}，定义}
+##{Y_j(g)=\frac 12\left(1+\frac 1{B_j}\operatorname{Re}\sum_{p\leq P}a_{jp}g(p)\right),\qquad S(g)=\sum_{n=1}^N b_ng(n),\qquad V=\sum_{n=1}^N|b_n|^2.}
+\p{这里 #{b_n\in\mathbb C} 任意，且 #{Y(g)\in[0,1]^J}。记 #{\mathbb E_{\rm char}} 为包括主特征标在内的均匀平均，#{\mathbb E_f} 为随机素数相位的期望。任意总次数至多 #{d} 的复多项式 #{Q} 都满足}
+##{\mathbb E_{\rm char}Q(Y(\chi))=\mathbb E_fQ(Y(f)),\qquad
+\mathbb E_{\rm char}Q(Y(\chi))|S(\chi)|^2=\mathbb E_fQ(Y(f))|S(f)|^2.}
+\p{\strong{跟踪展开后的整数。}将实部写成某个素数和与其共轭之和。#{Q(Y(g))} 的每一项都是常数乘 #{g(A)\overline{g(B)}}，其中 #{A,B} 各由至多 #{d} 个不超过 #{P} 的素数相乘而得，空乘积为 #{1}。于是 #{A,B\leq P^d}。再乘 #{|S(g)|^2}，每项变成常数乘 #{g(An)\overline{g(Bm)}}，其中 #{n,m\leq N}，故两边整数都严格小于 #{r}。}
+\p{[特征标正交性](0GG7)留下 #{An\equiv Bm\pmod r} 的项；在上述范围内，这等价于 #{An=Bm}。而[随机乘法正交性](0GG5)恰好留下同一批相等项。逐项相加给出两式。取 #{Q=1} 还得到两侧的 #{\mathbb E|S|^2=V}。长度条件控制的是展开后的整数乘积，不只是素数各自小于模数。}

@@ -1,0 +1,17 @@
+\title{度量图上的分部积分为何给出非负能量}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Baker–Faber，Metrized Graphs, Laplacian Operators, and Electrical Networks](https://www.math.ucdavis.edu/~saito/data/LapEig/baker-quantum_graphs.pdf)，§§2–3，定义 2、4–5，定理 1}
+
+\p{从有限[连通图](00LC)出发，给每条边指定长度 #{\ell_e>0}，把它替换成闭区间并按端点粘合，所得路径[度量空间](00EK)称为度量图 #{\Gamma}。允许环与重边；插入有限多个二价顶点后可用[简单图](00LB)作为模型。沿边的坐标记为 #{t\in[0,\ell_e]}，弧长测度记为 #{dt}。}
+
+\p{设 #{u:\Gamma\to\mathbb R} 连续，并在某个细分模型的每条闭边上为 #{C^2}。定义带符号[测度](00Q2)形式的 Laplace 算子}
+##{\Delta u=\sum_e\left(-u_e''(t)\,dt+u_e'(\ell_e)\delta_{e^+}-u_e'(0)\delta_{e^-}\right),}
+\p{其中 #{\delta_p} 表示点 #{p} 处质量一的测度，#{e^-,e^+} 是所选方向的起终点。反转方向不改变此式，插入导数连续的二价顶点时，两个人工端点项相消，因此定义与这些选择无关。}
+
+\p{对同类实值函数 #{u,v}，有}
+##{\int_\Gamma u\,d\Delta v=\int_\Gamma v\,d\Delta u=\sum_e\int_0^{\ell_e}u_e'(t)v_e'(t)\,dt.}
+\p{\strong{证明。}一条边的贡献为 #{-\int u_ev_e''+u_e(\ell_e)v_e'(\ell_e)-u_e(0)v_e'(0)}。对乘积 #{u_ev_e'} 使用[微积分基本定理](0A3C)，一维分部积分将它恰好化为 #{\int u_e'v_e'}；对所有边相加即可。取 #{u=1} 得 #{\Delta v} 总质量为零；取 #{u=v} 得}
+##{\int_\Gamma u\,d\Delta u=\sum_e\int_0^{\ell_e}|u_e'|^2\,dt\geq 0.}
+\p{若等号成立，每条边上的导数均为零。连续性与连通性于是使 #{u} 在整个图上为常数。因此具有相同 Laplacian 的两个解只差常数；固定某一点的函数值，或对一个[概率测度](00Q3)规定零均值，都唯一确定这个常数。}

@@ -1,0 +1,12 @@
+\title{Schwartz 符号的量子化有一致算子界}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{a\in\mathcal S(\mathbb R_x^d\times\mathbb R_\xi^d)}。其[左量子化](0H4J) #{\operatorname{Op}_h(a)} 在 #{0<h\leq 1} 时作为 [L²](0A6A) 算子满足 #{\|\operatorname{Op}_h(a)\|\leq C_a}。常数由 #{a} 的有限个 [Schwartz 半范数](0H4F)控制，因而对这些半范数一致有界的符号族也一致成立。}
+
+\p{\strong{证明。}核为 #{K_h(x,y)=(2\pi h)^{-d}\int e^{i(x-y)\cdot\xi /h}a(x,\xi)\,d\xi}。取整数 #{N>d/2}，记 #{\Delta_\xi=\sum_j\partial_{\xi_j}^2}。由}
+##{(1-\Delta_\xi)^N e^{iz\cdot\xi}=(1+|z|^2)^Ne^{iz\cdot\xi},}
+\p{分部积分给出}
+##{|K_h(x,y)|\leq (2\pi)^{-d}M_Nh^{-d}(1+|x-y|^2/h^2)^{-N},\qquad M_N=\sup_x\int|(1-\Delta_\xi)^Na(x,\xi)|\,d\xi.}
+\p{#{M_N} 有限；例如以 #{(1+|\xi|)^{-d-1}} 控制被积函数便得到有限个 Schwartz 半范数的上界。无论固定 #{x} 积 #{y}，还是固定 #{y} 积 #{x}，换元 #{z=(x-y)/h} 后右侧积分都是常数 #{(2\pi)^{-d}M_N\int(1+|z|^2)^{-N}\,dz}。[Schur 估计](0I81)即给出结论。}

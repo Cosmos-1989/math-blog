@@ -1,0 +1,13 @@
+\title{数字和的一阶矩怎样控制 Fourier 配对的误差}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§2 的圆法配对](icm2026-harper-probability)；有限 Fourier 恒等式及其条件误差界}
+
+\p{取[三进制数字集合](0HP1) #{A_k\subseteq\{0,\ldots,3^k-1\}}，令 #{F_k(\theta)=\sum_{n\in A_k}e^{2\pi in\theta}}。对任意复权重 #{c_0,\ldots,c_{3^k-1}}，置 #{C_k(\theta)=\sum_{n=0}^{3^k-1}c_ne^{-2\pi in\theta}}。那么}
+##{\sum_{n\in A_k}c_n=\int_0^1F_k(\theta)C_k(\theta)\,d\theta.}
+\p{证明是展开两个有限和，再使用[整数频率的圆周正交性](0HP0)；只有相同的整数下标留下，因而无任何极限交换。若 #{E\subseteq[0,1]} 可测且 #{|C_k(\theta)|\leq M_k} 对几乎处处的 #{\theta\in E} 成立，则}
+##{\left|\int_EF_k(\theta)C_k(\theta)\,d\theta\right|
+\leq M_k\int_0^1|F_k(\theta)|\,d\theta\leq M_k(4/3)^k.}
+\p{这解释了小一阶矩在圆法中的作用：#{E} 可以取作尚待控制的频率区域，数字因子提供积分节省，算术权重提供一致界。例如，若某项应用要求误差为 #{o(2^k/k)}，上述上界给出的充分条件是 #{M_k=o((3/2)^k/k)}。若只使用 #{M_k\leq 3^{k(1-\delta)}}，则 #{\delta>\log 2/\log 3} 足以保证这个条件。}
+\p{对于素数权重，必须先检查局部同余障碍：#{A_k} 的每个数字都是偶数，且 #{3} 是奇数，因此 #{A_k} 中所有整数都为偶数，其唯一可能的素数是 #{2}。不能把 #{2^k/k} 当作这个集合的素数计数预测。平移到 #{A_k+1} 可去掉这项奇偶障碍，Fourier 和只多一个模长为 #{1} 的因子 #{e^{2\pi i\theta}}，一阶矩界不变；但要得到素数渐近公式，仍须另外证明相应算术频率界、主项及其局部因子。}

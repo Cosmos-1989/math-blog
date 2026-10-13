@@ -13,18 +13,36 @@
         "read": "Full primary report sections 1-8, all figure captions, references 1-74, copyright and publication metadata. Equations, hypotheses and distinctions between proved theorems and unchecked proposals were read, not only the abstract.",
         "source_record": "research/sources/number-theory/computation/source-location.json",
         "downloaded": [],
-        "supplementary_reading": "Existing canonical notes listed below; no claim to have read the cited original papers or monographs in full.",
+        "supplementary_reading": "The original report reading remains as recorded above. For the post-164f927 expansion, re-read report section 6.1 and Remark 6.3 and read the Harvey-Sutherland II published author offprint in the exact scope below; no claim to have read all cited papers or monographs in full.",
+        "expansion_sources": [
+          {
+            "authors": "David Harvey and Andrew V. Sutherland",
+            "title": "Computing Hasse-Witt matrices of hyperelliptic curves in average polynomial time, II",
+            "url": "https://math.mit.edu/~drew/conm13352.pdf",
+            "doi": "10.1090/conm/663/13352",
+            "edition": "Contemporary Mathematics 663 (2016), pp. 127-147, published author offprint; 21 PDF pages",
+            "read": "Introduction and Theorem 1.1 (pp. 127-128); section 2 recurrence derivation (pp. 129-131); section 3 including Lemma 3.1 and Theorems 3.2-3.3 (pp. 131-134); section 4 algorithm and Theorems 4.2/4.5 inspected; section 5 complete translation/interpolation argument, Theorem 5.1, Example 5.2 and Lemma 5.3 (pp. 136-139); section 6 algorithm and proof of Theorem 1.1 through coefficient-height and exceptional-prime estimates (pp. 139-140). Performance tables and section 7 were not systematically read. The new local conjugacy proof uses coefficient extraction, not the source's differential/Cartier proof.",
+            "licensing": "Copyright 2016 by the authors; PDF explicitly says publisher-provided free author offprint and copyright restrictions may apply. Not assigned the report's CC BY license. No figures or extended text reproduced; local mathematical proofs and examples newly written.",
+            "arxiv_metadata_only": "https://arxiv.org/abs/1410.5222, v1 dated 2014-10-20; metadata checked, arXiv full text not substituted for the published offprint",
+            "downloaded": [],
+            "local_source_record": "This expansion_sources entry records the remote source location; no PDF was added to the repository."
+          }
+        ],
         "licensing": "IMU 2026, SIAM CC BY 4.0. Chinese adaptations and added elementary proofs are credited on the reference page; no reproduced figure used."
       },
       "coverage": {
         "section1": ["0H06", "0H0B", "0H0C"],
         "section2": ["0H0C", "0H07"],
         "section3.1": ["0H02", "0H07"],
-        "section3.2": ["0H01", "0H03", "0H04", "0H05", "0H07", "0H0U"],
+        "section3.2": ["0H01", "0H03", "0H04", "0H05", "0H07", "0H0U", "0I40", "0I41", "0I42", "0I43", "0I44"],
         "section3.3": ["0H08", "0H09", "0H0A", "0H0V"],
         "section4": ["0H0K", "0H0L"],
         "section5": ["0H0D", "0H0W", "0H0E", "0H0F", "0H0G", "0H0H", "0H0I", "0H0J"],
-        "section6.1": ["0H0M", "0H0N", "0H0O", "0H0P", "0H0U"],
+        "section6.1": ["0H0M", "0H0N", "0H0O", "0H0P", "0H0U", "0I40", "0I41", "0I42", "0I43", "0I44", "0I45", "0I46", "0I47", "0I48", "0I49", "0I4A", "0I4B", "0I4C", "0I4D"],
+        "supplementary_HSII_section2": ["0I4A"],
+        "supplementary_HSII_section3": ["0I40", "0I41", "0I42", "0I43", "0I44"],
+        "supplementary_HSII_section5": ["0I45", "0I46", "0I47", "0I48", "0I49", "0I4B"],
+        "supplementary_HSII_section6": ["0I4C", "0I4D"],
         "section6.2": ["0H0S"],
         "section6.3": ["0H0Q", "0H0T"],
         "section7": ["0H0R"],
@@ -37,8 +55,8 @@
         "Prime-table construction in the multitape model and the prime number theorem are cited inputs, not proved locally.",
         "Schoof/SEA, Kedlaya/Monsky-Washnitzer cohomology and Hasse-Weil theorem proofs.",
         "Hasse-Witt determinant congruence proof (report cites Handbook proposition 17.8).",
-        "Harvey-Sutherland translation/interpolation reconstruction and its coefficient-height-uniform O(g^3 N log^3 N) analysis; only the mechanism and exact source location are given.",
-        "Optimal remainder-forest time-space tradeoff; 0H0U proves a block state invariant only.",
+        "The translation/interpolation mechanism is now proved locally in 0I45-0I49, connected to first-row recurrence and a fixed-model batch proof in 0I4A-0I4D. The published coefficient-height-uniform O(g^3 M(N log N) log N) time and O(g^2 N) space theorem, under g log g=O(log N) and log max|f_i|=O(log N), still uses optimized matrix multiplication, prime estimates and a sharper exceptional-prime analysis not fully reproved here.",
+        "0I40-0I44 now prove an explicit schoolbook-matrix forest tradeoff, including initialization and long boundary states. The d^2 optimized main term of Harvey-Sutherland II Theorem 3.3 and the prime-block balance estimates supporting its strongest space bounds remain external. Linear-workspace fast integer arithmetic is an explicit additional assumption, not proved locally.",
         "Sato-Tate group definitions, Haar measure theorem formulations and proofs; 0H0S supplies the computational frequency construction, not an equidistribution proof.",
         "Full hyperelliptic higher-precision algorithm of Theorem 6.4; 0H0T states its fixed-curve consequence and external proof source.",
         "Geometrically hyperelliptic curves over quadratic extensions, plane quartics and superelliptic curve special recurrences.",
@@ -48,7 +66,7 @@
     }
   ],
   "entries": [
-    ["0H00", [], "Outline: why shared prefixes lead from factorials to matrix recurrences and local zeta functions; prose paths reach all 32 new atomic notes."],
+    ["0H00", [], "Outline: shared prefixes, explicit forest time-space tradeoff, first-row translation/interpolation, and local zeta functions; mathematical prose paths reach every owned atomic note."],
     ["0H01", ["00CU"], "Question: why can a remainder be reduced along divisibility and multiplied before reduction? Integer proof; matrix entrywise corollary."],
     ["0H02", ["00GK"], "Question: what interval product does each ordered product-tree node encode? Associativity proof and padding."],
     ["0H03", ["0H01", "0H02"], "Question: why does a classical remainder tree simultaneously reduce one integer? CRT construction 01I8 is contrast, not prerequisite."],
@@ -81,6 +99,20 @@
     ["0H0U", ["0H08", "0H01"], "Question: which boundary state makes blockwise ART valid? Proof without claiming the optimal remainder-forest resource tradeoff."],
     ["0H0V", ["0H06", "0H08"], "Question: how do dimension and bit growth affect matrix ART cost? Conservative schoolbook matrix multiplication bound with explicit d dependence."],
     ["0H0W", ["00GF", "0H0D"], "Question: how does Euler's square criterion count the roots of y^2=a? Separated from the power-sum proposition in the final atomicity review."],
+    ["0I40", ["0H06", "0H02"], "Question: why can the modulus-product root be computed in linear workspace? DFS live-interval proof; unit-modulus weights and linear-workspace arithmetic hypothesis explicit."],
+    ["0I41", ["0I40", "0H02", "0H08", "0H0U"], "Question: what exact block recurrence implements a remainder forest? Q peeling, prefix-state invariant, noncoprime moduli and four-leaf example."],
+    ["0I42", ["0I41", "0H06", "0H0V", "0I40"], "Question: how do local tree work and long boundary updates combine in the forest time bound? Explicit B/q block balance and conservative d^3 schoolbook main term."],
+    ["0I43", ["0I42", "0I40"], "Question: what remains live at peak memory? Complete one-block-plus-boundary proof conditional on linear-workspace arithmetic; input/output residency distinguished."],
+    ["0I44", ["0I42", "0I43"], "Question: which block count saves memory without changing the time order? q about log n; stronger log-squared choice only under additional prime-block balance. Exact input weight B=n(h+1)."],
+    ["0I45", ["00GF", "0ALH", "0H0D"], "Question: why does the selected-coefficient operator commute with translation over the prime field? Monomial proof and p-th-power extraction; no Cartier geometry assumed."],
+    ["0I46", ["00D0", "0ALH", "00GK"], "Question: which matrix represents polynomial translation in column coordinates? Binomial expansion and T(a)T(b)=T(a+b), in arbitrary characteristic."],
+    ["0I47", ["0H0N", "0I46", "0I45"], "Question: why is W(a)=T(a)WT(-a) with this pi-j convention? Degree bound and intertwining proof, no transpose or hidden f(a) nonzero hypothesis."],
+    ["0I48", ["00D0", "0ALH"], "Question: how are coefficients recovered from distinct point values with reusable weights? Full interpolation proof, root bound, synthetic division and one-inversion batch algorithm."],
+    ["0I49", ["0I46", "0I47", "0I48", "0H0D", "0H06"], "Question: how do g translated first rows determine all g^2 matrix entries? Right-side cancellation and column interpolation; operation/storage count and conservative bit bound."],
+    ["0I4A", ["0H0N", "0AL1", "0H0D", "0H0B", "0H08"], "Question: how does one obtain every hyperelliptic first row from a p-independent integer matrix sequence? Full coefficient recurrence, invertible denominator range, Wilson-Fermat simplification and exact leaf p."],
+    ["0I4B", ["0H0M", "0H0N", "0I4A", "0I49"], "Question: what are the actual two first rows and reconstructed matrix for y^2=x^5+x+1 over F_11? Squarefreeness proof, prefix outputs, interpolation and independent four-coefficient calculation."],
+    ["0I4C", ["0ALH", "0I48", "0I4A", "0I49", "0I46"], "Question: how can fixed integer shifts work for all but finitely many primes? Root count, explicit exception integer, distinct-node/nonzero-constant proof and translated coefficient-height bound."],
+    ["0I4D", ["0H0M", "0H06", "0H0N", "0I4C", "0I4A", "0I41", "0I49", "0I44"], "Question: how does the whole fixed-model Hasse-Witt batch algorithm follow? Good-model screening, finite exceptions, correct ART indexing, first-row assembly, interpolation, O_f(N log^3 N) time and O_f(N log N) workspace with prime table supplied."],
     ["icm2026-harvey-art", [], "Reference: exact publisher edition, pages, source scope, attribution, CC BY license and adaptation notice."]
   ],
   "proofs_written": [
@@ -107,7 +139,21 @@
     {"id":"0H0P","claim":"Exact division loses s digits of p-adic precision"},
     {"id":"0H0Q","claim":"Truncated formal-prime specialization is a ring homomorphism and respects ordered products"},
     {"id":"0H0U","claim":"Blockwise ART boundary state invariant"},
-    {"id":"0H0V","claim":"Matrix-entry growth and conservative bit-complexity bound"}
+    {"id":"0H0V","claim":"Matrix-entry growth and conservative bit-complexity bound"},
+    {"id":"0I40","claim":"Product-root DFS time and linear live storage, conditional on fast linear-workspace arithmetic"},
+    {"id":"0I41","claim":"Remainder-forest modulus-peeling recurrence, block induction and scalar example"},
+    {"id":"0I42","claim":"O(d^3 S log(2S)L+d^2 qB log(2B)) forest time with explicit balanced block weights"},
+    {"id":"0I43","claim":"O(d^2(S/q)L+dB) peak forest workspace including all boundary states and temporary arithmetic"},
+    {"id":"0I44","claim":"Logarithmic and conditional log-squared block choices and their time-space bounds"},
+    {"id":"0I45","claim":"Prime-field coefficient extraction commutes with translation by a monomial calculation"},
+    {"id":"0I46","claim":"Polynomial translation matrix, composition and inverse over an arbitrary field"},
+    {"id":"0I47","claim":"Elementary Hasse-Witt translation conjugacy under the h_(pi-j) column-coordinate convention"},
+    {"id":"0I48","claim":"Lagrange interpolation, uniqueness, reusable quadratic-time weights and one-inversion batch inversion"},
+    {"id":"0I49","claim":"Whole matrix recovery from translated first rows, O(g^3) field operations plus one inverse"},
+    {"id":"0I4A","claim":"Prime-independent hyperelliptic first-row recurrence and cancellation of the complete denominator using Wilson and Fermat"},
+    {"id":"0I4B","claim":"Genus-two mod-eleven squarefreeness, first-row reconstruction and independent coefficient verification"},
+    {"id":"0I4C","claim":"Existence of integer translation nodes, explicit finite exceptional-prime set and coefficient-height estimate"},
+    {"id":"0I4D","claim":"End-to-end fixed-model Hasse-Witt matrix batch algorithm and conservative bit/space bound, conditional on supplied primes and the stated arithmetic routines"}
   ],
   "research_statements_without_local_proof": [
     {"ids":["0H06"],"source":"Report section 1 reference [45], and section 3.2 reference [72] theorem 9.8","statement":"Fast integer multiplication and division in O(b log b) bit operations","status":"Published external input"},
@@ -115,12 +161,13 @@
     {"ids":["0H0H","0H0L"],"source":"Report sections 4-6, Hartshorne Appendix C and Silverman second edition V.2.4 as cited there","statement":"Hasse and curve Weil factorization/rationality","status":"External theorem; only its elementary consequences proved locally"},
     {"ids":["0H0M"],"source":"Report section 6 model setup","statement":"Genus of squarefree degree 2g+1/2g+2 double-cover model and model good reduction","status":"Geometric inputs recalled, not a Riemann-Hurwitz proof"},
     {"ids":["0H0O"],"source":"Report section 6.1, reference [16] proposition 17.8","statement":"Lp(T)=det(I-TWp) modulo p","status":"External theorem"},
-    {"ids":["0H0P"],"source":"Report section 6.1, reference [43] theorem 1.1","statement":"Translation method reconstructing Hasse-Witt matrices from first rows","status":"Cited mechanism; detailed proof and uniform parameter assumptions deferred"},
+    {"ids":["0I40","0I43","0I4D"],"source":"Harvey-Sutherland II published offprint p. 128 arithmetic model; report section 1","statement":"Fast integer arithmetic at O(b log(2b)) time and O(b) auxiliary space","status":"Explicit assumed arithmetic input. Time bound is cited in 0H06; linear workspace is a separate assumption, not inferred from the time bound."},
+    {"ids":["0I42","0I44","0I4D"],"source":"Harvey-Sutherland II Lemma 3.1, Theorem 3.3, Theorem 4.2 and Theorem 1.1","statement":"Optimized matrix multiplication gives a d^2 forest main term. Under g log g=O(log N) and log max|f_i|=O(log N), full matrices cost O(g^3 M(N log N) log N) time and O(g^2 N) space, with M(s)/(s log s) increasing and linear multiplication workspace assumed in the source.","status":"Published stronger theorem, not claimed as the local proof. Local forest proof uses schoolbook d^3 matrix work; the local complete batch theorem fixes the model and proves O_f(N log^3 N) time and O_f(N log N) workspace. Source prime-distribution and sharper exceptional-prime estimates remain external."},
     {"ids":["0H0T"],"source":"Report theorem 6.4, original Annals 179 (2014) theorem 1","statement":"Full hyperelliptic local factors in O_C(N log^3 N)","status":"Published theorem specialized to fixed C; cohomology proof external"},
     {"ids":["0H0R"],"source":"Report theorem 7.1 and remark 7.2, original PLMS 111 (2015) theorem 1.1(c)","statement":"Fixed arithmetic scheme batch zeta functions in O_X(N log^3 N)","status":"Published theorem; trace formula and general reconstruction proof external"},
     {"ids":["0H00","0H0T"],"source":"Report remark 6.2, section 6.3 methods two and three, section 8","statement":"Proposed lower genus exponents, generic-prime higher-precision variants and practical higher-dimensional computation","status":"Author explicitly unchecked or prospective; not established here"}
   ],
-  "existing_notes_reused": ["00CU","00GK","00GF","0AC3","0ALH","0AL0","0AL1","0AF0","01I8","0C01","0C03","0C0P","0E81","0131","0B0H","012X","01D2","0F0F","0H41"],
+  "existing_notes_reused": ["00CU","00D0","00GK","00GF","0AC3","0ALH","0AL0","0AL1","0AF0","01I8","0C01","0C03","0C0P","0E81","0131","0B0H","012X","01D2","0F0F","0H41","0H02","0H06","0H08","0H0B","0H0D","0H0M","0H0N","0H0U","0H0V"],
   "existing_edit_suggestions": [
     {"target":"01I8","suggestion":"The existing CRT construction is inside a special-linear-group surjectivity theorem. A future authorized split could create a canonical integer CRT atomic theorem and retarget 0E87 and 0H03; this task reuses the existing construction and creates no duplicate."},
     {"target":"0AL0","suggestion":"The existing introductory formal-series notation uses a verb expression; this task leaves it untouched and uses lbrack/lbrack in new pages."},
@@ -133,12 +180,14 @@
     "banana_attempts": [
       {"url":"https://banana.de/同余","result":"web tool Internal Error; not verified"},
       {"url":"https://www.bananaspace.org/wiki/中国剩余定理","result":"not accessible via web tool; not verified"},
-      {"url":"https://www.bananaspace.org/wiki/椭圆曲线","result":"403 Forbidden; not verified"}
+      {"url":"https://www.bananaspace.org/wiki/椭圆曲线","result":"403 Forbidden; not verified"},
+      {"url":"https://www.bananaspace.org/wiki/拉格朗日插值公式","result":"Expansion recheck on 2026-10-13: web tool Internal Error; not verified"}
     ],
     "search_result":"Site-specific Banana Space searches did not provide a usable primary entry. No claim of Banana terminology conformity; access failures are recorded here, not in public mathematical pages."
   },
   "checks": [
     {"kind":"prior_inventory","scope":"All 3138 existing trees at initial snapshot","result":"Full-tree text search for congruence, CRT, bit complexity/Turing, point counting, Wilson, Wolstenholme, Kurepa, Hasse-Witt, Sato-Tate; relevant canonical hits read. Other agents may add trees concurrently."},
+    {"kind":"expansion_inventory","base_commit":"164f927","date":"2026-10-13","scope":"All 3409 trees at expansion start","result":"Searched all trees for remainder forests, time/space complexity, interpolation, Vandermonde, translation, Cartier and Hasse-Witt before adding concepts. 00VP and 0AM1 use interpolation/Vandermonde inside other topics, not as a canonical standalone proof. 0I40-0I5Z were unused; only 0I40-0I4D allocated here. Parent reservations 0H4*/0H5*, 0I80, 0I8I and 0I8J left untouched."},
     {"kind":"ownership","result":"Only new 0H00-0H0W trees, uniquely named icm2026-harvey-art reference, this JSON, computation source-location metadata, and tests/number-theory-computation.test.mjs (authorized by the final user request) written. No agents spawned; no build, global sync, commit or push."},
     {"kind":"source_status","result":"Full report primary HTML verified; source anomaly and omitted branches recorded in source-location metadata. Wolstenholme absent; no invented attribution."},
     {"kind":"final_scoped_verification","result":"pass","owned_pages":34,"atomic_math_pages":32,"outlines":1,"references":1,"formulas_checked":686,"katex_version":"0.16.22","distinct_internal_body_links_per_page_summed":125,"prerequisite_closure_nodes":258,"details":"All owned files read after writing. No broken target, navigation prerequisite, prerequisite cycle, unmatched brace or detected command/slash hazard. All owned pages reachable by prose links from 0H00. The final atomicity pass separated Euler square-root counting into 0H0W; 0H0D now only proves power sums. Fixed a missing qquad backslash, declared midpoint s and empty residual product, and bounded padding length explicitly."},
@@ -183,6 +232,71 @@
       "research/number-theory-computation.json",
       "research/sources/number-theory/computation/source-location.json",
       "tests/number-theory-computation.test.mjs"
-    ]}
+    ]},
+    {
+      "kind": "post_164f927_expansion",
+      "date": "2026-10-13",
+      "new_ids": ["0I40","0I41","0I42","0I43","0I44","0I45","0I46","0I47","0I48","0I49","0I4A","0I4B","0I4C","0I4D"],
+      "updated_ids": ["0H00","0H0N","0H0P","0H0U"],
+      "proof_branches": [
+        "Complete explicit remainder-forest recurrence with root initialization, noncoprime correctness, balanced-block time proof, one-block-plus-boundary space proof, and block-choice corollaries.",
+        "Complete prime-field translation conjugacy via coefficient extraction, reusable interpolation weights, matrix reconstruction, p-independent first-row recurrence, integer shift selection, exact genus-two example, and fixed-model full-matrix batch proof."
+      ],
+      "mathematical_review": "All 14 new pages and four updated pages inspected after writing. Corrected exact modulus-weight bound to n(h+1), distinguished odd-prime prerequisites, explicitly retained degree and squarefreeness for geometric matrix interpretation, checked column/row orientation and leaf p. No Cartier determinant proof, uniform-genus optimized theorem or measured machine-space bound claimed.",
+      "scoped_verification": {
+        "result": "pass",
+        "command": "KATEX_MODULE=/Users/sunzy/claude_test/forester2/small4/assets/vendor/katex/katex.min.js node tests/number-theory-computation.test.mjs",
+        "owned_pages": 48,
+        "formulas": 1138,
+        "katex": "0.16.22",
+        "internal_body_links": 200,
+        "prerequisite_closure": 272,
+        "meaning": "Read-only source syntax, actual link targets, acyclic prerequisite closure, outline reachability, KaTeX parse and original finite numerical checks; not a global build or theorem-prover certificate."
+      },
+      "algorithm_tests": {
+        "result": "pass",
+        "command": "node tests/number-theory-computation-expansion.test.mjs",
+        "forest_runs": 461,
+        "boundary_states": 2604,
+        "extractor_cases": 140,
+        "conjugacy_cases": 3307,
+        "curve_cases": 295,
+        "first_row_cases": 3051,
+        "full_matrix_batch_cases": 203,
+        "genus_two_example": {"p":11,"f":"x^5+x+1","translated_rows":[[10,5],[4,6]],"transformed_rows":[[10,5],[4,10]],"matrix":[[10,5],[5,5]]},
+        "logical_product_node_bits_for_q_1_2_4_8_16_32_64": [8217,3923,1629,630,226,72,17],
+        "limits": "Exact BigInt comparisons against sequential prefixes/direct polynomial expansion; conjugacy tested also for p<g and vanishing translated constants, with first-row/reconstruction hypotheses enforced separately. Storage figures count logical saved product-node bits, not JS heap or arithmetic workspaces. Finite tests do not establish asymptotic bounds."
+      },
+      "pending_inputs": [
+        "Fast multiplication/division with the stated time and linear-workspace bounds.",
+        "Optimized large-integer matrix multiplication and prime-block estimates for stronger uniform-genus/source space bounds.",
+        "Hasse-Weil and the Hasse-Witt determinant congruence; no Cartier/cohomological proof added.",
+        "Cyclotomic factorial shortening, p-adic gamma and Gross-Koblitz branch remain deferred.",
+        "Parent-owned integration and rendered-page verification; Banana Space terminology access still unavailable."
+      ],
+      "ownership": "Only the 18 listed owned tree files, this manifest, and one new scoped test were edited. No parent Nelson tree, global script/registry/navigation, reference, source download, commit, push, global sync or build was changed/run.",
+      "changed_paths": [
+        "trees/math/number-theory/reports/0H00.tree",
+        "trees/math/number-theory/reports/0H0N.tree",
+        "trees/math/number-theory/reports/0H0P.tree",
+        "trees/math/number-theory/reports/0H0U.tree",
+        "trees/math/number-theory/reports/0I40.tree",
+        "trees/math/number-theory/reports/0I41.tree",
+        "trees/math/number-theory/reports/0I42.tree",
+        "trees/math/number-theory/reports/0I43.tree",
+        "trees/math/number-theory/reports/0I44.tree",
+        "trees/math/number-theory/reports/0I45.tree",
+        "trees/math/number-theory/reports/0I46.tree",
+        "trees/math/number-theory/reports/0I47.tree",
+        "trees/math/number-theory/reports/0I48.tree",
+        "trees/math/number-theory/reports/0I49.tree",
+        "trees/math/number-theory/reports/0I4A.tree",
+        "trees/math/number-theory/reports/0I4B.tree",
+        "trees/math/number-theory/reports/0I4C.tree",
+        "trees/math/number-theory/reports/0I4D.tree",
+        "research/number-theory-computation.json",
+        "tests/number-theory-computation-expansion.test.mjs"
+      ]
+    }
   ]
 }

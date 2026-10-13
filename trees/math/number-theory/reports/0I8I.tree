@@ -1,0 +1,13 @@
+\title{支配收敛定理}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+
+\p{在[测度空间](00Q2)上，设可测复函数 #{f_n} 几乎处处趋于 #{f}，且存在[可积函数](00Q5) #{g\geq 0}，使所有 #{n} 都满足 #{|f_n|\leq g}。则 #{f} 可积，并且}
+##{\int|f_n-f|\longrightarrow 0,\qquad \int f_n\longrightarrow\int f.}
+
+\p{\strong{证明。}先从[单调收敛定理](0A7A)推出所需的不等式。若 #{u_n\geq 0}，则 #{v_m=\inf_{n\geq m}u_n} 随 #{m} 递增，极限为 #{\liminf_nu_n}，且 #{\int v_m\leq\inf_{n\geq m}\int u_n}。因此}
+##{\int\liminf_nu_n\leq\liminf_n\int u_n.}
+\p{这是 Fatou 不等式。忽略一个零测集后，#{|f|\leq g}，故 #{f} 可积。将上述不等式用于非负函数 #{u_n=2g-|f_n-f|}，其逐点极限为 #{2g}，得到}
+##{2\int g\leq 2\int g-\limsup_n\int|f_n-f|.}
+\p{两边的 #{\int g} 有限，故 #{\limsup_n\int|f_n-f|\leq 0}。再用积分三角不等式即得第二个结论。}

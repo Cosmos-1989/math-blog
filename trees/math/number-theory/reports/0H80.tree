@@ -1,0 +1,13 @@
+\title{奇数次超椭圆曲线的无穷远极点空间}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，例 4.13}
+
+\p{设 #{k} 是特征不为二的[完美域](00SQ)，#{f\in k[x]} 无重根且 #{\deg f=2g+1}，#{g\geq 1}。令 #{C} 为 #{y^2=f(x)} 的[光滑射影模型](0C01)，#{\infty} 为唯一无穷远点。对于整数 #{n\geq 0}，定义 #{L(n\infty)} 为零函数及极点只在 #{\infty}、阶数至多 #{n} 的[有理函数](0B07)所成的向量空间。其一组基为}
+##{\{x^i:2i\leq n\}\ \cup\ \{x^jy:2j+2g+1\leq n\},\qquad i,j\geq 0.}
+
+\p{\strong{有限点处。}写有理函数为 #{A(x)+B(x)y}，#{A,B\in k(x)}。若它在所有有限点正则，施加对合 #{\iota(x,y)=(x,-y)}，取和与差可知 #{A} 与 #{By} 也在有限点正则。在非分歧纤维，#{y} 为单位，故 #{A,B} 在对应的 #{x} 值均无极点。在分歧点 #{(a,0)}，#{y} 为局部参数，#{x-a} 的阶为二。于是 #{B(x)y} 的阶为 #{2\operatorname{ord}_a(B)+1}；它非负迫使 #{B} 在 #{a} 无极点。对 #{A} 同理。所以 #{A,B\in k[x]}。}
+
+\p{\strong{无穷远处。}取[无穷远局部坐标](0G01) #{s=1/x}、#{z=y/x^{g+1}}，方程成为 #{z^2=s^{2g+2}f(1/s)}，右边在 #{s=0} 为单零点。因此 #{z} 是局部参数，#{s} 的阶为二，从而#{\operatorname{ord}_\infty(x)=-2}，#{\operatorname{ord}_\infty(y)=-(2g+1)}。各单项式的极点阶互异：纯 #{x} 项为偶数，含 #{y} 项为奇数。因此非零线性组合的最高极点项不能相消，允许的单项式恰是所列的两组。}
+\p{特别地，#{n\leq 2g} 时空间只含 #{x} 的多项式。一个极点总阶至多 #{2g}、且唯一极点在 #{\infty} 的函数，不能分辨同一超椭圆纤维中的两个非分歧点。这一限制给出[约化除子的唯一性](0H82)。}

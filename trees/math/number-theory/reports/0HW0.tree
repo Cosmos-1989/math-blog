@@ -1,0 +1,17 @@
+\title{短等差段的局部平均怎样给出密度增量}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§2 的密度增量步骤；带显式边界条件的有限和特例}
+
+\p{设 #{A\subseteq[N]=\{1,\ldots,N\}}，#{\alpha=|A|/N}，在整数上定义平衡函数 #{f=1_A-\alpha 1_{[N]}}。取正整数 #{q,L} 和 #{0<\eta\leq 1}，令 #{B_x=\sum_{j=1}^Lf(x+qj)}。若}
+##{\sum_{x\in\mathbb Z}|B_x|\geq\eta NL,\qquad qL\leq\frac{\eta N}{8},}
+\p{则存在完整包含于 #{[N]} 的等差段 #{P=x+q\{1,\ldots,L\}}，满足 #{|A\cap P|/L\geq\alpha+\eta /4}。这个结论以局部平均下界为假设，不要求 #{A} 已知避开某种配置。}
+
+\p{\strong{正负平均相抵。}每个 #{f(n)} 在 #{\sum_xB_x} 中恰出现 #{L} 次，而 #{\sum_nf(n)=0}，故 #{\sum_xB_x=0}。记 #{t_+=\max(t,0)}，于是}
+##{\sum_x(B_x)_+=\frac 12\sum_x|B_x|\geq\frac{\eta NL}{2}.}
+
+\p{\strong{去掉越界段。}一个等差段只要与 #{[N]} 相交，其起点参数就位于 #{1-qL\leq x\leq N-q}；完整落在 #{[N]} 内则要求 #{1-q\leq x\leq N-qL}。两者之间至多有 #{2q(L-1)} 个整数参数。由 #{|f|\leq 1}，每个越界段对正部的贡献至多 #{L}，总贡献至多 #{2qL^2\leq\eta NL/4}。因此完整段满足}
+##{\sum_{x:\,x+q\{1,\ldots,L\}\subseteq[N]}(B_x)_+\geq\frac{\eta NL}{4}.}
+
+\p{完整段的起点数至多为 #{N}，所以某个 #{B_x\geq\eta L/4}。在这个段上，#{B_x=|A\cap P|-\alpha L}，除以 #{L} 即得结论。[局部逆定理](0GO7)提供的正是这类绝对局部和；调用上述推导时还须核实平衡函数的身份和条件 #{qL\leq\eta N/8}。}

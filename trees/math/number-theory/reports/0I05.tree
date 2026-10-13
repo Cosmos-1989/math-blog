@@ -1,0 +1,18 @@
+\title{矩阵系数的范数比较怎样推广到紧算子系数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§4.2；[Hide–Magee](https://arxiv.org/pdf/2107.05292v3)，v3，推论3.4、命题6.3，印刷页12、32}
+
+\p{设 #{\Gamma} 为群，#{\pi_n:\Gamma\to U(H_n)} 为随机[酉表示](0H4C)，#{\pi_\infty:\Gamma\to U(H_\infty)} 为固定酉表示。假定如下矩阵系数比较：对每个固定正整数 #{r}、有限集 #{F\subset\Gamma}、矩阵 #{b_\gamma\in M_r(\mathbb C)} 和 #{\delta>0}，}
+##{\mathbb P\left\{\left\|\sum_{\gamma\in F}b_\gamma\otimes\pi_n(\gamma)\right\|\leq\left\|\sum_{\gamma\in F}b_\gamma\otimes\pi_\infty(\gamma)\right\|+\delta\right\}\longrightarrow 1.}
+\p{张量在[Hilbert 张量积](0F4E)上作用。则对任意 Hilbert 空间 #{K}、固定有限集 #{F}、[紧算子](0I09) #{A_\gamma\in B(K)} 和 #{\varepsilon>0}，同一结论成立，只须将 #{b_\gamma} 换成 #{A_\gamma}、#{\delta} 换成 #{\varepsilon}。}
+
+\p{\strong{张量误差不随表示维数放大。}若 #{U} 酉，则 #{\|B\otimes U\|\leq\|B\|}。确实，把一个有限张量和写成 #{\sum_ju_j\otimes e_j}，其中 #{e_j} 正交归一，则 #{\|(B\otimes I)\sum_ju_j\otimes e_j\|^2=\sum_j\|Bu_j\|^2\leq\|B\|^2\sum_j\|u_j\|^2}；#{I\otimes U} 保持范数。由稠密性延拓即得所需估计。}
+
+\p{\strong{固定有限维压缩。}空集 #{F} 时结论直接成立。否则令 #{m=|F|}，用[共同压缩引理](0I04)取有限维 #{W\subset K} 及投影 #{P}，使 #{B_\gamma=PA_\gamma P} 满足 #{\|A_\gamma -B_\gamma\|<\varepsilon /(3m)}。#{W} 和这些矩阵均在令 #{n\to\infty} 之前固定。对 #{j=n,\infty}，都有}
+##{\left\|\sum_{\gamma\in F}(A_\gamma -B_\gamma)\otimes\pi_j(\gamma)\right\|<\varepsilon /3.}
+
+\p{在 #{W^\perp\widehat\otimes H_j} 上，压缩后的算子为零；所以它的全空间范数等于 #{W\widehat\otimes H_j} 上的矩阵系数范数。若 #{W=0}，两个压缩算子都为零，直接相加两端误差即可；否则对大小为 #{\dim W} 的矩阵应用假设，误差取 #{\varepsilon /3}。在概率趋于一的事件上，三角不等式把两端压缩误差与中间比较误差相加，得到总误差不超过 #{\varepsilon}。}
+
+\p{对[自由群](00BQ)的均匀随机同态，所需矩阵比较正是 Hide–Magee 推论3.4引用的 Bordenave–Collins 与 Pisier 输入。它比仅对一个标量群代数元素写出的[强收敛](0GSF)陈述更强；从标量陈述到矩阵系数的论证不能省去。这里证明的是在该输入下向紧算子系数的推广。}

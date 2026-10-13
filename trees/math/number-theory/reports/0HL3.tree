@@ -1,0 +1,20 @@
+\title{消去一处分支使二面体拉回降为二分之一阶}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，Lemma 3.2(2)、式 (3.5)](nt-cdt-icm2026)；代数函数且沿实区间正则的特例证明}
+
+\p{设 #{0<\alpha<\beta}，#{f} 为零附近的代数函数芽，满足[双曲余弦拉回定理](0HL1)的分支假设。再假设所选分支沿实区间 #{0\leq x\leq\alpha} 全纯，包括端点 #{\alpha}。令 #{u=\operatorname{arctanh}\sqrt{\frac{\alpha}{\beta}}>0}，并定义}
+##{\varphi(z)=\alpha\left(1-\frac{\sinh^2\sqrt{u(u-z\tanh u/\alpha)}}{\sinh^2u}\right).}
+\p{则 #{f\circ\varphi} 延拓为整个复平面上的单值亚纯函数。}
+
+\p{\strong{先作双曲余弦拉回。}置 #{c=(\alpha+\beta)/2}、#{d=(\beta -\alpha)/2}，#{x(w)=c-d\cosh w}。由 #{\tanh^2u=\frac{\alpha}{\beta}} 得 #{x(2u)=0}。从 #{w=2u} 处的 #{f} 分支出发，前一定理给出全平面亚纯函数 #{F(w)=f(x(w))}。}
+
+\p{\strong{消奇点产生偶性。}当 #{w} 从 #{2u} 沿实轴走到零时，#{x(w)} 从零走到 #{\alpha}。在零附近，所选分支可写成 #{F(w)=f_\alpha(c-d\cosh w)}，其中 #{f_\alpha} 在 #{\alpha} 附近全纯。右边为偶函数，故 #{F} 在全平面为偶函数。[平方下降](0HL2)给出亚纯 #{G}，满足 #{F(w)=G(w^2)}。}
+
+\p{\strong{化去平方根。}令 #{s(z)=4u(u-z\tanh u/\alpha)}。在零附近选 #{\sqrt{s(0)}=2u}。因为 #{\sinh^2u=\frac{\alpha}{\beta -\alpha}}，有}
+##{x(\sqrt{s(z)})=c-d\cosh\sqrt{s(z)}=\varphi(z).}
+
+\p{因此在零附近 #{f(\varphi(z))=F(\sqrt{s(z)})=G(s(z))}。最后一项是亚纯函数与仿射映射的复合，在全平面亚纯，完成延拓。}
+
+\p{参数映射 #{\varphi} 本身为整函数，因为 #{\cosh\sqrt{s}} 的幂级数只含 #{s} 的整数幂。其指数增长只涉及 #{\sqrt{|z|}}，而未经平方下降的双曲余弦涉及 #{|z|}。这正是一个分支点的正则性转化为二分之一阶参数增长的原因。}

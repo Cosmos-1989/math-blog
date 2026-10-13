@@ -1,0 +1,13 @@
+\title{紧双曲曲面上的光滑余面积公式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[C. McMullen, Ergodic theory, geometry and dynamics](https://abel.math.harvard.edu/~ctm/papers/home/text/class/harvard/275/ergodic/course.pdf)，2020-12-24版，§17，定理17.3证明中陈述的余面积公式，印刷页143}
+
+\p{设 #{X} 为无边界[紧双曲曲面](0GS1)，#{u:X\to\mathbb R} 光滑，#{d\mu} 为面积元。梯度 #{\nabla u} 由度量内积关系 #{\langle\nabla u,v\rangle=du(v)} 确定。对每个[正则值](0I08) #{t}，令 #{\ell_u(t)} 为水平曲线 #{u^{-1}(t)} 的总长度，空集的长度取零。在临界值上令 #{\ell_u(t)=0}。光滑余面积公式给出}
+##{\int_X|\nabla u|\,d\mu=\int_{\mathbb R}\ell_u(t)\,dt.}
+\p{右侧使用实直线上的 [Lebesgue 积分](00Q5)；[Sard 定理](0I08)保证临界值集为零测集，因此在这些值上如何赋值不影响积分。紧性保证 #{u} 有界，左侧有限，右侧也只在有界的值域上有贡献。此处引用上述光滑余面积定理。}
+
+\p{公式中的因子可以在一个正则坐标片中直接看出。取坐标 #{(t,s)}，使 #{u=t}，将度量写为 #{g_{tt}\,dt^2+2g_{ts}\,dt\,ds+g_{ss}\,ds^2}。记 #{D=g_{tt}g_{ss}-g_{ts}^2>0}。则 #{d\mu=\sqrt D\,dt\,ds}，而逆矩阵给出 #{|\nabla u|^2=g^{tt}=g_{ss}/D}，故}
+##{|\nabla u|\,d\mu=\sqrt{g_{ss}}\,dt\,ds=dt\,d\ell_t.}
+\p{这项局部计算解释为何是梯度的一次方；全局余面积公式还处理坐标片拼接和临界集。它允许把几乎每个水平集上的长度估计积分为整个曲面上的梯度估计。}

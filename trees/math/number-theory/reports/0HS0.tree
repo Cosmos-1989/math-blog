@@ -1,0 +1,15 @@
+\title{正交随机变量的二进区间极大不等式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Kowalski，An Introduction to Probabilistic Number Theory，作者 PDF，引理 B.10.7，印刷页 155–156](https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf)；二进长度下的显式常数证明}
+
+\p{在[概率空间](00Q3)上，设复随机变量 #{X_1,\ldots,X_{2^k}} 平方可积，#{k\geq 0} 为整数，且 #{\mathbb E(X_n\overline{X_m})=0}（#{n\ne m}）。它们不必独立，也不要求各自均值为零。则}
+##{\mathbb E\max_{1\leq m\leq 2^k}\left|\sum_{n=1}^mX_n\right|^2
+\leq(k+1)^2\sum_{n=1}^{2^k}\mathbb E|X_n|^2.}
+\p{\strong{建立区间族。}对 #{0\leq j\leq k}、#{0\leq\ell<2^{k-j}}，取整数区间 #{I_{j,\ell}=\{\ell 2^j+1,\ldots,(\ell+1)2^j\}}，并记 #{T_I=\sum_{n\in I}X_n}。固定 #{j} 时这些区间分割整个 #{\{1,\ldots,2^k\}}。}
+\p{任意前缀 #{\{1,\ldots,m\}} 是至多 #{k+1} 个上述区间的不交并。具体地，将 #{m} 写成二进制展开，从最大非零位开始，在已经覆盖的前缀后接上相应长度 #{2^j} 的区间；此前各段长度都是 #{2^j} 的倍数，所以新段起点符合 #{\ell 2^j+1} 的形式。每个尺度至多用一次。}
+\p{\strong{逐样本估计，再取期望。}[有限和 Hölder 不等式](0A3M)给出}
+##{\left|\sum_{n=1}^mX_n\right|^2\leq(k+1)\sum_{I\text{ 用于此前缀}}|T_I|^2
+\leq(k+1)\sum_{I\text{ 属于全部二进区间}}|T_I|^2.}
+\p{右端不依赖 #{m}，可同时控制最大值。正交性消去交叉项，故 #{\mathbb E|T_I|^2=\sum_{n\in I}\mathbb E|X_n|^2}。每个整数恰在每个尺度的一个区间内，共被计数 #{k+1} 次。使用[期望线性性](00L1)即得结论。若每项二阶矩不超过 #{1}，右端进一步不超过 #{(k+1)^2 2^k}。}

@@ -1,0 +1,12 @@
+\title{左量子化的精确复合符号}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{a,b\in\mathcal S(\mathbb R^{2d})}，#{0<h\leq 1}。只对 #{b} 的位置变量作 [Fourier 变换](0H4G)，记 #{\widehat b_x(\eta,\xi)=\int e^{-iz\cdot\eta}b(z,\xi)\,dz}。则[左量子化](0H4J)满足}
+##{\operatorname{Op}_h(a)\operatorname{Op}_h(b)=\operatorname{Op}_h(c_h),\qquad c_h(x,\xi)=(2\pi)^{-d}\int e^{ix\cdot\eta}a(x,\xi+h\eta)\widehat b_x(\eta,\xi)\,d\eta.}
+
+\p{\strong{证明。}对 #{u\in\mathcal S(\mathbb R^d)}，Fourier 反演将第二个算子写为}
+##{(\operatorname{Op}_h(b)u)(z)=(2\pi h)^{-d}\int e^{iz\cdot\xi /h}b(z,\xi)\widehat u(\xi /h)\,d\xi.}
+\p{固定 #{\xi}，函数 #{z\mapsto e^{iz\cdot\xi /h}b(z,\xi)} 的 Fourier 变换是 #{\theta\mapsto\widehat b_x(\theta -\xi /h,\xi)}。将它代入第一个算子，再换元 #{\theta=\xi /h+\eta}，所得表达式恰好是 #{\operatorname{Op}_h(c_h)u}。这些换序均由 [Fubini 定理](0H53)成立，因为参与变换的函数及其各阶导数都快速衰减。}
+\p{[Fourier 反演的估计](0I80)也对部分变量成立，所以 #{\widehat b_x} 关于 #{(\eta,\xi)} 是 Schwartz 函数。对 #{c_h} 求导只产生 #{\eta} 的多项式和 #{a,\widehat b_x} 的导数；#{x} 的权重交给 #{a}，#{\xi} 的权重交给 #{\widehat b_x}，再对 #{\eta} 取足够衰减阶即可证明 #{c_h} 是 Schwartz 函数。两边都有[有界延拓](0I82)，再由 [Schwartz 函数在 L² 中稠密](0I8K)，等式也在 L² 上成立。}

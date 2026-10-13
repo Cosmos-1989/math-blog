@@ -1,0 +1,16 @@
+\title{大的纯二次指数和迫使主系数接近有理数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，引理4.2的主弧机制；由二次 Weyl 界推出的带对数损失特例}
+
+\p{设 #{0<\eta\leq 1}，整数 #{N} 满足 #{N\geq 20000\eta^{-2}\log(2N)}。设 #{\alpha,\beta\in\mathbb R}，#{e(t)=\exp(2\pi it)}，且 #{|\sum_{n=1}^Ne(\alpha n^2+\beta n)|\geq\eta N}。则存在整数 #{1\leq r\leq 400\eta^{-2}}，使}
+##{\|r\alpha\|\leq\frac{20000\eta^{-2}\log(2N)}{N^2},\qquad\|t\|=\min_{m\in\mathbb Z}|t-m|.}
+
+\p{\strong{选择逼近尺度。}记 #{L=\log(2N)}，#{Q=\lfloor\eta^2N^2/(10000L)\rfloor}。假设保证 #{Q\geq 1}，且取整前的数至少为二，故 #{1/Q\leq 20000L /(\eta^2N^2)}。把 #{0,2\alpha,\ldots,2Q\alpha} 的小数部分放入 #{Q} 个等长半开小区间，鸽巢原理给出 #{1\leq q\leq Q}、#{a\in\mathbb Z}，使 #{|2q\alpha -a|\leq 1 /Q}。约去公因子后仍可保留这些界，且 #{\gcd(a,q)=1}。}
+
+\p{由于 #{q\leq Q}，有 #{|2\alpha -a /q|\leq 1 /(qQ)\leq q^{-2}}。[二次 Weyl 界](0HW3)因此适用。又 #{Q\leq N^2}，故 #{\log(2q)\leq 2L}。除以 #{N^2} 后得到}
+##{\eta^2\leq\frac{100}{q}+\frac{200L}{N}+\frac{200qL}{N^2}\leq\frac{100}{q}+\frac{3\eta^2}{100}.}
+\p{最后两个量分别至多 #{\eta^2/100} 和 #{\eta^2/50}。所以 #{q\leq(10000/97)\eta^{-2}<200\eta^{-2}}。取 #{r=2q}，便有 #{r\leq 400\eta^{-2}} 和 #{\|r\alpha\|\leq 1 /Q}，即为结论。}
+
+\p{这同时给出分母和逼近误差，但误差中保留 #{\log(2N)}，并且被求和的权恒为一。[非线性 Roth 主弧定理](0GOF)允许两个任意有界权函数，其无对数损失结论还需要额外的差分和频率计数。}

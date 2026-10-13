@@ -1,0 +1,14 @@
+\title{正交性怎样给出几乎处处的平方根加 ε 部分和界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Kowalski，作者 PDF，附录 B.10 的正交级数方法](https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf)；由二进极大估计直接推出的增长界}
+
+\p{设复随机变量 #{(X_n)_{n\geq 1}} 满足 #{\mathbb E(X_n\overline{X_m})=0}（#{n\ne m}）及 #{\mathbb E|X_n|^2\leq 1}。存在一个概率为 #{1} 的事件 #{\Omega_*}，使每个 #{\omega\in\Omega_*} 与每个实数 #{\varepsilon>0} 都有有限常数 #{C_{\omega,\varepsilon}}，满足}
+##{\left|\sum_{n=1}^N X_n(\omega)\right|\leq C_{\omega,\varepsilon}N^{1/2+\varepsilon}\qquad(N\geq 1).}
+\p{\strong{固定一个正的 #{\varepsilon}。}令 #{E_k} 为事件 #{\max_{m\leq 2^k}|\sum_{n\leq m}X_n|>2^{k(1/2+\varepsilon)}}。[二进极大不等式](0HS0)与 [Markov 不等式](0A02)给出}
+##{\mathbb P(E_k)\leq(k+1)^2 2^{-2k\varepsilon},\qquad
+\sum_{k=0}^\infty\mathbb P(E_k)<\infty.}
+\p{对每个 #{K}，可数次可加性给 #{\mathbb P(\bigcup_{k\geq K}E_k)\leq\sum_{k\geq K}\mathbb P(E_k)}。右端趋于零，所以处于无穷多个 #{E_k} 中的样本构成零测集。这是第一 Borel–Cantelli 结论在此处的直接证明，不需要事件独立。}
+\p{对其余样本，所有足够大的 #{k} 都满足所需极大界。给定 #{N}，取 #{2^{k-1}<N\leq 2^k}，则部分和至多 #{2^{k(1/2+\varepsilon)}\leq 2^{1/2+\varepsilon}N^{1/2+\varepsilon}}。有限多个早期部分和可吸收到 #{C_{\omega,\varepsilon}}。}
+\p{\strong{只作可数次取交。}分别对 #{\varepsilon=1/j}（#{j\geq 1}）取上述概率一事件，再取它们的交，仍然概率为 #{1}。对于任意实数 #{\varepsilon>0}，选择 #{1/j<\varepsilon}，其界自动推出所需界。这样得到的是同一个样本对所有正 #{\varepsilon} 同时成立，而不是为每个参数另选零测例外集。}

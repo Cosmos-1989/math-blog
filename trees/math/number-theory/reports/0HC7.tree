@@ -1,0 +1,15 @@
+\title{圆环的零均值 Green 核为什么是二次函数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Baker–Faber，Metrized Graphs, Laplacian Operators, and Electrical Networks](https://www.math.ucdavis.edu/~saito/data/LapEig/baker-quantum_graphs.pdf)，§§3、6–7 的 Laplacian 与电阻构造；圆环的直接计算}
+
+\p{设 #{\Gamma=\mathbb R/L\mathbb Z} 是长度 #{L>0} 的圆环，#{\lambda=dt/L} 为均匀概率测度。对 #{x,y\in\Gamma}，令 #{t\in[0,L]} 表示 #{x-y} 的一个顺向弧长；两端值相同。则[零均值 Green 核](0HC5)为}
+##{G(x,y)=\frac L{12}-\frac{t(L-t)}{2L}.}
+
+\p{\strong{微分方程。}在 #{0<t<L} 上，#{G''=1/L}，所以 Laplacian 的连续部分为 #{-dt/L}。在 #{t=0}，右导数为 #{-1/2}、从左侧到达的导数为 #{1/2}，端点项合并为质量一的 #{\delta_y}。于是 #{\Delta_xG=\delta_y-\lambda}。}
+\p{\strong{归一化。}直接积分得 #{L^{-1}\int_0^L t(L-t)/(2L)\,dt=L/12}，故 #{\int G(x,y)\,d\lambda(x)=0}。由唯一性，这就是所需 Green 核。它满足 #{-L/24\leq G\leq L/12}，且 #{G(x,x)=L/12}，从而[能量原理](0HC6)给出 #{\sum_{i<j}G(x_i,x_j)\geq -nL/24}。}
+
+\p{若将单位电流从 #{y} 输入、从 #{x} 输出，电势可由两个 Green 函数之差构成。两端电势差，即有效电阻，等于}
+##{r(x,y)=G(x,x)+G(y,y)-2G(x,y)=\frac{t(L-t)}L.}
+\p{这也等于长为 #{t} 与 #{L-t} 的两条弧并联时的电阻。曲线约化图上的 Green 函数因而同时记录了点间的路径与环路结构。}

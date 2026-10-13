@@ -1,0 +1,18 @@
+\title{固定辛相似因子的无穷小变形使用十维伴随模}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[BCGP，§1.8.7–1.8.10](nt-gee-bcgp2025)；[Gee，arXiv:2202.05818v1，Exercise 3.11](https://arxiv.org/html/2202.05818v1#S3.SS2)的辛矩阵计算}
+
+\p{设 #{k} 为奇特征[有限域](00GF)，#{J=\left(\begin{smallmatrix}0&I_2\\-I_2&0\end{smallmatrix}\right)}，#{\bar\rho:G\to\operatorname{GSp}_4(k)} 连续，#{G} 为[预有限群](0F0G)。这里采用与[辛相似群](0G82)定义等价的标准基。定义}
+##{\mathfrak{sp}_4(k)=\{X\in M_4(k):X^{\mathsf T}J+JX=0\}.}
+
+\p{写 #{X=\left(\begin{smallmatrix}A&B\\C&D\end{smallmatrix}\right)}，条件等价于 #{D=-A^{\mathsf T}} 且 #{B,C} 对称。因此维数为 #{4+3+3=10}。共轭保持此空间：若 #{P^{\mathsf T}JP=\nu J}，令 #{Y=PXP^{-1}}，则}
+##{Y^{\mathsf T}J+JY=\nu P^{-\mathsf T}(X^{\mathsf T}J+JX)P^{-1}=0.}
+
+\p{考虑到[对偶数环](0F03) #{k[\varepsilon]} 的提升，要求相似因子仍等于嵌入其中的 #{\bar\nu}。写 #{\rho_\varepsilon(g)=(1+\varepsilon c(g))\bar\rho(g)}，展开配对得}
+##{\rho_\varepsilon(g)^{\mathsf T}J\rho_\varepsilon(g)=\bar\nu(g)J+\varepsilon\bar\rho(g)^{\mathsf T}(c(g)^{\mathsf T}J+Jc(g))\bar\rho(g).}
+
+\p{故固定相似因子等价于 #{c(g)\in\mathfrak{sp}_4(k)}。再由[一阶变形的乘法计算](0B8Q)，带基提升由 #{Z^1_{\mathrm{cts}}(G,\mathfrak{sp}_4(k))} 参数化；按 #{1+\varepsilon X}、#{X\in\mathfrak{sp}_4(k)} 的辛换基取商后，得到 #{H^1_{\mathrm{cts}}(G,\mathfrak{sp}_4(k))}。连续上同调采用[加法约定](0HG1)。}
+
+\p{相似因子固定以后，无穷小矩阵的系数空间由十六维 #{M_4(k)} 缩到十维 #{\mathfrak{sp}_4(k)}。这正适合保留阿贝尔曲面表示的逆分圆相似因子。}

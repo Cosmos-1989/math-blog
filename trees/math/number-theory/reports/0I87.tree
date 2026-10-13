@@ -1,0 +1,13 @@
+\title{固定 Schwartz 符号的群量子化不依赖局部截断}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Nelson](icm2026-nelson)，§13.6.1、§13.6.3 的固定符号情形}
+
+\p{设 #{a\in\mathcal S(\mathfrak g^*)} 固定，#{\pi} 为 [Lie 群](0H48) #{G} 的酉表示，#{\chi_1,\chi_2} 是[群局部量子化](0H4K)允许的两个固定截断。则对每个整数 #{N\geq 0}，有}
+##{\|\operatorname{Op}_{h,\pi}(a;\chi_1)-\operatorname{Op}_{h,\pi}(a;\chi_2)\|\leq C_Nh^N,\qquad 0<h\leq 1,}
+\p{其中 #{C_N} 与表示 #{\pi} 无关。单个算子的范数还满足与 #{h,\pi} 无关的上界。}
+
+\p{\strong{证明。}在选定坐标中令 #{A(X)=(2\pi)^{-d}\int a(\xi)e^{-i\xi\cdot X}\,d\xi}。由 [Fourier 反演与衰减](0I80)，#{A} 是 Schwartz 函数，量子化积分的核为 #{h^{-d}A(X/h)\chi_j(X)}。两截断在零点的一个半径 #{r>0} 的球内都为一。因此由[酉表示的积分范数界](0H4E)，差的范数不超过}
+##{C\int_{|X|\geq r}h^{-d}|A(X/h)|\,dX=C\int_{|Y|\geq r/h}|A(Y)|\,dY.}
+\p{取 #{|A(Y)|\leq C_M(1+|Y|)^{-M}}，其中 #{M>N+d}，右侧至多为 #{C_Nh^N}。单个算子的范数不超过 #{\|\chi_j\|_\infty\|A\|_1}。若符号随 #{h} 变化，这些估计仍成立于 Schwartz 半范数一致有界的族；符号支撑收缩时则须另外追踪导数增长。}

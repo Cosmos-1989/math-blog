@@ -1,0 +1,16 @@
+\title{数字限制怎样把指数和分解成逐位因子}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§2 的数字限制指数和](icm2026-harper-probability)；逐位数字集合的有限展开}
+
+\p{固定整数 #{b\geq 2,k\geq 1}，给每一位一个非空集合 #{D_j\subseteq\{0,\ldots,b-1\}}，#{0\leq j<k}。允许前导零，定义}
+##{A_k=\left\{\sum_{j=0}^{k-1}d_jb^j:d_j\in D_j\right\},\qquad
+e(t)=e^{2\pi it},\qquad F_k(\theta)=\sum_{n\in A_k}e(n\theta).}
+\p{逐位分解给出}
+##{|A_k|=\prod_{j=0}^{k-1}|D_j|,\qquad
+F_k(\theta)=\prod_{j=0}^{k-1}\left(\sum_{d\in D_j}e(db^j\theta)\right),\qquad
+\int_0^1|F_k(\theta)|^2\,d\theta=|A_k|.}
+\p{\strong{先验证数字没有重数。}两个数字串若表示相同整数，模 #{b} 后最低位相等；减去该位并除以 #{b}，重复便得每一位都相等。所以数字串到整数是单射，得到集合大小的公式。将各位有限和相乘，每个数字串恰好出现一次，得到乘积公式。}
+\p{\strong{再计算平方平均。}与 [Dirichlet 核的正交计算](0GGG)相同，对整数 #{h} 有 #{\int_0^1e(h\theta)\,d\theta=1}（#{h=0}）或 #{0}（#{h\ne 0}），后者直接积分指数函数即可。因此展开 #{|F_k|^2} 后只留下 #{n=m} 的 #{|A_k|} 项。}
+\p{乘积公式把每一位的确定性约束变成频率倍增下的乘法结构。它本身未给一阶矩节省；[三进制只取数字 0、2 的计算](0HP1)展示了额外节省如何来自逆分支上的严格收缩。}

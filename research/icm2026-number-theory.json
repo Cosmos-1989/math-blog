@@ -151,7 +151,24 @@
         "local_source": "research/sources/number-theory/rational-points/stoll-arxiv-v1.html",
         "sha256": "6885227ad21c61c3ee0151b929e0829cba48f25ee9075bb148b4e8b7468ce9eb",
         "date_discrepancy": "arXiv v1 submitted 2025-09-29; rendered HTML masthead displays 2026-08-24. Version ID and display date are kept separately; no invented version.",
-        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv v1 CC BY-NC-SA 4.0. Public exposition is grounded in the licensed formal edition and independently written derivations."
+        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv v1 CC BY-NC-SA 4.0. Public exposition is grounded in the licensed formal edition and independently written derivations.",
+        "proof_expansion_2026_10_13": {
+          "baseline": "164f927",
+          "report_recheck": "Revisited the primary report's Mumford/descent inputs; earlier full arXiv body reading and selective SIAM collation remain as recorded above.",
+          "additional_primary_texts": [
+            {
+              "author": "Michael Stoll",
+              "title": "Arithmetic of Hyperelliptic Curves",
+              "edition": "Summer Semester 2019 lecture notes; screen PDF dated July 8, 2020, 16:23; 46 PDF pages",
+              "url": "https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf",
+              "read": "Section 4 theorem 4.12 statement, example 4.13, corollary 4.14, definition 4.15, lemmas 4.16–4.17 and theorem 4.18 proofs; example 4.19 read as context. Section 5 opening delta formula, lemma 5.1 and its coprime-case proof, lemma 5.2, examples 5.3–5.5, lemma 5.6 proof, and example 5.9 local obstruction.",
+              "not_read_or_not_proved": "Riemann–Roch itself is an exact cited input. No reconstruction of lemma 5.1 global descent kernel or the branch-point extension proof. The notes describe a more involved non-coprime case without giving its full proof.",
+              "access": "Full primary PDF text read via browser. Direct curl archival download failed with SSL connection error; no source archive added in this ownership-restricted round.",
+              "licensing": "No open adaptation license verified for this lecture PDF. New notes give independently written mathematical arguments with source locations; no extended verbatim reproduction.",
+              "proof_variation": "0H84 uses compatible polynomial remainders plus a square-root lift, not the printed explicit Bezout numerator. 0H88 adds zero-evaluation cases so branch-point divisors are not incorrectly discarded."
+            }
+          ]
+        }
       },
       "coverage": {
         "1": [
@@ -163,7 +180,16 @@
           "0G02",
           "0G03",
           "0G04",
-          "0G0I"
+          "0G0I",
+          "0H80",
+          "0H81",
+          "0H82",
+          "0H83",
+          "0H84",
+          "0H85",
+          "0H86",
+          "0H87",
+          "0H88"
         ],
         "3": [
           "0G05",
@@ -190,10 +216,12 @@
         ]
       },
       "deferred": [
-        "No Magma computation or end-to-end rational-point certificate was executed on a concrete curve.",
-        "Selmer finiteness, computational descent, Weil finite-field bound, full Mumford uniqueness proof and the full explicit dual-Kummer/conic parametrization are cited, not reproved.",
+        "No Magma computation or end-to-end rational-point certificate was executed on a concrete rational curve. Finite-field Cantor tests do not establish an arithmetic rank or rational-point certificate.",
+        "Riemann–Roch over a perfect field is an exact cited input. Reduced Mumford existence/uniqueness and complete Cantor composition/reduction for odd-degree models are now proved in 0H80–0H84; arbitrary even-degree models are not covered by those proofs.",
+        "Selmer finiteness, the global well-definedness and kernel of explicit two-descent, moving divisors away from branch points, and the branch-point extension formula remain cited inputs. 0H86 proves the norm-square restriction, not the entire descent theorem.",
+        "0H88 excludes the one class (6,2,1,1,3) over Q2, including zero-evaluation cases; all other local images and the full Selmer group/rank calculation remain uncomputed.",
+        "Weil's finite-field bound and the full explicit dual-Kummer/conic parametrization remain cited. Quartic Kummer reconstruction, singular cases and quartic-search implementation are not reproved or implemented.",
         "Conjectures 5.1 and 5.2 remain conjectural termination inputs; successful certificate correctness is distinguished from universal termination.",
-        "The full proof of universal termination, singular Kummer reconstruction and the quartic-search implementation are not reproduced.",
         "Rank >1 methods and section 6 software examples are contextual reading, not new implementations or full proof coverage."
       ]
     },
@@ -212,7 +240,56 @@
         "local_source": "research/sources/number-theory/rational-points/yuan-arxiv-v1.html",
         "sha256": "45d1a46b9bdf55a4418a252bfed400e4455db126809f204dc28927504454da46",
         "related_paper": "Yu, Yuan and Zhou, Quantitativity on the number of rational points in the Mordell conjecture, arXiv:2602.01820. Identity/metadata checked; its complete proof was not read. SIAM bibliography labels the manuscript YYZ25, 2025.",
-        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv report CC BY-NC-ND 4.0. ND source is used for reading/cross-checking, not as adaptation authorization. Public exposition uses the formal CC BY edition and original explanations."
+        "licensing": "SIAM ©2026 IMU CC BY 4.0; arXiv report CC BY-NC-ND 4.0. ND source is used for reading/cross-checking, not as adaptation authorization. Public exposition uses the formal CC BY edition and original explanations.",
+        "proof_expansion_2026_10_13": {
+          "baseline": "164f927",
+          "report_recheck": "Re-read arXiv:2606.27129v1 section 5.3 around the multi-point height identity and the finite/infinite-place energy passage; formal SIAM constants remain unchanged.",
+          "additional_primary_texts": [
+            {
+              "author": "Dan Abramovich",
+              "title": "Heights on Pn",
+              "edition": "MA254 lecture slides, January 29, 2016; 14 slides, distilled from Hindry–Silverman",
+              "url": "https://www.math.brown.edu/dabramov/MA/s1516/254/MA254-Heights.pdf",
+              "read": "Slides 1–9, especially absolute height, extension and Galois invariance, bounded-degree Northcott coefficient argument on slides 6–8, and Kronecker context on slide 9.",
+              "proof_variation": "0HC0 proves h(coefficients) <= d*h(alpha)+d*log(2) by the product of the individual local maxima. This sharper bound is proved in the note; it is not falsely quoted as the exact displayed bound in the slides (whose bound is weaker). Kronecker's theorem is not added as another branch.",
+              "licensing": "No open adaptation license verified; independent exposition and proof, with exact reading scope."
+            },
+            {
+              "author": "Matthew Baker and Xander Faber",
+              "title": "Metrized Graphs, Laplacian Operators, and Electrical Networks",
+              "edition": "19-page author PDF, masthead copyright 2005 American Mathematical Society; exact title of the accessed copy retained.",
+              "url": "https://www.math.ucdavis.edu/~saito/data/LapEig/baker-quantum_graphs.pdf",
+              "read": "Sections 2–3 (metric graphs, Laplacian, integration by parts theorem 1 and uniqueness theorem 3); sections 5–6 (vertex Laplacian, j-function, theorems 4, 6, 7 and effective resistance theorem 9); selected section 7 discussion of canonical measures.",
+              "temporary_reading_files": [
+                "/tmp/rational-points-baker-faber.pdf",
+                "/tmp/rational-points-baker-faber.txt"
+              ],
+              "proof_scope": "0HC4–0HC6 give complete elementary proofs for real continuous edgewise C2 functions and Green equations with edgewise constant densities plus finitely many atoms. General measure/analytic existence theorems are not claimed.",
+              "licensing": "No open adaptation license verified; no source PDF committed or copied into public notes."
+            },
+            {
+              "author": "Robin de Jong",
+              "title": "On the height of Gross–Schoen cycles in genus three",
+              "edition": "Research in Number Theory 4 (2018), article 38; DOI 10.1007/s40993-018-0131-0.",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6413647/",
+              "read": "Section 2 in full: polarized metric graph, genus, canonical divisor, normalized admissible Green kernel, formula (2.1) defining phi, and stable-curve dual graph. Section 5 circle/tau discussion and proposition 5.1 read as context.",
+              "not_read": "Main global height theorem proofs and all cited source papers were not read.",
+              "licensing": "CC BY 4.0 shown by the accessed primary article."
+            },
+            {
+              "author": "Shou-Wu Zhang",
+              "title": "Admissible pairing on a curve",
+              "edition": "Inventiones Mathematicae 112 (1993); scanned author-hosted primary PDF.",
+              "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/355/9111-apc.pdf",
+              "read": "Rendered PDF page 10 (printed p.179), theorem 3.2 characterization of the admissible measure; PDF page 11 (printed p.180), corollary 3.4 and identity (3.5.1), plus beginning of proof 3.2. Appendix theorem a.7 and surrounding matrix-rank/Green-existence passage on PDF pages 22–23 (printed pp.191–192) inspected. Also viewed pages 4, 7–8 for locating the relevant section.",
+              "not_read": "The complete proof of theorem 3.2 and the full global arithmetic admissible-intersection construction were not read in this round.",
+              "temporary_reading_file": "/tmp/rational-points-zhang-1993.pdf",
+              "licensing": "No open adaptation license verified. Only an exact theorem input and independently checked single-loop specialization are used."
+            }
+          ],
+          "archival_policy": "This round is restricted to allocated tree IDs and this JSON; additional source downloads were transient /tmp reading copies, not repository additions. Existing primary report HTML archives remain at the source paths recorded above.",
+          "unavailable_not_used": "Silverman MSRIHeightNotes PDF fetch failed; no claim relies on it. A MIT lecture checked during source search did not contain the required Northcott proof and was not used."
+        }
       },
       "coverage": {
         "1": [
@@ -238,7 +315,10 @@
           "0G43",
           "0G44",
           "0G45",
-          "0G4P"
+          "0G4P",
+          "0HC0",
+          "0HC1",
+          "0HC2"
         ],
         "2.2–2.4": [
           "0G49",
@@ -261,7 +341,12 @@
           "0G4K",
           "0G4L",
           "0G4M",
-          "0G4V"
+          "0G4V",
+          "0HC4",
+          "0HC5",
+          "0HC6",
+          "0HC7",
+          "0HC8"
         ],
         "5.4": [
           "0G4N",
@@ -271,11 +356,12 @@
       "deferred": [
         "Yu–Yuan–Zhou main explicit theorem is stated with exact SIAM constants and a coherent dependency pathway, not claimed locally proved.",
         "Full quantitative Vojta construction, auxiliary sections, arithmetic Hilbert–Samuel/Riemann–Roch estimates, parameter optimization and refined spherical-code bounds remain external.",
-        "Adelic intersection construction, admissible metrics, arithmetic Hodge index, adjunction, Zhang successive minima and positivity of admissible volume are precisely cited inputs, not reconstructed proofs.",
-        "The two original archimedean analytic inequalities, heat-kernel/degeneration analysis and finite-place metric-graph energy bounds are external. Only eliminating the systole parameter is proved locally.",
-        "Uniform Bogomolov theorem and comparison of stable Faltings height with admissible volume are cited; Northcott is proved only for rational projective points, not all bounded-degree algebraic points.",
-        "No effective coordinate-height bound or point-enumeration algorithm is deduced from the explicit cardinality bound.",
-        "The full related YYZ research article and all source papers referenced by the report were not read."
+        "Adelic intersection construction, the general admissible-measure theorem and comparison of graph kernels with curve metrics, arithmetic Hodge index, adjunction, Zhang successive minima and positivity of admissible volume remain cited inputs.",
+        "General bounded-degree Northcott is now proved for algebraic numbers and projective points (0HC0–0HC1,0G4P); extension to ample Weil heights (0HC2) is proved conditional on the exact height-machine properties and existence of a projective embedding.",
+        "0HC4–0HC6 prove the finite-graph energy mechanism with edgewise constant densities and finitely many atoms. 0HC7–0HC8 explicitly compute the polarized single-loop case and its 7n/8*phi energy bound. General graph diagonal/phi comparison is still an external theorem, not a consequence claimed from the single-loop calculation.",
+        "The two original archimedean analytic inequalities, heat-kernel/degeneration analysis and global uniform energy theorem remain external. Only the algebraic elimination of the systole parameter and the specified finite-graph branches are proved locally.",
+        "Uniform Bogomolov and the comparison of stable Faltings height with admissible volume remain cited. No effective coordinate-height bound or point-enumeration algorithm is deduced from the explicit cardinality bound.",
+        "The complete related YYZ research article and all papers referenced by the report were not read; Zhang theorem 3.2 statement was checked on the scanned primary page, but its complete proof was not read."
       ]
     },
     {
@@ -319,16 +405,27 @@
           "0G8A",
           "0G8B",
           "0G8C",
-          "0G8D"
+          "0G8D",
+          "0HH0",
+          "0HH1",
+          "0HH2",
+          "0HH3"
         ],
         "4: elementary linear-algebra mechanism of the classicality argument, not the full geometric construction": [
           "0G8J",
           "0G80"
         ],
-        "5: deformation/Hecke comparison and a faithful-module mechanism, not the full patching proof": [
+        "5: deformation/Hecke comparison, small-extension cohomology and fixed-similitude lifting, not the full patching proof": [
           "0G8K",
           "0G8L",
-          "0G80"
+          "0G80",
+          "0HG0",
+          "0HG1",
+          "0HG2",
+          "0HG3",
+          "0HG4",
+          "0HG5",
+          "0HG6"
         ],
         "6: status of proposed generalizations": [
           "0G80"
@@ -339,7 +436,8 @@
         "Gee Theorem 2.1 is explicitly imprecise and uses a large-image qualification. It was not imported as an exact unconditional theorem. 0G8H instead states the full-mod-3-image specialization checked in the original research paper.",
         "The moduli-space, local-point, weak-approximation and Hilbert-irreducibility proof behind the auxiliary surface is not reproduced. 0G8F adds good ordinary reduction at 3 to the geometric input, ensuring the ordinary and dual-finite-flat assumptions of original Lemma 9.4.2 that are not spelled out in the survey's Lemma 2.4.",
         "The Hodge-Tate period map, higher Coleman theory, Cousin-Sen comparison and multiplicity-one hypotheses of the complete classicality theorem are not reconstructed. The exact geometric comparison source is original Theorem 4.10.12; 0G8J proves only its elementary semisimplicity mechanism.",
-        "Higher Hida cohomology and Taylor-Wiles patching are summarized in the outline and ring-comparison note, not proved. Existing Iyengar atoms 01BZ and 01AE are reused as further precise algebraic criteria, without claiming their hypotheses automatically hold here.",
+        "Higher Hida cohomology and Taylor-Wiles patching are summarized in the outline and ring-comparison note, not proved. Existing Iyengar atoms 01BZ and 01AE are reused as further precise algebraic criteria, without claiming their hypotheses automatically hold here. The new small-extension branch proves the underlying H1/H2 mechanism and fixed-similitude matrix lifting only. It does not prove H2 vanishing for the relevant Galois group or preservation of ordinary/crystalline conditions.",
+        "0HH2 proves the distinct-weight diagonalization step using external Sen functoriality and the Hodge-Tate criterion. Sen theory itself and the ordinary Hodge-Tate/de Rham comparison are not locally proved. 0HH3 is a non-geometric counterexample, not an abelian-surface representation.",
         "Section 6's extensions to more general totally real fields, nonordinary reduction and Serre-type residual modularity remain future or conditional directions, not added unconditional results."
       ]
     },
@@ -358,7 +456,7 @@
         "local_source": "research/sources/number-theory/modularity-approximation/cdt-2510.04156v1.txt",
         "pdf_sha256": "5f403f337fed8bfd776348a04aaaec7d57ca6f90c31dd871ed793bf24239c8f1",
         "text_sha256": "8615359d461c99bfa7b81d3feed09d87751e70444abc89c41af883d1e70d474c",
-        "other_proof_source": "The report cites The Linear Independence of 1, zeta(2), and L(2,chi_-3), arXiv:2408.15403v2, Theorem 2.5.1, sections 6-8 and Appendix A. Its identity/version and the report's citations were checked; that 218-page paper was not read in full and is not represented as such."
+        "other_proof_source": "The report cites The Linear Independence of 1, zeta(2), and L(2,chi_-3), arXiv:2408.15403v2. This continuation read Theorem 2.5.1, selected parts of section 7, and all of Appendix B.1-B.3; see supporting_papers for exact scope. The 218-page paper and Appendix A were not read in full."
       },
       "coverage": {
         "1: normalized heights, effective multiplicative approximation and the binary S-unit deduction": [
@@ -368,23 +466,36 @@
           "0GC4",
           "0GC5"
         ],
-        "2.1: holonomic series, denominator types, Apéry cancellation and qualitative dimension bounds": [
+        "2.1: holonomic series, denominator types, Apéry cancellation, nonconstant row weights and a weaker elementary dimension theorem": [
           "0GC8",
           "0GC9",
           "0GCA",
           "0GCB",
           "0GCC",
-          "0GCD"
+          "0GCD",
+          "0HK0",
+          "0HK1",
+          "0HK2",
+          "0HK3",
+          "0HK4",
+          "0HK5",
+          "0HK6",
+          "0HK7"
         ],
         "2.2-2.3: real irrationality measures, an elementary Liouville proof and the uniform-denominator quantitative specialization": [
           "0GC6",
           "0GC7",
           "0GCE"
         ],
-        "3.1-3.2: explicit dihedral functions, low-growth pullback and roots of 2": [
+        "3.1-3.2: explicit dihedral functions, algebraic meromorphic pullback proof, low-growth estimates and roots of 2": [
           "0GCF",
           "0GCG",
-          "0GCH"
+          "0GCH",
+          "0HL0",
+          "0HL1",
+          "0HL2",
+          "0HL3",
+          "0HL4"
         ],
         "4: elementary simultaneous-denominator and height-coset mechanisms of the Bombieri reduction": [
           "0GCI",
@@ -399,11 +510,11 @@
         ]
       },
       "deferred": [
-        "The general denominator matrix, its nonconstant row weights and the full multi-place Theorem 2.6 are not reproduced. 0GCC and 0GCE explicitly state uniform-row/uniform-denominator specializations.",
-        "The section 2.3 arithmetic-slopes proof was read but is not reproduced as an elementary local proof. No independent proof of the external dimension bounds is claimed.",
+        "The nonconstant denominator matrix and exact sharp holonomy statement are now supplied in 0HK0-0HK1; the quadratic optimization is proved in 0HK7. The complete arithmetic-slopes/Bost-Charles argument and the full quantitative multi-place Theorem 2.6 remain external. 0GCE retains its uniform-denominator specialization.",
+        "0HK3-0HK6 prove the full elementary dynamic-pigeonhole dimension argument for holomorphic parameter maps extending across the closed disc, with a divisibility-chain denominator and upper bound 2B/(a-sigma). This weaker bound does not recover the sharp double-integral numerator or row-weight savings. The general Nevanlinna/determinant extrapolation and multi-place effective estimates remain deferred.",
         "0GC6 is restricted to real rational approximation. The report's nonarchimedean claims require height-normalized approximations; they are not silently identified with a bound depending only on the denominator q.",
         "Propositions 3.3 and 3.4 require uniform control in the radicand over number fields and restrictions on r=ls. The report itself defers full details to a subsequent paper. Their full statements and proofs are not reconstructed here; the outline records their role and 0GCH only treats a=2 over Q.",
-        "0GCG proves entireness, derivative normalization and an O(sqrt(R)) logarithmic growth bound for the displayed map. Its meromorphic pullback assertion remains the external Lemma 3.2, not a proved consequence of the growth calculation alone.",
+        "0HL0-0HL3 now prove the algebraic-function specialization of the meromorphic pullback for 0<alpha<beta and a branch regular along [0,alpha]. Algebraicity controls the punctures, and local evenness gives square descent. The general Lemma 3.2 for arbitrary analytically continued germs/complex paths is not claimed proved. 0HL4 applies the proved specialization using the external algebraicity, local monodromy and cancellation facts in Proposition 3.1.",
         "0GC4 records the established Baker-Yu theorem and its original proof references, not an unconditional assertion that the report supplies every detail of its new proof. Section 4's full argument still uses the deferred uniform radical estimates.",
         "The pi-transcendence application in section 3.3 and the 2-adic zeta_2(5) bound in section 5.2 were read but not developed into separate notes. No conclusion about the classical real zeta(5) is inferred.",
         "0GCK quotes only the stated measure for L(2,chi_-3). Independence of the fourteen-function system and the certified integral bound in the cited paper's Appendix A are external; no local numerical certification is claimed.",
@@ -422,11 +533,19 @@
         "read": "Full main text sections 1-6, footnotes, relevant bibliography, publication and licensing metadata. Theorems 1.1-1.4, Conjecture 1.3 and equations in sections 3-5 were checked against the full chapter rather than its abstract. Coverage below identifies selected mathematical pathways, not full local proof coverage of every section.",
         "source_locations": [
           "https://epubs.siam.org/doi/10.1137/25M1826366",
-          "https://arxiv.org/abs/2512.23681v1"
+          "https://arxiv.org/abs/2512.23681v1",
+          "https://arxiv.org/pdf/2301.04390v1"
         ],
         "downloaded": [],
         "arxiv_scope": "2512.23681v1, 2025-12-29, 27 pages: bibliographic identity and ICM-version relationship checked; this preprint was not substituted for the SIAM text and its full proof was not read. Conjecture numbering follows SIAM, where it is 1.3.",
-        "original_research_scope": "Original papers cited as [7] and [8] in the chapter were not independently read in full. Their deep estimates are quoted through the chapter with this provenance.",
+        "original_research_scope": "No original research paper has been read in full. In the deeper round, Adam J. Harper, The typical size of character and zeta sums is o(sqrt(x)), arXiv:2301.04390v1 (2023-01-11, 34 pages) was read selectively: opening theorem context; section 2.1 Approximation Result 1 statement and opening construction; section 2.2 Lemma 1 statement and its cited-proof boundary; Proposition 1 statement and targeted proof reading of exact main-term matching, Taylor remainders and parameter choice on printed pp. 16-18. Its Lemma 1 proof is referred to another paper, not supplied there in full; that dependency and later sections 3-5 were not verified. The new Bernstein branch is a separately proved bounded-cube finite variant, not a proof of the original optimized Proposition 1 or its final low-moment theorem.",
+        "deeper_round": {
+          "date": "2026-10-13",
+          "report_reread": "SIAM section 2 digit factorization/Fourier pairing and section 4 conditioning/polynomial transfer.",
+          "supplement_license": "arXiv:2301.04390v1 links the arXiv perpetual non-exclusive distribution license, not CC. Only original mathematical exposition and independently detailed finite proofs were added; no full-text translation or source copy.",
+          "local_source_files": [],
+          "source_storage": "No supplementary source file downloaded; exact source URLs and reading locations are recorded in this JSON."
+        },
         "licensing": "Copyright International Mathematical Union 2026; SIAM chapter CC BY 4.0. Reference page credits the Chinese adaptation and added elementary calculations. No source figure reproduced."
       },
       "coverage": {
@@ -442,7 +561,10 @@
           "0GGI"
         ],
         "section2_selected_additive_example": [
-          "0GGG"
+          "0GGG",
+          "0HP0",
+          "0HP1",
+          "0HP2"
         ],
         "section3": [
           "0GG2",
@@ -455,7 +577,12 @@
           "0GG8",
           "0GGD",
           "0GGE",
-          "0GGF"
+          "0GGF",
+          "0HO0",
+          "0HO1",
+          "0HO2",
+          "0HO3",
+          "0HO4"
         ],
         "section5_context_only": [
           "0GG0",
@@ -467,8 +594,8 @@
       },
       "deferred": [
         "Proof of the uniform Steinhaus low fractional moment estimate (section 3, equation 3.1); critical multiplicative chaos and its Euler-product integral estimates remain external.",
-        "Full proof of Theorems 1.1 and 1.2: smooth partitions, polynomial approximation errors, prime cutoff optimization, integral tails and transfer uniformity are not proved locally. 0GGD and 0GGE prove only the stated finite-weight and conditional-second-moment lemmas.",
-        "Section 2 digit-restricted sums, squarefree exponential sums and circle-method applications beyond the elementary Dirichlet-kernel example.",
+        "Full proof of Theorems 1.1 and 1.2 remains deferred: optimized smooth partitions on the unbounded prime-sum scale, growing-dimensional parameter choices, original high-moment remainder bounds, prime cutoff optimization, integral tails and critical-chaos estimates. 0HO0-0HO4 now completely prove a bounded-statistic finite Bernstein transfer with NP^(JD)<r and explicit aggregate error, not those optimized estimates.",
+        "0HP0-0HP2 now prove digit factorization, the ternary {0,2} L1 bound (4/3)^k and a conditional Fourier-pairing error bound. General Bourgain/Swaenepoel prescribed-digit estimates, actual prime major/minor arc estimates, squarefree exponential sums and prime asymptotics remain deferred. The every-position ternary example is not identified with the report's sparse prescribed-position theorem.",
         "Section 5 Wang-Xu Theorem 1.4: the chapter's GRH plus ratios-conjecture hypothesis is not reproduced as a standalone vague-assumption theorem; precise underlying ratios statements and the conditional proof await the original papers.",
         "Section 6 lower bounds, nonvanishing, short-interval extensions and further families; no universal typical-scale limit law asserted.",
         "Möbius long-range Conjecture 1.3 remains conjectural; only its fixed A<1 consequence of the stated unconditional estimate is derived."
@@ -487,7 +614,10 @@
         "source_locations": [
           "https://epubs.siam.org/doi/10.1137/25M1806132",
           "https://arxiv.org/abs/2409.02876v1",
-          "https://arxiv.org/html/2409.02876v1"
+          "https://arxiv.org/html/2409.02876v1",
+          "https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf",
+          "https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.html",
+          "https://arxiv.org/pdf/1710.01350v1"
         ],
         "downloaded": [],
         "supplementary": {
@@ -498,7 +628,29 @@
           "not_read_in_full": "Section 2 density estimates, all preceding section 3 estimates and section 4 arithmetic comparison proofs. In particular, citing a dependency does not claim to have verified its proof.",
           "licensing": "arXiv perpetual non-exclusive distribution license, not a Creative Commons license. Notes restate mathematical claims in original prose; no full-text translation or copied exposition."
         },
-        "original_research_scope": "Bagchi's 1981 thesis, Maier's 1985 paper, original Cohen-Lenstra/random-cokernel proofs and Scholz's proof were not read in full; exact results used here are attributed through the report.",
+        "original_research_scope": "Bagchi's 1981 thesis, Maier's 1985 paper, the original Cohen-Lenstra/Friedman-Washington papers and Scholz's proof were not read in full. The deeper round additionally read the precisely listed full-text portions of Kowalski and Wood below; it does not claim their entire books/papers or all dependency proofs were checked.",
+        "deeper_round_sources": [
+          {
+            "author": "E. Kowalski",
+            "title": "Arithmetic Randonnee: An introduction to probabilistic number theory",
+            "edition": "Author's submitted draft, version of May 10, 2021, 199 PDF pages; not silently identified with the published CUP edition.",
+            "url": "https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf",
+            "read": "Proposition 3.2.9 statement and proof, printed pp. 45-47; Lemma B.10.7 and proof, printed pp. 155-156; surrounding Menshov-Rademacher Theorem B.10.5 statement and dyadic proof context; Lemma A.4.1 statement and proof sketch, printed pp. 124-125. The new notes supply an explicit dyadic-growth and Abel-tail route rather than cite the whole Menshov-Rademacher theorem without proof.",
+            "not_read": "Whole Chapter 3, Bagchi's arithmetic approximation/support argument and universality proof, remainder of the book.",
+            "license": "Author's page calls this a submitted draft made available thanks to CUP. No CC reuse license was found or assumed. Mathematical results are restated and proved in original Chinese prose, not translated wholesale.",
+            "downloaded": []
+          },
+          {
+            "author": "Melanie Matchett Wood",
+            "title": "Cohen-Lenstra heuristics and local conditions",
+            "edition": "arXiv:1710.01350v1, 2017-10-03, 22 pages. Current abstract page is v2 and was used only for version identity, not substituted for the v1 PDF.",
+            "url": "https://arxiv.org/pdf/1710.01350v1",
+            "read": "Section 1.2 notation and section 2, printed pp. 5-6: general-u measure, Proposition 2.1 statement, Proposition 2.2 statement/proof including its explicitly cited CL84 inputs, rectangular-cokernel paragraph and warning about exchanging limit with infinite sum; Proposition 2.3 statement and the beginning of its proof context. The CL84 counting inputs and complete moment-determinacy proof were not independently verified.",
+            "scope_difference": "Wood fixes an odd prime in section 1.2. The new elementary Haar-matrix proofs explicitly allow any prime, including 2; this extension follows from the displayed proofs and is not attributed as Wood's stated arithmetic theorem.",
+            "license": "No Creative Commons license inferred for the v1 PDF. Access to the versioned abstract failed once; the full versioned PDF was accessible. Only mathematical statements and original elementary proofs used.",
+            "downloaded": []
+          }
+        ],
         "licensing": "Copyright International Mathematical Union 2026; SIAM chapter CC BY 4.0. Adaptation and mathematical normalization changes credited in the reference."
       },
       "coverage": {
@@ -519,7 +671,12 @@
           "0GK8",
           "0GK9",
           "0GKA",
-          "0GKB"
+          "0GKB",
+          "0HS0",
+          "0HS1",
+          "0HS2",
+          "0HS3",
+          "0HS4"
         ],
         "section3_refined_model": [
           "0GKC",
@@ -534,7 +691,12 @@
           "0GKJ",
           "0GKK",
           "0GKL",
-          "0GKN"
+          "0GKN",
+          "0HT0",
+          "0HT1",
+          "0HT2",
+          "0HT3",
+          "0HT4"
         ],
         "supplementary_arxiv_section1_theorem1.2": [
           "0GKD",
@@ -544,10 +706,10 @@
       },
       "deferred": [
         "Maier's short-interval theorem proof. The note states the exact fixed-lambda>1 liminf/limsup result, not a locally proved sieve theorem.",
-        "Bagchi's function-space limit theorem and almost-sure locally uniform analytic construction. The elementary L2 Cauchy computation at each fixed point does not establish this stronger construction.",
+        "Bagchi's function-space limit theorem for actual zeta shifts, support/universality conclusions and arithmetic approximation remain external. 0HS0-0HS4 now prove almost-sure locally uniform Euler and ordinary Dirichlet convergence on Re(s)>1/2, their equality, nonvanishing and function-space measurability on one common probability-one event. Nothing is asserted at the critical boundary.",
         "Refined-model density existence, normalizing-constant bounds, Gaussian approximation of matrix traces and quantitative comparison proof; Theorem 1.2 is cited with q>5, beta in (1/4,1/2), weighted degree and Haar L2 norm specified.",
         "Supplementary paper Theorems 1.1, 1.3 and 1.5 and Conjecture 1.6 are not developed into additional pages; actual arithmetic-family comparison remains separate from the model-to-model Theorem 1.2.",
-        "Cohen-Lenstra mass identity, random-cokernel limit law and uniqueness from all surjection moments remain external. The finite-n surjection moment is proved locally and is not substituted for tightness or moment determinacy.",
+        "Infinite-law surjection moment identities and uniqueness from all such moments remain externally cited. The finite-n point-mass formula, uniform rank/exponent tightness, positive mass normalization and total-variation Haar-cokernel limit are now proved in 0HT0-0HT4 for every fixed prime p and integer u>=0. Total variation is not substituted for uniform integrability of unbounded surjection counts.",
         "Finiteness of number-field class groups and invertibility of all nonzero fractional ideals of their integer rings are cited algebraic-number-theory inputs.",
         "Quadratic-field Cohen-Lenstra distributions are conjectural, for fixed odd p and fixed group before discriminant bound tends to infinity. No p=2 version or independent joint law is claimed.",
         "Scholz reflection proof; only its absolute rank-difference consequence is stated and its obstruction to independent models is proved.",
@@ -568,7 +730,8 @@
         "not_read": "未全文阅读报告引用的 Bergelson–Leibman、Peluse、Peluse–Prendiville 等原始研究论文，未声称核验其完整证明。未对照排印 PDF 或作者 LaTeX 源。",
         "license": "Copyright International Mathematical Union 2026; CC BY 4.0, as stated on SIAM chapter page",
         "adaptation": "署名中文改写；新增有限和、密度迭代等初等推导；复共轭与范数幂次采用一致约定。",
-        "source_record": "research/sources/number-theory/combinatorics-spectra/reading.json"
+        "source_record": "research/sources/number-theory/combinatorics-spectra/reading.json",
+        "continuation_read": "2026-10-13重新核对SIAM HTML §2密度增量开头和§4式4.3–4.8、引理4.1–4.2及其后的等差分块。新增证明是明确假设下的有限和特例与带对数损失纯二次Weyl估计，不冒充完整局部逆或无对数主弧定理。"
       },
       "coverage": {
         "§1: configurations, qualitative theorem, distinct degrees, finite fields": [
@@ -582,29 +745,35 @@
           "0GO4",
           "0GO5",
           "0GO6",
-          "0GO7"
+          "0GO7",
+          "0HW0",
+          "0HW1"
         ],
         "§3: differences, van der Corput, box norms, quantitative concatenation": [
           "0GO8",
           "0GO9",
           "0GOA",
-          "0GOG"
+          "0GOG",
+          "0HW2",
+          "0HW3"
         ],
         "§4: dual averages, Gowers energy, Fourier detection, degree lowering, major arcs": [
           "0GOB",
           "0GOC",
           "0GOD",
           "0GOE",
-          "0GOF"
+          "0GOF",
+          "0HW4",
+          "0HW5"
         ]
       },
       "deferred": [
         "Bergelson–Leibman 的遍历论证明及多维一般定理；0GO2 仅陈述报告定理1.5的一维有限形式。",
         "不同次数主定理1.8、有限域定理1.6、非线性 Roth 定理1.7的研究论文证明及精确常数追踪。0GO6只从密度增量引理推得某个正指数，不推导2^{-150}。",
-        "引理2.1、定理2.2的完整证明，特别是平衡函数选择、边界控制与局部平均转化为密度增量。",
+        "引理2.1与定理2.2的一般证明仍外引，尤其由避形假设选择正确平衡函数和从任意二次位置函数抽取主弧相关。0HW0已证明带显式边界条件的局部平均到密度增量；0HW1证明已知近有理Fourier频率的充分条件；0HW5证明已知二次主弧相位时的局部逆及密度增量特例。",
         "定理2.3一般不同次数逆定理的系数一致性完整形式；目前主叙述以非线性 Roth 为可计算模型，并单独引用一般主结果。",
         "PET归纳、参数方向平均、定量拼接的完整技术定理与证明；0GOG明确为引用结果和证明结构。",
-        "降阶估计4.4、4.5及频率集中、主弧引理4.2、无对数损失 Weyl 估计的完整证明；0GOF仅证明有理相位在等差段上的直接计算。",
+        "降阶估计4.4、4.5及频率集中、主弧引理4.2的任意权函数和无对数损失Weyl技术仍未证明。0HW2–0HW4只证明纯二次和的间距估计、一次Weyl差分以及带log(2N)损失的主弧推论；不覆盖引理4.2。",
         "后续更强的非线性 Roth 对数界、定理1.9遍历平均、素数及分数幂模式、更多多维扩展均已读报告叙述但未扩建专页。"
       ]
     },
@@ -621,10 +790,96 @@
       "reading_scope": {
         "edition": "SIAM Proceedings of the International Congress of Mathematicians 2026, vol. 3, Invited Lectures (Sections 1–4), pp. 434–453; published online 2026-07-13",
         "read": "完整阅读出版章节 HTML §§1–4，包括随机模型、历史常数、迹方法、Friedman–Ramanujan 定义、强收敛、共振及引用定理；核对所用书目条目。",
-        "not_read": "未全文阅读所有原始谱隙、随机覆盖、强收敛及测地线统计论文；未声称报告的证明概要等于完整证明。未对照排印 PDF 或作者 LaTeX 源。",
+        "not_read": "未全文阅读所有原始谱隙、随机覆盖、强收敛及测地线统计论文。报告本身未对照排印PDF或作者LaTeX源；本轮另已读取Hide–Magee v3的指定PDF正文段落，准确范围见supplementary_sources。未把报告证明概要或该40页论文的局部读取记为全文证明核验。",
         "license": "Copyright International Mathematical Union 2026; CC BY 4.0, as stated on SIAM chapter page",
         "adaptation": "署名中文改写；新增1/4能量计算、覆盖谱分解、概率步骤、傅里叶乘子及置换计数的逐步证明。",
-        "source_record": "research/sources/number-theory/combinatorics-spectra/reading.json"
+        "source_record": "research/sources/number-theory/combinatorics-spectra/reading.json",
+        "continuation_read": "重新核对SIAM HTML §4.2–4.4；读取Hide–Magee原论文v3关于紧系数压缩和§7谱排除的实际证明。Cheeger支线另核对McMullen §17、Knill的Sard定理陈述和MIT紧算子定义，具体页码与未读部分如下。",
+        "supplementary_sources": [
+          {
+            "id": "hide-magee-2107.05292v3",
+            "author": [
+              "Will Hide",
+              "Michael Magee"
+            ],
+            "title": "Near optimal spectral gaps for hyperbolic surfaces",
+            "url": "https://arxiv.org/pdf/2107.05292v3",
+            "edition": "arXiv:2107.05292v3, 2023-02-15, 40 pages",
+            "read": [
+              "§1.2，印刷页5–7，预解算子方法概述。",
+              "§3，定理3.1、命题3.3、推论3.4的陈述，印刷页11–12。",
+              "§6.1，紧系数构造与引理6.1的陈述及证明，印刷页29–30。",
+              "§6.2推论6.2及所显示的单位等价与1/5范数结论，印刷页31。",
+              "§6.3命题6.3完整有限秩逼近证明，印刷页32。",
+              "§7全部，印刷页33–34：有限网格、2/5到3/5、尖点1/5、总余项4/5及自伴性谱排除。"
+            ],
+            "not_read": [
+              "没有全文核验§§4–5几何预解核和尖点估计的证明。",
+              "没有读取被引用Bordenave–Collins、Pisier原论文的完整证明。",
+              "未读取§8紧化论证；未声称读完40页。"
+            ],
+            "license": "arXiv non-exclusive distribution license (https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html)，不是CC BY；只据数学内容独立表述，不复制原文长段。",
+            "caveats": [
+              "定理1.1陈述用半开[0,1/4-epsilon)，§7证明排除到闭端点；固定epsilon的闭区间表述也可由epsilon/2版本推出。",
+              "本轮使用PDF抽取正文，没有声称成功完成页面图像复核。"
+            ],
+            "local_files": []
+          },
+          {
+            "id": "mcmullen-ergodic-20201224",
+            "author": "Curtis T. McMullen",
+            "title": "Ergodic theory, geometry and dynamics",
+            "url": "https://abel.math.harvard.edu/~ctm/papers/home/text/class/harvard/275/ergodic/course.pdf",
+            "edition": "2020-12-24, 246 pages",
+            "read": [
+              "§17印刷页142–145：Cheeger定理17.2、定理17.3证明中的余面积公式、定理17.4和有限体积Cheeger论证。"
+            ],
+            "not_read": [
+              "未通读246页讲义。",
+              "未从该讲义获得全局余面积公式或Sard定理的证明。"
+            ],
+            "license": "作者托管PDF未见明确再利用许可；不推定为CC授权，采用独立数学表述。",
+            "caveats": [
+              "有限体积论证改用两侧至多半面积的中位数，允许平台集有正测度。",
+              "等周界直接写h*Area<=Length，不复制讲义中V(t)<=h*area(X_t)的疑似排印错误；不用未经论证的分布函数微分。"
+            ],
+            "local_files": []
+          },
+          {
+            "id": "knill-geometry-1995",
+            "author": "Oliver Knill",
+            "title": "Introduction to Geometry and geometric analysis",
+            "url": "https://people.math.harvard.edu/~knill/teaching/math109_1995/geometry.pdf",
+            "edition": "Caltech fall 1995 lecture notes, author-hosted PDF, 121 pages",
+            "read": [
+              "封面；§1.4正则水平集坐标构造相关段落，印刷页11–12；§1.5临界点/临界值定义及定理1.5.1的完整陈述，印刷页12–13。"
+            ],
+            "not_read": [
+              "未核验Sard定理的整个归纳证明；工具返回的部分证明文字不算完整证明读取。",
+              "未通读讲义。"
+            ],
+            "license": "作者托管PDF未见明确再利用许可；只据定理数学内容独立陈述。",
+            "local_files": []
+          },
+          {
+            "id": "mit-18102-2021-compact",
+            "author": [
+              "Casey Rodriguez (lecturer)",
+              "Andrew Lin (notes)"
+            ],
+            "title": "18.102: Introduction to Functional Analysis",
+            "url": "https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/8fb8d5c170f1613151aca71de21027bc_MIT18_102s21_full_lec.pdf",
+            "edition": "Spring 2021 full lecture notes, 125 pages",
+            "read": [
+              "封面作者信息；定义207与紧邻有限秩紧性说明，印刷页104；例209无穷维恒等算子不紧，印刷页105；课程页许可链接。"
+            ],
+            "not_read": [
+              "未通读讲义；未声称完整读取定理210证明。"
+            ],
+            "license": "MIT OpenCourseWare课程页链接CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)。本页独立表述通用数学定义和直接论证，source-license元数据保留来源许可。",
+            "local_files": []
+          }
+        ]
       },
       "coverage": {
         "§1: surfaces, spectra, 1/4, Cheeger, Huber, local geometry": [
@@ -639,7 +894,12 @@
           "0GSM",
           "0GSN",
           "0GSP",
-          "0GSQ"
+          "0GSQ",
+          "0I00",
+          "0I01",
+          "0I02",
+          "0I07",
+          "0I08"
         ],
         "§2: marked surfaces and Weil–Petersson probability": [
           "0GS5",
@@ -660,15 +920,20 @@
           "0GSF",
           "0GSG",
           "0GSA",
-          "0GSB"
+          "0GSB",
+          "0I03",
+          "0I04",
+          "0I05",
+          "0I06",
+          "0I09"
         ]
       },
       "deferred": [
         "双曲曲面谱算子的自伴实现、椭圆谱定理、有限面积非紧曲面连续谱起点的解析证明。0GS2明确引用这些输入。",
-        "Cheeger、Buser及Huber定理，Fenchel–Nielsen坐标存在唯一性，Wolpert辛形式公式与Weil–Petersson体积有限性的完整证明。",
+        "0I00–0I02已在光滑余面积公式0I07、Sard定理0I08及0GS2的谱变分表达这些明确输入下证明紧曲面Cheeger下界，含光滑截断与平台集的中位数处理。全局余面积、Sard本身及谱变分理论仍引用。Buser上界、Huber定理、FN坐标、Wolpert公式与WP体积有限性仍未给本地证明。",
         "Weil–Petersson主定理3.4的任意阶1/g展开、弱Friedman–Ramanujan函数技术、短边界复杂子曲面排除及一致余项估计。0GSE只定义逐点强形式，不以此替代定理3.6所需弱形式。",
         "完整Selberg迹公式和测地线统计积分公式。未照录HTML中可能缺失原始长度因子的式3.1；扩展前需对照正式PDF。",
-        "随机覆盖定理4.2、4.3的强收敛及几何算子比较、预解算子构造；自由群与曲面群群代数范数收敛的深层证明。",
+        "随机覆盖定理4.2、4.3仍引用。已证明小余项到预解算子0I03、紧系数压缩与矩阵比较传递0I04–0I05、有限网格一致化0I06；未证明几何预解算子构造、尖点范数界、紧系数及其Lipschitz估计、极限内部核1/5范数界，也未证明Bordenave–Collins/Pisier矩阵比较或曲面群强收敛。",
         "BS谱密度收敛定理和Buser–Sarnak序列存在性；0GSI只证明给定非分离短测地线后的二重覆盖计算。",
         "Brooks–Makover模型的详细构造和定理、无穷面积曲面的共振理论与定理4.1、章末未提供统一精确参数的多项式概率速率均未扩建专页。",
         "报告文献[62]按2025预印本身份引用；未另行查询其在报告出版后是否正式刊出。"
@@ -686,7 +951,21 @@
         "read": "Full primary report sections 1-8, all figure captions, references 1-74, copyright and publication metadata. Equations, hypotheses and distinctions between proved theorems and unchecked proposals were read, not only the abstract.",
         "source_record": "research/sources/number-theory/computation/source-location.json",
         "downloaded": [],
-        "supplementary_reading": "Existing canonical notes listed below; no claim to have read the cited original papers or monographs in full.",
+        "supplementary_reading": "The original report reading remains as recorded above. For the post-164f927 expansion, re-read report section 6.1 and Remark 6.3 and read the Harvey-Sutherland II published author offprint in the exact scope below; no claim to have read all cited papers or monographs in full.",
+        "expansion_sources": [
+          {
+            "authors": "David Harvey and Andrew V. Sutherland",
+            "title": "Computing Hasse-Witt matrices of hyperelliptic curves in average polynomial time, II",
+            "url": "https://math.mit.edu/~drew/conm13352.pdf",
+            "doi": "10.1090/conm/663/13352",
+            "edition": "Contemporary Mathematics 663 (2016), pp. 127-147, published author offprint; 21 PDF pages",
+            "read": "Introduction and Theorem 1.1 (pp. 127-128); section 2 recurrence derivation (pp. 129-131); section 3 including Lemma 3.1 and Theorems 3.2-3.3 (pp. 131-134); section 4 algorithm and Theorems 4.2/4.5 inspected; section 5 complete translation/interpolation argument, Theorem 5.1, Example 5.2 and Lemma 5.3 (pp. 136-139); section 6 algorithm and proof of Theorem 1.1 through coefficient-height and exceptional-prime estimates (pp. 139-140). Performance tables and section 7 were not systematically read. The new local conjugacy proof uses coefficient extraction, not the source's differential/Cartier proof.",
+            "licensing": "Copyright 2016 by the authors; PDF explicitly says publisher-provided free author offprint and copyright restrictions may apply. Not assigned the report's CC BY license. No figures or extended text reproduced; local mathematical proofs and examples newly written.",
+            "arxiv_metadata_only": "https://arxiv.org/abs/1410.5222, v1 dated 2014-10-20; metadata checked, arXiv full text not substituted for the published offprint",
+            "downloaded": [],
+            "local_source_record": "This expansion_sources entry records the remote source location; no PDF was added to the repository."
+          }
+        ],
         "licensing": "IMU 2026, SIAM CC BY 4.0. Chinese adaptations and added elementary proofs are credited on the reference page; no reproduced figure used."
       },
       "coverage": {
@@ -709,7 +988,12 @@
           "0H04",
           "0H05",
           "0H07",
-          "0H0U"
+          "0H0U",
+          "0I40",
+          "0I41",
+          "0I42",
+          "0I43",
+          "0I44"
         ],
         "section3.3": [
           "0H08",
@@ -736,7 +1020,43 @@
           "0H0N",
           "0H0O",
           "0H0P",
-          "0H0U"
+          "0H0U",
+          "0I40",
+          "0I41",
+          "0I42",
+          "0I43",
+          "0I44",
+          "0I45",
+          "0I46",
+          "0I47",
+          "0I48",
+          "0I49",
+          "0I4A",
+          "0I4B",
+          "0I4C",
+          "0I4D"
+        ],
+        "supplementary_HSII_section2": [
+          "0I4A"
+        ],
+        "supplementary_HSII_section3": [
+          "0I40",
+          "0I41",
+          "0I42",
+          "0I43",
+          "0I44"
+        ],
+        "supplementary_HSII_section5": [
+          "0I45",
+          "0I46",
+          "0I47",
+          "0I48",
+          "0I49",
+          "0I4B"
+        ],
+        "supplementary_HSII_section6": [
+          "0I4C",
+          "0I4D"
         ],
         "section6.2": [
           "0H0S"
@@ -759,8 +1079,8 @@
         "Prime-table construction in the multitape model and the prime number theorem are cited inputs, not proved locally.",
         "Schoof/SEA, Kedlaya/Monsky-Washnitzer cohomology and Hasse-Weil theorem proofs.",
         "Hasse-Witt determinant congruence proof (report cites Handbook proposition 17.8).",
-        "Harvey-Sutherland translation/interpolation reconstruction and its coefficient-height-uniform O(g^3 N log^3 N) analysis; only the mechanism and exact source location are given.",
-        "Optimal remainder-forest time-space tradeoff; 0H0U proves a block state invariant only.",
+        "The translation/interpolation mechanism is now proved locally in 0I45-0I49, connected to first-row recurrence and a fixed-model batch proof in 0I4A-0I4D. The published coefficient-height-uniform O(g^3 M(N log N) log N) time and O(g^2 N) space theorem, under g log g=O(log N) and log max|f_i|=O(log N), still uses optimized matrix multiplication, prime estimates and a sharper exceptional-prime analysis not fully reproved here.",
+        "0I40-0I44 now prove an explicit schoolbook-matrix forest tradeoff, including initialization and long boundary states. The d^2 optimized main term of Harvey-Sutherland II Theorem 3.3 and the prime-block balance estimates supporting its strongest space bounds remain external. Linear-workspace fast integer arithmetic is an explicit additional assumption, not proved locally.",
         "Sato-Tate group definitions, Haar measure theorem formulations and proofs; 0H0S supplies the computational frequency construction, not an equidistribution proof.",
         "Full hyperelliptic higher-precision algorithm of Theorem 6.4; 0H0T states its fixed-curve consequence and external proof source.",
         "Geometrically hyperelliptic curves over quadratic extensions, plane quartics and superelliptic curve special recurrences.",
@@ -781,7 +1101,7 @@
         {
           "url": "https://ultronozm.github.io/math/standard.html",
           "version": "author HTML timestamp 2026-07-04 09:12:17",
-          "read": "Sections 1.1, 1.2, 1.3.2-1.3.4, 2.14.1-2.14.5; remaining proof architecture inspected but not full 256-page proof read"
+          "read": "Sections 1.1, 1.2, 1.3.2-1.3.4, 2.14.1-2.14.5; continuation read section 7.3.3 (anchors sec:parameter-tau, lem:construction-tau-from-theta and defn:parameter-tau-pi-T, including the compactness lemma; references 7.6-7.8 name statements, not sections) and section 13 Fourier conventions, symbol classes, 13.5.1-13.5.4, 13.6.1-13.6.3; full 256-page global proof not read"
         },
         {
           "url": "https://arxiv.org/abs/2109.15230v3",
@@ -838,11 +1158,39 @@
           "0H4N",
           "0H4P",
           "0H4Q"
+        ],
+        "Fixed Schwartz semiclassical calculus with proofs": [
+          "0I80",
+          "0I81",
+          "0I82",
+          "0I83",
+          "0I84",
+          "0I85",
+          "0I86",
+          "0I87",
+          "0I88",
+          "0I8F",
+          "0I8G",
+          "0I8H"
+        ],
+        "Arbitrary rank stable orbit local geometry with proofs": [
+          "0I8A",
+          "0I8B",
+          "0I8C",
+          "0I8D",
+          "0I8E"
+        ],
+        "Analytic prerequisites": [
+          "0I8I",
+          "0I8J",
+          "0I8K",
+          "0I8L",
+          "0I8M"
         ]
       },
       "deferred": [
-        "Full symbol calculus and uniform relative-character asymptotics",
-        "Higher-rank transverse volume estimates",
+        "General-order or shrinking-symbol Lie calculus and uniform relative-character asymptotics; fixed-Schwartz Euclidean all-order composition, group cutoff errors and compact-frequency first group correction are now proved",
+        "Higher-rank relative transverse volume estimates; arbitrary-rank free stabilizers and local single-orbit small-ball bounds are now proved, which do not imply the relative estimate",
         "Eisenstein wave-packet growth and the full global subconvexity proof",
         "General Gan-Gross-Prasad period identities and Ratner-based average results",
         "An actual ICM2026 proceedings manuscript remains unlocated"
@@ -902,6 +1250,23 @@
     "0G4P",
     "0G4S",
     "0G4T",
+    "0H80",
+    "0H81",
+    "0H82",
+    "0H83",
+    "0H84",
+    "0H85",
+    "0H86",
+    "0H87",
+    "0H88",
+    "0HC0",
+    "0HC1",
+    "0HC2",
+    "0HC4",
+    "0HC5",
+    "0HC6",
+    "0HC7",
+    "0HC8",
     "0G81",
     "0G82",
     "0G84",
@@ -923,6 +1288,29 @@
     "0GCG",
     "0GCI",
     "0GCJ",
+    "0HG0",
+    "0HG1",
+    "0HG2",
+    "0HG3",
+    "0HG4",
+    "0HG5",
+    "0HG6",
+    "0HH0",
+    "0HH1",
+    "0HH2",
+    "0HH3",
+    "0HK0",
+    "0HK2",
+    "0HK3",
+    "0HK4",
+    "0HK5",
+    "0HK6",
+    "0HK7",
+    "0HL0",
+    "0HL1",
+    "0HL2",
+    "0HL3",
+    "0HL4",
     "0GG1",
     "0GG3",
     "0GG4",
@@ -952,6 +1340,24 @@
     "0GKJ",
     "0GKM",
     "0GKN",
+    "0HO0",
+    "0HO1",
+    "0HO2",
+    "0HO3",
+    "0HO4",
+    "0HP0",
+    "0HP1",
+    "0HP2",
+    "0HS0",
+    "0HS1",
+    "0HS2",
+    "0HS3",
+    "0HS4",
+    "0HT0",
+    "0HT1",
+    "0HT2",
+    "0HT3",
+    "0HT4",
     "0GO4",
     "0GO6",
     "0GO8",
@@ -978,6 +1384,22 @@
     "0GSI",
     "0GSJ",
     "0GSL",
+    "0HW0",
+    "0HW1",
+    "0HW2",
+    "0HW3",
+    "0HW4",
+    "0HW5",
+    "0I00",
+    "0I01",
+    "0I02",
+    "0I03",
+    "0I04",
+    "0I05",
+    "0I06",
+    "0I07",
+    "0I08",
+    "0I09",
     "0H01",
     "0H02",
     "0H03",
@@ -1002,6 +1424,20 @@
     "0H0Q",
     "0H0U",
     "0H0V",
+    "0I40",
+    "0I41",
+    "0I42",
+    "0I43",
+    "0I44",
+    "0I45",
+    "0I46",
+    "0I47",
+    "0I48",
+    "0I49",
+    "0I4A",
+    "0I4B",
+    "0I4C",
+    "0I4D",
     "0H47",
     "0H4B",
     "0H4E",
@@ -1013,7 +1449,28 @@
     "0H4X",
     "0H50",
     "0H51",
-    "0H53"
+    "0H53",
+    "0I80",
+    "0I81",
+    "0I82",
+    "0I83",
+    "0I84",
+    "0I85",
+    "0I86",
+    "0I87",
+    "0I88",
+    "0I8B",
+    "0I8C",
+    "0I8D",
+    "0I8E",
+    "0I8F",
+    "0I8G",
+    "0I8H",
+    "0I8I",
+    "0I8J",
+    "0I8K",
+    "0I8L",
+    "0I8M"
   ],
   "research_statements_without_local_proof": [
     "0C08",
@@ -1036,7 +1493,6 @@
     "0C8O",
     "0C8P",
     "0G03",
-    "0G02",
     "0G09",
     "0G0F",
     "0G05",
@@ -1045,7 +1501,6 @@
     "0G42",
     "0G44",
     "0G45",
-    "0G4P",
     "0G47",
     "0G49",
     "0G4A",
@@ -1062,6 +1517,11 @@
     "0G4V",
     "0G4M",
     "0G4N",
+    "0H82",
+    "0H86",
+    "0H88",
+    "0HC2",
+    "0HC8",
     "0G81",
     "0G83",
     "0G84",
@@ -1085,7 +1545,12 @@
     "0GCC",
     "0GCE",
     "0GCF",
-    "0GCG",
+    "0HL4",
+    "0HK1",
+    "0HK7",
+    "0HH2",
+    "0HH3",
+    "0HK2",
     "0GCH",
     "0GCK",
     "0GG9",
@@ -1098,7 +1563,6 @@
     "0GKE",
     "0GKF",
     "0GKG",
-    "0GKH",
     "0GKK",
     "0GKL",
     "0GKN",
@@ -1124,6 +1588,10 @@
     "0GSH",
     "0GSI",
     "0GS0",
+    "0I07",
+    "0I08",
+    "0I05",
+    "0I06",
     "0H06",
     "0H0C",
     "0H0I",
@@ -1131,7 +1599,11 @@
     "0H0L",
     "0H0M",
     "0H0O",
-    "0H0P",
+    "0I40",
+    "0I43",
+    "0I4D",
+    "0I42",
+    "0I44",
     "0H0T",
     "0H0R",
     "0H00",
@@ -1815,11 +2287,14 @@
     [
       "0G02",
       [
+        "00SQ",
         "0G01",
         "0C07",
-        "0C04"
+        "0C04",
+        "0H81",
+        "0H82"
       ],
-      "Mumford 表示以奇数次模型和 Jacobian 除子类为对象；不把同一表示无条件搬到偶数次模型。"
+      "在完美域上定义五次模型的 Mumford 表示，存在唯一性由半约化编码与约化定理支撑；合成、降次是后续算法链接。"
     ],
     [
       "0G03",
@@ -1864,9 +2339,10 @@
       "0G07",
       [
         "0C10",
-        "0G01"
+        "0G01",
+        "0H87"
       ],
-      "保留 y 一次项后二进 Hensel 与变量替换支持递归。"
+      "二进 Hensel、模型覆盖与单位平方判据支持递归及反例。"
     ],
     [
       "0G08",
@@ -2023,9 +2499,9 @@
         "0BF1",
         "0G43",
         "0C08",
-        "0G4P"
+        "0HC2"
       ],
-      "Tate 高度与 Northcott 定理说明零高度挠点及有限秩实空间上的正定性。"
+      "零高度挠点推论需要阿贝尔簇上丰沛高度的 Northcott；以0HC2取代旧的直接0G4P边，完整二次性仍引用。"
     ],
     [
       "0G45",
@@ -2154,9 +2630,10 @@
         "0G4A",
         "0G41",
         "0E81",
-        "00FR"
+        "00FR",
+        "0HC4"
       ],
-      "局部相交测度、好约化、复曲面和位权定义 phi 并陈述体积下界。"
+      "局部相交、位权、良约化、Riemann曲面及约化度量图明确phi对象；单环计算为例子，不反向作前置。"
     ],
     [
       "0G4I",
@@ -2225,9 +2702,9 @@
       "0G4P",
       [
         "0G41",
-        "0G42"
+        "0HC1"
       ],
-      "在绝对高度与丰沛 Weil 高度下陈述 Northcott；仅证明有理射影情形并给出次数反例。"
+      "将各射影坐标比归一化后，直接从有界次数代数数有限性证明全部有界次数射影点的Northcott；丰沛高度0HC2是应用，因此删除旧0G42前置。"
     ],
     [
       "0G4Q",
@@ -2292,6 +2769,168 @@
       "icm2026-yuan-quantitativity",
       [],
       "文献与版本、常数和版权许可记录；不设数学前置。"
+    ],
+    [
+      "0H80",
+      [
+        "00SQ",
+        "0C01",
+        "0B07",
+        "0G01"
+      ],
+      "有限点正则性与无穷远阶数给出极点空间基；0H82是应用，不是前置。"
+    ],
+    [
+      "0H81",
+      [
+        "00SQ",
+        "0C01",
+        "0C04"
+      ],
+      "声明半约化除子，局部平方根逐次提升和多项式余数拼接均在正文证明；0G02为应用导航，不设循环边。"
+    ],
+    [
+      "0H82",
+      [
+        "00SQ",
+        "0C07",
+        "0C05",
+        "0H81",
+        "0H80",
+        "00FJ"
+      ],
+      "半约化编码和低阶极点空间证明唯一性；存在性明确引用代数Riemann–Roch，00FJ仅提供其复解析原型，非冒称任意域版本已本地证明。"
+    ],
+    [
+      "0H83",
+      [
+        "00SQ",
+        "0H81",
+        "0H82"
+      ],
+      "半约化多项式对的零极点计算证明降次保持除子类，唯一终点调用约化唯一性。"
+    ],
+    [
+      "0H84",
+      [
+        "00SQ",
+        "0H81",
+        "0H83"
+      ],
+      "局部重数说明gcd恰消去对合纤维，余数拼接和一次平方根提升给出唯一合成，再调用严格降次。"
+    ],
+    [
+      "0H85",
+      [
+        "00SQ",
+        "00GF",
+        "0C07",
+        "0C04",
+        "0H82"
+      ],
+      "约化唯一性将二挠条件化为v=0；因子子集与补集计数给维数s-1，Selmer页面仅为应用。"
+    ],
+    [
+      "0H86",
+      [
+        "0C07",
+        "0A40",
+        "0H81"
+      ],
+      "Jacobian、行列式范数和Mumford坐标支持范数平方证明；下降核与全局良定义是精确引用输入。"
+    ],
+    [
+      "0H87",
+      [
+        "00SM",
+        "00ER"
+      ],
+      "二进完备化与Cauchy收敛支撑逐次平方根提升；局部下降例子不是前置。"
+    ],
+    [
+      "0H88",
+      [
+        "0C07",
+        "0H86",
+        "0H82",
+        "0H87"
+      ],
+      "唯一低次数代表、下降必要条件和二进平方判据逐项排除指定平方类，不推断整个Selmer群。"
+    ],
+    [
+      "0HC0",
+      [
+        "0D04",
+        "0G41",
+        "0AI6",
+        "00WC"
+      ],
+      "最小多项式、绝对位权与有理射影高度支持系数乘积估计；不依赖Northcott结论。"
+    ],
+    [
+      "0HC1",
+      [
+        "0G41",
+        "0HC0",
+        "00WC"
+      ],
+      "先界定最小多项式的整数坐标，再有限计数其根；射影Northcott是后续应用，禁止反向边。"
+    ],
+    [
+      "0HC2",
+      [
+        "0AI6",
+        "0BF1",
+        "0G42",
+        "0G4P"
+      ],
+      "丰沛嵌入及高度机器的一致有界误差把问题归于射影Northcott，并明确基域次数因子。"
+    ],
+    [
+      "0HC4",
+      [
+        "00LC",
+        "00LB",
+        "00EK",
+        "00Q2",
+        "0A3C",
+        "00Q3"
+      ],
+      "路径度量、实值函数的分部积分和概率零均值固定Laplacian解的常数；不依赖Green核构造。"
+    ],
+    [
+      "0HC5",
+      [
+        "0HC4",
+        "00Q3"
+      ],
+      "先用二次边函数消去密度，再解有限图矩阵方程；能量唯一性和概率归一化给出对称Green核。"
+    ],
+    [
+      "0HC6",
+      [
+        "00Q3",
+        "0HC5",
+        "0HC4"
+      ],
+      "加入对角项并积分势函数的导数平方，证明一般有限图的线性负部界；phi与单环页面都是应用。"
+    ],
+    [
+      "0HC7",
+      [
+        "0HC5",
+        "0HC6"
+      ],
+      "验证圆环Green方程、零均值和对角常数，继而计算有效电阻及能量界。"
+    ],
+    [
+      "0HC8",
+      [
+        "0HC7",
+        "0HC5",
+        "0HC6"
+      ],
+      "明确极化权重后直接计算可容许核和phi，并由对角上界消去边长；一般可容许测度刻画与图曲线比较仍引用。"
     ],
     [
       "0G80",
@@ -2662,9 +3301,10 @@
       "0GCG",
       [
         "0A3G",
-        "0GCF"
+        "0GCF",
+        "0HL3"
       ],
-      "低增长参数映射的初等计算，加上外部亚纯延拓引理在二面体例子中的应用。"
+      "低增长参数映射的初等计算，加上代数函数且实路径正则的亚纯拉回特例证明。"
     ],
     [
       "0GCH",
@@ -2696,6 +3336,219 @@
         "0GC6"
       ],
       "L(2,chi_-3) 的外部有效无理性度量，说明函数系统和积分认证来源。"
+    ],
+    [
+      "0HG0",
+      [
+        "00CX"
+      ],
+      "小扩张的平方零核、矩阵核的加法化及剩余伴随作用；对偶数是例子链接。"
+    ],
+    [
+      "0HG1",
+      [
+        "00TX",
+        "00E2",
+        "0C16"
+      ],
+      "连续二余循环与余边界，核对拓扑群和连续映射的规范定义；余循环群并非循环群。"
+    ],
+    [
+      "0HG2",
+      [
+        "0F0G",
+        "00E2",
+        "0HG0",
+        "0HG1"
+      ],
+      "逐项构造 H2 障碍并证明消失与提升存在等价；变形环是应用链接。"
+    ],
+    [
+      "0HG3",
+      [
+        "0HG2",
+        "0C16"
+      ],
+      "相对底环恒等的换基下，提升的差组成 H1 挠子；不混同仅在剩余域恒等的换基。"
+    ],
+    [
+      "0HG4",
+      [
+        "00GF",
+        "0F0G",
+        "0G82",
+        "0F03",
+        "0B8Q",
+        "0HG1"
+      ],
+      "固定辛相似因子把无穷小变形限制在十维 sp4，复用已有一般一阶变形计算。"
+    ],
+    [
+      "0HG5",
+      [
+        "0HG0",
+        "0HG4"
+      ],
+      "二可逆时用显式平方零矩阵校正保持指定相似因子。"
+    ],
+    [
+      "0HG6",
+      [
+        "0F0G",
+        "00GF",
+        "0HG4",
+        "0HG5",
+        "0HG2",
+        "01M4"
+      ],
+      "在给定相似因子字符且 H2 消失的条件下，分解有限厚化并逐层提升。"
+    ],
+    [
+      "0HH0",
+      [
+        "00TX",
+        "0C16"
+      ],
+      "两个 p 进特征标扩张的非对角项归一化及 H1 分类；系数采用 p 进拓扑。"
+    ],
+    [
+      "0HH1",
+      [
+        "0F52",
+        "0HH0",
+        "0G84",
+        "0F0G"
+      ],
+      "整个扩张未分歧时，对角化 Frobenius 并用稠密性得到不变补空间。"
+    ],
+    [
+      "0HH2",
+      [
+        "0G8B",
+        "0G8A",
+        "0G8C",
+        "0F0B"
+      ],
+      "引用 Sen 子商相容性与判据后，逐列构造互异权重的特征基。"
+    ],
+    [
+      "0HH3",
+      [
+        "0G83",
+        "0G8D",
+        "0G8C",
+        "0G8B",
+        "0G87",
+        "0F0B"
+      ],
+      "对数扩张与扭曲对偶组成四维辛相似反例，说明重复权重幂零部分仍可存在。"
+    ],
+    [
+      "0HK0",
+      [
+        "0AL0",
+        "0GCA"
+      ],
+      "截止列分母矩阵的行权与平方节省恒等式；优化页为应用链接。"
+    ],
+    [
+      "0HK1",
+      [
+        "0HK0",
+        "0GC8",
+        "0A3G",
+        "0ALW"
+      ],
+      "准确引用非恒定行权的 sharp holonomy 定理，保留 holonomic、独立性及正分母假设。"
+    ],
+    [
+      "0HK2",
+      [
+        "0GCA"
+      ],
+      "二项式系数整除与二进递推给出初等 lcm 指数上界；素数定理另标外部输入。"
+    ],
+    [
+      "0HK3",
+      [
+        "00D3",
+        "0AL0"
+      ],
+      "有限维过滤的维数跳跃给出全部消失阶及其和的二次下界。"
+    ],
+    [
+      "0HK4",
+      [
+        "0HK3"
+      ],
+      "按首个不同系数的格点间距逐层计数，并先取系数盒极限。"
+    ],
+    [
+      "0HK5",
+      [
+        "0ALW",
+        "0BAD"
+      ],
+      "统一清除有限极点后用 Cauchy 控制首项；动态抽屉原理是应用链接。"
+    ],
+    [
+      "0HK6",
+      [
+        "0HK3",
+        "0HK4",
+        "0HK5"
+      ],
+      "分母链、消失阶、Cauchy 与两个有序极限给出较宽的完整初等维数界。"
+    ],
+    [
+      "0HK7",
+      [
+        "0HK0",
+        "0HK1"
+      ],
+      "在明确引用的斜率不等式之后逐列配方，证明行权节省；不把外部斜率论证算成本地证明。"
+    ],
+    [
+      "0HL0",
+      [
+        "0ALW",
+        "0A3G"
+      ],
+      "代数多项式根界把单值孤立奇点控制为极点。"
+    ],
+    [
+      "0HL1",
+      [
+        "040J",
+        "0HL0"
+      ],
+      "二阶局部分歧消去闭路作用，再用代数根界补回删点；覆盖同伦提升复用既有页。"
+    ],
+    [
+      "0HL2",
+      [
+        "0ALW",
+        "0BAD"
+      ],
+      "偶性保证平方根选择无关，偶 Taylor 展开给出零点处亚纯下降。"
+    ],
+    [
+      "0HL3",
+      [
+        "0HL1",
+        "0HL2"
+      ],
+      "在代数性和实区间正则的准确假设下，用局部偶性和平方下降证明低增长拉回。"
+    ],
+    [
+      "0HL4",
+      [
+        "0GCF",
+        "0GCG",
+        "0HL3",
+        "0HK1"
+      ],
+      "引用显式二面体解性质后证明幂系统亚纯延拓与解析尺度、积分平方根增长上界。"
     ],
     [
       "nt-gee-icm2026",
@@ -2944,7 +3797,7 @@
         "00Q6",
         "00ER"
       ],
-      "Question: where can random Euler/Dirichlet expressions be constructed absolutely or in fixed-point L2? 0GK8 is a forward application, not a prerequisite."
+      "Question: where can random Euler/Dirichlet expressions be constructed absolutely or in fixed-point L2? Links to the stronger 0HS4 construction and Bagchi are forward developments, not reverse prerequisites."
     ],
     [
       "0GK7",
@@ -2960,10 +3813,10 @@
         "00MG",
         "0H41",
         "0A3G",
-        "0GK6",
+        "0HS4",
         "00LA"
       ],
-      "Question: what fixed-compact bounded-test-function law relates zeta shifts to random Euler products? External analytic construction explicitly included."
+      "Question: what fixed-compact bounded-test-function law relates zeta shifts to random Euler products? The old direct 0GK6 edge is deliberately replaced by proved function-space construction 0HS4, which itself uses 0GK6. The zeta-shift limit theorem remains cited."
     ],
     [
       "0GK9",
@@ -3042,9 +3895,10 @@
       "0GKH",
       [
         "00G3",
-        "00G4"
+        "00G4",
+        "0HT4"
       ],
-      "Question: what are the u=0 and u=1 Cohen-Lenstra masses? Arithmetic application link 0GKL is not a prerequisite."
+      "Question: what are the u=0 and u=1 Cohen-Lenstra probabilities? Their normalization now uses the local mass proof 0HT4; arithmetic application 0GKL remains a forward link."
     ],
     [
       "0GKI",
@@ -3073,9 +3927,12 @@
       [
         "0GKI",
         "0GKH",
-        "0GKJ"
+        "0GKJ",
+        "0HT2",
+        "0HT3",
+        "0HT4"
       ],
-      "Question: which external limit/mass/moment-determinacy theorem identifies random cokernels? Finite-moment calculation is not treated as a complete proof."
+      "Question: how is the proved Haar-cokernel limit distinguished from the separately cited infinite-law moment identity and moment uniqueness? Finite moments alone do not justify exchanging the unbounded expectation."
     ],
     [
       "0GKL",
@@ -3103,6 +3960,180 @@
         "0GKH"
       ],
       "Question: why does Scholz reflection rule out unrestricted independence of paired quadratic class groups? Reflection cited; contradiction with product law proved."
+    ],
+    [
+      "0HO0",
+      [
+        "00FU",
+        "00L3",
+        "00L4",
+        "0A68"
+      ],
+      "Bernstein approximation on a finite cube: explicit uniform error, positivity and preservation of a partition of unity."
+    ],
+    [
+      "0HO1",
+      [
+        "0GG2",
+        "0GG6",
+        "0GG7",
+        "0GG5"
+      ],
+      "Exact polynomial-weight and weighted-second-moment transfer under NP^d<r, with all expanded integer products bounded."
+    ],
+    [
+      "0HO2",
+      [
+        "0HO1",
+        "0HO0"
+      ],
+      "Lipschitz partition transfer: each second-moment error is at most 2 epsilon_v V, not a pointwise N-squared loss. The hat construction link is optional input, not a prerequisite."
+    ],
+    [
+      "0HO3",
+      [
+        "0HO2",
+        "0GGD",
+        "0A3M"
+      ],
+      "Complete fractional-moment transfer with aggregate error V^q(Delta^q+Delta^(1-q)+Delta), 0<q<1."
+    ],
+    [
+      "0HO4",
+      [
+        "00FU",
+        "0A3M",
+        "0HO0"
+      ],
+      "Explicit tensor hat partition with Lipschitz and total Bernstein approximation cost; no optimized smooth-cutoff claim."
+    ],
+    [
+      "0HP0",
+      [
+        "0GGG"
+      ],
+      "Digit uniqueness, Fourier product factorization and exact second moment for arbitrary nonempty digit sets."
+    ],
+    [
+      "0HP1",
+      [
+        "0HP0",
+        "0A02"
+      ],
+      "Ternary digits {0,2}: inverse-branch contraction gives L1 <= (4/3)^k and probability-smallness relative to 2^(k/2)."
+    ],
+    [
+      "0HP2",
+      [
+        "0HP1",
+        "0HP0"
+      ],
+      "Exact finite Fourier pairing and measurable-region error bound; explicit external frequency saving needed before any prime asymptotic."
+    ],
+    [
+      "0HS0",
+      [
+        "00Q3",
+        "0A3M",
+        "00L1"
+      ],
+      "Explicit dyadic maximal L2 inequality for pairwise orthogonal complex variables, without independence or zero-mean assumptions."
+    ],
+    [
+      "0HS1",
+      [
+        "0HS0",
+        "0A02"
+      ],
+      "One probability-one event with partial sums O(N^(1/2+epsilon)) for every epsilon>0; first Borel-Cantelli implication proved by the union bound."
+    ],
+    [
+      "0HS2",
+      [
+        "0H41",
+        "00MG",
+        "0A3G",
+        "0BAD"
+      ],
+      "Abel finite identity, uniform compact tail bound and holomorphicity from Cauchy's formula."
+    ],
+    [
+      "0HS3",
+      [
+        "0GG2",
+        "0GG5",
+        "0HS1",
+        "0HS2"
+      ],
+      "Almost-sure locally uniform random Euler logarithm and nonvanishing product throughout Re(s)>1/2."
+    ],
+    [
+      "0HS4",
+      [
+        "0GG2",
+        "0HS3",
+        "0GG5",
+        "0HS1",
+        "0HS2",
+        "0GK6",
+        "0BAD",
+        "00MG",
+        "00Q1",
+        "00EP",
+        "00F4"
+      ],
+      "Ordinary random Dirichlet convergence, equality with the Euler product by a supplied identity-theorem argument, and measurable holomorphic-function-valued version. Bagchi is a forward comparison, not an edge."
+    ],
+    [
+      "0HT0",
+      [
+        "00SM",
+        "0137",
+        "00T1",
+        "00T2",
+        "00ED"
+      ],
+      "Finite-index p-adic submodule is free of the same rank, with explicit splitting and normalized Haar identification."
+    ],
+    [
+      "0HT1",
+      [
+        "0GKI",
+        "0H53",
+        "01D2"
+      ],
+      "Haar rectangular cokernel is finite almost surely: polynomial zero-set induction, Fubini and the adjugate identity."
+    ],
+    [
+      "0HT2",
+      [
+        "0GKI",
+        "0GKJ",
+        "0HT0",
+        "0HT1"
+      ],
+      "Exact finite-n Haar-cokernel probability of a fixed finite abelian p-group, for every fixed integer u>=0."
+    ],
+    [
+      "0HT3",
+      [
+        "0HT1",
+        "0GKJ",
+        "0A02",
+        "01JA",
+        "00GG",
+        "00G4"
+      ],
+      "Uniform rank and exponent tails from finite surjection moments; cyclic quotient constructed from a separating character; finite-set tightness proved."
+    ],
+    [
+      "0HT4",
+      [
+        "0GKI",
+        "0HT2",
+        "0HT3"
+      ],
+      "Positive infinite product, mass normalization by tightness, and total-variation cokernel convergence. Arithmetic conjecture link is not a proof dependency."
     ],
     [
       "icm2026-harper-probability",
@@ -3512,9 +4543,153 @@
       "出版版本、实际阅读范围、CC BY4.0署名改写记录。"
     ],
     [
+      "0HW0",
+      [],
+      "平衡函数和滑动等差平均本地定义，证明正部质量与边界损失；0GO7仅说明上游来源，不作循环前置。"
+    ],
+    [
+      "0HW1",
+      [],
+      "已知近有理频率下分块、冻结相位及正部选择的有限和证明；0GOC为相关来源说明。"
+    ],
+    [
+      "0HW2",
+      [],
+      "圆周距离本地定义，以互素性和调和和估计差分频率的集中。"
+    ],
+    [
+      "0HW3",
+      [
+        "0HW2"
+      ],
+      "平方差分化为几何级数后，调用有理逼近间距估计；0GOF只比较更强带权结果。"
+    ],
+    [
+      "0HW4",
+      [
+        "0HW3"
+      ],
+      "鸽巢逼近直接证明，二次Weyl界给出分母与带对数误差。"
+    ],
+    [
+      "0HW5",
+      [
+        "0HW0"
+      ],
+      "已知主弧相位下证明局部逆估计，再调用平衡函数局部平均引理；0GO7是一般定理比较。"
+    ],
+    [
+      "0I00",
+      [
+        "0GS1",
+        "0GS4",
+        "0I07",
+        "0I08",
+        "0H53"
+      ],
+      "紧曲面和Cheeger定义，引用光滑余面积与Sard，使用Tonelli证明半面积L1梯度界。"
+    ],
+    [
+      "0I01",
+      [
+        "0GS1",
+        "0GS4",
+        "0I00",
+        "004S",
+        "0I8I"
+      ],
+      "显式光滑正部逼近，以Schwarz和父线程支配收敛原子页传递能量。"
+    ],
+    [
+      "0I02",
+      [
+        "0GS1",
+        "0GS4",
+        "0GS2",
+        "0I01",
+        "0I07",
+        "0I08"
+      ],
+      "中位数分解及零均值比较证明Cheeger下界；余面积、Sard与谱变分表达为明确解析输入。"
+    ],
+    [
+      "0I03",
+      [
+        "0GSN",
+        "00M4",
+        "0GSQ",
+        "0GSM"
+      ],
+      "几何级数构造右逆，自伴性排除核，核对图范数定义域。"
+    ],
+    [
+      "0I04",
+      [
+        "00MQ",
+        "0I09",
+        "00M4",
+        "00MS",
+        "00MU"
+      ],
+      "紧算子统一有限网，正交投影和伴随构造共同双侧有限维压缩；epsilon/3保留严格余量。"
+    ],
+    [
+      "0I05",
+      [
+        "0H4C",
+        "0F4E",
+        "0I09",
+        "0I04",
+        "00BQ"
+      ],
+      "矩阵放大范数比较作为显式假设，Hilbert张量积误差和共同压缩推广到紧系数；0GSF为概念比较。"
+    ],
+    [
+      "0I06",
+      [
+        "0GSN",
+        "0I03",
+        "0GS8",
+        "0GSO",
+        "0I05"
+      ],
+      "有限网格及并集概率界给出全参数谱排除，并解释新拉普拉斯的应用条件。"
+    ],
+    [
+      "0I07",
+      [
+        "0GS1",
+        "0I08",
+        "00Q5"
+      ],
+      "精确陈述紧双曲曲面的光滑余面积公式为来源输入，Sard解码几乎处处正则水平集；只证明局部度量因子。"
+    ],
+    [
+      "0I08",
+      [
+        "0043",
+        "00N9",
+        "0045",
+        "0F50",
+        "00XV",
+        "0H51"
+      ],
+      "引用Sard实值形式；复用光滑流形、切映射、横截性和Lebesgue测度，以逆函数定理证明正则水平集的局部形状。"
+    ],
+    [
+      "0I09",
+      [
+        "00MQ",
+        "00M4",
+        "00F3",
+        "0A39"
+      ],
+      "紧算子独立定义，有限秩例由Heine–Borel证明；无穷维恒等算子不紧由分离向量证明。"
+    ],
+    [
       "0H00",
       [],
-      "Outline: why shared prefixes lead from factorials to matrix recurrences and local zeta functions; prose paths reach all 32 new atomic notes."
+      "Outline: shared prefixes, explicit forest time-space tradeoff, first-row translation/interpolation, and local zeta functions; mathematical prose paths reach every owned atomic note."
     ],
     [
       "0H01",
@@ -3790,6 +4965,142 @@
       "Question: how does Euler's square criterion count the roots of y^2=a? Separated from the power-sum proposition in the final atomicity review."
     ],
     [
+      "0I40",
+      [
+        "0H06",
+        "0H02"
+      ],
+      "Question: why can the modulus-product root be computed in linear workspace? DFS live-interval proof; unit-modulus weights and linear-workspace arithmetic hypothesis explicit."
+    ],
+    [
+      "0I41",
+      [
+        "0I40",
+        "0H02",
+        "0H08",
+        "0H0U"
+      ],
+      "Question: what exact block recurrence implements a remainder forest? Q peeling, prefix-state invariant, noncoprime moduli and four-leaf example."
+    ],
+    [
+      "0I42",
+      [
+        "0I41",
+        "0H06",
+        "0H0V",
+        "0I40"
+      ],
+      "Question: how do local tree work and long boundary updates combine in the forest time bound? Explicit B/q block balance and conservative d^3 schoolbook main term."
+    ],
+    [
+      "0I43",
+      [
+        "0I42",
+        "0I40"
+      ],
+      "Question: what remains live at peak memory? Complete one-block-plus-boundary proof conditional on linear-workspace arithmetic; input/output residency distinguished."
+    ],
+    [
+      "0I44",
+      [
+        "0I42",
+        "0I43"
+      ],
+      "Question: which block count saves memory without changing the time order? q about log n; stronger log-squared choice only under additional prime-block balance. Exact input weight B=n(h+1)."
+    ],
+    [
+      "0I45",
+      [
+        "00GF",
+        "0ALH",
+        "0H0D"
+      ],
+      "Question: why does the selected-coefficient operator commute with translation over the prime field? Monomial proof and p-th-power extraction; no Cartier geometry assumed."
+    ],
+    [
+      "0I46",
+      [
+        "00D0",
+        "0ALH",
+        "00GK"
+      ],
+      "Question: which matrix represents polynomial translation in column coordinates? Binomial expansion and T(a)T(b)=T(a+b), in arbitrary characteristic."
+    ],
+    [
+      "0I47",
+      [
+        "0H0N",
+        "0I46",
+        "0I45"
+      ],
+      "Question: why is W(a)=T(a)WT(-a) with this pi-j convention? Degree bound and intertwining proof, no transpose or hidden f(a) nonzero hypothesis."
+    ],
+    [
+      "0I48",
+      [
+        "00D0",
+        "0ALH"
+      ],
+      "Question: how are coefficients recovered from distinct point values with reusable weights? Full interpolation proof, root bound, synthetic division and one-inversion batch algorithm."
+    ],
+    [
+      "0I49",
+      [
+        "0I46",
+        "0I47",
+        "0I48",
+        "0H0D",
+        "0H06"
+      ],
+      "Question: how do g translated first rows determine all g^2 matrix entries? Right-side cancellation and column interpolation; operation/storage count and conservative bit bound."
+    ],
+    [
+      "0I4A",
+      [
+        "0H0N",
+        "0AL1",
+        "0H0D",
+        "0H0B",
+        "0H08"
+      ],
+      "Question: how does one obtain every hyperelliptic first row from a p-independent integer matrix sequence? Full coefficient recurrence, invertible denominator range, Wilson-Fermat simplification and exact leaf p."
+    ],
+    [
+      "0I4B",
+      [
+        "0H0M",
+        "0H0N",
+        "0I4A",
+        "0I49"
+      ],
+      "Question: what are the actual two first rows and reconstructed matrix for y^2=x^5+x+1 over F_11? Squarefreeness proof, prefix outputs, interpolation and independent four-coefficient calculation."
+    ],
+    [
+      "0I4C",
+      [
+        "0ALH",
+        "0I48",
+        "0I4A",
+        "0I49",
+        "0I46"
+      ],
+      "Question: how can fixed integer shifts work for all but finitely many primes? Root count, explicit exception integer, distinct-node/nonzero-constant proof and translated coefficient-height bound."
+    ],
+    [
+      "0I4D",
+      [
+        "0H0M",
+        "0H06",
+        "0H0N",
+        "0I4C",
+        "0I4A",
+        "0I41",
+        "0I49",
+        "0I44"
+      ],
+      "Question: how does the whole fixed-model Hasse-Witt batch algorithm follow? Good-model screening, finite exceptions, correct ART indexing, first-row assembly, interpolation, O_f(N log^3 N) time and O_f(N log N) workspace with prime table supplied."
+    ],
+    [
       "icm2026-harvey-art",
       [],
       "Reference: exact publisher edition, pages, source scope, attribution, CC BY license and adaptation notice."
@@ -3951,9 +5262,10 @@
       [
         "00N9",
         "0A32",
-        "00Q5"
+        "00Q5",
+        "00MD"
       ],
-      "Define Schwartz class independently of unrelated categorical Schwartz spaces"
+      "Define Schwartz class and its uniformly bounded seminorm families independently of unrelated categorical Schwartz spaces"
     ],
     [
       "0H4G",
@@ -3966,9 +5278,11 @@
     [
       "0H4H",
       [
-        "0H4G"
+        "0H4G",
+        "0I8I",
+        "0I8L"
       ],
-      "Compute Gaussian Fourier transform by a first-order equation"
+      "Compute Gaussian Fourier transform by a first-order equation and normalize its integral"
     ],
     [
       "0H4I",
@@ -3995,7 +5309,8 @@
         "0H4C",
         "0H4F",
         "0H4G",
-        "0H4E"
+        "0H4E",
+        "0I80"
       ],
       "Give local group quantization with negative Fourier phase, Jacobian and compact cutoff explicit"
     ],
@@ -4141,6 +5456,228 @@
         "00Q5"
       ],
       "Prove Fubini-Tonelli by rectangles, lambda systems and monotone approximation"
+    ],
+    [
+      "0I80",
+      [
+        "0H4F",
+        "0H4G",
+        "0I8I",
+        "0H53",
+        "0H4H",
+        "0I8L"
+      ],
+      "Prove Schwartz Fourier inversion by Gaussian regularization"
+    ],
+    [
+      "0I81",
+      [
+        "0A6A",
+        "00M4",
+        "004S",
+        "0H53"
+      ],
+      "Prove Schur kernel estimate on all L2 classes"
+    ],
+    [
+      "0I82",
+      [
+        "0H4J",
+        "0A6A",
+        "0H4F",
+        "0I81"
+      ],
+      "Prove h-uniform operator norm using kernel integration by parts"
+    ],
+    [
+      "0I83",
+      [
+        "0H4G",
+        "0H4J",
+        "0H53",
+        "0I80",
+        "0I82",
+        "0I8K"
+      ],
+      "Derive exact partial-Fourier composition formula"
+    ],
+    [
+      "0I84",
+      [
+        "0H4F",
+        "0I83",
+        "0H4U",
+        "0I8J",
+        "0I80",
+        "0I82"
+      ],
+      "Prove all finite orders with uniform Schwartz remainder and L2 error"
+    ],
+    [
+      "0I85",
+      [
+        "0BL2",
+        "0H4J",
+        "0I84"
+      ],
+      "Deduce commutator leading term with explicit sign and O(h2) operator error"
+    ],
+    [
+      "0I86",
+      [
+        "0A32"
+      ],
+      "Prove nonstationary phase by iterated integration by parts"
+    ],
+    [
+      "0I87",
+      [
+        "0H48",
+        "0H4K",
+        "0I80",
+        "0H4E"
+      ],
+      "Prove fixed-Schwartz cutoff errors uniformly in unitary representation"
+    ],
+    [
+      "0I88",
+      [
+        "0H4C",
+        "0H4E",
+        "0H53",
+        "0I80"
+      ],
+      "Prove exact symbol multiplication for additive group representations"
+    ],
+    [
+      "0I8A",
+      [
+        "00GM",
+        "00D3",
+        "00GC"
+      ],
+      "Define cyclic vector and prove determination of commuting maps"
+    ],
+    [
+      "0I8B",
+      [
+        "0H4P",
+        "0I8A",
+        "00MH",
+        "00SO",
+        "0F0B"
+      ],
+      "Prove spectral separation forces cyclic row and column without semisimplicity"
+    ],
+    [
+      "0I8C",
+      [
+        "0H4P",
+        "0H4B",
+        "00BK",
+        "0I8B"
+      ],
+      "Prove group and infinitesimal stabilizers trivial in arbitrary rank"
+    ],
+    [
+      "0I8D",
+      [
+        "0A33",
+        "00XV",
+        "0A3A",
+        "0A3C"
+      ],
+      "Prove quantitative local lower Lipschitz and preimage volume bound"
+    ],
+    [
+      "0I8E",
+      [
+        "0H4P",
+        "0F0B",
+        "00T1",
+        "0I8C",
+        "0I8D"
+      ],
+      "Prove local single-orbit Haar small-ball bound uniformly on stable compact sets"
+    ],
+    [
+      "0I8F",
+      [
+        "00M4",
+        "0H48"
+      ],
+      "Prove second-order BCH by convergent matrix power series"
+    ],
+    [
+      "0I8G",
+      [
+        "0I8H",
+        "0I8F",
+        "0I87",
+        "0I80"
+      ],
+      "Prove first Lie-star correction with compact-frequency O(h2) error only"
+    ],
+    [
+      "0I8H",
+      [
+        "0H48",
+        "0I80",
+        "0H4K",
+        "0H53",
+        "0I8I"
+      ],
+      "Define exact star convolution and prove operator composition"
+    ],
+    [
+      "0I8I",
+      [
+        "00Q2",
+        "00Q5",
+        "0A7A"
+      ],
+      "Prove dominated convergence via Fatou from monotone convergence"
+    ],
+    [
+      "0I8J",
+      [
+        "0A32",
+        "0A34",
+        "0A3C"
+      ],
+      "Prove multivariable integral Taylor remainder from one-variable FTC"
+    ],
+    [
+      "0I8K",
+      [
+        "00XV",
+        "0A6A",
+        "00EB",
+        "0H4F",
+        "0F62",
+        "0I8M",
+        "0I8I"
+      ],
+      "Prove smooth compact-support density by rectangle approximation and explicit cutoffs"
+    ],
+    [
+      "0I8L",
+      [
+        "0H53",
+        "0A3C"
+      ],
+      "Prove Gaussian normalization using only one-variable substitutions and Tonelli"
+    ],
+    [
+      "0I8M",
+      [
+        "00XV",
+        "0A7A",
+        "00Q0",
+        "00QD",
+        "00QA"
+      ],
+      "Prove rectangle approximation by finite-measure sigma-algebra argument"
     ]
   ],
   "notes": [
@@ -4639,7 +6176,7 @@
       "title": "亏格二秩一曲线的有理点计算",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0G00.tree",
-      "sha256": "ab90c004b48a8f5fa3bb0d2332fa9de2221855ff33c7fa493e3d06fb8e9c09dc"
+      "sha256": "b87b95013e0b9325e91341ab67850944aa6ea53b97962fe0403196e3ea0918c5"
     },
     {
       "id": "0G01",
@@ -4653,14 +6190,14 @@
       "title": "奇数次模型上的 Mumford 表示",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0G02.tree",
-      "sha256": "8459ecf342bfcb8c92279b13db79c2e142673fa1eda7df35ec21b78927a3660d"
+      "sha256": "5d1d0c7df0b4ccd9f53333c85bd6865244e282ef0ec78e9d3144520e15550369"
     },
     {
       "id": "0G03",
       "title": "Selmer 群怎样给出 Mordell–Weil 秩的上界",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0G03.tree",
-      "sha256": "286aa569b0620186c31bc07be9e50234e9c190b542b9fb74adc4c6626b9e4077"
+      "sha256": "38166f807137d869791b59e84a4eee992780b2bc845cb070499fd578a5203ad8"
     },
     {
       "id": "0G04",
@@ -4688,7 +6225,7 @@
       "title": "二进局部递归为何要保留一次 y 项",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0G07.tree",
-      "sha256": "a105fbff959f0fdb0857d1d38ffeda5822b1ab200c38a64a938e5d4842e4c8d8"
+      "sha256": "7b3f243399d38f1cf313b0823e3e8c21f5df5f00d448a40cd5d9e4ff41afbc2f"
     },
     {
       "id": "0G08",
@@ -4772,7 +6309,7 @@
       "title": "Mordell 猜想的定量一致性",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0G40.tree",
-      "sha256": "ea3c206506c232f77cdb62d65aaceb62183aeb33b6a43dd792fea802ac54580e"
+      "sha256": "7eb17343f61328990e38c1e6b3bcdd9bc899afb3072181db80e46aeca38cb2d9"
     },
     {
       "id": "0G41",
@@ -4800,7 +6337,7 @@
       "title": "Néron–Tate 高度把有限秩点群变成欧氏空间",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0G44.tree",
-      "sha256": "508ac95fda77a10d4e3261c721e6e26bd45d535d5be336809eeedc2e4cc3e7ef"
+      "sha256": "a416fe49f0bdc8e4033fbc95a5fdd14401a2990d3e17c1060fbfc124d8b0190c"
     },
     {
       "id": "0G45",
@@ -4891,7 +6428,7 @@
       "title": "Zhang 的 φ 不变量如何控制可容许体积",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0G4H.tree",
-      "sha256": "1522e70e5ab6d7360072a6b04d5392ec09e4778fff496c52817e2150fdd7e940"
+      "sha256": "595fae70d7dccf539d5d97a808fe41d1616a554165f964fd17ba575ba3cbe260"
     },
     {
       "id": "0G4I",
@@ -4919,14 +6456,14 @@
       "title": "多点高度的二次恒等式怎样分离 Green 能量",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0G4L.tree",
-      "sha256": "38f14d8744b33c01c52467bdc22fcabe8b883623fe6117d3b6998e0dc1c15dc2"
+      "sha256": "ab4ef2f9759663f08c8400464bae39901ac468aad976ac4feee2d2f726dbadb7"
     },
     {
       "id": "0G4M",
       "title": "最短闭测地线怎样使无限位能量估计一致",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0G4M.tree",
-      "sha256": "acd8cf5828347d719ad83f10633289d8ed3898779cb0df45f1406d3bc9a5b9a0"
+      "sha256": "ab928159a4aec8a94d95651acfd5e9e524990ee84a8c9c48449e450391f96ff7"
     },
     {
       "id": "0G4N",
@@ -4947,7 +6484,7 @@
       "title": "Northcott 有限性为何同时需要高度界和次数界",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0G4P.tree",
-      "sha256": "3ff31a454457f94899071b53129b5a134ab16066d1ab32e7ec9f9202d71b8859"
+      "sha256": "10eb8ada6003ecc35ce16425e7d3d94b27aa1b4a4185e4e06cc07fe34c3e5798"
     },
     {
       "id": "0G4Q",
@@ -5010,7 +6547,7 @@
       "title": "阿贝尔曲面的模性：从剩余表示到权二形式",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0G80.tree",
-      "sha256": "789fa0142c9b97c9225f44c5c30df562d8780c8809ea3ae9855f25788b99a5d0"
+      "sha256": "dfb8b452a5d2cd36ef1848563bc13216a9d8d12b597f3994cbd4f336a192cc42"
     },
     {
       "id": "0G81",
@@ -5087,7 +6624,7 @@
       "title": "普通局部 Galois 表示的滤过",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0G8B.tree",
-      "sha256": "114239ef0b9ef78e3116dc2ccf933fe780b248be3ea388e033b3c08a79a00370"
+      "sha256": "1edde6a4e70e3134b01c3aa625a83e222f3f423727018b7f488ff0c662083bd9"
     },
     {
       "id": "0G8C",
@@ -5101,7 +6638,7 @@
       "title": "整数 Sen 特征值不足以保证 Hodge–Tate",
       "taxon": "Example",
       "path": "trees/math/number-theory/reports/0G8D.tree",
-      "sha256": "6b80769be9901a2eaaddf22860d1c2ede4bbb75e7c28d58175cd6254b82c1474"
+      "sha256": "272a77f1e873211a7dfda3bf50d429a4627e8408ef2f7f10e4f9570ba95a7197"
     },
     {
       "id": "0G8E",
@@ -5150,7 +6687,7 @@
       "title": "Galois 变形环与 Hecke 商的比较问题",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0G8K.tree",
-      "sha256": "344556a1459dc725f372af1be98101556aeceaf64bc060a8d6fffe8f3d1d2adf"
+      "sha256": "676ba762558317080ee1b2be066a3cfc54070a65938b18035f4678c362e08292"
     },
     {
       "id": "0G8L",
@@ -5178,7 +6715,7 @@
       "title": "算术 holonomy 界与有效丢番图逼近",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0GC0.tree",
-      "sha256": "b4da0518d959cf7d4e39b49ababb92468d5c679c2c733621b047739006e66e0f"
+      "sha256": "3c3c34158598b4bff13c34fd8f56c1353564a01393b41611beffabd4b0b3cf62"
     },
     {
       "id": "0GC1",
@@ -5248,7 +6785,7 @@
       "title": "最小公倍数如何记录幂级数分母",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0GCA.tree",
-      "sha256": "8addf1346cee955645255644deca6d1933e789957f0e893a7b5d689bb95cf053"
+      "sha256": "62046e0088e119a54364be3a86eaadb5fb2ce510cc4a5b7c00866c2b306f8aae"
     },
     {
       "id": "0GCB",
@@ -5262,7 +6799,7 @@
       "title": "统一分母型的算术 holonomy 维数界",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GCC.tree",
-      "sha256": "a8bf2f5f74b305af8d119a9e27f40e4a9f5b4e7fd71368812a9e86cdd50af62e"
+      "sha256": "6c10577166004016c1cd7accb871ec6cc0362c112bbd37a6a64858ba0eb51c8c"
     },
     {
       "id": "0GCD",
@@ -5290,7 +6827,7 @@
       "title": "二面体解的二分之一阶增长拉回",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0GCG.tree",
-      "sha256": "5ab001fb6f63d1f50b3c359e1fb348027aada00b2bc02372d00316cfaf250640"
+      "sha256": "5825474c84ecdcb448240a256b3d3ab3168fbd120dc8d2e29093bedb7fea7d11"
     },
     {
       "id": "0GCH",
@@ -5346,7 +6883,7 @@
       "title": "超越平方根消去：从随机乘法函数到特征标和",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0GG0.tree",
-      "sha256": "d7b03599f41b5c8925b9375f2d4bc43ab7aae023d69bb79e1329d1a62a95f062"
+      "sha256": "b72cb99ee7b70417d0779d1e1623a052dcdff30103128b5e01088cc3e5abc10c"
     },
     {
       "id": "0GG1",
@@ -5402,7 +6939,7 @@
       "title": "长度限制下特征标矩与随机乘法矩相同",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GG8.tree",
-      "sha256": "9d6a6bf28dde2cfdaba487983570b1ef398b6f325df5c7514bdce99d0c3cbfa7"
+      "sha256": "e3caecbf87f718a1498bb028aa6a1426190d5771b86824bee9bae67699dd65c9"
     },
     {
       "id": "0GG9",
@@ -5479,7 +7016,7 @@
       "title": "数论概率模型：局部约束、零点与类群",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0GK0.tree",
-      "sha256": "fed79c1e84602cee6147bd64c5379a44fa553efb16f00b570c3f799b3ce08749"
+      "sha256": "7fdd3e20becd8f1109b3b518c3b41a02f3b13500d78261d4b42502c73f75bd7a"
     },
     {
       "id": "0GK1",
@@ -5521,7 +7058,7 @@
       "title": "随机 Euler 乘积与随机 Dirichlet 级数",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0GK6.tree",
-      "sha256": "863c98b55d596f23a732ab118326c17e0ee3363abd07fb8aeb9799306381c46f"
+      "sha256": "0f945c6b8bfe66992b5c10c5ca9648a63f53a32c4ffe78c1bcd60dcdbf09c6a9"
     },
     {
       "id": "0GK7",
@@ -5535,7 +7072,7 @@
       "title": "临界线右侧 zeta 平移的随机 Euler 乘积极限",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GK8.tree",
-      "sha256": "0add313632472bd8cd91ebf3404f4a5bd53ee1a8ab2ca326bf0e9373fc49a925"
+      "sha256": "1760a0cfb6647687bb011db92bb5fe89e187c96389c381ab08c0bbf9dbb76ff1"
     },
     {
       "id": "0GK9",
@@ -5598,7 +7135,7 @@
       "title": "Cohen–Lenstra 的有限阿贝尔 p 群概率权重",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0GKH.tree",
-      "sha256": "75669ac1cd91cb7912b752b082fcda75083c2d36e926d8ee1106a588df1ea2f9"
+      "sha256": "e47df94c4bece1d468eed4cd0cdfe1c4011bbeaf75651a03737a46558b3d1c1a"
     },
     {
       "id": "0GKI",
@@ -5619,7 +7156,7 @@
       "title": "随机 p 进矩阵余核的 Cohen–Lenstra 极限律",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GKK.tree",
-      "sha256": "7da9ef6f60bf1ed41caff08b12ac7d8a647dd473b0eddde082187f870bac0ce6"
+      "sha256": "03bf2c096b8b6ede6df9b6240ce081c7f4a2b497074ad562992f6db533e0c632"
     },
     {
       "id": "0GKL",
@@ -5668,7 +7205,7 @@
       "title": "多项式数列的密度界：从差分到降阶",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0GO0.tree",
-      "sha256": "04dd43e0b307c3c734267413bce4c330c0d1a85ab3d01c1aedf12c32642d909d"
+      "sha256": "33908d2a633f06b31ce12463f9d456dde51c50c2b8df9ddd63da4251e18e19f0"
     },
     {
       "id": "0GO1",
@@ -5703,7 +7240,7 @@
       "title": "非线性 Roth 配置的小步长密度增量",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GO5.tree",
-      "sha256": "3aaf7a9d5fd3b6355c5db1cd4c53b95e25638104e7f3fb31774ff5bc861cfe18"
+      "sha256": "98a510e04f609a11021ee46b37cd99f3e59cab38b595ed7e25503904aa960083"
     },
     {
       "id": "0GO6",
@@ -5717,7 +7254,7 @@
       "title": "非线性 Roth 平均的局部逆定理",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GO7.tree",
-      "sha256": "74c02d005bf59cbb3b4a6aed9a33fa04a983b34acc9a44f51b44c702574eb859"
+      "sha256": "bd8131a5893685229ac437d0c0c5526c5999dd747d616b9c6af2c5ed108ff55e"
     },
     {
       "id": "0GO8",
@@ -5773,7 +7310,7 @@
       "title": "非线性 Roth 相关迫使频率接近小分母有理数",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GOF.tree",
-      "sha256": "0f390850093426ba25a0004d4ac7761fc21f06c839adce95e9384d4b8e854cc4"
+      "sha256": "4c6c526dfe5a3dd734c474f38565474bd62297a4835262ddf9e1badb6bf3d461"
     },
     {
       "id": "0GOG",
@@ -5794,7 +7331,7 @@
       "title": "大双曲曲面的谱隙：随机模型与四分之一阈值",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0GS0.tree",
-      "sha256": "908473dd097eddc8a920a7a71669b5b009ad677510275541745a1a471947367c"
+      "sha256": "2a065e24ef84680fdf365ee962b325b12823640132f6f61d2a6a9a3b8d3d830b"
     },
     {
       "id": "0GS1",
@@ -5822,7 +7359,7 @@
       "title": "Cheeger 常数怎样控制双曲曲面的谱隙",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0GS4.tree",
-      "sha256": "3c9c30c0cec0dab202d8af819b0bfcc848dabb60c76178d2f737a1e71f46673d"
+      "sha256": "5d7cbd9e1f35f2cf722c04189d69bbda60a6d7ada12de45ac27531de5d85a1a6"
     },
     {
       "id": "0GS5",
@@ -5871,7 +7408,7 @@
       "title": "带尖点曲面的随机覆盖达到相对四分之一谱隙",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0GSB.tree",
-      "sha256": "bdb5fcb1c55c9f1bb32f5845e80ac29b4edb4092d3de1175faba0aa7228f9fa4"
+      "sha256": "30c7676ab9924678c1081c8a0339cbec226fb27363aa7b605ea48a2df939cb47"
     },
     {
       "id": "0GSC",
@@ -5899,7 +7436,7 @@
       "title": "置换表示向正则表示的强收敛",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0GSF.tree",
-      "sha256": "b83e251c4ded5b27785ae93f4216bb412593c9115ae6ed41087f1da7c0852c52"
+      "sha256": "1bdee467c3c8afa006bf8962590f6a9dad04f65d9507edcaf7acf207a08f06f3"
     },
     {
       "id": "0GSG",
@@ -5955,7 +7492,7 @@
       "title": "累积余数树：从阶乘同余到批量点计数",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0H00.tree",
-      "sha256": "ab5b1d3397ce556fee5b891121ef9bfcb1adae5c7e3e70454dcaa468290094b4"
+      "sha256": "1453661f541fde1acf2d6b261660218804e35398e552669da8449aec853023d3"
     },
     {
       "id": "0H01",
@@ -6116,7 +7653,7 @@
       "title": "超椭圆模型的 Hasse–Witt 系数矩阵",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0H0N.tree",
-      "sha256": "fccf435588d7570d602f1f1e6eab5c046114228d5558cc1d404663281ec24c44"
+      "sha256": "0afa30ef1f396513ae82f85f31680daf312b905903dcffb02f7a6c3ea5e6dd0e"
     },
     {
       "id": "0H0O",
@@ -6130,7 +7667,7 @@
       "title": "递推中的除以素数会损失多少精度",
       "taxon": "Theorem",
       "path": "trees/math/number-theory/reports/0H0P.tree",
-      "sha256": "63f9b7eaf25d353b628dbe30293ab98cfe2bbd88dfa23db332cef2971c81d4d3"
+      "sha256": "7533e5042774e210d6e0837fcf746450951dc1691ae1cc0d3c610199c4c7b08a"
     },
     {
       "id": "0H0Q",
@@ -6165,7 +7702,7 @@
       "title": "分块累积余数树的边界状态",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0H0U.tree",
-      "sha256": "fd9826335e529365278c4ed07972d1e7c466a6fab980b844bf6efd33514afc84"
+      "sha256": "614b20bea9f7a994d1f26e9bc37f42d891aee9fa71c23afe07e13bef37bf8916"
     },
     {
       "id": "0H0V",
@@ -6200,7 +7737,7 @@
       "title": "轨道法、微局部分析与 L 函数",
       "taxon": "Outline",
       "path": "trees/math/number-theory/reports/0H40.tree",
-      "sha256": "2fd8a55e5398b6d76e536598631991defde983972b1ebb044e1abca41f96d77b"
+      "sha256": "edf38db1de1a4664f0e5e9b4a3f62be6a0f7cece3d2ef77d2e7923ee5b8cda8f"
     },
     {
       "id": "0H41",
@@ -6305,21 +7842,21 @@
       "title": "欧氏空间上的 Schwartz 函数",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0H4F.tree",
-      "sha256": "1375267a081683036b23d785c81fb6b8265bbcc1d3b3cb4745154db636bac292"
+      "sha256": "bd9d958269eb81249a92be33d8c0e31cf4fce1597b6dde54c5213a92ba0baa20"
     },
     {
       "id": "0H4G",
       "title": "欧氏空间上的 Fourier 变换",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0H4G.tree",
-      "sha256": "bba9d6fc14e754174528b27321674965b5cdb5d3faa2c9c54c4f60d875ea3486"
+      "sha256": "6f3129cdea227f7f647f0a005f526b127584e70c3dc9f2f22319b9dbe708be66"
     },
     {
       "id": "0H4H",
       "title": "高斯函数的 Fourier 变换仍为高斯函数",
       "taxon": "Proposition",
       "path": "trees/math/number-theory/reports/0H4H.tree",
-      "sha256": "2ff71b2f1980e7a660a22a545310b867cbde8c7cf371265fec8709da4981f903"
+      "sha256": "36c1bac4d23687056c930c08362338e1482a67db2b414c1e79551230ddf6685d"
     },
     {
       "id": "0H4I",
@@ -6333,14 +7870,14 @@
       "title": "相空间符号的半经典量子化",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0H4J.tree",
-      "sha256": "6b9f83bdfae16eb0edfa7b7463e2481d3bfb24434202903bc58055ef9567040d"
+      "sha256": "705942c253764b52fa07184228906fc2fea7aa7f3ae9de53350e6a3da172360e"
     },
     {
       "id": "0H4K",
       "title": "Lie 群单位元附近的符号算子",
       "taxon": "Construction",
       "path": "trees/math/number-theory/reports/0H4K.tree",
-      "sha256": "668f9c15d665784dfba05375fe449c28a1ca2385793163f761990a51b39f70ab"
+      "sha256": "f44f95688446d811985037dd2dce093bc0706ed49f9990fbadf71c26139116aa"
     },
     {
       "id": "0H4L",
@@ -6368,7 +7905,7 @@
       "title": "主子块的谱分离条件",
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0H4P.tree",
-      "sha256": "af1108b870eede9360a773c144d3d0802399aa7e03f9a632a4167ee6d382866f"
+      "sha256": "ab52b2ac8fb0a34f6bbb29846c3fdb56796073191e6fb25d26cb7f3ef0d16a7f"
     },
     {
       "id": "0H4Q",
@@ -6495,6 +8032,783 @@
       "taxon": "Definition",
       "path": "trees/math/number-theory/reports/0GSQ.tree",
       "sha256": "c477f1b326af49b17b2df92dc1079bee6920b426cedd11491f391e69a0394578"
+    },
+    {
+      "id": "0H80",
+      "title": "奇数次超椭圆曲线的无穷远极点空间",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H80.tree",
+      "sha256": "79e391542e76f3a7f2b5ee44ab4aac04ec91f49fe588fe10ccc645e0bc36bf4e"
+    },
+    {
+      "id": "0H81",
+      "title": "Mumford 多项式为何唯一编码半约化除子",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H81.tree",
+      "sha256": "85b4a150bf82a5731ef7800154a3afa0e8547809778aaa612839761e204490f1"
+    },
+    {
+      "id": "0H82",
+      "title": "奇数次模型的约化除子为何存在且唯一",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H82.tree",
+      "sha256": "e3741c104f214bceed4fdc6d87c1f5188f2070ee759a4d5bdf7d39955630f1f4"
+    },
+    {
+      "id": "0H83",
+      "title": "Cantor 约化为何保持除子类并严格降次",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H83.tree",
+      "sha256": "bb552379c4aa9c6d0aac5cd87b9263b7af613525349702f9fc0892c3830a1783"
+    },
+    {
+      "id": "0H84",
+      "title": "Cantor 合成怎样处理重合点与对合点",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H84.tree",
+      "sha256": "ed917d11fd055481365311e16123284e3d6217cfb06ae26386e2e7ca033e5e29"
+    },
+    {
+      "id": "0H85",
+      "title": "奇数次超椭圆 Jacobian 的二挠群如何由因式分解决定",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H85.tree",
+      "sha256": "205f3f3f8072679813f42a398d1399101afe2897a64dfbf020bd53a64d5a5909"
+    },
+    {
+      "id": "0H86",
+      "title": "奇数次二下降的平方类为什么落入范数核",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H86.tree",
+      "sha256": "6ffdb02d61851c5f4c725c20c75bae4b362325fed1ad4123c3dd98e9eef95dc4"
+    },
+    {
+      "id": "0H87",
+      "title": "二进数何时是平方",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H87.tree",
+      "sha256": "b6a01cc5d6414df7bbed23dfbff36674b64fa6b83b262f6e8149d2997cc644f1"
+    },
+    {
+      "id": "0H88",
+      "title": "一个亏格二下降候选怎样被二进条件排除",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0H88.tree",
+      "sha256": "3f685e28910e104f3fe2ef083a439db48b21115ea606c04e4726af9358c6d324"
+    },
+    {
+      "id": "0HC0",
+      "title": "共轭根的高度怎样控制最小多项式系数",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC0.tree",
+      "sha256": "5cd2bfeb93e285ee30d9302bb7fb2bb89b0d9353c2633fe3a181fafac27b1bf8"
+    },
+    {
+      "id": "0HC1",
+      "title": "有界次数代数数的 Northcott 有限性",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC1.tree",
+      "sha256": "ecb827603c7804fd6cc0308e0cac33ae8f57de6a0b6bce0cbe976a1d6bf6c2d4"
+    },
+    {
+      "id": "0HC2",
+      "title": "丰沛高度怎样继承有界次数有限性",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC2.tree",
+      "sha256": "7337a9b75ed8041cd68eaa9d8bea1486c7dd1d3e34c1afaf4b85aa8457ea049a"
+    },
+    {
+      "id": "0HC4",
+      "title": "度量图上的分部积分为何给出非负能量",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC4.tree",
+      "sha256": "f8b3468d9eb2bab50253bac94caedcb7e3bdb42bc83c7ce54eb50908126d6600"
+    },
+    {
+      "id": "0HC5",
+      "title": "有限度量图的归一化 Green 核如何构造",
+      "taxon": "Construction",
+      "path": "trees/math/number-theory/reports/0HC5.tree",
+      "sha256": "f19165fa94112ff4d89c18be2abc8628972a2ad515b40035805e0750362e4fa9"
+    },
+    {
+      "id": "0HC6",
+      "title": "图上 Green 能量为何只有线性阶的负部",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC6.tree",
+      "sha256": "7ad914d9ef57f568f20f91e4a466d46a38c1904bbda73981b6829bb3632e341b"
+    },
+    {
+      "id": "0HC7",
+      "title": "圆环的零均值 Green 核为什么是二次函数",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC7.tree",
+      "sha256": "51a71b89b89185ded51a78ba16fe26e6f8114d012cdf348a9fc5f770ad8a7804"
+    },
+    {
+      "id": "0HC8",
+      "title": "带亏格权重的单环图如何得到显式 φ 能量界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HC8.tree",
+      "sha256": "3553b5b695e70db166a97abc2ee493dd2c51d0f792cfb9c9a933616b7ab6a69a"
+    },
+    {
+      "id": "0HG0",
+      "title": "小扩张把矩阵乘法误差线性化",
+      "taxon": "Definition",
+      "path": "trees/math/number-theory/reports/0HG0.tree",
+      "sha256": "4d1efa1133b8d3441eb19aa84b6cd4e380f34ede950d151aa7a3ee525f9b9942"
+    },
+    {
+      "id": "0HG1",
+      "title": "连续二次群上同调记录结合误差",
+      "taxon": "Definition",
+      "path": "trees/math/number-theory/reports/0HG1.tree",
+      "sha256": "93fe6025c867a8fcf4bfea344da7562ba28150af73139a45331d25260ae4201d"
+    },
+    {
+      "id": "0HG2",
+      "title": "表示沿小扩张提升的二次上同调障碍",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HG2.tree",
+      "sha256": "9ff11807689643054c0471bf6b62d16fe21a316cfc90a7ace740b80b2c0b1942"
+    },
+    {
+      "id": "0HG3",
+      "title": "存在一个提升后其余提升构成一次上同调挠子",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HG3.tree",
+      "sha256": "3d04f87b0637312eb3ed4780ac60f9508a2aa70a1750ed418cfff753f9dde97e"
+    },
+    {
+      "id": "0HG4",
+      "title": "固定辛相似因子的无穷小变形使用十维伴随模",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HG4.tree",
+      "sha256": "7375cb02d05190bf93fa8ee3a86e15bef521317d90d78d90dadb95b76b49dae7"
+    },
+    {
+      "id": "0HG5",
+      "title": "平方零校正提升辛相似矩阵",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HG5.tree",
+      "sha256": "9fd9df5c9f4b7ae7bd9560a84fa85ed1e2968d60a4928df941325179dc3de152"
+    },
+    {
+      "id": "0HG6",
+      "title": "二次上同调消失保证固定相似因子的逐层提升",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HG6.tree",
+      "sha256": "0de36cec3e90fd137625969f214ac510a11298f4cabc36c2c8d663a1f5dfc92d"
+    },
+    {
+      "id": "0HH0",
+      "title": "两个特征标的扩张由比值特征标的一次上同调分类",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HH0.tree",
+      "sha256": "da05ba4aaa959e08aa751f706eb28a51b0f277013aeff9b9edf08d82389e53a2"
+    },
+    {
+      "id": "0HH1",
+      "title": "不同 Frobenius 特征值迫使未分歧扩张分裂",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HH1.tree",
+      "sha256": "667580ef1a20203465a341c3ae32608f3b5638618b77406ee03166ccd783205f"
+    },
+    {
+      "id": "0HH2",
+      "title": "普通表示的互异权重为何自动给出 Hodge–Tate 性",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HH2.tree",
+      "sha256": "ed9801d27f238e272c8e7e68e829e83020ec7f479821602b10a86da3e549b666"
+    },
+    {
+      "id": "0HH3",
+      "title": "辛相似配对仍允许重复权重的对数障碍",
+      "taxon": "Example",
+      "path": "trees/math/number-theory/reports/0HH3.tree",
+      "sha256": "03610cbed78975e6e681d4dcf5b287238b10650e01b434e8c564d3424ccf0e45"
+    },
+    {
+      "id": "0HK0",
+      "title": "分母矩阵的行权为何是奇数权重",
+      "taxon": "Definition",
+      "path": "trees/math/number-theory/reports/0HK0.tree",
+      "sha256": "7a02e8388ca6ae414d59b8ae59505aec6931d881d961b796ae705985875cff23"
+    },
+    {
+      "id": "0HK1",
+      "title": "非恒定分母行权的算术 holonomy 定理",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK1.tree",
+      "sha256": "9451ce58b65455f81670217dfefe34315299faec6e00df888eb18b0744dae9b2"
+    },
+    {
+      "id": "0HK2",
+      "title": "最小公倍数具有初等指数上界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK2.tree",
+      "sha256": "04784b49b6a4db2b7464d0bc1046b9008d6342397f85c8ecc8fdbeb761fb8c0c"
+    },
+    {
+      "id": "0HK3",
+      "title": "有限维幂级数空间恰有维数多个消失阶跳点",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK3.tree",
+      "sha256": "9386b4ecfaa94d38b9be4c86987aa307fae4f48eda28559f902cf23d6fed2e16"
+    },
+    {
+      "id": "0HK4",
+      "title": "动态抽屉原理把首项间距乘成维数约束",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK4.tree",
+      "sha256": "71dac2b9807099dd5ae06bb2fc46332fb626d2df07ab7d515150ff235b7e7f8d"
+    },
+    {
+      "id": "0HK5",
+      "title": "亚纯拉回的 Cauchy 估计控制首个不同系数",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK5.tree",
+      "sha256": "f5f58329a676962d1691ba373963c4a5267d04138d541571c33cd0dac5b589db"
+    },
+    {
+      "id": "0HK6",
+      "title": "动态抽屉原理给出显式算术维数界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK6.tree",
+      "sha256": "759f0b734bdd3651515e1f9455f79a8c2eb9609459da134ae3cfcb86c22a0a47"
+    },
+    {
+      "id": "0HK7",
+      "title": "分母校准的二次最优化产生行权节省",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HK7.tree",
+      "sha256": "ac32e3c2f8ad0aa26b4363ae2c78003aae442d9494e4513f60fd9471bd9f63d5"
+    },
+    {
+      "id": "0HL0",
+      "title": "单值代数函数的孤立奇点至多为极点",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HL0.tree",
+      "sha256": "261b8154bb3d4c0e0abf2ca50349276b49460ebcd1342c592c61964e35f6aeb4"
+    },
+    {
+      "id": "0HL1",
+      "title": "双曲余弦拉回消去代数函数的两个二阶分支点",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HL1.tree",
+      "sha256": "fa7639d00ee5ca2bfc5227e4f819ccdc9a6e6060189ba58a4739a764dcffc16f"
+    },
+    {
+      "id": "0HL2",
+      "title": "偶亚纯函数通过平方映射下降",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HL2.tree",
+      "sha256": "c5fbdf25822f1bc2e3a03fd0a85da4a79e3a6d216e368d0d7806f02400e7a37c"
+    },
+    {
+      "id": "0HL3",
+      "title": "消去一处分支使二面体拉回降为二分之一阶",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HL3.tree",
+      "sha256": "73344bc33720d79f1657a78d76042dd9f47fddac5cef1a8dfd7f8d52107722f7"
+    },
+    {
+      "id": "0HL4",
+      "title": "根式幂系统的解析尺度与平方根增长估计",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HL4.tree",
+      "sha256": "e4a35181c9ca836010853904b0f57ca9d0014fe46e82b5c8d759df903a0f0b08"
+    },
+    {
+      "id": "0HO0",
+      "title": "Bernstein 逼近怎样保留非负权重分解",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HO0.tree",
+      "sha256": "b39115f4efe9df5ad0344a7ea4223b3e0e77278ca9d25af2eaacc8e19118588b"
+    },
+    {
+      "id": "0HO1",
+      "title": "短素数多项式权重的特征标平均何时精确转移",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HO1.tree",
+      "sha256": "094791809f3c3754fbea7e1ee9b3173acc01a81ebda6711035d68d81d092e205"
+    },
+    {
+      "id": "0HO2",
+      "title": "非多项式权重转移时怎样只付二阶矩尺度的误差",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HO2.tree",
+      "sha256": "15a53383b204bb6a675204b685340e59a5de532cd880d515164345a592c2ec83"
+    },
+    {
+      "id": "0HO3",
+      "title": "分数矩的有限转移怎样控制累计逼近误差",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HO3.tree",
+      "sha256": "b7abc9e511aa37070623b6835a7f14866d54305c7969aa074e59002fddd2acad"
+    },
+    {
+      "id": "0HO4",
+      "title": "立方体的非负网格权重需要多少逼近精度",
+      "taxon": "Construction",
+      "path": "trees/math/number-theory/reports/0HO4.tree",
+      "sha256": "9e9218b3e8498339a130980afa75510e12bfde39c644f0c5cf4cc425af90549d"
+    },
+    {
+      "id": "0HP0",
+      "title": "数字限制怎样把指数和分解成逐位因子",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HP0.tree",
+      "sha256": "15f3a66062f38256967221a4ce47dea07ac8be85126ca8fdc8fa73a5a7d86750"
+    },
+    {
+      "id": "0HP1",
+      "title": "三进制限位和的一阶矩为何严格小于平方根尺度",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HP1.tree",
+      "sha256": "bf962b297b8050655a54a29ecb94426b35ca1782325740ac673a70422241de91"
+    },
+    {
+      "id": "0HP2",
+      "title": "数字和的一阶矩怎样控制 Fourier 配对的误差",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HP2.tree",
+      "sha256": "e7757b3a5553ee3bc50ba69eb9d90a9f015bbd1235dfa5c4bda99bd2c4b01771"
+    },
+    {
+      "id": "0HS0",
+      "title": "正交随机变量的二进区间极大不等式",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HS0.tree",
+      "sha256": "510287eb653afc3807bfc7c4d57fb4bf9e3f38095a9867d934c2e2f06d41dc43"
+    },
+    {
+      "id": "0HS1",
+      "title": "正交性怎样给出几乎处处的平方根加 ε 部分和界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HS1.tree",
+      "sha256": "4ec5e42e90e9a31dfc7b4c7f81ac9202fbbabda48d37663a4ca0d56d67cae36e"
+    },
+    {
+      "id": "0HS2",
+      "title": "部分和增长界怎样推出 Dirichlet 级数的局部一致收敛",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HS2.tree",
+      "sha256": "e37d788ce597a13b36cc3eba54df78a513baf48f8f05d053b4f016999ba18c03"
+    },
+    {
+      "id": "0HS3",
+      "title": "随机 Euler 乘积在半平面上的非零全纯构造",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HS3.tree",
+      "sha256": "dbcd183695a7ffc47f514c52ae0ac84412ec3b424e305b48acefa9fac6fff9d4"
+    },
+    {
+      "id": "0HS4",
+      "title": "随机 Dirichlet 级数为何与全纯 Euler 乘积为同一个样本函数",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HS4.tree",
+      "sha256": "9ef093720714702fba85292648e1703504dcd340659d7cbce7576108959b8a14"
+    },
+    {
+      "id": "0HT0",
+      "title": "有限指数的 p 进子模为何仍是同秩自由模",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HT0.tree",
+      "sha256": "d757c1d8cdc20bc7263befca4ad4d24b5bd7fbe16b519d8620dd157cf454b05b"
+    },
+    {
+      "id": "0HT1",
+      "title": "矩形 Haar p 进矩阵的余核为何几乎必然有限",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HT1.tree",
+      "sha256": "6585b98e46acfddb383f389ccb7d6896dd0bac94e42a7a4948e5123c14d2901d"
+    },
+    {
+      "id": "0HT2",
+      "title": "有限维 Haar 余核的每个同构类有多大概率",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HT2.tree",
+      "sha256": "b6e93d2d64fea88a76e5202c1cca33a9d4c2a11d1b7ba1d51d3128a19a54dc70"
+    },
+    {
+      "id": "0HT3",
+      "title": "满射矩怎样排除随机余核的质量逃向无限大群",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HT3.tree",
+      "sha256": "f8e91b84b75f7d3d3317c6746082d8a47b9bf41d8c8c64d094775a2af0ec1fb7"
+    },
+    {
+      "id": "0HT4",
+      "title": "随机余核怎样证明 Cohen–Lenstra 无限质量公式",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HT4.tree",
+      "sha256": "7e513c3fc7669e0f28fd9dac831e9f31b24151512aa9cb4679b74e98180479db"
+    },
+    {
+      "id": "0HW0",
+      "title": "短等差段的局部平均怎样给出密度增量",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HW0.tree",
+      "sha256": "b83c9f9906b3fd4bb62b0f5eb80f42287d6264ac0297b3580ee2a0b88c4b58e7"
+    },
+    {
+      "id": "0HW1",
+      "title": "近有理 Fourier 相关产生指定步长的密度增量",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HW1.tree",
+      "sha256": "f94be91d6425980d1ce25764e31e174ede7a721580a3ab0d795573c735de1a3a"
+    },
+    {
+      "id": "0HW2",
+      "title": "有理逼近怎样控制差分频率的集中",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HW2.tree",
+      "sha256": "a91664ffa6ac3ec120f7dbcdc4f8836c211d3e41cac5cab4df5df7099484be3a"
+    },
+    {
+      "id": "0HW3",
+      "title": "二次指数和的 Weyl 差分界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HW3.tree",
+      "sha256": "67691fbf16ba49cffabca6afb04d2033763c86cddb1df4b2365432ec792beb77"
+    },
+    {
+      "id": "0HW4",
+      "title": "大的纯二次指数和迫使主系数接近有理数",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HW4.tree",
+      "sha256": "a145f60d9161567378dbf9b588e47cfb18bf025b295d903cbf28c0cd7560c8bf"
+    },
+    {
+      "id": "0HW5",
+      "title": "已知二次主弧相位时的局部逆推导",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0HW5.tree",
+      "sha256": "e81122c4d3f37a4dafb9198e261c243c984e3ba51d46e428caedd9338ea95caa"
+    },
+    {
+      "id": "0I00",
+      "title": "余面积公式把等周下界变为梯度不等式",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I00.tree",
+      "sha256": "baf99bd9a830ff33711fb638f2d12a9b604eb58148e5a2777cda6e7a50ed4b8d"
+    },
+    {
+      "id": "0I01",
+      "title": "光滑截断保留半面积函数的能量下界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I01.tree",
+      "sha256": "9d465a8c2c78e6dc316313c8e6565e8a4710e6d423a6bc68005fa66f941654f5"
+    },
+    {
+      "id": "0I02",
+      "title": "中位数分解证明 Cheeger 谱隙下界",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I02.tree",
+      "sha256": "f275f3e2e5326654e36a210d7fe4d46e57ae499eff6a3e51e9550793bd000448"
+    },
+    {
+      "id": "0I03",
+      "title": "小范数余项怎样把近似右逆变为预解算子",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I03.tree",
+      "sha256": "7489717de138242c377b298cb49d2508f8a73f003d674bb9dfe8553300a4f44a"
+    },
+    {
+      "id": "0I04",
+      "title": "有限族紧算子可以同时压缩为矩阵",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I04.tree",
+      "sha256": "1fe880915a9bbd40b53063f1bd3cbaf67b10c901ca15ccb056a30956a1858c04"
+    },
+    {
+      "id": "0I05",
+      "title": "矩阵系数的范数比较怎样推广到紧算子系数",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I05.tree",
+      "sha256": "5d137fc4d275427bea0222b0209b601134697fb3887c3de26267e58b6229efb6"
+    },
+    {
+      "id": "0I06",
+      "title": "有限参数网格把逐点范数界变为整段谱排除",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I06.tree",
+      "sha256": "113facf8573599cd993bdd0c193d13e80c95444c688ac1d47be617ea29ef8694"
+    },
+    {
+      "id": "0I07",
+      "title": "紧双曲曲面上的光滑余面积公式",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I07.tree",
+      "sha256": "3aa053c8a2b6de76bdda385350b5f9f776ba633c150c789ae293ee50857c5357"
+    },
+    {
+      "id": "0I08",
+      "title": "Sard 定理与实函数的正则水平集",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I08.tree",
+      "sha256": "fb0422d8609bf0dbf60abcb5fb1f366c2cf6db349abb330371882e847cf0d8a8"
+    },
+    {
+      "id": "0I09",
+      "title": "Hilbert 空间上的紧算子",
+      "taxon": "Definition",
+      "path": "trees/math/number-theory/reports/0I09.tree",
+      "sha256": "5eaa66f834221f7b2ea24a4677c9a31a23647596c8efc2ae68589d66b52130ca"
+    },
+    {
+      "id": "0I40",
+      "title": "只求乘积根节点时的线性工作空间",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I40.tree",
+      "sha256": "3c9b4b676a62c303502235aa965c150e0e07d12fd74f2ef5d880f09e85b48c85"
+    },
+    {
+      "id": "0I41",
+      "title": "余数森林的块循环与模数剥离",
+      "taxon": "Construction",
+      "path": "trees/math/number-theory/reports/0I41.tree",
+      "sha256": "d928de49e456b4644b0d80926a5328ec41b135f2c99b33d77afb9d52b4b4c51f"
+    },
+    {
+      "id": "0I42",
+      "title": "余数森林的时间界为何含有块数项",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I42.tree",
+      "sha256": "31a99bd095290bc3e5b98b63016c04a0fecb87fcad278fe58f1bf59f0233524b"
+    },
+    {
+      "id": "0I43",
+      "title": "余数森林的峰值工作空间",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I43.tree",
+      "sha256": "08aeca8ec0b3d28b6907f51824e1abe7f11901e64d7544a5af875c7392da81a9"
+    },
+    {
+      "id": "0I44",
+      "title": "怎样选择余数森林的块数",
+      "taxon": "Corollary",
+      "path": "trees/math/number-theory/reports/0I44.tree",
+      "sha256": "8c68654f46342e46c9648105f8b5f3910f03993a4f30bb2737eea6b1d81d720d"
+    },
+    {
+      "id": "0I45",
+      "title": "特征 p 的系数抽取为何与平移相容",
+      "taxon": "Lemma",
+      "path": "trees/math/number-theory/reports/0I45.tree",
+      "sha256": "a9617322ab5aba8cc6c3291fe3eb07c16f743c49aed941ad03a99b2902c90dee"
+    },
+    {
+      "id": "0I46",
+      "title": "多项式平移的二项式矩阵",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I46.tree",
+      "sha256": "eb9dfb33502e3a321706b0b9d009e9b8f65f6fd66b605473cbfe1eaacfc8773f"
+    },
+    {
+      "id": "0I47",
+      "title": "Hasse–Witt 矩阵的平移共轭公式",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I47.tree",
+      "sha256": "5d522ada8e117627674c41b87efcec3e5b79d3418d42058853e4caf1c083acf6"
+    },
+    {
+      "id": "0I48",
+      "title": "互异点值的插值公式与可复用权重",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I48.tree",
+      "sha256": "403b366cf5728a743ccdb35613e71b0589240d9675fcefd63755f5bbe48eb0ba"
+    },
+    {
+      "id": "0I49",
+      "title": "由平移模型的第一行恢复整张矩阵",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I49.tree",
+      "sha256": "467d9915aea05cf434e26ba8313f1c67cb25f7c82b67cd360509a0c36dfe2e66"
+    },
+    {
+      "id": "0I4A",
+      "title": "超椭圆第一行的无素数参数矩阵递推",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I4A.tree",
+      "sha256": "4c008ba08a22f6b52328b52e34ef6af70c09455b0f7ff6c2b3619a60379351b2"
+    },
+    {
+      "id": "0I4B",
+      "title": "两个平移第一行如何恢复亏格二矩阵",
+      "taxon": "Example",
+      "path": "trees/math/number-theory/reports/0I4B.tree",
+      "sha256": "144524bded89a814818c024881006c097471794ef18e274f583fd1842371fc65"
+    },
+    {
+      "id": "0I4C",
+      "title": "怎样一次选定可用于几乎所有素数的平移",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I4C.tree",
+      "sha256": "aa7257b6f9ffe6a07fd14f26a9131442258ecf41b44c9498474d6fd3947735ac"
+    },
+    {
+      "id": "0I4D",
+      "title": "固定超椭圆模型的整张 Hasse–Witt 矩阵如何批量算出",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I4D.tree",
+      "sha256": "97d18328fc50a887bd8f2ba86479dd7550d6e848d161a4cec97b3a88d3c12cdb"
+    },
+    {
+      "id": "0I80",
+      "title": "Schwartz 函数的 Fourier 反演",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I80.tree",
+      "sha256": "05352f1e4236707582e7f30abf652efcad044bf35a1d3d92c8124ddc0e08ef00"
+    },
+    {
+      "id": "0I81",
+      "title": "积分算子的 Schur 范数估计",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I81.tree",
+      "sha256": "084a710f82362a07a2819088f038998f16527412f149ea89d9a5c42334b85038"
+    },
+    {
+      "id": "0I82",
+      "title": "Schwartz 符号的量子化有一致算子界",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I82.tree",
+      "sha256": "b4508d27d4825ad46a5d533c6644098aa460ee352ce1c8593a71b0206d66cf3e"
+    },
+    {
+      "id": "0I83",
+      "title": "左量子化的精确复合符号",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I83.tree",
+      "sha256": "a11d4d3bd8e85415ac5dad4f53b792dd8007389810b97d1def504a32108b6130"
+    },
+    {
+      "id": "0I84",
+      "title": "左量子化复合的有限阶展开与余项",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I84.tree",
+      "sha256": "f87a66d86361fd24721a90829818a18c8a5d4cf89517a29f9828102aed17a37c"
+    },
+    {
+      "id": "0I85",
+      "title": "量子化交换子的首项是 Poisson 括号",
+      "taxon": "Corollary",
+      "path": "trees/math/number-theory/reports/0I85.tree",
+      "sha256": "cc682f922ec34a845ac5c1f61ba593d45950e1776313c6f125f46982d1e861f4"
+    },
+    {
+      "id": "0I86",
+      "title": "没有临界点的振荡积分快速衰减",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I86.tree",
+      "sha256": "95d4270c462093f86397e6853f49094d555d8dc384c2f2b3d50e65e85f00e762"
+    },
+    {
+      "id": "0I87",
+      "title": "固定 Schwartz 符号的群量子化不依赖局部截断",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I87.tree",
+      "sha256": "cd570b5eba864ab4e09317042e0657fa52a2b81448c7a0f882f446af1d80a9dc"
+    },
+    {
+      "id": "0I88",
+      "title": "加法群上符号量子化的精确乘法",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I88.tree",
+      "sha256": "ee1bad2c46937b1398feada09a09fe92434f7ef6ef02c331cf2f3421c28f5d1e"
+    },
+    {
+      "id": "0I8A",
+      "title": "线性算子的循环向量",
+      "taxon": "Definition",
+      "path": "trees/math/number-theory/reports/0I8A.tree",
+      "sha256": "ccf5e53a97f26013bc9b2b025ec9a7f206e2f75ecf90860bd499e1bdba33214c"
+    },
+    {
+      "id": "0I8B",
+      "title": "谱分离使边界向量成为循环向量",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8B.tree",
+      "sha256": "f33fcb3e19d41bc42b0b34ecb5777e510acdc702d40042fc57be248fe4cdb2a1"
+    },
+    {
+      "id": "0I8C",
+      "title": "谱分离矩阵在主子块群作用下的稳定子平凡",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8C.tree",
+      "sha256": "72eed3ab6b3315819d32a52607679347a5ca8ddf60a47c7b46a653c3ea9e7689"
+    },
+    {
+      "id": "0I8D",
+      "title": "单射微分给出局部距离下界与小球体积界",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8D.tree",
+      "sha256": "32c00f884e1e83de4dd70ead65f6959e4a5d18d2aac01622e6577074dd287645"
+    },
+    {
+      "id": "0I8E",
+      "title": "谱分离轨道的局部体积估计",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8E.tree",
+      "sha256": "5bb6d19105407ea4d306274944b395be97202dd3d17e172f865fffb39a507f88"
+    },
+    {
+      "id": "0I8F",
+      "title": "矩阵乘法在指数坐标中的二阶展开",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8F.tree",
+      "sha256": "8278f1e5216c9d5233c82423aa1e647fd4dae821980a04ad62f891610b5128c9"
+    },
+    {
+      "id": "0I8G",
+      "title": "群星积的一阶项由 Lie 括号决定",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8G.tree",
+      "sha256": "c41884f4ea2cc62ae76614b94d39e7c2d6859b4ac3df4ad5c06bb4b03f26f2a1"
+    },
+    {
+      "id": "0I8H",
+      "title": "局部群卷积定义符号的星积",
+      "taxon": "Construction",
+      "path": "trees/math/number-theory/reports/0I8H.tree",
+      "sha256": "af286f6ca3b79c1f98784096f35a21048cdb9ced24f0b0f04fa59f1f54272b06"
+    },
+    {
+      "id": "0I8I",
+      "title": "支配收敛定理",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I8I.tree",
+      "sha256": "9797c9f25f9dc8650f08f81b9dadac651aa6137dd1c241bac3e341dcbcca42ca"
+    },
+    {
+      "id": "0I8J",
+      "title": "多变量 Taylor 公式的积分余项",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I8J.tree",
+      "sha256": "1633b973b59c4296fcc35251ba40c10aaca0a9459899628a9367f7228344c18e"
+    },
+    {
+      "id": "0I8K",
+      "title": "紧支撑光滑函数在 L² 中稠密",
+      "taxon": "Theorem",
+      "path": "trees/math/number-theory/reports/0I8K.tree",
+      "sha256": "7381ae85895d9820929cd282b7b577eb85a79fe44fddda6b65a675653e0405dd"
+    },
+    {
+      "id": "0I8L",
+      "title": "高斯积分的归一化常数",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8L.tree",
+      "sha256": "308d9708a8742655d28ebd9d2952826de90a7470f12c53e3bc5ea7e78be85d4d"
+    },
+    {
+      "id": "0I8M",
+      "title": "有限测度的 Lebesgue 集可由有限矩形并逼近",
+      "taxon": "Proposition",
+      "path": "trees/math/number-theory/reports/0I8M.tree",
+      "sha256": "17a6cc119cd7b0986afbb93a0fcf06f02d14966b69faea895f551b2faf3fbd78"
     }
   ],
   "expansion_batches": [

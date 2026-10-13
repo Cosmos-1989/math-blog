@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-13",
+  "baseCommit": "164f9275e3e6d0a8d48bb89b19b1bb95f51dc1ba",
+  "scope": "Continuation of ten existing number-theory report topics. This records local pre-publication evidence, selected completed proofs, and remaining external inputs; it does not assert complete proofs of all ten research reports.",
+  "inventory": {
+    "newAtomicPages": 111,
+    "updatedExistingPages": 44,
+    "newOutlines": 0,
+    "updatedOutlines": 10,
+    "primaryNumberTheoryTopics": 12,
+    "numberTheoryTrackedPages": 447,
+    "wholeSitePages": 3515,
+    "newPagesByTopic": {
+      "Stoll": 9,
+      "Yuan": 8,
+      "Gee": 11,
+      "Calegari-Dimitrov-Tang": 13,
+      "Harper": 8,
+      "Sawin": 10,
+      "Peluse": 6,
+      "Monk-Naud": 10,
+      "Harvey": 14,
+      "NelsonAndSharedAnalysis": 22
+    },
+    "finalSourceHashes": "research/icm2026-number-theory.json notes; refreshed after integration and formatting. Agent-local checkpoints describe their earlier pre-formatting review state."
+  },
+  "build": {
+    "command": "opam exec -- forester build forest.toml",
+    "exitCode": 0,
+    "warnings": 0,
+    "log": "/tmp/number-theory-deepening-build-final.log"
+  },
+  "sourceChecks": {
+    "result": "pass",
+    "commands": [
+      "node scripts/test-note-prerequisites.mjs",
+      "node scripts/test-note-editorial.mjs",
+      "node scripts/test-subject-navigation.mjs",
+      "node scripts/check-note-prerequisites.mjs",
+      "node scripts/check-note-editorial.mjs --strict-format",
+      "node scripts/check-subject-navigation.mjs",
+      "node scripts/check-topic-narratives.mjs",
+      "node scripts/check-number-theory-notes.mjs",
+      "node scripts/check-site-notes.mjs --source-only"
+    ],
+    "prerequisiteRegressionCases": 23,
+    "navigationRegressionCases": 5,
+    "requiredPages": 2293,
+    "requiredLinkErrors": 0,
+    "editorialErrors": 0,
+    "formatErrors": 0,
+    "lexicalCandidates": 118,
+    "targetCandidates": 74,
+    "lexicalScope": "The scanner still uses the October 12 historical decision register. Candidate counts are not missing-definition counts; newer decisions are described below and in the first-integration verification record."
+  },
+  "generatedChecks": {
+    "result": "pass",
+    "reachablePages": 3515,
+    "formulasParsedWithKaTeX": 39017,
+    "diagrams": 46,
+    "brokenLinks": 0,
+    "prerequisiteCycles": 0,
+    "domain": "opetope.cc",
+    "readingThemeRepresentativeTransforms": 7,
+    "commands": [
+      "node scripts/check-site-notes.mjs --katex /private/tmp/forester-math-check/node_modules/katex",
+      "node scripts/check-site-domain.mjs",
+      "node scripts/check-reading-ui.mjs",
+      "node scripts/check-logic-notes.mjs --source-only",
+      "node scripts/check-algebra-notes.mjs --source-only",
+      "node scripts/check-riehl-notes.mjs --source-only",
+      "node scripts/check-geometry-notes.mjs"
+    ],
+    "scope": "Structure, reachability, registered prerequisites and formula parsing; mathematical correctness and semantic atomicity additionally require reading."
+  },
+  "reproducibleFiniteTests": {
+    "computation": {
+      "command": "KATEX_MODULE=/private/tmp/forester-math-check/node_modules/katex node tests/number-theory-computation.test.mjs",
+      "result": "pass",
+      "ownedPages": 48,
+      "formulas": 1138,
+      "matrixPrefixCases": 300,
+      "ellipticCurvePrimePairs": 924,
+      "coefficientRecurrenceIdentities": 20590
+    },
+    "computationExpansion": {
+      "command": "node tests/number-theory-computation-expansion.test.mjs",
+      "result": "pass",
+      "forestRuns": 461,
+      "boundaryStates": 2604,
+      "extractorCases": 140,
+      "conjugacyCases": 3307,
+      "curveCases": 295,
+      "firstRowCases": 3051,
+      "fullMatrixBatchCases": 203,
+      "storageScope": "Logical stored product-node bits, not measured JavaScript heap or fast-arithmetic workspaces."
+    },
+    "microlocal": {
+      "command": "node tests/number-theory-microlocal.test.mjs",
+      "result": "pass",
+      "bchCases": 90,
+      "gaussianCompositionCases": 60,
+      "stableMatrixCases": 18
+    },
+    "scope": "Finite numerical and exact-integer regressions check signs, examples and algorithmic invariants. They do not prove general asymptotic bounds or research theorems."
+  },
+  "browserChecks": {
+    "command": "node tests/number-theory-render.test.mjs with PLAYWRIGHT_MODULE and BROWSER_EXECUTABLE",
+    "result": "pass",
+    "representativePages": 29,
+    "viewportWidths": [1440, 390],
+    "pageViewportPairs": 58,
+    "formulaErrors": 0,
+    "pageErrors": 0,
+    "httpErrors": 0,
+    "horizontalOverflowCases": 0,
+    "visuallyInspected": ["0I84 at 1440", "0I8E at 390", "0H84 at 1440", "0I42 at 390"],
+    "knownCompatibilityIssue": "Chrome displays the existing XML/XSLT deprecation banner. The tested mathematical pages render correctly today; static HTML migration was not undertaken or simulated by hiding the banner."
+  },
+  "independentMathematicalReview": [
+    {
+      "reviewer": "Arendt",
+      "scope": "Read-only review of all 22 Nelson/shared-analysis new pages, including the composition remainder, first Lie-star sign and arbitrary-rank stable orbit proof.",
+      "result": "No blocking mathematical error reported.",
+      "resolved": [
+        "0I8H states h>0 and smooth compactly supported cutoffs explicitly; 0I8G states 0<h<=1.",
+        "The second-order BCH argument and Lie-star application are restricted to real matrix Lie groups.",
+        "The source record distinguishes section 7.3.3 from statement references 7.6-7.8 and supplies HTML anchors.",
+        "0I8H exact composition proof added to proofs_written."
+      ]
+    },
+    {
+      "reviewer": "Peirce",
+      "scope": "Read-only review of all 16 Peluse and Monk-Naud new pages, including Weyl constants, the Cheeger argument, compact-operator compression and the finite parameter grid.",
+      "result": "No immediate mathematical correction required.",
+      "limits": "0I03 proves a bounded resolvent, not a compact resolvent. Global coarea, Sard, elliptic spectral theory and the geometric parametrix remain identified external inputs."
+    }
+  ],
+  "integrationCorrections": [
+    "0HC4 explicitly uses real-valued functions and specifies the normalization for uniqueness.",
+    "0I44 uses B=n(h+1), retaining the extra unit in each modulus weight.",
+    "0I04 uses an epsilon/3 margin in the total-boundedness approximation.",
+    "Forester command/slash ambiguity and unsupported negative spacing were repaired before the final warning-free build.",
+    "Added direct continuity, cyclic-group, product-measure and Haar-measure links in 0HG6, 0HH1, 0HT1 and 0HT2."
+  ],
+  "newLexicalDecisions": [
+    {"ids": ["0HG1"], "term": "循环群", "decision": "False substring match inside 余循环群; do not link it to the definition of a cyclic group."},
+    {"ids": ["0I82", "0I84", "0I85", "0I87"], "term": "半范数", "decision": "The specific Schwartz seminorm definition 0H4F is linked and now explicitly gives the seminorms, uniform-family convention and underlying 00MD definition."},
+    {"ids": ["0H40", "0I8E"], "term": "横截", "decision": "These sentences delimit the unproved higher relative-orbit estimate and refer to the identified research paper. Do not replace it with the non-equivalent generic transverse-manifold definition."}
+  ],
+  "remainingScope": [
+    "All ten existing surveys now incorporate the additional branches, but their complete research proofs are not all reproduced.",
+    "Each of the six report-batch JSON files records exact primary reading ranges and remaining branches in deferred arrays.",
+    "Full modularity lifting, arithmetic intersection estimates, optimized random spectral gaps, critical multiplicative chaos and the global subconvexity proof still have external inputs.",
+    "Nelson's corresponding ICM2026 proceedings text remains unlocated; author research text and the dated 2021 lecture remain separately identified.",
+    "Banana Space access is incomplete; existing terminology is reused without claiming universal fresh verification."
+  ]
+}

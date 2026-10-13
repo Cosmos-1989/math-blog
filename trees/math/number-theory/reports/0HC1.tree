@@ -1,0 +1,17 @@
+\title{有界次数代数数的 Northcott 有限性}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Abramovich，Heights on Pn，2016-01-29](https://www.math.brown.edu/dabramov/MA/s1516/254/MA254-Heights.pdf)，幻灯片 6–8}
+
+\p{给定整数 #{D\geq 1} 与实数 #{B\geq 0}，集合}
+##{\{\alpha\in\overline{\mathbb Q}:[\mathbb Q(\alpha):\mathbb Q]\leq D,\ h([1:\alpha])\leq B\}}
+\p{是有限集。这里 #{h} 是[绝对高度](0G41)，次数只约束单个代数数，并不要求所有数预先属于同一个数域。}
+
+\p{\strong{固定次数。}先令 #{[\mathbb Q(\alpha):\mathbb Q]=d\leq D}。设其首一最小多项式的系数为 #{1,c_1,\ldots,c_d}。[共轭根系数界](0HC0)给出}
+##{h([1:c_1:\cdots:c_d])\leq dB+d\log 2.}
+\p{取该有理射影点的互素整数代表 #{[a_0:\cdots:a_d]}，要求 #{a_0>0}。由[有理射影高度公式](00WC)，每个整数系数满足 #{|a_i|\leq 2^d e^{dB}}。这个盒子只有有限个整数向量；每个向量唯一确定首一多项式 #{T^d+(a_1/a_0)T^{d-1}+\cdots+a_d/a_0}，而每个多项式至多有 #{d} 个根。}
+
+\p{\strong{合并次数。}只需将 #{d=1,\ldots,D} 的有限集取并，仍为有限集。例如设 #{M_d=\lfloor 2^d e^{dB}\rfloor}，粗略上界为}
+##{\sum_{d=1}^D d(2M_d+1)^{d+1}.}
+\p{这里多次计算可约多项式、非互素向量及相同根只会增大上界，不影响有限性。对一般[有界次数射影点](0G4P)，选择一个非零坐标归一化为一，再对其余各坐标应用此结论。}

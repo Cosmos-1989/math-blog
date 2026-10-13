@@ -1,0 +1,17 @@
+\title{辛相似配对仍允许重复权重的对数障碍}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Gee，§3.2 的对数扩张](nt-gee-icm2026)与[辛相似群](0G82)；四维构造}
+
+\p{设 #{p} 为奇素数，#{\varepsilon_p} 为[分圆特征标](0G83)，#{c(g)=\log_p\varepsilon_p(g)}。由[对数扩张](0G8D)得到表示 #{U(g)=\left(\begin{smallmatrix}1&c(g)\\0&1\end{smallmatrix}\right)}。令}
+##{R(g)=\begin{pmatrix}U(g)&0\\0&\varepsilon_p(g)^{-1}U(g)^{-\mathsf T}\end{pmatrix},\qquad J=\begin{pmatrix}0&I_2\\-I_2&0\end{pmatrix}.}
+
+\p{逆转置是对偶表示，故 #{R} 是四维连续表示。直接分块相乘得到 #{R(g)^{\mathsf T}JR(g)=\varepsilon_p(g)^{-1}J}，所以它具有与阿贝尔曲面上同调相同的辛相似因子。}
+
+\p{令 #{N=\left(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\right)}。在足够小的分圆子群上，#{U=\exp(cN)}，第二块为 #{\exp(c(-I_2-N^{\mathsf T}))}。因此 [Sen 算子](0G8C)为}
+##{\Theta_R=\begin{pmatrix}N&0\\0&-I_2-N^{\mathsf T}\end{pmatrix}.}
+
+\p{其[特征值](0F0B)为 #{0,0,-1,-1}，对应可能权重 #{0,0,1,1}，但两个块均有非零幂零部分，故不半单，#{R} 不满足 Hodge–Tate 条件。将第二块的两个基向量交换，整矩阵成为对角特征标为 #{1,1,\varepsilon_p^{-1},\varepsilon_p^{-1}} 的上三角矩阵，故它确为[普通表示](0G8B)。}
+
+\p{这个例子满足辛配对与普通性，却不满足几何 Hodge–Tate 条件，也不满足 [p-distinguished](0G87)。辛对偶使两组幂零部分相互配对，并没有使它们消失。}

@@ -1,0 +1,12 @@
+\title{有限指数的 p 进子模为何仍是同秩自由模}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§4 的随机余核模型](icm2026-sawin-probability)所用的初等 p 进线性代数}
+
+\p{令 #{L\subseteq\mathbb Z_p^n} 为 [#{\mathbb Z_p}](00SM) 子模，商模有限，#{n\geq 1}。则 #{L} 是秩 #{n} 的[自由模](0137)，并可选一个 #{\mathbb Z_p} 线性同胚 #{T:\mathbb Z_p^n\to L}。因此 #{L} 上归一化的 [Haar 概率](00T1)可在这组基下识别为 #{n} 个独立均匀 p 进坐标。}
+\p{\strong{商由某个 #{p^a} 杀死。}有限商群的阶数 #{M} 杀死整个商。写 #{M=p^av}，其中 #{p\nmid v}；#{v} 在 #{\mathbb Z_p} 中可逆，所以 #{p^a\mathbb Z_p^n\subseteq L}。这也说明 #{L} 是开且闭的子群。}
+\p{\strong{按坐标归纳取基。}将 #{L} 投影到第一坐标，所得非零理想 #{I} 包含 #{p^a\mathbb Z_p}。在 #{I\setminus\{0\}} 中选择 p 进赋值最小的元素；除去单位后得到 #{p^e\in I}。每个 #{I} 中元素都被 #{p^e} 整除，故 #{I=p^e\mathbb Z_p}。取 #{v_1\in L} 的第一坐标为 #{p^e}。任意 #{v\in L} 的第一坐标是 #{tp^e}，减去 #{tv_1} 后第一坐标为零，从而}
+##{L=\mathbb Z_pv_1\oplus L',\qquad L'=L\cap(\{0\}\times\mathbb Z_p^{n-1}).}
+\p{#{L'} 包含其余坐标中的 #{p^a\mathbb Z_p^{n-1}}。对 #{n-1} 归纳得到基 #{v_2,\ldots,v_n}；#{n=1} 已由理想计算证明。于是 #{T(t)=\sum_i t_iv_i} 是线性双射。其矩阵在 #{\mathbb Q_p} 上可逆，所以 #{T} 及其逆都由有限个连续线性运算给出。}
+\p{\strong{测度的识别。}把标准 [p 进 Haar 概率](00T2)经 #{T} 推前，所得测度在 #{L} 上平移不变且总质量为 #{1}。它与环境 Haar 测度在 #{L} 上的归一化限制相同：两者都给每个 #{p^bL} 陪集质量 #{p^{-bn}}；这些陪集构成[拓扑基](00ED)并生成 Borel 集，概率测度由这些有限分割唯一确定。}

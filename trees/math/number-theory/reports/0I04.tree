@@ -1,0 +1,16 @@
+\title{有限族紧算子可以同时压缩为矩阵}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hide–Magee](https://arxiv.org/pdf/2107.05292v3)，v3，2023-02-15，命题6.3证明中的有限维压缩，印刷页32；补出紧性与正交投影步骤}
+
+\p{设 #{K} 为[Hilbert 空间](00MQ)，#{A_1,\ldots,A_m\in B(K)} 为[紧算子](0I09)，其中 #{B(K)} 表示[有界算子](00M4)的空间。对任意 #{\varepsilon>0}，存在共同的有限维子空间 #{W\subset K} 及其[正交投影](00MS) #{P}，使}
+##{\|A_j-PA_jP\|<\varepsilon\qquad(1\leq j\leq m).}
+\p{因此 #{PA_jP} 在 #{W} 上可写成有限矩阵，并在 #{W^\perp} 上为零。只取输出空间的投影尚不足以保证这个双侧支撑结论。}
+
+\p{\strong{先近似为有限秩。}紧性使 #{A_j} 的单位球像可由有限个半径 #{\varepsilon /3} 的开球覆盖。令 #{V_j} 为这些球心的张成空间，#{P_j} 为到 #{V_j} 的正交投影。投影最小化到子空间的距离，故取单位球上的上确界后，#{T_j=P_jA_j} 满足 #{\|A_j-T_j\|\leq\varepsilon /3}，且值域有限维。}
+
+\p{\strong{同时容纳输入与输出。}取 #{W} 包含所有 #{\operatorname{ran}(T_j)} 与 #{\operatorname{ran}(T_j^*)}，后者使用[有界算子的伴随](00MU)。它们都有限维：若 #{T_j} 的像位于由 #{e_1,\ldots,e_r} 张成的空间，则 #{T_j^*} 的像由 #{T_j^*e_1,\ldots,T_j^*e_r} 张成。}
+\p{若 #{v\in W^\perp}，则对所有 #{u} 有 #{\langle u,T_jv\rangle=\langle T_j^*u,v\rangle=0}，所以 #{T_jv=0}。又 #{T_j} 的像包含于 #{W}，故 #{PT_jP=T_j}。最后由 #{\|P\|\leq 1}，}
+##{\|A_j-PA_jP\|\leq\|A_j-T_j\|+\|P(T_j-A_j)P\|\leq 2\varepsilon /3<\varepsilon.}
+\p{这说明同一个有限维空间可以处理整个有限算子族；其维数可依赖算子族和误差，不要求预先统一。}

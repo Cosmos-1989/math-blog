@@ -1,0 +1,24 @@
+\title{带亏格权重的单环图如何得到显式 φ 能量界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[de Jong，On the height of Gross–Schoen cycles in genus three](https://pmc.ncbi.nlm.nih.gov/articles/PMC6413647/)，§2，式 (2.1)；[Yuan](icm2026-yuan-quantitativity)，§5.3；单环情形的直接计算}
+
+\p{设 #{\Gamma} 为长度 #{L>0} 的[圆环](0HC7)，指定顶点 #{v}，赋予整数亏格权重 #{q(v)=g-1}，#{g\geq 2}，其余顶点权重为零。这个带权图的亏格为环路数一加顶点权重，即 #{g}；图典范除子按 #{K(p)=\operatorname{val}(p)-2+2q(p)} 定义，所以 #{K=(2g-2)v}。这是只有一个非分离节点、归一化分支亏格为 #{g-1} 的稳定约化所对应的图型。}
+
+\p{令 #{a=(g-1)/g}、#{\lambda=dt/L}、#{\mu=a\delta_v+(1-a)\lambda}。设 #{G} 为圆环均匀测度的 Green 核，则}
+##{g_\mu(x,y)=G(x,y)-aG(x,v)-aG(y,v)+a^2L/12.}
+\p{对 #{x} 取 Laplacian，得到 #{\delta_y-\mu}；对 #{\mu} 积分为零，故这确实是[归一化核](0HC5)。图可容许测度由条件 #{g_\mu(x,x)+\int g_\mu(x,y)\,d\delta_K(y)} 为常数刻画。上式中 #{G(x,v)} 的系数为 #{-2a+(2g-2)(1-a)=0}，验证了此条件。这个刻画采用 [Zhang，Admissible pairing on a curve，定理 3.2](https://archive.ymsc.tsinghua.edu.cn/pacm_download/355/9111-apc.pdf)。其与曲线可容许度量的对应仍采用该文的算术构造。}
+
+\p{\strong{计算 φ。}用所引来源式 (2.1) 的归一化，图不变量定义为}
+##{\varphi(\Gamma,q)=-\frac L4+\frac 14\int_\Gamma g_\mu(x,x)\bigl((10g+2)\mu -\delta_K\bigr).}
+\p{因 #{G(v,v)=L/12} 且 #{\int G(x,v)\,d\lambda=0}，直接得到}
+##{\int g_\mu(x,x)\,d\mu=\frac{L(1-a^2)}{12},\qquad g_\mu(v,v)=\frac{L(1-a)^2}{12}.}
+\p{代入并使用 #{a=(g-1)/g}，整理为}
+##{\varphi(\Gamma,q)=-\frac L4+\frac L{48}\left((10g+2)(1-a^2)-(2g-2)(1-a)^2\right)=\frac{(g-1)L}{6g}=\frac{aL}{6}.}
+
+\p{\strong{控制任意点配置。}由 #{G(x,v)\geq -L/24}，有 #{g_\mu(x,x)\leq L(1+a+a^2)/12}。[图能量界](0HC6)于是给出}
+##{\sum_{i<j}g_\mu(x_i,x_j)\geq -\frac{nL(1+a+a^2)}{24}=-n\,\frac{1+a+a^2}{4a}\,\varphi(\Gamma,q).}
+\p{由于 #{1/2\leq a<1}，且 #{7/8-(1+a+a^2)/(4a)=(2a-1)(2-a)/(8a)\geq 0}，最终得到}
+##{\sum_{i<j}g_\mu(x_i,x_j)+\frac{7n}{8}\varphi(\Gamma,q)\geq 0.}
+\p{这里亏格和边长都可变化，系数 #{7/8} 不变。这是指定单环图型的局部结论；一般约化图的统一估计以及从图核到曲线局部相交的比较仍使用所引理论。}

@@ -1,0 +1,13 @@
+\title{Sard 定理与实函数的正则水平集}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Oliver Knill, Introduction to Geometry and geometric analysis](https://people.math.harvard.edu/~knill/teaching/math109_1995/geometry.pdf)，Caltech 1995秋课程讲义，§§1.4–1.5，定理1.5.1，印刷页11–14；仅引用 Sard 定理，另给正则水平集的局部坐标推导}
+
+\p{设 #{M} 为有限维、无边界、第二可数的[光滑流形](0043)，#{u:M\to\mathbb R} 为[光滑映射](00N9)。点 #{x} 称临界点，如果其[微分](0045) #{du_x:T_xM\to\mathbb R} 为零。记临界点集为 #{C}；#{u(C)} 称临界值集。#{t\notin u(C)} 称正则值，即每个 #{x\in u^{-1}(t)} 都满足 #{du_x\ne 0}；空水平集也满足此条件。这是[横截性](0F50)在目标子流形为单点时的条件。}
+
+\p{\strong{Sard 定理的实值形式。}上述光滑性假设下，#{u(C)} 在实直线上具有零 [Lebesgue 测度](00XV)。因此几乎每个 #{t} 都是正则值。这个零测结论引用 Knill 讲义定理1.5.1；它不要求临界点集 #{C} 本身在 #{M} 内具有零体积。例如常值函数的所有点都临界，其临界值却只有一个。}
+
+\p{\strong{正则水平集的局部形状。}若 #{du_x\ne 0}，在 #{x} 附近选坐标 #{(x_1,\ldots,x_m)}，重排后可设 #{\partial u/\partial x_1\ne 0}。映射 #{F=(u,x_2,\ldots,x_m)} 的 Jacobi 行列式就是 #{\partial u/\partial x_1}。由[逆函数定理](0H51)，#{F} 在更小邻域内给出光滑坐标。此时 #{u^{-1}(t)} 是坐标超平面 #{F_1=t}，维数为 #{m-1}；#{\{u>t\}} 位于其一侧。}
+
+\p{所以在曲面上，正则水平集是光滑曲线，且 #{\partial\{u>t\}=u^{-1}(t)}。边界等式的一个方向由连续性给出，另一方向由上述坐标中 #{F_1-t} 在两侧取相反符号给出。这正是把水平集用于等周不等式所需的几何条件。}

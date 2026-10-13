@@ -1,0 +1,17 @@
+\title{奇数次二下降的平方类为什么落入范数核}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，§5 开头、引理 5.1、例 5.5 与引理 5.6}
+
+\p{设 #{k} 是特征零的域，#{f\in k[x]} 首一、无重根、次数 #{2g+1}，#{C:y^2=f(x)}，#{J} 为其 [Jacobian](0C07)。置 #{A=k[T]/(f(T))}，#{\theta=T\bmod f}。因 #{f} 无重根，这个代数是有限可分域扩张的乘积。元素 #{a\in A} 的范数定义为乘法线性算子的[行列式](0A40)：#{N(a)=\det(m_a)}。}
+
+\p{对避开有限分歧点的[半约化对](0H81) #{(u,v)}，#{d=\deg u}，设}
+##{\delta([D-d\infty])=(-1)^d u(\theta)\quad\text{于 }A^\times /A^{\times 2}.}
+\p{奇数次二下降定理断言该式延拓为同态 #{\delta:J(k)\to A^\times /A^{\times 2}}，且 #{\ker\delta=2J(k)}。此处同态的全局良定义、移动除子以及核的结论采用所引定理；下面证明可直接用于筛选的范数条件。}
+
+\p{\strong{范数是平方。}在分裂域中写 #{u(x)=\prod_{j=1}^d(x-\xi_j)}，含重数，并记 #{\eta_j=v(\xi_j)}。#{A} 的乘法算子可按 #{f} 的根对角化，所以 #{N(\xi -\theta)=f(\xi)}。于是}
+##{N((-1)^du(\theta))=\prod_{j=1}^d f(\xi_j)=\left(\prod_{j=1}^d\eta_j\right)^2.}
+\p{#{\prod_j\eta_j} 在 Galois 作用下不变，属于 #{k^\times}。因此 #{\delta(J(k))} 位于 #{\ker(N:A^\times /A^{\times 2}\to k^\times /k^{\times 2})}。对任意点可使用二下降定理中的避开分歧点代表；范数平方的结论与代表无关。}
+
+\p{若 #{f=\prod_{i=1}^{2g+1}(x-a_i)} 在 #{k} 上分裂，则目标变成平方类向量 #{(k^\times /k^{\times 2})^{2g+1}}，各分量乘积为平方。未遇到零值时，第 #{i} 分量是 #{(-1)^du(a_i)}。若 #{u(a_i)=0}，必须使用分歧点的延拓公式，不能把零当作可逆平方类；不过必要条件 #{(-1)^du(a_i)\in c_i k^2} 仍成立，约定 #{k^2} 含零。这使[二进局部排除](0H88)可以统一覆盖含分歧点的除子。}

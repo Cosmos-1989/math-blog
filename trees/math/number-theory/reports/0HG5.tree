@@ -1,0 +1,17 @@
+\title{平方零校正提升辛相似矩阵}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[BCGP，§1.8.7 的辛相似群](nt-gee-bcgp2025)；奇剩余特征下的显式矩阵提升}
+
+\p{设 #{A'\twoheadrightarrow A} 为核 #{I} 的[小扩张](0HG0)，且二为单位。取[标准辛矩阵](0HG4) #{J}。给定 #{P\in\operatorname{GSp}_4(A)} 及 #{\nu'\in A'^\times} 提升其相似因子，则存在 #{P'\in\operatorname{GSp}_4(A')} 提升 #{P}，相似因子恰为 #{\nu'}。}
+
+\p{任取可逆矩阵提升 #{P_0}，设}
+##{D=\nu'^{-1}P_0^{\mathsf T}JP_0-J\in M_4(I),\qquad X=-\frac 12J^{-1}D.}
+
+\p{#{D^{\mathsf T}=-D} 且 #{J^{\mathsf T}=-J}，故 #{JX=-D/2} 与 #{X^{\mathsf T}J=-D/2}。于是取 #{P'=P_0(1+X)}，利用 #{I^2=0} 得}
+##{\nu'^{-1}P'^{\mathsf T}JP'=(1+X)^{\mathsf T}(J+D)(1+X)=J+D+X^{\mathsf T}J+JX=J.}
+
+\p{所以 #{P'} 满足要求。若两次提升具有同一个相似因子，其左商形如 #{1+Y}，且 #{Y^{\mathsf T}J+JY=0}。因此固定相似因子的一条纤维，是[辛无穷小矩阵](0HG4) #{\mathfrak{sp}_4(k)\otimes_k I} 的加法挠子。}
+
+\p{公式中的 #{1/2} 解释了奇剩余特征假设。这给出逐个矩阵的提升；要使所有矩阵同时满足群乘法，还须消去二余循环障碍。}

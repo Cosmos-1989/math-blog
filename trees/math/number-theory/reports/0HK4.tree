@@ -1,0 +1,17 @@
+\title{动态抽屉原理把首项间距乘成维数约束}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Calegari–Dimitrov–Tang，arXiv:2408.15403v2，附录 B.2–B.3](https://arxiv.org/abs/2408.15403v2)；中文改写，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)}
+
+\p{设 #{e_1,\ldots,e_M\in\mathbb Q\lbrack\lbrack x\rbrack\rbrack} 线性独立，其张成空间的[消失阶跳点](0HK3)为 #{n_1<\cdots<n_M}。对每个正整数 #{T}，令 #{\mathcal S_T=\{\sum_jc_je_j:0\leq c_j<T,\ c_j\in\mathbb Z\}}，所以 #{|\mathcal S_T|=T^M}。}
+
+\p{假设跳点 #{n_j} 的系数均在 #{\Delta_{n_j}^{-1}\mathbb Z} 中；又有不依赖 #{T} 的 #{a_{n_j}>0}，使任意两个前 #{n_j} 个系数相同的元素，其 #{x^{n_j}} 系数之差绝对值不超过 #{Ta_{n_j}}。则}
+##{1\leq\prod_{j=1}^M a_{n_j}\Delta_{n_j}.}
+
+\p{\strong{逐层计数。}固定一个前缀，下一系数落在间距 #{1/\Delta_{n_j}} 的格点中，全部可能值的直径不超过 #{Ta_{n_j}}，故选择数至多 #{1+Ta_{n_j}\Delta_{n_j}}。非跳点处没有新的自由选择：若两个元素此前相同而在该处首次不同，它们的差将有一个不在跳点表中的消失阶。}
+
+\p{因此依次细分所有前缀，得到}
+##{T^M\leq\prod_{j=1}^M(1+Ta_{n_j}\Delta_{n_j}).}
+
+\p{固定空间与跳点，让 #{T\to\infty}，两边除以 #{T^M} 后取极限，即得结论。关键是先让系数盒子变大；跳点的位置在这个过程中保持不变。}

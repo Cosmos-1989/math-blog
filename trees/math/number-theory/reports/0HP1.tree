@@ -1,0 +1,15 @@
+\title{三进制限位和的一阶矩为何严格小于平方根尺度}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§2 的数字 Fourier 机制](icm2026-harper-probability)；下述每位取 0、2 的特例为独立初等计算，不等同于稀疏指定位的素数定理}
+
+\p{令 #{A_k} 为 #{k} 位三进制数字均属于 #{\{0,2\}} 的整数集合，允许前导零，令 #{F_k(\theta)=\sum_{n\in A_k}e^{2\pi in\theta}}，并约定 #{F_0=1}。[数字乘积公式](0HP0)给出 #{|A_k|=2^k} 和 #{\int_0^1|F_k|^2=2^k}；然而}
+##{\int_0^1|F_k(\theta)|\,d\theta\leq(4/3)^k=o(2^{k/2}).}
+\p{\strong{逐位递推。}设 #{w(\theta)=|1+e^{4\pi i\theta}|=2|\cos(2\pi\theta)|}，则 #{|F_k(\theta)|=w(\theta)|F_{k-1}(3\theta)|}。在三个三等分区间分别作换元 #{\theta=(u+j)/3}，利用周期性得到}
+##{\int_0^1|F_k|=\int_0^1|F_{k-1}(u)|\left(\frac 13\sum_{j=0}^2w((u+j)/3)\right)du.}
+\p{\strong{逆分支上的收缩。}三个实数 #{c_j=\cos(2\pi(u+j)/3)} 之和为零，因为三个单位根之和为零。任意三个和为零的实数，其绝对值之和等于最大绝对值的两倍：若两项非负，负项的绝对值等于另两项之和；两项非正时同理。因 #{|c_j|\leq 1}，}
+##{\frac 13\sum_{j=0}^2w((u+j)/3)=\frac 23\sum_{j=0}^2|c_j|\leq\frac 43.}
+\p{从 #{\int|F_0|=1} 归纳得到上界。又 #{4/(3\sqrt 2)<1}，故一阶矩与平方根尺度之比指数衰减。若 #{\theta} 在 #{[0,1]} 上均匀取值，[Markov 不等式](0A02)进一步给出，对每个固定 #{\eta>0}，}
+##{\mathbb P\bigl(|F_k(\theta)|>\eta\,2^{k/2}\bigr)\leq\eta^{-1}\left(\frac 4{3\sqrt 2}\right)^k\longrightarrow 0.}
+\p{因此数字约束能让多数相位远小于平方根尺度，同时不改变二阶矩的计数恒等式。这里的概率只来自相位采样；集合 #{A_k} 完全确定。}

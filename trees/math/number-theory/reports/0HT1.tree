@@ -1,0 +1,12 @@
+\title{矩形 Haar p 进矩阵的余核为何几乎必然有限}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，定义 4.1、4.2](icm2026-sawin-probability)；随机余核有限性的直接证明}
+
+\p{固定素数 #{p}、整数 #{n\geq 1,u\geq 0}，令 #{A_n} 为各项独立且在 #{\mathbb Z_p} 上 Haar 均匀的 #{n\times(n+u)} 矩阵。其[余核](0GKI) #{C_n=\mathbb Z_p^n/A_n\mathbb Z_p^{n+u}} 几乎必然是有限阿贝尔 #{p} 群。}
+\p{\strong{非零多项式的零点集测度为零。}先注意单个 #{x\in\mathbb Z_p} 的概率不超过它模 #{p^a} 陪集的质量 #{p^{-a}}，故为零。一元非零 #{\mathbb Q_p} 多项式只有有限个根，所以其零点集也为零。}
+\p{对变量数归纳。将非零多项式写成 #{P(x',t)=\sum_{j=0}^dP_j(x')t^j}，选一个非零系数多项式 #{P_j}。除去 #{P_j(x')=0} 的零测集，关于 #{t} 的多项式非零，其根截面测度为零。对有界的零点集指示函数使用 [Fubini–Tonelli 定理](0H53)，便知全部零点集的[乘积测度](00QB)为零。}
+\p{\strong{取一个方块。}令 #{B} 为 #{A_n} 的前 #{n} 列。[行列式](01D2)是矩阵元的非零多项式，因为在单位矩阵处取值 #{1}。因此几乎必然 #{\det B\ne 0}。写 #{\det B=p^av}，#{v} 为单位。伴随矩阵恒等式 #{B\operatorname{adj}(B)=(\det B)I} 给出}
+##{p^a\mathbb Z_p^n=(\det B)\mathbb Z_p^n\subseteq B\mathbb Z_p^n\subseteq A_n\mathbb Z_p^{n+u}.}
+\p{所以 #{C_n} 是有限群 #{(\mathbb Z/p^a\mathbb Z)^n} 的商，阶为 #{p} 的幂。这个论证只要求一个方块在 #{\mathbb Q_p} 上可逆，不要求它模 #{p} 可逆；后者是整个矩阵余核平凡的一个充分条件，在矩形情形下并非必要条件。}

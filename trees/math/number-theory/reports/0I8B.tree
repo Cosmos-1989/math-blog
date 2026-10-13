@@ -1,0 +1,10 @@
+\title{谱分离使边界向量成为循环向量}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{在复数域上写矩阵 #{\tau=\begin{pmatrix}B&b\\c&d\end{pmatrix}}，其中 #{B} 为 #{n\times n} 矩阵，#{b} 为列向量，#{c} 为行向量，#{d} 为标量。若 #{\operatorname{Spec}(\tau)\cap\operatorname{Spec}(B)=\varnothing}，即[谱分离](0H4P)，则 #{b} 是 #{B} 的[循环向量](0I8A)，而 #{c^{\mathsf T}} 是 #{B^{\mathsf T}} 的循环向量。}
+
+\p{\strong{列向量。}设 #{W=\operatorname{span}\{B^jb:j\geq 0\}}，它在 #{B} 下不变。若 #{W\ne\mathbb C^n}，其[对偶](00MH)中的湮灭子 #{W^\perp=\{\ell:\ell(w)=0\text{ 对所有 }w\in W\}} 非零，且在右乘 #{B} 下不变。由于复数域[代数闭](00SO)，这个非零有限维空间上的算子有[特征向量](0F0B) #{\ell\ne 0}，满足 #{\ell B=\lambda\ell}。又因 #{\ell b=0}，}
+##{(\ell,0)\tau=(\ell B,\ell b)=\lambda(\ell,0).}
+\p{于是 #{\lambda} 同时是 #{B} 与 #{\tau} 的特征值，矛盾。故 #{W=\mathbb C^n}。对转置矩阵重复该论证，即得行向量结论。证明适用于有重根或不可对角化的矩阵。}

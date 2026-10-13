@@ -1,0 +1,19 @@
+\title{近有理 Fourier 相关产生指定步长的密度增量}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§2、§4 的等差分块机制；平衡函数的直接证明}
+
+\p{设 #{A\subseteq[N]=\{1,\ldots,N\}}，#{\alpha=|A|/N}，#{f=1_A-\alpha 1_{[N]}}，#{e(t)=\exp(2\pi it)}。设 #{0<\eta\leq 1}，#{\theta=a/q+\beta}，其中 #{a\in\mathbb Z}、#{q\geq 1} 为整数，且}
+##{\left|\sum_{n=1}^Nf(n)e(\theta n)\right|\geq\eta N.}
+\p{若正整数 #{L} 满足 #{qL\leq\eta N/8} 和 #{2\pi|\beta|qL\leq\eta /4}，则有长度 #{L}、步长 #{q} 的等差段 #{P\subseteq[N]}，使 #{|A\cap P|/L\geq\alpha+\eta /4}。这给出一个已知主弧频率时的密度增量特例。}
+
+\p{\strong{分成整段。}在每个模 #{q} 的剩余类中，依次取长度 #{L} 的整段，余下不足 #{L} 个点放入集合 #{R}。所有整段两两不交，其并为 #{[N]\setminus R}，且 #{|R|<qL\leq\eta N/8}。对整段 #{P} 取首点 #{n_P}，记实数 #{b_P=\sum_{n\in P}f(n)}。}
+
+\p{\strong{冻结相位。}同一段内 #{n-n_P} 是 #{q} 的整数倍，故 #{e(a(n-n_P)/q)=1}。由 #{|e(t)-1|\leq 2\pi|t|}，}
+##{\left|\sum_{n\in P}f(n)e(\theta n)-e(\theta n_P)b_P\right|\leq 2\pi|\beta|qL\sum_{n\in P}|f(n)|.}
+\p{这个初等复指数估计来自沿 #{s\in[0,t]} 积分导数 #{2\pi i e(s)}。对所有整段求和，误差至多 #{\eta N/4}；丢弃 #{R} 的误差至多 #{\eta N/8}。三角不等式给出 #{\sum_P|b_P|\geq 5\eta N/8}。}
+
+\p{\strong{选出正增量。}平衡性给出 #{\sum_Pb_P=-\sum_{n\in R}f(n)\geq -\eta N/8}。因此}
+##{\sum_P(b_P)_+=\frac 12\left(\sum_P|b_P|+\sum_Pb_P\right)\geq\frac{\eta N}{4}.}
+\p{整段总长度至多 #{N}，故某段满足 #{b_P/L\geq\eta /4}，结论随即成立。若 #{\beta\ne 0}，可取不超过 #{\min\{\eta N/(8q),\eta /(8\pi q|\beta|)\}} 的整数长度；#{\beta=0} 时只需第一个限制。[二阶能量检测](0GOC)能够产生 Fourier 相关，但要保证这里的分母 #{q} 小，还需相应的主弧信息。}

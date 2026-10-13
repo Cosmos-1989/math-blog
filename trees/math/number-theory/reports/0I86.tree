@@ -1,0 +1,11 @@
+\title{没有临界点的振荡积分快速衰减}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{a\in C_c^\infty(U)}，#{U\subseteq\mathbb R^d} 开，#{\phi:U\to\mathbb R} 光滑。假设在 #{a} 的支撑的一个邻域上 #{|\nabla\phi|\geq c>0}，其中 #{\nabla\phi=(\partial_1\phi,\ldots,\partial_d\phi)} 是[偏导数](0A32)组成的向量。则每个整数 #{N\geq 0} 都有常数 #{C_N} 使}
+##{\left|\int_Ua(x)e^{i\phi(x)/h}\,dx\right|\leq C_Nh^N,\qquad 0<h\leq 1.}
+
+\p{\strong{证明。}令 #{V=\frac{\nabla\phi}{|\nabla\phi|^2}}，则 #{V\cdot\nabla\phi=1}，故 #{e^{i\phi /h}=(h/i)V\cdot\nabla e^{i\phi /h}}。分部积分一次得到}
+##{\int a e^{i\phi /h}=-(h/i)\int\operatorname{div}(aV)e^{i\phi /h},\qquad \operatorname{div}W=\sum_j\partial_jW_j.}
+\p{支撑紧含于 #{U}，所以边界项为零。记 #{La=-\operatorname{div}(aV)}，反复操作给出 #{\int a e^{i\phi /h}=(h/i)^N\int L^Na\,e^{i\phi /h}}。函数 #{L^Na} 仍光滑且支撑在同一紧集上，故取 #{C_N=\int|L^Na|} 即可。对振幅、相位成族的情形，若支撑统一紧、所用有限阶导数统一有界且同一个 #{c} 有效，上述常数亦可统一选择。}

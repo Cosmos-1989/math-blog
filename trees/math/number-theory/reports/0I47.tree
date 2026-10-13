@@ -1,0 +1,15 @@
+\title{Hasse–Witt 矩阵的平移共轭公式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harvey–Sutherland II](https://math.mit.edu/~drew/conm13352.pdf)，定理 5.1；用系数抽取给出初等证明}
+
+\p{设 #{g\geq 1}，#{p} 为奇素数，#{f\in\mathbb F_p[x]} 无重根，次数为 #{2g+1} 或 #{2g+2}。记 #{H=f^{(p-1)/2}}、#{W=(h_{pi-j})_{1\leq i,j\leq g}}，其中 #{h_m=[x^m]H}，采用[Hasse–Witt 系数矩阵](0H0N)的约定。对 #{a\in\mathbb F_p}，令 #{W(a)} 为 #{f(x+a)} 对应的同一系数矩阵，则}
+##{W(a)=T(a)WT(-a),}
+\p{其中 #{T(a)} 是[多项式平移矩阵](0I46)。此恒等式不要求 #{f(a)\ne 0}；该非零条件只在第一行的除法递推中使用。}
+\p{\strong{把矩阵写为系数算子。}在次数小于 #{g} 的多项式空间上，令 #{L(P)=\mathcal E_p(PH)}，其中 #{\mathcal E_p} 是[系数抽取算子](0I45)。由于}
+##{\deg(PH)\leq(g-1)+(g+1)(p-1)=(g+1)p-2,}
+\p{抽取后的次数仍小于 #{g}。对基向量 #{x^{j-1}} 有 #{L(x^{j-1})=\sum_{i=1}^gh_{pi-j}x^{i-1}}，故 #{L} 的列坐标矩阵恰为 #{W}，无需转置。}
+\p{令 #{L_a(P)=\mathcal E_p(PH(x+a))}。平移相容性给出}
+##{L_a(S_aP)=\mathcal E_p(P(x+a)H(x+a))=S_a(\mathcal E_p(PH))=S_aL(P).}
+\p{因此 #{W(a)T(a)=T(a)W}。右乘 #{T(-a)} 即得所求。此证明对素域中的系数和参数成立；一般有限扩域的半线性变换需保留 Frobenius 对系数的作用。}

@@ -1,0 +1,12 @@
+\title{Schwartz 函数的 Fourier 反演}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{f\in\mathcal S(\mathbb R^d)} 为 [Schwartz 函数](0H4F)，取[变换约定](0H4G) #{\widehat f(\xi)=\int f(x)e^{-ix\cdot\xi}\,dx}。则 #{\widehat f\in\mathcal S(\mathbb R^d)}，且}
+##{f(x)=(2\pi)^{-d}\int_{\mathbb R^d}\widehat f(\xi)e^{ix\cdot\xi}\,d\xi.}
+
+\p{\strong{变换后的衰减。}各阶 #{x^\alpha f(x)} 均可积，由[支配收敛](0I8I)可在积分内求导。再对 #{x} 分部积分，#{\xi^\beta\partial_\xi^\alpha\widehat f} 是常数倍的 #{\partial_x^\beta(x^\alpha f)} 的 Fourier 变换。该函数的绝对积分给出与 #{\xi} 无关的上界，所以变换保持 Schwartz 空间。}
+\p{\strong{反演。}在右侧插入 #{e^{-\varepsilon|\xi|^2}}，其中 #{\varepsilon>0}。由 [Fubini 定理](0H53)、[高斯 Fourier 公式](0H4H)及其[归一化常数](0I8L)，所得函数为}
+##{I_\varepsilon(x)=\int_{\mathbb R^d}f(x-y)(4\pi\varepsilon)^{-d/2}e^{-|y|^2/(4\varepsilon)}\,dy.}
+\p{高斯核的积分为一。固定 #{\delta>0}，在 #{|y|<\delta} 的区域，#{|f(x-y)-f(x)|} 由 #{f} 在 #{x} 的连续性控制；在其补集上，积分不超过 #{2\|f\|_\infty} 乘高斯尾。换元 #{y=\sqrt\varepsilon z} 后，该尾随 #{\varepsilon\downarrow 0} 趋于零。先令 #{\varepsilon\downarrow 0}，再令 #{\delta\downarrow 0}，得到 #{I_\varepsilon(x)\to f(x)}。另一方面，#{\widehat f} 可积，支配收敛使 #{I_\varepsilon(x)} 趋于所陈述的反演积分。}

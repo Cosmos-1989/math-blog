@@ -1,0 +1,15 @@
+\title{群星积的一阶项由 Lie 括号决定}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Nelson](icm2026-nelson)，§13.5.2；固定 Schwartz 符号在紧频率集上的展开}
+
+\p{设 #{G} 为实矩阵 Lie 群，#{\mathfrak g} 为其 Lie 代数；例如可取 #{G=\operatorname{GL}_n(\mathbb R)}。使用[局部星积](0I8H)及其负号 Fourier 核。选 #{\mathfrak g} 的基 #{E_1,\ldots,E_d}，写 #{[E_j,E_k]=\sum_\ell c_{jk}^\ell E_\ell}，并定义 #{\{a,b\}_{\mathfrak g}(\zeta)=\sum_{j,k,\ell}c_{jk}^\ell\zeta_\ell\partial_ja(\zeta)\partial_kb(\zeta)}。对固定 Schwartz 符号 #{a,b} 和紧集 #{K\subset\mathfrak g^*}，在 #{0<h\leq 1} 时有}
+##{\sup_{\zeta\in K}\left|(a\star_h b)(\zeta)-a(\zeta)b(\zeta)+\frac{ih}{2}\{a,b\}_{\mathfrak g}(\zeta)\right|\leq C_Kh^2.}
+
+\p{\strong{相位展开。}由[指数乘法的二阶公式](0I8F)，在截断的支撑内，}
+##{\frac 1hZ(hx,hy)=x+y+\frac h2[x,y]+R_h(x,y),\qquad |R_h(x,y)|\leq Ch^2(|x|+|y|)^3.}
+\p{因 #{\zeta} 位于紧集，相位修正 #{u=(h/2)\zeta([x,y])} 满足 #{|u|\leq C_Kh|x||y|}，而余相位模长至多为 #{C_Kh^2(|x|+|y|)^3}。对实数相位用 #{|e^{iu}-1-iu|\leq u^2/2} 和 #{|e^{iv}-1|\leq|v|}，得到指数展开的误差以 #{C_Kh^2((|x|+|y|)^3+|x|^2|y|^2)} 为界。乘以 #{|A(x)B(y)|} 后可积。}
+\p{\strong{求出首项。}在零阶和一阶积分中删去截断的误差比任意固定 #{h} 的幂更小，这是[Schwartz 尾估计](0I87)的同一换元论证，也适用于乘了有限次多项式的核。零阶积分由 [Fourier 反演](0I80)为 #{ab}，而}
+##{\int x_jA(x)e^{i\zeta(x)}\,dx=\frac 1i\partial_ja(\zeta),\qquad \int y_kB(y)e^{i\zeta(y)}\,dy=\frac 1i\partial_kb(\zeta).}
+\p{所以 #{(ih/2)\zeta([x,y])} 的积分为 #{-(ih/2)\{a,b\}_{\mathfrak g}}，余项按第一步为 #{O_K(h^2)}。此处的结论是紧频率集上的函数估计；将其用于随 #{h} 收缩的符号族或一致算子余项，需要另外的导数估计。}

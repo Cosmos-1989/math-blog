@@ -1,0 +1,19 @@
+\title{光滑截断保留半面积函数的能量下界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Monk–Naud](icm2026-monk-naud-spectra)，§1.1.3；Cheeger 余面积证明中的正部逼近步骤}
+
+\p{设 #{X} 是连通[紧双曲曲面](0GS1)，#{h} 为其[Cheeger 常数](0GS4)，#{f:X\to\mathbb R} 光滑，且 #{\mu\{f>0\}\leq\mu(X)/2}。记 #{f_+=\max(f,0)}。则}
+##{\frac{h^2}{4}\int_Xf_+^2\,d\mu\leq\int_{\{f>0\}}|\nabla f|^2\,d\mu.}
+\p{正部在零水平集处未必光滑，故先构造光滑函数再取极限。}
+
+\p{\strong{构造截断。}取光滑函数 #{\chi:\mathbb R\to[0,1]}，使它在 #{t\leq 0} 时为零、在 #{t\geq 1} 时为一。例如置 #{b(t)=e^{-1/t}}（#{t>0}）及 #{b(t)=0}（#{t\leq 0}），可取 #{\chi(t)=b(t)/(b(t)+b(1-t))}。对 #{\varepsilon>0} 令}
+##{\psi_\varepsilon(t)=\int_0^t\chi(s/\varepsilon)\,ds,\qquad v_\varepsilon=\psi_\varepsilon\circ f.}
+\p{于是 #{0\leq v_\varepsilon\leq f_+}，#{v_\varepsilon\to f_+} 逐点成立，且 #{\nabla v_\varepsilon=\chi(f/\varepsilon)\nabla f}。特别地，#{\{v_\varepsilon>0\}\subseteq\{f>0\}}，仍至多占一半面积。}
+
+\p{\strong{先证明光滑情形。}对 #{u=v_\varepsilon^2} 应用[等周梯度不等式](0I00)，再用 [Schwarz 不等式](004S)，得到}
+##{h\int_Xv_\varepsilon^2\leq 2\int_Xv_\varepsilon|\nabla v_\varepsilon|\leq 2\left(\int_Xv_\varepsilon^2\right)^{1/2}\left(\int_X|\nabla v_\varepsilon|^2\right)^{1/2}.}
+\p{若平方范数为零，所需结论直接成立；否则约去其平方根再平方，得 #{(h^2/4)\int_Xv_\varepsilon^2\leq\int_X|\nabla v_\varepsilon|^2}。}
+
+\p{\strong{取极限。}由于 #{X} 紧、#{f} 光滑，#{f_+^2} 与 #{|\nabla f|^2} 均可积。左边的被积函数由 #{f_+^2} 支配；右边由 #{|\nabla f|^2} 支配，并逐点趋于 #{1_{\{f>0\}}|\nabla f|^2}，在 #{f=0} 处始终为零。[支配收敛定理](0I8I)给出所述不等式。}

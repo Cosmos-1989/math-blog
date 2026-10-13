@@ -1,0 +1,10 @@
+\title{有限测度的 Lebesgue 集可由有限矩形并逼近}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{E\subseteq\mathbb R^d} 为有限 [Lebesgue 测度](00XV)的集合。对每个 #{\varepsilon>0}，存在有限个有界矩形的并 #{F}，使 #{|E\mathbin\triangle F|<\varepsilon}。这里 #{E\mathbin\triangle F=(E\setminus F)\cup(F\setminus E)}，竖线表示测度。}
+
+\p{\strong{固定有限盒。}先限制在半开盒 #{Q=\lbrack -R,R\rparen^d}。半开矩形的有限并构成 #{Q} 内的集合代数 #{\mathcal A}。令 #{\mathcal D} 为 #{Q} 中可测且能以任意小对称差测度被 #{\mathcal A} 逼近的集合族。它对相对补封闭，因为取补不改变对称差；也对有限并封闭，因为并集的对称差测度不超过各项误差之和。}
+\p{若 #{E_j\in\mathcal D}，令 #{E=\bigcup_jE_j}。[单调收敛](0A7A)及 #{|Q|<\infty} 给出 #{|E\setminus\bigcup_{j\leq N}E_j|\to 0}。选 #{N} 使该尾小于 #{\varepsilon /2}，再把前 #{N} 项各以误差 #{\varepsilon /(2N)} 逼近，即知 #{E\in\mathcal D}。故 #{\mathcal D} 是包含矩形的 [σ-代数](00Q0)。每个相对开集是有理端点开矩形与 #{Q} 相交后的可数并，所以 #{\mathcal D} 包含所有 [Borel 集](00QD)。}
+\p{\strong{完备化与截断。}Lebesgue 测度是 Borel 测度的[完备化](00QA)，因此每个 Lebesgue 集与某 Borel 集只差零测集，不影响逼近误差。这证明了 #{Q} 内的结论。对一般有限测度 #{E}，取 #{R} 足够大，使 #{|E\setminus Q|<\varepsilon /2}，再在 #{Q} 内以误差 #{\varepsilon /2} 逼近即可。将半开矩形换成开矩形仅改变边界；矩形边界可用总厚度任意小的有限薄盒覆盖，故测度为零。}

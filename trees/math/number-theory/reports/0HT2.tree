@@ -1,0 +1,18 @@
+\title{有限维 Haar 余核的每个同构类有多大概率}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sawin，§4](icm2026-sawin-probability)；[Wood，Cohen-Lenstra heuristics and local conditions，arXiv:1710.01350v1，§2](https://arxiv.org/pdf/1710.01350v1)中的矩形余核描述；下述有限维公式由核与生成元计数证明}
+
+\p{固定素数 #{p}、整数 #{n\geq 1,u\geq 0}，令 #{C_n} 为 [Haar 随机矩阵余核](0GKI)。给定有限阿贝尔 #{p} 群 #{G}，令 #{r=\dim_{\mathbb F_p}G/pG}。若 #{r>n}，则 #{\mathbb P(C_n\cong G)=0}；若 #{r\leq n}，则}
+##{\mathbb P(C_n\cong G)=\frac 1{|G|^u|\operatorname{Aut}G|}
+\prod_{i=u+1}^{n+u}(1-p^{-i})\prod_{j=0}^{r-1}(1-p^{j-n}).}
+\p{群同态与 #{\mathbb Z_p} 模同态在此相同，因为群被某个 #{p^a} 杀死，标量作用由整数模 #{p^a} 决定。平凡群取 #{r=0} 和空乘积 #{1}。}
+\p{\strong{数可能的像子模。}满足 #{\mathbb Z_p^n/L\cong G} 的子模 #{L} 与满射 #{\mathbb Z_p^n\to G} 的核对应。固定一个核后，满射由商到 #{G} 的同构确定，恰有 #{|\operatorname{Aut}G|} 个。[模 #{p} 生成元计数](0GKJ)给出}
+##{\#\{L:\mathbb Z_p^n/L\cong G\}
+=\frac{|G|^n}{|\operatorname{Aut}G|}\prod_{j=0}^{r-1}(1-p^{j-n}).}
+\p{#{r>n} 时不存在生成 #{G/pG} 的 #{n} 元组，故第一种情形成立。}
+\p{\strong{固定一个 #{L}。}它的环境 Haar 质量为 #{|G|^{-1}}，因为商的各陪集等质量。所以全部 #{n+u} 列落在 #{L} 的概率为 #{|G|^{-(n+u)}}。在该事件下，各列仍独立，且服从 #{L} 上归一化 [Haar 测度](00T1)。[有限指数子模的自由基](0HT0)把它们识别为 #{\mathbb Z_p^n} 中的独立均匀列。}
+\p{这些列生成 #{L} 当且仅当其模 #{pL} 的像张成 #{L/pL}。必要性直接；反向时从模 #{p} 的满秩矩阵中选取 #{n} 个独立列，其 #{n\times n} 行列式为单位，伴随矩阵除以该单位给出 #{\mathbb Z_p} 上的逆，所以这 #{n} 列已生成整个自由模。逐行计数满秩 #{n\times(n+u)} 矩阵，生成概率为}
+##{\prod_{j=0}^{n-1}(1-p^{j-(n+u)})=\prod_{i=u+1}^{n+u}(1-p^{-i}).}
+\p{将这个概率乘以全部列落入 #{L} 的概率，再对有限个 #{L} 求和。不同像子模的事件不交，且像恰为其中一个 #{L} 当且仅当余核同构于 #{G}。约去 #{|G|^n} 即得公式。余核为有限群的概率为 #{1}，由[行列式零测集论证](0HT1)保证。}

@@ -1,0 +1,17 @@
+\title{最小公倍数具有初等指数上界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[CDT，分母型 (2.1)](nt-cdt-icm2026)的初等分母估计；二项式系数计算}
+
+\p{令 [#{D(t)}](0GCA) 为不超过 #{t} 的正整数的最小公倍数。对 #{t\geq 0}，有 #{\log D(t)\leq 4t\log 2}。因此统一分母型 #{(b_1,\ldots,b_r)} 的分母链 #{\Delta_n=\prod_jD(b_jn)} 满足 #{\Delta_n\mid\Delta_{n+1}} 以及}
+##{\log\Delta_n\leq 4(\log 2)(b_1+\cdots+b_r)n.}
+
+\p{\strong{把素数幂放进二项式系数。}以 #{v_p(a)} 记非零整数 #{a} 中素因子 #{p} 的指数。对整数 #{N\geq 1}，#{D(2N)/D(N)} 中素数 #{p} 的指数，等于满足 #{N<p^a\leq 2N} 的正整数 #{a} 的个数。另一方面，逐次计数阶乘中 #{p^a} 的倍数，得到}
+##{v_p\binom{2N}{N}=\sum_{a\geq 1}\left(\left\lfloor\frac{2N}{p^a}\right\rfloor -2\left\lfloor\frac N{p^a}\right\rfloor\right).}
+
+\p{每项非负，且当 #{N<p^a\leq 2N} 时等于一。因此 #{D(2N)/D(N)} 整除 #{\binom{2N}{N}}，后者不超过 #{2^{2N}}。从 #{D(1)=1} 开始，对二的幂递推得 #{\log D(2^k)\leq(2^{k+1}-2)\log 2}。}
+
+\p{对整数 #{n\geq 2}，取最小的 #{2^k\geq n}，则 #{2^k<2n}。由整除单调性得到 #{\log D(n)<4n\log 2}；#{n=0,1} 直接成立。最后取 #{n=\lfloor t\rfloor} 即得实参数版本。分母链的整除性同样由每个 #{D(b_jn)} 的整除单调性得到。}
+
+\p{更精确的渐近式 #{\log D(t)=t+o(t)} 是以素数幂计数函数表述的素数定理；CDT 长文 §7.3 的式 (7.3.10) 后使用这个外部输入。初等上界已经足够用于[带指定分母增长率的维数界](0HK6)，只是常数较宽。}

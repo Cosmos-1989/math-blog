@@ -1,0 +1,13 @@
+\title{单射微分给出局部距离下界与小球体积界}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{F:U\subseteq\mathbb R^m\to\mathbb R^n} 连续可微，#{0\in U}，且[全微分](0A33) #{A=DF_0} 单射。则存在 #{r,c>0}，使 #{x,y\in B(0,r)} 时 #{|F(x)-F(y)|\geq c|x-y|}。因此对任意 #{z\in\mathbb R^n}、#{\varepsilon>0}，}
+##{\operatorname{vol}_m\{x\in B(0,r):|F(x)-z|<\varepsilon\}\leq v_m(2\varepsilon /c)^m,}
+\p{其中 #{\operatorname{vol}_m} 是 [Lebesgue 体积](00XV)，#{v_m} 是 #{\mathbb R^m} 单位球的体积。}
+
+\p{\strong{距离估计。}单位球面紧，且 #{|Av|>0}，由[极值定理](0A3A)可取 #{s=\min_{|v|=1}|Av|>0}。由 #{DF} 连续，缩小 #{r} 使 #{\|DF_x-A\|\leq s/2}。沿线段用[微积分基本定理](0A3C)，}
+##{F(x)-F(y)=A(x-y)+\int_0^1(DF_{y+t(x-y)}-A)(x-y)\,dt.}
+\p{第二项模长至多为 #{s|x-y|/2}，第一项至少为 #{s|x-y|}，故可取 #{c=s/2}。}
+\p{\strong{体积估计。}若所计集合非空，选其中一点 #{x_0}。集合内任意 #{x} 满足 #{c|x-x_0|\leq|F(x)-F(x_0)|<2\varepsilon}，所以整个集合包含于半径 #{2\varepsilon /c} 的球内。测度的单调性及缩放公式即得结论。}

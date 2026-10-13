@@ -1,0 +1,15 @@
+\title{亚纯拉回的 Cauchy 估计控制首个不同系数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Calegari–Dimitrov–Tang，arXiv:2408.15403v2，附录 B.3，式 (B.3.1)–(B.3.2)](https://arxiv.org/abs/2408.15403v2)；全纯参数映射特例，中文改写，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)}
+
+\p{设 #{m\geq 1}，#{f_1,\ldots,f_m} 是零附近的全纯函数芽。设 #{\varphi} 在闭单位圆盘邻域全纯，#{\varphi(0)=0}，#{\lambda=|\varphi'(0)|>0}。假设 #{g_i=f_i\circ\varphi} 在该邻域延拓为单值[亚纯函数](0ALW)。选多项式 #{h}，使 #{h(0)=1} 且全部 #{hg_i} 在闭圆盘邻域全纯。这样选取是可能的：该紧区域附近只有有限多个极点，按最大极点阶数相乘，再于零点归一化即可。记}
+##{B=\log\max\left(1,\max_{|z|=1}|\varphi(z)|\right),\qquad C=\max\left(1,\max_i\max_{|z|=1}|h(z)g_i(z)|\right).}
+
+\p{设 #{Q_i\in\mathbb Z[x]} 次数小于 #{D}，各系数绝对值不超过 #{T}，且 #{F=\sum_iQ_if_i=\beta x^n+O(x^{n+1})}。则}
+##{|\beta|\leq mDT C\exp(BD)\lambda^{-n}.}
+
+\p{\strong{消去极点。}函数 #{V(z)=h(z)\sum_iQ_i(\varphi(z))g_i(z)} 全纯，其首项为 #{\beta\varphi'(0)^nz^n}。在单位圆上，每项 #{|\varphi(z)^j|\leq e^{BD}}，故 #{|V(z)|\leq mDT C e^{BD}}。}
+
+\p{\strong{提取系数。}[Cauchy 积分公式](0BAD)给出首项系数的绝对值不超过圆周最大值，除以 #{\lambda^n} 即得结论。应用于两组系数在 #{0,\ldots,T-1} 中的多项式之差时，便得到[动态抽屉原理](0HK4)要求的首个不同系数间距。}

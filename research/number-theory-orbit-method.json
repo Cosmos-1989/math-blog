@@ -8,7 +8,7 @@
     "status": "report-theme-integrated-from-primary-literature",
     "source_kind": "Official talk title; no corresponding proceedings chapter located; author research paper and earlier same-title lecture used explicitly as supporting literature",
     "sources": [
-      {"url": "https://ultronozm.github.io/math/standard.html", "version": "author HTML timestamp 2026-07-04 09:12:17", "read": "Sections 1.1, 1.2, 1.3.2-1.3.4, 2.14.1-2.14.5; remaining proof architecture inspected but not full 256-page proof read"},
+      {"url": "https://ultronozm.github.io/math/standard.html", "version": "author HTML timestamp 2026-07-04 09:12:17", "read": "Sections 1.1, 1.2, 1.3.2-1.3.4, 2.14.1-2.14.5; continuation read section 7.3.3 (anchors sec:parameter-tau, lem:construction-tau-from-theta and defn:parameter-tau-pi-T, including the compactness lemma; references 7.6-7.8 name statements, not sections) and section 13 Fourier conventions, symbol classes, 13.5.1-13.5.4, 13.6.1-13.6.3; full 256-page global proof not read"},
       {"url": "https://arxiv.org/abs/2109.15230v3", "version": "v3, 2026-06-10", "read": "Metadata only; HTML exceeds web tool size limit. Exact theorem constants taken from separately identified author HTML, not assumed identical."},
       {"url": "https://math.mit.edu/~drew/MITNT/PaulNelsonSlides.pdf", "version": "MIT seminar 2021-02-23", "read": "Slides 1-42 including branching, coadjoint orbits, localization, stability, transverse commutator and compact quotient summaries. This is not relabelled ICM2026 slides."}
     ],
@@ -16,9 +16,12 @@
     "coverage": {
       "L-functions and subconvexity": ["0H41", "0H42", "0H43", "0H44", "0H45", "0H46", "0H47", "0H4R", "0H4S", "0H4T", "0H4U", "0H4V", "0H4X", "0H4Y", "0H4Z", "0H50", "0H52"],
       "Orbit and microlocal foundations": ["0H48", "0H49", "0H4A", "0H4B", "0H4C", "0H4D", "0H4E", "0H4F", "0H4G", "0H4H", "0H4I", "0H4J", "0H4K", "0H51", "0H53"],
-      "Restriction and stability": ["0H4L", "0H4M", "0H4N", "0H4P", "0H4Q"]
+      "Restriction and stability": ["0H4L", "0H4M", "0H4N", "0H4P", "0H4Q"],
+      "Fixed Schwartz semiclassical calculus with proofs": ["0I80", "0I81", "0I82", "0I83", "0I84", "0I85", "0I86", "0I87", "0I88", "0I8F", "0I8G", "0I8H"],
+      "Arbitrary rank stable orbit local geometry with proofs": ["0I8A", "0I8B", "0I8C", "0I8D", "0I8E"],
+      "Analytic prerequisites": ["0I8I", "0I8J", "0I8K", "0I8L", "0I8M"]
     },
-    "deferred": ["Full symbol calculus and uniform relative-character asymptotics", "Higher-rank transverse volume estimates", "Eisenstein wave-packet growth and the full global subconvexity proof", "General Gan-Gross-Prasad period identities and Ratner-based average results", "An actual ICM2026 proceedings manuscript remains unlocated"]
+    "deferred": ["General-order or shrinking-symbol Lie calculus and uniform relative-character asymptotics; fixed-Schwartz Euclidean all-order composition, group cutoff errors and compact-frequency first group correction are now proved", "Higher-rank relative transverse volume estimates; arbitrary-rank free stabilizers and local single-orbit small-ball bounds are now proved, which do not imply the relative estimate", "Eisenstein wave-packet growth and the full global subconvexity proof", "General Gan-Gross-Prasad period identities and Ratner-based average results", "An actual ICM2026 proceedings manuscript remains unlocated"]
   }],
   "entries": [
     ["icm2026-nelson", [], "Separate verified ICM talk identity from earlier lecture and research versions"],
@@ -37,12 +40,12 @@
     ["0H4C", ["00TX", "00MQ", "0124", "00MU"], "Define strong continuity and closed invariant-subspace convention"],
     ["0H4D", ["0H48", "0H4C", "0F00"], "Define smooth vectors and domain of differentiated action"],
     ["0H4E", ["0H4C", "00T1", "00Q5", "00MT", "00M4", "0H53"], "Construct weak integrated operator and prove L1 norm bound"],
-    ["0H4F", ["00N9", "0A32", "00Q5"], "Define Schwartz class independently of unrelated categorical Schwartz spaces"],
+    ["0H4F", ["00N9", "0A32", "00Q5", "00MD"], "Define Schwartz class and its uniformly bounded seminorm families independently of unrelated categorical Schwartz spaces"],
     ["0H4G", ["0H4F", "00XV"], "Fix Fourier signs and prove translation and modulation identities"],
-    ["0H4H", ["0H4G"], "Compute Gaussian Fourier transform by a first-order equation"],
+    ["0H4H", ["0H4G", "0I8I", "0I8L"], "Compute Gaussian Fourier transform by a first-order equation and normalize its integral"],
     ["0H4I", ["0H4G", "0H4H", "0H4U"], "Distinguish ordinary from semiclassical frequency width"],
     ["0H4J", ["0H4F", "0H4G", "0F51"], "Define absolutely convergent quantization for Schwartz symbols"],
-    ["0H4K", ["0H48", "0H4C", "0H4F", "0H4G", "0H4E"], "Give local group quantization with negative Fourier phase, Jacobian and compact cutoff explicit"],
+    ["0H4K", ["0H48", "0H4C", "0H4F", "0H4G", "0H4E", "0I80"], "Give local group quantization with negative Fourier phase, Jacobian and compact cutoff explicit"],
     ["0H4L", ["0124", "013A"], "Prove one-dimensional intertwiner comparison, retain normalization"],
     ["0H4M", ["0H4C", "00MS"], "Prove finite-group averaging is orthogonal projection"],
     ["0H4N", ["0H48", "0H4C"], "Define period with convergence and quotient-measure assumptions"],
@@ -59,12 +62,34 @@
     ["0H50", ["0F58", "0H4X"], "Prove product formula for rational ideles"],
     ["0H51", ["0A33", "00ER", "0A34"], "Prove inverse function theorem via explicit contracting iteration"],
     ["0H52", ["0F5D"], "Define nonarchimedean genericity and Whittaker functions, cite multiplicity one"],
-    ["0H53", ["00Q9", "00QB", "0A7A", "0A87", "00Q5"], "Prove Fubini-Tonelli by rectangles, lambda systems and monotone approximation"]
+    ["0H53", ["00Q9", "00QB", "0A7A", "0A87", "00Q5"], "Prove Fubini-Tonelli by rectangles, lambda systems and monotone approximation"],
+    ["0I80", ["0H4F", "0H4G", "0I8I", "0H53", "0H4H", "0I8L"], "Prove Schwartz Fourier inversion by Gaussian regularization"],
+    ["0I81", ["0A6A", "00M4", "004S", "0H53"], "Prove Schur kernel estimate on all L2 classes"],
+    ["0I82", ["0H4J", "0A6A", "0H4F", "0I81"], "Prove h-uniform operator norm using kernel integration by parts"],
+    ["0I83", ["0H4G", "0H4J", "0H53", "0I80", "0I82", "0I8K"], "Derive exact partial-Fourier composition formula"],
+    ["0I84", ["0H4F", "0I83", "0H4U", "0I8J", "0I80", "0I82"], "Prove all finite orders with uniform Schwartz remainder and L2 error"],
+    ["0I85", ["0BL2", "0H4J", "0I84"], "Deduce commutator leading term with explicit sign and O(h2) operator error"],
+    ["0I86", ["0A32"], "Prove nonstationary phase by iterated integration by parts"],
+    ["0I87", ["0H48", "0H4K", "0I80", "0H4E"], "Prove fixed-Schwartz cutoff errors uniformly in unitary representation"],
+    ["0I88", ["0H4C", "0H4E", "0H53", "0I80"], "Prove exact symbol multiplication for additive group representations"],
+    ["0I8A", ["00GM", "00D3", "00GC"], "Define cyclic vector and prove determination of commuting maps"],
+    ["0I8B", ["0H4P", "0I8A", "00MH", "00SO", "0F0B"], "Prove spectral separation forces cyclic row and column without semisimplicity"],
+    ["0I8C", ["0H4P", "0H4B", "00BK", "0I8B"], "Prove group and infinitesimal stabilizers trivial in arbitrary rank"],
+    ["0I8D", ["0A33", "00XV", "0A3A", "0A3C"], "Prove quantitative local lower Lipschitz and preimage volume bound"],
+    ["0I8E", ["0H4P", "0F0B", "00T1", "0I8C", "0I8D"], "Prove local single-orbit Haar small-ball bound uniformly on stable compact sets"],
+    ["0I8F", ["00M4", "0H48"], "Prove second-order BCH by convergent matrix power series"],
+    ["0I8G", ["0I8H", "0I8F", "0I87", "0I80"], "Prove first Lie-star correction with compact-frequency O(h2) error only"],
+    ["0I8H", ["0H48", "0I80", "0H4K", "0H53", "0I8I"], "Define exact star convolution and prove operator composition"],
+    ["0I8I", ["00Q2", "00Q5", "0A7A"], "Prove dominated convergence via Fatou from monotone convergence"],
+    ["0I8J", ["0A32", "0A34", "0A3C"], "Prove multivariable integral Taylor remainder from one-variable FTC"],
+    ["0I8K", ["00XV", "0A6A", "00EB", "0H4F", "0F62", "0I8M", "0I8I"], "Prove smooth compact-support density by rectangle approximation and explicit cutoffs"],
+    ["0I8L", ["0H53", "0A3C"], "Prove Gaussian normalization using only one-variable substitutions and Tonelli"],
+    ["0I8M", ["00XV", "0A7A", "00Q0", "00QD", "00QA"], "Prove rectangle approximation by finite-measure sigma-algebra argument"]
   ],
-  "proofs_written": ["0H47", "0H4B", "0H4E", "0H4H", "0H4L", "0H4M", "0H4Q", "0H4R", "0H4X", "0H50", "0H51", "0H53"],
+  "proofs_written": ["0H47", "0H4B", "0H4E", "0H4H", "0H4L", "0H4M", "0H4Q", "0H4R", "0H4X", "0H50", "0H51", "0H53", "0I80", "0I81", "0I82", "0I83", "0I84", "0I85", "0I86", "0I87", "0I88", "0I8B", "0I8C", "0I8D", "0I8E", "0I8F", "0I8G", "0I8H", "0I8I", "0I8J", "0I8K", "0I8L", "0I8M"],
   "research_statements_without_local_proof": ["0H45", "0H46", "0H42", "0H4V", "0H4Y", "0H52"],
   "existing_notes_reused": ["0F5B", "0F5C", "0F5D", "0F5F", "0F5G", "0F58", "0F59", "0F00", "00MQ", "00MH", "00T1", "0C80"],
   "existing_edit_suggestions": [],
-  "terminology": {"status": "partially-unverified", "checked": "2026-10-13", "attempted": ["https://bananaspace.org/wiki/李群", "https://bananaspace.org/wiki/酉表示"], "result": "Pages inaccessible to web tool; existing site Lie/Hilbert/Whittaker terminology retained; no claim of full Banana Space alignment"},
+  "terminology": {"status": "partially-unverified", "checked": "2026-10-13", "attempted": ["https://bananaspace.org/wiki/李群", "https://bananaspace.org/wiki/酉表示"], "result": "Pages inaccessible to web tool; existing site Lie/Hilbert/Whittaker terminology retained; no claim of full Banana Space alignment", "continuation": "Domain-restricted searches for cyclic vectors, Fourier transformation and dominated convergence returned no results; established site conventions retained without claiming fresh verification."},
   "checks": ["Strict delta endpoint", "mu_j+it for Gamma argument", "Finite conductor polynomial cost retained", "Inner product linear in second variable", "2x2 commutator lemma checked algebraically"]
 }

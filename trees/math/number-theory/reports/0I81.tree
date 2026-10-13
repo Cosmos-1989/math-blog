@@ -1,0 +1,12 @@
+\title{积分算子的 Schur 范数估计}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{K(x,y)} 是 #{\mathbb R^d\times\mathbb R^d} 上的可测函数，且有有限常数 #{A,B\geq 0} 满足}
+##{\mathop{\mathrm{ess\,sup}}_x\int|K(x,y)|\,dy\leq A,\qquad \mathop{\mathrm{ess\,sup}}_y\int|K(x,y)|\,dx\leq B.}
+\p{本质上确界允许忽略零测集。则 #{Tu(x)=\int K(x,y)u(y)\,dy} 定义 [L² 空间](0A6A)上的有界线性算子，其[算子范数](00M4)满足 #{\|T\|\leq\sqrt{AB}}。}
+
+\p{\strong{证明。}对固定 #{x}，在测度 #{|K(x,y)|\,dy} 下用 [Cauchy–Schwarz 不等式](004S)，得到}
+##{|Tu(x)|^2\leq\left(\int|K(x,y)|\,dy\right)\left(\int|K(x,y)||u(y)|^2\,dy\right).}
+\p{由 [Tonelli 定理](0H53)，第二个因子对几乎每个 #{x} 有限，因为其关于 #{x} 的积分不超过 #{B\|u\|_2^2}。因此定义积分绝对收敛。再对不等式积分并交换非负积分次序，得到 #{\|Tu\|_2^2\leq AB\|u\|_2^2}。改变 #{u} 的零测集代表不改变输出的等价类，同样由 Tonelli 定理保证。}

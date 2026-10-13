@@ -1,0 +1,12 @@
+\title{多项式平移的二项式矩阵}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Harvey–Sutherland II](https://math.mit.edu/~drew/conm13352.pdf)，定理 5.1 中的 T(a)}
+
+\p{设 #{K} 为[域](00D0)，#{g\geq 1}。次数小于 #{g} 的[多项式](0ALH)组成向量空间，按 #{1,x,\ldots,x^{g-1}} 排列基。对 #{a\in K}，平移 #{S_aP(x)=P(x+a)} 的列坐标[矩阵](00GK)为}
+##{T(a)_{ij}=\begin{cases}\binom{j-1}{i-1}a^{j-i},&i\leq j,\\0,&i>j.\end{cases}}
+\p{其中 #{\binom{u}{v}} 是从 #{u} 个位置选出 #{v} 个的个数，先取整数再映入 #{K}，因此正特征中不需除以可能为零的阶乘。把 #{(x+a)^{j-1}} 的各因子展开，选出 #{i-1} 个 #{x}，便得到第 #{j} 列。}
+\p{连续两次平移满足 #{S_aS_bP(x)=P(x+a+b)}。将两边写为同一基的列坐标，得到 #{T(a)T(b)=T(a+b)}，特别地 #{T(a)^{-1}=T(-a)}。例如 #{g=3} 时}
+##{T(a)=\begin{pmatrix}1&a&a^2\\0&1&2a\\0&0&1\end{pmatrix}.}
+\p{第一行恒为 #{(1,a,\ldots,a^{g-1})}。正是这一行使平移后的第一行数据能够成为原矩阵各列的多项式取值。}

@@ -1,0 +1,14 @@
+\title{部分和增长界怎样推出 Dirichlet 级数的局部一致收敛}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Kowalski，作者 PDF，引理 A.4.1 的分部求和方法](https://people.math.ethz.ch/~kowalski/probabilistic-number-theory.pdf)；附显式尾界与全纯性论证}
+
+\p{给定复数列 #{(a_n)}，令 #{A(x)=\sum_{n\leq x}a_n}。假设存在 #{C\geq 0,\alpha\geq 0}，使 #{|A(x)|\leq Cx^\alpha} 对所有 #{x\geq 1} 成立。则 [Dirichlet 级数](0H41) #{\sum_{n\geq 1}a_nn^{-s}} 在半平面 #{\operatorname{Re}s>\alpha} 上[局部一致收敛](00MG)，其和为[全纯函数](0A3G)。}
+\p{\strong{有限分部求和。}对整数 #{1\leq N<M}，在每个 #{[n,n+1]} 上积分常值 #{A(n)}，或直接把 #{a_n=A(n)-A(n-1)} 代入并消去相邻项，得到}
+##{\sum_{N<n\leq M}a_nn^{-s}=A(M)M^{-s}-A(N)N^{-s}+s\int_N^M A(t)t^{-s-1}\,dt.}
+\p{设 #{\sigma=\operatorname{Re}s>\alpha}。两个端点项各不超过 #{CN^{\alpha -\sigma}}，积分则由 #{\int_N^\infty t^{\alpha -\sigma -1}dt=N^{\alpha -\sigma}/(\sigma -\alpha)} 控制，因此}
+##{\left|\sum_{N<n\leq M}a_nn^{-s}\right|
+\leq CN^{\alpha -\sigma}\left(2+\frac{|s|}{\sigma -\alpha}\right).}
+\p{对任意非空紧集 #{K} 包含于该半平面，令 #{\sigma_0=\min_K\operatorname{Re}s>\alpha}、#{R=\max_K|s|}。右端一致地不超过 #{CN^{\alpha -\sigma_0}(2+R/(\sigma_0-\alpha))}，随 #{N\to\infty} 趋于零。复数的完备性先给逐点极限，此统一尾界再给紧集上的一致收敛。}
+\p{\strong{全纯性。}取任意闭圆盘包含于半平面。每个部分和是全纯函数，故满足 [Cauchy 积分公式](0BAD)。边界上一致收敛允许在有限长度的边界积分中取极限，于是极限函数在盘内仍由 #{(2\pi i)^{-1}\int f(z)/(z-w)\,dz} 表示。在更小圆盘上，差商的核一致收敛到 #{(z-w)^{-2}}，因为 #{w} 到边界的距离有正下界；因此该积分关于 #{w} 可复微分。任意点都可放进这样的圆盘，故和函数全纯。}

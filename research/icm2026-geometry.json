@@ -149,17 +149,103 @@
       "reading_scope": {
         "edition": "SIAM Proceedings of the International Congress of Mathematicians 2026, vol. 3, Invited Lectures (Sections 1–4), pp. 434–453; published online 2026-07-13",
         "read": "完整阅读出版章节 HTML §§1–4，包括随机模型、历史常数、迹方法、Friedman–Ramanujan 定义、强收敛、共振及引用定理；核对所用书目条目。",
-        "not_read": "未全文阅读所有原始谱隙、随机覆盖、强收敛及测地线统计论文；未声称报告的证明概要等于完整证明。未对照排印 PDF 或作者 LaTeX 源。",
+        "not_read": "未全文阅读所有原始谱隙、随机覆盖、强收敛及测地线统计论文。报告本身未对照排印PDF或作者LaTeX源；本轮另已读取Hide–Magee v3的指定PDF正文段落，准确范围见supplementary_sources。未把报告证明概要或该40页论文的局部读取记为全文证明核验。",
         "license": "Copyright International Mathematical Union 2026; CC BY 4.0, as stated on SIAM chapter page",
         "adaptation": "署名中文改写；新增1/4能量计算、覆盖谱分解、概率步骤、傅里叶乘子及置换计数的逐步证明。",
-        "source_record": "research/sources/number-theory/combinatorics-spectra/reading.json"
+        "source_record": "research/sources/number-theory/combinatorics-spectra/reading.json",
+        "continuation_read": "重新核对SIAM HTML §4.2–4.4；读取Hide–Magee原论文v3关于紧系数压缩和§7谱排除的实际证明。Cheeger支线另核对McMullen §17、Knill的Sard定理陈述和MIT紧算子定义，具体页码与未读部分如下。",
+        "supplementary_sources": [
+          {
+            "id": "hide-magee-2107.05292v3",
+            "author": [
+              "Will Hide",
+              "Michael Magee"
+            ],
+            "title": "Near optimal spectral gaps for hyperbolic surfaces",
+            "url": "https://arxiv.org/pdf/2107.05292v3",
+            "edition": "arXiv:2107.05292v3, 2023-02-15, 40 pages",
+            "read": [
+              "§1.2，印刷页5–7，预解算子方法概述。",
+              "§3，定理3.1、命题3.3、推论3.4的陈述，印刷页11–12。",
+              "§6.1，紧系数构造与引理6.1的陈述及证明，印刷页29–30。",
+              "§6.2推论6.2及所显示的单位等价与1/5范数结论，印刷页31。",
+              "§6.3命题6.3完整有限秩逼近证明，印刷页32。",
+              "§7全部，印刷页33–34：有限网格、2/5到3/5、尖点1/5、总余项4/5及自伴性谱排除。"
+            ],
+            "not_read": [
+              "没有全文核验§§4–5几何预解核和尖点估计的证明。",
+              "没有读取被引用Bordenave–Collins、Pisier原论文的完整证明。",
+              "未读取§8紧化论证；未声称读完40页。"
+            ],
+            "license": "arXiv non-exclusive distribution license (https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html)，不是CC BY；只据数学内容独立表述，不复制原文长段。",
+            "caveats": [
+              "定理1.1陈述用半开[0,1/4-epsilon)，§7证明排除到闭端点；固定epsilon的闭区间表述也可由epsilon/2版本推出。",
+              "本轮使用PDF抽取正文，没有声称成功完成页面图像复核。"
+            ],
+            "local_files": []
+          },
+          {
+            "id": "mcmullen-ergodic-20201224",
+            "author": "Curtis T. McMullen",
+            "title": "Ergodic theory, geometry and dynamics",
+            "url": "https://abel.math.harvard.edu/~ctm/papers/home/text/class/harvard/275/ergodic/course.pdf",
+            "edition": "2020-12-24, 246 pages",
+            "read": [
+              "§17印刷页142–145：Cheeger定理17.2、定理17.3证明中的余面积公式、定理17.4和有限体积Cheeger论证。"
+            ],
+            "not_read": [
+              "未通读246页讲义。",
+              "未从该讲义获得全局余面积公式或Sard定理的证明。"
+            ],
+            "license": "作者托管PDF未见明确再利用许可；不推定为CC授权，采用独立数学表述。",
+            "caveats": [
+              "有限体积论证改用两侧至多半面积的中位数，允许平台集有正测度。",
+              "等周界直接写h*Area<=Length，不复制讲义中V(t)<=h*area(X_t)的疑似排印错误；不用未经论证的分布函数微分。"
+            ],
+            "local_files": []
+          },
+          {
+            "id": "knill-geometry-1995",
+            "author": "Oliver Knill",
+            "title": "Introduction to Geometry and geometric analysis",
+            "url": "https://people.math.harvard.edu/~knill/teaching/math109_1995/geometry.pdf",
+            "edition": "Caltech fall 1995 lecture notes, author-hosted PDF, 121 pages",
+            "read": [
+              "封面；§1.4正则水平集坐标构造相关段落，印刷页11–12；§1.5临界点/临界值定义及定理1.5.1的完整陈述，印刷页12–13。"
+            ],
+            "not_read": [
+              "未核验Sard定理的整个归纳证明；工具返回的部分证明文字不算完整证明读取。",
+              "未通读讲义。"
+            ],
+            "license": "作者托管PDF未见明确再利用许可；只据定理数学内容独立陈述。",
+            "local_files": []
+          },
+          {
+            "id": "mit-18102-2021-compact",
+            "author": [
+              "Casey Rodriguez (lecturer)",
+              "Andrew Lin (notes)"
+            ],
+            "title": "18.102: Introduction to Functional Analysis",
+            "url": "https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/8fb8d5c170f1613151aca71de21027bc_MIT18_102s21_full_lec.pdf",
+            "edition": "Spring 2021 full lecture notes, 125 pages",
+            "read": [
+              "封面作者信息；定义207与紧邻有限秩紧性说明，印刷页104；例209无穷维恒等算子不紧，印刷页105；课程页许可链接。"
+            ],
+            "not_read": [
+              "未通读讲义；未声称完整读取定理210证明。"
+            ],
+            "license": "MIT OpenCourseWare课程页链接CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)。本页独立表述通用数学定义和直接论证，source-license元数据保留来源许可。",
+            "local_files": []
+          }
+        ]
       },
       "deferred": [
         "双曲曲面谱算子的自伴实现、椭圆谱定理、有限面积非紧曲面连续谱起点的解析证明。0GS2明确引用这些输入。",
-        "Cheeger、Buser及Huber定理，Fenchel–Nielsen坐标存在唯一性，Wolpert辛形式公式与Weil–Petersson体积有限性的完整证明。",
+        "0I00–0I02已在光滑余面积公式0I07、Sard定理0I08及0GS2的谱变分表达这些明确输入下证明紧曲面Cheeger下界，含光滑截断与平台集的中位数处理。全局余面积、Sard本身及谱变分理论仍引用。Buser上界、Huber定理、FN坐标、Wolpert公式与WP体积有限性仍未给本地证明。",
         "Weil–Petersson主定理3.4的任意阶1/g展开、弱Friedman–Ramanujan函数技术、短边界复杂子曲面排除及一致余项估计。0GSE只定义逐点强形式，不以此替代定理3.6所需弱形式。",
         "完整Selberg迹公式和测地线统计积分公式。未照录HTML中可能缺失原始长度因子的式3.1；扩展前需对照正式PDF。",
-        "随机覆盖定理4.2、4.3的强收敛及几何算子比较、预解算子构造；自由群与曲面群群代数范数收敛的深层证明。",
+        "随机覆盖定理4.2、4.3仍引用。已证明小余项到预解算子0I03、紧系数压缩与矩阵比较传递0I04–0I05、有限网格一致化0I06；未证明几何预解算子构造、尖点范数界、紧系数及其Lipschitz估计、极限内部核1/5范数界，也未证明Bordenave–Collins/Pisier矩阵比较或曲面群强收敛。",
         "BS谱密度收敛定理和Buser–Sarnak序列存在性；0GSI只证明给定非分离短测地线后的二重覆盖计算。",
         "Brooks–Makover模型的详细构造和定理、无穷面积曲面的共振理论与定理4.1、章末未提供统一精确参数的多项式概率速率均未扩建专页。",
         "报告文献[62]按2025预印本身份引用；未另行查询其在报告出版后是否正式刊出。"

@@ -1,0 +1,12 @@
+\title{二进数何时是平方}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，例 5.9 的局部平方条件；逐次提升证明}
+
+\p{对 #{z\in\mathbb Q_2^\times}，写 #{z=2^m u}，其中 #{m=v_2(z)\in\mathbb Z}，#{u\in\mathbb Z_2^\times}。这里 #{\mathbb Q_2} 是[二进完备化](00SM)。则 #{z} 是平方当且仅当 #{m} 为偶数且 #{u\equiv 1\bmod 8}。}
+\p{\strong{必要性。}平方的赋值为原赋值的两倍。奇数的平方模八恒为一，故每个二进单位平方都满足所述同余。}
+\p{\strong{充分性。}设 #{u\equiv 1\bmod 8}。取奇数 #{r_3=1}。若 #{r_n^2\equiv u\bmod 2^n}，#{n\geq 3}，在 #{r_n} 与 #{r_n+2^{n-1}} 中选择 #{r_{n+1}}。两者的平方之差为}
+##{2^nr_n+2^{2n-2}\equiv 2^n\pmod{2^{n+1}}.}
+\p{因 #{r_n} 为奇数，恰有一个选择满足 #{r_{n+1}^2\equiv u\bmod 2^{n+1}}。又有 #{v_2(r_{n+1}-r_n)\geq n-1}，所以得到 [Cauchy 序列](00ER)；完备性给极限 #{r}，连续性给出 #{r^2=u}。若 #{m=2a}，则 #{(2^ar)^2=z}。}
+\p{例如整数平方模十六只能是 #{0,1,4,9}；若 #{z=6s^2} 且 #{v_2(z)=1}，则 #{s} 为单位，故 #{z\equiv 6\bmod 16}。这些较小模数已经能排除某些[二下降候选](0H88)。}

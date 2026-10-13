@@ -1,0 +1,14 @@
+\title{立方体的非负网格权重需要多少逼近精度}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Harper，§4 的有限权重条件化](icm2026-harper-probability)；分片线性权重的显式构造}
+
+\p{设整数 #{m,J\geq 1}。在 #{[0,1]} 上定义 #{h_k(t)=\max\{0,1-m|t-k/m|\}}，其中 #{0\leq k\leq m}。对多指标 #{v\in\{0,\ldots,m\}^J}，置 #{F_v(y)=\prod_{j=1}^Jh_{v_j}(y_j)}。则 #{F_v\geq 0}、#{\sum_vF_v=1}，且每个 #{F_v} 的 Euclidean [Lipschitz 常数](00FU)至多 #{m\sqrt J}。}
+\p{\strong{分解与局部性。}若 #{t\in[k/m,(k+1)/m]}，仅 #{h_k,h_{k+1}} 可能非零，且其和为 #{(k+1-mt)+(mt-k)=1}。端点也满足此式。把每个坐标的和相乘，即得 #{\sum_vF_v=1}；非零权重的中心在每个坐标上距 #{y} 至多 #{1/m}。}
+\p{\strong{Lipschitz 常数。}每个 #{h_k} 取值于 #{[0,1]} 且为 #{m} Lipschitz。逐个替换乘积中的因子，得到}
+##{|F_v(x)-F_v(y)|\leq\sum_{j=1}^J|h_{v_j}(x_j)-h_{v_j}(y_j)|
+\leq m\sum_{j=1}^J|x_j-y_j|\leq m\sqrt J\|x-y\|_2.}
+\p{最后一步是[有限和 Hölder 不等式](0A3M)的平方情形。用[次数参数为 #{D} 的 Bernstein 逼近](0HO0)，共有 #{(m+1)^J} 个权重，故其总误差参数满足}
+##{2\sum_v\|B_DF_v-F_v\|_\infty\leq\frac{(m+1)^JmJ}{\sqrt D}.}
+\p{细化网格会改善条件化的分辨率，同时增加权重个数与所需多项式次数。这个明确的成本说明，转移定理中的“逼近足够好”必须与乘积长度限制一起检查。}

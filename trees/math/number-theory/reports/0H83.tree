@@ -1,0 +1,18 @@
+\title{Cantor 约化为何保持除子类并严格降次}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stoll 讲义，2020-07-08 屏幕版](https://mathe2.uni-bayreuth.de/stoll/teaching/ArithHypKurven-SS2019/Skript-ArithHypCurves-pub-screen.pdf)，定理 4.18 的约化步骤}
+
+\p{设 #{k} 为特征不为二的[完美域](00SQ)，#{C:y^2=f(x)} 的 #{f} 无重根、次数 #{2g+1}。给定[半约化 Mumford 对](0H81) #{(u,v)}，#{d=\deg u>g}，写}
+##{f-v^2=\lambda u w,\qquad \lambda\in k^\times,\qquad w\text{ 首一}.}
+\p{则 #{(w,-v\bmod w)} 代表同一个 Jacobian 点，并且 #{\deg w<d}。因此反复进行此步一定得到[唯一约化代表](0H82)。}
+
+\p{\strong{次数下降。}#{\deg v<d}，所以}
+##{\deg w\leq\max\{2g+1,2d-2\}-d<d.}
+\p{最后一项严格小于 #{d} 使用 #{d>g}。#{f-v^2} 不会恒为零，因为一个无重根奇数次多项式不可能是平方。}
+\p{\strong{除子类不变。}设 #{D,E} 分别对应 #{(u,v)} 和 #{(w,v\bmod w)}。函数 #{y-v(x)} 的范数为 #{v^2-f=-\lambda uw}。在非分歧根处，另一因子 #{y+v(x)} 为单位，故零点的重数等于 #{uw} 的根重数；分歧根处 #{f-v^2} 为单根，而 #{y-v(x)} 的局部阶为一。因此有限零除子恰为 #{D+E}。}
+
+\p{#{y} 的极点阶为奇数 #{2g+1}，#{v(x)} 的极点阶为偶数 #{2\deg v}，首项不能相消；所以极点阶等于 #{\deg(uw)}。由此}
+##{\operatorname{div}(y-v)=D+E-(d+\deg w)\infty.}
+\p{又有 #{E+\iota E\sim 2(\deg w)\infty}，故 #{[D-d\infty]=[\iota E-(\deg w)\infty]}。#{\iota E} 的编码正是 #{(w,-v\bmod w)}。}

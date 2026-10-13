@@ -1,0 +1,14 @@
+\title{左量子化复合的有限阶展开与余项}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+
+\p{固定 [Schwartz 符号](0H4F) #{a,b\in\mathcal S(\mathbb R^{2d})} 和整数 #{N\geq 1}。设 #{c_h} 是[精确复合符号](0I83)。则}
+##{c_h(x,\xi)=\sum_{|\alpha|<N}\frac{(h/i)^{|\alpha|}}{\alpha!}(\partial_\xi^\alpha a)(x,\xi)(\partial_x^\alpha b)(x,\xi)+h^Nr_{N,h}(x,\xi),}
+\p{其中 #{0<h\leq 1} 时 #{r_{N,h}} 的每个 Schwartz 半范数有与 #{h} 无关的上界。因此相应算子余项的 L² 范数为 #{O_{a,b,N}(h^N)}；常数依赖记号见[渐近估计](0H4U)。}
+
+\p{\strong{展开。}在精确公式中对 #{a(x,\xi+h\eta)} 用[Taylor 积分余项](0I8J)。每个多项式项由 [Fourier 反演](0I80)化为}
+##{(2\pi)^{-d}\int e^{ix\cdot\eta}\eta^\alpha\widehat b_x(\eta,\xi)\,d\eta=i^{-|\alpha|}\partial_x^\alpha b(x,\xi).}
+\p{余项除以 #{h^N} 后为}
+##{r_{N,h}=\frac{N}{(2\pi)^d}\sum_{|\alpha|=N}\frac 1{\alpha!}\int_0^1\int e^{ix\cdot\eta}\eta^\alpha(1-t)^{N-1}(\partial_\xi^\alpha a)(x,\xi+th\eta)\widehat b_x(\eta,\xi)\,d\eta\,dt.}
+\p{\strong{一致控制。}对任意固定的 #{x,\xi} 导数，乘积法则只增加有限个 #{\eta} 的幂；#{h,t\leq 1} 不增加常数。给定非负整数 #{P,Q}，#{a} 的导数在任意第二变量处均以 #{(1+|x|)^{-P}} 为界，#{\widehat b_x} 的导数则以任意指定的 #{(1+|\xi|)^{-Q}(1+|\eta|)^{-R}} 为界。取 #{R} 大于所有出现的幂次加 #{d+1}，积分绝对值遂不超过 #{C(1+|x|)^{-P}(1+|\xi|)^{-Q}}。这给出所需全部半范数。最后应用[符号算子的一致范数界](0I82)。}

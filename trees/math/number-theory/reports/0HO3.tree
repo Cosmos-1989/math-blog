@@ -1,0 +1,21 @@
+\title{分数矩的有限转移怎样控制累计逼近误差}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Harper，§4，式 (4.2)](icm2026-harper-probability)；有界素数统计量上的定量有限版本}
+
+\p{采用[非负权重转移](0HO2)的全部假设及记号，尤其 #{NP^{JD}<r}。设 #{0<q<1}，记 #{\delta_v=2\varepsilon_v}、#{\Delta=\sum_v\delta_v}、#{\sigma_v=\sigma_v^f}、#{m_v=m_v^f}。则}
+##{\mathbb E_{\rm char}|S(\chi)|^{2q}
+\leq\sum_v\sigma_v^{1-q}m_v^q
++V^q\left(\Delta^q+\Delta^{1-q}+\Delta\right).}
+\p{所有零底数的正次幂均取零；若 #{V=0}，各 #{b_n=0}，结论为零等式。以下设 #{V>0}。}
+\p{\strong{先在特征标侧条件化。}[非负权重不等式](0GGD)与转移误差依次给出}
+##{\mathbb E_{\rm char}|S|^{2q}\leq
+\sum_v(\sigma_v^{\rm char})^{1-q}(m_v^{\rm char})^q
+\leq\sum_v(\sigma_v+\delta_v)^{1-q}(m_v+\delta_vV)^q.}
+\p{\strong{分离误差。}对 #{a,b\geq 0}、#{0<\theta<1}，有 #{(a+b)^\theta\leq a^\theta+b^\theta}。当 #{a>0} 时除以 #{a^\theta}，令 #{t=b/a}；函数 #{(1+t)^\theta -1-t^\theta} 在 #{t>0} 的导数非正，且在零点取零。#{a=0} 时为等式。将此不等式用在上述两个因子，其乘积除主项外还剩}
+##{V^q\sum_v\sigma_v^{1-q}\delta_v^q
++\sum_v\delta_v^{1-q}m_v^q
++V^q\sum_v\delta_v.}
+\p{因权重和为 #{1}，有 #{\sum_v\sigma_v=1}、#{\sum_vm_v=V}。[有限和 Hölder 不等式](0A3M)将前两项分别界为 #{V^q\Delta^q}、#{\Delta^{1-q}V^q}，即得结论。#{q=1} 则直接使用两侧二阶矩均为 #{V} 的等式。}
+\p{主项仍保留不同小素数状态下的二阶矩起伏。若再用 Hölder 把它界成 #{V^q}，就丢掉了获得节省的可能。此有限定理提供确定的转移误差；Harper 的[全范围低阶矩界](0GGA)还需在随参数增长的统计量族中优化截断与逼近，并估计随机主项。}
