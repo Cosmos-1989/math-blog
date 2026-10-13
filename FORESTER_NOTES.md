@@ -128,23 +128,22 @@ cd /path/to/forester2
 eval $(opam env)
 
 # 构建网站
-forester build forest.toml
+node scripts/build-site.mjs
 
 # 查看输出（默认）
-# output/math-blog/
+# build/site/（output/ 保留 Forester 中间 XML）
 ```
 
 ## 6. 本地预览
 
 ```bash
-cd output/math-blog
-python3 -m http.server 8080
+python3 -m http.server 8080 --bind 127.0.0.1 --directory build/site
 # 访问 http://localhost:8080
 ```
 
 ## 7. 实用技巧
 
-1. **分步测试**：每次修改后立即运行 `forester build` 检查错误
+1. **分步测试**：每次修改后运行 `node scripts/build-site.mjs` 构建并检查静态网站
 2. **简化公式**：复杂公式分段写，避免嵌套 `#{}`
 3. **查阅文档**：Forester 语法与标准 LaTeX 有差异，以本文档为准
 4. **清理缓存**：遇到奇怪错误时，删除 `output/` 目录重新构建

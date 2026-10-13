@@ -25,12 +25,19 @@ if (searchButton && ninja) {
 const toc = document.querySelector('.toc-panel');
 if (toc) toc.open = window.matchMedia('(min-width: 1051px)').matches;
 
-document.querySelectorAll('.toc-anchor').forEach(link => {
-  link.addEventListener('click', () => {
-    let target = document.getElementById(link.hash.slice(1));
-    while (target) {
-      if (target instanceof HTMLDetailsElement) target.open = true;
-      target = target.parentElement;
-    }
-  });
-});
+function revealFragment(hash = window.location.hash) {
+  let id;
+  try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
+  let target = document.getElementById(id);
+  const anchor = target;
+  while (target) {
+    if (target instanceof HTMLDetailsElement) target.open = true;
+    target = target.parentElement;
+  }
+  anchor?.scrollIntoView();
+}
+document.querySelectorAll('.toc-anchor').forEach(link =>
+  link.addEventListener('click', () => revealFragment(link.hash)));
+window.addEventListener('hashchange', () => revealFragment());
+// Includes direct bookmarks and redirects from /index.xml, after math layout.
+window.addEventListener('load', () => revealFragment());

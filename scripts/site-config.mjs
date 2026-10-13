@@ -12,3 +12,6 @@ if (siteUrl.protocol !== 'https:' || !siteUrl.pathname.endsWith('/') || siteUrl.
 }
 export const basePath = siteUrl.pathname;
 export const output = path.join(root, 'output', basePath);
+// Forester's intermediate XML is kept separate from the publishable website.
+export const staticRoot = path.join(root, 'build', 'site');
+export const staticOutput = path.join(staticRoot, basePath);

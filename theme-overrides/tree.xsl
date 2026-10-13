@@ -9,6 +9,8 @@
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" data-base-url="{/f:tree/@base-url}">
       <head>
+        <meta charset="UTF-8" />
+        <link rel="canonical" href="{/f:tree/f:frontmatter/f:uri}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
         <link rel="icon" type="image/svg+xml" href="{/f:tree/@base-url}shulin-mark.svg?v=20260926" />
@@ -23,7 +25,7 @@
           </xsl:if>
         </script>
         <script type="module" src="{/f:tree/@base-url}forester.js"></script>
-        <script type="module" src="{/f:tree/@base-url}reading.js?v=20260924"></script>
+        <script type="module" src="{/f:tree/@base-url}reading.js?v=20261013"></script>
         <title>
           <xsl:value-of select="/f:tree/f:frontmatter/f:title/@text" />
         </title>

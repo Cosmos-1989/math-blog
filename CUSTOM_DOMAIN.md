@@ -5,11 +5,11 @@
 
 ## 发布配置
 
-- `forest.toml` 定义正式地址。Forester 在 `output/` 根目录生成网站，
+- `forest.toml` 定义正式地址。静态网站在 `build/site/` 目录生成，
   词条路径为 `/009E/` 等，不再带 `/math-blog/` 前缀。
 - GitHub 仓库的 Settings > Pages > Custom domain 设为 `opetope.cc`。
   本站通过 Actions 发布，仅提交 `CNAME` 文件不会修改 GitHub 的域名绑定。
-- `.github/workflows/deploy.yml` 发布 `output/` 的内容，并生成首页跳转文件。
+- `.github/workflows/deploy.yml` 发布 `build/site/` 的内容，首页直接提供 HTML。
 - `scripts/site-config.mjs` 从正式地址推导检查脚本使用的生成目录和预览路径。
 - `node scripts/check-site-domain.mjs` 检查所有页面的正式地址、站内路径和搜索索引。
 
@@ -34,14 +34,13 @@ DNS 生效、GitHub 完成证书签发后，在 Pages 设置中启用 Enforce HT
 ## 本地预览
 
 ```sh
-node scripts/apply-theme.mjs
-forester build forest.toml
+node scripts/build-site.mjs
 node scripts/check-site-domain.mjs
-node scripts/check-reading-ui.mjs
-python3 -m http.server 8083 --bind 127.0.0.1 --directory output
+python3 -m http.server 8083 --bind 127.0.0.1 --directory build/site
 ```
 
 访问 `http://localhost:8083/index/`。旧构建目录不会影响新路径的本地预览；
 正式发布由 GitHub Actions 的全新工作目录生成，避免混入本地历史产物。
+旧 XML 地址和 `/math-blog/` 前缀的兼容方式见 [静态 HTML 网站](STATIC_HTML.md)。
 
 配置依据为 [GitHub Pages 自定义域名文档](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)。

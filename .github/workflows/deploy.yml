@@ -69,36 +69,32 @@ jobs:
           eval $(opam env)
           forester build forest.toml
 
+      - name: Generate static HTML
+        run: |
+          node tests/static-html.test.mjs
+          node scripts/build-static-html.mjs
+
       - name: Check generated pages and research manifests
         run: |
           node scripts/check-site-domain.mjs
+          node scripts/check-static-html.mjs
           node scripts/check-reading-ui.mjs
           node scripts/check-site-notes.mjs
           node scripts/check-logic-notes.mjs
           node scripts/check-algebra-notes.mjs
 
-      - name: Prepare for GitHub Pages
+      - name: Test without browser XSLT
         run: |
-          # The custom domain is served at its root, with no repository prefix.
-          mkdir -p deploy
-          cp -r output/. deploy/
-          cp CNAME deploy/CNAME
-          touch deploy/.nojekyll
-
-          # Create root index.html with redirect
-          cat > deploy/index.html << 'EOF'
-          <!DOCTYPE html>
-          <html lang="zh-CN">
-            <head>
-              <meta charset="UTF-8">
-              <meta http-equiv="refresh" content="0;url=./index/index.xml">
-              <title>數林廣記</title>
-            </head>
-            <body>
-              <p>前往<a href="./index/index.xml">數林廣記</a>。</p>
-            </body>
-          </html>
-          EOF
+          npm install --prefix "$RUNNER_TEMP/site-browser" --no-package-lock --ignore-scripts playwright@1.62.1
+          "$RUNNER_TEMP/site-browser/node_modules/.bin/playwright" install --with-deps chromium --only-shell
+          python3 -m http.server 8083 --bind 127.0.0.1 --directory build/site > "$RUNNER_TEMP/site-preview.log" 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid"' EXIT
+          export PLAYWRIGHT_MODULE="$RUNNER_TEMP/site-browser/node_modules/playwright/index.mjs"
+          export PREVIEW_URL="http://127.0.0.1:8083/"
+          node scripts/check-reading-ui.mjs
+          node tests/static-html-browser.test.mjs
+          node tests/number-theory-render.test.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -106,7 +102,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./deploy
+          path: ./build/site
 
   deploy:
     environment:

@@ -312,26 +312,21 @@ cd /Users/sunzy/claude_test/forester2
 eval $(opam env)
 
 # 构建网站
-forester build forest.toml
+node scripts/build-site.mjs
 ```
 
-成功后会显示 `Success!`
+命令会构建 Forester 中间文件、生成静态 HTML 并检查站内链接与主题。
 
 ### 7.2 本地预览
 
 ```bash
 # 启动本地服务器
-cd output
-python3 -m http.server 8080
-
-# 或从 output/math-blog 启动
-cd output/math-blog
-python3 -m http.server 8080
+python3 -m http.server 8080 --bind 127.0.0.1 --directory build/site
 ```
 
 然后访问：
 - 博客首页：http://localhost:8080/
-- 或 http://localhost:8080/math-blog/
+- 旧 `/math-blog/` 前缀和 XML 地址会跳转到对应的静态页面。
 
 ### 7.3 查看页面
 

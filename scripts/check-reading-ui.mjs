@@ -3,11 +3,11 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
-import { output, basePath } from './site-config.mjs';
+import { staticOutput as output, basePath } from './site-config.mjs';
+import { renderHtml } from './build-static-html.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-for (const file of ['tree.xsl', 'reading.css', 'reading.js', 'shulin-mark.svg']) {
+for (const file of ['reading.css', 'reading.js', 'shulin-mark.svg']) {
   assert.equal(fs.readFileSync(path.join(output, file), 'utf8'), fs.readFileSync(path.join(root, 'theme-overrides', file), 'utf8'), `Stale theme: ${file}`);
 }
 const css = fs.readFileSync(path.join(root, 'theme-overrides/reading.css'), 'utf8');
@@ -16,7 +16,7 @@ assert(css.includes('font-size: clamp(26px, 2.2vw, 32px)'), 'Desktop heading sca
 assert(css.includes('h1 { font-size: 24px; }'), 'Mobile heading scale changed');
 const pages = ['index', '0062', '013Z', '004M', '004R', '003J', '009E'];
 for (const id of pages) {
-  const html = execFileSync('xsltproc', [path.join(output, 'default.xsl'), path.join(output, id, 'index.xml')], { encoding: 'utf8' });
+  const html = fs.readFileSync(path.join(output, id, 'index.html'), 'utf8');
   for (const marker of ['lang="zh-CN"', 'reading.css?v=', 'reading.js?v=', 'id="main-content"', 'class="tree-content"', 'class="search-trigger"']) {
     assert(html.includes(marker), `${id}: missing ${marker}`);
   }
@@ -27,12 +27,12 @@ for (const id of pages) {
   assert(!/<span class="taxon">[^<]*\.\s*<\/span>/.test(html), `${id}: English full stop after Chinese taxon label`);
   if (id === 'index') assert(html.includes('依然范德彪'), 'Missing author name');
 }
-console.log(`Reading theme: generated assets, heading typography and ${pages.length} representative XSL transformations passed.`);
+console.log(`Reading theme: generated assets, heading typography and ${pages.length} representative static HTML pages passed.`);
 
-// Browser checks are optional so CI can run the static checks without installing a browser.
+// Static checks also run on their own; CI adds the browser pass before publishing.
 if (process.env.PLAYWRIGHT_MODULE) {
   const { chromium } = await import(process.env.PLAYWRIGHT_MODULE);
-  const browser = await chromium.launch({ headless: true, ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}) });
+  const browser = await chromium.launch({ headless: true, args: ['--disable-blink-features=XSLT'], ...(process.env.BROWSER_EXECUTABLE ? { executablePath: process.env.BROWSER_EXECUTABLE } : {}) });
   const base = process.env.PREVIEW_URL || `http://localhost:8083${basePath}`;
   const shots = fs.mkdtempSync(path.join(os.tmpdir(), 'forester-reading-'));
   const errors = [];
@@ -42,7 +42,8 @@ if (process.env.PLAYWRIGHT_MODULE) {
       page.on('pageerror', error => errors.push(error.message));
       page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
       for (const id of pages) {
-        await page.goto(`${base}${id}/index.xml`, { waitUntil: 'commit' });
+        await page.goto(`${base}${id}/`, { waitUntil: 'load' });
+        assert.equal(await page.evaluate(() => typeof XSLTProcessor), 'undefined', 'Regression browser must have XSLT disabled');
         await page.locator('.search-trigger:not([disabled])').waitFor();
         await page.evaluate(() => document.fonts.ready);
         assert(await page.locator('.site-mark').evaluate(img => img.complete && img.naturalWidth > 0), 'Site mark failed to load');
@@ -80,10 +81,10 @@ if (process.env.PLAYWRIGHT_MODULE) {
       await page.locator('article > section > details > summary').click();
       assert.notEqual(await page.locator('article > section > details').getAttribute('open'), null);
       assert(await page.locator('footer a.heading-link').count() > 0, 'Related titles must be links');
-      await page.route('**/__reading_fixture__/index.xml', route => route.fulfill({
-        contentType: 'text/xml', body: fs.readFileSync(path.join(root, 'scripts/fixtures/reading.xml'), 'utf8').replaceAll('/math-blog/', basePath),
+      await page.route('**/__reading_fixture__/', route => route.fulfill({
+        contentType: 'text/html', body: renderHtml(path.join(root, 'scripts/fixtures/reading.xml')).replaceAll('/math-blog/', basePath),
       }));
-      await page.goto(`${base}__reading_fixture__/index.xml`, { waitUntil: 'commit' });
+      await page.goto(`${base}__reading_fixture__/`, { waitUntil: 'load' });
       await page.locator('.search-trigger:not([disabled])').waitFor();
       const toc = page.locator('.toc-panel');
       assert.equal(await toc.getAttribute('open') !== null, width > 1050, 'Responsive TOC default');

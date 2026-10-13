@@ -6,13 +6,14 @@ submodule; do not commit local overrides there or rely on its dirty working copy
 ## Build
 
 ```sh
-node scripts/apply-theme.mjs
-forester build forest.toml
-node scripts/check-reading-ui.mjs
+node scripts/build-site.mjs
 node scripts/check-site-domain.mjs
 ```
 
-GitHub Pages uses the same application step. CSS and JS are copied as theme files,
+GitHub Pages publishes `build/site/`, never the intermediate XML in `output/`.
+See [the static HTML workflow](../STATIC_HTML.md) for URL compatibility and tests.
+The build reuses this theme through `scripts/static-html.xsl`; browsers never load XSLT.
+CSS and JS are copied as theme files,
 not ordinary Forester assets (unreferenced assets are not emitted by this version).
 The query version of each changed CSS or JS resource in `tree.xsl` must change
 when publishing later revisions, so cached assets do not conceal updates.
@@ -46,7 +47,7 @@ mathematical text, stable note IDs and prerequisite dependencies outside UI chan
 
 ## Browser Regression
 
-Run a local server for `output/` on port 8083. With Playwright installed outside
+Run a local server for `build/site/` on port 8083. With Playwright installed outside
 the repository, set `PLAYWRIGHT_MODULE` to its absolute `index.mjs` path and run
 `node scripts/check-reading-ui.mjs`. Optionally set `BROWSER_EXECUTABLE` to an
 installed Chromium executable and `PREVIEW_URL` to another local base URL.
@@ -57,6 +58,9 @@ This tests seven representative pages at 1440, 390 and 320 pixels: heading/body
 font consistency, title sizing, horizontal overflow, resource loading, math,
 SVGs, search, keyboard shortcut, disclosure and
 related links. It also saves screenshots in a temporary directory for visual review.
-An isolated XML fixture checks nested statement styling, long equations, mobile
+An isolated XML fixture is transformed at build time to check nested statement styling, long equations, mobile
 TOC collapse and keyboard navigation into a closed proof; it is never built into
 the public forest. Static transformation tests require `xsltproc` (installed in CI).
+Browser tests run with XSLT disabled. `tests/static-html-browser.test.mjs` additionally
+checks legacy XML MIME types, query strings, fragments, search navigation and reading
+with JavaScript disabled.

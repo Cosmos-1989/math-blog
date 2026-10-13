@@ -12,9 +12,9 @@ const pages = ['0063', ...manifest.papers.map(paper => paper.outline), '0H0J', '
   '0H84', '0HC4', '0HG4', '0HL3', '0HO2', '0HS3', '0HW3', '0I03', '0I42', '0I84', '0I8E', '0I8G'];
 const base = process.env.PREVIEW_URL ?? 'http://localhost:8083/';
 const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'number-theory-render-'));
-const browser = await chromium.launch({headless: true,
+const browser = await chromium.launch({headless: true, args: ['--disable-blink-features=XSLT'],
   ...(process.env.BROWSER_EXECUTABLE ? {executablePath: process.env.BROWSER_EXECUTABLE} : {})});
-const errors = [], checks = [], compatibilityWarnings = new Set();
+const errors = [], checks = [];
 try {
   for (const width of [1440, 390]) {
     const page = await browser.newPage({viewport: {width, height: 1000}, reducedMotion: 'reduce'});
@@ -23,7 +23,7 @@ try {
       if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`);
     });
     for (const id of pages) {
-      await page.goto(`${base}${id}/index.xml`, {waitUntil: 'commit'});
+      await page.goto(`${base}${id}/`, {waitUntil: 'load'});
       await page.locator('.search-trigger:not([disabled])').waitFor();
       await page.evaluate(() => document.fonts.ready);
       assert.equal(await page.locator('.katex-error').count(), 0, `${id}: invalid formula`);
@@ -32,9 +32,8 @@ try {
       assert(size.scroll <= size.width + 1, `${id} at ${width}: horizontal overflow`);
       const content = await page.locator('article > section > details > .tree-content').innerText();
       assert(content.length > 100, `${id}: empty or untransformed body`);
-      if ((await page.locator('body').innerText()).includes('This site uses XSLT')) {
-        compatibilityWarnings.add('Browser displays an XSLT deprecation warning for the existing XML-based site.');
-      }
+      assert.equal(await page.evaluate(() => typeof XSLTProcessor), 'undefined');
+      assert(!(await page.locator('body').innerText()).includes('This site uses XSLT'));
       if (id === '0063') {
         for (const paper of manifest.papers) {
           assert.equal(await page.locator(`article > section > details > .tree-content > ul > li a[href="/${paper.outline}/"]`).count(), 1,
@@ -52,7 +51,6 @@ try {
   }
   assert.deepEqual(errors, []);
   console.log(JSON.stringify({result: 'pass', checks, screenshots: directory,
-    compatibilityWarnings: [...compatibilityWarnings],
     scope: 'Rendered desktop/mobile smoke checks; source checks separately cover all formulas and links.'}, null, 2));
 } finally {
   await browser.close();
