@@ -1,0 +1,12 @@
+\title{HMT 次项分布在异常谱区间上消失}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.3；HMT v2，引理3.3；矩判据按其引用的 Chen–Garza-Vargas–Tropp–van Handel 引理4.9}
+
+\p{在 [HMT 主不等式](0O08)中，令 #{a=f(0)}、#{b=f(i/2)}。若光滑函数 #{h} 的支撑为 #{(a,f(i\sqrt{1/4-0.0023}))} 内的紧集，定义 #{\widetilde h(x)=h(x)/x}，并在零附近取零。则}
+##{\nu_0(\widetilde h)=\nu_1(\widetilde h)=0.}
+\p{\strong{证明。}首项由[谱主体消失](0O09)得到。对多项式 #{P}，谱矩公式给出 #{\nu_1(P)=R(P)+B(P)-\nu_0(P)}，其中 #{B(P)=bP(b)} 是[常数贡献](0O0A)，#{R} 是[余项矩泛函](0O0C)。}
+\p{#{\nu_0} 是紧支撑有限测度：其作用形式为 #{\int f(\sqrt{r-1/4})\widetilde h(f(\sqrt{r-1/4}))\tanh(\pi\sqrt{r-1/4})\,dr}，Fourier 变换的快速衰减保证总质量有限，且其支撑位于 #{[0,a]}。主不等式已保证 #{\nu_1} 为紧支撑分布，故 #{R=\nu_1+\nu_0-B} 也如此。}
+\p{此处应用外部的[紧支撑分布矩判据](0O0N)：若 #{T} 是[紧支撑分布](0O06)且 #{\limsup_p|T(x^p)|^{1/p}\leq a}，则 #{\operatorname{supp}T\subset[-a,a]}。由 #{|R(x^p)|\leq 2a^{p+1}}，得到 #{\operatorname{supp}R\subset[-a,a]}。}
+\p{#{\widetilde h} 的支撑同时避开 #{[-a,a]} 和 #{b}，因此 #{R(\widetilde h)=B(\widetilde h)=\nu_0(\widetilde h)=0}，代入泛函分解即得结论。这里矩估计是显式计算；由矩增长确定分布支撑的分析定理仍作为外部输入。}

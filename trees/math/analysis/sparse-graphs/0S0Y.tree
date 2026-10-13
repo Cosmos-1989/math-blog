@@ -1,0 +1,15 @@
+\title{强收敛与快速衰减决定典型图距离}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，引理 4.8；固定半径与取整的显式证明}
+
+\p{设有限生成群 #{\Gamma} 具有[快速衰减性质](0S0V)，有限对称生成集 #{S} 的[球增长率](0S0W)为 #{\beta>0}。设 #{\rho_n} 为其 #{N_n} 点置换作用，#{N_n\to\infty}，并在 #{\mathbf 1^\perp} 上[强收敛](0GSF)到正则表示。则对每个固定 #{\varepsilon\in(0,1)}，Schreier 图中}
+##{\max_v\frac{|\{u:d(u,v)\geq(1+\varepsilon)\log N_n/\beta\}|}{N_n}\longrightarrow 0.}
+\p{\strong{先固定一个球。}选取常数 #{\alpha,c} 满足 #{\beta /(1+\varepsilon)<\alpha<c<\beta}。取半径 #{r} 球的平均 #{p_r=|B_S(r)|^{-1}\sum_{g\in B_S(r)}g}。由 RD 及球增长率，充分大的固定 #{r} 使}
+##{\|\lambda(p_r)\|\leq C(1+r)^s|B_S(r)|^{-1/2}<e^{-cr/2}.}
+\p{固定这个 #{r} 后再令 #{n\to\infty}。强收敛和严格不等式保证充分大时 #{q_n=\|\rho_n(p_r)|_{\mathbf 1^\perp}\|\leq e^{-cr/2}}。这里 #{p_r} 不随 #{n} 变化。}
+\p{\strong{再选择步数。}取 #{l_n=\lceil\log N_n/(\alpha r)\rceil}。矩阵 #{P_n=\rho_n(p_r)} 双随机，每步最多走 #{r} 条原图边。[范数到距离的估计](0S0X)给出}
+##{\max_v\frac{|\{u:d(u,v)>rl_n\}|}{N_n}\leq\sqrt{N_n}\,q_n^{l_n}\leq N_n^{(1-c/\alpha)/2}\longrightarrow 0.}
+\p{由于 #{rl_n\leq\log N_n/\alpha+r}，且 #{1/\alpha<(1+\varepsilon)/\beta}，充分大时 #{rl_n<(1+\varepsilon)\log N_n/\beta}。所需事件包含在已经估计的远点集合中，得到上界。结合[体积下界](0S0W)，从任一起点看，趋于全体比例的终点距离处于 #{(1\pm\varepsilon)\log N_n/\beta} 之间。}
+\p{若表示只依概率强收敛，同样证明给出上述最大远点比例依概率趋零，因为固定 #{p_r} 的范数事件概率趋于一。随机性只用在这个事件上。结论没有把“几乎所有终点”加强为“所有终点”。}

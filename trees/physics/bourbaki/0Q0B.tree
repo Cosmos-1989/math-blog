@@ -1,0 +1,12 @@
+\title{Hartree 乘积态的能量上界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，第 2 节常数试探态；乘积态直接计算}
+
+\p{设 #{\Lambda_L=(0,L)^3} 取 Neumann 边界，#{v\geq 0} 为有界偶势，#{\varphi\in H^1(\Lambda_L)} 为单位向量。[能量形式](0Q04)在[乘积态](0Q02)上的值为}
+##{q_{N,L}[\varphi^{\otimes N}]=N\int_{\Lambda_L}|\nabla\varphi|^2+\frac{N(N-1)}2\int_{\Lambda_L^2}v(x-y)|\varphi(x)|^2|\varphi(y)|^2\,dx\,dy.}
+\p{\strong{证明。}第 #{j} 个梯度只微分第 #{j} 个因子，其他因子的模平方积分均为 #{1}，所以每个动能项相同。固定一对 #{i<j} 后，将其他 #{N-2} 个变量积分掉，得到所示双重积分。恰有 #{N(N-1)/2} 对。由[变分定义](0Q05)，此值就是基态能量的上界。}
+\p{若 #{v\in L^1(\mathbb R^3)} 且取常数 #{\varphi=L^{-3/2}}，动能为零。对固定 #{x} 有 #{\int_{\Lambda_L}v(x-y)dy\leq\int_{\mathbb R^3}v}，因此}
+##{E(N,L)\leq\frac{N(N-1)}{2L^3}\int_{\mathbb R^3}v,\qquad e(\rho)\leq\frac{\rho^2}2\int_{\mathbb R^3}v.}
+\p{第二式在[热力学极限](0Q06)存在时成立。硬核势的积分无穷，这个试探态的有限能量条件随之失效。}

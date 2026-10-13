@@ -1,0 +1,11 @@
+\title{单个格点被椭球接触的概率}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Klartag 命题 4.1，取初值参数一；Aubrun §4.3}
+
+\p{固定 #{\lambda_1(\Lambda)>1} 的格和非零格点 #{x}。对[布朗椭球演化](0N0T) #{\mathcal E_t=\mathcal E_{A_t}} 与任意 #{t>0}，有}
+##{\mathbb P_W(x\in\partial\mathcal E_t)\leq 2\Phi\left(\frac{1-\|x\|^{-2}}{\sqrt t}\right),}
+\p{其中 #{\Phi} 是[标准高斯尾函数](0N0R)。这是 Klartag 命题 4.1 的特例；证明使用连续鞅的时间变换定理与一维布朗运动反射原理。}
+\p{概率比较的尺度可以直接看出：量 #{x^{\mathsf T}A_tx-1} 从 #{\|x\|^2-1} 出发，它对矩阵增量的线性系数是 #{xx^{\mathsf T}}，其 Hilbert–Schmidt 范数为 #{\|x\|^2}。[正交投影](00MS)不增大这个系数的长度。将初始距离除以 #{\sqrt t\|x\|^2}，便得到公式中的 #{(1-\|x\|^{-2})/\sqrt t}。}
+\p{反射原理的正确一维形式是 #{\mathbb P(\sup_{s\leq t}\beta_s\geq a)=2\mathbb P(\beta_t\geq a)=2\Phi(a/\sqrt t)}（#{a>0}），其中 #{\beta} 是[标准布朗运动](0N0S)。右边的单时刻事件没有绝对值；若写 #{|\beta_t|}，外面的系数二必须去掉。}

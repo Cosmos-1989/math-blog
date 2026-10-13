@@ -1,0 +1,14 @@
+\title{Legendre–Fenchel 变换}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§2及式(3.1)}
+
+\p{设 #{f\in\operatorname{Cvx}(\mathbb R^n)} 是[闭真凸函数](0R06)。相对于标准实[内积](004M)，定义它的 Legendre–Fenchel 变换为}
+##{(\mathcal L f)(y)=f^*(y)=\sup_{x\in\operatorname{dom}f}
+\bigl(\langle x,y\rangle -f(x)\bigr).}
+\p{每个固定 #{x} 给出关于 #{y} 的仿射函数，其上确界凸且下半连续。因此变换把线性下界的斜率组织成另一个凸函数。定义立即给出 Fenchel 不等式 #{f(x)+f^*(y)\ge\langle x,y\rangle}。}
+\p{若 #{f\le g}，则 #{\langle x,y\rangle -f(x)\ge\langle x,y\rangle -g(x)}，取上确界后得到 #{f^*\ge g^*}。用上图表示则为}
+##{\operatorname{epi}(f^*)=
+\{(y,s):s+t\ge\langle x,y\rangle\text{ 对所有 }(x,t)\in\operatorname{epi}f\}.}
+\p{这里两点间的关系 #{s+t\ge\langle x,y\rangle} 对交换 #{(x,t),(y,s)} 对称。[双共轭定理](0R08)进一步保证 #{f^{**}=f}，并保证 #{f^*} 仍是真函数。}

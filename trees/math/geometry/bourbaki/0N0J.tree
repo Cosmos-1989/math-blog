@@ -1,0 +1,13 @@
+\title{逐次极小值构造相容椭球}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §2，第 5 页}
+
+\p{设 #{\lambda_1,\ldots,\lambda_n} 为格 #{\Lambda} 的[逐次极小值](0N0I)。存在与 #{\Lambda} [相容的椭球](0N0C)，其体积为 #{\omega_n\prod_{i=1}^n\lambda_i}。}
+\p{\strong{证明。}递归选取 #{y_i\in\Lambda}：在 #{V_{i-1}=\operatorname{span}(y_1,\ldots,y_{i-1})} 以外选一个最短格向量，#{V_0=\{0\}}。存在性来自[有界集内格点有限](0N03)，且满秩性保证始终有候选。贪心选择的长度非递减；任意 #{i} 个独立格向量至少一个在 #{V_{i-1}} 外，因此 #{\|y_i\|=\lambda_i}。}
+\p{依次从 #{y_i} 减去它在 #{V_{i-1}} 的[正交投影](00MS)，再归一化，得到正交单位向量 #{e_i}，满足 #{V_i=\operatorname{span}(e_1,\ldots,e_i)}。定义}
+##{\mathcal E=\left\{\sum_i\alpha_i e_i:\sum_i\frac{\alpha_i^2}{\lambda_i^2}<1\right\}.}
+\p{给定非零格向量 #{x=\sum_i\alpha_i e_i}，令 #{j} 是最后一个非零坐标的指标。则 #{x\notin V_{j-1}}，由贪心选择 #{\|x\|\geq\lambda_j}。因 #{\lambda_i\leq\lambda_j} 对 #{i\leq j} 成立，}
+##{\sum_i\frac{\alpha_i^2}{\lambda_i^2}\geq\frac{\sum_{i\leq j}\alpha_i^2}{\lambda_j^2}=\frac{\|x\|^2}{\lambda_j^2}\geq 1.}
+\p{所以 #{x\notin\mathcal E}。椭球半轴为 #{\lambda_i}，由[椭球体积公式](0N0D)得到所述体积。}

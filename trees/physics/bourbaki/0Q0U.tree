@@ -1,0 +1,12 @@
+\title{单粒子谱隙控制非凝聚粒子数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，注记 2.4、第 5.3 节的激发数估计}
+
+\p{设 #{h\geq 0} 为单粒子[自伴算子](0GSN)，#{\varphi_0} 为单位零能态。令 #{P} 为到 #{\mathbb C\varphi_0} 的[正交投影](00MS)，#{Q=I-P}。假设存在 #{\gamma>0} 使二次型不等式 #{h\geq\gamma Q} 成立，称 #{\gamma} 为可用谱隙。对 #{N} 粒子态，定义激发数算子 #{\mathcal N_+=\sum_{j=1}^NQ_j}。记多体能量形式为 #{q[\Psi]=\sum_j\|h_j^{1/2}\Psi\|^2+\langle\Psi,W\Psi\rangle}，其中 #{W\geq 0} 是相互作用形式；当 #{h=-\Delta} 时即为[玻色气体能量形式](0Q04)。在其定义域内有}
+##{q[\Psi]\geq\gamma\langle\Psi,\mathcal N_+\Psi\rangle.}
+\p{\strong{证明。}将单粒子形式不等式应用于第 #{j} 个变量，对其余变量积分，得到 #{\langle\Psi,h_j\Psi\rangle\geq\gamma\langle\Psi,Q_j\Psi\rangle}。对 #{j} 求和，再加上非负相互作用即得结论。#{N-\langle\mathcal N_+\rangle} 正是[凝聚轨道占据数](0Q08)。}
+\p{在边长 #{\ell} 的 Neumann 立方箱中，#{\varphi_0=\ell^{-3/2}}，单粒子 Poincaré 不等式给出 #{\gamma=\pi^2/\ell^2}。该不等式是此处的谱论输入，也可由余弦基的特征值 #{\pi^2(n_1^2+n_2^2+n_3^2)/\ell^2} 得到。若已知 #{q[\Psi]\leq C a\rho^2\ell^3}，则}
+##{\langle\mathcal N_+\rangle\leq C' a\rho^2\ell^5.}
+\p{当 #{N\sim\rho\ell^3} 时，激发比例的上界为 #{C'a\rho\ell^2}。它在 #{\ell\ll(\rho a)^{-1/2}} 时趋零，却不随任意增大的热力学箱子保持有效。}

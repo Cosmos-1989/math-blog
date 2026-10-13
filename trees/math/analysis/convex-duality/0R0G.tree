@@ -1,0 +1,18 @@
+\title{几何凸函数的极性变换}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](icm2026-artstein-avidan)，ICM §4；Hidden structures，§§2.1、4}
+
+\p{设 #{f\in\operatorname{Cvx}_0(\mathbb R^n)} 为[几何凸函数](0R0F)，令 #{R(x,t)=(x,-t)}。定义极性变换 #{\mathcal A} 的上图为}
+##{\operatorname{epi}(\mathcal Af)=R((\operatorname{epi}f)^\circ).}
+\p{这里右边使用 #{\mathbb R^{n+1}} 中的[极集](0R01)。等价地，对 #{y\in\mathbb R^n}，}
+##{(\mathcal Af)(y)=\sup_{x\in\mathbb R^n}
+\frac{(\langle x,y\rangle -1)_+}{f(x)},\qquad a_+=\max(a,0).}
+\p{商的约定为：分母 #{+\infty} 时取零；分母为零、分子正时取 #{+\infty}；#{0/0=0}。则 #{\mathcal A} 是几何凸函数类上的序反转对合。}
+\p{\strong{上图公式。}点 #{(y,-s)} 属于极集，当且仅当 #{\langle x,y\rangle -st\le 1} 对所有 #{t\ge f(x)} 成立。上图含竖直正射线，所以必有 #{s\ge 0}。当 #{f(x)<\infty} 时，约束化为 #{s f(x)\ge\langle x,y\rangle -1}，恰好给出上面的商约定；#{f(x)=+\infty} 处没有约束。这个集合是闭凸上图，含 #{\{0\}\times\lbrack 0,\infty\rparen}，故确实定义一个几何凸函数。}
+\p{\strong{序反转与对合。}若 #{f\le g}，则上图包含方向相反；取极再反射得到 #{\mathcal Af\ge\mathcal Ag}。反射 #{R} 正交，故 #{(RC)^\circ=R(C^\circ)}。由[双极定理](0R04)，}
+##{\operatorname{epi}(\mathcal A^2f)
+=R\bigl(R((\operatorname{epi}f)^\circ)^\circ\bigr)
+=\operatorname{epi}f.}
+\p{这说明函数极性直接来自高一维的集合极性，而零点处的商约定由上图约束决定。}

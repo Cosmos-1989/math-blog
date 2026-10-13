@@ -1,0 +1,11 @@
+\title{有限动能的 Sobolev 空间}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，定义 1.6 所用的能量定义域}
+
+\p{设 #{U\subset\mathbb R^d} 为开集，#{u\in L^2(U)}。若 #{g_j\in L^2(U)} 满足对每个光滑紧支函数 #{\eta\in C_c^\infty(U)} 都有下式，其中 #{\partial_j\eta} 是通常的[偏导数](0A32)：}
+##{\int_U u\,\partial_j\eta=-\int_U g_j\eta,}
+\p{则称 #{g_j} 为 #{u} 的第 #{j} 个弱偏导数，记作 #{\partial_j u}。所有一阶弱偏导数均[平方可积](00Q6)的函数组成 #{H^1(U)}，赋予范数}
+##{\|u\|_{H^1}^2=\int_U\left(|u|^2+\sum_{j=1}^d|\partial_j u|^2\right).}
+\p{向量 #{\nabla u=(\partial_1u,\ldots,\partial_du)} 称弱梯度。取 #{H^1(U)} 为动能形式域时，不预先要求函数在边界为零，对应自然的 Neumann 边界条件；取 #{C_c^\infty(U)} 在上述范数下的闭包 #{H_0^1(U)}，则对应 Dirichlet 边界条件。周期箱使用相对面迹相同的 #{H^1} 函数。这些边界条件会改变有限箱的能量。}

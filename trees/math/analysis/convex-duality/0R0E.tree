@@ -1,0 +1,12 @@
+\title{对称关系刻画所有序反转准对合}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，定理3.3}
+
+\p{设 #{X} 为任意集合。映射 #{T:\mathcal P(X)\to\mathcal P(X)} 是[序反转准对合](0R0D)，当且仅当存在唯一的对称关系 #{S\subseteq X\times X}，使}
+##{T(A)=\{y:(x,y)\in S\text{ 对所有 }x\in A\}.}
+\p{\strong{由关系构造映射。}扩大 #{A} 会增加约束，故 #{T} 序反转。若 #{x\in A} 且 #{y\in T(A)}，则 #{(x,y)\in S}；由对称性 #{(y,x)\in S}，从而 #{x\in T^2(A)}。}
+\p{\strong{由映射恢复关系。}定义 #{(x,y)\in S} 当且仅当 #{y\in T(\{x\})}。若后者成立，序反转性及扩张性给出 #{T(\{y\})\supseteq T^2(\{x\})\supseteq\{x\}}，所以 #{S} 对称。}
+\p{剩下证明 #{T(A)=\bigcap_{x\in A}T(\{x\})}。从 #{\{x\}\subseteq A} 得到正向包含。反之，若 #{y} 属于右边，则对称性给出 #{A\subseteq T(\{y\})}。再次反转得到 #{T(A)\supseteq T^2(\{y\})\supseteq\{y\}}。当 #{A=\varnothing} 时同一论证仍成立。关系在单点集上的值被 #{T} 唯一确定，故唯一性也成立。}
+\p{例如 #{\langle x,y\rangle\le 1}、#{\langle x,y\rangle\ge 1} 和 #{|x-y|\le 1} 都是对称关系，分别通向极集、伪锥对偶和球交体对偶。对象类的差别来自这些关系的截面形状。}

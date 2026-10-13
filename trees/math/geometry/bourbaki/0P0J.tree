@@ -1,0 +1,11 @@
+\title{同时控制正反映射保证极限可逆}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，引理 3.9 第 4 条；Berger I，第 2.2.2 节}
+
+\p{设 #{X} 是紧[度量空间](00EK)，#{f_n:X\to X} 为同胚。如果 #{f_n\to f}、#{f_n^{-1}\to g} 都一致收敛，则 #{f,g} 互为逆映射，故 #{f} 是[同胚](00E3)。}
+\p{\strong{证明。}[连续映射](00E2)的一致极限连续。令 #{g_n=f_n^{-1}}，则}
+##{d(f(g(x)),x)\le d(f(g(x)),f(g_n(x)))+\sup_{z\in X}d(f(z),f_n(z)).}
+\p{第二项趋于零；第一项由 #{g_n\to g} 及 #{f} 的[一致连续性](0F41)一致趋于零。因此 #{fg=\operatorname{id}}。交换 #{f_n,g_n} 得 #{gf=\operatorname{id}}。}
+\p{若 #{X} 是光滑紧曲面，两个收敛还在[#{C^\infty} 拓扑](0APA)中成立，则逆映射也光滑。若每个 #{f_n} 保持某个辛形式且收敛至少为 #{C^1}，在坐标中对 #{f_n^*\omega=\omega} 取极限就得 #{f^*\omega=\omega}。故共轭逼近通常同时控制正反映射，避免把可逆性错误地当成单侧一致收敛的自动结果。}

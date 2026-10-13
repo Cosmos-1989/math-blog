@@ -1,0 +1,13 @@
+\title{水平与竖直剪切的 Hamilton 生成函数}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，第 3.1 节；Berger I，第 3.1 节}
+
+\p{在[圆柱](0P01)上取光滑函数 #{\tau:\mathbb R\to\mathbb R} 和一周期光滑函数 #{v:\mathbb R\to\mathbb R}，定义}
+##{T(\theta,y)=(\theta+\tau(y),y),\qquad V(\theta,y)=(\theta,y+v(\theta)).}
+\p{两者都是[辛同胚](0BL1)。水平剪切总是 Hamilton 映射；若 #{\int_0^1v(s)\,ds=0}，竖直剪切也由一个圆柱上的 Hamilton 函数生成。}
+\p{\strong{证明。}逆映射分别把 #{\tau,v} 换成 #{-\tau,-v}。直接计算}
+##{d(\theta+\tau(y))\wedge dy=d\theta\wedge dy,\qquad d\theta\wedge d(y+v(\theta))=d\theta\wedge dy.}
+\p{按[Hamilton 符号约定](0BL5)，函数 #{H_T(y)=-\int_0^y\tau(s)\,ds} 的向量场为 #{(\tau(y),0)}，时间一流即 #{T}。若 #{v} 均值为零，则 #{H_V(\theta)=\int_0^\theta v(s)\,ds} 为一周期函数，其向量场为 #{(0,v(\theta))}，时间一流即 #{V}。沿各自流，决定速度的坐标保持不变，所以这些解在所有实时间存在。}
+\p{例如 #{\tau(y)=y}、#{v(\theta)=\sin(2\pi\theta)} 时，可取 #{H_T=-y^2/2}、#{H_V=-\cos(2\pi\theta)/(2\pi)}。这些函数不紧支撑，因此这个例子不属于[内支撑条件](0P0A)的自动适用范围。}

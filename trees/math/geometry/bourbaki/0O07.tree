@@ -1,0 +1,13 @@
+\title{HMT 谱矩展开的阶数一致余项}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，定理8.2；HMT v2，定理1.4、§2.5、§4}
+
+\p{固定[测试函数](0O03) #{\varphi} 及 #{f=\widehat\varphi}。在 [Weil–Petersson 模型](0GS6)中令 #{X\in\mathcal M_g}，#{A_X} 为对应[谱乘子](0O04)，并用 #{\operatorname{tr}_g=g^{-1}\operatorname{Tr}} 归一化[迹](0O05)。HMT 定理1.4给出常数 #{C_0>0}，使每个整数 #{t\geq 1} 都有一列系数 #{a_k^{(t)}}，满足}
+##{\left|\mathbb E_g\operatorname{tr}_g(A_X^t)-\sum_{k=0}^{q-1}\frac{a_k^{(t)}}{g^k}\right|\leq\frac{(C_0q)^{C_0q}}{g^q}\qquad(q>t,\ g>C_0q^{C_0}).}
+\p{同一个 #{C_0} 控制阶数 #{q} 和幂次 #{t<q}。前两项为}
+##{a_0^{(t)}=\int_{1/4}^{\infty}f(\sqrt{r-1/4})^t\tanh(\pi\sqrt{r-1/4})\,dr,}
+##{a_1^{(t)}=\int_0^\infty\sum_{k\geq 1}\frac{2\sinh^2(\ell /2)}{\sinh(k\ell /2)}\varphi^{*t}(k\ell)\,d\ell -a_0^{(t)}.}
+\p{#{\varphi^{*t}} 表示 #{t} 次[卷积](0H4E)，不是逐点乘方。这一结论引用 HMT 的模空间体积与测地线计数分析。其作用不止于给出每个固定 #{q} 的 #{O(g^{-q})} 展开：#{(C_0q)^{C_0q}} 还限制了余项常数随阶数增长的速度。这项控制用于将多项式测试扩展到光滑测试。}
+\p{HMT 的体积递推、非简单测地线的贡献和所有阶数的一致估计是此定理的外部证明输入；公式中的前两项则可继续用于显式的[系数支撑计算](0O0D)。}

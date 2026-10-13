@@ -1,0 +1,14 @@
+\title{卷积平方给出谱上非负的 Fourier 测试函数}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.2；HMT，§2 的测试函数条件}
+
+\p{取非零、非负、偶的光滑函数 #{u}，支撑于 #{[-1/2,1/2]}，并在内部严格为正。例如可取 #{u(t)=\exp(-1/(1-4t^2))} 于 #{|t|<1/2}，在其余点取零。边界处各阶导数是负指数函数乘有理函数，均趋于零。定义[卷积](0H4E) #{\varphi=u*u} 及其 [Fourier 变换](0H4G)}
+##{\varphi(t)=\int_{\mathbb R}u(s)u(t-s)\,ds,\qquad f(z)=\int_{\mathbb R}\varphi(t)e^{-izt}\,dt.}
+\p{这里的变换核是 #{e^{-izt}}，正向变换不带 #{2\pi} 因子，与所链接定义的约定一致。#{\varphi} 光滑、偶、非负，支撑恰为 #{[-1,1]}。复参数 #{z} 的积分仍在固定紧集上，故可逐次求导。记 #{a=f(0)>0}、#{b=f(i/2)}。则}
+##{0\leq f(r)\leq a\quad(r\in\mathbb R),\qquad f(it)=\int_{\mathbb R}\varphi(x)\cosh(tx)\,dx.}
+\p{\strong{证明。}[Fubini 定理](0H53)和变量替换给出 #{f(z)=\widehat u(z)^2}。实数 #{r} 上，偶实函数 #{u} 的变换为实数，故 #{f(r)\geq 0}；三角不等式给出 #{|f(r)|\leq\int\varphi=a}。虚轴上的表达式由偶性得到，其对 #{t>0} 的导数是 #{\int\varphi(x)x\sinh(tx)\,dx>0}。因此 #{f(it)} 在 #{t\geq 0} 上严格递增，特别地 #{b>a}。}
+\p{在零附近，#{\cosh(tx)} 的展开在紧支撑上一致，因而}
+##{f(i\sqrt\varepsilon)-a=\frac{\varepsilon}{2}\int_{\mathbb R}x^2\varphi(x)\,dx+O(\varepsilon^2).}
+\p{二阶矩严格为正。所以存在 #{c_1,c_2>0}，使充分小的 #{\varepsilon>0} 满足 #{c_1\varepsilon\leq f(i\sqrt\varepsilon)-a\leq c_2\varepsilon}。这个尺度决定了平滑谱截断所需的导数界。}

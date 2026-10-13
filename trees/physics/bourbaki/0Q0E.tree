@@ -1,0 +1,14 @@
+\title{零能散射解的通量与变分能量}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，注记 2.2、引理 6.2；Fournais–Solovej I，式 (2.1)–(2.5)}
+
+\p{设 #{v\geq 0} 为径向、有界、紧支势，支撑在半径 #{R} 的球内。设径向函数 #{f} 满足 #{0\leq f\leq 1}、#{f-1\in\dot H^1}，并弱满足 #{-2\Delta f+vf=0}。若 #{r>R}，则 #{f(r)=1-b/r}，其中 #{b=a(v)} 是[散射长度](0Q0D)，并有}
+##{\int_{\mathbb R^3}vf=8\pi b,\qquad\int_{\mathbb R^3}(2|\nabla f|^2+vf^2)=8\pi b.}
+\p{\strong{证明。}支撑外的径向方程是 #{(r^2f')'=0}，故 #{f=A-b/r}；#{f-1\in L^6} 强迫 #{A=1}。在半径 #{T>R} 的球上积分 #{2\Delta f=vf}，径向通量给出 #{\int vf=2\cdot 4\pi T^2f'(T)=8\pi b}。乘方程以 #{f} 并分部积分又得到}
+##{\int_{|x|<T}(2|\nabla f|^2+vf^2)=2\int_{|x|=T}f\,\partial_rf=8\pi b(1-b/T).}
+\p{令 #{T\to\infty} 即得第二式。分部积分可先取光滑截断；有界径向势的解也可用径向弱方程处理，球壳界面处的通量连续。}
+\p{还需验证 #{b} 确为变分下确界。对实值光滑紧支 #{h}，弱方程使交叉项为零，故}
+##{\int(2|\nabla(f+h)|^2+v(f+h)^2)=\int(2|\nabla f|^2+vf^2)+\int(2|\nabla h|^2+vh^2).}
+\p{由 #{\dot H^1} 的光滑逼近，此恒等式延伸到任意允许的差 #{h}；紧支有界的 #{v} 保证局部 #{L^2} 收敛足够。于是 #{f} 实现最小值，#{8\pi a(v)=8\pi b}。所用的散射解存在性与 Sobolev 逼近是[散射变分理论](0Q0D)的输入，以上论证给出解到能量常数的具体关系。}

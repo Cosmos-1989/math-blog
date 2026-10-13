@@ -1,0 +1,12 @@
+\title{亚纯零微分的端点极点保证完备性}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Forstnerič](icm2026-forstneric)，§5 的端点极点条件；以下给出长度估计}
+
+\p{设 #{\overline M} 为紧 [Riemann 曲面](00FR)，#{E\subset\overline M} 为非空有限集，#{M=\overline M\setminus E}。设向量值亚纯[一形式](00FT) #{\Phi} 在 #{M} 上全纯且无共同零点，满足 #{\sum_j\phi_j^2=0} 和所有实周期为零。令 #{u=\operatorname{Re}\int\Phi} 为对应的[极小浸入](0T0X)。则 #{u} [完备](0T11)当且仅当 #{\Phi} 在每个 #{e\in E} 至少有一个分量具有极点。}
+\p{\strong{极点附近的长度。}取端点坐标 #{z(e)=0}。若最大极点阶数为 #{m\ge 1}，则 #{\Phi=z^{-m}(a+O(z))\,dz}，其中 #{a\in\mathbb C^n\setminus\{0\}}。缩小邻域后，系数范数上下界均为正常数乘 #{|z|^{-m}}。[共形零关系](0T0T)给出的诱导度量为}
+##{ds_u^2=\frac 12\sum_j|{\phi_j}/dz|^2\,|dz|^2.}
+\p{因而到达端点的路径长度至少是 #{c\int|dz|/|z|^m}。令 #{r=|z|}，由 #{|dr|\le|dz|}，该积分至少控制从正半径到零的 #{\int r^{-m}\,dr}，所以发散。}
+\p{\strong{没有极点时。}若所有分量在端点全纯，则系数有界，一条径向路径到端点的长度有限。沿它取趋向端点的序列，就得到不能在 #{M} 中收敛的 [Cauchy 序列](00ER)，故不完备。}
+\p{若所有端点都有极点，则上述下界使任何度量 Cauchy 序列都远离端点。它落在 #{M} 的某个紧子集内；其上诱导度量为光滑正定度量，与坐标距离局部可比较，故序列在 #{M} 中收敛。这完成全局完备性的证明。}

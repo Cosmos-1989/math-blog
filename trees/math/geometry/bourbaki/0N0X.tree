@@ -1,0 +1,12 @@
+\title{短格向量的接触权重和}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §4.2}
+
+\p{设 #{n\geq 2}，#{0<t<1/(9n)}，#{\Lambda} 是[满秩格](0N01)，记 #{\Lambda^*=\Lambda\setminus\{0\}}，不表示对偶格。定义截断球与径向权重}
+##{D_t=\{x:(1-3\sqrt{nt})\|x\|^2\leq 1\},\qquad f_t(x)=2\Phi\left(\frac{1-\|x\|^{-2}}{\sqrt t}\right)\quad(x\ne 0),}
+\p{其中 #{\Phi} 为[高斯尾函数](0N0R)。接触权重和定义为}
+##{K_t(\Lambda)=\sum_{x\in\Lambda^*\cap D_t}f_t(x).}
+\p{截断球有界，[格点有限性](0N03)保证这个和有限。定义适用于所有格，即使其中有长度小于一的向量；此时个别权重可能大于一。只有对最短长度大于一的格，权重才被用作[接触概率上界](0N0W)。}
+\p{截断球来自[矩阵尾界](0N0V)：在事件 #{G_t} 上，若 #{x} 是接触点，则 #{1=x^{\mathsf T}A_tx\geq(1-3\sqrt{nt})\|x\|^2}，故 #{x\in D_t}。先对所有格定义权重，再挑选好格，可以使用无条件的 Siegel 平均公式。}

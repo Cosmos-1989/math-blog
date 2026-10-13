@@ -1,0 +1,12 @@
+\title{正则图的 Alon–Boppana 下界无需局部收敛}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§4.2，命题 4.1 的正则图特例}
+
+\p{固定 #{d\geq 3}，设 #{G_n} 为顶点数 #{n\to\infty} 的有限 #{d} 正则[图](0S01)，其邻接本征值为 #{d=\lambda_1\geq\lambda_2\geq\cdots\geq\lambda_n}。则 #{\liminf_n\lambda_2\geq 2\sqrt{d-1}}，无须假设 #{G_n} 有 BS 极限。}
+\p{\strong{闭路比较。}每个根所在分支的[普遍覆盖树](0S09)为 #{T_d}。树上从指定提升根出发的闭路投影为图上闭路；[路径提升唯一性](0S07)使该映射单射。由[矩与闭路的关系](0S0E)，每个根的每阶闭路数至少为树上的对应数。}
+\p{\strong{平移谱以去除符号。}记 #{m_T} 为[正则树谱测度](0S0I)，#{M_{2k}=\int(d+t)^{2k}\,dm_T(t)}。二项式展开的系数非负，故对固定 #{k\geq 1}，}
+##{nM_{2k}\leq\operatorname{Tr}(A_n+dI)^{2k}\leq(2d)^{2k}+(n-1)(d+\lambda_2)^{2k}.}
+\p{最后一步用 #{-d\leq\lambda_j\leq d}，以及从第二项起 #{0\leq d+\lambda_j\leq d+\lambda_2}。先固定 #{k} 令 #{n\to\infty}，得到 #{\liminf_n(d+\lambda_2)\geq M_{2k}^{1/(2k)}}。}
+\p{树谱测度在右端点 #{2\sqrt{d-1}} 的每个邻域都有正质量。因此非负变量 #{d+t} 的高次矩根趋于其支撑右端 #{d+2\sqrt{d-1}}：上界由支撑给出，下界由端点附近的正质量给出。再令 #{k\to\infty} 即得结论。两次极限的次序使单个常数本征值的贡献先消失。}

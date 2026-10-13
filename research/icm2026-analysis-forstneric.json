@@ -1,0 +1,756 @@
+{
+  "date": "2026-10-13",
+  "report": {
+    "speaker": "Franc Forstnerič",
+    "title": "From Stein Manifolds to Oka Manifolds: The h-Principle in Complex Analysis",
+    "outline": "0T00",
+    "reference": "icm2026-forstneric",
+    "question": "Stein 源域上的连续映射何时能够在逼近、插值及参数约束下变为全纯映射，Oka 靶的柔性又如何转化为极小曲面的周期消去与端点控制？",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1802808",
+    "source_version": "ICM 2026, Volume 4, pp.657–677, DOI 10.1137/25M1802808；节号与定理号采用 SIAM 正式版。",
+    "status": "selected-branches-integrated; source-frozen-for-parent-integration",
+    "full_text_available": true,
+    "full_text_read_this_turn": true,
+    "reading_scope": "同一正式版报告的摘要、§§1–5及脚注通过 SIAM 开放 HTML 全文阅读；参考文献1–129通过作者网站正式版 PDF 的文本提取阅读，并目视核对正式页669–670的图(5.3)、(5.5)。这些互补阅读覆盖整篇正式报告，不表示报告所引全部原论文已读。arXiv v1仅读§5相关段落；支持论文的实际部分阅读范围逐项列于 sources。",
+    "sources": [
+      {
+        "url": "https://epubs.siam.org/doi/10.1137/25M1802808",
+        "title": "From Stein Manifolds to Oka Manifolds: The h-Principle in Complex Analysis",
+        "version": "SIAM ICM 2026 Volume 4, pp.657–677, accessed 2026-10-13",
+        "access": "web HTML 全文可访问；直接 curl 曾返回403，不影响通过公开 HTML 阅读。",
+        "read_scope": "摘要、正文§§1–5及脚注逐段全文阅读；参考文献表和图另用同版作者托管 PDF 补齐。",
+        "full_document_read": false,
+        "reading_status": "partial-representation; complete-main-text",
+        "same_work_full_read_with": "https://users.fmf.uni-lj.si/forstneric/papers/2026ICM.pdf",
+        "license": "CC BY 4.0; © 2026 International Mathematical Union"
+      },
+      {
+        "url": "https://users.fmf.uni-lj.si/forstneric/papers/2026ICM.pdf",
+        "title": "SIAM 正式报告作者托管副本",
+        "version": "正式版21页，印刷页657–677",
+        "access": "公开 PDF 已下载并提取文本",
+        "local_path": "/tmp/forstneric-icm2026-published.pdf",
+        "sha256": "de463b61c7bf55883a7060ac733634aba86ec19af9cbaae1ecbed2f0f1b10429",
+        "read_scope": "参考文献1–129；§5相关段落及公式；目视检查印刷页669–670的图(5.3)、(5.5)与许可。没有重复通读此 PDF 的全部正文，正文通读来自同版 HTML。",
+        "full_document_read": false,
+        "reading_status": "partial-representation; complements-full-main-text-HTML"
+      },
+      {
+        "url": "https://arxiv.org/abs/2509.21197v1",
+        "title": "From Stein manifolds to Oka manifolds",
+        "version": "arXiv v1, submitted 2025-09-25; manuscript dated 2025-09-24",
+        "access": "公开 PDF 已下载",
+        "local_path": "/tmp/forstneric-icm2026-arxiv-v1.pdf",
+        "sha256": "39df8eb99d51321aefa2b04bea8f83e572f760e827e56f7a7a9c2dd9f0d7dd37",
+        "read_scope": "版本日期及§5的极小曲面、有限总曲率、Gauss 映射段落，PDF页16–18，对应本地文本约775–898行；未通读此版本。",
+        "full_document_read": false,
+        "reading_status": "partial"
+      },
+      {
+        "url": "https://users.fmf.uni-lj.si/forstneric/papers/2019CAG.pdf",
+        "title": "The parametric h-principle for minimal surfaces in R^n and null curves in C^n",
+        "authors": [
+          "Franc Forstnerič",
+          "Finnur Lárusson"
+        ],
+        "version": "Communications in Analysis and Geometry 27 (2019), 1–45",
+        "access": "作者公开 PDF",
+        "read_scope": "开头定义、定理1.1、1.2及推论1.3，约前5页；另查看相关证明路线和§4片段。未完整阅读定理4.1的全部陈述及证明，0T10对此结果亦依正式报告定理5.1与图(5.3)。",
+        "full_document_read": false,
+        "reading_status": "partial"
+      },
+      {
+        "url": "https://users.fmf.uni-lj.si/forstneric/papers/2026JLMS.pdf",
+        "title": "Isotopies of complete minimal surfaces of finite total curvature",
+        "authors": [
+          "Antonio Alarcón",
+          "Franc Forstnerič",
+          "Finnur Lárusson"
+        ],
+        "version": "Journal of the London Mathematical Society 114 (2026), e70640; DOI 10.1112/jlms.70640",
+        "access": "作者公开正式 PDF",
+        "read_scope": "标题、摘要、许可；前4页的空间定义、定理1.1及图(1.4)，弱同伦与真正同伦等价的区别、代数平凡化注意事项；第5页定理1.2开头。未读全篇29页及核心证明。",
+        "full_document_read": false,
+        "reading_status": "partial",
+        "license": "CC BY-NC-ND；仅独立阐释数学结果，不转载或改编 PDF。"
+      },
+      {
+        "url": "https://users.fmf.uni-lj.si/forstneric/papers/2026TAMS.pdf",
+        "title": "The Oka principle for tame families of Stein manifolds",
+        "authors": [
+          "Franc Forstnerič",
+          "Álfheiður Edda Sigurðardóttir"
+        ],
+        "version": "Transactions of the American Mathematical Society, Series B 13 (2026), 477–511; DOI 10.1090/btran/257; published 2026-07-14",
+        "access": "作者公开正式 PDF",
+        "read_scope": "标题、摘要、目录及引言开头，印刷页477–478开头；仅核实发表状态和驯顺族研究范围。未读全文、主要定理的完整假设或证明，未据此新增高维族定理。",
+        "full_document_read": false,
+        "reading_status": "partial",
+        "license": "CC BY 3.0"
+      },
+      {
+        "url": "https://users.fmf.uni-lj.si/forstneric/",
+        "title": "Franc Forstnerič 作者文献目录",
+        "version": "accessed 2026-10-13",
+        "access": "公开 HTML",
+        "read_scope": "与上述正式报告、2019 CAG、2026 JLMS、2026 TAMS 有关的目录项、书目信息与下载链接；未将整个主页记为全文阅读。",
+        "full_document_read": false,
+        "reading_status": "partial"
+      }
+    ],
+    "deferred": [
+      "报告§2的 Stein 基础复用现有0B8Y、0B8Z、0B81、0B99；没有重建 Stein 定义，也没有补写所有 Cartan、Levi、嵌入定理的证明。",
+      "CAP、参数 Oka、CRE 等价、Oka–Grauert、椭圆 Oka、Oka 映射传递及局部化定理的核心解析证明均保留为外部输入。",
+      "报告其他补空间推广、密度性质的 Andersén–Lempert 证明、Oka-1 带例外集的一般版本、代数强支配定理及所有开放问题的后续进展未扩展新分支。",
+      "变化复结构定理只整合开曲面连续版本；高维驯顺 Stein 族论文仅核实书目和摘要，精确一般定理与证明待读。",
+      "非平坦极小曲面、完备性及有限总曲率参数同伦定理的周期控制、逼近粘合、端点安排核心证明未本地重建。",
+      "任意余维的 Gauss 方程和完备有限总曲率的紧化结构定理仍为外部几何输入。",
+      "报告引用的大部分原论文未逐篇阅读；只对 sources 中列出的支持论文作所注明的部分阅读。",
+      "香蕉空间未取得可核实的对应术语条目，不标为 verified。",
+      "0T0S 的 Forester 词法修复由集成人完成；本次最终写入只保存 manifest，不覆盖该页，不生成可能失效的源码快照哈希。",
+      "全站同步、全局 audit、构建与发布由集成人负责；本切片不再进行额外检索、扩页或重复验证。"
+    ]
+  },
+  "existing_note_ids": [],
+  "reused_note_ids": [
+    "0043",
+    "0044",
+    "0045",
+    "004S",
+    "00D9",
+    "00E2",
+    "00ER",
+    "00ET",
+    "00F3",
+    "00FO",
+    "00FQ",
+    "00FR",
+    "00FT",
+    "00NC",
+    "00ND",
+    "00NI",
+    "00O2",
+    "00O4",
+    "00TK",
+    "0116",
+    "0118",
+    "012K",
+    "012O",
+    "012Z",
+    "0213",
+    "040C",
+    "040D",
+    "040H",
+    "0A33",
+    "0A34",
+    "0A3D",
+    "0A3G",
+    "0A3V",
+    "0A99",
+    "0A9E",
+    "0A9G",
+    "0AL4",
+    "0AL7",
+    "0B81",
+    "0B82",
+    "0B8Y",
+    "0B8Z",
+    "0B99",
+    "0BA6",
+    "0BAC",
+    "0BAD",
+    "0C06"
+  ],
+  "entries": [
+    [
+      "0T00",
+      [],
+      "一个研究综述：解释 Stein 源域、Oka 靶空间与周期及端点条件之间的逻辑；导航不作硬前置。"
+    ],
+    [
+      "0T01",
+      [
+        "0B81",
+        "0B8Y",
+        "0B99",
+        "00E2",
+        "00FO"
+      ],
+      "只定义不带逼近约束的 BOP，复用 Stein 空间定义并明确光滑子类。"
+    ],
+    [
+      "0T02",
+      [
+        "0B81",
+        "00F3",
+        "00TK"
+      ],
+      "以所有源维数的凸紧集逼近定义 Oka 流形。"
+    ],
+    [
+      "0T03",
+      [
+        "0B81",
+        "0B8Y",
+        "0B8Z",
+        "00E2",
+        "00FO"
+      ],
+      "定义全程受控的基本 Oka 逼近性质。"
+    ],
+    [
+      "0T04",
+      [
+        "0B81",
+        "0B8Y",
+        "0B99",
+        "0B8Z",
+        "0A99",
+        "00E2",
+        "00FO"
+      ],
+      "定义有限 CW 参数对下的相对逼近插值性质，参数仅要求连续。"
+    ],
+    [
+      "0T05",
+      [
+        "0T02",
+        "0T03",
+        "0T04",
+        "0T0B"
+      ],
+      "陈述 CAP、BOPA、POPAI、CRE 的一个等价定理；BOP 是比较链接。"
+    ],
+    [
+      "0T06",
+      [
+        "0T01",
+        "0T02",
+        "00E2",
+        "00FO",
+        "0BAD"
+      ],
+      "以圆盘的收缩和 Cauchy 估计证明 BOP 不蕴含 CAP。"
+    ],
+    [
+      "0T07",
+      [
+        "0B8Y",
+        "0B81",
+        "0B82",
+        "0A3V"
+      ],
+      "陈述 Stein 底上全纯与拓扑向量丛同构类的对应。"
+    ],
+    [
+      "0T08",
+      [
+        "0B81",
+        "0B82",
+        "0044"
+      ],
+      "定义支配全纯喷流及由它表达的椭圆性，解码纤维参数微分。"
+    ],
+    [
+      "0T09",
+      [
+        "0B81",
+        "00NC",
+        "0T08"
+      ],
+      "证明有限个逐点张成切空间的完全流构造支配喷流。"
+    ],
+    [
+      "0T0A",
+      [
+        "0B81",
+        "0T08",
+        "0T02"
+      ],
+      "陈述次椭圆性推出 Oka 性的充分条件，有限喷流条件就地定义。"
+    ],
+    [
+      "0T0B",
+      [
+        "0B81",
+        "00TK",
+        "0A33",
+        "0044"
+      ],
+      "定义以给定映射为核心的凸相对椭圆性，区别于靶上的固定喷流丛。"
+    ],
+    [
+      "0T0C",
+      [
+        "0T02",
+        "0T05",
+        "0T0B",
+        "0A34"
+      ],
+      "从 CRE 取常值核心并限制参数维数，推出每点强支配。"
+    ],
+    [
+      "0T0D",
+      [
+        "0B8Y",
+        "0T02",
+        "00E2",
+        "0A9E",
+        "040D",
+        "0T04",
+        "0T05",
+        "040C"
+      ],
+      "由参数 Oka 性逐步证明映射空间包含诱导所有同伦群同构。"
+    ],
+    [
+      "0T0E",
+      [
+        "00E2",
+        "00FO"
+      ],
+      "定义 Serre 纤维化；与已有 Hurewicz 定义的比较不作为硬前置。"
+    ],
+    [
+      "0T0F",
+      [
+        "0B81",
+        "0T0E",
+        "0B8Y",
+        "00E2",
+        "0T04"
+      ],
+      "定义 Oka 映射的 Serre 条件和投影固定的参数全纯提升条件。"
+    ],
+    [
+      "0T0G",
+      [
+        "0B81",
+        "0T02",
+        "0T0F"
+      ],
+      "陈述 Oka 纤维的全纯局部平凡丛满足 Oka 映射条件；覆盖为例子。"
+    ],
+    [
+      "0T0H",
+      [
+        "0B81",
+        "0T0F",
+        "0T02"
+      ],
+      "陈述 Oka 性沿满射 Oka 映射双向传递。"
+    ],
+    [
+      "0T0I",
+      [
+        "0B81",
+        "00NC",
+        "0T09",
+        "00ND"
+      ],
+      "定义完全全纯向量场生成的 Lie 代数的密度性质。"
+    ],
+    [
+      "0T0J",
+      [
+        "0B8Y",
+        "0T0I",
+        "0B8Z",
+        "0T02"
+      ],
+      "陈述具密度性质的 Stein 流形中全纯凸紧集补空间的 Oka 定理。"
+    ],
+    [
+      "0T0K",
+      [
+        "0T02",
+        "0T0A",
+        "0T0J",
+        "004S"
+      ],
+      "验证闭球的多项式凸性并调用外部结果得到 Oka 而非次椭圆的例子。"
+    ],
+    [
+      "0T0L",
+      [
+        "0AL4",
+        "0B81",
+        "0T02",
+        "0T08",
+        "0T0A"
+      ],
+      "陈述射影 Oka 流形的椭圆性；阿贝尔簇仅作全纯与代数类别的比较例子。"
+    ],
+    [
+      "0T0M",
+      [
+        "0B81",
+        "0T02",
+        "0B99"
+      ],
+      "陈述解析 Zariski 开覆盖下的 Oka 局部化定理。"
+    ],
+    [
+      "0T0N",
+      [
+        "0B81",
+        "00FR",
+        "0B8Y",
+        "0B8Z",
+        "00E2",
+        "00FO"
+      ],
+      "定义只测试开 Riemann 曲面源的 Oka-1 性。"
+    ],
+    [
+      "0T0O",
+      [
+        "0B81",
+        "0T0C",
+        "0T0N"
+      ],
+      "陈述强支配性推出 Oka-1 性的无例外集特例。"
+    ],
+    [
+      "0T0P",
+      [
+        "0043",
+        "00FQ",
+        "0A99",
+        "00FR",
+        "0T02",
+        "00E2",
+        "00FO"
+      ],
+      "陈述复结构向局部 C^alpha 拓扑连续的开曲面族上的 Oka 原理。"
+    ],
+    [
+      "0T0Q",
+      [
+        "012Z",
+        "0AL7",
+        "012K",
+        "012O",
+        "0T08",
+        "0BA6"
+      ],
+      "定义代数喷流的椭圆性，区别代数正则性与全纯性。"
+    ],
+    [
+      "0T0R",
+      [
+        "012O",
+        "0T0Q",
+        "00E2",
+        "00FO",
+        "0A9E",
+        "0BA6"
+      ],
+      "陈述保留代数代表同伦类限制的仿射源逼近定理。"
+    ],
+    [
+      "0T0S",
+      [
+        "00FR",
+        "0045",
+        "00NI"
+      ],
+      "在任意余维中定义共形极小浸入及非平坦性；第二基本形式的法向版本就地说明。"
+    ],
+    [
+      "0T0T",
+      [
+        "00FR",
+        "0B81",
+        "0T0S",
+        "00D9"
+      ],
+      "展开复微分平方，证明共形性与零二次关系的等价及非退化条件。"
+    ],
+    [
+      "0T0U",
+      [
+        "0T0S",
+        "00FT",
+        "0A3G",
+        "0A3D"
+      ],
+      "计算平均曲率向量与复微分，证明极小性、调和性和微分全纯性等价。"
+    ],
+    [
+      "0T0V",
+      [
+        "0B81"
+      ],
+      "定义去顶点零二次曲面并计算其局部光滑性与切空间。"
+    ],
+    [
+      "0T0W",
+      [
+        "0T0V",
+        "0T08",
+        "0T09",
+        "0T0A"
+      ],
+      "用反对称矩阵的完全流构造零二次曲面的支配喷流，再引用椭圆 Oka 原理。"
+    ],
+    [
+      "0T0X",
+      [
+        "00FR",
+        "00FT",
+        "0T0S",
+        "0T0T",
+        "0T0U",
+        "0T0Z",
+        "0BAC"
+      ],
+      "证明 Weierstrass 实部积分的单值性判据，分清实周期、复周期与通量。"
+    ],
+    [
+      "0T0Y",
+      [
+        "00FR",
+        "0T0X",
+        "0T0S",
+        "0T0Z"
+      ],
+      "显式计算悬链面的实周期与非零通量，展示全局共轭曲面的障碍。"
+    ],
+    [
+      "0T0Z",
+      [
+        "00FR",
+        "00FT",
+        "0T0V"
+      ],
+      "定义全纯零曲线；实部的极小性是后续应用而非定义前置。"
+    ],
+    [
+      "0T10",
+      [
+        "00FR",
+        "00FT",
+        "0T07",
+        "0T0S",
+        "0T0Z",
+        "0T0V",
+        "0A9E",
+        "040D",
+        "0T0X"
+      ],
+      "陈述非平坦极小浸入、零曲线及零二次微分空间间的参数同伦原理。"
+    ],
+    [
+      "0T11",
+      [
+        "00FR",
+        "0T0S",
+        "00ET",
+        "0A9E",
+        "040D",
+        "0116"
+      ],
+      "陈述在非平坦极小浸入空间中加入完备性所保留的同伦型。"
+    ],
+    [
+      "0T12",
+      [
+        "00FR",
+        "00FT",
+        "0T0X",
+        "0T11",
+        "0T0T",
+        "00ER"
+      ],
+      "在固定紧化和亚纯零微分假设下，证明所有端点有极点等价于诱导度量完备。"
+    ],
+    [
+      "0T13",
+      [
+        "0T0S",
+        "00O4",
+        "0T11",
+        "00FR"
+      ],
+      "定义有限总曲率，以 Gauss 方程说明任意余维下曲率非正，并区分完备性。"
+    ],
+    [
+      "0T14",
+      [
+        "0T0S",
+        "0AL4",
+        "0T0U",
+        "0T0T"
+      ],
+      "定义广义全纯 Gauss 映射并验证其坐标不变性及三维射影参数化。"
+    ],
+    [
+      "0T15",
+      [
+        "00FR",
+        "0T14",
+        "0T0S",
+        "0T0X",
+        "0T0Z"
+      ],
+      "陈述给定全纯零二次方向映射的 Gauss 实现定理及带条件的加强。"
+    ],
+    [
+      "0T16",
+      [
+        "00FR",
+        "0T11",
+        "0T13",
+        "0T0S",
+        "0T0Z",
+        "0T0V",
+        "00FT",
+        "0A9E",
+        "040D"
+      ],
+      "陈述完备、非平坦、有限总曲率空间与代数零微分空间的弱同伦等价。"
+    ],
+    [
+      "icm2026-forstneric",
+      [],
+      "一份文献记录，分别保留正式报告、预印本版本及所读支持论文的出处与许可。"
+    ]
+  ],
+  "proofs_written": [
+    "0T06",
+    "0T09",
+    "0T0C",
+    "0T0D",
+    "0T0K",
+    "0T0T",
+    "0T0U",
+    "0T0W",
+    "0T0X",
+    "0T0Y",
+    "0T12"
+  ],
+  "proofs_with_external_inputs": [
+    "0T0C",
+    "0T0D",
+    "0T0K",
+    "0T0W"
+  ],
+  "research_statements_without_local_proof": [
+    "0T05",
+    "0T07",
+    "0T0A",
+    "0T0G",
+    "0T0H",
+    "0T0J",
+    "0T0L",
+    "0T0M",
+    "0T0O",
+    "0T0P",
+    "0T0R",
+    "0T10",
+    "0T11",
+    "0T15",
+    "0T16"
+  ],
+  "proof_boundaries": {
+    "0T05": "等价定理及有限阶插值引用正式报告定理1.2、1.6、3.2；没有本地完成 CAP 的逼近粘合或 CRE 等价证明。",
+    "0T06": "本地给出收缩、由既有 Cauchy 积分公式推出导数估计，以及两点逼近下界。",
+    "0T07": "Oka–Grauert 分类为外部定理；局部过渡矩阵只解释两端分类对象。",
+    "0T08": "C^a×(C*)^b 的喷流公式和零参数微分就地计算；一般 Oka 结论见0T0A。",
+    "0T09": "完全流复合及零参数微分的构造证明在本地给出，不要求流交换。",
+    "0T0A": "次椭圆推出 Oka 引用 Gromov–Forstnerič；说明逼近与粘合路线，不称为本地证明。",
+    "0T0C": "局部线性代数与链式法则推导在本地给出；起点 CRE 依赖0T05的外部等价定理。",
+    "0T0D": "路径分支和各阶同伦群的参数对论证在本地给出；参数 Oka 定理及紧开指数律为引用输入。",
+    "0T0G": "全纯纤维丛的参数 Oka 原理为外部输入；离散纤维满足 CAP 的解释是局部推论。",
+    "0T0H": "Oka 性双向传递引用报告定理1.4；覆盖例子不是一般传递定理的证明。",
+    "0T0J": "Kusakabe 补空间定理及 Euclidean 空间的密度性质为外部输入；多项式凸包解释不替代其证明。",
+    "0T0K": "闭球的多项式分离计算在本地给出；Oka 性调用0T0J，非次椭圆性调用报告推论4.4的外部结果，n>=3条件保留。",
+    "0T0L": "射影 Oka 椭圆性及三性质等价引用定理4.5、推论4.6；阿贝尔簇比较引自该处后续段落。",
+    "0T0M": "Zariski 局部化引用报告定理1.7及脚注1，不以普通坐标覆盖代替其假设。",
+    "0T0N": "Oka-1 定义本地说明；开 Riemann 曲面是 Stein 的 Behnke–Stein 定理外引。",
+    "0T0O": "仅陈述报告定理3.12的无例外集特例；从强支配到所有维数源的 Oka 性不作已解决声明。",
+    "0T0P": "引用正式报告定理3.13的连续版本，明确局部 C^alpha 连续性；Runge 补集条件用于解释证明路线。",
+    "0T0Q": "代数椭圆性为定义；代数次椭圆等价引用报告定理4.7，未本地证明。",
+    "0T0R": "一般仿射代数簇源的同伦逼近引用报告定理4.8；同伦于正则映射是必要的陈述假设。",
+    "0T0T": "对称平方的实虚部展开和非退化性在本地计算。",
+    "0T0U": "切向分量消去、平均曲率公式和 dbar 计算在本地给出。",
+    "0T0V": "零二次锥的非零点处微分及切空间计算本地给出；局部全纯平方根用于坐标解释。",
+    "0T0W": "矩阵指数流、保持二次型、切空间张成和喷流构造本地给出；由椭圆性得到 Oka 性依赖0T0A。",
+    "0T0X": "实部积分的路径无关性、局部原函数与共形极小条件的论证本地给出；通量的同调不变性使用已有 Stokes 公式0BAC。",
+    "0T0Y": "显式积分、零二次关系和非零通量在本地计算；这是一页已登记局部计算的 Example。",
+    "0T10": "参数周期消去与非平坦映射空间弱同伦等价引用报告定理5.1及2019论文；处处非零全纯一形式的存在亦为外部输入。",
+    "0T11": "完备非平坦包含的弱同伦等价及有限拓扑型时的加强引用报告§5所述 Alarcón–Lárusson 结果。",
+    "0T12": "固定紧化、亚纯性、零关系和实周期消失下，端点长度下界及 Cauchy 序列收敛证明本地给出；不据此证明有限总曲率紧化定理。",
+    "0T13": "总曲率定义及 Gauss 方程代入后 K<=0 的计算本地说明；任意余维 Gauss 方程本身与完备有限总曲率结构定理仍外引。",
+    "0T14": "射影坐标不变性及 n=3 的显式参数化与逆参数计算本地给出。",
+    "0T15": "Gauss 映射实现、通量指定及维数相关的嵌入加强均引用报告定理5.4；方向张成假设保留。",
+    "0T16": "报告定理5.3与2026 JLMS定理1.1为外部输入；完备、非平坦、有限总曲率条件明确，只声称弱同伦等价，未升级为真正同伦等价。"
+  },
+  "reuse_review": {
+    "scope": "所有0T原子页在本任务中逐页对照已有条目，复用既有基本定义；整合人亦已逐页核读0T00–0T16。",
+    "per_entry_record": "entries第三项记录单一数学问题及复用边界；前置列表只登记承重定义或论证输入，不等同于正文全部链接。",
+    "canonical_reuse": [
+      "Stein空间0B8Y",
+      "全纯凸空间0B8Z",
+      "复解析空间0B99",
+      "复流形0B81",
+      "全纯向量丛0B82",
+      "Riemann曲面00FR",
+      "连续映射00E2",
+      "全纯一形式00FT"
+    ],
+    "new_shared_foundation": [
+      {
+        "id": "0T0E",
+        "topic": "Serre 纤维化",
+        "relation": "复用连续映射和同伦；已有040H是量词更强的 Hurewicz 纤维化，不能混同。"
+      }
+    ],
+    "dependency_decisions": [
+      "0B8Z到0B8Y的 Remmert 应用回链不作反向硬前置，不修改旧页或全局记录。",
+      "0T02到0T04/05、0T0V到0T0T、0T0Z到0T0X/0T0S为解释或应用链接，未登记成定义依赖。",
+      "0T0L的阿贝尔簇比较、0T0G的覆盖例子、0T11到有限总曲率的比较不作主结论的硬前置。",
+      "0T0P的 Hölder 半范数已就地定义；射影线性子空间、弱同伦等价的子串候选不机械加链。"
+    ]
+  },
+  "terminology": {
+    "attempt_date": "2026-10-13",
+    "banana_space": {
+      "url": "https://bananaspace.org/wiki/Oka流形",
+      "access": "站内限定搜索没有得到可核实对应条目；直接页面访问返回工具错误。",
+      "verified": false
+    },
+    "choices": {
+      "Oka": "保留人名 Oka，不强行译音。",
+      "Stein / Riemann": "沿用既有站内术语及定义。",
+      "holomorphic spray": "全纯喷流；0T08首现附英文 spray，区别于 jet。",
+      "elliptic": "椭圆性指全纯支配喷流条件，不指微分算子的椭圆符号。",
+      "null quadric": "零二次曲面，使用复双线性型，不用 Hermitian 范数替代。",
+      "null curve": "全纯零曲线，微分处处非零。",
+      "flux": "通量，按 Phi=2 partial u 约定取虚周期。",
+      "weak homotopy equivalence": "弱同伦等价，复用040D，区别于0116同伦等价。"
+    },
+    "confirmation_scope": "保留现有网站用语，未声称已通过香蕉空间术语核验。"
+  },
+  "verification": {
+    "status": "manifest saved for parent integration; no additional verification run at final handoff",
+    "owned_entries": 44,
+    "new_atomic_pages": 42,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "proof_entries": 11,
+    "research_statement_entries": 15,
+    "proofs_with_external_inputs_count": 4,
+    "scope": "本切片此前已逐页进行数学阅读与链接修订；最终按用户要求停止额外研究和重复检查，直接保存 manifest。",
+    "parent_reported_review": "用户已逐页读完0T00–0T16，并报告 Forester 编译成功。",
+    "forester_lexical_fix": "0T0S第10行上标后斜线公式由集成人改为 frac；本次未覆写该页。KaTeX检查不能替代 Forester 词法和构建检查。",
+    "source_hashes": "未生成最终快照哈希，以免覆盖或误记集成人同步修复后的源码；快照由全站同步生成。",
+    "global_build_run_by_slice": false,
+    "global_sync_run_by_slice": false,
+    "global_audit_modified_by_slice": false,
+    "commit_or_push_run": false,
+    "whole_report_self_contained": false,
+    "remaining_integration": "全站同步、依赖校验、构建和发布由集成人执行；缺少本地证明的研究结果已逐项登记。"
+  }
+}

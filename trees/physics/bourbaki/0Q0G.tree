@@ -1,0 +1,12 @@
+\title{硬核排斥的散射长度等于排除半径}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[文献](bourbaki-1256-sabin)，Fournais–Solovej II，第 1.1 节、式 (1.2)}
+
+\p{设 #{R>0}，硬核势在 #{|x|\leq R} 取 #{\infty}，在核外取零。[散射变分问题](0Q0D)要求 #{f=0} 于核内，#{f-1\in\dot H^1}。其最小能量为 #{8\pi R}，所以 #{a=R}。这里 #{R} 是两粒子中心之间的最小距离；若粒子被画成不相交实体球，各球的几何半径为 #{R/2}。}
+\p{\strong{证明。}取 #{f(r)=0}（#{r\leq R}）及 #{f(r)=1-R/r}（#{r>R}），可得}
+##{2\int|\nabla f|^2=8\pi\int_R^\infty\frac{R^2}{r^4}r^2\,dr=8\pi R.}
+\p{下界先对平滑的允许函数证明，并在各方向 #{\theta\in S^2} 沿射线积分。由边界值 #{f(R\theta)=0} 和远处值 #{1}，[Schwarz 不等式](004S)给出}
+##{1=\left|\int_R^\infty\partial_rf(r\theta)\,dr\right|^2\leq\left(\int_R^\infty|\partial_rf|^2r^2\,dr\right)\left(\int_R^\infty r^{-2}\,dr\right).}
+\p{因此径向能量在每条射线上至少为 #{R}。角向梯度能非负，对球面方向积分并乘以 #{2}，下界为 #{8\pi R}。以能量范数逼近可推广至允许的弱梯度函数，得到所称最小值。}

@@ -1,0 +1,19 @@
+\title{偶几何凸函数的有理权重体积积上界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，定理4.4}
+
+\p{设 #{n\ge 1}，#{f} 是偶[几何凸函数](0R0F)，且 #{\{f\le 1\}} 有界并包含原点的一个邻域。记 #{V} 为[有理权重体积](0R0M)，#{\kappa_n=|B_2^n|}。则}
+##{V(f)V(\mathcal Lf)\le
+\frac{(n+1)^2}{2^{n+2}}\kappa_n^2
+\sum_{\substack{0\le j\le n\\j\ {\rm even}}}\binom nj\frac 4{(j+1)^2}.}
+\p{\strong{截面对偶。}令 #{K=\widetilde K_f} 为[高一维凸体](0R0N)，设 #{K_t=\{x:(x,t)\in K\}}，#{L_s=\{y:(y,s)\in K^\circ\}}。偶性使每个截面关于原点对称。对 #{-1<s,t<1}，极性约束给出 #{L_s\subseteq(1-st)K_t^\circ}。}
+\p{这些内部截面具有非空内部。因此引用[经典 Santaló 不等式](0R0B)，得到}
+##{|K_t|\,|L_s|\le(1-st)^n|K_t|\,|K_t^\circ|
+\le\kappa_n^2(1-st)^n.}
+\p{\strong{积分。}两体位于高度带 #{[-1,1]} 中，故 [Tonelli 定理](0H53)给出}
+##{|K|\,|K^\circ|\le\kappa_n^2
+\int_{-1}^1\int_{-1}^1(1-st)^n\,ds\,dt
+=\kappa_n^2\sum_{\substack{0\le j\le n\\j\ {\rm even}}}\binom nj\frac 4{(j+1)^2}.}
+\p{最后一步展开二项式，奇次幂积分为零，偶次幂各贡献 #{2/(j+1)}。再用[体积积换算](0R0N)即得结论。这里的深层输入是经典 Santaló 不等式；截面估计与积分推导均已给出。}

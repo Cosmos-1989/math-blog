@@ -1,0 +1,11 @@
+\title{支撑函数如何记录凸集}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§2}
+
+\p{设 #{K\subseteq\mathbb R^n} 是非空[闭凸集](00TK)。它的支撑函数是扩展实值函数}
+##{h_K(u)=\sup_{x\in K}\langle u,x\rangle.}
+\p{这里使用固定的实[内积](004M)，无界集合的上确界允许为 #{+\infty}。若 #{K} 紧，则连续线性函数由[极值定理](0A3A)取得最大值。对单位向量 #{u}，#{h_K(u)} 给出垂直于 #{u} 的支撑超平面 #{\langle u,x\rangle=h_K(u)} 的有向位置。}
+\p{由[点与闭凸集的分离](0R03)，有 #{K=\bigcap_u\{x:\langle u,x\rangle\le h_K(u)\}}；所以支撑函数唯一确定集合。[极集](0R01)则满足 #{K^\circ=\{u:h_K(u)\le 1\}}。这使线性不等式与集合包含之间可以相互转换。}
+\p{若 #{K,L} 为非空紧凸集，其 Minkowski 和指 #{K+L=\{x+y:x\in K,y\in L\}}。分别对 #{x,y} 取最大值得 #{h_{K+L}=h_K+h_L}。此外，#{h_{aK}=a h_K} 对 #{a\ge 0} 成立，而 #{h_{-K}(u)=h_K(-u)}。这些等式也说明 Minkowski 和的每个求和项能由其余两项的支撑函数唯一恢复。}

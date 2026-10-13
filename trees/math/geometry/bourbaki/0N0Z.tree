@@ -1,0 +1,15 @@
+\title{接触权重控制对数行列式的总下降}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun 命题 5，采用积分形式}
+
+\p{设格 #{\Lambda} 的最短长度大于一，#{A_t} 为其[布朗椭球演化](0N0T)。若 #{0<T<1/(9n)}，则}
+##{\mathbb E_W\log\det A_T\leq -\frac{n^2T}{4}+\int_0^T K_t(\Lambda)dt+2T^{3/2}n^{5/2}+Tn^2e^{-n/2}.}
+\p{\strong{证明。}记 #{N_t=\dim F_{A_t}}，#{S_t=\Lambda^*\cap\partial\mathcal E_{A_t}}，#{d=n(n+1)/2}。在[高概率事件](0N0V) #{G_t} 上，#{\|A_t\|_{\mathrm{op}}^{-2}\geq(1+3\sqrt{nt})^{-2}\geq 1-6\sqrt{nt}}。又 #{0\leq N_t\leq n^2}，因此}
+##{-\frac 12\mathbb E_W[\|A_t\|_{\mathrm{op}}^{-2}N_t]\leq -\frac 12\mathbb E_W[1_{G_t}N_t]+3\sqrt t\,n^{5/2}.}
+\p{由[接触点维数界](0N0P)，#{N_t\geq d-|S_t|/2}。结合 #{\mathbb P_W(G_t^c)\leq 2e^{-n/2}} 得到右边至多为}
+##{-\frac{n^2}{4}+\frac 14\mathbb E_W[1_{G_t}|S_t|]+3\sqrt t\,n^{5/2}+n^2e^{-n/2}.}
+\p{在 #{G_t} 上所有接触点属于[截断球](0N0X) #{D_t}。该球内只有有限个格点，故可逐项取期望，再用[单点接触概率界](0N0W)，得}
+##{\mathbb E_W[1_{G_t}|S_t|]\leq\sum_{x\in\Lambda^*\cap D_t}\mathbb P_W(x\in S_t)\leq K_t(\Lambda).}
+\p{将非负的 #{K_t/4} 放宽为 #{K_t}，把上述估计代入[对数行列式积分估计](0N0U)，并计算 #{3\int_0^T\sqrt t\,dt=2T^{3/2}}，即得结论。这里依赖的外部随机分析结果为积分估计、矩阵尾界和单点接触概率界。}

@@ -1,0 +1,11 @@
+\title{对角谱乘子的迹为何需要在零点消失}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.3；HMT，§1.2、§3.1}
+
+\p{设 #{H} 是有可数[正交归一基](0A0G) #{(e_j)} 的 [Hilbert 空间](00MQ)，#{Ae_j=\alpha_je_j}，其中 #{0\leq\alpha_j\leq b} 且 #{\sum_j\alpha_j<\infty}。对这种正对角算子，迹定义为 #{\operatorname{Tr}A=\sum_j\alpha_j}。若 #{h(x)=x\widetilde h(x)}，其中 #{\widetilde h} 在 #{[0,b]} 上连续，则}
+##{\sum_j|h(\alpha_j)|\leq\|\widetilde h\|_{\infty,[0,b]}\sum_j\alpha_j<\infty.}
+\p{所以 #{h(A)} 的迹可按绝对收敛级数 #{\operatorname{Tr}h(A)=\sum_jh(\alpha_j)} 计算。这是对角情形的迹类条件。}
+\p{\strong{证明。}逐项使用 #{|\alpha_j\widetilde h(\alpha_j)|\leq\alpha_j\|\widetilde h\|_\infty}，再求和即可。迹不依赖正交归一基：对任意另一组基 #{(v_k)}，其有限正交投影由基的稠密性收敛到恒等算子，故对单位向量 #{e_j} 有 #{\sum_k|\langle e_j,v_k\rangle|^2=1}。这就是所需的 Parseval 等式。把新基中的对角元展开为 #{\sum_jh(\alpha_j)|\langle e_j,v_k\rangle|^2}，绝对双重和至多 #{\sum_j|h(\alpha_j)|}，由 [Fubini–Tonelli 定理](0H53)交换求和即得同一迹。}
+\p{若 #{H} 无穷维，#{h(0)\ne 0}，则 #{\alpha_j\to 0} 使 #{h(\alpha_j)\to h(0)\ne 0}，谱和甚至不满足通项趋零。在曲面[谱乘子](0O04)的情形，正乘子的可和性由[紧曲面迹公式](0O0L)给出；要求 #{h=x\widetilde h} 正是为避免无穷多个高频特征值在变换后的零点附近累积造成发散。}

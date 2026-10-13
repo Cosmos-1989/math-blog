@@ -1,0 +1,12 @@
+\title{双随机矩阵的范数收缩控制不可达顶点比例}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，引理 4.8 的混合估计}
+
+\p{设 #{P} 为 #{N\times N} 非负矩阵，每行每列之和均为一，称为双随机矩阵。令 #{\mathbf 1=(1,\ldots,1)}，#{q=\|P|_{\mathbf 1^\perp}\|}。把 #{P_{uv}} 看成从 #{v} 到 #{u} 的一步概率，则对任意起点 #{v} 和整数 #{l\geq 1}，}
+##{\sum_u\left|(P^l)_{uv}-\frac 1N\right|\leq\sqrt N\,q^l.}
+\p{\strong{证明。}行列和条件使 #{P\mathbf 1=P^*\mathbf 1=\mathbf 1}，所以常数空间及其[正交补](00MR)均不变。令 #{\Pi=\mathbf 1\mathbf 1^*/N}，则 #{(P^l-\Pi)\delta_v=P^l(I-\Pi)\delta_v}，其二范数至多 #{q^l\|(I-\Pi)\delta_v\|_2\leq q^l}。由[Schwarz 不等式](004S)，一范数至多 #{\sqrt N} 倍二范数，得到结论。}
+\p{若 #{P_{uv}>0} 只可能发生在[图距离](00LC) #{d(u,v)\leq r} 时，则 #{P^l_{uv}=0} 对 #{d(u,v)>rl} 成立。每个这样的顶点给上述一范数贡献 #{1/N}，故}
+##{\frac{|\{u:d(u,v)>rl\}|}{N}\leq\sqrt N\,q^l.}
+\p{该估计对所有起点同时成立。它控制远处顶点的比例，不直接给出最大距离或直径。}

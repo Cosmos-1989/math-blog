@@ -1,0 +1,12 @@
+\title{有界度图的邻接算子是有界自伴算子}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§3.2 的邻接算子}
+
+\p{设 #{G=(V,E)} 为[度数不超过 D 的图](0S01)。在 [Hilbert 空间](00MQ) #{\ell^2(V)=\{f:V\to\mathbb C:\sum_v|f(v)|^2<\infty\}} 上，定义}
+##{(Af)(v)=\sum_{e:e_-=v}f(e_+).}
+\p{则 #{A} 为[自伴算子](0GSN)，且[算子范数](00M4)不超过 #{D}。重边逐条计数；一个自环在对角元中贡献二。}
+\p{\strong{有界性。}先取有限支撑的 #{f}，对每个顶点应用 [Schwarz 不等式](004S)，随后交换非负有限和，得到}
+##{\sum_v|(Af)(v)|^2\leq D\sum_v\sum_{e:e_-=v}|f(e_+)|^2=D\sum_u\deg(u)|f(u)|^2\leq D^2\|f\|_2^2.}
+\p{有限支撑函数在 #{\ell^2(V)} 中稠密，故由[有界延拓](00M8)得到处处定义的算子。把每条边换成反向边，得 #{\langle f,Ag\rangle=\langle Af,g\rangle}；连续性将恒等式推广到所有向量。处处定义的有界对称算子等于其[伴随](00MU)，所以自伴。无统一度数界时，上述范数估计失效，必须另行指定自伴实现。}

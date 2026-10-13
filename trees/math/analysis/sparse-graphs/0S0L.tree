@@ -1,0 +1,11 @@
+\title{Schreier 图的局部收敛等价于归一化迹收敛}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§3.1，式 (3.1)–(3.2)}
+
+\p{设 #{\Gamma} 为有限生成群，#{\rho_n} 为其 #{n} 点置换作用，#{\lambda} 为[左正则表示](0GSF)。对[群代数](017J)元素 #{a=\sum_g a_g g}，定义 #{\rho_n(a)=\sum_g a_g\rho_n(g)}、#{\tau(a)=a_e}。则对应 [Schreier 图](00D5) BS 趋于 [Cayley 图](00D4)，当且仅当对所有这样的有限和有}
+##{\frac 1n\operatorname{Tr}\rho_n(a)\longrightarrow\tau(a).}
+\p{\strong{证明。}置换矩阵的第 #{v} 个对角元在 #{v} 被固定时为一，否则为零。因此 #{\operatorname{Tr}\rho_n(g)} 恰为 #{g} 的固定点数。对群元素逐个应用[固定点判据](0S06)，再取有限线性组合便得正向结论；反向只需取 #{a=g}。}
+\p{群代数的乘法及 #{a^*=\sum_g\overline{a_g}g^{-1}} 对应算子的乘法与伴随。因此任何固定有限族的任意固定非交换多项式的归一化迹也收敛；多项式含变量及其伴随时同样成立。这就是此处的非交换分布收敛。}
+\p{若 #{a=a^*}，算子自伴，而且 #{\|\rho_n(a)\|\leq\sum_g|a_g|} 给出统一界。由[连续函数演算](0S14)和[多项式逼近](0P14)，归一化迹收敛进一步给出 #{\rho_n(a)} 的经验谱测度收敛到 #{\lambda(a)} 在单位元处的谱测度。范数的上界收敛仍是[强收敛](0GSF)增加的要求。}

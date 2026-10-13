@@ -1,0 +1,12 @@
+\title{指标函数区分两种凸函数对偶}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[文献](icm2026-artstein-avidan)，Hidden structures，§2.2第6项；ICM §4}
+
+\p{设 #{K\subseteq\mathbb R^n} 为含原点的闭凸集，#{\delta_K} 为其[凸指标函数](0R0A)。则 [Legendre 变换](0R07)和[函数极性](0R0G)分别满足}
+##{\mathcal L\delta_K=h_K,\qquad
+\mathcal A\delta_K=\delta_{K^\circ},}
+\p{其中 #{h_K} 是[支撑函数](0R02)，#{K^\circ} 是[极集](0R01)。}
+\p{\strong{证明。}计算共轭时，#{K} 外的点没有贡献，故 #{(\mathcal L\delta_K)(y)=\sup_{x\in K}\langle x,y\rangle=h_K(y)}。计算极性时，若 #{y\in K^\circ}，所有分母为零的位置都满足 #{\langle x,y\rangle\le 1}，因此各项均为零。若 #{y\notin K^\circ}，存在 #{x\in K} 使分子为正而分母为零，故上确界为 #{+\infty}。}
+\p{取 #{K=B_2^n}，得到 #{\mathcal A\delta_{B_2^n}=\delta_{B_2^n}}，而 #{\mathcal L\delta_{B_2^n}(y)=|y|}。二者因而是实质不同的对偶：一种保留指标函数的形式，另一种把集合改写成测量支撑位置的函数。}

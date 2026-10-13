@@ -1,0 +1,11 @@
+\title{三维排斥势的散射长度}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，式 (2)、注记 2.2；Fournais–Solovej II，第 3 节}
+
+\p{设 #{v:\mathbb R^3\to[0,\infty]} 为可测紧支势，采用[相对动能](0Q0C) #{-2\Delta}。记 #{\dot H^1(\mathbb R^3)} 为实值 #{\omega\in L^6(\mathbb R^3)} 且[弱梯度](0Q03)属于 #{L^2} 的函数空间，这里的可积性使用 [Lp 空间](00Q6)。定义散射长度}
+##{8\pi a(v)=\inf_{\omega\in\dot H^1(\mathbb R^3)}\int_{\mathbb R^3}\left(2|\nabla\omega|^2+v|1-\omega|^2\right).}
+\p{常写 #{f=1-\omega}。条件 #{f-1\in\dot H^1} 指定无穷远的背景值，排除了任意常数变化；#{f} 本身通常不属于 #{L^2(\mathbb R^3)}。硬核处 #{v=\infty} 的含义是只允许 #{f=0}，再对核外积分。}
+\p{非负性给出 #{a(v)\geq 0}。若势支撑于有限球，取 #{\omega} 在该球等于 #{1}、远处光滑变为零，就给出有限能量，故 #{a(v)<\infty}。对于有界紧支势，极小函数的存在性及以光滑紧支 #{\omega} 逼近下确界，使用 Sabin 注记 2.2 所述散射变分理论；径向势的零能解在支撑外等于 #{1-a/r}。这一尾部系数和定义中常数的关系由[通量计算](0Q0E)确定。}
+\p{对非紧支的非负径向势，规定 #{v_T(x)=v(x)}（#{|x|\leq T}），球外为零，再定义 #{a(v)=\lim_{T\to\infty}a(v_T)}。变分下确界随势单调增加，故该极限存在，允许为 #{\infty}；有限散射长度是另加的假设。此延拓采用 Fournais–Solovej II 第 3.2 节、式 (3.12)，并用于衰减势的下界定理。}

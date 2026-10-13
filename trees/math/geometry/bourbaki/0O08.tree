@@ -1,0 +1,12 @@
+\title{HMT 光滑谱统计的两项主不等式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.3，式(10)；HMT v2，定理1.5、命题3.2}
+
+\p{固定[测试函数](0O03) #{f=\widehat\varphi}，记 #{a=f(0)}、#{b=f(i/2)}。对 [Weil–Petersson 随机曲面](0GS6) #{X\in\mathcal M_g}，取[谱乘子](0O04) #{A_X}。存在常数 #{C>0}、整数 #{m\geq 1} 和[紧支撑分布](0O06) #{\nu_1}，使每个 #{\widetilde h\in C^\infty(\mathbb R)}、每个 #{g\geq 2} 都满足}
+##{\left|\mathbb E_g\frac{\operatorname{Tr}h(A_X)}g-\nu_0(\widetilde h)-\frac{\nu_1(\widetilde h)}g\right|\leq\frac C{g^2}\left(\|w^{(m)}\|_{\infty,[0,2\pi]}+\|\widetilde h\|_{\infty,[-b,b]}\right),}
+\p{其中 #{h(x)=x\widetilde h(x)}，#{w(\theta)=\widetilde h(b\cos\theta)}，而}
+##{\nu_0(\widetilde h)=\int_{1/4}^{\infty}h(f(\sqrt{r-1/4}))\tanh(\pi\sqrt{r-1/4})\,dr.}
+\p{常数 #{C,m} 只依赖已固定的测试函数，不随 #{g} 或 #{\widetilde h} 改变。#{\nu_1} 支撑于 #{[-b,b]}；它在单项式上的值为 #{\nu_1(x^p)=a_1^{(p+1)}}，#{a_1^{(t)}} 见[谱矩展开](0O07)。}
+\p{这是引用的 HMT 主不等式。从谱矩到这个结论需要多项式导数估计、Chebyshev 展开与一致余项控制，见原论文 §3.1。之后可用[支撑消失](0O0D)删除前两项，用光滑截断的导数界控制余项。归一化的 #{g^{-2}} 是迹平均误差；还原为特征值计数时会成为 #{g^{-1}}。}

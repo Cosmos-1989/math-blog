@@ -1,0 +1,11 @@
+\title{Rogers 线性密度下界的平均法}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §2，第 4–5 页}
+
+\p{对每个 #{n\geq 2}，[格球堆积密度](0N07)满足 #{\delta_n^L\geq e^{-1}n2^{-n}}。这里采用 Aubrun 展示的常数，目标是解释线性因子 #{n} 的来源。}
+\p{\strong{证明。}在余体积 #{v=\omega_n /n} 的[格空间](0N0F)上取样。对[对数权重](0N0K) #{f}，由 [Siegel 公式](0N0G)，#{\mathbb E\sum_{x\in\Lambda^*}f(x)=(1/v)\int f=1}。因此存在一个格使该和不超过一：若几乎处处严格大于一，则期望也严格大于一。固定这个格。}
+\p{按[逐次极小值椭球的构造](0N0J)选取 #{y_i}，长度为 #{\lambda_i}。它们互不相同，且权重非负，所以}
+##{-\log\prod_{i=1}^n\lambda_i=\sum_i\log\frac 1{\|y_i\|}\leq\sum_i f(y_i)\leq\sum_{x\in\Lambda^*}f(x)\leq 1.}
+\p{故 #{\prod_i\lambda_i\geq e^{-1}}，相容椭球体积至少为 #{e^{-1}\omega_n}。[椭球转球堆积](0N0E)给出密度至少 #{2^{-n}e^{-1}\omega_n /v=e^{-1}n2^{-n}}。证明用到的外部输入是 Siegel 平均公式。}

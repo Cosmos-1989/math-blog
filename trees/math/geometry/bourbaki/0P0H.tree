@@ -1,0 +1,10 @@
+\title{有理旋转轨道的均匀求积}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，第 2.1 节公式 (4)；Berger I，第 2.2.1 节}
+
+\p{设 #{p,q} 互素、#{q>0}，#{u:\mathbb T\to\mathbb R} 为连续函数。定义连续模 #{\omega_u(\eta)=\sup_{d_{\mathbb T}(s,t)\le\eta}|u(s)-u(t)|}。对[旋转](0P04) #{R_{p/q}} 的任一初点 #{\theta}，有}
+##{\left|\frac 1q\sum_{j=0}^{q-1}u(\theta+jp/q)-\int_0^1u(s)\,ds\right|\le\omega_u(1/q).}
+\p{\strong{证明。}模 #{q} 的乘法 #{j\mapsto jp} 是剩余类的置换，所以轨道和等于 #{q^{-1}\sum_{j=0}^{q-1}u(\theta+j/q)}。把圆周划成以这些点为左端点、长度 #{1/q} 的半开弧。每一弧上 #{u} 与左端值的差不超过 #{\omega_u(1/q)}，积分再相加便得估计。}
+\p{紧圆周上的连续函数[一致连续](0F41)，故右端趋于零。若在环带上固定光滑坐标变换 #{G} 与连续测试函数 #{\varphi}，取 #{u_y(\theta)=\varphi(G(\theta,y))}；其连续模可在紧的高度区间上一致控制。这说明长有理周期逼近被 #{G} 弯曲的纬圈分布，尚未说明该分布接近二维面积。}

@@ -1,0 +1,12 @@
+\title{谱边缘平方根密度为何提示三分之二尺度}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Petri](bourbaki-1255-petri)，§8.1；HMT v2，§1的启发式讨论}
+
+\p{双曲平面的单位面积谱密度在 #{\lambda=1/4+x} 处为 #{(4\pi)^{-1}\tanh(\pi\sqrt x)\,dx}，这是[迹公式](0O0L)中恒等项所用的密度。对面积 #{4\pi(g-1)} 的闭曲面，该密度预测窗口 #{[1/4,1/4+\varepsilon]} 内的数量为}
+##{N_{\mathrm{model}}(g,\varepsilon)=(g-1)\int_0^\varepsilon\tanh(\pi\sqrt x)\,dx.}
+\p{\strong{计算。}由 #{\tanh z=z+O(z^3)}，积分得到}
+##{N_{\mathrm{model}}(g,\varepsilon)=\frac{2\pi}{3}(g-1)\varepsilon^{3/2}+O((g-1)\varepsilon^{5/2}).}
+\p{令 #{\varepsilon=t(g-1)^{-2/3}}，其中 #{t>0} 固定，则主项趋于 #{(2\pi /3)t^{3/2}}，余项趋于零。这解释为何猜测单个边缘特征值的波动尺度为 #{g^{-2/3}}。}
+\p{计算的对象是连续密度模型。固定窗口下的谱测度收敛不足以控制随 #{g} 收缩的窗口，更不能由这个积分推出 Tracy–Widom 极限分布。Petri §8.1与 HMT 引言中的边缘分布属于预测；[HMT 定理](0O01)只保证某个正指数的单侧下界。}

@@ -1,0 +1,9 @@
+\title{固定误差的概率极限不能自动给出多项式速率}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Petri](bourbaki-1255-petri)，§8.1的速率问题；独立数列例子}
+
+\p{在单点[概率空间](00Q3)上，令 #{Y_g=1/4-1/\log g}，其中整数 #{g\geq 3}。则对每个固定 #{\varepsilon>0}，#{\mathbb P(Y_g>1/4-\varepsilon)\to 1}，但不存在常数 #{c,C>0} 使 #{Y_g\geq 1 /4-Cg^{-c}} [以高概率成立](00L8)。}
+\p{\strong{验证。}由于 #{1/\log g\to 0}，第一项断言成立。另一方面，令 #{t=\log g}，则 #{g^c/\log g=e^{ct}/t\to\infty}；例如指数级数中的二次项已给出 #{e^{ct}/t\geq c^2t/2}。因此最终有 #{1/\log g>Cg^{-c}}，第二项事件的概率最终为零。}
+\p{这个随机变量例子说明固定误差与收缩误差的量词差异。[固定阈值谱隙](0GS9)不能通过把固定 #{\varepsilon} 直接改写为 #{g^{-c}} 得到[多项式阈值](0O01)。后者需要随窗口缩小仍一致有效的估计。}

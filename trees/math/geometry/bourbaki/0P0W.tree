@@ -1,0 +1,9 @@
+\title{不动点的 Lyapunov 稳定性}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，第 3.3 节；Berger II，第 1 节}
+
+\p{设 #{f:X\to X} 为[拓扑空间](00E0)的[连续映射](00E2)，#{p} 是[不动点](0P02)。若对 #{p} 的每个邻域 #{V}，都存在邻域 #{U}，使所有 #{n\ge 0} 满足 #{f^n(U)\subset V}，称 #{p} 为 Lyapunov 稳定不动点。}
+\p{其否定称为不稳定：存在一个固定邻域 #{V}，使任意小的邻域 #{U} 内都能找到 #{x\in U} 与时间 #{n\ge 0}，满足 #{f^n(x)\notin V}。这里离开的点及时间可依赖 #{U}，不要求每个靠近 #{p} 的点都离开。}
+\p{在[度量空间](00EK)中，这等价于固定某个 #{\varepsilon>0}，无论选多小的 #{\delta>0}，总有 #{d(x,p)<\delta} 而 #{d(f^n(x),p)\ge\varepsilon}。稳定性描述整个非线性迭代过程，不能只由一阶导数的[特征值](0F0B)模长直接判定。}

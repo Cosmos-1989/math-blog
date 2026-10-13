@@ -1,0 +1,13 @@
+\title{有限图的根谱测度平均等于经验本征值分布}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§3.3，定理 3.2 之前}
+
+\p{设 #{A} 为 #{n} 点有限图的实对称[邻接矩阵](0S0B)。将本征值按重数记为 #{\lambda_1,\ldots,\lambda_n}，由[正交对角化](0N0B)选取对应单位特征向量 #{\psi_1,\ldots,\psi_n}。则顶点 #{v} 的[根谱测度](0S0C)为}
+##{m_A^v=\sum_{j=1}^n|\psi_j(v)|^2\delta_{\lambda_j},\qquad \frac 1n\sum_vm_A^v=\frac 1n\sum_{j=1}^n\delta_{\lambda_j}=:m_A.}
+\p{右边称经验谱测度。\strong{证明。}把 #{\delta_v} 在特征基上展开，得到 #{f(A)\delta_v=\sum_j f(\lambda_j)\langle\psi_j,\delta_v\rangle\psi_j}。取与 #{\delta_v} 的内积，得到第一条公式；权重非负，且由正交展开总和为 #{\|\delta_v\|^2=1}。}
+\p{若本征值重复，它的总权重等于 #{\delta_v} 到相应特征空间的正交投影长度平方，故与该空间中所选的基无关。现在对顶点求平均，交换两个有限和，并用 #{\sum_v|\psi_j(v)|^2=1}，便得第二条公式。}
+\p{同一计算还给出每个整数 #{k\geq 0} 的矩恒等式}
+##{\int t^k\,dm_A(t)=\frac 1n\sum_j\lambda_j^k=\frac 1n\sum_v(A^k)_{vv}=\frac 1n\operatorname{Tr}(A^k).}
+\p{因此按重数计数的本征值分布确实由根处局部量的空间平均描述；这里没有假设各顶点具有相同谱测度。}

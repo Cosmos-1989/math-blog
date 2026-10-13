@@ -1,0 +1,10 @@
+\title{标准正态分布与高斯尾函数}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §4.2}
+
+\p{实[随机变量](00L0) #{Z} 服从标准正态分布，记作 #{Z\sim N(0,1)}，指其分布的密度为 #{\varphi(x)=(2\pi)^{-1/2}e^{-x^2/2}}。[高斯积分](0I8L)保证总积分为一。其尾函数定义为}
+##{\Phi(a)=\mathbb P(Z\geq a)=\int_a^\infty\varphi(x)\,dx\qquad(a\in\mathbb R).}
+\p{对称性给出 #{\Phi(0)=1/2} 及 #{\mathbb P(|Z|\geq a)=2\Phi(a)}（#{a\geq 0}）。一般正态分布 #{N(m,\sigma^2)} 是 #{m+\sigma Z} 的分布，其中 #{\sigma>0}。}
+\p{此处 #{\Phi} 表示真实尾概率，与有些文献用同一字母记尾概率上界的约定不同。Aubrun 使用这个约定；Klartag §4 的式 (48) 则另定义一个显式上界函数。}

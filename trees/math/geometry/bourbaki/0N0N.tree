@@ -1,0 +1,11 @@
+\title{格点约束阻止椭球退化}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun 引理 3；采用密度至多一的弱下界}
+
+\p{设 #{\Lambda} 余体积为 #{v}。每个 #{A\in\mathcal C_\Lambda} 都正定，且}
+##{\det A\geq\left(\frac{\omega_n}{2^nv}\right)^2>0.}
+\p{\strong{证明。}先证半正定。写 #{\Lambda=B\mathbb Z^n}。若存在 #{u} 使 #{u^{\mathsf T}Au<0}，逐坐标把 #{tB^{-1}u} 舍入为整数向量 #{m_t}，则 #{Bm_t/t\to u}。充分大的 #{t} 使非零格向量 #{x_t=Bm_t} 满足 #{x_t^{\mathsf T}Ax_t<0}，违反[格点约束](0N0M)。}
+\p{故对 #{\varepsilon>0}，#{A+\varepsilon I} 正定，且仍在 #{\mathcal C_\Lambda} 中。由[椭球体积公式](0N0D)与[椭球转球堆积](0N0E)，得到密度 #{\omega_n /(2^nv\sqrt{\det(A+\varepsilon I)})}。密度[不超过一](0N07)，遂得所述行列式下界，先对 #{A+\varepsilon I} 成立。}
+\p{令 #{\varepsilon\downarrow 0}，行列式的多项式公式保证连续性。于是 #{\det A>0}；再由[对称矩阵的谱分解](0N0B)，半正定且行列式正意味着全部特征值正，故 #{A} 正定。}

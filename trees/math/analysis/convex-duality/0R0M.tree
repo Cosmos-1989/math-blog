@@ -1,0 +1,15 @@
+\title{有理权重体积在规范变换下不变}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，定理4.3、式(4.4)}
+
+\p{设 #{f} 是 #{\mathbb R^n} 上的[几何凸函数](0R0F)，#{\{f\le 1\}} 有界。定义}
+##{V(f)=\int_{\mathbb R^n}(1+f(x))^{-(n+1)}dx.}
+\p{则 #{V(f)<\infty}，且对[紧截面](0R0L) #{K_f} 和[规范变换](0R0K) #{\mathcal J} 有}
+##{|K_f|=\frac{V(f)}{n+1},\qquad V(\mathcal Jf)=V(f).}
+\p{\strong{逐层积分。}#{s=0,1} 两个截面在 #{n+1} 维的 [Lebesgue 测度](00XV)为零。对 #{0<s<1}，截面的 #{x} 坐标属于 #{s\{f\le s^{-1}-1\}}。用[缩放公式](0N12)，再令 #{t=s^{-1}-1}，得}
+##{|K_f|=\int_0^1s^n|\{f\le s^{-1}-1\}|ds
+=\int_0^\infty\frac{|\{f\le t\}|}{(1+t)^{n+2}}dt.}
+\p{由 [Tonelli 定理](0H53)，最后一式等于 #{\int_{\mathbb R^n}\int_{f(x)}^\infty(1+t)^{-(n+2)}dt\,dx=V(f)/(n+1)}。紧性给出有限性。}
+\p{\strong{不变性。}#{K_{\mathcal Jf}} 与 #{K_f} 关于 #{s=1/2} 反射，体积相同，故公式给出 #{V(\mathcal Jf)=V(f)}。同一积分公式对无界水平集也以非负扩展积分成立；在两侧有意义时，将 #{\mathcal J\mathcal Af=\mathcal Lf} 代入，得到 #{V(\mathcal Af)=V(\mathcal Lf)}。此处使用规范变换的引用识别。}

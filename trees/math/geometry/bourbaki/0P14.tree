@@ -1,0 +1,15 @@
+\title{Bernstein 多项式证明一致多项式逼近}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，引理 3.7 中使用的 Weierstrass 逼近；此处给出 Bernstein 多项式证明}
+
+\p{每个闭区间 #{[a,b]} 上的连续实函数都可被实多项式一致逼近。经仿射换元，只须考虑 #{[0,1]}。对[连续函数](00E2) #{u:[0,1]\to\mathbb R}，定义}
+##{B_nu(x)=\sum_{k=0}^n u(k/n)\binom nk x^k(1-x)^{n-k}.}
+\p{其中 #{\binom nk=n!/(k!(n-k)!)}，#{0!=1}。则 #{B_nu\to u} 一致收敛。}
+\p{\strong{证明。}令 #{p_k(x)=\binom nk x^k(1-x)^{n-k}}。由二项式恒等式及对其求导，}
+##{\sum_kp_k=1,\qquad \sum_k kp_k=nx,\qquad \sum_k k(k-1)p_k=n(n-1)x^2.}
+\p{因此 #{\sum_k (k/n-x)^2p_k=x(1-x)/n\le 1 /(4n)}。#{u} 在紧区间上[有界](0A3A)且[一致连续](0F41)。令 #{M=\sup|u|}，给定 #{\varepsilon>0}，选 #{\delta>0} 使 #{|s-t|<\delta} 时 #{|u(s)-u(t)|<\varepsilon}。}
+\p{在求和中将 #{|k/n-x|<\delta} 和其余项分开。第一部分总贡献小于等于 #{\varepsilon}；第二部分的权重总和不超过 #{1/(4n\delta^2)}，因为每个这样的平方差至少为 #{\delta^2}。于是}
+##{|B_nu(x)-u(x)|\le\varepsilon+\frac{M}{2n\delta^2}.}
+\p{这个上界与 #{x} 无关。先让 #{n\to\infty}，再任取更小的 #{\varepsilon}，即得一致收敛。}

@@ -1,0 +1,11 @@
+\title{单位球上对数径向权重的积分}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §2，第 4 页}
+
+\p{设 #{n\geq 1}，对 #{x\ne 0} 定义 #{f(x)=\max\{0,\log(1/\|x\|)\}}，在零点可任取值而不改变积分。则}
+##{\int_{\mathbb R^n}f(x)\,dx=\frac{\omega_n}{n}.}
+\p{\strong{证明。}对 #{x\ne 0} 有 #{f(x)=\int_0^\infty 1_{\{\|x\|<e^{-s}\}}\,ds}。由 [Tonelli 定理](0H53)交换非负积分，并用[线性缩放的体积公式](0N12)，得到}
+##{\int f(x)\,dx=\int_0^\infty\operatorname{vol}(B(0,e^{-s}))\,ds=\omega_n\int_0^\infty e^{-ns}\,ds=\frac{\omega_n}{n}.}
+\p{权重在靠近原点处变大，衡量短格向量对椭球体积造成的损失；球外权重为零，因此没有远处格点的无穷求和问题。}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-13",
+  "scope": "Three requested Analysis reports, integrated into subject 0068. This is not full coverage of the ICM Analysis section.",
+  "manifest": "research/icm2026-analysis.json",
+  "result": "pass",
+  "counts": {
+    "reports": 3,
+    "atomicNotes": 129,
+    "topicOverviews": 3,
+    "referenceNotes": 3,
+    "newPages": 135,
+    "pagesWithLocalDerivations": 59,
+    "derivationsUsingExternalInputs": 23,
+    "citedTheoremPagesWithoutLocalProof": 33,
+    "totalSitePages": 4009,
+    "checkedRenderedFormulas": 46390,
+    "checkedDiagrams": 46,
+    "staticInternalLinks": 617835
+  },
+  "mathematicalReview": {
+    "read": "All 129 new atomic notes, all three overviews, reference pages and report manifests. Source-reading scope is recorded individually in the three report manifests.",
+    "corrections": [
+      "Restored the affine and positive-scale parameters in the general Legendre order-antimorphism classification, checked against a primary author source.",
+      "Independently checked the half-body factor in the inverse-power pseudocone inequality.",
+      "Distinguished empirical spectral convergence from spectral-set convergence and retained the old/new subspace restriction for graph lifts.",
+      "Separated the deterministic degree lower bound from the cited random-graph extreme-eigenvalue theorem.",
+      "Retained the nonflatness, completeness and finite-total-curvature hypotheses in the minimal-surface statements.",
+      "Corrected prerequisite links for metric spaces, graph components, Hausdorff distance and several elementary complex-analysis notions."
+    ],
+    "remainingTerminologyCandidates": [
+      {"id": "0T0P", "term": "半范数", "decision": "The Holder seminorm is explicitly defined by its formula on this page."},
+      {"id": "0T15", "term": "线性子空间", "decision": "Substring of projective linear subspace; the linked projective Gauss-map construction supplies the geometric setting."},
+      {"id": "0T16", "term": "同伦等价", "decision": "Substring of weak homotopy equivalence, whose definition is linked on the same page."},
+      {"id": "0S02", "term": "连通分支", "decision": "Graph components use 00LC; adding the scanner's topological-components target 0118 would be inappropriate."},
+      {"id": "0S0P", "term": "连通分支", "decision": "Graph components are supplied through the linked graph and covering definitions, not the topological-components candidate."}
+    ]
+  },
+  "checks": [
+    "check-analysis-notes.mjs: all new sources registered, source hashes current, every theorem-class page has a proof-status classification",
+    "check-site-notes.mjs --source-only: all 4009 pages reachable, no broken links, duplicate titles or prerequisite cycles",
+    "check-note-prerequisites.mjs: no required-link or snapshot errors; remaining new candidates individually reviewed above",
+    "check-note-editorial.mjs --strict-format: zero errors and zero format findings; one existing site-wide prose candidate remains",
+    "check-topic-introductions.mjs and check-topic-narratives.mjs: 67 topic overviews and 88 introduction snapshots passed",
+    "test-note-editorial.mjs, test-note-prerequisites.mjs and test-subject-navigation.mjs passed",
+    "check-icm-section-coverage.mjs, check-subject-navigation.mjs and existing logic, algebra, number-theory, geometry, Bourbaki and Riehl manifests passed",
+    "analysis-math.test.mjs: polar support, quadratic conjugacy, walk moments, spectral outlier, Ihara-Bass with loops and parallel edges, and catenoid null differential and flux passed",
+    "build-site.mjs: Forester compilation and static HTML generation passed after fixing a TeX-command/slash lexical ambiguity",
+    "check-site-notes.mjs --katex: 46390 rendered formulas and 46 diagram resources passed",
+    "check-static-html.mjs and check-site-domain.mjs: static links, assets, opetope.cc routes and search index passed",
+    "static-html-browser.test.mjs: navigation, search, XML and /math-blog/ legacy URLs, JavaScript-disabled content and XSLT-disabled operation passed",
+    "analysis-render.test.mjs: final build, 31 pages at 1440px and 390px, 62 checks; no formula errors, page overflow or browser/network errors",
+    "check-reading-ui.mjs: desktop, mobile and narrow-mobile regression passed",
+    "git diff --check passed"
+  ],
+  "browserEvidence": {
+    "base": "http://127.0.0.1:8083/",
+    "finalScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/analysis-render-QOgZzO",
+    "readingScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/forester-reading-36qpIC",
+    "visualReview": "Viewed desktop convex-duality and sparse-graph overviews and mobile convex-duality and Oka overviews; existing typography and responsive layout retained."
+  },
+  "publication": {"localBuild": "build/site", "serverPort": 8083, "committed": false, "pushed": false},
+  "limitations": [
+    "Local proofs, deductions from external inputs, cited research results and open conjectures are distinct. No claim that every research proof has been reconstructed.",
+    "Mathematical branch coverage and deferred material are recorded per report; supplemental papers were read only in the specified passages.",
+    "Automated structure, formula and finite-example checks are not mathematical proof verification or a guarantee of complete prerequisite closure.",
+    "Banana Space terminology equivalence was not established where its relevant pages could not be verified.",
+    "Existing uncommitted work was preserved. No Git commit, push or public deployment was requested in this turn."
+  ]
+}

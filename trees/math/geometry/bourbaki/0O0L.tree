@@ -1,0 +1,10 @@
+\title{闭双曲曲面的 Selberg 迹公式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§1.4.4；HMT v2，定理2.1，印刷页9}
+
+\p{设 #{X} 为连通[紧双曲曲面](0GS1)，#{\lambda_j} 为其[拉普拉斯特征值](0GS2)。取实偶函数 #{\varphi\in C_c^\infty(\mathbb R)}，以 #{f(r)=\int\varphi(t)e^{-irt}\,dt} 为 [Fourier 变换](0H4G)。设 #{\mathcal P(X)} 为有向本原闭测地线的集合：闭测地线指局部最短且按弧长走行的周期曲线，本原表示不是较短闭测地线的多次走行；两种方向分别计数。以 #{\ell_\gamma} 记其长度。Selberg 迹公式为}
+##{\begin{aligned}\sum_{j\geq 0}f(r_j)&=\frac{\operatorname{Area}(X)}{4\pi}\int_{1/4}^{\infty}f(\sqrt{u-1/4})\tanh(\pi\sqrt{u-1/4})\,du\\&\quad+\sum_{\gamma\in\mathcal P(X)}\sum_{k\geq 1}\frac{\ell_\gamma}{2\sinh(k\ell_\gamma /2)}\varphi(k\ell_\gamma),\end{aligned}}
+\p{其中 #{r_j=\sqrt{\lambda_j-1 /4}} 于 #{\lambda_j\geq 1 /4}，#{r_j=i\sqrt{1/4-\lambda_j}} 于其余情形。公式及收敛性引用 HMT 定理2.1所用的 Selberg 迹公式。#{\varphi} 的紧支撑限制了有贡献的测地线长度及重复次数。}
+\p{对[卷积平方测试函数](0O03)，谱侧与几何侧每一项均非负。公式给出有限的 #{\sum_jf(r_j)}，因此[对角迹条件](0O05)成立。若对全部测地线改变为无向计数，必须相应调整系数；这里始终保留所引论文的有向约定。}

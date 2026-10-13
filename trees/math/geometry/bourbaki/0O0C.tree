@@ -1,0 +1,13 @@
+\title{去掉常数贡献后次项的矩只按谱主体尺度增长}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，HMT v2，引理3.3，印刷页25–26；采用较宽常数2}
+
+\p{取[测试函数](0O03) #{\varphi}，令 #{a=\int\varphi>0}。对整数 #{p\geq 0} 置 #{\psi_p=\varphi^{*(p+1)}}，并定义多项式泛函}
+##{R(x^p)=\int_0^\infty\sum_{k\geq 1}\frac{2\sinh^2(\ell /2)}{\sinh(k\ell /2)}\psi_p(k\ell)\,d\ell -2\int_0^\infty\cosh(r/2)\psi_p(r)\,dr.}
+\p{则 #{|R(x^p)|\leq 2a^{p+1}}，特别地 #{\limsup_{p\to\infty}|R(x^p)|^{1/p}\leq a}。}
+\p{\strong{证明。}#{\psi_p} 偶且非负，[卷积积分](0H4E)给出 #{\int_{\mathbb R}\psi_p=a^{p+1}}。将 #{k=1} 项与最后的积分合并，得到 #{-2\int_0^\infty e^{-r/2}\psi_p(r)\,dr}，其绝对值至多 #{a^{p+1}}。}
+\p{对 #{k\geq 2}，先用非负性和 [Tonelli 定理](0H53)逐项积分，再换元 #{r=k\ell}，由[重复权重界](0O0B)得到}
+##{\int_0^\infty\sum_{k\geq 2}\frac{2\sinh^2(\ell /2)}{\sinh(k\ell /2)}\psi_p(k\ell)\,d\ell\leq 2\sum_{k\geq 2}\frac 1{k^2}\int_0^\infty\psi_p(r)\,dr\leq a^{p+1}.}
+\p{最后一步可用 #{\sum_{k\geq 2}k^{-2}\leq\sum_{k\geq 2}(k(k-1))^{-1}=1}。合并两项即得矩界；取 #{p} 次根并令 #{p\to\infty}，固定因子 #{2a} 的 #{p} 次根趋于一。}

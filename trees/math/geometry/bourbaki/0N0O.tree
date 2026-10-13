@@ -1,0 +1,12 @@
+\title{接触点决定椭球可移动的方向}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun 引理 3；Klartag 式 (13)}
+
+\p{设 #{A\in\mathcal C_\Lambda}，记 #{\Lambda^*=\Lambda\setminus\{0\}}。其[接触点集](0N0C)为 #{S_A=\{x\in\Lambda^*:x^{\mathsf T}Ax=1\}}。矩阵 #{M\in\operatorname{Sym}_n} 满足 #{A+sM\in\mathcal C_\Lambda} 对充分小的正负实数 #{s} 都成立，当且仅当}
+##{x^{\mathsf T}Mx=0\quad(x\in S_A).}
+\p{\strong{证明。}必要性来自 #{1+s x^{\mathsf T}Mx\geq 1} 必须对两种符号的 #{s} 同时成立。反之，[正定性](0N0N)保证存在 #{a>0} 使 #{A\succeq aI}。由[有界集内格点有限](0N03)，存在 #{\alpha>1}，使所有非接触格点满足 #{x^{\mathsf T}Ax\geq\alpha}：只需考察二次型值不超过二的有限多个格点。}
+\p{若 #{|s|\|M\|_{\mathrm{op}}\leq(1-\alpha^{-1})a}，则 #{A+sM\succeq\alpha^{-1}A}。非接触格点的二次型值仍至少为一；接触点的值由假设恰好保持一。因此所有[约束](0N0M)仍满足。}
+\p{把这些双向可动方向组成的线性空间记为 #{F_A}。在[迹内积](0N0A)下，#{x^{\mathsf T}Mx=\operatorname{tr}(Mxx^{\mathsf T})}，故}
+##{F_A=\operatorname{span}\{xx^{\mathsf T}:x\in S_A\}^{\perp}.}

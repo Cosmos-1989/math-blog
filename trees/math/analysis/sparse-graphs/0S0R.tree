@@ -1,0 +1,13 @@
+\title{Ihara–Bass 行列式恒等式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，定理 3.4；定向边矩阵分解证明}
+
+\p{设 #{G} 为有 #{v} 个顶点、#{m} 条无向边的有限[图](0S01)，#{A} 为[邻接矩阵](0S0B)，#{D} 为度数对角矩阵，#{B} 为 [2m 维非回溯矩阵](0S0Q)。当 #{u\ne\pm 1} 时，}
+##{\det(I_{2m}-uB)=(1-u^2)^{m-v}\det(I_v-uA+u^2(D-I_v)).}
+\p{当 #{m-v<0} 时，右边先按有理式理解；消去公因子后是多项式，等式延拓到全部 #{u}。这里的 #{m-v} 可能为负，不能把该因子孤立地当作多项式。}
+\p{\strong{边矩阵分解。}令 #{O_{e,x}=1_{\{e_-=x\}}}、#{T_{e,x}=1_{\{e_+=x\}}}，#{J} 为反向边置换矩阵。则 #{B=OT^{\mathsf T}-J}，#{J^2=I}，#{T^{\mathsf T}O=A}，#{T^{\mathsf T}JO=D}。这些恒等式逐个矩阵元计数即得，自环也遵循同一约定。}
+\p{\strong{降维行列式。}由[行列式的交替多线性刻画](0A40)，把一行的倍数加到另一行不改变行列式；块三角矩阵的行列式为两个对角块的行列式之积。对矩形矩阵 #{X,Y}，两种顺序消去分块矩阵 #{\left(\begin{smallmatrix}I&X\\-Y&I\end{smallmatrix}\right)} 的非对角块，得到 #{\det(I+XY)=\det(I+YX)}。因此}
+##{\begin{aligned}\det(I-uB)&=\det(I+uJ)\det\bigl(I-uT^{\mathsf T}(I+uJ)^{-1}O\bigr)\\&=(1-u^2)^m\det\left(I-\frac{u}{1-u^2}(A-uD)\right)\\&=(1-u^2)^{m-v}\det(I-uA+u^2(D-I)).\end{aligned}}
+\p{第二行用了 #{(I+uJ)^{-1}=(I-uJ)/(1-u^2)}；每对反向边上的 #{J} 块贡献 #{1-u^2}。等式在除去两个点后成立，因而消去分母所得多项式恒等式处处成立。}

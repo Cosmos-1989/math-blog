@@ -1,0 +1,12 @@
+\title{重复测地线权重的平方可和界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，HMT v2，引理3.3，印刷页26；独立推导}
+
+\p{对所有 #{x\geq 0} 和整数 #{k\geq 2}，有}
+##{\sinh^2\left(\frac{x}{2k}\right)\leq\frac 1k\sinh\left(\frac x2\right).}
+\p{\strong{证明。}用 #{2\sinh^2(t/2)=\cosh t-1}，所需不等式等价于 #{F_k(x)\leq 1}，其中}
+##{F_k(x)=\cosh(x/k)-\frac 2k\sinh(x/2),\qquad F_k'(x)=\frac 1k\bigl(\sinh(x/k)-\cosh(x/2)\bigr).}
+\p{因 #{k\geq 2}、#{x\geq 0}，有 #{\sinh(x/k)\leq\sinh(x/2)<\cosh(x/2)}。故 #{F_k} 递减，而 #{F_k(0)=1}，结论成立。}
+\p{在[谱矩次项](0O07)中作变量替换 #{r=k\ell}，重复次数 #{k} 的权重变成 #{k^{-1}\sinh^2(r/(2k))/\sinh(r/2)}。上述不等式将它控制为 #{k^{-2}}，使所有重复次数可以求和。#{r=0} 处按连续极限解释。}

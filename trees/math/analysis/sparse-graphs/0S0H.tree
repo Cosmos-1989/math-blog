@@ -1,0 +1,11 @@
+\title{低秩扰动只改变少量本征值计数}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§3.3 截断论证的有限维补充}
+
+\p{设 #{A,B} 为 #{n\times n} 实对称矩阵，#{r=\operatorname{rank}(A-B)}，秩是像空间的[维数](00GM)。令 #{N_A(t)} 为不超过实数 #{t} 的本征值个数，按重数计。则}
+##{|N_A(t)-N_B(t)|\leq r\qquad(t\in\mathbb R).}
+\p{\strong{证明。}由[正交对角化](0N0B)，#{A} 的不超过 #{t} 的特征空间之和 #{L} 具有维数 #{N_A(t)}，且 #{\langle x,Ax\rangle\leq t\|x\|^2} 对 #{x\in L} 成立。与 #{\ker(A-B)} 相交至多损失 #{r} 维，故在至少 #{N_A(t)-r} 维的子空间上 #{\langle x,Bx\rangle\leq t\|x\|^2}。}
+\p{若该维数大于 #{N_B(t)}，这个子空间就与 #{B} 的严格大于 #{t} 的特征空间之和有非零交点；在交点上相反的两个二次型不等式矛盾。因此 #{N_A(t)-r\leq N_B(t)}。交换 #{A,B} 即得结论。}
+\p{若两个矩阵只在顶点集 #{S} 对应的行或列上不同，令 #{P} 为这些坐标的投影，则 #{A-B=P(A-B)+(I-P)(A-B)P}，每项秩至多 #{|S|}。因此归一化的[经验谱分布](0S0D)函数相差至多 #{2|S|/n}。这控制数量比例，不给出极端本征值的位置界。}

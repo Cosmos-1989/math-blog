@@ -1,0 +1,16 @@
+\title{双模 Bogoliubov Hamilton 算子的对角化}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，引理 3.7；Fournais–Solovej I，附录 A}
+
+\p{在双模[玻色 Fock 空间](0Q0N)上，设 #{a_1,a_2} 为[湮灭算子](0Q0O)。给定实数 #{A>|B|}，令}
+##{H=A(a_1^*a_1+a_2^*a_2)+B(a_1a_2+a_1^*a_2^*),\qquad D=\sqrt{A^2-B^2},\qquad\alpha=\frac{B}{A+D}.}
+\p{则 #{|\alpha|<1}。设 #{b_1=(a_1+\alpha a_2^*)/\sqrt{1-\alpha^2}}、#{b_2=(a_2+\alpha a_1^*)/\sqrt{1-\alpha^2}}，有}
+##{H=D(b_1^*b_1+b_2^*b_2)+(D-A)I.}
+\p{\strong{证明。}由[正则对易关系](0Q0P)，#{[b_i,b_j^*]=\delta_{ij}I}、#{[b_1,b_2]=0}。展开平方得到}
+##{b_1^*b_1+b_2^*b_2=\frac{(1+\alpha^2)(a_1^*a_1+a_2^*a_2)+2\alpha(a_1a_2+a_1^*a_2^*)+2\alpha^2 I}{1-\alpha^2}.}
+\p{由 #{D^2=A^2-B^2} 验证 #{D(1+\alpha^2)/(1-\alpha^2)=A}、#{2D\alpha /(1-\alpha^2)=B} 及 #{2D\alpha^2/(1-\alpha^2)=A-D}，即得恒等式。定义 #{\alpha=B/(A+D)} 也涵盖 #{B=0}，并允许 #{B<0}。}
+\p{非负平方项给出 #{H\geq D-A}。取归一化向量}
+##{\Omega_B=\sqrt{1-\alpha^2}\sum_{n=0}^{\infty}(-\alpha)^n|n,n\rangle.}
+\p{几何级数保证范数为 #{1}，并保证所有粒子数矩有限。对 #{b_1} 而言，相邻的 #{|n+1,n+1\rangle} 与 #{|n,n\rangle} 的贡献相消；#{b_2} 同理。因此 #{b_1\Omega_B=b_2\Omega_B=0}，基态能量恰为 #{D-A}。上述算子恒等式先在有限占据向量上成立，再按非负平方形式延拓；#{\Omega_B} 属于其定义域。}

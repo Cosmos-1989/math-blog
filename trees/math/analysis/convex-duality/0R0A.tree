@@ -1,0 +1,12 @@
+\title{凸函数的指数体积}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§2}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R\cup\{+\infty\}} 为[闭真凸函数](0R06)，约定 #{e^{-\infty}=0}。定义指数体积}
+##{I(f)=\int_{\mathbb R^n}e^{-f(x)}\,dx,}
+\p{其中积分采用 [Lebesgue 测度](00XV)，允许零或无穷。由 [Tonelli 定理](0H53)，它也是上图的加权体积：}
+##{I(f)=\int_{\operatorname{epi}f}e^{-t}\,dx\,dt.}
+\p{若 #{K} 为非空闭凸集，记 #{\delta_K} 为在 #{K} 上等于零、其余处等于 #{+\infty} 的凸指标函数。于是 #{I(\delta_K)=|K|}，其中 #{|K|} 是通常体积。若 #{q(x)=|x|^2/2}，则由[高斯积分](0I8L)及 Tonelli 定理，#{I(q)=(2\pi)^{n/2}}。}
+\p{在 #{0<I(f)<\infty} 且 #{\int |x|e^{-f(x)}dx<\infty} 时，密度 #{e^{-f}/I(f)} 的重心为 #{I(f)^{-1}\int xe^{-f(x)}dx}。此处的“中心在原点”指该向量为零，不等同于函数在原点取最小值。}

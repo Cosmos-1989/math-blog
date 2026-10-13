@@ -1,0 +1,14 @@
+\title{Weil–Petersson 谱隙的多项式误差界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，定理8.1；HMT v2，定理1.1、注记1.2、§3.2}
+
+\p{设 #{X\in\mathcal M_g} 按 [Weil–Petersson 概率测度](0GS6)取样。Hide–Macera–Thomas 证明存在常数 #{c,C>0}，使其[首个正特征值](0GS2)满足}
+##{\lim_{g\to\infty}\mathbb P_g^{\mathrm{WP}}\{\lambda_1(X)\geq 1 /4-Cg^{-c}\}=1.}
+\p{HMT 注记1.2说明指数原则上可显式化，论文没有给出其数值。结论是单侧下界，未给出 #{|\lambda_1-1 /4|\leq Cg^{-c}}，也未断言 #{\lambda_1\geq 1 /4} [以高概率成立](00L8)。}
+\p{\strong{证明。}以下从 HMT 的[两项主不等式](0O08)和[分布支撑结论](0O0D)出发。固定 #{\delta=0.0024}。Mirzakhani 的先验界给出 #{\mathbb P_g(\lambda_1<\delta)\to 0}，其具体常数见[固定阈值结果](0GS9)。取[谱乘子](0O04) #{A_X}，并按[光滑截断构造](0O0E)选取 #{h_\varepsilon}，使右端支撑仍严格小于 #{f(i\sqrt{1/4-0.0023})}。}
+\p{当 #{\delta\leq\lambda_1\leq 1 /4-\varepsilon} 时，相应乘子处 #{h_\varepsilon=1}，所以 #{S_{g,\varepsilon}=\operatorname{Tr}h_\varepsilon(A_X)\geq 1}。所有对角项均非负。支撑结论使 #{\nu_0=\nu_1=0}，主不等式与截断导数界便给出}
+##{0\leq\mathbb E_g\frac{S_{g,\varepsilon}}g\leq Cg^{-2}\varepsilon^{-m}.}
+\p{由[归一化与指数平衡](0O0F)，任取 #{0<c<1/m} 即有 #{\mathbb P_g(\lambda_1\leq 1 /4-g^{-c})\to 0}。这里给出的保守截断估计已足以得到某个正指数。HMT 的阶数一致模空间展开、从多项式到光滑统计的主不等式，以及 Mirzakhani 的先验正谱隙是此推导的外部输入。}
+\p{结合[大亏格上界](0GSL)，仍有 #{\lambda_1\to 1 /4} [依概率收敛](00L9)。进一步可[按每个充分大的亏格选出确定曲面](0O0M)；这一存在性推论不提供曲面的显式方程。}

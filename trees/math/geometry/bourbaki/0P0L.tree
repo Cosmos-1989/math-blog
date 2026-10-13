@@ -1,0 +1,11 @@
+\title{光滑收敛不控制解析带宽}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，第 3 节；Berger I，第 1.3 节的解析障碍}
+
+\p{取一周期实解析函数 #{u_q(x)=e^{-q^2}/(2-\cos(2\pi qx))}，其中 #{q\ge 1} 为整数。它在实圆周上以任意固定阶数的导数一致趋于零，但其复延拓的最大水平无奇点带宽趋于零。}
+\p{\strong{证明。}令 #{u(x)=(2-\cos(2\pi x))^{-1}}。实轴上分母至少为 1，故每个固定阶数 #{r} 的导数都有界，且}
+##{\sup_{x\in\mathbb R}|u_q^{(r)}(x)|\le e^{-q^2}q^r\sup_{x\in\mathbb R}|u^{(r)}(x)|\longrightarrow 0.}
+\p{令 #{a=\log(2+\sqrt 3)>0}，则 #{\cosh a=2}。在 #{z=\pm ia/(2\pi q)} 处，#{\cos(2\pi qz)=2}，分母为零且导数不为零，故确有极点。距实轴最近的极点距离为 #{a/(2\pi q)}。}
+\p{因此[#{C^\infty} 收敛](0APA)不提供统一的复邻域控制。对共轭作 #{q} 倍角度提升时，奇点也会靠近实轴。Berger 使用[整实自同构](0P0K)避免这种定义域缩小，再另行安排复紧集上的收敛估计。}

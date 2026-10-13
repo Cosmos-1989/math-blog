@@ -1,0 +1,9 @@
+\title{谱弱收敛给出边缘下界但允许离群值}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§4.1，式 (4.1)}
+
+\p{设实对称 #{n\times n} 矩阵 #{A_n} 的[经验谱测度](0S0D)弱趋于概率测度 #{m}，其[支撑](0K12)有有限右端点 #{b}。将本征值降序排列为 #{\lambda_1\geq\cdots\geq\lambda_n}。若整数 #{1\leq k_n\leq n} 满足 #{k_n/n\to 0}，则 #{\liminf_n\lambda_{k_n}(A_n)\geq b}。}
+\p{\strong{证明。}固定 #{\varepsilon>0}。因为 #{b} 属于支撑，可在 #{(b-\varepsilon,b+\varepsilon)} 中选取非负连续函数 #{f\leq 1}，使 #{\int f\,dm=c>0}。弱收敛保证充分大时 #{\int f\,dm_{A_n}>c/2}，所以该区间内至少有 #{cn/2} 个本征值。它们全部大于 #{b-\varepsilon}；而 #{k_n<cn/2} 最终成立，故得结论。}
+\p{若支撑 #{K} 紧，则在任意固定 #{\varepsilon} 邻域以外的本征值只有 #{o(n)} 个。可取连续有界函数 #{g}，在 #{K} 上为零、在距 #{K} 至少 #{\varepsilon} 处为一，应用弱收敛即可。这样的离群本征值数量很少，却仍可能决定算子范数；[圆圈与完全图的不交并](0S0K)给出有界度反例。}

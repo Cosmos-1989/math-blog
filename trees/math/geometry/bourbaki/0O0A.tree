@@ -1,0 +1,13 @@
+\title{卷积的指数矩提取常数特征函数的贡献}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.3；HMT v2，引理3.3，印刷页25}
+
+\p{取[测试函数](0O03) #{\varphi}，#{f=\widehat\varphi}，并令 #{b=f(i/2)}。对整数 #{p\geq 0} 定义}
+##{B(x^p)=2\int_0^\infty\cosh(r/2)\varphi^{*(p+1)}(r)\,dr,}
+\p{再按线性性将 #{B} 定义到多项式。则对每个多项式 #{P} 有 #{B(P)=bP(b)}。}
+\p{\strong{证明。}卷积保持偶性，所以半直线上的余弦双曲积分等于整条实线上的 #{e^{r/2}} 加权积分。对两个紧支撑函数 #{v,w}，[Fubini 定理](0H53)给出}
+##{\int_{\mathbb R}e^{r/2}(v*w)(r)\,dr=\left(\int_{\mathbb R}e^{s/2}v(s)\,ds\right)\left(\int_{\mathbb R}e^{t/2}w(t)\,dt\right).}
+\p{重复 #{p} 次得到 #{B(x^p)=b^{p+1}}，再对多项式逐项求和即可。}
+\p{因此 #{B} 延拓为[支撑](0O06)在单点 #{b} 的泛函 #{B(v)=bv(b)}。当 #{h=x\widetilde h} 时，#{B(\widetilde h)=h(b)}，恰好是[谱乘子](0O04)中零特征值的贡献。选取支撑避开 #{b} 的 #{h} 就将它消去。}

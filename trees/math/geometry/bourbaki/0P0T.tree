@@ -1,0 +1,13 @@
+\title{解析图边界环带的保面积整直}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，第 3.2.1 节；Berger I，第 2.4 节推论 B 的第一部分}
+
+\p{设 #{\gamma_-,\gamma_+:\mathbb T\to\mathbb R} 实解析且 #{\gamma_-<\gamma_+}。令 #{w=\gamma_+-\gamma_-}，假设 #{\int_0^1w(\theta)\,d\theta=2}。则闭图边界环带 #{\overline{B'}=\{(\theta,y):\gamma_-(\theta)\le y\le\gamma_+(\theta)\}} 与[标准闭环带](0P01) #{B} 之间存在实解析[辛同胚](0BL1)。}
+\p{\strong{证明。}把 #{w,\gamma_-} 看作实轴上的一周期函数，令}
+##{L(\theta)=\frac 12\int_0^\theta w(s)\,ds,\qquad \Psi(\theta,y)=\left(L(\theta),\,\frac{2(y-\gamma_-(\theta))}{w(\theta)}-1\right).}
+\p{面积条件给出 #{L(\theta+1)=L(\theta)+1}，且 #{L'=w/2>0}，所以 #{L} 诱导圆周上的解析微分同胚。第二坐标在两条边界上分别等于 #{-1,1}，并在每条竖线严格递增。逆映射可先由 #{L} 求 #{\theta}，再令 #{y=\gamma_-(\theta)+(r+1)w(\theta)/2}。}
+\p{写 #{(x,r)=\Psi(\theta,y)}，则 #{dx=(w/2)d\theta}，而 #{dr=(2/w)dy+b(\theta,y)d\theta}，其中 #{b} 是对 #{\theta} 求导产生的系数。因此}
+##{\Psi^*(dx\wedge dr)=\frac w2\,d\theta\wedge\left(\frac 2w\,dy+b\,d\theta\right)=d\theta\wedge dy.}
+\p{正函数 #{w} 在紧圆周上有正下界，故公式和解析逆也在实边界邻域有效。这给出所需的边界解析性；无须断言 #{\Psi} 及其逆在整个复圆柱上全纯。}

@@ -1,0 +1,12 @@
+\title{格球堆积的密度公式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §2；Klartag §1}
+
+\p{设 #{\Lambda} 是[余体积](0N02)为 #{v} 的格，且 #{0<r\leq\lambda_1(\Lambda)/2}。对应的[格球堆积](0N05)有[密度](0N07)}
+##{\delta(\Lambda,r)=\frac{\omega_n r^n}{v}.}
+\p{\strong{证明。}取基本胞腔 #{P}，令 #{h(y)=\sum_{\ell\in\Lambda}1_{B(\ell,r)}(y)}。球不交说明 #{0\leq h\leq 1}；平移指标说明 #{h(y+\ell)=h(y)}。利用非负函数的 [Tonelli 定理](0H53)与胞腔平移铺满全空间，得到}
+##{\int_P h(y)\,dy=\sum_{\ell\in\Lambda}\int_{P-\ell}1_{B(0,r)}(y)\,dy=\operatorname{vol}(B(0,r))=\omega_n r^n.}
+\p{设胞腔直径不超过 #{D}。与大球 #{B(0,R)} 边界相交的胞腔全落在厚度不超过 #{2D} 的球壳中，总体积为 #{O(R^{n-1})}；这里 #{n,D} 固定。其余胞腔或完全在球内，或完全在球外。每个完整胞腔上的平均值相同，所以 #{\int_{B(0,R)}h-(\omega_nr^n/v)\operatorname{vol}(B(0,R))=O(R^{n-1})}。除以 #{\omega_nR^n} 并令 #{R\to\infty} 即得公式。}
+\p{特别地，固定中心格所能达到的最大密度为 #{\omega_n\lambda_1(\Lambda)^n/(2^nv)}。放大格和球半径会同时把分子、分母乘以相同的 #{n} 次幂，密度保持不变。}

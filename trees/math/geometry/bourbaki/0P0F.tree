@@ -1,0 +1,12 @@
+\title{有限三角和的 Poisson 括号分解}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，第 3.1 节；Berger I，引理 3.7}
+
+\p{在[圆柱](0P01)上，对光滑函数定义 #{\{F,G\}=F_\theta G_y-F_yG_\theta}。设}
+##{H(\theta,y)=C(y)+\sum_{m=1}^N\bigl(a_m(y)\cos(2\pi m\theta)+b_m(y)\sin(2\pi m\theta)\bigr),}
+\p{其中 #{N} 为正整数，所有系数函数光滑。存在只依赖 #{y} 的函数 #{A_m,B_m}，使}
+##{H=C+\sum_{m=1}^N\left(\left\{\frac{\cos(2\pi m\theta)}{2\pi m},A_m(y)\right\}+\left\{\frac{\sin(2\pi m\theta)}{2\pi m},B_m(y)\right\}\right).}
+\p{\strong{证明。}取 #{A_m(y)=-\int_0^y b_m(s)\,ds}、#{B_m(y)=\int_0^y a_m(s)\,ds}。第一项括号等于 #{(-\sin(2\pi m\theta))(-b_m(y))}，第二项等于 #{\cos(2\pi m\theta)a_m(y)}，逐项相加即得。}
+\p{若 #{a_m,b_m} 紧支撑，其原函数未必紧支撑，但导数仍有该支撑。这一点在构造[水平剪切](0P0B)时有用。把一般光滑 Hamilton 函数逼近为这种有限和，再把其流逼近为[剪切换位子](0P0E)的复合，还需 Fourier 逼近和时间离散化的估计；相应全局结论由 Berger I 第 3.2 节证明。}

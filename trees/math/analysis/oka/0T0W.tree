@@ -1,0 +1,11 @@
+\title{零二次曲面的旋转流给出 Oka 性}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Forstnerič](icm2026-forstneric)，§5 的零二次曲面齐性；以下用例4.2(B)的流直接构造}
+
+\p{设 #{n\ge 3}，#{\mathbb A_*\subset\mathbb C^n} 为[去顶点的零二次曲面](0T0V)。则 #{\mathbb A_*} 有[支配全纯喷流](0T08)，因而是 [Oka 流形](0T02)。}
+\p{\strong{保持二次型的流。}对任意复反对称矩阵 #{A^t=-A}，定义向量场 #{V_A(z)=Az}。其流为 #{\phi_A^t(z)=e^{tA}z}，其中矩阵指数是对所有 #{t\in\mathbb C} 收敛的级数 #{\sum_{k\ge 0}t^kA^k/k!}。微分 #{(e^{tA})^te^{tA}} 得零，且在零处为恒等矩阵，故该流保持 #{z\cdot z}；指数矩阵可逆，故也不会把非零点送到零。}
+\p{\strong{张成切空间。}固定 #{z\in\mathbb A_*} 和 #{w\in T_z\mathbb A_*}，即 #{z\cdot w=0}。选 #{a\in\mathbb C^n} 使 #{a\cdot z=1}，并令 #{A=wa^t-aw^t}。则 #{A^t=-A}，且}
+##{Az=w(a\cdot z)-a(w\cdot z)=w.}
+\p{取反对称矩阵空间的一组有限基，所得完全向量场便逐点张成切空间。[完全流的喷流构造](0T09)给出椭圆性，再由[椭圆 Oka 定理](0T0A)得到 Oka 性。}

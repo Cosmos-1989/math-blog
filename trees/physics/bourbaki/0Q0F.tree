@@ -1,0 +1,12 @@
+\title{球形方势垒的散射长度}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，第 2 节的散射方程；球形势的直接计算}
+
+\p{设 #{R,V_0>0}，取势 #{v(x)=V_0\mathbf 1_{\{|x|<R\}}}，并令 #{\kappa=\sqrt{V_0/2}}。在单粒子动能 #{-\Delta} 的[归一化](0Q0C)下，其[散射长度](0Q0D)是}
+##{a=R-\frac{\tanh(\kappa R)}{\kappa}.}
+\p{\strong{证明。}将径向散射解写成 #{f(r)=u(r)/r}。核内方程为 #{u''=\kappa^2u}，原点有界性要求 #{u(0)=0}，所以 #{u(r)=C\sinh(\kappa r)}。核外归一化要求 #{u(r)=r-a}。在 #{r=R} 连续匹配 #{u,u'}，得到}
+##{C\sinh(\kappa R)=R-a,\qquad C\kappa\cosh(\kappa R)=1.}
+\p{消去 #{C} 即得结论；#{f(0)} 按极限取值。此解在界面处连续匹配一阶导数，满足弱散射方程，故[散射能量恒等式](0Q0E)确认其尾部系数等于变分散射长度。}
+\p{弱势极限中，#{\tanh z=z-z^3/3+2z^5/15+O(z^7)} 给出 #{a=V_0R^3/6-V_0^2R^5/30+O(V_0^3R^7)}。首项恰为 #{(8\pi)^{-1}\int v}。当 #{V_0\to\infty}，#{a\to R}；即使势积分任意大，散射长度仍受作用半径限制。}

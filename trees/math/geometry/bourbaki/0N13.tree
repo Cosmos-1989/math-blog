@@ -1,0 +1,10 @@
+\title{径向积分化为一维积分}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §§2、4.4，径向积分补充}
+
+\p{设 #{n\geq 1}，#{h:\lbrack 0,\infty\rparen\to\lbrack 0,\infty\rbrack} 可测，#{\omega_n} 是单位球的 [Lebesgue 体积](00XV)。则}
+##{\int_{\mathbb R^n}h(\|x\|)\,dx=n\omega_n\int_0^\infty h(r)r^{n-1}\,dr.}
+\p{\strong{证明。}先令 #{h=1_{\lparen a,b\rbrack}}，其中 #{0\leq a<b}。由[缩放公式](0N12)，左边是球壳体积 #{\omega_n(b^n-a^n)}，右边积分得到同一个值。球面体积为零，因为它可包含在半径差任意小的球壳中。}
+\p{半开区间生成半轴上的 Borel 集。在每个有界区间上应用[有限测度唯一性](0A87)，再让区间穷竭半轴，得半径映射 #{x\mapsto\|x\|} 推出的测度等于 #{n\omega_n r^{n-1}\,dr}。先对非负简单函数用线性性，再用[单调收敛](0A7A)即得一般非负函数公式。这个证明只使用球体积随半径的变化，不必先选球面角坐标。}

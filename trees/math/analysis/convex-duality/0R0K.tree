@@ -1,0 +1,12 @@
+\title{几何凸函数的规范变换与透视坐标}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[文献](icm2026-artstein-avidan)，Hidden structures，§2.3、推论6、§4；ICM §4}
+
+\p{设 #{f\in\operatorname{Cvx}_0(\mathbb R^n)} 为[几何凸函数](0R0F)。在正高度半空间定义 #{J(x,t)=(x/t,1/t)}。规范变换 #{\mathcal J} 由上图给出：}
+##{\operatorname{epi}(\mathcal Jf)
+=\overline{J\bigl(\operatorname{epi}f\cap\{t>0\}\bigr)}.}
+\p{这里取[闭包](00EA)是为了补齐高度零的边界；#{J} 本身不在 #{t=0} 定义。等价的逐点公式为 #{(\mathcal Jf)(x)=\inf\{s>0:s f(x/s)\le 1\}}，空集的下确界取 #{+\infty}。}
+\p{透视映射保持凸性。若 #{z_i=(x_i,t_i)} 且 #{t_i>0}，将 #{(1-\lambda)J(z_1)+\lambda J(z_2)} 再作用 #{J}，得到 #{z_1,z_2} 的凸组合，其权重与 #{(1-\lambda)/t_1,\lambda /t_2} 成比例。故凸集的像仍凸。上图的向上封闭性则来自 #{f(0)=0} 与凸性：增大 #{s} 会使 #{s f(x/s)} 不增。}
+\p{原论文推论6及§4证明 #{\mathcal J=\mathcal L\mathcal A=\mathcal A\mathcal L}，从而 #{\mathcal J^2=\mathrm{id}}。这一识别作为引用结果使用。它把两个序反转变换的复合解释为保序的透视变换。}

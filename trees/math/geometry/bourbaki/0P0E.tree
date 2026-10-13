@@ -1,0 +1,15 @@
+\title{剪切换位子的二阶展开}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，引理 3.6；按站内 Hamilton 约定直接计算}
+
+\p{令 #{T_t(\theta,y)=(\theta+t\tau(y),y)}、#{V_t(\theta,y)=(\theta,y+tv(\theta))}，其中 #{\tau,v} 光滑，#{v} 一周期。对任意固定紧集、任意固定有限导数阶数 #{r}，[换位子](0P0C)在 #{t\to 0} 时满足}
+##{V_t^{-1}T_t^{-1}V_tT_t(\theta,y)=(\theta,y)+t^2\bigl(-\tau'(y)v(\theta),\,\tau(y)v'(\theta)\bigr)+O(t^3).}
+\p{这里 #{O(t^3)} 表示各阶不超过 #{r} 的坐标导数绝对值均被某个常数乘 #{|t|^3} 控制，常数可依赖所选紧集、#{r,\tau,v}。}
+\p{\strong{证明。}经前两步 #{V_tT_t} 后，}
+##{\theta_1=\theta+t\tau(y),\qquad y_1=y+tv(\theta+t\tau(y))=y+tv(\theta)+t^2\tau(y)v'(\theta)+O(t^3).}
+\p{再作用 #{T_t^{-1}}，用 Taylor 展开得到}
+##{\theta_2=\theta_1-t\tau(y_1)=\theta -t^2\tau'(y)v(\theta)+O(t^3),\qquad y_2=y_1.}
+\p{最后 #{y_3=y_2-tv(\theta_2)=y+t^2\tau(y)v'(\theta)+O(t^3)}，角坐标不变。对展开逐次求导，紧集上的高阶导数有界，便得所述 #{C^r} 余项。}
+\p{按[Hamilton 约定](0BL5)，二阶向量正是函数 #{H(\theta,y)=\tau(y)v(\theta)} 的 #{X_H=(-H_y,H_\theta)}。换位子因而产生同时依赖两个坐标的 Hamilton 运动，尽管每个剪切只使用一个坐标。}

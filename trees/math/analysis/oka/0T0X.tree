@@ -1,0 +1,12 @@
+\title{零微分的周期条件与 Weierstrass 积分}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Forstnerič](icm2026-forstneric)，§5，公式(5.2)之后}
+
+\p{设 #{M} 为连通 [Riemann 曲面](00FR)，#{n\ge 3}，#{\Phi=(\phi_1,\ldots,\phi_n)} 为无共同零点的向量值[全纯一形式](00FT)，满足 #{\sum_j\phi_j^2=0}。这里无共同零点指 #{\Phi(p)\ne 0}，并不要求每个分量处处非零。固定 #{p_0\in M}。则}
+##{u(p)=u_0+\operatorname{Re}\int_{p_0}^p\Phi}
+\p{定义单值的[共形极小浸入](0T0S)，当且仅当每条闭分段光滑曲线 #{\gamma} 都满足 #{\operatorname{Re}\int_\gamma\Phi=0}。}
+\p{\strong{路径无关。}全纯一形式是闭形式，因为局部 #{d(h(z)\,dz)=0}。两条连接相同端点的路径之积分差等于一条闭路径的积分，所以实周期消失恰好保证实部积分单值。反向若 #{du=\operatorname{Re}\Phi}，沿闭路径积分当然为零。}
+\p{\strong{局部微分。}在坐标圆盘中对全纯系数逐项积分幂级数，得到全纯原函数 #{F}，满足 #{dF=\Phi}。于是 #{u=\operatorname{Re}F+\text{常向量}}，#{2\partial u=\Phi}。零二次关系和非零性由[共形判据](0T0T)保证浸入且共形；全纯性由[调和判据](0T0U)保证极小。}
+\p{若所有复周期 #{\int_\gamma\Phi} 也都为零，则同一积分直接定义[全纯零曲线](0T0Z) #{F:M\to\mathbb C^n}，且 #{u=\operatorname{Re}F}。在已有实周期消失的条件下，剩下的障碍为通量 #{\operatorname{Flux}_u(\gamma)=\operatorname{Im}\int_\gamma\Phi}。它在路径拼接下相加，由 [Stokes 公式](0BAC)知其只依赖闭曲线的同调类。}

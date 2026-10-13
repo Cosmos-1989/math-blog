@@ -1,0 +1,709 @@
+{
+  "date": "2026-10-13",
+  "report": {
+    "speaker": "Charles Bordenave",
+    "title": "Sparse Graphs and Their Benjamini–Schramm Limits: A Spectral Tour",
+    "outline": "0S00",
+    "reference": "icm2026-bordenave",
+    "question": "稀疏图的局部极限如何决定平均谱测度，为什么不控制离群本征值，群表示的强收敛如何在去除旧谱后控制极端谱并确定典型距离？",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1805862",
+    "source_version": "SIAM ICM 2026 Proceedings, Volume 4, pp.636–656; published online 2026-07-13; open-access HTML accessed 2026-10-13.",
+    "status": "selected-branches-integrated; full-report-body-read; scoped-source-validation-complete; global-integration-delegated",
+    "full_text_available": true,
+    "full_text_read_this_turn": true,
+    "reading_scope": "公开 HTML 的摘要、§1、§2.1–2.7、§3.1–3.5、§4.1–4.9、致谢及参考文献条目均已读；包括全部显示公式与图注。未单独打开六幅图像检查像素，未另读 PDF，也未将参考文献表等同于读过其原论文。正文阅读全文，部分高级分支仅记录而未写成本地证明。",
+    "sources": [
+      {
+        "url": "https://epubs.siam.org/doi/10.1137/25M1805862",
+        "title": "Sparse Graphs and Their Benjamini–Schramm Limits: A Spectral Tour",
+        "author": "Charles Bordenave",
+        "version": "ICM2026 Volume 4, pp.636–656, DOI 10.1137/25M1805862, online 2026-07-13",
+        "access": "Open-access publisher HTML, accessed 2026-10-13",
+        "reading_status": "full_text_read",
+        "full_document_read": true,
+        "read_scope": "Abstract; all body sections 1–4.9 including all statements, displayed proofs and equations; acknowledgments and bibliography; figure captions, not separate image inspection.",
+        "license": "CC BY 4.0; copyright International Mathematical Union; original Chinese exposition and supplemental proofs, not a translation."
+      }
+    ],
+    "deferred": [
+      "单模测度的局部弱闭性、一般连续有限传播核的本质自伴性、无界谱连续性以及谱原子逼近采用报告 §2.5、引理3.1和定理3.2，未重建原始文献深证。",
+      "有界自伴谱定理存在性单列0S14，外部输入；有限维实对称对角化复用0N0B。无界自伴谱定理不由0S14证明。",
+      "定理3.3的全部全实代数整数分类、零空间质量显式方程、绝对连续谱阈值与单图谱类型未独立建立；0S11只证明有限树事件产生原子，连续部分阈值明确引用。",
+      "命题4.1的矩阵一般性、exactness维数一致性、定理4.2的定量速率没有展开；0S0Z只证明固定度正则图的经典下界。",
+      "Friedman定理、ER大度数谱定位、Pisier矩阵放大、Bordenave–Collins随机强收敛的深层概率证明均外部引用；0GSG与0GSF直接复用。",
+      "定理4.9的高张量幂和随n增长维数、Weingarten积分、多项式方法、随机游走cutoff和超出自由群的新模型仅保留研究位置，不新增证明。",
+      "报告定理4.6的非回溯ER结论未纳入：HTML陈述d>0的范围需向原文核实，亚临界情形不能直接作同样主本征值断言。",
+      "没有运行全站同步、全站构建、修改导航或全局audit；这些操作由共享工作区的集成者执行。"
+    ]
+  },
+  "entries": [
+    [
+      "0S00",
+      [],
+      "研究综述以局部观察、谱主体、谱边缘和距离构成十段叙事；导航不是硬前置。"
+    ],
+    [
+      "0S01",
+      [],
+      "只定义成对定向边的图与标记约定，区别简单图与半环。"
+    ],
+    [
+      "0S02",
+      [
+        "0S01",
+        "00EK",
+        "00LC"
+      ],
+      "只定义有根带标记图的局部收敛。"
+    ],
+    [
+      "0S03",
+      [
+        "0S01",
+        "0S02",
+        "00Q3",
+        "00LC",
+        "00L9"
+      ],
+      "只定义均匀根经验分布及其确定性或依概率 BS 收敛。"
+    ],
+    [
+      "0S04",
+      [
+        "00LB",
+        "0S02"
+      ],
+      "星图反例说明平均度有界不足以使邻域分布紧；一致可积充分性另标引用。"
+    ],
+    [
+      "0S05",
+      [
+        "00LB",
+        "0S03",
+        "0A03"
+      ],
+      "通过短圈邻域计数证明一个正则树局部极限判据。"
+    ],
+    [
+      "0S06",
+      [
+        "00BI",
+        "00D5",
+        "00D4",
+        "0S03"
+      ],
+      "证明固定点比例与带标记 Schreier 局部收敛等价。"
+    ],
+    [
+      "0S07",
+      [
+        "0S01",
+        "00LC"
+      ],
+      "定义覆盖的局部双射条件并直接证明路径提升唯一性。"
+    ],
+    [
+      "0S08",
+      [
+        "0S01",
+        "00DC",
+        "0S07"
+      ],
+      "构造带纤维编号的 n 层提升及其独立置换概率模型。"
+    ],
+    [
+      "0S09",
+      [
+        "0S01",
+        "0A03",
+        "0S07"
+      ],
+      "约化道路模型构造普遍覆盖树并证明其覆盖性质。"
+    ],
+    [
+      "0S0A",
+      [
+        "0S02",
+        "00QJ",
+        "0S03"
+      ],
+      "定义单模质量输运并验证均匀根的有限求和恒等式。"
+    ],
+    [
+      "0S0B",
+      [
+        "0S01",
+        "00MQ",
+        "0GSN",
+        "00M4",
+        "004S",
+        "00M8",
+        "00MU"
+      ],
+      "证明度数上界给出邻接算子的有界自伴实现。"
+    ],
+    [
+      "0S0C",
+      [
+        "0GSN",
+        "0S14",
+        "00Q3",
+        "0GSQ",
+        "00QD"
+      ],
+      "定义有界情形根谱测度及对根分布取平均，单列无界版本的边界。"
+    ],
+    [
+      "0S0D",
+      [
+        "0S0B",
+        "0N0B",
+        "0S0C"
+      ],
+      "证明有限根谱权重平均恰为按重数计的经验谱测度。"
+    ],
+    [
+      "0S0E",
+      [
+        "0S01",
+        "0S0B",
+        "0S0C"
+      ],
+      "证明邻接矩与根处闭路数相同及其固定半径局部性。"
+    ],
+    [
+      "0S0F",
+      [
+        "0S0B",
+        "0S0D",
+        "0S0C",
+        "0S0E",
+        "0S03",
+        "0P14"
+      ],
+      "用统一谱区间、固定阶矩和多项式逼近证明有界度谱弱收敛。"
+    ],
+    [
+      "0S0G",
+      [
+        "0S03",
+        "0GSN",
+        "0S0D",
+        "0S0C",
+        "0S0H",
+        "0S0F",
+        "0S0E"
+      ],
+      "引用无统一度数界的邻接谱连续性；截断说明不替代自伴性证明。"
+    ],
+    [
+      "0S0H",
+      [
+        "00GM",
+        "0N0B",
+        "0S0D"
+      ],
+      "用特征空间交维数证明低秩扰动的计数界。"
+    ],
+    [
+      "0S0I",
+      [
+        "0A03",
+        "0S0B",
+        "0S0C",
+        "0GSQ",
+        "0S14"
+      ],
+      "通过分支预解式递推恢复正则树谱密度与支撑。"
+    ],
+    [
+      "0S0J",
+      [
+        "0S0D",
+        "0K12"
+      ],
+      "证明弱谱收敛的边缘下界和离群值数量限制。"
+    ],
+    [
+      "0S0K",
+      [
+        "00LB",
+        "0S0B",
+        "0S03",
+        "0S0F",
+        "0S0I"
+      ],
+      "以圆圈和 K6 不交并同时计算局部极限、四阶矩与离群范数。"
+    ],
+    [
+      "0S0L",
+      [
+        "0GSF",
+        "017J",
+        "00D5",
+        "00D4",
+        "0S06",
+        "0S14",
+        "0P14"
+      ],
+      "把固定点计数改写成群代数的归一化迹收敛。"
+    ],
+    [
+      "0S0M",
+      [
+        "0S01",
+        "0S08",
+        "0F4E",
+        "0S0B",
+        "00MR",
+        "0GSQ"
+      ],
+      "证明提升邻接算子的旧空间和新空间正交分解。"
+    ],
+    [
+      "0S0N",
+      [
+        "0GSN",
+        "0GSQ",
+        "00FN",
+        "0P14",
+        "0S14"
+      ],
+      "证明全部固定多项式范数收敛等价方向中所需的谱集收敛。"
+    ],
+    [
+      "0S0O",
+      [
+        "0H4C",
+        "0GSF",
+        "0F4E"
+      ],
+      "引用固定矩阵尺寸的强收敛放大与线性化，不重建标量强收敛定义。"
+    ],
+    [
+      "0S0P",
+      [
+        "0S01",
+        "0S08",
+        "0S09",
+        "0S0M",
+        "00FN",
+        "0GSG",
+        "0S0O",
+        "0S0N"
+      ],
+      "从随机表示的矩阵系数定理推出随机提升的新谱结论，补不使用生成元处理小底图。"
+    ],
+    [
+      "0S0Q",
+      [
+        "0S01",
+        "0F0B",
+        "004S"
+      ],
+      "定义边空间的非回溯推进，说明其通常非自伴。"
+    ],
+    [
+      "0S0R",
+      [
+        "0S01",
+        "0S0B",
+        "0S0Q",
+        "0A40"
+      ],
+      "以定向边矩阵和分块行列式证明 Ihara–Bass，处理负指数的消去。"
+    ],
+    [
+      "0S0S",
+      [
+        "0S01",
+        "0S0Q",
+        "0S0R",
+        "0N0B"
+      ],
+      "证明正则邻接与非回溯谱的二次关系和边缘对应。"
+    ],
+    [
+      "0S0T",
+      [
+        "00LB",
+        "0S0B",
+        "0S0S"
+      ],
+      "引用固定度均匀随机简单正则图的 Friedman 定理，保留最负本征值。"
+    ],
+    [
+      "0S0U",
+      [
+        "00LB",
+        "00M4",
+        "0N0B"
+      ],
+      "仅证明最大度平方根的确定性范数和最大本征值下界。"
+    ],
+    [
+      "0S0V",
+      [
+        "00D4",
+        "0GSF",
+        "017J"
+      ],
+      "定义 RD 并算出球平均系数的二范数，Haagerup 定理作为外部例子。"
+    ],
+    [
+      "0S0W",
+      [
+        "00D4",
+        "00D5",
+        "00LC"
+      ],
+      "证明群球增长率存在并用球体积给出典型距离下界。"
+    ],
+    [
+      "0S0X",
+      [
+        "00MR",
+        "004S",
+        "00LC"
+      ],
+      "证明双随机矩阵的范数收缩控制超过传播半径的终点比例。"
+    ],
+    [
+      "0S0Y",
+      [
+        "0S0V",
+        "0S0W",
+        "0GSF",
+        "0S0X"
+      ],
+      "从 RD 与强收敛推出典型距离上界，固定半径后再选增长的迭代次数。"
+    ],
+    [
+      "0S0Z",
+      [
+        "0S01",
+        "0S09",
+        "0S07",
+        "0S0E",
+        "0S0I"
+      ],
+      "用普遍覆盖的闭路注入和非负平移矩证明正则 Alon–Boppana。"
+    ],
+    [
+      "0S10",
+      [
+        "0S03",
+        "0S0C",
+        "0S0D"
+      ],
+      "引用整数邻接矩阵的单点谱质量连续性，不与一般弱收敛混淆。"
+    ],
+    [
+      "0S11",
+      [
+        "00L6",
+        "00LH",
+        "0S0C",
+        "0S0G",
+        "0A03",
+        "0S0D"
+      ],
+      "证明任意有限树本征值在 Poisson 树平均谱中具有正质量。"
+    ],
+    [
+      "0S12",
+      [
+        "0S01",
+        "0S08",
+        "0S03",
+        "0S09",
+        "0A02"
+      ],
+      "通过有限匹配暴露和 Markov 界证明经验邻域分布依概率收敛。"
+    ],
+    [
+      "0S13",
+      [
+        "0S01",
+        "0S02",
+        "00LC",
+        "004S",
+        "0GSN"
+      ],
+      "定义连续有限传播核，区别有限传播与固定球依赖。"
+    ],
+    [
+      "0S14",
+      [
+        "00MQ",
+        "0GSN",
+        "0GSQ",
+        "00M3",
+        "00Q3"
+      ],
+      "精确陈述非零 Hilbert 空间上的有界自伴谱定理，存在性作为外部输入。"
+    ],
+    [
+      "0S15",
+      [
+        "00BQ",
+        "00D5",
+        "00D4",
+        "00FN",
+        "017J",
+        "0GSG",
+        "0S0N",
+        "00MR"
+      ],
+      "从已有随机强收敛定理推出任意固定生成集的 Schreier 非常数谱结论。"
+    ],
+    [
+      "0S16",
+      [
+        "00LD",
+        "0S0B",
+        "00L8"
+      ],
+      "独立陈述稀疏 ER 极端谱的大度数定位外部定理，保留误差尺度与量词。"
+    ],
+    [
+      "icm2026-bordenave",
+      [],
+      "报告书目信息、精确章节与 CC BY 4.0 署名记录。"
+    ]
+  ],
+  "proofs_written": [
+    "0S04",
+    "0S05",
+    "0S06",
+    "0S07",
+    "0S09",
+    "0S0A",
+    "0S0B",
+    "0S0D",
+    "0S0E",
+    "0S0F",
+    "0S0H",
+    "0S0I",
+    "0S0J",
+    "0S0K",
+    "0S0L",
+    "0S0M",
+    "0S0N",
+    "0S0P",
+    "0S0R",
+    "0S0S",
+    "0S0U",
+    "0S0W",
+    "0S0X",
+    "0S0Y",
+    "0S0Z",
+    "0S11",
+    "0S12",
+    "0S15"
+  ],
+  "proofs_with_external_inputs": [
+    "0S04",
+    "0S0A",
+    "0S0E",
+    "0S0F",
+    "0S0I",
+    "0S0K",
+    "0S0L",
+    "0S0N",
+    "0S0P",
+    "0S0Z",
+    "0S11",
+    "0S15"
+  ],
+  "research_statements_without_local_proof": [
+    "0S0G",
+    "0S0O",
+    "0S0T",
+    "0S10",
+    "0S14",
+    "0S16"
+  ],
+  "proof_boundaries": {
+    "0S04": "星图反例本地证明；无标记图度数一致可积推出紧性的充分性引用§2.3，标记还需紧性控制。",
+    "0S0A": "有限双重求和恒等式本地验证；单模测度局部闭性引用§2.5。",
+    "0S0D": "离散权重、基选择无关性、空间平均和归一化迹均展开；只用现有有限维对角化0N0B。",
+    "0S0E": "道路计数本地证明；无限有界图的谱矩解释依赖0S14。",
+    "0S0F": "统一紧区间、固定阶矩、概率平均和多项式逼近逐步证明；无限谱测度存在性依赖0S14。",
+    "0S0G": "报告引理3.1与定理3.2作为外部定理；有限秩截断解释不登记为原定理证明，且不声称无界矩也收敛。",
+    "0S0I": "分支预解递推、二次根选择、Poisson核恢复、无端点原子和谱支撑推导已写；依赖有界自伴谱定理0S14。",
+    "0S0K": "精确四阶矩与范数本地计算；谱主体说明使用0S0F及其谱定理输入。",
+    "0S0L": "固定点与迹等价本地证明；连续谱测试函数使用0S14。",
+    "0S0N": "两个方向的Hausdorff谱集控制均证明，使用外部连续函数演算0S14及已有多项式逼近0P14。",
+    "0S0O": "命题4.7矩阵放大和线性化为外部定理；所有系数与矩阵尺寸固定。",
+    "0S0P": "图算子分解和谱集推导本地写出；0GSG、0S0O为外部输入。补不使用生成元把不足两边的底图置于非阿贝尔自由群，正则限制仅增加同谱直和。",
+    "0S0R": "Ihara–Bass以分块消元本地证明，树情形负指数按消去后的多项式恒等式解释。",
+    "0S0T": "定理4.3–4.4外部引用；二次转换在0S0S证明，不混同随机置换图与均匀简单正则图。",
+    "0S0V": "RD定义与球平均二范数计算本地给出；自由群满足RD的Haagerup不等式仅引用。",
+    "0S0Y": "以RD和强收敛为假设的距离推导本地证明；只控制均匀于起点的终点比例，不证明直径结论。先固定r，再取随log N增长的迭代次数。",
+    "0S0Z": "覆盖闭路注入、谱平移和两次极限本地证明；树谱识别继承0S0I的谱定理输入。",
+    "0S10": "定理3.2的谱原子连续性外部引用，限定为无权整数邻接、有界度情形。",
+    "0S11": "有限树事件和根谱正权重本地证明；无限随机树的自伴实现与连续部分阈值分别引用引理3.1和定理3.3(iii)，没有证明绝对连续谱分类。",
+    "0S13": "有界度且核一致有界时的范数估计写出；一般无界核采用引理3.1与定理3.2，不登记为本地深证。",
+    "0S14": "非零空间上的有界自伴连续函数演算及标量谱测度存在性外部引用；仅说明多项式逼近给出的唯一性，不以此替代存在性。",
+    "0S15": "图谱推论的组装证明本地写出；随机强收敛复用0GSG。",
+    "0S16": "报告定理4.5外部引用；误差按sqrt(d1)衡量，未宣称逐个sqrt(dk)尺度的相对误差。"
+  },
+  "reused_note_ids": [
+    "004S",
+    "005E",
+    "00BI",
+    "00BQ",
+    "00D4",
+    "00D5",
+    "00DC",
+    "00EK",
+    "00FN",
+    "00GM",
+    "00L6",
+    "00L8",
+    "00L9",
+    "00LB",
+    "00LC",
+    "00LD",
+    "00LH",
+    "00M3",
+    "00M4",
+    "00M8",
+    "00MQ",
+    "00MR",
+    "00MU",
+    "00Q3",
+    "00QD",
+    "00QJ",
+    "00XV",
+    "0126",
+    "017J",
+    "0A02",
+    "0A03",
+    "0A40",
+    "0F0B",
+    "0F4E",
+    "0GKM",
+    "0GS0",
+    "0GSF",
+    "0GSG",
+    "0GSN",
+    "0GSQ",
+    "0H4C",
+    "0K12",
+    "0N0B",
+    "0P14"
+  ],
+  "deduplication": {
+    "method": "每个新ID先对全树标题和相关内容检索，再逐页判断定义、特例、应用或证明是否已存在；entries的原子性说明记录各页单一问题。已有同名图/拓扑概念按语义区分，未按扫描器词面强行添加链接。",
+    "checked_ids": [
+      "0S00",
+      "0S01",
+      "0S02",
+      "0S03",
+      "0S04",
+      "0S05",
+      "0S06",
+      "0S07",
+      "0S08",
+      "0S09",
+      "0S0A",
+      "0S0B",
+      "0S0C",
+      "0S0D",
+      "0S0E",
+      "0S0F",
+      "0S0G",
+      "0S0H",
+      "0S0I",
+      "0S0J",
+      "0S0K",
+      "0S0L",
+      "0S0M",
+      "0S0N",
+      "0S0O",
+      "0S0P",
+      "0S0Q",
+      "0S0R",
+      "0S0S",
+      "0S0T",
+      "0S0U",
+      "0S0V",
+      "0S0W",
+      "0S0X",
+      "0S0Y",
+      "0S0Z",
+      "0S10",
+      "0S11",
+      "0S12",
+      "0S13",
+      "0S14",
+      "0S15",
+      "0S16",
+      "icm2026-bordenave"
+    ],
+    "decisions": [
+      "0S01–03扩展简单图与有根树到允许重边自环及局部概率分布；0GSH只定义双曲曲面BS，不重复其几何定义。",
+      "0S06、0S0L和0S15直接使用00D4、00D5，不新建Cayley/Schreier定义。",
+      "0S0C与0S14为图根谱测度及有界自伴函数演算；0O04–05是双曲曲面特定谱乘子与迹，0O06是广义函数，均非同一定义。",
+      "0S0F复用0P14多项式逼近，0S0D复用0N0B实对称对角化，未重建基础证明。",
+      "0S0O、0S0P和0S15只写矩阵扩展与图应用；强收敛定义0GSF和随机自由群定理0GSG均复用。",
+      "0S0M是离散图覆盖的显式张量分解，不重复0GS8双曲曲面新旧谱。",
+      "0K12测试紧支撑函数且对象为局部紧空间；0S03在图空间以有界连续测试函数定义概率弱收敛，并说明质量逃逸边界。",
+      "0S0U与0S16分离确定性度数下界和外部随机谱定位；0S0R引用0A40，Hausdorff定义复用00FN，Schwarz复用004S。"
+    ]
+  },
+  "terminology": {
+    "attempt_date": "2026-10-13",
+    "banana_space": {
+      "url": "https://bananaspace.org/wiki/谱",
+      "access": "web reader returned Internal Error",
+      "verified": false
+    },
+    "choices": {
+      "Benjamini–Schramm convergence": "图的均匀根局部弱收敛；区别0GSH曲面定义",
+      "rooted graph": "有根图",
+      "unimodular": "单模随机有根图；与代数单模区分",
+      "cover / lift": "图覆盖 / n层提升，要求邻接边局部双射",
+      "nonbacktracking": "非回溯，只禁止立即反向",
+      "outlier": "谱离群值",
+      "strong convergence": "每个固定群代数元素的范数收敛，复用0GSF；非强算子拓扑",
+      "weak convergence": "概率弱收敛测试有界连续函数；0K12的局部弱收敛测试紧支撑函数",
+      "old/new spectrum": "图提升的旧谱/新谱，去掉整个纤维常数空间",
+      "rapid decay": "快速衰减性质RD，以1+r规范包括单位元支撑"
+    },
+    "confirmation_scope": "保持已有数学术语；香蕉空间未访问成功，不宣称已对照一致。"
+  },
+  "integration_notes": [
+    "本切片唯一写入范围为trees/math/analysis/sparse-graphs/0S00–0S16.tree（按36进制连续ID）、trees/references/icm2026-bordenave.tree和本JSON。",
+    "43个知识树文件中含1综述和42个原子节点；额外1参考树。数量略高于建议范围来自拆离高级随机结论和新增必要谱定理输入，没有扩充新的研究分支。",
+    "跨主题基础页0S07图覆盖、0S0C根谱测度、0S0H低秩计数、0S0Q非回溯算子、0S14有界自伴谱定理可复用，已在工作消息中告知集成者。",
+    "导航应由集成者链接0S00；未修改现有树或全局audit。既有0GSF与0GSG无须修改。",
+    "来源HTML中覆盖段落的局部双射条件在0S07显式补全；距离证明重新处理范数误差的迭代和取整，未照抄原段落的略写。"
+  ],
+  "verification": {
+    "status": "scoped-source-checks-passed; ready-for-global-integration",
+    "owned_tree_files": 44,
+    "new_atomic_pages": 42,
+    "outline_paragraphs": 10,
+    "formulas_katex_checked": 715,
+    "broken_links": 0,
+    "metadata_or_style_errors": 0,
+    "local_prerequisite_cycles": 0,
+    "prerequisite_closure_nodes_checked": 208,
+    "outline_prerequisites": 0,
+    "all_owned_entries_reachable_from_outline": true,
+    "theorem_proof_classification_exclusive_and_complete": true,
+    "proofs_with_external_inputs_subset_of_proofs_written": true,
+    "finite_regression_checks_passed": 15,
+    "finite_regression_scope": "C_n disjoint K6 fourth trace at n=5,8,17; Ihara–Bass at u=0.1,-0.3,0.7 for a path, cycle, single loop, and parallel edges with a loop. Read-only inline Node checks; no test files added.",
+    "manual_review_scope": "All 43 new knowledge trees and the reference were read and checked page by page; 208 prerequisite closure nodes were structurally checked, not newly certified mathematically. Source theorem boundaries are recorded separately.",
+    "full_report_body_read": true,
+    "global_build_run": false,
+    "global_sync_run": false,
+    "commit_or_push_run": false,
+    "whole_report_self_contained": false,
+    "verification_limit": "只做本切片源文件链接、公式、格式、前置DAG与逐页数学审读；未运行Forester构建或渲染检查，高级引用定理保留外部证明边界。"
+  }
+}

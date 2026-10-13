@@ -8,6 +8,8 @@ assert(prose('\\p{理想满足升链条件。}').includes('升链条件'));
 assert.equal(prose('##{a\n+b}').split('\n').length, 2);
 assert(!prose('[文献](https://example.org/profile)').includes('profile'));
 assert(!styleRules.some(([, re]) => [...'scheme 是概形的英文名称。'.matchAll(re)].length));
+assert(!styleRules.some(([, re]) => [...'闭环带的边界有两个圆周。'.matchAll(re)].length));
+assert(styleRules.some(([, re]) => [...'建立知识闭环。'.matchAll(re)].length));
 const input='\\title{例}\n\\taxon{Theorem}\n\\date{2026-09-26}\n\n\\author{author}\n\n\\p{\\strong{证明。}}\n\n\\p{设 #{x} 为实数。}\n';
 const output=normalizeFormat(input);
 assert(output.startsWith('\\title{例}\n\\date{2026-09-26}\n\\taxon{Theorem}\n\\author{author}\n\n'));
@@ -22,5 +24,6 @@ assert(normalizeFormat('\\p{证明纲要：取 #{x}.}').includes('\\strong{证�
 assert.equal(normalizeMathPaths('#{\\varepsilon/3+\\rho/2}'), '#{\\varepsilon /3+\\rho /2}');
 assert.equal(normalizeMathPaths('#{\\le2a/3}'), '#{\\le 2a /3}');
 assert.equal(normalizeMathPaths('#{\\lambda_1/2}'), '#{\\lambda_1 /2}');
+assert.equal(normalizeMathPaths('#{v^\\perp/(2\\lambda^2)}'), '#{v^\\perp /(2\\lambda^2)}');
 assert.equal(normalizeMathPaths('\\tex{p}{\\rho/2} https://a/b'), '\\tex{p}{\\rho/2} https://a/b');
 console.log('Editorial masking and formatting tests passed.');

@@ -1,0 +1,11 @@
+\title{单激发态完全凝聚却远离纯乘积态}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，定义 1.3 前的例子；归一化计算}
+
+\p{设 #{\varphi,\chi\in L^2(\Omega)} 为相互正交的单位向量。对 #{N\geq 2}，定义[对称态](0Q01)}
+##{\Psi_N=\frac 1{\sqrt N}\sum_{j=1}^N\chi(x_j)\prod_{i\ne j}\varphi(x_i).}
+\p{则 #{\|\Psi_N\|_2=1}，#{n_\varphi(\Psi_N)=N-1}，而 #{\|\Psi_N-\varphi^{\otimes N}\|_2=\sqrt 2}。因此它在 #{\varphi} 中[完全凝聚](0Q09)，但不在多体范数中趋于[乘积态](0Q02)。}
+\p{\strong{证明。}记和式中第 #{j} 项为 #{F_j}。每个 #{F_j} 范数为 #{1}；若 #{j\ne k}，对变量 #{x_j} 积分就出现 #{\langle\chi,\varphi\rangle=0}，故不同项正交。归一化因子由此是 #{N^{-1/2}}。同理，每个 #{F_j} 都与 #{\varphi^{\otimes N}} 正交，两单位向量之差的范数平方为 #{2}。}
+\p{算子 #{\sum_iP_{\varphi,i}} 在 #{F_j} 上作用为 #{(N-1)F_j}：第 #{j} 个投影为零，其余均保持该向量。按[占据数定义](0Q08)得到 #{n_\varphi=N-1}，其比例趋于 #{1}。}

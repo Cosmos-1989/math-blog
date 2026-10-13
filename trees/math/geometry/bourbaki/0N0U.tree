@@ -1,0 +1,11 @@
+\title{布朗椭球的对数行列式积分估计}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Klartag 引理 3.3；Aubrun 命题 4、§4.3}
+
+\p{设 #{\lambda_1(\Lambda)>1}，#{A_t} 是从 #{I} 出发的[布朗椭球演化](0N0T)，#{N_t=\dim F_{A_t}}。对每个有限 #{T>0}，有}
+##{\mathbb E_W\log\det A_T\leq -\frac 12\int_0^T\mathbb E_W\left[\|A_t\|_{\mathrm{op}}^{-2}N_t\right]dt.}
+\p{这里 #{\mathbb E_W} 只对固定格上的布朗运动取期望。该不等式作为外部随机分析输入使用，精确证明见 Klartag 引理 3.3；取其初值参数 #{a_0=1} 即为此式。}
+\p{公式的二阶来源是[对数行列式的 Hessian](0N0Q)：每个可动的正交单位方向贡献至少 #{\|A_t\|_{\mathrm{op}}^{-2}} 的负二阶项，一共有 #{N_t} 个方向。将这项二阶计算用于随机过程的 Itô 公式是外部随机分析输入，其系数为 #{1/2}。一阶随机积分的期望为零需要可积性证明；它使用[行列式远离零](0N0N)和[矩阵范数的概率尾估计](0N0V)，不能仅凭“随机增量均值为零”略去。}
+\p{采用积分形式无需额外断言 #{t\mapsto\mathbb E\log\det A_t} 在每个时刻可微。负号说明可动方向越多，期望对数行列式下降的机会越多。}

@@ -1,0 +1,16 @@
+\title{最近点给出有限维闭凸集分离}
+\date{2026-10-13}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§3中双极性所需的有限维分离}
+
+\p{设 #{C\subseteq\mathbb R^n} 为非空[闭](00E1)[凸集](00TK)，#{a\notin C}。对标准实[内积](004M)诱导的距离，存在唯一最近点 #{p\in C}，且}
+##{\langle a-p,x-p\rangle\le 0\quad(x\in C).}
+\p{\strong{存在性。}固定 #{x_0\in C}。寻找最近点时可限制在 #{C\cap\{x:|x-a|\le |x_0-a|\}}；这是非空闭有界集，由 [Heine–Borel 定理](0A39)紧。距离函数连续，故由[极值定理](0A3A)取得最小值。}
+\p{\strong{支撑不等式。}对 #{x\in C} 及 #{0<t\le 1}，凸性保证 #{p+t(x-p)\in C}。于是}
+##{0\le |a-p-t(x-p)|^2-|a-p|^2
+=-2t\langle a-p,x-p\rangle+t^2|x-p|^2.}
+\p{除以 #{t} 并令 #{t\downarrow 0} 得所需不等式。若 #{p,q} 都最近，则平方范数恒等式给出}
+##{\left|a-\frac{p+q}{2}\right|^2
+=\frac{|a-p|^2+|a-q|^2}{2}-\frac{|p-q|^2}{4}.}
+\p{左边不小于最小平方距离，故 #{p=q}。最后令 #{u=a-p\ne 0}，便有 #{\langle u,x\rangle\le\langle u,p\rangle<\langle u,a\rangle} 对所有 #{x\in C} 成立，这就是严格分离点 #{a} 与集合 #{C} 的超平面。}

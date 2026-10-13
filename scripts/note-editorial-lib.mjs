@@ -29,7 +29,7 @@ export function prose(text) {
 export const styleRules = [
   ['contrast-template', /(?:不是|并非)[^。\n]{0,200}而是/g],
   ['defensive-writing', /不(?:宣称|声称|冒充)|不能冒充|本(?:页|文|站)(?:不证明|不提供|不补写|不把)|未宣称|没有声称/g],
-  ['editing-process', /本次(?:核读|读取|实际阅读)|本轮(?:下载|实际阅读|重读|只完整重建)|原专题入口保留|本页保留原入口|规范页|依赖链|多维框架|闭环|链条(?!件)/g],
+  ['editing-process', /本次(?:核读|读取|实际阅读)|本轮(?:下载|实际阅读|重读|只完整重建)|原专题入口保留|本页保留原入口|规范页|依赖链|多维框架|闭环(?!带)|链条(?!件)/g],
   ['engineering-vocabulary', /\b(?:audit|benchmark|certified|profile)\b/gi]
 ];
 

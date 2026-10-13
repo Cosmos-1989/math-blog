@@ -1,0 +1,16 @@
+\title{随机格的接触权重为何按指数增长}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun 命题 6 与 §4.4}
+
+\p{设 #{\Lambda} 是余体积 #{\omega_n} 的[随机格](0N0F)，#{K_t} 是[接触权重和](0N0X)。存在只依赖 #{n} 且趋于零的 #{\varepsilon_n\geq 0}，使充分大 #{n} 及所有 #{0<t\leq t_{\max}=20\log n/n^2} 满足}
+##{\mathbb E_\Lambda K_t(\Lambda)\leq(2+\varepsilon_n)e^{n^2t/8}.}
+\p{\strong{证明。}充分大 #{n} 时 #{3\sqrt{nt_{\max}}\leq 1 /2}，故截断球有界。[Siegel 公式](0N0G)与[径向积分](0N13)给出}
+##{\mathbb E_\Lambda K_t=2n\int_0^{(1-3\sqrt{nt})^{-1/2}}r^{n-1}\Phi\left(\frac{1-r^{-2}}{\sqrt t}\right)dr.}
+\p{令 #{y=(1-r^{-2})/\sqrt t}，再分部积分。记 #{\varphi(y)=e^{-y^2/2}/\sqrt{2\pi}}，则 #{\Phi'=-\varphi}，从而}
+##{\mathbb E_\Lambda K_t=2\Phi(3\sqrt n)(1-3\sqrt{nt})^{-n/2}+2\int_{-\infty}^{3\sqrt n}\varphi(y)(1-y\sqrt t)^{-n/2}dy.}
+\p{第一项一致趋于零。确实，#{a\geq 1} 时 #{\Phi(a)\leq\int_a^\infty (y/a)\varphi(y)dy=\varphi(a)/a\leq e^{-a^2/2}}；又 #{-\log(1-u)\leq 2u} 对 #{0\leq u\leq 1 /2} 成立，所以该项至多为 #{2\exp(-9n/2+3n\sqrt{nt_{\max}})}。}
+\p{对第二项，用 #{-\log(1-u)\leq u+u^2}（#{u\leq 1 /2}）。该不等式可对 #{u+u^2+\log(1-u)} 求导并与其在零点的值比较得到。于是积分不超过}
+##{\int_{\mathbb R}\exp\left(-\frac{1-nt}{2}y^2+\frac{n\sqrt t}{2}y\right)\frac{dy}{\sqrt{2\pi}}=\frac 1{\sqrt{1-nt}}\exp\left(\frac{n^2t}{8(1-nt)}\right).}
+\p{最后一步配方并使用[高斯积分](0I8L)。提取 #{e^{n^2t/8}} 后，余下因子为 #{(1-nt)^{-1/2}\exp(n^3t^2/(8(1-nt)))}。在整个指定时间区间上，#{nt=O(\log n/n)}、#{n^3t^2=O((\log n)^2/n)}，所以该因子一致趋于一。将两项合并得到结论。此证明的外部输入为 Siegel 公式。}

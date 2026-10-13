@@ -1,0 +1,17 @@
+\title{伪锥函数的逆幂 Santaló 不等式}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，式(5.3)、定理5.4；按反射体积重新归一化}
+
+\p{设 #{n\ge 2}，#{f:\mathbb R^{n-1}\to\lbrack 1,\infty\rbrack} 为偶函数，满足[归一化伪锥判据](0R0S)，且[透视反射集](0R0U) #{B=B_{\operatorname{epi}f}} 是原点内含的紧凸体。记 #{Tf} 为[伪锥对偶函数](0R0T)，#{\kappa_n=|B_2^n|}。则}
+##{\left(\int_{\mathbb R^{n-1}}f^{-n}\right)
+\left(\int_{\mathbb R^{n-1}}(Tf)^{-n}\right)
+\le\left(\frac{n\kappa_n}{2}\right)^2.}
+\p{\strong{体积换元。}对 #{J(x,t)=(x/t,1/t)}，先在每个高度缩放 #{n-1} 个水平坐标，再作一维换元 #{s=1/t}，由 [Tonelli 定理](0H53)得到}
+##{|J(\operatorname{epi}f)|
+=\int_{\mathbb R^{n-1}}\int_{f(x)}^\infty t^{-(n+1)}dt\,dx
+=\frac 1n\int_{\mathbb R^{n-1}}f(x)^{-n}dx.}
+\p{反射体由上下两半组成，公共部分在高度零处，#{n} 维体积为零。因此 #{|B|=(2/n)\int f^{-n}}。由[对偶对应](0R0U)，#{|B^\circ|=(2/n)\int(Tf)^{-n}}。}
+\p{\strong{应用体积积定理。}偶性使 #{B=-B}，故可引用[经典 Santaló 不等式](0R0B)，得到 #{(4/n^2)(\int f^{-n})(\int(Tf)^{-n})\le\kappa_n^2}。}
+\p{标准函数 #{f_0(x)=\sqrt{1+|x|^2}} 的反射体是单位球，所以 #{\int f_0^{-n}=n\kappa_n /2} 并取等号。常数中的二分之一来自只对正高度半球积分；没有这一因子就不符合球的体积。紧性及原点内含假设保证两个积分均为正且有限。}

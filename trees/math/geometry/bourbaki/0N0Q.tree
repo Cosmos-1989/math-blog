@@ -1,0 +1,13 @@
+\title{对数行列式的二阶变化}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §4.3；Klartag 引理 3.3 的矩阵计算}
+
+\p{设 #{A} 为[正定对称矩阵](0N0A)，#{M} 为实对称矩阵，#{F(A)=\log\det A}。沿直线的第一、二阶导数为}
+##{DF_A(M)=\operatorname{tr}(A^{-1}M),\qquad D^2F_A(M,M)=-\operatorname{tr}(A^{-1}MA^{-1}M).}
+\p{\strong{证明。}令 #{H=A^{-1/2}MA^{-1/2}}，用[正交对角化](0N0B)写其特征值为 #{h_i}。充分小的 #{s} 满足}
+##{\log\det(A+sM)=\log\det A+\sum_{i=1}^n\log(1+sh_i).}
+\p{逐项求导，分别得到 #{\sum_i h_i} 与 #{-\sum_i h_i^2}。由[迹的循环性](0F0F)，它们等于上述两式。若改在 #{A} 的特征基下写 #{M=(m_{ij})}，#{A} 的特征值为 #{a_i>0}，则}
+##{D^2F_A(M,M)=-\sum_{i,j}\frac{m_{ij}^2}{a_i a_j}\leq -\|A\|_{\mathrm{op}}^{-2}\|M\|_{\mathrm{HS}}^2.}
+\p{这证明了严格凹性，并量化每个允许移动的单位方向对二阶变化的贡献。#{D} 是[全微分](0A33)；由 #{D^2F_A(M,N)} 表示二阶双线性型，对应的线性算子称为 Hessian，记作 #{\nabla^2F(A)}。}

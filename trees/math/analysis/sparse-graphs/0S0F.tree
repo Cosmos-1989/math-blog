@@ -1,0 +1,15 @@
+\title{有界度局部收敛推出经验谱测度弱收敛}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，定理 3.2 的有界度邻接情形}
+
+\p{设有限无标记图 #{G_n} 的度数均不超过固定 #{D}，且 #{G_n\to_{\rm BS}\mu}。记 #{A_n} 为[邻接矩阵](0S0B)，#{m_{A_n}} 为[经验谱测度](0S0D)，#{m_\mu=\mathbb E_\mu m_A^o} 为极限图的[平均根谱测度](0S0C)。则对每个有界连续实函数 #{f}，}
+##{\int f\,dm_{A_n}\longrightarrow\int f\,dm_\mu.}
+\p{\strong{第一步，统一谱区间。}度数界与邻接算子范数界给出全部谱测度支撑于 #{[-D,D]}。极限图也满足同一度数界，因为每个固定根球中违反它的事件在原图中概率为零。}
+\p{\strong{第二步，固定阶矩。}由[闭路计数](0S0E)，#{W_k(G,o)} 只取决于半径 #{k} 的球且有界。故 [BS 收敛](0S03)给出}
+##{\int t^k\,dm_{A_n}(t)=\mathbb E_{U(G_n)}W_k\longrightarrow\mathbb E_\mu W_k=\int t^k\,dm_\mu(t).}
+\p{交换根平均与谱积分合法，因为此处积分函数在统一谱区间上有界。有限线性组合使结论对每个多项式成立。}
+\p{\strong{第三步，连续测试函数。}用 [Bernstein 多项式逼近](0P14)选 #{p} 满足 #{\sup_{[-D,D]}|f-p|<\varepsilon}。两端都是概率测度，所以}
+##{\left|\int f\,dm_{A_n}-\int f\,dm_\mu\right|\leq 2\varepsilon+\left|\int p\,dm_{A_n}-\int p\,dm_\mu\right|.}
+\p{先令 #{n\to\infty}，再令 #{\varepsilon\to 0}，即得弱收敛。该证明中的固定阶数和统一度数界不可省略；它没有估计随 #{n} 增长阶数的矩，也没有排除少数异常本征值。}

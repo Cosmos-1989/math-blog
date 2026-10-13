@@ -96,6 +96,7 @@ A research-topic outline should:
 - Link definitions, examples and proofs naturally within the prose. A terminology link should point to its atomic definition; label a subtopic link as a subtopic.
 - Use short thematic paragraphs or a few relative sections. Include a short reading list only when it adds navigation beyond the prose.
 - Keep full definitions, technical variants and proofs in their reusable atomic pages. A survey can be longer than an atomic note without becoming a replacement for those pages.
+- Read the survey without opening its links. The central question, the main obstruction, the role of each key idea and the meaning of the main results should still be understandable. Explain enough of each unfamiliar term locally to sustain that narrative; links supply technical depth.
 - Preserve stable IDs and reachability when replacing an old catalogue. Changing navigation does not change prerequisite edges or expand the source-reading record.
 
 Example survey opening:
@@ -123,6 +124,7 @@ Avoid deep nesting unless the nesting itself is mathematically meaningful.
 
 The subject pages `0061` through `0074` are topic selectors, not prerequisite courses.
 
+- Introduce the subject's objects, central questions and scope in a concise paragraph. Generic instructions to choose or follow topics do not count as a subject introduction.
 - List the integrated ICM2026 report topics directly on the corresponding subject page. Logic and Algebra must expose every report in their source manifests without requiring a visit to an intermediate overview.
 - Use ordinary mathematical labels such as "研究专题" on the public site, not "ICM 学科结构". Keep source/conference accounting in the research manifests.
 - Put independent directions such as categorical logic and quantum logic in a separate "其他专题" group.
@@ -198,6 +200,17 @@ Before marking a refactoring complete:
 6. Record which pages received explicit page-by-page semantic review, the review scope, and which remain unreviewed. Never describe the whole forest as atomic because a subset or a rendering check passed.
 
 ## Whole-Site Review Register
+
+### Current Overview Review
+
+The October 13 overview review is stored in `research/narrative-review-2026-10-13-*.json`.
+It covers the homepage, the 20 subject introductions and 64 topic overviews; it does
+not replace the atomic prerequisite or proof records. After reviewing changes to
+these overviews, update their specific record and run
+`node scripts/sync-topic-introductions.mjs`, followed by
+`node scripts/check-topic-introductions.mjs` and
+`node scripts/check-topic-narratives.mjs`. This scoped synchronization refreshes
+edited source snapshots without replaying older prerequisite decisions.
 
 ### Current Prerequisite Review
 

@@ -1,0 +1,11 @@
+\title{玻色气体 Hamilton 算子的能量形式}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，定义 1.6、注记 1.7；Fournais–Solovej II，注记 1.9}
+
+\p{设 #{\Lambda_L=(0,L)^3}，#{N\geq 1}，#{v:\mathbb R^3\to[0,\infty]} 是偶的可测两体势。采用单粒子动能 #{-\Delta} 的单位，令 #{W(x_1,\ldots,x_N)=\sum_{i<j}v(x_i-x_j)}。在[对称态空间](0Q01)上定义非负二次型}
+##{q_{N,L}[\Psi]=\sum_{j=1}^N\int_{\Lambda_L^N}|\nabla_{x_j}\Psi|^2+\int_{\Lambda_L^N}W|\Psi|^2.}
+\p{Neumann 形式域为 #{D(q)=\{\Psi\in H^1(\Lambda_L^N)\cap L^2_{\mathrm{sym}}:\int W|\Psi|^2<\infty\}}，其中 [#{H^1}](0Q03)以弱导数定义。Dirichlet 情形将其换为 #{H_0^1}。相应形式 Hamilton 算子写为}
+##{H_{N,L}=-\sum_{j=1}^N\Delta_{x_j}+\sum_{1\leq i<j\leq N}v(x_i-x_j).}
+\p{算子的[自伴性](0GSN)包含定义域条件。这里使用非负闭形式的表示定理，在 #{\mathcal H_q=\overline{D(q)}^{\,L^2}} 上得到唯一的自伴实现；此函数分析输入见 Fournais–Solovej II 注记 1.9。闭形式指 #{D(q)} 对范数 #{(q[\Psi]+\|\Psi\|_2^2)^{1/2}} 完备。若 #{v=\infty} 于某个区域，有限能量要求 #{\Psi} 在相应碰撞构型上为零，#{\mathcal H_q} 可能是真子空间。势的无穷值按这种排除条件理解。}

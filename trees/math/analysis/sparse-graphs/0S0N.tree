@@ -1,0 +1,12 @@
+\title{所有多项式的范数收敛排除谱离群值}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§4.8 开头的谱集结论}
+
+\p{设 #{A_n,A} 分别为非零 Hilbert 空间上的有界[自伴算子](0GSN)。假设每个实多项式 #{p} 都满足 #{\|p(A_n)\|\to\|p(A)\|}。则其紧[谱集](0GSQ)按 [Hausdorff 距离](00FN)收敛，即}
+##{\max\left\{\sup_{x\in\sigma(A_n)}\operatorname{dist}(x,\sigma(A)),\ \sup_{y\in\sigma(A)}\operatorname{dist}(y,\sigma(A_n))\right\}\longrightarrow 0.}
+\p{\strong{连续函数的范数。}取 #{p(t)=t} 得所有谱最终位于同一个 #{[-M,M]}。对该区间上的连续函数 #{f} 作[多项式一致逼近](0P14)，再用[连续函数演算](0S14)的等距性，得到 #{\|f(A_n)\|\to\|f(A)\|}。}
+\p{\strong{没有外来谱点。}取 #{f(t)=\operatorname{dist}(t,\sigma(A))}。因为 #{f(A)=0}，得到 #{\sup_{x\in\sigma(A_n)}\operatorname{dist}(x,\sigma(A))\to 0}。}
+\p{\strong{极限谱点不丢失。}若另一方向失败，可取固定 #{\varepsilon>0} 和子列 #{y_n\in\sigma(A)}，使其离 #{\sigma(A_n)} 至少 #{\varepsilon}。紧性给出进一步子列 #{y_n\to y\in\sigma(A)}。取支撑于 #{(y-\varepsilon /2,y+\varepsilon /2)}、在 #{y} 处取一的连续函数 #{h}；则充分大时 #{h(A_n)=0}，而 #{\|h(A)\|=1}，与连续函数的范数收敛矛盾。}
+\p{单独知道 #{\|A_n\|\to\|A\|} 只能控制最外侧绝对值，不能检测谱内部的空隙。要求所有固定多项式的范数收敛，才使上述局部测试成为可能。}

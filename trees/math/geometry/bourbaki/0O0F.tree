@@ -1,0 +1,13 @@
+\title{归一化谱迹的误差怎样产生多项式阈值}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.3的最后概率步骤；独立参数计算}
+
+\p{设 #{X_g} 是随机[紧双曲曲面](0GS1)，以 #{\lambda_1(X_g)} 记[首个正特征值](0GS2)，#{0<\delta<1/4} 固定。假设每个充分小的 #{\varepsilon>0} 都有非负可积随机变量 #{S_{g,\varepsilon}}，使当 #{\delta\leq\lambda_1(X_g)\leq 1 /4-\varepsilon} 时 #{S_{g,\varepsilon}\geq 1}，并且存在与 #{g,\varepsilon} 无关的 #{C,m>0}，满足}
+##{\mathbb E\left(\frac{S_{g,\varepsilon}}g\right)\leq Cg^{-2}\varepsilon^{-m}.}
+\p{若 #{\mathbb P(\lambda_1(X_g)<\delta)\to 0}，则对每个固定 #{0<c<1/m}，有 #{\mathbb P(\lambda_1(X_g)\leq 1 /4-g^{-c})\to 0}。}
+\p{\strong{证明。}先恢复未归一化的和，得到 #{\mathbb ES_{g,\varepsilon}\leq Cg^{-1}\varepsilon^{-m}}。由 [Markov 不等式](0A02)，}
+##{\mathbb P\{\delta\leq\lambda_1(X_g)\leq 1 /4-\varepsilon\}\leq Cg^{-1}\varepsilon^{-m}.}
+\p{令 #{\varepsilon=g^{-c}}，右侧成为 #{Cg^{cm-1}}，由于 #{cm<1} 而趋于零。再加上事件 #{\lambda_1<\delta} 的概率，即得所需结论。}
+\p{例如 #{c=1/(2m)} 时，这部分失败概率至多 #{Cg^{-1/2}}；总失败概率还包含先验小谱隙事件。此计算没有给出后者的多项式衰减率。[非负谱权重原则](0GSC)解释了如何从迹构造满足假设的 #{S_{g,\varepsilon}}。}

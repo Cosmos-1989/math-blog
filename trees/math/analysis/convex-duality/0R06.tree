@@ -1,0 +1,11 @@
+\title{闭真凸函数与上图}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§2}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R\cup\{+\infty\}}。其有效域记为 #{\operatorname{dom}f=\{x:f(x)<+\infty\}}；有效域非空时称 #{f} 为真函数。若对 #{x,y\in\mathbb R^n} 和 #{0<t<1} 有}
+##{f((1-t)x+ty)\le(1-t)f(x)+tf(y),}
+\p{则称 #{f} 凸。#{+\infty} 允许表达位置约束，且函数不取 #{-\infty}。称 #{f} 下半连续，指每个实数 #{a} 对应的下水平集 #{\{x:f(x)\le a\}} 都是[闭集](00E1)。闭真凸函数的全体记为 #{\operatorname{Cvx}(\mathbb R^n)}。}
+\p{函数的上图是 #{\operatorname{epi}f=\{(x,t)\in\mathbb R^{n+1}:f(x)\le t\}}。凸性恰好说上图是[凸集](00TK)，下半连续性恰好说上图闭：若 #{(x_j,t_j)\to(x,t)} 且 #{f(x_j)\le t_j}，对每个 #{\varepsilon>0} 最终有 #{f(x_j)\le t+\varepsilon}，闭下水平集给出 #{f(x)\le t+\varepsilon}，再令 #{\varepsilon\downarrow 0}。反方向固定高度 #{a} 取闭上图的截面即可。}
+\p{逐点序与上图包含反向对应：#{f\le g} 当且仅当 #{\operatorname{epi}f\supseteq\operatorname{epi}g}。若讨论所有集合上的上图对偶，还可加入恒为 #{+\infty} 与恒为 #{-\infty} 的两个退化函数，分别对应空集与整个空间；闭真凸函数类本身不含这两个函数。}

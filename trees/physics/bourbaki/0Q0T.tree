@@ -1,0 +1,14 @@
+\title{散射解使重整化势的积分等于八倍圆周率乘散射长度}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，引理 6.2；Fournais–Solovej I，式 (2.3)–(2.5)}
+
+\p{设 #{v\geq 0} 为径向有界紧支势，#{f=1-\omega} 为[归一化零能散射解](0Q0E)，#{a} 为[散射长度](0Q0D)。定义函数 #{g=vf}。则}
+##{\int g=8\pi a,\qquad\int g\omega=2\int|\nabla\omega|^2.}
+\p{\strong{证明。}第一式是散射通量恒等式。方程 #{-2\Delta\omega=g} 乘以 #{\omega} 并分部积分给出第二式；支撑外 #{\omega=a/r}，半径 #{T} 球面的边界项大小为 #{O(T^{-1})}，故在极限中消失。}
+\p{还可把这一等式写成二阶 Born 项的抵消。对非负紧支函数 #{g}，定义其 Newton 势 #{\mathcal Gg(x)=\int g(y)/(8\pi|x-y|)\,dy}，以及}
+##{a_0(g)=\frac 1{8\pi}\int g,\qquad a_1(g)=-\frac 1{8\pi}\int g\,\mathcal Gg.}
+\p{这里 #{\mathcal G} 是零能 Poisson 方程的解算子，不是有界的 #{L^2} 逆算子。径向时球面平均给出 #{\mathcal Gg(r)=(2r)^{-1}\int_0^r t^2g(t)dt+\tfrac 12\int_r^\infty tg(t)dt}，微分验证 #{-2\Delta\mathcal Gg=g}。它和 #{\omega} 都在原点有界、无穷远趋零，差的径向调和方程迫使差为零。因此}
+##{4\pi\bigl(a_0(g)+a_1(g)\bigr)+\frac 12\int g\omega=4\pi a.}
+\p{它解释了重整化势和补偿项如何恢复正确的首项系数。用 #{g} 替换多体势还会产生三次、四次激发项；它们的控制另由[多体下界估计](0Q0X)承担。}

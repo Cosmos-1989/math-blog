@@ -39,7 +39,12 @@ jobs:
           node scripts/check-subject-navigation.mjs
           node scripts/check-icm-section-coverage.mjs
           node scripts/check-topic-narratives.mjs
+          node scripts/check-topic-introductions.mjs
           node scripts/check-geometry-notes.mjs
+          node scripts/check-bourbaki-notes.mjs
+          node scripts/check-analysis-notes.mjs
+          node tests/analysis-math.test.mjs
+          node tests/bourbaki-math.test.mjs
           node tests/geometry-expansion-math.test.mjs
           node scripts/check-number-theory-notes.mjs
           node tests/number-theory-computation.test.mjs
@@ -98,6 +103,9 @@ jobs:
           node scripts/check-reading-ui.mjs
           node tests/static-html-browser.test.mjs
           node tests/number-theory-render.test.mjs
+          node tests/bourbaki-render.test.mjs
+          node tests/analysis-render.test.mjs
+          node tests/topic-introductions-render.test.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

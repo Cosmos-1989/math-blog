@@ -1,0 +1,12 @@
+\title{伪锥对偶的函数公式}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§5，命题5.1之前}
+
+\p{设 #{n\ge 2}，#{f:\mathbb R^{n-1}\to\lbrack 1,\infty\rbrack} 满足[归一化伪锥判据](0R0S)，记 #{K=\operatorname{epi}f}。那么 #{K^\diamond=\operatorname{epi}(Tf)}，其中}
+##{(Tf)(y)=\sup_{x\in\operatorname{dom}f}
+\frac{1-\langle x,y\rangle}{f(x)}.}
+\p{\strong{证明。}由[最近点定理](0R0R)，#{K^\diamond} 的最近点仍为 #{e}，因此它的点 #{(y,s)} 满足 #{s\ge 1}。对所有 #{(x,t)\in K} 的约束是 #{\langle x,y\rangle+st\ge 1}；因为 #{s>0}，在竖直截面上只需检验最低高度 #{t=f(x)}。除以正数 #{f(x)}，再对 #{x} 取上确界，就得到公式。取 #{x=0} 也直接给出 #{Tf\ge 1}。}
+\p{这一变换中的负号与 [Legendre 变换](0R07)不同，也与[几何凸函数极性](0R0G)的减一、取正部不同。它来自避开原点的半空间约束，且其自然作用类由上图的向外伸缩条件限定。}
+\p{例如 #{f_0(x)=\sqrt{1+|x|^2}} 满足 #{Tf_0=f_0}。由 [Schwarz 不等式](004S)，#{(1-\langle x,y\rangle)/\sqrt{1+|x|^2}\le\sqrt{1+|y|^2}}，在 #{x=-y} 时取等号。该函数的上图称为标准双曲面上方的伪锥。}

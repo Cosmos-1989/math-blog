@@ -1,0 +1,12 @@
+\title{闭真凸函数的双共轭定理}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Artstein-Avidan](icm2026-artstein-avidan)，§§2–3，Legendre 对合的有限维证明}
+
+\p{设 #{f} 是 #{\mathbb R^n} 上的[闭真凸函数](0R06)，#{f^*=\mathcal Lf} 为其 [Legendre–Fenchel 变换](0R07)。则 #{f^*} 也是真函数，且 #{f^{**}=f}。}
+\p{\strong{先找一个仿射下界。}取 #{a\in\operatorname{dom}f}，把点 #{(a,f(a)-1)} 与闭凸集 #{\operatorname{epi}f} 用[分离引理](0R03)分开。所得不等式可写成 #{\langle u,x\rangle+vt\le c<\langle u,a\rangle+v(f(a)-1)}。上图向上无界迫使 #{v\le 0}；代入 #{(a,f(a))} 则排除 #{v=0}。所以 #{v<0}，除以 #{-v} 得仿射函数 #{\ell_0(x)\le f(x)}。}
+\p{\strong{任意下方点均可分离。}给定 #{b\in\mathbb R^n} 与实数 #{r<f(b)}，再次分离 #{(b,r)} 和上图，得到 #{\langle u,x\rangle+vt\le c<\langle u,b\rangle+vr}。若 #{v<0}，直接得到仿射下界 #{\ell(b)>r}。若 #{v=0}，则 #{\langle u,x\rangle\le c} 对 #{x\in\operatorname{dom}f} 成立，且 #{\langle u,b\rangle>c}。于是}
+##{\ell_M(x)=\ell_0(x)+M(\langle u,x\rangle -c)\le f(x)\quad(M>0),}
+\p{取足够大 #{M} 即使 #{\ell_M(b)>r}。}
+\p{\strong{恢复函数。}每个仿射下界 #{\ell(x)=\langle y,x\rangle -\beta} 满足 #{f^*(y)\le\beta}，故 #{f^{**}(b)\ge\ell(b)}。让 #{r} 趋向 #{f(b)}，包括 #{f(b)=+\infty} 的情形，得到 #{f^{**}\ge f}；Fenchel 不等式给出反向。仿射下界又保证 #{f^*} 至少在一个斜率处有限，而固定 #{a\in\operatorname{dom}f} 保证它从不取 #{-\infty}，所以 #{f^*} 为真函数。}

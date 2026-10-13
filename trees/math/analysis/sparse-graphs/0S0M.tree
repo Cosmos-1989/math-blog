@@ -1,0 +1,12 @@
+\title{图提升的邻接矩阵分成旧谱与新谱}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§3.1，式 (3.3)–(3.5)}
+
+\p{设 #{G=(V,E)} 为有限[图](0S01)，#{G_n} 是由置换 #{\sigma_e} 给出的 [n 层提升](0S08)。令 #{P_e\delta_i=\delta_{\sigma_e(i)}}，#{E_{vu}} 为仅第 #{(v,u)} 项等于一的矩阵。把函数空间按纤维识别为[张量积](0F4E) #{\mathbb C^V\otimes\mathbb C^n}，则[邻接矩阵](0S0B)为}
+##{A_n=\sum_{e\in E}E_{e_+,e_-}\otimes P_e.}
+\p{令 #{\mathbf 1=(1,\ldots,1)}，旧空间 #{H_{\rm old}=\mathbb C^V\otimes\operatorname{span}(\mathbf 1)}，新空间为其[正交补](00MR) #{H_{\rm new}=\mathbb C^V\otimes\mathbf 1^\perp}。两者均在 #{A_n} 下不变，且旧空间上的限制与底图的邻接矩阵 #{A_G} 酉等价。因此}
+##{\sigma(A_n)=\sigma(A_G)\cup\sigma(A_n|_{H_{\rm new}}).}
+\p{\strong{证明。}每条提升边从 #{(e_-,i)} 到 #{(e_+,\sigma_e(i))}，故第一式逐个标准基向量成立。各 #{P_e} 固定 #{\mathbf 1}，所以 #{f\mapsto f\otimes\mathbf 1 /\sqrt n} 是旧空间的等距同构，并把 #{A_G} 交织为 #{A_n} 的限制。#{A_n} 自伴，故旧空间正交补也不变；[直和的谱](0GSQ)给出最后一式。}
+\p{旧本征值的归一化总质量为 #{1/n}，却可永久落在覆盖树谱的外面。新谱的估计须限制到整个 #{H_{\rm new}}，不能只去掉全图常数向量。底图不正则时，全图常数向量通常不是邻接特征向量。}

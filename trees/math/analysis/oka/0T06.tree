@@ -1,0 +1,13 @@
+\title{单位圆盘满足 BOP 但不是 Oka 流形}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Forstnerič](icm2026-forstneric)，§3.1，定理3.4之后；以下给出圆盘的直接论证}
+
+\p{令 #{\mathbb D=\{z\in\mathbb C:|z|<1\}}。它满足[基本 Oka 性 BOP](0T01)，但不满足[凸逼近性质 CAP](0T02)。}
+\p{\strong{BOP。}对任意[连续映射](00E2) #{f:X\to\mathbb D}，令 #{f_t(x)=(1-t)f(x)}。因 #{|(1-t)f(x)|<1}，这是留在圆盘内的[同伦](00FO)，终点是全纯常值映射 #{0}。这一步甚至不需要源是 Stein。}
+\p{\strong{整映射的限制。}若 #{F:\mathbb C\to\mathbb D} 全纯，则对任意 #{a\in\mathbb C} 和 #{R>0}，[Cauchy 积分公式](0BAD)的导数形式给出 #{|F'(a)|\le 1/R}。令 #{R\to\infty} 得 #{F'(a)=0}，故 #{F} 常值。}
+\p{\strong{CAP 失败。}取凸紧集 #{K=\{|z|\le 1/2\}} 和 #{f(z)=z}，它在 #{K} 的邻域取值于 #{\mathbb D}。任意常值 #{c} 满足}
+##{1=\left|\frac 12-\left(-\frac 12\right)\right|
+\le \left|\frac 12-c\right|+\left|-\frac 12-c\right|.}
+\p{所以 #{\sup_K|f-c|\ge 1/2}，无法任意精确逼近。圆盘有充分的源域函数论，却没有 Oka 靶空间所需的整映射。}

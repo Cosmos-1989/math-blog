@@ -1,0 +1,13 @@
+\title{Anosov–Katok 递归方案}
+\date{2026-10-13}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Florio 的报告](bourbaki-1254-florio)，定义 3.10；精确量词采用 Berger II v2，定义 2.1}
+
+\p{设 #{M} 是[闭环带或球面](0P01)，或闭圆盘 #{D=\{(x,y):x^2+y^2\le 1\}}。记 #{R_\alpha} 为各自的[标准旋转](0P04)，#{M_*} 为环带内部、去掉两极的球面、或去掉圆心与边界的圆盘。取 #{r\in\{0,1,2,\ldots,\infty\}}，#{\operatorname{Symp}^r(M)} 表示 #{C^r} [辛同胚](0BL1)空间；当 #{r=0} 时指保面积、保取向的同胚。}
+\p{在 #{M_*} 上采用紧开 #{C^r} 拓扑：每个紧子集上相应阶数的坐标导数一致收敛，#{r=0} 时仅要求映射值一致收敛。这是[紧流形 #{C^\infty} 拓扑](0APA)的局部紧集版本。一个 #{C^r} 共轭逼近方案指定}
+##{(h,\alpha)\longmapsto\bigl(U(h,\alpha),\nu(h,\alpha)\bigr),\qquad h\in\operatorname{Symp}^r(M),\quad\alpha\in\mathbb Q/\mathbb Z,}
+\p{其中 #{U(h,\alpha)} 是 #{\operatorname{Symp}^r(M_*)} 的开集，#{\nu(h,\alpha)>0}。首先，#{U(h,\alpha)} 必须含某个 #{\widehat h|_{M_*}}，且 #{\widehat h\in\operatorname{Symp}^r(M)} 满足 #{\widehat h^{-1}R_\alpha\widehat h=h^{-1}R_\alpha h}。它不必以 #{h|_{M_*}} 为中心。}
+\p{其次，对任意从 #{h_0=\operatorname{id},\alpha_0=0} 开始的序列，只要每一步满足}
+##{h_{n+1}^{-1}R_{\alpha_n}h_{n+1}=h_n^{-1}R_{\alpha_n}h_n,\qquad h_{n+1}|_{M_*}\in U(h_n,\alpha_n),\qquad 0<d_{\mathbb T}(\alpha_{n+1},\alpha_n)<\nu(h_{n+1},\alpha_n),}
+\p{则 #{f_n=h_n^{-1}R_{\alpha_n}h_n} 必须在 #{C^r} 中收敛于 #{f\in\operatorname{Symp}^r(M)}。要求的是所有满足条件的选择都能收敛，给后续解析替换保留选择余地。这个形式化定义对应[先选共轭再选角度](0P0G)的递归次序。}

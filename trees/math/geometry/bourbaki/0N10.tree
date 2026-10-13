@@ -1,0 +1,13 @@
+\title{同时排除短向量并控制接触总成本}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §4.2；Klartag 命题 5.1 的对应步骤}
+
+\p{对充分大的 #{n}，令 #{T=16\log n/n^2}。存在余体积 #{\omega_n} 的格 #{\Lambda}，同时满足}
+##{\lambda_1(\Lambda)>1,\qquad\int_0^T K_t(\Lambda)dt\leq 40,}
+\p{其中 #{K_t} 为[接触权重和](0N0X)。}
+\p{\strong{证明。}先取[随机格](0N0F)。由[权重平均界](0N0Y)及非负函数的 [Tonelli 定理](0H53)，}
+##{\mathbb E_\Lambda\int_0^T K_tdt\leq(2+\varepsilon_n)\int_0^T e^{n^2t/8}dt\leq 8(2+\varepsilon_n)<20.}
+\p{这里使用 #{e^{n^2T/8}=n^2}，最后一步对充分大 #{n} 成立。[Markov 不等式](0A02)说明总成本至少为四十的事件概率严格小于 #{1/2}。另一方面，[短向量计数的偶性](0N0H)保证 #{\lambda_1>1} 的概率至少为 #{1/2}。}
+\p{两个坏事件的概率之和严格小于一，故存在同时满足两条件的格。这个论证不要求两个事件独立；严格小于号保证交集确有正概率。之后固定这个格，再另行选择布朗运动轨道。}

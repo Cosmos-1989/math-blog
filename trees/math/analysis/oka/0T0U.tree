@@ -1,0 +1,17 @@
+\title{共形浸入的极小性等价于调和性}
+\date{2026-10-13}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Forstnerič](icm2026-forstneric)，§5 开头的调和刻画}
+
+\p{设 #{u:M\to\mathbb R^n} 为[共形浸入](0T0S)，在复坐标 #{z=x+iy} 中诱导度量为 #{\lambda^2(dx^2+dy^2)}。则它的平均曲率向量满足}
+##{2\lambda^2H=u_{xx}+u_{yy}.}
+\p{所以 #{u} 极小等价于每个分量调和，即 #{u_{xx}+u_{yy}=0}；又等价于 #{\partial u=\tfrac 12(u_x-i u_y)\,dz} 为向量值[全纯微分](00FT)。}
+\p{\strong{消去切向分量。}由 #{|u_x|^2=|u_y|^2=\lambda^2} 和 #{u_x\cdot u_y=0}，分别求导得}
+##{u_{xx}\cdot u_x=\tfrac 12(\lambda^2)_x,\qquad
+u_{yy}\cdot u_x=-u_y\cdot u_{xy}=-\tfrac 12(\lambda^2)_x.}
+\p{因此 #{(u_{xx}+u_{yy})\cdot u_x=0}。同理它与 #{u_y} 正交，故和向量已经法向。把它代入平均曲率的定义即可去掉法向投影，得到所需公式。}
+\p{\strong{检验全纯性。}令 #{a=\tfrac 12(u_x-i u_y)}。逐分量计算}
+##{\frac{\partial a}{\partial\bar z}
+=\frac 14(u_{xx}+u_{yy}),}
+\p{因为[混合偏导相等](0A3D)。由[复可导的实微分刻画](0A3G)，#{a} 全纯恰当且仅当右端为零。这把二阶的极小曲面方程变成一阶微分的全纯性。}

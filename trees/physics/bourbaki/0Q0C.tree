@@ -1,0 +1,10 @@
+\title{两体相对动能中的系数二}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，命题 2.1 的坐标变换}
+
+\p{对两个质量相同的粒子，设位置为 #{x,y\in\mathbb R^3}，定义质心 #{c=(x+y)/2}、相对位置 #{r=x-y}。若 #{\Psi(x,y)=F(c,r)} 光滑，则}
+##{\nabla_x=\tfrac 12\nabla_c+\nabla_r,\qquad\nabla_y=\tfrac 12\nabla_c-\nabla_r,\qquad -\Delta_x-\Delta_y=-\tfrac 12\Delta_c-2\Delta_r.}
+\p{\strong{证明。}[链式法则](0A34)给出前两式。平方后交叉项一正一负而抵消，所以第三式成立；对应的梯度能量为 #{\tfrac 12|\nabla_cF|^2+2|\nabla_rF|^2}。逆变换 #{x=c+r/2,y=c-r/2} 的 Jacobian 行列式绝对值为 #{1}，积分没有额外体积因子。}
+\p{因此当[单粒子动能](0Q04)是 #{-\Delta} 时，两体的零能散射方程是 #{(-2\Delta_r+v(r))f=0}，等价于 #{(-\Delta_r+v(r)/2)f=0}。若物理势为 #{V}、单粒子动能为 #{-(\hbar^2/2m)\Delta}，则先令 #{v=(2m/\hbar^2)V}，散射方程变为 #{(-\Delta_r+(m/\hbar^2)V)f=0}。同一势在不同动能归一化下的散射长度不能混用。}

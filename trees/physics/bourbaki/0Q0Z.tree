@@ -1,0 +1,14 @@
+\title{相干态的恒等分解与粒子数上符号}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sabin](bourbaki-1256-sabin)，第 5.2 节，命题 5.2 前的上符号公式}
+
+\p{设 #{|z\rangle} 为[单模相干态](0Q0Y)，#{d^2z} 是复平面的面积测度，#{\mathcal N=a^*a} 为[粒子数算子](0Q0O)。下式按有限占据向量之间的矩阵元理解：}
+##{I=\frac 1\pi\int_{\mathbb C}|z\rangle\langle z|\,d^2z,\qquad\mathcal N=\frac 1\pi\int_{\mathbb C}(|z|^2-1)|z\rangle\langle z|\,d^2z,}
+##{a^{*2}a^2=\frac 1\pi\int_{\mathbb C}(|z|^4-4|z|^2+2)|z\rangle\langle z|\,d^2z.}
+\p{\strong{证明。}极坐标 #{z=re^{i\theta}} 给出}
+##{\frac 1\pi\int_{\mathbb C}e^{-|z|^2}z^n\bar z^m\,d^2z=\delta_{nm}\,n!.}
+\p{当 #{n\ne m} 时角积分为零；当 #{n=m} 时令 #{t=r^2}，径向积分是 #{\int_0^\infty e^{-t}t^n dt=n!}，后一个等式由分部积分递推。故第一式在占据基上为单位矩阵。加入因子 #{|z|^2} 或 #{|z|^4} 后，其对角元分别为 #{n+1} 和 #{(n+1)(n+2)}。因此后两式的对角元分别为 #{n} 和}
+##{(n+1)(n+2)-4(n+1)+2=n(n-1),}
+\p{恰与 #{\mathcal N}、#{a^{*2}a^2} 相同。若算子写为 #{A=\pi^{-1}\int K_A(z)|z\rangle\langle z|d^2z}，函数 #{K_A} 称这里使用的上符号。若 #{K_A(z)\geq c} 处处成立，恒等分解给出 #{A\geq cI}。因此以复数替代算子可产生严格下界，但必须保留 #{-1}、#{-4|z|^2+2} 这些低阶修正。}

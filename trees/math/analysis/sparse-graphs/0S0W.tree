@@ -1,0 +1,11 @@
+\title{Cayley 球的增长给出 Schreier 典型距离下界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bordenave](icm2026-bordenave)，§4.6 引理 4.8 之前}
+
+\p{设 #{S} 为群 #{\Gamma} 的有限对称生成集，#{B_S(r)} 为 [Cayley 球](00D4)，假设其指数增长率 #{\beta=\lim_{r\to\infty}r^{-1}\log|B_S(r)|} 严格为正。对任意 #{N} 点作用的 [Schreier 图](00D5)，任意根 #{v} 及固定 #{\varepsilon\in(0,1)}，}
+##{\max_v\frac{|\{u:d(u,v)\leq(1-\varepsilon)\log N/\beta\}|}{N}\longrightarrow 0.}
+\p{此处 #{d} 为[图距离](00LC)，不同分支间取 #{+\infty}。\strong{增长率存在。}每个长度不超过 #{r+t} 的词可切成两段，故 #{|B_S(r+t)|\leq|B_S(r)||B_S(t)|}。令 #{b_r=\log|B_S(r)|}，固定 #{k} 并写 #{r=qk+j}，#{0\leq j<k}，可得 #{b_r\leq qb_k+\max_{j<k}b_j}。所以 #{\limsup b_r/r\leq b_k/k}；对 #{k} 取下确界，说明极限存在且等于 #{\inf_k b_k/k}。}
+\p{\strong{球计数。}映射 #{g\mapsto\rho(g)v} 将群球满射到 Schreier 球，因此 #{|B(v,r)|\leq|B_S(r)|}，且此界与根无关。选 #{\eta>0} 使 #{(\beta+\eta)(1-\varepsilon)/\beta<1}。充分大的 #{r} 有 #{|B_S(r)|\leq e^{(\beta+\eta)r}}，代入 #{r=\lfloor(1-\varepsilon)\log N/\beta\rfloor} 后除以 #{N}，即得趋零。}
+\p{这是体积所迫使的距离下界，完全不要求随机性或谱估计。若要证明几乎所有终点也能在略大于 #{\log N/\beta} 的时间内到达，还需额外的全局信息。}

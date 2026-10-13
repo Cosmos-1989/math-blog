@@ -1,0 +1,13 @@
+\title{缩小异常谱窗口的光滑截断及其导数代价}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Petri 及所列 HMT 论文](bourbaki-1255-petri)，§8.3的截断任务；独立构造，使用较宽的导数界}
+
+\p{固定[测试函数](0O03) #{f}，令 #{a=f(0)}、#{b=f(i/2)}，再固定 #{0<\delta<1/4}，记 #{d=f(i\sqrt{1/4-\delta})<b}。对充分小的 #{\varepsilon>0}，存在光滑 #{0\leq h_\varepsilon\leq 1}，支撑紧包含于 #{(a,b)}，在 #{[f(i\sqrt\varepsilon),d]} 上恒为一。令 #{\widetilde h_\varepsilon=h_\varepsilon /x}，在零附近取零，并置 #{w_\varepsilon(\theta)=\widetilde h_\varepsilon(b\cos\theta)}。对每个固定整数 #{m\geq 1}，有}
+##{\|w_\varepsilon^{(m)}\|_\infty+\|\widetilde h_\varepsilon\|_\infty\leq C_m\varepsilon^{-m}.}
+\p{\strong{证明。}取光滑函数 #{\chi}，在 #{t\leq 0} 时为零，在 #{t\geq 1} 时为一，且 #{0\leq\chi\leq 1}。可用 #{q(t)=e^{-1/t}}（#{t>0}）与 #{q(t)=0}（#{t\leq 0}），置 #{\chi(t)=q(t)/(q(t)+q(1-t))}。固定 #{d<d'<b}，记 #{L_\varepsilon=f(i\sqrt\varepsilon)-a}，定义}
+##{h_\varepsilon(x)=\chi\left(\frac{2(x-a)}{L_\varepsilon}-1\right)\left(1-\chi\left(\frac{x-d}{d'-d}\right)\right).}
+\p{左因子在 #{x\leq a+L_\varepsilon /2} 为零，在 #{x\geq a+L_\varepsilon} 为一；右因子在 #{x\leq d} 为一，在 #{x\geq d'} 为零。因此支撑和取值条件都成立。}
+\p{[测试函数的零点展开](0O03)给出 #{L_\varepsilon\geq c_1\varepsilon}。乘积求导表明，对 #{0\leq j\leq m}，#{\|h_\varepsilon^{(j)}\|_\infty\leq C_j\varepsilon^{-j}}。支撑上 #{x\geq a>0}，故除以 #{x} 的各阶导数只引入依赖 #{a,m} 的常数。[链式法则](0A34)将 #{w_\varepsilon^{(m)}} 写成这些导数乘以有限个正弦、余弦因子的和，因而获得所述界。}
+\p{这给出一个随 #{\varepsilon} 缩小而有效的上界。固定精度下的截断存在性本身不能替代这样的导数估计。}
