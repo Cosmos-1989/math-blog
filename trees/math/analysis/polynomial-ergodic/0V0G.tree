@@ -1,0 +1,10 @@
+\title{有限变差强迫序列收敛}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§3.2}
+
+\p{设 #{\mathbb I\subseteq\mathbb N} 无界、#{a_t\in\mathbb C}。若某个有限 #{r\ge 1} 的[变差](0V0D)有限，则 #{a_t} 沿 #{\mathbb I} 收敛，而且对任意固定 #{t_*\in\mathbb I}，}
+##{\sup_{t\in\mathbb I}|a_t|\le |a_{t_*}|+V^r(a),\qquad O_{I,J}^r(a)\le V^r(a).}
+\p{\strong{证明。}若尾部不为 [Cauchy 列](00ER)，有 #{\varepsilon>0}，并可递归选择互不相交、按顺序排列的指标对 #{s_j<t_j<s_{j+1}}，使 #{|a_{t_j}-a_{s_j}|>\varepsilon}。把前 #{J} 对端点串成一条递增链，其变差至少 #{J^{1/r}\varepsilon}，矛盾。复数完备性给出极限。极大值估计取两点链即可。[振荡](0V0E)的估计则在每块选择取得上确界的点，把块首和所选点依次串联；链中额外的跨块增量均非负。}
+\p{因此对[测度空间](00Q2)上的可测函数列 #{a_n(x)}，若 #{\|V^r(a_n)\|_{L^p}<\infty}，则 #{a_n} 几乎处处收敛。#{r=\infty} 时只得有界性，交替序列 #{(-1)^n} 表明它不足以保证收敛。}

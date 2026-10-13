@@ -1,0 +1,11 @@
+\title{完全遍历系统中多项式平均的 L² 极限}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§3.1，式(3.2)}
+
+\p{设[概率空间](00Q3)上的 #{T} [完全遍历](0V0A)，#{P\in\mathbb Z[n]} 非常数。则每个 #{f\in L^2(X)} 的[多项式平均](0V02)满足 #{A_N^{P,T}f\to\int f\,d\mu}，收敛按 #{L^2} 范数。}
+\p{\strong{一次情形。}若 #{P(n)=an+b}、#{a\ne 0}，[平均遍历定理](0V03)用于 #{T^a}，再作用 #{U_T^b}。由[不变函数刻画](0V04)，极限为常数 #{\int f}，保测性使平移不改变该常数。}
+\p{\strong{降阶。}减去 #{\int f} 后可设 #{\int f=0}。假设结论对次数小于 #{d} 的非常数多项式成立，取 #{\deg P=d\ge 2}、#{u_n=U_T^{P(n)}f}。对每个固定 #{h\ge 1}，#{Q_h(n)=P(n+h)-P(n)} 恰有次数 #{d-1}，其最高次系数为 #{dha_d\ne 0}。保测性与内积的第二变量线性约定给出}
+##{\frac 1N\sum_{n=1}^N\langle u_{n+h},u_n\rangle=\left\langle\frac 1N\sum_{n=1}^NU_T^{Q_h(n)}f,f\right\rangle\longrightarrow 0.}
+\p{归纳假设保证左内积中的平均按范数趋零，[Schwarz 不等式](004S)保证内积趋零。又 #{\|u_n\|_2=\|f\|_2}，[Hilbert 空间 van der Corput 判据](0V09)遂给出结论。常数多项式的极限为 #{f\circ T^{P(0)}}，所以非常数假设不可省。}

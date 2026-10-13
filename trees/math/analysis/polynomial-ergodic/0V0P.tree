@@ -1,0 +1,9 @@
+\title{小分母频率的平滑截断算子}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，式(4.9)–(4.10)、注5.1}
+
+\p{取偶的光滑函数 #{\eta:\mathbb R\to[0,1]}，在 #{[-1/4,1/4]} 上为一，支撑于 #{(-1/2,1/2)}。对 #{0<\varepsilon\le 1}、#{Q\ge 1}，在[频率圆周](0V0K)上将每个峰周期化，定义}
+##{\chi_{Q,\varepsilon}(\xi)=\sum_{\theta\in\mathcal R_{\le Q}}\sum_{k\in\mathbb Z}\eta\left(\frac{\xi -\theta -k}{\varepsilon}\right),\qquad \Pi_{Q,\varepsilon}f=\mathcal F_{\mathbb Z}^{-1}(\chi_{Q,\varepsilon}\mathcal F_{\mathbb Z}f).}
+\p{这里的有理频率集见[主弧定义](0V0N)。当 #{\varepsilon<Q^{-2}} 时各峰支撑不交，#{0\le\chi\le 1}；它在 #{\mathfrak M(Q,\varepsilon /4)} 上等于一，在 #{\mathfrak M(Q,\varepsilon /2)} 外为零。因此 #{f-\Pi_{Q,\varepsilon}f} 消去内弧，#{\Pi_{Q,\varepsilon}f} 则只保留外弧内频率。过渡带保留 #{0<\chi<1}，所以这类“平滑投影”一般不满足 #{\Pi^2=\Pi}。}

@@ -1,0 +1,10 @@
+\title{有限矩阵的二范数 Lipschitz 估计}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，§1.2 B；有限维二范数的独立证明}
+
+\p{设 #{A,B} 为 #{N\times N} 自伴矩阵，#{f:\mathbb R\to\mathbb C} 的 Lipschitz 常数为 #{L}。则 #{\|f(A)-f(B)\|_2\le L\|A-B\|_2}，其中 #{\|\cdot\|_2} 为[Schatten 二范数](0X01)。}
+\p{\strong{证明。}选取 #{A} 的正交特征基 #{(u_i)} 与 #{B} 的正交特征基 #{(v_j)}。由[有限谱差公式](0X0H)，}
+##{\langle u_i,(f(A)-f(B))v_j\rangle=d_{ij}\langle u_i,(A-B)v_j\rangle,\qquad |d_{ij}|\le L.}
+\p{这里采用[第二变量线性内积](004M)，并在相等谱点处令 #{d_{ij}=0}。二范数的平方等于任意两组正交基间矩阵元模方之和；逐项取绝对值平方并求和，就得到 #{\|f(A)-f(B)\|_2^2\le L^2\|A-B\|_2^2}。该计算只用有限维谱分解，无须调用 HMS 定理。}

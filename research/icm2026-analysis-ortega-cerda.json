@@ -1,0 +1,654 @@
+{
+  "date": "2026-10-14",
+  "report": {
+    "speaker": "Joaquim Ortega-Cerdà",
+    "title": "Some Fourier Extremal Problems",
+    "outline": "0W00",
+    "reference": "icm2026-ortega-cerda",
+    "question": "固定带宽的点取值极值如何由变分、零点与频谱决定，p=1为何产生微分方程和函数方程双重刻画？",
+    "source_url": "https://doi.org/10.1137/25M1804261",
+    "source_version": "SIAM ICM2026 Volume 4, pp.719–729; published online 2026-07-13; publisher HTML accessed 2026-10-14.",
+    "status": "full-report-body-read; main-branches-integrated; ready-for-parent-registration-and-build",
+    "full_text_available": true,
+    "full_text_read_this_turn": true,
+    "reading_scope": "正式出版社HTML全文：摘要、§1、§2、§3、§4、§5及§5.1–5.3、§6及§6.1、致谢、全部16项参考文献、版权及版本信息；全部显示公式、定理、证明和证明概要均已读。未另读PDF，未单独查看§4末图像像素。补充原论文只读取sources记录的部分，未称全部参考文献全文已读。",
+    "sources": [
+      {
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1804261",
+        "title": "Some Fourier Extremal Problems",
+        "author": "Joaquim Ortega-Cerdà",
+        "version": "ICM2026 Volume 4, pp.719–729; DOI 10.1137/25M1804261; online 2026-07-13",
+        "access": "Publisher open-access HTML, 2026-10-14",
+        "reading_status": "full_text_read",
+        "full_document_read": true,
+        "read_scope": "Abstract, all body §§1–6.1, every displayed statement/proof/sketch, acknowledgments, all 16 bibliography entries, copyright/history. No separate PDF or figure-pixel inspection.",
+        "license": "CC BY 4.0 explicitly checked in publisher Copyright block; copyright International Mathematical Union.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://arxiv.org/html/2504.05205v2",
+        "title": "The Hörmander–Bernhardsson extremal function",
+        "author": "Andriy Bondarenko; Joaquim Ortega-Cerdà; Danylo Radchenko; Kristian Seip",
+        "version": "arXiv:2504.05205v2, 2026-01-23",
+        "access": "Versioned HTML, 2026-10-14",
+        "reading_status": "targeted_full_text_sections_read",
+        "full_document_read": false,
+        "read_scope": "§1; §2 opening through Lemma 2.3 proof and Lemma 2.4 statement; §3 from proof of (1.5) through Corollary 3.2 and Taylor expansions; §4 opening and §4.1, opening of §4.2; §8 Theorem 8.1 through its proof; §9; §10.1 and opening of §10.2. Other sections not read in full.",
+        "license": "CC BY 4.0 displayed in HTML.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://arxiv.org/html/2504.05205v1",
+        "title": "The Hörmander–Bernhardsson extremal function",
+        "author": "Andriy Bondarenko; Joaquim Ortega-Cerdà; Danylo Radchenko; Kristian Seip",
+        "version": "arXiv:2504.05205v1, 2025-04-07",
+        "access": "Initially opened 2026-10-14; relevant claims subsequently checked in v2.",
+        "reading_status": "partial_read_superseded_by_v2_check",
+        "full_document_read": false,
+        "read_scope": "Introduction through beginning of §2/Lemma 2.3 proof; targeted §9 and §10.1 passages. Not a full-paper reading.",
+        "license": "CC BY 4.0 displayed in HTML.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://arxiv.org/abs/2407.00970v2",
+        "title": "The Hörmander–Bernhardsson extremal function: A preliminary study",
+        "author": "Andriy Bondarenko; Joaquim Ortega-Cerdà; Danylo Radchenko; Kristian Seip",
+        "version": "arXiv:2407.00970v2, 2025-12-12; metadata lists Springer ANHA 2026, pp.75–84",
+        "access": "arXiv metadata and license link, 2026-10-14",
+        "reading_status": "metadata_only",
+        "full_document_read": false,
+        "read_scope": "Abstract, title, authors, history, journal reference and license only; 0.13 theorem is sourced through fully read ICM report.",
+        "license": "CC BY 4.0 verified by following arXiv license link.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "deferred": [
+      "0W08的存在性、点值有限性所需增长估计、正常族紧性与下半连续性未独立证明；只补实值性。",
+      "Paley–Wiener逆方向、PW1嵌入及频谱支撑引用经典定理；0W04只证明频谱积分构造方向。Hadamard分解外部输入，Levin教材未全文阅读。",
+      "大小p渐近的Gamma试验函数估计、小p极限存在性、引理3.3轮廓积分及数值优化未展开；幂次缩放已证明但不能代替极限论证。",
+      "定理4.1零点几何、0.13不动点估计、收敛零点展开的深层证明引用。",
+      "引理4.3重现核的分布配对与频率端点处理未重建；0W0K显式保留PW1可积性及误差有界假设。",
+      "正弦刻画充分性所需密度与原点分布项排除、亚纯乘积刻画引用；二次微分恒等式的代数转换已写。",
+      "二阶方程的全局增长证明、倒数函数方程精确系数与全纯唯一性引用；交换关系、Taylor递推及三阶方程已推导。",
+      "无限三对角算子的闭定义域、非自伴谱、截断特征数据指数收敛和高精度算术误差未重证或重算；小数明确为文献结果。",
+      "频谱整延拓与增长阶1/2深证引用；仅直接计算端点值与导数。",
+      "报告外Dirichlet级数和整性分支不扩展。全局导航、同步、注册、构建交父任务；未提交或推送。"
+    ]
+  },
+  "entries": [
+    [
+      "0W00",
+      [],
+      "独立数学叙事综述；导航无硬前置。"
+    ],
+    [
+      "0W01",
+      [
+        "0H4G",
+        "0I80",
+        "0H4F",
+        "0A6A",
+        "0H53",
+        "0I8K",
+        "00ER",
+        "00EV"
+      ],
+      "由Schwartz反演、稠密性和完备性证明欧氏Plancherel。"
+    ],
+    [
+      "0W02",
+      [
+        "0A3G"
+      ],
+      "定义整函数指数型与增长阶。"
+    ],
+    [
+      "0W03",
+      [
+        "0W02",
+        "00XV",
+        "00Q6",
+        "0BAD"
+      ],
+      "定义PWp并区分p小于1的拟范数；频谱链接是后续刻画。"
+    ],
+    [
+      "0W04",
+      [
+        "0W01",
+        "0W03",
+        "004S"
+      ],
+      "带限刻画；证明由紧频谱构造整函数方向，反向与PW1嵌入引用。"
+    ],
+    [
+      "0W05",
+      [
+        "0W03",
+        "00MH",
+        "00M4"
+      ],
+      "定义Cp及归一化极值，泛函范数为Cp^(1/p)。"
+    ],
+    [
+      "0W06",
+      [
+        "0W04",
+        "0W01"
+      ],
+      "平坦频谱的sinc例子、L2大小与L1不可积性。"
+    ],
+    [
+      "0W07",
+      [
+        "0W04",
+        "0W01",
+        "0W06",
+        "0W05",
+        "004S"
+      ],
+      "证明p=2重现、C2=1及唯一性，避免内积线性变量约定冲突。"
+    ],
+    [
+      "0W08",
+      [
+        "0W03",
+        "0W05"
+      ],
+      "存在性引用；另补任何极值函数的实值性论证。"
+    ],
+    [
+      "0W09",
+      [
+        "0W03",
+        "0W05",
+        "0A68",
+        "0I8I",
+        "0BAD"
+      ],
+      "不先用唯一性证明变分重现等价，分开p=1与p>1差商。"
+    ],
+    [
+      "0W0A",
+      [
+        "0W05",
+        "0W08",
+        "0W09",
+        "0ALW"
+      ],
+      "有理扰动排除非实零点与重零点，检查可积性。"
+    ],
+    [
+      "0W0B",
+      [
+        "0W02",
+        "0ALW"
+      ],
+      "Hadamard外部定理及同零点商的指数形式。"
+    ],
+    [
+      "0W0C",
+      [
+        "0W03",
+        "0W05",
+        "0W08",
+        "0W0A",
+        "0W0B",
+        "004S"
+      ],
+      "p>1严格凸性；p=1用同号、单零点、Hadamard和几何平均；最后推出偶性。"
+    ],
+    [
+      "0W0D",
+      [
+        "0W0C",
+        "0W0A",
+        "0W0B"
+      ],
+      "配对Hadamard因子，消去指数，零点必须无限。"
+    ],
+    [
+      "0W0E",
+      [
+        "0W05",
+        "0W02"
+      ],
+      "证明整数幂缩放及整除链单调性。"
+    ],
+    [
+      "0W0F",
+      [
+        "0W05",
+        "0W0E"
+      ],
+      "两端渐近、常数和数值界均保留研究结果状态。"
+    ],
+    [
+      "0W0G",
+      [
+        "0W05",
+        "0W0C",
+        "0W09"
+      ],
+      "就地定义分离与相对稠密；陈述零点几何外部定理。"
+    ],
+    [
+      "0W0H",
+      [
+        "0W03",
+        "0W0C",
+        "0W0D",
+        "0W09"
+      ],
+      "定义Hörmander–Bernhardsson函数及C、正零点记号。"
+    ],
+    [
+      "0W0I",
+      [
+        "0W0H",
+        "00MN"
+      ],
+      "零点0.13界与收敛展开引用；间距极限为直接后果。"
+    ],
+    [
+      "0W0J",
+      [
+        "0W03",
+        "0W05",
+        "0A68",
+        "0A69"
+      ],
+      "重现核与试验函数夹住Cp^(1/p)。"
+    ],
+    [
+      "0W0K",
+      [
+        "0W0L",
+        "0W03",
+        "0W06",
+        "0W0J",
+        "0W0C",
+        "0W0Z"
+      ],
+      "sinc误差核身份引用；补尾部收敛与范数界。"
+    ],
+    [
+      "0W0L",
+      [
+        "00MN",
+        "0W02"
+      ],
+      "定义允许零点序列及配对乘积，不自动推断L1可积。"
+    ],
+    [
+      "0W0M",
+      [
+        "0W0H",
+        "0W0I",
+        "0W0D"
+      ],
+      "交错乘积收敛、反射分解及原点导数。"
+    ],
+    [
+      "0W0N",
+      [
+        "0W0L",
+        "0W0H",
+        "0W0Z",
+        "0W09"
+      ],
+      "正弦分布刻画引用，精确解释测试函数配对。"
+    ],
+    [
+      "0W0O",
+      [
+        "0W0L",
+        "0W0H"
+      ],
+      "亚纯乘积刻画引用；证明与二次微分恒等式的代数等价。"
+    ],
+    [
+      "0W0P",
+      [
+        "0W0M",
+        "0W0O"
+      ],
+      "二阶方程研究定理；系数唯一性另页直接证明。"
+    ],
+    [
+      "0W0Q",
+      [
+        "0W0P",
+        "0BAD",
+        "0W0M"
+      ],
+      "逐项递推与Taylor系数，区分形式级数和解析解。"
+    ],
+    [
+      "0W0R",
+      [
+        "0W0M"
+      ],
+      "倒数变量函数方程及整函数解唯一性引用。"
+    ],
+    [
+      "0W0S",
+      [
+        "0A3G"
+      ],
+      "定义算子后逐项证明交换关系，限定穿孔平面。"
+    ],
+    [
+      "0W0T",
+      [
+        "0W0H",
+        "0W0M",
+        "0H4G",
+        "0W02",
+        "0W04"
+      ],
+      "带内整延拓引用；区别真实频谱与解析延拓。"
+    ],
+    [
+      "0W0U",
+      [
+        "0BAD"
+      ],
+      "生成函数定义Legendre多项式并算端点值。"
+    ],
+    [
+      "0W0V",
+      [
+        "0W0U",
+        "0W0S",
+        "0H4G"
+      ],
+      "生成函数推出微分关系及三对角系数。"
+    ],
+    [
+      "0W0W",
+      [
+        "0W0M",
+        "0W0V",
+        "0W0U"
+      ],
+      "频率端点条件选出常数；谱与数值误差结论引用。"
+    ],
+    [
+      "0W0X",
+      [
+        "0W06",
+        "0W02",
+        "0W0A",
+        "0W08",
+        "0W04",
+        "0W07"
+      ],
+      "sinc平方初等界与重零点排除等号。"
+    ],
+    [
+      "0W0Y",
+      [
+        "0W05",
+        "0W0E"
+      ],
+      "只陈述Cp/p严格单调性猜想。"
+    ],
+    [
+      "0W0Z",
+      [
+        "0H4F",
+        "0H4G",
+        "0H53",
+        "0A68"
+      ],
+      "缓增分布定义、变换与局部相等；一般Lp仅p>=1。"
+    ],
+    [
+      "0W10",
+      [
+        "0W03",
+        "0W05"
+      ],
+      "实平移和带宽缩放，说明2pi频率换元。"
+    ],
+    [
+      "0W11",
+      [
+        "0W0H",
+        "0W0P",
+        "0W0M"
+      ],
+      "由两个反射因子的二阶方程消元推出三阶方程。"
+    ],
+    [
+      "0W12",
+      [
+        "0W03",
+        "0W05",
+        "0W08",
+        "0W0C"
+      ],
+      "非凸范围唯一性猜想及偶性后果。"
+    ],
+    [
+      "0W13",
+      [
+        "0W05",
+        "0W0C",
+        "0W0I",
+        "0W0G"
+      ],
+      "零点分布规律：等间距主猜想与相关分离和参数移动问题。"
+    ],
+    [
+      "0W14",
+      [
+        "0W05",
+        "0H4G",
+        "0W0Z",
+        "0W08",
+        "0W10"
+      ],
+      "频谱形状猜想；用点值界与平移补p<1分布意义。"
+    ],
+    [
+      "icm2026-ortega-cerda",
+      [],
+      "署名、DOI、版本、许可与改编说明；无硬前置。"
+    ]
+  ],
+  "proofs_written": [
+    "0W01",
+    "0W04",
+    "0W06",
+    "0W07",
+    "0W09",
+    "0W0A",
+    "0W0C",
+    "0W0D",
+    "0W0E",
+    "0W0J",
+    "0W0K",
+    "0W0M",
+    "0W0O",
+    "0W0Q",
+    "0W0S",
+    "0W0U",
+    "0W0V",
+    "0W0X",
+    "0W10",
+    "0W11"
+  ],
+  "proofs_with_external_inputs": [
+    "0W04",
+    "0W07",
+    "0W0C",
+    "0W0D",
+    "0W0K",
+    "0W0M",
+    "0W0O",
+    "0W0Q",
+    "0W0X",
+    "0W11"
+  ],
+  "research_statements_without_local_proof": [
+    "0W08",
+    "0W0B",
+    "0W0F",
+    "0W0G",
+    "0W0I",
+    "0W0N",
+    "0W0P",
+    "0W0R",
+    "0W0T",
+    "0W0W"
+  ],
+  "conjecture_pages": [
+    "0W0Y",
+    "0W12",
+    "0W13",
+    "0W14"
+  ],
+  "proof_classification_policy": "proofs_with_external_inputs为proofs_written子集；research_statements_without_local_proof与proofs_written不相交，标识主结论仅引用的页。附带初等推论不升级主研究定理的证明状态；具体边界如下。",
+  "proof_boundaries": {
+    "0W01": "Schwartz反演、Fubini、稠密与L2完备性推出Plancherel；本地证明。",
+    "0W04": "紧频谱到整函数方向本地证明；必要性及PW1嵌入外部定理。",
+    "0W07": "sinc重现、C2=1与等号唯一性本地证明，调用PW频谱刻画。",
+    "0W08": "存在性及0<Cp<infty引用；取实部实值性本地论证。",
+    "0W09": "必要充分性本地证明，含p=1差商支配与零点零测，不先用唯一性。",
+    "0W0A": "共轭根及重实根分别以正积分矛盾排除；可去奇点和积分假设已查。",
+    "0W0B": "Hadamard分解外部引用；同零点商只是直接后果。",
+    "0W0C": "p=1不用严格凸性；实单零点、Hadamard商、几何平均等号条件构成证明，最后偶性。",
+    "0W0D": "配对与消去线性指数因子本地；Hadamard外部。",
+    "0W0F": "研究渐近引用，A/B非精确系数，优化数字非本地重算。",
+    "0W0G": "主零点几何引用；p>=1有理扰动正交式直接由重现解释。",
+    "0W0I": "0.13及收敛展开引用；间距趋一和半整数左侧定位直接推导。",
+    "0W0J": "上下界与误差估计本地，作用于Cp^(1/p)。",
+    "0W0K": "重现核身份和端点处理引用；尾收敛、范数界及零误差极值性本地。",
+    "0W0M": "自然顺序乘积收敛、分解、导数本地；零点估计引用。",
+    "0W0N": "正弦分布刻画引用；测试函数配对及区间分解解释不冒充充分性证明。",
+    "0W0O": "亚纯乘积刻画外部；对数导数转二次恒等式本地。",
+    "0W0P": "Phi满足方程为研究定理；全纯解唯一性由0W0Q递推。",
+    "0W0Q": "递推与低阶系数本地；解析解存在来自研究方程。",
+    "0W0R": "函数方程及全纯唯一性外部，未由局部二维性直接推出全局结论。",
+    "0W0S": "穿孔平面交换关系完整链式法则计算；U不保证原点全纯。",
+    "0W0T": "整延拓及阶1/2外部；端点值、带内导数和拼接不C1直接计算。",
+    "0W0U": "生成函数定义及端点值直接计算。",
+    "0W0V": "有限多项式矩阵与紧支撑光滑测试上的Fourier共轭本地；无穷定义域与谱引用。",
+    "0W0W": "端点系数代数转换解释；参数刻画、误差、零点和公式及数字为文献结果，未重算。",
+    "0W0X": "sinc平方积分及初等界本地，严格界调用零点结构及存在性。",
+    "0W10": "平移和带宽缩放本地；明确xi=2pi nu。",
+    "0W11": "从研究二阶方程出发，反射乘积消元推导三阶方程。",
+    "0W14": "p<1的PW函数通过点值界获得有界性和L1可积性，不泛指任意Lp。"
+  },
+  "source_discrepancies": [
+    {
+      "location": "§4 following Lemma 4.3",
+      "issue": "一般p误差式把Cp与泛函范数混用。",
+      "resolution": "0W0J重新证明，正确对象Cp^(1/p)。"
+    },
+    {
+      "location": "§2 opening",
+      "issue": "偶性段落的平均值严格下降不能用于p=1。",
+      "resolution": "先变分和单零点，后分别证明唯一性，最后推出偶性。"
+    },
+    {
+      "location": "§4 open questions",
+      "issue": "相邻间距趋一位于开放清单。",
+      "resolution": "一般p在0W13列为猜想；p=1由收敛展开证明。"
+    },
+    {
+      "location": "§3, §5.3",
+      "issue": "已证渐近、数值界、近似数字与解析闭式不同。",
+      "resolution": "逐项标明，不称C1或c0具有已知初等闭式。"
+    },
+    {
+      "location": "§5 eigenfunction explanation",
+      "issue": "局部二阶解空间与原点全纯解空间不同。",
+      "resolution": "0W0S限定穿孔平面；0W0Q用原点递推证唯一。"
+    }
+  ],
+  "reused_note_ids": [
+    "004S",
+    "00ER",
+    "00EV",
+    "00M4",
+    "00MH",
+    "00MN",
+    "00Q6",
+    "00XV",
+    "0A3G",
+    "0A68",
+    "0A69",
+    "0A6A",
+    "0ALW",
+    "0BAD",
+    "0H4F",
+    "0H4G",
+    "0H53",
+    "0I80",
+    "0I8I",
+    "0I8K"
+  ],
+  "deduplication": {
+    "method": "全trees检索Fourier、Schwartz、Plancherel、PW、指数型、Hadamard、Legendre、分布、零点与Lp，逐项复用定义和定理。",
+    "decisions": [
+      "保留0H4G/0I80角频率；0W01欧氏Plancherel与Mirek的0V0L离散Plancherel不同。",
+      "复用0A3G/0ALW、00Q6/0A68/0I8I/0H53/0I8K等基础。",
+      "0O06仅紧支撑分布，新增0W0Z承担缓增分布。",
+      "未发现可直接复用的Legendre、指数型、PW词条。",
+      "按父任务反馈，将混合猜想拆为0W0Y、0W12、0W13、0W14。"
+    ]
+  },
+  "terminology": {
+    "attempt_date": "2026-10-14",
+    "banana_space": {
+      "url": "https://bananaspace.org/wiki/傅里叶变换",
+      "access": "web reader returned Internal Error",
+      "verified": false
+    },
+    "choices": {
+      "exponential type": "指数型",
+      "point evaluation": "点取值",
+      "reproducing formula": "重现公式",
+      "uniformly discrete": "一致离散",
+      "uniformly dense": "相对稠密；正文给出区间定义",
+      "tempered distribution": "缓增分布",
+      "admissible sequence": "允许序列；附精确l2条件"
+    },
+    "confirmation_scope": "香蕉空间未访问成功，不宣称已核术语；沿用站内用语。"
+  },
+  "integration_notes": [
+    "唯一写入：trees/math/analysis/fourier-extremal/0W00–0W14.tree（36进制连续ID，41页）、trees/references/icm2026-ortega-cerda.tree及本JSON。",
+    "40个原子页、1综述、1文献页。overview链接全部主要分支；全站入口由父任务接入。",
+    "父任务负责注册entries、全局导航/sync/build；未改主题、全局审计或脚本，未提交推送。",
+    "0W01可跨专题复用；0W0Z为缓增分布基础。父任务已逐页复核正文；内积约定、标题、猜想拆分与p<1补充均已处理。",
+    "0W0M斜杠格式在共享文件中已被修复，保留该修复；新增0W01的00ER/00EV链接，修正0W0Q措辞。"
+  ],
+  "verification": {
+    "status": "scoped-source-checks; ready-for-parent-integration",
+    "record_json_parse_checked": true,
+    "entry_count_checked": 42,
+    "all_owned_entries_reachable_from_outline": true,
+    "local_prerequisite_cycles": 0,
+    "proof_classification_disjointness_checked": true,
+    "remaining_explicit_link_notes": [
+      "最后一次局部检查中，0W09、0W0J的PWp定义硬前置0W03尚无直接正文链接；0W0K的0W03与sinc定义0W06同样尚无直接链接。真实数学依赖已在entries登记。按主协调最新要求不再修改正文，留给统一整合决定。"
+    ],
+    "parent_build_report": "主协调于本轮末告知统一格式后的Forester全站构建成功；本代理未自行运行该构建。",
+    "owned_tree_files": 42,
+    "new_atomic_pages": 40,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "formulas_katex_checked": 650,
+    "katex_formula_errors": 0,
+    "manual_review_scope": "全部新增页的数学假设、常数、前置语义及证明边界逐页检查；父任务同步逐页复核。研究级原论文证明不作全覆盖声明。",
+    "full_report_body_read": true,
+    "global_build_run": false,
+    "global_sync_run": false,
+    "commit_or_push_run": false,
+    "whole_report_self_contained": false,
+    "verification_limit": "650个源公式通过KaTeX检查；实际Forester构建、全站注册和全局前置闭包检查交父任务。"
+  }
+}

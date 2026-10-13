@@ -1,0 +1,12 @@
+\title{竞争簇面积给出等周轮廓的二阶上界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§8.5，式(8.4)}
+
+\p{设 [#{I}](0U0Q) 在内部体积向量 #{v} 附近为 #{C^2}，#{\Omega} 是体积 #{v} 的[驻定](0U0I)全局最小簇，且流的一阶体积变化能取遍 #{E_q=\{a:\sum_i a_i=0\}}。采用这个子空间的标准内积计算梯度和 Hessian，后者为[全微分](0A33)再次求导所得的对称双线性型。取压力规范 #{\lambda\in E_q}。则 #{\lambda=\nabla I(v)}，且任意光滑紧支撑流满足}
+##{(\delta_XV)^{\mathsf T}\nabla^2I(v)(\delta_XV)\le Q(X).}
+\p{\strong{证明。}令 #{v(t)=V(T_t\Omega)}、#{a(t)=A(T_t\Omega)}。由最优值的定义，#{a(t)-I(v(t))\ge 0}，且 #{t=0} 时等号成立，所以一阶导数为零、二阶导数非负：}
+##{a'(0)=\langle\nabla I(v),v'(0)\rangle,\qquad a''(0)\ge v'(0)^{\mathsf T}\nabla^2I(v)v'(0)+\langle\nabla I(v),v''(0)\rangle.}
+\p{驻定性又给出 #{a'(0)=\langle\lambda,v'(0)\rangle}。因 #{v'(0)} 遍历 #{E_q}，两个已归一化向量相等。第二式移项后恰为[压力修正指标型](0U0K)。所有导数都沿体积单纯形计算。}
+\p{这个结论以 #{I} 的 #{C^2} 正则性为假设。一般轮廓的比较通过光滑接触函数表达相应二阶不等式，报告§8.5使用黏性意义的版本。}

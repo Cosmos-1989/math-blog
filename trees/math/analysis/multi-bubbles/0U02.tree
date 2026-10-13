@@ -1,0 +1,13 @@
+\title{局部有限周长集}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§2；报告参考文献41}
+
+\p{设 #{E\subseteq\mathbb R^n} 为 [Lebesgue 可测集](00XV)，#{U\subseteq\mathbb R^n} 开。记 #{C_c^1(U;\mathbb R^n)} 为一阶连续可微且支撑为 #{U} 内紧集的向量值函数，#{\operatorname{div}X=\sum_{a=1}^n\partial_aX_a}。#{E} 在 #{U} 中的周长定义为}
+##{P(E;U)=\sup\left\{\int_E\operatorname{div}X\,dx:X\in C_c^1(U;\mathbb R^n),\ |X|\le 1\right\}.}
+\p{若每个相对紧开集 #{U} 都有 #{P(E;U)<\infty}，称 #{E} 局部有限周长；若 #{P(E;\mathbb R^n)<\infty}，称有限周长。积分使用 [Lebesgue 积分](00Q5)，偏导数见[多变量微分](0A33)。}
+\p{等价地，示性函数 #{\chi_E} 的分布导数由向量值 Radon 测度 #{D\chi_E} 表示：}
+##{\int_E\operatorname{div}X\,dx=-\int X\cdot dD\chi_E.}
+\p{这里 Radon 测度指在紧集上有限、可由紧子集内逼近的 Borel 测度；向量值版本逐分量定义。它的全变差 #{|D\chi_E|(U)} 等于上面的上确界。此表示是有限周长理论的测度表示定理。若 #{E} 有光滑边界，[Stokes 公式](0BAC)给出 #{D\chi_E=-\nu_E\mathcal H^{n-1}|_{\partial E}}，其中 #{\nu_E} 为外单位法向，[#{\mathcal H^{n-1}}](0U01)计量表面积。}
+\p{在流形上，以局部坐标定义局部有限周长；坐标间光滑微分同胚保持这一性质。改变 #{E} 的零测子集不改变积分，因而不改变周长。}

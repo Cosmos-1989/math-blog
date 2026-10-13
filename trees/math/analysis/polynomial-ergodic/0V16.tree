@@ -1,0 +1,12 @@
+\title{整数单侧极大平均的弱一型与强 p 型界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§2.2 所用离散 Hardy–Littlewood 估计；补充覆盖证明}
+
+\p{对整数序列 #{f} 定义 #{Mf(k)=\sup_{N\ge 1}N^{-1}\sum_{n=1}^N|f(k-n)|}。则}
+##{\#\{Mf>\lambda\}\le\frac 6\lambda\|f\|_{\ell^1},\qquad \|Mf\|_{\ell^p}^p\le\frac{12p\,2^{p-1}}{p-1}\|f\|_{\ell^p}^p\quad(1<p<\infty).}
+\p{这些是[弱型和强型估计](0V06)，所给常数无需最优。\strong{覆盖。}先取有限支撑 #{f} 及水平集中的有限子集 #{F}。为每个 #{k\in F} 选见证 #{N_k}，令整数区间 #{I_k=\{k-N_k,\ldots,k\}}。它含 #{N_k+1} 点，且 #{\sum_{I_k}|f|>\lambda N_k\ge(\lambda /2)\#I_k}。}
+\p{从有限区间族中反复选最长区间，删除所有与它相交的区间。保留下来的区间两两不交；被删除的区间不比所选者长且与之相交，故包含于所选区间向左右各延伸自身长度所得的区间中，其点数至多原来的三倍。因此}
+##{\#F\le 3\sum_{I\text{ 被选}}\#I\le\frac 6\lambda\sum_{I\text{ 被选}}\sum_{k\in I}|f(k)|\le\frac 6\lambda\|f\|_1.}
+\p{任意有限 #{F} 的界给出整个水平集的界。\strong{强型。}将 #{f} 拆为 #{|f|\le\lambda /2} 和其补集两部分，前者的极大函数至多 #{\lambda /2}。因此 #{\#\{Mf>\lambda\}\le(12/\lambda)\sum_k|f(k)|1_{\{|f(k)|>\lambda /2\}}}。将它乘 #{p\lambda^{p-1}} 后积分，使用恒等式 #{a^p=\int_0^ap\lambda^{p-1}\,d\lambda} 与非负的[Fubini 定理](0H53)，即得显示常数。一般 #{f} 由有限区间截断及[单调收敛](0A7A)得到。}

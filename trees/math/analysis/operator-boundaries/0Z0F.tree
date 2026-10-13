@@ -1,0 +1,12 @@
+\title{对角压缩将群 M 拓扑送到一致范数}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，§2.2 开头；补写矩阵系数估计}
+
+\p{设 #{\Gamma} 为可数离散群，#{M=L\Gamma}，#{\tau} 为[典范迹](0Z0G)。把 #{\ell^\infty\Gamma} 表为对角算子 #{D_f\delta_x=f(x)\delta_x}。定义 #{E(T)(x)=\langle\delta_x,T\delta_x\rangle}。则 #{T\mapsto D_{E(T)}} 为到对角代数的[条件期望](0Z0A)，且}
+##{\|E(T)\|_\infty\leq s_\tau^\tau(T).}
+\p{因此它从 [M 拓扑](0Z0D)到一致范数连续；#{M}-拓扑在对角代数上的限制正是一致范数拓扑。}
+\p{\strong{证明。}逐点的向量状态在每个矩阵层次都保持正性，故 #{E} 完全正；#{E(1)=1}，且 #{E(D_fTD_g)=fE(T)g}，从而得到条件期望。若 #{T=a^*Yb}，由 [Schwarz 不等式](004S)得}
+##{|E(T)(x)|=|\langle a\delta_x,Yb\delta_x\rangle|\leq\|Y\|\|a\delta_x\|\|b\delta_x\|=\|Y\|\tau(a^*a)^{1/2}\tau(b^*b)^{1/2}.}
+\p{最后一个等式使用 #{\delta_x=\rho_{x^{-1}}\delta_e}，以及 #{a,b} 与[右正则表示](0Z05)交换。对 #{x} 取上确界，再对因子分解取下确界即得估计。对 #{T=D_f}，估计给出 #{\|f\|_\infty\leq s_\tau^\tau(D_f)}，而 #{a=b=1} 给出反向不等式。其余定义[半范数](00MD)都被一致范数的常数倍控制，故两种拓扑相同。}

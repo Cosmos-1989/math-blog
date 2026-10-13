@@ -1,0 +1,11 @@
+\title{次平方根振荡界推出逐点收敛}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，式(3.5)–(3.6)的抽象收敛机制}
+
+\p{设 #{a_t:X\to\mathbb C} 可测，#{\mathbb I\subseteq\mathbb N} 无界，#{X} 为[σ-有限空间](00Q9)。假设对每条满足 #{I_{j+1}>2I_j} 的无限递增端点列 #{I\subseteq\mathbb I}，存在 #{C_I(J)} 使[二次振荡](0V0E)满足 #{\|O_{I,J}^2(a)\|_2\le C_I(J)} 且 #{C_I(J)/\sqrt J\to 0}。则 #{a_t} 沿 #{\mathbb I} 几乎处处收敛。}
+\p{\strong{证明。}若结论失败，可取有限正测度集合 #{E} 和 #{\varepsilon>0}，使 #{E} 上每个点在任意尾部均有两项相差大于 #{2\varepsilon}。固定 #{I_j} 后，至少一个后续指标 #{t} 满足 #{|a_t-a_{I_j}|>\varepsilon}。令右端点逐渐趋无穷，相应事件递增覆盖 #{E}；由[单调收敛](0A7A)，可选 #{I_{j+1}>2I_j}，使这一事件在 #{\lbrack I_j,I_{j+1}\rparen} 内发生的集合测度至少 #{\mu(E)/2}。}
+\p{递归完成一条固定无限端点列。每块的振荡平方在至少半个 #{E} 上超过 #{\varepsilon^2}，故}
+##{\|O_{I,J}^2(a)\|_2^2\ge\frac 12J\varepsilon^2\mu(E).}
+\p{这与 #{C_I(J)^2/J\to 0} 矛盾。端点列虽由反证过程选择，却是同一条无限列，因而允许常数依赖 #{I}。极大界单独只能给出 #{O(\sqrt J)}，正是严格改善这一增长率使论证成立。}

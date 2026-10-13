@@ -1,0 +1,13 @@
+\title{平方可积整函数的带限刻画}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，§1及所引 Levin 教材](icm2026-ortega-cerda)，经典 Paley–Wiener 定理}
+
+\p{设 #{\sigma>0}，采用[Plancherel 变换](0W01)。经典 Paley–Wiener 定理断言：#{f\in PW^2_\sigma} 当且仅当存在 #{g\in L^2([-\sigma,\sigma])}，使}
+##{f(z)=\frac 1{2\pi}\int_{-\sigma}^{\sigma}g(\xi)e^{iz\xi}\,d\xi.}
+\p{这里 #{PW^2_\sigma} 按[整函数定义](0W03)理解，#{g} 是 #{f} 的 Fourier 变换在该区间的限制。在区间外将 #{g} 延为零，即 #{\widehat f=0} 几乎处处于 #{|\xi|>\sigma}。从整函数增长推出频谱支撑，是所引用的 Paley–Wiener 定理的深层方向。}
+\p{\strong{由频谱构造整函数。}有限区间上的 [Cauchy–Schwarz 不等式](004S)给出 #{\|g\|_1\leq\sqrt{2\sigma}\|g\|_2}。在复平面任意紧集上，积分及其逐次导数一致受可积函数控制，故定义整函数，且}
+##{|f(x+iy)|\leq\frac{\sqrt{2\sigma}}{2\pi}\|g\|_2e^{\sigma|y|}.}
+\p{Plancherel 定理给出 #{\|f\|_2^2=(2\pi)^{-1}\|g\|_2^2}，所以它确实属于 #{PW^2_\sigma}。}
+\p{还使用经典定理的可积版本：#{PW^1_\sigma\subset PW^2_\sigma}，且可积 Fourier 积分 #{\widehat f} 连续，支撑包含于 #{[-\sigma,\sigma]}。连续性与区间外消失进一步给出 #{\widehat f(\pm\sigma)=0}。这里闭区间包含端点，即使端点处函数值为零。}

@@ -1,0 +1,15 @@
+\title{二阶微分算子与倒数变换交换}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，§5](icm2026-ortega-cerda)；Bondarenko 等，v2，引理4.1}
+
+\p{设 #{a,b\in\mathbb C\setminus\{0\}}，在穿孔平面上的[全纯函数](0A3G)上定义}
+##{\mathcal L_{a,b}f=z^2f''+(2z-a)f'+b^2z^2f,\qquad U_\pm f(z)=z^{-1}e^{\mp ibz-a/(2z)}f\left(\pm\frac{ia}{2bz}\right).}
+\p{则 #{\mathcal L_{a,b}U_\pm=U_\pm\mathcal L_{a,b}}。}
+\p{\strong{证明。}固定一个符号，写 #{c=\pm ia/(2b)}、#{d=\mp ib}、#{w=c/z}、#{u=z^{-1}e^{dz-a/(2z)}}。于是 #{dc=a/2}，#{d^2=-b^2}，#{b^2c^2=-a^2/4}。令 #{q=u'/u=d-1/z+a/(2z^2)}。链式法则给出}
+##{(uf(w))'=u(qf+w'f'),\qquad(uf(w))''=u\bigl((q'+q^2)f+(2qw'+w'')f'+(w')^2f''\bigr),}
+\p{其中右侧 #{f,f',f''} 均在 #{w} 处取值。代入 #{\mathcal L_{a,b}}，其三个系数满足}
+##{z^2(w')^2=w^2,\qquad z^2(2qw'+w'')+(2z-a)w'=2w-a,}
+##{z^2(q'+q^2)+(2z-a)q+b^2z^2=-\frac{a^2}{4z^2}=b^2w^2.}
+\p{故结果恰为 #{u(\mathcal L_{a,b}f)(w)}。这些是穿孔平面上的恒等式；#{U_\pm f} 一般在原点有奇性。特别地，对 #{a=1/(2C_1)}、#{b=\pi /2}，此交换关系适用于[交错乘积的微分方程](0W0P)。}

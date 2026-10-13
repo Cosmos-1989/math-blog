@@ -1,0 +1,12 @@
+\title{离散群随机游走的算子提升}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，§5 的离散群模型；补写右平移计算}
+
+\p{设 #{\Gamma} 为可数离散群，#{\mu} 为其概率分布。以[右正则表示](0Z05)定义}
+##{\Phi_\mu(T)=\sum_{t\in\Gamma}\mu(t)\rho_tT\rho_t^*,\qquad T\in B(\ell^2\Gamma).}
+\p{则 #{\Phi_\mu} 为[正规](0Z09) [u.c.p. 映射](0Z04)，固定[群代数](0Z06) #{L\Gamma} 中每个元素，并满足 #{\Phi_\mu(D_f)=D_{P_\mu f}}，其中 #{P_\mu f(x)=\sum_t\mu(t)f(xt)} 为[右随机游走算子](0Z14)。}
+\p{\strong{证明。}每个酉共轭是正规 u.c.p. 映射。级数在映射的算子范数下收敛，因为尾项范数至多为尾部总质量；在每个固定矩阵层次也有相同估计，故极限完全正且保单位。正规性可在有界递增正算子网中逐项取极限，再用概率尾部的一致估计交换求和与极限。}
+\p{#{L\Gamma} 与每个 #{\rho_t} 交换，故 #{\Phi_\mu(a)=a} 对 #{a\in L\Gamma} 成立。最后 #{\rho_tD_f\rho_t^*=D_{R_tf}}，在 #{x} 坐标上求和即得右调和算子。}
+\p{当 #{\mu} 的支撑生成 #{\Gamma} 作为半群时，其[非交换 Poisson 边界](0Z15)与经典边界的 [von Neumann 交叉积](0Z1I) #{L^\infty(B,\nu)\rtimes\Gamma} 同构，这是报告 §5 引用 Izumi 的外部识别定理。边界作用非奇异，交叉积取正则协变表示的双交换子；该识别的证明留在原文献。}

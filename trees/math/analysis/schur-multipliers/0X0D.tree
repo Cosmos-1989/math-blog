@@ -1,0 +1,10 @@
+\title{带振荡行因子的非 Toeplitz HMS 例子}
+\date{2026-10-14}
+\taxon{Example}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，定理1.2；符号及导数计算为独立例子}
+
+\p{在 #{\mathbb R\times\mathbb R} 上令 #{M(x,y)=\sin x\,e^{-(x-y)^2}}。它是非 Toeplitz 的[Schur 符号](0X03)：固定任意差值 #{x-y=r}，仍有 #{M(x,x-r)=e^{-r^2}\sin x} 随 #{x} 变化。对所有 #{1<p<\infty}，#{S_M} 完全有界。}
+\p{\strong{计算。}记 #{r=x-y}，则}
+##{\partial_x M=(\cos x-2r\sin x)e^{-r^2},\qquad \partial_yM=2r\sin x\,e^{-r^2}.}
+\p{#{|M|\le 1}，且 #{|r|(|\partial_xM|+|\partial_yM|)\le |r|e^{-r^2}+4r^2e^{-r^2}\le(2e)^{-1/2}+4/e}。一维 [HMS 定理](0X0C)只要求一阶导数，故直接适用。这里证明了定理的全部符号假设；乘子有界性采用 HMS 定理作为外部输入。}

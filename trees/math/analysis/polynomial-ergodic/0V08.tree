@@ -1,0 +1,12 @@
+\title{有限轨道截断给出 Calderón 移植}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§2.2、§4；一变换有限支撑形式}
+
+\p{设 #{T} 是[σ-有限空间](00Q9)上的可逆双可测[保测映射](00RR)。给定有限支撑核 #{K_1,\ldots,K_J:\mathbb Z\to\mathbb C}，定义 #{B_jg(k)=\sum_mK_j(m)g(k-m)} 和 #{\widetilde B_jf(x)=\sum_mK_j(m)f(T^mx)}。设 #{\Phi:\mathbb C^J\to\lbrack 0,\infty\rparen} 为连续函数。若对所有有限支撑 #{g} 有}
+##{\|\Phi(B_1g,\ldots,B_Jg)\|_{\ell^p}\le C\|g\|_{\ell^p},\qquad 1\le p<\infty,}
+\p{则相同常数给出 #{\|\Phi(\widetilde B_1f,\ldots,\widetilde B_Jf)\|_{L^p}\le C\|f\|_{L^p}}。}
+\p{\strong{证明。}取 #{R} 使所有核支撑于 #{[-R,R]}。固定 #{L}，对几乎每个 #{x} 定义有限序列 #{g_x(k)=f(T^{-k}x)1_{[-L-R,L+R]}(k)}。当 #{|k|\le L}，#{B_jg_x(k)=\widetilde B_jf(T^{-k}x)}。应用离散估计，再对 #{x} 积分。保测性使每个平移项积分相同，得到}
+##{(2L+1)\|\Phi(\widetilde B_1f,\ldots,\widetilde B_Jf)\|_p^p\le C^p(2L+2R+1)\|f\|_p^p.}
+\p{令 #{L\to\infty} 即得结论。取 #{\Phi} 为有限[极大值](0V06)或有限指标上的[变差](0V0D)，再按[单调收敛](0A7A)令指标集扩大，可移植常数一致的极大、变差估计。这一论证需要数量估计；单独的离散逐点极限不含统一常数，不能代入上述积分不等式。}

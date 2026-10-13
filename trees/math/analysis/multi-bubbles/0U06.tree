@@ -1,0 +1,11 @@
+\title{气泡总周长为何带有二分之一}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§2 的总周长公式}
+
+\p{设 #{\Omega} 为[有限分割](0U05)，记 #{\Sigma_{ij}=\partial^*\Omega_i\cap\partial^*\Omega_j}。对相对紧开集 #{U}，有}
+##{A_\mu(\Omega;U):=\frac 12\sum_{i=1}^q A_\mu(\Omega_i;U)=\sum_{i<j}\mu^{n-1}(\Sigma_{ij}\cap U).}
+\p{\strong{证明。}有限周长分割的界面结构定理断言：几乎每个约化边界点恰属于两个胞腔的约化边界，而且两外法向相反；“几乎每个”按 [#{\mathcal H^{n-1}}](0U01)理解。结合[约化边界面积表示](0U03)，得到}
+##{A_\mu(\Omega_i;U)=\sum_{j\ne i}\mu^{n-1}(\Sigma_{ij}\cap U).}
+\p{对 #{i} 求和，每个无序对 #{\{i,j\}} 恰出现两次，除以二即得结论。界面结构定理为外部输入，计数适用于无穷总周长，通过开集穷竭取极限。三重交线及更高交汇集合不另加面积项。}

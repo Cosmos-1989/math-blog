@@ -1,0 +1,12 @@
+\title{界面面积构成的加权图 Laplacian}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§8.6，Gaussian 体积变化矩阵}
+
+\p{设 #{q\ge 2}，#{w_{ij}=w_{ji}\ge 0}、#{w_{ii}=0}，以 #{w_{ij}>0} 为边的[简单图](00LB)连通。定义 #{\mathbb R^q} 上的对称矩阵}
+##{L=\sum_{i<j}w_{ij}(e_i-e_j)(e_i-e_j)^{\mathsf T}.}
+\p{则 #{(La)_i=\sum_{j\ne i}w_{ij}(a_i-a_j)}，#{\ker L=\mathbb R(1,\ldots,1)}，故 #{L} 在 #{E_q=\{a:\sum_i a_i=0\}} 上[正定](0N0A)，并且}
+##{\operatorname{tr}_{E_q}L=2\sum_{i<j}w_{ij}.}
+\p{\strong{证明。}展开秩一矩阵即得坐标公式及 #{a^{\mathsf T}La=\sum_{i<j}w_{ij}(a_i-a_j)^2}。该和为零恰说明每条边两端取值相同；沿连通路径传播，#{a} 必为常向量。常向量与 #{E_q} 正交，所以限制正定。每个秩一项的[迹](0F0F)为 #{w_{ij}|e_i-e_j|^2=2w_{ij}}，且常向量方向本征值为零，得到迹公式。}
+\p{对[界面面积](0U06)取 #{w_{ij}=\mu^{n-1}(\Sigma_{ij})}，分片常速度 #{f_{ij}=a_i-a_j} 的[体积通量](0U0H)恰为 #{La}。在连通界面图上，任意和为零的体积变化都能唯一写为 #{La}，其中 #{a\in E_q}。}

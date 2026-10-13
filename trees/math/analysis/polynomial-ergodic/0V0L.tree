@@ -1,0 +1,12 @@
+\title{离散 Fourier 的 Parseval 等式与乘子界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§4.1 所用离散 Plancherel 公式}
+
+\p{采用[整数 Fourier 约定](0V0K)。对有限支撑序列 #{f}，有}
+##{\int_0^1|\mathcal F_{\mathbb Z}f(\xi)|^2\,d\xi=\sum_{x\in\mathbb Z}|f(x)|^2,\qquad f(x)=\int_0^1\mathcal F_{\mathbb Z}f(\xi)e(-x\xi)\,d\xi.}
+\p{\strong{证明。}直接积分得 #{\int_0^1e(k\xi)\,d\xi=0} 对每个非零整数 #{k} 成立，#{k=0} 时为一。展开有限平方和或代入反演积分，只有相同指标保留。有限支撑序列在 #{\ell^2} 稠密，所以[等距延拓](00M8)将变换定义到整个 #{\ell^2}；反演中每个系数是 #{L^2} 连续泛函，仍成立。}
+\p{更一般地，若 #{g\in L^2(\mathbb T)}，其系数 #{c_x=\int_0^1g(\xi)e(-x\xi)\,d\xi} 满足 #{\sum_x|c_x|^2\le\|g\|_2^2}。确实，对任意有限 #{F\subseteq\mathbb Z}，正交展开给出 #{0\le\|g-\sum_{x\in F}c_xe(x\xi)\|_2^2=\|g\|_2^2-\sum_{x\in F}|c_x|^2}；令有限集扩大即可。因此对有界可测 #{m}，按系数积分定义 #{T_mf=\mathcal F_{\mathbb Z}^{-1}(m\mathcal F_{\mathbb Z}f)} 时，}
+##{\|T_mf\|_{\ell^2}\le\|m\|_{L^\infty(\mathbb T)}\|f\|_{\ell^2}.}
+\p{这一乘子界只需正交性、稠密延拓和系数的平方和估计；对于卷积核，其 Fourier 乘法关系由直接换元给出。}

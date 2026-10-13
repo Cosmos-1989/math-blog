@@ -1,0 +1,10 @@
+\title{欧氏 Fourier 变换的 Plancherel 定理}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+
+\p{在 #{\mathbb R^d} 上采用[约定](0H4G) #{\widehat f(\xi)=\int f(x)e^{-ix\cdot\xi}\,dx}。此变换从 [Schwartz 空间](0H4F)唯一延拓到 [L² 空间](0A6A)，满足}
+##{\int_{\mathbb R^d} f(x)\overline{g(x)}\,dx=(2\pi)^{-d}\int_{\mathbb R^d}\widehat f(\xi)\overline{\widehat g(\xi)}\,d\xi.}
+\p{因此 #{(2\pi)^{-d/2}\mathcal F} 是 L² 到自身的满射等距线性映射。对一般 L² 函数，#{\widehat f} 表示 L² 极限，点态积分未必存在。}
+\p{\strong{Schwartz 情形。}将[反演公式](0I80)用于 #{g}，取共轭后代入左侧。[Fubini 定理](0H53)适用，因为 #{f} 与 #{\widehat g} 都可积。内层积分就是 #{\widehat f(\xi)}，得到所述等式。取 #{g=f} 即得 #{\|\widehat f\|_2=(2\pi)^{d/2}\|f\|_2}。}
+\p{\strong{延拓与满射。}由 [Schwartz 空间在 L² 中稠密](0I8K)，若 #{f_n\to f} 于 L²，则 #{\widehat f_n} 为 [Cauchy 列](00ER)。L² 的完备性给出与逼近列无关的极限，并保留内积恒等式。逆变换在 Schwartz 空间给出互逆映射；完备空间的[等距映射](00EV)的像闭，又包含稠密的 Schwartz 空间，故延拓的像是全部 L²。}

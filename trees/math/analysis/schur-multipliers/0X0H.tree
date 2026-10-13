@@ -1,0 +1,10 @@
+\title{有限谱差公式将函数演算化为 Schur 乘法}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，§1.2 B 的算子 Lipschitz 背景；有限谱的直接证明}
+
+\p{设 #{A,B} 为 #{\mathbb C^N} 上自伴矩阵，谱分解为 #{A=\sum_i\lambda_iP_i}、#{B=\sum_j\mu_jQ_j}，其中两族各为和等于 #{I} 的正交谱投影。对定义在这些有限谱点上的复函数 #{f}，按[函数演算](0S14)定义 #{f(A),f(B)}，并令 #{d_{ij}=(f(\lambda_i)-f(\mu_j))/(\lambda_i-\mu_j)}，相等谱点处取 #{d_{ij}=0}。则}
+##{f(A)-f(B)=\sum_{i,j}d_{ij}P_i(A-B)Q_j.}
+\p{\strong{证明。}由 #{P_iA=\lambda_iP_i} 与 #{BQ_j=\mu_jQ_j}，有 #{P_i(A-B)Q_j=(\lambda_i-\mu_j)P_iQ_j}。若谱点不同，乘以 #{d_{ij}} 即得到 #{(f(\lambda_i)-f(\mu_j))P_iQ_j}；若相同，两边均为零。对 #{i,j} 求和并使用两族投影和为 #{I}，便得到结论。}
+\p{分别选取 #{A}、#{B} 的正交特征基，输入与输出的交叉矩阵元恰由上述[差商](0X0F)逐项相乘。左右基变换保持[Schatten 范数](0X06)，所以这正是一个有限矩阵 [Schur 乘子](0X03)估计问题。}

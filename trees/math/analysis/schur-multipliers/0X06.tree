@@ -1,0 +1,13 @@
+\title{Schatten 范数的左右乘法估计}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，§1 所用迹理想性质；有限秩逼近证明}
+
+\p{设 #{A\in S_p(H)}，#{1\le p\le\infty}，且 #{B,C\in\mathcal B(H)}。则}
+##{\|BAC\|_p\le\|B\|\|A\|_p\|C\|.}
+\p{若 #{U,V} 为酉算子，即 #{U^*U=UU^*=V^*V=VV^*=I}，则 #{\|UAV\|_p=\|A\|_p}。[Schatten 类](0X01)与[伴随](00MU)均取同一 Hilbert 空间结构。}
+\p{\strong{证明。}先取有限秩 #{A}。其第 #{j} 个奇异值满足 #{s_j(A)=\inf_{\operatorname{rank}R<j}\|A-R\|}：截去前 #{j-1} 个奇异方向给出上界；对任意秩小于 #{j} 的 #{R}，在前 #{j} 个右奇异向量的张成空间中选单位向量 #{v\in\ker R}，就有 #{\|(A-R)v\|=\|Av\|\ge s_j(A)}。因此 }
+##{s_j(BAC)\le\|B\|\|C\|s_j(A),}
+\p{因为 #{BRC} 的秩也小于 #{j}。对奇异值取 #{p} 次方求和得到有限秩情形。一般 #{A\in S_p} 用[有限秩稠密性](0X01)取极限：所求估计先保证 #{BA_kC} 在 #{S_p} 中为 [Cauchy 列](00ER)，其极限在算子范数中必为 #{BAC}。#{p=\infty} 的不等式直接来自[算子范数](00M4)的次乘性。对酉算子先用不等式，再用 #{A=U^*(UAV)V^*} 得到等号。}
+\p{有限秩奇异分解采用有限维自伴谱定理；无限维延拓只使用 Schatten 空间的完备性、有限秩稠密性及 #{\|A\|\le\|A\|_p}。}

@@ -1,0 +1,13 @@
+\title{主弧上离散指数和的算术与积分分解}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，引理5.3；补充逐剩余类证明}
+
+\p{固定 #{P\in\mathbb Z[n]}、#{d=\deg P\ge 1}，令 #{\xi=a/q+\beta}，其中 #{q\ge 1}、#{\gcd(a,q)=1}、#{\beta\in\mathbb R}，并采用[正号指数](0V0K)。记}
+##{G_P(a/q)=\frac 1q\sum_{r=1}^qe\left(\frac aqP(r)\right),\qquad v_N^P(\beta)=\frac 1N\int_0^Ne(\beta P(t))\,dt.}
+\p{对[离散指数和](0V0M)，有常数 #{C_P} 使}
+##{|m_N^P(a/q+\beta)-G_P(a/q)v_N^P(\beta)|\le C_Pq\left(N^{-1}+|\beta|N^{d-1}\right).}
+\p{\strong{剩余类分组。}整数系数保证 #{P(n)\equiv P(r)\pmod q} 当 #{n\equiv r\pmod q}。令 #{F(t)=e(\beta P(t))}，则 #{\|F\|_\infty=1}、#{\int_0^N|F'(t)|\,dt\le C_P|\beta|N^d}。对固定剩余类，用步长 #{q} 的小区间比较函数值与积分；完整小区间的误差由该区间上的 #{\int|F'|} 控制，两端不完整区间的贡献至多二，得到}
+##{\left|\sum_{1\le n\le N\atop n\equiv r\ (q)}F(n)-\frac 1q\int_0^NF(t)\,dt\right|\le 2+\int_0^N|F'(t)|\,dt.}
+\p{乘以模为一的 #{e(aP(r)/q)}，对 #{r=1,\ldots,q} 求和，再除以 #{N}，即得结论。#{G_P} 编码模 #{q} 的周期抵消，#{v_N^P} 描述邻近频率 #{\beta} 的连续变化；当 #{q\le Q}、#{|\beta|\le N^{-d}Q^d} 时，误差至多 #{C_P(Q+Q^{d+1})/N}。}

@@ -1,0 +1,11 @@
+\title{平滑有理频率截断的粗略范数界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，式(4.11)；补充核估计}
+
+\p{设 #{\Pi_{Q,\varepsilon}} 为[平滑截断](0V0P)，#{Q\ge 1}、#{0<\varepsilon\le 1}。对 #{1\le p\le\infty}，有 #{\|\Pi_{Q,\varepsilon}f\|_{\ell^p}\le C_\eta Q^2\|f\|_{\ell^p}}。若各峰支撑不交，#{p=2} 的常数可取一。}
+\p{\strong{单峰核。}对频率 #{\theta}，反向系数积分换元给出}
+##{k_{\theta,\varepsilon}(x)=\varepsilon e(-x\theta)\int_{\mathbb R}\eta(t)e(-\varepsilon xt)\,dt=\varepsilon e(-x\theta)\widehat\eta(2\pi\varepsilon x).}
+\p{最后的帽号严格采用[欧氏负号变换](0H4G)。[Schwartz 反演与衰减](0I80)或两次分部积分给出 #{|\widehat\eta(u)|\le C_\eta(1+|u|)^{-2}}，故 #{\sum_x|k_{\theta,\varepsilon}(x)|\le C_\eta}，常数与宽度、中心无关。绝对可和的核与有限支撑函数卷积时，[Minkowski](0A69)给出 #{\|k*f\|_p\le\|k\|_1\|f\|_p}，再按稠密延拓处理有限 #{p}，#{p=\infty} 直接求和。}
+\p{#{\#\mathcal R_{\le Q}\le\sum_{q\le Q}q\le Q^2}，逐峰相加即得粗界。峰支撑不交时 #{|\chi|\le 1}，[离散乘子界](0V0L)给出二范数收缩。光滑周期函数的 Fourier 级数在两次分部积分后绝对收敛，因而上述核确实实现所定义的乘子。}

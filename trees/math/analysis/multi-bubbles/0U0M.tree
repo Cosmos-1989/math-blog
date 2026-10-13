@@ -1,0 +1,13 @@
+\title{多界面二次变分的 Jacobi 公式}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，命题8.1，式(8.1a–b)}
+
+\p{设 #{\Omega} 为[驻定正则分割](0U0I)，环境为 [#{\mathbb R^n,\mathbb S^n,\mathbb H^n,\mathbb G^n}](0U04)。令 #{X} 紧支撑光滑，#{f_{ij}=\langle X,\nu_{ij}\rangle}。假设 #{X} 的支撑避开[#{\Sigma^4}](0U0F)，或界面的[曲率张量 #{B}](0U0G)局部有界。则[指标型](0U0K)等于}
+##{Q^0(f)=\sum_{i<j}\left[\int_{\Sigma_{ij}}\left(|\nabla_\Sigma f_{ij}|^2-(\rho+|B^{ij}|^2)f_{ij}^2\right)d\mu^{n-1}-\int_{\partial\Sigma_{ij}}b_{ij}f_{ij}^2\,d\mu^{n-2}\right].}
+\p{这里 [#{\nabla_\Sigma}](0U14)为诱导度量梯度，#{|B|^2} 为正交标架中各矩阵元平方和。四种环境的 #{\rho} 依次为 #{0,n-1,-(n-1),1}。在 #{\Sigma_{ijk}} 上，#{\eta_{ij}} 是界面 #{\Sigma_{ij}} 的外单位余法向，并定义}
+##{b_{ij}=\frac{B^{ik}(\eta_{ik},\eta_{ik})+B^{jk}(\eta_{jk},\eta_{jk})}{\sqrt 3},\qquad L_{ij}f=\Delta_{\Sigma,\mu}f+(\rho+|B^{ij}|^2)f.}
+\p{#{L} 称 Jacobi 算子；[加权 Laplace 算子](0U14)为 #{\Delta_{\Sigma,\mu}=\Delta_\Sigma -\langle\nabla_\Sigma W,\nabla_\Sigma\cdot\rangle}。分部积分后的等价表达为}
+##{Q^0(f)=\sum_{i<j}\left[-\int_{\Sigma_{ij}}f_{ij}L_{ij}f_{ij}\,d\mu^{n-1}+\int_{\partial\Sigma_{ij}}(\partial_{\eta_{ij}}f_{ij}-b_{ij}f_{ij})f_{ij}\,d\mu^{n-2}\right].}
+\p{这是所引命题的模型空间形式，包含奇异交汇附近的可积性结论。它显示三重交线贡献符号不定的边界项；逐片套用无边界曲面的二次变分会丢失这一项。}

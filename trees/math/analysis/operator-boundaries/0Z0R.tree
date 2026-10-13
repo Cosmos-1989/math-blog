@@ -1,0 +1,13 @@
+\title{可和作用的不变测度产生群均值}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，定义4.2之后的观察；补写积分与极限论证}
+
+\p{设可数离散群 #{\Gamma} 在非空紧 Hausdorff 空间 #{K} 上的作用[拓扑可和](0Z0I)。若存在 #{\Gamma}-不变的正则 Borel 概率测度 #{\nu}，则 #{\Gamma} [可和](0Z0Q)。不变性指 #{\nu(sA)=\nu(A)} 对每个 Borel 集成立。}
+\p{\strong{证明。}取定义中的 #{m_n:K\to\operatorname{Prob}(\Gamma)}，逐坐标[积分](00Q5)得 #{p_n(x)=\int_Km_n(k)(x)\,d\nu(k)}。非负级数的单调收敛给出 #{\sum_xp_n(x)=1}。由不变性及三角不等式，}
+##{\|s_*p_n-p_n\|_1
+\leq\int_K\|s_*m_n(k)-m_n(sk)\|_1\,d\nu(k)\longrightarrow 0.}
+\p{用[超滤子扩张引理](00GO)将自然数上的余有限滤子扩张成[非主超滤子](00CO) #{\mathcal U}，对有界函数定义 #{m(f)=\lim_{n\to\mathcal U}\sum_xp_n(x)f(x)}。复平面闭圆盘的[紧性保证超滤极限存在](0AP3)，极限与有限线性组合相容，且保持非负性与单位。最后}
+##{|\ell_n(L_sf)-\ell_n(f)|\leq\|f\|_\infty\|(s^{-1})_*p_n-p_n\|_1\longrightarrow 0,}
+\p{其中 #{\ell_n(f)=\sum_xp_n(x)f(x)}。取超滤极限得到平移不变性。}

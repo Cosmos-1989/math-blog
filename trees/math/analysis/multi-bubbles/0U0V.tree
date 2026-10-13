@@ -1,0 +1,12 @@
+\title{一个 Gaussian 气泡的轮廓常数}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§2、命题8.4；一维计算补充}
+
+\p{令 #{\varphi(t)=(2\pi)^{-1/2}e^{-t^2/2}}，#{F(t)=\int_{-\infty}^t\varphi(s)\,ds}。这采用[标准正态分布](0N0R)的分布函数，故 #{F=1-\Phi}，其中站内 #{\Phi} 表示右尾函数。半空间 #{\{x_1<t\}} 的 [Gaussian 体积](0U04)为 #{v=F(t)}，界面面积为 #{J(v)=\varphi(F^{-1}(v))}。}
+\p{\strong{微分。}#{F'=\varphi>0}，所以 #{dt/dv=1/\varphi(t)}。用 #{\varphi'(t)=-t\varphi(t)} 得}
+##{J'(v)=-t,\qquad J''(v)=-\frac 1{J(v)}.}
+\p{二胞腔体积向量为 #{(v,1-v)}。其切空间的单位向量是 #{e=(1,-1)/\sqrt 2}，沿 #{e} 移动时第一坐标变化率为 #{1/\sqrt 2}，所以内蕴 Hessian 的唯一特征值为 #{J''/2}。因此}
+##{\operatorname{tr}_{E_2}((-\nabla^2J)^{-1})=-\frac 2{J''}=2J.}
+\p{这核对了[模型方程](0U0U)的归一化。将 #{J} 识别为全部可测竞争者的最优轮廓，使用 Gaussian 半空间等周定理，见报告§2。}

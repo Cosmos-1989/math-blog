@@ -1,0 +1,12 @@
+\title{极大不等式使逐点收敛类闭合}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§2.2 的 Banach 连续性原理}
+
+\p{设 #{1\le p<\infty}，线性算子列 #{T_n:L^p(X)\to\{\text{可测函数}\}} 的[极大算子](0V06)满足弱型 #{(p,p)} 估计，常数为 #{C}。则使 #{T_nf} [几乎处处收敛](0V01)的函数组成 #{L^p} 中的闭集。}
+\p{\strong{证明。}设 #{f_j\to f} 按 #{L^p} 范数收敛且每个 #{T_nf_j} 几乎处处收敛。定义尾部直径}
+##{D(f)(x)=\inf_{K\ge 1}\sup_{m,n\ge K}|T_mf(x)-T_nf(x)|.}
+\p{删去所有 #{f_j} 对应的零测例外集，由线性性得 #{D(f)\le 2T^*(f-f_j)}。于是对 #{\varepsilon>0}，}
+##{\mu\{D(f)>\varepsilon\}\le\left(\frac{2C\|f-f_j\|_p}{\varepsilon}\right)^p\longrightarrow 0.}
+\p{对正有理 #{\varepsilon} 取并，得到 #{D(f)=0} 几乎处处；复数域的[Cauchy 完备性](00ET)给出有限极限。尤其，若能在[稠密](00EB)函数类上先证明逐点收敛，极大估计便将结论扩张到整个 #{L^p}。}

@@ -1,0 +1,11 @@
+\title{完全正映射的 Schwarz 不等式}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，§2 的基础工具；直接矩阵证明}
+
+\p{若 #{\Phi:A\to B} 是含幺 [C* 代数](0Z01)之间的 [u.c.p. 映射](0Z04)，则对任意 #{a\in A} 有}
+##{\Phi(a)^*\Phi(a)\leq\Phi(a^*a),\qquad\|\Phi(a)\|\leq\|a\|.}
+\p{\strong{证明。}正映射保持伴随：自伴元素可用[正负部分的函数演算](0S14)写成两个[正元素](0Z02)之差，再按实虚部分分解一般元素。矩阵}
+##{\begin{pmatrix}a^*a&a^*\\a&1\end{pmatrix}=\begin{pmatrix}a^*\\1\end{pmatrix}\begin{pmatrix}a&1\end{pmatrix}}
+\p{为正。将 #{\Phi} 按元素作用并在具体表示中用向量 #{(\xi,-\Phi(a)\xi)} 测试正性，得到 #{\langle\xi,(\Phi(a^*a)-\Phi(a)^*\Phi(a))\xi\rangle\geq 0}。再由 #{a^*a\leq\|a\|^2 1} 得 #{\Phi(a)^*\Phi(a)\leq\|a\|^2 1}，即范数估计。}

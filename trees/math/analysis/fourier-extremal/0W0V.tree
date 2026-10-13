@@ -1,0 +1,13 @@
+\title{频率微分算子的 Legendre 三对角表示}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，§5.1–5.2](icm2026-ortega-cerda)}
+
+\p{设 #{a\in\mathbb C}，在区间 #{[-1,1]} 上令 #{L_ag=((x^2-1)g')'-iaxg}。[Legendre 多项式](0W0U)满足}
+##{((x^2-1)P_n')'=n(n+1)P_n,\qquad xP_n=\frac{n+1}{2n+1}P_{n+1}+\frac n{2n+1}P_{n-1},}
+\p{#{n=0} 时第二项取零。因此在相位调整的基 #{i^nP_n} 下，有限线性组合的系数 #{c=(c_n)} 被映到}
+##{(T_ac)_m=-a\frac m{2m-1}c_{m-1}+m(m+1)c_m+a\frac{m+1}{2m+3}c_{m+1},\qquad m\geq 0,}
+\p{其中 #{c_{-1}=0}。}
+\p{\strong{多项式恒等式。}置生成函数 #{G=(1-2xt+t^2)^{-1/2}}。直接求导得到 #{(1-2xt+t^2)G_t=(x-t)G}，比较 #{t^n} 系数即得三项递推。另有 #{\partial_x((x^2-1)G_x)=t^2G_{tt}+2tG_t}，比较系数得到特征值 #{n(n+1)}。乘以 #{-iax} 后，来自第 #{m-1} 和第 #{m+1} 列的相位因子分别为 #{-i\,i^{m-1}/i^m=-1}、#{-i\,i^{m+1}/i^m=1}，故得显示矩阵。}
+\p{它对应于[时域算子](0W0S) #{\mathcal L_{a,1}}。具体地，对紧支撑于 #{(-1,1)} 的光滑 #{g}，令 #{f(z)=(2\pi)^{-1}\int g(x)e^{izx}\,dx}；按 [Fourier 约定](0H4G)分部积分，得到 #{\widehat{\mathcal L_{a,1}f}=L_ag}。这一步无边界项。将表示推广为带端点条件的闭算子并研究其谱，是所引论文的算子论结果。}

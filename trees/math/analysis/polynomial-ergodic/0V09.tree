@@ -1,0 +1,12 @@
+\title{Hilbert 空间的 van der Corput 降阶判据}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，命题3.2}
+
+\p{设 #{u_n} 属于[Hilbert 空间](00MQ)，#{\sup_n\|u_n\|\le M}。令 #{s_h=\limsup_{N\to\infty}|N^{-1}\sum_{n=1}^N\langle u_{n+h},u_n\rangle|}。若 #{H^{-1}\sum_{h=1}^Hs_h\to 0}，则 #{\|N^{-1}\sum_{n=1}^Nu_n\|\to 0}。}
+\p{\strong{证明。}固定 #{H}，将 #{u_1,\ldots,u_N} 外的序列补零。[有限和 van der Corput 证明](0GO9)中的平方绝对值改为 Hilbert 范数平方，同样由 [Schwarz 不等式](004S)及内积展开得到}
+##{\left\|\sum_{n=1}^Nu_n\right\|^2\le\frac{N+H-1}{H^2}\left(H\sum_n\|u_n\|^2+2\sum_{h=1}^{H-1}(H-h)\operatorname{Re}\sum_n\langle u_{n+h},u_n\rangle\right).}
+\p{除以 #{N^2}，先令 #{N\to\infty}。每个固定 #{h} 的补零端点至多改变 #{hM^2}，归一化后消失，故}
+##{\limsup_{N\to\infty}\left\|\frac 1N\sum_{n=1}^Nu_n\right\|^2\le\frac{M^2}{H}+\frac 2H\sum_{h=1}^{H-1}s_h.}
+\p{再令 #{H\to\infty}，右边趋零。极限顺序保证端点误差始终可控。}

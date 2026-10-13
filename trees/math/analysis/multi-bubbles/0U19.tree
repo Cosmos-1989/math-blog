@@ -1,0 +1,11 @@
+\title{三重交汇的边界二次型如何取迹抵消}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§8.1；有限维迹计算}
+
+\p{设三重交汇上有系数 #{b_{ij},b_{jk},b_{ki}}，满足 #{b_{ij}+b_{jk}+b_{ki}=0}。对 #{a\in E_q=\{a:\sum_\ell a_\ell=0\}} 定义二次型}
+##{B(a)=b_{ij}(a_i-a_j)^2+b_{jk}(a_j-a_k)^2+b_{ki}(a_k-a_i)^2.}
+\p{则 #{\operatorname{tr}_{E_q}B=0}。这里迹是任取正交单位基 #{a^{(\alpha)}} 后求 #{\sum_\alpha B(a^{(\alpha)})}。}
+\p{\strong{证明。}向量 #{e_i-e_j} 已位于 #{E_q}，其长度平方为二。因此正交展开给出 #{\sum_\alpha(a_i^{(\alpha)}-a_j^{(\alpha)})^2=2}。对三对指标求和，得到 #{\operatorname{tr}B=2(b_{ij}+b_{jk}+b_{ki})=0}。}
+\p{在[二次变分](0U0M)中取 #{f_{ij}^a=(a_i-a_j)\phi}，#{\phi} 是三片界面来自同一个环境函数的限制，则曲率边界项的迹是上述恒等式乘以 #{-\phi^2}。报告§8.1的驻定曲率相容性提供系数和为零；若每个界面上 #{\int\phi\,d\mu^{n-1}=0}，则[体积通量](0U0H)也同时为零。这样可以平均消去符号不定的边界项。}

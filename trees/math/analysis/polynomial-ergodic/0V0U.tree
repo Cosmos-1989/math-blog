@@ -1,0 +1,10 @@
+\title{奇数模下二次 Gauss 和的平方根抵消}
+\date{2026-10-14}
+\taxon{Example}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，式(5.7)的二次特例}
+
+\p{令 #{q} 为正奇数，#{\gcd(a,q)=1}，#{G(a/q)=q^{-1}\sum_{r=0}^{q-1}e(ar^2/q)}，其中 #{e(t)=\exp(2\pi it)}，与[主弧分解](0V0T)一致。则 #{|G(a/q)|=q^{-1/2}}。}
+\p{\strong{计算。}令 #{S=qG(a/q)}，在模 #{q} 的双和中令 #{r=s+h}，得到}
+##{|S|^2=\sum_{h\bmod q}e(ah^2/q)\sum_{s\bmod q}e(2ahs/q).}
+\p{内和是有限几何级数；当 #{q\mid 2ah} 时为 #{q}，其余情形为零。#{q} 为奇数且 #{a} 与 #{q} 互素，保证只有 #{h=0\bmod q} 保留，故 #{|S|^2=q}。这里可取任意奇合数模，素数假设并非必需。}

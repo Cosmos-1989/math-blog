@@ -1,0 +1,12 @@
+\title{极值性等价于非线性重现公式}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，定理2.1](icm2026-ortega-cerda)}
+
+\p{设 #{1\leq p<\infty}，#{\varphi} 属于 [Paley–Wiener 空间 #{PW^p}](0W03)，在实轴取实值，且 #{\varphi(0)=1}。置 #{N=\|\varphi\|_p^p}，并定义 #{D_p\varphi=|\varphi|^{p-2}\varphi}；在零点处令其为零，特别地 #{D_1\varphi=\operatorname{sgn}\varphi}。则 #{\varphi} 达到[点取值极小值](0W05)当且仅当}
+##{f(0)=\frac 1N\int_{\mathbb R}f(x)D_p\varphi(x)\,dx\qquad(f\in PW^p).}
+\p{\strong{必要性。}先取实值 #{h\in PW^p} 且 #{h(0)=0}。实函数 #{H(t)=\int|\varphi+th|^p} 在 #{t=0} 取极小值。若 #{p>1}，差商由常数倍的 #{|\varphi|^{p-1}|h|+|h|^p} 支配，此函数由 [Hölder 不等式](0A68)可积，故[支配收敛](0I8I)给出 #{H'(0)=p\int D_p\varphi\,h=0}。}
+\p{若 #{p=1}，差商的绝对值至多为 #{|h|}。非零整函数的零点由 [Taylor 展开](0BAD)孤立，因而实零点集测度为零。在其补集上，差商趋于 #{\operatorname{sgn}(\varphi)h}；同样得到导数为零。}
+\p{对实值 #{f} 取 #{h=f-f(0)\varphi}，再用 #{\int\varphi D_p\varphi=N}，便得重现公式。对复值 #{f}，定义共轭反射 #{f^*(z)=\overline{f(\overline z)}}，并将 #{f} 写成 #{(f+f^*)/2+i(f-f^*)/(2i)}。这两个分量均为实轴上取实值的整函数，属于同一 #{PW^p}；分别应用实值结论即可。}
+\p{\strong{充分性。}若 #{f(0)=1}，Hölder 不等式给出 #{1\leq N^{-1}\|f\|_p\|\varphi\|_p^{p-1}}，即 #{\|f\|_p\geq\|\varphi\|_p}。端点 #{p=1} 使用 #{|\operatorname{sgn}\varphi|\leq 1} 得到同一结论。这一等价性无需预先假设极值函数唯一。}

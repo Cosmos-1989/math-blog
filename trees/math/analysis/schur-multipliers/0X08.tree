@@ -1,0 +1,11 @@
+\title{Gram 符号的完全正 Schur 乘子}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，§2.2.1 在推论2.7后的因子分解背景；充分性的直接证明}
+
+\p{设 #{I} 为有限或可数集，#{(\xi_i)_{i\in I}} 是 Hilbert 空间 #{K} 中的一族向量，#{C=\sup_i\|\xi_i\|<\infty}。取[第二变量线性内积](004M)，令 #{M(i,j)=\langle\xi_i,\xi_j\rangle}。则 [Schur 乘子](0X03)在 #{\mathcal B(\ell^2(I))} 上[完全正](0Z04)，且 #{\|S_M\|_{\mathrm{cb},\infty}=C^2}。}
+\p{\strong{证明。}定义 #{V:\ell^2(I)\to\ell^2(I)\widehat\otimes K} 为 #{Ve_i=e_i\otimes\xi_i}。[张量积](0F4E)的范数公式给出 #{\|V\|=C}。逐个矩阵元计算得到}
+##{S_M(A)=V^*(A\otimes I_K)V.}
+\p{若分块矩阵 #{(A_{ab})} 为[正算子](0Z02)，则 #{(A_{ab})\otimes I_K} 仍正，其以 #{I_r\otimes V} 压缩后也正；这证明所有放大均保持正性。范数上界为 #{C^2}，而 #{S_M(I)} 的对角元为 #{\|\xi_i\|^2}，故范数下界也是 #{C^2}。若各 #{\xi_i} 为单位向量，则此映射保单位元且完全收缩。}
+\p{这是 Gram 分解的充分性证明；一般有界 Schur 乘子的因子分解刻画需要另外的定理。}

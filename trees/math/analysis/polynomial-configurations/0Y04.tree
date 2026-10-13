@@ -1,0 +1,15 @@
+\title{有限循环群的二阶 Gowers 量检测 Fourier 系数}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，引理 4.1 的归一化有限群对应式}
+
+\p{设 #{q\geq 2}，#{G=\mathbb Z/q\mathbb Z}，#{f:G\to\mathbb C}。采用[负号归一化 Fourier 变换](0Y01)与[全群 Gowers 量](0Y03)，有}
+##{\|f\|_{U^2(G)}^4=\sum_{r\in G}|\widehat f(r)|^4.}
+\p{若进一步 #{|f|\leq 1} 且 #{\|f\|_{U^2(G)}\geq\delta>0}，则存在 #{r\in G} 使 #{|\widehat f(r)|\geq\delta^2}。}
+\p{\strong{写成平移相关。}令 #{C(h)=\mathbb E_x f(x)\overline{f(x+h)}}。把定义中的 #{x,k} 改写为独立变量 #{x,z=x+k}，得到}
+##{\|f\|_{U^2(G)}^4=\mathbb E_h\mathbb E_{x,z}\Delta_hf(x)\overline{\Delta_hf(z)}=\mathbb E_h|C(h)|^2.}
+\p{对 #{f(x)} 与 #{f(x+h)} 应用[Fourier 反演](0Y02)，再平均 #{x}，只有相同频率留下，因此 #{C(h)=\sum_r|\widehat f(r)|^2e_q(-rh)}。将其模平方展开，对 #{h} 再用字符正交性，得到 #{\mathbb E_h|C(h)|^2=\sum_r|\widehat f(r)|^4}。}
+\p{\strong{抽取一个频率。}Parseval 等式给出 #{\sum_r|\widehat f(r)|^2=\mathbb E_x|f(x)|^2\leq 1}，故}
+##{\delta^4\leq\sum_r|\widehat f(r)|^4\leq\max_r|\widehat f(r)|^2\sum_r|\widehat f(r)|^2\leq\max_r|\widehat f(r)|^2.}
+\p{开平方得到结论。若假设改写为未开根的 #{\|f\|_{U^2(G)}^4\geq\eta}，相应结论为 #{\max_r|\widehat f(r)|\geq\sqrt\eta}；二者只是参数约定不同。}

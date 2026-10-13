@@ -1,0 +1,11 @@
+\title{重现核给出点取值常数的上下界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{1\leq p<\infty}，#{q} 为共轭指数，#{p=1} 时令 #{q=\infty}。取 [Paley–Wiener 空间](0W03)中的 #{\psi\in PW^p} 且 #{\psi(0)=1}。若 #{F\in L^q(\mathbb R)} 对所有 #{f\in PW^p} 满足 #{f(0)=\int f(x)F(x)\,dx}，则[点取值常数](0W05)满足}
+##{\frac 1{\|\psi\|_p}\leq C_p^{1/p}\leq\|F\|_q.}
+\p{\strong{证明。}将 #{\psi} 代入极值比值给出左侧；右侧对每个 #{f} 应用 [Hölder 不等式](0A68)，再取上确界。}
+\p{特别地，令 #{\psi} 在实轴取实值，#{D=|\psi|^{p-2}\psi /\|\psi\|_p^p}，在零点处置零。若 #{F=D+R} 是这样的重现核，则 #{\|D\|_q=\|\psi\|_p^{-1}}，由 [Minkowski 不等式](0A69)得到}
+##{\frac 1{\|\psi\|_p}\leq C_p^{1/p}\leq\frac 1{\|\psi\|_p}+\|R\|_q.}
+\p{端点 #{p=1} 使用本质上确界的三角不等式。这把试验函数给出的下界与重现误差给出的上界配成一个区间；#{p>1} 时各项估计的是 #{C_p^{1/p}}。}

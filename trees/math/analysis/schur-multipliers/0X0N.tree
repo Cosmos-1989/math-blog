@@ -1,0 +1,11 @@
+\title{球面半空间符号的局部无界性}
+\date{2026-10-14}
+\taxon{Corollary}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，注记1.8及图2；零曲率条件失败的显式计算}
+
+\p{设 #{n\ge 2}，#{X=S^n\subset\mathbb R^{n+1}} 带球面测度，#{\Sigma=\{(x,y):x\cdot y>0\}}。对 #{1<p<\infty,p\ne 2}，[Schur 乘子](0X03) #{S_\Sigma} 在任意边界点附近都不局部 #{S_p} 有界。}
+\p{\strong{证明。}先取 #{x_0=e_1,y_0=e_3}。函数 #{\Phi(x,y)=x\cdot y} 在边界上满足 #{x\perp y}，其两侧球面梯度分别为 #{y,x}，都非零，故为[双侧横截点](0X0L)。固定 #{y_0}，令 #{x_t=\cos t\,e_1+\sin t\,e_2}。所有 #{(x_t,y_0)} 都在边界上，且}
+##{T_{y_0}\partial\Sigma_{x_t}=\{v\in\mathbb R^{n+1}:v\cdot e_3=0,\ v\cdot x_t=0\}.}
+\p{#{e_2} 属于 #{t=0} 的切空间，但当 #{0<|t|<\pi /2} 时不属于 #{t} 的切空间。任意小邻域中都有这样的 #{t}，因此[局部几何分类](0X0M)的零曲率条件失败。正交坐标变换可以把任意正交单位向量对化到此模型，故每个边界点都有同样障碍。}
+\p{由于边界为零测集，符号 #{-i\operatorname{sgn}(x\cdot y)} 对应的球面 Hilbert 变换与 #{2S_\Sigma -I} 只差常数因子，所以也无界。#{p=2} 时[符号上确界公式](0X05)仍给出范数一；几何计算没有排除这一例外。此推论的解析输入是局部几何分类定理。}

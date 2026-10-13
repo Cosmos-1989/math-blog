@@ -1,0 +1,13 @@
+\title{Gaussian 二阶变分如何产生迹不等式}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§8.6}
+
+\p{设 #{\Omega} 为 [Gaussian 空间](0U04)中的平坦全局最小簇，所有胞腔质量正，界面图连通且各界面面积有限。令 [#{L}](0U0S) 的边权为 Gaussian 界面面积，设[等周轮廓](0U0Q)在其体积向量处 #{C^2}，记 #{H=\nabla^2I|_{E_q}}。进一步假定分片常场 #{f^a_{ij}=a_i-a_j} 可由光滑流法向速度逼近，且体积通量与指标型随之收敛。则}
+##{LHL\preceq -L,\qquad\operatorname{tr}_{E_q}((-H)^{-1})\le 2I.}
+\p{\strong{指标型。}界面平坦使 #{B=0} 及边界曲率项为零；Gaussian Jacobi 算子的零阶项为 #{1}。[二次变分公式](0U0M)因此给出}
+##{\delta_{f^a}V=La,\qquad Q^0(f^a)=-\sum_{i<j}w_{ij}(a_i-a_j)^2=-a^{\mathsf T}La.}
+\p{由逼近假设，可将[轮廓 Hessian 比较](0U0R)传到 #{f^a}。对所有 #{a\in E_q} 应用，得到 #{LHL\preceq -L}。因 #{L} 正定，左右乘 #{L^{-1}} 得 #{-H\succeq L^{-1}>0}。}
+\p{\strong{求逆与取迹。}正定次序在求逆后反向：若 #{A\succeq B>0}，则 #{B^{-1/2}AB^{-1/2}\succeq\mathrm{Id}}，由[正交对角化](0N0B)取逆得 #{A^{-1}\preceq B^{-1}}。因此 #{(-H)^{-1}\preceq L}，取迹并用[界面矩阵迹公式](0U0S)得到 #{\operatorname{tr}((-H)^{-1})\le 2\sum_{i<j}w_{ij}=2I}。}
+\p{此处光滑场逼近是报告所用几何分析输入；一般轮廓的黏性不等式还需处理不可微体积点。上面的矩阵推导适用于所列光滑假设。}

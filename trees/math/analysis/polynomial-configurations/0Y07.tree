@@ -1,0 +1,16 @@
+\title{三项多项式配置的双频 Fourier 展开}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§2 关于两项方法的限制；三项配置的直接 Fourier 计算}
+
+\p{设 #{P,Q} 属于[整数多项式环](0ALH) #{\mathbb Z[y]}，#{M\geq 1} 为整数，#{f_0,f_1,f_2:\mathbb Z\to\mathbb C} 有限支撑。记 #{e(t)=\exp(2\pi it)}，采用[两项展开](0Y06)中的负号约定 #{\widehat f_j(\xi)=\sum_xf_j(x)e(-x\xi)}，即[正号整数变换](0V0K)的频率取反。定义}
+##{K_{P,Q;M}(\xi,\eta)=\frac 1M\sum_{y=1}^M e\bigl(\xi P(y)+\eta Q(y)\bigr).}
+\p{则三项平均满足}
+##{\begin{aligned}
+&\sum_{x\in\mathbb Z}\frac 1M\sum_{y=1}^M f_0(x)f_1(x+P(y))f_2(x+Q(y))\\
+&\quad=\int_0^1\int_0^1\widehat f_0(-\xi -\eta)\widehat f_1(\xi)\widehat f_2(\eta)K_{P,Q;M}(\xi,\eta)\,d\xi\,d\eta.
+\end{aligned}}
+\p{\strong{证明。}分别对 #{f_1(x+P(y))}、#{f_2(x+Q(y))} 应用[整数反演公式](0V0L)，将其写为 #{\int_0^1\widehat f_1(\xi)e(\xi x+\xi P(y))\,d\xi} 和 #{\int_0^1\widehat f_2(\eta)e(\eta x+\eta Q(y))\,d\eta}。乘以 #{f_0(x)} 后，求和 #{x} 得到 #{\widehat f_0(-\xi -\eta)}；平均 #{y} 得到 #{K_{P,Q;M}}，即为结论。有限和与连续指数函数的积分可以逐项交换。}
+\p{对非线性 Roth 配置 #{P(y)=y,Q(y)=y^2}，核变成 #{M^{-1}\sum_{y=1}^M e(\xi y+\eta y^2)}。线性系数与二次系数分别由 #{\xi,\eta} 控制：将它们统一写成 #{\theta R(y)}，其中 #{R} 固定、#{\theta} 为一个线性频率参数，无法覆盖独立变化的两个系数。与此同时，权函数 #{\widehat f_0(-\xi -\eta)} 又将这两个频率耦合。}
+\p{因此三项配置仍有精确的 Fourier 表示；两项情形中“一个频率、两个系数、一个标量指数和”的配对估计却不能原样使用。报告转而以[配置对偶平均](0GOD)和[降阶估计](0GOE)利用非线性关系，再抽取适合密度增量的频率信息。}

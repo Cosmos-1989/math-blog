@@ -1,0 +1,17 @@
+\title{二次相位阻止一般函数的 Gowers 降阶}
+\date{2026-10-14}
+\taxon{Example}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§4 降阶的适用边界；复用[奇数模 Gauss 和](0V0U)的有限域例子}
+
+\p{设 #{p} 为奇素数，#{G=\mathbb F_p=\mathbb Z/p\mathbb Z} 为[素数阶有限域](00GF)，#{a\in\mathbb F_p\setminus\{0\}}，令 #{f(x)=e_p(ax^2)}，其中 #{e_p(t)=\exp(2\pi it/p)}。对[归一化 Gowers 量](0Y03)和[负号 Fourier 系数](0Y01)，有}
+##{\|f\|_{U^3(G)}=1,\qquad \|f\|_{U^2(G)}=p^{-1/4},\qquad |\widehat f(r)|=p^{-1/2}\quad(r\in G).}
+\p{\strong{差分计算。}所有指数均按模 #{p} 计算。依照 #{\Delta_hf(x)=f(x)\overline{f(x+h)}}，}
+##{\Delta_hf(x)=e_p(-2ahx-ah^2),\qquad \Delta_k\Delta_hf(x)=e_p(2ahk),\qquad \Delta_l\Delta_k\Delta_hf(x)=1.}
+\p{因此三阶量的八次方等于一。二阶量的四次方是 #{\mathbb E_{h,k}e_p(2ahk)}。因 #{2a\ne 0}，当 #{h\ne 0} 时，对 #{k} 的平均由[字符正交性](0Y02)等于零；#{h=0} 时等于一。恰有 #{1/p} 的平移参数保留，故 #{\|f\|_{U^2(G)}^4=1/p}。}
+\p{\strong{配方计算 Fourier 系数。}#{2a} 与 #{4a} 在域中均可逆。对每个 #{r\in G}，}
+##{ax^2-rx=a\bigl(x-(2a)^{-1}r\bigr)^2-(4a)^{-1}r^2.}
+\p{平移 #{x} 不改变全群平均，因而}
+##{\widehat f(r)=e_p\bigl(-(4a)^{-1}r^2\bigr)\mathbb E_{u\in G}e_p(au^2).}
+\p{调用[奇数模二次 Gauss 和的模长公式](0V0U)，取模数 #{q=p}，得到 #{|\widehat f(r)|=p^{-1/2}}。这些系数也与[二阶四次和恒等式](0Y04)吻合：#{p\cdot(p^{-1/2})^4=p^{-1}}。}
+\p{令 #{p} 沿奇素数趋于无穷，三阶量始终为一，二阶量与所有线性相位相关却趋于零。因此对所有有限[循环群](00GG)上的一般有界函数，不存在与群大小无关的正常数 #{c,C} 使 #{\|f\|_{U^2}\geq c\|f\|_{U^3}^C}。报告的[降阶定理](0GOE)利用特定[配置对偶平均](0GOD)内部的多项式关系；这份额外结构不能从“大三阶量”本身获得。}

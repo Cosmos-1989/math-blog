@@ -1,0 +1,11 @@
+\title{加权散度与 Laplace 算子}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§§7–8；微分算子约定补充}
+
+\p{设 #{(M,g)} 带 [Levi-Civita 联络](00NZ)，#{W} 光滑，#{d\mu=e^{-W}d\operatorname{vol}_g}。函数 #{u} 的梯度由 #{g(\nabla u,X)=du(X)} 定义；向量场的散度为 #{\operatorname{div}X=\sum_a g(\nabla_{e_a}X,e_a)}，其中 #{e_a} 为正交单位标架。加权散度和 Laplace 算子为}
+##{\operatorname{div}_\mu X=e^W\operatorname{div}(e^{-W}X)=\operatorname{div}X-\langle\nabla W,X\rangle,\qquad\Delta_\mu u=\operatorname{div}_\mu(\nabla u).}
+\p{局部坐标中 #{\operatorname{div}X=(\det g)^{-1/2}\partial_a((\det g)^{1/2}X^a)}。因此在光滑区域 #{D} 上，[Stokes 公式](0BAC)给出}
+##{\int_D\operatorname{div}_\mu X\,d\mu=\int_{\partial D}\langle X,\nu\rangle\,d\mu^{n-1}.}
+\p{#{\nu} 为外单位法向，面积采用[相同密度](0U04)。取 #{X=u\nabla v} 就得到分部积分。Hessian 为二次协变导数 #{\nabla^2u(X,Y)=g(\nabla_X\nabla u,Y)}，其迹为 #{\Delta u}；诱导度量下的子流形版本加下标 #{\Sigma}。Euclidean 空间上这些分别是普通梯度、偏导数散度和 #{\sum_a\partial_a^2u}；Gaussian 空间上 #{\Delta_\gamma u=\Delta u-x\cdot\nabla u}。}

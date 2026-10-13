@@ -1,0 +1,12 @@
+\title{极值零点序列的正弦分布刻画}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，引理5.2](icm2026-ortega-cerda)；Bondarenko 等，v2，引理2.3}
+
+\p{设 #{t=(t_n)} 为[允许序列](0W0L)，#{C=C_1}，#{\tau} 为 [Hörmander–Bernhardsson 函数](0W0H)的正零点序列。则 #{t=\tau} 当且仅当}
+##{\sum_{n=1}^\infty(-1)^n\sin(t_n\xi)=-\frac{\xi}{4C}\qquad(-\pi<\xi<\pi)}
+\p{在[分布意义](0W0Z)下成立。具体地，对每个支撑紧含于 #{(-\pi,\pi)} 的光滑测试函数 #{\eta}，积分配对的级数等于 #{-(4C)^{-1}\int\xi\eta(\xi)\,d\xi}。逐项配对绝对收敛，因为分部积分给出任意次的 #{t_n^{-1}} 衰减。}
+\p{该等价定理引用所列文献。其入口是 #{p=1} 的[重现公式](0W09)：对真正零点列，将符号相同的区间分别积分，得到}
+##{\frac{f(0)}C=\int_{-\tau_1}^{\tau_1}f(x)\,dx+\sum_{n=1}^\infty(-1)^n\int_{\tau_n}^{\tau_{n+1}}(f(x)+f(-x))\,dx.}
+\p{右侧对 #{f\in PW^1} 绝对收敛。Fourier 变换把区间积分化为正弦除以频率；从除以 #{\xi} 的恒等式返回正弦恒等式时，允许序列的 #{\ell^2} 条件排除了原点处的额外分布项。这一步保留在引用定理之内。}

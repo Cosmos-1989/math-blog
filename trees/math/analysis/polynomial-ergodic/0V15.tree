@@ -1,0 +1,10 @@
+\title{多线性示性函数平均检测共同复归}
+\date{2026-10-14}
+\taxon{Example}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§6 对复归与多项式配置的说明}
+
+\p{设 #{T} 是[概率空间](00Q3)的[保测自同构](00RS)，#{E} 可测，#{P_1,\ldots,P_m\in\mathbb Z[n]} 且 #{P_j(0)=0}。令 #{1_E} 为示性函数，则[多线性平均](0V0Y)与额外的起点条件相乘后，积分恰好等于}
+##{\int_X1_E(x)\frac 1N\sum_{n=1}^N\prod_{j=1}^m1_E(T^{P_j(n)}x)\,d\mu(x)=\frac 1N\sum_{n=1}^N\mu\left(E\cap\bigcap_{j=1}^mT^{-P_j(n)}E\right).}
+\p{\strong{计算。}每个乘积在且仅在 #{x\in E} 且全部 #{T^{P_j(n)}x\in E} 时为一，因而它就是显示交集的示性函数。对有限个 #{n} 交换积分与求和即得恒等式。右侧若为正，至少一个正整数 #{n} 给出正测度的共同复归集。}
+\p{这一形式解释了多线性平均与[多项式 Szemerédi 定理](0GO2)中 #{x,x+P_1(n),\ldots,x+P_m(n)} 构型的关系。收敛性控制平均的长期稳定性；要推出共同复归，还须证明极限或[下极限](0F61)的正性。}

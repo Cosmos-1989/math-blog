@@ -1,0 +1,15 @@
+\title{von Neumann 平均遍历定理的正交分解证明}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§2.1；一般不变子空间形式}
+
+\p{设 #{U} 是[Hilbert 空间](00MQ) #{H} 上的线性等距算子，即 #{\|Uh\|=\|h\|}，不要求满射。记 #{F=\ker(I-U)}，#{P_F} 为到这个[闭子空间](00MR)的[正交投影](00MS)。则对每个 #{h\in H}，}
+##{\frac 1N\sum_{n=1}^NU^nh\longrightarrow P_Fh\quad\text{按范数},\qquad H=F\oplus\overline{(I-U)H}.}
+\p{\strong{正交分解。}由[伴随算子](00MU)的定义，#{((I-U)H)^\perp=\ker(I-U^*)}。等距性给出 #{U^*U=I}，故 #{Uh=h} 蕴含 #{U^*h=h}。反过来，若 #{U^*h=h}，则}
+##{\|Uh-h\|^2=\|Uh\|^2+\|h\|^2-2\operatorname{Re}\langle Uh,h\rangle=0.}
+\p{因此两个核相同，正交投影定理给出显示的分解；上横线表示范数闭包。}
+\p{\strong{平均的极限。}记 #{B_N=N^{-1}\sum_{n=1}^NU^n}。三角不等式给出 #{\|B_N\|\le 1}；在 #{F} 上 #{B_N=I}。若 #{h=(I-U)g}，相邻项抵消后}
+##{B_Nh=\frac{Ug-U^{N+1}g}{N},\qquad \|B_Nh\|\le\frac{2\|g\|}{N}.}
+\p{对 #{h\in\overline{(I-U)H}}，任取 #{\varepsilon>0}，选择 #{g} 使 #{\|h-(I-U)g\|<\varepsilon}。于是 #{\limsup_N\|B_Nh\|\le\varepsilon}。令 #{\varepsilon\downarrow 0}，再按正交分解相加，即得定理。平均从 #{n=0} 开始时，首尾差的范数至多 #{2\|h\|/N}，极限相同。}
+\p{若 #{T} 是测度空间上的[保测映射](00RR)，则 #{Uf=f\circ T} 在 [#{L^2}](0A6A) 上等距；这就是 [Koopman 算子](00RZ)在非可逆情形的延伸。因此普通遍历平均的 #{L^2} 极限是投影到 #{\{f:f\circ T=f\}}，其维数由系统决定。}

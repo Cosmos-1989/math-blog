@@ -1,0 +1,13 @@
+\title{高维球极投影为何保持球面与交角}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§3；高维公式补充}
+
+\p{设 #{p=(y,z)\in\mathbb S^n\subseteq\mathbb R^n\times\mathbb R}，#{N=(0,1)}。二维[球极投影](00FI)的高维公式为 #{P(p)=y/(1-z)}，其逆为}
+##{F(x)=\left(\frac{2x}{1+|x|^2},\frac{|x|^2-1}{1+|x|^2}\right).}
+\p{它满足 #{F^*g_{\mathbb S^n}=4(1+|x|^2)^{-2}g_{\mathbb R^n}}，故保持交角；球面的测地球面经投影成为 Euclidean 球面或超平面。}
+\p{\strong{度量计算。}记 #{D=1+|x|^2}，对向量 #{h} 有}
+##{dF_x(h)=\left(\frac{2h}{D}-\frac{4x\langle x,h\rangle}{D^2},\frac{4\langle x,h\rangle}{D^2}\right).}
+\p{两个分量的平方相加后，含 #{\langle x,h\rangle^2} 的项相消，得到 #{|dF_x(h)|^2=4|h|^2/D^2}。对 #{h+\ell} 展开即得相应双线性内积公式。}
+\p{\strong{球面计算。}球面中的测地球面由 #{a\cdot y+bz=c} 截出。代入 #{F} 得 #{(b-c)|x|^2+2a\cdot x-(b+c)=0}。#{b=c} 时为超平面方程；#{b\ne c} 时配方得到球面方程。投影极点落在被截球面上恰对应 #{b=c}。}

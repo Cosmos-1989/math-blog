@@ -1,0 +1,14 @@
+\title{Higson 缓变性等价于对角算子的紧交换差}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，§4.1 式(4.1)的离散群计算}
+
+\p{设 #{f\in\ell^\infty\Gamma}，#{D_f\delta_x=f(x)\delta_x}，#{\rho} 为[右正则表示](0Z05)。则 #{D_f} 是[紧算子](0I09)当且仅当 #{f\in c_0(\Gamma)}，其中 [#{c_0}](0Z0J) 表示无穷远消失函数；并且}
+##{f\in S(\Gamma)\quad\Longleftrightarrow\quad
+[D_f,\rho_t]\in K(\ell^2\Gamma)\quad(t\in\Gamma),}
+\p{其中 #{[S,T]=ST-TS}，#{S(\Gamma)} 为 [Higson 代数](0Z0N)。}
+\p{\strong{证明。}若 #{f\in c_0}，对有限集 #{F} 截断得到有限秩算子 #{D_{f1_F}}，且 #{\|D_f-D_{f1_F}\|=\sup_{x\notin F}|f(x)|\to 0}。范数极限保持紧性：给定误差，先用近似算子的单位球像的有限网，再加上范数误差即可。反之，若 #{|f(x_n)|\geq\varepsilon>0} 在互异点上成立，则 #{D_f\delta_{x_n}} 两两正交且距离至少 #{\sqrt 2\varepsilon}，不能有收敛子列，与紧性矛盾。}
+\p{直接在函数上计算得}
+##{[D_f,\rho_t]=D_{f-R_tf}\rho_t.}
+\p{酉算子右乘保持紧性，故交换差紧等价于 #{f-R_tf\in c_0}。对所有 #{t} 应用这一等价即得结论。}

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-14",
+  "scope": "Integration of the requested Javier Parcet, Sarah Peluse and Jesse Peterson reports. Peluse reuses the existing number-theory overview and reference, with an additional Analysis entry. The nine registered reports are a selected and cross-listed collection, not a complete Analysis-section roster.",
+  "manifest": "research/icm2026-analysis.json",
+  "sourceRecords": [
+    "research/icm2026-analysis-parcet.json",
+    "research/icm2026-analysis-peluse.json",
+    "research/icm2026-analysis-peterson.json"
+  ],
+  "result": "pass",
+  "counts": {
+    "requestedReports": 3,
+    "newAtomicNotes": 105,
+    "newTopicOverviews": 2,
+    "newReferenceNotes": 2,
+    "newPages": 109,
+    "reusedOverviewAndReferencePages": 2,
+    "pagesWithLocalProofsExamplesOrDeductions": 34,
+    "localDeductionsWithExternalInputs": 9,
+    "citedResearchResultsWithoutLocalProof": 19,
+    "totalSitePages": 4254,
+    "checkedRenderedFormulas": 49941,
+    "checkedDiagramResources": 46,
+    "staticInternalLinks": 651849,
+    "staticAnchors": 4272,
+    "staticResourceReferences": 30400,
+    "browserSamplePages": 105,
+    "desktopAndMobileChecks": 210
+  },
+  "mathematicalReview": {
+    "scope": "The coordinator read all 105 new atomic notes, the three overviews and report records. Parcet and Peterson were checked against their formal report bodies; Peluse was checked against selected passages and the previously imported notes. The Peluse worker independently reviewed the early Parcet foundations. These reviews do not constitute independent verification of every cited research proof.",
+    "sourceScope": "Formal Proceedings sources are recorded in the reference pages. Peluse is in Volume 3 and is cross-listed here. Selected Das-Peterson 2022 passages support the hyperstate and Poisson-boundary definitions; no full reading of that supplementary article is claimed.",
+    "corrections": [
+      "Reused the existing Peluse overview 0GO0 and reference rather than creating a duplicate overview at 0Y00. Number-theory narrative ownership and existing topic links were retained.",
+      "Separated finite-cyclic Fourier normalization from the integer and Euclidean conventions. Checked conjugations, powers in Gowers identities and the signs in the one- and two-frequency expansions.",
+      "Kept the two-frequency polynomial identity separate from the estimates needed for quantitative density bounds. Retained degree-versus-coefficient dependence in Peluse's local inverse theorem.",
+      "Defined normality for arbitrary Schur maps by ultraweak continuity. Retained the second-variable-linear inner-product convention in kernels, Gram symbols and group traces.",
+      "Separated discrete group traces from the locally compact Plancherel-trace construction. Retained the positive-dimension hypothesis in local Lie-group estimates and strict high-rank exponent thresholds.",
+      "Kept C0 in the SL3 decay statement, and kept critical-exponent claims as conjectures. Deferred the global HM branch where the source's zeroth-order decay prose needs reconciliation with the constant symbol.",
+      "Restricted the no-expectation proper-proximality definition to finite factors, and did not treat the relative closure of compact operators as a C*-algebra.",
+      "Retained normal, regular, symmetric and generating hyperstate assumptions where needed. Specified the right-random-walk convention and the regular crossed-product representation.",
+      "Added explicit body links for the new foundational dependencies and reconciled the prerequisite records after the shared operator-algebra pages were written."
+    ],
+    "intentionalLinkTargets": [
+      {
+        "page": "0Z0I",
+        "label": "序列空间",
+        "target": "00MN",
+        "reason": "The context is l1, so the general lp-space definition is the appropriate prerequisite, rather than the scanner's other sequence-space topic."
+      },
+      {
+        "page": "0Z1H",
+        "label": "群代数",
+        "target": "0Z06",
+        "reason": "The context explicitly uses the von Neumann group algebra L(Gamma), not the algebraic group ring."
+      }
+    ],
+    "preservation": "Compared with the pre-turn baseline, none of the 4145 existing review entries was removed and none of the 3784 existing prerequisite records changed. The new review count is 109. Existing Peluse atomic pages and its reference were preserved; the overview was expanded deliberately. Previous uncommitted report imports and unrelated files remain untouched."
+  },
+  "checks": [
+    "check-analysis-notes.mjs: nine records, 382 registered pages, current hashes, new/reused partitions, 153 local-proof pages, 51 external-input deductions and 80 cited-result pages passed. These aggregate counts include earlier batches.",
+    "check-site-notes.mjs --source-only and --katex: all 4254 pages reachable; links, prerequisite graph, 49941 formulas and 46 diagram resources passed without errors or warnings.",
+    "check-note-prerequisites.mjs: 597 rules and 3039 required links passed. No new 0X/0Y/0Z unlinked-term candidate remains; the two intentional target choices are recorded above.",
+    "check-note-editorial.mjs --strict-format: no errors or format findings. The single remaining site-wide prose candidate is the pre-existing 0BGJ page.",
+    "check-topic-introductions.mjs and check-topic-narratives.mjs: 72 topic overviews and 93 introduction snapshots passed.",
+    "test-note-prerequisites.mjs, test-note-editorial.mjs and test-subject-navigation.mjs passed.",
+    "check-icm-section-coverage.mjs, check-subject-navigation.mjs and the logic, algebra, number-theory, geometry, Bourbaki and Riehl checks passed.",
+    "analysis-math.test.mjs: existing examples and new Gram-Schur conjugation, transposition-not-completely-positive, harmonic-product, quadratic-phase Gowers and exact polynomial Fourier examples passed.",
+    "build-site.mjs: final static HTML build passed for 4254 pages, 651849 internal links, 4272 anchors and 30400 resource references; unchanged theme and search assets passed.",
+    "check-site-domain.mjs: opetope.cc page URIs, root paths and search index passed.",
+    "analysis-render.test.mjs: final build, 105 sampled pages at 1440px and 390px, 210 checks; no formula errors, document overflow, page errors or failed resources. Subject links and legacy XML URLs with query and fragment passed for all nine registered reports.",
+    "check-reading-ui.mjs: final desktop, mobile and narrow-mobile regression passed.",
+    "static-html-browser.test.mjs: final navigation, search, legacy XML and /math-blog/ routes, JavaScript-disabled reading and XSLT-disabled operation passed.",
+    "git diff --check passed."
+  ],
+  "browserEvidence": {
+    "base": "http://127.0.0.1:8083/",
+    "status": "pass",
+    "finalScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/analysis-render-7PJAaf",
+    "readingScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/forester-reading-oBwFGS",
+    "visualReview": "Viewed the Parcet desktop overview, the mobile two-frequency Fourier page 0Y07 and the mobile hyperstate page 0Z17. The established typography, theorem colors and reading layout are preserved. Long displays stay within the formula region rather than expanding the document.",
+    "maximumDocumentOverflowPixels": 0
+  },
+  "publication": {
+    "localBuild": "build/site",
+    "serverPort": 8083,
+    "committed": false,
+    "pushed": false
+  },
+  "limitations": [
+    "The report records distinguish local proofs, deductions using external theorems, cited research results and conjectures. The cited deep proofs and deferred branches have not all been reproduced locally.",
+    "Automated graph, formula and finite-example tests do not establish the mathematical correctness or complete prerequisite closure of every research result.",
+    "This request did not ask for a commit, push or public deployment. The previous validation record was preserved separately."
+  ]
+}

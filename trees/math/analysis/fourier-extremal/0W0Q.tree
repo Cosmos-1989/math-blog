@@ -1,0 +1,14 @@
+\title{二阶方程如何逐项确定极值函数的 Taylor 系数}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，§5.1](icm2026-ortega-cerda)}
+
+\p{固定 #{C=C_1>0} 与 #{L=\Phi'(0)}，设整函数 #{F(z)=\sum_{m\geq 0}b_mz^m} 满足[交错乘积的二阶方程](0W0P)。令 #{b_{-1}=b_{-2}=0}。则}
+##{(m+1)b_{m+1}=\bigl(L+2Cm(m+1)\bigr)b_m+\frac{\pi^2C}2b_{m-2}\qquad(m\geq 0).}
+\p{\strong{证明。}由 [Cauchy 公式的 Taylor 展开](0BAD)可逐项微分。二阶方程中 #{z^m} 的系数依次为 #{m(m-1)b_m}、#{2mb_m-(m+1)b_{m+1}/(2C)}、#{\pi^2b_{m-2}/4+Lb_m/(2C)}。相加为零并乘以 #{2C} 即得。每一步的分母 #{m+1} 非零，所以 #{b_0} 唯一决定全部系数。}
+\p{取 #{b_0=1}，前三项为}
+##{b_1=L,\qquad b_2=\frac{L^2}2+2CL,\qquad b_3=\frac{L^3}6+\frac 83CL^2+8C^2L+\frac{\pi^2C}6.}
+\p{由[因子分解](0W0M) #{\varphi_1(z)=\Phi(z)\Phi(-z)}，二次项为 #{2b_2-b_1^2=4CL}。继续递推一次并相乘得到}
+##{\varphi_1(z)=1+4CLz^2+\left(96LC^3+(24L^2+2\pi^2)C^2\right)z^4+O(z^6).}
+\p{递推说明解析解一旦存在便由原点值唯一确定；对任取的参数，形式递推本身不保证所得级数收敛。这里解析解的存在来自 #{\Phi} 的乘积构造及微分方程定理。}

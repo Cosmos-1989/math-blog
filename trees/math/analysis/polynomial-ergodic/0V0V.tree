@@ -1,0 +1,9 @@
+\title{几何尺度上的可求和误差控制变差}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§5.2–5.3 的误差求和机制}
+
+\p{设 #{1\le p<\infty}、#{1\le r<\infty}，函数列 #{E_jf} 满足 #{\|E_jf\|_p\le b_j\|f\|_p}，其中 #{b_j\ge 0} 且 #{\sum_jb_j<\infty}。则其[变差](0V0D)满足}
+##{\|V^r(E_jf:j\ge 0)\|_p\le 2\sum_{j\ge 0}b_j\|f\|_p.}
+\p{\strong{证明。}对任意有限递增选点，三角不等式给出增量的 #{\ell^r} 范数至多增量绝对值之和，而后者至多 #{2\sum_j|E_jf|}。取上确界，用 [Minkowski](0A69)和[单调收敛](0A7A)积分即可。若 #{N_j=\lfloor\tau^j\rfloor}、#{\tau>1}、#{\|E_{N_j}\|\le KN_j^{-c}}、#{c>0}，删去重复的初始指标后 #{\sum_jN_j^{-c}<\infty}。这使次弧误差和主弧逼近误差都可从变差问题中分离。}

@@ -1,0 +1,13 @@
+\title{互异次数多项式配置的一般局部逆定理}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，定理 2.3、式 (2.6)；报告文献 [30]}
+
+\p{固定 #{m\geq 1} 和[整数多项式环](0ALH) #{\mathbb Z[y]} 中的非常数多项式族 #{\mathbf P=(P_1,\ldots,P_m)}，满足 #{1\leq\deg P_1<\cdots<\deg P_m=d}。存在只依赖 #{d} 的指数 #{C_d\geq 1}，以及允许依赖整族多项式系数的常数 #{c_{\mathbf P}>0,C_{\mathbf P}\geq 1}，使下述结论成立。取整数 #{N\geq 1}、#{0<\delta\leq 1}，记 #{[N]=\{1,\ldots,N\}}、#{M=\lfloor N^{1/d}\rfloor}；设 #{f_0,\ldots,f_m:\mathbb Z\to\mathbb C} 支撑于 #{[N]}，且 #{|f_i|\leq 1}。若}
+##{\left|\sum_{x\in\mathbb Z}\sum_{y=1}^M f_0(x)\prod_{i=1}^m f_i(x+P_i(y))\right|\geq\delta NM,\qquad N\geq C_{\mathbf P}\delta^{-C_d},}
+\p{则存在正整数 #{q,N'}，满足}
+##{q\leq C_{\mathbf P}\delta^{-C_d},\qquad N'\geq c_{\mathbf P}\delta^{C_d}M,\qquad \sum_{x\in\mathbb Z}\left|\sum_{j=1}^{N'}f_1(x+qj)\right|\geq c_{\mathbf P}\delta^{C_d}NN'.}
+\p{这是报告定理 2.3 的引用陈述，证明见 Peluse，Bounds for sets with no polynomial progressions，Forum Math. Pi 8 (2020)，e16，报告文献 [30]。报告以渐近记号分别给出各处常数；增大 #{C_d,C_{\mathbf P}}、减小 #{c_{\mathbf P}} 后可统一为上述形式。结论检测最低次数位置上的 #{f_1}；此处没有要求 #{P_i(0)=0}，该条件用于[避配置集合的密度定理](0GO3)时须另行检查。}
+\p{左边的大配置平均迫使 #{f_1} 在许多步长相同的等差段上有显著局部和，而步长仅随 #{\delta^{-1}} 多项式增长。一般 #{\deg P_1} 可以大于一，故这里“最低次数位置”不必是“线性位置”。从局部和到集合密度增益，还须像[局部平均引理](0HW0)那样检查平衡性与区间边界。}
+\p{[非线性 Roth 局部逆定理](0GO7)给出 #{P_1(y)=y,P_2(y)=q_0y^2} 时更适合迭代的系数记录：取样长度为 #{\lfloor\sqrt{N/q_0}\rfloor}，步长形如 #{q_0q'}，并明确控制 #{q_0} 的影响。上述一般陈述使用 #{\lfloor\sqrt N\rfloor}，隐含的 #{C_{\mathbf P},c_{\mathbf P}} 可以依赖 #{q_0}，因此不能直接从中读出对不断变化的 #{q_0} 的统一界。}

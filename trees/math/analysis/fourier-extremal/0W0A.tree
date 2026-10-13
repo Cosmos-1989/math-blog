@@ -1,0 +1,13 @@
+\title{重现公式排除非实零点与重零点}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，命题2.2](icm2026-ortega-cerda)}
+
+\p{设 #{1\leq p<\infty}，#{\varphi\in PW^p} 是 #{\varphi(0)=1} 的[极值函数](0W05)。则 #{\varphi} 的所有零点都在实轴上，并且[重数](0ALW)为一。}
+\p{\strong{非实零点。}由[实值性](0W08)，若 #{a\notin\mathbb R} 为零点，则 #{\overline a} 也是零点。于是}
+##{h(z)=\frac{z^2\varphi(z)}{(z-a)(z-\overline a)}}
+\p{的奇点可去。它在无穷远处只相差一个有界有理因子，故保留指数型；在实轴上该因子有界，故 #{h\in PW^p}，且 #{h(0)=0}。[重现公式](0W09)于是给出}
+##{0=\int_{\mathbb R}\frac{x^2|\varphi(x)|^p}{|x-a|^2}\,dx.}
+\p{被积函数非负，而且在零点与原点之外为正，矛盾。}
+\p{\strong{实重零点。}若实数 #{a} 的重数 #{m\geq 2}，则 #{a\ne 0}，并可取 #{h(z)=z^2\varphi(z)/(z-a)^2}。它仍为整函数且属于 #{PW^p}；在 #{a} 附近已消去奇点，在无穷远处有理因子有界。重现公式给出 #{0=\int x^2|\varphi(x)|^p/(x-a)^2\,dx}。此积分局部可积，因为 #{mp-2\geq 0}，并且同样严格为正，矛盾。}

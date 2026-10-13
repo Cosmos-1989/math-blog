@@ -1,0 +1,9 @@
+\title{sinc 函数来自平坦频谱}
+\date{2026-10-14}
+\taxon{Example}
+\author{author}
+
+\p{设 #{\sigma>0}，对频率区间的示性函数 #{1_{[-\sigma,\sigma]}} 使用[带限积分表示](0W04)，得到}
+##{K_\sigma(z)=\frac 1{2\pi}\int_{-\sigma}^{\sigma}e^{iz\xi}\,d\xi=\frac{\sin(\sigma z)}{\pi z},\qquad K_\sigma(0)=\frac\sigma\pi.}
+\p{零点处的值由极限定义，积分表示表明 #{K_\sigma} 为整函数。由 [Plancherel 定理](0W01)，#{\|K_\sigma\|_2^2=\sigma /\pi}。特别地，记 #{K(z)=K_\pi(z)=\sin(\pi z)/(\pi z)}，则 #{K(0)=\|K\|_2=1}。}
+\p{在实轴无穷远处 #{|K(x)|\leq 1/(\pi|x|)}，因此 #{K\in PW^p} 当 #{p>1}。它不属于 #{PW^1}：每个单位区间内都有长度固定的子区间满足 #{|\sin\pi x|\geq 1/2}，其绝对积分下界之和包含发散的调和级数。}

@@ -1,0 +1,12 @@
+\title{Toeplitz 符号与圆周共轭计算}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，定理1.1 的整数情形；一侧传递的直接证明}
+
+\p{设 #{m:\mathbb Z\to\mathbb C}，令 #{M(j,k)=m(j-k)}。这种仅依赖指标之差的 [Schur 符号](0X03)称 Toeplitz 符号。对 #{1\le p<\infty}，若[圆周 Fourier 乘子](0X09) #{T_m} 完全有界，则}
+##{\|S_M:S_p(\mathbb Z)\to S_p(\mathbb Z)\|_{\mathrm{cb},p}\le\|T_m\|_{\mathrm{cb},p}.}
+\p{\strong{证明。}先令 #{A=(A_{jk})} 仅在有限集合 #{F\times F} 上非零，定义对角酉矩阵 #{U_t e_j=e_j(t)e_j}。矩阵值函数 #{\pi(A)(t)=U_tAU_t^*} 的 #{(j,k)} 元为 #{e_{j-k}(t)A_{jk}}，所以}
+##{(T_m\otimes\mathrm{id})(\pi(A))=\pi(S_M A).}
+\p{由[Schatten 酉不变性](0X06)，#{\|\pi(A)\|_{L^p(S_p)}=\|A\|_p}；结合上式得到所求不等式。让 #{A_{jk}} 为任意 #{r\times r} 分块矩阵，相同计算给出各阶放大界，再由有限矩阵在 #{S_p(\mathbb Z)} 中稠密延拓。}
+\p{这一计算只证明一个方向。反向等范数传递需要平均或极限过程，见[Fourier–Schur 等范数定理](0X0B)。}

@@ -1,0 +1,10 @@
+\title{有限循环群上的归一化 Fourier 变换}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§4 的 Fourier 检测机制；有限循环群模型}
+
+\p{设 #{q\geq 2} 为整数，#{G=\mathbb Z/q\mathbb Z} 为按模 #{q} 加法运算的[循环群](00GG)，以 #{0,\ldots,q-1} 为代表元。记 #{\mathbb E_{x\in G}a(x)=q^{-1}\sum_{x\in G}a(x)}，并令 #{e_q(t)=\exp(2\pi it/q)}。整数 #{t} 改变 #{q} 的整数倍时，#{e_q(t)} 不变。对 #{f:G\to\mathbb C}，定义}
+##{\widehat f(r)=\mathbb E_{x\in G}f(x)e_q(-rx),\qquad r\in G.}
+\p{每个 #{x\mapsto e_q(rx)} 都将加法变成复数乘法，即 #{e_q(r(x+y))=e_q(rx)e_q(ry)}。#{\widehat f(r)} 衡量 #{f} 与这一线性相位的相关，#{\widehat f(0)=\mathbb E_xf(x)}。若 #{|f|\leq 1}，由三角不等式有 #{|\widehat f(r)|\leq 1}。此处变换使用负指数，并在空间变量上除以 #{q}；[反演与 Parseval 等式](0Y02)中的频率求和不再除以 #{q}。}
+\p{这一负号与[整数二阶能量页](0GOC)一致。[Mirek 专题的整数变换](0V0K)使用正号：若将 #{f} 在上述代表元上的值延为整数上的零支撑序列 #{\widetilde f}，则 #{\widehat f(r)=q^{-1}\mathcal F_{\mathbb Z}\widetilde f(-r/q)}。改变符号只将频率取反，改变归一化则会改变恒等式中的尺度因子。}

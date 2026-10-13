@@ -1,0 +1,12 @@
+\title{光滑 Lipschitz 函数的差商满足 HMS 条件}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，§1.2 B；一阶差商的显式导数计算}
+
+\p{设 #{f\in C^1(\mathbb R)} 为 Lipschitz 函数，#{L=\|f\|_{\mathrm{Lip}}}。[差商](0X0F) #{M_f} 满足}
+##{|M_f(x,y)|\le L,\qquad |x-y|\bigl(|\partial_xM_f|+|\partial_yM_f|\bigr)\le 4L\quad(x\ne y).}
+\p{\strong{证明。}微分商式得到}
+##{\partial_xM_f=\frac{f'(x)-M_f}{x-y},\qquad \partial_yM_f=\frac{M_f-f'(y)}{x-y}.}
+\p{导数的极限定义与 Lipschitz 条件给出 #{|f'|\le L}，而差商本身的界来自同一条件，所以两个加权导数各至多 #{2L}。这完成导数估计。}
+\p{据一维 [HMS 定理](0X0C)，#{\|S_{M_f}\|_{\mathrm{cb},p}\le C p^2L/(p-1)}，#{1<p<\infty}。对仅 Lipschitz 的 #{f}，将其与光滑非负积分为一的紧支撑核卷积，得到 Lipschitz 常数不增的 #{f_\varepsilon}；它们的差商在对角线外逐点收敛。由支配收敛，核乘法在 #{S_2} 上收敛；Schatten 范数的下半连续性给出相同 #{S_p} 界。此最后的延拓使用迹理想的下半连续性。}

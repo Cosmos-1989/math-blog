@@ -1,0 +1,13 @@
+\title{两项多项式配置的一频 Fourier 展开}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§2，引理 2.1 之前的两项配置恒等式；负号变换约定下的推导}
+
+\p{设 #{P} 属于[整数多项式环](0ALH) #{\mathbb Z[y]}，#{M\geq 1} 为整数，#{f,g:\mathbb Z\to\mathbb C} 有限支撑。记 #{e(t)=\exp(2\pi it)}、#{\mathbb E_{1\leq y\leq M}=M^{-1}\sum_{y=1}^M}，采用与[二阶能量页](0GOC)一致的负号变换 #{\widehat f(\xi)=\sum_xf(x)e(-x\xi)}。定义 #{S_{P,M}(\xi)=\mathbb E_{1\leq y\leq M}e(\xi P(y))}。则}
+##{\sum_{x\in\mathbb Z}\mathbb E_{1\leq y\leq M}f(x)g(x+P(y))=\int_0^1\widehat f(-\xi)\widehat g(\xi)S_{P,M}(\xi)\,d\xi.}
+\p{与[Mirek 专题的正号变换](0V0K)的关系为 #{\widehat f(\xi)=\mathcal F_{\mathbb Z}f(-\xi)}。若全用正号变换，右边相应成为 #{\int_0^1\mathcal F_{\mathbb Z}f(\xi)\mathcal F_{\mathbb Z}g(-\xi)S_{P,M}(\xi)\,d\xi}。指数和的正号保持不变。}
+\p{\strong{证明。}由[整数 Fourier 反演](0V0L)并把频率取反，有 #{g(x+P(y))=\int_0^1\widehat g(\xi)e(\xi x)e(\xi P(y))\,d\xi}。乘以 #{f(x)} 再对 #{x} 求和，得到 #{\sum_xf(x)e(\xi x)=\widehat f(-\xi)}；对 #{y} 取平均即为所述恒等式。所有序列有限支撑，交换求和与积分只涉及有限项。}
+\p{这个配对让标量指数和的抵消直接控制任意两侧权函数。具体地，设 #{E\subseteq[0,1]} 为 [Lebesgue 可测集](00XV)，在 #{E} 上有 #{|S_{P,M}|\leq\varepsilon}。由[Schwarz 不等式](004S)与 Parseval 等式，}
+##{\left|\int_E\widehat f(-\xi)\widehat g(\xi)S_{P,M}(\xi)\,d\xi\right|\leq\varepsilon\left(\sum_x|f(x)|^2\right)^{1/2}\left(\sum_x|g(x)|^2\right)^{1/2}.}
+\p{若 #{f,g} 支撑于 #{[N]=\{1,\ldots,N\}} 且模至多一，此误差至多 #{\varepsilon N}。于是两项配置可以直接利用指数和在指定频率区域的统一小量估计。}

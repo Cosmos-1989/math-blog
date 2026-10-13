@@ -1,0 +1,13 @@
+\title{紧算子的相对拓扑闭包可以不乘法封闭}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，§2.1 的例子；改用互不相交区间补写证明}
+
+\p{令 [L∞ 空间](0A66) #{M=L^\infty([0,1])} 通过乘法作用在 [L² 空间](0A6A) #{H=L^2([0,1])} 上，迹为积分。则 [M 拓扑](0Z0D)闭包 #{\mathcal C=\overline{K(H)}^{M-M}} 对乘法不封闭。}
+\p{\strong{构造。}取 #{I_n=\lparen 2^{-n},2^{-n+1}\rbrack}，#{n\geq 1}，以及归一化示性函数 #{e_n=|I_n|^{-1/2}1_{I_n}}。它们正交。令 #{P} 为其闭[线性张成](00D8)空间的[正交投影](00MS)，令 #{p_N=1_{\lparen 2^{-N},1\rbrack}} 为乘法投影。则 #{Pp_N} 是秩 #{N} 的投影。}
+\p{#{PH} 与 #{H} 都有可数无限[正交归一基](0A0G)，故选取一个从 #{PH} 到 #{H} 的酉算子，并将其在 #{(PH)^\perp} 上置零，得到 #{V}，满足 #{V^*V=P}、#{VV^*=1}。由于 #{V=VP}，#{Vp_N} 为有限秩，而}
+##{V-Vp_N=V(1-p_N),\qquad V^*-p_NV^*=(1-p_N)V^*.}
+\p{对任意正规正泛函 #{\rho,\omega}，因子分解给出 #{s_\omega^\rho(V(1-p_N))\leq\rho(1)^{1/2}\omega(1-p_N)^{1/2}}；另一式由 #{\rho(1-p_N)^{1/2}\omega(1)^{1/2}} 控制。[正规性](0Z09)和 #{1-p_N\downarrow 0} 使二者趋零。因此 #{V,V^*\in\mathcal C}。}
+\p{\strong{排除单位。}取正交酉函数 #{u_n(t)=\exp(2\pi int)}，#{n\geq 1}，定义 #{F(T)(n)=\langle u_n,Tu_n\rangle}。对 #{T=a^*Yb}，乘法算子满足 #{\|au_n\|_2=\|a\|_2}、#{\|bu_n\|_2=\|b\|_2}，由 [Schwarz 不等式](004S)得 #{\|F(T)\|_\infty\leq s_\tau^\tau(T)}。}
+\p{正交序列 #{u_n} 弱收敛到零：每个向量在这组正交向量上的系数平方和有限，故系数趋零。[紧算子](0I09) #{K} 使 #{\|Ku_n\|\to 0}；否则某子列的范数有正下界，紧性再给出范数收敛子列，其弱极限却只能为零，矛盾。所以 #{F(K)\in c_0}。连续性与 #{c_0} 的一致范数闭性给出 #{F(\mathcal C)\subset c_0}，而 #{F(1)=(1,1,\ldots)\notin c_0}。因此 #{1\notin\mathcal C}，但 #{V,V^*\in\mathcal C} 且 #{VV^*=1}。}

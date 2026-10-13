@@ -1,0 +1,13 @@
+\title{有限循环群上的归一化 Gowers 量}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，§§3–4 的差分记号；全群均匀平均模型}
+
+\p{设 #{q\geq 2}，#{G=\mathbb Z/q\mathbb Z} 为[循环群](00GG)，#{f:G\to\mathbb C}。记 #{\mathbb E_x=q^{-1}\sum_{x\in G}}，各变量独立取全群平均。沿用[乘法差分](0GO8)的方向约定，令 #{\Delta_hf(x)=f(x)\overline{f(x+h)}}，其中加法按模 #{q} 计算。对整数 #{s\geq 1}，定义}
+##{\|f\|_{U^s(G)}^{2^s}=\mathbb E_{x,h_1,\ldots,h_s\in G}\Delta_{h_1}\cdots\Delta_{h_s}f(x).}
+\p{差分乘积可展开为 #{\prod_{\omega\in\{0,1\}^s}\mathcal C^{|\omega|}f(x+\sum_{j=1}^s\omega_jh_j)}，其中 #{|\omega|=\sum_j\omega_j}，#{\mathcal C} 表示复共轭；偶数次共轭保持原值。所有 #{s+1} 个变量均取平均，故未归一化的全群和是 #{q^{s+1}\|f\|_{U^s(G)}^{2^s}}。}
+\p{定义右边是非负实数。事实上，换元 #{y=x+h} 给出 #{\|f\|_{U^1(G)}^2=|\mathbb E_xf(x)|^2}，差分的交换性又给出递推式}
+##{\|f\|_{U^{s+1}(G)}^{2^{s+1}}=\mathbb E_{h\in G}\|\Delta_hf\|_{U^s(G)}^{2^s}.}
+\p{从 #{s=1} 归纳即可证明非负性，因此定义时取非负实根。若 #{|f|\leq 1}，每个差分乘积的模至多一，故 #{0\leq\|f\|_{U^s(G)}\leq 1}。特别地，常函数 #{1} 的每阶量都等于一。}
+\p{这里的平移遍历整个群，与[整数局部盒范数](0GOA)中由有限步长集合产生的差分权重不同。[整数全局能量](0GOB)则采用零延拓与未归一化的整数求和。将区间函数放到循环群中会引入绕回端点的项，不能只凭相同的 #{U^s} 符号把这些量等同。}

@@ -1,0 +1,11 @@
+\title{平方范数下的唯一极值函数是 sinc}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，§1](icm2026-ortega-cerda)}
+
+\p{设 #{f\in PW^2}，#{K(x)=\sin(\pi x)/(\pi x)} 为 [sinc 函数](0W06)。则}
+##{f(0)=\int_{\mathbb R}f(x)K(x)\,dx,\qquad |f(0)|^2\leq\|f\|_2^2.}
+\p{所以[极值常数](0W05)为 #{C_2=1}，在 #{f(0)=1} 的约束下，唯一极值函数为 #{f=K}。}
+\p{\strong{证明。}由[带限刻画](0W04)，#{f(0)=(2\pi)^{-1}\int_{-\pi}^{\pi}\widehat f(\xi)\,d\xi}；由 [Plancherel 恒等式](0W01)和 #{\widehat K=1_{[-\pi,\pi]}}，该式等于 #{\int_{\mathbb R}f(x)K(x)\,dx}。[Cauchy–Schwarz 不等式](004S)及 #{\|K\|_2=1} 给出结论。}
+\p{等号要求 #{f} 为 #{K} 的标量倍数。归一化 #{f(0)=K(0)=1} 固定该标量，故得到唯一性。平移后还得到任意实数 #{a} 处的重现公式 #{f(a)=\int f(x)K(x-a)\,dx}。}

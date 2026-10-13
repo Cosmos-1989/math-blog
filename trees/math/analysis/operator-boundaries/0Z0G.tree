@@ -1,0 +1,11 @@
+\title{离散群典范向量泛函是正规忠实迹}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Peterson](icm2026-peterson)，离散群模型的基础计算}
+
+\p{设 #{M=L\Gamma} 为可数离散群的[群 von Neumann 代数](0Z06)。则 #{\tau(A)=\langle\delta_e,A\delta_e\rangle} 是[正规忠实迹状态](0Z07)。}
+\p{\strong{证明。}向量泛函超弱连续且在正算子上非负，#{\tau(1)=1}。左右正则表示交换，因此 #{M} 中每个算子都与 #{\rho_t} 交换。若 #{\tau(A^*A)=\|A\delta_e\|^2=0}，则 #{A\delta_x=A\rho_{x^{-1}}\delta_e=\rho_{x^{-1}}A\delta_e=0}，所有基向量都被消去，故 #{A=0}。}
+\p{对任意 #{A\in M}，注意 #{A\delta_s=\rho_{s^{-1}}A\delta_e}。依[伴随定义](00MU)，有}
+##{\langle\delta_s,A^*\delta_e\rangle=\langle A\delta_s,\delta_e\rangle=\overline{\langle\delta_{s^{-1}},A\delta_e\rangle}.}
+\p{对 #{s} 求系数绝对值平方之和，得到 #{\|A^*\delta_e\|^2=\|A\delta_e\|^2}，即 #{\tau(AA^*)=\tau(A^*A)}。最后令 #{A=X+zY}，分别取 #{z=1,-1,i,-i} 并比较交叉项，得到 #{\tau(X^*Y)=\tau(YX^*)}。再取 #{X=B^*} 即得 #{\tau(BY)=\tau(YB)}。}

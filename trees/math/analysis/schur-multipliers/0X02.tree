@@ -1,0 +1,11 @@
+\title{Hilbert–Schmidt 算子与平方可积核}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，§1 开头；核表示的直接证明}
+
+\p{设 #{(\Omega,\mu)} 为 [σ 有限测度空间](00Q9)，且 #{L^2(\Omega)} 可分。[Schatten 类](0X01) #{S_2(\Omega)} 称 Hilbert–Schmidt 类。它与 #{L^2(\Omega\times\Omega)} 等距对应：}
+##{A_Kf(x)=\int_\Omega K(x,y)f(y)\,d\mu(y),\qquad \|A_K\|_2^2=\int_{\Omega\times\Omega}|K(x,y)|^2\,d\mu(x)d\mu(y).}
+\p{\strong{证明。}积分 [Schwarz 不等式](004S)给出 #{\|A_K f\|_2\le\|K\|_2\|f\|_2}。取[正交归一基](0A0G) #{(e_j)}；有限正交投影趋于恒等算子，所以 #{\sum_j|\langle e_j,v\rangle|^2=\|v\|^2}。将此 Parseval 等式用于几乎每个 #{x} 处的 #{K(x,\cdot)}，并以 [Tonelli 定理](0H53)交换非负和与积分，得到 #{\sum_j\|A_K e_j\|_2^2=\|K\|_2^2}。左侧正是 #{\operatorname{Tr}(A_K^*A_K)}。}
+\p{反过来，若 #{A\in S_2}，令 #{K_N(x,y)=\sum_{j\le N}(Ae_j)(x)\overline{e_j(y)}}。正交性给出 #{\|K_N-K_M\|_2^2=\sum_{M<j\le N}\|Ae_j\|_2^2}，所以存在 #{L^2} 极限 #{K}。对应算子为 #{AP_N}，在每个向量上趋于 #{A}；又由前述算子范数估计趋于 #{A_K}，故 #{A=A_K}。范数等式也保证核的几乎处处唯一性。}
+\p{与[内积约定](004M)相容的秩一核为 #{K(x,y)=u(x)\overline{v(y)}}，对应 #{f\mapsto u\langle v,f\rangle}。核变量的[乘积测度](00QB)是关键，不能将一般有界算子都当作具有普通可测函数核的积分算子。}

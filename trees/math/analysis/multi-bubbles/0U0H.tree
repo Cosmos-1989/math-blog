@@ -1,0 +1,10 @@
+\title{界面法向速度怎样改变胞腔体积}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Milman](icm2026-milman)，§7 与§8开头}
+
+\p{设 #{\Omega} 为[正则分割](0U0F)，#{X} 为紧支撑[光滑向量场](00NC)，其流 #{T_t} 解 #{\frac d{dt}T_t(p)=X(T_t(p))}、#{T_0(p)=p}，存在性见[常微分方程](00OB)。在界面上令 #{f_{ij}=\langle X,\nu_{ij}\rangle}，法向采用[从 #{i} 到 #{j} 的约定](0U0G)。则}
+##{\delta_XV_i:=\left.\frac d{dt}\right|_{t=0}\mu(T_t\Omega_i)=\sum_{j\ne i}\int_{\Sigma_{ij}}f_{ij}\,d\mu^{n-1},\qquad \sum_i\delta_XV_i=0.}
+\p{无穷体积胞腔的导数在包含 #{\operatorname{supp}X} 的相对紧区域内计算。取流的 Jacobian 并求导得到 #{\int_{\Omega_i}\operatorname{div}_\mu X\,d\mu}；由[加权散度](0U14)及有限周长集的 Gauss–Green 公式，它等于外法向通量。将边界按[两两界面](0U06)分解便得第一式。Gauss–Green 公式是有限周长理论的外部输入；光滑情形由 [Stokes 公式](0BAC)给出。}
+\p{\strong{总量抵消。}#{\nu_{ji}=-\nu_{ij}} 使 #{f_{ji}=-f_{ij}}，所以每个界面的两个积分相消。于是体积变化落在 #{E_q=\{a:\sum_i a_i=0\}}，共有至多 #{q-1} 个独立体积约束。}

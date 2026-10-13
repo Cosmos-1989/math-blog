@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-14",
+  "scope": "Three additional requested Analysis reports: Emanuel Milman, Mariusz Mirek and Joaquim Ortega-Cerda. Six Analysis reports are now registered; this is not complete coverage of the section.",
+  "manifest": "research/icm2026-analysis.json",
+  "sourceRecords": [
+    "research/icm2026-analysis-milman.json",
+    "research/icm2026-analysis-mirek.json",
+    "research/icm2026-analysis-ortega-cerda.json"
+  ],
+  "result": "pass",
+  "counts": {
+    "newReports": 3,
+    "newAtomicNotes": 130,
+    "newTopicOverviews": 3,
+    "newReferenceNotes": 3,
+    "newPages": 136,
+    "pagesWithLocalProofsOrDerivations": 60,
+    "derivationsWithExternalInputs": 19,
+    "citedTheoremPagesWithoutLocalProof": 28,
+    "totalSitePages": 4145,
+    "checkedRenderedFormulas": 48370,
+    "checkedDiagramResources": 46,
+    "staticInternalLinks": 635961,
+    "browserSamplePages": 67,
+    "desktopAndMobileChecks": 134
+  },
+  "mathematicalReview": {
+    "scope": "The coordinator read every new atomic note, all three overviews and references, and all three source/proof records. Independent source checks concentrated on theorem hypotheses, normalizations and proof-status boundaries. Each report record distinguishes full report-body reading from selected supplementary-paper passages.",
+    "corrections": [
+      "Restricted Milman-Xu stability to the test fields supported by arXiv:2504.11185v1 Remark 1.4; did not infer stability for all physical variations from the informal overview.",
+      "Separated bubble count from cell count, spherical coning volume constants from area constants, and minimality from uniqueness ranges.",
+      "Added absolute continuity to the equal-mass statement for rotation-invariant measures, excluding atomic mass on the partition hyperplanes.",
+      "Retained the full invariant subspace in the mean ergodic theorem and the ergodicity hypotheses needed to identify limits as constants or zero.",
+      "Kept discrete positive-sign Fourier transforms separate from the site's Euclidean negative-sign convention; used the formal Weyl statement rather than the inconsistent radius in the source's explanatory prose.",
+      "Distinguished the point-evaluation constant C_p from the functional norm C_p^(1/p), and proved p=1 uniqueness without an incorrect appeal to strict convexity.",
+      "Split the Fourier problem's unrelated open questions into separate notes; justified the tempered-distribution interpretation for p<1 using the point-evaluation bound and translation invariance.",
+      "Made Paley-Wiener and sinc prerequisites explicit and defined the conjugate-reflection notation locally in the nonlinear reproduction proof."
+    ],
+    "existingPageIntegrated": {
+      "id": "0A6O",
+      "title": "遍历性的相关平均判据",
+      "change": "Replaced the proof outline by both directions of the correlation-average criterion, reusing the new mean ergodic proof 0V03 and invariant-function characterization 0V04; no duplicate criterion page was created.",
+      "prerequisites": ["00RS", "00RW", "0A6A", "00RZ", "00Q3", "0V03", "0V04", "004S"]
+    },
+    "remainingNewTerminologyCandidates": [
+      {
+        "id": "0U09",
+        "term": "球极投影",
+        "decision": "The page already links to the dimension-general construction 0U16, which supplies formulas and links to the older two-dimensional definition 00FI. The scanner's repeated-word and exact-title candidates need no additional link."
+      },
+      {
+        "id": "0U0N",
+        "term": "球极投影",
+        "decision": "0U16 is the appropriate dimension-general prerequisite and contains an explicit construction; replacing it by the scanner's two-dimensional definition 00FI would narrow the context."
+      }
+    ],
+    "priorRecordsPreserved": "Semantic comparison with HEAD found no removed prerequisite or review entries. Only the existing 0A6O prerequisite/review changed; the other changes add the new notes."
+  },
+  "checks": [
+    "check-analysis-notes.mjs: six report manifests, 271 registered pages, current hashes and explicit theorem proof classifications passed.",
+    "check-site-notes.mjs --source-only: all 4145 pages reachable, no missing links, duplicate titles or prerequisite cycles.",
+    "check-note-prerequisites.mjs: required links and snapshots passed; the new terminology candidates were individually reviewed above.",
+    "check-note-editorial.mjs --strict-format: zero errors and zero formatting findings; one pre-existing site-wide prose candidate remains.",
+    "check-topic-introductions.mjs and check-topic-narratives.mjs: 70 overviews and 91 introduction snapshots passed.",
+    "test-note-prerequisites.mjs, test-note-editorial.mjs and test-subject-navigation.mjs passed.",
+    "check-icm-section-coverage.mjs, check-subject-navigation.mjs and the logic, algebra, number-theory, geometry, Bourbaki and Riehl checks passed.",
+    "analysis-math.test.mjs: existing examples plus triple-junction balance, pressure-cycle cancellation, finite-cyclic polynomial Fourier multipliers, odd-composite quadratic Gauss sums, the l1 endpoint example and sinc normalization passed.",
+    "check-site-notes.mjs --katex: final source output has 48370 formulas and 46 diagram resources with no errors.",
+    "build-site.mjs: final Forester and static HTML build passed after the explicit-prerequisite corrections; 4145 pages, 635961 internal links and unchanged theme/search resources passed.",
+    "check-site-domain.mjs: opetope.cc page URIs, root paths and search index passed.",
+    "analysis-render.test.mjs: final build, 67 pages at 1440px and 390px, 134 checks; no formula errors, document overflow, page errors or failed resource requests. Subject links and XML URLs with query and fragment passed for all six Analysis reports.",
+    "check-reading-ui.mjs: final desktop, mobile and narrow-mobile regression passed.",
+    "static-html-browser.test.mjs: final build passed navigation, search, XML and /math-blog/ legacy routes, JavaScript-disabled reading and XSLT-disabled operation.",
+    "git diff --check passed."
+  ],
+  "browserEvidence": {
+    "base": "http://127.0.0.1:8083/",
+    "status": "pass",
+    "finalScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/analysis-render-vU5Q2e",
+    "readingScreenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/forester-reading-nNfjEW",
+    "visualReview": "Viewed the Milman desktop overview and the Mirek and Ortega-Cerda mobile overviews. Typography, spacing and inline formulas remain legible, with the established site design retained.",
+    "maximumDocumentOverflowPixels": 0
+  },
+  "publication": {
+    "localBuild": "build/site",
+    "serverPort": 8083,
+    "committed": false,
+    "pushed": false
+  },
+  "limitations": [
+    "The report records list deferred proofs and branches. A page with a local deduction from a cited theorem does not reproduce the cited theorem's proof.",
+    "Automated source, graph, formula and finite-example checks do not establish the mathematical correctness or complete prerequisite closure of all research results.",
+    "Banana Space terminology checks were access-limited; no claim of verified terminology equivalence is made.",
+    "Existing unrelated files and work were preserved. This request did not ask for a commit, push or public deployment."
+  ]
+}

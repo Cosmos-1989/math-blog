@@ -1,0 +1,13 @@
+\title{零点试验乘积的 sinc 误差界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ortega-Cerdà，引理4.3](icm2026-ortega-cerda)}
+
+\p{设 #{t=(t_n)} 为[允许零点序列](0W0L)，#{\psi_t(z)=\prod_{n\geq 1}(1-z^2/t_n^2)}，并假设 #{\psi_t} 属于 [Paley–Wiener 空间 #{PW^1}](0W03)。置 #{N=\|\psi_t\|_1}，取 [sinc 核](0W06) #{K(x)=\sin(\pi x)/(\pi x)}，以及}
+##{s_t(x)=\operatorname{sgn}\psi_t(x)-\operatorname{sgn}\cos(\pi x),\qquad R_t(x)=K(x)-\frac 1N\int_{\mathbb R}s_t(y)K(x-y)\,dy.}
+\p{若 #{R_t} 本质有界，则}
+##{\frac 1N\leq C_1\leq\frac 1N+\|R_t\|_\infty.}
+\p{报告引理4.3的 Fourier 分析给出重现核 #{F=N^{-1}\operatorname{sgn}\psi_t+R_t}。其关键是 #{\operatorname{sgn}\cos(\pi x)} 的[分布 Fourier 变换](0W0Z)在开区间 #{(-\pi,\pi)} 消失，并在带限 L¹ 配对中处理端点；由此 #{\int fF=f(0)}。随后的上下界由[重现核估计](0W0J)给出。}
+\p{卷积积分的尾部可解释为绝对收敛积分：符号差在第 #{n} 个远处半整数附近所占长度为 #{|t_n-n-1/2|}，固定 #{x} 时核在该处为 #{O_x(n^{-1})}，由 Cauchy–Schwarz 及平方可和性，#{\sum_n|t_n-n-1/2|/n<\infty}。有限范围内核有界。}
+\p{若 #{R_t=0}，上下界相等，故 #{\psi_t} 达到极值，由[唯一性](0W0C)即 #{\psi_t=\varphi_1}。这给出将零点方程转化为极值函数的判据。}

@@ -10,6 +10,12 @@ const expected = new Map([
   ['Shiri Artstein-Avidan', ['0R00', '10.1137/25M1803334']],
   ['Charles Bordenave', ['0S00', '10.1137/25M1805862']],
   ['Franc Forstnerič', ['0T00', '10.1137/25M1802808']],
+  ['Emanuel Milman', ['0U00', '10.1137/25M1804224']],
+  ['Mariusz Mirek', ['0V00', '10.1137/25M1805837']],
+  ['Joaquim Ortega-Cerdà', ['0W00', '10.1137/25M1804261']],
+  ['Javier Parcet', ['0X00', '10.1137/25M1803371']],
+  ['Sarah Peluse', ['0GO0', '10.1137/25M1806259']],
+  ['Jesse Peterson', ['0Z00', '10.1137/25M1807204']],
 ]);
 const files = new Map(fs.readdirSync(path.join(root, 'trees'), {recursive: true})
   .filter(file => file.endsWith('.tree')).map(file => [path.basename(file, '.tree'), `trees/${file}`]));
@@ -59,7 +65,31 @@ for (const note of manifest.notes) {
   }
 }
 for (const id of files.keys()) {
-  if (/^0[RST][0-9A-Z]{2}$/.test(id) && !ids.has(id)) errors.push(`Unreviewed new note: ${id}`);
+  if (/^0[R-Z][0-9A-Z]{2}$/.test(id) && !ids.has(id)) errors.push(`Unreviewed new note: ${id}`);
+}
+for (const id of ['0GO0', 'icm2026-peluse-combinatorics']) {
+  if (!manifest.reused_note_ids?.includes(id) || manifest.new_note_ids.includes(id)) {
+    errors.push(`Existing Peluse note counted as new: ${id}`);
+  }
+}
+if (files.has('0Y00')) errors.push('Duplicate Peluse overview; retain 0GO0');
+const analysisNarratives = JSON.parse(read('research/narrative-review-2026-10-13-analysis.json'));
+const numberNarratives = JSON.parse(read('research/narrative-review-2026-10-13-number-theory.json'));
+if (analysisNarratives.pages.some(page => page.id === '0GO0')
+    || numberNarratives.pages.filter(page => page.id === '0GO0').length !== 1) {
+  errors.push('Cross-listed Peluse topic must keep its original narrative registration');
+}
+const numberManifest = JSON.parse(read('research/icm2026-number-theory.json'));
+const peluseSnapshot = manifest.notes.find(note => note.id === '0GO0');
+if (numberManifest.notes.find(note => note.id === '0GO0')?.sha256 !== peluseSnapshot?.sha256) {
+  errors.push('Peluse overview snapshots differ between the two subject imports');
+}
+const newIds = new Set(manifest.new_note_ids);
+const reusedIds = new Set(manifest.reused_note_ids);
+if (newIds.size + reusedIds.size !== ids.size
+    || [...newIds].some(id => reusedIds.has(id) || !ids.has(id))
+    || [...reusedIds].some(id => !ids.has(id))) {
+  errors.push('New and reused note sets must partition the registered notes');
 }
 for (const field of ['proofs_written', 'proofs_with_external_inputs', 'research_statements_without_local_proof']) {
   for (const id of manifest[field]) if (!ids.has(id)) errors.push(`Unreviewed proof status: ${id}`);

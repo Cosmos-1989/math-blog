@@ -1,0 +1,13 @@
+\title{有限循环群 Fourier 变换的反演与 Parseval 等式}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Peluse](icm2026-peluse-combinatorics)，引理 4.1 的有限循环群背景；字符正交性的直接推导}
+
+\p{设 #{q\geq 2}，#{G=\mathbb Z/q\mathbb Z}，#{f,g:G\to\mathbb C}，采用[归一化 Fourier 变换](0Y01)。则}
+##{f(x)=\sum_{r\in G}\widehat f(r)e_q(rx),\qquad \mathbb E_{x\in G}f(x)\overline{g(x)}=\sum_{r\in G}\widehat f(r)\overline{\widehat g(r)}.}
+\p{特别地，#{\mathbb E_x|f(x)|^2=\sum_r|\widehat f(r)|^2}。空间一侧为平均，频率一侧为求和。}
+\p{\strong{正交性。}对 #{a\in G}，若 #{a=0}，则 #{\mathbb E_xe_q(ax)=1}。若 #{a\ne 0}，令 #{z=e_q(a)\ne 1}，由 #{z^q=1} 与几何级数公式得 #{\sum_{x=0}^{q-1}z^x=(1-z^q)/(1-z)=0}。同一计算也给出 #{\sum_{r\in G}e_q(r(x-y))=q} 当 #{x=y}，其余为零。}
+\p{\strong{反演。}代入系数定义并交换有限和，得到}
+##{\sum_r\widehat f(r)e_q(rx)=\frac 1q\sum_y f(y)\sum_r e_q(r(x-y))=f(x).}
+\p{\strong{保持内积。}把 #{f(x)}、#{g(x)} 分别反演，乘积的 #{(r,s)} 项为 #{\widehat f(r)\overline{\widehat g(s)}e_q((r-s)x)}。对 #{x} 取平均，正交性仅保留 #{r=s} 的项，得到第二个等式。整个论证对任意整数模 #{q\geq 2} 成立，无须素数假设。}

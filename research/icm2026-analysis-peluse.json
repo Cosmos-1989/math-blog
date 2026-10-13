@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-14",
+  "report": {
+    "speaker": "Sarah Peluse",
+    "title": "Reasonable Bounds in the Polynomial Szemerédi Theorem",
+    "outline": "0GO0",
+    "reference": "icm2026-peluse-combinatorics",
+    "question": "非线性配置为何超出两项一频Fourier配对的直接控制，配置对偶平均的额外结构如何使高阶相关降至可检测的线性频率，并通向小步长密度增量及多线性逐点遍历问题？",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806259",
+    "source_version": "SIAM Proceedings of the International Congress of Mathematicians 2026, Volume 3, Invited Lectures (Sections 1–4), pp.454–468; DOI 10.1137/25M1806259; published online 2026-07-13; official HTML checked 2026-10-14.",
+    "status": "existing-report-supplemented; selected-source-passages-read; global-integration-delegated",
+    "full_text_available": true,
+    "full_text_read_this_turn": false,
+    "reading_scope": "本轮针对已有报告的缺口精读正式HTML中的§1定理1.5–1.9及其讨论、§2两项Fourier恒等式与定理2.2–2.3、§3定义3.1和差分约定、§4开头至引理4.2后的相位分块讨论，并对照原站0GO0–0GOH、0HW0–0HW5。另核对出版元数据与版权声明。§3后半和§4末尾仅作背景参照；未逐段精读整篇报告，未另读PDF，未阅读全文所引研究论文，不将工具返回整页等同于全文阅读。",
+    "cross_section": {
+      "source_volume": 3,
+      "source_volume_sections": "1–4",
+      "pages": [454, 468],
+      "existing_topic": "number-theory / additive combinatorics",
+      "supplement_topic": "analysis / higher-order Fourier analysis and polynomial ergodic averages",
+      "in_volume4_analysis_roster": false,
+      "recording_reason": "复用已存在的数论/组合专题，以高阶Fourier分析和多项式遍历应用建立交叉链接；不是卷4分析报告目录中的新报告，也不新建overview或文献ID。"
+    },
+    "sources": [
+      {
+        "url": "https://epubs.siam.org/doi/10.1137/25M1806259",
+        "full_text_url": "https://epubs.siam.org/doi/full/10.1137/25M1806259",
+        "title": "Reasonable Bounds in the Polynomial Szemerédi Theorem",
+        "author": "Sarah Peluse",
+        "version": "ICM2026 Volume 3, pp.454–468, DOI 10.1137/25M1806259, online 2026-07-13",
+        "access": "Official publisher open-access HTML, accessed 2026-10-14",
+        "reading_status": "selected_passages_read",
+        "full_document_read": false,
+        "read_scope": "§1 Theorems 1.5–1.9 and context; §2 two-term Fourier identity, Theorems 2.2–2.3 and context; §3 Definition 3.1 and difference conventions; §4 opening, dual averages, degree-lowering discussion, Lemmas 4.1–4.2 and phase-blocking discussion; publication and copyright metadata. Other returned text was not treated as a full-document close reading.",
+        "license": "CC BY 4.0; ©2026 International Mathematical Union; published by SIAM. License, Volume 3, page span and publication date verified in official HTML.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "adaptation": "原创中文重述和补充推导；有限循环群归一化、二次相位反例及双频展开是说明性模型，不冒充报告中的逐字定理。署名、正式来源、许可链接及改编说明复用既有文献页，不修改文献。"
+      }
+    ],
+    "deferred": [
+      "一般局部逆定理2.3、定量拼接、对偶平均降阶的研究级证明仍属外部输入；本轮不补写或重新登记旧0GO分支的证明。",
+      "不展开报告定理2.3之后对其他位置函数的bootstrapping及自然尺度陈述，也不声称一般固定系数版本包含二次可变系数的统一控制。",
+      "整数密度增量、Weyl差分、有理逼近及带权主弧分块已有0GO与0HW分支，不重复建立原子页。",
+      "有限循环群模型只证明本轮所列恒等式与反例，不将其直接转移为有端点整数区间上的研究级降阶定理。",
+      "多线性逐点结论只在overview中复用0V11和0V00；未新读该定理原论文，未新建定理页，未将其记为本轮已证明或新引入的研究结论。",
+      "§3定量拼接证明细节、§4末尾频率集中证明概要及全部参考论文未精读，不记全文阅读或独立研究级证明。",
+      "香蕉空间术语未作本轮外部核对；沿用站内既有中文术语，并以明确数学定义为准。",
+      "本轮仅交付授权源文件和局部源级验证；全局同步、全站检查、构建、渲染及发布由主协调处理。"
+    ]
+  },
+  "entries": [
+    ["0GO0", [], "保留既有overview及全部旧链接，有机加入一频/双频障碍、一般局部逆定理、有限群反例和0V11逐点遍历联系；不登记为本轮证明。"],
+    ["0Y01", ["00GG", "0V0K"], "定义有限循环群的负号、空间平均归一化Fourier变换；说明与0GOC负号及0V0K正号的精确换算。"],
+    ["0Y02", ["0Y01"], "用几何级数正交性证明有限循环群Fourier反演与Parseval，逐项保留空间平均和频率求和的归一化。"],
+    ["0Y03", ["00GG", "0GO8"], "定义全群均匀平均的Gowers量，以递推验证非负性，并区分整数能量与局部差分权重。"],
+    ["0Y04", ["0Y01", "0Y02", "0Y03"], "通过平移相关证明U2四次方等于Fourier系数四次和；明确范数下界δ对应系数下界δ²。"],
+    ["0Y05",["00GF","0Y01","0Y02","0Y03","0V0U","00GG"],"奇素数域二次相位给出U3=1、U2=p^-1/4；配方并调用既有Gauss和证明全部系数模为p^-1/2。"],
+    ["0Y06", ["0ALH", "0V0K", "0V0L", "004S", "00XV"], "证明两项多项式平均的一频展开，并由Schwarz与Parseval导出指定频率区域上的标量指数和误差界；整数多项式环为对象前置。"],
+    ["0Y07", ["0ALH", "0Y06", "0V0L"], "证明三项配置的双频展开，说明非线性Roth核的两个独立系数及其与第三个Fourier因子的耦合；整数多项式环为对象前置。"],
+    ["0Y08", ["0ALH"], "精确引用报告定理2.3的正次数版本，区分仅依赖最高次数的δ指数与依赖全部系数的常数，连接0GO7但不宣称统一系数控制；0GO3仅为应用链接，不登记硬前置。"],
+    ["icm2026-peluse-combinatorics", [], "复用既有文献页；本轮核对卷3、454–468页、DOI与CC BY4.0，未修改或复制该页。"]
+  ],
+  "reused_existing_ids": [
+    "00GG", "00GF", "004S", "00XV", "0ALH",
+    "0GO1", "0GO2", "0GO3", "0GO4", "0GO5", "0GO6", "0GO7", "0GO8", "0GO9", "0GOA", "0GOB", "0GOC", "0GOD", "0GOE", "0GOF", "0GOG", "0GOH",
+    "0HW0", "0HW1", "0HW2", "0HW3", "0HW4", "0HW5",
+    "0V00", "0V0K", "0V0L", "0V0U", "0V11"
+  ],
+  "proofs_written": ["0Y02", "0Y04", "0Y05", "0Y06", "0Y07"],
+  "proofs_with_external_inputs": [],
+  "research_statements_without_local_proof": ["0Y08"],
+  "conjectures": [],
+  "proof_classification_convention": "proofs_written仅含本轮新增页的局部证明或例子计算；proofs_with_external_inputs是其中明确依赖站外研究级未证输入的子集，本轮为空。调用本站已有初等Gauss和证明不等于重新证明该旧页，也不登记为站外研究级输入。research_statements_without_local_proof与proofs_written互斥。定义页0Y03含定义适定性的初等递推验证，不另计主命题证明。overview及旧0GO/0HW/0V页均不重记本轮成果。",
+  "proof_boundaries": {
+    "0GO0": "专题叙述及复用导航；未将所述密度界、降阶或逐点遍历定理升级为本轮独立证明。",
+    "0Y01": "有限循环群的变换在空间侧除以q，使用负指数；整数0V0K的正号变换通过频率取反并除以q对应，整数0GOC则保持负号。",
+    "0Y02": "反演与Parseval对任意整数模q≥2成立，证明不使用有限域乘法或素数条件。",
+    "0Y03": "仅定义和验证非负性、递推与1-有界性；没有另证明所有高阶范数的三角不等式，也不等同于整数局部Gowers量。",
+    "0Y04": "归一化恒等式及U2逆推论由有限正交计算得到，不涉及一般高阶逆定理。",
+    "0Y05": "差分与配方本轮写出，Gauss和模长复用0V0U既有证明。反例排除的是所有群大小上一致的一般有界函数U3到U2下界；不反驳对特殊配置对偶平均的降阶定理。",
+    "0Y06": "整数有限支撑函数的一频恒等式及条件误差估计；实际多项式指数和次弧小量仍需额外输入。",
+    "0Y07": "精确双频表示不意味着已有足够的定量估计。双频耦合说明两项配对法不能直接照搬，不作任何不存在Fourier表示的断言。",
+    "0Y08": "定理2.3引用，未局部证明。δ的幂指数仅依赖d，乘法常数依赖固定多项式族。检测f1为最低次数位置；不要求零常数项，不引入其他位置bootstrapping，不从本陈述推得对可变q0的一致界。"
+  },
+  "source_review": {
+    "duplicate_check": "按ID和Gowers、有限Fourier、二次相位、一频、双频、局部逆定理等主题检索，逐页对照0GO1–0GOH、0HW0–0HW5及0V0K/0V0L/0V0U/0V11；有限群归一化、反例和两种频率展开未发现同义原子页。0HP2为数字集合的圆周Fourier配对，不重复其专属命题。",
+    "corrections_and_conventions": [
+      "两项恒等式使用负号变换时为Fhat(-ξ)Ghat(ξ)S(ξ)；若使用0V0K正号变换，改为F(ξ)G(-ξ)S(ξ)。两页均明确局部约定。",
+      "正式HTML定理2.3的内层下标印为y∈N′；按正整数段的上下文明确写成j=1,…,N′，不改变数学内容。",
+      "定理2.3统一常数通过增大指数与上界常数、减小正下界常数实现；保留度数与系数依赖的区别。",
+      "有限群模型由整数报告启发，不直接搬用报告§4不一致的未开根/开根尺度记号；归一化与2^s幂次均在本地定义。",
+      "报告§2对更长配置的无类似公式说明，解释为两项一频配对机制的限制；0Y07给出存在的精确双频展开，避免读成无Fourier恒等式。",
+      "0V11属于本轮复用，不将其预印本v4视为本轮已读来源；overview采用已核对报告定理1.9支持的概率空间有界函数范围，并保留可逆与交换条件。"
+    ],
+    "original_research_papers_read_this_turn": [],
+    "existing_elementary_proof_reused": ["0V0U", "0V0L", "004S"],
+    "semantic_review_scope": ["0GO0", "0Y01", "0Y02", "0Y03", "0Y04", "0Y05", "0Y06", "0Y07", "0Y08"]
+  },
+  "integration": {
+    "new_atomic_page_count": 8,
+    "new_atomic_pages": "trees/math/analysis/polynomial-configurations/0Y01.tree through 0Y08.tree",
+    "overview": "trees/math/number-theory/reports/0GO0.tree",
+    "reference": "trees/references/icm2026-peluse-combinatorics.tree",
+    "reference_modified": false,
+    "new_overview_created": false,
+    "old_atomic_pages_modified": false,
+    "authorized_write_set": [
+      "trees/math/analysis/polynomial-configurations/0Y*.tree (starting at 0Y01; no 0Y00)",
+      "trees/math/number-theory/reports/0GO0.tree",
+      "research/icm2026-analysis-peluse.json"
+    ],
+    "global_actions_run_by_this_task": [],
+    "committed_or_pushed": false,
+    "remaining_owner": "主协调适配两个既有ID和跨section登记，处理全局JSON、导航、sync、统一测试、构建和渲染验收。",
+    "local_validation_status": "scoped-source-checks-passed; known-format-normalization-delegated; no-build-or-render-check",
+    "parent_reported_review": {
+      "evidence": "2026-10-14主审在用户消息中报告；以下不是本任务执行的独立验证。",
+      "pages_read": ["0Y03", "0Y04", "0Y06", "0Y07", "0Y08", "0GO0"],
+      "source_check": "主审已将0Y08定理2.3与SIAM原文逐行核对，报告一致。",
+      "numerical_check": "主审报告有限Gowers量及一频/双频恒等式数值测试通过。",
+      "prerequisite_followup": "按主审要求，0Y06、0Y07、0Y08首次整数多项式处链接0ALH并登记硬前置；0GO3只为应用链接。",
+      "format_followup": "按主审安排，0Y02和0Y07已知格式差异留给最终normalize；本任务不运行normalize或global sync。"
+    },
+    "local_validation": {
+      "execution": "Read-only inline Node checks, scoped to 0GO0 and 0Y01–0Y08; no test or script files created or edited.",
+      "json_and_entry_scope": "pass; entries仅0GO0、8个新0Y页和既有reference，未建立0Y00，ID唯一性检查通过。",
+      "pages_checked": 9,
+      "math_expressions_checked": 219,
+      "katex_version": "0.16.11",
+      "katex_parse_errors": 0,
+      "internal_link_occurrences_checked": 79,
+      "prerequisite_edges_checked": 22,
+      "missing_links_or_prerequisite_mentions": 0,
+      "local_prerequisite_dag": "pass; checks local entry edges and their boundary targets, not a fresh whole-site prerequisite audit",
+      "proof_classification": "pass; external-input subset and mutual exclusion checked; all newly claimed proofs belong to 0Y pages",
+      "source_braces_control_characters_and_style_rules": "pass",
+      "format_normalization_pending": ["0Y02", "0Y07"],
+      "format_detail": "0Y02的frac命令后间隔；0Y07的frac命令后间隔与xi后负号间隔。已由主审接管最终normalize；KaTeX解析通过不能代替Forester构建。",
+      "numerical_checks": {
+        "status": "pass",
+        "scalar_assertions": 568,
+        "cyclic_moduli": [2, 3, 4, 5, 8, 9],
+        "quadratic_phase_cases": 34,
+        "quadratic_prime_moduli": [3, 5, 7, 11, 13],
+        "two_and_three_term_polynomial_pairs": 3,
+        "frequency_grid_size": 64,
+        "scope": "有限群反演、Parseval、直接立方体乘积与U2四次和；奇素数域所有非零二次系数的U2/U3及Fourier模长；三组整数多项式的一频/双频恒等式。积分采用64点周期网格，各坐标非零Fourier指数绝对值小于64，故除浮点舍入外与三角多项式积分相同。数值检验不替代正文证明。"
+      },
+      "protected_file_hash_check": "pass; 0GO1–0GOH、0HW0–0HW5共23个旧原子页及既有文献页，合计24文件的SHA256与本轮编辑前相同。",
+      "old_overview_links_retained": "pass; 原0GO0中的24个不同站内链接全部保留。",
+      "git_diff_check": "pass for authorized paths",
+      "not_run": ["global sync", "Forester build", "browser/render validation", "whole-site checks", "commit", "push"],
+      "source_hashes_before_parent_normalization": {
+        "trees/math/number-theory/reports/0GO0.tree": "6e16e4f0569bacb759d0130319d518797590c5c24032d713e40528d2de0c8387",
+        "trees/math/analysis/polynomial-configurations/0Y01.tree": "0b5b6f99e739c25be0efc87847b53f33eed05fd86f7f325288b7fbc74a9143ce",
+        "trees/math/analysis/polynomial-configurations/0Y02.tree": "2a2e668b2edc04decc78472e3286b070402829a1db48ec670e0635add34628cf",
+        "trees/math/analysis/polynomial-configurations/0Y03.tree": "33b6a099b141753b1662927012f7b1a37486abe998720755294734409d05c6f5",
+        "trees/math/analysis/polynomial-configurations/0Y04.tree": "0ce7afd2c58b995324dd7643dffaa49170735142c6f39c0c6a48c692a2a61ea7",
+        "trees/math/analysis/polynomial-configurations/0Y05.tree": "d35041b46ea45af11d301bc432154a29b5492deb2c6c1f0798b8804a92fdac60",
+        "trees/math/analysis/polynomial-configurations/0Y06.tree": "0822c6cfbfc8d0452e36517a7a4abe039049199443670efa6df4a050c1f8cd25",
+        "trees/math/analysis/polynomial-configurations/0Y07.tree": "2ed4b370eed5bfb6944f36bc7e54cf8b15c4ed7bb7450682e75d192e0a768742",
+        "trees/math/analysis/polynomial-configurations/0Y08.tree": "d53a069c6d6cf59890583cdd1817c94d90279334c5201ac7a3847c9b96ce089d"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+\title{越来越密的几何尺度恢复全部平均}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，§4 对式(4.1)的说明；补充有界函数推导}
+
+\p{设复数列 #{b_n} 满足 #{|b_n|\le B}，#{A_N=N^{-1}\sum_{n=1}^Nb_n}。对 #{s=1,2,\ldots} 置 #{\tau_s=1+1/s}、#{\mathbb D_s=\{\lfloor\tau_s^j\rfloor:j\ge 0\}}。若 #{A_N} 沿每个 #{\mathbb D_s} 收敛，则整个 #{A_N} 收敛。}
+\p{\strong{证明。}若 #{M\le N}，拆开前 #{M} 项和余下项，得}
+##{|A_N-A_M|\le 2B\frac{N-M}{N}.}
+\p{对每个充分大的 #{N}，在 #{\mathbb D_s} 中选相邻尺度 #{M\le N<L}。取整误差给出 #{L/M\le\tau_s+o(1)}，因此 #{\limsup_{N\to\infty}|A_N-A_M|\le 2B(\tau_s-1)}。任意两个大指标分别靠向其左邻尺度，尺度内平均本身已是 [Cauchy 列](00ER)，故整个平均的尾部直径至多 #{4B(\tau_s-1)}。令 #{s\to\infty} 即得结论。}
+\p{用于[遍历平均](0V02)时，可对有界 #{f} 逐点取 #{b_n=f(T^{P(n)}x)}。几何尺度上有限[变差](0V0G)给出所需子列收敛；[极大闭合原理](0V07)和[有界简单函数的稠密性](0F62)再将结论扩至 #{L^p}。这里只需可数多个 #{s}，相应零测例外集可同时删去。}

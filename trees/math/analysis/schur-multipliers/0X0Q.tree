@@ -1,0 +1,12 @@
+\title{离散群 Fourier 到 Schur 的单向传递}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Parcet](icm2026-parcet)，定理2.2(i)的离散群共轭论证}
+
+\p{设 #{G} 为可数离散群，#{1<p<\infty}，#{m:G\to\mathbb C} 为[完全有界 Fourier 乘子](0X0P)。令 #{M(g,h)=m(gh^{-1})}，则}
+##{\|S_M:S_p(G)\to S_p(G)\|_{\mathrm{cb},p}\le\|T_m:L^p(\mathrm{VN}(G))\to L^p(\mathrm{VN}(G))\|_{\mathrm{cb},p}.}
+\p{\strong{证明。}取有限集 #{F\subset G}，在 #{M_F\bar\otimes\mathrm{VN}(G)} 中定义 #{U=\sum_{g\in F}e_{gg}\otimes\lambda_g}。这里 #{e_{gh}} 为矩阵单位；由于[左正则表示](0Z05)为酉表示，#{U} 为酉元。定义}
+##{J(A)=U(A\otimes 1)U^*=\sum_{g,h\in F}A_{gh}e_{gh}\otimes\lambda_{gh^{-1}}.}
+\p{乘积迹 #{\operatorname{Tr}_F\otimes\tau} 满足 #{\tau(1)=1}。由函数演算与迹的酉不变性，[非交换 #{L^p} 范数](0X0O)给出 #{\|J(A)\|_p=\|A\|_{S_p(F)}}。逐项应用乘子得到 #{(\mathrm{id}\otimes T_m)J(A)=J(S_MA)}，于是取得所求界。}
+\p{让各 #{A_{gh}} 变为 #{r\times r} 矩阵，使用 #{U\otimes I_r} 得到所有[放大](0X04)的同一界；有限支撑矩阵的 Schatten 稠密性给出整个 #{S_p(G)} 上的延拓。证明没有用可和性，因而可用于非可和离散群。}

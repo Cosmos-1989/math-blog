@@ -1,0 +1,9 @@
+\title{多项式离散平均的指数和乘子}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mirek](icm2026-mirek)，式(4.3)–(4.4)}
+
+\p{设 #{P\in\mathbb Z[n]}，#{N\ge 1}。整数上的平均 #{A_N^Pf(x)=N^{-1}\sum_{n=1}^Nf(x-P(n))} 是与核 #{K_N^P=N^{-1}\sum_{n=1}^N1_{\{P(n)\}}} 的卷积，其中 #{K*f(x)=\sum_yK(y)f(x-y)}。重复的 #{P(n)} 按出现次数计入核。其[Fourier 变换](0V0K)满足}
+##{\mathcal F_{\mathbb Z}(A_N^Pf)(\xi)=m_N^P(\xi)\mathcal F_{\mathbb Z}f(\xi),\qquad m_N^P(\xi)=\frac 1N\sum_{n=1}^Ne(\xi P(n)).}
+\p{\strong{证明。}对有限支撑 #{f} 交换有限和，在内和中令 #{y=x-P(n)}，于是 #{e(x\xi)=e(y\xi)e(P(n)\xi)}，得出所示正号。由 [Minkowski](0A69)，#{A_N^P} 在每个 #{\ell^p}、#{1\le p\le\infty} 上是收缩；[Parseval 等式](0V0L)使恒等式延拓至 #{\ell^2}。频率为零时 #{m_N^P(0)=1}，故整个频率圆周上不能有统一趋零的乘子界。}
