@@ -1,0 +1,16 @@
+\title{全局截面给出局部体积的 alpha 下界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zhuang](icm2026-zhuang)，式 (4.2) 及其维数计数论证}
+
+\p{设 #{X} 为 #{n} 维射影 [klt 簇](0BF6)，#{L} 为大的 #{\mathbb Q}-Cartier 除子，#{x\in X} 为闭点。则}
+##{\widehat{\operatorname{vol}}(x,X)\ge
+\alpha(L)^n\operatorname{vol}(L),}
+\p{左侧为[局部体积](0L08)，#{\alpha(L)} 为[全局 alpha 不变量](0L18)，右侧体积为[除子体积](0BFA)。}
+\p{\strong{证明。}固定 #{v\in\operatorname{Val}_{X,x}^{*}}，记 #{A=A_X(v)}、#{V=\operatorname{vol}(L)}。若 #{A^n\operatorname{vol}(v)<\alpha(L)^nV}，可选 #{0<a<\alpha(L)} 使 #{A^n\operatorname{vol}(v)<a^nV}，再选实数 #{q>A/a}，使 #{q^n\operatorname{vol}(v)<V}。}
+\p{取足够大的可除整数 #{m} 使 #{mL} 为 Cartier。在 #{x} 附近平凡化 #{\mathcal O_X(mL)}，限制截面并取商，得到线性映射}
+##{H^0(X,\mathcal O_X(mL))\longrightarrow
+\mathcal O_{X,x}/\mathfrak a_{mq}(v).}
+\p{左侧维数的上极限首项系数为 #{V/n!}；右侧由[赋值体积的极限](0L04)得首项系数 #{q^n\operatorname{vol}(v)/n!}。严格不等式保证某个任意大的可除 #{m} 上左侧维数大于右侧，所以映射有非零核。取核中的截面 #{s}，其有效除子 #{D=(s=0)/m} 满足 #{D\sim_{\mathbb Q}L} 和 #{v(D)\ge q}。}
+\p{按 #{a<\alpha(L)} 的定义，#{(X,aD)} 对数典范，故由[一般赋值差异公式](0L0S)有 #{A-av(D)\ge 0}。但 #{v(D)\ge q>A/a}，矛盾。因此每个 #{v} 都满足 #{A_X(v)^n\operatorname{vol}(v)\ge\alpha(L)^nV}；取下确界即得结论。平凡化的改变是乘以单位，单位赋值为零，故上述 #{v(D)} 与选择无关。}

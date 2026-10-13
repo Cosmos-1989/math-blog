@@ -1,0 +1,30 @@
+\title{Kähler 微分与局部化相容}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks Project，微分](https://stacks.math.columbia.edu/tag/00RM)，引理 10.131.8}
+
+\p{设 #{A} 是域 #{k} 上的交换代数，#{S\subset A} 是乘法闭子集。将 [Kähler 微分模](0E80)作[模的局部化](0139)，得到自然同构}
+##{S^{-1}\Omega_{A/k}\cong\Omega_{S^{-1}A/k}.}
+\p{右侧先对 #{A} 作[环的局部化](012Q)，再取微分。自然映射由 #{da\mapsto d(a/1)} 确定。}
+
+\p{\strong{导子的延拓。}记 #{B=S^{-1}A}，并设 #{M} 是 #{B}-模。一个 #{k}-导子 #{D:A\to M} 若能延拓到 #{B}，由 #{s\,s^{-1}=1} 必须满足}
+##{\widetilde D(a/s)=s^{-1}D(a)-as^{-2}D(s).}
+\p{先验证这个公式不依赖分式表示。若 #{a/s=b/t}，存在 #{u\in S} 使 #{u(at-bs)=0}。对等式求导并在 #{B}-模 #{M} 中计算，#{at-bs=0} 且 #{u} 可逆，故}
+##{tD(a)+aD(t)-sD(b)-bD(s)=0.}
+\p{把候选值的差乘以可逆元 #{st}，得到}
+##{\begin{aligned}
+st\bigl(\widetilde D(a/s)-\widetilde D(b/t)\bigr)
+&=tD(a)-sD(b)-\frac{at}{s}D(s)+\frac{bs}{t}D(t)\\
+&=tD(a)-sD(b)-bD(s)+aD(t)=0.
+\end{aligned}}
+\p{所以候选值相同。将分式通分，#{D(at+bs)=tD(a)+aD(t)+sD(b)+bD(s)} 给出加法相容性。乘法则由下式验证}
+##{\begin{aligned}
+\widetilde D\left(\frac{ab}{st}\right)
+&=\frac{bD(a)+aD(b)}{st}
+-\frac{ab\bigl(tD(s)+sD(t)\bigr)}{s^2t^2}\\
+&=\frac bt\widetilde D(a/s)+\frac as\widetilde D(b/t).
+\end{aligned}}
+\p{该映射在 #{k} 上为零，故确实是导子。延拓公式也证明其唯一性。}
+
+\p{\strong{构造互逆映射。}把上述结果用于导子 #{A\to S^{-1}\Omega_{A/k}}，由微分模的泛性质得到 #{\Omega_{B/k}\to S^{-1}\Omega_{A/k}}。它与自然映射的复合在每个生成元 #{da} 上恒等，在另一方向的生成元 #{d(a/s)} 上也恒等，因为两侧均满足已经证明的分式求导公式。因此这两个模态射互逆。}

@@ -1,0 +1,22 @@
+\title{无重根零化多项式给出特征空间分解}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{k} 为[域](00D0)，#{V} 为 #{k} 上的[向量空间](00D3)，#{T:V\to V} 为[线性映射](00GC)。取两两不同的标量 #{\lambda_1,\ldots,\lambda_r}，其中 #{r\ge 1}，假设[多项式](0ALH) #{p(t)=\prod_{i=1}^r(t-\lambda_i)} 满足 #{p(T)=0}。这里将多项式中的 #{t^j} 换成 #{T} 的 #{j} 次复合，将常数换成恒等映射的标量倍。则}
+##{V=\bigoplus_{i=1}^r V_{\lambda_i},\qquad V_{\lambda_i}=\ker(T-\lambda_i\mathrm{id}_V).}
+\p{右侧为[特征空间](0F0B)的[直和](0127)，允许某些分量为零。该结论不要求 #{V} 有限维。}
+
+\p{\strong{构造投影。}定义插值多项式及其对应算子}
+##{L_i(t)=\prod_{j\ne i}\frac{t-\lambda_j}{\lambda_i-\lambda_j},\qquad P_i=L_i(T).}
+\p{分母均非零，且 #{L_i(\lambda_j)} 在 #{i=j} 时为一，其余为零。因此 #{\sum_iL_i-1}、#{L_i^2-L_i}、#{L_iL_j}（#{i\ne j}）及 #{(t-\lambda_i)L_i} 都在每个 #{\lambda_j} 处消失。逐次除以互不相同的一次因子可知，它们都被 #{p} 整除。代入 #{T} 得到}
+##{\begin{aligned}
+\sum_iP_i&=\mathrm{id}_V,\\
+P_i^2&=P_i,\\
+P_iP_j&=0\quad(i\ne j),\\
+(T-\lambda_i)P_i&=0.
+\end{aligned}}
+
+\p{\strong{确定各分量。}最后一个等式给出 #{\operatorname{im}P_i\subseteq V_{\lambda_i}}。若 #{v\in V_{\lambda_i}}，则 #{T^mv=\lambda_i^mv}，因而 #{P_iv=L_i(\lambda_i)v=v}。所以 #{\operatorname{im}P_i=V_{\lambda_i}}。每个向量都有分解 #{v=\sum_iP_iv}；若 #{\sum_iv_i=0} 且 #{v_i\in V_{\lambda_i}}，作用 #{P_j} 便得到 #{v_j=0}。这同时证明分解的存在性和唯一性。}
+
+\p{若线性映射 #{S:V\to V} 与 #{T} 交换，则它与每个 #{P_i} 交换，故保持上述各特征空间。不同特征值将分解固定下来，这一点使分解能够与额外的几何作用相容。}

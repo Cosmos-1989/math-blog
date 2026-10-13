@@ -1,0 +1,16 @@
+\title{归一化体积极小元计算自身理想序列的阈值}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zhuang](icm2026-zhuang)，定理 3.8 后的论证；Blum，Existence of valuations with smallest normalized volume，引理 4.7}
+
+\p{设 #{x\in X} 为 #{n} 维 [klt 奇点](0BF6)，#{R=\mathcal O_{X,x}}，#{v_0} 为[归一化体积极小元](0L0H)，并将其缩放到 #{A_X(v_0)=1}。则[理想序列的渐近阈值](0L1U)满足 #{\operatorname{lct}(\mathfrak a_\bullet(v_0))=1}，且该下确界由 #{v_0} 实现。}
+\p{\strong{证明。}由[自身理想序列的消失阶](0L10)，#{v_0(\mathfrak a_\bullet(v_0))=1}，所以阈值至多为 1。若阈值小于 1，则存在差异有限的赋值 #{w} 使 #{A_X(w)/w(\mathfrak a_\bullet(v_0))<1}。利用[齐性](0L09)将 #{w} 归一化到 #{A_X(w)=1}，记 #{\lambda=w(\mathfrak a_\bullet(v_0))>1}。}
+\p{下确界定义给出对每个正整数 #{m} 都有 #{w(\mathfrak a_m(v_0))\ge\lambda m}，因而}
+##{\mathfrak a_m(v_0)\subseteq\mathfrak a_{\lambda m}(w),\qquad
+\ell(R/\mathfrak a_m(v_0))\ge\ell(R/\mathfrak a_{\lambda m}(w)).}
+\p{除以 #{m^n/n!} 并取极限，使用[赋值体积的极限存在性](0L04)，得到 #{\operatorname{vol}(v_0)\ge\lambda^n\operatorname{vol}(w)}。由[局部体积正性](0L1T)，#{\operatorname{vol}(v_0)>0}；所以}
+##{\widehat{\operatorname{vol}}(w)=\operatorname{vol}(w)
+\le\lambda^{-n}\operatorname{vol}(v_0)
+<\widehat{\operatorname{vol}}(v_0),}
+\p{与极小性矛盾。论证只需选择一个比值小于 1 的 #{w}，无需另行假定阈值的下确界已达到。}

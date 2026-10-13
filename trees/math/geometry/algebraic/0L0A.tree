@@ -1,0 +1,15 @@
+\title{光滑坐标单项式赋值的体积}
+\date{2026-10-13}
+\taxon{Example}
+\author{author}
+\meta{source}{[Zhuang](icm2026-zhuang)，例 2.1、定义 2.2、例 2.6；格点计算}
+
+\p{设 #{k} 为特征零[代数闭域](00SO)，#{X=\mathbb A_k^n}，#{x=0}，其[局部环](00CX)为 #{R=k[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)}}。给定 #{\alpha_1,\ldots,\alpha_n>0}，对[单项式赋值](0L05) #{v_\alpha(z^\beta)=\sum_i\alpha_i\beta_i}，有}
+##{\operatorname{vol}(v_\alpha)=\frac 1{\alpha_1\cdots\alpha_n},
+\qquad A_X(v_\alpha)=\alpha_1+\cdots+\alpha_n.}
+\p{\strong{计算。}模去 #{\mathfrak a_t(v_\alpha)} 后，权重 #{\alpha\cdot\beta<t} 的单项式组成基。任一分母在原点非零，其逆模充分高的极大理想幂可用有限几何级数展开，因此局部化不会增加这组基。由[有限余长度](0L03)，长度就是这些格点的个数 #{N(t)}。}
+\p{令 #{S_t=\{u_i\ge 0:\sum_i\alpha_i u_i<t\}}，#{C=\sum_i\alpha_i}。对每个被计数的格点 #{\beta}，放置单位半开立方体 #{\prod_i\lbrack\beta_i,\beta_i+1\rparen}，其并集记作 #{U_t}。对 #{u\in S_t} 取各坐标的整数部分，得到 #{S_t\subseteq U_t}；而 #{u\in U_t} 蕴含 #{\alpha\cdot u<t+C}，故 #{U_t\subseteq S_{t+C}}。}
+\p{单纯形 #{\{u_i\ge 0:\sum u_i<t\}} 的体积为 #{t^n/n!}：按最后一个坐标积分，归纳地得到 #{\int_0^t(t-s)^{n-1}/(n-1)!\,ds=t^n/n!}。再逐坐标缩放，得到}
+##{\frac{t^n}{n!\prod_i\alpha_i}\le N(t)\le
+\frac{(t+C)^n}{n!\prod_i\alpha_i}.}
+\p{除以 #{t^n/n!} 并令 #{t\to\infty}，夹逼给出[赋值体积](0L04)。坐标除子在光滑簇上各有差异 1，[拟单项式差异公式](0L06)给出第二式。积分使用通常的[黎曼积分](0A3B)，这里仅对多项式作逐次积分。}

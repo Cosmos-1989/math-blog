@@ -1,0 +1,15 @@
+\title{单项式归一化体积的 AM–GM 下界}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zhuang](icm2026-zhuang)，例 2.6 的单项式特殊情形}
+
+\p{设 #{v_\alpha} 是光滑 #{n} 维坐标空间上正权 #{\alpha_1,\ldots,\alpha_n} 给出的[单项式赋值](0L0A)。则}
+##{\widehat{\operatorname{vol}}(v_\alpha)
+=\frac{(\sum_i\alpha_i)^n}{\prod_i\alpha_i}\ge n^n,}
+\p{等号当且仅当全部权相等。}
+\p{\strong{证明。}#{n=1} 时结论直接成立。设 #{n\ge 2}，记 #{a=\frac{\sum_i\alpha_i}{n}}，#{b_i=\frac{\alpha_i}{a}}，于是 #{\sum_i b_i=n}。先证明非负数 #{b_i} 在和为 #{n} 时乘积至多为 1。单纯形 #{\{b_i\ge 0:\sum_i b_i=n\}} 闭且有界，由 [Heine–Borel 定理](0A39)为紧集，故乘积在其上达到最大值。有坐标为零的点处乘积为零，点 #{(1,\ldots,1)} 的乘积为 1，所以最大点的全部坐标为正。若最大点有 #{b_i\ne b_j}，用二者均值替换它们，和不变，而}
+##{\left(\frac{b_i+b_j}{2}\right)^2-b_ib_j
+=\frac{(b_i-b_j)^2}{4}>0,}
+\p{其余因子均正，故总乘积严格增大，矛盾。因此最大点全部坐标为 1。代入[体积与差异的计算](0L0A)，得到所需不等式和等号条件。极值存在性使用[紧空间上连续实函数的极值定理](0A3A)。}
+\p{这给出固定光滑坐标中全部单项式赋值的极小值；推广到任意以该点为中心的赋值需要[光滑点的局部体积定理](0L0C)。}

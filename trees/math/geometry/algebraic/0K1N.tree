@@ -1,0 +1,10 @@
+\title{无点质量的非零重标度极限决定尺度}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xie 的报告](icm2026-xie)，定义 3.13、命题 3.14；Ji–Xie，DAO for Curves，命题 7.2}
+
+\p{设 #{\mu} 是圆盘上的[局部有限正则 Borel 测度](0K12)，#{a_n>0}，#{0<\rho_n,\sigma_n\leq 1}。若 #{a_ns_{\rho_n}^*\mu\to\nu_1}、#{a_ns_{\sigma_n}^*\mu\to\nu_2}，其中两极限非零且 #{\nu_1(\{0\})=\nu_2(\{0\})=0}，则存在 #{C\geq 1}，使 #{C^{-1}\leq\frac{\rho_n}{\sigma_n}\leq C} 对所有 #{n} 成立。这样的尺度序列称等价。}
+\p{\strong{证明。}若比例不双向有界，交换两序列并取子列，可设 #{r_n=\frac{\sigma_n}{\rho_n}\to 0}。取非负紧支撑连续函数 #{\varphi\leq 1}，使 #{\int\varphi\,d\nu_2=b>0}，并使其支撑包含于半径 #{R<1} 的圆盘。弱收敛给出 #{a_n\mu(\sigma_n\mathbb D_R)\geq b/2}，其中 #{\mathbb D_R=\{|z|<R\}}。}
+\p{于是 #{a_ns_{\rho_n}^*\mu(\mathbb D_{r_nR})\geq b/2}。对任意小的 #{r>0}，取连续函数 #{\chi_r}，在闭圆盘 #{\overline{\mathbb D_r}} 上为一，在 #{\mathbb D_{2r}} 外为零，且 #{0\leq\chi_r\leq 1}。充分大时 #{r_nR<r}，故取极限得 #{\int\chi_r\,d\nu_1\geq b/2}，从而 #{\nu_1(\mathbb D_{2r})\geq b/2}。}
+\p{令 #{r\downarrow 0}，局部有限性允许对递减圆盘取测度极限，得到 #{\nu_1(\{0\})\geq b/2}，矛盾。所以比例在尾部双向有界，再吸收有限个正比例即可。}

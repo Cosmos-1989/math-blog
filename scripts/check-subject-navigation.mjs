@@ -38,9 +38,9 @@ for (const id of subjects) {
 }
 
 const coverage = {};
-for (const [id, slug] of [["0061", "logic"], ["0062", "algebra"]]) {
+for (const [id, slug] of [["0061", "logic"], ["0062", "algebra"], ["0063", "number-theory"], ["0064", "geometry"]]) {
   const manifest = JSON.parse(read(`research/icm2026-${slug}.json`));
-  const expected = manifest.papers.map(paper => paper.outline);
+  const expected = [...manifest.papers, ...(manifest.cross_listed_reports ?? [])].map(paper => paper.outline);
   const text = trees.get(id) ?? "";
   const heading = "\\strong{研究专题}";
   const start = text.indexOf(heading);
@@ -53,7 +53,9 @@ for (const [id, slug] of [["0061", "logic"], ["0062", "algebra"]]) {
     if (!expected.includes(topic)) errors.push(`${id}: independent topic ${topic} must be listed separately`);
   }
   const other = text.indexOf("\\strong{其他专题}");
-  if (other < 0 || !listed(text.slice(other)).includes("003A")) errors.push(`${id}: categorical logic must be a separate topic`);
+  if (["logic", "algebra"].includes(slug) && (other < 0 || !listed(text.slice(other)).includes("003A"))) {
+    errors.push(`${id}: categorical logic must be a separate topic`);
+  }
   coverage[slug] = { expected: expected.length, directlyListed: research.length };
 }
 

@@ -1,0 +1,12 @@
+\title{有理映射族的相对 Green 流}
+\date{2026-10-13}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Xie 的报告](icm2026-xie)，§3.1；Dinh–Sibony，Dynamics in Several Complex Variables，引理 1.19；补充收敛估计}
+
+\p{设 #{F(t,z)=(t,f_t(z))} 是次数 #{d\geq 2} 的全纯族，参数在复曲线 #{\Lambda} 上。记 #{\pi_2} 为向球面的投影，#{\omega} 为归一化[球面面积形式](0K11)。相对 Green 流是}
+##{T_F=\lim_{n\to\infty}d^{-n}(F^n)^*\pi_2^*\omega.}
+\p{\strong{局部构造。}在小参数圆盘上取无公共零点的齐次提升 #{\widetilde f_t:\mathbb C^2\to\mathbb C^2}，令 #{G_n(t,Z)=d^{-n}\log\|\widetilde f_t^n(Z)\|}。在紧参数集和单位球面上，连续性与无公共零点给出常数 #{C}，使对所有 #{W\ne 0} 有}
+##{|\log\|\widetilde f_t(W)\|-d\log\|W\||\leq C.}
+\p{因此 #{|G_{n+1}-G_n|\leq Cd^{-n-1}}。几何级数收敛使 #{G_n} 局部一致收敛到连续函数 #{G}。又有 #{G(t,cZ)=\log|c|+G(t,Z)}，故 #{dd^cG} 在射影坐标片上相容。#{\log\|H\|} 对非消失全纯向量函数 #{H} 为多重次调和，结合[连续势的流](0K13)便得到上面的极限；这里正性使用势理论。}
+\p{迭代极限还给出 #{F^*T_F=dT_F}。限制到纤维 #{t} 得到该映射的平衡测度。Green 势实际具有局部 Hölder 正则性，这是所引引理 1.19 的进一步结论；其正则性估计不由几何级数估计单独给出。}

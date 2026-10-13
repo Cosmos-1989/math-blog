@@ -1,0 +1,11 @@
+\title{平均分离推出频繁分离}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xie 的报告](icm2026-xie)，引理 3.7；Ji–Xie，DAO for Curves，引理 3.5}
+
+\p{设轨道对 #{x,y} 相对于非空对应 #{\Sigma} 满足[平均分离](0K1E)。则它满足[频繁分离](0K1D)。}
+\p{\strong{证明。}写 #{\phi_i=\max\{-\log r_i,0\}}。由平均分离，存在 #{B>0} 和 #{n_j\to\infty}，使 #{\sum_{i=0}^{n_j-1}\phi_i\leq Bn_j}。给定 #{0<\varepsilon<1}，取 #{T>2B/\varepsilon}、#{\eta=e^{-T}}。}
+\p{若 #{r_i<\eta}，则 #{\phi_i>T}。因此}
+##{T\,\#\{0\leq i<n_j:r_i<\eta\}\leq\sum_{i=0}^{n_j-1}\phi_i\leq Bn_j.}
+\p{所以 #{r_i\geq\eta} 的时间在这些截断中的比例至少为 #{1-B/T>1-\frac{\varepsilon}{2}}。取整个序列的上极限不小于这个子列下界，得到上密度大于 #{1-\varepsilon}。#{\varepsilon\geq 1} 时可沿用更小正数的结论。}

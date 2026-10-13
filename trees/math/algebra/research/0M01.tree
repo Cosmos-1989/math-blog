@@ -1,0 +1,16 @@
+\title{阿贝尔范畴中的幂等态射分裂}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Stacks Project，第 12.4 节](https://stacks.math.columbia.edu/tag/09SF)，幂等分裂的刻画}
+
+\p{设 #{\mathcal A} 为[阿贝尔范畴](0F4B)，#{e:X\to X} 满足 #{e^2=e}。则存在[双积](0F49)分解 #{X\cong Y\oplus Z}，使 #{e} 对应到 #{Y} 上的投影。特别地，每个幂等态射在 #{\mathcal A} 中已经[分裂](015A)。}
+
+\p{\strong{构造两个分量。}令 #{i:Y\to X} 为 #{1_X-e} 的[核](0F4A)箭头，令 #{j:Z\to X} 为 #{e} 的核箭头。由 #{(1_X-e)e=0}，存在唯一 #{p:X\to Y} 满足 #{ip=e}。由 #{e(1_X-e)=0}，存在唯一 #{q:X\to Z} 满足 #{jq=1_X-e}。}
+\p{核箭头是[单态射](0E8C)。因为 #{ei=i}，等式 #{ipi=ei=i} 给出 #{pi=1_Y}。同理，由 #{(1_X-e)j=j} 得 #{qj=1_Z}。此外，#{ipj=ej=0} 与 #{jqi=(1_X-e)i=0} 分别给出 #{pj=0} 和 #{qi=0}。最后有 #{ip+jq=1_X}。}
+
+\p{于是 #{(i,j):Y\oplus Z\to X} 与 #{\binom{p}{q}:X\to Y\oplus Z} 互为逆态射，因为两个复合分别为}
+##{ip+jq=1_X,\qquad
+\begin{pmatrix}pi&pj\\qi&qj\end{pmatrix}
+=\begin{pmatrix}1_Y&0\\0&1_Z\end{pmatrix}.}
+\p{在该分解下 #{e=ip} 正是第一个直和分量的投影。整个构造只使用核的泛性质和态射加法，不需要为对象选择元素。}

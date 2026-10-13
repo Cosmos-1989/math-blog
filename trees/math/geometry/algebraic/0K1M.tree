@@ -1,0 +1,13 @@
+\title{参数重标度恢复相空间平衡测度}
+\date{2026-10-13}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xie 的报告](icm2026-xie)，命题 3.12；Ji–Xie，DAO for Curves，命题 7.1；以正确图映射重写证明}
+
+\p{设 #{F=(f_t)} 是圆盘上的次数 #{d\geq 2} 的全纯族，#{a} 为标记点，#{n_j\to\infty}，#{\rho_j\to 0} 为正数。假设 #{h_j(t)=f_{\rho_jt}^{n_j}(a(\rho_jt))} 局部一致收敛到 #{h}。则[分岔测度](0K16)满足}
+##{d^{n_j}s_{\rho_j}^*\mu_{F,a}\longrightarrow h^*\mu_{f_0},}
+\p{其中 #{s_\rho(t)=\rho t}，右侧是[平衡测度](0K15)按连续势的拉回。}
+\p{\strong{证明。}定义 #{H_j(t)=(\rho_jt,h_j(t))} 及 #{H(t)=(0,h(t))}。于是 #{H_j=F^{n_j}\iota_a s_{\rho_j}}，#{H_j\to H} 局部一致。[Green 流的不变性](0K14)给出}
+##{H_j^*T_F=s_{\rho_j}^*\iota_a^*(F^{n_j})^*T_F=d^{n_j}s_{\rho_j}^*\mu_{F,a}.}
+\p{在每个坐标片写 #{T_F=dd^cu}，#{u} 连续。局部一致收敛给出 #{uH_j\to uH}，按[测试形式定义](0K13)可取 #{dd^c} 的分布极限，故 #{H_j^*T_F\to H^*T_F=h^*\mu_{f_0}}。有限个坐标片和分割单位将此局部结论合并，得到所需弱收敛。}
+\p{若 #{a(0)\in J(f_0)} 且 #{h} 非常值，则 #{h(0)} 是 #{f_0^{n_j}(a(0))} 的极限。Julia 集闭且前向不变，故 #{h(0)\in J(f_0)}。由全纯开映射定理和 #{\operatorname{supp}\mu_{f_0}=J(f_0)}，#{h^*\mu_{f_0}} 在零的每个邻域上有正质量。这最后一步使用所引 Julia 集与平衡测度理论。}
