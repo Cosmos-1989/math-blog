@@ -1,0 +1,12 @@
+\title{有限子群的平均元是幂等元}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlank，§11，第443页](icm2026-schlank)的普通代数模型}
+
+\p{设 #{G} 为有限[阿贝尔群](00G3)，#{H\leq G} 为子群，#{R} 为交换环且 #{|H|} 在其中可逆。在[群代数](017J) #{R[G]} 中定义}
+##{e_H=\frac{1}{|H|}\sum_{x\in H}[x].}
+\p{则 #{e_H^2=e_H}，并有环分解 #{R[G]\cong e_HR[G]\times(1-e_H)R[G]}。}
+\p{\strong{计算平方。}固定 #{z\in H}，满足 #{xy=z} 的有序对有 #{|H|} 个，因为选定 #{x} 后 #{y=x^{-1}z} 唯一。因此 #{(\sum_x[x])^2=|H|\sum_z[z]}，除以 #{|H|^2} 得到幂等性。}
+\p{\strong{分裂。}映射 #{a\mapsto(e_Ha,(1-e_H)a)} 的逆为 #{(b,c)\mapsto b+c}。交叉乘积为零，且两部分相加为单位，所以这是环同构。}
+\p{若 #{R=\mathbb Q}、#{G=\mathbb Z/p^k}、#{H=p^{k-1}G}，在复数中用 #{p^k} 次单位根 #{\zeta} 表示一个[特征标](01JA)，则 #{e_H} 的值为 #{p^{-1}\sum_{j=0}^{p-1}\zeta^{jp^{k-1}}}。当 #{\zeta} 为原始 #{p^k} 次单位根时，这个等比和为零；非原始时 #{\zeta^{p^{k-1}}=1}，其值为一。因此原始分圆因子对应的是 #{(1-e_H)\mathbb Q[G]}，而 #{e_H\mathbb Q[G]} 收集非原始因子。}

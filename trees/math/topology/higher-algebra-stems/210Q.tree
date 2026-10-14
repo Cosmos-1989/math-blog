@@ -1,0 +1,12 @@
+\title{有限阿贝尔群代数的 Fourier 分解}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlank，Theorem 11.1，第444页](icm2026-schlank)}
+
+\p{设 #{A} 为被 #{p^k} 杀死的有限[阿贝尔群](00G3)，#{R} 为含有分圆域 #{\mathbb Q(\zeta_{p^k})} 的交换代数。令 #{\widehat A} 为[一维特征标群](01JA)，所有特征标值都在这个分圆域中。则有 #{R} 代数同构}
+##{\Phi:R[A]\xrightarrow{\sim}\prod_{\chi\in\widehat A}R,\qquad \Phi\left(\sum_{a\in A}c_a[a]\right)_\chi=\sum_{a\in A}c_a\chi(a).}
+\p{\strong{正交关系。}若 #{\psi} 为非平凡特征标，选 #{b} 使 #{\psi(b)\ne 1}。以 #{a\mapsto ba} 置换求和得 #{\sum_a\psi(a)=\psi(b)\sum_a\psi(a)}。#{1-\psi(b)} 为分圆域中的非零元，故在 #{R} 中可逆，推出该和为零；平凡特征标的和则为 #{|A|}。}
+\p{\strong{显式逆。}对元组 #{(u_\chi)} 定义}
+##{c_a=\frac{1}{|A|}\sum_{\chi\in\widehat A}u_\chi\chi(a)^{-1}.}
+\p{应用正交关系，#{\Phi(\sum_ac_a[a])_\eta=u_\eta}。又由 #{|\widehat A|=|A|} 及特征标分离群元素，同一计算表明逆向复合也为恒等。乘法相容性来自 #{\chi(ab)=\chi(a)\chi(b)}，所以这是[群代数](017J)的代数同构。}

@@ -3,8 +3,9 @@
 \taxon{Construction}
 \author{author}
 
-\p{设 #{X} 为[拓扑空间](00E0)，#{k} 为[域](00D0)。奇异 #{n}-单形是[连续映射](00E2) #{\sigma:\Delta^n\to X}，其中 #{\Delta^n=\{(t_0,\ldots,t_n):t_i\geq 0,\ \sum t_i=1\}}。以所有这样的映射为基，构造自由 #{k}-[向量空间](00D3) #{C_n(X;k)}。}
+\p{设 #{X} 为[拓扑空间](00E0)，#{R} 为[交换含幺环](00CS)。奇异 #{n}-单形是[连续映射](00E2) #{\sigma:\Delta^n\to X}，其中 #{\Delta^n=\{(t_0,\ldots,t_n):t_i\geq 0,\ \sum t_i=1\}}。以所有这样的映射为基，构造[自由模](0137) #{C_n(X;R)}。每条链都是有限个奇异单形的 #{R} 系数线性组合；取 #{R=\mathbb Z} 就得到整数奇异链。}
 \p{令 #{\delta_i:\Delta^{n-1}\to\Delta^n} 插入第 #{i} 个零坐标。边界为}
 ##{\partial\sigma=\sum_{i=0}^n(-1)^i\sigma\circ\delta_i.}
-\p{每个余维二面在 #{\partial^2} 中出现两次且符号相反，故 #{\partial^2=0}。定义 #{H_n(X;k)=\ker\partial_n /\operatorname{im}\partial_{n+1}}。再令 #{C^n(X;k)=\operatorname{Hom}_k(C_n(X;k),k)}，以上一边界的对偶作微分，其[上同调](012B)记为 #{H^n(X;k)}。}
-\p{当维数有限时，#{b_n(X;k)=\dim_kH^n(X;k)} 称第 #{n} 个 Betti 数。紧光滑流形具有有限 [CW 型](0A99)，所以只有有限多个非零 Betti 数且各个有限。这个构造给 Floer 交点下界中的拓扑量一个具体定义。}
+\p{每个余维二面在 #{\partial^2} 中出现两次且符号相反，故 #{\partial^2=0}。定义 #{H_n(X;R)=\ker\partial_n /\operatorname{im}\partial_{n+1}}。再令 #{C^n(X;R)=\operatorname{Hom}_R(C_n(X;R),R)}，以 #{\delta\alpha=\alpha\circ\partial} 作微分，其[上同调](012B)记为 #{H^n(X;R)}。整数系数的群可以含有非零挠元，即被某个正整数杀死的元素。}
+\p{对非空 #{X}，增广 #{\varepsilon:C_0(X;R)\to R} 把每个点单形送到 #{1}。将零次链模换为 #{\ker\varepsilon}，正次链模保持不变，就得到约化链复形，其同调记为 #{\widetilde H_n(X;R)}。边界为两端点之差，增广值为零，因此这一替换与边界相容。}
+\p{当系数取[域](00D0) #{k} 时，同调与上同调是 #{k}-[向量空间](00D3)。维数有限时，#{b_n(X;k)=\dim_kH^n(X;k)} 称第 #{n} 个 Betti 数。紧光滑流形具有有限 [CW 型](0A99)，所以只有有限多个非零 Betti 数且各个有限。记 #{b_n(X)} 时通常取有理系数；它不记录整数同调的挠元。}

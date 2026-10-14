@@ -4,11 +4,11 @@
 \author{author}
 \meta{source}{[Hatcher，Algebraic Topology，§3.2，页 206–210，引理 3.6 与定理 3.11](https://pi.math.cornell.edu/~hatcher/AT/AT.pdf)}
 
-\p{设 #{X} 为[拓扑空间](00E0)，#{k} 为[域](00D0)，使用[奇异余链](0BLY) #{C^*(X;k)}。对 #{\alpha\in C^p(X;k)}、#{\beta\in C^q(X;k)}，其杯积是次数 #{p+q} 的余链，按下式在每个奇异单形 #{\sigma:\Delta^{p+q}\to X} 上取值：}
+\p{设 #{X} 为[拓扑空间](00E0)，#{R} 为[交换含幺环](00CS)，使用[奇异余链](0BLY) #{C^*(X;R)}。对 #{\alpha\in C^p(X;R)}、#{\beta\in C^q(X;R)}，其杯积是次数 #{p+q} 的余链，按下式在每个奇异单形 #{\sigma:\Delta^{p+q}\to X} 上取值：}
 ##{(\alpha\smile\beta)(\sigma)=\alpha(\sigma\circ\iota_{0,\ldots,p})\,\beta(\sigma\circ\iota_{p,\ldots,p+q}).}
-\p{这里 #{\iota_{i_0,\ldots,i_r}:\Delta^r\to\Delta^{p+q}} 把顶点依次送到编号 #{i_0,\ldots,i_r} 的顶点，并在整个单形上作仿射延拓；右端相乘是域 #{k} 中的乘法。两部分共用第 #{p} 个顶点。}
+\p{这里 #{\iota_{i_0,\ldots,i_r}:\Delta^r\to\Delta^{p+q}} 把顶点依次送到编号 #{i_0,\ldots,i_r} 的顶点，并在整个单形上作仿射延拓；右端相乘是 #{R} 中的乘法。两部分共用第 #{p} 个顶点。}
 \p{余链微分 #{\delta\alpha=\alpha\circ\partial} 满足}
 ##{\delta(\alpha\smile\beta)=\delta\alpha\smile\beta+(-1)^p\alpha\smile\delta\beta.}
 \p{这是所引引理 3.6 的边界公式。因此余循环的杯积仍为余循环，任一因子改动一个余边界时，所得乘积只改变余边界；从而定义良好的双线性运算}
-##{\smile:H^p(X;k)\times H^q(X;k)\longrightarrow H^{p+q}(X;k).}
-\p{分次[直和](0127) #{H^*(X;k)=\bigoplus_{p\geq 0}H^p(X;k)} 配以此乘法称上同调环。余链公式给出结合律；上同调类满足 #{a\smile b=(-1)^{pq}b\smile a}，这项分次交换性引用定理 3.11，不应误认为余链本身逐项交换。}
+##{\smile:H^p(X;R)\times H^q(X;R)\longrightarrow H^{p+q}(X;R).}
+\p{分次[直和](0127) #{H^*(X;R)=\bigoplus_{p\geq 0}H^p(X;R)} 配以此乘法称上同调环。余链公式给出结合律；上同调类满足 #{a\smile b=(-1)^{pq}b\smile a}，这项分次交换性引用定理 3.11，发生在上同调类而非逐项余链上。所有公式均适用于整数环 #{R=\mathbb Z}；取域系数则恢复通常的上同调代数。}

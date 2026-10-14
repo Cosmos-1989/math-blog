@@ -1,0 +1,11 @@
+\title{有限 Moore 胞腔滤过给出稳定秩窗口界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlank，§8，式(8.2)至(8.3)](icm2026-schlank)的有限滤过版本}
+
+\p{设谱 #{F} 有有限滤过 #{0=F_0\to F_1\to\cdots\to F_s=F}，第 #{j} 个[余纤维](1605)为 #{\Sigma^{d_j}M_p}，其中 #{M_p} 是 [Moore 谱](2108)，#{d_j\in\mathbb Z}。当 #{m>1+\max_jd_j} 时，}
+##{\log_p|\pi_mF|\leq\sum_{j=1}^{s}\bigl(r_p(m-d_j)+r_p(m-d_j-1)\bigr).}
+\p{\strong{一步添胞腔。}长正合列中的 #{\pi_mF_{j-1}\to\pi_mF_j\to\pi_{m-d_j}M_p} 表明：#{\pi_mF_j} 是前一群的某个商与后一群的某个子群的扩张。因此它有限，且阶不超过两者阶数之积。取对数得到 #{\ell_p(\pi_mF_j)\leq\ell_p(\pi_mF_{j-1})+\ell_p(\pi_{m-d_j}M_p)}。}
+\p{\strong{迭代。}从零谱开始相加，再用 [Moore 谱群阶公式](2108)，即得结论。由于 #{s} 和所有 #{d_j} 均固定，右边只涉及固定长度的次数窗口；重复出现的次数须保留其重数。}
+\p{这里明确假设给定了上述滤过。把任意有限谱转成这种模型，或把一个余纤维塔中的各项解释成向量空间，还需要额外结构，不能由这个估计自行推出。}

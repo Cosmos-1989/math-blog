@@ -1,0 +1,13 @@
+\title{Moore 谱的群阶检测相邻稳定秩}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlank，§8，式(8.1)，第440页](icm2026-schlank)；用群阶表述以包含素数2}
+
+\p{固定素数 #{p}，令 #{M_p=\operatorname{cofib}(p:\mathbb S_{(p)}\to\mathbb S_{(p)})} 为模 #{p} Moore 谱。#{\mathbb S_{(p)}} 是[球谱](1604)在所有与 #{p} 互素整数处的[局部化](2109)。当 #{m>1} 时，}
+##{\log_p|\pi_mM_p|=r_p(m)+r_p(m-1),}
+\p{其中 #{r_p(j)} 是[稳定同伦群的模 p 秩](2104)。此公式不需要为 #{M_p} 选择乘法结构。}
+\p{\strong{证明。}[余纤维计算](2107)给出}
+##{0\longrightarrow(\pi_m\mathbb S)/p\longrightarrow\pi_mM_p\longrightarrow(\pi_{m-1}\mathbb S)[p]\longrightarrow 0.}
+\p{两端都是有限 #{p} 群，因为 #{m,m-1>0}。由[核与余核的等维性](2103)，它们的阶分别为 #{p^{r_p(m)}} 与 #{p^{r_p(m-1)}}。短正合列中间项的阶是两端阶数之积，取对数便得到公式。}
+\p{中间项是两个 #{\mathbb F_p} 向量空间的阿贝尔群扩张，单凭正合列不能断言它本身被 #{p} 杀死。若另有使乘 #{p} 为零的模结构，才可以把左边进一步写成 #{\mathbb F_p} 维数。}

@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-14",
+  "scope": "Piccirillo, Schlank and Watanabe report integration, shared foundations, topology navigation and regression tests.",
+  "source_records": [
+    "research/icm2026-topology-piccirillo.json",
+    "research/icm2026-topology-schlank.json",
+    "research/icm2026-topology-watanabe.json",
+    "research/icm2026-topology-shared-foundations.json"
+  ],
+  "content": {
+    "new_pages": 120,
+    "new_atomic_pages": 114,
+    "new_topic_overviews": 3,
+    "new_references": 3,
+    "existing_pages_expanded": ["0BLY", "0F55"],
+    "new_shared_foundation": "0F6B",
+    "topic_overviews": ["2000", "2100", "2200"],
+    "subject": "0066",
+    "catalogue": "Ten Section Six proceedings chapters and two cross-listed special section reports have direct topic entries. Plenary lectures are not included in this count."
+  },
+  "source_checks": {
+    "site_pages": 4781,
+    "reachable_pages": 4781,
+    "registered_pages": 4781,
+    "broken_links_or_graph_errors": 0,
+    "format_errors": 0,
+    "prerequisite_errors": 0,
+    "new_term_candidates": 0,
+    "existing_term_candidates": 162,
+    "existing_editorial_candidate": "0BGJ",
+    "note": "Existing term candidates are heuristic findings, not established errors. No claim of a new mathematical review of all pre-existing pages is made."
+  },
+  "build": {
+    "command": "node scripts/build-site.mjs",
+    "result": "pass",
+    "html_pages": 4781,
+    "internal_links_checked": 714382,
+    "anchors_checked": 4799,
+    "resource_references_checked": 34128,
+    "katex_formulas_checked": 56563,
+    "diagram_resources_checked": 48,
+    "formula_or_diagram_errors": 0,
+    "compatibility": "Static HTML plus index.xml and /math-blog/ compatibility routes."
+  },
+  "regressions": {
+    "combined_node_subtests": 32,
+    "topology_coverage_subtests": 4,
+    "new_mathematical_regressions": 10,
+    "result": "pass",
+    "checks": [
+      "Editorial rules, prerequisite rules and subject navigation",
+      "All topic narratives and current introduction snapshots",
+      "Recorded ICM section coverage and all three new source records",
+      "Bourbaki, analysis, number theory, algebra, geometry, logic and Riehl checks",
+      "Existing topology, geometry, number-theory and analysis regressions",
+      "Integer cup-product Leibniz signs, intersection-form invariants, p-rank versus group order, suspension indices, graph degrees, K4 orientation and framing comparison",
+      "Site-domain, static-HTML, reading-UI and git whitespace checks"
+    ],
+    "qualification": "The ten new finite mathematical checks are included in the combined regression run. They test examples and conventions, not general research theorem proofs."
+  },
+  "browser": {
+    "result": "pass",
+    "viewport_widths": [1440, 390],
+    "page_viewport_checks": 252,
+    "report_checks": {"piccirillo": 86, "schlank": 78, "watanabe": 80, "shared_foundations": 8},
+    "xslt_disabled": true,
+    "checks": [
+      "Every new note and reference, the subject page and the three shared foundations render with nonempty content",
+      "No browser errors, missing resources, formula errors or full-page horizontal overflow",
+      "Long display formulas remain horizontally scrollable on mobile",
+      "Subject links, topic search and legacy query/fragment-preserving redirects work"
+    ],
+    "screenshots_visually_reviewed": ["2000-390", "200D-1440", "2108-390", "2100-1440", "220N-390", "2210-1440", "0F55-390"]
+  },
+  "proof_and_source_limits": [
+    "The supporting algebraic and numerical arguments specified in the report records are expanded locally. Classification, Floer-theoretic, chromatic and configuration-integral research inputs remain explicitly cited where their full proofs have not been reconstructed.",
+    "Source-record reading ranges are authoritative. Supplemental long papers were read selectively; publication of the notes does not imply complete proof coverage.",
+    "Independent reconstruction of all source Kirby diagrams and comprehensive BananaSpace terminology verification remain incomplete, as recorded in the report files."
+  ]
+}

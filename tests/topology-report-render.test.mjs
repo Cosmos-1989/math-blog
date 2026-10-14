@@ -41,7 +41,7 @@ try {
         }));
       assert(displayScrolls.every(display => display.reachable && ['auto', 'scroll'].includes(display.overflowX)),
         `${id}/${width}: a long formula is clipped instead of scrollable`);
-      if (record.reports.some(report => report.outline === id) || ['0066', '140B', '150J', '160P', '0BLQ', '1701', '170Z', '180A', '180P', '1903', '190J'].includes(id)) {
+      if (record.reports.some(report => report.outline === id) || ['0066', '140B', '150J', '160P', '0BLQ', '1701', '170Z', '180A', '180P', '1903', '190J', '200D', '2108', '220N', '2210', '0BLY', '0F55'].includes(id)) {
         await page.screenshot({path: path.join(screenshots, `${id}-${width}.png`)});
       }
       checks.push({id, width, overflow, scrollableDisplays: displayScrolls.length,

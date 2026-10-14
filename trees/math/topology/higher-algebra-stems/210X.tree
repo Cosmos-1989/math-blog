@@ -1,0 +1,12 @@
+\title{对数窗口下界如何累积为 k log k}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{r_n,a_n\geq 0} 且 #{r_n\leq a_n}。假设有固定整数 #{C\geq 1,N_0\geq 2} 和常数 #{c>0}，使对每个整数 #{N\geq N_0} 都有}
+##{\frac{1}{C}\sum_{i=N+1}^{N+C}r_i\geq c\log N.}
+\p{则存在 #{c'>0,k_0}，使 #{\sum_{n=1}^k a_n\geq c'k\log k} 对所有 #{k\geq k_0} 成立。}
+\p{\strong{取后半段的互不相交窗口。}令 #{M=\lfloor k/2\rfloor}，从 #{M+1} 起放入 #{q=\lfloor(k-M)/C\rfloor} 个长度为 #{C} 的窗口。当 #{M\geq N_0} 时，每个窗口起点至少为 #{M}，其和至少为 #{cC\log M}。非负性及 #{a_n\geq r_n} 给出}
+##{\sum_{n=1}^k a_n\geq qcC\log M\geq c(k-M-C)\log M.}
+\p{当 #{k} 足够大，#{k-M-C\geq k/3} 且 #{\log M\geq(\log k)/2}，所以可以取 #{c'=c/6}。}
+\p{用于[稳定同伦群计数](2104)时，#{r_n} 是模 #{p} 秩，#{a_n} 是对数群阶。应用本命题必须先有带明确正常数、统一窗口长度和起始次数的窗口下界；仅知道窗口平均趋于无穷，尚未给出对数速率。}
