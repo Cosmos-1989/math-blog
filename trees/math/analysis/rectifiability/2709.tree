@@ -1,0 +1,8 @@
+\title{连续 Dirichlet 问题及解的唯一性}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tolsa，第 6 节](icm2026-tolsa)}
+
+\p{设 #{\Omega\subset\mathbb R^d} 为有界连通开集。连续 Dirichlet 问题要求对给定 #{f\in C(\partial\Omega)}，寻找 #{u\in C(\overline\Omega)}，使 #{u} 在内部[调和](270F)且边界限制为 #{f}。若对每个连续 #{f} 都有这样的解，称区域对该问题正则。}
+\p{若解存在，则唯一。为此取两个解之差 #{v}，其边界值为零。对 #{\varepsilon>0}，函数 #{v+\varepsilon|x|^2} 的 Laplace 算子严格为正，故不可能在内部取得最大值，因为内部最大点处 Hessian 半负定。它的最大值因此位于边界。令 #{\varepsilon\to 0} 得 #{v\le 0}，对 #{-v} 重复论证得 #{v\ge 0}。}

@@ -1,0 +1,10 @@
+\title{Khovanov 消解立方体的微分}
+\date{2026-10-14}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Manolescu](icm2026-manolescu)，§6.1}
+
+\p{固定一个有 #{n} 个交叉的链环平面图及交叉顺序。每个交叉有两种不交叉的局部接法，编号为 #{0,1}。选择 #{\varepsilon\in\{0,1\}^n} 后得到 #{c(\varepsilon)} 个圆周，给该顶点配模 #{A^{\otimes c(\varepsilon)}}，其中 #{A} 是[秩二 Frobenius 代数](2802)。按 #{|\varepsilon|=\sum_i\varepsilon_i} 分组取直和。}
+\p{把第 #{j} 个选择从 #{0} 改成 #{1}，会合并两个圆周或把一个圆周分裂为两个，分别使用 #{m} 或 #{\Delta}，其余因子取恒等。给这条边乘上 #{(-1)^{\varepsilon_1+\cdots+\varepsilon_{j-1}}}，把所有出边相加作为微分 #{d}。}
+\p{\strong{平方为零。}两步路径总是改变两个不同交叉 #{i,j}。对应的无符号映射由 Frobenius 恒等式交换。设 #{i<j}，先改 #{i} 会使第二条边的符号指数增加一，先改 #{j} 不改变第 #{i} 条边的符号。因此两条路径符号相反，逐面相消，得到 #{d^2=0}。}
+\p{这给出固定图的复形及 #{d^2=0} 的证明。给链环定向、加入标准分次与次数平移后，Reidemeister 变换下的不变性是另一个定理。用于标架曲面配边的整数系数版本还需指定标架归一化，并选取在链同伦范畴中相容的配边映射，使它们在同调上保持复合与恒等。消解立方体的边符号仅保证 #{d^2=0}，不能消除一般配边映射的正负号歧义；所需函子性引用 [Manolescu §6.3 所采用的 Morrison–Walker–Wedrich 版本](icm2026-manolescu)。}

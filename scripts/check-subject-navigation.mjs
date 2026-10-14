@@ -38,9 +38,19 @@ for (const id of subjects) {
 }
 
 const coverage = {};
+const plenaries = JSON.parse(read("research/icm2026-plenary.json"));
+for (const [id, leading] of Object.entries(plenaries.subjects)) {
+  const text = trees.get(id) ?? "";
+  const research = listed(text.split("\\strong{研究专题}")[1]?.split("\\strong{其他专题}")[0] ?? "");
+  if (JSON.stringify(research.slice(0, leading.length)) !== JSON.stringify(leading)) {
+    errors.push(`${id}: plenary topics must precede sectional topics in the reviewed order`);
+  }
+}
 for (const [id, slug] of [["0061", "logic"], ["0062", "algebra"], ["0063", "number-theory"], ["0064", "geometry"]]) {
   const manifest = JSON.parse(read(`research/icm2026-${slug}.json`));
-  const expected = [...manifest.papers, ...(manifest.cross_listed_reports ?? [])].map(paper => paper.outline);
+  const section = [...manifest.papers, ...(manifest.cross_listed_reports ?? [])].map(paper => paper.outline);
+  const leading = plenaries.subjects[id] ?? [];
+  const expected = [...leading, ...section];
   const text = trees.get(id) ?? "";
   const heading = "\\strong{研究专题}";
   const start = text.indexOf(heading);
@@ -56,7 +66,7 @@ for (const [id, slug] of [["0061", "logic"], ["0062", "algebra"], ["0063", "numb
   if (["logic", "algebra"].includes(slug) && (other < 0 || !listed(text.slice(other)).includes("003A"))) {
     errors.push(`${id}: categorical logic must be a separate topic`);
   }
-  coverage[slug] = { expected: expected.length, directlyListed: research.length };
+  coverage[slug] = { sectional: section.length, plenary: leading.length, directlyListed: research.length };
 }
 
 console.log(JSON.stringify({ subjects: subjects.length, coverage, errors }, null, 2));

@@ -7,6 +7,7 @@ import {listedTopics} from './subject-navigation-lib.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const catalogue = JSON.parse(read('research/icm2026-section-coverage.json'));
+const plenaries = JSON.parse(read('research/icm2026-plenary.json'));
 const trees = new Map();
 for (const file of fs.readdirSync(path.join(root, 'trees'), {recursive: true})) {
   if (!file.endsWith('.tree')) continue;
@@ -40,7 +41,9 @@ for (const section of catalogue.sections) {
   assert(start >= 0, `Missing research heading ${section.landing}`);
   const end = landing.indexOf('\n\\strong{', start + heading.length);
   const links = listedTopics(landing.slice(start + heading.length, end < 0 ? undefined : end));
-  assert.deepEqual(sorted(links), sorted(expected.map(report => report.outline)),
+  const leading = plenaries.subjects[section.landing] ?? [];
+  assert.deepEqual(links.slice(0, leading.length), leading, `${section.landing}: plenary order`);
+  assert.deepEqual(sorted(links.slice(leading.length)), sorted(expected.map(report => report.outline)),
     `${section.landing}: missing, duplicated or incorrectly grouped report`);
   for (const report of expected) {
     const paper = papers.find(paper => paper.outline === report.outline);
@@ -56,7 +59,7 @@ for (const section of catalogue.sections) {
       assert.equal(source.reference, paper.reference);
     }
   }
-  results.push({section: section.slug, speakers: speakers.length, reports: expected.length, directEntries: links.length});
+  results.push({section: section.slug, speakers: speakers.length, reports: expected.length, plenaries: leading.length, directEntries: links.length});
 }
 const numberTheory = JSON.parse(read('research/icm2026-number-theory.json'));
 assert.equal(numberTheory.papers.find(paper => paper.outline === '0H40').status, catalogue.source_gap.status);

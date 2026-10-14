@@ -130,6 +130,7 @@ The subject pages `0061` through `0074` are topic selectors, not prerequisite co
 - Put independent directions such as categorical logic and quantum logic in a separate "其他专题" group.
 - Link topics to their existing outlines. Definitions and foundation-tool outlines belong inside those topics, not at the start of a subject landing page.
 - Reuse a topic across relevant subjects. For subjects not yet fully integrated, list only available relevant topics; do not imply complete conference coverage or add dead report placeholders.
+- Put relevant plenary topics before sectional topics. Reuse their stable outlines across subjects, and record this editorial classification separately from the official sectional roster. Keep ordinary plenaries, special plenaries and section lectures distinct in source counts.
 - Preserve foundation pages and stable IDs. Removing a foundation link from a landing page must not make the underlying notes unreachable.
 
 Run `node scripts/check-subject-navigation.mjs` after changing subject navigation, in addition to the whole-site checks.

@@ -21,6 +21,7 @@ const expected = new Set([
   ...read('research/icm2026-topology-oct14.json').reports.map(p => p.outline),
   ...read('research/icm2026-topology-fibring-discs.json').reports.map(p => p.outline),
   ...read('research/icm2026-topology.json').reports.map(p => p.outline),
+  ...read('research/icm2026-plenary.json').reports.map(p => p.outline),
   '0200',
 ]);
 const reviewed = new Set(record.pages.map(p => p.id));

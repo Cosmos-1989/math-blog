@@ -1,0 +1,10 @@
+\title{整数模的二阶以上 Ext 消失}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Lurie](icm2026-lurie)，例 3.2 后的比较；[Hatcher，Algebraic Topology](https://pi.math.cornell.edu/~hatcher/AT/AT.pdf)，§3.1，印刷页 195–197}
+
+\p{对任意[阿贝尔群](00G3) #{A,B}，若 #{d\geq 2}，则 #{\operatorname{Ext}^d_{\mathbb Z}(A,B)=0}。这里 [Ext](012E) 由[投射分解](012D)计算。}
+\p{\strong{外部输入。}采用通常的选择公理，任意秩自由阿贝尔群的每个子群都是自由阿贝尔群。这里必须使用包含无限秩情形的子群自由定理；只证明有限秩情形不足以处理任意 #{A}。Hatcher §3.1，印刷页 195，正是以此定理构造任意阿贝尔群的长度一自由分解；以下引用这一输入。}
+\p{\strong{由该定理推出消失。}取以 #{A} 的元素为基的[自由模](0137) #{F_0=\bigoplus_{a\in A}\mathbb Z e_a}，由 #{e_a\mapsto a} 得到满射 #{F_0\to A}。其核 #{F_1} 由子群自由定理是自由的。由[自由模的投射性](01SD)，#{0\to F_1\to F_0\to A\to 0} 给出长度至多一的投射分解。应用 #{\operatorname{Hom}_{\mathbb Z}(-,B)} 后，复形仅在零次和一次可能非零，二次以上上同调因而为零。}
+\p{这说明由系数模间的 #{\operatorname{Ext}^d_{\mathbb Z}(A,B)} 诱导的运算在 #{d\geq 2} 时为零。[稳定运算](2501)还可来自谱态射；Lurie 例 3.2 后以 Steenrod 运算说明这些态射可以非零。上述消失结论仅涉及置于零次的两个系数模，不是 #{D(\mathbb Z)} 中任意两个复形间的高次态射消失。}

@@ -1,0 +1,61 @@
+{
+  "checked_on": "2026-10-15",
+  "coverage_record": "research/icm2026-plenary.json",
+  "publication": "Pre-release verification record. The GitHub Actions deployment associated with the release commit records publication status.",
+  "scope": {
+    "subject_pages": ["0061", "0062", "0063", "0064", "0066", "0068"],
+    "new_topics": 10,
+    "new_pages_including_references": 86,
+    "written_2026_chapters_used": 9,
+    "background_only_topics": ["2900"],
+    "note": "Relevant ordinary plenary topics precede sectional topics. Cross-listing is editorial and does not change official section counts. Special plenaries remain separately listed in the coverage record."
+  },
+  "static_build": {
+    "result": "pass",
+    "html_pages": 4867,
+    "internal_links": 722635,
+    "anchors": 4885,
+    "resource_references": 34730,
+    "legacy_xml_and_math_blog_routes": "pass"
+  },
+  "source_checks": {
+    "formula_rendering": "pass",
+    "formulas": 57405,
+    "diagrams": 48,
+    "subject_navigation": "pass",
+    "section_coverage": "pass",
+    "topic_narratives": "pass",
+    "topic_introductions": "pass",
+    "prerequisite_errors": 0,
+    "prerequisite_lexical_candidates": 168,
+    "prerequisite_target_candidates": 81,
+    "editorial_errors": 0,
+    "format_issues": 0,
+    "editorial_candidates": 1,
+    "note": "Lexical candidates require semantic review. Passing structural checks does not establish complete prerequisite coverage or prove the cited research theorems."
+  },
+  "regressions": {
+    "command": "node --test tests/plenary-coverage.test.mjs tests/plenary-math.test.mjs tests/topology-coverage.test.mjs",
+    "passed": 20,
+    "failed": 0,
+    "existing_subject_checks": ["analysis", "algebra", "geometry", "number-theory", "bourbaki"]
+  },
+  "browser": {
+    "test": "tests/plenary-render.test.mjs",
+    "base_url": "http://localhost:8083",
+    "result": "pass",
+    "xslt_disabled": true,
+    "widths": [1440, 390],
+    "page_visits": 184,
+    "formula_checks": 1684,
+    "horizontal_page_overflows": 0,
+    "scrollable_long_displays": 10,
+    "search_topics_checked": 10,
+    "legacy_topic_urls_checked": 10,
+    "visually_reviewed": ["0064 at 1440", "2300 at 1440", "270D at 390", "0066 at 390"]
+  },
+  "mathematical_review": {
+    "coverage": "Geometry and topology received separate reviews; analysis and arithmetic-pattern notes were reviewed directly against the sources.",
+    "boundaries": "The coverage record distinguishes written proofs, cited results, conjectures, and deferred branches. Ziegler's 2026 report has not been read; its topic contains verified background only."
+  }
+}

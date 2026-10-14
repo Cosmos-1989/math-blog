@@ -28,7 +28,7 @@ for (const [id, targets] of Object.entries(record.prerequisites)) {
   if (navigation && targets.length) throw new Error(`Navigation prerequisites ${id}`);
   if (navigation) delete audit.prerequisites[id];
   else audit.prerequisites[id] = targets;
-  audit.reviews[id] = {...audit.reviews[id], title, action: '拓扑报告增补',
+  audit.reviews[id] = {...audit.reviews[id], title, action: record.action ?? '拓扑报告增补',
     reason: `${title}。逐页核对定义、符号与显式前置；研究输入及证明范围见 ${path.basename(recordFile)}。`};
   required.pages[id] = {targets, sha256};
   notes.push({id, title, taxon, path: file, sha256});

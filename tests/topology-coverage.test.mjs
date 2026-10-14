@@ -9,6 +9,7 @@ import {bodyLinks} from '../scripts/note-prerequisite-lib.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const catalogue = JSON.parse(read('research/icm2026-topology.json'));
+const plenaries = JSON.parse(read('research/icm2026-plenary.json'));
 const files = new Map(fs.readdirSync(path.join(root, 'trees'), {recursive: true})
   .filter(file => file.endsWith('.tree')).map(file => [path.basename(file, '.tree'), `trees/${file}`]));
 const note = id => read(files.get(id));
@@ -20,7 +21,9 @@ test('topology lists ten proceedings chapters and two cross-listed reports exact
   assert.equal(new Set(catalogue.reports.map(report => report.outline)).size, 12);
   assert.equal(new Set(catalogue.reports.map(report => report.speaker)).size, 12);
   const body = note(catalogue.subject).split('\\strong{研究专题}')[1].split('\\strong{其他专题}')[0];
-  assert.deepEqual(sorted(listedTopics(body)), sorted(catalogue.reports.map(report => report.outline)));
+  const leading = plenaries.subjects[catalogue.subject];
+  assert.deepEqual(listedTopics(body).slice(0, leading.length), leading);
+  assert.deepEqual(sorted(listedTopics(body).slice(leading.length)), sorted(catalogue.reports.map(report => report.outline)));
   for (const report of catalogue.reports) {
     assert(note(report.outline).includes('\\taxon{Outline}'), report.outline);
     assert(note(report.reference).includes('\\taxon{Reference}'), report.reference);
