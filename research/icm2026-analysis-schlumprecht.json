@@ -1,0 +1,764 @@
+{
+  "date": "2026-10-14",
+  "report": {
+    "speaker": "Thomas Schlumprecht",
+    "title": "Asymptotic Properties of Banach Spaces",
+    "outline": "1000",
+    "reference": "icm2026-schlumprecht",
+    "question": "如何用有限余维博弈和弱零树刻画Banach空间的渐近几何，并将其转成线性嵌入、普适性、粗几何障碍及因子分解？",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1799519",
+    "doi": "10.1137/25M1799519",
+    "source_version": "SIAM ICM2026 Volume 4, pp.770–784; published online 2026-07-13; accessed 2026-10-14.",
+    "status": "integrated-and-locally-verified; research-proof-limits-recorded",
+    "full_text_available": true,
+    "full_text_read_this_turn": true,
+    "reading_scope": "出版社HTML摘要、全部§§1–9、显示公式、证明与概要、全部41项参考文献、版权和版本信息已读；未另读主文PDF，未检查§3插图像素。补充原论文只读sources所列范围，未称全部参考文献全文已读。",
+    "sources": [
+      {
+        "url": "https://epubs.siam.org/doi/10.1137/25M1799519",
+        "title": "Asymptotic Properties of Banach Spaces",
+        "author": "Thomas Schlumprecht",
+        "version": "2026-07-13; pp.770–784; DOI 10.1137/25M1799519",
+        "access": "Publisher full HTML, 2026-10-14",
+        "reading_status": "full_text_read",
+        "full_document_read": true,
+        "read_scope": "Abstract; all §§1–9 and displayed mathematics/proofs; all 41 bibliography entries; Copyright and History. No separate PDF or figure-pixel reading.",
+        "license": "CC BY 4.0 explicitly verified in Copyright block; copyright International Mathematical Union.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://arxiv.org/abs/math/0002219v1",
+        "title": "Trees and Branches in Banach Spaces",
+        "author": "Edward Odell; Thomas Schlumprecht",
+        "version": "v1, 2000-02-25",
+        "access": "Metadata, abstract and PDF text, 2026-10-14",
+        "reading_status": "targeted_sections_and_statements_read",
+        "full_document_read": false,
+        "read_scope": "Abstract and introduction; §2 game/tree definitions, full-subtree definition, epsilon 2^-j fattening and discrete-product closure; Proposition 2.3 statement and opening proof passages; Theorem 3.3 statement, remarks and selected proof passages; selected Theorem 4.1 proof passages. Abstract explicitly supplies separable reflexive hypothesis. Not a full-paper proof audit."
+      },
+      {
+        "url": "https://arxiv.org/abs/math/0507509v2",
+        "title": "A Universal Reflexive Space for the Class of Uniformly Convex Banach Spaces",
+        "author": "Edward Odell; Thomas Schlumprecht",
+        "version": "v2, 2007-01-03",
+        "access": "Metadata and PDF text, 2026-10-14",
+        "reading_status": "targeted_sections_read",
+        "full_document_read": false,
+        "read_scope": "Abstract, §1 through Theorem1.7 and initial §2 including Theorem2.1, Definitions2.2–2.3 and Proposition2.4 opening. Checked 1<=q<=p<=infty, global separability convention and separate-branch tree formulation. No full proof reading."
+      },
+      {
+        "url": "https://arxiv.org/abs/1809.09423v2",
+        "title": "Strategically Reproducible Bases and the Factorization Property",
+        "author": "Richard Lechner; Pavlos Motakis; Paul F. X. Müller; Thomas Schlumprecht",
+        "version": "v2, 2018-09-26",
+        "access": "PDF text, 2026-10-14",
+        "reading_status": "targeted_definitions_and_theorem_read",
+        "full_document_read": false,
+        "read_scope": "Abstract/introduction and §2 opening definitions; Definitions3.3–3.4; selected Remark3.5 passages; Definitions3.9–3.10 and Remark3.11; Theorem3.12 and Lemma3.14 statement plus opening proof. No full-paper reading; no claim of full proof of strategic factorization."
+      }
+    ],
+    "deferred": [
+      "博弈树对应、Zippin超空间构造、分块原理及子空间适应分解引理为外部研究输入；100K仅必要性在本地证明，充分性引用。",
+      "有限渐近结构紧性、Krivine定理、一般(U,V)树估计及任意无条件基上的常数统一命题未重证；不照抄报告命题2.4的拼接概要。",
+      "Szlenk导数、可数序数分层及定理5.5–5.6未展开，保留为研究分支。",
+      "Tsirelson构造、Hamming集中与一般粗普适否定的深层证明引用；100S从集中引理作完整反证。",
+      "Lp子空间的三个研究定理引用；不把无l2副本时嵌入lp加强成空间同构于lp。",
+      "非反身空间w*-UTP、FDD转基的细节、primary/accordion命题、多参数Haar及Hardy系统未展开。",
+      "策略可再生采用原论文完整博弈；因子分解定理引用，补对角逆和Neumann误差修正。",
+      "父任务负责全局注册、0068入口、manifest/sync、中央构建；本任务不提交推送。"
+    ]
+  },
+  "entries": [
+    [
+      "1000",
+      [],
+      "连续叙事综述；导航不作硬前置。"
+    ],
+    [
+      "1001",
+      [
+        "00M6",
+        "00GL",
+        "00MK",
+        "00M4",
+        "1043"
+      ],
+      "Schauder基、连续坐标与基常数；投影结论由1043证明。"
+    ],
+    [
+      "1002",
+      [
+        "00M6",
+        "00M4",
+        "1043"
+      ],
+      "有限维分解及区间投影。"
+    ],
+    [
+      "1003",
+      [
+        "1002"
+      ],
+      "块与跳块序列；基本序列性质就地证明。"
+    ],
+    [
+      "1004",
+      [
+        "00M6",
+        "1001",
+        "00M4",
+        "00ER"
+      ],
+      "序列等价及同构嵌入，区别等价常数与失真。"
+    ],
+    [
+      "1005",
+      [
+        "00M6",
+        "00D7",
+        "00DB",
+        "00MK",
+        "00M9"
+      ],
+      "闭有限余维子空间及有限泛函核表示。"
+    ],
+    [
+      "1006",
+      [
+        "00M6",
+        "00MK",
+        "00MJ"
+      ],
+      "弱零树、分支和节点依赖的满子树。"
+    ],
+    [
+      "1007",
+      [
+        "00M6",
+        "1005"
+      ],
+      "渐近博弈的策略量词。"
+    ],
+    [
+      "1008",
+      [
+        "00M6",
+        "1007",
+        "00MN",
+        "1004"
+      ],
+      "有限长度渐近lp；常数统一但策略可依赖长度。"
+    ],
+    [
+      "1009",
+      [
+        "00M6",
+        "1006",
+        "00MN",
+        "1004"
+      ],
+      "无限高lp树性质与统一常数。"
+    ],
+    [
+      "100A",
+      [
+        "00M6",
+        "1004"
+      ],
+      "可求和扰动的上下界直接证明。"
+    ],
+    [
+      "100B",
+      [
+        "00M6",
+        "00MN",
+        "0A3N",
+        "00ER"
+      ],
+      "lp直和、c0直和及逐坐标完备性。"
+    ],
+    [
+      "100C",
+      [
+        "100B",
+        "1003"
+      ],
+      "不交块范数恒等式。"
+    ],
+    [
+      "100D",
+      [
+        "00M6",
+        "00MK",
+        "00M4",
+        "1041"
+      ],
+      "典范二次对偶映射与反身性；等距性链到本地证明。"
+    ],
+    [
+      "100E",
+      [
+        "00M6",
+        "100D",
+        "1018",
+        "1019"
+      ],
+      "超反身性及引用的一致凸重赋范等价。"
+    ],
+    [
+      "100F",
+      [
+        "00M6",
+        "00MQ"
+      ],
+      "型与余型及Hilbert符号平均计算。"
+    ],
+    [
+      "100G",
+      [
+        "00M6",
+        "1006",
+        "1005",
+        "00M9",
+        "00MK"
+      ],
+      "商空间有限维导致弱零序列趋近有限余维子空间。"
+    ],
+    [
+      "100H",
+      [
+        "1002",
+        "1006",
+        "1003",
+        "00M9"
+      ],
+      "滑动截断递归得到同一树分支和近似跳块。"
+    ],
+    [
+      "100I",
+      [
+        "00M6",
+        "00MK",
+        "0025",
+        "00E5",
+        "00EI",
+        "1007",
+        "1006"
+      ],
+      "采用原论文命题2.3的eps2^-j和离散积闭包版本。"
+    ],
+    [
+      "100J",
+      [
+        "00M6",
+        "0025",
+        "100I",
+        "00EI",
+        "1002",
+        "1014",
+        "1003",
+        "1015",
+        "100D"
+      ],
+      "采用原论文定理3.3，输出eps与输入delta分别量化。"
+    ],
+    [
+      "100K",
+      [
+        "00M6",
+        "0025",
+        "100D",
+        "1004",
+        "100B",
+        "1009",
+        "100J",
+        "100H",
+        "100C",
+        "100A"
+      ],
+      "可分反身lp和嵌入判据；充分性引用，必要性本地证明。"
+    ],
+    [
+      "100L",
+      [
+        "00M6",
+        "1006"
+      ],
+      "将弱零序列变成末坐标树，推出子列条件。"
+    ],
+    [
+      "100M",
+      [
+        "00M6",
+        "1002",
+        "1003",
+        "1006"
+      ],
+      "块上下估计和树版本；指数次序由全一系数检验。"
+    ],
+    [
+      "100N",
+      [
+        "00M6",
+        "1004",
+        "0025",
+        "100D",
+        "100E",
+        "100M",
+        "100B"
+      ],
+      "普适性研究定理，保留深层输入；解释正确的参数合并。"
+    ],
+    [
+      "100O",
+      [
+        "00EK"
+      ],
+      "粗嵌入及等粗嵌入的共同控制函数。"
+    ],
+    [
+      "100P",
+      [
+        "00MN",
+        "00MQ",
+        "00EK"
+      ],
+      "坐标Hamming图的路径及带标签Hilbert模型。"
+    ],
+    [
+      "100Q",
+      [
+        "100D",
+        "1008",
+        "100W",
+        "1003",
+        "1004",
+        "00M6"
+      ],
+      "Tsirelson例子引用；有限渐近c0与无限副本区分。"
+    ],
+    [
+      "100R",
+      [
+        "100P",
+        "100Q",
+        "00FU"
+      ],
+      "Hamming集中研究引理；常数独立于k。"
+    ],
+    [
+      "100S",
+      [
+        "100O",
+        "100P",
+        "100R"
+      ],
+      "由图路径Lipschitz界与集中定理证明l2不粗嵌入。"
+    ],
+    [
+      "100T",
+      [
+        "00M6",
+        "100O",
+        "100F"
+      ],
+      "不存在无限维粗普适子空间的深层结果引用。"
+    ],
+    [
+      "100U",
+      [
+        "00Q6",
+        "00MN",
+        "1004",
+        "00M4",
+        "0A68",
+        "00D7",
+        "00Q3"
+      ],
+      "Kadets-Pelczynski二分；补子空间定义与范数比较。"
+    ],
+    [
+      "100V",
+      [
+        "00Q6",
+        "1006",
+        "1004",
+        "100B",
+        "00MN"
+      ],
+      "小Lp子空间的混合树估计二分，主定理引用。"
+    ],
+    [
+      "100W",
+      [
+        "1001",
+        "1002",
+        "00M6"
+      ],
+      "无条件基与无条件FDD的统一乘子约定。"
+    ],
+    [
+      "100X",
+      [
+        "00M6",
+        "1006",
+        "1001",
+        "100W"
+      ],
+      "无条件树性质，常数条件明示。"
+    ],
+    [
+      "100Y",
+      [
+        "00M6",
+        "0025",
+        "100D",
+        "100X",
+        "100W",
+        "1004"
+      ],
+      "可分反身UTP嵌入定理及FDD转基结论引用。"
+    ],
+    [
+      "100Z",
+      [
+        "00M6",
+        "00M4",
+        "1004"
+      ],
+      "算子因子分解及恒等因子分解产生可补副本。"
+    ],
+    [
+      "1010",
+      [
+        "00M6",
+        "00M4",
+        "100Z"
+      ],
+      "Neumann级数修正近似因子分解。"
+    ],
+    [
+      "1011",
+      [
+        "1001",
+        "00MK",
+        "1005",
+        "00MJ",
+        "1004",
+        "00M6"
+      ],
+      "原论文Definition3.4完整博弈，含双侧距离、非负权及sqrt常数。"
+    ],
+    [
+      "1012",
+      [
+        "1011",
+        "1001",
+        "100Z"
+      ],
+      "原论文Theorem3.12：对角分解假设和lambda C^2 K(delta)。"
+    ],
+    [
+      "1013",
+      [
+        "100W",
+        "1001",
+        "00M4",
+        "100Z",
+        "00M6",
+        "00ER"
+      ],
+      "实无条件基有界乘子及大对角可逆性直接证明。"
+    ],
+    [
+      "1014",
+      [
+        "1002",
+        "100B"
+      ],
+      "分块保留FDD及投影常数；区别重赋范。"
+    ],
+    [
+      "1015",
+      [
+        "00M6",
+        "1001",
+        "00MK",
+        "1002"
+      ],
+      "收缩性单独定义，补坐标对偶展开和弱零块论证。"
+    ],
+    [
+      "1016",
+      [
+        "00M6",
+        "1001",
+        "1002",
+        "100B",
+        "00ER"
+      ],
+      "有界完备性单独定义，lp正例与c0反例。"
+    ],
+    [
+      "1017",
+      [
+        "00Q6",
+        "00MN",
+        "1004",
+        "00D7"
+      ],
+      "Johnson-Odell无l2副本则嵌入lp定理，避免把嵌入写成等于lp。"
+    ],
+    [
+      "1018",
+      [
+        "00M6",
+        "1004"
+      ],
+      "有限可表示性独立定义。"
+    ],
+    [
+      "1019",
+      [
+        "00M6",
+        "00M1"
+      ],
+      "一致凸性独立定义。"
+    ],
+    [
+      "1040",
+      [
+        "00M1",
+        "00D7",
+        "00M4",
+        "0A37",
+        "00GT"
+      ],
+      "父任务提供实赋范空间Hahn-Banach完整Zorn证明。"
+    ],
+    [
+      "1041",
+      [
+        "00M1",
+        "00M4",
+        "00MK",
+        "00D7",
+        "1040"
+      ],
+      "父任务提供范数对偶及J等距性本地证明。"
+    ],
+    [
+      "1042",
+      [
+        "00M6",
+        "00M4",
+        "0AC5"
+      ],
+      "父任务提供Banach开映射定理本地Baire证明。"
+    ],
+    [
+      "1043",
+      [
+        "00M6",
+        "00M9",
+        "0A37",
+        "1042",
+        "00ER",
+        "00MK"
+      ],
+      "父任务提供FDD/Schauder坐标投影有界性；无前瞻依赖。"
+    ],
+    [
+      "icm2026-schlumprecht",
+      [],
+      "署名、版本、DOI、CC BY 4.0与改编说明。"
+    ]
+  ],
+  "proofs_written": [
+    "100A",
+    "100C",
+    "100G",
+    "100H",
+    "100K",
+    "100L",
+    "100P",
+    "100S",
+    "1010",
+    "1013",
+    "1040",
+    "1041",
+    "1042",
+    "1043"
+  ],
+  "proofs_with_external_inputs": [
+    "100K",
+    "100S"
+  ],
+  "research_statements_without_local_proof": [
+    "100I",
+    "100J",
+    "100N",
+    "100Q",
+    "100R",
+    "100T",
+    "100U",
+    "100V",
+    "100Y",
+    "1012",
+    "1017"
+  ],
+  "proof_classification_policy": "external_inputs为proofs_written子集；research_statements_without_local_proof与proofs_written不相交。100K主等价的充分性外引、必要性本地证明；其他定义内的短计算不冒充研究定理证明。",
+  "proof_boundaries": {
+    "1012": "策略再生和统一对角分解蕴含因子分解为外引研究定理，保留K(delta)和lambda C^2。",
+    "1013": "对实无条件基用符号凸组合得到乘子界，再构造逐坐标逆。",
+    "1040": "父任务写入并复核，本地Zorn延拓证明。",
+    "1041": "父任务写入并复核，调用已证明1040。",
+    "1042": "父任务写入并复核，调用站内Baire定理。",
+    "1043": "父任务写入并复核，序列Banach空间及开映射证明。",
+    "100K": "充分性引用原论文Theorem4.1；必要性由100H/100C/100A本地推导。",
+    "100N": "主存在定理引用；参数松弛与可数和解释不作完整构造证明。",
+    "100R": "集中定理引用，常数统一于k；未把原文弱极限概要改称证明。",
+    "100S": "调用100R集中定理，使用100P逐坐标图路径和坐标标签Hilbert映射完整反证。"
+  },
+  "source_discrepancies": [
+    {
+      "location": "§2.1.2",
+      "issue": "型公式平均幂次、常数与符号排版错误。",
+      "resolution": "100F给出标准有限符号平均定义及Hilbert验证。"
+    },
+    {
+      "location": "§2.2 Proposition2.1 / §3 Theorem3.1",
+      "issue": "报告使用任意epsilon_j与范数积闭包，原论文使用epsilon2^-j与离散积闭包；输入扰动不可与输出误差无条件识别。",
+      "resolution": "100I/100J明确采用已定点核查的原论文Proposition2.3/Theorem3.3版本，区分闭包拓扑和delta量词；不把两版逐字等同。"
+    },
+    {
+      "location": "§2.2 full subtree",
+      "issue": "统一M限制过强，一般剪枝后各节点的后继集不同。",
+      "resolution": "1006采用原论文前缀闭且每个节点有无限后继的定义。"
+    },
+    {
+      "location": "Theorem4.2 and Theorem5.2",
+      "issue": "陈述略去全文约定的可分性；可数FDD目标必可分。",
+      "resolution": "100K和100N明确限定可分空间，并核对原论文摘要/全文约定。"
+    },
+    {
+      "location": "§5 (5.1) and Prus parameter sum",
+      "issue": "一处p<=q与下lp上lq方向不符，p_n趋1/q_n趋无穷亦与覆盖方向相反。",
+      "resolution": "100M以全一向量检验q<=p；100N取p_n=n+2、q_n=1+1/(n+1)。"
+    },
+    {
+      "location": "§6 after Lemma6.2",
+      "issue": "sum e_(n_j)测集合差，不能统一控制坐标Hamming距离。",
+      "resolution": "100P使用e_(j,n_j)，精确得到sqrt(2d_H)；100S用Hamming图路径得到Lip<=omega(sqrt2)。"
+    },
+    {
+      "location": "§7 after Theorem7.2",
+      "issue": "嵌入lp不自动推出同构于lp。",
+      "resolution": "1017只保留原定理嵌入结论，不复述过强三分陈述。"
+    },
+    {
+      "location": "§9 Theorem9.2 / strategic game",
+      "issue": "定理缺T的假设和对角因子分解输入，结论按字面连T=0也允许；报告的尾博弈与原论文一般博弈不同。",
+      "resolution": "1011采用原论文Definition3.4；1012采用Theorem3.12并保留统一对角因子分解假设。不重述projectional/primary缺条件版本。"
+    }
+  ],
+  "reused_note_ids": [
+    "0025",
+    "00D7",
+    "00DB",
+    "00E5",
+    "00EI",
+    "00EK",
+    "00ER",
+    "00FU",
+    "00GL",
+    "00GT",
+    "00M1",
+    "00M4",
+    "00M6",
+    "00M9",
+    "00MJ",
+    "00MK",
+    "00MN",
+    "00MQ",
+    "00Q3",
+    "00Q6",
+    "0A37",
+    "0A3N",
+    "0A68",
+    "0AC5"
+  ],
+  "deduplication": {
+    "method": "全trees标题与正文检索Schauder、FDD、有限维分解、反身/自反、超反身、一致凸、UTP、型余型、Hamming、粗嵌入、Hahn-Banach、开映射。逐读所复用基础页标题/正文。",
+    "decisions": [
+      "未找到已有Schauder/FDD/反身/UTP定义，新增主题原子页。",
+      "00MH为代数对偶，不用作连续对偶；采用00MK并明确算子范数。",
+      "有限维弱收敛到范数收敛用00M9。",
+      "父任务提供1040–1043，记录为本专题条目；不宣称阅读MIT讲义证明。",
+      "商向量空间为00DB，非00D9。"
+    ]
+  },
+  "terminology": {
+    "banana_space": {
+      "verified": false,
+      "access": "No successful terminology verification in this task."
+    },
+    "choices": {
+      "reflexive": "反身",
+      "superreflexive": "超反身",
+      "FDD": "有限维分解",
+      "weakly null tree": "弱零树",
+      "shrinking": "收缩",
+      "boundedly complete": "有界完备",
+      "strategically reproducible": "策略可再生"
+    },
+    "confirmation_scope": "沿用站内与本文明确给定定义；不宣称已核香蕉空间。"
+  },
+  "integration_notes": [
+    "仅写trees/math/analysis/asymptotic-banach/1000–1019.tree（36进制连续ID，共46页）、指定文献页和本JSON；未改旧文件、0068、共享脚本或全局manifest。",
+    "父任务额外提供1040–1043四个基础证明，共51条entries（49原子页、1综述、1文献页）；父任务的前瞻应用链接不登记为硬前置。",
+    "1000为9段连续数学叙事，9段均有自然链接，无ul/ol目录；已修正“原子空间”为“原来的子空间”，移除末段未展开术语清单。",
+    "1001/1002链到1043；100D链到1041；1015/1016分别定义收缩与有界完备；1018/1019分别定义有限可表示与一致凸。",
+    "全部51条文件已存在，已按父任务最终依赖表纳入1040–1043。无提交或推送；中央构建与全局注册由父任务执行。"
+  ],
+  "agent_verification": {
+    "status": "scoped-source-checks-passed; ready-for-parent-integration",
+    "record_json_parse_checked": true,
+    "entry_count_checked": 51,
+    "owned_tree_files": 51,
+    "new_atomic_pages": 49,
+    "agent_written_atomic_pages": 45,
+    "parent_written_atomic_pages": 4,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "all_owned_entries_reachable_from_outline": true,
+    "all_registered_prerequisites_linked_in_body": true,
+    "local_prerequisite_cycles": 0,
+    "outline_hard_dependencies": 0,
+    "proof_classification_disjointness_checked": true,
+    "theorem_lemma_proposition_corollary_count": 25,
+    "proof_pages": 14,
+    "cited_result_pages": 11,
+    "formulas_katex_checked": 938,
+    "katex_formula_errors": 0,
+    "broken_links": 0,
+    "editorial_style_errors": 0,
+    "overview_paragraphs": 9,
+    "overview_linked_paragraphs": 9,
+    "overview_has_catalogue": false,
+    "format_pending_parent_pages": [
+      "1041",
+      "1042",
+      "1043"
+    ],
+    "manual_review_scope": "逐页核查1000–1019的数学假设、直接证明、依赖语义与引用边界；1040–1043由父任务写入后本代理亦全文复读。补充原论文只核对sources所列版本和局部段落。",
+    "prerequisite_lexical_scan": "运行check-note-prerequisites.mjs --report /tmp/schlumprecht-prerequisites.json；报告中10xx直接术语候选均已补链接。全局命令因0068历史snapshot待父任务同步而返回1，非本专题断链。",
+    "full_report_body_read": true,
+    "global_build_run": false,
+    "scoped_forester_build_run": false,
+    "global_sync_run": false,
+    "commit_or_push_run": false,
+    "whole_report_self_contained": false,
+    "verification_limit": "938个源公式KaTeX通过；未自行执行Forester构建或浏览器渲染。全站注册、快照、父任务1041–1043数学命令空格规范化和中央构建由父任务处理；深层定理仍为引用。"
+  }
+}

@@ -1,0 +1,13 @@
+\title{Banach 空间族的 ℓᵖ 直和}
+\date{2026-10-14}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Schlumprecht，§4、§7](icm2026-schlumprecht)}
+
+\p{设 #{(E_n)_{n\ge 1}} 是实 [Banach 空间](00M6)，#{1\le p<\infty}。它们的 #{\ell^p} 直和定义为}
+##{\left(\bigoplus_{n=1}^{\infty}E_n\right)_p
+=\left\{x=(x_n):x_n\in E_n,\ \sum_n\|x_n\|_{E_n}^p<\infty\right\},
+\qquad \|x\|=\left(\sum_n\|x_n\|_{E_n}^p\right)^{1/p}.}
+\p{取 #{E_n=\mathbb R} 就得到[标量序列空间](00MN)。取每个 #{E_n=E} 时记作 #{\ell^p(E)}；例如 #{\ell^p(\ell^2)} 允许每个外层坐标本身是一条平方可和序列。有限直和 #{E\oplus_p F} 由同一公式定义。}
+\p{三角不等式由[序列版 Minkowski 不等式](0A3N)得到。完备性可逐坐标验证：若 #{x^{(m)}} 是 [Cauchy 序列](00ER)，各坐标收敛到 #{x_n\in E_n}。固定足够大的 #{m}，对任意有限 #{N} 把 #{r\to\infty} 代入 #{\sum_{n\le N}\|x_n^{(m)}-x_n^{(r)}\|^p\le\varepsilon^p}，再令 #{N\to\infty}，得 #{\|x^{(m)}-x\|\le\varepsilon}，并由三角不等式得 #{x} 属于该直和。}
+\p{若各 #{E_n} 有限维，坐标空间构成[有限维分解](1002)，有限集投影的范数至多一。另定义 #{(\bigoplus E_n)_{c_0}} 为满足 #{\|x_n\|\to 0} 的序列，范数为 #{\sup_n\|x_n\|}。要求趋零才能使坐标截断收敛；全体有界序列构成的 #{\ell^\infty} 直和通常没有这个可数 FDD。}

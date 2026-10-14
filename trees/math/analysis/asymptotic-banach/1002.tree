@@ -1,0 +1,12 @@
+\title{有限维分解与区间投影}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Schlumprecht，§3](icm2026-schlumprecht)}
+
+\p{设 #{Z} 是实 [Banach 空间](00M6)。一列非零有限维子空间 #{\mathcal E=(E_n)_{n\ge 1}} 称为有限维分解（FDD），如果每个 #{z\in Z} 有唯一的范数收敛表示 #{z=\sum_{n=1}^{\infty}z_n}，其中 #{z_n\in E_n}。记坐标投影 #{P_n^{\mathcal E}z=z_n}。[坐标投影有界性定理](1043)保证部分和投影是[有界线性算子](00M4)，且 #{K=\sup_N\|\sum_{n=1}^NP_n^{\mathcal E}\|<\infty}。}
+\p{对有限集 #{A\subset\mathbb N}，置 #{P_A^{\mathcal E}=\sum_{n\in A}P_n^{\mathcal E}}。特别地，区间投影满足}
+##{P_{\{m,\ldots,n\}}^{\mathcal E}=P_{\{1,\ldots,n\}}^{\mathcal E}-P_{\{1,\ldots,m-1\}}^{\mathcal E},\qquad
+\|P_{\{m,\ldots,n\}}^{\mathcal E}\|\le 2K.}
+\p{约定空集投影为零。常数 #{B=\sup_{m\le n}\|P_{\{m,\ldots,n\}}^{\mathcal E}\|} 称区间投影常数；#{B=1} 时称双单调。所有有限集投影的一致有界性则是更强的[无条件性](100W)。}
+\p{一维分解 #{E_n=\operatorname{span}\{e_n\}} 对应 Schauder 基；一般 FDD 允许每个坐标块具有不同维数和不同范数。将相邻块合并得到[分块](1014)，而不改变空间 #{Z} 本身。}

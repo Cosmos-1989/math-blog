@@ -9,8 +9,17 @@ if (!process.env.PLAYWRIGHT_MODULE) throw new Error('Set PLAYWRIGHT_MODULE to an
 const {chromium} = await import(process.env.PLAYWRIGHT_MODULE);
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const manifest = read('research/icm2026-analysis.json');
-const samples = manifest.reports.flatMap(report => {
+const requestedOutlines = process.env.ANALYSIS_OUTLINES?.split(',').filter(Boolean);
+if (requestedOutlines) {
+  for (const id of requestedOutlines) {
+    assert(manifest.reports.some(report => report.outline === id), `Unknown analysis overview: ${id}`);
+  }
+}
+const reports = manifest.reports.filter(report => !requestedOutlines || requestedOutlines.includes(report.outline));
+const samples = reports.flatMap(report => {
   const record = read(report.record);
+  // New report batches exercise every note, including prerequisite definitions.
+  if (/^1[0-2]/.test(report.outline)) return record.entries.map(([id]) => id);
   return [report.outline, report.reference, ...(record.proofs_written ?? []).slice(0, 3),
     ...(record.research_statements_without_local_proof ?? []).slice(0, 2)];
 });
@@ -20,7 +29,9 @@ const calculationPages = ['0R0N', '0R0W', '0R17', '0S0I', '0S0R', '0S0Y', '0T0X'
   '0Y02', '0Y04', '0Y05', '0Y06', '0Y07', '0Y08',
   '0X08', '0X0C', '0X0G', '0X0H', '0X0N', '0X0Q', '0X0W', '0X12', '0X17',
   '0Z0F', '0Z0O', '0Z0U', '0Z12', '0Z13', '0Z16', '0Z17', '0Z18', '0Z1D', '0Z1E'];
-const pages = [...new Set([manifest.subject, ...samples, ...calculationPages])];
+const pages = [...new Set([manifest.subject, ...samples, ...(requestedOutlines ? [] : calculationPages)])];
+const proofScreenshots = new Set(reports.filter(report => /^1[0-2]/.test(report.outline))
+  .flatMap(report => (read(report.record).proofs_written ?? []).slice(0, 2)));
 const base = process.env.PREVIEW_URL ?? 'http://127.0.0.1:8083/';
 const screenshots = fs.mkdtempSync(path.join(os.tmpdir(), 'analysis-render-'));
 const browser = await chromium.launch({headless: true, args: ['--disable-blink-features=XSLT'],
@@ -44,19 +55,19 @@ try {
       const geometry = await page.evaluate(() => ({width: document.documentElement.clientWidth,
         scroll: document.documentElement.scrollWidth}));
       assert(geometry.scroll <= geometry.width + 1, `${id}/${width}: horizontal overflow`);
-      const report = manifest.reports.find(report => report.outline === id);
+      const report = reports.find(report => report.outline === id);
       if (report) {
         assert(await page.locator(`article a[href="/${report.reference}/"]`).count(), `${id}: missing source link`);
         assert(await body.locator('p').count() >= 5, `${id}: incomplete narrative`);
         await page.screenshot({path: path.join(screenshots, `${id}-${width}.png`), fullPage: false});
       }
-      if (['0X0C', '0Y07', '0Z17'].includes(id)) {
+      if (['0X0C', '0Y07', '0Z17'].includes(id) || proofScreenshots.has(id)) {
         await page.screenshot({path: path.join(screenshots, `${id}-${width}.png`), fullPage: false});
       }
       checks.push({id, width, formulas: await body.locator('.katex').count(),
         overflow: geometry.scroll - geometry.width});
     }
-    for (const report of manifest.reports) {
+    for (const report of reports) {
       await page.goto(`${base}${manifest.subject}/`);
       await page.locator(`article > section > details > .tree-content a[href="/${report.outline}/"]`).click();
       await page.waitForURL(`${base}${report.outline}/`);

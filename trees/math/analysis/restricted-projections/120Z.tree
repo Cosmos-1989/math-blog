@@ -1,0 +1,11 @@
+\title{四维二次曲面上的直线聚集障碍}
+\date{2026-10-14}
+\taxon{Example}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§6 式 (6.10) 后；局部几何计算}
+
+\p{考虑 #{Q=\{(x,y,z,w)\in\mathbb R^4:xy-zw=1\}}。令 #{A=\begin{pmatrix}x&z\\w&y\end{pmatrix}}，则 #{Q} 就是 #{\det A=1}。若 #{N\ne 0} 为满足 #{\operatorname{tr}N=\det N=0} 的二阶矩阵，则 #{A+tAN} 是 #{Q} 内的一条直线，因为}
+##{\det(A+tAN)=\det A\,\det(I+tN)=1+t\operatorname{tr}N+t^2\det N=1.}
+\p{例如 #{N=\begin{pmatrix}0&1\\0&0\end{pmatrix}} 给出经过每个 #{A\in Q} 的显式直线。取固定半径 #{R>3} 的有界区域，#{Q} 的 #{\delta} 邻域在其中体积为 #{O_R(\delta)}。确实，#{xy-zw=1} 蕴含四个坐标中至少一个绝对值不小于 #{1/\sqrt 2}；在相应坐标片中，可解出另一个坐标，例如 #{y=(1+zw)/x}。有界区域内分母远离零，函数导数有界。每张图的 #{\delta} 邻域包含于厚度 #{C_R\delta} 的竖直带，应用 [Fubini 定理](0H53)积分，有限张图合并得到体积界。}
+\p{报告给出的研究反例在这样的固定有界区域中选取约 #{\delta^{-5/2}} 根[管](120H)，满足四维相应的[凸 Katz–Tao 非集中条件](120Y)，而其并集仍位于 #{Q} 的 #{O(\delta)} 邻域。该管族的选取及公理验证引用报告；上面的直线公式本身不完成这项选取。四维单位管体积约 #{\delta^3}，故总体积之和约 #{\delta^{1/2}}，并集却只有 #{O(\delta)}。}
+\p{这阻碍了仅由凸集非集中推出近似可加体积的高维推广，促使将测试对象扩大为[有界复杂度半代数集](1216)。固定有界区域必须与曲面相交；#{xy-zw\leq(x^2+y^2+z^2+w^2)/2} 说明 #{Q\cap B(0,1)=\varnothing}。}

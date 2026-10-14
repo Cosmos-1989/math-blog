@@ -1,0 +1,13 @@
+\title{ℓ² 不能粗嵌入 Tsirelson 空间}
+\date{2026-10-14}
+\taxon{Corollary}
+\author{author}
+\meta{source}{[Schlumprecht，推论6.3](icm2026-schlumprecht)；以下从集中引理推导}
+
+\p{Hilbert 空间 #{H=\ell^2(\mathbb N\times\mathbb N)} 不能[粗嵌入](100O)满足[Hamming 集中定理](100R)的 #{T^*}。重排可数坐标使 #{H} 等距同构于通常的 #{\ell^2}。}
+\p{\strong{证明。}假设 #{F:H\to T^*} 是粗嵌入，具有控制函数 #{\rho,\omega}。令 #{f_k=F\circ\Phi_k}，其中 #{\Phi_k} 为[带坐标标签的 Hilbert 模型](100P)。相邻 Hamming 顶点的 Hilbert 距离为 #{\sqrt 2}，所以像距离至多 #{\omega(\sqrt 2)}。任意两点之间有长度 #{d_H(m,n)} 的逐坐标路径，因此三角不等式给出}
+##{\|f_k(m)-f_k(n)\|\le \omega(\sqrt 2)d_H(m,n).}
+\p{故 #{\operatorname{Lip}(f_k)\le\omega(\sqrt 2)}，此界独立于 #{k}，无须假设 #{\omega} 线性或次可加。由集中定理选无限集 #{M_k}，使 #{\operatorname{diam}f_k([M_k]^k)\le K\omega(\sqrt 2)}。}
+\p{从 #{M_k} 中依次取 #{2k} 个数，以前 #{k} 个和后 #{k} 个组成元组 #{m,n}，则 #{d_H(m,n)=k}。粗嵌入的下界与模型距离公式给出}
+##{\rho(\sqrt{2k})\le\|F\Phi_k(m)-F\Phi_k(n)\|\le K\omega(\sqrt 2).}
+\p{当 #{k\to\infty} 时左端趋于无穷，右端固定，矛盾。}

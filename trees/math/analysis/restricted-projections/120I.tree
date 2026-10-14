@@ -1,0 +1,9 @@
+\title{关联第二矩控制着色并的体积}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{\mathbb T} 为有限族，#{Y(T)} 为有限体积的[着色](120H)，且 #{A=\sum_T|Y(T)|>0}。则}
+##{|U(\mathbb T,Y)|\geq\frac{A^2}{\sum_{T,T'\in\mathbb T}|Y(T)\cap Y(T')|}.}
+\p{\strong{证明。}重数函数 #{m_Y} 在并集之外为零，且 #{\int m_Y=A}。由 [Cauchy–Schwarz 不等式](004S)，#{A^2\leq|U|\int m_Y^2}。展开有限和，#{\int m_Y^2=\sum_{T,T'}\int\mathbf 1_{Y(T)}\mathbf 1_{Y(T')}=\sum_{T,T'}|Y(T)\cap Y(T')|}，代入即得结论。因族有限且各着色体积有限，所有积分有限，分母由 #{A>0} 可知非零。}
+\p{特别地，若几乎处处 #{m_Y\leq M}，则 #{\int m_Y^2\leq M\int m_Y}，于是 #{|U|\geq A/M}。要得到强体积下界，关键是控制重数或两两重叠；仅知道管的总数并不足够。}

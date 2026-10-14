@@ -1,0 +1,12 @@
+\title{各向异性伸缩的 Fourier 对偶尺度}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§3.1；采用站内角频率约定}
+
+\p{设 #{\phi\in\mathcal S(\mathbb R^n)} 为 [Schwartz 函数](0H4F)，#{A} 为可逆实矩阵，#{x_0\in\mathbb R^n}，并置 #{\phi_{A,x_0}(x)=\phi(A^{-1}(x-x_0))}。在[角频率 Fourier 约定](0H4G)下，}
+##{\widehat{\phi_{A,x_0}}(\xi)=|\det A|e^{-ix_0\cdot\xi}\widehat\phi(A^{\mathsf T}\xi).}
+\p{\strong{证明。}作换元 #{x=x_0+Ay}，体积元为 #{|\det A|\,dy}，且 #{x\cdot\xi=x_0\cdot\xi+y\cdot A^{\mathsf T}\xi}。从 Fourier 定义直接得到公式。}
+\p{选正交坐标使 [Grassmannian](120A) 中的 #{V\in\operatorname{Gr}(m,n)} 为前 #{m} 个方向，并令 #{A=\delta I_V\oplus I_{V^\perp}}。[薄板](120G)的短方向于是具有尺度 #{\delta}。对每个 #{N>0}，有}
+##{|\widehat{\phi_{A,x_0}}(\xi)|\leq C_N\delta^m\bigl(1+\delta|P_V\xi|+|P_{V^\perp}\xi|\bigr)^{-N}.}
+\p{这是 Schwartz 衰减与 #{|A^{\mathsf T}\xi|^2=\delta^2|P_V\xi|^2+|P_{V^\perp}\xi|^2} 的直接结果。也可对 Fourier 积分反复分部积分，将 #{(1+|\xi|^2)^k} 移成作用于 #{\phi} 的 #{(1-\Delta)^k}；其绝对可积性给出任意偶数阶衰减，再降低指数即可。因此主要频率位于 #{|P_V\xi|\lesssim\delta^{-1}}、#{|P_{V^\perp}\xi|\lesssim 1} 的对偶薄板。紧支撑光滑空间函数的 Fourier 变换一般具有衰减尾部，不能把该估计写成严格支撑断言。}

@@ -1,0 +1,12 @@
+\title{有限频率重叠的 Plancherel 估计}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§3.1 的高频估计；严格支撑版本}
+
+\p{设 #{h_1,\ldots,h_J\in L^2(\mathbb R^n)}，其 Fourier 变换几乎处处支撑于可测集合 #{\Omega_j}。假定几乎处处 #{\sum_j\mathbf 1_{\Omega_j}\leq M}。则}
+##{\left\|\sum_jh_j\right\|_2^2\leq M\sum_j\|h_j\|_2^2.}
+\p{\strong{证明。}在每个频率点，至多 #{M} 项非零，由有限维 [Cauchy–Schwarz](004S)，#{|\sum_j\widehat h_j|^2\leq M\sum_j|\widehat h_j|^2}。积分并应用 [Plancherel 定理](0W01) #{\|h\|_2^2=(2\pi)^{-n}\|\widehat h\|_2^2}，两边相同的归一化因子消去，得到结论。}
+\p{对有限 [Lebesgue 测度](00XV)的可测集 #{E}，再用一次 Cauchy–Schwarz 得}
+##{\left|\int_E\sum_jh_j(x)\,dx\right|\leq |E|^{1/2}M^{1/2}\left(\sum_j\|h_j\|_2^2\right)^{1/2}.}
+\p{这可用于[高低频分解](120K)后的高频分量。若原函数只在频率盒外快速衰减，先写 #{f_j=h_j+r_j}，其中 #{h_j} 满足上述严格支撑条件。由 [L² 三角不等式](00Q6)，得到 #{\|\sum_jf_j\|_2\leq M^{1/2}(\sum_j\|h_j\|_2^2)^{1/2}+\sum_j\|r_j\|_2}；只有另外估计了余项，才可将有限重叠结论用于原函数。}

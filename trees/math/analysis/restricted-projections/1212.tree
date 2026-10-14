@@ -1,0 +1,15 @@
+\title{大切片推出 Hausdorff 维数下界}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§4 切片关系的单向形式；覆盖证明}
+
+\p{设 #{A\subset\mathbb R^d\times\mathbb R}，#{A_t=\{x:(x,t)\in A\}}。若存在正 Lebesgue 测度的可测集 #{J\subset\mathbb R}，使 #{\dim_HA_t\geq s>0} 对 #{t\in J} 成立，则 #{\dim_HA\geq s+1}。这里采用[实数阶 Hausdorff 测度](1202)。}
+\p{\strong{证明。}固定 #{0<q<s}。若 #{H^{q+1}(A)=0}，则对每个正整数 #{j} 可用半径 #{r_{i,j}<1/j} 的可数个欧氏球 #{B_{i,j}} 覆盖 #{A}，且 #{\sum_i r_{i,j}^{q+1}<2^{-j}}。球覆盖可由任意直径覆盖选中心并放大固定倍数得到。设球心最后坐标为 #{t_{i,j}}，置}
+##{g_j(t)=\sum_i(2r_{i,j})^q
+\mathbf 1_{\{|t-t_{i,j}|\leq r_{i,j}\}}.}
+\p{对每个 #{t}，这些球的截面覆盖 #{A_t}，直径至多 #{2/j}，所以 #{H^q_{2/j}(A_t)\leq g_j(t)}。由非负形式的 [Fubini 定理](0H53)，}
+##{\int_{\mathbb R}\sum_{j=1}^\infty g_j(t)\,dt
+\leq 2^{q+1}\sum_{j=1}^\infty 2^{-j}<\infty.}
+\p{故几乎处处 #{\sum_jg_j(t)<\infty}，特别有 #{g_j(t)\to 0}。于是 #{H^q(A_t)=0} 几乎处处，与 #{J} 正测度且其中 #{\dim_HA_t>q} 矛盾。因此 #{H^{q+1}(A)>0}，维数至少为 #{q+1}，令 #{q\uparrow s} 即得结论。}
+\p{反向一般不成立。例如 #{A=[0,1]^d\times[0,1/2]} 是满 #{d+1} 维集合，但对 #{t\in\lparen 1 /2,1\rbrack} 切片为空。其满维性来自[长方体的质量分布与覆盖估计](1206)。所以即使限定参数区间为 #{[0,1]}，总体满维也不能自动推出几乎每个切片满维。}

@@ -1,0 +1,14 @@
+\title{Rademacher 型与余型}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Schlumprecht，§2.1.2、§6](icm2026-schlumprecht)}
+
+\p{设 #{X} 是实 [Banach 空间](00M6)。对 #{n} 个符号 #{\varepsilon_j\in\{-1,1\}}，记 #{\mathbb E_\varepsilon} 为全部 #{2^n} 种选择的算术平均。给定 #{1\le r\le 2}，称 #{X} 有型 #{r}，如果存在 #{T<\infty}，使任意 #{n} 和 #{x_1,\ldots,x_n\in X} 满足}
+##{\left(\mathbb E_\varepsilon\left\|\sum_{j=1}^n\varepsilon_jx_j\right\|^r\right)^{1/r}
+\le T\left(\sum_{j=1}^n\|x_j\|^r\right)^{1/r}.}
+\p{给定 #{2\le q<\infty}，称 #{X} 有余型 #{q}，如果存在 #{Q<\infty}，使相同数据满足}
+##{\left(\sum_{j=1}^n\|x_j\|^q\right)^{1/q}
+\le Q\left(\mathbb E_\varepsilon\left\|\sum_{j=1}^n\varepsilon_jx_j\right\|^q\right)^{1/q}.}
+\p{常数须与 #{n} 及向量无关。非平凡型指某个 #{r>1}，有限余型指某个有限 #{q}；文献也称后者非平凡余型。向量的正负号只在随机和内出现，右侧的 #{\sum\|x_j\|^r} 没有符号。}
+\p{若 #{X} 是 [Hilbert 空间](00MQ)，展开内积并平均，交叉项因 #{\mathbb E(\varepsilon_i\varepsilon_j)=0} 消失，得到 #{\mathbb E\|\sum_j\varepsilon_jx_j\|^2=\sum_j\|x_j\|^2}，故型和余型都为二且常数一。一般空间的[粗几何障碍](100T)则需要把这种线性不等式与度量信息联系起来的深定理。}

@@ -1,0 +1,11 @@
+\title{块序列与跳块序列}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Schlumprecht，§3](icm2026-schlumprecht)}
+
+\p{设 #{\mathcal E=(E_n)} 是 #{Z} 的[有限维分解](1002)。向量 #{z} 的支集定义为 #{\operatorname{supp}_{\mathcal E}z=\{n:P_n^{\mathcal E}z\ne 0\}}。有限支集非零向量组成的序列 #{(z_j)} 称块序列，如果}
+##{\max\operatorname{supp}_{\mathcal E}z_j<\min\operatorname{supp}_{\mathcal E}z_{j+1}\quad(j\ge 1).}
+\p{若还满足 #{\min\operatorname{supp}_{\mathcal E}z_1\ge 2}，并且相邻两个支集间至少空出一个分解块，即 #{\max\operatorname{supp}_{\mathcal E}z_j+1<\min\operatorname{supp}_{\mathcal E}z_{j+1}}，则称跳块序列。归一化表示每个 #{\|z_j\|=1}。}
+\p{在 #{E_n=\operatorname{span}\{e_n\}} 的情形，#{e_2,e_4,e_6,\ldots} 是跳块序列，#{e_2,e_3,e_4,\ldots} 只是块序列。空出的坐标供截断与扰动时使用；它们相对于选定 FDD 而言，经过[分块](1014)后须重新检查。}
+\p{块序列本身是基本序列：对有限和 #{u=\sum_{j=1}^ma_jz_j}，截断到第 #{r} 项等于在 #{\max\operatorname{supp}_{\mathcal E}z_r} 处作部分和投影，故其范数至多为 #{K\|u\|}。由有限和的稠密性延拓这些投影，即得到闭线性包上的收敛展开。}

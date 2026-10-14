@@ -1,0 +1,15 @@
+\title{策略可再生基的双空间博弈}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[报告 §9及原论文](icm2026-schlumprecht)；Lechner–Motakis–Müller–Schlumprecht，Definition3.4}
+
+\p{设 #{(e_n)} 是实 [Banach 空间](00M6) #{X} 的归一化 [Schauder 基](1001)，#{(e_n^*)\subset X^*} 为[连续坐标泛函](00MK)。以下采用原论文的一般博弈版本，保留空间与对偶两侧的距离要求。}
+\p{固定 #{C\ge 1} 和 #{0<\eta<1}。开始时玩家 I 选择划分 #{\mathbb N=N_1\sqcup N_2}。第 #{k} 回合，I 选择 #{\eta_k>0}、[闭有限余维子空间](1005) #{W_k\subset X}，以及弱星闭有限余维子空间 #{G_k\subset X^*}。弱星拓扑是[弱拓扑](00MJ) #{\sigma(X^*,X)}；这里的 #{G_k} 可写成有限多个条件 #{f(x_i)=0} 的交。}
+\p{玩家 II 选择 #{i_k\in\{1,2\}}、有限集 #{E_k\subset N_{i_k}} 以及非负系数 #{\lambda_j^{(k)},\mu_j^{(k)}}，满足 #{1-\eta<\sum_{j\in E_k}\lambda_j^{(k)}\mu_j^{(k)}<1+\eta}。随后玩家 I 任意指定符号 #{\varepsilon_j^{(k)}\in\{-1,1\}}。得到}
+##{x_k=\sum_{j\in E_k}\varepsilon_j^{(k)}\lambda_j^{(k)}e_j,\qquad
+x_k^*=\sum_{j\in E_k}\varepsilon_j^{(k)}\mu_j^{(k)}e_j^*.}
+\p{玩家 II 获胜指：#{(x_k)} 与 #{(e_k)}、#{(x_k^*)} 与 #{(e_k^*)} 都是原论文所称 impartially #{C+\eta}-等价，即[双侧范数比较](1004)常数为 #{\sqrt{C+\eta}}；并且每个 #{k} 都满足}
+##{\operatorname{dist}(x_k,W_k)<\eta_k,\qquad
+\operatorname{dist}(x_k^*,G_k)<\eta_k.}
+\p{若对每个 #{0<\eta<1}，II 都有获胜策略，则称基 #{C}-策略可再生。所有更大的容许误差也随之可行。对偶侧在 #{X^*} 的范数中比较有限线性组合，不假设 #{(e_n^*)} 已生成整个 #{X^*}。}

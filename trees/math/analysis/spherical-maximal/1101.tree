@@ -1,0 +1,11 @@
+\title{归一化球面平均}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Seeger 幻灯片第 3 页；Roos–Seeger 综述 §1](icm2026-seeger)}
+
+\p{设整数 #{d\ge 2}，#{S^{d-1}=\{y\in\mathbb R^d:|y|=1\}}。用整数阶 [Hausdorff 测度](0U01)定义球面概率测度 #{\sigma(B)=\mathcal H^{d-1}(B\cap S^{d-1})/\mathcal H^{d-1}(S^{d-1})}。分母是单位球面的面积；因此 #{\sigma(S^{d-1})=1}，且旋转保持 #{\sigma}。}
+\p{对连续紧支撑函数 #{f:\mathbb R^d\to\mathbb C} 和 #{t>0}，定义}
+##{A_tf(x)=\int_{S^{d-1}}f(x-ty)\,d\sigma(y).}
+\p{它对中心为 #{x}、半径为 #{t} 的球面作平均。若 #{\sigma_t(B)=\sigma(t^{-1}B)}，则也写成 #{A_tf=f*\sigma_t}；这里与测度的卷积按 #{(f*\mu)(x)=\int f(x-y)\,d\mu(y)} 定义。#{\sigma_t} 的总质量仍为一，故公式没有额外的 #{t^{d-1}} 因子。}
+\p{对一般 [Lp 函数](00Q6)，固定 #{t} 后的积分及代表元问题由[收缩估计](1102)处理。球面在环境空间的 [Lebesgue 测度](00XV)为零，因此不能仅由环境空间中的逐点取值定义，直接断言所有 #{t} 的积分同时与代表元无关。}

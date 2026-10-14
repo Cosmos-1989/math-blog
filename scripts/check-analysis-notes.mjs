@@ -16,6 +16,9 @@ const expected = new Map([
   ['Javier Parcet', ['0X00', '10.1137/25M1803371']],
   ['Sarah Peluse', ['0GO0', '10.1137/25M1806259']],
   ['Jesse Peterson', ['0Z00', '10.1137/25M1807204']],
+  ['Thomas Schlumprecht', ['1000', '10.1137/25M1799519']],
+  ['Andreas Seeger', ['1100', 'ICM-slides.pdf']],
+  ['Hong Wang', ['1200', '10.1137/25M1806156']],
 ]);
 const files = new Map(fs.readdirSync(path.join(root, 'trees'), {recursive: true})
   .filter(file => file.endsWith('.tree')).map(file => [path.basename(file, '.tree'), `trees/${file}`]));
@@ -28,8 +31,8 @@ if (new Set(manifest.reports.map(report => report.speaker)).size !== expected.si
 if (ids.size !== manifest.notes.length) errors.push('Duplicate source snapshot');
 const subject = read(files.get(manifest.subject));
 for (const report of manifest.reports) {
-  const [outline, doi] = expected.get(report.speaker) ?? [];
-  if (outline !== report.outline || !report.source_url?.includes(doi)) errors.push(`Wrong source: ${report.speaker}`);
+  const [outline, sourceIdentifier] = expected.get(report.speaker) ?? [];
+  if (outline !== report.outline || !report.source_url?.includes(sourceIdentifier)) errors.push(`Wrong source: ${report.speaker}`);
   if (!report.reading_scope || !report.sources?.length || !Array.isArray(report.deferred)) {
     errors.push(`Missing source/proof scope: ${report.speaker}`);
   }
@@ -65,7 +68,7 @@ for (const note of manifest.notes) {
   }
 }
 for (const id of files.keys()) {
-  if (/^0[R-Z][0-9A-Z]{2}$/.test(id) && !ids.has(id)) errors.push(`Unreviewed new note: ${id}`);
+  if (/^(?:0[R-Z]|1[0-2])[0-9A-Z]{2}$/.test(id) && !ids.has(id)) errors.push(`Unreviewed new note: ${id}`);
 }
 for (const id of ['0GO0', 'icm2026-peluse-combinatorics']) {
   if (!manifest.reused_note_ids?.includes(id) || manifest.new_note_ids.includes(id)) {

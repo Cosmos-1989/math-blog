@@ -1,0 +1,11 @@
+\title{弱零序列趋近每个有限余维子空间}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Schlumprecht，§2–§3](icm2026-schlumprecht)的基本逼近步骤}
+
+\p{设 #{(x_n)} 是 [Banach 空间](00M6) #{X} 中的[弱零序列](1006)，#{Y\in\operatorname{cof}(X)} 是[闭有限余维子空间](1005)。则 #{\operatorname{dist}(x_n,Y)\to 0}。若另有 #{\|x_n\|=1}，则 #{\operatorname{dist}(x_n,S_Y)\to 0}。}
+\p{\strong{证明。}取商映射 #{Q:X\to X/Y}，给商空间配备商范数。任意[连续线性泛函](00MK) #{g} 在 #{X/Y} 上与 #{Q} 复合后属于 #{X^*}，故 #{g(Qx_n)\to 0}。商空间有限维，各基坐标都趋零，再由[有限维范数等价](00M9)得到 #{\|Qx_n\|\to 0}。商范数恰为 #{\operatorname{dist}(x_n,Y)}，第一结论成立。}
+\p{取 #{y_n\in Y} 满足 #{\|x_n-y_n\|\le\operatorname{dist}(x_n,Y)+1/n}。若 #{\|x_n\|=1}，则 #{|\|y_n\|-1|\le\|y_n-x_n\|\to 0}，所以 #{y_n} 最终非零。置 #{u_n=y_n/\|y_n\|\in S_Y}，得到}
+##{\|x_n-u_n\|\le\|x_n-y_n\|+|1-\|y_n\||\le 2\|x_n-y_n\|\longrightarrow 0.}
+\p{这个引理允许沿弱零树选择越来越接近博弈要求的向量，但通常只能得到近似属于 #{Y}，不能要求原树向量恰好落在 #{Y} 中。}

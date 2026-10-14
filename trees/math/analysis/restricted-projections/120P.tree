@@ -1,0 +1,17 @@
+\title{高低频二分中的关联积分估计}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§3.1；严格支撑模型}
+
+\p{设 #{E\subset\mathbb R^n} 可测且 #{0<|E|<\infty}，#{f} 为 Schwartz 函数，在 #{E} 上实值且 #{f\geq a>0}。固定截断频率 #{R>0}，取[低频截断](120K)中的光滑函数 #{\psi}，定义 #{f_{\mathrm{lo}}=\mathcal F^{-1}(\psi(\xi /R)\widehat f(\xi))}、#{f_{\mathrm{hi}}=f-f_{\mathrm{lo}}}。则至少有一个成立：}
+##{\left|\int_E f_{\mathrm{lo}}\right|\geq\frac{a|E|}{2},\qquad
+\left|\int_E f_{\mathrm{hi}}\right|\geq\frac{a|E|}{2}.}
+\p{若高频项可写为有限和 #{f_{\mathrm{hi}}=\sum_jh_j}，各项的 Fourier 支撑至多重叠 #{M} 次，则在第二种情形有}
+##{a^2|E|\leq 4M\sum_j\|h_j\|_2^2.}
+\p{\strong{证明。}由 #{a|E|\leq\int_E f} 及复数三角不等式，两个积分的绝对值不可能同时小于 #{a|E|/2}。[有限重叠的 Plancherel 估计](120L)给出 #{|\int_E f_{\mathrm{hi}}|\leq|E|^{1/2}M^{1/2}(\sum_j\|h_j\|_2^2)^{1/2}}，平方并约去 #{|E|} 即得结论。}
+\p{例如 #{f} 是[薄板](120G)适配光滑函数之和，且每点约被 #{a} 块板覆盖，则左端表达关联的下界。低频项是尺度 #{R^{-1}} 的卷积平均，通向较粗尺度；高频项由[对偶尺度](120J)的几何控制。若 #{p>2}，#{\Theta} 为有限频率区域族，且 #{f_{\mathrm{hi}}=\sum_{\theta\in\Theta}h_\theta}，其中各 Schwartz 函数 #{h_\theta} 的 Fourier 支撑包含于对应的 #{\theta}，则由 [Hölder 不等式](0A68)及[解耦常数](120M)得到}
+##{\left|\int_E f_{\mathrm{hi}}\right|
+\leq |E|^{1-1/p}D_p(\Theta)
+\left(\sum_{\theta\in\Theta}\|h_\theta\|_p^2\right)^{1/2}.}
+\p{这些不等式只把困难隔离为粗尺度估计、频率重叠或解耦常数。低频核可能变号，频率尾部需另估计；完成尺度归纳还须控制[参数损失](1215)。}

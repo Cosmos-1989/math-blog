@@ -2,7 +2,7 @@
   "date": "2026-10-14",
   "section": 8,
   "subject": "0068",
-  "scope": "9 selected reports linked from Analysis, including the reused Peluse topic from the number-theory import; not a complete section import.",
+  "scope": "12 selected reports linked from Analysis, including the reused Peluse topic from the number-theory import; not a complete section import.",
   "proceedings": "https://epubs.siam.org/doi/book/10.1137/1.9781611978674",
   "records": [
     "research/icm2026-analysis-artstein-avidan.json",
@@ -13,7 +13,10 @@
     "research/icm2026-analysis-ortega-cerda.json",
     "research/icm2026-analysis-parcet.json",
     "research/icm2026-analysis-peluse.json",
-    "research/icm2026-analysis-peterson.json"
+    "research/icm2026-analysis-peterson.json",
+    "research/icm2026-analysis-schlumprecht.json",
+    "research/icm2026-analysis-seeger.json",
+    "research/icm2026-analysis-hong-wang.json"
   ],
   "reports": [
     {
@@ -599,6 +602,225 @@
         "源页已交主代理审读、补链、格式化及统一sync/build；本任务未运行sync、build、commit或push，不将构建状态记为已验证。"
       ],
       "record": "research/icm2026-analysis-peterson.json"
+    },
+    {
+      "speaker": "Thomas Schlumprecht",
+      "title": "Asymptotic Properties of Banach Spaces",
+      "outline": "1000",
+      "reference": "icm2026-schlumprecht",
+      "question": "如何用有限余维博弈和弱零树刻画Banach空间的渐近几何，并将其转成线性嵌入、普适性、粗几何障碍及因子分解？",
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1799519",
+      "doi": "10.1137/25M1799519",
+      "source_version": "SIAM ICM2026 Volume 4, pp.770–784; published online 2026-07-13; accessed 2026-10-14.",
+      "status": "integrated-and-locally-verified; research-proof-limits-recorded",
+      "full_text_available": true,
+      "full_text_read_this_turn": true,
+      "reading_scope": "出版社HTML摘要、全部§§1–9、显示公式、证明与概要、全部41项参考文献、版权和版本信息已读；未另读主文PDF，未检查§3插图像素。补充原论文只读sources所列范围，未称全部参考文献全文已读。",
+      "sources": [
+        {
+          "url": "https://epubs.siam.org/doi/10.1137/25M1799519",
+          "title": "Asymptotic Properties of Banach Spaces",
+          "author": "Thomas Schlumprecht",
+          "version": "2026-07-13; pp.770–784; DOI 10.1137/25M1799519",
+          "access": "Publisher full HTML, 2026-10-14",
+          "reading_status": "full_text_read",
+          "full_document_read": true,
+          "read_scope": "Abstract; all §§1–9 and displayed mathematics/proofs; all 41 bibliography entries; Copyright and History. No separate PDF or figure-pixel reading.",
+          "license": "CC BY 4.0 explicitly verified in Copyright block; copyright International Mathematical Union.",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://arxiv.org/abs/math/0002219v1",
+          "title": "Trees and Branches in Banach Spaces",
+          "author": "Edward Odell; Thomas Schlumprecht",
+          "version": "v1, 2000-02-25",
+          "access": "Metadata, abstract and PDF text, 2026-10-14",
+          "reading_status": "targeted_sections_and_statements_read",
+          "full_document_read": false,
+          "read_scope": "Abstract and introduction; §2 game/tree definitions, full-subtree definition, epsilon 2^-j fattening and discrete-product closure; Proposition 2.3 statement and opening proof passages; Theorem 3.3 statement, remarks and selected proof passages; selected Theorem 4.1 proof passages. Abstract explicitly supplies separable reflexive hypothesis. Not a full-paper proof audit."
+        },
+        {
+          "url": "https://arxiv.org/abs/math/0507509v2",
+          "title": "A Universal Reflexive Space for the Class of Uniformly Convex Banach Spaces",
+          "author": "Edward Odell; Thomas Schlumprecht",
+          "version": "v2, 2007-01-03",
+          "access": "Metadata and PDF text, 2026-10-14",
+          "reading_status": "targeted_sections_read",
+          "full_document_read": false,
+          "read_scope": "Abstract, §1 through Theorem1.7 and initial §2 including Theorem2.1, Definitions2.2–2.3 and Proposition2.4 opening. Checked 1<=q<=p<=infty, global separability convention and separate-branch tree formulation. No full proof reading."
+        },
+        {
+          "url": "https://arxiv.org/abs/1809.09423v2",
+          "title": "Strategically Reproducible Bases and the Factorization Property",
+          "author": "Richard Lechner; Pavlos Motakis; Paul F. X. Müller; Thomas Schlumprecht",
+          "version": "v2, 2018-09-26",
+          "access": "PDF text, 2026-10-14",
+          "reading_status": "targeted_definitions_and_theorem_read",
+          "full_document_read": false,
+          "read_scope": "Abstract/introduction and §2 opening definitions; Definitions3.3–3.4; selected Remark3.5 passages; Definitions3.9–3.10 and Remark3.11; Theorem3.12 and Lemma3.14 statement plus opening proof. No full-paper reading; no claim of full proof of strategic factorization."
+        }
+      ],
+      "deferred": [
+        "博弈树对应、Zippin超空间构造、分块原理及子空间适应分解引理为外部研究输入；100K仅必要性在本地证明，充分性引用。",
+        "有限渐近结构紧性、Krivine定理、一般(U,V)树估计及任意无条件基上的常数统一命题未重证；不照抄报告命题2.4的拼接概要。",
+        "Szlenk导数、可数序数分层及定理5.5–5.6未展开，保留为研究分支。",
+        "Tsirelson构造、Hamming集中与一般粗普适否定的深层证明引用；100S从集中引理作完整反证。",
+        "Lp子空间的三个研究定理引用；不把无l2副本时嵌入lp加强成空间同构于lp。",
+        "非反身空间w*-UTP、FDD转基的细节、primary/accordion命题、多参数Haar及Hardy系统未展开。",
+        "策略可再生采用原论文完整博弈；因子分解定理引用，补对角逆和Neumann误差修正。",
+        "父任务负责全局注册、0068入口、manifest/sync、中央构建；本任务不提交推送。"
+      ],
+      "record": "research/icm2026-analysis-schlumprecht.json"
+    },
+    {
+      "speaker": "Andreas Seeger",
+      "title": "Problems on spherical means and associated maximal functions",
+      "outline": "1100",
+      "reference": "icm2026-seeger",
+      "question": "允许半径的统一覆盖增长和局部聚集程度如何决定球面极大估计、Lp改善、幂权重区域与分形局部光滑的正则性代价？",
+      "source_url": "https://people.math.wisc.edu/~aseeger/ICM-slides.pdf",
+      "source_version": "Author slides, ICM Analysis Section, July 24, 2026, 23 pages; accessed 2026-10-14.",
+      "status": "integrated-and-locally-verified; research-proof-limits-recorded",
+      "full_text_available": true,
+      "full_text_read_this_turn": true,
+      "reading_scope": "主来源23页幻灯片的全部提取正文与公式已读；本地下载PDF并对第16、18页关键公式作像素核对。配套合著综述v2定向阅读§§1–6、§8、致谢及使用到的参考文献条目；§7仅见部分开头，未作完整阅读或整合。未声称全部参考文献或研究原论文已读。",
+      "sources": [
+        {
+          "url": "https://people.math.wisc.edu/~aseeger/ICM-slides.pdf",
+          "title": "Problems on spherical means and associated maximal functions",
+          "author": "Andreas Seeger",
+          "version": "ICM Analysis Section, 2026-07-24, 23 pages",
+          "access": "Web PDF text and author PDF downloaded locally on 2026-10-14",
+          "reading_status": "full-slide-text-and-formulas-read; selected-pixel-checks",
+          "full_document_read": true,
+          "read_scope": "Slides 1–23 text/formulas including title and closing; formula pixels on slides 16 and 18 checked. Not an all-page visual-layout audit.",
+          "license": "No explicit open adaptation license found in the slides; no CC license asserted."
+        },
+        {
+          "url": "https://arxiv.org/html/2511.11283v2",
+          "metadata_url": "https://arxiv.org/abs/2511.11283v2",
+          "title": "Problems on spherical maximal functions",
+          "author": "Joris Roos; Andreas Seeger",
+          "version": "arXiv:2511.11283v2, 2026-05-10, 33 pages",
+          "access": "Versioned HTML, abstract metadata and locally downloaded versioned PDF, 2026-10-14",
+          "reading_status": "targeted-sections-read",
+          "full_document_read": false,
+          "read_scope": "§§1–6 and §8; acknowledgments; relevant bibliography entries including [2], [12], [14], [19], [26], [37], [94], [108], [109], [116]. PDF pages 16–17 rendered and inspected for (5.7)–(5.11). §7 supplementary branches not read completely or integrated.",
+          "license": "HTML explicitly displays arXiv.org perpetual non-exclusive license; not Creative Commons.",
+          "adaptation_policy": "Original Chinese exposition and independently written elementary proofs of mathematical facts; no full translation, copied figures or extensive source prose. Slides and coauthored survey are distinct works."
+        },
+        {
+          "url": "https://math.stanford.edu/~andras/205C-2.pdf",
+          "title": "Math 205C: Stationary Phase Lemma",
+          "author": "Andras Vasy",
+          "version": "Author-hosted lecture notes, accessed 2026-10-14",
+          "reading_status": "targeted-statement-read",
+          "full_document_read": false,
+          "read_scope": "Pages 1–2 hypotheses and Hessian conventions; page 5 equation (9), leading coefficient and remainder. General proof not reconstructed.",
+          "license": "No open reuse license asserted; theorem stated independently with source link."
+        },
+        {
+          "url": "https://www.math.ucla.edu/~tao/247b.1.07w/notes8.pdf",
+          "title": "Lecture Notes 8 for 247B",
+          "author": "Terence Tao",
+          "reading_status": "targeted-cross-check-only",
+          "full_document_read": false,
+          "read_scope": "Selected §3 stationary-phase statements and §4 spherical-measure application; final precise leading coefficient in 1119 checked against Vasy equation (9). Not used as a full-course reading claim.",
+          "license": "No open reuse license asserted."
+        }
+      ],
+      "deferred": [
+        "Stein/Bourgain全半径正向估计、Bourgain限制弱型及二维限制弱型失败引用；1107只独立证明普通弱端点反例。",
+        "稀疏极大正向估计、接近L1的对数改进、一般半径集全局正向阈值引用，未重建Calderon–Zygmund理论或原子分解。",
+        "1104只证明给定可数半径序列的几乎处处微分；一般Lp代表元的连续参数版本引用经典定理，不由序列证明自动推出。",
+        "1119非退化驻相定理及余项引用Vasy；110K的球面衰减仍作为外部结论，非临界部分复用0I86。未展开通用驻相证明。",
+        "110L只证明有限时间族L1和频率局部化L2估计；时间离散到连续、一般p插值和全局尺度组合未重建。",
+        "Assouad谱的一般连续性、普通谱与上谱极限等价、具体Cantor与幂次序列的正则谱引用；110D/110E只证明全局覆盖指数。",
+        "类型区域包含、正则精确区域、任意闭凸区域实现、二维困难情形双线性估计引用；未把闭包等式升级为边界强型。",
+        "110U的Legendre恒等式引用；110V只在该输入下完成正则谱的分段计算。110W引用球帽几何测试(5.7)，完整展开的是其到Legendre条件的代数转换。",
+        "1111幂权重闭区域引用综述(6.1)及其中Fraccaroli–Roos–Seeger结果；未独立阅读其研究原论文。一般权重和临界边界仍分开。",
+        "稀疏支配与改善的深层对应定理4.2只指明适用条件来源，未重建其Lorentz空间输入和证明；1110仅证明稀疏形式的初等上界。",
+        "局部光滑一般非径向正向界保持猜想；径向结果、低于阈值的研究反例、二维Sogge进展均按来源引用。1114独立证明p=2。",
+        "配套综述§7的多参数、螺旋平均、Nevo–Thangavelu分支暂缓；§8非对角推广、§5径向专门区域、分数极大算子端点及完整Lorentz变体暂缓。",
+        "不新增会议论文集DOI，不把arXiv永久非独占许可写成CC许可。开放状态固定在已读2026年来源，不声称独立核查此后全部进展。",
+        "所有原子页和独立叙事已落盘；全站导航、全局审计注册、同步、中央构建和浏览器验收交父任务。未提交或推送。"
+      ],
+      "record": "research/icm2026-analysis-seeger.json"
+    },
+    {
+      "speaker": "Hong Wang",
+      "title": "Restricted Families of Orthogonal Projections in R^n",
+      "outline": "1200",
+      "reference": "icm2026-hong-wang",
+      "question": "受限方向族何时保留最大投影维数，曲率、高低频关联与多尺度非集中怎样排除线性和非线性退化？",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806156",
+      "source_version": "SIAM ICM2026 Volume 4, pp.785–800; online 2026-07-13; publisher HTML accessed 2026-10-14.",
+      "status": "integrated-and-locally-verified; research-proof-limits-recorded",
+      "full_text_available": true,
+      "full_text_read_this_turn": true,
+      "reading_scope": "出版社HTML正文§1–7，包括§3.1、§5.1–5.2、所有显示定义/定理/猜想、假证明及诊断、两尺度因子分解和末尾研究问题；致谢、脚注、参考文献1–49、版权和出版信息。未另读出版社PDF。补充论文只读下列定点范围，不称全文已读。",
+      "sources": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806156",
+          "title": "Restricted Families of Orthogonal Projections in R^n",
+          "author": "Hong Wang",
+          "version": "ICM2026 Volume 4, pp.785–800; DOI 10.1137/25M1806156; online 2026-07-13",
+          "access": "Publisher open-access HTML, 2026-10-14",
+          "reading_status": "main_report_body_read",
+          "full_document_read": false,
+          "read_scope": "All main body §§1–7, including §§3.1,5.1,5.2, displays, fake-proof diagnosis, conjectures and research questions; acknowledgments, footnotes, bibliography1–49, copyright/history. No separate PDF. Abstract not included in full-reading claim.",
+          "license": "CC BY 4.0 checked in publisher Copyright block; copyright International Mathematical Union.",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://arxiv.org/html/2211.09508v2",
+          "title": "A restricted projection problem for fractal sets in R^n",
+          "author": "Shengwen Gan; Shaoming Guo; Hong Wang",
+          "version": "arXiv:2211.09508v2, 2024-01-21",
+          "access": "Versioned HTML and abstract metadata, 2026-10-14",
+          "reading_status": "targeted_sections_read",
+          "full_document_read": false,
+          "read_scope": "Abstract, §1 through notation/acknowledgment; §2 opening, Theorem2.1 and the displayed deduction of Theorem1.2, high-low setup through (2.21). Later frequency decomposition and decoupling proof not read.",
+          "license": "arXiv perpetual non-exclusive license displayed; not CC BY. Used for mathematical statement checking, not translated wholesale.",
+          "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+        },
+        {
+          "url": "https://arxiv.org/html/2308.08819v2",
+          "title": "Furstenberg sets estimate in the plane",
+          "author": "Kevin Ren; Hong Wang",
+          "version": "arXiv:2308.08819v2, 2023-09-07",
+          "access": "Versioned HTML, 2026-10-14",
+          "reading_status": "targeted_sections_read",
+          "full_document_read": false,
+          "read_scope": "Abstract; §1 including Theorems1.1/1.2, exceptional-set discussion, Definitions1.3/1.4, sum-product statements and roadmap; §2 definitions2.1–2.6 and Proposition2.7/Remark2.8. No full reading of §§3–6 proofs.",
+          "license": "CC BY 4.0 displayed in HTML.",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2502.17655v1",
+          "title": "Volume estimates for unions of convex sets, and the Kakeya set conjecture in three dimensions",
+          "author": "Hong Wang; Joshua Zahl",
+          "version": "arXiv:2502.17655v1; submitted 2025-02-24; PDF title date 2025-02-26",
+          "access": "Versioned PDF text and abstract metadata; HTML fetch failed due to size, 2026-10-14",
+          "reading_status": "targeted_statements_read",
+          "full_document_read": false,
+          "read_scope": "Abstract; printed p.3 Theorems1.1/1.2; §§1.1–1.2 definitions and discussion displayed on pp.3–6; printed p.7 Propositions1.6–1.8, Theorem1.9 and its parameter argument; p.8 Corollary1.10. Search also exposed later snippets, not treated as section readings. No full 127-page proof or figure inspection.",
+          "license": "CC BY 4.0 confirmed by following arXiv abstract license link.",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "deferred": [
+        "高阶切空间及球面受限投影的研究下界、解耦定理本身、全部频率算法未重证。",
+        "Ren–Wang连续与离散锐Furstenberg定理、异常集锐定理引用；未把单尺度覆盖下界直接当作Hausdorff证明。",
+        "紧集Frostman构造已证明；一般Borel集内部紧逼近及一般Frostman存在性未重证。",
+        "Shmerkin近线性区间分解引用。报告引理5.5的递增维数版本不另建定理页，其精确误差分析未重证。",
+        "1210完整证明精确均匀树的标量分解；报告引理6.10凸体因子分解仅说明输出结构并引用存在性，未升级为本地证明。",
+        "四维二次曲面管族选取与凸Wolff公理验证引用；只补直线恒等式、邻域体积及幂次比较。",
+        "Wang–Zahl管并估计及三维Kakeya满维定理引用；graininess、平面结构、径向投影、严格自改善命题1.7和着色到Hausdorff的全过程未重证。",
+        "报告Statement3.2是plausible statement且均匀性写法非精确定量，本轮不独立导入。一般多项式问题及高维Furstenberg猜想准确保留研究状态。",
+        "无全局导航/脚本/清单写入；父任务负责注册、同步、规范化、Forester构建及渲染核验。无提交或推送。"
+      ],
+      "record": "research/icm2026-analysis-hong-wang.json"
     }
   ],
   "new_note_ids": [
@@ -981,7 +1203,150 @@
     "0Z1G",
     "0Z1H",
     "0Z1I",
-    "icm2026-peterson"
+    "icm2026-peterson",
+    "1000",
+    "1001",
+    "1002",
+    "1003",
+    "1004",
+    "1005",
+    "1006",
+    "1007",
+    "1008",
+    "1009",
+    "100A",
+    "100B",
+    "100C",
+    "100D",
+    "100E",
+    "100F",
+    "100G",
+    "100H",
+    "100I",
+    "100J",
+    "100K",
+    "100L",
+    "100M",
+    "100N",
+    "100O",
+    "100P",
+    "100Q",
+    "100R",
+    "100S",
+    "100T",
+    "100U",
+    "100V",
+    "100W",
+    "100X",
+    "100Y",
+    "100Z",
+    "1010",
+    "1011",
+    "1012",
+    "1013",
+    "1014",
+    "1015",
+    "1016",
+    "1017",
+    "1018",
+    "1019",
+    "1040",
+    "1041",
+    "1042",
+    "1043",
+    "icm2026-schlumprecht",
+    "1100",
+    "1101",
+    "1102",
+    "1103",
+    "1104",
+    "1105",
+    "1106",
+    "1107",
+    "1108",
+    "1109",
+    "110A",
+    "110B",
+    "110C",
+    "110D",
+    "110E",
+    "110F",
+    "110G",
+    "110H",
+    "110I",
+    "110J",
+    "110K",
+    "110L",
+    "110M",
+    "110N",
+    "110O",
+    "110P",
+    "110Q",
+    "110R",
+    "110S",
+    "110T",
+    "110U",
+    "110V",
+    "110W",
+    "110X",
+    "110Y",
+    "110Z",
+    "1110",
+    "1111",
+    "1112",
+    "1113",
+    "1114",
+    "1115",
+    "1116",
+    "1117",
+    "1118",
+    "1119",
+    "icm2026-seeger",
+    "1200",
+    "1201",
+    "1202",
+    "1203",
+    "1204",
+    "1205",
+    "1206",
+    "1207",
+    "1208",
+    "1209",
+    "120A",
+    "120B",
+    "120C",
+    "120D",
+    "120E",
+    "120F",
+    "120G",
+    "120H",
+    "120I",
+    "120J",
+    "120K",
+    "120L",
+    "120M",
+    "120N",
+    "120O",
+    "120P",
+    "120Q",
+    "120R",
+    "120S",
+    "120T",
+    "120U",
+    "120V",
+    "120W",
+    "120X",
+    "120Y",
+    "120Z",
+    "1210",
+    "1211",
+    "1212",
+    "1213",
+    "1214",
+    "1215",
+    "1216",
+    "1217",
+    "icm2026-hong-wang"
   ],
   "reused_note_ids": [
     "0GO0",
@@ -3661,6 +4026,1007 @@
       "taxon": "Reference",
       "path": "trees/references/icm2026-peterson.tree",
       "sha256": "2799c4f1b1a5b34191f8dbbdf499192bde0f10b3b98885693c9c4c7cc0252ae2"
+    },
+    {
+      "id": "1000",
+      "title": "Banach 空间的渐近结构：从博弈到嵌入",
+      "taxon": "Outline",
+      "path": "trees/math/analysis/asymptotic-banach/1000.tree",
+      "sha256": "8f26a1881a2d9b805b167e0ff94120650e2ebe8baf0884d3484efc26c563be02"
+    },
+    {
+      "id": "1001",
+      "title": "Schauder 基与坐标泛函",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1001.tree",
+      "sha256": "11013e812038efcc8e207561d4a0d6c38167677b544f0c5466f72dd9f0b3ed31"
+    },
+    {
+      "id": "1002",
+      "title": "有限维分解与区间投影",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1002.tree",
+      "sha256": "824e47c356a24b8fdb079e59aca11caaa5931e39212a6f02f4b462105c5e1d6b"
+    },
+    {
+      "id": "1003",
+      "title": "块序列与跳块序列",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1003.tree",
+      "sha256": "d86be667e5cc35a8475d45667a5bbd6fceb2b098715c62e4b8a9aa40c19c47b7"
+    },
+    {
+      "id": "1004",
+      "title": "序列等价与线性同构嵌入",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1004.tree",
+      "sha256": "543f303a55174427c34e8ae19b620dbaa818af1008285e4d0ad8864b75dfcc5d"
+    },
+    {
+      "id": "1005",
+      "title": "闭有限余维子空间",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1005.tree",
+      "sha256": "9aa132d92a92d6d0a8129e1bb294aa07842f18f1405d3d439d82d9333e91afc7"
+    },
+    {
+      "id": "1006",
+      "title": "归一化弱零树及其分支",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1006.tree",
+      "sha256": "2646384f231a4bf2cc9c3e214f70ad5838ce472cd1acfdefa822168aa984f72e"
+    },
+    {
+      "id": "1007",
+      "title": "渐近博弈与获胜策略",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1007.tree",
+      "sha256": "51f7a43ae63b17ca1e00558509cfcfc52c82c173ed02218f00103f7e5bebc9b8"
+    },
+    {
+      "id": "1008",
+      "title": "有限长度的渐近 ℓᵖ 性质",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1008.tree",
+      "sha256": "14463d04830c66ae280974bf72c199f6ded8a0aaba0cc86fa43f5416db2bbbda"
+    },
+    {
+      "id": "1009",
+      "title": "无限高树的 ℓᵖ 分支性质",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1009.tree",
+      "sha256": "676d937e455ae9030a74d66b6b7901fb7ed96af04bf10bfafebda8330b2794a5"
+    },
+    {
+      "id": "100A",
+      "title": "可求和扰动保持 ℓᵖ 估计",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100A.tree",
+      "sha256": "d2c47601f7dad17ede4ff31262e9b6f99f351d9132a160cd27e2ca859fb6756f"
+    },
+    {
+      "id": "100B",
+      "title": "Banach 空间族的 ℓᵖ 直和",
+      "taxon": "Construction",
+      "path": "trees/math/analysis/asymptotic-banach/100B.tree",
+      "sha256": "ba8b30290c7ab08406e9277ce8cf91a49049bd4bf0489a52a460c3cc65e8a01b"
+    },
+    {
+      "id": "100C",
+      "title": "不交坐标块的 ℓᵖ 范数恒等式",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100C.tree",
+      "sha256": "b59f9e1f0e36babb73369168cbe93445923d8c99fd59feeb1b8b4ceafd67e9f1"
+    },
+    {
+      "id": "100D",
+      "title": "Banach 空间的反身性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100D.tree",
+      "sha256": "e24df69d2966f992200d9ddffa01a4003b8ec945c4e7a9bc97fd51d4421e3007"
+    },
+    {
+      "id": "100E",
+      "title": "Banach 空间的超反身性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100E.tree",
+      "sha256": "281a88c8c59ef00fe957e43535f39c3fd7d6d635d558205f549fe8f2c7e2b1f5"
+    },
+    {
+      "id": "100F",
+      "title": "Rademacher 型与余型",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100F.tree",
+      "sha256": "4712ce1002326cffc85b4033824f55d77d010ccdbf3a73fe3e57a7b1312007b5"
+    },
+    {
+      "id": "100G",
+      "title": "弱零序列趋近每个有限余维子空间",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100G.tree",
+      "sha256": "dea3938a4781e90a0144a4c1a3511d1dc8cd9f5f1b57704690647793d6eb064d"
+    },
+    {
+      "id": "100H",
+      "title": "弱零树中的滑动截断分支",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100H.tree",
+      "sha256": "2b3806a04c77bdf2452f0d0bc88cae9522651251fc490ae72532a69437da9fba"
+    },
+    {
+      "id": "100I",
+      "title": "渐近博弈与弱零树的对应",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100I.tree",
+      "sha256": "d924f4bec35aa101a1e724df1edd11bd911c536626fc2590a0d52efb22822520"
+    },
+    {
+      "id": "100J",
+      "title": "把渐近策略实现为跳块控制",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100J.tree",
+      "sha256": "3a3ab51f56616d59265f75e09f2a7e7aef6ab8dcdf2774f8febe2dbba49d7757"
+    },
+    {
+      "id": "100K",
+      "title": "嵌入有限维 ℓᵖ 直和的树判据",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100K.tree",
+      "sha256": "15f0424642f0b5b9e3840940c9e9e72031ab32694bc642a2abacb28d16ac583a"
+    },
+    {
+      "id": "100L",
+      "title": "树分支条件蕴含弱零子列条件",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100L.tree",
+      "sha256": "9f30d075a793ef9f532708625dd67f1d60d4c91e1c99d81ca0ab3fb1dbfacf6b"
+    },
+    {
+      "id": "100M",
+      "title": "分解的下 ℓᵖ 与上 ℓᑫ 估计",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100M.tree",
+      "sha256": "4588cb166c56c54f43fc931a0bd30a5de2bd5dad7f1cb59f39edd8fbb7b4b071"
+    },
+    {
+      "id": "100N",
+      "title": "超反身空间类的可分反身普适空间",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100N.tree",
+      "sha256": "a00205907ea690d73802a658dc518260153c2695c05c6c2f53000062c80fe1b7"
+    },
+    {
+      "id": "100O",
+      "title": "粗嵌入与一族空间的共同控制",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100O.tree",
+      "sha256": "2b2caeb20eb6abf73646c6de4c23901d8f88b6614fbd0092ccdf947191b66d8f"
+    },
+    {
+      "id": "100P",
+      "title": "坐标 Hamming 距离的 Hilbert 模型",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100P.tree",
+      "sha256": "9ae489ed3f3f3daa21d44a841216216b4b9fc74771cbfd44bf07185855bfcba7"
+    },
+    {
+      "id": "100Q",
+      "title": "反身而渐近 c₀ 的 Tsirelson 空间",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100Q.tree",
+      "sha256": "9ce032754a80aeb482f9a024bff843bbf95256d1a0da82e0c602a8a55f02dbab"
+    },
+    {
+      "id": "100R",
+      "title": "Tsirelson 空间中的 Hamming 集中",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/100R.tree",
+      "sha256": "b01d84d1e9e39c06368b560887bbf01a209160227941094b8efdccd3fa05e1b9"
+    },
+    {
+      "id": "100S",
+      "title": "ℓ² 不能粗嵌入 Tsirelson 空间",
+      "taxon": "Corollary",
+      "path": "trees/math/analysis/asymptotic-banach/100S.tree",
+      "sha256": "a9e231b938e3a17cab91fdc5636d3bff9e3b471bfc94b93584c3b3084f143532"
+    },
+    {
+      "id": "100T",
+      "title": "不存在无限维粗普适子空间",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100T.tree",
+      "sha256": "c8e11fc2038c5453e7c19ecf3496993e41939dfab4308fbd0498353f08844fd3"
+    },
+    {
+      "id": "100U",
+      "title": "Lᵖ 子空间的 Hilbert 与 ℓᵖ 二分",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100U.tree",
+      "sha256": "bffec2507b60eeee30f7f226cd2665db0e0c2fb632fc3d3bd9c72dd7042d2e06"
+    },
+    {
+      "id": "100V",
+      "title": "Lᵖ 小子空间的混合树估计",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100V.tree",
+      "sha256": "28ee315a0ff42eadab4b21ba7da96a7c2467aacbc3a990c6b2a088e2f08a24ca"
+    },
+    {
+      "id": "100W",
+      "title": "无条件基与无条件有限维分解",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100W.tree",
+      "sha256": "da4c8c471950b20aa676a40dc1d2a8f4ad61e9c4261a639235f8979ea815e2d9"
+    },
+    {
+      "id": "100X",
+      "title": "无条件树性质",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100X.tree",
+      "sha256": "b3e649562322238041021cb0d2c5d754e24e260d4a0d4b16c4b05882901e55e3"
+    },
+    {
+      "id": "100Y",
+      "title": "无条件树性质的反身嵌入定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/100Y.tree",
+      "sha256": "d56531d4b25a2af2c9431d3589231f68c261ecb828f705f016f8831fe140119a"
+    },
+    {
+      "id": "100Z",
+      "title": "算子的因子分解",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/100Z.tree",
+      "sha256": "ed3299929e95fd8a40d3d7591d6020c71b25b1e1e97c78f646a52b149c0df3cd"
+    },
+    {
+      "id": "1010",
+      "title": "近似因子分解的小误差修正",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/1010.tree",
+      "sha256": "3fd8054464b8d080ba18bf7f0f4e6f88bb259050fca23d70d7759094cfedf3ca"
+    },
+    {
+      "id": "1011",
+      "title": "策略可再生基的双空间博弈",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1011.tree",
+      "sha256": "180fa03e99b96a3277c4ed6e12ef51a8abf24933ee1aa7e154a96798ce66d586"
+    },
+    {
+      "id": "1012",
+      "title": "策略可再生基的因子分解定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/1012.tree",
+      "sha256": "2717cb4cf488e4a4cee5f164ef1542f0ab045a4ed3689084f00856dac1c58253"
+    },
+    {
+      "id": "1013",
+      "title": "无条件基的大对角乘子可逆",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/asymptotic-banach/1013.tree",
+      "sha256": "8965bafa8aed5c9e7b0ffd5fee27330e9f12f278a4f3b5dd3d3594dc534d70cc"
+    },
+    {
+      "id": "1014",
+      "title": "有限维分解的分块",
+      "taxon": "Construction",
+      "path": "trees/math/analysis/asymptotic-banach/1014.tree",
+      "sha256": "e7e28e1a2a27c581ff3dcecc3a1fd48f03a098eae8aa17c1b061f847bf783b9c"
+    },
+    {
+      "id": "1015",
+      "title": "基与有限维分解的收缩性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1015.tree",
+      "sha256": "5e0a7ab4d9bdcc4cf6175f7e0c5988da44632246c903c5ae34f8cdb8048a70f1"
+    },
+    {
+      "id": "1016",
+      "title": "基与有限维分解的有界完备性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1016.tree",
+      "sha256": "858ae3f3b6317682cb72946c541980e99a44e3bd438d5f8cfd47fa2aef7e7b6e"
+    },
+    {
+      "id": "1017",
+      "title": "Lᵖ 中不含 ℓ² 的子空间嵌入 ℓᵖ",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/1017.tree",
+      "sha256": "5c63420cba685c67e4e2edbe2b18c7f2d95c7e44d4112c77f958b071f70d49a9"
+    },
+    {
+      "id": "1018",
+      "title": "Banach 空间中的有限可表示性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1018.tree",
+      "sha256": "d5810a26adc3296a247915367950c704da828758d51b455c412dea01ff031686"
+    },
+    {
+      "id": "1019",
+      "title": "范数的一致凸性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/asymptotic-banach/1019.tree",
+      "sha256": "eb109761babe984b1e4002cca395403be7ddc1a7f08c06009b1cd2b2d2d1a1ca"
+    },
+    {
+      "id": "1040",
+      "title": "实赋范空间上的 Hahn–Banach 延拓定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/1040.tree",
+      "sha256": "7f304aa8cab4aa522bca97ef1d06ae4de4b2d080835190c44f9912efaeeb9591"
+    },
+    {
+      "id": "1041",
+      "title": "范数由单位对偶球上的取值确定",
+      "taxon": "Corollary",
+      "path": "trees/math/analysis/asymptotic-banach/1041.tree",
+      "sha256": "a98b319e1cdc524f6af38e23cf3df01e88ec8875be8fe643a14d07c6b91e05ba"
+    },
+    {
+      "id": "1042",
+      "title": "Banach 空间的开映射定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/1042.tree",
+      "sha256": "af4979ab402f29d3114d51dbf2fc4263b19eb41eda1c742277bc543a08280750"
+    },
+    {
+      "id": "1043",
+      "title": "唯一收敛分解的部分和投影一致有界",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/asymptotic-banach/1043.tree",
+      "sha256": "cd929b9960ea1aa387ed0041112e10374b5ca8b6766fc8ea3c5fdb549b297649"
+    },
+    {
+      "id": "icm2026-schlumprecht",
+      "title": "Thomas Schlumprecht：Asymptotic Properties of Banach Spaces",
+      "taxon": "Reference",
+      "path": "trees/references/icm2026-schlumprecht.tree",
+      "sha256": "56949d0d08cf43be6cd16051befec3fc190b8882c54bec062f0964920d3de72f"
+    },
+    {
+      "id": "1100",
+      "title": "球面平均：半径几何怎样决定极大估计",
+      "taxon": "Outline",
+      "path": "trees/math/analysis/spherical-maximal/1100.tree",
+      "sha256": "16366a927f785825bbc04bef6eaccda65f7e233687d3c34a49a95aa07bd184bb"
+    },
+    {
+      "id": "1101",
+      "title": "归一化球面平均",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/1101.tree",
+      "sha256": "6d34e65ffe0f7ad63b3508cb10942b8c9343d5219fa601196964cdc82c74ea03"
+    },
+    {
+      "id": "1102",
+      "title": "固定球面平均在 Lp 上收缩",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/1102.tree",
+      "sha256": "a1ab82c3b3a05c5ed7c68a4af14703cb4e235ec506fd4563592a299616c2d11e"
+    },
+    {
+      "id": "1103",
+      "title": "半径集上的球面极大算子",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/1103.tree",
+      "sha256": "2941f7714ef4559271f868976c10d7a67874e7594143c7f9bcf988ae933bee22"
+    },
+    {
+      "id": "1104",
+      "title": "弱极大估计推出沿半径序列的微分",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1104.tree",
+      "sha256": "dd4db90d64af850794b434e7140c57df76fba5ea0569dcb5f1f5c883af4f44fd"
+    },
+    {
+      "id": "1105",
+      "title": "球面极大估计的缩放律",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/1105.tree",
+      "sha256": "3740883fcc6ac14fdfa9268490c7b9b0d0b93c57f483e88f30823c7294ce40c4"
+    },
+    {
+      "id": "1106",
+      "title": "全半径球面极大定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1106.tree",
+      "sha256": "e071a8fd5ade36a1b0ea9e469ecfe47e5b8c54969192794a9e52e535233b0a7a"
+    },
+    {
+      "id": "1107",
+      "title": "对数奇性排除球面极大弱端点",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/1107.tree",
+      "sha256": "174c3e98c09a3eb6f75d3405ab1d2b18203cf786297c3652ced66d62343210bc"
+    },
+    {
+      "id": "1108",
+      "title": "稀疏几何半径上的球面极大定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1108.tree",
+      "sha256": "c94250f6abe6863ed4dc614d7e2965b054d52db44ad6db42956ede1229cf0470"
+    },
+    {
+      "id": "1109",
+      "title": "稀疏球面极大算子的弱一一问题",
+      "taxon": "Conjecture",
+      "path": "trees/math/analysis/spherical-maximal/1109.tree",
+      "sha256": "cd953d7912c34644528e20d5bdf6a54db57ed25604e593e82ce941585b648b2c"
+    },
+    {
+      "id": "110A",
+      "title": "正半轴上的乘法度量",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110A.tree",
+      "sha256": "b5194cb971ae9b788ca65e95f7de0d4cc74bbe3bb13146627c7f7a8f4f641894"
+    },
+    {
+      "id": "110B",
+      "title": "半径集的一致上 Minkowski 维数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110B.tree",
+      "sha256": "e4e2bbc3fb8d071ef1f8896d4729fe250abf30b5897f19924d8ca3eae9e3dd0e"
+    },
+    {
+      "id": "110C",
+      "title": "二进复制保持半径集的维数指数",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110C.tree",
+      "sha256": "e0b410c903ee2150a5f83ae3706f82e28904d9f1c74809f7178d067e652334d8"
+    },
+    {
+      "id": "110D",
+      "title": "幂次聚集序列的覆盖数",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110D.tree",
+      "sha256": "13298eb95a730326b12b93047354590b07cf9e8c9a94e5a224bd1acf735085f0"
+    },
+    {
+      "id": "110E",
+      "title": "三分 Cantor 半径集的覆盖数",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110E.tree",
+      "sha256": "1c94171121e97a0af6894f66c8b40634a0aa87f5695e7f957bc1627b9d884408"
+    },
+    {
+      "id": "110F",
+      "title": "逐壳有限的半径集也可具有一致维数一",
+      "taxon": "Example",
+      "path": "trees/math/analysis/spherical-maximal/110F.tree",
+      "sha256": "ee715deef4392d22fe3c1426664e34f42f86bdfc41e1f371321756ee9cefadcb"
+    },
+    {
+      "id": "110G",
+      "title": "小球帽的归一化面积",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/spherical-maximal/110G.tree",
+      "sha256": "dda3e75ebf0f17d0e9e92487ca1d334c477cca01e03520b90ac6af1f4abd124d"
+    },
+    {
+      "id": "110H",
+      "title": "小球测试给出的覆盖数必要条件",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110H.tree",
+      "sha256": "9b5119d5cab1f113a0d9ac5bd9158027033b3358b72104c99ca2649382891e53"
+    },
+    {
+      "id": "110I",
+      "title": "一般半径集的非端点 Lp 阈值",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/110I.tree",
+      "sha256": "66bf88d3bab2527f44be55919bf7dc687941985bbb3bde81a8939b820e24fcd7"
+    },
+    {
+      "id": "110J",
+      "title": "覆盖数能否刻画球面极大端点",
+      "taxon": "Conjecture",
+      "path": "trees/math/analysis/spherical-maximal/110J.tree",
+      "sha256": "790d51d71160aa866f698399788c7e2cdc9bea8d0a6d5a9d8062a082fff9dde2"
+    },
+    {
+      "id": "110K",
+      "title": "球面测度的 Fourier 衰减",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/110K.tree",
+      "sha256": "7ba3b24f2075f9a5faeb71362edaa6abfab52685a6f65eff42f08a11f2103386"
+    },
+    {
+      "id": "110L",
+      "title": "有限半径族的频率局部化估计",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110L.tree",
+      "sha256": "35a0f7eea4c91ba1e97544895613b654d935e9c0465f2026b8f71b13131478f5"
+    },
+    {
+      "id": "110M",
+      "title": "球面极大算子的类型集合",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110M.tree",
+      "sha256": "b75e218a90227af8484aa403037ce1fe6f98efbc3d56d767f547cb397c47ba51"
+    },
+    {
+      "id": "110N",
+      "title": "薄球壳给出的积分指数限制",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110N.tree",
+      "sha256": "a34b1a53295e4e622bb6d28a3fab9fba0c54e94328eecff299f047f346f8d42f"
+    },
+    {
+      "id": "110O",
+      "title": "远距离平移给出的积分指数限制",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110O.tree",
+      "sha256": "a63e7cd8d425c1481ef62207901a30a7ace87d57a5d8d130b7352d9ed7163a97"
+    },
+    {
+      "id": "110P",
+      "title": "普通 Assouad 谱与上 Assouad 谱",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110P.tree",
+      "sha256": "93e0b35a924f9ceb26684657f227f3be88a1125dfc831cc04197344afa745a87"
+    },
+    {
+      "id": "110Q",
+      "title": "准 Assouad 正则的半径集",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110Q.tree",
+      "sha256": "e5a1d1b4a977028f1c09ed27289d751cfda601135d9acf63b047f01a8a1ccf82"
+    },
+    {
+      "id": "110R",
+      "title": "维数参数对应的改善四边形",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110R.tree",
+      "sha256": "c6b2aece77ae53778bed6a0392a9d64565b55e58159ca5e0b18a9713adead1c6"
+    },
+    {
+      "id": "110S",
+      "title": "半径维数控制球面极大的类型区域",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/110S.tree",
+      "sha256": "5d5e557f34a8ec40884d91b1e307078b227160cb62886117fef1ef6f28896f52"
+    },
+    {
+      "id": "110T",
+      "title": "Legendre–Assouad 覆盖指数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110T.tree",
+      "sha256": "eb4dd96f252a9f6ccb3053496773f411e0215276883c7d42e33f0bb040470fba"
+    },
+    {
+      "id": "110U",
+      "title": "覆盖指数的 Legendre 表达式",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/110U.tree",
+      "sha256": "a1ae5eb36e7a032885e7acc7313dd472693705cd988f1decdf9f9067d439baf5"
+    },
+    {
+      "id": "110V",
+      "title": "正则半径集的 Legendre 指数计算",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110V.tree",
+      "sha256": "a4ddfcd5bd5dd133f390cbb7819774c5125b7357022f5ac8be70a5c4ac57ca24"
+    },
+    {
+      "id": "110W",
+      "title": "球帽必要条件的 Legendre 形式",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/110W.tree",
+      "sha256": "e8cd98655fe336fc21d35cff4c21a4d97c16ffb6888c8449b1c907f7c6e439fb"
+    },
+    {
+      "id": "110X",
+      "title": "由局部覆盖指数决定类型闭包的猜想",
+      "taxon": "Conjecture",
+      "path": "trees/math/analysis/spherical-maximal/110X.tree",
+      "sha256": "bead492ff1736ad57b1bc8b715e59c449226b8ffbcefbe86ea4569e52bbdbbc3"
+    },
+    {
+      "id": "110Y",
+      "title": "球面极大算子的加权 Lp 问题",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110Y.tree",
+      "sha256": "924bf78719e80d789379174a24ffeeab054b585e47641c1496d192a7dc51228e"
+    },
+    {
+      "id": "110Z",
+      "title": "稀疏族与双线性稀疏支配",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/110Z.tree",
+      "sha256": "ef454c0407be2afafcbf5eb60296cd24b9c95df1b1f554a27d483d9be2afa641"
+    },
+    {
+      "id": "1110",
+      "title": "稀疏形式的极大平均上界",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/1110.tree",
+      "sha256": "28fe94ef18ec2d85c091d39c3d0fab2a53305348e842c0f98a13d84e98e2746e"
+    },
+    {
+      "id": "1111",
+      "title": "幂权重有界性区域的覆盖指数刻画",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1111.tree",
+      "sha256": "af3a22161ed1800a432eb5fc50f37e60cc188dcb7f140297b24e08d75d671c51"
+    },
+    {
+      "id": "1112",
+      "title": "半波演化与频率局部化",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/1112.tree",
+      "sha256": "8bfc1f04ad42849e444f0385ad3f55df6c257a5fb8429b3b8f792b64ff0a2a11"
+    },
+    {
+      "id": "1113",
+      "title": "分形时间集上的局部光滑猜想",
+      "taxon": "Conjecture",
+      "path": "trees/math/analysis/spherical-maximal/1113.tree",
+      "sha256": "97c8dcb1ef5b17f98b14bbbe3a02240ee39fcf013d797db08052611b412b7e40"
+    },
+    {
+      "id": "1114",
+      "title": "分形时间采样的 L² 精确代价",
+      "taxon": "Proposition",
+      "path": "trees/math/analysis/spherical-maximal/1114.tree",
+      "sha256": "ef1fc855918aab76e77bd526fe7b6d7405fc2b4528494e5fa8ae80b990f14ae4"
+    },
+    {
+      "id": "1115",
+      "title": "Assouad 维数的双尺度覆盖定义",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/1115.tree",
+      "sha256": "fbd2b11bbcaed5803de96632f5b41969086fd43e89c4bba458bf9f91e3cc282c"
+    },
+    {
+      "id": "1116",
+      "title": "准 Assouad 维数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/spherical-maximal/1116.tree",
+      "sha256": "c3cbfec1362e88289310741100b14f5e85293cbaa6914d697f7dc24b27983d41"
+    },
+    {
+      "id": "1117",
+      "title": "正则半径集的精确类型区域",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1117.tree",
+      "sha256": "9e6c928b19ad02c5bf5de0cf26a19dbe86b038757eed02ac395559d859287dc0"
+    },
+    {
+      "id": "1118",
+      "title": "球面极大类型闭包的实现分类",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1118.tree",
+      "sha256": "47107a032ddc7aa4c22e38427aca72d62b42e57cfeef434b6d04b09e862c9472"
+    },
+    {
+      "id": "1119",
+      "title": "非退化驻相的首项与余项",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/spherical-maximal/1119.tree",
+      "sha256": "9f115679f7548c94a2e7550602121b2d53f3e082551113a0ff03b8c89ca4684d"
+    },
+    {
+      "id": "icm2026-seeger",
+      "title": "Seeger：球面平均及其极大函数",
+      "taxon": "Reference",
+      "path": "trees/references/icm2026-seeger.tree",
+      "sha256": "543bb8a2dbbde22024b49785f4f84e5f225aabc53879f13152f50fc6666541ba"
+    },
+    {
+      "id": "1200",
+      "title": "受限正交投影：曲率、关联与多尺度非集中",
+      "taxon": "Outline",
+      "path": "trees/math/analysis/restricted-projections/1200.tree",
+      "sha256": "2f51c089bd2a6c2f7b931ae80ade13c2de0e00490af629f6aaf99e2ab4ae43b6"
+    },
+    {
+      "id": "1201",
+      "title": "度量空间的覆盖数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/1201.tree",
+      "sha256": "358c90e850ad1d5e7e23639856a1c655c8222b6aba851005252d0dc57aa3efba"
+    },
+    {
+      "id": "1202",
+      "title": "实数阶 Hausdorff 测度与 Hausdorff 维数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/1202.tree",
+      "sha256": "d674bf8904cac1319e6dea885498f1cd3683904b805dab265cb02949f0d12c60"
+    },
+    {
+      "id": "1203",
+      "title": "Hausdorff 维数的覆盖稳定性",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/1203.tree",
+      "sha256": "9285fa9f186ff9f181e10288deb6194c76339c917e4b83f590bcdc7e6caecbe1"
+    },
+    {
+      "id": "1204",
+      "title": "分离点集与球覆盖的比较",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/1204.tree",
+      "sha256": "a0d6910b387057a383bd50f55730dfc748bb503a6bf006aa2d833486ad5094df"
+    },
+    {
+      "id": "1205",
+      "title": "Frostman 测度的球增长条件",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/1205.tree",
+      "sha256": "718889f8d67c413b845a5dd9f4dae1c8ca6d65d9c0656e657edb6cedd196b97b"
+    },
+    {
+      "id": "1206",
+      "title": "质量分布原理给出维数与覆盖下界",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/1206.tree",
+      "sha256": "e69e10947d77228619b7c3549247fb31e7d38ef54504d77a5289a2607051cd0c"
+    },
+    {
+      "id": "1207",
+      "title": "紧集上的 Frostman 引理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/restricted-projections/1207.tree",
+      "sha256": "5aad5b65199ac59fba3a250d3ac34b962c293c737283f9e98262cd39a1eed857"
+    },
+    {
+      "id": "1208",
+      "title": "有限尺度的 Frostman 非集中条件",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/1208.tree",
+      "sha256": "0ac17e913ab404ab0ad9c52e3ea2dba95712f188843921f0ceb46d0d1c6e9b35"
+    },
+    {
+      "id": "1209",
+      "title": "Frostman 条件在取子集与缩放时的损失",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/1209.tree",
+      "sha256": "a118a04a1e4e15da02b048292c37c2c6aa6e913ae42b1ff699cabddb3a325cf3"
+    },
+    {
+      "id": "120A",
+      "title": "Grassmannian 与有限维正交投影",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120A.tree",
+      "sha256": "56db1731c97be055c52395ed34f20f42b3743e6ba3aa60cc6d098dd25b63e1bb"
+    },
+    {
+      "id": "120B",
+      "title": "投影族中的 pencil 退化集合",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120B.tree",
+      "sha256": "8c8a1218bcd5a277cad4106000f30f42426163ae201f99b62000ae76835321f8"
+    },
+    {
+      "id": "120C",
+      "title": "pencil 导致正交投影的维数亏损",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120C.tree",
+      "sha256": "902272a573d88bbce1a7d38294050df430d56fa548973ed91e0f1d88f24cd55f"
+    },
+    {
+      "id": "120D",
+      "title": "非退化曲线与高阶切空间",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120D.tree",
+      "sha256": "f39a644cc6d3503a0939f67f2234e10e744d13811b194343eb188d27b9e6f65c"
+    },
+    {
+      "id": "120E",
+      "title": "矩曲线的非退化行列式",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120E.tree",
+      "sha256": "da249607ec08e80d32fcb024f6e6963c8c0f3669827b78e4cf4f88456ac32cee"
+    },
+    {
+      "id": "120F",
+      "title": "非退化曲线高阶切空间的受限投影定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/restricted-projections/120F.tree",
+      "sha256": "05efb9a39789c162255d8b7ddcbb9ed50afc44cf46650788fcb75253dc839129"
+    },
+    {
+      "id": "120G",
+      "title": "投影覆盖转化为薄板计数",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120G.tree",
+      "sha256": "6b3e424c528970c490ece5acbc38755dba2ac89a9f3512da1a7259d3a8aeb90a"
+    },
+    {
+      "id": "120H",
+      "title": "管族的着色与关联重数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120H.tree",
+      "sha256": "f823d421da4ee17b6f76cedd1548896f990bbe2b9805c93725d56359bbde73e3"
+    },
+    {
+      "id": "120I",
+      "title": "关联第二矩控制着色并的体积",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120I.tree",
+      "sha256": "88cea862cb6e4e294b960bbf511c8b55399f459e21bd4c11f3dfdf4be46ad86c"
+    },
+    {
+      "id": "120J",
+      "title": "各向异性伸缩的 Fourier 对偶尺度",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120J.tree",
+      "sha256": "77668cfd3f933dae3bcb25823ca8a8c528a7f3cfe4bca267ea60e34d9529ce3e"
+    },
+    {
+      "id": "120K",
+      "title": "低频截断等于粗尺度卷积平滑",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120K.tree",
+      "sha256": "66a3205f4bfd0e3ba8796f9cd1af957570d2a9c1f1ff4fe4a3227a98bcb9ebee"
+    },
+    {
+      "id": "120L",
+      "title": "有限频率重叠的 Plancherel 估计",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120L.tree",
+      "sha256": "d954464ea9882ec7773b0aa717627f7a69a12e324e1a1b8afc0d355db77d2a40"
+    },
+    {
+      "id": "120M",
+      "title": "平方和解耦不等式",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120M.tree",
+      "sha256": "b0cd0fa74fb205f4e578c6d5b918414ac05f624ee775e9a69dfac9ed614ea115"
+    },
+    {
+      "id": "120N",
+      "title": "正交投影的异常方向集",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120N.tree",
+      "sha256": "32fdceac680b931f048b1861d9a3b5c54a3142c3717a242f66f575e191c9969d"
+    },
+    {
+      "id": "120O",
+      "title": "平面投影异常集的锐维数界",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/restricted-projections/120O.tree",
+      "sha256": "e5dcb3068ec977432cb90595333edb5ac0afad72a3c66cdd6be80a00cba991df"
+    },
+    {
+      "id": "120P",
+      "title": "高低频二分中的关联积分估计",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120P.tree",
+      "sha256": "e1a2dafec40987f2d5907d2f63e455e2ef9cd80bff1d6680a8b8fc250b12582a"
+    },
+    {
+      "id": "120Q",
+      "title": "平面 Furstenberg 集与直线参数空间",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120Q.tree",
+      "sha256": "c6716d95422725e14c32f64cbbc40e2b9d9972ff9dc61d268de8fce98f526c63"
+    },
+    {
+      "id": "120R",
+      "title": "Ren–Wang 的平面 Furstenberg 维数定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/restricted-projections/120R.tree",
+      "sha256": "257ad18ec5182ccafe1a699c2521a8b67dc8dc6c8aec8b3622ea67064f92b5c8"
+    },
+    {
+      "id": "120S",
+      "title": "直线族的水平切片是参数空间投影",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120S.tree",
+      "sha256": "f66d562c0adb75f385d47359b0c60bd3d16c3f747e4c123e23daf3b83362caef"
+    },
+    {
+      "id": "120T",
+      "title": "Kakeya 集与方向丰富的线段族",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120T.tree",
+      "sha256": "e26cf8f39e074cb42f33e33ec75accdcd594ff68304f2c1db4c686deeabdac62"
+    },
+    {
+      "id": "120U",
+      "title": "有限尺度的双向正则性与粘性",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120U.tree",
+      "sha256": "61ca17a5a31fb5b4484cbd210ed0a052c460c31ccf545435ab022510c7038407"
+    },
+    {
+      "id": "120V",
+      "title": "均匀二进树的分枝函数",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120V.tree",
+      "sha256": "eeb51287719199623ba2b4dc9072dcd4546e1cdb748437f68a183dd0c5927903"
+    },
+    {
+      "id": "120W",
+      "title": "逐层抽屉原理抽取均匀子树",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120W.tree",
+      "sha256": "88376af6583655065d025d6488e9f661b1c368382ffb1a2591c2a3cd2e09b02a"
+    },
+    {
+      "id": "120X",
+      "title": "分枝函数的近线性区间分解",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/120X.tree",
+      "sha256": "f328eb4331c7b34ec3a4d4c48c885f4978fa55f496724aa25169c88246f6be3b"
+    },
+    {
+      "id": "120Y",
+      "title": "凸 Wolff 公理的两种归一化",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/120Y.tree",
+      "sha256": "4439dd6fc8ffa8d9a67891fdde6158a0e266700c68d7d571d23e076937211cc9"
+    },
+    {
+      "id": "120Z",
+      "title": "四维二次曲面上的直线聚集障碍",
+      "taxon": "Example",
+      "path": "trees/math/analysis/restricted-projections/120Z.tree",
+      "sha256": "3e94a041e09cc225a424a63c19126070c10bbc7499f906b6bcd9384c5e58f6c8"
+    },
+    {
+      "id": "1210",
+      "title": "均匀树的两尺度 Frostman–Katz–Tao 分解",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/1210.tree",
+      "sha256": "73a00eb53e3ac472a24bd822a826f06a4ed6b2e3bee1a63c3c9613069422af79"
+    },
+    {
+      "id": "1211",
+      "title": "三维管并的 Wang–Zahl 体积估计",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/restricted-projections/1211.tree",
+      "sha256": "59622c59a53614416dfde551a97bed57385ed83f7f97e62898dbd55ebb2f01ac"
+    },
+    {
+      "id": "1212",
+      "title": "大切片推出 Hausdorff 维数下界",
+      "taxon": "Lemma",
+      "path": "trees/math/analysis/restricted-projections/1212.tree",
+      "sha256": "0fd5a96cc6836585e14742412efaaa8736d94186457fef63c6438b312ea279d4"
+    },
+    {
+      "id": "1213",
+      "title": "逃离 pencil 的多项式投影族问题",
+      "taxon": "Question",
+      "path": "trees/math/analysis/restricted-projections/1213.tree",
+      "sha256": "d492ac6a83a4dab6fc0373529843e88c4d5113cfbe644348772160a521233930"
+    },
+    {
+      "id": "1214",
+      "title": "非退化球面曲线的三维投影定理",
+      "taxon": "Theorem",
+      "path": "trees/math/analysis/restricted-projections/1214.tree",
+      "sha256": "04cba5cb774ca400bef4d86c3a4d2ba30c91e1f8fd01c487f8b520125e37c69b"
+    },
+    {
+      "id": "1215",
+      "title": "粘性尺度归纳中的误差翻倍障碍",
+      "taxon": "Example",
+      "path": "trees/math/analysis/restricted-projections/1215.tree",
+      "sha256": "8c0195da6f7d12689154f02561d877a2b96f0670663c711910e85e497041a3a3"
+    },
+    {
+      "id": "1216",
+      "title": "Frostman 多项式 Wolff 非集中条件",
+      "taxon": "Definition",
+      "path": "trees/math/analysis/restricted-projections/1216.tree",
+      "sha256": "6aaab0491c1e892d2a7239505708cfb8f7e5a7d1defa9179f75075cf81b7bbab"
+    },
+    {
+      "id": "1217",
+      "title": "高维 Furstenberg 着色的 Wolff 型猜想",
+      "taxon": "Conjecture",
+      "path": "trees/math/analysis/restricted-projections/1217.tree",
+      "sha256": "61f9ea3499c9e21d87304d90deff2ffcfd7b65eab04f837f0c4ae5717378ef44"
+    },
+    {
+      "id": "icm2026-hong-wang",
+      "title": "Hong Wang：Restricted Families of Orthogonal Projections in Rⁿ",
+      "taxon": "Reference",
+      "path": "trees/references/icm2026-hong-wang.tree",
+      "sha256": "a98728ff6ab5459c52e026dc1fd1461f7138f1e61c43f9aa180e6185699b77ab"
     }
   ],
   "limitation": "Atomic explanations, local proofs and explicitly cited research results. Source coverage and link checks do not imply that all research proofs have been reproduced.",
@@ -3817,7 +5183,55 @@
     "0Z1C",
     "0Z1D",
     "0Z1E",
-    "0Z1H"
+    "0Z1H",
+    "100A",
+    "100C",
+    "100G",
+    "100H",
+    "100K",
+    "100L",
+    "100P",
+    "100S",
+    "1010",
+    "1013",
+    "1040",
+    "1041",
+    "1042",
+    "1043",
+    "1102",
+    "1104",
+    "1105",
+    "1107",
+    "110C",
+    "110D",
+    "110E",
+    "110F",
+    "110G",
+    "110H",
+    "110L",
+    "110N",
+    "110O",
+    "110V",
+    "110W",
+    "1110",
+    "1114",
+    "1203",
+    "1204",
+    "1206",
+    "1207",
+    "1209",
+    "120C",
+    "120E",
+    "120G",
+    "120I",
+    "120J",
+    "120K",
+    "120L",
+    "120P",
+    "120S",
+    "120W",
+    "1210",
+    "1212"
   ],
   "proofs_with_external_inputs": [
     "0R0M",
@@ -3870,7 +5284,12 @@
     "0X13",
     "0X17",
     "0Z12",
-    "0Z19"
+    "0Z19",
+    "100K",
+    "100S",
+    "110L",
+    "110V",
+    "110W"
   ],
   "research_statements_without_local_proof": [
     "0R05",
@@ -3952,6 +5371,33 @@
     "0Z10",
     "0Z11",
     "0Z15",
-    "0Z18"
+    "0Z18",
+    "100I",
+    "100J",
+    "100N",
+    "100Q",
+    "100R",
+    "100T",
+    "100U",
+    "100V",
+    "100Y",
+    "1012",
+    "1017",
+    "1106",
+    "1108",
+    "110I",
+    "110K",
+    "110S",
+    "110U",
+    "1111",
+    "1117",
+    "1118",
+    "1119",
+    "120F",
+    "120O",
+    "120R",
+    "120X",
+    "1211",
+    "1214"
   ]
 }

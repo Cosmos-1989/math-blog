@@ -1,0 +1,12 @@
+\title{弱零树中的滑动截断分支}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Schlumprecht，§3–§4](icm2026-schlumprecht)；滑动截断的直接证明}
+
+\p{设 #{Z} 有[有限维分解](1002) #{(E_n)}，#{(x_s)\subset S_Z} 是无限高[弱零树](1006)。对任意正数序列 #{(\eta_j)}，存在一个分支 #{(u_j)} 及归一化[跳块序列](1003) #{(v_j)}，使 #{\|u_j-v_j\|<\eta_j}。}
+\p{\strong{证明。}递归选前缀及整数 #{0=b_0<b_1<\cdots}。第 #{j} 步已有前缀 #{s} 及 #{b_{j-1}}。投影 #{P_{\{1,\ldots,b_{j-1}+1\}}} 的像有限维；其作用于后继弱零序列后仍弱零，由[有限维范数等价](00M9)得到范数趋零。因此可选后继 #{u_j=x_{s^\frown n_j}}，使这个头部投影范数小于 #{\varepsilon_j}。}
+\p{再由 FDD 展开的范数收敛选 #{b_j>b_{j-1}+1}，使 #{\|u_j-P_{\{1,\ldots,b_j\}}u_j\|<\varepsilon_j}。于是}
+##{w_j=P_{\{b_{j-1}+2,\ldots,b_j\}}u_j,\qquad
+\|u_j-w_j\|<2\varepsilon_j.}
+\p{预先取 #{0<\varepsilon_j<\min\{1/4,\frac{\eta_j}{4}\}}。则 #{w_j\ne 0}，并且归一化 #{v_j=w_j/\|w_j\|} 满足 #{\|u_j-v_j\|\le 2\|u_j-w_j\|<4\varepsilon_j<\eta_j}。支集均位于显示的区间内，相邻区间间空出坐标 #{b_j+1}，首项从第二坐标起，所以 #{(v_j)} 是跳块序列。递归同时延长树前缀，故 #{(u_j)} 确为同一分支。}

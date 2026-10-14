@@ -1,0 +1,16 @@
+\title{唯一收敛分解的部分和投影一致有界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{X} 是 [Banach 空间](00M6)，#{E_n\subset X} 为有限维子空间，且每个 #{x\in X} 都有唯一的范数收敛展开 #{x=\sum_{n\geq 1}x_n}，#{x_n\in E_n}。定义部分和 #{P_Nx=\sum_{n=1}^Nx_n}。则存在 #{K<\infty} 使}
+##{\|P_Nx\|\leq K\|x\|\qquad(N\geq 1,\ x\in X).}
+\p{这个结论只从唯一性和收敛性出发，给出[有限维分解](1002)所用投影的连续性。取 #{E_n=\mathbb Fe_n} 时，还给出 [Schauder 基](1001)的连续坐标泛函。}
+\p{\strong{展开序列的空间。}令 #{\mathcal S} 为所有使 #{\sum_n z_n} 在 #{X} 中收敛的序列 #{z=(z_n)}，其中 #{z_n\in E_n}，并赋予范数}
+##{\|z\|_{\mathcal S}=\sup_N\left\|\sum_{n=1}^Nz_n\right\|.}
+\p{有限性来自部分和收敛；三角不等式直接成立，所有部分和为零则每个坐标为零。尤其 #{\|z_n\|\leq 2\|z\|_{\mathcal S}}，其中首项可取常数一。}
+\p{\strong{完备性。}若 #{z^{(m)}} 在此范数下为 [Cauchy 序列](00ER)，各坐标 #{z_n^{(m)}} 在 #{E_n} 中是 Cauchy 序列。有限维空间由[范数等价](00M9)及[实数完备性](0A37)而完备，故有极限 #{z_n\in E_n}。给定 #{\varepsilon>0}，固定足够大的 #{m}，使 #{\|z^{(m)}-z^{(r)}\|_{\mathcal S}\leq\varepsilon} 对所有足够大的 #{r} 成立。固定 #{N} 令 #{r\to\infty}，得到}
+##{\left\|\sum_{n=1}^N(z_n^{(m)}-z_n)\right\|\leq\varepsilon\qquad\text{对所有 }N.}
+\p{比较任意两个部分和，候选序列 #{z} 的尾部范数不超过 #{z^{(m)}} 对应尾部范数加 #{2\varepsilon}。后者的级数收敛，且 #{\varepsilon} 可任意小，故候选部分和也是 Cauchy 序列。在 #{X} 中取极限，得到 #{z\in\mathcal S}；上面的不等式又说明 #{z^{(m)}\to z}，所以 #{\mathcal S} 完备。}
+\p{\strong{把展开范数与原范数比较。}求和映射 #{A:\mathcal S\to X}，#{Az=\sum_nz_n}，线性且 #{\|Az\|\leq\|z\|_{\mathcal S}}。展开的存在性与唯一性分别给出满射与单射。[开映射定理](1042)说明 #{A^{-1}} 有界；置 #{K=\|A^{-1}\|}，则 #{\|P_Nx\|\leq\|A^{-1}x\|_{\mathcal S}\leq K\|x\|}。}
+\p{在一维情形，若 #{x_n=e_n^*(x)e_n}，则 #{|e_n^*(x)|\|e_n\|=\|P_nx-P_{n-1}x\|\leq 2K\|x\|}，约定 #{P_0=0}。因此每个坐标泛函确为[连续线性泛函](00MK)。}

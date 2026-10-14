@@ -1,0 +1,11 @@
+\title{半径集的一致上 Minkowski 维数}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Seeger 幻灯片第 6 页；Roos–Seeger 综述式 (3.2)–(3.3)](icm2026-seeger)}
+
+\p{设非空 #{\mathcal E\subset(0,\infty)}，置 #{E_R=R^{-1}(\mathcal E\cap[R,2R])\subset[1,2]}。以通常距离下、闭球半径为 δ 的[覆盖数](1201)定义}
+##{\beta_{\mathcal E}=\limsup_{\delta\downarrow 0}\frac{\log\bigl(\sup_{R>0}N_\delta(E_R)\bigr)}{\log(1/\delta)}.}
+\p{这里连续参数的[上极限](0F61)按 #{\inf_{\varepsilon>0}\sup_{0<\delta<\varepsilon}} 理解。该数属于 #{[0,1]}，等价于满足下述条件的 b 的下确界：对每个 #{\varepsilon>0} 存在 #{C_\varepsilon<\infty}，使所有 #{R>0}、#{0<\delta<1} 同时满足 #{N_\delta(E_R)\le C_\varepsilon\delta^{-b-\varepsilon}}。常数不能依赖 R。这一等价性直接来自上极限定义，并用 #{N_\delta([1,2])\le 2 /\delta} 控制远离零的 δ。}
+\p{用[乘法度量](110A)在每个直径为一的区间上直接覆盖，得到相同指数。若只有非空 #{E\subset[1,2]}，通常上 Minkowski 维数记为 #{\beta_E=\limsup_{\delta\downarrow 0}\log N_\delta(E)/\log(1/\delta)}，它也等于上述一致版本。空的 #{E_R} 对上确界贡献零；非空的总半径集保证对数的真数至少为一。}
+\p{#{\beta_{\mathcal E}\ge\sup_R\beta_{E_R}}，但等号可能失败：[不同尺度越来越细的有限网格](110F)说明为何不能交换上极限与对 R 的上确界。}

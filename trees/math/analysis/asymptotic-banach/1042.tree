@@ -1,0 +1,12 @@
+\title{Banach 空间的开映射定理}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{X,Y} 是实或复 [Banach 空间](00M6)，#{T:X\to Y} 是满射[有界线性算子](00M4)。则 #{T} 把开集映为开集。若 #{T} 还是单射，则逆算子 #{T^{-1}} 有界。}
+\p{\strong{先得到像的闭包中的球。}记 #{B_X} 为开单位球，#{\overline B_X} 为闭单位球。满射性给出 #{Y=\bigcup_{n\geq 1}T(n\overline B_X)}。由 [Baire 纲定理](0AC5)，某个闭集 #{\overline{T(n\overline B_X)}} 有非空内部，否则这些闭集的补集是稠密开集，其交却为空。缩放后，#{\overline{T(\overline B_X)}} 包含某个开球 #{B(y_0,r)}。}
+\p{对 #{\|y\|<r}，两个点 #{y_0+y} 和 #{y_0} 都在上述闭包中。分别取像内逼近序列后相减，得到 #{y\in\overline{T(2\overline B_X)}}。所以有 #{a>0} 使}
+##{B(0,a)\subseteq\overline{T(\overline B_X)}.}
+\p{\strong{用可求和误差去掉闭包。}给定 #{\|y\|<a/2}。缩放上述包含关系，可取 #{x_1} 满足 #{\|x_1\|\leq 1 /2} 且 #{\|y-Tx_1\|<a/4}。归纳取 #{\|x_j\|\leq 2^{-j}}，使第 #{j} 步余项的范数小于 #{a2^{-j-1}}。级数 #{\sum_jx_j} 的尾部范数受几何级数控制，故由完备性收敛到某个 #{\|x\|\leq 1} 的向量。#{T} 连续且余项趋零，所以 #{Tx=y}。}
+\p{于是 #{B(0,a/2)\subseteq T(\overline B_X)}。进一步缩小输入球，得 #{B(0,a/4)\subseteq T(B_X)}。给定开集 #{U\subset X} 及 #{x\in U}，取 #{x+\varepsilon B_X\subset U}，线性性便给出 #{Tx+B(0,\varepsilon a/4)\subset T(U)}，所以 #{T(U)} 开。}
+\p{当 #{T} 双射时，#{B(0,a/2)\subseteq T(\overline B_X)} 还给出 #{\|T^{-1}y\|\leq(2/a)\|y\|}：先对任何大于 #{2\|y\|/a} 的缩放因子应用包含关系，再让该因子下降到临界值。唯一的原像保证这些范数上界都约束同一向量。}

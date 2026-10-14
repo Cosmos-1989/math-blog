@@ -1,0 +1,10 @@
+\title{渐近博弈与获胜策略}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Schlumprecht，§2.2](icm2026-schlumprecht)}
+
+\p{设 #{X} 是无限维实 [Banach 空间](00M6)，#{S_X} 为单位球面，#{\mathcal A\subset S_X^k} 或 #{\mathcal A\subset S_X^{\mathbb N}} 为目标集。第 #{j} 回合，玩家 I 选择[闭有限余维子空间](1005) #{Y_j}，玩家 II 选择 #{x_j\in S_X\cap Y_j}。分别进行 #{k} 回合或无限回合，玩家 I 在结果 #{(x_j)\in\mathcal A} 时获胜。}
+\p{策略可以依赖此前所有选择。形式上，I 的策略是为每个有限向量历史 #{s=(x_1,\ldots,x_r)} 指定 #{Y_s\in\operatorname{cof}(X)}；它获胜指任何满足 #{x_{r+1}\in S_{Y_s}} 的对局均落入 #{\mathcal A}。因而“存在一个好序列”远弱于“有策略迫使所有合法应答都好”。}
+\p{有限长度时，量词为 #{\exists Y_1\ \forall x_1\in S_{Y_1}\ \exists Y_2\ \forall x_2\in S_{Y_2}\cdots}。无限长度须用上述策略函数定义，不能把无限串量词当作有限逻辑公式。}
+\p{有限博弈可从终局向前递归判定胜方。无限博弈中，I 没有获胜策略一般不能直接推出 II 有获胜策略；需要目标集的确定性定理。有关闭目标及 Borel 目标的结果在[报告 §2.2](icm2026-schlumprecht)引用 Gale–Stewart 型确定性和 Martin 的定理。}

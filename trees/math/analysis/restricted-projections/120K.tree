@@ -1,0 +1,10 @@
+\title{低频截断等于粗尺度卷积平滑}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{f} 为 [Schwartz 函数](0H4F)，#{\psi\in C_c^\infty(\mathbb R^n)} 在单位球上等于 1、在半径 2 球外等于零，且 #{0\leq\psi\leq 1}。采用 [Fourier 变换](0H4G)与[反演](0I80)的角频率约定，对 #{R>0} 定义}
+##{f_{\mathrm{lo}}=\mathcal F^{-1}(\psi(\xi /R)\widehat f(\xi)),\qquad f_{\mathrm{hi}}=f-f_{\mathrm{lo}}.}
+\p{令 #{k=\mathcal F^{-1}\psi}，则 #{k_R(x)=R^nk(Rx)}，并有 #{f_{\mathrm{lo}}=f*k_R}，其中卷积定义为 #{(f*k_R)(x)=\int f(x-y)k_R(y)\,dy}。}
+\p{\strong{证明。}在逆 Fourier 积分中作 #{\xi=R\eta}，得到 #{\mathcal F^{-1}(\psi(\xi /R))=k_R}。对卷积积分应用 [Fubini 定理](0H53)，换元后得 #{\widehat{f*k_R}=\widehat f\,\widehat{k_R}}；Schwartz 衰减保证绝对可积。再用反演即得所述恒等式。由 #{\widehat k(0)=\psi(0)=1}，有 #{\int k_R=1}。}
+\p{对任意 #{N>n}，Schwartz 衰减给出 #{|k_R(x)|\leq C_NR^n(1+R|x|)^{-N}}，于是 #{\|k_R\|_1=\|k\|_1}，且 #{\int_{|x|>A/R}|k_R(x)|\,dx\leq C'_NA^{n-N}} 对 #{A\geq 1} 成立。最后一个估计可把区域分为 #{2^jA< R|x|\leq 2^{j+1}A} 的环带求几何级数。故平滑的空间尺度为 #{R^{-1}}；若 #{R=(S\delta)^{-1}}，便是粗尺度 #{S\delta}。核可能变号，尾部也必须保留。}

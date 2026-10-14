@@ -1,0 +1,13 @@
+\title{把渐近策略实现为跳块控制}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlumprecht，定理3.1](icm2026-schlumprecht)；Odell–Schlumprecht，Trees and Branches，定理3.3}
+
+\p{设 #{X} 是无限维实[可分](0025) [Banach 空间](00M6)，#{\mathcal A\subset S_X^{\mathbb N}}。采用[博弈与树对应](100I)中的 #{\mathcal A_\varepsilon} 及离散[积拓扑](00EI)闭包。下述是分块原理的精确扰动形式。}
+\p{\strong{定理（引用）。}存在 #{X} 到一个有[有限维分解](1002) #{(E_n)} 的 Banach 空间 #{Z} 的等距嵌入，使下述条件等价：对每个 #{\varepsilon>0}，玩家 I 在 #{\overline{\mathcal A_\varepsilon}^{\,d}} 博弈中获胜；对每个 #{\varepsilon>0}，存在[分块](1014) #{(F_n)} 及正数序列 #{\delta_j\downarrow 0}，使所有满足下式的 #{(x_j)\subset S_X} 都属于 #{\overline{\mathcal A_\varepsilon}^{\,d}}：}
+##{\text{存在 }1=k_0<k_1<\cdots,\qquad
+\left\|x_j-P^{\mathcal F}_{\{k_{j-1}+1,\ldots,k_j-1\}}x_j\right\|<\delta_j
+\quad(j\ge 1).}
+\p{若 #{X^*} 可分，可选分解[收缩](1015)；若 #{X} [反身](100D)，可选 #{Z} 反身。证明引用原论文定理3.3；此处只列单个目标集版本。输出误差 #{\varepsilon} 与输入截断误差 #{(\delta_j)} 分开量化，后者允许依赖前者。}
+\p{显示的条件说 #{x_j} 近似为相对于 #{(F_n)} 的[跳块](1003)，但 #{x_j} 本身仍属于 #{X}。直接将 #{Z} 的块投影用于 #{x\in X} 时，所得分量未必仍在 #{X}；原论文中的嵌入和协调构造正是处理这项障碍。}

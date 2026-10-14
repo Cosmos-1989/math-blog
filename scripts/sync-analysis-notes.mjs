@@ -11,6 +11,7 @@ const prefixes = new Map([
   ['artstein-avidan', '0R'], ['bordenave', '0S'], ['forstneric', '0T'],
   ['milman', '0U'], ['mirek', '0V'], ['ortega-cerda', '0W'],
   ['parcet', '0X'], ['peluse', '0Y'], ['peterson', '0Z'],
+  ['schlumprecht', '10'], ['seeger', '11'], ['hong-wang', '12'],
 ]);
 const reusedIds = new Map([
   ['peluse', new Set(['0GO0', 'icm2026-peluse-combinatorics'])],

@@ -1,0 +1,11 @@
+\title{粗嵌入与一族空间的共同控制}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Schlumprecht，§6](icm2026-schlumprecht)}
+
+\p{设 #{(X,d_X)}、#{(Y,d_Y)} 是[度量空间](00EK)。映射 #{f:X\to Y} 称为粗嵌入，如果存在非减函数 #{\rho,\omega:\lbrack 0,\infty\rparen\to\lbrack 0,\infty\rparen}，使每个有限 #{t} 有 #{\omega(t)<\infty}、#{\rho(t)\to\infty}（#{t\to\infty}），且}
+##{\rho(d_X(x,x'))\le d_Y(f(x),f(x'))\le\omega(d_X(x,x'))\qquad(x,x'\in X).}
+\p{这个条件控制大尺度距离，不要求 #{f} 线性，也不保证小尺度单射。上界要求每个有界距离的像距离统一有界，下界要求源距离趋于无穷时像距离也趋于无穷。}
+\p{一族空间 #{(X_k,d_k)} 等粗嵌入 #{Y}，指存在映射 #{f_k:X_k\to Y}，使同一对 #{\rho,\omega} 对所有 #{k} 都满足上述不等式。各个 #{X_k} 分别粗嵌入时，控制函数可能依赖 #{k}，这弱于共同控制。}
+\p{映射为 #{L}-Lipschitz 指 #{d_Y(f(x),f(x'))\le Ld_X(x,x')}，其最小常数记为 #{\operatorname{Lip}(f)}。粗嵌入的上控制函数无需线性；在[Hamming 图](100P)上可借最短路径从相邻顶点的控制得到 Lipschitz 界。}

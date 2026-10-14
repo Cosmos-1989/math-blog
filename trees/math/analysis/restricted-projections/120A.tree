@@ -1,0 +1,11 @@
+\title{Grassmannian 与有限维正交投影}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§1}
+
+\p{对整数 #{1\leq m<n}，Grassmannian #{\operatorname{Gr}(m,n)} 是 #{\mathbb R^n} 中所有 #{m} 维[线性子空间](00D7)组成的集合。标准内积为 #{x\cdot y=\sum_jx_jy_j}。由[正交投影定理](00MS)，每个 #{V\in\operatorname{Gr}(m,n)} 决定线性映射 #{P_V}，其像为 #{V}、核为 #{V^\perp=\{x:x\cdot v=0\text{ 对所有 }v\in V\}}，且 #{\|P_Vx\|\leq\|x\|}。}
+\p{用投影矩阵定义[度量](00EK) #{d(V,W)=\|P_V-P_W\|_{\mathrm{op}}}，其中 #{\|A\|_{\mathrm{op}}=\sup_{|x|=1}|Ax|}。对称性与三角不等式来自矩阵范数；距离为零时两投影同像，故 #{V=W}。这使方向族的[覆盖数](1201)和[Hausdorff 维数](1202)有确定含义。}
+\p{若满列秩矩阵 #{A\in\mathbb R^{n\times m}} 的列向量构成 #{V} 的一组基，则}
+##{P_V=A(A^{\mathsf T}A)^{-1}A^{\mathsf T}.}
+\p{确实，#{c^{\mathsf T}A^{\mathsf T}Ac=|Ac|^2>0} 对 #{c\ne 0} 成立，故逆矩阵存在。右侧作用于 #{Ac} 得 #{Ac}，作用于 #{V^\perp} 得零，因而由正交分解唯一性等于 #{P_V}。局部可把横截于固定补空间的子空间写成某线性映射 #{L:\mathbb R^m\to\mathbb R^{n-m}} 的图，取 #{A=\begin{pmatrix}I_m\\L\end{pmatrix}} 即给出 #{m(n-m)} 个矩阵坐标。}

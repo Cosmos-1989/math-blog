@@ -1,0 +1,11 @@
+\title{基与有限维分解的收缩性}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Schlumprecht，§3、§8](icm2026-schlumprecht)}
+
+\p{设 #{(e_n)} 是实 [Banach 空间](00M6) #{X} 的 [Schauder 基](1001)，#{e_n^*} 为坐标泛函。称此基收缩，如果}
+##{X^*=\overline{\operatorname{span}\{e_n^*:n\ge 1\}}^{\,\|\cdot\|}.}
+\p{闭包取[连续对偶](00MK)的算子范数。于是每个连续泛函都能被有限坐标泛函按范数逼近；这强于只对每个 #{x\in X} 逐点逼近。坐标泛函在 #{X^*} 中也构成 Schauder 基：令 #{S_N} 为原基部分和投影，则 #{S_N^*f=f\circ S_N=\sum_{n\le N}f(e_n)e_n^*} 且 #{\|S_N^*\|\le K}。对有限坐标泛函 #{g}，足够大的 #{N} 有 #{S_N^*g=g}；由稠密性和 #{\|S_N^*f-f\|\le(K+1)\|f-g\|} 得范数收敛。唯一性通过在每个 #{e_n} 上取值确定。}
+\p{对[有限维分解](1002) #{(E_n)}，定义 #{E_n^*=\{f\circ P_n:f\in X^*\}\subset X^*}，称分解收缩，如果 #{X^*=\overline{\operatorname{span}\bigcup_nE_n^*}}。该定义不要求为每个块预先选基。}
+\p{收缩 FDD 的有界块序列弱零。事实上，给定 #{f\in X^*} 和 #{\varepsilon>0}，用有限坐标泛函 #{g} 使 #{\|f-g\|<\varepsilon}；块支集最终避开 #{g} 的支集，故 #{g(x_j)=0}，于是 #{|f(x_j)|\le\varepsilon\sup_j\|x_j\|}。任取 #{\varepsilon} 得所需极限。}

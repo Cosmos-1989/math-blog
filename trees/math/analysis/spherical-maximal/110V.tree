@@ -1,0 +1,11 @@
+\title{正则半径集的 Legendre 指数计算}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Roos–Seeger 综述例 5.6(i)](icm2026-seeger)}
+
+\p{设非空 #{E\subset[1,2]} 为 #{(\beta,\gamma)} [准 Assouad 正则集](110Q)，#{\gamma>0}。其[Legendre–Assouad 指数](110T)为}
+##{\nu_E^\sharp(\alpha)=\begin{cases}\beta,&\alpha\le 0,\\\beta+(1-\beta /\gamma)\alpha,&0\le\alpha\le\gamma,\\\alpha,&\alpha\ge\gamma.\end{cases}}
+\p{\strong{证明。}正则谱使 #{(1-\theta)a_E(\theta)=\min\{\beta,\gamma(1-\theta)\}}。代入外部输入[Legendre 公式](110U)，需要最大化两个线段拼成的函数 #{\alpha\theta+\min\{\beta,\gamma(1-\theta)\}}。折点在 #{\theta_0=1-\beta /\gamma}。}
+\p{在 #{[0,\theta_0]} 上斜率为 α，在 #{[\theta_0,1]} 上斜率为 #{\alpha -\gamma}。若 #{\alpha\le 0}，最大值在零点，等于 β；若 #{0\le\alpha\le\gamma}，最大值在折点，等于 #{\beta+\alpha\theta_0}；若 #{\alpha\ge\gamma}，最大值在一，等于 α。这给出三个分支及端点的一致性。}
+\p{当 #{\gamma=0} 时 #{\beta=0}，同一上确界直接给出 #{\nu_E^\sharp(\alpha)=\max\{0,\alpha\}}，不使用含 #{\beta /\gamma} 的表达式。特别地 β 与 γ 相等时，公式退化为 #{\max\{\beta,\alpha\}}。}

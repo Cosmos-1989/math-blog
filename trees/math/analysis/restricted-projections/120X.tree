@@ -1,0 +1,12 @@
+\title{分枝函数的近线性区间分解}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，引理 5.4 与 §5.2；Shmerkin 的多尺度引理}
+
+\p{固定 #{d\geq 1}。对每个 #{0<\varepsilon<1}，存在 #{\tau=\tau(d,\varepsilon)>0}，使任意非减的 #{d}-[Lipschitz 函数](00FU) #{f:[0,1]\to[0,d]}、#{f(0)=0} 都具有有限多个内部互不相交的区间 #{[a_j,b_j]}，满足 #{b_j-a_j\geq\tau}、#{|[0,1]\setminus\bigcup_j[a_j,b_j]|\leq\varepsilon}，且}
+##{\left|f(x)-f(a_j)-\frac{f(b_j)-f(a_j)}{b_j-a_j}(x-a_j)\right|
+\leq\varepsilon(b_j-a_j)\quad(x\in[a_j,b_j]).}
+\p{这是所引 Shmerkin 引理，存在性证明引用文献。用于[分枝函数](120V)时，记该段弦斜率为 #{s_j}，则两端之间的累计分枝数与 #{(r/R)^{-s_j}} 之比只带一个小幂次误差；这里外尺度 #{R=\delta^{a_j}}、内尺度 #{r=\delta^{b_j}}。它把不规则尺度分布分解为近似固定维数的片段。}
+\p{这种分解本身不保证分段锐估计相乘后仍然锐。取 #{0<t<2}，函数 #{f(u)=\min\{2u,t\}} 的斜率先为 2，后为 0，但整体有效维数为 #{t}。平面 Furstenberg 估计中的额外指数为 #{q(s,t)=\min\{t,1,(t+s)/2\}}。分段使用 #{q(s,2)=1} 与 #{q(s,0)=0}，按区间长度加权只得到 #{t/2}，而 #{q(s,t)>t/2} 对 #{0<s\leq 1,\ 0<t<2} 成立。}
+\p{相应几何模型是在间距 #{\rho=\delta^{t/2}} 的平面网格点放置 #{\delta} 尺度小块：从 1 到 #{\rho} 具有二维分枝，从 #{\rho} 到 #{\delta} 几乎不分枝。因此 [Ren–Wang 定理](120R)还要分析不同尺度段之间的关联，使用高低频方法处理这类分散结构。}

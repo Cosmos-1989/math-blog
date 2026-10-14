@@ -1,0 +1,10 @@
+\title{投影覆盖转化为薄板计数}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§2；网格版本}
+
+\p{设 #{E\subset B(0,1)\subset\mathbb R^n}，#{V\in\operatorname{Gr}(m,n)}。选 #{V} 的正交坐标，将其分成边长 #{\delta} 的半开立方体 #{Q}。令 #{W_Q=P_V^{-1}(Q)}，称为相应的无限薄板，其短方向平行于 #{V}，长方向平行于 #{V^\perp}。记 #{M_V(E)=\#\{Q:W_Q\cap E\ne\varnothing\}}，则}
+##{N_{\sqrt m\delta}(P_VE)\leq M_V(E)\leq 4^mN_\delta(P_VE).}
+\p{\strong{证明。}由[正交投影](120A)的原像定义，#{W_Q\cap E\ne\varnothing} 当且仅当 #{Q\cap P_VE\ne\varnothing}。每个 #{Q} 直径为 #{\sqrt m\delta}，所以与像相交的立方体给出左侧的球覆盖。半径 #{\delta} 的球在每个坐标方向的投影区间长为 #{2\delta}，至多交四个网格区间，因而至多交 #{4^m} 个立方体；对最小球覆盖计数得到右侧。}
+\p{由[固定倍数尺度的覆盖比较](1204)，#{M_V(E)} 与[覆盖数](1201) #{N_\delta(P_VE)} 在只依赖 #{m} 的常数内可比。把 #{W_Q} 与固定有界区域相交，就得到 #{m} 个短边尺度为 #{\delta}、其余尺度有界的薄板。若有限点集 #{P\subset E} 对每个 #{V\in\Lambda} 使用这套分割，每个点恰属于每个方向的一块板，因此带方向标号的关联数精确等于 #{\#P\,\#\Lambda}；方向标号即使给出几何上重合的板也应保留。}

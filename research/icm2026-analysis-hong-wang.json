@@ -1,0 +1,676 @@
+{
+  "date": "2026-10-14",
+  "report": {
+    "speaker": "Hong Wang",
+    "title": "Restricted Families of Orthogonal Projections in R^n",
+    "outline": "1200",
+    "reference": "icm2026-hong-wang",
+    "question": "受限方向族何时保留最大投影维数，曲率、高低频关联与多尺度非集中怎样排除线性和非线性退化？",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806156",
+    "source_version": "SIAM ICM2026 Volume 4, pp.785–800; online 2026-07-13; publisher HTML accessed 2026-10-14.",
+    "status": "integrated-and-locally-verified; research-proof-limits-recorded",
+    "full_text_available": true,
+    "full_text_read_this_turn": true,
+    "reading_scope": "出版社HTML正文§1–7，包括§3.1、§5.1–5.2、所有显示定义/定理/猜想、假证明及诊断、两尺度因子分解和末尾研究问题；致谢、脚注、参考文献1–49、版权和出版信息。未另读出版社PDF。补充论文只读下列定点范围，不称全文已读。",
+    "sources": [
+      {
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1806156",
+        "title": "Restricted Families of Orthogonal Projections in R^n",
+        "author": "Hong Wang",
+        "version": "ICM2026 Volume 4, pp.785–800; DOI 10.1137/25M1806156; online 2026-07-13",
+        "access": "Publisher open-access HTML, 2026-10-14",
+        "reading_status": "main_report_body_read",
+        "full_document_read": false,
+        "read_scope": "All main body §§1–7, including §§3.1,5.1,5.2, displays, fake-proof diagnosis, conjectures and research questions; acknowledgments, footnotes, bibliography1–49, copyright/history. No separate PDF. Abstract not included in full-reading claim.",
+        "license": "CC BY 4.0 checked in publisher Copyright block; copyright International Mathematical Union.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://arxiv.org/html/2211.09508v2",
+        "title": "A restricted projection problem for fractal sets in R^n",
+        "author": "Shengwen Gan; Shaoming Guo; Hong Wang",
+        "version": "arXiv:2211.09508v2, 2024-01-21",
+        "access": "Versioned HTML and abstract metadata, 2026-10-14",
+        "reading_status": "targeted_sections_read",
+        "full_document_read": false,
+        "read_scope": "Abstract, §1 through notation/acknowledgment; §2 opening, Theorem2.1 and the displayed deduction of Theorem1.2, high-low setup through (2.21). Later frequency decomposition and decoupling proof not read.",
+        "license": "arXiv perpetual non-exclusive license displayed; not CC BY. Used for mathematical statement checking, not translated wholesale.",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+      },
+      {
+        "url": "https://arxiv.org/html/2308.08819v2",
+        "title": "Furstenberg sets estimate in the plane",
+        "author": "Kevin Ren; Hong Wang",
+        "version": "arXiv:2308.08819v2, 2023-09-07",
+        "access": "Versioned HTML, 2026-10-14",
+        "reading_status": "targeted_sections_read",
+        "full_document_read": false,
+        "read_scope": "Abstract; §1 including Theorems1.1/1.2, exceptional-set discussion, Definitions1.3/1.4, sum-product statements and roadmap; §2 definitions2.1–2.6 and Proposition2.7/Remark2.8. No full reading of §§3–6 proofs.",
+        "license": "CC BY 4.0 displayed in HTML.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2502.17655v1",
+        "title": "Volume estimates for unions of convex sets, and the Kakeya set conjecture in three dimensions",
+        "author": "Hong Wang; Joshua Zahl",
+        "version": "arXiv:2502.17655v1; submitted 2025-02-24; PDF title date 2025-02-26",
+        "access": "Versioned PDF text and abstract metadata; HTML fetch failed due to size, 2026-10-14",
+        "reading_status": "targeted_statements_read",
+        "full_document_read": false,
+        "read_scope": "Abstract; printed p.3 Theorems1.1/1.2; §§1.1–1.2 definitions and discussion displayed on pp.3–6; printed p.7 Propositions1.6–1.8, Theorem1.9 and its parameter argument; p.8 Corollary1.10. Search also exposed later snippets, not treated as section readings. No full 127-page proof or figure inspection.",
+        "license": "CC BY 4.0 confirmed by following arXiv abstract license link.",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "deferred": [
+      "高阶切空间及球面受限投影的研究下界、解耦定理本身、全部频率算法未重证。",
+      "Ren–Wang连续与离散锐Furstenberg定理、异常集锐定理引用；未把单尺度覆盖下界直接当作Hausdorff证明。",
+      "紧集Frostman构造已证明；一般Borel集内部紧逼近及一般Frostman存在性未重证。",
+      "Shmerkin近线性区间分解引用。报告引理5.5的递增维数版本不另建定理页，其精确误差分析未重证。",
+      "1210完整证明精确均匀树的标量分解；报告引理6.10凸体因子分解仅说明输出结构并引用存在性，未升级为本地证明。",
+      "四维二次曲面管族选取与凸Wolff公理验证引用；只补直线恒等式、邻域体积及幂次比较。",
+      "Wang–Zahl管并估计及三维Kakeya满维定理引用；graininess、平面结构、径向投影、严格自改善命题1.7和着色到Hausdorff的全过程未重证。",
+      "报告Statement3.2是plausible statement且均匀性写法非精确定量，本轮不独立导入。一般多项式问题及高维Furstenberg猜想准确保留研究状态。",
+      "无全局导航/脚本/清单写入；父任务负责注册、同步、规范化、Forester构建及渲染核验。无提交或推送。"
+    ]
+  },
+  "entries": [
+    [
+      "1200",
+      [],
+      "研究叙事综述；无硬前置。"
+    ],
+    [
+      "1201",
+      [
+        "00EK",
+        "00F3"
+      ],
+      "度量空间覆盖数，紧集有限覆盖；保留与Seeger共用ID。"
+    ],
+    [
+      "1202",
+      [
+        "00EK",
+        "00QD"
+      ],
+      "实数阶Hausdorff测度与维数；0U01仅作整数阶对照。"
+    ],
+    [
+      "1203",
+      [
+        "00EK",
+        "00FU",
+        "1202"
+      ],
+      "可数并稳定性及Lipschitz维数不增的覆盖证明。"
+    ],
+    [
+      "1204",
+      [
+        "1201",
+        "00XV"
+      ],
+      "极大分离集、覆盖比较与有限体积装填。"
+    ],
+    [
+      "1205",
+      [
+        "00QD",
+        "00Q2"
+      ],
+      "有限Borel测度球增长条件。"
+    ],
+    [
+      "1206",
+      [
+        "1205",
+        "1202",
+        "1201",
+        "00XV",
+        "1203",
+        "00D7"
+      ],
+      "质量分布原理、覆盖下界及欧氏子空间维数。"
+    ],
+    [
+      "1207",
+      [
+        "00F3",
+        "00Q2",
+        "1205",
+        "1203",
+        "1202",
+        "00XV",
+        "00Q5"
+      ],
+      "紧集Frostman的有限树容量、对角极限与区间推前构造。"
+    ],
+    [
+      "1208",
+      [
+        "1201",
+        "1204"
+      ],
+      "有限尺度Frostman及Katz–Tao归一化。"
+    ],
+    [
+      "1209",
+      [
+        "1208",
+        "1201"
+      ],
+      "子集与缩放的常数损失及delta/rho最细尺度。"
+    ],
+    [
+      "120A",
+      [
+        "00D7",
+        "00MS",
+        "00EK",
+        "1201",
+        "1202"
+      ],
+      "Grassmannian、投影矩阵及图坐标。"
+    ],
+    [
+      "120B",
+      [
+        "00D7",
+        "120A"
+      ],
+      "pencil秩退化定义。"
+    ],
+    [
+      "120C",
+      [
+        "00D7",
+        "00D9",
+        "120A",
+        "120B",
+        "1206"
+      ],
+      "基扩充证明秩亏损与线性集合反例。"
+    ],
+    [
+      "120D",
+      [
+        "00N9",
+        "120A"
+      ],
+      "非退化曲线及导数张成的高阶切空间。"
+    ],
+    [
+      "120E",
+      [
+        "120D"
+      ],
+      "矩曲线下三角导数矩阵计算。"
+    ],
+    [
+      "120F",
+      [
+        "120D",
+        "00QD",
+        "120A",
+        "1202",
+        "1203"
+      ],
+      "高阶切空间受限投影研究定理；有界到一般集合的可数并扩展。"
+    ],
+    [
+      "120G",
+      [
+        "120A",
+        "1201",
+        "1204"
+      ],
+      "投影网格覆盖与薄板关联的精确比较。"
+    ],
+    [
+      "120H",
+      [
+        "120G",
+        "00XV",
+        "1201"
+      ],
+      "管、着色、平均与逐管密度和重数。"
+    ],
+    [
+      "120I",
+      [
+        "120H",
+        "004S"
+      ],
+      "第二矩控制并集体积。"
+    ],
+    [
+      "120J",
+      [
+        "0H4F",
+        "0H4G",
+        "120A"
+      ],
+      "各向异性Fourier换元及衰减，区分尾部与严格支撑。"
+    ],
+    [
+      "120K",
+      [
+        "0H4F",
+        "0H4G",
+        "0I80",
+        "0H53"
+      ],
+      "低频截断、卷积核尺度与尾积分。"
+    ],
+    [
+      "120L",
+      [
+        "004S",
+        "0W01",
+        "00XV",
+        "00Q6"
+      ],
+      "Plancherel有限重叠及余项三角估计。"
+    ],
+    [
+      "120M",
+      [
+        "0H4F",
+        "0H4G",
+        "00Q6",
+        "120L"
+      ],
+      "平方和解耦定义与p=2有限重叠对照。"
+    ],
+    [
+      "120N",
+      [
+        "120A",
+        "1202",
+        "1203"
+      ],
+      "异常集定义、零测量词及维数排除逻辑。"
+    ],
+    [
+      "120O",
+      [
+        "120N"
+      ],
+      "异常集锐定理引用；受限方向上确界下界和正增益代数推论。"
+    ],
+    [
+      "120P",
+      [
+        "120K",
+        "120L",
+        "120G",
+        "120J",
+        "0A68",
+        "120M"
+      ],
+      "精确高低频关联二分与Lp解耦接口。"
+    ],
+    [
+      "120Q",
+      [
+        "1202",
+        "1203"
+      ],
+      "仿射直线局部参数及Furstenberg集定义。"
+    ],
+    [
+      "120R",
+      [
+        "120Q",
+        "1201",
+        "1208"
+      ],
+      "平面连续和离散研究定理；共同M可取c delta^(eta-s)。"
+    ],
+    [
+      "120S",
+      [
+        "120A",
+        "1203",
+        "120C"
+      ],
+      "线族切片等式、正交投影归一化和pencil障碍。"
+    ],
+    [
+      "120T",
+      [
+        "00F3",
+        "1202",
+        "1204",
+        "120H",
+        "120S"
+      ],
+      "Kakeya定义、方向参数及维数问题；三维状态引用1211。"
+    ],
+    [
+      "120U",
+      [
+        "1201",
+        "1208",
+        "120Q",
+        "120B"
+      ],
+      "AD型粘性与Kakeya局部方向丰富性，区分适用对象。"
+    ],
+    [
+      "120V",
+      [
+        "1201",
+        "1204",
+        "00FU"
+      ],
+      "精确均匀分枝树和分枝函数。"
+    ],
+    [
+      "120W",
+      [
+        "120V"
+      ],
+      "逐层抽屉原理、质量损失与反复抽取证明。"
+    ],
+    [
+      "120X",
+      [
+        "00FU",
+        "120V"
+      ],
+      "Shmerkin外部引理及分段指数不足的直接计算。"
+    ],
+    [
+      "120Y",
+      [
+        "120H",
+        "00TK",
+        "00XV",
+        "1208"
+      ],
+      "凸Wolff两种归一化及常数恒等式。"
+    ],
+    [
+      "120Z",
+      [
+        "120H",
+        "0H53",
+        "120Y"
+      ],
+      "二次曲面聚集例子；曲面局部计算与管族外部构造分开。"
+    ],
+    [
+      "1210",
+      [
+        "120V",
+        "1208",
+        "120Y"
+      ],
+      "标量两尺度分解证明；凸体版本存在性仅引用。"
+    ],
+    [
+      "1211",
+      [
+        "120H",
+        "120Y",
+        "1202",
+        "120T"
+      ],
+      "三维管并研究定理、凸Wolff形式转换及Kakeya结论引用。"
+    ],
+    [
+      "1212",
+      [
+        "1202",
+        "0H53",
+        "1206"
+      ],
+      "覆盖与Tonelli证明大切片的单向维数下界，给出反向反例。"
+    ],
+    [
+      "1213",
+      [
+        "00D7",
+        "00D9",
+        "120B",
+        "120C",
+        "120A",
+        "1205"
+      ],
+      "一般多项式逃离pencil问题和定量非集中问题。"
+    ],
+    [
+      "1214",
+      [
+        "120A",
+        "1202",
+        "1203",
+        "120D"
+      ],
+      "三维球面非退化曲线研究定理；法向量为omega(t)。"
+    ],
+    [
+      "1215",
+      [
+        "120U",
+        "1209"
+      ],
+      "平方根尺度使eta翻倍，解释假归纳障碍与自改善必要条件。"
+    ],
+    [
+      "1216",
+      [
+        "120H",
+        "00SX",
+        "00XV",
+        "00TK",
+        "120Y"
+      ],
+      "复杂度先固定的半代数Wolff测试与单管计数。"
+    ],
+    [
+      "1217",
+      [
+        "120H",
+        "1208",
+        "1216",
+        "1201"
+      ],
+      "n=3凸测试与n>=4半代数测试下的高维分数维猜想。"
+    ],
+    [
+      "icm2026-hong-wang",
+      [],
+      "作者、正式版本、定点原论文及许可和改编说明。"
+    ]
+  ],
+  "proofs_written": [
+    "1203",
+    "1204",
+    "1206",
+    "1207",
+    "1209",
+    "120C",
+    "120E",
+    "120G",
+    "120I",
+    "120J",
+    "120K",
+    "120L",
+    "120P",
+    "120S",
+    "120W",
+    "1210",
+    "1212"
+  ],
+  "proofs_with_external_inputs": [],
+  "research_statements_without_local_proof": [
+    "120F",
+    "120O",
+    "120R",
+    "120X",
+    "1211",
+    "1214"
+  ],
+  "conjecture_pages": [
+    "1217"
+  ],
+  "question_pages": [
+    "1213"
+  ],
+  "proof_classification_policy": "Theorem/Lemma/Corollary/Proposition各页按主结论互斥归类。proofs_with_external_inputs是proofs_written的子集；复用站内已证明定理不等于引用未证明的研究结论。附带推论不把主研究定理升级为本地证明。Example的计算和引用边界另记。",
+  "proof_boundaries": {
+    "1203": "覆盖证明可数并稳定及Lipschitz不增。",
+    "1204": "贪心存在性、体积装填及覆盖比较。",
+    "1206": "由球增长逐覆盖估计；欧氏立方体维数上下界及子空间推论。",
+    "1207": "紧集完整容量构造；一般Borel紧逼近不在证明范围。",
+    "1209": "质量归一化与缩放恒等式。",
+    "1210": "标量均匀树因子分解完整证明；凸体因子分解只引用输出结构，未用作标量证明前提。",
+    "1211": "Wang–Zahl体积/满维为外部定理；归一化转换直接代数；精确自改善命题未证明。",
+    "1212": "可变半径覆盖、非负Fubini及可求和级数完成切片单向证明。",
+    "1214": "球面曲线下界引用；C3是所用充分条件，不声称最低要求。",
+    "1215": "eta翻倍的精确算术和量词障碍；不作为粘性Furstenberg证明。",
+    "1216": "定义与单管代入计数；半代数非集中不是从凸条件直接推出。",
+    "1217": "高维分数维猜想；不误称由二维或三维现有定理证明。",
+    "120C": "基扩充证明秩公式；子空间Hausdorff维数调用1206。",
+    "120E": "下三角矩阵行列式。",
+    "120F": "主下界引用；上界及可数并扩展在正文解释。",
+    "120G": "网格板计数与球覆盖直接证明。",
+    "120I": "有限第二矩与Cauchy–Schwarz。",
+    "120J": "线性换元与Schwartz尾衰减。",
+    "120K": "反演、Fubini、环带求和；核可变号。",
+    "120L": "调用已证明0W01的有限重叠论证；非严格支撑保留余项。",
+    "120O": "主异常集定理引用；受限方向上确界和Bourgain型正增益推论本地证明。",
+    "120P": "三角不等式、高频L2及有明确支撑的Lp接口；未称完成研究级归纳。",
+    "120R": "连续/离散主结果引用；delta尺度Frostman推共同M下界仅为简单推论。",
+    "120S": "投影矩阵、切片维数等式和pencil线性例子均直接计算。",
+    "120W": "全套逐层抽取、损失指数和余项分解证明。",
+    "120X": "近线性区间存在性引用；折线反例指数计算本地。",
+    "120Z": "矩阵直线恒等式、邻域体积O(delta)、空单位球与幂次比较本地；delta^(-5/2)管族及非集中验证外部。"
+  },
+  "source_discrepancies": [
+    {
+      "location": "Theorem1.2",
+      "issue": "Bourgain上确界误排成全Grassmannian。",
+      "resolution": "120O取给定Lambda；由锐界直接推出相应正增益。"
+    },
+    {
+      "location": "§3",
+      "issue": "pi_theta写成投影到theta的正交补。",
+      "resolution": "1214用omega(t)^perp并区分球面零阶条件。"
+    },
+    {
+      "location": "§4",
+      "issue": "满Hausdorff维数与几乎处处满切片被称为Fubini等价。",
+      "resolution": "120S只证投影恒等式；1212证明单向切片下界并给反向反例。"
+    },
+    {
+      "location": "§5.1",
+      "issue": "报告明确标为fake proof的尺度归纳。",
+      "resolution": "1215解释eta翻倍及一致量词障碍，不导入为证明。"
+    },
+    {
+      "location": "§6 equation(6.1)",
+      "issue": "覆盖数(rho/delta)^(-2)符号错误；缩放末尺度倒置。",
+      "resolution": "120U改为正2次幂；1209/1210/120U明确delta/rho。"
+    },
+    {
+      "location": "§6 equation(6.11)",
+      "issue": "定义测试集W而右侧使用未定义U。",
+      "resolution": "1216统一写|W|^t，并显式固定复杂度。"
+    },
+    {
+      "location": "§6 quadric example",
+      "issue": "xy-zw=1与B(0,1)不相交。",
+      "resolution": "120Z在固定R>3区域作局部例子；用二次不等式解释单位球问题。"
+    },
+    {
+      "location": "§5 Furstenberg historical labels; §6 Conjectures6.5/6.9",
+      "issue": "章节沿用猜想编号但部分结论已解决。",
+      "resolution": "120R按Ren–Wang定理写；1211定点核对Wang–Zahl推论1.10，不把三维体积目标误记未解。"
+    },
+    {
+      "location": "§5 elementary bound",
+      "issue": "报告写min，Ren–Wang引言写max。",
+      "resolution": "不导入该旧初等界，保留已经核实的锐定理。"
+    }
+  ],
+  "reused_note_ids": [
+    "004S",
+    "00D7",
+    "00D9",
+    "00EK",
+    "00F3",
+    "00FU",
+    "00MS",
+    "00N9",
+    "00Q2",
+    "00Q5",
+    "00Q6",
+    "00QD",
+    "00SX",
+    "00TK",
+    "00XV",
+    "0A68",
+    "0H4F",
+    "0H4G",
+    "0H53",
+    "0I80",
+    "0U01",
+    "0W01"
+  ],
+  "deduplication": {
+    "method": "检索现有投影、Hausdorff、Furstenberg、Kakeya、凸集、半代数集及既有Fourier基础；逐项保留 canonical IDs。",
+    "decisions": [
+      "00MS复用正交投影完整证明。",
+      "0W01复用欧氏Plancherel，0H4G保持角频率。",
+      "0U01为整数阶界面测度，仅作对照不改用途。",
+      "实半代数集00SX、凸集00TK复用；未复用同名但不同概念的Furstenberg拓扑。",
+      "1201保留跨Seeger专题共用覆盖数页。"
+    ]
+  },
+  "terminology": {
+    "choices": {
+      "restricted projections": "受限投影",
+      "osculating spaces": "高阶切空间",
+      "shading": "着色",
+      "stickiness": "粘性",
+      "pencil": "pencil退化集合",
+      "decoupling": "解耦"
+    },
+    "confirmation_scope": "沿用现有站内数学用语，未声称新增香蕉空间外部术语核验。"
+  },
+  "integration_notes": [
+    "独占写入restricted-projections目录、icm2026-hong-wang文献页和本JSON。",
+    "既有1201–120M主体保留；修正120A图矩阵、120M标题，补1203/1206/1207/120B/120C基础链接；1207量词已由前序修正并保留。",
+    "按中央审阅修改120P的R和h_theta前提、120R的M量词与eta损失、120O校勘措辞。",
+    "中央已报告逐页审阅1201–120M、120N–T、120U–X；余下本地逐页审阅，仍待中央最终验证。",
+    "无全局文件写入，无注册/同步/构建/提交/推送。"
+  ],
+  "agent_verification": {
+    "status": "scoped-source-checks-passed; parent-global-build-pending",
+    "record_json_parse_checked": true,
+    "entry_count_checked": 45,
+    "owned_tree_files": 45,
+    "atomic_pages": 43,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "survey_paragraphs": 8,
+    "all_owned_entries_reachable_from_outline": true,
+    "local_prerequisite_cycles": 0,
+    "missing_internal_links": 0,
+    "missing_direct_prerequisite_links": 0,
+    "proof_classification_disjointness_checked": true,
+    "theorem_taxon_classification_complete": true,
+    "header_format_checked": true,
+    "katex_formula_check_run": false,
+    "global_build_run": false,
+    "global_sync_run": false,
+    "commit_or_push_run": false,
+    "whole_report_self_contained": false,
+    "manual_review_scope": "既有22页及新增全部页逐页阅读、假设和幂次检查；研究定理只确认所引陈述，非原论文全部证明复核。",
+    "verification_limit": "全站规范化、注册、前置闭包、Forester及渲染交中央；本地只做作用域内链接/结构/证明分类检查。"
+  }
+}

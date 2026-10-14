@@ -1,0 +1,12 @@
+\title{小球测试给出的覆盖数必要条件}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Roos–Seeger 综述式 (3.6)、§5.4](icm2026-seeger)}
+
+\p{设 #{d\ge 2}、非空 #{E\subset[1,2]}、#{1\le p,q<\infty}。若[球面极大算子](1103)满足 #{\|M_Ef\|_q\le B\|f\|_p}，则对 #{0<\delta<1/20}，}
+##{\delta^{d-1+1/q}N_\delta(E)^{1/q}\le C_d B\delta^{d/p}.}
+\p{\strong{选半径。}由[分离点与覆盖数比较](1204)，可在 E 中取 #{4\delta} 分离的极大有限集 #{\{t_i\}_{i=1}^m}，且 #{m\asymp N_\delta(E)}。壳层 #{S_i=\{x:||x|-t_i|<\delta /4\}} 两两不交；因为 #{1\le t_i\le 2}，每个壳层的体积与 δ 可比。}
+\p{\strong{选输入。}取光滑 #{0\le f_\delta\le 1}，在 #{|z|\le\delta} 上等于一，支撑在 #{|z|<2\delta}。于是 #{\|f_\delta\|_p\le C_d\delta^{d/p}}。若 #{x\in S_i}，取 #{\omega=x/|x|}，则当 #{|y-\omega|<\delta /8} 时 #{|x-t_iy|<\delta}。由[球帽面积](110G)，#{A_{t_i}f_\delta(x)\ge c_d\delta^{d-1}}。}
+\p{将这一共同下界在并集 #{\bigcup_iS_i} 上积分，得到 #{\|M_Ef_\delta\|_q\ge c_d\delta^{d-1}(m\delta)^{1/q}}，与假设合并即可。取同一水平集还证明了弱型 #{(p,p)} 情形的相同下界。}
+\p{若 #{\beta=\beta_E} 为[上 Minkowski 维数](110B)，按定义有趋零尺度使 #{N_\delta(E)\ge\delta^{-\beta+\varepsilon}}。让 δ 趋零，再令 #{\varepsilon\downarrow 0}，得到 #{d/p\le d-1+(1-\beta)/q}。特别地 #{p=q} 时，#{p\ge 1+\beta /(d-1)} 必要。全局半径族先用[缩放律](1105)归一化，再对所有 R 取上确界。}

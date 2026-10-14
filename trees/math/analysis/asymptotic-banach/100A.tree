@@ -1,0 +1,16 @@
+\title{可求和扰动保持 ℓᵖ 估计}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Schlumprecht，§4 定理4.2前的扰动论证](icm2026-schlumprecht)；下述估计直接证明}
+
+\p{设 #{1\le p\le\infty}，#{(x_j)} 位于 [Banach 空间](00M6) 中，且与 #{\ell^p} 单位向量基（#{p=\infty} 时取 #{c_0}）#{C}-[等价](1004)。设 #{(y_j)} 在同一空间中，#{\delta=\sum_j\|y_j-x_j\|<C^{-1}}。则对所有有限支集标量序列 #{a}，}
+##{(C^{-1}-\delta)\|a\|_p
+\le\left\|\sum_j a_jy_j\right\|
+\le(C+\delta)\|a\|_p.}
+\p{\strong{证明。}对每个 #{j} 都有 #{|a_j|\le\|a\|_p}，包括 #{p=\infty} 的情形。因此三角不等式给出}
+##{\left\|\sum_j a_j(y_j-x_j)\right\|
+\le\sum_j|a_j|\|y_j-x_j\|
+\le\delta\|a\|_p.}
+\p{把这个误差分别加到原上界、从原下界减去，得到结论。正下界又由[序列等价的延拓论证](1004)保证 #{y_j} 生成同构的闭线性包。若 #{\delta\le(2C)^{-1}}，下界至少 #{(2C)^{-1}\|a\|_p}，上界至多 #{2C\|a\|_p}。}
+\p{证明只用了有限和，所以同样适用于固定长度的序列，且常数不依赖长度。仅有 #{\|y_j-x_j\|\to 0} 并不能代替这里的可求和控制。}

@@ -1,0 +1,11 @@
+\title{有限半径族的频率局部化估计}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Seeger 幻灯片第 9 页；Roos–Seeger 综述式 (3.8) 的两个端点](icm2026-seeger)}
+
+\p{设 #{d\ge 2}、#{j\ge 1}、#{F\subset[1,2]} 有限非空，#{m=\#F}。对 [Schwartz 函数](0H4F) f，有 #{\|\max_{t\in F}|A_tf|\|_1\le m\|f\|_1}。若另有 #{\operatorname{supp}\widehat f\subset\{2^{j-1}\le|\xi|\le 2^{j+1}\}}，则}
+##{\left\|\max_{t\in F}|A_tf|\right\|_2\le C_d m^{1/2}2^{-j(d-1)/2}\|f\|_2.}
+\p{\strong{L¹ 估计。}把最大值以所有绝对值之和控制，积分后逐项使用[固定半径收缩性](1102)，得到第一式。}
+\p{\strong{L² 估计。}逐点有 #{\max_{t\in F}|A_tf|^2\le\sum_{t\in F}|A_tf|^2}。对每一项使用 [Plancherel 定理](0W01)与[球面乘子衰减](110K)，得到 #{\|A_tf\|_2^2\le C_d2^{-j(d-1)}\|f\|_2^2}。相加并开方即可。}
+\p{若 F 是 E 中的极大 #{2^{-j}} 分离集，则[分离点比较](1204)给出 #{m\asymp N_{2^{-j}}(E)}。这里证明的是有限半径最大值的估计；从它到整个 E 的上确界还需控制相邻时间的振荡，从局部估计到全局半径还需组合不同尺度。}

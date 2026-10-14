@@ -1,0 +1,10 @@
+\title{半波演化与频率局部化}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Roos–Seeger 综述 §8](icm2026-seeger)}
+
+\p{在 #{\mathbb R^d} 上采用[角频率 Fourier 变换](0H4G)。对 [Schwartz 函数](0H4F) f，定义半波演化 #{U_tf=e^{it\sqrt{-\Delta}}f}，其乘子为 #{\widehat{U_tf}(\xi)=e^{it|\xi|}\widehat f(\xi)}。由[Fourier 反演](0I80)，}
+##{U_tf(x)=(2\pi)^{-d}\int_{\mathbb R^d}e^{i(x\cdot\xi+t|\xi|)}\widehat f(\xi)\,d\xi.}
+\p{符号 #{\sqrt{-\Delta}} 在此按乘子 #{|\xi|} 定义，其中 #{\Delta=\sum_{k=1}^d\partial_{x_k}^2}。对频率远离原点的输入，微分积分公式给出 #{\partial_t^2U_tf=\Delta U_tf}，因为两侧 Fourier 乘子都等于 #{-|\xi|^2e^{it|\xi|}}。}
+\p{选光滑 #{\chi} 支撑于 #{(1/2,2)}，定义 #{\widehat{P_jf}(\xi)=\chi(2^{-j}|\xi|)\widehat f(\xi)}，称频率局部化。它只保留 #{|\xi|\asymp 2^j} 的部分。研究[分形时间局部光滑](1113)时，在时间间距 #{2^{-j}} 上采样与此频率相适应。}

@@ -1,0 +1,14 @@
+\title{直线族的水平切片是参数空间投影}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，§4；投影归一化}
+
+\p{设 #{k=n-1\geq 1}，#{E\subset\mathbb R^k\times\mathbb R^k}，并对 #{(a,b)\in E} 定义 #{\ell_{a,b}=\{(a+tb,t):t\in\mathbb R\}}。令 #{U_E=\bigcup_{(a,b)\in E}\ell_{a,b}}，#{L_t(a,b)=a+tb}，以及}
+##{V_t=\{(v,tv):v\in\mathbb R^k\}\in\operatorname{Gr}(k,2k).}
+\p{则 #{U_E\cap\{x_n=t\}=\{(L_t(a,b),t):(a,b)\in E\}}。而[正交投影](120A)满足}
+##{P_{V_t}(a,b)=\frac{1}{1+t^2}(a+tb,t(a+tb)),\qquad
+\dim_H(U_E\cap\{x_n=t\})=\dim_HP_{V_t}(E).}
+\p{\strong{证明。}切片等式直接由直线方程得到。#{V_t} 的基矩阵为 #{A=\begin{pmatrix}I_k\\tI_k\end{pmatrix}}，故 #{A^{\mathsf T}A=(1+t^2)I_k}；代入投影矩阵公式即得第二式。映射 #{z\mapsto(z,tz)/(1+t^2)} 将长度乘 #{(1+t^2)^{-1/2}}，是到 #{V_t} 的双 Lipschitz 同构，因此由[维数不变性](1203)得到维数等式。}
+\p{当 #{k\geq 2}，固定非零 #{e\in\mathbb R^k} 并令 #{W=\operatorname{span}\{(e,0),(0,e)\}}。有 #{L_t(W)=\mathbb Re}，故投影秩为 1，小于 #{\min\{2,k\}}。由[pencil 判据](120C)，全部 #{V_t} 都落在 #{\mathcal P_W} 中。因此一般集合 #{E} 不可能无条件满足最大投影维数公式；Kakeya 情形另有斜率坐标覆盖所有方向的要求。}
+\p{[几乎处处大切片推出总体维数下界](1212)可以用于这一表示。总体满 Hausdorff 维数并不由 Fubini 自动推出几乎每个水平切片满维，因而不能仅凭此恒等式声称两种维数命题等价。}

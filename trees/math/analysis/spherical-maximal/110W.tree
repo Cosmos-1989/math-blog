@@ -1,0 +1,14 @@
+\title{球帽必要条件的 Legendre 形式}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Roos–Seeger 综述 §5.4，式 (5.7)–(5.10)](icm2026-seeger)}
+
+\p{设 #{d\ge 2}、非空 #{E\subset[1,2]}、#{1\le p,q<\infty}。若 #{M_E:L^p\to L^q} 有界，则其[Legendre–Assouad 指数](110T)满足}
+##{\frac 1q\nu_E^\sharp\left(\frac{q(d-1)}2\left(1-\frac 1p-\frac 1q\right)\right)\le\frac{d-1}2-\frac{d+1}2\left(\frac 1p-\frac 1q\right).}
+\p{\strong{球帽输入。}引用综述式 (5.7) 的几何测试：对每个 #{0<\delta<1}、#{\delta\le|I|\le 1}，}
+##{N_\delta(E\cap I)^{1/q}\le C\delta^{1/p-d/q}\left(\frac{\delta}{|I|}\right)^{\frac{d-1}2(1/p+1/q-1)}.}
+\p{该测试使用角直径与 #{\sqrt{\delta /|I|}} 可比的球帽及其 δ 邻域，几何下界引用所示来源。常数必须同时独立于 δ 和 I；覆盖球半径与原文区间长度的固定倍数差异只改变 C。}
+\p{\strong{代数转换。}置 #{\alpha=\frac{q(d-1)}2(1-1/p-1/q)}。将上式的区间因子移到左侧并取 q 次方，得到}
+##{N_\delta(E\cap I)|I|^{-\alpha}\le C^q\delta^{q/p-d-\alpha}.}
+\p{先对 I 取上确界，再取对数并除以 #{\log(1/\delta)}，常数的贡献趋于零，故 #{\nu_E^\sharp(\alpha)/q\le\alpha /q-1/p+d/q}。展开右端正好是命题所示表达式。这个运算确定了 #{1/p-1/q} 的差号。由[指数的连续性](110U)，该必要条件也延续到[类型集合](110M)闭包中 q 有限的点。}

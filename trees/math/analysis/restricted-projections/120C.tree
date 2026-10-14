@@ -1,0 +1,11 @@
+\title{pencil 导致正交投影的维数亏损}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Hong Wang](icm2026-hong-wang)，定义 1.4 后的障碍}
+
+\p{设 #{W\subset\mathbb R^n} 为 #{k} 维[线性子空间](00D7)，#{V\in\operatorname{Gr}(m,n)}。[正交投影](120A)满足}
+##{\dim P_V(W)=k-\dim(W\cap V^\perp).}
+\p{所以 #{V\in\mathcal P_W} 当且仅当 #{\dim P_V(W)<\min\{k,m\}}，其中 #{\mathcal P_W} 是 [pencil](120B)。}
+\p{\strong{证明。}令 #{w_1,\ldots,w_q} 为 #{W\cap V^\perp} 的基，扩充为 #{W} 的基 #{w_1,\ldots,w_k}。后 #{k-q} 个向量的像张成 #{P_V(W)}。若这些像的某线性组合为零，原组合属于核，因基的[线性无关性](00D9)，系数全零。因此像维数为 #{k-q}。代入 #{q>\max\{k-m,0\}}，得到严格小于 #{\min\{k,m\}} 的等价关系。}
+\p{取 #{E=W}，由[线性子空间的 Hausdorff 维数](1206)，上述亏损也是 Hausdorff 维数亏损。例如在 #{\mathbb R^3} 中，若所有投影平面 #{V} 都包含固定直线 #{\ell}，取 #{W=\ell^\perp}。此时 #{V^\perp\subset W} 是一条直线，故二维 #{W} 的投影只有一维。可见一个参数变化的投影族仍可能处处退化。}

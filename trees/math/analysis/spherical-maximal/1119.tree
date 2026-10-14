@@ -1,0 +1,11 @@
+\title{非退化驻相的首项与余项}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[András Vasy，Math 205C: Stationary Phase Lemma，第 1–2、5 页，式 (9)](https://math.stanford.edu/~andras/205C-2.pdf)}
+
+\p{设 #{U\subset\mathbb R^n} 开，#{a\in C_c^\infty(U)}，#{\phi:U\to\mathbb R} [光滑](00N9)，且在 a 的支撑上恰有一个临界点 #{x_0}，即 #{\nabla\phi(x_0)=0}。用[偏导数](0A32)定义 Hessian 矩阵 #{H=(\partial_{x_j}\partial_{x_k}\phi(x_0))_{j,k=1}^n}。假设 #{\det H\ne 0}，称临界点非退化，与 [Morse 临界点](0BLU)的条件一致。}
+\p{当 #{\lambda\to+\infty} 时，驻相定理给出}
+##{\int_Ua(x)e^{i\lambda\phi(x)}dx=e^{i\lambda\phi(x_0)}\left(\frac{2\pi}{\lambda}\right)^{n/2}\frac{e^{i\pi\operatorname{sgn}(H)/4}a(x_0)}{\sqrt{|\det H|}}+O_{a,\phi}(\lambda^{-n/2-1}).}
+\p{#{\operatorname{sgn}(H)} 是 H 的正[特征值](0F0B)数减去负特征值数。余项表示存在依赖于固定振幅、相位及其非退化性界的常数 C，使误差的模不超过 #{C\lambda^{-n/2-1}}，#{\lambda\ge 1}。这里引用所示驻相定理，不对不同相位自动断言常数一致。}
+\p{[Taylor 公式](0I8J)将临界点附近的相位写为 #{\phi(x_0)+\tfrac 12(x-x_0)^TH(x-x_0)+O(|x-x_0|^3)}，说明首项由非退化二次型决定。远离临界点的贡献由[无临界点的分部积分](0I86)任意次衰减控制。驻相定理负责把局部二次近似提升为上述带余项的积分结论。}

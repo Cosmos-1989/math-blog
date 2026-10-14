@@ -1,0 +1,9 @@
+\title{质量分布原理给出维数与覆盖下界}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+
+\p{设 Borel 集 #{E\subset\mathbb R^d} 上有[球增长条件](1205) #{\mu(B(x,r))\leq Cr^s}，其中 #{s>0}，总质量为 #{M>0}。则}
+##{H^s(E)\geq\frac{M}{C},\qquad\dim_HE\geq s,\qquad N_\delta(E)\geq\frac{M}{C\delta^s}.}
+\p{\strong{证明。}给定 #{E} 的可数覆盖 #{\{U_j\}}，对与 #{E} 相交且直径 #{d_j>0} 的项，取 #{x_j\in U_j\cap E}，便有 #{U_j\subseteq B(x_j,d_j)}。直径零的非空项是单点，由球增长条件其质量为零。于是 #{M\leq C\sum_jd_j^s}。对直径受限的覆盖取下确界，再取极限，得 [Hausdorff 测度](1202)下界。若 #{q<s} 而 #{H^q(E)=0}，则 #{H^s(E)=0}，矛盾，故维数至少为 #{s}。由 #{N_\delta(E)} 个半径 #{\delta} 的球覆盖 #{E} 时，质量至多为 #{CN_\delta(E)\delta^s}，得到[覆盖数](1201)下界。}
+\p{例如 #{[0,1]^d} 上的 [Lebesgue 测度](00XV)满足 #{\mu(B(x,r))\leq\omega_dr^d}，故该立方体维数至少为 #{d}。用边长 #{1/k} 的网格立方体覆盖，对 #{q>d}，直径的 #{q} 次幂总和至多 #{d^{q/2}k^{d-q}\to 0}，给出反向不等式。因此立方体的 Hausdorff 维数为 #{d}。[双 Lipschitz 不变性与可数并稳定性](1203)进而说明每个非零 #{d} 维欧氏[线性子空间](00D7)的 Hausdorff 维数恰为 #{d}。零子空间只有一点，维数为零。}

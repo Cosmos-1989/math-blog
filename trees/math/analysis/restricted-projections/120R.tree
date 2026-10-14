@@ -1,0 +1,14 @@
+\title{Ren–Wang 的平面 Furstenberg 维数定理}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ren–Wang](https://arxiv.org/html/2308.08819v2)，定理 1.1；[Hong Wang](icm2026-hong-wang)，§5}
+
+\p{设 #{0<s\leq 1}、#{0<t\leq 2}。每个平面 #{(s,t)}-[Furstenberg 集](120Q) #{F} 都满足}
+##{\dim_HF\geq\min\left\{s+t,\frac{3s+t}{2},s+1\right\}.}
+\p{该结论由 Kevin Ren 与 Hong Wang 证明，属于已解决的平面 Furstenberg 问题。三个表达式的最小值依次由 #{t\leq s}、#{s\leq t\leq 2-s}、#{t\geq 2-s} 控制；在边界处数值一致。特别地，#{t=1} 时为 #{(3s+1)/2}，#{s=1} 时为 #{\min\{1+t,2\}}。}
+\p{报告 §5 的离散形式用[覆盖数](1201)描述：在固定有界坐标区域内，#{\delta}-管族在直线参数空间满足 Frostman #{(\delta,t,\delta^{-\eta})} 条件，每根管的非空着色满足空间 Frostman #{(\delta,s,\delta^{-\eta})} 条件，且 #{N_\delta(Y(T))\geq M}。对每个 #{\varepsilon>0} 可选足够小的 #{\eta>0}，使充分小的 #{\delta} 满足}
+##{N_\delta\left(\bigcup_TY(T)\right)\geq
+\delta^{-\min\{t,1,(t+s)/2\}+\varepsilon}M.}
+\p{固定的坐标、网格与几何比较常数可通过缩小 #{\eta}、放宽 #{\varepsilon} 吸收。对任意非空着色取 #{x\in Y(T)}，[Frostman 非集中条件](1208)在半径 #{\delta} 处给出 #{1\leq N_\delta(Y(T)\cap B(x,\delta))\leq\delta^{s-\eta}N_\delta(Y(T))}。因此可取共同下界 #{M=c\delta^{\eta -s}}，其中 #{c>0} 只反映固定的几何比较常数。于是并集覆盖数至少为 #{c\delta^{-\min\{s+t,s+1,(3s+t)/2\}+\varepsilon+\eta}}。这不限制另行指定的较小下界 #{M}，例如 #{M=1}。}
+\p{连续主定理及离散关联估计均引用文献。由单尺度覆盖下界到 Hausdorff 维数，还需对可变半径覆盖选尺度、保留质量并处理异常参数；仅对一个固定尺度数球不能完成这一步。证明使用[粘性结构](120U)与[多尺度分解](120X)，并以[高低频分析](120P)处理近似均匀分散的尺度段。}
