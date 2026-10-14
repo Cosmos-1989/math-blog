@@ -1,0 +1,11 @@
+\title{Schrödinger 初值的几乎处处恢复}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§4.1.2，引用 Carleson、Dahlberg–Kenig、Bourgain、Du–Guth–Li、Du–Zhang 的结果}
+
+\p{对 #{f\in H^s(\mathbb R^d)}，考察[自由 Schrödinger 演化](130A)是否满足 #{\lim_{t\to 0}e^{it\Delta}f(x)=f(x)} 对几乎所有 #{x} 成立。这里 [Hs 空间](130F)用 Fourier 权重衡量初值的光滑性。已知的锐阈值结果为：#{d=1} 时 #{s\geq 1 /4} 足够；#{d\geq 2} 时 #{s>d/(2(d+1))} 足够，而 #{s\geq d/(2(d+1))} 必要。}
+\p{这些是引用的研究定理；[报告](icm2026-ruixiang-zhang)§4.1.2 将高维端点另列为未解决情形。高维正结果的核心估计是，若 #{\operatorname{supp}\widehat f\subset B(0,1)}，则对每个 #{\varepsilon>0} 有}
+##{\left\|\sup_{0\leq t\leq R}|e^{it\Delta}f|\right\|_{L^2(B(0,R))}
+\leq C_\varepsilon R^{d/(2(d+1))+\varepsilon}\|f\|_2,\qquad R\geq 1.}
+\p{带限初值的 Fourier 变换可积，故这一极大函数由普通连续演化定义。估计控制每个空间点选择不同时间后仍可能达到的最大值。证明通过曲面解耦及精细的空间非集中估计完成；从带限估计到初值恢复还使用频率分解、缩放和极大收敛论证。波包在低维薄层中的集中和[格点相干叠加](1322)解释了光滑性阈值为何高于零。}

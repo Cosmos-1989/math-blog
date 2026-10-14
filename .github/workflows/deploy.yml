@@ -44,6 +44,7 @@ jobs:
           node scripts/check-bourbaki-notes.mjs
           node scripts/check-analysis-notes.mjs
           node tests/analysis-math.test.mjs
+          node --test tests/topology-report-math.test.mjs tests/topology-fibring-discs-math.test.mjs
           node tests/bourbaki-math.test.mjs
           node tests/geometry-expansion-math.test.mjs
           node scripts/check-number-theory-notes.mjs
@@ -105,6 +106,8 @@ jobs:
           node tests/number-theory-render.test.mjs
           node tests/bourbaki-render.test.mjs
           node tests/analysis-render.test.mjs
+          node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-topology-fibring-discs.json node tests/topology-report-render.test.mjs
           node tests/topic-introductions-render.test.mjs
 
       - name: Setup Pages

@@ -1,0 +1,12 @@
+\title{Hörmander 型振荡积分的非退化条件}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§5.2.2}
+
+\p{设 #{x\in\mathbb R^n}、#{\xi\in\mathbb R^{n-1}}，#{a(x;\xi)} 光滑紧支，#{\phi(x;\xi)} 在其支撑附近光滑且实值。对 #{\lambda\geq 1} 定义}
+##{T^\lambda g(x)=\int e^{i\lambda\phi(x/\lambda;\xi)}a(x/\lambda;\xi)g(\xi)\,d\xi.}
+\p{Hörmander 型条件要求两个非退化性质。首先，混合[偏导数](0A32)组成的 #{n\times(n-1)} [矩阵](00GK) #{\partial_x\partial_\xi\phi} 处处秩为 #{n-1}。因此其列空间有一维正交补，可在局部连续选择单位法向量 #{N(x;\xi_0)}。其次，要求}
+##{\det\left[\partial_\xi^2\bigl\langle\partial_x\phi(x;\xi),N(x;\xi_0)\bigr\rangle\right]_{\xi=\xi_0}\ne 0.}
+\p{其中 #{\partial_\xi^2} 表示所有二阶偏导数组成的 Hessian 矩阵；法向量在求这些偏导时固定。第一条使频率参数描述真正的超曲面，第二条要求其法向二阶弯曲非退化。取 #{\phi(x;\xi)=x'\cdot\xi+x_n|\xi|^2}，即得到抛物面[延拓积分](1301)的局部截断。}
+\p{一般相位的波包中心满足 #{\partial_\xi\phi(x;\xi)=v}，随空间变量可形成曲线。[曲管压缩例子](131A)表明，即使上述条件成立，曲管也可能聚集在低维代数曲面上。}

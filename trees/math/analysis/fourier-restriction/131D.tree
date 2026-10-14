@@ -1,0 +1,13 @@
+\title{单项式指数和的矩等于幂和系统解数}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{Parsell–Vinogradov 曲面的算术解释；指数正交计算}
+
+\p{设 #{k,s,N\geq 1} 为整数，#{D=k(k+3)/2}，#{\Phi_k} 为[单项式参数映射](131C)。定义}
+##{S_N(\alpha)=\sum_{1\leq u,v\leq N}e^{2\pi i\alpha\cdot\Phi_k(u,v)},\qquad\alpha\in[0,1]^D.}
+\p{则 #{\int_{[0,1]^D}|S_N(\alpha)|^{2s}\,d\alpha} 等于满足下列所有方程的有序整数组数 #{(u_j,v_j,u_j',v_j')_{j=1}^s}，各坐标介于一与 N 之间：}
+##{\sum_{j=1}^su_j^av_j^b=\sum_{j=1}^s(u_j')^a(v_j')^b
+\quad\text{对所有 }1\leq a+b\leq k.}
+\p{\strong{证明。}展开 #{S_N^s\overline{S_N}^s}。每一项的相位系数是整数向量 #{m=\sum_j\Phi_k(u_j,v_j)-\sum_j\Phi_k(u_j',v_j')}。各坐标独立积分；由 #{\int_0^1e^{2\pi i\ell t}\,dt=1} 当 #{\ell=0}，而 #{\ell\in\mathbb Z\setminus\{0\}} 时该积分为零，只有 #{m=0} 的项保留下来，每项贡献一。}
+\p{这里和式有限，[Fubini 定理](0H53)直接允许逐项逐坐标积分。恒等式把分析中的偶数次矩精确转为整数解计数，无需估计误差。}

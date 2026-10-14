@@ -1,0 +1,12 @@
+\title{直线积分权重与 Mizohata–Takeuchi 问题}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§6.4.3}
+
+\p{设 #{w:\mathbb R^n\to\mathbb R} 为非负权重，且关于 [Borel σ-代数](00QD)[可测](00Q1)。对单位向量 #{v} 及 #{y\perp v}，直线积分变换定义为}
+##{Xw(y,v)=\int_{\mathbb R}w(y+tv)\,dt,\qquad
+\|Xw\|_\infty=\sup_{v,y\perp v}Xw(y,v).}
+\p{当 #{w=1_U} 时，它记录每条直线在集合 #{U} 中穿过的总长度。[曲面延拓](1301)的加权问题比较空间能量 #{\int|E_Mg(x)|^2w(x)\,dx} 与曲面输入能量 #{\|g\|_{L^2(d\sigma)}^2}。Mizohata–Takeuchi 猜想曾预期}
+##{\int|E_Mg|^2w\leq C_M\|Xw\|_\infty\|g\|_{L^2(d\sigma)}^2.}
+\p{该不等式已经有[反例](1329)。其动机来自波包沿管传播：若每条直线穿过高权重区域的长度都受控，似乎应能限制每个波包所贡献的能量。问题在于多个波包可在不同地点相干叠加，直线积分并不记录这种加法结构。}

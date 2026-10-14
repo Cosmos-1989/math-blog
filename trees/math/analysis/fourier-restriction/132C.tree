@@ -1,0 +1,13 @@
+\title{有限正测度的卷积与 Fourier 乘法}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{测度平坦化的前置知识}
+
+\p{设 #{\mu,\nu} 为 #{\mathbb R^n} 的 [Borel σ-代数](00QD)上的有限正[测度](00Q2)。它们的卷积由下式定义，其中 #{A} 为 Borel 集：}
+##{(\mu*\nu)(A)=\iint 1_A(x+y)\,d\mu(x)\,d\nu(y).}
+\p{即先按[乘积测度](00QB)选择 #{(x,y)}，再记录和 #{x+y} 的分布。[Tonelli 定理](0H53)给出可数可加性，并有 #{(\mu*\nu)(\mathbb R^n)=\mu(\mathbb R^n)\nu(\mathbb R^n)}。和的结合律与三重积分交换给出卷积的结合律，故 #{\mu^{*k}} 表示 k 个同一测度的卷积。}
+\p{定义 #{\widehat\mu(\xi)=\int e^{-ix\cdot\xi}\,d\mu(x)}，这延续了[函数 Fourier 变换](0H4G)的约定。由于指数模长为一，Fubini 定理允许拆分积分，得到}
+##{\widehat{\mu*\nu}(\xi)=\iint e^{-i(x+y)\cdot\xi}\,d\mu(x)d\nu(y)
+=\widehat\mu(\xi)\widehat\nu(\xi).}
+\p{对概率测度，有 #{|\widehat\mu|\leq 1} 及 #{\widehat{\mu^{*k}}=(\widehat\mu)^k}。这把反复求和后的平滑性转为 Fourier 变换的[可积性问题](1326)。}

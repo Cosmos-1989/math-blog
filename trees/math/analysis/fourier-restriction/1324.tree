@@ -1,0 +1,15 @@
+\title{正定函数的大值集中存在大值差}
+\date{2026-10-14}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，命题 6.2；二次式证明及常数细化}
+
+\p{设 #{f} 为阿贝尔群 #{G} 上的[正定函数](1323)，#{A=f(0)>0}，#{K>1}。若互异的非零点 #{x_1,\ldots,x_N} 满足 #{|f(x_j)|\geq A/K}，且 #{N\geq\lceil 2K^2\rceil}，则存在 #{i\ne j} 使}
+##{|f(x_i-x_j)|\geq\frac{A}{2K^2}.}
+\p{\strong{对齐相位。}取模长为一的 #{c_j} 使 #{c_jf(x_j)=|f(x_j)|}，并令 #{L=\sum_j|f(x_j)|}。对点 #{0,x_1,\ldots,x_N} 的正定二次式，取 #{c_0=-L/A}，得到}
+##{0\leq A\frac{L^2}{A^2}-2\frac{L^2}{A}
++\sum_{i,j=1}^N c_i\overline{c_j}f(x_i-x_j).}
+\p{\strong{去掉对角线。}因此最后一项至少为 #{L^2/A}，其对角部分为 #{NA}。由 #{L\geq NA/K} 和三角不等式，}
+##{\sum_{i\ne j}|f(x_i-x_j)|\geq A\left(\frac{N^2}{K^2}-N\right).}
+\p{共有 #{N(N-1)} 个有序异点对，至少一项不小于 #{A(N-K^2)/(K^2(N-1))}。由 #{N\geq 2K^2}，该值至少为 #{A/(2K^2)}，证明完成。报告命题中的较弱常数 #{1/(9K^2)} 也随之成立。}
+\p{这是一条存在性结论。它保证任意足够多的大值点中有一个好差，并未断言整个大值集具有[小倍增](1325)。}

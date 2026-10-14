@@ -1,0 +1,11 @@
+\title{卷积幂具有 L2 密度的 Fourier 判据}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§6.4.2；Plancherel 的精确表述}
+
+\p{设 #{\mu} 为 #{\mathbb R^n} 上的 Borel 概率测度，#{k\geq 1} 为整数。[卷积幂](132C) #{\mu^{*k}} 具有 [L2 密度](00Q6)，当且仅当 #{\widehat\mu\in L^{2k}(\mathbb R^n)}。此时若 #{d\mu^{*k}=h(x)\,dx}，则}
+##{\|h\|_2^2=(2\pi)^{-n}\int_{\mathbb R^n}|\widehat\mu(\xi)|^{2k}\,d\xi.}
+\p{\strong{由密度到可积性。}[卷积乘法公式](132C)给出 #{\widehat h=(\widehat\mu)^k}。[Plancherel 定理](0W01)立即得到结论及等式。}
+\p{\strong{由可积性到密度。}若 #{(\widehat\mu)^k\in L^2}，由 L2 Fourier 反演取 #{h\in L^2} 使 #{\widehat h=(\widehat\mu)^k}。把测度和函数均看作[缓增分布](0W0Z)，它们的 Fourier 变换相同，反演唯一性给出 #{\mu^{*k}=h\,dx}。正测度性质又保证 #{h\geq 0} 几乎处处且 #{\int h=1}。}
+\p{因为 #{|\widehat\mu|\leq 1}，存在某个有限 #{p} 使 #{\widehat\mu\in L^p}，等价于存在某个卷积幂具有 L2 密度。正向选 #{2k\geq p} 即可。这个等价关系中的密度要求是 L2；仅知道密度可积不能直接应用 Plancherel 得到结论。}

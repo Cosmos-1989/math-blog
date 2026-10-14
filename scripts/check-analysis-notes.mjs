@@ -19,6 +19,7 @@ const expected = new Map([
   ['Thomas Schlumprecht', ['1000', '10.1137/25M1799519']],
   ['Andreas Seeger', ['1100', 'ICM-slides.pdf']],
   ['Hong Wang', ['1200', '10.1137/25M1806156']],
+  ['Ruixiang Zhang', ['1300', '10.1137/25M1806272']],
 ]);
 const files = new Map(fs.readdirSync(path.join(root, 'trees'), {recursive: true})
   .filter(file => file.endsWith('.tree')).map(file => [path.basename(file, '.tree'), `trees/${file}`]));
@@ -68,7 +69,7 @@ for (const note of manifest.notes) {
   }
 }
 for (const id of files.keys()) {
-  if (/^(?:0[R-Z]|1[0-2])[0-9A-Z]{2}$/.test(id) && !ids.has(id)) errors.push(`Unreviewed new note: ${id}`);
+  if (/^(?:0[R-Z]|1[0-3])[0-9A-Z]{2}$/.test(id) && !ids.has(id)) errors.push(`Unreviewed new note: ${id}`);
 }
 for (const id of ['0GO0', 'icm2026-peluse-combinatorics']) {
   if (!manifest.reused_note_ids?.includes(id) || manifest.new_note_ids.includes(id)) {

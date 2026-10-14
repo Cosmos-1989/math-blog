@@ -1,0 +1,15 @@
+\title{随机符号和的四阶矩}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§4.2 所用的 Khintchine 估计；四阶矩证明}
+
+\p{设 #{a_1,\ldots,a_N\in\mathbb C}，#{\varepsilon_j} 为独立、各以概率 #{1/2} 取 #{\pm 1} 的 [Rademacher 符号](100F)。以 #{\mathbb E} 表示[期望](00L1)，则}
+##{\left(\sum_j|a_j|^2\right)^2
+\leq\mathbb E\left|\sum_j\varepsilon_ja_j\right|^4
+\leq 3\left(\sum_j|a_j|^2\right)^2.}
+\p{\strong{下界。}记 #{Z=\sum_j\varepsilon_ja_j}。独立性给出 #{\mathbb E|Z|^2=\sum_j|a_j|^2}；对随机变量 #{|Z|^2} 与 #{1} 用 [Cauchy–Schwarz](004S)，得到下界。}
+\p{\strong{上界。}展开四重和，含奇数次指标的项期望为零。把每个存活项归入三种配对，并扣除被重复计算的四指标全相等项，得到恒等式}
+##{\mathbb E|Z|^4=2\left(\sum_j|a_j|^2\right)^2
++\left|\sum_j a_j^2\right|^2-2\sum_j|a_j|^4.}
+\p{由 #{|\sum_j a_j^2|\leq\sum_j|a_j|^2} 得上界。对可测函数 #{f_j} 逐点应用，再用 [Tonelli 定理](0H53)，可把 #{\mathbb E\|\sum_j\varepsilon_jf_j\|_4^4} 与 #{\int(\sum_j|f_j|^2)^2} 比较。这说明随机符号给出的典型四阶大小由平方函数决定；固定符号下的相同控制需要额外的几何定理。}

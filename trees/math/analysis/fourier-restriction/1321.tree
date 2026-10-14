@@ -1,0 +1,14 @@
+\title{格上的 Poisson 求和公式}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§6；周期化证明}
+
+\p{设 #{\Lambda=B\mathbb Z^n} 为[满秩格](0N01)，#{\Lambda^\vee=2\pi B^{-\mathsf T}\mathbb Z^n} 为[角频率对偶格](1320)。对 [Schwartz 函数](0H4F) #{f}，有绝对收敛公式}
+##{\sum_{\lambda\in\Lambda}f(x+\lambda)
+=\frac 1{|\det B|}\sum_{\eta\in\Lambda^\vee}\widehat f(\eta)e^{ix\cdot\eta}.}
+\p{\strong{周期化。}令 #{P(x)=\sum_{m\in\mathbb Z^n}f(x+Bm)}。Schwartz 衰减使它及各阶导数的级数在紧集上一致收敛，故 #{P} 光滑且为 #{\Lambda} 周期。以 #{Q=B[0,1]^n} 为基本平行多面体，#{\eta\in\Lambda^\vee} 的 Fourier 系数为}
+##{\frac 1{|\det B|}\int_QP(x)e^{-ix\cdot\eta}\,dx
+=\frac 1{|\det B|}\int_{\mathbb R^n}f(y)e^{-iy\cdot\eta}\,dy.}
+\p{等式通过逐项积分、换元 #{y=x+Bm} 及 #{e^{iBm\cdot\eta}=1} 得到。各个基本域仅在零测边界重叠，绝对收敛允许 [Fubini 交换](0H53)。}
+\p{\strong{重建函数。}Schwartz 函数的 Fourier 变换仍快速衰减，故右端级数绝对一致收敛；它与 #{P} 的全部 Fourier 系数一致。[连续周期函数的 Fourier 唯一性](132B)说明两者相等。取 #{x=0} 即为通常的 Poisson 求和公式。}

@@ -12,6 +12,7 @@ const prefixes = new Map([
   ['milman', '0U'], ['mirek', '0V'], ['ortega-cerda', '0W'],
   ['parcet', '0X'], ['peluse', '0Y'], ['peterson', '0Z'],
   ['schlumprecht', '10'], ['seeger', '11'], ['hong-wang', '12'],
+  ['ruixiang-zhang', '13'],
 ]);
 const reusedIds = new Map([
   ['peluse', new Set(['0GO0', 'icm2026-peluse-combinatorics'])],
@@ -86,7 +87,7 @@ for (const record of records) {
 const reused = new Set([...reusedIds.values()].flatMap(ids => [...ids]));
 const manifest = {
   date, section: 8, subject: '0068',
-  scope: `${records.length} selected reports linked from Analysis, including the reused Peluse topic from the number-theory import; not a complete section import.`,
+  scope: `${records.length} reports linked from Analysis: the 11 chapters in SIAM ICM2026 Volume 4 section 8, plus Seeger's separately sourced talk and the reused cross-listed Peluse topic. Catalogue coverage does not imply complete reproduction of research proofs.`,
   proceedings: 'https://epubs.siam.org/doi/book/10.1137/1.9781611978674',
   records: records.map(record => record.file),
   reports: records.map(record => ({...record.report, record: record.file})),

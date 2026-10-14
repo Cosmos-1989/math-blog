@@ -1,0 +1,11 @@
+\title{Dvir 的有限域 Kakeya 下界}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§5.1 所引 Dvir 多项式方法；初等证明}
+
+\p{若 #{K\subset\mathbb F_q^n} 是[有限域 Kakeya 集](1314)，则}
+##{|K|\geq\binom{q+n-1}{n}\geq\frac{q^n}{n!}.}
+\p{\strong{构造消失多项式。}总次数至多 #{q-1} 的单项式 #{X_1^{a_1}\cdots X_n^{a_n}} 由 #{a_1+\cdots+a_n\leq q-1} 计数，共有 #{\binom{q+n-1}{n}} 个。这些单项式构成相应[有限维向量空间](00GM)的基。若 #{|K|} 小于该维数，对每个 #{x\in K} 施加线性条件 #{P(x)=0} 后，齐次方程组仍有非零解 #{P}。}
+\p{\strong{提取最高次部分。}令 #{d=\deg P\leq q-1}，#{H} 为其非零的 d 次齐次部分。对每个非零 #{v}，取 #{K} 中方向为 #{v} 的直线。多项式 #{t\mapsto P(a_v+tv)} 在 #{q} 个域元素上全为零，次数却小于 #{q}，所以它恒等于零。其 #{t^d} 系数正是 #{H(v)}。}
+\p{若 #{d=0}，非零常数不可能在非空的 #{K} 上消失。故 #{d\geq 1}，从而 #{H(0)=0}。上一步给出 #{H} 在整个 #{\mathbb F_q^n} 上消失，而它逐变量次数小于 #{q}，[有限网格唯一性](1315)强制 #{H=0}，矛盾。于是第一个下界成立。最后 #{\binom{q+n-1}{n}=q(q+1)\cdots(q+n-1)/n!\geq q^n/n!}。}

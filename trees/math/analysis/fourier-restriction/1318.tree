@@ -1,0 +1,10 @@
+\title{Bochner–Riesz 平均在 L2 中恢复原函数}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{Bochner–Riesz 平均的 Plancherel 推论}
+
+\p{对 #{f\in L^2(\mathbb R^n)}、#{\alpha\geq 0}，[Bochner–Riesz 平均](1317)通过其有界乘子定义，满足 #{\|S_R^\alpha f\|_2\leq\|f\|_2}，且 #{\|S_R^\alpha f-f\|_2\to 0} 当 #{R\to\infty}。}
+\p{\strong{证明。}记乘子为 #{m_R(\xi)}。对 #{\alpha>0}，令 #{m_R=(1-|\xi|^2/R^2)_+^\alpha}，其中 #{a_+=\max\{a,0\}}；对 #{\alpha=0} 用球的示性函数。始终有 #{0\leq m_R\leq 1}，且固定 #{\xi} 时 #{m_R(\xi)\to 1}。[Plancherel 定理](0W01)立即给出范数不增，并且}
+##{\|S_R^\alpha f-f\|_2^2=(2\pi)^{-n}\int|m_R(\xi)-1|^2|\widehat f(\xi)|^2\,d\xi.}
+\p{被积函数趋于零，且由可积函数 #{|\widehat f|^2} 支配。[支配收敛定理](0I8I)给出所需极限。此论证只用平方范数与频率乘子的对应，不能直接替代一般 p 的估计。}

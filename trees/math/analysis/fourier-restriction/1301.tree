@@ -1,0 +1,11 @@
+\title{曲面测度的 Fourier 延拓算子}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§1}
+
+\p{设 #{\Omega\subset\mathbb R^d} 有界，#{\varphi:\Omega\to\mathbb R} 光滑。图像 #{M=\{(\xi,\varphi(\xi)): \xi\in\Omega\}} 上的曲面测度在这些坐标中为 #{d\sigma=\sqrt{1+|\nabla\varphi(\xi)|^2}\,d\xi}，其中梯度由[偏导数](0A32)组成。对 #{g\in L^1(M,d\sigma)}，定义延拓算子}
+##{E_Mg(x)=\int_M e^{ix\cdot\eta}g(\eta)\,d\sigma(\eta),\qquad x\in\mathbb R^{d+1}.}
+\p{这里采用[角频率 Fourier 约定](0H4G)。积分绝对收敛，并有 #{|E_Mg(x)|\leq\|g\|_{L^1(d\sigma)}}。当底层曲面带其他指定的有限正测度时，用该测度替换 #{d\sigma} 即可。尤其在抛物面上常把曲面密度吸收入 #{g}，写成}
+##{Eg(x,t)=\int_\Omega e^{i(x\cdot\xi+t|\xi|^2)}g(\xi)\,d\xi.}
+\p{延拓问题询问 #{\|E_Mg\|_{L^q(\mathbb R^{d+1})}} 能否由曲面上的某个 [Lp 范数](00Q6)控制。曲面本身的欧氏体积为零；#{g\,d\sigma} 是[测度](00Q2)，其逆 Fourier 积分仍是普通函数。把它理解为[缓增分布](0W0Z)的逆变换时，还须计入 Fourier 反演的 #{(2\pi)^{-(d+1)}} 常数。}

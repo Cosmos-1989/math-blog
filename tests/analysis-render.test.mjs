@@ -19,7 +19,7 @@ const reports = manifest.reports.filter(report => !requestedOutlines || requeste
 const samples = reports.flatMap(report => {
   const record = read(report.record);
   // New report batches exercise every note, including prerequisite definitions.
-  if (/^1[0-2]/.test(report.outline)) return record.entries.map(([id]) => id);
+  if (/^1[0-3]/.test(report.outline)) return record.entries.map(([id]) => id);
   return [report.outline, report.reference, ...(record.proofs_written ?? []).slice(0, 3),
     ...(record.research_statements_without_local_proof ?? []).slice(0, 2)];
 });
@@ -30,7 +30,7 @@ const calculationPages = ['0R0N', '0R0W', '0R17', '0S0I', '0S0R', '0S0Y', '0T0X'
   '0X08', '0X0C', '0X0G', '0X0H', '0X0N', '0X0Q', '0X0W', '0X12', '0X17',
   '0Z0F', '0Z0O', '0Z0U', '0Z12', '0Z13', '0Z16', '0Z17', '0Z18', '0Z1D', '0Z1E'];
 const pages = [...new Set([manifest.subject, ...samples, ...(requestedOutlines ? [] : calculationPages)])];
-const proofScreenshots = new Set(reports.filter(report => /^1[0-2]/.test(report.outline))
+const proofScreenshots = new Set(reports.filter(report => /^1[0-3]/.test(report.outline))
   .flatMap(report => (read(report.record).proofs_written ?? []).slice(0, 2)));
 const base = process.env.PREVIEW_URL ?? 'http://127.0.0.1:8083/';
 const screenshots = fs.mkdtempSync(path.join(os.tmpdir(), 'analysis-render-'));
@@ -65,7 +65,11 @@ try {
         await page.screenshot({path: path.join(screenshots, `${id}-${width}.png`), fullPage: false});
       }
       checks.push({id, width, formulas: await body.locator('.katex').count(),
-        overflow: geometry.scroll - geometry.width});
+        overflow: geometry.scroll - geometry.width,
+        scrollableFormulas: await body.locator('.katex-display').evaluateAll(displays => displays
+          .filter(display => display.scrollWidth > display.clientWidth + 1)
+          .map(display => ({width: display.clientWidth, contentWidth: display.scrollWidth,
+            tex: display.querySelector('annotation')?.textContent}))) });
     }
     for (const report of reports) {
       await page.goto(`${base}${manifest.subject}/`);
@@ -73,6 +77,13 @@ try {
       await page.waitForURL(`${base}${report.outline}/`);
       await page.goto(`${base}${report.outline}/index.xml?reading=analysis#top`);
       await page.waitForURL(`${base}${report.outline}/?reading=analysis#top`);
+      const title = manifest.notes.find(note => note.id === report.outline).title;
+      await page.locator('.search-trigger:not([disabled])').click();
+      await page.keyboard.type(title);
+      const result = page.locator('ninja-action').filter({hasText: title}).first();
+      await result.waitFor({state: 'visible'});
+      await result.click();
+      await page.waitForURL(`${base}${report.outline}/`);
     }
     await page.close();
   }

@@ -1,0 +1,14 @@
+\title{Fourier 限制与延拓估计的对偶关系}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§1；对偶计算}
+
+\p{设 #{M\subset\mathbb R^n} 带有限正曲面测度 #{\sigma}，#{1\leq p<\infty}、#{1\leq q\leq\infty}，且 #{1/p+1/p'=1}、#{1/q+1/q'=1}。下列估计具有相同的最佳常数，其中 #{F} 遍历 [Schwartz 函数](0H4F)，#{E_M} 为[延拓算子](1301)：}
+##{\|\widehat F|_M\|_{L^q(d\sigma)}\leq C\|F\|_{L^p(\mathbb R^n)},}
+##{\|E_Mg\|_{L^{p'}(\mathbb R^n)}\leq C\|g\|_{L^{q'}(d\sigma)}.}
+\p{\strong{配对恒等式。}有限测度上 #{g\in L^{q'}} 蕴含 #{g\in L^1}。由 [Fubini 定理](0H53)及 [Fourier 变换](0H4G)的定义，}
+##{\int_{\mathbb R^n}F(x)\overline{E_Mg(x)}\,dx
+=\int_M\widehat F(\eta)\overline{g(\eta)}\,d\sigma(\eta).}
+\p{\strong{由限制到延拓。}右端的绝对值由 [Hölder 不等式](0A68)控制为 #{C\|F\|_p\|g\|_{q'}}。先取有界且支撑在有界集上的可测测试函数 #{F}，用光滑截断与磨光在 Lp 和 L1 中同时逼近它，方法见[光滑函数的稠密性](0I8K)。由于 #{|E_Mg|\leq\|g\|_1}，配对积分在 L1 逼近下收敛，上述界遂对这些 #{F} 成立。再对 #{\|F\|_p\leq 1} 取上确界，[Lp 范数的积分配对公式](130H)给出延拓估计；这一论证不预先假设 #{E_Mg\in L^{p'}}。}
+\p{\strong{由延拓到限制。}把左端用 Hölder 控制为 #{C\|F\|_p\|g\|_{q'}}，再对 #{\|g\|_{q'}\leq 1} 取上确界，得到限制估计。因两次推导均未扩大常数，最佳常数相等。一般 Lp 函数的 Fourier 变换在零体积曲面上未必有逐点取值；限制算子由上述估计从 Schwartz 函数连续延拓定义。}

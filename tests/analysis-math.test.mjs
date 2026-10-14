@@ -265,4 +265,5 @@ for (let r = 0; r < q; r++) {
 }
 directPair.forEach((value, j) => close(value, frequencyPair[j]));
 directTriple.forEach((value, j) => close(value, frequencyTriple[j]));
+await import('./fourier-restriction-math.test.mjs');
 console.log('Analysis finite examples passed, including Schur/Kraus identities, failure of complete positivity for transposition, harmonic products, quadratic Gowers energies and polynomial Fourier identities. These calculations do not prove the general research theorems.');

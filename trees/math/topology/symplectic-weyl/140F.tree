@@ -1,0 +1,10 @@
+\title{最大卷积保留 Weyl 渐近中的体积和}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+
+\p{设非负数列 #{a_i,b_i} 满足 #{a_i/\sqrt i\to 2\sqrt V}、#{b_i/\sqrt i\to 2\sqrt W}，其中 #{V,W>0}。令 #{d_k=\max_{i+j=k}(a_i+b_j)}。则 #{d_k^2/k\to 4(V+W)}。}
+\p{\strong{上界。}给定 #{\varepsilon>0}，存在常数 #{C}，使所有 #{i,j\geq 0} 满足 #{a_i\leq(2\sqrt V+\varepsilon)\sqrt i+C} 及相应的 #{b_j} 估计。[Cauchy–Schwarz 不等式](004S)给出}
+##{d_k\leq\sqrt{(2\sqrt V+\varepsilon)^2+(2\sqrt W+\varepsilon)^2}\sqrt k+2C.}
+\p{\strong{下界。}取 #{i_k=\lfloor kV/(V+W)\rfloor}，#{j_k=k-i_k}，则 #{(a_{i_k}+b_{j_k})/\sqrt k\to 2\sqrt{V+W}}。结合上界并令 #{\varepsilon\to 0}，即得结论。}
+\p{[ECH 容量](1409)满足 #{c_k(X\sqcup Y)=\max_{i+j=k}(c_i(X)+c_j(Y))}，这是容量理论的不交并定理。因而两个区域各自的 Weyl 渐近推出不交并的渐近，且体积按通常方式相加。}

@@ -1,0 +1,10 @@
+\title{Mayer–Vietoris 正合列与示性数加法}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hatcher](0213)，§2.2}
+
+\p{设 #{X=U\cup V} 为[开覆盖](00FP)，系数取域 #{k}。[奇异同调](0BLY)有自然长正合列}
+##{\cdots\to H_i(U\cap V;k)\to H_i(U;k)\oplus H_i(V;k)\to H_i(X;k)\to H_{i-1}(U\cap V;k)\to\cdots.}
+\p{\strong{证明。}令 #{C_*^{U,V}(X)} 为由完全落在 #{U} 或 #{V} 中的奇异单形生成的链复形。重心细分使任意有限链经过足够多次细分后落入这个子复形，细分与恒等链映射之间的棱柱同伦保证包含诱导同调同构。链级短正合列 #{0\to C_*(U\cap V)\to C_*(U)\oplus C_*(V)\to C_*^{U,V}(X)\to 0} 中两映射分别为 #{c\mapsto(c,-c)} 与相加；取同调便得长正合列。细分引理见[细分与小链](1715)。}
+\p{若各同调有限维且只有有限多个非零次数，在正合列中交错求和，得到 #{\chi(X)=\chi(U)+\chi(V)-\chi(U\cap V)}。对于沿领圈粘合的紧流形，用领圈加厚成开覆盖，得到同样的加法公式。}

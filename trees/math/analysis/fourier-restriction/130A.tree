@@ -1,0 +1,11 @@
+\title{自由 Schrödinger 演化的 Fourier 表示}
+\date{2026-10-14}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§4.1.2}
+
+\p{设 #{f\in L^2(\mathbb R^d)}，定义 #{u(t)=e^{it\Delta}f} 为 [Fourier 乘子](0H4G)}
+##{\widehat{u(t)}(\xi)=e^{-it|\xi|^2}\widehat f(\xi),\qquad
+\Delta=\sum_{j=1}^d\partial_{x_j}^2.}
+\p{对 [Schwartz 初值](0H4F)，[反演公式](0I80)给出 #{u(x,t)=(2\pi)^{-d}\int e^{i(x\cdot\xi -t|\xi|^2)}\widehat f(\xi)\,d\xi}。逐项求导验证 #{i\partial_tu+\Delta u=0}，并有 #{u(x,0)=f(x)}。这是下开口抛物面的[延拓积分](1301)，时间反射把它变为上开口形式。}
+\p{对一般 L2 初值，[Plancherel 定理](0W01)给出 #{\|u(t)\|_2=\|f\|_2}，而[支配收敛](0I8I)给出 #{\|u(t)-f\|_2\to 0}，因为 #{|e^{-it|\xi|^2}-1|^2|\widehat f|^2\leq 4|\widehat f|^2}。逐点几乎处处收敛是更强的性质，由 [Carleson 问题](130B)研究。}

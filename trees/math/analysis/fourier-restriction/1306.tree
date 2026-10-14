@@ -1,0 +1,12 @@
+\title{抛物面上的一个光滑波包}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Ruixiang Zhang](icm2026-ruixiang-zhang)，§3.2；光滑模型的计算}
+
+\p{取光滑紧支函数 #{a\in C_c^\infty(B(0,1))}、#{0<\delta\leq 1} 及 #{\xi_0,v\in\mathbb R^d}，置 #{g(\xi)=a((\xi -\xi_0)/\delta)e^{-iv\cdot\xi}}。对抛物面[延拓算子](1301)，每个整数 #{N\geq 0} 都有常数 #{C_{a,N}}，使 #{|t|\leq\delta^{-2}} 时}
+##{|Eg(x,t)|\leq C_{a,N}\delta^d\bigl(1+\delta|x-v+2t\xi_0|\bigr)^{-N}.}
+\p{\strong{换元。}令 #{\xi=\xi_0+\delta\eta}，提出模长为一的常数相位，余下积分为}
+##{\delta^d\int a(\eta)\exp\left(i\delta(x-v+2t\xi_0)\cdot\eta+it\delta^2|\eta|^2\right)d\eta.}
+\p{\strong{衰减。}设 #{b_t(\eta)=a(\eta)e^{it\delta^2|\eta|^2}}。因 #{|t|\delta^2\leq 1}，它的每阶导数的 L1 范数均统一有界。用 #{(1-\Delta_\eta)^k} 分部积分得到积分的上界 #{C_{a,k}(1+|\delta(x-v+2t\xi_0)|^2)^{-k}}。选 #{2k\geq N} 即得结论。这是 [Schwartz 衰减](0H4F)的具体形式。}
+\p{因此主要质量沿直线 #{x=v-2t\xi_0} 传播，横向尺度 #{\delta^{-1}}，时间尺度 #{\delta^{-2}}；尾部快速衰减。一个波包已把频率中心、空间位置和传播方向联系起来。一般波包分解还要把任意输入展开为这类片段，并控制系数的平方和与重叠；其完整构造见 [Zhang 报告](icm2026-ruixiang-zhang)§3.2 所引文献 29、102。}

@@ -1,0 +1,12 @@
+\title{抛物面的平方和解耦定理}
+\date{2026-10-14}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Bourgain–Demeter，定理 1.1 及式 (3)；[Ruixiang Zhang](icm2026-ruixiang-zhang)，§6.1.1}
+
+\p{设 #{n\geq 2}，#{P=\{(\xi',|\xi'|^2):|\xi_j|\leq 1 /2\}}。取 #{0<\delta<1}，用切向尺度 #{\delta^{1/2}}、法向尺度 #{\delta} 的小帽覆盖 #{P} 的 #{\delta} 邻域，并用适配的光滑频率单位分解写成 #{f=\sum_\theta f_\theta}。若 [Schwartz 函数](0H4F) #{f} 的 Fourier 支撑位于该邻域，则对 #{2\leq p\leq 2(n+1)/(n-1)} 和每个 #{\varepsilon>0}，}
+##{\|f\|_{L^p(\mathbb R^n)}\leq C_{n,p,\varepsilon}\delta^{-\varepsilon}
+\left(\sum_\theta\|f_\theta\|_{L^p(\mathbb R^n)}^2\right)^{1/2}.}
+\p{这里的光滑单位分解指支撑在各帽中的光滑函数 #{\psi_\theta}，满足邻域上 #{\sum_\theta\psi_\theta=1}，并令 #{\widehat f_\theta=\psi_\theta\widehat f}。重叠数及每片缩放到单位大小后的各阶导数界固定。}
+\p{这是引用的 Bourgain–Demeter 定理，见[原论文](https://annals.math.princeton.edu/wp-content/uploads/annals-v182-n1-p09-p.pdf)第352页，定理 1.1 的临界指数与式 (3) 的次临界范围。常数不依赖 #{\delta}。}
+\p{#{p=2} 时，[有限重叠与 Plancherel](120L)直接给出平方和控制。更大的 p 会放大不同小帽在同一空间位置的叠加，定理以任意小幂次损失控制这部分代价。它实现了抽象[解耦定义](120M)对抛物面的锐尺度估计；右端是各项范数的平方和，与[逐点平方函数](130D)不同。}

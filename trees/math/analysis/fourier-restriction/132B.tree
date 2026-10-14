@@ -1,0 +1,14 @@
+\title{连续周期函数由 Fourier 系数唯一确定}
+\date{2026-10-14}
+\taxon{Lemma}
+\author{author}
+\meta{source}{Poisson 求和所用的 Fejér 核证明}
+
+\p{设 #{F:\mathbb R^n\to\mathbb C} 连续且每个坐标以一为周期。若全部 Fourier 系数 #{\int_{[0,1]^n}F(x)e^{-2\pi im\cdot x}\,dx} 均为零，#{m\in\mathbb Z^n}，则 #{F=0}。}
+\p{\strong{一维逼近核。}令}
+##{K_N(t)=\frac 1N\left|\sum_{j=0}^{N-1}e^{2\pi ijt}\right|^2
+=\sum_{|m|<N}\left(1-\frac{|m|}{N}\right)e^{2\pi imt}.}
+\p{展开平方可得第二式。#{K_N\geq 0}，且由指数函数在周期上的积分正交性，#{\int_0^1K_N=1}。若 #{t} 距离整数至少 #{\eta>0}，几何级数公式给出 #{K_N(t)\leq 1 /(N\sin^2(\pi\eta))}。因此远离整数的积分趋于零。}
+\p{\strong{一致逼近。}取乘积核 #{\mathcal K_N(x)=\prod_jK_N(x_j)}。它非负、积分一，并且至少有一个坐标距离整数大于 #{\eta} 的区域上，积分趋于零。连续周期函数由[紧集上的一致连续性](0F41)得到统一的连续模，故}
+##{\int_{[0,1]^n}\mathcal K_N(y)F(x-y)\,dy\longrightarrow F(x)}
+\p{关于 #{x} 一致成立：在小邻域中用一致连续性，在其余部分用 #{2\|F\|_\infty} 乘以趋零的核质量。每个左端又是 #{F} 的有限个 Fourier 系数的线性组合，因而恒为零。取极限得 #{F=0}。所用多重积分可由 [Fubini 定理](0H53)逐维计算。}
