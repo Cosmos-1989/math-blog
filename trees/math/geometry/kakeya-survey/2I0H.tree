@@ -1,0 +1,12 @@
+\title{小行列式与方向到平面的距离}
+\date{2026-10-16}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{v_1,v_2,v_3\in\mathbb R^3} 是单位向量，#{|v_1\times v_2|\geq\alpha>0}。记 #{P=\operatorname{span}(v_1,v_2)}。若 #{|\det(v_1,v_2,v_3)|\leq\beta}，则}
+##{\operatorname{dist}(v_3,P)\leq\frac{\beta}{\alpha}.}
+\p{\strong{证明。}平面的单位法向量是 #{u=(v_1\times v_2)/|v_1\times v_2|}。由[正交投影](120A)，#{\operatorname{dist}(v_3,P)=|v_3\cdot u|}。[行列式的体积公式](0A40)给出}
+##{|v_3\cdot u|
+=\frac{|\det(v_1,v_2,v_3)|}{|v_1\times v_2|}
+\leq\frac{\beta}{\alpha}.}
+\p{若一族单位方向中已找到彼此分离的 #{v_1,v_2}，而与它们配对的所有三阶行列式都很小，则整族方向接近 #{P}。若连这样的两个方向也找不到，方向已接近一条直线。这是横截与低维集中分解的线性代数基础；定量结论需要保留分母中的 #{\alpha}。}

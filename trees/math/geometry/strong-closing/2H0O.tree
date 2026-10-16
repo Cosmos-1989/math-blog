@@ -1,0 +1,17 @@
+\title{Darboux 局部定理与小辛球}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，Lemma 5.5 所用局部前置；Cannas da Silva，Lectures on Symplectic Geometry，Theorem 8.1}
+
+\p{设 #{(M^{2n},\omega)} 为[辛流形](0BL1)，#{p\in M}。存在以 #{p} 为原点的局部坐标，使 #{\omega=\sum_{j=1}^n dx_j\wedge dy_j}。因此每个非空开集都包含某个标准辛球的辛嵌入。}
+\p{\strong{固定原点的线性形式。}对非退化交替双线性形式，取非零 #{e_1}，再取 #{f_1} 使 #{\omega(e_1,f_1)=1}；它们张成的平面非退化，其辛正交补也非退化。归纳得到辛基。因而可先取坐标，使 #{\omega(0)=\omega_0=\sum dx_j\wedge dy_j}。记 #{\eta=\omega -\omega_0}。}
+\p{\strong{构造原始一形式。}在原点附近的星形球中，设}
+##{\beta_x(v)=\int_0^1 t\,\eta_{tx}(x,v)\,dt.}
+\p{径向缩放的微分公式给出 #{d\beta=\eta}。直接核算时，对 #{t^2\eta_{tx}(v,w)} 求导，利用 #{d\eta=0}，所得导数就是 #{d(t\,\eta_{tx}(x,\cdot))(v,w)}；对 #{t} 积分后，#{t=0} 的边界项为零，#{t=1} 的边界项为 #{\eta_x(v,w)}。又有 #{\eta(0)=0}，所以 #{\beta_x=O(|x|^2)}。这里的微分运算按[外微分](00OA)定义。}
+\p{\strong{消去变化。}缩小邻域，使 #{\omega_t=\omega_0+t\eta} 对所有 #{0\leq t\leq 1} 都非退化。令 #{V_t} 满足 #{\iota_{V_t}\omega_t=-\beta}。它在原点为零，并在更小邻域上具有定义到 #{t=1} 的流 #{F_t}，由[光滑常微分方程定理](00OB)保证。Cartan 公式和[拉回](00NQ)求导给出}
+##{\frac{d}{dt}F_t^*\omega_t
+=F_t^*(\eta+\mathcal L_{V_t}\omega_t)
+=F_t^*(\eta -d\beta)=0.}
+\p{这里 #{\mathcal L_V} 是沿 #{V} 的流对拉回求导所得的算子。Cartan 恒等式 #{\mathcal L_V=d\iota_V+\iota_Vd} 可在函数及坐标一形式上验证，再由乘积法则延拓。例如两端作用于 #{f} 都给出 #{V(f)}，作用于 #{dx_j} 都给出 #{d(V^j)}。含时形式的拉回求导再增加 #{\partial_t\omega_t=\eta} 一项。}
+\p{因此 #{F_1^*\omega=\omega_0}。在这个坐标邻域中取一个足够小的欧氏球，即得小辛球。其半径可以任意缩小；其容量大小按[辛容量的归一化](1404)计量。}

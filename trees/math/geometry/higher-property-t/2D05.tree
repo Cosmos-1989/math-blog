@@ -1,0 +1,12 @@
+\title{群上同调的连续上链模型}
+\date{2026-10-16}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bader](icm2026-bader)，Definition 1.2 的上同调约定}
+
+\p{设 #{G} 为[拓扑群](00TX)，#{V} 为实或复 [Banach 空间](00M6)，带有[线性表示](0124) #{\pi}，且作用映射 #{(g,v)\mapsto\pi(g)v} 连续；简记 #{gv=\pi(g)v}。对整数 #{q\geq 0}，记 #{C_c^q(G,V)} 为从 #{G^q} 到 #{V} 的[连续映射](00E2)空间，#{C_c^0(G,V)=V}。下标 #{c} 指连续性，不要求紧支撑。其上链微分 #{d^q:C_c^q\to C_c^{q+1}} 为}
+##{\begin{aligned}(dc)(g_1,\ldots,g_{q+1})={}&g_1c(g_2,\ldots,g_{q+1})\\&+\sum_{i=1}^{q}(-1)^ic(g_1,\ldots,g_ig_{i+1},\ldots,g_{q+1})\\&+(-1)^{q+1}c(g_1,\ldots,g_q).\end{aligned}}
+\p{其中 #{dv(g)=gv-v}。展开 #{d(dc)}，把合并相邻两个群元素的两种次序配对，项的符号相反；首项的抵消使用 #{g(hv)=(gh)v}。因此 #{d^2=0}，可取}
+##{Z_c^q=\ker d^q,\qquad B_c^q=\operatorname{im}d^{q-1},\qquad H_c^q(G,V)=Z_c^q/B_c^q,}
+\p{其中规定 #{B_c^0=0}。零次上同调是 #{V^G=\{v\in V:gv=v\text{ 对所有 }g\in G\}}；一次余循环条件是 #{b(gh)=b(g)+gb(h)}。这里取代数商，并不把余边界的像替换为闭包。}
+\p{对离散群 #{\Gamma}，所有映射连续，省略下标 #{c}。[bar 模型的比较定理](2D0I)给出这一模型与[投射分解定义](170B)的自然同构；其基础是齐次 bar 分解的自由性和正合性。}

@@ -1,0 +1,17 @@
+\title{谱正性通过共形变形产生正标量曲率}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§6及定理14.2证明；Math 258 讲义引理5.2、命题5.4}
+
+\p{设 #{(N^n,g)} 为闭连通 Riemann 流形，#{n\ge 3}。若 #{-2\Delta_g+R_g\ge c>0} 在[二次型意义](2G0A)下成立，则存在光滑正函数 #{u}，使共形度量 #{\widehat g=u^{4/(n-2)}g} 具有处处正的[标量曲率](2G01)。共形变形逐点以正倍数缩放内积，保持角度。}
+\p{\strong{证明。}令 #{a_n=4(n-1)/(n-2)>2}，考虑共形 Laplace 算子 #{L_g=-a_n\Delta_g+R_g}。对任意非零光滑函数 #{f}，}
+##{\int_NfL_gf
+=\int_N\left(2|\nabla f|^2+R_gf^2\right)
++(a_n-2)\int_N|\nabla f|^2
+\ge c\int_Nf^2.}
+\p{由[正第一特征函数的存在性](2G0R)，可取 #{u>0} 满足 #{L_gu=\lambda_0(L_g)u}，其中 #{\lambda_0(L_g)\ge c}。使用共形标量曲率变换公式}
+##{R_{\widehat g}=u^{-(n+2)/(n-2)}L_gu
+=\lambda_0(L_g)u^{-4/(n-2)}>0.}
+\p{变换公式引用 Math 258 讲义引理5.2，采用 #{\Delta=\operatorname{div}\nabla}。因此改变后的度量具有正标量曲率；原度量 #{g} 的标量曲率仍可能在某些点为负。}
+\p{特别地，正标量曲率流形中的闭[双侧稳定极小超曲面](2G04)由[Gauss 方程](2G05)满足假设。于是可以在降一维后改变诱导度量，再继续进行面积极小化。这个共形步骤是高维归纳中传递正标量曲率的依据。}

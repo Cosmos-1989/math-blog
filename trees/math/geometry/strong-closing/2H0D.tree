@@ -1,0 +1,15 @@
+\title{任意维辛椭球边界的 Reeb 旋转}
+\date{2026-10-16}
+\taxon{Example}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，Example 3.1}
+
+\p{给定 #{a_1,\ldots,a_n>0}，在 #{\mathbb R^{2n}} 中令}
+##{Q_a(q,p)=\sum_{j=1}^n\frac{\pi(q_j^2+p_j^2)}{a_j},
+\qquad E_a=\{Q_a\leq 1\},
+\qquad\lambda_0=\frac 12\sum_j(p_j\,dq_j-q_j\,dp_j).}
+\p{边界形式 #{\lambda_a=\lambda_0|_{\partial E_a}} 为[接触形式](1401)。这是向外径向 [Liouville 向量场](0BLG)横截边界的例子，采用与[余切辛形式](0BL2)相同的 #{d\lambda_0=\sum dp_j\wedge dq_j} 约定。}
+\p{\strong{计算。}令 #{V=\sum_j(2\pi /a_j)(p_j\partial_{q_j}-q_j\partial_{p_j})}。则 #{\lambda_0(V)=Q_a=1} 于边界，并有 #{\iota_Vd\lambda_0=-dQ_a}，在边界切空间上为零。因此由 [Reeb 场的定义](1402)，#{V=R_{\lambda_a}}。写 #{z_j=q_j+ip_j}，流为}
+##{z_j(t)=e^{-2\pi it/a_j}z_j(0).}
+\p{一条轨道周期为 #{T} 的充要条件是，对每个非零坐标 #{z_j(0)} 都有 #{T/a_j\in\mathbb Z}。若全部比值 #{a_i/a_j} 有理，可选共同周期，所有轨道都闭合。若任意两个不同指标的比值都无理，则闭轨道只能位于单个坐标平面，恰有 #{n} 条简单闭轨道，周期分别为 #{a_j}。}
+\p{在四维，这些周期进入[椭球的 ECH 容量公式](140A)。在高维，即使只有有限条简单闭轨道，椭球形式仍满足[强闭合性质](2H0G)。}

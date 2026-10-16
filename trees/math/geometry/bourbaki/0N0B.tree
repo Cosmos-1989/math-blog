@@ -1,5 +1,5 @@
-\title{实对称矩阵的正交对角化}
-\date{2026-10-13}
+\title{实对称与 Hermitian 矩阵的正交对角化}
+\date{2026-10-16}
 \taxon{Theorem}
 \author{author}
 \meta{source}{[文献](bourbaki-1253-aubrun)，Aubrun §4.1，线性代数补充}
@@ -8,3 +8,5 @@
 \p{\strong{证明。}单位球面由 [Heine–Borel 定理](0A39)是紧集，故连续函数 #{u\mapsto u^{\mathsf T}Au} 在球面上[达到最大值](0A3A)，设在单位向量 #{u} 处达到。对 #{v\perp u} 考察 #{(u+tv)/\|u+tv\|}，在 #{t=0} 求导得 #{v^{\mathsf T}Au=0}。所以 #{Au} 与 #{u} 平行，#{u} 是特征向量。}
 \p{对 #{v\perp u}，对称性给出 #{u^{\mathsf T}Av=(Au)^{\mathsf T}v=0}，故 #{u^\perp} 在 #{A} 下不变。限制到这个少一维的空间并归纳，得到全部正交单位特征向量。在这组基下二次型为 #{\sum_i a_i x_i^2}，正定性判别随之成立。}
 \p{对正定 #{A} 定义 #{A^{1/2}=Q\operatorname{diag}(\sqrt{a_1},\ldots,\sqrt{a_n})Q^{\mathsf T}}，则 #{(A^{1/2})^2=A}；同法定义 #{A^{-1/2}}。这些定义在每个特征空间上均为标量作用，因而不依赖所选正交特征基。}
+\p{复数情形把对称性改为 #{A=A^*}，其中 #{A^*} 为[伴随](00MU)，称 Hermitian 矩阵。采用[第二变量线性的内积](004M)，二次型 #{q(v)=(v,Av)} 仍为实值。在单位球面最大点 #{u} 处，对每个 #{v\perp u} 分别沿 #{v} 与 #{iv} 求实方向导数，得到 #{\operatorname{Re}(v,Au)=0} 与 #{\operatorname{Im}(v,Au)=0}。故 #{Au=\lambda u}，其中 #{\lambda=q(u)\in\mathbb R}。}
+\p{自伴性给出 #{(u,Av)=(Au,v)=0}，所以 #{u^\perp} 不变。再次按维数归纳即得酉对角化 #{A=U\operatorname{diag}(a_1,\ldots,a_n)U^*}。正定性判别与正平方根构造完全相同。特别地，可逆矩阵 #{B} 的 #{B^*B} 正定，因为 #{(v,B^*Bv)=\|Bv\|^2>0}。}

@@ -1,0 +1,17 @@
+\title{超曲面的体积谱}
+\date{2026-10-16}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，§8；Irie–Marques–Neves，§2、Proposition 2.2}
+
+\p{设 #{(M^m,g)} 为闭连通 [Riemann 流形](00NI)，#{m\geq 2}。体积谱 #{\omega_k(M,g)} 是面积泛函在具有 #{k} 重拓扑非平凡性的超曲面族上的极小极大值。这里“体积”指超曲面的 #{m-1} 维面积，按[诱导体积密度](00NN)计算。}
+\p{允许退化超曲面，使连续变形可以经过分裂或消失。具体使用模 #{2} 的几何链，重叠片的重数按奇偶抵消；在光滑片上，其质量 #{\mathbf M_g} 就是面积。两条链 #{T,T'} 的平坦距离用分解 #{T-T'=R+\partial S} 的量 #{\mathbf M_g(R)+\mathbf M_g(S)} 之下确界定义，其中 #{R} 与 #{T} 同维，#{S} 高一维。把分片光滑链在此距离下完备化，并将质量作下半连续延拓，得到平坦链。记 #{\mathcal Z} 为其中所有 #{m-1} 维边界 #{T=\partial U} 组成的空间。}
+\p{Almgren 的拓扑定理给出 #{H^1(\mathcal Z;\mathbb Z_2)=\mathbb Z_2}，记非零元为 #{\lambda}。对一个具有[有限三角剖分](0F4D)的参数空间 #{X}，[连续映射](00E2) #{\Phi:X\to\mathcal Z} 称为 #{k}-扫掠，如果 #{\Phi^*(\lambda^k)\ne 0}；幂使用[上同调杯积](0F55)。例如一次扫掠包含一个闭合变形过程，填充区域从空集变到整个流形，其边界回到零。}
+\p{还要求面积不在点上集中，即}
+##{\lim_{r\downarrow 0}\sup_{x\in X,\,p\in M}
+\mathbf M_g\bigl(\Phi(x)|_{B_r(p)}\bigr)=0.}
+\p{记全部满足此条件的 #{k}-扫掠为 #{\mathcal P_k}。参数空间允许随扫掠改变。定义}
+##{\omega_k(M,g)=\inf_{\Phi\in\mathcal P_k}\sup_{x\in X}\mathbf M_g(\Phi(x)).}
+\p{几何测度论保证这个构造给出有限正数，且随 #{k} 非减。若 #{3\leq m\leq 7}，极小极大与正则性定理进一步给出有限个两两不交、光滑闭嵌入的[极小超曲面](2G02) #{\Sigma_j} 和正整数 #{n_j}，使}
+##{\omega_k(M,g)=\sum_j n_j\operatorname{Area}_g(\Sigma_j).}
+\p{此处不要求每个超曲面双侧；极小性由局部法向表达的零平均曲率定义。平坦链空间的拓扑、极小极大存在性与上述光滑实现均引用所列研究定理。序号 #{k} 记录扫掠的拓扑条件，并非把所有极小超曲面的面积按大小依次排列。}

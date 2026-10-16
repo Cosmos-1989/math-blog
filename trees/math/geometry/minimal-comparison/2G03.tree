@@ -1,0 +1,16 @@
+\title{极小超曲面面积的二阶变分}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§3；Math 258 讲义定理1.3}
+
+\p{设 #{\Sigma^n\to(M^{n+1},g)} 为无边界[双侧极小超曲面](2G02)。令 #{f} 为 #{\Sigma} 上紧支撑光滑实函数，以初速度 #{f\nu} 作变分，则面积的二阶导数为}
+##{Q_\Sigma(f)=\int_\Sigma\left(|\nabla_\Sigma f|^2-\bigl(|A|^2+\operatorname{Ric}_M(\nu,\nu)\bigr)f^2\right)d\mu_\Sigma.}
+\p{这里 #{\operatorname{Ric}_M} 是环境的 [Ricci 曲率](2G01)，梯度和 #{\Delta_\Sigma=\operatorname{div}_\Sigma\nabla_\Sigma} 使用[几何 Laplace 符号](0U14)。非紧情形只对含变分支撑的区域计算面积变化。}
+\p{\strong{证明。}在变分坐标中记切向量为 #{E_i}，使 #{[\partial_t,E_i]=0}。无挠性给出 #{\nabla_tE_i=\nabla_{E_i}(f\nu)}，因此 #{g'_{ij}=2fA_{ij}}。由[面积密度的微分](2E02)，#{(d\mu)'=Hf\,d\mu}。微分 #{\langle\nu,E_i\rangle=0} 和 #{|\nu|^2=1}，得到 #{\nabla_t\nu=-\nabla_\Sigma f}。}
+\p{在一点取正交标架。对 #{A_{ij}=\langle\nabla_{E_i}\nu,E_j\rangle} 求导，交换协变微分时使用[曲率张量](004J)，得到}
+##{A'_{ij}=-(\nabla_\Sigma^2f)_{ij}+f(A^2)_{ij}
++f\langle\operatorname{Rm}(\nu,E_i)\nu,E_j\rangle.}
+\p{其中 #{\nabla_\Sigma^2f} 是 Hessian，定义为 #{(\nabla_\Sigma^2f)(X,Y)=X(Yf)-(\nabla^\Sigma_XY)f}。同时 #{(g^{ij})'=-2fA^{ij}}。故 #{H=g^{ij}A_{ij}} 的导数为}
+##{H'=-\Delta_\Sigma f-\bigl(|A|^2+\operatorname{Ric}_M(\nu,\nu)\bigr)f.}
+\p{对 #{\operatorname{Area}'=\int Hf} 再微分。因初始超曲面极小，含 #{H} 的面积密度项与速度导数项都为零，只剩 #{\int fH'}。对紧支撑函数作[分部积分](0U14)，#{-\int f\Delta_\Sigma f=\int|\nabla_\Sigma f|^2}，即得所述公式。}

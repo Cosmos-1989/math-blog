@@ -1,0 +1,13 @@
+\title{表示族的导数产生仿射作用}
+\date{2026-10-16}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Canary](icm2026-canary)，§6}
+
+\p{设 #{G\leq\operatorname{GL}_d(\mathbb R)} 为矩阵[Lie 群](0H48)，Lie 代数为 #{\mathfrak g}。设 #{\rho_t:\Gamma\to G} 为逐个群元素光滑依赖于 #{t} 的表示族。定义}
+##{b(\gamma)=\left.\frac d{dt}\right|_{0}\rho_t(\gamma)\,\rho_0(\gamma)^{-1}\in\mathfrak g,\qquad L(\gamma)X=\rho_0(\gamma)X\rho_0(\gamma)^{-1}.}
+\p{则 #{\gamma\cdot X=L(\gamma)X+b(\gamma)} 是 #{\Gamma} 在 #{\mathfrak g} 上的仿射作用。}
+\p{\strong{证明。}微分 #{\rho_t(\gamma\eta)=\rho_t(\gamma)\rho_t(\eta)}，再右乘 #{\rho_0(\eta)^{-1}\rho_0(\gamma)^{-1}}，得到}
+##{b(\gamma\eta)=b(\gamma)+L(\gamma)b(\eta).}
+\p{这就是[一余循环条件](2D06)，并直接保证仿射映射的复合满足群乘法。它与[对偶数上的一阶表示变形](0B8Q)是同一乘法恒等式的两种形式。}
+\p{若表示族由共轭给出 #{\rho_t(\gamma)=g_t\rho_0(\gamma)g_t^{-1}}，其中 #{g_0=I,\dot g_0=X_0}，则 #{b(\gamma)=X_0-L(\gamma)X_0}，仿射作用固定 #{X_0}。因此变形导数能否产生[适当作用](2F0O)，还取决于余循环的额外几何性质。}

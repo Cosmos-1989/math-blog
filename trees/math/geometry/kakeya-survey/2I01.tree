@@ -1,0 +1,15 @@
+\title{邻域体积与上下盒维数}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{E\subset\mathbb R^n} 有界非空，#{N_\delta(E)} 是半径 #{\delta} 的球所需的最少[覆盖数](1201)，#{E_\delta=\{x:\operatorname{dist}(x,E)<\delta\}}。上下盒维数，又称上下 Minkowski 维数，定义为 #{\log N_\delta(E)/\log(1/\delta)} 在 #{\delta\to 0} 时的上、下极限。存在仅依赖 #{n} 的正常数，使}
+##{c_n\delta^nN_\delta(E)\leq |E_\delta|\leq C_n\delta^nN_\delta(E).}
+\p{\strong{证明。}用 #{N_\delta(E)} 个半径 #{\delta} 的球覆盖 #{E}，将半径扩大为 #{2\delta} 即覆盖 #{E_\delta}，给出上界。取 #{E} 中一个极大的 #{\delta}-分离集。由[分离集与覆盖的比较](1204)，其点数至少为 #{N_\delta(E)}；以这些点为中心、半径 #{\delta /3} 的球互不相交且均在 #{E_\delta} 中。将球体积相加即得下界。}
+\p{对数恒等式给出}
+##{\overline{\dim}_{\mathrm M}E
+=n-\liminf_{\delta\to 0}\frac{\log|E_\delta|}{\log\delta},
+\qquad
+\underline{\dim}_{\mathrm M}E
+=n-\limsup_{\delta\to 0}\frac{\log|E_\delta|}{\log\delta}.}
+\p{特别地，若对每个 #{\varepsilon>0}，充分小的 #{\delta} 都满足 #{|E_\delta|\geq c_\varepsilon\delta^\varepsilon}，则两种盒维数都为 #{n}。[Hausdorff 维数](1202)使用可变半径覆盖，其下界还需相应的多尺度控制。}

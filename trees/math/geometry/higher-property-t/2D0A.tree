@@ -1,0 +1,9 @@
+\title{不变向量分解如何分解群上同调}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{G} 为[拓扑群](00TX)，#{\pi} 为其在 #{V} 上的[强连续酉表示](0H4C)，记 #{V^G=\{v\in V:\pi(g)v=v\text{ 对所有 }g\in G\}}。则 #{V=V^G\oplus(V^G)^\perp} 为两个闭不变子空间的直和，其中 #{(V^G)^\perp} 是[正交补](00MR)。对每个整数 #{j\geq 0}，有}
+##{H_c^j(G,V)\cong H_c^j(G,V^G)\oplus H_c^j(G,(V^G)^\perp).}
+\p{\strong{证明。}#{V^G} 是闭子空间，因为它是所有连续算子 #{\pi(g)-1} 的核之交。[Hilbert 空间的正交投影定理](00MS)给出上述直和。若 #{w\perp V^G}、#{v\in V^G}，酉性给出 #{\langle\pi(g)w,v\rangle=\langle w,\pi(g^{-1})v\rangle=0}，故正交补不变。}
+\p{两个正交投影有界且与作用交换。逐点作用于[连续上链](2D05)，得到上链复形的直和分解，并与微分交换。取核、像和商即得结论。若 #{G} 有[性质 #{(T_n)}](2D08)，则在 #{1\leq j\leq n} 次仅剩 #{H_c^j(G,V^G)}。}

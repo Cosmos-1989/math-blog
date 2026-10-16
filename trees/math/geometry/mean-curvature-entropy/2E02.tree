@@ -1,0 +1,11 @@
+\title{子流形面积的一阶变分}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{X_s:M^n\to\mathbb R^N} 为紧无边界流形的光滑嵌入族，#{\Sigma_s=X_s(M)}，在 #{s=0} 的变分向量为 #{V=\partial_sX_s|_0}。体积按[诱导体积密度](00NN)积分，不要求 #{M} 可定向。则}
+##{\left.\frac d{ds}\right|_0\operatorname{Vol}(\Sigma_s)=-\int_{\Sigma_0}\langle\mathbf H,V\rangle\,d\mu.}
+\p{\strong{证明。}局部度量矩阵为 #{g_{ij}(s)=\langle\partial_iX_s,\partial_jX_s\rangle}。由[行列式微分](0N0Q)，体积密度 #{\sqrt{\det g}} 的对数导数为 #{\frac 12g^{ij}\partial_sg_{ij}}，在正交标架中等于 #{\sum_i\langle D_{e_i}V,e_i\rangle}。}
+\p{把 #{V} 分成切向与法向部分。切向项是 #{\operatorname{div}_\Sigma V^\top}。微分 #{\langle V^\perp,e_i\rangle=0} 给出法向项 #{-\sum_i\langle V^\perp,D_{e_i}e_i\rangle=-\langle V,\mathbf H\rangle}，其中 #{\mathbf H} 是[平均曲率向量](2E01)。}
+\p{可定向时，散度积分由[Stokes 定理](0BAC)为零。一般情形取从属于坐标覆盖的[单位分解](0A49) #{\{\chi_\alpha\}}，其[存在性](2E0P)由紧性和局部光滑函数构造保证。对切向量场 #{W}，有 #{\sum_\alpha\operatorname{div}(\chi_\alpha W)=\operatorname{div}W}。每项乘体积密度后，在坐标中成为 #{\partial_i(\sqrt{\det g}\,\chi_\alpha W^i)|dx^1\cdots dx^n|}，其积分由紧支撑为零。应用于 #{W=V^\top}，得到所述变分公式。}
+\p{同样的局部计算适用于非紧子流形的紧支撑变分。若总面积无限，则固定一个包含全部变分支撑的紧区域，对该区域的面积变化求导；区域外保持不动，所得导数与区域选择无关。此时公式表达局部面积差的一阶变分。}

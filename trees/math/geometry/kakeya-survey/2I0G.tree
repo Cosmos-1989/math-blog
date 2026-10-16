@@ -1,0 +1,13 @@
+\title{三维 Loomis–Whitney 积分不等式}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{f(y,z),g(x,z),h(x,y)} 是平面上非负可积函数，则}
+##{\int_{\mathbb R^3}\sqrt{f(y,z)g(x,z)h(x,y)}\,dx\,dy\,dz
+\leq \left(\int f\int g\int h\right)^{1/2}.}
+\p{\strong{证明。}固定 #{y,z}，对 #{x} 用 [Cauchy–Schwarz 不等式](004S)，得到}
+##{\int_{\mathbb R}\sqrt{g(x,z)h(x,y)}\,dx
+\leq G(z)^{1/2}H(y)^{1/2},}
+\p{其中 #{G(z)=\int g(x,z)\,dx}、#{H(y)=\int h(x,y)\,dx}。再对 #{(y,z)} 用一次 Cauchy–Schwarz，左边至多为 #{(\int f)^{1/2}(\int G(z)H(y)\,dy\,dz)^{1/2}}。[非负积分换序](0H53)将后一积分写成 #{(\int g)(\int h)}，即得结论。可先截断函数，再由[单调收敛](0A7A)去掉有限性限制。}
+\p{取三个坐标方向的管族，将每根管扩大为无限圆柱。其重数分别只依赖 #{(y,z)}、#{(x,z)}、#{(x,y)}，且在各投影平面上的积分为 #{\pi\delta^2N_j}。代入上式得 #{C\delta^3(N_1N_2N_3)^{1/2}}，这正是[多线性 Kakeya 估计](2I0F)的三维坐标模型。}

@@ -1,0 +1,11 @@
+\title{可逆矩阵的奇异值分解}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{A\in\operatorname{GL}(d,\mathbb K)}，#{\mathbb K=\mathbb R} 或 #{\mathbb C}，使用标准[内积](004M)。矩阵 #{A^*A} 的[特征值](0F0B)正且可按大小排列，其正平方根}
+##{\sigma_1(A)\geq\cdots\geq\sigma_d(A)>0}
+\p{称为奇异值。存在正交矩阵或酉矩阵 #{U,V}，使 #{A=U\operatorname{diag}(\sigma_1,\ldots,\sigma_d)V^*}。}
+\p{\strong{证明。}由[自伴对角化](0N0B)，取 #{A^*A} 的正交归一特征基 #{v_i}，满足 #{A^*Av_i=\sigma_i^2v_i}。令 #{u_i=Av_i/\sigma_i}，则 #{(u_i,u_j)=\delta_{ij}}。以 #{u_i,v_i} 分别为 #{U,V} 的列即得分解。}
+\p{若 #{\sigma_k>\sigma_{k+1}}，最大 #{k} 个特征值的总特征空间唯一确定；其在 #{A} 下的像记为 #{U_k(A)=\operatorname{span}(u_1,\ldots,u_k)}。即使前 #{k} 个奇异值内部有重数，这个子空间仍唯一。}
+\p{分解还给出 #{\|A\|_{\mathrm{op}}=\sigma_1(A)}、#{\prod_i\sigma_i(A)=|\det A|}，以及 #{\sigma_i(A^{-1})=\sigma_{d+1-i}(A)^{-1}}。最后一式来自把分解取逆并重新排列。}

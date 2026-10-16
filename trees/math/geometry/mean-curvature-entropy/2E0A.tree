@@ -1,0 +1,15 @@
+\title{Huisken 单调公式的光滑紧致情形}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bernstein](icm2026-bernstein)，§2.1}
+
+\p{设 #{M^n} 为紧无边界光滑流形，#{X_t:M\to\mathbb R^N} 参数化光滑[平均曲率流](2E03) #{\Sigma_t=X_t(M)}，固定 #{a\in\mathbb R^N}、#{T>t}。则}
+##{\frac d{dt}F_{a,T-t}(\Sigma_t)=-(4\pi(T-t))^{-n/2}\int_{\Sigma_t}\left|\mathbf H+\frac{(x-a)^\perp}{2(T-t)}\right|^2e^{-|x-a|^2/(4(T-t))}\,d\mu_t.}
+\p{\strong{证明。}先对紧无边界子流形的法向变分 #{V} 求[高斯面积](2E05)的导数。[面积密度变分](2E02)贡献 #{-\langle\mathbf H,V\rangle}，权函数的导数贡献 #{-\langle x,V\rangle /2}，故}
+##{\delta F(V)=-(4\pi)^{-n/2}\int_\Sigma\langle\mathbf H+x^\perp /2,V\rangle e^{-|x|^2/4}\,d\mu.}
+\p{若变分另有切向部分 #{W}，其贡献为 #{\operatorname{div}_\Sigma(e^{-|x|^2/4}W)} 的积分，仍由面积变分页的密度论证为零。因此导数只取决于法向速度。相同局部公式适用于非紧子流形的紧支撑变分；总加权面积无限时，一阶变分按支撑区域内的面积差定义。}
+\p{令 #{\tau=T-t}，将公式用于[重标度流](2E09) #{Y_s=\tau^{-1/2}(X_t-a)}，得到负平方积分。由于}
+##{F_{0,1}(Y_s(M))=F_{a,\tau}(\Sigma_t),\qquad d\mu_Y=\tau^{-n/2}d\mu_t,\qquad \mathbf H_Y+\frac{Y^\perp}{2}=\sqrt\tau\left(\mathbf H_{X_t}+\frac{(X_t-a)^\perp}{2\tau}\right),}
+\p{再乘 #{ds/dt=\tau^{-1}}，负平方中的因子 #{\tau} 恰好抵消，即得所述公式。紧且无边界保证所有积分有限且没有边界贡献。}
+\p{由此[熵](2E06)沿光滑紧致流不增。具体地，若 #{t_1<t_2}，对任意 #{a,\tau>0} 取 #{T=t_2+\tau}，便有 #{F_{a,\tau}(\Sigma_{t_2})\leq F_{a,\tau+t_2-t_1}(\Sigma_{t_1})\leq\lambda(\Sigma_{t_1})}；再对 #{a,\tau} 取上确界即可。非紧解和弱流的版本还需要积分与正则性假设，见原文引用。}

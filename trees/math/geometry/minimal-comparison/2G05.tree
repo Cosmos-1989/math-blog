@@ -1,0 +1,18 @@
+\title{超曲面的 Gauss 方程与标量曲率}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，式(4.2)、式(5.1)}
+
+\p{设 #{\Sigma^n\to(M^{n+1},g)} 为[双侧超曲面](2G02)，其第二基本形式取 #{A(X,Y)=\langle\nabla_X\nu,Y\rangle}。记环境及诱导度量的[标量曲率](2G01)分别为 #{R_M,R_\Sigma}。则}
+##{R_\Sigma=R_M-2\operatorname{Ric}_M(\nu,\nu)+H^2-|A|^2.}
+\p{\strong{证明。}分解环境联络为 #{\nabla_XY=\nabla^\Sigma_XY-A(X,Y)\nu}，将其代入[曲率张量](004J)的定义，取切向分量，得到}
+##{\langle\operatorname{Rm}_\Sigma(X,Y)Z,W\rangle
+=\langle\operatorname{Rm}_M(X,Y)Z,W\rangle
++A(X,W)A(Y,Z)-A(X,Z)A(Y,W).}
+\p{对正交单位切向基 #{e_i,e_j} 取 #{X=W=e_i,Y=Z=e_j}，所以 #{\sec_\Sigma(e_i,e_j)=\sec_M(e_i,e_j)+A_{ii}A_{jj}-A_{ij}^2}。对 #{i\ne j} 求和，环境项等于 #{R_M-2\operatorname{Ric}_M(\nu,\nu)}，第二基本形式项等于 #{H^2-|A|^2}，结论成立。欧氏环境且 #{n=2} 时，这还原为[曲面的 Gauss 方程](00OF)。}
+\p{若 #{\Sigma} 极小，则 #{H=0}，因而}
+##{\operatorname{Ric}_M(\nu,\nu)+|A|^2=\frac 12\bigl(R_M+|A|^2-R_\Sigma\bigr).}
+\p{将此式代入[稳定性不等式](2G04)，对每个紧支撑光滑 #{f} 得到}
+##{\int_\Sigma(R_M+|A|^2)f^2\le\int_\Sigma\left(2|\nabla_\Sigma f|^2+R_\Sigma f^2\right).}
+\p{曲面情形 #{R_\Sigma=2K_\Sigma}。此恒等式把环境中的法向 Ricci 曲率与超曲面自身的曲率联系起来。}

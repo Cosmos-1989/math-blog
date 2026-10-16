@@ -1,0 +1,18 @@
+\title{多项式非集中改善横截管族的维数指数}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zahl](icm2026-zahl)，Theorem 4.4 与 Corollary 4.5}
+
+\p{设 #{2\leq k\leq n}，#{\mathbb T} 为方向 #{\delta}-分离的单位[管族](120H)，#{N\asymp\delta^{1-n}}。令 #{m=\sum_T\mathbf 1_T}，并设}
+##{d=\frac{n^2+k^2+n-k}{2n}.}
+\p{对 #{k} 个单位方向，记 #{|v_1\wedge\cdots\wedge v_k|} 为其张成平行多面体的 #{k} 维体积。它等于 #{\sqrt{\det G}}，其中 #{G=(\langle v_i,v_j\rangle)_{i,j=1}^k} 是由欧氏[内积](004M)组成的 Gram 矩阵。设可测区域 #{\Omega\subset\bigcup_TT} 承载固定正比例的管质量，即 #{\int_\Omega m\geq c_1\int m}，其中 #{c_1>0}。假设对几乎每个 #{x\in\Omega}，有一致的 #{c_0>0} 使}
+##{\sum_{(T_1,\ldots,T_k)\in\mathbb T^k}
+\prod_{j=1}^k\mathbf 1_{T_j}(x)
+|v_1\wedge\cdots\wedge v_k|^{k/d}
+\geq c_0m(x)^k.}
+\p{这明确要求相当一部分相交管组具有定量横截性。在这一条件下，对每个 #{\varepsilon>0}，有}
+##{\left|\bigcup_TT\right|\geq|\Omega|\geq c_{\varepsilon,c_0,c_1}\delta^{n-d+\varepsilon}.}
+\p{\strong{研究输入。}Zahl 的 Theorem 4.4 对满足多项式 Wolff 公理的管族，给出上面加权和的 #{1/k} 次方在 #{L^{d/(d-1)}} 中的上界 #{C_\eta\delta^{-(n/d-1)-\eta}}，此处使用 #{N|T|\asymp 1}。方向分离管族所需的[半代数非集中估计](1311)来自 Katz–Rogers 定理，允许的小幂次损失并入 #{\eta}。}
+\p{\strong{推导体积下界。}设 #{q=d/(d-1)}。横截假设给出 #{\|\mathbf 1_\Omega m\|_q\leq C_\eta c_0^{-1/k}\delta^{-(n/d-1)-\eta}}。[Hölder 不等式](0A68)及 #{\int m\asymp 1} 给出 #{c_1\lesssim\int_\Omega m\leq|\Omega|^{1/d}\|\mathbf 1_\Omega m\|_q}。取 #{d} 次方并令 #{\eta=\varepsilon /d} 即得所述结论，其中常数还依赖固定的 #{n,k} 和 #{N\asymp\delta^{1-n}} 中的比较常数。}
+\p{例如 #{n=4,k=3} 时 #{d=13/4}，体积下界的主幂次为 #{3/4}。这种估计控制横截部分；大量方向接近二维平面的情形由[四维近平面估计](2I0K)处理。}

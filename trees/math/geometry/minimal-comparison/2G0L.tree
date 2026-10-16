@@ -1,0 +1,24 @@
+\title{双 Ricci 下界诱导稳定超曲面的谱 Ricci 下界}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，定理12.1及其证明}
+
+\p{设 #{\Sigma^n\to(M^{n+1},g)} 是无边界[双侧稳定极小超曲面](2G04)，环境满足[双 Ricci 曲率](2G0K) #{\operatorname{biRic}_M\ge 1}。令 #{\lambda_{\operatorname{Ric},\Sigma}(p)} 为 #{\operatorname{Ric}_\Sigma} 相对诱导度量的最小特征值。则}
+##{\int_\Sigma f^2\le
+\int_\Sigma\left(|\nabla_\Sigma f|^2+
+\lambda_{\operatorname{Ric},\Sigma}f^2\right)
+\quad\text{对所有 }f\in C_c^\infty(\Sigma).}
+\p{这里借助度量把 Ricci 双线性型视为自伴线性映射，其最小[特征值](0F0B)也可写为 #{\min_{|v|=1}\operatorname{Ric}_\Sigma(v,v)}。它是连续函数，足以定义上述积分。结论是[二次型意义的谱条件](2G0A)。}
+\p{\strong{证明。}在每一点取正交基 #{e_1,\ldots,e_n}，使 #{\operatorname{Ric}_\Sigma(e_1,e_1)=\lambda_{\operatorname{Ric},\Sigma}}。由[Gauss 方程](2G05)，并用 #{\operatorname{tr}A=0}，}
+##{\begin{aligned}
+\lambda_{\operatorname{Ric},\Sigma}
+&=\sum_{j=2}^n\bigl(\sec_M(e_1,e_j)+A_{11}A_{jj}-A_{1j}^2\bigr)\\
+&=\operatorname{Ric}_M(e_1,e_1)-\sec_M(e_1,\nu)-\sum_{j=1}^nA_{1j}^2\\
+&\ge 1-\operatorname{Ric}_M(\nu,\nu)-|A|^2.
+\end{aligned}}
+\p{乘以 #{f^2} 后积分，再用稳定性不等式，得到}
+##{\int_\Sigma\lambda_{\operatorname{Ric},\Sigma}f^2
+\ge\int_\Sigma f^2-\int_\Sigma\bigl(\operatorname{Ric}_M(\nu,\nu)+|A|^2\bigr)f^2
+\ge\int_\Sigma f^2-\int_\Sigma|\nabla f|^2.}
+\p{移项即为结论。基向量只在单点选择，论证不要求最小特征向量在全曲面上光滑选取。}

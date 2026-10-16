@@ -1,0 +1,15 @@
+\title{正函数给出的 Schrödinger 二次型恒等式}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§6 的谱条件；Math 258 讲义§2}
+
+\p{设 #{(N,g)} 为无边界 [Riemann 流形](00NI)，#{a>0}，#{V} 为光滑实函数。令 #{L=-a\Delta+V}，其中 #{\Delta} 采用[几何符号](0U14)。若 #{u} 为处处正的光滑函数，则对任意 #{f\in C_c^\infty(N)} 有}
+##{\int_N\left(a|\nabla f|^2+Vf^2\right)
+=a\int_Nu^2\left|\nabla\left(\frac f u\right)\right|^2
++\int_N\frac{Lu}{u}f^2.}
+\p{\strong{证明。}写 #{f=u\psi}。展开平方得到}
+##{|\nabla(u\psi)|^2=u^2|\nabla\psi|^2+
+\langle\nabla u,\nabla(u\psi^2)\rangle.}
+\p{对第二项作[分部积分](0U14)，其积分为 #{-\int(\Delta u)u\psi^2}。再加入 #{\int V u^2\psi^2}，得到所述恒等式。由于 #{\psi=f/u} 紧支撑，整个计算不要求 #{u} 平方可积。若 #{Lu\ge c u}，右端给出[谱下界](2G0A) #{L\ge c}。}
+\p{闭连通流形上可以取[正的第一特征函数](2G0R)作为 #{u}。此时恒等式把二次型与其最小值之差写成非负的加权梯度能量。}

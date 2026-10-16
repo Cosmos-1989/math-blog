@@ -1,0 +1,19 @@
+\title{体积谱的 Weyl 律与度量缩放}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，§8 的 Weyl 定律；Liokumovich–Marques–Neves，Theorem 1.1；Irie–Marques–Neves，Lemma 2.1}
+
+\p{对每个整数 #{m\geq 2}，存在只依赖维数的常数 #{a_{m-1}>0}，使每个闭连通 #{m} 维 Riemann 流形的[体积谱](2H0P)满足}
+##{\lim_{k\to\infty}\frac{\omega_k(M,g)}{k^{1/m}}
+=a_{m-1}\operatorname{Vol}(M,g)^{(m-1)/m}.}
+\p{这是 Liokumovich–Marques–Neves 的 Weyl 定律。该渐近公式适用于所有这些维数；将每个谱值实现为光滑嵌入极小超曲面面积之和，则另用 #{3\leq m\leq 7} 的正则性条件。}
+\p{\strong{缩放计算。}将 #{g} 视为切空间上的正定二次型。若 #{g'=c g}，#{c>0}，则任意 #{m-1} 维切平面的度量矩阵行列式乘 #{c^{m-1}}，其[面积密度](00NN)乘 #{c^{(m-1)/2}}。扫掠的允许类不因常数缩放而改变，故对极小极大定义依次取上确界、下确界，得到}
+##{\omega_k(M,cg)=c^{(m-1)/2}\omega_k(M,g),\qquad
+\operatorname{Vol}(M,cg)=c^{m/2}\operatorname{Vol}(M,g).}
+\p{两式使 Weyl 定律左右同乘 #{c^{(m-1)/2}}。若用长度缩放因子 #{a}，对应的度量张量是 #{a^2g}，此时宽度才乘 #{a^{m-1}}。}
+\p{\strong{连续性估计。}若二次型满足 #{e^{-\delta}g\leq g'\leq e^\delta g}，则各切平面的面积比较给出}
+##{e^{-(m-1)\delta /2}\omega_k(M,g)
+\leq\omega_k(M,g')
+\leq e^{(m-1)\delta /2}\omega_k(M,g).}
+\p{紧流形上两个光滑度量相互一致可比，平坦拓扑及面积不集中条件不变。因此可对同一批扫掠作上述比较，证明每个宽度对度量 C⁰ 连续。对非零 #{h\geq 0}，还有 #{d\operatorname{vol}_{e^hg}=e^{mh/2}d\operatorname{vol}_g}，故总体积严格增大。Weyl 定律于是保证至少一个宽度严格增大，这与[接触谱的局部敏感性](2H06)具有相同的渐近机制。}

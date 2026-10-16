@@ -1,0 +1,15 @@
+\title{极小图像方程}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§13，式(13.1)}
+
+\p{设 #{U\subset\mathbb R^n} 为开集，#{u:U\to\mathbb R} 为光滑函数。其图像 #{F(x)=(x,u(x))} 是[极小超曲面](2G02)，当且仅当}
+##{\operatorname{div}\left(\frac{\nabla u}{\sqrt{1+|\nabla u|^2}}\right)=0.}
+\p{梯度和散度取欧氏意义，可与[一般 Riemann 算子](0U14)比较。若 #{U=\mathbb R^n}，称为整极小图像。}
+\p{\strong{证明。}图像诱导度量为 #{g_{ij}=\delta_{ij}+u_i u_j}。在 #{\nabla u\ne 0} 处，选择一个基向量平行于 #{\nabla u}，其余垂直于 #{\nabla u}，便见度量矩阵的[特征值](0F0B)为 #{1+|\nabla u|^2,1,\ldots,1}；梯度为零时同一公式仍成立。因此面积为 #{\int_U\sqrt{1+|\nabla u|^2}\,dx}。}
+\p{对紧支撑函数 #{f} 作变分 #{u_t=u+tf}，求导并分部积分得到}
+##{\left.\frac d{dt}\right|_0\operatorname{Area}(\operatorname{graph}u_t)
+=\int_U\frac{\nabla u\cdot\nabla f}{\sqrt{1+|\nabla u|^2}}\,dx
+=-\int_U f\operatorname{div}\left(\frac{\nabla u}{\sqrt{1+|\nabla u|^2}}\right)dx.}
+\p{向上的单位法向为 #{\nu=(-\nabla u,1)/\sqrt{1+|\nabla u|^2}}，竖直速度 #{fe_{n+1}} 的法向分量是 #{f/\sqrt{1+|\nabla u|^2}}。任意紧支撑法向速度都能这样实现；面积一阶变分只依赖法向部分，故方程恰等价于极小性。}

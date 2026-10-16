@@ -1,0 +1,15 @@
+\title{闭连通流形上的正第一特征函数}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§6 的谱正性；Math 258 讲义引理2.2}
+
+\p{设 #{(N,g)} 为闭连通 [Riemann 流形](00NI)，#{a>0}，#{V} 为光滑实函数。令 #{L=-a\Delta_g+V}，其中 #{\Delta_g=\operatorname{div}_g\nabla_g} 采用[几何 Laplace 符号](0U14)。其[二次型谱底](2G0A)为}
+##{\lambda_0=\inf_{0\ne f\in C^\infty(N)}
+\frac{\int_N(a|\nabla f|^2+Vf^2)\,d\mu_g}{\int_Nf^2\,d\mu_g}.}
+\p{则存在处处正的光滑函数 #{u}，满足 #{Lu=\lambda_0u}；可用 #{\int_Nu^2\,d\mu_g=1} 归一化。这里特征函数指算子作用后只乘以一个常数的非零函数，与有限维[特征向量](0F0B)的定义相同。}
+\p{该存在性定理引用 Math 258 讲义引理2.2。变分证明先在平方可积且具有平方可积弱一阶导数的函数中极小化 Rayleigh 商，紧性给出极小者，椭圆正则性给出光滑性。将极小者取绝对值保留能量，再由强最大值原理与连通性得到处处正性。紧性、正则性和最大值原理是这一存在性证明的分析输入。}
+\p{一旦正第一特征函数存在，最低特征空间的一维性可由[正函数二次型恒等式](2G0B)直接证明。若 #{Lv=\lambda_0v}，则}
+##{0=\int_Nv(L-\lambda_0)v\,d\mu_g
+=a\int_Nu^2|\nabla(v/u)|^2\,d\mu_g.}
+\p{所以 #{\nabla(v/u)=0}；由连通性，#{v/u} 为常数。这说明归一化的正第一特征函数唯一。}

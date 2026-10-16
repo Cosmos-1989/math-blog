@@ -1,0 +1,16 @@
+\title{bar 分解给出非齐次群上链公式}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{R} 是[交换含幺环](00CS)，#{\Gamma} 为离散群，#{V} 为左 #{R\Gamma} 模。对[齐次 bar 分解](2D0H)取 #{\operatorname{Hom}_{R\Gamma}(-,V)}，得到的上链复形自然同构于由所有映射 #{\Gamma^n\to V} 组成的非齐次上链复形。因而它计算[群上同调](170B)。}
+\p{\strong{上链的对应。}一个模同态等价于满足 #{F(hg_0,\ldots,hg_n)=hF(g_0,\ldots,g_n)} 的函数。置}
+##{c(g_1,\ldots,g_n)=F(e,g_1,g_1g_2,\ldots,g_1\cdots g_n).}
+\p{逆映射由 #{F(g_0,\ldots,g_n)=g_0c(g_0^{-1}g_1,g_1^{-1}g_2,\ldots,g_{n-1}^{-1}g_n)} 给出。逐项代入可见二者互逆。零次时该对应就是 #{\operatorname{Hom}_{R\Gamma}(R\Gamma,V)\cong V}。}
+\p{\strong{微分的对应。}微分为预合成 bar 边界。在元组 #{(e,g_1,g_1g_2,\ldots,g_1\cdots g_{n+1})} 上，删去首项后用等变性提取 #{g_1}；删去中间项使两段相邻增量相乘；删去末项则丢弃最后增量。因此}
+##{\begin{aligned}
+(dc)(g_1,\ldots,g_{n+1})={}&g_1c(g_2,\ldots,g_{n+1})\\
+&+\sum_{i=1}^{n}(-1)^ic(g_1,\ldots,g_ig_{i+1},\ldots,g_{n+1})\\
+&+(-1)^{n+1}c(g_1,\ldots,g_n).
+\end{aligned}}
+\p{所得是上链复形的同构，故诱导上同调同构。bar 分解是投射分解，[投射分解的比较与选择无关性](01S2)再说明结果与群上同调定义中选取的分解无关。}

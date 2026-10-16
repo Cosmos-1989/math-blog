@@ -1,0 +1,16 @@
+\title{双曲平面的四分之一谱下界}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§6末段；谱下界的直接计算}
+
+\p{在[双曲上半平面](0C81) #{\mathbb H^2=\{(x,y):y>0\}} 上取 #{g=y^{-2}(dx^2+dy^2)}。本页使用[几何 Laplace 符号](0U14) #{\Delta_g=y^2(\partial_x^2+\partial_y^2)}，所以非负算子是 #{-\Delta_g}。其[二次型谱底](2G0A)恰为 #{1/4}。}
+\p{\strong{下界。}令 #{u=y^{1/2}}，直接求导得 #{-\Delta_g u=\tfrac 14u}。[正函数恒等式](2G0B)于是给出}
+##{\int_{\mathbb H^2}|\nabla f|^2\,d\mu_g-\frac 14\int_{\mathbb H^2}f^2\,d\mu_g
+=\int_{\mathbb H^2}u^2|\nabla(f/u)|^2\,d\mu_g\ge 0.}
+\p{\strong{尖锐性。}设 #{t=\log y}，取非零 #{\chi\in C_c^\infty((-1,1))}，并置 #{\psi_L(x,t)=\chi(t/L)\chi(x/e^{2L})}、#{f_L=e^{t/2}\psi_L}。此时 #{g=dt^2+e^{-2t}dx^2}，且}
+##{\int f_L^2\,d\mu_g=\int\psi_L^2\,dx\,dt,\qquad
+\int u^2|\nabla\psi_L|^2\,d\mu_g
+=\int\left(|\partial_t\psi_L|^2+e^{2t}|\partial_x\psi_L|^2\right)dx\,dt.}
+\p{第一项除以分母为 #{O(L^{-2})}；第二项用支撑上的 #{t\le L}，除以分母至多 #{O(e^{-2L})}。因此 #{f_L} 的 Rayleigh 商趋于 #{1/4}，下界达到最优。}
+\p{双曲平面的高斯曲率为 #{K=-1}，故 #{-a\Delta_g+K} 的谱底为 #{a/4-1}。对每个 #{a>4}，它严格为正；将度量乘以 #{a/4-1}，即可使该算子的谱底为一，而平面仍完备且直径无穷。这说明谱正性下的直径定理必须限制 #{a}。在 #{a=4} 时本例仅给谱底零，不能用作严格谱正性的反例。}

@@ -1,0 +1,10 @@
+\title{粗细管族的占据重数乘法}
+\date{2026-10-16}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Zahl](icm2026-zahl)，§3.2，式 (3.7)}
+
+\p{设有限[管族](120H)分为互不相交的组 #{\mathbb T_i}，第 #{i} 组每根细管都在粗管 #{P_i} 中。记 #{U_i=\bigcup_{T\in\mathbb T_i}T}、#{m_i=\sum_{T\in\mathbb T_i}\mathbf 1_T}，并定义实际占据的粗重数 #{c(x)=\sum_i\mathbf 1_{U_i}(x)}。则}
+##{m(x)=\sum_i m_i(x)\leq c(x)\max_i m_i(x).}
+\p{\strong{证明。}对固定 #{x}，只有 #{x\in U_i} 的组对和式有贡献。这样的组恰有 #{c(x)} 个，每项都不超过 #{\max_i m_i(x)}，相加即得结论。若 #{c(x)\leq C} 且各 #{m_i(x)\leq M} 几乎处处，则[第二矩推论](120I)给出 #{|\bigcup_TT|\geq\sum_T|T|/(CM)}。}
+\p{由于 #{U_i\subset P_i}，有 #{c(x)\leq\sum_i\mathbf 1_{P_i}(x)}，且不等式可能严格。许多粗管可以经过同一点，而它们内部的细管都绕过该点；使用整个粗管的重数会额外计入这些空隙。尺度归纳中的典型重数还需细化为近似均匀的层，上式提供的是始终成立的逐点关系。}

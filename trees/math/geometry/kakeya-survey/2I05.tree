@@ -1,0 +1,17 @@
+\title{平面方向分离管族的 Córdoba 对数估计}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zahl](icm2026-zahl)，§1 所引用的 Córdoba 平面估计}
+
+\p{设 #{0<\delta<1/2}，#{\mathbb T} 为平面中单位线段的 #{\delta}-邻域，任意两个无向方向的夹角至少为 #{\delta}。设 #{N=\#\mathbb T>0}，#{m=\sum_T\mathbf 1_T}，则}
+##{\int_{\mathbb R^2}m^2\leq C N\delta\bigl(1+\log(1/\delta)\bigr).}
+\p{\strong{两管交叠。}两条管都在宽 #{2\delta} 的无限带内。若夹角为 #{\theta\in\lparen 0,\pi /2\rbrack}，两带交集是面积 #{4\delta^2/\sin\theta} 的平行四边形。因此 #{|T\cap T'|\leq C\min\{\delta,\delta^2/\theta\}}。第一项来自单根管的面积，第二项来自 #{\sin\theta\geq 2\theta /\pi}。}
+\p{\strong{按角度求和。}固定 #{T}，夹角落在 #{[k\delta,(k+1)\delta]} 中的方向只有常数多个。将角度按 #{k=1,\ldots,\lceil\pi /(2\delta)\rceil} 分组，连同 #{T'=T} 的项，得到}
+##{\sum_{T'}|T\cap T'|\leq C\delta+
+C\delta\sum_{1\leq k\leq C/\delta}\frac 1k
+\leq C'\delta\bigl(1+\log(1/\delta)\bigr).}
+\p{对 #{T} 再求和，并用[重数的第二矩恒等式](120I)，即得结论。若[着色](120H)平均密度至少为 #{\lambda}，同一个第二矩论证给出}
+##{\left|\bigcup_TY(T)\right|
+\geq \frac{c\lambda^2N\delta}{1+\log(1/\delta)}.}
+\p{取无向方向空间中的一个极大 #{\delta}-分离集，并对其中每个方向选一根管，则 #{N\asymp\delta^{-1}}。取 #{\lambda=1}，结合[邻域体积公式](2I01)，得到平面 Kakeya 集的上下盒维数均为 2。}

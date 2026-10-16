@@ -1,0 +1,14 @@
+\title{管并体积估计的损失指数如何趋于零}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zahl](icm2026-zahl)，Definition 3.6，Propositions 3.7–3.8}
+
+\p{设 #{\mathbb T} 为三维单位球中的非空有限 #{\delta}-[管族](120H)，记 #{N=\#\mathbb T}、#{S=\sum_T|T|}。对 #{0<\sigma\leq 1}，断言 #{D(\sigma)} 是：每个具有固定[Katz–Tao 凸 Wolff 常数](120Y)的管族，对任意 #{\varepsilon>0} 满足 #{|\bigcup_TT|\geq c_\varepsilon\delta^\varepsilon N^{-\sigma}S}。断言 #{E(\sigma)} 将假设换为固定 Frostman 凸 Wolff 常数，结论换为 #{|\bigcup_TT|\geq c_\varepsilon\delta^{2\sigma+\varepsilon}S^\sigma}。}
+\p{研究证明给出两个输入：#{D(\sigma)\Rightarrow E(\sigma)}；存在连续函数 #{g:\lparen 0,1\rbrack\to\lparen 0,1\rbrack}，满足 #{0<g(\sigma)<\sigma}，且 #{D(\sigma)} 与 #{E(\sigma)} 一起推出 #{D(g(\sigma))}。这里引用的正是 [Zahl 的 Propositions 3.7–3.8](icm2026-zahl)。以下证明这两个输入如何导出任意小损失。}
+\p{\strong{起点。}所有管体积相同，故并集至少包含一根管，#{|\bigcup_TT|\geq S/N}。这给出 #{D(1)}。递归定义 #{\sigma_0=1}、#{\sigma_{j+1}=g(\sigma_j)}，由两个输入归纳得到每个 #{D(\sigma_j)}。}
+\p{\strong{指数极限。}数列严格递减且有下界零，设极限为 #{\ell\geq 0}。若 #{\ell>0}，连续性给出 #{\ell=g(\ell)<\ell}，矛盾。故 #{\sigma_j\to 0}。}
+\p{\strong{体积结论。}在固定有界球中用凸 Wolff 公理测试该球，得到 #{N\leq C\delta^{-2}}。给定目标 #{\eta>0}，先取有限的 #{j} 使 #{2\sigma_j<\eta /2}，再在 #{D(\sigma_j)} 中取 #{\varepsilon=\eta /2}。于是}
+##{\left|\bigcup_TT\right|\geq c_j\delta^{\varepsilon+2\sigma_j}S
+\geq c_j\delta^\eta S.}
+\p{每个目标误差只需有限次迭代，常数可以依赖 #{\eta}。严格增益函数 #{g} 的存在来自深层几何论证；上述数列论证给出从该输入到体积结论的最后一步。}

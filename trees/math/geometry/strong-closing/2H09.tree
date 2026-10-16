@@ -1,0 +1,13 @@
+\title{曲面度量的局部扰动产生闭测地线}
+\date{2026-10-16}
+\taxon{Corollary}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，Example 3.2、Corollary 3.7}
+
+\p{设 #{(M,g)} 为闭二维 [Riemann 流形](00NI)，#{h:M\to\mathbb R_{\geq 0}} 光滑且不恒为零。存在 #{t\in[0,1]}，使度量 #{g_t=e^{th}g} 有一条非恒定闭[测地线](00NU)经过 #{\operatorname{supp}h}。}
+\p{\strong{余切球面的转换。}在[余切丛](0F51)上取[典范一形式](0BL2) #{\theta=p\,dq}。令 #{K(q,p)=\frac 12g^{ij}(q)p_ip_j}，并设 #{Y=\{K=1/2\}}。由 [Hamilton 方程](0BL5)，#{\theta(X_K)=2K}；又因 #{dK} 在 #{TY} 上为零，故 #{X_K|_Y} 正是 #{\alpha=\theta|_Y} 的 [Reeb 向量场](1402)。#{\alpha} 为接触形式，因为径向 Liouville 向量场横截于 #{Y}，可用 [Liouville 区域](0BLG)的边界判据。}
+\p{Hamilton 方程给出 #{\dot q^i=g^{ij}p_j} 和 #{\dot p_i=-\frac 12(\partial_i g^{jk})p_jp_k}。代入 #{p_i=g_{ij}\dot q^j}，并对 #{g^{jk}g_{k\ell}=\delta^j_\ell} 求导，得到}
+##{\frac{d}{ds}(g_{ij}\dot q^j)-\frac 12\partial_i g_{jk}\dot q^j\dot q^k=0.}
+\p{这就是 Riemann 测地线方程。因此 #{Y} 上的闭 Reeb 轨道投影为单位速度闭测地线。}
+\p{\strong{共形因子。}#{g_t} 在余切空间上的平方范数是 #{e^{-th}|p|_g^2}，故径向映射 #{F_t:Y\to S^*_{g_t}M}，#{F_t(q,p)=(q,e^{th(q)/2}p)} 满足 #{F_t^*\theta=e^{th\circ\pi /2}\alpha}。对非零非负函数 #{(h\circ\pi)/2} 应用[三维强闭合定理](2H07)，便得所需轨道和投影。}
+\p{结论指定闭测地线在底曲面经过的区域；它没有指定轨道在单位余切丛中必须接近的方向。因而它与在相空间预先指定一个邻域的闭合问题有区别。}

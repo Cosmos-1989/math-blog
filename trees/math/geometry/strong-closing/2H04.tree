@@ -1,0 +1,16 @@
+\title{Reeb 作用量的有限和谱}
+\date{2026-10-16}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，§4.1，Lemma 4.1；Irie 2015，Lemma 2.2}
+
+\p{设 #{(Y,\lambda)} 是闭接触流形。用 [Reeb 闭轨道的作用量](1402)定义}
+##{\begin{aligned}
+\mathcal A(Y,\lambda)&=\{T>0:\text{存在周期为 }T\text{ 的 Reeb 轨道}\},\\
+\mathcal A_+(Y,\lambda)&=\{0\}\cup
+\{T_1+\cdots+T_m:m\geq 1,\ T_j\in\mathcal A(Y,\lambda)\}.
+\end{aligned}}
+\p{有限和允许重复选择同一个周期。#{\mathcal A_+} 称为广义作用量谱；它包含 ECH 轨道集的作用量，但不要求满足 ECH 对双曲轨道重数的限制。}
+\p{\strong{闭性。}非消失[光滑向量场](00NC)在紧流形上有一致的正下界 #{\tau}，使闭轨道周期均至少为 #{\tau}。若存在 #{T_j\downarrow 0} 和 #{\varphi^{T_j}(y_j)=y_j}，取 #{y_j\to y}，在局部坐标中由流的可微性得 #{(\varphi^{T_j}(y_j)-y_j)/T_j\to R_\lambda(y)\ne 0}，矛盾。若周期序列收敛到正数 #{T}，取初始点的收敛子列，流的连续性给出 #{\varphi^T(y)=y}。这些流的局部性质来自[常微分方程定理](00OB)。}
+\p{因此，有界区间中的有限和至多含固定数目的项。对收敛的和序列，先固定项数，再逐项取收敛子列，极限仍是周期的和。这证明 #{\mathcal A_+} 闭。无闭轨道时 #{\mathcal A_+=\{0\}}，结论仍成立。}
+\p{\strong{零测性定理。}#{\mathcal A_+} 的 [Lebesgue 测度](00XV)为零。这是所引 Lemma 4.1，证明将周期和实现为有限维作用量函数的临界值并应用 [Sard 定理](0I08)。任意两个零测集的和未必零测，因此此结论需要作用量函数的几何性质。特别地，#{\mathcal A_+} 不包含非平凡区间。}

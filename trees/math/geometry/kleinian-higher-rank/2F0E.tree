@@ -1,0 +1,11 @@
+\title{简单根临界指数与 Poincaré 级数}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Canary](icm2026-canary)，§2.2}
+
+\p{设 #{\Gamma} 是无限 #{P_1}-[Anosov 群](2F0B)，令 #{\ell(\gamma)=\alpha_1(\kappa(\gamma))}。定义 #{N(T)=\#\{\gamma:\ell(\gamma)\leq T\}} 和}
+##{\delta^{\alpha_1}(\Gamma)=\limsup_{T\to\infty}\frac{\log N(T)}T.}
+\p{由 Anosov 下界，有界 #{\ell} 集合只含有限多个元素；有限生成群的字球至多指数增长，所以此上极限有限。它等于级数 #{\sum_{\gamma\in\Gamma}e^{-s\ell(\gamma)}} 的收敛临界指数。}
+\p{\strong{证明。}记上极限为 #{\delta}。若 #{s>\delta}，取 #{\delta<b<s}。充分大的整数 #{m} 满足 #{N(m+1)\leq e^{b(m+1)}}，按 #{m\leq\ell(\gamma)<m+1} 分层，尾和不超过 #{\sum_m e^{-sm}e^{b(m+1)}}，故收敛。}
+\p{若 #{0<s<\delta}，取 #{s<b<\delta}。有任意大的 #{T} 满足 #{N(T)\geq e^{bT}}，而全部 #{\ell(\gamma)\leq T} 项之和至少为 #{N(T)e^{-sT}\geq e^{(b-s)T}}，故发散。端点 #{s=\delta} 的敛散性不由这个论证决定。}

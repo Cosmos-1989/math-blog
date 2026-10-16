@@ -1,0 +1,18 @@
+\title{丢番图逼近使椭球 Reeb 流近周期}
+\date{2026-10-16}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，Example 7.6；以径向拉回写出的直接计算}
+
+\p{任意[辛椭球](2H0D)边界上的典范接触形式都具有 [Hofer 近周期性](2H0E)。设其参数为 #{a_1,\ldots,a_n>0}，记 #{\alpha_j=1/a_j}。}
+\p{\strong{共同分母。}对整数 #{Q>1}，将单位立方体分成 #{Q^n} 个边长 #{1/Q} 的半开小立方体。#{Q^n+1} 个点 #{m\alpha\bmod\mathbb Z^n}，#{0\leq m\leq Q^n}，必有两个落在同一小立方体。相减得整数 #{1\leq q\leq Q^n} 与 #{p_j}，满足}
+##{\left|q\alpha_j-p_j\right|<1/Q\qquad(1\leq j\leq n).}
+\p{这是[Dirichlet 抽屉法](0GCI)的共同分母论证。充分大 #{Q} 时所有 #{p_j>0}。令 #{b_j=q/p_j}，则参数 #{b} 的椭球流在时刻 #{q} 恒等，因为 #{q/b_j=p_j} 均为整数。}
+\p{\strong{在同一个流形上比较。}对 #{z\in\partial E_a}，径向映射 #{F(z)=Q_b(z)^{-1/2}z} 将 #{\partial E_a} 送到 #{\partial E_b}。径向向量被 #{\lambda_0} 消去，而 #{\lambda_0} 对常数伸缩二次齐次，故按[一形式拉回](00NQ)的定义有}
+##{F^*\lambda_b=Q_b(z)^{-1}\lambda_a=e^{h_Q(z)}\lambda_a,
+\qquad h_Q=-\log Q_b|_{\partial E_a}.}
+\p{在 #{Q_a=1} 上，数 #{w_j=\pi|z_j|^2/a_j} 非负且和为 #{1}，所以}
+##{|Q_b(z)-1|
+=\left|\sum_j w_j(a_jp_j/q-1)\right|
+\leq\frac{\max_j a_j}{qQ}.}
+\p{充分大 #{Q} 时右端小于 #{1/2}，用 #{|\log(1+x)|\leq 2|x|} 得 #{q\|h_Q\|_{C^0}\leq 2\max_j a_j/Q\to 0}。拉回保持 Reeb 流的时间参数，因此 #{e^{h_Q}\lambda_a} 为 #{q}-周期形式。这正是所需定义。}

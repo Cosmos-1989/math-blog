@@ -1,0 +1,15 @@
+\title{正标量曲率中的闭稳定曲面具有亏格零}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，定理4.1}
+
+\p{设 #{(M^3,g)} 满足[标量曲率](2G01) #{R_M>0}。若 #{\Sigma} 是连通、闭、[可定向](00FQ)的[双侧稳定极小曲面](2G04)，则 #{\Sigma} 的亏格为零。特别地，在有向三维流形中，双侧性已保证曲面的可定向性。}
+\p{\strong{证明。}由[Gauss 方程与稳定性](2G05)，对每个光滑函数 #{f} 有}
+##{\frac 12\int_\Sigma(R_M+|A|^2)f^2
+\le\int_\Sigma\left(|\nabla_\Sigma f|^2+K_\Sigma f^2\right).}
+\p{由于 #{\Sigma} 紧无边界，允许取 #{f=1}。左端严格为正，所以 #{\int_\Sigma K_\Sigma>0}。[Gauss–Bonnet 公式](2G06)给出 #{2\pi\chi(\Sigma)>0}，再用 #{\chi=2-2\gamma}，便有 #{\gamma=0}。}
+\p{若沿 #{\Sigma} 还有统一下界 #{R_M\ge R_0>0}，同一计算给出}
+##{\frac{R_0}{2}\operatorname{Area}(\Sigma)+\frac 12\int_\Sigma|A|^2\le 4\pi,\qquad
+\operatorname{Area}(\Sigma)\le\frac{8\pi}{R_0}.}
+\p{因此曲率下界同时限制稳定曲面的拓扑与面积。闭性在取常数检验函数时使用，不能从这一计算直接得出非紧曲面的相同结论。}

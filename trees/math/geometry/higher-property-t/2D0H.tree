@@ -1,0 +1,14 @@
+\title{离散群的齐次 bar 自由分解}
+\date{2026-10-16}
+\taxon{Construction}
+\author{author}
+
+\p{设 #{\Gamma} 为群，#{R} 为[交换含幺环](00CS)。令 #{B_n} 为以所有 #{(n+1)} 元组 #{(g_0,\ldots,g_n)\in\Gamma^{n+1}} 为基的自由 #{R} 模。群按对角方式左乘，#{h(g_0,\ldots,g_n)=(hg_0,\ldots,hg_n)}，使 #{B_n} 成为[群代数](017J) #{R\Gamma} 上的模。}
+\p{定义边界与增广为}
+##{\partial_n(g_0,\ldots,g_n)=\sum_{i=0}^n(-1)^i(g_0,\ldots,\widehat g_i,\ldots,g_n)\quad(n\geq 1),\qquad
+\epsilon(g_0)=1.}
+\p{帽号表示删去该项。两次删去不同位置的操作在 #{\partial^2} 中各出现两次，符号相反，故组成增广链复形。所有映射都与群的左作用交换。}
+\p{\strong{自由性。}每个对角轨道恰有一个首坐标为单位元 #{e} 的代表，且对角作用自由。因此 #{(e,g_1,\ldots,g_n)} 构成 #{B_n} 的一组 #{R\Gamma}-[自由基](0137)。}
+\p{\strong{正合性。}令 #{B_{-1}=R}、#{\partial_0=\epsilon}，定义 #{R} 线性映射 #{s_{-1}(1)=(e)} 与 #{s_n(g_0,\ldots,g_n)=(e,g_0,\ldots,g_n)}。展开边界，删去新增首项得到原元组，其余项与 #{s_{n-1}\partial_n} 抵消，故}
+##{\partial_{n+1}s_n+s_{n-1}\partial_n=1_{B_n},\qquad \epsilon s_{-1}=1_R.}
+\p{若 #{\partial_n z=0}，便有 #{z=\partial_{n+1}s_nz}。于是核等于像，增广满射，得到平凡 #{R\Gamma} 模 #{R} 的[自由分解](012D)。收缩只需 #{R} 线性，因为正合性可在底层 #{R} 模上检验；这一机制也见[代数 bar 分解的收缩](01L3)。}

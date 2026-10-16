@@ -1,0 +1,14 @@
+\title{极小图像的校准与面积最小性}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§13，定理13.1证明步骤1}
+
+\p{设 #{u:U\to\mathbb R} 满足[极小图像方程](2G0M)，#{\Sigma=\operatorname{graph}u}。若一个紧图像片段 #{S\subset\Sigma} 与同向比较超曲面 #{S'} 位于 #{U\times\mathbb R}，且 #{S'-S} 是该柱形区域内某紧有向分片光滑[链](0BLY)的边界，则 #{\operatorname{Area}(S)\le\operatorname{Area}(S')}。这里分片光滑链由有限个有向光滑单形带整数系数组成，边界按各单形的有向面相加。特别地，紧支撑扰动不能降低图像面积。}
+\p{\strong{证明。}将图像向上的单位法向延拓为与最后一个坐标无关的向量场}
+##{N(x,z)=\frac{(-\nabla u(x),1)}{\sqrt{1+|\nabla u(x)|^2}}.}
+\p{由图像方程，#{\operatorname{div}N=0}。取欧氏体积形式 #{dV}，定义 #{n}-[微分形式](00NK) #{\omega=\iota_NdV}，即 #{\omega(v_1,\ldots,v_n)=dV(N,v_1,\ldots,v_n)}。坐标计算给出 #{d\omega=(\operatorname{div}N)dV=0}。}
+\p{因为 #{|N|=1}，对任何有向正交单位 #{n} 标架都有 #{|\omega(v_1,\ldots,v_n)|\le 1}。在按 #{N} 取向的图像上，#{\omega} 恰等于面积形式。若 #{S'-S=\partial B}，[Stokes 公式](0BAC)遂给出}
+##{\operatorname{Area}(S)=\int_S\omega
+=\int_{S'}\omega\le\operatorname{Area}(S').}
+\p{这种闭形式在目标子流形上等于体积形式、在所有有向单位平面上取值至多为一的构造称校准。结论也说明极小图像是[稳定](2G04)的，因为每个紧支撑变分都产生上述边界链，并使面积在零时刻达到局部最小。}

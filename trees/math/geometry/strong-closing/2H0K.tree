@@ -1,0 +1,18 @@
+\title{经过指定点的伪全纯曲线与初等容量}
+\date{2026-10-16}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Irie](icm2026-irie)，§5.3，式 5.2；Hutchings，An elementary alternative to ECH capacities}
+
+\p{设 #{(X,\lambda)} 为四维 [Liouville 区域](0BLG)，边界 Reeb 轨道及其迭代均[非退化](1406)，即接触平面上的线性化返回映射没有[特征值](0F0B) #{1}。取完备化 #{\widehat X}，其圆柱端写为 #{\partial X\times\mathbb R_{\geq 0}}，原始形式为 #{e^r\alpha}，其中 #{\alpha=\lambda|_{\partial X}}。选与 #{d\lambda} [相容的概复结构](0BL7) #{J}，在圆柱端满足 #{J\partial_r=R_\alpha}，保持接触平面，并对 #{r} 平移不变。}
+\p{考虑可能不连通的紧 [Riemann 曲面](00FR)去掉有限个点后到 #{\widehat X} 的 #{J}-伪全纯映射 #{u}。要求每个连通分量上的映射非恒定，每个去掉的点都形成一个正柱状端，其极限是一条 [Reeb 闭轨道](1402) #{\gamma_i}。定义}
+##{E(u)=\sum_i\int_{\gamma_i}\alpha.}
+\p{这个能量记录正端的作用量之和。它与未截断的 #{d(e^r\alpha)} 面积积分有区别，后者在正端一般发散。}
+\p{给定 #{k} 个两两不同的点 #{x_1,\ldots,x_k\in X}，先在经过全部这些点的曲线中取最小能量下确界，再对点和 #{J} 取上确界，得到初等容量}
+##{c_k(X,\lambda)=
+\sup_{J,\,(x_1,\ldots,x_k)}
+\inf_{\substack{u\ J\text{-伪全纯}\\x_1,\ldots,x_k\in\operatorname{Im}u}}E(u),
+\qquad c_0=0.}
+\p{没有合适曲线时，下确界为 #{+\infty}。退化边界通过外部非退化逼近定义；良定义性、[辛嵌入单调性](1404)及不交并公式是 Hutchings 的定理。后者为}
+##{c_k(X\sqcup X')=\max_{i+j=k}\bigl(c_i(X)+c_j(X')\bigr).}
+\p{若 #{X} 辛嵌入复[射影平面](2F04)，其辛形式取 [Fubini–Study 形式](0B8I)的正数倍，则这些容量有限，并满足 #{c_k/\sqrt{k}\to 2\sqrt{\frac 12\int_X(d\lambda)^2}}，特别是 #{c_k/k\to 0}，见 Irie §5.3 的 Weyl 定律与 Proposition 5.9。容量的齐次性为 #{c_k(X,a\lambda)=a\,c_k(X,\lambda)}，与作用量按 #{a} 缩放相符。}

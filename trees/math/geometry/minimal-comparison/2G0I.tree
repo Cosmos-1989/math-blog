@@ -1,0 +1,13 @@
+\title{度量空间的 Urysohn 宽度}
+\date{2026-10-16}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，定义9.1}
+
+\p{设 #{(X,d)} 为[度量空间](00EK)，#{k\ge 0} 为整数。其 #{k} 维 Urysohn 宽度定义为}
+##{\operatorname{UW}_k(X)=
+\inf_{\substack{\dim Y\le k\\ f:X\to Y\ {\rm continuous}}}
+\ \sup_{y\in Y}\operatorname{diam}_d f^{-1}(y).}
+\p{这里 #{Y} 遍历维数不超过 #{k} 的[单纯复形](00BU)的几何实现。每个单纯形使用通常拓扑，并沿共同面粘合；一般复形取这种粘合给出的弱拓扑，有限情形就是[有限几何实现](0F4C)。#{f} 必须[连续](00E2)，空纤维的直径约定为零。某个映射的全部纤维直径不超过 #{W}，就给出 #{\operatorname{UW}_k(X)\le W}；下确界未必由一个映射达到。}
+\p{这个数衡量把 #{X} 连续映到 #{k} 维空间时，所需压缩的最大尺度。若 #{X} [连通](00F4)，则任何到零维复形的连续映射都是常值，因为零维复形是离散空间。于是 #{\operatorname{UW}_0(X)=\operatorname{diam}(X)}。}
+\p{若 #{X=Y\times Z} 配备 Riemann 乘积度量，#{Y} 是可三角剖分的 #{k} 维流形，且 #{\operatorname{diam}(Z)\le W}，则投影到 #{Y} 的纤维均等距于 #{Z}，给出 #{\operatorname{UW}_k(X)\le W}。总空间的直径可以很大，纤维直径仍可统一有界。}

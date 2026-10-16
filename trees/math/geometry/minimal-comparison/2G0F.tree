@@ -1,0 +1,19 @@
+\title{μ 气泡的稳定性与曲面曲率}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Chodosh](icm2026-chodosh)，§7，式(7.2)前的二阶变分}
+
+\p{设 #{\Sigma=\partial\Omega\cap\operatorname{int}W} 是[μ 气泡](2G0E)的光滑内边界，满足 #{H=h}，法向 #{\nu} 指向 #{\Omega} 外部。它的紧支撑二阶变分为}
+##{Q_h(f)=\int_\Sigma\left(|\nabla f|^2-
+\bigl(|A|^2+\operatorname{Ric}_W(\nu,\nu)+\partial_\nu h\bigr)f^2\right).}
+\p{这里 #{\partial_\nu h=\langle\nabla_W h,\nu\rangle}。若 #{\Omega} 极小化该泛函，则 #{Q_h(f)\ge 0}。}
+\p{\strong{证明。}对 #{\delta\mathcal A^h(f)=\int(H-h)f} 再求导。初始条件 #{H=h} 消去面积密度和速度导数项。[平均曲率线性化](2G03)给出 #{H'=-\Delta_\Sigma f-(|A|^2+\operatorname{Ric}(\nu,\nu))f}，而 #{h'=f\partial_\nu h}。分部积分后便得 #{Q_h}。}
+\p{在三维环境且 #{R_W\ge 6} 时，[Gauss 方程](2G05)给出}
+##{|A|^2+\operatorname{Ric}_W(\nu,\nu)
+=\frac 12(R_W+H^2+|A|^2)-K_\Sigma
+\ge 3+\frac 34h^2-K_\Sigma.}
+\p{最后一步使用 #{|A|^2\ge H^2/2}，它来自两个主曲率的平方和不小于其和的平方的一半。因此}
+##{\int_\Sigma\left(3+\frac 34h^2+\partial_\nu h\right)f^2
+\le\int_\Sigma\left(|\nabla f|^2+K_\Sigma f^2\right).}
+\p{若 #{\Sigma} 闭且可定向，并且括号内函数处处为正，取 #{f=1} 后应用 [Gauss–Bonnet](2G06)，可知每个[连通分支](0118)都为球面。法向导数的正负取决于上述外法向约定。}
