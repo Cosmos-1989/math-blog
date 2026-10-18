@@ -1,0 +1,12 @@
+\title{双曲平行曲面的 Jacobi 公式}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Krasnov–Schlenker，arXiv:0907.2590v2，§2–3；[Schlenker](icm2026-schlenker)，§3.2}
+
+\p{设 #{\Sigma} 是双曲三维流形中的光滑曲面，沿[单位法向](2Q08)作距离 #{r} 的指数映射。只要该映射无焦点且仍为浸入，令 #{A_r=\cosh r\,E+\sinh r\,B}，则拉回原曲面后的度量与形算子为}
+##{I_r(X,Y)=I(A_rX,A_rY),\qquad B_r=A_r^{-1}(\sinh r\,E+\cosh r\,B).}
+\p{\strong{证明。}对法向测地线族微分测地线方程，用[Levi-Civita 联络](00NZ)的无挠性交换变分方向，再用[曲率张量](004J)的交换导数恒等式，得到 #{J_X''+R(J_X,\nu)\nu=0}。常曲率 #{-1} 且 #{J_X\perp\nu} 给出 #{R(J_X,\nu)\nu=-J_X}，故 #{J_X''-J_X=0}，初值 #{J_X(0)=X}、#{J_X'(0)=BX}。沿测地线平行移动到同一切空间后，解就是 #{J_X(r)=A_rX}，故内积给出第一式。又 #{\nabla_{J_X}\nu=J_X'}，所以形算子在拉回坐标中是 #{A_r^{-1}A_r'}；#{A_r} 与 #{A_r'} 都是 #{B} 的多项式，因此可交换。}
+\p{从 #{A_r''=A_r} 得到 Riccati 方程 #{B_r'=E-B_r^2}。在主方向上，它等价于}
+##{k_i(r)=\frac{\sinh r+k_i(0)\cosh r}{\cosh r+k_i(0)\sinh r},\qquad k_i'=1-k_i^2.}
+\p{若初始 #{B} 正定，则 #{r\geq 0} 时分母为正，不出现局部焦点。这个局部判断不单独保证任意浸入的全局平行曲面嵌入；对凸区域，嵌入性还使用全局凸性。}

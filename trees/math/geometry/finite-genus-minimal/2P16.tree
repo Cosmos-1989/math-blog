@@ -1,0 +1,13 @@
+\title{极小曲面面积单调性与两平面增长问题}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pérez](icm2026-perez)，§7；Meeks–Wolf，面积增长论文§1、定理1}
+
+\p{设 #{X:M\to\mathbb R^3} 为无边界[恰当](2P1A)极小浸入，面积按参数域的重数计算。固定 #{p\in\mathbb R^3}，令 #{r=|X-p|}、#{A(R)=\operatorname{Area}\{r<R\}}。则 #{A(R)/R^2} 单调不减。}
+\p{\strong{证明。}由[极小性等价于坐标调和](0T0U)，#{\Delta_M r^2=4}。在正则值 #{R} 处，散度公式给出 #{4A(R)=2R\int_{r=R}|\nabla_M r|\,ds}。局部以 #{r} 和水平集弧长作坐标，面积元为 #{|\nabla_Mr|^{-1}ds\,dr}，所以 #{A'(R)=\int_{r=R}|\nabla_Mr|^{-1}ds}。两式相减得到}
+##{\frac{d}{dR}\frac{A(R)}{R^2}
+=\frac 1{R^2}\int_{r=R}\frac{1-|\nabla_Mr|^2}{|\nabla_Mr|}\,ds\ge 0.}
+\p{因为 #{\nabla_Mr} 是环境单位径向量的切投影，其长度不超过 #{1}。对半径积分即得单调性；临界半径通过截断与积分形式处理。若 #{p} 为嵌入曲面上的点，小球密度趋于 #{\pi}，故无穷远增长常数 #{A_\infty=\lim_{R\to\infty}A(R)/R^2} 至少为 #{\pi}。若等于 #{\pi}，所有尺度等号迫使径向向量处处切于曲面，光滑圆锥因而是平面。}
+\p{悬链面也有 #{A_\infty=2\pi}。单位悬链面在原点中心半径 #{R} 的球内对应 #{|s|\le S}，其中 #{R^2=\cosh^2S+S^2}，面积为 #{2\pi(S+\sinh S\cosh S)}；两者相除令 #{S\to\infty} 即得 #{2\pi}。}
+\p{因此两平面面积增长的分类问题必须包括悬链面：非平坦、连通、恰当嵌入且 #{A_\infty=2\pi} 的曲面是否只有悬链面和单周期 Scherk 曲面？Meeks–Wolf 已解决无限对称群情形，其定理甚至允许恰当浸入和 #{A_\infty<3\pi}。无对称性的一般分类在报告中仍作为开放方向。}

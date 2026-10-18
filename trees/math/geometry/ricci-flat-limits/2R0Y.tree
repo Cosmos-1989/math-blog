@@ -1,0 +1,25 @@
+\title{紧度量空间的 Gromov–Hausdorff 距离}
+\date{2026-10-18}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tosatti](icm2026-tosatti)，§4 所用度量拓扑}
+
+\p{设 #{(X,d_X)}、#{(Y,d_Y)} 为非空紧[度量空间](00EK)。其 Gromov–Hausdorff 距离定义为}
+##{d_{\mathrm{GH}}(X,Y)=\inf_{Z,\iota_X,\iota_Y}
+d_H^Z(\iota_X(X),\iota_Y(Y)),}
+\p{其中 #{Z} 遍历度量空间，#{\iota_X,\iota_Y} 为保持距离的嵌入，#{d_H^Z} 是同一空间内的 [Hausdorff 距离](00FN)。它比较空间本身，允许维数和拓扑在极限中改变。}
+\p{等价的对应刻画是 #{d_{\mathrm{GH}}(X,Y)=\frac 12\inf_R\operatorname{dis}(R)}。这里 #{R\subset X\times Y} 向两因子的投影均满射，称为对应，其失真为}
+##{\operatorname{dis}(R)=
+\sup_{(x,y),(x',y')\in R}|d_X(x,x')-d_Y(y,y')|.}
+\p{\strong{从共同嵌入得到对应。}若在 #{Z} 中两像的 Hausdorff 距离小于 #{r}，令 #{R} 由满足 #{d_Z(x,y)<r} 的点对组成。它的两个投影都满射。对 #{(x,y),(x',y')\in R}，三角不等式给出 #{|d_X(x,x')-d_Y(y,y')|\le d_Z(x,y)+d_Z(x',y')<2r}。对嵌入及 #{r} 取下确界，即得 #{\frac 12\inf_R\operatorname{dis}(R)\le d_{\mathrm{GH}}(X,Y)}。}
+\p{\strong{从对应构造共同度量。}给定对应 #{R}，令 #{\delta=\operatorname{dis}(R)}，取 #{r>\delta /2}。在不交并 #{Z=X\sqcup Y} 上保留原有距离，并定义跨空间距离}
+##{D(x,y)=\inf_{(a,b)\in R}\bigl(d_X(x,a)+r+d_Y(b,y)\bigr),\qquad
+D(y,x)=D(x,y).}
+\p{跨空间距离至少为 #{r>0}。其中一个端点在同一空间移动时的三角不等式直接由取下确界得到。还须检查绕经另一空间不会缩短原距离：对 #{x,x'\in X}、#{y\in Y} 及两对 #{(a,b),(a',b')\in R}，有}
+##{\begin{aligned}
+&d_X(x,a)+r+d_Y(b,y)+d_Y(y,b')+r+d_X(a',x')\\
+&\quad\ge d_X(x,a)+d_X(a,a')-\delta+2r+d_X(a',x')\\
+&\quad\ge d_X(x,x').
+\end{aligned}}
+\p{对两对点分别取下确界得 #{D(x,y)+D(y,x')\ge d_X(x,x')}；交换 #{X,Y} 同样成立。因此 #{D} 是共同度量。每个 #{(a,b)\in R} 满足 #{D(a,b)\le r}，而对应满射，故两像的 Hausdorff 距离至多 #{r}。令 #{r\downarrow\delta /2}，再对 #{R} 取下确界，得到反向不等式。}
+\p{特别地，满射 #{f:X\to Y} 的图像是对应；若其距离失真至多 #{\varepsilon}，就有 #{d_{\mathrm{GH}}(X,Y)\le\varepsilon /2}。#{d_{\mathrm{GH}}(X_i,Y)\to 0} 称为 GH 收敛。它记录最短距离，而固定复流形上的[弱流收敛](2N05)记录对测试形式的积分。}

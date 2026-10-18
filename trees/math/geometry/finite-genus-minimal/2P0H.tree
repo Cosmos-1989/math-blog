@@ -1,0 +1,12 @@
+\title{Miura 变换及 Shiffman 时间的归一化}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pérez](icm2026-perez)，式(2.3)–(2.5)；时间系数按下述计算统一}
+
+\p{设 #{v(z,t)} 满足[修正 KdV 方程](2P0G) #{v_t=\frac i2(v'''-\frac 32v^2v')}。定义 Miura 变换 #{u=v'/2-v^2/4}。则}
+##{u_t=\frac i2(u'''+6uu').}
+\p{\strong{证明。}由链式法则，#{u_t=(\partial_z-v)v_t/2}。把右端展开得}
+##{\frac{2}{i}u_t=\frac 12v''''-\frac 12vv'''-\frac 32v(v')^2-\frac 34v^2v''+\frac 34v^3v'.}
+\p{另一方面，#{u'''=v''''/2-3v'v''/2-vv'''/2}，而 #{6uu'=3v'v''/2-3v(v')^2/2-3v^2v''/4+3v^3v'/4}。两式相加正好得到同一表达，故命题成立。}
+\p{取新复时间 #{\tau=-it/2}，便得到标准符号的 KdV 方程 #{u_\tau=-u'''-6uu'}。若 #{v=g'/g}，则 #{u=g''/(2g)-3(g')^2/(4g^2)}。因此从 Shiffman 时间到这一标准 KdV 时间需要常数重参数化；只替换未知函数而保持时间不变，会遗漏 #{i/2}。}

@@ -1,0 +1,14 @@
+\title{光滑 Schläfli 公式与 W 体积的变分}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Krasnov–Schlenker，arXiv:0907.2590v2，§4.2，式(4.3)–(4.7)；[Schlenker](icm2026-schlenker)，§2.2}
+
+\p{设 #{N_t} 为带光滑闭边界的紧双曲三维区域的光滑变形，所有环境度量曲率均为 #{-1}。采用[外法向约定](2Q08) #{B=\nabla\nu}、#{H=\operatorname{tr}B}，光滑 Schläfli 公式是}
+##{2V'=\int_{\partial N}\left(H'+\frac 12\langle I',II\rangle_I\right)da_I.}
+\p{对变化的双曲结构，该式引用 Rivin–Schlenker 的定理，按 Krasnov–Schlenker §4.2 的符号表述。固定环境、边界以速度 #{f\nu} 移动时可直接核对：由[法向变分公式](2G03)，#{I'=2fII}，#{H'=-\Delta f+(2-|B|^2)f}，而 #{V'=\int f\,da}。代入右侧，#{-|B|^2f} 与 #{\tfrac 12\langle 2fII,II\rangle} 抵消；闭曲面的 #{\int\Delta f\,da=0}，因此右侧为 #{2\int f\,da=2V'}。}
+\p{定义 #{W=V-\tfrac 14\int H\,da}。利用[面积元的变分](2E02) #{(da)'=\tfrac 12\operatorname{tr}_I(I')da}，先计算}
+##{\left(\int H\,da\right)'=\int\left(H'+\frac H2\operatorname{tr}_I I'\right)da.}
+\p{将它从 Schläfli 公式的二分之一减去四分之一，得到}
+##{W'=\frac 14\int\left(H'+\langle I',II-\tfrac H2 I\rangle_I\right)da=\frac 14\int\left(H'+\langle I',II_0\rangle_I\right)da.}
+\p{因此含无迹第二基本形式的自然泛函是 #{W}，且仍有 #{H'} 项。不能在这套约定下把它换成 #{V+\tfrac 12\int H}，也不能把首个公式整体加负号；外移双曲球已经能检验出这种符号错误。}

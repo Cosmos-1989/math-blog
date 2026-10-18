@@ -1,0 +1,13 @@
+\title{沿 Bers 切片积分得到体积距离界}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlenker](icm2026-schlenker)，§3.6，式(3.8)；梯度界的路径积分}
+
+\p{设 #{X,Y\in\mathcal T(S)}，#{S} 闭且亏格 #{g\geq 2}。把第二侧反向定向识别到同一个实 Teichmüller 空间，[Ahlfors–Bers 参数化](2Q0K)给出的准 Fuchsian 流形满足}
+##{|V_R(Q(X,Y))|\leq 3\sqrt{\pi(g-1)}\,d_{WP}(X,Y).}
+\p{\strong{证明。}取任意分段光滑路径 #{\gamma:[0,1]\to\mathcal T(S)}，从 #{X} 到 #{Y}，仅变动第二个边界。由[单边梯度界](2Q0Q)，}
+##{|V_R(Q(X,Y))-V_R(Q(X,X))|\leq\int_0^1\left|\frac{d}{dt}V_R(Q(X,\gamma(t)))\right|dt\leq 3\sqrt{\pi(g-1)}L_{WP}(\gamma).}
+\p{[Fuchsian 值](2Q0H)为零；对所有路径长度取下确界得到结论，不需要预先假定距离由一条测地线实现。再用[凸核比较](2Q0R)以及 #{|\chi(\partial M)|=2|\chi(S)|}，得到}
+##{V_C(Q(X,Y))\leq 3\sqrt{\pi(g-1)}\,d_{WP}(X,Y)+20|\chi(S)|.}
+\p{绝对值界本身不证明 #{V_R\geq 0}；非负性需要额外的极小化或流定理。}

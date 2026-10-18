@@ -1,0 +1,12 @@
+\title{W 体积沿外平行面的线性变化}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Krasnov–Schlenker，arXiv:0907.2590v2，§2；[Schlenker](icm2026-schlenker)，式(3.1)}
+
+\p{设 #{N_r} 是双曲三维流形中紧光滑严格凸区域 #{N} 的外平行区域。令 #{W(N)=V(N)-\tfrac 14\int_{\partial N}H\,da}，其中 #{H} 是[外法向主曲率之和](2Q08)。则}
+##{W(N_r)=W(N)-\pi r\,\chi(\partial N).}
+\p{\strong{证明。}外移速度为一，故 #{V'=A}、#{(da)'=Hda}。由[平行曲面的 Riccati 方程](2Q0D)，#{H'=2-|B|^2}。于是}
+##{\begin{aligned}W'&=A-\frac 14\int(H'+H^2)da\\&=A-\frac 14\int(2+2\det B)da\\&=A-\frac 14\int(4+2K_I)da=-\frac 12\int K_I\,da.\end{aligned}}
+\p{第二步使用 #{H^2-|B|^2=2\det B}，第三步使用 #{K_I=-1+\det B}。由[Gauss–Bonnet 定理](2G06)，最后一项等于 #{-\pi\chi(\partial N)}。平行变形不改变边界拓扑，所以对 #{r} 积分即得结论。}
+\p{这说明 #{W} 的平行发散项只依赖拓扑，而非曲面的局部弯曲。它并不说明任意改变无穷远共形代表时只有线性变化；非恒定的共形因子还有导数项。}

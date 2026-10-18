@@ -1,0 +1,11 @@
+\title{Fuchsian 截断的体积计算}
+\date{2026-10-18}
+\taxon{Example}
+\author{author}
+\meta{source}{[Schlenker](icm2026-schlenker)，§3.2；Fuchsian 模型的直接计算}
+
+\p{在[Fuchsian 流形](2Q02) #{(S\times\mathbb R,dr^2+\cosh^2r\,h)} 中，#{h} 的曲率为 #{-1}，令 #{A_0=\operatorname{Area}(S,h)=4\pi(g-1)}，截断区域为 #{N_r=S\times[-r,r]}，#{r>0}。它的两侧外法向分别是 #{\partial_r} 和 #{-\partial_r}；相对于各自外法向，两侧都有 #{B=\tanh r\,E}。}
+\p{每侧的面积是 #{A_0\cosh^2r}，总和平均曲率是 #{2\tanh r}。故}
+##{V(N_r)=A_0\int_{-r}^r\cosh^2t\,dt=A_0\left(r+\tfrac 12\sinh 2r\right),\qquad \int_{\partial N_r}Hda=2A_0\sinh 2r.}
+\p{从而 #{W(N_r)=A_0r}。两侧内蕴曲率 #{K=-\operatorname{sech}^2r}，所以 #{\sqrt{1+K}=\tanh r}，#{\operatorname{artanh}\sqrt{1+K}=r}。又 #{\chi(\partial M)=2\chi(S)}，给出 #{\pi|\chi(\partial M)|=A_0}。代入[重整化定义](2Q0G)，每个 #{r} 的差都已等于零，因此 #{V_R(M)=0}。}
+\p{这项计算同时固定了三处容易混淆的因子：边界有两侧、#{H} 是两主曲率之和、W 的系数是 #{1/4}。若把下侧法向仍取 #{\partial_r}，总平均曲率会错误地相消。}

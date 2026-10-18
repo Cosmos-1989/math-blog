@@ -1,0 +1,12 @@
+\title{凸核对偶体积只对边界度量求导}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlenker](icm2026-schlenker)，式(2.4)–(2.5)；Bonahon 的凸核 Schläfli 公式及其对偶形式}
+
+\p{对凸余紧双曲三维流形，设凸核体积为 #{V_C}，[边界数据](2Q05)为 #{(m,\lambda)}，所有边界分支上的[层理长度](2Q04)之和为 #{L_m(\lambda)}。定义对偶凸核体积}
+##{V_C^*=V_C-\tfrac 12L_m(\lambda).}
+\p{沿光滑的双曲结构变形，其一阶公式是 #{(V_C^*)'=-\tfrac 12(d_mL_\lambda)(m')}。下标说明此处只对度量变量求导，计算时固定当前层理 #{\lambda}，并非对 #{t\mapsto L_{m_t}(\lambda_t)} 取全导数。}
+\p{若弯折支撑是一组固定闭曲线 #{\gamma_j}，权重为 #{a_j(t)}，Bonahon 公式成为 #{V_C'=\tfrac 12\sum_j\ell_j a_j'}。于是乘积法则给出}
+##{(V_C^*)'=\tfrac 12\sum_j\ell_j a_j'-\tfrac 12\sum_j(\ell_j'a_j+\ell_j a_j')=-\tfrac 12\sum_ja_j\ell_j'.}
+\p{这与[有限多面体的 Legendre 变换](2Q0B)完全一致。一般层理的导数要使用横截 Hölder 分布和长度微分，不能仅以“多曲线稠密”交换极限与导数；这一步及完整一般公式引用 Bonahon、后续对偶公式的研究结果。#{V_C^*} 的系数 #{1/2} 不同于 W 型修正 #{V_C-\tfrac 14L_m(\lambda)}。}

@@ -1,0 +1,13 @@
+\title{纤维化坍缩的体积主项}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tosatti](icm2026-tosatti)，§§3.2、3.3；二项式计算}
+
+\p{设 #{f:X^n\to Y^m} 为[半丰沛纤维化](2R0E)，#{0\le m<n}，#{X} 为广义 Calabi–Yau，#{\alpha=f^*\omega_Y}，#{\omega} 为固定 Kähler 形式。令 #{q=n-m}，#{\omega_t=\operatorname{CY}([\alpha]+t[\omega])}。则}
+##{\int_X\omega_t^n
+=\binom{n}{m}t^q\int_X\alpha^m\wedge\omega^q+O(t^{q+1}),\qquad
+\int_X\alpha^m\wedge\omega^q>0.}
+\p{\strong{证明。}由[总质量恒等式](2N02)可将左侧换为 #{\int_X(\alpha+t\omega)^n}。二项式展开的第 #{j} 项是 #{\binom njt^{n-j}\int_X\alpha^j\wedge\omega^{n-j}}。因 #{\alpha^{m+1}=0}，只有 #{j\le m}；最低次幂即 #{t^{n-m}}。其余有限项均含至少 #{t^{q+1}}。}
+\p{在正则纤维化区域，#{\alpha} 的复秩为 #{m}，#{\omega} 在纤维方向正定，故 #{\alpha^m\wedge\omega^q} 为正体积密度。它在全空间非负，在非空开集严格正，故积分正。若 #{m=0}，#{\alpha=0}，公式精确为 #{t^n\int_X\omega^n}。}
+\p{因此总体积按 #{t^{n-m}} 衰减，归一化常数 #{c_t} 也有这一阶。长度尺度要另取平方根；它由[纤维直径估计](2R0J)给出。}

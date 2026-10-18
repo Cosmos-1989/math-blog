@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-18",
+  "scope": "Local pre-publication verification of the final three ICM2026 Geometry reports. Remote publication is verified separately against the exact GitHub Actions run and its Pages artifact.",
+  "baseline_commit": "e4722e252db4ea28d66ab340638ca5a52252285e",
+  "manifest": "research/icm2026-geometry-final-reports.json",
+  "snapshots": "research/icm2026-geometry-final-reports-snapshots.json",
+  "directory": {
+    "public_speaker_records_read": 305,
+    "primary_reports": 15,
+    "cross_listed_reports": 3,
+    "unique_speakers": 20,
+    "reports_without_topic_entry": 0,
+    "new_outlines": ["2P00", "2Q00", "2R00"],
+    "new_knowledge_pages": 136,
+    "new_references": 3,
+    "new_tree_files": 142,
+    "direct_prerequisite_edges": 410
+  },
+  "source_checks": {
+    "result": "pass",
+    "workflow_source_commands": 31,
+    "new_regression_tests": 9,
+    "coverage": [
+      "Complete official primary and cross-listed speaker extraction",
+      "All 18 report entries on the geometry landing page, without duplicate entries",
+      "New titles unique across the forest",
+      "Reachability, source snapshots and explicit prerequisite prose links",
+      "Acyclic prerequisite graph and non-navigation prerequisite targets",
+      "All existing source, editorial, narrative, subject and research checks in deploy.yml",
+      "Helicoid curvature, Weierstrass metric normalization, collapse-volume order, hyperbolic parallel surfaces and Beltrami factor-four calculations"
+    ]
+  },
+  "mathematical_review": {
+    "method": "The three report branches were read against their stated primary sources, reviewed by the coordinating editor, and supplemented by a separate read-only check of selected explicit calculations.",
+    "separate_review_pages": ["2P05", "2P06", "2P0G", "2P0H", "2P14", "2P16", "2Q0C", "2Q0E", "2Q0H", "2Q0J", "2Q0O", "2Q16"],
+    "review_correction": "2Q0O explicitly restricts the Hubbard-Masur statement to closed connected surfaces of genus at least two; its rectangular-torus computation is an independent sign check.",
+    "source_errata": "Precise disagreements in printed formulas, assumptions and normalizations are recorded in the source packets and combined manifest, rather than silently treated as established assertions.",
+    "term_candidate_review": "Remaining exact-term hits were read in context. Examples include locally defined first fundamental forms and transversality, basic concepts accessible through linked prerequisites, and false substring matches such as nontrivial topology versus the indiscrete topology and geometric symmetry versus permutation groups.",
+    "boundary": "Research theorems cited from the literature remain external inputs where indicated. Numerical identities and structural checks do not establish all research proofs or semantic self-containment. Open problems retain their source status. Each packet records the proof scope and deferred mathematical work."
+  },
+  "build": {
+    "command": "node scripts/build-site.mjs",
+    "result": "pass",
+    "forester_warnings": 0,
+    "static_html_pages": 5365,
+    "internal_links_checked": 789566,
+    "anchors_checked": 5383,
+    "resource_references_checked": 38218,
+    "source_and_rendered_formulas_checked": 64009,
+    "diagrams_checked": 48,
+    "katex_version": "0.16.11",
+    "formula_errors": 0,
+    "formula_warnings": 0,
+    "additional_checks": ["Public domain and search index", "Existing logic records", "Existing algebra records", "Static legacy routes", "Reading theme"]
+  },
+  "browser": {
+    "command": "TOPOLOGY_RECORD=research/icm2026-geometry-final-reports.json node tests/topology-report-render.test.mjs",
+    "result": "pass",
+    "xslt_disabled": true,
+    "viewport_widths": [1440, 390],
+    "pages": 143,
+    "page_visits": 286,
+    "scrollable_long_formula_checks": 43,
+    "checks": ["Body rendered", "No KaTeX errors", "No document overflow", "Long formulas scroll to their end", "Search results navigate", "Subject links navigate", "Legacy XML query and fragment survive", "No JavaScript or HTTP errors"],
+    "visual_review": "The three outline screenshots were inspected at both desktop and mobile widths; heading, body, metadata and links remain readable in the existing theme.",
+    "local_server": "http://127.0.0.1:8083/",
+    "initial_attempt": "The first browser attempt found the preview port stopped; the server was restarted and the entire test rerun successfully."
+  }
+}

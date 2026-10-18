@@ -1,0 +1,12 @@
+\title{Shiffman 变形的对数导数满足修正 KdV 方程}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pérez](icm2026-perez)，式(2.2)、(2.3)}
+
+\p{设 #{g=g(z,t)} 在局部复坐标 #{z} 和复参数 #{t} 上全纯且非零，撇号表示 #{\partial_z}，点表示 #{\partial_t}。假设其满足 [Shiffman 变形](2P0F)所导出的演化式}
+##{\dot g=\frac i2\left(g'''-3\frac{g'g''}{g}+\frac 32\frac{(g')^3}{g^2}\right).}
+\p{令 #{v=g'/g}，则 #{\dot v=\frac i2(v'''-\frac 32v^2v')}。此结论只是一项局部微分恒等式，适用于有上述光滑性的解。}
+\p{\strong{证明。}先由 #{g'=vg} 得 #{g''=(v'+v^2)g}，再次求导得 #{g'''=(v''+3vv'+v^3)g}。代入原式并除以 #{g}，混合项 #{3vv'} 消去，得到}
+##{\frac{\dot g}{g}=\frac i2\left(v''-\frac 12v^3\right).}
+\p{再计算 #{\dot v=\partial_t(g'/g)=\partial_z(\dot g/g)}，即得所述方程。若 #{g} 亚纯，这些等式先在零极点之外成立，再作为亚纯恒等式延拓。演化解的全局存在、零极点阶数及 Weierstrass 周期的保持由[KdV 积分理论](2P0I)另行处理。}

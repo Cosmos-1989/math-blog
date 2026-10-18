@@ -1,0 +1,14 @@
+\title{平坦复环面的斜向路径可坍缩成一点}
+\date{2026-10-18}
+\taxon{Example}
+\author{author}
+\meta{source}{[Tosatti](icm2026-tosatti)，例 4.4 的路径条件；整数矩阵模型的直接计算}
+
+\p{设 #{E=\mathbb C/(\mathbb Z+i\mathbb Z)}，#{X=E^2}，#{\omega_0=(i/2)(dz_1\wedge d\bar z_1+dz_2\wedge d\bar z_2)}。对正整数 #{k} 定义 #{F_k(z_1,z_2)=(kz_1+z_2,-z_1)}。其整数矩阵行列式为一，逆矩阵仍为整数矩阵，故它是 #{X} 的双全纯自同构。}
+\p{令 #{\omega_k=k^{-2}F_k^*\omega_0}。由 [Ricci 平坦自然性](2R03)，每个 #{\omega_k} 都是其 Kähler 类中的 Ricci 平坦代表。直接展开得}
+##{\omega_k=\frac i2\left[
+(1+k^{-2})dz_1\wedge d\bar z_1+k^{-2}dz_2\wedge d\bar z_2
++k^{-1}(dz_1\wedge d\bar z_2+dz_2\wedge d\bar z_1)\right].}
+\p{因此 #{\omega_k} 在全部阶光滑拓扑中趋于非零半正形式 #{\alpha=(i/2)dz_1\wedge d\bar z_1}。可是 #{(X,\omega_k)} 与 #{(X,k^{-2}\omega_0)} 等距，其直径为 #{k^{-1}\operatorname{diam}(X,\omega_0)}。由[直径公式](2R0Z)，GH 极限为一点。}
+\p{另一方面，直线族 #{\alpha+t\omega_0} 的 GH 极限是带原平坦度量的第一个 #{E}，由[乘积距离计算](2R0K)即得。两条路径的上同调极限和光滑二形式极限相同，GH 极限却不同。}
+\p{所以用半正形式的核叶闭包确定 GH 极限时，需要保留[直线型路径](2R13)的条件；仅有常系数矩阵收敛并不充分。此例也说明“正流极限非零”不能推出直径下界。}

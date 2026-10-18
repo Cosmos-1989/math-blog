@@ -1,0 +1,12 @@
+\title{映射环面体积的 Weil–Petersson 上界}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Schlenker](icm2026-schlenker)，§3.6；Kojima–McShane，Geom. Topol. 22 (2018)；Brock–Bromberg，Math. Res. Lett. 23 (2016)}
+
+\p{设 #{\phi:S\to S} 是闭亏格 #{g\geq 2} 曲面的伪 Anosov 映射类，即存在一对横截的测度叶状结构，在 #{\phi} 下分别按 #{a>1} 与 #{a^{-1}} 缩放。其映射环面 #{T_\phi=S\times[0,1]/(x,1)\sim(\phi(x),0)} 具有完备双曲度量。令 #{\tau_{WP}(\phi)=\lim_{n\to\infty}d_{WP}(X,\phi^nX)/n} 为稳定平移长度，则}
+##{\operatorname{Vol}(T_\phi)\leq 3\sqrt{\pi(g-1)}\,\tau_{WP}(\phi).}
+\p{距离序列 #{a_n=d_{WP}(X,\phi^nX)} 满足 #{a_{n+m}\leq a_n+a_m}，因为映射类作用保持 [WP 距离](2J0X)。将 #{n=qk+r}，得到 #{a_n/n\leq qa_k/n+a_r/n}，先令 #{n\to\infty} 再对 #{k} 取下确界，可得极限存在且等于 #{\inf_k a_k/k}。换基点时距离差至多 #{2d_{WP}(X,Y)}，故稳定长度与基点无关。}
+\p{几何极限的深层输入是}
+##{\lim_{n\to\infty}\frac{V_C(Q(\phi^{-n}X,\phi^nX))}{2n}=\operatorname{Vol}(T_\phi).}
+\p{这项凸核体积渐近来自纤维三维流形的几何收敛与 inflexibility 理论，见上述原论文。把[凸核距离上界](2Q0S)用于 #{Q(\phi^{-n}X,\phi^nX)}，除以 #{2n}；等距不变性将距离改成 #{d_{WP}(X,\phi^{2n}X)}，拓扑误差趋于零，利用两个极限即得所述体积不等式。}

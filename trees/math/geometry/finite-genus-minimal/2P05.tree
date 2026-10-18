@@ -1,0 +1,10 @@
+\title{极小曲面的余法向通量守恒}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pérez](icm2026-perez)，§2；[Weierstrass 周期](0T0X)}
+
+\p{设 #{X:M\to\mathbb R^3} 为有向[共形极小浸入](0T0S)，#{\gamma} 为有向闭曲线，#{T} 为单位切向量。取与曲面定向一致的单位法向 #{N}，约定余法向 #{\eta=T\times N}。则通量可写为 #{F_X(\gamma)=\int_\gamma\eta\,ds}，并等于[复微分周期](0T0X) #{\operatorname{Im}\int_\gamma 2\partial X}。}
+\p{在正向共形坐标 #{z=x+iy} 中，#{N=(X_x\times X_y)/|X_x\times X_y|}，且 #{2\partial X=(X_x-iX_y)(dx+i\,dy)}。共形性给出 #{X_x\times N=-X_y}、#{X_y\times N=X_x}，所以沿曲线有 #{(T\times N)ds=X_xdy-X_ydx=\operatorname{Im}(2\partial X)}。若反转曲线方向，两种通量表达同时变号。}
+\p{由[调和性](0T0U)，向量值一形式 #{\omega=X_xdy-X_ydx} 满足 #{d\omega=(X_{xx}+X_{yy})dx\wedge dy=0}。若 #{\gamma_1-\gamma_2} 是紧曲面链的边界，[Stokes 公式](0BAC)给出 #{F_X(\gamma_1)=F_X(\gamma_2)}。有限个边界分量的向外通量之和因此为零。}
+\p{平移不改变通量；正比例缩放 #{X\mapsto\lambda X} 把通量乘以 #{\lambda}，因为单位余法向不变而弧长乘以 #{\lambda}。在有紧水平截线的情形，把余法向选为向上，则 #{F_3>0}，可归一化为 #{2\pi}。[悬链面计算](0T0Y)给出 #{F=(0,0,2\pi)}；Riemann 例则具有非零水平通量。跨越非紧平面端比较截线时，须先控制截断边界的通量，再对紧截断区域使用 Stokes 公式并取极限。}
