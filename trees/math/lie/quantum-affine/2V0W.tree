@@ -1,0 +1,15 @@
+\title{Baxter 多项式与转移矩阵的谱}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hernandez](icm2026-hernandez)，定理 3.6、注 4.5；Frenkel–Hernandez v4，§5.4–5.5}
+
+\p{设 #{q} 非单位根，量子空间 #{W} 是[第一类有限维单模](2V0A)的有限张量积，最高普通权为 #{\omega}。在权空间 #{W_\lambda} 上写 #{\omega -\lambda=\sum_i d_i\alpha_i}，此处 #{d_i\ge 0} 是根次数，不是 Cartan 矩阵的对称化系数。取与[预基本模](2V0T)相关的辅助模 #{R_{i,a}^+}：它是负预基本模的逐权限制对偶，作用使用逆对极；这是与 #{\mathcal O} 对偶的向上权锥范畴中的对象。}
+\p{令 #{u_j} 为独立可逆形式变量。对权格中的 #{\nu}，定义扭转单项式和根变量}
+##{u^\nu=\prod_j u_j^{\langle\nu,\alpha_j^\vee\rangle},\qquad v_i=u^{\alpha_i}=\prod_j u_j^{C_{ji}}.}
+\p{[扭转迹](2V0L)在权空间上乘以 #{u^\nu}。#{R_{i,a}^+} 的权从零沿正根锥增长，因此迹在 #{v_i} 的非负次幂完备化中定义；每个给定根次数的系数来自有限维权空间。这是形式级数的定义；复数专门化后的解析收敛须另加条件。Frenkel–Hernandez 的 Baxter 多项式性定理说明，存在只依赖 #{W} 的可逆标量级数 #{f_i(z)}，使}
+##{f_i(az)^{-1}T_{R_{i,a}^+}(z,u)\big|_{W_\lambda}\ \in\ \operatorname{End}(W_\lambda)\lbrack\lbrack v_1,\ldots,v_n\rbrack\rbrack[z],}
+\p{且关于 #{z} 的次数为 #{d_i}。这是算子多项式性，强于只对特征值的断言。其证明使用正预基本表示的分次和普遍 R 矩阵分解，见该文 §§6–7。}
+\p{因此在共同谱上，Q 算子特征值具有形状 #{f_i(z)Q_i(z)}，其中 #{Q_i} 为次数 #{d_i} 的多项式。将[Baxter 表示环关系](2V0V)送到转移矩阵，再取共同特征值，任意有限维辅助模 #{V} 的特征值由 #{\chi_q(V)} 作如下替换得到：}
+##{Y_{i,a}\longmapsto y_i\frac{f_i(azq_i^{-1})Q_i(azq_i^{-1})}{f_i(azq_i)Q_i(azq_i)}.}
+\p{#{y_i} 是对应一维 Borel 扭转模的转移特征值，在固定 #{W_\lambda} 上为与 #{z} 无关的形式标量；它包含扭转参数及 Cartan 权因子。原文 §5.5 给出其正规化。这里的谱陈述不要求整个交换算子族可同时对角化，也不推出 Bethe 方程的解穷尽全部谱。}

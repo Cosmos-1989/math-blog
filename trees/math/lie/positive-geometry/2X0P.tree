@@ -1,0 +1,13 @@
+\title{四点弦积分的低能极限}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Lam，§9](icm2026-lam)；Beta 积分的直接推导}
+
+\p{设 #{s,t>0}、#{\varepsilon>0}。在[四点配置正分支](2X0O)上，以[区间典范形式](2X0F)定义}
+##{I(\varepsilon)=\int_0^1x^{\varepsilon s}(1-x)^{\varepsilon t}\frac{dx}{x(1-x)}=B(\varepsilon s,\varepsilon t).}
+\p{两端的指数均大于 #{-1}，故积分收敛。利用 [Gamma 积分](0H4Z)的乘积，并按 [Fubini–Tonelli 定理](0H53)作换元 #{u=rx,v=r(1-x)}，#{r>0,0<x<1}，Jacobian 为 #{r}，得到}
+##{\Gamma(a)\Gamma(b)=\int_0^\infty e^{-r}r^{a+b-1}\,dr\int_0^1x^{a-1}(1-x)^{b-1}\,dx=\Gamma(a+b)B(a,b).}
+\p{取 #{a=\varepsilon s,b=\varepsilon t}，再用 #{\Gamma(1+u)=u\Gamma(u)}，可将全部奇因子显式分离：}
+##{\varepsilon I(\varepsilon)=\frac{s+t}{st}\frac{\Gamma(1+\varepsilon s)\Gamma(1+\varepsilon t)}{\Gamma(1+\varepsilon(s+t))}\longrightarrow\frac 1s+\frac 1t.}
+\p{最后一步使用 #{\Gamma} 在一处连续且 #{\Gamma(1)=1}。极限正好是[四点平面树振幅](2X0M)。未乘 #{\varepsilon} 的积分通常发散；这就是维数一的低能归一化。此计算只取正实 #{s,t} 以保证积分收敛，其他参数的陈述需要先作亚纯延拓。}

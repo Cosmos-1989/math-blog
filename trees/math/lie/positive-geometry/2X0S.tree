@@ -1,0 +1,12 @@
+\title{临界点振幅中的 Hessian 与整体符号}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Lam，定义10.2](icm2026-lam)；一维归一化计算}
+
+\p{设[配置主函数](2X0R)的对数为 #{\Phi}，其临界点有限非退化，室的典范形式写为 #{\Omega_P=h(x)dx_1\wedge\cdots\wedge dx_d}。定义直接 Hessian 和及带符号版本}
+##{S_P(a)=\sum_{p:d\Phi(p)=0}\frac{h(p)^2}{\det\operatorname{Hess}_p\Phi},\qquad A_P^{\mathrm{crit}}(a)=(-1)^dS_P(a).}
+\p{这两个表达在换坐标下都不变。事实上，在临界点一阶导数为零，Hessian 变换为 #{J^{\mathsf T}HJ}，而顶次形式的系数乘以 #{\det J}，所以分子分母都乘以 #{(\det J)^2}。这一抵消解释了平方系数与 Hessian 行列式为何配套出现。}
+\p{取 #{U=\mathbb P^1\setminus\{0,1,\infty\}}、#{\Phi=s\log x+t\log(1-x)}、#{h=1/(x(1-x))}，假设 #{st(s+t)\ne 0}。[散射方程](2X0Q)的唯一解是 #{x_*=s/(s+t)}。逐项求导得}
+##{\Phi''(x_*)=-\frac{(s+t)^3}{st},\qquad h(x_*)^2=\frac{(s+t)^4}{s^2t^2},\qquad S_P=-\frac{s+t}{st}.}
+\p{因此 #{A_P^{\mathrm{crit}}=1/s+1/t} 与四点标量振幅一致。若使用 #{S_P}，该例相差负号。比较临界点表达、扭曲交叉配对和组合旗标和时，必须同时固定 Hessian、对偶联络及配对的符号约定；本例的两种记号将这个整体差别显式保留下来。}

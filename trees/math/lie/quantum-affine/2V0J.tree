@@ -1,0 +1,12 @@
+\title{秩一 q 线段控制单模的张量因子}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Hernandez–Leclerc，arXiv:0903.1452v3，§5.1.2，例 exKRsl2，引用 Chari–Pressley；[Hernandez](icm2026-hernandez)，§6}
+
+\p{设 #{q} 非单位根、#{a\ne 0}、#{k\ge 1}。称 #{\Sigma(k,a)=\{a,aq^2,\ldots,aq^{2k-2}\}} 为 q 线段；其[Drinfeld 多项式](2V0C)为 #{\prod_{j=0}^{k-1}(1-aq^{2j}z)}，对应单模记为 #{W_{k,a}}，称秩一 Kirillov–Reshetikhin 模。它有维数 #{k+1}。}
+\p{两个线段处于一般位置，是指它们的并不是一个线段，或其中一个包含另一个。Chari–Pressley 定理断言：#{\bigotimes_rW_{k_r,a_r}} 为单模当且仅当各对线段处于一般位置；每个有限维第一类秩一单模都可如此分解。此处的并按集合判断，相同或包含的线段仍允许在张量积中重复。}
+\p{其 [q 特征标](2V0E)可写为}
+##{\chi_q(W_{k,a})=\left(\prod_{j=0}^{k-1}Y_{aq^{2j}}\right)\sum_{r=0}^{k}\prod_{s=0}^{r-1}A_{aq^{2k-1-2s}}^{-1},\qquad A_b=Y_{bq^{-1}}Y_{bq}.}
+\p{空乘积为 1。此公式来自显式求值模的电流作用，见所引版本；#{k=1,2} 分别恢复[二维](2V0F)和[三维](2V0G)计算。令所有 #{Y=1} 得 #{k+1}，因为和中恰有 #{k+1} 个项。}
+\p{例如单点 #{\{a\}} 与 #{\{aq^2\}} 相邻且互不包含，故张量积可约；单点 #{\{a\}} 与长度二的 #{\{a,aq^2\}} 相包含，故 #{V(a)\otimes W_{2,a}} 为六维单模。这个包含例子是秩一簇范畴化中冻结变量可以任意乘幂的原因。}

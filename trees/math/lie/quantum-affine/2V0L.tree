@@ -1,0 +1,11 @@
+\title{辅助空间上的部分迹}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Hernandez](icm2026-hernandez)，式 (3.1) 的线性代数基础}
+
+\p{设 #{V,W} 是有限维复向量空间。在[张量积](0122)上写算子 #{X=\sum_{i,j}E_{ij}\otimes X_{ij}}，其中 #{E_{ij}} 是 #{V} 的矩阵单位。对辅助空间 #{V} 的部分迹定义为}
+##{\operatorname{Tr}_V(X)=\sum_iX_{ii}\ \in\operatorname{End}(W).}
+\p{这是将[普通迹](0F0F)作用于第一个因子，因而不依赖所选基。若 #{A\in\operatorname{End}(V)}，则 #{\operatorname{Tr}_V((A\otimes 1)X)=\operatorname{Tr}_V(X(A\otimes 1))}：左边是 #{\sum_{i,j}A_{ij}X_{ji}}，右边换指标后为同一和；#{A_{ij}} 是复数，所以可与 #{X_{ji}} 交换。}
+\p{这条循环规则只将辅助空间上的数值矩阵移过迹。若两个矩阵的系数都在非交换代数 #{\operatorname{End}(W)} 中，一般不能任意交换它们。特别地，对可逆数值矩阵 #{A} 有 #{\operatorname{Tr}_V(AXA^{-1})=\operatorname{Tr}_V(X)}。}
+\p{若 #{D} 在权空间 #{V_\lambda} 上乘标量 #{u^\lambda}，则 #{\operatorname{Tr}_V(DX)} 称扭转部分迹；它等于 #{\sum_\lambda u^\lambda\operatorname{Tr}_{V_\lambda}(X_{\lambda\lambda})}。无穷维辅助空间需要另给使此和有意义的完备化条件。}

@@ -20,7 +20,8 @@ try {
     const page = await browser.newPage({viewport: {width, height: 1000}, reducedMotion: 'reduce'});
     page.on('pageerror', error => errors.push(error.message));
     page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
-    for (const id of [record.subject, ...snapshots.notes.map(note => note.id)]) {
+    for (const id of new Set([record.subject, ...(record.cross_subject_landings ?? []).map(row => row.subject),
+      ...snapshots.notes.map(note => note.id)])) {
       await page.goto(`${base}${id}/`, {waitUntil: 'load'});
       await page.locator('.search-trigger:not([disabled])').waitFor();
       await page.evaluate(() => document.fonts.ready);
@@ -41,7 +42,7 @@ try {
         }));
       assert(displayScrolls.every(display => display.reachable && ['auto', 'scroll'].includes(display.overflowX)),
         `${id}/${width}: a long formula is clipped instead of scrollable`);
-      if (id === record.subject || record.reports.some(report => report.outline === id) || ['0066', '140B', '150J', '160P', '0BLQ', '1701', '170Z', '180A', '180P', '1903', '190J', '200D', '2108', '220N', '2210', '0BLY', '0F55'].includes(id)) {
+      if (id === record.subject || (record.cross_subject_landings ?? []).some(row => row.subject === id) || record.reports.some(report => report.outline === id) || ['0066', '140B', '150J', '160P', '0BLQ', '1701', '170Z', '180A', '180P', '1903', '190J', '200D', '2108', '220N', '2210', '0BLY', '0F55'].includes(id)) {
         await page.screenshot({path: path.join(screenshots, `${id}-${width}.png`)});
       }
       checks.push({id, width, overflow, scrollableDisplays: displayScrolls.length,
@@ -62,6 +63,13 @@ try {
       await result.waitFor({state: 'visible'});
       await result.click();
       await page.waitForURL(`${base}${report.outline}/`);
+    }
+    for (const {subject, outline} of record.cross_subject_landings ?? []) {
+      await page.goto(`${base}${subject}/`);
+      const link = page.locator(`article > section > details > .tree-content a[href="/${outline}/"]`);
+      assert.equal(await link.count(), 1, `${subject}: duplicate or absent cross-listed topic ${outline}`);
+      await link.click();
+      await page.waitForURL(`${base}${outline}/`);
     }
     await page.close();
   }

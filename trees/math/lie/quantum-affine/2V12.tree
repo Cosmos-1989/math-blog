@@ -1,0 +1,18 @@
+\title{移位量子仿射代数中的电流次数}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Hernandez](icm2026-hernandez)，§8；arXiv:2010.06996v3，§3.1、§4.4}
+
+\p{设 #{q} 非单位根，#{C} 为有限型 Cartan 矩阵，#{q_i=q^{d_i}}、#{B_{ij}=d_iC_{ij}}，沿用[量子环代数](2V06)的记号。[余权格](0186)在根系记号下写成 #{\Lambda=\bigoplus_i\mathbb Z\omega_i^\vee}，其中 #{\alpha_j(\omega_i^\vee)=\delta_{ij}}。固定 #{\mu\in\Lambda}，记 #{m_i=\alpha_i(\mu)}。移位使[Drinfeld 电流](2V0B)在无穷远的最高次数由零变为 #{m_i}：}
+##{\phi_i^+(z)=k_i^+\exp\left((q_i-q_i^{-1})\sum_{r>0}h_{i,r}z^r\right),\qquad \phi_i^-(z)=z^{m_i}k_i^-\exp\left(-(q_i-q_i^{-1})\sum_{r>0}h_{i,-r}z^{-r}\right).}
+\p{代数 #{U_q^\mu} 的生成元为 #{x_{i,r}^{\pm}}（#{r\in\mathbb Z}）、#{h_{i,r}}（#{r\ne 0}）以及可逆元 #{k_i^+,k_i^-}。所有 #{h,k} 两两交换，但不要求 #{k_i^+k_i^-=1}。它们与 #{x} 的关系为}
+##{k_i^+x_{j,r}^{\pm}(k_i^+)^{-1}=q_i^{\pm C_{ij}}x_{j,r}^{\pm},\qquad k_i^-x_{j,r}^{\pm}(k_i^-)^{-1}=q_i^{\mp C_{ij}}x_{j,r}^{\pm},}
+##{[h_{i,s},x_{j,r}^{\pm}]=\pm\frac{[sC_{ij}]_{q_i}}s x_{j,r+s}^{\pm},\qquad [x_{i,r}^+,x_{j,t}^-]=\delta_{ij}\frac{\phi_{i,r+t}^+-\phi_{i,r+t}^-}{q_i-q_i^{-1}},}
+##{x_{i,r+1}^{\pm}x_{j,t}^{\pm}-q^{\pm B_{ij}}x_{j,t}^{\pm}x_{i,r+1}^{\pm}=q^{\pm B_{ij}}x_{i,r}^{\pm}x_{j,t+1}^{\pm}-x_{j,t+1}^{\pm}x_{i,r}^{\pm}.}
+\p{这里 #{\phi_{i,r}^{\pm}} 是前述级数中 #{z^r} 的系数，展开范围外的系数为零。最后对 #{i\ne j}、#{s=1-C_{ij}} 及任意整数 #{r_1,\ldots,r_s,t} 加入 Serre 关系}
+##{\sum_{\pi\in S_s}\sum_{p=0}^s(-1)^p\begin{bmatrix}s\\p\end{bmatrix}_{q_i}x_{i,r_{\pi(1)}}^{\pm}\cdots x_{i,r_{\pi(p)}}^{\pm}x_{j,t}^{\pm}x_{i,r_{\pi(p+1)}}^{\pm}\cdots x_{i,r_{\pi(s)}}^{\pm}=0.}
+\p{量子二项式沿用 [#{U_q(L\mathfrak g)} 的定义](2V06)。由于 #{k_i^+} 与 #{k_i^-} 的共轭因子互逆，#{k_i^+k_i^-} 与每个生成元交换，故为中心元。取 #{\mu=0} 再商去 #{k_i^+k_i^--1}，才得到通常的级零量子环代数。仅把移位设为零，还没有施加这个中心归一化。}
+\p{移位范畴 #{\mathcal O_\mu} 沿用 [Borel O 范畴](2V0O)的有限向下权锥条件，但要求 #{k_i^+} 与 #{(k_i^-)^{-1}} 各自给出半单权分解，所有相应权空间有限维，两个分解的权支撑均包含在有限个向下权锥中。两个权分解一般不同。Hernandez 的分类定理说，单模由最高环权 #{\Psi=(\Psi_i(z))} 参数化，其中每个 #{\Psi_i} 是在零点正则且非零的有理函数，满足}
+##{\deg\Psi_i=\deg(\text{分子})-\deg(\text{分母})=\alpha_i(\mu).}
+\p{这是 §4.4 的定理 4.12，存在性依赖最高环权模的有限权空间论证。例如秩一 #{\mu=\omega^\vee}、#{a\ne 0} 时，令全部 #{x_r^{\pm}=0}，令两电流均为同一多项式 #{1-az} 的展开。每个 #{\phi_r^+-\phi_r^-} 都为零，其余含 #{x} 的关系也为零，得到一维单模；#{k^+=1,k^-=-a} 均可逆。它与 [Borel 正预基本模](2V0T)虽有同一个最高环权函数，却是不同代数的模，不能据此将 Borel 模也判为一维。}

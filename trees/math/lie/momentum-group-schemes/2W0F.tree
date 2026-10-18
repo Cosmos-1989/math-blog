@@ -1,0 +1,14 @@
+\title{秩一群概形的方程与群律}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Knop](icm2026-knop)，Example 2.4；任意测试代数上的展开}
+
+\p{取 #{\overline S=\operatorname{Spec}\mathbb C[t]}、#{S=\operatorname{Spec}\mathbb C[s]}，#{s=t^2}。群 #{W=\{1,w\}} 令 #{w(t)=-t}，在 #{A=\mathbb G_m} 上令 #{w(u)=u^{-1}}。后者是群自同构。#{\mathbb C[t]} 作为 #{\mathbb C[s]} 模有基 #{1,t}，所以商映射有限平坦，满足[等变映射函子](2W0E)的假设。}
+\p{给定任意复代数 #{R} 和 #{s\in R}，基变换环为 #{B=R[t]/(t^2-s)}。从 #{\operatorname{Spec}B} 到 #{\mathbb G_m} 的态射由可逆元 #{u=a+bt} 唯一决定。等变条件为 #{w(u)=u^{-1}}，故等价于}
+##{(a+bt)(a-bt)=a^2-sb^2=1.}
+\p{反过来，这个等式直接给出逆元 #{a-bt}，因此不用额外添加可逆性条件。对所有测试代数成立的描述给出}
+##{J=\operatorname{Spec}\mathbb C[s,a,b]/(a^2-sb^2-1).}
+\p{在同一个 #{s} 纤维内相乘，比较 #{1,t} 的系数，得到}
+##{(a,b)(a',b')=(aa'+sbb',\ ab'+ba'),\qquad e=(1,0),\qquad (a,b)^{-1}=(a,-b).}
+\p{结合律来自环 #{B} 中乘法的结合律，交换律来自 #{B} 的交换性；把 #{(a,-b)} 代入乘法式得到 #{(1,0)}。所有公式都是底环上的多项式，因而确实定义[群概形](012L)，而不只是闭点上的一族群。}

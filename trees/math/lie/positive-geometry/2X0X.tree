@@ -1,0 +1,10 @@
+\title{单纯锥的 Laplace 变换}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Lam，§12](icm2026-lam)；Matroids and amplitudes，§10.2}
+
+\p{设 #{v_1,\ldots,v_d} 为 #{d} 维实向量空间 #{W} 的一组基，#{C=\{\sum_it_iv_i:t_i\ge 0\}} 是[尖多面锥](01CU)。固定 #{W} 上的体积元素 #{d\mu}，并设 #{D} 是由 #{v_i} 张成的平行多面体体积。对复线性函数 #{a}，若 #{\operatorname{Re}a(v_i)>0} 对所有 #{i} 成立，则}
+##{\int_Ce^{-a(x)}d\mu(x)=\frac{D}{\prod_{i=1}^da(v_i)}.}
+\p{\strong{证明。}换元 #{x=\sum_it_iv_i} 后，Jacobian 为常数 #{D}。绝对值的积分等于 #{D\prod_i\int_0^\infty e^{-t_i\operatorname{Re}a(v_i)}dt_i<\infty}，故可用 [Fubini 定理](0H53)逐项积分。每个因子为 #{1/a(v_i)}，即得公式。行列式因子出现一次，不能在每个分母前重复相乘。}
+\p{右边给出关于参数的有理延拓，称锥的 Laplace 变换。若 #{W} 含格且 #{v_i} 是格基，使用格的基本平行多面体体积为一的测度，就有 #{D=1}。若锥位于更大的空间中，应使用其张成空间上的 #{d} 维测度；环境高维 Lebesgue 测度会把它的积分错误地算成零。}

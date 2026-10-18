@@ -1,0 +1,12 @@
+\title{散射方程的三个恒等关系}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Lam，§9式(9.3)](icm2026-lam)}
+
+\p{设 #{(s_{ij})\in K_n} 是[运动学数据](2X0L)，#{z_i} 是两两不同的有限复数。局部取对数，令 #{\Phi=\sum_{i<j}s_{ij}\log(z_i-z_j)}，其微分不依赖对数支路。散射方程是 #{E_i=0}，其中}
+##{E_i=\frac{\partial\Phi}{\partial z_i}=\sum_{j\ne i}\frac{s_{ij}}{z_i-z_j}.}
+\p{逐对合并 #{i,j} 的项，得到 #{\sum_iE_i=0}。同样，}
+##{\sum_i z_iE_i=\sum_{i<j}s_{ij}=0,\qquad \sum_i z_i^2E_i=\sum_{i<j}(z_i+z_j)s_{ij}=\sum_i z_i\sum_{j\ne i}s_{ij}=0.}
+\p{中间第一个零等式来自全部行和相加。这三个恒等式对应共同平移、缩放以及分式线性变换的第三个无穷小方向，故在[配置模空间](2X0O)固定三个标记后只需 #{n-3} 个方程。一般参数下有 #{(n-3)!} 个复解是报告引用的研究结果。}
+\p{四点时取 #{(z_1,z_3,z_4)=(0,1,\infty)}、#{x=z_2}、#{s=s_{12},t=s_{23}}，方程为 #{s/x-t/(1-x)=0}。若 #{st(s+t)\ne 0}，唯一解为 #{x=s/(s+t)}，确实避开 #{0,1,\infty}；当 #{s,t>0} 时落在正分支。}

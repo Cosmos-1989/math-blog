@@ -1,0 +1,11 @@
+\title{共振谱参数使张量顺序改变子模}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Hernandez](icm2026-hernandez)，定理 2.6 后的例子；显式计算}
+
+\p{设 #{q} 非单位根，使用[二维求值模](2V08)和[余乘法](2V07)。在 #{V(a)\otimes V(b)} 中记 #{s=v_+\otimes v_- -qv_-\otimes v_+}。此向量被 #{e_1,f_1} 消去，且 #{k_1s=s}。仿射生成元作用为}
+##{e_0s=(q^{-1}a-qb)v_-\otimes v_-,\qquad f_0s=(qb^{-1}-q^3a^{-1})v_+\otimes v_+.}
+\p{因而 #{\mathbb Cs} 是平凡子模恰当 #{a=bq^2}。事实上所有平凡子模向量都在权零平面内；写成 #{Av_+\otimes v_-+Bv_-\otimes v_+}，由 #{e_1v=0} 得 #{B=-qA}，所以只有这条候选直线。}
+\p{当 #{a=bq^2} 时，商模有基 #{u_0=\overline{v_+\otimes v_+}}、#{u_1=[2]_q\overline{v_-\otimes v_+}}、#{u_2=\overline{v_-\otimes v_-}}。直接作用得 #{Fu_0=u_1,Fu_1=[2]_qu_2,Eu_1=[2]_qu_0,Eu_2=u_1}，权为 #{q^2,1,q^{-2}}，故由[最高权模的不可约性](2V05)它是三维单模 #{W}。于是有[短正合列](0129) #{0\to\mathbf 1\to V(bq^2)\otimes V(b)\to W\to 0}。}
+\p{这条正合列不分裂：若三维补模存在，其最高权向量必为 #{v_+\otimes v_+}，降权向量是 #{t=v_+\otimes v_-+q^{-1}v_-\otimes v_+}。但 #{e_0(v_+\otimes v_+)=bq^{-2}v_+\otimes v_-+bqv_-\otimes v_+} 不与 #{t} 成比例，否则 #{q^4=1}。反向张量积 #{V(b)\otimes V(bq^2)} 没有平凡子模，因为其参数不满足上述条件。因此两种顺序的张量积不同构。}

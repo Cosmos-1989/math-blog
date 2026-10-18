@@ -1,0 +1,15 @@
+\title{Drinfeld 电流记录环方向的 Cartan 算子}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{Frenkel–Hernandez，arXiv:1308.3444v4，§2.1；[Hernandez](icm2026-hernandez)，§3}
+
+\p{设 #{q} 非单位根。在[量子环代数](2V06)的 Drinfeld 实现中，除 #{k_i^{\pm 1}} 外有元素 #{x_{i,r}^{\pm}}（#{r\in\mathbb Z}）和 #{h_{i,r}}（#{r\ne 0}）。该实现与 Chevalley 生成元实现的同构是 Drinfeld–Beck 定理。级零时所有 #{h_{i,r},k_j} 两两交换。Cartan 电流是[形式级数](0AL0)}
+##{\phi_i^\pm(z)=k_i^{\pm 1}\exp\left(\pm(q_i-q_i^{-1})\sum_{r>0}h_{i,\pm r}z^{\pm r}\right).}
+\p{指数按形式幂级数展开，#{\phi_i^+} 在零点展开，#{\phi_i^-} 在无穷远展开；每个系数只涉及有限次乘法。记系数为 #{\phi_{i,\pm m}^{\pm}}。它们与升降算子的关系包括}
+##{[h_{i,r},x_{j,s}^{\pm}]=\pm\frac{[rC_{ij}]_{q_i}}r x_{j,r+s}^{\pm},\qquad [x_{i,r}^+,x_{j,s}^-]=\delta_{ij}\frac{\phi_{i,r+s}^+-\phi_{i,r+s}^-}{q_i-q_i^{-1}},}
+\p{其中 #{\phi_{i,m}^+=0} 对 #{m<0}，#{\phi_{i,m}^-=0} 对 #{m>0}；系数使用[量子整数](2V03)。这些是该实现中的关系，全部实现还包括同号交换与 Serre 关系。}
+\p{谱平移自同构 #{\tau_a} 使 #{x_{i,r}^{\pm}\mapsto a^rx_{i,r}^{\pm}}、#{h_{i,r}\mapsto a^rh_{i,r}}、#{k_i\mapsto k_i}。因此拉回表示把电流的有理特征值 #{\Psi_i(z)} 变为 #{\Psi_i(az)}。普通权只保留常数项，电流则保留谱参数。}
+\p{秩一时固定如下桥接约定：}
+##{e_1=x_{1,0}^+,\quad f_1=x_{1,0}^-,\quad e_0=q^{-3}k_1^{-1}x_{1,1}^-,\quad f_0=q^3x_{1,-1}^+k_1,\quad k_0=k_1^{-1}.}
+\p{Frenkel–Hernandez 例 2.1 的桥接没有这里的 #{q^{-3},q^3} 因子。两者相差 Chevalley 实现的谱自同构 #{e_0\mapsto q^{-3}e_0}、#{f_0\mapsto q^3f_0}；此自同构保持关系和余乘法。电流的定义及其内部关系不变。这个选择使[二维求值表示](2V08)中的参数 #{a} 同时成为最高环权变量 #{Y_a} 的参数，具体换算见[二维 q 特征标](2V0F)。}

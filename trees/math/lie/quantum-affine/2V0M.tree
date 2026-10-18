@@ -1,0 +1,12 @@
+\title{杨–巴克斯特方程推出转移矩阵交换}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Hernandez](icm2026-hernandez)，命题 3.3；有限维 RTT 的部分迹证明}
+
+\p{取有限维辅助空间 #{V,V'} 和量子空间 #{W}。由 [R 矩阵](2V0K)构造 #{L_{VW}(z),L_{V'W}(w)}，设泛型可逆的数值矩阵 #{R_{VV'}(z/w)} 满足}
+##{R_{VV'}L_{VW}(z)L_{V'W}(w)=L_{V'W}(w)L_{VW}(z)R_{VV'}.}
+\p{此 RTT 关系就是杨–巴克斯特方程在三个表示上的形式。设扭转矩阵 #{D_V,D_{V'}} 满足 #{[R_{VV'},D_V\otimes D_{V'}]=0}；同一个权扭转给出这一条件。定义[部分迹](2V0L) #{T_V(z)=\operatorname{Tr}_V(D_VL_{VW}(z))}。则 #{[T_V(z),T_{V'}(w)]=0}。}
+\p{\strong{证明。}在泛型参数域，解出 #{L_{VW}L_{V'W}=R^{-1}L_{V'W}L_{VW}R}。乘以 #{D_V\otimes D_{V'}} 后，对两个辅助空间取迹；扭转与 #{R} 交换，且 #{R} 的系数为复数有理函数，可用部分迹的循环规则消去 #{R,R^{-1}}。得到}
+##{\operatorname{Tr}_{V\otimes V'}(D_VD_{V'}L_{VW}L_{V'W})=\operatorname{Tr}_{V\otimes V'}(D_VD_{V'}L_{V'W}L_{VW}).}
+\p{按两个辅助基展开，左边恰为 #{T_V(z)T_{V'}(w)}，右边为反序乘积。等式在有理函数域成立，因而在两边均正则的参数处及相应形式展开中成立。比较 #{z^rw^s} 系数，得到所有转移矩阵系数两两交换。这就是此处“量子可积”的交换算子族。}

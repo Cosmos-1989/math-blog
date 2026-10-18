@@ -1,0 +1,10 @@
+\title{无质量运动学空间的线性约束与维数}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Lam，§2式(2.4)–(2.5)](icm2026-lam)}
+
+\p{设 #{n\ge 3}。抽象运动学空间 #{K_n} 是复[向量空间](00D3)，坐标为 #{s_{ij}=s_{ji}}，#{i\ne j}，约定 #{s_{ii}=0}，并施加 #{\sum_{j\ne i}s_{ij}=0}。若动量 #{p_i} 位于带对称[双线性配对](00MI)的空间，满足 #{p_i^2=0} 及 #{\sum_i p_i=0}，则 #{s_{ij}=2\langle p_i,p_j\rangle} 满足这些约束，因为 #{\sum_j s_{ij}=2\langle p_i,\sum_jp_j\rangle=0}。}
+\p{这 #{n} 个线性约束独立。若它们的线性组合系数为 #{\lambda_i}，则 #{s_{ij}} 的系数为 #{\lambda_i+\lambda_j}。若所有系数为零，取三个不同指标得 #{\lambda_1=-\lambda_2=\lambda_3=-\lambda_1}，故全部为零。因此}
+##{\dim K_n=\binom n2-n=\frac{n(n-3)}2.}
+\p{对集合 #{S\subset[n]}，置 #{X_S=\sum_{i<j,\ i,j\in S}s_{ij}}。把运动学约束分别在 #{S} 与补集上求和，得 #{2X_S+\sum_{i\in S,j\notin S}s_{ij}=0=2X_{S^c}+\sum_{i\in S,j\notin S}s_{ij}}，所以 #{X_S=X_{S^c}}。在动量实现中它就是 #{(\sum_{i\in S}p_i)^2}。固定时空维数时还可能出现 Gram 行列式约束；抽象 #{K_n} 只保留以上线性关系。}

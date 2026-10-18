@@ -1,0 +1,9 @@
+\title{矩阵列向量定义可表示拟阵}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Lam，§§5、11](icm2026-lam)}
+
+\p{设 #{v_1,\ldots,v_n} 为域 #{\mathbb K} 上有限维向量空间中的向量，令 #{E=\{1,\ldots,n\}}，并定义 #{r(S)=\dim\operatorname{span}\{v_i:i\in S\}}。这里的[张成](00D8)与[维数](00GM)给出一个[拟阵秩函数](01C8)，称该向量组的可表示拟阵。}
+\p{\strong{验证。}空集张成零空间；用 #{|S|} 个向量生成的空间维数至多 #{|S|}；包含更多向量使维数不减。令 #{U=\operatorname{span}(A)}、#{W=\operatorname{span}(B)}。将 #{U\cap W} 的基分别扩充为 #{U,W} 的基，所得并集给出 #{U+W} 的基，故 #{\dim(U+W)+\dim(U\cap W)=\dim U+\dim W}。又 #{\operatorname{span}(A\cap B)\subseteq U\cap W}，即得次模不等式 #{r(A\cup B)+r(A\cap B)\le r(A)+r(B)}。}
+\p{若矩阵 #{C} 满行秩 #{k}，其拟阵基恰为满足 #{\Delta_I(C)\ne 0} 的 #{k} 元集合，其中 #{\Delta_I} 是[Plücker 坐标](2X01)。换行基保持列向量之间的线性关系，故每个 Grassmannian 点确定一个拟阵。拟阵只记录子式是否为零；正性还需要子式的符号。}

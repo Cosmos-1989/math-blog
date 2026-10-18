@@ -1,0 +1,10 @@
+\title{有向拟阵的余向量与顶胞}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Lam，§11；Matroids and amplitudes，§3.5](icm2026-lam)}
+
+\p{在有限集 #{E} 上，符号向量取值于 #{\{0,+,-\}}。定义 #{(X\circ Y)_e=X_e} 当 #{X_e\ne 0}，否则为 #{Y_e}；分离集为 #{S(X,Y)=\{e:X_e=-Y_e\ne 0\}}。有向拟阵的余向量集合 #{\mathcal V^*\subseteq\{0,+,-\}^E} 满足：包含零向量；对取负和复合 #{\circ} 封闭；并满足如下消去公理。}
+\p{对任意 #{X,Y\in\mathcal V^*} 及 #{e\in S(X,Y)}，存在 #{Z\in\mathcal V^*} 使 #{Z_e=0}，且每个 #{f\notin S(X,Y)} 都有 #{Z_f=(X\circ Y)_f}。零集 #{X^0=\{e:X_e=0\}} 构成底层[拟阵的平坦格](01C9)；这是余向量公理与拟阵公理的标准对应。无环指每个坐标在某个余向量中非零。}
+\p{按逐坐标 #{0<+}、#{0<-} 排序，极大余向量称顶胞（tope）。无环时顶胞没有零坐标：若 #{X_e=0}，取该坐标非零的余向量 #{Y}，则 #{X\circ Y} 严格大于 #{X}。}
+\p{最基本的实现是取实向量空间上的线性函数 #{f_e}，令 #{\mathcal V^*=\{(\operatorname{sign}f_e(x))_e:x\in V\}}。复合由 #{x+\varepsilon y} 在足够小的正 #{\varepsilon} 下实现；消去取线段 #{(1-t)x+ty} 上使第 #{e} 个函数为零的一点，未分离的各坐标保持要求的符号。顶胞对应补去超平面后的开锥室。在射影化后，#{P} 与 #{-P} 对应同一个无取向的射影室。}

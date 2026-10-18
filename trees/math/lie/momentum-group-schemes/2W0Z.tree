@@ -1,0 +1,11 @@
+\title{二次不变量会把连通动量纤维成对合并}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Knop：连通性论文](icm2026-knop)，math/0108069v1 §1 的例子；矩阵计算}
+
+\p{设 #{G=SL_2(\mathbb C)} 作用于 #{X=\mathbb C^2}，将 #{T^*X} 写成列向量 #{u} 与行向量 #{\alpha} 的二元组。由[余切动量公式](2W02)，#{m(u,\alpha)(\xi)=\alpha(\xi u)}。用[迹配对](0H4B)的复线性版本识别 #{\mathfrak{sl}_2^*} 与 #{\mathfrak{sl}_2}：在基 #{H=\operatorname{diag}(1,-1),E=E_{12},F=E_{21}} 上，配对矩阵为 #{\begin{pmatrix}2&0&0\\0&0&1\\0&1&0\end{pmatrix}}，行列式为 #{-2}，所以限制到迹零子空间仍非退化。令 #{c=\alpha u}，则}
+##{m(u,\alpha)=u\alpha -\frac c2I,\qquad m(u,\alpha)^2=\frac{c^2}{4}I.}
+\p{\strong{计算。}因为 #{(u\alpha)^2=u(\alpha u)\alpha=c\,u\alpha}，展开平方后交叉项消去，仅余 #{c^2I/4}。同时 #{\operatorname{tr}m=0}，故 #{-4\det m=c^2}。这个归一化的二次伴随不变量把 #{(u,\alpha)} 映到 #{c^2}。}
+\p{若固定非零值 #{d} 并取 #{r^2=d}，原纤维为互不相交的闭开子集 #{\{\alpha u=r\}} 与 #{\{\alpha u=-r\}}。两者都非空。对任意 #{r\ne 0}，投影到 #{u\ne 0} 的纤维是一个仿射直线；在 #{u_1\ne 0} 或 #{u_2\ne 0} 的开集上，可分别解出一个 #{\alpha} 坐标。两张不可约的局部平凡图有非空交，故 #{\{\alpha u=r\}} 不可约。}
+\p{改用 #{\Psi(u,\alpha)=c} 就分开这两个分支，且 #{c} 满足底环上的首一方程 #{T^2-d=0}。这解释[不变动量映射](2W0M)为何要取整闭包中间层。在零纤维中，任意点沿 #{t\mapsto(tu,t\alpha)} 连到原点，故零纤维也连通。}

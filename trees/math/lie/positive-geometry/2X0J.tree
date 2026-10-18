@@ -1,0 +1,12 @@
+\title{凸多胞形典范形式的对偶体积公式}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Lam，定理8.1](icm2026-lam)，以通常 Euclidean 体积归一化}
+
+\p{设 #{P\subset\mathbb R^d} 为满维有限点[凸包](00TK)，取向为 #{dx_1\wedge\cdots\wedge dx_d}。对内部点 #{x}，平移体 #{P-x} 含原点于内部，其[极体](0R01)为 #{(P-x)^\circ=\{u:\langle u,p-x\rangle\le 1\text{ 对所有 }p\in P\}}。凸多胞形是[正几何](2X0E)，且}
+##{\Omega_P(x)=d!\,\operatorname{vol}_{\mathrm{Euc}}((P-x)^\circ)\,dx_1\wedge\cdots\wedge dx_d.}
+\p{右边先在内部定义，再延拓成有理形式。这是对偶体积定理。若使用归一化体积 #{\operatorname{Vol}=d!\operatorname{vol}_{\mathrm{Euc}}}，公式前面便没有阶乘。一般多胞形的定理可由三角剖分和留数递归证明。}
+\p{在[标准三角形](2X0G)内部令 #{t=1-x-y>0}。极三角形的三个顶点为 #{(-1/x,0),(0,-1/y),(1/t,1/t)}，对应三条边的线性不等式余量 #{x,y,t}；这里未将法向量单位化。以第一个顶点为基点，另两边的行列式为}
+##{\det\begin{pmatrix}1/x&1/t+1/x\\-1/y&1/t\end{pmatrix}=\frac 1{xt}+\frac 1{yt}+\frac 1{xy}=\frac 1{xyt}.}
+\p{面积是行列式绝对值的一半，因此 #{2!\operatorname{vol}_{\mathrm{Euc}}=1/(xyt)}，恰恢复三角形形式。区间情形 #{d=1} 则给出 #{1/(x-a)+1/(b-x)}。这两个计算固定了体积归一化。}

@@ -1,0 +1,13 @@
+\title{有限维相邻权空间迫使电流特征值有理}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{Hernandez–Jimbo，arXiv:1104.1891v3，§3.3，引理 3.9 的证明}
+
+\p{设 #{V} 是 [Borel 的 O 范畴](2V0O)中的模，取共同 [#{\ell} 权](2V0D)的特征向量 #{v}，普通权为 #{\omega}。固定简单根 #{i}；相邻权空间 #{V_{\omega\bar\alpha_i^{\pm 1}}} 有限维。则 [Cartan 电流](2V0B)在 #{v} 上的级数 #{\Psi_i(z)} 是有理函数。}
+\p{\strong{有限秩表达。}在两个相邻权空间中选基，维数为 #{R,P}，并选线性投影 #{\pi:V_\omega\to\mathbb Cv}。对 #{m\ge 0,p\ge 1}，电流交换关系给出}
+##{\Psi_{i,m+p}v=(q_i-q_i^{-1})\pi[x_{i,m}^+,x_{i,p}^-]v.}
+\p{分别将 #{x_{i,p}^-v}、#{x_{i,m}^+v} 在相邻权空间的基中展开，再作用另一算子及 #{\pi}，得到标量分解 #{\Psi_{i,m+p}=\sum_{r=1}^R a_r(p)b_r(m)-\sum_{s=1}^Pc_s(p)d_s(m)}。因此对不同 #{m}，移位尾级数}
+##{H_m(z)=\sum_{p\ge 1}\Psi_{i,m+p}z^p=z^{-m}\left(\Psi_i(z)-\sum_{p=0}^m\Psi_{i,p}z^p\right)}
+\p{都落在由 #{\sum_{p\ge 1}a_r(p)z^p} 和 #{\sum_{p\ge 1}c_s(p)z^p} 张成的至多 #{R+P} 维空间中。故存在不全零的 #{b_0,\ldots,b_N} 使 #{\sum_{m=0}^Nb_mH_m=0}。}
+\p{乘以 #{z^N}，移项可得 #{D(z)\Psi_i(z)=P(z)}，其中 #{D(z)=\sum_{m=0}^Nb_mz^{N-m}\ne 0}，而右侧是有限多项式。于是 #{\Psi_i=P/D} 有理；作为原形式级数，它在零点没有极点。此证明给出 O 范畴分类中的必要性；构造每个有理最高权的单模属于 O 仍需预基本表示的存在定理。}
