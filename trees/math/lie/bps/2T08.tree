@@ -1,0 +1,12 @@
+\title{Plethystic 指数与超对称幂的乘积公式}
+\date{2026-10-18}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Davison](icm2026-davison)，§2.2、§3.1}
+
+\p{令 #{F(q,T)=\sum_{\mathbf d\ne 0,j}c_{\mathbf d,j}q^{j/2}T^{\mathbf d}}，其中 #{c_{\mathbf d,j}\in\mathbb Z}。假设对每个维数向量，#{j} 有下界，各分次系数有限；先在 #{q^{1/2}}-进 Laurent 级数中取系数，再在维数向量方向完成。定义 plethystic 指数}
+##{\operatorname{Exp}(F)=\prod_{\mathbf d,j}(1-q^{j/2}T^{\mathbf d})^{-c_{\mathbf d,j}}=\exp\left(\sum_{r\ge 1}\frac{F(q^r,T^r)}r\right).}
+\p{第二式把整数系数保留不变；特别是负号不因 #{r} 的奇偶而变化。若 #{F=p(V;q,T)} 使用[Tate 次数约定](2T06)，则}
+##{p(\operatorname{Sym}(V);q,T)=\operatorname{Exp}(p(V;q,T)).}
+\p{\strong{证明。}[超对称代数](2T07)中，一维偶次 #{j} 生成元贡献几何级数 #{(1-q^{j/2}T^{\mathbf d})^{-1}}；一维奇次生成元贡献 #{1-q^{j/2}T^{\mathbf d}}。取齐次基并相乘即得第一式。对每个因子使用 #{-\log(1-z)=\sum_{r\ge 1}z^r/r} 得第二式。固定总维数只有有限种非零维数向量分拆；再固定上同调次数，由各维数的次数下界，只有有限项贡献。因此乘积与对数都在指定完成环中成立，也适用于 #{\mathbb Q[u]} 产生的无穷级数。}
+\p{例如 #{\operatorname{Exp}(-q^{1/2}T)=1-q^{1/2}T}，与奇次生成元的平方为零相符。把它误作普通指数或把 #{-q^{1/2}} 整体作 Adams 幂，都会改变此答案。}

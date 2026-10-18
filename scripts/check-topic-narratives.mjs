@@ -26,6 +26,7 @@ const expected = new Set([
   ...read('research/icm2026-geometry-closing-kakeya.json').reports.map(p => p.outline),
   ...read('research/icm2026-geometry-harmonic-contact.json').reports.map(p => p.outline),
   ...read('research/icm2026-geometry-stability-flow-kahler.json').reports.map(p => p.outline),
+  ...read('research/icm2026-lie-first-reports.json').reports.map(p => p.outline),
   '0200',
 ]);
 const reviewed = new Set(record.pages.map(p => p.id));

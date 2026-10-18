@@ -1,0 +1,14 @@
+\title{保持单子的等价诱导代数范畴等价}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ben-Zvi–Nadler](icm2026-ben-zvi-nadler)，猜想 2.17 的形式推论；以下证明普通范畴版本}
+
+\p{设 #{F:\mathcal C\to\mathcal D} 为[范畴等价](031H)，#{H,K} 分别是两侧的[单子](2S0H)。设自然同构 #{\alpha:FH\to KF} 保持单位与乘法，即}
+##{\alpha\circ F\eta^H=\eta^K F,\qquad
+\alpha\circ F\mu^H
+=\mu^K F\circ K\alpha\circ\alpha H.}
+\p{则 #{F} 提升为[单子代数范畴](2S15)的等价 #{\operatorname{Alg}_H(\mathcal C)\simeq\operatorname{Alg}_K(\mathcal D)}。}
+\p{\strong{证明。}对作用 #{a:Hc\to c}，在 #{Fc} 上定义 #{b=F(a)\circ\alpha_c^{-1}:KFc\to Fc}。单位相容给出 #{b\eta^K_{Fc}=F(a\eta^H_c)=\mathrm{id}}。将乘法相容等式代入，再用 #{\alpha} 的自然性，等式 #{aH(a)=a\mu^H_c} 恰好变为 #{bK(b)=b\mu^K_{Fc}}。故 #{b} 是代数作用。}
+\p{若 #{f} 与 #{H}-作用相容，自然性同样说明 #{Ff} 与 #{K}-作用相容。选取 #{F} 的拟逆并运输 #{\alpha^{-1}}，得到逆方向的提升；两侧的单位和余单位仍与作用相容，故两个提升互为拟逆。}
+\p{高阶情形须运输整套相容同伦，不能只在同伦范畴检查两个等式。[Potent 主猜想](2S0M)要求的是这整套单子数据的识别；上面的证明展示其普通范畴模型，不给出该猜想所需的非阿贝尔几何识别。}

@@ -1,0 +1,13 @@
+\title{有限 Heisenberg 表示的平移与乘法模型}
+\date{2026-10-18}
+\taxon{Example}
+\author{author}
+\meta{source}{[Fintzen，§§3.6、4.6](icm2026-fintzen)的有限群输入；显式 Schrödinger 模型}
+
+\p{设 #{p} 为奇素数，#{\zeta\in\mathbb C} 为本原 #{p} 次单位根。在 #{H=\mathbb F_p^3} 上定义}
+##{(a,b,c)(a',b',c')=(a+a',b+b',c+c'+b'a).}
+\p{这是阶 #{p^3} 的群，中心为 #{Z=\{(0,0,c)\}}。在 #{W=\{f:\mathbb F_p\to\mathbb C\}} 上定义[表示](0124)}
+##{(\eta(a,b,c)f)(t)=\zeta^{c+bt}f(t+a).}
+\p{\strong{乘法验证。}连续作用两次产生指数 #{c+bt+c'+b'(t+a)}，恰为乘积元对应的 #{c+c'+b'a+(b+b')t}。中心作用为标量 #{\zeta^c}。}
+\p{\strong{不可约性。}乘法算子 #{M_bf(t)=\zeta^{bt}f(t)} 的线性组合包含每个坐标投影：#{E_u=p^{-1}\sum_b\zeta^{-bu}M_b} 将函数投到 #{u} 处的点质量。非零不变子空间因此包含一个点质量，而平移作用把它带到所有点质量，故子空间为 #{W}。这也证明所有与作用交换的算子都是标量：先与各 #{E_u} 交换使其对角，再与平移交换使对角元相等。}
+\p{于是 #{\dim W=p}、#{\operatorname{End}_H(W)=\mathbb C}，但 #{\operatorname{End}_Z(W)=M_p(\mathbb C)}。恢复表示的重数空间时，必须对完整 Heisenberg 群取[交织空间](013A)；只对标量作用的中心取 Hom 会多出 #{p^2} 维的自同态空间。}

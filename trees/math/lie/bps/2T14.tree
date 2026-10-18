@@ -1,0 +1,12 @@
+\title{算子的主分解与幂零 Jordan 块}
+\date{2026-10-18}
+\taxon{Proposition}
+\author{author}
+\meta{source}{有限维线性代数的直接证明；用于 [Davison](icm2026-davison) §3.2 的 Jordan 箭图 Kac 计算}
+
+\p{设 #{A:V\to V} 是有限维[线性映射](00GC)。若其最小多项式在底域分解为 #{\prod_\lambda(t-\lambda)^{r_\lambda}}，则 #{V=\bigoplus_\lambda\ker(A-\lambda)^{r_\lambda}}。每个主分量进一步分解成若干循环块 #{v,Nv,\ldots,N^{r-1}v}，其中 #{N=A-\lambda}。因此在[代数闭域](00SO)上，不可分解的单算子表示恰是一个 Jordan 块。}
+\p{\strong{主分解。}这些多项式两两互素。Euclid 算法给出多项式 #{b_\lambda}，使 #{\sum_\lambda b_\lambda(t)\prod_{\mu\ne\lambda}(t-\mu)^{r_\mu}=1}。在 #{A} 处求值，每个求和项的像被 #{(A-\lambda)^{r_\lambda}} 消去，故得到各主分量之和。互素性同样说明一个主分量与其余部分之和的交为零：在该交上，两个互素多项式都消去向量，Bézout 恒等式便消去向量本身。}
+\p{\strong{幂零分块。}设 #{N} 的[幂零指数](0F01)为 #{r}，选 #{v} 使 #{N^{r-1}v\ne 0}。链向量[线性无关](00D9)；选线性泛函 #{\ell}，满足 #{\ell(N^{r-1}v)=1}，且 #{\ell(N^jv)=0}（#{j<r-1}）。定义}
+##{\pi(w)=\sum_{j=0}^{r-1}\ell(N^{r-1-j}w)N^jv.}
+\p{逐项计算得 #{\pi(v)=v}、#{\pi N=N\pi}，因而 #{\pi} 在整条链上为恒等，是到循环子空间 #{U} 的投影。于是 #{V=U\oplus\ker\pi} 为不变直和；对核归纳即可分块。}
+\p{单个块确实不可分解：#{k[N]}-不变子空间等于循环模 #{k[t]/(t^r)} 的子模，而其子模对应 #{k[t]} 中包含 #{(t^r)} 的理想。任一非零理想中取最小次数首一多项式，以带余除法可知它生成该理想；此生成元须整除 #{t^r}，所以子模恰为 #{(t^j)/(t^r)}。它们线性排序，任意两个非零子模有非零交，故不能形成非平凡直和。取上述链为基，矩阵由块长度和特征值唯一给出。}

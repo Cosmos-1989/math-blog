@@ -1,0 +1,10 @@
+\title{无箭头箭图的量子双对数级数}
+\date{2026-10-18}
+\taxon{Example}
+\author{author}
+\meta{source}{[Davison](icm2026-davison)，§3.1；系数由分类空间次数与 q 二项递推直接计算}
+
+\p{一顶点无箭的箭图满足 #{\chi(d,d)=d^2}。由[分类叠上同调](2T04)与[Tate 符号](2T06)，其归一化级数为}
+##{E(T)=\sum_{d\ge 0}\frac{(-q^{1/2})^{d^2}}{\prod_{j=1}^d(1-q^j)}T^d=\prod_{k\ge 0}(1-q^{k+1/2}T)=\operatorname{Exp}\left(\frac{-q^{1/2}T}{1-q}\right).}
+\p{\strong{证明。}设乘积为 #{P(T)=\sum a_dT^d}。分离首因子得 #{P(T)=(1-q^{1/2}T)P(qT)}，故 #{(1-q^d)a_d=-q^{d-1/2}a_{d-1}}。由 #{a_0=1} 得 #{a_d=(-1)^dq^{d^2/2}/\prod_{j=1}^d(1-q^j)}；因 #{d^2\equiv d\pmod 2}，即所列系数。末式来自[plethystic 指数](2T08)。}
+\p{只有维数一有简单表示，其[粗模空间](0B4E)是点，故[BPS 交上同调复形定理](2T0F)给 #{\mathrm{BPS}_1=\mathbb Q}、#{\mathrm{BPS}_d=0}（#{d>1}）。奇次空间 #{\mathbb Q[u]\otimes\mathbb L^{1/2}} 的超对称幂给上述乘积。首项为 #{1-q^{1/2}T/(1-q)}，二次项为 #{q^2T^2/((1-q)(1-q^2))}。}

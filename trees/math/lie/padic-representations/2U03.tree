@@ -1,0 +1,13 @@
+\title{紧诱导的 Frobenius 互反}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fintzen，§3.3](icm2026-fintzen)；开子群情形的显式证明}
+
+\p{设 #{F} 为非阿基米德局部域，#{G/F} 为连通约化群，#{R} 为交换环，#{H\subset G(F)} 开。设 #{(W,\rho)} 为光滑 #{H}-表示，#{(V,\pi_V)} 为光滑 #{G(F)}-表示，底模均为 #{R}-模。[紧诱导](2U02)满足[交织空间](013A)的自然同构}
+##{\operatorname{Hom}_{G(F)}(\operatorname{c-ind}_H^{G(F)}W,V)
+\simeq\operatorname{Hom}_H(W,V).}
+\p{\strong{证明。}对 #{w\in W}，令 #{e_w} 支撑于 #{H}，且 #{e_w(h)=\rho(h)w}。由于 #{\pi(h)e_w=e_{\rho(h)w}}，交织映射 #{A} 给出 #{a(w)=A(e_w)}。反向给定 #{a\in\operatorname{Hom}_H(W,V)}，定义}
+##{A_a(f)=\sum_{Ht\in H\backslash G(F)}\pi_V(t^{-1})a(f(t)).}
+\p{和有限。把 #{t} 换成 #{ht} 时，对应项变为 #{\pi_V(t^{-1}h^{-1})a(\rho(h)f(t))}，由 #{H}-等变性与原项相同。把 #{f} 换成 #{\pi(g)f} 并用 #{s=tg} 重标号，得到 #{A_a(\pi(g)f)=\pi_V(g)A_a(f)}。}
+\p{最后 #{A_a(e_w)=a(w)}，而每个函数有有限分解 #{f=\sum_{Ht}\pi(t^{-1})e_{f(t)}}，故两个构造互逆。此论证适用于交换环系数，也没有使用半单性。}

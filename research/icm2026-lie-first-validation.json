@@ -1,0 +1,102 @@
+{
+  "checked_on": "2026-10-19",
+  "note_date": "2026-10-18",
+  "baseline_commit": "8ee2c493512821f372b4b50bbc20c063601bbaf9",
+  "scope": "First Section 7 batch only: Ben-Zvi-Nadler, Davison and Fintzen, with existing cross-listed topics reused.",
+  "publication": {
+    "local_build": "passed",
+    "preview": "http://localhost:8083/0067/",
+    "git_commit_created": false,
+    "github_push": false,
+    "github_pages_deployment": false
+  },
+  "content": {
+    "new_knowledge_pages": 122,
+    "new_outlines": 3,
+    "new_references": 3,
+    "new_tree_files": 128,
+    "body_link_occurrences": 640,
+    "explicit_prerequisite_edges": 503,
+    "knowledge_pages_by_outline": {"2S00": 42, "2T00": 40, "2U00": 40},
+    "primary_reports_integrated": 3,
+    "cross_listed_topics_reused": 5,
+    "primary_reports_remaining": 5,
+    "remaining_speakers": ["David Hernandez", "Friedrich Knop", "Thomas Lam", "Anton Mellit", "Yongchang Zhu"],
+    "snapshots": "research/icm2026-lie-first-reports-snapshots.json",
+    "source_and_proof_record": "research/icm2026-lie-first-reports.json"
+  },
+  "source_checks": {
+    "workflow": ".github/workflows/deploy.yml",
+    "source_commands_run": 32,
+    "source_commands_passed": 32,
+    "lie_regression_tests": 6,
+    "lie_regression_tests_passed": 6,
+    "duplicate_new_titles": 0,
+    "missing_links": 0,
+    "unreachable_pages": 0,
+    "prerequisite_cycles": 0,
+    "new_term_link_candidates": 0,
+    "editorial_errors": 0,
+    "formatting_differences": 0,
+    "existing_editorial_candidate": "0BGJ retained unchanged; not a new-page error.",
+    "limit": "These checks validate recorded relationships and source syntax. They do not establish semantic completeness or prove the cited research results."
+  },
+  "mathematical_review": {
+    "independent_review": "A separate read-only review checked the p-adic induction, convolution, type, depth-zero, AFMO and Dat-Fintzen statements against their cited sources.",
+    "correction": "2U0R and 2U0T now restrict the AFMO input to K_{M^0}=M^0(F)_{x_0}, retaining the normalizer condition at the start of AFMO II v1 section 4.3, p.44. The condition is covered by a regression test.",
+    "moduli_terminology": "The general representation quotient and nonabelian Hodge comparison use semisimplification/good moduli. Coarse moduli terminology is retained for the simple or stable cases and linked to 0B4E.",
+    "conventions": [
+      "Ordinary module categories, derived module categories and higher IndCoh kernels retain separate hypotheses.",
+      "The potent Langlands correspondence and related announced or conjectural extensions retain their stated status.",
+      "BPS Tate shifts, super signs, plethystic coefficient completion and the positive-half Yangian identification were checked against the source conventions.",
+      "The Jordan primary decomposition and nilpotent splitting are supplied in 2T14, rather than silently invoking a PID classification theorem.",
+      "The complex Grassmannian cotangent calculation includes local matrix charts; it does not identify its definition with the existing real Grassmannian page.",
+      "Hecke covariance, right-module conventions, the quadratic correction and coefficient restrictions are kept explicit."
+    ],
+    "scope": "The packets identify written elementary proofs and deductions separately from cited deep theorems. No reconstruction of all research proofs is claimed. Final integrated checks supersede the agents' earlier scoped counts."
+  },
+  "static_build": {
+    "command": "node scripts/build-site.mjs",
+    "exit_code": 0,
+    "html_pages": 5493,
+    "internal_links_checked": 808997,
+    "anchors_checked": 5511,
+    "resource_references_checked": 39117,
+    "theme_and_search_assets": "unchanged",
+    "legacy_routes": "index.xml and /math-blog/ compatibility routes passed",
+    "katex_command": "node scripts/check-site-notes.mjs --katex /tmp/math-blog-katex-0.16.11.cjs",
+    "formulas_checked": 65968,
+    "diagrams_checked": 48,
+    "errors": 0,
+    "warnings": 0
+  },
+  "browser": {
+    "test": "tests/topology-report-render.test.mjs",
+    "record": "research/icm2026-lie-first-reports.json",
+    "result": "passed",
+    "xslt": "disabled in Chromium",
+    "pages": 129,
+    "widths": [1440, 390],
+    "page_views": 258,
+    "maximum_page_overflow_pixels": 0,
+    "rendered_formula_checks": 3918,
+    "long_display_scroll_checks": 57,
+    "search_queries": 6,
+    "topic_navigation_checks": 18,
+    "legacy_query_and_fragment_checks": 18,
+    "page_errors": 0,
+    "failed_resource_responses": 0,
+    "screenshots_inspected": ["0067-1440", "0067-390", "2S00-1440", "2S00-390", "2T00-1440", "2T00-390", "2U00-1440", "2U00-390"],
+    "visual_result": "Existing reading layout preserved; headings wrap on mobile, navigation remains usable and mathematical text is legible."
+  },
+  "preservation": {
+    "old_prerequisite_pages_compared": 4926,
+    "old_prerequisite_edges_changed": 0,
+    "old_required_link_records_compared": 4150,
+    "changed_old_required_link_records": ["0067"],
+    "subject_record_change": "Only the landing-page source hash changed; existing prerequisite targets were retained.",
+    "preexisting_theme_diff": "Byte-for-byte unchanged from the task baseline.",
+    "git_diff_check": "passed",
+    "unrelated_worktree_content": "Preserved. No reset, commit or push performed."
+  }
+}

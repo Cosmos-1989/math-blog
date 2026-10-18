@@ -1,0 +1,11 @@
+\title{单子的代数由相容的求值映射给出}
+\date{2026-10-18}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ben-Zvi–Nadler](icm2026-ben-zvi-nadler)，定理 2.12 的范畴基础}
+
+\p{设 #{(H,\eta,\mu)} 为范畴 #{\mathcal C} 上的[单子](2S0H)。一个 #{H}-代数由对象 #{c} 与态射 #{a:Hc\to c} 给出，满足}
+##{a\circ\eta_c=\mathrm{id}_c,\qquad
+a\circ H(a)=a\circ\mu_c.}
+\p{第一式说先加入自由结构再求值不改变原对象；第二式说两层自由结构可先压成一层，也可先在内部求值，两种结果相同。从 #{(c,a)} 到 #{(c',a')} 的态射是满足 #{f\circ a=a'\circ H(f)} 的 #{f:c\to c'}。这些对象和态射组成 #{\operatorname{Alg}_H(\mathcal C)}。}
+\p{例如给定含幺 #{k}-代数 #{A}，在向量空间上取 #{H(V)=A\otimes_kV}，单位与乘法来自 #{A}。一个 #{H}-代数正好是一个[左 #{A}-模](0136)：求值 #{a\otimes v\mapsto av} 的两条公理成为 #{1v=v} 与 #{a(bv)=(ab)v}。对高阶单子，则把两条公理连同所有高阶相容纳入代数结构。}

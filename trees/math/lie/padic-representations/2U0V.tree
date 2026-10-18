@@ -1,0 +1,11 @@
+\title{pro-p 平均与字符等型投影}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fintzen，§4.3 Step 2](icm2026-fintzen)；有限商计算}
+
+\p{设 #{K} 为 [pro-#{p} 群](2U04)，#{R} 为 #{\mathbb Z[1/p]}-代数，#{V} 为[光滑](2U01) #{R}-表示，#{\theta:K\to R^\times} 为光滑字符。对 #{v\in V}，选开[正规子群](00BF) #{U}，使 #{U} 固定 #{v} 且 #{\theta|_U=1}，定义}
+##{e_\theta v=\frac 1{[K:U]}\sum_{kU\in K/U}\theta(k)^{-1}\pi(k)v.}
+\p{\strong{定义与幺等性。}指标为 #{p} 的幂，可在 #{R} 中求逆。若将 #{U} 缩为 #{U'}，每一项重复 #{[U:U']} 次而分母乘同一因子，结果不变。两个选择可用其交比较，所以算子定义良好。换元 #{k=h^{-1}k'} 得 #{\pi(h)e_\theta v=\theta(h)e_\theta v}。若 #{v} 本来满足此等型条件，每个求和项都等于 #{v}，故 #{e_\theta v=v}。于是 #{e_\theta^2=e_\theta}，其像恰为 #{V^{K,\theta}}。}
+\p{\strong{正合性。}给定光滑表示的满射 #{V\to W} 及 #{w\in W^{K,\theta}}，任取提升 #{v}，则 #{e_\theta v} 仍提升 #{w}。等型部分函子保持满射，又自然保持核，故正合。它推广了[有限群平均的正合性](0B4N)。}
+\p{取 #{\theta=1} 得不变向量投影；在群代数的有限商模型中，#{e_\theta=|K/U|^{-1}\sum_{kU}\theta(k)^{-1}kU}。这正是一般系数归约中局部幺等元的计算基础。}

@@ -1,0 +1,10 @@
+\title{Kac 多项式与 Jordan 箭图的绝对不可分解表示}
+\date{2026-10-18}
+\taxon{Example}
+\author{author}
+\meta{source}{[Davison](icm2026-davison)，Theorem 3.7、§3.2}
+
+\p{域 #{k} 上的[箭图表示](2T01)称不可分解，是指不能写成两个非零表示的[直和](0127)；称绝对不可分解，是指扩域到 #{\overline k} 后仍不可分解。Kac 定理断言：对任意有限箭图和非零维数 #{\mathbf d}，存在 #{a_{Q,\mathbf d}(t)\in\mathbb Z[t]}，在每个[有限域](00GF)大小 #{q} 处的值等于绝对不可分解表示的同构类数。}
+\p{Jordan 箭图在每个维数 #{n\ge 1} 都满足 #{a_{Q,n}(t)=t}。证明使用[算子主分解与幂零分块](2T14)：扩到代数闭包后绝对不可分解算子必须是一个 Jordan 块，只有一个特征值 #{\lambda}。原矩阵系数在 #{\mathbb F_q} 中，Frobenius 保持特征值集合，故 #{\lambda^q=\lambda}，即 #{\lambda\in\mathbb F_q}。}
+\p{于是 #{N=A-\lambda} 已是有限域上的幂零算子，且 #{N^{n-1}\ne 0}；可在 #{\mathbb F_q^n} 中选 #{v} 使 #{N^{n-1}v\ne 0}，其链给有限域上的 Jordan 基。因此每个绝对不可分解同构类恰由 #{\mathbb F_q[x]/((x-\lambda)^n)} 给出。反过来这些单块扩域后仍不可分解，不同 #{\lambda} 不同构，故共有 #{q} 类。}
+\p{不可分解与简单不同：#{n>1} 的 Jordan 块有不变子空间，但没有不变直和分解。因此这里每个维数都贡献 Kac 多项式，与零势 Jordan 箭图只在维数一贡献 BPS 并不矛盾；Kac 对应的是三重箭图临界理论。}

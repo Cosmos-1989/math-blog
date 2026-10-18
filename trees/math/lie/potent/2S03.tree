@@ -1,0 +1,12 @@
+\title{仿射直线的导出环空间有一个奇变量}
+\date{2026-10-18}
+\taxon{Example}
+\author{author}
+\meta{source}{[Ben-Zvi–Nadler](icm2026-ben-zvi-nadler)，§2.1 的 HKR 模型；以下为一维 Koszul 计算}
+
+\p{设 #{k} 为特征零域，#{X=\mathbb A^1_k=\operatorname{Spec}k[x]}。按[对角自交定义](2S02)，#{\mathcal L X} 的函数由[导出张量积](2S10) #{A\otimes^{\mathbf L}_{A\otimes_k A}A} 给出，其中 #{A=k[x]}。令 #{R=k[x,y]}，对角线对应 #{A=R/(x-y)}。}
+\p{\strong{计算。}因 #{x-y} 在 #{R} 中不是零因子，二项[自由 Koszul 分解](01AH) #{R\varepsilon\to R} 的微分为 #{d\varepsilon=x-y}，#{|\varepsilon|=-1}。与另一个 #{A} 张量后，#{x-y} 变成零，得到}
+##{\mathcal O(\mathcal L\mathbb A^1)\simeq k[x,\varepsilon],\qquad
+|x|=0,\quad |\varepsilon|=-1,\quad d=0,\quad\varepsilon^2=0.}
+\p{因此 #{H^0=A}，#{H^{-1}=A\varepsilon}。将 #{\varepsilon} 识别为次数移到 #{-1} 的 #{dx}，这就是 #{T[-1]X} 的一维模型。普通自交只得到 #{A}，恰好丢掉此项。}
+\p{在 HKR 对应下，环旋转的混合算子为 #{B(f)=f'(x)\varepsilon}、#{B(f\varepsilon)=0}，次数为 #{-1}。直接计算 #{B^2=0}；这把通常的 de Rham 微分变成奇切方向上的算子。HKR 与圆周作用的一般相容性为外部定理，此处给出其一维代数模型。}
