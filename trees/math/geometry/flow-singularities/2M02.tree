@@ -1,0 +1,11 @@
+\title{光滑平均曲率流保持平均凸性}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Haslhofer](icm2026-haslhofer)，§2.1 式 (2.3)、Proposition 2.1}
+
+\p{设 #{M_t=\partial K_t\subset\mathbb R^{n+1}} 是紧无边界的光滑[平均曲率流](2E03)，定义于 #{0\leq t<T}，外法向约定下的[平均曲率](2M01)为 #{H}。若 #{H(\cdot,0)\geq 0}，则整个光滑存在区间上 #{H\geq 0}。}
+\p{\strong{证明。}使用曲率演化恒等式 #{\partial_tH=\Delta_{M_t}H+|A|^2H}，其推导见所引报告 §2.1；这里 #{\Delta} 是[几何 Laplace 算子](0U14)。固定 #{S<T}，光滑性与紧性使 #{C=\max_{0\leq t\leq S}|A|^2} 有限。令 #{w=e^{-Ct}H}、#{q=|A|^2-C\leq 0}，便有 #{(\partial_t-\Delta)w=qw}。}
+\p{对 #{\varepsilon>0} 置 #{v=w+\varepsilon e^t}，则}
+##{(\partial_t-\Delta)v=qv+\varepsilon e^t(1-q).}
+\p{初始时 #{v>0}。若它第一次达到零，在该时刻的空间最小点有 #{\partial_tv\leq 0}、#{\Delta v\geq 0}，所以左侧非正；右侧却等于 #{\varepsilon e^t(1-q)>0}，矛盾。紧性保证首次零点若出现就能取到。故 #{v>0}；令 #{\varepsilon\downarrow 0} 得 #{w\geq 0}，从而 #{H\geq 0}。由于 #{S<T} 任意，结论成立。}

@@ -1,0 +1,10 @@
+\title{零边值函数的 Poincaré 不等式}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设有界开集 #{\Omega\subset\mathbb R^m} 包含于边长为 #{L} 的立方体。对每个[零边值 Sobolev 函数](2J0C) #{v\in W^{1,2}_0(\Omega)}，有}
+##{\int_\Omega |v|^2\leq L^2\int_\Omega |\nabla v|^2.}
+\p{\strong{证明。}先取 #{v\in C_c^\infty(\Omega)}，把它在立方体外延拓为零。平移后立方体可写成 #{(0,L)^m}。固定其余坐标 #{x'}，微积分基本定理与 Cauchy–Schwarz 不等式给出}
+##{|v(x_1,x')|^2=\left|\int_0^{x_1}\partial_1v(t,x')\,dt\right|^2\leq L\int_0^L|\partial_1v(t,x')|^2\,dt.}
+\p{对 #{x_1} 和 #{x'} 积分即得结论。一般情形按 #{W^{1,2}_0} 的定义取光滑紧支撑逼近，左右两端均在该范数下连续。特别地，零边值函数若弱梯度为零，就几乎处处为零。}

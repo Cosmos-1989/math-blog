@@ -1,0 +1,10 @@
+\title{单值变换迫使穿孔圆盘上的能量发散}
+\date{2026-10-16}
+\taxon{Proposition}
+\author{author}
+
+\p{设 #{a} 为完备 [CAT(0) 空间](2J02)的等距同构，平移长度定义为 #{\ell(a)=\inf_{P\in X}d(P,aP)}。设穿孔圆盘的覆叠上有[局部 Lipschitz 映射](00FU) #{u(r,\theta)}，满足[等变条件](2J0I) #{u(r,\theta+2\pi)=a u(r,\theta)}。其在圆环 #{\varepsilon<r<R} 上的能量满足}
+##{E(u;\varepsilon<r<R)\geq\frac{\ell(a)^2}{4\pi}\log\frac R\varepsilon.}
+\p{\strong{证明。}固定几乎每个 #{r}，曲线 #{\theta\mapsto u(r,\theta)} 的长度至少为 #{d(u(r,0),au(r,0))\geq\ell(a)}。一维 Cauchy–Schwarz 不等式给出 #{\int_0^{2\pi}|\partial_\theta u|^2\,d\theta\geq\ell(a)^2/(2\pi)}。这里 #{|\partial_\theta u|} 是度量速度，即距离差商的几乎处处极限。由[度量能量的拉回二次型](2J1A)，丢去非负的径向能量后得到}
+##{E\geq\frac 12\int_\varepsilon^R\frac 1r\int_0^{2\pi}|\partial_\theta u|^2\,d\theta\,dr\geq\frac{\ell(a)^2}{4\pi}\log\frac R\varepsilon.}
+\p{当 #{X=\mathbb R}、#{a(s)=s+L} 且 #{u(r,\theta)=L\theta /(2\pi)} 时，#{u} 调和并取等号。若 #{L\ne 0}，全圆盘能量必为无穷。二维能量在源的共形换度量下不变，所以把圆盘改成双曲尖点度量也不能消去该发散。}

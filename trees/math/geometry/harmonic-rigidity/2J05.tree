@@ -1,0 +1,10 @@
+\title{三叉树是具有分叉点的 CAT(0) 空间}
+\date{2026-10-16}
+\taxon{Example}
+\author{author}
+\meta{source}{[Daskalopoulos 与 Mese](icm2026-daskalopoulos-mese)，§1.2}
+
+\p{取三个 #{\lbrack 0,\infty\rparen}，把三个原点粘为同一点 #{o}。同一支上令 #{d(s,t)=|s-t|}，不同支上令 #{d(s,t)=s+t}。所得空间称为三叉树。连接不同支上两点的最短路线经过 #{o}，故它是完备[测地空间](2J01)。}
+\p{\strong{曲率比较。}把任意一条长度 #{L} 的线段按弧长参数 #{s\in[0,L]} 表示。对第三点 #{z}，存在 #{b\in[0,L]} 和 #{a\geq 0}，使 #{d(z,\gamma(s))=a+|s-b|}。其平方减去 #{s^2} 后是仿射函数加 #{2a|s-b|}，为凸函数。因此}
+##{d(z,\gamma(tL))^2\leq(1-t)d(z,\gamma(0))^2+t d(z,\gamma(L))^2-t(1-t)L^2.}
+\p{这正是 [CAT(0) 条件](2J02)。去掉 #{o} 的小邻域分成三部分，所以 #{o} 没有与开区间同胚的邻域。曲率比较仍成立，光滑流形结构却在分叉点失效。}

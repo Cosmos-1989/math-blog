@@ -1,0 +1,10 @@
+\title{光滑曲率流的加权面积输运恒等式}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Haslhofer](icm2026-haslhofer)，§2.1 面积演化与 Definition 2.11 后的等式情形}
+
+\p{设 #{M_t\subset\mathbb R^{n+1}} 是光滑[平均曲率流](2E03)，#{d\mu_t} 为其面积测度，#{\phi(x,t)} 光滑且空间紧支撑。假定流在该支撑附近恰当嵌入且无边界。则}
+##{\frac d{dt}\int_{M_t}\phi\,d\mu_t=\int_{M_t}\left(\partial_t\phi+\langle\nabla\phi,\mathbf H\rangle -\phi|\mathbf H|^2\right)d\mu_t.}
+\p{\strong{证明。}取法向速度参数化 #{\partial_tX=\mathbf H}。[面积密度变分](2E02)给出 #{\partial_td\mu_t=-|\mathbf H|^2d\mu_t}。另一方面，链式法则给出 #{\frac d{dt}\phi(X(p,t),t)=\partial_t\phi+\langle\nabla\phi,\mathbf H\rangle}。}
+\p{对乘积 #{\phi(X(p,t),t)d\mu_t} 求导，再积分，便得公式。紧支撑与局部光滑性保证交换导数、积分合法。若换用含切向速度的参数化，新增项为切向散度的积分，由同一面积变分论证为零。对时间再积分，即得到 [Brakke 不等式](2M0D)的等号情形。}

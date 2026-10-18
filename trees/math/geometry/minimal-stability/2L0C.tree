@@ -1,0 +1,15 @@
+\title{对数截断使稳定不等式跨越有限个穿孔}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，§3.4；Fraser–Schoen v1，引理2.2}
+
+\p{设 #{u:S\to\mathbb R^n} 是完备、有限总曲率且稳定的定向极小浸入。采用[丛延拓](2L0B)，写 #{S=\bar S\setminus P}，令 #{E} 为紧化上的复法丛。对每个光滑截面 #{s\in\Gamma(E)}，有}
+##{\int_{\bar S}|D_z^\top s|^2\,dx\,dy\le\int_{\bar S}|D_{\bar z}^\perp s|^2\,dx\,dy.}
+\p{这些积分取任意光滑共形度量所给的坐标密度；它们不依赖该辅助度量。若原浸入覆盖稳定，则同一结论在 #{\bar S} 的每个有限覆盖上成立。}
+\p{\strong{截断能量。}在每个穿孔的复坐标圆盘中，取 #{0<\epsilon<1}，定义径向函数 #{\chi_\epsilon}：当 #{r\le\epsilon^2} 时为零，当 #{r\ge\epsilon} 时为一，中间取 #{\log(r/\epsilon^2)/|\log\epsilon|}。直接积分得}
+##{\int|\nabla\chi_\epsilon|^2\,dx\,dy=\frac{2\pi}{|\log\epsilon|^2}\int_{\epsilon^2}^{\epsilon}\frac{dr}{r}=\frac{2\pi}{|\log\epsilon|}\longrightarrow 0.}
+\p{二维共形因子在梯度与面积中抵消。对不交穿孔圆盘拼接这些函数，在外部取一；有限个圆盘的能量之和仍趋零。分段光滑截断可在两个转折圆附近光滑逼近，其一阶平方积分任意接近上述值。}
+\p{\strong{传递不等式。}对 #{\chi_\epsilon s} 应用[欧氏复二阶变分](2L05)。因为 #{s} 法向，#{D_z^\top(\chi_\epsilon s)=\chi_\epsilon D_z^\top s}。而}
+##{D_{\bar z}^\perp(\chi_\epsilon s)=\chi_\epsilon D_{\bar z}^\perp s+(\partial_{\bar z}\chi_\epsilon)s.}
+\p{第二项的平方积分至多是截断能量乘 #{\sup|s|^2}，趋于零；交叉项由 [Schwarz 不等式](004S)也趋零。其余项由[支配收敛](0I8I)趋于全曲面积分，得到结论。有限覆盖上的穿孔仍有限，对拉回丛重复相同计算即可。}

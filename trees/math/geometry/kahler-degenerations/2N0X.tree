@@ -1,0 +1,14 @@
+\title{沿交图构造集中质量的垂直除子}
+\date{2026-10-18}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Witt Nyström](icm2026-witt-nystrom)，引理 6.2 及其前段}
+
+\p{设 #{\mathcal X} 为紧连通 #{(X,\alpha)} 的 [SNC 支配模型](2N0C)，#{F=\sum_{j=1}^N b_jE_j}，#{A=\pi_X^*\alpha}，#{n=\dim_{\mathbb C}X\ge 1}。在每个 #{E_k} 上选 Kähler 形式 #{\eta_k}，定义 #{\ell_k(\gamma)=\int_{E_k}\gamma\wedge\eta_k^{n-1}}。对非零[伪有效类](2N0Z)，#{\ell_k(\gamma)>0}：正闭流与严格正测试形式配对给出正质量，质量为零只能是零流。}
+\p{交图的顶点为 #{1,\ldots,N}，#{E_j\cap E_k\ne\varnothing} 时连边。模型为到光滑乘积的修正，纤维连通性保证此图连通；此处引用修正的连通纤维定理。记图中最短边数为 #{l(i,j)}。固定 #{i}，对 #{t\ge 1} 取}
+##{D_{i,t}=\sum_j(1+t^N-t^{N-l(i,j)})b_jE_j.}
+\p{每个系数至少为 #{b_j}，故 #{D_{i,t}\ge F}。#{A+F} 是乘积 Kähler 类的修正拉回，属于[大类](2N06)；这里使用修正拉回保持大性的标准正流结果。再加有效除子仍大，所以 #{A+D_{i,t}} 大。}
+\p{由于 #{F|_{E_k}=0}，有 #{(b_kE_k)|_{E_k}=-\sum_{j\ne k}b_j(E_j\cap E_k)}，求和只取相交者。若 #{k\ne i}，设 #{r=l(i,k)}，令 #{J_{k,i}} 为与 #{k} 相邻且距 #{i} 为 #{r-1} 的顶点集，它因最短路存在而非空。代入并按 #{t} 的幂次整理得}
+##{D_{i,t}|_{E_k}=-t^{N+1-r}\gamma_{k,i}+O(t^{N-r}),\qquad \gamma_{k,i}=\sum_{j\in J_{k,i}}b_j[E_j\cap E_k].}
+\p{相邻顶点距 #{i} 只能为 #{r-1,r,r+1}；前一类给最高阶负项，中间类抵消，后一类仅贡献较低阶项。这解释余项阶数。#{\gamma_{k,i}} 是非零有效除子类，因此 #{\ell_k(\gamma_{k,i})>0}。将 #{\ell_k((A+D_{i,t})|_{E_k})} 除以 #{t^{N+1-r}} 并令 #{t\to\infty}，极限为 #{-\ell_k(\gamma_{k,i})<0}。}
+\p{只有有限个 #{k\ne i}，可选同一个充分大的 #{t_i} 使所有这些限制类都落在半空间 #{\ell_k<0}。取 #{D_i=D_{i,t_i}} 即得集中质量所需的除子。该构造控制实际限制类的符号；极限向量无需与有限 #{t_i} 时的限制类相等。}

@@ -1,0 +1,13 @@
+\title{浸入子流形的法联络}
+\date{2026-10-18}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，§1.1，式(1.1)}
+
+\p{设 #{u:S^k\to(M^n,g)} 为光滑映射，每点的[微分](0045)均单射，即为浸入；给 #{S} 赋予诱导[Riemann 度量](00NI)。沿 #{u} 的环境切空间分解为 #{u^*TM=du(TS)\oplus NS}，其中 #{N_pS=du(T_pS)^\perp} 称法空间，所有法空间组成法丛。拉回丛的纤维在 #{p} 处就是 #{T_{u(p)}M}，故这一构造也适用于有自交的浸入。}
+\p{环境的 [Levi-Civita 联络](00NZ)沿 #{u} 求导后，对法向截面 #{V} 定义}
+##{\nabla_X^\perp V=(\nabla_XV)^\perp,\qquad \nabla_X^\top V=(\nabla_XV)^\top.}
+\p{#{\nabla^\perp} 满足[向量丛联络](0B86)的乘积法则，称法联络。对切向量场 #{X,Y} 记 #{B(X,Y)=(\nabla_Xdu(Y))^\perp}。这是[欧氏向量第二基本形式](2E01)在曲环境中的版本，平均曲率向量为 #{\mathbf H=\sum_i B(e_i,e_i)}，#{e_i} 为局部正交单位切标架；#{\mathbf H=0} 称极小。}
+\p{由 #{\langle V,du(Y)\rangle=0} 求导，得到}
+##{\langle\nabla_X^\top V,du(Y)\rangle=-\langle V,B(X,Y)\rangle.}
+\p{因此切向导数由 #{B} 代数地决定，法向导数才含截面本身的微分。在[双侧超曲面](2G02)上，#{V=f\nu} 且 #{\nabla^\perp\nu=0}，故 #{\nabla^\perp(f\nu)=df\otimes\nu}。若标量形式采用 #{A(X,Y)=\langle\nabla_X\nu,Y\rangle}，则 #{B=-A\nu}，#{\mathbf H=-H\nu}，其中 #{H=\operatorname{div}_S\nu}。}

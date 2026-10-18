@@ -1,0 +1,13 @@
+\title{欧氏三维空间中的显式过扭圆盘}
+\date{2026-10-16}
+\taxon{Example}
+\author{author}
+\meta{source}{[Etnyre](icm2026-etnyre)，§3}
+
+\p{在 #{\mathbb R^3} 的柱坐标 #{(r,\theta,z)} 中，考虑一形式}
+##{\alpha_{\mathrm{ot}}=\cos r\,dz+r\sin r\,d\theta.}
+\p{它在轴 #{r=0} 处也光滑，因为 #{r\sin r\,d\theta=(\sin r/r)(x\,dy-y\,dx)}，而 #{\sin r/r} 在零点延伸为光滑的 #{r^2} 函数。对 #{r>0}，直接计算}
+##{\alpha_{\mathrm{ot}}\wedge d\alpha_{\mathrm{ot}}
+=(r+\sin r\cos r)\,dz\wedge dr\wedge d\theta.}
+\p{函数 #{h(r)=r+\sin r\cos r} 满足 #{h(0)=0}、#{h'(r)=2\cos^2r}，所以 #{h(r)>0} 对 #{r>0} 成立。改用 #{dx\wedge dy=r\,dr\wedge d\theta} 后系数 #{h(r)/r} 在零点趋于 #{2}，故全空间上均为[接触形式](1401)。}
+\p{取圆盘 #{D=\{z=0,\ r\leq\pi\}}。在边界 #{r=\pi} 处有 #{\alpha_{\mathrm{ot}}=-dz}，所以 #{\xi=TD}，而边界切向量 #{\partial_\theta} 位于接触平面。于是 #{D} 是[过扭圆盘](2K0F)，其边界的 #{\operatorname{tb}=0}。}

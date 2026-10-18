@@ -1,0 +1,14 @@
+\title{近全纯各向同性法向截面导致不稳定}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，式(3.2)，§4 定理4.9后的稳定性论证}
+
+\p{设 #{u:S\to M} 为定向[共形极小浸入](0T0S)，在曲环境中仍指诱导度量局部为 #{g=\lambda^2|dz|^2} 且平均曲率向量为零。环境[各向同性曲率](2L0L)下界为 #{\kappa>0}。设 #{s} 是内部紧支撑的光滑[复法丛](2L04)截面，并处处满足 #{b(s,s)=0}。定义}
+##{\|\bar\partial_Es\|_g^2=2\lambda^{-2}|D_{\bar z}^\perp s|_h^2.}
+\p{若 #{s\not\equiv 0} 且 #{\int_S\|\bar\partial_Es\|_g^2\,da<\kappa\int_S|s|_h^2\,da}，则 #{u} 不稳定。}
+\p{\strong{证明。}由[共形零二次关系](0T0T)，#{b(u_z,u_z)=0}。法向性同时给出 #{b(s,u_z)=0} 与 #{h(s,u_z)=0}。所以在 #{s\ne 0} 处，#{s,u_z} 张成全各向同性平面；又 #{|u_z|_h^2=\lambda^2/2}，于是}
+##{h(R(s,u_z)u_{\bar z},s)\ge\frac\kappa 2\lambda^2|s|_h^2.}
+\p{代入[复二阶变分](2L05)，舍去非正的第二基本形式项，并用 #{da=\lambda^2dx\,dy}，得到}
+##{Q_{\mathbb C}(s)\le 2\int_S\left(\|\bar\partial_Es\|_g^2-\kappa|s|_h^2\right)da<0.}
+\p{若 #{s=a+ib}，则 #{Q(a)+Q(b)<0}，至少一个实法向变分使面积二阶导数为负。特别地，在闭曲面上，非零全纯各向同性法向截面就足以证明不稳定。非紧曲面仍须有紧支撑或另行控制截断误差。}

@@ -1,0 +1,12 @@
+\title{度量值映射的拉回二次型}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Korevaar–Schoen，§2.3；Daskalopoulos–Wentworth，[Harmonic Maps and Teichmüller Theory](https://math.umd.edu/~raw/papers/teich.pdf)，§2.3.3，式 (2.48)、(2.49)}
+
+\p{设 #{u:(M,g)\to X} 是[局部 Lipschitz 映射](00FU)，#{X} 完备且 [CAT(0)](2J02)。对[光滑向量场](00NC) #{V}，沿其局部流 #{\Phi_t} 的度量速度记为 #{|u_*V|=\lim_{t\to 0}d(u(\Phi_t(x)),u(x))/|t|}。Korevaar–Schoen 理论给出这一几乎处处定义的速度，并证明极化式}
+##{\pi_u(V,W)=\frac 14\bigl(|u_*(V+W)|^2-|u_*(V-W)|^2\bigr)}
+\p{定义一个对称、半正定的可测双线性张量。其系数局部可积，且[能量密度](2J0E)为 #{e(u)=\tfrac 12\operatorname{tr}_g\pi_u}。这是目标无切空间时替代 #{u^*h} 的分析定理。}
+\p{特别地，在平面圆环的极坐标中，正交单位标架为 #{\partial_r,r^{-1}\partial_\theta}，故}
+##{e(u)=\frac 12\left(|u_*\partial_r|^2+\frac 1{r^2}|u_*\partial_\theta|^2\right),\qquad dV=r\,dr\,d\theta.}
+\p{该公式把圆周上的长度估计转成二维能量下界。若目标是欧氏空间，极化公式直接给出 #{\pi_u(V,W)=\langle du(V),du(W)\rangle}，从而恢复通常的径向与角向导数分解。}

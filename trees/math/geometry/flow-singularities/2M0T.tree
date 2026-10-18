@@ -1,0 +1,13 @@
+\title{圆柱线性算子的四个正模态与三个零模态}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Haslhofer](icm2026-haslhofer)，§3 式 (3.7) 后的谱分解；逐项计算}
+
+\p{在圆柱 #{\mathbb R\times\mathbb S^1(\sqrt 2)} 上，以 #{y\in\mathbb R} 为轴坐标、#{\vartheta\in\mathbb R/(2\pi\mathbb Z)} 为角坐标。[重标度平均曲率流](2E09)在该圆柱处的图像线性算子为}
+##{L=\partial_y^2-\frac y2\partial_y+\frac 12\partial_\vartheta^2+1.}
+\p{它在加权[平方可积空间](00Q6) #{L^2(e^{-y^2/4}dy\,d\vartheta)} 中有四个[线性无关](00D9)的正特征值模态 #{1,y,\cos\vartheta,\sin\vartheta}，以及三个零模态 #{y^2-2,y\cos\vartheta,y\sin\vartheta}。模态指满足 #{Lf=\lambda f} 的[特征函数](0F0B)。}
+\p{\strong{常数与线性项。}直接代入得 #{L1=1}。对 #{y}，二阶导数为零，漂移项为 #{-y/2}，最后的恒等项为 #{y}，所以 #{Ly=y/2}。对 #{\cos\vartheta}，角二阶导数为 #{-\cos\vartheta}，因此 #{L\cos\vartheta=\cos\vartheta /2}；正弦同理。正特征值分别为 #{1,1/2,1/2,1/2}。}
+\p{\strong{二次与混合项。}对 #{y^2-2}，三个非零贡献为 #{2,-y^2,y^2-2}，和为零。对 #{y\cos\vartheta}，轴漂移、角二阶导数、恒等项依次为 #{-y\cos\vartheta /2,-y\cos\vartheta /2,y\cos\vartheta}，也相消；正弦同理。所有这些函数因高斯权而平方可积，且由多项式次数与角 Fourier 项彼此独立。}
+\p{\strong{谱的定位。}令 #{A=\partial_y^2-y\partial_y /2}。其 Hermite 多项式本征函数 #{h_j} 满足 #{Ah_j=-jh_j/2}；角频率 #{m\geq 0} 的本征值为 #{-m^2/2}，故乘积在 #{L} 下的本征值为 #{1-(j+m^2)/2}。Hermite–Fourier 系的完备性作为报告所用谱分解输入。非负要求 #{j+m^2\leq 2}，恰好给出上列七个模态，其他谱值均负。}
+\p{正、零、负谱将归一化演化的扰动分成不同增长率。它们在线性方程中的分类由以上计算得到；[古流分类](2M0O)还须控制非线性余项与远离圆柱的端部几何。}

@@ -1,0 +1,10 @@
+\title{光滑 Monge–Ampère 方程的归一化唯一性}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Witt Nyström](icm2026-witt-nystrom)，定理 2.1 的唯一性；分部积分推导}
+
+\p{设 #{X} 为紧连通 Kähler 流形，复维数 #{n\ge 1}，#{\phi,\psi} 为相对于 #{\omega} 的 [Kähler 势](2N01)。若 #{\omega_\phi^n=\omega_\psi^n}，则 #{\phi -\psi} 为常数；若两者上确界均为零，则 #{\phi=\psi}。}
+\p{\strong{证明。}令 #{u=\phi -\psi}，#{S=\sum_{j=0}^{n-1}\omega_\phi^j\wedge\omega_\psi^{n-1-j}}。幂差公式与 [Stokes 公式](0BAC)给出}
+##{0=\int_Xu(\omega_\phi^n-\omega_\psi^n)=\int_Xu\,dd^cu\wedge S=-\int_Xdu\wedge d^cu\wedge S.}
+\p{最后一步来自 #{d(u\,d^cu\wedge S)=du\wedge d^cu\wedge S+u\,dd^cu\wedge S}。按约定 #{du\wedge d^cu=(i/\pi)\partial u\wedge\bar\partial u}，它与每个正的混合幂的外积都非负。特别是与 #{\omega_\psi^{n-1}} 的外积，在把 #{\omega_\psi} 化为单位矩阵的坐标中，是正倍数的 #{\sum_j|\partial_j u|^2} 乘体积形式。非负连续函数积分为零，故 #{du=0}。连通性使 #{u} 为常数，归一化消去该常数。}

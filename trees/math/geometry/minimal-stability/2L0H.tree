@@ -1,0 +1,13 @@
+\title{大有限覆盖上的近全纯线丛截面}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，§3.5.2；Fraser–Schoen v1，引理3.5}
+
+\p{设 #{T=\mathbb C/(\mathbb Z+\tau\mathbb Z)}，#{L_\rho} 为[酉平坦线丛](2L0G)，其中 #{\rho(1)=e^{i\theta}}、#{\rho(\tau)=e^{i\phi}}。对正整数 #{k}，令 #{T_k=\mathbb C/(k\mathbb Z+k\tau\mathbb Z)}，这是次数 #{k^2} 的[有限覆盖](0A9G)。拉回线丛存在处处单位长光滑截面 #{s_k}，使其平坦坐标下的 #{\bar\partial} 导数满足 #{|D_{\bar z}s_k|\le C_\tau /k}。}
+\p{\strong{构造。}分别选 #{\theta_k,\phi_k} 为 #{k\theta,k\phi} 模 #{2\pi} 的代表，令 #{|\theta_k|,|\phi_k|\le\pi}。写 #{z=\xi+\tau\eta}，定义}
+##{f_k(z)=\exp\left(\frac{i}{k}(\theta_k\xi+\phi_k\eta)\right).}
+\p{在 #{z\mapsto z+k} 下，#{\xi} 增加 #{k}，故 #{f_k(z+k)=e^{i\theta_k}f_k(z)=\rho(k)f_k(z)}；在 #{z\mapsto z+k\tau} 下则得到 #{f_k(z+k\tau)=\rho(k\tau)f_k(z)}。按上述商约定，它确实给出截面，且模恒为一。}
+\p{\strong{导数界。}若 #{\tau=a+ib}、#{b>0}，则 #{\xi=x-ay/b}、#{\eta=y/b}。因此}
+##{\partial_{\bar z}\xi=\tfrac 12(1-ia/b),\qquad \partial_{\bar z}\eta=\frac{i}{2b},\qquad D_{\bar z}s_k=\frac{i}{k}(\theta_k\partial_{\bar z}\xi+\phi_k\partial_{\bar z}\eta)s_k.}
+\p{可取 #{C_\tau=\tfrac\pi 2(\sqrt{1+a^2/b^2}+1/b)}。相位代表必须先模 #{2\pi} 约化，才能得到与 #{k} 无关的常数。任一固定光滑共形度量在紧底环面上与平坦度量一致有界，故同样有 #{O(k^{-1})} 的相对导数界。}

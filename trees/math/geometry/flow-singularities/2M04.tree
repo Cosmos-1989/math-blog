@@ -1,0 +1,12 @@
+\title{双侧接触球的两点不等式}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Haslhofer](icm2026-haslhofer)，§2.2 式 (2.4)，改用外法向}
+
+\p{设 #{X:M\to\mathbb R^{n+1}} 参数化一个紧光滑区域 #{K} 的严格平均凸边界，#{\nu(x)} 为外法向。固定 #{x\in M} 与 #{r>0}。存在半径 #{r} 的内外接触球，当且仅当对每个 #{y\ne x} 都有}
+##{-\frac 1r\leq\frac{2\langle X(y)-X(x),\nu(x)\rangle}{|X(y)-X(x)|^2}\leq\frac 1r.}
+\p{\strong{证明。}记 #{d=X(y)-X(x)}。内球中心必须为 #{c_-=X(x)-r\nu(x)}，曲面不进入其开球等价于}
+##{|X(y)-c_-|^2\geq r^2\quad\Longleftrightarrow\quad |d|^2+2r\langle d,\nu(x)\rangle\geq 0.}
+\p{这给出左侧不等式。外球中心 #{c_+=X(x)+r\nu(x)} 给出 #{|d|^2-2r\langle d,\nu(x)\rangle\geq 0}，即右侧不等式。}
+\p{反过来，不等式保证两开球均不与 #{\partial K} 相交。内球在 #{x} 附近含有沿 #{-\nu(x)} 的点，属于 #{\operatorname{Int}K}；开球连通且不穿过边界，因此整个内球在 #{K} 内。外球同理位于外部。取 #{r=\alpha /H(x)}，便得到[非塌缩](2M03)与两点商绝对值不超过 #{H(x)/\alpha} 的等价性。}

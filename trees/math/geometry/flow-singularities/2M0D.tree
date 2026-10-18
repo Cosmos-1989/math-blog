@@ -1,0 +1,11 @@
+\title{整数 Brakke 流的面积耗散不等式}
+\date{2026-10-18}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Haslhofer](icm2026-haslhofer)，Definition 2.11；采用时间积分形式}
+
+\p{设 #{I\subset\mathbb R} 为区间。一个 #{n} 维整数 Brakke 流是局部有限正则 Borel 测度族 #{\mathcal M=\{\mu_t\}_{t\in I}}，满足：几乎每个时刻的 #{\mu_t} 给出[整数可求长变分子](2M0C)，其[广义平均曲率](2M13) #{\mathbf H} 在紧时空区域上关于 #{d\mu_tdt} 平方可积；质量在紧时空区域上局部一致有界；并满足以下不等式。}
+\p{对 #{a<b}、#{[a,b]\subset I} 和非负、光滑、空间紧支撑的测试函数 #{\phi(x,t)}，有}
+##{\int\phi(x,b)\,d\mu_b-\int\phi(x,a)\,d\mu_a\leq\int_a^b\int\left(\partial_t\phi+\langle\nabla\phi,\mathbf H\rangle -\phi|\mathbf H|^2\right)d\mu_t\,dt.}
+\p{这里 #{\nabla\phi} 是环境欧氏梯度。可测性使右侧时间积分有定义。报告采用上导数形式；时间积分式把允许发生的向下面积跳跃直接写进条件。光滑流的面积测度满足[等式](2M0E)，弱极限一般只保留不等式。}
+\p{测度同时记录位置和整数重数；两个重合的曲面可以具有相同支集、不同测度。因此 Brakke 流与只记录集合的[水平集流](2M09)包含的信息不同。}

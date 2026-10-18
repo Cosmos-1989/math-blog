@@ -1,0 +1,12 @@
+\title{映射微分的协变导数与张力场}
+\date{2026-10-16}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{u:(M,g)\to(N,h)} 光滑，两侧使用 [Levi-Civita 联络](00NZ)。沿 #{u} 的向量场 #{V} 在每个 #{x} 取值于 #{T_{u(x)}N}；其导数定义为}
+##{(\nabla^u_XV)^a=X(V^a)+\Gamma^a_{bc}(u)X(u^b)V^c.}
+\p{其中 #{\Gamma^a_{bc}} 为目标的 [Christoffel 符号](00OE)。映射的二阶协变导数为}
+##{(\nabla du)(X,Y)=\nabla^u_X(du(Y))-du(\nabla^M_XY).}
+\p{由于两联络无挠，这个双线性张量关于 #{X,Y} 对称。它相对于源度量的迹称为张力场}
+##{\tau(u)=\sum_i(\nabla du)(e_i,e_i).}
+\p{写 #{\Delta=\operatorname{div}\nabla}，即[非正谱号的 Laplace 算子](0U14)，则 #{\tau(u)^a=\Delta u^a+g^{ij}\Gamma^a_{bc}(u)\partial_i u^b\partial_j u^c}。在欧氏目标中它逐分量等于 Laplace 算子。}

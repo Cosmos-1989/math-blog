@@ -1,0 +1,10 @@
+\title{度量值映射的 Korevaar–Schoen 能量}
+\date{2026-10-16}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Daskalopoulos 与 Mese](icm2026-daskalopoulos-mese)，§1.2}
+
+\p{设 #{\Omega} 是 #{m} 维[黎曼流形](00NI)中的相对紧开集，#{X} 是完备 [CAT(0) 空间](2J02)。[可测映射](00Q1) #{u:\Omega\to X} 满足 #{\int_\Omega d(u(x),P)^2\,dV<\infty} 时，称为平方可积；换一个基点 #{P} 不改变条件。以 #{\omega_{m-1}} 表示单位球面的面积，在距边界大于 #{\varepsilon} 的点定义}
+##{e_\varepsilon(u)(x)=\frac{m}{2\omega_{m-1}}\int_{\partial B_\varepsilon(x)}\frac{d(u(x),u(y))^2}{\varepsilon^{m+1}}\,dS(y),\qquad E(u)=\sup_{\substack{\phi\in C_c(\Omega)\\0\leq\phi\leq 1}}\limsup_{\varepsilon\downarrow 0}\int_\Omega\phi e_\varepsilon(u)\,dV.}
+\p{有限能量映射组成 #{W^{1,2}(\Omega,X)}，这是[标量 Sobolev 空间](2J0C)的度量版本。Korevaar–Schoen 理论证明，有限能量时近似能量测度收敛到绝对连续测度，其密度记为 #{e(u)}，从而 #{E(u)=\int_\Omega e(u)\,dV}。该测度收敛是引用的分析定理。}
+\p{\strong{光滑情形的归一化。}若目标光滑，则 #{d(u(x),u(\exp_x(\varepsilon v)))^2/\varepsilon^2\to|du_x(v)|^2}。球面的旋转对称性给出 #{\int_{S^{m-1}}v_iv_j\,dS=(\omega_{m-1}/m)\delta_{ij}}，故 #{e(u)=|du|^2/2}，恰好恢复[Dirichlet 能量](2J07)。定义只使用目标中的距离，因此也适用于三叉树等没有切空间的目标。}

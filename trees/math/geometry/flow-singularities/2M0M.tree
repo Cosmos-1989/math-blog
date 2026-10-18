@@ -1,0 +1,12 @@
+\title{旋转碗平移解的常微分方程}
+\date{2026-10-18}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Haslhofer](icm2026-haslhofer)，Example 1.2、Theorems 3.7、4.1 中的 bowl；图像方程直接推导}
+
+\p{设 #{\Sigma^n\subset\mathbb R^{n+1}} 是向最后一个坐标方向以单位速度运动的[平移孤子](2M14)，并且是整个 #{\mathbb R^n} 上的旋转对称图像。其方程 #{\mathbf H=e_{n+1}^\perp} 可化为一个径向常微分方程。}
+\p{取速度 #{v=e_{n+1}}，将曲面写为整个 #{\mathbb R^n} 上的图像 #{(x,f(x))}，向上单位法向为 #{\nu=(-Df,1)/W}，#{W=\sqrt{1+|Df|^2}}。诱导度量为 #{g_{ij}=\delta_{ij}+f_if_j}，逆矩阵为 #{g^{ij}=\delta_{ij}-f_if_j/W^2}。由[平均曲率向量](2E01)的迹定义，#{\mathbf H\cdot\nu=g^{ij}f_{ij}/W}，而 #{e_{n+1}\cdot\nu=1/W}，故}
+##{\sum_{i,j=1}^n\left(\delta_{ij}-\frac{f_if_j}{1+|Df|^2}\right)f_{ij}=1.}
+\p{对旋转对称图像 #{f(x)=g(r)}、#{r=|x|}，Hessian 在径向和切球面方向的[特征值](0F0B)分别为 #{g''}、#{g'/r}。代入得到}
+##{\frac{g''}{1+(g')^2}+\frac{n-1}{r}g'=1\qquad(r>0).}
+\p{光滑顶点要求 #{g'(0)=0}；若 #{g'(r)=ar+o(r)}，方程在 #{r\downarrow 0} 时给出 #{na=1}，即 #{g''(0)=1/n}。当 #{n\geq 2}，该初始条件给出严格凸整图像的旋转碗解，其全局存在唯一性引用报告所引碗孤子理论。全局延拓还需要常微分方程估计。}

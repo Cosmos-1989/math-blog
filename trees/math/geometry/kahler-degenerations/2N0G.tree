@@ -1,0 +1,12 @@
+\title{固定模型上限制体积的质量与连续性}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Witt Nyström](icm2026-witt-nystrom)，定理 3.4、命题 6.1；Mesquita-Piccione–Witt Nyström v1，命题 4.2.1}
+
+\p{固定 #{(X,\alpha)} 的 [SNC 模型](2N0C)，记 #{F=\sum_i b_iE_i}，#{V=\int_X\alpha^n}，#{\mathcal U=\{D=\sum_i d_iE_i:A+D\text{ 为大类}\}}。令 #{g_i(D)=\langle(A+D)^n\rangle_{\mathcal X|E_i}} 为[限制体积](2N0A)。限制体积理论给出：每个 #{g_i} 在开凸集 #{\mathcal U} 上连续，且}
+##{\sum_i b_i g_i(D)=V.}
+\p{\strong{证明概要。}沿整个中央纤维加足够大的正倍数不改变各限制体积，可将 #{D} 调整到 #{D\ge F}。当所有分支对 #{B=A+D} 良好时，[限制体积的上同调线性关系](2N0B)把 #{\sum_i b_i[E_i]=[X_1]} 转成限制体积等式。#{B|_{X_1}=\alpha}，环境限制体积的上下界均为 #{V}，故得到质量恒等式。一般情形用 #{B_\epsilon=B+\epsilon(A+D')}，其中 #{A+D'} 为 Kähler 类，以良好扰动和限制体积的单调极限得到等式。这些极限性质是所引解析输入。}
+\p{连续性在与 Kähler 位置相交的分支上由 Collins–Tosatti 的连续性定理给出；在非 nef 位置上限制体积局部为零。剩余边界情形使用负方向扰动。其一般纤维类为 #{(1+\epsilon)\alpha}，故对充分小的 #{\epsilon<0}，质量比较的正确形式为}
+##{(1+\epsilon)^nV=\sum_j b_j\langle B_\epsilon^n\rangle_{\mathcal X|E_j}\le\sum_{j\ne i}b_jg_j(D)=V-b_i g_i(D).}
+\p{此处被删去的第 #{i} 项因该分支进入非 nef 位置而为零，其他项由单调性控制。令 #{\epsilon\uparrow 0}，得 #{b_i g_i(D)\le 0}，结合非负性得到 #{g_i(D)=0}。再用单调性夹逼即得边界连续性。扰动进入奇异位置及夹逼所需的势理论按命题 6.1 引用。}

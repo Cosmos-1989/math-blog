@@ -1,0 +1,11 @@
+\title{欧氏调和函数的频率单调性}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{在[频率函数](2J0L)的设定下，#{N(r)} 随 #{r} 单调不减。确切地，}
+##{N'(r)=\frac{2r}{H(r)^2}\left(H(r)\int_{\partial B_r}(\partial_\nu h)^2-D(r)^2\right)\geq 0.}
+\p{\strong{边界微分。}把球面积分写成 #{r^{m-1}\int_{S^{m-1}}h(r\theta)^2\,d\theta}，微分得到 #{H'=(m-1)H/r+2D}，其中使用 #{D=\int_{\partial B_r}h\partial_\nu h}。}
+\p{\strong{能量微分。}向量场 #{V=|\nabla h|^2x-2(x\cdot\nabla h)\nabla h} 满足 #{\operatorname{div}V=(m-2)|\nabla h|^2}，因为二阶导数项相消且 #{\Delta h=0}。[散度定理](0BAC)于是给出}
+##{r\int_{\partial B_r}\left(|\nabla h|^2-2(\partial_\nu h)^2\right)=(m-2)D(r),\qquad D'=\frac{m-2}{r}D+2\int_{\partial B_r}(\partial_\nu h)^2.}
+\p{把这两式代入 #{N'=D/H+rD'/H-rDH'/H^2}，各维数项相消，得到所述恒等式。最后由[积分 Hölder 不等式](0A68)的平方可积情形，#{(\int h\partial_\nu h)^2\leq H\int(\partial_\nu h)^2}。若频率在一段半径上恒定，等号条件给出 #{\partial_rh=N h/r}，沿射线积分便恢复齐次性。}

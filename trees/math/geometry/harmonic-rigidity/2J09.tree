@@ -1,0 +1,9 @@
+\title{调和映射的第一变分公式}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{u:(M,g)\to(N,h)} 光滑。取光滑边界的相对紧区域 #{\Omega\subset M}，令 #{u_t} 是在 #{\partial\Omega} 上固定、并光滑定义于 #{\overline\Omega} 附近的变分，#{V=\partial_tu_t|_{t=0}}。对该区域上的 [Dirichlet 能量](2J07)有}
+##{\left.\frac{d}{dt}\right|_{0}E(u_t;\Omega)=-\int_\Omega\langle V,\tau(u)\rangle\,d\operatorname{vol}_g.}
+\p{\strong{证明。}度量相容性给出 #{\partial_t|du_t|^2/2=\sum_i\langle\nabla^u_{e_i}V,du(e_i)\rangle}。利用[协变导数](2J08)的乘积法则，将右端写成一个散度减去 #{\langle V,\tau(u)\rangle}。散度项由 [Stokes 公式](0BAC)化为边界积分；固定边界或紧支撑条件使它为零。}
+\p{称 #{u} 为光滑调和映射，是指对每个这样的区域，所有紧支撑变分的第一变分均为零。这等价于 #{\tau(u)=0}：若张力场在某处非零，取一个非负小支撑函数 #{\eta}，令 #{V=\eta\tau(u)}，所得积分严格为负。这样的沿映射变分场可由目标[指数映射](00NV)局部实现。闭源流形上可直接对全局能量使用公式；非紧源上的局部定义允许总能量为无穷。调和表示驻点，在一般目标中不能直接推出全局极小。}

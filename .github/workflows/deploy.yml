@@ -49,6 +49,8 @@ jobs:
           node --test tests/plenary-coverage.test.mjs tests/plenary-math.test.mjs
           node --test tests/geometry-oct16.test.mjs
           node --test tests/geometry-closing-kakeya.test.mjs
+          node --test tests/geometry-harmonic-contact.test.mjs
+          node --test tests/geometry-stability-flow-kahler.test.mjs
           node --test tests/topology-exotic-stems-graphs-math.test.mjs
           node tests/bourbaki-math.test.mjs
           node tests/geometry-expansion-math.test.mjs
@@ -119,6 +121,8 @@ jobs:
           node tests/plenary-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-geometry-oct16.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-geometry-closing-kakeya.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-geometry-harmonic-contact.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-geometry-stability-flow-kahler.json node tests/topology-report-render.test.mjs
           node tests/topic-introductions-render.test.mjs
 
       - name: Setup Pages

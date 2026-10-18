@@ -1,0 +1,10 @@
+\title{Gray 稳定性与接触结构的变形}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{M} 为闭光滑流形，#{\alpha_t} 是 #{0\leq t\leq 1} 上光滑变化的[接触形式](1401)。则存在从恒等映射出发的微分同胚族 #{\phi_t} 与正函数 #{f_t}，使 #{\phi_t^*\alpha_t=f_t\alpha_0}。因此这族接触分布由环境同痕联系。}
+\p{\strong{证明。}令 #{\xi_t=\ker\alpha_t}。因为 #{d\alpha_t|_{\xi_t}} 非退化，可唯一解出 #{X_t\in\xi_t}，使 #{\iota_{X_t}d\alpha_t|_{\xi_t}=-\dot\alpha_t|_{\xi_t}}。于是 #{\dot\alpha_t+\iota_{X_t}d\alpha_t=g_t\alpha_t}，其中 #{g_t=\dot\alpha_t(R_t)}，#{R_t} 为 [Reeb 场](1402)。}
+\p{#{X_t} 的[流](00OB)在紧流形上存在至时间 #{1}。用 #{\alpha_t(X_t)=0} 和 Cartan 公式 #{\mathcal L_X\alpha=\iota_Xd\alpha+d(\alpha(X))}，得到}
+##{\frac{d}{dt}\phi_t^*\alpha_t=(g_t\circ\phi_t)\phi_t^*\alpha_t.}
+\p{解此标量微分方程，得 #{f_t=\exp(\int_0^t g_s\circ\phi_s\,ds)>0}。Cartan 公式及随流拉回的微分公式可逐坐标求导，也见[辛 Darboux 证明](2H0O)。若只在一点附近使用且 #{X_t} 固定该点，缩小邻域即可得到相同的局部结论。}

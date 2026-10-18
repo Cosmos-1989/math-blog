@@ -1,0 +1,11 @@
+\title{调和映射的 Bochner 恒等式}
+\date{2026-10-16}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Daskalopoulos 与 Mese](icm2026-daskalopoulos-mese)，§1.1；采用本站曲率与能量约定}
+
+\p{设 #{u:(M,g)\to(N,h)} 是光滑[调和映射](2J09)。以 #{R(X,Y)Z=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z} 定义[曲率](2G01)，以 #{\Delta=\operatorname{div}\nabla} 定义 Laplace 算子。令 #{u_i=du(e_i)}，则}
+##{\tfrac 12\Delta|du|^2=|\nabla du|^2+\sum_i\langle du(\operatorname{Ric}^M e_i),u_i\rangle -\sum_{i,j}\langle R^N(u_i,u_j)u_j,u_i\rangle.}
+\p{\strong{证明。}在考察点取源的正规正交标架，记 #{D=\nabla du}。度量相容性给出 #{\Delta|du|^2/2=|D|^2+\sum_j\langle\sum_i\nabla_i\nabla_i du_j,du_j\rangle}。#{D} 的对称性允许先把 #{\nabla_i du_j} 换成 #{\nabla_j du_i}。对取值于目标切空间的源一形式，交换两次协变导数得到}
+##{\sum_i\nabla_i\nabla_i du_j=\nabla_j\tau(u)+du(\operatorname{Ric}^M e_j)+\sum_iR^N(u_i,u_j)u_i.}
+\p{此式中目标曲率作用在向量值上，源曲率以负号作用在一形式指标上；缩并后源项成为正的 Ricci 项。调和条件消去 #{\nabla_j\tau(u)}，再利用曲率在最后两个内积位置的反对称性即得结论。所有计算使用[二阶协变导数](2J08)，故正规标架下所得等式是坐标无关的。}

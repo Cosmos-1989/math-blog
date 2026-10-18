@@ -1,0 +1,13 @@
+\title{Chekanov–Eliashberg 代数的多边形微分}
+\date{2026-10-16}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Etnyre](icm2026-etnyre)，§5.1.1；基础综述 §4.1}
+
+\p{设 #{L\subset(\mathbb R^3,\ker(dz-y\,dx))} 为一般位置的有向 Legendrian 结。其 #{xy} 投影只有有限个横截双点，记对应的 [Reeb 弦](2K0M)集合为 #{C}。取以 #{C} 为基的 #{\mathbb F_2} 向量空间的[张量代数](014U)，得到非交换带单位代数 #{A=\mathbb F_2\langle C\rangle}。单词 #{b_1\cdots b_k} 的次序保留圆盘边界经过角点的次序。}
+\p{一个弦 #{c} 的上下端点用 #{c^+,c^-} 表示。沿结从 #{c^+} 到 #{c^-} 取弧，将其投影切线视为无向直线；在末端顺时针转到起始直线，得到射影圆中的闭路。其度数定义 #{|c|}，不同弧的选择相差 #{2\operatorname{rot}(L)}。因此分次取值于 #{\mathbb Z/(2\operatorname{rot}(L))}，旋转数为零时取整数分次，参见[绕数](00FK)与[旋转数](2K0A)。}
+\p{给圆盘边界取逆时针方向。在双点处，若把相邻两条边提升到结上时从低端点跳到高端点，就将所占象限标为正；从高端点跳到低端点则标为负。每个双点的正负象限交替出现。计数到平面的保向浸入圆盘，它的边界落在投影曲线上，角点均占据一个象限；一个角 #{a} 为正，其余顺边界依次为负角 #{b_1,\ldots,b_k}。这些圆盘满足}
+##{\int_Du^*(dx\wedge dy)=\mathcal A(a)-\sum_{j=1}^k\mathcal A(b_j)>0.}
+\p{将这些圆盘按保向重参数化取商，计数模二，定义 #{\partial a=\sum_{b_1\cdots b_k}\#_2\mathcal M(a;b_1,\ldots,b_k)b_1\cdots b_k}；无负角时对应常数项 #{1}。微分再按 Leibniz 法则延伸到全代数。面积恒等式可直接验证。每条光滑边上 #{dz=y\,dx}；绕边界一周后，边上的 #{z} 变化总和与角点跳跃总和相加为零。因此 #{-\oint y\,dx} 等于正角的高度减去负角高度之和。Stokes 公式把左侧变成 #{\int dx\wedge dy}。}
+\p{Chekanov 定理保证这里的计数有限、#{\partial} 降低分次一且 #{\partial^2=0}，并使同调代数在 Legendrian 同痕下不变。完整的角点拼接与局部变形论证见所引基础综述 Lemma 4.1、Theorem 4.4 及其原始文献。这里采用降低次数的[微分分次代数](019A)约定，与上链约定通过次数取负对应。}
+\p{\strong{一个代数检验。}若有元素 #{a} 满足 #{\partial a=1}，则任意闭元 #{x} 满足 #{x=\partial(ax)}，故全部同调为零。几何稳定化产生这类元素，见基础综述 Proposition 4.8。相同经典不变量的结仍可能有不同的微分代数，这正是其区别能力的来源。}

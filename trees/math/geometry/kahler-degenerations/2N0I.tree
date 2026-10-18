@@ -1,0 +1,15 @@
+\title{大测试构型的 Calabi–Yau 定理}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Witt Nyström](icm2026-witt-nystrom)，定理 A、§6}
+
+\p{设 #{(X,\alpha)} 为紧连通 Kähler 流形及其 Kähler 类，#{\dim_{\mathbb C}X=n\ge 1}，#{V=\int_X\alpha^n}。固定一个 [SNC 光滑紧支配模型](2N0C) #{\mathcal X}，#{F=\sum_{j=1}^N b_jE_j}，#{A=\pi_X^*\alpha}。对任意 #{q_j\ge 0}、#{\sum_j q_j=1}，存在垂直实除子 #{D}，使 #{A+D} 为大类且}
+##{\operatorname{MA}(\mathcal X,A+D)=\sum_j q_j\delta_{E_j}.}
+\p{测度使用[限制体积定义](2N0F)，允许零系数。结论为同一固定模型上的存在性；不附加除子 #{D} 的唯一性。}
+\p{\strong{几何输入。}[集中质量的除子构造](2N0X)给出 #{D_1,\ldots,D_N}：所有 #{A+D_i} 为大类，且对每个 #{j} 有线性泛函 #{\ell_j}，在 #{E_j} 的伪有效类上非负，而对 #{i\ne j} 有 #{\ell_j((A+D_i)|_{E_j})<0}。[质量与连续性定理](2N0G)保证限制体积可连续变化且总质量守恒。}
+\p{\strong{构造单纯形映射。}对 #{a\in\Sigma_N} 令 #{D_a=\sum_i a_iD_i}。由[大锥凸性](2N06)，#{A+D_a=\sum_i a_i(A+D_i)} 仍大。令}
+##{f_j(a)=V^{-1}b_j\langle(A+D_a)^n\rangle_{\mathcal X|E_j}.}
+\p{质量定理给出 #{f(a)\in\Sigma_N}，连续性定理给出 #{f} 连续。若 #{a_j=0}，则实际限制类满足}
+##{\ell_j((A+D_a)|_{E_j})=\sum_{i\ne j}a_i\ell_j((A+D_i)|_{E_j})<0.}
+\p{这里至少一个 #{a_i>0}。因此 #{(A+D_a)|_{E_j}} 非伪有效，[限制体积上界](2N0A)给出 #{f_j(a)=0}。于是 #{f} 保持每个面，由[保面满射定理](2N0H)存在 #{a} 使 #{f(a)=q}，取 #{D=D_a} 即得所求。#{N=1} 时任取一个大测试构型，总质量恒等式直接给出唯一的概率分配。}

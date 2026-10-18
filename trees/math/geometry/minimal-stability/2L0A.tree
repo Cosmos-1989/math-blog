@@ -1,0 +1,13 @@
+\title{双侧稳定极小超曲面的有限覆盖仍稳定}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，定义3.13后的性质1；以下给出纤维平方和证明}
+
+\p{设 #{u:S\to M} 为[双侧稳定极小超曲面](2G04)，#{p:\widetilde S\to S} 为有限层光滑[覆盖](0A9G)。则 #{u\circ p} 稳定，因而 #{u} [覆盖稳定](2L09)。此结论不要求紧致或完备。}
+\p{\strong{证明。}双侧性使法向速度为标量函数乘单位法向。记势 #{W=|A|^2+\operatorname{Ric}(\nu,\nu)}。取覆盖上任意内部紧支撑光滑实函数 #{f}。在均匀覆盖邻域，记各层上的值为 #{f_1,\ldots,f_d}。函数 #{F=\sum_jf_j^2} 不受层的排列影响，因而是底空间上光滑紧支撑函数。}
+\p{为避免平方根在零点不光滑，令 #{v_\epsilon=\sqrt{F+\epsilon^2}-\epsilon}。它光滑且支撑在 #{\operatorname{supp}F} 内。逐点的 [Cauchy–Schwarz 不等式](004S)给出}
+##{|\nabla v_\epsilon|^2=\frac{|\sum_j f_j\nabla f_j|^2}{F+\epsilon^2}\le\sum_j|\nabla f_j|^2.}
+\p{底空间稳定性于是推出 #{\int_S Wv_\epsilon^2\le\int_{\widetilde S}|\nabla f|^2}。在固定紧支撑上 #{W} 有界，#{v_\epsilon^2\to F} 且 #{0\le v_\epsilon^2\le F}，由[支配收敛定理](0I8I)可令 #{\epsilon\to 0}，得到}
+##{\int_{\widetilde S}(W\circ p)f^2=\int_SW F\le\int_{\widetilde S}|\nabla f|^2.}
+\p{这就是覆盖上的标量稳定不等式。高余维的法向截面取值于不同纤维，不能用同一标量平方和保留全部第二基本形式与曲率项。}

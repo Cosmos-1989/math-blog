@@ -1,0 +1,10 @@
+\title{仿射近似的几何衰减给出一阶可微性}
+\date{2026-10-16}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{u:B_1(0)\subset\mathbb R^m\to\mathbb R^q} 连续，#{0<\theta<1}、#{\alpha>0}。假设对每个 #{j\geq 0} 都有仿射映射 #{l_j(x)=a_j+B_jx}，满足}
+##{\sup_{B_{\theta^j}}|u-l_j|\leq C\theta^{j(1+\alpha)}.}
+\p{则存在 #{B} 使 #{u(x)=u(0)+Bx+O(|x|^{1+\alpha})}。}
+\p{\strong{证明。}在 #{B_{\theta^{j+1}}} 上，#{|l_{j+1}-l_j|\leq 2C\theta^{j(1+\alpha)}}。在原点求值得 #{|a_{j+1}-a_j|\leq 2C\theta^{j(1+\alpha)}}；在 #{\pm(\theta^{j+1}/2)e_i} 取值相减，得各列 #{|(B_{j+1}-B_j)e_i|\leq 4C\theta^{-1}\theta^{j\alpha}}。几何级数收敛，故 #{a_j\to a}、#{B_j\to B}，并有 #{|a-a_j|=O(\theta^{j(1+\alpha)})}、#{\|B-B_j\|=O(\theta^{j\alpha})}。}
+\p{在原点的原假设给出 #{a=u(0)}。对任意小 #{x\ne 0}，选 #{j} 使 #{\theta^{j+1}\leq|x|<\theta^j}，合并三项误差即得结论。奇异目标中的[调和映射正则性](2J0O)也采用逐尺度改进思想，但还必须先找到同一个可作仿射比较的光滑分支。}

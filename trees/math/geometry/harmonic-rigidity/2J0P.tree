@@ -1,0 +1,12 @@
+\title{以截断函数跨越奇点集的 Bochner 论证}
+\date{2026-10-16}
+\taxon{Lemma}
+\author{author}
+
+\p{设 #{M} 为闭黎曼流形，#{S\subset M} 是闭零测集。映射 #{u} 在 #{M\setminus S} 上光滑，满足[Bochner 不等式](2J0A) #{\Delta e\geq|\nabla du|^2}，其中 #{e=|du|^2/2}，且 #{|du|\leq L}。假设有光滑函数 #{\psi_j} 在 #{S} 附近为零，#{0\leq\psi_j\leq 1}，在 #{M\setminus S} 上趋于一，并且}
+##{\int_{M\setminus S}|\nabla du||\nabla\psi_j|\,dV\longrightarrow 0.}
+\p{则 #{\nabla du=0} 在正则集上成立。}
+\p{\strong{证明。}由[散度定理](0BAC)，#{\int\psi_j\Delta e=-\int\langle\nabla\psi_j,\nabla e\rangle}。又 #{|\nabla e|\leq|du||\nabla du|}，所以}
+##{0\leq\int\psi_j|\nabla du|^2\leq L\int|\nabla\psi_j||\nabla du|\longrightarrow 0.}
+\p{在任意正则点附近的小紧集上应用 [Fatou 引理](0I8I)，得到 #{\int|\nabla du|^2=0}，故连续性给出逐点消失。}
+\p{源 Ricci 曲率非负且目标正则部分的截面曲率非正时，[光滑 Bochner 恒等式](2J0A)正好给出所需不等式。建筑正则性提供的[加权截断估计](2J0O)解释了奇点处为什么不会留下边界项。}

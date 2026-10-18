@@ -1,0 +1,14 @@
+\title{包络正交性：质量集中在接触集}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Witt Nyström](icm2026-witt-nystrom)，定理 7.2–7.3、命题 7.4；Mesquita-Piccione–Witt Nyström v1，§4.2}
+
+\p{设 #{(X,\alpha)} 为紧 Kähler 流形，#{f} 为 #{X^{\mathrm{NA}}} 上连续实函数，#{P_A(f)} 为[连续 psh 包络](2N0U)。则}
+##{\int(f-P_A(f))\,d\operatorname{MA}_A(P_A(f))=0.}
+\p{\strong{解析输入。}先令 #{f=f_D} 为[PL 函数](2N0N)，加常数后可假设 #{D\ge F=\sum_i b_iE_i}。记 #{B=A+D}。所引模型包络定理与 Lelong 数估计给出}
+##{\operatorname{MA}_A(P_A(f_D))=V^{-1}\sum_i b_i\langle B^n\rangle_{\mathcal X|E_i}\delta_{v_{E_i}},\qquad 0\le f_D(v_{E_i})-P_A(f_D)(v_{E_i})\le b_i^{-1}\nu_{E_i}(B).}
+\p{前式是报告定理 7.3；后式使用原论文命题 4.2.3 所需的单侧不等式。[Lelong 数](2N08)正时，[限制体积](2N0A)为零。因此每个正质量点上必有 #{\nu_{E_i}(B)=0}，包络差也为零，逐项求和得到 PL 情形的积分为零。}
+\p{\strong{一致逼近。}PL 函数在连续函数中一致稠密，引用非阿基米德模型理论。选 #{f_k\to f} 一致，则包络稳定性给出 #{P_A(f_k)\to P_A(f)} 一致。[MA 连续性](2N0R)给出概率测度 #{\mu_k\to\mu} 弱收敛。令 #{h_k=f_k-P_A(f_k)}、#{h=f-P_A(f)}，有}
+##{\left|\int h_k\,d\mu_k-\int h\,d\mu\right|\le\|h_k-h\|_\infty+\left|\int h\,d\mu_k-\int h\,d\mu\right|\longrightarrow 0.}
+\p{第一项由一致收敛趋零，第二项由 #{h} 连续及弱收敛趋零，故得到所求。因为 #{f-P_A(f)\ge 0}，等式还表明 MA 测度在严格不接触区域 #{\{P_A(f)<f\}} 上为零。}

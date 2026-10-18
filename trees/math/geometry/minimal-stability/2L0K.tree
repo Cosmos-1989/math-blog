@@ -1,0 +1,14 @@
+\title{统一近全纯标架迫使第二基本形式项消失}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，§3.5.3 的能量比较；Fraser–Schoen v1 定理3.7；以下为带显式统一假设的判据}
+
+\p{设 #{F\to T} 是紧曲面上的厄米向量丛，秩为 #{r}；#{D''} 是一个满足乘积法则的一阶算子，#{A:F\to G} 是到另一厄米丛的光滑纤维线性映射。设次数 #{d_k} 的[有限覆盖](0A9G) #{p_k:T_k\to T} 上均有不等式 #{\int|A_ks|^2\le\int|D_k''s|^2}。这里下标 #{k} 表示拉回，所有范数和面积也拉回。}
+\p{假设 #{p_k^*F} 有光滑标架 #{s_{k,1},\ldots,s_{k,r}}，存在与 #{k} 无关的 #{0<c\le C<\infty}，使每个系数向量 #{a\in\mathbb C^r} 满足}
+##{c\sum_j|a_j|^2\le\left|\sum_ja_js_{k,j}\right|^2\le C\sum_j|a_j|^2,\qquad |D_k''s_{k,j}|\le\epsilon_k|s_{k,j}|,\qquad\epsilon_k\longrightarrow 0.}
+\p{则 #{A=0}。这里[向量丛](0A3V)及算子的范数由[厄米内积](2L03)逐纤维定义，配对对第一变量线性。}
+\p{\strong{证明。}记 #{|A|_{\mathrm{HS}}^2} 为任意正交单位基下像的模平方和。标架矩阵 #{S_k} 满足 #{S_kS_k^*\ge cI}，故取迹得到 #{\sum_j|A_ks_{k,j}|^2\ge c|A_k|_{\mathrm{HS}}^2}。对每个截面应用不等式后求和，得到}
+##{c\,d_k\int_T|A|_{\mathrm{HS}}^2\le\sum_j\int_{T_k}|D_k''s_{k,j}|^2\le\epsilon_k^2rC\,d_k\operatorname{Area}(T).}
+\p{除以 #{d_k} 并令 #{k\to\infty}，可知 #{\int_T|A|^2=0}。由连续性，#{A} 逐点为零。}
+\p{在[复稳定不等式](2L05)中，#{A(s)=(\partial s)^\top} 是纤维线性的，因为 #{s} 法向时 #{(\partial f)s} 的切向投影为零；#{D''s=\bar\partial_Es} 则含导数。实际应用须先证明上述统一下界，或采用保证每个商层不退化的滤过估计。}

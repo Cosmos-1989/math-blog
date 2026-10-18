@@ -25,8 +25,8 @@ test('geometry coverage registers the three reports without duplicating topics',
   const topics = listedTopics(note('0065'));
   assert.deepEqual(topics.slice(0, 2), ['2C00', '2600']);
   const coverage = JSON.parse(read('research/icm2026-geometry-section-coverage.json'));
-  assert.equal(coverage.counts.primary_reports_with_existing_topic, 7);
-  assert.equal(coverage.counts.reports_without_dedicated_topic, 8);
+  assert.equal(coverage.counts.primary_reports_with_existing_topic, coverage.reports.filter(row => row.outline).length);
+  assert.equal(coverage.counts.reports_without_dedicated_topic, coverage.reports.filter(row => !row.outline).length);
   for (const report of record.reports) {
     assert.equal(topics.filter(id => id === report.outline).length, 1);
     const entry = coverage.reports.find(row => row.speakers.includes(report.speaker));

@@ -1,0 +1,15 @@
+\title{任意余维极小浸入的稳定二次型}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，§1.1，式(1.1)}
+
+\p{设 #{u:S^k\to(M^n,g)} 是[极小浸入](2L01)。对支撑为内部紧集的光滑法向截面 #{V}，面积二阶变分为}
+##{Q(V)=\int_S\left(\sum_{i=1}^k|\nabla_{e_i}^\perp V|^2-\sum_{i,j=1}^k\langle B(e_i,e_j),V\rangle^2-\sum_{i=1}^k\langle R(V,e_i)e_i,V\rangle\right)da.}
+\p{#{B} 与 #{\nabla^\perp} 取[法联络](2L01)的约定，#{R} 取[曲率张量](004J)的约定，#{e_i} 表示单位切标架及其在环境中的像。称浸入稳定，若所有这样的 #{V} 都满足 #{Q(V)\ge 0}。有边界时这里检验固定边界的内部变分；不含自由边界的边界项。其 Morse 指标是使 #{Q} 负定的实截面子空间的维数上确界。}
+\p{\strong{证明。}选法向测地变分 #{u_t(p)=\exp_{u(p)}(tV(p))}，于是 #{\nabla_t\partial_tu_t=0}。在 #{t=0} 的一点取正交切标架，记诱导度量矩阵为 #{g(t)}。无挠性、度量相容性与曲率交换公式给出}
+##{g'_{ij}=-2\langle B(e_i,e_j),V\rangle,\qquad \tfrac 12\operatorname{tr}g''=\sum_i\left(|\nabla_{e_i}V|^2+\langle R(V,e_i)V,e_i\rangle\right).}
+\p{[面积密度的微分](2E02)在 #{g(0)=I} 时给出}
+##{(\sqrt{\det g})''=\tfrac 12\operatorname{tr}g''-\tfrac 12\operatorname{tr}((g')^2)+\tfrac 14(\operatorname{tr}g')^2.}
+\p{极小性使最后一项为零。法联络恒等式给出 #{\sum_i|\nabla_{e_i}^\top V|^2=\sum_{i,j}\langle B(e_i,e_j),V\rangle^2}；把 #{\nabla V} 分成正交的切向与法向部分，合并系数，即得公式。一般同初速度变分多出的加速度项与 #{\mathbf H} 配对，因此在极小浸入处仍为零。}
+\p{双侧余维一时代入 #{V=f\nu}，便得到既有的[超曲面二阶变分](2G03)。高余维中 #{\nabla^\perp} 一般不能化成一个标量函数的梯度。}

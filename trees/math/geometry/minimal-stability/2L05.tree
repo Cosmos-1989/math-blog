@@ -1,0 +1,13 @@
+\title{极小曲面的复二阶变分}
+\date{2026-10-18}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Fraser](icm2026-fraser)，§3.3，式(3.1)–(3.2)；Fraser–Schoen v1 §2}
+
+\p{设 #{u:S\to M} 是定向共形极小浸入：与[欧氏共形极小浸入](0T0S)一样，诱导度量局部为 #{\lambda^2(dx^2+dy^2)}，在曲环境中极小性取 #{\mathbf H=0}。设 #{s=a+ib} 是[复法丛](2L04)的紧支撑光滑截面。把[实二阶变分](2L02)厄米延拓，记 #{Q_{\mathbb C}(s)=Q(a)+Q(b)}。于是实稳定性等价于 #{Q_{\mathbb C}\ge 0}。用[厄米范数](2L03)及 #{D_z=\nabla_{\partial /\partial z}} 记导数，Micallef–Moore 公式为}
+##{Q_{\mathbb C}(s)=4\int_S\left(|D_{\bar z}^\perp s|^2-|D_z^\top s|^2-h(R(s,u_z)u_{\bar z},s)\right)dx\,dy.}
+\p{坐标表达的各项连同 #{dx\,dy} 在全纯坐标变换下不变，故可逐坐标积分。曲环境公式引用上述文献式(3.2)。因 #{h(v,w)=b(v,\bar w)} 对第一变量线性，曲率项也就是 #{b(R(s,u_z)u_{\bar z},\bar s)}。在单位圆球的约定 #{R(X,Y)Z=\langle Y,Z\rangle X-\langle X,Z\rangle Y} 下，它等于 #{(\lambda^2/2)|s|^2}，因此正曲率以负号进入二阶变分。欧氏情形曲率项为零，其推导如下。}
+\p{\strong{欧氏情形的证明。}在诱导度量 #{g=\lambda^2|dz|^2} 下，#{\lambda^{-2}} 与面积因子抵消。[法联络恒等式](2L01)把实二次型复化后写为}
+##{Q_{\mathbb C}(s)=2\int_S\left(|D_zs|^2+|D_{\bar z}s|^2-2|D_z^\top s|^2-2|D_{\bar z}^\top s|^2\right)dx\,dy.}
+\p{对欧氏值截面的每个复分量，紧支撑的[分部积分](0U14)与混合偏导可交换性给出 #{\int|D_zs|^2=\int|D_{\bar z}s|^2}。等价地，二者之差对应一个恰当二形式，积分由 Stokes 公式为零，因此不要求整个曲面有单一坐标。代入并使用 #{|D_{\bar z}s|^2=|D_{\bar z}^\perp s|^2+|D_{\bar z}^\top s|^2}，便得欧氏公式。}
+\p{全纯法向截面仅要求 #{D_{\bar z}^\perp s=0}，比实平行条件 #{\nabla^\perp s=0} 弱得多。它消去正项，留下第二基本形式和环境曲率所贡献的负项。}
