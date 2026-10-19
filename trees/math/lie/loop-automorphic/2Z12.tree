@@ -1,0 +1,20 @@
+\title{Schwartz 空间上的 beta–gamma 场}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Dai–Zhu，§3，式(3.2)–(3.5)、命题3.2](icm2026-zhu)}
+
+\p{取实辛空间的[负回路极化](2Z0I)。写每个负模态坐标为 #{(x_{i,k},y_{i,k})}，#{1\leq i\leq n,k\geq 1}，并在[切片 Schwartz 空间](2Z0O)上定义}
+##{\begin{aligned}
+\beta_i(k-1)&=\partial_{y_{i,k}},&
+\beta_i(-k)&=-2\pi i\,x_{i,k},\\
+\gamma_i(k-1)&=\partial_{x_{i,k}},&
+\gamma_i(-k)&=2\pi i\,y_{i,k}.
+\end{aligned}}
+\p{右边的坐标表示乘法算子。这些算子来自[Heisenberg 作用](2Z0K)的微分及重新编号。求导和坐标乘法均保持有限维 Schwartz 条件，故在整个空间上良定义。}
+\p{\strong{对易关系。}同坐标上 #{[\partial_x,x]=1}，不同坐标上的算子交换。因此只有 #{m=k-1,n=-k} 或反向的配对产生非零项；后一种情形的两个负号互相抵消。逐一得到}
+##{[\beta_i(m),\beta_j(n)]=[\gamma_i(m),\gamma_j(n)]=0,\qquad
+[\beta_i(m),\gamma_j(n)]=2\pi i\,\delta_{ij}\delta_{m+n+1,0}.}
+\p{\strong{拓扑场条件。}设 #{U_N} 是在前 #{N} 模态切片上为零的函数。坐标乘法保持 #{U_N}；对第 #{k} 坐标求导，把 #{U_{\max(N,k)}} 送入 #{U_N}，因为可先在含该坐标的切片求导再限制。故每个模态连续。当 #{k>N}，乘法算子 #{x_{i,k},y_{i,k}} 的整个像在 #{U_N} 中。因此 #{\beta_i(z),\gamma_i(z)} 的负模态满足[统一尾部条件](2Z0Y)。}
+\p{Dai–Zhu 命题3.2进一步证明这些场给出[完备拓扑顶点代数模](2Z11)。生成顶点代数是 beta–gamma 系统。令 #{B_i=\beta_i /(2\pi i)}、#{\Gamma_i=\gamma_i}，其奇异算子乘积写为 #{B_i(z)\Gamma_j(w)\sim\delta_{ij}/(z-w)}，同类场之间无奇异项；反序的 #{\Gamma_j(z)B_i(w)} 的简单极点为负。符号 #{\sim} 只记奇异部分，等价于这些模态对易关系。}
+\p{生成场的顶点代数重构定理作为外部输入。因实群作用的角色含 #{2\pi i}，归一化场只能理解为代数生成元缩放，不能把实群的酉相位直接改成增长指数。}

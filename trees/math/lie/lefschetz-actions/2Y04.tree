@@ -1,0 +1,13 @@
+\title{幂零算子的中心零典范滤过}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，命题 2.5；HMMS v2，定义 3.5}
+
+\p{设 #{N} 是有限维复向量空间上的[幂零算子](0F01)。定义}
+##{F_kV=\sum_{i\geq\max(0,k)}\left(\ker N^{i+1}\cap\operatorname{im}N^{i-k}\right).}
+\p{这是递增滤过，满足 #{NF_k\subseteq F_{k-2}}，且 #{N^k:\operatorname{Gr}^F_kV\to\operatorname{Gr}^F_{-k}V} 对所有 #{k\geq 0} 为同构。它只由 #{N} 决定；满足这两个条件的有限递增滤过唯一，见所引命题 2.5。}
+\p{\strong{公式的验证。}在一个 [Jordan 块](2T14)上写 #{v,Nv,\ldots,N^rv}。其中 #{\ker N^{i+1}} 由编号 #{j\geq\max(0,r-i)} 的链向量张成，#{\operatorname{im}N^{i-k}} 由 #{j\geq i-k} 的链向量张成。求和后最小的可用编号为 #{\max(0,\lceil(r-k)/2\rceil)}。于是}
+##{F_k\cap\langle v,Nv,\ldots,N^rv\rangle=\operatorname{span}\{N^jv:r-2j\leq k\}.}
+\p{因此每块的权依次为 #{r,r-2,\ldots,-r}，#{N} 降低权二，并将权 #{k} 与 #{-k} 的链向量通过 #{N^k} 配对。对各块取直和即得所需性质。定义中的核、像公式也直接表明任何与 #{N} 交换的线性映射保持 #{F}，不依赖 Jordan 基的选择。}
+\p{将关联分次的编号反向，就得到[分裂 Lefschetz 结构](2Y01)。这里的 #{N} 降低 #{F}，与上升型 Lefschetz 算子的编号相反。}

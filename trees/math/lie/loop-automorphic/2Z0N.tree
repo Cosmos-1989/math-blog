@@ -1,0 +1,12 @@
+\title{形式重参数化为何要同时作用于函数和微分}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Liu–Zhu，式(2.10)；留数换元为直接证明](icm2026-zhu)}
+
+\p{设 #{F} 的特征为零。形式重参数化是级数 #{\sigma(t)=a_1t+a_2t^2+\cdots,\ a_1\ne 0}；其逆 #{\tau=\sigma^{-1}} 是复合逆，不是乘法倒数。逐次比较 #{\sigma(\tau(t))=t} 的系数，可唯一解出 #{\tau}。链式法则给出}
+##{\tau'(t)=\frac 1{\sigma'(\tau(t))}.}
+\p{在[留数辛空间](2Z0H)的辛基下，把前 #{n} 个坐标看作函数，后 #{n} 个坐标看作一形式。令重参数化右作用为 #{f(t)\mapsto f(\tau(t))}、#{g(t)\,dt\mapsto g(\tau(t))\tau'(t)\,dt}。这保持辛配对。}
+\p{\strong{换元证明。}只需证明 #{\operatorname{Res}h(\tau(t))\tau'(t)\,dt=\operatorname{Res}h(t)\,dt}。对单项式 #{h=t^r}，若 #{r\ne -1}，换元后是一形式 #{d(\tau^{r+1}/(r+1))}，导数的留数为零。若 #{r=-1}，写 #{\tau=bt(1+u)}，#{u\in tF\lbrack\lbrack t\rbrack\rbrack}，则 #{\tau'/\tau=t^{-1}+u'/(1+u)}，留数为 #{1}。一般 Laurent 级数只有有限负次项，非负项不产生留数，故可逐项使用这个计算。}
+\p{若两个坐标都只作函数替换而不乘导数，则连旋转也通常不保配对。例如 #{\sigma(t)=rt}，#{f=t^{-1},g=1}；两者只替换成 #{f(t/r),g(t/r)} 会把原留数 #{1} 改成 #{r}。把第二坐标看作微分后，它还乘 #{r^{-1}}，留数恢复为 #{1}。}
+\p{重参数化保持 #{Y=W\lbrack\lbrack t\rbrack\rbrack}，故其[Weil 算子](2Z0M)属于 #{c=0} 情形；非线性替换仍可能把负尾的一部分送到正尾，因此一般保留二次相位及投影。}

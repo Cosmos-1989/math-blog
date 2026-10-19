@@ -1,0 +1,15 @@
+\title{Rallis 常数项如何降到有限维 theta 积分}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Liu–Zhu，§4.1、定理4.2；一般情形证明在§5](icm2026-zhu)}
+
+\p{沿用[theta 提升](2Z0S)的数据，#{f} 是 #{\operatorname O(V)(\mathbb A)} 上尖点形式，#{\phi\in\mathcal S'}。选辛分解 #{W=\ell^+\oplus W_0\oplus\ell^-}，其中 #{\ell^\pm} 各向同性、彼此对偶、维数为 #{a}，#{0\leq a\leq n}。令 #{P_a} 为稳定 #{\ell^-+tW\lbrack\lbrack t\rbrack\rbrack} 的标准最大抛物，#{U_a} 为其幺幂根。}
+\p{其 Levi 的两个辛因子分别来自 #{W_\ell=\ell^+\oplus t^{-1}\ell^-} 与 #{W_0}；前者带有限维 metaplectic 扩张，后者上的扩张分裂。#{W_\ell} 上的配对由[留数形式](2Z0H)给出，因为次数 #{0} 与 #{-1} 恰好配对。}
+\p{\strong{Rallis 常数项公式（引用）。}按幺幂商概率测度取常数项，有}
+##{\int_{U_a(F)\backslash U_a(\mathbb A)}\theta_\phi^f(ug)\,du
+=\int_{G'(F)\backslash G'(\mathbb A)}
+\sum_{r\in(t^{-1}\ell^-\otimes V)(F)}
+(\omega(g,h)\phi)(r)f(h)\,dh.}
+\p{#{U_a(F),U_a(\mathbb A)} 在这里是上述回路幺幂根的有理与阿代尔点，不是有限维辛群的普通幺幂根。右边求和的变量空间却是维数 #{am} 的有限维空间。这是 Liu–Zhu 定理4.2；各向异性情形在§4证明，一般情形需§5的回路轨道分析，均不由形式交换积分和求和直接推出。}
+\p{固定 #{g} 后，把 #{\omega(g)\phi} 限制到 #{t^{-1}\ell^-\otimes V}，就是有限维 Weil 模型的测试函数。因此右边是从同一个 #{f} 到 #{\widetilde{\operatorname{Sp}}_{2a}} 的经典 theta 提升在相应点的值。#{a=0} 时只剩 #{r=0}，右边成为零点截面乘 #{f} 的平均值。包含这个端点对[首次出现](2Z0W)的论证很重要。}

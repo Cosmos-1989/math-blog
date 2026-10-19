@@ -1,0 +1,13 @@
+\title{正辫子的 Rouquier 两项复形模型}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{Gorsky--Mellit 2601.16877v1，§2.1、定理 2.1；[Mellit](icm2026-mellit)，§4.3}
+
+\p{令 #{R=\mathbb C[x_1,\ldots,x_n]}，#{s_i} 交换 #{x_i,x_{i+1}}。固定其余变量后，不变环由 #{x_i+x_{i+1}}、#{x_ix_{i+1}} 生成。定义 #{R}-双模}
+##{C_i=R\otimes_{R^{s_i}}R,\qquad b_i:C_i\to R,\quad b_i(f\otimes g)=fg.}
+\p{此张量积与[秩一 Soergel 模型](01O9)相同，只是添上固定方向的多项式变量。#{b_i} 良定义，因为对 #{a\in R^{s_i}}，#{(fa)g=f(ag)}；它也与左右 #{R} 作用相容。忘掉内部次数的整体平移后，正生成元对应[两项复形](012A) #{T_i=(C_i\xrightarrow{b_i}R)}，两项放在上链次数零和一。}
+\p{对正字 #{\beta=\sigma_{i_1}\cdots\sigma_{i_\ell}}，令}
+##{T_\beta=T_{i_1}\otimes_R\cdots\otimes_RT_{i_\ell},\qquad d(u\otimes v)=du\otimes v+(-1)^{\deg u}u\otimes dv.}
+\p{交叉项的符号相反，故 #{d^2=0}。例如平方 #{T_i\otimes_RT_i} 的三项为 #{C_i\otimes_RC_i}、#{(R\otimes_RC_i)\oplus(C_i\otimes_RR)}、#{R\otimes_RR}；第二个微分在前一分量取负号、后一分量取正号，两条复合路径相消。}
+\p{Rouquier 的定理断言这些复形在链同伦意义下满足[辫子关系](190C)，所以 #{T_\beta} 的同伦型不依赖正字表达。该不变性引用所引定理，非由 #{d^2=0} 推出。若记录三重分次，还须加上标准内部平移与闭包规范化；此处的无移位模型只固定底层复形，具体链环分次采用 Gorsky--Hogancamp--Mellit 的规范。}

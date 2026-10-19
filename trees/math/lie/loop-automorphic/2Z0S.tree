@@ -1,0 +1,16 @@
+\title{正交正回路上的 theta 提升}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Liu–Zhu，§3，定理3.1、命题3.2](icm2026-zhu)}
+
+\p{取数域上的[辛正交张量对](2Z0R)，记 #{G'=\operatorname O(V)}，#{\mathbb X=t^{-1}(W\otimes V)[t^{-1}]}。取[尖点自守形式](0F5B)的同样定义于 #{G'(\mathbb A)} 的函数 #{f}：它的每个真有理抛物幺幂常数项为零。把它拉回正回路群，定义 #{f(h)=f(h(0))}。#{h(0)} 是取常数项的群同态。}
+\p{在[theta 泛函](2Z0Q)基础上定义}
+##{\theta_\phi^f(g)=\int_{G'(F\langle t\rangle_+)\backslash
+G'(\mathbb A\langle t\rangle_+)}
+\left(\sum_{r\in\mathbb X_F}(\omega(g,h)\phi)(r)\right)f(h(0))\,dh.}
+\p{积分商可分为取值核 #{N=\ker(h\mapsto h(0))} 的商与有限维商 #{G'(F)\backslash G'(\mathbb A)}。前者按逐次幺幂商取概率测度，后者取相应不变商测度。核商的紧性与测度构造是文献中的输入；此式不要求完整回路群具有 Haar 测度。}
+\p{\strong{尖点收敛定理（引用）。}若 #{f} 是尖点形式、#{\phi\in\mathcal S'}，则该积分绝对收敛，不要求 #{V} 各向异性。这是 Liu–Zhu 命题3.2；证明的输入是 theta 核的多项式增长与尖点形式的快速下降。}
+\p{若去掉 #{f}，写 #{\theta_\phi(g)=\theta_\phi^1(g)}，就不能援引尖点快速下降。设 #{b} 为 #{V} 的[Witt 指数](016E)，#{\dim W=2n}、#{\dim V=m}、#{\phi\in\mathcal S'_{\mathfrak q}}。定理3.1保证在 #{V} 各向异性，或}
+##{m-b>\frac{cn}{\log|\mathfrak q|}+1}
+\p{时，未加权积分绝对收敛；#{c>0} 是该定理中依赖固定数域与标准数据的估计常数，不是普适的数值阈值。两种收敛陈述不能相互替代。}

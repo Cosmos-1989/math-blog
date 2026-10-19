@@ -1,0 +1,15 @@
+\title{回路群 Iwahori 代数的 Bernstein 关系}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[BKP，§5.1及§6；Zhu，§3](icm2026-zhu)}
+
+\p{沿用[仿射 Satake 设定](2Z0D)，取 #{I\subset K} 为模 #{\pi} 约化落入选定正 Borel 的子群。BKP 证明 #{I\backslash G_+/I} 由 #{W\ltimes X} 参数化，#{X} 是[Tits 锥](2Z04)；其有限双陪集支撑的卷积代数是一个正级 Bernstein 代数。这里不需要球面情形同样的无限支撑类。}
+\p{精确的代数模型先在环 #{\mathbb C[q,q^{-1}]} 上取生成元 #{T_w\ (w\in W)}、#{\Theta_\lambda\ (\lambda\in Y)}，规定 #{T_1=\Theta_0=1}。它们满足长度可加时 #{T_wT_{w'}=T_{ww'}}、#{\Theta_\lambda\Theta_\mu=\Theta_{\lambda+\mu}}，以及对简单反射 #{s=s_i} 的关系}
+##{(T_s+1)(T_s-q)=0,\qquad
+T_s\Theta_\lambda -\Theta_{s\lambda}T_s
+=(q-1)\frac{\Theta_\lambda -\Theta_{s\lambda}}
+{1-\Theta_{-\alpha_i^\vee}}.}
+\p{分式实际上是有限群代数元。若 #{r=\alpha_i(\lambda)>0}，则 #{s\lambda=\lambda -r\alpha_i^\vee}，右边分式为 #{\sum_{j=0}^{r-1}\Theta_{\lambda -j\alpha_i^\vee}}；#{r=0} 时为零；#{r<0} 时对交换后的两项使用同一几何级数恒等式。}
+\p{以旋转级 #{\delta(\lambda)} 分次，#{T_w} 为零级。正半代数取所有严格正级部分，加上由 #{T_w} 和中心平移 #{\Theta_{nc}\ (n\in\mathbb Z)} 生成的零级部分。BKP 的同构将这个子代数专门化到剩余域大小 #{q}，得到 #{H(G_+,I)}。不能把整个双仿射 Hecke 代数或所有零级平移直接等同于它。同构证明依赖交织算子与双陪集计数，此处采用该同构作为定理输入。}
+\p{作为归一化检查，二次关系等价于 #{T_s^2=(q-1)T_s+q}，特征值为 #{q,-1}。若要与[另一种仿射 Hecke 约定](018Q)的 #{(H_s+v)(H_s-v^{-1})=0} 对接，应取 #{v=q^{-1/2}}、#{T_s=q^{1/2}H_s}。例如 #{r=2} 时 Bernstein 关系的右边恰为 #{(q-1)(\Theta_\lambda+\Theta_{\lambda -\alpha_i^\vee})}。}

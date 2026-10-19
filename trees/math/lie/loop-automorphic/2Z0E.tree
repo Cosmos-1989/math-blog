@@ -1,0 +1,21 @@
+\title{仿射球面函数的虚根修正因子}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[BKP，§1.2.5式(1.11)–(1.14)；Zhu，§3](icm2026-zhu)}
+
+\p{在[仿射 Satake 定理](2Z0D)的设定中，进一步假设有限根系单根长。令 #{R_+^\vee} 为正仿射余根，#{m(a^\vee)} 为根重数，#{\rho(\alpha_i^\vee)=1}。形式参数 #{v} 满足最后代入 #{v^2=q^{-1}}。定义}
+##{D_v=\prod_{a^\vee\in R_+^\vee}
+\left(\frac{1-v^2e^{-a^\vee}}{1-e^{-a^\vee}}\right)^{m(a^\vee)},\qquad
+H_\lambda=\frac{v^{-2\langle\rho,\lambda\rangle}}
+{\sum_{w\in W_\lambda}v^{2\ell(w)}}\sum_{w\in W}w(D_ve^\lambda).}
+\p{这里 #{W_\lambda} 是 #{\lambda} 的稳定子。单个 #{D_v} 先在[不限制 Tits 锥的向下支撑完成空间](2Z0C)中展开；它可以含零级非中心指数，不能直接视为 Satake 不变环中的元素。对 #{w(D_v)} 先作用于有理因子，再按负余根方向重展开。无限 Weyl 求和及其落入 Satake 完成空间的性质是 BKP 的定理内容。Macdonald 型公式断言}
+##{S(1_{K\pi^\lambda K})=\left.\frac{H_\lambda}{H_0}\right|_{v^2=q^{-1}}.}
+\p{设有限根系的指数为 #{m_1,\ldots,m_\ell}，即基本齐次 Weyl 不变多项式的次数减一；#{c} 是最小正虚余根。BKP 的常数项恒等式给出}
+##{C_q:=H_0|_{v^2=q^{-1}}
+=\prod_{i=1}^{\ell}\prod_{j\geq 1}
+\frac{1-q^{-m_i}e^{-jc}}{1-q^{-m_i-1}e^{-jc}}.}
+\p{上述两条恒等式作为深定理引用。修正因子只沿虚根方向变化；它既不是单个实根的局部积分，也不是随意的非零常数。由 #{\lambda=0} 可立即检验：除以 #{H_0} 后 Satake 像才是单位。}
+\p{\strong{秩一展开。}对 #{A_1}，#{m_1=1}。写 #{Q=e^{-c}}、#{a=q^{-1}}、#{b=q^{-2}}。模 #{Q^3}，只有 #{j=1,2} 的因子有贡献，故}
+##{C_q=1+(b-a)Q+(b^2-ab+b-a)Q^2+O(Q^3).}
+\p{这是把 #{(1-aQ)/(1-bQ)=1+(b-a)Q+(b^2-ab)Q^2+\cdots} 与 #{1+(b-a)Q^2+\cdots} 相乘所得。取 #{q=2} 得 #{C_2=1-\frac 14Q-\frac 5{16}Q^2+\cdots}，逆级数为 #{1+\frac 14Q+\frac 38Q^2+\cdots}。每阶只有有限因子参与，理由见[支撑完备化](2Z0C)。}

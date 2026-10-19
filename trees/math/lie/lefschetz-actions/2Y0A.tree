@@ -1,0 +1,10 @@
+\title{平面多项式 Hamilton 向量场的括号}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，§2.4；采用该节的符号约定}
+
+\p{在[多项式环](0ALH) #{R=\mathbb C[x,y]} 上定义 #{H_f=f_y\partial_x-f_x\partial_y}。这些导子组成 [Lie 代数](0F00) #{\mathcal H_2}，括号取算子交换子。令 #{T_{m,n}=H_{x^my^n}}，其中 #{m,n\geq 0}，并置 #{T_{0,0}=0}。则}
+##{T_{m,n}=nx^my^{n-1}\partial_x-mx^{m-1}y^n\partial_y,\qquad [T_{m,n},T_{p,q}]=(pn-mq)T_{m+p-1,n+q-1}.}
+\p{系数为零的项按零理解，不使用负指数符号。除 #{(0,0)} 外，这些向量场构成基：#{H_f=0} 等价于两个偏导均为零，也就等价于 #{f} 为常数。}
+\p{\strong{括号计算。}令 #{B(f,g)=f_yg_x-f_xg_y}。在坐标 #{x} 上，#{[H_f,H_g]\bigl(x\bigr)=H_f(g_y)-H_g(f_y)=\partial_yB(f,g)}；在 #{y} 上同理为 #{-\partial_xB(f,g)}。导子由坐标上的值确定，故 #{[H_f,H_g]=H_{B(f,g)}}。代入单项式得到上式。特别地 #{T_{m,0}=-mx^{m-1}\partial_y}，其对角张量作用必为 #{-m\sum_i x_i^{m-1}\partial_{y_i}}。}

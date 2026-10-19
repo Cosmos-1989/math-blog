@@ -1,0 +1,11 @@
+\title{多项式回路群与形式回路群}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Zhu，§1](icm2026-zhu)}
+
+\p{设 #{G_0} 是域 #{F} 上的线性代数群；例如[特殊线性群](01Q1) #{\operatorname{SL}_n} 由行列式为一的矩阵组成。把系数环分别换成 [Laurent 多项式环](2V11)与[形式 Laurent 级数域](00SN)，得到}
+##{L_{\mathrm{pol}}G_0(F)=G_0(F[t,t^{-1}]),\qquad L_{\mathrm{for}}G_0(F)=G_0(F((t))).}
+\p{前者每个矩阵元只有有限项，后者允许无限多个正次项，但每个矩阵元的负次项有限。例如 #{\begin{pmatrix}1&\sum_{j\geq 0}t^j\\0&1\end{pmatrix}} 属于形式回路 #{\operatorname{SL}_2}，不属于多项式回路群。这里 #{\sum t^j} 是形式级数，无需指定 #{t} 的数值或讨论解析收敛。}
+\p{第三种对象是紧 Lie 群 #{K_0} 的光滑回路群 #{C^\infty(S^1,K_0)}，乘法逐点定义；它使用圆周上的[光滑映射](00N9)及相应函数空间拓扑。一般形式级数不能在圆周求值，任意光滑回路也未必是 Laurent 多项式。这三种对象的表示范畴不能直接互换。}
+\p{形式对象已有一个局部紧性障碍。把无限域 #{F} 视为离散域，给 #{F((t))} 赋予 #{t} 进拓扑。若某个 #{t^NF\lbrack\lbrack t\rbrack\rbrack} 紧，则其连续商 #{t^NF\lbrack\lbrack t\rbrack\rbrack /t^{N+1}F\lbrack\lbrack t\rbrack\rbrack\simeq F} 是紧离散空间，必有限，矛盾。任何紧邻域都包含这样一个闭开子群，故此拓扑不局部紧。该论证指定的是 #{t} 进拓扑；它没有把 #{F} 自身的局部域拓扑当作离散拓扑混用。}

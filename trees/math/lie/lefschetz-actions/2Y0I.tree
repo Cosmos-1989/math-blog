@@ -1,0 +1,11 @@
+\title{对角调和多项式的 Haiman 算子定理}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Haiman，arXiv:math/0201148v1，§4 命题 4.1、定理 4.2；[Mellit](icm2026-mellit)，定理 2.11}
+
+\p{在 #{R_n=\mathbb C[\mathbf x,\mathbf y]} 上定义双线性配对 #{\langle f,g\rangle=g(\partial_{\mathbf x},\partial_{\mathbf y})f|_0}，并令 #{\mathrm{DH}_n=I_n^\perp}，其中 #{I_n} 是[对角不变量理想](2Y0F)。各双次数分量上单项式正交，#{\langle\mathbf x^\alpha\mathbf y^\beta,\mathbf x^\alpha\mathbf y^\beta\rangle=\alpha!\beta!}，故此配对将 #{\mathrm{DH}_n} 识别为 #{\mathrm{DC}_n} 的分次对偶。}
+\p{Haiman 算子定理断言，Vandermonde 多项式 #{\Delta(\mathbf x)=\prod_{i<j}(x_i-x_j)} 在以下交换算子作用下生成 #{\mathrm{DH}_n}：}
+##{\partial_{x_1},\ldots,\partial_{x_n},\qquad E_k=\sum_{i=1}^n y_i\partial_{x_i}^{k}\quad(1\leq k<n).}
+\p{生成性是 Haiman 定理的内容，证明使用 Hilbert 概形上的消失定理。算子保持调和空间则可以直接检验。#{\partial_{x_i}} 的转置是乘 #{x_i}，后者保持理想；#{E_k} 的转置为 #{\sum_i x_i^k\partial_{y_i}}，由[理想稳定性](2Y0H)保持 #{I_n}。所以它们都保持 #{I_n^\perp}。它们彼此交换，因为涉及的乘法变量 #{y_i} 与微分变量 #{x_j} 无关。}
+\p{例如 #{n=2} 时，#{\Delta=x_1-x_2}，#{\partial_{x_1}\Delta=1}、#{E_1\Delta=y_1-y_2}，正好生成三维调和空间。此处 #{x_i} 是多项式变量，作用用的是 #{\partial_{x_i}}；不能将二者在未经转置或 Fourier 变换时互换。}

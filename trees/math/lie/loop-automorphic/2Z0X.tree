@@ -1,0 +1,20 @@
+\title{指数模态衰减的无限乘积估计}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Liu–Zhu，§3式(3.7)后的估计；此处给出完整初等证明](icm2026-zhu)}
+
+\p{[正旋转](2Z0P)的高模态衰减可归结为一个关于[指数函数](0A46)及[数项级数](0A38)的实变量问题。固定 #{\rho>1,\beta>0}，令}
+##{\vartheta(x)=\prod_{j\geq 1}(1+\beta e^{-x\rho^j}),\qquad x>0.}
+\p{\strong{命题。}该乘积对每个 #{x>0} 收敛到有限正数；存在只依赖 #{\rho,\beta} 的常数 #{C}，使 #{0<x\leq 1} 时}
+##{\vartheta(x)\leq Cx^{-\log(1+\beta)/\log\rho}.}
+\p{\strong{证明。}先由 #{\rho^j\geq 1+j\log\rho} 得 #{\sum_je^{-x\rho^j}\leq e^{-x}\sum_j\rho^{-xj}<\infty}。再用 #{0\leq\log(1+u)\leq u}，知对数级数绝对收敛，故乘积有限正。}
+\p{令 #{J=\lfloor\log(1/x)/\log\rho\rfloor}。前 #{J} 个因子均至多 #{1+\beta}。由 #{x\rho^J>\rho^{-1}}，尾部满足 #{x\rho^{J+k}>\rho^{k-1}}，因此}
+##{\prod_{k\geq 1}(1+\beta e^{-x\rho^{J+k}})
+\leq \exp\left(\beta\sum_{k\geq 1}e^{-\rho^{k-1}}\right)=C<\infty.}
+\p{最后 #{(1+\beta)^J\leq x^{-\log(1+\beta)/\log\rho}}，合并即证。由于 #{\log(1+\beta)\leq\beta}，也得到文献使用的较弱指数 #{\beta /\log\rho}。}
+\p{若只截取到 #{M} 个因子，令尾部为 #{T_M(x)}，同一不等式给出显式界}
+##{0\leq\log T_M(x)\leq
+\frac{\beta e^{-x\rho^{M+1}}}
+{1-e^{-x\rho^{M+1}(\rho -1)}}.}
+\p{这是利用 #{\rho^k\geq 1+k(\rho -1)} 后求几何级数。它可用来严谨控制数值截断误差。上述估计只处理模态乘积；它不替代[theta 积分收敛](2Z0S)所需的约化论和算术格点估计。}

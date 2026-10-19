@@ -1,0 +1,12 @@
+\title{Lefschetz 分次的本原链分解}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，命题 2.3 的线性代数展开}
+
+\p{设 #{(V_\bullet,L)} 是[分裂 Lefschetz 结构](2Y01)。对 #{k\geq 0} 定义本原空间 #{B_{-k}=\ker(L^{k+1}:V_{-k}\to V_{k+2})}。则}
+##{V=\bigoplus_{k\geq 0}\bigoplus_{j=0}^k L^jB_{-k}.}
+\p{\strong{证明。}当 #{i\leq 0} 时，#{L^{1-i}} 在 #{LV_{i-2}} 上是同构到 #{V_{2-i}}：把它与 #{L:V_{i-2}\to LV_{i-2}} 复合即为硬 Lefschetz 同构 #{L^{2-i}:V_{i-2}\to V_{2-i}}。所以}
+##{V_i=LV_{i-2}\oplus\ker L^{1-i}=LV_{i-2}\oplus B_i.}
+\p{反复使用此式，从最小的非零分次起，分解所有非正分次。对 #{i>0}，同构 #{L^i:V_{-i}\to V_i} 把已经得到的直和分解送到正分次。每条链的末项以后为零，因为 #{L^{k+1}B_{-k}=0}；各项非零到第 #{k} 步，因为 #{L^k} 在 #{V_{-k}} 上单射。这证明所列直和既张成又无交。}
+\p{例如分次维数依次为 #{1,2,1}（编号 #{-2,0,2}）时，有一条长度三的链及一个零次本原向量。维数对称本身不足以保证这个结论，还需要 #{L^2:V_{-2}\to V_2} 可逆。}

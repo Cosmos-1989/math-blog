@@ -1,0 +1,14 @@
+\title{秩二原始商的基与双分次平移}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，§5.5、式 (5.2)；shuffle 商及平移的直接计算}
+
+\p{沿用[秩二 Laurent 判据](2Y11)中的 #{a,b,s,t}。则[shuffle 原始商](2Y0Z)是自由 #{\mathbb C[s,t]} 模，其基为}
+##{\left\{a^{-r}b^j:r\geq 1,\ j\geq 0,\ r+j\leq k-1,\ r+j\equiv k-1\pmod 2\right\}.}
+\p{证明时先把 #{M_{2,k}} 分成非负 #{a} 次数的多项式部分与负次部分。因为 #{M_{1,k}=\mathbb C[x,y]}，两个秩一多项式的乘积线性张成四变量多项式环。其 shuffle 正是施加 #{1+(-1)^{k-1}\tau}，其中 #{\tau} 交换两对变量；该算子的像等于置换特征 #{(-1)^{k-1}} 的整个多项式部分。故 shuffle 商恰去掉多项式部分，没有涉及负次项。将判据中的 #{i} 写成 #{-r}，便得到所列的基。}
+\p{令 #{x} 次数用 #{q}、#{y} 次数用 #{z} 记录，其 Hilbert 级数为}
+##{\operatorname{Hilb}(M_{2,k}^{\mathrm{prim}};q,z)=\frac{\displaystyle\sum_{\substack{r\geq 1,\ j\geq 0\cr r+j\leq k-1\cr r+j\equiv k-1\ (2)}}q^{-r}z^j}{(1-q)(1-z)}.}
+\p{把 #{r=u+1} 代入分子，得到精确等式}
+##{\sum_{\substack{r\geq 1,\ j\geq 0\cr r+j\leq k-1\cr r+j\equiv k-1\ (2)}}q^{-r}z^j=q^{-1}\sum_{\substack{u,j\geq 0\cr u+j\leq k-2\cr u+j\equiv k\ (2)}}q^{-u}z^j.}
+\p{所以与报告式 (5.2) 比较时，除了 #{q\mapsto q^{-1}}，还存在整体 #{q^{-1}} 平移。#{k=2} 的分子是 #{q^{-1}}，#{k=3} 时是 #{q^{-2}+q^{-1}z}，而 #{k=1} 时商为零。这些都是代数模型的已证计算；把相应次数解释为 Higgs 上同调分次，仍属于[模型猜想](2Y10)，不是这个基计算的推论。}

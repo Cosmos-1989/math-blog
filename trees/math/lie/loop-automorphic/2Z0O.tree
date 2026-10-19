@@ -1,0 +1,11 @@
+\title{负回路的切片 Schwartz 空间}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Liu–Zhu，§2.1；Dai–Zhu，§3](icm2026-zhu)}
+
+\p{取[负回路空间](2Z0I) #{X=t^{-1}W[t^{-1}]}，写 #{X_N=\bigoplus_{k=1}^NWt^{-k}}。局部域上的函数 #{\phi:X\to\mathbb C} 称为切片 Schwartz 函数，如果对每个 #{N}，#{\phi|_{X_N}} 都是通常 Schwartz 函数。实或复局部域使用[快速下降光滑函数](0H4F)；非阿基米德局部域使用局部常值、紧支撑函数。任一有限维子空间包含在某个 #{X_N} 中，故这与对所有有限维切片的定义相同。}
+\p{例子是实情形的 #{\phi(x)=\exp(-\sum_k\|x_k\|^2)}，每个输入只有有限个非零系数；非阿基米德情形可取格 #{t^{-1}\mathcal O[t^{-1}]^{\dim W}} 的示性函数。两者限制到 #{X_N} 后分别是有限维 Gaussian 和紧开格的示性函数。}
+\p{还可在 #{\mathcal S(X)} 上引入线性拓扑，以 #{U_N=\{\phi:\phi|_{X_N}=0\}} 为零邻域基，并把标量域 #{\mathbb C} 赋离散拓扑。这种拓扑要求有限切片上的函数完全相同，区别于 Schwartz 半范数给出的 Fréchet 拓扑。}
+\p{\strong{完备性证明。}限制映射给出 #{\mathcal S(X)\simeq\varprojlim_N\mathcal S(X_N)}，右边各空间赋离散拓扑。一个相容族 #{(\phi_N)} 在并集 #{X} 上唯一确定函数，并满足每个切片的 Schwartz 条件，故此映射满且单。若一列在每个商上最终稳定，取各商的稳定值即得极限；一般 Cauchy 网同理。#{\bigcap_NU_N=0}，所以极限唯一。}
+\p{这个定义不包含“对所有模态有统一衰减”的要求。每个切片是 Schwartz 不能推出[有理点 theta 和](2Z0Q)收敛；后者还需额外的正旋转条件。}

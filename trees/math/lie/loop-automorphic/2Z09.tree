@@ -1,0 +1,12 @@
+\title{秩一非阿基米德积分的局部因子}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Liu v2，§4.2 的秩一积分](icm2026-zhu)；逐壳求和}
+
+\p{设 #{F} 为[非阿基米德局部域](0F52)，#{\varpi} 为素元，剩余域大小为 #{q}，取 #{|\varpi|=q^{-1}}。把加法 [Haar 测度](00T1)归一化为 #{\operatorname{vol}(\mathcal O)=1}。若 #{\operatorname{Re}s>0}，则}
+##{I_q(s)=\int_F\max(1,|x|)^{-s-1}\,dx=\frac{1-q^{-s-1}}{1-q^{-s}}.}
+\p{\strong{证明。}在 #{\mathcal O} 上被积函数等于一，贡献为一。对整数 #{m\geq 1}，壳层 #{\{x:|x|=q^m\}} 的测度为 #{q^m-q^{m-1}}，因为它是 #{\varpi^{-m}\mathcal O} 去掉 #{\varpi^{-(m-1)}\mathcal O}。该壳层的积分为 #{(1-q^{-1})q^{-ms}}。于是}
+##{I_q(s)=1+(1-q^{-1})\sum_{m\geq 1}q^{-ms}=1+(1-q^{-1})\frac{q^{-s}}{1-q^{-s}}=\frac{1-q^{-s-1}}{1-q^{-s}}.}
+\p{绝对收敛等价于几何级数 #{\sum q^{-m\operatorname{Re}s}} 收敛，因此边界 #{\operatorname{Re}s=0} 不能包含。局部未分歧因子 #{L_q(s)=(1-q^{-s})^{-1}} 满足 #{I_q(s)=L_q(s)/L_q(s+1)}。例如 #{q=3,s=2} 时 #{I_3(2)=13/12}。}
+\p{此计算解释[常数项](2Z08)的一个有限位因子。把局部结果相乘还需独立的全局收敛条件 #{\operatorname{Re}s>1}，单个局部积分的半平面并不保证 Euler 乘积收敛。}

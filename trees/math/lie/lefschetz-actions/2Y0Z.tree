@@ -1,0 +1,12 @@
+\title{有理函数模型的带符号 shuffle 商}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，§5.4、猜想 5.8 前的定义}
+
+\p{固定 #{k\geq 1}，令 #{\epsilon=k-1\pmod 2}。将 #{f\in M_{a,k}}、#{g\in M_{b,k}} 分别放入前 #{a} 对、后 #{b} 对变量。在[有理函数模型](2Y0Y)上定义}
+##{f*g=\sum_{\sigma\in\operatorname{Sh}(a,b)}\operatorname{sgn}(\sigma)^\epsilon\,\sigma(fg),}
+\p{其中 #{\operatorname{Sh}(a,b)} 是保持每一块内部顺序的置换。报告中的封闭性断言保证结果落在 #{M_{a+b,k}}；一般秩的极点消去证明不由形式求和自动给出。对已经定义的运算，结合律则可直接证明：#{(f*g)*h} 与 #{f*(g*h)} 都按同一组三块内部保序置换求和，每个置换唯一分解成两次 shuffle，且符号是两次符号之积。}
+\p{同样，交换两块给出 #{g*f=(-1)^{\epsilon ab}f*g}。例如两个秩一元素的积是 #{f(x_1,y_1)g(x_2,y_2)+(-1)^\epsilon f(x_2,y_2)g(x_1,y_1)}，#{k} 偶数时 #{1*1=0}。定义可分解部分及原始商}
+##{M_{n,k}^{\mathrm{sh}}=\sum_{a=1}^{n-1}\operatorname{im}(M_{a,k}\otimes M_{n-a,k}\xrightarrow{*}M_{n,k}),\qquad M_{n,k}^{\mathrm{prim}}=M_{n,k}/M_{n,k}^{\mathrm{sh}}.}
+\p{“原始”在这里指去掉低秩 shuffle 乘积，并非[Lefschetz 原始子空间](2Y02)的核定义。该商首先只是双分次向量空间，不能把有理函数的通常乘法不加证明地下传为它的环结构。}

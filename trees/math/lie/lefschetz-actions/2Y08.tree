@@ -1,0 +1,13 @@
+\title{主降低算子与幂和生成 slₙ}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，引理 2.8}
+
+\p{在[主三元组](2Y07)的 #{A_n=\mathbb C[x]/(x^n)} 模型中，令 #{p_i=e^i}（这里取算子复合，#{1\leq i<n}）。则[迹零矩阵 Lie 代数](0F05)有基}
+##{(\operatorname{ad}f)^jp_i\qquad(1\leq i<n,\ 0\leq j\leq 2i).}
+\p{\strong{证明。}在 #{\operatorname{End}(A_n)} 上令 #{E=\operatorname{ad}e,H=\operatorname{ad}h,F=\operatorname{ad}f}。直接使用交换子可得 #{Ep_i=0}、#{Hp_i=2ip_i}，以及}
+##{EF^jp_i=j(2i-j+1)F^{j-1}p_i.}
+\p{因此 #{F^jp_i\ne 0} 对 #{j\leq 2i} 成立。又 #{F^{2i+1}p_i=0}：否则它是负权 #{-2i-2} 的最高权向量；若 #{v} 具有负权 #{\lambda} 且 #{Ev=0}，取最小 #{s>0} 使 #{F^sv=0}，则 #{0=EF^sv=s(\lambda -s+1)F^{s-1}v} 矛盾。这样的 #{s} 存在，因为 #{F} 降低有限集合中的 #{H} 权。}
+\p{算子 #{C=H^2+2H+4FE} 与 #{E,H,F} 交换，展开括号即可验证；它在第 #{i} 条链上恒为 #{4i(i+1)}。不同 #{i} 的这些数互异，故各链独立；同一条链各向量的 #{H} 权不同，也独立。所有向量迹零，数目为 #{\sum_{i=1}^{n-1}(2i+1)=n^2-1}，恰好等于迹零矩阵空间的维数，故成为基。}
+\p{因此在任何表示中，若已知全部 #{p_i} 与 #{f} 的作用，整个 #{\mathfrak{sl}_n} 作用便被确定。仅知道 #{p_1} 则通常只恢复主 #{\mathfrak{sl}_2}。}

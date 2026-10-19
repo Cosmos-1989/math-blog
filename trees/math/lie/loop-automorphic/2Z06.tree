@@ -1,0 +1,12 @@
+\title{Eisenstein 求和如何产生左不变函数}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Zhu，§2；Liu v2，§4.3，式(4.32)–(4.33)](icm2026-zhu)}
+
+\p{设 #{\Gamma} 是群 #{G} 的子群，#{P_\Gamma\subset\Gamma}，#{f:G\to\mathbb C} 满足 #{f(pg)=f(g)} 对 #{p\in P_\Gamma} 成立。在绝对收敛处定义}
+##{E_f(g)=\sum_{\gamma\in P_\Gamma\backslash\Gamma}f(\gamma g).}
+\p{左不变性保证每项不依赖陪集代表。对 #{\gamma_0\in\Gamma}，右乘 #{\gamma_0} 是左陪集集合的双射，所以绝对收敛允许重新编号，得到 #{E_f(\gamma_0g)=E_f(g)}。若 #{f} 右 #{K} 不变，则逐项得到 #{E_f(gk)=E_f(g)}。这解释了 Eisenstein 求和的自守性机制；收敛必须另证。}
+\p{回路群情形取[扩张形式回路群](2Z02)的[阿代尔版本](2Z05)，#{\Gamma} 为有理回路子群，#{P_\Gamma=\widehat B(F)\cap\Gamma}。Borel 子群 #{\widehat B} 是正回路在 #{t=0} 处落入有限维 [Borel 子群](0185)的原像，连同中心。诱导数据须为连续拟特征标 #{\chi:\widehat T(\mathbb A)/\widehat T(F)\to\mathbb C^\times}，并在选定紧环面上平凡；后一条件称为未分歧。按 Liu 的约定，#{\chi} 对旋转因子平凡延拓，再由 Iwasawa 分解定义 #{f(ua\sigma(\mathfrak q)k)=\chi(a)=a^\chi}。}
+\p{对有理环面点平凡，保证截面在 #{\widehat T(F)} 左乘下不变；截面对幺幂因子也平凡，故得到所需的 #{\widehat B(F)} 左不变性。未分歧仅控制紧环面，不能替代这个有理点条件。例如在 #{F=\mathbb Q} 的乘法群上，只取无限位绝对值而令有限位角色平凡，虽然在各位最大紧子群上平凡，却在对角有理点 #{2} 上取值 #{2}。用它求有理 Borel 陪集和会依赖代表选择。}
+\p{这类函数与有限维 [GL_n 自守形式](0F5B)共享左有理不变性，但后者的无穷小中心有限性、容许表示理论并未自动推广到无限维回路群。后续收敛定理均同时指定群的版本、截面和旋转参数。}

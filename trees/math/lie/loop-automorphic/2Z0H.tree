@@ -1,0 +1,12 @@
+\title{形式回路空间上的留数辛形式}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Liu–Zhu，§2.1](icm2026-zhu)}
+
+\p{设 #{F} 为特征不为 #{2} 的域。有限维辛空间是向量空间 #{W} 连同非退化交替双线性形式 #{\langle\ ,\ \rangle_W}；交替意为 #{\langle w,w\rangle_W=0}，非退化意为与每个向量配对均为零的向量只能是零。维数必为偶数，记作 #{2n}。取[形式 Laurent 级数](00SN)扩张 #{W((t))}，定义}
+##{\langle f,g\rangle_{\mathrm{res}}
+=\operatorname{Res}_{t=0}\langle f(t),g(t)\rangle_W\,dt.}
+\p{留数是 #{t^{-1}} 的系数。因 #{f,g} 的次数各有下界，该系数只有有限项，因此式子良定义。交替性与双线性逐项继承。}
+\p{\strong{非退化性证明。}若 #{f=\sum_j f_jt^j\ne 0}，取 #{f_r\ne 0}。由原形式非退化，可选 #{w\in W} 使 #{\langle f_r,w\rangle_W\ne 0}。令 #{g=wt^{-r-1}}，则 #{\langle f,g\rangle_{\mathrm{res}}=\langle f_r,w\rangle_W\ne 0}。故留数形式也非退化。}
+\p{例如取辛基 #{e_i,f_i}，满足 #{\langle e_i,f_j\rangle_W=\delta_{ij}}。则 #{\langle e_it^r,f_jt^s\rangle_{\mathrm{res}}=\delta_{ij}\delta_{r+s,-1}}。配对的是次数和等于 #{-1} 的两项，而不是等于零；若改用 #{dt/t} 才会改变这个条件。保持该形式的线性变换构成辛群，矩阵群 #{\operatorname{Sp}(W)((t))} 通过逐点作用给出其中一部分。}

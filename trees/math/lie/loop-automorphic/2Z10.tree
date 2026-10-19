@@ -1,0 +1,11 @@
+\title{顶点代数的真空平移与局部性}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Dai–Zhu，§2所用的普通顶点代数；Zhu，§4](icm2026-zhu)}
+
+\p{顶点代数由复向量空间 #{V}、真空向量 #{\mathbf 1}、线性算子 #{T} 及线性映射 #{Y(a,z)=\sum_{n\in\mathbb Z}a_{(n)}z^{-n-1}} 组成。每个 #{Y(a,z)} 是普通代数场：对固定 #{b}，#{a_{(n)}b=0} 对充分大的正 #{n} 成立。它还满足下列公理。}
+\p{真空公理为 #{Y(\mathbf 1,z)=\operatorname{Id}}，且 #{Y(a,z)\mathbf 1\in V\lbrack\lbrack z\rbrack\rbrack} 的常数项为 #{a}。平移公理为 #{T\mathbf 1=0}，#{[T,Y(a,z)]=\partial_zY(a,z)}。局部性要求任意 #{a,b} 存在 #{N} 使 #{(z-w)^N[Y(a,z),Y(b,w)]=0}，意义与[形式分布的局部性](2Z0Y)相同。}
+\p{#{a_{(n)}b} 因此是一族双线性乘法，不是一个普通结合乘法；其中 #{n=-1} 的乘法与正规乘积相联系。公理可等价地用 Borcherds 恒等式组织，但等价性是一条结构定理，证明见所引文献。}
+\p{\strong{交换微分代数例子。}设 #{A} 是含幺交换代数，#{D:A\to A} 是导子，即 #{D(ab)=D(a)b+aD(b)}。取 #{V=A,\mathbf 1=1,T=D}，令 #{Y(a,z)b=(e^{zD}a)b}，其中 #{e^{zD}a=\sum_{r\geq 0}D^ra\,z^r/r!}。这是形式级数，不要求解析收敛。}
+\p{所有非负指标模态都为零，所以截断成立。#{D1=0} 给出两条真空条件。由 Leibniz 法则，#{[D,Y(a,z)]b=(D e^{zD}a)b=\partial_zY(a,z)b}。两个场都是乘法算子，彼此交换，故局部性可取 #{N=0}。这完整验证了例子，也显示顶点代数不限于带奇异算子乘积的情形。}

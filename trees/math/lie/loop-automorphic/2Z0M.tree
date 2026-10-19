@@ -1,0 +1,15 @@
+\title{回路 Weil 交织算子与射影表示}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Liu–Zhu，§2.1，式(2.3)–(2.8)；Zhu，§4式(4.6)–(4.7)](icm2026-zhu)}
+
+\p{设 #{F} 为特征零局部域，固定非平凡连续加法角色 #{\psi}。取[Schrödinger 模型](2Z0K)及[有限秩块分解](2Z0L)。选择 #{\operatorname{Im}c} 上的 Haar 测度后，右作用约定的交织算子写成}
+##{(T_g\phi)(x)=\int_{\operatorname{Im}c}
+\psi\left(\tfrac 12\langle xa,xb\rangle+
+\tfrac 12\langle yc,yd\rangle+\langle yc,xb\rangle\right)
+\phi(xa+yc)\,d(yc).}
+\p{#{y} 是 #{yc} 的任一提升。若另一提升相差 #{z\in\ker c}，辛性给出 #{0=\langle yg,zg\rangle=\langle yc,zd\rangle}，所以半相位不变，公式不依赖提升。积分只在有限维空间进行；其收敛和保持 Schwartz 空间仍须定理保证。}
+\p{\strong{Weil 构造（引用）。}这些算子在适当测度选择下构成射影表示：#{T_gT_h=\sigma(g,h)T_{gh}}，其中 #{\sigma(g,h)\in\mathbb C^\times}。Zhu 的局部构造及 Liu–Zhu §2.1 给出所用标量因子与群的中心扩张；不能直接套用有限维 Stone–von Neumann 定理来省略无限维论证。}
+\p{\strong{从射影到线性。}由算子结合律，#{\sigma(g,h)\sigma(gh,k)=\sigma(h,k)\sigma(g,hk)}。因此在 #{\mathbb C^\times\times G} 上用乘法 #{(z,g)(w,h)=(zw\sigma(g,h),gh)} 得到群，而 #{(z,g)\mapsto zT_g} 成为真正表示。这一步的证明只是代入结合律；找到满足条件的 #{T_g} 是前述深构造。}
+\p{当 #{c=0} 时积分空间为零，公式简化为 #{T_g\phi(x)=\psi(\frac 12\langle xa,xb\rangle)\phi(xa)}。这既给出可核验的三角情形，也说明“所有 Weil 算子都是 Fourier 变换”并不准确。本页使用的中心是 #{\mathbb C^\times}，不无条件称为二重覆盖。}

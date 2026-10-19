@@ -1,0 +1,12 @@
+\title{链环同调的 y 化与曲率消失}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Mellit](icm2026-mellit)，§4.3；Gorsky--Hogancamp--Mellit 2103.01212v2，§1.2}
+
+\p{给定 #{n} 股辫子 #{\beta} 及其排列 #{w}，令 #{R=\mathbb C[x_1,\ldots,x_n]}。#{T_\beta} 是 Rouquier 双模复形，正字时用[两项复形的张量模型](2Y14)定义；一般辫子还使用逆生成元的对偶复形，其存在与不变性取自所引文献。普通 Khovanov--Rozansky 同调先逐项取双模的 Hochschild 同调，再取辫子方向微分的同调。对双模 #{B}，这里的 Hochschild 同调定义为 #{\operatorname{Tor}^{R\otimes R^{\mathrm{op}}}_*(R,B)}，其 [Tor 的投射分解定义](01SA)使构造可直接计算；左右变量在这个取迹过程中被识别。}
+\p{y 化在复形中加入变量 #{y_1,\ldots,y_n} 及奇算子 #{\xi_i}。以 #{x_i'} 表示右乘法，所用模型满足}
+##{[d,\xi_i]_+=x_i-x'_{w^{-1}(i)},\qquad [\xi_i,\xi_j]_+=0,\qquad d_y=d+\sum_i y_i\xi_i,}
+##{d_y^2=\sum_i y_i(x_i-x'_{w^{-1}(i)}).}
+\p{下标 #{+} 表示两个奇算子的反交换子。因而在开辫子双模层面，#{d_y} 一般是有曲率的，并不是平方为零的[复形微分](012A)。在 Hochschild 取迹之后 #{x_i'=x_i}；再令同一 #{w} 循环中的 #{y_i} 相等，上式每一循环的和抵消为零。这正是[辫子闭包](190C)每个链环分支只保留一个 #{y} 变量的原因。所得同调记为 #{\operatorname{HY}(\widehat\beta)}。}
+\p{例如 #{w=(12)} 时曲率在取迹后是 #{(y_1-y_2)(x_1-x_2)}，令 #{y_1=y_2} 才消失。对恒等单股辫子，得到不结的 #{\operatorname{HY}=\mathbb C[x,y]\otimes\Lambda(\theta)}，其中外代数变量来自 Hochschild 方向。上述曲率计算是直接验证；复形模型的存在、分次规范化及 Markov 不变性是所引文献中的构造定理。}
