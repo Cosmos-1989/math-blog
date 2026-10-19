@@ -1,0 +1,13 @@
+\title{SPR 轨道平均的小偏差具有二次指数率}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，定理5.10；BCS v1 定理11.15}
+
+\p{设 #{f} 为闭流形的 #{C^{1+}} 微分同胚，#{X} 为周期一的 具有[SPR](3309)的 [Borel 同宿类](330I)，#{\mu} 为其[最大熵测度](330O)。设实值 [Hölder 观测量](331C) #{\psi} 中心化，即 #{\int\psi\,d\mu=0}，且[渐近方差](330W) #{\sigma_\psi^2>0}。记 #{S_n\psi=\sum_{j=0}^{n-1}\psi\circ f^j}。对任意 #{\varepsilon>0}，存在 #{a_0>0}，使每个固定 #{0<a<a_0} 在充分大的 #{n} 时满足}
+##{\exp\left(-\frac{n(1+\varepsilon)a^2}{2\sigma_\psi^2}\right)
+\le\mu\{S_n\psi\ge na\}
+\le\exp\left(-\frac{n(1-\varepsilon)a^2}{2\sigma_\psi^2}\right).}
+\p{这是 BCS 大偏差定理的局部二次形式。#{a_0} 可依赖 #{\varepsilon,\psi,f,\mu}，而起效时间还可依赖 #{a}。这里先固定偏差幅度再令 #{n} 增大，不是对任意随 #{n} 趋零的 #{a_n} 自动成立的统一估计。}
+
+\p{[ASIP 的中心极限尺度](330Y)比较 #{S_n} 与 #{\sqrt n}；本定理比较 #{S_n} 与 #{na}，概率因而指数小。方差为零时式中的分母失去意义，需改用[余边界与周期平均结构](330X)，不能把同一公式形式延续过去。}

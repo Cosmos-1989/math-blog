@@ -1,0 +1,14 @@
+\title{熵上半连续性保证最大熵测度存在}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§1.1；Newhouse 定理与紧性推导}
+
+\p{设 #{f:K\to K} 为[连续映射](00E2)，#{K} 为[紧](00F3)[度量空间](00EK)，#{h_{\mathrm{top}}(f)<\infty}。假设熵映射在不变概率测度的[弱拓扑](00TQ)下上半连续，即 #{\mu_j\to\mu} 时 #{\limsup_jh_{\mu_j}(f)\le h_\mu(f)}。则存在[最大熵测度](3302)。}
+
+\p{\strong{证明。}由[变分原理](331D)，可选不变概率测度 #{\mu_j} 使 #{h_{\mu_j}>h_{\mathrm{top}}-1/j}。概率测度空间的紧性给出弱收敛子列，其极限记为 #{\mu}。对每个连续函数 #{u}，}
+##{\int u\circ f\,d\mu=\lim_j\int u\circ f\,d\mu_j
+=\lim_j\int u\,d\mu_j=\int u\,d\mu,}
+\p{所以 #{\mu} 不变。上半连续性与变分原理共同给出 #{h_{\mathrm{top}}\le h_\mu\le h_{\mathrm{top}}}。按[熵的遍历分解公式](331E)，几乎所有遍历分量也达到同一值，任取一个便得到遍历 MME。}
+
+\p{Newhouse 的定理保证紧流形上的 #{C^\infty} 映射具有所需熵上半连续性；该光滑性定理是外部输入，其证明使用光滑动力系统的局部复杂度估计。因而光滑紧曲面微分同胚存在 MME，但仅有连续性或有限阶可微性并不足以套用这一结论。}

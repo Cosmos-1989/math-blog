@@ -1,0 +1,12 @@
+\title{齐次场沿叶梯度下降为射影实向量场}
+\date{2026-10-19}
+\taxon{Construction}
+\author{author}
+\meta{source}{Alvarez–Deroin，第 4.2–4.3 节，引理 4.3；实场采用复坐标速度规范}
+
+\p{设 #{V} 是 #{\mathbb C^3} 上 #{d} 次齐次场，非零点处不消失。令 #{r^2=\langle p,p\rangle}，其中 #{\langle p,q\rangle=\sum p_j\overline{q_j}}。在积分曲线 #{p(t)} 上取复时间 #{p'(t)=V(p(t))}，赋予叶内 [Hermitian 度量](0B8I) #{g=r^{2d-2}|dt|^2}，并令 #{f(p)=-\log r^2}。Hermitian 度量指光滑变化的正定复内积；这里未对环境曲面施加 Kähler 闭性条件。}
+\p{用复坐标速度表示实梯度：若实时间为 #{s}，则 #{dt/ds=2g_{t\bar t}^{-1}f_{\bar t}}。因 #{f_{\bar t}=-\langle p,V(p)\rangle /r^2}，得到}
+##{\frac{dp}{ds}=\rho(p)V(p),\qquad \rho(p)=-2\frac{\langle p,V(p)\rangle}{r^{2d}}.}
+\p{这个式子表示实向量场的复坐标分量；作为作用在实函数上的导子，是 #{\rho V+\overline{\rho V}}。于是 #{df/ds=|\nabla_g f|_g^2\ge 0}，它沿叶朝 #{f} 增大的方向运动。}
+\p{对 #{\lambda\ne 0}，齐次性给出 #{V(\lambda p)=\lambda^dV(p)} 及 #{\rho(\lambda p)=\lambda^{1-d}\rho(p)}，所以速度满足 #{\rho(\lambda p)V(\lambda p)=\lambda\rho(p)V(p)}。它因此下降为 #{\mathbb P^2} 上的实场 #{W}，切于[射影叶方向](350S)。}
+\p{其零点由两部分组成：#{V(p)} 为径向的射影奇点，以及 #{B=\Pi\{p:\langle p,V(p)\rangle=0\}}。若 #{V(p)=cp\ne 0}，内积不为零，故这两部分不交。乘实场以正常数只改变时间参数，不改变后续的吸引与排斥判据。}

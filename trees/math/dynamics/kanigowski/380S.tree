@@ -1,0 +1,12 @@
+\title{积分余循环给出连续时间斜积}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.2；Z2210v1 定义 2；独立计算}
+
+\p{设 #{K_t} 是 #{(X,\mu)} 上的[保测流](00RV)，#{G_v} 是 #{(Y,\nu)} 上保测的 #{\mathbb R^d} [作用](00BI)，#{\tau:X\to\mathbb R^d} 沿轨道局部可积。定义}
+##{\tau_T(x)=\int_0^T\tau(K_sx)\,ds,\qquad
+F_T(x,y)=(K_Tx,G_{\tau_T(x)}y).}
+\p{换元 #{s=T+u} 得到 #{\tau_{T+S}(x)=\tau_T(x)+\tau_S(K_Tx)}，这是一条[加性余循环恒等式](340G)。于是}
+##{F_SF_T(x,y)=(K_{S+T}x,G_{\tau_S(K_Tx)+\tau_T(x)}y)=F_{S+T}(x,y).}
+\p{先对 #{y} 积分消去 #{G_{\tau_T(x)}}，再用 #{K_T} 的保测性，便证明 #{F_T} 保持[乘积测度](00QB)。在紧流形上，若 #{K,G,\tau} 具有共同 #{C^r} 或实解析正则性，所得有限时间作用也具该正则性。}

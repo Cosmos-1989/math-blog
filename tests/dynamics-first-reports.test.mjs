@@ -31,9 +31,11 @@ test('the first Dynamics batch follows the published chapter order and counts jo
   assert.deepEqual(coverage.reports.slice(0, 3).map(row => row.doi), record.reports.map(row => row.doi));
   assert.equal(coverage.reports.length, 10);
   assert.equal(coverage.counts.primary_reports, 10);
-  assert.equal(coverage.counts.primary_reports_with_existing_topic, 3);
+  const integrated = coverage.reports.filter(row => row.outline).length;
+  assert(integrated >= 3);
+  assert.equal(coverage.counts.primary_reports_with_existing_topic, integrated);
   assert.equal(coverage.counts.cross_listed_reports_with_existing_topic, 3);
-  assert.equal(coverage.counts.reports_without_dedicated_topic, 7);
+  assert.equal(coverage.counts.reports_without_dedicated_topic, 10 - integrated);
   assert.equal(coverage.reports[2].speakers.length, 2);
   assert.equal(new Set(coverage.reports.map(row => row.doi)).size, 10);
   const topics = listedTopics(note('0069'));

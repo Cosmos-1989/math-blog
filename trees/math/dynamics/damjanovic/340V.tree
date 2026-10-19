@@ -1,0 +1,13 @@
+\title{完全正熵条件本身迫使遍历性}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §5.1；DWWX §1}
+
+\p{设 #{T} 是[标准概率空间](00Q8)上的[保测自同构](00RS)，不预先假定遍历。若每个非平凡[有限可测分割](00S1) #{\mathcal P} 都满足 #{h_\mu(T,\mathcal P)>0}，则 #{T} [遍历](00RW)。因此，[K 自同构的完全正熵条件](00S5)已经蕴含遍历性。}
+\p{\strong{证明。}反设存在模零不变集 #{E}，#{0<\mu(E)<1}。取分割 #{\mathcal P=\{E,M\setminus E\}}。每个 #{T^{-j}\mathcal P} 都与 #{\mathcal P} 模零相同，因此}
+##{h_\mu(T,\mathcal P)=\lim_{n\to\infty}\frac 1n
+H_\mu\left(\bigvee_{j=0}^{n-1}T^{-j}\mathcal P\right)
+=\lim_{n\to\infty}\frac{H_\mu(\mathcal P)}n=0.}
+\p{这与完全正熵矛盾。等价地，#{x\mapsto 1_E(x)} 给出一个非平凡的两点恒等[保测因子](3002)，它每次观测都重复同一信息，故[熵](00S2)为零。}
+\p{整个系统的正熵不具有这一推论：正熵只对所有分割取上确界，不能排除某个非平凡分割的熵为零。}

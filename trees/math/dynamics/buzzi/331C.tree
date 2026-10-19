@@ -1,0 +1,13 @@
+\title{Hölder 观测量将空间邻近转成数值误差界}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§§1.1、4.2、5.2；标准正则性定义}
+
+\p{设 #{(K,d)} 为[度量空间](00EK)，#{0<\alpha\le 1}。有界实值或复值函数 #{u} 称为 #{\alpha}-Hölder 连续，若}
+##{[u]_\alpha=\sup_{x\ne y}\frac{|u(x)-u(y)|}{d(x,y)^\alpha}<\infty.}
+\p{记 #{\|u\|_\alpha=\|u\|_\infty+[u]_\alpha}，所得函数空间为 #{C^\alpha(K)}。#{\alpha=1} 即 Lipschitz 条件。度量空间之间的 Hölder 映射则将分子替换为像点间的距离。[紧空间](00F3)上的 Hölder 函数自动有界。}
+
+\p{若 #{\pi:Y\to K} 满足 #{d_K(\pi y,\pi z)\le A d_Y(y,z)^\beta}，而 #{u\in C^\alpha(K)}，则}
+##{|u(\pi y)-u(\pi z)|\le[u]_\alpha A^\alpha d_Y(y,z)^{\alpha\beta}.}
+\p{因此 #{u\circ\pi} 为 #{\alpha\beta}-Hölder，半范数至多 #{[u]_\alpha A^\alpha}。这项直接计算说明[符号编码](330P)为什么能把流形上的正则观测量送到符号空间；Hölder 指数可能降低，但仍为正。}

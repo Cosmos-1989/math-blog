@@ -1,0 +1,11 @@
+\title{Logistic 族与实二次族的仿射共轭}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dudko](icm2026-dudko)，式(2.2)；独立共轭计算}
+
+\p{设 #{L_\lambda(x)=\lambda x(1-x)}，#{0<\lambda\leq 4}，定义可逆仿射映射 #{h_\lambda(x)=\lambda /2-\lambda x}。令 #{c=\lambda /2-\lambda^2/4}，则 #{h_\lambda\circ L_\lambda=p_c\circ h_\lambda}，其中 #{p_c(z)=z^2+c}。}
+
+\p{\strong{证明。}左侧为 #{\lambda /2-\lambda^2x+\lambda^2x^2}；右侧为 #{\lambda^2/4-\lambda^2x+\lambda^2x^2+c}，代入 #{c} 后相等。迭代该恒等式得到所有时刻的轨道对应。#{h_\lambda} 把临界点 #{1/2} 送到 #{0}，所以有界临界轨道也对应。}
+
+\p{#{L_\lambda} 将 #{[0,1]} 映入自身，因为 #{0\leq x(1-x)\leq 1 /4}。故这些 #{c} 都在[Mandelbrot 集](3602)内。#{c(\lambda)} 在 #{\lambda=1} 取最大值 #{1/4}，在 #{\lambda=4} 为 #{-2}，其像为 #{[-2,1/4]}。端点 #{\lambda=0} 时 #{h_\lambda} 不可逆，共轭陈述不含此端点。这个计算解释了实一维动力学为何可用复二次族研究。}

@@ -1,0 +1,11 @@
+\title{指数体积极限的测试测度是原始体积}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.1，定理 4.3 前的公式；M2504v1 式 (1.2)}
+
+\p{设 #{f:M\to M} 是紧流形上的 #{C^{1+\alpha}} 微分同胚，#{m} 为归一化 [Riemann 体积](3801)，不要求 #{f_*m=m}。概率测度 #{\mu} 称为指数体积极限，若存在 #{r>0,C,a>0}，对所有 #{g,h\in C^r(M)} 及整数 #{n\geq 1} 有}
+##{\left|\int g(f^nx)h(x)\,dm(x)-\mu(g)m(h)\right|
+\leq Ce^{-an}\|g\|_{C^r}\|h\|_{C^r}.}
+\p{令 #{h=1} 得 #{f_*^nm\to\mu} 弱收敛。由连续函数的一致逼近，此收敛可测试于任意连续函数。于是对连续 #{g}，#{\mu(g\circ f)=\lim_n\int g\circ f^{n+1}\,dm=\mu(g)}，所以 #{f_*\mu=\mu}。}
+\p{上式左侧的积分仍是对 #{m}，并非对 #{\mu}，故它本身不给出 #{\mu} 的指数相关衰减。用于 SRB 与 Bernoulli 结论时须再保留[非原子](00Q7)条件。}

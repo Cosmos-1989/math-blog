@@ -1,0 +1,13 @@
+\title{保测作用生成的斜积}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§2.3，式 (2.1)；独立证明}
+
+\p{设 #{T:(X,\mu)\to(X,\mu)} 是[保测自同构](00RS)，#{A=\mathbb R^d} 或 #{\mathbb Z^d}，#{\alpha:A\curvearrowright(Y,\nu)} 是联合可测的保测[群作用](00BI)，#{\phi:X\to A} 可测。定义}
+##{F_\phi(x,y)=(Tx,\alpha_{\phi(x)}y).}
+\p{称它为底变换 #{T}、余循环增量 #{\phi}、纤维作用 #{\alpha} 的斜积，也称广义 #{(T,T^{-1})} 变换。#{A=\mathbb R} 时纤维作用是[保测流](00RV)。#{A=\mathbb Z} 时，作用由一个保测自同构的整数次迭代生成。定义本身只需可测性；讨论均值时另要求 #{\phi\in L^1(\mu)}。}
+\p{对有界可测 #{H}，先在纤维积分，再在底空间积分，得到}
+##{\int H(Tx,\alpha_{\phi(x)}y)\,d\nu(y)d\mu(x)
+=\int H(Tx,y)\,d\nu(y)d\mu(x)=\int H\,d(\mu\otimes\nu).}
+\p{因此它保持[乘积测度](00QB)。逆映射为 #{F_\phi^{-1}(x,y)=(T^{-1}x,\alpha_{-\phi(T^{-1}x)}y)}，逐次代入即可核对。}

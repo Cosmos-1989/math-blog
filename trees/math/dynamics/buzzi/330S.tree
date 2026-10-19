@@ -1,0 +1,16 @@
+\title{转移算子的谱隙推出指数相关衰减}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，定理4.11；BCS v1 附录B定理B.7}
+
+\p{设 #{(Y,\mu,T)} 为保概率系统，#{L} 是满足 #{\int vLu\,d\mu=\int(v\circ T)u\,d\mu} 的[归一化转移算子](330R)。假设某个 [Banach 空间](00M6) #{\mathcal B} 由可积函数组成，且连续嵌入 #{L^1(\mu)}，且在该空间上}
+##{L=P+N,\qquad Pu=\left(\int u\,d\mu\right)1,\qquad
+PN=NP=0,\qquad \rho(N)<1.}
+\p{这里 #{\rho(N)} 为谱半径，#{P^2=P}。则任意 #{\rho(N)<\kappa<1} 都有常数 #{C}，使 #{u\in\mathcal B}、#{v\in L^\infty(\mu)} 满足}
+##{\left|\int u(v\circ T^n)\,d\mu -\int u\,d\mu\int v\,d\mu\right|
+\le C\kappa^n\|u\|_{\mathcal B}\|v\|_\infty.}
+
+\p{\strong{证明。}由 #{PN=NP=0} 得 #{L^n=P+N^n}。谱半径公式 #{\lim_n\|N^n\|^{1/n}=\rho(N)} 说明充分大的 #{n} 有 #{\|N^n\|\le\kappa^n}；增大常数即可涵盖其余有限多个 #{n}。反复使用对偶恒等式，将左侧写为 #{|\int vN^nu\,d\mu|}。再用 #{L^\infty} 与 #{L^1} 的积分界，以及连续嵌入 #{\|w\|_1\le C_0\|w\|_{\mathcal B}}，便得结论。}
+
+\p{Cyr–Sarig 的谱隙定理及 BCS 的归一化版本，为有限熵、不可约、[周期一](330K)的[SPR Markov 移位](330L)提供这种空间，包含适当的 [Hölder 观测量](331C)。构造该 Banach 空间及证明谱隙是引用的研究结果；上面的计算证明的是谱隙到相关衰减的推论。}

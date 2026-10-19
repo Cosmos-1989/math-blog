@@ -1,0 +1,16 @@
+\title{可和相关函数给出 Green–Kubo 渐近方差}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§5.2；BCS v1 定理11.13的周期一情形}
+
+\p{设 #{f} 是保持概率测度 #{\mu} 的[保测自同构](00RS)，实函数 #{\psi\in L^2(\mu)} 平方可积，即 #{\int|\psi|^2\,d\mu<\infty}，并满足 #{\int\psi\,d\mu=0}。记 #{S_n\psi=\sum_{j=0}^{n-1}\psi\circ f^j}，#{C_k=\int\psi(\psi\circ f^k)\,d\mu}。若 #{\sum_{k\ge 1}|C_k|<\infty}，则渐近方差存在，并满足}
+##{\sigma_\psi^2:=\lim_{n\to\infty}\frac 1n\int(S_n\psi)^2\,d\mu
+=C_0+2\sum_{k=1}^\infty C_k\ge 0.}
+
+\p{\strong{证明。}展开平方得到 #{n^2} 个积分项。不变性使对角线上每项为 #{C_0}；时间差 #{k\ge 1} 的上、下对角线各有 #{n-k} 项，每项为 #{C_k}。所以}
+##{\frac 1n\int(S_n\psi)^2\,d\mu
+=C_0+2\sum_{k=1}^{n-1}\left(1-\frac{k}{n}\right)C_k.}
+\p{固定有限截断 #{K}，其内各系数趋于一；截断以外的误差绝对值不超过 #{2\sum_{k>K}|C_k|}。先令 #{n\to\infty}，再令 #{K\to\infty}，即得公式。左侧每项非负，故极限非负。}
+
+\p{[周期一 SPR MME 的指数混合](330T)保证 Hölder 观测量满足相关绝对可和性。周期大于一时，单步相关可能振荡而不趋零；需要按周期合并轨道和，再使用相应的周期版本，不能直接假设本页的级数绝对收敛。非中心化函数应先减去其均值。}

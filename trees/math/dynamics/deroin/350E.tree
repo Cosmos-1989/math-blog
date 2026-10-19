@@ -1,0 +1,13 @@
+\title{固定双曲曲面上的 Brownian 单值指数}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{Deroin–Dujardin，arXiv:1305.0049v2，第 1.4、2.1 节，定义命题 2.1}
+
+\p{设 #{B} 是亏格 #{g\ge 2} 的紧[黎曼曲面](00FR)，取其曲率 #{-1} 的双曲度量、基点 #{b}，并给定表示 #{\rho:\pi_1(B,b)\to\mathrm{PSL}_2(\mathbb C)}。曲面 Brownian 运动是连续路径 Markov 过程，其转移概率为 #{p_t(x,y)\,d\mathrm{vol}(y)}；热核满足 #{\partial_t p_t=\Delta_y p_t}，并在 #{t\downarrow 0} 时趋于点质量 #{\delta_x}。局部共形度量 #{g=e^{2u}(dx^2+dy^2)} 对应 #{\Delta=e^{-2u}(\partial_x^2+\partial_y^2)}。}
+\p{此规范的生成元为 #{\Delta}，而[标准欧氏 Brownian 运动](0N0S)的生成元为 #{\Delta /2}；曲面上也没有全局的独立平稳坐标增量。把从 #{b} 出发的路径 #{\omega|_{[0,t]}} 用终点到 #{b} 的最短测地线闭合，记所得闭路为 #{\widehat\omega_t}。}
+\p{Deroin–Dujardin 的存在定理断言：几乎处处有与路径无关的有限极限}
+##{\chi_B(\rho)=\lim_{t\to\infty}\frac 1t\log\|\rho(\widehat\omega_t)\|.}
+\p{这里对任意 #{\mathrm{SL}_2} 提升 #{A} 使用[算子范数](00M4) #{\|A\|=\sup_{\|v\|=1}\|Av\|=\sqrt{\lambda_{\max}(A^*A)}}。正负提升不影响范数。闭合最短路径的不唯一性与基点选择均不改变极限；这些断言包含在该存在定理中。}
+\p{共轭不变性可直接证明：#{\|CAC^{-1}\|\le\|C\|\|C^{-1}\|\|A\|}，反向同理，所以两种对数范数之差的绝对值被常数 #{\log(\|C\|\|C^{-1}\|)} 控制，除以 #{t} 后消失。有限维范数的选择同样无关。若改用生成元 #{\Delta /2}，新过程是原过程的 #{t/2} 时刻，指数相应减半。}
+\p{这与[悬挂](3507)中的横向单值增长相联系。底面有穿孔时，原定理另要求每个周边闭路的单值为非平凡抛物型；任意 loxodromic 周边单值不属于这个有限指数结论的适用范围。}

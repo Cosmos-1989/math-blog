@@ -1,0 +1,11 @@
+\title{Hamming 距离记录轨道名字的失配比例}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.1；独立距离估计}
+
+\p{设 #{T} 是[保测自同构](00RS)，#{\mathcal P=\{P_1,\ldots,P_s\}} 为[有限可测分割](00S1)。点 #{x} 的长度 #{n} 名字为 #{a_0\cdots a_{n-1}}，其中 #{T^jx\in P_{a_j}}。两个名字的归一化 Hamming 距离为}
+##{\bar d_n(a,b)=\frac 1n\#\{0\leq j<n:a_j\ne b_j\}.}
+\p{若失配次数至多 #{\varepsilon n}，则对在每个分割片上为常数且 #{|u|\leq B} 的函数，有}
+##{\left|\frac 1n\sum_{j<n}u(T^jx)-\frac 1n\sum_{j<n}u(T^jy)\right|\leq 2B\varepsilon.}
+\p{证明只需把和拆为匹配与失配位置。匹配处差为零，失配处差至多 #{2B}，相加后除以 #{n}。名字空间上这是度量，点空间上可能只是[伪度量](00EL)，因为不同点可以具有相同有限名字。}

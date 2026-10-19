@@ -1,0 +1,12 @@
+\title{流塔的高宽关系控制边界损失}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 §5 Definitions 5.1–5.2}
+
+\p{设 #{F_t} 是[概率空间](00Q3) #{(X,\mu)} 上的[保测流](00RV)。高度 #{H>0}、底 #{B} 的流塔是集合 #{\mathcal T=\{F_sb:b\in B,\ 0\le s<H\}}，要求参数化 #{(b,s)\mapsto F_sb} 除零测集外单射，且拉回测度为[乘积测度](00QB) #{d\nu(b)\,ds}。其中 #{\nu} 是底上的横截测度，故 #{\mu(\mathcal T)=H\nu(B)}。}
+\p{集合 #{A} 的 #{\delta}-近划分是一族两两不交的可测子集 #{A_j\subset A}，满足 #{\mu(A\setminus\bigcup_jA_j)<\delta\mu(A)}。若每个 #{A_j} 都是与原塔同高、底包含于 #{B} 的塔，便称为同高子塔近划分。空子塔可以省去。}
+\p{对 #{0\le r\le H}，底层 #{0\le s<r} 和顶层 #{H-r\le s<H} 的测度均为 #{r\nu(B)}。移动时间 #{r} 后仍留在塔内的点至少包括 #{0\le s<H-r}，所以}
+##{\mu(F_r\mathcal T\mathbin{\triangle}\mathcal T)\le 2r\nu(B)
+=\frac{2r}{H}\mu(\mathcal T).}
+\p{第一步用共同部分 #{\{F_sb:r\le s<H\}}，第二步用保测性使两边的损失相同。这解释了为何在很高的塔内做短时间平移只产生小的相对边界误差；一般流是否存在覆盖大部分空间的塔，是另一个存在性问题。}

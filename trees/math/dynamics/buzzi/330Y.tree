@@ -1,0 +1,15 @@
+\title{几乎必然不变原理以 Brownian 运动逼近轨道和}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，定义5.11、注5.12}
+
+\p{随机过程 #{(S_n)_{n\ge 1}} 满足参数 #{\sigma\ge 0}、速率 #{o(n^\gamma)} 的几乎必然不变原理（ASIP），是指存在同一[概率空间](00Q3)上的过程 #{(\widetilde S_n)} 与[标准 Brownian 运动](0N0S) #{(B_t)}，使 #{(\widetilde S_n)} 与 #{(S_n)} 的全部有限维联合分布相同，且}
+##{|\widetilde S_n-\sigma B_n|=o(n^\gamma)\quad\text{几乎处处},\qquad 0<\gamma<1/2.}
+\p{这里要求整个过程的分布一致，而不只是每个时刻的一维分布一致。Brownian 运动与原过程在新空间上耦合，也不要求二者独立。}
+
+\p{\strong{中心极限结论。}除以 #{\sqrt n}，误差几乎处处趋零。若 #{\sigma>0}，固定 #{t\in\mathbb R} 和 #{\delta>0}，有}
+##{\mathbb P(\sigma B_n/\sqrt n\le t-\delta)-\mathbb P(|D_n|>\delta)
+\le\mathbb P(\widetilde S_n/\sqrt n\le t)
+\le\mathbb P(\sigma B_n/\sqrt n\le t+\delta)+\mathbb P(|D_n|>\delta),}
+\p{其中 #{D_n=(\widetilde S_n-\sigma B_n)/\sqrt n}。误差概率趋零，而 #{B_n/\sqrt n} 每次都服从[标准正态分布](0N0R)。先令 #{n\to\infty}，再令 #{\delta\downarrow 0}，正态分布函数的连续性给出 #{S_n/\sqrt n\Rightarrow N(0,\sigma^2)}。若 #{\sigma=0}，直接得到依概率收敛到零。因此 ASIP 的非负参数 #{\sigma} 由极限分布唯一确定。}

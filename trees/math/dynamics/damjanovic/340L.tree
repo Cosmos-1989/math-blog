@@ -1,0 +1,13 @@
+\title{高秩作用的粗 Lyapunov 空间与墙}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §4；DSVX §2.4、§5.2.1}
+
+\p{设 #{\rho:\mathbb R^k\curvearrowright M} 为闭[光滑流形](0043)上的 #{C^1} [群作用](00BI)，保持一个[遍历](00RW)概率测度 #{\mu}。阿贝尔作用的乘法遍历定理给出有限个线性泛函 #{\chi:\mathbb R^k\to\mathbb R} 及满测度集上的可测不变分解 #{T_xM=\bigoplus_\chi E_\chi(x)}，使对 #{0\ne v\in E_\chi(x)} 有}
+##{\lim_{n\to\infty}\frac 1n\log\frac{\|D_x\rho(na)v\|}{\|v\|}=\chi(a).}
+\p{这是[单映射 Lyapunov 指数](311C)的多参数版本。紧性保证作用生成方向的微分对数可积；上述共同分解及泛函的线性性属于所引乘法遍历定理，不是分别给每个元素做分解后直接拼接。非遍历测度一般须按遍历分量理解，不能预先假定各分量的指数相同。}
+\p{对非零泛函，把正比例的泛函归为一类 #{[\chi]=\{c\chi:c>0\}}，定义粗 Lyapunov 空间}
+##{E^{[\chi]}(x)=\bigoplus_{c>0,\ c\chi\text{ 属于谱}}E_{c\chi}(x).}
+\p{相反的泛函 #{-\chi} 不在同一类，因为收缩与膨胀的方向相反。超平面 #{\ker\chi} 称墙，所有墙的补集的[连通分支](0118)称 Weyl 室。在一个室内，每个 #{\chi(a)} 的符号固定；跨墙才可能改变。零泛函不产生墙。}
+\p{可测粗空间的存在并不自动给出连续子丛或叶状结构。在[对角齐性算例](340E)中，#{\chi_{ij}(t)=t_i-t_j}，各空间由全局矩阵标架明确给出，因而额外具有光滑性。}

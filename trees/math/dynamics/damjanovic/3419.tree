@@ -1,0 +1,20 @@
+\title{交换仿射扰动的线性化共轭兼容关系}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §2.4、§6；独立一阶计算}
+
+\p{设 #{a(x)=Ax+\alpha}、#{b(x)=Bx+\beta} 为实空间上[交换的仿射提升](3412)。考虑光滑参数族}
+##{F_\varepsilon=a+\varepsilon p+O(\varepsilon^2),\qquad
+G_\varepsilon=b+\varepsilon q+O(\varepsilon^2),}
+\p{其中 #{p,q} 为周期向量值函数。若 #{F_\varepsilon G_\varepsilon=G_\varepsilon F_\varepsilon}，则一阶项满足}
+##{p\circ b-Bp=q\circ a-Aq.}
+\p{\strong{证明。}由 [Taylor 展开](0I8J)，左侧复合的一阶项为 #{Aq+p\circ b}，右侧为 #{Bp+q\circ a}。零阶相同，所以比较一阶项即得结论。}
+\p{若还希望用 #{H_\varepsilon=\operatorname{id}+\varepsilon u+O(\varepsilon^2)} 把两扰动同时共轭回原作用，则从 #{H_\varepsilon F_\varepsilon=aH_\varepsilon} 比较一阶项，得到}
+##{u\circ a-Au=-p,\qquad u\circ b-Bu=-q.}
+\p{令 #{\delta_a u=u\circ a-Au}、#{\delta_bu=u\circ b-Bu}。直接展开给出}
+##{\delta_b\delta_a u
+=u\circ ab-Au\circ b-Bu\circ a+BAu
+=\delta_a\delta_bu,}
+\p{这里同时使用 #{ab=ba} 与 #{AB=BA}。因此 #{\delta_b p=\delta_a q} 正是该线性方程组的必要兼容条件。}
+\p{当 #{A=B=I}，它退化为[标量余循环兼容式](340G)的逐分量版本；一般情形必须保留矩阵作用 #{Au,Bu}，不能照搬无扭曲公式。此计算只控制一阶项，不证明高阶误差能够迭代消除。}

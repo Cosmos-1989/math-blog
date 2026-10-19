@@ -1,0 +1,10 @@
+\title{区间交换把平移片段重新排列}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 §2.1}
+
+\p{设 #{I=\lbrack 0,L\rparen} 带 [Lebesgue 测度](00XV)，取正数 #{\lambda_1,\ldots,\lambda_d} 满足 #{\sum\lambda_i=L}，并把 #{I} 按此长度分成半开区间 #{I_i}。区间交换变换由一个排列指定：将各 #{I_i} 平移到互不相交、恰好覆盖 #{I} 的区间 #{J_i}，不翻转方向。}
+\p{若 #{a_i,b_i} 分别为 #{I_i,J_i} 的左端点，则 #{T(x)=x+b_i-a_i}，#{x\in I_i}。它是几乎处处可逆的[保测变换](00RS)：对可测集 #{A}，}
+##{\operatorname{Leb}(T^{-1}A)=\sum_i\operatorname{Leb}((A\cap J_i)-(b_i-a_i))=\sum_i\operatorname{Leb}(A\cap J_i)=\operatorname{Leb}(A).}
+\p{例如在单位区间取 #{I_1=\lbrack 0,1-\alpha\rparen}、#{I_2=\lbrack 1-\alpha,1\rparen}，交换其顺序。第一段平移 #{\alpha}，第二段平移 #{\alpha -1}，得到圆周旋转 #{x\mapsto x+\alpha\pmod 1}。区间交换本身没有伸长；以它为底的特殊流可由非恒定返回时间产生剪切。}

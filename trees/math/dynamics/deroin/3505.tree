@@ -1,0 +1,12 @@
+\title{Riccati 方程与二维线性系统的射影化}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deroin](icm2026-deroin)，第 2 节；线性系统的直接计算}
+
+\p{设 #{a,b,c} 在一个复圆盘上全纯。考虑迹为零的线性系统}
+##{\frac d{dx}\begin{pmatrix}u\\v\end{pmatrix}=A(x)\begin{pmatrix}u\\v\end{pmatrix},\qquad A=\begin{pmatrix}b/2&c\\-a&-b/2\end{pmatrix}.}
+\p{在 #{v\ne 0} 处令 #{y=u/v}。商法则给出 #{y'=(u'v-uv')/v^2=ay^2+by+c}，正是 [Riccati 方程](3504)。非零解不能在某点同时满足 #{u=v=0}，所以射影解在 #{\mathbb P^1} 中继续存在，越过 #{v=0} 时改用另一张坐标图即可。}
+\p{若 #{M(x)} 是满足 #{M(x_0)=I} 的基本解矩阵，直接求二阶行列式的导数得 #{(\det M)'=(\operatorname{tr}A)\det M=0}，故 #{M(x)\in\mathrm{SL}_2(\mathbb C)}。沿闭路延拓后，初值变换为某个矩阵 #{M_\gamma}；在比值坐标中它作用为}
+##{y\longmapsto\frac{m_{11}y+m_{12}}{m_{21}y+m_{22}}.}
+\p{这就是 [Möbius 变换](00ZB)，矩阵 #{M_\gamma} 与 #{-M_\gamma} 给出同一变换，故 [holonomy 表示](3503)取值于 #{\mathrm{PSL}_2(\mathbb C)}。变更初始纤维坐标将所有返回映射同时共轭；因此模空间中的自然对象是表示的共轭类，而不是选定基之后的矩阵。}

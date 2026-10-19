@@ -1,0 +1,12 @@
+\title{正反时间熵夹逼把平稳性升级为不变性}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Filip](icm2026-filip)，报告§3.2式(3.1)、§5.3；BFERH v1 命题4.3.8与4.3.11}
+
+\p{设 #{\mu=\sum_i p_i\delta_{f_i}}、#{\nu} 满足[stiffness 定理](370D)的假设，令 #{T} 为[随机斜积](3705)的可逆自然扩张时间一映射。记 #{H=-\sum_i p_i\log p_i}，#{h=h_{\widehat\nu}(T)} 为 [KS 熵](00S2)，#{h_-} 为反向动力学沿“固定当前点与未来、改变过去”的组合分割的条件熵。}
+\p{BFERH 命题4.3.8给出 #{h_-\le H}，且}
+##{h_-=H\quad\Longleftrightarrow\quad \nu\text{ 被每个 }f_i\text{ 保持}.}
+\p{其几何论证构造共同不变子丛 #{Z}。记 #{A=\sum_{\lambda>0}\lambda\dim Z_\lambda}、#{B=\sum_{\lambda<0}(-\lambda)\dim Z_\lambda}。条件测度的光滑方向与支撑方向，通过 Ledrappier–Young 型估计给出 #{h\ge H+A}、#{h_{\widehat\nu}(T^{-1})\le h_-+B}；这些估计采用该文命题4.3.8、4.3.11。}
+\p{\strong{夹逼。}可逆保测系统满足 #{h(T)=h(T^{-1})}，故 #{h_--H\ge A-B}。stiffness 假设给出 #{A-B\ge 0}，而 #{h_-\le H} 给出反向不等式，于是 #{0\ge h_--H\ge A-B\ge 0}，全部为零。由上面的等号判据得到不变性。}
+\p{这个推导的关键是熵的等号；不等式 #{h_-\le H} 对平稳测度本来就成立，不能单独用来识别不变测度。}

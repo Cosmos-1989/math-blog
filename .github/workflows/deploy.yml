@@ -56,6 +56,8 @@ jobs:
           node --test tests/lie-second-reports.test.mjs
           node --test tests/lie-third-reports.test.mjs
           node --test tests/dynamics-first-reports.test.mjs
+          node --test tests/dynamics-second-reports.test.mjs
+          node --test tests/dynamics-final-reports.test.mjs
           node --test tests/topology-exotic-stems-graphs-math.test.mjs
           node tests/bourbaki-math.test.mjs
           node tests/geometry-expansion-math.test.mjs
@@ -133,6 +135,8 @@ jobs:
           TOPOLOGY_RECORD=research/icm2026-lie-second-reports.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-lie-third-reports.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-dynamics-first-reports.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-dynamics-second-reports.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-dynamics-final-reports.json node tests/topology-report-render.test.mjs
           node tests/topic-introductions-render.test.mjs
 
       - name: Setup Pages

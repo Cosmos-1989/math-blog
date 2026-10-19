@@ -1,0 +1,16 @@
+\title{含二步生成元的抛物仿射作用的 KAM 二分}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 Theorem 6.1；DFS v2 Theorem A}
+
+\p{设 #{A,B\in\operatorname{SL}_d(\mathbb Z)} 交换且所有特征值为一，满足 #{A\ne I}、#{(A-I)^2=0}。在[实交换参数空间](3412) #{\mathcal T(A,B)} 中考察 #{a(x)=Ax+\alpha}、#{b(x)=Bx+\beta}。Damjanović–Fayad–Saprykina 的定理给出二分：}
+\ol{
+\li{线性作用[锁定](3417)，相应参数族中的作用均不具有所述 KAM 刚性；}
+\li{线性作用解锁，且对 #{\mathcal T(A,B)} 中几乎每个参数，作用遍历并具有[保体积零平均扰动下的 KAM 刚性](3416)。}
+}
+\p{这是 [arXiv:2303.04367v2，定理 A](https://arxiv.org/html/2303.04367v2) 的版本；“几乎每个”使用该线性参数空间自身的 Lebesgue 测度，并不是说每个解锁参数都刚性。遍历性指两个生成元共同不变的可测集只有零或一的测度，不要求每个非零群元素单独遍历。}
+\p{原始证明在最大平移因子上要求[联合丢番图控制](3414)，还要求共振频率的控制。具体地，记 #{\bar A=(A^{\mathsf T})^{-1}}、#{\bar B=(B^{\mathsf T})^{-1}}；若整数频率 #{m\ne 0} 被某个原始整数对 #{(k,l)} 的 #{\bar A^k\bar B^l} 固定，但不同时被 #{\bar A,\bar B} 固定，则要对 #{a^kb^l(x)=A^kB^lx+\alpha_{k,l}} 的平移部分满足统一的下界}
+##{|1-e^{2\pi i m\cdot\alpha_{k,l}}|\ge\gamma |m|^{-\tau}.}
+\p{原始整数对指 #{\gcd(k,l)=1}。解锁情形下，这些算术条件在参数中组成满测度集。仅验证平移因子的联合条件不足以取代全部共振条件。}
+\p{二步条件提供能以固定阶数损失求解的上同调估计；非线性迭代及一般共振分析属于该研究定理的证明。它不是关于全部高步抛物作用的无限制刚性结论。}

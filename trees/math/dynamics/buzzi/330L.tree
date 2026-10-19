@@ -1,0 +1,16 @@
+\title{符号 SPR 等价于高熵测度不能逃离有限顶点集}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，定义4.8；BCS v1 定理7.4}
+
+\p{设 #{\Sigma(G)} 为[不可约可数 Markov 移位](330J)，[测度熵](00S2)上确界 #{h=\sup_\nu h_\nu(\sigma)} 有限。其符号 SPR 条件可表为：存在有限顶点集 #{F\subset V}、#{h_0<h}、#{m>0}，使每个遍历不变概率测度 #{\nu} 满足}
+##{h_\nu(\sigma)>h_0\quad\Longrightarrow\quad
+\nu([F])\ge m,\qquad [F]=\{x:x_0\in F\}.}
+\p{这与[光滑 SPR](3309)形式相同，但受控区域是有限顶点集，而不是 Pesin 块。}
+
+\p{称 #{\nu_j} 逃向无穷，若每个有限 #{F\subset V} 都满足 #{\nu_j([F])\to 0}。定义 #{h_\infty=\sup\limsup_j h_{\nu_j}(\sigma)}，上确界取遍所有这种遍历测度序列；没有这种序列时取 #{-\infty}。上述有限集条件等价于 #{h_\infty<h}。}
+
+\p{\strong{证明。}若有限集条件成立，逃逸序列最终满足 #{\nu_j([F])<m}，从而 #{h_{\nu_j}\le h_0}，故 #{h_\infty\le h_0<h}。反之，若有限集条件不成立，枚举顶点并以 #{F_j} 表示前 #{j} 个。对阈值 #{h-1/j} 与质量 #{1/j}，可选遍历测度 #{\nu_j} 使 #{h_{\nu_j}>h-1/j} 且 #{\nu_j([F_j])<1/j}。每个有限顶点集最终包含于 #{F_j}，所以此序列逃逸，而其熵趋于 #{h}，与严格熵间隙矛盾。}
+
+\p{有限集条件与[首次回返闭路增长间隙](330M)等价，是 Gurevich、Savchenko、Ruette 等人的结构定理。上面的对角论证只负责两种测度表述之间的等价。}

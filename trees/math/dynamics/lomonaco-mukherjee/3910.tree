@@ -1,0 +1,12 @@
+\title{David 面积尾界推出畸变的指数可积性}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Lomonaco 与 Mukherjee](icm2026-lomonaco-mukherjee)，§5.1的指数可积畸变；以下尾积分推导}
+
+\p{设 #{E} 面积有限，系数 #{\mu} 在 #{E} 上满足 [David 面积条件](390Z)，常数为 #{C,\alpha,\varepsilon_0}。定义畸变 #{K=(1+|\mu|)/(1-|\mu|)}。则对每个 #{0<\beta<\frac{\alpha}{2}}，有 #{\int_E e^{\beta K}\,dm<\infty}。}
+\p{\strong{证明。}解不等式 #{K>t}，得到 #{|\mu|>(t-1)/(t+1)=1-2/(t+1)}。取 #{t} 足够大，使 #{2/(t+1)<\varepsilon_0}，面积条件给出}
+##{m\{K>t\}\leq C\exp\left(-\frac{\alpha(t+1)}2\right).}
+\p{又有 #{e^{\beta K}=1+\int_0^K\beta e^{\beta t}\,dt}。非负函数的 [Lebesgue 积分](00Q5)可用 [Tonelli 定理](0H53)交换次序，因此}
+##{\int_E e^{\beta K}\,dm=m(E)+\int_0^\infty\beta e^{\beta t}m\{z\in E:K(z)>t\}\,dt.}
+\p{有限长度的积分段由 #{m(E)} 控制；尾段被常数乘 #{\int^\infty e^{(\beta -\frac{\alpha}{2})t}\,dt} 控制，因 #{\beta<\frac{\alpha}{2}} 收敛。这个估计解释了指数面积条件的强度，也指出可积指数依赖于给定的面积衰减常数。}

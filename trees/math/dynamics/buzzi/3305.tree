@@ -1,0 +1,19 @@
+\title{Pesin 块的双曲分裂由向量增长唯一确定}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§2.2；分裂唯一性的直接证明}
+
+\p{设 #{x\in\Lambda(\chi,\varepsilon,C)} 是一个 [Pesin 块](3304)中的点，#{0<\varepsilon<\chi}。其分裂 #{T_xM=E\oplus F} 满足}
+##{E=\{v\in T_xM:\sup_{n\ge 0}\|Df_x^nv\|<\infty\},\qquad
+F=\{v\in T_xM:\sup_{n\ge 0}\|Df_x^{-n}v\|<\infty\}.}
+\p{特别地，满足块估计的分裂是唯一的。}
+
+\p{\strong{证明。}对 #{e\in E}，块估计在 #{k=0} 给出 #{\|Df_x^ne\|\le Ce^{-\chi n}\|e\|}，故正向轨道有界。对 #{u\in F}，在 #{k=n} 处对 #{Df_x^nu} 使用反向估计，得到}
+##{\|u\|\le Ce^{\varepsilon n}e^{-\chi n}\|Df_x^nu\|,\qquad
+\|Df_x^nu\|\ge C^{-1}e^{(\chi -\varepsilon)n}\|u\|.}
+\p{任意向量唯一写成 #{v=e+u}。若 #{u\ne 0}，三角不等式给出}
+##{\|Df_x^nv\|\ge C^{-1}e^{(\chi -\varepsilon)n}\|u\|-Ce^{-\chi n}\|e\|\longrightarrow\infty.}
+\p{因此正向有界恰好等价于 #{u=0}，证明第一个等式。把 #{f} 换成 #{f^{-1}}，交换 #{E,F}，同样得到第二个等式。右侧条件只依赖 #{f,x}，故分裂唯一。}
+
+\p{在 [Oseledets 正则点](311C)，正、负指数空间分别符合上述增长判别；因此块分裂就是稳定与不稳定 Oseledets 空间。严格条件 #{\varepsilon<\chi} 保证展开下界真正增长，是这一论证的关键。}

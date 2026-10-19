@@ -1,0 +1,13 @@
+\title{黄金均值的连分数返回时间}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Dudko](icm2026-dudko)，图4、图5所用参数；独立数论计算}
+
+\p{令 #{\theta=(\sqrt 5-1)/2}，则 #{\theta^2+\theta=1}，故 #{1/\theta=1+\theta}。按[连分数算法](360V)，每次尾数都仍为 #{\theta}，所以 #{\theta=[0;1,1,\ldots]}。它是周期一的有界型旋转数。}
+
+\p{令 Fibonacci 数 #{F_0=0,F_1=1,F_{n+1}=F_n+F_{n-1}}。连分数递推给出 #{p_n=F_n}、#{q_n=F_{n+1}}。更精确地，}
+##{q_n\theta -p_n=(-1)^n\theta^{n+1}.}
+\p{#{n=0,1} 时直接核验；其余由两边都满足相同的二阶递推及 #{1-\theta=\theta^2} 得出。因此圆周旋转 #{x\mapsto x+\theta\pmod 1} 在 #{q_n} 次之后的角位移趋零，并左右交替。}
+
+\p{将 #{\lambda=e^{2\pi i\theta}} 代入[中性二次式](360T)给出经典黄金均值 Siegel 参数。连分数的周期性给出重整化组合的周期性；实际映射的收敛和参数普适性依赖近 Siegel 双曲性定理，不能从 Fibonacci 恒等式单独推出。}

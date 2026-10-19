@@ -1,0 +1,701 @@
+{
+  "date": "2026-10-19",
+  "report": {
+    "speaker": "Jérôme Buzzi",
+    "prefix": "33",
+    "outline": "3300",
+    "reference": "icm2026-buzzi",
+    "title": "Chaos on Surfaces and Beyond: A New Notion of Dynamical Hyperbolicity",
+    "outline_title": "从高熵双曲块到混沌的统计规律",
+    "doi": "10.1137/25M1807071",
+    "pages": "59-78",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807071",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1807071",
+    "version_role": "Official published ICM2026 Volume 5: Invited Lectures (Sections 9-11), online 2026-07-13. The official full HTML is the report source; the 97-page BCS preprint is supplementary and pinned to v1.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union, published by SIAM under CC BY 4.0, verified in official publication metadata. The reference attributes the Chinese adaptation and added calculations. This license does not extend to the cited nonexclusive-license arXiv manuscript.",
+    "question": "How does common positive mass on controlled hyperbolic blocks prevent high-entropy escape, produce finite ergodic maximal-entropy structure and quantitative statistics, and extend beyond positive-entropy smooth surfaces?",
+    "reading_scope": "Read the complete official mathematical HTML: sections 1.1-1.2, 2.1-2.6, 3.1-3.4, 4.1-4.3, 5.1-5.2, 6.1-6.2, 7.1-7.5; all displayed statements and survey proof arguments, Questions 3.9 and 7.1-7.11, footnotes 1-2, bibliography 1-67, Figure 1 caption, publication and license metadata. No visual inspection of Figure 1 or official PDF/source TeX is claimed. BCS was read only in the targeted ranges below, not all 97 pages.",
+    "coverage_status": "46 atomic knowledge pages (3301-330Z; 3310-3316; 331C-331F), narrative 3300 and reference icm2026-buzzi. Main proof/construction/statistics branches are represented. Announced discretized-flow work, the uncoded-geometric-proof program, stronger thresholds, zeta continuation, flow and noncompact extensions are covered narratively with source/status boundaries, not expanded into unverified theorems.",
+    "proof_scope": {
+      "3301": "Defines separated-orbit entropy and proves compatible-metric invariance by uniform continuity. Conjugacy invariance follows from the same comparison.",
+      "3302": "Defines top entropy on invariant Borel sets and ergodic MME; delegates entropy decomposition and the variational principle to separate atoms.",
+      "3303": "Complete compactness and upper-semicontinuity proof of existence, including invariance of the limit and selection of an ergodic component. Newhouse upper semicontinuity is cited.",
+      "3304": "Defines standard Pesin blocks and proves the shifted-block inclusion. Compactness is cited from the block lemma; splitting uniqueness is proved in 3305.",
+      "3305": "Complete forward/backward bounded-vector proof of splitting uniqueness, with epsilon<chi used in the expansion lower bound.",
+      "3306": "Defines pointwise, chi-hyperbolic, saddle and stable-index notions. Pesin-block exhaustion of a chi-hyperbolic measure is cited.",
+      "3307": "States Pesin stable-manifold theorem for r>1 and hyperbolic invariant measures; distinguishes it from the existing uniform theorem. Graph-transform construction remains external.",
+      "3308": "Complete two-sided Ruelle derivation of lambda1>=h>0>-h>=lambda2 for ergodic surface measures; does not use the area-preserving Pesin equality.",
+      "3309": "Defines SPR with fixed chi, then arbitrary epsilon, then common threshold/block/mass, then all high-entropy ergodic measures. Proves the uniform-hyperbolic example.",
+      "3310": "Cites the local quadratic large-deviation bound with positive variance and explicit quantifier order. Conservatively specializes to period one; no uniform moving-threshold result is inferred.",
+      "3311": "Cites square-root entropy-gap control for positive exponent sum on a single SPR class, and separately the unique-global-MME surface result. Only direct substitution consequences are calculated.",
+      "3312": "Complete one-dimensional derivative multiplicativity and Birkhoff proof of average-exponent continuity; warns that positive-part integration needs additional sign control.",
+      "3313": "Cites the report's accessible T3 circle-fibration dichotomy and SPR equivalence. Separately states the C2 closed-connected-three-manifold sufficient condition actually present in BCS v1, retaining bounded center-leaf length and a hyperbolic periodic point.",
+      "3314": "Defines pressure, equilibrium state and potential-SPR with finite real top pressure. Cites BCS Theorem G only for Holder potentials on a Borel homoclinic class.",
+      "3315": "Defines unstable-Jacobian potential and reuses the atomic SRB definition 380K; retains sufficient-condition question as open at the report's scope. Does not assert that every hyperbolic SRB measure is SPR.",
+      "3316": "Defines symmetric asymptotic derivative dilation and proves its limit exists by subadditivity. Cites the strict finite-Cr entropy threshold for global or class SPR; derives impossibility of SPR plus infinitely many ergodic MME at r>1.",
+      "330A": "Complete positive-block-mass and Oseledets argument for |lambda_i|>=chi; strict chi'-hyperbolicity uses chi'<chi.",
+      "330B": "Defines positive exponent sum by integral of pointwise positive parts, proves the Jacobian integral identity using Oseledets and dominated convergence, and explains nonergodic cancellation.",
+      "330C": "Complete subadditive-integral infimum formula and weak upper-semicontinuity proof, using Oseledets as a cited input.",
+      "330D": "Cites the positive entropy/exponent loss decomposition. Completely derives maximal-entropy exponent continuity, including the subsequence argument and beta=1.",
+      "330E": "States EH/EC criterion in positive-entropy global or Borel-homoclinic-class setting. Forward implication is C1; converse is retained at C1+. Stable index is constant within each limit, not necessarily across all limits.",
+      "330F": "Complete deduction of smooth positive-entropy surface SPR from Newhouse, Ruelle, entropy decomposition, exponent continuity and the criterion. The input research theorems remain cited.",
+      "330G": "Complete neutral-vector obstruction to every Pesin block for Anosov times circle rotation. Positive entropy of the cat map is a standard cited example.",
+      "330H": "Defines double transverse homoclinic relation and proves equality of stable dimensions. Equivalence relation and periodic representative are cited.",
+      "330I": "Defines Borel homoclinic representatives, class entropy and period. Existence, separation and measure-class correspondence are cited, not reconstructed.",
+      "330J": "Defines countable graph shifts and regular part; proves every invariant probability gives full mass to the regular part using the existing Poincare recurrence theorem.",
+      "330K": "Complete path-modulo-period construction, equality of cyclic masses, nonmixing obstruction, and independence of base vertex.",
+      "330L": "Defines finite-core symbolic SPR and escape entropy; gives a complete diagonal proof of equivalence with a strict entropy gap. Equivalence to loop growth is cited.",
+      "330M": "Cites Gurevich variational principle and SPR loop-growth characterization. Gives the renewal generating-function proof of F(R)>1 iff the first-return radius exceeds the loop radius.",
+      "330N": "Defines Bernoulli times a finite cycle; proves block coding of the pth power, phase obstruction to mixing, and equivalence of total ergodicity with period one in this class.",
+      "330O": "Cites existence/uniqueness and Bernoulli-up-to-period for finite-entropy irreducible SPR shifts, and the homoclinic-class version. Does not infer these from arbitrary finite-to-one maps alone.",
+      "330P": "States coding with domain Sigma, finite fibers only on Sigma#, entropy-preserving projection and lifting of chi-hyperbolic ergodic measures. SPR transfer requires coding chi below the SPR constant.",
+      "330Q": "Cites the global finite-homoclinic-class decomposition; explains its local-product mechanism without calling it a full proof. Fully proves finite-class-to-global SPR combination and derives finiteness of ergodic MME.",
+      "330R": "Complete h-transform normalization, duality, invariance and L1 contraction calculation under stated spectral eigen-data; full-shift L1=q versus normalized L1=1 check. Existence of eigen-data remains cited.",
+      "330S": "Complete abstract spectral-gap-to-correlation estimate with explicit continuous embedding into L1; spectrum/radius formula and existence of the SPR Banach space are cited inputs.",
+      "330T": "Cites exponential mixing for the MME of an SPR class with total ergodicity/period one and Holder norms. Retains the cyclic-component f^p version when p>1.",
+      "330U": "Cites positive-entropy class equivalence involving an MME, common exponent gap and exponential entrance tails. Explicitly quantifies C after epsilon. Derives the surface simplification from Ruelle.",
+      "330V": "Complete tail-sum proof that a nonnegative integer entrance time has exponential tails iff some positive exponential moment is finite, and all polynomial moment bounds.",
+      "330W": "Complete Green-Kubo expansion and absolute-summability limit proof. States the ordinary formula only under summable correlations; does not use it unmodified for period p>1.",
+      "330X": "Cites zero-variance equivalence with periodic averages and measurable coboundaries for the SPR-class MME. Gives a full telescoping proof only for the additional L2-coboundary case.",
+      "330Y": "Defines process-level ASIP coupling and completely derives the central limit consequence by distribution-function bounds; treats sigma=0 separately and obtains parameter uniqueness.",
+      "330Z": "Cites ASIP with SPR class, MME and centered Holder observable, rates gamma in (1/4,1/2). No period-one requirement is added. General quasi-Holder extension is mentioned only as scope of the source.",
+      "331C": "Defines Holder seminorm/norm and gives the complete exponent-product calculation for pullback by a Holder coding.",
+      "331D": "States compact continuous variational principle as a standard cited theorem; derives restriction of the supremum to ergodic measures from 331E.",
+      "331E": "States standard ergodic decomposition and entropy integral formula as cited theorems; fully proves the maximality and support consequences by integrating nonnegative functions.",
+      "331F": "States Ruelle-Margulis inequality for C1 closed-manifold diffeomorphisms and arbitrary invariant probabilities; records the inverse-time inequality and distinguishes it from the Pesin equality."
+    },
+    "claim_sources": {
+      "3301": "Official §1.1; independent compact-metric calculation.",
+      "3302": "Official §1.1; 331D and 331E.",
+      "3303": "Official §1.1 and the proof of Theorem 3.1; Newhouse through the report.",
+      "3304": "Official Definition 2.1; BCS v1 §2.1.",
+      "3305": "Official §2.2; independent linear-growth calculation.",
+      "3306": "Official Definition 2.5 and Proposition 2.8.",
+      "3307": "Official Theorem 2.7 and Lemma 2.9.",
+      "3308": "Official Theorem 2.6; 331F.",
+      "3309": "Official Definition 2.10; BCS v1 Definitions 1.3-1.4. Epsilon is restricted to (0,chi), an equivalent sufficient range.",
+      "3310": "Official Theorem 5.10; BCS v1 Theorem 11.15 as cited there.",
+      "3311": "Official Theorems 3.10 and 6.2; BCS v1 Theorems 11.31-11.32 and §12.10.",
+      "3312": "Official §6.2; BCS v1 §5.1; independent line-bundle calculation.",
+      "3313": "Official Theorem 6.4 and Corollary 6.5; BCS v1 §5.1, Theorem 5.2 and Remark 5.3.",
+      "3314": "Official Remark 2.11; BCS v1 §1.6, Definition 1.12 and Theorem G.",
+      "3315": "Official §7.3, Problem 7.6; BCS v1 §1.6 for the potential framework. Specialized mostly contracting/expanding constructions remain external.",
+      "3316": "BCS v1 (1.2) and Theorem 3.19; official §§3.2 and 7.1. No blanket equality-threshold assertion.",
+      "330A": "Official §§2.2 and 2.6; independent local derivation.",
+      "330B": "Official Remarks 3.5 and §6.1; BCS v1 §3.1 supplies the unambiguous pointwise convention.",
+      "330C": "Official §3.2; independent division-with-remainder and dominated-convergence calculation.",
+      "330D": "Official Theorems 3.4 and 3.6; BCS 2022 continuity theorem is accessed through the official report, not claimed read in full.",
+      "330E": "Official Theorems 3.7 and 6.1 and Question 3.9; BCS v1 Theorems 3.1 and 13.1.",
+      "330F": "Official Theorem 3.1 and its proof in §3.3; BCS v1 Theorem A.",
+      "330G": "Official Remark 3.2; independent use of 3305.",
+      "330H": "Official Definition 4.1, Fact 4.2 and Lemma 4.3.",
+      "330I": "Official Lemma 4.3 and Definition 4.4; BCS v1 §2.2.",
+      "330J": "Official Definition 4.7 and regular-part formula; BCS v1 §6.",
+      "330K": "Official §4.2 period; independent graph proof. Parent's finite-state regression calculations are separate.",
+      "330L": "Official Definition 4.8; BCS v1 Theorem 7.4.",
+      "330M": "BCS v1 §7.1, Definition 7.1, Lemma 7.2 with proof and Theorem 7.4.",
+      "330N": "Official Definition 4.9; existing Bernoulli and total-ergodicity atoms; independent phase calculation.",
+      "330O": "Official Theorem 4.10 and Corollary 4.14; BCS v1 §§6-7 and §10.",
+      "330P": "Official Theorem 4.12 corrected by BCS v1 Theorem 10.5, Remark 10.6 and Addendum 10.7.",
+      "330Q": "Official Proposition 4.6 and Theorem 5.1; BCS v1 §2.2.4.",
+      "330R": "BCS v1 Appendix B.2, (B.3)-(B.4), Proposition B.4 and Remark B.5; official Theorem 4.11 normalization corrected.",
+      "330S": "Official Theorem 4.11; BCS v1 Theorem B.7 and its normalized-operator formulation.",
+      "330T": "Official Theorem 5.5 and Remark 5.6; BCS v1 §11.3.",
+      "330U": "Official Theorem 5.7 and Corollary 5.8, restricted to positive entropy; BCS v1 Theorem 13.1.",
+      "330V": "Independent probability calculation motivated by official §5.2.",
+      "330W": "Official §5.2; BCS v1 Theorem 11.13, periodic qualification retained.",
+      "330X": "Official Theorem 5.9; BCS v1 Theorem 11.13, including its bound measure and homoclinic periodic-point hypotheses.",
+      "330Y": "Official Definition 5.11 and Remark 5.12; independent elementary derivation.",
+      "330Z": "BCS v1 §11.7 and Theorem 11.19; restores SPR missing from the standalone official Theorem 5.13.",
+      "331C": "Official regularity conventions and §§4.2-5.2; independent metric calculation.",
+      "331D": "Official §1.1.",
+      "331E": "Official §1.1, with standard-space scope made explicit.",
+      "331F": "Official Theorem 2.6."
+    },
+    "sources": {
+      "main": {
+        "title": "Chaos on Surfaces and Beyond: A New Notion of Dynamical Hyperbolicity",
+        "version": "Official ICM2026 Volume 5, pp.59-78, online 2026-07-13",
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1807071",
+        "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1807071",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "read": "Complete official HTML mathematical report, references and publication metadata.",
+        "reading_scope": "Sections 1-7.5, bibliography 1-67, footnotes 1-2 and Figure 1 caption. No PDF visual audit or source TeX read."
+      },
+      "bcs_v1": {
+        "title": "Strong positive recurrence and exponential mixing for diffeomorphisms",
+        "authors": [
+          "Jérôme Buzzi",
+          "Sylvain Crovisier",
+          "Omri Sarig"
+        ],
+        "version": "arXiv:2501.07455v1, 2025-01-13; 97-page PDF",
+        "url": "https://arxiv.org/html/2501.07455v1",
+        "version_url": "https://arxiv.org/abs/2501.07455v1",
+        "pdf_url": "https://arxiv.org/pdf/2501.07455v1",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text HTML and PDF text reading, not an abstract-only check and not a complete-paper reading.",
+        "reading_scope": "Introduction §§1.1-1.3 and §1.6; notation (1.2); §2.2.4; §§3.1-3.2 including Theorem 3.1 and remarks; Theorems 3.19-3.20; §5.1 in full; §7.1 in full including renewal proof and Theorem 7.4; §10.2, Theorem 10.5 and proof, Remark 10.6 and Addendum 10.7; Theorem 11.13; ASIP definition/context in §11.7 and Theorem 11.19 statement, not its proof; Theorems 11.31-11.32; §12.10 exponent estimate; §13 properties I-VII, Theorem 13.1 and beginning of its proof; Appendix B.2 transfer formulas and Proposition B.4/Remark B.5, and Theorem B.7 statement/normalization context. Retrieved adjacent text is not counted as complete proof verification.",
+        "proof_not_read_in_full": "Complete Pesin construction, graph/coding construction, full spectral-gap proof, ASIP proof in §12.7, Appendix C, and complete equivalence proof in §13."
+      },
+      "secondary_results_via_report": {
+        "title": "Classical and earlier research inputs cited by Buzzi",
+        "version": "Statements pinned to the official report and BCS v1",
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1807071",
+        "license": "Underlying publications retain their own copyright; no blanket reuse license inferred.",
+        "read": "Statements and citations read in the official report or BCS v1.",
+        "reading_scope": "Newhouse; Pesin and Ruelle; BCS 2022 exponent-continuity and MME/homoclinic results; Gurevich-Savchenko and Cyr-Sarig; circle-center dichotomy; Burguet's finite-Cr threshold. Original full proofs of these separate papers were not read.",
+        "not_full_text_substitutes": "Burguet JEMS 2020 and Martinchich JMD 2023 landing pages were inspected as bibliographic leads only; neither is used as a claimed full-text verification."
+      },
+      "announced_flow_result": {
+        "title": "A dichotomy for measures of maximal entropy for irreducible discretized Anosov flows",
+        "authors": [
+          "Jérôme Buzzi",
+          "Sylvain Crovisier",
+          "Mauricio Poletti",
+          "Ali Tahzibi"
+        ],
+        "version": "In preparation as cited in official Theorem 6.6 and reference [20]",
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1807071",
+        "license": "No manuscript or separate license verified.",
+        "read": "Official announced statement only.",
+        "reading_scope": "C1+ discretized Anosov flow, underlying flow transitive and not a suspension; unique zero-center MME or exactly two opposite-sign hyperbolic MME, with SPR in the latter case. No independent manuscript or proof audit."
+      }
+    },
+    "remaining_branches": [
+      "Deep research proofs remain cited: Newhouse, Pesin/Ruelle, exponent-loss decomposition and EH/EC criterion, homoclinic representatives and coding, SPR symbolic structure, spectral-gap construction, exponential mixing/entrance characterization, periodic-obstruction theorem, ASIP/LDP and entropy-gap estimates.",
+      "General quasi-Holder observables and all geometric potentials are not developed. Holder statements are retained. Ordinary Green-Kubo is proved only with absolute correlation summability, not asserted for arbitrary periodic systems.",
+      "Uniform hyperbolicity and structural-stability history, Young tower constructions and a detailed C-infinity nonuniform example are context only; no duplicate foundational pages or new full proofs are claimed.",
+      "The report's continuous-potential/unique-positive-entropy-equilibrium argument is not expanded into a separate proof. The potential-SPR definition and Holder-class theorem are included; specialized mostly contracting/expanding SRB constructions remain cited context.",
+      "Announced discretized-Anosov-flow dichotomy appears only with in-preparation status in 3300/reference. No public manuscript proof is claimed.",
+      "Questions about abundance, uncoded geometric proofs, epsilon-independent thresholds, geometric entropy at infinity, filtered zeta continuation, flows and noncompact manifolds remain questions. No later literature resolution is claimed.",
+      "Burguet periodic-count growth was not independently checked in the original full paper. The report's all-n limit is not repeated: cyclic periods require care. The outline discusses only the corrected z^n/n-weighted zeta question without a new all-n growth theorem.",
+      "Official Problem 7.3 is not reproduced as a viable r>1 construction: SPR plus infinitely many ergodic MME conflicts with the cited C1+ finite-MME theorem. The C1 endpoint is not resolved."
+    ],
+    "normalization_notes": [
+      "Date 2026-10-19; author{author}; native Forester math wrappers; no raw wiki links or negative thin spaces.",
+      "MME means ergodic MME when discussing finiteness. Convex combinations are not counted as additional ergodic MME.",
+      "SPR quantifiers: fixed chi; for every epsilon in (0,chi), a common threshold h0, block C and positive mass; then all high-entropy ergodic measures.",
+      "Pointwise positive exponent parts are integrated before averaging; same-index hypotheses are stated locally.",
+      "Class coding threshold chi is chosen below the SPR exponent constant; finite fibers are restricted to Sigma#.",
+      "Probability transfer operator is the normalized h-transform, not the unweighted Ruelle sum.",
+      "Exponential mixing retains total ergodicity/period-one; ASIP does not require period one.",
+      "Entrance time starts at n=0, inf empty=+infinity; C is quantified after epsilon.",
+      "Finite-Cr threshold uses the symmetric asymptotic derivative dilation from BCS (1.2), not an ambiguously named single-step Lipschitz exponent.",
+      "Parent owns final normalizeFormat, shared audit registration, integration, global checks/build and browser validation."
+    ]
+  },
+  "prerequisites": {
+    "3301": [
+      "00EK",
+      "00F3",
+      "00E2",
+      "0F41"
+    ],
+    "3302": [
+      "00S2",
+      "00RW",
+      "331E",
+      "331D",
+      "00E2"
+    ],
+    "3303": [
+      "00E2",
+      "00F3",
+      "00EK",
+      "00TQ",
+      "331D",
+      "331E",
+      "3302"
+    ],
+    "3304": [
+      "00NI",
+      "3101",
+      "0A3X",
+      "00M4",
+      "3102"
+    ],
+    "3305": [
+      "3304",
+      "311C"
+    ],
+    "3306": [
+      "311C",
+      "3304",
+      "00RW"
+    ],
+    "3307": [
+      "3306",
+      "331C",
+      "311C",
+      "3304",
+      "311A"
+    ],
+    "3308": [
+      "00RW",
+      "00S2",
+      "311C",
+      "3306",
+      "331F"
+    ],
+    "3309": [
+      "3302",
+      "3304",
+      "3102"
+    ],
+    "3310": [
+      "3309",
+      "330I",
+      "330O",
+      "331C",
+      "330W"
+    ],
+    "3311": [
+      "3309",
+      "330I",
+      "330O",
+      "330B",
+      "330Q"
+    ],
+    "3312": [
+      "0APB",
+      "311C",
+      "00TQ",
+      "0V17",
+      "3407"
+    ],
+    "3313": [
+      "3407",
+      "3409",
+      "3408",
+      "3302",
+      "3312",
+      "3306",
+      "3309",
+      "330E",
+      "330A"
+    ],
+    "3314": [
+      "00S2",
+      "3302",
+      "3304",
+      "3309",
+      "330I",
+      "331C"
+    ],
+    "3315": [
+      "311C",
+      "3307",
+      "380K",
+      "3314",
+      "3115",
+      "3306"
+    ],
+    "3316": [
+      "00M4",
+      "330C",
+      "3301",
+      "3309",
+      "330I",
+      "330Q"
+    ],
+    "330A": [
+      "3304",
+      "311C",
+      "3305",
+      "3306"
+    ],
+    "330B": [
+      "311C",
+      "0I8I",
+      "00TQ"
+    ],
+    "330C": [
+      "330B",
+      "00TQ",
+      "311C",
+      "0I8I"
+    ],
+    "330D": [
+      "00TQ",
+      "00S2",
+      "330B",
+      "3308",
+      "331D"
+    ],
+    "330E": [
+      "330I",
+      "00TQ",
+      "3306",
+      "330B",
+      "3309"
+    ],
+    "330F": [
+      "3301",
+      "3309",
+      "3303",
+      "331E",
+      "3308",
+      "330D",
+      "330E"
+    ],
+    "330G": [
+      "0AP8",
+      "3304",
+      "3305",
+      "3309"
+    ],
+    "330H": [
+      "3306",
+      "3307",
+      "0F50"
+    ],
+    "330I": [
+      "330H",
+      "3302"
+    ],
+    "330J": [
+      "00SC",
+      "0A6H"
+    ],
+    "330K": [
+      "330J",
+      "00RY"
+    ],
+    "330L": [
+      "330J",
+      "00S2",
+      "3309"
+    ],
+    "330M": [
+      "330J",
+      "330L"
+    ],
+    "330N": [
+      "00S3",
+      "00RT",
+      "0A6T",
+      "00RY",
+      "0V0A"
+    ],
+    "330O": [
+      "330J",
+      "330L",
+      "3302",
+      "330N",
+      "330K",
+      "330I",
+      "330P"
+    ],
+    "330P": [
+      "330I",
+      "330J",
+      "331C",
+      "3306",
+      "3309",
+      "330L"
+    ],
+    "330Q": [
+      "3309",
+      "330I",
+      "3304",
+      "330O"
+    ],
+    "330R": [
+      "330J"
+    ],
+    "330S": [
+      "330R",
+      "00M6",
+      "330K",
+      "330L",
+      "331C"
+    ],
+    "330T": [
+      "3309",
+      "330I",
+      "330O",
+      "0V0A",
+      "331C",
+      "330P",
+      "330S",
+      "00M6"
+    ],
+    "330U": [
+      "330I",
+      "3309",
+      "3302",
+      "3304",
+      "3306",
+      "3308"
+    ],
+    "330V": [
+      "00Q3",
+      "330U",
+      "0A02"
+    ],
+    "330W": [
+      "00RS"
+    ],
+    "330X": [
+      "3309",
+      "330I",
+      "330O",
+      "331C",
+      "330W",
+      "330H"
+    ],
+    "330Y": [
+      "00Q3",
+      "0N0S",
+      "0N0R"
+    ],
+    "330Z": [
+      "3309",
+      "330I",
+      "330O",
+      "331C",
+      "330Y",
+      "330X"
+    ],
+    "331C": [
+      "00EK",
+      "00F3"
+    ],
+    "331D": [
+      "00F3",
+      "00EK",
+      "00E2",
+      "3301",
+      "00S2",
+      "331E"
+    ],
+    "331E": [
+      "00Q8",
+      "00RS",
+      "00RW",
+      "00S2"
+    ],
+    "331F": [
+      "00S2",
+      "311C",
+      "330B"
+    ]
+  },
+  "reused_pages": {
+    "3101": "局部微分同胚与全局可逆性的区别",
+    "3102": "紧不变集的一致双曲性",
+    "3115": "强耗散 Hénon 族中物理测度的正测度参数",
+    "3407": "部分双曲微分同胚",
+    "3408": "部分双曲映射的强稳定与强不稳定叶状结构",
+    "3409": "部分双曲系统的可达性与本质可达性",
+    "311A": "双曲集上每条轨道的稳定流形",
+    "311C": "Lyapunov 指数度量切向量的指数增长",
+    "0V0A": "完全遍历的保测变换",
+    "00F3": "紧空间",
+    "00EK": "度量空间",
+    "00E2": "连续映射",
+    "0F41": "紧度量空间上的连续映射一致连续",
+    "00S2": "Kolmogorov–Sinai 熵",
+    "00RW": "遍历性",
+    "310R": "经验测度的聚点是不变测度",
+    "00TQ": "紧空间上的概率测度单纯形",
+    "00NI": "Riemann 度量",
+    "0A3X": "切空间拼合为光滑切丛",
+    "00M4": "有界线性算子与算子范数",
+    "311D": "二维保面积映射的 Pesin 熵公式",
+    "0I8I": "支配收敛定理",
+    "0AP8": "Anosov 微分同胚",
+    "0F50": "光滑映射与子流形的横截性",
+    "00SC": "有限型子移位",
+    "0A6H": "有限测度保测系统的 Poincaré 复归",
+    "00RY": "保测系统的混合性",
+    "00S3": "Bernoulli 移位",
+    "00RT": "保测系统的测度共轭",
+    "0A6T": "Bernoulli 移位的混合性",
+    "00M6": "Banach 空间",
+    "00Q3": "概率空间",
+    "0A02": "Markov 不等式",
+    "00RS": "保测自同构",
+    "0N0S": "欧氏空间中的标准布朗运动",
+    "0N0R": "标准正态分布与高斯尾函数",
+    "0APB": "光滑向量丛的连续子丛",
+    "0V17": "可逆系统的 Birkhoff 逐点遍历定理",
+    "00Q8": "标准概率空间"
+  },
+  "terminology_evidence": {
+    "bananaspace_status": "Not verified. Domain-restricted searches for 拓扑熵 and 正常返 returned no usable results; direct requested entries were unavailable to the web reader.",
+    "attempted_urls": [
+      "https://bananaspace.org/wiki/拓扑熵",
+      "https://bananaspace.org/wiki/马尔可夫链"
+    ],
+    "spr_term": "强正常返性 (strong positive recurrence, SPR). English primary-source term is authoritative; the Chinese rendering is not presented as BananaSpace-verified.",
+    "existing_site_terms": "Anosov, Lyapunov, Pesin, Bernoulli, 完全遍历 and 部分双曲 follow reused local pages. Hölder continuity is a new minimal atom because no existing definition was found by title/text search.",
+    "search_scope": "rg title and body searches for entropy/MME/Pesin/SPR/Markov/Holder/partial hyperbolicity; exact-title collision check on the completed subtree."
+  },
+  "source_errata": [
+    {
+      "location": "Official Theorem 4.11",
+      "status": "Normalization conflict verified against BCS Appendix B",
+      "handling": "330R uses the probability-normalized operator; 330S applies the spectral gap to that operator."
+    },
+    {
+      "location": "Official Theorem 4.12",
+      "status": "Domain and unbound-measure notation corrected against BCS Theorem 10.5",
+      "handling": "pi:Sigma->M; projected measure pi_*eta; finite fibers on Sigma# only; small chi condition retained."
+    },
+    {
+      "location": "Official Theorem 5.13",
+      "status": "Missing standalone SPR hypothesis checked against BCS Theorem 11.19",
+      "handling": "330Z explicitly requires an SPR Borel homoclinic class and its MME."
+    },
+    {
+      "location": "Official Theorem 5.7 / Corollary 5.8",
+      "status": "Unquantified block C and zero-entropy boundary made explicit",
+      "handling": "330U quantifies C after epsilon and uses positive-entropy classes."
+    },
+    {
+      "location": "Official section 6.1 positive exponent sum",
+      "status": "Pointwise integral convention checked in BCS §3.1",
+      "handling": "330B/330E use integral of pointwise positive parts; a nonergodic cancellation example explains why."
+    },
+    {
+      "location": "Official Problem 7.3",
+      "status": "Apparent conflict for r>1 with the report's Theorem 5.1",
+      "handling": "3316 gives the valid strict-threshold theorem and the finite-MME obstruction; no asserted example or repaired author-intended conjecture."
+    },
+    {
+      "location": "Official Question 7.9",
+      "status": "Displayed generating function lacks z^n; all-n count asymptotic has a period caveat",
+      "handling": "3300 uses the intended z^n/n weight and does not repeat an unverified all-n periodic-count limit."
+    }
+  ],
+  "suggested_old_note_updates": [],
+  "handoff": {
+    "owned_files": [
+      "trees/math/dynamics/buzzi/3300.tree",
+      "trees/math/dynamics/buzzi/3301.tree",
+      "trees/math/dynamics/buzzi/3302.tree",
+      "trees/math/dynamics/buzzi/3303.tree",
+      "trees/math/dynamics/buzzi/3304.tree",
+      "trees/math/dynamics/buzzi/3305.tree",
+      "trees/math/dynamics/buzzi/3306.tree",
+      "trees/math/dynamics/buzzi/3307.tree",
+      "trees/math/dynamics/buzzi/3308.tree",
+      "trees/math/dynamics/buzzi/3309.tree",
+      "trees/math/dynamics/buzzi/330A.tree",
+      "trees/math/dynamics/buzzi/330B.tree",
+      "trees/math/dynamics/buzzi/330C.tree",
+      "trees/math/dynamics/buzzi/330D.tree",
+      "trees/math/dynamics/buzzi/330E.tree",
+      "trees/math/dynamics/buzzi/330F.tree",
+      "trees/math/dynamics/buzzi/330G.tree",
+      "trees/math/dynamics/buzzi/330H.tree",
+      "trees/math/dynamics/buzzi/330I.tree",
+      "trees/math/dynamics/buzzi/330J.tree",
+      "trees/math/dynamics/buzzi/330K.tree",
+      "trees/math/dynamics/buzzi/330L.tree",
+      "trees/math/dynamics/buzzi/330M.tree",
+      "trees/math/dynamics/buzzi/330N.tree",
+      "trees/math/dynamics/buzzi/330O.tree",
+      "trees/math/dynamics/buzzi/330P.tree",
+      "trees/math/dynamics/buzzi/330Q.tree",
+      "trees/math/dynamics/buzzi/330R.tree",
+      "trees/math/dynamics/buzzi/330S.tree",
+      "trees/math/dynamics/buzzi/330T.tree",
+      "trees/math/dynamics/buzzi/330U.tree",
+      "trees/math/dynamics/buzzi/330V.tree",
+      "trees/math/dynamics/buzzi/330W.tree",
+      "trees/math/dynamics/buzzi/330X.tree",
+      "trees/math/dynamics/buzzi/330Y.tree",
+      "trees/math/dynamics/buzzi/330Z.tree",
+      "trees/math/dynamics/buzzi/3310.tree",
+      "trees/math/dynamics/buzzi/3311.tree",
+      "trees/math/dynamics/buzzi/3312.tree",
+      "trees/math/dynamics/buzzi/3313.tree",
+      "trees/math/dynamics/buzzi/3314.tree",
+      "trees/math/dynamics/buzzi/3315.tree",
+      "trees/math/dynamics/buzzi/3316.tree",
+      "trees/math/dynamics/buzzi/331C.tree",
+      "trees/math/dynamics/buzzi/331D.tree",
+      "trees/math/dynamics/buzzi/331E.tree",
+      "trees/math/dynamics/buzzi/331F.tree",
+      "trees/references/icm2026-buzzi.tree",
+      "research/dynamics-buzzi-packet.json"
+    ],
+    "knowledge_ids": [
+      "3301",
+      "3302",
+      "3303",
+      "3304",
+      "3305",
+      "3306",
+      "3307",
+      "3308",
+      "3309",
+      "330A",
+      "330B",
+      "330C",
+      "330D",
+      "330E",
+      "330F",
+      "330G",
+      "330H",
+      "330I",
+      "330J",
+      "330K",
+      "330L",
+      "330M",
+      "330N",
+      "330O",
+      "330P",
+      "330Q",
+      "330R",
+      "330S",
+      "330T",
+      "330U",
+      "330V",
+      "330W",
+      "330X",
+      "330Y",
+      "330Z",
+      "3310",
+      "3311",
+      "3312",
+      "3313",
+      "3314",
+      "3315",
+      "3316",
+      "331C",
+      "331D",
+      "331E",
+      "331F"
+    ],
+    "cross_topic_dependencies": {
+      "3407": "Partially hyperbolic definition provided by 34; body-linked in 3312 and 3313.",
+      "3408": "Strong stable/unstable foliations provided by 34; body-linked in 3313.",
+      "3409": "Accessibility provided by 34; body-linked in 3313.",
+      "3102/311A/311C/311D": "First-batch uniform hyperbolicity, uniform stable manifolds, exponents and area-preserving Pesin formula reused with their correct scopes."
+    },
+    "parent_actions": [
+      "Register 46 atomic prerequisite rows and the outline/reference in shared integration files.",
+      "Include the 34 cross-topic dependency pages when publishing this batch.",
+      "Run parent-owned format normalization/sync, global dedup, full build and browser checks.",
+      "Keep review of normalization/source caveats separate from complete proof verification."
+    ],
+    "scope_status": "Only the assigned Buzzi subtree, reference and packet were written. No git command, staging, commit, push, shared script edit or site build was run."
+  },
+  "validation": {
+    "status": "Local final check passed: 46 atomic prerequisite/proof/source rows, 48 tree files and 49 owned files; all prerequisite IDs are body-linked; no broken local links, exact-title collisions or local prerequisite cycles.",
+    "math_check": "834 native Forester math expressions parsed with KaTeX, zero errors, in the owned subtree plus reference only. No raw wiki links, forbidden negative thin spaces or bare qquad tokens. Not a build or browser render.",
+    "independent_source_review": "Read the 33 checklist and relevant source_caveats from research/dynamics-second-source-review.json; no claim to have edited or performed that independent review.",
+    "prerequisite_scanner": "Reviewed all nine id^33 candidates from /tmp/dynamics-second-prerequisite-draft.json and added the real foundational links.",
+    "build": false,
+    "commit": false,
+    "push": false
+  }
+}

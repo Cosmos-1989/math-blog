@@ -1,0 +1,16 @@
+\title{归一化转移算子保留常函数与不变概率}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{BCS v1 附录B.2，式(B.3)至(B.4)；[Buzzi 报告](icm2026-buzzi)，§4.2}
+
+\p{在单边 [Markov 移位](330J) #{\Sigma^+=\{(x_i)_{i\ge 0}:x_i\to x_{i+1}\}} 上，势函数 #{\varphi} 的 Ruelle 算子是 #{\mathcal L_\varphi u(x)=\sum_{\sigma y=x}e^{\varphi(y)}u(y)}。假设有正特征函数 #{h}、正数 #{\lambda} 与测度 #{\nu}，满足 #{\mathcal L_\varphi h=\lambda h}、#{\mathcal L_\varphi^*\nu=\lambda\nu}、#{\int h\,d\nu=1}。令 #{\mu=h\nu}，归一化算子为}
+##{Lu(x)=\frac{\mathcal L_\varphi(hu)(x)}{\lambda h(x)}
+=\sum_{\sigma y=x}g(y)u(y),\qquad
+g(y)=\frac{e^{\varphi(y)}h(y)}{\lambda h(\sigma y)}.}
+\p{特征方程立即给出 #{\sum_{\sigma y=x}g(y)=1}，故 #{L1=1}。对可积 #{u} 与有界 #{v}，由 #{\mathcal L_\varphi((v\circ\sigma)hu)=v\mathcal L_\varphi(hu)} 得}
+##{\int vLu\,d\mu=\lambda^{-1}\int v\mathcal L_\varphi(hu)\,d\nu
+=\int(v\circ\sigma)u\,d\mu.}
+\p{取 #{v=1} 得 #{\int Lu\,d\mu=\int u\,d\mu}；取 #{u=1} 得 #{\mu} 不变。正性与 #{|Lu|\le L|u|} 还给出 #{L^1(\mu)} 收缩性。}
+
+\p{例如 #{q} 符号满移位取零势时，未归一化算子满足 #{\mathcal L_0 1=q}。取 #{h=1}、#{\lambda=q}，则 #{Lu=q^{-1}\sum_{\sigma y=x}u(y)}。因此用于概率相关性的[谱隙分解](330S)应施加于归一化算子；直接求和的算子不能同时满足 #{L1=1}。特征对象的存在由 SPR 热力学理论提供，不包含在这项代数归一化计算中。}

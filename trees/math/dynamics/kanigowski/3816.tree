@@ -1,0 +1,13 @@
+\title{可积奇性为何允许无穷高的屋顶}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 §§2.1、5}
+
+\p{设屋顶 #{f} 在区间端点附近具有正奇性，特殊流使用归一化的 #{dx\,ds/\int f\,dx}。这个[悬挂测度](00S9)为概率测度的条件是 #{0<\int f\,dx<\infty}，不要求 #{f} 有界。}
+\p{对 #{0<\gamma<1}，直接积分得}
+##{\int_0^\varepsilon x^{-\gamma}\,dx=\frac{\varepsilon^{1-\gamma}}{1-\gamma}<\infty.}
+\p{更一般地，#{x^{-\gamma}\in L^p(0,\varepsilon)} 当且仅当 #{p\gamma<1}；由于 #{\gamma<1}，总能选择 #{1<p<1/\gamma}。若 #{\gamma=1}，积分已经发散。这里的积分均取 [Lebesgue 测度](00XV)。}
+\p{对数奇性更弱。令 #{u=-\log x}，则任意有限 #{p>0} 都有}
+##{\int_0^\varepsilon|\log x|^p\,dx=\int_{-\log\varepsilon}^{\infty}u^pe^{-u}\,du<\infty.}
+\p{最后一个积分收敛，因为大 #{u} 时 #{u^p\le e^{u/2}}。所以幂次屋顶与对数屋顶都可以无穷高而有有限总体积；这种可积性还使塔的顶部误差可由 #{L^p} 尾估计控制。}

@@ -1,0 +1,21 @@
+\title{特殊线性群的根子群生成可达路径}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §3.3、§4 的齐性模型；独立证明}
+
+\p{在[对角左平移模型](340E) #{\operatorname{SL}_3(\mathbb R)/\Gamma} 中，每个非恒等正对角左平移都[可达](3409)，相对于它自身全部零指数方向组成的中心。}
+\p{\strong{证明。}设 #{a=\operatorname{diag}(e^{t_1},e^{t_2},e^{t_3})}。根子群 #{u_{ij}(s)=I+sE_{ij}} 满足}
+##{a^nu_{ij}(s)a^{-n}=u_{ij}(e^{n(t_i-t_j)}s).}
+\p{若 #{t_i-t_j<0}，沿 #{u_{ij}(s)} 的轨道曲线为强稳定曲线；正号时为强不稳定曲线。这也可由[强叶的唯一性](3408)与根方向的指数收缩识别。因此有限个这类左乘的乘积给出一条 #{su} 路。}
+\p{若三个 #{t_i} 两两不同，六个根子群全部可用。若有两个相等，重标记后可设 #{t_1=t_2\ne t_3}；此时四个子群 #{u_{13},u_{31},u_{23},u_{32}} 可用，而直接矩阵乘法给出}
+##{[u_{13}(s),u_{32}(r)]=u_{12}(sr),\qquad
+[u_{23}(s),u_{31}(r)]=u_{21}(sr),}
+\p{其中 #{[u,v]=uvu^{-1}v^{-1}}。第一式使用 #{E_{13}E_{32}=E_{12}}，其他会产生的高阶乘积为零；第二式同理。所以缺失的根子群也由可用路径生成。三个 #{t_i} 全相等只可能全部为零，已被排除。}
+\p{最后，六个初等根子群生成整个 #{\operatorname{SL}_3(\mathbb R)}。消元中的行加法由左乘 #{u_{ij}(s)} 实现；带符号换行可由嵌入的二阶矩阵}
+##{w(t)=
+\begin{pmatrix}1&t\\0&1\end{pmatrix}
+\begin{pmatrix}1&0\\-t^{-1}&1\end{pmatrix}
+\begin{pmatrix}1&t\\0&1\end{pmatrix}
+=\begin{pmatrix}0&t\\-t^{-1}&0\end{pmatrix}}
+\p{实现。还有 #{w(t)w(-1)=\operatorname{diag}(t,t^{-1})}，所以消元余下的行列式一对角矩阵也能生成。任意两陪集 #{g\Gamma,h\Gamma} 之间的左乘 #{hg^{-1}} 因而分解成有限个可用根子群元素，给出所需路径。}

@@ -1,10 +1,45 @@
 # ICM2026 Section 9 动力系统目录与本站收录核查
 
-实际检索日期：**2026-10-19，Asia/Shanghai**。本文件先记录首批整合结果，随后保留整合前的目录核查，便于核对新增内容与原有材料。
+目录检索日期：**2026-10-19，Asia/Shanghai**。本文件先记录三批整合结果，随后保留整合前的目录核查，便于核对新增内容与原有材料。精确验收时间另记于各 JSON 记录。
+
+## 最后一批整合结果
+
+动力系统主节的 10 场报告均已有对应专题；3 场跨列报告复用原专题。`0069` 按正式出版页序列出主节报告，并保留跨列报告及原有的其他专题。
+
+| 报告 | 专题入口 | 原子知识页 | 文献页 |
+| --- | --- | ---: | --- |
+| Dzmitry Dudko | `3600` Mandelbrot 局部连通性与复重整化 | 52 | `icm2026-dudko` |
+| Simion Filip | `3700` 超越齐性空间的测度刚性 | 54 | `icm2026-filip` |
+| Adam Kanigowski | `3800` 统计随机性如何受光滑几何约束 | 55 | `icm2026-kanigowski` |
+| Luna Lomonaco、Sabyasachi Mukherjee | `3900` 从 Schwarz 反射到群与有理映射的代数缝合 | 53 | `icm2026-lomonaco-mukherjee` |
+
+本批新增 214 个原子知识页、4 个专题综述和 4 个文献页，共 222 页。与上一批尚未发布的 142 页合并后，本次发布包含 7 场报告的 364 页。多项式样映射、混合等价及拟共形概念由两个复动力系统专题共享；拟共形映射的解析定义、抛物样混合共轭和抛物拉直定理分别独立成页。Green–Kubo 公式复用 `330W`，SRB 测度定义集中于 `380K`，并由上一批的 `3315` 直接链接。
+
+正式报告的综述内容已分别整理，逐页记录区分完整局部证明、引用定理、证明思路、猜想与开放问题。拉直与 David 手术、重整化双曲性、测度分类和 Bernoulli 匹配等深层证明保留准确来源及读取范围。目录覆盖不等于重写所有被引研究论文的证明。
+
+逐页来源、前置关系与最终文件散列见 `research/icm2026-dynamics-final-reports.json` 及对应 `-snapshots.json`。数学复核分别见 `research/dynamics-final-parent-review.json` 与 `research/dynamics-final-complex-review.json`。本地验收记录见 `research/icm2026-dynamics-final-validation.json`；提交、部署与线上内容核验另记于发布记录。
+
+合并发布前的本地验收通过 37 组源文件检查，全站构建生成 6,208 个静态 HTML 页面，77,347 个公式和 48 个交换图通过检查。两批页面在桌面与手机端合计完成 732 次浏览器检查，另逐张查看 26 张专题及重点条目截图。兼容地址、搜索、导航与长公式滚动均已检查；数学复核中记录的问题全部关闭，深层引用证明仍按上述范围保留。
+
+## 第二批整合结果
+
+第二批完成时，动力系统主节共 10 场，本地有同篇专题 6 场；3 场跨列报告复用原专题。当时尚无同篇专题的主节报告为 Dudko、Filip、Kanigowski、Lomonaco–Mukherjee，共 4 场，现已由最后一批补入。
+
+| 报告 | 专题入口 | 原子知识页 | 文献页 |
+| --- | --- | ---: | --- |
+| Jérôme Buzzi | `3300` 从高熵双曲块到混沌的统计规律 | 46 | `icm2026-buzzi` |
+| Danijela Damjanović | `3400` 交换对称如何迫使动力系统具有代数结构 | 45 | `icm2026-damjanovic` |
+| Bertrand Deroin | `3500` 复曲面叶状结构的稳定域 | 45 | `icm2026-deroin` |
+
+本批新增 136 个原子知识页、3 个专题综述和 3 个文献页，共 142 页，登记 561 条数学前置关系。一般熵、K 自同构、Anosov 系统、概率空间、全纯叶状结构等定义直接复用已有页面。部分双曲性与 holonomy 的定义由本批各专题共同引用。
+
+三篇正式报告均按全文整理，补充论文按固定版本登记实际读取范围。独立复核检查 82 个重点页面；直接计算、局部证明、引用定理、猜想和后续预印本分别标明。SPR 编码与极限定理、高秩作用分类、KAM 迭代、全局叶状结构稳定性等研究证明仍保留原文引用，不将本批整合视为这些论文全部证明的重写。逐页记录见 `research/icm2026-dynamics-second-reports.json` 及对应 `-snapshots.json`；独立复核见 `research/dynamics-second-source-review.json`。
+
+第二批首次本地验收时尚未提交或推送，36 组源文件检查通过；构建生成 5,986 个静态 HTML 页面，链接、公式及前置关系检查通过；143 页在桌面和手机端共 286 次浏览器检查通过。该历史记录见 `research/icm2026-dynamics-second-validation.json`；本次合并发布会重新检查这些页面及其新增的跨专题链接。
 
 ## 首批整合结果
 
-动力系统主节共 10 场，现有同篇专题 3 场；3 场跨列报告均已复用原专题并接入 `0069`。尚无同篇专题的主节报告为 Buzzi、Damjanović、Deroin、Dudko、Filip、Kanigowski、Lomonaco–Mukherjee，共 7 场。
+首批完成时，动力系统主节有同篇专题 3 场；3 场跨列报告均已复用原专题并接入 `0069`。当时尚无同篇专题的主节报告有 7 场。
 
 | 报告 | 专题入口 | 原子知识页 | 文献页 |
 | --- | --- | ---: | --- |
@@ -14,7 +49,7 @@
 
 本批新增 142 个原子知识页、3 个专题综述和3个文献页，共 148 页。基础定义优先链接既有条目；正文补入 46 处基础术语直达链接。可在本地展开的计算与证明写入独立条目，深层引用定理保留准确的假设、来源和证明范围。
 
-当前收录数据见 `research/icm2026-dynamics-section-coverage.json`，逐页登记及最终源文件散列见 `research/icm2026-dynamics-first-reports.json` 和同名 `-snapshots.json`。本地构建、依赖、数学复核与浏览器检查记录见 `research/icm2026-dynamics-first-validation.json`。本批尚未提交或推送，线上网站不作为本地整合结果的凭据。
+当前收录数据见 `research/icm2026-dynamics-section-coverage.json`，首批逐页登记及最终源文件散列见 `research/icm2026-dynamics-first-reports.json` 和同名 `-snapshots.json`。历史本地验收见 `research/icm2026-dynamics-first-validation.json`。首批已随提交 `291d07de8f25828686be328bb623b589fed79665` 推送并成功部署；150 个正式页面和 6 个兼容地址均通过 HTTPS 内容核对。核对时仅归一化跨平台 XSLT 生成的显示公式周围缩进，保留正文与公式内容。独立干净构建、工作流及线上核验见 `research/icm2026-dynamics-first-release.json`。
 
 以下各节的“基线”“计划”和待验收状态均指本批整合前的历史核查，当前状态以上述记录为准。
 

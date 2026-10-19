@@ -1,0 +1,16 @@
+\title{QNI 以指数下界量化叶间不相容}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Filip](icm2026-filip)，BFERH v1 定义3.2.2、§2.5.8、附录A.4.5与A.5；报告§5.1}
+
+\p{设 #{g_t} 是紧光滑流形 #{Q} 上的 #{C^\infty} 流，保持遍历概率；在[有限可测扩张](3706) #{X} 上给定[非平凡相容族](370S) #{U(x)}。固定[从属分割](370H) #{\mathfrak B_0,\mathfrak B_0^-} 及[中心稳定形式胚的光滑实现](371G) #{W^{cs}_{\mathrm{loc}}}。记}
+##{\mathfrak B_t[x]=g_{-t}\mathfrak B_0[g_tx],\qquad
+\mathfrak B_t^-[x]=g_t\mathfrak B_0^-[g_{-t}x],\qquad
+\mathcal B_t[x]=\mathfrak B_t[x]\cap U[x].}
+\p{设 #{|\,\cdot\,|} 为 #{U[x]} 上 [Haar 测度](00T1)，#{\nu_x^s} 为稳定叶测度，并定义 #{d_{\min}^Q(A,B)=\inf_{a\in A,b\in B}d_Q(\pi a,\pi b)}。QNI 指存在 #{\alpha_0>0}，使对每个 #{0<\delta<1}，存在测度大于 #{1-\delta} 的紧集 #{K} 及 #{C,\ell_0>0}，满足如下条件。}
+\p{对所有 #{\ell>\ell_0} 及 #{x,g_{\ell /2}x,g_{-\ell /2}x\in K}，存在可测 #{S\subset\mathcal B_{\ell /2}[x]}，#{|S|\ge(1-\delta)|\mathcal B_{\ell /2}[x]|}。对每个 #{y\in S}，存在可测 #{S'_y\subset\mathfrak B_{\ell /2}^-[x]}，使}
+##{\nu_x^s(S'_y)\ge(1-\delta)\nu_x^s(\mathfrak B_{\ell /2}^-[x]),\qquad
+d_{\min}^Q(\mathcal B_0[x'],W^{cs}_{\mathrm{loc}}[y])
+\ge Ce^{-\alpha_0\ell}\quad(x'\in S'_y).}
+\p{稳定集合 #{S'_y} 可以依赖 #{y}；#{\alpha_0} 先于 #{\delta} 固定。稳定分母和稳定集合使用同一个 #{\mathfrak B_{\ell /2}^-}。中心稳定实现按 BFERH 附录A.4.5固定为相容形式 jet 的光滑代表，并取其 Lyapunov 图内的局部片；定义3.2.4说明足够高 jet 决定此条件。其存在及代表无关性采用该文，不能任取一张切于 #{E^{cs}} 的曲面替代。}

@@ -1,0 +1,10 @@
+\title{流的 CLT 为什么不自动给时一映射的 CLT}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.2、问题 5.6；独立计算}
+
+\p{设 #{F_t} 是光滑[保测流](00RV)。对光滑函数 #{u} 定义 #{\mathcal Au(x)=\int_0^1u(F_sx)\,ds}。则每个整数 #{n\geq 1} 都有}
+##{\int_0^n u(F_tx)\,dt=\sum_{j=0}^{n-1}\mathcal Au(F_jx),\qquad \mu(\mathcal Au)=\mu(u).}
+\p{把积分区间分成 #{n} 个单位区间，并在第 #{j} 段作换元 #{t=j+s}，得到第一式；保测性给第二式。因此流的[经典 CLT](3806)直接控制时一映射的观测量 #{\mathcal Au}，却未必覆盖所有光滑观测量。}
+\p{例如圆周单位速度流 #{F_tx=x+t\bmod 1} 满足 #{\mathcal Au=\int_0^1u}，其值域只有常数。非恒定光滑函数根本不在值域中。故从“解析零熵流满足 CLT”跳到“其时一映射对所有光滑函数满足 CLT”，缺少一个实际不自动成立的满射步骤。}

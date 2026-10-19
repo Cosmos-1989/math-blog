@@ -1,0 +1,17 @@
+\title{定量剪切升阶还需要控制观测量范数}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4 Theorem 4.12；KR2410v1 §3.3、Theorem 7.7}
+
+\p{设 #{F_t} 是紧光滑流形 #{M} 上保持概率测度 #{\mu} 的光滑流，满足 [QLUS](381A)。在光滑观测量空间上给定递增范数族 #{\mathcal N_d}，假设存在固定整数 #{D\ge 0}，对每个 #{d} 有常数 #{C_d,\sigma_d\ge 1}，满足}
+##{\begin{aligned}
+\|\phi\|_{C^n}&\le C_{n+d}\mathcal N_{n+d}(\phi) &&(n\ge 0,\ d\ge D),\\
+\mathcal N_d(\phi\psi)&\le C_d\mathcal N_{d+D}(\phi)\mathcal N_{d+D}(\psi),\\
+\mathcal N_d(\phi\circ F_t)&\le C_d\mathcal N_d(\phi)(1+|t|)^{\sigma_d}.
+\end{aligned}}
+\p{这些是[范数](3807)的嵌入、乘积和拉回增长条件。若对某个控制 #{C^1} 范数的 #{\mathcal N_{d_2}} 已有二阶[多项式混合](3804)，则 Kanigowski–Ravotti 定理 7.7 给出：对每个整数 #{k\ge 2}，存在 #{d_k,\eta_k,C_k>0}，对全部光滑 #{\phi_0,\ldots,\phi_{k-1}} 和 #{0=t_0<\cdots<t_{k-1}}、#{\Delta=\min_i(t_i-t_{i-1})\ge 1}，有}
+##{\left|\int_M\prod_{i=0}^{k-1}\phi_i(F_{t_i}x)\,d\mu(x)
+-\prod_{i=0}^{k-1}\int_M\phi_i\,d\mu\right|
+\le C_k\Delta^{-\eta_k}\prod_{i=0}^{k-1}\mathcal N_{d_k}(\phi_i).}
+\p{特别地，光滑性本身不保证拉回范数只按多项式增长，第三项须单独检查。升阶中允许提高范数阶数、损失衰减指数；上述定理保留“每个有限阶存在某个正幂律”的结论。}

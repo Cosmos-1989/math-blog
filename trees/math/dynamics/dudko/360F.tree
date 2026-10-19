@@ -1,0 +1,11 @@
+\title{曲线族的极值长度与矩形计算}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Dudko](icm2026-dudko)，§4.1；极值长度定义与矩形证明}
+
+\p{设 #{\Gamma} 是平面域 #{D} 中局部可求长曲线组成的族。对非负可测密度 #{\rho}，令 #{L_\rho(\Gamma)=\inf_{\gamma\in\Gamma}\int_\gamma\rho\,|dz|}，面积为 #{A_\rho=\int_D\rho^2\,dxdy}。极值长度及极值宽度定义为}
+##{\operatorname{EL}(\Gamma)=\sup_{0<A_\rho<\infty}\frac{L_\rho(\Gamma)^2}{A_\rho},\qquad \mathcal W(\Gamma)=\frac 1{\operatorname{EL}(\Gamma)}.}
+\p{积分取 [Lebesgue 意义](00Q5)。这是[闭曲线类极值长度](2Q0O)所用同一变分定义，允许换成连接指定边界的曲线族。共形换元时，长度密度乘 #{|f'|}、面积密度乘 #{|f'|^2}，比值保持不变。}
+
+\p{\strong{矩形。}在 #{D=(0,a)\times(0,b)} 上，令 #{\Gamma} 连接左右两边。常密度 #{1} 给出下界 #{a^2/(ab)=a/b}。对任意 #{\rho}，每条水平线都是候选路径；若 #{L=L_\rho(\Gamma)}，则 #{bL\leq\int_D\rho}。Cauchy–Schwarz 不等式给出 #{b^2L^2\leq ab A_\rho}，故上界也是 #{a/b}。因此 #{\operatorname{EL}(\Gamma)=a/b}，宽度为 #{b/a}。对[圆环](360E)取周期对数坐标，同样计算给出跨越曲线族的极值长度等于环域模。}

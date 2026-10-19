@@ -1,0 +1,15 @@
+\title{二步抛物仿射映射的迭代是二次多项式}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §6；DFS Definition 1；独立计算}
+
+\p{设 #{A=I+N\in\operatorname{SL}_d(\mathbb Z)}，其中 #{N\ne 0}、#{N^2=0}。称 #{A} 二步抛物；一般步数 #{S} 要求 #{(A-I)^S=0} 而 #{(A-I)^{S-1}\ne 0}，即 #{A-I} 的[幂零指数](0F01)为 #{S}。对实空间上的仿射映射 #{a(x)=Ax+\alpha}，有}
+##{a^n(x)=x+nNx+n\alpha+\frac{n(n-1)}2N\alpha\qquad(n\in\mathbb Z).}
+\p{\strong{证明。}#{N^2=0} 给出 #{A^n=I+nN}，对负整数也成立，因为 #{A^{-1}=I-N}。当 #{n\ge 1}，反复复合得到}
+##{a^n(x)=A^nx+\sum_{j=0}^{n-1}A^j\alpha
+=(I+nN)x+n\alpha+\left(\sum_{j=0}^{n-1}j\right)N\alpha.}
+\p{有限等差和为 #{n(n-1)/2}。记右边为 #{F_n(x)}，逐项相乘验证 #{F_{n+1}=aF_n} 对所有整数 #{n} 成立，且 #{F_0=\operatorname{id}}；向后递推便证明负整数情形。}
+\p{例如 #{a(x,y)=(x+\alpha,y+x+\beta)} 的实提升满足}
+##{a^n(x,y)=\left(x+n\alpha,\ y+nx+n\beta+\frac{n(n-1)}2\alpha\right).}
+\p{微分 #{Da^n=I+nN} 只有多项式增长，所有 [Lyapunov 指数](311C)为零。确切地，#{\|A^{\pm n}\|\le C(1+|n|)}，所以任意非零向量的长度比被 #{C(1+|n|)} 及其倒数夹住，对数除以 #{|n|} 后都趋零。}

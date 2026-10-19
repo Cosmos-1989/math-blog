@@ -1,0 +1,13 @@
+\title{面积可加性给出小副本收缩判据}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dudko](icm2026-dudko)，猜想1.2之后的面积论证；定量步骤展开}
+
+\p{设 #{M_n} 为有限面积平面集合 #{E} 中的嵌套非空紧集。假设有两两不交的可测集 #{H_n\subset E} 与常数 #{a,b>0}，使 #{\operatorname{area}(H_n)\geq a(\operatorname{diam}H_n)^2} 且 #{\operatorname{diam}H_n\geq b\operatorname{diam}M_n}。则 #{\bigcap_nM_n} 为单点。}
+
+\p{\strong{证明。}由 [Lebesgue 积分](00Q5)的可数可加性，}
+##{ab^2\sum_{n\geq 1}(\operatorname{diam}M_n)^2\leq\sum_{n\geq 1}\operatorname{area}(H_n)\leq\operatorname{area}(E)<\infty.}
+\p{非负项级数收敛使其通项趋零，故 #{\operatorname{diam}M_n\to 0}；应用[嵌套紧集命题](360O)即可。证明无需 #{M_n} 的面积为正。}
+
+\p{报告猜想1.2预期：[原始型](360C)双曲分支闭包是填充心形的统一拟共形像，卫星型则是闭圆盘的统一拟共形像，并且各[分支](3605)与对应小副本的直径一致可比。统一拟共形畸变理论将这种几何转成上面的面积下界。严格嵌套副本的中心分支互异，故不交；取 #{E=\mathcal M\subset\{|c|\leq 2\}}，上述计算给出收缩，再由 [Yoccoz 归约](3604)推出 MLC。尚待证明的输入是猜想中的统一几何。}

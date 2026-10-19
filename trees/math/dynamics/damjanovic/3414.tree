@@ -1,0 +1,14 @@
+\title{联合丢番图条件在平移参数中具有满测度}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §6；DFS Definition 6；独立测度估计}
+
+\p{在 #{\mathbb T^d=\mathbb R^d/\mathbb Z^d} 上取平移向量 #{\alpha,\beta}，记 #{e(t)=\exp(2\pi it)}。称二者联合丢番图，是指存在 #{\gamma,\tau>0}，使每个 #{0\ne m\in\mathbb Z^d} 都满足}
+##{\max\{|e(m\cdot\alpha)-1|,\ |e(m\cdot\beta)-1|\}\ge\gamma |m|^{-\tau}.}
+\p{对任意固定 #{\tau>d/2}，几乎每一对 #{(\alpha,\beta)} 都对某个 #{\gamma>0} 满足此条件；测度为乘积 [Haar 概率测度](00T1)。}
+\p{\strong{证明。}固定非零整数向量 #{m}。映射 #{\alpha\mapsto m\cdot\alpha\bmod 1} 将 Haar 测度送到圆周均匀测度：选 #{m_j\ne 0}，固定其余坐标，#{m_j\alpha_j\bmod 1} 将单位区间等分成 #{|m_j|} 段，每段线性覆盖圆周；再用 [Fubini 定理](0H53)积分即可。}
+\p{由 #{|e(t)-1|=2|\sin(\pi t)|}，圆周上满足 #{|e(t)-1|<\delta} 的集合长度至多 #{C\delta}。#{\alpha,\beta} 独立，故两者同时小于 #{|m|^{-\tau}} 的坏集 #{B_m} 测度至多 #{C^2|m|^{-2\tau}}。格点按半径分层得}
+##{\sum_{m\ne 0}\mu(B_m)\le C_d\sum_{j\ge 1}j^{d-1-2\tau}<\infty.}
+\p{于是 #{\mu(\bigcup_{|m|\ge R}B_m)} 至多为趋于零的级数尾和；落入无穷多个坏集的点集为零测。另删去可数个同时精确共振的零测集，余下每对参数只有有限多个坏频率，且每个频率的最大分母严格为正。将这些有限个数乘以 #{|m|^\tau} 后取最小值，再与一取小，便得 #{\gamma>0}。}
+\p{这是整个平移参数空间中的满测度结论。限制到某个[仿射交换参数子空间](3412)后，某些频率可能被迫精确共振，不能直接沿用这项满测度断言。}

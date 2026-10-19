@@ -1,0 +1,12 @@
+\title{齐次向量场的无散度代表}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{Alvarez–Deroin，第 4.1–4.2 节，引理 4.1}
+
+\p{设 #{V=(V_0,V_1,V_2)} 的系数是三变量 #{d} 次齐次多项式，#{d\ge 1}，记径向场 #{R=\sum_{j=0}^2z_j\partial_{z_j}}。在射影商映射 #{\Pi:\mathbb C^3\setminus 0\to\mathbb P^2} 下，径向场的投影为零。因此把 #{V} 换成 #{V+qR}，其中 #{q} 齐次次数为 #{d-1}，不改变投影方向。在投影只有孤立零点时，这定义[次数为 #{d} 的叶状结构](0BH6)。}
+\p{每个模去 #{qR} 的向量场类有唯一无散度代表：}
+##{V^\circ=V-\frac{\operatorname{div}V}{d+2}R,\qquad \operatorname{div}V=\sum_j\frac{\partial V_j}{\partial z_j}.}
+\p{证明使用齐次多项式的 Euler 恒等式 #{R(q)=(d-1)q}，它对每个单项式直接成立。因而}
+##{\operatorname{div}(qR)=R(q)+3q=(d+2)q.}
+\p{取 #{q=-\operatorname{div}V/(d+2)} 即得存在性；若两个无散度代表相差 #{qR}，则 #{(d+2)q=0}，故相同。最后把非零向量场按常数倍识别，得到叶状结构的系数参数。这个规范固定的是同一射影方向的径向不确定性；它不保证 #{V^\circ} 在非零点处处不消失，后一个条件须单独检验。}

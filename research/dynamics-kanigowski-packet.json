@@ -1,0 +1,994 @@
+{
+  "date": "2026-10-19",
+  "report": {
+    "speaker": "Adam Kanigowski",
+    "prefix": "38",
+    "outline": "3800",
+    "reference": "icm2026-kanigowski",
+    "title": "Ergodic and Statistical Properties of Smooth Systems",
+    "outline_title": "统计随机性如何受光滑几何约束",
+    "doi": "10.1137/25M1804315",
+    "pages": "156-167",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804315",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804315",
+    "version_role": "Official published ICM2026 report is the primary source; eight supplementary originals are pinned to exact arXiv versions.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union; published by SIAM under CC BY 4.0, verified on official metadata. Reference attributes author/title/publisher/license and Chinese restructuring plus independent calculations. Supplements retain separate licenses.",
+    "question": "How do smooth geometry, measure regularity and quantitative correlations constrain Bernoulli structure, classical Gaussian limits and higher-order mixing?",
+    "reading_scope": "Sections 1-5 in full, all displayed formulas, theorem and problem statements, footnotes 1-2, bibliography 1-64 and publication/license metadata. No official PDF or image visual audit claimed.",
+    "coverage_status": "55 atomic pages 3801-381J, narrative 3800 and one reference. All main official branches have entries; deep proofs remain explicitly cited. Open problems stay narrative instead of being mechanically split into theorem-like atoms.",
+    "proof_scope": {
+      "3801": "Defines smooth nonnegative density and distinguishes positive-density equivalence.",
+      "3802": "Defines all-pair separation and the flow convention; gives bounded-observable equivalence by finite approximation.",
+      "3803": "Proves lowering order and mixing-to-weak-mixing-to-ergodicity; cites Sinai for K to all orders.",
+      "3804": "Retains exists r,C,rate before forall observables and times; constants may depend on order.",
+      "3805": "Proves descending orders with a constant observable, retaining rate and norm constants.",
+      "3806": "Defines shared normalization and permits degenerate individual variances; only variance functional nonzero.",
+      "3807": "Separates C^r/C-infinity/analytic observable regularity from invariant measure; replaces removed duplicate Green-Kubo atom, reused as 330W.",
+      "3808": "Shows bounded transfer coboundary normalized sums vanish uniformly; proves mean zero.",
+      "3809": "Uses tightness, Birkhoff and L1 approximation of invariant indicators; no nonzero variance for each observable.",
+      "3810": "Defines standard/loosely Kronecker in ergodic zero entropy class with positive L1 time change and measure reweighting.",
+      "3811": "Defines nilpotent adjoint and chain depths rather than block sizes; computes sl2 and product examples.",
+      "3812": "Restricts to ergodic nontrivial finite-volume linear semisimple setting; uses GR=3 and explicitly permits zero projections on additional factors.",
+      "3813": "Cites Katok sufficient obstruction with pointwise positive smooth cocycle and ergodic zero-entropy fiber.",
+      "3814": "Defines interval exchanges; complete finite-additivity proof of Lebesgue preservation and two-interval rotation calculation.",
+      "3815": "Complete local suspension formula and derivative calculation; no mixing inferred from derivative alone.",
+      "3816": "Complete power/log integrability calculation and finite suspension-volume deduction.",
+      "3817": "Defines measurable flow towers and almost partitions; complete boundary-strip bound.",
+      "3818": "Defines original almost-measure-preserving condition; independent safe 5-epsilon integral bound without an unstated proper-domain containment assumption.",
+      "3819": "Full compact-metric LUS sufficient framework, preserving all three tower/shear clauses; normalizes k>=1 and integer grid endpoints.",
+      "380A": "Cites CLT for Anosov times Diophantine rotation; fully checks the eigenfunction obstruction to weak mixing.",
+      "380B": "Defines skew product and proves invariance and inverse by Fubini and action law.",
+      "380C": "Proves iterate formula and additive cocycle identity, including signed n convention.",
+      "380D": "Checks conjugacy sign and measure preservation; constant cocycle reduction.",
+      "380E": "Defines exact Bernoulli product model and proves walk formula; K and non-Bernoulli are cited Kalikow inputs.",
+      "380F": "Surface-only Pesin Bernoulli theorem; four-dimensional counterexample split to 381H and 3D question to outline.",
+      "380G": "States compact C1+alpha smooth invariant probability theorem; describes proof inputs without claiming proof.",
+      "380H": "Defines names and Hamming pseudometric and proves bounded-observable average estimate.",
+      "380I": "Proves obstruction using a small positive-measure ball and compactness subsequence, not positive Lyapunov theorem.",
+      "380J": "States K-conditioned homogeneous theorem; avoids claiming every nontrivial semisimple translation is K. Uses the standard connected finite-centre no-compact-factor linear semisimple subclass.",
+      "380K": "Defines positive-exponent SRB convention and conditional densities; does not equate physical and SRB measures.",
+      "380L": "Defines exact two-test estimate with noninvariant volume; derives invariance of limit.",
+      "380M": "Maldonado A only, compact C1+alpha and invariant exponentially mixing SRB; B split to 381I.",
+      "380N": "States per-observable possibly-degenerate CLT and distinguishes system-level nondegeneracy.",
+      "380O": "Cites existence and proves nonmixing passes from a base factor; no general arbitrary-cocycle construction.",
+      "380P": "Cites quantified analytic counterexamples at each polynomial rate; does not exchange forall m exists F with exists F forall m.",
+      "380Q": "Preserves forall finite r exists M_r,F_r and zero topological entropy; explains no C-infinity diagonal conclusion.",
+      "380R": "Cites analytic strengthening, C3 observable scope, zero metric versus positive topological entropy.",
+      "380S": "Proves integral cocycle, flow law and invariance; regularity inherited only with smooth data.",
+      "380T": "Records mean-zero S1, vector S2 with explicit fixed threshold and o(T^-5), and S3 required for nondegenerate variance.",
+      "380U": "Derives integrated observable relation and non-surjectivity example using periodic rotation.",
+      "380V": "Defines aperiodicity modulo constant and lattice; proves it is stronger than not being a coboundary.",
+      "380W": "Gives exact A/B/C sequence and good-set quantifiers; does not replace quasi-ellipticity by vague sublinear growth.",
+      "380X": "Specializes to hyperbolic toral Lebesgue base; restores ergodicity, zero entropy and regular generating partition.",
+      "380Y": "Defines rotation suspension with integrable power roof and distinguishes smooth realizations from every abstract exponent.",
+      "380Z": "Restores a.e. rotation, 0<gamma<1/2, convex C2 roof and zero-mean aperiodic cocycle; specializes base to toral Lebesgue.",
+      "381A": "Explicit QLUS quantifiers and substitutions, including time-separation inequality and all three inherited clauses.",
+      "381B": "Cites qualitative LUS upgrade; explains correlation averaging mechanism, not a proof of the induction or van der Corput estimate.",
+      "381C": "Cites qualitative and polynomial versions for the same precisely specified roof model; no full shearing-partition proof.",
+      "381D": "Independent derivative and orbit-sum calculation for an exact logarithmic model; no assertion that imbalance alone proves mixing.",
+      "381E": "Cites compact special case of time-change theorem with full group/lattice hypotheses; proves reweighted invariant measure by generator integration.",
+      "381F": "Independent matrix conjugation and compact-Riemannian error estimate proving the t^(1/4) shear example.",
+      "381G": "Cites Bernoulli realization on compact connected smooth manifolds of dimension>=2; separates measure-theoretic existence from quantitative bounds.",
+      "381H": "Cites existence on T4 only, not a universal claim for arbitrary Kochergin exponent or cocycle; gives dimension/product explanation.",
+      "381I": "Cites compact C1+alpha non-atomic exponential volume limit theorem with m versus mu distinguished; no claimed mixing of limit measure.",
+      "381J": "Cites quantitative upgrade with explicit product, embedding and polynomial pullback norm hypotheses; no proof of full quantitative induction."
+    },
+    "claim_sources": {
+      "3801": "§§1、2.2",
+      "3802": "定义 2.1",
+      "3803": "§2.1、定理 3.6",
+      "3804": "定义 2.3",
+      "3805": "§2.2；独立推导",
+      "3806": "定义 2.4",
+      "3807": "§2.2；正则性约定",
+      "3808": "§2.2；独立望远镜证明",
+      "3809": "§3.2；独立证明",
+      "3810": "§4.3；KVW1805v2 §1、定义 2.1",
+      "3811": "§4.3；KVW1805v2 定义 3.8；独立矩阵计算",
+      "3812": "定理 4.9；KVW1805v2 推论 1.2、引理 3.9、3.11",
+      "3813": "定理 4.10",
+      "3814": "§4.4；KR2410v1 §2.1",
+      "3815": "§4.4；KR2410v1 §5",
+      "3816": "§4.4；KR2410v1 §§2.1、5",
+      "3817": "§4.4；KR2410v1 §5 Definitions 5.1–5.2",
+      "3818": "§4.4；KR2410v1 Definition 3.1、Lemma 3.2",
+      "3819": "§4.4；KR2410v1 Definition 6.1",
+      "380A": "定理 3.7",
+      "380B": "§2.3，式 (2.1)；独立证明",
+      "380C": "式 (2.1)；独立归纳",
+      "380D": "§2.3；独立共轭计算",
+      "380E": "定理 3.1",
+      "380F": "定理 3.2–3.5、问题 5.1",
+      "380G": "定理 4.2；DKRH 2024",
+      "380H": "§4.1；独立距离估计",
+      "380I": "§4.1 的伸长机制；独立反证",
+      "380J": "定理 4.1；K1812v1 定理 1.1",
+      "380K": "§4.1；M2504v1 §2.3",
+      "380L": "§4.1，定理 4.3 前的公式；M2504v1 式 (1.2)",
+      "380M": "定理 4.3；M2504v1 定理 A、B",
+      "380N": "定理 4.4；Björklund–Gorodnik",
+      "380O": "定理 4.5 C1；F2006v2 定理 1.5(a)",
+      "380P": "定理 4.5 C2；F2006v2 定理 1.3",
+      "380Q": "定理 4.5 C3；F2006v2 定理 1.4(b)",
+      "380R": "定理 4.6；Z2210v1 定理 A",
+      "380S": "§4.2；Z2210v1 定义 2；独立计算",
+      "380T": "§4.2；Z2210v1 定义 3、命题 4",
+      "380U": "§4.2、问题 5.6；独立计算",
+      "380V": "§4.3；DK1912v1 定义 2.2；N2601v1 定义 3.5",
+      "380W": "§4.3；DK1912v1 定义 1.1",
+      "380X": "定理 4.7；DK1912v1 推论 1.4",
+      "380Y": "§4.3–4.4；N2601v1 §2.5",
+      "380Z": "定理 4.8；N2601v1 定理 1.1、§§2.4–2.5",
+      "381A": "§4.4；KR2410v1 Definition 7.1",
+      "381B": "§4.4；KR2410v1 Theorem 6.8、§6.2",
+      "381C": "§4.4；KR2410v1 Theorems A–B",
+      "381D": "§4.4；KR2410v1 §2.1",
+      "381E": "§4.4；KR2410v1 Theorem E、§4",
+      "381F": "§4.4；KR2410v1 §3.1",
+      "381G": "§3.2 Theorem 3.8；§5 Problem 5.5",
+      "381H": "§3.1 Theorem 3.4；§5 Problem 5.1",
+      "381I": "§4.1 Theorem 4.3；M2504v1 §1.1 Theorem B",
+      "381J": "§4.4 Theorem 4.12；KR2410v1 §3.3、Theorem 7.7"
+    },
+    "sources": {
+      "main": {
+        "title": "Ergodic and Statistical Properties of Smooth Systems",
+        "authors": [
+          "Adam Kanigowski"
+        ],
+        "version": "Official ICM2026 Volume 5 pp.156-167; published online 2026-07-13",
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1804315",
+        "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804315",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "read": "Complete official mathematical HTML, not abstract only.",
+        "reading_scope": "Sections 1-5 in full, all displayed formulas, theorem and problem statements, footnotes 1-2, bibliography 1-64 and publication/license metadata. No official PDF or image visual audit claimed."
+      },
+      "K1812v1": {
+        "title": "Bernoulli property for homogeneous systems",
+        "authors": [
+          "Adam Kanigowski"
+        ],
+        "version": "arXiv:1812.03209v1, 2018-12-07",
+        "url": "https://arxiv.org/html/1812.03209v1",
+        "version_url": "https://arxiv.org/abs/1812.03209v1",
+        "pdf_url": "https://arxiv.org/pdf/1812.03209v1",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "Section 1 including Theorem 1.1 and sections 2.1-2.4 setup and matching definitions; not the complete proof."
+      },
+      "M2504v1": {
+        "title": "Exponentially Mixing SRB Measures are Bernoulli",
+        "authors": [
+          "Amadeus Maldonado"
+        ],
+        "version": "arXiv:2504.04044v1, 2025-04-05",
+        "url": "https://arxiv.org/html/2504.04044v1",
+        "version_url": "https://arxiv.org/abs/2504.04044v1",
+        "pdf_url": "https://arxiv.org/pdf/2504.04044v1",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "Sections 1.1-1.4 with both theorem statements, equations (1.1)-(1.2), non-atomic limit qualification; section 2.3 SRB definition and selected 2.2 unstable-leaf setup. Not complete sections 3-6 proof."
+      },
+      "F2006v2": {
+        "title": "Flexibility of statistical properties for smooth systems satisfying the central limit theorem",
+        "authors": [
+          "Dmitry Dolgopyat",
+          "Changguang Dong",
+          "Adam Kanigowski",
+          "Péter Nándori"
+        ],
+        "version": "arXiv:2006.02191v2, 2020-06-16",
+        "url": "https://arxiv.org/html/2006.02191v2",
+        "version_url": "https://arxiv.org/abs/2006.02191v2",
+        "pdf_url": "https://arxiv.org/pdf/2006.02191v2",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "Section 1 definitions 1.1-1.2, Theorems 1.3-1.5, surrounding discussion; constructions not read in full."
+      },
+      "Z2210v1": {
+        "title": "Smooth zero entropy flows satisfying the classical central limit theorem",
+        "authors": [
+          "Dmitry Dolgopyat",
+          "Bassam Fayad",
+          "Adam Kanigowski"
+        ],
+        "version": "arXiv:2210.10121v1, 2022-10-18",
+        "url": "https://arxiv.org/html/2210.10121v1",
+        "version_url": "https://arxiv.org/abs/2210.10121v1",
+        "pdf_url": "https://arxiv.org/pdf/2210.10121v1",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "Sections 1-2 including Definitions 1-3, Theorems A and C, Proposition 4 and Problem 5. Not full construction or nondegeneracy appendix."
+      },
+      "DK1912v1": {
+        "title": "Bernoulli property for certain skew products over hyperbolic systems",
+        "authors": [
+          "Changguang Dong",
+          "Adam Kanigowski"
+        ],
+        "version": "arXiv:1912.08132v1, 2019-12-17",
+        "url": "https://arxiv.org/html/1912.08132v1",
+        "version_url": "https://arxiv.org/abs/1912.08132v1",
+        "pdf_url": "https://arxiv.org/pdf/1912.08132v1",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "PDF pages 2-6: Definitions 1.1-1.2, Theorem 1.3, Corollaries 1.4-1.5 and Definition 2.2; HTML license metadata. Not full VWB matching proof."
+      },
+      "N2601v1": {
+        "title": "Bernoullicity of some skew products with hyperbolic base and Kochergin flow in the fiber",
+        "authors": [
+          "Mateusz Nowak"
+        ],
+        "version": "arXiv:2601.17630v1, 2026-01-24",
+        "url": "https://arxiv.org/html/2601.17630v1",
+        "version_url": "https://arxiv.org/abs/2601.17630v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.17630v1",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "Section 1 Theorems 1.1-1.2, sections 2.4-2.5 frequency/roof assumptions, Definition 3.5; not full fiber matching or Bernoulli proof."
+      },
+      "KVW1805v2": {
+        "title": "Kakutani equivalence of unipotent flows",
+        "authors": [
+          "Adam Kanigowski",
+          "Kurt Vinhage",
+          "Daren Wei"
+        ],
+        "version": "arXiv:1805.01501v2, 2019-08-14",
+        "url": "https://arxiv.org/html/1805.01501v2",
+        "version_url": "https://arxiv.org/abs/1805.01501v2",
+        "pdf_url": "https://arxiv.org/pdf/1805.01501v2",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "PDF pages 1-5 introduction, Theorem 1.1 and Corollary 1.2; section 3.4 Definition 3.8 and Lemmas 3.9, 3.11. HTML theorem and license cross-check. Not full Kakutani invariant or orbit-separation proof."
+      },
+      "KR2410v1": {
+        "title": "Multiple mixing for parabolic systems",
+        "authors": [
+          "Adam Kanigowski",
+          "Davide Ravotti"
+        ],
+        "version": "arXiv:2410.13686v1, 2024-10-17",
+        "url": "https://arxiv.org/html/2410.13686v1",
+        "version_url": "https://arxiv.org/abs/2410.13686v1",
+        "pdf_url": "https://arxiv.org/pdf/2410.13686v1",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Targeted full-text reading only; no whole-paper proof verification.",
+        "reading_scope": "Sections 1-2, section 3.1 and 3.3 norm conditions; section 5 tower definitions and suspension formulas; Definition 6.1, Theorem 6.8 and inspected induction structure in 6.2; Definition 7.1, Theorem 7.7 and section 11.3 Kochergin application. No complete verification of tower partition construction, quantitative induction or appendices."
+      },
+      "classical_via_report": {
+        "title": "Classical inputs and earlier constructions cited by Kanigowski",
+        "version": "Statements pinned to the official report",
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1804315",
+        "license": "Original publications retain their own copyright; the report's CC BY license is not transferred to them.",
+        "reading_scope": "Pesin, Sinai, Kalikow, Rudolph, Katok, Cohen-Conze, Bjorklund-Gorodnik, Brin-Feldman-Katok and Kanigowski-Rodriguez Hertz-Vinhage results read as statements in the official report, not their complete original proofs."
+      }
+    },
+    "remaining_branches": [
+      "Full Ornstein-Weiss/VWB matching, Pesin constructions, homogeneous equidistribution, Maldonado's SRB box construction and Bernoulli proof remain external.",
+      "Full exotic CLT skew-product constructions, slow-parabolic construction and variance-nondegeneracy appendix remain external.",
+      "Full quasi-elliptic/Nowak matching, Kakutani-invariant estimates and Katok positive-drift obstruction remain external.",
+      "Full LUS/QLUS induction, good partitions for Arnold and Chaika-Wright classes, and quantitative Kochergin return/distortion estimates remain external.",
+      "Official open Problems 5.1-5.9 are discussed by branch in 3800; no claimed resolution of dimension 3, general Rokhlin, exponential all-order rates, arbitrary-measure positive entropy, fixed-manifold smooth CLT or C-infinity zero-entropy diffeomorphism CLT."
+    ],
+    "normalization_notes": [
+      "3804 allows any invariant Borel probability; measure smoothness is only imposed by theorems that require it.",
+      "3801 measure regularity separated from 3807 observable regularity/norms.",
+      "The old draft Green-Kubo content at 3807 was removed and replaced by regularity definitions; all Green-Kubo reuse goes to 330W.",
+      "380B/380C uniformly allow additive groups R^d and Z^d; continuous flow is only the R case.",
+      "380F is the surface theorem; 381H is four-dimensional existence; dimension 3 remains in 3800.",
+      "380M is SRB exponential mixing; 381I is non-atomic exponential volume limit.",
+      "GR uses chain depth, not block size; entropy type, finite versus infinite smoothness, and flow versus map are retained."
+    ]
+  },
+  "prerequisites": {
+    "3801": [
+      "0043",
+      "00NI",
+      "3101"
+    ],
+    "3802": [
+      "00RS",
+      "00RV",
+      "00RY",
+      "00Q3"
+    ],
+    "3803": [
+      "3802",
+      "00RX",
+      "00RW",
+      "00S5"
+    ],
+    "3804": [
+      "3807",
+      "3802",
+      "00Q3"
+    ],
+    "3805": [
+      "3804"
+    ],
+    "3806": [
+      "3807",
+      "00LA",
+      "0N0R"
+    ],
+    "3807": [
+      "0043",
+      "331C"
+    ],
+    "3808": [
+      "0AP9",
+      "3806"
+    ],
+    "3809": [
+      "3806",
+      "00RW",
+      "0V17"
+    ],
+    "3810": [
+      "00RV",
+      "0A6V",
+      "00S2"
+    ],
+    "3811": [
+      "2D02",
+      "2D01",
+      "0F00",
+      "00T1"
+    ],
+    "3812": [
+      "3810",
+      "3811",
+      "00RW"
+    ],
+    "3813": [
+      "380B",
+      "3810",
+      "0AP8",
+      "00S3",
+      "00RT",
+      "00RV"
+    ],
+    "3814": [
+      "00XV",
+      "00RS"
+    ],
+    "3815": [
+      "00S9",
+      "3814",
+      "380C"
+    ],
+    "3816": [
+      "00S9",
+      "00XV"
+    ],
+    "3817": [
+      "00RV",
+      "00QB",
+      "00Q3"
+    ],
+    "3818": [
+      "00Q3",
+      "00Q1"
+    ],
+    "3819": [
+      "00EK",
+      "00RV",
+      "3817",
+      "3818"
+    ],
+    "380A": [
+      "3806",
+      "0AP8",
+      "00RX",
+      "0A6P"
+    ],
+    "380B": [
+      "00RS",
+      "00RV",
+      "00QB",
+      "00BI"
+    ],
+    "380C": [
+      "380B",
+      "340G"
+    ],
+    "380D": [
+      "380B",
+      "0AP9",
+      "00RT"
+    ],
+    "380E": [
+      "380B",
+      "380C",
+      "00S3",
+      "00S5",
+      "00RT"
+    ],
+    "380F": [
+      "3801",
+      "00S5",
+      "00S3",
+      "00RT",
+      "311C"
+    ],
+    "380G": [
+      "3801",
+      "3804",
+      "00S3",
+      "00RT",
+      "311C"
+    ],
+    "380H": [
+      "00S1",
+      "00RS",
+      "00EL"
+    ],
+    "380I": [
+      "00EK",
+      "00F3",
+      "00RY"
+    ],
+    "380J": [
+      "2D02",
+      "2D01",
+      "340C",
+      "00S5",
+      "00S3",
+      "00RT"
+    ],
+    "380K": [
+      "3807",
+      "311C",
+      "370G",
+      "3307",
+      "370H",
+      "00Q3"
+    ],
+    "380L": [
+      "3801",
+      "00Q7"
+    ],
+    "380M": [
+      "3807",
+      "380K",
+      "3804",
+      "00S3",
+      "00RT"
+    ],
+    "380N": [
+      "3804",
+      "3806",
+      "330W",
+      "3808"
+    ],
+    "380O": [
+      "3806",
+      "00RX",
+      "00RY",
+      "380S"
+    ],
+    "380P": [
+      "3807",
+      "3806",
+      "3804",
+      "00S5",
+      "00S3",
+      "00RT"
+    ],
+    "380Q": [
+      "3807",
+      "3806",
+      "331D",
+      "00S2"
+    ],
+    "380R": [
+      "3807",
+      "3806",
+      "00S2",
+      "331D"
+    ],
+    "380S": [
+      "00RV",
+      "00BI",
+      "00QB",
+      "340G"
+    ],
+    "380T": [
+      "380S",
+      "00LA",
+      "00EK"
+    ],
+    "380U": [
+      "3806",
+      "00RV"
+    ],
+    "380V": [
+      "0AP9",
+      "380C"
+    ],
+    "380W": [
+      "00RV",
+      "00EK"
+    ],
+    "380X": [
+      "380B",
+      "380V",
+      "380W",
+      "0AP8",
+      "0A6J",
+      "00S2",
+      "00S3",
+      "00RT"
+    ],
+    "380Y": [
+      "00S9",
+      "00XV"
+    ],
+    "380Z": [
+      "380Y",
+      "380V",
+      "380B",
+      "0AP8",
+      "00S3",
+      "00RT"
+    ],
+    "381A": [
+      "3819"
+    ],
+    "381B": [
+      "3819",
+      "3802",
+      "380H",
+      "00Q3",
+      "00RV"
+    ],
+    "381C": [
+      "380Y",
+      "360V",
+      "3804",
+      "381B"
+    ],
+    "381D": [
+      "3814",
+      "3815",
+      "3816"
+    ],
+    "381E": [
+      "3811",
+      "381A",
+      "3804",
+      "2D01",
+      "2D02",
+      "00T1"
+    ],
+    "381F": [
+      "3811",
+      "00NI"
+    ],
+    "381G": [
+      "0043",
+      "00S3",
+      "3801",
+      "3804"
+    ],
+    "381H": [
+      "380B",
+      "380Y",
+      "00S5",
+      "00S3",
+      "380F"
+    ],
+    "381I": [
+      "380L",
+      "380K",
+      "3807",
+      "00Q7",
+      "00S3"
+    ],
+    "381J": [
+      "381A",
+      "3804",
+      "3807"
+    ]
+  },
+  "reused_pages": {
+    "3101": "局部微分同胚与全局可逆性的区别",
+    "3307": "Pesin 稳定流形将负指数变成几何收缩",
+    "0V17": "可逆系统的 Birkhoff 逐点遍历定理",
+    "311C": "Lyapunov 指数度量切向量的指数增长",
+    "330W": "可和相关函数给出 Green–Kubo 渐近方差",
+    "331C": "Hölder 观测量将空间邻近转成数值误差界",
+    "331D": "紧空间拓扑熵的变分原理",
+    "340C": "齐性空间上的仿射动力系统",
+    "340G": "群作用上的线性余循环与微分余循环",
+    "360V": "旋转数的连分数、有界型与高型",
+    "370G": "非一致双曲性产生几乎处处的稳定叶",
+    "370H": "沿可测分割分解概率测度",
+    "0043": "光滑流形的局部坐标",
+    "0F00": "Lie 代数",
+    "00NI": "Riemann 度量",
+    "0AP8": "Anosov 微分同胚",
+    "0N0R": "标准正态分布与高斯尾函数",
+    "2D01": "局部紧群中的格",
+    "2D02": "半单实 Lie 群的实秩",
+    "007B": "遍历系统的分类复杂度",
+    "00A0": "光滑遍历系统的非 Borel 分类",
+    "00A2": "零熵混合系统仍不可 Borel 分类",
+    "00A3": "K 微分同胚的完全解析分类障碍",
+    "00BI": "群作用",
+    "00Q1": "可测映射",
+    "00Q3": "概率空间",
+    "00Q7": "无原子测度",
+    "00QB": "乘积测度",
+    "00RS": "保测自同构",
+    "00RT": "保测系统的测度共轭",
+    "00RV": "保测流",
+    "00RW": "遍历性",
+    "00RX": "弱混合",
+    "00RY": "保测系统的混合性",
+    "00S1": "有限可测分割的 Shannon 熵",
+    "00S2": "Kolmogorov–Sinai 熵",
+    "00S3": "Bernoulli 移位",
+    "00S5": "K 自同构与完全正熵",
+    "00S9": "实屋顶上的悬挂流",
+    "00T1": "Haar 测度",
+    "00XV": "欧氏空间的 Lebesgue 测度",
+    "0A6J": "Kolmogorov–Sinai 生成分割定理",
+    "0A6P": "弱混合的相关与特征函数判据",
+    "0A6V": "悬挂流的时间重参数化与 Kakutani 等价",
+    "0AP9": "动力系统上函数的上同调",
+    "00LA": "依分布收敛",
+    "00EK": "度量空间",
+    "00EL": "伪度量",
+    "00F3": "紧空间"
+  },
+  "terminology_evidence": {
+    "search_scope": "Read-only site-wide title/body rg searches for CLT, mixing, Bernoulli, K, entropy, smooth measures, Holder, cocycles, SRB, Pesin, interval exchange, suspensions and Green-Kubo; first/second-batch definitions reused.",
+    "reuse_decisions": [
+      "330W reused instead of duplicate Green-Kubo page; 3807 repurposed to regularity.",
+      "380K is an independent SRB definition, using 370H conditional measures and 370G/3307 Pesin leaves; 3315 is a different SPR question.",
+      "Existing 007B/00A0/00A2/00A3 are narrative background, not artificial prerequisites for new atoms.",
+      "00S3 retains iid independence; no report-gloss definition recreated."
+    ],
+    "chinese_terms": "Bernoulli, K, SRB, Lyapunov and Pesin follow local pages; LUS/QLUS and loosely Kronecker retain source English alongside local Chinese explanation. No BananaSpace verification claimed.",
+    "parent_candidate_review": "All seven id^38 candidates from /tmp/dynamics-final-draft-prerequisites.json reviewed and linked: 00Q3/00EL/00RV/00Q1; 3819 metric target corrected to 00EK."
+  },
+  "source_errata": [
+    {
+      "location": "Official section 2.1 Bernoulli gloss",
+      "status": "Two consecutive independent random variables do not define an iid process.",
+      "handling": "Use existing 00S3, which requires independence of every finite subfamily; no duplicate Bernoulli definition."
+    },
+    {
+      "location": "Official Definition 2.1",
+      "status": "Mixed n/N indexing and time-gap notation normalized.",
+      "handling": "3802 uses all-pair separation; ordered times use adjacent minimum gaps equivalently."
+    },
+    {
+      "location": "Official section 4.2 sentence before Theorem 4.5",
+      "status": "'Positive answer in finite smoothness' conflicts with the displayed zero topological entropy counterexample.",
+      "handling": "380Q and 3800 state the negative answer: for each finite regularity r an example exists. This is not one C-infinity example."
+    },
+    {
+      "location": "Official S1 in sections 4.2 and 5",
+      "status": "Uncentered statement fails on the constant observable 1.",
+      "handling": "380T follows Z2210v1 Definition 3 with mean-zero observables and convergence in distribution. The stronger L1 open-problem wording is not silently identified with this condition."
+    },
+    {
+      "location": "Official S2 in sections 4.2 and 5",
+      "status": "Inconsistent psi/phi, R/T and little-o inside the defining event.",
+      "handling": "380T uses a fixed centered vector cocycle tau, fixed C log^2(T) threshold, and probability o(T^-5), exactly the flow condition in Z2210v1. No guessed scalar diffeomorphism theorem is supplied."
+    },
+    {
+      "location": "Official Theorem 4.3 exponential volume limit",
+      "status": "Compactness, C1+alpha regularity and the non-atomic limit-SRB qualification are absent from the abbreviated survey statement.",
+      "handling": "381I restores all three from M2504v1 section 1.1/Theorem B; 380L separates m from mu. 380M contains only Theorem A."
+    },
+    {
+      "location": "Official Theorem 4.7",
+      "status": "Abbreviated quasi-elliptic criterion omits zero entropy, ergodicity and regular generating partition.",
+      "handling": "380W/380X use DK1912v1 Definitions 1.1-1.2 and Theorem 1.3; public theorem specialized to hyperbolic toral Lebesgue base."
+    },
+    {
+      "location": "Official Theorem 4.8",
+      "status": "Frequency and roof regularity hypotheses are compressed.",
+      "handling": "380Y/380Z retain almost-everywhere frequency, positive convex C2 singular roof, derivative asymptotes, zero mean and aperiodicity from N2601v1."
+    },
+    {
+      "location": "Official Theorem 4.9",
+      "status": "Ergodicity and degenerate one-parameter projections require care.",
+      "handling": "3812 uses the ergodic nontrivial formulation of KVW1805v2. A zero projection is allowed on an extra factor of an irreducible quotient; a product quotient can fail ergodicity."
+    },
+    {
+      "location": "KVW1805v2 introduction versus Definition 3.8",
+      "status": "The introduction calls m_i block sizes although the formula uses chain depth.",
+      "handling": "3811 sets m_i=Jordan block size minus one and checks sl2 gives GR=3 and two copies give GR=6."
+    },
+    {
+      "location": "Official section 4.4 surface-flow breadth",
+      "status": "The survey wording is broader than KR2410v1 Theorems A-D as precisely formulated.",
+      "handling": "3800 names the actual Kochergin, specified Arnold and Chaika-Wright branches; 381C states the explicit single-singularity roof model and q_(n+1)<=C q_n log^2 q_n condition, not every Diophantine frequency or every mixing surface flow."
+    },
+    {
+      "location": "KR2410v1 Definition 6.1",
+      "status": "LUS3 has K_epsilon versus K_delta and M versus M_s notation slips; k=0 gives an empty effective-shear family.",
+      "handling": "3819 consistently uses M=M_s, m<=floor(delta^-1), k>=1 and integer ell with ell delta<M. The three substantive conditions are retained."
+    },
+    {
+      "location": "KR2410v1 section 3.3",
+      "status": "Pullback growth written |t|^sigma for all real t vanishes at t=0.",
+      "handling": "381J uses (1+|t|)^sigma, the standard all-time normalization, retaining polynomial growth as a genuine hypothesis."
+    },
+    {
+      "location": "KR2410v1 Lemma 3.2 proper domains",
+      "status": "The displayed 3-epsilon proof tacitly suppresses mass of g(D) outside E.",
+      "handling": "3818 proves a safe 5-epsilon bound directly from Definition 3.1 without adding containment; records 3 epsilon when g(D) is contained in E."
+    },
+    {
+      "location": "Official sections 4.2/5 citations of flexibility examples",
+      "status": "Some prose points to report reference 16 although the exotic CLT statements used here are in the flexibility paper (reference 17).",
+      "handling": "380O/380P/380Q cite F2006v2 Theorems 1.3-1.5 directly."
+    },
+    {
+      "location": "CLT nondegeneracy throughout",
+      "status": "A system-level variance functional being nonzero does not mean every observable has positive variance.",
+      "handling": "3806/3808/380N distinguish observable-wise degenerate Gaussians, centered constants/coboundaries, and existence of at least one positive-variance observable."
+    }
+  ],
+  "suggested_old_note_updates": [
+    {
+      "id": "3315",
+      "suggestion": "Reference SRB definition 380K rather than define SRB inside the SPR question; parent already owns this integration."
+    },
+    {
+      "id": "0069",
+      "suggestion": "Parent adds the narrative 3800 entry. No edit performed here."
+    }
+  ],
+  "handoff": {
+    "owned_files": [
+      "trees/math/dynamics/kanigowski/3800.tree",
+      "trees/math/dynamics/kanigowski/3801.tree",
+      "trees/math/dynamics/kanigowski/3802.tree",
+      "trees/math/dynamics/kanigowski/3803.tree",
+      "trees/math/dynamics/kanigowski/3804.tree",
+      "trees/math/dynamics/kanigowski/3805.tree",
+      "trees/math/dynamics/kanigowski/3806.tree",
+      "trees/math/dynamics/kanigowski/3807.tree",
+      "trees/math/dynamics/kanigowski/3808.tree",
+      "trees/math/dynamics/kanigowski/3809.tree",
+      "trees/math/dynamics/kanigowski/380A.tree",
+      "trees/math/dynamics/kanigowski/380B.tree",
+      "trees/math/dynamics/kanigowski/380C.tree",
+      "trees/math/dynamics/kanigowski/380D.tree",
+      "trees/math/dynamics/kanigowski/380E.tree",
+      "trees/math/dynamics/kanigowski/380F.tree",
+      "trees/math/dynamics/kanigowski/380G.tree",
+      "trees/math/dynamics/kanigowski/380H.tree",
+      "trees/math/dynamics/kanigowski/380I.tree",
+      "trees/math/dynamics/kanigowski/380J.tree",
+      "trees/math/dynamics/kanigowski/380K.tree",
+      "trees/math/dynamics/kanigowski/380L.tree",
+      "trees/math/dynamics/kanigowski/380M.tree",
+      "trees/math/dynamics/kanigowski/380N.tree",
+      "trees/math/dynamics/kanigowski/380O.tree",
+      "trees/math/dynamics/kanigowski/380P.tree",
+      "trees/math/dynamics/kanigowski/380Q.tree",
+      "trees/math/dynamics/kanigowski/380R.tree",
+      "trees/math/dynamics/kanigowski/380S.tree",
+      "trees/math/dynamics/kanigowski/380T.tree",
+      "trees/math/dynamics/kanigowski/380U.tree",
+      "trees/math/dynamics/kanigowski/380V.tree",
+      "trees/math/dynamics/kanigowski/380W.tree",
+      "trees/math/dynamics/kanigowski/380X.tree",
+      "trees/math/dynamics/kanigowski/380Y.tree",
+      "trees/math/dynamics/kanigowski/380Z.tree",
+      "trees/math/dynamics/kanigowski/3810.tree",
+      "trees/math/dynamics/kanigowski/3811.tree",
+      "trees/math/dynamics/kanigowski/3812.tree",
+      "trees/math/dynamics/kanigowski/3813.tree",
+      "trees/math/dynamics/kanigowski/3814.tree",
+      "trees/math/dynamics/kanigowski/3815.tree",
+      "trees/math/dynamics/kanigowski/3816.tree",
+      "trees/math/dynamics/kanigowski/3817.tree",
+      "trees/math/dynamics/kanigowski/3818.tree",
+      "trees/math/dynamics/kanigowski/3819.tree",
+      "trees/math/dynamics/kanigowski/381A.tree",
+      "trees/math/dynamics/kanigowski/381B.tree",
+      "trees/math/dynamics/kanigowski/381C.tree",
+      "trees/math/dynamics/kanigowski/381D.tree",
+      "trees/math/dynamics/kanigowski/381E.tree",
+      "trees/math/dynamics/kanigowski/381F.tree",
+      "trees/math/dynamics/kanigowski/381G.tree",
+      "trees/math/dynamics/kanigowski/381H.tree",
+      "trees/math/dynamics/kanigowski/381I.tree",
+      "trees/math/dynamics/kanigowski/381J.tree",
+      "trees/references/icm2026-kanigowski.tree",
+      "research/dynamics-kanigowski-packet.json"
+    ],
+    "knowledge_ids": [
+      "3801",
+      "3802",
+      "3803",
+      "3804",
+      "3805",
+      "3806",
+      "3807",
+      "3808",
+      "3809",
+      "380A",
+      "380B",
+      "380C",
+      "380D",
+      "380E",
+      "380F",
+      "380G",
+      "380H",
+      "380I",
+      "380J",
+      "380K",
+      "380L",
+      "380M",
+      "380N",
+      "380O",
+      "380P",
+      "380Q",
+      "380R",
+      "380S",
+      "380T",
+      "380U",
+      "380V",
+      "380W",
+      "380X",
+      "380Y",
+      "380Z",
+      "3810",
+      "3811",
+      "3812",
+      "3813",
+      "3814",
+      "3815",
+      "3816",
+      "3817",
+      "3818",
+      "3819",
+      "381A",
+      "381B",
+      "381C",
+      "381D",
+      "381E",
+      "381F",
+      "381G",
+      "381H",
+      "381I",
+      "381J"
+    ],
+    "cross_topic_dependencies": {
+      "3307/330W/331C/331D": "Pesin, Green-Kubo, Holder norms and entropy variational principle reused.",
+      "370G/370H": "Nonuniform stable/unstable leaf and conditional-measure foundations for 380K.",
+      "340C/340G": "Homogeneous action and additive cocycles.",
+      "360V": "Continued-fraction denominator definition.",
+      "3101/311C": "Diffeomorphism and Lyapunov definitions."
+    },
+    "parent_actions": [
+      "Register 55 atomic prerequisite/proof/source rows and the overview/reference in shared registries.",
+      "Keep cross-batch definition dependencies available, especially 370G/370H and 360V.",
+      "Run parent-owned normalization/sync, full build, rendered/browser review and authorized publication."
+    ],
+    "scope_status": "Only assigned 38*.tree subtree, reference and packet written. No git command or shared registry/CI edit, no full sync/build."
+  },
+  "validation": {
+    "status": "Scoped final check passed: 55 atomic prerequisite/proof/source records, 57 tree files and 58 owned files.",
+    "structure": {
+      "atomic_count": 55,
+      "tree_file_count": 57,
+      "owned_file_count": 58,
+      "prerequisite_edge_count": 198,
+      "body_linked_prerequisites": true,
+      "overview_reachable_owned_pages": 56,
+      "transitive_prerequisite_nodes": 369,
+      "prerequisite_cycles": [],
+      "broken_internal_links": [],
+      "exact_title_collisions": [],
+      "balanced_forester_groups": true,
+      "metadata_date_author_taxon": true
+    },
+    "math_check": {
+      "expressions_parsed": 746,
+      "katex_errors": 0,
+      "unescaped_math_path_tokens": 0,
+      "method": "Parsed native Forester math groups with the existing groupEnd helper and rendered each through bundled KaTeX renderToString. This is not a Forester build, PDF render or browser check."
+    },
+    "editorial": {
+      "owned_tree_normalizeFormat_differences": 0,
+      "existing_style_rule_candidates": 0,
+      "parent_prerequisite_candidates_reviewed": 7,
+      "method": "Scoped owned-file normalization applied through apply_patch. No full-site formatter or sync was run."
+    },
+    "mathematical_review": [
+      "Checked centered CLT quantifiers and zero-variance coboundaries; 380N now explicitly uses C-infinity observables under possibly increasing per-order regularity requirements.",
+      "Checked signed Birkhoff cocycles and the R^d/Z^d action distinction, inverse formula and Fubini preservation.",
+      "Checked surface/four-dimensional separation, arbitrary Borel mixing definition, SRB positive exponent/conditional measure assumptions, and non-atomic C1+alpha volume-limit theorem.",
+      "Checked quasi-elliptic three-clause quantifiers, Nowak a.e. frequency and gamma<1/2, GR chain depth and ergodicity under zero factor projection.",
+      "Checked special-flow derivative signs, closed-interval C2 remainder in logarithmic roof, finite-volume roof integrals, tower boundary estimate, safe 5-epsilon almost-measure-preserving bound, and right-action horocycle matrix convention.",
+      "Checked LUS/QLUS all three clauses, time/height/error scales, extra norm hypotheses and per-order decay quantifiers; deep induction remains cited."
+    ],
+    "parent_review_addressed": "All received comments addressed: 3804 arbitrary invariant Borel probability; 330W reuse; split measure/norms, surface/4D, SRB/volume-limit; complete G hypotheses; 370G/370H/3307 links; 3819 metric link; English taxon; seven prerequisite candidates; closed C2 remainder; removed obsolete 3807 source label; discrete/continuous additive actions.",
+    "tree_sha256": {
+      "trees/math/dynamics/kanigowski/3800.tree": "db3f95f6e07748636b7096efb468288a1c8bbd1d968c69a9c80837ceb6a69142",
+      "trees/math/dynamics/kanigowski/3801.tree": "eb9d1b9761c217ae64134a4906dabe51f60a26c477a63b64dd630517037c1d91",
+      "trees/math/dynamics/kanigowski/3802.tree": "30a9bd8c3f2d88b059ecb8bfed86a5eeb2236b68899727bcdeb247e93e98d4ec",
+      "trees/math/dynamics/kanigowski/3803.tree": "3977298d0fd3156598e9457db0ba6c459e7ad51389dc0033ecd75f05a0762122",
+      "trees/math/dynamics/kanigowski/3804.tree": "72e21d04310a6bd412e7b2ce882c24bb47f84ad73346c62c3faf5ec38f522bda",
+      "trees/math/dynamics/kanigowski/3805.tree": "cb9ae5c076809ab41c959ff7b3f8869f3b986332c41550d73349e6487c501a99",
+      "trees/math/dynamics/kanigowski/3806.tree": "d38ba098a8edb35a36df0197d1f88b122c0f333f91f205b68ea33dfeeccfac66",
+      "trees/math/dynamics/kanigowski/3807.tree": "d97566f0b5fb5b1908558ff9e80cf38208917d02b7ecf55d21e3129a9bbf3bb7",
+      "trees/math/dynamics/kanigowski/3808.tree": "6bf4e7bddf492d3d88f906b5ced4867729856a7560c2c1a5858c4024feb2351f",
+      "trees/math/dynamics/kanigowski/3809.tree": "d2d6be8a12e2ea52c5e1a2163044676ad43060bc8ba368f27b0571fb22af6539",
+      "trees/math/dynamics/kanigowski/380A.tree": "865857c22113deeb6a5db1c38aae43cd974b875946666fcd3eeb7c045dfb7e35",
+      "trees/math/dynamics/kanigowski/380B.tree": "19159ad60399b27062b4e2e6333b853ff5987fce01407b35a6ba3048c14a12c6",
+      "trees/math/dynamics/kanigowski/380C.tree": "bcf4002da8550badd94815a019cb59b72ccf39cd37bc2095e1c2284c6b3ec342",
+      "trees/math/dynamics/kanigowski/380D.tree": "09c83616b51e129bdcff8cc29de3de036a8d69daf332bc788bc5c961382403c7",
+      "trees/math/dynamics/kanigowski/380E.tree": "8c2ca00e849427f09dbdebb8eaf0329d08046007d9ec99d15780f101c2cf9e67",
+      "trees/math/dynamics/kanigowski/380F.tree": "288bac0177b9a7b65f23380ca74ad0a139a08258b95864c6b69ee0f36a54aaa5",
+      "trees/math/dynamics/kanigowski/380G.tree": "671de4f94de0eea8ac81b077d8a46866d028245ec11b2b1adf730ac3d92b0455",
+      "trees/math/dynamics/kanigowski/380H.tree": "e709ab963ef3cacb7e2f8d015531b0207160d7e8d2f24abdd2b0848d226777fd",
+      "trees/math/dynamics/kanigowski/380I.tree": "8eb349ea6074cb90ed140789fc7d07e373a9348eb69c6ab0038a7be19856ca05",
+      "trees/math/dynamics/kanigowski/380J.tree": "9fe6ae70b4c55a47c2d8c4259d6b22e8d8a3acc3cf93fd9f0b317f3b18d09a99",
+      "trees/math/dynamics/kanigowski/380K.tree": "7d4d7635d935c487ec84aad70f5d8f99f14288afe82492ccf17a78fe6dd8874f",
+      "trees/math/dynamics/kanigowski/380L.tree": "5d3277f72f723066f09827b9d862fcd896a5fa1b56c0ef3a6e95d03227a452ab",
+      "trees/math/dynamics/kanigowski/380M.tree": "a06bfc0fcbd5b750f482f24a093fbafa858bf8dbb707a79734a3c0a4ff89e4e0",
+      "trees/math/dynamics/kanigowski/380N.tree": "4957e89675b54170d446330af7b3b5525a476b541631b811805e5c21bbed0809",
+      "trees/math/dynamics/kanigowski/380O.tree": "6eee09a1523f32ef0ce8df6511b98764df274776d3c95e2878c295094012c2d4",
+      "trees/math/dynamics/kanigowski/380P.tree": "b9be316ce2f1687142c77a2df702f8f427ceaf7bc8d875d3dda9a80f444fa360",
+      "trees/math/dynamics/kanigowski/380Q.tree": "e2721b14153f3d91d77368dcda97c029bcd2d487c3c17c1632e6d2d52df74735",
+      "trees/math/dynamics/kanigowski/380R.tree": "98e747a841e1104ed3a476cdbc6bbf6eef6eac229a8a92b1f656ddbdca5f719b",
+      "trees/math/dynamics/kanigowski/380S.tree": "23cf8a6d9728873733e1c6eb9ad53a2acf40629b9b9d013d24477d1c211d66c2",
+      "trees/math/dynamics/kanigowski/380T.tree": "625baa4e54b3114ca098075657ec8db390cace02c851c0e28d43e4e16ff2a668",
+      "trees/math/dynamics/kanigowski/380U.tree": "2ed74909b4fb1f74d9f5962a12ba282da2bd108feda6c656c81c48b5636438ba",
+      "trees/math/dynamics/kanigowski/380V.tree": "4f5960cc7083504b87d7d2486da0d3762eb34d37153d0c59e000da99caff671a",
+      "trees/math/dynamics/kanigowski/380W.tree": "8f06581c22a4c2804f91bbd8f579601b08fb7a9ce4b742a56470a4fd9643ddb4",
+      "trees/math/dynamics/kanigowski/380X.tree": "44e9461b6016779973a35dba37eef1b73af7e2e1a279904cc7aed7ce916d87d4",
+      "trees/math/dynamics/kanigowski/380Y.tree": "d781df31dd986c90372787e33966c85d4ed0e6cf23222d068976345dc210b35a",
+      "trees/math/dynamics/kanigowski/380Z.tree": "4370a5000be1d536cf5589249dcb7a6fa4c0479b3f0a7dcf47020dad1bd4ec84",
+      "trees/math/dynamics/kanigowski/3810.tree": "dca84ebbb0cdd00b60bd7daf10686f166cb7b824f9b514ca2a6cbe9772e9921f",
+      "trees/math/dynamics/kanigowski/3811.tree": "9d75223fa194d4bc0119ae63baa9eac71f3b682bdbbaa83876d66f6dd904942a",
+      "trees/math/dynamics/kanigowski/3812.tree": "d389dcae91e5f29be3e7e57b0207311968eb9657bb7500d8ff7184cc45636929",
+      "trees/math/dynamics/kanigowski/3813.tree": "b186cada821966b7e74b871afe78e0d6f9e34805166587c74a4cadd05f7b05d7",
+      "trees/math/dynamics/kanigowski/3814.tree": "4b9c2e5f765b236be207bb3e4d83c5c92f9527e584d0b9e5b6c130de7ba6d584",
+      "trees/math/dynamics/kanigowski/3815.tree": "c0b714dfeaac1c86004b65e51d4981a943351a5c05031e171c1a0fb1a8ba579d",
+      "trees/math/dynamics/kanigowski/3816.tree": "6ec53e712796067f6a7ed8ac945e1442889dd84a83a43256571fa1e6ea3a29c3",
+      "trees/math/dynamics/kanigowski/3817.tree": "b98f791a67c66d000712d19e0656656320af5576d38937095fda6c9162266539",
+      "trees/math/dynamics/kanigowski/3818.tree": "651f7b285ef75982188ece1a9cc986d5953badf98630aaf3044373cec3c46d7e",
+      "trees/math/dynamics/kanigowski/3819.tree": "7ff3fa1b782c09551edecd062b518e34622024e539a247fb1be2f122a152073c",
+      "trees/math/dynamics/kanigowski/381A.tree": "909657a8b025591b30049bc305e4dcb46274ccb59bc4249655977854a9c719e5",
+      "trees/math/dynamics/kanigowski/381B.tree": "e0ef1e65c26277608affd4f7229e866fa16e60261b65099ec36634bb48282f3a",
+      "trees/math/dynamics/kanigowski/381C.tree": "679352357f8e352061caed614e5f0612468a5668d667bbffc5365a054f06f360",
+      "trees/math/dynamics/kanigowski/381D.tree": "f6c33a76f476392f25b5a2a69d7350161b7171675ce3d6a9a6f9e8cc7bd4fef4",
+      "trees/math/dynamics/kanigowski/381E.tree": "7d4e505a25700619fa7d093fb1a00ad36e01920b967ef8dd8a80725e13b19d11",
+      "trees/math/dynamics/kanigowski/381F.tree": "9151ad667e3af64a284c1f2b8164395346f4ce96ec114479b03f0ab402ee1f05",
+      "trees/math/dynamics/kanigowski/381G.tree": "5ce894a234349f8fd4142e5e1afc2b324066223451593460fd085d54f54bc3b9",
+      "trees/math/dynamics/kanigowski/381H.tree": "364501a862043e6315fce4fe67138741cf2bda1ff292e59f35cbebc87dbbdbf2",
+      "trees/math/dynamics/kanigowski/381I.tree": "4b7ff1e22d88687d508e37365df894a32df3c1e80e1497f429819e8efbd5c83f",
+      "trees/math/dynamics/kanigowski/381J.tree": "43b848006d8f4e5ae83c536454f136e4fd9b591ebc433a16b48b73ef7d9698bf",
+      "trees/references/icm2026-kanigowski.tree": "801983a404c33a2eb0de3a3f56eadb3886beb5439f08b9db90e99afb73ff4d92"
+    },
+    "build": false,
+    "browser_review": false,
+    "commit": false,
+    "push": false,
+    "publication_boundary": "Ready for parent integration. Parent owns shared registries, global build, rendered/browser checks and publication."
+  }
+}

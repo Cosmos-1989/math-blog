@@ -1,0 +1,11 @@
+\title{高阶衰减估计如何降阶}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§2.2；独立推导}
+
+\p{设 #{f} 满足 [#{k} 阶定量混合](3804)，#{k\geq 3}，其速度 #{\kappa_k} 单调不增。则它满足同速度的 #{k-1} 阶估计。}
+\p{给定前 #{k-1} 个时刻，记最小间隔 #{D}。取 #{u_k=1}，并选 #{n_k} 大于所有已有时刻至少 #{D}；此时全部时刻的最小间隔仍为 #{D}。于是}
+##{\left|\int\prod_{i<k}u_i\circ f^{n_i}\,d\mu -\prod_{i<k}\mu(u_i)\right|
+\leq C_k\|1\|_{C^r}\prod_{i<k}\|u_i\|_{C^r}\,\kappa_k(D).}
+\p{令 #{C_{k-1}=C_k\|1\|_{C^r}} 即可。特别地，高阶指数混合可以降为二阶指数混合。反方向需要新增信息，不能通过给两两相关估计反复相乘得到。}

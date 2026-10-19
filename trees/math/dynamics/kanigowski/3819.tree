@@ -1,0 +1,15 @@
+\title{局部一致剪切要求什么时间与塔量词}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 Definition 6.1}
+
+\p{设 #{(X,d)} 为紧[度量空间](00EK)，#{\mu} 为 Borel 概率测度，#{F_t} 为[保测流](00RV)。局部一致剪切（LUS）是以下塔内匹配条件；用到[流塔与近划分](3817)及[近保测映射](3818)。}
+\p{存在 #{0<a\le 1 /2}、整数 #{d_0\ge 1} 和递增无界序列 #{M_s}，使每个 #{0<\delta<1}、整数 #{k\ge 1} 都有阈值 #{M_{k,\delta}>\delta^{-2}}。对任意 #{M=M_s\ge M_{k,\delta}} 及 #{H\ge M_{k,\delta}}，存在 #{t_{H,M}\ge\max(H,M)}，并有由 #{d_0} 座塔组成的 #{\delta}-近划分 #{\{\mathcal R_\rho\}}，塔高 #{H_\rho\in\lbrack H^{1/2},H^{3/2}\rbrack}。}
+\p{对每组 #{0=t_0<t_1<\cdots<t_k}，若 #{\Delta=\min_i(t_i-t_{i-1})>t_{H,M}}，须存在映射 #{g_m:\bigcup_\rho\mathcal R_\rho\to\bigcup_\rho\mathcal R_\rho}，#{0\le m\le\lfloor\delta^{-1}\rfloor}，满足三项条件。}
+\ol{
+\li{每个 #{g_m} 为 #{\delta}-近保测，且在其正常定义域上 #{d(g_mx,x)\le\delta}。对任意高度至少 #{H^{1/2}} 的塔 #{\mathcal T}，存在高度 #{H^{1/4}} 的子塔 #{\overline{\mathcal T}\subset g_m^{-1}\mathcal T}，使 #{\mu(g_m^{-1}\mathcal T\setminus\overline{\mathcal T})\le d_0\delta}。}
+\li{每座 #{\mathcal R_\rho} 有同高子塔的 #{\delta}-近划分 #{\{\mathcal T_{\rho,j}:1\le j\le k\}}。对所有 #{m,j} 和 #{x\in\mathcal T_{\rho,j}}，有 #{d(F_{t_j}g_mx,F_{t_j+mM^a}x)\le\delta}。}
+\li{对每个固定的 #{i,m,\rho}，存在同高子塔的 #{\delta}-近划分 #{\{R_\rho(i,m,\ell)\}}，指标为整数 #{\ell\ge 0}、#{\ell\delta<M}；在第 #{\ell} 座塔上 #{d(F_{t_i}g_mx,F_{t_i+\ell\delta}x)\le\delta}。}
+}
+\p{第二项只要求在适当子塔上有一个受控的有效剪切时间，不要求所有时间同时以相同速度剪切。第三项给其余时间的剪切加上有限尺度控制。塔的选择先于时间组，匹配映射及子塔细分则允许依赖时间组。}

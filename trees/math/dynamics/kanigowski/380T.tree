@@ -1,0 +1,14 @@
+\title{慢抛物流的三项偏差条件}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.2；Z2210v1 定义 3、命题 4}
+
+\p{设 #{K_t} 是紧光滑[度量流形](00EK) #{X} 上保光滑概率测度 #{\mu} 的流，固定 #{r}。称其满足下列慢抛物条件，使用同一个底测度 #{\mu}：}
+\p{第一，对每个 #{H\in C^r(X)} 且 #{\mu(H)=0}，有 #{T^{-1/2}\int_0^T H(K_tx)\,dt\Longrightarrow 0}，[依分布收敛](00LA)到零等价于依概率趋于零。}
+\p{第二，存在固定 #{d\geq 1,C>0} 及 #{\tau\in C^r(X,\mathbb R^d)}，#{\mu(\tau)=0}，使}
+##{\mu\left\{x:\left\|\int_0^T\tau(K_tx)\,dt\right\|<C(\log T)^2\right\}=o(T^{-5}).}
+\p{第三，存在 #{x_0,C_0>0} 及 #{0<m<11/10}，使充分小的 #{\delta>0} 满足}
+##{K_tB(x_0,\delta)\cap B(x_0,\delta)=\varnothing
+\quad\text{当 }C_0\delta<|t|<(C_0\delta)^{-1/m}.}
+\p{第一项须中心化，第二项允许向量余循环，阈值中的 #{C} 是固定常数。前两项控制[斜积](380S)的高斯极限，第三项用于保证存在正方差观测量。精确来源是[Z2210v1 定义 3、命题 4](icm2026-kanigowski)。}

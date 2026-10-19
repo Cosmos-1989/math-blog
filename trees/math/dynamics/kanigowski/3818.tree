@@ -1,0 +1,15 @@
+\title{近保测映射如何控制有界积分}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 Definition 3.1、Lemma 3.2}
+
+\p{设 #{(X,\mu),(Y,\nu)} 为[概率空间](00Q3)，#{0<\varepsilon<1}。称[可测映射](00Q1) #{g:X\to Y} 为 #{\varepsilon}-近保测，若存在 #{D\subset X,E\subset Y}，其补集测度分别小于 #{\varepsilon}，且对每个可测 #{A\subset E}，}
+##{(1-\varepsilon)\nu(A)\le\mu(D\cap g^{-1}A)\le(1+\varepsilon)\nu(A).}
+\p{对任意有界可测 #{\phi:Y\to\mathbb R}，有}
+##{\left|\int_Y\phi\,d\nu -\int_X\phi\circ g\,d\mu\right|
+\le 5\varepsilon\|\phi\|_\infty.}
+\p{\strong{证明。}定义 #{\eta(A)=\mu(D\cap g^{-1}A)}。在 #{E} 上，#{\eta} 对 #{\nu} 的密度介于 #{1-\varepsilon} 与 #{1+\varepsilon}，先对简单函数、再作有界逼近可得积分差不超过 #{\varepsilon\|\phi\|_\infty}。另一方面，}
+##{\eta(Y\setminus E)=\mu(D)-\eta(E)
+\le 1-(1-\varepsilon)\nu(E)<2\varepsilon.}
+\p{将两积分分别拆为 #{E,Y\setminus E} 与 #{D,X\setminus D}：正常部分误差至多 #{\varepsilon\|\phi\|_\infty}，另外三项分别至多 #{\varepsilon\|\phi\|_\infty}、#{2\varepsilon\|\phi\|_\infty}、#{\varepsilon\|\phi\|_\infty}。相加即得。若额外要求 #{g(D)\subset E}，第三项消失，常数可取 #{3}。}

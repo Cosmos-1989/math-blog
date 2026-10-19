@@ -1,0 +1,13 @@
+\title{整数进入时间的指数尾等价于正指数矩}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§5.2 的进入时间；独立尾和计算}
+
+\p{设 #{\tau} 是[概率空间](00Q3)上取值于非负整数及 #{+\infty} 的随机变量，例如[进入 Pesin 块的时间](330U)。下列条件等价：存在 #{A<\infty}、#{b>0} 使 #{\mathbb P(\tau>n)\le Ae^{-bn}}；存在 #{s>0} 使 #{\mathbb E e^{s\tau}<\infty}。}
+
+\p{\strong{证明。}对任意非负整数 #{k}，有限等比求和给出 #{e^{sk}=1+(e^s-1)\sum_{n=0}^{k-1}e^{sn}}。把 #{k} 换成 #{\tau}，对非负项使用单调收敛，得到扩展实数恒等式}
+##{\mathbb E e^{s\tau}=1+(e^s-1)\sum_{n=0}^\infty e^{sn}\mathbb P(\tau>n).}
+\p{若尾界成立，任取 #{0<s<b}，右侧由收敛几何级数控制，故指数矩有限。反向由 [Markov 不等式](0A02)，#{\mathbb P(\tau>n)\le e^{-sn}\mathbb E e^{s\tau}}。}
+
+\p{两条件都蕴含 #{\tau<\infty} 几乎处处，并控制全部正整数阶矩。例如 #{t^k\le k!s^{-k}e^{st}} 对 #{t\ge 0} 成立，故 #{\mathbb E\tau^k\le k!s^{-k}\mathbb Ee^{s\tau}}。指数尾比仅由复归定理得到的“最终进入”强得多。}

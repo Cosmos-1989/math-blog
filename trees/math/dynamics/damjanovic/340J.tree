@@ -1,0 +1,20 @@
+\title{高秩技巧用交换性消去上同调障碍}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §3.2；显式条件下的完整证明}
+
+\p{设光滑微分同胚 #{f,g:M\to M} 交换，#{f} 有[稠密轨道](0P07)。设 #{\varphi,\psi\in C^\infty(M,\mathbb R)} 满足[余循环兼容式](340G) #{\varphi\circ g-\varphi=\psi\circ f-\psi}。假定存在一族 #{f} [不变分布](340I) #{\mathcal O}，满足下列两条条件：}
+\ol{
+\li{若所有 #{P\in\mathcal O} 都有 #{P(v)=0}，则 #{v=\theta\circ f-\theta+c}，其中 #{\theta} 光滑、#{c} 为常数。}
+\li{每个 #{P\in\mathcal O} 都有整数序列 #{|n_j|\to\infty}，使 #{P(w\circ g^{n_j})\to 0} 对每个光滑 #{w} 成立。}
+}
+\p{则存在同一个光滑函数 #{\theta} 及常数 #{c,d}，使}
+##{\varphi=\theta\circ f-\theta+c,\qquad
+\psi=\theta\circ g-\theta+d.}
+\p{\strong{证明。}把兼容式复合 #{g^k}。因 #{f,g} 交换，不变分布给出}
+##{P(\varphi\circ g^{k+1})-P(\varphi\circ g^k)
+=P((\psi\circ g^k)\circ f)-P(\psi\circ g^k)=0.}
+\p{此式对全部 #{k\in\mathbb Z} 成立，所以 #{P(\varphi\circ g^n)=P(\varphi)}。沿条件二中的序列取极限，得 #{P(\varphi)=0}。由条件一得到第一条方程。}
+\p{把它代回兼容式，并用交换性整理，得到 #{\delta\circ f=\delta}，其中 #{\delta=\psi -\theta\circ g+\theta}。#{\delta} 连续且在 #{f} 的一条稠密轨道上恒定，故处处等于常数 #{d}。}
+\p{难点因系统而异，集中在完备障碍族及其沿另一个方向衰减的建立。仅有两个映射交换，并不保证这两条条件。}

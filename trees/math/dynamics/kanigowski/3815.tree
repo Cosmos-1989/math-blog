@@ -1,0 +1,13 @@
+\title{特殊流的剪切由屋顶和的导数产生}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 §5}
+
+\p{设 #{T:I\to I} 是[区间交换](3814)，#{f:I\to(0,\infty)} 为可积屋顶，在各连续片段上为 #{C^1}。其[特殊流](00S9) #{F_t} 在 #{X^f=\{(x,s):0\le s<f(x)\}} 上竖直运动，越过屋顶后从 #{(Tx,0)} 继续。}
+\p{记 #{S_nf(x)=\sum_{j=0}^{n-1}f(T^jx)}，负指标按[加性余循环](380C)延拓。经过 #{n} 次返回恰好耗时 #{S_nf(x)}，故唯一满足 #{0\le s+t-S_nf(x)<f(T^nx)} 的整数 #{n=N(x,s,t)} 给出}
+##{F_t(x,s)=\bigl(T^nx,\ s+t-S_nf(x)\bigr).}
+\p{固定一条水平小段，使其前 #{n} 次轨道不穿过交换间断点，且返回次数 #{N} 恒等于 #{n}。此段上 #{T^j} 都是平移，逐项求导得}
+##{\frac{d}{dx}S_nf(x)=\sum_{j=0}^{n-1}f'(T^jx),\qquad
+D_xF_t(x,s)=\bigl(1,-S_nf'(x)\bigr).}
+\p{于是两个横向相距 #{\Delta x} 的点在时刻 #{t} 的竖直差，首阶为 #{-S_nf'(x)\Delta x}。要把此计算用于混合，还须控制坏点、返回次数变化及二阶导数造成的畸变；单独的导数增大并不构成混合证明。}

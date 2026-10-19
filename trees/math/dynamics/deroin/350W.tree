@@ -1,0 +1,11 @@
+\title{一次 Jouanolou 结构的椭圆曲线值第一积分}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deroin](icm2026-deroin)，第 4.1 节；独立第一积分与纤维计算}
+
+\p{取[射影对角化](350V)中的 #{a=\omega -1,b=\omega^2-1}。由于 #{a/b\notin\mathbb R}，#{\Lambda=b\mathbb Z-a\mathbb Z} 是 #{\mathbb C} 中的实秩二格子。商 #{E=\mathbb C/\Lambda} 是一维[复环面](0BH5)，带零点后也是[椭圆曲线](0C0P)。在三条不变直线的补集 #{(\mathbb C^*)^2} 上定义}
+##{F(x,y)=\frac{b\log x-a\log y}{2\pi i}\pmod{\Lambda}.}
+\p{两支对数的变化分别为 #{2\pi im,2\pi in}，使上式增加 #{bm-an\in\Lambda}，故 #{F} 是单值全纯映射。沿 #{x'=ax,y'=by} 求导，得到 #{(ba-ab)/(2\pi i)=0}；并且 #{dF=(b\,dx/x-a\,dy/y)/(2\pi i)} 处处非零。因此它是叶状结构的第一积分，并且是全纯次浸没，即微分处处满秩，局部可用 #{F} 作为一个横向复坐标。}
+\p{纤维的复类型可完整算出。在对数覆盖 #{(s,t)\mapsto(e^s,e^t)} 上，#{F} 的一个纤维提升为直线 #{bs-at=c} 的所有格子平移。甲板平移 #{(s,t)\mapsto(s+2\pi im,t+2\pi in)} 在这些直线上传递作用，因为它使左端增加 #{2\pi i(bm-an)}；而保持单条直线的条件 #{bm-an=0} 只能由 #{m=n=0} 满足。故每个纤维同构于一条复直线。}
+\p{更具体地，纤维由 #{z\mapsto(x_0e^{az},y_0e^{bz})} 参数化。若两个参数给出同一点，则 #{a(z-z')=2\pi im,b(z-z')=2\pi in}，非实比值迫使 #{z=z'}。所以纤维是 #{\mathbb C}，不是单位圆盘。对数奇性使此第一积分不能跨过三条不变直线延拓；这也解释了一次模型与高次圆盘纤维模型的差别。}

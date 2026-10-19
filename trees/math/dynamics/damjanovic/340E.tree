@@ -1,0 +1,12 @@
+\title{对角左平移的根方向伸缩率}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §2.2、§4；独立矩阵计算}
+
+\p{令 #{G=\operatorname{SL}_3(\mathbb R)}，#{\Gamma<G} 为[余紧格](2D01)，#{M=G/\Gamma}。对 #{t_1+t_2+t_3=0}，置 #{a(t)=\operatorname{diag}(e^{t_1},e^{t_2},e^{t_3})}。这些元素组成一个[实秩二](2D02)的阿贝尔群，并以左平移作用于 #{M}。}
+\p{在 #{g\Gamma} 处用曲线 #{s\mapsto\exp(sX)g\Gamma} 表示切向量 #{X\in\mathfrak{sl}_3(\mathbb R)}。若将 #{g} 换为 #{g\gamma}，所得曲线不变，故这是商上的全局标架。左乘 #{a} 将该曲线送为 #{\exp(s\,aXa^{-1})ag\Gamma}，所以其微分在此标架中是 #{\operatorname{Ad}_a:X\mapsto aXa^{-1}}。}
+\p{记 #{E_{ij}} 为第 #{(i,j)} 项为一、其余为零的矩阵。逐项相乘得}
+##{\operatorname{Ad}_{a(t)}E_{ij}=e^{t_i-t_j}E_{ij}\quad(i\ne j),}
+\p{而对角迹零矩阵保持不变。因而 #{\chi_{ij}(t)=t_i-t_j} 是各非对角方向的指数，直线 #{t_i=t_j} 是伸缩率改变符号的墙。}
+\p{若 #{t_i} 两两不同，负指数方向强收缩，正指数方向强膨胀，对角方向保持长度。给上述标架选固定内积，便直接验证[部分双曲不等式](3407)。中心正好是对角群的轨道方向。墙上的元素则有额外的零指数方向，中心维数增大。}

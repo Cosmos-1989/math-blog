@@ -1,0 +1,11 @@
+\title{嵌套紧集的单点交等价于直径收缩}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dudko](icm2026-dudko)，式(2.1)背后的紧性事实；独立证明}
+
+\p{设 #{K_1\supset K_2\supset\cdots} 为[度量空间](00EK)中的非空[紧集](00F3)，直径记为 #{\operatorname{diam}K=\sup\{d(x,y):x,y\in K\}}。则交集为单点，当且仅当 #{\operatorname{diam}K_n\to 0}。}
+
+\p{\strong{交集存在。}若交为空，#{K_1\setminus K_n} 是覆盖 #{K_1} 的递增相对开集族。有限子覆盖意味着某个 #{K_n} 为空，矛盾。若直径趋零，交中任意 #{x,y} 满足 #{d(x,y)\leq\operatorname{diam}K_n} 对所有 #{n} 成立，故 #{x=y}。}
+
+\p{反过来，设交为 #{\{x\}}，但直径不趋零。存在 #{\varepsilon>0} 及递增指标 #{n_j}，可选 #{a_j,b_j\in K_{n_j}}，满足 #{d(a_j,b_j)\geq\varepsilon}。在紧度量空间 #{K_1} 中取共同收敛子列，极限为 #{a,b}。对每个固定 #{m}，子列尾部在闭集 #{K_m} 中，故 #{a,b\in\bigcap_mK_m}。于是 #{a=b=x}，与距离至少 #{\varepsilon} 矛盾。}

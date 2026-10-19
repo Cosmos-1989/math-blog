@@ -1,0 +1,16 @@
+\title{Pesin 块控制沿轨道缓慢恶化的双曲估计}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，定义2.1；BCS v1 §2.1}
+
+\p{设 #{f} 是紧[黎曼流形](00NI)上的 #{C^1} [微分同胚](3101)，固定 #{0<\varepsilon<\chi}、#{C\ge 1}。标准 Pesin 块 #{\Lambda(\chi,\varepsilon,C)} 由满足下列条件的点 #{x} 组成：存在[切空间](0A3X)分裂 #{T_xM=E_x\oplus F_x}，对所有 #{k\in\mathbb Z} 和 #{n\ge 0}，}
+##{\max\left\{\left\|Df^n_{f^kx}|_{Df_x^kE_x}\right\|,
+\left\|Df^{-n}_{f^kx}|_{Df_x^kF_x}\right\|\right\}
+\le C e^{\varepsilon|k|}e^{-\chi n}.}
+\p{[算子范数](00M4)取自黎曼度量。零维子空间上的范数取零。#{E_x} 沿正时间收缩，#{F_x} 沿负时间收缩；起点移到 #{f^kx} 后，常数至多乘 #{e^{\varepsilon|k|}}。这与[紧集一致双曲性](3102)的区别，是允许收缩常数随轨道起点缓慢增大。}
+
+\p{\strong{移位估计。}把 #{y=f^jx} 的分裂取为 #{Df_x^jE_x\oplus Df_x^jF_x}。在 #{f^ky=f^{k+j}x} 使用原估计和 #{|k+j|\le|k|+|j|}，便得}
+##{f^j\Lambda(\chi,\varepsilon,C)\subset
+\Lambda(\chi,\varepsilon,Ce^{\varepsilon|j|}).}
+\p{因此 Pesin 块通常并非不变集。标准块是紧集，分裂唯一；紧性采用 BCS 的块引理，[唯一性](3305)可由向量增长直接证明。固定 #{\chi,\varepsilon} 时，块随 #{C} 单调增大，这使其测度成为比较不同不变测度双曲性的共同尺度。}

@@ -1,0 +1,14 @@
+\title{Nevanlinna 叶平均的边界项趋于零}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{Dinh–Sibony，arXiv:1509.07711v2，第 1–2 节；径向权函数的直接计算}
+
+\p{设 #{\phi:\mathbb D\to L\subset S} 是叶子的全纯覆盖，#{S} 为紧曲面，#{\omega} 为 [Kähler 形式](0B8I)。令 #{\mathbb D_r=\{|z|<r\}}，定义}
+##{A_\phi(r)=\int_0^r\frac{dt}{t}\int_{\mathbb D_t}\phi^*\omega,\qquad \tau_r=\frac 1{A_\phi(r)}\phi_*\left(\log^+\frac r{|z|}\right).}
+\p{右端作为[流](2N05)的含义是对测试二形式 #{\eta} 积分 #{A_\phi(r)^{-1}\int_{\mathbb D_r}\log(r/|z|)\phi^*\eta}。恒等式 #{\log^+(r/|z|)=\int_0^r\mathbf 1_{\{|z|<t\}}dt/t} 和 Fubini 定理说明，它也是圆盘积分流的加权平均。因此 #{\tau_r} 正、沿叶，且 #{\langle\tau_r,\omega\rangle=1}。}
+\p{记 #{\nu_r} 为圆周 #{|z|=r} 上角参数的概率测度。对光滑函数 #{f}，极坐标积分与径向分部积分给出 Jensen 恒等式}
+##{\int_{|z|<r}\log\frac r{|z|}\,dd^cf=\frac 1{2\pi}\int_0^{2\pi}f(re^{i\theta})\,d\theta -f(0).}
+\p{具体地，令圆周平均 #{m(s)=(2\pi)^{-1}\int f(se^{i\theta})d\theta}；在规范 #{dd^cf=(2\pi)^{-1}\Delta f\,dx\,dy} 下，左端为 #{\int_0^r\log(r/s)(sm'(s))'ds}。分部积分后为 #{\int_0^rm'(s)ds=m(r)-m(0)}，零点边界项因 #{sm'(s)=O(s^2)} 消失。于是}
+##{dd^c\tau_r=\frac{\phi_*\nu_r-\delta_{\phi(0)}}{A_\phi(r)}.}
+\p{若 #{A_\phi(r)\to\infty}，右端对任意测试函数的绝对值不超过 #{2\|f\|_\infty /A_\phi(r)}，故趋于零。因此任何弱极限都是[沿叶正调和流](350N)。质量函数发散是一个额外条件；在 Dinh–Sibony 所研究的射影叶状结构中，它由所引叶子增长定理保证。}

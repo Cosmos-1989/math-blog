@@ -1,0 +1,12 @@
+\title{拟共形同胚的弱导数定义}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Lyubich 与 Mukherjee，Mirrors v2](icm2026-lomonaco-mukherjee)，附录A.1；实线性畸变与仿射例子直接计算}
+
+\p{设 #{U,V\subset\mathbb C} 为区域，#{h:U\to V} 是保定向[同胚](00E3)。称 #{h} 拟共形，若 #{h\in W^{1,2}_{\mathrm{loc}}(U)}，且存在常数 #{0\leq k<1} 使 #{|h_{\bar z}|\leq k|h_z|} 几乎处处成立。这里局部 [Sobolev 条件](2J0C)表示实部、虚部及各自的一阶弱导数在每个紧子集附近平方可积，几乎处处相对于平面 [Lebesgue 面积](00XV)而言。}
+\p{写 #{z=x+iy}，复弱导数为 #{h_z=(h_x-i h_y)/2}、#{h_{\bar z}=(h_x+i h_y)/2}。Beltrami 系数定义为 #{\mu_h=h_{\bar z}/h_z}；在 #{h_z=0} 的点约定 #{\mu_h=0}，此处不等式同时迫使 #{h_{\bar z}=0}。于是 #{h_{\bar z}=\mu_h h_z}，且 #{\|\mu_h\|_\infty\leq k<1}；本质上确界忽略零面积集合。}
+\p{点态畸变及最大畸变分别为}
+##{K_h(z)=\frac{1+|\mu_h(z)|}{1-|\mu_h(z)|},\qquad K(h)=\operatorname*{ess\,sup}_{z\in U}K_h(z)\leq\frac{1+k}{1-k}.}
+\p{称 #{h} 为 #{K}-拟共形，是指 #{K(h)\leq K}。这些公式描述弱微分所给实线性映射 #{v\mapsto h_zv+h_{\bar z}\bar v} 的伸缩：当 #{|v|=1} 时，最大、最小长度分别为 #{|h_z|+|h_{\bar z}|} 与 #{|h_z|-|h_{\bar z}|}。三角不等式给出两端界，选择 #{v} 的相位使两项同向或反向便取到等号；在 #{h_z\ne 0} 处，两者之比正是 #{K_h}。球面或 [Riemann 曲面](00FR)上的定义在复坐标中使用同一条件。}
+\p{例如取实数 #{0\leq t<1}，令 #{h_t(z)=z+t\bar z}。实坐标下 #{h_t(x+iy)=(1+t)x+i(1-t)y}，两个伸缩因子均为正，因此它是保定向线性同胚；其导数处处为 #{(h_t)_z=1}、#{(h_t)_{\bar z}=t}。故 #{\mu_{h_t}=t}，#{K(h_t)=(1+t)/(1-t)}；单位圆变成半轴长 #{1+t,1-t} 的椭圆。#{t=0} 给出畸变一的恒等映射。}

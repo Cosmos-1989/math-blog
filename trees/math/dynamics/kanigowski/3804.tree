@@ -1,0 +1,12 @@
+\title{定量混合先固定范数再量化观测量}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，定义 2.3}
+
+\p{设 #{M} 为紧光滑流形，#{f:M\to M} 为保持 [Borel 概率测度](00Q3) #{\mu} 的微分同胚，使用固定的[观测量范数](3807)，#{k\geq 2}，#{\kappa_k:\mathbb N_{\geq 1}\to(0,\infty)} 趋于零。称它以速度 #{\kappa_k} 作 #{k} 阶混合，若存在整数 #{r=r_k\geq 1} 和常数 #{C_k>0}，对所有 #{u_i\in C^r(M)} 及所有互异整数时刻 #{n_1=0,n_2,\ldots,n_k}，}
+##{\left|\int_M\prod_{i=1}^ku_i\circ f^{n_i}\,d\mu -\prod_{i=1}^k\mu(u_i)\right|
+\leq C_k\prod_{i=1}^k\|u_i\|_{C^r}\,\kappa_k(\Delta),\qquad
+\Delta=\min_{i\ne j}|n_i-n_j|.}
+\p{#{\kappa_k(n)=e^{-\delta_kn}}、#{\delta_k>0} 时称指数混合；#{\kappa_k(n)=n^{-\delta_k}} 时称多项式混合。#{r_k,C_k,\delta_k} 可依赖 #{k}，不可依赖观测量或时刻。对流，以实数时刻及 #{\Delta\geq 1} 写同一估计；有界时间由常数吸收。}
+\p{这是带统一范数控制的[高阶混合](3802)。仅对每个观测量分别给一个无控制的常数，不能替代此定义。}

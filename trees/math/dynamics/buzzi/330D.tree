@@ -1,0 +1,15 @@
+\title{熵损失与指数损失的分解控制高熵极限}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，定理3.4、3.6；BCS 2022 指数连续性论文}
+
+\p{设 #{f} 为闭曲面的 #{C^\infty} 微分同胚，#{\nu_j} 为遍历不变概率测度，且 #{\nu_j\to\mu} [弱收敛](00TQ)。假设两个极限 #{h_*:=\lim_jh_{\nu_j}(f)>0} 与 #{\lambda_*:=\lim_j\lambda_1(f,\nu_j)>0} 存在。Buzzi–Crovisier–Sarig 的分解定理给出 #{0<\beta\le 1} 及不变概率测度 #{\mu_0,\mu_1}，使}
+##{\mu=(1-\beta)\mu_0+\beta\mu_1,\qquad
+h_*\le\beta h_{\mu_1}(f),\qquad
+\lambda_*=\beta\lambda_1(f,\mu_1).}
+\p{这里 #{h_\nu} 是[测度熵](00S2)，#{\lambda_1} 是[平均最大指数](330B)。该分解是引用的研究定理，证明结合 Pesin 理论和 Yomdin 的光滑复杂度估计。}
+
+\p{\strong{最大熵情形的推导。}若 #{h_{\nu_j}\to h_{\mathrm{top}}(f)=h>0}，先取任意使最大指数收敛的子列；指数有界，故这样的子列总存在。[曲面 Ruelle 界](3308)使其指数极限至少为 #{h}。分解定理和[变分原理](331D)给出 #{h\le\beta h_{\mu_1}\le\beta h}，所以 #{\beta=1}、#{\mu_1=\mu}。每个收敛子列的指数极限均为 #{\lambda_1(f,\mu)}，因此整个最大指数序列收敛。再由[行列式恒等式](330B)，第二个指数也收敛。}
+
+\p{若极限 #{\mu} 遍历，则任意上述分解中有 #{\mu_1=\mu}，从而 #{h_*/\lambda_*\le h_\mu /\lambda_1(f,\mu)}。分解的两个测度可能随时间方向改变；对 #{f^{-1}} 应用定理不必产生同一分解。}

@@ -1,0 +1,15 @@
+\title{平均最大 Lyapunov 指数是测度的上半连续函数}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§3.2；次可加积分的直接证明}
+
+\p{设 #{f} 是闭黎曼流形的 #{C^1} 微分同胚。对不变概率测度 #{\mu}，其[平均最大指数](330B)满足}
+##{\lambda_1(f,\mu)=\inf_{n\ge 1}\frac 1n\int\log\|Df_x^n\|\,d\mu(x).}
+\p{因此 #{\mu\mapsto\lambda_1(f,\mu)} 在[弱拓扑](00TQ)下上半连续。}
+
+\p{\strong{证明。}记 #{a_n=\int\log\|Df^n\|\,d\mu}，#{a_0=0}。链式法则与不变性给出 #{a_{n+m}\le a_n+a_m}。固定 #{q\ge 1}，写 #{n=kq+r}，#{0\le r<q}，则 #{a_n\le k a_q+a_r}。除以 #{n} 并取上极限，余数项趋零，得到 #{\limsup a_n/n\le a_q/q}。再对 #{q} 取下确界；反向的下极限界由下确界定义立即得到。于是 #{\lim a_n/n=\inf a_n/n}。}
+
+\p{取 #{L\ge 1} 同时控制 #{\|Df\|} 与 #{\|Df^{-1}\|}，有 #{L^{-n}\le\|Df_x^n\|\le L^n}。由 [Oseledets 定理](311C)，#{n^{-1}\log\|Df_x^n\|\to\lambda_1(f,x)} 几乎处处；[支配收敛](0I8I)给出上式。最后，对每个固定 #{n}，被积函数连续，所以弱收敛 #{\mu_j\to\mu} 蕴含}
+##{\limsup_j\lambda_1(f,\mu_j)\le\frac 1n\int\log\|Df^n\|\,d\mu.}
+\p{对 #{n} 取下确界即得上半连续性。这个论证只给单侧控制；[高熵极限的双侧连续性](330D)还需要曲面光滑动力学的深层结构。}

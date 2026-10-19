@@ -1,0 +1,12 @@
+\title{二维次共振群是三角多项式群}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Filip](icm2026-filip)，报告§4.1；直接逆映射计算}
+
+\p{设 #{V=\mathbb R^2} 的坐标 #{x,y} 对应权重 #{-\alpha<-\beta<0}，令 #{k=\lfloor\frac{\alpha}{\beta}\rfloor}。由[次共振不等式](370K)，可逆次共振映射恰有形式}
+##{F(x,y)=(a+Ax+P(y),\,b+By),\qquad AB\ne 0,\quad\deg P\le k.}
+\p{可把 #{P} 的常数项并入 #{a}。第一分量中，包含 #{x} 的单项式只能是 #{x}，因为再乘任何变量都会超出权重 #{\alpha}。第二分量的允许项只有常数和 #{y}。这证明了形式的必要性。}
+\p{反过来，先由 #{Y=b+By} 解得 #{y=(Y-b)/B}，再由第一式解出}
+##{x=A^{-1}\bigl(X-a-P((Y-b)/B)\bigr).}
+\p{逆映射仍为同次数界的三角多项式，故仍次共振。导数行列式恒为 #{AB}，所以 #{AB\ne 0} 也正是可逆条件。复合的封闭性还可由[加权次数论证](370L)直接得到。}

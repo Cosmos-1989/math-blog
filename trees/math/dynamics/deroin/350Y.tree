@@ -1,0 +1,12 @@
+\title{叶内吸引临界点的 Hessian 判据}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{Alvarez–Deroin，引理 4.5、定义 4.6；展开二阶导数}
+
+\p{采用[齐次场的沿叶梯度](350X)，设 #{p} 满足 #{\langle p,V(p)\rangle=0}，故 #{f=-\log\|p\|^2} 在该叶上临界。记 #{A=\|V(p)\|^2>0}、#{C=\langle DV_p(V(p)),p\rangle}、#{r^2=\|p\|^2}。沿复时间曲线 #{p'(t)=V(p(t))}，令 #{q(t)=\|p(t)\|^2}，则}
+##{q_t=\langle V,p\rangle,\quad q_{t\bar t}=\|V\|^2,\quad q_{tt}=\langle DV(V),p\rangle.}
+\p{临界处 #{q_t=0}，链式法则给出 #{f_{t\bar t}=-A/r^2,f_{tt}=-C/r^2}。所以二阶 Taylor 项为}
+##{f(t)-f(0)=-\frac{A|t|^2+\operatorname{Re}(Ct^2)}{r^2}+o(|t|^2).}
+\p{把 #{t} 旋转半个 #{C} 的辐角，使 #{Ct^2} 的系数变成 #{|C|}。写新坐标为 #{x+iy}，二次型的两个系数便为 #{-(A+|C|)/r^2} 与 #{-(A-|C|)/r^2}。因此临界点是非退化局部极大，当且仅当 #{A>|C|}；若 #{A<|C|}，它是鞍点；等号时 Hessian 退化。}
+\p{梯度场在临界点的线性化为正定度量矩阵的逆乘 Hessian，故负定 Hessian 恰好给出叶内吸引零点。性质 #{\mathcal P_B} 的精确含义是：齐次无散度代表在非零点不消失，并且每个正则临界点都满足 #{\|V\|^2>|\langle DV(V),p\rangle|}。这是逐点严格不等式，不只是函数在临界点不增加。}

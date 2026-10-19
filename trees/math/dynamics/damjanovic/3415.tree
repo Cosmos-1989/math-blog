@@ -1,0 +1,17 @@
+\title{两个平移的兼容上同调方程有固定导数损失的解}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Damjanović](icm2026-damjanovic)，报告 §3.2、§6；独立 Fourier 证明}
+
+\p{设 #{\alpha,\beta\in\mathbb T^d} 满足参数为 #{(\gamma,\tau)} 的[联合丢番图条件](3414)。令 #{\varphi,\psi:\mathbb T^d\to\mathbb C} 光滑、积分均为零，并满足}
+##{\varphi(x+\beta)-\varphi(x)=\psi(x+\alpha)-\psi(x).}
+\p{则存在唯一零平均光滑函数 #{u}，满足两个[上同调方程](0AP9)}
+##{u(x+\alpha)-u(x)=\varphi(x),\qquad u(x+\beta)-u(x)=\psi(x).}
+\p{对整数 #{s\ge 0}，取 #{C^s} [范数](00M1)为 #{\|v\|_{C^s}=\max_{|\eta|\le s}\sup_x|\partial^\eta v(x)|}，其中 #{\eta} 为非负整数多重指标。记 #{e(t)=e^{2\pi it}}，#{|m|} 为 Euclidean 长度。对任意整数 #{q>\tau+d} 及整数 #{r\ge 0}，有 #{\|u\|_{C^r}\le C_{r,q,\gamma}(\|\varphi\|_{C^{r+q}}+\|\psi\|_{C^{r+q}})}。损失的阶数 #{q} 不依赖 #{r}。}
+\p{\strong{证明。}写 Fourier 系数 #{\widehat v(m)=\int_{\mathbb T^d}v(x)e^{-2\pi im\cdot x}\,dx}，并令 #{a_m=e(m\cdot\alpha)-1}、#{b_m=e(m\cdot\beta)-1}。兼容式给出 #{b_m\widehat\varphi(m)=a_m\widehat\psi(m)}。对 #{m\ne 0}，选择模较大的分母：若 #{|a_m|\ge|b_m|}，令 #{\widehat u(m)=\widehat\varphi(m)/a_m}；否则令 #{\widehat u(m)=\widehat\psi(m)/b_m}。令 #{\widehat u(0)=0}。}
+\p{被选择的分母非零，且兼容式保证另一个方程也成立，包括另一分母为零的情形。因此}
+##{|\widehat u(m)|\le\gamma^{-1}|m|^\tau
+\bigl(|\widehat\varphi(m)|+|\widehat\psi(m)|\bigr).}
+\p{选取 #{|m_j|\ge|m|/\sqrt d} 的坐标，沿该坐标积分分部 #{r+q} 次，周期边界项相消，得到 #{|\widehat v(m)|\le C_{r,q}|m|^{-r-q}\|v\|_{C^{r+q}}}。所以 Fourier 级数的各个 #{r} 阶导数绝对一致收敛，因为 #{\sum_{m\ne 0}|m|^{\tau -q}<\infty}。它们定义光滑 #{u} 并给出上述范数估计。}
+\p{两方程之差的每个 Fourier 系数为零，由[周期函数的 Fourier 唯一性](132B)得逐点等式。若两个零平均解之差为 #{w}，则 #{a_m\widehat w(m)=b_m\widehat w(m)=0}；每个非零频率至少一个分母非零，故所有系数为零，再用唯一性得 #{w=0}。}

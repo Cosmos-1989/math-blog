@@ -74,14 +74,12 @@ export function syncSectionReports({date, packetNames, manifest, scope, crossLan
       previous_targets: ids.filter(id => id !== report.outline)};
     const index = narratives.pages.findIndex(page => page.id === report.outline);
     if (index < 0) narratives.pages.push(narrative); else narratives.pages[index] = narrative;
-    if (entry.planned_integration) {
+    if (!entry.baseline_review && entry.status !== 'selected-branches-integrated') {
       entry.baseline_review = {status: entry.status, note: entry.note, reading_scope: entry.reading_scope};
-      delete entry.planned_integration;
     }
-    if (entry.baseline_review) {
-      entry.note = report.coverage_status;
-      entry.reading_scope = report.reading_scope;
-    }
+    delete entry.planned_integration;
+    if (report.coverage_status) entry.note = report.coverage_status;
+    entry.reading_scope = report.reading_scope;
     Object.assign(entry, {status: 'selected-branches-integrated', outline: report.outline,
       reference: report.reference, existing_record: manifest, on_subject_landing: true});
     delete entry.planned_outline;

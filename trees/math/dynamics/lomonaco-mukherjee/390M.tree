@@ -1,0 +1,11 @@
+\title{三尖内摆线的尖点具有二三次局部形状}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Lomonaco 与 Mukherjee](icm2026-lomonaco-mukherjee)，§4.2；自行 Taylor 展开}
+
+\p{设 #{R(z)=z+1/(2z^2)}，用 #{\gamma(t)=R(e^{it})=e^{it}+\tfrac 12e^{-2it}} 参数化[圆外部像域](390L)的边界。则 #{\gamma'(t)=i(e^{it}-e^{-2it})}，所以奇点恰在 #{e^{3it}=1}，共有三个。}
+\p{在 #{t=0}，逐次计算[导数](0A3G)得 #{\gamma(0)=3/2}、#{\gamma'(0)=0}、#{\gamma''(0)=-3}、#{\gamma'''(0)=3i}。对两个指数函数作 Taylor 展开，得到}
+##{\gamma(t)=\frac 32-\frac 32t^2+\frac i2t^3+O(t^4).}
+\p{实方向的首项为二次，横向的首项为三次，故这是普通半立方尖点。其余两个由三重旋转对称得到。}
+\p{当 #{t\to 0} 时，#{|\gamma(t)-\gamma(-t)|} 为 #{|t|^3} 阶，而经过尖点的短弧直径为 #{t^2} 阶。尖点两侧极近的端点因此夹着相对大得多的一段弧。这种尺度差异解释了为何反射缝合不能一律用具有均匀畸变界的边界坐标处理。}

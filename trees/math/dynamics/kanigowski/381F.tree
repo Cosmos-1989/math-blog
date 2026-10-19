@@ -1,0 +1,17 @@
+\title{horocycle 的横向短弧为何成为长轨道段}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Kanigowski 报告](icm2026-kanigowski)，§4.4；KR2410v1 §3.1}
+
+\p{在紧商 #{X=\Gamma\backslash\mathrm{SL}_2(\mathbb R)} 上固定[黎曼度量](00NI)。令 #{h_t(x)=xu_t} 为 [horocycle 幺幂流](3811)，#{g_s(x)=xa_s}，其中}
+##{u_t=\begin{pmatrix}1&t\\0&1\end{pmatrix},\qquad
+a_s=\begin{pmatrix}e^{s/2}&0\\0&e^{-s/2}\end{pmatrix}.}
+\p{矩阵相乘给出 #{a_su_t=u_{e^st}a_s}，所以 #{h_tg_s=g_sh_{e^st}}。紧性使两个生成向量场有界，存在与 #{x,t,s} 无关的 #{C}，当 #{|s|\le 1} 时}
+##{\begin{aligned}
+d(h_tg_sx,h_{t+st}x)
+&\le d(g_sh_{e^st}x,h_{e^st}x)+d(h_{e^st}x,h_{t+st}x)\\
+&\le C|s|+C|t|\,|e^s-1-s|\\
+&\le C|s|+C'|t|s^2.
+\end{aligned}}
+\p{第二行只沿两个流的短轨道估计长度，不需要假设整个流映射为等距。取 #{t\ge 1}、#{0\le s\le t^{-3/4}}，误差为 #{O(t^{-1/2})}，而目标轨道参数 #{t+st} 横跨长度 #{t^{1/4}}。因此越来越短的横向弧被推进后，可紧贴越来越长的 horocycle 轨道段；这给出剪切的具体几何尺度。}

@@ -1,0 +1,11 @@
+\title{紧空间上的随机平均产生平稳测度}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Filip](icm2026-filip)，§2.1、§6.1；Krylov–Bogolyubov 计算}
+
+\p{设 #{Q} 为非空的[紧](00F3)[度量空间](00EK)，#{f_1,\ldots,f_r} 连续，#{P_*=\sum_i p_i(f_i)_*} 为[平均推前](3701)。固定 #{q\in Q}，令 #{\eta_N=N^{-1}\sum_{n=0}^{N-1}P_*^n\delta_q}。则 #{\eta_N} 的每个弱收敛子列极限都是平稳概率测度。}
+\p{\strong{证明。}[概率测度空间的紧性](00TQ)给出弱收敛子列。消去相邻项得}
+##{P_*\eta_N-\eta_N=\frac{P_*^N\delta_q-\delta_q}{N}.}
+\p{对连续函数 #{\varphi}，右侧积分的绝对值不超过 #{\frac{2\|\varphi\|_\infty}{N}}。又 #{P\varphi=\sum_i p_i\varphi\circ f_i} 连续，所以若 #{\eta_{N_j}\to\eta}，便有 #{\int P\varphi\,d\eta=\int\varphi\,d\eta}，即 #{P_*\eta=\eta}。}
+\p{这里平均的是每个时刻的分布。单条随机轨道的时间平均还涉及额外的几乎必然收敛问题。非紧空间中，概率质量可能逃向无穷远，紧性这一步需要另行保证。}

@@ -1,0 +1,16 @@
+\title{正指数和与平均体积增长}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Buzzi 报告](icm2026-buzzi)，§§3.2、6.1；BCS v1 §3.1}
+
+\p{设 #{f} 是闭 #{d} 维黎曼流形的 #{C^1} 微分同胚，#{\mu} 为不变概率测度。用按重数计的 [Lyapunov 指数](311C)定义平均指数与正指数和}
+##{\lambda_i(f,\mu)=\int\lambda_i(f,x)\,d\mu(x),\qquad
+\Lambda^+(f,\mu)=\int\sum_{i=1}^d\max\{\lambda_i(f,x),0\}\,d\mu(x).}
+\p{非遍历时必须先取每点的正部再积分。例如某个指数在两等质量分量上分别为 #{a} 与 #{-a}，#{a>0}，则该项正部的积分为 #{a/2}，平均值的正部却为零。}
+
+\p{全部指数之和满足体积增长公式}
+##{\sum_{i=1}^d\lambda_i(f,\mu)=\int\log|\det Df_x|\,d\mu(x).}
+\p{\strong{推导。}Oseledets 定理给出几乎处处的极限 #{n^{-1}\log|\det Df_x^n|\to\sum_i\lambda_i(f,x)}。链式法则把左侧写成 #{n^{-1}\sum_{j=0}^{n-1}\log|\det Df_{f^jx}|}。其积分由不变性等于 #{\int\log|\det Df|\,d\mu}。紧性和可逆性使单步对数行列式有界，故[支配收敛](0I8I)允许交换积分与极限。}
+
+\p{右侧是连续函数对测度的积分，因而随[弱收敛](00TQ)连续。对曲面，两个平均指数之和连续；所以知道其中一个收敛，就知道另一个也收敛。一般高维的 #{\Lambda^+} 则不是一个固定连续函数的积分，其连续性是[SPR 判据](330E)中的实质条件。}
