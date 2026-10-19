@@ -1,0 +1,12 @@
+\title{自由积上的奇偶校验移位}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，定理3.9；Austin–Bowen–Shriver，正式版§1}
+
+\p{取整数 #{k>r\ge 3}，令 #{\Gamma=(\mathbb Z/k\mathbb Z)^{*r}} 为 #{r} 个有限[循环群](00GG)的[自由积](010S)，生成元为 #{s_1,\ldots,s_r}。在[配置空间](00SA) #{(\mathbb F_2)^\Gamma} 中定义}
+##{X=\left\{x:\sum_{j=0}^{k-1}x_{gs_i^j}=0\text{ 对所有 }g\in\Gamma,\ 1\le i\le r\right\}.}
+\p{每个条件要求一个循环陪集上的比特总和为偶数，称奇偶校验。该和只依赖有限个坐标，所以其零集闭；它又是线性条件，故 #{X} 是紧阿贝尔群 #{(\mathbb F_2)^\Gamma} 的闭子群。}
+\p{赋予 #{X} 其 [Haar 概率测度](00T1) #{m_X}，并用 #{(T^hx)_g=x_{h^{-1}g}} 作用。若 #{x\in X}，则}
+##{\sum_{j=0}^{k-1}(T^hx)_{gs_i^j}=\sum_{j=0}^{k-1}x_{h^{-1}gs_i^j}=0.}
+\p{因此移位保持 #{X}，且是连续群自同构。[Haar 测度唯一性](0A6M)遂给出 #{T^h_*m_X=m_X}，得到一个标准概率[保测作用](3001)。每个约束只涉及 #{k} 个坐标；有限近似中这些约束正对应低密度奇偶校验码。}

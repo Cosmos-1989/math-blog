@@ -1,0 +1,11 @@
+\title{Rokhlin 塔给出有限循环的弱模拟}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，引理2.6、推论3.2}
+
+\p{设 #{T} 是[无原子](00Q7)[标准概率空间](00Q8)上的[遍历](00RW)[保测自同构](00RS)。则 #{(X,\mu,T)} [弱包含](300A)任意均匀有限循环 #{(\mathbb Z/m\mathbb Z,u_m,j\mapsto j+1)}。}
+\p{使用 Kakutani–Rokhlin 塔引理：对任意高度 #{N} 和 #{\delta>0}，存在可测 #{E}，使 #{E,TE,\ldots,T^{N-1}E} 两两不交，并集测度大于 #{1-\delta}。此引理采用 [Austin 引理2.6](icm2026-austin)所述无原子、遍历假设。}
+\p{\strong{证明。}给定循环上的观测量 #{\beta:\mathbb Z/m\mathbb Z\to A} 和窗口 #{F\subseteq\{-r,\ldots,r\}}，取 #{N} 为 #{m} 的大倍数。在塔第 #{j} 层定义 #{\alpha(T^jx)=\beta(j\bmod m)}；塔外任选字母。若 #{r\le j<N-r}，窗口内的所有观察都留在塔中，且时间模式正是循环在相位 #{j\bmod m} 的模式。}
+\p{各塔层测度相等，全部 #{N} 层的相位分布恰为均匀分布。塔外及两端至多 #{2r} 层的总测度不超过 #{\delta+2r/N}。删去这些坏点只会使有限模式分布的总变差增加这个量，故其概率向量的 #{\ell^1} 距离不超过 #{2\delta+4r/N}。先增大 #{N} 再减小 #{\delta} 即得结论。}
+\p{无原子假设不能删去。例如一点遍历系统的二元观测分布只有两个点质量，无法逼近均匀二周期系统的原点分布。}

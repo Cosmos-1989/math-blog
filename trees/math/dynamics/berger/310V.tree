@@ -1,0 +1,13 @@
+\title{有限种轨道统计使涌现数最终恒定}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 3 节的有限遍历性；独立量化证明}
+
+\p{设 #{f} 保持紧[度量空间](00EK) #{M} 上的概率测度 #{m}，其[经验极限](310T)的分布为 #{\widehat m=\sum_{j=1}^k a_j\delta_{\nu_j}}，其中 #{a_j>0}、#{\sum_j a_j=1}，#{\nu_j} 两两不同。则充分小的 #{\epsilon>0} 下，[涌现数](310U)恰为 #{k}。}
+
+\p{\strong{证明。}选择全部 #{\nu_j} 作中心，误差为零，故 #{\mathcal E_f(\epsilon)\le k}。若 #{k=1}，定义中的最小正整数直接给出等号。若 #{k>1}，令 #{\delta=\min_{i\ne j}W_1(\nu_i,\nu_j)>0}。任一中心不能同时距两个 #{\nu_j} 都小于 #{\delta /3}，否则三角不等式将给出两者距离小于 #{2\delta /3}。}
+
+\p{因此少于 #{k} 个中心时，总有一个 #{\nu_j} 到全部中心的距离至少 #{\delta /3}。平均误差至少 #{(\min_j a_j)\delta /3}。当 #{0<\epsilon<(\min_j a_j)\delta /3} 时，这样的中心数不能满足定义，所以 #{\mathcal E_f(\epsilon)\ge k}。}
+
+\p{特别地，若 #{m} [遍历](00RW)，则 #{\widehat m=\delta_m}，所有正尺度下涌现数均为 1。一个遍历系统可以有很高的轨道熵，却只有一种几乎处处的长期统计。}

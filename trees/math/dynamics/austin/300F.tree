@@ -1,0 +1,11 @@
+\title{Følner 集如何构造 sofic 近似}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，§3.6；补写误差估计}
+
+\p{设可数无限群 #{\Gamma} 有左 [Følner 序列](3005) #{F_n}，取 #{V_n=F_n}。对每个 #{g}，左乘给出部分双射 #{F_n\cap g^{-1}F_n\to F_n\cap gF_n}；两侧补集等势，故可任意补成置换 #{\sigma_n(g)}。令 #{\sigma_n(e)=\operatorname{id}}。所得序列是 [sofic 近似](300E)。}
+\p{\strong{证明乘法律。}固定 #{g,h}。若 #{v,hv,ghv} 都在 #{F_n}，三个相关部分双射均按群乘法运行，于是 #{\sigma_n(g)\sigma_n(h)v=ghv=\sigma_n(gh)v}。坏点只可能落在}
+##{\{v\in F_n:hv\notin F_n\}\cup\{v\in F_n:ghv\notin F_n\}.}
+\p{其基数除以 #{|F_n|} 由 Følner 条件趋于零。固定 #{g\ne e} 时，凡 #{gv\in F_n} 都有 #{\sigma_n(g)v=gv\ne v}，所以固定点比例也趋于零。}
+\p{还须 #{|F_n|\to\infty}。若某子列基数有界，则任取有限个不同 #{g_1,\ldots,g_M}，Følner 条件保证充分后可找到 #{v\in F_n}，使全部 #{g_iv\in F_n}；这些点互不相同，故 #{|F_n|\ge M}，矛盾。此处证明的只是近似作用，任意补全一般不产生精确的群同态。}

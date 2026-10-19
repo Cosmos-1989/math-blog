@@ -1,0 +1,17 @@
+\title{零喷射误差可以用小范数截断消除}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，定理 1.7 证明概要；独立截断估计}
+
+\p{设 #{u:\mathbb R^d\to\mathbb R^m} 为 #{C^\ell} 映射，#{\ell\ge 1}，在原点的所有至多 #{\ell} 阶偏导数均为零。取光滑函数 #{\chi}，在单位球上等于 1，在半径 2 的球外为零。令 #{v_\delta(p)=\chi(p/\delta)u(p)}。则 #{v_\delta=u} 在 #{|p|\le\delta} 上，且 #{\|v_\delta\|_{C^\ell}\to 0}。}
+
+\p{\strong{证明。}[多重指标](0A32) #{\alpha} 表示各坐标的求导次数，#{|\alpha|} 为总阶数。对 #{D^\beta u} 沿线段 #{tp} 反复使用[微积分基本定理](0A3C)和[链式法则](0A34)。因原点处低阶项全部为零，所得积分余项由 #{|p|^{\ell -|\beta|}} 乘以最高阶导数在半径 #{|p|} 内的上界控制；该上界趋于零。故对 #{|\beta|\le\ell}，}
+##{\sup_{|p|\le 2\delta}|D^\beta u(p)|=o(\delta^{\ell -|\beta|}).}
+\p{把一次乘积求导法则重复 #{|\alpha|} 次，每次导数落在两个因子之一，便得到 Leibniz 公式：#{D^\alpha v_\delta} 的每一项是一个固定组合系数乘以}
+##{\delta^{-|\gamma|}(D^\gamma\chi)(p/\delta)
+D^{\alpha -\gamma}u(p)
+=o(\delta^{\ell -|\alpha|}),\qquad\gamma\le\alpha.}
+\p{这些项都支撑在半径 #{2\delta} 内。当 #{|\alpha|\le\ell} 时，上界趋于零，有限求和后即得结论。}
+
+\p{两族点在 #{p=0} 的 #{\ell} 阶喷射相同，意指所有至多 #{\ell} 阶导数相同；其差满足上面的假设。故可用 #{C^\ell} 小扰动使它们在一个参数邻域内精确重合。报告的 parablender 通过喷射空间中的 [blender](310A) 机制制造这种高阶接触。此引理仅证明从零喷射到小扰动的分析步骤；喷射覆盖的动力学构造另有实质内容。参数维数 #{d} 和喷射阶数 #{\ell} 是不同变量。}

@@ -1,0 +1,10 @@
+\title{圆周同胚旋转数的位移证明}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Poincaré 旋转数定理；为[台球报告](icm2026-bialy-mironov)补入的初等证明}
+
+\p{设 #{f} 是圆周 #{\mathbb R/\mathbb Z} 的保向[同胚](00E3)，提升为严格递增映射 #{F:\mathbb R\to\mathbb R}，满足 #{F(x+1)=F(x)+1}。则存在实数 #{\tau(F)}，使对每个 #{x} 都有 #{\lim_{n\to\infty}(F^n(x)-x)/n=\tau(F)}；其模整数类是 #{f} 的旋转数。}
+\p{\strong{位移宽度。}令 #{a_n=\inf_x(F^n(x)-x)}、#{b_n=\sup_x(F^n(x)-x)}。位移函数连续且周期为 1，极值有限。若 #{x\le y\le x+1}，单调性给出 #{0\le F^n(y)-F^n(x)\le 1}；扣除 #{y-x} 得任意两个位移值相差至多 1，故 #{b_n-a_n\le 1}。}
+\p{\strong{次可加性。}由迭代位移分解得 #{a_{n+m}\ge a_n+a_m}、#{b_{n+m}\le b_n+b_m}。固定 #{k}，写 #{n=qk+r}、#{0\le r<k}，于是 #{b_n\le qb_k+b_r}。除以 #{n} 并取上极限，得 #{\limsup b_n/n\le b_k/k}。又每项都至少是 #{\inf_j b_j/j}，所以 #{b_n/n} 收敛到该下确界。同理 #{a_n/n} 收敛到 #{\sup_j a_j/j}。两极限之差由 #{(b_n-a_n)/n\le 1 /n} 趋于零。夹逼即得每个初点的极限。}
+\p{改变提升为 #{F+j} 会把极限加上整数 #{j}；若 #{F^k(x)=x+r}，沿 #{k} 的倍数取极限得 #{\tau(F)=r/k}。对周期为 #{P} 的坐标，先以 #{x=q/P} 归一化即可。}

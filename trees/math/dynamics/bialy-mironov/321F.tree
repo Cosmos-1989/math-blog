@@ -1,0 +1,13 @@
+\title{正曲率凸曲线的平面等周不等式}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{经典等周不等式的支撑函数证明；[台球刚性](icm2026-bialy-mironov)，第 4 节}
+
+\p{设 #{K\subset\mathbb R^2} 是边界 #{C^2} 且曲率处处为正的凸体，周长为 #{P}、面积为 #{A}。则 #{P^2\ge 4\pi A}，等号当且仅当边界是圆。}
+\p{\strong{面积公式。}记[支撑参数式](3201)为 #{\gamma=hn+h't}、#{\gamma'=(h+h'')t}。由 [Stokes 公式](0BAC)应用于 #{(x\,dy-y\,dx)/2}，再作分部积分，得到}
+##{A=\frac 12\int_0^{2\pi}\det(\gamma,\gamma')\,d\psi=\frac 12\int_0^{2\pi}(h^2-(h')^2)\,d\psi,\qquad P=\int_0^{2\pi}h\,d\psi.}
+\p{令 #{\bar h=P/(2\pi)}、#{f=h-\bar h}，则 #{\int f=0}，因此 #{P^2-4\pi A=2\pi\int_0^{2\pi}((f')^2-f^2)\,d\psi}。只需证明零均值周期函数的 Wirtinger 不等式。}
+\p{\strong{Fourier 证明。}采用[Fejér 核逼近](132B)，把周期改为 #{2\pi}，令 #{f_N} 为 #{f} 的 Fejér 平均。其均值仍为零，且 #{f_N\to f}、#{f_N'\to f'} 一致成立：导数可移入卷积，再将同一逼近论证用于连续函数 #{f'}。对三角多项式 #{f_N=\sum_{j=1}^{N-1}(a_{j,N}\cos j\psi+b_{j,N}\sin j\psi)}，直接积分各频率的乘积得}
+##{\int_0^{2\pi}((f_N')^2-f_N^2)\,d\psi=\pi\sum_{j=1}^{N-1}(j^2-1)(a_{j,N}^2+b_{j,N}^2)\ge 0.}
+\p{一致收敛允许取极限，证明所需不等式。若极限为零，对每个固定 #{j\ge 2}，右端非负的该项也必须趋于零；而 Fejér 系数为原系数乘 #{1-j/N}，故 #{f} 的所有高于一次的 Fourier 系数均为零。[Fourier 系数唯一性](132B)给出 #{f=a\cos\psi+b\sin\psi}。于是 #{h=\bar h+a\cos\psi+b\sin\psi}，支撑参数式给出中心为 #{(a,b)}、半径为 #{\bar h} 的圆。圆的 #{P=2\pi R,A=\pi R^2} 验证逆向等号。}

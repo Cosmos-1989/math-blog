@@ -1,0 +1,12 @@
+\title{反对称旋转轨道上的线性台球积分}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Bialy–Mironov](icm2026-bialy-mironov)，公式 (8.1)；守恒量的直接证明}
+
+\p{设实矩阵 #{A} 满足 #{A^{\mathsf T}=-A}，令 #{\gamma(s)=e^{sA}x_0}，且 #{Ax_0\ne 0}。矩阵指数由收敛幂级数 #{e^{sA}=\sum_{j\ge 0}s^jA^j/j!} 定义。该曲线的[线台球](3214)具有速度一次的第一积分}
+##{F(x,v)=\langle Ax,v\rangle.}
+\p{\strong{自由运动。}#{F(x+tv,v)=F(x,v)+t\langle Av,v\rangle=F(x,v)}，因为反对称性使 #{\langle Av,v\rangle=0}。}
+\p{\strong{碰撞。}曲线切向量是 #{\gamma'(s)=A\gamma(s)}。反射条件正是 #{\langle A\gamma(s),v_-\rangle=\langle A\gamma(s),v_+\rangle}，故 #{F} 在每个允许分支上都保持。}
+\p{进一步，#{e^{sA}} 保持内积：其转置乘自身的导数为零，初值为单位矩阵。因此 #{|A\gamma(s)|=|Ax_0|} 为常数。对任意弦方向 #{v=(\gamma(t)-\gamma(s))/|\gamma(t)-\gamma(s)|}，有 #{\langle A\gamma(t),v\rangle -\langle A\gamma(s),v\rangle=0}。于是弦与两端切线的夹角相同，并沿反射保持。}
+\p{在坐标中，若 #{A_{ij}} 表示通常矩阵元素，则 #{F=\sum_{i<j}A_{ij}(x_jv_i-x_iv_j)}。采用相反的角动量约定只改变整体符号，不改变守恒性。}

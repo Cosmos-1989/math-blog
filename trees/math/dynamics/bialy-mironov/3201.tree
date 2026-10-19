@@ -1,0 +1,11 @@
+\title{正曲率平面曲线的支撑函数参数式}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Bialy–Mironov](icm2026-bialy-mironov)，第 4 节；支撑参数式的直接计算}
+
+\p{设 #{K\subset\mathbb R^2} 是有内部的紧[凸集](00TK)，边界 #{\gamma} 是 #{C^2} 简单闭曲线。严格凸指边界不含非退化线段；正曲率是更强的条件。取逆时针弧长参数 #{s}，即 #{|\gamma'(s)|=1}，记单位切向量 #{t=\gamma'}，向外单位法向量 #{n}，则正曲率约定为 #{t'=-\kappa n}、#{\kappa>0}。}
+\p{用外法线角 #{\psi} 作参数，令 #{n(\psi)=(\cos\psi,\sin\psi)}、#{t(\psi)=(-\sin\psi,\cos\psi)}，将[支撑函数](0R02)限制到单位圆，写作 #{h(\psi)=h_K(n(\psi))}。有}
+##{\gamma(\psi)=h(\psi)n(\psi)+h'(\psi)t(\psi),\qquad \frac{ds}{d\psi}=h+h''=\frac 1\kappa.}
+\p{\strong{证明。}由 #{\langle\gamma,n\rangle=h}，微分得 #{h'=\langle\gamma,t\rangle}，因为 #{\gamma'} 与 #{n} 正交。沿正交基 #{n,t} 展开即得第一式。再由 #{n'=t}、#{t'=-n} 得 #{d\gamma /d\psi=(h+h'')t}。切向量转过的角度满足 #{d\psi /ds=\kappa}，给出第二式。正曲率使法线角参数可逆。}
+\p{因此周长为 #{P=\int_0^{2\pi}h(\psi)\,d\psi}。改变原点只给 #{h} 加上 #{a\cos\psi+b\sin\psi}，不改变 #{h+h''} 或周长。}

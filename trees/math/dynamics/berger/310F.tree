@@ -1,0 +1,11 @@
+\title{周期点开集包含共同周期的开集}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，定义 2.9；Baire 论证}
+
+\p{设 #{f:M\to M} 连续，#{M} 为流形。若非空开集 #{U} 的每点都是[周期点](0P02)，称 #{U} 为周期斑。存在非空开集 #{V\subset U} 和整数 #{N\ge 1}，使 #{f^N|_V=\operatorname{id}}。}
+
+\p{\strong{证明。}在 #{U} 的一个坐标图内选闭球 #{K}，使其内部非空且 #{K\subset U}。令 #{K_n=\{x\in K:f^n(x)=x\}}；连续性保证 #{K_n} 在 #{K} 中闭，且 #{K=\bigcup_{n\ge 1}K_n}。由 [Baire 纲定理](0AC5)，某个 #{K_N} 具有非空相对内点。闭球的边界在 #{K} 内没有内点，故这个相对开集与 #{\operatorname{int}K} 相交，给出所需 #{V}。}
+
+\p{在连通实解析流形上，若 #{f} 实解析，#{f^N=\operatorname{id}} 在非空开集成立，则由[解析恒等原理](311B)在整个流形成立。因此，解析范畴不能像光滑范畴那样随意植入一个局部恒等周期斑而保持外部动力学不变。}

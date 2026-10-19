@@ -1,0 +1,17 @@
+\title{二维保面积映射的 Pesin 熵公式}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 2.3 节；Pesin 1977，第 5 节}
+
+\p{设 #{M} 是紧无边界光滑曲面，#{\omega} 是光滑正面积形式，#{m=\omega /\int_M\omega}，且 #{f:M\to M} 是保持 #{\omega} 的 #{C^\infty} 微分同胚。则其 [Kolmogorov–Sinai 熵](00S2)满足}
+##{h_m(f)=\int_M\lambda_{\max}(x)\,dm(x)
+=\lim_{n\to\infty}\frac 1n\int_M\log\|Df_x^n\|\,dm(x).}
+\p{第一等号是 Pesin 熵公式在二维保面积情形的特例，引用 [Pesin 1977](https://doi.org/10.1070/RM1977v032n04ABEH001639)。它不要求 #{m} 遍历，也不要求所有指数非零。测度是光滑面积测度而非任意不变概率测度；正则性和测度条件不能删去。}
+
+\p{\strong{第二等号的推导。}由 [Lyapunov 指数的存在定理](311C)，#{n^{-1}\log\|Df_x^n\|} 几乎处处趋于 #{\lambda_{\max}(x)}。取 #{L\ge 1} 同时控制 #{\|Df\|} 与 #{\|Df^{-1}\|}，则[链式法则](0A34)给出}
+##{L^{-n}\le\|Df_x^n\|\le L^n,\qquad
+\left|\frac 1n\log\|Df_x^n\|\right|\le\log L.}
+\p{下界来自 #{1\le\|Df_{f^n(x)}^{-n}\|\|Df_x^n\|}。由[支配收敛定理](0I8I)可以交换积分与极限。这证明了第二等号，但熵与正指数之间的第一等号仍是 Pesin 定理。}
+
+\p{在高维光滑保体积情形，熵公式积分的是按重数计的全部正指数之和。只有二维保面积情形的指数恰为一对相反数，才可用最大算子范数增长率代替这个和。}

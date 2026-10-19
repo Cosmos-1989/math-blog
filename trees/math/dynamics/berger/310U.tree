@@ -1,0 +1,16 @@
+\title{统计涌现是轨道统计的平均量化数}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，定义 3.1、3.3}
+
+\p{设 #{M} 为紧 Riemann 流形，#{m} 为归一化光滑体积，#{f:M\to M} 连续。在概率测度空间使用 [#{W_1} 距离](310S)。尺度 #{\epsilon>0} 的统计涌现数 #{\mathcal E_f(\epsilon)} 定义为满足下式的最小正整数 #{N}：存在固定概率测度 #{\mu_1,\ldots,\mu_N}，使}
+##{\limsup_{n\to\infty}\int_M
+\min_{1\le i\le N}W_1(e_n(x),\mu_i)\,dm(x)<\epsilon.}
+\p{[经验测度](310R)中的时间趋于无穷，而近似中心 #{\mu_i} 在所有时间共用。积分衡量初始条件的平均误差；这与要求每点误差都小于 #{\epsilon} 不同。}
+
+\p{若 #{f} 保持 #{m}，则[几乎处处极限](310T) #{e(x)} 存在。对固定中心，最小距离是测度变量的 1-Lipschitz 函数，且由 #{\operatorname{diam}M} 控制。由[支配收敛](0I8I)，定义中的条件等价于}
+##{\int_M\min_iW_1(e(x),\mu_i)\,dm(x)<\epsilon.}
+\p{令 #{\widehat m=e_*m}，即 #{\widehat m(B)=m(e^{-1}B)}。它是概率测度空间上的概率测度，称遍历分解的分布。上式恰是用 #{N} 个中心量化 #{\widehat m} 的平均误差。}
+
+\p{称涌现高，如果 #{\limsup_{\epsilon\downarrow 0}\log\mathcal E_f(\epsilon)/|\log\epsilon|=\infty}。定义上涌现阶为 #{\overline o(\mathcal E_f)=\limsup_{\epsilon\downarrow 0}\log\log\max\{e,\mathcal E_f(\epsilon)\}/|\log\epsilon|}；其中截断只处理有界涌现的零阶情形。正阶必为高涌现，高涌现却可能仍为零阶，例如增长律 #{\exp((\log(1/\epsilon))^2)}。}

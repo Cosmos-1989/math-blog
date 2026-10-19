@@ -1,0 +1,11 @@
+\title{圆盘四种台球的 β 函数}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Bialy–Mironov](icm2026-bialy-mironov)，例 6.1；圆盘作用的直接计算}
+
+\p{对半径 #{R>0} 的圆盘，采用[负内作用、正外作用](320U)的约定，令 #{0<\rho<1/2}。四种模型的 β 值为}
+##{\begin{aligned}\beta_{\mathrm{in,len}}(\rho)&=-2R\sin(\pi\rho),&\beta_{\mathrm{out,len}}(\rho)&=2R\tan(\pi\rho),\\\beta_{\mathrm{in,area}}(\rho)&=-\frac{R^2}{2}\sin(2\pi\rho),&\beta_{\mathrm{out,area}}(\rho)&=R^2\tan(\pi\rho).\end{aligned}}
+\p{\strong{内模型。}[圆形经典台球](3208)每次转角为 #{2\pi\rho}，弦长为 #{2R\sin(\pi\rho)}。[圆形辛台球](320L)具有同样恒定转角，相邻半径夹成的三角形面积为 #{R^2\sin(2\pi\rho)/2}。分别取负号得到两个内模型公式。}
+\p{\strong{外模型。}[外面积台球的不变圆](320I)与切点构成直角三角形；若其半转角为 #{\pi\rho}，每条外切边的一半长 #{R\tan(\pi\rho)}，故每边长 #{2R\tan(\pi\rho)}，以圆心为顶点的三角形面积 #{R^2\tan(\pi\rho)}。[外长度作用](320M)则恰为每边长度。}
+\p{\strong{极值的确认。}固定旋转数时，角增量之和固定。内长度函数 #{2R\sin(\delta /2)} 在 #{0<\delta<2\pi} 上严格凹，内面积函数 #{R^2\sin\delta /2} 在正分支 #{0<\delta<\pi} 上严格凹；两个外作用分别为 #{2R\tan(\delta /2)} 和 #{R^2\tan(\delta /2)}，在 #{0<\delta<\pi} 上严格凸。设角增量的均值为 #{\bar\delta}。凸函数的导数递增，积分即得 #{f(\delta)\ge f(\bar\delta)+f'(\bar\delta)(\delta -\bar\delta)}；对各角增量求和，一次项消失，故 #{\sum f(\delta_i)\ge qf(\bar\delta)}。凹函数的不等号相反。因此等角增量分别达到内作用的最大值、外作用的最小值，因而确实给出 β。有理旋转数得到周期公式，无理数由 β 的连续性得到。长度模型随 #{R} 一次缩放，面积模型随 #{R} 二次缩放。内面积的 #{\rho=1/2} 延拓值为零，而外模型在这一端发散。}

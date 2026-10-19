@@ -1,0 +1,15 @@
+\title{淬火 sofic 熵与典型模型计数}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，式(3.9)、问题3.22}
+
+\p{设 #{\nu} 为有限字母表[自由群](00BQ)系统，使用[均匀随机置换模型](300T)，记 #{Z_n(O)=|\mathcal X(\sigma_n,O)|}，并令 #{\log^+t=\log\max\{1,t\}}。其淬火 sofic 熵（quenched sofic entropy）定义为}
+##{h^{\mathrm{quen}}(\nu)=
+\begin{cases}
+\displaystyle\inf_{O\ni\nu}\limsup_{n\to\infty}\frac 1n\mathbb E\log^+Z_n(O),&h^0(\nu)=0,\\
+-\infty,&h^0(\nu)<0.
+\end{cases}}
+\p{这里 #{h^0} 为[零阶熵](300U)。#{\log^+0=0}，故单靠期望对数会把无模型事件记成零；定义中的分支条件专门保留模型存在的指数障碍。#{h^0=0} 时，数值介于 #{0} 与 #{\log|A|}。}
+\p{与[退火熵](300Z)相比，取对数在期望之前，压低了罕见而巨大模型空间的权重。报告借助集中估计说明这个量与高概率计数相联，但并不由 Jensen 不等式单独推出全序列收敛。}
+\p{报告问题3.22询问：在定义中把 #{\limsup_n} 换为 #{\liminf_n}，邻域下确界后的值是否不变？报告指出，即使假定零阶熵为零时模型全序列高概率存在，这个计数极限问题仍未解决。}

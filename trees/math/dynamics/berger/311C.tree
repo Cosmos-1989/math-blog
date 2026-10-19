@@ -1,0 +1,15 @@
+\title{Lyapunov 指数度量切向量的指数增长}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 2.3 节；Oseledets 乘法遍历定理}
+
+\p{设 #{f:M\to M} 是紧 Riemann 流形上的 #{C^1} 微分同胚，#{0\ne v\in T_xM}。沿轨道的 Lyapunov 指数在极限存在时定义为}
+##{\lambda(x,v)=\lim_{n\to\infty}\frac 1n\log\frac{\|Df_x^n v\|}{\|v\|}.}
+\p{这里使用[切丛](0A3X)上的 [Riemann 范数](00NI)。若两套范数以常数 #{C\ge 1} 一致等价，则同一增长率的两个对数商相差至多 #{2\log C/n}，所以指数不依赖紧流形上的光滑度量选择。正指数表示无穷小扰动的指数增长，并不等同于每个有限尺度轨道都指数分离，也不同于[不动点的 Lyapunov 稳定性](0P0W)。}
+
+\p{若 #{\mu} 是 #{f} 不变的 Borel [概率测度](00Q3)，Oseledets 乘法遍历定理给出：在一个不变满测度集上，切空间有可测不变分解 #{T_xM=\bigoplus_i E_i(x)}，每个非零 #{v\in E_i(x)} 的上述极限存在且等于有限数 #{\lambda_i(x)}。最大指数还满足}
+##{\lambda_{\max}(x)=\lim_{n\to\infty}\frac 1n\log\|Df_x^n\|.}
+\p{定理需要 #{\log^+\|Df\|} 和 #{\log^+\|Df^{-1}\|} 可积；在这里，紧性及 #{C^1} 可逆性使它们有界。分解和极限的存在性是引用的深定理，见 [Oseledets 1968](https://www.mathnet.ru/eng/mmo214)，不要求 #{\mu} 遍历；若测度遍历，则各指数及其重数几乎处处为常数。}
+
+\p{若 #{M} 为保面积曲面，可选面积元等于所保面积形式的度量。此时 #{|\det Df_x^n|=1}。按重数计的两个指数之和等于 #{\lim_n n^{-1}\log|\det Df_x^n|=0}，所以它们为 #{\lambda_{\max}(x)} 与 #{-\lambda_{\max}(x)}，且 #{\lambda_{\max}(x)\ge 0}。这一步使用乘法遍历定理的行列式结论，而不是由两个任意切向量的夹角有统一下界推出。}

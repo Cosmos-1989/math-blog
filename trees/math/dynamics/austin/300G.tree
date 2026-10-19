@@ -1,0 +1,11 @@
+\title{有限标记的经验轨道分布}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，§3.7，式(3.3)–(3.4)}
+
+\p{设 #{V} 为非空有限集，#{\sigma:\Gamma\to\operatorname{Sym}(V)} 是置换作用，#{A} 为有限字母表。给标记 #{a\in A^V}，在根 #{v} 处读取轨道名 #{\Pi^\sigma_v(a)_g=a_{\sigma(g^{-1})v}}，定义其经验分布}
+##{P_a^\sigma=\frac 1{|V|}\sum_{v\in V}\delta_{\Pi^\sigma_v(a)}.}
+\p{这是按根计重的平均；不同根读出同一个配置时，其质量必须相加。由[轨道编码](3003)的等变计算，#{S^g\Pi_v^\sigma(a)=\Pi_{\sigma(g)v}^\sigma(a)}，而置换保持均匀根分布，故 #{P_a^\sigma} 移位不变。}
+\p{给定不变测度 #{\nu} 的[弱邻域](00TQ) #{O}，令 #{\mathcal X(\sigma,O)=\{a\in A^V:P_a^\sigma\in O\}}。这是能够重现指定有限统计的标记集合，称模型空间。}
+\p{对于 [sofic 近似](300E)，同一公式仍定义概率测度，但单个 #{P_a^{\sigma_n}} 未必严格不变，故 #{O} 须取在整个 #{\operatorname{Prob}(A^\Gamma)} 中。固定 #{g} 和有限窗口后，近似乘法律使上述等变恒等式只在 #{o(|V_n|)} 个根处失败。因此这些经验分布的任何弱极限仍然移位不变。}

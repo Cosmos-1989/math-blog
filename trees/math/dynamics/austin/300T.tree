@@ -1,0 +1,11 @@
+\title{自由群随机置换的渐近自由性}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，§3.9；逐步暴露置换的计算}
+
+\p{令 #{F_r} 为有限集 #{S} 自由生成的[自由群](00BQ)，#{|S|=r}。独立均匀选取 #{\sigma_n(s)\in\operatorname{Sym}(\{1,\ldots,n\})}，唯一延拓为同态 #{\sigma_n:F_r\to\operatorname{Sym}(n)}。对每个固定非平凡约化词 #{w}，其固定点数的期望为 #{O_w(1)}。}
+\p{\strong{证明。}设词长为 #{\ell}，从一个顶点 #{v} 沿词依次读取随机置换或其逆。直到第一次重复访问旧顶点之前，每次查询的是一个尚未暴露的置换值；约化词排除了立即沿刚走的边原路返回。在给定全部已暴露值后，新像在至少 #{n-\ell} 个未使用候选中均匀分布。每步最多有 #{\ell+1} 个旧顶点，故前 #{\ell} 步中发生碰撞的概率不超过 #{\ell(\ell+1)/(n-\ell)}。}
+\p{若最后回到 #{v}，必发生上述碰撞。所以每个顶点被固定的概率为 #{O_w(1/n)}；对 #{n} 个顶点求和得到期望界。由 [Markov 不等式](0A02)，任意 #{\varepsilon>0} 有}
+##{\mathbb P\left(\frac{|\operatorname{Fix}(\sigma_n(w))|}{n}>\varepsilon\right)\le\frac{C_w}{\varepsilon n}\longrightarrow 0.}
+\p{因此对每个有限词集，渐近自由性以趋于一的概率成立。[固定点判据](0S06)将其译为随机 Schreier 图局部趋于自由群的 Cayley 树。此处得到依概率结论；若要在一个[概率空间](00Q3)中得到几乎必然的近似序列，可先取增长充分快的子列，使有限词集坏事件概率可求和，再作对角选择。}

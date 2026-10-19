@@ -1,0 +1,17 @@
+\title{殆周期熵用体积计量表示模型}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，§3.11 的标量模型说明}
+
+\p{设 #{\pi_n:\Gamma\to U(\mathbb C^{d_n})} 是[酉表示](0H4C)，#{d_n\to\infty}，#{\phi} 是[正定函数](3015)。对 #{\phi} 的逐点收敛邻域 #{O}，令}
+##{\widetilde{\mathcal X}(\pi_n,O)=
+\{v\in\mathbb C^{d_n}:g\mapsto\langle v,\pi_n(g)v\rangle\in O\}.}
+\p{将 #{\mathbb C^{d_n}} 视作实维 #{2d_n} 的空间，取归一化 Lebesgue 体积 #{\operatorname{vol}_{d_n}}，使欧氏单位球体积为 #{1}。相应的标量殆周期熵（almost periodic entropy，AP entropy）为}
+##{\widetilde h_{(\pi_n)}(\phi)=
+\inf_{O\ni\phi}\limsup_n\frac 1{d_n}
+\log\operatorname{vol}_{d_n}\widetilde{\mathcal X}(\pi_n,O).}
+\p{邻域可同时要求单位元处的值有界，故模型集合有界。#{\log 0=-\infty}。这个公式以体积替代 [sofic 熵](300J)中的标记数，既记录表示，也记录被指定的向量类型。}
+\p{一个可直接核算的归一化是缩放律。对 #{t>0}，向量映射 #{v\mapsto\sqrt t\,v} 把类型乘以 #{t}，体积乘以 #{t^{d_n}}；邻域也被一一对应地缩放，故}
+##{\widetilde h_{(\pi_n)}(t\phi)=\widetilde h_{(\pi_n)}(\phi)+\log t.}
+\p{所以该量依赖正定函数的尺度，不能仅凭 GNS 表示酉等价就断言它数值不变。报告指出，一般酉等价下应使用更细的变换公式。}

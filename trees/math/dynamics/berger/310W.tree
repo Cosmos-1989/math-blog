@@ -1,0 +1,17 @@
+\title{恒等映射的涌现只有多项式增长}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 3 节；单位立方体上的量化估计}
+
+\p{在欧氏单位立方体 #{Q=[0,1]^d} 上取 Lebesgue 概率测度与恒等映射 #{f}。此时 #{e(x)=\delta_x}；轨道统计有不可数多种，但[涌现数](310U)满足}
+##{c_d\epsilon^{-d}\le\mathcal E_f(\epsilon)\le C_d\epsilon^{-d}}
+\p{对充分小 #{\epsilon>0} 成立，故涌现阶为零。}
+
+\p{\strong{上界。}将每边分成 #{s} 份，取 #{s^d} 个小立方体中心 #{z_i}，以 #{\delta_{z_i}} 为中心测度。[点质量的距离](310S)等于点间距离，所以每点误差至多 #{\sqrt d/(2s)}。取 #{s>\sqrt d/(2\epsilon)} 即得上界。}
+
+\p{\strong{下界。}任取 #{N} 个概率测度 #{\mu_i}，令 #{z_i=\int_Qy\,d\mu_i(y)\in Q}。从 #{W_1(\delta_x,\mu_i)=\int|x-y|\,d\mu_i(y)} 及三角不等式得 #{W_1(\delta_x,\mu_i)\ge|x-z_i|}。前一等式的下界由 1-Lipschitz 函数 #{y\mapsto|x-y|} 给出，上界由任一 1-Lipschitz 测试函数的差值估计给出。}
+
+\p{令 #{v_d} 为欧氏单位球体积，取 #{r=(2Nv_d)^{-1/d}}。全部 #{B(z_i,r)} 与 #{Q} 的交的总体积至多 #{Nv_dr^d=1/2}，故至少一半的点到全部 #{z_i} 的距离均不小于 #{r}。平均误差至少 #{r/2}，要小于 #{\epsilon} 就须 #{N>c_d\epsilon^{-d}}。}
+
+\p{不可数多个遍历分量并不足以产生高涌现；关键是这些分量在概率测度空间中以怎样的速度彼此分离。}

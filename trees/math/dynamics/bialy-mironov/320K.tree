@@ -1,0 +1,11 @@
+\title{内接面积的变分产生辛台球}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Bialy–Mironov](icm2026-bialy-mironov)，第 3、6 节；面积归一化的直接计算}
+
+\p{在[辛台球正相空间](320J)取生成函数 #{S(s,t)=-\tfrac 12\det(\gamma(s),\gamma(t))}。闭合多边形的总作用 #{\sum_i S(s_i,s_{i+1})} 等于负的有向面积，且其驻点方程是辛台球反射律。}
+\p{\strong{证明。}三角形 #{0,\gamma(s),\gamma(t)} 的有向面积是 #{\tfrac 12\det(\gamma(s),\gamma(t))}，相加后内部辅助边抵消，得到多边形面积。改变原点只增加逐边相消项，闭合总和不变。}
+##{S_2(s,t)+S_1(t,u)=-\tfrac 12\det\bigl(\gamma'(t),\gamma(u)-\gamma(s)\bigr).}
+\p{因此驻点条件恰为前后顶点连线平行于中间点切线。又有 #{S_{12}=-\tfrac 12\det(\gamma'(s),\gamma'(t))<0}，按[生成函数判据](3204)得到正扭转。取 #{p=-S_1}，则 #{dq\wedge dp=\tfrac 12\det(\gamma'(s),\gamma'(t))\,ds\wedge dt} 是不变面积形式。}
+\p{系数 #{1/2} 使周期总作用等于负面积，而非负的双倍面积；正倍数缩放不改变反射映射，却改变 β 函数的数值。}

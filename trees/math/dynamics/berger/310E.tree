@@ -1,0 +1,13 @@
+\title{返回塔把精确周期乘以返回时间}
+\date{2026-10-19}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，定义 2.1 的直接推论}
+
+\p{设 #{F} 是 #{f} 的[原始重整化](310D)，返回时间为 #{N}，坐标映射为 #{\phi}。若 #{x} 是 #{F} 的精确周期 #{q} 点，且 #{x,Fx,\ldots,F^{q-1}x\in U}，则 #{\phi(x)} 在 #{f} 下的精确周期为 #{Nq}。若该周期点双曲，则对应的 #{f} 周期点也双曲。}
+
+\p{\strong{证明。}归纳使用返回等式得 #{f^{jN}\phi(x)=\phi(F^j x)}，从而 #{f^{Nq}\phi(x)=\phi(x)}。若有 #{0<k<Nq} 使 #{f^k\phi(x)=\phi(x)}，写 #{k=aN+b}，#{0\le b<N}。若 #{b>0}，则 #{f^k\phi(x)\in f^b(\phi(U))}，与 #{\phi(x)\in\phi(U)} 矛盾。故 #{b=0}，再由 #{\phi} 单射得 #{F^a x=x}，于是 #{q\mid a}，与 #{k<Nq} 矛盾。}
+
+\p{对 #{f^{Nq}\circ\phi=\phi\circ F^q} 求导，得到}
+##{Df_{\phi(x)}^{Nq}=D\phi_x\,DF_x^q\,(D\phi_x)^{-1}.}
+\p{相似矩阵具有相同特征值，故双曲性以及稳定、不稳定维数保存。不交塔假设在精确周期证明中不可删去：单有迭代共轭只能保证周期整除 #{Nq}。}

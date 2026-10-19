@@ -1,0 +1,16 @@
+\title{保测系统的经验测度几乎处处收敛}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 3 节；Birkhoff 定理的测度值推论}
+
+\p{设 #{X} 为紧[度量空间](00EK)，#{f:X\to X} 为同胚，保持 Borel 概率测度 #{m}。则[经验测度](310R) #{e_n(x)} 对 #{m} 几乎每个 #{x} 弱收敛到概率测度 #{e(x)}。}
+
+\p{\strong{证明。}#{C(X,\mathbb R)} 在一致范数下可分：有限空间网配上有理函数值，作有限个距离函数的下包络，得到可数 Lipschitz 函数族；[Lipschitz 逼近](310S)保证它稠密。取其中一列 #{(\varphi_j)}。对每个 #{j}，由 [Birkhoff 逐点遍历定理](0V17)，#{\int\varphi_j\,de_n(x)} 在一个满测度集收敛。可数交后，有同一个满测度集 #{X_0}，上面全部这些积分同时收敛。}
+
+\p{对 #{x\in X_0} 及任意连续 #{\varphi}，取 #{\|\varphi -\varphi_j\|_\infty<\eta}。任意两个时刻 #{n,k} 有}
+##{\left|\int\varphi\,de_n(x)-\int\varphi\,de_k(x)\right|
+\le 2\eta+\left|\int\varphi_j\,de_n(x)-\int\varphi_j\,de_k(x)\right|.}
+\p{因此所有连续函数积分都有极限。概率测度空间紧，任意两个子列聚点对所有连续函数给出同一积分，故相等；全序列遂收敛。[经验测度聚点不变性](310R)给出 #{f_*e(x)=e(x)}。作为[可测映射](00Q1)的逐点极限，#{e} 在 #{X_0} 上可测。}
+
+\p{若 #{m} [遍历](00RW)，Birkhoff 极限为 #{\int\varphi_j\,dm}，同一逼近论证给出 #{e(x)=m} 几乎处处。一般情形下，遍历分解定理还保证 #{e(x)} 几乎处处为遍历测度；该额外结论采用 Helfter《Scales》第 1.3.3 节引用的标准分解定理。}

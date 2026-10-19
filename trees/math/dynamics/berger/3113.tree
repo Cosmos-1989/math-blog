@@ -1,0 +1,22 @@
+\title{局部涌现阶度量遍历分解的小球质量}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 3.4 节；Helfter《Scales》定理 F；Berger arXiv:2210.03438v2 第 1.2 节}
+
+\p{设 #{f} 保持紧流形上的归一化光滑体积 #{m}。其[经验测度极限](310T)诱导概率分布 #{\widehat m=e_*m}，这是[遍历分解的分布](310U)。在概率测度空间采用 [#{W_1} 距离](310S)。对 #{\widehat m} 几乎每个 #{\nu}，每个以 #{\nu} 为中心的小球都有正质量；定义}
+##{q_\epsilon(\nu)=
+\frac{\log(1+|\log\widehat m(B(\nu,\epsilon))|)}{|\log\epsilon|},
+\qquad
+\overline o_{\mathrm{loc}}(\widehat m,\nu)
+=\limsup_{\epsilon\downarrow 0}q_\epsilon(\nu).}
+\p{加上 1 使质量为 1 的小球也有定义。这个双对数度量的是指数型小质量：若 #{\widehat m(B(\nu,\epsilon))=\exp(-\epsilon^{-s})}，则 #{q_\epsilon(\nu)\to s}；若小球质量与 #{\epsilon^d} 同阶，或 #{\nu} 是正质量原子，则极限为 0。前者由 #{\log(1+\epsilon^{-s})=s|\log\epsilon|+o(1)} 得到，后两者的分子至多为 #{O(\log|\log\epsilon|)} 或有界量。}
+
+\p{积分型点态上局部阶定义为}
+##{L_{\mathrm{pt}}(f)=\int\overline o_{\mathrm{loc}}(\widehat m,\nu)\,d\widehat m(\nu).}
+\p{Helfter 的局部尺度与量化阶比较定理给出 #{\overline o_{\mathrm{loc}}(\widehat m,\nu)\le\overline o(\mathcal E_f)} 几乎处处，故 #{L_{\mathrm{pt}}(f)\le\overline o(\mathcal E_f)}。局部阶比较是所引定理，积分后不等式只是对概率测度积分。}
+
+\p{解析伪旋转文献还使用先平均再取上极限的约定}
+##{L_{\mathrm{av}}(f)=\limsup_{\epsilon\downarrow 0}
+\int q_\epsilon(\nu)\,d\widehat m(\nu).}
+\p{这两个式子交换了积分与上极限，不能无条件视为相同。谈论[解析伪旋转的最大局部阶](3114)时使用 #{L_{\mathrm{av}}}；点态局部尺度的比较则使用 #{L_{\mathrm{pt}}}。例如遍历映射只有一个统计分量，此时 #{\widehat m} 是单原子分布，两种局部阶均为零。}

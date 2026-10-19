@@ -1,0 +1,12 @@
+\title{剩余有限群的渐近自由置换逼近}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，§3.6}
+
+\p{称群 #{\Gamma} 剩余有限，如果每个 #{g\ne e} 都在某个有限群像中非平凡。对可数无限群，这等价于存在有限集合上的[置换作用](00BI) #{\sigma_n:\Gamma\to\operatorname{Sym}(V_n)}，满足 #{|V_n|\to\infty} 且}
+##{\frac{|\{v:\sigma_n(g)v=v\}|}{|V_n|}\longrightarrow 0\quad(g\ne e).}
+\p{这样的序列称渐近自由置换逼近。注意每个 #{\sigma_n} 都是精确同态，而自由性只在极限中要求。}
+\p{\strong{构造。}枚举所有非单位元为 #{g_1,g_2,\ldots}。选有限群同态 #{q_i} 使 #{q_i(g_i)\ne e}，令 #{N_n=\bigcap_{i\le n}\ker q_i}。映射 #{\Gamma /N_n\to\prod_{i\le n}\operatorname{im}q_i} 是单射，故商群有限。取 #{V_n=\Gamma /N_n} 上的左乘作用。固定 #{g_i} 后，#{n\ge i} 时它在商群中非平凡，左乘没有任何固定点。}
+\p{这些指数必须趋于无穷：若沿嵌套[正规子群](00BF)链的指数有界，则指数最终相等，子群链最终常值；交为 #{\{e\}} 会迫使 #{\Gamma} 有限。反向，给定上述逼近及 #{g\ne e}，充分大时 #{\sigma_n(g)} 不是恒等置换，这个有限像便分开 #{g}。}
+\p{有限生成时，[Schreier 图的固定点判据](0S06)将该条件解释为：均匀根周围的任意固定半径标记球，以趋于一的比例与 [Cayley 图](00D4)一致。}

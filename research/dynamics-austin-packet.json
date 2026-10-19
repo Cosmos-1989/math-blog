@@ -1,0 +1,596 @@
+{
+  "date": "2026-10-19",
+  "report": {
+    "speaker": "Tim Austin",
+    "prefix": "30",
+    "outline": "3000",
+    "reference": "icm2026-austin",
+    "title": "Some Recent Developments in Structural Ergodic Theory",
+    "outline_title": "从有限模型看可数群作用的随机结构",
+    "doi": "10.1137/25M1805564",
+    "pages": "3-23",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805564",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805564",
+    "version_role": "Official published ICM2026 Volume 5: Invited Lectures (Sections 9-11), online 2026-07-13. The full official HTML, not an abstract or an arXiv substitute, is the report source. Supplementary sources are versioned separately.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union, published by SIAM under CC BY 4.0, verified in the official HTML publication metadata. Reference page attributes the Chinese adaptation and independent calculations. Seward arXiv distribution permissions are not treated as CC BY or as blanket adaptation licenses.",
+    "question": "Which parts of a countable-group action's random structure are detected by generators, weak containment and finite models, and when do sofic approximation dependence, weak Pinsker obstructions and random-model entropy separate these notions?",
+    "reading_scope": "Read the complete official mathematical HTML: section 1, sections 2.1-2.3 and 3.1-3.11, all displayed formulas, questions and theorem statements, bibliography 1-106, and publication/license metadata. Direct HTML download returned HTTP 403, but the web full-text reader exposed the complete official text. No PDF download, PDF visual inspection or source-TeX reading is claimed. Supplementary sources were read only in the ranges specified below.",
+    "coverage_status": "45 atomic knowledge pages: 3001-300Z and 3010-3019 (base36 order), narrative outline 3000, reference icm2026-austin. All main report branches are represented: classical-to-group coding, generators/Rokhlin entropy, weak containment, finite approximations and sofic entropy, weak Pinsker and LDPC obstruction, random free-group models, zero-order/annealed/quenched entropy and open questions, representation analogy and AP entropy. Secondary constructions and deep proofs remain external as itemized below.",
+    "proof_scope": {
+      "3001": "Defines standard probability-preserving countable-group actions, ergodicity and almost-sure freeness; proves the common-conull-set observation and the nonatomic consequence for free ergodic infinite-group actions.",
+      "3002": "Defines factor, isomorphism and independent direct-product factor; proves that a factor of an ergodic action is ergodic.",
+      "3003": "Computes orbit-code equivariance and the coordinate inversion relating the existing shift convention. Generator/isomorphism equivalence uses the standard measurable inverse theorem as an explicit external input.",
+      "3004": "Complete finite-base proof of almost-sure freeness for every countably infinite group, using infinitely many disjoint pairs and a probability strictly below one. Finite groups are explicitly excluded.",
+      "3005": "Defines the left Folner condition, proves the integer interval example and finite-set union bound. Equivalence with invariant-mean amenability is cited.",
+      "3006": "Defines Rokhlin entropy for ergodic actions using countable generating partitions. Records the invariant-sigma-algebra correction needed outside ergodicity. Amenable equality is cited only for free ergodic actions of countably infinite amenable groups.",
+      "3007": "Seward's prescribed-distribution finite generator theorem is cited with nonatomic, ergodic, countably infinite group and strict entropy inequality assumptions; freeness is not imposed on this theorem. The classical equality case is explained by the Shannon independence equality criterion, not by a new proof of Seward.",
+      "3008": "Cites Seward's Sinai theorem for free ergodic actions of countably infinite groups, including the non-strict base entropy bound. The nonamenable positive-entropy consequence uses the cited factor relation among Bernoulli shifts. Direct-product splitting is kept distinct.",
+      "3009": "Complete calculation of the F2 Ornstein-Weiss edge-difference factor, including equivariance and finite-forest fiber counting giving independent output bits.",
+      "3010": "Cites Bowen's Bethe-Kikuchi formula and the resulting limsup/liminf equality after neighborhood infimum. Proves product additivity directly from finite-block Shannon additivity and the formula.",
+      "3011": "Complete elementary bounds between zero-order and annealed entropy from probability <= expected count <= alphabet-size exponential times probability. The rare-large-count example is explicitly an abstract integer-variable example, not a constructed dynamical system.",
+      "3012": "Defines quenched entropy using expected log-plus model count on the zero-order-zero branch and -infinity otherwise, with log-plus(0)=0. Question 3.22 remains open at the report's scope.",
+      "3013": "Cites the weak Pinsker three-entropy identity in the finite weak-Pinsker-entropy setting; interprets its two terms without interchanging expectation and logarithm.",
+      "3014": "States Question 3.21 for general product actions and derives only the factor-monotonicity upper bound. Joint model events are not assumed independent.",
+      "3015": "Proves positive definiteness by the Gram identity under the existing second-variable-linear convention and checks the Koopman group law/unitarity. GNS existence is cited.",
+      "3016": "Defines scalar AP entropy with normalized Euclidean unit-ball volume and complex dimension in the exponent. Proves the scaling law by a real-volume Jacobian. General determinant and change-of-GNS-vector theorems are not reconstructed.",
+      "3017": "Cites the mollification recovery formula for independent Haar unitary generator models, with normalized volumes as in 3016. The superexponential trace hypothesis and Lemma 7.3 were directly checked; determinant and three-entropy proofs remain external inputs.",
+      "3018": "Complete periodic-measure density proof for every stationary finite-alphabet process, using independently sampled long blocks, variance estimates and cyclic boundary control. No ergodicity assumption or unproved ergodic decomposition step is needed.",
+      "3019": "Cites Hayes's completely-positive-sofic-entropy Koopman embedding theorem in the form stated in report Theorem 3.7(e). Defines the embedding and left regular action explicitly; it is not a Bernoulli classification criterion.",
+      "300A": "Defines weak containment by finite pattern distributions; proves equivalence to closure of observable laws, factor implication and transitivity.",
+      "300B": "Abért-Weiss minimality is cited. Derives weak equivalence of nontrivial finite-base Bernoulli shifts, and distinguishes it from isomorphism using existing classical entropy calculations.",
+      "300C": "Kakutani-Rokhlin tower lemma is cited in the nonatomic ergodic setting. Complete finite-window coloring argument proves weak simulation of a uniform finite cycle, with explicit error bound.",
+      "300D": "Complete construction of a permutation approximation from a separating sequence of finite quotients; proves the converse and growth of quotient sizes for an infinite group. Reuses the existing fixed-point criterion.",
+      "300E": "Defines sofic approximation by almost multiplicativity and asymptotic freeness; proves finite-window injectivity outside a vanishing bad set. Nonsofic existence is left an open problem at the report's scope.",
+      "300F": "Complete partial-translation completion proof that a countably infinite amenable group is sofic, including multiplicative error and size growth.",
+      "300G": "Defines root-weighted empirical distributions and model spaces. Verifies exact invariance for homomorphisms and explains the asymptotically invariant, not exactly invariant, sofic case.",
+      "300H": "Complete diagonal proof that subsequential model realizability is equivalent to infinitely many models in each neighborhood. No all-large-size existence is inferred.",
+      "300I": "Complete finite-window coding and measurable-approximation argument for passage of realizability along weak containment in the exact permutation-approximation setting. It is not presented as a model-count monotonicity theorem or as a full approximate-homomorphism proof.",
+      "300J": "Defines finite-alphabet sofic entropy, proves its -infinity versus nonnegative alternatives and logarithmic alphabet bound. Isomorphism invariance and Kerr-Li's extension beyond finite generators are cited.",
+      "300K": "Complete finite-base Bernoulli model-count calculation: good-root injectivity, independent-label variance bound, typical probability lower bound and multinomial/type upper bound. Zero-probability letters are handled by support restriction for the lower bound.",
+      "300L": "Necessity of equal finite-base entropy follows from the proved Bernoulli formula and cited invariance; sufficiency uses Bowen-Seward's theorem. Countably infinite group is an explicit condition, not extended to finite groups.",
+      "300M": "General sofic <= Rokhlin comparison is cited; the finite-generator counting bound is proved. Gives the two-cycle counterexample to blanket amenable Rokhlin=KS equality, and states the infinite-group free-ergodic zero-Rokhlin question precisely.",
+      "300N": "Complete finite-alphabet product-subadditivity argument, including the -infinity case; additivity when one factor is Bernoulli is cited. No undefined infinity subtraction is used.",
+      "300O": "Defines weak Pinsker splitting using arbitrarily small residual Rokhlin entropy and defines the supremal Bernoulli direct-factor entropy. Distinguishes the sofic variant and ordinary factor maps.",
+      "300P": "Cites the weak Pinsker theorem restricted to free ergodic actions of countably infinite amenable groups. No assertion of a single exactly zero-entropy residual factor is made.",
+      "300Q": "Cites the general approximation-independence lemma for weak Pinsker systems. Expands the elementary squeezing argument only when the chosen Bernoulli bases are finite and residual systems have finite generators; general standard-base and infinite-entropy cases remain cited.",
+      "300R": "Defines the compact binary parity-check shift for the free product of r cyclic groups with k>r>=3, proves closed subgroup and shift invariance, and obtains the Haar-preserving action from existing Haar theory.",
+      "300S": "Cites the LDPC construction's ergodicity, no nontrivial Bernoulli direct factor and non-weak-containment in Bernoulli. Specifies the independent k-uniform permutation law and prechosen high-probability sets: every selection has the stated entropy along every subsequence and completely positive entropy along the selected approximation. Derives failure of weak Pinsker from the cited structure and sofic-Rokhlin inequality.",
+      "300T": "Complete fixed-word collision estimate for independent uniform generator permutations, giving expected fixed points O(1) and freeness in probability. Almost-sure approximation is asserted only after a summable-error subsequence choice.",
+      "300U": "Defines zero-order entropy for finite-alphabet processes and extends it by the infimum over all finite observables. Records range [-infinity,0] and separates existence probability from model number.",
+      "300V": "Proves the weak-containment inequality for zero-order entropy using uniform finite-window model transfer and event inclusion; extends to the observable definition.",
+      "300W": "States Questions 3.15(a,b) as questions. Proves the elementary diagonal subexponential-probability subsequence observation; the concentration upgrade to subsequential high probability is cited, not treated as an elementary implication of zero exponential rate.",
+      "300X": "States Question 3.17 with the infimum over neighborhoods outside limsup/liminf. Does not replace it by a claim of convergence for every fixed neighborhood.",
+      "300Y": "Complete finite-graph identity between a balanced cut's normalized edge count and root statistics, retaining generator edge multiplicities. The convergence statement is cited only conditional on Question 3.15(a).",
+      "300Z": "Defines annealed sofic entropy with expectation before logarithm, finite-generator scope and possible finite negative values. Isomorphism invariance is cited."
+    },
+    "claim_sources": {
+      "3001": "Main section 3.1; existing standard probability and group-action definitions; local conull/atomic calculation.",
+      "3002": "Main sections 2.1 and 3.1; factor and isomorphism conventions; local ergodicity calculation.",
+      "3003": "Main section 2.1 and section 3.4, orbit coding; existing 00SA uses the conjugate right-index shift; local equivariance calculation.",
+      "3004": "Main section 3.4 Bernoulli systems; independent disjoint-pair proof with infinite-group hypothesis.",
+      "3005": "Main section 3.2; existing 0Z0Q invariant-mean definition; local finite-boundary calculations.",
+      "3006": "Main section 3.4; Seward finite-generator v5 introduction and background. The amenable comparison is restricted rather than copied without hypotheses.",
+      "3007": "Seward finite-generator v5 Theorem 1.1 and Corollaries 1.2-1.3; main Theorem 2.3 and section 3.4; existing 0A7B supplies entropy equality tools.",
+      "3008": "Seward Sinai v3 Theorem 1.1 and Corollary 1.4; main section 3.4.",
+      "3009": "Main section 3.4 discussion of the nonamenable Bernoulli factor phenomenon; independent explicit F2 edge-difference proof.",
+      "3010": "Main Theorem 3.19, equation (3.7), Corollary 3.20 and additivity paragraph; local Shannon-product derivation.",
+      "3011": "Independent integer-count inequalities motivated by main sections 3.9-3.10; abstract random-variable illustration.",
+      "3012": "Main section 3.10 quenched formula and Question 3.22; log-plus convention made explicit.",
+      "3013": "Main equation (3.8), after Theorem 3.19 and Corollary 3.20; finite hWP restriction prevents ambiguous infinite arithmetic.",
+      "3014": "Main Question 3.21 and its probabilistic interpretation; elementary consequence of zero-order weak-containment monotonicity.",
+      "3015": "Main sections 3.3 and 3.11; existing 0H4C inner-product convention and 00RZ classical Koopman definition; local Gram and group-law calculations.",
+      "3016": "Main section 3.11; AP determinants v3 sections 9.1-9.2, Definition 9.4 and Remark 9.5; independent scaling calculation.",
+      "3017": "Main equation (3.10); Annealed AP v1 sections 5.3-5.4, 7.1-7.3, Theorem 7.2 and Lemma 7.3. Haar models satisfy the trace hypothesis as stated in section 7.1.",
+      "3018": "Main Lemma 2.5; independent elementary block-concatenation proof for all stationary processes.",
+      "3019": "Main Theorem 3.7(e), citing Hayes; LDPC contrast from main Theorem 3.9 and ABS.",
+      "300A": "Main section 3.5, closures of observable laws; local finite-cylinder formulation and transitivity proof.",
+      "300B": "Main section 3.5, Abért-Weiss result cited there; existing 0A6S for the classical nonisomorphism example.",
+      "300C": "Main Lemma 2.6 and Corollary 3.2; independent explicit tower error estimate; atomless qualification retained.",
+      "300D": "Main section 3.6 and equation (3.1); existing 0S06 fixed-point criterion; local finite-quotient proof.",
+      "300E": "Main section 3.6 and equations (3.1)-(3.2); local finite-window collision estimate.",
+      "300F": "Main section 3.6 Folner construction paragraph; full local partial-permutation argument.",
+      "300G": "Main section 3.7 equations (3.3)-(3.4); 'uniform' is interpreted as uniform roots with multiplicity. General sofic neighborhoods are taken in all probability measures.",
+      "300H": "Main section 3.7 asymptotic-association definition; local diagonal argument.",
+      "300I": "Main Lemma 3.5; complete local proof restricted to exact permutation approximations, matching the report's simplifying convention.",
+      "300J": "Main section 3.7 entropy definition, isomorphism invariance and Kerr-Li extension; local elementary range calculation.",
+      "300K": "Main Theorem 3.7(a); independent finite-base variance and type-count proof.",
+      "300L": "Main section 3.4 equal-entropy sufficiency and Theorem 3.7(a) necessity for sofic groups; infinite-group assumption explicit.",
+      "300M": "Main Theorem 3.7(c,d), section 3.4 and Question 3.1; Seward finite-generator v5 background; independent periodic counterexample.",
+      "300N": "Main Theorem 3.7(f); local finite-alphabet subadditivity proof.",
+      "300O": "Main Definition 3.8 and equation (3.5); sofic-weak-Pinsker option in section 3.8.",
+      "300P": "Main Theorem 2.4, sections 3.2 and 3.8; amenable extension cited through the report.",
+      "300Q": "Main Question 3.10 and Lemma 3.11; local finite-base/finite-generator squeeze.",
+      "300R": "Main Theorem 3.9; ABS LDPC introduction construction and section 1.3; local compact-group calculation.",
+      "300S": "Main Theorem 3.9; ABS LDPC Theorems A-C, Proposition 1.2, Theorem 1.3 and section 1.4. Distinguishes prescribed random approximations from arbitrary approximations and ordinary factor entropy from the stronger inherited entropy in the primary result.",
+      "300T": "Main section 3.9, independent uniform random permutations; local word-exposure estimate and Markov inequality.",
+      "300U": "Main Definitions 3.12 and 3.14.",
+      "300V": "Main Lemma 3.13 with the proof mechanism of Lemma 3.5; local finite-coding event inclusion.",
+      "300W": "Main discussion before and including Questions 3.15(a,b); only the diagonal exponent estimate is proved locally.",
+      "300X": "Main Question 3.17 and following warning about shrinking neighborhoods.",
+      "300Y": "Main section 3.9 bisection formulas and conditional Corollary 3.16; local exact edge-count calculation.",
+      "300Z": "Main Definition 3.18 and its finite-generator scope discussion."
+    },
+    "sources": {
+      "main": {
+        "title": "Some Recent Developments in Structural Ergodic Theory",
+        "version": "Official published ICM2026 Volume 5, pp.3-23, online 2026-07-13",
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1805564",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "read": "Entire official HTML mathematical text, displays, references and publication/license metadata. No abstract-only substitution. PDF and source TeX not inspected.",
+        "reading_scope": "Sections 1, 2.1-2.3 and 3.1-3.11, bibliography 1-106."
+      },
+      "seward_generator": {
+        "title": "Krieger's finite generator theorem for actions of countable groups I",
+        "version": "arXiv:1405.3604v5, 2019-04-07",
+        "url": "https://arxiv.org/html/1405.3604v5",
+        "version_url": "https://arxiv.org/abs/1405.3604v5",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Partial full-text reading of introduction/background through Theorem 1.1 and Corollaries 1.2-1.3, including updated Rokhlin conventions. Full proof not read.",
+        "reading_scope": "Precise nonatomic and ergodic hypotheses, finite/countable prescribed distribution and strict entropy inequality. Only mathematical statements restated; no prose translation."
+      },
+      "seward_sinai": {
+        "title": "Positive entropy actions of countable groups factor onto Bernoulli shifts",
+        "version": "arXiv:1804.05269v3, 2019-05-21",
+        "url": "https://arxiv.org/html/1804.05269v3",
+        "version_url": "https://arxiv.org/abs/1804.05269v3",
+        "license": "arXiv perpetual non-exclusive distribution license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "read": "Partial full-text reading of introduction through Theorems/Corollaries 1.1-1.6. Full proof not read.",
+        "reading_scope": "Free ergodic countably infinite group, base-entropy bound, nonamenable positive-Rokhlin consequence. Mathematical statements restated without reproducing prose."
+      },
+      "abs_ldpc": {
+        "title": "Algebraic dynamical systems from LDPC codes satisfy a strong negation of the weak Pinsker property",
+        "version": "Official JIMJ 24(6) (2025), 2317-2385; online 2025-06-09",
+        "url": "https://doi.org/10.1017/S147474802510100X",
+        "version_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CBB75DEBACA1D2C9C1DE547B840AA074/S147474802510100Xa.pdf/algebraic-dynamical-systems-from-ldpc-codes-satisfy-a-strong-negation-of-the-weak-pinsker-property.pdf",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "copyright": "The Authors, 2025.",
+        "read": "Partial official full-text/PDF text reading: introductory construction at p.2319 and sections 1.3-1.4 at pp.2323-2325, Theorems A-C, Proposition 1.2 and Theorem 1.3. The full 69-page proof was not read.",
+        "reading_scope": "k>r>=3; k-uniform generator permutations; high-probability sets chosen before sequences and factors; entropy stable under subsequences; stronger inherited-entropy assertion distinguished from ordinary positive factor entropy."
+      },
+      "ap_determinants": {
+        "title": "Entropy and determinants for unitary representations",
+        "version": "arXiv:2412.13751v3, 2025-07-15; not the later v4",
+        "url": "https://arxiv.org/html/2412.13751v3",
+        "version_url": "https://arxiv.org/abs/2412.13751v3",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "read": "Partial full-text reading of sections 9.1-9.2, including Definition 9.4 and Remark 9.5, volume normalization and nearby type-model argument. Full paper not read.",
+        "reading_scope": "Scalar normalized volume definition; complex dimension d and unit-ball volume pi^d/d!; dependence on chosen positive definite type."
+      },
+      "ap_annealed": {
+        "title": "Annealed almost periodic entropy",
+        "version": "arXiv:2507.08909v1, 2025-07-11; theorem numbering pinned to this version",
+        "url": "https://arxiv.org/html/2507.08909v1",
+        "version_url": "https://arxiv.org/abs/2507.08909v1",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "read": "Partial full-text reading of sections 5.3-5.4 (Definitions 5.5 and 5.9), section 7.1's superexponential trace hypothesis, Theorem 7.2 and its displayed proof, and Lemma 7.3 with proof. Earlier determinant and representation-theoretic machinery not read in full.",
+        "reading_scope": "Random Haar-generator model, normalized expected volume and existence probability; recovery by delta_e+t phi. General CP-map and matrix-valued theory not imported."
+      }
+    },
+    "remaining_branches": [
+      "Deep proofs remain cited: Ornstein/Bowen-Seward classification, prescribed generators and Sinai factors, Abért-Weiss, entropy invariance and Kerr-Li extension, weak Pinsker, LDPC clustering/CPE, Hayes spectral embedding, Bowen Bethe-Kikuchi formula, AP determinant and three-entropy machinery.",
+      "Gaussian functor and Connes-Feldman-Weiss/orbit-equivalence proof machinery mentioned by the report are not given new atomic constructions; these are secondary supporting branches, not claimed reconstructed.",
+      "General nonergodic conditional Rokhlin entropy, full standard-base/infinite-entropy extensions, and the full sofic approximate-homomorphism version of the finite-window transfer proof are not expanded. Local proof scopes are stated page by page.",
+      "LDPC stronger inherited entropy and quantitative approximate-direct-factorization bound are not separately developed. Ordinary completely positive entropy and no exact nontrivial Bernoulli direct factor are the integrated consequences.",
+      "Planted random models, surface-group random permutation models and general matrix-valued AP/CP-map theory remain unexpanded secondary directions.",
+      "Questions 3.1, 3.10, 3.15(a,b), 3.17, 3.21 and 3.22 remain questions at the report's scope; Corollary 3.16 remains conditional. Existence of nonsofic groups is not inferred from the Aldous-Lyons developments."
+    ],
+    "normalization_notes": [
+      "Left shift S^g(z)_h=z_(g^-1 h) and orbit code alpha(T^(h^-1)x). Existing 00SA has the conjugate right-index convention; coordinate inversion J is calculated in 3003 rather than changing the existing page.",
+      "All logarithms are natural. Bernoulli entropy formula and classification are restricted to countably infinite groups where required. Nontrivial finite-group Bernoulli actions need not be almost surely free.",
+      "Rokhlin entropy uses countable generating partitions. Finite generators are conclusions requiring strict bounds, not tacit assumptions on every action. Nonergodic definitions require conditioning on the invariant sigma algebra.",
+      "Rokhlin=KS amenable comparison is restricted to free ergodic actions of countably infinite amenable groups. The finite periodic two-cycle example demonstrates why an unrestricted blanket equality is false.",
+      "Empirical distributions average over roots with multiplicity. For general sofic approximations neighborhoods lie in all probability measures; empirical distributions need not themselves be exactly invariant.",
+      "Finite-alphabet deterministic sofic entropy is -infinity or nonnegative. Nonnegative entropy only ensures arbitrarily late models in every shrinking neighborhood, not all-large-n realizability.",
+      "Annealed entropy uses log E(model count), not E log(model count), and may be finite negative. Quenched entropy uses log-plus with value zero at zero and an explicit zero-order branch condition.",
+      "The LDPC approximation law is independent uniform k-cycle-only permutations for k dividing n; the prechosen high-probability sets quantify uniformly over subsequent choices. It is not a theorem for arbitrary sofic approximations.",
+      "The entropy limit questions compare inf_O limsup and inf_O liminf, not convergence for each fixed neighborhood.",
+      "AP volume normalization makes the complex d-dimensional unit ball have volume one; the speed is d, not real dimension 2d. The inner product is linear in the second variable, so the type is <v,pi(g)v>.",
+      "Terminology is 殆周期熵 (almost periodic entropy, AP entropy), as requested in parent review. No externally verified Banana Space terminology entry is claimed.",
+      "Existing 可和 terminology is retained for amenability; sofic, Rokhlin, Bernoulli, annealed/退火 and quenched/淬火 remain consistent with the local note vocabulary."
+    ]
+  },
+  "prerequisites": {
+    "3001": [
+      "00Q8",
+      "00BI",
+      "00RS",
+      "00RW",
+      "00Q7",
+      "00Q1"
+    ],
+    "3002": [
+      "3001",
+      "00RT",
+      "00QB",
+      "00Q1"
+    ],
+    "3003": [
+      "3001",
+      "3002",
+      "00SA",
+      "00Q0",
+      "0A6J",
+      "00Q3"
+    ],
+    "3004": [
+      "0A6B",
+      "00S3",
+      "3001"
+    ],
+    "3005": [
+      "0Z0Q"
+    ],
+    "3006": [
+      "3001",
+      "3003",
+      "00S1",
+      "00S2",
+      "00Q3"
+    ],
+    "3007": [
+      "00Q7",
+      "3001",
+      "3003",
+      "3006",
+      "0A7B",
+      "00S2",
+      "00S3",
+      "00Q3"
+    ],
+    "3008": [
+      "3001",
+      "3002",
+      "3006",
+      "3004",
+      "0Z0Q",
+      "00Q3"
+    ],
+    "3009": [
+      "00BQ",
+      "3004",
+      "3002",
+      "00S1",
+      "0118"
+    ],
+    "3010": [
+      "300Z",
+      "00S1"
+    ],
+    "3011": [
+      "300T",
+      "300U",
+      "300Z"
+    ],
+    "3012": [
+      "300T",
+      "300U",
+      "300Z",
+      "00BQ"
+    ],
+    "3013": [
+      "300O",
+      "300Z",
+      "300U",
+      "300Q",
+      "00BQ"
+    ],
+    "3014": [
+      "300U",
+      "3002",
+      "300V",
+      "00BQ"
+    ],
+    "3015": [
+      "0H4C",
+      "3001",
+      "00RZ",
+      "3003",
+      "00D8"
+    ],
+    "3016": [
+      "0H4C",
+      "3015",
+      "300J"
+    ],
+    "3017": [
+      "0GK9",
+      "3015",
+      "3016",
+      "00BQ"
+    ],
+    "3018": [
+      "00TQ",
+      "300G",
+      "00L2",
+      "0A02"
+    ],
+    "3019": [
+      "3001",
+      "3002",
+      "300E",
+      "300J",
+      "3015",
+      "0GSF",
+      "00Q3",
+      "00EV"
+    ],
+    "300A": [
+      "3001",
+      "3003",
+      "00TQ",
+      "00SA"
+    ],
+    "300B": [
+      "3001",
+      "300A",
+      "3004",
+      "0A6S",
+      "00RT"
+    ],
+    "300C": [
+      "00Q7",
+      "00Q8",
+      "00RW",
+      "300A",
+      "00RS"
+    ],
+    "300D": [
+      "00BI",
+      "0S06",
+      "00BF",
+      "00D4"
+    ],
+    "300E": [
+      "300D"
+    ],
+    "300F": [
+      "3005",
+      "300E"
+    ],
+    "300G": [
+      "3003",
+      "00TQ",
+      "300E"
+    ],
+    "300H": [
+      "300E",
+      "300G",
+      "00E8"
+    ],
+    "300I": [
+      "300D",
+      "300H",
+      "300A"
+    ],
+    "300J": [
+      "300E",
+      "300G",
+      "300H",
+      "3003"
+    ],
+    "300K": [
+      "300E",
+      "3004",
+      "300J",
+      "00L2",
+      "0A02",
+      "00S1"
+    ],
+    "300L": [
+      "3004",
+      "3002",
+      "300J",
+      "300K",
+      "00S4",
+      "00Q3"
+    ],
+    "300M": [
+      "3001",
+      "300J",
+      "3006",
+      "300K",
+      "00BQ"
+    ],
+    "300N": [
+      "300E",
+      "300J",
+      "3004"
+    ],
+    "300O": [
+      "3001",
+      "3002",
+      "3006",
+      "300E",
+      "00Q3"
+    ],
+    "300P": [
+      "0Z0Q",
+      "3001",
+      "300O",
+      "3005",
+      "00Q3"
+    ],
+    "300Q": [
+      "300O",
+      "300N",
+      "300M"
+    ],
+    "300R": [
+      "010S",
+      "00SA",
+      "00T1",
+      "0A6M",
+      "3001",
+      "00GG"
+    ],
+    "300S": [
+      "300R",
+      "300A",
+      "300M",
+      "300O"
+    ],
+    "300T": [
+      "00BQ",
+      "0A02",
+      "0S06",
+      "00Q3"
+    ],
+    "300U": [
+      "300T",
+      "00TQ",
+      "300G",
+      "3003",
+      "00BQ"
+    ],
+    "300V": [
+      "300A",
+      "300U",
+      "300I",
+      "00BQ"
+    ],
+    "300W": [
+      "300U",
+      "00BQ",
+      "00E8"
+    ],
+    "300X": [
+      "300T",
+      "300U",
+      "300W",
+      "00BQ"
+    ],
+    "300Y": [
+      "00D5",
+      "300G",
+      "300W"
+    ],
+    "300Z": [
+      "300T",
+      "300G",
+      "300J",
+      "00BQ"
+    ]
+  },
+  "reused_pages": {
+    "007B": "Existing measured-system classification outline, linked only as narrative context in 3000, not registered as a prerequisite.",
+    "00S1": "Shannon partition entropy reused for all finite entropy calculations.",
+    "00S2": "KS entropy reused, not duplicated for countable-group applications.",
+    "00S3": "Classical Bernoulli shift definition reused; 3004 only extends the group setting and proves the new freeness fact.",
+    "00S4": "Finite-entropy classical Bernoulli classification reused as the baseline.",
+    "00RZ": "Classical Koopman operator reused; inverse convention for the group representation is explained in 3015.",
+    "00RW": "Ergodicity definition reused.",
+    "0A6J": "Generating-partition theorem reused; 3003 treats group coding rather than creating a duplicate.",
+    "0A6S": "Classical Bernoulli entropy calculation reused.",
+    "0A7B": "Partition entropy subadditivity and independence equality tools reused.",
+    "00Q8": "Standard probability spaces.",
+    "00Q7": "Atomless probability spaces.",
+    "00Q0": "Sigma algebra definition.",
+    "00RS": "Invertible measure-preserving transformations.",
+    "00RT": "Measure-theoretic conjugacy.",
+    "00QB": "Product probability spaces.",
+    "0A6B": "Countable product probability measure.",
+    "00BI": "Group action definition.",
+    "00BQ": "Free groups.",
+    "0Z0Q": "Amenability via an invariant mean, existing 可和 terminology.",
+    "00TQ": "Weak convergence of probability measures and cylinder-test context.",
+    "00SA": "Shift spaces and cylinder sets; coordinate convention explicitly conjugated.",
+    "0S06": "Fixed-point criterion for local Schreier convergence, not reproduced as a new general foundation.",
+    "00D5": "Schreier graph definition.",
+    "00L2": "Variance.",
+    "0A02": "Markov inequality.",
+    "010S": "Free products.",
+    "00T1": "Haar measure.",
+    "0A6M": "Haar existence and uniqueness.",
+    "0H4C": "Unitary representations and the inner-product convention.",
+    "0GSF": "Left regular representation formula, used narrowly.",
+    "0GK9": "Haar random unitary matrices.",
+    "0118": "Existing foundation for 连通分支; now linked directly at first use.",
+    "00Q1": "Existing foundation for 可测映射; now linked directly at first use.",
+    "00Q3": "Existing foundation for 概率空间; now linked directly at first use.",
+    "00BF": "Existing foundation for 正规子群; now linked directly at first use.",
+    "00D4": "Existing foundation for Cayley 图; now linked directly at first use.",
+    "00E8": "Existing foundation for 邻域基; now linked directly at first use.",
+    "00GG": "Existing foundation for 循环群; now linked directly at first use.",
+    "00D8": "Existing foundation for 线性张成; now linked directly at first use.",
+    "00EV": "Existing foundation for 等距映射; now linked directly at first use."
+  },
+  "terminology_evidence": {
+    "殆周期熵": "Parent terminology review requested the standard rendering of almost periodic entropy. English original retained at first definition; no verified external terminology-entry claim.",
+    "可和": "Existing 0Z0Q title and body determine the repository's amenability translation.",
+    "弱包含": "Finite-statistics meaning defined in 300A; ordinary factors and independent direct factors explicitly separated."
+  },
+  "source_errata": [
+    "Main Corollary 3.3 omits an explicit atomless restriction in its compressed wording. The notes use the atomless ergodic setting supplied by Corollary 3.2 and do not claim that finite ergodic cycles are all weakly equivalent.",
+    "Main section 3.4's compressed Rokhlin=KS amenable phrase is restricted in the notes to free ergodic infinite amenable actions. Finite periodic actions show why the restriction matters.",
+    "Main Theorem 2.3's finite-generator discussion is used with the standard nonatomic setting from Seward's precise theorem, not as a prescribed-generator assertion for arbitrary finite probability spaces."
+  ],
+  "suggested_old_note_updates": [],
+  "handoff": {
+    "owned_files": [
+      "trees/math/dynamics/austin/3000.tree",
+      "trees/math/dynamics/austin/3001.tree",
+      "trees/math/dynamics/austin/3002.tree",
+      "trees/math/dynamics/austin/3003.tree",
+      "trees/math/dynamics/austin/3004.tree",
+      "trees/math/dynamics/austin/3005.tree",
+      "trees/math/dynamics/austin/3006.tree",
+      "trees/math/dynamics/austin/3007.tree",
+      "trees/math/dynamics/austin/3008.tree",
+      "trees/math/dynamics/austin/3009.tree",
+      "trees/math/dynamics/austin/3010.tree",
+      "trees/math/dynamics/austin/3011.tree",
+      "trees/math/dynamics/austin/3012.tree",
+      "trees/math/dynamics/austin/3013.tree",
+      "trees/math/dynamics/austin/3014.tree",
+      "trees/math/dynamics/austin/3015.tree",
+      "trees/math/dynamics/austin/3016.tree",
+      "trees/math/dynamics/austin/3017.tree",
+      "trees/math/dynamics/austin/3018.tree",
+      "trees/math/dynamics/austin/3019.tree",
+      "trees/math/dynamics/austin/300A.tree",
+      "trees/math/dynamics/austin/300B.tree",
+      "trees/math/dynamics/austin/300C.tree",
+      "trees/math/dynamics/austin/300D.tree",
+      "trees/math/dynamics/austin/300E.tree",
+      "trees/math/dynamics/austin/300F.tree",
+      "trees/math/dynamics/austin/300G.tree",
+      "trees/math/dynamics/austin/300H.tree",
+      "trees/math/dynamics/austin/300I.tree",
+      "trees/math/dynamics/austin/300J.tree",
+      "trees/math/dynamics/austin/300K.tree",
+      "trees/math/dynamics/austin/300L.tree",
+      "trees/math/dynamics/austin/300M.tree",
+      "trees/math/dynamics/austin/300N.tree",
+      "trees/math/dynamics/austin/300O.tree",
+      "trees/math/dynamics/austin/300P.tree",
+      "trees/math/dynamics/austin/300Q.tree",
+      "trees/math/dynamics/austin/300R.tree",
+      "trees/math/dynamics/austin/300S.tree",
+      "trees/math/dynamics/austin/300T.tree",
+      "trees/math/dynamics/austin/300U.tree",
+      "trees/math/dynamics/austin/300V.tree",
+      "trees/math/dynamics/austin/300W.tree",
+      "trees/math/dynamics/austin/300X.tree",
+      "trees/math/dynamics/austin/300Y.tree",
+      "trees/math/dynamics/austin/300Z.tree",
+      "trees/references/icm2026-austin.tree",
+      "research/dynamics-austin-packet.json"
+    ],
+    "do_not_modify": "Shared registries, existing pages, subject page, scripts, Git, build output and publication are owned by the parent.",
+    "integration": "Parent owns global deduplication, normalization, prerequisite registration, whole-site build and browser checks. Outline links all 45 new knowledge IDs organically.",
+    "review": "Parent reports independent review of all current 45 atomic pages. This is editorial handoff context, not a substitute for source/proof boundaries."
+  },
+  "validation": {
+    "status": "Own-file source checks passed: 45 knowledge pages, one outline, one reference; 45 prerequisite/proof_scope/claim_sources entries; 219 body-link occurrences checked; all 45 knowledge pages directly reachable from outline; no missing targets, exact-title collisions, owned prerequisite cycles, missing metadata, forbidden raw links or forbidden math spacing syntax. Title comparison used 5842 current tree files. This is a structural check, not a new proof review.",
+    "rendering": "Not performed in this scoped task.",
+    "katex": "649 math blocks parsed successfully using existing small4/assets/vendor/katex/katex.min.js read-only, zero errors. Root require.resolve('katex') was unavailable; no dependency installation, output write or whole build attempted."
+  }
+}

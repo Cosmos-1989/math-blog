@@ -1,0 +1,14 @@
+\title{余第一纲集可以具有零测度}
+\date{2026-10-19}
+\taxon{Example}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 1.2 节；显式构造}
+
+\p{在 #{[0,1]} 内存在稠密的 [#{G_\delta} 集](00QG)，其 [Lebesgue 测度](00XV)为零。因而“拓扑泛有”与“几乎处处”不能互换。}
+
+\p{\strong{构造。}枚举 #{[0,1]} 中的有理数为 #{(q_j)_{j\ge 1}}。对 #{n\ge 1} 令}
+##{U_n=[0,1]\cap\bigcup_{j\ge 1}
+(q_j-2^{-n-j-2},q_j+2^{-n-j-2}),\qquad R=\bigcap_{n\ge 1}U_n.}
+\p{每个 #{U_n} 在相对拓扑中开，且含有全部有理数，所以稠密。[Baire 纲定理](0AC5)保证 #{R} 稠密；它的补集是可数个闭[无处稠密集](00QF)之并，所以 #{R} 余第一纲。另一方面，由次可加性，#{\operatorname{Leb}(U_n)\le\sum_{j\ge 1}2^{-n-j-1}=2^{-n-1}}。由于 #{R\subset U_n} 对所有 #{n} 成立，#{\operatorname{Leb}(R)=0}。}
+
+\p{其补集 #{[0,1]\setminus R} 则同时是第一纲集和满测度集。在参数动力学中，残余参数集合完全可能与另一个满测度结论并存。}

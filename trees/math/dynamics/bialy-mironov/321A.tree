@@ -1,0 +1,12 @@
+\title{支撑函数给出的台球非标准生成式}
+\date{2026-10-19}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Bialy–Mironov](icm2026-bialy-mironov)，第 2 节；Baranzini–Bialy–Sorrentino，公式 (12)}
+
+\p{设 #{h} 是 #{C^2} 正曲率台球桌的[支撑函数](3201)。给有向直线采用右单位法线 #{n(\phi)=(\cos\phi,\sin\phi)}，运动方向为 #{t(\phi)=(-\sin\phi,\cos\phi)}，并取规范动量 #{p} 为有向距离的负数，即直线方程 #{\langle x,n(\phi)\rangle=-p}。若入射、出射法线角为 #{\phi_0,\phi_1}，令 #{\psi=(\phi_0+\phi_1)/2}、#{\delta=(\phi_1-\phi_0)/2\in(0,\pi)}，则生成函数为}
+##{S(\phi_0,\phi_1)=-2h(\psi)\sin\delta.}
+\p{\strong{导数计算。}有 #{S_1=-h'\sin\delta+h\cos\delta}、#{S_2=-h'\sin\delta -h\cos\delta}，且}
+##{S_{12}=-\tfrac 12(h+h'')\sin\delta<0.}
+\p{为核对距离符号，取实际碰撞点 #{x=h(\psi)n(\psi)+h'(\psi)t(\psi)}。两条有向线经过 #{x} 时，#{\langle x,n(\phi_0)\rangle=h\cos\delta -h'\sin\delta=S_1}，#{\langle x,n(\phi_1)\rangle=h\cos\delta+h'\sin\delta=-S_2}。因为动量取距离的负数，恰有 #{p_0=-S_1,p_1=S_2}，符合[正扭转生成函数约定](3204)。}
+\p{\strong{周期作用。}在碰撞点 #{x_i}，入射与出射速度之差为 #{v_{i-1}-v_i=2\sin\delta_i\,n(\psi_i)}，所以 #{S_i=-\langle x_i,v_{i-1}-v_i\rangle}。循环求和并移动指标，得到 #{\sum_i S_i=-\sum_i\langle x_{i+1}-x_i,v_i\rangle=-\sum_i|x_{i+1}-x_i|}。因此周期作用确为负周长。混合导数表明正曲率 #{h+h''>0} 正是这种坐标中扭转符号的几何来源。}

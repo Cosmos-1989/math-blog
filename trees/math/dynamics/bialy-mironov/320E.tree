@@ -1,0 +1,11 @@
+\title{台球的局部极大轨道}
+\date{2026-10-19}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bialy–Mironov](icm2026-bialy-mironov)，第 4 节；Bialy–Tsodikovich，第 2.1 节、命题 2.1}
+
+\p{设 #{\{s_i\}_{i\in\mathbb Z}} 是[长度驻点轨道](3203)。若其任意有限段在固定两个端点时，都是该段长度泛函的局部极大点，称它为 m-构形，对应相空间轨道称 m-轨道。记全部 m-轨道扫过的集合为 #{\mathcal M}，补集为 #{\Delta}。}
+\p{对端点为零的有限支撑变分 #{\xi_i}，必要的二阶条件为}
+##{\sum_i\bigl(L_{22}(s_{i-1},s_i)+L_{11}(s_i,s_{i+1})\bigr)\xi_i^2+2\sum_i L_{12}(s_i,s_{i+1})\xi_i\xi_{i+1}\le 0.}
+\p{这个式子来自逐项对 #{\sum L(s_i+\varepsilon\xi_i,s_{i+1}+\varepsilon\xi_{i+1})} 求两次导数；每个 #{\xi_i^2} 从相邻两条边各取得一项，每条边贡献一次交叉项。它是必要条件，半负定本身不能排除高阶项破坏极大性。}
+\p{在 #{L_{12}>0} 的台球情形，对所有有限段同时要求上述条件，会迫使每个有限段的二阶变分负定，见[三对角判据](321E)；由此也得到 #{\mathcal M} 是闭不变集。它包含所有[旋转型不变曲线](3206)及作用极小的 Aubry–Mather 轨道，这一包含关系引用 Bialy–Tsodikovich 命题 2.1(a) 及其中的 Herman 定理。这里长度极大对应负长度作用极小。}

@@ -1,0 +1,16 @@
+\title{经验测度的聚点是不变测度}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berger 的报告](icm2026-berger)，第 3 节；望远镜求和}
+
+\p{设 #{X} 为紧[度量空间](00EK)，#{f:X\to X} 连续。点 #{x} 的第 #{n} 个经验测度是[概率测度](00Q3)}
+##{e_n(x)=\frac 1n\sum_{j=0}^{n-1}\delta_{f^j(x)}.}
+\p{点质量 #{\delta_y} 对集合 #{A} 的值在 #{y\in A} 时为 1，否则为零。经验测度记录前 #{n} 步对各区域的访问频率。任何[弱收敛](00TQ)子列极限 #{\mu} 都满足 #{f_*\mu=\mu}，其中 #{(f_*\mu)(A)=\mu(f^{-1}A)}。}
+
+\p{\strong{证明。}对任意连续实函数 #{\varphi}，移位求和得到}
+##{\int\varphi\,d(f_*e_n(x)-e_n(x))
+=\frac{\varphi(f^n x)-\varphi(x)}n.}
+\p{右端绝对值至多 #{2\|\varphi\|_\infty /n}，趋于零。若 #{e_{n_j}(x)\to\mu}，由于 #{\varphi\circ f} 仍连续，取极限得 #{\int\varphi\,d(f_*\mu)=\int\varphi\,d\mu}。连续函数确定正则 Borel 测度，故二者相等。}
+
+\p{[紧空间概率测度的紧性](00TQ)保证至少有子列聚点，却不保证整个序列收敛。这个论证没有假设 #{f} 保持预先给定的体积测度。}

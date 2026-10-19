@@ -1,0 +1,13 @@
+\title{退火熵的 Bethe–Kikuchi 公式}
+\date{2026-10-19}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Austin](icm2026-austin)，定理3.19、推论3.20}
+
+\p{令 #{F_r} 自由生成于 #{S}，#{|S|=r}，#{B_R} 是对称生成集 #{S\cup S^{-1}} 的词长球。对有限字母表上的移位不变测度 #{\nu}，其[退火 sofic 熵](300Z)满足 Bowen 公式}
+##{h^{\mathrm{ann}}(\nu)=\lim_{R\to\infty}\left(\sum_{s\in S}H(\nu_{B_R\cup sB_R})-(2r-1)H(\nu_{B_R})\right).}
+\p{#{\nu_D} 表示有限坐标集 #{D} 上的边缘分布，#{H} 为 [Shannon 熵](00S1)。公式把随机模型计数变为有限块的熵组合；这是引用的深层结果，其证明同时说明定义中先取邻域下确界后，可把 #{\limsup_n} 换为 #{\liminf_n}。}
+\p{由公式可直接证明直积加性。若 #{\nu,\theta} 独立，则对每个有限 #{D}，}
+##{H((\nu\times\theta)_D)=-\sum_{a,b}\nu_D(a)\theta_D(b)\log(\nu_D(a)\theta_D(b))
+=H(\nu_D)+H(\theta_D).}
+\p{代入上述有限半径表达式，乘积表达式恰为两项之和，再令 #{R\to\infty}，得到 #{h^{\mathrm{ann}}(\nu\times\theta)=h^{\mathrm{ann}}(\nu)+h^{\mathrm{ann}}(\theta)}。有限字母表排除了 #{+\infty}，所以即使某项为 #{-\infty}，也没有未定义的无穷量相减。}

@@ -1,0 +1,538 @@
+{
+  "date": "2026-10-19",
+  "report": {
+    "speaker": "Misha Bialy and Andrey E. Mironov",
+    "prefix": "32",
+    "outline": "3200",
+    "reference": "icm2026-bialy-mironov",
+    "title": "Integrable Billiards and Related Topics",
+    "outline_title": "可积台球：从反射守恒量到形状刚性",
+    "doi": "10.1137/25M1804078",
+    "pages": "42-58",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804078",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804078",
+    "version_role": "Official published ICM2026 Volume 5 proceedings, online 2026-07-13. The official full HTML report, not an abstract or an arXiv substitute, is the primary source. Supplementary papers have separately fixed versions.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union, published by SIAM under CC BY 4.0, verified in the official publication/license metadata. The reference page attributes the Chinese adaptation and independent calculations. Supplementary arXiv nonexclusive distribution licenses are not treated as translation or image-reuse permissions.",
+    "question": "How do variational reflection laws and invariant curves constrain the shape of a billiard table, and how do global, boundary-local, polynomial, and symmetry-assisted integrability differ across length, area, magnetic, Minkowski, wire, and cone models?",
+    "reading_scope": "Read the complete official mathematical text in sections 1-9, its displayed formulas and captions, bibliography and publication/license metadata. The image pixels were not visually inspected and no illustration-specific claim or image is reproduced. Supplementary full-text reading was selective and is recorded separately below; no supplementary research proof is represented as fully read when only its definitions, statements, or initial argument were consulted. Web content was treated as source data, not instructions.",
+    "coverage_status": "51 atomic knowledge pages, 3201-321F in base36 order, one narrative outline 3200, and one reference. All major report branches have a mathematical entry point: classical reflection and integrability, four planar models, effective and symmetry-assisted rigidity, beta inequalities and equality, magnetic/Minkowski variants, wires, cones, and the corresponding open questions. Elementary local calculations are developed; deep rigidity, Aubry-Mather, and cone-classification proofs remain cited results.",
+    "proof_scope": {
+      "3201": "Derives the support-function parameterization, curvature radius, perimeter and translation terms for C2 positive-curvature convex curves; reuses the existing support-function definition.",
+      "3202": "Derives the Euclidean reflection formula by tangential and normal decomposition, and explains the regular next collision for a strictly convex table.",
+      "3203": "Computes the first variation of every finite fixed-endpoint broken-line length and derives the reflection equation at each vertex.",
+      "3204": "Defines the exact symplectic positive twist convention p=-S_1, P=S_2, S_12<0 and checks preservation of the canonical two-form by differentiation.",
+      "3205": "Computes the mixed derivative of chord length, the positive twist derivative, the invariant density sin(theta) ds dtheta, and its total mass 2P.",
+      "3206": "Defines rotational invariant curves and the restricted circle map. Birkhoff's graph theorem is cited only for area-preserving positive twist maps isotopic to the identity; rotation-number existence is proved in 321D.",
+      "3207": "Defines total integrability on a specified annular region and separates whole-phase-space, boundary-neighborhood, and table-perturbation meanings. No equivalence with an arbitrary single first integral is asserted.",
+      "3208": "Computes the circle billiard map explicitly and checks its invariant constant-angle curves and total integrability.",
+      "3209": "Defines a caustic through tangent trajectories and explains the circle example and smooth convex caustic/invariant-curve correspondence in its nondegenerate domain.",
+      "320A": "Proves the ellipse's quadratic first integral during free motion and reflection; derives the confocal-line discriminant (F-lambda)/((a-lambda)(b-lambda)) and the elliptic-caustic range 0<F<b.",
+      "320B": "Defines velocity-polynomial integrability with the free-flow equation, boundary reflection identity, and nonconstancy on the unit-energy level. Separates it from total phase-space integrability.",
+      "320C": "Cites Glutsyuk Theorem 1.6 and Corollary 1.7 for a bounded connected planar domain with C2 connected boundary. The conclusion does not assume algebraicity of the boundary. The algebraic rigidity proof is external.",
+      "320D": "States the boundary-neighborhood Birkhoff-Poritsky conjecture as open and distinguishes it from perturbative results for tables close to an ellipse and from polynomial rigidity.",
+      "320E": "Defines m-configurations using actual finite fixed-endpoint local maxima, expands their second variation, and links the complete tridiagonal equivalence/closedness proof in 321E. Inclusion of rotational invariant curves in the m-set is a cited twist-map result.",
+      "320F": "States the centrally symmetric C2 positive-curvature period-four strip theorem with the full strip down to zero rotation, not an arbitrary neighborhood. Both foliation and all-m-orbit versions are cited; the Hopf-type proof is external.",
+      "320G": "Defines the oriented midpoint-tangency rule of outer-area billiards and distinguishes it from interior reflection.",
+      "320H": "Computes the Jacobians in tangent coordinates and proves that outer-area billiards preserve Euclidean area.",
+      "320I": "Proves preservation of concentric circles for a circular outer-area table and transfers the map by affine conjugacy to homothetic ellipses.",
+      "320J": "Defines the positive phase domain of symplectic billiards and its nonlocal parallel-chord rule, including the diagonal and two-periodic limiting boundaries.",
+      "320K": "Derives the symplectic reflection condition from the variation of half the sum of determinants, and checks the mixed derivative and invariant two-form with the correct factor 1/2.",
+      "320L": "Computes the circle symplectic map (s,t) to (t,2t-s), proves its constant-angle foliation, and transfers it to ellipses by affine equivariance.",
+      "320M": "Defines the outer-length tangent-segment generating function on the normal-angle interval (0,pi). The geometric circle rule, general twist property, and confocal ellipse construction are cited. General outer-length integrability rigidity remains open.",
+      "320N": "States global outer-area total-integrability rigidity precisely and links the existing Blaschke-Santalo inequality used in its proof. The global rigidity argument is cited, not reconstructed from that inequality alone.",
+      "320O": "Cites global symplectic rigidity and the centrally symmetric period-four strip theorem. The latter concerns either full side of the period-four curve, up to the diagonal or two-periodic boundary, not an arbitrary thin strip.",
+      "320P": "Cites the effective non-m-orbit measure bound in terms of the L2 distance of h from span(1,cos,sin), with its constant and curvature factor. Proves the zero-distance circle characterization and the elementary harmonic perturbation calculation.",
+      "320Q": "Cites the centrally symmetric effective ellipse bound with the specified period-four region, constant 25*pi^2/32, curvature power three, and the L2 distance of h^2 on [0,pi]. Checks scaling and uses the proved harmonic ellipse criterion 321B.",
+      "320R": "Cites the middle-strip estimate 3*kappa_min*(P^2-4*pi*A)/16 and its hypotheses. Derives the circular equality consequence using the explicit planar isoperimetric proof 321F.",
+      "320S": "States the four finite-symmetry rigidity theorems with their respective Euclidean or linear symmetry hypotheses. Proves the finite-order linear conjugacy calculation, keeping R_(2*pi*m/k), gcd(m,k)=1, and identifying its cyclic subgroup rather than an incorrectly fixed generator.",
+      "320T": "Defines Birkhoff orthogonality and Radon norms. The outer-area period-four characterization is cited; the order-four symmetry consequence follows from 320S.",
+      "320U": "Defines beta for the four C2 positive-curvature bounded strictly convex table models, with classical rotation interval (0,1) and the other positive branches (0,1/2). Existence and independence of minimizing average action are cited Aubry-Mather results. Inner signs are negative and outer signs positive.",
+      "320V": "Cites strict convexity, irrational differentiability, and the rational periodic-invariant-curve criterion only for the explicitly specified four billiard models and their rotation intervals. Derives the finite-symmetry consequence and cites the full central/global reconstruction results separately.",
+      "320W": "Calculates all four circular beta formulas geometrically. Proves the finite equal-angle extremum by the supporting-tangent inequality for convex/concave functions, so the calculation concerns global extrema, not just stationary configurations; uses cited beta continuity for irrational limits.",
+      "320X": "States the three beta isoperimetric inequalities with same perimeter for length models and same area for symplectic billiards. Outer-area billiards are excluded. Supplies the equal-angle trial-action calculation, while the complete comparison theorem remains cited.",
+      "320Y": "Cites interior rational rigidity and the irrational Gutkin exception for classical billiards. Treats rho=1/2 separately: proves beta=-diameter and equality iff constant width for classical billiards, and records the trivial symplectic endpoint and divergent outer endpoints.",
+      "320Z": "Cites centrally symmetric elliptic beta spectral rigidity and the special two-value determination result. Computes the diameter value directly and retains determination by arbitrary two beta values as an open question.",
+      "3210": "Derives the Larmor circle radius and free-flight center for constant magnetic field and computes the center change under specular reflection.",
+      "3211": "Cites magnetic total-integrability rigidity only in the weak-field range 0<B<kappa_min. Strong and variable-field extensions are retained as open questions.",
+      "3212": "Defines the possibly asymmetric Minkowski gauge and derives the tangential momentum reflection equation by varying the norm-length action.",
+      "3213": "Cites the finite-order symmetry enhancement and the global ellipse theorem with the k mod 4 distinction. Gives the elementary even-power lp symmetry obstruction; no invalid repeated enhancement is applied when k is 2 mod 4.",
+      "3214": "Defines wire billiards by equal tangential projections of incoming and outgoing chords, retaining their possible multivalued nature. The closed nonplanar three-dimensional example problem remains open.",
+      "3215": "Proves the linear-in-velocity conserved quantity <Ax,v> for a skew-symmetric orbit curve, both along free segments and at wire reflections; checks equality of the endpoint tangent-angle data.",
+      "3216": "Proves closure, embeddedness, regularity and nonplanarity for the coprime two-frequency curve in R4, and computes its conserved quantity and constant-parameter-increment solutions. Does not assert that every wire relation is single-valued.",
+      "3217": "Cites finite reflection for C3 cone sections with positive definite scalar second fundamental form, excluding apex and tangency singularities. Distinguishes per-orbit finiteness from a uniform bound and cites the C2 infinite-reflection counterexample.",
+      "3218": "Proves conservation of squared angular momentum and the corresponding centered sphere caustic by direct free-flight and reflection calculations. Individual angular momentum components need not be conserved.",
+      "3219": "Cites the cone orbit-separation theorem with its regularity and singular-set qualifications. The 2n-1 integrals on a 2n-2-dimensional line phase space are not asserted independent or Poisson commuting.",
+      "321A": "Derives the support-function generator S=-2h*sin(delta) with canonical momentum equal to negative signed line distance, verifies its first and mixed derivatives, and proves its periodic sum equals negative perimeter by telescoping.",
+      "321B": "Proves that a positive support function whose square is a positive second-harmonic quadratic expression is the support function of a centered ellipse, using linked Schwarz inequality and real symmetric diagonalization.",
+      "321C": "Derives global classical circle rigidity from the cited effective bound, invariant-curve inclusion in the m-set, and the zero-distance support-function criterion. The reverse direction is the explicit circle computation.",
+      "321D": "Gives a complete rotation-number existence proof for orientation-preserving circle homeomorphisms using oscillation of displacement at most one, subadditivity/superadditivity, and the division n=qk+r argument. No unproved Fekete lemma is used.",
+      "321E": "Proves equivalence of all finite local maxima, all finite negative semidefinite Hessians, and all finite negative definite Hessians for the positive-twist tridiagonal system, using zero extension into larger intervals. Proves closedness by passing the semidefinite inequalities to the limit.",
+      "321F": "Proves the planar isoperimetric inequality and circle equality for C2 positive-curvature convex curves via the support-area formula, Stokes, and a Fejer/Fourier proof of Wirtinger's inequality. Does not claim a proof for arbitrary nonconvex curves."
+    },
+    "claim_sources": {
+      "3201": "Main section 4 support-function convention; independent differential calculation; existing 0R02.",
+      "3202": "Main section 2 classical model; independent reflection calculation.",
+      "3203": "Main equation (2.1); direct finite-action variation.",
+      "3204": "Main section 6; BBS2509v2 section 2; direct symplectic sign calculation.",
+      "3205": "Main section 2; direct chord differentiation and invariant-measure integration.",
+      "3206": "Main sections 1,5,6; BBS2509v2 section 2 for area-preserving twist context; 321D for the rotation limit. Birkhoff graph theorem is an external input.",
+      "3207": "Main section 1; explicit separation of the report's different integrability hypotheses.",
+      "3208": "Main section 2 circular model; independent formula.",
+      "3209": "Main sections 2 and 8; circle caustic computation local.",
+      "320A": "Main section 2 confocal ellipse discussion; independent quadratic integral and discriminant computation.",
+      "320B": "Main section 2; Glutsyuk1706v7 Definitions 1.1-1.2.",
+      "320C": "Main section 2 and reference [35]; Glutsyuk1706v7 Theorem 1.6 and Corollary 1.7, read directly.",
+      "320D": "Main sections 1,2,9.1; no conjecture promoted to a theorem.",
+      "320E": "Main section 4; BT2203v2 section 2.1, Proposition 2.1 and its proof; invariant-curve m-orbit assertion is cited there from twist-map theory.",
+      "320F": "Main Theorem 2.1; original central-symmetry rigidity paper cited through the report, not independently read in full.",
+      "320G": "Main section 3 outer-area definition.",
+      "320H": "Main section 3 area preservation; independent tangent-coordinate Jacobian proof.",
+      "320I": "Main section 3 elliptic outer-area example; direct circle and affine-conjugacy proof.",
+      "320J": "Main section 3; BBN2402v1 section 2 phase-space definition.",
+      "320K": "Main sections 3,6; BBS2509v2 section 3.2 normalization; direct determinant variation.",
+      "320L": "Main section 3; BB2305v1 introductory affine equivariance; direct circle calculation.",
+      "320M": "Main section 3; BBS2509v2 section 3.4 generator. Albers-Tabachnikov geometry cited through the report, not independently read in full.",
+      "320N": "Main Theorem 3.1 and following discussion; existing 0R0B for Blaschke-Santalo. The outer rigidity research paper is cited through the report.",
+      "320O": "Main section 3; BB2305v1 Theorems 1.1-1.2; BBN2402v1 Theorem 1.1 and its phase-space setup.",
+      "320P": "Main Theorem 4.1; BT2203v2 introductory effective-bound statements; zero-error and perturbation calculations local.",
+      "320Q": "Main Theorem 4.2; BT2203v2 introductory theorem statements; 321B for the harmonic ellipse criterion.",
+      "320R": "Main Theorem 4.4 and Corollary 4.5; 321F for the exact isoperimetric equality used in the consequence.",
+      "320S": "Main Theorems 5.1-5.4; independent correction of finite-order linear-generator conjugacy to the appropriate primitive rotation.",
+      "320T": "Main section 5 and Corollary 5.5; existing 00M1 norm definition; equivalence with outer four-periodicity cited through the report.",
+      "320U": "Main section 6 and Example 6.1; BBS2509v2 sections 2 and 3 for the four minimizing-action conventions and rotation domains.",
+      "320V": "Main section 6 and Theorems 6.2-6.5; BBS2509v2 section 2 for beta regularity and the rational invariant-curve criterion.",
+      "320W": "Main Example 6.1; BBS2509v2 section 3 circle examples; independent triangle and supporting-tangent computations.",
+      "320X": "Main Theorem 6.7; BBS2509v2 Theorems 4.1-4.3 and beginning of section 4.3; the equal-angle trial formula also uses 321A.",
+      "320Y": "Main Theorem 6.8, restricted to the valid interior interval using BBS2509v2 Theorems 4.1-4.3 and Remark 5; independent rho=1/2 diameter/constant-width calculation.",
+      "320Z": "Main Corollary 6.4 and the subsequent elliptic beta discussion; original spectral-recovery proof is cited through the report.",
+      "3210": "Main section 7 magnetic model; direct Lorentz equation and reflection calculation.",
+      "3211": "Main Theorem 7.1 and section 9.4; magnetic rigidity proof cited through the report.",
+      "3212": "Main section 7 Minkowski model; direct first variation of norm length.",
+      "3213": "Main Theorems 7.2-7.3 and Example 7.4; independent lp symmetry check.",
+      "3214": "Main section 8 wire model and section 9 open question; direct variational reflection equation.",
+      "3215": "Main equation (8.1); direct skew-symmetry and reflection computation.",
+      "3216": "Main Example 8.1; independent two-frequency closure, embedding and integral calculations.",
+      "3217": "Main Theorems 8.2-8.3 and section 9.7; Mironov-Yin results cited through the report, not full supplementary proofs.",
+      "3218": "Main Theorem 8.4; complete local angular-momentum and line-distance calculation.",
+      "3219": "Main Theorem 8.5; original orbit-separation proof cited through the report.",
+      "321A": "Main section 2 nonstandard generator; BBS2509v2 equation (12); independent signed-distance and telescoping calculations.",
+      "321B": "Main Theorem 4.2 zero-error model; independent support-function proof using existing 004S and 0N0B.",
+      "321C": "Main section 2 global circle result and Theorem 4.1; consequence derived locally from 320P and 320E rather than presented as a new proof of the effective theorem.",
+      "321D": "Classical Poincare rotation theorem used in the main report; complete independent bounded-displacement proof, with existing 00E3 for homeomorphisms.",
+      "321E": "BT2203v2 Proposition 2.1(b,c) and its proof, read directly; independent expanded tridiagonal zero-extension proof.",
+      "321F": "Classical planar isoperimetric inequality used in main section 4; independent proof using existing 0BAC Stokes and 132B Fejer approximation/Fourier uniqueness."
+    },
+    "sources": [
+      {
+        "id": "main",
+        "title": "Integrable Billiards and Related Topics",
+        "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804078",
+        "version_role": "Official published report, ICM2026 Volume 5, pages 42-58, online 2026-07-13",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "reading_scope": "Complete official HTML mathematical text, sections 1-9, displays, captions, bibliography, publication and license metadata. Image pixels not inspected or reproduced."
+      },
+      {
+        "id": "BBS2509v2",
+        "title": "Isoperimetric-type inequalities for Mather's beta-function of convex billiards",
+        "authors": "Stefano Baranzini, Misha Bialy, Alfonso Sorrentino",
+        "version_url": "https://arxiv.org/html/2509.06915v2",
+        "version_role": "arXiv:2509.06915v2, 2025-12-22; supplementary source for conventions and exact equality scope",
+        "license": "arXiv perpetual nonexclusive distribution license; not a derivative-work license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "reading_scope": "Section 2 Aubry-Mather setup, section 3 all four model generators and circular examples, sections 4.1-4.2 theorem statements, and the beginning of section 4.3 equal-angle comparison. The full 36-page proof development was not read. Earlier v1 was encountered, but v2 governs these notes."
+      },
+      {
+        "id": "Glutsyuk1706v7",
+        "title": "On polynomially integrable Birkhoff billiards on surfaces of constant curvature",
+        "authors": "Alexey Glutsyuk",
+        "version_url": "https://arxiv.org/html/1706.04030v7",
+        "version_role": "arXiv:1706.04030v7, 2019-02-22; supplementary exact theorem hypotheses",
+        "license": "arXiv perpetual nonexclusive distribution license; not a derivative-work license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "reading_scope": "Section 1.1, Definitions 1.1-1.2, Theorem 1.6, Corollary 1.7 and relevant introductory remarks. The full algebraic-geometric proof was not read."
+      },
+      {
+        "id": "BB2305v1",
+        "title": "Totally integrable symplectic billiards are ellipses",
+        "authors": "Luca Baracco, Olga Bernardi",
+        "version_url": "https://arxiv.org/pdf/2305.19701v1",
+        "metadata_url": "https://arxiv.org/abs/2305.19701v1",
+        "version_role": "arXiv:2305.19701v1, 2023-05-31; supplementary symplectic rigidity hypotheses",
+        "license": "arXiv perpetual nonexclusive distribution license, verified through the versioned abstract page's license link; not a derivative-work license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "reading_scope": "Extracted PDF text of pages 1-3, including introductory Theorems 1.1-1.2, section 2 phase-space setup, and the beginning of section 3. The complete Hopf-type rigidity argument and figure were not inspected."
+      },
+      {
+        "id": "BBN2402v1",
+        "title": "Bialy-Mironov type rigidity for centrally symmetric symplectic billiards",
+        "authors": "Luca Baracco, Olga Bernardi, Alessandra Nardi",
+        "version_url": "https://arxiv.org/html/2402.19154v1",
+        "version_role": "arXiv:2402.19154v1, 2024-02-29; supplementary exact period-four strip scope",
+        "license": "arXiv perpetual nonexclusive distribution license; not a derivative-work license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "reading_scope": "Introductory Theorem 1.1 and corollaries, section 2 phase-space setup, and section 3 through Proposition 3.1. Technical sections 4-5 were not fully read."
+      },
+      {
+        "id": "BT2203v2",
+        "title": "Locally maximizing orbits for the non-standard generating function of convex billiards and applications",
+        "authors": "Misha Bialy, Daniel Tsodikovich",
+        "version_url": "https://arxiv.org/html/2203.15552v2",
+        "version_role": "arXiv:2203.15552v2, 2022-05-30; supplementary m-configuration definition and Hessian criterion",
+        "license": "arXiv perpetual nonexclusive distribution license; not a derivative-work license",
+        "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "reading_scope": "Sections 1.1-1.2 and Theorems 1.1-1.4; section 2.1 through Proposition 2.1 and its proof, the subsequent Jacobi criterion and proof, and the start of section 2.2. The full effective-estimate proofs were not read."
+      }
+    ],
+    "remaining_branches": [
+      "The report's main model and result branches are represented, but no full proof of polynomial/algebraic Birkhoff rigidity, central strip rigidity, outer-area rigidity, symplectic rigidity, or effective measure bounds is supplied. These are explicitly cited research theorems with their hypotheses.",
+      "Birkhoff's graph theorem, Aubry-Mather existence, beta strict convexity and differentiability, and the rational invariant-curve equivalence are cited inputs. Only rotation-number existence, the finite variational calculations, and the m-set Hessian/closedness argument are proved locally.",
+      "The beta comparison and equality theorems retain external proofs. The circular extremum, support-generator trial action and constant-width endpoint are computed locally. Irrational classical equality allows the Gutkin exception; outer-area comparison is not included in Theorem 6.7.",
+      "Magnetic/Minkowski rigidity and the general outer-length twist construction remain cited. Strong or variable magnetic fields, general outer-length integrability rigidity, partial-region outer-area rigidity, arbitrary two-value elliptic spectral recovery, and the boundary-local Birkhoff problem remain open as described in the report.",
+      "Wire examples and cone angular-momentum conservation are proved locally. Finite-reflection and orbit-separation theorems for cones, as well as the C2 counterexample, remain external. No independence or Poisson commutation is asserted for the separating integrals. Closed nonplanar three-dimensional wire examples and degenerate/nonconvex cone extensions remain open.",
+      "No report figures are reproduced and no image-specific claim is imported. Global deduplication, normalizeFormat, full Forester build and browser rendering belong to the parent integration task."
+    ],
+    "normalization_notes": [
+      "Author metadata is author, date is 2026-10-19. Knowledge bodies use Forester inline/display math and direct mathematical exposition, with no manual related-pages blocks.",
+      "The generating-function convention is p=-S_1, P=S_2 and S_12<0 for positive twist. Positive length/area local maxima use the opposite action sign to Aubry-Mather minimization.",
+      "Beta is negative maximal inner length or inner area per vertex, and positive minimal outer length or outer area per vertex. BBS section 3.3 prose mentioning maximal circumscribed area is not used to reverse the minimizing-action convention.",
+      "For symplectic billiards, -det(x,y)/2 means negative triangle area, not negative half of the triangle area. This fixes the circular value -R^2*sin(2*pi*rho)/2.",
+      "Theorem 6.7 compares length models with a disc of the same perimeter and the symplectic model with a disc of the same area. It does not cover outer-area billiards.",
+      "The rational equality assertion is restricted to 0<rho<1/2. At rho=1/2, classical equality is constant width rather than circularity, symplectic beta vanishes for every table, and the outer actions diverge. This endpoint qualification follows the supplementary exact statement and a direct calculation.",
+      "A real order-k linear map is conjugate to R_(2*pi*m/k) for a primitive residue m, not necessarily to the particular generator R_(2*pi/k). Its cyclic subgroup is conjugate to the usual order-k rotation group; the finite-symmetry consequences use that subgroup fact.",
+      "Polynomial integrability requires a velocity-polynomial integral nonconstant on the unit-energy level. Glutsyuk's smooth bounded-domain corollary does not require the boundary to be algebraic a priori.",
+      "The m-set is defined by actual finite fixed-endpoint local maxima. Semidefinite finite Hessians and definite proper-subinterval Hessians are equivalent across all intervals because the mixed derivatives are positive. Closedness uses the semidefinite formulation, not closedness of negative definiteness alone.",
+      "The ellipse equation in 320A is x^2/a+y^2/b=1 with a>b>0, so a,b are squared semiaxes. The circular/outer-area ellipse families are homothetic; classical elliptic caustics are confocal.",
+      "The nonstandard support generator uses canonical p equal to negative signed distance with the stated right-normal convention. This fixes the first-derivative signs and yields negative perimeter as periodic action.",
+      "Global total integrability, phase-boundary local integrability, closeness of a table to an ellipse, polynomial integrability, and cone orbit separation are separate notions throughout.",
+      "The prerequisite registry below includes only actual body-linked mathematical prerequisites, not every consequence or comparison link. In particular, reciprocal exposition links between 320C and 320D are not registered as a prerequisite cycle."
+    ]
+  },
+  "prerequisites": {
+    "3201": [
+      "00TK",
+      "0R02"
+    ],
+    "3202": [
+      "3201",
+      "004P"
+    ],
+    "3203": [
+      "3202"
+    ],
+    "3204": [
+      "0P01",
+      "0BL1"
+    ],
+    "3205": [
+      "3202",
+      "3204"
+    ],
+    "3206": [
+      "0P01",
+      "3204",
+      "321D"
+    ],
+    "3207": [
+      "3204",
+      "3206"
+    ],
+    "3208": [
+      "3202",
+      "3206",
+      "3207"
+    ],
+    "3209": [
+      "3202",
+      "3206",
+      "3208"
+    ],
+    "3210": [
+      "3202"
+    ],
+    "3211": [
+      "3210",
+      "3206"
+    ],
+    "3212": [
+      "00M1",
+      "3203"
+    ],
+    "3213": [
+      "3212",
+      "3206",
+      "00M2"
+    ],
+    "3214": [
+      "3203"
+    ],
+    "3215": [
+      "3214"
+    ],
+    "3216": [
+      "3215"
+    ],
+    "3217": [
+      "2E01",
+      "3202"
+    ],
+    "3218": [
+      "3202",
+      "3209"
+    ],
+    "3219": [
+      "3217",
+      "3218"
+    ],
+    "320A": [
+      "3202",
+      "3209"
+    ],
+    "320B": [
+      "3202",
+      "320A",
+      "3207"
+    ],
+    "320C": [
+      "320B",
+      "320A"
+    ],
+    "320D": [
+      "3209",
+      "3206",
+      "320A",
+      "3207",
+      "320C"
+    ],
+    "320E": [
+      "3203",
+      "321E",
+      "3206"
+    ],
+    "320F": [
+      "3201",
+      "3206",
+      "320E",
+      "321A"
+    ],
+    "320G": [
+      "3201",
+      "3202"
+    ],
+    "320H": [
+      "320G",
+      "0BL1"
+    ],
+    "320I": [
+      "320G",
+      "3207",
+      "0P05"
+    ],
+    "320J": [
+      "3201"
+    ],
+    "320K": [
+      "320J",
+      "3204"
+    ],
+    "320L": [
+      "320J",
+      "3207",
+      "0P05"
+    ],
+    "320M": [
+      "3201",
+      "3204"
+    ],
+    "320N": [
+      "320G",
+      "3206",
+      "320I",
+      "0R0B"
+    ],
+    "320O": [
+      "320J",
+      "320L",
+      "3206"
+    ],
+    "320P": [
+      "0R02",
+      "320E",
+      "3205",
+      "3201"
+    ],
+    "320Q": [
+      "3206",
+      "320E",
+      "3205",
+      "321B"
+    ],
+    "320R": [
+      "3206",
+      "320E",
+      "3205",
+      "321F"
+    ],
+    "320S": [
+      "3202",
+      "320M",
+      "320G",
+      "320J",
+      "3206",
+      "00GG"
+    ],
+    "320T": [
+      "00M1",
+      "320G",
+      "3206",
+      "320S"
+    ],
+    "320U": [
+      "3204",
+      "3206",
+      "3203",
+      "320K",
+      "320G",
+      "320M"
+    ],
+    "320V": [
+      "320U",
+      "3206",
+      "320S"
+    ],
+    "320W": [
+      "320U",
+      "3208",
+      "320L",
+      "320I",
+      "320M"
+    ],
+    "320X": [
+      "320U",
+      "320W",
+      "321A"
+    ],
+    "320Y": [
+      "320X",
+      "3206",
+      "3201"
+    ],
+    "320Z": [
+      "320U",
+      "320V"
+    ],
+    "321A": [
+      "3201",
+      "3204"
+    ],
+    "321B": [
+      "0R02",
+      "004S",
+      "0N0B"
+    ],
+    "321C": [
+      "3207",
+      "320E",
+      "320P",
+      "3208"
+    ],
+    "321D": [
+      "00E3"
+    ],
+    "321E": [
+      "3203",
+      "3205",
+      "0N0B"
+    ],
+    "321F": [
+      "3201",
+      "0BAC",
+      "132B"
+    ]
+  },
+  "reused_pages": [
+    {
+      "id": "00TK",
+      "reason": "Convex-set definition for the planar table and support parameterization."
+    },
+    {
+      "id": "0R02",
+      "reason": "Canonical support function, reused rather than redefined as a new foundation."
+    },
+    {
+      "id": "004P",
+      "reason": "Orthogonal decomposition in the reflection law."
+    },
+    {
+      "id": "004S",
+      "reason": "Schwarz inequality in the ellipse support-function proof."
+    },
+    {
+      "id": "0P01",
+      "reason": "Annular area coordinates for twist maps and invariant curves."
+    },
+    {
+      "id": "0BL1",
+      "reason": "Symplectic forms and preservation of area."
+    },
+    {
+      "id": "0P05",
+      "reason": "Dynamical conjugacy for affine images of circular models."
+    },
+    {
+      "id": "00M1",
+      "reason": "Norm definition for Radon and Minkowski models."
+    },
+    {
+      "id": "00M2",
+      "reason": "Finite-coordinate lp norm examples in the linear-symmetry obstruction."
+    },
+    {
+      "id": "0R0B",
+      "reason": "Existing Blaschke-Santalo theorem used by the cited outer-area rigidity argument."
+    },
+    {
+      "id": "0N0B",
+      "reason": "Real symmetric diagonalization in the ellipse and Hessian arguments."
+    },
+    {
+      "id": "00E3",
+      "reason": "Homeomorphisms in the circle rotation-number foundation."
+    },
+    {
+      "id": "2E01",
+      "reason": "Second fundamental form; the cone page explicitly selects its scalar normal component."
+    },
+    {
+      "id": "0BAC",
+      "reason": "Stokes formula for the support-area computation."
+    },
+    {
+      "id": "132B",
+      "reason": "Fejer approximation and Fourier uniqueness in the Wirtinger/equality proof."
+    },
+    {
+      "id": "00GG",
+      "reason": "Existing foundation for 循环群; now linked directly at first use."
+    }
+  ],
+  "terminology_evidence": [
+    {"term": "全可积性", "source": "Main section 1: total integrability", "decision": "Always attach the specified phase region; do not replace this with existence of an arbitrary first integral."},
+    {"term": "外面积台球 / 外长度台球", "source": "Main section 3 and BBS2509v2 sections 3.3-3.4", "decision": "Reserve outer-area for midpoint tangency and outer-length for tangent-segment length, avoiding an unqualified outer-billiard conflation."},
+    {"term": "局部极大轨道 / m-构形", "source": "BT2203v2 section 2.1, Proposition 2.1", "decision": "Use finite fixed-endpoint actual local maxima and prove their Hessian characterization before asserting closedness."},
+    {"term": "旋转型不变曲线", "source": "Main sections 1,5,6", "decision": "Essential invariant circles in the annulus, distinguished from contractible invariant curves and interpreted through a circle homeomorphism."},
+    {"term": "线台球", "source": "Main section 8: wire billiards", "decision": "Use the equal tangential-projection relation on a space curve and retain its potentially multivalued nature."},
+    {"term": "轨道分离积分", "source": "Main Theorem 8.5", "decision": "Record separation of trajectories without adding functional independence or Poisson commutation."}
+  ],
+  "proposed_existing_page_edits": [],
+  "integration_scope": {
+    "owned_tree_directory": "trees/math/dynamics/bialy-mironov",
+    "knowledge_id_ranges_base36": ["3201-320Z", "3210-321F"],
+    "outline_file": "trees/math/dynamics/bialy-mironov/3200.tree",
+    "reference_file": "trees/references/icm2026-bialy-mironov.tree",
+    "packet_file": "research/dynamics-bialy-mironov-packet.json",
+    "parent_owned": "Global deduplication, shared registries, subject integration, normalizeFormat, build output, browser checks and publication. No shared existing page, script, registry or Git state was modified by this branch."
+  }
+}
