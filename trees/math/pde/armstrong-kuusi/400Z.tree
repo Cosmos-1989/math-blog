@@ -1,0 +1,18 @@
+\title{一次重整化的尺度成本}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.7 的一致椭圆形式}
+
+\p{在[固定指数模型](400O)下，记确定微观对比度为 #{\Theta=\Lambda /\lambda}。存在 #{C(d)}，对 #{0<\sigma\leq 1/2} 及整数 #{N} 有}
+##{N\geq C\sigma^{-4}\log(2/\sigma)\log(2\Theta /\sigma)
+ \quad\Longrightarrow\quad T_N\leq 1+\sigma\theta_0.}
+\p{\strong{参数选择。}取 #{\delta=c(d)\sigma^4\leq 1/2}，使[平坦窗口收缩](400Y)中的 #{C\delta^{1/4}\leq\sigma /4}。再取 #{h=\lceil C(d)\log(2\Theta /\delta)\rceil}，并扩大常数使 #{C3^{-\rho h}\Theta\leq\sigma /4}，其中 #{\rho=13/64}。最后取 #{k=\lceil 2\delta^{-1}\log(4/\sigma)\rceil}，要求 #{N\geq(k+1)h}。显示的尺度下界保证这些条件。}
+\p{\strong{选窗口。}把[鸽巢原理](400Q)以下降容限 #{\sigma /4} 用于尺度区间 #{0,\ldots,N-h}。若其下降分支成立，则 #{\theta_{N-h}\leq(\sigma /4)\theta_0}。否则存在长度 #{h} 的平坦窗口 #{j,\ldots,j+h}。缩放场 #{a(3^j\cdot)} 保持同一对确定椭圆界，所选 #{h} 仍满足收缩引理的门槛。因此}
+##{\theta_{N-h}\leq\theta_{j+h}\leq 1+\tfrac 14\sigma\theta_j
+ \leq 1+\tfrac 14\sigma\theta_0.}
+\p{\strong{恢复矩参数。}由[任意起始尺度的矩控制](400S)，}
+##{T_N\leq\theta_{N-h}+C3^{-\rho h}\Theta
+ \leq 1+\tfrac 14\sigma\theta_0+\tfrac 14\sigma
+ \leq 1+\sigma\theta_0.}
+\p{最后使用 #{\theta_0\geq 1}。从任意整数尺度重新开始时，结论中的平均对比度改为该尺度的 #{\theta_j}，而成本中的 #{\Theta} 保持为同一微观确定界的比值。}

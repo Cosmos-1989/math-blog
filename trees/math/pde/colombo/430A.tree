@@ -1,0 +1,12 @@
+\title{NS 的对数时间与自相似方程}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§2.2；Albritton–Brué–Colombo，式(1.7)–(1.9)}
+
+\p{在黏性 #{\nu=1} 的[NS 方程](4302)中，取 #{t>0}，令 #{\xi=x/\sqrt t}、#{\tau=\log t}，并写}
+##{u=t^{-1/2}U(\xi,\tau),\quad p=t^{-1}P(\xi,\tau),\quad f=t^{-3/2}F(\xi,\tau).}
+\p{则方程等价于}
+##{\partial_\tau U-\frac 12(U+\xi\cdot\nabla U)-\Delta U+(U\cdot\nabla)U+\nabla P=F,\qquad\operatorname{div}U=0.}
+\p{\strong{证明。}由[链式法则](0A34)，#{\partial_t\xi=-\xi /(2t)}、#{\partial_t\tau=1/t}，所以 #{\partial_tu=t^{-3/2}(\partial_\tau U-U/2-\xi\cdot\nabla U/2)}。对流、Laplace 与压力梯度各为相应 #{\xi} 表达式乘 #{t^{-3/2}}。除去公共系数得到结论。}
+\p{#{U} 与 #{\tau} 无关恰好表示正向自相似解，即在[抛物重标度](4308)下不变。#{t\downarrow 0} 对应 #{\tau\to -\infty}；初值成为无限远过去的渐近条件，不能套用有限时刻常微分方程的初值唯一性。}

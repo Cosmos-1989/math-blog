@@ -1,0 +1,13 @@
+\title{经典 Caccioppoli 内部能量估计}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.3，经典 Caccioppoli 估计}
+
+\p{设 #{Q_m} 为[三进立方体](4004)，#{u} 在其中是[一致椭圆弱调和函数](4001)。则对任意常数 #{c}，有}
+##{|Q_{m-1}|^{-1}\int_{Q_{m-1}}\nabla u\cdot a\nabla u
+ \leq C(d)\Lambda\,3^{-2m}|Q_m|^{-1}\int_{Q_m}|u-c|^2.}
+\p{\strong{证明。}选 #{0\leq\zeta\leq 1} 光滑紧支于 #{Q_m}，在 #{Q_{m-1}} 等于一，且 #{|\nabla\zeta|\leq C(d)3^{-m}}。测试函数 #{\zeta^2(u-c)\in H^1_0(Q_m)} 给出}
+##{\int\zeta^2|\nabla u|_a^2=-2\int\zeta(u-c)\nabla\zeta\cdot a\nabla u
+ \leq\frac 12\int\zeta^2|\nabla u|_a^2+2\int|u-c|^2|\nabla\zeta|_a^2.}
+\p{将第一项移到左边，用 #{|\nabla\zeta|_a^2\leq\Lambda|\nabla\zeta|^2}，再除以内部块体积。内外体积比为 #{3^d}，并入 #{C(d)}。取 #{c=(u)_{Q_m}} 可消去无关的常数分量。}

@@ -1,0 +1,9 @@
+\title{半线性反应扩散方程的能量解}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3，式(3.1)}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为区域，#{f\in C^1(\mathbb R)}。半线性反应扩散椭圆方程为 #{-\Delta u=f(u)}；[Laplace 算子](0U14)采用 #{\Delta=\sum_i\partial_i^2}，扩散项前有负号，反应项只依赖函数值。它是热方程 #{v_t-\Delta v=f(v)} 的定常方程。}
+\p{采用[散度型方程的弱解框架](4001)，令系数矩阵为单位阵、右端取 #{f(u)}：能量解要求 #{u\in H^1_{\mathrm{loc}}(\Omega)}、#{f(u)\in L^1_{\mathrm{loc}}(\Omega)}，并对每个 #{\varphi\in C_c^\infty(\Omega)} 满足 #{\int\nabla u\cdot\nabla\varphi=\int f(u)\varphi}。这里 #{H^1=W^{1,2}} 采用[弱导数定义](2J0C)；下标 loc 表示在每个紧包含的开子域上满足条件。全局有限能量另要求 #{u\in H^1(\Omega)}。}
+\p{零 Dirichlet 条件表示 #{u\in H^1_0(\Omega)}；在有界 Lipschitz 域上，对连续到闭域的 #{H^1} 函数，它等价于边界值为零。若边界光滑且 #{u\in C^1(\overline\Omega)}，零 Neumann 条件表示外法导数 #{\partial_\nu u=\nabla u\cdot\nu=0}；其弱形式允许边界不消失的测试函数。这两种问题的允许变分空间不同。[边界反应](420V)则把非线性移到边界，内部方程变成 #{\Delta u=0}。}

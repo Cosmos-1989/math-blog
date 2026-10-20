@@ -1,0 +1,13 @@
+\title{Dirichlet 粗粒化矩阵}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2，式 (2.14)}
+
+\p{设 #{U} 为立方体，#{a} 是[对称一致椭圆系数](4001)，#{p\in\mathbb R^d}，#{\ell_p(x)=p\cdot x}。定义矩阵 #{A(U)} 使}
+##{\frac 12p\cdot A(U)p=\min_{w\in\ell_p+H^1_0(U)}
+ |U|^{-1}\int_U\frac 12\nabla w\cdot a\nabla w.}
+\p{极小元记为 #{u_p}。[零边值 Poincaré](2J0D)使 #{B(h,\varphi)=\int_U\nabla\varphi\cdot a\nabla h} 在 #{H^1_0(U)} 上强制。[Lax–Milgram](4003)应用于 #{F(\varphi)=-\int_U\nabla\varphi\cdot ap}，给出唯一的 #{h_p=u_p-\ell_p}。}
+\p{#{h_p} 随 #{p} 线性变化，故极小值是二次型，定义对称矩阵 #{A(U)}。零边值函数的梯度积分为零：先对紧支光滑函数积分，再用 Sobolev 逼近。因此 #{(\nabla u_p)_U=p}，并且}
+##{p\cdot A(U)p=|U|^{-1}\int_U\nabla u_p\cdot a\nabla u_p\geq\lambda|p|^2.}
+\p{任意竞争者 #{u_p+h} 的能量等于 #{u_p} 的能量加 #{\frac 12|U|^{-1}\int_U\nabla h\cdot a\nabla h}，交叉项由弱方程消失。}

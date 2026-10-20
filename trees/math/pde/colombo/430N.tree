@@ -1,0 +1,12 @@
+\title{径向涡旋的角速度与模态方程}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，命题3.2；径向记号与线性化的直接计算}
+
+\p{在极坐标中令 #{e_\theta=(-\sin\theta,\cos\theta)} 为单位切向量，取 #{\bar u=r\zeta(r)e_\theta}，其中 #{\zeta} 选得此向量场在原点光滑。其角速度为 #{\zeta}，其[涡量](430H)为}
+##{\bar\omega(r)=\frac 1r\partial_r(r\bar u_\theta)=2\zeta(r)+r\zeta'(r).}
+\p{这也可由 #{\bar u=(-x_2\zeta(r),x_1\zeta(r))} 逐分量求旋度验证。若把切向速度本身记成 #{V(r)}，则正确表达式为 #{V'(r)+V(r)/r}。径向涡量沿圆周恒定，故 #{\bar u\cdot\nabla\bar\omega=0}；其稳态压力满足 #{p'(r)=r\zeta(r)^2}。}
+\p{取涡量线性扰动 #{e^{\lambda t+im\theta}\eta(r)}，#{m\ne 0}，其流函数为 #{e^{\lambda t+im\theta}\psi(r)}。[Biot–Savart 约定](430I)给出径向速度 #{-im\psi /r}，因此线性化方程是}
+##{(\lambda+im\zeta)\eta -\frac{im}{r}\bar\omega'\psi=0,\qquad\eta=\psi''+\frac 1r\psi'-\frac{m^2}{r^2}\psi.}
+\p{令 #{\lambda=-imc}，便得到 #{(\zeta -c)(\psi''+r^{-1}\psi'-m^2r^{-2}\psi)-r^{-1}\bar\omega'\psi=0}。原点的正则性、无穷远的衰减以及 #{\operatorname{Re}\lambda>0} 是寻找不稳定模时必须同时满足的条件；任意形式 ODE 解不自动给出可容许特征向量。}

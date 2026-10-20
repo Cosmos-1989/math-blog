@@ -1,0 +1,12 @@
+\title{平坦水面的 Dirichlet–Neumann 符号}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(0.5)；分离变量推导}
+
+\p{对[平坦自由边界](4102) #{\eta=0}，令 #{D=-i\partial_x}。则 #{G(0)} 是 [Fourier 乘子](0X09)，其第 #{j} 个符号为}
+##{q_h(j)=\begin{cases}|j|\tanh(h|j|),&0<h<\infty,\\ |j|,&h=\infty,\end{cases}\qquad q_h(0)=0.}
+\p{\strong{证明。}先对一个非零模态 #{\psi=e^{ijx}} 求解。写 #{\Phi=e^{ijx}a(y)}，调和方程变为 #{a''-j^2a=0}。有限深底部条件 #{a'(-h)=0} 排除以 #{y+h} 为中心的双曲正弦项，顶部条件 #{a(0)=1} 给出}
+##{a(y)=\frac{\cosh(|j|(y+h))}{\cosh(|j|h)},\qquad a'(0)=|j|\tanh(|j|h).}
+\p{无限深时衰减条件排除 #{e^{-|j|y}}，故 #{a(y)=e^{|j|y}}、#{a'(0)=|j|}。#{j=0} 时取常数延拓，法向导数为零。逐项相加证明三角多项式上的结论。}
+\p{由 #{0\le q_h(j)\le |j|}，在[周期 Sobolev 范数](4101)中有 #{\|G(0)f\|_{H^{s-1}}\le\|f\|_{H^s}}。三角多项式稠密，因此乘子公式唯一延拓到 #{H^s}。#{D\tanh(hD)} 与 #{|D|\tanh(h|D|)} 相等，因为 #{j\tanh(hj)} 为偶函数。}

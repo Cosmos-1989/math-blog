@@ -1,0 +1,14 @@
+\title{粗粒化 Caccioppoli 不等式}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，命题 2.3；研究论文命题 2.5}
+
+\p{设 #{d\geq 2}，#{u\in\mathcal A(Q_m)}，#{s,t\in(0,1)} 且 #{\eta=1-s-t>0}。设[粗粒化常数](400F)有限且正。Armstrong–Kuusi 的估计为}
+##{\|a^{1/2}\nabla u\|_{\underline L^2(Q_{m-1})}^2
+ \leq\left(\frac{C(d)}{\eta}\right)^{2+4s/\eta}
+ \left(\frac{\Lambda_{s,1}(Q_m)}{\lambda_{t,1}(Q_m)}\right)^{s/\eta}
+ \Lambda_{s,1}(Q_m)3^{-2m}\|u\|_{\underline L^2(Q_m)}^2.}
+\p{这里可先取[一致椭圆弱解](4001)；扩展到[加权能量空间](400L)时，测试函数的合法性也是定理的一部分。此定理引用报告命题 2.3 及研究论文 arXiv:2405.10732v3 命题 2.5。}
+\p{\strong{论证结构。}从[经典测试恒等式](400H)出发，在介于截断宽度和观测尺度之间的小块上，把 #{u} 分为均值与振荡。均值部分用通量的负范数估计，振荡部分用 [Besov 对偶与乘子估计](4016)及[粗粒化 Poincaré 估计](400G)。}
+\p{尺度归一为 #{m=0} 后，设截断宽度约为 #{3^{-k}}、小块边长为 #{3^{-h}}。振荡项的系数包含 #{C3^{k-\eta h}(\Lambda_{s,1}/\lambda_{t,1})^{1/2}/(s(1-s))}。选择 #{h} 使其不超过 #{1/4}，再用 Young 不等式吸收均值项中的能量平方根。随后在嵌套内部块之间迭代，产生所示的对比度指数。完整的中尺度估计与内部迭代见所引命题的证明。}

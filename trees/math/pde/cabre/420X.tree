@@ -1,0 +1,10 @@
+\title{两个边界跳点的重整化能量}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，式(4.5)；Cabré–Cónsul–Kurzke 手稿}
+
+\p{设 #{\Omega\subset\mathbb R^2} 为光滑、有界、单连通区域，#{p\ne q\in\partial\Omega}。沿逆时针从 #{p} 到 #{q} 的边界弧上置 #{\chi^{p,q}=-1}，另一弧上置 #{+1}，两个端点的取值不影响积分。令 #{u_0^{p,q}} 为该有界边界函数的[调和延拓](270F)，并令 #{\Omega_\rho=\Omega\setminus(B_\rho(p)\cup B_\rho(q))}。定义}
+##{W_\Omega(p,q)=\lim_{\rho\downarrow 0}\left(\frac 12\int_{\Omega_\rho}|\nabla u_0^{p,q}|^2-\frac 4\pi\log\frac 1\rho\right).}
+\p{极限存在及余项 #{O(\rho)} 是报告式(4.5)所引用手稿的结论。其定义域是互异的边界点对，排除对角线。边界数据有[跳跃发散](420W)，故不能省去减项而把 #{u_0^{p,q}} 当作有限能量极小者。}
+\p{\strong{对数系数。}平坦边界附近的半平面跳跃延拓在极坐标中为 #{U(r,\theta)=1-2\theta /\pi}，#{0<\theta<\pi}。于是 #{|\nabla U|=2/(\pi r)}，单个跳点的截断能量为 #{\tfrac 12\int_\rho^R\int_0^\pi 4 /(\pi^2r^2)\,r\,d\theta dr=(2/\pi)\log(R/\rho)}。两个跳点因此给出 #{4/\pi}。有限余项记录域形状与跳点位置的相互作用。}

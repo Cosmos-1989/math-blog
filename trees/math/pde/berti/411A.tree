@@ -1,0 +1,13 @@
+\title{平水面移动坐标中的 Bloch 谱}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，§3 的未扰动谱；二阶矩阵计算}
+
+\p{取 #{g=1}、#{\kappa=\gamma=0}，水深 #{h\in\lparen 0,\infty\rbrack}，以[基波线性速度](4118) #{c_h} 移动。[Bloch 纤维](4119)在线性平水面处的第 #{j} 个 Fourier 模态矩阵为}
+##{A_h(k)=\begin{pmatrix}ic_hk&q_h(k)\\-1&ic_hk\end{pmatrix},\qquad k=j+\mu,\quad q_h(k)=|k|\tanh(h|k|),}
+\p{无限深取 #{q_\infty(k)=|k|}。其特征值为}
+##{\lambda_j^\sigma(\mu)=i\left(c_h(j+\mu)-\sigma\sqrt{q_h(j+\mu)}\right),\qquad\sigma\in\{-1,1\}.}
+\p{\strong{证明。}计算 #{\det(A_h(k)-\lambda I)=(ic_hk-\lambda)^2+q_h(k)}。两根如上，均为纯虚数。#{\mu=0} 时，#{j=0} 给矩阵 #{\left(\begin{smallmatrix}0&0\\-1&0\end{smallmatrix}\right)}，零特征值的代数重数二、几何重数一。#{j=1,\sigma=1} 和 #{j=-1,\sigma=-1} 再各贡献一个零根。}
+\p{没有其他零根：对 #{r>0}，#{\tanh(hr)/r} 严格递减，因为其导数的符号等于 #{hr\operatorname{sech}^2(hr)-\tanh(hr)<0}；后一不等式由 #{\sinh(2z)>2z}，#{z>0}，得到。因此 #{c_h^2r^2=r\tanh(hr)} 仅在正整数 #{r=1} 成立；无限深直接由 #{r^2=r} 得到。零特征值总代数重数恰为四。}
+\p{谱问题这里在完整周期扰动空间中保留零模态。用于构造特定水波轨道的[零均值相空间](4101)与这一谱计算的空间应分别注明，不能先删去零模态再沿用四维重数。}

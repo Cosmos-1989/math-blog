@@ -1,0 +1,13 @@
+\title{Benjamin–Feir 首阶模型的最大增长率}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(3.7) 首项；矩阵与极值计算}
+
+\p{固定 #{\varepsilon>0}，考虑二阶复矩阵模型}
+##{A(\mu,\varepsilon)=\frac{i\mu}{2}I+\begin{pmatrix}0&-\mu^2/8\\-\varepsilon^2+\mu^2/8&0\end{pmatrix},\qquad \mu\ge 0.}
+\p{它保留[Benjamin–Feir 谱展开](411C)的最低阶项。减去标量对角部分后，特征方程为 #{(\lambda -i\mu /2)^2=(\mu^2/64)(8\varepsilon^2-\mu^2)}。因此 #{0<\mu<2\sqrt 2\varepsilon} 时恰有一个正实部特征值，增长率为 #{r(\mu)=\mu\sqrt{8\varepsilon^2-\mu^2}/8}。}
+\p{\strong{最大值。}令 #{q=\mu^2}，则}
+##{r(\mu)^2=\frac{q(8\varepsilon^2-q)}{64}=\frac{16\varepsilon^4-(q-4\varepsilon^2)^2}{64}.}
+\p{最大值在 #{q=4\varepsilon^2}，即 #{\mu=2\varepsilon} 取得，且 #{r_{\max}=\varepsilon^2/2}。端点 #{\mu=0,2\sqrt 2\varepsilon} 的实部均为零。}
+\p{这项计算适用于显示的矩阵模型。完整水波谱的最大实部满足 #{\max\operatorname{Re}\lambda\sim\varepsilon^2/2}，还须使用定理对余项的一致控制。对 #{2\pi N} 周期扰动，[Floquet 网格](4119)只取 #{m/N}；例如 #{1/N<\mu_*(\varepsilon)} 足以保证网格命中深水的不稳定区间。}

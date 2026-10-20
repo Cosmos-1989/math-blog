@@ -1,0 +1,14 @@
+\title{有限块响应误差的概率界}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2 与定理 3.1}
+
+\p{采用[标量平均响应](400O)，固定尺度 #{n}。若 #{\theta_n\leq 1+\sigma}，则对任意 #{t>0}，}
+##{\mathbb P\left(\|A(Q_n)-A_*(Q_n)\|>t\alpha_n\right)
+ \leq\frac{d\sigma}{t}.}
+\p{\strong{证明。}由[矩阵次序](400A)，#{D=A-A_*\succeq 0}，故 #{\|D\|\leq\operatorname{tr}D}。逆矩阵的期望满足 #{\mathbb EA_*\succeq(\mathbb EB)^{-1}=\beta_n^{-1}I}，从而}
+##{\mathbb E\|D\|\leq d(\alpha_n-\beta_n^{-1})
+ =d\alpha_n(1-\theta_n^{-1})\leq d\alpha_n\sigma.}
+\p{由[期望](00L1)的定义，对非负随机变量 #{Z}，#{\mathbb EZ\geq u\,\mathbb P(Z>u)}，应用于 #{Z=\|D\|,u=t\alpha_n} 得到概率界。在好事件上，[平均响应误差](400C)至多为 #{(t\alpha_n)^{1/2}E_{Q_n}(w)^{1/2}}。}
+\p{有限个 #{M} 块同时满足响应误差界，可用并集界把失败概率改为 #{Md\sigma /t}。此推论只控制所选有限块；无限空间中的共同随机最小尺度需要更强尾估计。}

@@ -1,0 +1,10 @@
+\title{环带吸收不等式推出幂次衰减}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3.3；迭代的直接证明}
+
+\p{设 #{E:\lparen 0,R\rbrack\to\lbrack 0,\infty\rparen} 非减，且存在 #{C>0} 使 #{E(r/2)\le C(E(r)-E(r/2))} 对 #{0<r\le R} 成立。令 #{\theta=C/(1+C)<1}、#{\beta=-\log_2\theta>0}，则}
+##{E(r)\le 2^\beta(r/R)^\beta E(R)\qquad(0<r\le R).}
+\p{\strong{证明。}将右端的 #{CE(r/2)} 移项得 #{E(r/2)\le\theta E(r)}，故 #{E(2^{-k}R)\le\theta^kE(R)}。选 #{k} 使 #{2^{-k-1}R<r\le 2^{-k}R}；由单调性及 #{\theta^k=(2^{-k})^\beta} 即得结论。}
+\p{对稳定解，可取加权径向能量 #{E(r)=\int_{B_r}|x|^{2-n}u_r^2}。但[最初的加权估计](420F)右端是全梯度，需先用[梯度估计](420H)及[径向 Poincaré](420J)把它替换成环带径向能量，才符合本引理。由所有中心上的衰减到函数 Hölder 正则性的分析属于[内部定理](420B)所引证明。}

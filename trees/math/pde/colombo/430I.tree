@@ -1,0 +1,11 @@
+\title{二维 Biot–Savart 定律与有限能量条件}
+\date{2026-10-20}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，式(1.11)；Vishik 论述本第1章}
+
+\p{在 #{\mathbb R^2}，约定 #{x^\perp=(-x_2,x_1)}。涡量恢复速度的 Biot–Savart 算子为}
+##{K(x)=\frac 1{2\pi}\frac{x^\perp}{|x|^2},\qquad u(x)=(K*\omega)(x)=\int_{\mathbb R^2}K(x-y)\omega(y)\,dy.}
+\p{若 #{\omega} 光滑紧支撑，该积分在核的局部可积奇性下有意义。它等于 #{\nabla^\perp\psi}，其中 #{\psi=(2\pi)^{-1}\log|\cdot|*\omega}。利用 #{\Delta((2\pi)^{-1}\log|x|)=\delta_0} 的分布基本解恒等式，其中零点 Dirac 分布满足 #{\delta_0(\phi)=\phi(0)}，得 #{\operatorname{curl}u=\omega}、#{\operatorname{div}u=0}，符号与[旋度约定](4301)一致。基本解恒等式可由小圆通量 #{(2\pi r)^{-1}2\pi r=1} 和圆外调和性验证。}
+\p{有限动能需要单独要求 #{K*\omega\in L^2}。[Fourier 变换](0H4G)与[Plancherel 定理](0W01)给出等价条件 #{\int|\widehat\omega(k)|^2|k|^{-2}\,dk<\infty}，记作 #{\omega\in\dot H^{-1}}。这一定义特别控制低频。}
+\p{设紧支撑涡量的总环量 #{\Gamma=\int\omega\ne 0}。在大半径处对核作一阶展开，#{u(x)=\Gamma K(x)+O(|x|^{-2})}，因为 #{|\nabla K(x)|\leq C|x|^{-2}} 且 #{\int|y\omega(y)|<\infty}。主项的能量尾部正比于 #{\int_R^\infty r^{-2}r\,dr=\infty}。因此连光滑紧支撑的 #{L^1\cap L^\infty} 涡量也未必对应有限能量速度。}

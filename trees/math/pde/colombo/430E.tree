@@ -1,0 +1,11 @@
+\title{不稳定特征模在无限远过去衰减}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，式(2.7)–(2.9)；实部范数的直接检验}
+
+\p{设实系数线性算子 #{L} 的复化有非零[特征向量](0F0B) #{\eta}，#{L\eta=\lambda\eta}，#{\lambda=a+ib}、#{a>0}。其中范数采用 [Sobolev 空间](130F)的定义。在适当定义域上，这给出[谱](0GSQ)中的不稳定特征值。则 #{v(\tau)=\operatorname{Re}(e^{\lambda\tau}\eta)} 解 #{\partial_\tau v=Lv}，并有}
+##{\|v(\tau)\|_{H^k}\leq e^{a\tau}\|\eta\|_{H^k}.}
+\p{\strong{证明。}微分 #{e^{\lambda\tau}\eta} 得 #{\lambda e^{\lambda\tau}\eta=L(e^{\lambda\tau}\eta)}；取实部与实系数算子交换。取实部是范数不增映射，得到上界。#{a>0} 使此上界在 #{\tau\to -\infty} 趋于零。}
+\p{若 #{b\ne 0}，写 #{\eta=A+iB}，则 #{v=e^{a\tau}(\cos(b\tau)A-\sin(b\tau)B)}。#{A,B} 在实空间上线性无关，否则一个实直线将承载非实特征值，矛盾。单位圆的紧性于是给出常数 #{c,C>0}，使 #{ce^{a\tau}\leq\|v(\tau)\|_{H^k}\leq Ce^{a\tau}}。若 #{b=0}，选择非零实特征向量即可得到等式。一般复模取实部时，范数没有固定为 #{e^{a\tau}\|\eta\|} 的理由。}
+\p{对[自相似 NS](430D)，这样的模在正向 #{\tau} 增长，在 #{t=e^\tau\downarrow 0} 却趋于背景。要得到不同的非线性解，还需要控制二次余项。}

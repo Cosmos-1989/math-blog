@@ -1,0 +1,13 @@
+\title{准周期微分方程的小除数与 Melnikov 条件}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(1.5)–(1.7)；Fourier 计算}
+
+\p{设 #{\omega\in\mathbb R^\nu}，#{v>0}，#{\tau>\nu -1}，满足连续时间丢番图条件 #{|\omega\cdot\ell|\ge v|\ell|^{-\tau}}，#{\ell\ne 0}。它控制[准周期流](4108)的微分算子；[联合平移的丢番图条件](3414)则控制离散差分，二者分母不同。}
+\p{对零均值 #{f\in H^{s+\tau}(\mathbb T^\nu)}，方程 #{\omega\cdot\partial_\varphi w=f} 有唯一零均值解，且}
+##{w_\ell=\frac{f_\ell}{i\omega\cdot\ell}\quad(\ell\ne 0),\qquad \|w\|_{H^s}\le v^{-1}\|f\|_{H^{s+\tau}}.}
+\p{\strong{证明。}将 Fourier 级数代入方程得到逐模态关系；分母非零给出唯一候选。乘上[周期 Sobolev 权重](4101)并平方求和得到估计，因而级数定义所需的解。零模态由归一化固定。这个计算与[平移上同调估计](3415)体现相同的固定导数损失机制。}
+\p{水波还有无限多个法向频率 #{\mu_j}。逆线性算子和共轭方程分别出现 #{\omega\cdot\ell+\mu_j}、#{\omega\cdot\ell+\mu_j-\mu_k}。纯重力驻波证明采用弱的第二 Melnikov 下界}
+##{|\omega\cdot\ell+\mu_j-\mu_k|\ge v j^{-d}k^{-d}\langle\ell\rangle^{-\tau},\qquad (\ell,j,k)\ne(0,j,j),}
+\p{其中 #{d>0}，#{j,k} 为切向模态集合之外的正整数。因为 #{\sqrt{j+1}-\sqrt j=1/(\sqrt{j+1}+\sqrt j)\to 0}，不能要求所有法向频率差一致远离零。上述下界是研究定理构造中施加的参数条件；单个 Fourier 方程的求解不包含非线性水波环面的存在证明。}

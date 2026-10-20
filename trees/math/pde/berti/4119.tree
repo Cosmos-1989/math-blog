@@ -1,0 +1,10 @@
+\title{Bloch 波与大周期扰动的 Floquet 参数}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(3.2)–(3.4)；周期条件计算}
+
+\p{设 #{L} 是具有 #{2\pi} 周期系数的线性算子，例如[Stokes 波](4118)在移动坐标中的线性化。对实数 #{\mu} 定义周期纤维算子 #{L_\mu=e^{-i\mu x}Le^{i\mu x}}。Bloch 波为 #{e^{i\mu x}v(x)}，其中 #{v} 为 #{2\pi} 周期函数；#{\mu} 称 Floquet 参数。}
+\p{乘积求导给出 #{e^{-i\mu x}\partial_xe^{i\mu x}=\partial_x+i\mu}，所以 Fourier 乘子 #{m(D)} 化为 #{m(D+\mu)}。又 #{L_{\mu+k}=e^{-ikx}L_\mu e^{ikx}}，#{k\in\mathbb Z}，乘子 #{e^{ikx}} 保持周期函数空间，故各纤维的[谱](0GSQ)以一为周期，可取 #{\mu\in\lbrack -1 /2,1/2\rparen}。}
+\p{若 #{L_\mu v=\lambda v}，则 #{e^{\lambda t}e^{i\mu x}v(x)} 解线性演化，#{\operatorname{Re}\lambda>0} 给出指数增长。单个 Bloch 波一般不属于 #{L^2(\mathbb R)}；全直线谱由 Bloch 直接积分理论描述。在水波算子的定义域与闭性条件下，所引结果给出 #{\sigma_{L^2(\mathbb R)}(L)=\bigcup_\mu\sigma_{L^2(\mathbb T)}(L_\mu)}。}
+\p{\strong{大周期采样。}对整数 #{N\ge 1}，有 #{e^{i\mu(x+2\pi N)}v(x+2\pi N)=e^{2\pi iN\mu}e^{i\mu x}v(x)}。非零 Bloch 波具有 #{2\pi N} 周期，当且仅当 #{N\mu\in\mathbb Z}。所以大周期扰动只采样 #{\mu=m/N\bmod 1}；原周期扰动对应 #{\mu=0}。实轴上的不稳定区间未必被某个固定小 #{N} 的网格命中。}

@@ -1,0 +1,13 @@
+\title{涡量参数族中的准周期重力行波}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，定理 1.3；Berti–Franzoi–Maspero，CPAM 77 (2024)，990–1064}
+
+\p{固定水深 #{h\in\lparen 0,\infty\rbrack}，归一化重力 #{g=1}，令表面张力 #{\kappa=0}。选 #{1\le n_1<\cdots<n_\nu} 和符号 #{\sigma_a\in\{-1,1\}}，记 #{j_a=\sigma_an_a}；再固定涡量区间 #{\lbrack\gamma_1,\gamma_2\rbrack}，#{\gamma_1<\gamma_2}。存在 #{\bar s>0}、#{\varepsilon_0>0}，使每个足够小的正振幅参数向量 #{\xi} 对应 Borel 集 #{\mathcal G_\xi}，满足}
+##{\mathcal G_\xi\subset\lbrack\gamma_1,\gamma_2\rbrack,\qquad \lim_{\xi\to 0}|\mathcal G_\xi|=\gamma_2-\gamma_1.}
+\p{对每个 #{\gamma\in\mathcal G_\xi}，[水波方程](4104)具有[准周期行波](410C) #{U(\omega t-\vec jx)}，其中 #{U\in H^{\bar s}(\mathbb T^\nu;\mathbb R^2)}。写 #{U=U_L+\breve r}，以[线性方程确定的正弦符号](4128)规定}
+##{U_L(\theta)=\sum_{a=1}^\nu\sqrt{\xi_{j_a}}\binom{M_{j_a}\cos\theta_a}{-\bigl(M_{j_a}^{-1}+\gamma M_{j_a}/(2j_a)\bigr)\sin\theta_a},\qquad M_j=\left(\frac{q_h(j)}{1+\gamma^2q_h(j)/(4j^2)}\right)^{1/4}.}
+\p{余项满足 #{\|\breve r\|_{H^{\bar s}}/\sqrt{|\xi|}\to 0}。频率向量满足[丢番图条件](410A)，且 #{\omega\to(\Omega(j_a))_{a=1}^\nu}，#{\Omega} 取[带涡量的色散关系](4107)。正参数向量的范围为 #{|\xi|\le\varepsilon_0^2}。}
+\p{这些环面在同空间周期的法向线性动力学中稳定。#{|j_a|} 两两不同是模态选择条件；参数排除发生在涡量上，并未要求水深属于渐近满测集。固定 #{\gamma=0} 的点不能仅由这个测度结论选出。无旋无限深通过弱 Birkhoff 正规形筛选初值的另一个 KAM 结果，属于原文文献 48 的不同参数机制。}
+\p{存在、正则性及稳定性采用所引定理 1.3。显示的线性首项固定 #{\theta=\omega t-\vec jx}，其系数由两条线性方程同时确定。研究证明的逆算子与参数测度部分见[可约化结构](410E)。}

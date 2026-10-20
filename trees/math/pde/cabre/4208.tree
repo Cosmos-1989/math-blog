@@ -1,0 +1,16 @@
+\title{欧氏 Hardy 不等式及其最优常数}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3.1、脚注3；平方展开与截断证明}
+
+\p{设 #{n\ge 3}，#{\xi\in C_c^\infty(\mathbb R^n)}。则}
+##{\frac{(n-2)^2}{4}\int_{\mathbb R^n}\frac{\xi^2}{|x|^2}\,dx\le\int_{\mathbb R^n}|\nabla\xi|^2\,dx.}
+\p{\strong{平方展开。}先假设支撑避开原点，令 #{a=(n-2)/2}。由 #{\operatorname{div}(x/|x|^2)=(n-2)/|x|^2} 及[分部积分](0U14)，}
+##{0\le\int\left|\nabla\xi+a\frac{x}{|x|^2}\xi\right|^2
+=\int|\nabla\xi|^2-\frac{(n-2)^2}{4}\int\frac{\xi^2}{|x|^2}.}
+\p{一般光滑 #{\xi} 乘以径向截断，使其在 #{B_\delta} 内为零、在 #{\mathbb R^n\setminus B_{2\delta}} 上不变。新增梯度项的平方积分为 #{O(\delta^{n-2})}，加权函数平方的删去部分也为 #{O(\delta^{n-2})}，故 #{\delta\downarrow 0} 给出结论。依[零边值 Sobolev 空间](2J0C)的稠密定义，该式延拓到 #{H^1_0(B_1)}。}
+\p{\strong{最优性。}取非零 #{\chi\in C_c^\infty((1,2))}，令 #{\xi_T(r)=r^{-a}\chi((-\log r)/T)}，#{T>1}。它支撑在 #{e^{-2T}<r<e^{-T}}。置 #{s=-\log r}，径向积分中有}
+##{\frac{\int|\nabla\xi_T|^2}{\int r^{-2}\xi_T^2}
+=a^2+\frac{1}{T^2}\frac{\int|\chi'|^2}{\int\chi^2}.}
+\p{交叉项是 #{\int(\chi^2)'=0}；令 #{T\to\infty} 得到任意更大常数都会失败，且反例可支撑在单位球内部。}

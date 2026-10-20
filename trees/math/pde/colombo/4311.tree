@@ -1,0 +1,13 @@
+\title{Euler 自相似尺度中的黏性初始层}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§6；Albritton–Colombo–Mescolini v1 PDF，§1.2–1.3}
+
+\p{固定 #{0<\alpha<1}，使用[二维 Euler 自相似变量](430L)。加入黏性 #{\nu>0} 后，速度方程化为}
+##{\partial_\tau U+(\alpha^{-1}-1)U-\alpha^{-1}\xi\cdot\nabla U+U\cdot\nabla U+\nabla P=\nu e^{-\gamma\tau}\Delta U+F,\qquad\gamma=2/\alpha -1.}
+\p{\strong{计算。}#{u=t^{1/\alpha -1}U} 的时间与对流项都乘 #{t^{1/\alpha -2}}；#{\nu\Delta u} 则乘 #{\nu t^{-1/\alpha -1}}，比值为 #{\nu t^{1-2/\alpha}=\nu e^{-\gamma\tau}}。因此黏性与自相似项平衡的时间是 #{T_\nu=\nu^{1/\gamma}}，相应长度为 #{L_\nu=\nu^{1/(2-\alpha)}}。#{t\ll T_\nu} 时黏性系数大，#{t\gg T_\nu} 时小。}
+\p{对 #{s>0} 定义无量纲初值范数}
+##{\|v\|_{Y_\nu}=L_\nu^{\alpha+s}\|v\|_{\dot H^{2+s}}+L_\nu^{\alpha -2}\|v\|_2.}
+\p{齐次 [Sobolev 范数](130F)在此指 #{\|v\|_{\dot H^r}^2=(2\pi)^{-2}\int|k|^{2r}|\widehat v(k)|^2dk}。若 #{v^\nu(x)=L_\nu^{1-\alpha}v(x/L_\nu)}，Fourier 换元给出 #{\|v^\nu\|_{\dot H^{2+s}}=L_\nu^{-\alpha -s}\|v\|_{\dot H^{2+s}}} 及 #{\|v^\nu\|_2=L_\nu^{2-\alpha}\|v\|_2}，故 #{\|v^\nu\|_{Y_\nu}=\|v\|_{Y_1}}。}
+\p{若不稳定模按 #{t^a} 增长，则在过渡时间的大小为 #{T_\nu^a=\nu^{a/\gamma}}，提示指数 #{\kappa_c=a/\gamma}。这个尺度计算尚未控制真实初始层中扰动的演化；阈值的充分性需要研究定理。}

@@ -1,0 +1,11 @@
+\title{不可压缩方程的无散度测试弱形式}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.4；由 E/NS 分部积分}
+
+\p{设 #{u\in L^2_{\mathrm{loc}}}、#{f\in L^1_{\mathrm{loc}}}，#{u_0} 局部可积。这里局部可积指每个紧集上的 [Lebesgue 积分](00Q5)有限。称 #{u} 满足[不可压缩方程](4302)的无散度测试弱形式，若 #{\int u\cdot\nabla\chi=0} 对每个紧支撑光滑标量测试函数成立，且对每个 #{\phi\in C_c^\infty(\mathbb R^d\times\lbrack 0,T\rparen;\mathbb R^d)}、#{\operatorname{div}\phi=0} 有}
+##{\int_0^T\int_{\mathbb R^d}\bigl(u\cdot\partial_t\phi+(u\otimes u):\nabla\phi+\nu u\cdot\Delta\phi+f\cdot\phi\bigr)\,dx\,dt+\int_{\mathbb R^d}u_0\cdot\phi(x,0)\,dx=0.}
+\p{其中 #{C_c^\infty} 表示光滑且支撑为紧集，测试函数在 #{t=T} 附近为零，但在 #{t=0} 可以非零。矩阵配对采用[张量散度约定](4301)。在环面上以周期光滑测试函数代替空间紧支撑条件。}
+\p{\strong{经典解的推导。}把方程乘 #{\phi} 积分。时间分部积分给出 #{-\int u\cdot\partial_t\phi -\int u_0\cdot\phi(0)}；无散度条件给出 #{\int(u\cdot\nabla)u\cdot\phi=-\int(u\otimes u):\nabla\phi}。对 Laplace 项分部积分两次，得 #{-\nu\int u\cdot\Delta\phi}；压力项等于 #{-\int p\operatorname{div}\phi=0}。移项再乘 #{-1} 就得到显示式。它沿用[弱导数](2J0C)的思想，将导数放到测试函数上。}
+\p{上述测试消去压力。在要求完整分布方程的解类中，另要求存在压力使动量方程对任意向量测试函数成立；压力重构所需的函数空间条件须单独核对。}

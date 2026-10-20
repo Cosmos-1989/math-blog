@@ -1,0 +1,17 @@
+\title{几何平均归一化平衡梯度与通量}
+\date{2026-10-20}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.6 的几何平均归一化}
+
+\p{在[平均响应模型](400O)中，固定尺度 #{m}，写 #{\alpha=\alpha_m,\beta=\beta_m,\theta=\alpha\beta}，令 #{\mu=(\alpha /\beta)^{1/2}}。对单位向量 #{e} 取}
+##{p=\mu^{-1/2}e,\quad q=\mu^{1/2}e,\quad
+p_0=\beta q-p=\mu^{-1/2}(\sqrt\theta -1)e,\quad
+q_0=q-\alpha p=-\mu^{1/2}(\sqrt\theta -1)e.}
+\p{因而 #{q_0=-\mu p_0}。定义中心化泛函 #{\widetilde J=J(Q_m,p,q)-\frac 12p_0\cdot q_0}。[联合二次公式](4007)与期望给出}
+##{\mathbb EJ(Q_m,p,q)=\sqrt\theta -1,\qquad
+ \mathbb E\widetilde J=\frac 12(\theta -1).}
+\p{第二式由 #{p_0\cdot q_0=-(\sqrt\theta -1)^2} 得到。若窗口满足 #{\alpha_0\leq(1+\delta)\alpha_m}、#{\beta_0\leq(1+\delta)\beta_m}，记 #{\tau_{m,j}(p,q)=\mathbb EJ(Q_j,p,q)-\mathbb EJ(Q_m,p,q)}，则对 #{0\leq j\leq m} 有}
+##{\mathbb EJ(Q_j,p,q)\leq(1+\delta)\sqrt{\theta_0},\qquad
+ \tau_{m,j}(p,q)\leq\delta\sqrt{\theta_0}.}
+\p{将 #{\mu^{-1}\alpha_j} 与 #{\mu\beta_j} 分别用对应的窗口上界控制，均不超过 #{(1+\delta)\sqrt{\theta_m}}；其差同理。选几何平均可使这两个量平衡，避免额外损失一个微观对比度因子。}

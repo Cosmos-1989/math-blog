@@ -1,0 +1,9 @@
+\title{径向导数不能控制任意函数的角向振荡}
+\date{2026-10-20}
+\taxon{Example}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3.4}
+
+\p{设 #{n\ge 2}，取 #{\varphi\in C^\infty(\lbrack 0,\infty\rparen)}，在 #{\lbrack 0,1/4\rbrack} 上为零、在 #{\lbrack 1 /2,\infty\rparen} 上为一。对 #{0<\varepsilon<1} 定义 #{u_\varepsilon(x)=\varphi(|x|/\varepsilon)x_n/|x|}，原点附近置零。它在闭球上光滑，却不满足统一的[径向 Poincaré 估计](420J)。}
+\p{\strong{计算。}沿固定方向 #{\sigma} 有 #{u_{\varepsilon,r}=\varepsilon^{-1}\varphi'(r/\varepsilon)\sigma_n}，支撑在 #{\varepsilon /4<r<\varepsilon /2}。换元 #{r=\varepsilon t} 得 #{\|u_{\varepsilon,r}\|_{L^1(B_1)}\le C\varepsilon^{n-1}\to 0}。在环带 #{A=B_1\setminus\overline B_{1/2}} 上，径向导数恒为零。}
+\p{由于关于 #{x_n} 的奇性，球和环带上的平均值都为零，而 #{\int_A|u_\varepsilon|=\int_{1/2}^1r^{n-1}dr\int_{S^{n-1}}|\sigma_n|d\sigma>0} 与 #{\varepsilon} 无关。因此球上及环带上的估计都失败。[超调和性](420I)正是排除这种角向自由度的方程条件。}

@@ -1,0 +1,11 @@
+\title{带常涡量的周期自由表面方程}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(0.2)–(0.3)}
+
+\p{考虑二维不可压、无黏流体，水平变量 #{x\in\mathbb T}，平底水深 #{h\in\lparen 0,\infty\rbrack}。重力 #{g>0}，表面张力 #{\kappa\ge 0}，常涡量 #{\gamma\in\mathbb R}。速度写为 #{(u,v)=(-\gamma y,0)+\nabla\Phi}，其中 #{\Phi} 调和，于是 #{u_x+v_y=0}、#{v_x-u_y=\gamma}。未知量为水面 #{\eta} 和表面势 #{\psi=\Phi|_{y=\eta}}。}
+\p{用[Dirichlet–Neumann 算子](4102)消去内部势，Zakharov–Craig–Sulem 方程的常涡量形式为}
+##{\begin{aligned}\eta_t&=G(\eta)\psi+\gamma\eta\eta_x,\\ \psi_t&=-g\eta -\frac{\psi_x^2}{2}+\frac{(\eta_x\psi_x+G(\eta)\psi)^2}{2(1+\eta_x^2)}+\kappa\partial_x\left(\frac{\eta_x}{\sqrt{1+\eta_x^2}}\right)\\ &\quad+\gamma\eta\psi_x+\gamma\partial_x^{-1}G(\eta)\psi.\end{aligned}}
+\p{第一式是表面随流体运动的运动学条件，第二式来自表面压强平衡。#{\kappa=0} 称纯重力情形，#{\gamma=0} 称无旋情形。势函数方程在模常数空间中理解；#{\partial_x^{-1}} 取[零均值逆导数](4101)。}
+\p{由 #{G(\eta)1=0} 及其对称性，#{\int G(\eta)\psi\,dx=0}；又 #{\int\eta\eta_x\,dx=0}。因此 #{\int\eta\,dx} 守恒，可固定 #{\eta} 的均值为零。未知水面出现在算子系数中，且方程包含最高阶导数的非线性作用，这是自由边界拟线性问题。}

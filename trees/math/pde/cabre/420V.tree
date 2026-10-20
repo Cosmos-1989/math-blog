@@ -1,0 +1,13 @@
+\title{边界双阱反应的一阶方程与稳定性}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§4.2，式(4.3)–(4.4)}
+
+\p{设 #{\Omega\subset\mathbb R^2} 为光滑有界域，#{\varepsilon>0}，#{u\in C^2(\overline\Omega)}。定义}
+##{E_\varepsilon(u)=\frac 12\int_\Omega|\nabla u|^2dx+\frac 1{4\varepsilon}\int_{\partial\Omega}(1-u^2)^2d\ell.}
+\p{允许全部 #{\xi\in C^1(\overline\Omega)} 扰动时，临界方程及稳定性条件分别是}
+##{\Delta u=0\ \text{于 }\Omega,\qquad\partial_\nu u=\varepsilon^{-1}(u-u^3)\ \text{于 }\partial\Omega,}
+##{Q^{\partial}_u(\xi)=\int_\Omega|\nabla\xi|^2+\varepsilon^{-1}\int_{\partial\Omega}(3u^2-1)\xi^2\ge 0.}
+\p{\strong{证明。}边界势的一阶导数是 #{\varepsilon^{-1}(u^3-u)\xi}，二阶导数是 #{\varepsilon^{-1}(3u^2-1)\xi^2}。动能项[分部积分](0U14)为 #{-\int\Delta u\xi+\int_{\partial\Omega}\partial_\nu u\xi}。先选内部紧支撑扰动得到调和性，再让边界值任意变化得到边界方程。再次微分即得二次型。}
+\p{反应势作用在边界，内部函数[调和](270F)。这与[内部反应的零 Neumann 问题](420T)不同：边界法向导数通常非零，线性化势也从体积分变成边界积分。对有限能量弱形式，使用 [H1 迹定理](421B)；在平面光滑域中，边界 #{H^{1/2}} 的临界 Sobolev 嵌入给出每个有限指数的边界 #{L^p} 可积性，四次势能有意义。}

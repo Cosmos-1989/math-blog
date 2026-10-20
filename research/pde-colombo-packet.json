@@ -1,0 +1,1171 @@
+{
+  "date": "2026-10-20",
+  "report": {
+    "speaker": "Maria Colombo",
+    "prefix": "43",
+    "outline": "4300",
+    "reference": "icm2026-colombo",
+    "title": "Instability and Non uniqueness for the Euler and Navier–Stokes Equations",
+    "outline_title": "流体方程的非唯一性：自相似不稳定、解类与黏性极限",
+    "doi": "10.1137/25M1807010",
+    "pages": "249-263",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1807010",
+    "version_url": "https://epubs.siam.org/doi/10.1137/25M1807010",
+    "version_role": "Official published ICM2026 Volume5:Invited Lectures(Sections9-11),Section10,chapter4. DOI verified from official chapter, not inferred from book DOI.",
+    "book_url": "https://epubs.siam.org/doi/book/10.1137/1.9781611978698",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright2026 International Mathematical Union. Chinese reorganization and corrections attributed in icm2026-colombo; no figures copied.",
+    "question": "在共同初值与外力下，自相似不稳定怎样在能量解类中产生分离轨道，凸积分怎样改变允许的正则性，而消失黏性又能否从这些Euler弱解中选出唯一极限？",
+    "reading_scope": "Read the full official mathematical HTML §§1-6, named statements, displayed formulas exposed as text, captions1-3, acknowledgments, bibliography1-71 and publication/license metadata. Official PDF request failed. No full-PDF or figure-pixel review claimed. Supplementary source reading is selective and version-pinned in source_records. Main-thread independent reviews are separately reported, not counted as this agent's source reading.",
+    "coverage_status": "43 atomic pages (4301-430Z,4310-4317), narrative4300 and reference. All six report sections have explicit coverage records; main theorems1.2,2.1-2.4,3.1,Proposition3.2,Theorems5.1-5.3,6.1 are represented with scope corrections. This is not a claim that all subsidiary branches or research proofs were expanded.",
+    "proof_scope": {
+      "4301": "定义向量微分算子、张量散度及二维旋度方向；逐分量验证守恒形式和混合导数消去。",
+      "4302": "定义欧氏空间及周期环面上的不可压缩 Euler/NS、经典解、共同初值与体力；不包含一般存在定理的证明。",
+      "4303": "给出含初始项的无散度测试定义，逐项分部积分推导黏性与力的正号；完整分布压力的重构作为另需核对的条件。",
+      "4304": "完整逐分量推导局部能量恒等式，并在周期或明确足够衰减条件下积分得到全局等式。",
+      "4305": "定义时空混合范数及能量类；用 Holder 不等式验证 L1_t L2_x 体力的做功可积。",
+      "4306": "定义带外力 Leray-Hopf 类，说明从初时刻与强能量约定的差异；完整证明弱连续加能量不等式给出强 L2 初始迹。",
+      "4307": "定义局部适当性，说明测试不等式与局部能量平衡的关系；不证明任意 Leray 解的适当性。",
+      "4308": "完整链式法则计算 Euler 双参数与 NS 保黏性缩放，包括压力、力与黏性系数。",
+      "4309": "完整时空换元推导临界指数及二维/三维能量范数尺度；不将尺度启发当成存在或唯一性证明。",
+      "4310": "定义异常耗散；在端点能量与做功均收敛的明确附加条件下，由能量等式推出极限缺口；不宣称无条件能量缺口恒等式或一般构造。",
+      "4311": "完整计算Euler尺度下黏性系数、过渡时间/长度及Ynu不变性；kappa=a/gamma的大小解释标为尺度启发。",
+      "4312": "按2507.19257v1 PDF定理1.1及§1.1-1.3准确陈述固定力、特殊旋转类、构造选取的s、阈值和子列强收敛；只给初始层与非线性不稳定的研究证明结构。",
+      "4313": "完整证明共同力、充分光滑有限能量解的差能量与积分因子估计；一般弱强唯一性的逼近论证不在此证明范围。",
+      "4314": "完整给出Biot-Savart近、中、远三区估计，证明L1交L无穷涡量的对数Lipschitz模；不把此估计单独当成Yudovich全证明。",
+      "4315": "完整极坐标计算非零连续负一次齐次场的局部L2与远场发散。",
+      "4316": "完整强L2乘积估计及消失应力的弱形式极限；初值需要另列收敛假设，不推出能量不等式。",
+      "4317": "定义Banach空间上的强连续半群和生成元；在明确可范数求导条件下证明经典Duhamel公式，无限远过去积分及一般半群生成定理不在证明范围。",
+      "430A": "完整推导强迫 NS 的对数时间、自相似速度和保留 F 的方程。",
+      "430B": "完整计算紧支撑背景的力、t^(1/4) 零初始迹、耗散和力的时间可积性，以及给定衰减扰动的同类估计；能量延拓以前述光滑等式为输入。",
+      "430C": "以 Fourier 符号定义 Leray 投影，利用现有 Plancherel 定理验证有界性、幂等、无散度及消梯度；分布扩展只在各项有意义的类中使用。",
+      "430D": "定义自相似线性化及其 H2 和膨胀导数定义域，完整展开并扣除同一背景力，得到负二次余项。",
+      "430E": "完整验证复特征模的实部解、范数上界及实不变二维空间上的可比下界；不把实部范数误作恒等式。",
+      "430F": "准确引用 ABC 定理4.1、命题4.3-4.5的非线性轨道及所有 Hk 的二次衰减；展示 Duhamel 与加权压缩结构，未重证半群谱界、平滑及非线性闭合。",
+      "430G": "准确引用三维受力适当 Leray-Hopf 非唯一性；从已引用的谱和轨道定理结合430B验证共同零初值与能量条件；不声称完整重证存在构造。",
+      "430H": "完整逐分量推导二维涡量输运方程，区分二维 NS 黏性与三维涡伸长。",
+      "430I": "定义 Biot-Savart 与 dot H^-1 有限能量条件；给出基本解通量检验、Fourier 对应及非零环量导致1/r尾的计算；一般分布基本解理论采用现有弱导数/Fourier背景。",
+      "430J": "完整推导光滑、无边界通量条件下有限1<p<infinity的Lp等式与估计；p=1/无穷端点仅给正则化/特征线方法，不声称粗糙弱解的重整化定理。",
+      "430K": "准确引用有限能量、共同受力 Yudovich 定理；只给对数Lipschitz、梯度估计、Osgood和紧性的证明思路，完整论证在所引论述本附录B.2。",
+      "430L": "完整推导二维 Euler 自相似涡量方程、速度系数和线性化膨胀项。",
+      "430M": "完整换元证明涡量/源项Lp指数、alpha p<2条件和有限能量零初始迹；不从尺度条件推断第二个解存在。",
+      "430N": "完整核对单位e_theta下u=r zeta e_theta的旋度，并逐项推导角向模态ODE；不证明满足端点条件的不稳定谱存在。",
+      "430O": "引用紧支撑二维不稳定涡旋及角频率L2特征模；概述中性模分岔、截断谱保持及分片常数的替代路线，未重证研究级谱构造。",
+      "430P": "准确引用每个有限p>2、共同源、零初值、不可数多有限能量解的Vishik型定理；只给自相似谱扰动及非线性自举结构。",
+      "430Q": "定义轴对称无旋流，解释no swirl不同于curl=0；逐项检验流函数的无散度与涡量，三维伸长演化作为标准柱坐标表达记录。",
+      "430R": "引用从二维涡旋经环化、背景放大到自相似NS不稳定谱的定理；解释预解式/谱投影与奇异扰动结构，未重证算子收敛。",
+      "430S": "引用Jia-Sverak无力正向自相似存在；区别已证存在、数值谱证据和仍需验证的分岔局部化计划，未声称有限能量无力Leray-Hopf非唯一。",
+      "430T": "定义Euler-Reynolds缺陷与压力吸收纯迹部分；未把允许缺陷本身称作非唯一性证明。",
+      "430U": "完整计算固定L2集中块的Lp与梯度指数；二维p=1障碍限定于该简单缩放模型。",
+      "430V": "引用三维环面beta<1/3、任意正光滑目标能量的Euler存在定理；研究证明仅述应力/能量迭代，不预先固定任意初始速度。",
+      "430W": "引用三维无力NS的Hbeta拼接与奇异时间维数结论；完整论证零初值至非零后段与Leray能量不等式矛盾；拼接构造本身未重证。",
+      "430X": "引用无力二维环面1<p<1+1/6500、按L2稠密初值、CtL2速度和CtLp涡量的非唯一性；保留非能量守恒而不附加可容许性。",
+      "430Y": "运动Lamb-Chaplygin偶极子、空间异质性和时间平均的机制概要；具体块、误差分解、参数迭代均指向原论文，不称完整证明。",
+      "430Z": "定义固定体力的消失黏性方案，区分变初值族与固定黏性唯一性；完整证明统一耗散界使黏性测试项趋零，二次项用强L2收敛。"
+    },
+    "claim_sources": {
+      "4301": [
+        "本站分量定义；0A32、0A3D"
+      ],
+      "4302": [
+        "C §1 equations E/NS"
+      ],
+      "4303": [
+        "C §1.4 (1.9), corrected by integration by parts",
+        "A Definition1.1"
+      ],
+      "4304": [
+        "C §1.1 (1.1)-(1.2), viscosity factor corrected"
+      ],
+      "4305": [
+        "C §1.3-1.4 (1.8)",
+        "00Q6, 0Q03, 0A68"
+      ],
+      "4306": [
+        "C Definition1.1 (1.8)-(1.10)",
+        "A Definition1.1"
+      ],
+      "4307": [
+        "C §1.4 following (1.10)",
+        "A (1.4)"
+      ],
+      "4308": [
+        "C §1.2 (1.3)-(1.4); force scaling independently derived"
+      ],
+      "4309": [
+        "C §1.3; direct spacetime change of variables"
+      ],
+      "4310": [
+        "C §1.6 (1.13), §6; conditional consequence of4304"
+      ],
+      "4311": [
+        "C §6",
+        "M PDF§§1.2-1.3, (1.11)-(1.17)"
+      ],
+      "4312": [
+        "C Theorem6.1 qualified by primary source",
+        "M PDFTheorem1.1,§§1.1-1.3,(1.12)-(1.13); HTML comparison (1.31),(1.33) not used to replace PDF numbering"
+      ],
+      "4313": [
+        "C §1.3/§1.5; independent smooth difference-energy proof"
+      ],
+      "4314": [
+        "C §1.5; independent kernel proof from430I"
+      ],
+      "4315": [
+        "C §2.1 after (1.7); direct polar integration"
+      ],
+      "4316": [
+        "C §5; elementary strong-product limiting step"
+      ],
+      "4317": [
+        "A §4.2 uses semigroup/Duhamel; local standard definitions and classical identity, not a generation theorem"
+      ],
+      "430A": [
+        "C §2.2 (2.5), corrected with F",
+        "A (1.7)-(1.9)"
+      ],
+      "430B": [
+        "C Theorems2.2-2.4",
+        "A Theorem1.3; direct norm and integrability calculations"
+      ],
+      "430C": [
+        "C (2.1); standard Fourier multiplier construction using 0H4G and0W01"
+      ],
+      "430D": [
+        "C §2.2",
+        "A (4.1),(4.17); direct subtraction and projection"
+      ],
+      "430E": [
+        "C (2.7)-(2.9); norm statement independently corrected"
+      ],
+      "430F": [
+        "C Theorem2.4",
+        "A Theorem4.1,Propositions4.3-4.5,§4.2.7"
+      ],
+      "430G": [
+        "C Theorem2.2",
+        "A Theorems1.2-1.3"
+      ],
+      "430H": [
+        "C §1.5 (1.11); direct curl calculation"
+      ],
+      "430I": [
+        "C (1.11) and Theorem1.2 finite-energy qualification",
+        "V Chapter1,Theorems1.0.1/1.0.3; local kernel and circulation calculation"
+      ],
+      "430J": [
+        "C §1.5 (1.12), corrected by chain rule"
+      ],
+      "430K": [
+        "C Theorem1.2",
+        "V Theorem1.0.3; AppendixB.2 is the cited full proof, not fully read"
+      ],
+      "430L": [
+        "C §3 (3.1) with dilation corrected",
+        "V §2.3 cited in report; local calculation"
+      ],
+      "430M": [
+        "C §3 and Theorem3.1; direct change of variables"
+      ],
+      "430N": [
+        "C Proposition3.2 and (3.2); unit-vector convention corrected"
+      ],
+      "430O": [
+        "C Proposition3.2",
+        "A Proposition2.2; V Chapters3-4 are referenced deep proofs, not fully read"
+      ],
+      "430P": [
+        "C Theorem3.1",
+        "V Theorem1.0.1 and Remarks1.0.2/1.0.4"
+      ],
+      "430Q": [
+        "C §4",
+        "A (1.13)-(1.15); direct coordinate checks"
+      ],
+      "430R": [
+        "C Proposition2.3 and §4",
+        "A Proposition2.6,Theorem3.1,Corollary3.2"
+      ],
+      "430S": [
+        "C Theorem2.1 and §2.1, citing Jia-Sverak2014/2015 and Guillod-Sverak numerical evidence"
+      ],
+      "430T": [
+        "C §5",
+        "B §3.2; local definition"
+      ],
+      "430U": [
+        "C §5 intermittency discussion; direct concentration scaling"
+      ],
+      "430V": [
+        "C Theorem5.1 and references to Isett/BDLSV; original research proof not independently read"
+      ],
+      "430W": [
+        "C Theorem5.2; Buckmaster-Colombo-Vicol JEMS2022 through C"
+      ],
+      "430X": [
+        "C Theorem5.3",
+        "B Theorem1.2,Proposition3.1 and parameter choice (5.18)"
+      ],
+      "430Y": [
+        "C §5 last part and captions2-3",
+        "B §1.2; §§2,4-5 cited as construction/estimates, not fully read"
+      ],
+      "430Z": [
+        "C §6; local weak-form estimate"
+      ]
+    },
+    "source_records": {
+      "C": {
+        "title": "Instability and Non uniqueness for the Euler and Navier–Stokes Equations",
+        "authors": [
+          "Maria Colombo"
+        ],
+        "doi": "10.1137/25M1807010",
+        "source_url": "https://epubs.siam.org/doi/10.1137/25M1807010",
+        "version_url": "https://epubs.siam.org/doi/10.1137/25M1807010",
+        "version": "Official ICM2026 Volume5,Section10,chapter4,pp.249-263; online2026-07-13",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "reading_scope": "Read the full official mathematical HTML §§1-6, named statements, displayed formulas exposed as text, captions1-3, acknowledgments, bibliography1-71 and publication/license metadata. Official PDF request failed. No full-PDF or figure-pixel review claimed.",
+        "copyright": "Copyright2026 International Mathematical Union. Chinese reorganization and corrections attributed in icm2026-colombo; no figures copied."
+      },
+      "A": {
+        "title": "Non-uniqueness of Leray solutions of the forced Navier-Stokes equations",
+        "authors": [
+          "Dallas Albritton",
+          "Elia Brué",
+          "Maria Colombo"
+        ],
+        "doi": "10.4007/annals.2022.196.1.3",
+        "source_url": "https://arxiv.org/abs/2112.03116v1",
+        "version_url": "https://arxiv.org/html/2112.03116v1",
+        "version": "v1,2021-12-06; publication Annals196(2022),415-455",
+        "license": "CC BY 4.0",
+        "reading_scope": "Selective HTML reading: introduction Definition1.1,Theorems1.2-1.3,§§1.1-1.2; angular-mode setup and Proposition2.2; Proposition2.6 and selected resolvent discussion; §3 setup,Theorem3.1,Corollary3.2 and selected surrounding argument; §4.1 Theorem4.1,Proposition4.3 and §4.2 statements4.5-4.7,Duhamel/contraction setup. Not all estimates or the full paper read."
+      },
+      "V": {
+        "title": "Instability and nonuniqueness for the 2d Euler equations in vorticity form, after M. Vishik",
+        "authors": [
+          "Dallas Albritton",
+          "Elia Brué",
+          "Maria Colombo",
+          "Camillo De Lellis",
+          "Vikram Giri",
+          "Maximilian Janisch",
+          "Hyunju Kwon"
+        ],
+        "source_url": "https://arxiv.org/abs/2112.04943v4",
+        "version_url": "https://arxiv.org/html/2112.04943v4",
+        "version": "v4,2023-03-29",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reading_scope": "Read Chapter1 introduction,weak-solution definition,Theorems1.0.1/1.0.3,Remarks1.0.2/1.0.4 and contents plus targeted search excerpts. Chapters3-4 and AppendixB.2 are exact external proof locations, not a claim of full reading.",
+        "adaptation": "430K/430P attributed and offered CC BY-SA4.0 in icm2026-colombo; source symbol for scalar forcing replaced by g and curl direction unified."
+      },
+      "B": {
+        "title": "Flexibility of Two-Dimensional Euler Flows with Integrable Vorticity",
+        "authors": [
+          "Elia Brué",
+          "Maria Colombo",
+          "Anuj Kumar"
+        ],
+        "source_url": "https://arxiv.org/abs/2408.07934v1",
+        "version_url": "https://arxiv.org/html/2408.07934v1",
+        "version": "v1,2024-08-15",
+        "license": "arXiv perpetual, non-exclusive license; not a Creative Commons license",
+        "reading_scope": "Read introduction,Theorems1.1-1.3,selected mechanism discussion,Proposition3.1 and parameter display(5.18). Detailed dipole construction and full iterative estimates not read. No arbitrary prescribed-energy strengthening is imported.",
+        "copyright_handling": "Independently worded mathematical statements and source pointers; no source prose or figures reproduced."
+      },
+      "M": {
+        "title": "Vanishing viscosity non-unique solutions to the forced 2D Euler Equations",
+        "pdf_title": "Non-unique vanishing viscosity solutions to the forced 2D Euler equations",
+        "authors": [
+          "Dallas Albritton",
+          "Maria Colombo",
+          "Giulia Mescolini"
+        ],
+        "source_url": "https://arxiv.org/abs/2507.19257v1",
+        "version_url": "https://arxiv.org/pdf/2507.19257v1",
+        "html_comparison_url": "https://arxiv.org/html/2507.19257v1",
+        "version": "v1 submitted2025-07-25; PDF internal date2025-07-28,56pages",
+        "license": "arXiv perpetual, non-exclusive license; not a Creative Commons license",
+        "reading_scope": "Read PDF extracted text of introduction pp.1-7 and the start of p.8: exact Theorem1.1,Proposition1.2,§§1.1-1.3 and early§1.4 through initial-layer setup/Theorem1.3. Targeted HTML comparison was also read. No full56page proof or rendered-PDF visual review claimed.",
+        "pdf_sha256": "b0346c6336b1c50f3d8d73c249e293faf2d63865109912869cb3e60e93a91d7b",
+        "pdf_numbering": "kappa_c=(1.12),Y_nu=(1.13); HTML gives (1.31),(1.33).",
+        "version_warning": "Experimental HTML displays a different internal date/numbering. The impossible s=1+2/(2+sigma),s<1 also occurs in extracted v1 PDF§1.3,p.6; no assertion that PDF resolves it. 4312 uses only existence of a construction-chosen s in(0,1), not that formula or a guessed correction.",
+        "copyright_handling": "Independent mathematical restatement only; no reproduction of original prose or figures."
+      },
+      "CP-preview": {
+        "title": "Non-uniqueness of smooth solutions of the Navier–Stokes equations from critical data",
+        "authors": [
+          "Coiculescu",
+          "Palasek"
+        ],
+        "source_url": "https://link.springer.com/article/10.1007/s00222-025-01396-z",
+        "doi": "10.1007/s00222-025-01396-z",
+        "reading_scope": "Publisher abstract,metadata and accessible notes only, not the full paper or its theorem hypotheses. Used solely to record the deferred BMO^-1 branch and a mechanism-classification caution.",
+        "license": "No open adaptation license verified; no content reproduced.",
+        "boundary": "Publisher note4 explicitly distinguishes this mechanism from convex integration; no standalone formal theorem added."
+      }
+    },
+    "section_coverage": [
+      {
+        "section": "§1.1 Energy",
+        "pages": [
+          "4301",
+          "4302",
+          "4304",
+          "4305"
+        ],
+        "status": "定义与基础推导已展开",
+        "boundary": "局部能量黏性系数校正；全局等式保留衰减/边界条件。"
+      },
+      {
+        "section": "§1.2 Scaling",
+        "pages": [
+          "4308",
+          "4309",
+          "430A",
+          "4315"
+        ],
+        "status": "双参数与抛物尺度、范数和齐次能量尾已展开",
+        "boundary": "存在性由430S引用，不从缩放单独推导。"
+      },
+      {
+        "section": "§1.3 Classical well-posedness",
+        "pages": [
+          "4309",
+          "4313"
+        ],
+        "status": "尺度及光滑唯一性机制已展开；一般适定性部分覆盖",
+        "boundary": "小数据/粗糙力例子未升级为正式定理。"
+      },
+      {
+        "section": "§1.4 Weak solutions",
+        "pages": [
+          "4303",
+          "4305",
+          "4306",
+          "4307"
+        ],
+        "status": "解类、初始迹、整体/局部能量条件已拆分",
+        "boundary": "一般Leray全局存在/压力重构证明未展开。"
+      },
+      {
+        "section": "§1.5 Vorticity and Yudovich",
+        "pages": [
+          "430H",
+          "430I",
+          "430J",
+          "430K",
+          "4314"
+        ],
+        "status": "涡量、Biot-Savart、光滑估计、有限能量Yudovich已展开",
+        "boundary": "Yudovich全证明和一般弱涡量存在外引；Lp源项与有限能量错误已校正。"
+      },
+      {
+        "section": "§1.6 Questions and dissipation",
+        "pages": [
+          "4300",
+          "430G",
+          "430X",
+          "430Z",
+          "4310",
+          "4312"
+        ],
+        "status": "Q1-Q3按解类/外力分开讨论，异常耗散定义已展开",
+        "boundary": "不将所有p>1仍未知或所有耗散构造仍未知作为无条件当前事实。"
+      },
+      {
+        "section": "§2.1 Self-similar solutions",
+        "pages": [
+          "430A",
+          "430S",
+          "4315"
+        ],
+        "status": "NS存在、无力分岔计划及能量障碍已展开",
+        "boundary": "点涡和Bressan-Shen数值模型未独立展开；数值证据不作严格谱定理。"
+      },
+      {
+        "section": "§2.2 Instability and nonuniqueness",
+        "pages": [
+          "430B",
+          "430C",
+          "430D",
+          "430E",
+          "430F",
+          "430G",
+          "4317"
+        ],
+        "status": "变量、线性化、增长模、Duhamel、零初值及主非唯一性结论已展开",
+        "boundary": "基础代数/积分完整；半群估计和不稳定流形研究证明外引。"
+      },
+      {
+        "section": "§3 Two-dimensional Euler",
+        "pages": [
+          "430H",
+          "430I",
+          "430K",
+          "430L",
+          "430M",
+          "430N",
+          "430O",
+          "430P"
+        ],
+        "status": "径向模态、自相似、阈值、受力Vishik结论已展开",
+        "boundary": "谱构造与非线性自举只给来源/结构；不用无力定理替代受力结论。"
+      },
+      {
+        "section": "§4 From vortices to vortex rings",
+        "pages": [
+          "430Q",
+          "430R",
+          "430G"
+        ],
+        "status": "柱坐标、no-swirl符号、环化及加黏性路线已展开",
+        "boundary": "不以系数趋零代替预解式收敛证明；原图未复制。"
+      },
+      {
+        "section": "§5 Convex integration",
+        "pages": [
+          "430T",
+          "430U",
+          "430V",
+          "430W",
+          "430X",
+          "430Y",
+          "4316"
+        ],
+        "status": "三项主要定理5.1-5.3及应力/集中/时间平均机制已展开；旁支部分覆盖",
+        "boundary": "BMO^-1、Lorentz/Hardy、其他方程未建页；非守恒不等同可容许，二维未写任意预设能量。"
+      },
+      {
+        "section": "§6 Vanishing viscosity",
+        "pages": [
+          "430Z",
+          "4310",
+          "4311",
+          "4312"
+        ],
+        "status": "固定力、初始层、无量纲范数和阈值主结论已展开",
+        "boundary": "以固定v1 PDF定理保留旋转类及子列；证明只概述，s公式冲突保持未决。"
+      }
+    ],
+    "remaining_branches": [
+      {
+        "section": "§1.3",
+        "topic": "一般局部/小数据经典适定性",
+        "status": "只使用尺度和光滑差估计；未导入报告中粗略外力范数例子为正式定理。",
+        "reason": "精确外力正则性、温和解空间及端点需另核原文；粗糙力不能自动推出经典光滑解。"
+      },
+      {
+        "section": "§1.5",
+        "topic": "DiPerna-Majda、Delort及一般弱涡量存在",
+        "status": "历史背景未另建定理页。",
+        "reason": "本专题只正式陈述共同有限能量Yudovich与非唯一性解类；正测度存在、浓集抵消和一般重整化理论未展开。"
+      },
+      {
+        "section": "§2.1",
+        "topic": "点涡爆裂与Bressan-Shen数值自相似分岔",
+        "status": "未建原子页。",
+        "reason": "点涡为更奇异模型，数值证据不代替本文的有限能量弱解定理；主线程要求以当前44页收尾。"
+      },
+      {
+        "section": "§5",
+        "topic": "Coiculescu-Palasek临界BMO^-1初值",
+        "status": "报告分支已读，正式定理及BMO^-1前置未展开。",
+        "reason": "只另读出版页摘要/注记，未核完整初值和解类条款，故未写精确定理；出版页note4区分其机制与凸积分，不能直接照抄报告的机制分类。",
+        "source_id": "CP-preview"
+      },
+      {
+        "section": "§5",
+        "topic": "Lorentz L1,infinity、Hardy Hp、Prodi-Serrin锐性及其他方程",
+        "status": "未另建原子页。",
+        "reason": "它们是报告引用的相邻方向；不把43页的覆盖等同为所有被引论文或所有分支均已展开。"
+      },
+      {
+        "section": "§5末",
+        "topic": "无力二维更大p与能量守恒阈值",
+        "status": "保留进一步问题，未给p>=3/2的能量守恒证明。",
+        "reason": "430X已覆盖1<p<1+1/6500；不得仍称所有p>1未知，也未推断同一构造对任意p成立。"
+      },
+      {
+        "section": "§6",
+        "topic": "无力消失黏性、一般选择机制及固定完全相同初值族",
+        "status": "未声称解决。",
+        "reason": "4312固定力但允许黏性相关的初值族，只给特定旋转对称构造类；结论不推广为一般无力有限能量非唯一。"
+      },
+      {
+        "section": "源版本",
+        "topic": "2507.19257v1的s与sigma关系",
+        "status": "来源内在不一致，未修订其公式。",
+        "reason": "HTML与PDF抽取文本均有s=1+2/(2+sigma)与s<1冲突；4312只用定理允许选择s∈(0,1)。未读全篇以恢复作者预期参数关系。"
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "pages": [
+          "430F",
+          "430G"
+        ],
+        "source_id": "A",
+        "location": "Theorem4.1,Propositions4.3-4.7,§4.2",
+        "scope": "线性半群增长/平滑、最高增长模、导数损失与非线性不动点的完整研究证明未重写。"
+      },
+      {
+        "pages": [
+          "430K"
+        ],
+        "source_id": "V",
+        "location": "Theorem1.0.3,AppendixB.2",
+        "scope": "Yudovich存在、梯度Lp估计及Osgood唯一性仅引用与论证结构；4314独立证明其中核的模估计。"
+      },
+      {
+        "pages": [
+          "430O",
+          "430P"
+        ],
+        "source_id": "V",
+        "location": "Theorem1.0.1,Chapters2-5",
+        "scope": "Vishik特殊径向谱构造、自相似谱扰动和非线性自举未完整导入。"
+      },
+      {
+        "pages": [
+          "430O",
+          "430R"
+        ],
+        "source_id": "A",
+        "location": "Propositions2.2,2.6,Theorem3.1,Corollary3.2",
+        "scope": "截断、环化预解式、奇异黏性扰动和从涡量回速度的谱证明外引。"
+      },
+      {
+        "pages": [
+          "430S"
+        ],
+        "source_id": "C",
+        "location": "Theorem2.1,§2.1; references51-52",
+        "scope": "Jia-Sverak度理论、局部正则性与局部化研究证明外引；数值谱穿越未提升为已证事实。"
+      },
+      {
+        "pages": [
+          "430V"
+        ],
+        "source_id": "C",
+        "location": "Theorem5.1",
+        "scope": "Onsager凸积分迭代及Hölder估计只概述。"
+      },
+      {
+        "pages": [
+          "430W"
+        ],
+        "source_id": "C",
+        "location": "Theorem5.2",
+        "scope": "NS时空间歇性拼接与奇异时间Hausdorff维数估计只引用。"
+      },
+      {
+        "pages": [
+          "430X",
+          "430Y"
+        ],
+        "source_id": "B",
+        "location": "Theorem1.2,Proposition3.1,§§2-5",
+        "scope": "偶极子块、输运/无散度误差、时间平均和参数求和的完整迭代未读全/未重证。"
+      },
+      {
+        "pages": [
+          "4312"
+        ],
+        "source_id": "M",
+        "location": "§§2-6,AppendixA",
+        "scope": "谱分析、黏性修正背景、反向唯一性/稠密值域、初始层和后续非线性分离均为引用的研究证明。"
+      }
+    ]
+  },
+  "prerequisites": {
+    "4301": [
+      "0A32",
+      "0A3D"
+    ],
+    "4302": [
+      "4301"
+    ],
+    "4303": [
+      "00Q5",
+      "4302",
+      "4301",
+      "2J0C"
+    ],
+    "4304": [
+      "4302",
+      "0A3C"
+    ],
+    "4305": [
+      "00Q6",
+      "0Q03",
+      "0A68"
+    ],
+    "4306": [
+      "4305",
+      "00MJ",
+      "4303"
+    ],
+    "4307": [
+      "4305",
+      "4304",
+      "4306"
+    ],
+    "4308": [
+      "4302",
+      "0A34"
+    ],
+    "4309": [
+      "4308",
+      "4305"
+    ],
+    "4310": [
+      "4304",
+      "430Z"
+    ],
+    "4311": [
+      "430L",
+      "130F"
+    ],
+    "4312": [
+      "4311",
+      "2J0C",
+      "430Z"
+    ],
+    "4313": [
+      "4302",
+      "4304"
+    ],
+    "4314": [
+      "430I",
+      "0A3C"
+    ],
+    "4315": [
+      "00Q6"
+    ],
+    "4316": [
+      "430T",
+      "4303",
+      "0A68"
+    ],
+    "4317": [
+      "00M6",
+      "0GSQ"
+    ],
+    "430A": [
+      "4302",
+      "0A34",
+      "4308"
+    ],
+    "430B": [
+      "430A",
+      "4305",
+      "4304"
+    ],
+    "430C": [
+      "0H4G",
+      "0W01",
+      "4303"
+    ],
+    "430D": [
+      "430B",
+      "130F",
+      "430C",
+      "430A"
+    ],
+    "430E": [
+      "0F0B",
+      "130F",
+      "0GSQ"
+    ],
+    "430F": [
+      "430D",
+      "430E",
+      "4317"
+    ],
+    "430G": [
+      "4307",
+      "4306",
+      "430R",
+      "430F",
+      "430B"
+    ],
+    "430H": [
+      "4302",
+      "4301"
+    ],
+    "430I": [
+      "4301",
+      "0H4G",
+      "0W01"
+    ],
+    "430J": [
+      "430H",
+      "0A68",
+      "00OB"
+    ],
+    "430K": [
+      "430I",
+      "430H",
+      "4314"
+    ],
+    "430L": [
+      "430H",
+      "0A34",
+      "430I"
+    ],
+    "430M": [
+      "430L",
+      "430I"
+    ],
+    "430N": [
+      "430H",
+      "430I"
+    ],
+    "430O": [
+      "430I",
+      "430N"
+    ],
+    "430P": [
+      "430H",
+      "430I",
+      "430O",
+      "430L",
+      "430M"
+    ],
+    "430Q": [
+      "4301"
+    ],
+    "430R": [
+      "430Q",
+      "430D",
+      "430O",
+      "0GSQ"
+    ],
+    "430S": [
+      "430A",
+      "331C",
+      "4315"
+    ],
+    "430T": [
+      "4301",
+      "4302"
+    ],
+    "430U": [
+      "430H"
+    ],
+    "430V": [
+      "4303",
+      "331C",
+      "430T"
+    ],
+    "430W": [
+      "4303",
+      "1202",
+      "130F",
+      "4306"
+    ],
+    "430X": [
+      "4302",
+      "2J0C",
+      "00Q6",
+      "430Y",
+      "430T"
+    ],
+    "430Y": [
+      "430T",
+      "430U"
+    ],
+    "430Z": [
+      "4302",
+      "4303"
+    ]
+  },
+  "navigation_only": {
+    "4300": "综述，全部43原子页均为叙事链接；不是任何原子页的前置。",
+    "4304": [
+      "4303"
+    ],
+    "4306": [
+      "4307"
+    ],
+    "4315": [
+      "430S",
+      "4306"
+    ],
+    "430E": [
+      "430D"
+    ],
+    "430P": [
+      "430K"
+    ],
+    "430S": [
+      "430R"
+    ],
+    "430T": [
+      "4316"
+    ],
+    "430X": [
+      "430P"
+    ],
+    "430Y": [
+      "430X"
+    ],
+    "430Z": [
+      "4312"
+    ],
+    "explanation": "这些现有正文链接用于应用、比较或结果去向，不作为反向证明前提；尤其4306/4307、430T/4316、430X/430Y、430Z/4312和430S/4315不构成前置循环。"
+  },
+  "reused_pages": {
+    "1202": "Hausdorff测度与维数",
+    "0A32": "偏导数",
+    "0A3D": "混合偏导交换",
+    "0A34": "全微分的链式法则",
+    "0A3C": "微积分基本定理",
+    "00Q5": "Lebesgue积分",
+    "00Q6": "Lp空间",
+    "0A68": "积分Holder不等式",
+    "0Q03": "有限动能的Sobolev空间，复用Bourbaki物理原子页",
+    "2J0C": "弱导数与一阶Sobolev空间",
+    "00MJ": "弱拓扑",
+    "0H4G": "Fourier变换",
+    "0W01": "Plancherel定理",
+    "130F": "实数阶Sobolev空间的Fourier定义",
+    "0F0B": "线性映射的特征值与特征空间",
+    "0GSQ": "闭算子的谱与预解集",
+    "331C": "Holder连续定义与复合估计",
+    "00M6": "Banach空间",
+    "00OB": "光滑常微分方程的存在唯一性"
+  },
+  "terminology_evidence": {
+    "checked_on": "2026-10-20",
+    "site_search_scope": "Before authoring, searched titles/bodies across trees/math,trees/physics and the whole forest for Euler/Navier-Stokes,fluid/vorticity,Biot-Savart,Leray,Yudovich,self-similarity,weak derivatives,Sobolev,Fourier,spectrum and semigroups. Inspected Bourbaki physics0Q03 and geometry2J0C. Existing fluid definitions were not found in that search; no new generic Sobolev/Lp/Fourier/Gamma definition was added.",
+    "duplicate_resolution": "0Q03 and2J0C overlap in weak H1 foundations and are both reused in their existing roles; no edits to these pages. 430I adds missing fluid Biot-Savart/finite-energy content. Gamma in430I denotes the locally defined total circulation, not the Gamma function. 4317 is the missing evolution-semigroup foundation, not a duplicate algebraic semigroup. No40-42/44-prefix pages created.",
+    "bananaspace_attempts": [
+      {
+        "url": "https://bananaspace.org/wiki/Navier-Stokes方程",
+        "date": "2026-10-20",
+        "result": "Internal Error; no usable content"
+      },
+      {
+        "url": "https://bananaspace.org/wiki/弱解",
+        "date": "2026-10-20",
+        "result": "Internal Error; no usable content"
+      },
+      {
+        "url": "https://bananaspace.org/wiki/索伯列夫空间",
+        "date": "2026-10-20",
+        "result": "Internal Error; no usable content"
+      }
+    ],
+    "status": "BananaSpace terminology verification unavailable; no claim that terminology was externally confirmed.",
+    "choices": "无旋流 translates no swirl and means zero azimuthal velocity, not zero curl. f denotes vector body force; g=curl f denotes scalar vorticity source. 局部能量适当性 is separate from the global Leray-Hopf energy condition. 涡量正则性,速度有限能量,能量守恒 and能量可容许性 are not identified.",
+    "arxiv_access": "Skill helper API attempt failed DNS in restricted network; versioned arXiv abs/HTML and the downloaded pinned PDF supplied the recorded source data."
+  },
+  "source_errata": [
+    {
+      "source_id": "C",
+      "location": "(1.1)",
+      "pages": [
+        "4304",
+        "4307"
+      ],
+      "issue": "局部耗散项漏ν。",
+      "resolution": "从-νu·Δu逐项推导为ν|∇u|²；无黏性Euler时该项消失。"
+    },
+    {
+      "source_id": "C",
+      "location": "(1.9)",
+      "pages": [
+        "4303"
+      ],
+      "issue": "时导数/对流项写正时，黏性和力的符号与动量方程不符。",
+      "resolution": "逐次分部积分后使用+νu·Δφ及+f·φ，并显式保留初始项。"
+    },
+    {
+      "source_id": "C",
+      "location": "(1.12)",
+      "pages": [
+        "430J"
+      ],
+      "issue": "源项错误使用初始涡量且幂/符号不对应链式法则。",
+      "resolution": "使用p|ω(x,t)|^(p-2)ω(x,t)g(x,t)，在已列光滑/边界条件下推导。"
+    },
+    {
+      "source_id": "C",
+      "location": "Theorem1.2",
+      "pages": [
+        "430I",
+        "430K"
+      ],
+      "issue": "L1交L∞涡量本身不蕴含有限能量。",
+      "resolution": "按V Theorem1.0.3增加K*ω0∈L2及相应源项条件；独立计算非零环量1/r尾。"
+    },
+    {
+      "source_id": "C",
+      "location": "§1.5 after(1.12)",
+      "pages": [
+        "430I",
+        "430K"
+      ],
+      "issue": "Biot-Savart本身为负一阶，Calderon-Zygmund的零阶性质用于速度梯度。",
+      "resolution": "正文用核定义速度并把梯度估计作为Yudovich引用输入，不把速度恢复算子直接视为零阶算子。"
+    },
+    {
+      "source_id": "C",
+      "location": "(2.5) and perturbation equation",
+      "pages": [
+        "430A",
+        "430D",
+        "430F"
+      ],
+      "issue": "受力相似式漏F；扰动式使用物理t及错误二次符号。",
+      "resolution": "先保留F，再扣除同一稳态得到∂τv=Lss v-P(v·∇v)。"
+    },
+    {
+      "source_id": "C",
+      "location": "(2.9)",
+      "pages": [
+        "430E",
+        "430F"
+      ],
+      "issue": "复模实部范数一般不等于e^(aτ)||η||。",
+      "resolution": "使用上界；非实特征值时在实不变二维空间证明可比上下界，实特征值选非零实向量。"
+    },
+    {
+      "source_id": "C",
+      "location": "Theorem2.4",
+      "pages": [
+        "430F"
+      ],
+      "issue": "T<0却使用log T。",
+      "resolution": "选择τ0<0并设0<T=e^τ0<1。"
+    },
+    {
+      "source_id": "C",
+      "location": "(3.1)",
+      "pages": [
+        "430L"
+      ],
+      "issue": "自相似膨胀微分项须含ξ·∇。",
+      "resolution": "链式法则独立推导α^-1 ξ·∇。"
+    },
+    {
+      "source_id": "C",
+      "location": "(3.2)",
+      "pages": [
+        "430N"
+      ],
+      "issue": "单位eθ与切向速度/角速度记号混淆。",
+      "resolution": "取u=rζ(r)eθ时curl u=2ζ+rζ′；若取u=ζeθ则是ζ′+ζ/r。页面明确采用前者。"
+    },
+    {
+      "source_id": "C",
+      "location": "§1.6 Q2 compared with§5 Theorem5.3",
+      "pages": [
+        "4300",
+        "430X"
+      ],
+      "issue": "不能在综述末仍无条件称全部p>1未知。",
+      "resolution": "明确无力T2的1<p<1+1/6500已解决；更大p、区域及能量条件分别讨论。"
+    },
+    {
+      "source_id": "C",
+      "location": "§1.6 anomalous dissipation",
+      "pages": [
+        "4310"
+      ],
+      "issue": "过于一般的无构造表述需要指定force/维数/正则性/极限方案。",
+      "resolution": "仅定义性质及附条件能量缺口，不导入无条件全局研究状态。"
+    },
+    {
+      "source_id": "C",
+      "location": "Theorem6.1",
+      "pages": [
+        "4312"
+      ],
+      "issue": "报告略去原论文旋转类及子列等精确量词。",
+      "resolution": "按M PDF Theorem1.1恢复m0重旋转类、Yν、共同f、强拓扑、临界初值球和子列结论。"
+    },
+    {
+      "source_id": "M",
+      "location": "PDF§1.3,p.6 and experimental HTML§1.3",
+      "pages": [
+        "4311",
+        "4312"
+      ],
+      "issue": "s=1+2/(2+sigma)与0<s<1冲突，PDF抽取文本同样存在。",
+      "resolution": "不照抄也不猜改公式；仅保留可由构造选择s∈(0,1)。未核完整参数证明；该关系待作者/版本澄清。",
+      "status": "unresolved source formula"
+    },
+    {
+      "source_id": "M",
+      "location": "PDF§1.2 after(1.11),p.5",
+      "pages": [
+        "4311"
+      ],
+      "issue": "过渡区括注νe^(γτ)≫1与显示式的黏性系数不一致。",
+      "resolution": "独立计算νe^(-γτ)，t≫Tν时此系数≪1。"
+    },
+    {
+      "source_id": "M",
+      "location": "version metadata and equation numbering",
+      "pages": [
+        "4311",
+        "4312"
+      ],
+      "issue": "abs标题与PDF标题顺序不同，实验HTML内部日期/编号不同。",
+      "resolution": "文献页沿用abs书目标题；packet另记PDF标题、SHA256、内部日期及编号；不声称两个全文排版完全一致。"
+    }
+  ],
+  "review_responses": [
+    {
+      "from": "human relaying main-thread review",
+      "scope": "4301-430S and4313-4315",
+      "result": "核心弱式、缩放、涡量、谱线性化经主线程核对；4315结构元话术已删除。"
+    },
+    {
+      "from": "human relaying main-thread review",
+      "scope": "430T-4312,4316-4317",
+      "result": "主结论区分/范数/缩放经主线程核对；2507.19257v1 HTML定理与PDF陈述一致的范围由主线程独立复核。该复核不计作本站作者完整阅读原论文。"
+    },
+    {
+      "from": "human relaying main-thread review",
+      "scope": "4300及当前44页",
+      "result": "主线程逐页阅读完成；4300改为能量可容许性条件；430P改直接受力结论；4303两处不支持负空格已移除。"
+    },
+    {
+      "scope": "最后内容微调",
+      "pages": [
+        "4300",
+        "430E",
+        "430I",
+        "430J",
+        "430M",
+        "4314"
+      ],
+      "result": "只改术语措辞、现有原子前置链接与δ0释义；已告知主线程刷新哈希。未扩页。"
+    }
+  ],
+  "handoff": {
+    "owned_files": [
+      "trees/math/pde/colombo/4300.tree",
+      "trees/math/pde/colombo/4301.tree",
+      "trees/math/pde/colombo/4302.tree",
+      "trees/math/pde/colombo/4303.tree",
+      "trees/math/pde/colombo/4304.tree",
+      "trees/math/pde/colombo/4305.tree",
+      "trees/math/pde/colombo/4306.tree",
+      "trees/math/pde/colombo/4307.tree",
+      "trees/math/pde/colombo/4308.tree",
+      "trees/math/pde/colombo/4309.tree",
+      "trees/math/pde/colombo/4310.tree",
+      "trees/math/pde/colombo/4311.tree",
+      "trees/math/pde/colombo/4312.tree",
+      "trees/math/pde/colombo/4313.tree",
+      "trees/math/pde/colombo/4314.tree",
+      "trees/math/pde/colombo/4315.tree",
+      "trees/math/pde/colombo/4316.tree",
+      "trees/math/pde/colombo/4317.tree",
+      "trees/math/pde/colombo/430A.tree",
+      "trees/math/pde/colombo/430B.tree",
+      "trees/math/pde/colombo/430C.tree",
+      "trees/math/pde/colombo/430D.tree",
+      "trees/math/pde/colombo/430E.tree",
+      "trees/math/pde/colombo/430F.tree",
+      "trees/math/pde/colombo/430G.tree",
+      "trees/math/pde/colombo/430H.tree",
+      "trees/math/pde/colombo/430I.tree",
+      "trees/math/pde/colombo/430J.tree",
+      "trees/math/pde/colombo/430K.tree",
+      "trees/math/pde/colombo/430L.tree",
+      "trees/math/pde/colombo/430M.tree",
+      "trees/math/pde/colombo/430N.tree",
+      "trees/math/pde/colombo/430O.tree",
+      "trees/math/pde/colombo/430P.tree",
+      "trees/math/pde/colombo/430Q.tree",
+      "trees/math/pde/colombo/430R.tree",
+      "trees/math/pde/colombo/430S.tree",
+      "trees/math/pde/colombo/430T.tree",
+      "trees/math/pde/colombo/430U.tree",
+      "trees/math/pde/colombo/430V.tree",
+      "trees/math/pde/colombo/430W.tree",
+      "trees/math/pde/colombo/430X.tree",
+      "trees/math/pde/colombo/430Y.tree",
+      "trees/math/pde/colombo/430Z.tree",
+      "trees/references/icm2026-colombo.tree",
+      "research/pde-colombo-packet.json"
+    ],
+    "knowledge_ids": [
+      "4301",
+      "4302",
+      "4303",
+      "4304",
+      "4305",
+      "4306",
+      "4307",
+      "4308",
+      "4309",
+      "4310",
+      "4311",
+      "4312",
+      "4313",
+      "4314",
+      "4315",
+      "4316",
+      "4317",
+      "430A",
+      "430B",
+      "430C",
+      "430D",
+      "430E",
+      "430F",
+      "430G",
+      "430H",
+      "430I",
+      "430J",
+      "430K",
+      "430L",
+      "430M",
+      "430N",
+      "430O",
+      "430P",
+      "430Q",
+      "430R",
+      "430S",
+      "430T",
+      "430U",
+      "430V",
+      "430W",
+      "430X",
+      "430Y",
+      "430Z"
+    ],
+    "parent_actions": [
+      "同步43条前置记录及outline/reference注册；更新最后六个ID的源码哈希。",
+      "主线程负责共享总表、入口与四支集成，不由本分支修改。",
+      "按最终同步后的源码复核全站构建与静态HTML；保留本packet来源/证明边界。"
+    ],
+    "scope_status": "Only assigned43 subtree,reference andpacket edited. No shared registry/homepage/script changes, no commit or push. User instructed no further page expansion."
+  },
+  "validation": {
+    "status": "Scoped read-only checks passed: 43 atomic pages, 44 topic pages including overview, 45 owned tree files including reference, 46 owned files including this packet. All required report fields/arrays present; atomic/prerequisite/proof/source key sets agree.",
+    "semantic_reading": "All43atoms and overview reread; main-thread independent reading separately logged.",
+    "format_method": "Parent owns current normalizeFormat pass. This branch uses prose/styleRules/normalizeFormat read-only, with no formatter writes.",
+    "parent_reported_validation": "Human reports Forester build and80,091formula KaTeX checks passed before packet integration; this is reported parent evidence, not this branch's independent run.",
+    "source_checks": "All43 atoms directly linked in4300. No broken local links, duplicate IDs involving these pages, exact-title collisions, metadata/date errors, unbalanced braces, unsupported negative spaces, manual related blocks or control bytes.",
+    "math_check": "621 native Forester math expressions parsed with the repository KaTeX library using throwOnError=true and strict=error; zero failures. Source-level parsing does not replace generated-page or browser inspection.",
+    "prerequisite_check": "115 explicit prerequisite edges are body-linked and target actual non-Outline nodes. Traversal from43 atoms using the current shared audit overridden by this packet reaches207 nodes, with no cycles. Application/comparison edges are separated in navigation_only.",
+    "editorial_check": "Read-only prose/styleRules and normalizeFormat from scripts/note-editorial-lib.mjs report zero style matches and zero formatting differences after the parent formatting pass.",
+    "pdf_identity_check": "Local pinned2507.19257v1 PDF SHA256 independently recomputed and matches source_records.M. PDF text p.6 still contains the s/sigma conflict; no claim of visual-PDF verification or full-paper reading.",
+    "remaining_validation": "Shared registry synchronization, final source hashes, static HTML and browser verification remain parent-owned. No full-site checker or build was independently run by this branch, and no full original-paper research-proof verification is claimed.",
+    "build": false,
+    "commit": false,
+    "push": false
+  }
+}

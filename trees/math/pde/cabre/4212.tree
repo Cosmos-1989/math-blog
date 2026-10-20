@@ -1,0 +1,11 @@
+\title{周期分数反应扩散的每周期能量}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，定理5.1前及定理中的泛函}
+
+\p{设 #{L>0}，#{0<s<1}，#{F\in C^1(\mathbb R)}。对有界 #{2L}-周期函数 #{v}，定义每周期能量}
+##{\mathcal E_L(v)=\frac{c_{1,s}}4\int_{-L}^{L}\int_{\mathbb R}\frac{|v(x)-v(y)|^2}{|x-y|^{1+2s}}\,dy\,dx-\int_{-L}^{L}F(v(x))dx.}
+\p{常数 #{c_{1,s}} 采用[分数 Laplace 归一化](420N)。仅第一个变量限于一周期，第二个变量遍历全实线；将两个变量都限于 #{(-L,L)} 会丢掉跨周期相互作用。有限能量函数的周期 #{H^s} 正则性由此双积分刻画。}
+\p{\strong{变分。}把第二个变量按周期平移分解，得到周期核 #{K_L(t)=\sum_{k\in\mathbb Z}|t+2kL|^{-1-2s}}，它满足 #{K_L(t)=K_L(-t)}。在一周期内交换 #{x,y}，二次项的一阶变分化为 #{\int_{-L}^L\xi(-\Delta)^sv}。势能项给出 #{-\int F'(v)\xi}，所以自由临界点解 #{(-\Delta)^sv=F'(v)}。}
+\p{若还固定 #{\int_{-L}^L\widetilde F(v)=c}，允许变分要服从该约束；在约束导数非零并可用乘子定理时，方程右端成为 #{F'(v)+\mu\widetilde F'(v)}，#{\mu} 的符号可吸收入乘子约定。约束极小者与自由稳定解必须区分。}

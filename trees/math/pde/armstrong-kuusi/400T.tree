@@ -1,0 +1,17 @@
+\title{联合能量的弱范数局部化}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.3；研究论文附录 A}
+
+\p{设随机场[整数平稳](400M)，#{m>k\geq 0}，#{0<s,t<1} 且 #{s+t\leq 1}。固定 #{p,q,p_0,q_0\in\mathbb R^d}，令[联合能量](4007)的极大元为 #{v_m=v(\cdot,Q_m,p,q)}，#{j_m=\mathbb EJ(Q_m,p,q)}，#{\tau_{m,k}=j_k-j_m\geq 0}。用[负范数](400E)记}
+##{X=3^{-sm}[\nabla v_m-p_0]_{\mathcal B^{-s}_{2,1}(Q_m)},\qquad
+Y=3^{-tm}[a\nabla v_m-q_0]_{\mathcal B^{-t}_{2,1}(Q_m)}.}
+\p{报告引理 3.3 给出}
+##{j_m-\tfrac 12p_0\cdot q_0\leq
+ C\tau_{m,k}^{1/2}j_k^{1/2}+C3^{k-m}j_m
+ +C|q_0|\mathbb EX+C|p_0|\mathbb EY
+ +C(\mathbb EX^2)^{1/2}(\mathbb EY^2)^{1/2}.}
+\p{\strong{局部化。}取光滑 #{\varphi\geq 0}，紧支于 #{Q_m}，#{(\varphi)_{Q_m}=1}，并满足 #{|\nabla^i\varphi|\leq C3^{-im}}，#{i=0,1,2}。用[分块差能量恒等式](4009)将 #{J_m} 的加权能量换为小块极大元能量。解差交叉项由 Schwarz 控制为 #{C\tau_{m,k}^{1/2}j_k^{1/2}}；#{\varphi} 的块内振荡为 #{C3^{k-m}}。}
+\p{剩余中心化乘积为 #{|Q_m|^{-1}\int_{Q_m}\varphi(\nabla v_m-p_0)\cdot(a\nabla v_m-q_0)/2}。通量散度为零，分部积分把一个导数移给 #{\varphi}；[Besov 对偶与乘子估计](4016)把它控制为 #{CXY}。两个线性项分别给出 #{C|q_0|X} 与 #{C|p_0|Y}。}
+\p{小块能量还有权重 #{1-(\varphi)_Q}，其期望之和为零：平稳性使 #{\mathbb EJ(Q,p,q)} 不依赖块中心，而权重平均为零。取期望后得到显示式。Besov 乘子估计作为引用的分析输入保留。}

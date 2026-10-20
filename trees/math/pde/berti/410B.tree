@@ -1,0 +1,12 @@
+\title{水深参数族中的准周期重力驻波}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，定理 1.1；Baldi–Berti–Haus–Montalto，Inventiones 214 (2018)，739–911}
+
+\p{固定有限非空集合 #{\mathbb S^+\subset\mathbb N}，#{\nu=|\mathbb S^+|}，以及 #{0<h_1<h_2<\infty}。在[水波方程](4104)中归一化 #{g=1}，令 #{\kappa=\gamma=0}，空间周期为 #{2\pi}。存在 #{\bar s>0}、#{\varepsilon_0>0}，使每个正向量 #{\xi=(\xi_j)_{j\in\mathbb S^+}}、#{|\xi|\le\varepsilon_0^2} 对应一个 Borel 水深集合 #{\mathcal G_\xi\subset\lbrack h_1,h_2\rbrack}，满足}
+##{\lim_{\xi\to 0}|\mathcal G_\xi|=h_2-h_1.}
+\p{对每个 #{h\in\mathcal G_\xi}，存在[时间准周期](4108)、[空间偶对称](4109)的解，其角变量表示属于 #{H^{\bar s}(\mathbb T^\nu\times\mathbb T;\mathbb R^2)}，并有}
+##{\begin{aligned}\eta(t,x)&=\sum_{j\in\mathbb S^+}\sqrt{\xi_j}\cos(\omega_jt)\cos(jx)+r_1(\omega t,x),\\ \psi(t,x)&=-\sum_{j\in\mathbb S^+}\frac{\sqrt{\xi_j}}{\Omega_h(j)}\sin(\omega_jt)\cos(jx)+r_2(\omega t,x),\\ \Omega_h(j)&=\sqrt{j\tanh(hj)}.\end{aligned}}
+\p{余项满足 #{\|r_i\|_{H^{\bar s}}=o(\sqrt{|\xi|})}；#{\omega=\omega(\xi,h)} 满足[丢番图条件](410A)，且趋于 #{(\Omega_h(j))_{j\in\mathbb S^+}}。这些解在所研究的同空间周期扰动类中线性稳定，法向线性方程可约化为实频率的独立振子。}
+\p{量词先固定 #{\xi}，再允许水深落在 #{\mathcal G_\xi}；测度结论发生在水深区间上。原定理提供某个足够高的有限正则阶数 #{\bar s}，没有给出一个适用于任意低正则初值的结论。证明使用[拟微分可约化与 Nash–Moser 迭代](410E)，所引论文给出完整研究证明。}

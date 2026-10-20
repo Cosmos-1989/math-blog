@@ -1,0 +1,10 @@
+\title{光滑二维涡量的 Lp 估计}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.5；输运方程直接推导}
+
+\p{设光滑 #{\omega,u,g} 满足[涡量方程](430H)，#{\operatorname{div}u=0}，空间为环面，或全空间且所有边界通量消失。对 #{1<p<\infty}，有}
+##{\frac d{dt}\int|\omega|^p=p\int|\omega|^{p-2}\omega g,\qquad\|\omega(t)\|_p\leq\|\omega(0)\|_p+\int_0^t\|g(s)\|_p\,ds.}
+\p{\strong{证明。}把方程乘 #{p|\omega|^{p-2}\omega}，链式法则把左侧变为 #{\partial_t|\omega|^p+\operatorname{div}(u|\omega|^p)}。空间积分消去散度，再用[Hölder 不等式](0A68)得 #{\frac d{dt}\|\omega\|_p^p\leq p\|\omega\|_p^{p-1}\|g\|_p}。范数非零时除以 #{p\|\omega\|_p^{p-1}} 后积分；零点可用 #{(\|\omega\|_p^p+\varepsilon)^{1/p}} 正则化再令 #{\varepsilon\downarrow 0}。}
+\p{特别地 #{g=0} 时所有这些范数守恒。#{p=1} 可用平滑凸近似处理绝对值，#{p=\infty} 可沿[光滑速度的特征曲线](00OB)积分。源项中出现的是当前时间的 #{\omega(x,t)}。对粗糙弱涡量，链式法则是否成立是额外的重整化问题。}

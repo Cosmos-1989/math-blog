@@ -1,0 +1,11 @@
+\title{周期 Sobolev 空间与水波的零模态}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，引言 Phase spaces；周期 Fourier 定义}
+
+\p{取 #{\mathbb T^d=(\mathbb R/(2\pi\mathbb Z))^d}，使用归一化测度 #{(2\pi)^{-d}dx}。与[圆周 Fourier 乘子](0X09)的一周期约定相差坐标伸缩，写 #{f(x)=\sum_{k\in\mathbb Z^d}f_ke^{ik\cdot x}}。对实数 #{s}，周期 Sobolev 空间是三角多项式在下述范数中的完备化：}
+##{\|f\|_{H^s(\mathbb T^d)}^2=\sum_{k\in\mathbb Z^d}\langle k\rangle^{2s}|f_k|^2,\qquad \langle k\rangle=(1+|k|^2)^{1/2}.}
+\p{这是[实数阶 Sobolev 空间](130F)的周期版本。指数函数的正交性给出三角多项式的 Parseval 等式；取完备化后 #{H^0=L^2}。#{s=1} 的 Fourier 范数等于函数及其一阶[弱导数](2J0C)的平方积分之和。周期 Fourier 系数的唯一性也可由 [Fejér 核](132B)理解。}
+\p{在一维定义 #{H_0^s(\mathbb T)=\{f\in H^s:f_0=0\}}。下标零表示零均值，不表示零边界值。另记 #{\dot H^s(\mathbb T)=H^s(\mathbb T)/\mathbb R}，实函数相差常数视为相同；其范数取唯一零均值代表元的 #{H^s} 范数。水面高度用 #{H_0^s} 固定体积，势函数用 #{\dot H^s} 消去不改变速度的常数。}
+\p{对零均值函数，#{\partial_x^{-1}f=\sum_{j\ne 0}(ij)^{-1}f_je^{ijx}}。因此 #{\partial_x\partial_x^{-1}f=f}，而 #{\partial_x^{-1}\partial_x f=f-f_0}。这也说明逆导数的定义必须先处理零模态。}

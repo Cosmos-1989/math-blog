@@ -1,0 +1,15 @@
+\title{常涡量的 Wahlén 正则变量}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(0.4) 后的变量变换；矩阵计算}
+
+\p{设 #{A=\partial_x^{-1}} 为[零均值逆导数](4101)。在[常涡量 Hamilton 系统](4105)中令 #{\zeta=\psi -\frac\gamma 2A\eta}。则 #{Q=(\eta,\zeta)^T=Tq} 的 Poisson 张量是正则矩阵 #{J_0}。}
+##{T=\begin{pmatrix}1&0\\-\gamma A/2&1\end{pmatrix},\quad T^*=\begin{pmatrix}1&\gamma A/2\\0&1\end{pmatrix},\quad TJ_\gamma T^*=\begin{pmatrix}0&1\\-1&0\end{pmatrix}=J_0.}
+\p{\strong{证明。}#{A^*=-A} 给出显示的 #{T^*}。先相乘得 #{TJ_\gamma=\left(\begin{smallmatrix}0&1\\-1&\gamma A/2\end{smallmatrix}\right)}，再右乘 #{T^*}，右下块相消。若 #{K(Q)=H(T^{-1}Q)}，链式法则给出 #{\nabla_qH=T^*\nabla_QK}，故 #{Q_t=TJ_\gamma T^*\nabla_QK=J_0\nabla_QK}。}
+\p{这个等式由下面的交换图表达；两条复合都等于 #{TJ_\gamma}。}
+\figure{\tex{\usepackage{tikz-cd}}{\begin{tikzcd}[column sep=large,row sep=large]
+\nabla_q H \arrow[r,"J_\gamma"] \arrow[d,"T^{-*}"'] & \dot q \arrow[d,"T"] \\
+\nabla_Q K \arrow[r,"J_0"'] & \dot Q
+\end{tikzcd}}}
+\p{因此 #{J_0T^{-*}=TJ_\gamma}。变换可逆，因为 #{\psi=\zeta+\frac\gamma 2A\eta}；它不消去能量中的涡量依赖，只把 Poisson 张量化为正则形式。}

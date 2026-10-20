@@ -1,0 +1,10 @@
+\title{p-Laplace 能量的稳定二次型}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3.5(2)；文献15}
+
+\p{设 #{p>1}。在[弱导数](2J0C)意义下，#{W^{1,p}(\Omega)} 要求函数与一阶弱导数属于 [#{L^p}](00Q6)。#{p}-Laplace 算子为 #{\Delta_pu=\operatorname{div}(|\nabla u|^{p-2}\nabla u)}，来自能量 #{\int_\Omega(|\nabla u|^p/p-F(u))}，其中 #{F'=f}；弱方程为 #{\int|\nabla u|^{p-2}\nabla u\cdot\nabla\xi=\int f(u)\xi}。}
+\p{当 #{p\ge 2} 且 #{u\in C^1(\overline\Omega)} 时，固定边值稳定性要求对全部 #{\xi\in C_c^1(\Omega)} 有}
+##{\int f'(u)\xi^2\le\int\left(|\nabla u|^{p-2}|\nabla\xi|^2+(p-2)|\nabla u|^{p-4}(\nabla u\cdot\nabla\xi)^2\right).}
+\p{公式由 #{z\mapsto|z|^p/p} 的 Hessian 求得。#{p>2} 时在 #{z=0} 处将整个 Hessian 延拓为零；#{p=2} 时为单位矩阵，回到[半线性稳定性](4203)。#{1<p<2} 时在临界点处权重奇异，需用加权测试空间定义稳定性，不能逐项在 #{\nabla u=0} 处照抄上式。}

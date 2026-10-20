@@ -1,0 +1,11 @@
+\title{块平均梯度与通量的能量界}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2，梯度与通量能量界}
+
+\p{在立方体 #{U} 上令 #{E_U(w)=|U|^{-1}\int_U\nabla w\cdot a\nabla w}，#{A,B} 为[粗粒化矩阵](4007)。对 #{w\in H^1(U)} 有 #{(\nabla w)_U\cdot B^{-1}(\nabla w)_U\leq E_U(w)}；若 #{w} [调和](4001)，还满足}
+##{(a\nabla w)_U\cdot A^{-1}(a\nabla w)_U\leq E_U(w).}
+\p{\strong{梯度界。}令 #{g=(\nabla w)_U}。Neumann 变分定义给出 #{q\cdot g-\frac 12E_U(w)\leq\frac 12q\cdot Bq}。对 #{q} 极大化，最优 #{q=B^{-1}g}，得到结论。}
+\p{\strong{通量界。}令 #{j=(a\nabla w)_U}，取[Dirichlet 解](4005) #{u_p}。调和性使 #{p\cdot j=|U|^{-1}\int_U\nabla u_p\cdot a\nabla w}。由 Schwarz 不等式，#{|p\cdot j|\leq(p\cdot Ap)^{1/2}E_U(w)^{1/2}}。取 #{p=A^{-1}j} 即得结论。}
+\p{第一条用于任意有限能量函数；第二条需要方程，否则不能消去零边值扰动。}

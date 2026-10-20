@@ -1,0 +1,21 @@
+\title{负范数配对与截断乘子估计}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.1 式 (2.11)-(2.13)；研究论文附录 A}
+
+\p{设 #{Q_m} 为[三进块](4004)，#{0<s<1}。对函数 #{g}，用边长 #{3^k}、中心位于 #{3^{k-1}\mathbb Z^d} 且包含在 #{Q_m} 内的所有块组成 #{\mathcal R_k}，定义}
+##{[g]_{\underline B^s_{2,\infty}(Q_m)}
+ =\sup_{k\leq m}3^{-sk}
+ \left(\frac 1{|\mathcal R_k|}\sum_{Q\in\mathcal R_k}
+ \|g-(g)_Q\|_{\underline L^2(Q)}^2\right)^{1/2},\qquad
+ \|g\|_{\underline B^s_{2,\infty}}
+ =[g]_{\underline B^s_{2,\infty}}+3^{-sm}\|g\|_{\underline L^2}.}
+\p{与[显式负范数](400E)的配对满足}
+##{\left||Q_m|^{-1}\int_{Q_m}fg\right|\leq C(d,s)[f]_{\mathcal B^{-s}_{2,1}}\,
+ \|g\|_{\underline B^s_{2,\infty}}.}
+\p{\strong{配对的分层计算。}记 #{P_kg} 为 #{k} 级不交块上的平均阶梯函数。由 #{P_kg\to g} 的 #{L^2} 逼近，#{g=P_mg+\sum_{k\leq m}(P_{k-1}g-P_kg)}。每个差在子块上为常数，与 #{f} 配对只读取该子块的平均；同尺度 [Schwarz 不等式](004S)给出 #{C3^{sk}[g]_{\underline B^s_{2,\infty}}} 乘该层 #{f} 平均的均方根。对尺度求和即得到负范数；常数项由完整范数中的 #{3^{-sm}\|g\|_2} 控制。先对有限和计算，再取极限，得到配对延拓。}
+\p{还需要如下分析输入。若 #{w\in H^1(Q_m)} 为[一阶 Sobolev 函数](2J0C) 且 #{(w)_{Q_m}=0}，#{\varphi} 光滑且 #{\|\nabla\varphi\|_\infty\leq C_0\,3^{-m}}、#{\|\nabla^2\varphi\|_\infty\leq C_0\,3^{-2m}}，则}
+##{\|w\nabla\varphi\|_{\underline B^{1-s}_{2,\infty}(Q_m)}
+ \leq C(d,s,C_0)3^{-m}[\nabla w]_{\mathcal B^{-s}_{2,1}(Q_m)}.}
+\p{此乘子估计引用报告式 (2.12)-(2.13)及研究论文附录 A 的多尺度 Poincaré 和乘子引理。它将分部积分后的低正则度乘积转换为可求和的块平均；一般分数阶乘子证明保留在该附录。}

@@ -1,0 +1,15 @@
+\title{对数平方尺度来自两层迭代}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，定理 3.1 的尺度迭代}
+
+\p{在[固定指数模型](400O)下，设 #{\Theta=\Lambda /\lambda}。存在 #{C(d)}，使}
+##{N\geq C\log^2(1+\Theta)\quad\Longrightarrow\quad T_N\leq\tfrac 32.}
+\p{\strong{从大对比度进入有界区间。}在[单步重整化](400Z)中固定 #{\sigma=1/4}，每轮使用 #{h_*=\lceil C(d)\log(2\Theta)\rceil} 个三进尺度。若某起始尺度的 #{T>2}，则下一步满足 #{T_{\mathrm{new}}\leq 1+T/4\leq 3T/4}。由 #{T_0\leq\Theta}，至多 #{K=\lceil\log(2\Theta)/\log(4/3)\rceil} 轮后进入 #{T\leq 2}。于是总成本至多 #{Kh_*\leq C(d)\log^2(1+\Theta)}。}
+\p{再做一次 #{\sigma=1/4} 的单步估计，得到 #{T\leq 3/2}。对任意 #{N\geq(K+1)h_*}，在首次进入 #{T\leq 2} 的尺度停下前面的等长迭代，把最后一次单步估计延长至该 #{N}。最后一步长度至少为 #{h_*}，且单步定理对所有超过门槛的整数均有效，故无需假设 #{T_n} 单调。每轮都使用同一个微观 #{\Theta}。}
+\p{\strong{任意容限。}对 #{0<\sigma\leq 1/2}，进入 #{T\leq 2} 后再以 #{\sigma /2} 应用单步估计，得到}
+##{N\geq C\log^2(1+\Theta)
+ +C\sigma^{-4}\log(2/\sigma)\log(2\Theta /\sigma)
+ \quad\Longrightarrow\quad T_N\leq 1+\sigma.}
+\p{报告定理 3.1 的更细容限项 #{C\sigma^{-4}\log(\sigma^{-1})} 按[精确原定理](400P)引用。这里的附加成本仍含同一微观 #{\Theta}；固定任意容限后，它不改变关于对比度的 #{\log^2(1+\Theta)} 上界。}

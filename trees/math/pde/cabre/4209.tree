@@ -1,0 +1,12 @@
+\title{对数奇异解的稳定阈值恰为十维}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，式(3.7)；直接计算}
+
+\p{设 #{n\ge 3}，#{u(x)=-2\log|x|} 于 #{B_1\setminus\{0\}}。它属于 #{H^1_0(B_1)}，在[弱意义](4201)下满足 #{-\Delta u=2(n-2)e^u}，且[固定边值稳定](4203)当且仅当 #{n\ge 10}。}
+\p{\strong{方程与能量。}记 #{r=|x|}，则 #{u_r=-2/r}，#{u_{rr}=2/r^2}，径向 Laplace 公式给出 #{-\Delta u=2(n-2)/r^2=2(n-2)e^u}。又 #{\int_0^1 r^{n-1}|\log r|^2dr<\infty}、#{\int_0^1r^{n-3}dr<\infty}，故函数与梯度平方可积。截断原点的误差为 #{O(\delta^{n-2}|\log\delta|^2)}；边界 #{r=1} 上函数为零，由光滑逼近得 #{u\in H^1_0}。}
+\p{\strong{穿过原点。}在 #{B_1\setminus\overline B_\delta} 上对紧支撑光滑测试函数分部积分。内球面的通量大小至多 #{C\delta^{n-1}|u_r(\delta)|=C\delta^{n-2}\to 0}，右端 #{r^{-2}} 可积。因此原点没有额外 Dirac 质量，弱方程成立。}
+\p{\strong{稳定阈值。}线性化势为 #{2(n-2)r^{-2}}。由[最优 Hardy 不等式](4208)，二次型非负恰好要求}
+##{2(n-2)\le\frac{(n-2)^2}{4}\quad\Longleftrightarrow\quad n\ge 10.}
+\p{必要性使用该页支撑在小环带的最优常数序列。#{n=10} 为等号情形，稳定但无界；这解释了普遍有界性定理为何最多到九维。}

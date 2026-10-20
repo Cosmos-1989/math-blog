@@ -1,0 +1,11 @@
+\title{高阶能量不等式给出多项式寿命}
+\date{2026-10-20}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(2.3)；连续性论证}
+
+\p{设 #{N\ge 0}，#{y(t)\ge 0} 连续，#{y(0)\le\varepsilon}，且在解存在的期间满足 #{y(t)^2\le A\varepsilon^2+B\int_0^t y(\tau)^{N+3}\,d\tau}，其中 #{A\ge 1}、#{B>0}。固定 #{\delta>0}，假设局部解在任何有限存在区间上只要 #{\sup y<\delta} 就可延拓。若 #{0<\varepsilon<\delta /(2\sqrt A)}，则存在只依赖 #{A,B,N} 的 #{c>0}，使 #{0\le t\le c\varepsilon^{-N-1}} 上 #{y(t)<2\sqrt A\varepsilon<\delta}。}
+\p{\strong{证明。}在连续性假设 #{y\le 2\sqrt A\varepsilon} 的区间上，令 #{C_*=2\sqrt A}，得到}
+##{y(t)^2\le A\varepsilon^2+BC_*^{N+3}t\varepsilon^{N+3}.}
+\p{取 #{c=A/(2BC_*^{N+3})}，若 #{t\le c\varepsilon^{-N-1}}，则右端至多 #{(3A/2)\varepsilon^2<4A\varepsilon^2}。若存在首次达到 #{2\sqrt A\varepsilon} 的时刻，在该时刻所得严格不等式矛盾。由局部连续性及延拓假设，估计一直保持到指定时间。反向时间满足相同不等式时同理。}
+\p{应用于[水波定理](4110)时，#{y=\|(\eta,\psi)\|_{X^s}}。高阶能量不等式和延拓准则是 PDE 的实质输入；上述推导说明指数为何是 #{N+1}：积分中的 #{\varepsilon^{N+3}} 必须与初始能量 #{\varepsilon^2} 比较。范数采用[周期 Sobolev 定义](4101)。}

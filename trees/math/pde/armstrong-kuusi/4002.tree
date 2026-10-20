@@ -1,0 +1,15 @@
+\title{立方体上的均值零 Poincaré 不等式}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.3 的经典分析前置}
+
+\p{设 #{Q=(0,L)^d}，#{u\in H^1(Q)} 为[一阶 Sobolev 函数](2J0C)，记 #{(u)_Q=|Q|^{-1}\int_Q u}。则}
+##{\int_Q|u-(u)_Q|^2\leq dL^2\int_Q|\nabla u|^2.}
+\p{\strong{证明。}先设 #{u} 光滑。记 #{P_i} 为对第 #{i} 个坐标取平均的算子。由积分形式的 [Schwarz 不等式](004S)，它是 #{L^2} 压缩；不同 #{P_i} 交换。在一维，微积分基本定理给出}
+##{|v(x)-v(y)|^2\leq L\int_0^L|v'(t)|^2\,dt,\qquad
+ \int_0^L|v-(v)_{(0,L)}|^2\leq L^2\int_0^L|v'|^2.}
+\p{将此式逐纤维应用，并写出望远镜和}
+##{u-P_1\cdots P_du=\sum_{i=1}^dP_1\cdots P_{i-1}(u-P_iu).}
+\p{平方和估计 #{|\sum_i b_i|^2\leq d\sum_i|b_i|^2} 与压缩性给出结论。立方体上的 #{H^1} 函数可先逐坐标反射延拓，再卷积光滑逼近；函数与弱梯度同时在 #{L^2} 中收敛，因此不等式传至 #{H^1}。}
+\p{均值零闭子空间上，梯度范数与 #{H^1} 范数等价。这里的条件是均值零；[零边值版本](2J0D)适用于另一闭子空间。}

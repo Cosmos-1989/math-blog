@@ -32,6 +32,7 @@ const expected = new Set([
   ...read('research/icm2026-dynamics-first-reports.json').reports.map(p => p.outline),
   ...read('research/icm2026-dynamics-second-reports.json').reports.map(p => p.outline),
   ...read('research/icm2026-dynamics-final-reports.json').reports.map(p => p.outline),
+  ...read('research/icm2026-pde-first-reports.json').reports.map(p => p.outline),
   '0200',
 ]);
 const reviewed = new Set(record.pages.map(p => p.id));

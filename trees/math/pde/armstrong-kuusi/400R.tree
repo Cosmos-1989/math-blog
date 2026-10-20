@@ -1,0 +1,12 @@
+\title{有限程块平均的高阶矩衰减}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.5 的矩估计}
+
+\p{设 #{r=2\ell\geq 2} 为偶整数，#{X_z} 是单位块内系数的实随机观测，按[单位有限程依赖](400M)且平稳，#{\|X_0\|_{L^r}<\infty}。在 #{Q_n} 的单位块中心平均，#{n\geq 0}，有}
+##{\left\|\frac 1{3^{dn}}\sum_{z\in\mathbb Z^d\cap Q_n}(X_z-\mathbb EX_z)\right\|_{L^r}
+ \leq C(d,r)3^{-dn/2}\|X_0\|_{L^r}.}
+\p{\strong{独立族的计数。}设中心化的[独立随机变量](00L3) #{Y_1,\ldots,Y_M} 的 #{L^{2\ell}} 范数至多 #{K}。展开[期望](00L1) #{\mathbb E(\sum_iY_i)^{2\ell}}，任何有指标只出现一次的项都因独立和中心化而为零。其余项最多含 #{\ell} 个不同指标，故数量不超过 #{C_\ell M^\ell}。[Hölder 不等式](0A68)把每项绝对值控制为 #{K^{2\ell}}。因此 #{\|\sum_iY_i\|_{2\ell}\leq C_\ell M^{1/2}K}。}
+\p{\strong{分色。}将全部单位块按中心坐标模 #{3} 分成 #{3^d} 族。每族相互独立；对各族用上式，再用 [Minkowski 不等式](0A69)相加。每族的大小至多 #{3^{dn}}，除以总块数即得结论。}
+\p{对矩阵逐项应用，再用有限维范数比较，结论仍成立，常数可依赖 #{d,r}。这为固定 #{r=32d} 的论证提供矩估计，不需要把相邻块假作独立。}

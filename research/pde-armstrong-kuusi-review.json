@@ -1,0 +1,1344 @@
+{
+  "schema_version": 1,
+  "reviewer_role": "独立数学复核者；不是 40 组作者",
+  "review_date_local": "2026-10-20",
+  "repository": "/Users/sunzy/claude_test/forester2",
+  "stage": "final_scoped_review_closed",
+  "scope": {
+    "only_group": "Armstrong-Kuusi 40xx",
+    "only_writable_repository_file": "research/pde-armstrong-kuusi-review.json",
+    "excluded": [
+      "Cabre",
+      "Colombo",
+      "Berti",
+      "数学页修改",
+      "packet 修改",
+      "注册表修改",
+      "提交",
+      "新建线程"
+    ],
+    "writer": "Sagan",
+    "final_ready_notification_received": true,
+    "finalhash_review_completed": true,
+    "hash_policy": "按用户最后指令，在作者交付冻结、主线程normalizeFormat之后刷新44个源文件及packet的SHA-256。证书仅适用于下列精确字节；后续改动须重核，不扩大范围。"
+  },
+  "summary": {
+    "snapshot_pages_read": 44,
+    "atomic_pages": 42,
+    "reused_foundations_read": 15,
+    "p1_findings": 0,
+    "p2_findings": 0,
+    "resolved_p1_findings": 1,
+    "resolved_p2_findings": 3,
+    "verdict": "修复后独立复核完成，未关闭P1/P2为零。400S无效sum/max交换已移除，确定微观椭圆界贯穿400S/X/Y/Z/4010；400N可积性与正文/packet来源编号均已核对关闭。此前漏检及修复历史保留。44源文件哈希与作者packet完全一致，42原子及145条直接前置边核对通过。",
+    "proof_boundary": "在确定一致椭圆、有符号置换不变、单位有限程依赖的固定指数模型下，本地修复给出固定容限C(d)log^2(1+Theta)尺度，并保留较弱且含Theta的任意容限成本。一般退化理论、粗Caccioppoli、局部化/Besov乘子、分数边界黑箱和尖锐容限项仍是明确外引；未认证全部原始论文或出版PDF。"
+  },
+  "instructions_read": [
+    "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+    "NOTES_STYLE_GUIDE.md",
+    "EVERGREEN_REFACTOR_AUDIT.md (前 90 行)",
+    "/Users/sunzy/.agents/skills/latex-math-writing/SKILL.md",
+    "/Users/sunzy/.agents/skills/latex-math-writing/references/writing-rules.md"
+  ],
+  "sources": [
+    {
+      "id": "AK-report-published",
+      "title": "A Coarse-Graining Theory for Elliptic Operators and Homogenization in High Contrast",
+      "authors": [
+        "Scott Armstrong",
+        "Tuomo Kuusi"
+      ],
+      "doi": "10.1137/25M1804807",
+      "publication": "Proceedings of the International Congress of Mathematicians 2026, Volume 5, pp. 193-212",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1804807",
+      "pdf_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1804807",
+      "actual_reading": {
+        "html": "通读正文第 1-3 节及参考文献的可见文本；部分公式在 HTML 中是图片。",
+        "pdf_text": "定点核读出版 PDF 的可提取文本：pp.196-200 的能量、矩阵与式 (2.21)；pp.201-203 的 Caccioppoli、缺陷、概率假设及定理 3.1；pp.209-211 的收缩、引理 3.7 及最终迭代。",
+        "visual": "出版 PDF 截图工具返回缓存错误；直接下载 PDF/epdf 返回 HTTP 403。没有取得官方 PDF 的完整可视阅读证据。"
+      },
+      "full_published_pdf_visually_read": false,
+      "license_verified_from_html": "Creative Commons Attribution 4.0 (CC BY); IMU copyright; HTML989-995",
+      "last_targeted_comparison": "See published_targeted_comparison; precise sites compared again in current turn."
+    },
+    {
+      "id": "AK-report-v1",
+      "title": "A coarse-graining theory for elliptic operators and homogenization in high contrast",
+      "url": "https://arxiv.org/abs/2509.24887v1",
+      "version": "v1, 2025-09-29",
+      "pages": 22,
+      "local_pdf": "/tmp/pde-armstrong-kuusi-arxiv-v1.pdf",
+      "sha256": "4655dd75ce92a2fdb5d73167a6870228e0f4886b55f82f636c038a5c3661b8f6",
+      "actual_reading": "读取全篇提取文本，数学正文 pp.1-20 和参考文献 pp.21-22；视觉核查 PDF pp.8,12,20。此版本用于补读报告数学，不宣称与出版20页逐字相同。"
+    },
+    {
+      "id": "AK-research-v3",
+      "title": "Renormalization group and elliptic homogenization in high contrast",
+      "url": "https://arxiv.org/abs/2405.10732v3",
+      "version": "v3, 2025-09-06",
+      "pages": 152,
+      "publication_doi": "10.1007/s00222-025-01370-9",
+      "publication_url": "https://link.springer.com/article/10.1007/s00222-025-01370-9",
+      "local_pdf": "/tmp/pde-armstrong-kuusi-original-v3.pdf",
+      "sha256": "81aedeb87003afb4813914f60dd54f88e688bce01529256418974e35b616b5b6",
+      "actual_reading": [
+        "Theorem A p.4；§1.2 假设和 Theorem B p.8-9 的相应部分。",
+        "§2.1 加权空间 pp.17-18 的相关定义，不是该框架全部证明。",
+        "§2.2-2.3 pp.20-23 定点读取双变量矩阵、(2.15)-(2.18)、(2.26)-(2.29)，用于核对 4014 缺陷及 4008 恒等式。",
+        "Proposition 2.5 pp.29-31 的完整证明文本；其附录输入和外引内部迭代引理未全部独立复证。",
+        "Theorem 3.1 pp.52-53 的陈述和讨论，不含其完整证明。",
+        "Definition 5.1 / Remark 5.2 pp.85-86、Proposition 5.3 pp.86-87 的陈述和讨论；Lemma 5.5 p.88 陈述及证明开头，不含该节完整证明。"
+      ],
+      "full_text_read": false,
+      "reason_for_consultation": "仅查报告或条目的关键恒等式、粗粒化 Caccioppoli 与解比较的必要步骤；未声称通读152页。"
+    }
+  ],
+  "key_conditions_checklist": [
+    {
+      "id": "C01",
+      "topic": "模型与解空间",
+      "required": "d>=2；对称 SPD；统一椭圆模型用 H1，退化模型另需 a,a^-1 的局部可积与精确定义的加权空间及测试合法性。",
+      "page_result": "4001/400L/400O区分模型；400N矩条件已补并复核。"
+    },
+    {
+      "id": "C02",
+      "topic": "概率假设",
+      "required": "P1 为 Z^d 平移平稳；P2 为距离至少单位的集合生成 sigma 代数独立，不是普通遍历性，也不是相邻单位块独立。",
+      "page_result": "400M 和 400R 有有限染色处理。"
+    },
+    {
+      "id": "C03",
+      "topic": "源文矩门槛",
+      "required": "gamma1+gamma2<1，xi>=16d/(1-gamma1-gamma2)；必须跟踪上下椭圆量各自对应的 gamma/nu，不得任意交换。",
+      "page_result": "400O/P 明确特化 gamma1=gamma2=1/8, nu=7/32, r=32d，门槛满足。"
+    },
+    {
+      "id": "C04",
+      "topic": "标量化",
+      "required": "普通坐标置换不足；须反射加置换等足以消去非对角元的对称性，且矩阵均值存在。",
+      "page_result": "400N明确有符号置换，并补有限一阶矩，已关闭缺口。"
+    },
+    {
+      "id": "C05",
+      "topic": "体积归一化",
+      "required": "能量用归一化积分1/|U|乘积分；子块能量用体积权重平均；不能改成未归一化总和。",
+      "page_result": "4004-4009、400R-400V 已查。"
+    },
+    {
+      "id": "C06",
+      "topic": "Dirichlet/Neumann",
+      "required": "A 是 Dirichlet 最小能量矩阵；B=A_*^-1 是 Neumann 极大能量矩阵；v=n_q-u_p；Neumann 解仅模常数唯一。",
+      "page_result": "4005-4008 已查。"
+    },
+    {
+      "id": "C07",
+      "topic": "二次亏损",
+      "required": "J-F_{p,q}(w)=1/2 fint |grad v-grad w|_a^2；不是 J-1/2 fint |grad w|_a^2。",
+      "page_result": "4008 修正正确；4009 传播正确。"
+    },
+    {
+      "id": "C08",
+      "topic": "矩阵顺序",
+      "required": "lambda I<=A_*<=A<=fint a<=Lambda I；B<=fint a^-1；取逆反序，不能交换非交换矩阵乘积。",
+      "page_result": "400A/400J 已查。"
+    },
+    {
+      "id": "C09",
+      "topic": "能量界对象",
+      "required": "平均梯度界对全部有限能量函数；平均通量界需调和性。响应误差含 sqrt(||A-A_*||)。",
+      "page_result": "400B/C/G/U 已查。"
+    },
+    {
+      "id": "C10",
+      "topic": "粗粒化常数",
+      "required": "k=-infinity,...,m，取每层全部子块最大值，权重 c_sq=1-3^-sq，椭圆量外幂2/q，缺陷外幂1/q，q=infinity另定义。",
+      "page_result": "400E/F/J 已查。"
+    },
+    {
+      "id": "C11",
+      "topic": "有效椭圆性",
+      "required": "粗粒化 Caccioppoli 要 s,t>0 且 s+t<1、相关上下常数有限正；这是尺度化椭圆性，不是说微观系数已变成低对比度。",
+      "page_result": "400F/I 正确区分；400I 属引用定理。"
+    },
+    {
+      "id": "C12",
+      "topic": "算子缺陷",
+      "required": "固定 SPD 参照矩阵不必预先是均匀化矩阵；E_s2 到负范数的常数须保留 c_{2s} 的平方根损失。",
+      "page_result": "400J/K 已查。"
+    },
+    {
+      "id": "C13",
+      "topic": "annealed 均值",
+      "required": "alpha I=EA，beta I=EB=E[A_*^-1]；beta^-1 I 不等于 E[A_*]，也不等于 (EA)^-1。",
+      "page_result": "400N/O/4012/4013 已查。"
+    },
+    {
+      "id": "C14",
+      "topic": "两种对比度",
+      "required": "theta=alpha beta 只含均值；T=Lr(lower^-1)Lr(upper) 含全细尺度最大值；1<=theta<=T；theta 单调不自动证明 T 单调。",
+      "page_result": "400O/S/Z/4010 明确避免混用。"
+    },
+    {
+      "id": "C15",
+      "topic": "尺度与重启",
+      "required": "整数平稳可直接用于 k>=0 的整数块中心；从 j>=0 放大后仍满足平稳和单位范围条件。",
+      "page_result": "400T限制k>=0；400S/X/Z/4010重启保持同一lambda,Lambda,Theta，整数平稳与依赖距离上界仍成立。"
+    },
+    {
+      "id": "C16",
+      "topic": "集中与矩桥",
+      "required": "先用PSD次可加差与块平均集中；最大值个数损失须计入指数。细尾禁止交换sum(max)与max(sum)，改以确定M逐层控制。",
+      "page_result": "400S修复已逐项复核：细尾<=sqrt(M)3^{-nu m}，rho=nu-d/(2r)=13/64，||(K-b)_+||_r<=CM3^{-rho m}；T_{j+m}<=theta_j+C3^{-rho m}Theta。AK-P1-003关闭。"
+    },
+    {
+      "id": "C17",
+      "topic": "平衡与收缩",
+      "required": "mu=sqrt(alpha/beta)，p=mu^-1/2 e,q=mu^1/2 e，q0=-mu p0；E Jtilde=(theta-1)/2。",
+      "page_result": "400W/X/Y代数已查；400X的四个吸收条件明确包含3^{-rho m}Theta^2<=delta。Besov局部化输入仍是引用，不标为全部自证。"
+    },
+    {
+      "id": "C18",
+      "topic": "单步成本",
+      "required": "修复后的本地窗口h>=C log(2Theta/delta)，delta=c sigma^4；k>=2delta^-1 log(4/sigma)，N>=(k+1)h。尾部恢复保留同一Theta，不能改成改善后的局部T。",
+      "page_result": "400Z逐项给出C sigma^-4 log(2/sigma) log(2Theta/sigma)成本，及T_N<=theta_{N-h}+C3^{-rho h}Theta<=1+sigma theta_0。"
+    },
+    {
+      "id": "C19",
+      "topic": "对数平方推导",
+      "required": "固定sigma=1/4，每轮O(log(2Theta))尺度、O(log(2Theta))轮；T>2时1+T/4<=3T/4。进入T<=2后再一步；任意更大N通过延长最后一步而非假设T单调。",
+      "page_result": "4010修复后可闭合固定容限C(d)log^2(1+Theta)。本地任意容限成本含Theta；原文更尖锐项在400P单独引用，不再声称局部T0成本或无Theta余项。"
+    },
+    {
+      "id": "C20",
+      "topic": "尺度编号与长度",
+      "required": "N=O(log^2(1+Theta)) 是三进尺度编号；物理长度 ell*3^N=ell exp(O(log^2(1+Theta)))。",
+      "page_result": "400P/4011 正确。"
+    },
+    {
+      "id": "C21",
+      "topic": "有效常矩阵",
+      "required": "beta_n^-1<=a_hom<=alpha_n，极限共同依赖环境；不能从有限块均值逼近直接声称一般边值解全部已比较。",
+      "page_result": "4012/4014 区分响应夹逼和外部确定性黑箱。"
+    },
+    {
+      "id": "C22",
+      "topic": "证明覆盖",
+      "required": "粗 Caccioppoli、Besov 乘子、Lipschitz 分数边界黑箱、任意容限尖锐项的引用必须单列，抽象鸽巢原理或论证结构不算原文完整证明。",
+      "page_result": "最终packet及400I/P/T、4010/4014/4016保持明确引用边界；report与根层remaining_branches/unexpanded_deep_proofs一致。"
+    }
+  ],
+  "source_observations": [
+    {
+      "id": "SRC-01",
+      "status": "independent_counterexample",
+      "location": "报告 (2.21)",
+      "observation": "印刷式左端把 F(w) 错写为正的半能量。a=I,p=0,q=e1,v=x1,w=2x1 时印刷左端=-3/2、右端=1/2。正确式见原研究 v3 (2.29)。",
+      "local_handling": "4008/4009 已正确处理，不再报本地 P1。"
+    },
+    {
+      "id": "SRC-02",
+      "status": "independent_counterexample",
+      "location": "报告 §3 (P5)",
+      "observation": "仅普通置换不能使均值矩阵标量化；常矩阵 [[2,1],[1,2]] 已是反例。",
+      "local_handling": "400N/P 加强为有符号置换并明确说明。"
+    },
+    {
+      "id": "SRC-03",
+      "status": "normalization_check",
+      "location": "报告 (2.37)",
+      "observation": "按报告离散负范数和归一化 E 定义，常数需有 c_{2s}^-1/2 损失，不能对所有 s>0 仅取 C(d)。常场 a=2I,bar a=I,u=x1 可直接检验。",
+      "local_handling": "400K 明确保留 sqrt(2/c_{2s})。"
+    },
+    {
+      "id": "SRC-04",
+      "status": "notation_correction_needed",
+      "location": "报告 §3 平均 Neumann 矩阵定义",
+      "observation": "应使用 E[a_*^-1(U)]；源式中的 E[a^-1(U)] 若不带星号，与后续论证不一致。",
+      "local_handling": "400O 使用 B=A_*^-1，无此错误。"
+    },
+    {
+      "id": "SRC-05",
+      "status": "version_or_notation_mismatch",
+      "location": "报告 P3、(3.3)、Lemma 3.5、(3.24)",
+      "observation": "gamma/nu 对应上下椭圆量的顺序在这些位置不一致；gamma1!=gamma2 时不能不加说明互换。",
+      "local_handling": "400O/P 显式取两指数相同，避免歧义。"
+    },
+    {
+      "id": "SRC-06",
+      "status": "proof_accounting_gap_not_theorem_refutation",
+      "location": "报告 Lemma 3.7 的参数选择与 Theorem 3.1 末段",
+      "observation": "按所写 delta=c sigma^4 xi^-4、m=ceil[xi log(delta^-1 xi T0)]、k=ceil[2 delta^-1 |log sigma|]，(k+1)m 含额外 log(1/sigma)。仅靠所列计算不能声称已证明源文更尖锐的一次容限对数。固定 sigma 的 log^2 T0 结论不受这一记账问题影响。",
+      "local_handling": "400Z/4010 使用可直接核算的较弱容限界，400P 精确项明确引用。"
+    },
+    {
+      "id": "SRC-07",
+      "status": "proof_endpoint_check",
+      "location": "报告最终迭代叙述",
+      "observation": "T_new<=1+T/2 本身不能保证从 T>2 有限次达到 T<=2。",
+      "local_handling": "4010 改用固定 sigma=1/4，有限进入阈值的推导正确。"
+    },
+    {
+      "id": "SRC-08",
+      "status": "framework_boundary",
+      "location": "报告 §2.1",
+      "observation": "包含 L1 范数项的所示能量空间范数不直接是内积范数。一般退化空间的完备化和测试合法性不能由一致椭圆 Lax-Milgram 自动推出。",
+      "local_handling": "400L 明确区分，未把一般框架记为已证。"
+    },
+    {
+      "id": "SRC-09",
+      "status": "unresolved_published_formula_visual_check",
+      "location": "出版 (2.13)、(2.17)、(2.29)",
+      "observation": "出版可提取文本与 v1 在 (2.13) 的 Besov 求和指标、(2.29) 的下椭圆指数等处有不一致；(2.17) 提取文本疑似重复。未取得出版公式像素，因此不把提取损坏断言为出版数学错误，也不把两版静默合并。",
+      "local_handling": "主要推导采用明示版本和独立计算；4016 的附录输入仍需最终来源精确定位。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "AK-P2-001",
+      "priority": "P2",
+      "status": "resolved_by_author_and_independently_rechecked",
+      "file": "trees/math/pde/armstrong-kuusi/400N.tree",
+      "start_line": 7,
+      "end_line": 9,
+      "title": "标量化定理需声明均值矩阵有限",
+      "claim": "仅分布的有符号置换不变性，不能保证 EA(Q_m)、EB(Q_m) 为有限矩阵。",
+      "evidence": "取空间常值 a(x)=Z I，其中 Z>=1 几乎处处有限但 EZ=+infinity。它满足本页的全部对称性假设，而 A(Q_m)=Z I 没有有限均值。本页没有规定确定的一致椭圆常数，也没有写明一阶矩条件。",
+      "impact": "400O 的确定一致椭圆假设已保证可积，因此不破坏下游受限模型；但 400N 作为独立 Theorem 的假设不完备。",
+      "minimal_fix": "在首段补 E||A(Q_m)||+E||B(Q_m)||<infinity；或者明确假设存在确定的 0<lambda<=Lambda<infinity 使 lambda I<=a<=Lambda I a.s.。不要只用随机的逐样本椭圆常数替代。",
+      "source_check": "报告 §3 的矩条件及 400O；同时核读 00L1 对一般期望的可积性要求。",
+      "resolution": "400N首段现明确固定m、矩阵存在及E||A(Q_m)||+E||B(Q_m)||<infinity，并说明确定一致椭圆为充分条件；反例缺口已关闭。"
+    },
+    {
+      "id": "AK-P2-002",
+      "priority": "P2",
+      "status": "resolved_by_author_and_independently_rechecked",
+      "file": "trees/math/pde/armstrong-kuusi/400W.tree",
+      "start_line": 5,
+      "end_line": 5,
+      "title": "改正无法追溯的公式编号",
+      "claim": "400W 将几何平均归一化定位为 v1 (3.87)-(3.95)，该范围不在报告 v1 中。",
+      "evidence": "报告 arXiv:2509.24887v1 Lemma 3.6 的相关公式是 (3.14)-(3.22)，其中几何平均为 (3.16)，参数为 (3.18)，窗口界为 (3.19)-(3.22)。",
+      "impact": "数学推导本身未发现错误，但目前编号无法支持独立来源复查。",
+      "minimal_fix": "将 400W 的来源改为 Lemma 3.6, (3.14)-(3.22), arXiv:2509.24887v1；并顺手修正下列相邻来源范围。",
+      "related_locations": [
+        {
+          "file": "trees/math/pde/armstrong-kuusi/400B.tree",
+          "line": 5,
+          "current": "(2.25)-(2.26)",
+          "suggested": "(2.26)-(2.27)"
+        },
+        {
+          "file": "trees/math/pde/armstrong-kuusi/400C.tree",
+          "line": 5,
+          "current": "(2.23)-(2.24)",
+          "suggested": "(2.24)-(2.25)"
+        },
+        {
+          "file": "trees/math/pde/armstrong-kuusi/400H.tree",
+          "line": 5,
+          "current": "(2.31)-(2.32)",
+          "suggested": "(2.32)-(2.33)"
+        }
+      ],
+      "source_check": "直接检索并阅读报告 v1 相应公式上下文；不是由相邻编号猜测。",
+      "resolution": "二次快照中 400W 已删除不存在的 (3.87)-(3.95)，改为引理 3.6 的几何平均归一化；400B/C/H 同步改为准确节内主题定位。已读取这些变更，暂不再作为待修项。更细公式范围可参考本条记录，不强制新增。 最终正文与packet已分别复核，配套历史问题AK-P2-004亦关闭。"
+    },
+    {
+      "id": "AK-P1-003",
+      "priority": "P1",
+      "status": "resolved_by_author_and_independently_rechecked",
+      "file": "trees/math/pde/armstrong-kuusi/400S.tree",
+      "start_line": 16,
+      "end_line": 20,
+      "title": "细尺度尾部把逐层最大值之和错误地换成最大尺度和",
+      "claim": "n<=0 的贡献不能由分组直接上界为 3^{-nu m} max_z K_0(z)^{1/2}。",
+      "evidence": "写 b_n(z)=max_{Q in unit z at scale n}||X(Q)||^{1/2}，实际细尾为3^{-nu m} c_nu sum_{n<=0}3^{nu n} max_z b_n(z)，声称的上界是3^{-nu m} max_z[c_nu sum_{n<=0}3^{nu n}b_n(z)]。一般前者>=后者；两次操作不能交换为所需上界。即使 b_n 随细化单调，一块恒1，另一块在 n<=-h 才从很小正数升至3^{nu h}，也使各块加权和约1而逐层max加权和约2-3^{-nu h}。",
+      "evidence_limit": "此数组检验证明所用代数推理无效，不宣称已构造真实椭圆PDE对最终定理的反例。",
+      "impact": "R_m 的 L^{2r} 界失去本地证明，400X/Y/Z/4010使用它闭合重整化。不能把此链记为完整已验证。",
+      "minimal_fix": "不扩支的可行修复：用既有确定一致椭圆界直接控制细尾为3^{-nu m}lambda^{-1/2}或3^{-nu m}Lambda^{1/2}；相应矩桥余项改为lambda^-1、Lambda、Theta；窗口和单步尺度成本统一以Theta而非T0计。每轮O(logTheta)、O(logTheta)轮仍能达到本支目标。或另提供有效的更强尾部证明。",
+      "affected_pages": [
+        "400S",
+        "400X",
+        "400Y",
+        "400Z",
+        "4010"
+      ],
+      "coordination": "作者确认修复并冻结交付；独立复读400S/X/Y/Z/4010及4000同步表述，随后核对最终字节与packet。",
+      "resolution": "采用确定M=lambda^-1或Lambda直接控制细尾，修复正部矩余项；窗口、余项吸收、重启和单步成本统一保留微观Theta。固定容限目标闭合，较强的局部T0成本及无Theta任意容限余项撤回。完整逐步复核见repair_recheck。",
+      "closed_at_snapshot_manifest_sha256": "d9c9256da626f17f77934f4820e7702cbf703321e938a6fae4f39a00d9b5286e",
+      "historical_line_numbers": true
+    },
+    {
+      "id": "AK-P2-004",
+      "priority": "P2",
+      "status": "resolved_by_author_and_independently_rechecked",
+      "file": "research/pde-armstrong-kuusi-packet.json",
+      "start_line": 104,
+      "end_line": 104,
+      "title": "packet保留已从正文移除的错误来源编号",
+      "claim": "report.claim_sources 的400W仍写v1(3.87)-(3.95)；400B/C/H也仍保留旧错位范围。",
+      "minimal_fix": "400W改Lemma3.6 (3.14)-(3.22)，400B改(2.26)-(2.27)，400C改(2.24)-(2.25)，400H改(2.32)-(2.33)；同步出版HTML定点比对状态但保留作者自身实际阅读范围。",
+      "impact": "不改变公式本身，但妨碍版本化来源追溯；已通知作者，本复核者不改packet。",
+      "resolution": "最终packet的400B为(2.26)-(2.27)、400C为(2.24)-(2.25)、400H为(2.32)-(2.33)、400W为Lemma3.6 (3.14)-(3.22)。出版定点成功记录与作者自身阅读范围分别列出，未再笼统称出版版本完全无法比对。",
+      "closed_at_packet_sha256": "726e6dd4e096602efa0272abff5b398d20fc4ced9b7505c605babf31b0a38a53"
+    }
+  ],
+  "pages": [
+    {
+      "id": "4000",
+      "file": "trees/math/pde/armstrong-kuusi/4000.tree",
+      "sha256_at_read": "cc017c7d0ba4afb041a28c224e9dde62a57b1021eac5a7cd3f4a286169e5b44a",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "已复读总览修订：每轮以同一Theta计C log(2Theta)成本；固定容限本地链与原文更精细容限引用区分。",
+      "previous_review_sha256": "4ab7660b6d5a9c0e655c858e4eaa6e8030e7a199f040bf0e89a39aea27b6a01e",
+      "final_sha256": "cc017c7d0ba4afb041a28c224e9dde62a57b1021eac5a7cd3f4a286169e5b44a",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    },
+    {
+      "id": "4001",
+      "file": "trees/math/pde/armstrong-kuusi/4001.tree",
+      "sha256_at_read": "9a973f65078287450ed3daea3bc513d095d08522e55f3c616bac0665c0ff40ab",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "一致椭圆、对称弱方程及测试空间已核对；这是受限模型，不是一般退化系数结论。",
+      "previous_review_sha256": "8df199de8f01f22efbf2860537d57d9ad0c0a2fb83c224cbdebf7140aec83e8c",
+      "final_sha256": "9a973f65078287450ed3daea3bc513d095d08522e55f3c616bac0665c0ff40ab",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4002",
+      "file": "trees/math/pde/armstrong-kuusi/4002.tree",
+      "sha256_at_read": "8b0bd3faaf24cfd7f0eb1cd796bafee097aca606279977020761c305f7f6e916",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "沿坐标平均的 Poincare 证明、尺度及密度步骤已读。",
+      "previous_review_sha256": "8b0bd3faaf24cfd7f0eb1cd796bafee097aca606279977020761c305f7f6e916",
+      "final_sha256": "8b0bd3faaf24cfd7f0eb1cd796bafee097aca606279977020761c305f7f6e916",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "4003",
+      "file": "trees/math/pde/armstrong-kuusi/4003.tree",
+      "sha256_at_read": "80c3b82a345a79b793839867feaffe40459bfd53315ea7351cfe777418dafa40",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "实 Hilbert 空间中 Lax-Milgram 的算子证明已读。",
+      "previous_review_sha256": "08fbded770cbd3b7599842f0a80de6d03ae649920b086e4d05b734e71608fd4a",
+      "final_sha256": "80c3b82a345a79b793839867feaffe40459bfd53315ea7351cfe777418dafa40",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4004",
+      "file": "trees/math/pde/armstrong-kuusi/4004.tree",
+      "sha256_at_read": "feac336dc8b558623d74a5d08d445e99d9e09cf52cef48e1b396e99610daa07b",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "三进块、子块分割及体积平均归一化已核对。",
+      "initial_snapshot_sha256": "3fedaefc59c13057196a6489e54d2660cf80723b27db400e847b53d3e9867c1b",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "bc495fe106cf5e0692ff6142825303e2057f425b96ea71e7c371da39002173f7",
+      "final_sha256": "feac336dc8b558623d74a5d08d445e99d9e09cf52cef48e1b396e99610daa07b",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4005",
+      "file": "trees/math/pde/armstrong-kuusi/4005.tree",
+      "sha256_at_read": "f2d631d246af01b6727712610a81992763a29afb9ca0fd49ad982c9f8135800b",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "Dirichlet 最小化、线性、二次型及椭圆下界已核对。",
+      "initial_snapshot_sha256": "9484c776ab1842ff1e8e4bc979fa8e642e9e45d54828f1067a32222925836d7e",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "d918d098c68ae3e33d699cb521e4c57eac79bd32a3b57e7061866506b74dd62e",
+      "final_sha256": "f2d631d246af01b6727712610a81992763a29afb9ca0fd49ad982c9f8135800b",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4006",
+      "file": "trees/math/pde/armstrong-kuusi/4006.tree",
+      "sha256_at_read": "8883c18896a5557b49dcac0e56182bd8c273a85f9e0c5da9245de7a24b9d8c2a",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "Neumann 极大化、模常数唯一性及仿射试探的下界已核对。",
+      "initial_snapshot_sha256": "73e9b8a7ab8c6c620fbf4fee80b8e55cc78016cb59c30ee9c6df85f3d8031fbc",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "8ef458494aa77dc046ffc11d917e3c3826c102b823b31e8c3a7efc2df3824c89",
+      "final_sha256": "8883c18896a5557b49dcac0e56182bd8c273a85f9e0c5da9245de7a24b9d8c2a",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4007",
+      "file": "trees/math/pde/armstrong-kuusi/4007.tree",
+      "sha256_at_read": "e46bb8175398dfeefc1a647d283f36b46b7c65d8f0522cc18934cf6411a4cca5",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "v=n_q-u_p 的符号、联合二次型及非负性已核对。",
+      "initial_snapshot_sha256": "6fcba7fcfcc812507767879989970b3f042b8da72a33bb84f06363e64dd0978c",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "05b67f5071893544422ae19e3ae825f104dfcf5119fa942c18a7d59bdcbc3c7a",
+      "final_sha256": "e46bb8175398dfeefc1a647d283f36b46b7c65d8f0522cc18934cf6411a4cca5",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4008",
+      "file": "trees/math/pde/armstrong-kuusi/4008.tree",
+      "sha256_at_read": "4550e80e9fe4061218ea31e5b5a78426bb7998da553d14a58a0510b7a0e93c04",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "作者修正后的 J-F(w)=半解差能量恒等式正确；没有沿用报告 (2.21) 的错误左端。",
+      "initial_snapshot_sha256": "d6e7c57f50028d6eb5a7138a2d6ea44956e45c5a87f525774b6daa3784a7c792",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "280b2571026ac62e62ba5eacb5d78a5c4684876790e16a848ee71092f733bd9d",
+      "final_sha256": "4550e80e9fe4061218ea31e5b5a78426bb7998da553d14a58a0510b7a0e93c04",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4009",
+      "file": "trees/math/pde/armstrong-kuusi/4009.tree",
+      "sha256_at_read": "205d2c9a84fddca5a1116c4fd65d4c7dc7fa7113d9421c6f2b881b89341781cd",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "逐块应用修正后的 4008，得到准确的次可加亏损恒等式；后续调用未见旧错误残留。",
+      "initial_snapshot_sha256": "58e92ca160a3d779c306fc8ace413f0840b07462287c6437a476f77ee1d985f9",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "3e743357567e2bca267c8983d5883a7c844f2abf14ff9926afd8e8a72c34cfda",
+      "final_sha256": "205d2c9a84fddca5a1116c4fd65d4c7dc7fa7113d9421c6f2b881b89341781cd",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400A",
+      "file": "trees/math/pde/armstrong-kuusi/400A.tree",
+      "sha256_at_read": "9dc6cbad839d7ebef77c5c6d36c1a0ea1ca6c5a4336bb42b44a203b58f93ffe3",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "Loewner 序、逆序、调和平均/算术平均夹逼已核对；B 的上界使用逐点配方而非错误的仿射极大试探。",
+      "initial_snapshot_sha256": "98227be7fd96dbc38be99fbb7373314bf7ed23baf9a477630215e0b4699bedcc",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "1cd1c21bc507a7a14c142ce5212230a1983523fae395efc3be6cf037c349cdec",
+      "final_sha256": "9dc6cbad839d7ebef77c5c6d36c1a0ea1ca6c5a4336bb42b44a203b58f93ffe3",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400B",
+      "file": "trees/math/pde/armstrong-kuusi/400B.tree",
+      "sha256_at_read": "30c86c6ecbf957163cdd1e792fa3420e93f5a30ac60dd847f2d143c1073f675e",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "梯度界适用于所有 H1 函数，通量界需要调和性；证明正确。来源定位已由作者清理，见 AK-P2-002 的解决记录。",
+      "initial_snapshot_sha256": "3207d082ff2eb62c7cec4c2f9592b0169d30581aec27245626d8f80d5e895fd1",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "bb1b634dde9c8b11e3d085f4860229ec686783b8d63d3039ab2d080c03eb6cfe",
+      "final_sha256": "30c86c6ecbf957163cdd1e792fa3420e93f5a30ac60dd847f2d143c1073f675e",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400C",
+      "file": "trees/math/pde/armstrong-kuusi/400C.tree",
+      "sha256_at_read": "512f3f3955faaf70fd5acf4a38af839488a1ff359fb989c246a72a86d2a1fabd",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "选择 q=A_*p 后得到平方根间隙误差；谱范数及能量归一化正确。来源定位已由作者清理，见 AK-P2-002 的解决记录。",
+      "initial_snapshot_sha256": "ee240656e3405c9bcba1b670e30ddb283d0e764b1075040e71f4ff477e668a67",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "512f3f3955faaf70fd5acf4a38af839488a1ff359fb989c246a72a86d2a1fabd",
+      "final_sha256": "512f3f3955faaf70fd5acf4a38af839488a1ff359fb989c246a72a86d2a1fabd",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "400D",
+      "file": "trees/math/pde/armstrong-kuusi/400D.tree",
+      "sha256_at_read": "a8c7bb4ec3e9f7ff28df1b353906ea9f39c29f66e2a4884103a1acb94e197390",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "一维调和平均例子正确，并明确不用于后面 d>=2 的随机论证。",
+      "initial_snapshot_sha256": "3bbb8b3592eb118eac5f18000c076325cd9e3c5a52986a5d94aee584aa598fd6",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "aad31d05feb2161f54b9b7c26ccc89e413ad42b69ef6e2064beaf26400f372cd",
+      "final_sha256": "a8c7bb4ec3e9f7ff28df1b353906ea9f39c29f66e2a4884103a1acb94e197390",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400E",
+      "file": "trees/math/pde/armstrong-kuusi/400E.tree",
+      "sha256_at_read": "47518f63b0b08885d7ccbf52d28904844dd6459040b41a57864f7f3aff0f8dba",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "离散负范数与常向量几何级数已核对。",
+      "initial_snapshot_sha256": "0646b6e41843b39563ef34c80a3380bb5f000ab492fd5154a2ba708e30f82a24",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "47518f63b0b08885d7ccbf52d28904844dd6459040b41a57864f7f3aff0f8dba",
+      "final_sha256": "47518f63b0b08885d7ccbf52d28904844dd6459040b41a57864f7f3aff0f8dba",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "400F",
+      "file": "trees/math/pde/armstrong-kuusi/400F.tree",
+      "sha256_at_read": "b2471559a9a64892535d29c2259389d026c1d412fb107ac9bb4e017590f3ded5",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "c_sq、2/q 外幂、全部细尺度最大值、q=infinity 及 s+t<1 的含义已核对；尾和可证明 infinity 量不超过 q=1 量。",
+      "initial_snapshot_sha256": "28a52831a2c2bc5b4da00cf472553e2e7674caf2a1693cb9cc04ec9e9e5f5252",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "b2471559a9a64892535d29c2259389d026c1d412fb107ac9bb4e017590f3ded5",
+      "final_sha256": "b2471559a9a64892535d29c2259389d026c1d412fb107ac9bb4e017590f3ded5",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "400G",
+      "file": "trees/math/pde/armstrong-kuusi/400G.tree",
+      "sha256_at_read": "fd6277f4d7d9fea751c5c1604ca3e46842205c15b32c4d8c95ab313e4251e2e0",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "块平均能量界到负范数估计的权重和常数已核对；梯度/通量的适用对象区分正确。",
+      "initial_snapshot_sha256": "2f1ff5494417ea133ed6abdb8c812b15e9c671d53a4baa8d29ed655125800a43",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "fd6277f4d7d9fea751c5c1604ca3e46842205c15b32c4d8c95ab313e4251e2e0",
+      "final_sha256": "fd6277f4d7d9fea751c5c1604ca3e46842205c15b32c4d8c95ab313e4251e2e0",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "400H",
+      "file": "trees/math/pde/armstrong-kuusi/400H.tree",
+      "sha256_at_read": "a9521953f75b6acf281d4f736af218bac27ea7b48f821d13d46b3873defcf1d0",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "截断测试、Young 吸收及内外体积比 3^d 已核对。来源定位已由作者清理，见 AK-P2-002 的解决记录。",
+      "initial_snapshot_sha256": "bfeb506e77f5440fab753686a150f6f57609331721ed447fe6ed0997f590cce3",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "4363859f094df91ab473dd4976f4c0c2dd5b7031e33e1df572cef68152981eea",
+      "final_sha256": "a9521953f75b6acf281d4f736af218bac27ea7b48f821d13d46b3873defcf1d0",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400I",
+      "file": "trees/math/pde/armstrong-kuusi/400I.tree",
+      "sha256_at_read": "3234b1d69dd903713bd84d630fc4f0a34ec8c8e309c6bec68b62aa49f198d97a",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "公式匹配原研究 v3 Proposition 2.5；条目诚实标为引用定理和论证结构，不认定为独立完整证明。",
+      "initial_snapshot_sha256": "1bf4b531e01e3d93198c240848e7d846bdbab568701821d2c82ffe11c2cec8b4",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "53262ede48dbd97e89e325add61cafd06506936ef8adfb7a1a0c255b818a6a9c",
+      "final_sha256": "3234b1d69dd903713bd84d630fc4f0a34ec8c8e309c6bec68b62aa49f198d97a",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400J",
+      "file": "trees/math/pde/armstrong-kuusi/400J.tree",
+      "sha256_at_read": "806187f51b5973206cad928276b7b51601c17d3bd06cfdba867f4407dce1e3f4",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "J 缺陷外幂为 1/q；非交换矩阵展开顺序正确。",
+      "initial_snapshot_sha256": "a4d2b309a31c8f81c925601b182a2a82f6b16d4eeedf79401f359def986c146a",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "806187f51b5973206cad928276b7b51601c17d3bd06cfdba867f4407dce1e3f4",
+      "final_sha256": "806187f51b5973206cad928276b7b51601c17d3bd06cfdba867f4407dce1e3f4",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "400K",
+      "file": "trees/math/pde/armstrong-kuusi/400K.tree",
+      "sha256_at_read": "224a12a05de1c74f1a38e11a1b745ddcafe5203eff73f84a88f0e35c58153458",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "正确保留 sqrt(2/c_{2s})；未无条件照抄报告声称只依赖 d 的常数。",
+      "initial_snapshot_sha256": "83bfeae1c0da4c4cee52c1564d18f2ddc796c4f97201a6df3752161132c03f16",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "3a1c33317c6d516e5357ae80a779ad3565b9eb3cbc0e76cfe7256a30c5cf7210",
+      "final_sha256": "224a12a05de1c74f1a38e11a1b745ddcafe5203eff73f84a88f0e35c58153458",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400L",
+      "file": "trees/math/pde/armstrong-kuusi/400L.tree",
+      "sha256_at_read": "a3903b716a07163bb014ef7a6c595e22b579fdd34504e31af0f13d37f2e25f70",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "区分完备化、弱梯度及 Hilbert 等价范数；未把含 L1 项的范数直接说成内积范数。一般退化框架仍属外部输入。",
+      "initial_snapshot_sha256": "da996e8fcc695fa00d23326ed45790ecae65382a273078d5e7e5bffa59caaa2d",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "a3903b716a07163bb014ef7a6c595e22b579fdd34504e31af0f13d37f2e25f70",
+      "final_sha256": "a3903b716a07163bb014ef7a6c595e22b579fdd34504e31af0f13d37f2e25f70",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "400M",
+      "file": "trees/math/pde/armstrong-kuusi/400M.tree",
+      "sha256_at_read": "ae0a9d632f2080fc737b1e5796bf041ee12015bbe10fff68cbb8a3d56cd211e0",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "整数平稳与单位有限程分别定义；单位相邻块不冒充独立，使用有限染色。",
+      "initial_snapshot_sha256": "34cab59b45bb6dfd186c3fd4872f01e6ce7613535f3bef01d2d7d6f3c3742e1d",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "b2dd15f22fb789273e93f18a967fa504c49bf4d9c716e322612686de5d861612",
+      "final_sha256": "ae0a9d632f2080fc737b1e5796bf041ee12015bbe10fff68cbb8a3d56cd211e0",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400N",
+      "file": "trees/math/pde/armstrong-kuusi/400N.tree",
+      "sha256_at_read": "6c5482841d33b1bc46c1810e59a12bff739a360c09a7bc27f127afb9095d770a",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "可积性补充已复核，AK-P2-001关闭。",
+      "initial_snapshot_sha256": "13ded0a3e16c31ed4dc35a69173ba7e5c66cf848ea71dcc9d92fe6cca6af460c",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "a3e9c6ae5daba46ee007b4105096f8a6c000cc6aa7be12fbbbec80b872b3cb0e",
+      "final_sha256": "6c5482841d33b1bc46c1810e59a12bff739a360c09a7bc27f127afb9095d770a",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400O",
+      "file": "trees/math/pde/armstrong-kuusi/400O.tree",
+      "sha256_at_read": "a9b2df7865e7cf97ecbb81c84b5a5d4719b399bba85a4f0465546adf62568336",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "固定 gamma=1/8, nu=7/32, r=32d 避开源文指数配对歧义；theta 与 T 区分正确，只直接声称 theta 单调。",
+      "initial_snapshot_sha256": "a8b600d8d80beab9c5115aa2fb4ee6b4ee9f35ba40c624af2f0b4bf98f4a89c9",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "0cfca0ea3ca96e8db5ac4eec5d07ceef6f4cd4130ee9ea581f3bd7a24b2d0b05",
+      "final_sha256": "a9b2df7865e7cf97ecbb81c84b5a5d4719b399bba85a4f0465546adf62568336",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400P",
+      "file": "trees/math/pde/armstrong-kuusi/400P.tree",
+      "sha256_at_read": "9aed759a5eeedbdaec5d5e62ec61877a4a8bbb17fa4fb8a49ccc657e0f5ad003",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "一致椭圆特例的指数门槛和 T0<=Theta 正确；精确 sigma^-4 log(sigma^-1) 项明确作为来源定理引用，不是本地证明结果。",
+      "initial_snapshot_sha256": "45f8c921749315c832c31dc2d84075502dbcbb35bf0b7dfa1d3aa84055f9ca98",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "986bc7a532b8724aa72a110e36a1970493b44a9c229e88ec786bf45ab158c250",
+      "final_sha256": "9aed759a5eeedbdaec5d5e62ec61877a4a8bbb17fa4fb8a49ccc657e0f5ad003",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400Q",
+      "file": "trees/math/pde/armstrong-kuusi/400Q.tree",
+      "sha256_at_read": "9246ceaee0ff269ed525e18c693fae071a1fd5a528d374ed18853fd41de640f9",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "双单调序列二选一的鸽巢证明正确；仅认定为抽象引理，不能单独证明 PDE 收缩。",
+      "initial_snapshot_sha256": "dae6ba994b9b8a01c2504f44f7f60b4cb6db4911710a3b5ddfb45c31494bae53",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "6f22a6c582af9b5685d7c30404310723476e45909ee9fb3d9340da26499bd374",
+      "final_sha256": "9246ceaee0ff269ed525e18c693fae071a1fd5a528d374ed18853fd41de640f9",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400R",
+      "file": "trees/math/pde/armstrong-kuusi/400R.tree",
+      "sha256_at_read": "785b3d17bfafe27889f037413c0c3353843fe00e1fbddf838e69d468c50f492f",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "有限程染色、偶阶矩展开及平均衰减已核对。",
+      "initial_snapshot_sha256": "a29fa79ae102b40d5fcd392a42cba8505b74ee24f4ebf403904c2db81bad872b",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "cb3a034b6e4ea796b79897038b612d1beaa5fbc9f873bdaaccff2019129a37c3",
+      "final_sha256": "785b3d17bfafe27889f037413c0c3353843fe00e1fbddf838e69d468c50f492f",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400S",
+      "file": "trees/math/pde/armstrong-kuusi/400S.tree",
+      "sha256_at_read": "a8ca9d9805ac25896843375c9f12fd254823356de41893d3268eda83f548811d",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "确定M控制细尾，rho=13/64的矩衰减、正部平方余项及重启的Theta保留均通过，AK-P1-003关闭。",
+      "initial_snapshot_sha256": "1ef1661461a7a9c11769903d551ada8ef977943dae08f009f8d1d0e99c7262b7",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "80c805828908f6b89167c025166b29f937a3b8d95cccd85ed675fb191f24d053",
+      "final_sha256": "a8ca9d9805ac25896843375c9f12fd254823356de41893d3268eda83f548811d",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    },
+    {
+      "id": "400T",
+      "file": "trees/math/pde/armstrong-kuusi/400T.tree",
+      "sha256_at_read": "18898553402b71144abc1836f3f9f1a50adb5295338d26e5c31155f8e863564e",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "k>=0 保证整数平稳可用于块中心；局部化代数已读，Besov 乘子仍是显式引用的输入，不计为全部独立完成。",
+      "initial_snapshot_sha256": "227aaabdf699e4daa024d34a5ce6140911565cc9f03497578a585501c2efde51",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "13f59e4c200c59cfd413e6140aac84c40924d2871b8844a094d245b6849bf3df",
+      "final_sha256": "18898553402b71144abc1836f3f9f1a50adb5295338d26e5c31155f8e863564e",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400U",
+      "file": "trees/math/pde/armstrong-kuusi/400U.tree",
+      "sha256_at_read": "9d53d835ef680cbfd2845aec8ea798630f78f1d0c71a8a8226a222ddbbf49e74",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "四项分解、解差能量的 sqrt(2K)、s-s' 尾部和通量调和性已核对。",
+      "initial_snapshot_sha256": "9fc484bc18ceda4115697218e0a3fafc1c6b8ea9dd485fc9fc505f655c081879",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "12f869a617cc0a9a121958d549c5beaf6b1445745310f15a5168b39ce39d6c15",
+      "final_sha256": "9d53d835ef680cbfd2845aec8ea798630f78f1d0c71a8a8226a222ddbbf49e74",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400V",
+      "file": "trees/math/pde/armstrong-kuusi/400V.tree",
+      "sha256_at_read": "0573f1935e8136ab17d1dfa799b4ad05c2c4cebcc09bd2b2678fc12d1cb19edf",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "PSD 的次可加误差以迹控制，再对单位块平均使用浓缩，逻辑次序正确。",
+      "initial_snapshot_sha256": "7ebbed9aac48043b8d079e1d3bdc8bb16612d37421ad881ddc1133fe276547cd",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "5136c41f450371ded4fec505c3a139f38076d3f850e1a24c95516d8f468ab60e",
+      "final_sha256": "0573f1935e8136ab17d1dfa799b4ad05c2c4cebcc09bd2b2678fc12d1cb19edf",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400W",
+      "file": "trees/math/pde/armstrong-kuusi/400W.tree",
+      "sha256_at_read": "32084c65104ba6f5ba0e845b66fd8247c78444ccba4262bd68f12073c52e68d6",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "几何平均 mu、p0/q0 符号、E Jtilde=(theta-1)/2 及窗口界正确；错误公式编号已由作者删除，见 AK-P2-002 的解决记录。",
+      "initial_snapshot_sha256": "d815e81cfe21d9db00ee89e12b5d7fd7124a39d40509ec1c4bffe2c1ea2f09e6",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "91b1e7faf5dd8312d609b03b998dc94569d834dd3c8dda8e3788d7b30e67966f",
+      "final_sha256": "32084c65104ba6f5ba0e845b66fd8247c78444ccba4262bd68f12073c52e68d6",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "400X",
+      "file": "trees/math/pde/armstrong-kuusi/400X.tree",
+      "sha256_at_read": "79dbfc3cb86495f9c2e490306158a7f98228212be847d517f985df34a542c87d",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "四个吸收条件尤其3^{-rho m}Theta^2<=delta已复算；块波动、EKD、EKJ及常向量尾均可吸收。",
+      "initial_snapshot_sha256": "06e20f340c8fef2c2314f6d368f568235f29a07688d56dbde8d337980a885707",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "db11533a9511eef345c3ff681d1e6d8083c4f452ef2faa2308398947e6d3f524",
+      "final_sha256": "79dbfc3cb86495f9c2e490306158a7f98228212be847d517f985df34a542c87d",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    },
+    {
+      "id": "400Y",
+      "file": "trees/math/pde/armstrong-kuusi/400Y.tree",
+      "sha256_at_read": "c9d91902707aff34ec37e38d07ee7df189bde94cef96d2e47e24e97c1e9a1d70",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "门槛C log(2Theta/delta)；线性/乘积项theta次数闭合，仍以400T的显式引用输入为条件。",
+      "initial_snapshot_sha256": "0bee8722fe5bff5bfbe0b220aa0eeb6681814dfa33446265b5e09a0d494c4dae",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "208868e2445858b15e8a900f52545fd2eed4ae7fd67c02a81fafbd459999e85d",
+      "final_sha256": "c9d91902707aff34ec37e38d07ee7df189bde94cef96d2e47e24e97c1e9a1d70",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    },
+    {
+      "id": "400Z",
+      "file": "trees/math/pde/armstrong-kuusi/400Z.tree",
+      "sha256_at_read": "ac20ac5081309e708b73f0584848d66315d7044d30c9715f66057fa55ff854b6",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "delta=c sigma^4、h、k和N-h窗口余量已核对；恢复T尾部保留Theta，成本保留两个对数。",
+      "initial_snapshot_sha256": "6fcc1fa42912cbfdf200fb42002d10e7cf540aeeb34c4e4e08a2222bd244202b",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "b73a3874cec0ea73d15147c52a4997b6b63c7af68dd4d15fe85b1e883efd0d0f",
+      "final_sha256": "ac20ac5081309e708b73f0584848d66315d7044d30c9715f66057fa55ff854b6",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    },
+    {
+      "id": "4010",
+      "file": "trees/math/pde/armstrong-kuusi/4010.tree",
+      "sha256_at_read": "721b2395b10da37a7ee7fa4eb66a2485a4e97dbd598a654de4554f16174a6123",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "固定sigma=1/4，以3/4下降进入T<=2后再一步；所有大N延长末步，不假设T单调。一般容限本地成本仍含Theta。",
+      "initial_snapshot_sha256": "da48f2376e9d1c61184ba3753a24fffe067b6da4e3f80de7b3f6270d4300c1ed",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "c5cf90332bbce464fd47a2242fee4d7158400d01dcdfac7cc272ef96befee35a",
+      "final_sha256": "721b2395b10da37a7ee7fa4eb66a2485a4e97dbd598a654de4554f16174a6123",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    },
+    {
+      "id": "4011",
+      "file": "trees/math/pde/armstrong-kuusi/4011.tree",
+      "sha256_at_read": "7bb95a0773fef90273848bf2d04256c0796e64ef9a0e0e2f58172d35bd5ec3a5",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "尺度编号 N 转为物理长度 ell*3^N，取整和 exp(C log^2) 已核对；不是对数平方物理长度。",
+      "initial_snapshot_sha256": "d486d9ba56b804bf893df214a35be7e38663d45bfef2c81950c01a0905b4ac18",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "cec766a609f091ec6dfdca074b546e763e65d49b9bcaa49a543be0a97fef0db1",
+      "final_sha256": "7bb95a0773fef90273848bf2d04256c0796e64ef9a0e0e2f58172d35bd5ec3a5",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4012",
+      "file": "trees/math/pde/armstrong-kuusi/4012.tree",
+      "sha256_at_read": "f55e6169984e3e3fe6414e68c7d5bb1c5100090a4f51156239593702a136f893",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "单调正上下界和乘积趋 1 确定极限常数，夹逼速率正确；解层面的均匀化仍需确定性黑箱。",
+      "initial_snapshot_sha256": "b6c1820c7ce10329824399b78eaf1f9e9bf012a253d7a40ce00b59f45f3042d9",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "91ebbae503a557074413363daea747eea6368dc330050889476941558250a7f3",
+      "final_sha256": "f55e6169984e3e3fe6414e68c7d5bb1c5100090a4f51156239593702a136f893",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4013",
+      "file": "trees/math/pde/armstrong-kuusi/4013.tree",
+      "sha256_at_read": "baf88520c4fd6593a749d9ac5772cf0c0a483a32f7626db87c0048011316e885",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "Jensen 逆矩阵序、PSD 迹界、Markov 和有限并集界正确；没有扩张为无限空间随机最小尺度尾界。",
+      "initial_snapshot_sha256": "00e17868e2bb93b7f84f45cff2080148ca9e7def00824ed7a7ffed2fa3ae5744",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "1adb6b243881e45e3d791f85fd206086a87ee3949fcfa74a6374c8a4e89a987a",
+      "final_sha256": "baf88520c4fd6593a749d9ac5772cf0c0a483a32f7626db87c0048011316e885",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4014",
+      "file": "trees/math/pde/armstrong-kuusi/4014.tree",
+      "sha256_at_read": "8817089f36856c1f30a0451bc1892c89ecb5370cf6eaf6c079241b36e2ade06a",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "与原研究 v3 Proposition 5.3 的对称 H1 特例对应；s<1/2、Lipschitz 区域、全 H^s 对偶范数及常数依赖已核对。双变量缺陷在对称情形分为两个相同的归一化块，比较成立。完整边界对偶证明未独立复证。 作者随后补出的 j(e1)+j(e2) 恒等式及单位球上确界相等已独立核算。",
+      "initial_snapshot_sha256": "a292a56b0e2598558f13f590a978c980b01f880cd6b36159a360beed26b0b951",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "d7627dedacde0d1609abae812f64438c8a6f245eb2e603453182e36df66360ce",
+      "final_sha256": "8817089f36856c1f30a0451bc1892c89ecb5370cf6eaf6c079241b36e2ade06a",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "4015",
+      "file": "trees/math/pde/armstrong-kuusi/4015.tree",
+      "sha256_at_read": "e68abdb9fcacf82993912aea43960e1911821d0652d4bbacce2e273b2766b56a",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "渗流幂律作为物理缩放预测与开放问题，不冒充已证定理。",
+      "previous_review_sha256": "e68abdb9fcacf82993912aea43960e1911821d0652d4bbacce2e273b2766b56a",
+      "final_sha256": "e68abdb9fcacf82993912aea43960e1911821d0652d4bbacce2e273b2766b56a",
+      "final_change_review": "与本轮完整复读版本字节相同。"
+    },
+    {
+      "id": "4016",
+      "file": "trees/math/pde/armstrong-kuusi/4016.tree",
+      "sha256_at_read": "0e0c14995f4df59e4cf844da9b2561bdbaa34b697fcd164eac1e8903c292313b",
+      "read_status": "full_page_previously_read_final_normalization_delta_checked",
+      "review_status": "no_open_page_finding",
+      "notes": "分层配对计算已读；乘子估计仍属外部分析输入，未完成原研究附录 A 全部证明复核。最终证书不得把这一引用记为自包含证明。",
+      "initial_snapshot_sha256": "a9113e4ddaff844e116f722e1169f526241be8125071f06dd5eaf0cbcc2fe9a8",
+      "change_review": "数学平均积分改为显式体积因子、来源文字清理等已读；4014 的新增双变量恒等式另作代数核对。",
+      "previous_review_sha256": "3ac4cb7b178e894711a73fbe64fb954d3dff0deefafe031141dd2ee2ff8f5e13",
+      "final_sha256": "0e0c14995f4df59e4cf844da9b2561bdbaa34b697fcd164eac1e8903c292313b",
+      "final_change_review": "与本轮完整复读版本仅有空白差异；数学语义未变。"
+    },
+    {
+      "id": "icm2026-armstrong-kuusi",
+      "file": "trees/references/icm2026-armstrong-kuusi.tree",
+      "sha256_at_read": "dccffd743c2a028540c5590fe5e1fa9c032df6105d0ed3d1484f25b2574fff61",
+      "read_status": "full_revised_page_read_and_final_bytes_rechecked",
+      "review_status": "no_open_page_finding",
+      "notes": "出版网址、CC BY4.0/IMU版权/在线日期及v1不同许可已核对。出版证据为列明HTML定点，非全文PDF认证。",
+      "previous_review_sha256": "2657b988617a5606808db190f8ca17a9a80d2c645a7a6e4e991d4a07e4e20a3c",
+      "final_sha256": "dccffd743c2a028540c5590fe5e1fa9c032df6105d0ed3d1484f25b2574fff61",
+      "final_change_review": "实质修订已全文复读，数学核算见repair_recheck。"
+    }
+  ],
+  "additional_dependencies_read": [
+    {
+      "id": "004S",
+      "file": "trees/math/analysis/004S.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00M4",
+      "file": "trees/math/analysis/atomic/00M4.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "70300ca09bf8107f544ae2d1467bbc30224143bd8d5ad886255e2962ff292636",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00MQ",
+      "file": "trees/math/analysis/atomic/00MQ.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00MS",
+      "file": "trees/math/analysis/atomic/00MS.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00MT",
+      "file": "trees/math/analysis/atomic/00MT.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "fbcf8d38d2ab17bab0f44cb22fd2a0f788851099b561fa2df05aeaacfa9fe2c9",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "130F",
+      "file": "trees/math/analysis/fourier-restriction/130F.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "3fc1a2f592adaf3c6ae1217a87f59bd402422c8c7c82989a7d182909e23b426b",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "0N0A",
+      "file": "trees/math/geometry/bourbaki/0N0A.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "bf8faf7f9f971f425ad8933bf0a4ccf9cd683cc2a1b6350e69589f69cbdfde7d",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "2J0C",
+      "file": "trees/math/geometry/harmonic-rigidity/2J0C.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "d8bd7434ee5511668e0d55d05bdcef2e60a25503f27badbb631027585b0c0fdb",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "2J0D",
+      "file": "trees/math/geometry/harmonic-rigidity/2J0D.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "8c3150e4be333cf743eca81b70755cdae818cf66cf65b579c4080623fa30894e",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00Q3",
+      "file": "trees/math/logic/research/atomic/00Q3.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00Q5",
+      "file": "trees/math/logic/research/atomic/00Q5.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "0A68",
+      "file": "trees/math/logic/research/atomic/0A68.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "c144e465bb42f04d14cefca339608f744fd3620c36e29bfae42639b16c2df85b",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "0A69",
+      "file": "trees/math/logic/research/atomic/0A69.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "01cce7dd029c2a04d84f8ec8f0186dece9898e33f3de04fd1ae864ee78ef7855",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00L1",
+      "file": "trees/math/network/atomic/00L1.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    },
+    {
+      "id": "00L3",
+      "file": "trees/math/network/atomic/00L3.tree",
+      "scope": "full_page_source_read",
+      "sha256_at_read": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+      "reason": "核对42原子所声明的本科基础对象、定理和实际使用条件；不是全站递归证明认证。"
+    }
+  ],
+  "pending_final_review": [],
+  "verification": {
+    "json_parse": "passed_on_disk; all_44_source_hashes_and_packet_hash_and_manifest_digest_verified",
+    "snapshot_currentness": "作者最终交付后重新读取44源文件及packet；最终证书仅适用于final_snapshot中SHA-256。",
+    "repository_math_files_modified_by_reviewer": false,
+    "packet_or_registry_modified_by_reviewer": false,
+    "commit_created": false,
+    "concurrent_writer_changes": "相对本轮初始完整阅读快照，7页有实质修订并全文复读：4000、400S/X/Y/Z、4010、文献页；其余变更均为纯空白，已逐页核对。",
+    "unique_page_ids": 44,
+    "final_hash_checks": "all_44_source_sha256_match_packet",
+    "reused_foundation_hashes_unchanged": 15,
+    "full_site_build_performed": false,
+    "browser_review_performed": false
+  },
+  "dependency_review": {
+    "atom_count": 42,
+    "prerequisite_rows": 42,
+    "proof_scope_entries": 42,
+    "claim_source_entries": 42,
+    "declared_dependency_edges": 145,
+    "reused_foundations": 15,
+    "missing_from_outline": [],
+    "issues": [],
+    "cycles": [],
+    "body_links_not_declared_prerequisites": [
+      {
+        "from": "400O",
+        "to": "400S"
+      },
+      {
+        "from": "400P",
+        "to": "4014"
+      },
+      {
+        "from": "400P",
+        "to": "400Q"
+      },
+      {
+        "from": "400P",
+        "to": "400T"
+      },
+      {
+        "from": "400P",
+        "to": "400X"
+      },
+      {
+        "from": "400P",
+        "to": "400Y"
+      },
+      {
+        "from": "400P",
+        "to": "400Z"
+      },
+      {
+        "from": "400P",
+        "to": "4010"
+      },
+      {
+        "from": "4010",
+        "to": "400P"
+      },
+      {
+        "from": "4012",
+        "to": "400K"
+      }
+    ],
+    "method": "逐页阅读全文后核对packet有向前置图；不把结论页中的证明导航链接误登记为循环前置。",
+    "semantic_review": "145条声明边均在正文链接，目标存在且不是Outline，42原子无环。15个直接基础页已全文读且最终哈希未变。400S新增400A/0A69，400X新增400A/4007/004S并删除0A69，与实际使用匹配。",
+    "non_prerequisite_links_explanation": "400O->400S为后续控制，400P->证明链为定理解释，4010->400P为尖锐外引对照，4012->400K为进一步解比较；不形成证明中的循环调用。",
+    "inventory_match": true,
+    "packet_hash_mismatches": [],
+    "recursive_registry_scope": "独立检查本packet的42原子直接前置图及15个直接基础页。213节点全站可达图检查属于作者的记录，不冒称独立重证213节点内容。"
+  },
+  "published_targeted_comparison": {
+    "date": "2026-10-20",
+    "url": "https://epubs.siam.org/doi/10.1137/25M1804807",
+    "access": "success: HTML 1130 lines; /full/ route failure does not imply publication inaccessible",
+    "scope": "仅本轮列明位置的出版HTML与arXiv:2509.24887v1逐项比对，不是出版全文/PDF图像认证。",
+    "comparisons": [
+      {
+        "location": "§2.1, (2.2)-(2.5), HTML188-221",
+        "result": "SPD、a/a^-1局部可积、L1加权完备化、三进块及体积归一化与v1一致；L1范数不能直接称内积范数的问题仍需独立区分。"
+      },
+      {
+        "location": "§2.2, (2.14)-(2.16), HTML264-279",
+        "result": "两变分矩阵、J定义、联合二次式、Dirichlet的-p符号与v1一致。"
+      },
+      {
+        "location": "§2.2, (2.18)-(2.27), HTML287-348",
+        "result": "矩阵序、变分和响应界与v1一致；(2.21)仍以裸正半能量代替F(w)，错误未在出版HTML修正。4008修正仍必要。"
+      },
+      {
+        "location": "Definition2.1, (2.28), HTML353-360",
+        "result": "c_sq、全部细尺度最大值、q/2内幂、正负2/q外幂、q=infinity及s+t<1与v1一致。"
+      },
+      {
+        "location": "Proposition2.3 / Definition2.4, (2.34),(2.36), HTML405-429",
+        "result": "粗Caccioppoli的条件与指数、参照常矩阵缺陷的非交换次序及1/q外幂与v1一致。"
+      },
+      {
+        "location": "§3(P1)-(P5), theta/T, Theorem3.1, HTML448-504",
+        "result": "Z^d平稳、单位程、gamma和xi门槛、nu定义、C(xi,d)、0<sigma<=1/2及N>=C log²T0+C sigma^-4 log(sigma^-1)的结论与v1一致。普通置换P5不足、annealed逆缺星及(3.3)指数配对问题仍出现；本支加强对称/固定相等指数保留。"
+      },
+      {
+        "location": "(2.13),(2.29), HTML259,365",
+        "result": "出版HTML分别显示Besov下标2,3和逆系数正则度-2s，v1为2,1和-2t。记录为可见版本差异；未取得出版PDF像素，不推广为全篇差异清单。"
+      },
+      {
+        "location": "(2.9),(2.17)图片",
+        "result": "HTML只给图片链接，点击返回Cache miss；本轮未认证出版图片中的逐字符公式。"
+      },
+      {
+        "location": "Copyright/History, HTML989-995",
+        "result": "确认IMU版权、SIAM以CC BY4.0出版、2026-07-13上线。仅更新出版许可事实，不更改v1自己的arXiv许可。"
+      }
+    ],
+    "all_published_formulas_verified": false,
+    "pdf_visual_certification": false
+  },
+  "packet_review": {
+    "full_json_read": true,
+    "sha256": "726e6dd4e096602efa0272abff5b398d20fc4ced9b7505c605babf31b0a38a53",
+    "claim_inventory_matches_42_atoms": true,
+    "proof_boundaries": "proof_scope、claim_sources及两层remaining_branches/unexpanded_deep_proofs一致；撤回局部T0矩桥与成本，保持同一微观Theta。精细容限、局部化/Besov、粗Caccioppoli、边界比较及一般退化框架均保持引用边界。",
+    "required_corrections": [],
+    "corrected_source_numbers": {
+      "400B": "(2.26)-(2.27)",
+      "400C": "(2.24)-(2.25)",
+      "400H": "(2.32)-(2.33)",
+      "400W": "Lemma3.6 (3.14)-(3.22)"
+    },
+    "published_access_boundary": "作者自身未成功读取SIAM的历史事实与复核者成功定点比对分别记录，不再笼统称出版版本无法比对。",
+    "hash_lock": true,
+    "source_sha256_match_count": 44,
+    "source_sha256_mismatches": [],
+    "build_boundary": "作者739条公式检查及107次数值回归不作为数学或浏览器认证。本复核者未执行主线程的全站构建及浏览器验收。"
+  },
+  "coordination": {
+    "writer_thread_id": "01a15524-1f48-7531-921a-bf4fe5bbda3a",
+    "direct_messages_authorized_by_user": true,
+    "writer_notified": true,
+    "parent_direct_message": "App tool拒绝向native ancestor发送；通过本聊天commentary和最终答复回报。",
+    "author_final_delivery_observed": true,
+    "author_final_delivery_status": "completed and frozen; wait_threads cursor 33ab56a2-d922-47d1-b83b-1a38ffe09605:6",
+    "final_open_findings": [],
+    "final_notice": "数学关闭及最终哈希将在本记录写入并验证后告知Sagan与用户。"
+  },
+  "repair_recheck": {
+    "finding": "AK-P1-003",
+    "method": "独立阅读全文并逐式复算，不以作者确认、数值回归、KaTeX通过或抽象迭代引理代替承重数学核查。",
+    "model": "d>=2, lambda I<=a<=Lambda I with deterministic constants; Theta=Lambda/lambda; integer stationarity, unit finite-range dependence, signed-coordinate permutation invariance; nu=7/32, r=32d, s=3/8.",
+    "steps": [
+      {
+        "pages": [
+          "400S"
+        ],
+        "check": "令M=lambda^-1或Lambda，b=beta_0或alpha_0。细尾c_nu sum_{n<=0}3^{-nu(m-n)}max_Q||X(Q)||^(1/2)<=sqrt(M)3^{-nu m}，不交换sum和max。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "400S"
+        ],
+        "check": "单位块平均集中加3^{d(m-n)}块最大值损失，开方后rho=nu-d/(2r)=13/64；n级几何指数nu-d/4-d/(2r)<0。故||R_m||_{2r}<=C sqrt(M)3^{-rho m}，再由b<=M及平方展开得||(K_m-b)_+||_r<=CM3^{-rho m}。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "400S"
+        ],
+        "check": "上下矩界相乘的交叉项与平方余项都<=C3^{-rho m}Theta；a(3^j dot)保持同一确定界，故T_{j+m}<=theta_j+C3^{-rho m}Theta，不将Theta替换成T_j。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "400X"
+        ],
+        "check": "mu在[lambda,Lambda]，lambda^-1/beta_0<=Theta，Lambda/alpha_0<=Theta，J和分块亏损点态<=Theta。取m>=C(d)log(2Theta/delta)可同时满足3^{-rho m}Theta^2<=delta、3^{-eta m}Theta<=delta、3^{-2(s-nu)m}<=delta、3^{-2sm}<=delta，其中eta=s-3nu/2=3/64。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "400X"
+        ],
+        "check": "H=K+beta_0的L3范数<=C beta_0；块波动加权均值<=Cdelta beta_0，给EZ^2<=Cbeta_0 delta^(1/2)sqrt(theta_0)。EKD<=beta_0 delta sqrt(theta_0)+C3^{-rho m}lambda^-1Theta，靠Theta^2条件吸收；EKJ及常向量两尾同理。通量交换A/alpha/mu^-1。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "400Y"
+        ],
+        "check": "将中心化X/Y平方均值、几何归一化和tau窗口亏损代入400T；线性项<=Cdelta^(1/4)theta_0，乘积项<=Cdelta^(1/2)theta_0，得到theta_m<=1+Cdelta^(1/4)theta_0。仍依赖明确外引的局部化/乘子输入。",
+        "result": "pass_conditional_on_cited_analytic_input"
+      },
+      {
+        "pages": [
+          "400Z"
+        ],
+        "check": "delta=c(d)sigma^4使Cdelta^(1/4)<=sigma/4；h=ceil C(d)log(2Theta/delta)另使C3^{-rho h}Theta<=sigma/4；k=ceil 2delta^-1log(4/sigma)，N>=(k+1)h。到N-h的鸽巢下降/平坦两支都足够，再用theta_0>=1恢复T_N<=1+sigma theta_0。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "4010"
+        ],
+        "check": "sigma=1/4固定，h_*=ceil C(d)log(2Theta)，T>2时Tnew<=3T/4。T0<=Theta，K=ceil log(2Theta)/log(4/3)轮内进入T<=2，再一步<=3/2。任意N>=(K+1)h_*可延长最后一步，不需要T_n单调。",
+        "result": "pass"
+      },
+      {
+        "pages": [
+          "4010",
+          "400P"
+        ],
+        "check": "进入T<=2后以sigma/2再做一步，直接所得成本为C log^2(1+Theta)+C sigma^-4 log(2/sigma)log(2Theta/sigma)。Theta不能从第二项删掉。原文C sigma^-4 log(sigma^-1)尖锐项仅作精确引用。",
+        "result": "pass_with_explicitly_weaker_local_tolerance_cost"
+      }
+    ],
+    "withdrawn_claims": [
+      "由逐层最大值之和直接估计为单位块加权和的最大值。",
+      "矩桥余项与改善后的局部L0/U0/T0成比例。",
+      "各重启成本C log(2T_j)。",
+      "本地任意容限附加成本不依赖微观Theta。"
+    ],
+    "retained_claim": "固定容限的C(d)log^2(1+Theta)三进尺度上界，在本支限定模型与已列明的引用分析输入下成立。",
+    "not_claimed": "不是一般粗矩条件、各向异性或弱混合情形的独立重证，也不是短报告/152页研究论文的全证明认证。"
+  },
+  "remaining_nonblocking_boundaries": [
+    "出版关键定义、(2.21)及定理3.1的定点HTML比对已完成，非完整出版PDF或全篇版本一致性认证。",
+    "一般退化理论、粗Caccioppoli、局部化/Besov分析、分数边界黑箱及尖锐容限项为精确外引，本轮不扩展补证。",
+    "全站构建、生成页与浏览器验收由主线程负责，本支不扩展。"
+  ],
+  "final_snapshot": {
+    "tree_file_count": 44,
+    "topic_tree_count": 43,
+    "atomic_page_count": 42,
+    "reference_file_count": 1,
+    "source_sha256": {
+      "trees/math/pde/armstrong-kuusi/4000.tree": "cc017c7d0ba4afb041a28c224e9dde62a57b1021eac5a7cd3f4a286169e5b44a",
+      "trees/math/pde/armstrong-kuusi/4001.tree": "9a973f65078287450ed3daea3bc513d095d08522e55f3c616bac0665c0ff40ab",
+      "trees/math/pde/armstrong-kuusi/4002.tree": "8b0bd3faaf24cfd7f0eb1cd796bafee097aca606279977020761c305f7f6e916",
+      "trees/math/pde/armstrong-kuusi/4003.tree": "80c3b82a345a79b793839867feaffe40459bfd53315ea7351cfe777418dafa40",
+      "trees/math/pde/armstrong-kuusi/4004.tree": "feac336dc8b558623d74a5d08d445e99d9e09cf52cef48e1b396e99610daa07b",
+      "trees/math/pde/armstrong-kuusi/4005.tree": "f2d631d246af01b6727712610a81992763a29afb9ca0fd49ad982c9f8135800b",
+      "trees/math/pde/armstrong-kuusi/4006.tree": "8883c18896a5557b49dcac0e56182bd8c273a85f9e0c5da9245de7a24b9d8c2a",
+      "trees/math/pde/armstrong-kuusi/4007.tree": "e46bb8175398dfeefc1a647d283f36b46b7c65d8f0522cc18934cf6411a4cca5",
+      "trees/math/pde/armstrong-kuusi/4008.tree": "4550e80e9fe4061218ea31e5b5a78426bb7998da553d14a58a0510b7a0e93c04",
+      "trees/math/pde/armstrong-kuusi/4009.tree": "205d2c9a84fddca5a1116c4fd65d4c7dc7fa7113d9421c6f2b881b89341781cd",
+      "trees/math/pde/armstrong-kuusi/400A.tree": "9dc6cbad839d7ebef77c5c6d36c1a0ea1ca6c5a4336bb42b44a203b58f93ffe3",
+      "trees/math/pde/armstrong-kuusi/400B.tree": "30c86c6ecbf957163cdd1e792fa3420e93f5a30ac60dd847f2d143c1073f675e",
+      "trees/math/pde/armstrong-kuusi/400C.tree": "512f3f3955faaf70fd5acf4a38af839488a1ff359fb989c246a72a86d2a1fabd",
+      "trees/math/pde/armstrong-kuusi/400D.tree": "a8c7bb4ec3e9f7ff28df1b353906ea9f39c29f66e2a4884103a1acb94e197390",
+      "trees/math/pde/armstrong-kuusi/400E.tree": "47518f63b0b08885d7ccbf52d28904844dd6459040b41a57864f7f3aff0f8dba",
+      "trees/math/pde/armstrong-kuusi/400F.tree": "b2471559a9a64892535d29c2259389d026c1d412fb107ac9bb4e017590f3ded5",
+      "trees/math/pde/armstrong-kuusi/400G.tree": "fd6277f4d7d9fea751c5c1604ca3e46842205c15b32c4d8c95ab313e4251e2e0",
+      "trees/math/pde/armstrong-kuusi/400H.tree": "a9521953f75b6acf281d4f736af218bac27ea7b48f821d13d46b3873defcf1d0",
+      "trees/math/pde/armstrong-kuusi/400I.tree": "3234b1d69dd903713bd84d630fc4f0a34ec8c8e309c6bec68b62aa49f198d97a",
+      "trees/math/pde/armstrong-kuusi/400J.tree": "806187f51b5973206cad928276b7b51601c17d3bd06cfdba867f4407dce1e3f4",
+      "trees/math/pde/armstrong-kuusi/400K.tree": "224a12a05de1c74f1a38e11a1b745ddcafe5203eff73f84a88f0e35c58153458",
+      "trees/math/pde/armstrong-kuusi/400L.tree": "a3903b716a07163bb014ef7a6c595e22b579fdd34504e31af0f13d37f2e25f70",
+      "trees/math/pde/armstrong-kuusi/400M.tree": "ae0a9d632f2080fc737b1e5796bf041ee12015bbe10fff68cbb8a3d56cd211e0",
+      "trees/math/pde/armstrong-kuusi/400N.tree": "6c5482841d33b1bc46c1810e59a12bff739a360c09a7bc27f127afb9095d770a",
+      "trees/math/pde/armstrong-kuusi/400O.tree": "a9b2df7865e7cf97ecbb81c84b5a5d4719b399bba85a4f0465546adf62568336",
+      "trees/math/pde/armstrong-kuusi/400P.tree": "9aed759a5eeedbdaec5d5e62ec61877a4a8bbb17fa4fb8a49ccc657e0f5ad003",
+      "trees/math/pde/armstrong-kuusi/400Q.tree": "9246ceaee0ff269ed525e18c693fae071a1fd5a528d374ed18853fd41de640f9",
+      "trees/math/pde/armstrong-kuusi/400R.tree": "785b3d17bfafe27889f037413c0c3353843fe00e1fbddf838e69d468c50f492f",
+      "trees/math/pde/armstrong-kuusi/400S.tree": "a8ca9d9805ac25896843375c9f12fd254823356de41893d3268eda83f548811d",
+      "trees/math/pde/armstrong-kuusi/400T.tree": "18898553402b71144abc1836f3f9f1a50adb5295338d26e5c31155f8e863564e",
+      "trees/math/pde/armstrong-kuusi/400U.tree": "9d53d835ef680cbfd2845aec8ea798630f78f1d0c71a8a8226a222ddbbf49e74",
+      "trees/math/pde/armstrong-kuusi/400V.tree": "0573f1935e8136ab17d1dfa799b4ad05c2c4cebcc09bd2b2678fc12d1cb19edf",
+      "trees/math/pde/armstrong-kuusi/400W.tree": "32084c65104ba6f5ba0e845b66fd8247c78444ccba4262bd68f12073c52e68d6",
+      "trees/math/pde/armstrong-kuusi/400X.tree": "79dbfc3cb86495f9c2e490306158a7f98228212be847d517f985df34a542c87d",
+      "trees/math/pde/armstrong-kuusi/400Y.tree": "c9d91902707aff34ec37e38d07ee7df189bde94cef96d2e47e24e97c1e9a1d70",
+      "trees/math/pde/armstrong-kuusi/400Z.tree": "ac20ac5081309e708b73f0584848d66315d7044d30c9715f66057fa55ff854b6",
+      "trees/math/pde/armstrong-kuusi/4010.tree": "721b2395b10da37a7ee7fa4eb66a2485a4e97dbd598a654de4554f16174a6123",
+      "trees/math/pde/armstrong-kuusi/4011.tree": "7bb95a0773fef90273848bf2d04256c0796e64ef9a0e0e2f58172d35bd5ec3a5",
+      "trees/math/pde/armstrong-kuusi/4012.tree": "f55e6169984e3e3fe6414e68c7d5bb1c5100090a4f51156239593702a136f893",
+      "trees/math/pde/armstrong-kuusi/4013.tree": "baf88520c4fd6593a749d9ac5772cf0c0a483a32f7626db87c0048011316e885",
+      "trees/math/pde/armstrong-kuusi/4014.tree": "8817089f36856c1f30a0451bc1892c89ecb5370cf6eaf6c079241b36e2ade06a",
+      "trees/math/pde/armstrong-kuusi/4015.tree": "e68abdb9fcacf82993912aea43960e1911821d0652d4bbacce2e273b2766b56a",
+      "trees/math/pde/armstrong-kuusi/4016.tree": "0e0c14995f4df59e4cf844da9b2561bdbaa34b697fcd164eac1e8903c292313b",
+      "trees/references/icm2026-armstrong-kuusi.tree": "dccffd743c2a028540c5590fe5e1fa9c032df6105d0ed3d1484f25b2574fff61"
+    },
+    "packet_file": "research/pde-armstrong-kuusi-packet.json",
+    "packet_sha256": "726e6dd4e096602efa0272abff5b398d20fc4ced9b7505c605babf31b0a38a53",
+    "source_manifest_sha256": "d9c9256da626f17f77934f4820e7702cbf703321e938a6fae4f39a00d9b5286e",
+    "source_manifest_format": "sha256 + two ASCII spaces + repository-relative path + LF; paths ASCII-sorted",
+    "all_44_match_packet": true,
+    "status": "writer_frozen_snapshot_checked_after_global_normalization"
+  }
+}

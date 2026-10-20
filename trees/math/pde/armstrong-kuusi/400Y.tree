@@ -1,0 +1,19 @@
+\title{平坦尺度窗口迫使对比度收缩}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.6}
+
+\p{采用[固定指数模型](400O)，记 #{\Theta=\Lambda /\lambda}。若 #{0<\delta\leq 1 /2}，#{m\geq C(d)\log(2\Theta /\delta)}，并且 #{\alpha_0\leq(1+\delta)\alpha_m}、#{\beta_0\leq(1+\delta)\beta_m}，则}
+##{\theta_m\leq 1+C(d)\delta^{1/4}\theta_0.}
+\p{\strong{证明。}按[几何平均平衡](400W)取 #{p,q,p_0,q_0}，并在[弱范数局部化](400T)中取 #{k=0,s=t=3/8}。其左端为 #{(\theta_m-1)/2}。记该引理的中心化弱范数为 #{X,Y}。}
+\p{由[窗口能量界](400W)，#{\tau_{m,0}^{1/2}j_0^{1/2}\leq C\delta^{1/2}\sqrt{\theta_0}}，而尺度误差 #{3^{-m}j_m} 也被 #{C\delta^{1/4}\theta_0} 控制。由[中心化估计](400X)，}
+##{|q_0|(\mathbb EX^2)^{1/2}
+ \leq C\mu^{1/2}\sqrt{\theta_0}\,
+ \beta_0^{1/2}\delta^{1/4}\theta_0^{1/4}
+ \leq C\delta^{1/4}\theta_0,}
+\p{因为 #{\mu\beta_0\leq(1+\delta)\sqrt{\theta_0}}。通量线性项使用 #{\mu^{-1}\alpha_0\leq(1+\delta)\sqrt{\theta_0}}，得到同一界。最后}
+##{(\mathbb EX^2\mathbb EY^2)^{1/2}
+ \leq C\delta^{1/2}\sqrt{\theta_0}\sqrt{\alpha_0\beta_0}
+ =C\delta^{1/2}\theta_0.}
+\p{代回局部化估计，利用 #{\theta_0\geq 1}、#{\delta^{1/2}\leq\delta^{1/4}}，即得结论。Besov 乘子估计仍是该局部化引理的分析输入。}

@@ -1,0 +1,10 @@
+\title{反应扩散热流的能量耗散}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，式(3.6)}
+
+\p{设 #{v(x,t)} 是光滑解，满足 #{v_t-\Delta v=f(v)}，区域 #{\Omega} 光滑有界，并满足时间不变的 Dirichlet 边值或零 Neumann 边值。令 #{F'=f}，用[反应扩散能量](4202)，则}
+##{\frac{d}{dt}\mathcal E(v(\cdot,t))=-\int_\Omega |v_t|^2\,dx.}
+\p{\strong{证明。}链式法则给出 #{d\mathcal E/dt=\int(\nabla v\cdot\nabla v_t-f(v)v_t)}。分部积分的边界项为 #{\int_{\partial\Omega}\partial_\nu v\,v_t}：固定边值时 #{v_t=0}，零 Neumann 时 #{\partial_\nu v=0}，所以均消失。余项为 #{\int(-\Delta v-f(v))v_t=-\int v_t^2}。}
+\p{该等式说明能量沿解下降。若定常解的[线性化最低值](4204)为零，仅凭二次变分不能控制高阶项；从耗散得到非线性 Lyapunov 稳定，还需要能量在该解附近的极小性与适当强制性。}

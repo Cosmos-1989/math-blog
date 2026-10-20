@@ -12,7 +12,8 @@ const hash = text => crypto.createHash('sha256').update(text).digest('hex');
 export function syncSectionReports({date, packetNames, manifest, scope, crossLandings = [], sharedSnapshotManifests = [], terminology,
   subject = '0067', packetPrefix = 'lie', coverageFile = 'research/icm2026-lie-section-coverage.json',
   rosterFile = 'research/icm2026-section-seven-roster.json', reviewAction = 'Lie 理论报告增补',
-  narrativeReason = '由表示的具体模型、主要构造与定理组织叙述，猜想保留其数学状态。', coverageScope}) {
+  narrativeReason = '由表示的具体模型、主要构造与定理组织叙述，猜想保留其数学状态。', coverageScope,
+  sourceMethod = 'Published proceedings; exact reading locations, versions and proof boundaries are recorded in each packet.'}) {
   const packetFiles = packetNames.map(name => `research/${packetPrefix}-${name}-packet.json`);
   const packets = packetFiles.map(read);
   const files = new Map();
@@ -147,7 +148,7 @@ export function syncSectionReports({date, packetNames, manifest, scope, crossLan
     write(file, previous);
   }
   write(manifest, {date, subject, scope,
-    source_method: 'Published proceedings; exact reading locations, versions and proof boundaries are recorded in each packet.',
+    source_method: sourceMethod,
     reports: packets.map(packet => packet.report), prerequisites,
     navigation_checks: [...leading, ...coverage.cross_listed_reports.map(row => row.outline).filter(Boolean)],
     ...(crossLandings.length ? {cross_subject_landings: crossLandings} : {}),

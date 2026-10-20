@@ -1,0 +1,18 @@
+\title{中心化弱范数的四项分解}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.4}
+
+\p{设 #{m>k\geq 0}，#{s>s'>0}，固定 #{p,q,p_0\in\mathbb R^d}，设 #{v_m=v(\cdot,Q_m,p,q)} 为[联合能量](4007)的极大元。记 #{D_{m,j}=\langle J(Q,p,q)\rangle_j-J(Q_m,p,q)} 为[分块亏损](4009)，#{K=\lambda_{s',1}(Q_m)^{-1}}。采用[块平均负范数](400E)，则}
+##{\begin{aligned}
+3^{-sm}[\nabla v_m-p_0]_{\mathcal B^{-s}_{2,1}}
+\leq{}&\sum_{j=k+1}^m3^{-s(m-j)}
+ \left\langle|B(Q)q-p-p_0|^2\right\rangle_j^{1/2}\\
+&+\sqrt{2K}\sum_{j=k+1}^m3^{-(s-s')(m-j)}D_{m,j}^{1/2}\\
+&+C(s')K^{1/2}3^{-(s-s')(m-k)}J(Q_m,p,q)^{1/2}
+ +C(s)3^{-s(m-k)}|p_0|.
+\end{aligned}}
+\p{\strong{粗尺度部分。}在每个 #{j} 级块加入并减去局部极大元 #{v_Q}。由[联合二次式及一阶变分](4008)，#{(\nabla v_Q)_Q=B(Q)q-p}。解差的平均梯度由[块能量界](400B)及 #{D_{m,j}} 控制；又 #{\max_Q\|B(Q)\|^{1/2}\leq 3^{s'(m-j)}K^{1/2}}，得到前两项。}
+\p{\strong{细尺度尾部。}对 #{j\leq k} 直接用 #{|(\nabla v_m)_Q|^2\leq\|B(Q)\|E_Q(v_m)}。从每项权重中取出 #{3^{-(s-s')(m-k)}}，剩下的 #{s'} 权重总和由[粗粒化定义](400F)控制。常向量 #{p_0} 的尾部是几何级数，得到最后两项。}
+\p{通量版本将 #{\nabla v_m,p_0,B(Q)q-p,K} 分别替换为 #{a\nabla v_m,q_0,q-A(Q)p,\Lambda_{s',1}(Q_m)}；其块能量界要求调和性，在此满足。}

@@ -1,0 +1,11 @@
+\title{MEMS 稳定解在六维内与奇异势垒分离}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3.5(3)；Bruera–Cabré，定理1.1}
+
+\p{设 #{n\le 6}，#{f\in C^2(\lbrack 0,1\rparen)} 非负、非减，#{F(t)=\int_0^tf(r)dr\to\infty} 当 #{t\uparrow 1}，且对某个 #{\theta>0}，#{f^{-\theta}} 在1附近为凹函数。若 #{u\in C^2(\overline B_1)}、#{0\le u<1} 是 #{-\Delta u=f(u)} 的[稳定解](4203)，则其在 #{B_{1/2}} 上与1有定量间隔。原论文的先验估计写为 #{\|u\|_{L^\infty(B_{1/2})}\le F^{-1}(C\|u\|_{L^1(B_1)}^2)<1}；#{F} 不严格递增时使用单调广义逆。}
+\p{具体地，选 #{K\ge 0} 使 #{ff''\ge(1+\theta)(f')^2-K} 于 #{\lbrack 0,1\rparen} 成立，则 #{C} 只依赖 #{n,\theta,K}。这是内部估计，不施加 Dirichlet 边值。引用证明通过稳定性估计控制 #{F(u)}，再以 #{F(1)=\infty} 排除接触奇异势垒。仅有 Hölder 连续性不足以排除 #{u=1}。}
+\p{\strong{反应条件的计算。}在 #{f,f'>0} 的末端区间，}
+##{(f^{-\theta})''=-\theta f^{-\theta -2}\left(ff''-(1+\theta)(f')^2\right).}
+\p{所以存在这样的凹负幂，等价于 #{\liminf_{t\uparrow 1}ff''/(f')^2>1}。模型 #{f(t)=(1-t)^{-q}}、#{q\ge 1} 的比值为 #{1+1/q}，而 #{f(t)=e^{1/(1-t)}} 的比值趋于1。移除该 Crandall–Rabinowitz 条件是报告提出的问题；[七维接触模型](4219)说明普遍阈值六的最优性。}

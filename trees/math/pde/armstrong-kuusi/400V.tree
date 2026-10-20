@@ -1,0 +1,14 @@
+\title{平坦窗口使块矩阵接近其均值}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.6 的矩阵波动估计}
+
+\p{在[标量平均模型](400O)中，设 #{\beta_0\leq(1+\delta)\beta_m}，#{0<\delta\leq 1 /2}。令 #{M_B=\|\|B(Q_0)\|\|_{L^2}}。对 #{0\leq j\leq m} 有}
+##{\mathbb E\|B(Q_j)-\beta_mI\|
+ \leq C(d)\delta\beta_0+C(d)3^{-dj/2}M_B.}
+\p{\strong{证明。}令 #{Y_j} 是 #{Q_j} 内单位块 #{B} 的平均。[次可加性](4009)给出 #{Y_j-B(Q_j)\succeq 0}，故其算子范数至多其迹。取期望得}
+##{\mathbb E\|Y_j-B(Q_j)\|
+ \leq d(\beta_0-\beta_j)\leq d\delta\beta_0.}
+\p{对 #{Y_j-\beta_0I} 用[有限程矩估计](400R)的二阶情形；再加 #{|\beta_0-\beta_m|\leq\delta\beta_0}，三角不等式给出结论。}
+\p{将 #{B,\beta} 换成 #{A,\alpha} 得相同结论。这里先把半正定的次可加误差变成均值差，再对真正的块平均应用独立性。}

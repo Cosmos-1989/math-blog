@@ -1,0 +1,14 @@
+\title{矩阵间隙控制平均响应误差}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2，平均响应估计}
+
+\p{设 #{w\in\mathcal A(U)}，#{A,A_*} 为[粗粒化矩阵](4007)，矩阵范数取[算子范数](00M4)。则}
+##{|(a\nabla w)_U-A_*(\nabla w)_U|
+ \leq\|A-A_*\|^{1/2}\left(|U|^{-1}\int_U\nabla w\cdot a\nabla w\right)^{1/2}.}
+\p{\strong{证明。}由[一阶变分](4008)和 Schwarz 不等式，}
+##{|p\cdot(a\nabla w)_U-q\cdot(\nabla w)_U|
+ \leq(2J(U,p,q))^{1/2}E_U(w)^{1/2}.}
+\p{取 #{q=A_*p}，联合二次式给出 #{2J(U,p,A_*p)=p\cdot(A-A_*)p}。对单位向量 #{p} 取上确界，得到结论。}
+\p{间隙为零时，所有调和函数的块平均梯度与通量满足同一个精确线性关系。一般系数场的两个响应矩阵记录这一关系的缺陷。}

@@ -1,0 +1,12 @@
+\title{水波能量与常涡量 Poisson 张量}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(0.4)；其文献 35、38、86、92}
+
+\p{在[水波相空间](4101)取光滑实变量 #{(\eta,\psi)}，参数同[常涡量方程](4104)。Hamilton 函数可减去无关常数后写为}
+##{\begin{aligned}H(\eta,\psi)&=\frac 12\int_{\mathbb T}\bigl(\psi G(\eta)\psi+g\eta^2\bigr)\,dx+\kappa\int_{\mathbb T}\bigl(\sqrt{1+\eta_x^2}-1\bigr)\,dx\\ &\quad+\frac\gamma 2\int_{\mathbb T}\left(-\psi_x\eta^2+\frac\gamma 3\eta^3\right)\,dx.\end{aligned}}
+\p{这里 #{L^2} 梯度由 #{dH(q)[v]=\int\nabla H(q)\cdot v\,dx} 定义，是[Fréchet 微分](0F68)在积分配对下的表示。水波方程的 Hamilton 表述为}
+##{q_t=J_\gamma\nabla H(q),\qquad q=\binom\eta\psi,\qquad J_\gamma=\begin{pmatrix}0&1\\-1&\gamma\partial_x^{-1}\end{pmatrix}.}
+\p{此处规定 Hamilton 方程的符号为 #{q_t=J_\gamma\nabla H}。在 #{\gamma=0} 时，若沿用[站内 Hamilton 场](0BL5)的约定 #{\omega(v,X_H)=dH(v)}，对应的辛形式取 #{\omega(v,w)=\int(v_\psi w_\eta -v_\eta w_\psi)\,dx}。有限维[辛结构](0BL1)的概念在这里成为函数空间上的积分形式。}
+\p{由 Fourier 符号可知 #{(\partial_x^{-1})^*=-\partial_x^{-1}}，故 #{J_\gamma^*=-J_\gamma}。沿足够光滑解，#{dH/dt=\langle\nabla H,J_\gamma\nabla H\rangle=0}。从能量变分恢复完整自由边界方程还需 #{G(\eta)} 的形状导数公式；这一输入见所引水波 Hamilton 理论。}

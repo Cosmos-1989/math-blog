@@ -1,0 +1,42 @@
+\title{平坦窗口中的中心化弱范数估计}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.6 的中心化估计}
+
+\p{采用[固定指数模型](400O)，记 #{\Theta=\Lambda /\lambda}。设 #{0<\delta\leq 1/2}、#{m\geq C(d)\log(2\Theta /\delta)}，并假设 #{\alpha_0\leq(1+\delta)\alpha_m}、#{\beta_0\leq(1+\delta)\beta_m}。按[几何平均归一化](400W)选择 #{\mu,p,q,p_0,q_0}。记 #{v_m=v(\cdot,Q_m,p,q)}、#{J_m=J(Q_m,p,q)}，固定 #{s=3/8}，令}
+##{X=3^{-sm}[\nabla v_m-p_0]_{\mathcal B^{-s}_{2,1}},\qquad
+Y=3^{-sm}[a\nabla v_m-q_0]_{\mathcal B^{-s}_{2,1}}.}
+\p{则 #{\mathbb EX^2\leq C\beta_0\delta^{1/2}\sqrt{\theta_0}}、#{\mathbb EY^2\leq C\alpha_0\delta^{1/2}\sqrt{\theta_0}}。以下证明第一式；第二式将 #{B,\beta,\mu} 换成 #{A,\alpha,\mu^{-1}}。}
+\p{\strong{确定界与尺度选择。}由[矩阵上下界](400A)，#{\lambda\leq\mu\leq\Lambda}、#{\lambda^{-1}/\beta_0\leq\Theta}、#{\Lambda /\alpha_0\leq\Theta}。将 #{p=\mu^{-1/2}e,q=\mu^{1/2}e} 代入[联合二次式](4007)，对每个块有}
+##{0\leq J(Q,p,q)
+ \leq \tfrac 12(\Lambda /\mu+\mu /\lambda)\leq\Theta.}
+\p{置 #{\rho=13/64}、#{\eta=s-3\nu /2=3/64}。扩大仅依赖 #{d} 的尺度常数后，所选 #{m} 同时保证}
+##{3^{-\rho m}\Theta^2\leq\delta,\qquad
+ 3^{-\eta m}\Theta\leq\delta,\qquad
+ 3^{-2(s-\nu)m}\leq\delta,\qquad 3^{-2sm}\leq\delta.}
+\p{\strong{块矩阵波动。}在[四项分解](400U)中取 #{s'=\nu=7/32,k=0}，令 #{K=\lambda_{\nu,1}(Q_m)^{-1}}、#{H=K+\beta_0}、#{F_j=\langle\|B(Q)-\beta_mI\|\rangle_j}。若 #{D=\|B(Q)-\beta_mI\|}，则 #{\max D\leq 3^{2\nu(m-j)}H}，且 #{\langle D^2\rangle\leq(\max D)^{3/2}F_j^{1/2}}。所以第一项 #{Z} 满足}
+##{Z\leq\mu^{1/2}H^{3/4}
+ \sum_{j=1}^m3^{-\eta(m-j)}F_j^{1/4},\qquad
+Z^2\leq C\mu H^{3/2}
+ \left(\sum_{j=1}^m3^{-\eta(m-j)}F_j\right)^{1/2}.}
+\p{第二式由加权 [Hölder 不等式](0A68)得到。由[矩参数控制](400S)的正部估计，#{\|H\|_{L^3}\leq 2\beta_0+C3^{-\rho m}\lambda^{-1}\leq C\beta_0}。[平坦窗口波动界](400V)给出}
+##{\mathbb E\sum_{j=1}^m3^{-\eta(m-j)}F_j
+ \leq C\delta\beta_0+C3^{-\eta m}\lambda^{-1}
+ \leq C\delta\beta_0.}
+\p{这里 #{\eta<d/2} 使卷积中的几何级数收敛。用 [Schwarz 不等式](004S)，得到}
+##{\mathbb EZ^2\leq C\mu\beta_0^2\delta^{1/2}
+ \leq C\beta_0\delta^{1/2}\sqrt{\theta_0},}
+\p{其中使用了 #{\mu\beta_0\leq(1+\delta)\sqrt{\theta_0}}。}
+\p{\strong{分块解差。}记[分块亏损](4009)为 #{D_{m,j}}。第二项平方至多为 #{CK\sum_{j=1}^m3^{-(s-\nu)(m-j)}D_{m,j}}。点态能量界给出 #{0\leq D_{m,j}\leq\Theta}，[平衡能量界](400W)给出 #{\mathbb ED_{m,j}\leq\delta\sqrt{\theta_0}}。由 #{K\leq\beta_0+(K-\beta_0)_+}、正部矩估计和 Schwarz，}
+##{\begin{aligned}
+\mathbb E(KD_{m,j})
+&\leq \beta_0\delta\sqrt{\theta_0}
+ +C3^{-\rho m}\lambda^{-1}\Theta\\
+&\leq C\beta_0\delta\sqrt{\theta_0}.
+\end{aligned}}
+\p{最后一步用 #{\lambda^{-1}/\beta_0\leq\Theta}、#{\theta_0\geq 1} 及所列尺度条件；再对可求和的权重求和。}
+\p{\strong{细尺度尾部。}同样分解 #{K}，使用 #{J_m\leq\Theta} 和 #{\mathbb EJ_m\leq\sqrt{\theta_0}}，得到 #{\mathbb E(KJ_m)\leq C\beta_0\sqrt{\theta_0}}。又 #{|p_0|^2\leq\mu^{-1}\theta_m=\beta_m\sqrt{\theta_m}\leq\beta_0\sqrt{\theta_0}}。因此最后两项平方之和至多为}
+##{C3^{-2(s-\nu)m}\mathbb E(KJ_m)+C3^{-2sm}|p_0|^2
+ \leq C\beta_0\delta\sqrt{\theta_0}.}
+\p{四项和的平方至多四倍平方和。结合块矩阵波动界及 #{\delta\leq\delta^{1/2}}，便得结论。}

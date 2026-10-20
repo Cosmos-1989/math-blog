@@ -1,0 +1,11 @@
+\title{二维 Euler 的涡量输运方程}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.5；逐分量推导}
+
+\p{设 #{u=(u_1,u_2)} 是二维[Euler 方程](4302)的光滑无散度解，令[涡量](4301) #{\omega=\partial_1u_2-\partial_2u_1}，涡量源 #{g=\partial_1f_2-\partial_2f_1}。则}
+##{\partial_t\omega+u\cdot\nabla\omega=g.}
+\p{\strong{证明。}对第二分量方程取 #{\partial_1}，减去第一分量方程的 #{\partial_2}。压力的混合导数抵消。对流项展开后，二阶导数合并为 #{u\cdot\nabla\omega}，剩余一阶乘积为}
+##{(\partial_1u_1)(\partial_1u_2)+(\partial_1u_2)(\partial_2u_2)-(\partial_2u_1)(\partial_1u_1)-(\partial_2u_2)(\partial_2u_1)=(\operatorname{div}u)\omega=0.}
+\p{因此得到结论。二维 NS 则多出 #{-\nu\Delta\omega}。三维旋度为向量，方程另含涡伸长项 #{(\omega\cdot\nabla)u}；二维的标量输运估计不能直接视为三维结论。}

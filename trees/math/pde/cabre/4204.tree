@@ -1,0 +1,11 @@
+\title{稳定性与最低 Rayleigh 商的符号}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3；Rayleigh 商的直接推论}
+
+\p{设 #{\Omega} 有界，#{V\in L^\infty(\Omega)}，#{X} 为 #{H^1_0(\Omega)} 或 #{H^1(\Omega)}。定义 #{Q(\xi)=\int_\Omega(|\nabla\xi|^2-V\xi^2)} 及}
+##{\lambda_X=\inf_{0\ne\xi\in X}\frac{Q(\xi)}{\|\xi\|_{L^2(\Omega)}^2}.}
+\p{则 #{Q\ge 0} 于 #{X} 当且仅当 #{\lambda_X\ge 0}。这给出[稳定性](4203)的谱符号判据，其中 #{V=f'(u)}；光滑有界域上它分别是线性化算子 #{-\Delta -f'(u)} 的第一 Dirichlet 或 Neumann 特征值的变分刻画。特征值实现属于标准紧嵌入谱理论。}
+\p{\strong{证明。}若 #{Q\ge 0}，所有商均非负，其下确界也非负。反之每个商至少为 #{\lambda_X}，乘以正的平方范数即得 #{Q\ge 0}。因 #{H^1_0\subset H^1}，#{\lambda_{H^1}\le\lambda_{H^1_0}}。这说明 Neumann 稳定要求更强。}
+\p{若 #{u\equiv a} 是常数解，即 #{f(a)=0}，则 Neumann 稳定当且仅当 #{f'(a)\le 0}：必要性取 #{\xi=1}，充分性逐项检查二次型。Dirichlet 情形则用[零边值 Poincaré 不等式](2J0D)控制负的势能项，不能照搬常数测试。}

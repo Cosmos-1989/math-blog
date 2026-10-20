@@ -1,0 +1,10 @@
+\title{三维负一次齐次速度的能量尾部发散}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§2.1；极坐标计算}
+
+\p{设 #{a:\mathbb R^3\setminus\{0\}\to\mathbb R^3} 连续、非零，并满足 #{a(rx)=r^{-1}a(x)}。则 #{a} 在原点附近属于 #{L^2}，但在无穷远不属于 #{L^2}。}
+\p{\strong{证明。}写 #{x=r\theta}，#{\theta\in S^2}。球面连续性给出 #{A=\int_{S^2}|a(\theta)|^2d\theta\in(0,\infty)}。因体积元是 #{r^2dr\,d\theta}，}
+##{\int_{R<|x|<S}|a(x)|^2dx=A\int_R^S r^{-2}r^2dr=A(S-R).}
+\p{令 #{R=0}、#{S<\infty} 可见原点局部可积；固定 #{R>0} 再令 #{S\to\infty} 则发散。因此[无力自相似存在定理](430S)的负一次齐次数据不能未经局部化就当成 [Leray–Hopf](4306) 的全空间有限能量初值。计算只用 [#{L^2} 定义](00Q6)。}

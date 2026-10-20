@@ -1,0 +1,10 @@
+\title{径向加权能量估计中的九维限制}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，命题3.3；文献14，引理2.1}
+
+\p{设 #{3\le n\le 9}，#{u\in C^\infty(\overline B_1)} 解 #{-\Delta u=f(u)} 且[稳定](4203)，#{f\in C^1(\mathbb R)}。记 #{r=|x|}、#{u_r=(x/r)\cdot\nabla u}。对 #{0<\rho<2/3} 有}
+##{\int_{B_\rho}r^{2-n}u_r^2\,dx\le C(n)\rho^{2-n}\int_{B_{3\rho /2}\setminus B_\rho}|\nabla u|^2\,dx.}
+\p{此命题不要求 #{f\ge 0}。它采用[测试恒等式](420E)中的 #{c=x\cdot\nabla u} 及截断权重 #{\eta=r^{(2-n)/2}\zeta}。直接微分给出 #{\Delta c+f'(u)c=-2f(u)}，因为 #{\Delta(x\cdot\nabla u)=x\cdot\nabla\Delta u+2\Delta u}。随后还需带权分部积分、原点截断与误差吸收，精确的研究估计见所引引理。}
+\p{右端含整个梯度，左端只有径向导数，二者尚不能直接迭代。用[梯度估计](420H)和[径向 Poincaré 估计](420J)补上这一差别，才得到 Hölder 正则性。维数1、2的最终结论可通过添加无关变量转到三维处理。}

@@ -1,0 +1,13 @@
+\title{H1 函数的边界迹属于 H1/2}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Lamberti–Provenzano，定理3.1、3.4；[Cabré 报告文献与补充来源](icm2026-cabre)；半空间 Fourier 证明}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为光滑有界域，#{n\ge 2}。边界限制在光滑函数上定义，并唯一延拓为有界满射 #{T:H^1(\Omega)\to H^{1/2}(\partial\Omega)}，满足 #{\|Tu\|_{H^{1/2}(\partial\Omega)}\le C_\Omega\|u\|_{H^1(\Omega)}}，且 #{\ker T=H^1_0(\Omega)}。[H1](2J0C)采用弱导数定义；边界 #{H^{1/2}} 通过有限光滑坐标片和单位分解，以[实数阶 Fourier 范数](130F)定义。}
+\p{\strong{半空间估计。}取 #{U\in C_c^\infty(\overline{\mathbb R^n_+})}，记边界值 #{v(x)=U(x,0)}，对切向 #{x\in\mathbb R^{n-1}} 作 [Fourier 变换](0H4G)。令 #{a=|\xi|}，微积分基本定理和 #{2ab\le a^2+b^2} 给出}
+##{|\xi||\widehat v|^2=-2\operatorname{Re}\int_0^\infty|\xi|\partial_y\widehat U\,\overline{\widehat U}\,dy
+\le\int_0^\infty(|\partial_y\widehat U|^2+|\xi|^2|\widehat U|^2)dy.}
+\p{同样去掉频率因子，得 #{|\widehat v|^2\le\int_0^\infty(|\partial_y\widehat U|^2+|\widehat U|^2)dy}。由 #{(1+|\xi|^2)^{1/2}\le 1+|\xi|}，相加后使用 [Plancherel 定理](0W01)即得非齐次迹范数控制。光滑稠密性将其延拓到 #{H^1}。}
+\p{\strong{半空间右逆。}对 #{g\in H^{1/2}(\mathbb R^{n-1})}，设 #{\widehat U(\xi,y)=e^{-y\sqrt{1+|\xi|^2}}\widehat g(\xi)}。直接对 #{y} 积分，#{\|U\|_{H^1(\mathbb R^n_+)}^2=(2\pi)^{1-n}\int\sqrt{1+|\xi|^2}|\widehat g|^2}，且 #{TU=g}。该右逆为方便控制低频而选，不要求调和。}
+\p{\strong{光滑域的局部化。}将边界展平、乘以单位分解并使用上述估计与右逆，可拼接得到一般域的有界满射。平滑坐标对 Sobolev 范数的有界性、光滑稠密性及零迹函数的内移逼近是这里引用的标准局部化步骤；零迹内移后再光滑化给出 #{\ker T=H^1_0}。在平面边界上，相应 #{H^{1/2}} 半范数局部等价于 #{\iint|g(s)-g(t)|^2/|s-t|^2dsdt}。}

@@ -1,0 +1,12 @@
+\title{梯度测试给出的 Hessian 缺陷不等式}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3.3，式(3.12)的局部计算}
+
+\p{设 #{u\in C^3(\Omega)} 是[稳定解](4203)，#{f\in C^1}，#{\eta\in C_c^1(\Omega)}。记 #{D^2u=(u_{ij})}、#{|D^2u|^2=\sum_{i,j}u_{ij}^2}。则}
+##{\int_\Omega\left(|D^2u|^2-|\nabla|\nabla u||^2\right)\eta^2\le\int_\Omega|\nabla u|^2|\nabla\eta|^2.}
+\p{\strong{正则化。}置 #{w_\delta=(|\nabla u|^2+\delta^2)^{1/2}}。对方程求导及使用乘积法则，得到 #{\tfrac 12\Delta|\nabla u|^2=|D^2u|^2-f'(u)|\nabla u|^2}，因而}
+##{w_\delta(\Delta w_\delta+f'(u)w_\delta)=|D^2u|^2-|\nabla w_\delta|^2+\delta^2 f'(u).}
+\p{代入[测试恒等式](420E)。因 #{|\nabla w_\delta|\le|D^2u|}，在测试函数支撑上可用控制收敛；#{|\nabla u|} 为局部 Lipschitz 函数，弱梯度在其零集合上几乎处处为零。令 #{\delta\downarrow 0} 即得结论。}
+\p{在 #{\nabla u\ne 0} 处令 #{\nu=\nabla u/|\nabla u|}。取最后一个基向量为 #{\nu} 的正交基，直接拆分 Hessian 各项可得缺陷等于 #{|\nabla_T|\nabla u||^2+|A|^2|\nabla u|^2}，其中 #{\nabla_T} 为水平集切向梯度、#{A} 为水平集第二基本形式。这与[极小超曲面的稳定二次型](2G04)具有同一曲率势结构。}

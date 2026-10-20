@@ -1,0 +1,16 @@
+\title{联合能量泛函 J}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2，式 (2.15)-(2.16)}
+
+\p{在立方体 #{U} 上，对[调和函数空间](4001)定义}
+##{J(U,p,q)=\max_{w\in\mathcal A(U)}F_{p,q}(w),\qquad
+F_{p,q}(w)=|U|^{-1}\int_U\left(-\frac 12\nabla w\cdot a\nabla w+
+q\cdot\nabla w-p\cdot a\nabla w\right).}
+\p{用 [Dirichlet 解](4005) #{u_p} 和 [Neumann 解](4006) #{n_q}，极大元可取 #{v=n_q-u_p}。对调和 #{w}，由 #{u_p-\ell_p\in H^1_0(U)} 得}
+##{|U|^{-1}\int_U\nabla w\cdot a\nabla u_p=p\cdot(a\nabla w)_U,\qquad
+ |U|^{-1}\int_U\nabla w\cdot a\nabla n_q=q\cdot(\nabla w)_U.}
+\p{故 #{v} 满足极值方程。配方证明它确为极大元。再取 #{w=u_p} 代入 Neumann 方程，得到 #{|U|^{-1}\int_U\nabla u_p\cdot a\nabla n_q=p\cdot q}。于是}
+##{J(U,p,q)=\frac 12p\cdot A(U)p+\frac 12q\cdot B(U)q-p\cdot q.}
+\p{#{(p,q)\mapsto\nabla v} 线性，#{J\geq 0}；常数系数时 #{J=\frac 12(q-ap)\cdot a^{-1}(q-ap)}。}

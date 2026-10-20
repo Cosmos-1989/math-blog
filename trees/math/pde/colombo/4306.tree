@@ -1,0 +1,11 @@
+\title{带外力的 Leray–Hopf 解}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，定义1.1；Albritton–Brué–Colombo，定义1.1}
+
+\p{设 #{\nu>0}、#{T>0}，#{u_0\in L^2(\mathbb R^3)} 无散度，#{f\in L^1_tL^2_x}。采用从初始时刻出发的能量不等式约定：Leray–Hopf 解是属于[能量类](4305)的无散度速度 #{u}，在 #{\lbrack 0,T\rbrack} 上 [#{L^2} 弱连续](00MJ)，满足 #{u(0)=u_0}，并存在局部可积压力使 NS 成立为分布方程。其无散度测试式见[弱形式](4303)。}
+\p{弱连续具体指每个 #{h\in L^2} 的配对 #{t\mapsto\int u(t)\cdot h} 连续。此外要求对所有 #{0<t\leq T} 有}
+##{\frac 12\|u(t)\|_2^2+\nu\int_0^t\|\nabla u(s)\|_2^2\,ds\leq\frac 12\|u_0\|_2^2+\int_0^t\int f\cdot u\,dx\,ds.}
+\p{也常将从几乎每个起始时刻 #{s} 出发的强能量不等式纳入 Leray–Hopf 的定义。本专题的非唯一构造对正时刻光滑且满足能量等式，因而也满足这一加强约定。适当性所要求的[局部能量不等式](4307)是另一项条件。}
+\p{初始条件实际上强成立。右侧做功趋于零，故 #{\limsup_{t\downarrow 0}\|u(t)\|_2^2\leq\|u_0\|_2^2}。由弱连续，#{\langle u(t),u_0\rangle\to\|u_0\|_2^2}；展开 #{\|u(t)-u_0\|_2^2} 即得强 #{L^2} 收敛。}

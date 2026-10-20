@@ -1,0 +1,11 @@
+\title{稳定性测试函数 cη 的线性化恒等式}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，式(3.9)}
+
+\p{设 #{u} 是光滑[稳定解](4203)，#{c\in C^2(\Omega)}，#{\eta\in C_c^1(\Omega)}。则}
+##{\int_\Omega(\Delta c+f'(u)c)c\eta^2\le\int_\Omega c^2|\nabla\eta|^2.}
+\p{\strong{证明。}将 #{\xi=c\eta} 代入稳定性不等式。展开右端为 #{\int(\eta^2|\nabla c|^2+c\nabla c\cdot\nabla(\eta^2)+c^2|\nabla\eta|^2)}。中间项的分部积分是}
+##{\int c\nabla c\cdot\nabla(\eta^2)=-\int\eta^2(|\nabla c|^2+c\Delta c).}
+\p{第一项恰被抵消，将势能项移到左端即得。紧支撑消去了边界项，所以 #{c} 无需满足边界条件。选择 #{c=x\cdot\nabla u} 或 #{c=|\nabla u|} 将分别产生尺度信息和[水平集几何信息](420G)。后者在梯度零点需先正则化。}

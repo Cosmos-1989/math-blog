@@ -1,0 +1,37 @@
+\title{粗粒化矩参数的跨尺度控制}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§3，粗粒化矩估计}
+
+\p{在[固定指数模型](400O)中，记确定椭圆界为 #{\lambda I\preceq a\preceq\Lambda I}，#{\Theta=\Lambda /\lambda}，#{\rho=\nu -d /(2r)=13/64}。存在 #{C(d)} 使任意整数 #{m\geq 0} 满足}
+##{L_m\leq\beta_0+C3^{-\rho m}\lambda^{-1},\qquad
+ U_m\leq\alpha_0+C3^{-\rho m}\Lambda,\qquad
+ T_m\leq\theta_0+C3^{-\rho m}\Theta.}
+\p{\strong{统一记号。}令 #{X(Q)} 分别为 #{B(Q)} 或 #{A(Q)}，其单位块均值为 #{bI}，相应粗粒化量为 #{K_m}；分别取确定常数 #{M=\lambda^{-1}} 或 #{M=\Lambda}。由[矩阵上下界](400A)，#{0\preceq X(Q)\preceq MI}、#{b\leq M}。由[次可加性](4009)，#{X(Q_n)\preceq Y_n}，其中 #{Y_n} 为该块内单位块矩阵的平均。[矩衰减](400R)给出 #{\|Y_n-bI\|_{L^r}\leq C3^{-dn/2}M}。}
+\p{在 #{Q_m} 的所有 #{n} 级块上取最大值，使用 #{\|\max_iZ_i\|_r\leq(\sum_i\|Z_i\|_r^r)^{1/r}}，得到}
+##{\left\|\max_{Q\in\mathcal Q_n(Q_m)}
+ (\|X(Q)\|-b)_+\right\|_{L^r}
+ \leq C3^{d(m-n)/r-dn/2}M\qquad(1\leq n\leq m).}
+\p{\strong{细尺度尾部。}按[粗粒化定义](400F)，#{K_m^{1/2}} 是各尺度的 #{\max_Q\|X(Q)\|^{1/2}} 以权重 #{c_\nu 3^{-\nu(m-n)}} 求和，其中 #{c_\nu=1-3^{-\nu}}。直接使用确定上界，得到}
+##{c_\nu\sum_{n\leq 0}3^{-\nu(m-n)}
+ \max_{Q\in\mathcal Q_n(Q_m)}\|X(Q)\|^{1/2}
+ \leq M^{1/2}3^{-\nu m}.}
+\p{\strong{粗尺度波动。}在 #{n\geq 1} 部分使用 #{\sqrt{x}\leq\sqrt b+\sqrt{(x-b)_+}}。存在非负随机量 #{R_m} 使 #{K_m^{1/2}\leq\sqrt b+R_m}。由 [Minkowski 不等式](0A69)与上述最大值估计，}
+##{\begin{aligned}
+\|R_m\|_{L^{2r}}
+&\leq M^{1/2}3^{-\nu m}
+ +CM^{1/2}3^{-\rho m}
+   \sum_{n=1}^m3^{(\nu -d /4-d/(2r))n}\\
+&\leq CM^{1/2}3^{-\rho m}.
+\end{aligned}}
+\p{这里 #{\nu=7/32<d/4}、#{d\geq 2}，故级数一致有界。平方后，}
+##{\|(K_m-b)_+\|_{L^r}
+ \leq 2\sqrt b\,\|R_m\|_{L^{2r}}+\|R_m\|_{L^{2r}}^2
+ \leq CM3^{-\rho m}.}
+\p{这给出前两式。相乘时，#{\alpha_0\leq\Lambda}、#{\beta_0\leq\lambda^{-1}}，交叉项与二次余项都被 #{C3^{-\rho m}\Theta} 控制，得到第三式。}
+\p{\strong{任意起始尺度。}对整数 #{j\geq 0}，缩放场 #{a(3^j\cdot)} 仍整数平稳、依赖距离至多一，并保持同一对确定界 #{\lambda,\Lambda}。其 #{m} 级量等于原场的 #{j+m} 级量。因此}
+##{L_{j+m}\leq\beta_j+C3^{-\rho m}\lambda^{-1},\quad
+ U_{j+m}\leq\alpha_j+C3^{-\rho m}\Lambda,\quad
+ T_{j+m}\leq\theta_j+C3^{-\rho m}\Theta.}
+\p{每次重新开始时，余项中的 #{\Theta} 仍是这对确定界的比值。}

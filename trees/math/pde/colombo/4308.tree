@@ -1,0 +1,11 @@
+\title{Euler 的双参数重标度与 NS 的抛物重标度}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.2；直接链式求导}
+
+\p{若 #{(u,p,f)} 满足[流体方程](4302)，对 #{\ell,h>0} 令}
+##{u_{\ell,h}(x,t)=\frac\ell h u(x/\ell,t/h),\quad p_{\ell,h}=\frac{\ell^2}{h^2}p(x/\ell,t/h),\quad f_{\ell,h}=\frac\ell{h^2}f(x/\ell,t/h).}
+\p{新黏性系数是 #{\nu_{\ell,h}=\nu\ell^2/h}。特别地 Euler 容许任意 #{\ell,h}；要保持非零黏性不变必须取 #{h=\ell^2}。令 #{\lambda=1/\ell}，就得到 NS 重标度}
+##{u_\lambda=\lambda u(\lambda x,\lambda^2t),\quad p_\lambda=\lambda^2p(\lambda x,\lambda^2t),\quad f_\lambda=\lambda^3f(\lambda x,\lambda^2t).}
+\p{\strong{证明。}[链式法则](0A34)给出时间导数与对流项均乘 #{\ell /h^2}，压力梯度也乘此系数，而 #{\Delta u_{\ell,h}=(\ell h)^{-1}\Delta u}。因而要求 #{\nu_{\ell,h}/(\ell h)=\nu\ell /h^2}，即上述系数。散度乘 #{1/h}，仍为零。外力必须随同变换，固定一个任意外力通常会破坏缩放对称性。}

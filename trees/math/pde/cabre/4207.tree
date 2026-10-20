@@ -1,0 +1,10 @@
+\title{超线性反应使固定边值能量无下界}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3，脚注2；直接证明}
+
+\p{设 #{\Omega\subset\mathbb R^n} 有界，#{f\in C(\mathbb R)} 且 #{f(t)/t\to\infty} 当 #{t\to\infty}，令 #{F'=f}。固定 #{u\in C^1(\overline\Omega)}，取非负、非零的 #{\psi\in C_c^\infty(\Omega)}，则[能量](4202) #{\mathcal E(u+t\psi)\to -\infty} 当 #{t\to\infty}。}
+\p{\strong{证明。}对任意 #{M>0}，存在 #{T} 使 #{f(s)\ge 4Ms} 当 #{s\ge T}；积分得 #{F(s)\ge M s^2-C_M}，其中在 #{s\ge -\|u\|_\infty} 上可选择统一的 #{C_M}。于是}
+##{\mathcal E(u+t\psi)\le\frac 12\int|\nabla u+t\nabla\psi|^2-M\int|u+t\psi|^2+C_M|\Omega|.}
+\p{右端关于 #{t} 的二次项系数为 #{\tfrac 12\int|\nabla\psi|^2-M\int\psi^2}。选 #{M} 使其为负即得结论。扰动不改变边界值；因此绝对极小值不存在，却仍可能有[稳定分支](4206)。}

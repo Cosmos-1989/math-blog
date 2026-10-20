@@ -1,0 +1,10 @@
+\title{强 L2 收敛把消失应力传到 Euler 弱解}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§5的基础极限步骤；直接乘积估计}
+
+\p{设 #{(u_n,p_n,R_n)} 在 #{\mathbb T^d\times(0,T)} 满足 [Euler–Reynolds 系统](430T)，且 #{u_n\to u} 强于 #{L^2_{t,x}}，#{R_n\to 0} 强于 #{L^1_{t,x}}。则 #{u} 无散度并满足内部时间区间上的[无力 Euler 弱形式](4303)。若还要包含初值，另假设 #{u_n(0)\to u_0} 强于 #{L^2_x} 并使用含初值的测试恒等式。}
+\p{\strong{证明。}代数恒等式给出 #{u_n\otimes u_n-u\otimes u=(u_n-u)\otimes u_n+u\otimes(u_n-u)}，由 [Hölder 不等式](0A68)，}
+##{\|u_n\otimes u_n-u\otimes u\|_1\leq(\|u_n\|_2+\|u\|_2)\|u_n-u\|_2\to 0.}
+\p{强收敛保证 #{\|u_n\|_2} 有界。于是固定测试函数的对流项收敛，时间项由 #{L^2} 收敛传递，应力项以 #{\|R_n\|_1\|\nabla\phi\|_\infty} 控制并趋零；无散度条件也由线性配对传递。初始项在额外假设下同样收敛。这证明弱形式，但没有自动给出能量单调性。}

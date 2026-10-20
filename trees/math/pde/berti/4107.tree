@@ -1,0 +1,14 @@
+\title{周期水波的线性频率与相速}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(0.5)–(0.8)；特征多项式推导}
+
+\p{将[水波方程](4104)在 #{(\eta,\psi)=(0,0)} 处线性化。记[平面符号](4103) #{q=q_h(j)}，#{j\ne 0}，#{a=g+\kappa j^2}，#{b=\gamma q/j}。第 #{j} 个 Fourier 模态满足}
+##{\frac d{dt}\binom{\eta_j}{\psi_j}=\begin{pmatrix}0&q\\-a&-ib\end{pmatrix}\binom{\eta_j}{\psi_j}.}
+\p{\strong{特征值。}特征多项式为 #{\lambda^2+ib\lambda+aq}，两根为 #{-ib/2\pm i\sqrt{aq+b^2/4}}。定义}
+##{\Omega(j)=\sqrt{q_h(j)(g+\kappa j^2)+\frac{\gamma^2q_h(j)^2}{4j^2}}+\frac{\gamma q_h(j)}{2j}.}
+\p{因 #{aq>0}，平方根大于 #{|b|/2}，故 #{\Omega(j)>0}，两特征值恰为 #{-i\Omega(j)} 和 #{i\Omega(-j)}。涡量一般使 #{\Omega(j)\ne\Omega(-j)}。}
+\p{\strong{正则复变量。}用 [Wahlén 变量](4106)，记 #{A_j=a+\gamma^2q/(4j^2)}、#{M_j=(q/A_j)^{1/4}}。因 #{\zeta_j=\psi_j+i\gamma\eta_j /(2j)}，代入原矩阵方程得 #{\dot\eta_j=q\zeta_j-ib\eta_j /2}、#{\dot\zeta_j=-A_j\eta_j-ib\zeta_j /2}。又 #{q/M_j=\sqrt{qA_j}M_j}、#{A_jM_j=\sqrt{qA_j}/M_j}，故 #{u_j=(M_j^{-1}\eta_j+iM_j\zeta_j)/\sqrt 2} 满足 #{\dot u_j=-i(\sqrt{qA_j}+b/2)u_j=-i\Omega(j)u_j}，从而}
+##{u_j(t)=u_j(0)e^{-i\Omega(j)t},\qquad e^{i(jx-\Omega(j)t)}\text{ 的相速为 }\frac{\Omega(j)}j.}
+\p{频率是单位时间的相位变化率，相速是等相位点的空间移动速度：对 #{jx-\Omega(j)t=\mathrm{const}} 求导即得后一式。固定 #{h>0} 时高频 #{q_h(j)\sim|j|}，因此 #{\kappa>0} 时 #{\Omega(j)\sim\sqrt\kappa|j|^{3/2}}，#{\kappa=0} 时 #{\Omega(j)\sim\sqrt g|j|^{1/2}}。}

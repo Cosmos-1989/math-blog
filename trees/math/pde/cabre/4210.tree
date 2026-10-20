@@ -1,0 +1,10 @@
+\title{反正切边界层的尺度与反应归一化}
+\date{2026-10-20}
+\taxon{Example}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，式(4.8)后的例子；保留尺度的直接验算}
+
+\p{设 #{a>0}，在上半平面定义 #{U_a(x,y)=(2/\pi)\arctan(x/(y+a))}。它是[调和函数](270F)，边界值 #{v_a(x)=U_a(x,0)} 从 #{-1} 严格递增到 #{1}，且}
+##{-\partial_yU_a(x,0)=\frac 1{\pi a}\sin(\pi v_a(x)).}
+\p{\strong{计算。}记 #{D=x^2+(y+a)^2}，则 #{\partial_xU_a=2(y+a)/(\pi D)}、#{\partial_yU_a=-2x/(\pi D)}。两次微分给出 #{\partial_{xx}U_a=-4x(y+a)/(\pi D^2)}、#{\partial_{yy}U_a=4x(y+a)/(\pi D^2)}，所以调和。边界上 #{-\partial_yU_a=2x/(\pi(x^2+a^2))}，而 #{\sin(2\arctan(x/a))=2ax/(x^2+a^2)}，即得所述系数。}
+\p{因此 #{a=1} 对应反应项 #{\pi^{-1}\sin(\pi v)}；要取 #{f(v)=\sin(\pi v)}，应选 #{a=1/\pi}。由[法向导数表示](420O)，边界函数也解相应半 Laplace 方程。它给出 Peierls–Nabarro 模型的层解，不能直接代入反应项 #{v-v^3} 的边界双阱方程。}

@@ -1,0 +1,12 @@
+\title{幂次奇异解与 Joseph–Lundgren 阈值}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3 的幂次模型；独立 Hardy 计算}
+
+\p{设 #{n\ge 3}，#{q>(n+2)/(n-2)}，令 #{a=2/(q-1)}，#{A^{q-1}=a(n-2-a)}。则 #{U(x)=A|x|^{-a}} 是 #{B_1} 中 #{-\Delta U=U^q} 的有限能量奇异弱解，其固定边界值为 #{A}。它稳定当且仅当}
+##{(a+2)(n-2-a)\le\frac{(n-2)^2}{4}.}
+\p{\strong{计算。}#{-\Delta r^{-a}=a(n-2-a)r^{-a-2}}，且 #{aq=a+2}，所以方程成立。#{a<(n-2)/2} 保证 #{\int_0^1r^{n-3-2a}dr<\infty}；内球通量为 #{O(\delta^{n-2-a})\to 0}，从而弱方程穿过原点。线性化势为 #{qU^{q-1}=(a+2)(n-2-a)r^{-2}}，再用[Hardy 最优性](4208)即得充要条件。}
+\p{\strong{解出指数。}置 #{N=n-2}，上式等价于 #{(a-(N-2)/2)^2\ge N+1}。能量范围为 #{0<a<N/2}；其中只能取 #{a\le(n-4)/2-\sqrt{n-1}}。当 #{n\le 10} 右端非正，没有有限 #{q} 满足；当 #{n\ge 11} 得}
+##{q\ge q_{\mathrm{JL}}(n):=1+\frac 4{n-4-2\sqrt{n-1}}.}
+\p{若希望边值为零，置 #{v=U/A-1=r^{-a}-1}，方程变为 #{-\Delta v=a(n-2-a)(1+v)^q}。这里证明的是明确奇异幂次解的稳定阈值；整个正解分支的分岔分类需要另用 Joseph–Lundgren 理论。}

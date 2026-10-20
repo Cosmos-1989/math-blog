@@ -1,0 +1,14 @@
+\title{两条单调序列的尺度鸽巢原理}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，引理 3.2}
+
+\p{设 #{\alpha_n,\beta_n>0} 均不增，#{\theta_n=\alpha_n\beta_n}。给定 #{0<\delta,\sigma\leq 1 /2}、整数 #{h\geq 1}，若 #{N\geq kh}，其中 #{k=\lceil 2\delta^{-1}\log(\sigma^{-1})\rceil}，则至少有一个结论成立：存在 #{n\in\{h,2h,\ldots,kh\}} 满足}
+##{\alpha_{n-h}\leq(1+\delta)\alpha_n,\qquad
+ \beta_{n-h}\leq(1+\delta)\beta_n,}
+\p{或者 #{\theta_N\leq\sigma\theta_0}。}
+\p{\strong{证明。}若每个窗口至少一条比较失败，则另一序列仍单调，故 #{\theta_{jh}/\theta_{(j-1)h}<(1+\delta)^{-1}}。乘起来并利用 #{\log(1+\delta)\geq\delta /2}，得到}
+##{\frac{\theta_N}{\theta_0}\leq(1+\delta)^{-k}
+ \leq e^{-k\delta /2}\leq\sigma.}
+\p{应用于[平均响应矩阵](400O)时，第一种结论给出两种响应都变化很小的窗口；第二种结论已经实现乘积下降。单独控制其中一条序列不能替代这一二选一。}

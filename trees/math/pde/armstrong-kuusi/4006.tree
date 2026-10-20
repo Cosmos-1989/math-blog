@@ -1,0 +1,15 @@
+\title{Neumann 粗粒化矩阵}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2，式 (2.14)}
+
+\p{设 #{U} 为立方体，#{a} 是[对称一致椭圆系数](4001)。对 #{q\in\mathbb R^d} 定义 #{B(U)=A_*(U)^{-1}}，使}
+##{\frac 12q\cdot B(U)q=\max_{w\in H^1(U)}
+ |U|^{-1}\int_U\left(q\cdot\nabla w-\frac 12\nabla w\cdot a\nabla w\right).}
+\p{在均值零的 #{H^1} 子空间上，[均值零 Poincaré](4002)与 [Lax–Milgram](4003)给出唯一 #{n_q} 满足}
+##{(n_q)_U=0,\qquad
+ \int_U\nabla\varphi\cdot a\nabla n_q=\int_U q\cdot\nabla\varphi
+ \quad(\varphi\in H^1(U)).}
+\p{方程对所有 #{H^1} 测试函数成立，在光滑边界上对应法向通量 #{q\cdot\mathbf n}。常数测试函数自动满足相容条件。取 #{\varphi=n_q}，并配方，便得到最大值等于 #{\frac 12|U|^{-1}\int_U\nabla n_q\cdot a\nabla n_q}；极大元只差常数。}
+\p{线性依赖于 #{q} 给出对称二次型。以 #{w=\Lambda^{-1}q\cdot x} 试探，得 #{q\cdot B(U)q\geq\Lambda^{-1}|q|^2}，故 #{B(U)} 可逆。}

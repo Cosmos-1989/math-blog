@@ -1,0 +1,952 @@
+{
+  "date": "2026-10-20",
+  "report": {
+    "speaker": "Scott Armstrong and Tuomo Kuusi",
+    "prefix": "40",
+    "outline": "4000",
+    "reference": "icm2026-armstrong-kuusi",
+    "title": "A Coarse-Graining Theory for Elliptic Operators and Homogenization in High Contrast",
+    "outline_title": "椭圆算子的粗粒化与高对比度均匀化",
+    "doi": "10.1137/25M1804807",
+    "pages": "193-212",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804807",
+    "version_url": "https://arxiv.org/abs/2509.24887v1",
+    "version_role": "The official SIAM report identity and pages were confirmed from Crossref. This writer's official full-HTML retrieval attempts failed; the exact author preprint 2509.24887v1 controls statements and numbering. Noether subsequently reported a targeted published-HTML comparison, recorded separately under source_records. It establishes agreement only at the listed locations, not textual identity of the complete versions or this writer's own reading of the published text.",
+    "license": "Published SIAM report: CC BY 4.0, independently reported by Noether from the published HTML footer (lines 989-995). Pinned arXiv author preprint: perpetual, non-exclusive distribution license; these are distinct version-specific licenses.",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Published HTML footer reports copyright International Mathematical Union, CC BY 4.0 and online publication 13 July 2026, according to Noether's targeted check. The author preprint retains its distinct arXiv distribution license. Chinese mathematical exposition is independently reorganized with corrections and local derivations, attributed to Armstrong and Kuusi; no figures or long verbatim passages are reproduced.",
+    "question": "How can variational block responses replace pointwise ellipticity so that finite-range high-contrast media reach a fixed small coarse contrast after only C(d) log^2(1+Theta) triadic scales?",
+    "reading_scope": "Read the complete main TeX ICM-forarxiv.tex (1960 lines), its bibliography and relevant definitions/macros from the exact 2509.24887v1 source archive. Read versioned abstract/HTML metadata. This includes §§1.1-1.2, §§2.1-2.3, §3 and all stated lemmas and proofs in the short report. No PDF pixel inspection and no successful reading of the SIAM full text. The 152-page underlying paper 2405.10732v3 was read only in the targeted ranges listed under source_records, not in full.",
+    "coverage_status": "42 atomic pages (4001-400Z and 4010-4016), narrative 4000 and one reference, with every atom linked from the narrative. Following Noether's P1 on the 400S fine-scale tail, 400S/400X/400Y/400Z/4010 and the overview were revised using deterministic microscopic bounds lambda and Lambda. Every restart retains the same Theta=Lambda/lambda. The local fixed-tolerance logarithmic-square derivation is supplied conditional on the cited localization/multiplier inputs; Noether subsequently reread the five repaired proof pages and confirmed that the mathematical P1 can be closed; final record/hash refresh remains pending. General degenerate/anisotropic/weaker-mixing results, full coarse Caccioppoli and boundary estimates remain cited or deferred.",
+    "proof_scope": {
+      "4001": "Defines uniformly elliptic symmetric weak equations and Dirichlet data using existing Sobolev definitions. No extra boundary trace theorem is assumed.",
+      "4002": "Coordinate averaging, one-dimensional integration and reflection/mollification give the cube mean-zero Poincare proof.",
+      "4003": "Full Hilbert-space proof of real, possibly nonsymmetric Lax-Milgram; minimization conclusion restricted to symmetric forms.",
+      "4004": "Definitions and exact partition identities.",
+      "4005": "Construction, existence, linearity and minimizing property proved in the uniformly elliptic setting.",
+      "4006": "Variational Neumann construction and solvability proved; no boundary trace theorem invoked.",
+      "4007": "Joint quadratic formula proved from both boundary problems.",
+      "4008": "Full first-variation and quadratic-functional difference proof. The correct identity uses J-F(w), not J minus the bare positive energy; independent countercheck and source discrepancy recorded only in source_errata.",
+      "4009": "Exact additivity-defect identity and both matrix subadditivities proved.",
+      "4010": "Fixed tolerance: at most C log(2Theta) rounds, each costing C log(2Theta), with factor 1/4 and a last step padded to every larger N. The corrected directly derived arbitrary-tolerance remainder is C sigma^-4 log(2/sigma) log(2Theta/sigma), including the unchanged microscopic Theta. The sharper original tolerance term in 400P remains a citation. Localization/multiplier inputs remain external; Noether subsequently confirmed the corrected iteration and tolerance cost.",
+      "4011": "Exact scaling conversion including physical correlation length.",
+      "4012": "Monotone-limit argument only; not a qualitative replacement for the scale theorem.",
+      "4013": "Full trace/Markov proof; explicit finite-block quantifiers.",
+      "4014": "Precisely cited symmetric H1 specialization of arXiv:2405.10732v3 Proposition 5.3; the equality of the two-variable defect and the symmetric one-variable defect is proved. Fractional boundary duality is described, not reproduced.",
+      "4015": "Open problems and conditional algebra only; no percolation exponent asserted as proved.",
+      "4016": "Pairing telescoping argument supplied; fractional Poincare/multiplier theorem precisely quoted as external input.",
+      "400A": "All order bounds proved; distinguishes trial-function lower bound from pointwise upper bound.",
+      "400B": "Both inequalities proved with their distinct domains.",
+      "400C": "Full response-error proof.",
+      "400D": "Exact model calculation; not a multidimensional stochastic theorem.",
+      "400E": "Defines only the explicit block norm and proves constant-function normalization.",
+      "400F": "Exact square-root/square normalization preserved; deterministic bounds proved.",
+      "400G": "Both estimates proved, including normalization and domains.",
+      "400H": "Cutoff proof with absorption and volume factor.",
+      "400I": "Exact statement and detailed argument structure; mesoscopic localization proof cited.",
+      "400J": "Definition and noncommutative algebraic identity proved.",
+      "400K": "Full blockwise proof, with explicit c_(2s) factor instead of an unsupported uniform-in-s constant.",
+      "400L": "Completion and local integrability explained; avoids claiming L1-based displayed norm is an inner-product norm.",
+      "400M": "Exact local sigma-field formulation and finite coloring explained.",
+      "400N": "Scalarization proved under signed-coordinate symmetry and the explicit finite-moment assumption E||A(Q_m)||+E||B(Q_m)||<infinity. Deterministic uniform ellipticity is stated as sufficient. Ordinary permutations alone are shown insufficient.",
+      "400O": "Correct annealed inverse, Jensen order and theta monotonicity; no unproved T monotonicity.",
+      "400P": "Exact reported theorem cited; local proof chain derives fixed-tolerance result and a weaker explicit tolerance remainder.",
+      "400Q": "Full numerical proof with exact window length.",
+      "400R": "Full combinatorial proof for fixed even moments.",
+      "400S": "Uniformly elliptic fixed-exponent estimate using the direct fine-tail bound c_nu sum_(n<=0) 3^-nu(m-n) max_Q ||X(Q)||^(1/2) <= M^(1/2)3^-nu m, with deterministic M=lambda^-1 or Lambda. The resulting positive-part and L/U errors use those deterministic bounds, and T_(j+m)<=theta_j+C3^-rho m Theta at every restart. The earlier max/sum exchange and stronger local-T0 remainder have been withdrawn; Noether subsequently confirmed this mathematical repair.",
+      "400T": "Exact usable inequality with proof structure; Besov multiplier input cited.",
+      "400U": "Four-term decomposition derived; both gradient and flux substitutions specified.",
+      "400V": "Full trace-plus-concentration estimate, slightly stronger j-decay than the weakened printed bound.",
+      "400W": "All scalar balancing identities proved.",
+      "400X": "Uses the deterministic Theta-based threshold C log(2Theta/delta), pointwise J and D <=Theta, rho=13/64, eta=3/64 and four explicit absorption conditions. Derives both centered estimates with the corrected 400S positive-part bounds; no reliance on the withdrawn local-T0 cost.",
+      "400Y": "Deduction from localization and centered estimates at the corrected threshold C log(2Theta/delta), retaining the original deterministic microscopic Theta.",
+      "400Z": "One-step bound derived with cost C sigma^-4 log(2/sigma) log(2Theta/sigma). The final restoration uses theta_(N-h)+C3^-rho h Theta. Every spatial restart keeps the same lambda, Lambda and Theta."
+    },
+    "claim_sources": {
+      "4001": "arXiv:2509.24887v1 §2.1; 2J0C and direct weak formulation under deterministic uniform ellipticity.",
+      "4002": "Classical cube Poincare inequality, used in arXiv:2509.24887v1 §2.3; independent coordinate-averaging proof using 004S and 2J0C.",
+      "4003": "Classical real Lax-Milgram theorem; direct proof from the existing Hilbert-space Riesz and projection atoms 00MT and 00MS, applied to v1 §2.2.",
+      "4004": "arXiv:2509.24887v1 §2.1",
+      "4005": "arXiv:2509.24887v1 §2.2, (2.14)",
+      "4006": "arXiv:2509.24887v1 §2.2, (2.14)",
+      "4007": "arXiv:2509.24887v1 §2.2, (2.15)-(2.16)",
+      "4008": "arXiv:2509.24887v1 §2.2 (2.20)-(2.22); the quadratic response in arXiv:2405.10732v3 §2.3 and direct expansion resolve the displayed difference identity.",
+      "4009": "arXiv:2509.24887v1 §2.2, (2.17); §3 proof of Lemma 3.3",
+      "4010": "arXiv:2509.24887v1 Theorem 3.1 iteration mechanism; local proof uses a fixed microscopic-Theta cost at every restart and cites the sharper original arbitrary-tolerance term separately.",
+      "4011": "arXiv:2509.24887v1 §1.2 and §3",
+      "4012": "arXiv:2509.24887v1 §3 monotonicity; direct consequence of the quantitative theorem",
+      "4013": "arXiv:2509.24887v1 Direct consequence of §2.2 and Theorem 3.1",
+      "4014": "arXiv:2405.10732v3 §5.1 Proposition 5.3 and §2.3 symmetric quadratic decomposition; NOT a theorem proved in full in the short report.",
+      "4015": "arXiv:2509.24887v1 §1.2 的两个开放问题及电阻网络讨论",
+      "4016": "arXiv:2509.24887v1 §2.1 (2.11)-(2.13); arXiv:2405.10732v3 Appendix A, targeted reading of pairing, multiscale Poincare, multiplier and norm-equivalence statements/proofs.",
+      "400A": "arXiv:2509.24887v1 §2.2, (2.18)-(2.19)",
+      "400B": "arXiv:2509.24887v1 §2.2, (2.26)-(2.27)",
+      "400C": "arXiv:2509.24887v1 §2.2, (2.24)-(2.25)",
+      "400D": "arXiv:2509.24887v1 §2 motivation; independent one-dimensional calculation",
+      "400E": "arXiv:2509.24887v1 §2.1, (2.8)-(2.13)",
+      "400F": "arXiv:2509.24887v1 Definition 2.1",
+      "400G": "arXiv:2509.24887v1 Proposition 2.2",
+      "400H": "arXiv:2509.24887v1 §2.3, (2.32)-(2.33)",
+      "400I": "arXiv:2509.24887v1 Report Proposition 2.3; AK2405v3 Proposition 2.5",
+      "400J": "arXiv:2509.24887v1 Definition 2.4 and preceding identity",
+      "400K": "arXiv:2509.24887v1 Proposition 2.5; normalization checked directly",
+      "400L": "arXiv:2509.24887v1 §2.1; AK2405v3 §2.1 as external framework",
+      "400M": "arXiv:2509.24887v1 §3 assumptions (P1)-(P2)",
+      "400N": "arXiv:2509.24887v1 §3 (P5), explicitly strengthened to signed permutations; direct scalarization proof with finite first matrix moments.",
+      "400O": "arXiv:2509.24887v1 §3, definitions before Theorem 3.1; fixed symmetric exponents",
+      "400P": "arXiv:2509.24887v1 Theorem 3.1, explicitly specialized with strengthened symmetry",
+      "400Q": "arXiv:2509.24887v1 Lemma 3.2",
+      "400R": "arXiv:2509.24887v1 Lemma 3.5 concentration step; elementary even-moment replacement for cited Rosenthal inequality",
+      "400S": "arXiv:2509.24887v1 Lemma 3.5 motivates the estimate. The local statement is a weaker uniformly elliptic derivation with deterministic lambda^-1/Lambda tails, nu=7/32, r=32d, rho=13/64; it is not identified with the source's local-moment remainder.",
+      "400T": "arXiv:2509.24887v1 Lemma 3.3; AK2405v3 Appendix A",
+      "400U": "arXiv:2509.24887v1 Lemma 3.4, with explicit fixed-exponent constants",
+      "400V": "arXiv:2509.24887v1 Lemma 3.6, fluctuation step",
+      "400W": "arXiv:2509.24887v1 Lemma 3.6, (3.14)-(3.22)",
+      "400X": "arXiv:2509.24887v1 Lemma 3.6 centered estimates; local derivation with s=3/8 and a deterministic-Theta threshold.",
+      "400Y": "arXiv:2509.24887v1 Lemma 3.6; uniformly elliptic fixed-exponent form with the corrected deterministic-Theta threshold.",
+      "400Z": "arXiv:2509.24887v1 Lemma 3.7; local uniform-elliptic version with C sigma^-4 log(2/sigma) log(2Theta/sigma) cost."
+    },
+    "remaining_branches": [
+      "General coarse-moment-only, nonsymmetric or anisotropic renormalization beyond the deliberately simplified uniformly elliptic signed-permutation-invariant model.",
+      "Weaker decorrelation and quantitative stochastic tails controlling a common infinite-space random minimal scale; 4013 only controls specified finitely many blocks.",
+      "Near-critical Bernoulli/resistor-network exponents and a polynomial homogenization-length bound; retained as open problems, not established conclusions.",
+      "Complete comparison with the final published SIAM text beyond Noether's listed targeted HTML checks remains open; the published CC BY 4.0 footer is recorded independently, but no complete version identity or published-PDF certification is claimed."
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "pages": [
+          "400I"
+        ],
+        "source": "2405.10732v3 Proposition 2.5",
+        "scope": "Mesoscopic coarse Caccioppoli localization and full absorption iteration; exact statement and structure supplied."
+      },
+      {
+        "pages": [
+          "4016",
+          "400T"
+        ],
+        "source": "2509.24887v1 (2.12)-(2.13), Lemma 3.3; 2405.10732v3 Appendix A",
+        "scope": "General fractional Poincare/multiplier analysis remains cited. The local contraction chain is conditional on these precise analytic inputs, not a self-contained proof of all harmonic-analysis machinery."
+      },
+      {
+        "pages": [
+          "400P"
+        ],
+        "source": "2509.24887v1 Theorem 3.1",
+        "scope": "Sharper arbitrary-tolerance C sigma^-4 log(1/sigma) remainder cited. The corrected local derivation retains C sigma^-4 log(2/sigma) log(2Theta/sigma), including the original microscopic contrast."
+      },
+      {
+        "pages": [
+          "4014"
+        ],
+        "source": "2405.10732v3 Proposition 5.3",
+        "scope": "Fractional boundary estimates and duality proof; only the symmetric defect identification is proved locally."
+      },
+      {
+        "pages": [
+          "400L"
+        ],
+        "source": "2405.10732v3 §2.1",
+        "scope": "General degenerate weighted-space, trace and solvability theory remains external."
+      }
+    ]
+  },
+  "prerequisites": {
+    "4001": [
+      "0N0A",
+      "2J0C"
+    ],
+    "4002": [
+      "2J0C",
+      "004S",
+      "2J0D"
+    ],
+    "4003": [
+      "00MQ",
+      "00MT",
+      "00MS"
+    ],
+    "4004": [
+      "00Q5"
+    ],
+    "4005": [
+      "4001",
+      "2J0D",
+      "4003"
+    ],
+    "4006": [
+      "4001",
+      "4002",
+      "4003"
+    ],
+    "4007": [
+      "4001",
+      "4005",
+      "4006"
+    ],
+    "4008": [
+      "4007"
+    ],
+    "4009": [
+      "4004",
+      "4007",
+      "4008"
+    ],
+    "4010": [
+      "400O",
+      "400Z"
+    ],
+    "4011": [
+      "400M",
+      "4004",
+      "4010"
+    ],
+    "4012": [
+      "400O",
+      "400A"
+    ],
+    "4013": [
+      "400O",
+      "400A",
+      "400C",
+      "00L1"
+    ],
+    "4014": [
+      "4001",
+      "400J",
+      "400K",
+      "130F",
+      "2J0C"
+    ],
+    "4015": [
+      "400M",
+      "4011"
+    ],
+    "4016": [
+      "4004",
+      "400E",
+      "2J0C",
+      "004S"
+    ],
+    "400A": [
+      "4005",
+      "4006",
+      "4007",
+      "0N0A"
+    ],
+    "400B": [
+      "4001",
+      "4005",
+      "4007"
+    ],
+    "400C": [
+      "4007",
+      "4008",
+      "00M4"
+    ],
+    "400D": [
+      "4001",
+      "4005",
+      "4006"
+    ],
+    "400E": [
+      "4004",
+      "130F"
+    ],
+    "400F": [
+      "4004",
+      "4007",
+      "4009",
+      "400A"
+    ],
+    "400G": [
+      "400E",
+      "400F",
+      "400B"
+    ],
+    "400H": [
+      "4001",
+      "4004"
+    ],
+    "400I": [
+      "4001",
+      "400F",
+      "400G",
+      "400H",
+      "4016",
+      "400L"
+    ],
+    "400J": [
+      "4004",
+      "4007",
+      "400A",
+      "0N0A"
+    ],
+    "400K": [
+      "400C",
+      "400E",
+      "400J"
+    ],
+    "400L": [
+      "2J0C",
+      "4002",
+      "0N0A"
+    ],
+    "400M": [
+      "00Q3",
+      "00L3",
+      "4009"
+    ],
+    "400N": [
+      "4007",
+      "00L1"
+    ],
+    "400O": [
+      "400M",
+      "400N",
+      "400F",
+      "4009",
+      "400A",
+      "00L1"
+    ],
+    "400P": [
+      "4001",
+      "400M",
+      "400N",
+      "400O"
+    ],
+    "400Q": [
+      "400O"
+    ],
+    "400R": [
+      "400M",
+      "00L1",
+      "00L3",
+      "0A68",
+      "0A69"
+    ],
+    "400S": [
+      "400O",
+      "400F",
+      "4009",
+      "400R",
+      "400A",
+      "0A69"
+    ],
+    "400T": [
+      "400M",
+      "4007",
+      "4009",
+      "400E",
+      "4016"
+    ],
+    "400U": [
+      "4007",
+      "4008",
+      "4009",
+      "400B",
+      "400E",
+      "400F"
+    ],
+    "400V": [
+      "400O",
+      "4009",
+      "400R"
+    ],
+    "400W": [
+      "400O",
+      "4007"
+    ],
+    "400X": [
+      "400O",
+      "400W",
+      "400U",
+      "400S",
+      "400V",
+      "4009",
+      "0A68",
+      "4007",
+      "400A",
+      "004S"
+    ],
+    "400Y": [
+      "400O",
+      "400W",
+      "400T",
+      "400X"
+    ],
+    "400Z": [
+      "400O",
+      "400Q",
+      "400S",
+      "400Y"
+    ]
+  },
+  "reused_pages": {
+    "004S": "Schwarz 不等式",
+    "00M4": "有界线性算子与算子范数",
+    "00MQ": "Hilbert 空间",
+    "00MS": "Hilbert 空间的正交投影定理",
+    "00MT": "Hilbert 空间的 Riesz 表示定理",
+    "130F": "实数阶 Sobolev 空间的 Fourier 定义",
+    "0N0A": "实对称矩阵的正定次序",
+    "2J0C": "弱导数与一阶 Sobolev 空间",
+    "2J0D": "零边值函数的 Poincaré 不等式",
+    "00Q3": "概率空间",
+    "00Q5": "Lebesgue 积分",
+    "0A68": "积分形式的 Hölder 不等式",
+    "0A69": "积分形式的 Minkowski 不等式",
+    "00L1": "随机变量的期望",
+    "00L3": "事件与随机变量的独立性"
+  },
+  "terminology_evidence": {
+    "search_scope": "Site-wide title/body searches for Sobolev and weak derivatives, Poincare, Lax-Milgram, weak elliptic equations, positive matrix order, energy minimization, probability, independence, expectation, Holder and Minkowski. Rechecked the coordinated IDs 2J0C, 2J0D, 0Q03 and 130F.",
+    "existing_conventions": "2J0C supplies weak derivatives and first-order Sobolev spaces; 2J0D supplies the zero-boundary Poincare inequality. 0Q03 was inspected as the existing finite-kinetic-energy setting, not copied or created anew. 130F is reused for fractional Fourier Sobolev spaces and distinguished from the explicitly defined triadic block norms. Mean-zero Poincare 4002 is a different boundary normalization.",
+    "shared_foundations": {
+      "4001": "Weak divergence-form equation under symmetric deterministic uniform ellipticity.",
+      "4002": "Cube mean-zero Poincare inequality, distinct from 2J0D.",
+      "4003": "Real Lax-Milgram theorem from existing Hilbert/Riesz/projection atoms."
+    },
+    "coordination": "4001-4003 were communicated to the Cabre writer 01a15524-2125-7761-8592-7ab640ac8121 for reuse. No 41-44 prefixes were created.",
+    "bananaspace_status": "Access attempts on 2026-10-20 to the two URLs below failed. Chinese terminology has NOT been externally verified against BananaSpace.",
+    "bananaspace_attempts": [
+      {
+        "url": "https://banana-space.org/wiki/Sobolev空间",
+        "date": "2026-10-20",
+        "result": "Web retrieval unavailable; pending terminology check."
+      },
+      {
+        "url": "https://banana-space.org/wiki/椭圆型偏微分方程",
+        "date": "2026-10-20",
+        "result": "Web retrieval unavailable; pending terminology check."
+      }
+    ],
+    "local_choices": "粗粒化 = coarse-graining; 均匀化 = homogenization; 对比度 = contrast; 通量 = flux; 有限程依赖 = finite range of dependence. Their meanings are fixed by explicit formulas, not by a claim of verified BananaSpace terminology.",
+    "baseline": "Elementary real/integer arithmetic and finite sums are baseline. Nontrivial functional-analytic, integration, matrix-order and probability notions are body-linked to atomic pages, never to an Outline."
+  },
+  "source_records": [
+    {
+      "id": "AK-report-v1",
+      "url": "https://arxiv.org/abs/2509.24887v1",
+      "html_url": "https://arxiv.org/html/2509.24887v1",
+      "source_url": "https://arxiv.org/src/2509.24887v1",
+      "version_date": "2025-09-29",
+      "pages": 22,
+      "reading": "Complete main TeX and bibliography plus relevant macros; no PDF pixels.",
+      "archive_sha256": "b7466a3cea70e01978904e5af259414ceaaf1825b19ddb630b7bcd3f0ba4f98c",
+      "main_tex_sha256": "b8ada0dab82ec5d95915befb9fcac8312be8be5d8b9258dfefa99b36f629f538"
+    },
+    {
+      "id": "AK-research-v3",
+      "title": "Renormalization group and elliptic homogenization in high contrast",
+      "url": "https://arxiv.org/abs/2405.10732v3",
+      "version_date": "2025-09-06",
+      "pages": 152,
+      "reading": "Targeted source reading only: highcontrast-arxiv-v3.tex lines 1215-1262 fractional norms; 1284-1453 §2.1 weighted spaces; 1565-1655 and 1700-1885 §2.3 quadratic responses; 2370-2565 Proposition 2.5 coarse Caccioppoli; 5010-5155 Theorem 3.1 and start of renormalization; 8888-9010 §5.1/Proposition 5.3 statement; 12410-12880 Appendix A pairing, Poincare, multiplier, equivalence and Hardy estimates. No complete reading of the 152-page proof.",
+      "archive_sha256": "eed036a7139984dafdbfe53fd486a75ef0056b1757690800f438b318224af152"
+    },
+    {
+      "id": "SIAM-Crossref",
+      "url": "https://api.crossref.org/works/10.1137/25M1804807",
+      "reading": "Metadata confirms joint authorship, exact title, pp.193-212, ICM2026 Volume 5 Sections 9-11, publication July 2026. No license supplied.",
+      "fulltext_access": "This writer's official SIAM web reading failed twice (timeout/internal retrieval error); direct HTTP request returned 403. No official full-text reading by this writer is claimed. Noether's later successful targeted HTML comparison is recorded separately."
+    },
+    {
+      "id": "SIAM-Noether-targeted-comparison",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1804807",
+      "date": "2026-10-20",
+      "provenance": "Independent review reported by Noether, source thread 01a15524-bbef-7522-8e97-df0363d1cda0; not this writer's own published-text reading.",
+      "retrieval": "Successful published HTML retrieval returned 1130 lines. Only the named locations were compared; no complete published-HTML or PDF certification.",
+      "matched_locations": [
+        "(2.14)-(2.16): variational matrices and joint energy",
+        "Definition 2.1 and (2.28): coarse ellipticity constants",
+        "Definition 2.4 and (2.36): multiscale defect",
+        "P1-P5 and the exponent threshold",
+        "Theorem 3.1 statement"
+      ],
+      "result": "The listed statements match arXiv:2509.24887v1. Published (2.21) retains the same invalid J-minus-bare-half-energy expression; 4008 must retain the correct J-F(w) identity. The ordinary-permutation P5 issue and missing star in the annealed inverse display also persist. These are independent mathematical diagnoses, not author-issued errata.",
+      "packet_citation_repairs": "Synchronized 400B to (2.26)-(2.27), 400C to (2.24)-(2.25), 400H to (2.32)-(2.33), and 400W to Lemma 3.6 (3.14)-(3.22). No mathematical page changed in this synchronization.",
+      "metadata_evidence": {
+        "reported_by": "Noether, 2026-10-20",
+        "html_lines": "989-995",
+        "copyright": "International Mathematical Union",
+        "license": "Creative Commons Attribution 4.0 (CC BY)",
+        "published_online": "2026-07-13",
+        "scope": "Independently reported HTML footer; not this writer's own published-text reading."
+      },
+      "display_discrepancies": [
+        {
+          "location": "Published HTML line 259, (2.13)",
+          "published_html": "Subscript 2,3",
+          "pinned_v1": "Subscript 2,1",
+          "status": "HTML representation differs; published PDF not checked."
+        },
+        {
+          "location": "Published HTML line 365, (2.29)",
+          "published_html": "Inverse-coefficient weight exponent -2s",
+          "pinned_v1": "Exponent -2t",
+          "status": "HTML representation differs; published PDF not checked."
+        }
+      ],
+      "unverified_images": "Image-formula clicks for (2.9) and (2.17) returned cache-miss errors. No complete visual comparison of those formulas is claimed."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§1.1 Coarse-graining for elliptic operators",
+      "pages": [
+        "4000",
+        "4001",
+        "4005",
+        "4006",
+        "4007",
+        "400L"
+      ],
+      "status": "Motivation and deterministic variational model developed; general degenerate theory explicitly cited."
+    },
+    {
+      "section": "§1.2 High contrast homogenization",
+      "pages": [
+        "400D",
+        "400P",
+        "4011",
+        "4014",
+        "4015"
+      ],
+      "status": "Exact one-dimensional obstruction, quantitative target, physical length conversion and open polynomial-length question. General anisotropic/degenerate research Theorem 1.1 and near-critical percolation exponents are not reproved."
+    },
+    {
+      "section": "§2.1 Notation for functional spaces",
+      "pages": [
+        "4004",
+        "400E",
+        "400L",
+        "4016"
+      ],
+      "status": "Explicit normalized blocks and negative norm defined; constant normalization and pairing explained. Weighted framework and fractional multiplier input cited. Fourier Sobolev 130F is reused, not equated by definition with a block norm."
+    },
+    {
+      "section": "§2.2 Coarse-grained matrices",
+      "pages": [
+        "4005",
+        "4006",
+        "4007",
+        "4008",
+        "4009",
+        "400A",
+        "400B",
+        "400C",
+        "400D"
+      ],
+      "status": "Uniformly elliptic Dirichlet/Neumann solvability, J formula, variations, exact subadditivity gap, order bounds and response estimates proved locally; v1 display correction recorded below."
+    },
+    {
+      "section": "§2.3 Coarse-grained ellipticity",
+      "pages": [
+        "400F",
+        "400G",
+        "400H",
+        "400I",
+        "400J",
+        "400K"
+      ],
+      "status": "Square-root/square constants preserved; coarse Poincare, classical Caccioppoli and operator-defect estimates derived. Coarse Caccioppoli has exact hypothesis/conclusion and proof structure, not a full mesoscopic proof."
+    },
+    {
+      "section": "§3 Assumptions and Theorem 3.1",
+      "pages": [
+        "400M",
+        "400N",
+        "400O",
+        "400P"
+      ],
+      "status": "Explicit fixed gamma=1/8, nu=7/32, r=32d, d>=2, deterministic ellipticity and strengthened signed-permutation law. Exact reported tolerance term cited; finite expectation condition now explicit in 400N."
+    },
+    {
+      "section": "§3 Lemma 3.2",
+      "pages": [
+        "400Q"
+      ],
+      "status": "Numerical window-selection proof supplied."
+    },
+    {
+      "section": "§3 Lemmas 3.3-3.4",
+      "pages": [
+        "400T",
+        "400U",
+        "4016"
+      ],
+      "status": "Localization inequality and its cancellation structure supplied with cited multiplier input; four-term centered weak-norm decomposition derived. Localization is not labelled an independent complete research proof."
+    },
+    {
+      "section": "§3 Lemma 3.5",
+      "pages": [
+        "400R",
+        "400S"
+      ],
+      "status": "Even-moment concentration and square-root moment estimate at fixed exponents, using deterministic fine-tail bounds. Restart errors retain the same microscopic Theta. The earlier sum/max exchange has been removed; Noether has confirmed the mathematical repair."
+    },
+    {
+      "section": "§3 Lemma 3.6",
+      "pages": [
+        "400V",
+        "400W",
+        "400X",
+        "400Y"
+      ],
+      "status": "Trace control, geometric balancing and centered estimates use s=3/8, eta=3/64 and the explicit threshold C log(2Theta/delta). Four absorption inequalities are displayed. Localization/multiplier input remains cited."
+    },
+    {
+      "section": "§3 Lemma 3.7 and final iteration",
+      "pages": [
+        "400Z",
+        "4010"
+      ],
+      "status": "Corrected per-step cost uses the unchanged microscopic Theta. Fixed tolerance still gives C log^2(1+Theta). The directly derived arbitrary-tolerance remainder is C sigma^-4 log(2/sigma) log(2Theta/sigma); no stronger local-T0 cost is claimed."
+    },
+    {
+      "section": "Consequences and retained research branches",
+      "pages": [
+        "4011",
+        "4012",
+        "4013",
+        "4014",
+        "4015"
+      ],
+      "status": "Scale conversion, monotone scalar limit, finite-block Markov bound proved. Same-boundary solution comparison cited precisely from research v3 Proposition 5.3. Open physics predictions remain open."
+    },
+    {
+      "section": "Undergraduate supporting analysis",
+      "pages": [
+        "4001",
+        "4002",
+        "4003"
+      ],
+      "status": "Weak formulation and full local Poincare/Lax-Milgram arguments; canonical existing Sobolev and Hilbert foundations reused."
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "AK-S01",
+      "location": "2509.24887v1 (2.21)",
+      "status": "Independent algebraic discrepancy, not an author-issued erratum.",
+      "handling": "4008 uses J-F(w)=one-half the difference energy; the bare positive-energy expression omits the linear terms. Its source meta now contains only §2.2 (2.20)-(2.22)."
+    },
+    {
+      "id": "AK-S02",
+      "location": "2509.24887v1 §3 (P5)",
+      "status": "Ordinary coordinate permutations do not force scalar means; the counterexample I+b11^T is invariant.",
+      "handling": "The local model explicitly assumes signed permutations. 400N also assumes finite first moments, with deterministic uniform ellipticity as a sufficient condition."
+    },
+    {
+      "id": "AK-S03",
+      "location": "2509.24887v1 §3 annealed inverse and exponent notation",
+      "status": "The inverse-response display and later nu index ordering require interpretation.",
+      "handling": "Use beta I=E B=E A_*^-1, and fix equal gamma exponents 1/8 so the raised exponent is unambiguously nu=7/32."
+    },
+    {
+      "id": "AK-S04",
+      "location": "2509.24887v1 Lemma 3.5 proof",
+      "status": "The displayed linear-weight manipulation does not directly retain the square-root/square definition.",
+      "handling": "The revised 400S uses the square-root definition and bounds the fine tail by the deterministic microscopic bound. Its rho=13/64 remainder is proportional to lambda^-1/Lambda/Theta, not the source's local moments. The separate local-draft sum/max error is recorded in local_revision_findings."
+    },
+    {
+      "id": "AK-S05",
+      "location": "2509.24887v1 Lemma 3.6 weak-norm interpolation",
+      "status": "Scale weights need to stay summable after the 3/2-power estimate.",
+      "handling": "400X uses s=3/8 and eta=s-3nu/2=3/64>0, with s+t=3/4<1. The symbol eta is distinct from the coefficient a."
+    },
+    {
+      "id": "AK-S06",
+      "location": "2509.24887v1 Proposition 2.5",
+      "status": "Normalization of the explicit negative norm introduces a geometric-series factor if s varies.",
+      "handling": "400K displays the c_(2s) dependence instead of asserting an unsupported constant uniform in s."
+    },
+    {
+      "id": "AK-S07",
+      "location": "2509.24887v1 final proof of Theorem 3.1",
+      "status": "The recurrence T_new<=1+T/2 approaches the fixed point 2 and does not by itself reach T<=2 in finitely many steps.",
+      "handling": "4010 uses sigma=1/4 and the strict geometric contraction above 2, followed by one more step."
+    },
+    {
+      "id": "AK-S08",
+      "location": "2509.24887v1 Lemma 3.7 and tolerance remainder",
+      "status": "The directly reconstructed window length retains a log(1/delta) factor.",
+      "handling": "400Z/4010 now retain the cost C sigma^-4 log(2/sigma) log(2Theta/sigma), including the fixed microscopic contrast after restart. 400P cites the sharper original tolerance term without claiming its derivation from this weaker local estimate."
+    },
+    {
+      "id": "AK-S09",
+      "location": "2509.24887v1 §2.1 weighted norm",
+      "status": "The displayed L1-based norm is not generally an inner-product norm.",
+      "handling": "400L defines completion and local gradient/flux representatives; the general energy Hilbert realization remains the cited research framework."
+    }
+  ],
+  "remaining_branches": [
+    "General coarse-moment-only, nonsymmetric or anisotropic renormalization beyond the deliberately simplified uniformly elliptic signed-permutation-invariant model.",
+    "Weaker decorrelation and quantitative stochastic tails controlling a common infinite-space random minimal scale; 4013 only controls specified finitely many blocks.",
+    "Near-critical Bernoulli/resistor-network exponents and a polynomial homogenization-length bound; retained as open problems, not established conclusions.",
+    "Complete comparison with the final published SIAM text beyond Noether's listed targeted HTML checks remains open; the published CC BY 4.0 footer is recorded independently, but no complete version identity or published-PDF certification is claimed."
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "pages": [
+        "400I"
+      ],
+      "source": "2405.10732v3 Proposition 2.5",
+      "scope": "Mesoscopic coarse Caccioppoli localization and full absorption iteration; exact statement and structure supplied."
+    },
+    {
+      "pages": [
+        "4016",
+        "400T"
+      ],
+      "source": "2509.24887v1 (2.12)-(2.13), Lemma 3.3; 2405.10732v3 Appendix A",
+      "scope": "General fractional Poincare/multiplier analysis remains cited. The local contraction chain is conditional on these precise analytic inputs, not a self-contained proof of all harmonic-analysis machinery."
+    },
+    {
+      "pages": [
+        "400P"
+      ],
+      "source": "2509.24887v1 Theorem 3.1",
+      "scope": "Sharper arbitrary-tolerance C sigma^-4 log(1/sigma) remainder cited. The corrected local derivation retains C sigma^-4 log(2/sigma) log(2Theta/sigma), including the original microscopic contrast."
+    },
+    {
+      "pages": [
+        "4014"
+      ],
+      "source": "2405.10732v3 Proposition 5.3",
+      "scope": "Fractional boundary estimates and duality proof; only the symmetric defect identification is proved locally."
+    },
+    {
+      "pages": [
+        "400L"
+      ],
+      "source": "2405.10732v3 §2.1",
+      "scope": "General degenerate weighted-space, trace and solvability theory remains external."
+    }
+  ],
+  "handoff": {
+    "owned_files": [
+      "trees/math/pde/armstrong-kuusi/4000.tree",
+      "trees/math/pde/armstrong-kuusi/4001.tree",
+      "trees/math/pde/armstrong-kuusi/4002.tree",
+      "trees/math/pde/armstrong-kuusi/4003.tree",
+      "trees/math/pde/armstrong-kuusi/4004.tree",
+      "trees/math/pde/armstrong-kuusi/4005.tree",
+      "trees/math/pde/armstrong-kuusi/4006.tree",
+      "trees/math/pde/armstrong-kuusi/4007.tree",
+      "trees/math/pde/armstrong-kuusi/4008.tree",
+      "trees/math/pde/armstrong-kuusi/4009.tree",
+      "trees/math/pde/armstrong-kuusi/400A.tree",
+      "trees/math/pde/armstrong-kuusi/400B.tree",
+      "trees/math/pde/armstrong-kuusi/400C.tree",
+      "trees/math/pde/armstrong-kuusi/400D.tree",
+      "trees/math/pde/armstrong-kuusi/400E.tree",
+      "trees/math/pde/armstrong-kuusi/400F.tree",
+      "trees/math/pde/armstrong-kuusi/400G.tree",
+      "trees/math/pde/armstrong-kuusi/400H.tree",
+      "trees/math/pde/armstrong-kuusi/400I.tree",
+      "trees/math/pde/armstrong-kuusi/400J.tree",
+      "trees/math/pde/armstrong-kuusi/400K.tree",
+      "trees/math/pde/armstrong-kuusi/400L.tree",
+      "trees/math/pde/armstrong-kuusi/400M.tree",
+      "trees/math/pde/armstrong-kuusi/400N.tree",
+      "trees/math/pde/armstrong-kuusi/400O.tree",
+      "trees/math/pde/armstrong-kuusi/400P.tree",
+      "trees/math/pde/armstrong-kuusi/400Q.tree",
+      "trees/math/pde/armstrong-kuusi/400R.tree",
+      "trees/math/pde/armstrong-kuusi/400S.tree",
+      "trees/math/pde/armstrong-kuusi/400T.tree",
+      "trees/math/pde/armstrong-kuusi/400U.tree",
+      "trees/math/pde/armstrong-kuusi/400V.tree",
+      "trees/math/pde/armstrong-kuusi/400W.tree",
+      "trees/math/pde/armstrong-kuusi/400X.tree",
+      "trees/math/pde/armstrong-kuusi/400Y.tree",
+      "trees/math/pde/armstrong-kuusi/400Z.tree",
+      "trees/math/pde/armstrong-kuusi/4010.tree",
+      "trees/math/pde/armstrong-kuusi/4011.tree",
+      "trees/math/pde/armstrong-kuusi/4012.tree",
+      "trees/math/pde/armstrong-kuusi/4013.tree",
+      "trees/math/pde/armstrong-kuusi/4014.tree",
+      "trees/math/pde/armstrong-kuusi/4015.tree",
+      "trees/math/pde/armstrong-kuusi/4016.tree",
+      "trees/references/icm2026-armstrong-kuusi.tree",
+      "research/pde-armstrong-kuusi-packet.json"
+    ],
+    "knowledge_ids": [
+      "4001",
+      "4002",
+      "4003",
+      "4004",
+      "4005",
+      "4006",
+      "4007",
+      "4008",
+      "4009",
+      "400A",
+      "400B",
+      "400C",
+      "400D",
+      "400E",
+      "400F",
+      "400G",
+      "400H",
+      "400I",
+      "400J",
+      "400K",
+      "400L",
+      "400M",
+      "400N",
+      "400O",
+      "400P",
+      "400Q",
+      "400R",
+      "400S",
+      "400T",
+      "400U",
+      "400V",
+      "400W",
+      "400X",
+      "400Y",
+      "400Z",
+      "4010",
+      "4011",
+      "4012",
+      "4013",
+      "4014",
+      "4015",
+      "4016"
+    ],
+    "shared_foundations": [
+      "4001",
+      "4002",
+      "4003"
+    ],
+    "parent_actions": [
+      "Register 4000, the reference and all 42 atomic prerequisite rows in parent-owned shared records.",
+      "Record Noether's confirmed AK-P1-400S closure and refresh final hashes. Propagated prerequisites now include 400A/0A69 in 400S and 400A/4007/004S in 400X, with unused 0A69 removed from 400X.",
+      "Run the parent-owned full Forester build, global KaTeX/prerequisite checks and generated-page/browser review."
+    ],
+    "scope_status": "Only the assigned 40-prefix subtree, report reference and this packet were edited. No 41-44 files, shared scripts, homepage, registry, commit or push.",
+    "independent_review": {
+      "reported_by": "Human coordinator, 2026-10-20",
+      "scope": "43 topic tree pages",
+      "result": "Earlier 400N P2 repair was confirmed. Subsequent AK-P1-400S sum/max error has now been repaired and independently reread by Noether; Noether reports that the mathematical P1 can be closed.",
+      "repair": "400N retains explicit first matrix moments. The P1 repair replaces the invalid fine-tail sum/max exchange by deterministic bounds and propagates the same microscopic Theta through 400S, 400X, 400Y, 400Z and 4010.",
+      "status": "Mathematical P1 repair confirmed by independent rereading of the five affected proof pages; final review-record update and 44-source-file hash refresh remain pending. No complete published-PDF or general research-proof acceptance is implied.",
+      "published_text_comparison": "Noether's targeted published-HTML comparison is recorded under source_records/SIAM-Noether-targeted-comparison. It is not attributed to this writer and does not enlarge this writer's v1 reading scope."
+    },
+    "finalfiles_status": "Revised source and packet ready for final review-record/hash refresh after the independently confirmed AK-P1-400S repair. No new pages."
+  },
+  "validation": {
+    "status": "Scoped source/formula checks passed after the AK-P1-400S repair: 42 atomic pages, 44 tree files, 45 owned files. Noether independently confirmed the repaired mathematics; final review record/hash refresh and parent-owned full build remain pending.",
+    "counts": {
+      "atomic_pages": 42,
+      "tree_files": 44,
+      "math_expressions": 739,
+      "body_internal_links": 244,
+      "prerequisite_edges": 145,
+      "reachable_prerequisite_nodes": 213
+    },
+    "math_check": "739 native Forester math expressions parsed with the existing local KaTeX library, throwOnError=true and strict=error; zero failures. No \\fint or \\! remains. No global macro changes.",
+    "source_check": "Exact atomic/prerequisite/proof/source key agreement; all 42 atoms linked from 4000; 145 direct prerequisite edges body-linked. No broken local links, Outline prerequisites, exact-title collisions, unbalanced braces, control bytes, prohibited prose candidates, literal double-square-bracket math or format differences.",
+    "prerequisite_check": "Traversal from all 42 atoms using the current shared prerequisite registry plus available report packets (own packet taking precedence) reached 213 nodes and found no cycle. This validates the reachable dependency graph, not all other drafts.",
+    "format_method": "Read-only checks reused groupEnd, prose, styleRules and normalizeFormat from the existing note-editorial library. Forester math-command spacing was applied only to owned files through apply_patch; no shared formatter/synchronizer/script was edited.",
+    "semantic_check": "The revised local argument uses deterministic lambda/Lambda for fine-scale tails, positive-part moment remainders and pointwise energy bounds. It keeps the same microscopic Theta at every spatial restart. Fixed-tolerance logarithmic-square scaling is locally derived with cited localization/multiplier inputs; the stronger local-T0 costs and contrast-independent tolerance remainder are withdrawn.",
+    "independent_review": "Noether found and then reread the repair of AK-P1-400S. The direct deterministic tail, rho, Theta^2 absorption conditions, fixed microscopic contrast at restarts, fixed-tolerance iteration and revised arbitrary-tolerance cost were confirmed. Noether reports that this mathematical P1 can be closed. Final independent review record and hash refresh remain pending; the prior 400N P2 repair was also confirmed.",
+    "publication_crosscheck": "Noether reports a successful 1130-line published-HTML retrieval and a targeted comparison at (2.14)-(2.16), Definition 2.1/(2.28), Definition 2.4/(2.36), P1-P5/exponent threshold, (2.21) and Theorem 3.1. The listed statements agree with v1, including the retained errors in (2.21), ordinary-permutation scalarization and the annealed inverse display. The correct local identity and strengthened assumptions remain unchanged. This is independent targeted HTML evidence, not this writer's own published-text reading or full published/PDF certification. Noether additionally reports IMU copyright, CC BY 4.0 and online date 13 July 2026 at HTML lines 989-995, two HTML/v1 display differences at (2.13)/(2.29), and failed image-formula retrievals for (2.9)/(2.17); these do not certify the published PDF.",
+    "source_sha256": {
+      "trees/math/pde/armstrong-kuusi/4000.tree": "cc017c7d0ba4afb041a28c224e9dde62a57b1021eac5a7cd3f4a286169e5b44a",
+      "trees/math/pde/armstrong-kuusi/4001.tree": "9a973f65078287450ed3daea3bc513d095d08522e55f3c616bac0665c0ff40ab",
+      "trees/math/pde/armstrong-kuusi/4002.tree": "8b0bd3faaf24cfd7f0eb1cd796bafee097aca606279977020761c305f7f6e916",
+      "trees/math/pde/armstrong-kuusi/4003.tree": "80c3b82a345a79b793839867feaffe40459bfd53315ea7351cfe777418dafa40",
+      "trees/math/pde/armstrong-kuusi/4004.tree": "feac336dc8b558623d74a5d08d445e99d9e09cf52cef48e1b396e99610daa07b",
+      "trees/math/pde/armstrong-kuusi/4005.tree": "f2d631d246af01b6727712610a81992763a29afb9ca0fd49ad982c9f8135800b",
+      "trees/math/pde/armstrong-kuusi/4006.tree": "8883c18896a5557b49dcac0e56182bd8c273a85f9e0c5da9245de7a24b9d8c2a",
+      "trees/math/pde/armstrong-kuusi/4007.tree": "e46bb8175398dfeefc1a647d283f36b46b7c65d8f0522cc18934cf6411a4cca5",
+      "trees/math/pde/armstrong-kuusi/4008.tree": "4550e80e9fe4061218ea31e5b5a78426bb7998da553d14a58a0510b7a0e93c04",
+      "trees/math/pde/armstrong-kuusi/4009.tree": "205d2c9a84fddca5a1116c4fd65d4c7dc7fa7113d9421c6f2b881b89341781cd",
+      "trees/math/pde/armstrong-kuusi/400A.tree": "9dc6cbad839d7ebef77c5c6d36c1a0ea1ca6c5a4336bb42b44a203b58f93ffe3",
+      "trees/math/pde/armstrong-kuusi/400B.tree": "30c86c6ecbf957163cdd1e792fa3420e93f5a30ac60dd847f2d143c1073f675e",
+      "trees/math/pde/armstrong-kuusi/400C.tree": "512f3f3955faaf70fd5acf4a38af839488a1ff359fb989c246a72a86d2a1fabd",
+      "trees/math/pde/armstrong-kuusi/400D.tree": "a8c7bb4ec3e9f7ff28df1b353906ea9f39c29f66e2a4884103a1acb94e197390",
+      "trees/math/pde/armstrong-kuusi/400E.tree": "47518f63b0b08885d7ccbf52d28904844dd6459040b41a57864f7f3aff0f8dba",
+      "trees/math/pde/armstrong-kuusi/400F.tree": "b2471559a9a64892535d29c2259389d026c1d412fb107ac9bb4e017590f3ded5",
+      "trees/math/pde/armstrong-kuusi/400G.tree": "fd6277f4d7d9fea751c5c1604ca3e46842205c15b32c4d8c95ab313e4251e2e0",
+      "trees/math/pde/armstrong-kuusi/400H.tree": "a9521953f75b6acf281d4f736af218bac27ea7b48f821d13d46b3873defcf1d0",
+      "trees/math/pde/armstrong-kuusi/400I.tree": "3234b1d69dd903713bd84d630fc4f0a34ec8c8e309c6bec68b62aa49f198d97a",
+      "trees/math/pde/armstrong-kuusi/400J.tree": "806187f51b5973206cad928276b7b51601c17d3bd06cfdba867f4407dce1e3f4",
+      "trees/math/pde/armstrong-kuusi/400K.tree": "224a12a05de1c74f1a38e11a1b745ddcafe5203eff73f84a88f0e35c58153458",
+      "trees/math/pde/armstrong-kuusi/400L.tree": "a3903b716a07163bb014ef7a6c595e22b579fdd34504e31af0f13d37f2e25f70",
+      "trees/math/pde/armstrong-kuusi/400M.tree": "ae0a9d632f2080fc737b1e5796bf041ee12015bbe10fff68cbb8a3d56cd211e0",
+      "trees/math/pde/armstrong-kuusi/400N.tree": "6c5482841d33b1bc46c1810e59a12bff739a360c09a7bc27f127afb9095d770a",
+      "trees/math/pde/armstrong-kuusi/400O.tree": "a9b2df7865e7cf97ecbb81c84b5a5d4719b399bba85a4f0465546adf62568336",
+      "trees/math/pde/armstrong-kuusi/400P.tree": "9aed759a5eeedbdaec5d5e62ec61877a4a8bbb17fa4fb8a49ccc657e0f5ad003",
+      "trees/math/pde/armstrong-kuusi/400Q.tree": "9246ceaee0ff269ed525e18c693fae071a1fd5a528d374ed18853fd41de640f9",
+      "trees/math/pde/armstrong-kuusi/400R.tree": "785b3d17bfafe27889f037413c0c3353843fe00e1fbddf838e69d468c50f492f",
+      "trees/math/pde/armstrong-kuusi/400S.tree": "a8ca9d9805ac25896843375c9f12fd254823356de41893d3268eda83f548811d",
+      "trees/math/pde/armstrong-kuusi/400T.tree": "18898553402b71144abc1836f3f9f1a50adb5295338d26e5c31155f8e863564e",
+      "trees/math/pde/armstrong-kuusi/400U.tree": "9d53d835ef680cbfd2845aec8ea798630f78f1d0c71a8a8226a222ddbbf49e74",
+      "trees/math/pde/armstrong-kuusi/400V.tree": "0573f1935e8136ab17d1dfa799b4ad05c2c4cebcc09bd2b2678fc12d1cb19edf",
+      "trees/math/pde/armstrong-kuusi/400W.tree": "32084c65104ba6f5ba0e845b66fd8247c78444ccba4262bd68f12073c52e68d6",
+      "trees/math/pde/armstrong-kuusi/400X.tree": "79dbfc3cb86495f9c2e490306158a7f98228212be847d517f985df34a542c87d",
+      "trees/math/pde/armstrong-kuusi/400Y.tree": "c9d91902707aff34ec37e38d07ee7df189bde94cef96d2e47e24e97c1e9a1d70",
+      "trees/math/pde/armstrong-kuusi/400Z.tree": "ac20ac5081309e708b73f0584848d66315d7044d30c9715f66057fa55ff854b6",
+      "trees/math/pde/armstrong-kuusi/4010.tree": "721b2395b10da37a7ee7fa4eb66a2485a4e97dbd598a654de4554f16174a6123",
+      "trees/math/pde/armstrong-kuusi/4011.tree": "7bb95a0773fef90273848bf2d04256c0796e64ef9a0e0e2f58172d35bd5ec3a5",
+      "trees/math/pde/armstrong-kuusi/4012.tree": "f55e6169984e3e3fe6414e68c7d5bb1c5100090a4f51156239593702a136f893",
+      "trees/math/pde/armstrong-kuusi/4013.tree": "baf88520c4fd6593a749d9ac5772cf0c0a483a32f7626db87c0048011316e885",
+      "trees/math/pde/armstrong-kuusi/4014.tree": "8817089f36856c1f30a0451bc1892c89ecb5370cf6eaf6c079241b36e2ade06a",
+      "trees/math/pde/armstrong-kuusi/4015.tree": "e68abdb9fcacf82993912aea43960e1911821d0652d4bbacce2e273b2766b56a",
+      "trees/math/pde/armstrong-kuusi/4016.tree": "0e0c14995f4df59e4cf844da9b2561bdbaa34b697fcd164eac1e8903c292313b",
+      "trees/references/icm2026-armstrong-kuusi.tree": "dccffd743c2a028540c5590fe5e1fa9c032df6105d0ed3d1484f25b2574fff61"
+    },
+    "remaining_validation": "Parent-owned full Forester compilation and generated-output/browser checks must be refreshed for the changed sources. Independent final record and source-hash refresh remain with Noether/coordinator. Source/formula checks and numerical regressions do not establish full research proofs or browser layout.",
+    "build": false,
+    "commit": false,
+    "push": false,
+    "numerical_regressions": {
+      "counterchecks": 20,
+      "minimum_counterexample_gap": 0.10681247525049975,
+      "absorptionChecks": 80,
+      "iterationChecks": 7,
+      "total": 107,
+      "scope": "Numerical algebra checks only; not PDE examples or replacement for proofs."
+    }
+  },
+  "local_revision_findings": [
+    {
+      "id": "AK-P1-400S",
+      "severity": "P1",
+      "reported_by": "Noether, source thread 01a15524-bbef-7522-8e97-df0363d1cda0, 2026-10-20",
+      "location": "Earlier 400S fine-scale tail; propagated into 400X, 400Y, 400Z and 4010",
+      "finding": "The earlier estimate replaced sum_n max_z by max_z sum_n in the wrong direction. Monotonicity in the fine-scale index does not justify that exchange.",
+      "algebraic_countercheck": "For normalized weights c_nu 3^(nu n), n<=0, let one block sequence be 1 and another be epsilon for -h<n<=0 and 3^(nu h) for n<=-h. Both are positive and nondecreasing toward finer scales. The maximum of their weighted sums is 1+epsilon(1-3^-nu h), while the weighted sum of their pointwise maximum is 2-3^-nu h, strictly larger for 0<epsilon<1, h>0. This tests the algebraic inference, not realizability by a particular PDE coefficient.",
+      "repair": "Bound every fine-scale matrix by deterministic M=lambda^-1 or Lambda. The normalized fine tail is then <=3^-nu m sqrt(M). Derive R_m and positive-part moment bounds with this M; retain the same microscopic Theta at all restarts. Rewrite the centered estimates, flat-window threshold, one-step cost and final iteration accordingly.",
+      "changed_pages": [
+        "4000",
+        "400S",
+        "400X",
+        "400Y",
+        "400Z",
+        "4010"
+      ],
+      "withdrawn_claims": [
+        "L/U/T remainder proportional to local L0/U0/T0 from the earlier tail proof.",
+        "Per-step cost C log(2T) based on the improved local contrast.",
+        "Arbitrary-tolerance remainder C sigma^-4 log^2(2/sigma) independent of the microscopic contrast."
+      ],
+      "retained_target": "For fixed tolerance, C log(2Theta) rounds with cost C log(2Theta) each still yield C log^2(1+Theta); analytic localization and multiplier inputs retain their explicit citation boundaries.",
+      "status": "Mathematical repair confirmed by Noether after rereading 400S, 400X, 400Y, 400Z and 4010. The P1 can be closed; final review record and hash refresh remain with the independent reviewer/coordinator.",
+      "independent_recheck": "Noether explicitly checked the deterministic fine tail, rho, Theta^2 absorption, unchanged microscopic Theta at restart, fixed-sigma iteration and revised arbitrary-tolerance cost.",
+      "numerical_regressions": {
+        "counterchecks": 20,
+        "minimum_counterexample_gap": 0.10681247525049975,
+        "absorptionChecks": 80,
+        "iterationChecks": 7,
+        "total": 107,
+        "scope": "Numerical algebra checks only; not PDE examples or replacement for proofs."
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+\title{从算子缺陷到同边值解比较}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，研究论文 arXiv:2405.10732v3 §5.1 命题 5.3}
+
+\p{设 #{0<s<1/2}，#{U\Subset Q_0} 为有界 Lipschitz 区域，即其边界局部经刚体变换后为 Lipschitz 函数的图像。设 #{a} 为[一致椭圆对称系数](4001)，#{\bar a} 为正定常矩阵。采用[一阶 Sobolev 空间](2J0C)，若 #{u,h\in H^1(U)} 分别满足 #{-\nabla\cdot a\nabla u=0}、#{-\nabla\cdot\bar a\nabla h=0}，且 #{u-h\in H^1_0(U)}，研究论文命题 5.3 给出}
+##{\|\nabla u-\nabla h\|_{\widehat H^{-s}(U)}
+ +\|a\nabla u-\bar a\nabla h\|_{\widehat H^{-s}(U)}
+ \leq C(U,s,\lambda_0,\Lambda_0,d)\,
+ \mathcal E_{s,2}(Q_0;\bar a)\|a^{1/2}\nabla u\|_{L^2(U)}.}
+\p{其中 #{\lambda_0 I\preceq\bar a\preceq\Lambda_0I}，#{\widehat H^{-s}(U)} 是对全部 #{H^s(U)} 测试函数的对偶范数，不是只对零边值测试函数的范数。#{H^s(U)} 取[全空间 Fourier Sobolev 空间](130F)的限制空间及商范数；固定区域内与文献所用的等价范数只改变常数。}
+\p{#{\mathcal E} 是[多尺度缺陷](400J)。此陈述取对称、通常 #{H^1} 解的特例；原研究论文还处理退化系数与分数阶边值。引用位置为 arXiv:2405.10732v3 §5.1 命题 5.3。对称情形的两变量缺陷与这里相同：记 #{j(e)=J(Q,\bar a^{-1/2}e,\bar a^{1/2}e)}，则研究论文中单位向量 #{(e_1,e_2)\in\mathbb R^{2d}} 对应的缺陷为 #{\frac 12j(e_1-e_2)+\frac 12j(e_1+e_2)=j(e_1)+j(e_2)}。因为 #{j} 是非负二次型，对 #{|e_1|^2+|e_2|^2=1} 取上确界正好等于 #{\max_{|e|=1}j(e)}。}
+\p{\strong{论证结构。}先以[算子缺陷估计](400K)控制 #{(a-\bar a)\nabla u}，再对 #{u-h} 的常系数方程作对偶测试，并使用 Lipschitz 区域上的分数阶边界估计。后一步决定常数对区域和 #{\bar a} 的依赖；其证明保留在所引命题。}

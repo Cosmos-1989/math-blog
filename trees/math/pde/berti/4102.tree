@@ -1,0 +1,13 @@
+\title{水波的 Dirichlet–Neumann 算子}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，(0.2)–(0.3)；Green 恒等式计算}
+
+\p{设 #{x\in\mathbb T=\mathbb R/(2\pi\mathbb Z)}，水深 #{0<h<\infty}，光滑水面满足 #{\eta(x)>-h}。在区域 #{\mathcal D_\eta=\{(x,y):-h<y<\eta(x)\}} 中，给定表面势 #{\psi}，取[调和延拓](270F) #{\Phi} 满足 #{\Delta\Phi=0}、#{\Phi(x,\eta(x))=\psi(x)}、#{\Phi_y(x,-h)=0}。定义}
+##{G(\eta)\psi=\bigl(\Phi_y-\eta_x\Phi_x\bigr)\big|_{y=\eta(x)}.}
+\p{它是未单位化的法向导数。表面的外单位法向量为 #{n=(-\eta_x,1)/\sqrt{1+\eta_x^2}}，弧长元为 #{ds=\sqrt{1+\eta_x^2}\,dx}，故 #{G(\eta)\psi=\sqrt{1+\eta_x^2}\,\partial_n\Phi}，从而 #{G(\eta)\psi\,dx=\partial_n\Phi\,ds}。固定 #{\eta} 时该算子对 #{\psi} 线性。}
+\p{\strong{能量恒等式。}设 #{\Phi_f,\Phi_g} 分别延拓 #{f,g}。由[Stokes 公式](0BAC)的散度形式，应用于 #{\overline{\Phi_f}\nabla\Phi_g}，再用调和性，得到}
+##{\int_{\mathbb T}\overline f\,G(\eta)g\,dx=\int_{\mathcal D_\eta}\nabla\overline{\Phi_f}\cdot\nabla\Phi_g\,dx\,dy.}
+\p{底部通量为零，左右边界由周期性相消，顶部恰由上述 #{ds} 因子转成左端。因此二次型非负且共轭对称；其值在 #{f=g} 时为零，当且仅当延拓梯度为零，即 #{f} 为常数。调和延拓的存在与 Sobolev 映射性质使用椭圆边值理论；恒等式首先对光滑数据成立。}
+\p{无限水深时取 #{y<\eta(x)}，要求延拓梯度在深处衰减，并在有限能量类中模常数唯一；截断底部后令截断深度趋于无穷得到同一恒等式。零均值和模常数的处理采用[周期相空间](4101)。}

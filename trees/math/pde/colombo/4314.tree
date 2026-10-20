@@ -1,0 +1,11 @@
+\title{有界涡量给出对数 Lipschitz 速度}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.5；Biot–Savart 核的直接估计}
+
+\p{设 #{\omega\in L^1(\mathbb R^2)\cap L^\infty(\mathbb R^2)}，#{u=K*\omega} 采用 [Biot–Savart 核](430I)。存在绝对常数 #{C}，使 #{h=|x-y|\in(0,1/4)} 时}
+##{|u(x)-u(y)|\leq C(\|\omega\|_1+\|\omega\|_\infty)h(1+|\log h|).}
+\p{\strong{近区。}在 #{|x-z|<2h} 上分别估计两个核。该区域也包含于 #{|y-z|<3h}，而 #{\int_{|w|<3h}|K(w)|dw\leq Ch}，故贡献至多 #{Ch\|\omega\|_\infty}。}
+\p{\strong{中区。}当 #{2h\leq|x-z|\leq 2} 时，连接 #{x-z} 与 #{y-z} 的线段离零至少 #{|x-z|/2}。由 #{|\nabla K(w)|\leq C|w|^{-2}} 及[微积分基本定理](0A3C)，核差至多 #{Ch|x-z|^{-2}}。极坐标积分为 #{Ch\|\omega\|_\infty\int_{2h}^2dr/r\leq Ch\|\omega\|_\infty|\log h|}。}
+\p{\strong{远区。}在 #{|x-z|>2} 上，同样的核差至多 #{Ch}，乘 #{|\omega|} 积分得 #{Ch\|\omega\|_1}。三部分相加即得结论。这个模比 Lipschitz 的 #{Ch} 多一个对数，但 #{\int_0^{1/4}dh/(h(1+|\log h|))=\infty}，解释了其在边界唯一性论证中的作用。}

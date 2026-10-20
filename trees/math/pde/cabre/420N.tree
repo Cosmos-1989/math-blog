@@ -1,0 +1,11 @@
+\title{分数 Laplace 算子的主值积分与非局部能量}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§5；标准 Fourier 归一化}
+
+\p{设 #{0<s<1}。对 [Schwartz 函数](0H4F) #{u:\mathbb R^n\to\mathbb R}，定义 #{\widehat{(-\Delta)^su}(\xi)=|\xi|^{2s}\widehat u(\xi)}，采用[Fourier 约定](0H4G)。其主值积分表示为}
+##{(-\Delta)^su(x)=c_{n,s}\operatorname{P.V.}\int_{\mathbb R^n}\frac{u(x)-u(y)}{|x-y|^{n+2s}}\,dy,\qquad
+c_{n,s}=\frac{s4^s\Gamma(n/2+s)}{\pi^{n/2}\Gamma(1-s)}.}
+\p{[Gamma 函数](0H4Z)在 #{t>0} 时为 #{\Gamma(t)=\int_0^\infty r^{t-1}e^{-r}dr}；主值指删去 #{B_\delta(x)} 后令 #{\delta\downarrow 0}。光滑有界函数也可用该积分：近处线性项在对称球上抵消，二阶余项径向可积，因为 #{s<1}；远处核可积，因为 #{s>0}。}
+\p{交换 #{x,y} 并取平均得到 #{\int u(-\Delta)^su=(c_{n,s}/2)\iint|u(x)-u(y)|^2|x-y|^{-n-2s}dxdy}。由 [Plancherel 定理](0W01)，它等于 #{(2\pi)^{-n}\int|\xi|^{2s}|\widehat u|^2}，与[实数阶 Sobolev 空间](130F)相连。该算子需要整个空间上的函数值；在区域外给定函数和在边界上给定函数是不同的数据。}

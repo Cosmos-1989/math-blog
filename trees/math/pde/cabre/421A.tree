@@ -1,0 +1,12 @@
+\title{非负 Neumann 零模在闭域上严格为正}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Gilbarg–Trudinger，Elliptic Partial Differential Equations of Second Order，第8章的弱解 Harnack 理论；[Cabré 报告](icm2026-cabre)，定理4.1的基础}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为有界、连通、#{C^2} 区域，#{V\in L^\infty(\Omega)}，#{w\in H^1(\Omega)\cap C^1(\overline\Omega)} 非负，在[弱意义](4001)下满足 #{-\Delta w=Vw}，且 #{\partial_\nu w=0}。则 #{w\equiv 0} 或 #{w>0} 于整个 #{\overline\Omega}。外法向采用[散度约定](0U14)。}
+\p{\strong{内部。}对有界势的非负弱解，局部 Harnack 不等式说明任一紧包含小球上的上确界由下确界控制。若有内部零点，该球上函数恒零，再沿相交球列利用连通性得 #{w\equiv 0}。这个 Harnack 结论采用所引标准弱椭圆理论；故非零情形在内部严格为正。}
+\p{\strong{边界障碍函数。}令 #{M=\|V\|_\infty}，则 #{(-\Delta+M)w=(V+M)w\ge 0}。假设 #{w(x_0)=0} 于边界，取在 #{x_0} 内切的球 #{B_R(z)\subset\Omega}。在环带 #{R/2<r=|x-z|<R} 上设 #{b=e^{-\alpha r^2}-e^{-\alpha R^2}}。当 #{\alpha} 足够大，}
+##{(-\Delta+M)b=(2\alpha n-4\alpha^2r^2+M)e^{-\alpha r^2}-Me^{-\alpha R^2}\le 0.}
+\p{内球面上 #{w} 有正的最小值，故可选 #{\delta>0} 使 #{w\ge\delta b}；外球面上也有 #{w\ge 0=\delta b}。对 #{w-\delta b} 的负部作弱测试，非负零阶项给出比较原理，遂有 #{w\ge\delta b} 于环带。沿内法向接近 #{x_0}，由 #{C^1} 正则性得 #{\partial_\nu w(x_0)\le\delta\partial_\nu b(x_0)<0}，矛盾。}
+\p{若最初只给 #{H^1} 弱 Neumann 解，须另用边界椭圆正则性取得 #{C^1} 代表后再应用本结论。有界势在光滑域上的 #{W^{2,p}} 自举足够；不需要从连续势擅自推出 #{C^2} 正则性。}

@@ -1,0 +1,13 @@
+\title{紧支撑自相似剖面的零初值与有限能量}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，定理2.2–2.4；Albritton–Brué–Colombo，定理1.3}
+
+\p{设 #{\bar U\in C_c^\infty(\mathbb R^3;\mathbb R^3)} 无散度。取压力剖面零，并定义}
+##{\bar F=-\tfrac 12(\bar U+\xi\cdot\nabla\bar U)-\Delta\bar U+(\bar U\cdot\nabla)\bar U.}
+\p{由[自相似方程](430A)，#{\bar u(x,t)=t^{-1/2}\bar U(x/\sqrt t)} 满足体力 #{f=t^{-3/2}\bar F(x/\sqrt t)} 的 NS。#{\bar F} 光滑紧支撑，但不必无散度；体力中的梯度部分可由压力吸收。}
+\p{\strong{初始迹与可积性。}换元 #{x=\sqrt t\xi} 给出}
+##{\|\bar u(t)\|_2=t^{1/4}\|\bar U\|_2,\qquad\|\nabla\bar u(t)\|_2^2=t^{-1/2}\|\nabla\bar U\|_2^2,\qquad\|f(t)\|_2=t^{-3/4}\|\bar F\|_2.}
+\p{故 #{\bar u(t)\to 0} 强于 #{L^2}，且 #{\int_0^Tt^{-1/2}dt=2\sqrt T}、#{\int_0^Tt^{-3/4}dt=4T^{1/4}}，恰好得到[能量类](4305)和 #{f\in L^1_tL^2_x}。若 #{\|V(\tau)\|_{H^1}\leq Ce^{a\tau}}，#{a>0}，扰动 #{v=t^{-1/2}V(\log t,x/\sqrt t)} 满足 #{\|v(t)\|_2\leq Ct^{a+1/4}} 和 #{\|\nabla v(t)\|_2^2\leq C^2t^{2a-1/2}}，也有相同零初值与有限耗散。}
+\p{对每个 #{\varepsilon>0} 先在 #{\lbrack\varepsilon,T\rbrack} 用[光滑能量等式](4304)，然后令 #{\varepsilon\downarrow 0}，就得到这一背景解从零时刻出发的能量等式。外力虽然可积，却在 #{t=0} 具有时间奇性。}

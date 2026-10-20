@@ -1,0 +1,12 @@
+\title{光滑不可压缩流的能量平衡}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.1；逐项计算}
+
+\p{设 #{(u,p)} 是[方程](4302)的光滑解。记 #{e=|u|^2/2}，则}
+##{\partial_te-\nu\Delta e+\nu|\nabla u|^2+\operatorname{div}((e+p)u)=f\cdot u.}
+\p{\strong{证明。}逐分量乘 #{u_i} 后求和：#{u\cdot\partial_tu=\partial_te}，#{u\cdot(u\cdot\nabla)u=u\cdot\nabla e=\operatorname{div}(eu)}。乘积法则给出 #{\Delta e=\sum_{i,j}(\partial_ju_i)^2+\sum_iu_i\Delta u_i}，故 #{-\nu u\cdot\Delta u=-\nu\Delta e+\nu|\nabla u|^2}。最后 #{u\cdot\nabla p=\operatorname{div}(pu)}。所有散度恒等式均使用 #{\operatorname{div}u=0}。}
+\p{若空间是环面，或全空间解的衰减足以使边界通量消失且以下积分有限，空间积分再用[微积分基本定理](0A3C)得到}
+##{\frac 12\|u(t)\|_2^2+\nu\int_s^t\|\nabla u(r)\|_2^2\,dr=\frac 12\|u(s)\|_2^2+\int_s^t\int f\cdot u\,dx\,dr.}
+\p{在周期箱，各对面通量相消；在全空间，可用趋于一的空间截断并令截断半径趋于无穷。无力 Euler 的动能恒定；无力 NS 的动能减少。弱解未必能以自身作为测试函数，故这一证明不能直接移用到任意[弱解](4303)。}

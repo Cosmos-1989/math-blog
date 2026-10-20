@@ -1,0 +1,13 @@
+\title{Hamilton 单项式的共振与正规形方程}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Berti](icm2026-berti)，§2；有限多项式的独立计算}
+
+\p{取有限多个复正则坐标 #{z_j}，约定 #{\dot z_j=-i\partial_{\bar z_j}H}，与[水波正则变量](4106)相容。定义 Poisson 括号}
+##{\{F,H\}=-i\sum_j\bigl(\partial_{z_j}F\,\partial_{\bar z_j}H-\partial_{\bar z_j}F\,\partial_{z_j}H\bigr),\qquad H_2=\sum_j\Omega_j|z_j|^2.}
+\p{沿 #{H} 的流有 #{dF/dt=\{F,H\}}。对单项式 #{M=z^\alpha\bar z^\beta}，逐项求导得到}
+##{\{M,H_2\}=-i\Delta\Omega\,M,\qquad \Delta\Omega=\sum_j(\alpha_j-\beta_j)\Omega_j.}
+\p{若 #{\Delta\Omega\ne 0}，方程 #{\{F,H_2\}=cM} 可取 #{F=icM/\Delta\Omega}；若 #{\Delta\Omega=0}，这一单项式在算子 #{F\mapsto\{F,H_2\}} 的核中，称为共振项。含 #{cM} 和其共轭的实 Hamilton 多项式可成对求解，保持实性。}
+\p{空间平移作用为 #{z_j\mapsto e^{ij\theta}z_j}。单项式平移不变当且仅当 #{\sum_j(\alpha_j-\beta_j)j=0}，这给出动量条件。因此水波共振同时涉及频率与波数。}
+\p{这是有限单项式上的代数求解。在无限维 [Sobolev 空间](4101)中，除以越来越小的 #{\Delta\Omega} 可能产生无界变换；必须另证[平滑性与 tame 界](4127)，才能把形式正规形用于 PDE。}

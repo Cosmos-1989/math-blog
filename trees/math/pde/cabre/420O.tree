@@ -1,0 +1,10 @@
+\title{半 Laplace 算子是调和延拓的法向导数}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，式(4.8)之后；Fourier 模式计算}
+
+\p{设 #{v\in\mathcal S(\mathbb R^n)}，令 #{U} 为上半空间 #{\{(x,y):y>0\}} 中的衰减[调和延拓](270F)，边界值为 #{v}。则}
+##{-\partial_yU(x,0)=(-\Delta)^{1/2}v(x).}
+\p{\strong{证明。}只对 #{x} 作 [Fourier 变换](0H4G)。方程成为 #{\partial_y^2\widehat U=|\xi|^2\widehat U}，边界值及衰减给出 #{\widehat U(\xi,y)=e^{-y|\xi|}\widehat v(\xi)}。微分得 #{-\partial_y\widehat U(\xi,0)=|\xi|\widehat v(\xi)}，正是[半 Laplace 算子](420N)的乘子。}
+\p{外单位法向在边界为 #{-\partial_y}，所以 #{\partial_\nu U=f(U)} 化为 #{(-\Delta)^{1/2}v=f(v)}。再逐频率积分，得到 #{\int_{y>0}|\nabla U|^2=(2\pi)^{-n}\int|\xi||\widehat v|^2}；右端是齐次 #{\dot H^{1/2}} 半范数的平方。还需加入 #{v\in L^2} 才得到[非齐次 H1/2 空间](130F)。对一般 #{s}，Caffarelli–Silvestre 延拓改用权重 #{y^{1-2s}} 的散度方程及加权法向导数，其对应定理作为标准延拓理论引用。}

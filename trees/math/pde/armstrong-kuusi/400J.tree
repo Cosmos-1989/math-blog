@@ -1,0 +1,16 @@
+\title{相对常矩阵的多尺度缺陷}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，定义 2.4}
+
+\p{固定实对称[正定矩阵](0N0A) #{\bar a}，#{0<s<1/2}，#{1\leq q<\infty}。在[三进分块](4004)上以[联合能量](4007)定义}
+##{\mathcal E_{s,q}(Q_m;\bar a)=
+ \left(c_{sq}\sum_{k=-\infty}^m3^{-sq(m-k)}
+ \max_{Q\in\mathcal Q_k(Q_m)}\max_{|e|=1}
+ J(Q,\bar a^{-1/2}e,\bar a^{1/2}e)^{q/2}\right)^{1/q}.}
+\p{#{c_r=1-3^{-r}}，#{q=\infty} 用上确界。正定矩阵的平方根按正交特征分解定义。代入联合二次式并展开，有}
+##{2J(Q,\bar a^{-1/2}e,\bar a^{1/2}e)=
+ e\cdot\bar a^{-1/2}\left(A-A_*+
+ (A_*-\bar a)A_*^{-1}(A_*-\bar a)\right)\bar a^{-1/2}e.}
+\p{展开右侧括号，得到 #{A-2\bar a+\bar a A_*^{-1}\bar a}，所以等式不需要矩阵彼此交换。两项均半正定：第一项测量 [Dirichlet–Neumann 间隙](400A)，第二项测量相对指定常矩阵的偏差。}

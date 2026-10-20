@@ -1,0 +1,11 @@
+\title{Lax–Milgram 定理}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Armstrong–Kuusi](icm2026-armstrong-kuusi)，§2.2 的变分存在性前置}
+
+\p{设 #{H} 是实 [Hilbert 空间](00MQ)，双线性型 #{B:H\times H\to\mathbb R} 满足 #{|B(u,v)|\leq M\|u\|\|v\|} 及 #{B(u,u)\geq c\|u\|^2}，其中 #{M<\infty,c>0}。对任意连续线性泛函 #{F}，存在唯一 #{u\in H} 使}
+##{B(u,v)=F(v)\quad(v\in H),\qquad \|u\|\leq c^{-1}\|F\|.}
+\p{\strong{证明。}由 [Riesz 表示](00MT)，存在有界线性算子 #{T:H\to H} 和 #{f\in H}，使 #{B(u,v)=\langle Tu,v\rangle}、#{F(v)=\langle f,v\rangle}。强制性与 Schwarz 不等式给出 #{\|Tu\|\geq c\|u\|}。因此 #{T} 单射，且值域闭：若 #{Tu_n} 收敛，#{u_n} 为 Cauchy 列，完备性与连续性给出其像的极限仍在值域。}
+\p{若 #{w} 正交于值域，则对所有 #{u} 有 #{B(u,w)=0}。取 #{u=w} 得 #{c\|w\|^2\leq 0}，所以 #{w=0}。[正交投影定理](00MS)说明闭值域等于 #{H}。因此 #{Tu=f} 唯一可解；在方程中取 #{v=u} 即得范数界。}
+\p{当 #{B} 对称时，解还唯一极小化 #{\frac 12B(v,v)-F(v)}，因为将 #{v=u+h} 代入后，与最小值的差恰为 #{\frac 12B(h,h)}。非对称情形的存在唯一性不需要这个极小化解释。}

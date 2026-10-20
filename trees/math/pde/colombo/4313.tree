@@ -1,0 +1,11 @@
+\title{可积 Lipschitz 控制下的速度差能量估计}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，§1.3、§1.5；光滑解的直接计算}
+
+\p{设 #{u,v} 是同一[不可压缩方程](4302)的光滑有限能量解，黏性相同、外力相同，空间为环面或衰减充分的全空间。若 #{\int_0^T\|\nabla v(t)\|_\infty dt<\infty}，则}
+##{\|u(t)-v(t)\|_2^2\leq\|u(0)-v(0)\|_2^2\exp\left(2\int_0^t\|\nabla v(s)\|_\infty ds\right).}
+\p{\strong{证明。}令 #{w=u-v}。因为 #{u\cdot\nabla u-v\cdot\nabla v=u\cdot\nabla w+w\cdot\nabla v}，差方程乘 #{w} 后积分，[无散度积分计算](4304)消去压力和 #{u\cdot\nabla w}，得到}
+##{\tfrac 12\frac d{dt}\|w\|_2^2+\nu\|\nabla w\|_2^2=-\int(w\cdot\nabla v)\cdot w\leq\|\nabla v\|_\infty\|w\|_2^2.}
+\p{将不等式乘 #{\exp(-2\int_0^t\|\nabla v(s)\|_\infty ds)}，用乘积求导，得到该加权差能量不增，即所需估计。同一初值故给出相同解。这一证明只针对可合法作上述测试的光滑解；一般弱强唯一性还需通过逼近证明相对能量不等式。自相似背景的梯度可按 #{t^{-1}} 增长，恰好越过此时间可积条件。}

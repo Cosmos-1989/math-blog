@@ -1,0 +1,11 @@
+\title{反应扩散能量的一阶与二阶变分}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，§3，式(3.2)–(3.3)}
+
+\p{设 #{\Omega} 为光滑有界域，#{f\in C^1(\mathbb R)}，#{F'=f}，#{u\in C^2(\overline\Omega)}。定义 #{\mathcal E(u)=\int_\Omega(\tfrac 12|\nabla u|^2-F(u))\,dx}。对 #{\xi\in C^1(\overline\Omega)}，其沿直线 #{u+t\xi} 的导数为}
+##{\mathcal E'(u)\xi=\int_\Omega(\nabla u\cdot\nabla\xi -f(u)\xi),\qquad
+\mathcal E''(u)(\xi,\xi)=\int_\Omega(|\nabla\xi|^2-f'(u)\xi^2).}
+\p{\strong{证明。}动能项展开为 #{\tfrac 12|\nabla u|^2+t\nabla u\cdot\nabla\xi+\tfrac 12t^2|\nabla\xi|^2}。链式法则给出 #{(d/dt)F(u+t\xi)=f(u+t\xi)\xi}，再求导得到 #{f'(u+t\xi)\xi^2}。#{u,\xi} 有界，#{f,f'} 在相应紧区间上一致有界，故可逐次在积分下求导。}
+\p{由[分部积分](0U14)，一阶导数也等于 #{\int_\Omega(-\Delta u-f(u))\xi+\int_{\partial\Omega}\partial_\nu u\,\xi}。固定边值时 #{\xi=0} 于边界，只得到[内部方程](4201)；自由边值时全部 #{\xi} 可用，还得到零 Neumann 条件。二阶导数非负是局部极小值的必要条件。}

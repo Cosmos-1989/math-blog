@@ -1,0 +1,13 @@
+\title{凸域的稳定零 Neumann 反应扩散解必为常数}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Cabré 报告](icm2026-cabre)，定理4.1；Casten–Holland、Matano}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为有界、光滑、[凸](00TK)区域，#{f\in C^1(\mathbb R)}。若 #{u\in C^2(\overline\Omega)} 满足 #{-\Delta u=f(u)}、#{\partial_\nu u=0}，并且 #{Q_u(\xi)\ge 0} 对所有 #{\xi\in H^1(\Omega)} 成立，则 #{u} 为常数。此处用[Neumann 稳定性](4203)，不限制测试函数的边界值。}
+\p{\strong{几何计算。}先在可逐项微分的光滑情形计算。沿边界取切向量 #{\tau}，微分 #{\nabla u\cdot\nu=0} 得 #{D^2u(\tau,\nu)+\nabla u\cdot D_\tau\nu=0}。由于 #{\nabla u} 切于边界，若 #{\mathrm{II}(\tau,\tau)=D_\tau\nu\cdot\tau}，则}
+##{\frac 12\partial_\nu|\nabla u|^2=-\mathrm{II}(\nabla_Tu,\nabla_Tu)\le 0.}
+\p{对方程求导，#{-\Delta u_i=f'(u)u_i}。逐个分部积分并求和，得}
+##{\sum_i Q_u(u_i)=\frac 12\int_{\partial\Omega}\partial_\nu|\nabla u|^2\le 0.}
+\p{稳定性使每项非负，故全部为零。令 #{w=|\nabla u|}，由 #{|\nabla w|^2\le|D^2u|^2} 又得 #{0\le Q_u(w)\le\sum_iQ_u(u_i)=0}。极化 #{Q_u(w+t\xi)\ge 0} 给出 #{\int\nabla w\cdot\nabla\xi -f'(u)w\xi=0}，故 #{w} 是非负的线性化零 Neumann 弱解。}
+\p{\strong{引用的椭圆步骤。}经 Neumann 正则性提升后，[非负零模的闭域正性](421A)说明非零的 #{w} 在闭域严格为正。但 #{u} 在闭域取得最大值；内部最大点梯度为零，边界最大点的切向导数与 Neumann 法向导数也均为零。因此 #{w} 有零点，只能恒零，#{u} 恒常。上述导数积分在定理的 #{C^2} 假设下由弱微分和椭圆正则性实现；从连续有界势的弱零模到所需经典代表的正则性，连同一般正则性处理，采用所引经典定理。凸性无需严格。}

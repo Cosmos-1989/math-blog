@@ -1,0 +1,12 @@
+\title{不稳定自相似剖面产生非线性分离轨道}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Colombo](icm2026-colombo)，定理2.4；Albritton–Brué–Colombo，定理4.1、命题4.3–4.5、§4.2.7}
+
+\p{设 #{\bar U\in C_c^\infty(\mathbb R^3)} 无散度，且[线性化算子](430D) #{L_{\bar U}} 有不稳定特征值。引用定理保证谱实部的上确界 #{a>0} 由某个 #{\lambda=a+ib} 实现，并可取非零光滑 #{\eta\in\bigcap_{k\geq 0}H^k}。存在 #{\tau_0<0} 和无散度修正 #{R}，使}
+##{U=\bar U+\operatorname{Re}(e^{\lambda\tau}\eta)+R(\tau),\qquad\|R(\tau)\|_{H^k}\leq C_ke^{2a\tau}\quad(\tau\leq\tau_0,\ k\geq 0)}
+\p{满足与 #{\bar U} 相同体力的自相似 NS。物理时间终点取 #{T=e^{\tau_0}\in(0,1)}。按[模的下界](430E)，#{R} 的高阶衰减保证 #{U\not\equiv\bar U}。}
+\p{\strong{证明概要。}记 #{V=\operatorname{Re}(e^{\lambda\tau}\eta)}。修正须满足积分方程}
+##{R(\tau)=-\int_{-\infty}^{\tau}e^{(\tau -s)L_{\bar U}}\mathbb P\bigl((V+R)\cdot\nabla(V+R)\bigr)(s)\,ds.}
+\p{#{e^{hL_{\bar U}}} 表示线性方程在时间 #{h\geq 0} 的[演化半群](4317)。原论文先证明其增长与平滑估计，再在 #{\sup_{\tau\leq\tau_0}e^{-(a+\varepsilon)\tau}\|R(\tau)\|_{H^N}} 有限的空间上作压缩映射，#{N>5/2}、#{0<\varepsilon<a}。向足够负的 #{\tau_0} 限制使交叉项很小，迭代正则性估计最后得到 #{e^{2a\tau}}。半群估计、导数损失的补偿及迭代闭合是所引研究证明的关键输入。}
