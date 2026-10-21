@@ -1,0 +1,12 @@
+\title{KdV 下倒数 Green 密度的局部守恒律}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (5.10)–(5.11)；原研究论文 KdV，命题 3.1、式 (3.5)–(3.6)}
+
+\p{令 #{q} 为实线上的实 Schwartz [KdV 解](4703)，并假设其 #{H^{-1}} 范数充分小。固定谱参数 #{a\geq 1}，记[对角 Green 函数](470J)为 #{g_a(x)=g(x;a,q)}。原论文命题 3.1 给出其演化式}
+##{\partial_tg_a=-2q_xg_a+2q\partial_xg_a-4a^2\partial_xg_a.}
+\p{于是倒数密度满足局部守恒律}
+##{\partial_t\frac 1{2g_a}=\partial_x\left(\frac{q-2a^2}{g_a}+4a^3\right).}
+\p{\strong{推导。}由[链式法则](0A34)，左端为 #{-(2g_a^2)^{-1}\partial_tg_a}，代入演化式即得 #{q_x/g_a-(q-2a^2)(\partial_xg_a)/g_a^2}。这等于右侧空间导数；常数 #{4a^3} 使通量在空间无穷远趋于零，因为 #{q\to 0}、#{g_a\to 1 /(2a)}。}
+\p{因此适于低正则估计的变量是 #{a-1/(2g_a)\in H^1}。Green 演化式本身来自预解式变分与 KdV Lax 恒等式，证明见原论文命题 3.1；上述计算只使用该演化式推导局部守恒律。}

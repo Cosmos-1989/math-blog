@@ -1,0 +1,14 @@
+\title{三项估计将对易正则化变成连续解流}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (5.4)–(5.9)；原论文 KdV，定理 5.1、推论 5.2}
+
+\p{设 #{X} 为 [Banach 空间](00M6)，#{D\subset X} 为稠密的光滑初值类，#{\Phi_t:D\to D} 为已知连续流。设每个 #{\Psi_t^\kappa:X\to X} 是保持 #{D} 的连续流，初值到紧时间区间轨道的映射连续，并在 #{D} 上与 #{\Phi} 对易。令差流 #{\Theta_t^\kappa=\Phi_t\Psi_{-t}^\kappa}。假设对任意 #{X} 中收敛的序列 #{q_n\in D} 及 #{T>0}，有}
+##{\lim_{\kappa\to\infty}\sup_n\sup_{|t|\leq T}\|\Theta_t^\kappa\Psi_t^\kappa q_n-\Psi_t^\kappa q_n\|_X=0.}
+\p{则 #{\Phi} 在[光滑连续延拓意义](4701)下给出 #{X} 上唯一的连续全局流。}
+\p{\strong{证明。}由[差流分解](4705)及三角不等式，}
+##{\sup_{|t|\leq T}\|\Phi_tq_n-\Phi_tq_m\|_X\leq\sup_{|t|\leq T}\|\Psi_t^\kappa q_n-\Psi_t^\kappa q_m\|_X+2\varepsilon_\kappa,}
+\p{其中 #{\varepsilon_\kappa} 为假设中的上确界。先固定充分大的 #{\kappa}，再令 #{n,m\to\infty}，便得到轨道空间的 [Cauchy 条件](00ER)。两种逼近序列交错排列仍收敛到同一初值，故轨道极限独立于逼近。}
+\p{为证延拓连续，取 #{x_j\to x}，为每个 #{j} 选 #{d_j\in D}，使 #{\|d_j-x_j\|_X<1/j} 且其光滑轨道与 #{x_j} 的极限轨道在 #{[-T,T]} 上相差少于 #{1/j}。则 #{d_j\to x}，刚证的收敛性使 #{x_j} 的轨道趋于 #{x} 的轨道。群性质由连续逼近传递。}
+\p{在 Sobolev 应用中，差流小量往往先在较低阶范数中证明，再由[等度连续恢复导数](4708)提升；若只得到局部空间收敛，还需[空间紧性](470A)。假设只要求对每条收敛初值序列成立，不要求对整个有界球统一误差率。}

@@ -1,0 +1,14 @@
+\title{热方程自相似能量的高斯耗散}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，§2.1、式(2.1)–(2.4)。}
+
+\p{设 #{p>1}，光滑实解 #{u_t=\Delta u+|u|^{p-1}u} 在 #{t<T} 定义。令 #{\tau=T-t}，#{y=(x-a)/\sqrt\tau}，#{s=-\log\tau}，#{w=\tau^{1/(p-1)}u}，#{\rho_h=e^{-|y|^2/4}}。则}
+##{w_s=\rho_h^{-1}\operatorname{div}(\rho_h\nabla w)-\frac{w}{p-1}+|w|^{p-1}w.}
+\p{若解及所需导数的增长足以保证下列积分和分部积分成立，例如均为多项式增长，则}
+##{E_h(w)=\int_{\mathbb R^N}\left(\frac 12|\nabla w|^2+\frac{w^2}{2(p-1)}-\frac{|w|^{p+1}}{p+1}\right)\rho_hdy,\qquad E_h'=-\int_{\mathbb R^N}w_s^2\rho_hdy.}
+
+\p{\strong{证明。}由[链式法则](0A34)，#{u_t=\tau^{-1-1/(p-1)}(w_s+y\cdot\nabla w/2+w/(p-1))}，#{\Delta_xu=\tau^{-1-1/(p-1)}\Delta_yw}。代入并利用[散度](4301)恒等式 #{\rho_h^{-1}\operatorname{div}(\rho_h\nabla w)=\Delta w-y\cdot\nabla w/2}，得变换方程。对能量求导，以 [Stokes 公式](0BAC)分部积分，括号中的变分导数为 #{-w_s}，故得耗散式。}
+
+\p{与[波方程自相似耗散](4909)相比，热方程使用空间尺度 #{\sqrt\tau} 与整空间高斯权重，波方程使用尺度 #{\tau} 与单位球权重。两个等式都把有限时爆破转成长期的耗散动力学，但定常解分类与轨道收敛仍是额外的问题。}

@@ -1,0 +1,12 @@
+\title{KdV 的 Hamilton 函数与平移动量}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§2、§5；原研究论文 KdV，式 (1.1)、(1.2)、(3.2)}
+
+\p{对实 [Schwartz 函数](0H4F)，采用 [Gardner 括号](4702)，定义}
+##{H(q)=\int\left(\frac 12 q_x^2+q^3\right)dx,\qquad P(q)=\frac 12\int q^2\,dx.}
+\p{则 #{H} 生成 Korteweg–de Vries 方程 #{q_t=-q_{xxx}+6qq_x}，#{P} 生成平移 #{q(t,x)=q(0,x+t)}，并且 #{\{H,P\}=0}。}
+\p{\strong{证明。}沿方向 #{h} 求导并分部积分，得 #{dH(q)[h]=\int(-q_{xx}+3q^2)h}、#{dP(q)[h]=\int qh}。再施加 #{\partial_x} 即得两个演化。最后}
+##{\{H,P\}=\int(-q_{xx}+3q^2)q_x\,dx=\int\partial_x\left(-\frac 12q_x^2+q^3\right)dx=0.}
+\p{动量中的系数 #{1/2} 保证平移速度恰为 #{1}。#{H}、#{P} 的上述积分定义只用于其有意义的函数类；低正则流可由其他变量延拓。}

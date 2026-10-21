@@ -1,12 +1,12 @@
 {
-  "checked_on": "2026-10-20",
+  "checked_on": "2026-10-21",
   "timezone": "Asia/Shanghai",
   "subject": "006A",
   "section": 10,
   "section_name": "Partial Differential Equations",
   "site_commit": "cf26da4c88b3301b5e07185fdd98c78b83168ef4",
   "site_commit_role": "Local source baseline for this independent audit; not a deployment assertion.",
-  "scope": "Seven primary Section 10 reports have dedicated topics, together with three reused cross-listed topics. Four reports remain without dedicated topics. Integration covers the branches and proof ranges recorded in the two PDE manifests.",
+  "scope": "All 10 primary and 4 officially cross-listed PDE reports have dedicated topics. Seven earlier and four new integrations retain their stated proof ranges; three cross-listed topics reuse existing material. Topic coverage is distinct from reproduction of every research proof.",
   "coverage_definitions": {
     "existing-topic-reused": "已有与同一篇报告对应的专门 Outline、文献页及实质内容；不等于全文证明、整篇翻译或部署验收。",
     "related-material-only": "已有具体分支交集，但没有本篇专门入口。outline/reference 保持 null，相关页列于 reusable_existing_notes。",
@@ -287,14 +287,14 @@
     "proceedings_section_ten_authors": 13,
     "proceedings_section_ten_primary_reports": 10,
     "proceedings_section_ten_cross_listed_reports": 1,
-    "primary_reports_with_existing_topic": 7,
-    "cross_listed_reports_with_existing_topic": 3,
-    "reports_without_dedicated_topic": 4,
-    "dedicated_topics_total": 10,
-    "related_material_only_reports": 1,
-    "missing_reports": 3,
-    "primary_related_material_only_reports": 1,
-    "primary_missing_reports": 2,
+    "primary_reports_with_existing_topic": 10,
+    "cross_listed_reports_with_existing_topic": 4,
+    "reports_without_dedicated_topic": 0,
+    "dedicated_topics_total": 14,
+    "related_material_only_reports": 0,
+    "missing_reports": 0,
+    "primary_related_material_only_reports": 0,
+    "primary_missing_reports": 0,
     "primary_reports_pending_parent_validation": 0,
     "baseline_cross_listed_topics_on_subject_landing": 0,
     "baseline_editorial_plenary_topics_on_subject_landing": 0
@@ -899,8 +899,8 @@
       "theme_zh": "交换流方法与可积 PDE 的适定性",
       "doi": "10.1137/25M1807149",
       "pages": "328-347",
-      "status": "related-material-only",
-      "note": "2A00/2A03/2A04 已有 Gérard 全会的 Lax 结构与 Benjamin–Ono 方程；Killip–Vişan 引言也以该方程为模型。该交集不包含交换流方法及其低正则性适定性论证，不能把全会专题当成本联合报告。",
+      "status": "selected-branches-integrated",
+      "note": "Source-only integration: one narrative overview, 45 atomic pages, one reference. No shared navigation/registry/workflow/test changes, build, render, commit or deployment. Awaiting independent frozen-content review.",
       "primary_section": 10,
       "additional_sections": [],
       "proceedings_volume": 5,
@@ -915,7 +915,7 @@
       "category": "Joint Section Lectures",
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1807149",
       "checked_on": "2026-10-20",
-      "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing. Additionally spot-checked the Benjamin–Ono model in the chapter introduction (BO/ILW paragraph); no full-method or proof reading.",
+      "reading_scope": "Read the complete textual mathematical narrative of §§1-6, equations exposed as text, Figure 1 caption and surrounding explanation. Cross-checked publisher PDF extraction for the final CCM paragraphs, metadata and selected formulas. Mathematical narrative occupies printed pp328-342; bibliography pp343-347 was consulted selectively for the cited primary studies. This is full report-text reading subject to the explicitly inaccessible visual items below, not abstract-only reading. Image-only table (2.1) and Figure 1 pixels were not inspected. Direct image retrieval and publisher PDF screenshots at zero-based pages 3,9,12,14 failed with Cache miss. No visual PDF collation or complete rereading of all bibliography entries is claimed.",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -923,15 +923,21 @@
         "doi": true,
         "method": "Individual SIAM DOI chapter header cross-checked with the complete Volume 5 Section Ten contents."
       },
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "outline": "4700",
+      "reference": "icm2026-killip-visan",
+      "on_subject_landing": true,
       "reusable_existing_notes": [
         "2A00",
         "2A03",
         "2A04"
       ],
-      "background_only_notes": []
+      "background_only_notes": [],
+      "baseline_review": {
+        "status": "related-material-only",
+        "note": "2A00/2A03/2A04 已有 Gérard 全会的 Lax 结构与 Benjamin–Ono 方程；Killip–Vişan 引言也以该方程为模型。该交集不包含交换流方法及其低正则性适定性论证，不能把全会专题当成本联合报告。",
+        "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing. Additionally spot-checked the Benjamin–Ono model in the chapter introduction (BO/ILW paragraph); no full-method or proof reading."
+      },
+      "existing_record": "research/icm2026-pde-final-reports.json"
     },
     {
       "speakers": [
@@ -944,8 +950,8 @@
       "theme_zh": "线性与非线性波的长时间行为",
       "doi": "10.1137/25M1807174",
       "pages": "348-367",
-      "status": "missing",
-      "note": "1112/1113 有自由半波演化与局部光滑问题，但没有本报告的物理空间长时间尾项、变系数 Klein–Gordon 全局渐近。一般波动背景不计为本报告覆盖。",
+      "status": "selected-branches-integrated",
+      "note": "One narrative overview, 46 atomic notes 4801–482E, one reference. Source-only freeze pending independent review; no shared integration/build/publication performed by this author.",
       "primary_section": 10,
       "additional_sections": [],
       "proceedings_volume": 5,
@@ -959,7 +965,7 @@
       "category": "Section Lectures",
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1807174",
       "checked_on": "2026-10-20",
-      "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing.",
+      "reading_scope": "Read the entire publisher HTML mathematical body, §§1–4.3, all displayed mathematics, footnotes 1–8, acknowledgments and bibliography [1]–[81], in overlapping section-sized retrievals. Publisher PDF located and its opening copyright/license text checked. No full source-PDF pixel inspection claimed.\nRead PDF text pp1–6, pp21–40, pp45–49, p50 through the opening portion of Example 3.8, and pp53–56. The pp32–40 extraction was initially truncated in its middle; pp35–38 were reread separately. This covers the introductory theorem contracts, geometrical/coefficient/zero-frequency/nonlinear/data/solution assumptions, recurrence and renormalized radiation fields, Main Theorems 1–3, selected flat/potential/dynamic examples, Schwarzschild and beginning Kerr–Newman examples, nonlinear examples at p53, and the statement and argument of Theorem 4.1. Page56 also includes the opening of §5.1.1. These selected ranges do not constitute reading the full 180-page paper.",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -967,14 +973,20 @@
         "doi": true,
         "method": "Individual SIAM DOI chapter header cross-checked with the complete Volume 5 Section Ten contents."
       },
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "outline": "4800",
+      "reference": "icm2026-oh",
+      "on_subject_landing": true,
       "reusable_existing_notes": [],
       "background_only_notes": [
         "1112",
         "1113"
-      ]
+      ],
+      "baseline_review": {
+        "status": "missing",
+        "note": "1112/1113 有自由半波演化与局部光滑问题，但没有本报告的物理空间长时间尾项、变系数 Klein–Gordon 全局渐近。一般波动背景不计为本报告覆盖。",
+        "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing."
+      },
+      "existing_record": "research/icm2026-pde-final-reports.json"
     },
     {
       "speakers": [
@@ -987,8 +999,8 @@
       "theme_zh": "三维各向异性与经典不可压缩 Navier–Stokes 方程",
       "doi": "10.1137/25M1801980",
       "pages": "388-407",
-      "status": "missing",
-      "note": "未找到三维各向异性 Navier–Stokes、仅水平耗散、相应正则性准则或解析半径的专门材料。Ruixiang Zhang 的 Fourier 限制专题不是 Ping Zhang 的流体报告。",
+      "status": "selected-branches-integrated",
+      "note": "1篇叙事概览4A00、40篇原子笔记4A01–4A28（十六进制连续编号）、1篇参考页。覆盖模型和空间、ANS存在理论及依赖性、经典NS特殊大数据与单分量判据、解析半径。40篇均从概览正文可达。已按PZ-F1..F5修订并重新冻结，等待独立复验；无站点构建或发布。",
       "primary_section": 10,
       "additional_sections": [],
       "proceedings_volume": 5,
@@ -1002,7 +1014,7 @@
       "category": "Section Lectures",
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1801980",
       "checked_on": "2026-10-20",
-      "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing.",
+      "reading_scope": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。 未逐项阅读全文参考文献1–71；未取得并逐页视觉检查正式PDF。 其余原始研究按source_records分别标记选读范围；摘要不视为全文。",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -1010,15 +1022,21 @@
         "doi": true,
         "method": "Individual SIAM DOI chapter header cross-checked with the complete Volume 5 Section Ten contents."
       },
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "outline": "4A00",
+      "reference": "icm2026-ping-zhang",
+      "on_subject_landing": true,
       "reusable_existing_notes": [],
       "background_only_notes": [],
       "rejected_name_only_hits": [
         "1300"
       ],
-      "title_note": "Only the nonbreaking space after 'vs.' in the publisher display is normalized to an ordinary space; words, capitalization and Navier–Stokes punctuation retained."
+      "title_note": "Only the nonbreaking space after 'vs.' in the publisher display is normalized to an ordinary space; words, capitalization and Navier–Stokes punctuation retained.",
+      "baseline_review": {
+        "status": "missing",
+        "note": "未找到三维各向异性 Navier–Stokes、仅水平耗散、相应正则性准则或解析半径的专门材料。Ruixiang Zhang 的 Fourier 限制专题不是 Ping Zhang 的流体报告。",
+        "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing."
+      },
+      "existing_record": "research/icm2026-pde-final-reports.json"
     }
   ],
   "cross_listed_reports": [
@@ -1115,8 +1133,8 @@
       "theme_zh": "次共形非线性波方程爆破时的孤子分解",
       "doi": "10.1137/25M1806892",
       "pages": "368-387",
-      "status": "missing",
-      "note": "未找到 Zaag 本篇或次共形非线性波方程爆破孤子分解专题。2A00 中 Benjamin–Ono 的长时间孤子分解属于不同模型，且本地明确标为进行中，不可移作 Zaag 结果。",
+      "status": "selected-branches-integrated",
+      "note": "One narrative overview (4900), 36 atomic notes (4901-4924 in hexadecimal sequence), one reference page. Local writer self-checks are distinct from independent review, Forester build, rendered output and publication.",
       "primary_section": 8,
       "additional_sections": [
         10,
@@ -1133,7 +1151,7 @@
       "category": "Special Section Lectures",
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1806892",
       "checked_on": "2026-10-20",
-      "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing.",
+      "reading_scope": "Entire 20-page PDF text: §§1-4, all displayed formulas and theorem statements, textual figure captions 3.1-3.3, acknowledgments and bibliography [1]-[95]. Supplementary actual reading ranges are listed separately, with unread proof portions. Correction pass for Z-F1/F2/F3 reread report-v1 pp6-7, stability-v1 pp1-2, and cote-v1 pp3-5/8-9 from hash-verified local PDFs; detailed records distinguish these ranges from external deep proofs.",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -1141,14 +1159,20 @@
         "doi": true,
         "method": "Individual SIAM DOI chapter header cross-checked with the complete Volume 5 Section Ten contents."
       },
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "outline": "4900",
+      "reference": "icm2026-zaag",
+      "on_subject_landing": true,
       "reusable_existing_notes": [],
       "background_only_notes": [
         "2A00"
       ],
-      "organizer_proceedings_difference": "Official primary Section 8; explicit dagger Sections 10 and 11; publisher Volume 5 Section Ten chapter 10. Count once in cross_listed_reports, not again in reports."
+      "organizer_proceedings_difference": "Official primary Section 8; explicit dagger Sections 10 and 11; publisher Volume 5 Section Ten chapter 10. Count once in cross_listed_reports, not again in reports.",
+      "baseline_review": {
+        "status": "missing",
+        "note": "未找到 Zaag 本篇或次共形非线性波方程爆破孤子分解专题。2A00 中 Benjamin–Ono 的长时间孤子分解属于不同模型，且本地明确标为进行中，不可移作 Zaag 结果。",
+        "reading_scope": "SIAM Volume 5 complete Section Ten table of contents and individual DOI chapter header: exact title, all authors, page range and DOI; abstract and keywords for the Chinese topic gloss. No full-paper reading, proof verification, PDF/image inspection or talk/video viewing."
+      },
+      "existing_record": "research/icm2026-pde-final-reports.json"
     },
     {
       "speakers": [
@@ -1227,11 +1251,18 @@
       "4100",
       "4200",
       "4300",
+      "4400",
+      "4500",
+      "4600",
+      "4700",
+      "4800",
+      "4900",
+      "4A00",
       "2G00",
       "1200",
       "2I00"
     ],
-    "note": "首页先列三个相关全会专题，其后依照论文集顺序列出七篇偏微分方程专题，并保留三个跨列专题。"
+    "note": "三个相关全会专题领衔，随后按论文集次序列出十一篇专题，并复用其余三个跨列报告。Zaag 在分析、偏微分方程和数学物理首页共享同一专题。"
   },
   "excluded_related_topics": [
     {
@@ -1452,7 +1483,7 @@
     "cross_listed_reports_in_separate_array": true,
     "planned_outline_fields_are_null": true,
     "editorial_leading_topics": "The order 2A00, 2700, 2C00 is verified against the current subject page. These editorial plenary links remain outside the official Section 10 report count.",
-    "prerequisites": "Before invoking the mutating sync function, parent must validate packets, add each accepted report outline exactly once to 006A, and add all three reused cross-listed outlines. The function requires every non-null outline to appear on the subject landing. It locates packet reports only in coverage.reports: a future Zaag integration needs explicit cross-listed handling by parent, not silent reclassification into Section 10 primary.",
+    "prerequisites": "syncSectionReports matches a DOI uniquely across the primary and cross-listed arrays without changing its official section membership.",
     "not_executed": false
   },
   "limitations": [
@@ -1464,5 +1495,6 @@
     "Existing selected-branch topics were matched to sources, not re-certified page by page.",
     "Missing local material means absent from the frozen baseline, not a rejection or acceptance of concurrent agent work."
   ],
-  "limitations_scope": "The limitations below describe the frozen roster audit. Current integration and validation are recorded separately."
+  "limitations_scope": "The limitations below describe the frozen roster audit. Current integration and validation are recorded separately.",
+  "directory_recheck": "research/icm2026-pde-final-directory-check.json"
 }

@@ -1,0 +1,12 @@
+\title{可积受迫项决定谐振子的振荡渐近}
+\date{2026-10-21}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), §4.1.2；常微分方程的直接证明}
+
+\p{设复值函数 #{w\in C^2(\lbrack\rho_0,\infty\rparen)} 满足 #{w''+w=f}，且 #{f\in L^1(\lbrack\rho_0,\infty\rparen)}。定义}
+##{A_+(\rho)=\tfrac 12e^{-i\rho}(w-iw'),\qquad A_-(\rho)=\tfrac 12e^{i\rho}(w+iw').}
+\p{直接微分可得 #{A_+'=-\frac i2e^{-i\rho}f}、#{A_-'=\frac i2e^{i\rho}f}。由[微积分基本定理](0A3C)，#{A_\pm} 均有极限 #{a_\pm}，并且}
+##{w(\rho)=a_+e^{i\rho}+a_-e^{-i\rho}+R(\rho),\qquad |R(\rho)|\le\int_\rho^\infty|f(s)|\,ds.}
+
+\p{特别地，#{|f(\rho)|\le C\rho^{-2}} 时 #{R=O(\rho^{-1})}。若方程带参数 #{y}，且右侧有在该参数集上一致的可积控制，则结论也一致。将其用于[共轭后的 Klein–Gordon 方程](4824)，再乘 #{\rho^{-d/2}}，得到 #{\rho^{-d/2}e^{\pm i\rho}} 型主项。}

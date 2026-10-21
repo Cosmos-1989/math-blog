@@ -1,0 +1,10 @@
+\title{KdV 的局部动量守恒导出加权导数恒等式}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (4.13)–(4.14)}
+
+\p{设实 #{q(t,x)} 为 [KdV](4703) 的 Schwartz 解，#{\phi\in C^3(\mathbb R)} 及其前三阶导数有界。则}
+##{\frac d{dt}\int\phi q^2dx=-3\int\phi' q_x^2dx-4\int\phi' q^3dx+\int\phi'''q^2dx.}
+\p{\strong{证明。}直接计算 #{\partial_t(q^2)=-2qq_{xxx}+12q^2q_x}。另一方面，#{\partial_x[-3q_x^2-4q^3+(q^2)_{xx}]=2qq_{xxx}-12q^2q_x}。所以密度 #{\rho=q^2} 和通量 #{j=-3q_x^2-4q^3+(q^2)_{xx}} 满足局部守恒律 #{\rho_t+j_x=0}。乘 #{\phi} 积分，再将 #{\int\phi'(q^2)_{xx}} 两次分部积分即得。}
+\p{#{\phi=1} 给出 #{\int q^2} 守恒。若 #{\phi'\geq 0} 且在所关心的区间有正下界，左侧变化与其余两项便控制该区间的 #{\iint q_x^2}。对三次项的定量估计可导出报告式 (4.14) 的 Kato 局部平滑界；上式给出产生正导数项的精确恒等式。}

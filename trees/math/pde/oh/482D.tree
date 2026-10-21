@@ -1,0 +1,11 @@
+\title{超过半维数的 Sobolev 正则性控制一致范数}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Fourier 反演与 Schwarz 不等式；[Oh](icm2026-oh) 中 Sobolev 估计的基础}
+
+\p{设 #{s>d/2}。每个 #{f\in H^s(\mathbb R^d)} 都有有界连续代表元，且 #{\|f\|_\infty\le C_{s,d}\|f\|_{H^s}}，其中 [Sobolev 范数](130F)按角频率 Fourier 约定定义。}
+
+\p{\strong{证明。}由 [Schwarz 不等式](004S)，}
+##{\int|\widehat f(\xi)|\,d\xi\le\left(\int\langle\xi\rangle^{-2s}\,d\xi\right)^{1/2}\left(\int\langle\xi\rangle^{2s}|\widehat f(\xi)|^2\,d\xi\right)^{1/2}.}
+\p{第一积分在无穷远与 #{\int_1^\infty r^{d-1-2s}dr} 比较，因 #{2s>d} 有限。因此[反演公式](0I80)的积分绝对收敛并有一致界；连续性由[支配收敛定理](0I8I)得到。将 #{\widehat f} 以光滑紧支撑函数在加权 L² 中逼近，反变换同时在 #{H^s} 与一致范数中收敛；[Plancherel 定理](0W01)识别两种极限，得到一般情形的代表元。}

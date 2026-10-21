@@ -1,0 +1,3467 @@
+{
+  "date": "2026-10-21",
+  "schema_basis": [
+    "research/pde-faure-packet.json",
+    "research/pde-elgindi-packet.json"
+  ],
+  "report": {
+    "speaker": "Ping Zhang",
+    "prefix": "4A",
+    "outline": "4A00",
+    "reference": "icm2026-ping-zhang",
+    "title": "3-D Anisotropic vs. Classical Incompressible Navier–Stokes Equations",
+    "outline_title": "各向异性与经典三维流体：耗散、单分量控制和解析性",
+    "doi": "10.1137/25M1801980",
+    "pages": "388-407",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1801980",
+    "version_url": "https://epubs.siam.org/doi/10.1137/25M1801980",
+    "version_role": "正式出版HTML全文为主文本。三篇补充研究固定arXiv:1905.00156v1、1310.6442v1、2406.10865v2，逐篇阅读范围单列；Springer2024仅实际读到预览及附录A。",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union；参考页署名Ping Zhang并注明中文改编、独立基础推导与许可。未复制报告图像；补充论文保留各自许可。",
+    "question": "各向异性分析怎样连接仅水平耗散、经典三维 NS 的特殊大数据和条件正则性？",
+    "reading_scope": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。 未逐项阅读全文参考文献1–71；未取得并逐页视觉检查正式PDF。 其余原始研究按source_records分别标记选读范围；摘要不视为全文。",
+    "coverage_status": "1篇叙事概览4A00、40篇原子笔记4A01–4A28（十六进制连续编号）、1篇参考页。覆盖模型和空间、ANS存在理论及依赖性、经典NS特殊大数据与单分量判据、解析半径。40篇均从概览正文可达。已按PZ-F1..F5修订并重新冻结，等待独立复验；无站点构建或发布。",
+    "proof_scope": {
+      "4A01": "定义模型、系数和域；不含存在性断言。",
+      "4A02": "光滑衰减解的分部积分证明；不由此构造弱解。",
+      "4A03": "频率范数及齐次实现约定；不引用未定义的空间。",
+      "4A04": "定义截断；用望远镜求和证明分解。",
+      "4A05": "定义和低频实现；不证明产品定理。",
+      "4A06": "定义时间范数及解类。",
+      "4A07": "Fourier 换元及二进索引平移证明。",
+      "4A08": "低高频分割与几何级数证明。",
+      "4A09": "频率支撑和乘子指数估计。",
+      "4A0A": "张量乘积与调制给出反例。",
+      "4A0B": "定义混合范数及两种频区；不证明完整乘积律。",
+      "4A0C": "引用 Paicu 定理；解释缺失导数与频块求和，研究证明未重建。",
+      "4A0D": "标量微分不等式逐块乘权并积分的证明。",
+      "4A0E": "引用 Paicu–Zhang 定理；解分解和阈值明确，压力机制解释。",
+      "4A0F": "引用 LPZ-v1 Corollary 1.1，保留四次幂版本和精确解分解。",
+      "4A10": "分布恒等式和有界 L2 乘子证明。",
+      "4A11": "频率非零处的二维线性代数证明，低频域明确。",
+      "4A12": "逐项求导、压力散度及符号核算。",
+      "4A13": "两个频率锥上的逐点比较证明。",
+      "4A14": "光滑实标量的链式求导、由Stokes公式在大球上分部积分及边界极限证明；保留p<2的正则化测试和积分有限假设，不把标量等式用于向量模。",
+      "4A15": "引用局部存在、小数据全局及延拓判据；推导温和方程符号。",
+      "4A16": "引用 CZ-v1 Theorem1.4，完整保留初始涡量和 p 范围；计算临界性。",
+      "4A17": "引用两个关键先验估计；阐述闭合机制和深层输入，不替代研究证明。",
+      "4A18": "定义频率权并比较普通半阶范数。",
+      "4A19": "引用阈值定理；区分非零下界和无穷大。",
+      "4A1A": "逐坐标三次多项式恒等式与能量求导证明。",
+      "4A1B": "定义解析半径并证明指数 Hs 控制是充分条件。",
+      "4A1C": "配方及 Plancherel 证明，区别线性与非线性半径。",
+      "4A1D": "三角不等式和初值 L2 尾积分的直接证明。",
+      "4A1E": "引用 LZ-v2 Theorem1.2，证明高频参数趋无穷及较弱显式推论。",
+      "4A1F": "报告Remark4.5(4)的明确带限特例；只证明数据满足解析范数条件，非线性定理引用。",
+      "4A20": "有限频块乘积的精确分组证明；无限极限注明收敛前提。",
+      "4A21": "引用连续依赖定理；共同存在区间按最大解解释。",
+      "4A22": "引用分离序列；用定义证明对一致连续的否定。",
+      "4A23": "带限特例的 O(epsilon^1/2) 估计和无散度计算；一般 Schwartz 版本明确引用。",
+      "4A24": "全套换元与散度计算；不将计算直接升级为全局定理。",
+      "4A25": "一般柱坐标下非零整数角频率标量模的梯度能量计算；整数条件保证全局单值性，由链式法则显式推导，明确不等同向量NS定理。",
+      "4A26": "引用报告3.9的存在部分；使用一般正交标架分量及散度公式验证约束，允许角度依赖与非零角向分量；不重述全部模态衰减估计。",
+      "4A27": "引用报告3.8的存在结论，全部辅助量和数据条件显式；仅保留局部时间积分结论。",
+      "4A28": "在r>0明确坐标域、单位标架、一般角度依赖的向量分量和轴线限制；直接计算标架导数，并由链式法则及欧氏散度推导柱坐标散度式。"
+    },
+    "claim_sources": {
+      "4A01": "report §2 (2.1)",
+      "4A02": "report §1 (1.2), §2",
+      "4A03": "report Definition 2.1; LPZ-v1 Definition 1.1",
+      "4A04": "report (2.3); LPZ-v1 (1.3)",
+      "4A05": "report Definition 2.2",
+      "4A06": "report Definition 2.2 and Theorem 2.1",
+      "4A07": "report §2; independent scaling calculation",
+      "4A08": "LPZ-v1 §2 (2.1)",
+      "4A09": "report (2.5) discussion",
+      "4A0A": "report §2 mechanism; independent counterexample；0W01 Plancherel theorem, direct application to the modulated vertical frequency support",
+      "4A0B": "report Definition 2.3; LPZ-v1 Definition 1.3",
+      "4A0C": "report Theorem 2.1; Paicu 2005 DOI 10.4171/rmi/420",
+      "4A0D": "report Definition 2.4; LPZ-v1 Definition 2.2",
+      "4A0E": "report Theorem 2.3 (2.6)-(2.7); Paicu–Zhang 2011 DOI 10.1007/s00220-011-1350-6",
+      "4A0F": "LPZ-v1 Theorem 1.2, Corollary 1.1 (1.10), PDF p4; report Theorem 2.4 version comparison",
+      "4A10": "report Remark 2.2(b); LPZ-v1 Remark 1.1(b)",
+      "4A11": "CZ-v1 §2 (2.1)-(2.2), PDF p4",
+      "4A12": "report (3.7); CZ-v1 §2; pressure sign derived with explicit (-Delta) inverse",
+      "4A13": "CZ-v1 §2 (2.4), PDF p5",
+      "4A14": "report (1.2); CZ-v1 Lemma 3.1, PDF p8；0BAC Stokes formula on expanding balls, with vanishing boundary terms under the stated decay assumptions",
+      "4A15": "report Theorems 1.2, 3.2; Fujita–Kato 1964 DOI 10.1007/BF00276188",
+      "4A16": "report Theorems 3.3-3.4; CZ-v1 Theorems 1.3-1.4, PDF p3",
+      "4A17": "report Proposition3.1; CZ-v1 Propositions2.1-2.3, §5-8",
+      "4A18": "report Definition3.1",
+      "4A19": "report Theorem3.7; Chemin–Gallagher–Zhang 2019 DOI10.1080/03605302.2019.1641725",
+      "4A1A": "report (3.8) and following E1 identity",
+      "4A1B": "report §4; elementary Fourier argument",
+      "4A1C": "report §4 mechanism; LZ-v2 (2.2)",
+      "4A1D": "LZ-v2 Lemma 2.3, (2.30), PDF p16; independent local short-time variant",
+      "4A1E": "report Theorem4.4 (4.7)-(4.8); LZ-v2 Theorem1.2, PDF pp3-5",
+      "4A1F": "report Remark4.5(4) (4.10); Liu–Zhang2024 DOI10.1007/s00205-024-02051-2",
+      "4A20": "Liu–Zhang2024 Appendix A (A.1)-(A.3); report (3.9)",
+      "4A21": "report Theorem2.5; Zhang–Zhu JFA288(2025)110689",
+      "4A22": "report Theorem2.6 (2.12); Zhang–Zhu JFA288(2025)110689",
+      "4A23": "report Proposition2.1 and (1.6); Chemin–Zhang2007",
+      "4A24": "report (3.11); independent anisotropic dilation calculation",
+      "4A25": "report §3.2 (3.18)-(3.21) mechanism；4A28 general cylindrical coordinates and orthonormal frame",
+      "4A26": "report Theorem3.9 (3.12)-(3.14); Liu–Zhang2024 DOI10.1016/j.aim.2023.109475；4A28 general cylindrical coordinates, physical vector components and divergence formula",
+      "4A27": "report Theorem3.8; Liu–Zhang2020 DOI10.1007/s00205-019-01447-9",
+      "4A28": "report §3.2 coordinate conventions；004P orthonormal set definition；0A34 chain rule；4301 Euclidean divergence; direct coordinate derivation"
+    },
+    "remaining_branches": [
+      "ANS局部、小水平分量和小单向导数的完整非线性证明：补足压力分解、各向异性乘积律、时间权与逼近极限。已有基础推导不替代Paicu、Paicu–Zhang或LPZ的研究证明。",
+      "单分量判据的全部指数范围与端点证明：4<p<6固定方向采用CZ-v1；扩大p范围、时间变化方向、端点压力及对数乘积律须另核完整原始论文。未加权p=∞问题只按报告所处状态说明，不作后续文献穷尽判断。",
+      "经典NS小竖直导数定理的完整二维背景估计：报告3.8的全部数据权与小量条件已录入，背景二维解、扰动估计及原论文全证明尚未逐页重建。",
+      "圆柱大角模态定理和定量模态衰减：4A25只证明标量耗散；4A26引用全空间经典NS存在结论。圆柱边界与轴线相容性、报告3.10完整条件、ANS变体、式(3.17)/(3.20)的精细模态衰减留待原始全文核定。",
+      "无磁扩散MHD及跨专题基础：报告§3.3仅在概览中交代，不在本独占前缀另造共享MHD基础页；若展开，先与负责共享基础的作者协调方程、磁场散度和耗散定义。",
+      "ANS全局小解析定理的双频空间与小量条件：报告4.6及出版社附录的B^(s,s')记号不能直接等同此前竖直单分块B空间。原论文主要正文不可访问，保持未展开；4A1F只收录带限解析数据的局部结论。",
+      "解析半径的临界、Lp及长时间结果：已录LZ-v2定理1.2亚临界精细短时下界。报告4.1的大时间结论以已有全局解为条件；4.2–4.3的完整Lp非线性控制、LZ-v2定理1.3临界情形尚未整理。",
+      "一般Sobolev和Besov解析半径的新扩展：报告4.5明确属于进行中的工作，未转录为已发表定理。",
+      "ANS连续但非一致连续的原始构造：有界分离序列的研究构造及共同存在时间估计引用Zhang–Zhu；本地只给出从序列推出非一致连续的定义级证明。",
+      "外部中文术语对照：香蕉空间Sobolev和Besov条目均未成功读取；采用站内现有术语与原文数学定义。",
+      "独立数学复核与统一站点集成：本轮修复PZ-F1..F5并重新执行独占文件的源码检查与冻结；共享注册、Forester构建、渲染、发布及独立验收交由父级，不将作者修复记录视为review通过。"
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "source": "ANS局部、小水平分量和小单向导数的完整非线性证明",
+        "pages": [
+          "4A0C",
+          "4A0D",
+          "4A0E",
+          "4A0F"
+        ],
+        "boundary": "补足压力分解、各向异性乘积律、时间权与逼近极限。已有基础推导不替代Paicu、Paicu–Zhang或LPZ的研究证明。"
+      },
+      {
+        "source": "单分量判据的全部指数范围与端点证明",
+        "pages": [
+          "4A16",
+          "4A17",
+          "4A19"
+        ],
+        "boundary": "4<p<6固定方向采用CZ-v1；扩大p范围、时间变化方向、端点压力及对数乘积律须另核完整原始论文。未加权p=∞问题只按报告所处状态说明，不作后续文献穷尽判断。"
+      },
+      {
+        "source": "经典NS小竖直导数定理的完整二维背景估计",
+        "pages": [
+          "4A27"
+        ],
+        "boundary": "报告3.8的全部数据权与小量条件已录入，背景二维解、扰动估计及原论文全证明尚未逐页重建。"
+      },
+      {
+        "source": "圆柱大角模态定理和定量模态衰减",
+        "pages": [
+          "4A25",
+          "4A26"
+        ],
+        "boundary": "4A25只证明标量耗散；4A26引用全空间经典NS存在结论。圆柱边界与轴线相容性、报告3.10完整条件、ANS变体、式(3.17)/(3.20)的精细模态衰减留待原始全文核定。"
+      },
+      {
+        "source": "ANS全局小解析定理的双频空间与小量条件",
+        "pages": [
+          "4A1F",
+          "4A20"
+        ],
+        "boundary": "报告4.6及出版社附录的B^(s,s')记号不能直接等同此前竖直单分块B空间。原论文主要正文不可访问，保持未展开；4A1F只收录带限解析数据的局部结论。"
+      },
+      {
+        "source": "解析半径的临界、Lp及长时间结果",
+        "pages": [
+          "4A1B",
+          "4A1C",
+          "4A1D",
+          "4A1E"
+        ],
+        "boundary": "已录LZ-v2定理1.2亚临界精细短时下界。报告4.1的大时间结论以已有全局解为条件；4.2–4.3的完整Lp非线性控制、LZ-v2定理1.3临界情形尚未整理。"
+      },
+      {
+        "source": "ANS连续但非一致连续的原始构造",
+        "pages": [
+          "4A21",
+          "4A22"
+        ],
+        "boundary": "有界分离序列的研究构造及共同存在时间估计引用Zhang–Zhu；本地只给出从序列推出非一致连续的定义级证明。"
+      }
+    ]
+  },
+  "prerequisites": {
+    "4A00": [],
+    "4A01": [
+      "4301",
+      "4302"
+    ],
+    "4A02": [
+      "4A01",
+      "4304",
+      "00Q6"
+    ],
+    "4A03": [
+      "0H4G",
+      "0H4F",
+      "0W0Z",
+      "00M7",
+      "00Q6"
+    ],
+    "4A04": [
+      "0H4G",
+      "0I80",
+      "0H4F"
+    ],
+    "4A05": [
+      "4A04",
+      "00Q6",
+      "00M7",
+      "0W0Z"
+    ],
+    "4A06": [
+      "4A05",
+      "4305"
+    ],
+    "4A07": [
+      "4308",
+      "4A03",
+      "4A05",
+      "0H4G"
+    ],
+    "4A08": [
+      "4A04",
+      "4A05",
+      "0W01"
+    ],
+    "4A09": [
+      "4A04",
+      "0W01",
+      "4317"
+    ],
+    "4A0A": [
+      "4A09",
+      "4A03",
+      "0H4F",
+      "0W01"
+    ],
+    "4A0B": [
+      "4A04",
+      "00Q6",
+      "00M7"
+    ],
+    "4A0C": [
+      "4A01",
+      "4A05",
+      "4A06"
+    ],
+    "4A0D": [
+      "4A06"
+    ],
+    "4A0E": [
+      "4A01",
+      "4A0B",
+      "4A06",
+      "4A09",
+      "4A0D"
+    ],
+    "4A0F": [
+      "4A01",
+      "4A03",
+      "4A05",
+      "4A08",
+      "4A0B",
+      "4A06",
+      "4A09"
+    ],
+    "4A10": [
+      "4301",
+      "4A03",
+      "4A05"
+    ],
+    "4A11": [
+      "4301",
+      "430I",
+      "4A03"
+    ],
+    "4A12": [
+      "4302",
+      "4301",
+      "4508",
+      "4A11"
+    ],
+    "4A13": [
+      "4A03",
+      "4301"
+    ],
+    "4A14": [
+      "4301",
+      "00Q6",
+      "0A34",
+      "0BAC"
+    ],
+    "4A15": [
+      "4302",
+      "4A03",
+      "4305",
+      "430C",
+      "4317"
+    ],
+    "4A16": [
+      "4A15",
+      "4301",
+      "4A07"
+    ],
+    "4A17": [
+      "4A16",
+      "4A12",
+      "4A11",
+      "4A13",
+      "4A14"
+    ],
+    "4A18": [
+      "4A03"
+    ],
+    "4A19": [
+      "4A18",
+      "4A15"
+    ],
+    "4A1A": [
+      "4301",
+      "4302",
+      "4304"
+    ],
+    "4A1B": [
+      "0H4G",
+      "0I80",
+      "4A03",
+      "0A68",
+      "0A3G"
+    ],
+    "4A1C": [
+      "4A1B",
+      "4A09",
+      "0W01"
+    ],
+    "4A1D": [
+      "4A03",
+      "00E2"
+    ],
+    "4A1E": [
+      "4A15",
+      "4A1B",
+      "4A1C",
+      "4A1D"
+    ],
+    "4A1F": [
+      "4A01",
+      "4A04",
+      "4A05",
+      "4A1B",
+      "0H4F"
+    ],
+    "4A20": [
+      "4A04"
+    ],
+    "4A21": [
+      "4A01",
+      "4A03",
+      "4305",
+      "00E2"
+    ],
+    "4A22": [
+      "4A21",
+      "0F40"
+    ],
+    "4A23": [
+      "4A0B",
+      "0H4G",
+      "4301",
+      "4A0E",
+      "0H4F"
+    ],
+    "4A24": [
+      "4A03",
+      "4301",
+      "0H4G"
+    ],
+    "4A25": [
+      "4A28",
+      "00Q6",
+      "0A34"
+    ],
+    "4A26": [
+      "4302",
+      "4A28",
+      "00Q6",
+      "4A25",
+      "4A03"
+    ],
+    "4A27": [
+      "4A15",
+      "4A03",
+      "4A05",
+      "4A04"
+    ],
+    "icm2026-ping-zhang": [],
+    "4A28": [
+      "004P",
+      "0A34",
+      "4301"
+    ]
+  },
+  "atomic_questions": {
+    "4A01": "各向异性模型与经典三维 NS 的耗散有何区别？",
+    "4A02": "ANS 的动能能直接控制哪些导数？",
+    "4A03": "怎样分别测量水平与竖直的 Sobolev 正则性？",
+    "4A04": "怎样把水平频率与竖直频率分别分成二进环带？",
+    "4A05": "只对竖直频率作可和分块得到什么临界空间？",
+    "4A06": "时间积分与频率求和按什么次序进行？",
+    "4A07": "各向异性数据范数在 NS 缩放下怎样变化？",
+    "4A08": "怎样用 L2 与一次竖直导数控制临界 Besov 范数？",
+    "4A09": "什么频率区域里水平热耗散足以控制竖直频率？",
+    "4A0A": "水平热流能否统一增加正阶竖直正则性？",
+    "4A0B": "为何临界空间要分别处理水平高频和水平低频？",
+    "4A0C": "仅水平耗散在临界数据空间中有哪些存在唯一性结论？",
+    "4A0D": "Chemin–Lerner 估计中的时间权如何处理大分量增长？",
+    "4A0E": "ANS 允许多大的竖直初速度，水平小量如何依赖它？",
+    "4A0F": "何种单向导数小量足以允许大的水平旋转部分？",
+    "4A10": "小单向导数实际约束水平速度的哪些部分？",
+    "4A11": "已知竖直速度与竖直涡量，怎样重建水平速度？",
+    "4A12": "经典 NS 怎样化为竖直涡量和竖直伸缩的耦合系统？",
+    "4A13": "为何 ∂3u3 的各向异性负阶范数可由临界速度控制？",
+    "4A14": "为什么竖直涡量的三分之四次幂适合能量估计？",
+    "4A15": "经典 NS 在临界 Sobolev 数据下有什么局部与全局结论？",
+    "4A16": "一个速度投影的什么时空控制可以阻止有限时奇性？",
+    "4A17": "控制 u3 如何同时约束竖直涡量与竖直伸缩？",
+    "4A18": "单分量端点估计增加了哪一种对数正则性？",
+    "4A19": "有限时奇性对单分量的对数加权范数提出什么必要条件？",
+    "4A1A": "水平二乘二梯度矩阵为何使三次非线性含一个竖直分量？",
+    "4A1B": "指数频率衰减怎样给出复空间中的解析延拓？",
+    "4A1C": "热核如何支付指数解析权的代价？",
+    "4A1D": "为什么连续强解的短时高频尾趋于零？",
+    "4A1E": "所有 γ大于二分之一的 Sobolev 初值可获得什么短时解析半径？",
+    "4A1F": "无竖直黏性时，带限初值能得到怎样的短时水平解析性？",
+    "4A20": "乘积的低高频和相近频率相互作用如何分离？",
+    "4A21": "初值收敛能否给出同一时间区间上的解收敛？",
+    "4A22": "为什么逐初值稳定性不提供有界初值族上的统一模？",
+    "4A23": "大频率调制怎样产生符合全局定理的初值？",
+    "4A24": "为何慢变初值能有大 L2 范数却有小竖直导数？",
+    "4A25": "大角频率为什么在有界半径圆柱中给出统一耗散？",
+    "4A26": "固定剖面加上足够高的角频率何时产生全局经典 NS 解？",
+    "4A27": "经典 NS 的慢变机制需要哪些完整数据条件？",
+    "4A28": "一般柱坐标中的正交标架如何定义向量分量及其角向变化？"
+  },
+  "notes": [
+    {
+      "id": "4A00",
+      "path": "trees/math/pde/ping-zhang/4A00.tree",
+      "title": "各向异性与经典三维流体：耗散、单分量控制和解析性",
+      "taxon": "Outline",
+      "prerequisites": [],
+      "question": "各向异性分析怎样连接仅水平耗散、经典三维 NS 的特殊大数据和条件正则性？",
+      "proof_scope": "叙事综述；各定理和局部证明分别链接，不作整体全局正则性断言。",
+      "proof_status": "narrative-overview",
+      "refs": [
+        "report §§1-4"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §§1-4"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R5",
+        "R8",
+        "R11"
+      ],
+      "body_links": [
+        "4A01",
+        "4A02",
+        "4A0A",
+        "4A03",
+        "4A04",
+        "4A05",
+        "4A07",
+        "4A08",
+        "4A06",
+        "4A20",
+        "4A09",
+        "4A0B",
+        "4A23",
+        "4A0C",
+        "4A0E",
+        "4A0D",
+        "4A0F",
+        "4A10",
+        "4A24",
+        "4A27",
+        "4A28",
+        "4A25",
+        "4A26",
+        "4A15",
+        "4A16",
+        "4A11",
+        "4A12",
+        "4A13",
+        "4A14",
+        "4A1A",
+        "4A17",
+        "4A18",
+        "4A19",
+        "4A21",
+        "4A22",
+        "4A1B",
+        "4A1C",
+        "4A1D",
+        "4A1E",
+        "4A1F",
+        "icm2026-ping-zhang"
+      ]
+    },
+    {
+      "id": "4A01",
+      "path": "trees/math/pde/ping-zhang/4A01.tree",
+      "title": "仅有水平耗散的三维不可压缩方程",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4301",
+        "4302"
+      ],
+      "question": "各向异性模型与经典三维 NS 的耗散有何区别？",
+      "proof_scope": "定义模型、系数和域；不含存在性断言。",
+      "proof_status": "definition-with-local-conventions",
+      "refs": [
+        "report §2 (2.1)"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §2 (2.1)"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4301",
+        "4302"
+      ]
+    },
+    {
+      "id": "4A02",
+      "path": "trees/math/pde/ping-zhang/4A02.tree",
+      "title": "水平耗散的动能恒等式",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A01",
+        "4304",
+        "00Q6"
+      ],
+      "question": "ANS 的动能能直接控制哪些导数？",
+      "proof_scope": "光滑衰减解的分部积分证明；不由此构造弱解。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report §1 (1.2), §2"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §1 (1.2), §2"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4A01",
+        "00Q6",
+        "4304"
+      ]
+    },
+    {
+      "id": "4A03",
+      "path": "trees/math/pde/ping-zhang/4A03.tree",
+      "title": "水平与竖直频率加权的 Sobolev 空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0H4G",
+        "0H4F",
+        "0W0Z",
+        "00M7",
+        "00Q6"
+      ],
+      "question": "怎样分别测量水平与竖直的 Sobolev 正则性？",
+      "proof_scope": "频率范数及齐次实现约定；不引用未定义的空间。",
+      "proof_status": "definition-with-local-conventions",
+      "refs": [
+        "report Definition 2.1; LPZ-v1 Definition 1.1"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Definition 2.1; LPZ-v1 Definition 1.1"
+          ]
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "report Definition 2.1; LPZ-v1 Definition 1.1"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R10",
+        "R11"
+      ],
+      "body_links": [
+        "0H4G",
+        "0H4F",
+        "00M7",
+        "0W0Z",
+        "00Q6"
+      ]
+    },
+    {
+      "id": "4A04",
+      "path": "trees/math/pde/ping-zhang/4A04.tree",
+      "title": "水平与竖直 Littlewood–Paley 分块",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0H4G",
+        "0I80",
+        "0H4F"
+      ],
+      "question": "怎样把水平频率与竖直频率分别分成二进环带？",
+      "proof_scope": "定义截断；用望远镜求和证明分解。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report (2.3); LPZ-v1 (1.3)"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report (2.3); LPZ-v1 (1.3)"
+          ]
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "report (2.3); LPZ-v1 (1.3)"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "0H4F",
+        "0H4G",
+        "0I80"
+      ]
+    },
+    {
+      "id": "4A05",
+      "path": "trees/math/pde/ping-zhang/4A05.tree",
+      "title": "竖直临界 Besov 范数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4A04",
+        "00Q6",
+        "00M7",
+        "0W0Z"
+      ],
+      "question": "只对竖直频率作可和分块得到什么临界空间？",
+      "proof_scope": "定义和低频实现；不证明产品定理。",
+      "proof_status": "definition-with-local-conventions",
+      "refs": [
+        "report Definition 2.2"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Definition 2.2"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R10",
+        "R11"
+      ],
+      "body_links": [
+        "4A04",
+        "00Q6",
+        "00M7",
+        "0W0Z"
+      ]
+    },
+    {
+      "id": "4A06",
+      "path": "trees/math/pde/ping-zhang/4A06.tree",
+      "title": "Chemin–Lerner 时间范数的求和次序",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4A05",
+        "4305"
+      ],
+      "question": "时间积分与频率求和按什么次序进行？",
+      "proof_scope": "定义时间范数及解类。",
+      "proof_status": "definition-with-local-conventions",
+      "refs": [
+        "report Definition 2.2 and Theorem 2.1"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Definition 2.2 and Theorem 2.1"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R10",
+        "R11"
+      ],
+      "body_links": [
+        "4A05",
+        "4305"
+      ]
+    },
+    {
+      "id": "4A07",
+      "path": "trees/math/pde/ping-zhang/4A07.tree",
+      "title": "各向异性范数的临界缩放指数",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4308",
+        "4A03",
+        "4A05",
+        "0H4G"
+      ],
+      "question": "各向异性数据范数在 NS 缩放下怎样变化？",
+      "proof_scope": "Fourier 换元及二进索引平移证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report §2; independent scaling calculation"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §2; independent scaling calculation"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4308",
+        "0H4G",
+        "4A03",
+        "4A05"
+      ]
+    },
+    {
+      "id": "4A08",
+      "path": "trees/math/pde/ping-zhang/4A08.tree",
+      "title": "一次竖直导数给出的临界插值",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A04",
+        "4A05",
+        "0W01"
+      ],
+      "question": "怎样用 L2 与一次竖直导数控制临界 Besov 范数？",
+      "proof_scope": "低高频分割与几何级数证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "LPZ-v1 §2 (2.1)"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": []
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "LPZ-v1 §2 (2.1)"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4A04",
+        "0W01",
+        "4A05"
+      ]
+    },
+    {
+      "id": "4A09",
+      "path": "trees/math/pde/ping-zhang/4A09.tree",
+      "title": "水平高频区的热耗散控制全部频率",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A04",
+        "0W01",
+        "4317"
+      ],
+      "question": "什么频率区域里水平热耗散足以控制竖直频率？",
+      "proof_scope": "频率支撑和乘子指数估计。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report (2.5) discussion"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report (2.5) discussion"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4317",
+        "4A04",
+        "0W01"
+      ]
+    },
+    {
+      "id": "4A0A",
+      "path": "trees/math/pde/ping-zhang/4A0A.tree",
+      "title": "水平热方程不产生竖直平滑",
+      "taxon": "Example",
+      "prerequisites": [
+        "4A09",
+        "4A03",
+        "0H4F",
+        "0W01"
+      ],
+      "question": "水平热流能否统一增加正阶竖直正则性？",
+      "proof_scope": "张量乘积与调制给出反例。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report §2 mechanism; independent counterexample",
+        "0W01 Plancherel theorem, direct application to the modulated vertical frequency support"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §2 mechanism; independent counterexample"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4A03",
+        "4A09",
+        "0H4F",
+        "0W01"
+      ]
+    },
+    {
+      "id": "4A0B",
+      "path": "trees/math/pde/ping-zhang/4A0B.tree",
+      "title": "水平振荡适用的混合临界空间",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4A04",
+        "00Q6",
+        "00M7"
+      ],
+      "question": "为何临界空间要分别处理水平高频和水平低频？",
+      "proof_scope": "定义混合范数及两种频区；不证明完整乘积律。",
+      "proof_status": "definition-with-local-conventions",
+      "refs": [
+        "report Definition 2.3; LPZ-v1 Definition 1.3"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Definition 2.3; LPZ-v1 Definition 1.3"
+          ]
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "report Definition 2.3; LPZ-v1 Definition 1.3"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R10",
+        "R11"
+      ],
+      "body_links": [
+        "4A04",
+        "00Q6",
+        "00M7"
+      ]
+    },
+    {
+      "id": "4A0C",
+      "path": "trees/math/pde/ping-zhang/4A0C.tree",
+      "title": "竖直临界空间中的 ANS 局部与小数据全局解",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A01",
+        "4A05",
+        "4A06"
+      ],
+      "question": "仅水平耗散在临界数据空间中有哪些存在唯一性结论？",
+      "proof_scope": "引用 Paicu 定理；解释缺失导数与频块求和，研究证明未重建。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem 2.1; Paicu 2005 DOI 10.4171/rmi/420"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem 2.1; Paicu 2005 DOI 10.4171/rmi/420"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem 2.1; Paicu 2005 DOI 10.4171/rmi/420"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R1",
+        "R11"
+      ],
+      "body_links": [
+        "4A01",
+        "4A05",
+        "4A06"
+      ]
+    },
+    {
+      "id": "4A0D",
+      "path": "trees/math/pde/ping-zhang/4A0D.tree",
+      "title": "指数时间权把增长项变成耗散项",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A06"
+      ],
+      "question": "Chemin–Lerner 估计中的时间权如何处理大分量增长？",
+      "proof_scope": "标量微分不等式逐块乘权并积分的证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report Definition 2.4; LPZ-v1 Definition 2.2"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Definition 2.4; LPZ-v1 Definition 2.2"
+          ]
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "report Definition 2.4; LPZ-v1 Definition 2.2"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R1",
+        "R11"
+      ],
+      "body_links": [
+        "4A06"
+      ]
+    },
+    {
+      "id": "4A0E",
+      "path": "trees/math/pde/ping-zhang/4A0E.tree",
+      "title": "大竖直分量下的小水平分量全局定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A01",
+        "4A0B",
+        "4A06",
+        "4A09",
+        "4A0D"
+      ],
+      "question": "ANS 允许多大的竖直初速度，水平小量如何依赖它？",
+      "proof_scope": "引用 Paicu–Zhang 定理；解分解和阈值明确，压力机制解释。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem 2.3 (2.6)-(2.7); Paicu–Zhang 2011 DOI 10.1007/s00220-011-1350-6"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem 2.3 (2.6)-(2.7); Paicu–Zhang 2011 DOI 10.1007/s00220-011-1350-6"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem 2.3 (2.6)-(2.7); Paicu–Zhang 2011 DOI 10.1007/s00220-011-1350-6"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R1",
+        "R11"
+      ],
+      "body_links": [
+        "4A0B",
+        "4A01",
+        "4A09",
+        "4A06",
+        "4A0D"
+      ]
+    },
+    {
+      "id": "4A0F",
+      "path": "trees/math/pde/ping-zhang/4A0F.tree",
+      "title": "ANS 的小单向导数全局存在定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A01",
+        "4A03",
+        "4A05",
+        "4A08",
+        "4A0B",
+        "4A06",
+        "4A09"
+      ],
+      "question": "何种单向导数小量足以允许大的水平旋转部分？",
+      "proof_scope": "引用 LPZ-v1 Corollary 1.1，保留四次幂版本和精确解分解。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "LPZ-v1 Theorem 1.2, Corollary 1.1 (1.10), PDF p4; report Theorem 2.4 version comparison"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "LPZ-v1 Theorem 1.2, Corollary 1.1 (1.10), PDF p4; report Theorem 2.4 version comparison"
+          ]
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "LPZ-v1 Theorem 1.2, Corollary 1.1 (1.10), PDF p4; report Theorem 2.4 version comparison"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R1",
+        "R11"
+      ],
+      "body_links": [
+        "4A03",
+        "4A05",
+        "4A0B",
+        "4A08",
+        "4A01",
+        "4A09",
+        "4A06"
+      ]
+    },
+    {
+      "id": "4A10",
+      "path": "trees/math/pde/ping-zhang/4A10.tree",
+      "title": "不可压缩条件将竖直伸缩转成水平散度",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4301",
+        "4A03",
+        "4A05"
+      ],
+      "question": "小单向导数实际约束水平速度的哪些部分？",
+      "proof_scope": "分布恒等式和有界 L2 乘子证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report Remark 2.2(b); LPZ-v1 Remark 1.1(b)"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Remark 2.2(b); LPZ-v1 Remark 1.1(b)"
+          ]
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+          "application_scope": [
+            "report Remark 2.2(b); LPZ-v1 Remark 1.1(b)"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4301",
+        "4A03",
+        "4A05"
+      ]
+    },
+    {
+      "id": "4A11",
+      "path": "trees/math/pde/ping-zhang/4A11.tree",
+      "title": "水平散度和竖直涡量恢复水平速度",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4301",
+        "430I",
+        "4A03"
+      ],
+      "question": "已知竖直速度与竖直涡量，怎样重建水平速度？",
+      "proof_scope": "频率非零处的二维线性代数证明，低频域明确。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "CZ-v1 §2 (2.1)-(2.2), PDF p4"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": []
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+          "application_scope": [
+            "CZ-v1 §2 (2.1)-(2.2), PDF p4"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4A03",
+        "4301",
+        "430I"
+      ]
+    },
+    {
+      "id": "4A12",
+      "path": "trees/math/pde/ping-zhang/4A12.tree",
+      "title": "竖直涡量与竖直伸缩的耦合方程",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4302",
+        "4301",
+        "4508",
+        "4A11"
+      ],
+      "question": "经典 NS 怎样化为竖直涡量和竖直伸缩的耦合系统？",
+      "proof_scope": "逐项求导、压力散度及符号核算。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report (3.7); CZ-v1 §2; pressure sign derived with explicit (-Delta) inverse"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report (3.7); CZ-v1 §2; pressure sign derived with explicit (-Delta) inverse"
+          ]
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+          "application_scope": [
+            "report (3.7); CZ-v1 §2; pressure sign derived with explicit (-Delta) inverse"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4302",
+        "4508",
+        "4301",
+        "4A11"
+      ]
+    },
+    {
+      "id": "4A13",
+      "path": "trees/math/pde/ping-zhang/4A13.tree",
+      "title": "无散度性控制负阶各向异性伸缩范数",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A03",
+        "4301"
+      ],
+      "question": "为何 ∂3u3 的各向异性负阶范数可由临界速度控制？",
+      "proof_scope": "两个频率锥上的逐点比较证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "CZ-v1 §2 (2.4), PDF p5"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": []
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+          "application_scope": [
+            "CZ-v1 §2 (2.4), PDF p5"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4A03",
+        "4301"
+      ]
+    },
+    {
+      "id": "4A14",
+      "path": "trees/math/pde/ping-zhang/4A14.tree",
+      "title": "输运扩散方程的 Lp 耗散恒等式",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4301",
+        "00Q6",
+        "0A34",
+        "0BAC"
+      ],
+      "question": "为什么竖直涡量的三分之四次幂适合能量估计？",
+      "proof_scope": "光滑实标量的链式求导、由Stokes公式在大球上分部积分及边界极限证明；保留p<2的正则化测试和积分有限假设，不把标量等式用于向量模。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report (1.2); CZ-v1 Lemma 3.1, PDF p8",
+        "0BAC Stokes formula on expanding balls, with vanishing boundary terms under the stated decay assumptions"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report (1.2); CZ-v1 Lemma 3.1, PDF p8"
+          ]
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+          "application_scope": [
+            "report (1.2); CZ-v1 Lemma 3.1, PDF p8"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4301",
+        "0A34",
+        "0BAC",
+        "00Q6"
+      ]
+    },
+    {
+      "id": "4A15",
+      "path": "trees/math/pde/ping-zhang/4A15.tree",
+      "title": "经典 NS 的 Fujita–Kato 临界解",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4302",
+        "4A03",
+        "4305",
+        "430C",
+        "4317"
+      ],
+      "question": "经典 NS 在临界 Sobolev 数据下有什么局部与全局结论？",
+      "proof_scope": "引用局部存在、小数据全局及延拓判据；推导温和方程符号。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorems 1.2, 3.2; Fujita–Kato 1964 DOI 10.1007/BF00276188"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorems 1.2, 3.2; Fujita–Kato 1964 DOI 10.1007/BF00276188"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorems 1.2, 3.2; Fujita–Kato 1964 DOI 10.1007/BF00276188"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4302",
+        "4A03",
+        "4305",
+        "430C",
+        "4317"
+      ]
+    },
+    {
+      "id": "4A16",
+      "path": "trees/math/pde/ping-zhang/4A16.tree",
+      "title": "一个固定速度分量的临界延拓判据",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A15",
+        "4301",
+        "4A07"
+      ],
+      "question": "一个速度投影的什么时空控制可以阻止有限时奇性？",
+      "proof_scope": "引用 CZ-v1 Theorem1.4，完整保留初始涡量和 p 范围；计算临界性。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorems 3.3-3.4; CZ-v1 Theorems 1.3-1.4, PDF p3"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorems 3.3-3.4; CZ-v1 Theorems 1.3-1.4, PDF p3"
+          ]
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+          "application_scope": [
+            "report Theorems 3.3-3.4; CZ-v1 Theorems 1.3-1.4, PDF p3"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R2",
+        "R11"
+      ],
+      "body_links": [
+        "4301",
+        "4A15",
+        "4A07"
+      ]
+    },
+    {
+      "id": "4A17",
+      "path": "trees/math/pde/ping-zhang/4A17.tree",
+      "title": "单分量判据中的双重指数能量控制",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A16",
+        "4A12",
+        "4A11",
+        "4A13",
+        "4A14"
+      ],
+      "question": "控制 u3 如何同时约束竖直涡量与竖直伸缩？",
+      "proof_scope": "引用两个关键先验估计；阐述闭合机制和深层输入，不替代研究证明。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Proposition3.1; CZ-v1 Propositions2.1-2.3, §5-8"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Proposition3.1; CZ-v1 Propositions2.1-2.3, §5-8"
+          ]
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+          "application_scope": [
+            "report Proposition3.1; CZ-v1 Propositions2.1-2.3, §5-8"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R2",
+        "R11"
+      ],
+      "body_links": [
+        "4A16",
+        "4A13",
+        "4A12",
+        "4A14",
+        "4A11"
+      ]
+    },
+    {
+      "id": "4A18",
+      "path": "trees/math/pde/ping-zhang/4A18.tree",
+      "title": "横向对数加权的半阶 Sobolev 范数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4A03"
+      ],
+      "question": "单分量端点估计增加了哪一种对数正则性？",
+      "proof_scope": "定义频率权并比较普通半阶范数。",
+      "proof_status": "definition-with-local-conventions",
+      "refs": [
+        "report Definition3.1"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Definition3.1"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4A03"
+      ]
+    },
+    {
+      "id": "4A19",
+      "path": "trees/math/pde/ping-zhang/4A19.tree",
+      "title": "单分量对数端点的非零阈值",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A18",
+        "4A15"
+      ],
+      "question": "有限时奇性对单分量的对数加权范数提出什么必要条件？",
+      "proof_scope": "引用阈值定理；区分非零下界和无穷大。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem3.7; Chemin–Gallagher–Zhang 2019 DOI10.1080/03605302.2019.1641725"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem3.7; Chemin–Gallagher–Zhang 2019 DOI10.1080/03605302.2019.1641725"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem3.7; Chemin–Gallagher–Zhang 2019 DOI10.1080/03605302.2019.1641725"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R2",
+        "R11"
+      ],
+      "body_links": [
+        "4A18",
+        "4A15"
+      ]
+    },
+    {
+      "id": "4A1A",
+      "path": "trees/math/pde/ping-zhang/4A1A.tree",
+      "title": "水平梯度能量中的三次项消去",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4301",
+        "4302",
+        "4304"
+      ],
+      "question": "水平二乘二梯度矩阵为何使三次非线性含一个竖直分量？",
+      "proof_scope": "逐坐标三次多项式恒等式与能量求导证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report (3.8) and following E1 identity"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report (3.8) and following E1 identity"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4302",
+        "4301",
+        "4304"
+      ]
+    },
+    {
+      "id": "4A1B",
+      "path": "trees/math/pde/ping-zhang/4A1B.tree",
+      "title": "指数 Fourier 权与空间解析半径",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0H4G",
+        "0I80",
+        "4A03",
+        "0A68",
+        "0A3G"
+      ],
+      "question": "指数频率衰减怎样给出复空间中的解析延拓？",
+      "proof_scope": "定义解析半径并证明指数 Hs 控制是充分条件。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report §4; elementary Fourier argument"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §4; elementary Fourier argument"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R7",
+        "R11"
+      ],
+      "body_links": [
+        "0A3G",
+        "0H4G",
+        "0I80",
+        "0A68",
+        "4A03"
+      ]
+    },
+    {
+      "id": "4A1C",
+      "path": "trees/math/pde/ping-zhang/4A1C.tree",
+      "title": "热扩散与指数解析权的配方估计",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A1B",
+        "4A09",
+        "0W01"
+      ],
+      "question": "热核如何支付指数解析权的代价？",
+      "proof_scope": "配方及 Plancherel 证明，区别线性与非线性半径。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report §4 mechanism; LZ-v2 (2.2)"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §4 mechanism; LZ-v2 (2.2)"
+          ]
+        },
+        {
+          "source_id": "LZ-v2",
+          "read_range": "实际阅读第1页模型和版本信息、PDF第3–7页：定理1.2与1.3及其注记、证明框架、低高频分离和引理2.1证明。4A1D另外给出短时高频尾的独立初等证明。 本次复核补读固定v2 PDF第16页引理2.3与式(2.30)，以及第18–19页范围内至§3之前的该引理证明全文（PDF文本提取lines3897–4112）。两次页图请求均返回cache miss，本次补读为PDF文本核对。",
+          "application_scope": [
+            "report §4 mechanism; LZ-v2 (2.2)"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R7",
+        "R11"
+      ],
+      "body_links": [
+        "4A1B",
+        "0W01",
+        "4A09"
+      ]
+    },
+    {
+      "id": "4A1D",
+      "path": "trees/math/pde/ping-zhang/4A1D.tree",
+      "title": "连续 Sobolev 解在初始时刻的高频尾",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A03",
+        "00E2"
+      ],
+      "question": "为什么连续强解的短时高频尾趋于零？",
+      "proof_scope": "三角不等式和初值 L2 尾积分的直接证明。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "LZ-v2 Lemma 2.3, (2.30), PDF p16; independent local short-time variant"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": []
+        },
+        {
+          "source_id": "LZ-v2",
+          "read_range": "实际阅读第1页模型和版本信息、PDF第3–7页：定理1.2与1.3及其注记、证明框架、低高频分离和引理2.1证明。4A1D另外给出短时高频尾的独立初等证明。 本次复核补读固定v2 PDF第16页引理2.3与式(2.30)，以及第18–19页范围内至§3之前的该引理证明全文（PDF文本提取lines3897–4112）。两次页图请求均返回cache miss，本次补读为PDF文本核对。",
+          "application_scope": [
+            "LZ-v2 Lemma 2.3, (2.30), PDF p16; independent local short-time variant"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R7",
+        "R11"
+      ],
+      "body_links": [
+        "00E2",
+        "4A03"
+      ]
+    },
+    {
+      "id": "4A1E",
+      "path": "trees/math/pde/ping-zhang/4A1E.tree",
+      "title": "亚临界 Sobolev 初值的精细解析半径",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A15",
+        "4A1B",
+        "4A1C",
+        "4A1D"
+      ],
+      "question": "所有 γ大于二分之一的 Sobolev 初值可获得什么短时解析半径？",
+      "proof_scope": "引用 LZ-v2 Theorem1.2，证明高频参数趋无穷及较弱显式推论。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem4.4 (4.7)-(4.8); LZ-v2 Theorem1.2, PDF pp3-5"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem4.4 (4.7)-(4.8); LZ-v2 Theorem1.2, PDF pp3-5"
+          ]
+        },
+        {
+          "source_id": "LZ-v2",
+          "read_range": "实际阅读第1页模型和版本信息、PDF第3–7页：定理1.2与1.3及其注记、证明框架、低高频分离和引理2.1证明。4A1D另外给出短时高频尾的独立初等证明。 本次复核补读固定v2 PDF第16页引理2.3与式(2.30)，以及第18–19页范围内至§3之前的该引理证明全文（PDF文本提取lines3897–4112）。两次页图请求均返回cache miss，本次补读为PDF文本核对。",
+          "application_scope": [
+            "report Theorem4.4 (4.7)-(4.8); LZ-v2 Theorem1.2, PDF pp3-5"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R7",
+        "R11"
+      ],
+      "body_links": [
+        "4A15",
+        "4A1B",
+        "4A1D",
+        "4A1C"
+      ]
+    },
+    {
+      "id": "4A1F",
+      "path": "trees/math/pde/ping-zhang/4A1F.tree",
+      "title": "带限初值的 ANS 短时水平解析性",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A01",
+        "4A04",
+        "4A05",
+        "4A1B",
+        "0H4F"
+      ],
+      "question": "无竖直黏性时，带限初值能得到怎样的短时水平解析性？",
+      "proof_scope": "报告Remark4.5(4)的明确带限特例；只证明数据满足解析范数条件，非线性定理引用。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Remark4.5(4) (4.10); Liu–Zhang2024 DOI10.1007/s00205-024-02051-2"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Remark4.5(4) (4.10); Liu–Zhang2024 DOI10.1007/s00205-024-02051-2"
+          ]
+        },
+        {
+          "source_id": "LZ-analytic-2024",
+          "read_range": "实际阅读出版社元数据、摘要和可访问附录A的全部文本：引理A.1各向异性Bernstein估计、定义A.1、Bony分解(A.1)–(A.3)、引理A.2及证明。",
+          "application_scope": [
+            "report Remark4.5(4) (4.10); Liu–Zhang2024 DOI10.1007/s00205-024-02051-2"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R6",
+        "R11"
+      ],
+      "body_links": [
+        "0H4F",
+        "4A01",
+        "4A1B",
+        "4A04",
+        "4A05"
+      ]
+    },
+    {
+      "id": "4A20",
+      "path": "trees/math/pde/ping-zhang/4A20.tree",
+      "title": "Bony 分解把乘积按频率大小分组",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4A04"
+      ],
+      "question": "乘积的低高频和相近频率相互作用如何分离？",
+      "proof_scope": "有限频块乘积的精确分组证明；无限极限注明收敛前提。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "Liu–Zhang2024 Appendix A (A.1)-(A.3); report (3.9)"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "Liu–Zhang2024 Appendix A (A.1)-(A.3); report (3.9)"
+          ]
+        },
+        {
+          "source_id": "LZ-analytic-2024",
+          "read_range": "实际阅读出版社元数据、摘要和可访问附录A的全部文本：引理A.1各向异性Bernstein估计、定义A.1、Bony分解(A.1)–(A.3)、引理A.2及证明。",
+          "application_scope": [
+            "Liu–Zhang2024 Appendix A (A.1)-(A.3); report (3.9)"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R6",
+        "R11"
+      ],
+      "body_links": [
+        "4A04"
+      ]
+    },
+    {
+      "id": "4A21",
+      "path": "trees/math/pde/ping-zhang/4A21.tree",
+      "title": "ANS 在竖直 Sobolev 空间中的连续依赖",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A01",
+        "4A03",
+        "4305",
+        "00E2"
+      ],
+      "question": "初值收敛能否给出同一时间区间上的解收敛？",
+      "proof_scope": "引用连续依赖定理；共同存在区间按最大解解释。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem2.5; Zhang–Zhu JFA288(2025)110689"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem2.5; Zhang–Zhu JFA288(2025)110689"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem2.5; Zhang–Zhu JFA288(2025)110689"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R9",
+        "R11"
+      ],
+      "body_links": [
+        "4A03",
+        "4A01",
+        "4305",
+        "00E2"
+      ]
+    },
+    {
+      "id": "4A22",
+      "path": "trees/math/pde/ping-zhang/4A22.tree",
+      "title": "ANS 解映射的连续性不推出一致连续性",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A21",
+        "0F40"
+      ],
+      "question": "为什么逐初值稳定性不提供有界初值族上的统一模？",
+      "proof_scope": "引用分离序列；用定义证明对一致连续的否定。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem2.6 (2.12); Zhang–Zhu JFA288(2025)110689"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem2.6 (2.12); Zhang–Zhu JFA288(2025)110689"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem2.6 (2.12); Zhang–Zhu JFA288(2025)110689"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R9",
+        "R11"
+      ],
+      "body_links": [
+        "4A21",
+        "0F40"
+      ]
+    },
+    {
+      "id": "4A23",
+      "path": "trees/math/pde/ping-zhang/4A23.tree",
+      "title": "水平振荡使混合临界范数变小",
+      "taxon": "Example",
+      "prerequisites": [
+        "4A0B",
+        "0H4G",
+        "4301",
+        "4A0E",
+        "0H4F"
+      ],
+      "question": "大频率调制怎样产生符合全局定理的初值？",
+      "proof_scope": "带限特例的 O(epsilon^1/2) 估计和无散度计算；一般 Schwartz 版本明确引用。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report Proposition2.1 and (1.6); Chemin–Zhang2007"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Proposition2.1 and (1.6); Chemin–Zhang2007"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "0H4F",
+        "4A0B",
+        "0H4G",
+        "4301",
+        "4A0E"
+      ]
+    },
+    {
+      "id": "4A24",
+      "path": "trees/math/pde/ping-zhang/4A24.tree",
+      "title": "竖直慢变数据的小导数与大能量",
+      "taxon": "Example",
+      "prerequisites": [
+        "4A03",
+        "4301",
+        "0H4G"
+      ],
+      "question": "为何慢变初值能有大 L2 范数却有小竖直导数？",
+      "proof_scope": "全套换元与散度计算；不将计算直接升级为全局定理。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report (3.11); independent anisotropic dilation calculation"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report (3.11); independent anisotropic dilation calculation"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "4301",
+        "0H4G",
+        "4A03"
+      ]
+    },
+    {
+      "id": "4A25",
+      "path": "trees/math/pde/ping-zhang/4A25.tree",
+      "title": "圆柱角频率的耗散与半径限制",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A28",
+        "00Q6",
+        "0A34"
+      ],
+      "question": "大角频率为什么在有界半径圆柱中给出统一耗散？",
+      "proof_scope": "一般柱坐标下非零整数角频率标量模的梯度能量计算；整数条件保证全局单值性，由链式法则显式推导，明确不等同向量NS定理。",
+      "proof_status": "local-proof-or-explicit-calculation",
+      "refs": [
+        "report §3.2 (3.18)-(3.21) mechanism",
+        "4A28 general cylindrical coordinates and orthonormal frame"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §3.2 (3.18)-(3.21) mechanism"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R4",
+        "R11"
+      ],
+      "body_links": [
+        "4A28",
+        "0A34",
+        "00Q6"
+      ]
+    },
+    {
+      "id": "4A26",
+      "path": "trees/math/pde/ping-zhang/4A26.tree",
+      "title": "经典三维 NS 的大角 Fourier 模态全局解",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4302",
+        "4A28",
+        "00Q6",
+        "4A25",
+        "4A03"
+      ],
+      "question": "固定剖面加上足够高的角频率何时产生全局经典 NS 解？",
+      "proof_scope": "引用报告3.9的存在部分；使用一般正交标架分量及散度公式验证约束，允许角度依赖与非零角向分量；不重述全部模态衰减估计。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem3.9 (3.12)-(3.14); Liu–Zhang2024 DOI10.1016/j.aim.2023.109475",
+        "4A28 general cylindrical coordinates, physical vector components and divergence formula"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem3.9 (3.12)-(3.14); Liu–Zhang2024 DOI10.1016/j.aim.2023.109475"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem3.9 (3.12)-(3.14); Liu–Zhang2024 DOI10.1016/j.aim.2023.109475"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R4",
+        "R11"
+      ],
+      "body_links": [
+        "4A28",
+        "00Q6",
+        "4302",
+        "4A03",
+        "4A25"
+      ]
+    },
+    {
+      "id": "4A27",
+      "path": "trees/math/pde/ping-zhang/4A27.tree",
+      "title": "经典 NS 的小竖直导数全局定理",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4A15",
+        "4A03",
+        "4A05",
+        "4A04"
+      ],
+      "question": "经典 NS 的慢变机制需要哪些完整数据条件？",
+      "proof_scope": "引用报告3.8的存在结论，全部辅助量和数据条件显式；仅保留局部时间积分结论。",
+      "proof_status": "cited-research-theorem-with-stated-scope",
+      "refs": [
+        "report Theorem3.8; Liu–Zhang2020 DOI10.1007/s00205-019-01447-9"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report Theorem3.8; Liu–Zhang2020 DOI10.1007/s00205-019-01447-9"
+          ]
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+          "application_scope": [
+            "report Theorem3.8; Liu–Zhang2020 DOI10.1007/s00205-019-01447-9"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R3",
+        "R11"
+      ],
+      "body_links": [
+        "4A03",
+        "4A05",
+        "4A04",
+        "4A15",
+        "4A24"
+      ]
+    },
+    {
+      "id": "4A28",
+      "path": "trees/math/pde/ping-zhang/4A28.tree",
+      "title": "一般柱坐标的正交标架与向量分量",
+      "taxon": "Definition",
+      "prerequisites": [
+        "004P",
+        "0A34",
+        "4301"
+      ],
+      "question": "一般柱坐标中的正交标架如何定义向量分量及其角向变化？",
+      "proof_scope": "在r>0明确坐标域、单位标架、一般角度依赖的向量分量和轴线限制；直接计算标架导数，并由链式法则及欧氏散度推导柱坐标散度式。",
+      "proof_status": "definition-with-local-coordinate-derivations",
+      "refs": [
+        "report §3.2 coordinate conventions",
+        "004P orthonormal set definition",
+        "0A34 chain rule",
+        "4301 Euclidean divergence; direct coordinate derivation"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+          "application_scope": [
+            "report §3.2 coordinate conventions"
+          ]
+        },
+        {
+          "source_id": "local-coordinate-foundations",
+          "read_range": "完整阅读004P标准正交集、0A34链式法则和4301欧氏微分算子正文；由显式三角函数坐标映射独立推导标架变化和散度公式。",
+          "application_scope": [
+            "4A28 general cylindrical coordinates; no axisymmetry or no-swirl assumption"
+          ]
+        }
+      ],
+      "remaining_branches": [
+        "R11"
+      ],
+      "body_links": [
+        "004P",
+        "0A34",
+        "4301"
+      ]
+    },
+    {
+      "id": "icm2026-ping-zhang",
+      "path": "trees/references/icm2026-ping-zhang.tree",
+      "title": "张平：三维各向异性与经典不可压缩 Navier–Stokes 方程",
+      "taxon": "Reference",
+      "prerequisites": [],
+      "question": "本专题使用哪些固定主源以及哪一正式出版报告？",
+      "proof_scope": "出版与版本信息；不承载数学定理。",
+      "proof_status": "reference",
+      "refs": [
+        "https://epubs.siam.org/doi/10.1137/25M1801980",
+        "https://arxiv.org/pdf/1905.00156v1",
+        "https://arxiv.org/pdf/1310.6442v1",
+        "https://arxiv.org/pdf/2406.10865v2",
+        "https://link.springer.com/article/10.1007/s00205-024-02051-2",
+        "https://epubs.siam.org/doi/10.1137/25M1801980"
+      ],
+      "source_reading": [
+        {
+          "source_id": "report",
+          "read_range": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。"
+        },
+        {
+          "source_id": "LPZ-v1",
+          "read_range": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。"
+        },
+        {
+          "source_id": "CZ-v1",
+          "read_range": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。"
+        },
+        {
+          "source_id": "LZ-v2",
+          "read_range": "实际阅读第1页模型和版本信息、PDF第3–7页：定理1.2与1.3及其注记、证明框架、低高频分离和引理2.1证明。4A1D另外给出短时高频尾的独立初等证明。 本次复核补读固定v2 PDF第16页引理2.3与式(2.30)，以及第18–19页范围内至§3之前的该引理证明全文（PDF文本提取lines3897–4112）。两次页图请求均返回cache miss，本次补读为PDF文本核对。"
+        },
+        {
+          "source_id": "LZ-analytic-2024",
+          "read_range": "实际阅读出版社元数据、摘要和可访问附录A的全部文本：引理A.1各向异性Bernstein估计、定义A.1、Bony分解(A.1)–(A.3)、引理A.2及证明。"
+        },
+        {
+          "source_id": "report-bibliography",
+          "read_range": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。"
+        }
+      ],
+      "remaining_branches": [
+        "R10",
+        "R11"
+      ],
+      "body_links": [
+        "4A00"
+      ]
+    }
+  ],
+  "source_records": [
+    {
+      "id": "report",
+      "type": "publisher-full-text",
+      "title": "3-D Anisotropic vs. Classical Incompressible Navier–Stokes Equations",
+      "authors": [
+        "Ping Zhang"
+      ],
+      "doi": "10.1137/25M1801980",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1801980",
+      "publication": "Proceedings of the International Congress of Mathematicians 2026, Volume 5: Invited Lectures (Sections 9–11)",
+      "pages": "388–407",
+      "published_online": "2026-07-13",
+      "read_on": "2026-10-21",
+      "reading_status": "full mathematical HTML text read",
+      "source_reading": "实际通读正式版 HTML §1–4全部数学正文、显示公式、定理及注记，查看致谢、参考文献1–71和页末出版/许可元数据；浏览器文本连续覆盖约lines90–1198，并核对lines1220–1224的许可信息。",
+      "not_read": "未逐项阅读全文参考文献1–71；未取得并逐页视觉检查正式PDF。",
+      "authority": "正式出版题名、DOI、页码、出版日期及许可均以SIAM主源为准。"
+    },
+    {
+      "id": "LPZ-v1",
+      "type": "fixed-arxiv-version",
+      "title": "Global well-posedness of 3-D anisotropic Navier–Stokes system with small unidirectional derivative",
+      "authors": [
+        "Yanlin Liu",
+        "Marius Paicu",
+        "Ping Zhang"
+      ],
+      "url": "https://arxiv.org/pdf/1905.00156v1",
+      "abs_url": "https://arxiv.org/abs/1905.00156v1",
+      "version": "1905.00156v1",
+      "pdf_pages": 33,
+      "published_doi": "10.1007/s00205-020-01555-x",
+      "published_pages": "805–843",
+      "reading_status": "selected full-text pages read",
+      "source_reading": "实际阅读PDF第1页及第2–7页：初始模型、定义1.1–1.3、定理1.2、推论1.1、注1.1、§2框架和命题2.1证明开端。PDF第2–7页由固定v1源流经pdftotext抽取。",
+      "not_read": "未通读其余研究证明；本文§3以后各向异性非线性、压力与时间权估计不标作已重建。",
+      "version_binding": "4A0F固定使用v1推论1.1的四次幂阈值与第三分量热流；不与报告2.4的八次幂阈值合并。"
+    },
+    {
+      "id": "CZ-v1",
+      "type": "fixed-arxiv-version",
+      "title": "On the critical one component regularity for 3-D Navier-Stokes system",
+      "authors": [
+        "Jean-Yves Chemin",
+        "Ping Zhang"
+      ],
+      "url": "https://arxiv.org/pdf/1310.6442v1",
+      "abs_url": "https://arxiv.org/abs/1310.6442v1",
+      "version": "1310.6442v1",
+      "published_doi": "10.24033/asens.2278",
+      "published_pages": "131–167",
+      "reading_status": "selected full-text pages read",
+      "source_reading": "实际阅读PDF第3–8页：定理1.3与1.4，§2的整体证明策略、式(2.1)–(2.4)、命题2.1–2.3与定理2.1，§3引理3.1及其证明开端。",
+      "not_read": "§5–8只据已读§2及报告定位其作用，未通读完整证明。4A17的深层乘积律、压力控制和延拓定理保留引用身份。"
+    },
+    {
+      "id": "LZ-v2",
+      "type": "fixed-arxiv-version",
+      "title": "On the refined analyticity radius of 3-D generalized Navier–Stokes equations",
+      "authors": [
+        "Dong Li",
+        "Ping Zhang"
+      ],
+      "url": "https://arxiv.org/pdf/2406.10865v2",
+      "abs_url": "https://arxiv.org/abs/2406.10865v2",
+      "version": "2406.10865v2",
+      "version_date": "2025-06-05",
+      "pdf_pages": 29,
+      "reading_status": "selected full-text pages read",
+      "source_reading": "实际阅读第1页模型和版本信息、PDF第3–7页：定理1.2与1.3及其注记、证明框架、低高频分离和引理2.1证明。4A1D另外给出短时高频尾的独立初等证明。 本次复核补读固定v2 PDF第16页引理2.3与式(2.30)，以及第18–19页范围内至§3之前的该引理证明全文（PDF文本提取lines3897–4112）。两次页图请求均返回cache miss，本次补读为PDF文本核对。",
+      "not_read": "未通读其余非线性解析权估计；4A1E完整引用定理1.2的亚临界结论，未重建全证明或收录定理1.3所有临界情形。引理2.3已补读，4A1D仍采用独立的局部短时证明。",
+      "source_locator_correction": {
+        "finding": "PZ-F1",
+        "actual": "Lemma 2.3, (2.30), PDF p16",
+        "proof_read": "PDF pp18–19, extracted lines3897–4112 ending before section3",
+        "reason": "引言中交叉引用的旧编号不能替代实际引理标题。"
+      }
+    },
+    {
+      "id": "LZ-analytic-2024",
+      "type": "publisher-preview-and-appendix",
+      "title": "Global Small Analytic Solution of 3-D Anisotropic Navier–Stokes System",
+      "authors": [
+        "Ning Liu",
+        "Ping Zhang"
+      ],
+      "doi": "10.1007/s00205-024-02051-2",
+      "url": "https://link.springer.com/article/10.1007/s00205-024-02051-2",
+      "publication": "Archive for Rational Mechanics and Analysis 248 (2024), article 106",
+      "published_online": "2024-10-30",
+      "reading_status": "metadata, abstract and accessible Appendix A read; main full text unavailable",
+      "source_reading": "实际阅读出版社元数据、摘要和可访问附录A的全部文本：引理A.1各向异性Bernstein估计、定义A.1、Bony分解(A.1)–(A.3)、引理A.2及证明。",
+      "not_read": "出版社主要正文未取得。尝试PDF端点所得为HTML，未将其当作全文。定义A.1网页显示的双频求和索引有歧义，未据此补造范数定义。",
+      "used_for": [
+        "4A20的频率分组背景",
+        "4A1F的论文入口；局部结论直接据report Remark4.5(4)的明确带限特例"
+      ],
+      "not_used_for": "未将报告4.6的全局小解析定理复制为本地已核定定理。"
+    },
+    {
+      "id": "report-bibliography",
+      "type": "primary-report-mediated-references",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1801980",
+      "reading_status": "bibliographic entries and report theorem statements read",
+      "source_reading": "Paicu2005、Paicu–Zhang2011、Fujita–Kato1964、Chemin–Gallagher–Zhang2019、Liu–Zhang2020、Liu–Zhang2024大角模态、Zhang–Zhu2025的出版引用与报告中的精确定理陈述。",
+      "not_read": "未逐篇通读这些原始论文；引用定理以报告的指定编号为读取依据，并保留原论文DOI入口。",
+      "dois": [
+        "10.4171/rmi/420",
+        "10.1007/s00220-011-1350-6",
+        "10.1007/BF00276188",
+        "10.1080/03605302.2019.1641725",
+        "10.1007/s00205-019-01447-9",
+        "10.1016/j.aim.2023.109475",
+        "10.1016/j.jfa.2024.110689"
+      ]
+    },
+    {
+      "id": "local-coordinate-foundations",
+      "type": "local-atomic-foundations",
+      "paths": [
+        "trees/math/analysis/004P.tree",
+        "trees/math/analysis/atomic/0A34.tree",
+        "trees/math/pde/colombo/4301.tree"
+      ],
+      "reading_status": "all three atom bodies read",
+      "source_reading": "完整阅读004P标准正交集、0A34链式法则和4301欧氏微分算子正文；由显式三角函数坐标映射独立推导标架变化和散度公式。",
+      "not_read": "不涉及新增研究论文的全文阅读；不从轴对称无旋流特殊情形推断一般柱坐标公式。"
+    }
+  ],
+  "source_reading": {
+    "primary_report": "report",
+    "supplementary_sources": [
+      "LPZ-v1",
+      "CZ-v1",
+      "LZ-v2",
+      "LZ-analytic-2024",
+      "report-bibliography",
+      "local-coordinate-foundations"
+    ],
+    "method": "主源网页全文与固定版本PDF的实际页段阅读；未访问部分、版本差异和未重建证明均逐项记录。",
+    "abstract_only_is_full_text": false
+  },
+  "section_coverage": [
+    {
+      "section": "§1",
+      "notes": [
+        "4A01",
+        "4A02",
+        "4A07",
+        "4A15"
+      ],
+      "scope": "模型、能量、缩放、临界经典解；压力与温和公式按已固定符号直接核算。"
+    },
+    {
+      "section": "§2.1–2.2",
+      "notes": [
+        "4A03",
+        "4A04",
+        "4A05",
+        "4A06",
+        "4A08",
+        "4A09",
+        "4A0A",
+        "4A0B",
+        "4A0C",
+        "4A0D",
+        "4A0E",
+        "4A0F",
+        "4A10",
+        "4A21",
+        "4A22",
+        "4A23"
+      ],
+      "scope": "临界空间、水平热耗散、特殊小量和连续依赖；式(2.2)未作为可用定理转录。"
+    },
+    {
+      "section": "§3.1",
+      "notes": [
+        "4A11",
+        "4A12",
+        "4A13",
+        "4A14",
+        "4A16",
+        "4A17",
+        "4A18",
+        "4A19",
+        "4A1A",
+        "4A20"
+      ],
+      "scope": "固定单分量判据与对数端点，基础耦合式和消去给出推导，深层估计引用。"
+    },
+    {
+      "section": "§3.2",
+      "notes": [
+        "4A24",
+        "4A25",
+        "4A26",
+        "4A27",
+        "4A28"
+      ],
+      "scope": "慢变缩放、小单向导数全局阈值、标量角模耗散与全空间高角模存在部分。圆柱完整定理不转录。 一般柱坐标标架独立定义，不采用轴对称无旋流假设。"
+    },
+    {
+      "section": "§3.3",
+      "notes": [
+        "4A00"
+      ],
+      "scope": "MHD在叙事概览提及，跨专题扩展未创建。"
+    },
+    {
+      "section": "§4",
+      "notes": [
+        "4A1B",
+        "4A1C",
+        "4A1D",
+        "4A1E",
+        "4A1F"
+      ],
+      "scope": "解析半径定义、热乘子基础推导、亚临界精细短时结果、带限ANS局部特例；全球小解析ANS和进行中扩展留有清晰边界。"
+    }
+  ],
+  "reused_pages": [
+    {
+      "id": "004P",
+      "path": "trees/math/analysis/004P.tree",
+      "title": "内积空间中的正交与标准正交集",
+      "taxon": "Definition"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "title": "连续映射",
+      "taxon": "Definition"
+    },
+    {
+      "id": "00M7",
+      "path": "trees/math/analysis/atomic/00M7.tree",
+      "title": "赋范空间的完备化",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "00Q6",
+      "path": "trees/math/logic/research/atomic/00Q6.tree",
+      "title": "L^p 空间",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0A34",
+      "path": "trees/math/analysis/atomic/0A34.tree",
+      "title": "全微分的链式法则",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "0A3G",
+      "path": "trees/math/analysis/atomic/0A3G.tree",
+      "title": "复导数与全纯函数",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0A68",
+      "path": "trees/math/logic/research/atomic/0A68.tree",
+      "title": "积分形式的 Hölder 不等式",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "0BAC",
+      "path": "trees/math/geometry/algebraic/0BAC.tree",
+      "title": "微分形式的 Stokes 公式",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "0F40",
+      "path": "trees/math/topology/atomic/0F40.tree",
+      "title": "度量空间之间的一致连续映射",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0H4F",
+      "path": "trees/math/number-theory/reports/0H4F.tree",
+      "title": "欧氏空间上的 Schwartz 函数",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0H4G",
+      "path": "trees/math/number-theory/reports/0H4G.tree",
+      "title": "欧氏空间上的 Fourier 变换",
+      "taxon": "Definition"
+    },
+    {
+      "id": "0I80",
+      "path": "trees/math/number-theory/reports/0I80.tree",
+      "title": "Schwartz 函数的 Fourier 反演",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "0W01",
+      "path": "trees/math/analysis/fourier-extremal/0W01.tree",
+      "title": "欧氏 Fourier 变换的 Plancherel 定理",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "0W0Z",
+      "path": "trees/math/analysis/fourier-extremal/0W0Z.tree",
+      "title": "缓增分布及其 Fourier 变换",
+      "taxon": "Definition"
+    },
+    {
+      "id": "4301",
+      "path": "trees/math/pde/colombo/4301.tree",
+      "title": "欧氏向量场的散度、旋度与对流导数",
+      "taxon": "Definition"
+    },
+    {
+      "id": "4302",
+      "path": "trees/math/pde/colombo/4302.tree",
+      "title": "不可压缩 Euler 与 Navier–Stokes 方程",
+      "taxon": "Definition"
+    },
+    {
+      "id": "4304",
+      "path": "trees/math/pde/colombo/4304.tree",
+      "title": "光滑不可压缩流的能量平衡",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "4305",
+      "path": "trees/math/pde/colombo/4305.tree",
+      "title": "流体的时空混合范数与能量类",
+      "taxon": "Definition"
+    },
+    {
+      "id": "4308",
+      "path": "trees/math/pde/colombo/4308.tree",
+      "title": "Euler 的双参数重标度与 NS 的抛物重标度",
+      "taxon": "Theorem"
+    },
+    {
+      "id": "430C",
+      "path": "trees/math/pde/colombo/430C.tree",
+      "title": "Leray 投影消去压力梯度",
+      "taxon": "Construction"
+    },
+    {
+      "id": "430I",
+      "path": "trees/math/pde/colombo/430I.tree",
+      "title": "二维 Biot–Savart 定律与有限能量条件",
+      "taxon": "Construction"
+    },
+    {
+      "id": "4317",
+      "path": "trees/math/pde/colombo/4317.tree",
+      "title": "线性演化半群与 Duhamel 公式",
+      "taxon": "Definition"
+    },
+    {
+      "id": "4508",
+      "path": "trees/math/pde/elgindi/4508.tree",
+      "title": "三维涡伸长与 Cauchy 涡量公式",
+      "taxon": "Theorem"
+    }
+  ],
+  "foundation_scope": {
+    "new_foundations_within_owned_prefix": [
+      "4A01",
+      "4A03",
+      "4A04",
+      "4A05",
+      "4A06",
+      "4A0B",
+      "4A18",
+      "4A1B",
+      "4A20",
+      "4A28"
+    ],
+    "existing_undergraduate_atoms_reused": [
+      "00M7",
+      "00Q6",
+      "0A34",
+      "0A3G",
+      "0A68",
+      "0H4F",
+      "0H4G",
+      "0I80",
+      "0W01",
+      "0W0Z",
+      "00E2",
+      "0F40",
+      "004P",
+      "0BAC"
+    ],
+    "fluid_foundations_reused": [
+      "4301",
+      "4302",
+      "4304",
+      "4305",
+      "4308",
+      "430C",
+      "430I",
+      "4317",
+      "4508"
+    ],
+    "outline_as_prerequisite": false,
+    "shared_foundations_created": [],
+    "cross_topic_requests": [
+      "若推进报告§3.3 MHD，请由父级协调既有磁流体模型原子与负责作者；本批未改共享基础。"
+    ]
+  },
+  "terminology_evidence": {
+    "checked_on": "2026-10-21",
+    "provider": "香蕉空间",
+    "status": "unavailable",
+    "attempted_urls": [
+      "https://www.bananaspace.org/wiki/Sobolev空间",
+      "https://www.bananaspace.org/wiki/Besov空间"
+    ],
+    "verified_terms": [],
+    "decision": "未声称外部术语核验通过。使用站内的Sobolev空间、Besov范数、无散度、黏性、各向异性、解析半径等既有表述；非通用记号在原子正文局部定义。"
+  },
+  "source_errata": [
+    {
+      "id": "S1",
+      "source": "report (2.2)",
+      "kind": "independently-computed-scaling-mismatch",
+      "observation": "式中L2^epsilon与dotH^(0,1/2+epsilon)^(1-epsilon)之积，在u_lambda=lambda*u(lambda*x)下缩放为lambda^(epsilon/2-epsilon^2)，一般不临界。",
+      "action": "未收录这条小量定理；4A07给出可独立核算的指数，4A08使用L2与一次竖直导数的有效插值。",
+      "notes": [
+        "4A07",
+        "4A08"
+      ],
+      "status": "local calculation, not a publisher erratum"
+    },
+    {
+      "id": "S2",
+      "source": "report Theorem2.6",
+      "kind": "quantifier-restriction",
+      "observation": "字面“any bounded subset”包含单点集，不能满足非一致连续结论。",
+      "action": "4A22只录该定理同时给出的有界分离序列，因此结论是包含这些序列的有界集上的非一致连续性。",
+      "notes": [
+        "4A22"
+      ],
+      "status": "precise sequence statement retained"
+    },
+    {
+      "id": "S3",
+      "source": "report Theorem2.4 versus LPZ-v1 Corollary1.1",
+      "kind": "version-difference-and-vector-decomposition",
+      "observation": "报告阈值含X4八次幂，固定v1推论为四次幂。报告的(0,u0,hh)使用此前向量符号，分量数不明。",
+      "action": "4A0F明确固定v1，保留四次幂，并按原始论文用(0,0,exp(tDelta_h)u0,hh^3)。不把两版阈值混为同一公式。",
+      "notes": [
+        "4A0F"
+      ],
+      "status": "version binding; not a claim that later exponent is erroneous"
+    },
+    {
+      "id": "S4",
+      "source": "report (3.7) and CZ-v1 §2 pressure term",
+      "kind": "operator-convention-check",
+      "observation": "按Delta=sum partial_j^2，压力满足-Delta p=S。",
+      "action": "4A12直接推导右端为-partial_3^2(-Delta)^(-1)S；此写法等于+partial_3^2 Delta^(-1)S，明确逆算子约定，不照搬可能混淆的负号。",
+      "notes": [
+        "4A12"
+      ],
+      "status": "independent algebraic derivation"
+    },
+    {
+      "id": "S5",
+      "source": "report §1 Duhamel bilinear term",
+      "kind": "sign-check",
+      "observation": "对流项移至方程右端时，标准温和公式的Leray投影积分带负号。",
+      "action": "4A15从动量方程重新推导负号；引用双线性估计的范数结论不受整体符号影响。",
+      "notes": [
+        "4A15"
+      ],
+      "status": "independent derivation"
+    },
+    {
+      "id": "S6",
+      "source": "report Theorem4.2",
+      "kind": "display-domain-warning",
+      "observation": "报告显示sqrt(t log|t|)，当0<t<1时根号内为负。",
+      "action": "未转录该字面下界；4A1E使用固定LZ-v2定理1.2的|log t|表达式。",
+      "notes": [
+        "4A1E"
+      ],
+      "status": "unimported ambiguous display"
+    },
+    {
+      "id": "S7",
+      "source": "report Theorem4.6 and LZ-analytic-2024 Appendix A DefinitionA.1",
+      "kind": "unresolved-norm-definition",
+      "observation": "双频空间与此前竖直单分块空间记号接近，附录网页求和显示还有游离k。",
+      "action": "不自行补造B^(s,s')定义或全球小量定理，4A1F采用满足相关解析空间条件的明确带限局部特例。",
+      "notes": [
+        "4A1F",
+        "4A20"
+      ],
+      "status": "requires main original text"
+    },
+    {
+      "id": "S8",
+      "source": "report Theorem4.5",
+      "kind": "epistemic-status",
+      "observation": "来源将该扩展标为work in progress。",
+      "action": "只在概览保留该状态，不列为本地定理。",
+      "notes": [
+        "4A00"
+      ],
+      "status": "work-in-progress preserved"
+    },
+    {
+      "id": "S9",
+      "source": "LZ-v2 introduction cross-reference versus actual Lemma 2.3 (2.30)",
+      "kind": "source-locator-correction",
+      "observation": "实际高频尾引理位于PDF第16页Lemma2.3、式(2.30)，引言交叉引用保留了旧编号。",
+      "action": "4A1D及packet全部refs、claim_sources和application_scope改为实际引理位置；局部短时三角不等式证明与其独立身份保留。",
+      "notes": [
+        "4A1D"
+      ],
+      "status": "checked against fixed-v2 PDF text; awaiting reviewer recheck"
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "source": "ANS局部、小水平分量和小单向导数的完整非线性证明",
+      "pages": [
+        "4A0C",
+        "4A0D",
+        "4A0E",
+        "4A0F"
+      ],
+      "boundary": "补足压力分解、各向异性乘积律、时间权与逼近极限。已有基础推导不替代Paicu、Paicu–Zhang或LPZ的研究证明。"
+    },
+    {
+      "source": "单分量判据的全部指数范围与端点证明",
+      "pages": [
+        "4A16",
+        "4A17",
+        "4A19"
+      ],
+      "boundary": "4<p<6固定方向采用CZ-v1；扩大p范围、时间变化方向、端点压力及对数乘积律须另核完整原始论文。未加权p=∞问题只按报告所处状态说明，不作后续文献穷尽判断。"
+    },
+    {
+      "source": "经典NS小竖直导数定理的完整二维背景估计",
+      "pages": [
+        "4A27"
+      ],
+      "boundary": "报告3.8的全部数据权与小量条件已录入，背景二维解、扰动估计及原论文全证明尚未逐页重建。"
+    },
+    {
+      "source": "圆柱大角模态定理和定量模态衰减",
+      "pages": [
+        "4A25",
+        "4A26"
+      ],
+      "boundary": "4A25只证明标量耗散；4A26引用全空间经典NS存在结论。圆柱边界与轴线相容性、报告3.10完整条件、ANS变体、式(3.17)/(3.20)的精细模态衰减留待原始全文核定。"
+    },
+    {
+      "source": "ANS全局小解析定理的双频空间与小量条件",
+      "pages": [
+        "4A1F",
+        "4A20"
+      ],
+      "boundary": "报告4.6及出版社附录的B^(s,s')记号不能直接等同此前竖直单分块B空间。原论文主要正文不可访问，保持未展开；4A1F只收录带限解析数据的局部结论。"
+    },
+    {
+      "source": "解析半径的临界、Lp及长时间结果",
+      "pages": [
+        "4A1B",
+        "4A1C",
+        "4A1D",
+        "4A1E"
+      ],
+      "boundary": "已录LZ-v2定理1.2亚临界精细短时下界。报告4.1的大时间结论以已有全局解为条件；4.2–4.3的完整Lp非线性控制、LZ-v2定理1.3临界情形尚未整理。"
+    },
+    {
+      "source": "ANS连续但非一致连续的原始构造",
+      "pages": [
+        "4A21",
+        "4A22"
+      ],
+      "boundary": "有界分离序列的研究构造及共同存在时间估计引用Zhang–Zhu；本地只给出从序列推出非一致连续的定义级证明。"
+    }
+  ],
+  "remaining_branches": [
+    {
+      "id": "R1",
+      "notes": [
+        "4A0C",
+        "4A0D",
+        "4A0E",
+        "4A0F"
+      ],
+      "branch": "ANS局部、小水平分量和小单向导数的完整非线性证明",
+      "status": "cited-deep-proof",
+      "detail": "补足压力分解、各向异性乘积律、时间权与逼近极限。已有基础推导不替代Paicu、Paicu–Zhang或LPZ的研究证明。"
+    },
+    {
+      "id": "R2",
+      "notes": [
+        "4A16",
+        "4A17",
+        "4A19"
+      ],
+      "branch": "单分量判据的全部指数范围与端点证明",
+      "status": "partly-covered",
+      "detail": "4<p<6固定方向采用CZ-v1；扩大p范围、时间变化方向、端点压力及对数乘积律须另核完整原始论文。未加权p=∞问题只按报告所处状态说明，不作后续文献穷尽判断。"
+    },
+    {
+      "id": "R3",
+      "notes": [
+        "4A27"
+      ],
+      "branch": "经典NS小竖直导数定理的完整二维背景估计",
+      "status": "cited-deep-proof",
+      "detail": "报告3.8的全部数据权与小量条件已录入，背景二维解、扰动估计及原论文全证明尚未逐页重建。"
+    },
+    {
+      "id": "R4",
+      "notes": [
+        "4A25",
+        "4A26"
+      ],
+      "branch": "圆柱大角模态定理和定量模态衰减",
+      "status": "partly-covered",
+      "detail": "4A25只证明标量耗散；4A26引用全空间经典NS存在结论。圆柱边界与轴线相容性、报告3.10完整条件、ANS变体、式(3.17)/(3.20)的精细模态衰减留待原始全文核定。"
+    },
+    {
+      "id": "R5",
+      "notes": [
+        "4A00"
+      ],
+      "branch": "无磁扩散MHD及跨专题基础",
+      "status": "cross-topic-handoff-needed",
+      "detail": "报告§3.3仅在概览中交代，不在本独占前缀另造共享MHD基础页；若展开，先与负责共享基础的作者协调方程、磁场散度和耗散定义。"
+    },
+    {
+      "id": "R6",
+      "notes": [
+        "4A1F",
+        "4A20"
+      ],
+      "branch": "ANS全局小解析定理的双频空间与小量条件",
+      "status": "source-main-text-unavailable",
+      "detail": "报告4.6及出版社附录的B^(s,s')记号不能直接等同此前竖直单分块B空间。原论文主要正文不可访问，保持未展开；4A1F只收录带限解析数据的局部结论。"
+    },
+    {
+      "id": "R7",
+      "notes": [
+        "4A1B",
+        "4A1C",
+        "4A1D",
+        "4A1E"
+      ],
+      "branch": "解析半径的临界、Lp及长时间结果",
+      "status": "partly-covered",
+      "detail": "已录LZ-v2定理1.2亚临界精细短时下界。报告4.1的大时间结论以已有全局解为条件；4.2–4.3的完整Lp非线性控制、LZ-v2定理1.3临界情形尚未整理。"
+    },
+    {
+      "id": "R8",
+      "notes": [
+        "4A00"
+      ],
+      "branch": "一般Sobolev和Besov解析半径的新扩展",
+      "status": "work-in-progress-in-source",
+      "detail": "报告4.5明确属于进行中的工作，未转录为已发表定理。"
+    },
+    {
+      "id": "R9",
+      "notes": [
+        "4A21",
+        "4A22"
+      ],
+      "branch": "ANS连续但非一致连续的原始构造",
+      "status": "cited-deep-proof",
+      "detail": "有界分离序列的研究构造及共同存在时间估计引用Zhang–Zhu；本地只给出从序列推出非一致连续的定义级证明。"
+    },
+    {
+      "id": "R10",
+      "notes": [
+        "4A03",
+        "4A05",
+        "4A06",
+        "4A0B"
+      ],
+      "branch": "外部中文术语对照",
+      "status": "banana-space-unavailable",
+      "detail": "香蕉空间Sobolev和Besov条目均未成功读取；采用站内现有术语与原文数学定义。"
+    },
+    {
+      "id": "R11",
+      "notes": [
+        "4A00",
+        "4A01",
+        "4A02",
+        "4A03",
+        "4A04",
+        "4A05",
+        "4A06",
+        "4A07",
+        "4A08",
+        "4A09",
+        "4A0A",
+        "4A0B",
+        "4A0C",
+        "4A0D",
+        "4A0E",
+        "4A0F",
+        "4A10",
+        "4A11",
+        "4A12",
+        "4A13",
+        "4A14",
+        "4A15",
+        "4A16",
+        "4A17",
+        "4A18",
+        "4A19",
+        "4A1A",
+        "4A1B",
+        "4A1C",
+        "4A1D",
+        "4A1E",
+        "4A1F",
+        "4A20",
+        "4A21",
+        "4A22",
+        "4A23",
+        "4A24",
+        "4A25",
+        "4A26",
+        "4A27",
+        "4A28"
+      ],
+      "branch": "独立数学复核与统一站点集成",
+      "status": "awaiting-independent-review",
+      "detail": "本轮修复PZ-F1..F5并重新执行独占文件的源码检查与冻结；共享注册、Forester构建、渲染、发布及独立验收交由父级，不将作者修复记录视为review通过。"
+    }
+  ],
+  "diagram_decision": {
+    "created": [],
+    "reason": "本批核心信息为频率区域、精确权指数和等式推导。水平高频区与双频分解用公式和定义即可独立检查，未增加装饰性图示。已读FORESTER_STERLING_DIAGRAM_SKILL.md；后续若增加频率图应保留可编辑源并另行渲染核验。"
+  },
+  "validation": {
+    "status": "passed-source-only",
+    "checked_on": "2026-10-21",
+    "tree_files": 42,
+    "content_notes": 41,
+    "atomic_notes": 40,
+    "formulas_parsed_with_katex": 523,
+    "body_internal_links": 179,
+    "direct_prerequisite_edges": 136,
+    "recursive_prerequisite_nodes": 217,
+    "shared_dependency_graph_read_only": "research/site-evergreen-audit.json",
+    "checks": [
+      "所有title/taxon与packet相符",
+      "所有独占标题与全站标题无重复",
+      "Forester源码花括号配平及元数据唯一",
+      "规范化源码无剩余差异",
+      "KaTeX 0.16.8逐公式解析",
+      "全部正文内部链接目标存在",
+      "每个声明前置依赖在正文出现",
+      "直接前置依赖均非Outline或Reference",
+      "复用共享依赖图并检查可达依赖无环",
+      "文风规则检查通过",
+      "40个原子均由4A00正文直接链接",
+      "PZ-F1实际引理编号及式号存在",
+      "PZ-F2例子关系保留正文链接且不属于prerequisites",
+      "PZ-F3两处一般柱坐标依赖均指向4A28",
+      "PZ-F4 Plancherel直链与两处依赖记录一致",
+      "PZ-F5 Stokes直链与两处依赖记录一致",
+      "review文件字节哈希保持不变"
+    ],
+    "errors": [],
+    "forester_build": "not run, forbidden by task scope",
+    "rendered_pages": "not generated or visually verified",
+    "shared_files_modified": [],
+    "commit_created": false,
+    "independent_review": "PZ-F1..F5 author corrections complete; reviewer recheck pending; review file not modified",
+    "review_file_unchanged": true
+  },
+  "owned_files": [
+    "trees/math/pde/ping-zhang/4A00.tree",
+    "trees/math/pde/ping-zhang/4A01.tree",
+    "trees/math/pde/ping-zhang/4A02.tree",
+    "trees/math/pde/ping-zhang/4A03.tree",
+    "trees/math/pde/ping-zhang/4A04.tree",
+    "trees/math/pde/ping-zhang/4A05.tree",
+    "trees/math/pde/ping-zhang/4A06.tree",
+    "trees/math/pde/ping-zhang/4A07.tree",
+    "trees/math/pde/ping-zhang/4A08.tree",
+    "trees/math/pde/ping-zhang/4A09.tree",
+    "trees/math/pde/ping-zhang/4A0A.tree",
+    "trees/math/pde/ping-zhang/4A0B.tree",
+    "trees/math/pde/ping-zhang/4A0C.tree",
+    "trees/math/pde/ping-zhang/4A0D.tree",
+    "trees/math/pde/ping-zhang/4A0E.tree",
+    "trees/math/pde/ping-zhang/4A0F.tree",
+    "trees/math/pde/ping-zhang/4A10.tree",
+    "trees/math/pde/ping-zhang/4A11.tree",
+    "trees/math/pde/ping-zhang/4A12.tree",
+    "trees/math/pde/ping-zhang/4A13.tree",
+    "trees/math/pde/ping-zhang/4A14.tree",
+    "trees/math/pde/ping-zhang/4A15.tree",
+    "trees/math/pde/ping-zhang/4A16.tree",
+    "trees/math/pde/ping-zhang/4A17.tree",
+    "trees/math/pde/ping-zhang/4A18.tree",
+    "trees/math/pde/ping-zhang/4A19.tree",
+    "trees/math/pde/ping-zhang/4A1A.tree",
+    "trees/math/pde/ping-zhang/4A1B.tree",
+    "trees/math/pde/ping-zhang/4A1C.tree",
+    "trees/math/pde/ping-zhang/4A1D.tree",
+    "trees/math/pde/ping-zhang/4A1E.tree",
+    "trees/math/pde/ping-zhang/4A1F.tree",
+    "trees/math/pde/ping-zhang/4A20.tree",
+    "trees/math/pde/ping-zhang/4A21.tree",
+    "trees/math/pde/ping-zhang/4A22.tree",
+    "trees/math/pde/ping-zhang/4A23.tree",
+    "trees/math/pde/ping-zhang/4A24.tree",
+    "trees/math/pde/ping-zhang/4A25.tree",
+    "trees/math/pde/ping-zhang/4A26.tree",
+    "trees/math/pde/ping-zhang/4A27.tree",
+    "trees/math/pde/ping-zhang/4A28.tree",
+    "trees/references/icm2026-ping-zhang.tree",
+    "research/pde-ping-zhang-packet.json"
+  ],
+  "owned_files_absolute": [
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A00.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A01.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A02.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A03.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A04.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A05.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A06.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A07.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A08.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A09.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A0A.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A0B.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A0C.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A0D.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A0E.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A0F.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A10.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A11.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A12.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A13.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A14.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A15.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A16.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A17.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A18.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A19.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A1A.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A1B.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A1C.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A1D.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A1E.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A1F.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A20.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A21.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A22.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A23.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A24.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A25.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A26.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A27.tree",
+    "/Users/sunzy/claude_test/forester2/trees/math/pde/ping-zhang/4A28.tree",
+    "/Users/sunzy/claude_test/forester2/trees/references/icm2026-ping-zhang.tree",
+    "/Users/sunzy/claude_test/forester2/research/pde-ping-zhang-packet.json"
+  ],
+  "frozen_tree_sha256": {
+    "trees/math/pde/ping-zhang/4A00.tree": "4a18c00bfb51a3db5e55241ac5f8eff1b57634429fa0760f50f891483e49538c",
+    "trees/math/pde/ping-zhang/4A01.tree": "a471e0a64dc01e20d61302e1cfd6a5a4cf808330df1ef97afd8b0fe881f056dd",
+    "trees/math/pde/ping-zhang/4A02.tree": "f376455aef8e9d955d1577b578eab63681639b692e2667481c42d6203bfaf97b",
+    "trees/math/pde/ping-zhang/4A03.tree": "13d535cb8e632aa4f2c0843d330d8f33fdd041d7b7a1c97fd74cd64c0d35bae0",
+    "trees/math/pde/ping-zhang/4A04.tree": "65ffabd250b0a073a414f1420ae85b2023c249ab623b909d0b7c15b00bae1cbe",
+    "trees/math/pde/ping-zhang/4A05.tree": "bd52dd3ff35f036af09aa8bd065165e59f95f29cdbb80c0cb981c33df8a1f527",
+    "trees/math/pde/ping-zhang/4A06.tree": "647a47e5cfce728b47f0ef334663ba3d8de5800e8e1463cceda4ac4b0bba7be3",
+    "trees/math/pde/ping-zhang/4A07.tree": "3462dcb464f22ace47dc035e7340fd3617a25a174e90700590b73c122a72b35f",
+    "trees/math/pde/ping-zhang/4A08.tree": "037f3b6ba17caf963866443b22995ce1c92ffdb3aebcf79cf586467c364f6315",
+    "trees/math/pde/ping-zhang/4A09.tree": "0444ca4256098b28c38fff76fba7d571d51a97ed23b3c885c22f3d9e38870124",
+    "trees/math/pde/ping-zhang/4A0A.tree": "f20d1206b1932cddff6dea54b47b7ba94da6ec322d1d24bc75f329c3f6818d92",
+    "trees/math/pde/ping-zhang/4A0B.tree": "f222046cdf341e8f1e3c6d5c0891351416396603e3ca76721b0c05e944b40f06",
+    "trees/math/pde/ping-zhang/4A0C.tree": "e888e54e009f437154cf98627e6d5fb94fbbce48331ed013d16810c0f3af0dcc",
+    "trees/math/pde/ping-zhang/4A0D.tree": "129bd412808f4e05d8d37748d6cb33d66b2f8e9c21c53633690b91089cd3d9d3",
+    "trees/math/pde/ping-zhang/4A0E.tree": "9e19e4be4981f2042b1597d00699937bb5f65a005d933abc6a935ae0800cc4f1",
+    "trees/math/pde/ping-zhang/4A0F.tree": "c5699f21c033d262864bd543a704f053513d7a1275a3e00ef3a32fa6fe59a0a5",
+    "trees/math/pde/ping-zhang/4A10.tree": "a0552543a1ea4181a82acd9cd749533a916bba958a0f5d76cf26e20cdcc4c040",
+    "trees/math/pde/ping-zhang/4A11.tree": "6cced220d8e44a0a880ad93f8aa8f4b326bd76730743defb8dfbe2ad180a6694",
+    "trees/math/pde/ping-zhang/4A12.tree": "79dcbf1c0767c45a0ed98865f90dd54926ef3edcdc71be01067389b10d565c90",
+    "trees/math/pde/ping-zhang/4A13.tree": "a6088773312cf41511e68fd906d2a72d4f6b6852e5bbd050e15bebc815e760bf",
+    "trees/math/pde/ping-zhang/4A14.tree": "210c5027f038894fa0903cd5622d717ce0bdb3db587dcbcb534d8e79e8f60d98",
+    "trees/math/pde/ping-zhang/4A15.tree": "bb5f9b8ba4ed4a8aa7877818706d8bb841b3689e1f4477e296da0ec6613a3947",
+    "trees/math/pde/ping-zhang/4A16.tree": "6b5ceaa25b26fb0bd699ba74e5496436374a7a739215ce002cdef852b9079d7d",
+    "trees/math/pde/ping-zhang/4A17.tree": "1ce938820a32beb86781e3eb02ea44c7b9dcb3460065aa44b7de86f8ed4520eb",
+    "trees/math/pde/ping-zhang/4A18.tree": "61da145bfaafca5f81012e2192bda5168df999057400f8c75611bc29b69bcea9",
+    "trees/math/pde/ping-zhang/4A19.tree": "a366ffca45e844ac352b4cb577a0fefb779203cc3e47c39991f40fcd3f3df279",
+    "trees/math/pde/ping-zhang/4A1A.tree": "a1c78795c2cbe4377f5ced23927e2584787221628cfcdf99f9a8db29f51e5e47",
+    "trees/math/pde/ping-zhang/4A1B.tree": "56365bc96e104bdf7afb176d34e53b99dc823c95d4a392604c38181b267e4dfa",
+    "trees/math/pde/ping-zhang/4A1C.tree": "cd8afd9e391d5d42f76247db30d7828ef7404d4f190a8d406ef4fcdf835dc436",
+    "trees/math/pde/ping-zhang/4A1D.tree": "cf2fdf0d3b6e2a3eaced95b6cd4ecbd4c5842fa55f7cbccb6b104d25d53400ab",
+    "trees/math/pde/ping-zhang/4A1E.tree": "54a9f6b061efc9dfde8ea857f7f33b4c782522a11c6c7f8670a90f666e4a911f",
+    "trees/math/pde/ping-zhang/4A1F.tree": "1df181032629679ba403821a7fbbc0b2a1d7ee86675de8238b993730582278c7",
+    "trees/math/pde/ping-zhang/4A20.tree": "ff5b121db39829f35fa034b79eb5af8375375a8954c3433d6eb87725b6780ecd",
+    "trees/math/pde/ping-zhang/4A21.tree": "541697e081d0bec8a66818bb9e6021495f42a7387436e0c8867a9296f910b693",
+    "trees/math/pde/ping-zhang/4A22.tree": "7a6f64a1c7715d2d0f5939f79475b1f562e9325ccb01dc07cb064a6568dc450f",
+    "trees/math/pde/ping-zhang/4A23.tree": "2fec72183fd5c5803d46da014459c1b1e772099f6a04c0a979523a3dc650e51b",
+    "trees/math/pde/ping-zhang/4A24.tree": "f61618b237ac0e0ef251d80bd05cf21ee4dc7b7193614982f75a647a76c32968",
+    "trees/math/pde/ping-zhang/4A25.tree": "a5b7c599599c857738bab53298c5ba72046a9879c5ec636cd6d1a14b0bb30a1c",
+    "trees/math/pde/ping-zhang/4A26.tree": "4fc52cb9a2a803e54ffb699a3d917cab2501cf20fb84d19718c05764ba4213a5",
+    "trees/math/pde/ping-zhang/4A27.tree": "5429cfb847e0b663f884a4b016d4af9fa47ec892ccd7371abf4ed858b12172f3",
+    "trees/math/pde/ping-zhang/4A28.tree": "b6578f1c3ac2e64e19c1fac74d32a8c8bf482d2132e2e4db4c469eb96e215357",
+    "trees/references/icm2026-ping-zhang.tree": "7c9bbc513dffbec22d302be3038ea6ceafbd7254bd800eecd5f999824b0cc9b2"
+  },
+  "freeze": {
+    "status": "refrozen-after-PZ-F1-F5-awaiting-independent-review",
+    "date": "2026-10-21",
+    "tree_count": 42,
+    "packet_path": "research/pde-ping-zhang-packet.json",
+    "tree_hash_algorithm": "SHA-256",
+    "packet_hash_policy": "Packet carries hashes of every tree, not its own recursive hash; delivery-time packet hash may be recorded separately.",
+    "next_action": "仅由独立reviewer复验修复内容和冻结快照；本线程不改review状态。",
+    "revision": 2
+  },
+  "scope_boundary": "仅写trees/math/pde/ping-zhang/4A*.tree、trees/references/icm2026-ping-zhang.tree、research/pde-ping-zhang-packet.json。未修改共享导航、registries、workflow、tests、其他作者文件，未提交、构建或发布。",
+  "typed_relations": [
+    {
+      "from": "4A27",
+      "to": "4A24",
+      "type": "example-context",
+      "in_body": true,
+      "prerequisite": false,
+      "reason": "慢变缩放例子说明大能量与小导数可以相容，不参与所引全局定理的陈述或证明。"
+    }
+  ],
+  "semantic_decisions": [
+    {
+      "page": "4A03",
+      "term": "多重指标测试函数半范数",
+      "checked_targets": [
+        "0H4F",
+        "00MD",
+        "0W0Z"
+      ],
+      "decision": "保持4A03原文及直接依赖不变。4A03已链接0H4F；其正文定义p_(alpha,beta)，解释半范数公理并实际链接00MD，故未添加冗余4A03->00MD直边。",
+      "dependency_path": [
+        "4A03",
+        "0H4F",
+        "00MD"
+      ],
+      "status": "author checked actual target bodies; reviewer reconfirmation pending"
+    }
+  ],
+  "author_responses": [
+    {
+      "id": "PZ-F1",
+      "status": "implemented-awaiting-review",
+      "paths": [
+        "trees/math/pde/ping-zhang/4A1D.tree",
+        "research/pde-ping-zhang-packet.json"
+      ],
+      "change": "改为固定v2 Lemma2.3(2.30)，PDF p16；同步所有文献定位并补充实际阅读范围，独立短时证明不改。"
+    },
+    {
+      "id": "PZ-F2",
+      "status": "implemented-awaiting-review",
+      "paths": [
+        "research/pde-ping-zhang-packet.json"
+      ],
+      "change": "从4A27的两处prerequisites删除4A24，正文链接和4A27文件保持原样，另记example-context关系。"
+    },
+    {
+      "id": "PZ-F3",
+      "status": "implemented-awaiting-review",
+      "paths": [
+        "trees/math/pde/ping-zhang/4A00.tree",
+        "trees/math/pde/ping-zhang/4A25.tree",
+        "trees/math/pde/ping-zhang/4A26.tree",
+        "trees/math/pde/ping-zhang/4A28.tree",
+        "research/pde-ping-zhang-packet.json"
+      ],
+      "change": "新增一般柱坐标正交标架4A28，保留角度依赖和角向分量；4A25/26链接与前置关系由430Q改至4A28，概览接入新页。"
+    },
+    {
+      "id": "PZ-F4",
+      "status": "implemented-awaiting-review",
+      "paths": [
+        "trees/math/pde/ping-zhang/4A0A.tree",
+        "research/pde-ping-zhang-packet.json"
+      ],
+      "change": "在频率下界的实际使用处链接0W01，并补两处prerequisites及claim_sources。"
+    },
+    {
+      "id": "PZ-F5",
+      "status": "implemented-awaiting-review",
+      "paths": [
+        "trees/math/pde/ping-zhang/4A14.tree",
+        "research/pde-ping-zhang-packet.json"
+      ],
+      "change": "在输运与扩散的分部积分处引用0BAC，说明大球边界极限；保留衰减、积分有限和p<2正则化条件。"
+    }
+  ],
+  "body_links": {
+    "4A00": [
+      "4A01",
+      "4A02",
+      "4A0A",
+      "4A03",
+      "4A04",
+      "4A05",
+      "4A07",
+      "4A08",
+      "4A06",
+      "4A20",
+      "4A09",
+      "4A0B",
+      "4A23",
+      "4A0C",
+      "4A0E",
+      "4A0D",
+      "4A0F",
+      "4A10",
+      "4A24",
+      "4A27",
+      "4A28",
+      "4A25",
+      "4A26",
+      "4A15",
+      "4A16",
+      "4A11",
+      "4A12",
+      "4A13",
+      "4A14",
+      "4A1A",
+      "4A17",
+      "4A18",
+      "4A19",
+      "4A21",
+      "4A22",
+      "4A1B",
+      "4A1C",
+      "4A1D",
+      "4A1E",
+      "4A1F",
+      "icm2026-ping-zhang"
+    ],
+    "4A01": [
+      "4301",
+      "4302"
+    ],
+    "4A02": [
+      "4A01",
+      "00Q6",
+      "4304"
+    ],
+    "4A03": [
+      "0H4G",
+      "0H4F",
+      "00M7",
+      "0W0Z",
+      "00Q6"
+    ],
+    "4A04": [
+      "0H4F",
+      "0H4G",
+      "0I80"
+    ],
+    "4A05": [
+      "4A04",
+      "00Q6",
+      "00M7",
+      "0W0Z"
+    ],
+    "4A06": [
+      "4A05",
+      "4305"
+    ],
+    "4A07": [
+      "4308",
+      "0H4G",
+      "4A03",
+      "4A05"
+    ],
+    "4A08": [
+      "4A04",
+      "0W01",
+      "4A05"
+    ],
+    "4A09": [
+      "4317",
+      "4A04",
+      "0W01"
+    ],
+    "4A0A": [
+      "4A03",
+      "4A09",
+      "0H4F",
+      "0W01"
+    ],
+    "4A0B": [
+      "4A04",
+      "00Q6",
+      "00M7"
+    ],
+    "4A0C": [
+      "4A01",
+      "4A05",
+      "4A06"
+    ],
+    "4A0D": [
+      "4A06"
+    ],
+    "4A0E": [
+      "4A0B",
+      "4A01",
+      "4A09",
+      "4A06",
+      "4A0D"
+    ],
+    "4A0F": [
+      "4A03",
+      "4A05",
+      "4A0B",
+      "4A08",
+      "4A01",
+      "4A09",
+      "4A06"
+    ],
+    "4A10": [
+      "4301",
+      "4A03",
+      "4A05"
+    ],
+    "4A11": [
+      "4A03",
+      "4301",
+      "430I"
+    ],
+    "4A12": [
+      "4302",
+      "4508",
+      "4301",
+      "4A11"
+    ],
+    "4A13": [
+      "4A03",
+      "4301"
+    ],
+    "4A14": [
+      "4301",
+      "0A34",
+      "0BAC",
+      "00Q6"
+    ],
+    "4A15": [
+      "4302",
+      "4A03",
+      "4305",
+      "430C",
+      "4317"
+    ],
+    "4A16": [
+      "4301",
+      "4A15",
+      "4A07"
+    ],
+    "4A17": [
+      "4A16",
+      "4A13",
+      "4A12",
+      "4A14",
+      "4A11"
+    ],
+    "4A18": [
+      "4A03"
+    ],
+    "4A19": [
+      "4A18",
+      "4A15"
+    ],
+    "4A1A": [
+      "4302",
+      "4301",
+      "4304"
+    ],
+    "4A1B": [
+      "0A3G",
+      "0H4G",
+      "0I80",
+      "0A68",
+      "4A03"
+    ],
+    "4A1C": [
+      "4A1B",
+      "0W01",
+      "4A09"
+    ],
+    "4A1D": [
+      "00E2",
+      "4A03"
+    ],
+    "4A1E": [
+      "4A15",
+      "4A1B",
+      "4A1D",
+      "4A1C"
+    ],
+    "4A1F": [
+      "0H4F",
+      "4A01",
+      "4A1B",
+      "4A04",
+      "4A05"
+    ],
+    "4A20": [
+      "4A04"
+    ],
+    "4A21": [
+      "4A03",
+      "4A01",
+      "4305",
+      "00E2"
+    ],
+    "4A22": [
+      "4A21",
+      "0F40"
+    ],
+    "4A23": [
+      "0H4F",
+      "4A0B",
+      "0H4G",
+      "4301",
+      "4A0E"
+    ],
+    "4A24": [
+      "4301",
+      "0H4G",
+      "4A03"
+    ],
+    "4A25": [
+      "4A28",
+      "0A34",
+      "00Q6"
+    ],
+    "4A26": [
+      "4A28",
+      "00Q6",
+      "4302",
+      "4A03",
+      "4A25"
+    ],
+    "4A27": [
+      "4A03",
+      "4A05",
+      "4A04",
+      "4A15",
+      "4A24"
+    ],
+    "4A28": [
+      "004P",
+      "0A34",
+      "4301"
+    ],
+    "icm2026-ping-zhang": [
+      "4A00"
+    ]
+  },
+  "revision_scope": {
+    "finding_ids": [
+      "PZ-F1",
+      "PZ-F2",
+      "PZ-F3",
+      "PZ-F4",
+      "PZ-F5"
+    ],
+    "allowed_paths": [
+      "trees/math/pde/ping-zhang/",
+      "research/pde-ping-zhang-packet.json"
+    ],
+    "modified_paths": [
+      "research/pde-ping-zhang-packet.json",
+      "trees/math/pde/ping-zhang/4A00.tree",
+      "trees/math/pde/ping-zhang/4A0A.tree",
+      "trees/math/pde/ping-zhang/4A14.tree",
+      "trees/math/pde/ping-zhang/4A1D.tree",
+      "trees/math/pde/ping-zhang/4A25.tree",
+      "trees/math/pde/ping-zhang/4A26.tree",
+      "trees/math/pde/ping-zhang/4A28.tree"
+    ],
+    "review_file_unchanged": true,
+    "reference_file_unchanged": true,
+    "shared_registry_updates": "not performed; parent integration responsibility"
+  }
+}

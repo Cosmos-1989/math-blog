@@ -1,0 +1,14 @@
+\title{不可压缩条件将竖直伸缩转成水平散度}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Remark 2.2(b); LPZ-v1 Remark 1.1(b)}
+
+\p{设 #{u=(u^{\mathrm h},u^3)} 是[无散度向量场](4301)，各项属于下式的[频率空间](4A03)。则}
+##{|D_{\mathrm h}|^{-1}\partial_3u=
+\left(|D_{\mathrm h}|^{-1}\partial_3u^{\mathrm h},
+-|D_{\mathrm h}|^{-1}\operatorname{div}_{\mathrm h}u^{\mathrm h}\right).}
+\p{\strong{证明。}#{\partial_3u^3=-\operatorname{div}_{\mathrm h}u^{\mathrm h}} 来自无散度恒等式，作用相同 Fourier 乘子即得。由于 #{|\xi_{\mathrm h}\cdot\widehat u^{\mathrm h}|/|\xi_{\mathrm h}|\leq|\widehat u^{\mathrm h}|}，逐竖直块积分求和还给出}
+##{\||D_{\mathrm h}|^{-1}\partial_3u^3\|_{\mathcal B^{0,1/2}}
+\leq\|u^{\mathrm h}\|_{\mathcal B^{0,1/2}}.}
+\p{这里的[Besov 范数](4A05)只利用逐块 #{L^2} 控制。水平散度与水平旋度 #{\partial_1u^2-\partial_2u^1} 是不同的量；这个恒等式未要求水平旋度小。但全局定理的其他大范数仍会决定小量阈值。}

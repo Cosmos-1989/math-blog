@@ -1,0 +1,19 @@
+\title{经典三维 NS 的大角 Fourier 模态全局解}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Theorem3.9 (3.12)-(3.14); Liu–Zhang2024 DOI10.1016/j.aim.2023.109475}
+
+\p{在 #{\mathbb R^3} 的[一般柱坐标与正交标架](4A28)中，写 #{u=u^re_r+u^\vartheta e_\vartheta+u^ze_z}。这三个分量允许依赖角度；对不依赖角度的标量剖面 #{f(r,z)} 定义}
+##{\|f\|_{\mathcal M}=\|r^{1/2}f\|_6+\|f\|_2+\|(\partial_rf,\partial_zf)\|_2+\|r^{-1}f\|_2,}
+\p{其中所有 [#{L^p} 积分](00Q6)均使用三维体积测度。设六个实剖面 #{a^r,a^\vartheta,a^z,b^r,b^\vartheta,b^z} 的上述范数有限，并满足}
+##{\partial_ra^r+\frac{a^r}{r}+\partial_za^z+\frac{b^\vartheta}{r}=0,\qquad
+\partial_rb^r+\frac{b^r}{r}+\partial_zb^z-\frac{a^\vartheta}{r}=0.}
+\p{则存在仅依赖这些剖面范数的整数 #{N_0}，使对整数 #{N>N_0}，下列无散度初值生成[经典 NS](4302)的唯一全局强解：}
+##{\begin{aligned}
+u_{\mathrm{in}}^r&=a^r\cos(N\vartheta)+b^r\sin(N\vartheta),\\
+u_{\mathrm{in}}^\vartheta&=N^{-1}(a^\vartheta\cos(N\vartheta)+b^\vartheta\sin(N\vartheta)),\\
+u_{\mathrm{in}}^z&=a^z\cos(N\vartheta)+b^z\sin(N\vartheta).
+\end{aligned}}
+\p{这里“强解”使用有限能量 #{H^1} 初值的强解类 #{C([0,T];H^1)\cap L^2(0,T;H^2)}，[Sobolev 范数](4A03)按通常的各向同性权定义，每个有限 #{T} 上成立，正时间光滑。存在结论引用 Liu–Zhang，Adv. Math. 438 (2024), 109475，报告定理3.9。}
+\p{\strong{散度检验。}柱坐标散度为 #{\partial_ru^r+u^r/r+r^{-1}\partial_\vartheta u^\vartheta+\partial_zu^z}。对角向速度求导恰好抵消 #{N^{-1}}，余下的余弦、正弦系数就是假设中的两式。大频率[耗散机制](4A25)还须配合全空间半径权、压力和非线性模态估计，后者属于引用证明。}

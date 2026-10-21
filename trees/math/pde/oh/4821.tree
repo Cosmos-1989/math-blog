@@ -1,0 +1,12 @@
+\title{Klein–Gordon 波沿类时射线的驻相主项}
+\date{2026-10-21}
+\taxon{Calculation}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), (4.2)；使用既有驻相定理并保留相位常数}
+
+\p{在 [Fourier 表示](4820)中，先取 #{a_+,a_-\in C_c^\infty(\mathbb R^d)}。固定 #{|v|<1}，记 #{\kappa=\sqrt{1-|v|^2}}、#{\xi_v=v/\kappa}，沿 #{x=tv} 考虑相位 #{\Psi_\sigma(\xi)=v\cdot\xi+\sigma\sqrt{1+|\xi|^2}}。唯一临界点为 #{\xi=-\sigma\xi_v}，相位值为 #{\sigma\kappa}。}
+
+\p{\strong{Hessian 计算。}#{D^2\omega=\omega^{-1}I-\omega^{-3}\xi\xi^T} 的径向特征值为 #{\omega^{-3}}，其余为 #{\omega^{-1}}，故 #{\det D^2\omega=\omega^{-(d+2)}}。临界点处 #{\omega=\kappa^{-1}}，Hessian 的符号差为 #{\sigma d}。[驻相定理](1119)于是给出}
+##{\phi(t,tv)=(2\pi)^{-d/2}t^{-d/2}\kappa^{-(d+2)/2}\sum_{\sigma=\pm 1}e^{i\sigma(t\kappa+\pi d/4)}a_\sigma(-\sigma\xi_v)+O_v(t^{-d/2-1}).}
+
+\p{若振幅在临界点附近为零，局部主项相应消失，补集用[非驻相分部积分](0I86)控制。令 #{\rho=t\kappa}、#{y=v/\kappa}，主项也可写为 #{\rho^{-d/2}\sum_\sigma e^{i\sigma\rho}\gamma_\sigma(y)}，其中 #{\gamma_\sigma=(2\pi)^{-d/2}e^{i\sigma\pi d/4}\langle y\rangle a_\sigma(-\sigma y)}。此页证明紧频率支撑、固定类时速度的渐近；光锥边缘的一致估计需额外分析。}

@@ -1,0 +1,14 @@
+\title{静态势的二阶修正交换算子}
+\date{2026-10-21}
+\taxon{Calculation}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), §4.2 的交换算子；下列完整恒等式由乘积法则推导}
+
+\p{令 #{P=-\partial_t^2+\Delta -1+q(x)}，#{q\in C_c^\infty(\mathbb R^d)}，#{L_j=t\partial_j+x_j\partial_t}，#{S=t\partial_t+x\cdot\nabla}，#{Dq=x\cdot\nabla q}。定义}
+##{A=\sum_jL_j^2+(t^2-r^2)q.}
+\p{采用 #{[A,P]=AP-PA}，有精确恒等式}
+##{[A,P]=2(Dq+2q)S+2\bigl(r^2\nabla q-(Dq)x\bigr)\cdot\nabla+r^2\Delta q+5Dq+2(d+1)q.}
+
+\p{\strong{证明。}由[一阶交换](4826)，#{[\sum L_j^2,q]=t^2\Delta q+Dq+2t^2\nabla q\cdot\nabla+2tDq\partial_t}。令 #{b=(t^2-r^2)q}，则 #{[b,\Box]=-(\Box b)-2\partial^\mu b\partial_\mu}，其中 #{\Box b=(t^2-r^2)\Delta q-4Dq-2(d+1)q}。相加后 #{t^2\Delta q} 与 #{t^2\nabla q\cdot\nabla} 的项相消，整理即得结论。}
+
+\p{在势的固定紧支撑上，交换误差的系数至多随 #{t} 一次增长，而 #{A} 的主要空间部分是 #{t^2(\Delta+q)}。它恰好消去[归一化静态解](4814)的主导空间部分。这一代数改善是长时间估计的起点；对 #{A\phi} 的能量控制以及从中恢复导数还需额外分析。}

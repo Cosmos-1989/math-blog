@@ -1,0 +1,13 @@
+\title{收缩球上的能量估计给出有限传播速度}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，§1.2、式(1.5)；以下为光滑解的局部能量证明。}
+
+\p{设 #{u,v} 是[纯幂波方程](4901)的光滑解，在闭截锥 #{0\le t\le t_1<R,\ |x-a|\le R-t} 附近有界。若它们的初值在 #{B(a,R)} 相同，则在整个开截锥内相同。因而传播速度至多为 #{1}。}
+
+\p{\strong{证明。}令 #{z=u-v}。函数 #{f(r)=|r|^{p-1}r} 在有界区间的导数有界，故 #{z_{tt}-\Delta z=c(x,t)z}，其中 #{|c|\le C}。定义}
+##{E(t)=\frac 12\int_{B(a,R-t)}(z_t^2+|\nabla z|^2+z^2)\,dx.}
+\p{使用 [Stokes 公式](0BAC)的散度形式，并对收缩半径求导，得到}
+##{E'(t)=\int_{B(a,R-t)}(c+1)zz_t\,dx+\int_{\partial B(a,R-t)}\left(z_t\partial_nz-\frac 12(z_t^2+|\nabla z|^2+z^2)\right)dS\le C_1E(t).}
+\p{边界项非正，因为 #{2z_t\partial_nz\le z_t^2+|\nabla z|^2}。于是 #{(e^{-C_1t}E(t))'\le 0}，结合 #{E(0)=0} 及 #{E\ge 0} 得 #{E=0}。时间与空间平移给出任意后向光锥内的结论。能量解版本由局部适定性中的逼近与唯一性得到，作为该理论的一部分引用。}

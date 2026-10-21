@@ -1,0 +1,13 @@
+\title{孤子对称参数产生增长模与中性模}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，§3开头；Merle–Zaag，arXiv:1610.05637v1，式(2.6)–(2.8)。}
+
+\p{固定 #{N\ge 1,p>1}、#{d\in\mathbb R^N} 且 #{|d|<1}，令 #{\beta=2/(p-1)}。将[自相似波方程](4907)在[孤子状态](490C) #{(\kappa(d),0)} 处线性化，得到对状态 #{(q_1,q_2)} 的微分算子}
+##{L_d(q_1,q_2)=\left(q_2,\mathcal Lq_1-\beta(\beta+1)q_1+p\kappa(d)^{p-1}q_1-(2\beta+1)q_2-2y\cdot\nabla q_2\right).}
+\p{“特征模”指非零状态 #{F} 满足 #{L_dF=\lambda F}。该算子有来自时间平移的 #{\lambda=1} 模，以及来自参数 #{d} 变化的 #{\lambda=0} 模。}
+
+\p{\strong{证明。}对定常方程关于 #{d_j} 求导，得 #{L_d(\partial_{d_j}\kappa,0)=0}。另一方面，[广义孤子](4915)在 #{\nu=\mu e^s} 时是精确解。对 #{\mu} 在零处求导，得线性解 #{e^s(f_d,f_d)}，其中 #{f_d=-\beta\kappa(d)/(1+d\cdot y)}。所以 #{L_d(f_d,f_d)=(f_d,f_d)}。上述微分用[链式法则](0A34)即可验证。}
+
+\p{增长模按 #{e^s} 放大，中性模对应在孤子族内移动。这个计算只识别由对称性产生的模式；剩余谱的位置与控制误差所需的估计属于原始稳定性理论。}

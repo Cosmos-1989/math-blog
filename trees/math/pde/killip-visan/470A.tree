@@ -1,0 +1,9 @@
+\title{空间紧性将局部平方收敛提升为全空间收敛}
+\date{2026-10-21}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§5 末尾的紧性步骤}
+
+\p{设 #{u_n(t),v_n(t)\in L^2(\mathbb R)}，#{|t|\leq T}，所有这些函数组成的集合满足[空间紧性](4709)。若对每个 #{R>0}，#{\sup_{|t|\leq T}\|u_n(t)-v_n(t)\|_{L^2([-R,R])}\to 0}，则 #{\sup_{|t|\leq T}\|u_n(t)-v_n(t)\|_2\to 0}。}
+\p{\strong{证明。}把差的积分分成内外两部分。由 #{|a-b|^2\leq 2|a|^2+2|b|^2}，外部积分至多为两个空间尾部积分之和的两倍。先取 #{R} 使其一致小，再对固定 #{R} 令 #{n\to\infty}，即得结论。}
+\p{若已知 #{\|\operatorname{sech}(x-y)(u_n-v_n)\|_2\to 0} 对 #{t,y} 一致，只取 #{y=0}，利用 #{\operatorname{sech}x} 在固定紧区间上的正下界便得到上述局部收敛。这个正下界随 #{R} 变小，因而仍需独立的紧性输入。}

@@ -1,0 +1,10 @@
+\title{常系数 Hamilton 括号为零使向量场对易}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (5.1) 的有限维计算}
+
+\p{设 #{U\subset\mathbb R^n} 开，#{J} 为常反对称矩阵，#{F,H\in C^3(U)}。定义 #{X_F=J\nabla F}、#{X_H=J\nabla H}、#{\{F,H\}=\nabla F\cdot J\nabla H}。[向量场 Lie 括号](00ND)取 #{[X,Y]=DY\,X-DX\,Y}。则}
+##{[X_H,X_F]=J\nabla\{F,H\}.}
+\p{\strong{证明。}Hessian 矩阵对称且 #{J^{\mathsf T}=-J}，故 #{\nabla\{F,H\}=D^2F\,J\nabla H-D^2H\,J\nabla F}。左乘 #{J}，恰为 #{DX_FX_H-DX_HX_F}。因此 #{\{F,H\}=0} 蕴含向量场对易。常数非零括号也产生零向量场，所以反向推论需要附加条件。}
+\p{结合[光滑 ODE 存在唯一性](00OB)，对易向量场的局部流在共同定义范围内对易。证明是对 #{D\Phi_H^tX_F} 沿 #{t} 求导，利用括号为零得 #{D\Phi_H^tX_F=X_F\circ\Phi_H^t}；因而 #{s\mapsto\Phi_H^t\Phi_F^sx} 与 #{s\mapsto\Phi_F^s\Phi_H^tx} 满足同一初值问题。PDE 的[场论括号](4702)还涉及定义域和流的存在性，这些由各模型的分析定理提供。}

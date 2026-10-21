@@ -1,0 +1,14 @@
+\title{水平振荡适用的混合临界空间}
+\date{2026-10-21}
+\taxon{Definition}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Definition 2.3; LPZ-v1 Definition 1.3}
+
+\p{对[各向异性分块](4A04)，记 #{X_4=\mathcal B_4^{-1/2,1/2}}，其范数为}
+##{\begin{aligned}
+\|f\|_{X_4}={}&\sum_{\ell\in\mathbb Z}2^{\ell /2}
+\left(\sum_{k\geq\ell -1}2^{-k}\|\Delta_k^{\mathrm h}\Delta_\ell^{\mathrm v}f\|_{L^4_{\mathrm h}(L^2_{\mathrm v})}^2\right)^{1/2}\\
+&+\sum_{\ell\in\mathbb Z}2^{\ell /2}\|S_{\ell -1}^{\mathrm h}\Delta_\ell^{\mathrm v}f\|_2 .
+\end{aligned}}
+\p{混合 [#{L^p} 范数](00Q6)定义为 #{\|f\|_{L^4_{\mathrm h}(L^2_{\mathrm v})}=(\int_{\mathbb R^2}(\int_{\mathbb R}|f|^2dx_3)^2dx_{\mathrm h})^{1/4}}。空间可由 Schwartz 函数按该范数[完备化](00M7)，固定齐次低频代表元。}
+\p{第一项处理 #{k\geq\ell -1} 的水平高频，以负半阶水平权 #{2^{-k/2}} 容纳振荡。第二项保留水平低频的 #{L^2} 能量控制。写 #{f=f_{\mathrm{hh}}+f_{\mathrm{lh}}}，其中 #{f_{\mathrm{hh}}=\sum_{\ell}\sum_{k\geq\ell -1}\Delta_k^{\mathrm h}\Delta_\ell^{\mathrm v}f}、#{f_{\mathrm{lh}}=\sum_\ell S_{\ell -1}^{\mathrm h}\Delta_\ell^{\mathrm v}f}。两部分之和为 #{f}，由水平分块的望远镜恒等式得到。}

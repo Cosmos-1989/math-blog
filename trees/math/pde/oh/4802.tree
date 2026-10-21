@@ -1,0 +1,11 @@
+\title{波方程的 Fourier 初值公式}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Oh](icm2026-oh)，式 (2.1)；Fourier 解法补充}
+
+\p{设 #{g,h\in\mathcal S(\mathbb R^d)} 为 [Schwartz 函数](0H4F)。[波方程](4801) #{\Box\phi=0}、#{\phi(0)=g}、#{\partial_t\phi(0)=h} 的解满足}
+##{\widehat\phi(t,\xi)=\cos(t|\xi|)\widehat g(\xi)+\frac{\sin(t|\xi|)}{|\xi|}\widehat h(\xi).}
+\p{这里用[角频率 Fourier 变换](0H4G)，分式在 #{\xi=0} 取连续值 #{t}。由[反演](0I80)得到 #{\phi}。在频率远离零时，这也把解写成两个[半波演化](1112)之和。}
+
+\p{\strong{证明。}空间 Fourier 变换把方程变为 #{\partial_t^2\widehat\phi+|\xi|^2\widehat\phi=0}。显示公式逐频率满足方程与两个初值；其乘子在原点光滑，且各阶导数至多多项式增长，故对固定 #{t} 保持 Schwartz 类。对积分求导验证原方程。[常微分方程唯一性](00OB)给出每个频率上的唯一性，反演便给出 Schwartz 解的唯一性。}

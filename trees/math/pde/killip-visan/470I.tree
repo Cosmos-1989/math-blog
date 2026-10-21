@@ -1,0 +1,12 @@
+\title{KdV 的正则化流由平移与 Green 函数导数组成}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§5；原研究论文 KdV，命题 3.2、式 (3.11)}
+
+\p{固定 #{\kappa\geq 1}，令 #{g(x;\kappa,q)} 为[对角 Green 函数](470J)。[正则化 Hamilton 函数](470H)在光滑实势上生成}
+##{q_t=16\kappa^5\partial_xg(x;\kappa,q)+4\kappa^2q_x.}
+\p{Killip–Vişan 原论文命题 3.2 给出：存在与 #{\kappa} 无关的充分小 #{\delta>0}，对 #{\|q_0\|_{H^{-1}}<\delta}，此流在 #{H^{-1}(\mathbb R)} 中全局适定；它保持 Schwartz 类，与 KdV 流对易，并保持所有定义充分的 #{\alpha(\varkappa;q)}，#{\varkappa\geq 1}。原论文范数的频率权为 #{4+\xi^2}，改用本站 #{1+\xi^2} 只调整小量常数。}
+\p{\strong{局部机制。}由[变分公式](470K)，#{\delta\alpha /\delta q=(2\kappa)^{-1}-g}，再用 [Gardner 算子](4702) #{\partial_x} 得到上式。在平移坐标中，它等价于}
+##{q(t,x)=q_0(x+4\kappa^2t)+16\kappa^5\int_0^t g_x(x+4\kappa^2(t-r);\kappa,q(r))\,dr.}
+\p{#{q\mapsto g-(2\kappa)^{-1}} 的局部解析映射性质使积分项局部 Lipschitz，故可作 Picard 迭代。全局延拓、守恒和对易性使用所引命题；固定 #{\kappa} 的局部估计无需对 #{\kappa\to\infty} 一致。}

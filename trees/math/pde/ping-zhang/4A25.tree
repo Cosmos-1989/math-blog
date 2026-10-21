@@ -1,0 +1,13 @@
+\title{圆柱角频率的耗散与半径限制}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report §3.2 (3.18)-(3.21) mechanism}
+
+\p{在[一般柱坐标](4A28) #{(r,\vartheta,z)} 中，取标量 #{f(r,\vartheta,z)=a(r,z)e^{iN\vartheta}}，#{N\in\mathbb Z\setminus\{0\}}，并假设各积分有限。整数频率保证 #{f} 对角度具有 #{2\pi} 周期。柱坐标体积为 #{r\,dr\,d\vartheta\,dz}，由[链式法则](0A34)计算，}
+##{\|\nabla_{\mathrm h}f\|_2^2
+=2\pi\int\left(|\partial_ra|^2+\frac{N^2}{r^2}|a|^2\right)r\,dr\,dz.}
+\p{\strong{证明。}由 #{x_1=r\cos\vartheta,x_2=r\sin\vartheta}，有 #{\partial_{x_1}=\cos\vartheta\,\partial_r-r^{-1}\sin\vartheta\,\partial_\vartheta}、#{\partial_{x_2}=\sin\vartheta\,\partial_r+r^{-1}\cos\vartheta\,\partial_\vartheta}。因此平方相加得到 #{|\nabla_{\mathrm h}f|^2=|\partial_rf|^2+r^{-2}|\partial_\vartheta f|^2}。再用 #{\partial_\vartheta f=iNf} 并对角度积分即得。若域为 #{0<r<1} 的无限圆柱，则}
+##{\|\nabla_{\mathrm h}f\|_2^2\geq N^2\|f\|_2^2.}
+\p{因为 #{r^{-2}\geq 1}。在整个平面可把剖面移到半径 #{R\gg N} 的圆环，使角向系数 #{N^2/r^2} 很小，因此这个角项不提供相同的统一下界。}
+\p{对向量速度，柱坐标基向量也随角度变化，会产生耦合项；非线性还产生零模和高次谐波。上述标量 [#{L^2}](00Q6) 计算只解释圆柱大模态估计的一部分机制。}

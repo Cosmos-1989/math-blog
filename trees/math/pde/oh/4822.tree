@@ -1,0 +1,13 @@
+\title{未来光锥中的双曲面坐标与 Lorentz 推进}
+\date{2026-10-21}
+\taxon{Calculation}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), §4.1.2}
+
+\p{在 #{t>|x|} 内定义 #{\rho=\sqrt{t^2-|x|^2}>0}、#{y=x/\rho}，故 #{t=\rho\langle y\rangle}、#{x=\rho y}。将微分代入[Minkowski 度量](4801)，交叉项相消，得到}
+##{\eta=-d\rho^2+\rho^2h_{ij}dy^idy^j,\qquad h_{ij}=\delta_{ij}-\frac{y_iy_j}{1+|y|^2}.}
+\p{矩阵 #{h} 的径向特征值为 #{\langle y\rangle^{-2}}，其余为一，故双曲面 #{H_\rho=\{t^2-r^2=\rho^2,t>0\}} 的体积元为 #{\rho^d\langle y\rangle^{-1}dy}。这是曲率为负的双曲空间的双曲面表示；后续计算只使用此显式度量。}
+
+\p{对[推进向量场](4807) #{L_j=t\partial_{x_j}+x_j\partial_t}，有 #{L_j\rho=0}、#{L_jy_k=\langle y\rangle\delta_{jk}}；对缩放场 #{S=t\partial_t+x\cdot\nabla_x}，有 #{S\rho=\rho,Sy=0}。所以}
+##{L_j=\langle y\rangle\partial_{y_j},\qquad S=\rho\partial_\rho.}
+\p{推进场切于每张双曲面，适合控制其上的空间正则性。}

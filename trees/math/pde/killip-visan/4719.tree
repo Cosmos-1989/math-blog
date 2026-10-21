@@ -1,0 +1,12 @@
+\title{一维 H¹ 乘法在 H⁻¹ 上的对偶估计}
+\date{2026-10-21}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§5 的 Green 坐标估计所用基础；五阶 KdV 原论文式 (2.2)}
+
+\p{在实线 [Sobolev 空间](130F)中，存在绝对常数 #{C}，使 #{f,h\in H^1}、#{u\in H^{-1}} 满足}
+##{\|fh\|_{H^1}\leq C\|f\|_{H^1}\|h\|_{H^1},\qquad\|fu\|_{H^{-1}}\leq C\|f\|_{H^1}\|u\|_{H^{-1}}.}
+\p{第二式中的乘积通过分布配对 #{\langle fu,h\rangle=\langle u,fh\rangle} 定义；实值测试函数足以说明论证，复值情形按对偶配对加入共轭。常数加 #{H^1} 函数也给出 #{H^{-1}} 上的有界乘法算子。}
+\p{\strong{证明。}对 [Schwartz 函数](0H4F)，[Fourier 反演](0I80)及 [Cauchy–Schwarz](004S)给出}
+##{\|f\|_\infty\leq\frac 1{2\pi}\int|\widehat f(\xi)|d\xi\leq C\left(\int(1+\xi^2)|\widehat f(\xi)|^2d\xi\right)^{1/2},}
+\p{因为 #{\int(1+\xi^2)^{-1}d\xi<\infty}。再用 #{(fh)'=f'h+fh'}，分别以一项的 #{L^\infty} 范数控制另一项的 #{L^2} 范数，即得第一式。由频率截断和[光滑稠密性](0I8K)传到 #{H^1}。最后对 #{\|h\|_{H^1}\leq 1} 取配对上确界，得到第二式；#{H^{-1}} 与 #{H^1} 的对偶范数可直接由 Fourier 权重和 Cauchy–Schwarz 验证。}

@@ -1,0 +1,11 @@
+\title{输运扩散方程的 Lp 耗散恒等式}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report (1.2); CZ-v1 Lemma 3.1, PDF p8}
+
+\p{设实标量 #{a} 满足 #{\partial_ta+u\cdot\nabla a-\Delta a=g}，#{u} [无散度](4301)。假设各函数光滑、衰减足够，且以下积分有限。对 #{1<p<\infty}，令 #{a_{p/2}=\operatorname{sgn}(a)|a|^{p/2}}，零点取零。则}
+##{\frac 1p\frac d{dt}\|a\|_p^p+\frac{4(p-1)}{p^2}\|\nabla a_{p/2}\|_2^2
+=\int g\,a|a|^{p-2}\,dx.}
+\p{\strong{证明。}用 #{a|a|^{p-2}} 配对方程。[链式法则](0A34)把时间项化为 #{p^{-1}d\|a\|_p^p/dt}。由 [Stokes 公式](0BAC)在大球上分部积分，再令半径趋于无穷，衰减假设使边界项消失。输运项为 #{p^{-1}\int u\cdot\nabla|a|^p=-p^{-1}\int(\operatorname{div}u)|a|^p=0}；扩散项得到 #{(p-1)\int|a|^{p-2}|\nabla a|^2}，又 #{|\nabla a_{p/2}|^2=(p^2/4)|a|^{p-2}|\nabla a|^2}。}
+\p{当 #{p<2}，先以光滑函数 #{a(a^2+\varepsilon^2)^{(p-2)/2}} 测试，再在积分有限的假设下取极限，即可解释零点。对 #{p=3/2}，[#{L^p}](00Q6)控制写成 #{\|a\|_{3/2}^{3/2}=\|a_{3/4}\|_2^2}，扩散系数为 #{8/9}。这是标量涡量分量的计算；向量涡量的模求导会带来不同的 Hessian 项。}

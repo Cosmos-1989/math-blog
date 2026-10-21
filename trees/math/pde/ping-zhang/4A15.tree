@@ -1,0 +1,14 @@
+\title{经典 NS 的 Fujita–Kato 临界解}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Theorems 1.2, 3.2; Fujita–Kato 1964 DOI 10.1007/BF00276188}
+
+\p{设 #{u_0\in\dot H^{1/2}(\mathbb R^3)} 无散度。[经典 NS](4302)在黏性一、无外力时，有唯一最大临界解}
+##{u\in C(\lbrack 0,T^*\rparen;\dot H^{1/2})\cap L^2_{\mathrm{loc}}(\lbrack 0,T^*\rparen;\dot H^{3/2}).}
+\p{这里[Sobolev 空间](4A03)与[时间范数](4305)按既定约定。#{T^*>0} 为该类中不能继续延拓的最大时间；若 #{\|u_0\|_{\dot H^{1/2}}\leq c}，其中 #{c>0} 是充分小的绝对常数，则 #{T^*=\infty}。若 #{T^*<\infty}，对每个 #{2\leq p<\infty} 有}
+##{\int_0^{T^*}\|u(t)\|_{\dot H^{1/2+2/p}}^p\,dt=\infty.}
+\p{以上引用 Fujita–Kato 理论，见报告定理1.2、3.2及原文 Arch. Ration. Mech. Anal. 16 (1964), 269–315。}
+\p{\strong{积分形式。}对方程施加 [Leray 投影](430C)，利用[半群积分公式](4317)，得}
+##{u(t)=e^{t\Delta}u_0-\int_0^te^{(t-s)\Delta}\mathbb P\operatorname{div}(u\otimes u)(s)\,ds.}
+\p{这里 #{e^{t\Delta}} 的 Fourier 符号是 #{e^{-t|\xi|^2}}。二次项前的负号来自把对流项移至右侧。存在性所需的临界双线性估计属于所引理论。}

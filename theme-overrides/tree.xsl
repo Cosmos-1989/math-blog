@@ -261,6 +261,7 @@
       <xsl:when test="$label = 'Corollary'">推论</xsl:when>
       <xsl:when test="$label = 'Example'">例</xsl:when>
       <xsl:when test="$label = 'Construction'">构造</xsl:when>
+      <xsl:when test="$label = 'Calculation'">计算</xsl:when>
       <xsl:when test="$label = 'Convention'">约定</xsl:when>
       <xsl:when test="$label = 'Principle'">原则</xsl:when>
       <xsl:when test="$label = 'Outline'">提纲</xsl:when>

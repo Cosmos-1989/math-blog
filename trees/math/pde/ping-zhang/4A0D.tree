@@ -1,0 +1,15 @@
+\title{指数时间权把增长项变成耗散项}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Definition 2.4; LPZ-v1 Definition 2.2}
+
+\p{设 #{f(t)\geq 0} 在有限区间可积，#{F(t)=\int_0^t f(s)\,ds}。对[竖直分块时间范数](4A06)，定义}
+##{\|u\|_{\widetilde L^2_{T,f}\mathcal B^{0,1/2}}
+=\sum_\ell 2^{\ell /2}\left(\int_0^Tf(t)\|\Delta_\ell^{\mathrm v}u(t)\|_2^2\,dt\right)^{1/2}.}
+\p{设非负可微函数 #{y_\ell}、非负函数 #{d_\ell,g_\ell} 满足 #{y_\ell'+d_\ell\leq Cf\,y_\ell+g_\ell}。取 #{\lambda>C}，则}
+##{e^{-\lambda F(t)}y_\ell(t)+\int_0^t e^{-\lambda F(s)}
+\left(d_\ell(s)+(\lambda -C)f(s)y_\ell(s)\right)\,ds
+\leq y_\ell(0)+\int_0^t e^{-\lambda F(s)}g_\ell(s)\,ds.}
+\p{\strong{证明。}将不等式乘 #{e^{-\lambda F}}，用乘积法则，#{(e^{-\lambda F}y_\ell)'=e^{-\lambda F}(y_\ell'-\lambda f y_\ell)}。积分即得。}
+\p{当 #{y_\ell=\|\Delta_\ell^{\mathrm v}u\|_2^2}，取平方根并按 #{2^{\ell /2}} 求和，新增的正项正好对应指数加权速度的 #{\widetilde L^2_{T,f}} 控制。恢复无权速度付出 #{e^{\lambda F(T)/2}}，这解释小水平分量条件中的指数代价。实际方程中选择 #{f} 并控制它的积分，仍需相应非线性估计。}

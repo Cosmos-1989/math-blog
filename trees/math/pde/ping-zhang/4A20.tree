@@ -1,0 +1,12 @@
+\title{Bony 分解把乘积按频率大小分组}
+\date{2026-10-21}
+\taxon{Construction}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；Liu–Zhang2024 Appendix A (A.1)-(A.3); report (3.9)}
+
+\p{固定一个方向的[二进分块](4A04)，记为 #{\Delta_j,S_j}。对仅有有限多个非零块的函数，定义}
+##{T_ab=\sum_jS_{j-1}a\,\Delta_jb,\qquad
+R(a,b)=\sum_j\Delta_ja\,(\Delta_{j-1}+\Delta_j+\Delta_{j+1})b.}
+\p{则 #{ab=T_ab+T_ba+R(a,b)}。#{T_ab} 称低高频部分或旁乘积，#{R} 收集相近频率。}
+\p{\strong{证明。}展开 #{ab=\sum_{i,j}\Delta_ia\,\Delta_jb}。指标对恰分成三个互不相交的区域 #{i\leq j-2}、#{j\leq i-2}、#{|i-j|\leq 1}。第一部分用 #{\sum_{i\leq j-2}\Delta_i=S_{j-1}} 得到 #{T_ab}，第二部分得到 #{T_ba}，第三部分得到 #{R(a,b)}。}
+\p{水平和竖直方向可分别应用该分解，产生九类相互作用。无限分解在相关级数于分布中收敛时成立；要从这一恒等式得到特定 Sobolev 或 Besov 乘积估计，还须证明相应求和界。}

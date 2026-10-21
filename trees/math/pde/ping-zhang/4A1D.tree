@@ -1,0 +1,14 @@
+\title{连续 Sobolev 解在初始时刻的高频尾}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；LZ-v2 Lemma 2.3, (2.30), PDF p16; independent local short-time variant}
+
+\p{设 #{u\in C([0,T];H^\gamma(\mathbb R^3))}，其中 #{\gamma>0}，[连续性](00E2)取 [Sobolev 范数](4A03)。令 #{J(t)\to\infty} 当 #{t\downarrow 0}，定义}
+##{\eta(t)=\sup_{0\leq\tau\leq t}(2\pi)^{-3/2}
+\|1_{\{|\xi|\geq J(t)\}}|\xi|^\gamma\widehat u(\tau,\xi)\|_2.}
+\p{则 #{\eta(t)\to 0}。}
+\p{\strong{证明。}把 #{u(\tau)} 写成 #{u_0+(u(\tau)-u_0)}，由于频率截断范数不超过一，有}
+##{\eta(t)\leq \sup_{0\leq\tau\leq t}\|u(\tau)-u_0\|_{H^\gamma}
++(2\pi)^{-3/2}\|1_{\{|\xi|\geq J(t)\}}|\xi|^\gamma\widehat u_0\|_2.}
+\p{第一项由在零点连续而趋于零；第二项是一个可积平方函数的尾积分，随 #{J(t)\to\infty} 趋于零。对 #{\dot H^{1/2}} 连续解采用对应齐次范数，证明相同。该结论只给定性尾小量，不提供适用于整个有界初值球的统一衰减率。}

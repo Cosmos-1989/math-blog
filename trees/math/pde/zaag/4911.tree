@@ -1,0 +1,17 @@
+\title{一阶 Toda 系统的对数分离解}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，式(3.13)、(3.15)；Côte–Zaag，arXiv:1110.2512v1，式(16)、§2.1式(28)–(32)。}
+
+\p{固定 #{p>1}、整数 #{k\ge 2} 与常数 #{A>0}。对实函数 #{\zeta_1,\ldots,\zeta_k}，定义一阶 Toda 系统}
+##{A^{-1}\zeta_i'=e^{-2(\zeta_i-\zeta_{i-1})/(p-1)}-e^{-2(\zeta_{i+1}-\zeta_i)/(p-1)}.}
+\p{首项在 #{i=1} 时取零，末项在 #{i=k} 时取零，可记为 #{\zeta_0=-\infty,\zeta_{k+1}=+\infty}。存在唯一满足 #{\sum_i\bar\alpha_i=0} 的常数组，使}
+##{\bar\zeta_i(s)=\frac{p-1}{2}\left(i-\frac{k+1}{2}\right)\log s+\bar\alpha_i,\qquad s>0,}
+\p{解此系统。在形如 #{a_i\log s+c_i}、其中 #{a_i=(p-1)(i-(k+1)/2)/2} 的解中，全部自由度是共同平移 #{\bar\zeta_i+\zeta_*}。}
+
+\p{\strong{证明。}记 #{a_i=(p-1)(i-(k+1)/2)/2}，令 #{b_i=e^{-2(\bar\alpha_{i+1}-\bar\alpha_i)/(p-1)}}，#{b_0=b_k=0}。代入并消去 #{s^{-1}} 后，方程化为 #{a_i/A=b_{i-1}-b_i}。求和得到}
+##{b_i=-A^{-1}\sum_{j=1}^ia_j=\frac{p-1}{4A}i(k-i)>0\qquad(1\le i<k).}
+\p{因此各差 #{\bar\alpha_{i+1}-\bar\alpha_i=-(p-1)\log b_i/2} 唯一，零和条件固定共同平移。这里使用[对数](0A45)及[指数](0A46)。系统求和给出 #{\sum_i\zeta_i'=0}，故中心 #{k^{-1}\sum_i\zeta_i} 守恒。特别地，相邻距离为 #{(p-1)\log s/2+O(1)}，其中 #{O(1)} 表示有界项，故距离趋于无穷。}
+
+\p{应用于波方程的多孤子渐近时，取 #{A=c_1(p)>0}，其中 #{c_1(p)} 是 Côte–Zaag 原文式(16)、(28)所用的固定调制系数，其数值由原始调制理论给定。上述代数证明允许任意 #{A>0}；在 PDE 应用中，#{A} 的值固定。若把 #{A} 改成 #{A'}，每个相邻常数差都增加 #{(p-1)\log(A'/A)/2}，所以这个改变无法由共同平移 #{\zeta_*} 消去。}

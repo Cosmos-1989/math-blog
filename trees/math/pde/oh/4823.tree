@@ -1,0 +1,14 @@
+\title{Klein–Gordon 双曲面能量中的质量控制}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), (4.3)；通量的直接计算}
+
+\p{对实函数 #{\phi} 定义质量为一的能量动量张量 #{Q^{KG}_{\mu\nu}=\partial_\mu\phi\partial_\nu\phi -\frac 12\eta_{\mu\nu}(\partial^\alpha\phi\partial_\alpha\phi+\phi^2)}。在[双曲面](4822) #{H_\rho} 上，未来单位法向量为 #{N=(t\partial_t+x\cdot\nabla_x)/\rho}。令 #{T=\partial_t}，定义通量 #{E_{KG}(H_\rho)=\int_{H_\rho}Q^{KG}(T,N)d\Sigma}。}
+
+\p{\strong{计算。}由于 #{d\Sigma=(\rho /t)dx}，有}
+##{E_{KG}(H_\rho)=\int_{H_\rho}\left[\tfrac 12(\phi_t^2+|\nabla_x\phi|^2+\phi^2)+\frac{x}{t}\cdot\nabla_x\phi\,\phi_t\right]dx.}
+\p{令 #{v=x/t}。导数部分等于 #{\frac 12|\nabla_x\phi+v\phi_t|^2+\frac 12(1-|v|^2)\phi_t^2\ge 0}。换元 #{x=\rho y} 后得到}
+##{E_{KG}(H_\rho)\ge\frac 12\rho^d\int|\phi(\rho,y)|^2\,dy.}
+
+\p{质量项正好提供无导数的平方控制。类似[波的散度恒等式](4803)，有 #{\partial^\mu Q^{KG}_{\mu\nu}=((\Box -1)\phi)\partial_\nu\phi}。自由解的能量流散度为零；对截断区域应用 [Stokes 定理](0BAC)，并利用未来因果边界通量的非负性，可将双曲面通量控制在初始能量之内。取极限时需有限能量及边界通量收敛。}

@@ -1,0 +1,11 @@
+\title{三维波方程的径向幂权通量恒等式}
+\date{2026-10-21}
+\taxon{Calculation}
+\author{author}
+\meta{source}{[Oh](icm2026-oh)，§2.4 的 r 幂权方法；局部恒等式}
+
+\p{在三维空间取 #{u=t-r}、#{\Phi=r\phi}，令 #{\Box\phi=f}。由[共轭公式](4809)，#{-2\Phi_{ur}+\Phi_{rr}+r^{-2}\Delta_S\Phi=rf}。固定实数 #{p}，在 #{r>0} 处乘以 #{r^p\Phi_r} 并在单位球面上积分。记 #{\nabla_S} 为球面[梯度](0U14)，得到}
+##{\begin{aligned}-\partial_u\int_{S^2}r^p\Phi_r^2\,dA+\frac 12\partial_r\int_{S^2}\left(r^p\Phi_r^2-r^{p-2}|\nabla_S\Phi|^2\right)\,dA\\-\frac 12\int_{S^2}\left(p r^{p-1}\Phi_r^2+(2-p)r^{p-3}|\nabla_S\Phi|^2\right)\,dA=\int_{S^2}r^{p+1}f\Phi_r\,dA.\end{aligned}}
+\p{\strong{计算。}时间混合项给 #{-\partial_u(r^p\Phi_r^2)}，径向项给 #{\tfrac 12\partial_r(r^p\Phi_r^2)-\tfrac p2r^{p-1}\Phi_r^2}。球面分部积分把角向项化为 #{-\tfrac 12r^{p-2}\partial_r\int|\nabla_S\Phi|^2dA}，再对径向权重用乘积法则即得公式。球面没有边界，使用 [Stokes 公式](0BAC)。}
+
+\p{当 #{0\le p\le 2} 时，移到等号另一侧的两个体积项均非负。在外部时空区域积分后仍须处理固定内边界的通量；[积分局部能量衰减](480C)负责控制这部分。仅此局部恒等式尚未给出完整的时间衰减定理。}

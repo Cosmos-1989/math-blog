@@ -1,0 +1,11 @@
+\title{水平散度和竖直涡量恢复水平速度}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；CZ-v1 §2 (2.1)-(2.2), PDF p4}
+
+\p{设 #{u} 是光滑无散度速度，令 #{\omega=\partial_1u^2-\partial_2u^1}、#{d=\partial_3u^3}。约定 #{\nabla_{\mathrm h}^{\perp}=(-\partial_2,\partial_1)}，#{\Delta_{\mathrm h}^{-1}} 的[乘子](4A03)为 #{-|\xi_{\mathrm h}|^{-2}}。在频率避开 #{\xi_{\mathrm h}=0} 时，}
+##{u^{\mathrm h}=\nabla_{\mathrm h}^{\perp}\Delta_{\mathrm h}^{-1}\omega -
+\nabla_{\mathrm h}\Delta_{\mathrm h}^{-1}d.}
+\p{\strong{证明。}第一项的[水平散度](4301)为零、旋度为 #{\omega}，与[二维 Biot–Savart 约定](430I)一致。第二项的散度为 #{-d}、旋度为零。两者与 #{u^{\mathrm h}} 之差的 Fourier 变换同时垂直和平行于非零 #{\xi_{\mathrm h}}，故为零。}
+\p{对一般数据，通过频率截断在相应范数中取极限；若没有规定低频实现，还可存在水平调和自由度。这一分解揭示单分量判据的两个待估计量 #{\omega,d}，并解释为何逆水平 Laplace 算子促使使用各向异性范数。}

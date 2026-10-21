@@ -1,0 +1,10 @@
+\title{KdV 正则化线性频率在高频处降低阶数}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§5 的正则化机制；由原论文式 (2.10)、(3.11) 计算}
+
+\p{固定 #{\kappa\geq 1}，在零解处线性化[正则化 KdV 流](470I)。其 Fourier 乘子为}
+##{i\xi\frac{4\kappa^2\xi^2}{\xi^2+4\kappa^2}.}
+\p{\strong{证明。}[Green 函数的变分](470K)在 #{q=0} 处为 #{Dg(0)[h]=-\kappa^{-1}(-\partial_x^2+4\kappa^2)^{-1}h}。代入正则化向量场得 #{-16\kappa^4\partial_x(-\partial_x^2+4\kappa^2)^{-1}h+4\kappa^2h_x}，合并乘子即得。}
+\p{对每个固定 #{\xi}，当 #{\kappa\to\infty} 时乘子趋于 #{i\xi^3}，这正是 #{-\partial_x^3} 的符号。固定 #{\kappa} 而 #{|\xi|\gg\kappa} 时，乘子仅按 #{4\kappa^2i\xi} 增长。差流的线性符号为 #{i\xi^5/(\xi^2+4\kappa^2)}，所以高频误差的控制需要[一致小的频率尾部](4707)。}

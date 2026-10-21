@@ -1,0 +1,26 @@
+\title{一般柱坐标的正交标架与向量分量}
+\date{2026-10-21}
+\taxon{Definition}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)§3.2的坐标约定；直接坐标计算}
+
+\p{在 #{\mathbb R^3} 去掉竖直轴的区域，柱坐标由}
+##{x_1=r\cos\vartheta,\qquad x_2=r\sin\vartheta,\qquad x_3=z,\qquad r>0}
+\p{给出。角度相差 #{2\pi} 的整数倍表示同一点；固定长度小于 #{2\pi} 的角度区间可作局部坐标。定义}
+##{e_r=(\cos\vartheta,\sin\vartheta,0),\quad
+e_\vartheta=(-\sin\vartheta,\cos\vartheta,0),\quad e_z=(0,0,1).}
+\p{这三个向量在每一点组成[标准正交集](004P)，并张成 #{\mathbb R^3}，称为柱坐标的正交标架。对向量场 #{u=(u^1,u^2,u^3)}，其标架分量由}
+##{u=u^re_r+u^\vartheta e_\vartheta+u^ze_z,\qquad
+u^r=u^1\cos\vartheta+u^2\sin\vartheta,\quad
+u^\vartheta=-u^1\sin\vartheta+u^2\cos\vartheta,\quad u^z=u^3}
+\p{定义；三分量都可以依赖 #{r,\vartheta,z}。坐标切向量为 #{\partial_rx=e_r}、#{\partial_\vartheta x=re_\vartheta}、#{\partial_zx=e_z}，所以 #{u^\vartheta} 是单位角向量的系数。直接求导有}
+##{\partial_\vartheta e_r=e_\vartheta,\qquad
+\partial_\vartheta e_\vartheta=-e_r,\qquad \partial_\vartheta e_z=0.}
+\p{由[链式法则](0A34)，对光滑标量函数得到}
+##{\partial_{x_1}=\cos\vartheta\,\partial_r-r^{-1}\sin\vartheta\,\partial_\vartheta,\qquad
+\partial_{x_2}=\sin\vartheta\,\partial_r+r^{-1}\cos\vartheta\,\partial_\vartheta,\qquad
+\partial_{x_3}=\partial_z.}
+\p{把 #{u^1=u^r\cos\vartheta -u^\vartheta\sin\vartheta}、#{u^2=u^r\sin\vartheta+u^\vartheta\cos\vartheta} 代入[欧氏散度](4301)，径向求导项之和为 #{\partial_ru^r}，角向求导项之和为 #{r^{-1}(u^r+\partial_\vartheta u^\vartheta)}，因而}
+##{\operatorname{div}u=\partial_ru^r+\frac{u^r}{r}
++\frac 1r\partial_\vartheta u^\vartheta+\partial_zu^z.}
+\p{这些坐标公式适用于 #{r>0}。轴线上的光滑性须由笛卡尔分量的延拓判断；各标架分量不必各自有与角度无关的轴上值。}

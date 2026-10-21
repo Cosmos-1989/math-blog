@@ -1,0 +1,11 @@
+\title{预解式夹心算子的 Hilbert–Schmidt 范数}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (4.7)；原研究论文 KdV，式 (2.4)}
+
+\p{取实 #{q\in H^{-1}(\mathbb R)}、#{\kappa\geq 1}，#{R_0} 为[自由预解式](470C)。由光滑逼近定义 #{A_\kappa(q)=R_0^{1/2}qR_0^{1/2}}。它是自伴 [Hilbert–Schmidt 算子](0X02)，且按本站 [Fourier 归一化](130F)，}
+##{\|A_\kappa(q)\|_{S_2}^2=\frac 1{2\pi\kappa}\int_{\mathbb R}\frac{|\widehat q(\xi)|^2}{\xi^2+4\kappa^2}\,d\xi.}
+\p{\strong{证明。}先取实 Schwartz 函数。Fourier 空间中核为 #{(2\pi)^{-1}\widehat q(\xi -\eta)(\xi^2+\kappa^2)^{-1/2}(\eta^2+\kappa^2)^{-1/2}}。核的平方积分及变量代换 #{\zeta=\xi -\eta} 给出结论，因为}
+##{\int_{\mathbb R}\frac{d\eta}{((\eta+\zeta)^2+\kappa^2)(\eta^2+\kappa^2)}=\frac{2\pi}{\kappa(\zeta^2+4\kappa^2)}.}
+\p{此积分也可由指数核的卷积验证：#{e^{-\kappa|x|}} 的 Fourier 变换为 #{2\kappa /(\kappa^2+\xi^2)}，两个变换的卷积对应 #{e^{-2\kappa|x|}}。右端对 #{q} 是连续的 #{H^{-1}} 二次型。先在频率上截断，再用[紧支撑光滑函数的 L² 稠密性](0I8K)逼近；在固定紧频率区间，Sobolev 权重与常数等价。逆 Fourier 变换得到 [Schwartz 函数](0H4F)逼近，取实部可保持实值性，故算子延拓到 #{H^{-1}}。自伴性由算子范数极限保持。}

@@ -1,0 +1,13 @@
+\title{标量波的能量动量散度恒等式}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Oh](icm2026-oh)，引理 2.1 的第一部分}
+
+\p{设 #{\phi:\mathbb R^{1+d}\to\mathbb R} 光滑，采用 [Minkowski 指标约定](4801)。定义对称[张量](00NG)}
+##{Q_{\mu\nu}[\phi]=\partial_\mu\phi\partial_\nu\phi -\frac 12\eta_{\mu\nu}\partial^\alpha\phi\partial_\alpha\phi.}
+\p{则 #{\partial^\mu Q_{\mu\nu}=(\Box\phi)\partial_\nu\phi}。}
+
+\p{\strong{证明。}用乘积法则展开，并用[混合偏导交换](0A3D)，得到}
+##{\partial^\mu Q_{\mu\nu}=(\Box\phi)\partial_\nu\phi+\partial^\mu\phi\partial_\mu\partial_\nu\phi -\partial^\alpha\phi\partial_\nu\partial_\alpha\phi=(\Box\phi)\partial_\nu\phi.}
+\p{若 #{\Box\phi=0}，取 #{\nu=0}，此式等价于 #{\partial_t e=\operatorname{div}_x(\partial_t\phi\nabla_x\phi)}，其中 #{e=Q_{00}=((\partial_t\phi)^2+|\nabla_x\phi|^2)/2}。散度的坐标含义见[欧氏向量场的散度](4301)。}

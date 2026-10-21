@@ -1,0 +1,15 @@
+\title{水平与竖直 Littlewood–Paley 分块}
+\date{2026-10-21}
+\taxon{Definition}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report (2.3); LPZ-v1 (1.3)}
+
+\p{在 [Schwartz 空间](0H4F)上选偶的光滑截断 #{\chi}，使其在 #{|\tau|\leq 3 /4} 为一、在 #{|\tau|\geq 4 /3} 为零，且随 #{|\tau|} 单调不增。置 #{\varphi(\tau)=\chi(\tau /2)-\chi(\tau)}，则 #{\operatorname{supp}\varphi\subset\{3/4\leq|\tau|\leq 8 /3\}}。利用 [Fourier 变换](0H4G)及其[反演](0I80)定义}
+##{\begin{aligned}
+\Delta_k^{\mathrm h}f&=\mathcal F^{-1}(\varphi(2^{-k}|\xi_{\mathrm h}|)\widehat f),&
+S_k^{\mathrm h}f&=\mathcal F^{-1}(\chi(2^{-k}|\xi_{\mathrm h}|)\widehat f),\\
+\Delta_\ell^{\mathrm v}f&=\mathcal F^{-1}(\varphi(2^{-\ell}|\xi_3|)\widehat f),&
+S_\ell^{\mathrm v}f&=\mathcal F^{-1}(\chi(2^{-\ell}|\xi_3|)\widehat f).
+\end{aligned}}
+\p{对非零频率，#{\sum_{j\in\mathbb Z}\varphi(2^{-j}\tau)=1}。这是有限和 #{\sum_{j=-N}^N\varphi(2^{-j}\tau)=\chi(2^{-N-1}\tau)-\chi(2^N\tau)} 的极限。因此 #{\Delta_k^{\mathrm h}\Delta_\ell^{\mathrm v}} 同时选择 #{|\xi_{\mathrm h}|\asymp 2^k} 与 #{|\xi_3|\asymp 2^\ell}；#{S_k^{\mathrm h}=\sum_{j<k}\Delta_j^{\mathrm h}}。}
+\p{在齐次空间中求和按频率截断的极限解释，并固定低频代表元。本文的指数变化只改变范数权，不改变这一套截断。}

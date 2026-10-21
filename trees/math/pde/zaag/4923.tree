@@ -1,0 +1,14 @@
+\title{一维孤子能量与中心参数无关}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，§3.2；Merle–Zaag，JFA 2007，命题1(ii)、§2.3式(49)。}
+
+\p{设 #{N=1,p>1}，#{|d|<1}，#{q(y)=\kappa(d,y)} 为[显式孤子](490C)，#{\rho=(1-y^2)^{2/(p-1)}}。其[自相似能量](4908)满足}
+##{E(q,0)=E(-q,0)=E(\kappa_0,0)=\frac{p-1}{2(p+1)}\kappa_0^{p+1}\int_{-1}^1\rho(y)\,dy>0.}
+
+\p{\strong{证明。}把定常方程乘以 #{q\rho} 并使用[分部积分](0BAC)，边界项因 #{(1-y^2)\rho\to 0} 及 #{q,q'} 有界而消失，得到}
+##{\int_{-1}^1\bigl((1-y^2)(q')^2+\beta(\beta+1)q^2\bigr)\rho\,dy=\int_{-1}^1q^{p+1}\rho\,dy,\qquad \beta=\frac{2}{p-1}.}
+\p{代入能量定义，得 #{E(q,0)=(p-1)\int q^{p+1}\rho /[2(p+1)]}。令 #{Y=(y+d)/(1+dy)}，则}
+##{1-Y^2=\frac{(1-d^2)(1-y^2)}{(1+dy)^2},\qquad dY=\frac{1-d^2}{(1+dy)^2}dy,\qquad q(y)^{p+1}\rho(y)dy=\kappa_0^{p+1}\rho(Y)dY.}
+\p{该递增换元保持端点 #{-1,1}，因此积分与 #{d} 无关。能量只含平方与绝对值，故改号不改变能量；被积函数严格为正，得最后的不等式。}

@@ -14,7 +14,7 @@ const css = fs.readFileSync(path.join(root, 'theme-overrides/reading.css'), 'utf
 assert(css.includes('--heading-font: var(--body-font)'), 'Page headings must share the body font family');
 assert(css.includes('font-size: clamp(26px, 2.2vw, 32px)'), 'Desktop heading scale changed');
 assert(css.includes('h1 { font-size: 24px; }'), 'Mobile heading scale changed');
-const pages = ['index', '0062', '013Z', '004M', '004R', '003J', '009E'];
+const pages = ['index', '0062', '013Z', '004M', '004R', '003J', '009E', '4817'];
 for (const id of pages) {
   const html = fs.readFileSync(path.join(output, id, 'index.html'), 'utf8');
   for (const marker of ['lang="zh-CN"', 'reading.css?v=', 'reading.js?v=', 'id="main-content"', 'class="tree-content"', 'class="search-trigger"']) {
@@ -26,6 +26,10 @@ for (const id of pages) {
   assert(!/数学博客作者|数学博客首页/.test(html), `${id}: stale branding`);
   assert(!/<span class="taxon">[^<]*\.\s*<\/span>/.test(html), `${id}: English full stop after Chinese taxon label`);
   if (id === 'index') assert(html.includes('依然范德彪'), 'Missing author name');
+  if (id === '4817') {
+    assert(/class="taxon">\s*计算/.test(html), 'Calculation labels must be localized');
+    assert(!/class="taxon">\s*Calculation/.test(html), 'Unlocalized Calculation label');
+  }
 }
 console.log(`Reading theme: generated assets, heading typography and ${pages.length} representative static HTML pages passed.`);
 
@@ -76,9 +80,12 @@ if (process.env.PLAYWRIGHT_MODULE) {
       await page.keyboard.press('/');
       await page.waitForFunction(() => document.querySelector('ninja-keys').visible);
       await page.keyboard.press('Escape');
-      await page.locator('article > section > details > summary').click();
+      await page.waitForFunction(() => !document.querySelector('ninja-keys').visible);
+      // Summary metadata contains links; its centre need not toggle the details.
+      const summaryLabel = page.locator('article > section > details > summary > header > h1 > .taxon');
+      await summaryLabel.click();
       assert.equal(await page.locator('article > section > details').getAttribute('open'), null);
-      await page.locator('article > section > details > summary').click();
+      await summaryLabel.click();
       assert.notEqual(await page.locator('article > section > details').getAttribute('open'), null);
       assert(await page.locator('footer a.heading-link').count() > 0, 'Related titles must be links');
       await page.route('**/__reading_fixture__/', route => route.fulfill({

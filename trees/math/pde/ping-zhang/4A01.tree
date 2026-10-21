@@ -1,0 +1,10 @@
+\title{仅有水平耗散的三维不可压缩方程}
+\date{2026-10-21}
+\taxon{Definition}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report §2 (2.1)}
+
+\p{在全空间 #{\mathbb R^3}，写 #{x=(x_{\mathrm h},x_3)}、#{x_{\mathrm h}=(x_1,x_2)}、#{u=(u^{\mathrm h},u^3)}。用[散度和对流导数](4301)，各向异性不可压缩方程为}
+##{\partial_tu+u\cdot\nabla u-\nu_{\mathrm h}\Delta_{\mathrm h}u-\nu_{\mathrm v}\partial_3^2u+\nabla p=0,\quad \operatorname{div}u=0,\quad u(0)=u_0,}
+\p{其中 #{\Delta_{\mathrm h}=\partial_1^2+\partial_2^2}，#{\nu_{\mathrm h}>0}、#{\nu_{\mathrm v}\geq 0} 是给定常数，#{u_0} 无散度，压力 #{p=p(t,x)} 是标量。[经典 NS](4302)对应 #{\nu_{\mathrm h}=\nu_{\mathrm v}>0}；本文记 ANS 为 #{\nu_{\mathrm h}=1,\nu_{\mathrm v}=0}，NS 为 #{\nu_{\mathrm h}=\nu_{\mathrm v}=1}。}
+\p{ANS 仍有三个速度分量、三个空间变量和竖直输运项 #{u^3\partial_3u}。去掉竖直黏性不会把它化为二维方程。水平热扩散直接控制 #{\partial_1u,\partial_2u}，竖直正则性需要另外估计。改变黏性系数与改变初值是不同的参数问题。}

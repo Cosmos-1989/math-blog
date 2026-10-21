@@ -1,0 +1,13 @@
+\title{双曲面上的加权 Sobolev 估计}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), (4.4)；局部缩放与 Sobolev 嵌入的证明}
+
+\p{设 #{N=\lfloor d/2\rfloor+1}，#{L_j=\langle y\rangle\partial_{y_j}}。对光滑函数 #{f}，有}
+##{|f(y)|\le C_d\langle y\rangle^{-d/2}\sum_{|I|\le N}\|L^If\|_{L^2(\mathbb R^d,dy)}.}
+\p{\strong{证明。}固定 #{y_0}，取 #{R=\langle y_0\rangle /4}，在 #{B(y_0,R)} 上 #{\langle y\rangle\asymp\langle y_0\rangle}。对该球的光滑截断乘积缩放到单位球，应用[超过半维数的 Sobolev 嵌入](482D)，得到 #{|f(y_0)|\le C\sum_{|\alpha|\le N}R^{|\alpha|-d/2}\|\partial^\alpha f\|_{L^2(B(y_0,R))}}。在此球上，缩放导数 #{R\partial_j} 是 #{L_j} 的有界系数组合；这些系数的各阶缩放导数也一致有界。归纳展开复合导数并扩大积分区域，即得结论。}
+
+\p{在[双曲面坐标](4822)中把该式用于 #{f(y)=\phi(\rho,y)}，再用[质量能量控制](4823)，得到}
+##{|\phi(t,x)|\le C_dt^{-d/2}\sum_{|I|\le N}E_{KG}\lbrack L^I\phi\rbrack(H_\rho)^{1/2},\qquad t>|x|.}
+\p{因为 #{t=\rho\langle y\rangle}，两项权恰好合成 #{t^{-d/2}}。自由 Klein–Gordon 解的推进交换能量可由初始交换能量控制，从而得到光锥内部的衰减。}

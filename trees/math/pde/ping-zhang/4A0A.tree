@@ -1,0 +1,12 @@
+\title{水平热方程不产生竖直平滑}
+\date{2026-10-21}
+\taxon{Example}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report §2 mechanism; independent counterexample}
+
+\p{任取 #{s>0} 和 #{t>0}。不存在常数 #{C_{s,t}} 使全部 #{f\in L^2(\mathbb R^3)} 满足 #{\||D_3|^s e^{t\Delta_{\mathrm h}}f\|_2\leq C_{s,t}\|f\|_2}，其中[导数乘子](4A03)与[水平热流](4A09)如所定义。}
+\p{\strong{证明。}选非零 [Schwartz 函数](0H4F) #{g(x_{\mathrm h})} 与 #{h(x_3)}，使 #{\widehat h} 支撑于 #{[-1,1]}。令 #{f_N=g(x_{\mathrm h})e^{iNx_3}h(x_3)}，#{N\geq 2}。则 #{\|f_N\|_2=\|g\|_2\|h\|_2}，而}
+##{e^{t\Delta_{\mathrm h}}f_N=(e^{t\Delta_{\mathrm h}}g)(x_{\mathrm h})e^{iNx_3}h(x_3).}
+\p{其竖直频率属于 #{[N-1,N+1]}。[Plancherel 定理](0W01)给出}
+##{\||D_3|^s e^{t\Delta_{\mathrm h}}f_N\|_2\geq(N-1)^s\|e^{t\Delta_{\mathrm h}}g\|_2\|h\|_2.}
+\p{最后两因子正且与 #{N} 无关，令 #{N\to\infty} 即矛盾。这是线性方程的方向性障碍；ANS 的竖直正则性须利用初值、输运结构或解析性。}

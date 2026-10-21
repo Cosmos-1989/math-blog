@@ -1,0 +1,10 @@
+\title{dNLS 的局部平滑估计依赖初值的频率分布}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (5.12)；dNLS 原论文定理 1.5}
+
+\p{设 #{Q\subset\mathcal S(\mathbb R;\mathbb C)} 在 #{L^2} 中有界且[平移等度连续](4706)，#{q} 为 [dNLS](470X) 的光滑解，#{q(0)\in Q}。对每个 #{T>0}，原论文定理 1.5 给出}
+##{\sup_{y\in\mathbb R}\int_{-T}^{T}\|\psi_y^{12}q(t)\|_{H^{1/2}}^2dt\leq C_{T,Q}\|q(0)\|_2^2,\qquad \psi_y(x)=\sqrt{\operatorname{sech}((x-y)/99)}.}
+\p{这里 #{\operatorname{sech}r=2/(e^r+e^{-r})}，#{H^{1/2}} 采用 [Fourier Sobolev 范数](130F)。时间积分和空间局部化使平方可积初值获得半个导数。常数依赖 #{Q} 的频率尾部控制；原论文命题 1.11 排除了仅由质量上界决定的统一常数。}
+\p{此处引用定理，证明使用原论文 §3 的低正则局部守恒律及 §4 的估计。将这一结论用于适定性还需更强的频率局部化版本，并需对正则化差流另外证明平滑估计，见[第二代方法的收敛步骤](470P)。}

@@ -1,0 +1,18 @@
+\title{无散度性控制负阶各向异性伸缩范数}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；CZ-v1 §2 (2.4), PDF p5}
+
+\p{对 #{0<\theta<1/2}，记[各向异性空间](4A03) #{\mathcal H_\theta=\dot H^{-1/2+\theta,-\theta}}。若 #{u\in\dot H^{1/2}(\mathbb R^3)} [无散度](4301)，则}
+##{\|\partial_3u^3\|_{\mathcal H_\theta}\leq\|u\|_{\dot H^{1/2}}.}
+\p{\strong{证明。}在 #{|\xi_{\mathrm h}|\geq|\xi_3|} 上，}
+##{|\xi_{\mathrm h}|^{-1+2\theta}|\xi_3|^{-2\theta}
+|\xi_3\widehat u^3|^2
+\leq|\xi_3||\widehat u^3|^2\leq|\xi||\widehat u|^2,}
+\p{因为 #{1-2\theta>0}。在 #{|\xi_{\mathrm h}|<|\xi_3|} 上，利用 #{\xi_3\widehat u^3=-\xi_{\mathrm h}\cdot\widehat u^{\mathrm h}}，得}
+##{|\xi_{\mathrm h}|^{-1+2\theta}|\xi_3|^{-2\theta}
+|\xi_{\mathrm h}\cdot\widehat u^{\mathrm h}|^2
+\leq|\xi_{\mathrm h}||\widehat u^{\mathrm h}|^2
+\leq|\xi||\widehat u|^2.}
+\p{分别积分再相加即得范数平方估计。该证明同时处理水平逆导数在 #{\xi_{\mathrm h}=0} 附近的危险，关键是第二个区域中改用水平散度。}

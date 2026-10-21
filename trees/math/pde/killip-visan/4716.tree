@@ -1,0 +1,12 @@
+\title{KdV 两解的平方距离需要一阶导数控制}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (3.4)–(3.5)}
+
+\p{设实 Schwartz 解 #{u,v} 满足 [KdV](4703)，#{w=u-v}。则}
+##{\frac d{dt}\|w(t)\|_2^2=3\int(u_x+v_x)w^2dx.}
+\p{\strong{证明。}差方程为 #{w_t=-w_{xxx}+3\partial_x((u+v)w)}。与 #{2w} 相乘后积分，三阶项分部积分为零；其余部分为 #{6\int(u_x+v_x)w^2+6\int(u+v)ww_x=3\int(u_x+v_x)w^2}。}
+\p{令 #{a(t)=3\|u_x(t)+v_x(t)\|_\infty}，若 #{\int_0^Ta(t)dt<\infty}，则对 #{E=\|w\|_2^2} 有 #{E'\leq aE}。乘以 #{e^{-\int_0^ta}} 求导，得到}
+##{E(t)\leq E(0)\exp\left(\int_0^ta(r)dr\right),\qquad 0\leq t\leq T.}
+\p{这是此情形的 Gronwall 估计及其直接证明。低正则 #{H^{-1}} 范数不控制 #{u_x,v_x} 的上确界，故这一距离估计无法直接处理[端点适定性](470R)。}

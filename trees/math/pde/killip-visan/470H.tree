@@ -1,0 +1,11 @@
+\title{KdV 正则化 Hamilton 函数的两项消去}
+\date{2026-10-21}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (5.2)–(5.3)；原研究论文 KdV，式 (3.3)}
+
+\p{对实 Schwartz 势 #{q}，采用[归一化动量与能量](4703) #{P=\frac 12\int q^2}、#{H=\int(\frac 12q_x^2+q^3)}，以及[正则化行列式](470E) #{\alpha}。其大参数展开的前两项为}
+##{\alpha(\kappa;q)=\frac{P(q)}{4\kappa^3}-\frac{H(q)}{16\kappa^5}+O_q(\kappa^{-7}).}
+\p{由此定义 #{H_\kappa=-16\kappa^5\alpha+4\kappa^2P}，得到 #{H_\kappa(q)=H(q)+O_q(\kappa^{-2})}。展开在固定充分光滑衰减势上使用，余项不表示对 #{H^{-1}} 有界球一致。}
+\p{二次项的首两项可直接从[精确 Fourier 公式](470D)读出：将 #{(\xi^2+4\kappa^2)^{-1}} 展开，得到 #{(8\kappa^3)^{-1}\int q^2-(32\kappa^5)^{-1}\int q_x^2}；三次迹项贡献 #{-(16\kappa^5)^{-1}\int q^3}。其余展开及可微余项采用原研究论文的预解式分析。}
+\p{在粗糙初值上，#{P} 未必有限；构造通过[正则化向量场](470I)定义流。因此需要的是流的存在与收敛，不能仅凭光滑势上的 Hamilton 数值展开推出低正则收敛。}

@@ -1,0 +1,16 @@
+\title{自相似变量把爆破光锥化为固定单位球}
+\date{2026-10-21}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，式(3.2)–(3.4)。}
+
+\p{设 #{u} 解[波方程](4901)，固定中心 #{a} 与时间 #{T}，在 #{t<T,|x-a|<T-t} 内令 #{\tau=T-t}，#{\beta=2/(p-1)}，并定义}
+##{y=\frac{x-a}{\tau},\qquad s=-\log\tau,\qquad w(y,s)=\tau^\beta u(x,t).}
+\p{[自然对数](0A45)使 #{t\uparrow T} 对应 #{s\to\infty}，空间域成为 #{B=\{|y|<1\}}。取 #{T=T(a)} 时记作 #{w_a}。}
+
+\p{\strong{方程推导。}令 #{D=\partial_s+y\cdot\nabla_y}。由[链式法则](0A34)，}
+##{u_t=\tau^{-\beta -1}(Dw+\beta w),\qquad u_{tt}=\tau^{-\beta -2}(D^2w+(2\beta+1)Dw+\beta(\beta+1)w),\qquad \Delta_xu=\tau^{-\beta -2}\Delta_yw.}
+\p{展开 #{D^2w=w_{ss}+2y\cdot\nabla w_s+\sum_{ij}y_iy_j\partial_{ij}w+y\cdot\nabla w}，用 #{\beta p=\beta+2} 消去公共因子，得到}
+##{w_{ss}=\mathcal Lw-\beta(\beta+1)w+|w|^{p-1}w-(2\beta+1)w_s-2y\cdot\nabla w_s,}
+##{\mathcal Lw=\rho^{-1}\operatorname{div}\bigl(\rho(I-y\otimes y)\nabla w\bigr),\qquad \rho=(1-|y|^2)^\alpha,\qquad \alpha=\beta -\frac{N-1}{2}.}
+\p{直接求散度给出 #{\mathcal Lw=\Delta w-\sum_{ij}y_iy_j\partial_{ij}w-(2\beta+2)y\cdot\nabla w}，与展开式一致。梯度、散度及张量记号见[欧氏微分算子](4301)。}

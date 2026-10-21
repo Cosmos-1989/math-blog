@@ -9,6 +9,14 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const write = (file, value) => fs.writeFileSync(path.join(root, file), JSON.stringify(value, null, 2) + '\n');
 const hash = text => crypto.createHash('sha256').update(text).digest('hex');
+export function findSectionReport(coverage, doi) {
+  const matches = [...coverage.reports, ...(coverage.cross_listed_reports ?? [])]
+    .filter(row => row.doi === doi);
+  if (matches.length !== 1)
+    throw new Error(`Expected one primary or cross-listed report for ${doi}; found ${matches.length}`);
+  return matches[0];
+}
+
 export function syncSectionReports({date, packetNames, manifest, scope, crossLandings = [], sharedSnapshotManifests = [], terminology,
   subject = '0067', packetPrefix = 'lie', coverageFile = 'research/icm2026-lie-section-coverage.json',
   rosterFile = 'research/icm2026-section-seven-roster.json', reviewAction = 'Lie 理论报告增补',
@@ -40,8 +48,7 @@ export function syncSectionReports({date, packetNames, manifest, scope, crossLan
       if (!report[key]) throw new Error(`Missing report field ${key}`);
     if (subjectTopics.filter(id => id === report.outline).length !== 1)
       throw new Error(`Topic must be listed once: ${report.outline}`);
-    const entry = coverage.reports.find(row => row.doi === report.doi);
-    if (!entry) throw new Error(`Report absent from section roster: ${report.doi}`);
+    const entry = findSectionReport(coverage, report.doi);
     const ids = [...files.keys()].filter(id => id.startsWith(report.prefix) || id === report.reference).sort();
     if (!ids.includes(report.outline) || !ids.includes(report.reference)) throw new Error(`Incomplete branch ${report.prefix}`);
     for (const id of ids) {

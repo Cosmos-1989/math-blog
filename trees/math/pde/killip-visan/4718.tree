@@ -1,0 +1,16 @@
+\title{固定 Green 坐标中差流的主项消去}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§5；原研究论文 KdV，式 (3.12)、命题 4.4、定理 5.1}
+
+\p{设 #{Q} 是实 Schwartz 初值的有界、[平移等度连续](4706)集合，且其 #{H^{-1}(\mathbb R)} 范数充分小。令 #{Q^*} 为 KdV 与所有 #{\kappa\geq 1} 的[正则化流](470I)有限次复合得到的共同轨道族。每条流均保持同一族谱量，故命题 4.4 的[守恒量论证](470G)也适用于这些复合：#{Q^*} 仍小、有界且等度连续，并满足}
+##{\lim_{\kappa\to\infty}\sup_{q\in Q^*}\left\|q+4\kappa^3\left(g(\cdot;\kappa,q)-\frac 1{2\kappa}\right)\right\|_{H^{-1}}=0.}
+\p{对任意 #{T>0}，两流的[差流](4705) #{\Theta_t^\kappa=\Phi_t\Psi_{-t}^\kappa} 因而满足}
+##{\lim_{\kappa\to\infty}\sup_{q\in Q^*}\sup_{|t|\leq T}\|\Theta_t^\kappa q-q\|_{H^{-1}}=0.}
+\p{\strong{证明概要及消去计算。}固定探测参数 #{a\geq 1}，取 #{\kappa\geq a+1}，令 #{q(t)=\Theta_t^\kappa q}、#{g_a=g(x;a,q(t))}、#{g_\kappa=g(x;\kappa,q(t))}。原论文式 (3.12) 给出正则化流下的倒数密度演化；从 [KdV 密度演化](4717)中减去它，得到}
+##{\partial_t\frac 1{2g_a}=\partial_x\left[\frac 1{g_a}\left\{q+\frac{4\kappa^5}{\kappa^2-a^2}\left(g_\kappa -\frac 1{2\kappa}\right)-\frac{4a^5}{\kappa^2-a^2}\left(g_a-\frac 1{2a}\right)\right\}\right].}
+\p{花括号内可写为 #{q+4\kappa^3(g_\kappa -1 /(2\kappa))} 加上}
+##{\frac{4a^2\kappa^3}{\kappa^2-a^2}\left(g_\kappa -\frac 1{2\kappa}\right)-\frac{4a^5}{\kappa^2-a^2}\left(g_a-\frac 1{2a}\right).}
+\p{第一项由命题 4.4 一致趋零；余项在固定 #{a} 下于 #{H^{-1}} 为 #{O(\kappa^{-2})}。小球上的 [Green 坐标估计](470J)给出 #{1/g_a=2a+H^1} 的一致控制，[对偶乘法估计](4719)遂使乘以 #{1/g_a} 在 #{H^{-1}} 上一致有界，空间微分再映到 #{H^{-2}}。积分有限时间后得到倒数密度增量在 #{H^{-2}} 一致趋零。}
+\p{坐标映射与平移交换，在充分小球上具有一致的正反向 Lipschitz 界，所以 #{Q^*} 的等度连续性传到 #{H^1} 中的 #{a-1/(2g_a)}。[低阶收敛提升引理](4708)把 #{H^{-2}} 收敛提升为 #{H^1} 收敛，再用逆坐标估计回到 #{H^{-1}}。这里的研究输入是命题 4.4 的非线性一致渐近与命题 2.2 的坐标估计；两谱参数的消去及极限传递如上。}

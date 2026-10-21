@@ -1,0 +1,14 @@
+\title{对角 Green 函数给出低正则势的光滑坐标}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，式 (5.10)；原研究论文 KdV，命题 2.1–2.2}
+
+\p{对实 #{q\in H^{-1}(\mathbb R)}，令 #{L=-\partial_x^2+q} 为二次型 #{\int|f_x|^2+\langle q,|f|^2\rangle}、定义域 #{H^1} 所确定的自伴算子；#{\langle q,|f|^2\rangle} 按 Sobolev 对偶解释。取 #{\kappa\geq 1}，记 #{R=(L+\kappa^2)^{-1}}。}
+\p{原论文命题 2.1–2.2 说明：存在充分小的 #{H^{-1}} 原点邻域，使 #{R} 有连续核 #{G(x,y;\kappa,q)}，对角值 #{g(x;\kappa,q)=G(x,x;\kappa,q)} 定义良好；映射}
+##{q\longmapsto g(\cdot;\kappa,q)-\frac 1{2\kappa},\qquad q\longmapsto\kappa -\frac 1{2g(\cdot;\kappa,q)}}
+\p{均为进入 #{H^1(\mathbb R)} 的实解析微分同胚，即到各自像上有实解析逆映射。此处“实解析”指局部由收敛的连续齐次多项式级数表示。结论是原点附近的坐标定理；对大势固定 #{\kappa} 时，#{-\kappa^2} 可能进入谱。}
+\p{\strong{证明概要。}[夹心算子估计](470D)保证预解式级数 #{R=R_0^{1/2}(I+A_\kappa(q))^{-1}R_0^{1/2}} 收敛。核的对角限制及解析性给出上述映射。记第一映射为 #{F(q)=g(q)-(2\kappa)^{-1}}，第二映射为 #{J(q)=\kappa -(2g(q))^{-1}}，则}
+##{DF(0)h=-\kappa^{-1}(-\partial_x^2+4\kappa^2)^{-1}h,\qquad
+DJ(0)h=-2\kappa(-\partial_x^2+4\kappa^2)^{-1}h.}
+\p{第二式由 #{g(0)=(2\kappa)^{-1}} 和 #{DJ(0)h=(2g(0)^2)^{-1}Dg(0)h=2\kappa^2DF(0)h} 得到。两个导数都是 #{H^{-1}\to H^1} 同构。非线性余项估计和 Banach 逆函数论证见所引命题。}

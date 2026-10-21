@@ -1,0 +1,11 @@
+\title{Miura 变换把实散焦修正 KdV 解送到 KdV}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§2 的 Miura 变换}
+
+\p{设实光滑函数 #{v(t,x)} 满足[散焦 mKdV](470U) #{v_t=-v_{xxx}+6v^2v_x}。令 #{u=v_x+v^2}，则 #{u} 满足 [KdV](4703) #{u_t=-u_{xxx}+6uu_x}。}
+\p{\strong{证明。}逐项求导得到}
+##{u_t=-v_{xxxx}-2vv_{xxx}+12vv_x^2+6v^2v_{xx}+12v^3v_x.}
+\p{另一方面 #{u_{xxx}=v_{xxxx}+6v_xv_{xx}+2vv_{xxx}}，且 #{6uu_x=6v_xv_{xx}+12vv_x^2+6v^2v_{xx}+12v^3v_x}。两式相减即为 #{u_t}。}
+\p{此计算给出一个单向映射；恢复 #{v} 要解 Riccati 方程 #{v_x+v^2=u} 并处理其定义域和边界条件，因此不能据此直接认定两个低正则初值问题等价。}

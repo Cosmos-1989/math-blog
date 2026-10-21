@@ -1,0 +1,10 @@
+\title{Gardner 泊松括号与变分导数}
+\date{2026-10-21}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，§5；原研究论文 KdV，式 (1.7)、(3.1)}
+
+\p{在实 [Schwartz 函数](0H4F) #{q(x)} 上，泛函 #{F} 的变分导数由 #{\left.\frac d{d\varepsilon}F(q+\varepsilon h)\right|_{\varepsilon=0}=\int(\delta F/\delta q)h\,dx} 定义。对变分导数及其乘积可积分、分部积分无边界项的泛函，Gardner 泊松括号定义为}
+##{\{F,G\}(q)=\int_{\mathbb R}\frac{\delta F}{\delta q}\,\partial_x\frac{\delta G}{\delta q}\,dx.}
+\p{这里的 Hamilton 演化为 #{q_t=\partial_x(\delta H/\delta q)}，沿光滑解有 #{\frac d{dt}F(q(t))=\{F,H\}(q(t))}。分部积分给出 #{\{F,G\}=-\{G,F\}}。因而 #{\{F,H\}=0} 表示两个泛函分别沿对方的流守恒。这个场论括号的算子是 #{J=\partial_x}；与[有限维 Hamilton 向量场](0BL5)相同，必须同时指定 Hamilton 函数及其几何结构才能确定演化。}
+\p{例如 #{C(q)=\int q\,dx} 的变分导数为 #{1}，故 #{\partial_x(\delta C/\delta q)=0}。它生成恒等流，这类泛函称 Casimir。积分 #{\int q} 在一般 #{H^{-1}} 初值上未必有定义，因此上述例子限定在 Schwartz 类。}

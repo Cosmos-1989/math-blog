@@ -1,0 +1,10 @@
+\title{热扩散与指数解析权的配方估计}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report §4 mechanism; LZ-v2 (2.2)}
+
+\p{对 #{t>0,r\geq 0}，全空间热流与[指数乘子](4A1B)满足}
+##{\|e^{r|D|}e^{t\Delta}f\|_2\leq e^{r^2/(4t)}\|f\|_2.}
+\p{\strong{证明。}对每个 #{\rho\geq 0}，#{r\rho -t\rho^2=-t(\rho -r /(2t))^2+r^2/(4t)\leq r^2/(4t)}，代入 Fourier 乘子并用 [Plancherel 定理](0W01)即可。相同计算把 #{|D|,\Delta} 改成 #{|D_{\mathrm h}|,\Delta_{\mathrm h}}，得到[水平热流](4A09)版本。}
+\p{取 #{r=a\sqrt t}，代价为固定的 #{e^{a^2/4}}。取 #{r=a\sqrt{t|\log t|}}，#{0<t<1}，代价为 #{t^{-a^2/4}}，需要额外小量或更强初始正则性补偿。固定正时间的线性热流允许任意有限 #{r}；非线性 NS 的可控半径还受二次项估计限制。}

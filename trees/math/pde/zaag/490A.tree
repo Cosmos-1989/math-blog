@@ -1,0 +1,14 @@
+\title{共形端点的耗散测度集中在球面}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，式(3.6)–(3.7)。}
+
+\p{设 #{N\ge 2}。当 #{\alpha\downarrow 0} 时，[次共形耗散](4909)中的测度 #{2\alpha(1-|y|^2)^{\alpha -1}dy} 弱收敛到单位球面的面积测度，即对每个连续函数 #{f} 于闭单位球，}
+##{\lim_{\alpha\downarrow 0}2\alpha\int_Bf(y)(1-|y|^2)^{\alpha -1}dy=\int_{S^{N-1}}f(\omega)d\omega.}
+
+\p{\strong{证明。}写 #{y=r\omega}，其中 #{0<r<1}、#{\omega\in S^{N-1}=\{|\omega|=1\}}。该极坐标的体积因子为 #{r^{N-1}}，因为径向微分长度为 #{dr}，其余 #{N-1} 个切向长度各乘 #{r}。再令 #{q=1-r^2}，左端成为}
+##{\int_{S^{N-1}}\int_0^1\alpha q^{\alpha -1}(1-q)^{(N-2)/2}f(\sqrt{1-q}\,\omega)\,dq\,d\omega.}
+\p{#{\int_0^1\alpha q^{\alpha -1}dq=1}，而 #{\int_\varepsilon^1\alpha q^{\alpha -1}dq=1-\varepsilon^\alpha\to 0}。把积分分成 #{q<\varepsilon} 与 #{q\ge\varepsilon}，[紧集上一致连续性](0F41)使前一部分逼近 #{f(\omega)}，后一部分趋零。}
+
+\p{在[共形指数](4901) #{p=p_c} 处，#{\alpha=0}。将[能量公式](4908)中的权取为 #{\rho=1}，记所得能量为 #{E_0}。对闭球光滑解，分部积分时二阶空间项的边界通量为零，因为 #{(I-y\otimes y)y=0} 于单位球面；输运项留下 #{-\int_{S^{N-1}}w_s^2d\omega}，内部项因 #{N-(p+3)/(p-1)=0} 抵消。因此 #{E_0'=-\int_{S^{N-1}}w_s^2d\omega}。上面的测度极限解释其形式，跨参数的解收敛还需独立估计。}

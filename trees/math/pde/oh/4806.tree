@@ -1,0 +1,11 @@
+\title{收缩球能量证明波的有限传播速度}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Oh](icm2026-oh)，§§2.1–2.2}
+
+\p{设光滑实值函数 #{\phi} 满足[自由波方程](4801)，其初值 #{\phi(0,x)}、#{\partial_t\phi(0,x)} 在球 #{B_R(x_0)} 上为零。则 #{\phi(t,x)=0} 当 #{0\le t<R}、#{|x-x_0|<R-t}。}
+
+\p{\strong{证明。}记 #{e=((\partial_t\phi)^2+|\nabla\phi|^2)/2}，#{E_R(t)=\int_{B_{R-t}(x_0)}e\,dx}。由[局部能量恒等式](4803)、径向积分的[微积分基本定理](0A3C)及 [Stokes 公式](0BAC)，}
+##{E_R'(t)=\int_{\partial B_{R-t}(x_0)}(\partial_t\phi\partial_n\phi -e)\,dA=-\frac 12\int_{\partial B_{R-t}(x_0)}\bigl((\partial_t\phi -\partial_n\phi)^2+|\nabla_{\mathrm{tan}}\phi|^2\bigr)\,dA\le 0.}
+\p{其中 #{n} 是外单位法向，#{\nabla_{\mathrm{tan}}\phi=\nabla\phi -n\partial_n\phi}。因 #{E_R(0)=0} 且能量非负，锥内的时间和空间导数全为零。固定锥内的 #{(t,x)}，整段 #{(s,x)}、#{0\le s\le t} 都在锥内，故 #{\phi(t,x)=\phi(0,x)=0}。}

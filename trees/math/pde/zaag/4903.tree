@@ -1,0 +1,13 @@
+\title{空间常值波方程解的显式爆破}
+\date{2026-10-21}
+\taxon{Example}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，§1.2、式(3.10)。}
+
+\p{设 #{p>1}，#{T>0}，#{\beta=2/(p-1)}，#{\kappa_0=[\beta(\beta+1)]^{1/(p-1)}}。则}
+##{h(t)=\kappa_0(T-t)^{-\beta},\qquad 0\le t<T,}
+\p{满足 #{h''=h^p}，故 #{u(x,t)=h(t)} 是[聚焦波方程](4901)的空间常值解。}
+
+\p{\strong{证明。}两次求导给出 #{h''=\kappa_0\beta(\beta+1)(T-t)^{-\beta -2}}。由[尺度指数关系](4902)，#{\beta p=\beta+2}；由 #{\kappa_0^{p-1}=\beta(\beta+1)}，两端相等。#{h(t)\to\infty} 当 #{t\uparrow T}。负函数 #{-h} 也满足实值方程，因为 #{|u|^{p-1}u} 是奇函数。}
+
+\p{空间常值初值属于一致局部能量空间。把它们在包含 #{B(a,T+\varepsilon)} 的区域保留，并在外面光滑截断，就得到有限全局能量初值；[有限传播](4904)保证新解在 #{|x-a|<T+\varepsilon -t} 内与 #{h(t)} 相等。}

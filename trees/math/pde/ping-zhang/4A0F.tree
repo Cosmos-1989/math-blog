@@ -1,0 +1,17 @@
+\title{ANS 的小单向导数全局存在定理}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；LPZ-v1 Theorem 1.2, Corollary 1.1 (1.10), PDF p4; report Theorem 2.4 version comparison}
+
+\p{设 #{u_0\in L^2(\mathbb R^3)} 无散度，#{\partial_3u_0\in L^2}，且 #{|D_{\mathrm h}|^{-1}\partial_3u_0\in\mathcal B^{0,1/2}}。这里[负阶乘子](4A03)、[竖直空间](4A05)和[混合空间](4A0B)均取既定低频实现；由[插值](4A08)，#{u_0\in\mathcal B^{0,1/2}}。}
+\p{Liu–Paicu–Zhang 的固定版本 arXiv:1905.00156v1，推论1.1给出：存在普适常数 #{L,M,\varepsilon_0>0}，若}
+##{\| |D_{\mathrm h}|^{-1}\partial_3u_0\|_{\mathcal B^{0,1/2}}
+\exp\left(L(1+\|u_0^3\|_{X_4}^4)
+\exp\left(\exp(M\|u_0^{\mathrm h}\|_2\|\partial_3u_0^{\mathrm h}\|_2)\right)\right)
+\leq\varepsilon_0,}
+\p{则 [ANS](4A01)有唯一全局解，且}
+##{u=\begin{pmatrix}0\\0\\e^{t\Delta_{\mathrm h}}u_{0,\mathrm{hh}}^3\end{pmatrix}+v,\qquad
+v\in C(\lbrack 0,\infty\rparen;\mathcal B^{0,1/2}),\quad
+\nabla_{\mathrm h}v\in L^2(0,\infty;\mathcal B^{0,1/2}).}
+\p{#{u_{0,\mathrm{hh}}^3} 只取初值的第三分量，再作水平高频分解；[水平热半群](4A09)只作用于这个标量。时间空间按[混合范数约定](4A06)解释。阈值同时依赖大分量的范数，因此单说“竖直导数小”会遗漏实质条件。存在、唯一性及全局非线性估计引用原文定理1.2和推论1.1。}

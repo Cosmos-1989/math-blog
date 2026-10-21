@@ -1,0 +1,11 @@
+\title{平移等度连续等价于一致小的高频尾部}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，定义 3.1；原研究论文 KdV，引理 4.2(i)}
+
+\p{设 #{Q\subset H^s(\mathbb R)} 有界。按[Fourier 定义](130F)记 #{d\nu_q(\xi)=(2\pi)^{-1}(1+\xi^2)^s|\widehat q(\xi)|^2d\xi}。则 [平移等度连续性](4706)等价于 #{\lim_{N\to\infty}\sup_{q\in Q}\int_{|\xi|>N}d\nu_q=0}。}
+\p{\strong{尾部推出平移控制。}由 [Plancherel 定理](0W01)，平移差范数平方等于 #{\int|e^{ih\xi}-1|^2d\nu_q}。在 #{|\xi|\leq N} 上用 #{|e^{ih\xi}-1|\leq|h\xi|}，在其余频率用上界 #{2}，得到 #{N^2h^2\sup_Q\|q\|_{H^s}^2+4\sup_Q\int_{|\xi|>N}d\nu_q}。先增大 #{N}，再减小 #{h} 即可。}
+\p{\strong{反向。}以概率密度 #{N e^{-2N|h|}} 对平移差平方积分。[Tonelli 定理](0H53)和初等指数积分给出}
+##{\int_{\mathbb R}|e^{ih\xi}-1|^2N e^{-2N|h|}dh=\frac{2\xi^2}{4N^2+\xi^2}.}
+\p{右端在 #{|\xi|>N} 上至少 #{2/5}。给定 #{\delta>0}，左端在 #{|h|\leq\delta} 的贡献由等度连续性控制，补集至多 #{4\sup_Q\|q\|_{H^s}^2e^{-2N\delta}}。先令 #{N\to\infty}，再令 #{\delta\downarrow 0}，即得一致尾部消失。}

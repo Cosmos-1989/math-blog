@@ -1,0 +1,13 @@
+\title{一次竖直导数给出的临界插值}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；LPZ-v1 §2 (2.1)}
+
+\p{设 #{f,\partial_3f\in L^2(\mathbb R^3)}。则存在与 #{f} 无关的常数 #{C}，使}
+##{\|f\|_{\mathcal B^{0,1/2}}\leq C\|f\|_2^{1/2}\|\partial_3f\|_2^{1/2}.}
+\p{\strong{证明。}记 #{A=\|f\|_2}、#{B=\|\partial_3f\|_2}。由[分块支撑](4A04)与 [Plancherel 定理](0W01)，有 #{\|\Delta_\ell^{\mathrm v}f\|_2\leq CA} 及 #{\|\Delta_\ell^{\mathrm v}f\|_2\leq C2^{-\ell}B}。对整数 #{N} 分割[范数](4A05)得}
+##{\sum_{\ell\leq N}2^{\ell /2}\|\Delta_\ell^{\mathrm v}f\|_2+
+\sum_{\ell>N}2^{\ell /2}\|\Delta_\ell^{\mathrm v}f\|_2
+\leq C(2^{N/2}A+2^{-N/2}B).}
+\p{当 #{A,B>0}，选 #{2^N\leq B/A<2^{N+1}}，右边不超过 #{C\sqrt{AB}}。若 #{A=0} 则 #{f=0}；若 #{B=0}，Fourier 变换在 #{\xi_3\ne 0} 消失，#{L^2} 函数不能支撑于零测度平面，故也有 #{f=0}。}

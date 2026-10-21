@@ -1,0 +1,10 @@
+\title{水平耗散的动能恒等式}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report §1 (1.2), §2}
+
+\p{设 #{u,p} 是[各向异性方程](4A01)的光滑解，空间衰减足以使以下积分与分部积分成立。以 #{\|\cdot\|_2} 记空间 [#{L^2} 范数](00Q6)，则}
+##{\frac 12\|u(t)\|_2^2+\int_0^t\left(\nu_{\mathrm h}\|\nabla_{\mathrm h}u(s)\|_2^2+\nu_{\mathrm v}\|\partial_3u(s)\|_2^2\right)\,ds=\frac 12\|u_0\|_2^2.}
+\p{\strong{证明。}将速度方程点乘 #{u} 并积分。与[经典能量计算](4304)相同，无散度条件给出 #{\int u\cdot\nabla(|u|^2/2)=0} 与 #{\int u\cdot\nabla p=0}。逐方向分部积分得 #{-\int u\cdot\partial_j^2u=\|\partial_ju\|_2^2}。时间积分即得结论。}
+\p{当 #{\nu_{\mathrm v}=0}，左边没有 #{\|\partial_3u\|_2^2}。因此这个恒等式本身没有提供竖直导数的耗散控制。它也没有给出经典三维 NS 任意大初值的全局光滑性。}

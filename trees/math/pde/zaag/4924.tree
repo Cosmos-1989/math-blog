@@ -1,0 +1,13 @@
+\title{Lorentz 变换保持一维纯幂波方程}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Zaag 报告](icm2026-zaag)，§3开头；Côte–Zaag，arXiv:1110.2512v1，§4。}
+
+\p{设 #{u(x,t)} 是一维[纯幂波方程](4901)的光滑解。固定 #{|d|<1}，令}
+##{x'=\frac{x+dt}{\sqrt{1-d^2}},\qquad t'=\frac{t+dx}{\sqrt{1-d^2}},\qquad U(x',t')=u(x,t).}
+\p{此可逆线性时空变换称为 Lorentz 变换。函数 #{U} 在变换后的定义域仍满足 #{U_{t't'}=U_{x'x'}+|U|^{p-1}U}。}
+
+\p{\strong{证明。}逆变换为 #{x=(x'-dt')/\sqrt{1-d^2}}、#{t=(t'-dx')/\sqrt{1-d^2}}。由[链式法则](0A34)，}
+##{\partial_{t'}=\frac{\partial_t-d\partial_x}{\sqrt{1-d^2}},\qquad \partial_{x'}=\frac{\partial_x-d\partial_t}{\sqrt{1-d^2}}.}
+\p{平方后相减，[混合偏导交换](0A3D)使交叉项抵消，得到 #{\partial_{t'}^2-\partial_{x'}^2=\partial_t^2-\partial_x^2}。非线性只依赖函数值，故方程保持不变。变换混合时间与空间，初值面的选取及截断仍须结合具体解的定义域处理。}

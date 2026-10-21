@@ -1,0 +1,11 @@
+\title{零阶扰动不改变波方程的传播锥}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), §§2–3 所用的局部能量论证；直接证明}
+
+\p{设实函数 #{q(t,x)} 光滑，#{\phi} 满足 #{(\Box+q)\phi=0}。若两项初值在 #{B_R(x_0)} 上为零，则 #{\phi=0} 于 #{0\le t<R,|x-x_0|<R-t}。势只需在每个闭的截断锥上有界。}
+
+\p{\strong{证明。}沿用[自由波的收缩球计算](4806)，但将能量密度改为 #{e_1=(\phi_t^2+|\nabla\phi|^2+\phi^2)/2}。由方程 #{\phi_{tt}=\Delta\phi+q\phi}，局部恒等式多出 #{(q+1)\phi\phi_t}。新增边界项为 #{-\phi^2/2\le 0}，所以在任意 #{0\le t\le T<R} 上，}
+##{E_1'(t)\le C_TE_1(t),\qquad E_1(t)=\int_{B_{R-t}(x_0)}e_1\,dx.}
+\p{于是 #{(e^{-C_Tt}E_1(t))'\le 0}。由[微积分基本定理](0A3C)、#{E_1(0)=0} 与非负性，#{E_1(t)=0}，故锥内 #{\phi=0}。这个结论同时覆盖小势、时变势与 Klein–Gordon 的常数质量项。}

@@ -1,0 +1,19 @@
+\title{单分量判据中的双重指数能量控制}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Proposition3.1; CZ-v1 Propositions2.1-2.3, §5-8}
+
+\p{设 #{u} 满足[单分量判据](4A16)的初始条件，#{4<p<6}，#{1/2-2/p<\theta<1/6}。令 #{\omega=\partial_1u^2-\partial_2u^1}、#{d=\partial_3u^3}、#{\omega_{3/4}=\operatorname{sgn}(\omega)|\omega|^{3/4}}，并使用[空间](4A13) #{\mathcal H_\theta}。对 #{t<T^*}，令}
+##{I(t)=\int_0^t\|u^3(s)\|_{\dot H^{1/2+2/p}}^p\,ds,\qquad
+\mathcal E(t)=\exp(C\exp(CI(t))).}
+\p{Chemin–Zhang 的关键估计为}
+##{\begin{aligned}
+\|\omega_{3/4}(t)\|_2^{2(p+3)/3}
++\|\nabla\omega_{3/4}\|_{L^2(0,t;L^2)}^{2(p+3)/3}
+&\leq C\|\Omega_0\|_{3/2}^{(p+3)/2}\mathcal E(t),\\
+\|d(t)\|_{\mathcal H_\theta}^2+\|\nabla d\|_{L^2(0,t;\mathcal H_\theta)}^2
+&\leq C\|\Omega_0\|_{3/2}^2\mathcal E(t).
+\end{aligned}}
+\p{\strong{证明概要。}[耦合方程](4A12)的第一式以[标量 #{L^{3/2}} 能量](4A14)测试，输运项消失，但产生 #{\partial_3^2u^3} 的待估计项。第二式在 #{\mathcal H_\theta} 中测试；[水平散度–旋度恢复](4A11)把水平速度写成 #{\omega,d}，压力中的二次涡量项因而进入同一组估计。将两式代回并使用积分增长估计，得到双重指数。}
+\p{频块乘积律以及第二式的压力估计引用原文§5–6；两式合并见§7，最终排除爆破的负阶 Besov 延拓定理见§8。#{\theta} 区间非空要求 #{p<6}，展示这一证明中的指数限制。}

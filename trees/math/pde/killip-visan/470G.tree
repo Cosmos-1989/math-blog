@@ -1,0 +1,11 @@
+\title{KdV 守恒量传播整个函数族的频率尾部控制}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Killip–Vişan](icm2026-killip-visan)，定理 4.1、式 (4.9)–(4.11)；原研究论文 KdV，引理 4.3、命题 4.4}
+
+\p{设 #{Q} 为实 [Schwartz 函数](0H4F)集合，在 #{H^{-1}(\mathbb R)} 中有界且[平移等度连续](4706)。令 #{Q^*=\{\Phi_tq:q\in Q,t\in\mathbb R\}}，其中 #{\Phi} 为 [KdV 光滑流](4703)。则 #{Q^*} 仍有界且平移等度连续。}
+\p{\strong{引用的守恒输入。}报告式 (4.9) 及原研究论文给出常数 #{C,K}：若 #{\sup_Q\|q\|_{H^{-1}}\leq M}，取 #{\kappa\geq K(M)}，则对一切 #{q\in Q,t\in\mathbb R}，}
+##{C^{-1}E_\kappa(q)\leq E_\kappa(\Phi_tq)\leq CE_\kappa(q),\qquad E_\kappa(f)=\frac 1{2\pi}\int\frac{|\widehat f(\xi)|^2}{\xi^2+4\kappa^2}d\xi.}
+\p{该输入来自[正则化行列式](470E)的守恒、[二次项可比性](470F)及连续性延拓估计。固定 #{\kappa=K(M)} 时，#{H^{-1}} 范数与 #{E_\kappa^{1/2}} 等价，因而先得到轨道有界。}
+\p{\strong{频率尾部的推导。}对有界族，#{\sup E_\kappa\to 0} 等价于[高频尾部一致消失](4707)。一个方向由 #{|\xi|>\kappa} 上 #{\xi^2+4\kappa^2\leq 5\xi^2} 得到；另一方向先取固定 #{N}，在 #{|\xi|\leq N} 上用 #{(1+N^2)/(4\kappa^2)} 控制权重比，在补集用原尾部控制。守恒输入使这一性质从 #{Q} 传到 #{Q^*}。原论文命题 4.4 还在小 #{H^{-1}} 数据范围内对 KdV 与正则化流组成的共同轨道族给出同一结论。}

@@ -1,0 +1,13 @@
+\title{对偶局部能量估计节省半个时间幂次}
+\date{2026-10-21}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Oh](icm2026-oh), Theorem 4.2 与其后证明概要}
+
+\p{对 #{P\psi=f} 的零初值解，假设有对偶积分局部能量估计}
+##{\sup_{t\ge 0}E_N\lbrack\psi\rbrack(t)^{1/2}\le C_N\|\langle r\rangle^{1+\beta}\partial^{\le N+s}f\|_{L^2_{t,x}},\qquad \beta>0,\quad s\ge 0.}
+\p{这里 #{E_N} 是控制至多 #{N} 阶坐标导数的正能量，#{\partial^{\le k}} 表示所有至多 #{k} 阶时空导数，非整数指标须改用相应 Sobolev 范数。允许的导数损失 #{s} 和空间权均是估计的组成部分。该不等式作为所研究算子的假设，与无源自由波的[积分局部能量衰减](480C)相区别。}
+
+\p{设源项支撑在 #{T\le t\le 2T}，且加权空间范数满足 #{\|\langle r\rangle^{1+\beta}\partial^{\le N+s}f(t)\|_2\le At^{-p}}。积分得到}
+##{\sup_tE_N\lbrack\psi\rbrack(t)^{1/2}\le C_{N,p}A T^{1/2-p}.}
+\p{证明只需 #{\int_T^{2T}t^{-2p}dt=C_pT^{1-2p}}。相较之下，直接把同样的界放入时间 L¹ 能量估计会给出 #{AT^{1-p}}。在[修正交换子](4827)产生空间局部化误差时，这半个时间幂次的改善可用于衰减迭代。}

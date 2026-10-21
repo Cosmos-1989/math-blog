@@ -1,0 +1,11 @@
+\title{可积径向误差保证辐射场存在}
+\date{2026-10-21}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Oh](icm2026-oh)，引理 2.4 后的输运论证；带基点条件的表述}
+
+\p{设 #{\Phi(u,r,\theta)} 在 #{u\in[a,b]}、#{r\ge R}、#{\theta\in S^{d-1}} 上光滑。假设 #{|\partial_r\partial_u\Phi|\le C r^{-1-\delta}}，#{\delta>0}，且 #{\Phi(a,r,\theta)} 随 #{r\to\infty} 一致收敛于连续函数 #{A(\theta)}。则 #{\Phi(u,r,\theta)} 在这一参数集上一致收敛。}
+
+\p{\strong{证明。}由[微积分基本定理](0A3C)，#{|\partial_u\Phi(u,r_2,\theta)-\partial_u\Phi(u,r_1,\theta)|\le C\delta^{-1}r_1^{-\delta}}，#{r_2\ge r_1\ge R}。这给出[一致 Cauchy 判据](0AP5)，故存在一致极限 #{G(u,\theta)}。再积分于 #{u}，得到}
+##{\Phi(u,r,\theta)\longrightarrow A(\theta)+\int_a^uG(s,\theta)\,ds.}
+\p{对[共轭波方程](4809)，若 #{\partial_r^2\Phi+r^{-2}(\Delta_S-m(m-1))\Phi -r^mf=O(r^{-1-\delta})}，便得到所需的混合导数界。对齐次自由波，紧支撑初值通过[有限传播](4806)允许在足够负的 #{a} 上取零基点；结合混合导数界即可得到[辐射场](480A)。}

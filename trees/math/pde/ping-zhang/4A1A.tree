@@ -1,0 +1,19 @@
+\title{水平梯度能量中的三次项消去}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report (3.8) and following E1 identity}
+
+\p{设 #{u} 是三维[经典 NS](4302)的光滑衰减无散度解。对 #{i,j\in\{1,2\}} 记 #{A_{ij}=\partial_i u^j}。水平三次项满足}
+##{-\sum_{i=1}^2\int(\partial_i u^{\mathrm h}\cdot\nabla_{\mathrm h}u^{\mathrm h})\cdot\partial_i u^{\mathrm h}\,dx
+=\int\partial_3u^3\left(|A|^2+A_{12}A_{21}-A_{11}A_{22}\right)\,dx.}
+\p{\strong{证明。}写 #{A=\begin{pmatrix}a&b\\c&d\end{pmatrix}}。左侧积分内取掉负号后的多项式是}
+##{\sum_{i,j,k=1}^2 A_{ij}A_{jk}A_{ik}
+=a^3+d^3+(a+d)(b^2+c^2+bc)
+=(a+d)(|A|^2+bc-ad).}
+\p{由[无散度条件](4301)，#{a+d=-\partial_3u^3}，得到所述符号。对整个速度方程求 #{\partial_i}、配对 #{\partial_i u} 并求和，按[能量抵消](4304)，还得}
+##{\frac 12\frac d{dt}\|\nabla_{\mathrm h}u\|_2^2+
+\|\nabla\nabla_{\mathrm h}u\|_2^2
+=-\sum_{i=1}^2\sum_{j,k=1}^3
+\int\partial_i u^j\,\partial_j u^k\,\partial_i u^k\,dx.}
+\p{其中纯水平部分恰是上面的三次项，其余部分至少含 #{u^3} 的一个导数。将这些导数重新分配到临界范数仍需要乘积估计，代数抵消本身不关闭全局能量估计。}

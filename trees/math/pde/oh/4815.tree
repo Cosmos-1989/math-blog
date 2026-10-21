@@ -1,0 +1,15 @@
+\title{小径向势下辐射极限与时间尾项的匹配定理}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Luk–Oh, arXiv:2404.02220v1, Main Theorem 2, Example 3.1；[Oh](icm2026-oh), Theorem 3.1}
+
+\p{以下是 Luk–Oh 定理的径向、无对数特例。设 #{d\ge 3} 为奇数，#{m=(d-1)/2}，#{V\in C^\infty(\mathbb R^d)} 径向，且 #{V(r)=r^{-3}} 于 #{r\ge R}。设实数 #{\varepsilon} 足够小，使}
+##{\sup_x\left(\langle r\rangle^2|\varepsilon V|+\langle r\rangle^3|\nabla(\varepsilon V)|\right)\le\epsilon_d,}
+\p{其中 #{\epsilon_d>0} 是原定理小势条件所允许的常数。令 #{(\Box+\varepsilon V)\phi=0} 的两项初值均为光滑、紧支撑、径向函数。取其[高阶辐射展开](4810) #{r^m\phi\sim\sum_jF_j(u)r^{-j}}。若整数 #{J\ge m} 满足}
+##{\lim_{u\to\infty}F_j(u)=0\quad(0\le j<J),\qquad L=\lim_{u\to\infty}F_J(u)\in\mathbb R,}
+\p{则对每个固定的空间紧集，一致有}
+##{\phi(t,x)=c_{J,d}L\,t^{-(J+m)}\psi_0(x)+o(t^{-(J+m)}),}
+\p{其中 #{c_{J,d}\ne 0} 依赖 #{J,d} 和展开的归一化，#{\psi_0} 是趋于一的[静态解](4814)。小势条件提供该特例所需的[零频正则性](4813)及初步演化估计；精确渐近式引用 Main Theorem 2，其证明未在这里展开。}
+
+\p{要得到非零首项，还须证明 #{L\ne 0}，并在观测位置有 #{\psi_0(x)\ne 0}。三维与五维递推分别给出[一次势作用的系数](4816)和[二次势作用的系数](4817)。一般非平稳或非线性方程的定理另有导数控制的系数展开、趋稳速度、零频条件和解的基准衰减假设，不能仅从“系数趋向平直”推出此式。}

@@ -1,0 +1,15 @@
+\title{亚临界 Sobolev 初值的精细解析半径}
+\date{2026-10-21}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[张平报告](icm2026-ping-zhang)；report Theorem4.4 (4.7)-(4.8); LZ-v2 Theorem1.2, PDF pp3-5}
+
+\p{设 #{u_0\in H^\gamma(\mathbb R^3)} 无散度，#{\gamma>1/2}，令 #{u} 为[经典 NS 局部强解](4A15)。Li–Zhang 的定理给出 #{T>0} 和 #{u\in C([0,T];H^\gamma)\cap L^2(0,T;\dot H^{\gamma+1})}，并有如下[解析半径](4A1B)下界。}
+\p{令 #{\eta(t)=\sup_{0\leq\tau\leq t}\|1_{\{|\xi|\geq 0.01t^{-1/2}\}}|\xi|^\gamma\widehat u(\tau,\xi)\|_2}，以及}
+##{\beta(t)=\min\left\{|\log\eta(t)|,\ \tfrac 12(\gamma -\tfrac 12)|\log t|\right\},\qquad
+\lambda(t)=\sqrt{(2\gamma -1)(|\log t|+\log|\log t|)+3\beta(t)}.}
+\p{当 #{\eta(t)=0}，将第一项视为无穷大。对充分小的 #{0<t\leq t_0<e^{-1}}，有 #{\operatorname{rad}(u(t))\geq\lambda(t)\sqrt t}。此为 arXiv:2406.10865v2 定理1.2的引用结论，适用于所有 #{\gamma>1/2}，含 #{\gamma\geq 3 /2}。}
+\p{由[高频尾估计](4A1D)，#{\eta(t)\to 0}，故 #{\beta(t)\to\infty}。特别地，}
+##{\operatorname{rad}(u(t))\geq
+\sqrt{(2\gamma -1)t(|\log t|+\log|\log t|)}.}
+\p{\strong{证明概要。}将低频与高频分开，在 [热核指数配方](4A1C)中用高频尾小量补偿增加的解析权，再证明带权二次积分方程的迭代估计。相关低高频乘积控制见原文§2；上面的尾极限和较弱下界可直接推导。所有结论限于既有局部解的短时间，不扩大其最大存在区间。}

@@ -1,0 +1,3205 @@
+{
+  "date": "2026-10-21",
+  "report": {
+    "speaker": "Rowan Killip and Monica Vişan",
+    "authors": [
+      "Rowan Killip",
+      "Monica Vişan"
+    ],
+    "prefix": "47",
+    "outline": "4700",
+    "reference": "icm2026-killip-visan",
+    "title": "The Method of Commuting Flows",
+    "outline_title": "对易流如何构造粗糙初值的色散演化",
+    "doi": "10.1137/25M1807149",
+    "pages": "328-347",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807149",
+    "version_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1807149",
+    "version_role": "Publisher full text is authoritative for report numbering; pinned research versions are separately recorded.",
+    "license": "CC BY 4.0 (publisher chapter)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "©2026 International Mathematical Union; published by SIAM. Original authors credited; Chinese reformulation and independent elementary derivations. No source figures copied. Supplementary sources retain their own licenses.",
+    "reading_scope": "Read the complete textual mathematical narrative of §§1-6, equations exposed as text, Figure 1 caption and surrounding explanation. Cross-checked publisher PDF extraction for the final CCM paragraphs, metadata and selected formulas. Mathematical narrative occupies printed pp328-342; bibliography pp343-347 was consulted selectively for the cited primary studies. This is full report-text reading subject to the explicitly inaccessible visual items below, not abstract-only reading. Image-only table (2.1) and Figure 1 pixels were not inspected. Direct image retrieval and publisher PDF screenshots at zero-based pages 3,9,12,14 failed with Cache miss. No visual PDF collation or complete rereading of all bibliography entries is claimed.",
+    "coverage_status": "Source-only integration: one narrative overview, 45 atomic pages, one reference. No shared navigation/registry/workflow/test changes, build, render, commit or deployment. Awaiting independent frozen-content review.",
+    "question": "对易正则化如何跨越 Lipschitz 障碍构造粗糙初值的连续解流？",
+    "proof_scope": {
+      "4700": {
+        "status": "narrative",
+        "scope": "Report §§1-6 synthesized as one mathematical narrative; theorem scopes and proof routes linked, not reproved here."
+      },
+      "4701": {
+        "status": "definition-and-local-proof",
+        "scope": "Defines compact-time trajectory convergence and proves extension uniqueness and inherited group property."
+      },
+      "4702": {
+        "status": "definition-and-calculation",
+        "scope": "Variational derivative, skew bracket, conservation identity and the integral Casimir are computed on Schwartz functions."
+      },
+      "4703": {
+        "status": "local-proof",
+        "scope": "Full variation and integration-by-parts proof, with P=one half of the squared L2 norm."
+      },
+      "4704": {
+        "status": "local-proof",
+        "scope": "Finite-dimensional C3 Hessian calculation and ODE pushforward argument; PDE existence is a separate cited input."
+      },
+      "4705": {
+        "status": "local-proof",
+        "scope": "Chain rule and uniqueness establish exact flow factorization on common smooth domains."
+      },
+      "4706": {
+        "status": "definition",
+        "scope": "Defines uniform translation continuity for bounded families and distinguishes time equicontinuity."
+      },
+      "4707": {
+        "status": "local-proof",
+        "scope": "Full Plancherel proof in both directions, using an explicitly integrated exponential average."
+      },
+      "4708": {
+        "status": "local-proof",
+        "scope": "Frequency splitting proves Cauchy convergence and the converse, including parameter-uniform variant."
+      },
+      "4709": {
+        "status": "definition-and-local-proof",
+        "scope": "L2 tail definition; equivalence with the stated bounded cutoff weight is proved."
+      },
+      "4710": {
+        "status": "cited-theorem",
+        "scope": "Line H^-1 theorem, uniform two-derivative local-smoothing bound and continuity on each fixed translated spacetime window; periodic sharp L2 result is cited through the introduction, not independently reproved."
+      },
+      "4711": {
+        "status": "definition-and-local-proof",
+        "scope": "Defines continuous-frequency Hardy subspace and proves projection identities; circle Hardy page retained only as comparison."
+      },
+      "4712": {
+        "status": "definition-and-calculation",
+        "scope": "Defines epsilon convention, Hardy constraint and critical mass scaling; no regularity theorem proved here."
+      },
+      "4713": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Defocusing all L2_+; focusing mass strictly below 2pi from Theorems 1.4 and 1.6; explicit-formula proof separated from forthcoming commuting-flow work."
+      },
+      "4714": {
+        "status": "local-proof",
+        "scope": "Full differential algebra with real smooth input; no inverse or low-regularity equivalence asserted."
+      },
+      "4715": {
+        "status": "local-proof",
+        "scope": "Two-term subtraction and absorption prove the precise conditional parameter estimate."
+      },
+      "4716": {
+        "status": "local-proof",
+        "scope": "Exact L2 difference identity plus integrating-factor Gronwall proof on smooth solutions."
+      },
+      "4717": {
+        "status": "cited-input-and-local-proof",
+        "scope": "Quotes Proposition 3.1 evolution; chain rule derives reciprocal density and the vanishing-at-infinity flux constant."
+      },
+      "4718": {
+        "status": "proof-outline-with-local-algebra",
+        "scope": "Two-parameter cancellation and norm-upgrade steps supplied; Proposition 4.4 nonlinear asymptotic and Proposition 2.2 bi-Lipschitz estimates remain cited inputs."
+      },
+      "4719": {
+        "status": "local-proof",
+        "scope": "Fourier Cauchy-Schwarz embedding, product derivative estimate and duality prove the multiplier bound."
+      },
+      "470A": {
+        "status": "local-proof",
+        "scope": "Inner/outer split and tightness prove the compact-time uniform result."
+      },
+      "470B": {
+        "status": "local-proof",
+        "scope": "Every differential-operator commutator is expanded on common compactly supported tests; no unbounded unitary-propagator theorem asserted."
+      },
+      "470C": {
+        "status": "local-proof",
+        "scope": "Distributional jump calculation, Fourier multiplier and positive square-root multiplier."
+      },
+      "470D": {
+        "status": "local-proof",
+        "scope": "Exact Fourier kernel calculation with nonunitary Fourier normalization, convolution integral, and dense extension."
+      },
+      "470E": {
+        "status": "definition-and-local-proof",
+        "scope": "Defines alpha via absolutely convergent traces for HS norm below one; det2 notation introduced locally."
+      },
+      "470F": {
+        "status": "local-proof",
+        "scope": "Geometric-series trace estimate yields explicit one-sixth and five-sixths bounds when HS norm is at most one quarter."
+      },
+      "470G": {
+        "status": "cited-input-and-local-proof",
+        "scope": "Conserved determinant coercivity is cited; weighted Fourier-tail equivalence and propagation are proved locally."
+      },
+      "470H": {
+        "status": "calculation-with-cited-expansion",
+        "scope": "Quadratic expansion and cancellation computed; cubic coefficient and differentiable higher remainder cited for fixed Schwartz data."
+      },
+      "470I": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Exact vector field and Duhamel formula derived; local mechanism explained; global conservation and commutation cited from Proposition 3.2."
+      },
+      "470J": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Small real H^-1 ball, kappa>=1, continuous kernel and analytic diffeomorphisms onto images stated; the first coordinate derivative is -kappa^{-1}R and the second is -2*kappa*R, with the normalization derived by the chain rule."
+      },
+      "470K": {
+        "status": "local-proof-with-domain-boundary",
+        "scope": "Resolvent identity, diagonal variation, and trace series calculation proved for small Schwartz potentials; rough extension cited."
+      },
+      "470L": {
+        "status": "local-proof",
+        "scope": "Substitution of the zero-potential Green derivative yields regularized and difference multipliers exactly."
+      },
+      "470M": {
+        "status": "local-proof",
+        "scope": "Abstract Banach Cauchy extension proof with D-invariant auxiliary flows; diagonal density argument proves continuity."
+      },
+      "470N": {
+        "status": "local-proof",
+        "scope": "Local momentum conservation and weighted identity fully derived; full Kato smoothing estimate is not deduced here."
+      },
+      "470O": {
+        "status": "cited-theorem",
+        "scope": "Exact Theorem 1.5 weight and family-dependence stated; Proposition 1.11 obstruction cited, without redoing the deep smoothing proof."
+      },
+      "470P": {
+        "status": "proof-outline",
+        "scope": "Explains separate original-flow and difference-flow smoothing, frequency tails, finite-time tightness, and the abstract extension step."
+      },
+      "470Q": {
+        "status": "local-proof",
+        "scope": "Fourier change of variables proves scaling exponent; model equations are examples, not prerequisites of the general formula."
+      },
+      "470R": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Real line and circle s>=-1, continuous extension, all-time bounded equicontinuous H^-1 orbits; distributional line result stated separately."
+      },
+      "470S": {
+        "status": "cited-theorem",
+        "scope": "Real-valued s>-1/2 on both geometries; periodic endpoint obstruction and report-bound open line endpoint distinguished."
+      },
+      "470T": {
+        "status": "definition-and-calculation",
+        "scope": "Defines equation, energy sign and free evolution; verifies scaling by substitution."
+      },
+      "470U": {
+        "status": "definition-and-calculation",
+        "scope": "Defines complex Hirota mKdV, real restriction and signs; distinguishes |q|^2 q_x from derivative of |q|^2 q."
+      },
+      "470V": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Both signs, all s>-1/2, no small mass; complex norm inflation for s<=-1/2 is separately cited."
+      },
+      "470W": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Both signs real/complex s>-1/2; complex endpoint small-to-large inflation; real focusing A.3 bounded homogeneous endpoint data and stricter subcritical inflation."
+      },
+      "470X": {
+        "status": "local-proof",
+        "scope": "Full mass-current calculation and critical scaling; equation normalization fixed."
+      },
+      "470Y": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Arbitrary finite L2 mass, all s>=0, continuous local L3 dependence and distributional solution property."
+      },
+      "470Z": {
+        "status": "local-proof",
+        "scope": "All variational derivatives and coefficients are calculated by integration by parts."
+      }
+    },
+    "claim_sources": {
+      "4700": [
+        "KV-ICM"
+      ],
+      "4701": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4702": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4703": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4704": [
+        "KV-ICM"
+      ],
+      "4705": [
+        "KV-ICM"
+      ],
+      "4706": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4707": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4708": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4709": [
+        "KV-ICM",
+        "HGKNV-dNLS"
+      ],
+      "4710": [
+        "KV-ICM",
+        "BKV-5KdV-v1"
+      ],
+      "4711": [
+        "KV-ICM",
+        "KLV-CCM-v1"
+      ],
+      "4712": [
+        "KV-ICM",
+        "KLV-CCM-v1"
+      ],
+      "4713": [
+        "KV-ICM",
+        "KLV-CCM-v1"
+      ],
+      "4714": [
+        "KV-ICM"
+      ],
+      "4715": [
+        "KV-ICM"
+      ],
+      "4716": [
+        "KV-ICM"
+      ],
+      "4717": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4718": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "4719": [
+        "KV-ICM",
+        "BKV-5KdV-v1"
+      ],
+      "470A": [
+        "KV-ICM"
+      ],
+      "470B": [
+        "KV-ICM"
+      ],
+      "470C": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470D": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470E": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470F": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470G": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470H": [
+        "KV-ICM",
+        "KV-KdV",
+        "BKV-5KdV-v1"
+      ],
+      "470I": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470J": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470K": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470L": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470M": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470N": [
+        "KV-ICM"
+      ],
+      "470O": [
+        "KV-ICM",
+        "HGKNV-dNLS"
+      ],
+      "470P": [
+        "KV-ICM",
+        "HGKNV-dNLS",
+        "HGKV-NLS-v3"
+      ],
+      "470Q": [
+        "KV-ICM"
+      ],
+      "470R": [
+        "KV-ICM",
+        "KV-KdV"
+      ],
+      "470S": [
+        "KV-ICM",
+        "KLV-BO-v1"
+      ],
+      "470T": [
+        "KV-ICM",
+        "HGKV-NLS-v3"
+      ],
+      "470U": [
+        "KV-ICM",
+        "HGKV-NLS-v3"
+      ],
+      "470V": [
+        "KV-ICM",
+        "HGKV-NLS-v3"
+      ],
+      "470W": [
+        "KV-ICM",
+        "HGKV-NLS-v3"
+      ],
+      "470X": [
+        "KV-ICM",
+        "HGKNV-dNLS"
+      ],
+      "470Y": [
+        "KV-ICM",
+        "HGKNV-dNLS"
+      ],
+      "470Z": [
+        "KV-ICM",
+        "BKV-5KdV-v1"
+      ]
+    },
+    "remaining_branches": [
+      "Report extensions and unread deep proofs are enumerated at packet level."
+    ],
+    "unexpanded_deep_proofs": [
+      "Small-H^-1 closed Schrödinger operator, analytic Green-coordinate inverse, and full nonlinear resolvent estimates.",
+      "Full low-regularity existence proofs, periodic KdV implementation and primary ill-posedness constructions except selected Appendix A reading.",
+      "BO new gauge and hierarchy Lax structure.",
+      "NLS/mKdV/dNLS/fifth-order frequency-localized smoothing and difference-flow estimates.",
+      "CCM explicit formula and compactness proof; endpoint and blowup studies."
+    ]
+  },
+  "prerequisites": {
+    "4700": [],
+    "4701": [
+      "00M6",
+      "00E2",
+      "00EX",
+      "130F",
+      "0H4F"
+    ],
+    "4702": [
+      "0H4F",
+      "0BL5"
+    ],
+    "4703": [
+      "0H4F",
+      "4702"
+    ],
+    "4704": [
+      "00ND",
+      "00OB",
+      "4702"
+    ],
+    "4705": [
+      "00NC",
+      "4704",
+      "0A34",
+      "00OB"
+    ],
+    "4706": [
+      "130F"
+    ],
+    "4707": [
+      "130F",
+      "4706",
+      "0W01",
+      "0H53"
+    ],
+    "4708": [
+      "130F",
+      "4706",
+      "4707",
+      "00ER"
+    ],
+    "4709": [
+      "0A6A",
+      "00F3"
+    ],
+    "4710": [
+      "470Z",
+      "4701",
+      "2J0C",
+      "4101",
+      "470Q"
+    ],
+    "4711": [
+      "0H4G",
+      "0W01",
+      "00MS",
+      "130F"
+    ],
+    "4712": [
+      "4711",
+      "470Q",
+      "470X"
+    ],
+    "4713": [
+      "4712",
+      "4701",
+      "4706",
+      "4709"
+    ],
+    "4714": [
+      "470U",
+      "4703"
+    ],
+    "4715": [
+      "00M6",
+      "00FU",
+      "0F40",
+      "4707"
+    ],
+    "4716": [
+      "4703"
+    ],
+    "4717": [
+      "4703",
+      "470J",
+      "0A34"
+    ],
+    "4718": [
+      "4706",
+      "470I",
+      "470G",
+      "4705",
+      "4717",
+      "470J",
+      "4719",
+      "4708"
+    ],
+    "4719": [
+      "130F",
+      "0H4F",
+      "0I80",
+      "004S",
+      "0I8K"
+    ],
+    "470A": [
+      "4709"
+    ],
+    "470B": [
+      "4703",
+      "2A03"
+    ],
+    "470C": [
+      "0GSQ",
+      "0H4G",
+      "0W01"
+    ],
+    "470D": [
+      "470C",
+      "0X02",
+      "130F",
+      "0I8K",
+      "0H4F"
+    ],
+    "470E": [
+      "470D",
+      "0X01",
+      "0X06"
+    ],
+    "470F": [
+      "470E",
+      "0X06",
+      "004S",
+      "470D"
+    ],
+    "470G": [
+      "0H4F",
+      "4706",
+      "4703",
+      "470E",
+      "470F",
+      "4707"
+    ],
+    "470H": [
+      "4703",
+      "470E",
+      "470D"
+    ],
+    "470I": [
+      "470J",
+      "470H",
+      "470K",
+      "4702"
+    ],
+    "470J": [
+      "470D"
+    ],
+    "470K": [
+      "470J",
+      "470E"
+    ],
+    "470L": [
+      "470I",
+      "470K",
+      "4707"
+    ],
+    "470M": [
+      "00M6",
+      "4701",
+      "4705",
+      "00ER"
+    ],
+    "470N": [
+      "4703"
+    ],
+    "470O": [
+      "4706",
+      "470X",
+      "130F"
+    ],
+    "470P": [
+      "470X",
+      "4706",
+      "4708",
+      "4709",
+      "470A",
+      "470M",
+      "470O"
+    ],
+    "470Q": [
+      "0H4G",
+      "130F"
+    ],
+    "470R": [
+      "4703",
+      "4101",
+      "4701",
+      "4706",
+      "470I",
+      "470G",
+      "470J",
+      "4718",
+      "470M",
+      "470Q"
+    ],
+    "470S": [
+      "2A04",
+      "130F",
+      "4101",
+      "4701"
+    ],
+    "470T": [
+      "0H4F",
+      "130A",
+      "470Q"
+    ],
+    "470U": [
+      "4703",
+      "470Q"
+    ],
+    "470V": [
+      "470T",
+      "4701",
+      "470P"
+    ],
+    "470W": [
+      "470U",
+      "4701",
+      "470P"
+    ],
+    "470X": [
+      "0H4F",
+      "470Q"
+    ],
+    "470Y": [
+      "470X",
+      "4701",
+      "470O",
+      "470P",
+      "4708",
+      "470Q"
+    ],
+    "470Z": [
+      "0H4F",
+      "4702",
+      "4703"
+    ],
+    "icm2026-killip-visan": []
+  },
+  "atomic_questions": {
+    "4700": "对易正则化如何跨越 Lipschitz 障碍构造粗糙初值的连续解流？",
+    "4701": "粗糙初值的光滑流连续延拓究竟要求什么？",
+    "4702": "Gardner 括号怎样由变分导数生成演化？",
+    "4703": "哪一种 Hamilton 归一化恰好生成 KdV 与单位速度平移？",
+    "4704": "常反对称结构下括号为零为何推出光滑流对易？",
+    "4705": "两条对易演化的误差为何由差向量场的真实流描述？",
+    "4706": "负阶 Sobolev 函数族的平移等度连续是什么意思？",
+    "4707": "平移等度连续怎样等价为高频尾部一致消失？",
+    "4708": "何时低阶范数收敛能提升回目标 Sobolev 阶？",
+    "4709": "空间紧性排除哪一种质量逃逸？",
+    "4710": "五阶 KdV 的实线与周期适定门槛为何不能混用？",
+    "4711": "实线正频率 Hardy 空间怎样通过 Fourier 投影定义？",
+    "4712": "CCM 的正频率约束及聚焦符号与 dNLS 有何区别？",
+    "4713": "CCM 的临界全局流在哪种符号和质量区间成立？",
+    "4714": "Miura 变换怎样把实散焦 mKdV 解映到 KdV？",
+    "4715": "带统一参数估计的压缩方案为何强制 Lipschitz 初值依赖？",
+    "4716": "KdV 两解的直接距离估计在哪一步需要强导数控制？",
+    "4717": "KdV 下的 Green 演化怎样变成倒数密度守恒律？",
+    "4718": "固定探测谱参数后，差流的主导项怎样相消？",
+    "4719": "为何一维 H¹ 函数可以乘 H⁻¹ 分布？",
+    "470A": "局部 L² 收敛何时提升为全空间一致收敛？",
+    "470B": "KdV 的 Lax 交换子如何消掉所有正阶微分项？",
+    "470C": "自由 Schrödinger 预解式为什么有指数核？",
+    "470D": "夹心预解式的 Hilbert–Schmidt 范数怎样检测 H⁻¹ 势？",
+    "470E": "为何删去一次迹项后可在 H⁻¹ 上定义对数行列式？",
+    "470F": "正则化对数行列式在小量区间由什么二次量控制？",
+    "470G": "谱守恒怎样传播一个初值族的高频尾部？",
+    "470H": "正则化 Hamilton 函数的系数怎样消掉主导平移项？",
+    "470I": "固定谱参数的正则化 KdV 流为何能在 H⁻¹ 求解？",
+    "470J": "对角 Green 函数何时是 H⁻¹ 到 H¹ 的可逆坐标？",
+    "470K": "预解式变分如何产生行列式的 Green 梯度？",
+    "470L": "正则化流的线性乘子怎样同时逼近低频并降低高频阶数？",
+    "470M": "三项估计如何把差流小量转为唯一连续解流？",
+    "470N": "KdV 的哪条局部恒等式产生加权正导数项？",
+    "470O": "dNLS 的半阶局部平滑常数为何依赖频率分布？",
+    "470P": "第二代方法如何将差流的局部小量变成全空间收敛？",
+    "470Q": "一维缩放怎样决定齐次 Sobolev 临界阶？",
+    "470R": "KdV 的连续解流能到达哪个负正则端点？",
+    "470S": "Benjamin–Ono 的负半阶阈值如何依赖实线或圆周？",
+    "470T": "一维三次 NLS 的聚焦与散焦符号怎样约定？",
+    "470U": "这里的复值修正 KdV 使用哪一种三次非线性？",
+    "470V": "实线三次 NLS 的负阶适定性在哪个范围成立？",
+    "470W": "mKdV 的适定与不适定陈述为何必须保留实复及符号区别？",
+    "470X": "导数 NLS 的密度通量与临界缩放是什么？",
+    "470Y": "dNLS 的临界全局适定性是否仍需质量上界？",
+    "470Z": "五阶 KdV 的微分项如何由下一层 Hamilton 能量生成？",
+    "icm2026-killip-visan": "报告及补充原始研究的出版版本与具体出处是什么？"
+  },
+  "navigation_only": {
+    "outlines": [
+      "4700",
+      "2A00"
+    ],
+    "references": [
+      "icm2026-killip-visan"
+    ],
+    "rule": "No Outline or Reference is a prerequisite. Body links are split between actual prerequisite edges and examples, consequences, comparisons or topic navigation."
+  },
+  "reused_pages": {
+    "4101": {
+      "path": "trees/math/pde/berti/4101.tree",
+      "title": "周期 Sobolev 空间与水波的零模态",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "130F": {
+      "path": "trees/math/analysis/fourier-restriction/130F.tree",
+      "title": "实数阶 Sobolev 空间的 Fourier 定义",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "2A04": {
+      "path": "trees/math/analysis/hardy-integrable/2A04.tree",
+      "title": "Benjamin–Ono 方程的色散项",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "2A00": {
+      "path": "trees/math/analysis/hardy-integrable/2A00.tree",
+      "title": "Hardy 空间与可积方程的显式解",
+      "taxon": "Outline",
+      "use": "Navigation only: existing Gerard topic."
+    },
+    "00M6": {
+      "path": "trees/math/analysis/atomic/00M6.tree",
+      "title": "Banach 空间",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00E2": {
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "title": "连续映射",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00EX": {
+      "path": "trees/math/topology/atomic/00EX.tree",
+      "title": "度量连续性与序列判据",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0H4F": {
+      "path": "trees/math/number-theory/reports/0H4F.tree",
+      "title": "欧氏空间上的 Schwartz 函数",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0BL5": {
+      "path": "trees/math/geometry/algebraic/0BL5.tree",
+      "title": "Hamilton 向量场与 Hamilton 同痕",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00ND": {
+      "path": "trees/math/geometry/atomic/00ND.tree",
+      "title": "向量场的 Lie 括号",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00OB": {
+      "path": "trees/math/analysis/atomic/00OB.tree",
+      "title": "光滑常微分方程的存在唯一性",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00NC": {
+      "path": "trees/math/geometry/atomic/00NC.tree",
+      "title": "光滑向量场",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0A34": {
+      "path": "trees/math/analysis/atomic/0A34.tree",
+      "title": "全微分的链式法则",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0W01": {
+      "path": "trees/math/analysis/fourier-extremal/0W01.tree",
+      "title": "欧氏 Fourier 变换的 Plancherel 定理",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0H53": {
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "title": "Fubini–Tonelli 积分定理",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00ER": {
+      "path": "trees/math/topology/atomic/00ER.tree",
+      "title": "Cauchy 序列",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0A6A": {
+      "path": "trees/math/logic/research/atomic/0A6A.tree",
+      "title": "L² 空间的 Hilbert 结构",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00F3": {
+      "path": "trees/math/topology/atomic/00F3.tree",
+      "title": "紧空间",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "2A03": {
+      "path": "trees/math/analysis/hardy-integrable/2A03.tree",
+      "title": "有界 Lax 方程保持酉共轭类",
+      "taxon": "Proposition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0GSQ": {
+      "path": "trees/math/number-theory/reports/0GSQ.tree",
+      "title": "闭算子的谱与预解集",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0H4G": {
+      "path": "trees/math/number-theory/reports/0H4G.tree",
+      "title": "欧氏空间上的 Fourier 变换",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0X02": {
+      "path": "trees/math/analysis/schur-multipliers/0X02.tree",
+      "title": "Hilbert–Schmidt 算子与平方可积核",
+      "taxon": "Proposition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0I8K": {
+      "path": "trees/math/number-theory/reports/0I8K.tree",
+      "title": "紧支撑光滑函数在 L² 中稠密",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0X01": {
+      "path": "trees/math/analysis/schur-multipliers/0X01.tree",
+      "title": "Schatten 类与矩阵的非交换范数",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0X06": {
+      "path": "trees/math/analysis/schur-multipliers/0X06.tree",
+      "title": "Schatten 范数的左右乘法估计",
+      "taxon": "Proposition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "004S": {
+      "path": "trees/math/analysis/004S.tree",
+      "title": "Schwarz 不等式",
+      "taxon": "Corollary",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "130A": {
+      "path": "trees/math/analysis/fourier-restriction/130A.tree",
+      "title": "自由 Schrödinger 演化的 Fourier 表示",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "2J0C": {
+      "path": "trees/math/geometry/harmonic-rigidity/2J0C.tree",
+      "title": "弱导数与一阶 Sobolev 空间",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "00MS": {
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "title": "Hilbert 空间的正交投影定理",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "2A01": {
+      "path": "trees/math/analysis/hardy-integrable/2A01.tree",
+      "title": "圆盘 Hardy 空间与边界值",
+      "taxon": "Definition",
+      "use": "Comparison only: disk/circle Hardy definition."
+    },
+    "00FU": {
+      "path": "trees/math/topology/atomic/00FU.tree",
+      "title": "Lipschitz 映射",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0F40": {
+      "path": "trees/math/topology/atomic/0F40.tree",
+      "title": "度量空间之间的一致连续映射",
+      "taxon": "Definition",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    },
+    "0I80": {
+      "path": "trees/math/number-theory/reports/0I80.tree",
+      "title": "Schwartz 函数的 Fourier 反演",
+      "taxon": "Theorem",
+      "use": "Existing canonical definition or theorem; direct destination inspected."
+    }
+  },
+  "terminology_evidence": {
+    "checked_date": "2026-10-21",
+    "existing_conventions": [
+      "Sobolev 空间",
+      "平移等度连续性",
+      "空间紧性",
+      "预解式",
+      "泊松括号",
+      "变分导数",
+      "局部平滑",
+      "Hilbert–Schmidt 算子",
+      "聚焦／散焦"
+    ],
+    "banana_space": {
+      "status": "unavailable",
+      "attempted_urls": [
+        "https://banana-space.com/wiki/等度连续",
+        "https://banana-space.com/wiki/泊松括号"
+      ],
+      "result": "Both retrieval attempts failed; terminology was not claimed to be verified on Banana Space."
+    },
+    "new_foundation_reuse_decisions": [
+      "Reuse 130F/4101 for real/periodic Sobolev spaces, 0H4G/0W01/0I80/0I8K for Fourier/Plancherel/inversion/density, 0X01/0X02/0X06 for operator ideals.",
+      "Reuse Gerard 2A03 for the bounded Lax conjugation calculation and 2A04 for BO normalization. 2A00 is navigation only.",
+      "4711 is needed because 2A01 defines disk/circle Hardy space, not the real-line continuous positive-frequency subspace.",
+      "No existing H1-algebra/negative-Sobolev multiplier atomic page found by title and body searches; 4719 supplies the elementary dual estimate within the owned prefix."
+    ]
+  },
+  "notes": [
+    {
+      "id": "4700",
+      "path": "trees/math/pde/killip-visan/4700.tree",
+      "title": "对易流如何构造粗糙初值的色散演化",
+      "taxon": "Outline",
+      "prerequisites": [],
+      "single_question": "对易正则化如何跨越 Lipschitz 障碍构造粗糙初值的连续解流？",
+      "proof_scope": {
+        "status": "narrative",
+        "scope": "Report §§1-6 synthesized as one mathematical narrative; theorem scopes and proof routes linked, not reproved here."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Full mathematical narrative §§1-6, including caption and equation prose, with image-only table (2.1) excluded.",
+      "remaining_branches": [
+        "All deferred research branches listed at packet level."
+      ],
+      "non_prerequisite_links": [
+        {
+          "target": "130F",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4701",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4715",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4716",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470Q",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4703",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4702",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4704",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4705",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470B",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470C",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470D",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470E",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470F",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4706",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4707",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470G",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4708",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470H",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470I",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470K",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470L",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470J",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4717",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4718",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4719",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470M",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470R",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "2A04",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470S",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470N",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470O",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4709",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470A",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470P",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470T",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470U",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470V",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470W",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4714",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470X",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470Y",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470Z",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4710",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4712",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4711",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "4713",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "2A00",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "icm2026-killip-visan",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "74ea33ef2e51a3a9063ecf8198aec3ae3c1f7de339896fa1e7b21a6f69f66e2e"
+    },
+    {
+      "id": "4701",
+      "path": "trees/math/pde/killip-visan/4701.tree",
+      "title": "由光滑解连续延拓定义粗糙初值的演化",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00M6",
+        "00E2",
+        "00EX",
+        "130F",
+        "0H4F"
+      ],
+      "single_question": "粗糙初值的光滑流连续延拓究竟要求什么？",
+      "proof_scope": {
+        "status": "definition-and-local-proof",
+        "scope": "Defines compact-time trajectory convergence and proves extension uniqueness and inherited group property."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §5 (5.4); KdV Theorem 1.1 and pp250-251 solution discussion.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "e57f98c119560b81210dae9294dd2d3db14e28e41bf2f67cc6427d77dc2b8095"
+    },
+    {
+      "id": "4702",
+      "path": "trees/math/pde/killip-visan/4702.tree",
+      "title": "Gardner 泊松括号与变分导数",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0H4F",
+        "0BL5"
+      ],
+      "single_question": "Gardner 括号怎样由变分导数生成演化？",
+      "proof_scope": {
+        "status": "definition-and-calculation",
+        "scope": "Variational derivative, skew bracket, conservation identity and the integral Casimir are computed on Schwartz functions."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §5; KdV §3 (3.1)-(3.2), pp273-274.",
+      "remaining_branches": [
+        "Infinite-dimensional Poisson geometry beyond the stated smooth test class."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "488a3b5100acbe5c2ad0e1ec1a4af175b2466ec003ed00008da9747c77571ebd"
+    },
+    {
+      "id": "4703",
+      "path": "trees/math/pde/killip-visan/4703.tree",
+      "title": "KdV 的 Hamilton 函数与平移动量",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0H4F",
+        "4702"
+      ],
+      "single_question": "哪一种 Hamilton 归一化恰好生成 KdV 与单位速度平移？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Full variation and integration-by-parts proof, with P=one half of the squared L2 norm."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §§2,5; KdV (1.1),(3.2), pp252,273. Normalization also cross-checked in the extracted §3 discussion.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "ec6bb720a19d054d7d3d09064d22607fea069ec25dcdbf00b291a594d04d9b3a"
+    },
+    {
+      "id": "4704",
+      "path": "trees/math/pde/killip-visan/4704.tree",
+      "title": "常系数 Hamilton 括号为零使向量场对易",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "00ND",
+        "00OB",
+        "4702"
+      ],
+      "single_question": "常反对称结构下括号为零为何推出光滑流对易？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Finite-dimensional C3 Hessian calculation and ODE pushforward argument; PDE existence is a separate cited input."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §5 (5.1); elementary independent finite-dimensional proof.",
+      "remaining_branches": [
+        "Unbounded infinite-dimensional vector fields require model-specific domains."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "8036d4208029017ba8d7d74ff357266eaa3cdb797e0c3a1c37d261c6c152350c"
+    },
+    {
+      "id": "4705",
+      "path": "trees/math/pde/killip-visan/4705.tree",
+      "title": "对易流将演化误差写成差流",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "00NC",
+        "4704",
+        "0A34",
+        "00OB"
+      ],
+      "single_question": "两条对易演化的误差为何由差向量场的真实流描述？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Chain rule and uniqueness establish exact flow factorization on common smooth domains."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §5 (5.5).",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "51fc5121c3f1150380975b38362a16b3f6a8d6e54cc756613ef7d353de77b8ba"
+    },
+    {
+      "id": "4706",
+      "path": "trees/math/pde/killip-visan/4706.tree",
+      "title": "Sobolev 函数族的平移等度连续性",
+      "taxon": "Definition",
+      "prerequisites": [
+        "130F"
+      ],
+      "single_question": "负阶 Sobolev 函数族的平移等度连续是什么意思？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "Defines uniform translation continuity for bounded families and distinguishes time equicontinuity."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report Definition 3.1; KdV §4 (4.1), p277.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "4707",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "598417f4c414cf1e0f1dd149efbb72dc8cb371b440e0394152a48d3dc52bedb3"
+    },
+    {
+      "id": "4707",
+      "path": "trees/math/pde/killip-visan/4707.tree",
+      "title": "平移等度连续等价于一致小的高频尾部",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "130F",
+        "4706",
+        "0W01",
+        "0H53"
+      ],
+      "single_question": "平移等度连续怎样等价为高频尾部一致消失？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Full Plancherel proof in both directions, using an explicitly integrated exponential average."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report Definition 3.1; KdV Lemma 4.2(i), p277.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "671ba64c79fd33a4c355abd04c42d90e11f7cb0294d44496708b165bde5e02f3"
+    },
+    {
+      "id": "4708",
+      "path": "trees/math/pde/killip-visan/4708.tree",
+      "title": "等度连续性恢复收敛中损失的导数",
+      "taxon": "Lemma",
+      "prerequisites": [
+        "130F",
+        "4706",
+        "4707",
+        "00ER"
+      ],
+      "single_question": "何时低阶范数收敛能提升回目标 Sobolev 阶？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Frequency splitting proves Cauchy convergence and the converse, including parameter-uniform variant."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report Lemma 3.2; KdV Lemma 4.2(ii), pp277-278.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "ac2a7ba5db404d04fcc467741409821dceccb9561386ea07ba2977317299210f"
+    },
+    {
+      "id": "4709",
+      "path": "trees/math/pde/killip-visan/4709.tree",
+      "title": "平方可积函数族的空间紧性",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0A6A",
+        "00F3"
+      ],
+      "single_question": "空间紧性排除哪一种质量逃逸？",
+      "proof_scope": {
+        "status": "definition-and-local-proof",
+        "scope": "L2 tail definition; equivalence with the stated bounded cutoff weight is proved."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKNV-dNLS",
+          "url": "https://ems.press/content/serial-article-files/48071"
+        }
+      ],
+      "source_reading": "Report Definition 3.1 and end of §5; dNLS Definition 1.4, pp3-4.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "09430ac01c92ba7d1db645e6ea2c730ec9074670413a944ede63924ace04df01"
+    },
+    {
+      "id": "470A",
+      "path": "trees/math/pde/killip-visan/470A.tree",
+      "title": "空间紧性将局部平方收敛提升为全空间收敛",
+      "taxon": "Lemma",
+      "prerequisites": [
+        "4709"
+      ],
+      "single_question": "局部 L² 收敛何时提升为全空间一致收敛？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Inner/outer split and tightness prove the compact-time uniform result."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report end of §5; independent elementary localization proof.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "7ab61d7482a5d2ba2782a48452868f661441e0d908ef8eefd2955144756fa017"
+    },
+    {
+      "id": "470B",
+      "path": "trees/math/pde/killip-visan/470B.tree",
+      "title": "KdV 的 Lax 交换子消去正阶微分项",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4703",
+        "2A03"
+      ],
+      "single_question": "KdV 的 Lax 交换子如何消掉所有正阶微分项？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Every differential-operator commutator is expanded on common compactly supported tests; no unbounded unitary-propagator theorem asserted."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §4 (4.1)-(4.2).",
+      "remaining_branches": [
+        "Domain analysis for unbounded Lax propagators."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "f8a4a9a957e183d9194afb711409c6e7ff7ead4c6a8749eec42b086fe35ec933"
+    },
+    {
+      "id": "470C",
+      "path": "trees/math/pde/killip-visan/470C.tree",
+      "title": "一维自由 Schrödinger 预解式的指数核",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0GSQ",
+        "0H4G",
+        "0W01"
+      ],
+      "single_question": "自由 Schrödinger 预解式为什么有指数核？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Distributional jump calculation, Fourier multiplier and positive square-root multiplier."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (4.6); KdV (2.2), p262.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "2b0f85e8b08957a6b70e8749c5b335b7f58081cc3a8acce3900ed881efe9e6ec"
+    },
+    {
+      "id": "470D",
+      "path": "trees/math/pde/killip-visan/470D.tree",
+      "title": "预解式夹心算子的 Hilbert–Schmidt 范数",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "470C",
+        "0X02",
+        "130F",
+        "0I8K",
+        "0H4F"
+      ],
+      "single_question": "夹心预解式的 Hilbert–Schmidt 范数怎样检测 H⁻¹ 势？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Exact Fourier kernel calculation with nonunitary Fourier normalization, convolution integral, and dense extension."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (4.7); KdV (2.4), p262.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "a931d6a6bb90bbf560b35133920b7bd1b5de5dfa706edb5e05d00c5483f1e24e"
+    },
+    {
+      "id": "470E",
+      "path": "trees/math/pde/killip-visan/470E.tree",
+      "title": "删去线性项的对数扰动行列式",
+      "taxon": "Definition",
+      "prerequisites": [
+        "470D",
+        "0X01",
+        "0X06"
+      ],
+      "single_question": "为何删去一次迹项后可在 H⁻¹ 上定义对数行列式？",
+      "proof_scope": {
+        "status": "definition-and-local-proof",
+        "scope": "Defines alpha via absolutely convergent traces for HS norm below one; det2 notation introduced locally."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (4.5)-(4.6); KdV (2.21) and discussion of det2 near (2.34)-(2.35), pp266,269.",
+      "remaining_branches": [
+        "Global determinant continuation outside the local series domain."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "743ebd1707bbd0eda0157437d382375a69dc618d61b22524529afdd9c151eef8"
+    },
+    {
+      "id": "470F",
+      "path": "trees/math/pde/killip-visan/470F.tree",
+      "title": "正则化对数行列式由二次主项控制",
+      "taxon": "Lemma",
+      "prerequisites": [
+        "470E",
+        "0X06",
+        "004S",
+        "470D"
+      ],
+      "single_question": "正则化对数行列式在小量区间由什么二次量控制？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Geometric-series trace estimate yields explicit one-sixth and five-sixths bounds when HS norm is at most one quarter."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (4.7)-(4.8); KdV quadratic comparison (2.20), p266.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "c126ec5fe263dee3b957dc3b8442ec10a36e46b7903a78ce1688b4e01e7e0a54"
+    },
+    {
+      "id": "470G",
+      "path": "trees/math/pde/killip-visan/470G.tree",
+      "title": "KdV 守恒量传播整个函数族的频率尾部控制",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "0H4F",
+        "4706",
+        "4703",
+        "470E",
+        "470F",
+        "4707"
+      ],
+      "single_question": "谱守恒怎样传播一个初值族的高频尾部？",
+      "proof_scope": {
+        "status": "cited-input-and-local-proof",
+        "scope": "Conserved determinant coercivity is cited; weighted Fourier-tail equivalence and propagation are proved locally."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report Theorem 4.1 and (4.9)-(4.11); KdV Lemma 4.3 and Proposition 4.4, p278.",
+      "remaining_branches": [
+        "Full a priori determinant bootstrap and nonlinear resolvent estimates."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "26c112b755c5f497fe4939b7f4461b27aac3e6755ffe3e4420f6bead5c1cea9e"
+    },
+    {
+      "id": "470H",
+      "path": "trees/math/pde/killip-visan/470H.tree",
+      "title": "KdV 正则化 Hamilton 函数的两项消去",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4703",
+        "470E",
+        "470D"
+      ],
+      "single_question": "正则化 Hamilton 函数的系数怎样消掉主导平移项？",
+      "proof_scope": {
+        "status": "calculation-with-cited-expansion",
+        "scope": "Quadratic expansion and cancellation computed; cubic coefficient and differentiable higher remainder cited for fixed Schwartz data."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        },
+        {
+          "source_id": "BKV-5KdV-v1",
+          "url": "https://arxiv.org/html/1912.01536v1"
+        }
+      ],
+      "source_reading": "Report (5.2)-(5.3); KdV (3.3), pp273-274 and Appendix A expansion, p298; fifth-order introduction (1.6).",
+      "remaining_branches": [
+        "Full arbitrary-order expansion with differentiable remainders."
+      ],
+      "non_prerequisite_links": [
+        {
+          "target": "470I",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "2e1d48617985c1f77f23c1b39af5c0e26c27b34fa9bb5777e8802cbbc2e739b1"
+    },
+    {
+      "id": "470I",
+      "path": "trees/math/pde/killip-visan/470I.tree",
+      "title": "KdV 的正则化流由平移与 Green 函数导数组成",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "470J",
+        "470H",
+        "470K",
+        "4702"
+      ],
+      "single_question": "固定谱参数的正则化 KdV 流为何能在 H⁻¹ 求解？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Exact vector field and Duhamel formula derived; local mechanism explained; global conservation and commutation cited from Proposition 3.2."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §5; KdV Proposition 3.2 statement and proof opening, pp275-276.",
+      "remaining_branches": [
+        "Remainder of Proposition 3.2 conservation proof, not reconstructed in this note."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "5f2ad609cb23205e78dd6a7eddfb7b681979bf6028ae8563fcf3e059581d1dce"
+    },
+    {
+      "id": "470J",
+      "path": "trees/math/pde/killip-visan/470J.tree",
+      "title": "对角 Green 函数给出低正则势的光滑坐标",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "470D"
+      ],
+      "single_question": "对角 Green 函数何时是 H⁻¹ 到 H¹ 的可逆坐标？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Small real H^-1 ball, kappa>=1, continuous kernel and analytic diffeomorphisms onto images stated; the first coordinate derivative is -kappa^{-1}R and the second is -2*kappa*R, with the normalization derived by the chain rule."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (5.10); KdV Propositions 2.1-2.2, pp262-265, with selected proof passages.",
+      "remaining_branches": [
+        "Full closed-form construction and analytic inverse estimates."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "5fa5f27521a53beadcd3e2dc2414a3b02fc652f3e0aabeccee093ae692481e86"
+    },
+    {
+      "id": "470K",
+      "path": "trees/math/pde/killip-visan/470K.tree",
+      "title": "预解式变分给出行列式的 Green 函数导数",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "470J",
+        "470E"
+      ],
+      "single_question": "预解式变分如何产生行列式的 Green 梯度？",
+      "proof_scope": {
+        "status": "local-proof-with-domain-boundary",
+        "scope": "Resolvent identity, diagonal variation, and trace series calculation proved for small Schwartz potentials; rough extension cited."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §5; KdV (2.10),(2.34), pp264,269.",
+      "remaining_branches": [
+        "Rough-direction dual estimates and general trace-kernel interchange."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "bbd6372fcc7f11d3f5b0fcb7d7d8f39980e7eb47cf762eb81a472883ed036c69"
+    },
+    {
+      "id": "470L",
+      "path": "trees/math/pde/killip-visan/470L.tree",
+      "title": "KdV 正则化线性频率在高频处降低阶数",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "470I",
+        "470K",
+        "4707"
+      ],
+      "single_question": "正则化流的线性乘子怎样同时逼近低频并降低高频阶数？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Substitution of the zero-potential Green derivative yields regularized and difference multipliers exactly."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §5; KdV (2.10),(3.11), pp264,275.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "dc6179ad633f56622e2e453860515f5c5a91a976b4c57abb36e99f705639bece"
+    },
+    {
+      "id": "470M",
+      "path": "trees/math/pde/killip-visan/470M.tree",
+      "title": "三项估计将对易正则化变成连续解流",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "00M6",
+        "4701",
+        "4705",
+        "00ER"
+      ],
+      "single_question": "三项估计如何把差流小量转为唯一连续解流？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Abstract Banach Cauchy extension proof with D-invariant auxiliary flows; diagonal density argument proves continuity."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (5.4)-(5.9); KdV Theorem 5.1 and Corollary 5.2 proofs, pp279-281.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "4708",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        },
+        {
+          "target": "470A",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "5b83e0f6e810dca88273c008203b51faa56dc0c56079b3117e509a9c38131506"
+    },
+    {
+      "id": "470N",
+      "path": "trees/math/pde/killip-visan/470N.tree",
+      "title": "KdV 的局部动量守恒导出加权导数恒等式",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4703"
+      ],
+      "single_question": "KdV 的哪条局部恒等式产生加权正导数项？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Local momentum conservation and weighted identity fully derived; full Kato smoothing estimate is not deduced here."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report (4.13)-(4.14).",
+      "remaining_branches": [
+        "Quantitative control of the cubic term in the Kato estimate."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "067a28eac0a116d9fa472a68bcb012957d3047d16e1107a4121191265736294d"
+    },
+    {
+      "id": "470O",
+      "path": "trees/math/pde/killip-visan/470O.tree",
+      "title": "dNLS 的局部平滑估计依赖初值的频率分布",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4706",
+        "470X",
+        "130F"
+      ],
+      "single_question": "dNLS 的半阶局部平滑常数为何依赖频率分布？",
+      "proof_scope": {
+        "status": "cited-theorem",
+        "scope": "Exact Theorem 1.5 weight and family-dependence stated; Proposition 1.11 obstruction cited, without redoing the deep smoothing proof."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKNV-dNLS",
+          "url": "https://ems.press/content/serial-article-files/48071"
+        }
+      ],
+      "source_reading": "Report (5.12); dNLS Theorem 1.5, pp3-4 and Proposition 1.11, pp15-16.",
+      "remaining_branches": [
+        "Frequency-localized smoothing and microscopic conservation-law estimates in §§3-4."
+      ],
+      "non_prerequisite_links": [
+        {
+          "target": "470P",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "9e826acdc899b835c46f14a40666bb181ced274ee94e49d293f81236cbdb501d"
+    },
+    {
+      "id": "470P",
+      "path": "trees/math/pde/killip-visan/470P.tree",
+      "title": "第二代对易流方法如何由局部控制获得全局收敛",
+      "taxon": "Construction",
+      "prerequisites": [
+        "470X",
+        "4706",
+        "4708",
+        "4709",
+        "470A",
+        "470M",
+        "470O"
+      ],
+      "single_question": "第二代方法如何将差流的局部小量变成全空间收敛？",
+      "proof_scope": {
+        "status": "proof-outline",
+        "scope": "Explains separate original-flow and difference-flow smoothing, frequency tails, finite-time tightness, and the abstract extension step."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKNV-dNLS",
+          "url": "https://ems.press/content/serial-article-files/48071"
+        },
+        {
+          "source_id": "HGKV-NLS-v3",
+          "url": "https://arxiv.org/html/2003.05011v3"
+        }
+      ],
+      "source_reading": "Report end of §5; dNLS §1.2 opening and targeted method passages; NLS/mKdV introduction and section outline.",
+      "remaining_branches": [
+        "Full difference-flow nonlinear estimates in the cited papers."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "c265123a467fe0502ebee59a79b82c4bc4fc910405e9a06dea41136c27d51299"
+    },
+    {
+      "id": "470Q",
+      "path": "trees/math/pde/killip-visan/470Q.tree",
+      "title": "一维演化方程的 Sobolev 缩放临界阶",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0H4G",
+        "130F"
+      ],
+      "single_question": "一维缩放怎样决定齐次 Sobolev 临界阶？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Fourier change of variables proves scaling exponent; model equations are examples, not prerequisites of the general formula."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §2 (2.2), model equations.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "4703",
+          "role": "example-consequence-or-comparison",
+          "reason": "Equation examples illustrate the general scaling formula; they are not inputs to its Fourier proof."
+        },
+        {
+          "target": "2A04",
+          "role": "example-consequence-or-comparison",
+          "reason": "Equation examples illustrate the general scaling formula; they are not inputs to its Fourier proof."
+        },
+        {
+          "target": "470T",
+          "role": "example-consequence-or-comparison",
+          "reason": "Equation examples illustrate the general scaling formula; they are not inputs to its Fourier proof."
+        },
+        {
+          "target": "470U",
+          "role": "example-consequence-or-comparison",
+          "reason": "Equation examples illustrate the general scaling formula; they are not inputs to its Fourier proof."
+        },
+        {
+          "target": "470X",
+          "role": "example-consequence-or-comparison",
+          "reason": "Equation examples illustrate the general scaling formula; they are not inputs to its Fourier proof."
+        },
+        {
+          "target": "4712",
+          "role": "example-consequence-or-comparison",
+          "reason": "Equation examples illustrate the general scaling formula; they are not inputs to its Fourier proof."
+        }
+      ],
+      "sha256": "dd9d616f2bc53e48275e7c6eab8506b04f90a944cd2131bc6ece75156e238868"
+    },
+    {
+      "id": "470R",
+      "path": "trees/math/pde/killip-visan/470R.tree",
+      "title": "KdV 在负一阶 Sobolev 空间中的全局适定性",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4703",
+        "4101",
+        "4701",
+        "4706",
+        "470I",
+        "470G",
+        "470J",
+        "4718",
+        "470M",
+        "470Q"
+      ],
+      "single_question": "KdV 的连续解流能到达哪个负正则端点？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Real line and circle s>=-1, continuous extension, all-time bounded equicontinuous H^-1 orbits; distributional line result stated separately."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §6; KdV Theorem 1.1 and pp250-251, Corollary 5.3; Proposition 7.2 statement p290.",
+      "remaining_branches": [
+        "Periodic §6 proof and full local-smoothing proof in §7; counterexample papers cited through the report."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "c408aa343e122e80971e8fbc2b44d2054c25fc4d5bf536be5bbaa4e5ce789ca0"
+    },
+    {
+      "id": "470S",
+      "path": "trees/math/pde/killip-visan/470S.tree",
+      "title": "Benjamin–Ono 的负半阶阈值与几何区别",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "2A04",
+        "130F",
+        "4101",
+        "4701"
+      ],
+      "single_question": "Benjamin–Ono 的负半阶阈值如何依赖实线或圆周？",
+      "proof_scope": {
+        "status": "cited-theorem",
+        "scope": "Real-valued s>-1/2 on both geometries; periodic endpoint obstruction and report-bound open line endpoint distinguished."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KLV-BO-v1",
+          "url": "https://arxiv.org/html/2304.00124v1"
+        }
+      ],
+      "source_reading": "Report §6 BO paragraph; BO v1 introduction and Theorem 1.1, HTML57-103.",
+      "remaining_branches": [
+        "Full new gauge in §4 and well-posedness proof in §5; endpoint counterexample proof."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "ef29e8860a28c2b9fc03816f8b6938e7a429fdc49e4c9440d3041419116e5bab"
+    },
+    {
+      "id": "470T",
+      "path": "trees/math/pde/killip-visan/470T.tree",
+      "title": "一维三次非线性 Schrödinger 方程的两种符号",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0H4F",
+        "130A",
+        "470Q"
+      ],
+      "single_question": "一维三次 NLS 的聚焦与散焦符号怎样约定？",
+      "proof_scope": {
+        "status": "definition-and-calculation",
+        "scope": "Defines equation, energy sign and free evolution; verifies scaling by substitution."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKV-NLS-v3",
+          "url": "https://arxiv.org/html/2003.05011v3"
+        }
+      ],
+      "source_reading": "Report §2; NLS/mKdV v3 §1 equations and sign convention.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "92ab35720630f6e62d6c5532602e25a0d63cf2abbc1fcceb713b432a64b96c5c"
+    },
+    {
+      "id": "470U",
+      "path": "trees/math/pde/killip-visan/470U.tree",
+      "title": "实值与复值修正 KdV 方程",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4703",
+        "470Q"
+      ],
+      "single_question": "这里的复值修正 KdV 使用哪一种三次非线性？",
+      "proof_scope": {
+        "status": "definition-and-calculation",
+        "scope": "Defines complex Hirota mKdV, real restriction and signs; distinguishes |q|^2 q_x from derivative of |q|^2 q."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKV-NLS-v3",
+          "url": "https://arxiv.org/html/2003.05011v3"
+        }
+      ],
+      "source_reading": "Report §2; NLS/mKdV v3 §1 equations.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "4714",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "946eae7e18c8aa50c874589aed8e014b1cd5c8b3ec93c950979e2a11ad58f9f8"
+    },
+    {
+      "id": "470V",
+      "path": "trees/math/pde/killip-visan/470V.tree",
+      "title": "实线三次 NLS 在负正则阶的连续适定性",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "470T",
+        "4701",
+        "470P"
+      ],
+      "single_question": "实线三次 NLS 的负阶适定性在哪个范围成立？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Both signs, all s>-1/2, no small mass; complex norm inflation for s<=-1/2 is separately cited."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKV-NLS-v3",
+          "url": "https://arxiv.org/html/2003.05011v3"
+        }
+      ],
+      "source_reading": "Report §6; NLS/mKdV v3 Theorem 1.1, introduction and Proposition A.2 with proof passage.",
+      "remaining_branches": [
+        "Full §§3-8 construction and periodic renormalized NLS theories."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "d67d6f186540c8d63493e82e3b9a4445a7c777c642098d86247562287c979997"
+    },
+    {
+      "id": "470W",
+      "path": "trees/math/pde/killip-visan/470W.tree",
+      "title": "修正 KdV 的低正则适定性保留实复差异",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "470U",
+        "4701",
+        "470P"
+      ],
+      "single_question": "mKdV 的适定与不适定陈述为何必须保留实复及符号区别？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Both signs real/complex s>-1/2; complex endpoint small-to-large inflation; real focusing A.3 bounded homogeneous endpoint data and stricter subcritical inflation."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKV-NLS-v3",
+          "url": "https://arxiv.org/html/2003.05011v3"
+        }
+      ],
+      "source_reading": "Report §6; NLS/mKdV v3 Theorem 1.1 and Appendix A.2-A.3, HTML2772-2816.",
+      "remaining_branches": [
+        "Full nonlinear existence proof; real defocusing endpoint is not covered by A.3."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "ddb40e77e3ab350b145357973d1d6141884c2cec8c1a3c9cf095d6106b75780a"
+    },
+    {
+      "id": "470X",
+      "path": "trees/math/pde/killip-visan/470X.tree",
+      "title": "导数非线性 Schrödinger 方程的质量守恒律",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0H4F",
+        "470Q"
+      ],
+      "single_question": "导数 NLS 的密度通量与临界缩放是什么？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Full mass-current calculation and critical scaling; equation normalization fixed."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKNV-dNLS",
+          "url": "https://ems.press/content/serial-article-files/48071"
+        }
+      ],
+      "source_reading": "Report §2; dNLS opening equation and mass/scaling discussion pp2-3.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "0e79cf29e4a69ecc91871abb7f43aa72284e36d710fc98159f80810226a35c42"
+    },
+    {
+      "id": "470Y",
+      "path": "trees/math/pde/killip-visan/470Y.tree",
+      "title": "dNLS 在临界平方可积空间中允许任意大数据",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "470X",
+        "4701",
+        "470O",
+        "470P",
+        "4708",
+        "470Q"
+      ],
+      "single_question": "dNLS 的临界全局适定性是否仍需质量上界？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Arbitrary finite L2 mass, all s>=0, continuous local L3 dependence and distributional solution property."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "HGKNV-dNLS",
+          "url": "https://ems.press/content/serial-article-files/48071"
+        }
+      ],
+      "source_reading": "Report §6; dNLS Theorem 1.1, Corollaries 1.2 and 1.6, pp2-4.",
+      "remaining_branches": [
+        "Deep large-data equicontinuity and §§3-8 proof; s<0 ill-posedness research not reread."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "12b33a9679784cfbb7ed9ccbed35d007b7bd685659886495d2282695fa100358"
+    },
+    {
+      "id": "470Z",
+      "path": "trees/math/pde/killip-visan/470Z.tree",
+      "title": "五阶 KdV 方程由层级中的下一项能量生成",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0H4F",
+        "4702",
+        "4703"
+      ],
+      "single_question": "五阶 KdV 的微分项如何由下一层 Hamilton 能量生成？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "All variational derivatives and coefficients are calculated by integration by parts."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "BKV-5KdV-v1",
+          "url": "https://arxiv.org/html/1912.01536v1"
+        }
+      ],
+      "source_reading": "Report §5 and KdV5 equation; fifth-order v1 §1 (1.2)-(1.3).",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "5b44d9c4be13ab09be039d930b4d3b1c44fd52892e1edfea61b2c9eab43774fe"
+    },
+    {
+      "id": "4710",
+      "path": "trees/math/pde/killip-visan/4710.tree",
+      "title": "五阶 KdV 在实线与圆周上的正则门槛不同",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "470Z",
+        "4701",
+        "2J0C",
+        "4101",
+        "470Q"
+      ],
+      "single_question": "五阶 KdV 的实线与周期适定门槛为何不能混用？",
+      "proof_scope": {
+        "status": "cited-theorem",
+        "scope": "Line H^-1 theorem, uniform two-derivative local-smoothing bound and continuity on each fixed translated spacetime window; periodic sharp L2 result is cited through the introduction, not independently reproved."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "BKV-5KdV-v1",
+          "url": "https://arxiv.org/html/1912.01536v1"
+        }
+      ],
+      "source_reading": "Report §6; fifth-order v1 §1 Theorems 1.1-1.2 and comparison with Kappeler-Molnar.",
+      "remaining_branches": [
+        "Full §§4-7 proof; direct Kappeler-Molnar reading; line optimality below -1 is not established by this source."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "dd3666732bf3b808a8dc4d859ad65c25aec7bb30be90a1c26cfd004bfa68f7aa"
+    },
+    {
+      "id": "4711",
+      "path": "trees/math/pde/killip-visan/4711.tree",
+      "title": "实线正频率 Hardy 子空间及其投影",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0H4G",
+        "0W01",
+        "00MS",
+        "130F"
+      ],
+      "single_question": "实线正频率 Hardy 空间怎样通过 Fourier 投影定义？",
+      "proof_scope": {
+        "status": "definition-and-local-proof",
+        "scope": "Defines continuous-frequency Hardy subspace and proves projection identities; circle Hardy page retained only as comparison."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KLV-CCM-v1",
+          "url": "https://arxiv.org/html/2311.12334v1"
+        }
+      ],
+      "source_reading": "Report §2; CCM v1 §1 Hardy definition and projection convention.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "2A01",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "dc56653ffaea1d7e3fe5ff3368f2a57271d52e5dc2d92eb8df6a8ce8e2adae32"
+    },
+    {
+      "id": "4712",
+      "path": "trees/math/pde/killip-visan/4712.tree",
+      "title": "连续 Calogero–Moser 方程的 Hardy 约束",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4711",
+        "470Q",
+        "470X"
+      ],
+      "single_question": "CCM 的正频率约束及聚焦符号与 dNLS 有何区别？",
+      "proof_scope": {
+        "status": "definition-and-calculation",
+        "scope": "Defines epsilon convention, Hardy constraint and critical mass scaling; no regularity theorem proved here."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KLV-CCM-v1",
+          "url": "https://arxiv.org/html/2311.12334v1"
+        }
+      ],
+      "source_reading": "Report §2 CCM equation; CCM v1 §1 equation, signs and scaling.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "ad2c3dff28baadfadcb7b00acae04196f2ae04b285e503bf417e588accefba3e"
+    },
+    {
+      "id": "4713",
+      "path": "trees/math/pde/killip-visan/4713.tree",
+      "title": "CCM 的临界适定定理须区分聚焦质量条件",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4712",
+        "4701",
+        "4706",
+        "4709"
+      ],
+      "single_question": "CCM 的临界全局流在哪种符号和质量区间成立？",
+      "proof_scope": {
+        "status": "cited-theorem-and-proof-outline",
+        "scope": "Defocusing all L2_+; focusing mass strictly below 2pi from Theorems 1.4 and 1.6; explicit-formula proof separated from forthcoming commuting-flow work."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KLV-CCM-v1",
+          "url": "https://arxiv.org/html/2311.12334v1"
+        }
+      ],
+      "source_reading": "Report final §6 paragraphs; CCM v1 §1 Theorems 1.1,1.4,1.6 and proof overview.",
+      "remaining_branches": [
+        "Mass=2pi general L2 endpoint, above-threshold blowup and optimal higher-bound papers; forthcoming proof not treated as established."
+      ],
+      "non_prerequisite_links": [
+        {
+          "target": "2A00",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "c1e5a50f6362678d62304873688824d531064decb2d5edacf6d34fb036157007"
+    },
+    {
+      "id": "4714",
+      "path": "trees/math/pde/killip-visan/4714.tree",
+      "title": "Miura 变换把实散焦修正 KdV 解送到 KdV",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "470U",
+        "4703"
+      ],
+      "single_question": "Miura 变换怎样把实散焦 mKdV 解映到 KdV？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Full differential algebra with real smooth input; no inverse or low-regularity equivalence asserted."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §2 discussion of Miura; independent substitution.",
+      "remaining_branches": [
+        "Riccati inversion and low-regularity range of the Miura map."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "3a55ccf2a24e82f11221113e33a3a893eb55501c35713134875e8ec6148ba777"
+    },
+    {
+      "id": "4715",
+      "path": "trees/math/pde/killip-visan/4715.tree",
+      "title": "统一压缩构造迫使解映射满足 Lipschitz 估计",
+      "taxon": "Lemma",
+      "prerequisites": [
+        "00M6",
+        "00FU",
+        "0F40",
+        "4707"
+      ],
+      "single_question": "带统一参数估计的压缩方案为何强制 Lipschitz 初值依赖？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Two-term subtraction and absorption prove the precise conditional parameter estimate."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §3 discussion of contraction methods.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "55030997194577137b5592ba2cecbd3364a31a67e08824268d9ee5f2af52142c"
+    },
+    {
+      "id": "4716",
+      "path": "trees/math/pde/killip-visan/4716.tree",
+      "title": "KdV 两解的平方距离需要一阶导数控制",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4703"
+      ],
+      "single_question": "KdV 两解的直接距离估计在哪一步需要强导数控制？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Exact L2 difference identity plus integrating-factor Gronwall proof on smooth solutions."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        }
+      ],
+      "source_reading": "Report §3 (3.4)-(3.5).",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "470R",
+          "role": "example-consequence-or-comparison",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "fe58a20574e4c50737062abd0d352ec82faed41fdcea1d10b00cfc7005e10c27"
+    },
+    {
+      "id": "4717",
+      "path": "trees/math/pde/killip-visan/4717.tree",
+      "title": "KdV 下倒数 Green 密度的局部守恒律",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4703",
+        "470J",
+        "0A34"
+      ],
+      "single_question": "KdV 下的 Green 演化怎样变成倒数密度守恒律？",
+      "proof_scope": {
+        "status": "cited-input-and-local-proof",
+        "scope": "Quotes Proposition 3.1 evolution; chain rule derives reciprocal density and the vanishing-at-infinity flux constant."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report (5.10); KdV Proposition 3.1 (3.5)-(3.6) and proof, pp274-275.",
+      "remaining_branches": [
+        "Resolvent identity underlying the quoted Green evolution is cited rather than re-expanded."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "3739e2bb3d6811509bac9511655fb0f68fe7b30b83ecfd05ff93232d94344653"
+    },
+    {
+      "id": "4718",
+      "path": "trees/math/pde/killip-visan/4718.tree",
+      "title": "固定 Green 坐标中差流的主项消去",
+      "taxon": "Theorem",
+      "prerequisites": [
+        "4706",
+        "470I",
+        "470G",
+        "4705",
+        "4717",
+        "470J",
+        "4719",
+        "4708"
+      ],
+      "single_question": "固定探测谱参数后，差流的主导项怎样相消？",
+      "proof_scope": {
+        "status": "proof-outline-with-local-algebra",
+        "scope": "Two-parameter cancellation and norm-upgrade steps supplied; Proposition 4.4 nonlinear asymptotic and Proposition 2.2 bi-Lipschitz estimates remain cited inputs."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        }
+      ],
+      "source_reading": "Report §5; KdV (3.12), Proposition 4.4 and Theorem 5.1, pp275,278-280.",
+      "remaining_branches": [
+        "Full nonlinear resolvent asymptotic and analytic-coordinate bounds."
+      ],
+      "non_prerequisite_links": [],
+      "sha256": "e3833994bca20f4b567d209d417525be9046bb79b5c7bfa0a3050c1059c22deb"
+    },
+    {
+      "id": "4719",
+      "path": "trees/math/pde/killip-visan/4719.tree",
+      "title": "一维 H¹ 乘法在 H⁻¹ 上的对偶估计",
+      "taxon": "Lemma",
+      "prerequisites": [
+        "130F",
+        "0H4F",
+        "0I80",
+        "004S",
+        "0I8K"
+      ],
+      "single_question": "为何一维 H¹ 函数可以乘 H⁻¹ 分布？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "Fourier Cauchy-Schwarz embedding, product derivative estimate and duality prove the multiplier bound."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "BKV-5KdV-v1",
+          "url": "https://arxiv.org/html/1912.01536v1"
+        }
+      ],
+      "source_reading": "Report §5 multiplication mechanism; fifth-order v1 §2 (2.2), HTML172-175.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [],
+      "sha256": "0fe21bb7762a668b2263c446af3644ac30c59465feadff100f29a004bc137c9c"
+    },
+    {
+      "id": "icm2026-killip-visan",
+      "path": "trees/references/icm2026-killip-visan.tree",
+      "title": "Rowan Killip 与 Monica Vişan：对易流方法",
+      "taxon": "Reference",
+      "prerequisites": [],
+      "single_question": "报告及补充原始研究的出版版本与具体出处是什么？",
+      "proof_scope": {
+        "status": "bibliography",
+        "scope": "Source-bound bibliography and attribution; no theorem proof."
+      },
+      "refs": [
+        {
+          "source_id": "KV-ICM",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149"
+        },
+        {
+          "source_id": "KV-KdV",
+          "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf"
+        },
+        {
+          "source_id": "KLV-BO-v1",
+          "url": "https://arxiv.org/html/2304.00124v1"
+        },
+        {
+          "source_id": "HGKV-NLS-v3",
+          "url": "https://arxiv.org/html/2003.05011v3"
+        },
+        {
+          "source_id": "HGKNV-dNLS",
+          "url": "https://ems.press/content/serial-article-files/48071"
+        },
+        {
+          "source_id": "BKV-5KdV-v1",
+          "url": "https://arxiv.org/html/1912.01536v1"
+        },
+        {
+          "source_id": "KLV-CCM-v1",
+          "url": "https://arxiv.org/html/2311.12334v1"
+        }
+      ],
+      "source_reading": "Publisher metadata plus source ranges in source_records. Final dNLS metadata directly checked in publisher PDF52163, front matter and opening excerpt.",
+      "remaining_branches": [],
+      "non_prerequisite_links": [
+        {
+          "target": "4700",
+          "role": "navigation",
+          "reason": "Explicitly presented as a subsequent application, comparison or topic navigation; not used to establish the page's main statement."
+        }
+      ],
+      "sha256": "9c19ee4fd1300f77c8b17c2ebc94631a0d246b4c379f53aaac574ad61caab1bf"
+    }
+  ],
+  "source_records": [
+    {
+      "id": "KV-ICM",
+      "title": "The Method of Commuting Flows",
+      "authors": [
+        "Rowan Killip",
+        "Monica Vişan"
+      ],
+      "doi": "10.1137/25M1807149",
+      "pages": "328-347",
+      "version": "Published SIAM proceedings chapter; online 2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1807149",
+      "pdf_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1807149",
+      "read": "Read the complete textual mathematical narrative of §§1-6, equations exposed as text, Figure 1 caption and surrounding explanation. Cross-checked publisher PDF extraction for the final CCM paragraphs, metadata and selected formulas. Mathematical narrative occupies printed pp328-342; bibliography pp343-347 was consulted selectively for the cited primary studies. This is full report-text reading subject to the explicitly inaccessible visual items below, not abstract-only reading.",
+      "not_read": "Image-only table (2.1) and Figure 1 pixels were not inspected. Direct image retrieval and publisher PDF screenshots at zero-based pages 3,9,12,14 failed with Cache miss. No visual PDF collation or complete rereading of all bibliography entries is claimed.",
+      "license": "CC BY 4.0; ©2026 International Mathematical Union, published by SIAM",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "role": "Authoritative report and publication metadata"
+    },
+    {
+      "id": "KV-KdV",
+      "title": "KdV is wellposed in H^{-1}",
+      "authors": [
+        "Rowan Killip",
+        "Monica Vişan"
+      ],
+      "doi": "10.4007/annals.2019.190.1.4",
+      "publication": "Annals of Mathematics 190 (2019), 249-305",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v190-n1-p04-s.pdf",
+      "version": "Published 57-page Annals PDF",
+      "read": "Selected full-text ranges: pdftotext -layout lines1-185 (opening pp249-252, Theorem1.1, solution concept and higher-s discussion); lines587-805 (§1.2 conventions, Proposition2.1, Proposition2.2 and first proof portion, pp261-265); lines830-1020 (remaining weighted estimates, Propositions2.3-2.4 and det2/variation discussion, pp266-269); lines1225-1400 plus1220-1410 (§3, pp273-276, P/H normalization, Proposition3.1 with proof and Proposition3.2 through the local/global argument opening); lines1450-1715 (§4 through Theorem5.1, Corollary5.2 and opening Corollary5.3, pp277-281). Additional targeted reads: Proposition7.2 statement and preceding argument on p290 (lines2190-2255); Appendix A expansion and PropositionA.3 statement/proof opening around pp298-299 (lines2700-2790). Repeated exact reads of lines65-175,1495-1570,1560-1705 confirmed key contracts.",
+      "not_read": "No complete read of the 57-page paper. Lines805-830 were not included in the cited extraction runs. Full periodic §6, local-smoothing §7, weighted inverse estimates, the rest of Proposition3.2 and Appendix A were not reconstructed.",
+      "role": "Primary research contracts, normalization corrections and selected mechanism proofs"
+    },
+    {
+      "id": "KLV-BO-v1",
+      "title": "Sharp well-posedness for the Benjamin-Ono equation",
+      "authors": [
+        "Rowan Killip",
+        "Thierry Laurens",
+        "Monica Vişan"
+      ],
+      "doi": "10.1007/s00222-024-01250-8",
+      "publication": "Inventiones Mathematicae 236 (2024), 999-1054",
+      "url": "https://arxiv.org/html/2304.00124v1",
+      "version": "arXiv:2304.00124v1, 2023-03-31",
+      "read": "Introduction HTML lines57-103: equation, signs, scaling, Theorem1.1 and geometric/endpoint context; contents used only to locate §§4-5.",
+      "not_read": "Full new gauge and Lax theory in §§3-4, §5 well-posedness proof and endpoint counterexample papers.",
+      "license": "arXiv perpetual non-exclusive license; no source images copied",
+      "role": "Direct primary theorem statement"
+    },
+    {
+      "id": "HGKV-NLS-v3",
+      "title": "Sharp well-posedness for the cubic NLS and mKdV in H^s(R)",
+      "authors": [
+        "Benjamin Harrop-Griffiths",
+        "Rowan Killip",
+        "Monica Vişan"
+      ],
+      "doi": "10.1017/fmp.2024.4",
+      "publication": "Forum of Mathematics, Pi 12 (2024), e6",
+      "url": "https://arxiv.org/html/2003.05011v3",
+      "version": "arXiv:2003.05011v3, 2024-02-06",
+      "read": "Introduction HTML lines62-114 including equations, focusing/defocusing convention, Theorem1.1 and solution concept; Appendix A lines2772-2816 including PropositionsA.2-A.3 and displayed proof arguments. Contents locate §§3-8 but do not constitute reading those sections.",
+      "not_read": "Full Green-function, local smoothing, tightness and difference-flow proofs in §§3-8, and earlier original counterexample papers.",
+      "license": "CC BY 4.0 on this fixed arXiv version",
+      "role": "Direct primary theorem and precise real/complex norm-inflation distinction"
+    },
+    {
+      "id": "HGKNV-dNLS",
+      "title": "Global well-posedness for the derivative nonlinear Schrodinger equation in L2(R)",
+      "authors": [
+        "Benjamin Harrop-Griffiths",
+        "Rowan Killip",
+        "Maria Ntekoume",
+        "Monica Vişan"
+      ],
+      "doi": "10.4171/JEMS/1490",
+      "publication": "Journal of the European Mathematical Society 28 (2026), 843-924; DOI and final pagination directly checked in publisher PDF",
+      "url": "https://ems.press/content/serial-article-files/48071",
+      "version": "Actual publisher PDF with online-first pagination; not silently replaced by an arXiv abstract",
+      "read": "PDF text passages pp1-9: front matter, Theorem1.1, Corollary1.2, Definitions1.3-1.4, Theorem1.5, Corollary1.6, Theorem1.7 and §1.2 opening through the three-term comparison. Additional targeted §1.2 method paragraphs and §1.3 pp15-17 passages around Propositions1.11-1.12, including their soliton obstruction discussion. Contents were read to locate §§3-8.",
+      "not_read": "No full reading of all §1.2, and no full deep proofs in §§3-8. arXiv:2204.12548v2 was metadata-only because HTML retrieval timed out twice; the mathematical reading used this publisher full text.",
+      "role": "Arbitrary-mass L2 theorem, smoothing contract and local L3 interpretation",
+      "final_publication_url": "https://ems.press/content/serial-article-files/52163",
+      "final_publication_reading": "Final publisher PDF front matter and excerpt of printed pp843-846: title, authors, DOI, final volume/pages, CC BY 4.0 statement, equation, Theorem1.1 and Corollary1.2. Main mathematical reading remains bound to the online-first PDF above; no complete edition collation."
+    },
+    {
+      "id": "BKV-5KdV-v1",
+      "title": "Global well-posedness for the fifth-order KdV equation in H^{-1}(R)",
+      "authors": [
+        "Bjoern Bringmann",
+        "Rowan Killip",
+        "Monica Vişan"
+      ],
+      "doi": "10.1007/s40818-021-00111-4",
+      "publication": "Annals of PDE 7 (2021), article21",
+      "url": "https://arxiv.org/html/1912.01536v1",
+      "version": "arXiv:1912.01536v1, 2019-12-03",
+      "read": "HTML §1 lines42-151: equation, Hamiltonian, Theorems1.1-1.2, periodic comparison, full introductory explanation of the difference-flow smoothing/tightness mechanism. Also §2 lines159-175, especially (2.2) multiplication/duality estimates.",
+      "not_read": "Full paraproduct and smoothing proofs in §§3-7; Kappeler-Molnar's periodic paper was cited through this primary introduction and not separately read. PDF retrieval failed; fixed-version HTML was the full-text source.",
+      "license": "arXiv perpetual non-exclusive license; no source figures copied",
+      "role": "Direct fifth-order theorem and distinction between proven range and conjectured line optimality"
+    },
+    {
+      "id": "KLV-CCM-v1",
+      "title": "Scaling-critical well-posedness for continuum Calogero-Moser models",
+      "authors": [
+        "Rowan Killip",
+        "Thierry Laurens",
+        "Monica Vişan"
+      ],
+      "doi": "10.1090/cams/48",
+      "publication": "Communications of the American Mathematical Society 5 (2025), 284-320",
+      "url": "https://arxiv.org/html/2311.12334v1",
+      "version": "arXiv:2311.12334v1, 2023-11-21",
+      "read": "Introduction HTML lines35-175: equation and sign convention, real-line Hardy restriction, Theorems1.1,1.3,1.4,1.6,1.7 and opening proof overview. The focusing mass<2pi result is a stated consequence of Theorems1.4 and1.6.",
+      "not_read": "Full explicit formula, compactness and well-posedness proofs in §§2-6; separate critical-mass, blowup and turbulent-threshold papers; forthcoming Marsden collaboration.",
+      "license": "arXiv perpetual non-exclusive license; no source figures copied",
+      "role": "Primary critical theorem and identification of explicit-formula proof"
+    }
+  ],
+  "source_reading": [
+    {
+      "source_id": "KV-ICM",
+      "read": "Read the complete textual mathematical narrative of §§1-6, equations exposed as text, Figure 1 caption and surrounding explanation. Cross-checked publisher PDF extraction for the final CCM paragraphs, metadata and selected formulas. Mathematical narrative occupies printed pp328-342; bibliography pp343-347 was consulted selectively for the cited primary studies. This is full report-text reading subject to the explicitly inaccessible visual items below, not abstract-only reading.",
+      "not_read": "Image-only table (2.1) and Figure 1 pixels were not inspected. Direct image retrieval and publisher PDF screenshots at zero-based pages 3,9,12,14 failed with Cache miss. No visual PDF collation or complete rereading of all bibliography entries is claimed."
+    },
+    {
+      "source_id": "KV-KdV",
+      "read": "Selected full-text ranges: pdftotext -layout lines1-185 (opening pp249-252, Theorem1.1, solution concept and higher-s discussion); lines587-805 (§1.2 conventions, Proposition2.1, Proposition2.2 and first proof portion, pp261-265); lines830-1020 (remaining weighted estimates, Propositions2.3-2.4 and det2/variation discussion, pp266-269); lines1225-1400 plus1220-1410 (§3, pp273-276, P/H normalization, Proposition3.1 with proof and Proposition3.2 through the local/global argument opening); lines1450-1715 (§4 through Theorem5.1, Corollary5.2 and opening Corollary5.3, pp277-281). Additional targeted reads: Proposition7.2 statement and preceding argument on p290 (lines2190-2255); Appendix A expansion and PropositionA.3 statement/proof opening around pp298-299 (lines2700-2790). Repeated exact reads of lines65-175,1495-1570,1560-1705 confirmed key contracts.",
+      "not_read": "No complete read of the 57-page paper. Lines805-830 were not included in the cited extraction runs. Full periodic §6, local-smoothing §7, weighted inverse estimates, the rest of Proposition3.2 and Appendix A were not reconstructed."
+    },
+    {
+      "source_id": "KLV-BO-v1",
+      "read": "Introduction HTML lines57-103: equation, signs, scaling, Theorem1.1 and geometric/endpoint context; contents used only to locate §§4-5.",
+      "not_read": "Full new gauge and Lax theory in §§3-4, §5 well-posedness proof and endpoint counterexample papers."
+    },
+    {
+      "source_id": "HGKV-NLS-v3",
+      "read": "Introduction HTML lines62-114 including equations, focusing/defocusing convention, Theorem1.1 and solution concept; Appendix A lines2772-2816 including PropositionsA.2-A.3 and displayed proof arguments. Contents locate §§3-8 but do not constitute reading those sections.",
+      "not_read": "Full Green-function, local smoothing, tightness and difference-flow proofs in §§3-8, and earlier original counterexample papers."
+    },
+    {
+      "source_id": "HGKNV-dNLS",
+      "read": "PDF text passages pp1-9: front matter, Theorem1.1, Corollary1.2, Definitions1.3-1.4, Theorem1.5, Corollary1.6, Theorem1.7 and §1.2 opening through the three-term comparison. Additional targeted §1.2 method paragraphs and §1.3 pp15-17 passages around Propositions1.11-1.12, including their soliton obstruction discussion. Contents were read to locate §§3-8. Final-paginated publisher PDF front matter and excerpt of pp843-846 were additionally read for publication metadata and opening theorem cross-check.",
+      "not_read": "No full reading of all §1.2, and no full deep proofs in §§3-8. arXiv:2204.12548v2 was metadata-only because HTML retrieval timed out twice; the mathematical reading used this publisher full text."
+    },
+    {
+      "source_id": "BKV-5KdV-v1",
+      "read": "HTML §1 lines42-151: equation, Hamiltonian, Theorems1.1-1.2, periodic comparison, full introductory explanation of the difference-flow smoothing/tightness mechanism. Also §2 lines159-175, especially (2.2) multiplication/duality estimates.",
+      "not_read": "Full paraproduct and smoothing proofs in §§3-7; Kappeler-Molnar's periodic paper was cited through this primary introduction and not separately read. PDF retrieval failed; fixed-version HTML was the full-text source."
+    },
+    {
+      "source_id": "KLV-CCM-v1",
+      "read": "Introduction HTML lines35-175: equation and sign convention, real-line Hardy restriction, Theorems1.1,1.3,1.4,1.6,1.7 and opening proof overview. The focusing mass<2pi result is a stated consequence of Theorems1.4 and1.6.",
+      "not_read": "Full explicit formula, compactness and well-posedness proofs in §§2-6; separate critical-mass, blowup and turbulent-threshold papers; forthcoming Marsden collaboration."
+    }
+  ],
+  "source_clarifications": [
+    {
+      "location": "Report (5.2)-(5.3)",
+      "issue": "P is written as integral q^2, incompatible with the displayed coefficients for J=partial_x.",
+      "resolution": "Use P=1/2 integral q^2 as in KdV (3.2)-(3.3); independently verify translation speed and the quadratic trace coefficient.",
+      "status": "Normalization inconsistency identified; no official erratum asserted."
+    },
+    {
+      "location": "Report (5.11)",
+      "issue": "The g(t,x;varkappa) identity contains -12 kappa^2 g instead of the same probe parameter.",
+      "resolution": "Use a single fixed a in 4717; compare KdV (3.10). Distinguish a from the large regulator kappa in 4718.",
+      "status": "Notational inconsistency cross-checked against original research."
+    },
+    {
+      "location": "Report §6 BO paragraph",
+      "issue": "Open line endpoint printed H^{1/2}, while surrounding threshold is -1/2 and L2 well-posedness is already stated.",
+      "resolution": "Bind the open endpoint discussion to H^{-1/2}(R), supported by the primary BO introduction; mark current-literature status as report-bound.",
+      "status": "Inferred typographic sign error; no claim of an official correction or exhaustive post-report search."
+    },
+    {
+      "location": "Report §6 real mKdV norm inflation",
+      "issue": "Survey summary is less specific than v3 Appendix A.3.",
+      "resolution": "470W limits the real result to focusing; endpoint uses bounded initial homogeneous norm, while s<-1/2 has small-to-large inflation."
+    },
+    {
+      "location": "CCM proof provenance",
+      "issue": "Published critical theorem and forthcoming commuting-flow proof have distinct proof methods.",
+      "resolution": "4713 cites v1 explicit-formula method and keeps report's Marsden work forthcoming."
+    },
+    {
+      "location": "Fourier and Sobolev weights",
+      "issue": "KdV research uses unitary Fourier transform and weight 4+xi^2; canonical site uses nonunitary transform and 1+xi^2.",
+      "resolution": "470D includes 1/(2pi kappa); small-ball constants adjusted under equivalent norms; all exact coefficients use one convention."
+    },
+    {
+      "location": "dNLS publication record",
+      "issue": "Report bibliography says to appear, publisher full text is an online-first 2024 PDF.",
+      "resolution": "Final publisher PDF 52163 directly confirms JEMS28 (2026), 843-924. Reference includes final publication and preserves online-first 48071 as the actual main reading edition."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "1",
+      "notes": [
+        "4700",
+        "4701",
+        "4703"
+      ],
+      "scope": "Well-posedness question, solution concept and integrable prototype."
+    },
+    {
+      "section": "2",
+      "notes": [
+        "4702",
+        "4703",
+        "470Q",
+        "470T",
+        "470U",
+        "470X",
+        "470Z",
+        "4711",
+        "4712",
+        "4714"
+      ],
+      "scope": "Equation conventions, scaling and Miura; image-only table not transcribed."
+    },
+    {
+      "section": "3",
+      "notes": [
+        "4706",
+        "4707",
+        "4708",
+        "4709",
+        "470A",
+        "4715",
+        "4716"
+      ],
+      "scope": "Method obstructions, equicontinuity and tightness."
+    },
+    {
+      "section": "4",
+      "notes": [
+        "470B",
+        "470C",
+        "470D",
+        "470E",
+        "470F",
+        "470G",
+        "470N"
+      ],
+      "scope": "Lax/resolvent conservation, trace coercivity and microscopic conservation laws."
+    },
+    {
+      "section": "5",
+      "notes": [
+        "4704",
+        "4705",
+        "470H",
+        "470I",
+        "470J",
+        "470K",
+        "470L",
+        "470M",
+        "470O",
+        "470P",
+        "4717",
+        "4718",
+        "4719"
+      ],
+      "scope": "Regularized flows, exact comparison, fixed Green gauge cancellation, first/second-generation mechanisms."
+    },
+    {
+      "section": "6",
+      "notes": [
+        "470R",
+        "470S",
+        "470V",
+        "470W",
+        "470Y",
+        "4710",
+        "4713"
+      ],
+      "scope": "All principal equation applications and careful domain, sign, endpoint and mass distinctions; broader extensions deferred below."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    "Small-H^-1 closed Schrödinger operator, analytic Green-coordinate inverse, and full nonlinear resolvent estimates.",
+    "Full low-regularity existence proofs, periodic KdV implementation and primary ill-posedness constructions except selected Appendix A reading.",
+    "BO new gauge and hierarchy Lax structure.",
+    "NLS/mKdV/dNLS/fifth-order frequency-localized smoothing and difference-flow estimates.",
+    "CCM explicit formula and compactness proof; endpoint and blowup studies."
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Higher KdV hierarchy",
+      "status": "Report §6 result noted as further work; primary reference [54] not read and no full hierarchy theorem page created."
+    },
+    {
+      "branch": "Thermodynamic limits and nondecaying backgrounds",
+      "status": "Report §6 references [44],[19],[59],[60] not expanded; requires a separate source campaign for soliton gases, step-like and asymptotically periodic data."
+    },
+    {
+      "branch": "Nonintegrable comparisons",
+      "status": "Higher-power gKdV and higher-dimensional NLS rows of image-only table (2.1) were not inspected; no unsupported table transcription."
+    },
+    {
+      "branch": "Critical endpoints and optimality",
+      "status": "BO real-line endpoint, real defocusing mKdV endpoint, line fifth-order optimality and general critical-mass CCM are not resolved by this packet."
+    },
+    {
+      "branch": "CCM supplementary literature",
+      "status": "Hogan-Kowalski higher norm threshold and Kim-Kim-Kwon blowup studies not directly read; mass=2pi smooth theorem kept separate from general L2 endpoint."
+    },
+    {
+      "branch": "Independent review and parent integration",
+      "status": "Freeze and source self-check only. Parent must independently review and own any registry/navigation/build/render/publication changes."
+    }
+  ],
+  "cross_topic_needs": [],
+  "validation": {
+    "status": "passed-source-only-self-check",
+    "build_run": false,
+    "render_run": false,
+    "shared_files_modified": false,
+    "commit_run": false,
+    "deploy_run": false,
+    "pre_freeze_reference": "research/pde-killip-visan-review.json consulted as source checklist only; its pending result is not draft acceptance.",
+    "terminology_scan_decisions": [
+      {
+        "id": "4701",
+        "concept": "continuity",
+        "decision": "Added direct 00E2 and 00EX links and an explicit product metric; the Banach link alone did not define joint continuity or the sequential criterion."
+      },
+      {
+        "id": "4705",
+        "concept": "smooth vector field",
+        "decision": "Added 00NC and explicitly specified a common smooth manifold; the previous Hamilton calculation was not a replacement for the general definition."
+      }
+    ],
+    "checked_at": "2026-10-21T12:36:11Z",
+    "tree_files": 47,
+    "atomic_pages": 45,
+    "formula_blocks": 626,
+    "body_link_occurrences": 221,
+    "prerequisite_edges": 156,
+    "dependency_closure_size": 261,
+    "errors": [],
+    "warnings": [],
+    "syntax_scope": "Balanced nested braces and square brackets, math-command spacing, controls, format and style rules only; no full Forester/KaTeX build or render.",
+    "title_uniqueness": "All 47 owned tree titles unique in the current forest.",
+    "links": "All owned internal links resolve; every declared prerequisite is present in its body and targets a non-Outline/non-Reference.",
+    "prerequisite_graph": "156 declared edges; merged canonical prerequisite closure covers 261 nodes and has no cycle, missing target or Outline/Reference dependency.",
+    "reachability": "All 45 atomic pages directly linked from 4700.",
+    "semantic_scope": "Author read all 47 tree bodies and inspected direct reused destinations, with exact source/proof ranges recorded. Recursive closure check is structural, not a new full proof audit of 261 existing pages.",
+    "review_status": "Independent source checklist consulted; frozen pages not yet formally accepted."
+  },
+  "modified_paths": [
+    "trees/math/pde/killip-visan/4700.tree",
+    "trees/math/pde/killip-visan/4701.tree",
+    "trees/math/pde/killip-visan/4702.tree",
+    "trees/math/pde/killip-visan/4703.tree",
+    "trees/math/pde/killip-visan/4704.tree",
+    "trees/math/pde/killip-visan/4705.tree",
+    "trees/math/pde/killip-visan/4706.tree",
+    "trees/math/pde/killip-visan/4707.tree",
+    "trees/math/pde/killip-visan/4708.tree",
+    "trees/math/pde/killip-visan/4709.tree",
+    "trees/math/pde/killip-visan/470A.tree",
+    "trees/math/pde/killip-visan/470B.tree",
+    "trees/math/pde/killip-visan/470C.tree",
+    "trees/math/pde/killip-visan/470D.tree",
+    "trees/math/pde/killip-visan/470E.tree",
+    "trees/math/pde/killip-visan/470F.tree",
+    "trees/math/pde/killip-visan/470G.tree",
+    "trees/math/pde/killip-visan/470H.tree",
+    "trees/math/pde/killip-visan/470I.tree",
+    "trees/math/pde/killip-visan/470J.tree",
+    "trees/math/pde/killip-visan/470K.tree",
+    "trees/math/pde/killip-visan/470L.tree",
+    "trees/math/pde/killip-visan/470M.tree",
+    "trees/math/pde/killip-visan/470N.tree",
+    "trees/math/pde/killip-visan/470O.tree",
+    "trees/math/pde/killip-visan/470P.tree",
+    "trees/math/pde/killip-visan/470Q.tree",
+    "trees/math/pde/killip-visan/470R.tree",
+    "trees/math/pde/killip-visan/470S.tree",
+    "trees/math/pde/killip-visan/470T.tree",
+    "trees/math/pde/killip-visan/470U.tree",
+    "trees/math/pde/killip-visan/470V.tree",
+    "trees/math/pde/killip-visan/470W.tree",
+    "trees/math/pde/killip-visan/470X.tree",
+    "trees/math/pde/killip-visan/470Y.tree",
+    "trees/math/pde/killip-visan/470Z.tree",
+    "trees/math/pde/killip-visan/4710.tree",
+    "trees/math/pde/killip-visan/4711.tree",
+    "trees/math/pde/killip-visan/4712.tree",
+    "trees/math/pde/killip-visan/4713.tree",
+    "trees/math/pde/killip-visan/4714.tree",
+    "trees/math/pde/killip-visan/4715.tree",
+    "trees/math/pde/killip-visan/4716.tree",
+    "trees/math/pde/killip-visan/4717.tree",
+    "trees/math/pde/killip-visan/4718.tree",
+    "trees/math/pde/killip-visan/4719.tree",
+    "trees/references/icm2026-killip-visan.tree",
+    "research/pde-killip-visan-packet.json"
+  ],
+  "frozen_tree_sha256": {
+    "trees/math/pde/killip-visan/4700.tree": "74ea33ef2e51a3a9063ecf8198aec3ae3c1f7de339896fa1e7b21a6f69f66e2e",
+    "trees/math/pde/killip-visan/4701.tree": "e57f98c119560b81210dae9294dd2d3db14e28e41bf2f67cc6427d77dc2b8095",
+    "trees/math/pde/killip-visan/4702.tree": "488a3b5100acbe5c2ad0e1ec1a4af175b2466ec003ed00008da9747c77571ebd",
+    "trees/math/pde/killip-visan/4703.tree": "ec6bb720a19d054d7d3d09064d22607fea069ec25dcdbf00b291a594d04d9b3a",
+    "trees/math/pde/killip-visan/4704.tree": "8036d4208029017ba8d7d74ff357266eaa3cdb797e0c3a1c37d261c6c152350c",
+    "trees/math/pde/killip-visan/4705.tree": "51fc5121c3f1150380975b38362a16b3f6a8d6e54cc756613ef7d353de77b8ba",
+    "trees/math/pde/killip-visan/4706.tree": "598417f4c414cf1e0f1dd149efbb72dc8cb371b440e0394152a48d3dc52bedb3",
+    "trees/math/pde/killip-visan/4707.tree": "671ba64c79fd33a4c355abd04c42d90e11f7cb0294d44496708b165bde5e02f3",
+    "trees/math/pde/killip-visan/4708.tree": "ac2a7ba5db404d04fcc467741409821dceccb9561386ea07ba2977317299210f",
+    "trees/math/pde/killip-visan/4709.tree": "09430ac01c92ba7d1db645e6ea2c730ec9074670413a944ede63924ace04df01",
+    "trees/math/pde/killip-visan/470A.tree": "7ab61d7482a5d2ba2782a48452868f661441e0d908ef8eefd2955144756fa017",
+    "trees/math/pde/killip-visan/470B.tree": "f8a4a9a957e183d9194afb711409c6e7ff7ead4c6a8749eec42b086fe35ec933",
+    "trees/math/pde/killip-visan/470C.tree": "2b0f85e8b08957a6b70e8749c5b335b7f58081cc3a8acce3900ed881efe9e6ec",
+    "trees/math/pde/killip-visan/470D.tree": "a931d6a6bb90bbf560b35133920b7bd1b5de5dfa706edb5e05d00c5483f1e24e",
+    "trees/math/pde/killip-visan/470E.tree": "743ebd1707bbd0eda0157437d382375a69dc618d61b22524529afdd9c151eef8",
+    "trees/math/pde/killip-visan/470F.tree": "c126ec5fe263dee3b957dc3b8442ec10a36e46b7903a78ce1688b4e01e7e0a54",
+    "trees/math/pde/killip-visan/470G.tree": "26c112b755c5f497fe4939b7f4461b27aac3e6755ffe3e4420f6bead5c1cea9e",
+    "trees/math/pde/killip-visan/470H.tree": "2e1d48617985c1f77f23c1b39af5c0e26c27b34fa9bb5777e8802cbbc2e739b1",
+    "trees/math/pde/killip-visan/470I.tree": "5f2ad609cb23205e78dd6a7eddfb7b681979bf6028ae8563fcf3e059581d1dce",
+    "trees/math/pde/killip-visan/470J.tree": "5fa5f27521a53beadcd3e2dc2414a3b02fc652f3e0aabeccee093ae692481e86",
+    "trees/math/pde/killip-visan/470K.tree": "bbd6372fcc7f11d3f5b0fcb7d7d8f39980e7eb47cf762eb81a472883ed036c69",
+    "trees/math/pde/killip-visan/470L.tree": "dc6179ad633f56622e2e453860515f5c5a91a976b4c57abb36e99f705639bece",
+    "trees/math/pde/killip-visan/470M.tree": "5b83e0f6e810dca88273c008203b51faa56dc0c56079b3117e509a9c38131506",
+    "trees/math/pde/killip-visan/470N.tree": "067a28eac0a116d9fa472a68bcb012957d3047d16e1107a4121191265736294d",
+    "trees/math/pde/killip-visan/470O.tree": "9e826acdc899b835c46f14a40666bb181ced274ee94e49d293f81236cbdb501d",
+    "trees/math/pde/killip-visan/470P.tree": "c265123a467fe0502ebee59a79b82c4bc4fc910405e9a06dea41136c27d51299",
+    "trees/math/pde/killip-visan/470Q.tree": "dd9d616f2bc53e48275e7c6eab8506b04f90a944cd2131bc6ece75156e238868",
+    "trees/math/pde/killip-visan/470R.tree": "c408aa343e122e80971e8fbc2b44d2054c25fc4d5bf536be5bbaa4e5ce789ca0",
+    "trees/math/pde/killip-visan/470S.tree": "ef29e8860a28c2b9fc03816f8b6938e7a429fdc49e4c9440d3041419116e5bab",
+    "trees/math/pde/killip-visan/470T.tree": "92ab35720630f6e62d6c5532602e25a0d63cf2abbc1fcceb713b432a64b96c5c",
+    "trees/math/pde/killip-visan/470U.tree": "946eae7e18c8aa50c874589aed8e014b1cd5c8b3ec93c950979e2a11ad58f9f8",
+    "trees/math/pde/killip-visan/470V.tree": "d67d6f186540c8d63493e82e3b9a4445a7c777c642098d86247562287c979997",
+    "trees/math/pde/killip-visan/470W.tree": "ddb40e77e3ab350b145357973d1d6141884c2cec8c1a3c9cf095d6106b75780a",
+    "trees/math/pde/killip-visan/470X.tree": "0e79cf29e4a69ecc91871abb7f43aa72284e36d710fc98159f80810226a35c42",
+    "trees/math/pde/killip-visan/470Y.tree": "12b33a9679784cfbb7ed9ccbed35d007b7bd685659886495d2282695fa100358",
+    "trees/math/pde/killip-visan/470Z.tree": "5b44d9c4be13ab09be039d930b4d3b1c44fd52892e1edfea61b2c9eab43774fe",
+    "trees/math/pde/killip-visan/4710.tree": "dd3666732bf3b808a8dc4d859ad65c25aec7bb30be90a1c26cfd004bfa68f7aa",
+    "trees/math/pde/killip-visan/4711.tree": "dc56653ffaea1d7e3fe5ff3368f2a57271d52e5dc2d92eb8df6a8ce8e2adae32",
+    "trees/math/pde/killip-visan/4712.tree": "ad2c3dff28baadfadcb7b00acae04196f2ae04b285e503bf417e588accefba3e",
+    "trees/math/pde/killip-visan/4713.tree": "c1e5a50f6362678d62304873688824d531064decb2d5edacf6d34fb036157007",
+    "trees/math/pde/killip-visan/4714.tree": "3a55ccf2a24e82f11221113e33a3a893eb55501c35713134875e8ec6148ba777",
+    "trees/math/pde/killip-visan/4715.tree": "55030997194577137b5592ba2cecbd3364a31a67e08824268d9ee5f2af52142c",
+    "trees/math/pde/killip-visan/4716.tree": "fe58a20574e4c50737062abd0d352ec82faed41fdcea1d10b00cfc7005e10c27",
+    "trees/math/pde/killip-visan/4717.tree": "3739e2bb3d6811509bac9511655fb0f68fe7b30b83ecfd05ff93232d94344653",
+    "trees/math/pde/killip-visan/4718.tree": "e3833994bca20f4b567d209d417525be9046bb79b5c7bfa0a3050c1059c22deb",
+    "trees/math/pde/killip-visan/4719.tree": "0fe21bb7762a668b2263c446af3644ac30c59465feadff100f29a004bc137c9c",
+    "trees/references/icm2026-killip-visan.tree": "9c19ee4fd1300f77c8b17c2ebc94631a0d246b4c379f53aaac574ad61caab1bf"
+  },
+  "freeze": {
+    "status": "frozen-pending-independent-review",
+    "frozen_at": "2026-10-21T12:36:11Z",
+    "scope": "46 topic trees (4700 overview plus 45 atoms), one reference tree and this packet.",
+    "tree_count": 47,
+    "project_file_count": 48,
+    "independent_review_status": "pending",
+    "hash_scope": "frozen_tree_sha256 contains exact final bytes of all topic/reference trees. Packet hash is reported after write, outside its own content.",
+    "author_edits_stopped": true,
+    "build_or_publication_claimed": false
+  },
+  "parent_render_repairs": [
+    {
+      "date": "2026-10-21",
+      "id": "470N",
+      "repair": "Replace adjacent TeX integral commands and negative space with the equivalent double-integral command accepted by Forester.",
+      "sha256": "067a28eac0a116d9fa472a68bcb012957d3047d16e1107a4121191265736294d"
+    }
+  ]
+}
