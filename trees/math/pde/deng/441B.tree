@@ -1,0 +1,12 @@
+\title{独立复高斯的 Wick 配对公式}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，§2.1.1；独立复高斯矩的直接证明}
+
+\p{设 #{(g_k)} 是独立[标准复高斯变量](4411)。对任意频率指标 #{a_1,\ldots,a_p,b_1,\ldots,b_q}，若 #{p\ne q}，则 #{\mathbb E\prod_{i=1}^pg_{a_i}\prod_{j=1}^q\overline{g_{b_j}}=0}；若 #{p=q=m}，则}
+##{\mathbb E\left(\prod_{i=1}^mg_{a_i}\prod_{j=1}^m\overline{g_{b_j}}\right)
+=\sum_{\sigma\in S_m}\prod_{i=1}^m\mathbf 1_{a_i=b_{\sigma(i)}}.}
+\p{这里 #{S_m} 是 #{\{1,\ldots,m\}} 的所有置换。右端枚举把每个非共轭因子与一个同频共轭因子配成一对的方法。}
+\p{\strong{证明。}按频率 #{k} 分组，令它在两组中出现 #{p_k,q_k} 次。由[独立性](00L3)，期望为 #{\prod_k\mathbb E(g_k^{p_k}\overline g_k^{\,q_k})}。圆对称性使任一 #{p_k\ne q_k} 时为零；全部相等时该积为 #{\prod_k p_k!}。右端也恰有 #{\prod_kp_k!} 个允许配对，因而相等。}
+\p{例如 #{\mathbb E|g|^4=2}，两种配对都要计入。展开项的配对数可呈阶乘增长，这正是[波图计数](4420)需要额外衰减或相消的原因。}

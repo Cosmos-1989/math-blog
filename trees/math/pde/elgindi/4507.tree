@@ -1,0 +1,11 @@
+\title{Euler 速度的 Weber 拉回恒等式}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，式(4)；链式求导}
+
+\p{设 #{(u,p)} 是 #{\mathbb R^3} 上光滑无力 [Euler 解](4302)，其[流映射](4501)为 #{\Phi_t}。假设以下向量场和梯度均属于可作 [Leray 投影](430C)的函数类。则}
+##{\mathbb P\bigl((D_a\Phi_t)^T(u\circ\Phi_t)\bigr)=u_0.}
+\p{\strong{证明。}令 #{A=D_a\Phi_t}、#{B=A^T(u\circ\Phi_t)}。因 #{\partial_t A=(\nabla u\circ\Phi_t)A}，有}
+##{\partial_tB=A^T\bigl((\nabla u)^Tu+\partial_tu+(u\cdot\nabla)u\bigr)\circ\Phi_t=\nabla_a\bigl((|u|^2/2-p)\circ\Phi_t\bigr).}
+\p{这里 #{(\nabla u)^Tu=\nabla(|u|^2/2)}。时间积分得到 #{B=u_0+\nabla_a q}，其中 #{q(a,t)=\int_0^t(|u|^2/2-p)(\Phi_s(a),s)\,ds}。投影消去梯度，而 #{\mathbb Pu_0=u_0}，即得恒等式。转置矩阵是拉回速度一形式所必需的；它与涡量向量的逆矩阵拉回不同。}

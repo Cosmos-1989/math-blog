@@ -1,0 +1,15 @@
+\title{高斯波包变换的恒等分解}
+\date{2026-10-20}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§5.1、式(5.2)；欧氏模型的直接计算}
+
+\p{固定 #{h>0}，在 #{\mathbb R^n} 上取[高斯波包](0H4I)}
+##{g_{q,p}(x)=(\pi h)^{-n/4}\exp\left(-\frac{|x-q|^2}{2h}+\frac{i p\cdot(x-q)}h\right),
+\qquad (Tu)(q,p)=\langle g_{q,p},u\rangle.}
+\p{相空间测度选为 #{dq\,dp/(2\pi h)^n}。则 #{T:L^2(\mathbb R^n)\to L^2(\mathbb R^{2n})} 为等距嵌入，#{T^*T=I}，而 #{P=TT^*} 是像空间的[正交投影](00MS)。}
+\p{\strong{计算。}固定 #{q}，对 #{p/h} 用 [Fourier–Plancherel 恒等式](0W01)，得到}
+##{\int |Tu(q,p)|^2\frac{dp}{(2\pi h)^n}
+=(\pi h)^{-n/2}\int e^{-|x-q|^2/h}|u(x)|^2\,dx.}
+\p{再对 #{q} 积分，高斯积分恰为 #{(\pi h)^{n/2}}，所以 #{\|Tu\|=\|u\|}。先对 Schwartz 函数计算，再按稠密性延拓；极化给出 #{T^*T=I}，继而 #{P^2=P=P^*}。}
+\p{在闭流形上，报告使用适应流盒、频率尺度与单位分解的波包变换，仍满足恒等分解。欧氏公式证明这种表示为何能保留信息；全局相容构造见 Faure–Tsujii v4 §2.5。#{TT^*} 一般不等于整个相空间 L² 上的恒等算子。}

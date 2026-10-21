@@ -1,0 +1,12 @@
+\title{不可压缩多孔介质方程的重力耗散}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§6.2；Darcy 关系的能量计算}
+
+\p{二维不可压缩多孔介质方程，简称 IPM，以密度 #{\rho} 为输运标量，并通过 Darcy 关系确定速度：}
+##{u+\nabla p=-\rho e_2,\qquad\operatorname{div}u=0,\qquad\partial_t\rho+u\cdot\nabla\rho=0.}
+\p{这里 #{e_2=(0,1)}，重力向下；有固壁时要求 #{u\cdot n=0}。用[旋度](4301)消去压力得到 #{\operatorname{curl}u=-\partial_x\rho}。速度在每一时刻由密度经非局部椭圆关系确定，动量关系中没有 Euler 的加速度项。}
+\p{若解光滑、#{\int_D y\rho} 有限且所有边界通量为零，则[输运公式](4503)与分部积分给出 #{\frac d{dt}\int_Dy\rho=\int_D\rho u_2}。把 Darcy 关系与 #{u} 点乘积分，压力项因无散度和边界条件消失，于是}
+##{\frac d{dt}\int_Dy\rho=-\int_D|u|^2.}
+\p{这是重力势能的耗散；密度自身的[Casimir 积分](4504)仍守恒。IPM 的分层趋向与 [Boussinesq](4512) 的惯性动力学不同。该模型或其带源变体的爆破结论，需要连同域、外源和正则性引用，不能直接称为 Euler 奇性。}

@@ -1,0 +1,11 @@
+\title{相关函数的 Laplace 变换是预解式配对}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§2.4；预解式的直接积分计算}
+
+\p{设 #{U_t=e^{tX}} 是光滑保测流的 [Koopman 群](4605)。在 #{L^2(M,\mu)} 中把 #{X} 取为强连续群的生成元：定义域由极限 #{\lim_{t\to 0}(U_tu-u)/t} 存在的向量组成。对 #{\Re z>0}，[预解式](0GSQ)为}
+##{R(z)=(z-X)^{-1}=\int_0^\infty e^{-zt}U_t\,dt,
+\qquad \|R(z)\|\le(\Re z)^{-1}.}
+\p{\strong{证明。}酉性保证积分在每个向量上绝对收敛并给出范数界。对生成元定义域中的 #{u}，有 #{\frac d{dt}(e^{-zt}U_tu)=-(z-X)e^{-zt}U_tu}。从零积到 #{T}，再令 #{T\to\infty}，得到 #{R(z)(z-X)u=u}。另一方面，对任意 #{u\in L^2}，截断积分属于生成元定义域且 #{(z-X)\int_0^T e^{-zt}U_tu\,dt=u-e^{-zT}U_Tu}；闭性给出 #{(z-X)R(z)u=u}。}
+\p{因此 #{\int_0^\infty e^{-zt}C_{u,v}(t)\,dt=\langle v,R(z)u\rangle}。把 #{R(z)} 在光滑函数到[分布](4607)的意义下继续延拓，便能寻找控制相关衰减的极点；延拓后的算子不再是左半平面的 #{L^2} 有界逆。}

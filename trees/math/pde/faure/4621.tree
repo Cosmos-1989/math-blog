@@ -1,0 +1,11 @@
+\title{线性收缩的半密度算子产生逐阶阻尼}
+\date{2026-10-20}
+\taxon{Calculation}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，式(5.8)、脚注5；Faure–Tsujii v4 附录D}
+
+\p{设 #{\lambda_j>0}，#{A_t=\operatorname{diag}(e^{-\lambda_1t},\ldots,e^{-\lambda_dt})}，#{t\ge 0}。其[半密度拉回](460D)为 #{Q_tf(x)=e^{-t\sum_j\lambda_j /2}f(A_tx)}。在单项式 #{x^\beta=\prod_jx_j^{\beta_j}} 上有}
+##{Q_tx^\beta=\exp\left[-t\left(\frac 12\sum_j\lambda_j+\sum_j\beta_j\lambda_j\right)\right]x^\beta.}
+\p{\strong{计算。}将 #{A_tx} 代入每个幂次即得。故生成元 #{L=-\sum_j\lambda_jx_j\partial_{x_j}-\frac 12\sum_j\lambda_j} 在该单项式上的特征值为 #{-\frac 12\sum_j\lambda_j-\sum_j\beta_j\lambda_j}。#{d=1,\lambda_1=1} 时就是 #{-1/2-k}，与双曲曲面的谱带位置相符。}
+\p{但所有非零多项式均不属于 #{L^2(\mathbb R^d)}。#{Q_t} 在 L² 上仍为酉群，所以这些数不能称为它的 L² 衰减特征值。多项式在适当[各向异性分布空间](460B)中出现为共振态；将 Taylor 阶数投影延拓为有界算子并估计余项，是 Faure–Tsujii 附录D的研究结果。}
+\p{在有限多项式空间 #{\operatorname{Pol}_{\le K}} 上，定义 #{P_0p=p(0)}，重标定后 #{e^{t\sum_j\lambda_j /2}Q_t-P_0} 的每个非恒定单项式系数至少衰减 #{e^{-t\min_j\lambda_j}}。任取固定有限维范数即可得到相应算子范数界；不能未经空间说明将它当作整个 L² 上的秩一极限。}

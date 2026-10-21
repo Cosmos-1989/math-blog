@@ -1,0 +1,10 @@
+\title{无散度流保持体积}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§1–2；Jacobian 计算}
+
+\p{设 #{\Phi_t:D\to D} 是光滑速度 #{u} 的[流映射](4501)，记 #{J(a,t)=\det D_a\Phi_t(a)}。则}
+##{\partial_tJ(a,t)=(\operatorname{div}u)(\Phi_t(a),t)J(a,t),\qquad J(a,0)=1.}
+\p{\strong{证明。}由[行列式的多线性](0A40)，可逆矩阵 #{A(t)} 满足 #{\frac d{dt}\det A=\det A\operatorname{tr}(A^{-1}A')}。代入 #{A'= (\nabla u)A}，用迹的循环性得 #{\operatorname{tr}(A^{-1}(\nabla u)A)=\operatorname{tr}\nabla u=\operatorname{div}u}，其中[散度](4301)是对角偏导之和。}
+\p{若 #{\operatorname{div}u=0}，则 #{J=1}。积分换元于是给出 #{\int_D h(\Phi_t(a))\,da=\int_Dh(x)\,dx}，对所有可积 #{h} 成立。特别地可测集合的 [Lebesgue 测度](00Q5)不变。反过来，若流的每个时刻都保持体积，则其正 Jacobian 为一，显示式推出 #{\operatorname{div}u=0}。这个结论依赖流的光滑可逆性；粗糙速度需要另行建立输运理论。}

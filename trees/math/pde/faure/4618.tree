@@ -1,0 +1,15 @@
+\title{由周期轨道定义动力学行列式}
+\date{2026-10-20}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，定理4.2、式(4.2)；Giulietti–Liverani–Pollicott；Dyatlov–Zworski}
+
+\p{设 #{X} 为闭流形上光滑接触 Anosov 流的生成元，#{\gamma,T_\gamma,P_\gamma} 为[本原轨道及横向返回映射](4616)。在绝对收敛的右半平面定义动力学行列式}
+##{d(z)=\exp\left(-\sum_\gamma\sum_{n\ge 1}
+\frac{e^{-znT_\gamma}}{n|\det(I-P_\gamma^n)|}\right).}
+\p{报告定理4.2给出此标量行列式的整函数延拓，零点按重数对应 [PR 共振](4609)。这里使用光滑闭流的结论，不将它推广到任意有限正则性、开系统或其他 ζ 函数。证明来源为报告文献[53]、[39]，其中延拓与零点识别是研究定理。}
+\p{在收敛区域逐项求导，可核对}
+##{\frac{d'(z)}{d(z)}
+=\sum_\gamma\sum_{n\ge 1}\frac{T_\gamma e^{-znT_\gamma}}{|\det(I-P_\gamma^n)|}
+=\int_0^\infty e^{-zt}\operatorname{Tr}^{\flat}(e^{tX})\,dt.}
+\p{指数定义中的负号因求导 #{e^{-znT}} 再产生负号而相消。有限维恒等式 #{\partial_z\log\det(z-A)=\operatorname{Tr}(z-A)^{-1}} 解释这项类比；但无限维的平坦迹不自动等于通常算子迹，整延拓也不能只由形式积分得到。}

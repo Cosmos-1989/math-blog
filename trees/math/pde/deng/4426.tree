@@ -1,0 +1,10 @@
+\title{Dirac 质量与约束积分}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+
+\p{对 #{a\in\mathbb R^m}，Dirac 质量 #{\delta_a} 是把全部质量集中在 #{a} 的[测度](00Q2)：#{\delta_a(A)=1} 当 #{a\in A}，其余为零。对连续函数 #{\varphi}，#{\int\varphi\,d\delta_a=\varphi(a)}；作为[分布](0W0Z)，它同样按测试函数取值定义，而非一个有限的普通函数。}
+\p{约束记号 #{\delta(y-a)\,dy} 表示这个测度。若一维光滑函数 #{g} 的零点 #{y_j} 有限且均满足 #{g'(y_j)\ne 0}，局部换元定义}
+##{\int\varphi(y)\delta(g(y))\,dy=\sum_j\frac{\varphi(y_j)}{|g'(y_j)|}.}
+\p{更高维中，若光滑实值 #{g} 在零水平集上梯度不消失，则相应记号表示 #{\int_{g=0}\varphi /|\nabla g|\,dS}，#{dS} 是水平面的面积测度。这是约束积分的通常约定；临界零点需要另行解释，不能直接除以零。}
+\p{波动力学里的动量约束可先消去一个频率变量，剩余能量约束再参数化为共振曲面的角向积分。硬球碰撞的约束还含轨道匹配与碰撞通量，各 Jacobian 都必须保留。}

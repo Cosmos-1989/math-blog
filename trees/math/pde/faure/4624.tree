@@ -1,0 +1,12 @@
+\title{带低频有限秩余项的有效量子近似}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Faure–Tsujii，arXiv:2102.11196v4，定理1.5、式(1.12)至(1.13)、§6；[Faure 报告](icm2026-faure)，§5}
+
+\p{设 #{X} 是闭流形上光滑接触形式 #{\alpha} 的 Reeb 向量场，并且满足 Anosov 条件，先取未扭曲标量演化。令 #{\Sigma} 为[非零辛俘获集](461D)，#{N_s} 为其辛法向中投影到 #{E_s} 的子丛；在[反时间余切流](461C)下，该子丛实际为扩张方向。#{\widetilde T_{[0,K]}} 是沿 #{N_s} 纤维取零至 #{K} 阶齐次 Taylor 部分的投影，像为[谱带丛](460E)的有限直和。}
+\p{原研究的量子化算子写成 #{Q_K(t)=\operatorname{Op}_\Sigma(e^{tX_{\mathcal F}}\widetilde T_{[0,K]})}，其中 #{X_{\mathcal F}} 是法向多项式与线因子的丛演化。具体构造为 #{Q_K(t)=T_{N_s}^{\Delta}\Upsilon_t^{1/2}e^{tX_{\mathcal F}}\widetilde T_{[0,K]}T_{N_s}}：#{T_{N_s}} 是局部化波包变换后沿法向作 Bargmann 变换的分析算子，#{T_{N_s}^{\Delta}} 是相应重构算子，#{\Upsilon_t^{1/2}} 是 metaplectic 归一化因子。它们的精确定义分别为原文式(4.34)、(4.35)、(3.39)，不是任意选择的符号量子化。}
+\p{令 #{B_\sigma=T^*\chi_{\Sigma,\sigma}T}，其中 #{T} 为波包变换，#{\chi_{\Sigma,\sigma}(\rho)=1_{\{\|\rho_u+\rho_s\|_{g_\rho}\le\sigma\}}} 是[适应波包度量](460B)下的俘获集邻域示性函数。这是原文式(1.22)规定的截断。对任意固定 #{K\in\mathbb N_0}、#{\epsilon>0}，可选各向异性空间与常数 #{C}，使对每个 #{t>0} 存在 #{\sigma_t>0}，对每个 #{\sigma>\sigma_t} 存在有限秩算子 #{R_{\sigma,t}}，满足}
+##{\|e^{tX}-B_\sigma Q_K(t)B_\sigma -R_{\sigma,t}\|_{\mathcal H_W\to\mathcal H_W}
+\le Ce^{(\gamma_{K+1}^++\epsilon)t}.}
+\p{这是原文定理1.5的标量特例；证明在§6。#{R_{\sigma,t}} 保留未被高频分析描述的低频贡献，其秩可以随时间增长。这一定理无需预先有带间谱隙，也没有把余项宣布为零。若另有谱隙，[精确整带投影定理](4611)提供不依赖这些截断的另一种半群分解。两种结论的量词与余项不同，不应互相替换。}

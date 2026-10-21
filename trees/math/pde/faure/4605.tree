@@ -1,0 +1,11 @@
+\title{流的相关函数与正反时间约定}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§2.2及脚注1}
+
+\p{设 #{\phi^t} 为闭流形 #{M} 上保持光滑概率测度 #{\mu} 的[流](00RV)。其 [Koopman 算子](00RZ)记作 #{U_tu=u\circ\phi^t=e^{tX}u}，内积约定为 #{\langle v,u\rangle=\int_M\overline v u\,d\mu}。对光滑复值函数 #{u,v}，相关函数定义为}
+##{C_{u,v}(t)=\langle v,U_tu\rangle,
+\qquad C^0_{u,v}(t)=C_{u,v}(t)-\left(\int_M\overline v\,d\mu\right)\left(\int_Mu\,d\mu\right).}
+\p{#{u} 是被演化的函数，#{v} 是固定观测量。变量替换给出 #{U_t^*=U_{-t}}。对概率密度的前向输运使用 #{P_t=U_{-t}}，满足 #{\int vP_tu\,d\mu=\int(v\circ\phi^t)u\,d\mu}；这是[转移算子对偶关系](330R)在可逆保测流中的版本，不需要对多个原像求和。}
+\p{对[分布](4607)，前向推送定义为 #{(P_tT)(v)=T(v\circ\phi^t)}，所以 #{P_t\delta_m=\delta_{\phi^tm}}。保留这项符号区分，才能同时正确描述粒子沿正时间运动与报告采用的 #{e^{tX}} 共振。测地流取[不变接触体积](4602)归一化后得到这里的 #{\mu}。}

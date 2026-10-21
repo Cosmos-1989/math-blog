@@ -1,0 +1,12 @@
+\title{向外输运在奇异权下产生局部正性}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，引理6.9的局部计算}
+
+\p{设 #{u\in C^1(\lbrack 0,1\rbrack)}，#{u(0)=0}、#{u'(0)=a>0}，#{g} 在零点附近连续。定义一维算子 #{Lf=uf'+gf}。存在整数 #{N>0}、#{\delta>0}、#{c>0}，使所有实值 #{f\in C_c^\infty(0,\delta)} 满足}
+##{\int_0^\delta(Lf)f\,x^{-N}\,dx\geq c\int_0^\delta f^2x^{-N}\,dx.}
+\p{右侧定义了加权 [#{L^2} 范数](00Q6)平方。\strong{证明。}紧支撑消去两端边界项。对 #{uf'f=(u/2)(f^2)'} 分部积分得}
+##{\int_0^\delta(Lf)f x^{-N}\,dx=\int_0^\delta\left(g-\frac{u'}2+\frac{Nu}{2x}\right)f^2x^{-N}\,dx.}
+\p{因 #{u(x)/x\to a}、#{u'(x)\to a}，可取小 #{\delta} 使 #{u/x\geq a/2}、#{u'\leq 3a /2}；再取 #{M} 使 #{g\geq -M}。括号至少为 #{-M-3a/4+Na/4}，选择足够大 #{N} 就得到某个 #{c>0}。}
+\p{大权重惩罚原点附近的函数值，向外速度则把这些值运向权重较小处。这个局部二次型估计没有给出整个区间上的可逆性。报告引理6.9还讨论另一端、区间中部以及有限秩修正；那些步骤需要另选函数空间和边界条件。}

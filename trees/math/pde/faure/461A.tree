@@ -1,0 +1,15 @@
+\title{双曲曲面的半经典 ζ 函数等于 Selberg 移位}
+\date{2026-10-20}
+\taxon{Calculation}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§4.3，式(4.3)后的计算}
+
+\p{设 #{N} 为定向闭[双曲曲面](0GS1)。对长度 #{T_\gamma} 的本原测地流轨道，横向返回映射的特征值为 #{e^{T_\gamma}}、#{e^{-T_\gamma}}。在所有级数绝对收敛的右半平面计算[半经典 ζ 函数](4619)。令 #{x=e^{-nT_\gamma}\in(0,1)}，则}
+##{|\det(I-P_\gamma^n)|^{-1/2}
+=\big|(1-x^{-1})(1-x)\big|^{-1/2}
+=\frac{x^{1/2}}{1-x}=\sum_{m\ge 0}x^{m+1/2}.}
+\p{代入定义并交换绝对收敛的和，利用 #{-\sum_{n\ge 1}a^n/n=\log(1-a)}，得到}
+##{d_{\mathrm{sc}}(z)
+=\prod_\gamma\prod_{m\ge 0}\left(1-e^{-(z+1/2+m)T_\gamma}\right)
+=Z_{\mathrm{Selberg}}(z+1/2).}
+\p{这里将 Selberg 乘积定义为 #{Z_{\mathrm{Selberg}}(s)=\prod_\gamma\prod_{m\ge 0}(1-e^{-(s+m)T_\gamma})}，两边必须采用相同的本原轨道计数约定；不能一边按有方向轨道计数，另一边把两种方向合并。乘积域中的恒等式经唯一性延续到共同延拓域。它没有自行证明 Selberg 函数的解析延拓或全部零点重数，后两者是另外的谱定理。}

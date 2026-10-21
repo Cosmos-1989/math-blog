@@ -1,0 +1,13 @@
+\title{波动力学的短动力学时间极限}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，Theorem 2.1；精确归一化采用 2311.10082v2，Theorem 1.1 的短时特例}
+
+\p{固定 #{d\geq 3}、#{0<\gamma<1}、非负 [Schwartz 初谱](0H4F) #{n_{\rm in}}，采用[随机初值](4412)及[归一化 NLS](4413)，#{\alpha=L^{-\gamma}}、#{T_{\rm kin}=(2\alpha^2)^{-1}}。令 #{n(\tau,k)} 解[波动力学方程](4415)，初值为 #{n_{\rm in}}。取依赖初谱的充分小常数 #{\delta>0}，使该解在 #{[0,\delta]} 上正则。}
+\p{当 #{L} 足够大，NLS 在 #{[0,\delta T_{\rm kin}]} 上有光滑解的好事件 #{\mathcal E_L} 满足 #{\mathbb P(\mathcal E_L)\geq 1-\exp(-(\log L)^{40d})}，且在该事件的期望约定下}
+##{\sup_{0\leq\tau\leq\delta}\sup_{k\in\Lambda_L}
+\left|\mathbb E_{\mathcal E_L}|\widehat u(T_{\rm kin}\tau,k)|^2-n(\tau,k)\right|\leq L^{-\theta},
+\qquad \theta=\theta(d,\gamma)>0.}
+\p{这里明确采用截断期望 #{\mathbb E_{\mathcal E_L}X:=\mathbb E[\mathbf 1_{\mathcal E_L}X]}，在事件外把被积量置零，不除以 #{\mathbb P(\mathcal E_L)}。这与原论文 §3.7 的证明约定一致；不能据此推断所有随机样本在该区间均有光滑解。对应的[混沌传播](4417)见报告 Theorem 2.1。}
+\p{“短时”指慢时间 #{\tau\leq\delta}；物理时间上界 #{\delta L^{2\gamma}/2} 随 #{L} 发散。早期定理的证明通过[树展开](441A)区分主导项、相消项与小余项，具体引用报告文献 [25]–[27]；本式也直接是[长时定理](4419)在固定短区间上的限制。}

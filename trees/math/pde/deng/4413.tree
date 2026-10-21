@@ -1,0 +1,15 @@
+\title{弱耦合三次 NLS 的动力学时间}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：2311.10082v2，§1.1；报告 §1.2}
+
+\p{在[大周期盒](4412) #{\mathbb T_L^d} 上，固定如下 Deng–Hani 归一化的三次非线性 Schrödinger 方程：}
+##{(i\partial_t-\Delta_*)u+\alpha|u|^2u=0,\qquad
+\Delta_*=\frac 1{2\pi}\sum_{j=1}^d\partial_{x_j}^2,\qquad
+\alpha=L^{-\gamma},\quad 0<\gamma<1.}
+\p{初值采用独立随机 Fourier 模态。对每一个初始样本，方程演化是确定的；没有随时间施加的随机驱动。弱耦合与大盒极限同时取 #{\alpha\to 0}、#{L\to\infty}。}
+\p{该归一化定义动力学时间和慢时间为}
+##{T_{\rm kin}=(2\alpha^2)^{-1},\qquad \tau=t/T_{\rm kin}=2\alpha^2t.}
+\p{随机相位下谱强度的首个有效变化出现在二阶相互作用，尺度为 #{\alpha^2t}；这解释 #{\alpha^{-2}} 的幂次。控制高阶项、共振以及余项的工作由[动力学极限定理](4419)完成。}
+\p{报告 §1.2 使用 #{T_{\rm kin}=\alpha^{-2}} 的简化约定。这里始终使用上述原论文约定；相应[碰撞算子](4415)为 #{K}，报告角向算子为 #{C=2K}。若 #{n(\tau)} 解 #{\partial_\tau n=K(n)}，则 #{n_{\rm rep}(s)=n(2s)} 解 #{\partial_s n_{\rm rep}=C(n_{\rm rep})}。NLS 的符号也按原论文保留；复共轭可转换为 #{i\partial_t\overline u+\Delta_*\overline u=\alpha|\overline u|^2\overline u}。}

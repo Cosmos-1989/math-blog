@@ -1,0 +1,11 @@
+\title{无旋流轴对称涡量除以半径后的输运}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§6.3、图3；轴对称方程计算}
+
+\p{采用[轴对称无旋流](430Q)约定 #{u=u^r(r,z)e_r+u^z(r,z)e_z}、#{\operatorname{curl}u=-w(r,z)e_\theta}。在 #{r>0}，无力 Euler 方程给出}
+##{(\partial_t+u^r\partial_r+u^z\partial_z)w=\frac{u^r}{r}w.}
+\p{令 #{q=w/r}，则 #{(\partial_t+u^r\partial_r+u^z\partial_z)q=0}。\strong{证明。}物质导数作用于坐标 #{r} 等于 #{u^r}，故商的导数为 #{(u^rw/r)/r-wu^r/r^2=0}。因此 #{q} 沿子午面粒子轨道恒定。}
+\p{这个公式只在轴外直接成立。若三维涡量光滑且轴对称，其方位分量在轴上为零，局部 Taylor 估计给出 #{w=O(r)}，故 #{q} 局部有界。若只知涡量 [#{\alpha}-Hölder](331C)且轴上为零，只能推出 #{w=O(r^\alpha)}；当 #{\alpha<1}，这不保证 #{q} 有界。}
+\p{所以无旋流条件仍允许[有限正则奇性构造](450R)使用轴附近的低正则性。#{q} 输运本身并未证明光滑解的全局正则性，也未证明所有无界 #{q} 数据都会爆破；还需要速度恢复和增长机制的估计。}

@@ -1,0 +1,11 @@
+\title{弹性碰撞保持总动量与总动能}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (1.2)；直接代数计算}
+
+\p{给定速度 #{v,w\in\mathbb R^d} 和单位向量 #{\omega}，令 #{a=(v-w)\cdot\omega}，按[硬球碰撞](4402)定义 #{v'=v-a\omega,\ w'=w+a\omega}。则}
+##{v'+w'=v+w,\qquad |v'|^2+|w'|^2=|v|^2+|w|^2.}
+\p{\strong{证明。}第一式将速度相加即可。第二式展开为}
+##{|v-a\omega|^2+|w+a\omega|^2-|v|^2-|w|^2=-2a(v-w)\cdot\omega+2a^2=0.}
+\p{令相对速度 #{g=v-w}，质心速度 #{V=(v+w)/2}。变换固定 #{V}，把 #{g} 变为 #{g-2(g\cdot\omega)\omega}，即关于 #{\omega^\perp} 的反射。因此它是对合，绝对 Jacobian 为一。将 #{\omega} 换成 #{-\omega} 不改变 #{v',w'}。这些性质给出[碰撞积分换元](4408)所需的对称性。}

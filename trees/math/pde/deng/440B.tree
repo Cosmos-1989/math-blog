@@ -1,0 +1,16 @@
+\title{Maxwell 分布的质量、应力与能量矩}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，§1.1.2；高斯积分计算}
+
+\p{设 #{M=M_{\rho,u,T}} 是[Maxwell 分布](440A)，#{c=v-u}。其速度矩为}
+##{\int M\,dv=\rho,\quad
+\int vM\,dv=\rho u,\quad
+\int v_i v_j M\,dv=\rho u_i u_j+\rho T\delta_{ij}.}
+##{\int\frac{|v|^2}{2}M\,dv=E,\qquad
+\int\frac{|v|^2}{2}vM\,dv=(E+\rho T)u,\qquad
+E=\frac{\rho}{2}(|u|^2+dT).}
+\p{\strong{证明。}作 #{v=u+\sqrt T\,y} 换元。归一化由[高斯积分](0I8L)与 [Fubini 定理](0H53)得到。奇函数积分为零；一维分部积分给出 #{\int y^2(2\pi)^{-1/2}e^{-y^2/2}dy=1}，故 #{\int c_i c_jM\,dv=\rho T\delta_{ij}}，得前三式及能量式。}
+\p{能量通量中展开 #{|u+c|^2(u+c)/2}。奇次 #{c} 项消失，剩下 #{\tfrac 12\rho|u|^2u}、#{\int(u\cdot c)cM\,dv=\rho Tu} 和 #{\tfrac 12u\int|c|^2M\,dv=\tfrac d2\rho Tu}，合并即得最后一式。}
+\p{所以动量密度是 #{\rho u}，能量密度是 #{E}。从矩恢复 #{u,T} 需除以 #{\rho} 并扣除整体运动能量，不能把原始一阶矩直接记作速度。}

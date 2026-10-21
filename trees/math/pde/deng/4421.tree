@@ -1,0 +1,14 @@
+\title{相对单粒子密度的子集去相关展开}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (3.2)；子集反演计算}
+
+\p{设有限指标集 #{S} 的每个子集 #{J} 都给定[关联函数](4405) #{f_J(z_J)}，规定 #{f_\varnothing=1}；另取单粒子参考函数 #{a(z)}。对 #{H\subseteq S} 定义}
+##{E_H(z_H)=\sum_{J\subseteq H}(-1)^{|H\setminus J|}
+f_J(z_J)\prod_{j\in H\setminus J}a(z_j).}
+\p{则有去相关展开}
+##{f_S(z_S)=\sum_{H\subseteq S}E_H(z_H)\prod_{j\in S\setminus H}a(z_j).}
+\p{\strong{证明。}把第一式代入右端。固定 #{J} 后，#{f_J\prod_{j\in S\setminus J}a(z_j)} 的系数为 #{\sum_{J\subseteq H\subseteq S}(-1)^{|H\setminus J|}=(1-1)^{|S\setminus J|}}。仅 #{J=S} 的系数为一，得结论。}
+\p{例如 #{E_{\{1\}}=f_1-a_1}，#{E_{\{1,2\}}=f_{12}-a_1f_2-a_2f_1+a_1a_2}。若参考函数恰为实际单粒子密度，二阶量退化为 #{f_{12}-f_1f_2}；一般参考函数不具有这个性质。}
+\p{硬球长时证明取 #{a=f^{\mathcal A}} 为 Boltzmann 的近似解，保留这些一粒子因子，只继续展开 #{E_H}。报告也把 #{E_H} 称 cumulant，但它采用子集反演，与[通常联合累积量](441C)的分划定义不同。}

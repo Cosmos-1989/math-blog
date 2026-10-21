@@ -1,0 +1,10 @@
+\title{速度场的 Lagrange 流映射}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§2}
+
+\p{设 #{u(x,t)} 是区域 #{D\subseteq\mathbb R^d} 上随时间变化的光滑速度。以 #{a} 标记初始粒子，流映射 #{\Phi_t(a)} 由[常微分方程](00OB)定义：}
+##{\partial_t\Phi_t(a)=u(\Phi_t(a),t),\qquad\Phi_0(a)=a.}
+\p{以下只在轨道存在且留在 #{D} 的时间段讨论。对有界光滑区域，采用不可穿透边界条件 #{u\cdot n=0}，其中 #{n} 是外单位法向量；这允许切向运动。全空间须另有防止轨道逃向无穷远的增长控制，例如速度有界。环面上则使用周期速度的提升。}
+\p{初值唯一性和反向解方程使 #{\Phi_t} 成为[微分同胚](0A3F)。它把初始位置变为当前位置；#{\Phi_t^{-1}(x)} 给出现在位于 #{x} 的粒子的标签。记 #{D_a\Phi_t} 为关于标签的导数矩阵，由[链式法则](0A34)有 #{\partial_tD_a\Phi_t=(\nabla u)(\Phi_t,t)D_a\Phi_t}。对时变速度，一般没有 #{\Phi_{t+s}=\Phi_t\circ\Phi_s}，需要保留起始时刻的两参数流。}

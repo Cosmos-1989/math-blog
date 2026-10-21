@@ -1,0 +1,12 @@
+\title{三维 Euler 的后向自相似涡量方程}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，式(18)–(19)}
+
+\p{在 #{\mathbb R^3}，设 #{T>0}、#{\lambda\in\mathbb R}，写 #{s=T-t>0}、#{y=x/s^\lambda}。设涡量与速度具有形式}
+##{\omega(x,t)=s^{-1}\Omega(y),\qquad u(x,t)=s^{\lambda -1}U(y),\qquad U=K\Omega,}
+\p{其中 #{K=\operatorname{curl}(-\Delta)^{-1}} 是[三维 Biot–Savart 算子](4509)，在选定的衰减或对称函数类中定义，并要求 #{\operatorname{div}\Omega=0}。则[涡量方程](4508)等价于}
+##{\Omega+\lambda y\cdot\nabla\Omega+U\cdot\nabla\Omega -\Omega\cdot\nabla U=0.}
+\p{\strong{证明。}#{\partial_ty=\lambda y/s}，故 #{\partial_t\omega=s^{-2}(\Omega+\lambda y\cdot\nabla\Omega)}；输运项与伸长项分别为 #{s^{-2}U\cdot\nabla\Omega} 和 #{s^{-2}\Omega\cdot\nabla U}。消去公共因子便得结论。速度缩放也与[一般 Euler 缩放](4308)相容。}
+\p{#{\lambda>0} 时空间尺度收缩；#{\lambda<0} 时扩张。若 #{\Omega} 非零且有界，涡量最大值按 #{s^{-1}} 增长。寻找满足该定常非局部方程的剖面仍是实质问题；任意选一个形状并按此公式缩放，并不会自动满足 Euler 方程。}

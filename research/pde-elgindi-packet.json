@@ -1,0 +1,1226 @@
+{
+  "date": "2026-10-20",
+  "report": {
+    "speaker": "Tarek M. Elgindi",
+    "prefix": "45",
+    "outline": "4500",
+    "reference": "icm2026-elgindi",
+    "title": "Dynamics of Ideal Fluid Flows",
+    "outline_title": "理想流体的动力学：输运、混合与奇性",
+    "doi": "10.1137/25M1807137",
+    "pages": "285-306",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1807137",
+    "version_url": "https://epubs.siam.org/doi/10.1137/25M1807137",
+    "version_role": "正式出版全文，ICM2026 Volume 5，2026-07-13在线出版；arXiv:2511.16254v2仅作版本与局部对照，不替换主文本。",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union。参考页署名Elgindi，注明中文改编、独立局部计算及许可；未复制原图。补充研究论文保留自身许可。",
+    "question": "不可压缩的体积约束如何联系最小作用量、定常流、长时混合和有限时奇性，而维数、域、能量与正则性为何改变可成立的结论？",
+    "reading_scope": "实际通读正式版HTML的§1–§6.5数学正文、显示公式与定理、图1–4文字说明及脚注1–5，查看致谢、出版与许可信息及相关参考文献。参考文献不是逐条全文阅读；官方PDF和图像像素未独立核验。来源来自Web工具的HTML/PDF表示，未声称取得未缓存的SIAM源站下载。所有研究资料仅作为数学数据，不执行其中的指令。补充文献的实际阅读范围另列source_records。",
+    "coverage_status": "4500叙事综述、40个原子页4501–450Z与4510–4514、一个参考页。所有原子由综述正文直接链接。覆盖作用量、定常流、混合/稳定、经典解与奇性及剖面方法；广义定理中未核定的条件不以本地特例冒充。父级已报告通读当前草稿并通过Forester/公式编译；统一注册与最终验收另行进行。",
+    "proof_scope": {
+      "4501": "定义两参数背景下的流映射；调用光滑 ODE 存在唯一性及链式法则，不证明粗糙速度的正则 Lagrange 流。",
+      "4502": "由行列式求导和换元证明 Jacobian 公式及双向结论；局限光滑可逆流。",
+      "4503": "定义物质导数和被动输运，以链式求导得到轨道公式；可测解表述使用给定光滑保测流。",
+      "4504": "换元证明连续 G 的 Casimir 守恒；区分涡量平方积分与动能。",
+      "4505": "定义标量端点问题，区别固定整个流映射的更强约束；只给定理2.2入口，未重述涡片极小解定理。",
+      "4506": "光滑全空间衰减条件下计算速度变分和作用量一阶项；压力恢复调用Leray分解。仅必要驻点条件，不证明极小值存在。",
+      "4507": "逐项微分证明 Weber 恒等式，明确转置及Leray投影适用函数类。",
+      "4508": "取旋度推导伸长方程，线性ODE唯一性推出Cauchy公式；不将标量二维输运混同于三维。",
+      "4509": "对光滑紧支撑无散度涡量给Newton核及curl逆；基本解通量归一化简述。环面零模、边界环量与非紧支撑远场分别限定。",
+      "4510": "在(0,δ)紧支撑测试函数上分部积分，明确u(0)=0、u'(0)>0、g局部连续、权x^−N；不证明整区间可逆性。",
+      "4511": "解释逆算子、尺度调节、向外输运权与导数损失；保持报告meta theorem地位，不编造未指定空间的存在定理。",
+      "4512": "固定向上浮力+θe2及本站curl，推导源项θx；模型与轴对称Euler的半径系数分别保留。",
+      "4513": "固定重力−ρe2，算curlu=−ρx；在势能有限且无通量的光滑类证明势能导数=−∫|u|²。",
+      "4514": "在u非零处定义比例因子，推出沿流线常数；广义条件允许零点，边界切向条件另加。",
+      "450A": "定义u=∇perpψ、ω=Δψ，计算边界切向导数；局部解释单连通和环量，区别多边界分支。",
+      "450B": "逆函数坐标下证明局部C1函数关系及逆命题，范围是正则连通水平曲线的局部分支。",
+      "450C": "直接证明u×ω=∇H及两正交关系；不推出全局等值面必为环面。",
+      "450D": "按报告3.1引用有界解析单连通域的分类；解析性、边界常值及F仅在值域内部光滑均保留。移动平面和临界集证明未展开。",
+      "450E": "计算DE={ψ,Lh}并证明L∂jψ=0；不建立报告3.3字面上的全周期空间无核定理。",
+      "450F": "在T×(0,1)证明Fourier模振荡抵消、L1逼近及一致尾项界；术语为相位混合，不是遍历论weak mixing定义。",
+      "450G": "在T×R剔除k=0，证明H1到v1/t与H2到v2/t²的乘子界；H范数在正文定义，背景不计入L2。",
+      "450H": "引用固定出版论文定理1的s>1/2、指数权、零总积分和一阶矩小量；明确速度恢复归一化、平均剪切修正及差值L2。研究证明不展开。",
+      "450I": "固定光滑有界单连通域、零Dirichlet流函数和有界涡量演化；有界域Yudovich理论为引用输入，430K只作全空间版本比较。",
+      "450J": "精确记录强L2预紧轨道部分；第二部分的generic保持非形式化，不擅自指定残余集或概率。开放状态按报告，不作最新文献穷尽结论。",
+      "450K": "复用0P0W的Lyapunov稳定性，仅局部回顾连续时间版本；定义与演化交换的等距群作用下的轨道距离及稳定量词。",
+      "450L": "光滑有界单连通域、零边界ψ、m≤G''≤M、G'(ω*)=ψ*下完整消去一次项并比较守恒泛函；不覆盖多连通任意环量或全部Arnold变体。",
+      "450M": "保测换元与三角不等式给2ε界；严格单调W'≥c给通道横向位移界，明确Couette常涡量不满足条件。",
+      "450N": "定义通道提升中的扭转并证明一致L∞接近Couette的边界判据；不将两边界粒子结论升级为域内所有标量混合。",
+      "450O": "定义非齐次C1α范数、一个导数差及紧时间段正则性；全空间速度与压力的归一化单独说明。",
+      "450P": "引用光滑有界域局部唯一经典解与二维全局结论，补divu0=0；涡量最大值机制解释，椭圆对数估计及存在论未证明。",
+      "450Q": "标准R3、整数s≥3、Hs无散度初值与CtHs∩Ct1Hs−1解类；仅证明概要，不宣称原始六页证明已核读。",
+      "450R": "引用EGM v1定理1：某0<α<1、L2∩C1α无散度速度、紧支撑涡量、有限时间涡量积分发散；区分精确无限能量前身与有限能量局部化。",
+      "450S": "采用430Q的curlu=−w eθ约定，计算q=w/r物质导数；比较光滑轴上O(r)和Cα的O(r^α)，不由输运单独推出全局正则。",
+      "450T": "引用Chen–Hou v3定理2并指向§6定理4；周期固壁圆柱、轴对称带旋流、有限能量、支撑和奇对称均保留。未重述所有权和稳定常数。",
+      "450U": "验证D×T上的2.5维嵌入；用两个坐标标量和detDΦ=1证明max_i范数≥λ/√2。指标允许随时间改变，不作单个g的全时间量词跃迁。",
+      "450V": "定义−i sgn(k)乘子，计算三角函数像、零模、H²和实反对称性；只在圆周L2类。",
+      "450W": "周期初值−sinx，几何级数和复Riccati计算验证显式解；选随时间点证明t↑2无界。不推出Euler爆破。",
+      "450X": "R3中逐项计算s幂、缩放速度、无散度约束和符号；Biot–Savart须在已定义的函数类中。",
+      "450Y": "换元得s^(5λ−2)，故λ=2/5为必要条件；不声称剖面存在，局部或渐近自相似不受同一全空间公式约束。",
+      "450Z": "计算一次项及精确二次余项；对真解缩放族求导得尺度核。未给出Banach空间可逆性；秩一调节不自动消核。"
+    },
+    "claim_sources": {
+      "4501": "正式版§2；站内00OB、0A3F、0A34。",
+      "4502": "正式版§1–2；独立 Jacobian 计算。",
+      "4503": "正式版式(1)、(11)；独立轨道计算。",
+      "4504": "正式版§4.3；独立换元证明。",
+      "4505": "正式版问题1.1、§2、定理2.2前后。",
+      "4506": "正式版§2、推论2.1；独立变分计算。",
+      "4507": "正式版式(4)；独立链式求导。",
+      "4508": "正式版式(7)、§6.1；独立向量恒等式和ODE证明。",
+      "4509": "正式版式(17)、(19)；标准Newton核与Fourier计算。",
+      "4510": "正式版引理6.9的受限局部计算。",
+      "4511": "正式版§6.5、假设6.6–6.7及注6.8；实际证明入口EGM§3–7与报告文献53§7。",
+      "4512": "正式版§6.2–6.3；独立符号核对。",
+      "4513": "正式版§6.2；独立输运及压力分部积分。",
+      "4514": "正式版§3；独立Bernoulli和散度计算。",
+      "450A": "正式版§3.1；复用4301、430I并固定本站符号。",
+      "450B": "正式版式(9)–(10)；修正Jacobian排印后独立局部证明。",
+      "450C": "正式版§3；独立向量计算。",
+      "450D": "正式版定理3.1、文献45；原研究论文2408.14662未独立全文核读。",
+      "450E": "正式版§3.2；独立展开与求导，见source_errata E2。",
+      "450F": "正式版§4.1的受限剪切模型；独立Fourier证明。",
+      "450G": "正式版§4.1；Bedrossian–Masmoudi式(1.3)–(1.4)；改用独立直接乘子估计而非照搬其H3展示。",
+      "450H": "Bedrossian–Masmoudi，Publ. Math. IHES122(2015)，定理1、式(1.7a)–(1.7c)，pp200–201；§1.2的l1频率约定。",
+      "450I": "正式版定义4.4；有界域Yudovich背景经报告引用，未把430K当同域存在定理。",
+      "450J": "正式版猜想4.5。",
+      "450K": "正式版§4.3背景；既有0P0W、00BI、00EV；轨道版本的标准定义。",
+      "450L": "正式版定理4.7的明确受限替代；独立能量–Casimir证明。",
+      "450M": "正式版§4.3问题4.8之前；独立计算。",
+      "450N": "正式版定义4.9、定理4.10的特殊充分条件；问题4.8保留为研究问题。",
+      "450O": "正式版§5、脚注4；复用331C及4301。",
+      "450P": "正式版定理5.2–5.3，文献73、61、65、94。",
+      "450Q": "正式版定理6.1；Beale–Kato–Majda，Comm. Math. Phys.94(1984)61–66，DOI10.1007/BF01212349。",
+      "450R": "arXiv:1910.14071v1定理1、§2.6、§3–7；1904.04795v2定理1及注1.3–1.5；正式报告5.5。",
+      "450S": "正式版§6.3、图3文字；430Q的柱坐标约定及直接计算。",
+      "450T": "arXiv:2210.07191v3，定理2、§6定理4；报告文献15–16；严格数值部分DOI10.1137/23M1580395。",
+      "450U": "正式版命题6.4的嵌入部分；修复后独立有限族证明；2F02奇异值公式。",
+      "450V": "正式版§6.2模型背景；独立Fourier计算。",
+      "450W": "正式版§6.2动机；独立周期显式计算；De Gregorio闭合改为ux=Hω。",
+      "450X": "正式版式(18)–(19)；独立代入。",
+      "450Y": "正式版§6.4背景；独立能量尺度计算。",
+      "450Z": "正式版§6.5、假设6.6；独立代数展开。"
+    },
+    "remaining_branches": [
+      "正式版问题1.1及§2的广义最小作用量、最优涡片存在论只设入口，未补全弱可行类与研究证明。",
+      "§3.2定常解商空间的全局连通性、退化点及局部横截面问题保留；未把定理3.3的字面环面陈述录为可用定理。",
+      "§4.1一般周期函数混合定理须另核文献37的非退化和谱假设；450F仅证明Couette相位混合。松弛猜想及问题4.8按报告保留。",
+      "CFM涡量方向判据未重述；原始论文的零涡量集、局部几何及时间控制条件尚需逐项核对。",
+      "模型方程、带角点域、IPM及带源变体的全部奇性定理未逐一展开；本批保留模型定义和精确研究入口。",
+      "无边界光滑有限能量Euler奇性按所引报告记录为未解决方向；未作报告之后文献的穷尽更新。",
+      "香蕉空间术语外部核对未完成；采用已有站内术语及原论文含义，不声称已通过外部术语核验。",
+      "共享注册、统一sync/build、最终hash验收及发布由父级处理；本线程不修改共享文件，不提交或推送。"
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "source": "正式版§2、定理2.2及所引最小作用量文献",
+        "pages": [
+          "4505",
+          "4506",
+          "4507"
+        ],
+        "boundary": "广义流的存在、最优涡片及两点边值问题；光滑一阶变分不代替极小化存在论。"
+      },
+      {
+        "source": "正式版定理3.1、文献45；§3.2文献28、26",
+        "pages": [
+          "450D",
+          "450E"
+        ],
+        "boundary": "解析分类的临界集、解析延拓及移动平面证明；经过正确边界或横截面选择后的隐函数定理。"
+      },
+      {
+        "source": "Bedrossian–Masmoudi，Publ. Math. IHES122(2015)，定理1，§2–9",
+        "pages": [
+          "450H"
+        ],
+        "boundary": "时间依赖Gevrey权、共振级联、椭圆恢复、坐标修正及非线性闭合；精确假设与速度结论已读，研究证明未逐节展开。"
+      },
+      {
+        "source": "正式版定义4.4、猜想4.5、定理4.7、5.2–5.3",
+        "pages": [
+          "450I",
+          "450J",
+          "450L",
+          "450P"
+        ],
+        "boundary": "有界域Yudovich存在唯一性、全Arnold稳定性变体及经典Hölder存在/延拓证明；450L仅给统一凸受限证明。"
+      },
+      {
+        "source": "Beale–Kato–Majda，Comm. Math. Phys.94(1984)61–66；正式版§6.1",
+        "pages": [
+          "450Q"
+        ],
+        "boundary": "原始BKM对数估计及延拓证明未全文核读，正文为标准全空间Hs版与概要；CFM精确陈述未收录。"
+      },
+      {
+        "source": "arXiv:1904.04795v2定理1、注1.3–1.5；1910.14071v1定理1、§2.6、§3–7",
+        "pages": [
+          "450R",
+          "450S",
+          "4511"
+        ],
+        "boundary": "低Hölder剖面构造、谱及加权能量稳定性、有限能量局部化和非线性控制。"
+      },
+      {
+        "source": "arXiv:2210.07191v3定理2、§6定理4；DOI10.1137/23M1580395",
+        "pages": [
+          "450T"
+        ],
+        "boundary": "固壁圆柱的精确加权稳定性、支撑尺度、残差区间和严格数值常数；没有独立复现计算机辅助证明。"
+      },
+      {
+        "source": "正式版§6.5、假设6.6–6.7、注6.8、引理6.9",
+        "pages": [
+          "450Z",
+          "4510",
+          "4511"
+        ],
+        "boundary": "真实Banach空间中的逆算子、远场、有限秩修正及导数损失闭合；只证明代数线性化和局部输运正性。"
+      }
+    ]
+  },
+  "prerequisites": {
+    "4501": [
+      "00OB",
+      "0A3F",
+      "0A34"
+    ],
+    "4502": [
+      "4501",
+      "0A40",
+      "4301",
+      "00Q5"
+    ],
+    "4503": [
+      "4301",
+      "4501"
+    ],
+    "4504": [
+      "4503",
+      "4502",
+      "00Q6",
+      "4304"
+    ],
+    "4505": [
+      "4301",
+      "4503",
+      "4501"
+    ],
+    "4506": [
+      "4505",
+      "0A34",
+      "4502",
+      "430C"
+    ],
+    "4507": [
+      "4302",
+      "4501",
+      "430C"
+    ],
+    "4508": [
+      "4302",
+      "4301",
+      "4501",
+      "00OB"
+    ],
+    "4509": [
+      "2J0C",
+      "4301",
+      "0H4G"
+    ],
+    "4510": [
+      "00Q6"
+    ],
+    "4511": [
+      "450X",
+      "450Z",
+      "00M6",
+      "4510"
+    ],
+    "4512": [
+      "4301",
+      "430H",
+      "4503"
+    ],
+    "4513": [
+      "4301",
+      "4503",
+      "4504"
+    ],
+    "4514": [
+      "4301",
+      "450C"
+    ],
+    "450A": [
+      "4301",
+      "430I"
+    ],
+    "450B": [
+      "450A",
+      "430H",
+      "0H51"
+    ],
+    "450C": [
+      "4302",
+      "4508"
+    ],
+    "450D": [
+      "450B"
+    ],
+    "450E": [
+      "450B"
+    ],
+    "450F": [
+      "4503",
+      "00MJ",
+      "4101",
+      "4504"
+    ],
+    "450G": [
+      "4101",
+      "0H4G",
+      "450A",
+      "0W01",
+      "130F"
+    ],
+    "450H": [
+      "4302",
+      "4101",
+      "0H4G",
+      "450G"
+    ],
+    "450I": [
+      "450A",
+      "00MJ"
+    ],
+    "450J": [
+      "450I",
+      "00Q6",
+      "00F3"
+    ],
+    "450K": [
+      "00EK",
+      "0P0W",
+      "00BI",
+      "00EV"
+    ],
+    "450L": [
+      "450A",
+      "4304",
+      "4504",
+      "0P0W"
+    ],
+    "450M": [
+      "4501",
+      "430H",
+      "4502"
+    ],
+    "450N": [
+      "4501"
+    ],
+    "450O": [
+      "331C",
+      "4301",
+      "4509",
+      "4302"
+    ],
+    "450P": [
+      "4302",
+      "450O",
+      "430H",
+      "4508"
+    ],
+    "450Q": [
+      "4302",
+      "130F"
+    ],
+    "450R": [
+      "4302",
+      "450O"
+    ],
+    "450S": [
+      "430Q",
+      "331C"
+    ],
+    "450T": [
+      "430Q",
+      "450R"
+    ],
+    "450U": [
+      "4302",
+      "4503",
+      "4502",
+      "2F02"
+    ],
+    "450V": [
+      "0X09",
+      "4101"
+    ],
+    "450W": [
+      "450V"
+    ],
+    "450X": [
+      "4509",
+      "4508",
+      "4308"
+    ],
+    "450Y": [
+      "450X",
+      "4304"
+    ],
+    "450Z": [
+      "450X",
+      "4509"
+    ]
+  },
+  "navigation_only": {
+    "4500": "叙事综述，不作为任何概念的定义或前置。",
+    "icm2026-elgindi": "文献署名与版本页，不作为数学前置。",
+    "application_links": "450C→4514为后果，450R↔450T为条件比较，450S→450R为应用，450Y→450R为尺度比较；这些不是反向前置。450I→430K仅比较全空间版本，未将430K作为有界域Yudovich存在论。"
+  },
+  "atomic_reviews": {
+    "4501": {
+      "question": "怎样由速度恢复粒子位置，并确定流映射的适用时间？",
+      "status": "definition",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4502": {
+      "question": "无散度为何等价于光滑流保持体积？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4503": {
+      "question": "被动标量如何由初始粒子标签表示？",
+      "status": "definition_with_calculation",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4504": {
+      "question": "保体积输运保存哪些函数积分？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4505": {
+      "question": "不可压缩输运的端点约束与最小作用量是什么？",
+      "status": "definition",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4506": {
+      "question": "保体积固定端点变分怎样产生 Euler 方程？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4507": {
+      "question": "速度一形式沿流映射拉回后怎样变化？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4508": {
+      "question": "三维涡量为何随流的导数伸长？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4509": {
+      "question": "三维涡量恢复速度需固定哪些域和归一化？",
+      "status": "construction",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4510": {
+      "question": "向外输运如何在奇异权下产生局部二次型正性？",
+      "status": "proved_local_lemma",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4511": {
+      "question": "小剖面残差之外还需什么才能证明真解存在？",
+      "status": "method_remark",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4512": {
+      "question": "无黏无扩散Boussinesq标量怎样产生新涡量？",
+      "status": "definition_with_calculation",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4513": {
+      "question": "IPM的Darcy关系怎样耗散重力势能？",
+      "status": "definition_with_calculation",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "4514": {
+      "question": "广义Beltrami场与常比例Beltrami场有何区别？",
+      "status": "definition_with_calculation",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450A": {
+      "question": "流函数的符号和固壁边界常数怎样确定？",
+      "status": "definition_with_calculation",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450B": {
+      "question": "定常性在正则点附近何时给出ω=F(ψ)？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450C": {
+      "question": "定常三维Euler流有哪些Bernoulli第一积分？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450D": {
+      "question": "解析二维定常流何时具有全局半线性描述？",
+      "status": "cited_theorem",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450E": {
+      "question": "定常方程线性化为何有平移核？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450F": {
+      "question": "Couette输运怎样弱趋于水平平均？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450G": {
+      "question": "Couette线性化的非零水平模为何产生两种速度衰减率？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450H": {
+      "question": "哪些精确小扰动条件保证非线性Couette阻尼？",
+      "status": "cited_theorem",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450I": {
+      "question": "二维Euler所有轨道的弱极限集合怎样定义？",
+      "status": "definition",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450J": {
+      "question": "松弛猜想把弱极限集合与什么强拓扑性质联系起来？",
+      "status": "open_conjecture",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450K": {
+      "question": "允许平移或旋转时怎样定义定常解的轨道稳定？",
+      "status": "definition",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450L": {
+      "question": "统一凸Casimir怎样控制速度与涡量的联合L2差？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450M": {
+      "question": "Eulerian涡量稳定怎样约束粒子横向位移？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450N": {
+      "question": "边界速度差为何强制相对绕行持续增长？",
+      "status": "proved_special_case",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450O": {
+      "question": "速度和涡量的Hölder阶数及经典解时间范围怎样区分？",
+      "status": "definition",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450P": {
+      "question": "兼容Hölder初值何时局部存在，二维为何可全局延拓？",
+      "status": "cited_theorem_with_mechanism",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450Q": {
+      "question": "BKM怎样把三维有限时延拓归结为涡量时间积分？",
+      "status": "cited_theorem_with_sketch",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450R": {
+      "question": "已有的无力全空间有限能量奇性定理允许何种初值？",
+      "status": "cited_theorem",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450S": {
+      "question": "无旋流轴对称涡量除以半径后为何被输运？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450T": {
+      "question": "光滑带边界奇性解决的是什么问题？",
+      "status": "cited_research_remark",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450U": {
+      "question": "二维输运梯度怎样嵌入三维涡量并给出有限族下界？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450V": {
+      "question": "圆周Hilbert变换采用什么符号并有什么L2性质？",
+      "status": "definition_with_calculation",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450W": {
+      "question": "CLM非局部伸长模型能否给出直接可验的爆破解？",
+      "status": "proved_example",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450X": {
+      "question": "后向自相似代入怎样给出定常涡量剖面方程？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450Y": {
+      "question": "全空间精确自相似与非零有限动能守恒施加什么指数限制？",
+      "status": "proved",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    },
+    "450Z": {
+      "question": "剖面线性化的二次余项和尺度核是什么？",
+      "status": "proved_formal_algebra",
+      "reviewed": "逐页核对符号、域、初值/边界条件、量词、局部证明与引用边界；父级亦报告通读40原子。"
+    }
+  },
+  "reused_pages": {
+    "4101": "周期 Sobolev 空间与水波的零模态",
+    "4301": "欧氏向量场的散度、旋度与对流导数",
+    "4302": "不可压缩 Euler 与 Navier–Stokes 方程",
+    "4304": "光滑不可压缩流的能量平衡",
+    "4308": "Euler 的双参数重标度与 NS 的抛物重标度",
+    "00BI": "群作用",
+    "00EK": "度量空间",
+    "00EV": "等距映射",
+    "00F3": "紧空间",
+    "00M6": "Banach 空间",
+    "00MJ": "配对诱导的弱拓扑",
+    "00OB": "光滑常微分方程的存在唯一性",
+    "00Q5": "Lebesgue 积分",
+    "00Q6": "L^p 空间",
+    "0A34": "全微分的链式法则",
+    "0A3F": "Euclidean 开集间的微分同胚",
+    "0A40": "行列式的交替多线性刻画",
+    "0H4G": "欧氏空间上的 Fourier 变换",
+    "0H51": "有限维逆函数定理",
+    "0P0W": "不动点的 Lyapunov 稳定性",
+    "0W01": "欧氏 Fourier 变换的 Plancherel 定理",
+    "0X09": "圆周 Fourier 乘子的矩阵值范数",
+    "130F": "实数阶 Sobolev 空间的 Fourier 定义",
+    "2F02": "可逆矩阵的奇异值分解",
+    "2J0C": "弱导数与一阶 Sobolev 空间",
+    "331C": "Hölder 观测量将空间邻近转成数值误差界",
+    "430C": "Leray 投影消去压力梯度",
+    "430H": "二维 Euler 的涡量输运方程",
+    "430I": "二维 Biot–Savart 定律与有限能量条件",
+    "430Q": "轴对称无旋流速度的柱坐标结构"
+  },
+  "foundation_scope": {
+    "search": "写作前以全站rg及标题/正文检索查询Euler、涡量、Biot–Savart、流映射、输运、Fourier、Hölder、Sobolev、Lyapunov、群作用和奇异值；读取实际定义与命题，不把Outline当概念页。",
+    "fluid_reuse": "优先复用4301–4317中的4301、4302、4304、4308、430C、430H、430I、430K、430Q；未修改这些基础页。",
+    "new_gaps": "仅在本分支补流映射、体积保持、被动输运、流函数边界、圆周Hilbert变换、轨道稳定及模型方程等实质缺口。",
+    "recursive_check": "将本packet的112条前置与已有site-evergreen-audit前置图合并，只读追踪257页，无循环、缺页或Outline前置。图的闭合不等于重新证明全部共享基础。",
+    "baseline_leaves": [
+      "00DE",
+      "00E0",
+      "00EK",
+      "00G0",
+      "00NA",
+      "00Q0",
+      "0P02"
+    ],
+    "shared_review_boundary": "本轮逐页复读自己的42个tree及直接使用的共享基础；递归257节点中的更深共享页沿用现有审查记录，不宣称本轮全量数学复审。"
+  },
+  "source_records": [
+    {
+      "id": "official",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1807137",
+      "version": "2026-07-13出版，pp285–306",
+      "read": "§1–§6.5数学正文、公式、定理、图注1–4、脚注1–5；相关书目与版权栏。",
+      "not_read": "未独立核对官方PDF或图像像素；未全文阅读全部引用论文。",
+      "role": "主来源，定理及文献编号依正式版。"
+    },
+    {
+      "id": "report-arxiv-v2",
+      "url": "https://arxiv.org/html/2511.16254v2",
+      "version": "v2，2025-12-09",
+      "read": "版本记录、摘要、结构、引言及§3.2局部对照。",
+      "not_read": "未把v2记为另一份逐节独立全文阅读。"
+    },
+    {
+      "id": "damping-published",
+      "url": "https://pmihes.centre-mersenne.org/item/10.1007/s10240-015-0070-4.pdf",
+      "version": "Publ. Math. IHES122(2015)，195–300",
+      "read": "pp195–204的引言、定理1、式(1.3)–(1.7)、有关注记、§1.2的频率/范数约定及目录；§2.1线性计算入口。",
+      "not_read": "未通读§2–9全部研究证明；PDF截图工具未成功，不声称像素核验。",
+      "pages": [
+        "450G",
+        "450H"
+      ]
+    },
+    {
+      "id": "elgindi-v2",
+      "url": "https://arxiv.org/html/1904.04795v2",
+      "version": "v2，2020-05-04",
+      "read": "引言、§1.3定理1、注1.3–1.5及相关说明，核对精确自相似和无限能量边界。",
+      "not_read": "完整剖面构造及全部研究证明未展开。",
+      "pages": [
+        "450R",
+        "450S"
+      ]
+    },
+    {
+      "id": "EGM-v1",
+      "url": "https://arxiv.org/html/1910.14071v1",
+      "version": "v1，2019-10-30",
+      "read": "§1.1–1.4、定理1、注1.1、推论1.3、目录及§2.6/§3–7证明位置，核对有限能量、紧支撑涡量与积分发散。",
+      "not_read": "未通读§2–7完整技术证明。",
+      "pages": [
+        "450R",
+        "4511"
+      ]
+    },
+    {
+      "id": "Chen-Hou-v3",
+      "url": "https://arxiv.org/pdf/2210.07191v3",
+      "version": "v3，2023-05-09；PDF内署2023-05-10",
+      "read": "PDF前5页的引言、定理1–2、计算机辅助框架、方程(2.1)–(2.5)；§6.1的变量转换、定理4及紧接的支撑条件（PDF页67–69附近）。",
+      "not_read": "未通读145页证明，未复现严格数值代码；文末研究常数仅作引用入口。",
+      "pages": [
+        "450T"
+      ]
+    },
+    {
+      "id": "BKM-primary-metadata",
+      "url": "https://link.springer.com/article/10.1007/BF01212349",
+      "version": "Comm. Math. Phys.94(1984)，61–66",
+      "read": "出版页摘要和元数据；完整积分判据从报告6.1阅读，并限制为标准全空间Hs框架。",
+      "not_read": "原始六页全文获取未成功，未声称原始证明已核读。",
+      "pages": [
+        "450Q"
+      ]
+    },
+    {
+      "id": "classification-report-citation",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1807137",
+      "version": "正式版定理3.1、文献45",
+      "read": "分类陈述及报告中的证明思路。",
+      "not_read": "原研究论文arXiv:2408.14662全文未独立核读。",
+      "pages": [
+        "450D"
+      ]
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§1–2",
+      "pages": [
+        "4501",
+        "4502",
+        "4503",
+        "4505",
+        "4506",
+        "4507"
+      ],
+      "scope": "体积约束、标量端点与固定映射端点、光滑变分；极小化存在与涡片留作引用分支。"
+    },
+    {
+      "section": "§3",
+      "pages": [
+        "450A",
+        "450B",
+        "450C",
+        "450D",
+        "450E",
+        "4514"
+      ],
+      "scope": "流函数、局部F关系、解析分类、Bernoulli与Beltrami、线性化平移核；不照搬商空间的错误无核前提。"
+    },
+    {
+      "section": "§4",
+      "pages": [
+        "4504",
+        "450F",
+        "450G",
+        "450H",
+        "450I",
+        "450J",
+        "450K",
+        "450L",
+        "450M",
+        "450N"
+      ],
+      "scope": "相位混合、精确Gevrey引用、弱极限与松弛、受限能量稳定和扭转；一般周期函数混合条件尚待原文献。"
+    },
+    {
+      "section": "§5",
+      "pages": [
+        "450O",
+        "450P",
+        "450R"
+      ],
+      "scope": "速度/涡量正则性、兼容初值、2D全局与3D有限正则奇性。"
+    },
+    {
+      "section": "§6.1",
+      "pages": [
+        "4508",
+        "4509",
+        "450Q",
+        "450U"
+      ],
+      "scope": "涡伸长、BKM标准框架和有限族2.5维嵌入；CFM未重述。"
+    },
+    {
+      "section": "§6.2–6.4",
+      "pages": [
+        "450S",
+        "450T",
+        "450V",
+        "450W",
+        "450X",
+        "450Y",
+        "4512",
+        "4513"
+      ],
+      "scope": "轴对称、模型、边界构造、自相似和能量限制；带源/角点模型的研究定理不一并扩张。"
+    },
+    {
+      "section": "§6.5",
+      "pages": [
+        "450Z",
+        "4510",
+        "4511"
+      ],
+      "scope": "线性化代数、局部加权正性与引用方法说明；meta theorem不升级为存在定理。"
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "E1-jacobian",
+      "location": "§3.1，式(9)之前",
+      "finding": "HTML把同一乘积相减；应为psi_x omega_y−psi_y omega_x。",
+      "resolution": "450B独立坐标计算采用正确Jacobian。",
+      "pages": [
+        "450B"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E1-level-set",
+      "location": "§3.1，式(9)后的水平集措辞",
+      "finding": "任意连通等值集的措辞过强；临界集和分支不能省略。",
+      "resolution": "只证明正则点附近、坐标矩形中的连通水平曲线分支；全局分类另作引用。",
+      "pages": [
+        "450B",
+        "450D"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E2-quotient",
+      "location": "§3.2，S_k定义",
+      "finding": "已取商的S_k不能直接称C^k的闭子集。",
+      "resolution": "未复述该闭子集断言；商拓扑和横截面需单独选择。",
+      "pages": [
+        "450E"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E2-translation-kernel",
+      "location": "定理3.3",
+      "finding": "非恒定周期解满足L_*∂jψ_*=0，全部周期空间上的无核条件不能成立。",
+      "resolution": "450E证明平移核；未建立字面版本的图像定理，真实横截面/边界版留待原论文核对。",
+      "pages": [
+        "450E"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E3-general-period",
+      "location": "定理4.1",
+      "finding": "周期函数每个开集非常数，不足排除正测度等周期集或奇异谱问题。",
+      "resolution": "不引用该广义充分条件；450F证明非退化的Couette模型，文献37精确假设留待另核。",
+      "pages": [
+        "450F"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E3-zero-mode-energy",
+      "location": "§4.1，Couette阻尼",
+      "finding": "非零水平模与平均剪切必须区分；无限通道背景(y,0)不属L2。",
+      "resolution": "450G排除k=0；450H保留演化后的平均剪切，写速度差的L2收敛并固定恢复归一化。",
+      "pages": [
+        "450G",
+        "450H"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E3-Gevrey",
+      "location": "定理4.3",
+      "finding": "概括性的解析小扰动措辞不能代替原定理的空间和局部化条件。",
+      "resolution": "按已读出版版定理1给s>1/2、lambda0>lambda'>0、零总积分、一阶矩与Gevrey小量；不声称Sobolev小扰动普遍阻尼。",
+      "pages": [
+        "450H"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E4-energy-Casimir",
+      "location": "定理4.7",
+      "finding": "边界环量与流函数归一化需明确，F'>0的短条件不足代替整套能量框架。",
+      "resolution": "仅在有界单连通域、零边界流函数、统一凸G下给完整估计；多连通情形不收录。",
+      "pages": [
+        "450A",
+        "450L"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E4-divergence",
+      "location": "定理5.2",
+      "finding": "短陈述遗漏div u0=0。",
+      "resolution": "450P补无散度与不可穿透兼容条件、压力归一化和时间正则范围。",
+      "pages": [
+        "450P"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E5-finite-family",
+      "location": "命题6.4证明",
+      "finding": "每时刻有限族范数和大，只能选出依赖时间的指标，不能直接固定一个g对所有时间。",
+      "resolution": "450U证明2.5维嵌入及两个坐标标量的max≥lambda/sqrt(2)，不作量词升级。",
+      "pages": [
+        "450U"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E6-De-Gregorio",
+      "location": "§6.2",
+      "finding": "De Gregorio闭合印作u_x=H(u)。",
+      "resolution": "采用u_x=H(omega)；CLM显式例子独立验算。",
+      "pages": [
+        "450W"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E6-linear-R",
+      "location": "§6.2，任意线性R的爆破措辞",
+      "finding": "R=0给f_t=0，已否定无条件的普遍爆破表述。",
+      "resolution": "不收录此无条件断言；只证明明确的周期Hilbert模型例子。",
+      "pages": [
+        "450V",
+        "450W"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E7-meta-theorem",
+      "location": "§6.5",
+      "finding": "meta theorem没有给出真实Banach空间、逆算子或非线性导数损失估计。",
+      "resolution": "4511类型为Remark；450Z仅线性化计算，不能据此宣布剖面存在。",
+      "pages": [
+        "450Z",
+        "4511"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "E7-endpoints",
+      "location": "引理6.9",
+      "finding": "u的正性在(0,1)，不能包含已规定u=0的端点。",
+      "resolution": "4510只证明原点附近紧支撑测试函数的局部加权正性，明确u(0)=0和u'(0)>0。",
+      "pages": [
+        "4510"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "CFM-zero-vorticity",
+      "location": "§6.1，涡量方向判据",
+      "finding": "xi=omega/|omega|在零涡量集不定义，短述不能代替原几何假设。",
+      "resolution": "不建立CFM定理页；仅保留未展开研究分支。",
+      "pages": [],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "editorial-phase-mixing",
+      "location": "450F标题、450N链接",
+      "finding": "弱混合易与遍历论weak mixing混淆。",
+      "resolution": "依父级复读意见改为相位混合；450F标题为Couette输运的相位混合与弱极限。",
+      "pages": [
+        "450F",
+        "450N"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    },
+    {
+      "id": "editorial-Lyapunov-reuse",
+      "location": "450K及4500、450L",
+      "finding": "已有0P0W定义Lyapunov稳定性，不宜重复建基础定义。",
+      "resolution": "450K聚焦轨道稳定性并链接0P0W；4500、450L直接复用0P0W。",
+      "pages": [
+        "4500",
+        "450K",
+        "450L"
+      ],
+      "status": "writer-addressed",
+      "publisher_confirmation": "非出版方正式勘误；数学核对与编辑处理记录。"
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "source": "正式版§2、定理2.2及所引最小作用量文献",
+      "pages": [
+        "4505",
+        "4506",
+        "4507"
+      ],
+      "boundary": "广义流的存在、最优涡片及两点边值问题；光滑一阶变分不代替极小化存在论。"
+    },
+    {
+      "source": "正式版定理3.1、文献45；§3.2文献28、26",
+      "pages": [
+        "450D",
+        "450E"
+      ],
+      "boundary": "解析分类的临界集、解析延拓及移动平面证明；经过正确边界或横截面选择后的隐函数定理。"
+    },
+    {
+      "source": "Bedrossian–Masmoudi，Publ. Math. IHES122(2015)，定理1，§2–9",
+      "pages": [
+        "450H"
+      ],
+      "boundary": "时间依赖Gevrey权、共振级联、椭圆恢复、坐标修正及非线性闭合；精确假设与速度结论已读，研究证明未逐节展开。"
+    },
+    {
+      "source": "正式版定义4.4、猜想4.5、定理4.7、5.2–5.3",
+      "pages": [
+        "450I",
+        "450J",
+        "450L",
+        "450P"
+      ],
+      "boundary": "有界域Yudovich存在唯一性、全Arnold稳定性变体及经典Hölder存在/延拓证明；450L仅给统一凸受限证明。"
+    },
+    {
+      "source": "Beale–Kato–Majda，Comm. Math. Phys.94(1984)61–66；正式版§6.1",
+      "pages": [
+        "450Q"
+      ],
+      "boundary": "原始BKM对数估计及延拓证明未全文核读，正文为标准全空间Hs版与概要；CFM精确陈述未收录。"
+    },
+    {
+      "source": "arXiv:1904.04795v2定理1、注1.3–1.5；1910.14071v1定理1、§2.6、§3–7",
+      "pages": [
+        "450R",
+        "450S",
+        "4511"
+      ],
+      "boundary": "低Hölder剖面构造、谱及加权能量稳定性、有限能量局部化和非线性控制。"
+    },
+    {
+      "source": "arXiv:2210.07191v3定理2、§6定理4；DOI10.1137/23M1580395",
+      "pages": [
+        "450T"
+      ],
+      "boundary": "固壁圆柱的精确加权稳定性、支撑尺度、残差区间和严格数值常数；没有独立复现计算机辅助证明。"
+    },
+    {
+      "source": "正式版§6.5、假设6.6–6.7、注6.8、引理6.9",
+      "pages": [
+        "450Z",
+        "4510",
+        "4511"
+      ],
+      "boundary": "真实Banach空间中的逆算子、远场、有限秩修正及导数损失闭合；只证明代数线性化和局部输运正性。"
+    }
+  ],
+  "remaining_branches": [
+    "正式版问题1.1及§2的广义最小作用量、最优涡片存在论只设入口，未补全弱可行类与研究证明。",
+    "§3.2定常解商空间的全局连通性、退化点及局部横截面问题保留；未把定理3.3的字面环面陈述录为可用定理。",
+    "§4.1一般周期函数混合定理须另核文献37的非退化和谱假设；450F仅证明Couette相位混合。松弛猜想及问题4.8按报告保留。",
+    "CFM涡量方向判据未重述；原始论文的零涡量集、局部几何及时间控制条件尚需逐项核对。",
+    "模型方程、带角点域、IPM及带源变体的全部奇性定理未逐一展开；本批保留模型定义和精确研究入口。",
+    "无边界光滑有限能量Euler奇性按所引报告记录为未解决方向；未作报告之后文献的穷尽更新。",
+    "香蕉空间术语外部核对未完成；采用已有站内术语及原论文含义，不声称已通过外部术语核验。",
+    "共享注册、统一sync/build、最终hash验收及发布由父级处理；本线程不修改共享文件，不提交或推送。"
+  ],
+  "review_responses": [
+    {
+      "source": "父级消息及research/pde-elgindi-review.json E1–E7",
+      "resolution": "全部处理见source_errata；未修改父级审稿文件，文件中的旧needs-revision状态由父级自行更新。"
+    },
+    {
+      "source": "父级冻结前复读消息",
+      "pages": [
+        "450F",
+        "450N",
+        "450K",
+        "4500",
+        "450L"
+      ],
+      "resolution": "相位混合术语已改；0P0W复用已落实，450K专讲轨道稳定。"
+    },
+    {
+      "source": "父级明确报告的独立阅读",
+      "resolution": "父级已独立核arXiv:1306.5028v3定理1及1910.14071v1定理1，确认条件匹配；这不是本线程对这两个固定版本均作全文阅读的声明。"
+    },
+    {
+      "source": "父级最终等待packet消息",
+      "resolution": "父级报告全部41页加参考页复读完成、Forester和公式编译通过。本线程自己的验证仅为下列只读源检查；统一sync及hash验收待父级执行。"
+    }
+  ],
+  "validation": {
+    "status": "source-checks-passed-frozen-for-parent-sync",
+    "checked_on": "2026-10-20",
+    "source_checks": {
+      "owned_tree_files": 42,
+      "knowledge_pages": 40,
+      "outline_directly_links_all_atoms": true,
+      "prerequisite_edges": 112,
+      "dependency_closure_nodes": 257,
+      "body_internal_links": 169,
+      "broken_links": 0,
+      "duplicate_titles": 0,
+      "prerequisite_cycles": 0,
+      "outline_prerequisites": 0,
+      "editorial_or_normalizeFormat_findings": 0,
+      "brace_or_Forester_path_findings": 0,
+      "source_formulas": 582,
+      "katex_errors": 0
+    },
+    "method": "只读Node内联检查：全站ID/标题和链接目标索引；packet前置逐一要求正文链接；合并共享前置图做DFS；调用note-editorial-lib的prose/styleRules/normalizeFormat/groupEnd；对源公式调用本地KaTeX。检查不写共享文件。",
+    "formula_boundary": "582项为源文件提取公式的KaTeX检查，不冒称本线程浏览器渲染或Forester输出检查。",
+    "local_build": {
+      "status": "not-run-by-writer",
+      "reason": "用户要求统一构建由父级进行，避免修改共享构建目录。"
+    },
+    "parent_reported_validation": {
+      "status": "reported-passed",
+      "scope": "用户消息明确报告已复读全部41页及参考、Forester和公式编译通过；本线程未读取其构建日志。"
+    },
+    "shared_registry_modified": false,
+    "homepage_modified": false,
+    "build_directories_modified": false,
+    "committed": false,
+    "pushed": false,
+    "schema": "report必需字段、40个prerequisites、逐页proof_scope/claim_sources和两层remaining_branches/unexpanded_deep_proofs均随本packet提供；仅写入分配范围。",
+    "proof_acceptance": "局部证明、引用定理、证明概要、方法说明及开放问题分别登记。源/公式检查不证明数学正确性；父级最终注册、hash与发布验收独立。"
+  },
+  "owned_files": [
+    "trees/math/pde/elgindi/4500.tree",
+    "trees/math/pde/elgindi/4501.tree",
+    "trees/math/pde/elgindi/4502.tree",
+    "trees/math/pde/elgindi/4503.tree",
+    "trees/math/pde/elgindi/4504.tree",
+    "trees/math/pde/elgindi/4505.tree",
+    "trees/math/pde/elgindi/4506.tree",
+    "trees/math/pde/elgindi/4507.tree",
+    "trees/math/pde/elgindi/4508.tree",
+    "trees/math/pde/elgindi/4509.tree",
+    "trees/math/pde/elgindi/450A.tree",
+    "trees/math/pde/elgindi/450B.tree",
+    "trees/math/pde/elgindi/450C.tree",
+    "trees/math/pde/elgindi/450D.tree",
+    "trees/math/pde/elgindi/450E.tree",
+    "trees/math/pde/elgindi/450F.tree",
+    "trees/math/pde/elgindi/450G.tree",
+    "trees/math/pde/elgindi/450H.tree",
+    "trees/math/pde/elgindi/450I.tree",
+    "trees/math/pde/elgindi/450J.tree",
+    "trees/math/pde/elgindi/450K.tree",
+    "trees/math/pde/elgindi/450L.tree",
+    "trees/math/pde/elgindi/450M.tree",
+    "trees/math/pde/elgindi/450N.tree",
+    "trees/math/pde/elgindi/450O.tree",
+    "trees/math/pde/elgindi/450P.tree",
+    "trees/math/pde/elgindi/450Q.tree",
+    "trees/math/pde/elgindi/450R.tree",
+    "trees/math/pde/elgindi/450S.tree",
+    "trees/math/pde/elgindi/450T.tree",
+    "trees/math/pde/elgindi/450U.tree",
+    "trees/math/pde/elgindi/450V.tree",
+    "trees/math/pde/elgindi/450W.tree",
+    "trees/math/pde/elgindi/450X.tree",
+    "trees/math/pde/elgindi/450Y.tree",
+    "trees/math/pde/elgindi/450Z.tree",
+    "trees/math/pde/elgindi/4510.tree",
+    "trees/math/pde/elgindi/4511.tree",
+    "trees/math/pde/elgindi/4512.tree",
+    "trees/math/pde/elgindi/4513.tree",
+    "trees/math/pde/elgindi/4514.tree",
+    "trees/references/icm2026-elgindi.tree",
+    "research/pde-elgindi-packet.json"
+  ],
+  "frozen_tree_sha256": {
+    "trees/math/pde/elgindi/4500.tree": "97fb9e35ce8e0b6c54d4d26f254798106339d6c628d56ed1b636e09ab674dd24",
+    "trees/math/pde/elgindi/4501.tree": "082f7d79860ecd1c656ecc8cd1cc3a27f5ec6feb225cb440fb6ad61c08f30e37",
+    "trees/math/pde/elgindi/4502.tree": "e2b44e39e9b506ecec3e58787c2265ab3fa02a0e0ca3bbed5e7ba136b5fbba38",
+    "trees/math/pde/elgindi/4503.tree": "c76e7fca51810626238f3100457bac1413b75635d4087b86e74cd0eda3e25ca3",
+    "trees/math/pde/elgindi/4504.tree": "774f249999cc890e1fc23dc24eb747dc9529def251827829ab0cb77542e68e67",
+    "trees/math/pde/elgindi/4505.tree": "0caaa38da4e4a2c94da94bc73501f6f01f1e3248fc5d21434b9d55584ddb594d",
+    "trees/math/pde/elgindi/4506.tree": "68da4d3134c10f3f1220723cb289491f3f9f9648594693a607fbc0d92e640800",
+    "trees/math/pde/elgindi/4507.tree": "b76cc916d42f8b5664babffe85ebe8ed6447c20e488b0a63395d48213bc5ba6d",
+    "trees/math/pde/elgindi/4508.tree": "c957de16a449f8bfe5859a94d7d540ae312df4d573298ac41464a796b5801b8f",
+    "trees/math/pde/elgindi/4509.tree": "60a56a66434e711f16f4f9c833728df42d628cd2403761f841eef6af90b98ee8",
+    "trees/math/pde/elgindi/4510.tree": "3f6e108eb62212c6e175e8c9df4b4b9f563313742c985841a6f499a2828e60d7",
+    "trees/math/pde/elgindi/4511.tree": "19172dc414286352393e4a5a8eb220bfcc7d1a39c23ab14720eaaefe6522d306",
+    "trees/math/pde/elgindi/4512.tree": "44aa71a534e1803a16dac1b195f3357dd7ead540d2ddd940c09c847aaafedc78",
+    "trees/math/pde/elgindi/4513.tree": "5d7e5ef99ba2490cb7951adcca3cf5396e11d24c0b9fc6379f288a8e07f22f3c",
+    "trees/math/pde/elgindi/4514.tree": "111ac479b75d2f97e919d283a8a6d9181346763d14cd5bc1c6a134458a2eb198",
+    "trees/math/pde/elgindi/450A.tree": "d5c208905393abb08925e6b094dad12505c6e2a4e599c78a900e561b8ddcf7a0",
+    "trees/math/pde/elgindi/450B.tree": "c662874c92f4fc513db273c8d4023e7967215c221c4c3a79e833e6de8be6a67d",
+    "trees/math/pde/elgindi/450C.tree": "819a456f6b138cdcb82c2f444630d618d816667c3bf9e697088827d05af99e16",
+    "trees/math/pde/elgindi/450D.tree": "3beead2039390ed21f2c1ae6f1528f5a912d6d09d20ca90bcda190afbcc65a66",
+    "trees/math/pde/elgindi/450E.tree": "352fdd89e84d2a8492d3b20dfb8768d29fc4d009293fb1fe27f517865b518c64",
+    "trees/math/pde/elgindi/450F.tree": "fff84b1485a94422543de135837f1bfc82f7282c8dbdff4ae1845bced45d91c9",
+    "trees/math/pde/elgindi/450G.tree": "658d172ff711601f8a7a2bafcbe029c370a82f605664bf6e4556b21cfeccce3f",
+    "trees/math/pde/elgindi/450H.tree": "2fedb6f126c7d213bcba978d9b0c43c6479f909e007a481ba7c28030801a42d7",
+    "trees/math/pde/elgindi/450I.tree": "2da355a4e67d90644ec87421f644023f14ddd8e754a22d51299ad2bbe8505a96",
+    "trees/math/pde/elgindi/450J.tree": "74539d3547745353d5647466e653014aa50954a6f5c679bbddc94f4a672636b6",
+    "trees/math/pde/elgindi/450K.tree": "0b62b5aaad478ae5700193734c1563f3f6dbc8d12d7d90effa5088ee6fca9804",
+    "trees/math/pde/elgindi/450L.tree": "fa13a3759da3de7bcc4820ca55a8beae4ef9921f1bd74a3eb780884f61f04b67",
+    "trees/math/pde/elgindi/450M.tree": "2d9c520e4d4052ad49ccea3879792642676141fc0793b11653158e0d8cc8082f",
+    "trees/math/pde/elgindi/450N.tree": "846de5ae6e0513959f3669c19ae2951355f23a9e6b19da673ccbf1bd8f6a03ca",
+    "trees/math/pde/elgindi/450O.tree": "1a8946d3fd264697e043035c8a1664c87736917701e023459eddc3d554d38c22",
+    "trees/math/pde/elgindi/450P.tree": "65a32fb6ccdd99a8ac396c7e3e5a6f919ade79b969e59e186ceb3bc24d39b765",
+    "trees/math/pde/elgindi/450Q.tree": "79f97e4229d29f15249e973cffc464e7d78218e3c54492a8c2a704af20c37e48",
+    "trees/math/pde/elgindi/450R.tree": "58fd4348259987a41e377535c08f7b60589dfb37d7145d88bbc7f57f39f5d88c",
+    "trees/math/pde/elgindi/450S.tree": "83f1bc89074f37ba34ab3b0fdebe7ba102ca8afd305ed3dd73b04d0e011e94a4",
+    "trees/math/pde/elgindi/450T.tree": "7fdeff6bd9bd412b0516aac55b4fb6efa0ca99da27352d446ae0ee5407b2a6fd",
+    "trees/math/pde/elgindi/450U.tree": "110eefa289f010f8521242cc93b4d7397094e42ebc51e8a5a18b097137fe7622",
+    "trees/math/pde/elgindi/450V.tree": "6be41739eb842679a9c5afae73d1e79e272ba7120bbdd19c698582670e312e5b",
+    "trees/math/pde/elgindi/450W.tree": "e8d9f2dbac2eb8b0af1bd14a43df20d2d08ad223dde4c1e88680ea188a3b3716",
+    "trees/math/pde/elgindi/450X.tree": "c7c7a050926b7844786353eb789b426f4a31012b39aff4fdda20ae6ff68f1d4b",
+    "trees/math/pde/elgindi/450Y.tree": "d90ca3a9761b581e1f7db58689379d67123d5980dcf1d79a08ea27d66383aadc",
+    "trees/math/pde/elgindi/450Z.tree": "4ee2dd96c2110cb815a568d5eb8a20a29a6c9397465d5ae65d22f03304a3d3f8",
+    "trees/references/icm2026-elgindi.tree": "1aef2fff3ed60feeec80787ee1de3b081014011c06e5f2dae2da368d9754f067"
+  },
+  "freeze": {
+    "status": "frozen-after-packet-write",
+    "instruction": "本packet写出后本线程停止修改。父级可立即统一sync/build并以frozen_tree_sha256核对42个tree。packet自身hash由最终只读命令给出，不在文件内作自引用hash。",
+    "file_count": 43
+  }
+}

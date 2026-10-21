@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-20",
+  "result": "passed-local-integration",
+  "manifest": "research/icm2026-pde-second-reports.json",
+  "snapshots": "research/icm2026-pde-second-reports-snapshots.json",
+  "publication": {
+    "status": "not-pushed",
+    "scope": "The user requested publication of the previous batch followed by preparation of these three reports. This new batch is locally integrated and tested, not included in the previous release.",
+    "previous_release_commit": "0ce446f75b11af84bdbd7c2febb516ab7916ea51",
+    "previous_release_record": "research/icm2026-pde-first-release.json",
+    "preview": "http://localhost:8083/006A/"
+  },
+  "content": {
+    "reports": 3,
+    "outlines": [
+      "4400",
+      "4500",
+      "4600"
+    ],
+    "knowledge_pages": 117,
+    "reference_pages": 3,
+    "total_new_pages": 123,
+    "declared_prerequisite_edges": 358,
+    "report_page_counts": {
+      "4400": 40,
+      "4500": 40,
+      "4600": 37
+    },
+    "existing_foundations": "Reused existing probability, Fourier analysis, differential geometry, functional analysis, dynamical systems and first-batch PDE pages. Knowledge prerequisites are separate from bibliography, examples and navigation."
+  },
+  "mathematical_review": {
+    "records": [
+      "research/pde-deng-review.json",
+      "research/pde-elgindi-review.json",
+      "research/pde-faure-review.json"
+    ],
+    "results": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "open_findings": 0,
+    "reviewed_source_hashes_checked": true,
+    "scope": "Every new topic page was read by a reviewer distinct from its writer. Exact reading ranges, source corrections, local proofs, cited results and unexpanded research proofs are recorded per report. This is not a full rereading of the entire recursively reachable prerequisite corpus."
+  },
+  "source_checks": {
+    "workflow_commands": 39,
+    "passed": 39,
+    "failed": 0,
+    "log": "/tmp/math-blog-final-source-checks.json",
+    "new_regression_test": "tests/pde-second-reports.test.mjs",
+    "new_test_cases": 6,
+    "new_test_scope": "Report order, navigation, unique titles, source and prerequisite links, reachability, dependency acyclicity, exact review hashes, collision conservation, Couette transport signs and self-similar exponents. Numerical examples supplement, not replace, the written proofs."
+  },
+  "build": {
+    "command": "node scripts/build-site.mjs",
+    "exit_code": 0,
+    "log": "/tmp/pde-second-build.log",
+    "html_pages": 6511,
+    "checked_internal_links": 949078,
+    "checked_anchors": 6529,
+    "checked_resource_references": 46275,
+    "legacy_routes": "XML and /math-blog/ compatibility paths retained",
+    "theme_and_search": "Existing reading theme, Chinese labels and search assets passed checks."
+  },
+  "mathematics_rendering": {
+    "command": "node scripts/check-site-notes.mjs --katex /tmp/math-blog-katex-0.16.11.cjs",
+    "log": "/tmp/pde-second-katex-final.json",
+    "formulas": 81895,
+    "diagrams": 50,
+    "errors": 0,
+    "warnings": 0,
+    "new_diagram": "4620 uses the existing editable Sterling-style tikz-cd/SVG construction."
+  },
+  "browser": {
+    "record": "/tmp/pde-second-browser-final.json",
+    "result": "pass",
+    "unique_pages": 124,
+    "viewport_widths": [
+      1440,
+      390
+    ],
+    "page_viewport_checks": 248,
+    "scrollable_display_checks": 76,
+    "page_overflow_failures": 0,
+    "browser_xslt": "disabled",
+    "navigation_search_legacy_query_fragment": "passed",
+    "final_build_retest": "The first complete rebuild changed eight HTML outputs relative to an earlier preview. All 124 pages were tested again after the final rebuild; the earlier browser pass is not substituted for the final pass."
+  },
+  "visual_review": {
+    "overview_ids": [
+      "006A",
+      "4400",
+      "4500",
+      "4600"
+    ],
+    "detail_ids": [
+      "4405",
+      "4419",
+      "450W",
+      "450Z",
+      "4611",
+      "4620"
+    ],
+    "viewport_widths": [
+      1440,
+      390
+    ],
+    "detail_images": "/tmp/pde-second-detail-render/",
+    "checked": "Chinese headings and paragraphs, bibliography metadata, display equations, horizontal formula scrolling and the Wigner covariance diagram. Final Deng detail screenshots were refreshed and reread after rebuilding."
+  },
+  "scope_boundary": "These reports have substantial narrative and atomic coverage, with local definitions, calculations and proofs. The per-report remaining_branches and unexpanded_deep_proofs fields identify research-level results not re-proved here. Static and graph tests do not establish semantic completeness or the correctness of every cited theorem. No claim of a completed BananaSpace terminology comparison is made.",
+  "evidence_sha256": {
+    "research/icm2026-pde-second-reports.json": "59beb5a09c77b3aeb69039b2007a2443a285ce52777c90428348056ffcb0c665",
+    "research/icm2026-pde-second-reports-snapshots.json": "0bc43591f918a0b1016c1cbeb632b86bbb5b8cbaf6f96cb3b78b002b3d3b7574",
+    "research/pde-deng-review.json": "094530737d66e843e82a20d6ab0f64e368646c58354491370464b0e85a3b204d",
+    "research/pde-elgindi-review.json": "76a81b353fcbfd581eb7223ce118a3cfc74afbce3b1d0fb7e81305044736bb6f",
+    "research/pde-faure-review.json": "cecd08add416820bb730c0e6f46b88cbf579e2ec05148e01dec1de19a51566b7",
+    "/tmp/math-blog-final-source-checks.json": "1a5024ded6b12c53fe8f08ea735b0cb6dfa2754b665f11f4837779ee0378acf6",
+    "/tmp/pde-second-build.log": "16aa1e654bcca29e30d578b8271e917b01c561e1d48a4293703499d1665ac684",
+    "/tmp/pde-second-katex-final.json": "812a258006820188ef587eb77aa328259a6411f0d102518b3ca6aa048fb6fe0f",
+    "/tmp/pde-second-browser-final.json": "cb37356d0e777492bac4cf37a3ff8e8a2efd6321f59c70fcc2242b28f17e9611"
+  },
+  "completed_at": "2026-10-20T01:02:17.041Z"
+}

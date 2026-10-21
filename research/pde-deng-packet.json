@@ -1,0 +1,1012 @@
+{
+  "date": "2026-10-20",
+  "report": {
+    "speaker": "Yu Deng",
+    "prefix": "44",
+    "outline": "4400",
+    "reference": "icm2026-deng",
+    "title": "Hilbert's Sixth Problem: Particles and Waves",
+    "outline_title": "希尔伯特第六问题：粒子、波与动力学极限",
+    "doi": "10.1137/25M1804406",
+    "pages": "264-284",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1804406",
+    "version_url": "https://epubs.siam.org/doi/10.1137/25M1804406",
+    "version_role": "Exact published ICM2026 Volume 5 chapter, published online 2026-07-13, read in full mathematical HTML. Supplementary theorem conventions are pinned to arXiv:2408.07818v3, 2503.01800v1 and 2311.10082v2; their roles and targeted reading ranges are recorded below.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "Copyright 2026 International Mathematical Union. SIAM identifies CC BY 4.0. The reference page attributes Yu Deng, marks the Chinese adaptation and added elementary arguments, and links the license. No source figures are reproduced. Supplementary papers retain their own terms.",
+    "question": "牛顿硬球与随机弱非线性波各自怎样产生不可逆动力学方程，相关性为何阻碍短时定理的直接迭代，而严格的流体极限还需要哪些尺度与初值条件？",
+    "reading_scope": "Read the official HTML full mathematical main text, sections 1-4: all displayed formulas, Theorems 2.1-2.2 and 3.1-3.2, all 14 figure captions, footnotes 1-11, acknowledgments, publication metadata/license and relevant bibliography, especially references 25-30. Did not read the entire bibliography sequentially or inspect official PDF/figure pixels. Targeted original-paper readings are separately listed in source_records; none is claimed as a complete reading of the 192-, 48- or 121-page papers. All retrieved research material was treated as source data, never operational instructions.",
+    "coverage_status": "One narrative outline 4400, 40 atomic pages 4401-440F,4410-441F,4420-4428, and one reference page. Both particle and wave branches, fluid limits, the main proof obstructions and report-scoped open questions have entrances. Elementary proofs are separated from cited research theorems and schematic algorithms. Source-only checks do not constitute rendered-site acceptance or proof of all research inputs.",
+    "proof_scope": {
+      "4401": "Defines fixed-N phase-space laws and marginals; proves marginal normalization by Fubini and distinguishes probability marginals from rescaled grand canonical correlations.",
+      "4402": "Defines the nonoverlap region and hard-sphere flow, including the binary collision rule. Almost-everywhere global hard-sphere flow is an external classical input; singular simultaneous collisions are excluded.",
+      "4403": "Complete velocity-reflection calculation of momentum, kinetic energy, involution and absolute Jacobian one; conservation does not by itself prove a kinetic limit.",
+      "4404": "Defines the Boltzmann-Grad and Knudsen conventions; computes occupied-volume scale. Swept collision tube is a geometric heuristic, not a rigorous independence argument.",
+      "4405": "Defines the grand canonical probability weights with partition function and 1/N!, and normalized factorial correlation functions. Derives their total masses and explains why the initial hard-sphere law is not an exact product.",
+      "4406": "Defines fixed-order chaos using L1 convergence and distinguishes propagation from exact finite-system independence. Proves removal of the exclusion indicator under bounded spatial density via a pairwise union estimate.",
+      "4407": "Defines the positive-part hard-sphere collision operator, its equivalent half-absolute-value kernel and the Boltzmann equation. Molecular factorization is identified as the limiting statistical input, not assumed for the exact hard-sphere law.",
+      "4408": "Complete weak-form change of variables and the three collision-invariant moment identities, under absolute integrability.",
+      "4409": "Complete H-theorem calculation for positive smooth decaying/periodic solutions with convergent integrals. Physical entropy and mathematical H have opposite signs; no global existence or equilibration theorem is inferred.",
+      "4410": "Quotes the prepared-data incompressible Navier-Stokes-Fourier theorem for d=2,3 with physical time eta^-1 S*, weighted derivative conditions and eta^(3/2) error. Hydrodynamic estimates and transport coefficients are external; empirical velocity moments need the additional cutoff/tail arguments cited in the paper.",
+      "4411": "Defines the standard circular complex Gaussian from two real Gaussians and computes mixed moments by rotation symmetry and radial integration.",
+      "4412": "Defines L^-d/2 Fourier normalization on the L-periodic box and independent Gaussian initial coefficients. Computes second moments and explains almost-sure smoothness from rapid decay and finite expected absolute coefficient sums.",
+      "4413": "Fixes the normalized Laplacian, NLS sign, coupling and kinetic time from v2. Explicitly reconciles the report's doubled collision operator with its half-sized slow time; no incompatible Fourier conventions are combined.",
+      "4414": "Complete four-wave resonance rectangle identity and verification of the elastic collision parameterization.",
+      "4415": "Defines the double-Dirac cubic collision integral by its angular measure and derives the factor 1/2 and exponent d-2 for d>=3. The angular expression specifies the singular constraint convention.",
+      "4416": "Complete pointwise Rayleigh-Jeans collision cancellation and divergent-mass calculation in d>=3. Algebraic cancellation is separated from gain/loss integrability and from applicability of Schwartz-data theorems.",
+      "4417": "Defines distinct-mode chaos and distinguishes repeated Gaussian modes, whose moments include factorial multiplicities. Proves gauge/translation selection rules. Positive-time propagation and high-order estimates remain cited results with the same good-event truncation convention.",
+      "4418": "States a short-time specialization of the pinned long-time theorem, while locating the historical short-time result in the report. Retains the high-probability smooth-existence event, truncated expectation and d,gamma restrictions; tree estimates are not reproduced.",
+      "4419": "Quotes v2 Theorem 1.1 for every fixed regular effective lifespan interval, including the good event, uniform spectral error, quantifier order and square-box gamma restriction. Quotes Proposition 3.2 continuation criterion; its proof is in Appendix C. No polynomially growing time or global WKE regularity is inferred.",
+      "4420": "Complete conditional numerical bound showing that L^-c*rho absorbs rho! when rho<=n<=A log L. Actual graph counting, complexity bounds and grouped cancellation are external and are not inferred from this elementary inequality.",
+      "4421": "Complete subset inclusion-exclusion inversion of E_H relative to a reference one-particle density. Explicitly distinguishes this anchored expansion from ordinary partition cumulants.",
+      "4422": "Defines a readable collision-history multigraph and its ordinary cycle rank; the research molecule's decorated endpoints and precise admissibility remain in the original definitions. Correlation order alone is not treated as a recollision count.",
+      "4423": "Complete expansion of exclusion factors over unordered cluster pairs into graphs. Penrose tree regrouping and bounds for cyclic graphs remain external.",
+      "4424": "Complete Tonelli composition and operator-norm product estimate for ordinary integrable kernels. The constrained hard-sphere cutting identity is separately cited, including endpoint matching, operator order and localization.",
+      "4425": "Research cutting-algorithm overview only. Computes the schematic net epsilon exponent and identifies the required combinatorial inequality; all cutoffs, time powers, degenerate cases and the proof of the research estimate remain external.",
+      "4426": "Defines Dirac measures and their distribution action, then the simple-root delta substitution and regular-level coarea convention. Critical levels are not treated by a division-by-zero formula.",
+      "4427": "Complete cancellation of quartic terms in the d=3 quantum collision bracket, yielding Q+sigma*C in the stated normalization. General quantum many-body derivation is an open direction, not proved by the algebra.",
+      "4428": "Records report-scoped questions on faster growing times, effective singularities, condensation, quasilinear models and non-equilibrium spectra. No claimed complete current-literature survey or new resolution.",
+      "440A": "Defines the local Maxwellian and proves Q(M,M)=0 using momentum and energy conservation. Does not characterize every collision equilibrium.",
+      "440B": "Complete Gaussian computation of mass, momentum, stress, energy and energy flux, including momentum density rho*u and thermal central moment.",
+      "440C": "Quotes a strengthened sufficient version of Euclidean v3 Theorem 1: a covering-cube Gaussian initial norm controls the quantity displayed in original (1.15). Retains the weighted solution bound, log-epsilon range of correlation order and parameter-dependent threshold. Also states torus v1 Theorem 1 with its joint rate/time/size condition. Research proofs remain external; no equivalence of the printed ball expression and the cube norm is asserted in high dimension.",
+      "440D": "Derives compressible Euler moment closure conditional on local Maxwell equilibrium and the moment identities. This formal closure does not prove convergence to local equilibrium.",
+      "440E": "Research theorem overview, not a complete standalone construction of the Hilbert coefficients. Preserves prepared data F0 through F6, nonnegativity, normalization, original weighted remainder conditions and joint scale restriction; proves only the triangle-inequality combination epsilon^theta+eta.",
+      "440F": "Complete chain-rule calculation of the low-Mach time rescaling and Re=nu/eta. Statements about limiting fluid equations require the cited prepared-data convergence results.",
+      "441A": "Derives the interaction-representation modal ODE and its Duhamel integral with the stated sign and L normalization; defines ternary trees and paired trees. Convergence and quantitative summation of the expansion remain external.",
+      "441B": "Complete complex Gaussian Wick identity by independence and mixed moments, including repeated indices and factorial multiplicities.",
+      "441C": "Defines ordinary joint cumulants by set partitions, with the covariance example; distinguishes them from the hard-sphere relative subset coefficients.",
+      "441D": "Complete finite-coefficient moment-cumulant inversion using formal log/exp, followed by vanishing of mixed cumulants across independent groups. No analytic moment-generating function is required.",
+      "441E": "Explains the time-reversal obstruction only for conjugation/reflection-invariant norm-only sufficient restart hypotheses; includes k-to-minus-k. Does not deny valid a posteriori small-cumulant norm bounds.",
+      "441F": "Research proof architecture: balanced signed tree families, layers, partial expansion and retention of the current quadratic spectrum. Full canonical admissibility, cutoff orders and Proposition 3.9 errors are referenced, not replaced by the schematic description."
+    },
+    "claim_sources": {
+      "4401": "Standard probability marginal construction; existing 00L0,00Q5,0H53,00L3; report section 1.1 supplies the kinetic application.",
+      "4402": "Official report section 1.1.1, collision rule (1.2); 2408.07818v3 sections 1.1.1-1.1.2 and 2503.01800v1 section 1.2.1 for the hard-sphere domain.",
+      "4403": "Independent calculation of the collision rule in official (1.2).",
+      "4404": "Official section 1.1.1, Boltzmann-Grad discussion; independent epsilon/eta volume calculation.",
+      "4405": "2408.07818v3 Definition 1.3 and 2503.01800v1 Definition 1.3; independent factorial mass calculation.",
+      "4406": "Official sections 1.1.1 and 3.1; 2408.07818v3 Theorem 1 with nonoverlap indicator; independent fixed-order exclusion-volume estimate.",
+      "4407": "Official (1.3)-(1.4), including the positive-part convention; independent omega-to-minus-omega conversion.",
+      "4408": "Official collision invariants in section 1.1.2; independent symmetrization using (1.2).",
+      "4409": "Official (1.5) and section 1.1.2; independent sign and 1/4 entropy-production calculation with b=|g dot omega|/2.",
+      "4410": "2503.01800v1 section 1.3.1, Proposition 1.6, Theorem 2, (1.19)-(1.26); additional empirical moment claims located at (1.27)-(1.39).",
+      "4411": "Existing 0N0R,00L3,00L1 and independent Gaussian polar-coordinate calculation; supplies the DAT convention of 2311.10082v2.",
+      "4412": "2311.10082v2 section 1.1, (1.1) and (DAT); independent Fourier normalization and second-moment checks.",
+      "4413": "2311.10082v2 (NLS), Theorem 1.1 kinetic time; official (1.10), (1.13)-(1.14). Conversion C=2K is independently derived in 4415.",
+      "4414": "Independent algebra from official (1.2), (1.14) and v2 (COL).",
+      "4415": "2311.10082v2 (COL); official (1.14); independent radial delta/Jacobian computation explains the factor 1/2.",
+      "4416": "Official section 1.2 Rayleigh-Jeans discussion; independent reciprocal-spectrum cancellation and radial mass integral.",
+      "4417": "Official (1.12), Theorems 2.1-2.2; 2311.10082v2 Remark 1.5; independent repeated-mode Gaussian moment and symmetry selection calculations.",
+      "4418": "Official Theorem 2.1, short-time reference [25], DOI 10.1007/s00222-023-01189-2; precise displayed version is a short-interval consequence of 2311.10082v2 Theorem 1.1 and its section 3.7 expectation convention.",
+      "4419": "2311.10082v2 Theorem 1.1, Remarks 1.3-1.5, Proposition 3.2, section 3.5 Proposition 3.9, section 3.7 main proof and Appendix C; official Theorem 2.2.",
+      "4420": "Official sections 2.1.2-2.1.4 and footnote 5; independent factorial estimate. Underlying short-time graph bounds cited through report reference [25], Propositions 4.14 and 9.10, sections 9-10; that full paper was not read.",
+      "4421": "Official section 3.1, (3.2); independent Boolean-lattice subset inversion, compared with 441C.",
+      "4422": "Official sections 3.1-3.2; 2408.07818v3 research molecule definitions and roadmap; existing graph/connectedness definitions 00LB,00LC, plus local multiedge and cycle-rank explanation.",
+      "4423": "Official section 3.2.1, (3.7)-(3.8); independent unordered-edge expansion. The Penrose regrouping is cited through the report, not proved by this elementary identity.",
+      "4424": "Official (3.10)-(3.11), footnote 10; 2408.07818v3 Proposition 8.14 and Remark 8.15; independent ordinary-kernel argument from 0H53 and 00M4.",
+      "4425": "Official sections 3.3.1-3.3.3, (3.12)-(3.13); 2408.07818v3 Proposition 9.7, section 11 toy model and sections 12-13 general algorithm.",
+      "4426": "Standard measure/distribution construction from existing 00Q2 and 0W0Z, with simple-root change of variables; supports the singular constraints in report (1.14) and section 3.2.",
+      "4427": "Official section 4, (4.1), with d=3 kernel convention fixed by (1.4),(1.14); independent polynomial expansion.",
+      "4428": "Official section 1.2 and section 4; all open-state descriptions are relative to the report, not asserted as an exhaustive October 2026 literature update.",
+      "440A": "Official (1.6); independent product invariance using (1.2).",
+      "440B": "Independent Gaussian integration from official (1.6), existing 0I8L and 0H53; corrects the raw-moment interpretation of 2503.01800v1 (1.48).",
+      "440C": "2408.07818v3 Theorem 1, printed pp.5-7 and (1.15), with an explicitly stronger covering-cube initial norm; independent containment and high-dimensional coverage check. 2503.01800v1 Theorem 1 and (1.16)-(1.18); official Theorem 3.1 is used only as a simplified survey statement.",
+      "440D": "Official (1.7); independent velocity-moment derivation with 4408 and 440B.",
+      "440E": "2503.01800v1 section 1.3.2, Proposition 1.8, Theorem 3, (1.42)-(1.47), inheriting (1.24); official Theorem 3.2 is a simplified overview.",
+      "440F": "Official section 1.1.2, (1.8)-(1.9), Re convention; independent chain rule.",
+      "441A": "Official section 2.1.1; independent interaction-representation calculation from 2311.10082v2 (NLS) and (1.1); existing Duhamel definition 4317 and rooted-tree definition 0A03.",
+      "441B": "Official section 2.1.1 Wick reduction; independent proof from 4411 and 00L3.",
+      "441C": "Official section 2.2.1, (2.5); standard finite partition definition.",
+      "441D": "Official (2.5)-(2.6); independent formal power series proof using existing 0AL0.",
+      "441E": "Official section 2.2.2, (2.7)-(2.8); independent Fourier-conjugation check and qualification of the norm-only obstruction.",
+      "441F": "Official sections 2.2.1-2.2.4; 2311.10082v2 sections 3.2 (cumulants), 3.4 (Definitions 3.4-3.7), 3.5 (Proposition 3.9), 3.7 and section 5 for the non-coherence proof architecture."
+    },
+    "remaining_branches": [
+      "Open directions in report section 4 and the non-equilibrium/condensation discussion in section 1.2 remain open in the report's stated sense; no post-report exhaustive literature update is claimed.",
+      "Chinese terminology checks against BananaSpace could not be completed because both attempted site spellings were inaccessible through the web tool; terms follow the mathematical sources and reused site definitions pending external terminology verification.",
+      "No official PDF page-image or diagram-pixel comparison was performed. Original papers were read only in the targeted ranges listed in source_records; complete research proofs remain external.",
+      "Shared registration, subject landing, whole-site prerequisites snapshot, Forester build and rendered-browser verification are reserved to the parent. No shared files, build outputs, commits or pushes are part of this packet."
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "source": "2408.07818v3, Theorem 1; section 6 Propositions 6.1-6.3; sections 3.5,5,7-15",
+        "pages": [
+          "4402",
+          "440C",
+          "4421",
+          "4422",
+          "4423",
+          "4424",
+          "4425"
+        ],
+        "boundary": "Global almost-everywhere billiard construction, full cumulant/molecule formulas, collision histories, quantitative recollision estimates, truncation errors, layered selection and the general cutting algorithm. Ordinary subset and graph identities do not replace these estimates."
+      },
+      {
+        "source": "2503.01800v1, sections 2-5; section 1.3 Propositions 1.6,1.8 and Theorems 2,3 with their cited hydrodynamic sources",
+        "pages": [
+          "440C",
+          "440E",
+          "4410"
+        ],
+        "boundary": "Periodic hard-sphere extension, construction of Hilbert coefficients F1 through F6, fluid stability estimates, transport coefficients, and empirical velocity cutoff/tail control. The underlying hydrodynamic papers were not separately read."
+      },
+      {
+        "source": "2311.10082v2, section 3.4 Definitions 3.4-3.7; section 3.5 Proposition 3.9; section 3.7; sections 4-11 and appendices",
+        "pages": [
+          "4417",
+          "4418",
+          "4419",
+          "441F"
+        ],
+        "boundary": "Complete canonical garden admissibility, moment bounds on good events, partial expansion, cross-layer non-coherence, probabilistic and lattice-counting remainders, and Appendix C well-posedness/continuation proof."
+      },
+      {
+        "source": "Official report reference [25], DOI 10.1007/s00222-023-01189-2, especially Propositions 4.14,9.10 and sections 9-10 as located by the report",
+        "pages": [
+          "441A",
+          "4420"
+        ],
+        "boundary": "Short-time dominant/regular diagram classification, actual complexity counting and grouped cancellation. This original full research paper was not directly read; citations here are mediated by the complete official report."
+      },
+      {
+        "source": "Official report section 3.2.1 and referenced cluster-expansion literature",
+        "pages": [
+          "4423"
+        ],
+        "boundary": "Penrose tree regrouping, signs and quantitative bounds beyond the finite unordered-edge inclusion-exclusion identity."
+      }
+    ]
+  },
+  "prerequisites": {
+    "4401": [
+      "00L0",
+      "00Q5",
+      "0H53",
+      "00L3"
+    ],
+    "4402": [
+      "4401"
+    ],
+    "4403": [
+      "4402"
+    ],
+    "4404": [
+      "4402"
+    ],
+    "4405": [
+      "4401",
+      "4402",
+      "00L1"
+    ],
+    "4406": [
+      "4401",
+      "4405",
+      "00L3"
+    ],
+    "4407": [
+      "4401",
+      "4403",
+      "4404",
+      "4406"
+    ],
+    "4408": [
+      "4407",
+      "4403",
+      "0H53"
+    ],
+    "4409": [
+      "4407",
+      "4408"
+    ],
+    "4410": [
+      "4302",
+      "4405",
+      "0A32",
+      "440F"
+    ],
+    "4411": [
+      "00L3",
+      "0N0R",
+      "00L1"
+    ],
+    "4412": [
+      "132B",
+      "0H4F",
+      "4411"
+    ],
+    "4413": [
+      "4412"
+    ],
+    "4414": [
+      "4413",
+      "4403"
+    ],
+    "4415": [
+      "4414",
+      "4426",
+      "4413"
+    ],
+    "4416": [
+      "4415",
+      "4414",
+      "440A"
+    ],
+    "4417": [
+      "4412",
+      "4406",
+      "4411"
+    ],
+    "4418": [
+      "0H4F",
+      "4412",
+      "4413",
+      "4415",
+      "4419"
+    ],
+    "4419": [
+      "0H4F",
+      "4415",
+      "4412",
+      "4413"
+    ],
+    "4420": [
+      "441A"
+    ],
+    "4421": [
+      "4405",
+      "441C"
+    ],
+    "4422": [
+      "4402",
+      "00LB",
+      "4426",
+      "00LC"
+    ],
+    "4423": [
+      "4402",
+      "00LB",
+      "4422",
+      "4421"
+    ],
+    "4424": [
+      "00M4",
+      "0H53",
+      "4422"
+    ],
+    "4425": [
+      "4422",
+      "4424"
+    ],
+    "4426": [
+      "00Q2",
+      "0W0Z"
+    ],
+    "4427": [
+      "4407",
+      "4415"
+    ],
+    "4428": [
+      "440C",
+      "4419",
+      "4426",
+      "4416"
+    ],
+    "440A": [
+      "0N0R",
+      "4403",
+      "4407"
+    ],
+    "440B": [
+      "440A",
+      "0I8L",
+      "0H53"
+    ],
+    "440C": [
+      "4405",
+      "4407",
+      "0A32",
+      "4406"
+    ],
+    "440D": [
+      "4407",
+      "4408",
+      "440A",
+      "440B",
+      "4301"
+    ],
+    "440E": [
+      "440D",
+      "440A",
+      "4405",
+      "440C",
+      "440B"
+    ],
+    "440F": [
+      "4407",
+      "440A"
+    ],
+    "441A": [
+      "4413",
+      "4412",
+      "4317",
+      "4414",
+      "0A03"
+    ],
+    "441B": [
+      "4411",
+      "00L3"
+    ],
+    "441C": [
+      "00L0",
+      "00L1"
+    ],
+    "441D": [
+      "441C",
+      "0AL0",
+      "441B"
+    ],
+    "441E": [
+      "4413",
+      "4415",
+      "441C"
+    ],
+    "441F": [
+      "4413",
+      "441C",
+      "441A",
+      "441D",
+      "4417",
+      "441E"
+    ]
+  },
+  "navigation_only": {
+    "outline": "4400",
+    "reference": "icm2026-deng",
+    "policy": "Neither Outline nor Reference is a prerequisite. Body links to consequences, comparisons, normalization cross-references and proof applications are not all dependency edges. In particular 4413 links forward to 4415/4419 as normalization/application references, while 4415 depends on the locally defined model in 4413; 4406 links to 440C as an application, not a premise."
+  },
+  "reused_pages": {
+    "4301": "欧氏向量场的散度、旋度与对流导数",
+    "4302": "不可压缩 Euler 与 Navier–Stokes 方程",
+    "4317": "线性演化半群与 Duhamel 公式",
+    "00L0": "实随机变量与分布",
+    "00L1": "随机变量的期望",
+    "00L3": "事件与随机变量的独立性",
+    "00Q2": "测度",
+    "00Q5": "Lebesgue 积分",
+    "0H53": "Fubini–Tonelli 积分定理",
+    "0N0R": "标准正态分布与高斯尾函数",
+    "0I8L": "高斯积分的归一化常数",
+    "0A32": "偏导数与高阶偏导数",
+    "132B": "连续周期函数由 Fourier 系数唯一确定",
+    "0H4F": "欧氏空间上的 Schwartz 函数",
+    "0A03": "有限或可数的有根树",
+    "0AL0": "交换环上的形式幂级数",
+    "00LB": "有限简单无向图",
+    "00LC": "图的道路、距离与连通分支",
+    "00M4": "有界线性算子与算子范数",
+    "0W0Z": "缓增分布及其 Fourier 变换"
+  },
+  "foundation_search": {
+    "scope": "Searched the entire trees source inventory for probability, independence, density, Fourier coefficients, Gaussian integrals, Schwartz functions, distributions, graph concepts, Duhamel formula and fluid equations before adding definitions.",
+    "new_gaps": [
+      "4401 probability phase-space marginals versus factorial correlations",
+      "4405 grand canonical hard-sphere ensemble",
+      "4411 circular complex Gaussian convention",
+      "441C-441D ordinary joint cumulants and inversion",
+      "4426 Dirac mass and constraint convention, absent as a definition in the reused tempered-distribution page"
+    ],
+    "baseline": "Elementary sets, real/complex arithmetic and finite algebra; named analytic/probabilistic/graph notions use the reused atomic definitions above. Theorem-scale existence and estimates are explicitly cited inputs, not elementary prerequisite gaps."
+  },
+  "terminology_evidence": {
+    "checked_on": "2026-10-20",
+    "status": "external-verification-unavailable",
+    "attempted_urls": [
+      "https://banana-space.org/wiki/玻尔兹曼方程",
+      "https://bananaspace.org/wiki/玻尔兹曼方程"
+    ],
+    "result": "Web tool reported the pages inaccessible. No claim of BananaSpace agreement. Internal canonical definitions and the English mathematical meanings were checked."
+  },
+  "source_records": [
+    {
+      "id": "SIAM",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1804406",
+      "version": "Formal published chapter, online 2026-07-13, pp.264-284",
+      "read": "Entire mathematical sections 1-4, displayed theorems and formulas, all figure captions, footnotes 1-11; relevant bibliography entries and license metadata.",
+      "not_read": "All bibliography entries in sequence; PDF page images; diagram pixels; all research proofs in cited literature."
+    },
+    {
+      "id": "PARTICLE-v3",
+      "url": "https://arxiv.org/pdf/2408.07818v3",
+      "metadata_url": "https://arxiv.org/abs/2408.07818v3",
+      "version": "v3, 2025-07-18, 192 pages",
+      "read": "Targeted section 1.1.2 Definition 1.3, section 1.1.3 and section 1.1.4 Theorem 1 including weighted norms; table of contents and research-proof roadmap; targeted Proposition 8.14 and Remark 8.15 for cut composition and source locators for Proposition 9.7 and sections 11-13.",
+      "not_read": "Full 192-page research proof and appendices; diagram pixels.",
+      "retrieval": "Versioned PDF extracted text; versioned HTML retrieval failed due to size."
+    },
+    {
+      "id": "FLUID-v1",
+      "url": "https://arxiv.org/html/2503.01800v1",
+      "metadata_url": "https://arxiv.org/abs/2503.01800v1",
+      "version": "v1, 2025-03-03, 48 pages",
+      "read": "Sections 1.2.1-1.2.4 and 1.3.1-1.3.2, including Theorems 1-3, Propositions 1.6 and 1.8, displayed hypotheses and the short composition proofs; opening of section 1.4.",
+      "not_read": "Remaining technical proof sections in full and original hydrodynamic papers cited inside Propositions 1.6 and 1.8."
+    },
+    {
+      "id": "WAVE-v2",
+      "url": "https://arxiv.org/pdf/2311.10082v2",
+      "metadata_url": "https://arxiv.org/abs/2311.10082v2",
+      "version": "v2, 2024-04-07, 121 pages",
+      "read": "Section 1.1 normalization, (NLS),(1.1),(DAT),(COL), Theorem 1.1 and relevant remarks; Proposition 3.2, selected parameter/construction passages in sections 3.3-3.4, Definitions 3.3-3.4 and locator of Definition 3.7, Proposition 3.9 locator, section 3.7 proof passage fixing truncated expectation and assembling the theorem; table of contents.",
+      "not_read": "The full long-time research proof, full garden admissibility estimates, full Appendix C, and PDF page images.",
+      "retrieval": "Versioned PDF text. Versioned HTML v2 failed; available v1 HTML was not substituted as the mathematical source of the v2 theorem."
+    }
+  ],
+  "source_errata": [
+    {
+      "source": "Official Theorem 3.1",
+      "issue": "The survey writes exact product initial marginals for hard spheres. Literal finite-diameter exclusion forbids that identity.",
+      "treatment": "4405-4406 and 440C use the precise grand canonical excluded product and normalized correlations from the fixed original versions.",
+      "status": "survey-simplification-resolved"
+    },
+    {
+      "source": "Official Theorem 3.2",
+      "issue": "A particle epsilon^theta error alone does not measure distance to the Euler Maxwellian.",
+      "treatment": "440E separates particle error epsilon^theta from the prepared-data fluid error O(eta); 4410 preserves its different incompressible error and time.",
+      "status": "survey-simplification-resolved"
+    },
+    {
+      "source": "Official (1.10)-(1.14) versus 2311.10082v2 (NLS),(1.1),(COL)",
+      "issue": "Fourier 2pi, normalized Laplacian, angular collision factor and kinetic time must be changed together.",
+      "treatment": "4412-4415 use v2 exact conventions; K has angular factor 1/2, C_report=2K, tau_v2=2alpha^2*t and tau_report=alpha^2*t. This is an explicit convention conversion, not an unverified theorem transfer.",
+      "status": "normalization-reconciled"
+    },
+    {
+      "source": "2503.01800v1 Theorem 3, (1.48)",
+      "issue": "Raw compressible velocity moments as printed do not equal u and T; the moment of v is rho*u and the raw energy includes bulk velocity. The theorem also has apparent equation/time-label slips.",
+      "treatment": "440B calculates the moments directly; 440E uses the fixed smooth Euler interval and does not reproduce the mislabeled raw moments. No claim of an official publisher erratum.",
+      "status": "internal-consistency-correction"
+    },
+    {
+      "source": "Official section 3.2.1 schematic cluster product",
+      "issue": "An elementary inclusion-exclusion product must count each unordered pair once.",
+      "treatment": "4423 indexes edges by i<j; Penrose regrouping remains a separately cited research step.",
+      "status": "explicit-index-convention"
+    },
+    {
+      "source": "2408.07818v3, (1.15)",
+      "issue": "With Euclidean |x-m|, the displayed radius-one balls centered at Z^d fail to cover R^d for d>=5: the half-integer point has distance sqrt(d)/2 from the nearest lattice point. The displayed expression therefore cannot directly serve as a norm on arbitrary smooth functions in those dimensions.",
+      "treatment": "440C defines a stronger covering-cube norm using max_j |x_j-m_j|<=1. Each Euclidean unit ball lies inside its cube, so the assumed cube bound implies the printed bound and the quoted theorem remains applicable. No high-dimensional norm equivalence or official erratum is claimed.",
+      "status": "stronger-sufficient-hypothesis-explicit"
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "1.1 and 3.1",
+      "pages": [
+        "4401",
+        "4402",
+        "4403",
+        "4404",
+        "4405",
+        "4406",
+        "4407",
+        "4408",
+        "4409",
+        "440A",
+        "440B",
+        "440C"
+      ],
+      "scope": "Particle mechanics, probability, dilute limit, collision law, entropy and long-time theorem."
+    },
+    {
+      "section": "1.1.2 and Theorem 3.2",
+      "pages": [
+        "440D",
+        "440E",
+        "440F",
+        "4410"
+      ],
+      "scope": "Moment closure, prepared-data compressible limit and incompressible slow time."
+    },
+    {
+      "section": "1.2 and 2",
+      "pages": [
+        "4411",
+        "4412",
+        "4413",
+        "4414",
+        "4415",
+        "4416",
+        "4417",
+        "4418",
+        "4419",
+        "4426"
+      ],
+      "scope": "Wave model, normalization, randomness, resonance, collision operator, equilibrium and exact theorem hypotheses."
+    },
+    {
+      "section": "2.1-2.2",
+      "pages": [
+        "441A",
+        "441B",
+        "441C",
+        "441D",
+        "441E",
+        "441F",
+        "4420"
+      ],
+      "scope": "Elementary random/diagram algebra, factorial obstruction, time reversal and research partial-expansion architecture."
+    },
+    {
+      "section": "3.1-3.3",
+      "pages": [
+        "4421",
+        "4422",
+        "4423",
+        "4424",
+        "4425"
+      ],
+      "scope": "Relative correlations, graph expansion and cut estimates; full combinatorial algorithms remain referenced."
+    },
+    {
+      "section": "4",
+      "pages": [
+        "4427",
+        "4428"
+      ],
+      "scope": "Quantum bracket algebra and the report's open questions."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "source": "2408.07818v3, Theorem 1; section 6 Propositions 6.1-6.3; sections 3.5,5,7-15",
+      "pages": [
+        "4402",
+        "440C",
+        "4421",
+        "4422",
+        "4423",
+        "4424",
+        "4425"
+      ],
+      "boundary": "Global almost-everywhere billiard construction, full cumulant/molecule formulas, collision histories, quantitative recollision estimates, truncation errors, layered selection and the general cutting algorithm. Ordinary subset and graph identities do not replace these estimates."
+    },
+    {
+      "source": "2503.01800v1, sections 2-5; section 1.3 Propositions 1.6,1.8 and Theorems 2,3 with their cited hydrodynamic sources",
+      "pages": [
+        "440C",
+        "440E",
+        "4410"
+      ],
+      "boundary": "Periodic hard-sphere extension, construction of Hilbert coefficients F1 through F6, fluid stability estimates, transport coefficients, and empirical velocity cutoff/tail control. The underlying hydrodynamic papers were not separately read."
+    },
+    {
+      "source": "2311.10082v2, section 3.4 Definitions 3.4-3.7; section 3.5 Proposition 3.9; section 3.7; sections 4-11 and appendices",
+      "pages": [
+        "4417",
+        "4418",
+        "4419",
+        "441F"
+      ],
+      "boundary": "Complete canonical garden admissibility, moment bounds on good events, partial expansion, cross-layer non-coherence, probabilistic and lattice-counting remainders, and Appendix C well-posedness/continuation proof."
+    },
+    {
+      "source": "Official report reference [25], DOI 10.1007/s00222-023-01189-2, especially Propositions 4.14,9.10 and sections 9-10 as located by the report",
+      "pages": [
+        "441A",
+        "4420"
+      ],
+      "boundary": "Short-time dominant/regular diagram classification, actual complexity counting and grouped cancellation. This original full research paper was not directly read; citations here are mediated by the complete official report."
+    },
+    {
+      "source": "Official report section 3.2.1 and referenced cluster-expansion literature",
+      "pages": [
+        "4423"
+      ],
+      "boundary": "Penrose tree regrouping, signs and quantitative bounds beyond the finite unordered-edge inclusion-exclusion identity."
+    }
+  ],
+  "remaining_branches": [
+    "Open directions in report section 4 and the non-equilibrium/condensation discussion in section 1.2 remain open in the report's stated sense; no post-report exhaustive literature update is claimed.",
+    "Chinese terminology checks against BananaSpace could not be completed because both attempted site spellings were inaccessible through the web tool; terms follow the mathematical sources and reused site definitions pending external terminology verification.",
+    "No official PDF page-image or diagram-pixel comparison was performed. Original papers were read only in the targeted ranges listed in source_records; complete research proofs remain external.",
+    "Shared registration, subject landing, whole-site prerequisites snapshot, Forester build and rendered-browser verification are reserved to the parent. No shared files, build outputs, commits or pushes are part of this packet."
+  ],
+  "diagrams": {
+    "status": "not-added",
+    "reason": "The two scaling routes do not assert a commutative diagram. No source figures are reproduced; tree/cutting research pictures are described with their proof boundaries rather than presented as a verified algorithm figure. Sterling diagram rules were read but no new diagram is needed for the local identities."
+  },
+  "review_responses": [
+    {
+      "id": "DENG-01",
+      "action": "440E now displays the joint eta/epsilon/time condition locally, with non-optimality and prepared-data scope."
+    },
+    {
+      "id": "DENG-02",
+      "action": "4419 uses v2 section 3.5 for Proposition 3.9 and section 3.7 for the main proof."
+    },
+    {
+      "id": "DENG-03",
+      "action": "4418-4419 explicitly define E_event X=E[1_event X], without division by the event probability; 4417 applies the same convention."
+    },
+    {
+      "id": "DENG-04",
+      "action": "441F uses section 3.4 and Definitions 3.4-3.7 for the garden construction, not section 3.2."
+    },
+    {
+      "id": "DENG-05",
+      "action": "4428 replaces editorial process commentary with the convergence requirement for collision integrals in the stationary-spectrum discussion."
+    },
+    {
+      "id": "DENG-06",
+      "action": "4400 separates initially independent wave modes from initially excluded hard spheres; 4419 defines the Japanese bracket and the direction tau upward to tau_max."
+    },
+    {
+      "id": "DENG-07",
+      "action": "Reopened only 440C and the packet after the first freeze. Replaced the initial weighted ball expression by an explicitly stronger covering-cube norm, explained containment and the d>=5 noncoverage issue, reran strict formula/style checks and refreshed the sole changed tree hash."
+    }
+  ],
+  "validation": {
+    "status": "source-checks-pass",
+    "scope": "Only the 41 Deng branch trees, one reference tree and this packet; no shared registry writes, whole-site build or rendered output.",
+    "source_checks": {
+      "tree_files": 42,
+      "atomic_pages": 40,
+      "formulas_katex_strict": 582,
+      "distinct_body_links": 182,
+      "declared_prerequisite_edges": 120,
+      "prerequisite_closure_nodes": 184,
+      "outline_paragraphs": 11,
+      "all_branch_pages_reachable_from_outline": true,
+      "duplicate_tree_ids": 0,
+      "duplicate_branch_titles": 0,
+      "missing_body_links": 0,
+      "invalid_prerequisites": 0,
+      "prerequisite_cycles": 0,
+      "brace_errors": 0,
+      "format_errors": 0,
+      "banned_style_matches": 0,
+      "source_proof_scope_missing": 0
+    },
+    "source_check_method": "Read-only inline Node script using scripts/note-prerequisite-lib.mjs bodyLinks, scripts/note-editorial-lib.mjs groupEnd/prose/styleRules/normalizeFormat, strict KaTeX from wu-bu-zhi-shu/assets/vendor/katex.js, the entire tree inventory for destinations/title uniqueness, and the current shared prerequisite graph overlaid in memory with this packet. No shared files were generated.",
+    "mathematical_regressions": {
+      "status": "pass",
+      "collision_momentum_energy_involution_and_resonance_cases": 256,
+      "quantum_quartic_cancellation_cases": 200,
+      "subset_inversion_identities": 510,
+      "wick_multiplicity_cases": 56,
+      "tolerance": "Relative 1e-9 for floating arithmetic; exact integers for Wick pair counts.",
+      "boundary": "Deterministic finite regression checks complement the written elementary proofs; they do not verify the cited research estimates or imply a rigorous kinetic limit.",
+      "cube_norm_check": "Verified sqrt(5)/2>1 at the half-integer point, cube coverage by coordinate rounding, and Euclidean unit-ball containment in the radius-one sup-norm cube."
+    },
+    "editorial_review": {
+      "author_read_pages": [
+        "4401",
+        "4402",
+        "4403",
+        "4404",
+        "4405",
+        "4406",
+        "4407",
+        "4408",
+        "4409",
+        "440A",
+        "440B",
+        "440C",
+        "440D",
+        "440E",
+        "440F",
+        "4410",
+        "4411",
+        "4412",
+        "4413",
+        "4414",
+        "4415",
+        "4416",
+        "4417",
+        "4418",
+        "4419",
+        "441A",
+        "441B",
+        "441C",
+        "441D",
+        "441E",
+        "441F",
+        "4420",
+        "4421",
+        "4422",
+        "4423",
+        "4424",
+        "4425",
+        "4426",
+        "4427",
+        "4428"
+      ],
+      "outline_read": true,
+      "reference_read": true,
+      "scope": "Local assumptions and symbols, prerequisite meanings, proof-versus-citation status, particle/wave scale separation, source normalizations and narrative continuity.",
+      "independent_review": "Hume's independent final rereading and acceptance are recorded separately in research/pde-deng-review.json. The frozen source hashes below are the version offered for that review."
+    },
+    "deferred": [
+      "Parent's second-batch registry integration and tests/pde-second-reports.test.mjs",
+      "Forester compilation and rendered formula/page verification",
+      "Unavailable BananaSpace terminology check",
+      "Full proofs outside the exact source reading ranges"
+    ],
+    "shared_build": "not-run-by-design",
+    "git_commit_push": "not-performed",
+    "post_freeze_revision": "DENG-07: only 440C was reopened; all other 41 tree hashes unchanged. Strict KaTeX and formatting/style checks rerun on all 42 trees: 582 formulas pass. Existing body prerequisite targets of 440C unchanged."
+  },
+  "freeze": {
+    "status": "frozen-for-independent-final-review",
+    "outline_title": "希尔伯特第六问题：粒子、波与动力学极限",
+    "range": [
+      "4400-440F",
+      "4410-441F",
+      "4420-4428"
+    ],
+    "atomic_pages": 40,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "files": [
+      "trees/math/pde/deng/4400.tree",
+      "trees/math/pde/deng/4401.tree",
+      "trees/math/pde/deng/4402.tree",
+      "trees/math/pde/deng/4403.tree",
+      "trees/math/pde/deng/4404.tree",
+      "trees/math/pde/deng/4405.tree",
+      "trees/math/pde/deng/4406.tree",
+      "trees/math/pde/deng/4407.tree",
+      "trees/math/pde/deng/4408.tree",
+      "trees/math/pde/deng/4409.tree",
+      "trees/math/pde/deng/440A.tree",
+      "trees/math/pde/deng/440B.tree",
+      "trees/math/pde/deng/440C.tree",
+      "trees/math/pde/deng/440D.tree",
+      "trees/math/pde/deng/440E.tree",
+      "trees/math/pde/deng/440F.tree",
+      "trees/math/pde/deng/4410.tree",
+      "trees/math/pde/deng/4411.tree",
+      "trees/math/pde/deng/4412.tree",
+      "trees/math/pde/deng/4413.tree",
+      "trees/math/pde/deng/4414.tree",
+      "trees/math/pde/deng/4415.tree",
+      "trees/math/pde/deng/4416.tree",
+      "trees/math/pde/deng/4417.tree",
+      "trees/math/pde/deng/4418.tree",
+      "trees/math/pde/deng/4419.tree",
+      "trees/math/pde/deng/441A.tree",
+      "trees/math/pde/deng/441B.tree",
+      "trees/math/pde/deng/441C.tree",
+      "trees/math/pde/deng/441D.tree",
+      "trees/math/pde/deng/441E.tree",
+      "trees/math/pde/deng/441F.tree",
+      "trees/math/pde/deng/4420.tree",
+      "trees/math/pde/deng/4421.tree",
+      "trees/math/pde/deng/4422.tree",
+      "trees/math/pde/deng/4423.tree",
+      "trees/math/pde/deng/4424.tree",
+      "trees/math/pde/deng/4425.tree",
+      "trees/math/pde/deng/4426.tree",
+      "trees/math/pde/deng/4427.tree",
+      "trees/math/pde/deng/4428.tree",
+      "trees/references/icm2026-deng.tree",
+      "research/pde-deng-packet.json"
+    ],
+    "tree_source_hashes": [
+      {
+        "id": "4400",
+        "path": "trees/math/pde/deng/4400.tree",
+        "sha256": "964e4085ad180f256ac431412b862fbd1eb2e2188d0d17694e2cb8ccdc1c2356"
+      },
+      {
+        "id": "4401",
+        "path": "trees/math/pde/deng/4401.tree",
+        "sha256": "82f6fb503646aab64f6e80e57f6ef7505291c94c2b35980dcab14736b580a27e"
+      },
+      {
+        "id": "4402",
+        "path": "trees/math/pde/deng/4402.tree",
+        "sha256": "e01e3e4e657d4a0f2cbc73e0ac13a761adc76b80034fe847fcb4b294ed20982f"
+      },
+      {
+        "id": "4403",
+        "path": "trees/math/pde/deng/4403.tree",
+        "sha256": "b725ec9ae22f095a60f4c78a0ad72cb6ceada1e795dad87fcd3b158690e30520"
+      },
+      {
+        "id": "4404",
+        "path": "trees/math/pde/deng/4404.tree",
+        "sha256": "8705264c0cfbe28b81fa51da96602d321b6e5ac565c90b2c50084d66897ab9a4"
+      },
+      {
+        "id": "4405",
+        "path": "trees/math/pde/deng/4405.tree",
+        "sha256": "bb4a72258b1cb7f1ad2709739cc84cc822651290ecc17fa70f94d7ffae47c6e5"
+      },
+      {
+        "id": "4406",
+        "path": "trees/math/pde/deng/4406.tree",
+        "sha256": "8b3172ed8025da429c4a2cf620ec7785948cb7af36c0f4337e10f0b4aadf4461"
+      },
+      {
+        "id": "4407",
+        "path": "trees/math/pde/deng/4407.tree",
+        "sha256": "ddce2f253e68fc61aaa2dc3f5e7bc31d72817fef7febdfd6d0736849df93026f"
+      },
+      {
+        "id": "4408",
+        "path": "trees/math/pde/deng/4408.tree",
+        "sha256": "b4104affc7922e9e93fabe684d7427b1b77efa669dcd859286f55c414c5c1806"
+      },
+      {
+        "id": "4409",
+        "path": "trees/math/pde/deng/4409.tree",
+        "sha256": "d7bc3b54ecb01a3d850c0c7fa8ba9063ccd128dea01706ef8a0a415fe73bcfc9"
+      },
+      {
+        "id": "440A",
+        "path": "trees/math/pde/deng/440A.tree",
+        "sha256": "18cf185e874731748cafb5015df4102ddc3f9eeb5c6b92baf50fe4e2ec8a1d18"
+      },
+      {
+        "id": "440B",
+        "path": "trees/math/pde/deng/440B.tree",
+        "sha256": "86cd33d0e65d5bd54a27e932c8270b293dd9d32f42eb12f094c8ef98569ead56"
+      },
+      {
+        "id": "440C",
+        "path": "trees/math/pde/deng/440C.tree",
+        "sha256": "a0f73745feff6c9398ff098343aaffd3ba3a732d9dac5796a072178c5dca094e"
+      },
+      {
+        "id": "440D",
+        "path": "trees/math/pde/deng/440D.tree",
+        "sha256": "f78294913c764ad3b06287294ff862ee755a94ce854cae1406b7d3d1156643b1"
+      },
+      {
+        "id": "440E",
+        "path": "trees/math/pde/deng/440E.tree",
+        "sha256": "3138e5edd283664efe04536ee74d218fb68252fadb118cf6ea9a186d97a21214"
+      },
+      {
+        "id": "440F",
+        "path": "trees/math/pde/deng/440F.tree",
+        "sha256": "11df7da738b68923e57a905f1dbebce2ed229ba638b9e8258cd377a7bc21e50b"
+      },
+      {
+        "id": "4410",
+        "path": "trees/math/pde/deng/4410.tree",
+        "sha256": "981c99ad9106306fd45fc9c771a9c6fabcee826f5fe60c543002a6ffac89066a"
+      },
+      {
+        "id": "4411",
+        "path": "trees/math/pde/deng/4411.tree",
+        "sha256": "1186a41eccb72a9814cd16d1ce1d38800255c7cc1b6b0153283a06d3ad20cc2f"
+      },
+      {
+        "id": "4412",
+        "path": "trees/math/pde/deng/4412.tree",
+        "sha256": "65a5b644b67169315c0321e204ec4fc64c4358f00ef8bc6d1bff6acb6daa7999"
+      },
+      {
+        "id": "4413",
+        "path": "trees/math/pde/deng/4413.tree",
+        "sha256": "90d1e3a3e859ab4e4e092006196f2160103e6ea4833fa701ade30d72ed585975"
+      },
+      {
+        "id": "4414",
+        "path": "trees/math/pde/deng/4414.tree",
+        "sha256": "75e91276cc6d91d7472e6331251f8c3ace56eeaffa8896baabda4697437bd3d5"
+      },
+      {
+        "id": "4415",
+        "path": "trees/math/pde/deng/4415.tree",
+        "sha256": "d39121e47b11eab7454f73649c780bbf4a6b0e6b67636d65496b81c2c6d6a24f"
+      },
+      {
+        "id": "4416",
+        "path": "trees/math/pde/deng/4416.tree",
+        "sha256": "02cb06ed651c49904fa4bde56f60b926f808db90f9a3c52b6e8e425e484dba4a"
+      },
+      {
+        "id": "4417",
+        "path": "trees/math/pde/deng/4417.tree",
+        "sha256": "054e14e1f5eb82e05ecf68f357f939b953262ffcbea9ccfd9e51c5d97dd20ffa"
+      },
+      {
+        "id": "4418",
+        "path": "trees/math/pde/deng/4418.tree",
+        "sha256": "0478090752555dc24edb72634fa97e02bff161d16c8893f83f76675d849d9d79"
+      },
+      {
+        "id": "4419",
+        "path": "trees/math/pde/deng/4419.tree",
+        "sha256": "642be41313764f5bdd6b526d71dcc53ee937ef2b5f1474aa3c16dd630d789752"
+      },
+      {
+        "id": "441A",
+        "path": "trees/math/pde/deng/441A.tree",
+        "sha256": "71442fc0fedbc099ad5a6fb5fba7c05251d994cc302101fe6b1b76ed416d964a"
+      },
+      {
+        "id": "441B",
+        "path": "trees/math/pde/deng/441B.tree",
+        "sha256": "5df16a70fa48b6db8c59f6e0ad9b5deaeff159204787a316cf86b0c9f5f89d98"
+      },
+      {
+        "id": "441C",
+        "path": "trees/math/pde/deng/441C.tree",
+        "sha256": "88c9b305b5dbda2eada2426f262342288b221e1326b3b9a766df2ae4f691bec8"
+      },
+      {
+        "id": "441D",
+        "path": "trees/math/pde/deng/441D.tree",
+        "sha256": "7acf9e1131e0c9afa8f7f8f248e44dc7a83cd76414a2a0e4e2605fb62ab2e2c2"
+      },
+      {
+        "id": "441E",
+        "path": "trees/math/pde/deng/441E.tree",
+        "sha256": "9984cee0b8c7aa6a5c8c7c340dd29f63d7f7a3d139db751cd1f1044c9a2b3b58"
+      },
+      {
+        "id": "441F",
+        "path": "trees/math/pde/deng/441F.tree",
+        "sha256": "586ca53cea28747edab3ffce0ce0006fa1667e149b9485c0e54052f9bd654a7c"
+      },
+      {
+        "id": "4420",
+        "path": "trees/math/pde/deng/4420.tree",
+        "sha256": "becaba86a8d968c3cda16abce92c03633374798ded5b20f29cb2a12bfb623db3"
+      },
+      {
+        "id": "4421",
+        "path": "trees/math/pde/deng/4421.tree",
+        "sha256": "15d7281c2cb7025a8583f58bd31b76aa52bec38a6fe92ca28a4bf93568a49a49"
+      },
+      {
+        "id": "4422",
+        "path": "trees/math/pde/deng/4422.tree",
+        "sha256": "a9bf8a6fc914d4f9be588ac5d57acf0d39ddc92c1e0eb5435762ee43e4ecc047"
+      },
+      {
+        "id": "4423",
+        "path": "trees/math/pde/deng/4423.tree",
+        "sha256": "b3cf8858ff8b0ca8645f144a3751e569a18a392c3e70439c8751c8aefec9c6ee"
+      },
+      {
+        "id": "4424",
+        "path": "trees/math/pde/deng/4424.tree",
+        "sha256": "64c07fbe7943da76afdfdbecd85ea4e2f230b8b9bcaa4437966a9fbb5b7acafa"
+      },
+      {
+        "id": "4425",
+        "path": "trees/math/pde/deng/4425.tree",
+        "sha256": "19928f4315309a0632541f16ee5fbdb3be8eac032cfa0ba2566e75b1fa3d96a1"
+      },
+      {
+        "id": "4426",
+        "path": "trees/math/pde/deng/4426.tree",
+        "sha256": "2f846568d60f1fc739bf92f714d7c75bb0a786d3dfe1c6b8ec8629f6155fdc74"
+      },
+      {
+        "id": "4427",
+        "path": "trees/math/pde/deng/4427.tree",
+        "sha256": "38b3c6a1c1f011d75d5f6d758f7d5f041cc56f6501d60761e2cc7171072aff52"
+      },
+      {
+        "id": "4428",
+        "path": "trees/math/pde/deng/4428.tree",
+        "sha256": "d1293732d5564be9b9c7ef2875babfd47755b09a2f1f3893a44f4175ea253e6a"
+      },
+      {
+        "id": "icm2026-deng",
+        "path": "trees/references/icm2026-deng.tree",
+        "sha256": "def1ca6a19278df6217c8f9a9e91983ff3e4d276df55be5a2a39f8d4cd772c43"
+      }
+    ],
+    "packet_hash_policy": "The packet is listed but does not include a self-referential hash. Compute its SHA-256 externally at handoff if required.",
+    "write_boundary": "Only the files in this list were authored for this task. Shared files, reviewer report and other author branches are owned by their respective writers."
+  }
+}

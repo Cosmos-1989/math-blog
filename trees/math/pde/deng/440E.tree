@@ -1,0 +1,17 @@
+\title{硬球到可压缩 Euler 的两阶段极限}
+\date{2026-10-20}
+\taxon{Remark}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：报告 Theorem 3.2；2503.01800v1，Proposition 1.8、Theorem 3}
+
+\p{在单位环面 #{\mathbb T^d}、#{d=2,3} 上，固定[可压缩 Euler 系统](440D)的光滑解 #{(\rho,u,T)}，定义于与小参数无关的 #{[0,T_*]}，并有 #{\rho,T>0}。令 #{M(t,x,v)} 是相应[局部 Maxwell 分布](440A)。Deng–Hani–Ma 证明，适当准备的[巨正则硬球初值](4405)在联合稀薄、流体极限中产生这个 #{M}。}
+\p{原论文取碰撞率 #{\lambda=\eta^{-1}}，以有限 Hilbert 展开准备单粒子初值：}
+##{f_0^\eta=\sum_{j=0}^{6}\eta^jF_j(0)+\eta^3F_R\geq 0,\qquad
+\int f_0^\eta=1,\qquad F_0=M.}
+\p{这里 #{F_1,\ldots,F_6} 是对 Boltzmann 方程逐阶配平的修正项，其构造含线性化碰撞算子的逆与线性化 Euler 方程，精确规定见该文式 (1.42)；余项的加权导数界见式 (1.44)。这是带有指定构造的定理概要，不能把这些条件简化为任意光滑初值。}
+\p{采用该固定版本 Theorem 3 从式 (1.24) 继承的充分尺度条件}
+##{\max(1,\eta^{-1})\max(1,\eta^{-1}T_*)\ll(\log|\log\varepsilon|)^{1/2}.}
+\p{此条件未断言最优性。在这些假设下，[粒子到 Boltzmann 定理](440C)给出 #{\|f_1^\varepsilon -f^\eta\|_1\leq\varepsilon^\theta}，流体逼近给出 #{\|f^\eta -M\|_1\lesssim\eta}，故}
+##{\|f_1^\varepsilon -M\|_1\lesssim\varepsilon^\theta+\eta.}
+\p{可先固定 #{\eta} 令 #{\varepsilon\to 0}，再令 #{\eta\to 0}；联合极限则保持该文的定量条件。有限阶修正和流体误差不能并入纯粹的 #{\varepsilon^\theta} 误差。结论止于所固定光滑 Euler 解的区间，未越过激波形成时刻。}
+\p{上述定理与流体逼近的证明分别引用该文 Theorem 3 和 Proposition 1.8 及其文献；这里的三角不等式仅解释两个误差怎样合并。速度、温度的恢复按[Maxwell 矩](440B)进行。}

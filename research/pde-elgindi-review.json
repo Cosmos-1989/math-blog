@@ -1,0 +1,289 @@
+{
+  "date": "2026-10-20",
+  "reviewer": "parent",
+  "topic": "4500",
+  "result": "pass",
+  "source": {
+    "doi": "10.1137/25M1807137",
+    "url": "https://epubs.siam.org/doi/10.1137/25M1807137",
+    "version": "Published SIAM ICM2026 chapter, Volume 5, pp.285-306",
+    "reading_scope": "Abstract, sections 2-6.5 including displayed statements and figure captions, footnotes, bibliography entries 1-43 and publication/license metadata. The introduction was only partially read. Figure pixels, official PDF and the cited research proofs have not been checked in this review.",
+    "license": "CC BY 4.0, verified in the publisher's copyright field",
+    "access": "Web tool representation marked crawled today; not an uncached SIAM-origin download.",
+    "source_safety": "Source pages were treated as mathematical data, not instructions. The observations below are independent mathematical checks, not publisher-confirmed errata."
+  },
+  "open_findings": [],
+  "closed_findings": [
+    {
+      "id": "E1",
+      "location": "Section 3.1, expansion immediately before (9)",
+      "finding": "The HTML repeats the same product twice in the Jacobian. The correct steady equation is psi_x omega_y minus psi_y omega_x equals zero. Constancy along level sets must be interpreted on regular connected level curves unless stronger hypotheses are supplied."
+    },
+    {
+      "id": "E2",
+      "location": "Section 3.2, quotient S_k and Theorem 3.3",
+      "finding": "The quotient is not literally a subset of C^k. On the unreduced torus, a nonconstant steady solution with Delta psi=F(psi) has translation derivatives in ker(Delta-F'(psi)); trivial kernel therefore cannot be assumed without an appropriate reduction or different boundary setting. Do not reproduce the literal torus statement as a usable theorem."
+    },
+    {
+      "id": "E3",
+      "location": "Section 4.1, Theorems 4.1 and 4.3",
+      "finding": "Nowhere locally constant period alone does not rule out positive-measure isoperiodic sets or singular spectral measures. Give a proved nondegenerate mixing model unless the full source hypotheses are verified. Couette decay concerns nonzero horizontal Fourier modes and velocity perturbations; the background itself is not in L2 of the infinite channel. Nonlinear damping requires the original high-regularity hypotheses."
+    },
+    {
+      "id": "E4",
+      "location": "Theorem 4.7 and Theorem 5.2",
+      "finding": "State the boundary/circulation and stream-function normalization in the energy-Casimir argument. Local Euler existence requires divergence-free initial data, omitted in the short source statement."
+    },
+    {
+      "id": "E5",
+      "location": "Section 6.1, Proposition 6.4 proof",
+      "finding": "A finite sum of transported-scalar gradient norms bounded below at every time does not select one scalar attaining a uniform lower bound at every time. Retain the proved finite-family maximum estimate or a separately justified single-scalar example."
+    },
+    {
+      "id": "E6",
+      "location": "Section 6.2",
+      "finding": "The De Gregorio closure is u_x=H(omega), not H(u). A universal blow-up claim for every linear R in f_t=f R(f) is false when R=0; cite the precise theorem with its hypotheses or omit this unrestricted sentence."
+    },
+    {
+      "id": "E7",
+      "location": "Section 6.5",
+      "finding": "The source meta theorem is schematic and does not supply Banach spaces or derivative-loss bounds. Keep it a research method, not a complete existence theorem. In Lemma 6.9 positivity of u is on the open interval since both endpoint values are zero."
+    }
+  ],
+  "resolutions": {
+    "E1": "450B proves the corrected Jacobian identity in a regular local coordinate chart and explicitly limits the conclusion to local connected regular levels.",
+    "E2": "450E derives the factorization and translation kernel on the torus. It does not import the unsupported unreduced trivial-kernel statement or identify a quotient with a subset.",
+    "E3": "450F proves Couette phase mixing directly. 450G removes the horizontal zero mode for velocity decay. 450H states the original Gevrey, moment and mean conditions and retains the limiting shear correction; 4500 does not infer general mixing from the shortened report hypothesis.",
+    "E4": "450L fixes a bounded simply connected domain and zero Dirichlet stream-function normalization, proves cancellation of the linear term and the convex remainder bound. 450P includes divergence-free initial data and identifies external existence inputs.",
+    "E5": "450U proves a maximum estimate for two explicitly constructed passive scalars; the attaining index may vary with time. The SVD step and inverse-flow change of variables are explicit.",
+    "E6": "450V fixes the periodic Hilbert sign; 450W verifies a specific CLM blow-up solution by a convergent Fourier series and gives the correct De Gregorio closure. No unrestricted blow-up assertion for an arbitrary linear R is retained.",
+    "E7": "4510 proves only a compact-support local weighted estimate with all hypotheses stated. 4511 is a Remark explaining the method, derivative-loss and function-space requirements; no schematic meta theorem is promoted to a proved existence theorem."
+  },
+  "additional_review": [
+    "450F and its links use phase mixing, not weak mixing as an ergodic-theoretic property.",
+    "450K reuses Lyapunov stability at 0P0W and focuses on the separate notion of orbital stability modulo an isometric symmetry group.",
+    "450H checked against Bedrossian-Masmoudi arXiv:1306.5028v3, Theorem 1 and introductory remarks; full nonlinear proof not reconstructed.",
+    "450R checked against Elgindi-Ghoul-Masmoudi arXiv:1910.14071v1, Theorem 1, Remarks 1.1-1.2 and Corollary 1.3. Finite-energy localization is distinguished from the earlier infinite-energy exact profile.",
+    "450T checked against Chen-Hou arXiv:2210.07191v3, introductory pages and Theorem 2. Periodic cylinder, solid boundary and computer-assisted proof are retained; this is not a smooth whole-space finite-energy construction.",
+    "All 41 topic pages and the reference page were read in full. Local algebra, variational signs, flow identities, CLM solution, self-similar scaling, energy exponent, linearization and weighted integration by parts were checked independently of the writer. Selected prerequisites were read, not the entire recursive prerequisite corpus."
+  ],
+  "reviewed_files": [
+    {
+      "id": "4500",
+      "path": "trees/math/pde/elgindi/4500.tree",
+      "sha256": "97fb9e35ce8e0b6c54d4d26f254798106339d6c628d56ed1b636e09ab674dd24"
+    },
+    {
+      "id": "4501",
+      "path": "trees/math/pde/elgindi/4501.tree",
+      "sha256": "082f7d79860ecd1c656ecc8cd1cc3a27f5ec6feb225cb440fb6ad61c08f30e37"
+    },
+    {
+      "id": "4502",
+      "path": "trees/math/pde/elgindi/4502.tree",
+      "sha256": "e2b44e39e9b506ecec3e58787c2265ab3fa02a0e0ca3bbed5e7ba136b5fbba38"
+    },
+    {
+      "id": "4503",
+      "path": "trees/math/pde/elgindi/4503.tree",
+      "sha256": "c76e7fca51810626238f3100457bac1413b75635d4087b86e74cd0eda3e25ca3"
+    },
+    {
+      "id": "4504",
+      "path": "trees/math/pde/elgindi/4504.tree",
+      "sha256": "774f249999cc890e1fc23dc24eb747dc9529def251827829ab0cb77542e68e67"
+    },
+    {
+      "id": "4505",
+      "path": "trees/math/pde/elgindi/4505.tree",
+      "sha256": "0caaa38da4e4a2c94da94bc73501f6f01f1e3248fc5d21434b9d55584ddb594d"
+    },
+    {
+      "id": "4506",
+      "path": "trees/math/pde/elgindi/4506.tree",
+      "sha256": "68da4d3134c10f3f1220723cb289491f3f9f9648594693a607fbc0d92e640800"
+    },
+    {
+      "id": "4507",
+      "path": "trees/math/pde/elgindi/4507.tree",
+      "sha256": "b76cc916d42f8b5664babffe85ebe8ed6447c20e488b0a63395d48213bc5ba6d"
+    },
+    {
+      "id": "4508",
+      "path": "trees/math/pde/elgindi/4508.tree",
+      "sha256": "c957de16a449f8bfe5859a94d7d540ae312df4d573298ac41464a796b5801b8f"
+    },
+    {
+      "id": "4509",
+      "path": "trees/math/pde/elgindi/4509.tree",
+      "sha256": "60a56a66434e711f16f4f9c833728df42d628cd2403761f841eef6af90b98ee8"
+    },
+    {
+      "id": "450A",
+      "path": "trees/math/pde/elgindi/450A.tree",
+      "sha256": "d5c208905393abb08925e6b094dad12505c6e2a4e599c78a900e561b8ddcf7a0"
+    },
+    {
+      "id": "450B",
+      "path": "trees/math/pde/elgindi/450B.tree",
+      "sha256": "c662874c92f4fc513db273c8d4023e7967215c221c4c3a79e833e6de8be6a67d"
+    },
+    {
+      "id": "450C",
+      "path": "trees/math/pde/elgindi/450C.tree",
+      "sha256": "819a456f6b138cdcb82c2f444630d618d816667c3bf9e697088827d05af99e16"
+    },
+    {
+      "id": "450D",
+      "path": "trees/math/pde/elgindi/450D.tree",
+      "sha256": "3beead2039390ed21f2c1ae6f1528f5a912d6d09d20ca90bcda190afbcc65a66"
+    },
+    {
+      "id": "450E",
+      "path": "trees/math/pde/elgindi/450E.tree",
+      "sha256": "352fdd89e84d2a8492d3b20dfb8768d29fc4d009293fb1fe27f517865b518c64"
+    },
+    {
+      "id": "450F",
+      "path": "trees/math/pde/elgindi/450F.tree",
+      "sha256": "fff84b1485a94422543de135837f1bfc82f7282c8dbdff4ae1845bced45d91c9"
+    },
+    {
+      "id": "450G",
+      "path": "trees/math/pde/elgindi/450G.tree",
+      "sha256": "658d172ff711601f8a7a2bafcbe029c370a82f605664bf6e4556b21cfeccce3f"
+    },
+    {
+      "id": "450H",
+      "path": "trees/math/pde/elgindi/450H.tree",
+      "sha256": "2fedb6f126c7d213bcba978d9b0c43c6479f909e007a481ba7c28030801a42d7"
+    },
+    {
+      "id": "450I",
+      "path": "trees/math/pde/elgindi/450I.tree",
+      "sha256": "2da355a4e67d90644ec87421f644023f14ddd8e754a22d51299ad2bbe8505a96"
+    },
+    {
+      "id": "450J",
+      "path": "trees/math/pde/elgindi/450J.tree",
+      "sha256": "74539d3547745353d5647466e653014aa50954a6f5c679bbddc94f4a672636b6"
+    },
+    {
+      "id": "450K",
+      "path": "trees/math/pde/elgindi/450K.tree",
+      "sha256": "0b62b5aaad478ae5700193734c1563f3f6dbc8d12d7d90effa5088ee6fca9804"
+    },
+    {
+      "id": "450L",
+      "path": "trees/math/pde/elgindi/450L.tree",
+      "sha256": "fa13a3759da3de7bcc4820ca55a8beae4ef9921f1bd74a3eb780884f61f04b67"
+    },
+    {
+      "id": "450M",
+      "path": "trees/math/pde/elgindi/450M.tree",
+      "sha256": "2d9c520e4d4052ad49ccea3879792642676141fc0793b11653158e0d8cc8082f"
+    },
+    {
+      "id": "450N",
+      "path": "trees/math/pde/elgindi/450N.tree",
+      "sha256": "846de5ae6e0513959f3669c19ae2951355f23a9e6b19da673ccbf1bd8f6a03ca"
+    },
+    {
+      "id": "450O",
+      "path": "trees/math/pde/elgindi/450O.tree",
+      "sha256": "1a8946d3fd264697e043035c8a1664c87736917701e023459eddc3d554d38c22"
+    },
+    {
+      "id": "450P",
+      "path": "trees/math/pde/elgindi/450P.tree",
+      "sha256": "65a32fb6ccdd99a8ac396c7e3e5a6f919ade79b969e59e186ceb3bc24d39b765"
+    },
+    {
+      "id": "450Q",
+      "path": "trees/math/pde/elgindi/450Q.tree",
+      "sha256": "79f97e4229d29f15249e973cffc464e7d78218e3c54492a8c2a704af20c37e48"
+    },
+    {
+      "id": "450R",
+      "path": "trees/math/pde/elgindi/450R.tree",
+      "sha256": "58fd4348259987a41e377535c08f7b60589dfb37d7145d88bbc7f57f39f5d88c"
+    },
+    {
+      "id": "450S",
+      "path": "trees/math/pde/elgindi/450S.tree",
+      "sha256": "83f1bc89074f37ba34ab3b0fdebe7ba102ca8afd305ed3dd73b04d0e011e94a4"
+    },
+    {
+      "id": "450T",
+      "path": "trees/math/pde/elgindi/450T.tree",
+      "sha256": "7fdeff6bd9bd412b0516aac55b4fb6efa0ca99da27352d446ae0ee5407b2a6fd"
+    },
+    {
+      "id": "450U",
+      "path": "trees/math/pde/elgindi/450U.tree",
+      "sha256": "110eefa289f010f8521242cc93b4d7397094e42ebc51e8a5a18b097137fe7622"
+    },
+    {
+      "id": "450V",
+      "path": "trees/math/pde/elgindi/450V.tree",
+      "sha256": "6be41739eb842679a9c5afae73d1e79e272ba7120bbdd19c698582670e312e5b"
+    },
+    {
+      "id": "450W",
+      "path": "trees/math/pde/elgindi/450W.tree",
+      "sha256": "e8d9f2dbac2eb8b0af1bd14a43df20d2d08ad223dde4c1e88680ea188a3b3716"
+    },
+    {
+      "id": "450X",
+      "path": "trees/math/pde/elgindi/450X.tree",
+      "sha256": "c7c7a050926b7844786353eb789b426f4a31012b39aff4fdda20ae6ff68f1d4b"
+    },
+    {
+      "id": "450Y",
+      "path": "trees/math/pde/elgindi/450Y.tree",
+      "sha256": "d90ca3a9761b581e1f7db58689379d67123d5980dcf1d79a08ea27d66383aadc"
+    },
+    {
+      "id": "450Z",
+      "path": "trees/math/pde/elgindi/450Z.tree",
+      "sha256": "4ee2dd96c2110cb815a568d5eb8a20a29a6c9397465d5ae65d22f03304a3d3f8"
+    },
+    {
+      "id": "4510",
+      "path": "trees/math/pde/elgindi/4510.tree",
+      "sha256": "3f6e108eb62212c6e175e8c9df4b4b9f563313742c985841a6f499a2828e60d7"
+    },
+    {
+      "id": "4511",
+      "path": "trees/math/pde/elgindi/4511.tree",
+      "sha256": "19172dc414286352393e4a5a8eb220bfcc7d1a39c23ab14720eaaefe6522d306"
+    },
+    {
+      "id": "4512",
+      "path": "trees/math/pde/elgindi/4512.tree",
+      "sha256": "44aa71a534e1803a16dac1b195f3357dd7ead540d2ddd940c09c847aaafedc78"
+    },
+    {
+      "id": "4513",
+      "path": "trees/math/pde/elgindi/4513.tree",
+      "sha256": "5d7e5ef99ba2490cb7951adcca3cf5396e11d24c0b9fc6379f288a8e07f22f3c"
+    },
+    {
+      "id": "4514",
+      "path": "trees/math/pde/elgindi/4514.tree",
+      "sha256": "111ac479b75d2f97e919d283a8a6d9181346763d14cd5bc1c6a134458a2eb198"
+    },
+    {
+      "id": "icm2026-elgindi",
+      "path": "trees/references/icm2026-elgindi.tree",
+      "sha256": "1aef2fff3ed60feeec80787ee1de3b081014011c06e5f2dae2da368d9754f067"
+    }
+  ],
+  "validation_boundary": "Mathematical source review only. Cited global existence, damping, classification and singularity research proofs remain external inputs with explicit locators. This does not certify every recursive prerequisite or constitute build, browser or deployment acceptance. Final source hashes are recorded separately below.",
+  "final_snapshot": {
+    "captured_at": "2026-10-20T00:55:36.013Z",
+    "tree_count": 42,
+    "writer_freeze_preceded_hashes": true,
+    "packet_sha256": "5c86142e7682b6f45b6cbf8c0ea5a95b3d2cb9b268614ab9f9d51c059d59d3cc"
+  }
+}

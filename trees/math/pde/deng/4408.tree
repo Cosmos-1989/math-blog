@@ -1,0 +1,14 @@
+\title{Boltzmann 碰撞项的弱形式与守恒量}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (1.5)；对称化计算}
+
+\p{固定位置与时间，令 #{f\geq 0} 和测试函数 #{\psi(v)} 使下列积分绝对收敛。采用[硬球碰撞算子](4407)的记号，设 #{b=\tfrac 12|(v-w)\cdot\omega|}。则}
+##{\int_{\mathbb R^d}\psi(v)Q(f,f)(v)\,dv
+=\frac 12\iiint b\,ff_*
+[\psi(v')+\psi(w')-\psi(v)-\psi(w)]\,d\omega\,dw\,dv.}
+\p{\strong{证明。}先把正部核改成 #{b}。在增益项对 #{(v,w)} 作[碰撞对合](4403)，绝对 Jacobian 为一，#{b} 不变，得到 #{\iiint bff_*[\psi(v')-\psi(v)]}。再交换 #{v,w}，并把原式与交换后的式子平均，即得结论。积分换序由 [Fubini 定理](0H53)保证。}
+\p{取 #{\psi=1}、任一速度坐标 #{v_j} 或 #{|v|^2}，方括号由碰撞守恒恒等为零。于是}
+##{\int (1,v,|v|^2)Q(f,f)\,dv=0.}
+\p{这是碰撞点处的质量、动量与能量守恒。整个相空间的守恒还需处理输运的边界项，例如周期边界或足够的空间衰减。}

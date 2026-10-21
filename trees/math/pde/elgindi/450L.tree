@@ -1,0 +1,12 @@
+\title{统一凸 Casimir 给出的涡量稳定估计}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，定理4.7的受限能量论证}
+
+\p{设 #{D} 是光滑有界单连通平面域，#{\psi_*} 是光滑定常流函数，#{\psi_*|_{\partial D}=0}，#{\omega_*=\Delta\psi_*}、#{u_*=\nabla^\perp\psi_*}。设区间 #{I} 包含所比较涡量的值域，#{G\in C^2(I)} 满足 #{0<m\leq G''\leq M} 及 #{G'(\omega_*)=\psi_*}。对相同[零边界流函数](450A)归一化的光滑无力 Euler 解，令 #{\delta\omega=\omega -\omega_*}、#{\delta u=u-u_*}，则}
+##{\|\delta u(t)\|_2^2+m\|\delta\omega(t)\|_2^2\leq\|\delta u(0)\|_2^2+M\|\delta\omega(0)\|_2^2.}
+\p{\strong{守恒泛函。}令 #{\mathcal H(\omega)=\frac 12\int_D|\nabla\psi|^2+\int_DG(\omega)}。[光滑能量平衡](4304)在边界的通量为 #{(p+|u|^2/2)u\cdot n=0}；另一项由[输运守恒](4504)恒定。}
+\p{\strong{消去一次项。}写 #{\delta\psi=\psi -\psi_*}，边界为零。分部积分给出 #{\int\nabla\psi_*\cdot\nabla\delta\psi=-\int\psi_*\delta\omega}。Taylor 积分余项于是给出}
+##{\mathcal H(\omega)-\mathcal H(\omega_*)=\frac 12\|\delta u\|_2^2+\int_D(\delta\omega)^2\int_0^1(1-s)G''(\omega_*+s\delta\omega)\,ds.}
+\p{用 #{m,M} 上下界，再比较时刻 #{t} 与零时刻，得到结论。这证明在速度与涡量的联合 #{L^2} 距离下的 [Lyapunov 稳定](0P0W)。若 #{\omega_*=F(\psi_*)} 且 #{F'} 在相关区间有正的上下界，可取 #{G'=F^{-1}}。多连通域需额外固定环量并处理边界项，不包含在此估计中。}

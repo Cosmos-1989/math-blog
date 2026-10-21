@@ -1,0 +1,20 @@
+\title{硬球的不可压缩 Navier–Stokes–Fourier 极限}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：2503.01800v1，Proposition 1.6、Theorem 2，式 (1.19)–(1.26)}
+
+\p{在 #{\mathbb T^d}、#{d=2,3} 上，固定光滑、空间平均为零的 #{(u,r)}，在 #{[0,S_*]} 上满足}
+##{\partial_su+u\cdot\nabla u-\mu_1\Delta u=-\nabla p,\qquad
+\partial_sr+u\cdot\nabla r-\mu_2\Delta r=0,\qquad \nabla\cdot u=0.}
+\p{第一式是[不可压缩 Navier–Stokes 方程](4302)，第二式为随流输运的热扩散方程。#{r} 表示密度的一阶扰动，温度扰动为 #{-r}；#{\mu_1,\mu_2>0} 由硬球核决定，精确公式引用原论文所引 Gallagher–Tristani 定理。}
+\p{写 #{M_0(v)=(2\pi)^{-d/2}e^{-|v|^2/2}}，取[巨正则初值](4405)的碰撞率 #{\eta^{-1}}，单粒子密度为}
+##{f_0^\eta=M_0\left[1+\eta\left(\frac{d+2-|v|^2}{2}r(0,x)+v\cdot u(0,x)\right)
++\eta^4e^{|v|^2/4}g_R(x,v)\right]\geq 0.}
+\p{其中 #{g_R} 对每个 #{v} 的空间平均为零，且对所有 #{|\alpha|,|\beta|\leq 2d}，#{\|\langle v\rangle^{2d}\partial_x^\alpha\partial_v^\beta g_R\|_\infty\leq 1}，#{\langle v\rangle=(1+|v|^2)^{1/2}}。多重导数见[高阶偏导数](0A32)。假定}
+##{\max(1,\eta^{-1})\max(1,\eta^{-1}S_*)\ll(\log|\log\varepsilon|)^{1/2}.}
+\p{Deng–Hani–Ma 的 Theorem 2 给出，对 #{0\leq t_{\rm mic}\leq\eta^{-1}S_*} 一致有}
+##{\left\|f_1^\varepsilon(t_{\rm mic})-
+M_0\left[1+\eta\left(\frac{d+2-|v|^2}{2}r(\eta t_{\rm mic},x)+v\cdot u(\eta t_{\rm mic},x)\right)\right]\right\|_1
+\lesssim\eta^{3/2}.}
+\p{这是[低 Mach 时间](440F) #{s=\eta t_{\rm mic}} 下的结论。证明把该文 Proposition 1.6 的带高斯权流体估计与 Theorem 1 的粒子误差相加；尺度条件使粒子误差可被吸收。原论文还证明带速度截断的经验量依概率收敛，见式 (1.27)–(1.39)。该经验量结论不能只从无权 #{L^1} 收敛直接推出。}

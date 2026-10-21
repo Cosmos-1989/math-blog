@@ -1,0 +1,12 @@
+\title{Boltzmann 的 H 定理与熵符号}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (1.7)；光滑正解的对称化证明}
+
+\p{设 #{f>0} 是[Boltzmann 方程](4407)的光滑解，空间周期或在无穷远充分衰减，并假定以下积分、求导和换元合法。定义数学 H 泛函 #{\mathcal H(f)=\iint f\log f\,dx\,dv}；物理熵采用相反符号 #{S=-\mathcal H}。则}
+##{\frac{d\mathcal H}{dt}=-\eta^{-1}D(f)\leq 0,\qquad
+D(f)=\frac 14\int\iiint b(A-B)\log\frac AB\,d\omega\,dw\,dv\,dx,}
+\p{其中 #{A=f'f_*'}、#{B=ff_*}，#{b=\tfrac 12|(v-w)\cdot\omega|}。}
+\p{\strong{证明。}输运项积分为零；[质量守恒](4408)消去导数中的常数一，故 #{d\mathcal H/dt=\eta^{-1}\iint Q(f,f)\log f}。交换两粒子，得被积对数 #{\tfrac 12\log(ff_*)}。再作碰撞换元，#{A-B} 变号，#{\log B} 变为 #{\log A}，将两式平均得到上式。}
+\p{对正数 #{A,B}，对数的单调性给出 #{(A-B)(\log A-\log B)\geq 0}，从而 #{D(f)\geq 0}。报告中的 #{H} 取物理熵符号，故写成递增。熵单调性本身不证明任意解趋于平衡，也不证明所有时间上都存在光滑解。}

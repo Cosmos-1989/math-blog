@@ -1,0 +1,10 @@
+\title{Eulerian 涡量稳定约束粒子横向位移}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§4.3，问题4.8之前}
+
+\p{设光滑二维无力 Euler 解的涡量为 #{\omega(t)}，[流映射](4501)为 #{\Phi_t}。在固定保体积域上，若某定常涡量 #{\omega_*} 满足 #{\|\omega(t)-\omega_*\|_2\leq\varepsilon} 和 #{\|\omega_0-\omega_*\|_2\leq\varepsilon}，则}
+##{\|\omega_*\circ\Phi_t-\omega_*\|_2\leq 2\varepsilon.}
+\p{\strong{证明。}由[涡量输运](430H)，#{\omega(t)\circ\Phi_t=\omega_0}。因此 #{\omega_*\circ\Phi_t-\omega_*=(\omega_*-\omega(t))\circ\Phi_t+\omega_0-\omega_*}。[保体积换元](4502)保持第一项的 #{L^2} 范数，三角不等式给出结论。}
+\p{例如在通道 #{\mathbb T\times(0,1)}，若 #{\omega_*(x,y)=W(y)} 且 #{W'\geq c>0}，则中值公式给出 #{|W(Y)-W(y)|\geq c|Y-y|}。写 #{\Phi_t=(X_t,Y_t)}，便得 #{\|Y_t-y\|_2\leq 2\varepsilon /c}。这只限制横向位移；沿通道方向的绕行仍可持续增长。Couette 的常涡量 #{-1} 不满足这里的严格单调假设。}

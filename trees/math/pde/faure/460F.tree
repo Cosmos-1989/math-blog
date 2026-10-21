@@ -1,0 +1,16 @@
+\title{谱带边界与收缩率夹逼的充分条件}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，式(2.11)；Faure–Tsujii v4 式(1.6)、(1.7)}
+
+\p{设 #{F_k} 为[谱带丛](460E)，给纤维选连续范数。截面算子的上下长期增长率定义为}
+##{\gamma_k^+=\lim_{t\to+\infty}\frac 1t\log\|e^{tX_{F_k}}\|_{L^\infty},
+\qquad
+\gamma_k^-=\lim_{t\to -\infty}\frac 1t\log\|e^{tX_{F_k}}\|_{L^\infty}.}
+\p{群性质给出算子范数的次乘性，故连续时间次可加引理保证极限存在。负时间分母为负，不能把第二个式子解释成正时间最大增长率。若稳定线性作用的奇异值对 #{t\ge 0} 落在 #{C^{-1}e^{-\lambda_{\max}t}} 与 #{Ce^{-\lambda_{\min}t}} 之间，其中 #{0<\lambda_{\min}\le\lambda_{\max}}，则未扭曲的标量模型有}
+##{-\left(\frac d2+k\right)\lambda_{\max}
+\le\gamma_k^-\le\gamma_k^+
+\le -\left(\frac d2+k\right)\lambda_{\min}.}
+\p{\strong{估计。}#{d} 维 Jacobian 的平方根最多贡献 #{e^{-d\lambda_{\min}t/2}}，#{k} 次齐次多项式最多贡献 #{e^{-k\lambda_{\min}t}}；常数经 #{t^{-1}\log} 后消失。逆作用给出另一端界。于是 #{\gamma_k^+\to -\infty}。}
+\p{第 #{k} 带与下一带分开的一个充分条件是 #{(d/2+k+1)\lambda_{\min}>(d/2+k)\lambda_{\max}}。这是粗界推出的充分条件，不是必要条件。曲率恒为 #{-1} 的双曲曲面有 #{d=1}、稳定收缩 #{e^{-t}}，从而 #{\gamma_k^- =\gamma_k^+=-1/2-k}。}

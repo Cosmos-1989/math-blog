@@ -1,0 +1,10 @@
+\title{圆周 Hilbert 变换的符号约定}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§6.2的模型算子}
+
+\p{在 #{\mathbb T=\mathbb R/(2\pi\mathbb Z)} 上写 #{f(x)=\sum_{k\in\mathbb Z}\widehat f(k)e^{ikx}}，定义 Hilbert 变换 #{H} 为[Fourier 乘子](0X09)}
+##{\widehat{Hf}(k)=-i\operatorname{sgn}(k)\widehat f(k),\qquad\operatorname{sgn}(0)=0.}
+\p{因此 #{H1=0}、#{H\cos(kx)=\sin(kx)}、#{H\sin(kx)=-\cos(kx)}，其中 #{k>0}。[周期 Parseval 恒等式](4101)给出 #{\|Hf\|_2\leq\|f\|_2}，故它从三角多项式延拓到 #{L^2}。若 #{f} 的平均值为零，则 #{H^2f=-f}。}
+\p{对实值 #{f}，#{Hf} 仍实值，而且 #{\int fHf=0}：正负频率的乘子互为相反数，在实内积中抵消。这个算子不改变微分阶数，却通过全体 Fourier 系数作用于函数，提供一个一维非局部伸长模型。此处固定圆周约定；全直线 Hilbert 变换需用连续频率并指定相应函数类。}

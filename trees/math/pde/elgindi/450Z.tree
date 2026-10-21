@@ -1,0 +1,10 @@
+\title{自相似剖面方程的线性化与尺度核}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§6.5、假设6.6；直接代数展开}
+
+\p{以[自相似剖面算子](450X) #{\mathcal F(\Omega,\lambda)=\Omega+\lambda y\cdot\nabla\Omega+(K\Omega)\cdot\nabla\Omega -\Omega\cdot\nabla(K\Omega)}，设近似剖面为 #{(\Omega_*,\lambda_*)}，#{U_*=K\Omega_*}。扰动 #{(h,\mu)} 的一次项为}
+##{\begin{aligned}L_*h+\mu y\cdot\nabla\Omega_*={}&h+\lambda_*y\cdot\nabla h+U_*\cdot\nabla h+(Kh)\cdot\nabla\Omega_*\\&-h\cdot\nabla U_*-\Omega_*\cdot\nabla(Kh)+\mu y\cdot\nabla\Omega_* .\end{aligned}}
+\p{\strong{计算。}将 #{\Omega_*+h,\lambda_*+\mu} 代入并逐项展开；余项恰为 #{\mu y\cdot\nabla h+(Kh)\cdot\nabla h-h\cdot\nabla(Kh)}。显示式仅计算导数表达式，未指定使它有界或可逆的 Banach 空间。}
+\p{若 #{\Omega_*} 是真解，且所选 [Biot–Savart 归一化](4509)保持缩放，则 #{\Omega_a(y)=\Omega_*(ay)} 也是真解，#{K\Omega_a(y)=a^{-1}U_*(ay)}。对 #{a} 在一处求导，得到 #{L_*(y\cdot\nabla\Omega_*)=0}。尺度对称性因此产生核向量。令 #{\mu=\ell(h)}，其中 #{\ell} 为线性泛函，会加入秩至多一的项；这种调节是否消去核，还取决于归一化、值域障碍和算子的定义域。}

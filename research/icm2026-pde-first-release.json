@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-20",
+  "result": "published-and-live-verified",
+  "scope": "First four PDE reports: Armstrong-Kuusi, Berti, Cabre and Colombo. The Deng, Elgindi and Faure working-tree additions are not part of this release.",
+  "commit": "0ce446f75b11af84bdbd7c2febb516ab7916ea51",
+  "theme_commit": "23017d9c49e7685e9ec5949378f9b5e3cb924b58",
+  "repository": "https://github.com/Cosmos-1989/math-blog",
+  "branch": "main",
+  "site": "https://opetope.cc/006A/",
+  "workflow": {
+    "run_id": 39347767155,
+    "url": "https://github.com/Cosmos-1989/math-blog/actions/runs/39347767155",
+    "head_sha_verified": true,
+    "build": "success",
+    "deploy": "success",
+    "deployed_at": "2026-10-20T01:26:53Z",
+    "evidence": "/tmp/pde-first-ci-final.json"
+  },
+  "independent_build": {
+    "result": "pass",
+    "method": "Build the exact commit and recorded theme commit in a clean archive, excluding all current working-tree additions and unrelated local changes.",
+    "root": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/math-blog-pde-first-1Maiiy",
+    "record": "/tmp/pde-first-clean-build.json",
+    "log": "/tmp/pde-first-clean-build.log"
+  },
+  "live_verification": {
+    "result": "pass",
+    "checked_at": "2026-10-20T01:28:43.325Z",
+    "canonical_routes": 182,
+    "compatibility_routes": 8,
+    "total_routes": 190,
+    "errors": [],
+    "comparison": "Entire HTML compared with the independent build. Only between-tag and display-math-boundary indentation is normalized; 190 normalized matches, including 8 byte-identical compatibility pages.",
+    "tls": "NODE_TLS_REJECT_UNAUTHORIZED=1 with default HTTPS verification; no insecure overrides.",
+    "record": "/tmp/pde-first-live-check.json"
+  },
+  "historical_records": "icm2026-pde-first-validation.json records the earlier local validation state. This separate record establishes later push, deployment and live acceptance.",
+  "evidence_sha256": {
+    "/tmp/pde-first-ci-final.json": "3222af57d20f9b32b88415fefe35a576b58dee7c8ee5263c646f549c0102e7cf",
+    "/tmp/pde-first-clean-build.json": "c289abe268bd17ea815c6c85b1b6d287d06a1508a3bff3d927366f7898d1a8a4",
+    "/tmp/pde-first-clean-build.log": "3a60801cdce55def84fd9caec35048240fa5a3061231facbf6d36b4dcf10f30e",
+    "/tmp/pde-first-live-check.json": "45802abd2f65db35ecf963145b7bc6659d187fcfd82e02c97d81422467a6ad64"
+  }
+}

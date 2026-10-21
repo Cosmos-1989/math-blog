@@ -1,0 +1,16 @@
+\title{Maxwell 矩闭合给出可压缩 Euler 方程}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，§1.1.2；2503.01800v1，式 (1.40)}
+
+\p{设 #{f(t,x,v)} 足够光滑、速度方向充分衰减。把[Boltzmann 方程](4407)分别乘以 #{1,v,|v|^2/2} 并积分，由[碰撞守恒](4408)得到三个矩方程。若这些方程中的密度与通量用同一[Maxwell 分布](440A)的矩代入，则对 #{\rho>0,T>0} 得到}
+##{\begin{aligned}
+\partial_t\rho+\nabla_x\cdot(\rho u)&=0,\\
+\partial_t(\rho u)+\nabla_x\cdot(\rho u\otimes u)+\nabla_x p&=0,\\
+\partial_t E+\nabla_x\cdot((E+p)u)&=0,\\
+p=\rho T,\qquad E&=\tfrac 12\rho(|u|^2+dT).
+\end{aligned}}
+\p{这里 #{(u\otimes u)_{ij}=u_i u_j}；[散度](4301)按空间坐标求和。这个系统称理想单原子气体的可压缩 Euler 方程。}
+\p{\strong{证明。}质量通量是 #{\int vf\,dv}，动量通量是矩阵 #{\int v_i v_jf\,dv}，能量通量是 #{\int v|v|^2f/2\,dv}。分别代入[Maxwell 矩公式](440B)，便得到三行守恒律。}
+\p{这是矩方程的代数闭合。要把一族实际的 Boltzmann 解替换为 Maxwell 矩，还须证明该族向局部平衡收敛并控制速度矩；这些是流体极限定理的分析内容。}

@@ -1,0 +1,10 @@
+\title{单位速度测地流是 Reeb 流}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，定义2.1、式(2.1)至(2.3)}
+
+\p{设 #{(N,g)} 为闭 Riemann 流形，#{M=S^*N} 带有[Liouville 接触形式](4601) #{\alpha}。在 #{T^*N} 上令 #{H(q,p)=|p|_g^2/2}，采用[Hamilton 向量场](0BL5)的约定 #{\iota_{X_H}d\lambda=-dH}。则 #{X=X_H|_M} 是 #{\alpha} 的 [Reeb 向量场](1402)，其投影轨道是单位速度[测地线](00NU)。}
+\p{\strong{证明。}Hamilton 方程为 #{\dot q^j=\partial_{p_j}H}、#{\dot p_j=-\partial_{q^j}H}，故 #{H} 沿轨道不变。在 #{M} 的切向量上 #{dH=0}，于是 #{d\alpha(X,\cdot)=0}；又由关于 #{p} 的二次齐次性，#{\alpha(X)=\sum_jp_j\partial_{p_j}H=2H=1}。这就是 Reeb 方程。}
+\p{为核对测地线解释，写 #{p_j=g_{jk}\dot q^k}，将第二条 Hamilton 方程及逆矩阵微分恒等式代入，得到 #{\frac{d}{dt}(g_{jk}\dot q^k)=\frac 12\partial_jg_{ab}\dot q^a\dot q^b}。展开左侧并乘 #{g^{\ell j}}，便是 #{\ddot q^\ell+\Gamma^\ell_{ab}\dot q^a\dot q^b=0}，其中 #{\Gamma} 为 [Levi-Civita 联络](00NZ)的 Christoffel 符号。能量条件给出 #{g(\dot q,\dot q)=1}。}
+\p{Reeb 恒等式还给出 #{\mathcal L_X\alpha=d(\alpha(X))+\iota_Xd\alpha=0}，故流 #{\phi^t} 保持 #{\alpha} 和 #{dm=\alpha\wedge(d\alpha)^d}。紧性保证流对所有实时间存在。}

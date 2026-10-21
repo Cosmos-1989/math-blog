@@ -1,0 +1,14 @@
+\title{大周期盒上的随机 Fourier 初值}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：2311.10082v2，§1.1，式 (1.1) 与 (DAT)}
+
+\p{令 #{\mathbb T_L^d=\mathbb R^d/(L\mathbb Z)^d}，频率格点 #{\Lambda_L=L^{-1}\mathbb Z^d}。采用与[周期 Fourier 系数](132B)相容的归一化}
+##{\widehat u(k)=L^{-d/2}\int_{[0,L]^d}u(x)e^{-2\pi i k\cdot x}\,dx,\qquad
+u(x)=L^{-d/2}\sum_{k\in\Lambda_L}\widehat u(k)e^{2\pi i k\cdot x}.}
+\p{基函数 #{L^{-d/2}e^{2\pi i k\cdot x}} 在盒上的内积为 #{\delta_{k\ell}}。取非负 [Schwartz 函数](0H4F) #{n_{\rm in}}，以及独立的[标准复高斯](4411) #{g_k}，定义随机初值}
+##{\widehat u(0,k)=\sqrt{n_{\rm in}(k)}\,g_k,\qquad
+u(0,x)=L^{-d/2}\sum_{k\in\Lambda_L}\sqrt{n_{\rm in}(k)}\,g_ke^{2\pi i k\cdot x}.}
+\p{于是 #{\mathbb E|\widehat u(0,k)|^2=n_{\rm in}(k)}。位置处的二阶矩是 #{\mathbb E|u(0,x)|^2=L^{-d}\sum_k n_{\rm in}(k)}，趋于 #{\int_{\mathbb R^d}n_{\rm in}(k)\,dk}。因此谱密度记录每一模态的强度，无需再在 #{\mathbb E|\widehat u|^2} 前乘 #{L^{-d}}。}
+\p{#{n_{\rm in}} 的快速衰减使每个有限阶导数的系数绝对值之和具有有限期望，从而几乎处处绝对收敛；对可数个导数阶取交，得到光滑初值。这里指数中的 #{2\pi} 与周期 #{L} 配套，不能将指数改为 #{e^{ikx}} 后仍保留同一频率格点。}

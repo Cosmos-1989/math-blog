@@ -1,0 +1,12 @@
+\title{矩与联合累积量的分划反演}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (2.6)；有限系数证明}
+
+\p{设 #{X_1,\ldots,X_r} 的各子集乘积均可积，#{\kappa} 为[联合累积量](441C)。则}
+##{\mathbb E\prod_{j=1}^rX_j=\sum_{\pi\in\Pi_r}\prod_{A\in\pi}\kappa((X_j)_{j\in A}).}
+\p{\strong{证明。}令 #{m_A=\mathbb E\prod_{j\in A}X_j}、#{m_\varnothing=1}。引入独立形式变量 #{t_1,\ldots,t_r}，写 #{t_A=\prod_{j\in A}t_j} 和多项式 #{M=1+\sum_{\varnothing\ne A\subseteq[r]}m_At_A}。在[形式幂级数](0AL0)中令 #{K=\log M=\sum_{\ell\geq 1}(-1)^{\ell -1}(M-1)^\ell /\ell}。}
+\p{#{t_A} 的系数只来自 #{A} 的有序分划。一个有 #{\ell} 块的无序分划出现 #{\ell!} 次，系数为 #{(-1)^{\ell -1}(\ell -1)!}，故 #{[t_A]K=\kappa((X_j)_{j\in A})}。这里只取各变量次数为一的系数，所以全部计算是有限的，不要求矩母函数解析。}
+\p{再从 #{M=\exp K=\sum_{\ell\geq 0}K^\ell /\ell!} 取 #{t_{[r]}} 系数。有序分划的 #{\ell!} 恰与分母抵消，得到所求等式。}
+\p{若变量可以分成两个独立非空组，则在这两个组的变量上 #{M} 因式分解，#{\log M} 为两项之和，跨组的累积量为零。对[中心高斯配对](441B)，高阶累积量也为零；正时间 NLS 会产生小而非零的高阶累积量，不能把初始高斯性每层重新假定一次。}

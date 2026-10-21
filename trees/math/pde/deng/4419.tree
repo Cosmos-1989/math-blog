@@ -1,0 +1,14 @@
+\title{波动力学极限覆盖正则有效解的寿命}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：2311.10082v2，Theorem 1.1、Proposition 3.2；报告 Theorem 2.2}
+
+\p{固定 #{d\geq 3}、#{0<\gamma<1} 和非负 [Schwartz 函数](0H4F) #{n_{\rm in}}。令 #{n} 是[波动力学方程](4415)的 Schwartz 解，最大存在时间为 #{\tau_{\max}}。给定任意固定 #{0<\tau_*<\tau_{\max}}，采用[随机 Fourier 初值](4412)和[归一化 NLS](4413)，则当 #{L} 足够大时，在 #{[0,T_{\rm kin}\tau_*]} 上有光滑解的事件 #{\mathcal E_L} 满足}
+##{\mathbb P(\mathcal E_L)\geq 1-e^{-(\log L)^{40d}},\qquad
+\sup_{0\leq\tau\leq\tau_*}\sup_{k\in\Lambda_L}
+\left|\mathbb E_{\mathcal E_L}|\widehat u(T_{\rm kin}\tau,k)|^2-n(\tau,k)\right|\leq L^{-\theta}.}
+\p{这里 #{T_{\rm kin}=L^{2\gamma}/2}，#{\theta>0} 只依赖 #{d,\gamma}，#{L} 的阈值还依赖初谱和所选区间上的有效解界。采用截断期望 #{\mathbb E_{\mathcal E_L}X:=\mathbb E[\mathbf 1_{\mathcal E_L}X]}，在事件外把被积量置零，不除以事件概率；这与原论文 §3.7 的证明约定一致。坏事件上的全时光滑演化未由此定理保证。这是 Deng–Hani Theorem 1.1 在正方盒、#{0<\gamma<1} 的陈述。}
+\p{Proposition 3.2 指定有效解的寿命：记 #{\langle k\rangle=(1+|k|^2)^{1/2}}，若 #{\tau_{\max}<\infty}，则对每个 #{s>d/2-1}，当 #{\tau\uparrow\tau_{\max}} 时有 #{\|\langle k\rangle^s n(\tau,k)\|_{L^2_k}\to\infty}；#{L^2} 范数是平方积分的平方根。局部存在与该延拓判据证明在原论文 Appendix C。}
+\p{研究证明引用原论文 §3.5 的 Proposition 3.9、§3.7 对主定理的汇总以及后续图估计；[分层累积量展开](441F)说明其归纳对象。[波混沌](4417)的伴随结论见 Remark 1.5。}
+\p{定理允许任意固定的正则时间区间，但不提供有效方程的全局正则性。报告在额外全局有界条件下讨论缓慢增长的观察区间；不能由本定理把 #{\tau_*} 任意替换为 #{L} 的正幂。端点 #{\gamma=1} 需要原论文另列的矩形盒泛性假设，不包含在此陈述中。}

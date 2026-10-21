@@ -1,0 +1,12 @@
+\title{Gevrey 小扰动的非线性无黏阻尼}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，定理4.3；Bedrossian–Masmoudi，定理1、式(1.7a)–(1.7c)}
+
+\p{在 #{\mathbb T\times\mathbb R}，#{\mathbb T=\mathbb R/(2\pi\mathbb Z)}，把二维无力 [Euler 速度](4302)写成 #{u=(y,0)+v}，总涡量写成 #{-1+w}。固定 #{v=\nabla^\perp\Delta^{-1}w} 的归一化：非零水平模用 Fourier 乘子，平均模满足 #{\bar v_2=0}、#{\partial_y\bar v_1=-\bar w}、#{\bar v_1(y)\to 0} 当 #{y\to\pm\infty}。初值的零总积分保证两端条件相容。固定 #{1/2<s\leq 1}、#{\lambda_0>\lambda'>0}，用[周期展开](4101)和[连续 Fourier 变换](0H4G)定义 Gevrey 范数}
+##{\|w\|_{\mathcal G^{\lambda;s}}^2=\sum_{k\in\mathbb Z}\int_{\mathbb R}e^{2\lambda(|k|+|\eta|)^s}|\widehat w(k,\eta)|^2\,d\eta.}
+\p{Bedrossian–Masmoudi 定理1给出 #{\varepsilon_0=\varepsilon_0(\lambda_0,\lambda',s)>0}：若 #{0<\varepsilon\leq\varepsilon_0}，初始扰动满足 #{\int w_0=0}、#{\int|yw_0|<\varepsilon}、#{\|w_0\|_{\mathcal G^{\lambda_0;s}}\leq\varepsilon}，则存在全局解和剪切修正 #{v_\infty(y)}，使以下估计对所有 #{t\geq 0} 成立，其中 #{\langle t\rangle=(1+t^2)^{1/2}}，#{C} 只依赖固定参数：}
+##{\|v_1(t)-\overline v_1(t)\|_2\leq C\varepsilon\langle t\rangle^{-1},\quad \|v_2(t)\|_2\leq C\varepsilon\langle t\rangle^{-2},\quad \|\overline v_1(t)-v_\infty\|_2\leq C\varepsilon^2\langle t\rangle^{-2}.}
+\p{横线表示 #{x} 平均。于是 #{\|u(t)-(y+v_\infty(y),0)\|_2\to 0}；这是差值的 #{L^2} 收敛，背景速度的总动能无限。平均模可以非零，并随演化调整到新的剪切。}
+\p{\strong{引用的证明。}原论文定理1的证明见§2–9，特别是§3的时间依赖 Fourier 权、§4的椭圆估计和§6的非线性相互作用控制。[线性衰减](450G)伴随涡量导数增长，不能单靠速度变小闭合非线性估计。上述指数权要求超出任意固定阶 Sobolev 正则性；该定理不覆盖一般 Sobolev 小扰动。}

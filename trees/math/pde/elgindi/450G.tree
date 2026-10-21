@@ -1,0 +1,12 @@
+\title{Couette 线性化的零均值速度衰减}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§4.1；Bedrossian–Masmoudi，式(1.3)–(1.4)}
+
+\p{在 #{\mathbb T\times\mathbb R} 上，#{\mathbb T=\mathbb R/(2\pi\mathbb Z)}，设 #{\partial_t\omega+y\partial_x\omega=0}，且对几乎每个 #{y} 有 #{\int_{\mathbb T}\omega_0(x,y)\,dx=0}。以零 #{x} 平均的 #{v=\nabla^\perp\Delta^{-1}\omega} 恢复扰动速度。对 #{t\geq 0}，以下估计在各自右端有限时成立：}
+##{\|v_1(t)\|_2\leq\frac C{\langle t\rangle}\|\omega_0\|_{H^1},\qquad \|v_2(t)\|_2\leq\frac C{\langle t\rangle^2}\|\omega_0\|_{H^2},\qquad\langle t\rangle=(1+t^2)^{1/2}.}
+\p{\strong{证明。}用剪切坐标 #{z=x-ty}，#{\omega(t,z+ty,y)=\omega_0(z,y)}。对 #{z} 作[周期 Fourier 展开](4101)，对 #{y} 作[Fourier 变换](0H4G)，频率为 #{(k,\eta)\in\mathbb Z\times\mathbb R}，#{k\ne 0}。这里 #{H^m} 范数平方为 #{\sum_k\int(1+k^2+\eta^2)^m|\widehat\omega_0(k,\eta)|^2\,d\eta}。[流函数](450A)乘子为 #{-1/(k^2+(\eta -kt)^2)}，两个速度乘子的绝对值分别为}
+##{\frac{|\eta -kt|}{k^2+(\eta -kt)^2},\qquad\frac{|k|}{k^2+(\eta -kt)^2}.}
+\p{当 #{t\geq 1} 且 #{|\eta|\leq |kt|/2} 时，#{|\eta -kt|\geq|kt|/2}，两式分别至多 #{C/t}、#{C/t^2}。在补集，#{|\eta|>|kt|/2}，用各乘子至多 #{1/|k|} 和 #{|k|\geq 1}，分别得到 #{C\langle\eta\rangle /t}、#{C\langle\eta\rangle^2/t^2}。#{0\leq t\leq 1} 用统一有界性。由[Plancherel 定理](0W01)及 [Sobolev 范数](130F)得结论。}
+\p{剪切换元保持体积。排除 #{k=0} 必不可少：平均剪切模不衰减。这里控制的是扰动速度 #{v}；背景 #{(y,0)} 在此无限通道上不属于 #{L^2}。}

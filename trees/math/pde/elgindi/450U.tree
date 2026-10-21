@@ -1,0 +1,12 @@
+\title{二维流加被动分量的三维嵌入}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，命题6.4的嵌入构造；有限族估计}
+
+\p{设 #{v=(v_1,v_2),p} 是平面域 #{D} 上的光滑无力 [Euler 解](4302)，#{g} 满足 #{\partial_tg+v\cdot\nabla g=0}。在 #{D\times\mathbb T_z} 令}
+##{u(x,y,z,t)=(v_1(x,y,t),v_2(x,y,t),g(x,y,t)),\qquad P=p(x,y,t).}
+\p{则 #{u,P} 是三维 Euler 解，且 #{\operatorname{curl}u=(\partial_yg,-\partial_xg,\operatorname{curl}v)}。\strong{证明。}所有未知量与 #{z} 无关，所以第三分量的对流作用 #{g\partial_z} 消失。前两条动量方程是原方程，第三条就是[被动输运方程](4503)，散度和边界条件也保持。}
+\p{进一步设 #{D} 有界，#{\Phi_t} 是 #{v} 的[保面积流](4502)，#{\lambda(t)=\|D\Phi_t\|_\infty} 采用矩阵算子范数。分别取 #{g_0^1(a)=a_1}、#{g_0^2(a)=a_2}，得到两条三维解 #{u^1,u^2}。则}
+##{\max_{i=1,2}\|\operatorname{curl}u^i(t)\|_\infty\geq\frac 1{\sqrt 2}\lambda(t).}
+\p{因 #{g^i=g_0^i\circ\Phi_t^{-1}}，两梯度是 #{D\Phi_t^{-1}} 的两行。两行长度的平方和是矩阵 Frobenius 范数平方，至少为算子范数平方。由[奇异值分解](2F02)，二维行列式一的矩阵的两个奇异值互为倒数，因此其逆矩阵与自身的算子范数相等。再用 #{D\Phi_t^{-1}(\Phi_t(a))=(D\Phi_t(a))^{-1}} 和 #{\Phi_t} 满射，得到 #{\|D\Phi_t^{-1}\|_\infty=\lambda(t)}。这些事实给出显示式。最大值中的指标可以随时间改变；结论没有选出一条对所有时间都实现此下界的固定三维解。}

@@ -1,0 +1,18 @@
+\title{硬球到 Boltzmann 的长时极限定理}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：2408.07818v3，Theorem 1，pp. 5–7；2503.01800v1，Theorem 1}
+
+\p{在 #{\mathbb R^d}、#{d\geq 2} 中，取[巨正则硬球模型](4405)的碰撞率 #{\lambda=1}。设 #{f_0\geq 0,\ \int f_0=1}，#{f(t,x,v)} 是初值 #{f_0} 的[Boltzmann 解](4407)，在固定区间 #{[0,t_*]} 上存在。固定 #{\beta>0}，并假定}
+##{\sup_{0\leq t\leq t_*}\|e^{2\beta|v|^2}f(t)\|_\infty\leq A,\qquad
+\|f_0\|_{\mathrm{Bol}_{2\beta}^{\square}}+\|\nabla_x f_0\|_{\mathrm{Bol}_{2\beta}^{\square}}\leq B_0,}
+##{\|h\|_{\mathrm{Bol}_{b}^{\square}}=\sum_{m\in\mathbb Z^d}\sup_{\max_{1\leq j\leq d}|x_j-m_j|\leq 1,\ v\in\mathbb R^d}e^{b|v|^2}|h(x,v)|.}
+\p{这里用覆盖全空间的立方体定义加权局部上确界范数。它控制原论文式 (1.15) 所显示的欧氏单位球上确界之和，因此上述更强的充分假设保证原定理条件。对于 #{d\geq 5}，整数格点中心的欧氏单位球不覆盖全空间；不能把所显示的球上确界之和直接视为这里立方体范数的等价形式。}
+\p{导数按[偏导数](0A32)理解。Deng–Hani–Ma 的定理断言：#{\varepsilon} 足够小，其阈值可依赖 #{d,t_*,\beta,A,B_0}，则对 #{0\leq t\leq t_*} 和整数 #{1\leq s\leq|\log\varepsilon|} 一致有}
+##{\left\|f_s^\varepsilon(t,Z_s)-\mathbf 1_{\mathcal D_s}(Z_s)\prod_{j=1}^sf(t,z_j)\right\|_{L^1}\leq\varepsilon^\theta,}
+\p{其中 #{\theta>0} 仅依赖 #{d}，#{L^1} 范数即绝对值的相空间积分。该结果同时给出单粒子方程和[混沌传播](4406)。}
+\p{在单位环面上，2503.01800v1 的 Theorem 1 给出 #{d=2,3} 的定量版本。令碰撞率 #{\lambda=\eta^{-1}}，假定 #{\|e^{2\beta|v|^2}f(t)\|_\infty\leq A} 及 #{\|e^{2\beta|v|^2}\nabla_x f_0\|_\infty\leq A}。同一关联函数估计成立的尺度条件为}
+##{\max(1,\lambda)\max(1,A)\max(1,t_*)\ll(\log|\log\varepsilon|)^{1/2}.}
+\p{这里 #{\ll} 表示受仅依赖 #{d,\beta} 的充分小常数控制。定理要求有效解在整个考察区间保持所列界；“任意长”允许先固定任意这样的区间，再令粒子尺度充分小。它不提供 Boltzmann 大数据全局正则性。}
+\p{证明引用上述论文：欧氏情形由 §6 的 Propositions 6.1–6.3 汇总，累积量公式见 §3.5、§5，估计及切割算法见 §§7–15；周期扩展见 2503.01800v1，§§2–5。}

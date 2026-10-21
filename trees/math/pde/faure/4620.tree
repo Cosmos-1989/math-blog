@@ -1,0 +1,20 @@
+\title{Wigner 变换把经典线性输运分成两个量子因子}
+\date{2026-10-20}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§1.4、§5.3；Faure–Tsujii v4 定理C.33；Wigner 模型中的等距计算}
+
+\p{固定 #{h>0}，令 #{H=L^2(\mathbb R^d)}、#{\overline H} 为共轭 Hilbert 空间。对 Schwartz 函数 #{f,g} 定义}
+##{\mathcal W_h(f\otimes\overline g)(q,p)
+=(2\pi h)^{-d/2}\int e^{-ip\cdot y/h}f(q+y/2)\overline{g(q-y/2)}\,dy.}
+\p{该变换酉地延拓为[Hilbert 张量积](0F4E) #{H\widehat\otimes\overline H\cong L^2(\mathbb R^{2d})}。若 #{S} 为线性辛同胚，#{M_S} 为其 [metaplectic 实现](461F)，则}
+##{\mathcal W_h(M_S\otimes\overline{M_S})\mathcal W_h^{-1}a=a\circ S^{-1}.}
+\figure{\tex{\usepackage{amsmath,amssymb}\usepackage{tikz-cd}}{
+\begin{tikzcd}[column sep=large,row sep=large]
+H\widehat\otimes\overline H \arrow[r,"M_S\otimes\overline{M_S}"] \arrow[d,"\mathcal W_h"'] & H\widehat\otimes\overline H \arrow[d,"\mathcal W_h"] \\
+L^2(\mathbb R^{2d}) \arrow[r,"a\mapsto a\circ S^{-1}"'] & L^2(\mathbb R^{2d})
+\end{tikzcd}
+}}
+\p{图中的复合等式正是 #{\mathcal W_h\circ(M_S\otimes\overline{M_S})=(S^{-1})^*\circ\mathcal W_h}。#{M_S} 的相位在与共轭因子的张量积中相消。}
+\p{\strong{等距性计算。}对 #{y} 用 [Plancherel 恒等式](0W01)，再作 #{x=q+y/2,x'=q-y/2} 的行列式绝对值为一的换元，得到 #{\|\mathcal W_h(f\otimes\overline g)\|_2^2=\int|f(x)|^2|g(x')|^2dx\,dx'}。极化给出内积恒等式。逆向先作 Fourier 逆变换再作线性换元，说明其像稠密且满。}
+\p{协变等式使用 metaplectic 表示的精确 Weyl 协变性，等价形式见上述定理C.33。分解本身同时存在两个因子；它没有消除任何自由度。[法向耗散选择](4622)是另一个步骤。Wigner 函数还可能取负值，所以此线性恒等式本身不提供概率密度解释。}

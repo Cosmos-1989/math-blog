@@ -1,0 +1,10 @@
+\title{CLM 模型的一个显式有限时爆破解}
+\date{2026-10-20}
+\taxon{Example}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§6.2；圆周 Fourier 级数的直接验证}
+
+\p{在 #{\mathbb T} 上，Constantin–Lax–Majda 模型是 #{\partial_t\omega=\omega H\omega}，其中 #{H} 采用[圆周 Hilbert 变换](450V)约定。取 #{\omega_0(x)=-\sin x}，则对 #{0\leq t<2} 有光滑解}
+##{\omega(t,x)=\frac{-\sin x}{1-t\cos x+t^2/4}.}
+\p{\strong{验证。}令 #{a=t/2}、#{Z=e^{-ix}/(1-ae^{-ix})}。因 #{a<1}，几何级数 #{Z=\sum_{n\geq 1}a^{n-1}e^{-inx}} 连同任意空间导数一致收敛。其虚部为显示的 #{\omega}，且由 #{H\sin(nx)=-\cos(nx)}，实部正是 #{H\omega}。直接求导得 #{\partial_tZ=Z^2/2}，取虚部即得 #{\partial_t\omega=\omega H\omega}。}
+\p{取 #{x_t=\arccos(t/2)}，则 #{|\omega(t,x_t)|=(1-t^2/4)^{-1/2}\to\infty}，故有限时刻 #{2} 前不能保持一致有界。这展示非局部二次伸长可以导致爆破。模型删去了 Euler 的输运与三维几何耦合，所得爆破不自动给出 Euler 爆破解。报告讨论的 De Gregorio 模型恢复输运项，其闭合关系应为 #{\partial_xu=H\omega}。}

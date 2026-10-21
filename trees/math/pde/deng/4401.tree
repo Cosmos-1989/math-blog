@@ -1,0 +1,10 @@
+\title{相空间概率密度与粒子边缘分布}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+
+\p{设 #{E=D\times\mathbb R^d} 是单粒子相空间，#{D=\mathbb R^d} 或单位周期盒 #{\mathbb T^d=\mathbb R^d/\mathbb Z^d}，#{z=(x,v)} 分别记录位置与速度。[随机变量](00L0)的定义逐坐标推广到 #{E^N} 值随机向量。其概率密度是非负可测函数 #{F_N}，满足 #{\int_{E^N}F_N\,dz_1\cdots dz_N=1}，且事件 #{Z\in A} 的概率为 #{\int_A F_N}；积分采用 [Lebesgue 积分](00Q5)。}
+\p{只观察前 #{s} 个粒子时，边缘密度定义为}
+##{F_N^{(s)}(z_1,\ldots,z_s)=\int_{E^{N-s}}F_N(z_1,\ldots,z_N)\,dz_{s+1}\cdots dz_N,\qquad 1\leq s\leq N.}
+\p{[Fubini–Tonelli 定理](0H53)保证它仍非负且积分为一。若 #{F_N} 在粒子编号置换下不变，则称其为对称密度，各编号的单粒子边缘相同。若 #{F_N=\prod_{j=1}^N f(z_j)} 且 #{\int f=1}，各坐标[独立](00L3)，积分直接给出 #{F_N^{(s)}=\prod_{j=1}^s f(z_j)}。}
+\p{固定粒子数的概率边缘，与允许粒子数随机时的[重标度关联函数](4405)有不同的归一化。后者的总积分一般不等于一。}

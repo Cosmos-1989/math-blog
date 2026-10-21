@@ -1,0 +1,12 @@
+\title{Weyl 量子化与线性辛变换的 metaplectic 实现}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§5.3；Faure–Tsujii v4 附录C.7、C.8}
+
+\p{设 #{h>0}，#{a\in\mathcal S(\mathbb R^{2d})} 为 [Schwartz 符号](0H4F)。与[左量子化](0H4J)相比较，Weyl 量子化把位置参数取在两端的中点：}
+##{(\operatorname{Op}_h^W(a)u)(x)=(2\pi h)^{-d}\int e^{i(x-y)\cdot p/h}
+a\left(\frac{x+y}{2},p\right)u(y)\,dy\,dp.}
+\p{积分先对 Schwartz 函数定义。核的共轭对称性表明 #{(\operatorname{Op}_h^W(a))^*=\operatorname{Op}_h^W(\overline a)}；对实 Schwartz 符号，所得有界算子自伴。一般无界实符号仍须另查定义域与自伴性。}
+\p{设 #{S} 为相空间的线性[辛同胚](0BL1)。其 metaplectic 实现是作用在 #{L^2(\mathbb R^d)} 上的酉算子 #{M_S}，满足精确协变关系 #{M_S\operatorname{Op}_h^W(a)M_S^{-1}=\operatorname{Op}_h^W(a\circ S^{-1})}。严格的群表示定义在辛群的双覆盖上，#{S} 的两个提升给出相差负号的算子；协变关系本身只把算子确定到相位。}
+\p{这些酉实现的存在为 metaplectic 表示定理，报告采用等价的 Bargmann 模型；可见 Faure–Tsujii v4 定义C.24、命题C.29。这里的“辛旋量空间”是这种无限维表示空间，可在选定拉格朗日坐标后实现为 #{L^2(\mathbb R^d)}；它与有限维正交旋量空间应当区分。}

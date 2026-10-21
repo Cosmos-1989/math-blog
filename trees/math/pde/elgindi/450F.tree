@@ -1,0 +1,11 @@
+\title{Couette 输运的相位混合与弱极限}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§4.1；单调剪切的直接证明}
+
+\p{在周期通道 #{D=\mathbb T\times(0,1)}，#{\mathbb T=\mathbb R/(2\pi\mathbb Z)}，给定剪切速度 #{u_*=(y,0)}。对任意 #{f_0\in L^2(D)}，[输运解](4503)满足}
+##{f(t,x,y)=f_0(x-ty,y)\rightharpoonup\bar f_0(y),\qquad \bar f_0(y)=\frac 1{2\pi}\int_{\mathbb T}f_0(x,y)\,dx.}
+\p{这里[弱收敛](00MJ)指与每个固定 #{L^2} 测试函数的积分配对收敛。不同高度的粒子以不同角速度绕行，因而非零角频率越来越快地振荡，这称相位混合。}
+\p{\strong{证明。}按 #{x} 作[周期 Fourier 展开](4101)。第 #{k} 模为 #{f_{0,k}(y)e^{-ikty}}。与测试函数的第 #{k} 模配对得到 #{\int_0^1f_{0,k}(y)\overline{g_k(y)}e^{-ikty}\,dy}。当 #{k\ne 0} 时，被积振幅属于 #{L^1}；先用紧支撑光滑函数在 #{L^1(0,1)} 中逼近它，再分部积分，光滑振幅的积分绝对值至多 #{\|h'\|_1/(|k|t)}，故极限为零。}
+\p{先处理有限个 Fourier 模，再用 Parseval 等式和 Cauchy–Schwarz 不等式控制尾项；输运的 [#{L^2} 范数不变](4504)，故尾项界对时间一致。只有 #{k=0} 模保留，得到结论。又 #{\|f(t)-\bar f_0\|_2=\|f_0-\bar f_0\|_2}，除非初值已与 #{x} 无关，否则收敛不可能是强 #{L^2} 收敛。}

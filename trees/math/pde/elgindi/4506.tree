@@ -1,0 +1,11 @@
+\title{保体积变分导出 Euler 方程}
+\date{2026-10-20}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Elgindi](icm2026-elgindi)，§2、推论2.1；光滑固定端点变分}
+
+\p{设 #{u} 在 #{\mathbb R^d} 上光滑、无散度，空间衰减使下列积分与分部积分成立。若其保体积路径在固定两端的变分下是[作用量](4505)驻点，则存在压力 #{p}，使 #{\partial_tu+u\cdot\nabla u+\nabla p=0}。}
+\p{\strong{速度变分。}设 #{\Phi_t^\varepsilon} 是保体积路径族，令 #{w=(\partial_\varepsilon\Phi_t^\varepsilon)|_0\circ\Phi_t^{-1}}。对 #{\partial_t\Phi_t^\varepsilon=u^\varepsilon\circ\Phi_t^\varepsilon} 求变分，用[链式法则](0A34)得到}
+##{\delta u=\partial_tw+(u\cdot\nabla)w-(w\cdot\nabla)u.}
+\p{其中 #{\operatorname{div}w=0}、#{w(0)=w(T)=0}。反过来，任意这样的光滑紧支撑 #{w} 可由在每个时刻沿 #{w} 作小参数流并复合 #{\Phi_t} 实现；其[体积保持](4502)保证变分可行。}
+\p{\strong{一阶作用量。}代入 #{\delta\mathcal A=\int u\cdot\delta u}。时间项积分为 #{-\int\partial_tu\cdot w}，输运项为 #{-\int(u\cdot\nabla)u\cdot w}，最后一项是 #{-\int w\cdot\nabla(|u|^2/2)=0}。故 #{\partial_tu+u\cdot\nabla u} 与所有无散度测试场正交。[Leray 分解](430C)表明该场是梯度，写成 #{-\nabla p} 即得结论。这里证明的是必要条件，未证明任意 Euler 路径为作用量极小值。}

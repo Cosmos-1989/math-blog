@@ -1,0 +1,14 @@
+\title{波包加权的各向异性 Sobolev 空间}
+\date{2026-10-20}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Faure 报告](icm2026-faure)，§5.2；Faure–Tsujii v4 §4.2，式(4.15)至(4.17)}
+
+\p{设 #{M} 为闭流形，#{T} 是满足 #{T^*T=I} 的[波包变换](461B)，#{W:T^*M\to(0,\infty)} 为正权。定义 #{\|u\|_{\mathcal H_W}=\|WTu\|_{L^2(T^*M)}}，并把光滑函数按此范数完备化。权满足适当的多项式上下界与符号估计时，这个完备化可嵌入[分布空间](4607)，并夹在两个通常的 [Sobolev 空间](130F)之间。}
+\p{“各向异性”表示同样大小的频率，因余向量方向不同而获得不同权重。对于 Anosov 流，选权使其沿[拉回对应的余切流](461C)在俘获集外递减，在 #{\Sigma=\mathbb R^*\alpha} 附近接近一。于是向高频逃逸的部分在新范数中变小，而靠近俘获集的部分仍能被观察。}
+
+\p{具体地，由[双曲分解](4603)写 #{\rho=\rho_u+\rho_s+\omega\alpha}，其中 #{\rho_u} 湮灭 #{E_s\oplus\mathbb RX}，#{\rho_s} 湮灭 #{E_u\oplus\mathbb RX}。设子丛的 Hölder 指数为 #{\beta>0}，取 #{1-\beta\le\gamma<1}、#{R>0}，并记 #{\langle a\rangle=(1+a^2)^{1/2}}。原研究使用}
+##{W(\rho)=\frac{\langle h_\gamma(\rho)\|\rho_s\|_{g_\rho}\rangle^R}{\langle h_\gamma(\rho)\|\rho_u\|_{g_\rho}\rangle^R},\qquad
+h_\gamma(\rho)=\left\langle(\|\rho_u\|_{g_\rho}^2+\|\rho_s\|_{g_\rho}^2)^{1/2}\right\rangle^{-\gamma}.}
+\p{这里 #{g_\rho} 是原文引理2.8的波包度量；在高频流盒坐标 #{(x,z;\xi,\omega)} 中，横向位置尺度为 #{\langle\eta\rangle^{-1/2}}、横向频率尺度为 #{\langle\eta\rangle^{1/2}}，流向位置和频率尺度分别为固定小常数 #{\delta} 与 #{\delta^{-1}}，其中 #{\eta=(\xi,\omega)}。余向量竖直分量视作 #{T_\rho(T^*M)} 中的切向量取此范数。该权通常仅 Hölder 连续；具体传播界还使用其慢变性。原文注4.5给出 #{H^r(M)\subset\mathcal H_W\subset H^{-r}(M)}，#{r=R(1-\gamma)/2}。}
+\p{上述描述规定构造的作用，并非对任意正权的谱定理。Faure–Tsujii v4 §4.2采用适应抛物邻域的逃逸权，证明流的有界性和离散谱；[谱带间的统一预解式界](4610)依赖这一更细选择。只把光滑函数写成集合而不作完备化，得不到所需 Hilbert 空间。}

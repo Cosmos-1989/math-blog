@@ -1,0 +1,12 @@
+\title{联合累积量}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (2.5)}
+
+\p{给定实或复[随机变量](00L0) #{X_1,\ldots,X_r}，假定所有所需的乘积均可积。#{[r]=\{1,\ldots,r\}} 的一个集合分划是把它写成有限个两两不交非空块之并。记全部分划的集合为 #{\Pi_r}，分划 #{\pi} 的块数为 #{|\pi|}。联合累积量定义为}
+##{\kappa(X_1,\ldots,X_r)=
+\sum_{\pi\in\Pi_r}(-1)^{|\pi|-1}(|\pi|-1)!
+\prod_{A\in\pi}\mathbb E\prod_{j\in A}X_j.}
+\p{所有[期望](00L1)均按原来的联合分布计算，不预设独立性。低阶情形为 #{\kappa(X)=\mathbb EX} 和 #{\kappa(X,Y)=\mathbb E(XY)-\mathbb EX\,\mathbb EY}。复变量公式本身不自动取共轭；需协方差 #{\mathbb E(X\overline Y)} 时，应把输入写成 #{(X,\overline Y)}。}
+\p{累积量把可以由较小块矩解释的相关性扣去。[矩与累积量的反演](441D)说明它如何重构全部联合矩。硬球长时证明还使用一种相对于指定单粒子函数的[子集去相关展开](4421)，那是另一种组合定义。}

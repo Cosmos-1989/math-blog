@@ -1,0 +1,15 @@
+\title{硬球巨正则初值与重标度关联函数}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[文献](icm2026-deng)：2408.07818v3，Definition 1.3；2503.01800v1，Definition 1.3}
+
+\p{令 #{E=D\times\mathbb R^d}，取[概率密度](4401) #{f_0\geq 0,\ \int_E f_0=1}，直径 #{\varepsilon} 和碰撞率 #{\lambda>0}。写 #{\mu=\lambda\varepsilon^{-(d-1)}}，以[非重叠区域](4402) #{\mathcal D_N} 定义}
+##{W_{0,N}(Z_N)=\mathcal Z^{-1}\mu^N\prod_{j=1}^N f_0(z_j)\mathbf 1_{\mathcal D_N}(Z_N),\qquad
+\mathcal Z=\sum_{N=0}^{\infty}\frac{\mu^N}{N!}\int_{E^N}\prod_{j=1}^N f_0(z_j)\mathbf 1_{\mathcal D_N}\,dZ_N.}
+\p{空构型贡献 #{N=0} 的一项。因 #{1\leq\mathcal Z\leq e^\mu}，这些公式定义概率律：落在 #{\mathcal D_N} 中集合 #{A} 的概率为 #{(N!)^{-1}\int_A W_{0,N}}。粒子数 #{N} 随机，每个样本中的粒子数随硬球演化保持不变。}
+\p{令 #{W_N(t)} 是这个概率律在硬球流下的演化密度。#{s} 粒子重标度关联函数定义为}
+##{f_s^\varepsilon(t,Z_s)=\mu^{-s}\sum_{n=0}^{\infty}\frac 1{n!}
+\int_{E^n}W_{s+n}(t,Z_{s+n})\,dz_{s+1}\cdots dz_{s+n}.}
+\p{它的总质量为 #{\mu^{-s}\mathbb E[N(N-1)\cdots(N-s+1)]}，其中[期望](00L1)按上述概率律计算，故它有别于固定 #{N} 的概率边缘。在适用的稀薄极限中 #{\mathbb EN\,\varepsilon^{d-1}\sim\lambda}；该渐近关系是引用结果。}
+\p{排斥指标已经在初始时刻引入相关性。有限 #{\varepsilon} 时，光滑正密度的完全乘积会给重叠构型正概率，不能作为硬球概率律。严格的混沌结论是稀薄极限中的渐近分解。}

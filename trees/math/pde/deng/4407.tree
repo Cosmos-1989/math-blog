@@ -1,0 +1,13 @@
+\title{硬球 Boltzmann 碰撞算子}
+\date{2026-10-20}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Deng 报告](icm2026-deng)，式 (1.4)–(1.6)}
+
+\p{设 #{f(t,x,v)\geq 0} 是[相空间密度](4401)。固定 #{(t,x)}，把 #{f(v)} 简记为 #{f}，#{f(w)} 记为 #{f_*}，并以[弹性碰撞映射](4403)定义 #{f'=f(v'),\ f_*'=f(w')}。硬球碰撞算子为}
+##{Q(f,f)(v)=\int_{\mathbb R^d}\int_{\mathbb S^{d-1}}[(v-w)\cdot\omega]_+
+(f'f_*'-ff_*)\,d\omega\,dw.}
+\p{这里 #{[a]_+=\max(a,0)}，#{d\omega} 为通常的球面面积测度。因出射速度对 #{\omega\mapsto -\omega} 不变，也可把核改写为 #{\tfrac 12|(v-w)\cdot\omega|} 并仍在整个球面积分。两种写法的常数一致。}
+\p{以[Knudsen 数](4404) #{\eta} 表示碰撞频率，Boltzmann 方程是}
+##{(\partial_t+v\cdot\nabla_x)f=\eta^{-1}Q(f,f).}
+\p{输运项描述自由飞行；二次项在固定位置组合两个速度的密度。该乘积形式对应[混沌闭合](4406)，从有限硬球系统推到这个方程需要极限定理。核中的正部是几何碰撞通量，并非另加的随机碰撞规则。}
