@@ -1,0 +1,11 @@
+\title{谱隙控制平稳过程的命中时间}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，式 (1.4)；有限状态证明}
+
+\p{设 #{(X_t)} 为有限状态可逆链，从平稳测度 #{\mu} 出发，且[松弛时间](4G06) #{T<\infty}。设 #{A} 满足 #{a=\mu(A)>0}，令 #{\tau_A=\inf\{t\geq 0:X_t\in A\}}。则}
+##{\mathbb P_\mu(\tau_A>t)\leq(1-a)e^{-at/T},\qquad \mathbb E_\mu\tau_A\leq\frac{(1-a)T}{a}.}
+\p{\strong{证明。}把 #{A} 设为杀死状态，即到达 #{A} 后函数值取零；记所得半群为 #{P_t^A}。其生成元是原生成元在 #{A^c} 上的子矩阵，转移由[矩阵指数](4G01)定义，仍可逆。任意在 #{A} 上为零的 #{g} 满足 #{(\mu g)^2\leq(1-a)\mu(g^2)}，这是加权内积的 [Cauchy–Schwarz 不等式](004S)。因此 #{\operatorname{Var}_\mu(g)\geq a\mu(g^2)}，且 #{\mathcal D(g,g)\geq a\mu(g^2)/T}。按松弛时间页中的加权范数与微分论证，#{\|P_t^Ag\|_2\leq e^{-at/T}\|g\|_2}。}
+\p{又 #{\mathbb P_\mu(\tau_A>t)=\langle\mathbf 1_{A^c},P_t^A\mathbf 1_{A^c}\rangle_\mu}，应用一次 Cauchy–Schwarz 得尾界。用[非负积分](00Q5)恒等式 #{\tau_A=\int_0^\infty\mathbf 1_{\{\tau_A>t\}}dt} 积分即得均值界。}
+\p{对无限格的平稳 [KCM](4G03)，报告式 (1.4)给出 #{A=\{\omega_0=0\}} 时的结论 #{\mathbb P_\mu(\tau_0>t)\leq e^{-qt/T_{\mathrm{rel}}}} 与 #{\mathbb E_\mu\tau_0\leq T_{\mathrm{rel}}/q}。这一个无限体积结论按该式引用；上面的证明处理有限状态。}

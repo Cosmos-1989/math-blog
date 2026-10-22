@@ -1,0 +1,11 @@
+\title{广义合并分枝排斥过程的条件热浴}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§2.3 的 g-CBSEP 构造}
+
+\p{设 #{G=(V,E)} 为有限连通[简单图](00LB)，#{S} 为有限集合，#{\rho(s)>0} 是概率权，#{\varnothing\ne\mathcal O\subseteq S} 是活跃状态事件。对 #{\omega\in S^V}，仅当边 #{e=\{u,v\}} 至少有一端属于 #{\mathcal O} 时，以速率一把两端重新抽样为 #{\rho\otimes\rho} 条件于至少一端活跃的分布。全局状态限制为至少一个活跃点，记此事件为 #{H}。}
+\p{这一[有限连续时间链](4G01)称广义合并分枝排斥过程，平稳可逆分布为 #{\pi=\rho^{\otimes V}(\cdot\mid H)}，其中使用[条件概率](0A00)。证明可逐边检查：固定边外构形，两个允许的端点状态 #{a,b} 之间的平衡流都正比于 #{\rho^{\otimes 2}(a)\rho^{\otimes 2}(b)/\rho^{\otimes 2}(H_e)}，故交换 #{a,b} 不变。}
+\p{当 #{S=\{0,1\}}、活跃状态为 #{0}、#{\rho(0)=r\in(0,1)} 时，允许的边状态是 #{00,01,10}，条件概率分别为}
+##{\frac r{2-r},\qquad \frac{1-r}{2-r},\qquad \frac{1-r}{2-r}.}
+\p{所以 #{01\leftrightarrow 10} 的交换为常数量级，#{01\to 00} 的分枝为 #{r} 量级，#{00\to 01} 的合并为常数量级。对稀少活跃液滴，这种时间差异能描述快速移动而缓慢复制；与 [FA-2f](4G0R) 的联系仍需比较相应 Dirichlet 形式。}

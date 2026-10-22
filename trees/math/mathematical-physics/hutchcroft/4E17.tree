@@ -1,0 +1,11 @@
+\title{对数导数只决定正则变化指数}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，式 (4.1) 后第二矩讨论；条件积分证明}
+
+\p{设 #{b\in\mathbb R}、#{r_0>0}，函数 #{m:(r_0,\infty)\to(0,\infty)} 连续可微，且当 #{r\to\infty} 时 #{rm'(r)/m(r)\to b}。则对每个固定 #{\lambda>0}，当 #{r\to\infty} 时 #{m(\lambda r)/m(r)\to\lambda^b}。这一性质称指数 #{b} 的正则变化。}
+\p{\strong{证明。}写 #{m'/m=(b+e(r))/r}，#{e(r)\to 0}。由[自然对数](0A45)的导数及[微积分基本定理](0A3C)，}
+##{\log\frac{m(\lambda r)}{m(r)}=b\log\lambda+\int_r^{\lambda r}\frac{e(s)}s\,ds.}
+\p{误差绝对值至多 #{|\log\lambda|\sup_{s\geq\min\{1,\lambda\}r}|e(s)|}，趋于零，取指数即得结论。}
+\p{对任意实数 #{c}，#{m(r)=r^b(\log r)^c} 在 #{r>1} 满足同一假设，因为 #{rm'/m=b+c/\log r}。所以领先阶对数导数不能决定对数修正。报告的第二矩在 #{b=3\alpha} 时正面临这一问题。}

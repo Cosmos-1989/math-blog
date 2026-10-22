@@ -1,0 +1,12 @@
+\title{Pauli 算子的反交换与矩阵展开}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§2，式 (2.4) 后](icm2026-mahadev)，保留共轭中的算子次序}
+
+\p{在一个[量子比特](4F01)上置 #{X=\begin{pmatrix}0&1\\1&0\end{pmatrix}}、#{Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix}}。对位串 #{a,b\in\{0,1\}^r}，#{Z^a=\bigotimes_j Z^{a_j}}、#{X^b=\bigotimes_jX^{b_j}}。这些矩阵满足}
+##{Z^aX^b=(-1)^{a\cdot b}X^bZ^a,\qquad H^{\otimes r}Z^aX^bH^{\otimes r}=X^aZ^b.}
+\p{\strong{证明。}在 #{|t\rangle} 上分别作用两个单比特乘积，得 #{ZX|t\rangle=(-1)^{t\oplus 1}|t\oplus 1\rangle=-XZ|t\rangle}。再直接算出 #{HZH=X}、#{HXH=Z}，其中 #{H} 为 [Hadamard 变换](4F04)。逐坐标相乘即得两式。若把第二式右端重新排成 #{Z^bX^a}，须乘上 #{(-1)^{a\cdot b}}。}
+\p{任意 #{2^r} 阶复矩阵 #{M} 都唯一展开为 #{M=\sum_{a,b}\gamma_{ab}Z^aX^b}，其中}
+##{\gamma_{ab}=2^{-r}\operatorname{tr}((Z^aX^b)^*M).}
+\p{事实上单比特四个矩阵 #{I,X,Z,ZX} 对配对 #{\operatorname{tr}(A^*B)} 两两正交，平方长度均为二。乘积基的[迹](0F0F)因子化，故 #{r} 比特的 #{4^r} 个矩阵也两两正交，平方长度为 #{2^r}；它们的个数等于矩阵空间的维数，所以是基。}

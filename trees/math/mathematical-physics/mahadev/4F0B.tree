@@ -1,0 +1,9 @@
+\title{带误差学习的参数化假设}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mahadev，§1](icm2026-mahadev)；[BCMVV v4，定义 2.5](https://arxiv.org/html/1804.00640v4)}
+
+\p{取安全参数 #{\lambda}。指定正整数 #{n(\lambda),m(\lambda),q(\lambda)}，其中 #{q\geq 2}，且 #{n,m,\log_2q} 多项式有界；再指定秘密分布 #{\sigma_\lambda} 于 #{\mathbb Z_q^n} 和误差分布 #{\chi_\lambda} 于 #{\mathbb Z_q}。独立取均匀矩阵 #{A\in\mathbb Z_q^{m\times n}}、#{s\leftarrow\sigma_\lambda}、#{e\leftarrow\chi_\lambda^{\otimes m}}，形成 #{(A,As+e)}，运算均在[模整数环](4F0A)中进行。}
+\p{判定 LWE 假设断言，以上分布与 #{(A,u)} [计算不可区分](4F08)，其中 #{u} 独立均匀于 #{\mathbb Z_q^m}。必须同时指定攻击者为 PPT 还是 QPT，以及全部参数族。常见的误差取[截断离散 Gaussian](4F0A)；均匀秘密 #{\sigma_\lambda=U(\mathbb Z_q^n)} 与二进制秘密 #{U(\{0,1\}^n)} 给出不同的分布族。}
+\p{搜索 LWE 则要求从样本恢复所抽取的 #{s}。判定困难、搜索困难及不同秘密分布之间的归约均是额外定理。素数 #{q} 且噪声为零时，[满列秩](4F0C)允许消元恢复秘密；带噪声时的困难性取决于具体参数，不能从 #{m>n} 或 #{\|e\|\ll q} 单独推出。LWE 的量子困难性在这里作为假设使用。}

@@ -1,0 +1,12 @@
+\title{多状态热浴向二值促进过程的投影}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，注 1.1}
+
+\p{设 #{V} 有限，#{S} 为有限状态集，#{\rho} 为概率权，#{\mathcal O\subset S} 满足 #{0<p=\rho(\mathcal O)<1}。令 #{\widehat\omega_x=\mathbf 1_{\{\omega_x\in\mathcal O\}}}。每个坐标以速率一尝试更新，只有二值构形满足约束 #{c_x(\widehat\omega)=1} 时，才把 #{\omega_x} 重抽为 #{\rho}；约束不查询坐标 #{x}。}
+\p{则投影过程 #{\widehat\omega(t)} 恰为相同约束、占据概率 #{p} 的二值 [KCM](4G03)，空位概率为 #{q=1-p}。}
+\p{\strong{证明。}对任何二值构形函数 #{f}，用[单坐标热浴平均](4G02)计算复合函数 #{f\circ\widehat{\cdot}} 的生成元。一次重抽落入 #{\mathcal O} 的概率为 #{p}，落入补集的概率为 #{q}，所以}
+##{L(f\circ\widehat{\cdot})(\omega)=\sum_xc_x(\widehat\omega)
+\left(pf(\widehat\omega^{x,1})+qf(\widehat\omega^{x,0})-f(\widehat\omega)\right).}
+\p{右侧只依赖投影构形。有限矩阵指数的幂级数因而同样保持这类复合函数，其转移半群与二值链一致。若把 #{S} 取为一个大块的全部微观构形、把 #{\mathcal O^c} 取为含促进液滴的事件，便得到有效空位概率。投影识别的是二值过程；多状态内部波动的松弛估计还需要额外方差控制。}

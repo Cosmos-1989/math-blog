@@ -1,0 +1,11 @@
+\title{密度矩阵与混合态的测量}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mahadev，§2](icm2026-mahadev)，采用迹为一的归一化}
+
+\p{在有限维[量子寄存器](4F01)上，密度矩阵是满足 #{\rho=\rho^*}、#{v^*\rho v\geq 0} 及 #{\operatorname{tr}\rho=1} 的方阵；这里的[迹](0F0F)是对角元之和。以概率 #{p_j} 准备单位向量 #{|\psi_j\rangle} 所表示的混合态，其密度矩阵为 #{\rho=\sum_jp_j|\psi_j\rangle\langle\psi_j|}。由 [Hermitian 矩阵的谱分解](0N0B)，每个密度矩阵都有这样的表示，其特征值非负且总和为一。不同的混合制备可以给出同一矩阵。}
+\p{若 #{P_a=P_a^*=P_a^2}、#{P_aP_b=0} 对 #{a\ne b} 成立，且 #{\sum_aP_a=I}，这组正交投影定义一次测量。结果 #{a} 的概率及正概率时的条件态为}
+##{p(a)=\operatorname{tr}(P_a\rho),\qquad \rho_a=\frac{P_a\rho P_a}{p(a)}.}
+\p{这些公式由[纯态投影规则](00JO)对混合制备逐项平均得到；迹的循环性保证 #{\operatorname{tr}(P_a\rho P_a)=p(a)}。计算基测量给出 #{p(x)=\rho_{xx}}。均匀混合 #{|0\rangle} 与 #{|1\rangle} 的矩阵为 #{I_2/2}，其迹为一；纯叠加 #{(|0\rangle+|1\rangle)/\sqrt 2} 则还具有非零的非对角元。}
+\p{一个自伴矩阵 #{A} 若满足 #{A^2=I}，称二值可观测量。投影 #{P_\pm=(I\pm A)/2} 分别对应数值 #{\pm 1}，测量结果的期望为 #{\operatorname{tr}(A\rho)}。}

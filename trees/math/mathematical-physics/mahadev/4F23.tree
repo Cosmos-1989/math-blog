@@ -1,0 +1,11 @@
+\title{用 X 和 Z 测量抽样 Hamiltonian 能量}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§4.1](icm2026-mahadev)；[验证论文 v3，§7.1，式 (164)–(167)](https://arxiv.org/html/1804.01082v3)，概率计算}
+
+\p{在 #{N} 个量子比特上，设 #{K=\sum_{j=1}^M a_jP_j}，其中 #{a_j\in\mathbb R\setminus\{0\}}，#{P_j} 是由 #{I,X,Z} 构成的张量积，#{C=\sum_j|a_j|>0}。给定[密度矩阵](4F02) #{\rho}，以概率 #{|a_j|/C} 抽取 #{j}，分别测量 #{P_j} 中非单位因子的 [Pauli 可观测量](4F05)，把各个 #{\pm 1} 结果相乘得到 #{R}；空乘积取一。若 #{R=-\operatorname{sgn}(a_j)} 就接受。则}
+##{\Pr(\mathrm{acc})=\frac 12-\frac{\operatorname{Tr}(K\rho)}{2C}.}
+\p{\strong{证明。}不同量子比特上的测量投影彼此交换。乘积结果的期望为 #{\mathbb E(R\mid j)=\operatorname{Tr}(P_j\rho)}；因 #{R\in\{-1,1\}}，接受条件的指示函数为 #{(1-\operatorname{sgn}(a_j)R)/2}。按 #{j} 平均并用[迹的线性](0F0F)，便得到公式。#{Z} 测量就是计算基测量；#{X} 测量等价于先施加 [Hadamard](4F04) 再测计算基。}
+\p{如果某个诚实态满足 #{\operatorname{Tr}(K\rho)\leq a}，而否实例的每个态都满足 #{\operatorname{Tr}(K\rho)\geq b>a}，则完备率与可靠率相差至少 #{(b-a)/(2C)}。当该量为逆多项式时，[多次独立抽样](4F2B)可将错误降至可忽略。对于攻击者，所需条件是最低特征值至少为 #{b}，由[谱定理](0N0B)它等价于所有密度矩阵的能量下界。}
+\p{所引验证论文 §7.1 采用外部电路归约：BQP 判定问题可转为具有逆多项式能隙、由至多两位的 #{X,Z} 项组成的局部 Hamiltonian 判定，并有高效量子制备的诚实见证。此归约引用该文的 Biamonte–Love 与 Morimae–Fitzsimons 结果；上式的抽样计算只需要已给定的 #{K} 及能量承诺。[历史态传播约束](4F22)解释见证编码的起点。}

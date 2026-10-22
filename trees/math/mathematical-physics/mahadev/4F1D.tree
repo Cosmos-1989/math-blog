@@ -1,0 +1,16 @@
+\title{爪承诺的 Hadamard 测量解码}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§4.2，式 (4.1)–(4.3)](icm2026-mahadev)，振幅计算}
+
+\p{设 #{x_0,x_1} 是有限集合 #{\mathcal X} 中的一对元素，#{J:\mathcal X\to\{0,1\}^w} 为单射。给定归一化[量子比特](4F01) #{|\psi\rangle=\alpha_0|0\rangle+\alpha_1|1\rangle}，将它等距编码为}
+##{|\Psi\rangle=\alpha_0|0,J(x_0)\rangle+\alpha_1|1,J(x_1)\rangle.}
+\p{在全部 #{w+1} 位上施加 [Hadamard 变换](4F04)，再测计算基得到 #{(c,d)\in\{0,1\}\times\{0,1\}^w}。知道两个原像的人计算}
+##{m=c\oplus d\cdot(J(x_0)\oplus J(x_1)),}
+\p{其中点积在 #{\mathbb F_2} 中计算。则 #{m} 的分布恰好等于直接在 Hadamard 基测量 #{|\psi\rangle}，即 #{\Pr(m=a)=|\alpha_0+(-1)^a\alpha_1|^2/2}。}
+\p{\strong{证明。}令 #{\delta=J(x_0)\oplus J(x_1)}。结果 #{(c,d)} 的振幅是}
+##{2^{-(w+1)/2}(-1)^{d\cdot J(x_0)}
+  \bigl(\alpha_0+(-1)^{c+d\cdot\delta}\alpha_1\bigr).}
+\p{对每个固定 #{d}，两个 #{c} 的概率之和为 #{2^{-w}}，因为 #{|\alpha_0+\alpha_1|^2+|\alpha_0-\alpha_1|^2=2}。所以 #{d} 均匀；把 #{c} 改记为 #{m=c\oplus d\cdot\delta}，再对 #{2^w} 个 #{d} 求和即得公式。计算基测量则直接以概率 #{|\alpha_b|^2} 给出 #{b}。}
+\p{在[陷门函数对](4F13)中，先公开函数值 #{y}，陷门使验证者能恢复相应的 #{x_0,x_1}，而证明者可相干地保留两支。带噪声制备与这个理想编码之间的误差由[平方根振幅界](4F09)及[共同测量误差界](4F28)控制。}

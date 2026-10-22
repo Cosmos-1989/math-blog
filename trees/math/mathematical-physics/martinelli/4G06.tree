@@ -1,0 +1,16 @@
+\title{松弛时间与 Poincaré 不等式}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§1.2，式 (1.3)}
+
+\p{设 #{L} 是至少含两个状态的有限集合 #{E} 上、可逆概率测度为 #{\mu>0} 的[Markov 生成元](4G01)。实函数的加权[内积](004M)与范数记为 #{\langle f,g\rangle_\mu=\sum_{a\in E}\mu(a)f(a)g(a)}、#{\|f\|_2^2=\langle f,f\rangle_\mu}。以[Dirichlet 形式](4G04) #{\mathcal D(f,f)=-\mu(fLf)} 定义谱隙与松弛时间}
+##{\operatorname{gap}(L)=\inf_{\operatorname{Var}_\mu(f)>0}\frac{\mathcal D(f,f)}{\operatorname{Var}_\mu(f)},\qquad T_{\mathrm{rel}}=\operatorname{gap}(L)^{-1},}
+\p{其中 #{1/0=\infty}，#{\operatorname{Var}_\mu} 是[方差](00L2)。等价地，#{T_{\mathrm{rel}}} 是使 #{\operatorname{Var}_\mu(f)\leq T_{\mathrm{rel}}\mathcal D(f,f)} 对一切 #{f} 成立的最小常数。这称 Poincaré 不等式。无限格 KCM 用所有局部函数取同样的上确界定义 #{T_{\mathrm{rel}}}。}
+\p{有限状态时，该常数恰好控制均方松弛。写 #{g_t=P_tf-\mu f}，可逆性与半群求导给出 #{\frac{d}{dt}\mu(g_t^2)=-2\mathcal D(g_t,g_t)\leq -2\mu(g_t^2)/T_{\mathrm{rel}}}。乘以 #{e^{2t/T_{\mathrm{rel}}}} 并积分，得}
+##{\operatorname{Var}_\mu(P_tf)\leq e^{-2t/T_{\mathrm{rel}}}\operatorname{Var}_\mu(f).}
+\p{反过来，对这个不等式在 #{t=0} 求右导数，恢复 Poincaré 不等式。无约束热浴由[方差张量化](4G05)给出 #{T_{\mathrm{rel}}\leq 1}；任一非恒定单坐标函数使等号成立。}
+\p{有限链若任意两状态可经正速率边连接，则 #{T_{\mathrm{rel}}<\infty}。事实上，令 #{N=|E|}、#{\kappa=\min_{r(u,v)>0}\mu(u)r(u,v)>0}。任意两点可用至多 #{N-1} 条边连接；沿路径应用 [Cauchy–Schwarz 不等式](004S)，再扩大到全部有向边，得到}
+##{\operatorname{Var}_\mu(f)=\frac 12\sum_{a,b}\mu(a)\mu(b)(f(a)-f(b))^2
+\leq\frac{N-1}{2}\sum_{r(u,v)>0}(f(u)-f(v))^2
+\leq\frac{N-1}{\kappa}\mathcal D(f,f).}

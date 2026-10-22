@@ -1,0 +1,10 @@
+\title{临界分枝随机游走的平均访问量}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§2；逐代期望证明}
+
+\p{设[分枝随机游走](4E07)后代均值为 #{m=\mathbb EN<\infty}，跳跃分布为 #{D}。记 #{p_n(y)=\mathbb P(S_n=y)}，#{p_0(y)=1_{\{y=0\}}}。则}
+##{\mathbb EZ_n(y)=m^np_n(y),\qquad \mathbb E\sum_{n\geq 0}Z_n(y)=\sum_{n\geq 0}m^np_n(y).}
+\p{\strong{证明。}给定第 #{n} 代的有限位置列表，每个位于 #{x} 的亲代平均产生 #{mD(y-x)} 个位于 #{y} 的子代。[条件期望](0A01)的全期望公式给出 #{\mathbb EZ_{n+1}(y)=m\sum_xD(y-x)\mathbb EZ_n(x)}。从 #{n=0} 归纳，再由[单调收敛](0A7A)对世代求和。}
+\p{临界情形 #{m=1} 时，右侧就是随机游走的 Green 函数 #{G(0,y)=\sum_np_n(y)}，它计数平均访问次数。若 #{m<1}，对 #{y} 求和得平均总个体数 #{\mathbb ET=\sum_nm^n=(1-m)^{-1}}，给出平均场易感率指数一。}

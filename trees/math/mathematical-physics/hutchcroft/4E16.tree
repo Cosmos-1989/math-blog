@@ -1,0 +1,10 @@
+\title{第一矩渐近微分方程的终端积分}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，式 (4.1) 的第一矩；条件微积分证明}
+
+\p{设 #{a,A>0}，#{m:\lbrack 1,\infty\rparen\to(0,\infty)} 连续可微，当 #{r\to\infty} 时 #{m(r)\to\infty} 且 #{m'(r)\sim Ar^{-a-1}m(r)^2}。其中 #{\sim} 表示比值趋于一。则 #{m(r)\sim(a/A)r^a}。}
+\p{\strong{证明。}由[链式法则](0A34)，#{(1/m)'=-m'/m^2}。给定 #{0<\varepsilon<1}，充分大 #{r} 以后此导数的负值介于 #{(1-\varepsilon)Ar^{-a-1}} 与 #{(1+\varepsilon)Ar^{-a-1}} 之间。以[微积分基本定理](0A3C)积分到 #{R}，再用 #{1/m(R)\to 0} 令 #{R\to\infty}，得到}
+##{\frac{(1-\varepsilon)A}{a}r^{-a}\leq\frac 1{m(r)}\leq\frac{(1+\varepsilon)A}{a}r^{-a}.}
+\p{令 #{\varepsilon\downarrow 0} 即得结论。对于[截断簇](4E13)，报告的研究估计给出 #{a=\alpha} 和 #{A=v_d(d+\alpha)\beta_c}，其中 #{v_d} 为欧氏单位球体积。关键的簇解耦负责建立微分假设；终端条件 #{m\to\infty} 也不能省去。}

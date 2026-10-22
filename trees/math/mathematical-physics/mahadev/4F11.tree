@@ -1,0 +1,12 @@
+\title{小噪声平移与两支态的整体误差}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§3.2.1，式 (3.4)–(3.7)](icm2026-mahadev)，归一化后的定量版本}
+
+\p{设 #{q\geq 2}，#{A\in\mathbb Z_q^{m\times n}}，#{s\in\mathbb Z_q^n}，#{e\in\mathbb Z_q^m}。令 #{p} 为 #{\mathbb Z_q^m} 上的概率质量函数，#{p_e(z)=p(z-e)}。用[可逆求值](4F06)定义}
+##{|\Psi_e\rangle=\frac 1{\sqrt{2q^n}}\sum_{b,x,z}\sqrt{p(z)}|b,x,Ax+b(As+e)+z\rangle,}
+\p{求和遍历 #{b\in\{0,1\},x\in\mathbb Z_q^n,z\in\mathbb Z_q^m}。把 #{e} 换成零所得态记为 #{\Psi_0}。则}
+##{\|\Psi_e-\Psi_0\|^2=h^2(p,p_e).}
+\p{\strong{证明。}#{b=0} 的分量完全相同。在 #{b=1} 分量中令 #{z'=z+e}，两态同一基向量的振幅差为 #{(2q^n)^{-1/2}(\sqrt{p(z'-e)}-\sqrt{p(z')})}。固定 #{x} 时输出标签与 #{z'} 一一对应，故平方求和得 #{\frac 12\sum_{z'}(\sqrt{p_e(z')}-\sqrt{p(z')})^2=h^2(p,p_e)}。}
+\p{再假定 #{Ax+\operatorname{supp}p} 随 #{x} 两两不交，其中支撑指质量函数为正的点集。在理想态 #{\Psi_0} 中，每个正概率测量结果 #{y=Ax_0+z_0} 唯一确定 #{x_0,z_0}，因此其条件态恰为[两支叠加](4F10)。若[平方 Hellinger 距离](4F09)满足 #{h^2(p,p_e)\leq\varepsilon^2}，由[振幅误差的测量界](4F28)，两态在任何共同酉变换和投影测量后的整体结果分布相差至多 #{\varepsilon}。特别地，可把承诺 #{y} 及后续回答一起比较。这个整体界不要求每个罕见 #{y} 的条件态都相近。}

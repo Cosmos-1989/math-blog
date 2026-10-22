@@ -1,0 +1,13 @@
+\title{固定促进端点下的路径方差扩展}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§4、式 (4.8) 前的固定路径论证；有限版本证明}
+
+\p{设 #{S} 有限，#{\rho(s)>0}，#{G\subset S} 满足 #{0<r=\rho(G)<1}。在坐标 #{0,1,\ldots,n,n+1} 上取乘积测度 #{\nu}，令 #{I=\{0,\ldots,n\}}。定义辅助热浴链：对 #{j<n}，只有 #{\omega_{j+1}\in G} 时才更新 #{j}；第 #{n} 位无约束更新。记该有限链的[松弛时间](4G06)为 #{T_{n,r,\rho}}。}
+\p{对任意实函数 #{f}，以[单坐标方差](4G02)记 #{V_j(f)}，有}
+##{\nu(\mathbf 1_{\{\omega_{n+1}\in G\}}V_0(f))
+\leq T_{n,r,\rho}\,\nu\left(\mathbf 1_{\{\omega_{n+1}\in G\}}
+\left[V_n(f)+\sum_{j=0}^{n-1}\mathbf 1_{\{\omega_{j+1}\in G\}}V_j(f)\right]\right).}
+\p{\strong{证明。}先固定端点 #{\omega_{n+1}}。把其他 #{I\setminus\{0\}} 坐标也平均，方差分解给出 #{\nu_I(V_0(f))\leq\operatorname{Var}_{\nu_I}(f)}，因为差为其余坐标上条件均值的方差，非负。辅助链可逆，由其 Poincaré 不等式，右侧不超过 #{T_{n,r,\rho}} 乘所示局部方差之和。最后对端点属于 #{G} 的取值按 #{\rho} 求和。}
+\p{辅助链的通信性也可直接验证：从右往左把各位设为某个固定 #{s_*\in G}，再逆向连接任意目标构形。每步合法，且所有目标状态都有正概率，故[有限通信类](4G09)论证保证松弛时间有限。该恒等式明确分离了方差扩展这一代数步骤与估计 #{T_{n,r,\rho}} 的困难；后者的精细尺度由一维辅助模型提供。}

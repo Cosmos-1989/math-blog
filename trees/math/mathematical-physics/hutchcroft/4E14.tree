@@ -1,0 +1,12 @@
+\title{有限独立边模型的微分公式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§§2、4 的边微分；有限模型直接证明}
+
+\p{设有限边集 #{E} 上的[渗流](4E01)具有可导开边概率 #{p_e(t)\in(0,1)}，#{F(\omega)} 为任意实函数。记 #{\omega^{e=i}} 为把边 #{e} 强制设为 #{i} 的构形。则}
+##{\frac{d}{dt}\mathbb E_tF=\sum_{e\in E}p'_e(t)\mathbb E_t\bigl[F(\omega^{e=1})-F(\omega^{e=0})\bigr].}
+\p{\strong{证明。}固定其余坐标，期望关于 #{p_e} 是仿射函数 #{p_eF(1)+(1-p_e)F(0)}，其偏导等于 #{F(1)-F(0)}。对有限乘积求和使用[链式法则](0A34)得到公式。}
+\p{若 #{p_e(t)=1-e^{-\beta J_e(t)}}，定义 #{\Delta_eF(\omega)=F(\omega^{e=1})-F(\omega)}，则 #{\Delta_eF=0} 在开边事件上，而闭边概率为 #{e^{-\beta J_e(t)}}。因此}
+##{\frac{d}{dt}\mathbb E_tF=\beta\sum_eJ'_e(t)\mathbb E_t\Delta_eF.}
+\p{若所有边直接以概率 #{p} 开放，则相应公式是 #{d\mathbb E_pF/dp=(1-p)^{-1}\sum_e\mathbb E_p\Delta_eF}。闭边增量形式中的 #{(1-p)^{-1}} 必须保留。}

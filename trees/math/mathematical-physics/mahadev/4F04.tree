@@ -1,0 +1,10 @@
+\title{Hadamard 变换的二进制 Fourier 公式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§2，式 (2.3)](icm2026-mahadev)，逐坐标展开}
+
+\p{在[量子比特](4F01)上定义 #{H=2^{-1/2}\begin{pmatrix}1&1\\1&-1\end{pmatrix}}。对 #{x,d\in\{0,1\}^r}，令 #{d\cdot x=\sum_jd_jx_j\pmod 2}，#{\oplus} 表示逐位模二加法。则}
+##{H^{\otimes r}|x\rangle=2^{-r/2}\sum_{d\in\{0,1\}^r}(-1)^{d\cdot x}|d\rangle.}
+\p{\strong{证明。}直接乘矩阵得 #{H|x_j\rangle=2^{-1/2}\sum_{d_j=0}^1(-1)^{d_jx_j}|d_j\rangle}。取各坐标的[张量积](0F4E)，每个选择 #{d} 的系数是各坐标系数的乘积，因而得到公式。又 #{H^*=H} 且 #{H^2=I}，所以张量积变换也酉。}
+\p{对一个比特，Hadamard 基测量是先作用 #{H} 再做计算基测量。若输入为 #{\alpha_0|0\rangle+\alpha_1|1\rangle}，结果 #{c} 的概率为 #{|\alpha_0+(-1)^c\alpha_1|^2/2}。这个概率依赖两振幅的相对相位。}

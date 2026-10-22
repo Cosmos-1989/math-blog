@@ -1,0 +1,10 @@
+\title{模整数上的截断离散 Gaussian 分布}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[BCMVV v4，§2.3，式 (6)–(7)](https://arxiv.org/html/1804.00640v4)}
+
+\p{设整数 #{q\geq 2}，记 #{\mathbb Z_q=\mathbb Z/q\mathbb Z} 为整数[商环](00CU)。选每个剩余类在 #{\lparen -q /2,q/2\rbrack} 内的唯一整数代表 #{[x]_q}。给定 #{B>0}，令 #{S_B=\{x\in\mathbb Z_q:|[x]_q|\leq B\}}，定义}
+##{D_{q,B}(x)=\frac{\mathbf 1_{S_B}(x)e^{-\pi[x]_q^2/B^2}}{\sum_{z\in S_B}e^{-\pi[z]_q^2/B^2}}.}
+\p{分母为正，因为 #{0\in S_B}。它是有限集合上的[概率分布](00Q3)。#{m} 维乘积分布为 #{D_{q,B}^{\otimes m}(e)=\prod_{j=1}^mD_{q,B}(e_j)}；其支撑是立方截断 #{S_B^m}，因此包含在 #{\|[e]_q\|_2\leq B\sqrt m} 的球内。该乘积分布与按 Euclidean 球截断后再归一化的分布是两种约定。}
+\p{给定固定偏移 #{v\in\mathbb Z_q^m}，平移分布为 #{(D+v)(e)=D(e-v)}。比较宽误差与小偏移时，应估计这两个质量函数的[概率距离](4F09)，包括截断边界的贡献。密码学参数中 #{B}、#{q}、#{m} 都随安全参数变化。}

@@ -1,0 +1,11 @@
+\title{更新族定义的动力学约束自旋模型}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§1.1}
+
+\p{固定整数 #{d\geq 1}、#{0<q<1}，令 #{p=1-q}。构形 #{\omega\in\{0,1\}^{\mathbb Z^d}} 中，#{0} 表示空位，#{1} 表示占据。更新族 #{\mathcal U} 是非空有限集合，其元素 #{X} 都是 #{\mathbb Z^d\setminus\{0\}} 的非空有限子集。约束为}
+##{c_x(\omega)=\mathbf 1_{\{\exists X\in\mathcal U:\ \omega_{x+y}=0\text{ 对所有 }y\in X\}}.}
+\p{每个格点有独立的速率一 [Poisson 时钟](4C02)，即时间区间的计数均值等于区间长度。响铃时若 #{c_x=1}，便以概率 #{q} 置空，以概率 #{p} 置为占据；否则不变。选择结果是独立的 [Bernoulli 变量](00L4)。称满足约束的响铃为合法响铃。对局部函数，利用[单坐标平均](4G02)，生成元写为}
+##{Lf=\sum_{x\in\mathbb Z^d}c_x(\mu_xf-f),\qquad \mu=\operatorname{Bernoulli}(p)^{\otimes\mathbb Z^d}.}
+\p{在有限区域 #{\Lambda} 内，只对 #{x\in\Lambda} 更新，区域外指定构形保持不动，得到[有限连续时间 Markov 链](4G01)。无限格的构造可由时钟向过去追踪查询：令 #{M=|\bigcup_{X\in\mathcal U}X|}。判定一次响铃的约束至多查询 #{M} 个邻居；若响铃不合法，还须查询该格点在响铃前的旧值。因此每次回溯至多有 #{M+1} 个坐标分支。在长度 #{T} 的时间窗内，从有限集合 #{K} 出发的长度 #{n} 有序查询序列期望数至多 #{|K|(M+1)^nT^n/n!}，随 #{n\to\infty} 趋零。因此几乎必然不存在无限向后查询，各有限观测可由有限时钟信息决定。对整数时间窗与格点取可数交，得到一致的过程。}

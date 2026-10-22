@@ -1,0 +1,10 @@
+\title{格点幂律的球内和与尾和}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§2 标度计算；二进壳层证明}
+
+\p{设 #{d\geq 1}，#{\|x\|} 为欧氏范数，#{0<a<d}。则对 #{R\geq 2}，}
+##{\sum_{\|x\|\leq R}(1+\|x\|)^{-d+a}\asymp R^a,\qquad \sum_{\|x\|>R}(1+\|x\|)^{-d-a}\asymp R^{-a}.}
+\p{\strong{证明。}使用最大坐标范数 #{\|x\|_\infty=\max_i|x_i|}，球的格点数恰为 #{(2\lfloor R\rfloor+1)^d}。因 #{\|x\|_\infty\leq\|x\|\leq\sqrt d\|x\|_\infty}，两种范数给出的求和可在常数倍半径之间夹逼。最大坐标壳层 #{2^k\leq\|x\|_\infty<2^{k+1}} 含与 #{2^{kd}} 同阶的格点。两个权重在壳层上分别与 #{2^{k(-d+a)}}、#{2^{k(-d-a)}} 同阶。}
+\p{球内和归结为有限几何和 #{\sum_{k\leq\log_2R}2^{ka}}，由最大项控制；尾和归结为 #{\sum_{k>\log_2R}2^{-ka}}，由第一项控制。这里 #{f\asymp g} 指比值具有固定正上下界。将第一式用于[两点函数求和](4E04)，便从衰减阶 #{\|x\|^{-d+a}} 得到球内平均簇体积阶 #{R^a}。}

@@ -1,0 +1,10 @@
+\title{用不可区分的函数密钥隐藏测量基}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mahadev 验证论文 v3，定义 4.2–4.3](https://arxiv.org/html/1804.01082v3)}
+
+\p{设 #{\mathcal F} 是定义于有限集合 #{\mathcal X,\mathcal Y} 的[带噪声陷门爪函数族](4F13)，并具有[自适应硬核比特性质](4F14)。另设族 #{\mathcal G=\{g_{k,b}:\mathcal X\to\mathcal D(\mathcal Y)\}}，其中 #{b\in\{0,1\}}，#{\mathcal D(\mathcal Y)} 为有限概率质量函数集合。称 #{\mathcal G} 为陷门单射族，若有 PPT 密钥生成器输出 #{(k,t_k)}，且满足以下性质。}
+\p{任意不同 #{(b,x),(b',x')} 对应的分布支撑不交。给定陷门和支撑中的 #{y}，高效确定性算法 #{\operatorname{Inv}_{\mathcal G}(t_k,y)} 返回唯一的 #{(b,x)}。公开算法 #{\operatorname{Chk}_{\mathcal G}(k,b,x,y)} 恰好检查支撑归属。相干制备的理想目标为 #{|\mathcal X|^{-1/2}\sum_{x,y}\sqrt{g_{k,b}(x)(y)}|x,y\rangle}，工作寄存器为零；有限门 QPT 实现按[联合态制备约定](4F13)，在控制、输出、工作寄存器及任意纠缠辅助空间上具有统一可忽略范数误差。}
+\p{称 #{\mathcal F} 具有单射不变性，若存在这样的 #{\mathcal G}，两族使用同一公开检查及相干制备算法，且两种生成器的公钥分布对 [QPT 攻击者](4F07)[计算不可区分](4F08)。陷门不提供给攻击者。}
+\p{理想制备下，爪模式在同一个 #{y} 上保留两个分支；单射模式的 #{y} 唯一确定分支 #{b}。因此在[部分测量](4F03)后，单射模式已完成标准基测量，而爪模式仍允许 [Hadamard 解码](4F1D)。有限门实现对这些整体测量分布只增加可忽略误差。密钥模式由验证者预先选择，公开密钥隐藏了这个选择。}

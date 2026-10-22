@@ -1,0 +1,11 @@
+\title{可逆求值与辅助寄存器的消去}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Mahadev，§2 式 (2.5) 与附录 A](icm2026-mahadev)}
+
+\p{设 #{f:\{0,1\}^a\to\{0,1\}^b} 为函数。在[计算基](4F01)上定义 #{U_f|x,y\rangle=|x,y\oplus f(x)\rangle}。这个映射的平方为恒等，所以它是基的置换，线性延拓即为酉算子。若 #{f} 由一个有限 Boolean 电路计算，可把每一步结果写入新的辅助位，复制最终输出后按相反次序执行各步，便将辅助位全部恢复为零；门数至多增加一个常数倍，所需辅助位数至多与原门数成正比。}
+\p{特别地，取 #{A\in(\mathbb Z/q\mathbb Z)^{m\times n}}、#{x\in(\mathbb Z/q\mathbb Z)^n} 和 #{e\in(\mathbb Z/q\mathbb Z)^m}，在三个寄存器上先得到 #{|x,e,Ax+e\rangle}。把第二寄存器改为 #{e+Ax-(Ax+e)}，所得态是 #{|x,0,Ax+e\rangle}。这两次模加法在保留其他寄存器时均可逆。}
+\p{若 #{p} 是误差向量上的概率质量函数，初态取 #{q^{-n/2}\sum_{x,e}\sqrt{p(e)}|x,e\rangle}，消去辅助寄存器后便得到}
+##{q^{-n/2}\sum_{x,e}\sqrt{p(e)}|x,Ax+e\rangle.}
+\p{固定 #{x} 时，映射 #{e\mapsto Ax+e} 为双射，故该向量归一化。制备振幅 #{\sqrt{p(e)}} 的效率是另外一个条件；有限维酉映射的存在本身不提供高效电路。}

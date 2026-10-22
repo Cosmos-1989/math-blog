@@ -1,0 +1,10 @@
+\title{East 模型的有向促进与零自举阈值}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§2.1；自举尾界直接证明}
+
+\p{设 #{e_1,\ldots,e_d} 是 #{\mathbb Z^d} 的坐标单位向量。East 模型是[更新族](4G03) #{\mathcal U=\{\{-e_i\}:1\leq i\leq d\}} 给出的 KCM；一个点只需有一个后方邻居 #{x-e_i} 为空便能更新。在一维采用向右传播的约定 #{c_x=1-\omega_{x-1}}。}
+\p{若一维初态只有原点为空，原点左边永远全占据，原点也永远为空；因为这些点都无合法促进者。原点右边的空位可依次生成。一般初始分布为 #{\mu_q=\operatorname{Bernoulli}(1-q)^{\otimes\mathbb Z^d}} 时，[自举感染](4G08)可沿负第一坐标轴向原点传播。若 #{0,-e_1,\ldots,-ne_1} 中有空位，则原点至迟在第 #{n} 步感染，故}
+##{\mu_q(\tau_0^{\mathrm{BP}}>n)\leq(1-q)^{n+1}.}
+\p{对每个 #{q>0}，此尾界快于任意固定负幂，所以[两个自举阈值](4G0A)均为零。由[遍历区间定理](4G0B)，所有 #{0<q<1} 的 East 模型均关于乘积测度遍历且松弛时间有限。}

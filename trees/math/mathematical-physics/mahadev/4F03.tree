@@ -1,0 +1,11 @@
+\title{部分测量留下哪一个条件态}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§2 与 §4.3，式 (4.4)](icm2026-mahadev)，有限维投影计算}
+
+\p{在两个[量子寄存器](4F01)上写单位向量 #{|\Psi\rangle=\sum_y|v_y\rangle\otimes|y\rangle}，其中 #{|y\rangle} 是第二寄存器的计算基，#{v_y} 无须单位化。只测量第二寄存器，结果 #{y} 的概率为 #{\|v_y\|^2}；当此数正时，第一寄存器的条件态由 #{v_y/\|v_y\|} 表示。}
+\p{\strong{证明。}结果 #{y} 的正交投影是 #{I\otimes|y\rangle\langle y|}，投影后的向量恰为 #{v_y\otimes|y\rangle}。[投影测量规则](00JO)给出其平方范数和归一化。不同 #{y} 分量正交，所以各概率总和为一。}
+\p{更一般地，设 #{P} 投影到所有合法回答张成的子空间。若接受概率 #{\|P\Psi\|^2=1}，则 #{(I-P)\Psi=0}，整个向量就在合法子空间内。例如合法的前两寄存器基向量只有 #{|0,x_0\rangle,|1,x_1\rangle} 时，必能写成}
+##{|\Psi\rangle=|0,x_0\rangle|v_0\rangle+|1,x_1\rangle|v_1\rangle,\qquad \|v_0\|^2+\|v_1\|^2=1.}
+\p{辅助向量 #{v_0,v_1} 可以任意且可以为零。若接受概率仅为 #{1-\varepsilon>0}，归一化的接受分量 #{\Phi=P\Psi /\sqrt{1-\varepsilon}} 满足 #{\|\Psi -\Phi\|^2=2-2\sqrt{1-\varepsilon}\leq 2\varepsilon}；这直接由 #{\langle\Psi|\Phi\rangle=\sqrt{1-\varepsilon}} 得到。}

@@ -1,0 +1,11 @@
+\title{含稀少促进块的好路径方差不等式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，式 (4.3)–(4.4)、命题 4.4}
+
+\p{设 #{S} 有限，#{\rho(s)>0}，#{\nu=\rho^{\otimes\mathbb Z^2}}。取 #{\varnothing\ne G_2\subseteq G_1\subseteq S}，#{p_i=\rho(G_i)}，且 #{0<p_2<1}。称 #{G_1} 为好事件，#{G_2} 为促进事件。令 #{n=\lfloor p_2^{-2}\rfloor}。从 #{x+e_2} 出发、含 #{n} 个顶点、每步为 #{e_1} 或 #{e_2} 的路径称有向路径。}
+\p{路径 #{\gamma} 为好路径，指对每个 #{z\in\gamma}，坐标 #{\omega_z,\omega_{z-e_1},\omega_{z+e_1}} 都在 #{G_1} 中。预先固定所有有限步序列的字典序。令 #{A_x} 为以下事件：存在好路径；按该序取最小好路径，其某个顶点状态在 #{G_2} 中；此外 #{\omega_{x+e_1}\in G_1}。}
+\p{引用报告命题 4.4：存在绝对常数 #{\delta>0}，若 #{\max\{p_2,(1-p_1)(\log(1/p_2))^2\}\leq\delta}，则对每个局部实函数 #{f}，}
+##{\operatorname{Var}_\nu(f)\leq 4\sum_{x\in\mathbb Z^2}\nu(\mathbf 1_{A_x}\operatorname{Var}_{\rho_x}(f)).}
+\p{这里[单坐标方差](4G02)仅对 #{\omega_x} 平均。#{A_x} 的所有坐标均满足 #{z_1+2z_2>x_1+2x_2}，包括路径两旁的缓冲点，因此满足[外层依赖条件](4G12)。不等式把任意波动的方差归结到“能沿好环境找到稀少促进块”的更新位置；处理随机选路与事件概率的证明引用报告所引 Martinelli–Morris–Toninelli，Proposition 3.5。}

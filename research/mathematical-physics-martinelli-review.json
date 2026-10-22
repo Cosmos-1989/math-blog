@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "review_id": "mathematical-physics-martinelli-review",
+  "reviewer_role": "Independent mathematical reviewer",
+  "result": "pass",
+  "status": "Post-freeze independent rereview complete; all seven findings resolved",
+  "reviewed_at_utc": "2026-10-22 03:08:43 UTC",
+  "freeze_confirmed": true,
+  "scope": {
+    "target": "All 46 Martinelli 4G trees (45 atoms and overview), reference, packet, and 18 directly inspected external prerequisite pages",
+    "new_tree_count": 46,
+    "full_build_run": false,
+    "git_operations": false,
+    "modified_files": [
+      "research/mathematical-physics-martinelli-review.json"
+    ],
+    "pending": [],
+    "packet_snapshot": "6c167a7a28c3fc8ae9e7a6153409d9baf469b79a58dcef1786f6c71d6a7afacb",
+    "packet_read": "Entire packet data reviewed: report/proof scope/claim locators, note metadata and hashes, prerequisites, atomic questions, reuse records, sources and corrections, deferred branches, checks and freeze metadata. Author test logs are not independently certified.",
+    "reviewed_file_count": 66,
+    "final_hash_policy": "This pass applies only to the exact reviewed_files digests. Later changes to any reviewed tree, reference, packet or prerequisite invalidate its corresponding review binding and require a scoped rereview."
+  },
+  "source_read_scopes": [
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/25M180425X",
+      "version": "Publisher DOI HTML",
+      "read_scope": "Full mathematical text, Sections 1-4, including Theorems 1.4-1.5, Conjecture 1.6, equations 2.1-2.6, Theorems 2.2/2.5/2.8/2.12, Conjectures 2.7/2.10/2.11, Definitions 3.2/3.7/3.8/3.10/3.12, Theorems 3.4/3.11/3.13/3.15, equations 4.1-4.8, Propositions 4.4-4.5; bibliography entries 1-29 inspected; publisher date, copyright and license verified in Information and Authors",
+      "claim": "Contract comparison, not reproof of cited research results"
+    },
+    {
+      "url": "https://arxiv.org/html/2510.20461v1",
+      "version": "v1, 23 October 2025",
+      "read_scope": "Sections 1 and 2 through Conjecture 3; equations 1.4-1.6, Definition 2.3, Theorems 2.4/2.5, Corollary 2.9, Theorems 2.10/2.12/2.13; proof text of Theorem 2.5 and beginning of Lemma 2.8 inspected",
+      "claim": "Supplementary source confirms normalizations and stationary-state contracts"
+    }
+  ],
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "MART-R1",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G0J.tree",
+      "line": 8,
+      "title": "Reuse the existing Hausdorff-distance prerequisite",
+      "detail": "The page defines Hausdorff distance without linking the canonical atomic definition 00FN, although that definition already exists. This defeats deduplication and omits the nonempty compact-set domain. Use 00FN for the definition, state that the limiting compact K is nonempty, and retain the distinction between the displayed weaker thickened-set conjecture and the source's stronger dilation conjecture.",
+      "requested_change": "Link Hausdorff distance to 00FN and record it in prerequisites; remove the redundant full definition or keep only a clearly labelled recall.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read repaired 4G0J: canonical 00FN reused, K explicitly nonempty compact, finite-time infected-region bound supplied, and weaker Hausdorff conjecture still distinguished from source dilation claim.",
+      "verified_sha256": "eff261a4a52655fcf0ab832d2475ceee6ee1a113324f0f036b0bbad5e866ffb9"
+    },
+    {
+      "id": "MART-R2",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G0I.tree",
+      "line": 7,
+      "title": "Send the total-variation terminology link to its definition",
+      "detail": "The link labelled 全变差距离 lands on 4G0H (mixing time/cutoff), rather than the coordinated canonical definition 4F27. The notation d_L belongs to 4G0H, but the named definition does not.",
+      "requested_change": "Link 全变差距离 to 4F27, or relabel the existing 4G0H link 最坏初态距离/混合截断; retain true prerequisite edges.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read repaired 4G0I: 4F27 is the TV definition and 4G0H is correctly labelled worst-initial-state distance; packet registers both.",
+      "verified_sha256": "e560152feca4fd39641053fd4c7ed7122f65c36d1d525ce4bc36d5b2e84156fd"
+    },
+    {
+      "id": "MART-R3",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G0M.tree",
+      "line": 12,
+      "title": "Square the distance in the diffusion heuristic",
+      "detail": "The prose says to divide the typical distance q^(-1/d) by the diffusion speed, but the displayed q^(-(1+2/d)) comes from the squared distance divided by the jump rate q. The wording teaches ballistic instead of diffusive scaling even though the final exponent is correct.",
+      "requested_change": "Write the heuristic explicitly as (q^(-1/d))^2/q = q^(-(1+2/d)), and describe q as the jump-rate or diffusivity scale.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read repaired 4G0M: the displayed diffusion heuristic now explicitly squares the typical distance and divides by rate q.",
+      "verified_sha256": "be026b37550afc0b63cd74b1646ca825e5c9350b3724063ae78a745505c8603b"
+    },
+    {
+      "id": "MART-R4",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G15.tree",
+      "line": 14,
+      "title": "Keep the comparison-cost statement as an upper bound",
+      "detail": "The formulas and cited Proposition 4.5 assert upper bounds on the comparison constants; the subsequent phrase 第一种代价的对数为...量级 reads as a matching two-sided order, which is not established there.",
+      "requested_change": "Say the logarithmic cost is at most that order (and the symmetric cost at most polynomial), unless a separate matching lower bound is supplied.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read repaired 4G15: both costs are described only as upper bounds, consistent with the displayed inequalities.",
+      "verified_sha256": "3c5ba691659ec5907223b532af5a4c8cbabf88a6ca7fc4cc56e3dc0c6947fe3f"
+    },
+    {
+      "id": "MART-R5",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G0D.tree",
+      "line": 7,
+      "title": "Introduce the density and dimension locally",
+      "detail": "The stationary-state conjecture uses q and Z^d without locally fixing d>=1 and 0<q<1. The update-family link does not bind parameters for this page, and endpoint q=0 or 1 changes the equilibrium interpretation.",
+      "requested_change": "Begin by fixing d>=1 and 0<q<1 before defining the update family and mu.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read repaired 4G0D: d>=1 and 0<q<1 introduced locally; zero-probability conditioning caution and conjectural status preserved.",
+      "verified_sha256": "ca87f88b97aadb9fbb530b6aa1f674df3613cc623a0bf7054c6c7f3884be0d31"
+    },
+    {
+      "id": "MART-R6",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G03.tree",
+      "line": 11,
+      "title": "Account for the updated site's old value in backward queries",
+      "detail": "The backwards construction counts only the M constraint-neighbor choices. At an illegal ring the updated site retains its old value, so recursively determining that update also requires the same site's value before the ring. With the currently defined M, the stated bound does not account for this self branch. A finite branching bound still proves the result, but it must describe all queried coordinates.",
+      "requested_change": "Use a branching bound M+1 (or define a new bound that explicitly includes the updated coordinate), explain the old-value query at failed rings, and retain the factorial time-ordering bound. Alternatively explicitly define a compressed influence-path construction and justify the different count.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read final 4G03: M is the cardinality of the union of constraint neighbors, retained old values are explicit self queries, and the safe M+1 branching factor appears in the factorial time-order bound.",
+      "verified_sha256": "ac055494554e387b12e3ac51477d304b0b654a0662a824a763ce485224e2180a"
+    },
+    {
+      "id": "MART-R7",
+      "priority": 2,
+      "file": "trees/math/mathematical-physics/martinelli/4G0W.tree",
+      "line": 11,
+      "title": "Bind the random initialization and density in standalone universality notes",
+      "detail": "4G0W's probability statement uses q and tau_0^BP without introducing a Bernoulli(q) infected set or the limit q down to zero on this page. Likewise 4G0Y introduces q, mu_q and the hitting times only in its research formulas; 4G0X uses mu_q without locally defining it. An update-family definition alone does not bind these random data in a separately reusable note.",
+      "requested_change": "Before the time-scale claims in 4G0W, 4G0X and 4G0Y, fix 0<q<1, specify iid vacancy density q (equivalently mu_q=Bernoulli(1-q) product), distinguish bootstrap infection time from KCM hitting time where both occur, and state q down to zero.",
+      "status": "resolved-on-rereview",
+      "resolution": "Re-read final 4G0W, 4G0X and 4G0Y: each now binds 0<q<1 and the Bernoulli product initialization; applicable discrete bootstrap and continuous KCM hitting times are locally specified, q tends to zero explicitly, and mean versus high-probability statements remain distinct.",
+      "verified_sha256": "3ca01aa0be6afb8af72c774260566d2c81db6b70bdf1937f6f4307a1780c017e",
+      "also_verified": [
+        {
+          "id": "4G0X",
+          "path": "trees/math/mathematical-physics/martinelli/4G0X.tree",
+          "sha256": "432f6c436b453fdc3f4a94f471b83308f509f2c40b06c755fac980a2a41680f1"
+        },
+        {
+          "id": "4G0Y",
+          "path": "trees/math/mathematical-physics/martinelli/4G0Y.tree",
+          "sha256": "2384e4a25437f85b6e1db601119b4c122f47781a2cd2e8530f80ea57f9090b29"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "local_proofs": "All local proof paragraphs were read. The finite generator/uniformization, heat-bath identities and Dirichlet normalization, variance tensorization, finite killed-chain estimate, closure-class argument, concrete geometry, BABP duality, path comparison, fixed-endpoint variance bound and finite projection are consistent on their stated domains. The backward-query construction now accounts for self retention. Numerical spot checks are corroboration only.",
+    "research_contracts": "All represented research statements compared with their precise locations in the publisher body or pinned supplementary v1. No remaining mismatch found in finite/infinite scope, densities, thresholds, dimension regimes, logarithmic exponents, cutoff conditions, or conditional-variance factors. Heuristics, cited research inputs, local deductions and conjectures remain distinguished.",
+    "source_corrections": "The notes' removal of the spurious 1/2 in conditional-variance sums and replacement of delta_all-empty by product equilibrium in East stationary classification are supported by direct calculation and the fixed supplementary v1.",
+    "prerequisites": "18 external prerequisite pages read and hash-bound. All 47 packet tree/reference records match files, titles and taxons. All 145 declared prerequisite edges have body links; the authored prerequisite graph is acyclic. Canonical TV 4F27 and Hausdorff distance 00FN are reused. Full shared-registry integration remains parent-owned.",
+    "limitations": "This is mathematical source/contract, local-proof and note-structure review, not reconstruction of cited deep research proofs or certification of the entire forest. No build, rendering or git operation was performed by this reviewer. Parent-reported Forester/KaTeX success is not used as mathematical evidence.",
+    "computational_spot_checks": {
+      "East": "Exhaustive finite reachability, vacancy caps 1-4: counts 2,5,26,373; farthest vacancies 1,3,7,15. Checks examples only, not the general counting theorem.",
+      "BABP": "Four-vertex graph, all pairs of subsets, q=0.2,0.5,0.8: generator duality identity within 1.5e-14. Algebraic proof remains the justification."
+    },
+    "atomicity_and_narration": "All 45 atomic questions checked against their pages. Each has one principal mathematical role, with local derivations/examples serving it; the overview connects the central problem and methods without replacing atomic definitions. Missing parameter bindings and misleading links identified in review have been repaired.",
+    "final_hashes": {
+      "reviewed_files": 66,
+      "new_trees_including_overview": 46,
+      "reference_files": 1,
+      "packet_files": 1,
+      "external_prerequisite_files": 18,
+      "missing_required_files": [],
+      "packet_tree_hash_mismatches": []
+    }
+  },
+  "reviewed_files": [
+    {
+      "id": "4G00",
+      "path": "trees/math/mathematical-physics/martinelli/4G00.tree",
+      "sha256": "0cce91a6a557ba6f4b9a3664fd662bbb83f4da231d3897b3c5854e39afab98d1"
+    },
+    {
+      "id": "4G01",
+      "path": "trees/math/mathematical-physics/martinelli/4G01.tree",
+      "sha256": "c74828c8f2b60d3306a4f57365ba78077f643b6c9b89ddf4e3990f20ef06ef27"
+    },
+    {
+      "id": "4G02",
+      "path": "trees/math/mathematical-physics/martinelli/4G02.tree",
+      "sha256": "6b09059c41a3257d937567f3092e868cddced54e84ae99a9d39367af77d111be"
+    },
+    {
+      "id": "4G03",
+      "path": "trees/math/mathematical-physics/martinelli/4G03.tree",
+      "sha256": "ac055494554e387b12e3ac51477d304b0b654a0662a824a763ce485224e2180a"
+    },
+    {
+      "id": "4G04",
+      "path": "trees/math/mathematical-physics/martinelli/4G04.tree",
+      "sha256": "a89cd34c118f92771b6e690836094289c70c2ca8338e4c12d118f97387e561fc"
+    },
+    {
+      "id": "4G05",
+      "path": "trees/math/mathematical-physics/martinelli/4G05.tree",
+      "sha256": "8c1d341f4fb23db5f3f222267bf35b9f3592a97a82d4d9d579be9ae5eba6c46b"
+    },
+    {
+      "id": "4G06",
+      "path": "trees/math/mathematical-physics/martinelli/4G06.tree",
+      "sha256": "ca01435aabfb024b5ed70907c5eaa22685c038e585463cdb4a4a940483025e7d"
+    },
+    {
+      "id": "4G07",
+      "path": "trees/math/mathematical-physics/martinelli/4G07.tree",
+      "sha256": "515c687aa92d0e8d3ac4485d9ac0c876d0c9d9c8800450d6bbb1a0ba1f75f518"
+    },
+    {
+      "id": "4G08",
+      "path": "trees/math/mathematical-physics/martinelli/4G08.tree",
+      "sha256": "ececf03e7bb923f4a30dfd0a0753686e17fdf1d49a28abd060a66ef25bbc142d"
+    },
+    {
+      "id": "4G09",
+      "path": "trees/math/mathematical-physics/martinelli/4G09.tree",
+      "sha256": "6f1505c76831f69364e9464b5d914862a75c05d4f4dfbd3671d66cba023d8e9e"
+    },
+    {
+      "id": "4G0A",
+      "path": "trees/math/mathematical-physics/martinelli/4G0A.tree",
+      "sha256": "da8cad578d3e3b1848d651dcc69231306a26fd34c7fa61f3be937dbbc996bc72"
+    },
+    {
+      "id": "4G0B",
+      "path": "trees/math/mathematical-physics/martinelli/4G0B.tree",
+      "sha256": "4f1ba14db9fad141a358c62553f3a11eb85471ac3528b3e0fcdb99c67ded454f"
+    },
+    {
+      "id": "4G0C",
+      "path": "trees/math/mathematical-physics/martinelli/4G0C.tree",
+      "sha256": "a7aa22c9257a64b6a9fc8a66f5c834e4b8169eab63751d9f477d3f3dff118728"
+    },
+    {
+      "id": "4G0D",
+      "path": "trees/math/mathematical-physics/martinelli/4G0D.tree",
+      "sha256": "ca87f88b97aadb9fbb530b6aa1f674df3613cc623a0bf7054c6c7f3884be0d31"
+    },
+    {
+      "id": "4G0E",
+      "path": "trees/math/mathematical-physics/martinelli/4G0E.tree",
+      "sha256": "16b888ba1ce8183b797802b30935f093eb802d59a84d74205f891a5034cdd9ea"
+    },
+    {
+      "id": "4G0F",
+      "path": "trees/math/mathematical-physics/martinelli/4G0F.tree",
+      "sha256": "7c4e06513d7950da5edd80e46d1ca044445294748c633b223ebc3d2604767e72"
+    },
+    {
+      "id": "4G0G",
+      "path": "trees/math/mathematical-physics/martinelli/4G0G.tree",
+      "sha256": "369ec87b0a37e4b746f1c9e8be4998730603696b9a795c218da2f7a6ba33be90"
+    },
+    {
+      "id": "4G0H",
+      "path": "trees/math/mathematical-physics/martinelli/4G0H.tree",
+      "sha256": "f1ecf7eb17cc17530606b8a1aedb28a296ee0f6861cbd0998ffeda3440eee39a"
+    },
+    {
+      "id": "4G0I",
+      "path": "trees/math/mathematical-physics/martinelli/4G0I.tree",
+      "sha256": "e560152feca4fd39641053fd4c7ed7122f65c36d1d525ce4bc36d5b2e84156fd"
+    },
+    {
+      "id": "4G0J",
+      "path": "trees/math/mathematical-physics/martinelli/4G0J.tree",
+      "sha256": "eff261a4a52655fcf0ab832d2475ceee6ee1a113324f0f036b0bbad5e866ffb9"
+    },
+    {
+      "id": "4G0K",
+      "path": "trees/math/mathematical-physics/martinelli/4G0K.tree",
+      "sha256": "1a4d63f81539f92fdebd8a9a333047ed752b257e7963a7327449e6b27c72f6a7"
+    },
+    {
+      "id": "4G0L",
+      "path": "trees/math/mathematical-physics/martinelli/4G0L.tree",
+      "sha256": "7350d2496c253212c23760c97db7f6987ceb83722d8e3525277154d3722a2a93"
+    },
+    {
+      "id": "4G0M",
+      "path": "trees/math/mathematical-physics/martinelli/4G0M.tree",
+      "sha256": "be026b37550afc0b63cd74b1646ca825e5c9350b3724063ae78a745505c8603b"
+    },
+    {
+      "id": "4G0N",
+      "path": "trees/math/mathematical-physics/martinelli/4G0N.tree",
+      "sha256": "63bf881b407298b662ea546a1f6024e2a9ba1be4bd53b01561a5388217d63fef"
+    },
+    {
+      "id": "4G0O",
+      "path": "trees/math/mathematical-physics/martinelli/4G0O.tree",
+      "sha256": "e9285b45ca97328773ff8ff03ac19f7069a56b8e804a5cc8afefa0214a90d672"
+    },
+    {
+      "id": "4G0P",
+      "path": "trees/math/mathematical-physics/martinelli/4G0P.tree",
+      "sha256": "6673dffdc199431e4ffba81220a706752b417876fc4c8f94d3e2823911ca7c2e"
+    },
+    {
+      "id": "4G0Q",
+      "path": "trees/math/mathematical-physics/martinelli/4G0Q.tree",
+      "sha256": "f1f1c692b51f63e69c91784bb7994fe0227a29cfc0476cff4f2bd6396929694f"
+    },
+    {
+      "id": "4G0R",
+      "path": "trees/math/mathematical-physics/martinelli/4G0R.tree",
+      "sha256": "065552428bc6d39476c072041a225ca57154c9221dda1935f51491f208d52065"
+    },
+    {
+      "id": "4G0S",
+      "path": "trees/math/mathematical-physics/martinelli/4G0S.tree",
+      "sha256": "fda52bb7be81cf27de4c26a07d66222ca5434b62f134b33fb79245b35aaab2ce"
+    },
+    {
+      "id": "4G0T",
+      "path": "trees/math/mathematical-physics/martinelli/4G0T.tree",
+      "sha256": "d99bc8488cb882e22bed15b990da4caea2559270ae06aac67be19a9a2241927d"
+    },
+    {
+      "id": "4G0U",
+      "path": "trees/math/mathematical-physics/martinelli/4G0U.tree",
+      "sha256": "3d41061c347a08dc7c793f8cd5401ae03de70337e4a7c8970d776a0b7500c783"
+    },
+    {
+      "id": "4G0V",
+      "path": "trees/math/mathematical-physics/martinelli/4G0V.tree",
+      "sha256": "225c0843c123643301d65847116c7589effd969760ecad4c5696c96ab6d48f5d"
+    },
+    {
+      "id": "4G0W",
+      "path": "trees/math/mathematical-physics/martinelli/4G0W.tree",
+      "sha256": "3ca01aa0be6afb8af72c774260566d2c81db6b70bdf1937f6f4307a1780c017e"
+    },
+    {
+      "id": "4G0X",
+      "path": "trees/math/mathematical-physics/martinelli/4G0X.tree",
+      "sha256": "432f6c436b453fdc3f4a94f471b83308f509f2c40b06c755fac980a2a41680f1"
+    },
+    {
+      "id": "4G0Y",
+      "path": "trees/math/mathematical-physics/martinelli/4G0Y.tree",
+      "sha256": "2384e4a25437f85b6e1db601119b4c122f47781a2cd2e8530f80ea57f9090b29"
+    },
+    {
+      "id": "4G0Z",
+      "path": "trees/math/mathematical-physics/martinelli/4G0Z.tree",
+      "sha256": "55c5df031077d06539975de7f8c019740141d095e0d9fb092760530f25e563ef"
+    },
+    {
+      "id": "4G10",
+      "path": "trees/math/mathematical-physics/martinelli/4G10.tree",
+      "sha256": "b68a4ec3c72c23125f952e241c06c05fa92fb655866b0d948664cbec7a65d547"
+    },
+    {
+      "id": "4G11",
+      "path": "trees/math/mathematical-physics/martinelli/4G11.tree",
+      "sha256": "ee067b51b457afef62a073980dc503720659035fe1c56ce1099acc9e2279f05a"
+    },
+    {
+      "id": "4G12",
+      "path": "trees/math/mathematical-physics/martinelli/4G12.tree",
+      "sha256": "b5787100ff37c815bdafacd037399a516d017deb93bca4ef896059bc4a9360a6"
+    },
+    {
+      "id": "4G13",
+      "path": "trees/math/mathematical-physics/martinelli/4G13.tree",
+      "sha256": "16956e0b2e5e56c7f2d76225f239397fd6eca067d6db6e9f7c05bac137fe7c54"
+    },
+    {
+      "id": "4G14",
+      "path": "trees/math/mathematical-physics/martinelli/4G14.tree",
+      "sha256": "65df035a0ee965a6a026e919e72da8e2cc97cda67134cf695328eb66bb9863c5"
+    },
+    {
+      "id": "4G15",
+      "path": "trees/math/mathematical-physics/martinelli/4G15.tree",
+      "sha256": "3c5ba691659ec5907223b532af5a4c8cbabf88a6ca7fc4cc56e3dc0c6947fe3f"
+    },
+    {
+      "id": "4G16",
+      "path": "trees/math/mathematical-physics/martinelli/4G16.tree",
+      "sha256": "0ea9c907dd6bfe80a2eb6d12528429ef4f012db40730e306ab2040472e34b256"
+    },
+    {
+      "id": "4G17",
+      "path": "trees/math/mathematical-physics/martinelli/4G17.tree",
+      "sha256": "0a17e14272ff9649b348c4288a59155a0a5ab5552f1db0753c2129ce51942e4c"
+    },
+    {
+      "id": "4G18",
+      "path": "trees/math/mathematical-physics/martinelli/4G18.tree",
+      "sha256": "7e38a83de36330fff991df4e648c358d2f1bdf128f9068f1186978ae62684cc7"
+    },
+    {
+      "id": "4G19",
+      "path": "trees/math/mathematical-physics/martinelli/4G19.tree",
+      "sha256": "857fddf695b495a719d3a2b11e0ef08f689bcfbcc1f4b4883e6ee257dcdb2b85"
+    },
+    {
+      "id": "icm2026-martinelli",
+      "path": "trees/references/icm2026-martinelli.tree",
+      "sha256": "c0fea66cd75775912e470d611b2da7d046a3251a756e508a1a16b5d9f8196349"
+    },
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af"
+    },
+    {
+      "id": "00L2",
+      "path": "trees/math/network/atomic/00L2.tree",
+      "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d"
+    },
+    {
+      "id": "00L4",
+      "path": "trees/math/network/atomic/00L4.tree",
+      "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5"
+    },
+    {
+      "id": "00L6",
+      "path": "trees/math/network/atomic/00L6.tree",
+      "sha256": "fd172194dce08d96291ce873d8cb1a7ca2024c9508275c5d90be3c05734f0041"
+    },
+    {
+      "id": "00L9",
+      "path": "trees/math/network/atomic/00L9.tree",
+      "sha256": "64b62cd8e4dfe86989f410ecc38b6729f80a9e6f1a1f3f7e53a6dff365416456"
+    },
+    {
+      "id": "00LB",
+      "path": "trees/math/network/atomic/00LB.tree",
+      "sha256": "6096935638db64c694caeb47a215bcd82345ee6ee6c1516f9c984554d15a22b9"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260"
+    },
+    {
+      "id": "0A00",
+      "path": "trees/math/network/atomic/0A00.tree",
+      "sha256": "c326c3c96b57793471b8a4b80defd4108f6a9f17e36a4a670c6356528db92759"
+    },
+    {
+      "id": "0A01",
+      "path": "trees/math/network/atomic/0A01.tree",
+      "sha256": "86b0392b9e3599ede428d4cfa67ccd8876fb9aba84f958bd9fa00215a38d22a8"
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297"
+    },
+    {
+      "id": "0A6A",
+      "path": "trees/math/logic/research/atomic/0A6A.tree",
+      "sha256": "c4c9673cbf76ee86cc9396e886bb800f1decfefc4c943140a5f4e0b4c05f9aa1"
+    },
+    {
+      "id": "0A6B",
+      "path": "trees/math/logic/research/atomic/0A6B.tree",
+      "sha256": "5693f635e82eb6556c668128012930441c1f96212da3f1e39a467c3645cbc4c8"
+    },
+    {
+      "id": "0F63",
+      "path": "trees/math/network/atomic/0F63.tree",
+      "sha256": "223582dcf9ad25175e42fbd8d0a6cc31edc13d5cbcb7c9e506e98fc92d965fe0"
+    },
+    {
+      "id": "4C02",
+      "path": "trees/math/mathematical-physics/ferrari/4C02.tree",
+      "sha256": "8f18c3852ad1ba45e090dac936a0cc8013d5c639d42ffe7b25fa8e8ef76076b6"
+    },
+    {
+      "id": "4F27",
+      "path": "trees/math/mathematical-physics/mahadev/4F27.tree",
+      "sha256": "6e5fb95df8b8742a3db8598ca4edb02040e93073aa53b1a7d2f42f07c2805f98"
+    },
+    {
+      "id": "00FN",
+      "path": "trees/math/topology/atomic/00FN.tree",
+      "sha256": "7e391f52fd3ea8ab45d135f55f87da8382b0bb3b324595330de71e9fecd6ff3e"
+    },
+    {
+      "id": "mathematical-physics-martinelli-packet",
+      "path": "research/mathematical-physics-martinelli-packet.json",
+      "sha256": "6c167a7a28c3fc8ae9e7a6153409d9baf469b79a58dcef1786f6c71d6a7afacb"
+    }
+  ],
+  "freeze_evidence": {
+    "revision": 2,
+    "confirmation": "Parent explicitly confirmed revision 2 frozen and the packet digest; author completed with the same digest.",
+    "packet_sha256": "6c167a7a28c3fc8ae9e7a6153409d9baf469b79a58dcef1786f6c71d6a7afacb",
+    "all_target_files_present": true,
+    "packet_tree_hashes_match": true
+  },
+  "rereview": {
+    "changed_tree_ids": [
+      "4G03",
+      "4G0D",
+      "4G0I",
+      "4G0J",
+      "4G0M",
+      "4G0W",
+      "4G0X",
+      "4G0Y",
+      "4G15"
+    ],
+    "method": "All nine repaired trees re-read after author completion. Entire packet read at arrival, repair changes compared field by field, all note metadata/hashes/prerequisite edges revalidated, and every reviewed-file digest recomputed after freeze.",
+    "resolved_ids": [
+      "MART-R1",
+      "MART-R2",
+      "MART-R3",
+      "MART-R4",
+      "MART-R5",
+      "MART-R6",
+      "MART-R7"
+    ],
+    "packet_id": "mathematical-physics-martinelli-packet",
+    "packet_sha256": "6c167a7a28c3fc8ae9e7a6153409d9baf469b79a58dcef1786f6c71d6a7afacb"
+  }
+}

@@ -1,0 +1,11 @@
+\title{概率距离怎样控制平方根振幅}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[BCMVV v4，§2.2](https://arxiv.org/html/1804.00640v4)；有限和估计}
+
+\p{在有限集合 #{S} 上，设 #{p,q} 为概率质量函数，#{\Delta(p,q)} 为其[全变差距离](4F27)。定义平方 Hellinger 距离为}
+##{h^2(p,q)=1-\sum_{s\in S}\sqrt{p(s)q(s)}.}
+\p{它们满足 #{h^2\leq\Delta\leq\sqrt{2h^2}}。相应的[纯态](4F01) #{|p\rangle=\sum_s\sqrt{p(s)}|s\rangle}、#{|q\rangle=\sum_s\sqrt{q(s)}|s\rangle} 满足 #{\||p\rangle -|q\rangle\|^2=2h^2(p,q)}。}
+\p{\strong{证明。}由 #{(\sqrt u-\sqrt v)^2\leq|u-v|} 并求和得到第一个不等式及范数等式。对 #{|p-q|=|\sqrt p-\sqrt q|(\sqrt p+\sqrt q)} 使用 [Schwarz 不等式](004S)，得 #{\Delta\leq\frac 12\sqrt{(2h^2)(4-2h^2)}\leq\sqrt{2h^2}}。}
+\p{这说明比较非负平方根振幅时，分布的重合程度直接变成态向量的内积。一般复振幅还带有相位，单凭计算基概率相同不能确定量子态相同。}

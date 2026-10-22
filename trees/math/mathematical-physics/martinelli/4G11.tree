@@ -1,0 +1,11 @@
+\title{合法路径把块更新的能量比较到单点更新}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§4 末段；有限可逆链路径比较证明}
+
+\p{设同一有限集合 #{E} 上两个[可逆生成元](4G01) #{L,\widehat L} 共用正概率测度 #{\pi}。记它们的有向边权为 #{Q(a,b)=\pi(a)r(a,b)}、#{\widehat Q(a,b)=\pi(a)\widehat r(a,b)}。对每条 #{\widehat Q(a,b)>0} 的有向边，选取一条由 #{Q>0} 的边构成的路径 #{\gamma_{ab}}，从 #{a} 到 #{b}，长度为 #{m_{ab}}。设 #{N_e(\gamma)} 为有向边 #{e} 在路径内出现次数，并定义}
+##{A=\max_{e:Q(e)>0}\frac 1{Q(e)}\sum_{a,b}\widehat Q(a,b)m_{ab}N_e(\gamma_{ab}).}
+\p{则对应[Dirichlet 形式](4G04)满足 #{\widehat{\mathcal D}(f,f)\leq A\mathcal D(f,f)}；特别地，#{T_{\mathrm{rel}}(L)\leq A T_{\mathrm{rel}}(\widehat L)}。}
+\p{\strong{证明。}沿路径望远镜求和，得到 #{f(b)-f(a)=\sum_{e\in\gamma_{ab}}\nabla_ef}，其中 #{\nabla_{(u,v)}f=f(v)-f(u)}。[Cauchy–Schwarz 不等式](004S)给出 #{(f(b)-f(a))^2\leq m_{ab}\sum_{e\in\gamma_{ab}}(\nabla_ef)^2}。乘以 #{\widehat Q(a,b)/2} 求和并交换有限求和次序，每条有向边的系数至多 #{AQ(e)/2}，即得形式比较。再把它代入 #{\widehat L} 的[Poincaré 不等式](4G06)，得到松弛时间比较。}
+\p{块热浴与原始 KCM 比较时，路径必须由原始合法翻转构成，并且同一条微观边被多少块路径重复使用也须计入 #{A}。只证明存在合法路径，尚不能给出有效的时间上界。}

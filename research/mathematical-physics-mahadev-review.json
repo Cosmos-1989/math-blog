@@ -1,0 +1,887 @@
+{
+  "schema_version": 2,
+  "reviewer": "Independent mathematical/source review",
+  "branch": "4F",
+  "date": "2026-10-22",
+  "result": "pass",
+  "status": "frozen_revision_3_independent_rereview_passed",
+  "freeze_received": true,
+  "scope": {
+    "root": "/Users/sunzy/claude_test/forester2",
+    "owned_file": "research/mathematical-physics-mahadev-review.json",
+    "trees_directory": "trees/math/mathematical-physics/mahadev",
+    "reference_id": "icm2026-mahadev",
+    "reference_path": "trees/references/icm2026-mahadev.tree",
+    "packet_path": "research/mathematical-physics-mahadev-packet.json",
+    "builds_run": false,
+    "git_used": false,
+    "other_files_edited": false,
+    "rendered_pages_checked": false
+  },
+  "packet_binding": {
+    "id": "mathematical-physics-mahadev-packet",
+    "path": "research/mathematical-physics-mahadev-packet.json",
+    "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832",
+    "status": "read_and_bound_to_author_and_parent_confirmed_revision_3_freeze",
+    "author_freeze_confirmed_by_user": true,
+    "revision": 3
+  },
+  "coverage": {
+    "new_tree_files": 45,
+    "reference_files": 1,
+    "existing_prerequisite_files_read_in_full": 17,
+    "source_texts_read": 3,
+    "packet_reviewed": true,
+    "final_hash_binding": true,
+    "method": "Read all 4F00-4F2B notes, reference and original packet during the first review; reread all revised trees and the complete changed packet fields, and read new atom 4F2C in full. Every unchanged file was hash-compared to the previously read snapshot. Local algebra/probability proofs were checked directly; cited deep research proofs remain attributed inputs. All 46 owned tree hashes agree with packet revision 3, and all 17 existing prerequisite hashes were rechecked. Final review is bound to the exact author- and parent-confirmed packet hash; no open review findings remain.",
+    "atomic_notes": 44,
+    "reviewed_file_count": 64
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "M4F-F01",
+      "priority": 2,
+      "title": "Do not describe an unresolved encoding discrepancy as a supplied boundary condition",
+      "status": "resolved",
+      "resolved_in_packet_revision": 3,
+      "original_detail": "The odd-modulus issue is genuine in the exact cited v3, not repaired by adaptive good masks. The new packet correctly records its unresolved status and does not refute the general verification theorem. However, 4F24 still links to a 'wraparound boundary condition' as if 4F18 supplied sufficient hypotheses for the LWE instantiation. That page supplies a counterexample and an even-q identity, not a repaired prime-q construction.",
+      "resolution": "The published quantum-LWE verification theorem remains an attributed ICM research input. The abstract extended-TCF theorem is separate from the precise old-v3 full-domain fixed-mask mismatch. No sufficient boundary condition or encoding-only repair is invented, and no refutation of the general theorem is claimed.",
+      "verification": "Rechecked v3 Definition 4.4 and Claim 8.7 against the odd-q counterexample. Independently verified the stronger odd-cycle obstruction now proved in 4F2C. Packet MAH-S07/MAH-S08 accurately retain the unresolved old-source construction-repair scope.",
+      "verified_files": [
+        {
+          "id": "4F00",
+          "path": "trees/math/mathematical-physics/mahadev/4F00.tree",
+          "sha256": "582e5f22eaa77a60289d64aa4ce6f784036ae0e83d3b455fdc869364b56d56c7"
+        },
+        {
+          "id": "4F18",
+          "path": "trees/math/mathematical-physics/mahadev/4F18.tree",
+          "sha256": "609317577256cda89cd42e55fc378bca4234cc884a72461eb98d4e103b765ca7"
+        },
+        {
+          "id": "4F24",
+          "path": "trees/math/mathematical-physics/mahadev/4F24.tree",
+          "sha256": "ebb25c34e8724e55d43daf8d6e0435697c59f803d11f3d6f3698f095719c0825"
+        },
+        {
+          "id": "4F29",
+          "path": "trees/math/mathematical-physics/mahadev/4F29.tree",
+          "sha256": "1c4f3c9aa920e461b38de85876f90a8bf0a4deab24610e8b6386073ab075896a"
+        },
+        {
+          "id": "4F2C",
+          "path": "trees/math/mathematical-physics/mahadev/4F2C.tree",
+          "sha256": "03add2f9361184a1752d9ab4a5010daa01ee7ad1e8854937d7c74d772ab863c2"
+        },
+        {
+          "id": "icm2026-mahadev",
+          "path": "trees/references/icm2026-mahadev.tree",
+          "sha256": "d596719411d8644d734dc7ce1895c42b1313db7bce5286f867405b144deda867"
+        },
+        {
+          "id": "mathematical-physics-mahadev-packet",
+          "path": "research/mathematical-physics-mahadev-packet.json",
+          "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+        }
+      ],
+      "source_ranges": [
+        {
+          "url": "https://arxiv.org/html/1804.01082v3",
+          "range": "Definition 4.4, equations (53)-(54); Section 8.1, equation (186), Theorem 8.1; Section 8.4, Lemma 8.6 and Claim 8.7, equations (198)-(200)"
+        },
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1811549",
+          "range": "Section 4.3.2, final two paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "M4F-F02",
+      "priority": 2,
+      "title": "Put the negligible soundness term after the adversary quantifier",
+      "status": "resolved",
+      "resolved_in_packet_revision": 3,
+      "original_detail": "The current statement chooses one negligible mu before quantifying over every QPT prover. Computational hardness gives a negligible bound for each fixed efficient adversary, not a single pointwise bound for the union of all polynomial-time machines with unrestricted constants.",
+      "rereview_detail": "The revised 4F24 now correctly places mu_P after P, but asserts one mu_P for all x of length lambda while selecting advice-free uniform QPT as the default hardness model. A worst-case no-instance sequence x_lambda need not be efficiently generable and must be carried as polynomial classical advice in the LWE reduction. Explicitly adopt the advice-resistant LWE assumption already recorded in 4F15 (and compatible auxiliary-input security for the abstract primitives), or supply a justified uniformly generated input-family formulation. The mere absence of extra quantum input to P does not remove the nonuniform classical information in arbitrary x_lambda.",
+      "resolution": "Completeness has its own mu_c. Soundness fixes an efficient circuit and its parameter-dependent advice family before choosing mu_P. Revision 3 explicitly assumes advice-resistant LWE and the same advised security for adaptive-hardcore, injective-invariance and fixed-mask primitives, so the all-input statement no longer relies on advice-free uniform hardness.",
+      "verification": "BCMVV v4 Definition 2.5 explicitly includes parameter-dependent polynomial quantum advice. For a fixed prover/advice family, if the supremum of its soundness excess over length-lambda no instances were nonnegligible, a maximizing input sequence could be supplied as polynomial classical advice, independent of the fresh key. The stated stronger hardness assumption covers that reduction. No single negligible function is required for all efficient adversaries.",
+      "verified_files": [
+        {
+          "id": "4F00",
+          "path": "trees/math/mathematical-physics/mahadev/4F00.tree",
+          "sha256": "582e5f22eaa77a60289d64aa4ce6f784036ae0e83d3b455fdc869364b56d56c7"
+        },
+        {
+          "id": "4F07",
+          "path": "trees/math/mathematical-physics/mahadev/4F07.tree",
+          "sha256": "9c06ad29dd93edd3d3009fceac65ad08c4d1a9a44b386c3252eb6b7bbb5c1643"
+        },
+        {
+          "id": "4F08",
+          "path": "trees/math/mathematical-physics/mahadev/4F08.tree",
+          "sha256": "4f4994b94bd8849b7284dd23d7998461d7e58d0de2d1c8cdca4366370f63ca55"
+        },
+        {
+          "id": "4F15",
+          "path": "trees/math/mathematical-physics/mahadev/4F15.tree",
+          "sha256": "ddb7b81ba87a18127dc645b7a29702c3ff0b2710fe82371b47fd0cafeb65a02a"
+        },
+        {
+          "id": "4F16",
+          "path": "trees/math/mathematical-physics/mahadev/4F16.tree",
+          "sha256": "95bd79511869dffdc79a279f7d68a533ff2e233358031ede1807e751dc7af004"
+        },
+        {
+          "id": "4F24",
+          "path": "trees/math/mathematical-physics/mahadev/4F24.tree",
+          "sha256": "ebb25c34e8724e55d43daf8d6e0435697c59f803d11f3d6f3698f095719c0825"
+        },
+        {
+          "id": "mathematical-physics-mahadev-packet",
+          "path": "research/mathematical-physics-mahadev-packet.json",
+          "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+        }
+      ],
+      "source_ranges": [
+        {
+          "url": "https://arxiv.org/html/1804.01082v3",
+          "range": "Definitions 4.1 and 4.3-4.4; Lemma 6.12; Theorem 7.6 proof"
+        }
+      ]
+    },
+    {
+      "id": "M4F-F03",
+      "priority": 2,
+      "title": "Distinguish ideal square-root states from finite-gate implementations",
+      "status": "resolved",
+      "resolved_in_packet_revision": 3,
+      "original_detail": "4F07 fixes a finite universal gate set, while 4F13 and 4F26 require exact output of the displayed Gaussian/uniform square-root amplitudes, including clean coherent control. Universality only gives approximation; for example the usual Clifford+T set does not exactly prepare a uniform state of odd support size. The cited Gaussian preparation argument uses numerical precision.",
+      "resolution": "Exact distributions and ideal square-root states are distinguished from finite-gate implementations. The preparation approximation includes coherent control, output, workspace and an arbitrary entangled reference, with ideal zero workspace. The negligible implementation error is accumulated separately from the f/f' Hellinger error.",
+      "verification": "Checked the joint norm formula for arbitrary v_0,v_1 and normalized control/reference input; branchwise probabilities alone are explicitly insufficient. Common-experiment stability follows from 4F28, and polynomial-call error is bounded by the hybrid triangle inequality. 4F16 no longer claims exact test acceptance for compiled states. This matches finite-precision preparation in BCMVV Section 4.3, equations (23)-(26), footnote 3.",
+      "verified_files": [
+        {
+          "id": "4F00",
+          "path": "trees/math/mathematical-physics/mahadev/4F00.tree",
+          "sha256": "582e5f22eaa77a60289d64aa4ce6f784036ae0e83d3b455fdc869364b56d56c7"
+        },
+        {
+          "id": "4F10",
+          "path": "trees/math/mathematical-physics/mahadev/4F10.tree",
+          "sha256": "0773234b759d0714924eff6be689dc6368bf722bb1b261fec5cf9aa5950eb87a"
+        },
+        {
+          "id": "4F13",
+          "path": "trees/math/mathematical-physics/mahadev/4F13.tree",
+          "sha256": "2fc566094603cb457bacfeee0549697f2ee42b10610231d0d45825ea1f20e5f4"
+        },
+        {
+          "id": "4F15",
+          "path": "trees/math/mathematical-physics/mahadev/4F15.tree",
+          "sha256": "ddb7b81ba87a18127dc645b7a29702c3ff0b2710fe82371b47fd0cafeb65a02a"
+        },
+        {
+          "id": "4F16",
+          "path": "trees/math/mathematical-physics/mahadev/4F16.tree",
+          "sha256": "95bd79511869dffdc79a279f7d68a533ff2e233358031ede1807e751dc7af004"
+        },
+        {
+          "id": "4F26",
+          "path": "trees/math/mathematical-physics/mahadev/4F26.tree",
+          "sha256": "e68a60d5868c405aafc9103f2aa6665c3073c4f9a2f73eeba023204d6dc3f62b"
+        },
+        {
+          "id": "4F2A",
+          "path": "trees/math/mathematical-physics/mahadev/4F2A.tree",
+          "sha256": "99302c0a737a8930f00488317db9f42d8a50b6dc32b0629ed4e6cda0ff43902b"
+        },
+        {
+          "id": "4F28",
+          "path": "trees/math/mathematical-physics/mahadev/4F28.tree",
+          "sha256": "7aa56358b5d86a4c54b02a6b640700d4ef393162178fa4d548ab2c783a62f9da"
+        },
+        {
+          "id": "mathematical-physics-mahadev-packet",
+          "path": "research/mathematical-physics-mahadev-packet.json",
+          "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+        }
+      ],
+      "source_ranges": [
+        {
+          "url": "https://arxiv.org/html/1804.00640v4",
+          "range": "Section 4.3, equations (23)-(26), footnote 3 on preparation to good precision"
+        },
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1811549",
+          "range": "Appendix A"
+        }
+      ]
+    },
+    {
+      "id": "M4F-F04",
+      "priority": 3,
+      "title": "Handle the certain-success endpoint in the repetition lemma",
+      "status": "resolved",
+      "resolved_in_packet_revision": 3,
+      "original_detail": "The honest-case assertion allows c=1, but D(a||c) is only given by a formula with denominator 1-c and no endpoint convention. Also the honest comparison should be explicitly a separate completeness case; under the preceding soundness assumption M<=sI no state of that same operator can have c>a>s.",
+      "resolution": "The no-instance operator M<=sI and the honest yes-instance operator M_yes are separated. The finite divergence formula has 0<a<c<1, and c=1 is handled directly with zero lower-tail failure probability.",
+      "verification": "Rechecked the tensor-product moment-generating bound for arbitrary entangled input, the positive Chernoff optimizer, D''=1/(a(1-a)), and the honest product-state lower tail. At c=1, Y_yes=k almost surely, so the event Y_yes<=ka is empty when a<1.",
+      "verified_files": [
+        {
+          "id": "4F2B",
+          "path": "trees/math/mathematical-physics/mahadev/4F2B.tree",
+          "sha256": "aa0da382f880de60438966043632b9f09c8c53a62a40ae9e303c6f40023df502"
+        },
+        {
+          "id": "4F23",
+          "path": "trees/math/mathematical-physics/mahadev/4F23.tree",
+          "sha256": "31b72a5580678301acfa76504181627a83f9db45e986763d4e3101deea4139d9"
+        },
+        {
+          "id": "mathematical-physics-mahadev-packet",
+          "path": "research/mathematical-physics-mahadev-packet.json",
+          "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+        }
+      ]
+    },
+    {
+      "id": "M4F-F05",
+      "priority": 2,
+      "title": "Split the new odd-cycle obstruction from endpoint-dependent parity linearization",
+      "status": "resolved",
+      "resolved_in_packet_revision": 3,
+      "original_detail": "The revision adds a correct general theorem about derivatives of arbitrary binary functions on odd-order translation cycles. This theorem is independent of the original endpoint-dependent binary-secret linearization lemma, has a separate proof and different hypotheses, and is now a prerequisite used by 4F00, 4F24 and 4F29. Keeping both in the same permanent note violates the required one-question atomicity.",
+      "resolution": "The arbitrary-encoding odd-cycle obstruction and its complete proof are now the separate atomic theorem 4F2C. The endpoint-dependent linearization remains in 4F18. Obstruction links and prerequisite edges from 4F24/4F29 are retargeted, while 4F18's link is correctly treated as a further consequence rather than a prerequisite.",
+      "verification": "Read all of 4F2C. It introduces q,n,w,G,s,J,d,g and the orbit length locally; q may be any odd integer and J need not be injective. Minimal return time r divides q by Euclidean division; the mod-two sum of derivatives is zero, so an odd cycle cannot have every derivative equal to one. This includes s=0, d=0 and composite odd q. Independently checked 10,296 finite Boolean-function/translation cases as corroboration, not as the general proof.",
+      "verified_files": [
+        {
+          "id": "4F00",
+          "path": "trees/math/mathematical-physics/mahadev/4F00.tree",
+          "sha256": "582e5f22eaa77a60289d64aa4ce6f784036ae0e83d3b455fdc869364b56d56c7"
+        },
+        {
+          "id": "4F18",
+          "path": "trees/math/mathematical-physics/mahadev/4F18.tree",
+          "sha256": "609317577256cda89cd42e55fc378bca4234cc884a72461eb98d4e103b765ca7"
+        },
+        {
+          "id": "4F24",
+          "path": "trees/math/mathematical-physics/mahadev/4F24.tree",
+          "sha256": "ebb25c34e8724e55d43daf8d6e0435697c59f803d11f3d6f3698f095719c0825"
+        },
+        {
+          "id": "4F29",
+          "path": "trees/math/mathematical-physics/mahadev/4F29.tree",
+          "sha256": "1c4f3c9aa920e461b38de85876f90a8bf0a4deab24610e8b6386073ab075896a"
+        },
+        {
+          "id": "4F2C",
+          "path": "trees/math/mathematical-physics/mahadev/4F2C.tree",
+          "sha256": "03add2f9361184a1752d9ab4a5010daa01ee7ad1e8854937d7c74d772ab863c2"
+        },
+        {
+          "id": "00CU",
+          "path": "trees/math/logic/research/00CU.tree",
+          "sha256": "3785696d5c2f0ea658740f7d2b10ac71460e2da7648119fb00f6742f9616e40b"
+        },
+        {
+          "id": "mathematical-physics-mahadev-packet",
+          "path": "research/mathematical-physics-mahadev-packet.json",
+          "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+        }
+      ]
+    }
+  ],
+  "confirmed_corrections": [
+    {
+      "nodes": [
+        "4F0C"
+      ],
+      "detail": "Full column rank, not full row rank; union-bound proof and composite-modulus limitation checked."
+    },
+    {
+      "nodes": [
+        "4F02",
+        "4F05",
+        "4F06",
+        "4F11"
+      ],
+      "detail": "Mixed-state normalization, Pauli conjugation order, coherent uncomputation, and normalized joint-state error are correct."
+    },
+    {
+      "nodes": [
+        "4F14",
+        "4F16",
+        "4F17",
+        "4F18"
+      ],
+      "detail": "Adaptive outputs and good-mask validity are retained. The 3/4 classical bound is justified by copying classical configurations, without postselecting on a rare validity event. Encoding and modular subtraction are separated correctly."
+    }
+  ],
+  "mathematical_checks": [
+    {
+      "nodes": [
+        "4F01",
+        "4F02",
+        "4F03",
+        "4F04",
+        "4F05",
+        "4F06"
+      ],
+      "method": "Checked projectors, normalization, Fourier coefficients, Pauli signs, trace basis expansion, and reversible register maps directly.",
+      "result": "local_algebra_checked"
+    },
+    {
+      "nodes": [
+        "4F09",
+        "4F0C",
+        "4F0D",
+        "4F0E",
+        "4F0F",
+        "4F10",
+        "4F11",
+        "4F12"
+      ],
+      "method": "Verified Schwarz bounds, rank union bound, centered lifting, CHSH square and Bell attainment, two-preimage normalization, Hellinger norm identity, and uniform Hadamard masks.",
+      "result": "local_proofs_checked"
+    },
+    {
+      "nodes": [
+        "4F16",
+        "4F17",
+        "4F18",
+        "4F19",
+        "4F1A",
+        "4F1B",
+        "4F1C"
+      ],
+      "method": "Verified a<=a'+mu, a+a'<=p and the resulting 3/4 bound; nonzero bad-mask example; coordinatewise secret-parity conversion; collision sum and conditional-entropy hash bound; seed-dependence counterexample; random-column hybrid telescoping.",
+      "result": "local_proofs_checked"
+    },
+    {
+      "nodes": [
+        "4F1D",
+        "4F1E",
+        "4F1F",
+        "4F20"
+      ],
+      "method": "Expanded all measurement amplitudes, checked second-variable-linear partial-trace entries, averaged independent phases, proved Kraus normalization and diagonal preservation, and checked both branches of phase kickback.",
+      "result": "local_proofs_checked"
+    },
+    {
+      "nodes": [
+        "4F22",
+        "4F23",
+        "4F27",
+        "4F28",
+        "4F2B"
+      ],
+      "method": "Checked propagation quadratic forms and joint kernel; Hamiltonian sampling sign/factor; TV variational and contraction identities; projective measurement norm bound; tensor-product moment-generating operator, Chernoff optimizer and D'' bound. Rereview separately verified the honest yes-instance operator and the c=1 endpoint.",
+      "result": "local_proofs_checked"
+    },
+    {
+      "nodes": [
+        "4F07",
+        "4F08",
+        "4F0A",
+        "4F0B",
+        "4F13",
+        "4F14",
+        "4F15",
+        "4F21",
+        "4F24",
+        "4F25",
+        "4F26",
+        "4F29",
+        "4F2A"
+      ],
+      "method": "Compared formal contracts with exact primary definitions/theorem statements. Cited construction and binding proofs remain research inputs. Verified one extracted state precedes the basis quantifier, conditional versus unconditional outputs, per-adversary negligible bounds, and the explicit advised security convention used for all-input soundness. Reread the coherent approximation convention.",
+      "result": "source_contracts_checked_and_findings_resolved"
+    },
+    {
+      "nodes": [
+        "4F18",
+        "4F24",
+        "4F29",
+        "4F2C"
+      ],
+      "method": "Independently proved the arbitrary-encoding odd-translation-cycle obstruction and verified its limited source implication. Checked the all-input advice argument, atomic split, source-status wording and corrected link targets.",
+      "result": "rereview_passed",
+      "finite_corroboration": {
+        "cases": 10296,
+        "groups": [
+          "Z/3",
+          "Z/5",
+          "Z/7",
+          "Z/9",
+          "(Z/3)^2"
+        ],
+        "failures": [],
+        "scope": "All Boolean functions and all shifts for listed finite groups; corroboration only. General proof independently checked by order divisibility and mod-two telescoping."
+      }
+    }
+  ],
+  "source_read_scopes": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1811549",
+      "format": "publisher_html",
+      "scope": "Sections 1-5 and Appendix A, equations (2.1)-(4.15) and (A.1)-(A.3), footnotes 1-5, acknowledgment, references relevant to the notes, bibliographic and license block.",
+      "limitations": "No PDF rendering was performed; review used the exact publisher HTML text.",
+      "rereview_scope": "Rechecked the abstract's LWE classical-verification claim and the Section 4.3.2 fixed-mask discussion against the revised attribution."
+    },
+    {
+      "url": "https://arxiv.org/html/1804.00640v4",
+      "format": "versioned_author_primary_html",
+      "scope": "Sections 2.1-2.3, Definitions 2.2-2.5 and 2.7, Theorem 2.6; Definition 3.1; Section 4 parameter conditions, Theorem 4.1 and Remark 4.2; Sections 4.1-4.3 in full; Section 4.4 introductory good-mask definitions and Lemma 4.3, plus selected reduction passages.",
+      "limitations": "The complete Section 4.4 adaptive-hardcore proof, full randomness-accumulation proof, and all cited lattice-reduction proofs were not reread. Construction remains a cited input.",
+      "rereview_scope": "Rechecked Definition 2.5 for parameter-dependent quantum advice and Section 4.3 equations (23)-(26), footnote 3 for numerical precision and uncomputation."
+    },
+    {
+      "url": "https://arxiv.org/html/1804.01082v3",
+      "format": "versioned_author_primary_html",
+      "scope": "Definitions 4.2-4.4; Protocols 5.1-5.2 and notation; Lemma 6.12, Claims 6.13-6.14 and surrounding general-to-perfect argument; Section 7.1-7.2 protocols and soundness calculation; Section 8.1 parameters and Theorem 8.1; Section 8.4, Lemmas 8.4-8.6 and Claim 8.7.",
+      "limitations": "Binding remains an attributed external theorem, not an independent reconstruction of every Section 6 reduction. The exact old-v3 fixed-mask construction is not validated as repaired; its unresolved source discrepancy is correctly delimited by the notes and packet.",
+      "rereview_scope": "Rechecked Definitions 3.2, 3.4 and 3.12 for computational and interactive-proof contracts; Definition 4.4 equations (53)-(54), Section 7.2 soundness quantifiers, Section 8.1 and Claim 8.7 equations (198)-(200)."
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/20M1371828",
+      "format": "publisher_metadata",
+      "scope": "Journal, volume, issue, pages, publication date and abstract; full journal article was not accessible."
+    }
+  ],
+  "prerequisite_review": {
+    "existing_destinations": [
+      "00GC",
+      "00GF",
+      "004N",
+      "004S",
+      "00JO",
+      "00JZ",
+      "0F4E",
+      "0F4F",
+      "0F0F",
+      "0N0B",
+      "2V0L",
+      "00CU",
+      "00Q3",
+      "0AC3",
+      "00L0",
+      "0A00",
+      "0F65"
+    ],
+    "result": "All 17 direct existing destinations contain the notion used or a locally decodable finite special case. Links were not treated as proof of a whole-forest prerequisite audit.",
+    "deduplication": "Title scan found no existing competing TV, density-matrix, quantum-register, Pauli, LWE or leftover-hash atomic definition. 4F27 is the shared finite TV page; 4F09 and 4F28 have separate mathematical purposes.",
+    "atomicity": "All 44 atomic notes have one principal question with their direct proof or immediate decoding consequences. 4F00 is a narrative outline. New 4F2C separates the encoding-independent obstruction from 4F18's endpoint-dependent lemma. The direct prerequisite graph and semantic roles were rechecked.",
+    "final_edge_count": 143,
+    "final_local_graph_check": "No local prerequisite cycles or missing body prerequisite links; all 44 atoms reachable from 4F00. The previously read 00CU remains the sole direct prerequisite of 4F2C."
+  },
+  "reviewed_files": [
+    {
+      "id": "4F00",
+      "path": "trees/math/mathematical-physics/mahadev/4F00.tree",
+      "sha256": "582e5f22eaa77a60289d64aa4ce6f784036ae0e83d3b455fdc869364b56d56c7"
+    },
+    {
+      "id": "4F01",
+      "path": "trees/math/mathematical-physics/mahadev/4F01.tree",
+      "sha256": "d37b4c946bd197aa1981d6e2c6d069905dbadf4fb8c660c8ab331a304f42eff9"
+    },
+    {
+      "id": "4F02",
+      "path": "trees/math/mathematical-physics/mahadev/4F02.tree",
+      "sha256": "98bd53d86041c99e52d8203cf206b48ea138abc80e8f0d282ba13cd1468d9bc6"
+    },
+    {
+      "id": "4F03",
+      "path": "trees/math/mathematical-physics/mahadev/4F03.tree",
+      "sha256": "c465fcbd4610523b26292e701c7aaf8c0b7a257f5836d1cb90497d486f6d2eed"
+    },
+    {
+      "id": "4F04",
+      "path": "trees/math/mathematical-physics/mahadev/4F04.tree",
+      "sha256": "4edf3facf9d6826cfe61cac0fbe1ba56ecfc7dbfbd63b15159b7ec0896215979"
+    },
+    {
+      "id": "4F05",
+      "path": "trees/math/mathematical-physics/mahadev/4F05.tree",
+      "sha256": "4f9a7a56658cab5e8ed27b9407cae80e2dc996acddc0d9e1368c11e91ffd9ff1"
+    },
+    {
+      "id": "4F06",
+      "path": "trees/math/mathematical-physics/mahadev/4F06.tree",
+      "sha256": "eac53679ecf03a915e18dc49659507e0d5adcbfca3a33e5f1add211ec8a9d2a6"
+    },
+    {
+      "id": "4F07",
+      "path": "trees/math/mathematical-physics/mahadev/4F07.tree",
+      "sha256": "9c06ad29dd93edd3d3009fceac65ad08c4d1a9a44b386c3252eb6b7bbb5c1643"
+    },
+    {
+      "id": "4F08",
+      "path": "trees/math/mathematical-physics/mahadev/4F08.tree",
+      "sha256": "4f4994b94bd8849b7284dd23d7998461d7e58d0de2d1c8cdca4366370f63ca55"
+    },
+    {
+      "id": "4F09",
+      "path": "trees/math/mathematical-physics/mahadev/4F09.tree",
+      "sha256": "653c269a775f9c233a6def3f53a089f2a109d50027ee6e91ba185abbea651136"
+    },
+    {
+      "id": "4F0A",
+      "path": "trees/math/mathematical-physics/mahadev/4F0A.tree",
+      "sha256": "857cc0ef105cbd0f998f820836c9941051474512ee094bf27dbf9b6a9ceb6b1b"
+    },
+    {
+      "id": "4F0B",
+      "path": "trees/math/mathematical-physics/mahadev/4F0B.tree",
+      "sha256": "8c4fecf20009cfe153f0ec20a466c5bc392ed6fd0f86c117adbb049201877c54"
+    },
+    {
+      "id": "4F0C",
+      "path": "trees/math/mathematical-physics/mahadev/4F0C.tree",
+      "sha256": "7e0fa1d759414d7d5cc0d1835658bc2d8a868da255c2ce4258c8a8aa4c68eb8c"
+    },
+    {
+      "id": "4F0D",
+      "path": "trees/math/mathematical-physics/mahadev/4F0D.tree",
+      "sha256": "f69b0dc83c08a5384e144e30e5f50f17d32fa01622fe76e094e351fe2183a2b7"
+    },
+    {
+      "id": "4F0E",
+      "path": "trees/math/mathematical-physics/mahadev/4F0E.tree",
+      "sha256": "703cfe8b152255b99534bc8a412cd638132a24989e926d55dc0ca23402aa8966"
+    },
+    {
+      "id": "4F0F",
+      "path": "trees/math/mathematical-physics/mahadev/4F0F.tree",
+      "sha256": "ecb1fcf0e8115a1593174e644d5b356f39b0fd8285420002dd1152742e85205d"
+    },
+    {
+      "id": "4F10",
+      "path": "trees/math/mathematical-physics/mahadev/4F10.tree",
+      "sha256": "0773234b759d0714924eff6be689dc6368bf722bb1b261fec5cf9aa5950eb87a"
+    },
+    {
+      "id": "4F11",
+      "path": "trees/math/mathematical-physics/mahadev/4F11.tree",
+      "sha256": "ca33de5197cbc6106d25a22d704ed8837f73efb57e2df3a3b2c177575fed0a4e"
+    },
+    {
+      "id": "4F12",
+      "path": "trees/math/mathematical-physics/mahadev/4F12.tree",
+      "sha256": "35eff4b431ec123f9ab268b812b38c132c87e47826c89d66cdd2c74b829ad52f"
+    },
+    {
+      "id": "4F13",
+      "path": "trees/math/mathematical-physics/mahadev/4F13.tree",
+      "sha256": "2fc566094603cb457bacfeee0549697f2ee42b10610231d0d45825ea1f20e5f4"
+    },
+    {
+      "id": "4F14",
+      "path": "trees/math/mathematical-physics/mahadev/4F14.tree",
+      "sha256": "fc20cb7f06067146264849a4534ac8507b08d0969c49dfce719f66a0e2b6edb6"
+    },
+    {
+      "id": "4F15",
+      "path": "trees/math/mathematical-physics/mahadev/4F15.tree",
+      "sha256": "ddb7b81ba87a18127dc645b7a29702c3ff0b2710fe82371b47fd0cafeb65a02a"
+    },
+    {
+      "id": "4F16",
+      "path": "trees/math/mathematical-physics/mahadev/4F16.tree",
+      "sha256": "95bd79511869dffdc79a279f7d68a533ff2e233358031ede1807e751dc7af004"
+    },
+    {
+      "id": "4F17",
+      "path": "trees/math/mathematical-physics/mahadev/4F17.tree",
+      "sha256": "b137c6b8c5a6695fcba4c9ee52beaf1c79ba9f4744a5d6b0359480adceef01c9"
+    },
+    {
+      "id": "4F18",
+      "path": "trees/math/mathematical-physics/mahadev/4F18.tree",
+      "sha256": "609317577256cda89cd42e55fc378bca4234cc884a72461eb98d4e103b765ca7"
+    },
+    {
+      "id": "4F19",
+      "path": "trees/math/mathematical-physics/mahadev/4F19.tree",
+      "sha256": "6e85e4253fc455b4565672f24ae7c7de096be76781cb7b2bcc53e15a56322893"
+    },
+    {
+      "id": "4F1A",
+      "path": "trees/math/mathematical-physics/mahadev/4F1A.tree",
+      "sha256": "92db4a55bce05bf30bc4020e4cfd88b1ffb08a7dff16c93b4d664de78027c611"
+    },
+    {
+      "id": "4F1B",
+      "path": "trees/math/mathematical-physics/mahadev/4F1B.tree",
+      "sha256": "3e75f50ac4f9966c6778004e38d61c0846b7324d768c07346f60b5e92828a807"
+    },
+    {
+      "id": "4F1C",
+      "path": "trees/math/mathematical-physics/mahadev/4F1C.tree",
+      "sha256": "a149e299c94946d7031c38a4ff030e928957c83d2be76d918baec3fa287cab63"
+    },
+    {
+      "id": "4F1D",
+      "path": "trees/math/mathematical-physics/mahadev/4F1D.tree",
+      "sha256": "915659b05d7696cd0b9143c001a1b32ce48846ac8d2c051485e581675a9a5320"
+    },
+    {
+      "id": "4F1E",
+      "path": "trees/math/mathematical-physics/mahadev/4F1E.tree",
+      "sha256": "ed1b678b61457075f503884820a9c5d6b432811feceaa56aebb69a6920f94e8b"
+    },
+    {
+      "id": "4F1F",
+      "path": "trees/math/mathematical-physics/mahadev/4F1F.tree",
+      "sha256": "22c746f4b6cf6e46c6d10f3576b81c0d055387a4d7566c7f34f5b6c75353c897"
+    },
+    {
+      "id": "4F20",
+      "path": "trees/math/mathematical-physics/mahadev/4F20.tree",
+      "sha256": "dca2a7ead16744d155ab35b63c9ae4173dd7ed634454a50bdcc3dec576ef288f"
+    },
+    {
+      "id": "4F21",
+      "path": "trees/math/mathematical-physics/mahadev/4F21.tree",
+      "sha256": "1ae405923779ecb0fc5dd6b64cb5771c9ef62fdd80126c17ed5e21851e8903b8"
+    },
+    {
+      "id": "4F22",
+      "path": "trees/math/mathematical-physics/mahadev/4F22.tree",
+      "sha256": "34121b77b864711bfbf1479d27ad386a3c39742e3db93d88fe9fdba4947ef034"
+    },
+    {
+      "id": "4F23",
+      "path": "trees/math/mathematical-physics/mahadev/4F23.tree",
+      "sha256": "31b72a5580678301acfa76504181627a83f9db45e986763d4e3101deea4139d9"
+    },
+    {
+      "id": "4F24",
+      "path": "trees/math/mathematical-physics/mahadev/4F24.tree",
+      "sha256": "ebb25c34e8724e55d43daf8d6e0435697c59f803d11f3d6f3698f095719c0825"
+    },
+    {
+      "id": "4F25",
+      "path": "trees/math/mathematical-physics/mahadev/4F25.tree",
+      "sha256": "dc0cb9d8c1a6e7fe89d3d0d4711806fbf7d5224b04af1e6b34ee1bdbf1db9611"
+    },
+    {
+      "id": "4F26",
+      "path": "trees/math/mathematical-physics/mahadev/4F26.tree",
+      "sha256": "e68a60d5868c405aafc9103f2aa6665c3073c4f9a2f73eeba023204d6dc3f62b"
+    },
+    {
+      "id": "4F27",
+      "path": "trees/math/mathematical-physics/mahadev/4F27.tree",
+      "sha256": "6e5fb95df8b8742a3db8598ca4edb02040e93073aa53b1a7d2f42f07c2805f98"
+    },
+    {
+      "id": "4F28",
+      "path": "trees/math/mathematical-physics/mahadev/4F28.tree",
+      "sha256": "7aa56358b5d86a4c54b02a6b640700d4ef393162178fa4d548ab2c783a62f9da"
+    },
+    {
+      "id": "4F29",
+      "path": "trees/math/mathematical-physics/mahadev/4F29.tree",
+      "sha256": "1c4f3c9aa920e461b38de85876f90a8bf0a4deab24610e8b6386073ab075896a"
+    },
+    {
+      "id": "4F2A",
+      "path": "trees/math/mathematical-physics/mahadev/4F2A.tree",
+      "sha256": "99302c0a737a8930f00488317db9f42d8a50b6dc32b0629ed4e6cda0ff43902b"
+    },
+    {
+      "id": "4F2B",
+      "path": "trees/math/mathematical-physics/mahadev/4F2B.tree",
+      "sha256": "aa0da382f880de60438966043632b9f09c8c53a62a40ae9e303c6f40023df502"
+    },
+    {
+      "id": "4F2C",
+      "path": "trees/math/mathematical-physics/mahadev/4F2C.tree",
+      "sha256": "03add2f9361184a1752d9ab4a5010daa01ee7ad1e8854937d7c74d772ab863c2"
+    },
+    {
+      "id": "icm2026-mahadev",
+      "path": "trees/references/icm2026-mahadev.tree",
+      "sha256": "d596719411d8644d734dc7ce1895c42b1313db7bce5286f867405b144deda867"
+    },
+    {
+      "id": "004N",
+      "path": "trees/math/analysis/004N.tree",
+      "sha256": "dcdb81e51a6a4e76da31d63bd44e9ab22faa8dc5e9da2b525fde7774cff09fec"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b"
+    },
+    {
+      "id": "00CU",
+      "path": "trees/math/logic/research/00CU.tree",
+      "sha256": "3785696d5c2f0ea658740f7d2b10ac71460e2da7648119fb00f6742f9616e40b"
+    },
+    {
+      "id": "00GC",
+      "path": "trees/math/algebra/atomic/00GC.tree",
+      "sha256": "996d480e73e1b22e0aa6b8ee814d1bbe5e55fdedf4cb7a91de6a576d4e50e348"
+    },
+    {
+      "id": "00GF",
+      "path": "trees/math/algebra/atomic/00GF.tree",
+      "sha256": "ae89d512cd09158e482dd30557f5ee7e81608beb84f5209dbef01dd387f4a066"
+    },
+    {
+      "id": "00JO",
+      "path": "trees/math/category/quantum/atomic/00JO.tree",
+      "sha256": "053261d5bcb0f9f4297dbb3d3def7fbfa1a98bd6414ea352845ad9d84b02295e"
+    },
+    {
+      "id": "00JZ",
+      "path": "trees/math/category/quantum/atomic/00JZ.tree",
+      "sha256": "77592cd15a34241b4f775a0e542a708b02906c01ee915e33c11a9dd1c8410948"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1"
+    },
+    {
+      "id": "0A00",
+      "path": "trees/math/network/atomic/0A00.tree",
+      "sha256": "c326c3c96b57793471b8a4b80defd4108f6a9f17e36a4a670c6356528db92759"
+    },
+    {
+      "id": "0AC3",
+      "path": "trees/math/logic/research/atomic/0AC3.tree",
+      "sha256": "64d1b8b3a627e35e3c6a711684493b5c459c581a64fa5d3f5e3a2e83e60c9ec7"
+    },
+    {
+      "id": "0F0F",
+      "path": "trees/math/geometry/algebraic/0F0F.tree",
+      "sha256": "6f0154249461062a074a9e1ec67bfb06d9fd3445e71f2f8e17a57a0b321ef528"
+    },
+    {
+      "id": "0F4E",
+      "path": "trees/math/category/quantum/atomic/0F4E.tree",
+      "sha256": "a325c75c71d8f15dbeed0eeec43c303a4fd89cc422842263e16719a1bad41397"
+    },
+    {
+      "id": "0F4F",
+      "path": "trees/math/category/quantum/atomic/0F4F.tree",
+      "sha256": "9b1c3aae4c706f1541aed7563d6200d405f3ee339ff3d364f7a44be265481ad3"
+    },
+    {
+      "id": "0F65",
+      "path": "trees/math/network/atomic/0F65.tree",
+      "sha256": "58cae556b5789e3bcd1a92b2dc8317e69211d990193cbd21dba549c754ebf4ce"
+    },
+    {
+      "id": "0N0B",
+      "path": "trees/math/geometry/bourbaki/0N0B.tree",
+      "sha256": "83fb26af0fc669bf0ce10adbf32513bbd3068429fb4cf16583f4472cb73ca7f0"
+    },
+    {
+      "id": "2V0L",
+      "path": "trees/math/lie/quantum-affine/2V0L.tree",
+      "sha256": "0d6562802f05f0308f364ff1399e15f018550b79fc0673afd3077e7cd9b968a3"
+    },
+    {
+      "id": "mathematical-physics-mahadev-packet",
+      "path": "research/mathematical-physics-mahadev-packet.json",
+      "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+    }
+  ],
+  "unreviewed_required_files": [],
+  "verification_limits": [
+    "This pass applies only to the listed 64 exact file hashes and the declared source/proof scope. Any subsequent edit requires review and hash rebinding.",
+    "The specific old-v3 full-domain fixed-mask construction repair is unresolved and not reconstructed. Its correctly disclosed source limitation is not an open finding against this packet; the general LWE verification result remains an attributed primary research input.",
+    "Deep lattice, adaptive-hardcore, computational-binding and circuit-to-local-Hamiltonian reductions are cited research inputs, not claimed to be independently reproved.",
+    "No full build, git operation, shared-register edit or rendered-page audit was performed by this reviewer. Parent build reports are separate evidence."
+  ],
+  "reporting": {
+    "parent_thread": "019d4377-a853-79c1-b794-699c22ccc6f0",
+    "immediate_findings_reported_in_commentary": true,
+    "direct_message_attempt": "App messaging tool rejects sends to a native ancestor; findings are recorded here and will be returned in the final response.",
+    "final_result": "All five review findings resolved after frozen revision-3 rereview. Final response reports exact packet binding and scoped pass."
+  },
+  "freeze_evidence": {
+    "sources": [
+      "Author completed turn 01a16192-8a29-7dc3-80a8-232726f9077b: revision 3 frozen, exact packet SHA supplied.",
+      "Parent user message independently confirms revision 3, 46 owned trees, 44 atoms and 143 edges."
+    ],
+    "author_thread": "01a16169-4cbd-7083-847b-e3bbe47e7678",
+    "packet_sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832",
+    "author_packet_revision": 3
+  },
+  "packet_checks": {
+    "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832",
+    "revision": 3,
+    "owned_tree_hashes": 46,
+    "hash_mismatches": [],
+    "prerequisite_edges": 143,
+    "local_prerequisite_cycles": [],
+    "missing_body_prerequisite_links": [],
+    "atomic_questions": 44,
+    "proof_scope_records": 44,
+    "claim_source_records": 44,
+    "reachable_atoms": 44,
+    "metadata_and_source_status": "Local proofs, assumptions, source-dated open questions and cited research inputs are distinguished. MAH-S07/MAH-S08 retain the exact unresolved old-v3 construction discrepancy without a purported boundary repair or a refutation of the general verification theorem.",
+    "limits": "Author formula, browser/build and full-forest traversal claims were read as author/parent evidence, not relabeled independent reruns. This reviewer reran scoped hashes, titles, direct prerequisite edges, reachability and local-DAG consistency, and the stated finite odd-cycle checks."
+  },
+  "review_round": 3,
+  "final_hash_verification": {
+    "files_checked": 64,
+    "owned_tree_files": 46,
+    "existing_prerequisite_files": 17,
+    "packet_files": 1,
+    "drift": [],
+    "unlisted_owned_trees": [],
+    "packet_note_hash_mismatches": []
+  },
+  "rereview_history": [
+    {
+      "revision": 1,
+      "packet_sha256": "9f078f30060b50c6de25ac1be38ea84a97dc1dd79587aad5a056ff5c2c453188",
+      "result": "changes_requested",
+      "finding_ids": [
+        "M4F-F01",
+        "M4F-F02",
+        "M4F-F03",
+        "M4F-F04"
+      ]
+    },
+    {
+      "revision": 2,
+      "result": "changes_requested",
+      "scope": "Draft tree rereview, not final hash acceptance.",
+      "remaining_findings": [
+        "M4F-F02",
+        "M4F-F05"
+      ],
+      "provisionally_satisfactory": [
+        "M4F-F01",
+        "M4F-F03",
+        "M4F-F04"
+      ]
+    },
+    {
+      "revision": 3,
+      "packet_sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832",
+      "result": "pass",
+      "resolved_findings": [
+        "M4F-F01",
+        "M4F-F02",
+        "M4F-F03",
+        "M4F-F04",
+        "M4F-F05"
+      ],
+      "open_findings": []
+    }
+  ]
+}

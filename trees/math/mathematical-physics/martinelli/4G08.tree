@@ -1,0 +1,10 @@
+\title{更新族的自举渗流闭包}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§1.1}
+
+\p{设 #{\mathcal U} 是[更新族](4G03)，#{A\subseteq\mathbb Z^d} 为初始感染集，感染与空位同义。定义离散时间的自举渗流（bootstrap percolation）}
+##{A_0=A,\qquad A_{n+1}=A_n\cup\{x:\exists X\in\mathcal U,\ x+X\subseteq A_n\},\qquad [A]_{\mathcal U}=\bigcup_{n\geq 0}A_n.}
+\p{原点感染时间为 #{\tau_0^{\mathrm{BP}}=\inf\{n\geq 0:0\in A_n\}}，空集的下确界约定为 #{\infty}。有限区域 #{\Lambda} 内只允许加入 #{\Lambda} 的点、区域外视为未感染，所得闭包记 #{[A\cap\Lambda]_{\mathcal U}^{\Lambda}}；它等于 #{\Lambda} 时称 #{\Lambda} 被内部填满。}
+\p{闭包具有单调性 #{A\subseteq B\Rightarrow[A]_{\mathcal U}\subseteq[B]_{\mathcal U}} 与幂等性 #{[[A]_{\mathcal U}]_{\mathcal U}=[A]_{\mathcal U}}。单调性逐步归纳；幂等性由每个更新规则只有有限个点推出：若 #{x+X\subseteq[A]_{\mathcal U}}，这些点都在某个共同有限时刻出现，故 #{x} 也在闭包中。相同归纳表明，每个属于闭包的点都有仅涉及有限个初始感染点的有限生成过程。}

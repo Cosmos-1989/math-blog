@@ -1,0 +1,14 @@
+\title{历史态满足传播约束}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§4.1](icm2026-mahadev)，有限电路传播项的直接计算}
+
+\p{设 #{V} 为有限维量子寄存器，#{T\geq 1}，#{U_1,\ldots,U_T} 为 #{V} 上的酉算子。取单位向量 #{\psi_0}，递归置 #{\psi_t=U_t\psi_{t-1}}。在[张量积](0F4E) #{V\otimes\mathbb C^{T+1}} 中，以正交基 #{|0\rangle,\ldots,|T\rangle} 记录时刻，定义历史态}
+##{|\eta\rangle=\frac 1{\sqrt{T+1}}\sum_{t=0}^T|\psi_t\rangle\otimes|t\rangle.}
+\p{对任意向量 #{v=\sum_{t=0}^Tv_t\otimes|t\rangle}，定义 #{L_tv=v_t-U_tv_{t-1}}，并设 #{H_{\rm prop}=\frac 12\sum_{t=1}^TL_t^\dagger L_t}。则}
+##{\langle v,H_{\rm prop}v\rangle
+=\frac 12\sum_{t=1}^T\|v_t-U_tv_{t-1}\|^2\geq 0.}
+\p{因此 #{H_{\rm prop}} 为半正定 Hermitian 算子，#{H_{\rm prop}|\eta\rangle=0}；其核恰好由所有满足 #{v_t=U_tv_{t-1}} 的向量组成。}
+\p{\strong{证明。}时钟基正交且酉变换保持范数，所以 #{\|\eta\|^2=(T+1)^{-1}\sum_t\|\psi_t\|^2=1}。伴随定义给出每个二次型等于 #{\|L_tv\|^2}，于是非负之和为零当且仅当全部 #{L_tv=0}。逐时刻递推决定所有 #{v_t}。反过来，递推成立时所有传播项均消失。由[谱定理](0N0B)，半正定算子的零二次型也等价于属于其核。}
+\p{若再加入 #{H_{\rm in}=(I-|\psi_0\rangle\langle\psi_0|)\otimes|0\rangle\langle 0|}，则零能量要求 #{v_0} 为 #{\psi_0} 的倍数；联合核遂为 #{\mathbb C|\eta\rangle}。这个算子描述尚未限制每项作用的比特数。把传播、输入和输出约束转换为少体局部项，并证明逆多项式能隙，是电路到局部 Hamiltonian 归约的额外结论。}

@@ -1,0 +1,17 @@
+\title{随机相位平均消去 Pauli 交叉项}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§4.3.1，式 (4.5)–(4.10)](icm2026-mahadev)，精确单比特计算}
+
+\p{设 #{\rho} 为单比特[密度矩阵](4F02)，#{U} 为固定酉矩阵。写它的 [Pauli 展开](4F05)为 #{U=\sum_{a,b\in\{0,1\}}u_{ab}X^aZ^b}，并置 #{K_a=\sum_bu_{ab}Z^b}。独立均匀选 #{r\in\{0,1\}}，依次作用 #{Z^r,U,H}，计算基测得 #{c}，最后输出 #{m=c\oplus r}。该输出分布等于先对 #{\rho} 作变换}
+##{\Phi(\rho)=\sum_{a=0}^1K_a\rho K_a^\dagger,}
+\p{再作 Hadamard 基测量。并且 #{\sum_aK_a^\dagger K_a=I}，故 #{\Phi(\rho)} 仍为密度矩阵；它保留 #{\rho} 的标准基测量分布。}
+\p{\strong{证明。}翻转测量结果等于在最终测量前作用 #{X^r}。利用 #{X^rH=HZ^r}，解码后的电路为 #{H U_r}，其中}
+##{U_r=Z^rUZ^r=\sum_{a=0}^1(-1)^{ra}X^aK_a.}
+\p{对 #{r} 平均时，#{\frac 12\sum_r(-1)^{r(a-a')}=\mathbf 1_{a=a'}}，所以}
+##{\frac 12\sum_rU_r\rho U_r^\dagger
+=\sum_aX^aK_a\rho K_a^\dagger X^a.}
+\p{每个 #{U_r} 均酉，将同一平均用于 #{U_r^\dagger U_r=I} 得到 #{\sum_aK_a^\dagger K_a=I}。在最终的 #{H} 之后，#{HX^a=Z^aH}，而 #{Z^a} 不改变计算基概率，故各项中的 #{X^a} 可从测量概率中去掉。这证明输出等价性。}
+\p{每个 #{K_a} 都对角，写其第 #{j} 个对角元为 #{k_{aj}}。则 #{\Phi(\rho)_{jj}=\rho_{jj}\sum_a|k_{aj}|^2=\rho_{jj}}，说明标准基概率保持不变。正性来自各项 #{K_a\rho K_a^\dagger} 的正性，迹为一来自上述归一化恒等式。}
+\p{这一等式要求 #{U} 与随机位 #{r} 独立。密码学协议中隐含的相位位可能与公钥相关，以计算不可区分性替换这一平均需要另行证明。}

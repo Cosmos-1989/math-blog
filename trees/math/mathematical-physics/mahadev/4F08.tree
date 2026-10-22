@@ -1,0 +1,11 @@
+\title{计算不可区分性的量词}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mahadev，§1](icm2026-mahadev)；[BCMVV v4，定义 2.2–2.3](https://arxiv.org/html/1804.00640v4)}
+
+\p{函数 #{\mu:\mathbb N\to[0,1]} 称可忽略，若对每个正整数 #{c}，存在 #{\lambda_c} 使 #{\lambda\geq\lambda_c} 时 #{\mu(\lambda)\leq\lambda^{-c}}。例如 #{2^{-\lambda}} 可忽略，而固定的 #{\lambda^{-10}} 不可忽略。}
+\p{设 #{D_{0,\lambda},D_{1,\lambda}} 是多项式长度位串上的两族[概率分布](00Q3)。相对于指定的[高效算法类](4F07)，若对每个输出一个比特的算法 #{A} 都存在可忽略函数 #{\mu_A}，使}
+##{\left|\Pr_{x\leftarrow D_{0,\lambda}}(A(1^\lambda,x)=1)-\Pr_{x\leftarrow D_{1,\lambda}}(A(1^\lambda,x)=1)\right|\leq\mu_A(\lambda),}
+\p{则称两族计算不可区分，记作 #{D_0\approx_cD_1}。概率包括样本、算法随机位及量子测量的随机性。指定 PPT 区分器与指定 QPT 区分器是不同假设；后者更强。量子态族的定义相同，只把位串输入换成给定量子态。}
+\p{对两分布施加同一个高效随机处理仍保持此性质。否则先执行该处理再执行区分器，即得到原分布的区分器。有限次或多项式次的混合替换按三角不等式累计优势；当每一步具有统一可忽略上界时，总误差仍可忽略。}

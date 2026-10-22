@@ -1,0 +1,13 @@
+\title{有限 Markov 链的混合时间与截断}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§2.1.1、§2.2}
+
+\p{设 #{P_t} 是有限集合 #{E} 上的[转移半群](4G01)，#{\pi} 为平稳概率。对两个概率向量，采用[全变差距离](4F27)的记号}
+##{\|\nu -\pi\|_{\mathrm{TV}}=\frac 12\sum_{a\in E}|\nu(a)-\pi(a)|=\max_{A\subseteq E}|\nu(A)-\pi(A)|.}
+\p{最坏初态距离与混合时间为 #{d(t)=\max_a\|P_t(a,\cdot)-\pi\|_{\mathrm{TV}}}、#{t_{\mathrm{mix}}(\varepsilon)=\inf\{t:d(t)\leq\varepsilon\}}，其中 #{0<\varepsilon<1}。}
+\p{对一族链 #{E_L}，若存在 #{a_L\to\infty} 与 #{w_L/a_L\to 0}，使}
+##{\lim_{c\to\infty}\liminf_{L\to\infty}d_L(a_L-cw_L)=1,\qquad
+\lim_{c\to\infty}\limsup_{L\to\infty}d_L(a_L+cw_L)=0,}
+\p{则称它在时刻 #{a_L}、窗口 #{w_L} 内发生截断。固定 #{c} 时，第一式的时间对充分大 #{L} 为正。这个性质描述最坏初态距离的陡降；[松弛时间](4G06)描述平衡均方衰减，两者定义不同。}

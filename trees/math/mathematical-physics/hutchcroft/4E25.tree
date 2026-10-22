@@ -1,0 +1,11 @@
+\title{积分超过程的典范游程测度}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§2、定理 4.4；arXiv:2508.18807v1，页 11–12 的典范测度约定}
+
+\p{积分超过程描述临界[分枝随机游走](4E07)的全部世代占据量的连续极限。可用以下构造说明其典范测度。固定整数 #{d\geq 1}，在 #{\mathbb Z^d} 上使用欧氏范数 #{\|\cdot\|}。取均值一、方差一的二元[分枝树](4E09)，从原点出发，沿每条家系边独立跳跃。短程情形取最近邻对称跳跃；长程情形取概率与 #{\|z\|^{-d-s}} 成正比的非零跳跃 #{z\in\mathbb Z^d\setminus\{0\}}，#{0<s<2}。记 #{X_v} 为个体 #{v} 的位置。}
+\p{选定正常数 #{c_s}，以 #{a_n=c_2n^{1/2}}（短程）或 #{a_n=c_sn^{1/s}}（长程）缩放位置，令 #{M_n=n^{-2}\sum_v\delta_{X_v/a_n}}。分枝随机游走的尺度极限理论给出一个位于非零有限[测度空间](4E24)上的典范测度 #{\mathbb N}，使对每个 #{\lambda>0}，有限测度}
+##{n\,\mathbb P\bigl(M_n(\mathbb R^d)\geq\lambda,\ M_n\in\cdot\bigr)\ \Longrightarrow\ \mathbb N\bigl(\mu(\mathbb R^d)\geq\lambda,\ \mu\in\cdot\bigr).}
+\p{此构造的存在与唯一极限采用分枝过程尺度极限理论，见所引原文及其 Le Gall、Perkins 文献。#{\mathbb N(\mu(\mathbb R^d)\geq\lambda)=c\lambda^{-1/2}}，#{c>0}；因此 #{\mathbb N} 总质量无穷，但在每个正质量阈值以上有限。它不是概率分布。}
+\p{短程极限称积分超 Brownian 游程测度，其空间运动是[Brownian 运动](0N0S)；长程极限称积分对称 #{s} 稳定 Lévy 超过程游程测度，其空间运动允许跳跃，位移满足时间伸缩 #{t\mapsto ct} 对应空间伸缩 #{x\mapsto c^{1/s}x}。空间常数可选成跳跃强度密度 #{s\|z\|^{-d-s}/(d+s)}，即报告采用的约定；整体质量常数由分枝归一化固定。“积分”表示已经对世代时间求和，所得测度不携带家系距离。}

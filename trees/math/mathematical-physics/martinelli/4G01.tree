@@ -1,0 +1,11 @@
+\title{有限连续时间 Markov 链的生成元}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§1.1 的有限状态背景；均匀化计算}
+
+\p{设 #{E} 为有限集合。给每对不同状态 #{a,b} 指定跳跃率 #{r(a,b)\geq 0}，并令 #{r(a)=\sum_{b\ne a}r(a,b)}。连续时间 Markov 链在状态 #{a} 等待尾概率为 #{e^{-r(a)t}} 的时间，然后以概率 #{r(a,b)/r(a)} 跳到 #{b}；每次等待和选择在给定当前状态后与过去独立。#{r(a)=0} 时停留在 #{a}。作用于函数 #{f:E\to\mathbb R} 的生成元为}
+##{Lf(a)=\sum_{b\ne a}r(a,b)(f(b)-f(a)).}
+\p{令 #{R\geq\max_a r(a)} 且 #{R>0}，#{K=I+L/R}。矩阵 #{K} 非负且每行和为一。以速率 #{R} 的 [Poisson 计数](00L6)决定尝试次数，每次按 #{K} 选择下一状态，允许留在原处，得到转移矩阵}
+##{P_t=e^{-Rt}\sum_{n=0}^{\infty}\frac{(Rt)^n}{n!}K^n=e^{tL}.}
+\p{这里矩阵指数定义为 #{e^{tL}=\sum_{n=0}^{\infty}t^nL^n/n!}。有限矩阵的绝对收敛允许逐项相乘、求导，故 #{P_{s+t}=P_sP_t}、#{\partial_tP_t=LP_t=P_tL}，且 #{P_tf(a)=\mathbb E_a f(X_t)}，使用[期望](00L1)。这族矩阵称转移半群。概率向量 #{\pi} 满足 #{\pi P_t=\pi} 时称平稳；若 #{\pi(a)r(a,b)=\pi(b)r(b,a)}，称满足详细平衡或可逆。对 #{a} 求和即得 #{\pi L=0}，再代入指数级数得平稳性。}

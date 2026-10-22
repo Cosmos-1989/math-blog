@@ -1,0 +1,11 @@
+\title{随机线性哈希的剩余哈希界}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§3.2.4](icm2026-mahadev)，有限域线性哈希的碰撞概率证明}
+
+\p{设 #{q} 为素数，#{S} 是 #{\{0,1\}^n\subseteq\mathbb F_q^n} 上的[随机变量](00L0)，各点概率至多 #{2^{-h}}；称 #{H_\infty(S)=-\log_2\max_s\Pr(S=s)} 为最小熵。独立均匀抽取 #{C\in\mathbb F_q^{\ell\times n}}，并令 #{U} 独立均匀于 #{\mathbb F_q^\ell}。则[全变差距离](4F27)满足}
+##{\Delta((C,CS),(C,U))\leq\frac 12\sqrt{q^\ell 2^{-h}}.}
+\p{\strong{证明。}写 #{M=q^\ell}、#{p(s)=\Pr(S=s)}，并记固定 #{C} 时 #{CS} 的分布为 #{p_C}。当 #{s\ne t}，向量 #{s-t} 在[有限域](00GF)中非零；逐行固定一个非零坐标可知 #{\Pr_C(Cs=Ct)=1/M}。所以}
+##{\begin{aligned}\mathbb E_C\sum_y p_C(y)^2&=\sum_s p(s)^2+M^{-1}\sum_{s\ne t}p(s)p(t),\\ \mathbb E_C\sum_y(p_C(y)-M^{-1})^2&=(1-M^{-1})\sum_s p(s)^2\leq 2^{-h}.\end{aligned}}
+\p{对 #{y} 使用 [Schwarz 不等式](004S)，再对有限个矩阵 #{C} 的平均使用同一不等式，得到 #{\mathbb E_C\Delta(p_C,U)\leq\frac 12\sqrt{M2^{-h}}}。由于两个联合分布的 #{C} 边缘相同，该平均正是所求联合全变差。特别地，#{h\geq\ell\log_2q+2\log_2(1/\varepsilon)} 保证距离至多 #{\varepsilon /2}。}

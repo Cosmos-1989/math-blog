@@ -1,0 +1,10 @@
+\title{随机有限域矩阵何时满列秩}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§1](icm2026-mahadev)，素数模数下的直接计数}
+
+\p{设 #{q} 为素数，#{m\geq n\geq 1}，#{A} 在[有限域](00GF) #{\mathbb F_q} 上的 #{m\times n} 矩阵中均匀抽取。则}
+##{\Pr(\operatorname{rank}A<n)\leq(q^n-1)q^{-m}<q^{n-m}.}
+\p{\strong{证明。}不满列秩等价于存在非零 #{v\in\mathbb F_q^n} 满足 #{Av=0}。固定这样的 #{v}，选 #{v_j\ne 0}。一行 #{a} 的其他坐标给定后，方程 #{a\cdot v=0} 唯一确定 #{a_j}，所以该行满足方程的概率为 #{1/q}。各行独立，故 #{\Pr(Av=0)=q^{-m}}。对 #{q^n-1} 个非零 #{v} 用[事件并的概率上界](0F65)，得到结论。}
+\p{在满列秩事件上，[线性映射](00GC) #{s\mapsto As} 单射， #{As=b} 至多有一个解，可用域上的消元求出。#{m>n} 时矩阵的秩至多为 #{n}，所以它不可能满行秩。合数模数下 #{\mathbb Z_q} 一般不是域，以上概率证明不直接适用；需要另行假定或证明 #{s\mapsto As} 单射。}

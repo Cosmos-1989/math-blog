@@ -1,0 +1,12 @@
+\title{有限图上 BABP 的自对偶恒等式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，式 (2.3)；有限图生成元证明}
+
+\p{设 #{G=(V,E)} 为有限无向[简单图](00LB)，#{0<q<1}、#{p=1-q}。用 #{B\subseteq V} 表示空位集。BABP 在点 #{x} 以 #{n_B(x)=|\{y\in B:\{x,y\}\in E\}|} 为热浴尝试速率：若 #{x\notin B} 则以速率 #{qn_B(x)} 加入 #{x}，若 #{x\in B} 则以速率 #{pn_B(x)} 删除 #{x}。它与 [FA-1f](4G0K) 的区别是使用空邻居数而非“至少一个”的指标。}
+\p{令 #{h=-p/q}、#{D(B,C)=h^{|B\cap C|}}。若 #{B_t,C_t} 是从确定集合 #{B,C} 出发的两个独立 BABP，则}
+##{\mathbb E_B D(B_t,C)=\mathbb E_C D(B,C_t).}
+\p{\strong{证明。}用[有限生成元](4G01)分别作用于 #{D} 的两个变量。只有 #{x\in C} 的翻转改变 #{D}。当 #{x\notin B} 时，其贡献除以 #{D} 为 #{qn_B(x)(h-1)=-n_B(x)}；当 #{x\in B} 时，为 #{pn_B(x)(h^{-1}-1)=-n_B(x)}。因此}
+##{L_BD(B,C)=-D(B,C)\sum_{x\in C}n_B(x)=-D(B,C)\sum_{y\in B}n_C(y)=L_CD(B,C).}
+\p{中间等式逐条无向边计数，即使两端同时属于 #{B\cap C} 也保留相同的两次计数。两个生成元作用于不同变量而交换，故对固定 #{t}，函数 #{e^{sL_B}e^{(t-s)L_C}D} 的导数为零。取 #{s=0,t} 即得恒等式。有限图使所有指数与期望都是有限矩阵运算；无限感染集的幂与可积性须另作定义。}

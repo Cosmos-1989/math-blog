@@ -1,0 +1,12 @@
+\title{Duarte 模型中困难度与有向时间代价}
+\date{2026-10-22}
+\taxon{Example}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§3.2 的 Duarte 讨论与文献 [45]、[46]}
+
+\p{在 #{\mathbb Z^2} 上，以 #{e_1,e_2} 为标准单位向量，Duarte [更新族](4G03)为 #{\mathcal U=\{\{e_2,-e_2\},\{e_2,-e_1\},\{-e_2,-e_1\}\}}。对 #{u=(\cos\theta,\sin\theta)}，[稳定方向](4G0T)恰为孤立点 #{\theta=0} 与闭弧 #{\pi /2\leq\theta\leq 3\pi /2}。因为前两个相反竖直向量不能同时具有负内积，而含 #{-e_1} 的规则可以完全落在负半空间，当且仅当 #{\cos\theta>0} 且 #{\sin\theta\ne 0}。}
+\p{在 #{u=e_1} 的左半平面外加原点一颗种子，可用西邻居加已有竖直邻居逐步感染整条竖线，所以[方向困难度](4G0W)为 #{1}。闭弧上的稳定方向非孤立，困难度为无穷。右开半圆只有那个孤立稳定方向，而每个开半圆至少含稳定方向，因此 Duarte 为临界族且 #{\alpha(\mathcal U)=1}。}
+\p{固定 #{0<q<1}，令 #{\mu_q=\operatorname{Bernoulli}(1-q)^{\otimes\mathbb Z^2}}。初始空位集 #{A_0} 因而各点独立以概率 #{q} 感染。按[自举规则](4G08)迭代得到 #{A_n}，定义离散感染时间 #{\tau_0^{\mathrm{BP}}=\inf\{n\geq 0:0\in A_n\}}。另从 #{\mu_q} 启动每点尝试速率为一的 Duarte KCM，定义连续命中时间 #{\tau_0=\inf\{t\geq 0:\omega_0(t)=0\}}。以下极限均令 #{q\downarrow 0}。}
+\p{报告引用的自举结果是 #{\log\tau_0^{\mathrm{BP}}=\Theta(q^{-1}(\log(1/q))^2)}，以概率趋于一成立。对平稳 Duarte KCM，报告所引研究给出均值的匹配上下界}
+##{\log\mathbb E_{\mu_q}\tau_0=\Theta\left(q^{-2}(\log(1/q))^4\right).}
+\p{#{\Theta} 的常数与充分小 #{q} 无关。若液滴有效密度为 #{r=\exp[-\Theta(q^{-1}(\log(1/q))^2)]}，把它代入 [East 的平方对数尺度](4G0G)，就得到 #{(\log(1/r))^2=\Theta(q^{-2}(\log(1/q))^4)}。这是与定理相符的代价计算；液滴构造及动态下界需要来源中的算法与组合证明。}

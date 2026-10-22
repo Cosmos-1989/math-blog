@@ -1,0 +1,15 @@
+\title{有限概率分布的全变差距离}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[BCMVV v4，§2.2，式 (4)](https://arxiv.org/html/1804.00640v4)，有限概率的直接推导}
+
+\p{设 #{S} 为非空有限集合，#{p,q:S\to[0,1]} 为[概率质量函数](00Q3)，即 #{\sum_sp(s)=\sum_sq(s)=1}。定义全变差距离，也称总变差距离}
+##{\Delta(p,q)=\frac 12\sum_{s\in S}|p(s)-q(s)|.}
+\p{它恰好等于全部事件的最大概率差，即}
+##{\Delta(p,q)=\max_{E\subseteq S}|p(E)-q(E)|,\qquad p(E)=\sum_{s\in E}p(s).}
+\p{\strong{证明。}令 #{E_+=\{s:p(s)\geq q(s)\}}。由于 #{\sum_s(p(s)-q(s))=0}，正差之和与负差绝对值之和相等，均为 #{\Delta(p,q)}。任一事件的概率差介于两者的相反数与正数之间，而 #{E_+} 达到上界。}
+\p{对任意函数 #{g:S\to[0,1]} 也有 #{|\sum_sg(s)(p(s)-q(s))|\leq\Delta(p,q)}，因为正差部分和负差部分分别被同样的总量控制。故该距离同样刻画允许随机化的二值统计检验所能达到的最大概率差。}
+\p{设 #{T} 为另一有限集合，#{K(t\mid s)\geq 0} 且对每个 #{s} 有 #{\sum_tK(t\mid s)=1}。这给出共同随机处理，输出分布为 #{pK(t)=\sum_sp(s)K(t\mid s)}。三角不等式给出}
+##{2\Delta(pK,qK)\leq\sum_{t,s}K(t\mid s)|p(s)-q(s)|=2\Delta(p,q).}
+\p{特别地，取函数像、丢弃一个坐标和添加独立随机性都不会增加全变差。若联合分布 #{(X,Y)} 与 #{(X,Y')} 的 #{X} 边缘同为 #{r(x)}，则直接按 #{x} 求和得到 #{\Delta((X,Y),(X,Y'))=\sum_{x:r(x)>0}r(x)\Delta(Y\mid X=x,Y'\mid X=x)}，其中条件分布按[条件概率](0A00)定义。}

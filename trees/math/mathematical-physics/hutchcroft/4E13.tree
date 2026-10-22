@@ -1,0 +1,11 @@
+\title{连续长度截断的长程边核}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§4 式 (4.1) 前的截断核}
+
+\p{固定 #{d\geq 1}、#{\alpha>0}，#{J(x,y)=\|x-y\|^{-d-\alpha}} 对不同格点定义。对 #{r\geq 1} 令}
+##{J_r(x,y)=1_{\{0<\|x-y\|\leq r\}}\int_{\|x-y\|}^r(d+\alpha)s^{-d-\alpha -1}\,ds=\bigl(J(x,y)-r^{-d-\alpha}\bigr)_+}
+\p{其中第二式只用于 #{x\ne y}，对角取零，#{t_+=\max\{t,0\}}。以开边概率 #{1-e^{-\beta J_r(x,y)}} 定义 #{\mathbb P_{\beta,r}}。}
+\p{由[微积分基本定理](0A3C)，积分等式成立，且在 #{r\ne\|x-y\|} 时 #{\partial_rJ_r=(d+\alpha)r^{-d-\alpha -1}1_{\{0<\|x-y\|<r\}}}。[同一均匀变量耦合](4E02)使 #{K_0(r)} 随 #{r} 递增。每条在完整模型中开放的边几乎必然最终开放；可数多条边可同时如此。任一连接由有限路径见证，故 #{\bigcup_rK_0(r)=K_0} 几乎必然。}
+\p{#{\beta_c} 始终表示完整核的临界参数，#{K=K_0} 表示原点开簇。当 #{\beta_c<\infty} 时，原文的截断严格亚临界结论保证 #{\mathbb E_{\beta_c,r}|K|^p<\infty} 对有限 #{r} 和整数 #{p\geq 1} 成立；这一严格性是研究输入，不能仅从 #{J_r\leq J} 推出。}

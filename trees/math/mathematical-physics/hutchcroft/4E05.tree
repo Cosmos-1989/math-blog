@@ -1,0 +1,10 @@
+\title{整数随机变量的尾和矩公式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§2 标度讨论的基础计算}
+
+\p{设 #{X} 为取值于非负整数与 #{\infty} 的[随机变量](00L0)，#{q>0}。以非负积分理解[期望](00L1)，则}
+##{\mathbb EX^q=\sum_{n\geq 1}\bigl(n^q-(n-1)^q\bigr)\mathbb P(X\geq n).}
+\p{\strong{证明。}对每个整数 #{N}，望远镜求和给出 #{\min\{X,N\}^q=\sum_{n=1}^N(n^q-(n-1)^q)1_{\{X\geq n\}}}。取期望后以[单调收敛](0A7A)令 #{N\to\infty}。}
+\p{例如，若存在 #{a>0} 与常数 #{0<c\leq C<\infty}，使 #{cn^{-a}\leq\mathbb P(X\geq n)\leq Cn^{-a}} 对所有 #{n\geq 1} 成立，则 #{\mathbb EX^q<\infty} 恰当且仅当 #{q<a}。[中值定理](0A35)使第 #{n} 项与 #{n^{q-1-a}} 相差固定倍数；把级数按 #{2^k\leq n<2^{k+1}} 分组，每组与 #{2^{k(q-a)}} 同阶，便得到收敛、对数发散和幂发散的三种情形。}

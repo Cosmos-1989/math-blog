@@ -1,0 +1,12 @@
+\title{二阶微分误差如何产生对数因子}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§4 第二矩对数修正；抽象微分方程计算}
+
+\p{设 #{r_0>1}、#{b,c\in\mathbb R}，正值连续可微函数 #{m:\lbrack r_0,\infty\rparen\to(0,\infty)} 满足}
+##{\frac{m'(r)}{m(r)}=\frac br-\frac{c}{r\log r}+\varepsilon(r),\qquad \int_{r_0}^{\infty}|\varepsilon(r)|\,dr<\infty.}
+\p{则存在 #{C>0}，使当 #{r\to\infty} 时 #{m(r)\sim Cr^b(\log r)^{-c}}。}
+\p{\strong{证明。}以[对数求导](0A45)和[微积分基本定理](0A3C)得到}
+##{\log\left(m(r)r^{-b}(\log r)^c\right)=\log\left(m(r_0)r_0^{-b}(\log r_0)^c\right)+\int_{r_0}^r\varepsilon(s)\,ds.}
+\p{右侧趋向有限实数，取指数即得严格正常数。代入 #{b=3\alpha,c=1/2} 得到 #{r^{3\alpha}(\log r)^{-1/2}} 的形式。报告中确定真实渗流第二矩的系数 #{1/2} 需要二阶重整化分析和尺度极限；此抽象命题说明该系数一旦成立，怎样积分出对数幂。}

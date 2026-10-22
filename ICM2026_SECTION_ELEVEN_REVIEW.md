@@ -2,23 +2,37 @@
 
 核查日期：2026-10-22，Asia/Shanghai。官方名册与出版身份的核查先于本轮写作。以下先记录本轮整合结果，其后保留增补前的冻结基线，便于区别既有内容与新增专题。
 
-## 本轮整合
+## 首批发布与第二批整合
 
-按论文集页码顺序，前三场缺失报告现已分别建立综述、原子条目与文献页，并通过独立内容复核。
+按论文集页码顺序，首批三场报告已建立综述、原子条目与文献页，通过独立内容复核，并以提交 `84f4f5c0e659fcd7659672687a64062e858142b8` 推送至 `main`。GitHub Pages 于 2026-10-22 03:33:04 UTC 完成部署。147 条线上页面及兼容路径通过严格 TLS 检查，并与该提交的独立构建逐页比对一致；发布记录见 `research/icm2026-mathematical-physics-first-release.json`。
 
-| 报告 | 本地专题 | 原子条目 |
+| 报告 | 已发布专题 | 原子条目 |
 |---|---|---|
-| Amol Aggarwal | [Toda 多体渐近](http://localhost:8083/4B00/) | 39 |
-| Pablo A. Ferrari | [硬杆与箱球系统](http://localhost:8083/4C00/) | 42 |
-| Davide Gaiotto | [范畴化 't Hooft 展开](http://localhost:8083/4D00/) | 49 |
+| Amol Aggarwal | [Toda 多体渐近](https://opetope.cc/4B00/) | 39 |
+| Pablo A. Ferrari | [硬杆与箱球系统](https://opetope.cc/4C00/) | 42 |
+| Davide Gaiotto | [范畴化 't Hooft 展开](https://opetope.cc/4D00/) | 49 |
 
 合计新增 130 个原子页、3 篇综述及 3 个文献页，登记 400 条直接前置依赖，直接复用 77 个既有知识页面。有限维计算、局部推导和证明分别写入条目；引用的深层研究定理、条件性识别与物理猜想保留其准确地位，逐项范围见三个研究包。
 
-当前本地收录为主列 3 场、跨列 1 场，合计 **4/15 场**。Zaag 的 `4900` 直接复用。Yau 的既有全会专题 `2B00` 置于数学物理首页首位，单独计数；Sabin 的 Bourbaki 专题 `0Q00` 保留于其他专题。
+第二批按相同顺序继续整理三场报告。
 
-尚余 11 场：Hutchcroft、Mahadev、Martinelli、Pausader、Pérez-García、Rhodes–Vargas、Sasada、Staffilani、Sun、Xu，以及尚未识别出版题名的 De Roeck。联合报告仍计一场，De Roeck 仍保留在官方名册中。
+| 报告 | 本地专题 | 原子条目 |
+|---|---|---|
+| Tom Hutchcroft | [长程渗流](http://localhost:8083/4E00/) | 41 |
+| Urmila Mahadev | [经典通信与量子系统](http://localhost:8083/4F00/) | 44 |
+| Fabio Martinelli | [动力学约束模型](http://localhost:8083/4G00/) | 45 |
 
-验证结果见 `research/icm2026-mathematical-physics-first-validation.json`，内容复核见各报告的 `mathematical-physics-*-review.json`。本轮未请求推送，源码整合、本地构建与公开发布分别记录。
+第二批新增 130 个原子页、3 篇综述及 3 个文献页，登记 400 条直接前置依赖，直接复用 44 个既有知识页面。Hutchcroft 专题从独立边渗流、分枝过程与尺度微分进入临界指数和尺度极限；Mahadev 专题从量子态、LWE 与陷门函数进入量子性检验和经典验证；Martinelli 专题从可逆 Markov 动力学、条件方差与自举渗流进入缓慢松弛和二维普适性。
+
+当前本地收录为主列 6 场、跨列 1 场，合计 **7/15 场**。Zaag 的 `4900` 直接复用。Yau 的既有全会专题 `2B00` 置于数学物理首页首位，单独计数；Sabin 的 Bourbaki 专题 `0Q00` 保留于其他专题。
+
+尚余 8 场：Pausader、Pérez-García、Rhodes–Vargas、Sasada、Staffilani、Sun、Xu，以及尚未识别出版题名的 De Roeck。联合报告仍计一场，De Roeck 仍保留在官方名册中。
+
+首批本地验证保存在 `research/icm2026-mathematical-physics-first-validation.json`，不改写为后来的发布状态。第二批的来源范围、证明范围和未展开分支分别保存在三个 packet；独立内容复核保存在对应的 `mathematical-physics-*-review.json`。本次请求先发布首批、再整理第二批，两个批次的发布状态分别记录。
+
+第二批已完成三份独立复核、42 项全站源码检查及静态 HTML 构建。全站 6,958 页均可达，89,114 个公式通过解析；137 个相关页面分别在 1440 和 390 像素宽度检查，共 274 项页面显示检查通过。另检验 320 像素阅读界面、搜索、中文标签、长公式滚动及旧 XML 路径，人工查看了 10 张代表性截图。完整证据见 `research/icm2026-mathematical-physics-second-validation.json`。这一批目前仅本地验收，尚未提交或部署。
+
+Mahadev 专题保留 ICM 报告引用的 LWE 经典验证定理。所读验证论文 v3 的全定义域固定掩码实现与奇数模数平移模型存在不匹配；`4F2C` 单独证明相应奇轨道障碍，`4F29` 记录具体定义和实现的区别。未以未经核实的编码条件补造修订，也未将这一具体构造问题表述为一般验证定理的反例。
 
 ## 增补前的冻结结论
 

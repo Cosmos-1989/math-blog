@@ -1,0 +1,14 @@
+\title{LWE 构造带噪声陷门爪函数}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[BCMVV v4，§4，条件 (A.1)–(A.4)、定理 4.1、§§4.1–4.3](https://arxiv.org/html/1804.00640v4)}
+
+\p{以下采用 Brakerski、Christiano、Mahadev、Vazirani、Vidick 的构造定理。所有参数随安全参数 #{\lambda} 变化；#{q} 为素数，#{\ell,n,m,\log q} 多项式有界，宽度 #{B_L,B_V,B_P>0} 满足}
+##{\begin{gathered}n=\Omega(\ell\log q+\lambda),\qquad m=\Omega(n\log q),\\ B_P=\frac{q}{2C_T\sqrt{mn\log q}},\qquad B_L<B_V<B_P,\\ B_P/B_V\text{ 与 }B_V/B_L\text{ 均超多项式增长}.\end{gathered}}
+\p{#{\Omega} 表示具有足够大的固定常数下界；“超多项式增长”表示最终超过 #{\lambda} 的每个固定幂。#{C_T>0} 是该文定理 2.6 的通用陷门常数。假定秘密均匀于 #{\mathbb Z_q^\ell}、误差为[截断 Gaussian](4F0A) #{D_{q,B_L}} 的[判定 LWE](4F0B)，对所有多项式样本数以及可持有仅依赖参数的[多项式量子建议的 QPT 攻击者](4F07)均困难。这是该文定义 2.5 的困难模型。则存在满足[结构条件](4F13)及[自适应硬核比特条件](4F14)的 NTCF 家族。}
+\p{具体地，#{\mathcal X=\mathbb Z_q^n,\mathcal Y=\mathbb Z_q^m}。陷门生成器产生统计上接近均匀的 #{A} 及私有陷门；再抽取二进制秘密 #{s\in\{0,1\}^n} 和 #{e\leftarrow D_{q,B_V}^{\otimes m}}，公开 #{k=(A,As+e)}。理想与实际分布分别为}
+##{\begin{aligned}f_{k,b}(x)(y)&=D_{q,B_P}^{\otimes m}(y-Ax-bAs),\\ f'_{k,b}(x)(y)&=D_{q,B_P}^{\otimes m}(y-Ax-b(As+e)).\end{aligned}}
+\p{匹配关系为 #{x_1=x_0-s}。理想函数由密钥数学上确定，但求值使用公开可计算的 #{f'}。宽度 #{B_P} 用于两支的近似重合，#{B_V} 用于公开样本误差；底层困难假设的秘密维数是 #{\ell}，不同于构造中的二进制秘密长度 #{n}。}
+\p{显示的 #{f,f'} 是数学上精确定义的分布，平方根振幅是相干制备的理想目标。有限门电路采用[联合态的可忽略实现误差](4F13)，包括控制比特和以零为目标的工作寄存器；这项误差与 #{f,f'} 之间的 Hellinger 误差分别计入协议的可忽略损失。所引论文 §4.3 式 (23)–(26) 及脚注 3 使用有限精度 Gaussian 制备。}
+\p{陷门生成、相干 Gaussian 制备、误差估计及自适应硬核比特归约采用所引构造定理，相关论证位于该文 §§2.3、4.1–4.4。局部的[短陷门恢复](4F0D)与[两支态误差](4F11)解释其中的线性代数机制。}

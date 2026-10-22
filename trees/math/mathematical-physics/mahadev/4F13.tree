@@ -1,0 +1,21 @@
+\title{带噪声陷门函数对的结构}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[BCMVV v4，定义 3.1，第 1–3 条](https://arxiv.org/html/1804.00640v4)}
+
+\p{给定安全参数 #{\lambda}，取可由多项式长度位串编码的有限集合 #{\mathcal X,\mathcal Y}。公开密钥 #{k} 指定两个映射 #{f_{k,b}:\mathcal X\to\mathcal D(\mathcal Y)}，#{b\in\{0,1\}}；#{\mathcal D(\mathcal Y)} 表示[概率质量函数](00Q3)的集合。一个输出是分布，#{f_{k,b}(x)(y)} 是该分布在 #{y} 的质量。PPT 密钥算法产生 #{(k,t_k)}，其中 #{t_k} 是只供验证者使用的陷门。}
+\p{高效确定性的陷门逆算法 #{\operatorname{Inv}(t_k,b,y)} 对 #{y\in\operatorname{supp}f_{k,b}(x)} 返回 #{x}。因此同一分支不同 #{x} 的支撑互不相交。还要求一个完美匹配 #{\mathcal R_k\subseteq\mathcal X\times\mathcal X}，即每个元素在左右各恰好匹配一次，且}
+##{f_{k,0}(x_0)=f_{k,1}(x_1)\quad\Longleftrightarrow\quad(x_0,x_1)\in\mathcal R_k.}
+\p{匹配的一对 #{(x_0,x_1)} 称爪。实际求值使用分布 #{f'_{k,b}(x)}，并满足以下共同要求。对每个爪及 #{y\in\operatorname{supp}f'_{k,b}(x_b)}，陷门能同时恢复两端 #{x_0,x_1}。公开高效确定性算法 #{\operatorname{Chk}(k,b,x,y)} 精确判断 #{y\in\operatorname{supp}f'_{k,b}(x)}。对每个 #{k,b}，其平均[平方 Hellinger 误差](4F09)满足}
+##{\frac 1{|\mathcal X|}\sum_{x\in\mathcal X}h^2(f_{k,b}(x),f'_{k,b}(x))\leq\mu(\lambda),}
+\p{其中 #{\mu} [可忽略](4F08)。相干制备的理想目标为}
+##{|\phi_{k,b}\rangle_{XY}
+=|\mathcal X|^{-1/2}\sum_{x,y}\sqrt{f'_{k,b}(x)(y)}|x,y\rangle.}
+\p{在固定有限通用门集的 [QPT 模型](4F07)中，要求有多项式大小的酉电路 #{\widetilde U_k}，以比特寄存器 #{B} 为控制，输出寄存器为 #{X,Y}，工作寄存器为 #{W}。存在统一可忽略函数 #{\varepsilon}，使每个有效密钥 #{k}、每个辅助空间 #{E} 及向量 #{v_0,v_1\in E}，只要 #{\|v_0\|^2+\|v_1\|^2=1}，都有}
+##{\left\|(\widetilde U_k\otimes I_E)
+\sum_{b=0}^1|b\rangle_B|0\rangle_{XYW}\otimes v_b
+-\sum_{b=0}^1|b\rangle_B|\phi_{k,b}\rangle_{XY}|0\rangle_W\otimes v_b
+\right\|\leq\varepsilon(\lambda).}
+\p{误差在控制、输出、工作寄存器及任意纠缠辅助空间的联合向量上度量；理想工作寄存器为零。仅分别逼近两个分支的输出概率不能保证这一相干条件。理想平方根公式用于代数计算，有限门电路只须以可忽略误差实现它。由[共同测量误差界](4F28)，该实现误差对任何后续共同实验的影响也可忽略；多项式次调用按三角不等式累积后仍可忽略。}
+\p{以上是函数对的结构条件；加入[自适应硬核比特性质](4F14)后称 NTCF 家族。}

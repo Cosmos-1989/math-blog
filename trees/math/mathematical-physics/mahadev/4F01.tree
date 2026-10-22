@@ -1,0 +1,9 @@
+\title{量子寄存器与计算基}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Mahadev，§2，式 (2.1)–(2.2)](icm2026-mahadev)}
+
+\p{一个量子比特的状态空间是带[标准复内积](004N)的 #{\mathbb C^2}，计算基为 #{|0\rangle=(1,0)^{\mathsf T}}、#{|1\rangle=(0,1)^{\mathsf T}}。含 #{r} 个量子比特的寄存器采用 [Hilbert 张量积](0F4E) #{(\mathbb C^2)^{\otimes r}}，其计算基记为 #{|x\rangle=|x_1\rangle\otimes\cdots\otimes|x_r\rangle}，其中 #{x\in\{0,1\}^r}。}
+\p{用单位向量表示[纯态](00JZ)，便有 #{|\psi\rangle=\sum_x\alpha_x|x\rangle} 和 #{\sum_x|\alpha_x|^2=1}。计算基测量的结果 #{x} 具有概率 #{|\alpha_x|^2}；这是[投影测量](00JO)在各坐标射线上的形式。符号 #{\langle\psi|} 表示向量的共轭转置，故 #{\langle\phi|\psi\rangle} 对第二变量线性。}
+\p{酉变换是满足 #{U^*U=UU^*=I} 的方阵，其中星号为共轭转置。它保持内积与单位长度，因而给出封闭系统的状态演化。任意有限集合 #{S} 也可以标记一组计算基 #{\{|s\rangle:s\in S\}}；实际二进制存储采用一个单射编码 #{J:S\to\{0,1\}^w}，未使用的编码仍属于寄存器空间。}

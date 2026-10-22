@@ -1,0 +1,13 @@
+\title{稳定方向的困难度与半圆最优化}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，定义 3.10、定理 3.11}
+
+\p{设 #{\mathcal U} 为二维[更新族](4G03)，#{H_u=\{x\in\mathbb Z^2:x\cdot u<0\}}。按[稳定方向](4G0T)定义困难度 #{\alpha(u)}：不稳定方向取 #{0}；非孤立稳定方向取 #{\infty}；孤立稳定方向取使}
+##{|[H_u\cup F]_{\mathcal U}\setminus H_u|=\infty}
+\p{成立的有限集合 #{F\subseteq\mathbb Z^2\setminus H_u} 的最小基数。这里 #{[\cdot]_{\mathcal U}} 是[自举闭包](4G08)。孤立稳定方向确实存在这种有限集合，是报告所引 Bollobás–Smith–Uzzell，Lemma 5.2 的结论。更新族的困难度定义为}
+##{\alpha(\mathcal U)=\min_{C\text{ 为开半圆}}\max_{u\in C}\alpha(u).}
+\p{由[半圆分类](4G0U)及稳定集为有限闭弧与孤立点之并，超临界、临界、次临界分别对应 #{\alpha=0}、#{1\leq\alpha<\infty}、#{\alpha=\infty}。}
+\p{为陈述随机感染时间，固定 #{0<q<1}，令初始自旋服从 #{\mu_q=\operatorname{Bernoulli}(1-q)^{\otimes\mathbb Z^2}}，即各点独立以概率 #{q} 成为空位。以这些空位为初始感染集 #{A_0}，记自举迭代为 #{A_n}，原点感染时间为 #{\tau_0^{\mathrm{BP}}=\inf\{n\geq 0:0\in A_n\}}。报告定理 3.11 给出临界族的时间尺度：固定规则并令 #{q\downarrow 0} 时，以概率趋于一，#{\log\tau_0^{\mathrm{BP}}} 在 #{c q^{-\alpha}(\log(1/q))^\gamma} 与 #{C q^{-\alpha}(\log(1/q))^\gamma} 之间，其中 #{c,C>0}，#{\gamma\in\{0,2\}} 由更细的平衡性分类确定。}
+\p{对二维 [FA-2f](4G0V)，四个稳定方向均有困难度 #{1}。例如 #{u=e_1} 时半平面 #{x_1<0} 全感染，在原点增加一颗种子后，可借左侧感染邻居沿竖直边界逐点传播。无种子时稳定性阻止传播，故最小数恰为一。}

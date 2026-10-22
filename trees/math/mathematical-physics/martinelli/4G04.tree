@@ -1,0 +1,12 @@
+\title{约束热浴的可逆性与 Dirichlet 形式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§1.2；[Martinelli–Shapira–Toninelli v1](https://arxiv.org/html/2510.20461v1)，式 (1.6)}
+
+\p{设 #{\Lambda} 有限，#{0<q<1}，#{p=1-q}，#{\mu=\operatorname{Bernoulli}(p)^{\otimes\Lambda}}。设非负速率 #{c_x} 不依赖坐标 #{\omega_x}，允许固定边界条件。对[热浴生成元](4G03) #{L=\sum_xc_x(\mu_x-I)}，#{\mu} 满足[详细平衡](4G01)，且}
+##{\mathcal D(f,f):=-\mu(fLf)=\sum_{x\in\Lambda}\mu(c_x\operatorname{Var}_x(f)).}
+\p{\strong{证明。}记 #{\omega^x} 为翻转第 #{x} 位的构形。实际翻转率是 #{r(\omega,\omega^x)=c_x(\omega)(q\omega_x+p(1-\omega_x))}。因 #{c_x(\omega)=c_x(\omega^x)}，而两个构形的乘积概率比只来自第 #{x} 位，故 #{\mu(\omega)r(\omega,\omega^x)=\mu(\omega^x)r(\omega^x,\omega)}。逐边相加即得可逆性。再将[条件方差恒等式](4G02)用于每个 #{x}，得到所示等式。}
+\p{若改写为有向跳跃边之和，则}
+##{\mathcal D(f,f)=\frac 12\sum_{\omega,x}\mu(\omega)r(\omega,\omega^x)(f(\omega^x)-f(\omega))^2.}
+\p{因每条无向边在此出现两次，边求和含 #{1/2}；条件方差求和不含此因子。对无限格的局部函数，两边仍为有限和，同一证明成立。乘积测度可逆不要求所有构形相互可达。}

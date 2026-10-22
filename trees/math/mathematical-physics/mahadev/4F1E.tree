@@ -1,0 +1,18 @@
+\title{含辅助纠缠的爪承诺与逻辑态}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§4.3，式 (4.4)](icm2026-mahadev)，有限维计算}
+
+\p{设 #{E} 为有限维辅助寄存器，#{v_0,v_1\in E} 满足 #{\|v_0\|^2+\|v_1\|^2=1}，允许其中一个为零。给定已编码的位串 #{z_0,z_1\in\{0,1\}^w}，考虑[张量积](0F4E)中的单位向量}
+##{|\Psi\rangle=|0,z_0\rangle\otimes v_0+|1,z_1\rangle\otimes v_1.}
+\p{它对应的逻辑向量为 #{|\phi\rangle=|0\rangle\otimes v_0+|1\rangle\otimes v_1}。对辅助寄存器取[偏迹](2V0L)所得单比特[密度矩阵](4F02)为}
+##{\rho=\begin{pmatrix}
+\|v_0\|^2&\langle v_1,v_0\rangle\\
+\langle v_0,v_1\rangle&\|v_1\|^2
+\end{pmatrix},}
+\p{这里[内积](004N)对第二变量线性。标准基概率为 #{\|v_b\|^2}。若对前 #{w+1} 位作 Hadamard 测量并按 #{m=c\oplus d\cdot(z_0\oplus z_1)} 解码，则}
+##{\Pr(m=a)=\frac 12\|v_0+(-1)^a v_1\|^2
+=\operatorname{Tr}(H|a\rangle\langle a|H\rho).}
+\p{\strong{证明。}编码映射把 #{|b\rangle\otimes v} 送到 #{|b,z_b\rangle\otimes v}，因两个 #{b} 正交而保持所有内积。若知道 #{z_0,z_1}，受控异或将 #{|b,z_b\rangle} 送到 #{|b,0^w\rangle}，从而恢复逻辑向量。偏迹公式由矩阵元逐项得到。对 Hadamard 结果 #{(c,d)}，未归一化的辅助向量为 #{2^{-(w+1)/2}(-1)^{d\cdot z_0}(v_0+(-1)^{c+d\cdot(z_0\oplus z_1)}v_1)}；取范数平方并对 #{d} 求和，得到结论。这也是[纯单比特解码](4F1D)的向量系数版本。}
+\p{逻辑态的存在只使用线性代数。验证者能够由经典通信得到其测量分布，还需要约束证明者在挑战之后采取的操作。}

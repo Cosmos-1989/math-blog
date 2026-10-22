@@ -1,0 +1,2586 @@
+{
+  "date": "2026-10-22",
+  "checked_at": "2026-10-22T03:40:06.800Z",
+  "result": "pass",
+  "scope": "Hutchcroft, Mahadev and Martinelli report branches, locally integrated and validated.",
+  "baseline_commit": "84f4f5c0e659fcd7659672687a64062e858142b8",
+  "manifest": "research/icm2026-mathematical-physics-second-reports.json",
+  "reports": [
+    {
+      "speaker": "Tom Hutchcroft",
+      "outline": "4E00",
+      "doi": "10.1137/25M180679X",
+      "atoms": 41,
+      "remaining_branches": [
+        {
+          "branch": "Self-avoiding walk and Ising background",
+          "scope": "Report §1 uses these for universality motivation; separate model definitions and research proofs are not developed in this percolation packet."
+        },
+        {
+          "branch": "Hierarchical models and general kernels",
+          "scope": "§4 historical hierarchical results and general slowly varying/anisotropic kernels are not expanded; the notes use the exact Euclidean power kernel of the report."
+        },
+        {
+          "branch": "Off-critical and higher-point refinements",
+          "scope": "The report statement for three-point functions and leading exponent relations is covered; the research series general k-point, quantitative off-critical and correction estimates are not fully developed."
+        },
+        {
+          "branch": "Sak crossover and low-dimensional scaling limits",
+          "scope": "Full characterization of CL, short-range universality after crossover, uniqueness/conformal structure of low-dimensional scaling limits, and nearest-neighbor six-dimensional log predictions remain open/conjectural in the pinned report."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4E0E",
+            "4E13"
+          ],
+          "source": "hutchcroft-icm2026",
+          "scope": "Sharp subcritical finite cluster moments and strict subcriticality of the finite-range cutoff at finite beta_c."
+        },
+        {
+          "notes": [
+            "4E10",
+            "4E11"
+          ],
+          "source": "hutchcroft-icm2026",
+          "scope": "Universal tightness/large-cluster control and the space-average-to-pointwise two-point estimates."
+        },
+        {
+          "notes": [
+            "4E15",
+            "4E19",
+            "4E1A",
+            "4E26"
+          ],
+          "source": "hutchcroft-icm2026",
+          "scope": "Infinite-volume derivative exchange is retained as the I.4.1/sharpness research input; asymptotic independence, all-moment recursion, second-order critical errors, Tauberian transfer, mixed spatial moments, tightness and superprocess identification remain unexpanded. Locally supplied arguments cover finite-volume calculus, conditional ODE integrations, and cutoff continuity/local absolute continuity from the cited derivative identity and finite moments."
+        },
+        {
+          "notes": [
+            "4E1E",
+            "4E1F",
+            "4E20",
+            "4E22",
+            "4E23"
+          ],
+          "source": "hutchcroft-II-v1",
+          "scope": "Full CL characterization proofs, cutoff lower bounds, low-dimensional hyperscaling and cluster-volume lower bounds, k-point/Gladkov estimates, off-critical relations. Precise introduction statements on pp.9–14 were read; §§II.2–II.6 proofs were not read in full or reproduced."
+        },
+        {
+          "notes": [
+            "4E25"
+          ],
+          "source": "hutchcroft-I-v1",
+          "scope": "Construction/uniqueness and branching-random-walk convergence to canonical integrated superprocess excursion measures. Canonical-measure introduction pp.11–12 and the report background were read, not the full superprocess proof literature."
+        }
+      ]
+    },
+    {
+      "speaker": "Urmila Mahadev",
+      "outline": "4F00",
+      "doi": "10.1137/25M1811549",
+      "atoms": 44,
+      "remaining_branches": [
+        {
+          "branch": "Robust CHSH rigidity and multi-prover verification",
+          "scope": "4F0E–4F0F prove the finite-dimensional optimal winning probabilities. Robust self-testing, RUV rigidity and sequential multi-prover protocols are report context, not proved or imported as local theorems."
+        },
+        {
+          "branch": "Full LWE instantiation",
+          "scope": "4F15 cites the precise NTCF construction contract. Efficient lattice trapdoor generation, coherent Gaussian sampling, binary-secret reductions, boundary-sensitive noise estimates and adaptive leakage resilience are not reconstructed."
+        },
+        {
+          "branch": "Computational measurement binding",
+          "scope": "4F21 uses the abstract extended-family theorem with one state for all bases. Its computational twirl, auxiliary-space reductions and multi-qubit hybrid security proof remain external."
+        },
+        {
+          "branch": "Old-v3 full-domain fixed-mask discrepancy",
+          "scope": "ICM quantum-LWE classical verification remains an attributed primary research input. The old v3 fixed-mask definition and odd-q full-domain translation implementation conflict: 4F2C proves every fixed mask, for any encoding, has zero in its value set by odd-cycle parity. No encoding-only repair or extra boundary-condition premise is supplied; the corrected concrete instantiation was not reconstructed. This does not disprove the general verification theorem."
+        },
+        {
+          "branch": "Local Hamiltonian reduction and unconditional verification",
+          "scope": "The circuit-to-2-local-XZ reduction and spectral-gap proof are external inputs. 4F25 records the report's open single-prover question without asserting a later resolution."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4F06",
+            "4F0D",
+            "4F15"
+          ],
+          "source": "bcmvv-v4",
+          "scope": "TrapGen Theorem 2.6, coherent finite-precision Gaussian preparation and the full Theorem 4.1/§4.4 adaptive-hardcore reduction are external inputs. §4.3 (23)–(26) and footnote 3 were additionally read during repair; exact ideal amplitudes are not asserted to be finite-gate outputs."
+        },
+        {
+          "notes": [
+            "4F21",
+            "4F24"
+          ],
+          "source": "mahadev-verification-v3",
+          "scope": "Lemma 6.12/Claims 6.13–6.14, §6 binding and Protocol 7.5/Theorem 7.6 abstract soundness optimization remain cited. Negligible soundness is quantified per fixed efficient adversary; local twirl/kickback proofs do not replace these reductions. In 4F24 the advised security convention is explicit: fixed circuit and advice family precede the negligible bound, and all input sequences are covered by allowing classical advice independent of fresh keys."
+        },
+        {
+          "notes": [
+            "4F23",
+            "4F24"
+          ],
+          "source": "mahadev-verification-v3",
+          "scope": "§7.1 circuit-to-2-local XZ Hamiltonian promise reduction, attributed there to Biamonte–Love and Morimae–Fitzsimons. Those primary papers were not retrieved here. Local history-state and sampling calculations prove only their explicitly narrower statements."
+        },
+        {
+          "notes": [
+            "4F29",
+            "4F24"
+          ],
+          "source": "mahadev-verification-v3",
+          "scope": "The exact v3 Definition 4.4 / §8.4 full-domain fixed-mask realization remains unresolved in this packet. Re-checked current arXiv history still lists v3; targeted primary-source searches found no verified newer repair. ICM classical verification under LWE is retained as an attributed result, independently of this incomplete reconstruction. No invented wraparound hypothesis is attached to that theorem."
+        }
+      ]
+    },
+    {
+      "speaker": "Fabio Martinelli",
+      "outline": "4G00",
+      "doi": "10.1137/25M180425X",
+      "atoms": 45,
+      "remaining_branches": [
+        {
+          "branch": "General one-dimensional universality",
+          "scope": "Stable-direction definition and East/FA examples covered. Do not reproduce Theorem 3.4(1)'s printed extra 1/q in the exponent; a complete corrected general statement awaits checking the cited monograph."
+        },
+        {
+          "branch": "Fine critical classification and higher dimensions",
+          "scope": "4G0Z records the exact double-log exponent consequence only. Seven critical classes and their logarithmic corrections, arbitrary d≥3 universality and sharp subcritical thresholds not expanded."
+        },
+        {
+          "branch": "Nonlocal constraint example",
+          "scope": "Theorem 4.2's infinite percolation-cluster constraint and its approximation argument are not developed; the authored construction uses finite-range constraints."
+        },
+        {
+          "branch": "Open stationary and nonequilibrium questions",
+          "scope": "Threshold equality, general closure-component stationary decomposition, East shape, two-dimensional FA-1f logarithmic correction and FA-1f nonequilibrium convergence remain explicitly conjectural."
+        },
+        {
+          "branch": "Sharp FA-2f relaxation",
+          "scope": "Sharp stationary hitting-time result is represented; equality of the leading relaxation-time constant with pi^2/9 is not asserted."
+        },
+        {
+          "branch": "Applications outside spin Glauber dynamics",
+          "scope": "Kob–Andersen lattice gases, upper-triangular matrix walks, surface dynamics and quantum-spin-chain applications in the introduction are contextual, not additional developed branches."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4G0B",
+            "4G0C",
+            "4G0P"
+          ],
+          "source": "martinelli-icm2026; mst-one-facilitated-v1",
+          "scope": "Infinite-volume ergodicity, invariant-measure entropy/finite-window arguments and the exhaustiveness of stationary-state classifications are cited. Local detailed balance and candidate verification are separately proved."
+        },
+        {
+          "notes": [
+            "4G0F",
+            "4G0G",
+            "4G0I"
+          ],
+          "source": "martinelli-icm2026",
+          "scope": "General East combinatorial barrier/counting, sharp low-temperature gap and finite-box cutoff research proofs are not reconstructed."
+        },
+        {
+          "notes": [
+            "4G0M",
+            "4G0R",
+            "4G18"
+          ],
+          "source": "martinelli-icm2026",
+          "scope": "FA-1f sharp dimension-dependent gap, FA-2f droplet rarity and multiscale conditional Poincare/matryoshka proofs remain cited inputs; the log-scale composition lemma is local and conditional."
+        },
+        {
+          "notes": [
+            "4G0U",
+            "4G0W",
+            "4G0X",
+            "4G0Y",
+            "4G0Z"
+          ],
+          "source": "martinelli-icm2026",
+          "scope": "General BP threshold/difficulty theorems and two-dimensional KCM universality, Duarte bottlenecks and hierarchical liquid-droplet motion are not reproved. Explicit stable-direction examples are local."
+        },
+        {
+          "notes": [
+            "4G13",
+            "4G15"
+          ],
+          "source": "martinelli-icm2026",
+          "scope": "Propositions 4.4–4.5, including conditional random-path selection, renormalization and congestion control, are cited with exact usable assumptions; only finite deterministic reductions and abstract path comparison are proved locally."
+        },
+        {
+          "notes": [
+            "4G07"
+          ],
+          "source": "martinelli-icm2026",
+          "scope": "The infinite-volume stationary hitting bound is quoted from (1.4); the complete killed-semigroup argument supplied in the note has finite state space."
+        }
+      ]
+    }
+  ],
+  "atomic_pages": 130,
+  "new_tree_files": 136,
+  "prerequisite_edges": 400,
+  "reused_direct_prerequisites": [
+    "004M",
+    "004N",
+    "004S",
+    "00CU",
+    "00FN",
+    "00GC",
+    "00GF",
+    "00JO",
+    "00JZ",
+    "00L0",
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L4",
+    "00L6",
+    "00L9",
+    "00LB",
+    "00LC",
+    "00LH",
+    "00Q2",
+    "00Q3",
+    "00Q5",
+    "0A00",
+    "0A01",
+    "0A34",
+    "0A35",
+    "0A3C",
+    "0A45",
+    "0A46",
+    "0A6A",
+    "0A6B",
+    "0A7A",
+    "0AC3",
+    "0F0F",
+    "0F4E",
+    "0F4F",
+    "0F63",
+    "0F65",
+    "0I8I",
+    "0K12",
+    "0N0B",
+    "0N0S",
+    "2V0L",
+    "4C02"
+  ],
+  "source_checks": [
+    {
+      "command": "node scripts/test-note-editorial.mjs",
+      "result": "pass",
+      "elapsed_ms": 36,
+      "output": "Editorial masking and formatting tests passed.\n"
+    },
+    {
+      "command": "node scripts/test-note-prerequisites.mjs",
+      "result": "pass",
+      "elapsed_ms": 39,
+      "output": "Prerequisite prose scanner: 23 regression cases passed.\n"
+    },
+    {
+      "command": "node scripts/test-subject-navigation.mjs",
+      "result": "pass",
+      "elapsed_ms": 36,
+      "output": "Subject navigation: 5 topic-link regression cases passed.\n"
+    },
+    {
+      "command": "node scripts/check-note-prerequisites.mjs",
+      "result": "pass",
+      "elapsed_ms": 2349,
+      "output": "{\n  \"date\": \"2026-10-12\",\n  \"scannedPages\": 6958,\n  \"termRules\": 687,\n  \"requiredPages\": 5743,\n  \"candidateCount\": 323,\n  \"targetCandidateCount\": 85,\n  \"reviewedCandidates\": 93,\n  \"reviewedTargetCandidates\": 71,\n  \"method\": \"Exact definition titles and reviewed aliases in prose; formulas, metadata, URLs and existing links excluded. Candidates require mathematical reading; local definitions and longer constructions can satisfy a prerequisite without a direct link.\",\n  \"errors\": []\n}\n"
+    },
+    {
+      "command": "node scripts/check-note-editorial.mjs --strict-format",
+      "result": "pass",
+      "elapsed_ms": 837,
+      "output": "{\n  \"pages\": 6958,\n  \"errors\": 0,\n  \"format\": 0,\n  \"candidates\": 2,\n  \"details\": []\n}\n"
+    },
+    {
+      "command": "node scripts/check-subject-navigation.mjs",
+      "result": "pass",
+      "elapsed_ms": 219,
+      "output": "{\n  \"subjects\": 20,\n  \"coverage\": {\n    \"logic\": {\n      \"sectional\": 8,\n      \"plenary\": 1,\n      \"directlyListed\": 9\n    },\n    \"algebra\": {\n      \"sectional\": 12,\n      \"plenary\": 2,\n      \"directlyListed\": 14\n    },\n    \"number-theory\": {\n      \"sectional\": 13,\n      \"plenary\": 4,\n      \"directlyListed\": 17\n    },\n    \"geometry\": {\n      \"sectional\": 15,\n      \"plenary\": 4,\n      \"directlyListed\": 19\n    }\n  },\n  \"errors\": []\n}\n"
+    },
+    {
+      "command": "node scripts/check-icm-section-coverage.mjs",
+      "result": "pass",
+      "elapsed_ms": 252,
+      "output": "{\n  \"checkedOn\": \"2026-10-13\",\n  \"sections\": [\n    {\n      \"section\": \"logic\",\n      \"speakers\": 10,\n      \"reports\": 8,\n      \"plenaries\": 1,\n      \"directEntries\": 9\n    },\n    {\n      \"section\": \"algebra\",\n      \"speakers\": 15,\n      \"reports\": 12,\n      \"plenaries\": 2,\n      \"directEntries\": 14\n    },\n    {\n      \"section\": \"number-theory\",\n      \"speakers\": 16,\n      \"reports\": 13,\n      \"plenaries\": 4,\n      \"directEntries\": 17\n    },\n    {\n      \"section\": \"geometry\",\n      \"speakers\": 18,\n      \"reports\": 15,\n      \"plenaries\": 4,\n      \"directEntries\": 19\n    }\n  ],\n  \"uniqueReports\": 43,\n  \"reportMemberships\": 48,\n  \"limitation\": \"Verifies the recorded catalogue, source pages and navigation, not complete proof coverage.\"\n}\n"
+    },
+    {
+      "command": "node scripts/check-topic-narratives.mjs",
+      "result": "pass",
+      "elapsed_ms": 896,
+      "output": "{\n  \"surveys\": 144,\n  \"pages\": [\n    {\n      \"id\": \"0077\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0078\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0079\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"007A\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"007B\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"007C\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"007D\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"007E\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0181\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0140\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0160\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"01C0\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"01A0\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"016Y\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"01C2\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0182\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"014Z\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"01E0\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"01A2\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0200\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0B00\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"0B20\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"0B40\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0B80\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"0C00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0C80\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0C0O\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0BF0\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0BG0\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0BH0\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0BJ0\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0BL0\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"0G00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0G40\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0G80\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0GC0\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"0GG0\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0GK0\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0GO0\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"0GS0\",\n      \"paragraphs\": 13,\n      \"linkedParagraphs\": 13\n    },\n    {\n      \"id\": \"0H00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"0H40\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0J00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"0K00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"0L00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0N00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0P00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0Q00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"003A\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"0006\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0075\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"0020\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"00AU\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"013Z\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"000D\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0056\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"0040\",\n      \"paragraphs\": 13,\n      \"linkedParagraphs\": 13\n    },\n    {\n      \"id\": \"0051\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"000E\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"004U\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"0039\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"0038\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 5\n    },\n    {\n      \"id\": \"004T\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 4\n    },\n    {\n      \"id\": \"005C\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"0R00\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"0S00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"0T00\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"0U00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"0V00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0W00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0X00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"0Z00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"1000\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"1100\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"1200\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"1300\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"1400\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"1500\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"1600\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"1700\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"1800\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"1900\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"2200\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"2100\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"2000\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"2300\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2400\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2500\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2600\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2700\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2800\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2900\",\n      \"paragraphs\": 5,\n      \"linkedParagraphs\": 5\n    },\n    {\n      \"id\": \"2A00\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2B00\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 5\n    },\n    {\n      \"id\": \"2C00\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 5\n    },\n    {\n      \"id\": \"2D00\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2E00\",\n      \"paragraphs\": 7,\n      \"linkedParagraphs\": 7\n    },\n    {\n      \"id\": \"2F00\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2G00\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"2H00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"2I00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"2J00\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"2K00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"2L00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"2M00\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"2N00\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"2P00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"2Q00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"2R00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"2S00\",\n      \"paragraphs\": 13,\n      \"linkedParagraphs\": 13\n    },\n    {\n      \"id\": \"2T00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"2U00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"2V00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"2W00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"2X00\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"2Y00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"2Z00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"3000\",\n      \"paragraphs\": 14,\n      \"linkedParagraphs\": 14\n    },\n    {\n      \"id\": \"3100\",\n      \"paragraphs\": 13,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"3200\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"3300\",\n      \"paragraphs\": 16,\n      \"linkedParagraphs\": 15\n    },\n    {\n      \"id\": \"3400\",\n      \"paragraphs\": 17,\n      \"linkedParagraphs\": 16\n    },\n    {\n      \"id\": \"3500\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"3600\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"3700\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"3800\",\n      \"paragraphs\": 17,\n      \"linkedParagraphs\": 16\n    },\n    {\n      \"id\": \"3900\",\n      \"paragraphs\": 26,\n      \"linkedParagraphs\": 22\n    },\n    {\n      \"id\": \"4000\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"4100\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"4200\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"4300\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"4400\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"4500\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 11\n    },\n    {\n      \"id\": \"4600\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"4700\",\n      \"paragraphs\": 13,\n      \"linkedParagraphs\": 13\n    },\n    {\n      \"id\": \"4800\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"4900\",\n      \"paragraphs\": 6,\n      \"linkedParagraphs\": 6\n    },\n    {\n      \"id\": \"4A00\",\n      \"paragraphs\": 8,\n      \"linkedParagraphs\": 8\n    },\n    {\n      \"id\": \"4B00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"4C00\",\n      \"paragraphs\": 11,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"4D00\",\n      \"paragraphs\": 10,\n      \"linkedParagraphs\": 10\n    },\n    {\n      \"id\": \"4E00\",\n      \"paragraphs\": 12,\n      \"linkedParagraphs\": 12\n    },\n    {\n      \"id\": \"4F00\",\n      \"paragraphs\": 9,\n      \"linkedParagraphs\": 9\n    },\n    {\n      \"id\": \"4G00\",\n      \"paragraphs\": 14,\n      \"linkedParagraphs\": 14\n    }\n  ],\n  \"errors\": [],\n  \"limitation\": \"Checks prose structure, report coverage and reachability, not narrative quality or mathematical truth.\"\n}\n"
+    },
+    {
+      "command": "node scripts/check-topic-introductions.mjs",
+      "result": "pass",
+      "elapsed_ms": 248,
+      "output": "{\n  \"home\": 1,\n  \"subjects\": 20,\n  \"topicOverviews\": 144,\n  \"currentSnapshots\": 165,\n  \"result\": \"pass\",\n  \"limitation\": \"Checks scope, source snapshots and introduction regressions, not mathematical exposition quality.\"\n}\n"
+    },
+    {
+      "command": "node scripts/check-geometry-notes.mjs",
+      "result": "pass",
+      "elapsed_ms": 108,
+      "output": "{\n  \"speakers\": 18,\n  \"reports\": 15,\n  \"addedTopics\": 13,\n  \"reusedTopics\": 2,\n  \"newPages\": 491,\n  \"exactSampleCalculations\": 95,\n  \"coverage\": \"all-report-topics-integrated; selected-proofs-and-explicit-external-inputs\",\n  \"errors\": []\n}\n"
+    },
+    {
+      "command": "node scripts/check-bourbaki-notes.mjs",
+      "result": "pass",
+      "elapsed_ms": 317,
+      "output": "{\n  \"session\": \"2026-06-06\",\n  \"reports\": 4,\n  \"newPages\": 144,\n  \"changedPages\": 8,\n  \"proofPages\": 74,\n  \"proofsWithExternalInputs\": 21,\n  \"citedResearchResults\": 30,\n  \"errors\": [],\n  \"limitation\": \"Selected mathematical branches, explicit proofs and cited research inputs. Neither topic presence nor structural checks imply that all source proofs are reproduced locally.\"\n}\n"
+    },
+    {
+      "command": "node scripts/check-analysis-notes.mjs",
+      "result": "pass",
+      "elapsed_ms": 859,
+      "output": "{\n  \"reports\": 13,\n  \"pages\": 572,\n  \"proofPages\": 216,\n  \"proofsWithExternalInputs\": 56,\n  \"citedResults\": 115,\n  \"errors\": [],\n  \"limitation\": \"Atomic explanations, local proofs and explicitly cited research results. Source coverage and link checks do not imply that all research proofs have been reproduced.\"\n}\n"
+    },
+    {
+      "command": "node tests/analysis-math.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 55,
+      "output": "Fourier restriction finite examples passed: Knapp scaling, complex fourth moments, finite-field Kakeya, curved compression, Poisson constants, lattice peaks, positive-definite pairs, and moment counting. Finite checks do not prove the general theorems.\nAnalysis finite examples passed, including Schur/Kraus identities, failure of complete positivity for transposition, harmonic products, quadratic Gowers energies and polynomial Fourier identities. These calculations do not prove the general research theorems.\n"
+    },
+    {
+      "command": "node --test tests/topology-report-math.test.mjs tests/topology-fibring-discs-math.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 148,
+      "output": "TAP version 13\n# Subtest: three distinct report entrances and complete batch registration\nok 1 - three distinct report entrances and complete batch registration\n  ---\n  duration_ms: 3.121417\n  type: 'test'\n  ...\n# Subtest: finite cyclic group invariant-subspace trace has finite-index scaling\nok 2 - finite cyclic group invariant-subspace trace has finite-index scaling\n  ---\n  duration_ms: 0.130209\n  type: 'test'\n  ...\n# Subtest: formal Novikov geometric inverse works degree by degree\nok 3 - formal Novikov geometric inverse works degree by degree\n  ---\n  duration_ms: 1.570333\n  type: 'test'\n  ...\n# Subtest: two-point configuration coordinates and reconstruction\nok 4 - two-point configuration coordinates and reconstruction\n  ---\n  duration_ms: 0.265666\n  type: 'test'\n  ...\n# Subtest: ribbon disk cap count and genus-two enlargement count\nok 5 - ribbon disk cap count and genus-two enlargement count\n  ---\n  duration_ms: 0.184667\n  type: 'test'\n  ...\n# Subtest: critical-value velocity and descending fibre Morse index are distinct from slice index\nok 6 - critical-value velocity and descending fibre Morse index are distinct from slice index\n  ---\n  duration_ms: 0.097041\n  type: 'test'\n  ...\n# Subtest: source statements retain theorem hypotheses and conjectural boundaries\nok 7 - source statements retain theorem hypotheses and conjectural boundaries\n  ---\n  duration_ms: 0.716417\n  type: 'test'\n  ...\n# Subtest: ellipsoid lattice count obeys the area bounds, including rational multiplicities\nok 8 - ellipsoid lattice count obeys the area bounds, including rational multiplicities\n  ---\n  duration_ms: 1.035292\n  type: 'test'\n  ...\n# Subtest: ball capacity indexing starts at zero and preserves triangular multiplicities\nok 9 - ball capacity indexing starts at zero and preserves triangular multiplicities\n  ---\n  duration_ms: 0.302875\n  type: 'test'\n  ...\n# Subtest: max-convolution normalization gives sum of volumes\nok 10 - max-convolution normalization gives sum of volumes\n  ---\n  duration_ms: 0.528375\n  type: 'test'\n  ...\n# Subtest: small spectral gap bound is a telescoping estimate\nok 11 - small spectral gap bound is a telescoping estimate\n  ---\n  duration_ms: 1.730833\n  type: 'test'\n  ...\n# Subtest: mirror Hessian and duality plot center agree with formulas\nok 12 - mirror Hessian and duality plot center agree with formulas\n  ---\n  duration_ms: 0.159417\n  type: 'test'\n  ...\n# Subtest: report coverage, theorem hypotheses and research statuses are retained\nok 13 - report coverage, theorem hypotheses and research statuses are retained\n  ---\n  duration_ms: 3.533584\n  type: 'test'\n  ...\n1..13\n# tests 13\n# suites 0\n# pass 13\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 112.9765\n"
+    },
+    {
+      "command": "node --test tests/topology-coverage.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 324,
+      "output": "TAP version 13\n# Subtest: topology lists ten proceedings chapters and two cross-listed reports exactly once\nok 1 - topology lists ten proceedings chapters and two cross-listed reports exactly once\n  ---\n  duration_ms: 2.159083\n  type: 'test'\n  ...\n# Subtest: piccirillo: source scope, note registration and atomic prerequisites agree\nok 2 - piccirillo: source scope, note registration and atomic prerequisites agree\n  ---\n  duration_ms: 60.606875\n  type: 'test'\n  ...\n# Subtest: schlank: source scope, note registration and atomic prerequisites agree\nok 3 - schlank: source scope, note registration and atomic prerequisites agree\n  ---\n  duration_ms: 82.0635\n  type: 'test'\n  ...\n# Subtest: watanabe: source scope, note registration and atomic prerequisites agree\nok 4 - watanabe: source scope, note registration and atomic prerequisites agree\n  ---\n  duration_ms: 45.062958\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 289.849375\n"
+    },
+    {
+      "command": "node --test tests/plenary-coverage.test.mjs tests/plenary-math.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 584,
+      "output": "TAP version 13\n# Subtest: ordinary plenaries, special lectures and source gaps are distinguished\nok 1 - ordinary plenaries, special lectures and source gaps are distinguished\n  ---\n  duration_ms: 1.199709\n  type: 'test'\n  ...\n# Subtest: six subject pages begin with shared plenary topics without replacing section reports\nok 2 - six subject pages begin with shared plenary topics without replacing section reports\n  ---\n  duration_ms: 0.901291\n  type: 'test'\n  ...\n# Subtest: Jacob Tsimerman: atomic notes, prerequisites and source scope\nok 3 - Jacob Tsimerman: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 50.28425\n  type: 'test'\n  ...\n# Subtest: Dennis Gaitsgory: atomic notes, prerequisites and source scope\nok 4 - Dennis Gaitsgory: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 50.247042\n  type: 'test'\n  ...\n# Subtest: Jacob Lurie: atomic notes, prerequisites and source scope\nok 5 - Jacob Lurie: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 78.114125\n  type: 'test'\n  ...\n# Subtest: Ngaiming Mok: atomic notes, prerequisites and source scope\nok 6 - Ngaiming Mok: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 42.508917\n  type: 'test'\n  ...\n# Subtest: Xavier Tolsa: atomic notes, prerequisites and source scope\nok 7 - Xavier Tolsa: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 33.512417\n  type: 'test'\n  ...\n# Subtest: Ciprian Manolescu: atomic notes, prerequisites and source scope\nok 8 - Ciprian Manolescu: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 47.359625\n  type: 'test'\n  ...\n# Subtest: Tamar Ziegler: atomic notes, prerequisites and source scope\nok 9 - Tamar Ziegler: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 34.876625\n  type: 'test'\n  ...\n# Subtest: Patrick Gérard: atomic notes, prerequisites and source scope\nok 10 - Patrick Gérard: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 32.325834\n  type: 'test'\n  ...\n# Subtest: Horng-Tzer Yau: atomic notes, prerequisites and source scope\nok 11 - Horng-Tzer Yau: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 45.088\n  type: 'test'\n  ...\n# Subtest: Simon Brendle: atomic notes, prerequisites and source scope\nok 12 - Simon Brendle: atomic notes, prerequisites and source scope\n  ---\n  duration_ms: 30.337167\n  type: 'test'\n  ...\n# Subtest: three-term Fourier counting formula agrees with enumeration\nok 13 - three-term Fourier counting formula agrees with enumeration\n  ---\n  duration_ms: 12.692875\n  type: 'test'\n  ...\n# Subtest: Ward identity uses the positive imaginary part for H minus zI\nok 14 - Ward identity uses the positive imaginary part for H minus zI\n  ---\n  duration_ms: 0.441291\n  type: 'test'\n  ...\n# Subtest: quadratic skew shift has vanishing third orbit difference\nok 15 - quadratic skew shift has vanishing third orbit difference\n  ---\n  duration_ms: 0.101834\n  type: 'test'\n  ...\n# Subtest: inverse participation ratio has the stated effective support values\nok 16 - inverse participation ratio has the stated effective support values\n  ---\n  duration_ms: 0.268125\n  type: 'test'\n  ...\n1..16\n# tests 16\n# suites 0\n# pass 16\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 549.207709\n"
+    },
+    {
+      "command": "node --test tests/geometry-oct16.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 234,
+      "output": "TAP version 13\n# Subtest: three report identities and geometry landing are consistent\nok 1 - three report identities and geometry landing are consistent\n  ---\n  duration_ms: 1.688334\n  type: 'test'\n  ...\n# Subtest: each note is registered, reachable, hashed and has explicit atomic prerequisites\nok 2 - each note is registered, reachable, hashed and has explicit atomic prerequisites\n  ---\n  duration_ms: 92.384708\n  type: 'test'\n  ...\n# Subtest: new prerequisite edges contain no circular proof dependencies\nok 3 - new prerequisite edges contain no circular proof dependencies\n  ---\n  duration_ms: 0.305875\n  type: 'test'\n  ...\n# Subtest: research hypotheses and proof boundaries survive editing\nok 4 - research hypotheses and proof boundaries survive editing\n  ---\n  duration_ms: 0.739875\n  type: 'test'\n  ...\n# Subtest: round-flow scale, entropy constants and Clifford density agree numerically\nok 5 - round-flow scale, entropy constants and Clifford density agree numerically\n  ---\n  duration_ms: 0.097667\n  type: 'test'\n  ...\n# Subtest: diagonal Cartan gaps separate the selected Anosov indices\nok 6 - diagonal Cartan gaps separate the selected Anosov indices\n  ---\n  duration_ms: 0.103208\n  type: 'test'\n  ...\n# Subtest: finite-group averaging recovers a common affine fixed point\nok 7 - finite-group averaging recovers a common affine fixed point\n  ---\n  duration_ms: 0.201708\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 199.970875\n"
+    },
+    {
+      "command": "node --test tests/geometry-closing-kakeya.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 266,
+      "output": "TAP version 13\n# Subtest: geometry coverage registers the three reports without duplicating topics\nok 1 - geometry coverage registers the three reports without duplicating topics\n  ---\n  duration_ms: 1.479666\n  type: 'test'\n  ...\n# Subtest: reviewed pages are reachable, hashed and linked to atomic prerequisites\nok 2 - reviewed pages are reachable, hashed and linked to atomic prerequisites\n  ---\n  duration_ms: 109.930417\n  type: 'test'\n  ...\n# Subtest: scoped prerequisite graph has no circular proof dependencies\nok 3 - scoped prerequisite graph has no circular proof dependencies\n  ---\n  duration_ms: 0.372541\n  type: 'test'\n  ...\n# Subtest: theorem assumptions and research boundaries remain explicit\nok 4 - theorem assumptions and research boundaries remain explicit\n  ---\n  duration_ms: 0.6185\n  type: 'test'\n  ...\n# Subtest: dual-number lines lie in the claimed set and have distinct parameters\nok 5 - dual-number lines lie in the claimed set and have distinct parameters\n  ---\n  duration_ms: 7.94825\n  type: 'test'\n  ...\n# Subtest: Heisenberg line identity holds for complex parameters\nok 6 - Heisenberg line identity holds for complex parameters\n  ---\n  duration_ms: 0.339125\n  type: 'test'\n  ...\n# Subtest: critical tube and broad/narrow exponents have the stated scaling\nok 7 - critical tube and broad/narrow exponents have the stated scaling\n  ---\n  duration_ms: 0.094292\n  type: 'test'\n  ...\n# Subtest: Gauss scalar contraction and hyperbolic spectral threshold agree\nok 8 - Gauss scalar contraction and hyperbolic spectral threshold agree\n  ---\n  duration_ms: 0.080584\n  type: 'test'\n  ...\n# Subtest: ellipsoid radial comparison preserves its periodic time\nok 9 - ellipsoid radial comparison preserves its periodic time\n  ---\n  duration_ms: 0.282792\n  type: 'test'\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 231.669542\n"
+    },
+    {
+      "command": "node --test tests/geometry-harmonic-contact.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 231,
+      "output": "TAP version 13\n# Subtest: two reports are linked once and the joint report is counted once\nok 1 - two reports are linked once and the joint report is counted once\n  ---\n  duration_ms: 1.240833\n  type: 'test'\n  ...\n# Subtest: all imported notes are reachable, hashed and have reviewed dependencies\nok 2 - all imported notes are reachable, hashed and have reviewed dependencies\n  ---\n  duration_ms: 87.65875\n  type: 'test'\n  ...\n# Subtest: hypotheses and energy normalizations are retained\nok 3 - hypotheses and energy normalizations are retained\n  ---\n  duration_ms: 0.693709\n  type: 'test'\n  ...\n# Subtest: contact examples satisfy their defining identities\nok 4 - contact examples satisfy their defining identities\n  ---\n  duration_ms: 0.265791\n  type: 'test'\n  ...\n# Subtest: tripod strong convexity holds for many point configurations\nok 5 - tripod strong convexity holds for many point configurations\n  ---\n  duration_ms: 0.300416\n  type: 'test'\n  ...\n# Subtest: normalizations agree with scalar harmonic and warped-metric examples\nok 6 - normalizations agree with scalar harmonic and warped-metric examples\n  ---\n  duration_ms: 0.092417\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 195.398084\n"
+    },
+    {
+      "command": "node --test tests/geometry-stability-flow-kahler.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 536,
+      "output": "TAP version 13\n# Subtest: three geometry reports reuse the official roster and appear once after plenaries\nok 1 - three geometry reports reuse the official roster and appear once after plenaries\n  ---\n  duration_ms: 1.281833\n  type: 'test'\n  ...\n# Subtest: all new pages retain source hashes, explicit prerequisites and access from their topic\nok 2 - all new pages retain source hashes, explicit prerequisites and access from their topic\n  ---\n  duration_ms: 235.506166\n  type: 'test'\n  ...\n# Subtest: new knowledge titles do not duplicate existing definitions\nok 3 - new knowledge titles do not duplicate existing definitions\n  ---\n  duration_ms: 150.7655\n  type: 'test'\n  ...\n# Subtest: research assumptions and the distinction between proofs and cited inputs survive editing\nok 4 - research assumptions and the distinction between proofs and cited inputs survive editing\n  ---\n  duration_ms: 0.610875\n  type: 'test'\n  ...\n# Subtest: the cylindrical Ornstein-Uhlenbeck operator has four positive and three zero modes\nok 5 - the cylindrical Ornstein-Uhlenbeck operator has four positive and three zero modes\n  ---\n  duration_ms: 0.228042\n  type: 'test'\n  ...\n# Subtest: finite torus covers give equivariant sections with inverse-length derivative bounds\nok 6 - finite torus covers give equivariant sections with inverse-length derivative bounds\n  ---\n  duration_ms: 0.253625\n  type: 'test'\n  ...\n# Subtest: vertical-divisor graph coefficients have the claimed leading sign\nok 7 - vertical-divisor graph coefficients have the claimed leading sign\n  ---\n  duration_ms: 0.466125\n  type: 'test'\n  ...\n# Subtest: component masses retain multiplicities and scale with the fibre dimension\nok 8 - component masses retain multiplicities and scale with the fibre dimension\n  ---\n  duration_ms: 0.170125\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 501.019625\n"
+    },
+    {
+      "command": "node --test tests/geometry-final-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 609,
+      "output": "TAP version 13\n# Subtest: official speaker extraction includes cross-listed and referenced biographies\nok 1 - official speaker extraction includes cross-listed and referenced biographies\n  ---\n  duration_ms: 1.671959\n  type: 'test'\n  ...\n# Subtest: the complete Geometry roster accounts for 20 speakers in 18 reports\nok 2 - the complete Geometry roster accounts for 20 speakers in 18 reports\n  ---\n  duration_ms: 1.214625\n  type: 'test'\n  ...\n# Subtest: three new branches have explicit, source-bound prerequisites and narrative entry points\nok 3 - three new branches have explicit, source-bound prerequisites and narrative entry points\n  ---\n  duration_ms: 273.002208\n  type: 'test'\n  ...\n# Subtest: new knowledge-page titles are unique across the forest\nok 4 - new knowledge-page titles are unique across the forest\n  ---\n  duration_ms: 182.778167\n  type: 'test'\n  ...\n# Subtest: the helicoid parameterization has zero mean curvature and the stated Gaussian curvature\nok 5 - the helicoid parameterization has zero mean curvature and the stated Gaussian curvature\n  ---\n  duration_ms: 0.45825\n  type: 'test'\n  ...\n# Subtest: Weierstrass data obey both the null relation and the induced metric normalization\nok 6 - Weierstrass data obey both the null relation and the induced metric normalization\n  ---\n  duration_ms: 0.261416\n  type: 'test'\n  ...\n# Subtest: a rank-m semipositive form has the stated fibre-collapse volume order\nok 7 - a rank-m semipositive form has the stated fibre-collapse volume order\n  ---\n  duration_ms: 0.346166\n  type: 'test'\n  ...\n# Subtest: hyperbolic parallel surfaces preserve the stated normal and volume conventions\nok 8 - hyperbolic parallel surfaces preserve the stated normal and volume conventions\n  ---\n  duration_ms: 0.221208\n  type: 'test'\n  ...\n# Subtest: the real tensor contraction equals four times the Beltrami pairing\nok 9 - the real tensor contraction equals four times the Beltrami pairing\n  ---\n  duration_ms: 0.353666\n  type: 'test'\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 571.530583\n"
+    },
+    {
+      "command": "node --test tests/lie-first-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 554,
+      "output": "TAP version 13\n# Subtest: finite models check the Heisenberg phase and Laurent convolution conventions\nok 1 - finite models check the Heisenberg phase and Laurent convolution conventions\n  ---\n  duration_ms: 9.747459\n  type: 'test'\n  ...\n# Subtest: the Hecke comparison retains its normalizer-compatible input\nok 2 - the Hecke comparison retains its normalizer-compatible input\n  ---\n  duration_ms: 1.209375\n  type: 'test'\n  ...\n# Subtest: section extraction handles abbreviated designations, cross-listings and UTF-8 references\nok 3 - section extraction handles abbreviated designations, cross-listings and UTF-8 references\n  ---\n  duration_ms: 1.226167\n  type: 'test'\n  ...\n# Subtest: the official Lie roster contains 16 speakers in 13 reports, including joint reports\nok 4 - the official Lie roster contains 16 speakers in 13 reports, including joint reports\n  ---\n  duration_ms: 1.039625\n  type: 'test'\n  ...\n# Subtest: landing lists only integrated topics, preserves shared topics, and separates other branches\nok 5 - landing lists only integrated topics, preserves shared topics, and separates other branches\n  ---\n  duration_ms: 1.580792\n  type: 'test'\n  ...\n# Subtest: new notes are reachable, uniquely named and have explicit source-bound dependencies\nok 6 - new notes are reachable, uniquely named and have explicit source-bound dependencies\n  ---\n  duration_ms: 378.548666\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 516.659292\n"
+    },
+    {
+      "command": "node --test tests/lie-second-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 535,
+      "output": "TAP version 13\n# Subtest: the second Lie batch has three distinct reports and preserves cross-subject navigation\nok 1 - the second Lie batch has three distinct reports and preserves cross-subject navigation\n  ---\n  duration_ms: 2.589167\n  type: 'test'\n  ...\n# Subtest: each new knowledge page has a unique title, reachable source and explicit prerequisites\nok 2 - each new knowledge page has a unique title, reachable source and explicit prerequisites\n  ---\n  duration_ms: 386.116458\n  type: 'test'\n  ...\n# Subtest: rank-one centralizer multiplication preserves the norm, including the degenerate fibre\nok 3 - rank-one centralizer multiplication preserves the norm, including the degenerate fibre\n  ---\n  duration_ms: 5.150625\n  type: 'test'\n  ...\n# Subtest: the four-column Pluecker relation has the sign used by positive Grassmannians\nok 4 - the four-column Pluecker relation has the sign used by positive Grassmannians\n  ---\n  duration_ms: 0.24875\n  type: 'test'\n  ...\n# Subtest: the ordered quantum loop tensor product has a trivial vector exactly at resonance\nok 5 - the ordered quantum loop tensor product has a trivial vector exactly at resonance\n  ---\n  duration_ms: 0.258041\n  type: 'test'\n  ...\n# Subtest: reviewed convention changes and domain restrictions remain explicit\nok 6 - reviewed convention changes and domain restrictions remain explicit\n  ---\n  duration_ms: 0.269208\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 500.089917\n"
+    },
+    {
+      "command": "node --test tests/lie-third-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 507,
+      "output": "TAP version 13\n# Subtest: the last two primary Lie reports complete the recorded directory without duplicate topics\nok 1 - the last two primary Lie reports complete the recorded directory without duplicate topics\n  ---\n  duration_ms: 2.534334\n  type: 'test'\n  ...\n# Subtest: new Lie pages retain source attribution, prerequisite links and narrative reachability\nok 2 - new Lie pages retain source attribution, prerequisite links and narrative reachability\n  ---\n  duration_ms: 331.971333\n  type: 'test'\n  ...\n# Subtest: Lefschetz operators on a truncated polynomial space satisfy the sl2 signs\nok 3 - Lefschetz operators on a truncated polynomial space satisfy the sl2 signs\n  ---\n  duration_ms: 1.44675\n  type: 'test'\n  ...\n# Subtest: plane Hamiltonian monomials use a consistent Poisson and Lie bracket convention\nok 4 - plane Hamiltonian monomials use a consistent Poisson and Lie bracket convention\n  ---\n  duration_ms: 15.986708\n  type: 'test'\n  ...\n# Subtest: the braid coordinate change preserves the entire three-by-three matrix\nok 5 - the braid coordinate change preserves the entire three-by-three matrix\n  ---\n  duration_ms: 2.834333\n  type: 'test'\n  ...\n# Subtest: the modal-product tail estimate bounds finite tails across decay parameters\nok 6 - the modal-product tail estimate bounds finite tails across decay parameters\n  ---\n  duration_ms: 8.729208\n  type: 'test'\n  ...\n# Subtest: the Schrodinger half phase agrees with the Heisenberg central cocycle\nok 7 - the Schrodinger half phase agrees with the Heisenberg central cocycle\n  ---\n  duration_ms: 0.629125\n  type: 'test'\n  ...\n# Subtest: reviewed hypotheses and conjectural boundaries remain explicit\nok 8 - reviewed hypotheses and conjectural boundaries remain explicit\n  ---\n  duration_ms: 0.514542\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 472.552834\n"
+    },
+    {
+      "command": "node --test tests/dynamics-first-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 529,
+      "output": "TAP version 13\n# Subtest: the first Dynamics batch follows the published chapter order and counts joint talks once\nok 1 - the first Dynamics batch follows the published chapter order and counts joint talks once\n  ---\n  duration_ms: 1.184125\n  type: 'test'\n  ...\n# Subtest: every recorded Section 9 speaker belongs to exactly one primary or cross-listed report\nok 2 - every recorded Section 9 speaker belongs to exactly one primary or cross-listed report\n  ---\n  duration_ms: 0.513584\n  type: 'test'\n  ...\n# Subtest: new Dynamics notes have source records, acyclic prerequisites and reachable atomic pages\nok 3 - new Dynamics notes have source records, acyclic prerequisites and reachable atomic pages\n  ---\n  duration_ms: 376.886958\n  type: 'test'\n  ...\n# Subtest: independent fair vertex labels give independent edge differences on finite forests\nok 4 - independent fair vertex labels give independent edge differences on finite forests\n  ---\n  duration_ms: 0.484958\n  type: 'test'\n  ...\n# Subtest: specular reflection preserves speed and tangential velocity and reverses the normal component\nok 5 - specular reflection preserves speed and tangential velocity and reverses the normal component\n  ---\n  duration_ms: 0.772541\n  type: 'test'\n  ...\n# Subtest: the generalized Henon map has the stated inverse and signed area factor\nok 6 - the generalized Henon map has the stated inverse and signed area factor\n  ---\n  duration_ms: 0.253042\n  type: 'test'\n  ...\n# Subtest: the elliptic billiard quadratic integral survives free motion and reflection\nok 7 - the elliptic billiard quadratic integral survives free motion and reflection\n  ---\n  duration_ms: 0.712791\n  type: 'test'\n  ...\n# Subtest: the circular inner-length action has the negative chord-length convention\nok 8 - the circular inner-length action has the negative chord-length convention\n  ---\n  duration_ms: 1.266709\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 493.286625\n"
+    },
+    {
+      "command": "node --test tests/dynamics-second-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 551,
+      "output": "TAP version 13\n# Subtest: the second Dynamics batch continues the official chapter order without losing earlier topics\nok 1 - the second Dynamics batch continues the official chapter order without losing earlier topics\n  ---\n  duration_ms: 1.137125\n  type: 'test'\n  ...\n# Subtest: second-batch pages retain sources, atomic prerequisites, unique titles and narrative reachability\nok 2 - second-batch pages retain sources, atomic prerequisites, unique titles and narrative reachability\n  ---\n  duration_ms: 388.287541\n  type: 'test'\n  ...\n# Subtest: a finite Markov model has the Perron entropy and normalized first-return series\nok 3 - a finite Markov model has the Perron entropy and normalized first-return series\n  ---\n  duration_ms: 0.203375\n  type: 'test'\n  ...\n# Subtest: irreducibility alone does not remove the periodic obstruction to mixing\nok 4 - irreducibility alone does not remove the periodic obstruction to mixing\n  ---\n  duration_ms: 0.099833\n  type: 'test'\n  ...\n# Subtest: commuting integral automorphisms preserve each other's iterated orbits\nok 5 - commuting integral automorphisms preserve each other's iterated orbits\n  ---\n  duration_ms: 0.230916\n  type: 'test'\n  ...\n# Subtest: root commutators recover the missing direction on a Lyapunov wall\nok 6 - root commutators recover the missing direction on a Lyapunov wall\n  ---\n  duration_ms: 0.415791\n  type: 'test'\n  ...\n# Subtest: an unweighted full-shift operator must be normalized before it preserves probability\nok 7 - an unweighted full-shift operator must be normalized before it preserves probability\n  ---\n  duration_ms: 0.086542\n  type: 'test'\n  ...\n# Subtest: projectivizing a linear system gives the correct Riccati coefficients\nok 8 - projectivizing a linear system gives the correct Riccati coefficients\n  ---\n  duration_ms: 0.166875\n  type: 'test'\n  ...\n# Subtest: a linear fractional coordinate change preserves the quadratic Riccati form\nok 9 - a linear fractional coordinate change preserves the quadratic Riccati form\n  ---\n  duration_ms: 0.280833\n  type: 'test'\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 516.187083\n"
+    },
+    {
+      "command": "node --test tests/dynamics-final-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 658,
+      "output": "TAP version 13\n# Subtest: all ten primary reports and three cross-listed topics are present exactly once\nok 1 - all ten primary reports and three cross-listed topics are present exactly once\n  ---\n  duration_ms: 1.424083\n  type: 'test'\n  ...\n# Subtest: each final-batch page is individually recorded, reachable and source-bound\nok 2 - each final-batch page is individually recorded, reachable and source-bound\n  ---\n  duration_ms: 508.73775\n  type: 'test'\n  ...\n# Subtest: the horseshoe statement retains its fixed period bound and little sets have distinct base notation\nok 3 - the horseshoe statement retains its fixed period bound and little sets have distinct base notation\n  ---\n  duration_ms: 0.279083\n  type: 'test'\n  ...\n# Subtest: quadratic fixed-point multipliers give the cardioid parameter with the correct factors\nok 4 - quadratic fixed-point multipliers give the cardioid parameter with the correct factors\n  ---\n  duration_ms: 0.192125\n  type: 'test'\n  ...\n# Subtest: the Joukowski map intertwines squaring and the quadratic map at minus two\nok 5 - the Joukowski map intertwines squaring and the quadratic map at minus two\n  ---\n  duration_ms: 0.157625\n  type: 'test'\n  ...\n# Subtest: the two affine Cantor branches preserve the stationary mean and variance but not each measure separately\nok 6 - the two affine Cantor branches preserve the stationary mean and variance but not each measure separately\n  ---\n  duration_ms: 0.084708\n  type: 'test'\n  ...\n# Subtest: coboundary Birkhoff sums telescope and hence have degenerate square-root fluctuations\nok 7 - coboundary Birkhoff sums telescope and hence have degenerate square-root fluctuations\n  ---\n  duration_ms: 0.23525\n  type: 'test'\n  ...\n# Subtest: skew-product iteration uses the full cocycle sum\nok 8 - skew-product iteration uses the full cocycle sum\n  ---\n  duration_ms: 0.128709\n  type: 'test'\n  ...\n# Subtest: circle Schwarz reflection is antiholomorphic, fixes the circle and is an involution\nok 9 - circle Schwarz reflection is antiholomorphic, fixes the circle and is an involution\n  ---\n  duration_ms: 0.304042\n  type: 'test'\n  ...\n# Subtest: the deleted cubic correspondence retains diagonal critical limits\nok 10 - the deleted cubic correspondence retains diagonal critical limits\n  ---\n  duration_ms: 0.35025\n  type: 'test'\n  ...\n1..10\n# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 624.003583\n"
+    },
+    {
+      "command": "node --test tests/pde-first-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 616,
+      "output": "TAP version 13\n# Subtest: every official PDE speaker belongs to exactly one primary or cross-listed report\nok 1 - every official PDE speaker belongs to exactly one primary or cross-listed report\n  ---\n  duration_ms: 1.363916\n  type: 'test'\n  ...\n# Subtest: the first four reports follow proceedings order and preserve the rest of the catalogue\nok 2 - the first four reports follow proceedings order and preserve the rest of the catalogue\n  ---\n  duration_ms: 0.484583\n  type: 'test'\n  ...\n# Subtest: every new page has a source, proof scope, dependency review and reader-visible route\nok 3 - every new page has a source, proof scope, dependency review and reader-visible route\n  ---\n  duration_ms: 455.165041\n  type: 'test'\n  ...\n# Subtest: flat water-wave modes satisfy the bottom condition and the Dirichlet-Neumann symbol\nok 4 - flat water-wave modes satisfy the bottom condition and the Dirichlet-Neumann symbol\n  ---\n  duration_ms: 0.29125\n  type: 'test'\n  ...\n# Subtest: the exponential singular solution has the Hardy stability threshold at dimension ten\nok 5 - the exponential singular solution has the Hardy stability threshold at dimension ten\n  ---\n  duration_ms: 0.16575\n  type: 'test'\n  ...\n# Subtest: the explicit half-plane layer uses the matching boundary-reaction normalization\nok 6 - the explicit half-plane layer uses the matching boundary-reaction normalization\n  ---\n  duration_ms: 0.062333\n  type: 'test'\n  ...\n# Subtest: self-similar velocity and force have integrable energy-class scaling in dimension three\nok 7 - self-similar velocity and force have integrable energy-class scaling in dimension three\n  ---\n  duration_ms: 0.100667\n  type: 'test'\n  ...\n# Subtest: taking a real part gives an upper bound, not a general equality, for unstable eigenmodes\nok 8 - taking a real part gives an upper bound, not a general equality, for unstable eigenmodes\n  ---\n  duration_ms: 0.048542\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 582.320959\n"
+    },
+    {
+      "command": "node --test tests/pde-second-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 562,
+      "output": "TAP version 13\n# Subtest: the second PDE batch follows the published order and preserves first-batch navigation\nok 1 - the second PDE batch follows the published order and preserves first-batch navigation\n  ---\n  duration_ms: 1.069375\n  type: 'test'\n  ...\n# Subtest: every atom has distinct content, an explicit source and linked prerequisites\nok 2 - every atom has distinct content, an explicit source and linked prerequisites\n  ---\n  duration_ms: 410.726042\n  type: 'test'\n  ...\n# Subtest: independent mathematical reviews refer to the exact current sources\nok 3 - independent mathematical reviews refer to the exact current sources\n  ---\n  duration_ms: 5.359584\n  type: 'test'\n  ...\n# Subtest: the hard-sphere collision reflection preserves momentum, energy and reversibility\nok 4 - the hard-sphere collision reflection preserves momentum, energy and reversibility\n  ---\n  duration_ms: 0.235875\n  type: 'test'\n  ...\n# Subtest: Couette characteristics solve the transport equation with the correct time sign\nok 5 - Couette characteristics solve the transport equation with the correct time sign\n  ---\n  duration_ms: 0.254208\n  type: 'test'\n  ...\n# Subtest: Euler self-similar vorticity gives the same exponent to transport and stretching\nok 6 - Euler self-similar vorticity gives the same exponent to transport and stretching\n  ---\n  duration_ms: 0.058167\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 527.022\n"
+    },
+    {
+      "command": "node --test tests/pde-final-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 623,
+      "output": "TAP version 13\n# Subtest: all fourteen official PDE reports have topics without double-counting Zaag\nok 1 - all fourteen official PDE reports have topics without double-counting Zaag\n  ---\n  duration_ms: 1.836792\n  type: 'test'\n  ...\n# Subtest: DOI lookup preserves membership and rejects absent or duplicated reports\nok 2 - DOI lookup preserves membership and rejects absent or duplicated reports\n  ---\n  duration_ms: 0.248125\n  type: 'test'\n  ...\n# Subtest: new atoms retain distinct titles, explicit sources and acyclic prerequisites\nok 3 - new atoms retain distinct titles, explicit sources and acyclic prerequisites\n  ---\n  duration_ms: 462.511709\n  type: 'test'\n  ...\n# Subtest: independent reviews bind every new knowledge page to its exact content\nok 4 - independent reviews bind every new knowledge page to its exact content\n  ---\n  duration_ms: 8.34375\n  type: 'test'\n  ...\n# Subtest: the Miura calculation preserves the stated defocusing mKdV and KdV signs\nok 5 - the Miura calculation preserves the stated defocusing mKdV and KdV signs\n  ---\n  duration_ms: 0.186209\n  type: 'test'\n  ...\n# Subtest: the wave blow-up exponent and weighted similarity operator have matching coefficients\nok 6 - the wave blow-up exponent and weighted similarity operator have matching coefficients\n  ---\n  duration_ms: 0.239916\n  type: 'test'\n  ...\n# Subtest: the anisotropic Navier-Stokes norm has half-order critical scaling\nok 7 - the anisotropic Navier-Stokes norm has half-order critical scaling\n  ---\n  duration_ms: 0.075417\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 587.965917\n"
+    },
+    {
+      "command": "node --test tests/mathematical-physics-first-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 570,
+      "output": "TAP version 13\n# Subtest: the first three missing proceedings chapters have distinct report topics\nok 1 - the first three missing proceedings chapters have distinct report topics\n  ---\n  duration_ms: 1.196125\n  type: 'test'\n  ...\n# Subtest: new atoms have explicit sources, real prerequisite links and stable snapshots\nok 2 - new atoms have explicit sources, real prerequisite links and stable snapshots\n  ---\n  duration_ms: 407.204583\n  type: 'test'\n  ...\n# Subtest: independent reviews bind the new pages to their exact content\nok 3 - independent reviews bind the new pages to their exact content\n  ---\n  duration_ms: 10.159458\n  type: 'test'\n  ...\n# Subtest: the open Toda Lax normalization gives the Hamilton equations\nok 4 - the open Toda Lax normalization gives the Hamilton equations\n  ---\n  duration_ms: 0.482291\n  type: 'test'\n  ...\n# Subtest: constant-length hard-rod velocities solve the finite-species balance equation\nok 5 - constant-length hard-rod velocities solve the finite-species balance equation\n  ---\n  duration_ms: 0.126416\n  type: 'test'\n  ...\n# Subtest: hard-rod label order resolves permanent ties and takes the right limit at crossings\nok 6 - hard-rod label order resolves permanent ties and takes the right limit at crossings\n  ---\n  duration_ms: 0.214417\n  type: 'test'\n  ...\n# Subtest: quartic matrix pairings distinguish planar and genus-one index counts\nok 7 - quartic matrix pairings distinguish planar and genus-one index counts\n  ---\n  duration_ms: 0.0895\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 532.685333\n"
+    },
+    {
+      "command": "node --test tests/mathematical-physics-second-reports.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 541,
+      "output": "TAP version 13\n# Subtest: the second mathematical-physics batch follows proceedings order without duplicating older topics\nok 1 - the second mathematical-physics batch follows proceedings order without duplicating older topics\n  ---\n  duration_ms: 1.030958\n  type: 'test'\n  ...\n# Subtest: atomic notes have explicit sources, unique titles, reachable pages and acyclic prerequisites\nok 2 - atomic notes have explicit sources, unique titles, reachable pages and acyclic prerequisites\n  ---\n  duration_ms: 375.684125\n  type: 'test'\n  ...\n# Subtest: independent reviews bind all new notes and their packets to current content\nok 3 - independent reviews bind all new notes and their packets to current content\n  ---\n  duration_ms: 9.595125\n  type: 'test'\n  ...\n# Subtest: binary derivatives along odd translation cycles cannot be identically one\nok 4 - binary derivatives along odd translation cycles cannot be identically one\n  ---\n  duration_ms: 3.838375\n  type: 'test'\n  ...\n# Subtest: finite independent percolation has the susceptibility identity and a simple-path union bound\nok 5 - finite independent percolation has the susceptibility identity and a simple-path union bound\n  ---\n  duration_ms: 0.495334\n  type: 'test'\n  ...\n# Subtest: Hadamard measurement of a coherent two-preimage state enforces its parity equation\nok 6 - Hadamard measurement of a coherent two-preimage state enforces its parity equation\n  ---\n  duration_ms: 3.248875\n  type: 'test'\n  ...\n# Subtest: a two-site constrained heat bath obeys detailed balance and the conditional-variance Dirichlet formula\nok 7 - a two-site constrained heat bath obeys detailed balance and the conditional-variance Dirichlet formula\n  ---\n  duration_ms: 0.367167\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 503.492209\n"
+    },
+    {
+      "command": "node --test tests/topology-exotic-stems-graphs-math.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 91,
+      "output": "TAP version 13\n# Subtest: cup-product Leibniz signs hold over integers and a ring with torsion\nok 1 - cup-product Leibniz signs hold over integers and a ring with torsion\n  ---\n  duration_ms: 1.358625\n  type: 'test'\n  ...\n# Subtest: diagonal four-manifold forms recover Euler characteristic and signature\nok 2 - diagonal four-manifold forms recover Euler characteristic and signature\n  ---\n  duration_ms: 0.194291\n  type: 'test'\n  ...\n# Subtest: unimodular basis changes preserve the intersection determinant\nok 3 - unimodular basis changes preserve the intersection determinant\n  ---\n  duration_ms: 0.31\n  type: 'test'\n  ...\n# Subtest: p-rank and logarithmic order are distinct finite abelian group invariants\nok 4 - p-rank and logarithmic order are distinct finite abelian group invariants\n  ---\n  duration_ms: 0.205208\n  type: 'test'\n  ...\n# Subtest: stable suspension indexing keeps the stem fixed\nok 5 - stable suspension indexing keeps the stem fixed\n  ---\n  duration_ms: 0.1515\n  type: 'test'\n  ...\n# Subtest: graph excess, order and configuration-integral degree use the same convention\nok 6 - graph excess, order and configuration-integral degree use the same convention\n  ---\n  duration_ms: 1.187334\n  type: 'test'\n  ...\n# Subtest: trivalent graph degrees lie in the exceptional even-dimensional bands\nok 7 - trivalent graph degrees lie in the exceptional even-dimensional bands\n  ---\n  duration_ms: 0.117834\n  type: 'test'\n  ...\n# Subtest: all tetrahedron automorphisms preserve the even graph orientation\nok 8 - all tetrahedron automorphisms preserve the even graph orientation\n  ---\n  duration_ms: 0.348792\n  type: 'test'\n  ...\n# Subtest: five-leaf tree compatibility gives the ten-vertex fifteen-edge Lie-hedron\nok 9 - five-leaf tree compatibility gives the ten-vertex fifteen-edge Lie-hedron\n  ---\n  duration_ms: 0.331375\n  type: 'test'\n  ...\n# Subtest: odd-dimensional framing comparison has both adjacent rational homotopy groups zero\nok 10 - odd-dimensional framing comparison has both adjacent rational homotopy groups zero\n  ---\n  duration_ms: 0.750958\n  type: 'test'\n  ...\n1..10\n# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 55.8215\n"
+    },
+    {
+      "command": "node tests/bourbaki-math.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 35,
+      "output": "{\"latticeExamples\":1680,\"spectralEstimates\":20,\"shearExamples\":36,\"scatteringExamples\":21,\"annulusExamples\":25,\"bogoliubovExamples\":15,\"scope\":\"Checks explicit coordinate calculations and normalization factors, not the cited research theorems.\"}\n"
+    },
+    {
+      "command": "node tests/geometry-expansion-math.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 39,
+      "output": "{\"spectralExamples\":56,\"latticeExamples\":20,\"cycleExamples\":24,\"arithmetic\":\"exact integer / finite field\",\"limitation\":\"Checks explicit examples and normalizations, not the cited geometric theorems.\"}\n"
+    },
+    {
+      "command": "node scripts/check-number-theory-notes.mjs",
+      "result": "pass",
+      "elapsed_ms": 70,
+      "output": "{\n  \"notes\": 447,\n  \"matrixCases\": 84,\n  \"finiteGroupCases\": 4,\n  \"henselLifts\": 3,\n  \"exponentialSumCases\": 2869,\n  \"limitation\": \"Finite examples check arithmetic conventions; they do not prove the cited research theorems.\"\n}\n"
+    },
+    {
+      "command": "node tests/number-theory-computation.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 405,
+      "output": "{\n  \"result\": \"pass\",\n  \"ownedPages\": 48,\n  \"formulas\": 1114,\n  \"katex\": \"not run (set KATEX_MODULE)\",\n  \"internalBodyLinks\": 200,\n  \"prerequisiteClosure\": 272,\n  \"randomizedMatrixCases\": 300,\n  \"wilsonAndLeftFactorialPrimeBound\": 256,\n  \"ellipticCurvePrimePairs\": 924,\n  \"ellipticMatrixAndScalarARTLeafPairs\": 924,\n  \"exactCoefficientRecurrenceIdentities\": 20590,\n  \"scope\": \"Read-only source, formula and finite numerical checks; no Forester build or deep-theorem proof verification.\"\n}\n"
+    },
+    {
+      "command": "node tests/number-theory-computation-expansion.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 499,
+      "output": "{\n  \"result\": \"pass\",\n  \"forestRuns\": 461,\n  \"boundaryStates\": 2604,\n  \"extractorCases\": 140,\n  \"conjugacyCases\": 3307,\n  \"curveCases\": 295,\n  \"firstRowCases\": 3051,\n  \"fullMatrixBatchCases\": 203,\n  \"storedProductTreeBitsByBlocks\": [\n    8217,\n    3923,\n    1629,\n    630,\n    226,\n    72,\n    17\n  ],\n  \"storageScope\": \"Logical stored product-node bits only, not measured JS heap or arithmetic workspace.\",\n  \"workedExample\": {\n    \"f\": [\n      \"1\",\n      \"1\",\n      \"0\",\n      \"0\",\n      \"0\",\n      \"1\"\n    ],\n    \"g\": 2,\n    \"p\": \"11\",\n    \"rows\": [\n      [\n        \"10\",\n        \"5\"\n      ],\n      [\n        \"4\",\n        \"6\"\n      ]\n    ],\n    \"transformedRows\": [\n      [\n        \"10\",\n        \"5\"\n      ],\n      [\n        \"4\",\n        \"10\"\n      ]\n    ],\n    \"W\": [\n      [\n        \"10\",\n        \"5\"\n      ],\n      [\n        \"5\",\n        \"5\"\n      ]\n    ],\n    \"coefficients\": [\n      \"1\",\n      \"5\",\n      \"10\",\n      \"10\",\n      \"5\",\n      \"6\",\n      \"9\",\n      \"8\",\n      \"9\",\n      \"5\",\n      \"10\",\n      \"8\",\n      \"8\",\n      \"10\",\n      \"0\",\n      \"10\",\n      \"9\",\n      \"10\",\n      \"0\",\n      \"0\",\n      \"5\",\n      \"5\",\n      \"0\",\n      \"0\",\n      \"0\",\n      \"1\"\n    ]\n  }\n}\n"
+    },
+    {
+      "command": "node tests/number-theory-microlocal.test.mjs",
+      "result": "pass",
+      "elapsed_ms": 52,
+      "output": "{\"result\":\"pass\",\"bchCases\":90,\"compositionCases\":60,\"stableCases\":18,\"scope\":\"Numerical regression checks for signs, scaling and sampled stable matrices; not a proof certification.\"}\n"
+    },
+    {
+      "command": "node scripts/check-site-notes.mjs --source-only",
+      "result": "pass",
+      "elapsed_ms": 339,
+      "output": "{\n  \"scope\": \"all trees, not only research notes\",\n  \"pages\": 6958,\n  \"originalPages\": 2312,\n  \"reviewedPages\": 6958,\n  \"reachablePages\": 6958,\n  \"formulas\": 0,\n  \"diagrams\": 0,\n  \"katexChecked\": false,\n  \"semanticLimit\": \"The register records editorial review; structural checks do not prove mathematical correctness or semantic atomicity.\",\n  \"errors\": [],\n  \"warnings\": []\n}\n"
+    },
+    {
+      "command": "node scripts/check-algebra-notes.mjs --source-only",
+      "result": "pass",
+      "elapsed_ms": 61,
+      "output": "{\n  \"reports\": 12,\n  \"invitedSpeakers\": 15,\n  \"trackedPages\": 714,\n  \"reusedReports\": 1,\n  \"errors\": [],\n  \"limitation\": \"Checks source records and roster coverage, not mathematical truth or completeness of proofs; run check-site-notes.mjs for links, prerequisites and KaTeX.\"\n}\n"
+    },
+    {
+      "command": "node scripts/check-riehl-notes.mjs",
+      "result": "pass",
+      "elapsed_ms": 250,
+      "output": "{\n  \"scope\": \"User-authored synthetic lectures; source preservation and mapping, not a mathematical proof verifier\",\n  \"archivedFiles\": 28,\n  \"newPages\": 657,\n  \"chapters\": [\n    {\n      \"file\": \"01_sets.tex\",\n      \"formalUnits\": 34,\n      \"mapped\": 34\n    },\n    {\n      \"file\": \"02_categories.tex\",\n      \"formalUnits\": 30,\n      \"mapped\": 30\n    },\n    {\n      \"file\": \"03_universal.tex\",\n      \"formalUnits\": 32,\n      \"mapped\": 32\n    },\n    {\n      \"file\": \"04_yoneda.tex\",\n      \"formalUnits\": 29,\n      \"mapped\": 29\n    },\n    {\n      \"file\": \"05_topology.tex\",\n      \"formalUnits\": 32,\n      \"mapped\": 32\n    },\n    {\n      \"file\": \"06_simplicial.tex\",\n      \"formalUnits\": 32,\n      \"mapped\": 32\n    },\n    {\n      \"file\": \"07_kan.tex\",\n      \"formalUnits\": 32,\n      \"mapped\": 32\n    },\n    {\n      \"file\": \"08_families.tex\",\n      \"formalUnits\": 29,\n      \"mapped\": 29\n    },\n    {\n      \"file\": \"09_types.tex\",\n      \"formalUnits\": 36,\n      \"mapped\": 36\n    },\n    {\n      \"file\": \"10_paths.tex\",\n      \"formalUnits\": 45,\n      \"mapped\": 45\n    },\n    {\n      \"file\": \"11_equivalences.tex\",\n      \"formalUnits\": 44,\n      \"mapped\": 44\n    },\n    {\n      \"file\": \"12_univalence.tex\",\n      \"formalUnits\": 45,\n      \"mapped\": 45\n    },\n    {\n      \"file\": \"13_classifying.tex\",\n      \"formalUnits\": 35,\n      \"mapped\": 35\n    },\n    {\n      \"file\": \"14_groups.tex\",\n      \"formalUnits\": 51,\n      \"mapped\": 51\n    },\n    {\n      \"file\": \"15_simplicial_spaces.tex\",\n      \"formalUnits\": 38,\n      \"mapped\": 38\n    },\n    {\n      \"file\": \"16_segal.tex\",\n      \"formalUnits\": 42,\n      \"mapped\": 42\n    },\n    {\n      \"file\": \"17_covariant.tex\",\n      \"formalUnits\": 42,\n      \"mapped\": 42\n    },\n    {\n      \"file\": \"18_arrow_yoneda.tex\",\n      \"formalUnits\": 40,\n      \"mapped\": 40\n    },\n    {\n      \"file\": \"19_representability.tex\",\n      \"formalUnits\": 46,\n      \"mapped\": 46\n    },\n    {\n      \"file\": \"20_directed.tex\",\n      \"formalUnits\": 54,\n      \"mapped\": 54\n    },\n    {\n      \"file\": \"21_structures.tex\",\n      \"formalUnits\": 61,\n      \"mapped\": 61\n    },\n    {\n      \"file\": \"22_semantics.tex\",\n      \"formalUnits\": 51,\n      \"mapped\": 51\n    },\n    {\n      \"file\": \"a_calculations.tex\",\n      \"formalUnits\": 70,\n      \"mapped\": 70\n    },\n    {\n      \"file\": \"b_glossary.tex\",\n      \"formalUnits\": 5,\n      \"mapped\": 5\n    }\n  ],\n  \"formalUnits\": 955,\n  \"mappedUnits\": 955,\n  \"errors\": []\n}\n"
+    }
+  ],
+  "site_checks": {
+    "scope": "all trees, not only research notes",
+    "pages": 6958,
+    "originalPages": 2312,
+    "reviewedPages": 6958,
+    "reachablePages": 6958,
+    "formulas": 89114,
+    "diagrams": 50,
+    "katexChecked": true,
+    "semanticLimit": "The register records editorial review; structural checks do not prove mathematical correctness or semantic atomicity.",
+    "errors": [],
+    "warnings": []
+  },
+  "prerequisite_check": {
+    "errors": []
+  },
+  "editorial_check": {
+    "errors": [],
+    "format": []
+  },
+  "independent_reviews": [
+    {
+      "file": "research/mathematical-physics-hutchcroft-review.json",
+      "sha256": "c2b20cd7ac0d8d812bb0a561ea389bce91f2a91208dba6bfb87188c258c2d87b",
+      "reviewed_files": 44,
+      "resolved_findings": 7
+    },
+    {
+      "file": "research/mathematical-physics-mahadev-review.json",
+      "sha256": "fe83fae46a355c7ec0ad24870ec99a9e19a0b8f2332741b83bfd7021f72bab81",
+      "reviewed_files": 64,
+      "resolved_findings": 5
+    },
+    {
+      "file": "research/mathematical-physics-martinelli-review.json",
+      "sha256": "81ee0a5f509530b1eb05428b26eb5eaaed8c94bcf0af5ca5a4e03e1636c2e0b1",
+      "reviewed_files": 66,
+      "resolved_findings": 7
+    }
+  ],
+  "packet_hashes": [
+    {
+      "file": "research/mathematical-physics-hutchcroft-packet.json",
+      "sha256": "942f841984b1d500cb68674ac822366bc1e7a1e59d6094a653cf9341a4d68e60"
+    },
+    {
+      "file": "research/mathematical-physics-mahadev-packet.json",
+      "sha256": "92e27b7b1bf542caa290d4b399275e8a45deae26fc3c6573188777a89233b832"
+    },
+    {
+      "file": "research/mathematical-physics-martinelli-packet.json",
+      "sha256": "6c167a7a28c3fc8ae9e7a6153409d9baf469b79a58dcef1786f6c71d6a7afacb"
+    }
+  ],
+  "browser_checks": {
+    "result": "pass",
+    "checks": [
+      {
+        "id": "006B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4E00",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 32
+      },
+      {
+        "id": "4E01",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4E02",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4E03",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4E04",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4E05",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4E06",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4E07",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4E08",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4E09",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 29
+      },
+      {
+        "id": "4E0A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4E0B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 38
+      },
+      {
+        "id": "4E0C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4E0D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4E0E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4E0F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4E10",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4E11",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4E12",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4E13",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4E14",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4E15",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4E16",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4E17",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4E18",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4E19",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 50
+      },
+      {
+        "id": "4E1A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 7
+      },
+      {
+        "id": "4E1B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4E1C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4E1D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4E1E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4E1F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4E20",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4E21",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4E22",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4E23",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4E24",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4E25",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4E26",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4E27",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4E28",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4E29",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "icm2026-hutchcroft",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4F00",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4F01",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F02",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4F03",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4F04",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4F05",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4F06",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4F07",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4F08",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4F09",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4F0A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F0B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4F0C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4F0D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4F0E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4F0F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4F10",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4F11",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4F12",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4F13",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 36
+      },
+      {
+        "id": "4F14",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4F15",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4F16",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 39
+      },
+      {
+        "id": "4F17",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F18",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4F19",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4F1A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4F1B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 30
+      },
+      {
+        "id": "4F1C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4F1D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4F1E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4F1F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 34
+      },
+      {
+        "id": "4F20",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4F21",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 25
+      },
+      {
+        "id": "4F22",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4F23",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 26
+      },
+      {
+        "id": "4F24",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 31
+      },
+      {
+        "id": "4F25",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 5
+      },
+      {
+        "id": "4F26",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4F27",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4F28",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4F29",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F2A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 29
+      },
+      {
+        "id": "4F2B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 42
+      },
+      {
+        "id": "4F2C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 42
+      },
+      {
+        "id": "icm2026-mahadev",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4G00",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4G01",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4G02",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4G03",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4G04",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4G05",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4G06",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4G07",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4G08",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4G09",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4G0A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4G0B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4G0C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4G0D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4G0E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4G0F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4G0G",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4G0H",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4G0I",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4G0J",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4G0K",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4G0L",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4G0M",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4G0N",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 5
+      },
+      {
+        "id": "4G0O",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4G0P",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4G0Q",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 30
+      },
+      {
+        "id": "4G0R",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4G0S",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4G0T",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4G0U",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4G0V",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4G0W",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4G0X",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4G0Y",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4G0Z",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4G10",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4G11",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4G12",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4G13",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4G14",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4G15",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 26
+      },
+      {
+        "id": "4G16",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4G17",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4G18",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4G19",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "icm2026-martinelli",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 2
+      },
+      {
+        "id": "006B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4E00",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 32
+      },
+      {
+        "id": "4E01",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4E02",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4E03",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4E04",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4E05",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4E06",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4E07",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4E08",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4E09",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 29
+      },
+      {
+        "id": "4E0A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4E0B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 38
+      },
+      {
+        "id": "4E0C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4E0D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4E0E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4E0F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4E10",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4E11",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 9
+      },
+      {
+        "id": "4E12",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4E13",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 21
+      },
+      {
+        "id": "4E14",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 18
+      },
+      {
+        "id": "4E15",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 22
+      },
+      {
+        "id": "4E16",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4E17",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4E18",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 11
+      },
+      {
+        "id": "4E19",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 50
+      },
+      {
+        "id": "4E1A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 7
+      },
+      {
+        "id": "4E1B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4E1C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4E1D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4E1E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4E1F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4E20",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4E21",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 11
+      },
+      {
+        "id": "4E22",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4E23",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4E24",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4E25",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 22
+      },
+      {
+        "id": "4E26",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 21
+      },
+      {
+        "id": "4E27",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4E28",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 10
+      },
+      {
+        "id": "4E29",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "icm2026-hutchcroft",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4F00",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4F01",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F02",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4F03",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 20
+      },
+      {
+        "id": "4F04",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4F05",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 22
+      },
+      {
+        "id": "4F06",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4F07",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4F08",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 12
+      },
+      {
+        "id": "4F09",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4F0A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F0B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4F0C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4F0D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4F0E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 9
+      },
+      {
+        "id": "4F0F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 20
+      },
+      {
+        "id": "4F10",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4F11",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 28
+      },
+      {
+        "id": "4F12",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4F13",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 36
+      },
+      {
+        "id": "4F14",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 18
+      },
+      {
+        "id": "4F15",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 24
+      },
+      {
+        "id": "4F16",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 39
+      },
+      {
+        "id": "4F17",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4F18",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4F19",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 24
+      },
+      {
+        "id": "4F1A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4F1B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 30
+      },
+      {
+        "id": "4F1C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 22
+      },
+      {
+        "id": "4F1D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4F1E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 20
+      },
+      {
+        "id": "4F1F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 34
+      },
+      {
+        "id": "4F20",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4F21",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 25
+      },
+      {
+        "id": "4F22",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4F23",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 26
+      },
+      {
+        "id": "4F24",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 31
+      },
+      {
+        "id": "4F25",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 5
+      },
+      {
+        "id": "4F26",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4F27",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 23
+      },
+      {
+        "id": "4F28",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 11
+      },
+      {
+        "id": "4F29",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4F2A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 29
+      },
+      {
+        "id": "4F2B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 3,
+        "formulas": 42
+      },
+      {
+        "id": "4F2C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 3,
+        "formulas": 42
+      },
+      {
+        "id": "icm2026-mahadev",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4G00",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4G01",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4G02",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 18
+      },
+      {
+        "id": "4G03",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 24
+      },
+      {
+        "id": "4G04",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 18
+      },
+      {
+        "id": "4G05",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4G06",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 24
+      },
+      {
+        "id": "4G07",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 22
+      },
+      {
+        "id": "4G08",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4G09",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4G0A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 13
+      },
+      {
+        "id": "4G0B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4G0C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 19
+      },
+      {
+        "id": "4G0D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4G0E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4G0F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4G0G",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4G0H",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 15
+      },
+      {
+        "id": "4G0I",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4G0J",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4G0K",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4G0L",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4G0M",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4G0N",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 5
+      },
+      {
+        "id": "4G0O",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4G0P",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4G0Q",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 30
+      },
+      {
+        "id": "4G0R",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4G0S",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4G0T",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4G0U",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4G0V",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4G0W",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4G0X",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4G0Y",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4G0Z",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 9
+      },
+      {
+        "id": "4G10",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4G11",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4G12",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 11
+      },
+      {
+        "id": "4G13",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4G14",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 18
+      },
+      {
+        "id": "4G15",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 3,
+        "formulas": 26
+      },
+      {
+        "id": "4G16",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 23
+      },
+      {
+        "id": "4G17",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4G18",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4G19",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 21
+      },
+      {
+        "id": "icm2026-martinelli",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 2
+      }
+    ],
+    "screenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/topology-render-3Pbqix"
+  },
+  "manual_visual_review": {
+    "date": "2026-10-22",
+    "result": "pass",
+    "method": "Manual visual inspection of the actual local browser screenshots using view_image, in addition to automated render checks.",
+    "overview_screenshot_directory": "/private/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/topology-render-3Pbqix",
+    "detail_screenshot_directory": "/tmp/mathphysics-second-detail-shots",
+    "inspected": [
+      {
+        "id": "006B",
+        "width": 390,
+        "area": "viewport"
+      },
+      {
+        "id": "4E00",
+        "width": 1440,
+        "area": "viewport"
+      },
+      {
+        "id": "4F00",
+        "width": 390,
+        "area": "viewport"
+      },
+      {
+        "id": "4G00",
+        "width": 1440,
+        "area": "viewport"
+      },
+      {
+        "id": "4E19",
+        "width": 1440,
+        "area": "complete main content"
+      },
+      {
+        "id": "4F12",
+        "width": 390,
+        "area": "complete main content"
+      },
+      {
+        "id": "4F24",
+        "width": 1440,
+        "area": "complete main content"
+      },
+      {
+        "id": "4F24",
+        "width": 390,
+        "area": "complete main content"
+      },
+      {
+        "id": "4G04",
+        "width": 1440,
+        "area": "complete main content"
+      },
+      {
+        "id": "4G13",
+        "width": 390,
+        "area": "complete main content"
+      }
+    ],
+    "observations": [
+      "Existing logo, typography, colors and subject navigation preserved.",
+      "Chinese headings and metadata fit desktop and mobile layouts; linked mathematical terms remain readable.",
+      "Theorem and proof blocks have consistent pale backgrounds, margins and paragraph separation.",
+      "Displayed formulas, sums, subscripts and fractions render without overlap; long mobile formulas use horizontally scrollable containers verified by browser tests."
+    ],
+    "scope": "Ten screenshots were inspected manually. All 137 target pages were checked automatically at both 1440px and 390px, and 18 additional detail captures were checked automatically. No claim of manual inspection of every page."
+  },
+  "build_log_sha256": "9850a1c2f93f27b66fcf1cc16815722b7b7c164c5b393779319ac6aae2b0ba60",
+  "reading_ui_log_sha256": "446d4434318687763f9401634821710e667d96ae6178c8cc90a56411bc865234",
+  "preview": "http://localhost:8083/006B/",
+  "publication": {
+    "pushed": false,
+    "deployed": false,
+    "note": "The previous batch was requested for publication; this next batch remains a separately validated local update."
+  },
+  "proof_scope": "Local proofs and exact external research inputs are distinguished in the note text and source packets; cited deep proofs have not all been reproduced."
+}

@@ -62,6 +62,7 @@ jobs:
           node --test tests/pde-second-reports.test.mjs
           node --test tests/pde-final-reports.test.mjs
           node --test tests/mathematical-physics-first-reports.test.mjs
+          node --test tests/mathematical-physics-second-reports.test.mjs
           node --test tests/topology-exotic-stems-graphs-math.test.mjs
           node tests/bourbaki-math.test.mjs
           node tests/geometry-expansion-math.test.mjs
@@ -145,6 +146,7 @@ jobs:
           TOPOLOGY_RECORD=research/icm2026-pde-second-reports.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-pde-final-reports.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-mathematical-physics-first-reports.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-mathematical-physics-second-reports.json node tests/topology-report-render.test.mjs
           node tests/topic-introductions-render.test.mjs
 
       - name: Setup Pages

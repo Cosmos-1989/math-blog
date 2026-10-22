@@ -1,0 +1,11 @@
+\title{局部约束的外层依赖条件}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§4 的 exterior condition}
+
+\p{设 #{\nu=\rho^{\otimes\mathbb Z^d}} 是有限集合 #{S} 上正概率权的[乘积测度](0A6B)。对每个格点 #{x}，有有限个指标约束 #{c_x^{(i)}=\mathbf 1_{A_x^{(i)}}}，只依赖有限坐标集 #{\Delta_x^{(i)}\subset\mathbb Z^d\setminus\{x\}}。若存在递增集合族 #{(V_n)_{n\in\mathbb Z}}，满足 #{\bigcup_nV_n=\mathbb Z^d}、#{\bigcap_nV_n=\varnothing}，且}
+##{x\in V_n\setminus V_{n-1}\quad\Longrightarrow\quad
+\Delta_x^{(i)}\subseteq\bigcup_{j>n}(V_j\setminus V_{j-1}),}
+\p{便称约束满足外层依赖条件。它要求决定当前层是否可更新的信息全部位于更外的层。集合 #{V_n} 可以无限，例如 #{V_n=\{x\in\mathbb Z^2:x_1+2x_2\leq n\}}。}
+\p{这种定向条件使依次条件平均时不会回头依赖刚处理的坐标。与足够小的约束失败概率结合，它可产生带约束的[方差张量化](4G05)。具体可使用[好路径不等式](4G13)，其中所有小概率条件都明确给出。没有定向条件时，即使每个约束失败概率都很小，仍可能存在[冻结通信类](4G17)。}

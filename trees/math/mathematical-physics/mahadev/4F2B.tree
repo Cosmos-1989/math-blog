@@ -1,0 +1,21 @@
+\title{对纠缠输入重复独立二值测试的尾界}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev 验证论文 v3，§7.1 的放大步骤](https://arxiv.org/html/1804.01082v3)，测试算子的独立推导}
+
+\p{有限维空间 #{V} 上的二值量子测试由 Hermitian 矩阵 #{M} 描述，#{0\leq M\leq I}，态 #{\rho} 的接受概率为 #{\operatorname{Tr}(M\rho)}。先考虑否实例的可靠性，假设 #{M\leq sI}，其中 #{0<s<1}。给定整数 #{k\geq 1}，在 #{V^{\otimes k}} 的各个寄存器上独立运行该测试，允许输入为任意[纠缠密度矩阵](4F02) #{\sigma}。记接受次数为 #{Y}。对 #{s<a<1}，有}
+##{\Pr(Y\geq ka)\leq
+\exp\{-kD(a\Vert s)\},\qquad
+D(a\Vert s)=a\log\frac as+(1-a)\log\frac{1-a}{1-s}>0.}
+\p{\strong{证明。}由[谱定理](0N0B)，#{M} 的特征值均在 #{[0,s]}。对 #{t>0}，独立局部测试的联合结果给出}
+##{\mathbb E e^{tY}
+=\operatorname{Tr}\left(\sigma\,(I-M+e^tM)^{\otimes k}\right)
+\leq(1-s+se^t)^k.}
+\p{最后一步可在 #{M} 的张量积特征基中验证：每个特征值乘积均不超过右端，#{\sigma} 的对角元非负且和为一。点态不等式 #{\mathbf 1_{\{Y\geq ka\}}\leq e^{t(Y-ka)}} 因而给出上界 #{e^{-tka}(1-s+se^t)^k}。选 #{e^t=a(1-s)/(s(1-a))} 得到所示公式。}
+\p{为说明指数严格为正，把 #{D(a\Vert s)} 看作 #{a} 的函数。它在 #{a=s} 值及一阶导数均为零，二阶导数为 #{1/(a(1-a))\geq 4}。两次积分得到 #{D(a\Vert s)\geq 2(a-s)^2}。}
+\p{另考虑是实例的完备性，其测试算子记为 #{M_{\rm yes}}，诚实态为 #{\rho_{\rm yes}}，单次接受概率为 #{c=\operatorname{Tr}(M_{\rm yes}\rho_{\rm yes})}。这里不对 #{M_{\rm yes}} 施加否实例的 #{sI} 上界。输入独立乘积态 #{\rho_{\rm yes}^{\otimes k}}，记接受次数为 #{Y_{\rm yes}}。若 #{0<a<c<1}，对拒绝次数应用同一指数矩论证，得到}
+##{\Pr(Y_{\rm yes}\leq ka)\leq e^{-kD(a\Vert c)},\qquad
+D(a\Vert c)=a\log\frac ac+(1-a)\log\frac{1-a}{1-c}.}
+\p{端点 #{c=1} 时，每次都确定接受，#{Y_{\rm yes}=k} 几乎必然成立；只要 #{a<1}，失败概率 #{\Pr(Y_{\rm yes}\leq ka)} 就等于零，无须代入含有 #{1-c} 分母的公式。}
+\p{因此，当 #{c-s} 为逆多项式，取中间阈值和适当多项式次重复，可使两类错误指数小。该结论适用于[能量抽样测试](4F23)：验证者独立选择局部项产生固定平均测试算子。对恶意态的上界没有假定不同寄存器之间独立。}

@@ -1,0 +1,10 @@
+\title{单调边耦合与渗流临界参数}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§3；单调耦合的直接证明}
+
+\p{设 #{J(x,y)=J(y,x)\geq 0} 是 #{\mathbb Z^d} 上平移不变的边权，#{J(x,x)=0}。在[可数乘积空间](0A6B)上取独立的 #{[0,1]} 均匀变量 #{U_{\{x,y\}}}；均匀指区间概率等于长度。定义参数 #{\beta\geq 0} 的[渗流](4E01)为}
+##{\omega_\beta(\{x,y\})=1_{\{U_{\{x,y\}}\leq 1-e^{-\beta J(x,y)}\}}.}
+\p{令 #{\theta(\beta)=\mathbb P_\beta(|K_0|=\infty)}，定义 #{\beta_c=\inf\{\beta\geq 0:\theta(\beta)>0\}}，空集的下确界取 #{\infty}。这是以原点无限簇概率定义的临界参数。}
+\p{\strong{证明。}由[指数函数](0A46)的单调性，#{\beta\leq\beta'} 时每条在 #{\beta} 下开放的边也在 #{\beta'} 下开放，故 #{K_0(\beta)\subseteq K_0(\beta')}，#{\theta} 非减。若 #{\beta<\beta_c}，每个顶点属于无限簇的概率均为零；平移不变性与[并集上界](0F65)说明此时几乎必然没有无限簇。若 #{\beta>\beta_c} 且 #{\beta_c<\infty}，下确界的定义和单调性给出 #{\theta(\beta)>0}。临界点处的取值须另行确定。}

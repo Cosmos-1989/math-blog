@@ -1,0 +1,10 @@
+\title{短陷门如何恢复带噪声的线性像}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§3.2.2](icm2026-mahadev)，条件性线性代数推导}
+
+\p{设整数 #{q\geq 2}，#{A\in\mathbb Z_q^{m\times n}} 使 #{s\mapsto As} 单射。假定已知一个整数矩阵 #{T\in\mathbb Z^{m\times m}}，它在有理数域上可逆且 #{TA\equiv 0\pmod q}。给定 #{y=As+e\pmod q}，其中 #{e\in\mathbb Z^m} 满足 #{\|Te\|_\infty<q/2}，则由 #{T,y} 可以唯一恢复 #{e,s}。}
+\p{\strong{证明。}先算 #{Ty\pmod q}。因 #{TA\equiv 0}，这等于 #{Te\pmod q}。按照[中心整数代表](4F0A)逐坐标提升，严格界 #{\|Te\|_\infty<q/2} 保证得到的整数向量恰为 #{Te}。于是 #{e=T^{-1}[Ty]_q}，再求解 #{As=y-e\pmod q}；单射性保证唯一。素数 #{q} 时，[满列秩消元](4F0C)给出后一计算。}
+\p{若 #{\max_{ij}|T_{ij}|\leq\tau}、#{\|e\|_\infty\leq E}，则 #{m\tau E<q/2} 是上述提升条件的充分条件。矩阵 #{T} 在有理数域上的可逆性与模 #{q} 可逆性不同：若后者也成立，由 #{TA=0} 会推出 #{A=0}。}
+\p{密码学构造还须高效生成短陷门，并使公开矩阵的分布足够接近均匀分布。这是报告所引 Gentry–Peikert–Vaikuntanathan 与 Micciancio–Peikert 的陷门生成结果；本命题使用已给定的 #{T}，没有从随机 #{A} 构造它。}

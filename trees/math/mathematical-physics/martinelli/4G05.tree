@@ -1,0 +1,10 @@
+\title{乘积测度的方差张量化}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§4 的无约束背景；有限求和证明}
+
+\p{设 #{\mu=\bigotimes_{i=1}^n\rho_i} 是有限集合的乘积概率测度，#{f} 为实函数。以[单坐标条件方差](4G02)记 #{\operatorname{Var}_i}，则}
+##{\operatorname{Var}_\mu(f)\leq\sum_{i=1}^n\mu(\operatorname{Var}_i(f)).}
+\p{\strong{证明。}对两个独立坐标组 #{X,Y}，直接展开[方差](00L2)得 #{\operatorname{Var}(f)=\mathbb E\operatorname{Var}(f\mid Y)+\operatorname{Var}(\mathbb E[f\mid Y])}。固定 #{Y,Y'}，平方的凸性给出 #{(\mathbb E_X[f(X,Y)-f(X,Y')])^2\leq\mathbb E_X[(f(X,Y)-f(X,Y'))^2]}。对独立的 #{Y,Y'} 平均，再用条件方差的双副本表达式，得 #{\operatorname{Var}_Y(\mathbb E_Xf)\leq\mathbb E_X\operatorname{Var}_Y(f)}。}
+\p{以 #{X} 为第一坐标、#{Y} 为其余坐标，并对 #{Y} 的方差归纳，即得结论。平方凸性来自恒等式 #{\sum_j a_jz_j^2-(\sum_j a_jz_j)^2=\frac 12\sum_{j,k}a_ja_k(z_j-z_k)^2\geq 0}，其中 #{a_j\geq 0,\sum_j a_j=1}。在可数乘积空间中，局部函数只依赖有限个坐标，故同一不等式成立。}

@@ -1,0 +1,12 @@
+\title{单坐标热浴平均与条件方差}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，§§1.2、4；有限求和推导}
+
+\p{设 #{I} 为有限或可数指标集，#{S} 为有限集合，#{\rho(s)>0} 且 #{\sum_{s\in S}\rho(s)=1}。在[乘积概率空间](0A6B) #{(S^I,\mu=\rho^{\otimes I})} 上，局部函数指仅依赖有限个坐标的函数。记 #{\omega^{x,s}} 为仅把坐标 #{x} 改为 #{s} 的构形。固定其他坐标，对 #{x} 的热浴平均及方差为}
+##{\mu_xf(\omega)=\sum_{s\in S}\rho(s)f(\omega^{x,s}),\qquad
+\operatorname{Var}_x(f)=\mu_x(f^2)-(\mu_xf)^2.}
+\p{这就是对其余相关坐标给定后的[条件期望](0A01)与[方差](00L2)；对于局部函数，只需有限求和。展开平方可得}
+##{\operatorname{Var}_x(f)=\frac 12\sum_{s,t\in S}\rho(s)\rho(t)(f(\omega^{x,s})-f(\omega^{x,t}))^2.}
+\p{对 #{S=\{0,1\}} 取 #{\rho(0)=q,\rho(1)=p=1-q}，于是 #{\operatorname{Var}_x(f)=pq(f(\omega^{x,1})-f(\omega^{x,0}))^2}。若 #{a} 与坐标 #{x} 无关，则逐坐标求和给出 #{\mu(a\mu_xf)=\mu(af)}，并有 #{\mu(fa(f-\mu_xf))=\mu(a\operatorname{Var}_x(f))}。最后一个恒等式把热浴更新写成非负平方。}

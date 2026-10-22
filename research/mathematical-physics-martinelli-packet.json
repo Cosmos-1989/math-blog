@@ -1,0 +1,1825 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "prefix": "4G",
+    "outline": "4G00",
+    "reference": "icm2026-martinelli",
+    "doi": "10.1137/25M180425X",
+    "speaker": "Fabio Martinelli",
+    "title": "Kinetically Constrained Spin Models: A Short Survey",
+    "pages": "497–515",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M180425X",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M180425X",
+    "license": "CC BY 4.0",
+    "question": "平衡测度只是独立 Bernoulli 乘积时，局部空位约束为何仍产生极慢松弛，而稳定方向又怎样预测二维时间尺度？",
+    "reading_scope": "martinelli-icm2026: Entire publisher HTML mathematical body §§1–4, every displayed formula and both figure captions, acknowledgments, footnotes and full bibliography [1]–[65], in overlapping section-sized reads. Body lines 87–553; footnotes 557–573; references 574–929; metadata/license 932–976. No full PDF or figure-pixel inspection. The third-party Figure 3.2 is not reproduced.\nmst-one-facilitated-v1: Abstract and §§1.1–1.4; §2 main statements through Conjecture 3 (HTML lines 41–236), including Corollary 2.9 and Theorems 2.10/2.12. Selected §2.1 entropy-proof paragraphs and the start of §2.2 were read through approximately line 340; these sections and the whole paper were not read in full.\nlocal-calculations: Finite-state probability/energy identities, elementary closure and geometry arguments, finite-graph duality and conditional log-scale calculations are proved in the authored notes; existing forest definitions supply the prerequisite vocabulary.",
+    "proof_scope": {
+      "4G01": {
+        "status": "definition-and-local-proof",
+        "scope": "有限连续时间链、均匀化与矩阵指数；有限求和证明详细平衡推出平稳。"
+      },
+      "4G02": {
+        "status": "definition-and-local-proof",
+        "scope": "局部有限乘积空间中的热浴平均和条件方差；双副本平方差恒等式直接展开。"
+      },
+      "4G03": {
+        "status": "definition-and-local-construction",
+        "scope": "更新族、Poisson 尝试与有限边界生成元；以 M=|union U| 计约束邻居，非法响铃保留旧值的自身查询使分支数至多 M+1。由 |K|(M+1)^n T^n/n! 排除无限回溯；不宣称重建一般无限粒子系统的全部分析理论。"
+      },
+      "4G04": {
+        "status": "local-proof",
+        "scope": "详细平衡及 D=sum mu(c Var_x) 的有限求和证明；无限格只对局部函数作有限非零项计算。"
+      },
+      "4G05": {
+        "status": "local-proof",
+        "scope": "有限乘积的方差分解与归纳张量化；局部函数的无限乘积版本由有限支撑归约。"
+      },
+      "4G06": {
+        "status": "definition-and-local-proof",
+        "scope": "定义谱隙与 Poincare 常数；有限可逆链的均方衰减等价性、有限通信图的显式正谱隙界、无约束热浴常数一。无限格只给局部函数变分定义。"
+      },
+      "4G07": {
+        "status": "local-finite-proof-and-cited-infinite-bound",
+        "scope": "杀死半群、加权 Cauchy–Schwarz 和尾积分完整证明有限状态命中界；无限 KCM 界仅引用 (1.4)。"
+      },
+      "4G08": {
+        "status": "definition-and-local-proof",
+        "scope": "定义有限/无限自举闭包；证明单调性、幂等性、有限见证以及内部填满含义。"
+      },
+      "4G09": {
+        "status": "local-finite-proof",
+        "scope": "全占据边界的有限区域：闭包在合法翻转下不变，共同闭包给出通信路径，条件乘积测度可逆；明确有限翻转不等于无限构形的整体连通。"
+      },
+      "4G0A": {
+        "status": "definition-local-proof-and-conjecture",
+        "scope": "定义填满与多项式尾阈值，耦合/平移论证 q_c≤tilde q_c；两阈值相等保留猜想。"
+      },
+      "4G0B": {
+        "status": "cited-theorem",
+        "scope": "精确陈述 Theorem 1.4 的严格阈值区间、L2 遍历性与有限松弛结论；不加入临界端点结论。"
+      },
+      "4G0C": {
+        "status": "cited-theorem",
+        "scope": "完整列出内部填满概率趋一、局部详细平衡和全闭包支撑；引用唯一性与 FA-1f 平稳态分类，不重建熵/有限窗口极限证明。"
+      },
+      "4G0D": {
+        "status": "conjecture-with-domain-clarification",
+        "scope": "局部固定整数 d≥1、0<q<1，记录按自举稳定构形分解的猜想；正概率条件测度和零概率分量的额外构造严格分开。"
+      },
+      "4G0E": {
+        "status": "definition-and-local-proof",
+        "scope": "East 有向规则、冻结半线与自举尾界 (1-q)^(n+1)；由定义得到两个自举阈值为零，再调用已标明来源的遍历定理。"
+      },
+      "4G0F": {
+        "status": "cited-combinatorial-theorem-and-local-examples",
+        "scope": "ell(n)=2^n-1 与对数主阶可达构形上界按报告引用；只对 n=1,2 给出直接路径解释，不宣称一般组合证明。正半轴空位总数含目标空位。"
+      },
+      "4G0G": {
+        "status": "cited-theorem-and-local-interpretation",
+        "scope": "引用固定维数的精确极限 1/(2d log 2)，说明能量/熵及低温变量的代数关系；不把启发式计数当作定理证明。"
+      },
+      "4G0H": {
+        "status": "definition",
+        "scope": "有限链的最坏初态全变差距离、混合时间和截断窗口；基础全变差定义复用 4F27，不再证明其基本性质。"
+      },
+      "4G0I": {
+        "status": "cited-theorem",
+        "scope": "保留有限方盒、原点空其余外边界占据、固定 q 后 L 趋无穷及适用 q 区间；一维全 q 与 sqrt(L) 窗口作为源备注。 全变差定义链接 4F27，最坏初态距离/截断定义链接 4G0H。"
+      },
+      "4G0J": {
+        "status": "conjecture-reformulation-and-local-domain-check",
+        "scope": "d≥2、0<q<1；有向 Poisson 路径计数证明固定有限时间的加厚感染集几乎必然为非空紧集。Hausdorff 距离复用 00FN，极限 K 明确为非空紧集。形状收敛仍是较弱的概率距离猜想，不声称等价于原文强集合夹逼或已证明。"
+      },
+      "4G0K": {
+        "status": "definition-and-local-proof",
+        "scope": "定义 k 空位促进；FA-1f 两步移动及有限连通区域非空空位类的通信性直接证明。"
+      },
+      "4G0L": {
+        "status": "local-proof",
+        "scope": "二维 FA-2f 有限感染集不能越出包围矩形；两条相邻全占据无限线形成屏障，有限与无限情形分别说明。"
+      },
+      "4G0M": {
+        "status": "cited-theorem-with-heuristic",
+        "scope": "引用 d=1 的 q^-3、d≥3 的 q^-2 及 d=2 上下界；独立游走启发式明确为距离平方除以跳跃率尺度，即 (q^(-1/d))^2/q，不作为完整证明。"
+      },
+      "4G0N": {
+        "status": "conjecture",
+        "scope": "二维 log(1/q)/q^2 精细尺度明确为报告猜想，不与现有双边不等式混同。"
+      },
+      "4G0O": {
+        "status": "conjecture-with-primary-sharpening",
+        "scope": "任意非空初态的 FA-1f 局部收敛仍为猜想；指数收敛只按补充文献的一维指数空区间尾假设陈述。"
+      },
+      "4G0P": {
+        "status": "cited-classification-and-local-verification",
+        "scope": "一维 East 平稳态混合的穷尽性引用补充 Theorem 2.12；逐坐标验证候选测度可逆，并算 L omega_0(allzero)=p 排除全空点质量。"
+      },
+      "4G0Q": {
+        "status": "local-finite-proof",
+        "scope": "有限无向简单图 BABP 生成元逐项计算 L_B D=L_C D，有限矩阵半群推出自对偶；不宣称无限图全体初态的对偶延拓。"
+      },
+      "4G0R": {
+        "status": "cited-theorem-and-local-consequences",
+        "scope": "引用二维平稳 FA-2f 命中时间均值与高概率双边精确界，并作 q log 极限；不推出尚开放的同常数松弛时间渐近。"
+      },
+      "4G0S": {
+        "status": "construction-and-local-proof",
+        "scope": "有限图上成对条件重抽构造、三类非空二值概率及详细平衡直接验证；有效液滴动力学的适用性并未据此证明。"
+      },
+      "4G0T": {
+        "status": "definition-and-local-proof",
+        "scope": "稳定方向的半平面判据与不再生长等价性证明；有限闭弧/孤立点结构由有限更新族计算；一维方向按同一判据解释。"
+      },
+      "4G0U": {
+        "status": "definition-and-cited-threshold-theorem",
+        "scope": "二维半圆分类精确定义，q_c 的零/正二分作为报告引入的 BP 研究结果；不补写未知阈值常数。"
+      },
+      "4G0V": {
+        "status": "local-calculation",
+        "scope": "逐更新规则算 East、FA-1f、FA-2f、North-East 的稳定集合并判类别，不依赖图像辨认。"
+      },
+      "4G0W": {
+        "status": "definition-cited-results-and-local-example",
+        "scope": "困难度与半圆最优化定义；孤立稳定方向有限困难度及 BP 时间尺度引用。局部固定 0<q<1、mu_q=Bernoulli(1-q) 的二维乘积、iid 感染初态 A_0 与离散 tau_0^BP，并令 q 趋零；FA-2f 困难度一给直接边界传播证明。"
+      },
+      "4G0X": {
+        "status": "cited-theorem",
+        "scope": "定义超临界有根/无根，局部指定 mu_q 的 iid 空位密度 q、速率一 KCM 和连续命中时间 tau_0；引用 q 趋零时平稳命中时间的多项式或平方对数指数高概率范围。与同初态单调 BP 感染时间作区分，液滴运动仅给解释。"
+      },
+      "4G0Y": {
+        "status": "local-geometry-and-cited-time-scale",
+        "scope": "Duarte 稳定集和困难度一直接计算；局部指定二维坐标、0<q<1、iid mu_q 初态、离散 BP 感染时间与连续 KCM 命中时间。q 趋零时 KCM 均值的 log^4(1/q)/q^2 与 BP 高概率尺度按报告引用，液滴密度替换只作启发式。"
+      },
+      "4G0Z": {
+        "status": "cited-theorem-consequence",
+        "scope": "仅取 Theorem 3.15 的精确双对数指数概率结论及 epsilon 夹逼；不宣称已展开七类精细对数修正。"
+      },
+      "4G10": {
+        "status": "local-proof",
+        "scope": "有限可逆链代入集合指示函数给瓶颈下界；区分一般变分引理与具体模型寻找尖锐瓶颈的研究难点。"
+      },
+      "4G11": {
+        "status": "local-finite-proof",
+        "scope": "加权有向边拥塞、路径重复次数、望远镜和 Cauchy–Schwarz 完整推出形式及松弛常数比较。"
+      },
+      "4G12": {
+        "status": "definition-and-local-example",
+        "scope": "精确定义外层条件，显式秩函数 x1+2x2；不把未量化的小失败概率条件冒充通用定理。"
+      },
+      "4G13": {
+        "status": "cited-theorem-and-local-support-check",
+        "scope": "完整指定字典序好路径、缓冲点、n=floor(p2^-2)、小量条件，引用 Proposition 4.4；用秩函数直接核对全部查询点在外层。"
+      },
+      "4G14": {
+        "status": "definition",
+        "scope": "逐项给出有向/反向 D,E，保留缓冲坐标和平衡律条件于 G1 的单坐标方差。"
+      },
+      "4G15": {
+        "status": "cited-theorem-and-conditional-local-composition",
+        "scope": "Proposition 4.5 的两个上界、小量条件、两种比较代价完整陈述；文字只声称对数代价至多平方对数、双向代价至多多项式，不声称匹配下界。最终 4AT 界只是与已给比较常数合成，不补作随机选路研究证明。"
+      },
+      "4G16": {
+        "status": "local-finite-proof",
+        "scope": "固定路径端点后用方差分解与已定义辅助有限链的 Poincare 不等式；证明该链通信，未求它的精细 r,n 尺度。"
+      },
+      "4G17": {
+        "status": "local-counterexample",
+        "scope": "两个互相要求空位的热浴坐标，精算指示函数方差为 p^2(1-p^2) 而能量为零；说明单靠高概率约束不足。"
+      },
+      "4G18": {
+        "status": "conditional-local-proof",
+        "scope": "从 T≤K/r、q log(1/r)→a、q log K→0 推出 limsup q log T≤a；FA-2f 精确移动代价仅按报告 (2.6) 引用作尺度例子。"
+      },
+      "4G19": {
+        "status": "local-finite-proof",
+        "scope": "有限状态生成元复合与矩阵指数证明二值投影精确 Markov；明确内部多状态松弛不由投影自动控制。"
+      }
+    },
+    "claim_sources": {
+      "4G01": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.1; finite-state background"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G01: 有限连续时间链、均匀化与矩阵指数；有限求和证明详细平衡推出平稳。"
+        }
+      ],
+      "4G02": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.2; §4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G02: 局部有限乘积空间中的热浴平均和条件方差；双副本平方差恒等式直接展开。"
+        }
+      ],
+      "4G03": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.1; Remark 1.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G03: 更新族、Poisson 尝试与有限边界生成元；以 M=|union U| 计约束邻居，非法响铃保留旧值的自身查询使分支数至多 M+1。由 |K|(M+1)^n T^n/n! 排除无限回溯；不宣称重建一般无限粒子系统的全部分析理论。"
+        }
+      ],
+      "4G04": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.2, generator and Dirichlet display"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G04: 详细平衡及 D=sum mu(c Var_x) 的有限求和证明；无限格只对局部函数作有限非零项计算。"
+        },
+        {
+          "source": "mst-one-facilitated-v1",
+          "locator": "§1.1, equation (1.6): normalization without an extra half"
+        }
+      ],
+      "4G05": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§4, unconstrained background for (4.1)–(4.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G05: 有限乘积的方差分解与归纳张量化；局部函数的无限乘积版本由有限支撑归约。"
+        }
+      ],
+      "4G06": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.2, (1.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G06: 定义谱隙与 Poincare 常数；有限可逆链的均方衰减等价性、有限通信图的显式正谱隙界、无约束热浴常数一。无限格只给局部函数变分定义。"
+        }
+      ],
+      "4G07": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.2, (1.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G07: 杀死半群、加权 Cauchy–Schwarz 和尾积分完整证明有限状态命中界；无限 KCM 界仅引用 (1.4)。"
+        }
+      ],
+      "4G08": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.1, BP construction"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G08: 定义有限/无限自举闭包；证明单调性、幂等性、有限见证以及内部填满含义。"
+        }
+      ],
+      "4G09": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§1.2, ergodic-component discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G09: 全占据边界的有限区域：闭包在合法翻转下不变，共同闭包给出通信路径，条件乘积测度可逆；明确有限翻转不等于无限构形的整体连通。"
+        }
+      ],
+      "4G0A": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "(1.1)–(1.2), Remark 1.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0A: 定义填满与多项式尾阈值，耦合/平移论证 q_c≤tilde q_c；两阈值相等保留猜想。"
+        }
+      ],
+      "4G0B": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 1.4"
+        }
+      ],
+      "4G0C": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 1.5"
+        },
+        {
+          "source": "mst-one-facilitated-v1",
+          "locator": "Theorem 2.10 and Corollary 2.9, including stationarity versus detailed-balance hypotheses"
+        }
+      ],
+      "4G0D": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Conjecture 1.6"
+        },
+        {
+          "source": "mst-one-facilitated-v1",
+          "locator": "Conjecture 3 and the discussion immediately preceding it"
+        }
+      ],
+      "4G0E": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0E: East 有向规则、冻结半线与自举尾界 (1-q)^(n+1)；由定义得到两个自举阈值为零，再调用已标明来源的遍历定理。"
+        }
+      ],
+      "4G0F": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.1, (2.1), Chung–Diaconis–Graham result cited there"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0F: ell(n)=2^n-1 与对数主阶可达构形上界按报告引用；只对 n=1,2 给出直接路径解释，不宣称一般组合证明。正半轴空位总数含目标空位。"
+        }
+      ],
+      "4G0G": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 2.2, Remarks 2.3–2.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0G: 引用固定维数的精确极限 1/(2d log 2)，说明能量/熵及低温变量的代数关系；不把启发式计数当作定理证明。"
+        }
+      ],
+      "4G0H": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.1.1; §2.2"
+        }
+      ],
+      "4G0I": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 2.5, Remark 2.6"
+        }
+      ],
+      "4G0J": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Conjecture 2.7"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0J: at most d^n oriented paths of length n, each requiring n ordered Poisson clock rings; bound (dt)^n/n! establishes almost-sure finite-time compactness only, not a shape theorem."
+        }
+      ],
+      "4G0K": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§§2.2–2.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0K: 定义 k 空位促进；FA-1f 两步移动及有限连通区域非空空位类的通信性直接证明。"
+        }
+      ],
+      "4G0L": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0L: 二维 FA-2f 有限感染集不能越出包围矩形；两条相邻全占据无限线形成屏障，有限与无限情形分别说明。"
+        }
+      ],
+      "4G0M": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 2.8, Remark 2.9; the local independent-walk heuristic uses squared distance divided by diffusivity q and is explicitly contrasted with the cited theorem."
+        }
+      ],
+      "4G0N": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Conjecture 2.10"
+        }
+      ],
+      "4G0O": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Conjecture 2.11"
+        },
+        {
+          "source": "mst-one-facilitated-v1",
+          "locator": "Conjectures 1–2; Conjecture 2 is one-dimensional with exponential empty-interval tails"
+        }
+      ],
+      "4G0P": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.1, stationary-measure paragraph"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0P: 一维 East 平稳态混合的穷尽性引用补充 Theorem 2.12；逐坐标验证候选测度可逆，并算 L omega_0(allzero)=p 排除全空点质量。"
+        },
+        {
+          "source": "mst-one-facilitated-v1",
+          "locator": "Theorem 2.12: complete one-dimensional East stationary-measure classification"
+        }
+      ],
+      "4G0Q": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.2.1, (2.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0Q: 有限无向简单图 BABP 生成元逐项计算 L_B D=L_C D，有限矩阵半群推出自对偶；不宣称无限图全体初态的对偶延拓。"
+        }
+      ],
+      "4G0R": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 2.12, (2.5), §2.3 final discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0R: 引用二维平稳 FA-2f 命中时间均值与高概率双边精确界，并作 q log 极限；不推出尚开放的同常数松弛时间渐近。"
+        }
+      ],
+      "4G0S": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.3, g-CBSEP construction"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0S: 有限图上成对条件重抽构造、三类非空二值概率及详细平衡直接验证；有效液滴动力学的适用性并未据此证明。"
+        }
+      ],
+      "4G0T": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Definitions 3.2 and 3.7"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0T: 稳定方向的半平面判据与不再生长等价性证明；有限闭弧/孤立点结构由有限更新族计算；一维方向按同一判据解释。"
+        }
+      ],
+      "4G0U": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Definition 3.8, Remark 3.9, Theorem 3.11"
+        }
+      ],
+      "4G0V": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Figure 3.1 and Remark 3.9"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0V: 逐更新规则算 East、FA-1f、FA-2f、North-East 的稳定集合并判类别，不依赖图像辨认。"
+        }
+      ],
+      "4G0W": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Definition 3.10, Theorem 3.11"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0W: 困难度与半圆最优化定义；孤立稳定方向有限困难度及 BP 时间尺度引用。局部固定 0<q<1、mu_q=Bernoulli(1-q) 的二维乘积、iid 感染初态 A_0 与离散 tau_0^BP，并令 q 趋零；FA-2f 困难度一给直接边界传播证明。"
+        }
+      ],
+      "4G0X": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Definition 3.12, Theorem 3.13, Remark 3.14"
+        }
+      ],
+      "4G0Y": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§3.2, Duarte discussion, references [45]–[46]"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G0Y: Duarte 稳定集和困难度一直接计算；局部指定二维坐标、0<q<1、iid mu_q 初态、离散 BP 感染时间与连续 KCM 命中时间。q 趋零时 KCM 均值的 log^4(1/q)/q^2 与 BP 高概率尺度按报告引用，液滴密度替换只作启发式。"
+        }
+      ],
+      "4G0Z": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Theorem 3.15, Remark 3.16"
+        }
+      ],
+      "4G10": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§4, opening bottleneck discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G10: 有限可逆链代入集合指示函数给瓶颈下界；区分一般变分引理与具体模型寻找尖锐瓶颈的研究难点。"
+        }
+      ],
+      "4G11": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§4, final legal-update comparison"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G11: 加权有向边拥塞、路径重复次数、望远镜和 Cauchy–Schwarz 完整推出形式及松弛常数比较。"
+        }
+      ],
+      "4G12": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§4, exterior condition preceding (4.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G12: 精确定义外层条件，显式秩函数 x1+2x2；不把未量化的小失败概率条件冒充通用定理。"
+        }
+      ],
+      "4G13": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "(4.3)–(4.4), Proposition 4.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G13: 完整指定字典序好路径、缓冲点、n=floor(p2^-2)、小量条件，引用 Proposition 4.4；用秩函数直接核对全部查询点在外层。"
+        }
+      ],
+      "4G14": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "(4.5)–(4.6)"
+        }
+      ],
+      "4G15": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Proposition 4.5, (4.7): upper bounds on comparison constants only; no matching lower bound asserted."
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G15: Proposition 4.5 的两个上界、小量条件、两种比较代价完整陈述；文字只声称对数代价至多平方对数、双向代价至多多项式，不声称匹配下界。最终 4AT 界只是与已给比较常数合成，不补作随机选路研究证明。"
+        }
+      ],
+      "4G16": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§4, deterministic-path reduction before (4.8)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G16: 固定路径端点后用方差分解与已定义辅助有限链的 Poincare 不等式；证明该链通信，未求它的精细 r,n 尺度。"
+        }
+      ],
+      "4G17": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Remark 4.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G17: 两个互相要求空位的热浴坐标，精算指示函数方差为 p^2(1-p^2) 而能量为零；说明单靠高概率约束不足。"
+        }
+      ],
+      "4G18": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "§2.3, (2.6) and droplet rarity discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G18: 从 T≤K/r、q log(1/r)→a、q log K→0 推出 limsup q log T≤a；FA-2f 精确移动代价仅按报告 (2.6) 引用作尺度例子。"
+        }
+      ],
+      "4G19": [
+        {
+          "source": "martinelli-icm2026",
+          "locator": "Remark 1.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4G19: 有限状态生成元复合与矩阵指数证明二值投影精确 Markov；明确内部多状态松弛不由投影自动控制。"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "General one-dimensional universality",
+        "scope": "Stable-direction definition and East/FA examples covered. Do not reproduce Theorem 3.4(1)'s printed extra 1/q in the exponent; a complete corrected general statement awaits checking the cited monograph."
+      },
+      {
+        "branch": "Fine critical classification and higher dimensions",
+        "scope": "4G0Z records the exact double-log exponent consequence only. Seven critical classes and their logarithmic corrections, arbitrary d≥3 universality and sharp subcritical thresholds not expanded."
+      },
+      {
+        "branch": "Nonlocal constraint example",
+        "scope": "Theorem 4.2's infinite percolation-cluster constraint and its approximation argument are not developed; the authored construction uses finite-range constraints."
+      },
+      {
+        "branch": "Open stationary and nonequilibrium questions",
+        "scope": "Threshold equality, general closure-component stationary decomposition, East shape, two-dimensional FA-1f logarithmic correction and FA-1f nonequilibrium convergence remain explicitly conjectural."
+      },
+      {
+        "branch": "Sharp FA-2f relaxation",
+        "scope": "Sharp stationary hitting-time result is represented; equality of the leading relaxation-time constant with pi^2/9 is not asserted."
+      },
+      {
+        "branch": "Applications outside spin Glauber dynamics",
+        "scope": "Kob–Andersen lattice gases, upper-triangular matrix walks, surface dynamics and quantum-spin-chain applications in the introduction are contextual, not additional developed branches."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4G0B",
+          "4G0C",
+          "4G0P"
+        ],
+        "source": "martinelli-icm2026; mst-one-facilitated-v1",
+        "scope": "Infinite-volume ergodicity, invariant-measure entropy/finite-window arguments and the exhaustiveness of stationary-state classifications are cited. Local detailed balance and candidate verification are separately proved."
+      },
+      {
+        "notes": [
+          "4G0F",
+          "4G0G",
+          "4G0I"
+        ],
+        "source": "martinelli-icm2026",
+        "scope": "General East combinatorial barrier/counting, sharp low-temperature gap and finite-box cutoff research proofs are not reconstructed."
+      },
+      {
+        "notes": [
+          "4G0M",
+          "4G0R",
+          "4G18"
+        ],
+        "source": "martinelli-icm2026",
+        "scope": "FA-1f sharp dimension-dependent gap, FA-2f droplet rarity and multiscale conditional Poincare/matryoshka proofs remain cited inputs; the log-scale composition lemma is local and conditional."
+      },
+      {
+        "notes": [
+          "4G0U",
+          "4G0W",
+          "4G0X",
+          "4G0Y",
+          "4G0Z"
+        ],
+        "source": "martinelli-icm2026",
+        "scope": "General BP threshold/difficulty theorems and two-dimensional KCM universality, Duarte bottlenecks and hierarchical liquid-droplet motion are not reproved. Explicit stable-direction examples are local."
+      },
+      {
+        "notes": [
+          "4G13",
+          "4G15"
+        ],
+        "source": "martinelli-icm2026",
+        "scope": "Propositions 4.4–4.5, including conditional random-path selection, renormalization and congestion control, are cited with exact usable assumptions; only finite deterministic reductions and abstract path comparison are proved locally."
+      },
+      {
+        "notes": [
+          "4G07"
+        ],
+        "source": "martinelli-icm2026",
+        "scope": "The infinite-volume stationary hitting bound is quoted from (1.4); the complete killed-semigroup argument supplied in the note has finite state space."
+      }
+    ],
+    "metadata": {
+      "node_count": 46,
+      "atomic_count": 45,
+      "reference_count": 1,
+      "language": "zh",
+      "model_conventions": "0=vacant/infected, 1=occupied, p=1-q; each site attempts at rate one. D=sum mu(c Var_x). Finite-volume local proofs are explicitly separated from cited infinite-volume results. Mean hitting time, high-probability hitting scale, relaxation and mixing are not identified. Effective-droplet descriptions are heuristic unless a stated conditional inequality applies.",
+      "coverage": "All four main report sections represented by definitions, usable research statements, conjectures and accessible proofs. Deferred one-dimensional general formula, seven-class refinement, nonlocal percolation example and introduction-only applications listed explicitly.",
+      "status": "author-repairs-frozen-pending-independent-recheck",
+      "shared_integration": "Parent-owned; no shared trees, landing pages, registries, workflows, theme, build or git changes.",
+      "reference_directory": "trees/references",
+      "review_round": 2,
+      "repaired_findings": [
+        "Parent: 4G07 first Cauchy–Schwarz use links 004S; 4G01 defines matrix exponential; 4G06 supplies weighted inner product and norm.",
+        "Parent: generic total variation reused through 4F27 only; canonical label 全变差距离.",
+        "MART-R1",
+        "MART-R2",
+        "MART-R3",
+        "MART-R4",
+        "MART-R5",
+        "MART-R6",
+        "MART-R7"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4G00",
+      "path": "trees/math/mathematical-physics/martinelli/4G00.tree",
+      "title": "动力学约束模型：空位、缓慢松弛与二维普适性",
+      "taxon": "Outline",
+      "sha256": "0cce91a6a557ba6f4b9a3664fd662bbb83f4da231d3897b3c5854e39afab98d1"
+    },
+    {
+      "id": "4G01",
+      "path": "trees/math/mathematical-physics/martinelli/4G01.tree",
+      "title": "有限连续时间 Markov 链的生成元",
+      "taxon": "Definition",
+      "sha256": "c74828c8f2b60d3306a4f57365ba78077f643b6c9b89ddf4e3990f20ef06ef27"
+    },
+    {
+      "id": "4G02",
+      "path": "trees/math/mathematical-physics/martinelli/4G02.tree",
+      "title": "单坐标热浴平均与条件方差",
+      "taxon": "Definition",
+      "sha256": "6b09059c41a3257d937567f3092e868cddced54e84ae99a9d39367af77d111be"
+    },
+    {
+      "id": "4G03",
+      "path": "trees/math/mathematical-physics/martinelli/4G03.tree",
+      "title": "更新族定义的动力学约束自旋模型",
+      "taxon": "Definition",
+      "sha256": "ac055494554e387b12e3ac51477d304b0b654a0662a824a763ce485224e2180a"
+    },
+    {
+      "id": "4G04",
+      "path": "trees/math/mathematical-physics/martinelli/4G04.tree",
+      "title": "约束热浴的可逆性与 Dirichlet 形式",
+      "taxon": "Theorem",
+      "sha256": "a89cd34c118f92771b6e690836094289c70c2ca8338e4c12d118f97387e561fc"
+    },
+    {
+      "id": "4G05",
+      "path": "trees/math/mathematical-physics/martinelli/4G05.tree",
+      "title": "乘积测度的方差张量化",
+      "taxon": "Theorem",
+      "sha256": "8c1d341f4fb23db5f3f222267bf35b9f3592a97a82d4d9d579be9ae5eba6c46b"
+    },
+    {
+      "id": "4G06",
+      "path": "trees/math/mathematical-physics/martinelli/4G06.tree",
+      "title": "松弛时间与 Poincaré 不等式",
+      "taxon": "Definition",
+      "sha256": "ca01435aabfb024b5ed70907c5eaa22685c038e585463cdb4a4a940483025e7d"
+    },
+    {
+      "id": "4G07",
+      "path": "trees/math/mathematical-physics/martinelli/4G07.tree",
+      "title": "谱隙控制平稳过程的命中时间",
+      "taxon": "Theorem",
+      "sha256": "515c687aa92d0e8d3ac4485d9ac0c876d0c9d9c8800450d6bbb1a0ba1f75f518"
+    },
+    {
+      "id": "4G08",
+      "path": "trees/math/mathematical-physics/martinelli/4G08.tree",
+      "title": "更新族的自举渗流闭包",
+      "taxon": "Definition",
+      "sha256": "ececf03e7bb923f4a30dfd0a0753686e17fdf1d49a28abd060a66ef25bbc142d"
+    },
+    {
+      "id": "4G09",
+      "path": "trees/math/mathematical-physics/martinelli/4G09.tree",
+      "title": "有限体积的合法通信类由自举闭包决定",
+      "taxon": "Theorem",
+      "sha256": "6f1505c76831f69364e9464b5d914862a75c05d4f4dfbd3671d66cba023d8e9e"
+    },
+    {
+      "id": "4G0A",
+      "path": "trees/math/mathematical-physics/martinelli/4G0A.tree",
+      "title": "自举渗流的填满阈值与尾衰减阈值",
+      "taxon": "Definition",
+      "sha256": "da8cad578d3e3b1848d651dcc69231306a26fd34c7fa61f3be937dbbc996bc72"
+    },
+    {
+      "id": "4G0B",
+      "path": "trees/math/mathematical-physics/martinelli/4G0B.tree",
+      "title": "自举阈值控制 KCM 的遍历区间",
+      "taxon": "Theorem",
+      "sha256": "4f1ba14db9fad141a358c62553f3a11eb85471ac3528b3e0fcdb99c67ded454f"
+    },
+    {
+      "id": "4G0C",
+      "path": "trees/math/mathematical-physics/martinelli/4G0C.tree",
+      "title": "内部填满条件下的可逆平稳态唯一性",
+      "taxon": "Theorem",
+      "sha256": "a7aa22c9257a64b6a9fc8a66f5c834e4b8169eab63751d9f477d3f3dff118728"
+    },
+    {
+      "id": "4G0D",
+      "path": "trees/math/mathematical-physics/martinelli/4G0D.tree",
+      "title": "按自举闭包分解平稳态的猜想",
+      "taxon": "Conjecture",
+      "sha256": "ca87f88b97aadb9fbb530b6aa1f674df3613cc623a0bf7054c6c7f3884be0d31"
+    },
+    {
+      "id": "4G0E",
+      "path": "trees/math/mathematical-physics/martinelli/4G0E.tree",
+      "title": "East 模型的有向促进与零自举阈值",
+      "taxon": "Definition",
+      "sha256": "16b888ba1ce8183b797802b30935f093eb802d59a84d74205f891a5034cdd9ea"
+    },
+    {
+      "id": "4G0F",
+      "path": "trees/math/mathematical-physics/martinelli/4G0F.tree",
+      "title": "一维 East 模型的对数空位障碍",
+      "taxon": "Theorem",
+      "sha256": "7c4e06513d7950da5edd80e46d1ca044445294748c633b223ebc3d2604767e72"
+    },
+    {
+      "id": "4G0G",
+      "path": "trees/math/mathematical-physics/martinelli/4G0G.tree",
+      "title": "East 松弛时间的平方对数渐近",
+      "taxon": "Theorem",
+      "sha256": "369ec87b0a37e4b746f1c9e8be4998730603696b9a795c218da2f7a6ba33be90"
+    },
+    {
+      "id": "4G0H",
+      "path": "trees/math/mathematical-physics/martinelli/4G0H.tree",
+      "title": "有限 Markov 链的混合时间与截断",
+      "taxon": "Definition",
+      "sha256": "f1ecf7eb17cc17530606b8a1aedb28a296ee0f6861cbd0998ffeda3440eee39a"
+    },
+    {
+      "id": "4G0I",
+      "path": "trees/math/mathematical-physics/martinelli/4G0I.tree",
+      "title": "East 方盒中的混合截断",
+      "taxon": "Theorem",
+      "sha256": "e560152feca4fd39641053fd4c7ed7122f65c36d1d525ce4bc36d5b2e84156fd"
+    },
+    {
+      "id": "4G0J",
+      "path": "trees/math/mathematical-physics/martinelli/4G0J.tree",
+      "title": "East 感染区域的形状猜想",
+      "taxon": "Conjecture",
+      "sha256": "eff261a4a52655fcf0ab832d2475ceee6ee1a113324f0f036b0bbad5e866ffb9"
+    },
+    {
+      "id": "4G0K",
+      "path": "trees/math/mathematical-physics/martinelli/4G0K.tree",
+      "title": "Fredrickson–Andersen 的 k 空位促进规则",
+      "taxon": "Definition",
+      "sha256": "1a4d63f81539f92fdebd8a9a333047ed752b257e7963a7327449e6b27c72f6a7"
+    },
+    {
+      "id": "4G0L",
+      "path": "trees/math/mathematical-physics/martinelli/4G0L.tree",
+      "title": "二维 FA-2f 的有限空位团不能越出包围矩形",
+      "taxon": "Theorem",
+      "sha256": "7350d2496c253212c23760c97db7f6987ceb83722d8e3525277154d3722a2a93"
+    },
+    {
+      "id": "4G0M",
+      "path": "trees/math/mathematical-physics/martinelli/4G0M.tree",
+      "title": "FA-1f 松弛时间的维数依赖",
+      "taxon": "Theorem",
+      "sha256": "be026b37550afc0b63cd74b1646ca825e5c9350b3724063ae78a745505c8603b"
+    },
+    {
+      "id": "4G0N",
+      "path": "trees/math/mathematical-physics/martinelli/4G0N.tree",
+      "title": "二维 FA-1f 的对数修正猜想",
+      "taxon": "Conjecture",
+      "sha256": "63bf881b407298b662ea546a1f6024e2a9ba1be4bd53b01561a5388217d63fef"
+    },
+    {
+      "id": "4G0O",
+      "path": "trees/math/mathematical-physics/martinelli/4G0O.tree",
+      "title": "FA-1f 从非平衡初态趋向乘积平衡的猜想",
+      "taxon": "Conjecture",
+      "sha256": "e9285b45ca97328773ff8ff03ac19f7069a56b8e804a5cc8afefa0214a90d672"
+    },
+    {
+      "id": "4G0P",
+      "path": "trees/math/mathematical-physics/martinelli/4G0P.tree",
+      "title": "一维 East 模型的冻结半线平稳态",
+      "taxon": "Theorem",
+      "sha256": "6673dffdc199431e4ffba81220a706752b417876fc4c8f94d3e2823911ca7c2e"
+    },
+    {
+      "id": "4G0Q",
+      "path": "trees/math/mathematical-physics/martinelli/4G0Q.tree",
+      "title": "有限图上 BABP 的自对偶恒等式",
+      "taxon": "Theorem",
+      "sha256": "f1f1c692b51f63e69c91784bb7994fe0227a29cfc0476cff4f2bd6396929694f"
+    },
+    {
+      "id": "4G0R",
+      "path": "trees/math/mathematical-physics/martinelli/4G0R.tree",
+      "title": "二维 FA-2f 的平稳感染时间常数",
+      "taxon": "Theorem",
+      "sha256": "065552428bc6d39476c072041a225ca57154c9221dda1935f51491f208d52065"
+    },
+    {
+      "id": "4G0S",
+      "path": "trees/math/mathematical-physics/martinelli/4G0S.tree",
+      "title": "广义合并分枝排斥过程的条件热浴",
+      "taxon": "Construction",
+      "sha256": "fda52bb7be81cf27de4c26a07d66222ca5434b62f134b33fb79245b35aaab2ce"
+    },
+    {
+      "id": "4G0T",
+      "path": "trees/math/mathematical-physics/martinelli/4G0T.tree",
+      "title": "自举更新族的稳定方向",
+      "taxon": "Definition",
+      "sha256": "d99bc8488cb882e22bed15b990da4caea2559270ae06aac67be19a9a2241927d"
+    },
+    {
+      "id": "4G0U",
+      "path": "trees/math/mathematical-physics/martinelli/4G0U.tree",
+      "title": "二维更新族的超临界、临界与次临界分类",
+      "taxon": "Definition",
+      "sha256": "3d41061c347a08dc7c793f8cd5401ae03de70337e4a7c8970d776a0b7500c783"
+    },
+    {
+      "id": "4G0V",
+      "path": "trees/math/mathematical-physics/martinelli/4G0V.tree",
+      "title": "East、FA 与 North-East 的稳定方向计算",
+      "taxon": "Example",
+      "sha256": "225c0843c123643301d65847116c7589effd969760ecad4c5696c96ab6d48f5d"
+    },
+    {
+      "id": "4G0W",
+      "path": "trees/math/mathematical-physics/martinelli/4G0W.tree",
+      "title": "稳定方向的困难度与半圆最优化",
+      "taxon": "Definition",
+      "sha256": "3ca01aa0be6afb8af72c774260566d2c81db6b70bdf1937f6f4307a1780c017e"
+    },
+    {
+      "id": "4G0X",
+      "path": "trees/math/mathematical-physics/martinelli/4G0X.tree",
+      "title": "超临界 KCM 的有根与无根时间尺度",
+      "taxon": "Theorem",
+      "sha256": "432f6c436b453fdc3f4a94f471b83308f509f2c40b06c755fac980a2a41680f1"
+    },
+    {
+      "id": "4G0Y",
+      "path": "trees/math/mathematical-physics/martinelli/4G0Y.tree",
+      "title": "Duarte 模型中困难度与有向时间代价",
+      "taxon": "Example",
+      "sha256": "2384e4a25437f85b6e1db601119b4c122f47781a2cd2e8530f80ea57f9090b29"
+    },
+    {
+      "id": "4G0Z",
+      "path": "trees/math/mathematical-physics/martinelli/4G0Z.tree",
+      "title": "临界 KCM 的稳定方向数决定双对数指数",
+      "taxon": "Theorem",
+      "sha256": "55c5df031077d06539975de7f8c019740141d095e0d9fb092760530f25e563ef"
+    },
+    {
+      "id": "4G10",
+      "path": "trees/math/mathematical-physics/martinelli/4G10.tree",
+      "title": "构形瓶颈给出松弛时间下界",
+      "taxon": "Theorem",
+      "sha256": "b68a4ec3c72c23125f952e241c06c05fa92fb655866b0d948664cbec7a65d547"
+    },
+    {
+      "id": "4G11",
+      "path": "trees/math/mathematical-physics/martinelli/4G11.tree",
+      "title": "合法路径把块更新的能量比较到单点更新",
+      "taxon": "Theorem",
+      "sha256": "ee067b51b457afef62a073980dc503720659035fe1c56ce1099acc9e2279f05a"
+    },
+    {
+      "id": "4G12",
+      "path": "trees/math/mathematical-physics/martinelli/4G12.tree",
+      "title": "局部约束的外层依赖条件",
+      "taxon": "Definition",
+      "sha256": "b5787100ff37c815bdafacd037399a516d017deb93bca4ef896059bc4a9360a6"
+    },
+    {
+      "id": "4G13",
+      "path": "trees/math/mathematical-physics/martinelli/4G13.tree",
+      "title": "含稀少促进块的好路径方差不等式",
+      "taxon": "Theorem",
+      "sha256": "16956e0b2e5e56c7f2d76225f239397fd6eca067d6db6e9f7c05bac137fe7c54"
+    },
+    {
+      "id": "4G14",
+      "path": "trees/math/mathematical-physics/martinelli/4G14.tree",
+      "title": "有向与双向促进块的局部方差形式",
+      "taxon": "Definition",
+      "sha256": "65df035a0ee965a6a026e919e72da8e2cc97cda67134cf695328eb66bb9863c5"
+    },
+    {
+      "id": "4G15",
+      "path": "trees/math/mathematical-physics/martinelli/4G15.tree",
+      "title": "长路径方差向局部促进的两种比较代价",
+      "taxon": "Theorem",
+      "sha256": "3c5ba691659ec5907223b532af5a4c8cbabf88a6ca7fc4cc56e3dc0c6947fe3f"
+    },
+    {
+      "id": "4G16",
+      "path": "trees/math/mathematical-physics/martinelli/4G16.tree",
+      "title": "固定促进端点下的路径方差扩展",
+      "taxon": "Theorem",
+      "sha256": "0ea9c907dd6bfe80a2eb6d12528429ef4f012db40730e306ab2040472e34b256"
+    },
+    {
+      "id": "4G17",
+      "path": "trees/math/mathematical-physics/martinelli/4G17.tree",
+      "title": "高概率约束仍可留下冻结类",
+      "taxon": "Example",
+      "sha256": "0a17e14272ff9649b348c4288a59155a0a5ab5552f1db0753c2129ce51942e4c"
+    },
+    {
+      "id": "4G18",
+      "path": "trees/math/mathematical-physics/martinelli/4G18.tree",
+      "title": "液滴稀有度与次主阶移动代价的合成",
+      "taxon": "Theorem",
+      "sha256": "7e38a83de36330fff991df4e648c358d2f1bdf128f9068f1186978ae62684cc7"
+    },
+    {
+      "id": "4G19",
+      "path": "trees/math/mathematical-physics/martinelli/4G19.tree",
+      "title": "多状态热浴向二值促进过程的投影",
+      "taxon": "Theorem",
+      "sha256": "857fddf695b495a719d3a2b11e0ef08f689bcfbcc1f4b4883e6ee257dcdb2b85"
+    },
+    {
+      "id": "icm2026-martinelli",
+      "path": "trees/references/icm2026-martinelli.tree",
+      "title": "Martinelli：Kinetically Constrained Spin Models: A Short Survey",
+      "taxon": "Reference",
+      "sha256": "c0fea66cd75775912e470d611b2da7d046a3251a756e508a1a16b5d9f8196349"
+    }
+  ],
+  "prerequisites": {
+    "4G01": [
+      "00L6",
+      "00L1"
+    ],
+    "4G02": [
+      "0A6B",
+      "0A01",
+      "00L2"
+    ],
+    "4G03": [
+      "4C02",
+      "00L4",
+      "4G02",
+      "4G01"
+    ],
+    "4G04": [
+      "4G03",
+      "4G01",
+      "4G02"
+    ],
+    "4G05": [
+      "4G02",
+      "00L2"
+    ],
+    "4G06": [
+      "4G01",
+      "004M",
+      "4G04",
+      "00L2",
+      "4G05",
+      "004S"
+    ],
+    "4G07": [
+      "4G06",
+      "4G01",
+      "004S",
+      "00Q5",
+      "4G03"
+    ],
+    "4G08": [
+      "4G03"
+    ],
+    "4G09": [
+      "4G03",
+      "4G08",
+      "4G04"
+    ],
+    "4G0A": [
+      "4G03",
+      "4G08",
+      "0A45",
+      "0F63"
+    ],
+    "4G0B": [
+      "4G03",
+      "4G0A",
+      "4G06",
+      "0A6A",
+      "4G09"
+    ],
+    "4G0C": [
+      "4G03",
+      "4G08",
+      "4G04",
+      "4G09",
+      "4G0K"
+    ],
+    "4G0D": [
+      "4G03",
+      "4G08",
+      "0A00",
+      "4G09"
+    ],
+    "4G0E": [
+      "4G03",
+      "4G08",
+      "4G0A",
+      "4G0B"
+    ],
+    "4G0F": [
+      "4G0E"
+    ],
+    "4G0G": [
+      "4G0E",
+      "4G06",
+      "4G0F"
+    ],
+    "4G0H": [
+      "4G01",
+      "4F27",
+      "4G06"
+    ],
+    "4G0I": [
+      "4G0E",
+      "4G0H",
+      "4F27"
+    ],
+    "4G0J": [
+      "4G0E",
+      "4G08",
+      "00FN"
+    ],
+    "4G0K": [
+      "4G03",
+      "4G09"
+    ],
+    "4G0L": [
+      "4G0K",
+      "4G08",
+      "4G09"
+    ],
+    "4G0M": [
+      "4G0K",
+      "4G06"
+    ],
+    "4G0N": [
+      "4G0K",
+      "4G06",
+      "4G0M"
+    ],
+    "4G0O": [
+      "4G0K",
+      "4G06"
+    ],
+    "4G0P": [
+      "4G0E",
+      "4G04"
+    ],
+    "4G0Q": [
+      "00LB",
+      "4G0K",
+      "4G01"
+    ],
+    "4G0R": [
+      "4G0K",
+      "00L9",
+      "4G08",
+      "4G0S",
+      "4G07"
+    ],
+    "4G0S": [
+      "00LB",
+      "4G01",
+      "0A00"
+    ],
+    "4G0T": [
+      "4G03",
+      "4G08"
+    ],
+    "4G0U": [
+      "4G03",
+      "4G0T",
+      "4G0A"
+    ],
+    "4G0V": [
+      "4G0T",
+      "4G0U",
+      "4G0E",
+      "4G0K"
+    ],
+    "4G0W": [
+      "4G03",
+      "4G0T",
+      "4G08",
+      "4G0U",
+      "4G0V"
+    ],
+    "4G0X": [
+      "4G0U",
+      "4G0T",
+      "4G03",
+      "4G0V",
+      "4G08"
+    ],
+    "4G0Y": [
+      "4G03",
+      "4G0T",
+      "4G0W",
+      "4G0G",
+      "4G08"
+    ],
+    "4G0Z": [
+      "4G0U",
+      "4G0W",
+      "4G03"
+    ],
+    "4G10": [
+      "4G01",
+      "4G06",
+      "4G04"
+    ],
+    "4G11": [
+      "4G01",
+      "4G04",
+      "004S",
+      "4G06"
+    ],
+    "4G12": [
+      "0A6B",
+      "4G05"
+    ],
+    "4G13": [
+      "4G02",
+      "4G12"
+    ],
+    "4G14": [
+      "4G02",
+      "4G0E",
+      "4G0K"
+    ],
+    "4G15": [
+      "4G13",
+      "4G14",
+      "4G16",
+      "4G11"
+    ],
+    "4G16": [
+      "4G06",
+      "4G02",
+      "4G09"
+    ],
+    "4G17": [
+      "4G03",
+      "4G04",
+      "4G06",
+      "4G12"
+    ],
+    "4G18": [
+      "4G11",
+      "4G0R"
+    ],
+    "4G19": [
+      "4G03",
+      "4G02"
+    ]
+  },
+  "atomic_questions": {
+    "4G01": "有限跳跃率如何产生转移半群？",
+    "4G02": "只平均一个坐标时，热浴和方差分别是什么？",
+    "4G03": "邻居空位如何限制自旋更新？",
+    "4G04": "约束热浴为何仍以乘积测度为可逆平衡？",
+    "4G05": "独立坐标的单点方差如何控制总方差？",
+    "4G06": "松弛时间为什么等于最优方差控制常数？",
+    "4G07": "谱隙怎样给出平稳命中时间的指数尾？",
+    "4G08": "单调自举规则最终能感染哪些点？",
+    "4G09": "有限体积的合法通信类如何由自举闭包识别？",
+    "4G0A": "填满阈值与感染时间尾阈值有何关系？",
+    "4G0B": "自举阈值如何决定乘积平衡下的遍历区间？",
+    "4G0C": "哪些条件保证可逆平稳态只有乘积平衡？",
+    "4G0D": "一般平稳态能否按自举闭包分解？",
+    "4G0E": "East 的单向促进为何仍允许任意正密度的自举填满？",
+    "4G0F": "一维 East 为什么出现对数级空位障碍？",
+    "4G0G": "East 松弛时间为何具有平方对数主阶？",
+    "4G0H": "混合截断怎样表述趋向平衡的陡降？",
+    "4G0I": "East 方盒在哪些条件下发生混合截断？",
+    "4G0J": "East 感染区域是否具有确定的线性增长形状？",
+    "4G0K": "FA 的 k 空位规则怎样区分单空位移动与合作移动？",
+    "4G0L": "二维 FA-2f 的有限空位团为什么无法独立远行？",
+    "4G0M": "FA-1f 的松弛尺度如何依赖维数？",
+    "4G0N": "二维 FA-1f 是否真正需要对数修正？",
+    "4G0O": "FA-1f 的非平衡初态何时趋向乘积平衡？",
+    "4G0P": "一维 East 的冻结半线如何产生全部平稳态？",
+    "4G0Q": "BABP 的有限图自对偶函数为何取 (-p/q) 的交集次方？",
+    "4G0R": "二维 FA-2f 的平稳感染时间为何出现 pi^2/9？",
+    "4G0S": "g-CBSEP 如何同时表示交换、分枝与合并？",
+    "4G0T": "怎样从更新规则判断一个方向能否自行生长？",
+    "4G0U": "稳定方向如何给出二维更新族的三分法？",
+    "4G0V": "典型模型的稳定方向集合具体长什么样？",
+    "4G0W": "一个稳定方向需要多少额外种子才能继续生长？",
+    "4G0X": "超临界模型为何仍有两种截然不同的低温时间尺度？",
+    "4G0Y": "Duarte 的有向液滴如何把双对数指数加倍？",
+    "4G0Z": "临界族的有限或无穷稳定方向如何决定双对数指数？",
+    "4G10": "构形空间的瓶颈如何下界松弛时间？",
+    "4G11": "如何把块更新方差严谨比较到合法单点更新？",
+    "4G12": "约束的外层依赖怎样排除相互冻结？",
+    "4G13": "高概率好环境中的稀少促进块怎样控制总方差？",
+    "4G14": "有向和双向促进分别对应哪些局部方差项？",
+    "4G15": "长好路径怎样转化为有向或双向局部更新？",
+    "4G16": "固定促进端点时怎样把单点方差扩展到整条路径？",
+    "4G17": "每个约束都很可能满足，为何仍可能没有谱隙？",
+    "4G18": "次主阶液滴移动代价为何不改变主指数常数？",
+    "4G19": "多状态块热浴什么时候能精确投影成二值 KCM？"
+  },
+  "navigation_only": [
+    "4G00",
+    "icm2026-martinelli"
+  ],
+  "reused_pages": [
+    "004M",
+    "004S",
+    "00FN",
+    "00L1",
+    "00L2",
+    "00L4",
+    "00L6",
+    "00L9",
+    "00LB",
+    "00Q5",
+    "0A00",
+    "0A01",
+    "0A45",
+    "0A6A",
+    "0A6B",
+    "0F63",
+    "4C02",
+    "4F27"
+  ],
+  "terminology_evidence": {
+    "method": "Whole-forest title and content searches for Markov generators, heat-bath updates, conditional variance, tensorization, spectral gaps, Poincare inequalities, bootstrap percolation, KCM/East/FA, stable directions, Poisson clocks, coupling and both Chinese TV terms. Selected prerequisite bodies were read; no generic definition was taken from an outline. Existing finite-probability definitions reused.",
+    "canonical_definition_repairs": [
+      "4G07 links 004S at the first Cauchy–Schwarz use; 4G06 uses 004M for inner product and gives the weighted norm.",
+      "4G0H links the cross-branch neutral finite-probability TV definition 4F27. It recalls the formula as notation and does not duplicate the elementary TV proofs.",
+      "全变差距离 follows the majority existing forest terminology (0HT4/0GKK; 总变差 in 300C is a synonym). Shared 4F27 text remains Mahadev/parent-owned.",
+      "MART-R1: 4G0J links existing 00FN rather than recreating Hausdorff distance; nonempty compact domains stated.",
+      "MART-R2: 4G0I sends the named 全变差距离 definition to 4F27 and retains 4G0H only for 最坏初态距离."
+    ],
+    "external_terminology_site": "Parent reports scoped Banana-space searches for 全变差 and 总变差 yielded no results. No verified Banana correspondence or independent external terminology match is claimed."
+  },
+  "source_records": [
+    {
+      "id": "martinelli-icm2026",
+      "authors": [
+        "Fabio Martinelli"
+      ],
+      "title": "Kinetically Constrained Spin Models: A Short Survey",
+      "doi": "10.1137/25M180425X",
+      "pages": "497–515",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M180425X",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M180425X",
+      "license": "CC BY 4.0",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1–4, every displayed formula and both figure captions, acknowledgments, footnotes and full bibliography [1]–[65], in overlapping section-sized reads. Body lines 87–553; footnotes 557–573; references 574–929; metadata/license 932–976. No full PDF or figure-pixel inspection. The third-party Figure 3.2 is not reproduced.",
+      "proof_boundary": "The survey's quoted research theorems are not treated as fully proved by their heuristic discussions. Local derivations and imported statements are recorded for each atomic ID.",
+      "review_recheck": "Before first freeze, exact publisher §3.1 Theorem 3.4, §3.2 Theorem 3.15, §4 Propositions 4.4–4.5 and all shifted coordinates in (4.5)–(4.6) were rechecked; publication/license metadata reconfirmed. Exact-title arXiv searches plus an arXiv API title-and-author query did not locate an exact arXiv edition of this report; six older similarly titled results were excluded. This is a search outcome, not proof no such edition exists. Institutional repository handle 11590/521378 was found in search metadata only, not used as a read full-text source."
+    },
+    {
+      "id": "mst-one-facilitated-v1",
+      "authors": [
+        "Fabio Martinelli",
+        "Assaf Shapira",
+        "Cristina Toninelli"
+      ],
+      "title": "Long time behaviour of one facilitated kinetically constrained models: results and open problems",
+      "version": "arXiv:2510.20461v1",
+      "version_date": "2025-10-23",
+      "url": "https://arxiv.org/abs/2510.20461v1",
+      "version_url": "https://arxiv.org/html/2510.20461v1",
+      "html": "https://arxiv.org/html/2510.20461v1",
+      "license": "CC BY 4.0",
+      "actual_reading": "Abstract and §§1.1–1.4; §2 main statements through Conjecture 3 (HTML lines 41–236), including Corollary 2.9 and Theorems 2.10/2.12. Selected §2.1 entropy-proof paragraphs and the start of §2.2 were read through approximately line 340; these sections and the whole paper were not read in full.",
+      "proof_boundary": "Used for exact normalization, stationary-state theorem contracts and dimension/tail hypotheses of conjectures. Deep proofs remain cited. This is a separate paper, not an arXiv version of the assigned report."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Finite-state probability/energy identities, elementary closure and geometry arguments, finite-graph duality and conditional log-scale calculations are proved in the authored notes; existing forest definitions supply the prerequisite vocabulary.",
+      "proof_boundary": "The finite numerical and exhaustive checks corroborate these formulas; they do not replace proofs or establish infinite-volume research results."
+    }
+  ],
+  "source_clarifications": [
+    {
+      "location": "Version binding",
+      "resolution": "Primary source is the DOI-bound publisher edition, published 2026-07-13 and read 2026-10-22. No exact arXiv edition located. The separate 2510.20461v1 supplement is not relabeled as this report."
+    },
+    {
+      "location": "§1.2 infinite versus finite components",
+      "resolution": "4G09 proves closure/communication equivalence only in finite volume with fully occupied exterior. It does not identify infinite configurations differing at infinitely many sites by finite flip sequences."
+    },
+    {
+      "location": "Conjecture 1.6 and supplement Conjecture 3",
+      "resolution": "4G0D separates ordinary positive-probability conditioning from unspecified zero-probability closure components. A regular conditional law only defined mu-almost everywhere cannot canonically determine arbitrary stationary mixing measures."
+    },
+    {
+      "location": "Conjecture 2.7",
+      "resolution": "4G0J uses thickened lattice cells, includes the origin, and proves fixed-time almost-sure nonempty compactness by a Poisson path-count bound. The limiting K is explicitly nonempty compact. Hausdorff distance is reused from 00FN; the shape assertion remains the weaker Hausdorff-in-probability conjecture, not the source's stronger inclusion statement."
+    },
+    {
+      "location": "Conjecture 2.11",
+      "resolution": "4G0O pins exponential convergence with exponential empty-interval tails to the one-dimensional Conjecture 2 in the fixed supplement."
+    },
+    {
+      "location": "§3.2 Duarte and Theorem 3.15",
+      "resolution": "Duarte log^4/q^2 estimate is stated for the stationary mean as in the source passage. General critical universality is used only for its high-probability double-log exponent, without upgrading one source's mean estimate or inventing seven-class log factors."
+    },
+    {
+      "location": "§2.3 final discussion",
+      "resolution": "Sharp pi^2/9 stationary hitting time does not determine the sharp relaxation-time constant. 4G07 preserves the one-sided comparison."
+    },
+    {
+      "location": "§4 general exterior inequality",
+      "resolution": "4G12 defines the exterior condition without a vague universal smallness theorem; 4G13 and 4G15 give the precise smallness hypothesis from the usable Propositions 4.4–4.5."
+    },
+    {
+      "location": "Proposition 4.5 comparison constants",
+      "resolution": "Both the formulas and explanation in 4G15 assert upper bounds only. No optimality or matching lower bound for the comparison cost is inferred."
+    },
+    {
+      "location": "§1.1 backward graphical construction",
+      "resolution": "4G03 includes the updated coordinate's pre-ring value when a ring is illegal. With M constraint neighbors the backward branching bound is M+1, retaining the factorial ordered-time bound."
+    },
+    {
+      "location": "§3 standalone probability conventions",
+      "resolution": "4G0W/4G0X/4G0Y each locally fix iid vacancy density q through mu_q=Bernoulli(1-q) product and the low-density limit. Discrete bootstrap infection and continuous KCM hitting times remain separate."
+    }
+  ],
+  "source_errata": [
+    {
+      "source": "martinelli-icm2026",
+      "location": "§1.2 Dirichlet-form display",
+      "status": "normalization-inconsistency-resolved-by-local-proof",
+      "issue": "The conditional-variance sum carries an extra 1/2 relative to the stated heat-bath generator.",
+      "evidence": "4G04 expands -mu(fLf) directly; supplement equation (1.6) has the conditional-variance sum without 1/2.",
+      "resolution": "D=sum_x mu(c_x Var_x); the half belongs to the oriented-edge squared-difference form.",
+      "notes": [
+        "4G04",
+        "4G06"
+      ]
+    },
+    {
+      "source": "martinelli-icm2026",
+      "location": "§2.1 stationary measures",
+      "status": "object-confusion-resolved-by-primary-supplement",
+      "issue": "The point mass at the fully empty configuration is listed as if it were stationary for East.",
+      "evidence": "L omega_0(allzero)=p>0 in 4G0P; supplement Theorem 2.12 identifies the fully unblocked component's stationary law as the Bernoulli product law.",
+      "resolution": "Use the product law, the fully occupied point mass, and the explicit leftmost-vacancy laws; import only the classification's exhaustiveness.",
+      "notes": [
+        "4G0P"
+      ]
+    },
+    {
+      "source": "martinelli-icm2026",
+      "location": "Theorem 3.4(1)",
+      "status": "printed-general-formula-not-imported",
+      "issue": "The printed exponent contains log^2(1/q)/q, inconsistent with the East example and Theorem 2.2.",
+      "evidence": "Theorem 3.4 explicitly includes East and says the analogous scale holds for relaxation, while Theorem 2.2 gives square-log relaxation.",
+      "resolution": "Do not state a corrected general one-dimensional universality theorem without checking the cited monograph. Retain the exact East theorem and stable-direction definition.",
+      "notes": [
+        "4G0G",
+        "4G0T"
+      ]
+    },
+    {
+      "source": "martinelli-icm2026",
+      "location": "§2.1 energy/entropy heuristic after (2.1)",
+      "status": "index-and-counting-convention-clarified",
+      "issue": "The relevant count is indexed by the vacancy budget n of order log_2(1/q), not by the spacing 1/q. Exact small-n counts also depend on whether the initial empty set is included.",
+      "evidence": "4G0F defines V_n including the initial state and quotes only the logarithmic leading counting bound.",
+      "resolution": "Keep ell(n)=2^n-1 as cited; use log|V_n|≤(n^2/2)log 2+O(n log(n+1)). No incorrect exact finite-n counting bound asserted.",
+      "notes": [
+        "4G0F",
+        "4G0G"
+      ]
+    },
+    {
+      "source": "martinelli-icm2026",
+      "location": "§2.3 mobile-droplet heuristic versus (2.6)",
+      "status": "heuristic-scale-not-imported",
+      "issue": "One qualitative sentence prints a sqrt(q) exponent where the surrounding inverse-root scale diverges.",
+      "evidence": "The precise displayed conditional Poincare estimate (2.6) gives exp(O(log^3(1/q)/sqrt(q))).",
+      "resolution": "4G18 uses only that explicit quantitative input and proves its subleading status algebraically.",
+      "notes": [
+        "4G18"
+      ]
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§1.1 construction and BP",
+      "notes": [
+        "4G01",
+        "4G02",
+        "4G03",
+        "4G08",
+        "4G0A",
+        "4G19"
+      ],
+      "scope": "Clock construction, finite generator background, update families, closure thresholds and exact finite multistate projection."
+    },
+    {
+      "section": "§1.2 relaxation and stationary measures",
+      "notes": [
+        "4G04",
+        "4G05",
+        "4G06",
+        "4G07",
+        "4G09",
+        "4G0B",
+        "4G0C",
+        "4G0D"
+      ],
+      "scope": "Correct energy normalization, accessible probability/semigroup dependencies, finite communication, quoted ergodicity/uniqueness and component conjecture."
+    },
+    {
+      "section": "§2.1 East",
+      "notes": [
+        "4G0E",
+        "4G0F",
+        "4G0G",
+        "4G0H",
+        "4G0I",
+        "4G0J",
+        "4G0P"
+      ],
+      "scope": "Oriented rule, barriers, sharp relaxation, finite-box cutoff, explicitly conjectural shape and supplement-corrected stationary measures."
+    },
+    {
+      "section": "§2.2 FA-1f and §2.2.1 duality",
+      "notes": [
+        "4G0K",
+        "4G0M",
+        "4G0N",
+        "4G0O",
+        "4G0Q"
+      ],
+      "scope": "Single-vacancy mobility, dimension-dependent relaxation, open logarithmic/nonequilibrium problems and a complete finite-graph BABP duality calculation."
+    },
+    {
+      "section": "§2.3 FA-2f",
+      "notes": [
+        "4G0L",
+        "4G0R",
+        "4G0S",
+        "4G18"
+      ],
+      "scope": "Cooperative obstruction, sharp stationary hitting theorem, generalized CBSEP and conditional subleading-cost lemma; full matryoshka proof remains external."
+    },
+    {
+      "section": "§3.1 and §3.2 universality",
+      "notes": [
+        "4G0T",
+        "4G0U",
+        "4G0V",
+        "4G0W",
+        "4G0X",
+        "4G0Y",
+        "4G0Z"
+      ],
+      "scope": "Stable directions, half-circle classification, difficulty, concrete calculations, rooted dichotomy and critical double-log exponent. General 1D numerical typo and seven-class refinement are not silently filled in."
+    },
+    {
+      "section": "§4 Poincare tools",
+      "notes": [
+        "4G10",
+        "4G11",
+        "4G12",
+        "4G13",
+        "4G14",
+        "4G15",
+        "4G16",
+        "4G17"
+      ],
+      "scope": "Finite bottleneck and canonical-path proofs, exterior definition/counterexample, exact Propositions 4.4–4.5 with all event/variance conventions, and a complete finite deterministic-path reduction."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "General one-dimensional universality",
+      "scope": "Stable-direction definition and East/FA examples covered. Do not reproduce Theorem 3.4(1)'s printed extra 1/q in the exponent; a complete corrected general statement awaits checking the cited monograph."
+    },
+    {
+      "branch": "Fine critical classification and higher dimensions",
+      "scope": "4G0Z records the exact double-log exponent consequence only. Seven critical classes and their logarithmic corrections, arbitrary d≥3 universality and sharp subcritical thresholds not expanded."
+    },
+    {
+      "branch": "Nonlocal constraint example",
+      "scope": "Theorem 4.2's infinite percolation-cluster constraint and its approximation argument are not developed; the authored construction uses finite-range constraints."
+    },
+    {
+      "branch": "Open stationary and nonequilibrium questions",
+      "scope": "Threshold equality, general closure-component stationary decomposition, East shape, two-dimensional FA-1f logarithmic correction and FA-1f nonequilibrium convergence remain explicitly conjectural."
+    },
+    {
+      "branch": "Sharp FA-2f relaxation",
+      "scope": "Sharp stationary hitting-time result is represented; equality of the leading relaxation-time constant with pi^2/9 is not asserted."
+    },
+    {
+      "branch": "Applications outside spin Glauber dynamics",
+      "scope": "Kob–Andersen lattice gases, upper-triangular matrix walks, surface dynamics and quantum-spin-chain applications in the introduction are contextual, not additional developed branches."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4G0B",
+        "4G0C",
+        "4G0P"
+      ],
+      "source": "martinelli-icm2026; mst-one-facilitated-v1",
+      "scope": "Infinite-volume ergodicity, invariant-measure entropy/finite-window arguments and the exhaustiveness of stationary-state classifications are cited. Local detailed balance and candidate verification are separately proved."
+    },
+    {
+      "notes": [
+        "4G0F",
+        "4G0G",
+        "4G0I"
+      ],
+      "source": "martinelli-icm2026",
+      "scope": "General East combinatorial barrier/counting, sharp low-temperature gap and finite-box cutoff research proofs are not reconstructed."
+    },
+    {
+      "notes": [
+        "4G0M",
+        "4G0R",
+        "4G18"
+      ],
+      "source": "martinelli-icm2026",
+      "scope": "FA-1f sharp dimension-dependent gap, FA-2f droplet rarity and multiscale conditional Poincare/matryoshka proofs remain cited inputs; the log-scale composition lemma is local and conditional."
+    },
+    {
+      "notes": [
+        "4G0U",
+        "4G0W",
+        "4G0X",
+        "4G0Y",
+        "4G0Z"
+      ],
+      "source": "martinelli-icm2026",
+      "scope": "General BP threshold/difficulty theorems and two-dimensional KCM universality, Duarte bottlenecks and hierarchical liquid-droplet motion are not reproved. Explicit stable-direction examples are local."
+    },
+    {
+      "notes": [
+        "4G13",
+        "4G15"
+      ],
+      "source": "martinelli-icm2026",
+      "scope": "Propositions 4.4–4.5, including conditional random-path selection, renormalization and congestion control, are cited with exact usable assumptions; only finite deterministic reductions and abstract path comparison are proved locally."
+    },
+    {
+      "notes": [
+        "4G07"
+      ],
+      "source": "martinelli-icm2026",
+      "scope": "The infinite-volume stationary hitting bound is quoted from (1.4); the complete killed-semigroup argument supplied in the note has finite state space."
+    }
+  ],
+  "review_responses": [
+    {
+      "reviewer": "parent-draft-spot-checks",
+      "status": "addressed-before-first-freeze",
+      "items": [
+        "4G07 has first-use 004S link and prerequisite; 4G01 and 4G06 explicitly provide matrix exponential and weighted L2 notation.",
+        "4G0H uses 4F27, not 4F09 or 4F28, and retains 全变差距离 as canonical label.",
+        "report.remaining_branches and report.unexpanded_deep_proofs are arrays; source_errata is a root-level array."
+      ]
+    },
+    {
+      "reviewer": "independent-reviewer",
+      "status": "read-only-review-started-pending-report",
+      "items": [
+        "No independent pass or source/proof acceptance is claimed."
+      ]
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R1",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G0J"
+      ],
+      "repair": "Removed redundant Hausdorff formula; linked and registered 00FN, fixed nonempty compact K, and gave a local Poisson path-count verification of the random set's fixed-time nonempty compact domain. Preserved weaker-shape-conjecture boundary."
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R2",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G0I"
+      ],
+      "repair": "全变差距离 now links 4F27; 最坏初态距离 links 4G0H; both genuine prerequisites retained."
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R3",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G0M"
+      ],
+      "repair": "Wrote the diffusive heuristic explicitly as (q^(-1/d))^2/q=q^(-(1+2/d)); q is the jump-rate/diffusivity scale, not a ballistic speed."
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R4",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G15"
+      ],
+      "repair": "Changed prose to at-most square-log logarithmic comparison cost and at-most polynomial symmetric comparison cost, matching the stated inequalities."
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R5",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G0D"
+      ],
+      "repair": "Locally fixed integer d≥1 and 0<q<1 before the update family and equilibrium product measure."
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R6",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G03"
+      ],
+      "repair": "Included the retained pre-ring value at illegal rings as a self query. Defined M by the union of constraint neighbors and used branching M+1 in the factorial time-ordering bound."
+    },
+    {
+      "reviewer": "Independent mathematical reviewer",
+      "finding_id": "MART-R7",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4G0W",
+        "4G0X",
+        "4G0Y"
+      ],
+      "repair": "Bound 0<q<1, iid vacancy density and mu_q locally on all three pages. Defined the applicable BP/KCM infection or hitting times, retained their discrete/continuous distinction, and fixed q→0. Added direct BP prerequisite links in 4G0X and 4G0Y."
+    }
+  ],
+  "cross_topic_requests": [
+    {
+      "target": "parent-integration",
+      "request": "Register the owned 4G IDs and their prerequisites from this packet; no shared files were edited. 4G01/02/04/05/06 are reusable finite-probability foundations authored in this branch. Keep shared TV 4F27 in Mahadev ownership and merge its own prerequisite edges before global DAG verification.",
+      "status": "pending-parent-integration"
+    }
+  ],
+  "validation": {
+    "source_links": "47 owned tree files checked for local targets and links outside formulas; no missing local target or editorial-rule error.",
+    "format": "normalizeFormat checked only on owned 4G trees and reference; no remaining differences.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.8",
+      "count": 802,
+      "errors": 0,
+      "scope": "All source formula groups in 47 owned trees; brace balance also checked. Not a Forester build or rendered-page check."
+    },
+    "elementary_checks": {
+      "detailedBalanceCases": 288,
+      "tensorCases": 9,
+      "dualityCases": 4092,
+      "eastCases": 33,
+      "directionCases": 240,
+      "errors": 0,
+      "scope": "Finite heat-bath detailed balance/energy normalization and tensorization; finite graph BABP generator duality; East cap-1/2/3 reachability; explicit stable-direction truth tables."
+    },
+    "prerequisite_check": "Passed: 47 owned tree hashes and canonical paths; 45 atomic question/proof/source records; 145 prerequisites all appear as body links to knowledge nodes; 160 recursively visited nodes in the current shared-audit-plus-local DAG, with no cycles. Overview directly reaches all 45 atoms. The concurrently authored 4F27 exists and is linked; its separate branch prerequisite registration must be merged by the parent before the final global DAG audit.",
+    "build": "Not run; parent owns shared integration/build. No publication claim.",
+    "independent_review": "Read the reviewer-owned needs_revision report and its later update adding MART-R6 and MART-R7. All seven author repairs are recorded; frozen for independent recheck. No reviewer pass claimed. Review JSON was not edited.",
+    "review_input": {
+      "path": "research/mathematical-physics-martinelli-review.json",
+      "sha256": "7bae1394518e05e354ee57aa1af43c0722ba15d03f9246364704183e3bd0b961",
+      "status": "Read-only interim needs_revision snapshot with MART-R1 through MART-R7. All seven addressed by author; awaiting reviewer recheck. Further reviewer-owned notes are preserved."
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-22",
+    "paths": [
+      "trees/math/mathematical-physics/martinelli/4G*.tree",
+      "trees/references/icm2026-martinelli.tree",
+      "research/mathematical-physics-martinelli-packet.json"
+    ],
+    "hashes": "notes[].sha256 records each owned tree; packet digest will be sent separately to avoid self-hashing.",
+    "mutation_boundary": "Only owned new trees/reference/packet. After freeze, edits only in response to explicitly requested reviewer repairs; titles and IDs stable. Shared dependencies remain parent/other-author owned.",
+    "revision": 2,
+    "previous_packet_sha256": "64af367a51aedc254cb0cf914545abca1bdcca5e92a484671e3a4ea15d965402"
+  }
+}

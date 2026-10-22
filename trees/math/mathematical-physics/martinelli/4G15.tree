@@ -1,0 +1,15 @@
+\title{长路径方差向局部促进的两种比较代价}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Martinelli](icm2026-martinelli)，命题 4.5、式 (4.7)}
+
+\p{设 #{S} 为有限集合，#{\rho(s)>0} 为概率权，#{\nu=\rho^{\otimes\mathbb Z^2}}。取 #{\varnothing\ne G_2\subseteq G_1\subseteq S}，令 #{p_i=\rho(G_i)}，且 #{0<p_2<1}。事件 #{A_x} 使用[好路径不等式](4G13)中的定义：从 #{x+e_2} 出发、含 #{\lfloor p_2^{-2}\rfloor} 个顶点的字典序最小好路径含有促进点，并且 #{\omega_{x+e_1}\in G_1}；好路径及左右缓冲点的状态均须在 #{G_1} 中。#{D_x^\pm,E_x^\pm,D_x,E_x} 是同一组数据对应的[局部方差形式](4G14)。报告命题 4.5 给出：存在 #{\delta>0} 和函数 #{T_{\to},T_{\leftrightarrow}:(0,1)\to(0,\infty)}，满足}
+##{T_{\to}(r)\leq\exp(C(\log(1/r))^2),\qquad T_{\leftrightarrow}(r)\leq r^{-C}}
+\p{对充分小 #{r} 成立，其中 #{C} 为固定常数。若 #{\max\{p_2,(1-p_1)(\log(1/p_2))^2\}\leq\delta}，则对每个局部 #{f}，}
+##{\sum_x\nu(\mathbf 1_{A_x}\operatorname{Var}_{\rho_x}(f))
+\leq T_{\to}(p_2)\sum_x(D_x^+(f)+E_x^+(f)),}
+##{\sum_x\nu(\mathbf 1_{A_x}\operatorname{Var}_{\rho_x}(f))
+\leq T_{\leftrightarrow}(p_2)\sum_x(D_x(f)+E_x(f)).}
+\p{两式同时成立，应用时选择能由原始合法更新实现的一种。第一种比较代价的对数至多为 #{(\log(1/p_2))^2} 的固定常数倍，第二种比较代价至多为 #{1/p_2} 的固定次幂。其证明将路径上的状态按好事件条件化，并利用一维有向或双向辅助链；[固定路径上的方差扩展](4G16)给出其中可直接验证的步骤。}
+\p{最后还须用[合法路径能量比较](4G11)把局部块方差控制到原模型的单点 Dirichlet 形式。若所得比较常数为 #{A}，再结合好路径不等式便得 #{T_{\mathrm{rel}}\leq 4A T_{\to}(p_2)} 或 #{4A T_{\leftrightarrow}(p_2)}。随机选路、条件化及重复计数控制为本命题引用的研究证明内容。}

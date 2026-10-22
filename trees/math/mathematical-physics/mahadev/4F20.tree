@@ -1,0 +1,12 @@
+\title{原像寄存器上的相位回踢}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§4.3.2，式 (4.14)](icm2026-mahadev)，基向量恒等式}
+
+\p{设 #{z_0,z_1,d\in\{0,1\}^w}，#{v_0,v_1} 属于同一有限维辅助空间。对向量 #{|\Psi\rangle=|0,z_0\rangle\otimes v_0+|1,z_1\rangle\otimes v_1}，记 #{Z^d=Z^{d_1}\otimes\cdots\otimes Z^{d_w}}，其中 #{Z|j\rangle=(-1)^j|j\rangle}。则}
+##{(I\otimes Z^d\otimes I_E)|\Psi\rangle
+=(-1)^{d\cdot z_0}
+(Z^{d\cdot(z_0\oplus z_1)}\otimes I\otimes I_E)|\Psi\rangle.}
+\p{\strong{证明。}左边第 #{b} 支乘以 #{(-1)^{d\cdot z_b}}。右边第零支乘以 #{(-1)^{d\cdot z_0}}，第一支乘以 #{(-1)^{d\cdot z_0+d\cdot(z_0\oplus z_1)}=(-1)^{d\cdot z_1}}，故逐支相等。点积的指数均在 #{\mathbb F_2} 中计算。归一化时，共同因子 #{(-1)^{d\cdot z_0}} 只是[全局相位](00JZ)。}
+\p{对[爪承诺逻辑态](4F1E)，取 #{z_b=J(x_b)}，原像寄存器上的可描述相位便成为逻辑比特上的 #{Z^{d\cdot(J(x_0)\oplus J(x_1))}}。这个代数恒等式不要求该位均匀，也不证明它对攻击者隐藏；隐藏性属于[硬核比特假设](4F14)。}

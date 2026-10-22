@@ -1,0 +1,1882 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "prefix": "4F",
+    "outline": "4F00",
+    "reference": "icm2026-mahadev",
+    "doi": "10.1137/25M1811549",
+    "speaker": "Urmila Mahadev",
+    "title": "Classical Control of a Quantum System",
+    "pages": "483–496",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1811549",
+    "version_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1811549",
+    "license": "CC BY 4.0",
+    "question": "经典验证者怎样借助 LWE 与两种测量基，检验量子性并约束单个高效量子证明者的计算结果？",
+    "reading_scope": "mahadev-icm2026: Entire publisher HTML mathematical body §§1–5 and Appendix A, all displayed formulas, acknowledgments, footnotes 1–5 and bibliography [1]–[15], by overlapping retrievals (HTML lines 94–513). Publisher metadata lines 514–560 and PDF first-page bibliographic/license text read; PDF page-1 introduction text also checked. No complete PDF pixel inspection. Repair recheck: ICM abstract and §4, including §4.3.2 final paragraphs, re-read for F01. The LWE verification result is retained as an attributed primary report theorem, not replaced by a newly invented encoding premise.\nbcmvv-v4: Version metadata and §§2.1–2.3 preliminaries, including Definition 2.5 and trapdoor Theorem 2.6; Definition 3.1 in full (all structural and adaptive-hardcore clauses); §4 parameter conditions (A.1)–(A.4), Theorem 4.1 and §§4.1–4.2 plus §4.3 through HTML line 549; selected §5 protocol passages. §4.3 (23)–(26) and footnote 3 additionally read during repair. Full §4.4 and the full paper were not read. Repair recheck: §4.3 equations (23)–(26) and footnote 3 checked for finite-precision Gaussian preparation; displayed square-root states retained as ideal targets, not exact finite-gate outputs. Revision 3 re-read Definition 2.5 (HTML lines 318–324): LWE hardness explicitly permits polynomial quantum advice depending on problem parameters. 4F24 adopts this stronger model for all input sequences and matches the abstract primitive-security convention.\nmahadev-verification-v3: Version metadata; Definitions 4.1–4.4; §5.1 commitment calculations, complete Protocol 5.1, honest strategy and notation through §5.3 (HTML approximately 527–802); Lemma 6.12, Claims 6.13–6.14 and combining proof, plus §6.4.1 through about line 1297; §7 in full; §8.1 parameters/Theorem 8.1; §8.4 Lemmas 8.4–8.6, Claim 8.7 and its proof (approximately 1547–1606). Full §6 and full paper were not read. Publisher journal page retrieval was unsuccessful; claims are bound to arXiv v3. Repair recheck: Definitions 4.2–4.4 and §5.1 re-read; arXiv abstract/history at https://arxiv.org/abs/1804.01082 checked on 2026-10-22 and still lists v3 (2023-12-08). Restricted searches for erratum/correction on arxiv.org, epubs.siam.org and eprint.iacr.org returned no result. Publisher journal full page again inaccessible. No exact newer repaired source verified; not a claim that none exists.\nlocal-calculations: Not a bibliographic source. Finite linear algebra, probability, matrix and Fourier calculations are supplied in the notes, using existing forest foundations.",
+    "proof_scope": {
+      "4F01": {
+        "status": "definition",
+        "scope": "量子寄存器、计算基、Born 概率、有限集合编码与酉变换的定义。"
+      },
+      "4F02": {
+        "status": "definition-and-local-proof",
+        "scope": "迹一半正定密度矩阵、混合表示、投影概率与归一化；I/2 修正。"
+      },
+      "4F03": {
+        "status": "local-proof",
+        "scope": "部分测量条件态、合法支撑分解及平方范数扰动界。"
+      },
+      "4F04": {
+        "status": "local-proof",
+        "scope": "Hadamard 张量积的二进制 Fourier 展开与单比特概率。"
+      },
+      "4F05": {
+        "status": "local-proof",
+        "scope": "Pauli 反交换、带正确次序的 H 共轭、迹正交展开。"
+      },
+      "4F06": {
+        "status": "construction-and-local-proof",
+        "scope": "可逆求值、反算辅助位及模线性 Gaussian 态的正确归一化；Gaussian 振幅的高效制备作为额外输入。"
+      },
+      "4F07": {
+        "status": "definition",
+        "scope": "PPT、一致 QPT、BQP/BPP、安全参数及参数依赖量子建议模型。"
+      },
+      "4F08": {
+        "status": "definition-and-local-proof",
+        "scope": "可忽略函数和计算不可区分的量词，公共高效后处理与多项式混合。"
+      },
+      "4F09": {
+        "status": "local-proof",
+        "scope": "有限分布平方 Hellinger、全变差比较与平方根振幅距离；全变差定义独立复用 4F27。"
+      },
+      "4F0A": {
+        "status": "definition",
+        "scope": "模整数中心代表、截断 Gaussian 及乘积立方支撑。"
+      },
+      "4F0B": {
+        "status": "definition",
+        "scope": "明确 n,m,q、秘密分布、误差族及攻击模型的判定 LWE；不混同搜索或二进制秘密归约。"
+      },
+      "4F0C": {
+        "status": "local-proof",
+        "scope": "素数域随机矩阵列秩失败概率 <q^(n-m)，由逐行均匀和并集界证明。"
+      },
+      "4F0D": {
+        "status": "conditional-local-proof",
+        "scope": "给定有理数域可逆整数 T，且 ||Te||inf<q/2 时精确恢复；不构造陷门生成器。"
+      },
+      "4F0E": {
+        "status": "local-proof",
+        "scope": "四个 XOR 条件的矛盾和随机策略的凸平均，经典胜率恰为 3/4。"
+      },
+      "4F0F": {
+        "status": "local-proof",
+        "scope": "有限维二值投影 CHSH 的 Tsirelson 上界和 Bell 态达到；不证明鲁棒刚性。"
+      },
+      "4F10": {
+        "status": "construction-and-local-proof",
+        "scope": "单射 A 的无噪声两支理想目标态及公开 y 的均匀分布；未声称任意有限门集精确制备奇数支撑均匀态。"
+      },
+      "4F11": {
+        "status": "conditional-local-proof",
+        "scope": "归一化后态范数差平方等于 h²；理想支撑不交时的条件两支态与整体实验误差。"
+      },
+      "4F12": {
+        "status": "local-proof",
+        "scope": "任意二进制编码两支态的 Hadamard 奇偶约束，掩码均匀性及 ceil(log2 q)。"
+      },
+      "4F13": {
+        "status": "definition-with-approximate-implementation-convention",
+        "scope": "NTCF 结构条件保留精确 f/f' 分布；平方根态是理想目标。有限门实现要求对控制、输出、工作寄存器及任意纠缠辅助空间统一可忽略范数误差，理想工作寄存器为零；实现误差进入后续测量损失。"
+      },
+      "4F14": {
+        "status": "definition",
+        "scope": "好掩码与正确/错误无条件质量差的完整自适应量词。"
+      },
+      "4F15": {
+        "status": "cited-theorem-with-implementation-convention",
+        "scope": "BCMVV Theorem 4.1 的 A.1–A.4 参数和量子建议 LWE 模型；§4.3 (23)–(26)、脚注 3 的有限精度 Gaussian 制备与精确分布公式分开。陷门和自适应归约仍是外部输入。"
+      },
+      "4F16": {
+        "status": "local-proof-from-security-assumption",
+        "scope": "抽象两挑战协议；诚实 μ_c 同时计入 f/f' 误差与有限门相干制备误差；对每个固定经典证明者存在 μ_P，配置复制提取得到 3/4+μ_P。精确 f' 目标的测试轮概率一与实际实现的 1-negl 区分。"
+      },
+      "4F17": {
+        "status": "local-counterexample",
+        "scope": "零掩码以及 x0=2、非零末两位 11 的坏掩码反例。"
+      },
+      "4F18": {
+        "status": "local-proof-and-counterexample",
+        "scope": "已知一端的 r·s 化简、偶模数最低位等式、奇模数回绕反例；任意编码的奇轨道定理及其证明独立置于 4F2C。"
+      },
+      "4F19": {
+        "status": "local-proof",
+        "scope": "独立种子有限域线性剩余哈希引理的碰撞概率与 Schwarz 推导。"
+      },
+      "4F1A": {
+        "status": "local-counterexample",
+        "scope": "条件于随机行核的高熵 S 使 CS 恒为零，显示独立种子不可删除。"
+      },
+      "4F1B": {
+        "status": "local-proof-from-lwe-assumption",
+        "scope": "均匀秘密判定 LWE 的逐列混合，随机位置归约及 δ/n 优势。"
+      },
+      "4F1C": {
+        "status": "local-proof",
+        "scope": "固定非零奇偶位的条件熵 n-1 及联合全变差界；不声称自适应泄漏定理。"
+      },
+      "4F1D": {
+        "status": "local-proof",
+        "scope": "任意 α0,α1 的爪编码 Hadamard 解码振幅计算。"
+      },
+      "4F1E": {
+        "status": "local-proof",
+        "scope": "辅助向量系数、偏迹密度矩阵、秘密控制反算和解码概率。"
+      },
+      "4F1F": {
+        "status": "local-proof",
+        "scope": "独立均匀相位平均消去交叉项；对角 Kraus 归一化、测量等价与 Z 概率保持。"
+      },
+      "4F20": {
+        "status": "local-proof",
+        "scope": "逐支证明原像寄存器相位回踢到逻辑比特，保留全局相位。"
+      },
+      "4F21": {
+        "status": "cited-theorem-with-proof-mechanism",
+        "scope": "Lemma 6.12 按 §7.2 的条件输出重述；一个态对全部基，pH+sqrt(pT)+μ；§6 深安全归约外引。"
+      },
+      "4F22": {
+        "status": "local-proof",
+        "scope": "传播项非负平方和、历史态归一化、零能核与固定输入；不证明局部化与能隙。"
+      },
+      "4F23": {
+        "status": "local-proof-and-cited-reduction",
+        "scope": "XZ 抽样接受概率逐项证明；2-local XZ 电路归约作为所引 §7.1 的外部输入。"
+      },
+      "4F24": {
+        "status": "attributed-lwe-result-and-cited-abstract-theorem",
+        "scope": "保留 ICM 摘要及 §4 援引的量子 LWE 经典验证定理作为外部研究输入。另列 v3 抽象 extended-TCF 协议定理与精确旧构造不匹配。明确采用抵抗参数依赖多项式量子建议的 LWE 假设，并要求抽象函数族的自适应硬核、单射不变性和固定掩码条件在同一建议模型下安全。完备性 μ_c 独立陈述；先固定攻击电路及建议态族，再取对所有长度 λ 输入统一的 μ_P。任意坏输入序列 x_λ 可作为独立于新密钥的经典建议。奇轨道障碍引用 4F2C；不添加回绕边界条件，不声称重建具体 LWE 实现。"
+      },
+      "4F25": {
+        "status": "source-dated-open-question",
+        "scope": "报告提出的单证明者无密码假设问题；区分无界与 QPT 恶意模型，不宣称已解决。"
+      },
+      "4F26": {
+        "status": "definition-with-approximate-implementation-convention",
+        "scope": "陷门单射族与公钥模式不可区分；理想平方根态与有限门的联合态可忽略误差分开，引用 4F13 的控制/工作/辅助系统误差约定。"
+      },
+      "4F27": {
+        "status": "definition-and-local-proof",
+        "scope": "有限全变差、事件最大差、有界测试函数、随机处理收缩与共同边缘分解；独立中性基础页。"
+      },
+      "4F28": {
+        "status": "local-proof",
+        "scope": "共同酉变换及投影测量的全变差 ≤ 向量范数差；有限自适应实验的相干标签扩张。"
+      },
+      "4F29": {
+        "status": "definition-and-local-consequence",
+        "scope": "原 v3 固定掩码定义完整量词，常值攻击者对双值集合的限制；引用 4F2C 奇轨道证明说明奇模数全定义域平移实现与该定义不匹配，改变编码或自适应好掩码不修复它。"
+      },
+      "4F2A": {
+        "status": "construction-with-implementation-error",
+        "scope": "Protocol 5.1 基预选、密钥模式、承诺、轮次与解码；有限门相干制备在任意纠缠输入下每次误差 ε，N 次调用至多 Nε，计入可忽略完备性损失。"
+      },
+      "4F2B": {
+        "status": "local-proof",
+        "scope": "否实例 M≤sI 的纠缠输入指数矩与 KL 尾界；是实例使用独立 M_yes 和诚实乘积态，a<c<1 时给有限散度公式，c=1 时单列失败概率零。"
+      },
+      "4F2C": {
+        "status": "local-proof",
+        "scope": "对任意奇整数 q≥3、n,w≥1、s∈(Z/qZ)^n、任意编码 J 和掩码 d，完整证明平移轨道长度整除 q，二进制导数不能沿奇轨道恒一，故全定义域值集合恒含零。常值零预测者的结论只适用于该平移模型，不否定一般 Mahadev 验证定理。"
+      }
+    },
+    "claim_sources": {
+      "4F01": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§2, (2.1)–(2.2)"
+        }
+      ],
+      "4F02": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F02 explicit calculation in the note"
+        }
+      ],
+      "4F03": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§2; §4.3 (4.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F03 explicit calculation in the note"
+        }
+      ],
+      "4F04": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§2 (2.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F04 explicit calculation in the note"
+        }
+      ],
+      "4F05": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§2 (2.4) and following paragraph"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F05 explicit calculation in the note"
+        }
+      ],
+      "4F06": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§2 (2.5); Appendix A"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F06 explicit calculation in the note"
+        }
+      ],
+      "4F07": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§1"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "§2.2 and Definition 2.5 (quantum advice)"
+        }
+      ],
+      "4F08": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F08 explicit calculation in the note"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "§2.2"
+        }
+      ],
+      "4F09": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F09 explicit calculation in the note"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "§2.2 (4)–(5)"
+        }
+      ],
+      "4F0A": [
+        {
+          "source": "bcmvv-v4",
+          "locator": "§2.3 (6)–(7)"
+        }
+      ],
+      "4F0B": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§1"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "Definition 2.5"
+        }
+      ],
+      "4F0C": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F0C explicit calculation in the note"
+        }
+      ],
+      "4F0D": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F0D explicit calculation in the note"
+        }
+      ],
+      "4F0E": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F0E explicit calculation in the note"
+        }
+      ],
+      "4F0F": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F0F explicit calculation in the note"
+        }
+      ],
+      "4F10": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.1 (3.1)–(3.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F10 explicit calculation in the note"
+        }
+      ],
+      "4F11": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.1 (3.4)–(3.7)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F11 explicit calculation in the note"
+        }
+      ],
+      "4F12": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F12 explicit calculation in the note"
+        }
+      ],
+      "4F13": [
+        {
+          "source": "bcmvv-v4",
+          "locator": "Definition 3.1 clauses 1–3"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "§4.3 (23)–(26), footnote 3; finite-precision coherent implementation convention"
+        }
+      ],
+      "4F14": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.3"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "Definition 3.1 clause 4, (14)"
+        }
+      ],
+      "4F15": [
+        {
+          "source": "bcmvv-v4",
+          "locator": "Definition 2.5; (A.1)–(A.4); Theorem 4.1; §§4.1–4.3 including (23)–(26), footnote 3"
+        }
+      ],
+      "4F16": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§§3.2.2–3.2.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F16 explicit calculation in the note"
+        }
+      ],
+      "4F17": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§§3.2.2–3.2.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F17 explicit calculation in the note"
+        }
+      ],
+      "4F18": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.3 footnote 2; §4.3.2 final paragraph"
+        },
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Definition 4.4 (53)–(54); §8.4 Claim 8.7 (200); old full-domain fixed-mask discrepancy"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Endpoint-dependent parity linearization, even-modulus lowest-bit identity and odd-modulus wraparound counterexample; general odd-cycle theorem split to 4F2C"
+        }
+      ],
+      "4F19": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F19 explicit calculation in the note"
+        }
+      ],
+      "4F1A": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F1A explicit calculation in the note"
+        }
+      ],
+      "4F1B": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F1B explicit calculation in the note"
+        }
+      ],
+      "4F1C": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F1C explicit calculation in the note"
+        }
+      ],
+      "4F1D": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.2 (4.1)–(4.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F1D explicit calculation in the note"
+        }
+      ],
+      "4F1E": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.3 (4.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F1E explicit calculation in the note"
+        }
+      ],
+      "4F1F": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.3.1 (4.5)–(4.10)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F1F explicit calculation in the note"
+        }
+      ],
+      "4F20": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.3.2 (4.14)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F20 explicit calculation in the note"
+        }
+      ],
+      "4F21": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.3"
+        },
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Lemma 6.12, Claims 6.13–6.14, §7.2 restatement"
+        }
+      ],
+      "4F22": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F22 explicit calculation in the note"
+        }
+      ],
+      "4F23": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§4.1"
+        },
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "§7.1 (164)–(167), external reduction cited there"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F23 explicit calculation in the note"
+        }
+      ],
+      "4F24": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "Abstract and §4: attributed classical-verification theorem under quantum LWE"
+        },
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Protocol 7.5 and Theorem 7.6 (abstract extended-family result); §8.1 (186) parameter convention; Definition 4.4 and §8.4 cited only to identify the unresolved concrete mismatch"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "Definition 2.5: quantum polynomial-size parameter-dependent advice; the explicitly adopted hardness convention matches 4F15 and includes classical advice carrying arbitrary input sequences"
+        }
+      ],
+      "4F25": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§§1,5"
+        }
+      ],
+      "4F26": [
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Definitions 4.2–4.3"
+        },
+        {
+          "source": "bcmvv-v4",
+          "locator": "§4.3 finite-precision preparation, as implemented by the joint-state convention in 4F13"
+        }
+      ],
+      "4F27": [
+        {
+          "source": "bcmvv-v4",
+          "locator": "§2.2 (4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F27 explicit calculation in the note"
+        }
+      ],
+      "4F28": [
+        {
+          "source": "mahadev-icm2026",
+          "locator": "§3.2.1; §4.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4F28 explicit calculation in the note"
+        }
+      ],
+      "4F29": [
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Definition 4.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Constant-output consequence and application of the arbitrary-encoding odd-orbit obstruction proved in 4F2C"
+        }
+      ],
+      "4F2A": [
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Protocol 5.1; §5.1"
+        }
+      ],
+      "4F2B": [
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "§7.1 amplification context; independent operator calculation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Separate no-instance operator mgf and yes-instance binomial tail, including c=1"
+        }
+      ],
+      "4F2C": [
+        {
+          "source": "local-calculations",
+          "locator": "Complete orbit-divisibility and mod-two telescoping proof for arbitrary odd modulus, shift, binary map and fixed mask"
+        },
+        {
+          "source": "mahadev-verification-v3",
+          "locator": "Definition 4.4 (53)–(54) and §8.4 supply the full-domain fixed-mask model being tested, not a source for the local obstruction proof"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "Robust CHSH rigidity and multi-prover verification",
+        "scope": "4F0E–4F0F prove the finite-dimensional optimal winning probabilities. Robust self-testing, RUV rigidity and sequential multi-prover protocols are report context, not proved or imported as local theorems."
+      },
+      {
+        "branch": "Full LWE instantiation",
+        "scope": "4F15 cites the precise NTCF construction contract. Efficient lattice trapdoor generation, coherent Gaussian sampling, binary-secret reductions, boundary-sensitive noise estimates and adaptive leakage resilience are not reconstructed."
+      },
+      {
+        "branch": "Computational measurement binding",
+        "scope": "4F21 uses the abstract extended-family theorem with one state for all bases. Its computational twirl, auxiliary-space reductions and multi-qubit hybrid security proof remain external."
+      },
+      {
+        "branch": "Old-v3 full-domain fixed-mask discrepancy",
+        "scope": "ICM quantum-LWE classical verification remains an attributed primary research input. The old v3 fixed-mask definition and odd-q full-domain translation implementation conflict: 4F2C proves every fixed mask, for any encoding, has zero in its value set by odd-cycle parity. No encoding-only repair or extra boundary-condition premise is supplied; the corrected concrete instantiation was not reconstructed. This does not disprove the general verification theorem."
+      },
+      {
+        "branch": "Local Hamiltonian reduction and unconditional verification",
+        "scope": "The circuit-to-2-local-XZ reduction and spectral-gap proof are external inputs. 4F25 records the report's open single-prover question without asserting a later resolution."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4F06",
+          "4F0D",
+          "4F15"
+        ],
+        "source": "bcmvv-v4",
+        "scope": "TrapGen Theorem 2.6, coherent finite-precision Gaussian preparation and the full Theorem 4.1/§4.4 adaptive-hardcore reduction are external inputs. §4.3 (23)–(26) and footnote 3 were additionally read during repair; exact ideal amplitudes are not asserted to be finite-gate outputs."
+      },
+      {
+        "notes": [
+          "4F21",
+          "4F24"
+        ],
+        "source": "mahadev-verification-v3",
+        "scope": "Lemma 6.12/Claims 6.13–6.14, §6 binding and Protocol 7.5/Theorem 7.6 abstract soundness optimization remain cited. Negligible soundness is quantified per fixed efficient adversary; local twirl/kickback proofs do not replace these reductions. In 4F24 the advised security convention is explicit: fixed circuit and advice family precede the negligible bound, and all input sequences are covered by allowing classical advice independent of fresh keys."
+      },
+      {
+        "notes": [
+          "4F23",
+          "4F24"
+        ],
+        "source": "mahadev-verification-v3",
+        "scope": "§7.1 circuit-to-2-local XZ Hamiltonian promise reduction, attributed there to Biamonte–Love and Morimae–Fitzsimons. Those primary papers were not retrieved here. Local history-state and sampling calculations prove only their explicitly narrower statements."
+      },
+      {
+        "notes": [
+          "4F29",
+          "4F24"
+        ],
+        "source": "mahadev-verification-v3",
+        "scope": "The exact v3 Definition 4.4 / §8.4 full-domain fixed-mask realization remains unresolved in this packet. Re-checked current arXiv history still lists v3; targeted primary-source searches found no verified newer repair. ICM classical verification under LWE is retained as an attributed result, independently of this incomplete reconstruction. No invented wraparound hypothesis is attached to that theorem."
+      }
+    ],
+    "metadata": {
+      "node_count": 45,
+      "atomic_count": 44,
+      "reference_count": 1,
+      "language": "zh",
+      "model_conventions": "Finite-dimensional registers; second-variable-linear complex inner product; normalized density matrices; prime q only for field-rank/hash/construction claims, general modulus where explicitly stated; ceil(log2 q) binary encoding; finite full variation uses one-half L1; PPT/QPT and parameter-dependent quantum advice distinguished; noisy completeness 1-negl. Finite-gate preparation has negligible joint control/output/workspace/reference error relative to clean ideal states. Soundness negligible functions are adversary-dependent; completeness uses a separate function. Honest repetition uses a separate yes-instance operator and treats c=1 separately. For 4F24, advice-resistant LWE and compatible advised primitive security are explicit operative assumptions, not optional variants: each fixed circuit/advice family has its own negligible bound uniform over all inputs of length lambda. Arbitrary input sequences are polynomial classical advice independent of fresh keys.",
+      "coverage": "All mathematical branches of report §§1–5 and Appendix A represented; elementary local derivations versus exact cited research inputs distinguished.",
+      "status": "author-repairs-frozen-pending-independent-recheck",
+      "shared_integration": "Parent-owned; no shared landing, registry, workflow, theme or existing tree edited; no commit/push or full-site build.",
+      "reference_directory": "trees/references",
+      "review_round": 3,
+      "repaired_findings": [
+        "M4F-F01",
+        "M4F-F02",
+        "M4F-F03",
+        "M4F-F04",
+        "M4F-F05"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4F00",
+      "path": "trees/math/mathematical-physics/mahadev/4F00.tree",
+      "title": "经典通信如何约束量子系统",
+      "taxon": "Outline",
+      "sha256": "582e5f22eaa77a60289d64aa4ce6f784036ae0e83d3b455fdc869364b56d56c7"
+    },
+    {
+      "id": "4F01",
+      "path": "trees/math/mathematical-physics/mahadev/4F01.tree",
+      "title": "量子寄存器与计算基",
+      "taxon": "Definition",
+      "sha256": "d37b4c946bd197aa1981d6e2c6d069905dbadf4fb8c660c8ab331a304f42eff9"
+    },
+    {
+      "id": "4F02",
+      "path": "trees/math/mathematical-physics/mahadev/4F02.tree",
+      "title": "密度矩阵与混合态的测量",
+      "taxon": "Definition",
+      "sha256": "98bd53d86041c99e52d8203cf206b48ea138abc80e8f0d282ba13cd1468d9bc6"
+    },
+    {
+      "id": "4F03",
+      "path": "trees/math/mathematical-physics/mahadev/4F03.tree",
+      "title": "部分测量留下哪一个条件态",
+      "taxon": "Theorem",
+      "sha256": "c465fcbd4610523b26292e701c7aaf8c0b7a257f5836d1cb90497d486f6d2eed"
+    },
+    {
+      "id": "4F04",
+      "path": "trees/math/mathematical-physics/mahadev/4F04.tree",
+      "title": "Hadamard 变换的二进制 Fourier 公式",
+      "taxon": "Theorem",
+      "sha256": "4edf3facf9d6826cfe61cac0fbe1ba56ecfc7dbfbd63b15159b7ec0896215979"
+    },
+    {
+      "id": "4F05",
+      "path": "trees/math/mathematical-physics/mahadev/4F05.tree",
+      "title": "Pauli 算子的反交换与矩阵展开",
+      "taxon": "Theorem",
+      "sha256": "4f9a7a56658cab5e8ed27b9407cae80e2dc996acddc0d9e1368c11e91ffd9ff1"
+    },
+    {
+      "id": "4F06",
+      "path": "trees/math/mathematical-physics/mahadev/4F06.tree",
+      "title": "可逆求值与辅助寄存器的消去",
+      "taxon": "Construction",
+      "sha256": "eac53679ecf03a915e18dc49659507e0d5adcbfca3a33e5f1add211ec8a9d2a6"
+    },
+    {
+      "id": "4F07",
+      "path": "trees/math/mathematical-physics/mahadev/4F07.tree",
+      "title": "概率与量子多项式时间",
+      "taxon": "Definition",
+      "sha256": "9c06ad29dd93edd3d3009fceac65ad08c4d1a9a44b386c3252eb6b7bbb5c1643"
+    },
+    {
+      "id": "4F08",
+      "path": "trees/math/mathematical-physics/mahadev/4F08.tree",
+      "title": "计算不可区分性的量词",
+      "taxon": "Definition",
+      "sha256": "4f4994b94bd8849b7284dd23d7998461d7e58d0de2d1c8cdca4366370f63ca55"
+    },
+    {
+      "id": "4F09",
+      "path": "trees/math/mathematical-physics/mahadev/4F09.tree",
+      "title": "概率距离怎样控制平方根振幅",
+      "taxon": "Theorem",
+      "sha256": "653c269a775f9c233a6def3f53a089f2a109d50027ee6e91ba185abbea651136"
+    },
+    {
+      "id": "4F0A",
+      "path": "trees/math/mathematical-physics/mahadev/4F0A.tree",
+      "title": "模整数上的截断离散 Gaussian 分布",
+      "taxon": "Definition",
+      "sha256": "857cc0ef105cbd0f998f820836c9941051474512ee094bf27dbf9b6a9ceb6b1b"
+    },
+    {
+      "id": "4F0B",
+      "path": "trees/math/mathematical-physics/mahadev/4F0B.tree",
+      "title": "带误差学习的参数化假设",
+      "taxon": "Definition",
+      "sha256": "8c4fecf20009cfe153f0ec20a466c5bc392ed6fd0f86c117adbb049201877c54"
+    },
+    {
+      "id": "4F0C",
+      "path": "trees/math/mathematical-physics/mahadev/4F0C.tree",
+      "title": "随机有限域矩阵何时满列秩",
+      "taxon": "Theorem",
+      "sha256": "7e0fa1d759414d7d5cc0d1835658bc2d8a868da255c2ce4258c8a8aa4c68eb8c"
+    },
+    {
+      "id": "4F0D",
+      "path": "trees/math/mathematical-physics/mahadev/4F0D.tree",
+      "title": "短陷门如何恢复带噪声的线性像",
+      "taxon": "Theorem",
+      "sha256": "f69b0dc83c08a5384e144e30e5f50f17d32fa01622fe76e094e351fe2183a2b7"
+    },
+    {
+      "id": "4F0E",
+      "path": "trees/math/mathematical-physics/mahadev/4F0E.tree",
+      "title": "CHSH 游戏的经典胜率为四分之三",
+      "taxon": "Theorem",
+      "sha256": "703cfe8b152255b99534bc8a412cd638132a24989e926d55dc0ca23402aa8966"
+    },
+    {
+      "id": "4F0F",
+      "path": "trees/math/mathematical-physics/mahadev/4F0F.tree",
+      "title": "CHSH 游戏的量子胜率与 Bell 态",
+      "taxon": "Theorem",
+      "sha256": "ecb1fcf0e8115a1593174e644d5b356f39b0fd8285420002dd1152742e85205d"
+    },
+    {
+      "id": "4F10",
+      "path": "trees/math/mathematical-physics/mahadev/4F10.tree",
+      "title": "测量线性像产生两支叠加",
+      "taxon": "Construction",
+      "sha256": "0773234b759d0714924eff6be689dc6368bf722bb1b261fec5cf9aa5950eb87a"
+    },
+    {
+      "id": "4F11",
+      "path": "trees/math/mathematical-physics/mahadev/4F11.tree",
+      "title": "小噪声平移与两支态的整体误差",
+      "taxon": "Theorem",
+      "sha256": "ca33de5197cbc6106d25a22d704ed8837f73efb57e2df3a3b2c177575fed0a4e"
+    },
+    {
+      "id": "4F12",
+      "path": "trees/math/mathematical-physics/mahadev/4F12.tree",
+      "title": "两支叠加的 Hadamard 奇偶关系",
+      "taxon": "Theorem",
+      "sha256": "35eff4b431ec123f9ab268b812b38c132c87e47826c89d66cdd2c74b829ad52f"
+    },
+    {
+      "id": "4F13",
+      "path": "trees/math/mathematical-physics/mahadev/4F13.tree",
+      "title": "带噪声陷门函数对的结构",
+      "taxon": "Definition",
+      "sha256": "2fc566094603cb457bacfeee0549697f2ee42b10610231d0d45825ea1f20e5f4"
+    },
+    {
+      "id": "4F14",
+      "path": "trees/math/mathematical-physics/mahadev/4F14.tree",
+      "title": "自适应硬核比特与好掩码",
+      "taxon": "Definition",
+      "sha256": "fc20cb7f06067146264849a4534ac8507b08d0969c49dfce719f66a0e2b6edb6"
+    },
+    {
+      "id": "4F15",
+      "path": "trees/math/mathematical-physics/mahadev/4F15.tree",
+      "title": "LWE 构造带噪声陷门爪函数",
+      "taxon": "Theorem",
+      "sha256": "ddb7b81ba87a18127dc645b7a29702c3ff0b2710fe82371b47fd0cafeb65a02a"
+    },
+    {
+      "id": "4F16",
+      "path": "trees/math/mathematical-physics/mahadev/4F16.tree",
+      "title": "两种挑战如何检验量子性",
+      "taxon": "Theorem",
+      "sha256": "95bd79511869dffdc79a279f7d68a533ff2e233358031ede1807e751dc7af004"
+    },
+    {
+      "id": "4F17",
+      "path": "trees/math/mathematical-physics/mahadev/4F17.tree",
+      "title": "只排除零掩码仍不足以保证硬核性",
+      "taxon": "Example",
+      "sha256": "b137c6b8c5a6695fcba4c9ee52beaf1c79ba9f4744a5d6b0359480adceef01c9"
+    },
+    {
+      "id": "4F18",
+      "path": "trees/math/mathematical-physics/mahadev/4F18.tree",
+      "title": "已知一端时如何把奇偶式化为秘密的线性式",
+      "taxon": "Theorem",
+      "sha256": "609317577256cda89cd42e55fc378bca4234cc884a72461eb98d4e103b765ca7"
+    },
+    {
+      "id": "4F19",
+      "path": "trees/math/mathematical-physics/mahadev/4F19.tree",
+      "title": "随机线性哈希的剩余哈希界",
+      "taxon": "Theorem",
+      "sha256": "6e85e4253fc455b4565672f24ae7c7de096be76781cb7b2bcc53e15a56322893"
+    },
+    {
+      "id": "4F1A",
+      "path": "trees/math/mathematical-physics/mahadev/4F1A.tree",
+      "title": "高最小熵不能替代哈希种子的独立性",
+      "taxon": "Example",
+      "sha256": "92db4a55bce05bf30bc4020e4cfd88b1ffb08a7dff16c93b4d664de78027c611"
+    },
+    {
+      "id": "4F1B",
+      "path": "trees/math/mathematical-physics/mahadev/4F1B.tree",
+      "title": "逐列混合把随机矩阵换成近低秩矩阵",
+      "taxon": "Theorem",
+      "sha256": "3e75f50ac4f9966c6778004e38d61c0846b7324d768c07346f60b5e92828a807"
+    },
+    {
+      "id": "4F1C",
+      "path": "trees/math/mathematical-physics/mahadev/4F1C.tree",
+      "title": "固定奇偶泄漏下的熵计算",
+      "taxon": "Theorem",
+      "sha256": "a149e299c94946d7031c38a4ff030e928957c83d2be76d918baec3fa287cab63"
+    },
+    {
+      "id": "4F1D",
+      "path": "trees/math/mathematical-physics/mahadev/4F1D.tree",
+      "title": "爪承诺的 Hadamard 测量解码",
+      "taxon": "Theorem",
+      "sha256": "915659b05d7696cd0b9143c001a1b32ce48846ac8d2c051485e581675a9a5320"
+    },
+    {
+      "id": "4F1E",
+      "path": "trees/math/mathematical-physics/mahadev/4F1E.tree",
+      "title": "含辅助纠缠的爪承诺与逻辑态",
+      "taxon": "Theorem",
+      "sha256": "ed1b678b61457075f503884820a9c5d6b432811feceaa56aebb69a6920f94e8b"
+    },
+    {
+      "id": "4F1F",
+      "path": "trees/math/mathematical-physics/mahadev/4F1F.tree",
+      "title": "随机相位平均消去 Pauli 交叉项",
+      "taxon": "Theorem",
+      "sha256": "22c746f4b6cf6e46c6d10f3576b81c0d055387a4d7566c7f34f5b6c75353c897"
+    },
+    {
+      "id": "4F20",
+      "path": "trees/math/mathematical-physics/mahadev/4F20.tree",
+      "title": "原像寄存器上的相位回踢",
+      "taxon": "Theorem",
+      "sha256": "dca2a7ead16744d155ab35b63c9ae4173dd7ed634454a50bdcc3dec576ef288f"
+    },
+    {
+      "id": "4F21",
+      "path": "trees/math/mathematical-physics/mahadev/4F21.tree",
+      "title": "经典测量协议的计算绑定定理",
+      "taxon": "Theorem",
+      "sha256": "1ae405923779ecb0fc5dd6b64cb5771c9ef62fdd80126c17ed5e21851e8903b8"
+    },
+    {
+      "id": "4F22",
+      "path": "trees/math/mathematical-physics/mahadev/4F22.tree",
+      "title": "历史态满足传播约束",
+      "taxon": "Theorem",
+      "sha256": "34121b77b864711bfbf1479d27ad386a3c39742e3db93d88fe9fdba4947ef034"
+    },
+    {
+      "id": "4F23",
+      "path": "trees/math/mathematical-physics/mahadev/4F23.tree",
+      "title": "用 X 和 Z 测量抽样 Hamiltonian 能量",
+      "taxon": "Theorem",
+      "sha256": "31b72a5580678301acfa76504181627a83f9db45e986763d4e3101deea4139d9"
+    },
+    {
+      "id": "4F24",
+      "path": "trees/math/mathematical-physics/mahadev/4F24.tree",
+      "title": "经典验证量子计算的条件定理",
+      "taxon": "Theorem",
+      "sha256": "ebb25c34e8724e55d43daf8d6e0435697c59f803d11f3d6f3698f095719c0825"
+    },
+    {
+      "id": "4F25",
+      "path": "trees/math/mathematical-physics/mahadev/4F25.tree",
+      "title": "无密码假设的单证明者经典验证问题",
+      "taxon": "Question",
+      "sha256": "dc0cb9d8c1a6e7fe89d3d0d4711806fbf7d5224b04af1e6b34ee1bdbf1db9611"
+    },
+    {
+      "id": "4F26",
+      "path": "trees/math/mathematical-physics/mahadev/4F26.tree",
+      "title": "用不可区分的函数密钥隐藏测量基",
+      "taxon": "Definition",
+      "sha256": "e68a60d5868c405aafc9103f2aa6665c3073c4f9a2f73eeba023204d6dc3f62b"
+    },
+    {
+      "id": "4F27",
+      "path": "trees/math/mathematical-physics/mahadev/4F27.tree",
+      "title": "有限概率分布的全变差距离",
+      "taxon": "Definition",
+      "sha256": "6e5fb95df8b8742a3db8598ca4edb02040e93073aa53b1a7d2f42f07c2805f98"
+    },
+    {
+      "id": "4F28",
+      "path": "trees/math/mathematical-physics/mahadev/4F28.tree",
+      "title": "向量误差控制共同测量的概率误差",
+      "taxon": "Theorem",
+      "sha256": "7aa56358b5d86a4c54b02a6b640700d4ef393162178fa4d548ab2c783a62f9da"
+    },
+    {
+      "id": "4F29",
+      "path": "trees/math/mathematical-physics/mahadev/4F29.tree",
+      "title": "扩展陷门爪函数的固定掩码条件",
+      "taxon": "Definition",
+      "sha256": "1c4f3c9aa920e461b38de85876f90a8bf0a4deab24610e8b6386073ab075896a"
+    },
+    {
+      "id": "4F2A",
+      "path": "trees/math/mathematical-physics/mahadev/4F2A.tree",
+      "title": "隐藏测量基的经典测量协议",
+      "taxon": "Construction",
+      "sha256": "99302c0a737a8930f00488317db9f42d8a50b6dc32b0629ed4e6cda0ff43902b"
+    },
+    {
+      "id": "4F2B",
+      "path": "trees/math/mathematical-physics/mahadev/4F2B.tree",
+      "title": "对纠缠输入重复独立二值测试的尾界",
+      "taxon": "Theorem",
+      "sha256": "aa0da382f880de60438966043632b9f09c8c53a62a40ae9e303c6f40023df502"
+    },
+    {
+      "id": "4F2C",
+      "path": "trees/math/mathematical-physics/mahadev/4F2C.tree",
+      "title": "奇数模数的平移爪不满足全定义域固定掩码条件",
+      "taxon": "Theorem",
+      "sha256": "03add2f9361184a1752d9ab4a5010daa01ee7ad1e8854937d7c74d772ab863c2"
+    },
+    {
+      "id": "icm2026-mahadev",
+      "path": "trees/references/icm2026-mahadev.tree",
+      "title": "Mahadev：Classical Control of a Quantum System",
+      "taxon": "Reference",
+      "sha256": "d596719411d8644d734dc7ce1895c42b1313db7bce5286f867405b144deda867"
+    }
+  ],
+  "prerequisites": {
+    "4F01": [
+      "004N",
+      "0F4E",
+      "00JZ",
+      "00JO"
+    ],
+    "4F02": [
+      "4F01",
+      "0F0F",
+      "0N0B",
+      "00JO"
+    ],
+    "4F03": [
+      "4F01",
+      "00JO"
+    ],
+    "4F04": [
+      "4F01",
+      "0F4E"
+    ],
+    "4F05": [
+      "4F01",
+      "4F04",
+      "0F0F"
+    ],
+    "4F06": [
+      "4F01"
+    ],
+    "4F07": [
+      "0AC3",
+      "4F01"
+    ],
+    "4F08": [
+      "00Q3",
+      "4F07"
+    ],
+    "4F09": [
+      "4F27",
+      "4F01",
+      "004S"
+    ],
+    "4F0A": [
+      "00CU",
+      "00Q3"
+    ],
+    "4F0B": [
+      "4F0A",
+      "4F08",
+      "4F0C"
+    ],
+    "4F0C": [
+      "00GF",
+      "0F65",
+      "00GC"
+    ],
+    "4F0D": [
+      "4F0A",
+      "4F0C"
+    ],
+    "4F0E": [
+      "0A00"
+    ],
+    "4F0F": [
+      "4F0E",
+      "4F02",
+      "0N0B",
+      "0F4F",
+      "4F05"
+    ],
+    "4F10": [
+      "4F06",
+      "4F03",
+      "4F0C"
+    ],
+    "4F11": [
+      "4F06",
+      "4F10",
+      "4F09",
+      "4F28"
+    ],
+    "4F12": [
+      "4F01",
+      "4F04"
+    ],
+    "4F13": [
+      "00Q3",
+      "4F09",
+      "4F08",
+      "4F07",
+      "4F28"
+    ],
+    "4F14": [
+      "4F13",
+      "4F07",
+      "4F08",
+      "4F12"
+    ],
+    "4F15": [
+      "4F0A",
+      "4F0B",
+      "4F07",
+      "4F13",
+      "4F14"
+    ],
+    "4F16": [
+      "4F14",
+      "4F13",
+      "4F08",
+      "4F03",
+      "4F12",
+      "4F09",
+      "4F28"
+    ],
+    "4F17": [
+      "4F12",
+      "4F14"
+    ],
+    "4F18": [
+      "4F12",
+      "4F17"
+    ],
+    "4F19": [
+      "00L0",
+      "4F27",
+      "00GF",
+      "004S"
+    ],
+    "4F1A": [
+      "00GF",
+      "4F19",
+      "4F27"
+    ],
+    "4F1B": [
+      "4F0B",
+      "4F08"
+    ],
+    "4F1C": [
+      "4F19"
+    ],
+    "4F1D": [
+      "4F01",
+      "4F04"
+    ],
+    "4F1E": [
+      "0F4E",
+      "2V0L",
+      "4F02",
+      "004N",
+      "4F1D"
+    ],
+    "4F1F": [
+      "4F02",
+      "4F05"
+    ],
+    "4F20": [
+      "00JZ",
+      "4F1E"
+    ],
+    "4F21": [
+      "4F2A",
+      "4F29",
+      "4F02",
+      "4F08",
+      "4F27"
+    ],
+    "4F22": [
+      "0F4E",
+      "0N0B"
+    ],
+    "4F23": [
+      "4F02",
+      "4F05",
+      "0F0F",
+      "4F04",
+      "0N0B",
+      "4F2B"
+    ],
+    "4F24": [
+      "4F29",
+      "4F07",
+      "4F23",
+      "4F2B",
+      "4F2A",
+      "4F21",
+      "4F0B",
+      "4F15",
+      "4F2C",
+      "4F08",
+      "4F0A"
+    ],
+    "4F25": [
+      "4F07",
+      "4F0E"
+    ],
+    "4F26": [
+      "4F13",
+      "4F14",
+      "4F07",
+      "4F08",
+      "4F03"
+    ],
+    "4F27": [
+      "00Q3",
+      "0A00"
+    ],
+    "4F28": [
+      "4F01",
+      "4F27",
+      "004S"
+    ],
+    "4F29": [
+      "4F14",
+      "4F26",
+      "4F08",
+      "4F2C"
+    ],
+    "4F2A": [
+      "4F29",
+      "4F26",
+      "4F14",
+      "4F1D",
+      "4F1E",
+      "4F13"
+    ],
+    "4F2B": [
+      "4F02",
+      "0N0B"
+    ],
+    "4F2C": [
+      "00CU"
+    ]
+  },
+  "atomic_questions": {
+    "4F01": "量子寄存器的基标签和振幅怎样决定测量概率？",
+    "4F02": "混合量子态怎样由密度矩阵描述？",
+    "4F03": "部分测量和近乎必过的投影测试留下什么态？",
+    "4F04": "Hadamard 变换怎样产生二进制奇偶相位？",
+    "4F05": "Pauli 算子如何在 Hadamard 共轭下变换并展开矩阵？",
+    "4F06": "如何相干计算经典函数而不留下破坏叠加的辅助记录？",
+    "4F07": "高效经典与量子攻击者的计算资源如何量化？",
+    "4F08": "什么叫密码学意义的不可区分？",
+    "4F09": "Hellinger 距离怎样控制平方根振幅？",
+    "4F0A": "LWE 中使用哪一种有限离散 Gaussian 分布？",
+    "4F0B": "参数化 LWE 困难假设究竟比较哪两个分布？",
+    "4F0C": "高矩阵何时以高概率满列秩？",
+    "4F0D": "已知短陷门怎样解开带噪声的模线性像？",
+    "4F0E": "CHSH 的经典成功率为何至多四分之三？",
+    "4F0F": "二值投影量子策略的 CHSH 最优值是多少？",
+    "4F10": "测量相同函数值为何留下两个原像的叠加？",
+    "4F11": "小平移怎样控制带噪声两支态的整体误差？",
+    "4F12": "两支叠加的 Hadamard 测量揭示什么奇偶关系？",
+    "4F13": "带噪声陷门函数对需要哪些结构条件？",
+    "4F14": "自适应硬核比特为什么同时要求原像与好掩码？",
+    "4F15": "哪组量子 LWE 假设产生 NTCF 家族？",
+    "4F16": "原像和奇偶两种挑战怎样检验量子性？",
+    "4F17": "排除零掩码为什么仍不足以保证硬核性？",
+    "4F18": "已知一个爪端点时，如何把二进制奇偶式化为秘密的线性式？",
+    "4F19": "独立随机线性映射怎样从高最小熵中得到近均匀输出？",
+    "4F1A": "最小熵高为何仍不能省去哈希种子独立性？",
+    "4F1B": "怎样由 LWE 把随机矩阵换成 BC+Z？",
+    "4F1C": "固定奇偶泄漏后还剩多少可哈希的熵？",
+    "4F1D": "陷门如何把爪承诺的回答解码为原比特的测量？",
+    "4F1E": "辅助纠缠是否改变爪承诺的逻辑测量公式？",
+    "4F1F": "随机相位怎样把单比特攻击化成保持标准基概率的操作？",
+    "4F20": "原像奇偶相位如何作用在逻辑比特上？",
+    "4F21": "高通过率的经典测量协议为什么绑定到同一量子态？",
+    "4F22": "历史态为什么满足全部传播约束？",
+    "4F23": "只测 X 与 Z 怎样估计 Hamiltonian 能量？",
+    "4F24": "哪些假设足以得到全经典通信的 BQP 验证？",
+    "4F25": "单证明者经典验证能否摆脱密码学困难假设？",
+    "4F26": "怎样用函数密钥的不可区分性隐藏测量基？",
+    "4F27": "有限概率分布的全变差为何等于最大事件概率差？",
+    "4F28": "纯态向量误差怎样控制整个测量实验？",
+    "4F29": "固定掩码硬核条件与自适应条件有什么不同？",
+    "4F2A": "隐藏测量基的经典协议如何逐步运行？",
+    "4F2B": "独立重复的二值量子测试怎样抵御跨份纠缠？",
+    "4F2C": "为什么奇数模数上的全定义域平移爪对任意编码和固定掩码都产生零奇偶位？"
+  },
+  "navigation_only": [
+    "4F00",
+    "icm2026-mahadev"
+  ],
+  "reused_pages": [
+    "004N",
+    "004S",
+    "00CU",
+    "00GC",
+    "00GF",
+    "00JO",
+    "00JZ",
+    "00L0",
+    "00Q3",
+    "0A00",
+    "0AC3",
+    "0F0F",
+    "0F4E",
+    "0F4F",
+    "0F65",
+    "0N0B",
+    "2V0L"
+  ],
+  "terminology_evidence": {
+    "method": "Whole-forest searches for Mahadev, LWE/learning with errors, 带误差学习, 陷门/trapdoor, CHSH, Hadamard, 量子比特, 密度矩阵/算子, 计算不可区分, 硬核比特, statistical/variation distance, Pauli, 最小熵, 剩余哈希, 量子电路, 多项式时间; selected existing foundation bodies read before reuse. Additional user-identified TV usage pages 0HT4, 0GKK and 300C read.",
+    "canonical_definition_repairs": [
+      "Finite probability TV separated as neutral 4F27; Hellinger remains 4F09 and quantum measurement bound is 4F28.",
+      "Canonical label is 全变差距离, with 总变差距离 given once as synonym on 4F27. Majority forest usage 0HT4/0GKK adopted; 300C contains the synonym.",
+      "Random-variable prerequisite uses 00L0, not the Poisson distribution page 00L6. Existing Hilbert tensor, spectral theorem, trace and partial trace reused rather than redefined."
+    ],
+    "external_terminology_site": "Parent reported scoped Banana-space searches for both TV terms returned no results. No verified Banana-space correspondence is claimed."
+  },
+  "source_records": [
+    {
+      "id": "mahadev-icm2026",
+      "authors": [
+        "Urmila Mahadev"
+      ],
+      "title": "Classical Control of a Quantum System",
+      "doi": "10.1137/25M1811549",
+      "pages": "483–496",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1811549",
+      "version_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1811549",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "copyright": "International Mathematical Union; published by SIAM",
+      "acknowledgment": "The article states it was cowritten with Umesh Vazirani.",
+      "actual_reading": "Entire publisher HTML mathematical body §§1–5 and Appendix A, all displayed formulas, acknowledgments, footnotes 1–5 and bibliography [1]–[15], by overlapping retrievals (HTML lines 94–513). Publisher metadata lines 514–560 and PDF first-page bibliographic/license text read; PDF page-1 introduction text also checked. No complete PDF pixel inspection.",
+      "proof_boundary": "Expository report read in full; research constructions and security theorems are not treated as locally proved. Exact elementary identities expanded with corrections below.",
+      "arxiv_search": "Exact-title and author/title searches, including arxiv.org-restricted searches, did not locate an arXiv edition of this report. This is a search outcome, not a claim of nonexistence; the two 2018-ID papers below are distinct supplements.",
+      "review_recheck": "ICM abstract and §4, including §4.3.2 final paragraphs, re-read for F01. The LWE verification result is retained as an attributed primary report theorem, not replaced by a newly invented encoding premise."
+    },
+    {
+      "id": "bcmvv-v4",
+      "authors": [
+        "Zvika Brakerski",
+        "Paul Christiano",
+        "Urmila Mahadev",
+        "Umesh Vazirani",
+        "Thomas Vidick"
+      ],
+      "title": "A Cryptographic Test of Quantumness and Certifiable Randomness from a Single Quantum Device",
+      "version": "arXiv:1804.00640v4",
+      "version_date": "2021-05-04",
+      "url": "https://arxiv.org/abs/1804.00640v4",
+      "version_url": "https://arxiv.org/html/1804.00640v4",
+      "doi": "10.1145/3441309",
+      "publication": "Journal of the ACM 68 (2021), Article 31",
+      "license": "arXiv perpetual non-exclusive distribution license; not relabeled CC",
+      "actual_reading": "Version metadata and §§2.1–2.3 preliminaries, including Definition 2.5 and trapdoor Theorem 2.6; Definition 3.1 in full (all structural and adaptive-hardcore clauses); §4 parameter conditions (A.1)–(A.4), Theorem 4.1 and §§4.1–4.2 plus §4.3 through HTML line 549; selected §5 protocol passages. §4.3 (23)–(26) and footnote 3 additionally read during repair. Full §4.4 and the full paper were not read.",
+      "proof_boundary": "Definition and main construction contract used; local extraction argument proves the stated abstract single-round game only, not the paper's full randomness-expansion protocol.",
+      "review_recheck": "§4.3 equations (23)–(26) and footnote 3 checked for finite-precision Gaussian preparation; displayed square-root states retained as ideal targets, not exact finite-gate outputs. Revision 3 re-read Definition 2.5 (HTML lines 318–324): LWE hardness explicitly permits polynomial quantum advice depending on problem parameters. 4F24 adopts this stronger model for all input sequences and matches the abstract primitive-security convention."
+    },
+    {
+      "id": "mahadev-verification-v3",
+      "authors": [
+        "Urmila Mahadev"
+      ],
+      "title": "Classical Verification of Quantum Computations",
+      "version": "arXiv:1804.01082v3",
+      "version_date": "2023-12-08",
+      "url": "https://arxiv.org/abs/1804.01082v3",
+      "version_url": "https://arxiv.org/html/1804.01082v3",
+      "doi": "10.1137/20M1371828",
+      "publication": "SIAM Journal on Computing 51 (2022), 1172–1229",
+      "license": "arXiv perpetual non-exclusive distribution license; not relabeled CC",
+      "actual_reading": "Version metadata; Definitions 4.1–4.4; §5.1 commitment calculations, complete Protocol 5.1, honest strategy and notation through §5.3 (HTML approximately 527–802); Lemma 6.12, Claims 6.13–6.14 and combining proof, plus §6.4.1 through about line 1297; §7 in full; §8.1 parameters/Theorem 8.1; §8.4 Lemmas 8.4–8.6, Claim 8.7 and its proof (approximately 1547–1606). Full §6 and full paper were not read. Publisher journal page retrieval was unsuccessful; claims are bound to arXiv v3.",
+      "proof_boundary": "The abstract extended-family theorem is kept distinct from the old full-domain odd-q fixed-mask implementation. The latter fails the literal Definition 4.4 condition by the arbitrary-encoding odd-cycle argument. Its repair is unresolved here; the established LWE verification theorem is still attributed to the primary ICM report and is not claimed disproved.",
+      "review_recheck": "Definitions 4.2–4.4 and §5.1 re-read; arXiv abstract/history at https://arxiv.org/abs/1804.01082 checked on 2026-10-22 and still lists v3 (2023-12-08). Restricted searches for erratum/correction on arxiv.org, epubs.siam.org and eprint.iacr.org returned no result. Publisher journal full page again inaccessible. No exact newer repaired source verified; not a claim that none exists."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Not a bibliographic source. Finite linear algebra, probability, matrix and Fourier calculations are supplied in the notes, using existing forest foundations.",
+      "proof_boundary": "Finite numerical checks corroborate examples and identities only; they do not prove cryptographic hardness, complexity reductions or externally cited theorems."
+    }
+  ],
+  "source_clarifications": [
+    {
+      "location": "Edition binding",
+      "resolution": "Publisher report DOI/PDF is authoritative. Distinct arXiv supplements are pinned to v4 and v3, not presented as an arXiv edition of the report."
+    },
+    {
+      "location": "Gaussian and noise estimates",
+      "resolution": "Truncated coordinate product distributions have cube support, not a Euclidean-ball truncation. 4F11 assumes an explicit Hellinger bound and proves its consequence; a truncation-boundary-free Gaussian shift proof is not imported."
+    },
+    {
+      "location": "Trapdoor algebra",
+      "resolution": "4F0D requires T invertible over Q, TA=0 modulo q, and strict ||Te||inf<q/2; entry bounds require m tau E<q/2. Generation close to uniform is an external theorem, not exact uniformity of a generated key."
+    },
+    {
+      "location": "Adaptive masks",
+      "resolution": "Known endpoint allows an x-dependent derived mask r, which may vanish for nonzero d. Fixed-mask leftover hashing is not substituted for adaptive leakage resilience."
+    },
+    {
+      "location": "Measurement soundness output",
+      "resolution": "4F21 follows §7.2 restatement and Claim 6.13 using acceptance-conditioned D^C, whereas the first printed Lemma 6.12 statement omits superscript C. One rho works for all bases; postselection error is stated quantitatively."
+    },
+    {
+      "location": "Measurement basis timing",
+      "resolution": "h is fixed before key generation. The later random challenge chooses test versus Hadamard round, not an arbitrary late basis for a fixed key."
+    },
+    {
+      "location": "Security and completeness",
+      "resolution": "Ideal algebra has exact equalities. Finite-gate preparation approximates the complete control/output/workspace/reference state relative to ideal clean workspace by a negligible norm error; multiple polynomial calls accumulate negligible error. Completeness uses mu_c; for each fixed efficient adversary P soundness uses its own mu_P. In 4F24 the advice family is explicitly part of P, and both LWE hardness and abstract primitive security cover parameter-dependent polynomial quantum advice, including classical advice for arbitrary input sequences."
+    },
+    {
+      "location": "F01: LWE theorem versus old construction",
+      "resolution": "4F24 explicitly attributes classical verification under quantum LWE to the ICM abstract/§4. The abstract extended-TCF theorem is stated separately. 4F18 supplies the endpoint calculation and lowest-bit counterexample; the independent arbitrary-encoding obstruction is 4F2C. Neither supplies sufficient boundary conditions for a repaired implementation or a disproof of the general theorem."
+    },
+    {
+      "location": "F03: exact ideals and coherent finite-gate implementation",
+      "resolution": "4F13 defines one joint norm approximation for all control superpositions, including arbitrary reference entanglement and ideal zero workspace. 4F15/4F16/4F26/4F2A propagate this convention; exact f' target support acceptance is not mistaken for exact acceptance of a compiled state."
+    },
+    {
+      "location": "F04: distinct yes/no tests and c=1",
+      "resolution": "4F2B uses M<=sI only for no instances. Honest yes instances use M_yes and rho_yes; the displayed finite divergence is restricted to a<c<1, while c=1 gives zero lower-tail failure directly."
+    },
+    {
+      "location": "F02 rereview: all input sequences and advice",
+      "resolution": "4F24 explicitly assumes LWE hardness against every fixed QPT circuit with any polynomial-size parameter-dependent quantum advice family. The abstract adaptive-hardcore, injective-invariance and fixed-mask conditions are required against the same advised class. A worst-case x_lambda is polynomial classical advice independent of fresh keys, so the stated per-P negligible bound is uniform over all inputs of that length."
+    },
+    {
+      "location": "F05: atomic odd-cycle obstruction",
+      "resolution": "4F2C is a new standalone theorem with q,n,w,G,s,J,d,g,orbit and value-set hypotheses introduced locally. 4F18 retains only endpoint linearization and its immediate modular example; 4F00/4F24/4F29 link to 4F2C for the general obstruction. No existing ID or title changed."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§1",
+      "notes": [
+        "4F07",
+        "4F08",
+        "4F0A",
+        "4F0B",
+        "4F0C",
+        "4F25"
+      ],
+      "scope": "Computational single-prover model, parameterized LWE and open unconditional problem."
+    },
+    {
+      "section": "§2",
+      "notes": [
+        "4F01",
+        "4F02",
+        "4F03",
+        "4F04",
+        "4F05",
+        "4F06"
+      ],
+      "scope": "Finite quantum notation, measurements, Pauli algebra and reversible computation."
+    },
+    {
+      "section": "§3.1",
+      "notes": [
+        "4F0E",
+        "4F0F"
+      ],
+      "scope": "Classical and projective quantum CHSH optima; rigidity remains external context."
+    },
+    {
+      "section": "§3.2.1",
+      "notes": [
+        "4F09",
+        "4F10",
+        "4F11",
+        "4F27",
+        "4F28"
+      ],
+      "scope": "Noiseless and noisy two-branch preparation with normalized amplitudes and whole-experiment error."
+    },
+    {
+      "section": "§§3.2.2–3.2.3",
+      "notes": [
+        "4F0D",
+        "4F12",
+        "4F13",
+        "4F14",
+        "4F15",
+        "4F16",
+        "4F17",
+        "4F18"
+      ],
+      "scope": "Trapdoor algebra, NTCF contract with negligible coherent implementation error, good masks and per-classical-adversary extraction bound."
+    },
+    {
+      "section": "§3.2.4",
+      "notes": [
+        "4F19",
+        "4F1A",
+        "4F1B",
+        "4F1C"
+      ],
+      "scope": "Independent-seed leftover hash, seed-dependence obstruction, LWE column hybrid, fixed parity leakage; adaptive theorem cited."
+    },
+    {
+      "section": "§4.1",
+      "notes": [
+        "4F22",
+        "4F23",
+        "4F2B",
+        "4F24"
+      ],
+      "scope": "History propagation, XZ sampling and independent repetition with separate yes/no operators and c=1 endpoint. Quantum-LWE verification is an attributed ICM theorem, with the abstract protocol theorem distinguished. All-input soundness explicitly uses advice-resistant LWE and compatible advised primitive security."
+    },
+    {
+      "section": "§§4.2–4.3",
+      "notes": [
+        "4F1D",
+        "4F1E",
+        "4F1F",
+        "4F20",
+        "4F21",
+        "4F26",
+        "4F29",
+        "4F2A",
+        "4F2C"
+      ],
+      "scope": "Honest decoding, coherent implementation error, auxiliary entanglement, exact phase average/kickback, hidden-mode protocol and cited binding. The old-v3 full-domain fixed-mask mismatch is identified, not repaired by a new premise."
+    },
+    {
+      "section": "§5",
+      "notes": [
+        "4F24",
+        "4F25"
+      ],
+      "scope": "Conditional verification scope and source-dated open question."
+    },
+    {
+      "section": "Appendix A",
+      "notes": [
+        "4F06",
+        "4F11"
+      ],
+      "scope": "Coherent modular evaluation and uncomputation with explicit uniform-input normalization; efficient Gaussian sampler external."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Robust CHSH rigidity and multi-prover verification",
+      "scope": "4F0E–4F0F prove the finite-dimensional optimal winning probabilities. Robust self-testing, RUV rigidity and sequential multi-prover protocols are report context, not proved or imported as local theorems."
+    },
+    {
+      "branch": "Full LWE instantiation",
+      "scope": "4F15 cites the precise NTCF construction contract. Efficient lattice trapdoor generation, coherent Gaussian sampling, binary-secret reductions, boundary-sensitive noise estimates and adaptive leakage resilience are not reconstructed."
+    },
+    {
+      "branch": "Computational measurement binding",
+      "scope": "4F21 uses the abstract extended-family theorem with one state for all bases. Its computational twirl, auxiliary-space reductions and multi-qubit hybrid security proof remain external."
+    },
+    {
+      "branch": "Old-v3 full-domain fixed-mask discrepancy",
+      "scope": "ICM quantum-LWE classical verification remains an attributed primary research input. The old v3 fixed-mask definition and odd-q full-domain translation implementation conflict: 4F2C proves every fixed mask, for any encoding, has zero in its value set by odd-cycle parity. No encoding-only repair or extra boundary-condition premise is supplied; the corrected concrete instantiation was not reconstructed. This does not disprove the general verification theorem."
+    },
+    {
+      "branch": "Local Hamiltonian reduction and unconditional verification",
+      "scope": "The circuit-to-2-local-XZ reduction and spectral-gap proof are external inputs. 4F25 records the report's open single-prover question without asserting a later resolution."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4F06",
+        "4F0D",
+        "4F15"
+      ],
+      "source": "bcmvv-v4",
+      "scope": "TrapGen Theorem 2.6, coherent finite-precision Gaussian preparation and the full Theorem 4.1/§4.4 adaptive-hardcore reduction are external inputs. §4.3 (23)–(26) and footnote 3 were additionally read during repair; exact ideal amplitudes are not asserted to be finite-gate outputs."
+    },
+    {
+      "notes": [
+        "4F21",
+        "4F24"
+      ],
+      "source": "mahadev-verification-v3",
+      "scope": "Lemma 6.12/Claims 6.13–6.14, §6 binding and Protocol 7.5/Theorem 7.6 abstract soundness optimization remain cited. Negligible soundness is quantified per fixed efficient adversary; local twirl/kickback proofs do not replace these reductions. In 4F24 the advised security convention is explicit: fixed circuit and advice family precede the negligible bound, and all input sequences are covered by allowing classical advice independent of fresh keys."
+    },
+    {
+      "notes": [
+        "4F23",
+        "4F24"
+      ],
+      "source": "mahadev-verification-v3",
+      "scope": "§7.1 circuit-to-2-local XZ Hamiltonian promise reduction, attributed there to Biamonte–Love and Morimae–Fitzsimons. Those primary papers were not retrieved here. Local history-state and sampling calculations prove only their explicitly narrower statements."
+    },
+    {
+      "notes": [
+        "4F29",
+        "4F24"
+      ],
+      "source": "mahadev-verification-v3",
+      "scope": "The exact v3 Definition 4.4 / §8.4 full-domain fixed-mask realization remains unresolved in this packet. Re-checked current arXiv history still lists v3; targeted primary-source searches found no verified newer repair. ICM classical verification under LWE is retained as an attributed result, independently of this incomplete reconstruction. No invented wraparound hypothesis is attached to that theorem."
+    }
+  ],
+  "review_responses": [
+    {
+      "reviewer": "parent",
+      "finding_id": "MAH-P01",
+      "status": "implemented-before-freeze",
+      "pages": [
+        "4F0C",
+        "4F0B"
+      ],
+      "repair": "Full column rank, prime-q field assumption, parameterized LWE; source_errata is top-level."
+    },
+    {
+      "reviewer": "parent",
+      "finding_id": "MAH-P02",
+      "status": "implemented-before-freeze",
+      "pages": [
+        "4F27",
+        "4F09",
+        "4F28"
+      ],
+      "repair": "Neutral finite full-variation definition split to 4F27; Hellinger and quantum measurement bounds separated; canonical 全变差 label harmonized to existing forest."
+    },
+    {
+      "reviewer": "Independent mathematical/source review",
+      "finding_id": "M4F-F01",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4F00",
+        "4F18",
+        "4F24",
+        "4F29",
+        "icm2026-mahadev",
+        "4F2C"
+      ],
+      "repair": "Removed invented wraparound boundary-condition layer. Retained ICM LWE-verification input; separated abstract extended-TCF theorem and old-v3 mismatch. Proved odd-orbit obstruction for any encoding. Scoped newer-source search did not verify a repair; unresolved concrete instantiation recorded without claiming disproof. In revision 3 the general obstruction proof is separately atomic in 4F2C."
+    },
+    {
+      "reviewer": "Independent mathematical/source review",
+      "finding_id": "M4F-F02",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4F24",
+        "4F16",
+        "4F00"
+      ],
+      "repair": "Separate honest mu_c and per-fixed-adversary mu_P. Revision 3 explicitly adopts advice-resistant LWE from BCMVV Definition 2.5/4F15 and advised security for all three abstract primitive conditions. P includes its circuit and fixed advice family; arbitrary length-lambda no-instance sequences can be classical advice independent of fresh keys. The same mu_P therefore applies to all inputs of that length. Advice is no longer an optional alternative."
+    },
+    {
+      "reviewer": "Independent mathematical/source review",
+      "finding_id": "M4F-F03",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4F00",
+        "4F10",
+        "4F13",
+        "4F15",
+        "4F16",
+        "4F26",
+        "4F2A"
+      ],
+      "repair": "Ideal square-root states separated from negligible-error finite-gate preparation, controlled jointly with output/workspace/reference systems and ideal zero workspace. Polynomial-call accumulation and negligible completeness losses synchronized."
+    },
+    {
+      "reviewer": "Independent mathematical/source review",
+      "finding_id": "M4F-F04",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4F2B"
+      ],
+      "repair": "Separated no-instance effect M from honest yes-instance M_yes. Finite KL formula uses 0<a<c<1; c=1 has zero lower-tail probability explicitly."
+    },
+    {
+      "reviewer": "Independent mathematical/source review",
+      "finding_id": "M4F-F05",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4F18",
+        "4F2C",
+        "4F00",
+        "4F24",
+        "4F29"
+      ],
+      "repair": "Confirmed 4F2C unused, then moved the odd-cycle obstruction and complete proof into that standalone atom with all hypotheses local. 4F18 retains endpoint linearization and the elementary wraparound example; obstruction body links and prerequisites retargeted. Counts, scopes, source attribution and all owned-tree hashes synchronized."
+    }
+  ],
+  "cross_topic_requests": [
+    {
+      "from": "Mahadev",
+      "to": "parent / Martinelli",
+      "node": "4F27",
+      "path": "trees/math/mathematical-physics/mahadev/4F27.tree",
+      "title": "有限概率分布的全变差距离",
+      "request": "Use 4F27 for finite full variation in Martinelli 4G0H; dependent labels 全变差距离. No reverse dependency. Parent owns cross-branch integration; no existing tree changed."
+    }
+  ],
+  "validation": {
+    "source_links": "46 owned trees checked for local targets, required metadata, math/link separation, editorial rules and balanced braces; no structural source errors.",
+    "format": "normalizeFormat applied through apply_patch only to repaired owned trees; zero remaining differences.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.11",
+      "count": 988,
+      "errors": 0,
+      "scope": "Source formula groups and balanced Forester/TeX braces only; not a Forester build or browser render."
+    },
+    "elementary_checks": {
+      "counts": {
+        "chsh_classical": 16,
+        "mask_identity": 3168,
+        "odd_wrap_counterexamples": 7,
+        "rank_bound": 10,
+        "hellinger": 300,
+        "hadamard_decode": 6400,
+        "pauli_twirl": 100,
+        "history_energy": 100
+      },
+      "errors": 0,
+      "scope": "Finite enumerations and floating-point corroboration of local algebra; not cryptographic reductions or full-site rendering.",
+      "reviewer_repairs": {
+        "counts": {
+          "odd_cycle_boolean_functions": 5688,
+          "honest_repetition_interior": 180,
+          "honest_certain_success": 90,
+          "joint_control_phase": 1
+        },
+        "errors": 0,
+        "scope": "Finite corroboration plus wording regressions; no cryptographic-hardness or old-instantiation validation."
+      },
+      "rerun": "All prior local algebra and reviewer-repair checks rerun for revision 3 with zero errors. Wording regressions additionally check explicit advised LWE/primitive security, arbitrary-input advice, theorem split and retargeted links."
+    },
+    "prerequisite_check": "Scoped revision-3 checks: 46 owned tree hashes; 44 atomic questions, proof scopes and claim-source entries; 143 genuine body-link prerequisite edges; 175 recursively visited shared-plus-local DAG nodes; no cycles, missing targets or navigation prerequisites. All 44 atoms reachable from 4F00. Ferrari schema plus requested top-level source_errata matched. Existing IDs, titles, taxa and paths unchanged; new 4F2C is the reviewer-requested atomic split. These structural checks are not independent mathematical acceptance.",
+    "build": "Not run, as requested. Parent owns shared registration/build. No publication claim.",
+    "independent_review": "Reviewer rereview provisionally regards F01/F03/F04 as satisfactory and requests F02/F05 repairs. Revision 3 supplies those author repairs and awaits final independent recheck; no pass or reviewer resolution claimed.",
+    "review_input": {
+      "path": "research/mathematical-physics-mahadev-review.json",
+      "sha256": "3997d73275b7b7af3a8750dbec15761fde329e96acb0810b82a5a1c872def8e2",
+      "status": "Read-only rereview snapshot used for F02/F05 repair. Reviewer may update its own file; author did not edit it."
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-22",
+    "paths": [
+      "trees/math/mathematical-physics/mahadev/4F*.tree",
+      "trees/references/icm2026-mahadev.tree",
+      "research/mathematical-physics-mahadev-packet.json"
+    ],
+    "hashes": "notes[].sha256 binds every owned tree after format normalization; packet SHA-256 supplied separately to parent.",
+    "mutation_boundary": "Only owned new files. Titles and IDs stable after freeze; subsequent edits only for explicitly requested review repairs.",
+    "revision": 3,
+    "previous_packet_sha256": "df98a961c1f0a517c990e46057e20381b9554f6127e70b1a4dae9a2cb6e27294"
+  },
+  "source_errata": [
+    {
+      "id": "MAH-S01",
+      "source": "mahadev-icm2026",
+      "location": "§1, HTML line 96",
+      "issue": "A is m×n with m>n, yet the text says full row-rank.",
+      "resolution": "4F0C uses full column rank. Its probabilistic proof explicitly assumes prime q, so Z_q is a field; no field-rank statement is silently made for composite q.",
+      "notes": [
+        "4F0B",
+        "4F0C"
+      ],
+      "status": "locally-corrected"
+    },
+    {
+      "id": "MAH-S02",
+      "source": "mahadev-icm2026",
+      "location": "§2, uniform mixed qubit",
+      "issue": "(1/2)|0><0|+(1/2)|1><1| is printed as I.",
+      "resolution": "4F02 uses I_2/2, of trace one.",
+      "notes": [
+        "4F02"
+      ],
+      "status": "locally-corrected"
+    },
+    {
+      "id": "MAH-S03",
+      "source": "mahadev-icm2026",
+      "location": "§2, final Pauli conjugation identity",
+      "issue": "H Z^z X^x H is printed as Z^x X^z without the ordering phase.",
+      "resolution": "4F05 gives X^z Z^x = (-1)^(xz) Z^x X^z and proves the matrix identity.",
+      "notes": [
+        "4F05"
+      ],
+      "status": "locally-corrected"
+    },
+    {
+      "id": "MAH-S04",
+      "source": "mahadev-icm2026",
+      "location": "§3.2.1 (3.4)–(3.6); Appendix A (A.2)–(A.3)",
+      "issue": "Uniform sums over q^n inputs lack the q^(-n/2) normalization.",
+      "resolution": "4F06 and 4F11 retain the uniform normalization; conditional and whole-experiment errors are separated.",
+      "notes": [
+        "4F06",
+        "4F11"
+      ],
+      "status": "locally-corrected"
+    },
+    {
+      "id": "MAH-S05",
+      "source": "mahadev-icm2026",
+      "location": "§3.2.2 Hadamard challenge; §3.2.3 simplified nonzero-mask condition",
+      "issue": "Without a good-mask condition, d=0 wins trivially; merely requiring d nonzero is still insufficient.",
+      "resolution": "4F17 gives both counterexamples. 4F14 and 4F16 use the full good-set and adaptive-hardcore conditions from BCMVV Definition 3.1.",
+      "notes": [
+        "4F14",
+        "4F16",
+        "4F17"
+      ],
+      "status": "formal-condition-restored"
+    },
+    {
+      "id": "MAH-S06",
+      "source": "mahadev-icm2026",
+      "location": "§4.3.1 displayed (4.10)",
+      "issue": "Displayed expression duplicates the z summation in the Pauli-average calculation.",
+      "resolution": "4F1F derives the single-qubit twirl independently, summing each Pauli index once and proving trace preservation.",
+      "notes": [
+        "4F1F"
+      ],
+      "status": "locally-rederived"
+    },
+    {
+      "id": "MAH-S07",
+      "source": "mahadev-icm2026",
+      "location": "§4.3.2 final paragraph",
+      "issue": "The lowest binary bit of x XOR (x-s mod q) is asserted to equal binary s without a wraparound qualification.",
+      "resolution": "4F18 proves the lowest-bit counterexample; 4F2C independently proves the arbitrary-encoding odd-cycle obstruction on the entire Z_q^n translation domain. The even-q identity is only an algebraic observation, not a repaired prime-q instantiation or a new assumption for the general verification theorem.",
+      "notes": [
+        "4F18",
+        "4F24",
+        "4F29",
+        "4F2C"
+      ],
+      "status": "counterexample-recorded-instantiation-repair-unresolved"
+    },
+    {
+      "id": "MAH-S08",
+      "source": "mahadev-verification-v3",
+      "location": "§8.4 Claim 8.7, (200), and use in Lemma 8.6",
+      "issue": "Definition 4.4 takes H' over all claws. For odd q and full-domain x1=x0-s, any function g(x)=d.J(x) has an odd translation orbit on which g(x)+g(x-s) cannot be identically 1. Thus 0 belongs to H' for every secret and fixed mask, so the constant-zero algorithm wins with probability one. This is stronger than a lowest-bit typo and is not fixed merely by another encoding or adaptive good masks.",
+      "resolution": "4F2C proves the obstruction; 4F29 records the exact old-v3 definition/implementation mismatch. 4F24 retains classical verification under LWE as an attributed ICM research input, separately gives the abstract extended-family theorem, and supplies no invented boundary condition or reconstructed concrete instantiation. No verified newer repair was located in the scoped primary-source checks; the general Mahadev theorem is not claimed false.",
+      "notes": [
+        "4F2C",
+        "4F29",
+        "4F24"
+      ],
+      "status": "old-version-construction-discrepancy-unresolved"
+    }
+  ]
+}
+

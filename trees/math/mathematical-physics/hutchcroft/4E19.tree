@@ -1,0 +1,14 @@
+\title{高有效维数下的截断簇矩渐近}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hutchcroft](icm2026-hutchcroft)，§4 式 (4.1) 及其后两段；arXiv:2508.18807v1，定义 I.1.5、定理 I.1.6、引理 I.4.1}
+
+\p{取满足 [(HD+)](4E0F) 的欧氏幂律长程渗流，其中整数 #{d\geq 1}、#{\alpha>0}，#{\beta_c} 是完整模型的临界参数。记 #{K=K_0} 为原点的开簇，#{m_p(r)=\mathbb E_{\beta_c,r}|K|^p} 为[截断模型](4E13)的矩，#{p\geq 1} 为整数。令 #{v_d} 为 #{\mathbb R^d} 中欧氏单位球的 Lebesgue 体积，#{A=v_d(d+\alpha)\beta_c}。记格点距离集合 #{D=\{\|z\|:z\in\mathbb Z^d\setminus\{0\}\}}。以下导数渐近式只在 #{r\notin D} 使用普通导数，因而也几乎处处成立；其他不含导数的渐近式沿全部 #{r\to\infty} 成立：}
+##{m'_p(r)\sim Ar^{-\alpha -1}\sum_{\ell=0}^{p-1}\binom p\ell m_{\ell+1}(r)m_{p-\ell}(r),}
+##{m_1(r)\sim\frac\alpha A r^\alpha,\qquad m_p(r)\sim(2p-3)!!\left(\frac{m_2(r)}{m_1(r)}\right)^{p-1}m_1(r).}
+\p{其中 #{(2p-3)!!=1\cdot 3\cdots(2p-3)} 对 #{p\geq 2} 定义，并约定 #{(-1)!!=1}。#{\sim} 表示比值趋于一。第二矩的结论须分开陈述，以下 #{C>0} 均可依赖模型。}
+\ul{\li{若 #{d>3\alpha}，则 #{m_2(r)\sim Cr^{3\alpha}}。}\li{若 #{d>6} 且临界两点函数满足 #{\mathbb P_{\beta_c}(x\leftrightarrow y)\leq C_0\|x-y\|^{-d+2}}，其中 #{C_0<\infty}、#{x\ne y}，同样有 #{m_2(r)\sim Cr^{3\alpha}}。}\li{特殊边界 #{d=6,\alpha=2} 必须另加 #{\mathbb P_{\beta_c}(x\leftrightarrow y)\leq C_0\|x-y\|^{-4}/\log(2+\|x-y\|)}；在此假设下，定理 I.1.6 仍给出 #{m_2(r)\sim Cr^6}。}\li{长程临界维 #{d=3\alpha<6} 的结论不同：#{m_2(r)\sim Cr^{3\alpha}(\log r)^{-1/2}}。}}
+\p{这些渐近式是引用的研究结论。尺度函数的局部正则性可由原文引理 I.4.1 的求导公式及有限截断的矩界说明。固定 #{1\leq a<b<\infty}；#{D\cap[a,b]} 有限，因为半径 #{b} 的格点球有限。单调耦合下，在截断 #{b} 时原点及有限个邻点的簇几乎必然有限，给定尺度处边激活的概率为零。故这些簇随尺度趋于一个固定值时几乎必然稳定；以 #{b} 尺度的有限矩支配，应用[支配收敛定理](0I8I)得到相关矩和混合矩的连续性。}
+\p{在相邻激活半径之间，引理 I.4.1 把 #{m'_p(r)} 写成有限个项的和，每项是有界系数乘以 #{\mathbb E_{\beta_c,r}[|K_0|^{\ell+1}|K_y|^{p-\ell}1_{\{0\not\leftrightarrow y\}}]}，其中 #{0\leq\ell\leq p-1}、#{\|y\|\leq b}。对非负数 #{u,v} 使用 #{u^{\ell+1}v^{p-\ell}\leq(u+v)^{p+1}\leq 2^p(u^{p+1}+v^{p+1})}，再用平移不变性和尺度单调性，得到 #{0\leq m'_p(r)\leq C_{p,a,b}m_{p+1}(b)<\infty}。同一支配也保证每段上的导数连续。因此 #{m_p} 在每个紧尺度区间连续、分段连续可微且分段导数有界，因而局部绝对连续。}
+\p{具体地，把任意有限积分区间按 #{D} 分成有限段，在每段应用[微积分基本定理](0A3C)后相加；函数连续使中间端点相消，得到 #{m_p(v)-m_p(u)=\int_u^v m'_p(s)\,ds}，积分中可忽略有限个激活半径。因此，[第一矩终端积分](4E16)和[正则变化计算](4E17)的证明可逐段应用，无须截断矩在所有半径处连续可微。首式的 #{p=1} 情形给出第一矩；#{p=2} 时系数和为 #{3m_1m_2}，只得到几乎处处的 #{m'_2/m_2\sim 3\alpha /r}，尚不足以固定对数因子。更高矩的常数递推和二阶误差控制仍采用原始研究结果。}

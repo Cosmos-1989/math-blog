@@ -1,0 +1,11 @@
+\title{CHSH 游戏的量子胜率与 Bell 态}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§3.1](icm2026-mahadev)，二值投影策略的 Tsirelson 界计算}
+
+\p{在 [CHSH 游戏](4F0E)中，两人共享有限维[密度矩阵](4F02) #{\rho}，用各自子系统上的二值可观测量 #{A_0,A_1} 与 #{B_0,B_1} 回答。输出位 #{a,b} 对应测量值 #{(-1)^a,(-1)^b}。这类量子策略的最大胜率为 #{\frac 12+\frac{\sqrt 2}{4}}。}
+\p{\strong{证明。}令 #{S=A_0\otimes(B_0+B_1)+A_1\otimes(B_0-B_1)}。获胜指标为 #{(1+(-1)^{xy+a+b})/2}，故平均胜率为 #{1/2+\operatorname{tr}(S\rho)/8}。用 #{A_i^2=B_j^2=I} 展开平方得}
+##{S^2=4I-[A_0,A_1]\otimes[B_0,B_1],\qquad [R,T]=RT-TR.}
+\p{定义算子范数 #{\|M\|=\sup_{\|v\|=1}\|Mv\|}。它满足三角不等式和 #{\|MN\|\leq\|M\|\|N\|}，而每个可观测量的范数为一，所以两交换子的范数至多为二。因此 #{\|S\|^2=\|S^2\|\leq 8}；此等式也可由[自伴谱分解](0N0B)逐特征值检查。密度矩阵的谱分解给出 #{\operatorname{tr}(S\rho)\leq\|S\|}，从而得到上界。}
+\p{取[纠缠](0F4F) Bell 态 #{|\Phi\rangle=(|00\rangle+|11\rangle)/\sqrt 2}，以及 [Pauli 算子](4F05)给出的 #{A_0=Z,A_1=X,B_0=(Z+X)/\sqrt 2,B_1=(Z-X)/\sqrt 2}。反交换关系保证 #{B_j^2=I}。此时 #{S=\sqrt 2(Z\otimes Z+X\otimes X)}，两张量积在 #{\Phi} 上均取特征值一，故达到上界。最大胜率的计算与“近最大胜率迫使策略接近 Bell 策略”的刚性定理是不同命题。}

@@ -1,0 +1,11 @@
+\title{两支叠加的 Hadamard 奇偶关系}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Mahadev，§3.2.2，式 (3.8)](icm2026-mahadev)}
+
+\p{设 #{x_0,x_1} 属于有限集合 #{S}，#{J:S\to\{0,1\}^w} 为单射编码。在[量子寄存器](4F01)中取 #{|\psi\rangle=(|0,J(x_0)\rangle+|1,J(x_1)\rangle)/\sqrt 2}，记 #{\delta=J(x_0)\oplus J(x_1)}。对全部 #{w+1} 位作 [Hadamard 变换](4F04)后，测得 #{(c,d)} 必满足 #{c=d\cdot\delta}，且 #{d} 在 #{\{0,1\}^w} 上均匀。}
+\p{\strong{证明。}结果 #{(c,d)} 的振幅为}
+##{2^{-(w+2)/2}\left((-1)^{d\cdot J(x_0)}+(-1)^{c+d\cdot J(x_1)}\right).}
+\p{当 #{c\ne d\cdot\delta} 时两项相消；当相等时振幅为 #{2^{-w/2}(-1)^{d\cdot J(x_0)}}。每个 #{d} 恰有一个允许的 #{c}，其概率为 #{2^{-w}}，总和为一。}
+\p{若 #{S=\mathbb Z_q^n}，可逐坐标采用长度 #{\lceil\log_2q\rceil} 的通常二进制编码，故 #{w=n\lceil\log_2q\rceil}。#{x_1=x_0-s} 的减法在模 #{q} 环内完成，随后才编码并作异或；一般不能把 #{J(x_0)\oplus J(x_0-s)} 换成 #{J(s)}。}

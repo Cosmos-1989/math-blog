@@ -1,0 +1,11 @@
+\title{测量线性像产生两支叠加}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Mahadev，§3.2.1，式 (3.1)–(3.3)](icm2026-mahadev)}
+
+\p{设 #{q\geq 2}，#{A\in\mathbb Z_q^{m\times n}} 使 #{x\mapsto Ax} 单射，#{s\in\mathbb Z_q^n} 固定，公开数据为 #{A,u=As}。从均匀输入叠加出发，[可逆求值](4F06)给出如下归一化的理想目标态}
+##{|\Psi\rangle=\frac 1{\sqrt{2q^n}}\sum_{b\in\{0,1\},x\in\mathbb Z_q^n}|b,x,Ax+bu\rangle.}
+\p{测量最后一个寄存器。每个可能结果 #{y=Ax_0} 恰有两个原像 #{(0,x_0)} 和 #{(1,x_0-s)}，因为 #{Ax+As=Ax_0} 等价于 #{x=x_0-s}。由[部分测量公式](4F03)，结果 #{y} 的概率为 #{q^{-n}}，剩余条件态是}
+##{|\psi_y\rangle=\frac{|0,x_0\rangle+|1,x_0-s\rangle}{\sqrt 2}.}
+\p{这里两个基向量始终正交，即使 #{s=0}，首比特仍不同。素数模数的随机矩阵可以用[满列秩估计](4F0C)保证单射性。这个无噪声构造展示了量子态的形状；此时秘密可以消元求出，所以它自身没有密码学隐藏性。}
