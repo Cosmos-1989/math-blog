@@ -1,0 +1,12 @@
+\title{Vlasov–Poisson 方程的密度与力场约定}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§1.1，式 (1.1)}
+
+\p{位置 #{x\in D}、速度 #{v\in\mathbb R^d} 组成相空间，其中 #{D=\mathbb R^d} 或[周期环面](4101) #{\mathbb T^d}。非负函数 #{M(t,x,v)} 是粒子数对相空间体积的密度，空间密度为 #{\rho_M(t,x)=\int_{\mathbb R^d}M(t,x,v)\,dv}，积分按 [Lebesgue 意义](00Q5)理解。给定背景密度 #{\rho^{ext}}，Vlasov–Poisson 方程为}
+##{\partial_tM+v\cdot\nabla_xM+\lambda E\cdot\nabla_vM=0,\qquad E=\nabla_x\phi,\qquad \Delta_x\phi=\rho_M-\rho^{ext}.}
+\p{这里 #{\Delta=\sum_j\partial_{x_j}^2}，#{\nabla} 是偏导组成的向量，#{\lambda=1} 表示排斥、#{\lambda=-1} 表示吸引。#{E} 表示此归一化下的势梯度，粒子加速度为 #{\lambda E}。碰撞项缺席意味着粒子只受共同的自洽场驱动；这仍是非线性方程，因为场由未知密度决定。}
+\p{在三维全空间，选取无穷远消失的势，使用 [Newton 核的归一化](4509)得到}
+##{\phi(x)=-\frac 1{4\pi}\int\frac{\rho_M(y)-\rho^{ext}(y)}{|x-y|}\,dy,\qquad E(x)=\frac 1{4\pi}\int\frac{x-y}{|x-y|^3}(\rho_M(y)-\rho^{ext}(y))\,dy.}
+\p{这些积分要求相应的局部与远场可积性。在环面上，Poisson 方程要求右端积分为零；用[非零 Fourier 模](4101)定义 #{\widehat\phi(k)=-\widehat\rho(k)/|k|^2}，再固定势的平均值。改变势的常数不改变力场。}

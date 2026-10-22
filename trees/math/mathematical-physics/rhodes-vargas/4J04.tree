@@ -1,0 +1,12 @@
+\title{闭曲面高斯自由场的谱级数}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (3.2) 及其后说明。}
+
+\p{设 #{(\Sigma,g)} 为闭连通光滑 [Riemann 曲面](00FR)。由[闭曲面 Laplace 谱定理及 Weyl 计数律](4J1D)，[非负 Laplace 算子](4J01)有实 [L² 空间](0A6A)中的正交归一基 #{e_j}，满足 #{\Delta_ge_j=\lambda_je_j}，#{0=\lambda_0<\lambda_1\le\cdots}，#{e_0=\operatorname{Area}_g(\Sigma)^{-1/2}}，且 #{\lambda_j\asymp j}。取独立[标准正态变量](0N0R) #{a_j}，定义}
+##{X_g=\sqrt{2\pi}\sum_{j\ge 1}\frac{a_j}{\sqrt{\lambda_j}}e_j.}
+\p{此处使用[谱式 Sobolev 空间](4J1D)的定义 #{\|f\|_{H^s_g}^2=\sum_j(1+\lambda_j)^s|\langle e_j,f\rangle|^2}。对每个 #{s<0}，}
+##{\mathbb E\|X_g\|_{H^s_g}^2=2\pi\sum_{j\ge 1}\frac{(1+\lambda_j)^s}{\lambda_j}<\infty.}
+\p{\strong{收敛。}级数右端与 #{\sum j^{s-1}} 比较收敛。[Tonelli 定理](0H53)说明随机非负级数几乎处处有限，故部分和在 #{H^s_g} 中几乎处处收敛；尾和期望趋零又给出均方收敛。负阶空间的元素按与光滑测试函数配对理解为分布，不能直接代入一点。}
+\p{对实光滑函数 #{f,h}，协方差为 #{2\pi\sum_{j\ge 1}\langle f,e_j\rangle\langle h,e_j\rangle /\lambda_j}。因此若 #{G_g(x,y)} 为[零均值 Green 核](4J1E)，则 #{\mathbb E[X_g(x)X_g(y)]=2\pi G_g(x,y)} 是分布恒等式，其局部奇部为 #{\log(1/d_g(x,y))}；常数模态须另以实变量 #{c} 加回。}

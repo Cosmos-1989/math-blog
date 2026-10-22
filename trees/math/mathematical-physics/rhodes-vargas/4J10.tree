@@ -1,0 +1,10 @@
+\title{非正交基的完备性公式为什么含逆 Gram 矩阵}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (7.7) 的有限维线性代数。}
+
+\p{设 #{E} 是有限维复[内积空间](004M)，内积对第二变量线性，#{v_1,\ldots,v_N} 是一组基。令 #{F_{ij}=\langle v_i,v_j\rangle}，则 #{F} 为正定 Hermitian 矩阵，且对 #{u,w\in E}，}
+##{w=\sum_{i,j}v_i(F^{-1})_{ij}\langle v_j,w\rangle,\qquad \langle u,w\rangle=\sum_{i,j}\langle u,v_i\rangle(F^{-1})_{ij}\langle v_j,w\rangle.}
+\p{\strong{证明。}写 #{w=\sum_i a_i v_i}，令 #{b_j=\langle v_j,w\rangle}。第二变量线性给出 #{b_j=\sum_iF_{ji}a_i}，即 #{b=Fa}。#{a^*Fa=\|\sum_i a_iv_i\|^2>0} 对所有非零 #{a} 成立，故 #{F} 可逆，#{a=F^{-1}b}；代回即得两式。}
+\p{若 #{u,w} 属于更大的 Hilbert 空间，而所有 #{v_i} 张成其中的子空间，上式右端等于 #{\langle u,P_Ew\rangle}，其中 #{P_E} 是[正交投影](00MS)。对 Virasoro 的某一层，用 [Shapovalov 矩阵](4J0L)即可完成同样的代数收缩；推广到连续广义状态还要另用 [Plancherel 定理](4J0Z)。}

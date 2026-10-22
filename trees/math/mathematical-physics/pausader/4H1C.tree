@@ -1,0 +1,10 @@
+\title{静电二次型在正则坐标下的积分表达}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§5.3 的对偶方法}
+
+\p{在 #{\mathbb T\times\mathbb R}，设实值扰动 #{f} 光滑可积，#{\rho(x)=\int f(x,v)dv}，且 #{\int\rho dx=0}。令 #{\psi''=\rho} 并固定 #{\int\psi dx=0}。静电二次型定义为 #{U[f]=\int\rho\psi dx}。则}
+##{U[f]=-\int_{\mathbb T}|\psi'(x)|^2dx=\iint f(x,v)\psi(x)dx\,dv.}
+\p{\strong{证明。}第一式是周期分部积分，第二式由 [Fubini 定理](0H53)。因此采用 #{\Delta\psi=\rho} 的约定时，#{U} 为非正；正的电场能量是 #{-U/2}。}
+\p{若在一块相空间区域用[正则坐标](4H0I) #{(x,v)=(X(\theta,I),V(\theta,I))}，则面积元满足 #{dx\,dv=d\theta\,dI}，该区域的双积分变成 #{\int f(X,V)\psi(X)d\theta\,dI}。即使“固定位置再积速度”在新坐标中难以表达，全相空间配对仍可直接换元。这是非齐次 BGK 分析改用轨道平均二次型的原因。}

@@ -1,0 +1,13 @@
+\title{无限区域的零能投影为何属于局部代数}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Ogata–Pérez-García–Ruiz-de-Alarcón v2，Lemma 2.1.3](icm2026-perez-garcia)；强极限证明}
+
+\p{设 #{\omega} 是[准局域代数](4I0C)的无挫折态，#{\Phi(X)\geq 0}，取其 [GNS 三元组](4I0F) #{(H,\pi,\Omega)}。对任意区域 #{C}，令}
+##{K_C=\bigcap_{X\subset C}\ker\pi(\Phi(X)),\qquad P_C=\text{投影到 }K_C.}
+\p{则 #{P_C\in\mathcal R_C=\pi(\mathcal A_C)''} 且 #{P_C\Omega=\Omega}。这里 #{X} 只取有限集合。}
+\p{\strong{证明。}选有限区域 #{C_n\uparrow C}，记 #{Q_n} 为有限哈密顿量 #{H_{C_n}} 的零能投影。有限谱中可选多项式在零处取一、其余谱点取零，故 #{Q_n\in\mathcal A_{C_n}}，且 #{\pi(Q_n)} 是表示中对应的零能投影。[正项核引理](4I04)说明这些投影的像递减。对 #{m\geq n}，}
+##{\|\pi(Q_n)\xi -\pi(Q_m)\xi\|^2
+=\|\pi(Q_n)\xi\|^2-\|\pi(Q_m)\xi\|^2.}
+\p{右边趋零，故它们[强收敛](00MW)于交空间的投影 #{P_C}。由[双交换子定理](004X)，#{\mathcal R_C} 强闭，因而包含该极限。又 #{\omega(\Phi(X))=0} 蕴含 #{\pi(\Phi(X))\Omega=0}：有限维正项满足 #{\Phi(X)^2\leq\|\Phi(X)\|\Phi(X)}，取期望即得其作用于 #{\Omega} 的范数为零。因此 #{\Omega\in K_C}。}

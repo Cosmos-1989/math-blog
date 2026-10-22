@@ -1,0 +1,16 @@
+\title{三维真空附近的小初值修正散射定理}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，定理 3.1(i)，式 (3.5)–(3.6)；Flynn–Ouyang–Pausader–Widmayer v1，§3}
+
+\p{在 #{\mathbb R^3_x\times\mathbb R^3_v}，固定 #{\lambda\in\{-1,1\}}、零背景，令 #{M=\mu^2}，[Vlasov 方程](4H01)写为}
+##{\partial_t\mu+v\cdot\nabla_x\mu+\lambda E\cdot\nabla_v\mu=0,\qquad E=\nabla\Delta^{-1}\int\mu^2dv.}
+\p{记 #{\langle x,v\rangle=(1+|x|^2+|v|^2)^{1/2}}。报告定理 3.1(i)给出 #{\varepsilon>0}：若初值满足}
+##{\|\mu_0\|_{L^2_{x,v}}+\|\langle x,v\rangle^2\mu_0\|_{L^\infty_{x,v}}+\|\nabla_{x,v}\mu_0\|_{L^\infty_{x,v}}\leq\varepsilon,}
+\p{则有下述正则类中的唯一全局强解，并存在 #{\mu_\infty} 及其[速度边缘电场](4H1R) #{E_\infty[\mu_\infty]}，使}
+##{\mu(t,x+tv-\lambda\log(t)E_\infty(v),v)\longrightarrow\mu_\infty(x,v)\quad(t\to+\infty),}
+\p{收敛对每个紧的 #{(x,v)} 集合一致。这里范数采用 [#{L^p} 空间](00Q6)，空间导数采用[有界弱导数](4H1Q)。具体地，以 #{\tau=1+t} 作[伪共形换元](4H1O)，令 #{\gamma(s,q,p)=\mu(s^{-1}-1,q/s,q-sp)}。原论文定理 3.1 给出的解类满足}
+##{\begin{gathered}\gamma\in L^\infty_s(\lparen 0,1\rbrack;L^2_{q,p}\cap L^\infty_{q,p}),\\\|\langle p\rangle^2\gamma(s)\|_\infty\leq C\varepsilon\langle\log s\rangle^2,\qquad\|\nabla_{q,p}\gamma(s)\|_\infty\leq C\varepsilon\langle\log s\rangle^5.\end{gathered}}
+\p{时间正则性可写为 #{\gamma\in C(\lparen 0,1\rbrack;L^2)}，且在每个远离 #{s=0} 的紧时间区间及有界相空间集合上，#{\partial_s\gamma\in L^\infty}，方程几乎处处成立。后一个性质由方程和上述空间导数界得到；沿特征线解绝对连续，#{L^2} 连续性来自保体积流的连续依赖与截断逼近。唯一性取上述带权正则解类，不涉及所有分布弱解。}
+\p{\strong{引用的证明。}Flynn–Ouyang–Pausader–Widmayer v1 定理 1.1(i)、3.1及注 3.2(2)控制场、导数和渐近剪切；其中非线性构造给出终态电场公式，不以 Schwartz 自由模型作为假设。该论文在原时间 #{t=1} 使用 #{\langle x-v\rangle^2} 权；这里陈述报告在 #{t=0} 的较强、对称权版本。定理 3.1 的全相空间一致收敛另要求带一阶动量权的梯度界；此处仅采用定理 1.1 和注 3.2 的局部一致收敛。[对数位移引理](4H0E)解释修正的来源。}

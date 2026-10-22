@@ -1,0 +1,12 @@
+\title{退化向量消去如何导出二阶 BPZ 方程}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§4；DOZZ 原论文 v3 §4.2。此处为明确假设下的代数推导。}
+
+\p{设 #{G(z;z_1,\ldots,z_m)} 是互异点配置上的二次可微函数，#{b>0}。假定 #{z} 处插入权重 #{\alpha=-b} 的场，并且相关函数满足如下两个恒等式：#{L_{-1}} 插入由 #{\partial_z} 实现；#{L_{-2}} 插入由 [Ward 算子](4J13)实现为}
+##{\mathcal D_zG=\sum_{j=1}^m\left(\frac{\Delta_j}{(z-z_j)^2}+\frac 1{z-z_j}\partial_{z_j}\right)G.}
+\p{再假定[奇异向量](4J0M) #{L_{-1}^2+b^2L_{-2}} 的插入为零，则}
+##{\left[\frac 1{b^2}\partial_z^2+\sum_{j=1}^m\left(\frac{\Delta_j}{(z-z_j)^2}+\frac 1{z-z_j}\partial_{z_j}\right)\right]G=0.}
+\p{\strong{证明。}按假设把两个后裔插入分别替换为 #{\partial_z^2G} 与 #{\mathcal D_zG}，奇异向量消去即给出 #{\partial_z^2G+b^2\mathcal D_zG=0}，再除以 #{b^2}。对 #{\alpha=-b^{-1}}，同样得到 #{b^2\partial_z^2+\mathcal D_z}。}
+\p{在概率构造中，Ward 恒等式、奇异向量消去及其参数范围都需要分析证明。DOZZ 原论文 §4.2 在其适用范围将退化四点函数约化为超几何方程，并结合奇点渐近推导三点函数的差分关系；仅有代数奇异向量并不能推出概率相关函数自动满足该方程。}

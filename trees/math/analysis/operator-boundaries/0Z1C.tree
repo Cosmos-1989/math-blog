@@ -1,10 +1,13 @@
 \title{状态的 Schwarz 不等式}
-\date{2026-10-14}
+\date{2026-10-22}
 \taxon{Proposition}
 \author{author}
 \meta{source}{[Peterson](icm2026-peterson)，状态与迹的基础工具；直接证明}
 
 \p{设 #{\varphi} 是含幺 [C* 代数](0Z01)上的正线性泛函，即对每个[正元素](0Z02) #{a} 都有 #{\varphi(a)\geq 0}。则}
 ##{|\varphi(a^*b)|^2\leq\varphi(a^*a)\varphi(b^*b).}
-\p{\strong{证明。}正泛函在自伴元素上取实值：将其按[函数演算](0S14)分解为正负部分；由实虚部分分解进一步得到 #{\varphi(c^*)=\overline{\varphi(c)}}。因此 #{q(a,b)=\varphi(a^*b)} 是第一变量共轭线性的正半定形式。若 #{q(a,a)>0}，在 #{q(b-za,b-za)\geq 0} 中取 #{z=q(a,b)/q(a,a)}，即得不等式。若 #{q(a,a)=0}，同一不等式对所有 #{z\in\mathbb C} 成立，线性项只能为零，故 #{q(a,b)=0}。}
-\p{对[状态](0Z03)，取 #{a=1} 并用 #{b^*b\leq\|b\|^2 1} 得 #{|\varphi(b)|\leq\|b\|}。又 #{\varphi(1)=1}，故 #{\|\varphi\|=1}。}
+\p{\strong{证明。}令 #{q(a,b)=\varphi(a^*b)}。它对第一变量共轭线性，对第二变量线性，且 #{q(a,a)\geq 0}。设 #{u=q(a,b)}、#{v=q(b,a)}。展开 #{q(a+b,a+b)} 和 #{q(a+ib,a+ib)}，可知 #{u+v} 与 #{i(u-v)} 均为实数。因此 #{v=\overline u}，即 #{q} 为 Hermitian 正半定形式。}
+\p{若 #{q(a,a)>0}，在 #{q(b-za,b-za)\geq 0} 中取 #{z=q(a,b)/q(a,a)}，整理得到所需不等式。若 #{q(a,a)=0}，同一展开对所有 #{z\in\mathbb C} 成立，故线性项只能为零，得到 #{q(a,b)=0}。}
+\p{\strong{状态的范数。}设 #{\varphi} 为[状态](0Z03)，即另有 #{\varphi(1)=1}。为在抽象代数内得到范数界，固定 #{r>\|b\|}，置 #{t=b^*b/r^2}。由 C* 恒等式，#{\|t\|<1}。二项式展开}
+##{(1-z)^{1/2}=1-\sum_{n\geq 1}c_nz^n,\qquad c_n=\frac{\binom{2n}{n}}{4^n(2n-1)}}
+\p{在 #{|z|<1} 成立，且 #{0<c_n\leq 1}。于是 #{s=1-\sum_{n\geq 1}c_nt^n} 是[绝对收敛的 Banach 空间级数](0A38)。逐项共轭和绝对收敛级数的乘法给出 #{s^*=s}、#{s^2=1-t}。因此 #{r^21-b^*b=(rs)^*(rs)} 为正元，故 #{\varphi(b^*b)\leq r^2}。令 #{r\downarrow\|b\|}，再在 Schwarz 不等式中取 #{a=1}，得到 #{|\varphi(b)|\leq\|b\|}。又 #{\varphi(1)=1}，故 #{\|\varphi\|=1}。}

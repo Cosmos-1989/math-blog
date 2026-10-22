@@ -1,0 +1,16 @@
+\title{局域自同态为何自然形成张量范畴}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§4 的范畴化框架](icm2026-perez-garcia)；交织子恒等式的直接证明}
+
+\p{设 #{\mathcal B} 是含幺 [C* 代数](0Z01)，考虑一族对复合封闭且包含恒等映射的含幺星自同态。对 #{\rho,\sigma} 定义}
+##{\operatorname{Hom}(\rho,\sigma)=\{T\in\mathcal B:T\rho(a)=\sigma(a)T\ \text{对所有 }a\in\mathcal B\}.}
+\p{箭头复合取算子乘法，单位箭头为 #{1}。对象张量积定义为 #{\rho\otimes\sigma=\rho\circ\sigma}；对 #{T:\rho\to\rho'}、#{S:\sigma\to\sigma'} 定义 #{T\otimes S=T\rho(S)}。这些给出一个严格[幺半范畴](012G)。}
+\p{\strong{证明。}交织关系先给 #{T\rho(S)=\rho'(S)T}。进而}
+##{T\rho(S)\rho\sigma(a)=T\rho(\sigma'(a)S)
+=\rho'\sigma'(a)T\rho(S),}
+\p{所以张量后的箭头类型正确。若 #{T':\rho'\to\rho''}、#{S':\sigma'\to\sigma''}，则}
+##{(T'\rho'(S'))(T\rho(S))=T'T\rho(S'S),}
+\p{这正是张量积与复合相容的交换律。结合律来自自同态复合的结合律及 #{\rho\sigma(S)=\rho(\sigma(S))}，单位来自恒等自同态。伴随将交织箭头反向，因取伴随再将 #{a^*} 改名为 #{a} 即可。}
+\p{当对象来自[锥局域化扇区](4I16)时，这个代数结构描述激发融合。还须构造自然同构 #{c_{\rho,\sigma}:\rho\sigma\to\sigma\rho} 并验证六边形，才能得到[编织范畴](012H)。报告所讨论的二维局域化理论提供这一步的研究结果；上面证明的是交织子范畴的张量结构。}

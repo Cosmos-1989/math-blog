@@ -1,0 +1,11 @@
+\title{约化态为何等于可观测代数上的限制}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§4 的 reduced state](icm2026-perez-garcia)；有限维直接计算}
+
+\p{设 #{H_A,H_B} 为有限维 [Hilbert 空间](00MQ)，#{\rho} 是 #{H_A\otimes H_B} 上的[密度矩阵](4F02)。按[偏迹](2V0L)的定义，固定 #{H_B} 的标准正交基 #{f_j} 后有}
+##{\rho_A=\operatorname{Tr}_B\rho=\sum_j(I\otimes\langle f_j|)\rho(I\otimes|f_j\rangle).}
+\p{每个 #{a\in B(H_A)} 都满足 #{\operatorname{tr}(\rho_Aa)=\operatorname{tr}(\rho(a\otimes I))}。在基 #{e_i\otimes f_j} 中展开右边，逐个对 #{j} 求和即得此式。迹配对非退化：若 #{\operatorname{tr}(Xa)=0} 对所有矩阵 #{a} 成立，取矩阵单位便知 #{X} 的所有元素为零。因此此式唯一确定 #{\rho_A}，并证明定义不依赖所选基。}
+\p{对任意 #{u\in H_A}，#{\langle u,\rho_Au\rangle=\sum_j\langle u\otimes f_j,\rho(u\otimes f_j)\rangle\geq 0}；取 #{a=I} 得 #{\operatorname{tr}\rho_A=1}。故它确实是密度矩阵，表示将状态限制到 #{A} 中所有可观测量后得到的统计。}
+\p{例如取 #{D=\dim H_A\geq 2}，令 #{e_1,\ldots,e_D} 为 #{H_A} 的完整标准正交基，#{f_1,\ldots,f_D} 为 #{H_B} 中的标准正交组。则[纠缠向量](0F4F) #{\Omega_D=D^{-1/2}\sum_{j=1}^D e_j\otimes f_j} 给出 #{\operatorname{Tr}_B|\Omega_D\rangle\langle\Omega_D|=I_A/D}。若 #{e_j} 仅张成真子空间 #{K\subset H_A}，同一计算得到的是 #{P_K/D}。整体纯态的约化态可以是混合态。}

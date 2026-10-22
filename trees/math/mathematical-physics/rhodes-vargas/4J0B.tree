@@ -1,0 +1,11 @@
+\title{顶点算子的相关函数由共同正则化定义}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (3.6)–(3.7)。}
+
+\p{固定[Liouville 积分](4J0A)的参数与正则化。对实权重 #{\alpha} 和点 #{x\in\Sigma}，令 #{\phi=c+X_g}，定义正则化顶点插入 #{V_{\alpha,\epsilon}(x)=\epsilon^{\alpha^2/2}e^{\alpha\phi_\epsilon(x)}}。若 #{x_1,\ldots,x_m} 两两不同，定义}
+##{\left\langle\prod_{j=1}^mV_{\alpha_j}(x_j)\right\rangle_{\Sigma,g}=\lim_{\epsilon\downarrow 0}\left\langle\prod_{j=1}^mV_{\alpha_j,\epsilon}(x_j)\right\rangle_{\Sigma,g},}
+\p{只在该极限有意义的范围使用此记号。它定义的是插入的联合相关函数，不要求每个 #{e^{\alpha\phi(x)}} 本身是逐点随机变量。#{\epsilon^{\alpha^2/2}} 的作用由[高斯自方差消去](4J06)解释。}
+\p{固定 #{\epsilon>0}，取高斯变量 #{Y_\epsilon=\sum_j\alpha_jX_{g,\epsilon}(x_j)}。[高斯场的指数平移定理](4J1I)使均值增加 #{h_\epsilon(x)=\sum_j\alpha_j\mathbb E[X_g(x)X_{g,\epsilon}(x_j)]}。对另一个固定平滑尺度 #{\delta}，场的指数平移恰使混沌密度乘以 #{e^{\gamma h_{\epsilon,\delta}(x)}}。远离插入点令两个尺度趋零，由[Green 核](4J1E)得到 #{h(x)=2\pi\sum_j\alpha_jG_g(x,x_j)}，其奇部为 #{\sum_j\alpha_j\log(1/d_g(x,x_j))}。}
+\p{把这一极限带入无界混沌积分及其负矩需要额外估计。在[严格 Seiberg 条件](4J0C)内采用所引相关函数定理；球面上的精确奇异混沌表达式见 DOZZ 原论文 v3 §2.2，式 (2.11)–(2.14)，其高斯平移依据为 Theorem 12.1。局部奇异因子为 #{d_g(x,x_j)^{-\gamma\alpha_j}}，其有限光滑因子由度量与正则化共同决定。}

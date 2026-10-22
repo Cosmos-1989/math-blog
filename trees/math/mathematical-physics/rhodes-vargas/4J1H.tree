@@ -1,0 +1,12 @@
+\title{分布值高斯自由场的圆平均怎样定义}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§3 的正则化；利用一般闭曲面 Green 核的有限对数能量构造。}
+
+\p{设 #{g} 为闭曲面上的光滑正定度量，#{X_g} 为[高斯自由场](4J04)。固定点 #{x}，取 #{0<\varepsilon} 小于其[注入半径](2P0Y)，使测地圆 #{C_{x,\varepsilon}} 是光滑嵌入曲线。令 #{\sigma_{x,\varepsilon}} 为其归一化弧长概率测度。它不是光滑测试函数，故用如下 L² 极限定义 #{X_{g,\varepsilon}(x)}。}
+\p{将 #{\sigma_{x,\varepsilon}} 在有限坐标卡内与光滑非负近似单位卷积，再拼合并保持总质量为一，得到光滑概率密度 #{\sigma_\delta}。#{X_g(\sigma_\delta)} 是已定义的高斯变量，协方差为 #{\iint 2\pi G_g(u,v)\sigma_\delta(du)\sigma_{\delta'}(dv)}。}
+\p{\strong{L² 极限。}固定此圆，其弧长测度满足 #{\sigma(B(u,r))\le Cr}；上述光滑近似也有统一的同类界。由[Green 核的对数分解](4J1E)，只需控制对角附近的对数积分。将 #{\log(1/d)} 按距离分层，得到当 #{r<1} 时的统一界}
+##{\iint_{d_g(u,v)<r}\log\frac 1{d_g(u,v)}\,\sigma_\delta(du)\sigma_{\delta'}(dv)\le C' r(1+|\log r|).}
+\p{在对角外核连续，弱逼近给出积分极限；令 #{r\downarrow 0} 消去上界。因此交叉协方差共同收敛到 #{\iint 2\pi G_g,d\sigma\,d\sigma}，并有 #{\mathbb E|X_g(\sigma_\delta)-X_g(\sigma_{\delta'})|^2\to 0}。其 L² 极限定义圆平均，且与这样的平滑近似无关。有限组圆平均仍联合高斯，因为其每个线性组合是 L² 收敛的高斯变量。}
+\p{当 #{\varepsilon\downarrow 0} 时，局部距离比较 #{d_g(u,v)\asymp\varepsilon|e^{i\theta}-e^{i\theta'}|} 与有限弦长对数积分给出 #{\mathbb E[X_{g,\varepsilon}(x)^2]=\log(1/\varepsilon)+O(1)}。这里 L² 指随机变量的均方空间，与样本分布本身的空间正则性不同。}

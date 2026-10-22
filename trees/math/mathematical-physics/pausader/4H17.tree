@@ -1,0 +1,12 @@
+\title{小 BGK 分岔曲线的边缘稳定假设}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，定理 5.1 的条件；2601.10030v2，Definition 1.1，式 (1.11)}
+
+\p{取[单势阱 BGK 波](4H12)的曲线 #{\gamma(s)=(M_s,\phi_s)}，#{0\leq s\leq s_0}，#{M_s=F_s(v^2/2-\phi_s)}。要求 #{\gamma} 在 #{L^1(\mathbb T\times\mathbb R)\times H^1(\mathbb T)} 中为 #{C^2} 曲线，#{\phi_0=0}，#{\partial_s\phi_s|_{s=0}\ne 0}。这里[周期 Sobolev 空间](4101)与[Banach 空间微分](0F68)给出正则性的含义。}
+\p{对起点 #{M_0(v)=F_0(v^2/2)} 的[介电核](4H0Q)，要求存在常数 #{c,C>0}：}
+##{\begin{gathered}1+K(1,0)=0,\qquad |1+K(1,\theta)|\geq c\min\{|\theta|^2,1\}\quad(\theta\in\mathbb R\setminus\{0\}),\\\inf_{|k|\geq 2,\ \operatorname{Im}\theta\leq 0}|1+K(k,\theta)|\geq c,\qquad |K(k,\theta)|\leq\frac C{k^2+|\theta|^2}\quad(k\ne 0,\ \operatorname{Im}\theta\leq 0).\end{gathered}}
+\p{这固定了第一模的边缘退化，并排除其余模接近不稳定边界。曲线还须具有一致正则界}
+##{\sup_{0\leq s\leq s_0}\left[\max_{0\leq j\leq 4}\|(1+e^2)\partial_e^jF_s(e)\|_\infty+\|\phi_s\|_{H^8}\right]<\infty,}
+\p{能量范数取 #{e\geq -\max\phi_s}。对 #{s>0}，势均为偶函数，#{\phi_s(\pi)=0}，#{\phi_s'<0} 于 #{(0,\pi)}，最小周期为 #{2\pi}。原论文 Lemma 1.4说明首阶势为 #{\kappa s(1+\cos x)}，#{\kappa>0}；换参数后可令 #{\kappa=1}。只要求势幅小，并不包含上述分岔、全局能量表示与边缘稳定假设。}

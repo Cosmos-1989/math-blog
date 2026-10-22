@@ -1,0 +1,13 @@
+\title{高斯坐标中的自由 Liouville Hamiltonian}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (7.1)；[bootstrap 原论文，v2](https://arxiv.org/abs/2005.11530v2)，§4.1 的多项式空间与式 (4.1)–(4.7)，§4.2、命题 4.3。}
+
+\p{设 #{0<\gamma<2}、#{Q=2/\gamma+\gamma /2}。在[圆周状态空间](4J0O) #{\mathcal H=L^2(dc\otimes\mathbb P_{\mathbb T})} 中，#{x_n,y_n} 是独立标准正态坐标。取初始定义域}
+##{\mathcal D_0=\operatorname{span}\{f(c)P(x_1,y_1,\ldots,x_N,y_N):f\in C_c^\infty(\mathbb R),\ P\in\mathbb C[x_1,y_1,\ldots,x_N,y_N],\ N\ge 1\}.}
+\p{这里 #{C_c^\infty} 表示光滑紧支撑函数，#{P} 是多项式。有限坐标多项式在高斯 #{L^2} 中稠密，这是所引 §4.1 的 Hermite 多项式完备性；结合 #{C_c^\infty(\mathbb R)} 在 #{L^2(dc)} 中的稠密性，得到 #{\mathcal D_0} 在 #{\mathcal H} 中稠密。高斯测度下所有多项式可平方积分，故 #{\mathcal D_0} 中函数及下式涉及的各阶导数均属于 #{\mathcal H}。在此定义域上，自由 Hamiltonian 的表达式为}
+##{H_0=-\frac 12\partial_c^2+\frac{Q^2}{2}+\sum_{n\ge 1}n(\partial_{x_n}^*\partial_{x_n}+\partial_{y_n}^*\partial_{y_n}).}
+\p{\strong{初始定义域上的分部积分。}标准正态密度 #{\rho(x)} 满足 #{\rho'=-x\rho}。多项式乘 #{\rho} 在两端趋于零，故对多项式 #{u,v} 有 #{\int\overline{u'}v\rho=\int\overline u(xv-v')\rho}。因此 #{\partial_x^*} 在此定义域上的作用是 #{x-\partial_x}，进而 #{\partial_x^*\partial_x=-\partial_x^2+x\partial_x}。在 #{c} 方向利用紧支撑分部积分，得到每个 #{F\in\mathcal D_0} 的恒等式}
+##{\langle F,H_0F\rangle=\frac 12\|\partial_cF\|_2^2+\frac{Q^2}{2}\|F\|_2^2+\sum_{n\ge 1}n(\|\partial_{x_n}F\|_2^2+\|\partial_{y_n}F\|_2^2).}
+\p{\strong{形式闭包。}记右端为 #{q_0(F)}，其和只有有限项非零，且 #{q_0(F)\ge(Q^2/2)\|F\|_2^2}。若 #{F_k\in\mathcal D_0} 在此能量范数下为 Cauchy 列且在 #{\mathcal H} 中趋于零，则带权导数向量在相应 Hilbert 直和中收敛。将每个导数分量与任意 #{\phi\in\mathcal D_0} 配对，用刚证得的分部积分把导数移到 #{\phi}，配对的极限为零。由稠密性，每个分量的极限都为零，故整个导数向量的极限为零，#{q_0(F_k)\to 0}。这证明 #{q_0} 可闭。其闭包由[闭形式表示定理](4J0Y)确定 Friedrichs 自伴实现；无界算子的[伴随](0GSN)及自伴实现的定义域依该定理指定。}

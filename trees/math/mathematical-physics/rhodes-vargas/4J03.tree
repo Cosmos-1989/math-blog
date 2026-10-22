@@ -1,0 +1,10 @@
+\title{有限维高斯指数加权等于均值平移}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§§3、8；DOZZ 原论文 v3 附录 Theorem 12.1 的有限维情形。}
+
+\p{令 #{Z=(Z_1,\ldots,Z_n)} 的坐标为[独立](00L3)[标准正态变量](0N0R)，#{A} 为实 #{m\times n} 矩阵，#{Y=AZ}。称 #{Y} 为中心高斯向量，其协方差矩阵是 #{C=AA^{\mathsf T}}，即 #{C_{ij}=\mathbb E(Y_iY_j)}。对 #{t\in\mathbb R^m} 及任意非负可测函数 #{F}，有}
+##{\mathbb E\left[e^{t^{\mathsf T}Y-\frac 12t^{\mathsf T}Ct}F(Y)\right]=\mathbb E[F(Y+Ct)].}
+\p{\strong{证明。}记 #{h=A^{\mathsf T}t}。高斯密度中的指数满足 #{-|z|^2/2+h^{\mathsf T}z-|h|^2/2=-|z-h|^2/2}。在积分中换元 #{z=w+h}，则 #{Az=Aw+Ah=Aw+Ct}，即得公式。此推导允许 #{A} 不满秩。非负函数由非负积分解释；绝对可积函数再取正负部。}
+\p{取 #{F=1} 得 #{\mathbb E e^{t^{\mathsf T}Y}=e^{t^{\mathsf T}Ct/2}}。因此插入一个高斯指数会平移其他高斯变量；场论中产生的对数奇性来自协方差核所给的这一平移。无限维平移及极限交换还需相应的可积性定理。}

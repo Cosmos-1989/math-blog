@@ -1,0 +1,2561 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "prefix": "4J",
+    "outline": "4J00",
+    "reference": "icm2026-rhodes-vargas",
+    "doi": "10.1137/25M1803632",
+    "speaker": "Rémi Rhodes and Vincent Vargas",
+    "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+    "pages": "551–574",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+    "license": "CC BY 4.0",
+    "question": "如何把分布值随机场的指数面积构造成严格 Liouville 相关函数，并通过边界拼接、连续谱和 DOZZ 三点数据重建曲面振幅？",
+    "reading_scope": "rhodes-vargas-icm2026: Entire publisher HTML mathematical body §§1–9, every displayed formula and all figure captions, in overlapping section-sized reads (lines 90–602); acknowledgments 603–604 and footnote 609. Selected relevant bibliography entries only, not the complete bibliography. Metadata/title/authors/DOI/pages/license and online date verified, lines 59–65 and 1196–1246. No publisher PDF or figure-pixel inspection. Subsequent checks re-read §§3–8 normalization, hypotheses and typographical discrepancies.\nreport-preprint-v1: Metadata/abstract and opening §§1–2 only. Not the full version; publisher HTML is the authoritative full-content source.\ndozz-v3: Selected full text: §2.2–2.4 (extracted lines 470–585), §4.2 (830–890), §5.2 (1230–1295, including start of §6 only), Appendix §12.1 and Corollary 12.2 (3548–3600). PDF p.13 rendered and visually inspected for both negative degenerate weights. RV-F09 repair additionally read §1.2, (1.11) and following continuation/zeros paragraph (lines 248–292, PDF p.5), and §12.5, (12.7) and following zeros paragraph (lines 3763–3797, PDF p.53); both pages rendered and visually inspected for the integral, shifts, powers and zero sets. Remaining sections not read in full.\nbootstrap-v2: Selected §§1.3–1.5 (lines 342–488), §2.3 (587–627), Proposition 5.5 statement and opening proof (2110–2155), §7.5 formula (7.36) and Proposition 7.12 (5072–5103), §8.1 and start of §8.2 (5198–5234). Searches additionally checked reversed descendant convention at lines 750–753 and 1524. RV-F08 repair additionally read §4.1 through the opening of Proposition 4.1 proof (1165–1235, PDF p.20), §4.2 including Proposition 4.3 proof (1238–1295, PDF pp.21–22), and the ensuing dynamics excerpt through Remark 4.6 (1296–1375); §5.2 opening through Proposition 5.3 statement (1790–1850, PDF p.28) checked for the all-derivatives polynomial-growth domain. Full spectral proof §6, full §5 and full Ward proof §9 were not read.\nsegal-v2: Selected §2.1.1–2.1.3 (760–850), §3.1.2–3.1.3 (1040–1098), Theorem 4.4 and bound (1860–1915), Propositions 5.1/5.2 and gluing constants (2190–2260), §10.1 selected local Green proof excerpt (4350–4400), Appendix C statement and proof excerpt (6371–6465). No full proof of Segal axioms or high-genus bootstrap read. §10.1 planar/sphere excerpt is not used as authority for arbitrary closed-surface smooth Green remainder.\nzelditch-v1: Introduction eigenbasis/positive Laplacian convention (text lines 120–175, PDF pp.3–4); §8 Weyl law (2340–2410, pp.45–46). Not the whole survey or microlocal proof. Spectral frequency squared is converted to the present Laplace eigenvalue.\npolyakov-v5-consulted: Selected §3 excerpt lines 1720–1785 and searches of Green-kernel statements. Hyperbolic scope identified; not used to infer all-metric circle averages or arbitrary-surface Green regularity.\nreview-v1-consulted: Abstract/contents and selected §3 excerpt lines 900–980. Used to compare conventions, not treated as fully read. Report covariance normalization remains authoritative.\nlocal-calculations: Explicit local derivations are given in the authored atoms and distinguished from quoted elliptic/GMC/LCFT research theorems.",
+    "proof_scope": {
+      "4J01": {
+        "status": "local-proof",
+        "scope": "等温坐标推导曲率变换；Gauss–Bonnet 复用，明确标量曲率为高斯曲率两倍。"
+      },
+      "4J02": {
+        "status": "local-proof",
+        "scope": "闭曲面变分、曲率代入及两解相减的能量唯一性；经典 Q=2/gamma。"
+      },
+      "4J03": {
+        "status": "local-proof",
+        "scope": "完成平方，含协方差因子及指数归一化。"
+      },
+      "4J04": {
+        "status": "local-construction-from-cited-spectrum",
+        "scope": "引用一般闭曲面谱基与 Weyl 定律，逐项二阶矩和 Tonelli 证明负阶收敛及 covariance=2pi G。"
+      },
+      "4J05": {
+        "status": "definition-with-cited-continuation",
+        "scope": "谱 zeta 的全平面亚纯延拓和零点正则性引用；有限乘积类比直接计算。"
+      },
+      "4J06": {
+        "status": "local-proof",
+        "scope": "高斯矩恒等式与两种正则化的有限方差密度；不丢确定性因子。"
+      },
+      "4J07": {
+        "status": "cited-theorem-and-definition",
+        "scope": "0<gamma<2，固定测地圆平均，弱收敛、非退化和唯一性引用 GMC 理论；圆平均单独构造。"
+      },
+      "4J08": {
+        "status": "local-proof",
+        "scope": "高斯两点矩和二维极坐标可积性给出 gamma^2<2；不以此证明整个次临界区间。"
+      },
+      "4J09": {
+        "status": "local-proof",
+        "scope": "gamma,mu,Z>0，a>0 时精确换元；a<=0 的负尾发散；随机 Z 段再次明确 a>0。"
+      },
+      "4J0A": {
+        "status": "definition",
+        "scope": "参数、曲率线性项、自由场行列式和 GMC 势的完整概率定义；不假设总质量自动有限。"
+      },
+      "4J0B": {
+        "status": "definition-and-cited-singular-limit",
+        "scope": "共同正则化定义；固定尺度应用场级 Cameron–Martin，奇异混沌极限引用严格 Seiberg 区域的研究定理。"
+      },
+      "4J0C": {
+        "status": "cited-theorem-with-local-zero-mode-proof",
+        "scope": "所有 alpha_j<Q、sum alpha>Q chi；全局条件由 Gamma 积分证明，局部混沌与负矩界引用；零与发散分开。"
+      },
+      "4J0D": {
+        "status": "cited-theorem-with-local-check",
+        "scope": "完整 c_L/(96pi) 反常、点权与微分同胚自然性引用；常数缩放直接计算。"
+      },
+      "4J0E": {
+        "status": "local-calculation",
+        "scope": "Delta_alpha=alpha(2Q-alpha)/4，Delta_gamma=1、谱线值及 c_L>25 直接计算。"
+      },
+      "4J0F": {
+        "status": "local-proof-with-fixed-metric",
+        "scope": "明确圆度量，Möbius 距离恒等式与三重传递性；C=C0*C_DOZZ 仅用于此度量，常数缩放反常显式。"
+      },
+      "4J0G": {
+        "status": "local-proof-and-definition",
+        "scope": "零端抵消、无穷端指数衰减、紧子集全纯性、中心归一化；全局结果移至 1G。"
+      },
+      "4J0H": {
+        "status": "cited-research-theorem",
+        "scope": "保持全部 Upsilon 参数、幂指数、mu 因子与报告 C0；证明所需 BPZ/解析延拓/反射识别明确引用。"
+      },
+      "4J0I": {
+        "status": "local-proof",
+        "scope": "抽屉原理产生趋零周期，再用整数倍逼近任意位移和连续性。"
+      },
+      "4J0J": {
+        "status": "definition-and-local-check",
+        "scope": "Witt 交换子直接计算，中心项和 Jacobi 多项式核验。"
+      },
+      "4J0K": {
+        "status": "definition-and-local-proof",
+        "scope": "最高权/Verma/分拆定义及 L0 交换计算；共同双主态权为 h,k，只有 h=k 才有 2h。"
+      },
+      "4J0L": {
+        "status": "local-proof",
+        "scope": "按第二变量线性约定逐交换子计算一级、二级所有元素与行列式。"
+      },
+      "4J0M": {
+        "status": "local-proof-and-source-correction",
+        "scope": "L1,L2 及更高模式消去计算；商模中向量可以已为零；-gamma/2,-2/gamma 的出处与报告符号差异明确。"
+      },
+      "4J0N": {
+        "status": "conditional-local-proof",
+        "scope": "完整列明 L-1、L-2 插入和消去假设，代入得二阶方程；未声称代数关系自动证明概率 BPZ。"
+      },
+      "4J0O": {
+        "status": "local-construction-and-proof",
+        "scope": "Fourier 规范、负阶均方收敛、对数弦长协方差以及 dc 乘积边界测度。"
+      },
+      "4J0P": {
+        "status": "local-proof",
+        "scope": "平滑边界 Fourier 延拓与 2pi sum |n||f_n|^2 能量；粗糙高斯边界不具有限能量。"
+      },
+      "4J0Q": {
+        "status": "local-proof-and-definition",
+        "scope": "证明 G 可测 L² 子空间闭，引用投影定理，给积分刻画；条件独立移至 1J。"
+      },
+      "4J0R": {
+        "status": "cited-theorem-with-local-energy-calculation",
+        "scope": "平滑有界 D 与内区域 U，独立 Dirichlet 场加随机调和部分；有限能量正交计算不充当连续场存在性证明。"
+      },
+      "4J0S": {
+        "status": "definition-with-local-check",
+        "scope": "In/Out 方向、精确圆柱 collar 度量、反演相容性与 Euler 数。"
+      },
+      "4J0T": {
+        "status": "cited-research-theorem",
+        "scope": "连通可容许曲面、每点 alpha<Q、sum alpha>Q chi；报告归一化的拼接，未标记圆环明确排除在 HS 结论外。"
+      },
+      "4J0U": {
+        "status": "local-proof",
+        "scope": "Cauchy–Schwarz 与 Fubini 给乘积范数界，说明复内积的共轭约定。"
+      },
+      "4J0V": {
+        "status": "cited-construction-and-local-composition",
+        "scope": "规范化有界圆环算子及强连续性引用；长度相加、生成元定义与 H 非中心的交换计算。"
+      },
+      "4J0W": {
+        "status": "local-form-calculation-and-closability-proof",
+        "scope": "初始稠密定义域为 C_c∞(c) 与有限高斯坐标多项式的代数张量积；Hermite 完备性引用，导数平方可积、边界项消失、分部积分能量恒等式和形式可闭性局部证明；闭形式表示定理指定自伴实现。"
+      },
+      "4J0X": {
+        "status": "cited-thresholds-with-local-second-moment-proof",
+        "scope": "随机变量阈值与 L² 阈值分开；更大耦合改用场配置空间的奇异势形式。"
+      },
+      "4J0Y": {
+        "status": "cited-standard-theorem-and-application",
+        "scope": "形式定义域、闭性、D(H) 与作用完整列明；Liouville 全 0<gamma<2 的构造引用 Proposition 5.5。"
+      },
+      "4J0Z": {
+        "status": "cited-research-theorem",
+        "scope": "谱区间、能量、p>0 和 1/(2pi)、两套逆 Gram、广义系数与第二变量线性约定；散射完整性引用。"
+      },
+      "4J10": {
+        "status": "local-proof",
+        "scope": "有限维系数 b=Fa 与正定性；推广到子空间投影，未由此推出连续谱完整性。"
+      },
+      "4J11": {
+        "status": "cited-construction-and-analytic-bridge",
+        "scope": "alpha<Q 的精确公式，Pphi 已含零模态；加权解析延拓和后裔定理引用；非 HS 与内积全纯性约定明确。"
+      },
+      "4J12": {
+        "status": "cited-formula-with-local-proof",
+        "scope": "精确 Gamma 比、正底数幂、排除集合引用；共轭 Gamma 与两次反射恒等式证明；(7.12)按解析延拓理解。"
+      },
+      "4J13": {
+        "status": "cited-identity-with-local-recursion",
+        "scope": "引用 Ward 分析定理；单次微分、无穷远归一化和 W_nu 乘积直接证明；源文两种乘积次序明确换算。"
+      },
+      "4J14": {
+        "status": "definition-and-local-coefficient-proof",
+        "scope": "每层双指标收缩、一级系数、二级向量、q=z/2 与报告幂因子；不把形式定义等同收敛。"
+      },
+      "4J15": {
+        "status": "cited-research-theorem",
+        "scope": "严格成对条件、0<|z|<1、0,z,2,infinity、平坦插入邻域、圆柱 collar、inversion 对称、g(0)=1；C(g)保留，度量指数据 Theorem 8.1。"
+      },
+      "4J16": {
+        "status": "local-consequence-of-cited-bootstrap",
+        "scope": "四个成对不等式、0<q<1；在原论文去度量的 1/(8pi) 规范中比较两次定理，不混用报告 C(g)。"
+      },
+      "4J17": {
+        "status": "local-proof",
+        "scope": "给定裤子分解后的 Euler 加法与边界计数；不另证明曲面分类。"
+      },
+      "4J18": {
+        "status": "cited-research-theorem-with-factor-explanation",
+        "scope": "(2pi)^-3、R_+³、DOZZ 绝对值平方、三组逆 Gram 与几何 Cprime；只断言几乎处处块收敛。"
+      },
+      "4J19": {
+        "status": "local-proof-and-source-context",
+        "scope": "系数指数界充分条件与 n! 反例；报告中的环面 AGT 仅作为形式结果，不升级为解析收敛。"
+      },
+      "4J1A": {
+        "status": "local-proof",
+        "scope": "正形状参数、有限正负矩假设下联合换元证明独立性，面积均值方差及 mu 缩放。"
+      },
+      "4J1B": {
+        "status": "cited-construction-with-local-radial-check",
+        "scope": "报告 (6.1) 的 v/fprime、复共轭系数及共同定义域限制；沿 r=e^-t 的链式法则直接计算。"
+      },
+      "4J1C": {
+        "status": "conditional-local-proof",
+        "scope": "以 C² 解及函数和导数两端渐近为假设，证明 Im(conj(psi)psi prime) 守恒；不证明散射解存在性。"
+      },
+      "4J1D": {
+        "status": "cited-standard-theorem-with-local-consequences",
+        "scope": "一般闭连通光滑二维范围，lambda不是sqrt(lambda)，A/(4pi)计数常数；反演、级数阈值和分布配对局部推导。"
+      },
+      "4J1E": {
+        "status": "local-proof-from-cited-spectrum",
+        "scope": "谱 L² 核构造、唯一性、二维基本解通量；在共形坐标对两变量用四维局部正则性，证明一般闭曲面共同光滑余项。"
+      },
+      "4J1F": {
+        "status": "local-proof",
+        "scope": "局部分布定义、径向平滑与球面平均的 Weyl 引理、二维/四维基本解及平滑右端的卷积。"
+      },
+      "4J1G": {
+        "status": "cited-standard-theorem",
+        "scope": "两种步长、Gamma商、正底数幂、完整零点集合和无理b²简单性；不伪称从条带积分已证明全部延拓。"
+      },
+      "4J1H": {
+        "status": "local-construction-and-proof",
+        "scope": "一般光滑度量、注入半径内嵌入圆，平滑概率密度的统一球质量界控制对数能量，证明高斯 L² 极限。"
+      },
+      "4J1I": {
+        "status": "local-proof",
+        "scope": "显式平方可和高斯级数和线性高斯 Y，有界连续 F；权重 L² 收敛控制极限，无界 GMC 负矩另引用。"
+      },
+      "4J1J": {
+        "status": "definition-and-local-consequence",
+        "scope": "有界变量条件期望定义、全期望拼接恒等式及非负截断版本。"
+      }
+    },
+    "claim_sources": {
+      "4J01": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§§1,3; (1.2),(3.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "等温坐标推导曲率变换；Gauss–Bonnet 复用，明确标量曲率为高斯曲率两倍。"
+        }
+      ],
+      "4J02": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "闭曲面变分、曲率代入及两解相减的能量唯一性；经典 Q=2/gamma。"
+        }
+      ],
+      "4J03": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3; Gaussian background"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "完成平方，含协方差因子及指数归一化。"
+        }
+      ],
+      "4J04": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "引用一般闭曲面谱基与 Weyl 定律，逐项二阶矩和 Tonelli 证明负阶收敛及 covariance=2pi G。"
+        }
+      ],
+      "4J05": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.3)"
+        },
+        {
+          "source": "segal-v2",
+          "locator": "§2.1.1"
+        }
+      ],
+      "4J06": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "高斯矩恒等式与两种正则化的有限方差密度；不丢确定性因子。"
+        }
+      ],
+      "4J07": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.4)-(3.5)"
+        }
+      ],
+      "4J08": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3; GMC second-moment calculation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "高斯两点矩和二维极坐标可积性给出 gamma^2<2；不以此证明整个次临界区间。"
+        }
+      ],
+      "4J09": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3; zero-mode integral"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "gamma,mu,Z>0，a>0 时精确换元；a<=0 的负尾发散；随机 Z 段再次明确 a>0。"
+        }
+      ],
+      "4J0A": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.5)"
+        }
+      ],
+      "4J0B": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, (3.6)-(3.7)"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "§2.2 (2.9)-(2.14); Theorem 12.1"
+        }
+      ],
+      "4J0C": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Proposition 3.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "所有 alpha_j<Q、sum alpha>Q chi；全局条件由 Gamma 积分证明，局部混沌与负矩界引用；零与发散分开。"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "§2.2 ordinary and extended Seiberg bounds"
+        }
+      ],
+      "4J0D": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Proposition 3.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "完整 c_L/(96pi) 反常、点权与微分同胚自然性引用；常数缩放直接计算。"
+        }
+      ],
+      "4J0E": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§§3,7; (7.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Delta_alpha=alpha(2Q-alpha)/4，Delta_gamma=1、谱线值及 c_L>25 直接计算。"
+        }
+      ],
+      "4J0F": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§4, (4.1)-(4.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "明确圆度量，Möbius 距离恒等式与三重传递性；C=C0*C_DOZZ 仅用于此度量，常数缩放反常显式。"
+        }
+      ],
+      "4J0G": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§4, (4.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "零端抵消、无穷端指数衰减、紧子集全纯性、中心归一化；全局结果移至 1G。"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "§1.2, (1.11), PDF p.5: strip integral; following paragraph: entire continuation and zeros"
+        }
+      ],
+      "4J0H": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Theorem 4.1, (4.1)-(4.5)"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "Theorem 2.4"
+        }
+      ],
+      "4J0I": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§4, uniqueness discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "抽屉原理产生趋零周期，再用整数倍逼近任意位移和连续性。"
+        }
+      ],
+      "4J0J": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§6, (6.2)-(6.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Witt 交换子直接计算，中心项和 Jacobi 多项式核验。"
+        }
+      ],
+      "4J0K": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7, (7.6),(7.9)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "最高权/Verma/分拆定义及 L0 交换计算；共同双主态权为 h,k，只有 h=k 才有 2h。"
+        }
+      ],
+      "4J0L": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7, Shapovalov form"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "按第二变量线性约定逐交换子计算一级、二级所有元素与行列式。"
+        }
+      ],
+      "4J0M": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§4, degenerate insertions"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "L1,L2 及更高模式消去计算；商模中向量可以已为零；-gamma/2,-2/gamma 的出处与报告符号差异明确。"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "§4.2 p.13, negative degenerate weights"
+        }
+      ],
+      "4J0N": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§4; BPZ mechanism"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "完整列明 L-1、L-2 插入和消去假设，代入得二阶方程；未声称代数关系自动证明概率 BPZ。"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "§4.2; probability statement not reproduced beyond its cited scope"
+        }
+      ],
+      "4J0O": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.2, (5.6)-(5.7)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Fourier 规范、负阶均方收敛、对数弦长协方差以及 dc 乘积边界测度。"
+        }
+      ],
+      "4J0P": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.2; harmonic extension"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "平滑边界 Fourier 延拓与 2pi sum |n||f_n|^2 能量；粗糙高斯边界不具有限能量。"
+        }
+      ],
+      "4J0Q": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.1; conditional expectation background"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "证明 G 可测 L² 子空间闭，引用投影定理，给积分刻画；条件独立移至 1J。"
+        }
+      ],
+      "4J0R": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.1-5.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "平滑有界 D 与内区域 U，独立 Dirichlet 场加随机调和部分；有限能量正交计算不充当连续场存在性证明。"
+        },
+        {
+          "source": "segal-v2",
+          "locator": "Appendix C, Proposition C.1(1), proof first part"
+        }
+      ],
+      "4J0S": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.2, footnote 1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "In/Out 方向、精确圆柱 collar 度量、反演相容性与 Euler 数。"
+        },
+        {
+          "source": "segal-v2",
+          "locator": "§3.1.2-3.1.3"
+        }
+      ],
+      "4J0T": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Theorem 5.1, (5.5)"
+        },
+        {
+          "source": "segal-v2",
+          "locator": "Theorem 4.4; Propositions 5.1 and 5.2 gluing"
+        }
+      ],
+      "4J0U": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.2; kernel composition"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "Cauchy–Schwarz 与 Fubini 给乘积范数界，说明复内积的共轭约定。"
+        }
+      ],
+      "4J0V": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§6, (6.1) and dilation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "规范化有界圆环算子及强连续性引用；长度相加、生成元定义与 H 非中心的交换计算。"
+        }
+      ],
+      "4J0W": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7, (7.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "初始稠密定义域为 C_c∞(c) 与有限高斯坐标多项式的代数张量积；Hermite 完备性引用，导数平方可积、边界项消失、分部积分能量恒等式和形式可闭性局部证明；闭形式表示定理指定自伴实现。"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "§4.1, PDF p.20: polynomial cylinder space P, derivative growth class S, (4.1)-(4.7), Hermite completeness; §4.2, (4.9)-(4.10), Proposition 4.3, PDF pp.21-22: free-form closure"
+        }
+      ],
+      "4J0X": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7 after (7.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "随机变量阈值与 L² 阈值分开；更大耦合改用场配置空间的奇异势形式。"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "§2.3 and cited §5 construction"
+        }
+      ],
+      "4J0Y": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7; form realization"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "Proposition 5.5, statement and opening proof pp.32-33"
+        }
+      ],
+      "4J0Z": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Theorem 7.1, (7.4),(7.6)-(7.7)"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "§1.4 spectral statement; (2.9), and cited Theorem 6.25 not fully read"
+        }
+      ],
+      "4J10": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7, finite-dimensional background to (7.7)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有限维系数 b=Fa 与正定性；推广到子空间投影，未由此推出连续谱完整性。"
+        }
+      ],
+      "4J11": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "(7.8), Theorem 7.1, Proposition 7.2"
+        }
+      ],
+      "4J12": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "(7.10)-(7.12)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "精确 Gamma 比、正底数幂、排除集合引用；共轭 Gamma 与两次反射恒等式证明；(7.12)按解析延拓理解。"
+        }
+      ],
+      "4J13": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Lemma 8.2, (8.5)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "引用 Ward 分析定理；单次微分、无穷远归一化和 W_nu 乘积直接证明；源文两种乘积次序明确换算。"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "§7.5 (7.36)-(7.37), reversed descendant order"
+        }
+      ],
+      "4J14": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "(8.2)-(8.5)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "每层双指标收缩、一级系数、二级向量、q=z/2 与报告幂因子；不把形式定义等同收敛。"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "§8.1 (8.1)-(8.2), explicitly summed two partitions"
+        }
+      ],
+      "4J15": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Theorem 8.1, (8.3)"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "Theorem 1.1 and §1.5, almost-everywhere block convergence"
+        }
+      ],
+      "4J16": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§8; crossing through alternate decomposition"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "四个成对不等式、0<q<1；在原论文去度量的 1/(8pi) 规范中比较两次定理，不混用报告 C(g)。"
+        },
+        {
+          "source": "bootstrap-v2",
+          "locator": "§1.3 (1.16)-(1.17), 1/(8pi) convention"
+        }
+      ],
+      "4J17": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§8, genus-two example"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "给定裤子分解后的 Euler 加法与边界计数；不另证明曲面分类。"
+        }
+      ],
+      "4J18": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "Theorem 8.3, (8.6)-(8.9)"
+        }
+      ],
+      "4J19": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§9, conformal blocks and AGT"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "系数指数界充分条件与 n! 反例；报告中的环面 AGT 仅作为形式结果，不升级为解析收敛。"
+        }
+      ],
+      "4J1A": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3; zero-mode consequence"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "正形状参数、有限正负矩假设下联合换元证明独立性，面积均值方差及 mu 缩放。"
+        }
+      ],
+      "4J1B": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§6, (6.1)-(6.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "报告 (6.1) 的 v/fprime、复共轭系数及共同定义域限制；沿 r=e^-t 的链式法则直接计算。"
+        }
+      ],
+      "4J1C": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§7, toy-model motivation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "以 C² 解及函数和导数两端渐近为假设，证明 Im(conj(psi)psi prime) 守恒；不证明散射解存在性。"
+        }
+      ],
+      "4J1D": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, background to (3.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "一般闭连通光滑二维范围，lambda不是sqrt(lambda)，A/(4pi)计数常数；反演、级数阈值和分布配对局部推导。"
+        },
+        {
+          "source": "segal-v2",
+          "locator": "§2.1.1-2.1.3, spectral basis and space"
+        },
+        {
+          "source": "zelditch-v1",
+          "locator": "Introduction pp.3-4; §8 (68), p.45"
+        }
+      ],
+      "4J1E": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, covariance normalization"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "谱 L² 核构造、唯一性、二维基本解通量；在共形坐标对两变量用四维局部正则性，证明一般闭曲面共同光滑余项。"
+        },
+        {
+          "source": "segal-v2",
+          "locator": "§2.1.2 (2.1), normalization only; general smooth remainder proved locally"
+        }
+      ],
+      "4J1F": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, analytic background"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "局部分布定义、径向平滑与球面平均的 Weyl 引理、二维/四维基本解及平滑右端的卷积。"
+        }
+      ],
+      "4J1G": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§4, (4.4) and zero set"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "§1.2 following (1.11), PDF p.5: extension and zeros; Appendix §12.5, (12.7) and following paragraph, PDF p.53: shifts and zeros"
+        }
+      ],
+      "4J1H": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, circle-average regularization"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "一般光滑度量、注入半径内嵌入圆，平滑概率密度的统一球质量界控制对数能量，证明高斯 L² 极限。"
+        }
+      ],
+      "4J1I": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§3, Gaussian shifts"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "显式平方可和高斯级数和线性高斯 Y，有界连续 F；权重 L² 收敛控制极限，无界 GMC 负矩另引用。"
+        },
+        {
+          "source": "dozz-v3",
+          "locator": "Theorem 12.1, here proved for explicit square-summable Gaussian expansions"
+        }
+      ],
+      "4J1J": [
+        {
+          "source": "rhodes-vargas-icm2026",
+          "locator": "§5.1, factorization"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有界变量条件期望定义、全期望拼接恒等式及非负截断版本。"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "Boundary LCFT and exact one-dimensional GMC formulas",
+        "scope": "Report §9 context retained; full boundary structure constants, Fyodorov–Bouchaud and interval laws, and annulus random modulus not developed as additional theorem pages."
+      },
+      {
+        "branch": "Random geometry and SLE/CLE couplings",
+        "scope": "Introductory motivation and §9 directions acknowledged; no full planar-map scaling, mating-of-trees or percolation-exponent proofs claimed."
+      },
+      {
+        "branch": "Global geometry of conformal blocks",
+        "scope": "Local geometric factor and almost-everywhere block convergence retained. Full Teichmuller line bundle, Schwarzian cocycle, projective mapping-class representation and Verlinde equivalence not constructed. Correspondence remains conjectural in the report."
+      },
+      {
+        "branch": "AGT, JT gravity, Toda, H3-WZW and imaginary Liouville",
+        "scope": "Report §9 is a dated source survey. Formal/analytic distinction expanded in 4J19; JT semiclassical claims and general bootstrap extensions are not promoted to proved universal statements or current-status surveys."
+      },
+      {
+        "branch": "Beyond ordinary strict Seiberg bounds",
+        "scope": "Extended analytic continuation and critical renormalizations not developed; fourpoint formula restricted to stated pair-charge inequalities."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4J1D",
+          "4J05"
+        ],
+        "source": "zelditch-v1; segal-v2",
+        "scope": "Compact elliptic spectral basis, Weyl law, and spectral-zeta meromorphic continuation are precisely quoted standard theorems. Green local remainder and Gaussian Sobolev convergence are separately proved."
+      },
+      {
+        "notes": [
+          "4J07",
+          "4J0B",
+          "4J0C",
+          "4J0D"
+        ],
+        "source": "rhodes-vargas-icm2026; dozz-v3",
+        "scope": "Full subcritical GMC existence/nondegeneracy, singular negative moments, simultaneous vertex limits and general Weyl anomaly are cited. Circle averages, finite/Gaussian-field shifts and zero-mode calculation are local."
+      },
+      {
+        "notes": [
+          "4J0H",
+          "4J0N",
+          "4J1G"
+        ],
+        "source": "dozz-v3",
+        "scope": "DOZZ integrability, probabilistic BPZ decoupling, reflection identification, parameter analytic continuation and global Upsilon theorem not reproved. Algebraic null-vector calculation and conditional BPZ implication are local."
+      },
+      {
+        "notes": [
+          "4J0R",
+          "4J0T",
+          "4J0V",
+          "4J1B"
+        ],
+        "source": "segal-v2; rhodes-vargas-icm2026",
+        "scope": "Continuous domain Markov construction, determinant gluing, full Segal amplitudes, projective annulus representation and operator differentiability are cited. Conditional expectation, kernel contraction and radial calculation are local."
+      },
+      {
+        "notes": [
+          "4J0X",
+          "4J0Y",
+          "4J0Z",
+          "4J11",
+          "4J12"
+        ],
+        "source": "bootstrap-v2; rhodes-vargas-icm2026",
+        "scope": "Singular interaction form at larger coupling, self-adjoint realization, scattering completeness, weighted analytic continuation and exact reflection coefficient are cited; bounded self-adjoint spectral theorem is not substituted."
+      },
+      {
+        "notes": [
+          "4J13",
+          "4J15",
+          "4J18"
+        ],
+        "source": "bootstrap-v2; segal-v2; rhodes-vargas-icm2026",
+        "scope": "Analytic Ward identities, holomorphic factorization, block convergence almost everywhere and justified spectral integrals are cited. Ward coefficient arithmetic, inverse Gram algebra, topology counts and conditional crossing consequence are local."
+      }
+    ],
+    "metadata": {
+      "node_count": 56,
+      "atomic_count": 55,
+      "reference_count": 1,
+      "language": "zh",
+      "coverage": "All main mathematical report sections §§3–8 developed; §§1–2 motivation and §9 context integrated, with specialized side branches explicitly deferred.",
+      "status": "author-repairs-frozen-pending-independent-recheck",
+      "shared_integration": "Parent-owned; no shared registry, navigation, theme, tests, build, commit or push performed.",
+      "reference_directory": "trees/references",
+      "conventions": [
+        "Positive Laplacian -div grad; scalar curvature twice Gaussian curvature; covariance 2pi G in report, whereas Segal G already includes 2pi.",
+        "Existing forest second-variable-linear convention used throughout; bra/ket holomorphic dependence translated rather than copied from the report.",
+        "Report descending descendant product differs from bootstrap v2 reversed product. Ward polynomial and Gram basis are changed together; the scalar contraction is basis-invariant.",
+        "Round metric fixed for C0 in threepoint formula. Constant metric rescaling multiplies the stripped constant by exp(c_L t/6).",
+        "Report fourpoint geometric C(g) and genus-two Cprime are retained, not assigned invented numerical values; the separate bootstrap 1/(8pi) convention is labeled.",
+        "No unmarked annulus HS claim. No bounded spectral theorem substituted for unbounded H. Surface GMC threshold2, circle L2 threshold1 and circle variable thresholdsqrt2 separated.",
+        "General smooth Green remainder uses a local 4D Laplace regularity proof, not the planar/sphere scope of Segal §10.1 or hyperbolic-only GRV lemma."
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4J00",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J00.tree",
+      "title": "Liouville 共形场论：从随机面积到连续谱自举",
+      "taxon": "Outline",
+      "sha256": "090218599c37fd6360e1e6428c80987e0ff72393c548948260700fe9a158a970"
+    },
+    {
+      "id": "4J01",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J01.tree",
+      "title": "二维共形变换下的标量曲率",
+      "taxon": "Theorem",
+      "sha256": "49177b9c302963eafd565da541306958c2ee1a98a0b5ccf87b0f8aa0d1981b7f"
+    },
+    {
+      "id": "4J02",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J02.tree",
+      "title": "经典 Liouville 作用量的临界点具有常负曲率",
+      "taxon": "Theorem",
+      "sha256": "dffd9cad770fe8ee98f275c30962ad4be56ec7d78d55ff762f8eb847542f9269"
+    },
+    {
+      "id": "4J03",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J03.tree",
+      "title": "有限维高斯指数加权等于均值平移",
+      "taxon": "Theorem",
+      "sha256": "a588cf645e7a24f871c0966a71a862b0fbe9eac291cb2e534d17dad1ade2a2d8"
+    },
+    {
+      "id": "4J04",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J04.tree",
+      "title": "闭曲面高斯自由场的谱级数",
+      "taxon": "Construction",
+      "sha256": "1048f6565f884670a55dbba66eee6ec121426c61e0ee5d709861f777607dcb17"
+    },
+    {
+      "id": "4J05",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J05.tree",
+      "title": "拉普拉斯算子的 zeta 正则化行列式",
+      "taxon": "Definition",
+      "sha256": "22a0f0fc929303f6279b416c617417a82f775216de5a1dceb859440a2d515cec"
+    },
+    {
+      "id": "4J06",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J06.tree",
+      "title": "Wick 指数如何消去高斯自方差",
+      "taxon": "Theorem",
+      "sha256": "8faff359659be63212fee220b3b2b22ee9d90b404429c2e518e8c60d9d83fdb1"
+    },
+    {
+      "id": "4J07",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J07.tree",
+      "title": "次临界高斯乘性混沌给出随机面积测度",
+      "taxon": "Construction",
+      "sha256": "8414a3049138dc5f9650e67383de31cf6129962ede6680aa53e97812eaf5fe37"
+    },
+    {
+      "id": "4J08",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J08.tree",
+      "title": "二维混沌的二阶矩为何要求平方耦合小于二",
+      "taxon": "Theorem",
+      "sha256": "8d430825c3347c1734038d7059cec8bbbba02044531759dfe04624c40e0f757b"
+    },
+    {
+      "id": "4J09",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J09.tree",
+      "title": "Liouville 零模态积分化为 Gamma 积分",
+      "taxon": "Theorem",
+      "sha256": "dc15a843228086b13f88581b6f88277c8a9febcf0d9587010040a7ee186d50b2"
+    },
+    {
+      "id": "4J0A",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0A.tree",
+      "title": "Liouville 场的概率积分",
+      "taxon": "Definition",
+      "sha256": "e07c891489413c407ab9786aa3aef438198eb3796535fde674c8a16635942143"
+    },
+    {
+      "id": "4J0B",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0B.tree",
+      "title": "顶点算子的相关函数由共同正则化定义",
+      "taxon": "Definition",
+      "sha256": "11c3562491d691f703942e82ca6b528906e1f8a43e4ff5083844e2ec34e1dd03"
+    },
+    {
+      "id": "4J0C",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0C.tree",
+      "title": "Seiberg 条件刻画有限正的 Liouville 相关函数",
+      "taxon": "Theorem",
+      "sha256": "241989a45f0cf7dad458649b5e7897d4ce3217eb9194e4ac0b7791243d3942c7"
+    },
+    {
+      "id": "4J0D",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0D.tree",
+      "title": "Liouville 相关函数的 Weyl 反常",
+      "taxon": "Theorem",
+      "sha256": "d1070b1a470928747e171f3c04286392e50cdc2e82872213097565d42f494971"
+    },
+    {
+      "id": "4J0E",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0E.tree",
+      "title": "Liouville 权重的反射对称与连续谱参数",
+      "taxon": "Theorem",
+      "sha256": "9f1ce10b15abc9a2a58e58270f641c2cff3d2f5649fbc69f3f2df52946fb0b55"
+    },
+    {
+      "id": "4J0F",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0F.tree",
+      "title": "三点共形协变固定距离幂次",
+      "taxon": "Theorem",
+      "sha256": "046fd555744bc0bca2ac581b3dafeba44e16211bbd43504570184fab23e17ffb"
+    },
+    {
+      "id": "4J0G",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0G.tree",
+      "title": "Upsilon 函数在基本条带上的积分定义",
+      "taxon": "Definition",
+      "sha256": "9346779b5e572738a1391fc427cd39fe0170dadf2c3c3005e7caddff3ec13b2e"
+    },
+    {
+      "id": "4J0H",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0H.tree",
+      "title": "DOZZ 公式给出 Liouville 三点结构常数",
+      "taxon": "Theorem",
+      "sha256": "4dfe7bfb7acb15172e47863d804c28f52429964834da07d34a056fcac178bf8b"
+    },
+    {
+      "id": "4J0I",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0I.tree",
+      "title": "两个不可公度实周期迫使连续函数为常数",
+      "taxon": "Theorem",
+      "sha256": "7e4bd7d4882df42a7416e6b08c47257291d8fb30b00a227f4ba34b0a6385c6e9"
+    },
+    {
+      "id": "4J0J",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0J.tree",
+      "title": "Virasoro 代数是圆周向量场代数的中心扩张",
+      "taxon": "Definition",
+      "sha256": "4536417a3ce3aa3acdfaaa72d0e96bc9b42367228f862825ef50c5b5c0b8a9f1"
+    },
+    {
+      "id": "4J0K",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0K.tree",
+      "title": "Virasoro 最高权向量生成的后裔层级",
+      "taxon": "Construction",
+      "sha256": "6082906f6afc372b2d6b9bc80fc8582e2bce984cbe57895fd913edf35e2655ef"
+    },
+    {
+      "id": "4J0L",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0L.tree",
+      "title": "Virasoro 二级 Gram 矩阵的直接计算",
+      "taxon": "Theorem",
+      "sha256": "7f1e5efaf75e12bc6ee8dce0cffa3afd183b8248748947aacffa114aa2c51b7b"
+    },
+    {
+      "id": "4J0M",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0M.tree",
+      "title": "二级退化向量的两个负权重参数",
+      "taxon": "Theorem",
+      "sha256": "e7f18ef66937dbd201b94c5a4a003f72737574cf14bb136e01608b22f8352b1f"
+    },
+    {
+      "id": "4J0N",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0N.tree",
+      "title": "退化向量消去如何导出二阶 BPZ 方程",
+      "taxon": "Theorem",
+      "sha256": "25d2364b425ecc428ed7c31e90dacdb931c4cd5e52bf2c75b89c2138721cc1bd"
+    },
+    {
+      "id": "4J0O",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0O.tree",
+      "title": "圆周高斯场的 Fourier 级数与对数协方差",
+      "taxon": "Construction",
+      "sha256": "411fbbd7b0bb63fee1d234b480673bac90fe27b8a8ea6d84dbbc7c9a3f8a5c18"
+    },
+    {
+      "id": "4J0P",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0P.tree",
+      "title": "圆盘调和延拓的 Fourier 能量公式",
+      "taxon": "Theorem",
+      "sha256": "a78889f98e8f5b105415d6f1d464383b51e340e3ad9059d9c6149e6dc2945ee2"
+    },
+    {
+      "id": "4J0Q",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Q.tree",
+      "title": "平方可积条件期望是正交投影",
+      "taxon": "Construction",
+      "sha256": "af28900de4dbfa57f15126b2cd623008078138c6c10ce24be44960fa7d6cb22d"
+    },
+    {
+      "id": "4J0R",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0R.tree",
+      "title": "高斯自由场的区域 Markov 分解",
+      "taxon": "Theorem",
+      "sha256": "04b180ffdc8d56501bba8e150d914bdbecaaf3b9ead30af376380a8c506e894b"
+    },
+    {
+      "id": "4J0S",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0S.tree",
+      "title": "曲面拼接所需的解析边界与圆柱度量",
+      "taxon": "Definition",
+      "sha256": "d490b3f808cbf27d1780c9857c87de895be085ba3c79cd745fbebc4d02bd13ad"
+    },
+    {
+      "id": "4J0T",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0T.tree",
+      "title": "严格电荷条件下的 Liouville 振幅与拼接",
+      "taxon": "Theorem",
+      "sha256": "35aba19b8c1f7f2acaa31821eeccfdb9f86ca35cf8240ef9d319c11f71f0ce8b"
+    },
+    {
+      "id": "4J0U",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0U.tree",
+      "title": "平方可积核的收缩满足乘积范数界",
+      "taxon": "Theorem",
+      "sha256": "6344c5dc61a971f90a643cda173d7a0acbf84d46d9682dfd56fb91fc42755291"
+    },
+    {
+      "id": "4J0V",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0V.tree",
+      "title": "圆环的拼接如何产生 Liouville 传播半群",
+      "taxon": "Construction",
+      "sha256": "d9b5b5be52ca8b96feb1cbbc5be905f981608f0851ec0ba0c465a561bd333782"
+    },
+    {
+      "id": "4J0W",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0W.tree",
+      "title": "高斯坐标中的自由 Liouville Hamiltonian",
+      "taxon": "Construction",
+      "sha256": "6803c6943909cf9b403aae13e65f2e794327584fedf2f028a92df59a48af61af"
+    },
+    {
+      "id": "4J0X",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0X.tree",
+      "title": "圆周混沌势的三个耦合区间",
+      "taxon": "Theorem",
+      "sha256": "9ca2c404db03336b5269dd6b0d829651fa190f26a01869f0466c2727c30c420b"
+    },
+    {
+      "id": "4J0Y",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Y.tree",
+      "title": "闭能量形式怎样指定一个无界自伴算子",
+      "taxon": "Theorem",
+      "sha256": "aee78be6e07b3dda4c1caa06430afba45e56527314f7ac05d55a3efb6d1fae6f"
+    },
+    {
+      "id": "4J0Z",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Z.tree",
+      "title": "Liouville Hamiltonian 的连续谱分解",
+      "taxon": "Theorem",
+      "sha256": "09f3b726d76888ff6166d35827b4047f9844cc49fc912267d05e60bac60d4ae7"
+    },
+    {
+      "id": "4J10",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J10.tree",
+      "title": "非正交基的完备性公式为什么含逆 Gram 矩阵",
+      "taxon": "Theorem",
+      "sha256": "19f719182bc222f5de3303f5865e2f2a0f7c166a0fe72708d27c7b381e19a2bc"
+    },
+    {
+      "id": "4J11",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J11.tree",
+      "title": "圆盘单点振幅怎样给出 Liouville 主态",
+      "taxon": "Construction",
+      "sha256": "4ab5adc31cdfa6256574121ea6ff4815475e6e0fffe47c585badaadc1c494429"
+    },
+    {
+      "id": "4J12",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J12.tree",
+      "title": "Liouville 反射系数在谱线上为何模长为一",
+      "taxon": "Theorem",
+      "sha256": "2fff2f21c13e1b3535807a8b1fef41edfca05dea487ecb5048096c7a35628967"
+    },
+    {
+      "id": "4J13",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J13.tree",
+      "title": "Ward 恒等式怎样计算三点后裔系数",
+      "taxon": "Theorem",
+      "sha256": "ad787bfe283e7bf2ff1238b97d2c8533b3001ed4e582888b63b869fc6864ee4e"
+    },
+    {
+      "id": "4J14",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J14.tree",
+      "title": "球面共形块的逐层逆 Gram 定义",
+      "taxon": "Construction",
+      "sha256": "89d02a11d1ee828640c6026c0fa63e3db08c53667fcacf0b226bdc2d6575eef9"
+    },
+    {
+      "id": "4J15",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J15.tree",
+      "title": "Liouville 球面四点函数的连续自举公式",
+      "taxon": "Theorem",
+      "sha256": "1a31a6dad865ec6b479b26ac324e1f722420d725584dcc406a07d09979185bcc"
+    },
+    {
+      "id": "4J16",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J16.tree",
+      "title": "四点函数的交叉对称为何比较两种缝合",
+      "taxon": "Theorem",
+      "sha256": "f83562585dfed0c89d2a4e7e2fa229d3204b6fc55382fb69387e1c8b6725ad92"
+    },
+    {
+      "id": "4J17",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J17.tree",
+      "title": "裤子分解为何有二倍亏格减二个曲面块",
+      "taxon": "Proposition",
+      "sha256": "cd91504601a7af3750ec6e1756cc707dd41b6a5f4ef6e74d5f2ed19870e1e714"
+    },
+    {
+      "id": "4J18",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J18.tree",
+      "title": "亏格二配分函数的三重谱积分",
+      "taxon": "Theorem",
+      "sha256": "0cec9046f572d3fdfa4a6b7cf294aa46b2ee98bbb671550c5cae9a7b86a67d3e"
+    },
+    {
+      "id": "4J19",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J19.tree",
+      "title": "逐系数相等为什么还不保证共形块收敛",
+      "taxon": "Proposition",
+      "sha256": "602a3e21c113b53ef7e4aa9cd60d7955672c37f8d01482ca9c0e76877c22e3ba"
+    },
+    {
+      "id": "4J1A",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1A.tree",
+      "title": "零模态为何使 Liouville 总面积服从 Gamma 分布",
+      "taxon": "Theorem",
+      "sha256": "eaf79eb0ded65021162e6ccea47c127ca531bd7f60b2124382867f44bc44264c"
+    },
+    {
+      "id": "4J1B",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1B.tree",
+      "title": "全纯环带变形怎样产生两套 Virasoro 算子",
+      "taxon": "Theorem",
+      "sha256": "0fadbf28976a02b5825f91ebf8e753af03159af237022f99f898acd067100b44"
+    },
+    {
+      "id": "4J1C",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1C.tree",
+      "title": "一维反射波的单位模长来自流量守恒",
+      "taxon": "Proposition",
+      "sha256": "8b917f217855d4f7ac4cec81b7f85915764443a416bbc11c672739f22bee8152"
+    },
+    {
+      "id": "4J1D",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1D.tree",
+      "title": "闭 Riemann 曲面的 Laplace 谱与 Weyl 计数律",
+      "taxon": "Theorem",
+      "sha256": "656aa8a35f9b1ac15ff629864a6d7327bc62115c3cf70fa110d9f8bff93b382d"
+    },
+    {
+      "id": "4J1E",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1E.tree",
+      "title": "二维零均值 Green 核为何带对数奇性",
+      "taxon": "Theorem",
+      "sha256": "73e65c973d4397b7f513702e84d6f5e3e4e85907d4d04b51c526889b6b83880e"
+    },
+    {
+      "id": "4J1F",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1F.tree",
+      "title": "光滑右端的 Euclidean Laplace 方程具有光滑分布解",
+      "taxon": "Theorem",
+      "sha256": "8e972c06f4fb6b556757f03eef01193a11a6348e7dcd336d130758cca963c5ba"
+    },
+    {
+      "id": "4J1G",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1G.tree",
+      "title": "Upsilon 整函数的平移关系与零点",
+      "taxon": "Theorem",
+      "sha256": "2c580c178aaabf55837686ae7abca3435ea08af9f1e4cdb09d302508ac640c4e"
+    },
+    {
+      "id": "4J1H",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1H.tree",
+      "title": "分布值高斯自由场的圆平均怎样定义",
+      "taxon": "Construction",
+      "sha256": "8969e4572bd733ec6ad5d6f7ed1369ba96b9fc81fd13b1d6bb76842bc5defcba"
+    },
+    {
+      "id": "4J1I",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1I.tree",
+      "title": "高斯场的指数加权怎样平移其分布",
+      "taxon": "Theorem",
+      "sha256": "884791e977e0340fbad34ad0548d1bb91c0328acc48dab9033752db507db7398"
+    },
+    {
+      "id": "4J1J",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1J.tree",
+      "title": "条件独立如何把两侧权重分解为乘积",
+      "taxon": "Definition",
+      "sha256": "893e37eb08ac9028748fd6cc55f800be025724e5e6abd5044225c7e43185d824"
+    },
+    {
+      "id": "icm2026-rhodes-vargas",
+      "path": "trees/references/icm2026-rhodes-vargas.tree",
+      "title": "Rhodes–Vargas：Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "taxon": "Reference",
+      "sha256": "080682b846c89a21f7e9ab7eed052a861d77d9c48447e75fab96b20c0e2a8895"
+    }
+  ],
+  "prerequisites": {
+    "4J01": [
+      "00FR",
+      "00NI",
+      "00O3",
+      "0U14",
+      "00O4",
+      "2G06",
+      "00FG"
+    ],
+    "4J02": [
+      "4J01",
+      "0U14"
+    ],
+    "4J03": [
+      "00L3",
+      "0N0R"
+    ],
+    "4J04": [
+      "00FR",
+      "4J1D",
+      "4J01",
+      "0A6A",
+      "0N0R",
+      "0H53",
+      "4J1E"
+    ],
+    "4J05": [
+      "4J1D"
+    ],
+    "4J06": [
+      "4J03"
+    ],
+    "4J07": [
+      "4J04",
+      "4J1H",
+      "00Q2",
+      "0K12",
+      "4J06"
+    ],
+    "4J08": [
+      "4J06",
+      "0H53"
+    ],
+    "4J09": [
+      "0H4Z",
+      "00L0",
+      "0H53"
+    ],
+    "4J0A": [
+      "4J04",
+      "4J07",
+      "4J05",
+      "4J01"
+    ],
+    "4J0B": [
+      "4J0A",
+      "4J06",
+      "4J1I",
+      "4J1E"
+    ],
+    "4J0C": [
+      "4J0B",
+      "4J01",
+      "4J09",
+      "00FG"
+    ],
+    "4J0D": [
+      "4J0C",
+      "4J01",
+      "00NI"
+    ],
+    "4J0E": [
+      "4J0D"
+    ],
+    "4J0F": [
+      "00FR",
+      "4J0C",
+      "4J0D"
+    ],
+    "4J0G": [
+      "0H4Z",
+      "0A3G"
+    ],
+    "4J0H": [
+      "4J0F",
+      "4J0G",
+      "4J1G",
+      "4J0C",
+      "4J0I"
+    ],
+    "4J0I": [
+      "00E2"
+    ],
+    "4J0J": [
+      "0F00"
+    ],
+    "4J0K": [
+      "4J0J",
+      "0F5A"
+    ],
+    "4J0L": [
+      "4J0K",
+      "004M"
+    ],
+    "4J0M": [
+      "4J0K",
+      "4J0J"
+    ],
+    "4J0N": [
+      "4J13",
+      "4J0M"
+    ],
+    "4J0O": [
+      "0N0R",
+      "4101",
+      "0H53",
+      "0A6B",
+      "0A6A"
+    ],
+    "4J0P": [
+      "270F",
+      "4101",
+      "4J0O"
+    ],
+    "4J0Q": [
+      "00Q3",
+      "00MS",
+      "0A6A",
+      "004S",
+      "0H53"
+    ],
+    "4J0R": [
+      "270F",
+      "4J0P",
+      "4J1J"
+    ],
+    "4J0S": [
+      "00FR",
+      "00FG"
+    ],
+    "4J0T": [
+      "4J0S",
+      "4J0O",
+      "0X02",
+      "0F4E",
+      "4J0R"
+    ],
+    "4J0U": [
+      "004S",
+      "0H53",
+      "0X02"
+    ],
+    "4J0V": [
+      "4J0O",
+      "4J0S",
+      "4J0J"
+    ],
+    "4J0W": [
+      "4J0O",
+      "4J0Y",
+      "0GSN"
+    ],
+    "4J0X": [
+      "4J0O",
+      "4J06",
+      "4J08",
+      "4J07"
+    ],
+    "4J0Y": [
+      "00MQ",
+      "0GSN"
+    ],
+    "4J0Z": [
+      "4J0Y",
+      "4J0O",
+      "4J0K",
+      "4J0L",
+      "4J10"
+    ],
+    "4J10": [
+      "004M",
+      "00MS"
+    ],
+    "4J11": [
+      "4J0R",
+      "4J07",
+      "4J0O",
+      "4J0P",
+      "4J0B",
+      "4J0Z",
+      "4J0T"
+    ],
+    "4J12": [
+      "0H4Z",
+      "4J11",
+      "4J0C"
+    ],
+    "4J13": [
+      "4J0E",
+      "4J0F",
+      "4J0K"
+    ],
+    "4J14": [
+      "4J0L",
+      "4J0K",
+      "4J13",
+      "4J10"
+    ],
+    "4J15": [
+      "4J0H",
+      "4J14",
+      "4J0D",
+      "4J0T",
+      "4J0Z"
+    ],
+    "4J16": [
+      "4J0H",
+      "4J14",
+      "4J15"
+    ],
+    "4J17": [
+      "00FG",
+      "4J0S"
+    ],
+    "4J18": [
+      "4J17",
+      "4J0S",
+      "4J0H",
+      "4J10",
+      "4J0K",
+      "4J13",
+      "4J0T",
+      "0F4E",
+      "4J0Z"
+    ],
+    "4J19": [
+      "0AL0"
+    ],
+    "4J1A": [
+      "4J09",
+      "0H4Z"
+    ],
+    "4J1B": [
+      "4J0V",
+      "4J0D",
+      "4J0J",
+      "0GSN"
+    ],
+    "4J1C": [],
+    "4J1D": [
+      "00NI",
+      "4J01",
+      "0GSN",
+      "0A6A",
+      "4607"
+    ],
+    "4J1E": [
+      "00FR",
+      "4J01",
+      "4607",
+      "4J1D",
+      "4J1F"
+    ],
+    "4J1F": [
+      "00MH"
+    ],
+    "4J1G": [
+      "4J0G"
+    ],
+    "4J1H": [
+      "4J04",
+      "2P0Y",
+      "4J1E"
+    ],
+    "4J1I": [
+      "00MQ",
+      "4J03"
+    ],
+    "4J1J": [
+      "00Q3",
+      "4J0Q",
+      "0A7A"
+    ]
+  },
+  "atomic_questions": {
+    "4J01": "二维共形缩放如何改变标量曲率？",
+    "4J02": "经典 Liouville 作用量的临界点为何具有常负曲率？",
+    "4J03": "有限维高斯指数加权为何等于均值平移？",
+    "4J04": "闭曲面 GFF 谱级数如何在负阶空间中收敛？",
+    "4J05": "如何删除零模态并定义 Laplace 的正则化行列式？",
+    "4J06": "Wick 指数为何消去发散的高斯自方差？",
+    "4J07": "如何从正则化场得到次临界随机面积测度？",
+    "4J08": "二维混沌的二阶矩何时有限？",
+    "4J09": "零模态积分何时等于一个有限 Gamma 积分？",
+    "4J0A": "怎样把 Liouville 路径积分定义为高斯场与零模态积分？",
+    "4J0B": "顶点插入的联合相关函数怎样正则化？",
+    "4J0C": "何种电荷条件使相关函数有限且严格正？",
+    "4J0D": "相关函数在 Weyl 缩放下如何变化？",
+    "4J0E": "Liouville 共形权为何有反射对称并产生实谱能量？",
+    "4J0F": "三点共形协变怎样固定距离幂次？",
+    "4J0G": "Upsilon 的基本条带积分为何收敛并满足反射对称？",
+    "4J0H": "DOZZ 公式怎样精确给出三点结构常数？",
+    "4J0I": "为什么两个不可公度的实周期迫使连续函数为常数？",
+    "4J0J": "Virasoro 代数如何成为圆周向量场代数的中心扩张？",
+    "4J0K": "最高权向量的后裔为什么按整数层级排列？",
+    "4J0L": "一级与二级 Virasoro Gram 矩阵是什么？",
+    "4J0M": "两个退化电荷为何都是负号？",
+    "4J0N": "在 Ward 恒等式和退化消去成立时如何推出 BPZ 方程？",
+    "4J0O": "圆周场如何由高斯 Fourier 级数构造？",
+    "4J0P": "圆盘调和延拓的 Dirichlet 能量怎样由 Fourier 系数计算？",
+    "4J0Q": "L² 条件期望为何是一个存在唯一的正交投影？",
+    "4J0R": "区域 Markov 性怎样分解 Dirichlet 高斯自由场？",
+    "4J0S": "曲面振幅的解析边界及可容许度量是什么？",
+    "4J0T": "何种条件使 Liouville 振幅满足平方可积拼接定理？",
+    "4J0U": "两个 L² 核沿共享变量收缩后为何仍平方可积？",
+    "4J0V": "圆环缝合如何产生强连续传播半群？",
+    "4J0W": "自由 Liouville Hamiltonian 在高斯坐标中如何表示？",
+    "4J0X": "圆周势为何有 1 与 sqrt(2) 两个阈值？",
+    "4J0Y": "闭的非负能量形式如何指定无界自伴算子？",
+    "4J0Z": "Liouville Hamiltonian 的连续谱分解是什么？",
+    "4J10": "非正交基的完备性恒等式为何含逆 Gram？",
+    "4J11": "圆盘单点振幅如何连接概率参数和广义谱态？",
+    "4J12": "反射系数在谱线上为何具有单位模长？",
+    "4J13": "Ward 恒等式如何递推三点后裔系数？",
+    "4J14": "球面块如何由每层有限 Gram 收缩定义？",
+    "4J15": "四点相关函数何时等于 DOZZ 与共形块的谱积分？",
+    "4J16": "交叉对称如何由同一相关函数的两种缝合推出？",
+    "4J17": "给定裤子分解为何有 2g-2 个块及 3g-3 道缝？",
+    "4J18": "亏格二配分函数为什么是三重连续谱积分？",
+    "4J19": "形式级数恒等式还需什么条件才能给出解析函数恒等式？",
+    "4J1A": "为什么归一化后的 Liouville 总面积有 Gamma 分布？",
+    "4J1B": "全纯环带变形如何产生 Virasoro 生成元？",
+    "4J1C": "实指数壁垒的反射波为何必须有单位模长？",
+    "4J1D": "一般闭曲面的 Laplace 谱如何增长并定义谱式空间？",
+    "4J1E": "零均值 Green 核的对数系数与光滑余项如何确定？",
+    "4J1F": "光滑右端的 Laplace 分布解为何局部光滑？",
+    "4J1G": "Upsilon 的整延拓满足哪些平移关系和零点分类？",
+    "4J1H": "分布值 GFF 怎样对测地圆作平均？",
+    "4J1I": "场级 Cameron–Martin 平移如何由有限高斯坐标极限得到？",
+    "4J1J": "条件独立如何分解两侧可测权重？"
+  },
+  "reused_pages": [
+    "004M",
+    "004S",
+    "00E2",
+    "00FG",
+    "00FR",
+    "00L0",
+    "00L3",
+    "00MH",
+    "00MQ",
+    "00MS",
+    "00NI",
+    "00O3",
+    "00O4",
+    "00Q2",
+    "00Q3",
+    "0A3G",
+    "0A6A",
+    "0A6B",
+    "0A7A",
+    "0AL0",
+    "0F00",
+    "0F4E",
+    "0F5A",
+    "0GSN",
+    "0H4Z",
+    "0H53",
+    "0K12",
+    "0N0R",
+    "0U14",
+    "0X02",
+    "270F",
+    "2G06",
+    "2P0Y",
+    "4101",
+    "4607"
+  ],
+  "reused_page_records": [
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325",
+      "title": "内积空间"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b",
+      "title": "Schwarz 不等式"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba",
+      "title": "连续映射"
+    },
+    {
+      "id": "00FG",
+      "path": "trees/math/topology/atomic/00FG.tree",
+      "sha256": "d7d3a044d2b74c54ff0b1969be77f229fbcc70f7de355a6ba637fec172d27854",
+      "title": "曲面的 Euler 示性数"
+    },
+    {
+      "id": "00FR",
+      "path": "trees/math/topology/atomic/00FR.tree",
+      "sha256": "99e9e8debfbd37aca8a05823fe544a0a5cc66105b928333bc8534a3cab4409dd",
+      "title": "Riemann 曲面"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce",
+      "title": "实随机变量与分布"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+      "title": "事件与随机变量的独立性"
+    },
+    {
+      "id": "00MH",
+      "path": "trees/math/analysis/atomic/00MH.tree",
+      "sha256": "87539a2ae6f7b46a02abbb40fbe4f676d2397cde571a09a7cc9f693d81d42cd8",
+      "title": "代数对偶空间"
+    },
+    {
+      "id": "00MQ",
+      "path": "trees/math/analysis/atomic/00MQ.tree",
+      "sha256": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37",
+      "title": "Hilbert 空间"
+    },
+    {
+      "id": "00MS",
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260",
+      "title": "Hilbert 空间的正交投影定理"
+    },
+    {
+      "id": "00NI",
+      "path": "trees/math/geometry/atomic/00NI.tree",
+      "sha256": "ff87c6bc1af3aae11c2e4878816631aad0368040a4394352ac9831e6152dd80c",
+      "title": "Riemann 度量"
+    },
+    {
+      "id": "00O3",
+      "path": "trees/math/geometry/atomic/00O3.tree",
+      "sha256": "54bd85a64ce95af66d4564002e24e541ca4aee6cc969a7528c613e342be657b4",
+      "title": "曲面的高斯曲率"
+    },
+    {
+      "id": "00O4",
+      "path": "trees/math/geometry/atomic/00O4.tree",
+      "sha256": "aedc206891c40ef5a15366044fb4d51844fcc7f97a3e0c1cf7c934fb557166dc",
+      "title": "等温坐标中的高斯曲率公式"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1",
+      "title": "测度"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1",
+      "title": "概率空间"
+    },
+    {
+      "id": "0A3G",
+      "path": "trees/math/analysis/atomic/0A3G.tree",
+      "sha256": "731854bc58c584422f1ece86b8da8192bbfc15e58089a2a74488c5f8865daad9",
+      "title": "复导数与全纯函数"
+    },
+    {
+      "id": "0A6A",
+      "path": "trees/math/logic/research/atomic/0A6A.tree",
+      "sha256": "c4c9673cbf76ee86cc9396e886bb800f1decfefc4c943140a5f4e0b4c05f9aa1",
+      "title": "L² 空间的 Hilbert 结构"
+    },
+    {
+      "id": "0A6B",
+      "path": "trees/math/logic/research/atomic/0A6B.tree",
+      "sha256": "5693f635e82eb6556c668128012930441c1f96212da3f1e39a467c3645cbc4c8",
+      "title": "可数概率空间的乘积测度"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree",
+      "sha256": "fc9fd9db793237c02165a5b40db7e6bf854fb810a195573e761818bee338f49c",
+      "title": "非负可测函数的单调收敛定理"
+    },
+    {
+      "id": "0AL0",
+      "path": "trees/math/algebra/research/0AL0.tree",
+      "sha256": "6c3c372ace9152ead31c43d7df8d6c0175f4d1113f3554bb77a31ac34d44f660",
+      "title": "交换环上的形式幂级数"
+    },
+    {
+      "id": "0F00",
+      "path": "trees/math/geometry/algebraic/0F00.tree",
+      "sha256": "cebcb9728b6082658d91dfbd9bd82ab6583011278155c47549e756bec64bccba",
+      "title": "Lie 代数"
+    },
+    {
+      "id": "0F4E",
+      "path": "trees/math/category/quantum/atomic/0F4E.tree",
+      "sha256": "a325c75c71d8f15dbeed0eeec43c303a4fd89cc422842263e16719a1bad41397",
+      "title": "Hilbert 空间的张量积"
+    },
+    {
+      "id": "0F5A",
+      "path": "trees/math/number-theory/0F5A.tree",
+      "sha256": "891a191fc664249f1d20f87afa3f970450e4da2d792fccce83f651cb518db5be",
+      "title": "Lie 代数的泛包络代数"
+    },
+    {
+      "id": "0GSN",
+      "path": "trees/math/number-theory/reports/0GSN.tree",
+      "sha256": "a5f5e14e959db59ebd57334b3222bac8b3ac49aa863e97188901e915c3033017",
+      "title": "稠密定义算子的伴随与自伴性"
+    },
+    {
+      "id": "0H4Z",
+      "path": "trees/math/number-theory/reports/0H4Z.tree",
+      "sha256": "857c3fd822acc69dee2542721ae76d4d028d8fe3eee8bb609847312c913702dc",
+      "title": "Gamma 函数的积分与递推"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b",
+      "title": "Fubini–Tonelli 积分定理"
+    },
+    {
+      "id": "0K12",
+      "path": "trees/math/geometry/algebraic/0K12.tree",
+      "sha256": "159d760f5c2b5abf484470cc94e097b0a9f81490ef53bf5ee2098729a4d68380",
+      "title": "局部有限测度的弱收敛与重标度"
+    },
+    {
+      "id": "0N0R",
+      "path": "trees/math/geometry/bourbaki/0N0R.tree",
+      "sha256": "afc97ce9792ec340ab6f24c01766f7927c95aa5cff958bad4f146502779894db",
+      "title": "标准正态分布与高斯尾函数"
+    },
+    {
+      "id": "0U14",
+      "path": "trees/math/analysis/multi-bubbles/0U14.tree",
+      "sha256": "7de36fb9ff564155238c237f496739d10a8b64781d801b934d5bb143b3882b0a",
+      "title": "加权散度与 Laplace 算子"
+    },
+    {
+      "id": "0X02",
+      "path": "trees/math/analysis/schur-multipliers/0X02.tree",
+      "sha256": "d3a3d26d2d3d94439c192f31d8a1a85bae6747d55f151337c6e9aeebdaca4ac5",
+      "title": "Hilbert–Schmidt 算子与平方可积核"
+    },
+    {
+      "id": "270F",
+      "path": "trees/math/analysis/rectifiability/270F.tree",
+      "sha256": "688dda7bb6d81752c33c15a4db34c0f9a95c3df7230593a208ddac95942ba086",
+      "title": "欧氏区域上的调和函数"
+    },
+    {
+      "id": "2G06",
+      "path": "trees/math/geometry/minimal-comparison/2G06.tree",
+      "sha256": "6e6659f0e50ff6914ca6701f65e88ec5f301817cb31d49579f244247bf9316fe",
+      "title": "闭曲面的 Gauss–Bonnet 公式"
+    },
+    {
+      "id": "2P0Y",
+      "path": "trees/math/geometry/finite-genus-minimal/2P0Y.tree",
+      "sha256": "cd31048eb7530875664cf2fafbe6469a8807a7183a707893e9be65448c1ccefb",
+      "title": "曲面的注入半径与缩放"
+    },
+    {
+      "id": "4101",
+      "path": "trees/math/pde/berti/4101.tree",
+      "sha256": "9fe3ad1309109320516976629031538d9a524a2cc57a24cbc2a3266a887760e0",
+      "title": "周期 Sobolev 空间与水波的零模态"
+    },
+    {
+      "id": "4607",
+      "path": "trees/math/pde/faure/4607.tree",
+      "sha256": "4334a218db056c4df5b851cb05d0313c978cadfadf5c3b93e30c8d73e939bd4b",
+      "title": "闭流形上的分布与向量场导数"
+    }
+  ],
+  "navigation_only": {
+    "4J01": [],
+    "4J02": [],
+    "4J03": [],
+    "4J04": [],
+    "4J05": [],
+    "4J06": [],
+    "4J07": [],
+    "4J08": [
+      "4J07"
+    ],
+    "4J09": [],
+    "4J0A": [],
+    "4J0B": [
+      "4J0C"
+    ],
+    "4J0C": [],
+    "4J0D": [],
+    "4J0E": [],
+    "4J0F": [],
+    "4J0G": [
+      "4J1G"
+    ],
+    "4J0H": [],
+    "4J0I": [],
+    "4J0J": [],
+    "4J0K": [
+      "4J0E"
+    ],
+    "4J0L": [],
+    "4J0M": [],
+    "4J0N": [],
+    "4J0O": [],
+    "4J0P": [],
+    "4J0Q": [
+      "4J1J"
+    ],
+    "4J0R": [],
+    "4J0S": [],
+    "4J0T": [],
+    "4J0U": [
+      "4J0T"
+    ],
+    "4J0V": [],
+    "4J0W": [],
+    "4J0X": [],
+    "4J0Y": [
+      "4J0W",
+      "4J0X"
+    ],
+    "4J0Z": [],
+    "4J10": [
+      "4J0L",
+      "4J0Z"
+    ],
+    "4J11": [],
+    "4J12": [],
+    "4J13": [],
+    "4J14": [
+      "4J15"
+    ],
+    "4J15": [],
+    "4J16": [],
+    "4J17": [
+      "4J0Z"
+    ],
+    "4J18": [],
+    "4J19": [
+      "4J15"
+    ],
+    "4J1A": [
+      "4J0C"
+    ],
+    "4J1B": [],
+    "4J1C": [
+      "4J12"
+    ],
+    "4J1D": [],
+    "4J1E": [],
+    "4J1F": [],
+    "4J1G": [
+      "4J0H",
+      "4J0M"
+    ],
+    "4J1H": [],
+    "4J1I": [
+      "4J04",
+      "4J1H",
+      "4J0C"
+    ],
+    "4J1J": []
+  },
+  "terminology_evidence": {
+    "method": "Scoped whole-forest title/content searches for GFF, GMC, Laplacian spectra, Sobolev spaces, Green kernels, Gaussian laws, conditional expectation/independence, Hilbert spaces, unbounded adjoints, Virasoro, Upsilon, formal series, injectivity radius, Euler numbers and tensor products; selected bodies read before reuse.",
+    "reuse_decisions": [
+      "0GSP is hyperbolic-specific and not used for general closed-surface spectrum.",
+      "130F is Euclidean and is not cited as automatically giving manifold Sobolev theory; 4J1D defines the spectral norm locally.",
+      "4607 reused for manifold distributions; 4J1F states the local R^d distribution definition explicitly because 0O06 is only a compactly supported real-line definition.",
+      "0A6B retained only for countable probability products; orthogonal projection points to 00MS.",
+      "Existing formal power series 0AL0, injectivity radius 2P0Y, Hilbert tensor0F4E and unbounded adjoint0GSN reused.",
+      "No concurrent 4H/4I unfinished atoms used."
+    ],
+    "external_terminology_site": "No verified Banana-space match claimed; forest terminology and primary mathematical meanings used. 宇宙学常数 used consistently."
+  },
+  "source_records": [
+    {
+      "id": "rhodes-vargas-icm2026",
+      "authors": [
+        "Rémi Rhodes",
+        "Vincent Vargas"
+      ],
+      "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "doi": "10.1137/25M1803632",
+      "pages": "551–574",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+      "license": "CC BY 4.0",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1–9, every displayed formula and all figure captions, in overlapping section-sized reads (lines 90–602); acknowledgments 603–604 and footnote 609. Selected relevant bibliography entries only, not the complete bibliography. Metadata/title/authors/DOI/pages/license and online date verified, lines 59–65 and 1196–1246. No publisher PDF or figure-pixel inspection. Subsequent checks re-read §§3–8 normalization, hypotheses and typographical discrepancies.",
+      "proof_boundary": "Full mathematical survey read, not a full reading or reconstruction of every cited research proof. No source figures reproduced.",
+      "local_snapshot_sha256": null,
+      "hash_note": "Publisher HTML was read through browser text; direct curl returned 403. No local publisher snapshot hash is claimed."
+    },
+    {
+      "id": "report-preprint-v1",
+      "authors": [
+        "Rémi Rhodes",
+        "Vincent Vargas"
+      ],
+      "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "version": "arXiv:2509.21053v1",
+      "version_date": "2025-09-25",
+      "url": "https://arxiv.org/abs/2509.21053v1",
+      "version_url": "https://arxiv.org/html/2509.21053v1",
+      "license": "arXiv non-exclusive distribution license; report publisher version independently CC BY 4.0",
+      "actual_reading": "Metadata/abstract and opening §§1–2 only. Not the full version; publisher HTML is the authoritative full-content source."
+    },
+    {
+      "id": "dozz-v3",
+      "authors": [
+        "Antti Kupiainen",
+        "Rémi Rhodes",
+        "Vincent Vargas"
+      ],
+      "title": "Integrability of Liouville theory: proof of the DOZZ Formula",
+      "version": "arXiv:1707.08785v3",
+      "version_date": "2019-08-30",
+      "doi": "10.4007/annals.2020.191.1.2",
+      "publication": "Annals of Mathematics 191 (2020), 81–166",
+      "url": "https://arxiv.org/abs/1707.08785v3",
+      "version_url": "https://arxiv.org/pdf/1707.08785v3",
+      "license": "No blanket reuse license inferred; mathematical statements paraphrased, no source redistribution.",
+      "actual_reading": "Selected full text: §2.2–2.4 (extracted lines 470–585), §4.2 (830–890), §5.2 (1230–1295, including start of §6 only), Appendix §12.1 and Corollary 12.2 (3548–3600). PDF p.13 rendered and visually inspected for both negative degenerate weights. RV-F09 repair additionally read §1.2, (1.11) and following continuation/zeros paragraph (lines 248–292, PDF p.5), and §12.5, (12.7) and following zeros paragraph (lines 3763–3797, PDF p.53); both pages rendered and visually inspected for the integral, shifts, powers and zero sets. Remaining sections not read in full.",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-dozz-v3.pdf",
+      "sha256": "9c9262c4a87d5e2b8a34a364dc230dc9cf64b798972f7005cce7f4ad022875b5"
+    },
+    {
+      "id": "bootstrap-v2",
+      "authors": [
+        "Colin Guillarmou",
+        "Antti Kupiainen",
+        "Rémi Rhodes",
+        "Vincent Vargas"
+      ],
+      "title": "Conformal bootstrap in Liouville Theory",
+      "version": "arXiv:2005.11530v2",
+      "version_date": "2020-11-11",
+      "doi": "10.4310/ACTA.2024.v233.n1.a2",
+      "publication": "Acta Mathematica 233 (2024), 33–194",
+      "url": "https://arxiv.org/abs/2005.11530v2",
+      "version_url": "https://arxiv.org/pdf/2005.11530v2",
+      "license": "No blanket reuse license inferred; mathematical statements paraphrased, no source redistribution.",
+      "actual_reading": "Selected §§1.3–1.5 (lines 342–488), §2.3 (587–627), Proposition 5.5 statement and opening proof (2110–2155), §7.5 formula (7.36) and Proposition 7.12 (5072–5103), §8.1 and start of §8.2 (5198–5234). Searches additionally checked reversed descendant convention at lines 750–753 and 1524. RV-F08 repair additionally read §4.1 through the opening of Proposition 4.1 proof (1165–1235, PDF p.20), §4.2 including Proposition 4.3 proof (1238–1295, PDF pp.21–22), and the ensuing dynamics excerpt through Remark 4.6 (1296–1375); §5.2 opening through Proposition 5.3 statement (1790–1850, PDF p.28) checked for the all-derivatives polynomial-growth domain. Full spectral proof §6, full §5 and full Ward proof §9 were not read.",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-bootstrap-v2.pdf",
+      "sha256": "d21df3b580b1370604494878fbc4fda1a2d186938ad25ed0591e37e3a4927bad"
+    },
+    {
+      "id": "segal-v2",
+      "authors": [
+        "Colin Guillarmou",
+        "Antti Kupiainen",
+        "Rémi Rhodes",
+        "Vincent Vargas"
+      ],
+      "title": "Segal's axioms and bootstrap for Liouville Theory",
+      "version": "arXiv:2112.14859v2",
+      "version_date": "2025-05-25",
+      "url": "https://arxiv.org/abs/2112.14859v2",
+      "version_url": "https://arxiv.org/pdf/2112.14859v2",
+      "license": "No blanket reuse license inferred; mathematical statements paraphrased, no source redistribution.",
+      "actual_reading": "Selected §2.1.1–2.1.3 (760–850), §3.1.2–3.1.3 (1040–1098), Theorem 4.4 and bound (1860–1915), Propositions 5.1/5.2 and gluing constants (2190–2260), §10.1 selected local Green proof excerpt (4350–4400), Appendix C statement and proof excerpt (6371–6465). No full proof of Segal axioms or high-genus bootstrap read. §10.1 planar/sphere excerpt is not used as authority for arbitrary closed-surface smooth Green remainder.",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-segal-v2.pdf",
+      "sha256": "dd364401400731011347da8df703acddd17af01995cc10f311d139b8cc013c3f"
+    },
+    {
+      "id": "zelditch-v1",
+      "authors": [
+        "Steve Zelditch"
+      ],
+      "title": "Local and global analysis of eigenfunctions",
+      "version": "arXiv:0903.3420v1",
+      "url": "https://arxiv.org/abs/0903.3420v1",
+      "version_url": "https://arxiv.org/pdf/0903.3420v1",
+      "license": "No blanket reuse license inferred; statements paraphrased, no source redistribution.",
+      "actual_reading": "Introduction eigenbasis/positive Laplacian convention (text lines 120–175, PDF pp.3–4); §8 Weyl law (2340–2410, pp.45–46). Not the whole survey or microlocal proof. Spectral frequency squared is converted to the present Laplace eigenvalue.",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-weyl-v1.pdf",
+      "sha256": "5439caa6afda938e977b6f68db697a25c0a761fde26551af2ceb12e2935d749d"
+    },
+    {
+      "id": "polyakov-v5-consulted",
+      "authors": [
+        "Colin Guillarmou",
+        "Rémi Rhodes",
+        "Vincent Vargas"
+      ],
+      "title": "Polyakov's formulation of 2d bosonic string theory",
+      "version": "arXiv:1607.08467v5",
+      "version_date": "2019-09-22",
+      "doi": "10.1007/s10240-019-00109-6",
+      "url": "https://arxiv.org/abs/1607.08467v5",
+      "version_url": "https://arxiv.org/pdf/1607.08467v5",
+      "actual_reading": "Selected §3 excerpt lines 1720–1785 and searches of Green-kernel statements. Hyperbolic scope identified; not used to infer all-metric circle averages or arbitrary-surface Green regularity.",
+      "license": "No source redistribution.",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-polyakov-v5.pdf",
+      "sha256": "d32c9b35f1a54ce86a592a825274691dccf208a017c8d8b40a95c24cbe35c862"
+    },
+    {
+      "id": "review-v1-consulted",
+      "authors": [
+        "Colin Guillarmou",
+        "Antti Kupiainen",
+        "Rémi Rhodes"
+      ],
+      "title": "Review on the probabilistic construction and Conformal bootstrap in Liouville Theory",
+      "version": "arXiv:2403.12780v1",
+      "version_date": "2024-03-19",
+      "url": "https://arxiv.org/abs/2403.12780v1",
+      "version_url": "https://arxiv.org/pdf/2403.12780v1",
+      "actual_reading": "Abstract/contents and selected §3 excerpt lines 900–980. Used to compare conventions, not treated as fully read. Report covariance normalization remains authoritative.",
+      "license": "No source redistribution.",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-review-v1.pdf",
+      "sha256": "999694c2af2abb4d1a4db90a855eb87e02eb253ba3424c543f57558eb9d2d0c4"
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Explicit local derivations are given in the authored atoms and distinguished from quoted elliptic/GMC/LCFT research theorems.",
+      "proof_boundary": "Numerical regressions corroborate elementary normalization only; they do not establish research results."
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "degenerate-sign",
+      "notes": [
+        "4J0M",
+        "4J0N"
+      ],
+      "printed": "Report §4: -gamma/2 and +2/gamma.",
+      "adopted": "-gamma/2 and -2/gamma.",
+      "basis": "DOZZ v3 §4.2 PDF p.13 (published p.100), visually inspected; direct null-vector calculation."
+    },
+    {
+      "id": "fourpoint-metric-power",
+      "notes": [
+        "4J15"
+      ],
+      "printed": "Unnumbered intermediate line before (8.3): g(z)^(-4 Delta_2).",
+      "adopted": "Theorem 8.1 (8.3): g(z)^(-Delta_2).",
+      "basis": "Formal theorem and Proposition 3.2 Weyl point weight agree."
+    },
+    {
+      "id": "unsummed-descendant",
+      "notes": [
+        "4J14"
+      ],
+      "printed": "Report (8.4) displays only sum over nu while nu-prime remains free.",
+      "adopted": "Sum over both nu and nu-prime at equal level.",
+      "basis": "Report preceding (7.7)/(8.1) expansion and bootstrap v2 (8.2) explicitly contain both indices."
+    }
+  ],
+  "source_clarifications": [
+    "Positive Laplacian -div grad; scalar curvature twice Gaussian curvature; covariance 2pi G in report, whereas Segal G already includes 2pi.",
+    "Existing forest second-variable-linear convention used throughout; bra/ket holomorphic dependence translated rather than copied from the report.",
+    "Report descending descendant product differs from bootstrap v2 reversed product. Ward polynomial and Gram basis are changed together; the scalar contraction is basis-invariant.",
+    "Round metric fixed for C0 in threepoint formula. Constant metric rescaling multiplies the stripped constant by exp(c_L t/6).",
+    "Report fourpoint geometric C(g) and genus-two Cprime are retained, not assigned invented numerical values; the separate bootstrap 1/(8pi) convention is labeled.",
+    "No unmarked annulus HS claim. No bounded spectral theorem substituted for unbounded H. Surface GMC threshold2, circle L2 threshold1 and circle variable thresholdsqrt2 separated.",
+    "General smooth Green remainder uses a local 4D Laplace regularity proof, not the planar/sphere scope of Segal §10.1 or hyperbolic-only GRV lemma."
+  ],
+  "review_responses": [
+    {
+      "finding": "RV-P01",
+      "status": "author-addressed",
+      "notes": [
+        "4J0F"
+      ],
+      "change": "Fixed round metric and included exp(c_L t/6) constant-rescaling formula."
+    },
+    {
+      "finding": "RV-P02",
+      "status": "author-addressed",
+      "notes": [
+        "4J0K"
+      ],
+      "change": "Two commuting copies require a common primary with weights h,k; 2h only when h=k."
+    },
+    {
+      "finding": "RV-P03",
+      "status": "parent-owned",
+      "notes": [],
+      "change": "Shared 0Z1C repair reported by parent; no shared file edited."
+    },
+    {
+      "finding": "RV-P04",
+      "status": "author-addressed",
+      "notes": [
+        "4J07",
+        "4J1H"
+      ],
+      "change": "Added Gaussian L2 circle average via finite log energy on arbitrary smooth metric inside injectivity radius."
+    },
+    {
+      "finding": "RV-P05",
+      "status": "author-addressed",
+      "notes": [
+        "4J0B",
+        "4J1I"
+      ],
+      "change": "Added field-level Gaussian shift proof for bounded continuous functionals and separated cited GMC negative-moment/vertex limits."
+    },
+    {
+      "finding": "RV-P06",
+      "status": "author-addressed",
+      "notes": [
+        "4J0M"
+      ],
+      "change": "Annihilated descendant may be zero in a quotient; singular terminology conditional on nonzero."
+    },
+    {
+      "finding": "RV-P07",
+      "status": "author-addressed",
+      "notes": [
+        "4J0G",
+        "4J1G"
+      ],
+      "change": "Separated strip integral construction from cited entire extension, shifts and zero theorem."
+    },
+    {
+      "finding": "parent-spectral-foundation-and-Green-provenance",
+      "status": "author-addressed",
+      "notes": [
+        "4J04",
+        "4J1D",
+        "4J1E",
+        "4J1F"
+      ],
+      "change": "General closed-surface sources and local proof; no Euclidean Sobolev or hyperbolic-only substitution."
+    },
+    {
+      "finding": "parent-zero-mode-and-editorial",
+      "status": "author-addressed",
+      "notes": [
+        "4J09",
+        "4J00",
+        "4J15"
+      ],
+      "change": "Repeated a>0 for random-Z Gamma identity; cosmological term translated; hierarchy-relative/defensive wording corrected."
+    },
+    {
+      "finding": "RV-F08",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4J0W"
+      ],
+      "change": "Replaced unrestricted smooth cylinders by the dense algebraic span of C_c∞(c) times finite Gaussian-coordinate polynomials. Established derivative L2 integrability and vanishing boundary terms before integration by parts, and gave a derivative-vector proof of form closability before invoking the closed-form self-adjoint realization. Source binding added to bootstrap v2 §§4.1–4.2."
+    },
+    {
+      "finding": "RV-F09",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4J0G",
+        "4J1G"
+      ],
+      "change": "Read DOZZ v3 §1.2 (1.11), PDF p.5, and §12.5 (12.7), PDF p.53, in extracted text and rendered pages. Corrected public source metadata, both claim-source locators and actual_reading; the Upsilon formulas are unchanged."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Boundary LCFT and exact one-dimensional GMC formulas",
+      "scope": "Report §9 context retained; full boundary structure constants, Fyodorov–Bouchaud and interval laws, and annulus random modulus not developed as additional theorem pages."
+    },
+    {
+      "branch": "Random geometry and SLE/CLE couplings",
+      "scope": "Introductory motivation and §9 directions acknowledged; no full planar-map scaling, mating-of-trees or percolation-exponent proofs claimed."
+    },
+    {
+      "branch": "Global geometry of conformal blocks",
+      "scope": "Local geometric factor and almost-everywhere block convergence retained. Full Teichmuller line bundle, Schwarzian cocycle, projective mapping-class representation and Verlinde equivalence not constructed. Correspondence remains conjectural in the report."
+    },
+    {
+      "branch": "AGT, JT gravity, Toda, H3-WZW and imaginary Liouville",
+      "scope": "Report §9 is a dated source survey. Formal/analytic distinction expanded in 4J19; JT semiclassical claims and general bootstrap extensions are not promoted to proved universal statements or current-status surveys."
+    },
+    {
+      "branch": "Beyond ordinary strict Seiberg bounds",
+      "scope": "Extended analytic continuation and critical renormalizations not developed; fourpoint formula restricted to stated pair-charge inequalities."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4J1D",
+        "4J05"
+      ],
+      "source": "zelditch-v1; segal-v2",
+      "scope": "Compact elliptic spectral basis, Weyl law, and spectral-zeta meromorphic continuation are precisely quoted standard theorems. Green local remainder and Gaussian Sobolev convergence are separately proved."
+    },
+    {
+      "notes": [
+        "4J07",
+        "4J0B",
+        "4J0C",
+        "4J0D"
+      ],
+      "source": "rhodes-vargas-icm2026; dozz-v3",
+      "scope": "Full subcritical GMC existence/nondegeneracy, singular negative moments, simultaneous vertex limits and general Weyl anomaly are cited. Circle averages, finite/Gaussian-field shifts and zero-mode calculation are local."
+    },
+    {
+      "notes": [
+        "4J0H",
+        "4J0N",
+        "4J1G"
+      ],
+      "source": "dozz-v3",
+      "scope": "DOZZ integrability, probabilistic BPZ decoupling, reflection identification, parameter analytic continuation and global Upsilon theorem not reproved. Algebraic null-vector calculation and conditional BPZ implication are local."
+    },
+    {
+      "notes": [
+        "4J0R",
+        "4J0T",
+        "4J0V",
+        "4J1B"
+      ],
+      "source": "segal-v2; rhodes-vargas-icm2026",
+      "scope": "Continuous domain Markov construction, determinant gluing, full Segal amplitudes, projective annulus representation and operator differentiability are cited. Conditional expectation, kernel contraction and radial calculation are local."
+    },
+    {
+      "notes": [
+        "4J0X",
+        "4J0Y",
+        "4J0Z",
+        "4J11",
+        "4J12"
+      ],
+      "source": "bootstrap-v2; rhodes-vargas-icm2026",
+      "scope": "Singular interaction form at larger coupling, self-adjoint realization, scattering completeness, weighted analytic continuation and exact reflection coefficient are cited; bounded self-adjoint spectral theorem is not substituted."
+    },
+    {
+      "notes": [
+        "4J13",
+        "4J15",
+        "4J18"
+      ],
+      "source": "bootstrap-v2; segal-v2; rhodes-vargas-icm2026",
+      "scope": "Analytic Ward identities, holomorphic factorization, block convergence almost everywhere and justified spectral integrals are cited. Ward coefficient arithmetic, inverse Gram algebra, topology counts and conditional crossing consequence are local."
+    }
+  ],
+  "section_coverage": {
+    "3": [
+      "4J01",
+      "4J02",
+      "4J03",
+      "4J04",
+      "4J05",
+      "4J06",
+      "4J07",
+      "4J08",
+      "4J09",
+      "4J0A",
+      "4J0B",
+      "4J0C",
+      "4J0D",
+      "4J0E",
+      "4J1A",
+      "4J1D",
+      "4J1E",
+      "4J1F",
+      "4J1H",
+      "4J1I"
+    ],
+    "4": [
+      "4J0F",
+      "4J0G",
+      "4J0H",
+      "4J0I",
+      "4J0M",
+      "4J0N",
+      "4J1G"
+    ],
+    "5": [
+      "4J0O",
+      "4J0P",
+      "4J0Q",
+      "4J0R",
+      "4J0S",
+      "4J0T",
+      "4J0U",
+      "4J1J"
+    ],
+    "6": [
+      "4J0J",
+      "4J0V",
+      "4J1B"
+    ],
+    "7": [
+      "4J0K",
+      "4J0L",
+      "4J0W",
+      "4J0X",
+      "4J0Y",
+      "4J0Z",
+      "4J10",
+      "4J11",
+      "4J12",
+      "4J1C"
+    ],
+    "8": [
+      "4J13",
+      "4J14",
+      "4J15",
+      "4J16",
+      "4J17",
+      "4J18"
+    ],
+    "9": [
+      "4J00",
+      "4J19"
+    ],
+    "1-2": [
+      "4J00"
+    ]
+  },
+  "validation": {
+    "source_links": "57 owned trees: all local body links exist; no shared file edited.",
+    "format": "normalizeFormat from scripts/note-editorial-lib.mjs applied only to owned 4J trees and reference; final comparison has no changes. Literal bracket/half-open checks run separately.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.8",
+      "count": 1004,
+      "errors": 0,
+      "scope": "All owned source math groups; brace balance and literal bracket matching checked. Not Forester parsing, rendering or whole-site build."
+    },
+    "prerequisite_check": {
+      "owned_atomic_count": 55,
+      "edges": 174,
+      "recursive_nodes": 339,
+      "cycles": 0,
+      "all_edges_in_body": true,
+      "outline_prerequisites": 0,
+      "outline_directly_reaches_all_atoms": true,
+      "scope": "Current shared audit prerequisites plus local packet, traversed only from owned atoms."
+    },
+    "elementary_checks": {
+      "gamma_integral": {
+        "cases": 48,
+        "max_relative_error": 6.328271240363392e-15,
+        "formula": "a=n*gamma: integral exp(a*c-mu*Z*exp(gamma*c)) dc = (n-1)!/(gamma*(mu*Z)^n)",
+        "parameters": {
+          "gamma": [
+            0.4,
+            1,
+            1.7
+          ],
+          "n": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "mu": [
+            0.5,
+            2
+          ],
+          "Z": [
+            0.3,
+            3
+          ]
+        },
+        "method": "Composite Simpson 20000 panels; c lower=-60/a, upper=log(80/(mu*Z))/gamma; corroboration only."
+      },
+      "null_vector": {
+        "cases": 8,
+        "max_absolute_residual": 2.1316282072803006e-14,
+        "formula": "F_level2(h,c)*(b^2,1)^T=0 for h=-1/2-3b²/4, c=13+6b²+6/b²",
+        "parameters": {
+          "b": [
+            0.15,
+            0.25,
+            0.5,
+            0.75,
+            1,
+            1.4,
+            2,
+            3
+          ]
+        }
+      },
+      "negative_tail": "Analytic regression contract: a<=0 and c<=0 imply exp(a*c-mu*Z*exp(gamma*c))>=exp(-mu*Z), hence integral on [-L,0]>=L exp(-mu*Z). Parent owns shared numerical tests."
+    },
+    "build": "Not run; parent owns global integration/build and publication.",
+    "independent_review": "The input final review returned needs_changes with RV-F08 and RV-F09 open. Both are author-addressed in revision 2; independent recheck of the refreshed packet and changed notes remains pending. The review file is read-only and no independent pass is claimed.",
+    "review_input": {
+      "path": "research/mathematical-physics-rhodes-vargas-review.json",
+      "sha256": "86ff3eb5b5454b54d89463196d9695c081afa5fd5a3d56ac1eb1d33976ea2647",
+      "result": "needs_changes",
+      "open_findings": [
+        "RV-F08",
+        "RV-F09"
+      ]
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-22",
+    "paths": [
+      "trees/math/mathematical-physics/rhodes-vargas/4J*.tree",
+      "trees/references/icm2026-rhodes-vargas.tree",
+      "research/mathematical-physics-rhodes-vargas-packet.json"
+    ],
+    "hashes": "notes[].sha256 freezes each owned tree; downloaded primary supplements carry source_records[].sha256; packet digest reported separately to avoid self-hashing.",
+    "mutation_boundary": "No further author edits after freeze except explicitly requested reviewer repairs; no shared files, builds or git operations.",
+    "revision": 2,
+    "previous_packet_sha256": "90a9c93042ed2a156b845a422ec52a9c060918561a958dc6f205a71c73e8aab6"
+  }
+}

@@ -1,0 +1,14 @@
+\title{有限群网络的 Gram 算子归一化}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§5 体边对应](icm2026-perez-garcia)；未归一化边向量约定下的独立计算}
+
+\p{取方格晶格的一个非空有限连通顶点区域 #{S}，内部边是两个端点都在 #{S} 中的最近邻边。设顶点数为 #{n}、内部边数为 #{m}。每个顶点使用四腿的[正则表示平均张量](4I0O)，所有未用于内部边的腿均保留为边界腿，数目记为 #{b}。每条内部边占用两条腿，故 #{4n=2m+b}，且有限区域满足 #{b\geq 1}。}
+\p{设 #{G} 为有限群，写 #{D=|G|}，每条内部边按相配的方向用未归一化 #{\Omega_D=\sum_x|xx\rangle} 收缩。令 #{\Gamma} 为边界映射，#{P_\partial=D^{-1}\sum_gU_\partial(g)} 为边界同时作用的不变投影。则}
+##{\Gamma^*\Gamma=D^{m-n+1}P_\partial.}
+\p{\strong{证明。}将每个局部平均展开，顶点 #{v} 带群变量 #{g_v}，共给出因子 #{D^{-n}}。一条连接 #{v,w} 的内部边产生}
+##{\langle\Omega_D,(L(g_v)\otimes\overline{L(g_w)})\Omega_D\rangle
+=\operatorname{tr}(L(g_v)L(g_w)^*)=D\,\mathbf 1_{g_v=g_w}.}
+\p{最后等式来自正则表示的迹：单位元迹为 #{D}，其余群元没有固定基向量，迹为零。连通性强迫所有 #{g_v} 相等，每条内部边贡献 #{D}，剩下边界上的 #{\sum_gU_\partial(g)=DP_\partial}。三项相乘即为所求。}
+\p{所以 #{\widehat\Gamma=D^{(n-m-1)/2}\Gamma} 满足 #{\widehat\Gamma^*\widehat\Gamma=P_\partial}，而由[像投影公式](4I0M)，#{Q=\widehat\Gamma\widehat\Gamma^*} 才是正交投影。树满足 #{m=n-1}，无需再缩放；单个四边形环满足 #{m=n=4}，应缩放 #{D^{-1/2}}。该计算采用这里明确规定的无权有限群张量；一般[弱 Hopf](4I1A)模型还含额外权重。}

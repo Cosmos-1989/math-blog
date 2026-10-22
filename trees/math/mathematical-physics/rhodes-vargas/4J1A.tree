@@ -1,0 +1,13 @@
+\title{零模态为何使 Liouville 总面积服从 Gamma 分布}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§3；零模态换元的直接推论。}
+
+\p{设 #{\gamma,\mu,a>0}，#{s=a/\gamma}。令 #{W(dX)} 为正测度，#{Z(X)} 可测且严格正、有限，并假设 #{0<\int Z(X)^{-s}W(dX)<\infty}。在 #{(X,c)} 上将测度}
+##{e^{ac-\mu e^{\gamma c}Z(X)}W(dX)\,dc}
+\p{归一化为概率测度。定义总面积 #{A=e^{\gamma c}Z(X)}，则 #{T=\mu A} 的概率密度为 #{t^{s-1}e^{-t}/\Gamma(s)}、#{t>0}；它与 #{X} 独立。}
+\p{\strong{证明。}固定 #{X} 作[零模态换元](4J09) #{t=\mu Z(X)e^{\gamma c}}，联合测度成为}
+##{\frac{\mu^{-s}}\gamma Z(X)^{-s}W(dX)\,t^{s-1}e^{-t}dt.}
+\p{两因子均可归一化，故联合概率为乘积，且 #{T} 具有显示密度。由 [Gamma 递推](0H4Z)，#{\mathbb E[A]=s/\mu}、#{\operatorname{Var}(A)=s/\mu^2}；未归一化总质量随 #{\mu} 按 #{\mu^{-s}} 缩放。}
+\p{在满足[Seiberg 条件](4J0C)的曲面相关函数中，#{a=\sum_j\alpha_j-Q\chi(\Sigma)>0}，#{Z(X)} 是包含插入奇性后的 GMC 总质量，#{W} 吸收其余与 #{c,\mu} 无关的权重。这说明宇宙学常数控制面积尺度，而严格总电荷不等式保证 Gamma 形状参数为正。}

@@ -1,0 +1,11 @@
+\title{小摆势的陷获区面积为十六倍振幅平方根}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (5.3)、§5.3；精确面积计算}
+
+\p{固定 #{\varepsilon>0}，在 #{\mathbb T\times\mathbb R} 上考虑 [Hamilton 函数](4H03) #{H_\varepsilon(x,v)=v^2/2-\varepsilon(1+\cos x)}。选一周期 #{-\pi\leq x\leq\pi}，其[陷获区](4H12) #{H_\varepsilon<0} 的相空间面积为 #{16\sqrt\varepsilon}。}
+\p{\strong{证明。}由 #{1+\cos x=2\cos^2(x/2)}，且这一周期内 #{\cos(x/2)\geq 0}，陷获条件等价于}
+##{-2\sqrt\varepsilon\cos(x/2)<v<2\sqrt\varepsilon\cos(x/2).}
+\p{固定 #{x} 的速度区间长度为 #{4\sqrt\varepsilon\cos(x/2)}。积分得到 #{4\sqrt\varepsilon\int_{-\pi}^{\pi}\cos(x/2)dx=16\sqrt\varepsilon}。边界 #{H_\varepsilon=0} 是零面积曲线，不改变结果。}
+\p{势幅是 #{O(\varepsilon)}，新增陷获粒子的几何区域却是 #{O(\sqrt\varepsilon)}。这一尺度差异解释了小 BGK 波线性响应中出现平方根修正的原因；响应算子的系数与误差估计仍需独立分析。}

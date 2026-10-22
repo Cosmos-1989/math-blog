@@ -1,0 +1,15 @@
+\title{伪共形倒置怎样把无限时间变为奇异初始面}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§3；2101.01390v1，§1.1 式 (1.9)–(1.13)；链式法则证明}
+
+\p{对三维零背景 [Vlasov 振幅方程](4H01) #{\partial_t\mu+v\cdot\nabla_x\mu+\lambda E[\mu]\cdot\nabla_v\mu=0}，其中密度为 #{\mu^2}，在 #{t>0} 定义}
+##{s=1/t,\quad q=x/t,\quad p=x-tv,\qquad\gamma(s,q,p)=\mu(s^{-1},q/s,q-sp).}
+\p{此变换自身是逆变换，并把方程化为}
+##{\partial_s\gamma+p\cdot\nabla_q\gamma+\lambda s^{-1}E\lbrack\gamma\rbrack(s,q)\cdot\nabla_p\gamma=0.}
+\p{\strong{场的缩放。}固定 #{s}，换元 #{x'=q'/s}、#{v'=q'-sp'} 的体积绝对 Jacobian 为一。[Coulomb 核](4H01)的二次负齐次性因此给 #{E\lbrack\mu\rbrack(s^{-1},q/s)=s^2E\lbrack\gamma\rbrack(s,q)}。}
+\p{\strong{输运的变换。}[链式法则](0A34)直接给}
+##{\partial_s\gamma=-s^{-2}(\partial_t+q\cdot\nabla_x)\mu -p\cdot\nabla_v\mu,\quad\nabla_q\gamma=s^{-1}\nabla_x\mu+\nabla_v\mu,\quad\nabla_p\gamma=-s\nabla_v\mu.}
+\p{由于 #{v=q-sp}，前两式合成 #{(\partial_s+p\cdot\nabla_q)\gamma=-s^{-2}(\partial_t+v\cdot\nabla_x)\mu=-\lambda s^{-1}E[\gamma]\cdot\nabla_p\gamma}，得到结论。}
+\p{原时间 #{t\to\infty} 对应 #{s\downarrow 0}。自由输运在变换后仍是自由输运，而自洽场变为 #{s^{-1}} 系数；它的积分为 #{\log s}，提示构造终态时需要对数剪切。该变换本身并未解决奇异初始面上的存在问题。}

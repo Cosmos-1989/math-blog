@@ -1,0 +1,10 @@
+\title{沿轨道的平方衰减加速度产生对数位移}
+\date{2026-10-22}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (3.3)–(3.6)；条件性常微分方程计算}
+
+\p{设轨道 #{X:\lbrack 1,\infty\rparen\to\mathbb R^3} 二次可微，#{V=X'}，且存在固定向量 #{A} 与 #{\delta>0}，使 #{V'(t)=At^{-2}+r(t)}、#{|r(t)|\leq Ct^{-2-\delta}}。则存在 #{v_\infty,x_\infty} 使}
+##{V(t)=v_\infty -\frac A t+O(t^{-1-\delta}),\qquad X(t)=tv_\infty -A\log t+x_\infty+O(t^{-\delta}).}
+\p{\strong{证明。}加速度绝对可积，由[微积分基本定理](0A3C)，#{v_\infty=V(1)+\int_1^\infty V'(s)ds} 存在。对尾积分计算得 #{v_\infty -V(t)=A/t+O(t^{-1-\delta})}。再对 #{X(t)-tv_\infty+A\log t} 求导，导数为 #{O(t^{-1-\delta})}；第二次尾积分得到其极限及误差。}
+\p{对 [Vlasov 特征线](4H02)，若已经证明沿轨道 #{E(t,X(t))=t^{-2}E_\infty(v_\infty)+O(t^{-2-\delta})}，可取 #{A=\lambda E_\infty(v_\infty)}。仅有 #{\|E(t)\|_\infty=O(t^{-2})} 不包含这个渐近展开，也不足以推出存在对数修正后的极限。}

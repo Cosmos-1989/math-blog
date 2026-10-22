@@ -1,0 +1,12 @@
+\title{光滑右端的 Euclidean Laplace 方程具有光滑分布解}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Weyl 引理的局部卷积证明；用于 [Rhodes–Vargas](icm2026-rhodes-vargas) 的 Green 核基础。}
+
+\p{令 #{\Omega\subset\mathbb R^d} 为开集，#{d=2} 或 #{4}，#{L=-\sum_{j=1}^d\partial_j^2}。这里分布是 #{C_c^\infty(\Omega)} 上的[线性泛函](00MH) #{u}：对每个紧集 #{K\subset\Omega}，存在 #{C,m}，使支撑在 #{K} 内的测试函数满足 #{|u(\psi)|\le C\max_{|\beta|\le m}\|\partial^\beta\psi\|_\infty}，其中 #{\beta} 为非负整数多重指标，#{|\beta|} 为分量和。导数由 #{(\partial_ju)(\psi)=-u(\partial_j\psi)} 定义。若 #{Lu=f} 且 #{f\in C^\infty(\Omega)}，则 #{u} 在 #{\Omega} 内由光滑函数给出。}
+\p{\strong{调和情形。}先设 #{f=0}。取非负径向光滑函数 #{\rho}，支撑在单位球内且积分为一，令 #{\rho_\varepsilon(x)=\varepsilon^{-d}\rho(x/\varepsilon)}。局部卷积定义为 #{u_\varepsilon(x)=u(\rho_\varepsilon(x-\cdot))}，在离边界大于 #{\varepsilon} 的区域光滑且调和。}
+\p{光滑调和函数的球面平均等于中心值：球面平均对半径的导数是球内 Laplace 积分除以球面面积，由散度公式等于零。对半径再作径向加权，就得到 #{u_\varepsilon*\rho_\delta=u_\varepsilon}。固定紧含于 #{\Omega} 的小球，#{\varepsilon,\delta} 足够小时，卷积可交换且}
+##{u_\varepsilon=u_\varepsilon*\rho_\delta=u_\delta*\rho_\varepsilon=u_\delta.}
+\p{所以这些平滑函数在更小球上完全相同。又 #{u_\varepsilon\to u} 按分布收敛，故 #{u} 就等于此光滑调和函数。}
+\p{\strong{一般右端。}#{L} 的基本解为 #{E_2(x)=-(2\pi)^{-1}\log|x|} 与 #{E_4(x)=(4\pi^2|x|^2)^{-1}}。它们在原点外调和；小球上的负法向通量均为一，因此分布意义下 #{LE_d=\delta_0}。取光滑紧支撑截断 #{\eta}，在所考察小球上等于一，令 #{v=E_d*(\eta f)}。因 #{E_d} 局部可积，任意阶导数可移到光滑紧支撑因子 #{\eta f} 上，故 #{v} 光滑，且 #{Lv=\eta f}。于是小球内 #{u-v} 调和，前一步说明它光滑。逐点选择小球完成证明。}

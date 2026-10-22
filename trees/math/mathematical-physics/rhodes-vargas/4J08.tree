@@ -1,0 +1,11 @@
+\title{二维混沌的二阶矩为何要求平方耦合小于二}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§3；Wick 二阶矩与局部积分推导。}
+
+\p{设 #{D\subset\mathbb R^2} 有界，#{X_\epsilon} 为中心高斯正则化，满足一致协方差上界 #{C_\epsilon(x,y)\le\log(1/(|x-y|+\epsilon))+C}。令 #{M_\epsilon(D)=\int_D:e^{\gamma X_\epsilon(x)}:\,dx}，其中使用 [Wick 指数](4J06)。若 #{\gamma^2<2}，则 #{\sup_{0<\epsilon<1}\mathbb E[M_\epsilon(D)^2]<\infty}。}
+\p{\strong{证明。}由 [Tonelli 定理](0H53)和高斯指数矩，}
+##{\mathbb E[M_\epsilon(D)^2]=\int_{D^2}e^{\gamma^2C_\epsilon(x,y)}dx\,dy\le e^{\gamma^2C}\int_{D^2}|x-y|^{-\gamma^2}dx\,dy.}
+\p{取包含 #{D-D} 的半径 #{R} 圆盘。对每个 #{x}，内积分至多 #{2\pi\int_0^R r^{1-\gamma^2}dr=2\pi R^{2-\gamma^2}/(2-\gamma^2)}，乘 #{|D|} 得一致上界。若 #{D} 含圆盘且极限核在对角线附近满足反向比较，则相应极限二阶核积分在 #{\gamma^2\ge 2} 时发散。}
+\p{这解释了二阶矩方法的范围。它单独不证明正则化是 Cauchy 列；全次临界区间 #{0<\gamma<2} 的[混沌存在定理](4J07)也不要求二阶矩有限。}

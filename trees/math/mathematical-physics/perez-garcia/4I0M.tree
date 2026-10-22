@@ -1,0 +1,10 @@
+\title{边界映射怎样给出正交基态投影}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§5](icm2026-perez-garcia)；有限维归一化计算}
+
+\p{设 #{\Gamma:V\to H} 为有限维 Hilbert 空间之间的[边界映射](4I0L)，令 #{T=\Gamma^*\Gamma}。利用[自伴谱分解](0N0B)，将 #{T} 的正特征值 #{\lambda} 替换为 #{\lambda^{-1}}，零特征值仍取零，所得算子记为 #{T^+}。则像空间上的[正交投影](00MS)为}
+##{Q=\Gamma T^+\Gamma^*.}
+\p{\strong{证明。}首先 #{\ker T=\ker\Gamma}，因为 #{\langle v,Tv\rangle=\|\Gamma v\|^2}。又 #{T^+T} 是 #{(\ker\Gamma)^\perp} 上的投影，因此 #{Q\Gamma=\Gamma T^+T=\Gamma}。#{Q} 自伴且像包含于 #{\operatorname{Im}\Gamma}，所以它在该像上恒等、在正交补上为零，正是所求。}
+\p{特别地，若 #{T=P} 已是投影，则 #{Q=\Gamma\Gamma^*}。若 #{T=cP}、#{c>0}，则 #{Q=c^{-1}\Gamma\Gamma^*}。故直接写 #{\Gamma\Gamma^*} 为投影需要先确定收缩和边界权重的归一化。例如 #{\Gamma=2I} 时 #{\Gamma\Gamma^*=4I}，显然不是投影。对一般有权 PEPS，应使用像投影或等价的加权公式。}

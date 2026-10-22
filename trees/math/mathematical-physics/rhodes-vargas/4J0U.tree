@@ -1,0 +1,10 @@
+\title{平方可积核的收缩满足乘积范数界}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§5 拼接的函数分析基础。}
+
+\p{设 #{X,Y,Z} 是 σ-有限测度空间，#{A\in L^2(X\times Y)}、#{B\in L^2(Y\times Z)}。定义核收缩 #{K(x,z)=\int_YA(x,y)B(y,z)dy}。则它几乎处处有定义，且}
+##{\|K\|_{L^2(X\times Z)}\le\|A\|_{L^2(X\times Y)}\|B\|_{L^2(Y\times Z)}.}
+\p{\strong{证明。}对几乎处处的 #{x,z}，由 [Schwarz 不等式](004S)，#{|K(x,z)|^2\le(\int_Y|A(x,y)|^2dy)(\int_Y|B(y,z)|^2dy)}。再用 [Fubini–Tonelli 定理](0H53)分别积分 #{x,z}，即得结论。这也证明核积分绝对收敛。}
+\p{若 #{A,B} 是 [Hilbert–Schmidt 核](0X02)，该式控制它们的算子复合。边界场的测度无穷并不妨碍这个论证，关键是核本身平方可积。[振幅定理](4J0T)中的严格电荷条件正用于获得这种可积性。对向量的配对使用 #{\langle A,B\rangle=\int\overline A B}，与未带共轭的核复合分别处理。}

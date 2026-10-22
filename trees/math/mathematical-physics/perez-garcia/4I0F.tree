@@ -1,0 +1,14 @@
+\title{状态的 GNS 表示}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Pérez-García，§4](icm2026-perez-garcia)；标准构造的逐步证明}
+
+\p{设 #{\omega} 是含幺 [C* 代数](0Z01) #{\mathcal A} 的[状态](0Z03)，采用第二变量线性的内积。令 #{N_\omega=\{a:\omega(a^*a)=0\}}。由[状态的 Schwarz 不等式](0Z1C)，若 #{a\in N_\omega}，则对所有 #{b} 都有 #{\omega(a^*b)=\omega(b^*a)=0}。展开平方立即说明 #{N_\omega} 对线性组合封闭，并说明 #{\langle[a],[b]\rangle=\omega(a^*b)} 在商空间 #{\mathcal A/N_\omega} 上良定义且正定。}
+\p{为定义左乘，先在抽象代数内验证[正元序](0Z02)的不等式 #{a^*c^*ca\leq\|c\|^2a^*a}。当 #{c\ne 0} 时，令 #{t=c^*c/\|c\|^2}。二项式级数 #{(1-z)^{1/2}=1-\sum_{n\geq 1}b_nz^n} 的系数满足 #{b_n>0}、#{\sum b_n=1}，后者由 #{z\uparrow 1} 得到。因此 #{b=\|c\|(1-\sum b_nt^n)} 在代数范数下收敛，#{b=b^*} 且 #{b^2=\|c\|^21-c^*c}。于是两边之差为 #{(ba)^*(ba)}，是正元；#{c=0} 时直接成立。对状态取值便得}
+##{\omega((ca)^*(ca))\leq\|c\|^2\omega(a^*a).}
+\p{故 #{N_\omega} 是左理想，而且 #{[a]\mapsto[ca]} 的范数至多 #{\|c\|}。先作[度量完备化](00EW)；Schwarz 不等式保证任意两个 Cauchy 序列的内积有极限，且极限只依赖其等价类，因而内积唯一延拓，使完备化成为 Hilbert 空间 #{H_\omega}。左乘唯一延拓为有界算子 #{\pi_\omega(c)}。直接在稠密商空间上计算，得到 #{\pi(cd)=\pi(c)\pi(d)}、#{\pi(c^*)=\pi(c)^*}、#{\pi(1)=I}。这就是一个含幺星表示。}
+\p{令 #{\Omega_\omega=[1]}，则 #{\|\Omega_\omega\|=1}，并且}
+##{\omega(a)=\langle\Omega_\omega,\pi_\omega(a)\Omega_\omega\rangle,\qquad
+H_\omega=\overline{\pi_\omega(\mathcal A)\Omega_\omega}.}
+\p{后一性质称 #{\Omega_\omega} 为循环向量。若另一个三元组具有这两项性质，映射 #{\pi(a)\Omega\mapsto\pi'(a)\Omega'} 保持内积、定义良好且像稠密，因此延拓为酉算子，并交织两个表示。这证明循环表示的酉唯一性。}

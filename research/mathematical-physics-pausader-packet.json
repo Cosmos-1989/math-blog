@@ -1,0 +1,2422 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "prefix": "4H",
+    "outline": "4H00",
+    "reference": "icm2026-pausader",
+    "doi": "10.1137/25M1805825",
+    "speaker": "Benoit Pausader",
+    "title": "Stability Problems in Collisionless Kinetic Systems",
+    "pages": "516–533",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+    "license": "CC BY 4.0",
+    "question": "参考轨道从自由流变为等离子体波和陷获轨道时，怎样确定宏观场的衰减、终态及稳定性的正确含义？",
+    "reading_scope": "pausader-icm2026: Entire publisher HTML mathematical body §§1–6, every displayed formula, all 11 footnotes, three figure captions, acknowledgments, bibliography [1]–[78], abstract and publication/license metadata. Mathematical body lines88–533, footnotes537–580, references581–1020, metadata1022–1065 were read in overlapping sections; §4.3–6 and bibliography ref4 rechecked before freeze. Figure pixels and publisher PDF were not inspected. Exact-title arXiv search did not locate a matching report version; no nonexistence claim.\nvacuum-scattering-v1: Abstract and entire §1 including Theorem1.1, remarks, open questions and §1.1; §2 Lemma2.1 and its complete proof, start of Lemma2.3. Reviewer follow-up: Theorem3.1 and Remark3.2 in full, §3.3 final proof passage (3.35)–(3.39), §4 beginning (4.1)–(4.10) through Theorem4.2, and the subsequent a-priori bound displays (4.16)–(4.20). Full §§3–4 proofs were not read.\npoisson-equilibrium-v2: Abstract and entire §1, including Theorem1.1, prior-work discussion, proof overview§1.3 and organization; beginning §2 through equations2.1–2.2. The full 60-page research proof was not read.\nsharp-gevrey-v1: Abstract, §1.1 completely including Theorems1.1–1.3 and Remarks1.4–1.7; §1.2 through line176. Theorem1.2/1.3 and exact radii re-read. The opening energy and Z-norm displays of §1.3 through approximately line194 were also seen, not the complete §1.3 or later proofs.\nsmall-bgk-v2: Abstract and §§1.1–1.4, including Definition1.1, Theorem1.2, Remark1.3, Lemma1.4, Theorem1.6, Definition1.8 and Theorem1.9; beginning§1.5 only. AppendixB.1 completely, with neighboring B.2 opening and A.6/A.7 excerpts seen. Not the full 110-page paper and not deep §§3–5 proofs. Versioned abstract metadata was inspected; HTML internal manuscript date is later than arXiv v2 history, so citations bind the explicit v2 identifier.\nlocal-calculations: Calculations and elementary proofs in owned notes, with existing prerequisite pages inspected. No additional primary-paper full-reading claim.\nRepair recheck: PR04/PR05: independently re-opened publisher HTML lines88–173 and265–390, checking §1.3/(1.4), §1.4 Boltzmann background, §1.4.1/(1.5), §2 energy/angular-momentum steady states, §4 opening/(4.1), §4.2 before(4.10), §4.2/(4.13) and §4.2.1 Poisson model. Re-read actual 4H0A statement: both phi and chi are Schwartz, not restricted to compact support.",
+    "proof_scope": {
+      "4H01": {
+        "status": "definition",
+        "scope": "定义相空间密度及两种反应符号，固定 Delta phi=rho-background 与 E=grad phi。"
+      },
+      "4H02": {
+        "status": "local-proof",
+        "scope": "链式法则、相空间散度零、Jacobian 换元证明 Casimir 恒等式；要求轨道存在及积分收敛。"
+      },
+      "4H03": {
+        "status": "local-proof",
+        "scope": "明确 bracket=x-v convention，与 0I85 相反；直接计算 H=v²/2-lambda phi 的向量场。"
+      },
+      "4H04": {
+        "status": "local-proof",
+        "scope": "速度分部积分得到压力张量；不把未闭合矩方程当作 Euler 闭合。"
+      },
+      "4H05": {
+        "status": "definition-and-calculation",
+        "scope": "固定报告的时间和 Laplace 符号，消去 Newton 势得到非局部相互作用。"
+      },
+      "4H06": {
+        "status": "local-proof",
+        "scope": "链式法则证明 F(H) 的定常输运；Poisson 自洽性仍是额外椭圆方程。"
+      },
+      "4H07": {
+        "status": "local-proof",
+        "scope": "展开括号得到反应项与二次项，按 (1.1)/(1.4) 修正报告 (2.1) 反应项符号。"
+      },
+      "4H08": {
+        "status": "definition",
+        "scope": "在指定范数中定义线性控制、指数模态及轨道稳定目标。"
+      },
+      "4H09": {
+        "status": "local-proof",
+        "scope": "y=x-tv 换元给 L1_x Linfty_v 到 Linfty_x 的 t^-d 界。"
+      },
+      "4H0A": {
+        "status": "local-proof",
+        "scope": "对两个 Schwartz 函数 phi、chi 两次分部积分，分别给空间 Linfty 和 L1 界；不额外要求紧支撑。"
+      },
+      "4H0B": {
+        "status": "local-proof",
+        "scope": "链式法则给精确轮廓方程；线性反应项和非线性项分别保留。"
+      },
+      "4H0C": {
+        "status": "local-proof",
+        "scope": "近处 R Linfty 与远处 R^-2 L1 分裂后优化半径。"
+      },
+      "4H0D": {
+        "status": "local-proof",
+        "scope": "支配收敛与奇核截断证明自由模型极限；不附加 Schwartz 假设到研究定理。"
+      },
+      "4H0E": {
+        "status": "conditional-local-proof",
+        "scope": "从精确轨道展开 At^-2+O(t^-2-delta) 两次积分；仅有 O(t^-2) 界不够。"
+      },
+      "4H0F": {
+        "status": "cited-theorem-with-solution-class",
+        "scope": "报告二阶联合权小量版本；原论文 Thm1.1(i)/3.1 的 weighted gamma 解类与局部时间正则性，局部一致收敛；不声称一般弱解唯一。"
+      },
+      "4H0G": {
+        "status": "cited-theorem-with-integrability-check",
+        "scope": "精确保留空间第五阶权、一阶与二阶导数权及场 W3infty；给出 Thm4.2 sigma 终态类。终态只要求有限，不要求小。"
+      },
+      "4H0H": {
+        "status": "cited-theorem",
+        "scope": "第五阶联合权与导数空间权、小量及 W3infty 场；正负时间对数平移号相反。"
+      },
+      "4H0I": {
+        "status": "conditional-local-proof",
+        "scope": "假设 C1 反解存在，用 d²S=0 证明保辛与 Hamilton–Jacobi 直化；不证明全局坐标存在。"
+      },
+      "4H0J": {
+        "status": "local-proof",
+        "scope": "正能量给半径下界，二阶径向凸性给线性逃逸，积分加速度得两端速度。"
+      },
+      "4H0K": {
+        "status": "conditional-local-calculation",
+        "scope": "假设 H=a²/2 的正则坐标存在，计算 SIC 量及约束；不重建全局 Kepler 散射坐标。"
+      },
+      "4H0L": {
+        "status": "local-proof",
+        "scope": "外法向入流零，Stokes 通量恒等式；无界域附加外截断通量趋零，区分镜面反射。"
+      },
+      "4H0M": {
+        "status": "local-examples",
+        "scope": "有界域、半空间、圆柱的 blowdown 必要条件；不是充分的散射定理。"
+      },
+      "4H0N": {
+        "status": "local-proof-and-definition",
+        "scope": "单位质量背景与环面 Poisson 中性相容。三维紧支撑非中性密度仍给 O(|x|^-2) 场；一维 E(+infty)-E(-infty)=Q 排除非零总量时的双端趋零。"
+      },
+      "4H0O": {
+        "status": "local-proof",
+        "scope": "Fourier 模态积分因子求解，频率分母零处取连续极限 t。"
+      },
+      "4H0P": {
+        "status": "local-proof",
+        "scope": "Duhamel 公式和速度分部积分，准确保持卷积号及非线性迫项的角色。"
+      },
+      "4H0Q": {
+        "status": "definition-and-local-bound",
+        "scope": "定义指定频率集合上的下界，证明已存在因果解的加权 L2 乘子界；不由代数除法推出因果逆核。"
+      },
+      "4H0R": {
+        "status": "local-proof",
+        "scope": "K(0,theta)=-theta^-2 与两步极限给非零小频率反例；不适用于环面整数频率。"
+      },
+      "4H0S": {
+        "status": "local-proof",
+        "scope": "三维质量积分与径向逆 Fourier 积分；测试函数证明变换身份。报告 a=sqrt2、primary a=1。"
+      },
+      "4H0T": {
+        "status": "local-proof",
+        "scope": "独立证明 k*q=k-q，以卷积结合律验证因果响应核 delta_0-1_{t>=0}exp(-a|xi|t)sin(t)，用阶乘迭代证明唯一性；衰减因子为 exp(-a|xi|t)。"
+      },
+      "4H0U": {
+        "status": "local-proof",
+        "scope": "精确速度幂尾下 gamma>2 收敛、gamma=2 对数发散；含对数修正的尾需另外判别。"
+      },
+      "4H0V": {
+        "status": "cited-theorem",
+        "scope": "primary v2 C1 小数据速度权9/2，两类混合范数，无中性假设；静态3-delta、振荡2-delta、散射1/2，delta=10^-4。"
+      },
+      "4H0W": {
+        "status": "conditional-local-proof",
+        "scope": "a 与 a' 的明确衰减假设下分部积分得到 T^-1+delta 尾界。"
+      },
+      "4H0X": {
+        "status": "definition",
+        "scope": "位置离散频率、速度连续频率、速度矩和指数半径；与 Euler Gevrey 不等同。"
+      },
+      "4H0Y": {
+        "status": "local-proof",
+        "scope": "rhohat(t,k)=fhat0(k,tk)，在明确逐点指数频率界下得到时间衰减，不直接把积分范数当逐点界。"
+      },
+      "4H0Z": {
+        "status": "cited-theorem",
+        "scope": "primary n=floor(d/2+1)，平衡正则界、theta 裕量、中性与 lambda 半径损失；收敛对象是移动轮廓。"
+      },
+      "4H10": {
+        "status": "cited-theorem",
+        "scope": "primary Thm1.2，lambda 输入、3lambda/4 解和极限、lambda/2 下界，精确双边 Lipschitz 界。"
+      },
+      "4H11": {
+        "status": "local-proof",
+        "scope": "按空间归一化 Fourier 系数计算乘积频率平移，指出晚时频率可重新耦合。"
+      },
+      "4H12": {
+        "status": "definition",
+        "scope": "全局 F(v²/2-phi) 以及背景-1，偶性、最小周期、单调半周期与零能量分界。"
+      },
+      "4H13": {
+        "status": "local-calculation",
+        "scope": "初始时刻平均分解、质量和非负性；最终平衡及 Penrose 条件另须控制。"
+      },
+      "4H14": {
+        "status": "local-proof",
+        "scope": "逐位置积分上下速度差，精确系数16。"
+      },
+      "4H15": {
+        "status": "local-proof",
+        "scope": "三角换元给完整椭圆积分表达，再以端点奇核比较证明对数尺度。"
+      },
+      "4H16": {
+        "status": "local-proof",
+        "scope": "正则非退化转向点的端点截断求导，I'=T/(2pi)；局部时间-能量坐标保辛。"
+      },
+      "4H17": {
+        "status": "definition-and-cited-tangent",
+        "scope": "primary Def1.1：C2 曲线、非零切向、marginal kernel、ED 四阶及 H8 一致界、单井全局 F。Lemma1.4 的首阶势按来源引用。"
+      },
+      "4H18": {
+        "status": "cited-theorem",
+        "scope": "primary Thm1.2 第一支、同最小周期；报告增长率 O(sqrt epsilon) 仅作上界，非匹配下界。"
+      },
+      "4H19": {
+        "status": "cited-theorem-consequence",
+        "scope": "primary weighted initial data 的 static+Galilei+dynamic 分解及 L2_t 场；只陈述静态弱解这一较弱结论，明确 tangent completion 未定义。电流可积且零时可去 Galilei 线性增长。"
+      },
+      "4H1A": {
+        "status": "local-proof",
+        "scope": "微分 M(x+a,v) 与 M(x+ct,v+c) 得精确线性解，保留 t grad_x 项。"
+      },
+      "4H1B": {
+        "status": "local-counterexample-and-proof",
+        "scope": "光滑稀薄尖峰给反例；一致连续性和不交区间论证给充分条件。"
+      },
+      "4H1C": {
+        "status": "local-proof",
+        "scope": "周期分部积分确定负号，Fubini 与保辛换元得到全相空间表达。"
+      },
+      "4H1D": {
+        "status": "local-proof",
+        "scope": "偶速度积分换能量，保留sqrt2常数、背景1与零能量相容条件。"
+      },
+      "4H1E": {
+        "status": "local-proof",
+        "scope": "Fubini 加 sin² 换元得到 I² 积分恒等式，求导得唯一反演；不保证任意数据的正性。"
+      },
+      "4H1F": {
+        "status": "local-proof",
+        "scope": "原始B.1质量1、报告4.15质量2逐项积分；F'(0)精确求导，不据曲率断言Penrose稳定。"
+      },
+      "4H1G": {
+        "status": "conditional-local-proof",
+        "scope": "有波频率隙omega_*时三角不等式给omega_*/2；不覆盖磁场其他分支。"
+      },
+      "4H1H": {
+        "status": "open-question",
+        "scope": "明确属于报告开放问题；有限大终态存在不意味着大初值全散射。"
+      },
+      "4H1I": {
+        "status": "conditional-local-proof",
+        "scope": "指定自相似密度下场缩放t^(1-d)，比较速度及位移绝对积分；不宣称二维自洽散射。"
+      },
+      "4H1J": {
+        "status": "open-question-and-conditional-scaling",
+        "scope": "所列低频符号幂律下比较耗散和色散时间；更一般厚尾引用4仍为in preparation。"
+      },
+      "4H1K": {
+        "status": "open-question",
+        "scope": "二次项、变动陷获区与线性时间估计的区别；退化零导数、非全局能量与非同周期问题未解决。"
+      },
+      "4H1L": {
+        "status": "local-proof-and-open-context",
+        "scope": "角动量分量守恒，F(H,L)满足固定势输运；自洽椭圆问题及环面高维BGK仍须另解。"
+      },
+      "4H1M": {
+        "status": "local-proof",
+        "scope": "指数线性化给(Delta-beta)psi=r和屏蔽乘子；不把乘子界当作Penrose或非线性定理。"
+      },
+      "4H1N": {
+        "status": "local-proof",
+        "scope": "绝对 Fourier 积分和缩放给t^(-d/gamma) L1-Linfty界，对gamma>0有效、不假设核非负。"
+      },
+      "4H1O": {
+        "status": "local-proof",
+        "scope": "体积 Jacobian、Coulomb齐次性、链式法则给 s^-1 场项，正负号逐项核算。"
+      },
+      "4H1P": {
+        "status": "cited-theorem",
+        "scope": "primary Thm1.3所有半径、neutrality、小量与双边Lipschitz估计。"
+      },
+      "4H1Q": {
+        "status": "definition",
+        "scope": "复用弱导数与Lp，单独定义W^{m,infty}，避免把基础定义藏在研究定理中。"
+      },
+      "4H1R": {
+        "status": "local-proof",
+        "scope": "m in L1 cap Linfty使奇核绝对收敛；L2和空间权r>3/2给充分条件，W3infty不由此推出。"
+      }
+    },
+    "claim_sources": {
+      "4H01": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H01: 定义相空间密度及两种反应符号，固定 Delta phi=rho-background 与 E=grad phi。"
+        }
+      ],
+      "4H02": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.1–1.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H02: 链式法则、相空间散度零、Jacobian 换元证明 Casimir 恒等式；要求轨道存在及积分收敛。"
+        }
+      ],
+      "4H03": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.3, (1.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H03: 明确 bracket=x-v convention，与 0I85 相反；直接计算 H=v²/2-lambda phi 的向量场。"
+        }
+      ],
+      "4H04": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.4.1, (1.5)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H04: 速度分部积分得到压力张量；不把未闭合矩方程当作 Euler 闭合。"
+        }
+      ],
+      "4H05": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.4, (1.6)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H05: 固定报告的时间和 Laplace 符号，消去 Newton 势得到非局部相互作用。"
+        }
+      ],
+      "4H06": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.2, §5.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H06: 链式法则证明 F(H) 的定常输运；Poisson 自洽性仍是额外椭圆方程。"
+        }
+      ],
+      "4H07": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§2, (2.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H07: 展开括号得到反应项与二次项，按 (1.1)/(1.4) 修正报告 (2.1) 反应项符号。"
+        }
+      ],
+      "4H08": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H08: 在指定范数中定义线性控制、指数模态及轨道稳定目标。"
+        }
+      ],
+      "4H09": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3, (3.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H09: y=x-tv 换元给 L1_x Linfty_v 到 Linfty_x 的 t^-d 界。"
+        }
+      ],
+      "4H0A": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2, (4.13)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0A: 对两个 Schwartz 函数 phi、chi 两次分部积分，分别给空间 Linfty 和 L1 界；不额外要求紧支撑。"
+        }
+      ],
+      "4H0B": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4, (4.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0B: 链式法则给精确轮廓方程；线性反应项和非线性项分别保留。"
+        }
+      ],
+      "4H0C": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3; 2101.01390v1 §2 context"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0C: 近处 R Linfty 与远处 R^-2 L1 分裂后优化半径。"
+        }
+      ],
+      "4H0D": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3, (3.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0D: 支配收敛与奇核截断证明自由模型极限；不附加 Schwartz 假设到研究定理。"
+        }
+      ],
+      "4H0E": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3, (3.3)–(3.6)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0E: 从精确轨道展开 At^-2+O(t^-2-delta) 两次积分；仅有 O(t^-2) 界不够。"
+        }
+      ],
+      "4H0F": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 3.1(i), (3.5)–(3.6)"
+        },
+        {
+          "source": "vacuum-scattering-v1",
+          "locator": "Theorems1.1(i),3.1; Remark3.2(2)"
+        }
+      ],
+      "4H0G": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 3.1(ii), (3.7)"
+        },
+        {
+          "source": "vacuum-scattering-v1",
+          "locator": "Theorems1.1(ii),4.2; (4.3)–(4.10)"
+        }
+      ],
+      "4H0H": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 3.1(iii), (3.8)"
+        },
+        {
+          "source": "vacuum-scattering-v1",
+          "locator": "Theorem1.1(iii)"
+        }
+      ],
+      "4H0I": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3.1"
+        },
+        {
+          "source": "vacuum-scattering-v1",
+          "locator": "§4, generating function"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0I: 假设 C1 反解存在，用 d²S=0 证明保辛与 Hamilton–Jacobi 直化；不证明全局坐标存在。"
+        }
+      ],
+      "4H0J": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0J: 正能量给半径下界，二阶径向凸性给线性逃逸，积分加速度得两端速度。"
+        }
+      ],
+      "4H0K": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3.1, SIC coordinates"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0K: 假设 H=a²/2 的正则坐标存在，计算 SIC 量及约束；不重建全局 Kepler 散射坐标。"
+        }
+      ],
+      "4H0L": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0L: 外法向入流零，Stokes 通量恒等式；无界域附加外截断通量趋零，区分镜面反射。"
+        }
+      ],
+      "4H0M": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0M: 有界域、半空间、圆柱的 blowdown 必要条件；不是充分的散射定理。"
+        }
+      ],
+      "4H0N": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4 introduction; §4.2 three-dimensional setting; (1.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0N: 单位质量背景与环面 Poisson 中性相容。三维紧支撑非中性密度仍给 O(|x|^-2) 场；一维 E(+infty)-E(-infty)=Q 排除非零总量时的双端趋零。"
+        }
+      ],
+      "4H0O": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4 opening, (4.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0O: Fourier 模态积分因子求解，频率分母零处取连续极限 t。"
+        }
+      ],
+      "4H0P": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.1, (4.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0P: Duhamel 公式和速度分部积分，准确保持卷积号及非线性迫项的角色。"
+        }
+      ],
+      "4H0Q": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.1, (4.9)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0Q: 定义指定频率集合上的下界，证明已存在因果解的加权 L2 乘子界；不由代数除法推出因果逆核。"
+        }
+      ],
+      "4H0R": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2, discussion preceding (4.10)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0R: K(0,theta)=-theta^-2 与两步极限给非零小频率反例；不适用于环面整数频率。"
+        }
+      ],
+      "4H0S": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2.1"
+        },
+        {
+          "source": "poisson-equilibrium-v2",
+          "locator": "(1.5)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0S: 三维质量积分与径向逆 Fourier 积分；测试函数证明变换身份。报告 a=sqrt2、primary a=1。"
+        }
+      ],
+      "4H0T": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2.1, Poisson model; independent explicit response-kernel proof"
+        },
+        {
+          "source": "poisson-equilibrium-v2",
+          "locator": "§1 linear response; §2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0T: 独立证明 k*q=k-q，以卷积结合律验证因果响应核 delta_0-1_{t>=0}exp(-a|xi|t)sin(t)，用阶乘迭代证明唯一性；衰减因子为 exp(-a|xi|t)。"
+        }
+      ],
+      "4H0U": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0U: 精确速度幂尾下 gamma>2 收敛、gamma=2 对数发散；含对数修正的尾需另外判别。"
+        }
+      ],
+      "4H0V": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 4.1"
+        },
+        {
+          "source": "poisson-equilibrium-v2",
+          "locator": "Theorem1.1; (1.5)"
+        }
+      ],
+      "4H0W": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2.1, oscillatory field discussion"
+        },
+        {
+          "source": "poisson-equilibrium-v2",
+          "locator": "§1.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0W: a 与 a' 的明确衰减假设下分部积分得到 T^-1+delta 尾界。"
+        }
+      ],
+      "4H0X": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.3, footnote 6"
+        },
+        {
+          "source": "sharp-gevrey-v1",
+          "locator": "§1.1, (1.4)–(1.5), interpreted via report footnote6"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0X: 位置离散频率、速度连续频率、速度矩和指数半径；与 Euler Gevrey 不等同。"
+        }
+      ],
+      "4H0Y": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.3"
+        },
+        {
+          "source": "sharp-gevrey-v1",
+          "locator": "§1.1, free transport context"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H0Y: rhohat(t,k)=fhat0(k,tk)，在明确逐点指数频率界下得到时间衰减，不直接把积分范数当逐点界。"
+        }
+      ],
+      "4H0Z": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 4.2, (4.16)–(4.17)"
+        },
+        {
+          "source": "sharp-gevrey-v1",
+          "locator": "Theorem1.1; (1.6)–(1.11)"
+        }
+      ],
+      "4H10": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.3"
+        },
+        {
+          "source": "sharp-gevrey-v1",
+          "locator": "Theorem1.2"
+        }
+      ],
+      "4H11": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.3"
+        },
+        {
+          "source": "sharp-gevrey-v1",
+          "locator": "(1.9), local Fourier computation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H11: 按空间归一化 Fourier 系数计算乘积频率平移，指出晚时频率可重新耦合。"
+        }
+      ],
+      "4H12": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.1–5.2, (5.2)"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "§1.1, stationary model"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H12: 全局 F(v²/2-phi) 以及背景-1，偶性、最小周期、单调半周期与零能量分界。"
+        }
+      ],
+      "4H13": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.1, (5.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H13: 初始时刻平均分解、质量和非负性；最终平衡及 Penrose 条件另须控制。"
+        }
+      ],
+      "4H14": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.2.1–5.3, (5.3)"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "§1.1–1.2 pendulum model"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H14: 逐位置积分上下速度差，精确系数16。"
+        }
+      ],
+      "4H15": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.2.1"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "§1.1–1.2 phase portrait"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H15: 三角换元给完整椭圆积分表达，再以端点奇核比较证明对数尺度。"
+        }
+      ],
+      "4H16": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "§1.3 discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H16: 正则非退化转向点的端点截断求导，I'=T/(2pi)；局部时间-能量坐标保辛。"
+        }
+      ],
+      "4H17": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 5.1 hypotheses"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "Definition1.1; Lemma1.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H17: primary Def1.1：C2 曲线、非零切向、marginal kernel、ED 四阶及 H8 一致界、单井全局 F。Lemma1.4 的首阶势按来源引用。"
+        }
+      ],
+      "4H18": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 5.1 first case"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "Theorem1.2 instability branch"
+        }
+      ],
+      "4H19": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem 5.1 second case, (5.4)"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "Theorem1.2; Remark1.3(3),(6)"
+        }
+      ],
+      "4H1A": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.1; primary Remark1.3"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "Remark1.3 modulation formulas"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1A: 微分 M(x+a,v) 与 M(x+ct,v+c) 得精确线性解，保留 t grad_x 项。"
+        }
+      ],
+      "4H1B": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.3, (5.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1B: 光滑稀薄尖峰给反例；一致连续性和不交区间论证给充分条件。"
+        }
+      ],
+      "4H1C": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "§1.3 electrostatic quadratic form"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1C: 周期分部积分确定负号，Fubini 与保辛换元得到全相空间表达。"
+        }
+      ],
+      "4H1D": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.2"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "Theorem1.6; (1.18)–(1.21)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1D: 偶速度积分换能量，保留sqrt2常数、背景1与零能量相容条件。"
+        }
+      ],
+      "4H1E": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§5.2"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "Theorem1.6; (1.18),(1.20)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1E: Fubini 加 sin² 换元得到 I² 积分恒等式，求导得唯一反演；不保证任意数据的正性。"
+        }
+      ],
+      "4H1F": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.3, (4.15)"
+        },
+        {
+          "source": "small-bgk-v2",
+          "locator": "AppendixB.1, (B.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1F: 原始B.1质量1、报告4.15质量2逐项积分；F'(0)精确求导，不据曲率断言Penrose稳定。"
+        }
+      ],
+      "4H1G": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1G: 有波频率隙omega_*时三角不等式给omega_*/2；不覆盖磁场其他分支。"
+        }
+      ],
+      "4H1H": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§6 questions1–2"
+        }
+      ],
+      "4H1I": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§6 question3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1I: 指定自相似密度下场缩放t^(1-d)，比较速度及位移绝对积分；不宣称二维自洽散射。"
+        }
+      ],
+      "4H1J": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2.2; §6 question5"
+        }
+      ],
+      "4H1K": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§6 questions6–7"
+        }
+      ],
+      "4H1L": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§2, energy and angular-momentum steady states; §6 questions4,8"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1L: 角动量分量守恒，F(H,L)满足固定势输运；自洽椭圆问题及环面高维BGK仍须另解。"
+        }
+      ],
+      "4H1M": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§1.4, Boltzmann-electron background"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1M: 指数线性化给(Delta-beta)psi=r和屏蔽乘子；不把乘子界当作Penrose或非线性定理。"
+        }
+      ],
+      "4H1N": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.2.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1N: 绝对 Fourier 积分和缩放给t^(-d/gamma) L1-Linfty界，对gamma>0有效、不假设核非负。"
+        }
+      ],
+      "4H1O": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3"
+        },
+        {
+          "source": "vacuum-scattering-v1",
+          "locator": "§1.1, (1.9)–(1.13)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1O: 体积 Jacobian、Coulomb齐次性、链式法则给 s^-1 场项，正负号逐项核算。"
+        }
+      ],
+      "4H1P": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§4.3"
+        },
+        {
+          "source": "sharp-gevrey-v1",
+          "locator": "Theorem1.3"
+        }
+      ],
+      "4H1Q": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "Theorem3.1 notation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1Q: 复用弱导数与Lp，单独定义W^{m,infty}，避免把基础定义藏在研究定理中。"
+        }
+      ],
+      "4H1R": [
+        {
+          "source": "pausader-icm2026",
+          "locator": "§3, (3.4)"
+        },
+        {
+          "source": "vacuum-scattering-v1",
+          "locator": "(1.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4H1R: m in L1 cap Linfty使奇核绝对收敛；L2和空间权r>3/2给充分条件，W3infty不由此推出。"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "Large data, optimal topology and low dimensions",
+        "scope": "4H1H/4H1I represent report§6 questions1–3 as open or conditional. No large-initial-data scattering or two-dimensional asymptotic framework proved."
+      },
+      {
+        "branch": "Point charge and domains",
+        "scope": "4H0J/0K prove reference-flow facts only. Full self-consistent repulsive-charge stability theorem, convex absorbing-domain nonlinear scattering and attractive point-mass trapped dynamics are not reconstructed; boundary problem beyond torus remains open context."
+      },
+      {
+        "branch": "General homogeneous equilibria",
+        "scope": "The exact Poisson model and Gevrey torus theorem are covered. General linear spectral decomposition for arbitrary tails is not fully stated or proved. Survey ref4 thick-tail extension through gamma=2 remains in preparation, not an available proof; thin-tail nonlinear damping is an open question in the survey."
+      },
+      {
+        "branch": "Nonlinear and general BGK waves",
+        "scope": "Same-minimal-period linear result only. General tangent-completion geometry, all higher compatibility functionals, Fprime(0)=0, non-global-energy states, other periods, nonlinear modulation and unstable-orbit endpoints remain unexpanded."
+      },
+      {
+        "branch": "Adjacent models and high dimensions",
+        "scope": "Moment and Schrodinger–Poisson definitions, screening and relativistic low-frequency computation are included. Full Vlasov–Maxwell magnetic-wave theory, quantum analogues, rigorous quasilinear modulation and high-dimensional confined BGK classification are not developed. These match report§6 questions8–11 context."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4H0F",
+          "4H0G",
+          "4H0H"
+        ],
+        "source": "vacuum-scattering-v1",
+        "scope": "Nonlinear characteristic bootstrap, weighted derivative propagation, convergence of the asymptotic field, singular-time wave-operator contraction and global extension cited. Source classes now specified; no uniqueness for arbitrary weak solutions."
+      },
+      {
+        "notes": [
+          "4H0V"
+        ],
+        "source": "poisson-equilibrium-v2",
+        "scope": "Nonlinear resonant field decomposition, all §§3–7 estimates and §8 closure not reproduced."
+      },
+      {
+        "notes": [
+          "4H0Z",
+          "4H10",
+          "4H1P"
+        ],
+        "source": "sharp-gevrey-v1",
+        "scope": "Endpoint Gevrey nonlinear bootstrap, echo chains, causal response estimates, final-state construction and scattering injectivity proofs cited."
+      },
+      {
+        "notes": [
+          "4H17",
+          "4H18",
+          "4H19"
+        ],
+        "source": "small-bgk-v2",
+        "scope": "Bifurcation tangent theorem, operator-valued dielectric expansion, small eigenvalue analysis, modulation projections and time-integrated damping proof cited. Local pendulum geometry is not a proof of the stability sign criterion."
+      },
+      {
+        "notes": [
+          "4H1D",
+          "4H1E"
+        ],
+        "source": "small-bgk-v2",
+        "scope": "Elementary energy/Abel identities proved locally; full smooth BGK manifold parametrization and all endpoint compatibility/positivity conditions are not reproduced."
+      }
+    ],
+    "metadata": {
+      "node_count": 64,
+      "atomic_count": 63,
+      "reference_count": 1,
+      "language": "zh",
+      "model_conventions": "E=grad phi; Delta phi=int Mdv-background; lambda+1 repulsive, -1 attractive. Bracket=xavb-vaxb, opposite0I85. Vacuum uses M=mu². Periodic domain2pi and background1. Poisson research theorem uses a1, survey a=sqrt2 explicitly distinguished. Static/dynamic/Galilei BGK components distinguished.",
+      "coverage": "All report sections represented, with 63 atoms, integrated narrative and elementary proofs. Exact research contracts quoted, full deep proofs deferred as itemized.",
+      "status": "frozen-author-repairs-ready-for-independent-recheck",
+      "shared_integration": "Parent-owned; no shared files, registry, navigation, theme, full build, git or publication action.",
+      "reference_directory": "trees/references",
+      "review_round": 2,
+      "repaired_findings": [
+        "PR04",
+        "PR05"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4H00",
+      "path": "trees/math/mathematical-physics/pausader/4H00.tree",
+      "title": "无碰撞动力学的稳定性：自由流、等离子体振荡与陷获轨道",
+      "taxon": "Outline",
+      "sha256": "6a6dfac0edf0f4872a11a4a10fdc4381289e9841d69d283683e395c5a000af7a"
+    },
+    {
+      "id": "4H01",
+      "path": "trees/math/mathematical-physics/pausader/4H01.tree",
+      "title": "Vlasov–Poisson 方程的密度与力场约定",
+      "taxon": "Definition",
+      "sha256": "d012a79b737398b2c98c5e9606c05b2760aaf2526178e952dce958c637dc6bf2"
+    },
+    {
+      "id": "4H02",
+      "path": "trees/math/mathematical-physics/pausader/4H02.tree",
+      "title": "Vlasov 特征线保持粒子密度与相空间体积",
+      "taxon": "Theorem",
+      "sha256": "7e914fd98812896575f7b1b451cfddc4a28e32513485ed86f259acae93924954"
+    },
+    {
+      "id": "4H03",
+      "path": "trees/math/mathematical-physics/pausader/4H03.tree",
+      "title": "Vlasov 输运的 Hamilton 表达式",
+      "taxon": "Proposition",
+      "sha256": "acacfbc60b1c591a81b1707e69a8712f881607dda8f991500834327d0c87c657"
+    },
+    {
+      "id": "4H04",
+      "path": "trees/math/mathematical-physics/pausader/4H04.tree",
+      "title": "Vlasov 方程的前两阶矩与 Euler–Poisson 闭合",
+      "taxon": "Proposition",
+      "sha256": "e0b2ada2050deb961f008b5a5d1380206d7ded1bb8b82ff12c3f6bd4b2709d67"
+    },
+    {
+      "id": "4H05",
+      "path": "trees/math/mathematical-physics/pausader/4H05.tree",
+      "title": "Schrödinger–Poisson 方程的非局部势",
+      "taxon": "Definition",
+      "sha256": "3fd579345905a5ea2f7b73b2942fe3d9c786dbe986f1afd98fa027ac1128582a"
+    },
+    {
+      "id": "4H06",
+      "path": "trees/math/mathematical-physics/pausader/4H06.tree",
+      "title": "能量分布给出定常 Vlasov 解的条件",
+      "taxon": "Proposition",
+      "sha256": "883701036cee0472433aa8b5ac22404e20007afe8aa352703ad571215cc98fe3"
+    },
+    {
+      "id": "4H07",
+      "path": "trees/math/mathematical-physics/pausader/4H07.tree",
+      "title": "定常态附近的输运项与反应项",
+      "taxon": "Proposition",
+      "sha256": "95328e5646365b77e5f4d886f9799b606e9316a45458a231bf5bd82d03ae2885"
+    },
+    {
+      "id": "4H08",
+      "path": "trees/math/mathematical-physics/pausader/4H08.tree",
+      "title": "线性增长模态与稳定性所用的拓扑",
+      "taxon": "Definition",
+      "sha256": "9a8b054723d0bbca5199d85182f68a76168fadf635ceb0c02d34bdd0bea084af"
+    },
+    {
+      "id": "4H09",
+      "path": "trees/math/mathematical-physics/pausader/4H09.tree",
+      "title": "自由输运的速度平均产生三维稀释",
+      "taxon": "Theorem",
+      "sha256": "cb1a06801fb38c9fb04731438965d1a252e661ce35f78394c0aa7e99b0f8c41f"
+    },
+    {
+      "id": "4H0A",
+      "path": "trees/math/mathematical-physics/pausader/4H0A.tree",
+      "title": "自由平均中两个空间导数带来额外衰减",
+      "taxon": "Lemma",
+      "sha256": "2033edfe1711729efae794963aed15e2f41db3e05fcc64ac4828095c8ebe2c47"
+    },
+    {
+      "id": "4H0B",
+      "path": "trees/math/mathematical-physics/pausader/4H0B.tree",
+      "title": "随自由流移动的动力学轮廓",
+      "taxon": "Proposition",
+      "sha256": "9320eba1f1b4c6d91649c6ddebaf197b7f425d821b060957b901ee9ec73d0bd7"
+    },
+    {
+      "id": "4H0C",
+      "path": "trees/math/mathematical-physics/pausader/4H0C.tree",
+      "title": "Coulomb 场的近远分解估计",
+      "taxon": "Lemma",
+      "sha256": "5fa247d1887c6cc5ae4ca94cbd718ec834f02477e29bb5729fe6d54ec9babd0d"
+    },
+    {
+      "id": "4H0D",
+      "path": "trees/math/mathematical-physics/pausader/4H0D.tree",
+      "title": "自由稀释后的渐近电场在速度空间求解 Poisson 方程",
+      "taxon": "Proposition",
+      "sha256": "93e4e57a50c6513d68cea2964c065e44f1db76102a47a5485067571793277824"
+    },
+    {
+      "id": "4H0E",
+      "path": "trees/math/mathematical-physics/pausader/4H0E.tree",
+      "title": "沿轨道的平方衰减加速度产生对数位移",
+      "taxon": "Lemma",
+      "sha256": "d6695c1c1451a9f3ea26d12c15b0e2d28978f60648eb63a3a10444e224d66bda"
+    },
+    {
+      "id": "4H0F",
+      "path": "trees/math/mathematical-physics/pausader/4H0F.tree",
+      "title": "三维真空附近的小初值修正散射定理",
+      "taxon": "Theorem",
+      "sha256": "29d4b4ac0199cb9d5aa3c67a86da4caebb88afc8c6df6238f8c4320bc8c7bf7f"
+    },
+    {
+      "id": "4H0G",
+      "path": "trees/math/mathematical-physics/pausader/4H0G.tree",
+      "title": "由有限大小终态构造修正波算子",
+      "taxon": "Theorem",
+      "sha256": "92ecc0893159a2670415b8bac6e107705f978938ea9eeb82b82e8de72fddf29c"
+    },
+    {
+      "id": "4H0H",
+      "path": "trees/math/mathematical-physics/pausader/4H0H.tree",
+      "title": "小入射态到出射态的修正散射映射",
+      "taxon": "Theorem",
+      "sha256": "178dc7d0472e0dad70374829691059894dc8305104027cf33d4197077dd93392"
+    },
+    {
+      "id": "4H0I",
+      "path": "trees/math/mathematical-physics/pausader/4H0I.tree",
+      "title": "生成函数怎样给出正则坐标变换",
+      "taxon": "Proposition",
+      "sha256": "eaa0baba2bd8b18708e6bc64444a6dc10acdb2fe0fc6c504b7320928992000e2"
+    },
+    {
+      "id": "4H0J",
+      "path": "trees/math/mathematical-physics/pausader/4H0J.tree",
+      "title": "排斥 Kepler 轨道为何没有陷获",
+      "taxon": "Theorem",
+      "sha256": "7a61523dfae01bbd334fce499a534fe08eaa93579a217d3bec1e61b5d9ead074"
+    },
+    {
+      "id": "4H0K",
+      "path": "trees/math/mathematical-physics/pausader/4H0K.tree",
+      "title": "渐近 Kepler 坐标中的守恒量与唯一漂移量",
+      "taxon": "Proposition",
+      "sha256": "92db1d7606641791c8b2bbdd1c201113c108c746dd9db30d624fc0f3698598a3"
+    },
+    {
+      "id": "4H0L",
+      "path": "trees/math/mathematical-physics/pausader/4H0L.tree",
+      "title": "吸收边界的入流条件与质量损失",
+      "taxon": "Proposition",
+      "sha256": "d0d2f5b00467a617e52a698ae037f7cd66283facf832fed887c632a25180e124"
+    },
+    {
+      "id": "4H0M",
+      "path": "trees/math/mathematical-physics/pausader/4H0M.tree",
+      "title": "空间域缩小后的极限限制渐近速度",
+      "taxon": "Example",
+      "sha256": "922804c15c4eedd9bcd99732b165689a774fc8d9074a6d7464c97b2b442b1465"
+    },
+    {
+      "id": "4H0N",
+      "path": "trees/math/mathematical-physics/pausader/4H0N.tree",
+      "title": "单位背景上的齐次平衡与中性扰动",
+      "taxon": "Proposition",
+      "sha256": "6f7462e4133df7feb38766ca6621cdb8d17e4a62849600a7acc754036005d264"
+    },
+    {
+      "id": "4H0O",
+      "path": "trees/math/mathematical-physics/pausader/4H0O.tree",
+      "title": "匀速源激发的尾迹共振",
+      "taxon": "Proposition",
+      "sha256": "160067aedfb8b3c5396576afe130acb49800c5df4c3fade12ed86eb24ad0077c"
+    },
+    {
+      "id": "4H0P",
+      "path": "trees/math/mathematical-physics/pausader/4H0P.tree",
+      "title": "齐次 Vlasov 线性化的密度 Volterra 方程",
+      "taxon": "Proposition",
+      "sha256": "a5e4fb4361ebfc69dd44e13673945c028838ae73606eeb448b8e7e8f91da4af0"
+    },
+    {
+      "id": "4H0Q",
+      "path": "trees/math/mathematical-physics/pausader/4H0Q.tree",
+      "title": "Penrose 条件要求介电分母有一致下界",
+      "taxon": "Definition",
+      "sha256": "fc38fd0bfa85a632cf61f4c5f5d555dd1e40282cb98e2c875ff2f9f4fe6d8875"
+    },
+    {
+      "id": "4H0R",
+      "path": "trees/math/mathematical-physics/pausader/4H0R.tree",
+      "title": "全空间的零频极限必然出现等离子体振荡",
+      "taxon": "Proposition",
+      "sha256": "8a152093e55cf8b97fd0e5ae9fcb044f7d02662319b8772a3f7d0283b049e1e8"
+    },
+    {
+      "id": "4H0S",
+      "path": "trees/math/mathematical-physics/pausader/4H0S.tree",
+      "title": "三维 Poisson 平衡的尺度与 Fourier 变换",
+      "taxon": "Proposition",
+      "sha256": "96f727b4ddaeb4d2b16c05742e9faabc302469030ed5c9d4c3a464bb381c2dfa"
+    },
+    {
+      "id": "4H0T",
+      "path": "trees/math/mathematical-physics/pausader/4H0T.tree",
+      "title": "Poisson 平衡的显式因果响应核",
+      "taxon": "Theorem",
+      "sha256": "b831134519361d508d6314a4fdc8e28a9056c356b48214c93026bbc7ed441859"
+    },
+    {
+      "id": "4H0U",
+      "path": "trees/math/mathematical-physics/pausader/4H0U.tree",
+      "title": "速度幂尾的二阶矩在指数二处出现对数边界",
+      "taxon": "Proposition",
+      "sha256": "cf3686b1b4a35372dc1184ea3597eb7356d89fa34f0530bc0ae54ad173c55690"
+    },
+    {
+      "id": "4H0V",
+      "path": "trees/math/mathematical-physics/pausader/4H0V.tree",
+      "title": "三维 Poisson 平衡附近的非线性 Landau 阻尼",
+      "taxon": "Theorem",
+      "sha256": "b05d93765ce52c45b2b48c8750d1ae00c22cb3bf93b7fd5449884fcb2d4dcc04"
+    },
+    {
+      "id": "4H0W",
+      "path": "trees/math/mathematical-physics/pausader/4H0W.tree",
+      "title": "时间振荡怎样使临界位移积分收敛",
+      "taxon": "Lemma",
+      "sha256": "b48da5a880472f5fa10de8077e4959db6d4b4336e0913d712f0990f73714ec33"
+    },
+    {
+      "id": "4H0X",
+      "path": "trees/math/mathematical-physics/pausader/4H0X.tree",
+      "title": "带速度矩的动力学 Gevrey 范数",
+      "taxon": "Definition",
+      "sha256": "65a0aa3677357e5f6b3525e260e7f955c4a7cf4fd846b825c0935a34aab00788"
+    },
+    {
+      "id": "4H0Y",
+      "path": "trees/math/mathematical-physics/pausader/4H0Y.tree",
+      "title": "环面自由输运把速度频率衰减变为时间衰减",
+      "taxon": "Proposition",
+      "sha256": "ca71a8af863873bc66509010d7fdb986cc4e950ffbf3b9cac13ad63a62a69dc5"
+    },
+    {
+      "id": "4H0Z",
+      "path": "trees/math/mathematical-physics/pausader/4H0Z.tree",
+      "title": "临界 Gevrey-3 空间中的非线性 Landau 阻尼",
+      "taxon": "Theorem",
+      "sha256": "2f3122c385ebc9cf864733c49f13f3e968cc8d51a00c15a77ab45295b542a954"
+    },
+    {
+      "id": "4H10",
+      "path": "trees/math/mathematical-physics/pausader/4H10.tree",
+      "title": "Gevrey 终态问题的波算子与半径损失",
+      "taxon": "Theorem",
+      "sha256": "e905a2bb78c26a0f8b340fd9971c3696ff2b601a046120466d33294aa8d0c4ee"
+    },
+    {
+      "id": "4H11",
+      "path": "trees/math/mathematical-physics/pausader/4H11.tree",
+      "title": "非线性回声中的频率组合 kt−ℓs",
+      "taxon": "Proposition",
+      "sha256": "3c5a8d452bfda92418bf612a07f0dd1f019eb75063713ab5f81e0ca0e94676f4"
+    },
+    {
+      "id": "4H12",
+      "path": "trees/math/mathematical-physics/pausader/4H12.tree",
+      "title": "单势阱 BGK 波的自洽定义",
+      "taxon": "Definition",
+      "sha256": "ae78d75f980f577c1bbcb79055601be87a898ff82c9fa6087a2208fca041f4bf"
+    },
+    {
+      "id": "4H13",
+      "path": "trees/math/mathematical-physics/pausader/4H13.tree",
+      "title": "空间平均给出齐次背景的初始调制",
+      "taxon": "Proposition",
+      "sha256": "7c7bbd5428726c42c9fe1707964019e849bc5714c608ff8ac8f75c7eee97fefb"
+    },
+    {
+      "id": "4H14",
+      "path": "trees/math/mathematical-physics/pausader/4H14.tree",
+      "title": "小摆势的陷获区面积为十六倍振幅平方根",
+      "taxon": "Proposition",
+      "sha256": "8ab18aef427d62392fc19a8189fd902688972f3dd33ffa80f40e88924635da07"
+    },
+    {
+      "id": "4H15",
+      "path": "trees/math/mathematical-physics/pausader/4H15.tree",
+      "title": "摆的周期在分离轨附近对数发散",
+      "taxon": "Proposition",
+      "sha256": "ca90fd358934532b4723e7e464bb6bdc3a4838e35d1ab4eaf03a99f97aa392a4"
+    },
+    {
+      "id": "4H16",
+      "path": "trees/math/mathematical-physics/pausader/4H16.tree",
+      "title": "闭轨道作用量的能量导数等于周期除以二π",
+      "taxon": "Proposition",
+      "sha256": "7fb69eac7c1d1e407b42c5aaf2327cd768d496b93ced8133d843d90bbefaac03"
+    },
+    {
+      "id": "4H17",
+      "path": "trees/math/mathematical-physics/pausader/4H17.tree",
+      "title": "小 BGK 分岔曲线的边缘稳定假设",
+      "taxon": "Definition",
+      "sha256": "d1628ad6863a25d44bed4d6ddbe2b062b3b6633c6f4298c20bc347eb239a9b83"
+    },
+    {
+      "id": "4H18",
+      "path": "trees/math/mathematical-physics/pausader/4H18.tree",
+      "title": "能量导数为负的小 BGK 波具有指数增长模态",
+      "taxon": "Theorem",
+      "sha256": "5690ad3c65c9d5f55832cb33e7f37be2a24d6a59636b606d9d46be0e87465082"
+    },
+    {
+      "id": "4H19",
+      "path": "trees/math/mathematical-physics/pausader/4H19.tree",
+      "title": "小 BGK 波的线性阻尼须保留 Galilei 调制",
+      "taxon": "Theorem",
+      "sha256": "6f2cee183b1b39ae030ddd1d14d177d25a2130b3dedbd50633473555bd245fd0"
+    },
+    {
+      "id": "4H1A",
+      "path": "trees/math/mathematical-physics/pausader/4H1A.tree",
+      "title": "平移和 Galilei 对称产生 BGK 中性解",
+      "taxon": "Proposition",
+      "sha256": "192d1735f9ec4c068f08badb186e5896952753c813f66b2777f01e206ea562f6"
+    },
+    {
+      "id": "4H1B",
+      "path": "trees/math/mathematical-physics/pausader/4H1B.tree",
+      "title": "时间平方可积与逐点衰减之间需要连续性控制",
+      "taxon": "Proposition",
+      "sha256": "eb5d4a66318583c0094d2721f5736ba7fabd8b56312ef4768afc9a6cf074576f"
+    },
+    {
+      "id": "4H1C",
+      "path": "trees/math/mathematical-physics/pausader/4H1C.tree",
+      "title": "静电二次型在正则坐标下的积分表达",
+      "taxon": "Proposition",
+      "sha256": "cc25d81425e0173cc6fcc60b58ba499f1346926d9c184d02f7802eda45612ae0"
+    },
+    {
+      "id": "4H1D",
+      "path": "trees/math/mathematical-physics/pausader/4H1D.tree",
+      "title": "BGK 密度分解为自由能量与陷获能量积分",
+      "taxon": "Proposition",
+      "sha256": "7c70c50fcb4d6d144378fc434067cc5731b36db4084b04f7e369e33bf63e5348"
+    },
+    {
+      "id": "4H1E",
+      "path": "trees/math/mathematical-physics/pausader/4H1E.tree",
+      "title": "Abel 半积分的二次复合与 BGK 陷获分布反演",
+      "taxon": "Theorem",
+      "sha256": "09f4009452231bbef323de2ba8006f4f9269bdd4b97c8587a5d56e61e1a44db5"
+    },
+    {
+      "id": "4H1F",
+      "path": "trees/math/mathematical-physics/pausader/4H1F.tree",
+      "title": "一维双 Poisson 组合的单位质量与中心曲率",
+      "taxon": "Proposition",
+      "sha256": "e2d2ecdbd4a72e65f36ce239587cfdea192790fad7a0120c92f2fc357c87d0f9"
+    },
+    {
+      "id": "4H1G",
+      "path": "trees/math/mathematical-physics/pausader/4H1G.tree",
+      "title": "有限相对论速度为何排除足够低频的尾流共振",
+      "taxon": "Lemma",
+      "sha256": "7ef1bf7fb5a04680f525d1583dd01641cf2b5f6d6b627540a6fd649714e0e3cb"
+    },
+    {
+      "id": "4H1H",
+      "path": "trees/math/mathematical-physics/pausader/4H1H.tree",
+      "title": "排斥型三维真空散射能否容纳任意大初值",
+      "taxon": "Question",
+      "sha256": "5b533a3b23d055f67b3b953d80b486f406d15632ea019ef4dfeeb67b2a02e8cf"
+    },
+    {
+      "id": "4H1I",
+      "path": "trees/math/mathematical-physics/pausader/4H1I.tree",
+      "title": "Coulomb 缩放为何把三维置于位移的临界维数",
+      "taxon": "Proposition",
+      "sha256": "e87c67b0f0a29e35e117437e0063adb480f58fd089c7fb84a5388e1797cb1612"
+    },
+    {
+      "id": "4H1J",
+      "path": "trees/math/mathematical-physics/pausader/4H1J.tree",
+      "title": "薄尾平衡的低频阻尼为何不能只靠耗散时间尺度",
+      "taxon": "Question",
+      "sha256": "e9d6d24952331cad34db532fa46ffc9e6bc3e1bc15ce8d4e93549de19204be2e"
+    },
+    {
+      "id": "4H1K",
+      "path": "trees/math/mathematical-physics/pausader/4H1K.tree",
+      "title": "小 BGK 波的线性调制稳定性离非线性稳定还缺什么",
+      "taxon": "Question",
+      "sha256": "84655db1ebecb3a0c7887e3b11ebd1290e9af1ecb51f3b1440badb528a52aa95"
+    },
+    {
+      "id": "4H1L",
+      "path": "trees/math/mathematical-physics/pausader/4H1L.tree",
+      "title": "中心力下角动量怎样提供能量之外的稳态参数",
+      "taxon": "Proposition",
+      "sha256": "ab70618e507e50418fcc34eca0945d584443dbbcd49b5bd5b0d5edff12bdc35d"
+    },
+    {
+      "id": "4H1M",
+      "path": "trees/math/mathematical-physics/pausader/4H1M.tree",
+      "title": "Boltzmann 背景的线性化如何屏蔽 Poisson 低频奇性",
+      "taxon": "Proposition",
+      "sha256": "1b150c57c6cf17fc2b7b0d289cd22108ed51ab48bf2e7fd7d630a5eef3df50d9"
+    },
+    {
+      "id": "4H1N",
+      "path": "trees/math/mathematical-physics/pausader/4H1N.tree",
+      "title": "分数阶耗散乘子的密度衰减尺度",
+      "taxon": "Lemma",
+      "sha256": "3eb83b4af4162434128e3f3df14253f8936d140f15a283505aee236d06f025a3"
+    },
+    {
+      "id": "4H1O",
+      "path": "trees/math/mathematical-physics/pausader/4H1O.tree",
+      "title": "伪共形倒置怎样把无限时间变为奇异初始面",
+      "taxon": "Proposition",
+      "sha256": "74bbf1d73c629bfaf864a0daa8fdc9d98fcf578e1899a3dc274a71aa872e0895"
+    },
+    {
+      "id": "4H1P",
+      "path": "trees/math/mathematical-physics/pausader/4H1P.tree",
+      "title": "环面上的 Gevrey 两端散射映射保留何种信息",
+      "taxon": "Theorem",
+      "sha256": "899eb3429da7d072d0ab70e834c081091e46beb04c5cad1401e2a71045101f21"
+    },
+    {
+      "id": "4H1Q",
+      "path": "trees/math/mathematical-physics/pausader/4H1Q.tree",
+      "title": "有界弱导数的整数阶 Sobolev 空间",
+      "taxon": "Definition",
+      "sha256": "c2eb21b575a998a9aa61d763777b8f22aa5652e53ca8f2e3fe77da6d00394106"
+    },
+    {
+      "id": "4H1R",
+      "path": "trees/math/mathematical-physics/pausader/4H1R.tree",
+      "title": "非 Schwartz 终态的速度边缘电场何时有定义",
+      "taxon": "Proposition",
+      "sha256": "27fbd6ff547f185da291f59404acb5b7bb60cc23244c1b06ca7906bf8426214e"
+    },
+    {
+      "id": "icm2026-pausader",
+      "path": "trees/references/icm2026-pausader.tree",
+      "title": "Pausader：Stability Problems in Collisionless Kinetic Systems",
+      "taxon": "Reference",
+      "sha256": "578d5c483a8693f76bdb76bad21435ea6be7fcd1807a11f17213669133a8c2c7"
+    }
+  ],
+  "prerequisites": {
+    "4H01": [
+      "4101",
+      "00Q5",
+      "4509"
+    ],
+    "4H02": [
+      "4H01",
+      "4501",
+      "0A34",
+      "4502",
+      "00Q6"
+    ],
+    "4H03": [
+      "4H01",
+      "0BL1",
+      "0I85"
+    ],
+    "4H04": [
+      "4H01",
+      "4301"
+    ],
+    "4H05": [
+      "130A",
+      "4509",
+      "4H01"
+    ],
+    "4H06": [
+      "4H01",
+      "4H03"
+    ],
+    "4H07": [
+      "4H01",
+      "4H03"
+    ],
+    "4H08": [
+      "4H07",
+      "00M1",
+      "450K"
+    ],
+    "4H09": [
+      "4503",
+      "4305",
+      "450F"
+    ],
+    "4H0A": [
+      "0H4F",
+      "0H53",
+      "4H09"
+    ],
+    "4H0B": [
+      "4H07",
+      "0A34"
+    ],
+    "4H0C": [
+      "00Q6",
+      "4H01"
+    ],
+    "4H0D": [
+      "0H4F",
+      "4H09",
+      "0I8I",
+      "4H01",
+      "4H1R"
+    ],
+    "4H0E": [
+      "0A3C",
+      "4H02"
+    ],
+    "4H0F": [
+      "4H01",
+      "4H1R",
+      "00Q6",
+      "4H1Q",
+      "4H1O",
+      "4H0E"
+    ],
+    "4H0G": [
+      "4H0F",
+      "4H1R",
+      "4H1Q"
+    ],
+    "4H0H": [
+      "4H0F",
+      "4H1R",
+      "4H1Q",
+      "4H0G"
+    ],
+    "4H0I": [
+      "0BL1",
+      "00OA",
+      "4H03"
+    ],
+    "4H0J": [
+      "4H03",
+      "00OB"
+    ],
+    "4H0K": [
+      "4H0I"
+    ],
+    "4H0L": [
+      "4H01",
+      "0BAC"
+    ],
+    "4H0M": [
+      "4H0L"
+    ],
+    "4H0N": [
+      "4H01",
+      "4101",
+      "0A3C"
+    ],
+    "4H0O": [
+      "0H4G"
+    ],
+    "4H0P": [
+      "4H0N",
+      "4503",
+      "0H4G"
+    ],
+    "4H0Q": [
+      "4H0P",
+      "0H53",
+      "4H0N",
+      "0W01"
+    ],
+    "4H0R": [
+      "4H0Q"
+    ],
+    "4H0S": [
+      "0H4G",
+      "0H53",
+      "0I80"
+    ],
+    "4H0T": [
+      "4H0S",
+      "4H0P",
+      "0H53",
+      "4H0Q"
+    ],
+    "4H0U": [
+      "4H0S"
+    ],
+    "4H0V": [
+      "4H0S",
+      "0H4F",
+      "4305",
+      "4H0T"
+    ],
+    "4H0W": [
+      "0A3C",
+      "4H0V"
+    ],
+    "4H0X": [
+      "4101",
+      "0H4G"
+    ],
+    "4H0Y": [
+      "4H0X"
+    ],
+    "4H0Z": [
+      "4H0N",
+      "4H0Q",
+      "4H0X",
+      "4H0B"
+    ],
+    "4H10": [
+      "4H0Z",
+      "4H0X"
+    ],
+    "4H11": [
+      "4H0B",
+      "4H0X"
+    ],
+    "4H12": [
+      "4H06"
+    ],
+    "4H13": [
+      "4H0N",
+      "4H0Q",
+      "4H12"
+    ],
+    "4H14": [
+      "4H03",
+      "4H12"
+    ],
+    "4H15": [
+      "4H14"
+    ],
+    "4H16": [
+      "4H03",
+      "4H15"
+    ],
+    "4H17": [
+      "4H12",
+      "4101",
+      "0F68",
+      "4H0Q"
+    ],
+    "4H18": [
+      "4H17",
+      "4H07",
+      "4H08",
+      "4H14"
+    ],
+    "4H19": [
+      "4H17",
+      "4H07",
+      "4H1A",
+      "4H1B"
+    ],
+    "4H1A": [
+      "4H12",
+      "4H07"
+    ],
+    "4H1B": [
+      "00Q6",
+      "00M1",
+      "0F40"
+    ],
+    "4H1C": [
+      "0H53",
+      "4H0I"
+    ],
+    "4H1D": [
+      "4H12"
+    ],
+    "4H1E": [
+      "0H53",
+      "0A3C",
+      "4H1D"
+    ],
+    "4H1F": [
+      "4H0N",
+      "4H0Q"
+    ],
+    "4H1G": [
+      "4H0O"
+    ],
+    "4H1H": [
+      "0H4F",
+      "4H0F",
+      "4H0G"
+    ],
+    "4H1I": [
+      "4H01",
+      "4H0E"
+    ],
+    "4H1J": [
+      "4H0U",
+      "4H0O",
+      "4H0V"
+    ],
+    "4H1K": [
+      "4H17",
+      "4H19",
+      "4H07",
+      "4H14",
+      "4H15"
+    ],
+    "4H1L": [
+      "4H03",
+      "4H0J"
+    ],
+    "4H1M": [
+      "0H4G",
+      "4H0R"
+    ],
+    "4H1N": [
+      "0H4G"
+    ],
+    "4H1O": [
+      "4H01",
+      "0A34"
+    ],
+    "4H1P": [
+      "4H0Z",
+      "4H0X",
+      "4H10"
+    ],
+    "4H1Q": [
+      "2J0C",
+      "00Q6",
+      "0H4F"
+    ],
+    "4H1R": [
+      "00Q6",
+      "4H0C",
+      "0H53"
+    ]
+  },
+  "atomic_questions": {
+    "4H01": "Vlasov–Poisson 密度、背景和力的符号怎样配合？",
+    "4H02": "特征线为何保持密度和相空间体积？",
+    "4H03": "Vlasov 方程怎样写成 Hamilton 输运？",
+    "4H04": "速度积分怎样产生密度和动量方程？",
+    "4H05": "Schrodinger–Poisson 的非局部项由什么势产生？",
+    "4H06": "能量函数何时给出自洽定常态？",
+    "4H07": "围绕非齐次稳态的精确扰动方程是什么？",
+    "4H08": "谱增长、线性控制与非线性轨道稳定有何区别？",
+    "4H09": "自由输运的空间密度为何按 t^-d 稀释？",
+    "4H0A": "速度分部积分怎样换取额外 t^-2？",
+    "4H0B": "移动轮廓怎样把速度导数变成 grad_v-t grad_x？",
+    "4H0C": "L1 与 Linfty 密度怎样控制 Coulomb 场？",
+    "4H0D": "自由 Schwartz 分布的缩放电场怎样趋于速度边缘场？",
+    "4H0E": "平方衰减的加速度为何产生对数位移？",
+    "4H0F": "三维真空附近小初值在何种类中修正散射？",
+    "4H0G": "有限大小的给定终态怎样定义修正波算子？",
+    "4H0H": "小入射态怎样确定两端修正散射？",
+    "4H0I": "生成函数在已有局部反解时为何给出正则变换？",
+    "4H0J": "排斥 Kepler 粒子为何不撞中心且会逃逸？",
+    "4H0K": "Kepler 直化后哪些量守恒而哪个量线性增长？",
+    "4H0L": "吸收边界怎样使粒子质量减少？",
+    "4H0M": "域的远处几何怎样限制直线终态的速度？",
+    "4H0N": "齐次平衡的背景与零频相容条件是什么？",
+    "4H0O": "移动外源的波响应何时出现共振分母？",
+    "4H0P": "齐次线性化密度如何满足 Volterra 方程？",
+    "4H0Q": "Penrose 条件为什么必须有统一的正裕量？",
+    "4H0R": "连续空间频率为何破坏单位质量平衡的统一间隙？",
+    "4H0S": "Poisson 平衡的速度尺度怎样决定 Fourier 衰减？",
+    "4H0T": "Poisson 平衡的 Volterra 方程怎样显式反演？",
+    "4H0U": "幂尾何时具有有限二阶矩？",
+    "4H0V": "三维 Poisson 平衡附近的已证非线性阻尼条件是什么？",
+    "4H0W": "振荡怎样使看似不可积的位移修正收敛？",
+    "4H0X": "动力学加权 Gevrey 范数同时控制什么？",
+    "4H0Y": "自由密度为何在移动的 Fourier 频率上采样？",
+    "4H0Z": "临界 Gevrey 阻尼定理的全部平衡与小量条件是什么？",
+    "4H10": "给定小 Gevrey 终态时波算子有什么半径损失？",
+    "4H11": "非线性回声的频率 kt-ell s 从哪里产生？",
+    "4H12": "单势阱 BGK 波的自由与陷获能量区域是什么？",
+    "4H13": "怎样把初始扰动的空间平均吸收到齐次背景？",
+    "4H14": "摆模型的陷获区面积为何恰为16sqrt(epsilon)？",
+    "4H15": "摆的周期在分离轨附近怎样发散？",
+    "4H16": "作用量对能量求导为何等于周期除以2pi？",
+    "4H17": "BGK 分岔定理需要哪些边缘稳定与一致正则假设？",
+    "4H18": "负的零能量导数怎样给出小 BGK 增长模态？",
+    "4H19": "正的零能量导数给出哪种线性调制阻尼？",
+    "4H1A": "平移和 Galilei 对称如何产生中性线性解？",
+    "4H1B": "时间平方可积何时才能推出逐点衰减？",
+    "4H1C": "静电二次型怎样避免固定位置的速度积分？",
+    "4H1D": "BGK 密度怎样分离自由与陷获能量？",
+    "4H1E": "Abel 半积分为什么能反演陷获密度？",
+    "4H1F": "双 Poisson 组合如何归一化并计算中心曲率？",
+    "4H1G": "相对论速度上界何时排除低频尾流共振？",
+    "4H1H": "大排斥初值能否全部实现修正散射？",
+    "4H1I": "为什么三维是 Coulomb 位移积分的临界维数？",
+    "4H1J": "薄尾平衡为何需要比耗散更精细的非线性分析？",
+    "4H1K": "小 BGK 波的非线性调制稳定还缺什么？",
+    "4H1L": "高维中心力怎样产生能量以外的稳态标签？",
+    "4H1M": "Boltzmann 背景怎样改变场的低频乘子？",
+    "4H1N": "分数阶耗散的 Linfty 衰减尺度从何而来？",
+    "4H1O": "伪共形倒置如何把远时间化为奇异初始面？",
+    "4H1P": "环面两端散射映射如何定量保留入射信息？",
+    "4H1Q": "整数阶有界弱导数空间与加权条件有什么区别？",
+    "4H1R": "非 Schwartz 终态的边缘电场何时有定义？"
+  },
+  "navigation_only": [
+    "4H00"
+  ],
+  "reused_pages": [
+    "00M1",
+    "00OA",
+    "00OB",
+    "00Q5",
+    "00Q6",
+    "0A34",
+    "0A3C",
+    "0BAC",
+    "0BL1",
+    "0F40",
+    "0F68",
+    "0H4F",
+    "0H4G",
+    "0H53",
+    "0I80",
+    "0I85",
+    "0I8I",
+    "0W01",
+    "130A",
+    "2J0C",
+    "4101",
+    "4301",
+    "4305",
+    "4501",
+    "4502",
+    "4503",
+    "4509",
+    "450F",
+    "450K"
+  ],
+  "terminology_evidence": {
+    "method": "Systematic title/content searches across existing PDE, analysis, quantum/mathematical-physics, geometry, dynamics and probability foundations. Read selected prerequisite bodies. Searches included Vlasov, collisionless, Landau, Penrose, Gevrey, Abel, Hamilton, bracket, phase mixing, weighted Sobolev, screening, fractional heat and action-angle. New atoms introduced only where exact kinetic or integer-Winfty definitions were absent.",
+    "canonical_decisions": [
+      "Reuse4501/4502/4503/450F for flow, Jacobian and passive mixing;450K orbital stability;4509 Newton kernel.",
+      "Reuse0BL1/00OA and explicitly negate existing0I85 bracket instead of modifying shared conventions.",
+      "Reuse0H4F/0H4G/0I80/0W01/0H53/0I8I for Fourier, integration and limits;4101 periodic Sobolev;4305 mixed norms;2J0C weak derivatives.",
+      "450H is Euler Gevrey and is not substituted for the kinetic velocity-weighted norm4H0X.",
+      "4H1Q supplies absent integer W^{m,infty} definition;4H1R general field integrability is separated from Schwartz free-limit4H0D.",
+      "0A3F is a diffeomorphism definition, not inverse-function theorem;4H0I assumes local C1 inverse explicitly.0BAC supplies Stokes rather than mislabelling4301 as divergence theorem."
+    ],
+    "external_terminology_site": "Scoped Banana-space searches for Vlasov and symplectic terminology gave no relevant verified entry. No external equivalence claimed.",
+    "unfinished_branches_reused": []
+  },
+  "source_records": [
+    {
+      "id": "pausader-icm2026",
+      "authors": [
+        "Benoit Pausader"
+      ],
+      "title": "Stability Problems in Collisionless Kinetic Systems",
+      "doi": "10.1137/25M1805825",
+      "pages": "516–533",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+      "license": "CC BY 4.0",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1–6, every displayed formula, all 11 footnotes, three figure captions, acknowledgments, bibliography [1]–[78], abstract and publication/license metadata. Mathematical body lines88–533, footnotes537–580, references581–1020, metadata1022–1065 were read in overlapping sections; §4.3–6 and bibliography ref4 rechecked before freeze. Figure pixels and publisher PDF were not inspected. Exact-title arXiv search did not locate a matching report version; no nonexistence claim.",
+      "proof_boundary": "Survey research theorems and heuristic discussions are separated. Equations with inconsistent reaction sign, missing background, mass2 prefactor and velocity scaling are clarified explicitly; elementary calculations are authored separately.",
+      "review_recheck": "PR04/PR05: independently re-opened publisher HTML lines88–173 and265–390, checking §1.3/(1.4), §1.4 Boltzmann background, §1.4.1/(1.5), §2 energy/angular-momentum steady states, §4 opening/(4.1), §4.2 before(4.10), §4.2/(4.13) and §4.2.1 Poisson model. Re-read actual 4H0A statement: both phi and chi are Schwartz, not restricted to compact support."
+    },
+    {
+      "id": "vacuum-scattering-v1",
+      "authors": [
+        "Patrick Flynn",
+        "Zhimeng Ouyang",
+        "Benoit Pausader",
+        "Klaus Widmayer"
+      ],
+      "title": "Scattering map for the Vlasov-Poisson system",
+      "version": "arXiv:2101.01390v1",
+      "version_date": "2021-01-05",
+      "url": "https://arxiv.org/abs/2101.01390v1",
+      "version_url": "https://arxiv.org/html/2101.01390v1",
+      "license": "arXiv perpetual non-exclusive distribution license; authors retain copyright",
+      "actual_reading": "Abstract and entire §1 including Theorem1.1, remarks, open questions and §1.1; §2 Lemma2.1 and its complete proof, start of Lemma2.3. Reviewer follow-up: Theorem3.1 and Remark3.2 in full, §3.3 final proof passage (3.35)–(3.39), §4 beginning (4.1)–(4.10) through Theorem4.2, and the subsequent a-priori bound displays (4.16)–(4.20). Full §§3–4 proofs were not read.",
+      "proof_boundary": "Exact theorem contracts and weighted solution classes quoted; pseudoconformal and force-integrability calculations independently proved. Nonlinear bootstrap and singular-time contraction remain cited."
+    },
+    {
+      "id": "poisson-equilibrium-v2",
+      "authors": [
+        "Alexandru Ionescu",
+        "Benoit Pausader",
+        "Xuecheng Wang",
+        "Klaus Widmayer"
+      ],
+      "title": "Nonlinear Landau damping for the Vlasov-Poisson system in R^3: the Poisson equilibrium",
+      "version": "arXiv:2205.04540v2",
+      "version_date": "2024-01-29",
+      "url": "https://arxiv.org/abs/2205.04540v2",
+      "version_url": "https://arxiv.org/html/2205.04540v2",
+      "license": "CC BY 4.0",
+      "actual_reading": "Abstract and entire §1, including Theorem1.1, prior-work discussion, proof overview§1.3 and organization; beginning §2 through equations2.1–2.2. The full 60-page research proof was not read.",
+      "proof_boundary": "Exact norm, no-neutrality hypothesis, fixed delta and rates are quoted. Explicit unit-mass transform and Volterra resolvent are proved locally; nonlinear §§3–8 remain cited."
+    },
+    {
+      "id": "sharp-gevrey-v1",
+      "authors": [
+        "A. D. Ionescu",
+        "B. Pausader",
+        "X. Wang",
+        "K. Widmayer"
+      ],
+      "title": "Nonlinear Landau damping and wave operators in sharp Gevrey spaces",
+      "version": "arXiv:2405.04473v1",
+      "version_date": "2024-05-07",
+      "url": "https://arxiv.org/abs/2405.04473v1",
+      "version_url": "https://arxiv.org/html/2405.04473v1",
+      "license": "CC0 1.0",
+      "actual_reading": "Abstract, §1.1 completely including Theorems1.1–1.3 and Remarks1.4–1.7; §1.2 through line176. Theorem1.2/1.3 and exact radii re-read. The opening energy and Z-norm displays of §1.3 through approximately line194 were also seen, not the complete §1.3 or later proofs.",
+      "proof_boundary": "Weighted norm uses report footnote6 square-sum convention, equivalent to intended finite l1 sum of L2 derivative terms. HTML (1.5) has a malformed nested norm; no double Gevrey weight inferred. Deep endpoint and echo estimates remain cited."
+    },
+    {
+      "id": "small-bgk-v2",
+      "authors": [
+        "Dongfen Bian",
+        "Emmanuel Grenier",
+        "Wenrui Huang",
+        "Benoit Pausader"
+      ],
+      "title": "Stability and instability of small BGK waves",
+      "version": "arXiv:2601.10030v2",
+      "version_date": "2026-02-17",
+      "url": "https://arxiv.org/abs/2601.10030v2",
+      "version_url": "https://arxiv.org/html/2601.10030v2",
+      "license": "CC BY-NC-SA 4.0",
+      "actual_reading": "Abstract and §§1.1–1.4, including Definition1.1, Theorem1.2, Remark1.3, Lemma1.4, Theorem1.6, Definition1.8 and Theorem1.9; beginning§1.5 only. AppendixB.1 completely, with neighboring B.2 opening and A.6/A.7 excerpts seen. Not the full 110-page paper and not deep §§3–5 proofs. Versioned abstract metadata was inspected; HTML internal manuscript date is later than arXiv v2 history, so citations bind the explicit v2 identifier.",
+      "proof_boundary": "Uses mathematical theorem facts in original Chinese paraphrase, no reproduced illustrations or long prose. Direct elementary pendulum, Abel and mass calculations supplied independently. Exact marginality/regularity/co-period hypotheses imported. Stable statement deliberately uses the weaker static-weak-solution consequence, not an undeclared exact tangent-completion definition."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Calculations and elementary proofs in owned notes, with existing prerequisite pages inspected. No additional primary-paper full-reading claim.",
+      "proof_boundary": "Conditional statements name their assumptions; finite numerical checks corroborate formulas only."
+    }
+  ],
+  "source_clarifications": [
+    {
+      "id": "PAU-SIGN",
+      "notes": [
+        "4H03",
+        "4H07"
+      ],
+      "scope": "Report (2.1) reaction sign disagrees with (1.1)/(1.4). Direct expansion with bracket=xavb-vaxb gives -lambda{Ms,psi} on left and +lambda{f,psi} on right. Existing0I85 uses the opposite bracket convention, explicitly negated, not edited."
+    },
+    {
+      "id": "PAU-BACKGROUND",
+      "notes": [
+        "4H0N",
+        "4H12"
+      ],
+      "scope": "Report (5.2) omits neutralizing -1. Periodic nonnegative mass1 BGK uses phi_xx=int M dv-1, as primary2601.10030v2§1.1; otherwise integration over torus is incompatible."
+    },
+    {
+      "id": "PAU-MASS",
+      "notes": [
+        "4H1F"
+      ],
+      "scope": "Report(4.15) prefactor2/[pi(1-alpha)] has mass2. PrimaryB.1 prefactor1/[pi(1-alpha)] has mass1. Both calculated explicitly; source convention not silently changed. Parent independently confirmed and added both regression cases."
+    },
+    {
+      "id": "PAU-SCALE",
+      "notes": [
+        "4H0S",
+        "4H0T",
+        "4H0V"
+      ],
+      "scope": "Report c3(1+|v|²/2)^-2 normalized to mass1 is Pa with a=sqrt2, Fourierexp(-sqrt2|xi|), damping sqrt2|xi|. Primaryv2 uses a1. Nonlinear theorem stated in primary convention with weight9/2 vs report5 and no neutrality."
+    },
+    {
+      "id": "PAU-GEVREY",
+      "notes": [
+        "4H0X",
+        "4H0Z",
+        "4H10",
+        "4H1P"
+      ],
+      "scope": "Report uses velocity derivative indexd; primaryv1 uses floor(d/2+1). Full equilibrium bound and uniform margin imported, all radius losses explicit. Primary HTML(1.5) nested norm formatting not interpreted literally; reportfootnote6 gives square-sum formulation, equivalent up to finite constants to intended l1 of L2 derivative terms."
+    },
+    {
+      "id": "PAU-BGK",
+      "notes": [
+        "4H17",
+        "4H19",
+        "4H1A",
+        "4H1B"
+      ],
+      "scope": "Survey compressed BGK hypotheses/decomposition supplemented by primaryDef1.1/Thm1.2. C2 bifurcation, marginality, uniformED/H8, globalF, weighted f0 and same period explicit. Galilei linear growth retained; zero meaningful initial current removes it. L2time not pointwise decay or nonlinear stability."
+    },
+    {
+      "id": "PAU-TAIL",
+      "notes": [
+        "4H0U",
+        "4H1J"
+      ],
+      "scope": "Exact power-law gamma2 endpoint has logarithmically divergent second moment; source ref4 marked in preparation. General tails with logarithmic corrections require separate moment check."
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "PAU-SIGN",
+      "notes": [
+        "4H03",
+        "4H07"
+      ],
+      "scope": "Report (2.1) reaction sign disagrees with (1.1)/(1.4). Direct expansion with bracket=xavb-vaxb gives -lambda{Ms,psi} on left and +lambda{f,psi} on right. Existing0I85 uses the opposite bracket convention, explicitly negated, not edited."
+    },
+    {
+      "id": "PAU-BACKGROUND",
+      "notes": [
+        "4H0N",
+        "4H12"
+      ],
+      "scope": "Report (5.2) omits neutralizing -1. Periodic nonnegative mass1 BGK uses phi_xx=int M dv-1, as primary2601.10030v2§1.1; otherwise integration over torus is incompatible."
+    },
+    {
+      "id": "PAU-MASS",
+      "notes": [
+        "4H1F"
+      ],
+      "scope": "Report(4.15) prefactor2/[pi(1-alpha)] has mass2. PrimaryB.1 prefactor1/[pi(1-alpha)] has mass1. Both calculated explicitly; source convention not silently changed. Parent independently confirmed and added both regression cases."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "1–2",
+      "notes": [
+        "4H01",
+        "4H02",
+        "4H03",
+        "4H04",
+        "4H05",
+        "4H06",
+        "4H07",
+        "4H08",
+        "4H1M",
+        "4H1L"
+      ]
+    },
+    {
+      "section": "3",
+      "notes": [
+        "4H09",
+        "4H0B",
+        "4H0C",
+        "4H0D",
+        "4H0E",
+        "4H0F",
+        "4H0G",
+        "4H0H",
+        "4H0I",
+        "4H0J",
+        "4H0K",
+        "4H0L",
+        "4H0M",
+        "4H1O",
+        "4H1Q",
+        "4H1R"
+      ]
+    },
+    {
+      "section": "4",
+      "notes": [
+        "4H0N",
+        "4H0P",
+        "4H0Q",
+        "4H0R",
+        "4H0S",
+        "4H0T",
+        "4H0U",
+        "4H0V",
+        "4H0W",
+        "4H0X",
+        "4H0Y",
+        "4H0Z",
+        "4H10",
+        "4H11",
+        "4H1F",
+        "4H1G",
+        "4H1N",
+        "4H1P",
+        "4H0A",
+        "4H0O"
+      ]
+    },
+    {
+      "section": "5",
+      "notes": [
+        "4H12",
+        "4H13",
+        "4H14",
+        "4H15",
+        "4H16",
+        "4H17",
+        "4H18",
+        "4H19",
+        "4H1A",
+        "4H1B",
+        "4H1C",
+        "4H1D",
+        "4H1E"
+      ]
+    },
+    {
+      "section": "6",
+      "notes": [
+        "4H1H",
+        "4H1I",
+        "4H1J",
+        "4H1K",
+        "4H1L"
+      ],
+      "context_in_outline": "Questions9–11 on quantum analogy, quasilinear modulation and boundaries summarized in narrative without extra theorem claims."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Large data, optimal topology and low dimensions",
+      "scope": "4H1H/4H1I represent report§6 questions1–3 as open or conditional. No large-initial-data scattering or two-dimensional asymptotic framework proved."
+    },
+    {
+      "branch": "Point charge and domains",
+      "scope": "4H0J/0K prove reference-flow facts only. Full self-consistent repulsive-charge stability theorem, convex absorbing-domain nonlinear scattering and attractive point-mass trapped dynamics are not reconstructed; boundary problem beyond torus remains open context."
+    },
+    {
+      "branch": "General homogeneous equilibria",
+      "scope": "The exact Poisson model and Gevrey torus theorem are covered. General linear spectral decomposition for arbitrary tails is not fully stated or proved. Survey ref4 thick-tail extension through gamma=2 remains in preparation, not an available proof; thin-tail nonlinear damping is an open question in the survey."
+    },
+    {
+      "branch": "Nonlinear and general BGK waves",
+      "scope": "Same-minimal-period linear result only. General tangent-completion geometry, all higher compatibility functionals, Fprime(0)=0, non-global-energy states, other periods, nonlinear modulation and unstable-orbit endpoints remain unexpanded."
+    },
+    {
+      "branch": "Adjacent models and high dimensions",
+      "scope": "Moment and Schrodinger–Poisson definitions, screening and relativistic low-frequency computation are included. Full Vlasov–Maxwell magnetic-wave theory, quantum analogues, rigorous quasilinear modulation and high-dimensional confined BGK classification are not developed. These match report§6 questions8–11 context."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4H0F",
+        "4H0G",
+        "4H0H"
+      ],
+      "source": "vacuum-scattering-v1",
+      "scope": "Nonlinear characteristic bootstrap, weighted derivative propagation, convergence of the asymptotic field, singular-time wave-operator contraction and global extension cited. Source classes now specified; no uniqueness for arbitrary weak solutions."
+    },
+    {
+      "notes": [
+        "4H0V"
+      ],
+      "source": "poisson-equilibrium-v2",
+      "scope": "Nonlinear resonant field decomposition, all §§3–7 estimates and §8 closure not reproduced."
+    },
+    {
+      "notes": [
+        "4H0Z",
+        "4H10",
+        "4H1P"
+      ],
+      "source": "sharp-gevrey-v1",
+      "scope": "Endpoint Gevrey nonlinear bootstrap, echo chains, causal response estimates, final-state construction and scattering injectivity proofs cited."
+    },
+    {
+      "notes": [
+        "4H17",
+        "4H18",
+        "4H19"
+      ],
+      "source": "small-bgk-v2",
+      "scope": "Bifurcation tangent theorem, operator-valued dielectric expansion, small eigenvalue analysis, modulation projections and time-integrated damping proof cited. Local pendulum geometry is not a proof of the stability sign criterion."
+    },
+    {
+      "notes": [
+        "4H1D",
+        "4H1E"
+      ],
+      "source": "small-bgk-v2",
+      "scope": "Elementary energy/Abel identities proved locally; full smooth BGK manifold parametrization and all endpoint compatibility/positivity conditions are not reproduced."
+    }
+  ],
+  "review_responses": [
+    {
+      "id": "PR01",
+      "status": "reviewer-resolved-in-pinned-review",
+      "notes": [
+        "4H0D",
+        "4H0F",
+        "4H0G",
+        "4H0H",
+        "4H1R"
+      ],
+      "response": "General edge-field definition and L1/Linfty sufficient conditions moved to independent4H1R.4H0D solely Schwartz free model.4H0G checks fifth weight implies integrability;4H0F attributes nonlinear field construction to source theorem."
+    },
+    {
+      "id": "PR02",
+      "status": "reviewer-resolved-in-pinned-review",
+      "notes": [
+        "4H0F",
+        "4H0G",
+        "4H0H",
+        "4H1O"
+      ],
+      "response": "Removed circular strong-solution phrase.4H0F specifies pseudoconformal weighted gamma bounds, local time derivative and L2 continuity, uniqueness within that regularity class.4H0G gives sourceThm4.2 sigma coordinate, C_sL2 and s derivative/gradient continuity, weighted bounds.4H0H refers to this construction class. SourceTheorem3.1 extra weighted derivative for globaluniform convergence separated from local statement viaRemark3.2."
+    },
+    {
+      "id": "PR03",
+      "status": "reviewer-resolved-in-pinned-review",
+      "notes": [
+        "4H0G",
+        "4H0H",
+        "4H1Q"
+      ],
+      "response": "Searched existing Sobolev/weak-derivative pages; added integer-Winfty atomic definition using2J0C/00Q6, now linked from both theorems."
+    },
+    {
+      "id": "PARENT-FORMAT",
+      "status": "author-repaired",
+      "response": "normalizeFormat applied only owned65trees; all literal half-open intervals converted to command delimiters. Function square-bracket notation followed by parentheses changed where it would parse as link; exact hashes computed after fixed-point check."
+    },
+    {
+      "id": "PR04",
+      "status": "author-repaired-awaiting-independent-recheck",
+      "notes": [
+        "4H03",
+        "4H04",
+        "4H0A",
+        "4H0O",
+        "4H0R",
+        "4H0T",
+        "4H1L",
+        "4H1M"
+      ],
+      "response": "All eight publisher locators re-opened and corrected. 4H0A proof scope now matches two Schwartz functions. Pipe-delimited helper previously split |xi| into fields; parser now preserves bars inside proof-scope text and validates locator form. Both response-kernel descriptions restored in full, with exp(-a|xi|t), sin(t), convolution identity and uniqueness. Section coverage moves cancellation/wake examples to section4 and includes angular momentum in section2. Only incorrect tree source metadata in4H1L/4H1M changed; verified formulas preserved.",
+      "verified_locators": {
+        "4H03": "§1.3, (1.4)",
+        "4H04": "§1.4.1, (1.5)",
+        "4H0A": "§4.2, (4.13)",
+        "4H0O": "§4 opening, (4.1)",
+        "4H0R": "§4.2, discussion preceding (4.10)",
+        "4H0T": "§4.2.1, Poisson model; independent explicit response-kernel proof",
+        "4H1L": "§2, energy and angular-momentum steady states; §6 questions4,8",
+        "4H1M": "§1.4, Boltzmann-electron background"
+      }
+    },
+    {
+      "id": "PR05",
+      "status": "author-repaired-awaiting-independent-recheck",
+      "notes": [
+        "4H0N"
+      ],
+      "response": "Restricts decaying non-neutral Coulomb-field example to R3 with smooth compactly supported density and explicit O(|x|^-2) bound. Adds R1 integration E(+infty)-E(-infty)=Q, so nonzero Q forbids decay at both ends. Retains the distinction between periodic Poisson compatibility and whole-space solvability. Links existing fundamental-calculus atom0A3C and records this prerequisite."
+    }
+  ],
+  "cross_topic_requests": [],
+  "validation": {
+    "source_links": "65 owned files; no missing local links. All 63 atoms directly linked from narrative outline.",
+    "format": "Owned-only normalizeFormat fixed point; zero editorial styleRules errors; brace balance and literal ()/[] stack check across all math groups, including half-open interval repair.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.11",
+      "count": 962,
+      "errors": 0,
+      "scope": "Source formula groups only, not a Forester build or rendered-page check."
+    },
+    "elementary_checks": {
+      "volterra_cases": 20,
+      "max_absolute_residual": 1.0302869668521453e-13,
+      "pendulum_cases": 5,
+      "max_area_residual": 1.3500311979441904e-13
+    },
+    "regression_candidates": [
+      {
+        "id": "pausader-volterra",
+        "note": "4H0T",
+        "formula": "int_0^t (t-s)exp(-b(t-s))*exp(-bs)sin(s)ds = exp(-bt)(t-sin(t))",
+        "parameters": {
+          "b": [
+            0,
+            0.1,
+            1,
+            1.4142135623730951,
+            3
+          ],
+          "t": [
+            0.1,
+            1,
+            3,
+            10
+          ]
+        },
+        "expected": "Absolute residual <1e-9; protects sign, oscillation and velocity-scale damping."
+      },
+      {
+        "id": "pausader-pendulum-area",
+        "note": "4H14",
+        "formula": "int_-pi^pi 4sqrt(epsilon)cos(x/2)dx=16sqrt(epsilon)",
+        "parameters": {
+          "epsilon": [
+            0.0001,
+            0.01,
+            0.2,
+            1,
+            4
+          ]
+        },
+        "expected": "Absolute residual <1e-9; protects square-root amplitude and exact constant16."
+      }
+    ],
+    "parent_regression_note": "Parent reports an independent test for primary mass1 versus report mass2, matching4H1F.",
+    "prerequisite_check": {
+      "atoms": 63,
+      "edges": 163,
+      "reused_pages": 29,
+      "recursively_visited_nodes": 299,
+      "errors": [],
+      "scope": "Local edges combined read-only with existing site-evergreen-audit prerequisites; every local edge is a body link to a genuine atomic page, not an Outline."
+    },
+    "build": "Not run; parent owns integration/build. No deployment claim.",
+    "independent_review": "Pinned Mencius review records PR01–03 resolved and PR04–05 open. Author repaired PR04–05 and independently rechecked their source locations; final reviewer acceptance remains pending. Reviewer-owned JSON was read only.",
+    "owned_scope_only": true,
+    "review_input": {
+      "path": "research/mathematical-physics-pausader-review.json",
+      "sha256": "76a62832a91cd95e28b0c5386f17c1be704f3c16f55fd0c1a9d15131bbcdf832",
+      "result": "needs_revision",
+      "open_findings": [
+        "PR05",
+        "PR04"
+      ]
+    },
+    "repair_regressions": {
+      "locator_assertions": 8,
+      "response_kernel_complete_strings": 2,
+      "schwartz_scope_matches_note": true,
+      "changed_tree_ids": [
+        "4H0N",
+        "4H1L",
+        "4H1M"
+      ],
+      "sigma_note_unchanged": true,
+      "source_formula_mutation_scope": "Only 4H0N gains the requested dimensional bound and counterexample; 4H1L/4H1M source metadata only.",
+      "errors": []
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-22",
+    "revision": 2,
+    "paths": [
+      "trees/math/mathematical-physics/pausader/4H*.tree",
+      "trees/references/icm2026-pausader.tree",
+      "research/mathematical-physics-pausader-packet.json"
+    ],
+    "hashes": "notes[].sha256 freezes each owned .tree source after owned-only normalizeFormat. Packet digest reported separately to avoid self-hashing. Remote publisher HTML not archived or byte-hashed; version URLs and exact reading scopes recorded.",
+    "mutation_boundary": "No further author edits except reviewer-requested repairs; no shared integration or git action.",
+    "previous_packet_sha256": "d718e770fe8a947fec2cd24011f49d69dc10a570c7be8c458f0169688cd4cf11"
+  }
+}

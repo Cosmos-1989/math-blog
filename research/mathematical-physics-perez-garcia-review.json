@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "reviewer_role": "independent mathematical reviewer",
+  "result": "pass",
+  "review_stage": "whole-branch mathematical acceptance after revision-2 targeted recheck",
+  "packet": {
+    "id": "mathematical-physics-perez-garcia-packet",
+    "path": "research/mathematical-physics-perez-garcia-packet.json",
+    "expected_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+    "reviewed_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+    "expected_hash_matched": true,
+    "freeze_revision": 2
+  },
+  "scope": {
+    "owned_tree_files": 50,
+    "atomic_notes": 48,
+    "outlines": 1,
+    "references": 1,
+    "packet_reused_pages_reviewed": 33,
+    "additional_shared_tree_files_reviewed": 8,
+    "guide_files_reviewed": 2,
+    "reviewed_file_count": 94,
+    "mathematical_reading": "Read all owned source bodies, definitions, proofs and research-result qualifications. Compared packet proof_scope, claim_sources, unexpanded_deep_proofs and validation claims against the inspected notes and precise primary-source passages. Revision 2: reread all 11 changed owned trees and every changed packet field; the 39 unchanged owned trees retain the earlier full-body review, verified by identical hashes.",
+    "dependencies": "Read all 33 reused pages, the abstract-series and Hilbert-space prerequisites actually used in the GNS check, the auxiliary Green-kernel repair implicated by PG-P05, and the existing EGNO reference. No full-forest mathematical certification is claimed.",
+    "independence": "No author notes, reference pages, shared registries, build products or git state were edited. Only this review JSON is written.",
+    "acceptance_boundary": "Pass applies only to the exact revision-2 packet and file contents listed here, within the preserved source/proof scope. Subsequent content changes require review refresh. This is not build, deployment or publication approval."
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "PG-P01",
+      "status": "resolved",
+      "notes": [
+        "0Z1C",
+        "0A38",
+        "4I0F"
+      ],
+      "resolution": "The positive sesquilinear form is made Hermitian by direct polarization, then Schwarz is proved with the second-linear convention. For r>||b||, the norm-convergent binomial series inside the abstract C*-algebra gives r^2*1-b*b=(rs)*(rs). The norm bound and GNS representation no longer depend circularly on a concrete functional calculus. The null-space, completion, bounded action and cyclic unitary equivalence arguments were checked.",
+      "shared_final_sha256": "6168e0894cf45abdee2f064a0e4f2fcaae56d8f50547e797874a245474260a3d"
+    },
+    {
+      "id": "PG-P02",
+      "status": "resolved",
+      "notes": [
+        "4I0D"
+      ],
+      "resolution": "The I_A/D example now assumes a complete basis and D=dim(H_A)>=2; a proper span K gives P_K/D. Partial-trace coefficients agree with the stated inner-product convention."
+    },
+    {
+      "id": "PG-P03",
+      "status": "resolved",
+      "notes": [
+        "4I09",
+        "4I0A"
+      ],
+      "resolution": "The blank binary tape, n nonhalting states plus one halting state, only left/right moves, and final-transition step count are explicit. The effective finite-control simulation supplies a computable state count. The proof does not transfer the numerical BB(6) value between machine models."
+    },
+    {
+      "id": "PG-P04",
+      "status": "resolved",
+      "notes": [
+        "4I0E",
+        "4I1C"
+      ],
+      "resolution": "Abstract purity is separated from the rank-one characterization for the full matrix algebra M_N(C). The diagonal-subalgebra warning prevents the former overgeneralization."
+    },
+    {
+      "id": "PG-P05",
+      "status": "resolved",
+      "notes": [
+        "4J1D",
+        "4J1E",
+        "4J1F",
+        "4J04"
+      ],
+      "resolution": "The general-surface smooth Green remainder is now proved locally, not inferred from a sphere-only reference. The combined four-dimensional Laplacian gives a smooth right-hand side, and the local Weyl-lemma argument proves joint smoothness. The 1/(2*pi) fundamental solution, spectral summability and the GFF covariance factor 2*pi were checked. The final three changed auxiliary files were reread before their hashes were refreshed."
+    },
+    {
+      "id": "PG-P06",
+      "status": "resolved",
+      "notes": [
+        "4I0E",
+        "4I1C",
+        "4I0I"
+      ],
+      "resolution": "The independent full-matrix characterization is now its own atom. The approximate-Haag note locally reintroduces its algebra, pure state and GNS data instead of relying on its parent outline."
+    },
+    {
+      "id": "PG-F01",
+      "status": "resolved",
+      "priority": "P2",
+      "title": "Fusion-category axioms omit additivity and tensor bilinearity",
+      "original_finding": "Every existing object being a finite sum of simples does not assert that arbitrary finite sums or a zero object exist. The stated meaning of complex linearity constrains composition but not the tensor bifunctor.",
+      "notes": [
+        "4I1B",
+        "0AI1",
+        "013X"
+      ],
+      "resolution": "The definition now explicitly requires all finite biproducts including zero, finite-dimensional morphism spaces, finite simple classes, decomposition into simples, and a tensor bifunctor complex-linear in both morphism variables. The C*-norm, adjoint, rigid and unitary monoidal requirements are explicit. The former one-object counterexample is excluded. EGNO Definition 4.1.1 and Remarks 4.2.2 and 9.4.7 were checked; 4.2.2 is a Remark, correcting the review's former label 'Example'.",
+      "resolved_for_packet_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+      "sources": [
+        {
+          "url": "https://math.mit.edu/~etingof/egnobookfinal.pdf",
+          "locator": "Definition 4.1.1, printed p.65 (PDF page 82); Remark 4.2.2 illustrates why tensor bilinearity is separate."
+        }
+      ]
+    },
+    {
+      "id": "PG-F02",
+      "status": "resolved",
+      "priority": "P2",
+      "title": "Several notes and packet entries point to unrelated primary-source locations",
+      "original_finding": "The cited report section and equation numbers do not support the attached definitions. This affects the source-bound packet as well as public-note metadata; 4I0O also uses the wrong equation number in its mathematical explanation.",
+      "notes": [
+        "4I0J",
+        "4I0K",
+        "4I0L",
+        "4I0N",
+        "4I0O",
+        "4I16",
+        "icm2026-perez-garcia"
+      ],
+      "resolution": "Note metadata, the 4I0O body citation and packet claim_sources now match the report's MPS/PEPS/group-tensor locations. The sector criterion is tied to Ogata v1 Definition 1.5 and Setting 2.1/(2.2), with the common-Hilbert-space identification explained. The reference and packet add separately scoped EGNO and Ogata records; they do not claim full-book or full-paper proof reading.",
+      "resolved_for_packet_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+      "sources": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+          "locator": "Sections 3, 4, 5.1.1, 5.1.2, 5.2; Definitions 4.1, 5.2, 5.3, 5.5; equations (5.1)-(5.3)."
+        },
+        {
+          "url": "https://arxiv.org/pdf/2106.15741v1",
+          "locator": "Section 1.3, Definition 1.5, printed p.5; Setting 2.1 and (2.2), printed p.6."
+        }
+      ]
+    },
+    {
+      "id": "PG-F03",
+      "status": "resolved",
+      "priority": "P2",
+      "title": "Four-leg tensor model and claimed Gram-test graphs disagree",
+      "original_finding": "4I0Q quantifies over finite connected graphs while using exactly the four-leg tensor defined in 4I0O. Accounting for all tensor legs gives 4n=2m+b. The packet's (n,m,b)=(3,2,2) and (4,4,2) examples do not satisfy that condition.",
+      "notes": [
+        "4I0Q",
+        "4I0S"
+      ],
+      "resolution": "Both atoms now use finite connected square-lattice vertex regions, four legs per vertex, all unused legs as boundary, and 4n=2m+b. The path3 and square4 examples have b=8 and rank D^7; their Gram factors remain 1 and D. The packet withdraws the former b=2 evidence and records physical Z2 contractions. The reviewer independently executed the unchanged parent test block over all 256 boundary columns and all 65536 Gram entries in each example, obtaining the expected factors 1 and 2. Rank 128 follows exactly from the verified paired-column Gram blocks; this agrees with the earlier reviewer contraction.",
+      "resolved_for_packet_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+      "sources": [
+        {
+          "type": "independent-derivation",
+          "locator": "Count all half-edges in 4I0O and independently contract the four-leg Z/2 tensors; numerical corroboration recorded in independent_checks.gram."
+        }
+      ]
+    },
+    {
+      "id": "PG-F04",
+      "status": "resolved",
+      "priority": "P3",
+      "title": "The halting reduction does not imply half of the instances are gapless",
+      "original_finding": "The phrase '其中一半实例属于无隙分支' asserts a proportion not established by the reduction. No measure or density on machine inputs is specified.",
+      "notes": [
+        "4I08"
+      ],
+      "resolution": "The proportion assertion is replaced by the nonhalting-input branch. The note and packet make no claim about a measure or density of halting inputs; the reduction and gapped-promise distinction remain unchanged.",
+      "resolved_for_packet_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+      "sources": [
+        {
+          "type": "independent-logical-check",
+          "locator": "4I06-4I08: the reduction gives a branch correspondence, not a counting or density theorem."
+        }
+      ]
+    }
+  ],
+  "proof_scope_audit": [
+    {
+      "notes": "4I01-4I0B",
+      "assessment": "Checked diameter versus support cardinality, gap above the full ground space, finite exceptions, parameter/volume quantifiers, finite projector proofs, reductions, machine conventions, and the distinction between proved undecidability and the gapped-promise conjecture. PG-F04 was resolved in revision 2; the reduction has no unsupported proportion claim."
+    },
+    {
+      "notes": "4I0C-4I0I and 4I1C",
+      "assessment": "Checked inductive norm completion, partial trace, purity, abstract GNS completion and norm control, commutant calculations and approximate-duality quantifiers. Earlier substantive defects are resolved."
+    },
+    {
+      "notes": "4I0J-4I0T",
+      "assessment": "Checked trace/index conventions, parent-term annihilation, pseudoinverse image projections, cut-rank hypotheses, dual legs, group averaging, Gram normalization, boundary ranks and polarization. The intersection assertion retains both comb-like and plaquette-union conditions; local indistinguishability retains its interior-region hypothesis. Revision 2 resolves PG-F02 and PG-F03 with corrected source locations and an explicit four-leg domain."
+    },
+    {
+      "notes": "4I0U-4I12",
+      "assessment": "Checked conditional infinite-plane uniqueness and purity, decreasing-projection strong limits, the real-linear criterion, compressed-algebra reduction and all finite-volume estimate quantifiers. General operator-algebra and two-dimensional tensor arguments remain cited, not claimed as local full proofs. Approximate original-lattice and exact blocked-lattice conclusions are distinguished."
+    },
+    {
+      "notes": "4I13-4I19 and 4I1A-4I1B",
+      "assessment": "Checked the finite-group Hopf identity, finite toric-code stabilizer count and gap, endpoint/string calculations, sector selection, intertwiner tensor identities, string-net coefficient conventions and classification status. Weak-Hopf axioms follow the stated primary convention; the Haag extension is restricted to the specified biconnected weighted family. Revision 2 resolves PG-F01 and the source binding in PG-F02; the definition and criterion retain their precise hypotheses."
+    },
+    {
+      "notes": "4I00 and icm2026-perez-garcia",
+      "assessment": "Read the entire outline and reference. The narrative does not turn the one-dimensional illustration into a full two-dimensional Haag proof or upgrade the classification conjectures to theorems. The revised packet's source/model corrections and explicit proof limitations are consistent with the reviewed notes."
+    }
+  ],
+  "atomicity_and_dependency_audit": {
+    "atomic_questions_reviewed": 48,
+    "declared_edges_checked": 170,
+    "reused_targets_read": 33,
+    "missing_direct_targets": [],
+    "declared_edges_absent_from_body": [],
+    "cycles_in_packet_subgraph": [],
+    "assessment": "All four final findings and the prior independent-definition split are resolved. The fusion atom now states the required structures explicitly; the Gram atom has an explicit four-leg domain. No additional independent-compound split is requested within this review scope.",
+    "limitation": "The packet's claim of 240 recursively visited nodes was not independently reproduced as a whole-forest semantic review. No build, formatter, site checker or git command was run."
+  },
+  "source_checks": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+      "scope": "Mathematical body and final contract/locator checks; no claim of reading every cited research proof."
+    },
+    {
+      "url": "https://arxiv.org/html/2509.23734v2",
+      "scope": "Selected exact contracts and proof passages: Theorem 2.1.1, Lemma 2.1.4, Assumption 2.2.1, Lemma 2.2.3; weak-Hopf definitions; comb geometry; Theorem 3.6.1, Lemma 3.6.3, Theorem 3.7.1; Theorem 4.1.3 and Corollaries 4.1.5-4.1.6. Not a full-paper or 166-figure proof audit."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1502.04573v5",
+      "scope": "Initial strong-gap/gapless definitions and Theorem 3, compared with the later restatement/assembly. The alpha-bound discrepancy is disclosed rather than silently reconciled. Not the 150-page construction proof."
+    },
+    {
+      "url": "https://arxiv.org/html/cond-mat/0404617v2",
+      "scope": "Fixed-point Hamiltonian passage, equations (10)-(14), coefficients, multiplicity-free input restrictions and quoted projector consequences; not appendix graphical proofs."
+    },
+    {
+      "url": "https://math.mit.edu/~etingof/egnobookfinal.pdf",
+      "scope": "Definition 4.1.1, Remark 4.2.2 and Remark 9.4.7; selected definition/unitarity passages were rechecked in revision 2. No full-book proof review is claimed."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2106.15741v1",
+      "scope": "Definition 1.5 and Setting 2.1/(2.2), rechecked for the sector-criterion source and the unitary identification of Hilbert spaces. No full braided-category proof audit."
+    }
+  ],
+  "independent_checks": {
+    "packet_digest_matched": true,
+    "all_50_owned_hashes_matched_packet": true,
+    "gram": [
+      {
+        "D": 2,
+        "n": 3,
+        "m": 2,
+        "b": 8,
+        "gram_factor": 1,
+        "max_entrywise_error": 0,
+        "rank_from_verified_pair_blocks": 128,
+        "method": "Construct the full four-leg tensor boundary map and its Gram matrix; compare with factor times (I + simultaneous bit flip)/2."
+      },
+      {
+        "D": 2,
+        "n": 4,
+        "m": 4,
+        "b": 8,
+        "gram_factor": 2,
+        "max_entrywise_error": 0,
+        "rank_from_verified_pair_blocks": 128,
+        "method": "Construct the full four-leg tensor boundary map and its Gram matrix; compare with factor times (I + simultaneous bit flip)/2."
+      }
+    ],
+    "numerical_scope": "The reviewer's original four-leg contractions and the revision-2 rerun of the exact parent test corroborate the local algebraic calculation. They do not prove the general research intersection or Haag theorems.",
+    "shared_refresh": "The auxiliary GFF files refreshed during revision 1 remain byte-identical in revision 2. All previously reviewed shared files, including repaired 0Z1C, were hash-checked again; their mathematical review is carried forward without claiming a new full reread.",
+    "builds_run": false,
+    "git_commands_run": false,
+    "parent_four_leg_test": {
+      "path": "tests/mathematical-physics-third-reports.test.mjs",
+      "test": "four-leg Z2 tensor networks have the stated boundary Gram factor",
+      "status": "passed",
+      "source_sha256": "0b1447cff2df172d1297ab8ab0c6165c6dfc5ff063093a08b339ff346abb0a6b",
+      "test_block_sha256": "cc9198f176b84ce64c3b9a845fcc3ec2fadfd85a009b848dd51eebca8a7c0670",
+      "extraction": "Exact named declaration through the newline before the next top-level test; full-block digest matches packet. Execution trims only surrounding whitespace; both digests are recorded.",
+      "scope": "Unmodified named block executed with node:assert/strict; whole module and suite not executed.",
+      "examples": 2,
+      "boundary_columns_per_example": 256,
+      "gram_entries_per_example": 65536,
+      "executed_trimmed_block_sha256": "31800e8d59634890473cc1f08365a5d10690ae32f3a71be9bf2ba4cdf55a26cd",
+      "source_hash_matches_packet": true,
+      "test_block_hash_matches_packet": true,
+      "evidence_independence": "Independent reviewer execution of the parent's implementation, not an independently authored implementation. The separate reviewer-authored contraction from revision 1 is preserved under gram.",
+      "reviewed_files_policy": "Recorded here, not in reviewed_files; only this named block was reviewed and executed, not the full shared test suite."
+    },
+    "current_hash_verification": {
+      "reviewed_file_count": 94,
+      "reviewed_hash_mismatches": [],
+      "owned_tree_hashes_matching_packet": 50,
+      "separately_bound_test_files": 1,
+      "total_file_bindings_including_test": 95,
+      "hash_algorithm": "SHA-256 of raw current file bytes; changed note bytes were reread before accepting refreshed digests."
+    }
+  },
+  "limitations": [
+    "This pass is limited to the mathematical/source-contract review of the exact listed revision-2 content; it is not build, integration, deployment or publication authorization.",
+    "Research results imported with accurate hypotheses remain cited inputs; checking their contracts is not reconstructing their full proofs.",
+    "Source-reading logs are compared with available content and scope, not treated as independently verified historical records of another author's reading actions.",
+    "The auxiliary GFF inspection is limited to resolving PG-P05 and is not acceptance of the Rhodes-Vargas branch.",
+    "Parent-owned source/required-link registries, rendering, integration and deployment remain outside this review."
+  ],
+  "reviewed_files": [
+    {
+      "id": "4I00",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I00.tree",
+      "sha256": "76e37aa7c4cb37aecbee7a6a81ebbbb90ee33b8e630177daf7a2e4793b5022d1"
+    },
+    {
+      "id": "4I01",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I01.tree",
+      "sha256": "f8bb36895bf59773d3aa73cdcbd9e08b8721fa5fb457af118160e97f98d341bf"
+    },
+    {
+      "id": "4I02",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I02.tree",
+      "sha256": "80e43a85d601b4ac2490dd58261d82d091250a1d1d6d7d802cf9d8cf62df4965"
+    },
+    {
+      "id": "4I03",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I03.tree",
+      "sha256": "d792c7a8e621bc419d239ba0eed1d9ffaa79b91a200ec109319e34151d6bd336"
+    },
+    {
+      "id": "4I04",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I04.tree",
+      "sha256": "31744684e003dfec146365f5d0fbd48454913e40988d3a9507014d744003b935"
+    },
+    {
+      "id": "4I05",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I05.tree",
+      "sha256": "e5c53ca82224aa0eb386254f7e3b696f9891b8968f8ce0fb2f0f16bdc272b22a"
+    },
+    {
+      "id": "4I06",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I06.tree",
+      "sha256": "aa65418f609d5cfeadafef5d2157303d26349ab127c587af48dca7c306879245"
+    },
+    {
+      "id": "4I07",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I07.tree",
+      "sha256": "e0c17714fbceaad6056af2198ddc0bb1058240f2b958205212876345f08b513f"
+    },
+    {
+      "id": "4I08",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I08.tree",
+      "sha256": "96ae70fd13f5a55c74cdfdb1307af5a896d81229003420c537a84ee490644e65"
+    },
+    {
+      "id": "4I09",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I09.tree",
+      "sha256": "95dd9e74a1af54d6c1d879a1f193b40705ad84f7ade994fc5213262015ed95ba"
+    },
+    {
+      "id": "4I0A",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0A.tree",
+      "sha256": "95f3726d8ed14542f7a7544a223055e1cb506216ef39474f3019297ceb7a0728"
+    },
+    {
+      "id": "4I0B",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0B.tree",
+      "sha256": "4aa0670ec7e8f122f9687f3107aefdeefe9ecd1aaade21302c7618e7e6c32006"
+    },
+    {
+      "id": "4I0C",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0C.tree",
+      "sha256": "b699785b193579253b951e9a1ea319df55478662a0109c3f77dc2295a8da6d08"
+    },
+    {
+      "id": "4I0D",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0D.tree",
+      "sha256": "febc14a5420a97137601eddf47881b1ddf136419a576e2aeb16cb2cf334e5c64"
+    },
+    {
+      "id": "4I0E",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0E.tree",
+      "sha256": "b8589932847147f04f0e1646277a82056461683f752384cf0432a9849761f1ab"
+    },
+    {
+      "id": "4I0F",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0F.tree",
+      "sha256": "c83e8db13706a37b8d91c7f4d813d784b759219b16717a6bd890b7d824909aee"
+    },
+    {
+      "id": "4I0G",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0G.tree",
+      "sha256": "2163fc7c682313a568e44dea0cae960158d1d3f5ec54eb6b9ad667d95f91ad72"
+    },
+    {
+      "id": "4I0H",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0H.tree",
+      "sha256": "a4c4398786baa535c06ccac3ed6d9c49efd38d43ba67a88d08e8165f582751af"
+    },
+    {
+      "id": "4I0I",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0I.tree",
+      "sha256": "858b28e39d763bd974242c584a1d7dcd90affd08a68b20d35b8f2e3de28f4ca0"
+    },
+    {
+      "id": "4I0J",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0J.tree",
+      "sha256": "6df4b5c91e897d1d35e0163f02620fd5c697aca08a6a70575140ae16f43d624d"
+    },
+    {
+      "id": "4I0K",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0K.tree",
+      "sha256": "5e5f4b8248d64cf860fd6f40c8ff1d4bdedd4bd145d39de188f370f8e93c146c"
+    },
+    {
+      "id": "4I0L",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0L.tree",
+      "sha256": "1b417bf73985b4b4f0369b64da8a4a73468eba8be9b090eb5f4e2eadd80a1940"
+    },
+    {
+      "id": "4I0M",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0M.tree",
+      "sha256": "6561d46cd551970b6227ab4708b7d145fb39e8ce4a13d911994718b5e8328672"
+    },
+    {
+      "id": "4I0N",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0N.tree",
+      "sha256": "12fce5f9dee52431df17eb88e85c0026503249f5f18663763f1363fc889a3e1e"
+    },
+    {
+      "id": "4I0O",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0O.tree",
+      "sha256": "7224e45bf2489d27c6c7e6ab4c00dd164cc12f338463ce234e7bffd9997a96ea"
+    },
+    {
+      "id": "4I0P",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0P.tree",
+      "sha256": "13fb68654dae93a82edb1db10c19eaaf06c241dfb52e9466dc668adc1e45d87d"
+    },
+    {
+      "id": "4I0Q",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0Q.tree",
+      "sha256": "4857b16a6caac226b4bacc8e3884ae7e7431f1cdd717ee20c02d97b840cbdd29"
+    },
+    {
+      "id": "4I0R",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0R.tree",
+      "sha256": "9f02bf984caafabe2b6c0877471436a6620143b801f232738ab6aa84f00606ad"
+    },
+    {
+      "id": "4I0S",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0S.tree",
+      "sha256": "82ead156309d81d251340e015d7140cc4b199409880d84e39355d457696e07e7"
+    },
+    {
+      "id": "4I0T",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0T.tree",
+      "sha256": "b33b1c94855b718d03fd5a7dbd03cf61f471501b71a18d9d274321099daec736"
+    },
+    {
+      "id": "4I0U",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0U.tree",
+      "sha256": "88b0a9d026b67ff7895f85790b7777b2af0b0a5a93d594a5e38510a287467ff4"
+    },
+    {
+      "id": "4I0V",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0V.tree",
+      "sha256": "b349210f02d425280ea409dbeec56a4e310aeb24fa2cedaad74701491f2e0e92"
+    },
+    {
+      "id": "4I0W",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0W.tree",
+      "sha256": "a305a8338b6b52e8a216532516b57305eab16605d91b90b58937849c8240634f"
+    },
+    {
+      "id": "4I0X",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0X.tree",
+      "sha256": "84ec52cb8da0aab15cbb5b19786df13a7c21c577430980c02824633f84037ea3"
+    },
+    {
+      "id": "4I0Y",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0Y.tree",
+      "sha256": "18e4df8272694d1bbc2d64528ef45834cc43f3f608fcd62b0ceb37f7b17e58e9"
+    },
+    {
+      "id": "4I0Z",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0Z.tree",
+      "sha256": "18fdcee212edfb1e8e204272a0243b5c7e0ce721799474a285e80cd97e553961"
+    },
+    {
+      "id": "4I10",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I10.tree",
+      "sha256": "bf0cec4e060c7aee1f519584d99c3bb8c978e216783adb7a3bf0a652d257e3d9"
+    },
+    {
+      "id": "4I11",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I11.tree",
+      "sha256": "5c3ae99788092e91fd51eeb1d3242c2483eb390578673699a27b924cc119b05e"
+    },
+    {
+      "id": "4I12",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I12.tree",
+      "sha256": "521b543c93f0d6f155af6ba69ede3a0f7621f39ce853e030c9376633f694826b"
+    },
+    {
+      "id": "4I13",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I13.tree",
+      "sha256": "7b9c95d9598a7501b09aa725e2a8da4b584e0191c08e881cf35bde255879f649"
+    },
+    {
+      "id": "4I14",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I14.tree",
+      "sha256": "4c60dc26078fce43ee7c46f8aa330a6ef9ebfeb2f4e6436708c18c83c38ef219"
+    },
+    {
+      "id": "4I15",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I15.tree",
+      "sha256": "8fa4a322ec8c1662ce5373bab6e630b6b56ec4a32f6b035ffbcb9320678281b9"
+    },
+    {
+      "id": "4I16",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I16.tree",
+      "sha256": "1e10e20961dac8c520782051d65dd7f473cb5ae77c1360d491afef4fbd392584"
+    },
+    {
+      "id": "4I17",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I17.tree",
+      "sha256": "bcf89e590c7d9058c463e3765f2223473225a030269ff55aff9f615a43893aef"
+    },
+    {
+      "id": "4I18",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I18.tree",
+      "sha256": "28f95dee8b75fcb3ef62b61b9bb3a2dbf84fe38a2749e31aa143e2861d6e148d"
+    },
+    {
+      "id": "4I19",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I19.tree",
+      "sha256": "a994aaa471cb824080599f270ad7de929b73c1b0a4e8f697a6db35ea36381549"
+    },
+    {
+      "id": "4I1A",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I1A.tree",
+      "sha256": "2f665c7694124fa2f96ca9f77d94231633178072490b04d74ffaa88c3c114280"
+    },
+    {
+      "id": "4I1B",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I1B.tree",
+      "sha256": "73395ab0ea8ef51c6bd518f0814c938b0ed9112f492c3bfd7e120cf9fd1a2e05"
+    },
+    {
+      "id": "4I1C",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I1C.tree",
+      "sha256": "c49e47b1c1ddc360148c95905c2888cac848db26a6d9eaa9d439e124f8d6e1e2"
+    },
+    {
+      "id": "icm2026-perez-garcia",
+      "path": "trees/references/icm2026-perez-garcia.tree",
+      "sha256": "eb1ea97dd7606b2ee761764b93c9041694e6a4b31a019963eb22c5ace6009074"
+    },
+    {
+      "id": "mathematical-physics-perez-garcia-packet",
+      "path": "research/mathematical-physics-perez-garcia-packet.json",
+      "sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839"
+    },
+    {
+      "id": "004N",
+      "path": "trees/math/analysis/004N.tree",
+      "sha256": "dcdb81e51a6a4e76da31d63bd44e9ab22faa8dc5e9da2b525fde7774cff09fec"
+    },
+    {
+      "id": "004V",
+      "path": "trees/math/analysis/004V.tree",
+      "sha256": "c4eba0294490b9855f4c5cc16a9621e92fd4cc1bdc20f9bb0145fa257efa8d72"
+    },
+    {
+      "id": "004X",
+      "path": "trees/math/analysis/004X.tree",
+      "sha256": "f255c21464d978d72c005dbb8c2579625c64c396bacab05d83b1fb16a9c9e21f"
+    },
+    {
+      "id": "00EW",
+      "path": "trees/math/topology/atomic/00EW.tree",
+      "sha256": "be3f45510d200fc767fec670a2d933731373848a083433a0161d3beaeca134a9"
+    },
+    {
+      "id": "00JZ",
+      "path": "trees/math/category/quantum/atomic/00JZ.tree",
+      "sha256": "77592cd15a34241b4f775a0e542a708b02906c01ee915e33c11a9dd1c8410948"
+    },
+    {
+      "id": "00M4",
+      "path": "trees/math/analysis/atomic/00M4.tree",
+      "sha256": "70300ca09bf8107f544ae2d1467bbc30224143bd8d5ad886255e2962ff292636"
+    },
+    {
+      "id": "00MQ",
+      "path": "trees/math/analysis/atomic/00MQ.tree",
+      "sha256": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37"
+    },
+    {
+      "id": "00MS",
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260"
+    },
+    {
+      "id": "00MU",
+      "path": "trees/math/analysis/atomic/00MU.tree",
+      "sha256": "b6ab9609e60598f6df2bbbedde82f7fc9ca08e8860665aee730f07ec456b00c8"
+    },
+    {
+      "id": "00MW",
+      "path": "trees/math/analysis/atomic/00MW.tree",
+      "sha256": "f4d920f59d1a0c2c1e30541f6242686e11b05a40f036d4f3a4df259641508645"
+    },
+    {
+      "id": "00N0",
+      "path": "trees/math/analysis/atomic/00N0.tree",
+      "sha256": "8095113f495c424acd23ebbc794ea5bae43c0d42af0d5e43b518cfd4b099d5f3"
+    },
+    {
+      "id": "00QP",
+      "path": "trees/math/logic/research/atomic/00QP.tree",
+      "sha256": "7b6250385542cb7ea82e6e5163c30e86bb9eed5b307f2059bf7d9d6270b9a4c5"
+    },
+    {
+      "id": "00QR",
+      "path": "trees/math/logic/research/atomic/00QR.tree",
+      "sha256": "2bbfc1148c432267a5cd473bc75d2a375bf08a22602adaf446283e39f8fc565a"
+    },
+    {
+      "id": "012G",
+      "path": "trees/math/algebra/research/012G.tree",
+      "sha256": "643ff15b6e93c2b4423c729ca31b55ef7717a962bb91d12dbb241ab1bdca4124"
+    },
+    {
+      "id": "012H",
+      "path": "trees/math/algebra/research/012H.tree",
+      "sha256": "8027b66e17b89473edb90250ec39a42caae5ec6ac45e84780e965f666d51d8c5"
+    },
+    {
+      "id": "0143",
+      "path": "trees/math/algebra/research/0143.tree",
+      "sha256": "e95c715f633b8e4368c5a49dfb9f0430b5a916ee3167ed51c2a8bbbbd032848e"
+    },
+    {
+      "id": "014T",
+      "path": "trees/math/algebra/research/014T.tree",
+      "sha256": "26fc7d72016a28f921e6a6b98b4d6182c88eed023c155b6bf8f0aa303cdff1a1"
+    },
+    {
+      "id": "014W",
+      "path": "trees/math/algebra/research/014W.tree",
+      "sha256": "487a28a6b38d81e76087129cb8a09557919170b0ab590070c3f911ebda6ef09e"
+    },
+    {
+      "id": "0A39",
+      "path": "trees/math/topology/atomic/0A39.tree",
+      "sha256": "952607bf21fbdb930f4b92345c6545d3bba550588512f36581f3e3d6465c4f5d"
+    },
+    {
+      "id": "0AC3",
+      "path": "trees/math/logic/research/atomic/0AC3.tree",
+      "sha256": "64d1b8b3a627e35e3c6a711684493b5c459c581a64fa5d3f5e3a2e83e60c9ec7"
+    },
+    {
+      "id": "0AI1",
+      "path": "trees/math/algebra/research/0AI1.tree",
+      "sha256": "ec4283172e4b9f256a761fa24e8dfad5255a5289e7ca13b8ec3baf8ac6f2fb6e"
+    },
+    {
+      "id": "0F0F",
+      "path": "trees/math/geometry/algebraic/0F0F.tree",
+      "sha256": "6f0154249461062a074a9e1ec67bfb06d9fd3445e71f2f8e17a57a0b321ef528"
+    },
+    {
+      "id": "0F4E",
+      "path": "trees/math/category/quantum/atomic/0F4E.tree",
+      "sha256": "a325c75c71d8f15dbeed0eeec43c303a4fd89cc422842263e16719a1bad41397"
+    },
+    {
+      "id": "0F4F",
+      "path": "trees/math/category/quantum/atomic/0F4F.tree",
+      "sha256": "9b1c3aae4c706f1541aed7563d6200d405f3ee339ff3d364f7a44be265481ad3"
+    },
+    {
+      "id": "0H4M",
+      "path": "trees/math/number-theory/reports/0H4M.tree",
+      "sha256": "8c9d01a0dc3e25d0fb1c76b2b5b58e436a0bfd0d3e7858206fe4f8a098a8d655"
+    },
+    {
+      "id": "0N0B",
+      "path": "trees/math/geometry/bourbaki/0N0B.tree",
+      "sha256": "83fb26af0fc669bf0ce10adbf32513bbd3068429fb4cf16583f4472cb73ca7f0"
+    },
+    {
+      "id": "0Z01",
+      "path": "trees/math/analysis/operator-boundaries/0Z01.tree",
+      "sha256": "bd049c98d37243ec00e0dd766785d6b3fc8501d51afb1c18af0de15d4c2e5589"
+    },
+    {
+      "id": "0Z02",
+      "path": "trees/math/analysis/operator-boundaries/0Z02.tree",
+      "sha256": "55ea45f930abb2cb24eecea84e98d0ba23d70ed490badaab92126ed924675950"
+    },
+    {
+      "id": "0Z03",
+      "path": "trees/math/analysis/operator-boundaries/0Z03.tree",
+      "sha256": "054350a7d05577e3e830efc90a2a78f7b70a892e86b69ffec16d997c0bfc9f6a"
+    },
+    {
+      "id": "0Z05",
+      "path": "trees/math/analysis/operator-boundaries/0Z05.tree",
+      "sha256": "6e1578b348677035259921676cd0c65626187fc8e067ec463b3d3d1bb6c0d21a"
+    },
+    {
+      "id": "0Z1C",
+      "path": "trees/math/analysis/operator-boundaries/0Z1C.tree",
+      "sha256": "6168e0894cf45abdee2f064a0e4f2fcaae56d8f50547e797874a245474260a3d"
+    },
+    {
+      "id": "2V0L",
+      "path": "trees/math/lie/quantum-affine/2V0L.tree",
+      "sha256": "0d6562802f05f0308f364ff1399e15f018550b79fc0673afd3077e7cd9b968a3"
+    },
+    {
+      "id": "4F02",
+      "path": "trees/math/mathematical-physics/mahadev/4F02.tree",
+      "sha256": "98bd53d86041c99e52d8203cf206b48ea138abc80e8f0d282ba13cd1468d9bc6"
+    },
+    {
+      "id": "0A38",
+      "path": "trees/math/analysis/atomic/0A38.tree",
+      "sha256": "5549822368c709b807074bd0031939d3840dcef0781612f8ca085da85a3da34b"
+    },
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325"
+    },
+    {
+      "id": "00MT",
+      "path": "trees/math/analysis/atomic/00MT.tree",
+      "sha256": "fbcf8d38d2ab17bab0f44cb22fd2a0f788851099b561fa2df05aeaacfa9fe2c9"
+    },
+    {
+      "id": "4J1D",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1D.tree",
+      "sha256": "656aa8a35f9b1ac15ff629864a6d7327bc62115c3cf70fa110d9f8bff93b382d"
+    },
+    {
+      "id": "4J1E",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1E.tree",
+      "sha256": "73e65c973d4397b7f513702e84d6f5e3e4e85907d4d04b51c526889b6b83880e"
+    },
+    {
+      "id": "4J04",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J04.tree",
+      "sha256": "1048f6565f884670a55dbba66eee6ec121426c61e0ee5d709861f777607dcb17"
+    },
+    {
+      "id": "4J1F",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1F.tree",
+      "sha256": "8e972c06f4fb6b556757f03eef01193a11a6348e7dcd336d130758cca963c5ba"
+    },
+    {
+      "id": "013X",
+      "path": "trees/references/013X.tree",
+      "sha256": "b0ad4f4b628cadf863e4f108b42d881900360a0458af12144cf46b99bd152f64"
+    },
+    {
+      "id": "NOTES_STYLE_GUIDE",
+      "path": "NOTES_STYLE_GUIDE.md",
+      "sha256": "a72c61c33b088b8fc87755b980755c3eca1d7a96fd9612d4264917dbfd52ea47"
+    },
+    {
+      "id": "EVERGREEN_ATOMIC_NOTES_SKILL",
+      "path": "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+      "sha256": "741e9cc486f79cb5b6f814c30ff9f02219705f082dcd3778d678bbf94bf8945c"
+    }
+  ],
+  "review_history": [
+    {
+      "packet_revision": 1,
+      "packet_sha256": "d7f3346d64eaad7df394625d050346ae0cb57e95d5836b24daf1e7cde5270762",
+      "review_sha256": "c5bc3e51e58c71a168fef089a011b1826bbc1921df5c3f029be14eca25e5cd6e",
+      "result": "changes-required",
+      "scope": "Full reading of 50 owned trees and packet, plus the recorded directly implicated shared files.",
+      "open_findings": [
+        "PG-F01",
+        "PG-F02",
+        "PG-F03",
+        "PG-F04"
+      ],
+      "resolved_provisional_findings": [
+        "PG-P01",
+        "PG-P02",
+        "PG-P03",
+        "PG-P04",
+        "PG-P05",
+        "PG-P06"
+      ]
+    },
+    {
+      "packet_revision": 2,
+      "packet_sha256": "05834e8d85a8d5c267072d0bd9c89291cbd4c3d44cf7cdd943bfa8d9eff60839",
+      "result": "pass",
+      "scope": "Targeted reread of all changed trees and all packet changes, exact-primary locator checks, isolated parent mathematical regression, and a fresh hash comparison of every previously reviewed file.",
+      "changed_owned_files_reread": [
+        "4I08",
+        "4I0J",
+        "4I0K",
+        "4I0L",
+        "4I0N",
+        "4I0O",
+        "4I0Q",
+        "4I0S",
+        "4I16",
+        "4I1B",
+        "icm2026-perez-garcia"
+      ],
+      "unchanged_previously_reviewed_files_hash_verified": 82,
+      "packet_change_paths_reviewed": [
+        "/report/reading_scope",
+        "/report/proof_scope/4I08/scope",
+        "/report/proof_scope/4I0Q/scope",
+        "/report/proof_scope/4I0S/scope",
+        "/report/proof_scope/4I16/scope",
+        "/report/proof_scope/4I1B/scope",
+        "/report/claim_sources/4I08",
+        "/report/claim_sources/4I0J",
+        "/report/claim_sources/4I0K",
+        "/report/claim_sources/4I0L",
+        "/report/claim_sources/4I0N",
+        "/report/claim_sources/4I0O",
+        "/report/claim_sources/4I0Q",
+        "/report/claim_sources/4I0S",
+        "/report/claim_sources/4I16",
+        "/report/claim_sources/4I1B",
+        "/report/unexpanded_deep_proofs",
+        "/report/metadata/coverage",
+        "/report/metadata/model_conventions",
+        "/report/metadata/status",
+        "/report/metadata/shared_integration",
+        "/report/metadata/review_responses",
+        "/notes",
+        "/prerequisites/4I1B",
+        "/terminology_evidence/canonical_reuse",
+        "/source_records",
+        "/unexpanded_deep_proofs",
+        "/validation/source_links",
+        "/validation/formula_check/count",
+        "/validation/elementary_checks/gram",
+        "/validation/regression_test_candidates",
+        "/validation/build",
+        "/validation/independent_review",
+        "/validation/superseded_checks",
+        "/validation/parent_regression",
+        "/validation/computation_provenance",
+        "/validation/review_input",
+        "/freeze/revision",
+        "/freeze/mutation_boundary",
+        "/freeze/previous_packet_sha256"
+      ],
+      "resolved_final_findings": [
+        "PG-F01",
+        "PG-F02",
+        "PG-F03",
+        "PG-F04"
+      ],
+      "shared_suite_run": false,
+      "build_run": false,
+      "git_commands_run": false
+    }
+  ]
+}

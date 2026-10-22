@@ -1,0 +1,14 @@
+\title{Abel 半积分的二次复合与 BGK 陷获分布反演}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§5.2；2601.10030v2，式 (1.18)、(1.20)；复合积分证明}
+
+\p{对 #{f\in C([0,L])} 定义 Abel 半积分 #{I(f)(y)=\pi^{-1/2}\int_0^y f(u)(y-u)^{-1/2}du}。则}
+##{I(I(f))(y)=\int_0^y f(u)du,\qquad f(y)=\frac d{dy}I(I(f))(y).}
+\p{\strong{证明。}两次积分的绝对值由 #{\|f\|_\infty} 乘以可积的双奇核控制，故 [Fubini 定理](0H53)适用。交换积分得到}
+##{I(I(f))(y)=\frac 1\pi\int_0^yf(u)\left[\int_u^y\frac{ds}{\sqrt{(y-s)(s-u)}}\right]du.}
+\p{令 #{s=u+(y-u)\sin^2\theta}，内积分成为 #{2\int_0^{\pi /2}d\theta=\pi}，即得第一式；第二式来自[微积分基本定理](0A3C)。}
+\p{对 [BGK 密度方程](4H1D)，若连续陷获分布存在，令 #{A=N-J(F_f)}，则 #{A=\sqrt{2\pi}I(F_t)}，从而唯一地}
+##{F_t(y)=\frac 1{\sqrt{2\pi}}\frac d{dy}I(A)(y).}
+\p{这证明反演公式及连续解的唯一性。任意给定 #{A} 未必产生连续非负的 #{F_t}；端点相容和正性必须检查。}

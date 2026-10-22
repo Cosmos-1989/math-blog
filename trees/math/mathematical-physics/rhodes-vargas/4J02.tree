@@ -1,0 +1,15 @@
+\title{经典 Liouville 作用量的临界点具有常负曲率}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (1.2)、(3.1)；变分与唯一性推导。}
+
+\p{设 #{(\Sigma,g)} 是闭连通曲面，#{\gamma,\mu>0}。采用[标量曲率与非负 Laplace 算子](4J01)，定义经典作用量}
+##{S_g^{\rm cl}(u)=\frac 1{4\pi}\int_\Sigma\left(|du|_g^2+\frac 2\gamma K_gu+4\pi\mu e^{\gamma u}\right)dv_g.}
+\p{光滑函数 #{u} 是它的临界点，当且仅当 #{g'=e^{\gamma u}g} 的标量曲率等于 #{-2\pi\mu\gamma^2}。若临界点存在，则唯一。}
+\p{\strong{变分。}对任意光滑 #{v}，使用[分部积分](0U14)，}
+##{\left.\frac d{dt}S_g^{\rm cl}(u+tv)\right|_{t=0}=\frac 1{4\pi}\int_\Sigma(2\Delta_gu+2K_g/\gamma+4\pi\mu\gamma e^{\gamma u})v\,dv_g.}
+\p{故临界方程等价于 #{K_g+\gamma\Delta_gu=-2\pi\mu\gamma^2e^{\gamma u}}。代入共形曲率公式即得结论。}
+\p{\strong{唯一性。}若 #{u,v} 都是解，以 #{w=u-v} 乘两式之差并积分，得}
+##{2\int_\Sigma|dw|_g^2\,dv_g+4\pi\mu\gamma\int_\Sigma(e^{\gamma u}-e^{\gamma v})(u-v)\,dv_g=0.}
+\p{两项非负，且指数函数严格递增；所以 #{u=v}。存在性另需几何条件；将方程积分可见 #{\chi(\Sigma)<0} 是必要条件。量子理论使用的背景电荷 #{Q=2/\gamma+\gamma /2} 与这里的 #{2/\gamma} 不同。}

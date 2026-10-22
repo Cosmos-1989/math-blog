@@ -1,0 +1,12 @@
+\title{自由输运的速度平均产生三维稀释}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§3；换元证明}
+
+\p{在 #{\mathbb R^d_x\times\mathbb R^d_v}，设 #{h(t,x,v)=h_0(x-tv,v)} 是[自由输运解](4503)，且 #{A=\int\sup_v|h_0(y,v)|\,dy<\infty}。其速度平均 #{r(t,x)=\int h(t,x,v)\,dv} 满足}
+##{\|r(t)\|_{L^\infty_x}\leq |t|^{-d}A,\qquad t\ne 0.}
+\p{\strong{证明。}固定 #{x,t}，令 #{y=x-tv}。换元的 Jacobian 绝对值为 #{|t|^d}，于是}
+##{r(t,x)=|t|^{-d}\int h_0\left(y,\frac{x-y}{t}\right)\,dy.}
+\p{取绝对值并用对速度的上确界控制，得到与 #{x} 无关的界。在 #{d=3} 时衰减为 #{t^{-3}}。#{A} 是 [#{L^1_xL^\infty_v} 混合范数](4305)的同类定义，积分和上确界的顺序不可交换。}
+\p{相空间的 #{L^p} 大小因剪切换元保持不变；衰减发生在速度积分之后。这与周期剪切的[相位混合](450F)共享“不同速度累积不同位移”的机制，全空间还允许粒子向外扩散。}

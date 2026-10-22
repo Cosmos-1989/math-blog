@@ -1,0 +1,11 @@
+\title{匀速源激发的尾迹共振}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (4.1)；逐频率积分}
+
+\p{设 #{B\in\mathcal S(\mathbb R^d)}，#{v\in\mathbb R^d} 固定，#{\omega(\xi)} 为实色散函数。以 [Fourier 乘子](0H4G)定义 #{\omega(D)}，考察 #{(\partial_t-i\omega(D))u=B(x-vt)}、#{u(0)=0}。则}
+##{\widehat u(t,\xi)=\widehat B(\xi)e^{it\omega(\xi)}\frac{1-e^{-itw_v(\xi)}}{iw_v(\xi)},\qquad w_v(\xi)=\omega(\xi)+v\cdot\xi,}
+\p{在 #{w_v=0} 处将商连续定义为 #{t}。}
+\p{\strong{证明。}[Fourier 平移公式](0H4G)把右端变为 #{e^{-itv\cdot\xi}\widehat B(\xi)}。乘以积分因子 #{e^{-it\omega(\xi)}}，从零积分至 #{t}，得到 #{\widehat B e^{it\omega}\int_0^te^{-isw_v}ds}，计算积分即可。}
+\p{若 #{|w_v|\geq c>0}，积分模长至多 #{2/c}；若 #{w_v=0} 且 #{\widehat B\ne 0}，该模态振幅线性增长。有限时间公式没有真正的分母奇点；长时间控制在共振集合附近退化。Vlasov 的粒子与波相互作用出现同类分母。}

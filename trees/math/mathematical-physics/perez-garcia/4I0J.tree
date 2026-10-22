@@ -1,0 +1,12 @@
+\title{矩阵乘积态如何编码链的边界}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Pérez-García，§5.1.1，Definition 5.2](icm2026-perez-garcia)}
+
+\p{给定 #{d} 个 #{D\times D} 复矩阵 #{A_1,\ldots,A_d}，令链上每点的物理空间为 #{\mathbb C^d}。矩阵乘积态的边界映射是}
+##{\Gamma_N:M_D(\mathbb C)\longrightarrow(\mathbb C^d)^{\otimes N},\qquad
+\Gamma_N(X)=\sum_{i_1,\ldots,i_N=1}^d\operatorname{tr}(XA_{i_1}\cdots A_{i_N})|i_1\cdots i_N\rangle.}
+\p{这里的[张量积](0F4E)按格点顺序排列；#{D} 称虚拟维数或键维数，#{X} 是边界矩阵。所得向量一般未归一化，也可能为零。只有对非零向量除以其范数，才得到[纯态](00JZ)。迹采用通常[矩阵迹](0F0F)，不除以 #{D}。}
+\p{这个公式的逐指标意义是：先将邻接矩阵的列、行指标求和，最后用 #{X} 将两端配对。矩阵单位 #{E_{ab}} 给出 #{\operatorname{tr}(E_{ab}M)=M_{ba}}，所以任意两端指标的振幅都包含在 #{\Gamma_N(M_D)} 中，且该空间维数至多 #{D^2}，与链长无关。}
+\p{最小例子 #{D=1} 时，设 #{A_i=a_i}，便有 #{\Gamma_N(x)=x(\sum_i a_i|i\rangle)^{\otimes N}}。这时边界只改变整体倍数，态为[乘积态](0F4F)。增大 #{D} 才允许更丰富的相关性。}

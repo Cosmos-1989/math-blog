@@ -320,14 +320,14 @@
     "primary_reports_without_identified_proceedings_chapter": 1,
     "primary_reports_cross_listed_to_section_twelve": 6,
     "primary_speakers_cross_listed_to_section_twelve": 7,
-    "primary_reports_with_existing_topic": 6,
+    "primary_reports_with_existing_topic": 9,
     "cross_listed_reports_with_existing_topic": 1,
-    "reports_without_dedicated_topic": 8,
-    "dedicated_topics_total": 7,
+    "reports_without_dedicated_topic": 5,
+    "dedicated_topics_total": 10,
     "related_material_only_reports": 0,
-    "missing_reports": 8,
+    "missing_reports": 5,
     "primary_related_material_only_reports": 0,
-    "primary_missing_reports": 8,
+    "primary_missing_reports": 5,
     "primary_reports_pending_parent_validation": 0,
     "baseline_cross_listed_topics_on_subject_landing": 1,
     "baseline_editorial_plenary_topics_on_subject_landing": 0
@@ -820,9 +820,12 @@
       "coverage_class": "dedicated-topic-present",
       "integration": {
         "date": "2026-10-22",
-        "status": "registered-in-local-source",
+        "status": "published-and-live-verified",
         "validation_record": "research/icm2026-mathematical-physics-second-validation.json",
-        "publication": "This batch is integrated locally; publication requires a separate deployment record."
+        "publication": {
+          "record": "research/icm2026-mathematical-physics-second-release.json",
+          "commit": "5211fad7fc4921292b8dc12248483fe0637ed32b"
+        }
       }
     },
     {
@@ -874,9 +877,12 @@
       "coverage_class": "dedicated-topic-present",
       "integration": {
         "date": "2026-10-22",
-        "status": "registered-in-local-source",
+        "status": "published-and-live-verified",
         "validation_record": "research/icm2026-mathematical-physics-second-validation.json",
-        "publication": "This batch is integrated locally; publication requires a separate deployment record."
+        "publication": {
+          "record": "research/icm2026-mathematical-physics-second-release.json",
+          "commit": "5211fad7fc4921292b8dc12248483fe0637ed32b"
+        }
       }
     },
     {
@@ -928,9 +934,12 @@
       "coverage_class": "dedicated-topic-present",
       "integration": {
         "date": "2026-10-22",
-        "status": "registered-in-local-source",
+        "status": "published-and-live-verified",
         "validation_record": "research/icm2026-mathematical-physics-second-validation.json",
-        "publication": "This batch is integrated locally; publication requires a separate deployment record."
+        "publication": {
+          "record": "research/icm2026-mathematical-physics-second-release.json",
+          "commit": "5211fad7fc4921292b8dc12248483fe0637ed32b"
+        }
       }
     },
     {
@@ -958,7 +967,7 @@
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1805825",
       "metadata_evidence_url": "https://epubs.siam.org/doi/10.1137/25M1805825",
       "checked_on": "2026-10-22",
-      "reading_scope": "Publisher Volume 5 table of contents and individual chapter header/abstract: exact title, all authors, pages and DOI. No full-paper reading, research-proof audit, PDF/image inspection or talk/video viewing.",
+      "reading_scope": "pausader-icm2026: Entire publisher HTML mathematical body §§1–6, every displayed formula, all 11 footnotes, three figure captions, acknowledgments, bibliography [1]–[78], abstract and publication/license metadata. Mathematical body lines88–533, footnotes537–580, references581–1020, metadata1022–1065 were read in overlapping sections; §4.3–6 and bibliography ref4 rechecked before freeze. Figure pixels and publisher PDF were not inspected. Exact-title arXiv search did not locate a matching report version; no nonexistence claim.\nvacuum-scattering-v1: Abstract and entire §1 including Theorem1.1, remarks, open questions and §1.1; §2 Lemma2.1 and its complete proof, start of Lemma2.3. Reviewer follow-up: Theorem3.1 and Remark3.2 in full, §3.3 final proof passage (3.35)–(3.39), §4 beginning (4.1)–(4.10) through Theorem4.2, and the subsequent a-priori bound displays (4.16)–(4.20). Full §§3–4 proofs were not read.\npoisson-equilibrium-v2: Abstract and entire §1, including Theorem1.1, prior-work discussion, proof overview§1.3 and organization; beginning §2 through equations2.1–2.2. The full 60-page research proof was not read.\nsharp-gevrey-v1: Abstract, §1.1 completely including Theorems1.1–1.3 and Remarks1.4–1.7; §1.2 through line176. Theorem1.2/1.3 and exact radii re-read. The opening energy and Z-norm displays of §1.3 through approximately line194 were also seen, not the complete §1.3 or later proofs.\nsmall-bgk-v2: Abstract and §§1.1–1.4, including Definition1.1, Theorem1.2, Remark1.3, Lemma1.4, Theorem1.6, Definition1.8 and Theorem1.9; beginning§1.5 only. AppendixB.1 completely, with neighboring B.2 opening and A.6/A.7 excerpts seen. Not the full 110-page paper and not deep §§3–5 proofs. Versioned abstract metadata was inspected; HTML internal manuscript date is later than arXiv v2 history, so citations bind the explicit v2 identifier.\nlocal-calculations: Calculations and elementary proofs in owned notes, with existing prerequisite pages inspected. No additional primary-paper full-reading claim.\nRepair recheck: PR04/PR05: independently re-opened publisher HTML lines88–173 and265–390, checking §1.3/(1.4), §1.4 Boltzmann background, §1.4.1/(1.5), §2 energy/angular-momentum steady states, §4 opening/(4.1), §4.2 before(4.10), §4.2/(4.13) and §4.2.1 Poisson model. Re-read actual 4H0A statement: both phi and chi are Schwartz, not restricted to compact support.",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -966,13 +975,26 @@
         "doi": true,
         "method": "Individual official SIAM DOI header cross-checked with Volume 5 Section Eleven contents."
       },
-      "status": "missing",
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "status": "selected-branches-integrated",
+      "outline": "4H00",
+      "reference": "icm2026-pausader",
+      "on_subject_landing": true,
       "reusable_existing_notes": [],
       "background_only_notes": [],
-      "note": "No same-report outline, reference, exact title, DOI or author identity was found in the frozen pre-existing trees/research corpus. General mathematical background does not establish report integration."
+      "note": "已建立专题综述与原子条目，复用既有基础；推导、引用定理、条件性结论与猜想在正文中分别注明。",
+      "baseline_review": {
+        "status": "missing",
+        "note": "No same-report outline, reference, exact title, DOI or author identity was found in the frozen pre-existing trees/research corpus. General mathematical background does not establish report integration.",
+        "reading_scope": "Publisher Volume 5 table of contents and individual chapter header/abstract: exact title, all authors, pages and DOI. No full-paper reading, research-proof audit, PDF/image inspection or talk/video viewing."
+      },
+      "existing_record": "research/icm2026-mathematical-physics-third-reports.json",
+      "coverage_class": "dedicated-topic-present",
+      "integration": {
+        "date": "2026-10-22",
+        "status": "registered-in-local-source",
+        "validation_record": "research/icm2026-mathematical-physics-third-validation.json",
+        "publication": "This batch is integrated locally; publication requires a separate deployment record."
+      }
     },
     {
       "speakers": [
@@ -999,7 +1021,7 @@
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1804728",
       "metadata_evidence_url": "https://epubs.siam.org/doi/10.1137/25M1804728",
       "checked_on": "2026-10-22",
-      "reading_scope": "Publisher Volume 5 table of contents and individual chapter header/abstract: exact title, all authors, pages and DOI. No full-paper reading, research-proof audit, PDF/image inspection or talk/video viewing.",
+      "reading_scope": "perez-garcia-icm2026: Entire publisher HTML: abstract, mathematical §§1–6, every displayed formula, all bibliography entries [1]–[64], acknowledgments and copyright/publication metadata, read in overlapping section-sized passes. All 15 inline tensor-diagram images were opened and visually inspected individually in the browser. No report PDF edition was read. §§2–3 were rechecked during final authoring. For revision 2, reread Theorem 2.3 clauses 2–3 and the following undecidability consequence, and §§5.1.1–5.2 including Definitions 5.2, 5.3, 5.5 and equations (5.1)–(5.3); checked the corresponding note locators against those passages.\nhaag-duality-v2: v2 abstract and §1; all §2.1 including Lemma 2.1.4 proof; §2.2 Assumption 2.2.1, Remark 2.2.2 and Lemma 2.2.3 statement plus selected proof paragraphs, not the whole proof; §3.1 definitions through dual/trivial representations; §3.4 Definitions 3.4.1–3.4.5; §3.5 Theorem 3.5.3 and selected proof text; §3.6 main theorem, Lemma 3.6.3 uses and proof conclusion; §3.7 Theorem 3.7.1 and beginning of its proof; §4.1 theorem statements and finite-map formulas through Corollary 4.1.6, plus beginning of §4.2. Earlier v1 was also read for these themes and §3.4 tensor conventions, but final theorem contracts are bound to v2. The 70-page paper and its 166 figures were not read in full; no full appendix reading claimed.\ncubitt-gap-v5: Version metadata/abstract; PDF introductory definitions of strong gapped/gapless and initial Theorem 3 (printed pp.5–6); restatement and final assembly excerpt in §6.2 (printed pp.140–142). Independently read publisher PDF pages 4 and 96 via text extraction from existing parent-provided /tmp/cubitt-undecidability-2022.pdf to verify alpha≤beta versus alpha≤2beta. Not the full 150-page proof. Web PDF screenshot calls failed; no visual-PDF inspection by this author is claimed.\nlevin-wen-v2: Abstract/version metadata and introduction excerpt; HTML §IV.B fixed-point Hamiltonians, equations (10)–(14), coefficient choice d_s/sum d_i^2 and listed commuting-projector consequences. Full appendices, F-symbol graphical proofs and generalized models were not read.\nogata-sectors-v1: Version metadata and license; PDF text of §1.3 Definition 1.5 and following main-result summary (printed p.5), §2 Setting 2.1 and equations (2.1)–(2.2) (printed p.6), Lemma 2.2 and beginning of Definition 2.3. These selected passages were read independently for revision 2. Not the full 50-page paper, later category-construction proofs or appendices.\negno-2015-author-final: Title/copyright pages; Definition 4.1.1 and Examples 4.1.2–4.1.3, printed p.65 (PDF page 82); Proposition 4.2.1 and Remark 4.2.2, p.66 (PDF page 83); Remark 9.4.7 on Hermitian and unitary fusion categories, pp.283–284 (PDF pages 300–301). Selected PDF text read independently, not the entire book. The numbered item 4.2.2 is a Remark, not an Example.\nlocal-calculations: Local proofs in the notes: finite spectral/projection identities, halting diagonal reduction, restricted binary Busy Beaver simulation, GNS, finite tensor commutants, MPS/PEPS annihilation, pseudoinverse image projection, cut-rank bound, four-leg regular-group contractions on finite square-lattice regions, boundary rank, polarization, conditional plane uniqueness, decreasing projections, Pauli toric-code counting, string endpoints, and intertwiner tensor composition. Revision 2 recomputes physical Z2 four-leg tensor contractions for path3 and square4 with all eight boundary legs, rather than the superseded two-boundary group-label expansion.",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -1007,13 +1029,26 @@
         "doi": true,
         "method": "Individual official SIAM DOI header cross-checked with Volume 5 Section Eleven contents."
       },
-      "status": "missing",
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "status": "selected-branches-integrated",
+      "outline": "4I00",
+      "reference": "icm2026-perez-garcia",
+      "on_subject_landing": true,
       "reusable_existing_notes": [],
       "background_only_notes": [],
-      "note": "No same-report outline, reference, exact title, DOI or author identity was found in the frozen pre-existing trees/research corpus. General mathematical background does not establish report integration."
+      "note": "已建立专题综述与原子条目，复用既有基础；推导、引用定理、条件性结论与猜想在正文中分别注明。",
+      "baseline_review": {
+        "status": "missing",
+        "note": "No same-report outline, reference, exact title, DOI or author identity was found in the frozen pre-existing trees/research corpus. General mathematical background does not establish report integration.",
+        "reading_scope": "Publisher Volume 5 table of contents and individual chapter header/abstract: exact title, all authors, pages and DOI. No full-paper reading, research-proof audit, PDF/image inspection or talk/video viewing."
+      },
+      "existing_record": "research/icm2026-mathematical-physics-third-reports.json",
+      "coverage_class": "dedicated-topic-present",
+      "integration": {
+        "date": "2026-10-22",
+        "status": "registered-in-local-source",
+        "validation_record": "research/icm2026-mathematical-physics-third-validation.json",
+        "publication": "This batch is integrated locally; publication requires a separate deployment record."
+      }
     },
     {
       "speakers": [
@@ -1045,7 +1080,7 @@
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1803632",
       "metadata_evidence_url": "https://epubs.siam.org/doi/10.1137/25M1803632",
       "checked_on": "2026-10-22",
-      "reading_scope": "Publisher Volume 5 table of contents and individual chapter header/abstract: exact title, all authors, pages and DOI. No full-paper reading, research-proof audit, PDF/image inspection or talk/video viewing.",
+      "reading_scope": "rhodes-vargas-icm2026: Entire publisher HTML mathematical body §§1–9, every displayed formula and all figure captions, in overlapping section-sized reads (lines 90–602); acknowledgments 603–604 and footnote 609. Selected relevant bibliography entries only, not the complete bibliography. Metadata/title/authors/DOI/pages/license and online date verified, lines 59–65 and 1196–1246. No publisher PDF or figure-pixel inspection. Subsequent checks re-read §§3–8 normalization, hypotheses and typographical discrepancies.\nreport-preprint-v1: Metadata/abstract and opening §§1–2 only. Not the full version; publisher HTML is the authoritative full-content source.\ndozz-v3: Selected full text: §2.2–2.4 (extracted lines 470–585), §4.2 (830–890), §5.2 (1230–1295, including start of §6 only), Appendix §12.1 and Corollary 12.2 (3548–3600). PDF p.13 rendered and visually inspected for both negative degenerate weights. RV-F09 repair additionally read §1.2, (1.11) and following continuation/zeros paragraph (lines 248–292, PDF p.5), and §12.5, (12.7) and following zeros paragraph (lines 3763–3797, PDF p.53); both pages rendered and visually inspected for the integral, shifts, powers and zero sets. Remaining sections not read in full.\nbootstrap-v2: Selected §§1.3–1.5 (lines 342–488), §2.3 (587–627), Proposition 5.5 statement and opening proof (2110–2155), §7.5 formula (7.36) and Proposition 7.12 (5072–5103), §8.1 and start of §8.2 (5198–5234). Searches additionally checked reversed descendant convention at lines 750–753 and 1524. RV-F08 repair additionally read §4.1 through the opening of Proposition 4.1 proof (1165–1235, PDF p.20), §4.2 including Proposition 4.3 proof (1238–1295, PDF pp.21–22), and the ensuing dynamics excerpt through Remark 4.6 (1296–1375); §5.2 opening through Proposition 5.3 statement (1790–1850, PDF p.28) checked for the all-derivatives polynomial-growth domain. Full spectral proof §6, full §5 and full Ward proof §9 were not read.\nsegal-v2: Selected §2.1.1–2.1.3 (760–850), §3.1.2–3.1.3 (1040–1098), Theorem 4.4 and bound (1860–1915), Propositions 5.1/5.2 and gluing constants (2190–2260), §10.1 selected local Green proof excerpt (4350–4400), Appendix C statement and proof excerpt (6371–6465). No full proof of Segal axioms or high-genus bootstrap read. §10.1 planar/sphere excerpt is not used as authority for arbitrary closed-surface smooth Green remainder.\nzelditch-v1: Introduction eigenbasis/positive Laplacian convention (text lines 120–175, PDF pp.3–4); §8 Weyl law (2340–2410, pp.45–46). Not the whole survey or microlocal proof. Spectral frequency squared is converted to the present Laplace eigenvalue.\npolyakov-v5-consulted: Selected §3 excerpt lines 1720–1785 and searches of Green-kernel statements. Hyperbolic scope identified; not used to infer all-metric circle averages or arbitrary-surface Green regularity.\nreview-v1-consulted: Abstract/contents and selected §3 excerpt lines 900–980. Used to compare conventions, not treated as fully read. Report covariance normalization remains authoritative.\nlocal-calculations: Explicit local derivations are given in the authored atoms and distinguished from quoted elliptic/GMC/LCFT research theorems.",
       "metadata_verified": {
         "title": true,
         "authors": true,
@@ -1053,13 +1088,26 @@
         "doi": true,
         "method": "Individual official SIAM DOI header cross-checked with Volume 5 Section Eleven contents."
       },
-      "status": "missing",
-      "outline": null,
-      "reference": null,
-      "on_subject_landing": false,
+      "status": "selected-branches-integrated",
+      "outline": "4J00",
+      "reference": "icm2026-rhodes-vargas",
+      "on_subject_landing": true,
       "reusable_existing_notes": [],
       "background_only_notes": [],
-      "note": "No same-report outline, reference, exact title, DOI or author identity was found in the frozen pre-existing trees/research corpus. General mathematical background does not establish report integration."
+      "note": "已建立专题综述与原子条目，复用既有基础；推导、引用定理、条件性结论与猜想在正文中分别注明。",
+      "baseline_review": {
+        "status": "missing",
+        "note": "No same-report outline, reference, exact title, DOI or author identity was found in the frozen pre-existing trees/research corpus. General mathematical background does not establish report integration.",
+        "reading_scope": "Publisher Volume 5 table of contents and individual chapter header/abstract: exact title, all authors, pages and DOI. No full-paper reading, research-proof audit, PDF/image inspection or talk/video viewing."
+      },
+      "existing_record": "research/icm2026-mathematical-physics-third-reports.json",
+      "coverage_class": "dedicated-topic-present",
+      "integration": {
+        "date": "2026-10-22",
+        "status": "registered-in-local-source",
+        "validation_record": "research/icm2026-mathematical-physics-third-validation.json",
+        "publication": "This batch is integrated locally; publication requires a separate deployment record."
+      }
     },
     {
       "speakers": [
@@ -1372,6 +1420,9 @@
       "4E00",
       "4F00",
       "4G00",
+      "4H00",
+      "4I00",
+      "4J00",
       "4900",
       "0Q00",
       "0006",

@@ -1,0 +1,13 @@
+\title{Virasoro 二级 Gram 矩阵的直接计算}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§7 的 Shapovalov 形式；交换子计算。}
+
+\p{在实 #{h,c} 的[最高权模](4J0K)中，将最高权向量 #{v} 归一化为 #{\langle v,v\rangle=1}，规定 #{L_n^*=L_{-n}}，并采用第二变量线性的[内积约定](004M)。这些代数关系定义各层的 Hermitian Gram 形式，称 Shapovalov 形式；它不一定正定。一级与二级矩阵分别为}
+##{F_h^{(1)}=(2h),\qquad F_h^{(2)}=\begin{pmatrix}4h+c/2&6h\\6h&4h(2h+1)\end{pmatrix},}
+\p{二级有序向量取 #{L_{-2}v,L_{-1}^2v}。}
+\p{\strong{证明。}#{\langle L_{-n}v,L_{-n}v\rangle=\langle v,[L_n,L_{-n}]v\rangle}，在 #{n=1,2} 时给出 #{2h} 与 #{4h+c/2}。又 #{[L_2,L_{-1}]=3L_1}，故 #{L_2L_{-1}^2v=3L_1L_{-1}v=6hv}。}
+\p{最后，#{[L_1,L_{-1}]=2L_0} 给出 #{L_1L_{-1}^2v=2L_0L_{-1}v+2L_{-1}L_0v=(4h+2)L_{-1}v}。再作用一次 #{L_1} 得 #{4h(2h+1)v}。因此}
+##{\det F_h^{(2)}=4h\left[(4h+c/2)(2h+1)-9h\right].}
+\p{复参数时可将这些矩阵元素作为 #{h,c} 的多项式作双线性延拓。在 Liouville 谱线 #{\alpha=Q+ip} 上 #{h=\Delta_\alpha} 为实数，两种记法相容。}

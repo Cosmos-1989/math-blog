@@ -1,0 +1,11 @@
+\title{分数阶耗散乘子的密度衰减尺度}
+\date{2026-10-22}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§4.2.1；Fourier 积分估计}
+
+\p{给定 #{d\geq 1}、#{\gamma>0} 和 #{t>0}，采用 [Fourier 约定](0H4G)定义逆积分}
+##{K_t(x)=(2\pi)^{-d}\int_{\mathbb R^d}e^{ix\cdot\xi}e^{-t|\xi|^\gamma}d\xi.}
+\p{则对 #{u_0\in L^1(\mathbb R^d)}，#{u(t)=K_t*u_0} 满足 #{\|u(t)\|_\infty\leq C_{d,\gamma}t^{-d/\gamma}\|u_0\|_1}。这里 #{K_t*u_0(x)=\int K_t(x-y)u_0(y)dy}。}
+\p{\strong{证明。}绝对积分给 #{|K_t(x)|\leq(2\pi)^{-d}\int e^{-t|\xi|^\gamma}d\xi}。令 #{\eta=t^{1/\gamma}\xi}，右侧变为 #{t^{-d/\gamma}(2\pi)^{-d}\int e^{-|\eta|^\gamma}d\eta}。后者有限，因为球坐标积分为常数乘 #{\int_0^\infty r^{d-1}e^{-r^\gamma}dr}，在零点及无穷远都可积。最后用 #{|(K_t*u_0)(x)|\leq\|K_t\|_\infty\|u_0\|_1}。}
+\p{该估计对所有 #{\gamma>0} 成立，不需要核非负。在三维，#{\gamma=1} 给 #{t^{-3}}，#{\gamma=2} 给 #{t^{-3/2}}。这说明报告中厚尾参数增大时，耗散部分可能衰减更慢；将具体 Vlasov 波分解归约到这一乘子仍需相应的研究定理。}

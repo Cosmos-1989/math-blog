@@ -1,0 +1,14 @@
+\title{小 BGK 波的线性阻尼须保留 Galilei 调制}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，定理 5.1；2601.10030v2，Theorem 1.2 与 Remark 1.3(3)、(6)}
+
+\p{设 #{(M_s,\phi_s)} 满足[BGK 分岔曲线条件](4H17)，且 #{\partial_eF_0(0)>0}。固定足够小的 #{s>0}，对同最小周期 #{2\pi}、Poisson 方程可解的初始扰动，假设 #{\langle v\rangle^2f_0\in L^\infty(\mathbb T\times\mathbb R)}。原论文定理 1.2的动力学结论给出[线性化解](4H07)的分解}
+##{f=f^{stat}+f^{gal}+f^{dyn},\qquad \psi=\psi^{stat}+\psi^{gal}+\psi^{dyn}.}
+\p{第一对是时间不变的线性化弱解；弱解指方程在与紧支撑光滑测试函数积分后成立。第二对属于[平移与 Galilei 中性解](4H1A)张成的二维空间：}
+##{f^{gal}=\alpha\partial_xM_s+\beta(\partial_v+t\partial_x)M_s,\qquad \psi^{gal}=(\alpha+\beta t)\partial_x\phi_s.}
+\p{余下动力学场 #{E^{dyn}=\partial_x\psi^{dyn}} 满足}
+##{\int_0^\infty\|E^{dyn}(t)\|_{L^2_x}^2dt<\infty.}
+\p{原论文的场符号取负梯度，与这里相反，但该平方范数不变。其定理还把静态项解释为 BGK 定常族切向扰动的适当完备化；上述陈述只使用静态弱解与动力学分解的结论。若初始总电流 #{\iint vf_0dx\,dv} 有定义且为零，原论文 Remark 1.3(3)说明可使 Galilei 项没有随时间线性增长的部分。}
+\p{\strong{引用的证明。}原论文 §3.3构造调制分解，§5.3估计介电算子的逆。时间平方可积本身[不推出逐点衰减](4H1B)，也不证明非线性稳定性；额外的正则条件才允许进一步作非平稳相估计。}

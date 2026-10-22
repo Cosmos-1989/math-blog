@@ -1,0 +1,15 @@
+\title{齐次 Vlasov 线性化的密度 Volterra 方程}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (4.3)–(4.5)；线性方程的直接推导}
+
+\p{设 #{M_0(v)} 是[单位质量齐次平衡](4H0N)，#{f} 满足 #{\partial_tf+v\cdot\nabla_xf+E\cdot\nabla_vM_0=0}，#{E=\nabla\Delta^{-1}\rho}、#{\rho=\int f\,dv}。假设函数充分光滑且衰减，以便交换积分。则}
+##{\rho(t,x)+\int_0^t\int(t-s)\rho(s,x-(t-s)v)M_0(v)\,dv\,ds=\rho_{free}(t,x),}
+\p{其中 #{\rho_{free}(t,x)=\int f_0(x-tv,v)dv}。}
+\p{\strong{沿自由线积分。}利用[输运公式](4503)，有 #{f(t,x,v)=f_0(x-tv,v)-\int_0^t E(s,x-(t-s)v)\cdot\nabla_vM_0(v)ds}。对速度积分。记 #{a=t-s}，则}
+##{\int E(s,x-av)\cdot\nabla_vM_0(v)dv=a\int(\operatorname{div}_xE)(s,x-av)M_0(v)dv.}
+\p{这是速度分部积分与 #{\operatorname{div}_v E(s,x-av)=-a\operatorname{div}_xE(s,x-av)} 的结果。由 #{\operatorname{div}E=\rho} 即得式子。}
+\p{再取[空间 Fourier 变换](0H4G)，得到因果积分方程}
+##{\widehat\rho(t,\xi)+\int_0^t(t-s)\widehat M_0((t-s)\xi)\widehat\rho(s,\xi)ds=\widehat\rho_{free}(t,\xi).}
+\p{这称 Volterra 方程，因为时刻 #{t} 只积分过去。非线性方程保留相同的左端，右端另加对 #{-E\cdot\nabla_vf} 的自由输运积分；把非线性移入右端并未使它成为给定外力。}

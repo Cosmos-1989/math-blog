@@ -1,0 +1,22 @@
+\title{有限体积哪些一致估计足以推出 Haag 对偶}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ogata–Pérez-García–Ruiz-de-Alarcón v2，Assumption 2.2.1、Remark 2.2.2、Lemma 2.2.3](icm2026-perez-garcia)}
+
+\p{设均匀有界[有限程正相互作用](4I01)有唯一平面无挫折态 #{\omega}。取无限连通区域 #{C}，令 #{\Lambda_N=[-N,N]^2\cap\mathbb Z^2}、#{R_N=C\cap\Lambda_N}、#{L_N=C^c\cap\Lambda_N}。#{Q_S} 是有限区域 #{S} 的零能投影，作用到更大体积时补恒等算子。假设每个 #{N} 可选单位向量 #{\Omega_N\in\operatorname{Im}Q_{\Lambda_N}}。}
+\p{对每个 #{\ell}，要求有自伴部分之间的实线性映射}
+##{S_\ell^1:(\mathcal A_{R_\ell})_{\mathrm h}\to(\mathcal A_{R_{2\ell}})_{\mathrm h},\qquad
+S_\ell^2:(\mathcal A_{R_\ell})_{\mathrm h}\to(\mathcal A_{L_{2\ell}})_{\mathrm h},}
+\p{以及复线性映射 #{\Theta_\ell:\mathcal A_{\Lambda_\ell}\to\mathcal A_{R_{2\ell}}}。要求同一个有界非负函数 #{f(N,\ell)} 满足 #{\lim_{\ell\to\infty}\limsup_{N\to\infty}f(N,\ell)=0}，并使下列估计成立：}
+##{\begin{aligned}
+\|(iQ_{R_N}a-Q_{R_N}S_\ell^1(a)-iQ_{L_N}S_\ell^2(a))\Omega_N\|&\leq\|a\|f(N,\ell),\\
+\|Q_{L_N}b\Omega_N-\Theta_\ell(b)\Omega_N\|&\leq\|b\|f(N,\ell),
+\end{aligned}}
+\p{其中第一式对所有 #{a=a^*\in\mathcal A_{R_\ell}}，第二式对所有 #{b\in\mathcal A_{\Lambda_\ell}}。还要求投影拼接误差}
+##{\begin{aligned}
+\|Q_{R_N}-Q_{R_{3\ell}}Q_{(R_{2\ell})^c\cap R_N}\|(1+\|S_\ell^1\|)&\leq f(N,\ell),\\
+\|Q_{L_N}-Q_{L_{3\ell}}Q_{(L_{2\ell})^c\cap L_N}\|(1+\|S_\ell^2\|)&\leq f(N,\ell).
+\end{aligned}}
+\p{所有有限算子均嵌入包含其支撑的共同有限张量空间，或准局域代数；使用 #{\Omega_N} 的两式取 #{N\geq 2\ell}。这些就是原假设中的大体积条件，小体积值可另取误差界；有界性的要求仍须满足。所引引理给出：这些条件成立时，[Haag 对偶](4I0G)在 #{C} 上成立。其证明先导出[两个无限体积零能条件](4I0X)。}
+\p{误差对每个单位范数的输入算子统一；不能只对每个算子分别选收敛速度。#{\Omega_N} 是预先选定的零能单位向量序列，假设并不要求上述向量误差对所有有限体积态成立。投影拼接项则是真正的[算子范数](00M4)估计，并保留了可能随 #{\ell} 增长的映射范数因子。原文 Remark 2.2.2 允许将扩大尺度 #{2\ell} 改为 #{h(\ell)}，条件为 #{h(\ell)-\ell\to\infty}，相邻缓冲尺度也相应选择。}

@@ -1,0 +1,20 @@
+\title{弱 C* Hopf 代数与双连通条件}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ogata–Pérez-García–Ruiz-de-Alarcón v2，Definitions 3.1.1、3.1.3、3.1.7](icm2026-perez-garcia)}
+
+\p{令 #{A} 为有限维含幺 [C* 代数](0Z01)。弱 C* Hopf 结构包括余乘法 #{\Delta:A\to A\otimes A}、余单位 #{\varepsilon:A\to\mathbb C} 和线性[对极](0143) #{S}。余乘法余结合，余单位满足 #{(\varepsilon\otimes\mathrm{Id})\Delta=(\mathrm{Id}\otimes\varepsilon)\Delta=\mathrm{Id}}；#{\Delta} 保乘法及伴随，但不要求保单位。记 #{\Delta(x)=\sum x_{(1)}\otimes x_{(2)}}，下式省略求和号，#{1'} 表示第二份独立的 #{\Delta(1)}。要求}
+##{\begin{aligned}
+(\Delta\otimes\mathrm{Id})\Delta(1)
+&=(\Delta(1)\otimes 1)(1\otimes\Delta(1))\\
+&=(1\otimes\Delta(1))(\Delta(1)\otimes 1),\\
+\varepsilon(xyz)&=\varepsilon(xy_{(1)})\varepsilon(y_{(2)}z)
+=\varepsilon(xy_{(2)})\varepsilon(y_{(1)}z).
+\end{aligned}}
+\p{对极反转乘法及余乘法，并满足}
+##{x_{(1)}S(x_{(2)})=\varepsilon(1_{(1)}x)1_{(2)}=: \varepsilon^L(x),\qquad
+S(x_{(1)})x_{(2)}=1_{(1)}\varepsilon(x1_{(2)})=: \varepsilon^R(x).}
+\p{这里 #{A^L=\varepsilon^L(A)} 与 #{A^R=\varepsilon^R(A)} 是余单位子代数。对偶空间 #{\widehat A=A^*} 的乘法由 #{(fg)(x)=(f\otimes g)\Delta(x)} 定义，余乘法由 #{\widehat\Delta(f)(x\otimes y)=f(xy)} 定义，伴随为 #{f^*(x)=\overline{f(S(x^*))}}，也带弱 C* Hopf 结构。}
+\p{为精确定义双连通，采用原文的平凡表示：其空间是 #{H_\varepsilon=(\widehat A)^R}，作用为 #{\Phi_\varepsilon(x)f=f_{(1)}f_{(2)}(x)}，其中 #{\widehat\Delta(f)=\sum f_{(1)}\otimes f_{(2)}}。若 #{A} 与 #{\widehat A} 的这两个平凡星表示都不能分解为两个非零不变正交子空间之和，则称 #{A} 双连通，英文 biconnected。这是额外假设，不能从弱 Hopf 公理自动推出。}
+\p{普通[有限群 Hopf 代数](014T)给出最熟悉的特例；弱结构允许平凡表示本身不再是一维，也允许它可分解。因此将普通 Hopf 的术语原样代入弱情形，会遗漏双连通等控制平面纯态的条件。}

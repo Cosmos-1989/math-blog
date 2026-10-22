@@ -1,0 +1,10 @@
+\title{带速度矩的动力学 Gevrey 范数}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，脚注 6；sharp Gevrey v1，式 (1.4)–(1.6)}
+
+\p{在 #{\mathbb T^d_x\times\mathbb R^d_v}，#{\mathbb T=\mathbb R/(2\pi\mathbb Z)}，结合[周期展开](4101)与[连续 Fourier 变换](0H4G)，采用未归一化积分 #{\widehat g(k,\eta)=\int g(x,v)e^{-ik\cdot x-i\eta\cdot v}dx\,dv}。设 #{0<s\leq 1}、#{\lambda>0}、整数 #{n\geq 0}，定义}
+##{\|g\|_{\mathcal G_n^{\lambda,s}}^2=\sum_{|\alpha|\leq n}\sum_{k\in\mathbb Z^d}\int_{\mathbb R^d}e^{2\lambda\langle k,\eta\rangle^s}|D_\eta^\alpha\widehat g(k,\eta)|^2d\eta,\quad\langle k,\eta\rangle=(1+|k|^2+|\eta|^2)^{1/2}.}
+\p{有限范数的函数构成加权 Gevrey-#{1/s} 空间。#{D_\eta^\alpha} 是普通多重偏导；因为 #{D_\eta^\alpha\widehat g=\widehat{(-iv)^\alpha g}}，这个权同时要求速度矩。#{s=1/3} 称 Gevrey-3，而不是 Gevrey-#{1/3}。有限个平方范数相加再开方，与逐项范数求和等价，相关小量阈值随这一等价改变。}
+\p{纯位置范数 #{\mathcal G^{\lambda,s}(\mathbb T^d)} 只保留 #{k} 的加权平方和；纯速度范数去掉 #{k} 求和。指数权中的 #{\lambda} 称正则半径。若 #{\lambda'<\lambda}，有 #{\|g\|_{\mathcal G_n^{\lambda',s}}\leq\|g\|_{\mathcal G_n^{\lambda,s}}}。这种半径损失与仅改变一个多项式 Sobolev 阶数不同。}

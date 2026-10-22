@@ -1,0 +1,16 @@
+\title{谱隙不可判定构造的精确二分}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pérez-García，Theorem 2.3](icm2026-perez-garcia)；引用 Cubitt–Pérez-García–Wolf 的研究定理}
+
+\p{固定一台[通用图灵机](4I06)。存在固定局部维数 #{d} 以及固定的 #{d^2\times d^2} 矩阵 #{A,A',B,C,D,D'}、#{d\times d} 对角投影 #{\Pi}，构成下述平移不变[最近邻系统](4I01)。可选正有理参数 #{\beta} 任意小；选择后这些矩阵与 #{d} 均不随输入 #{n} 改变。}
+\p{矩阵 #{A,D} 为整数对角矩阵；#{A'} 自伴，元素属于 #{\mathbb Z+2^{-1/2}\mathbb Z}；#{B,C} 有整数元素；#{D'} 为整数自伴矩阵。记 #{|n|} 为二进制长度，#{\varphi(n)} 为将二进制数字逆序放到小数点后的有理数。定义}
+##{\begin{aligned}
+h_1(n)&=\alpha(n)\Pi,\qquad h_{\mathrm{col}}=D+\beta D',\\
+h_{\mathrm{row}}(n)&=A+\beta\bigl(A'+e^{i\pi\varphi(n)}B+e^{-i\pi\varphi(n)}B^*\\
+&\hspace{24mm}+e^{i\pi 2^{-|n|}}C+e^{-i\pi 2^{-|n|}}C^*\bigr).
+\end{aligned}}
+\p{这里 #{\alpha(n)\leq\beta} 是可从 #{n} 计算的代数数，归一化满足 #{\max(\|h_1\|,\|h_{\mathrm{row}}\|,\|h_{\mathrm{col}}\|)\leq 1}。报告的定理给出如下二分。}
+\p{若 #{U(n)} 停机，则存在 #{L_0(n)}，使所有 #{L\geq L_0(n)} 的基态唯一且为[乘积态](0F4F)，[激发谱隙](4I02)至少为一。若 #{U(n)} 不停机，则存在 #{c(n)>0}，平移后的谱 #{\operatorname{spec}(H_L(n))-E_0(L,n)} 在 #{[0,c(n)]} 中随 #{L\to\infty} 变稠密。}
+\p{后一结论表示：任给 #{\varepsilon>0}，充分大的每个 #{L} 中，该区间每一点距离平移谱都小于 #{\varepsilon}。它比“没有一致正谱隙”更强。研究证明将计算历史编码到局域相互作用中；该构造定理作为引用结果使用。这里的 #{\alpha\leq\beta} 固定为报告 Theorem 2.3 的陈述。}

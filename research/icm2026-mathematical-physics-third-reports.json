@@ -1,0 +1,3641 @@
+{
+  "date": "2026-10-22",
+  "subject": "006B",
+  "scope": "The next three Section Eleven chapters in proceedings order: Pausader, Perez-Garcia, and the joint Rhodes-Vargas report, pp.516-574.",
+  "source_method": "Published proceedings and versioned primary research; packets distinguish passages read, local derivations, cited theorems, conditional statements and open questions.",
+  "reports": [
+    {
+      "prefix": "4H",
+      "outline": "4H00",
+      "reference": "icm2026-pausader",
+      "doi": "10.1137/25M1805825",
+      "speaker": "Benoit Pausader",
+      "title": "Stability Problems in Collisionless Kinetic Systems",
+      "pages": "516–533",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+      "license": "CC BY 4.0",
+      "question": "参考轨道从自由流变为等离子体波和陷获轨道时，怎样确定宏观场的衰减、终态及稳定性的正确含义？",
+      "reading_scope": "pausader-icm2026: Entire publisher HTML mathematical body §§1–6, every displayed formula, all 11 footnotes, three figure captions, acknowledgments, bibliography [1]–[78], abstract and publication/license metadata. Mathematical body lines88–533, footnotes537–580, references581–1020, metadata1022–1065 were read in overlapping sections; §4.3–6 and bibliography ref4 rechecked before freeze. Figure pixels and publisher PDF were not inspected. Exact-title arXiv search did not locate a matching report version; no nonexistence claim.\nvacuum-scattering-v1: Abstract and entire §1 including Theorem1.1, remarks, open questions and §1.1; §2 Lemma2.1 and its complete proof, start of Lemma2.3. Reviewer follow-up: Theorem3.1 and Remark3.2 in full, §3.3 final proof passage (3.35)–(3.39), §4 beginning (4.1)–(4.10) through Theorem4.2, and the subsequent a-priori bound displays (4.16)–(4.20). Full §§3–4 proofs were not read.\npoisson-equilibrium-v2: Abstract and entire §1, including Theorem1.1, prior-work discussion, proof overview§1.3 and organization; beginning §2 through equations2.1–2.2. The full 60-page research proof was not read.\nsharp-gevrey-v1: Abstract, §1.1 completely including Theorems1.1–1.3 and Remarks1.4–1.7; §1.2 through line176. Theorem1.2/1.3 and exact radii re-read. The opening energy and Z-norm displays of §1.3 through approximately line194 were also seen, not the complete §1.3 or later proofs.\nsmall-bgk-v2: Abstract and §§1.1–1.4, including Definition1.1, Theorem1.2, Remark1.3, Lemma1.4, Theorem1.6, Definition1.8 and Theorem1.9; beginning§1.5 only. AppendixB.1 completely, with neighboring B.2 opening and A.6/A.7 excerpts seen. Not the full 110-page paper and not deep §§3–5 proofs. Versioned abstract metadata was inspected; HTML internal manuscript date is later than arXiv v2 history, so citations bind the explicit v2 identifier.\nlocal-calculations: Calculations and elementary proofs in owned notes, with existing prerequisite pages inspected. No additional primary-paper full-reading claim.\nRepair recheck: PR04/PR05: independently re-opened publisher HTML lines88–173 and265–390, checking §1.3/(1.4), §1.4 Boltzmann background, §1.4.1/(1.5), §2 energy/angular-momentum steady states, §4 opening/(4.1), §4.2 before(4.10), §4.2/(4.13) and §4.2.1 Poisson model. Re-read actual 4H0A statement: both phi and chi are Schwartz, not restricted to compact support.",
+      "proof_scope": {
+        "4H01": {
+          "status": "definition",
+          "scope": "定义相空间密度及两种反应符号，固定 Delta phi=rho-background 与 E=grad phi。"
+        },
+        "4H02": {
+          "status": "local-proof",
+          "scope": "链式法则、相空间散度零、Jacobian 换元证明 Casimir 恒等式；要求轨道存在及积分收敛。"
+        },
+        "4H03": {
+          "status": "local-proof",
+          "scope": "明确 bracket=x-v convention，与 0I85 相反；直接计算 H=v²/2-lambda phi 的向量场。"
+        },
+        "4H04": {
+          "status": "local-proof",
+          "scope": "速度分部积分得到压力张量；不把未闭合矩方程当作 Euler 闭合。"
+        },
+        "4H05": {
+          "status": "definition-and-calculation",
+          "scope": "固定报告的时间和 Laplace 符号，消去 Newton 势得到非局部相互作用。"
+        },
+        "4H06": {
+          "status": "local-proof",
+          "scope": "链式法则证明 F(H) 的定常输运；Poisson 自洽性仍是额外椭圆方程。"
+        },
+        "4H07": {
+          "status": "local-proof",
+          "scope": "展开括号得到反应项与二次项，按 (1.1)/(1.4) 修正报告 (2.1) 反应项符号。"
+        },
+        "4H08": {
+          "status": "definition",
+          "scope": "在指定范数中定义线性控制、指数模态及轨道稳定目标。"
+        },
+        "4H09": {
+          "status": "local-proof",
+          "scope": "y=x-tv 换元给 L1_x Linfty_v 到 Linfty_x 的 t^-d 界。"
+        },
+        "4H0A": {
+          "status": "local-proof",
+          "scope": "对两个 Schwartz 函数 phi、chi 两次分部积分，分别给空间 Linfty 和 L1 界；不额外要求紧支撑。"
+        },
+        "4H0B": {
+          "status": "local-proof",
+          "scope": "链式法则给精确轮廓方程；线性反应项和非线性项分别保留。"
+        },
+        "4H0C": {
+          "status": "local-proof",
+          "scope": "近处 R Linfty 与远处 R^-2 L1 分裂后优化半径。"
+        },
+        "4H0D": {
+          "status": "local-proof",
+          "scope": "支配收敛与奇核截断证明自由模型极限；不附加 Schwartz 假设到研究定理。"
+        },
+        "4H0E": {
+          "status": "conditional-local-proof",
+          "scope": "从精确轨道展开 At^-2+O(t^-2-delta) 两次积分；仅有 O(t^-2) 界不够。"
+        },
+        "4H0F": {
+          "status": "cited-theorem-with-solution-class",
+          "scope": "报告二阶联合权小量版本；原论文 Thm1.1(i)/3.1 的 weighted gamma 解类与局部时间正则性，局部一致收敛；不声称一般弱解唯一。"
+        },
+        "4H0G": {
+          "status": "cited-theorem-with-integrability-check",
+          "scope": "精确保留空间第五阶权、一阶与二阶导数权及场 W3infty；给出 Thm4.2 sigma 终态类。终态只要求有限，不要求小。"
+        },
+        "4H0H": {
+          "status": "cited-theorem",
+          "scope": "第五阶联合权与导数空间权、小量及 W3infty 场；正负时间对数平移号相反。"
+        },
+        "4H0I": {
+          "status": "conditional-local-proof",
+          "scope": "假设 C1 反解存在，用 d²S=0 证明保辛与 Hamilton–Jacobi 直化；不证明全局坐标存在。"
+        },
+        "4H0J": {
+          "status": "local-proof",
+          "scope": "正能量给半径下界，二阶径向凸性给线性逃逸，积分加速度得两端速度。"
+        },
+        "4H0K": {
+          "status": "conditional-local-calculation",
+          "scope": "假设 H=a²/2 的正则坐标存在，计算 SIC 量及约束；不重建全局 Kepler 散射坐标。"
+        },
+        "4H0L": {
+          "status": "local-proof",
+          "scope": "外法向入流零，Stokes 通量恒等式；无界域附加外截断通量趋零，区分镜面反射。"
+        },
+        "4H0M": {
+          "status": "local-examples",
+          "scope": "有界域、半空间、圆柱的 blowdown 必要条件；不是充分的散射定理。"
+        },
+        "4H0N": {
+          "status": "local-proof-and-definition",
+          "scope": "单位质量背景与环面 Poisson 中性相容。三维紧支撑非中性密度仍给 O(|x|^-2) 场；一维 E(+infty)-E(-infty)=Q 排除非零总量时的双端趋零。"
+        },
+        "4H0O": {
+          "status": "local-proof",
+          "scope": "Fourier 模态积分因子求解，频率分母零处取连续极限 t。"
+        },
+        "4H0P": {
+          "status": "local-proof",
+          "scope": "Duhamel 公式和速度分部积分，准确保持卷积号及非线性迫项的角色。"
+        },
+        "4H0Q": {
+          "status": "definition-and-local-bound",
+          "scope": "定义指定频率集合上的下界，证明已存在因果解的加权 L2 乘子界；不由代数除法推出因果逆核。"
+        },
+        "4H0R": {
+          "status": "local-proof",
+          "scope": "K(0,theta)=-theta^-2 与两步极限给非零小频率反例；不适用于环面整数频率。"
+        },
+        "4H0S": {
+          "status": "local-proof",
+          "scope": "三维质量积分与径向逆 Fourier 积分；测试函数证明变换身份。报告 a=sqrt2、primary a=1。"
+        },
+        "4H0T": {
+          "status": "local-proof",
+          "scope": "独立证明 k*q=k-q，以卷积结合律验证因果响应核 delta_0-1_{t>=0}exp(-a|xi|t)sin(t)，用阶乘迭代证明唯一性；衰减因子为 exp(-a|xi|t)。"
+        },
+        "4H0U": {
+          "status": "local-proof",
+          "scope": "精确速度幂尾下 gamma>2 收敛、gamma=2 对数发散；含对数修正的尾需另外判别。"
+        },
+        "4H0V": {
+          "status": "cited-theorem",
+          "scope": "primary v2 C1 小数据速度权9/2，两类混合范数，无中性假设；静态3-delta、振荡2-delta、散射1/2，delta=10^-4。"
+        },
+        "4H0W": {
+          "status": "conditional-local-proof",
+          "scope": "a 与 a' 的明确衰减假设下分部积分得到 T^-1+delta 尾界。"
+        },
+        "4H0X": {
+          "status": "definition",
+          "scope": "位置离散频率、速度连续频率、速度矩和指数半径；与 Euler Gevrey 不等同。"
+        },
+        "4H0Y": {
+          "status": "local-proof",
+          "scope": "rhohat(t,k)=fhat0(k,tk)，在明确逐点指数频率界下得到时间衰减，不直接把积分范数当逐点界。"
+        },
+        "4H0Z": {
+          "status": "cited-theorem",
+          "scope": "primary n=floor(d/2+1)，平衡正则界、theta 裕量、中性与 lambda 半径损失；收敛对象是移动轮廓。"
+        },
+        "4H10": {
+          "status": "cited-theorem",
+          "scope": "primary Thm1.2，lambda 输入、3lambda/4 解和极限、lambda/2 下界，精确双边 Lipschitz 界。"
+        },
+        "4H11": {
+          "status": "local-proof",
+          "scope": "按空间归一化 Fourier 系数计算乘积频率平移，指出晚时频率可重新耦合。"
+        },
+        "4H12": {
+          "status": "definition",
+          "scope": "全局 F(v²/2-phi) 以及背景-1，偶性、最小周期、单调半周期与零能量分界。"
+        },
+        "4H13": {
+          "status": "local-calculation",
+          "scope": "初始时刻平均分解、质量和非负性；最终平衡及 Penrose 条件另须控制。"
+        },
+        "4H14": {
+          "status": "local-proof",
+          "scope": "逐位置积分上下速度差，精确系数16。"
+        },
+        "4H15": {
+          "status": "local-proof",
+          "scope": "三角换元给完整椭圆积分表达，再以端点奇核比较证明对数尺度。"
+        },
+        "4H16": {
+          "status": "local-proof",
+          "scope": "正则非退化转向点的端点截断求导，I'=T/(2pi)；局部时间-能量坐标保辛。"
+        },
+        "4H17": {
+          "status": "definition-and-cited-tangent",
+          "scope": "primary Def1.1：C2 曲线、非零切向、marginal kernel、ED 四阶及 H8 一致界、单井全局 F。Lemma1.4 的首阶势按来源引用。"
+        },
+        "4H18": {
+          "status": "cited-theorem",
+          "scope": "primary Thm1.2 第一支、同最小周期；报告增长率 O(sqrt epsilon) 仅作上界，非匹配下界。"
+        },
+        "4H19": {
+          "status": "cited-theorem-consequence",
+          "scope": "primary weighted initial data 的 static+Galilei+dynamic 分解及 L2_t 场；只陈述静态弱解这一较弱结论，明确 tangent completion 未定义。电流可积且零时可去 Galilei 线性增长。"
+        },
+        "4H1A": {
+          "status": "local-proof",
+          "scope": "微分 M(x+a,v) 与 M(x+ct,v+c) 得精确线性解，保留 t grad_x 项。"
+        },
+        "4H1B": {
+          "status": "local-counterexample-and-proof",
+          "scope": "光滑稀薄尖峰给反例；一致连续性和不交区间论证给充分条件。"
+        },
+        "4H1C": {
+          "status": "local-proof",
+          "scope": "周期分部积分确定负号，Fubini 与保辛换元得到全相空间表达。"
+        },
+        "4H1D": {
+          "status": "local-proof",
+          "scope": "偶速度积分换能量，保留sqrt2常数、背景1与零能量相容条件。"
+        },
+        "4H1E": {
+          "status": "local-proof",
+          "scope": "Fubini 加 sin² 换元得到 I² 积分恒等式，求导得唯一反演；不保证任意数据的正性。"
+        },
+        "4H1F": {
+          "status": "local-proof",
+          "scope": "原始B.1质量1、报告4.15质量2逐项积分；F'(0)精确求导，不据曲率断言Penrose稳定。"
+        },
+        "4H1G": {
+          "status": "conditional-local-proof",
+          "scope": "有波频率隙omega_*时三角不等式给omega_*/2；不覆盖磁场其他分支。"
+        },
+        "4H1H": {
+          "status": "open-question",
+          "scope": "明确属于报告开放问题；有限大终态存在不意味着大初值全散射。"
+        },
+        "4H1I": {
+          "status": "conditional-local-proof",
+          "scope": "指定自相似密度下场缩放t^(1-d)，比较速度及位移绝对积分；不宣称二维自洽散射。"
+        },
+        "4H1J": {
+          "status": "open-question-and-conditional-scaling",
+          "scope": "所列低频符号幂律下比较耗散和色散时间；更一般厚尾引用4仍为in preparation。"
+        },
+        "4H1K": {
+          "status": "open-question",
+          "scope": "二次项、变动陷获区与线性时间估计的区别；退化零导数、非全局能量与非同周期问题未解决。"
+        },
+        "4H1L": {
+          "status": "local-proof-and-open-context",
+          "scope": "角动量分量守恒，F(H,L)满足固定势输运；自洽椭圆问题及环面高维BGK仍须另解。"
+        },
+        "4H1M": {
+          "status": "local-proof",
+          "scope": "指数线性化给(Delta-beta)psi=r和屏蔽乘子；不把乘子界当作Penrose或非线性定理。"
+        },
+        "4H1N": {
+          "status": "local-proof",
+          "scope": "绝对 Fourier 积分和缩放给t^(-d/gamma) L1-Linfty界，对gamma>0有效、不假设核非负。"
+        },
+        "4H1O": {
+          "status": "local-proof",
+          "scope": "体积 Jacobian、Coulomb齐次性、链式法则给 s^-1 场项，正负号逐项核算。"
+        },
+        "4H1P": {
+          "status": "cited-theorem",
+          "scope": "primary Thm1.3所有半径、neutrality、小量与双边Lipschitz估计。"
+        },
+        "4H1Q": {
+          "status": "definition",
+          "scope": "复用弱导数与Lp，单独定义W^{m,infty}，避免把基础定义藏在研究定理中。"
+        },
+        "4H1R": {
+          "status": "local-proof",
+          "scope": "m in L1 cap Linfty使奇核绝对收敛；L2和空间权r>3/2给充分条件，W3infty不由此推出。"
+        }
+      },
+      "claim_sources": {
+        "4H01": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H01: 定义相空间密度及两种反应符号，固定 Delta phi=rho-background 与 E=grad phi。"
+          }
+        ],
+        "4H02": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.1–1.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H02: 链式法则、相空间散度零、Jacobian 换元证明 Casimir 恒等式；要求轨道存在及积分收敛。"
+          }
+        ],
+        "4H03": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.3, (1.4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H03: 明确 bracket=x-v convention，与 0I85 相反；直接计算 H=v²/2-lambda phi 的向量场。"
+          }
+        ],
+        "4H04": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.4.1, (1.5)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H04: 速度分部积分得到压力张量；不把未闭合矩方程当作 Euler 闭合。"
+          }
+        ],
+        "4H05": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.4, (1.6)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H05: 固定报告的时间和 Laplace 符号，消去 Newton 势得到非局部相互作用。"
+          }
+        ],
+        "4H06": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.2, §5.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H06: 链式法则证明 F(H) 的定常输运；Poisson 自洽性仍是额外椭圆方程。"
+          }
+        ],
+        "4H07": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§2, (2.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H07: 展开括号得到反应项与二次项，按 (1.1)/(1.4) 修正报告 (2.1) 反应项符号。"
+          }
+        ],
+        "4H08": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H08: 在指定范数中定义线性控制、指数模态及轨道稳定目标。"
+          }
+        ],
+        "4H09": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3, (3.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H09: y=x-tv 换元给 L1_x Linfty_v 到 Linfty_x 的 t^-d 界。"
+          }
+        ],
+        "4H0A": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2, (4.13)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0A: 对两个 Schwartz 函数 phi、chi 两次分部积分，分别给空间 Linfty 和 L1 界；不额外要求紧支撑。"
+          }
+        ],
+        "4H0B": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4, (4.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0B: 链式法则给精确轮廓方程；线性反应项和非线性项分别保留。"
+          }
+        ],
+        "4H0C": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3; 2101.01390v1 §2 context"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0C: 近处 R Linfty 与远处 R^-2 L1 分裂后优化半径。"
+          }
+        ],
+        "4H0D": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3, (3.4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0D: 支配收敛与奇核截断证明自由模型极限；不附加 Schwartz 假设到研究定理。"
+          }
+        ],
+        "4H0E": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3, (3.3)–(3.6)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0E: 从精确轨道展开 At^-2+O(t^-2-delta) 两次积分；仅有 O(t^-2) 界不够。"
+          }
+        ],
+        "4H0F": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 3.1(i), (3.5)–(3.6)"
+          },
+          {
+            "source": "vacuum-scattering-v1",
+            "locator": "Theorems1.1(i),3.1; Remark3.2(2)"
+          }
+        ],
+        "4H0G": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 3.1(ii), (3.7)"
+          },
+          {
+            "source": "vacuum-scattering-v1",
+            "locator": "Theorems1.1(ii),4.2; (4.3)–(4.10)"
+          }
+        ],
+        "4H0H": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 3.1(iii), (3.8)"
+          },
+          {
+            "source": "vacuum-scattering-v1",
+            "locator": "Theorem1.1(iii)"
+          }
+        ],
+        "4H0I": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3.1"
+          },
+          {
+            "source": "vacuum-scattering-v1",
+            "locator": "§4, generating function"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0I: 假设 C1 反解存在，用 d²S=0 证明保辛与 Hamilton–Jacobi 直化；不证明全局坐标存在。"
+          }
+        ],
+        "4H0J": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0J: 正能量给半径下界，二阶径向凸性给线性逃逸，积分加速度得两端速度。"
+          }
+        ],
+        "4H0K": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3.1, SIC coordinates"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0K: 假设 H=a²/2 的正则坐标存在，计算 SIC 量及约束；不重建全局 Kepler 散射坐标。"
+          }
+        ],
+        "4H0L": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0L: 外法向入流零，Stokes 通量恒等式；无界域附加外截断通量趋零，区分镜面反射。"
+          }
+        ],
+        "4H0M": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0M: 有界域、半空间、圆柱的 blowdown 必要条件；不是充分的散射定理。"
+          }
+        ],
+        "4H0N": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4 introduction; §4.2 three-dimensional setting; (1.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0N: 单位质量背景与环面 Poisson 中性相容。三维紧支撑非中性密度仍给 O(|x|^-2) 场；一维 E(+infty)-E(-infty)=Q 排除非零总量时的双端趋零。"
+          }
+        ],
+        "4H0O": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4 opening, (4.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0O: Fourier 模态积分因子求解，频率分母零处取连续极限 t。"
+          }
+        ],
+        "4H0P": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.1, (4.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0P: Duhamel 公式和速度分部积分，准确保持卷积号及非线性迫项的角色。"
+          }
+        ],
+        "4H0Q": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.1, (4.9)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0Q: 定义指定频率集合上的下界，证明已存在因果解的加权 L2 乘子界；不由代数除法推出因果逆核。"
+          }
+        ],
+        "4H0R": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2, discussion preceding (4.10)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0R: K(0,theta)=-theta^-2 与两步极限给非零小频率反例；不适用于环面整数频率。"
+          }
+        ],
+        "4H0S": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2.1"
+          },
+          {
+            "source": "poisson-equilibrium-v2",
+            "locator": "(1.5)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0S: 三维质量积分与径向逆 Fourier 积分；测试函数证明变换身份。报告 a=sqrt2、primary a=1。"
+          }
+        ],
+        "4H0T": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2.1, Poisson model; independent explicit response-kernel proof"
+          },
+          {
+            "source": "poisson-equilibrium-v2",
+            "locator": "§1 linear response; §2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0T: 独立证明 k*q=k-q，以卷积结合律验证因果响应核 delta_0-1_{t>=0}exp(-a|xi|t)sin(t)，用阶乘迭代证明唯一性；衰减因子为 exp(-a|xi|t)。"
+          }
+        ],
+        "4H0U": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0U: 精确速度幂尾下 gamma>2 收敛、gamma=2 对数发散；含对数修正的尾需另外判别。"
+          }
+        ],
+        "4H0V": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 4.1"
+          },
+          {
+            "source": "poisson-equilibrium-v2",
+            "locator": "Theorem1.1; (1.5)"
+          }
+        ],
+        "4H0W": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2.1, oscillatory field discussion"
+          },
+          {
+            "source": "poisson-equilibrium-v2",
+            "locator": "§1.3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0W: a 与 a' 的明确衰减假设下分部积分得到 T^-1+delta 尾界。"
+          }
+        ],
+        "4H0X": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.3, footnote 6"
+          },
+          {
+            "source": "sharp-gevrey-v1",
+            "locator": "§1.1, (1.4)–(1.5), interpreted via report footnote6"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0X: 位置离散频率、速度连续频率、速度矩和指数半径；与 Euler Gevrey 不等同。"
+          }
+        ],
+        "4H0Y": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.3"
+          },
+          {
+            "source": "sharp-gevrey-v1",
+            "locator": "§1.1, free transport context"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H0Y: rhohat(t,k)=fhat0(k,tk)，在明确逐点指数频率界下得到时间衰减，不直接把积分范数当逐点界。"
+          }
+        ],
+        "4H0Z": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 4.2, (4.16)–(4.17)"
+          },
+          {
+            "source": "sharp-gevrey-v1",
+            "locator": "Theorem1.1; (1.6)–(1.11)"
+          }
+        ],
+        "4H10": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.3"
+          },
+          {
+            "source": "sharp-gevrey-v1",
+            "locator": "Theorem1.2"
+          }
+        ],
+        "4H11": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.3"
+          },
+          {
+            "source": "sharp-gevrey-v1",
+            "locator": "(1.9), local Fourier computation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H11: 按空间归一化 Fourier 系数计算乘积频率平移，指出晚时频率可重新耦合。"
+          }
+        ],
+        "4H12": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.1–5.2, (5.2)"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "§1.1, stationary model"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H12: 全局 F(v²/2-phi) 以及背景-1，偶性、最小周期、单调半周期与零能量分界。"
+          }
+        ],
+        "4H13": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.1, (5.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H13: 初始时刻平均分解、质量和非负性；最终平衡及 Penrose 条件另须控制。"
+          }
+        ],
+        "4H14": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.2.1–5.3, (5.3)"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "§1.1–1.2 pendulum model"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H14: 逐位置积分上下速度差，精确系数16。"
+          }
+        ],
+        "4H15": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.2.1"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "§1.1–1.2 phase portrait"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H15: 三角换元给完整椭圆积分表达，再以端点奇核比较证明对数尺度。"
+          }
+        ],
+        "4H16": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "§1.3 discussion"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H16: 正则非退化转向点的端点截断求导，I'=T/(2pi)；局部时间-能量坐标保辛。"
+          }
+        ],
+        "4H17": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 5.1 hypotheses"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "Definition1.1; Lemma1.4"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H17: primary Def1.1：C2 曲线、非零切向、marginal kernel、ED 四阶及 H8 一致界、单井全局 F。Lemma1.4 的首阶势按来源引用。"
+          }
+        ],
+        "4H18": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 5.1 first case"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "Theorem1.2 instability branch"
+          }
+        ],
+        "4H19": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem 5.1 second case, (5.4)"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "Theorem1.2; Remark1.3(3),(6)"
+          }
+        ],
+        "4H1A": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.1; primary Remark1.3"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "Remark1.3 modulation formulas"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1A: 微分 M(x+a,v) 与 M(x+ct,v+c) 得精确线性解，保留 t grad_x 项。"
+          }
+        ],
+        "4H1B": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.3, (5.4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1B: 光滑稀薄尖峰给反例；一致连续性和不交区间论证给充分条件。"
+          }
+        ],
+        "4H1C": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "§1.3 electrostatic quadratic form"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1C: 周期分部积分确定负号，Fubini 与保辛换元得到全相空间表达。"
+          }
+        ],
+        "4H1D": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.2"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "Theorem1.6; (1.18)–(1.21)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1D: 偶速度积分换能量，保留sqrt2常数、背景1与零能量相容条件。"
+          }
+        ],
+        "4H1E": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§5.2"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "Theorem1.6; (1.18),(1.20)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1E: Fubini 加 sin² 换元得到 I² 积分恒等式，求导得唯一反演；不保证任意数据的正性。"
+          }
+        ],
+        "4H1F": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.3, (4.15)"
+          },
+          {
+            "source": "small-bgk-v2",
+            "locator": "AppendixB.1, (B.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1F: 原始B.1质量1、报告4.15质量2逐项积分；F'(0)精确求导，不据曲率断言Penrose稳定。"
+          }
+        ],
+        "4H1G": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1G: 有波频率隙omega_*时三角不等式给omega_*/2；不覆盖磁场其他分支。"
+          }
+        ],
+        "4H1H": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§6 questions1–2"
+          }
+        ],
+        "4H1I": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§6 question3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1I: 指定自相似密度下场缩放t^(1-d)，比较速度及位移绝对积分；不宣称二维自洽散射。"
+          }
+        ],
+        "4H1J": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2.2; §6 question5"
+          }
+        ],
+        "4H1K": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§6 questions6–7"
+          }
+        ],
+        "4H1L": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§2, energy and angular-momentum steady states; §6 questions4,8"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1L: 角动量分量守恒，F(H,L)满足固定势输运；自洽椭圆问题及环面高维BGK仍须另解。"
+          }
+        ],
+        "4H1M": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§1.4, Boltzmann-electron background"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1M: 指数线性化给(Delta-beta)psi=r和屏蔽乘子；不把乘子界当作Penrose或非线性定理。"
+          }
+        ],
+        "4H1N": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.2.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1N: 绝对 Fourier 积分和缩放给t^(-d/gamma) L1-Linfty界，对gamma>0有效、不假设核非负。"
+          }
+        ],
+        "4H1O": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3"
+          },
+          {
+            "source": "vacuum-scattering-v1",
+            "locator": "§1.1, (1.9)–(1.13)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1O: 体积 Jacobian、Coulomb齐次性、链式法则给 s^-1 场项，正负号逐项核算。"
+          }
+        ],
+        "4H1P": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§4.3"
+          },
+          {
+            "source": "sharp-gevrey-v1",
+            "locator": "Theorem1.3"
+          }
+        ],
+        "4H1Q": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "Theorem3.1 notation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1Q: 复用弱导数与Lp，单独定义W^{m,infty}，避免把基础定义藏在研究定理中。"
+          }
+        ],
+        "4H1R": [
+          {
+            "source": "pausader-icm2026",
+            "locator": "§3, (3.4)"
+          },
+          {
+            "source": "vacuum-scattering-v1",
+            "locator": "(1.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4H1R: m in L1 cap Linfty使奇核绝对收敛；L2和空间权r>3/2给充分条件，W3infty不由此推出。"
+          }
+        ]
+      },
+      "remaining_branches": [
+        {
+          "branch": "Large data, optimal topology and low dimensions",
+          "scope": "4H1H/4H1I represent report§6 questions1–3 as open or conditional. No large-initial-data scattering or two-dimensional asymptotic framework proved."
+        },
+        {
+          "branch": "Point charge and domains",
+          "scope": "4H0J/0K prove reference-flow facts only. Full self-consistent repulsive-charge stability theorem, convex absorbing-domain nonlinear scattering and attractive point-mass trapped dynamics are not reconstructed; boundary problem beyond torus remains open context."
+        },
+        {
+          "branch": "General homogeneous equilibria",
+          "scope": "The exact Poisson model and Gevrey torus theorem are covered. General linear spectral decomposition for arbitrary tails is not fully stated or proved. Survey ref4 thick-tail extension through gamma=2 remains in preparation, not an available proof; thin-tail nonlinear damping is an open question in the survey."
+        },
+        {
+          "branch": "Nonlinear and general BGK waves",
+          "scope": "Same-minimal-period linear result only. General tangent-completion geometry, all higher compatibility functionals, Fprime(0)=0, non-global-energy states, other periods, nonlinear modulation and unstable-orbit endpoints remain unexpanded."
+        },
+        {
+          "branch": "Adjacent models and high dimensions",
+          "scope": "Moment and Schrodinger–Poisson definitions, screening and relativistic low-frequency computation are included. Full Vlasov–Maxwell magnetic-wave theory, quantum analogues, rigorous quasilinear modulation and high-dimensional confined BGK classification are not developed. These match report§6 questions8–11 context."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4H0F",
+            "4H0G",
+            "4H0H"
+          ],
+          "source": "vacuum-scattering-v1",
+          "scope": "Nonlinear characteristic bootstrap, weighted derivative propagation, convergence of the asymptotic field, singular-time wave-operator contraction and global extension cited. Source classes now specified; no uniqueness for arbitrary weak solutions."
+        },
+        {
+          "notes": [
+            "4H0V"
+          ],
+          "source": "poisson-equilibrium-v2",
+          "scope": "Nonlinear resonant field decomposition, all §§3–7 estimates and §8 closure not reproduced."
+        },
+        {
+          "notes": [
+            "4H0Z",
+            "4H10",
+            "4H1P"
+          ],
+          "source": "sharp-gevrey-v1",
+          "scope": "Endpoint Gevrey nonlinear bootstrap, echo chains, causal response estimates, final-state construction and scattering injectivity proofs cited."
+        },
+        {
+          "notes": [
+            "4H17",
+            "4H18",
+            "4H19"
+          ],
+          "source": "small-bgk-v2",
+          "scope": "Bifurcation tangent theorem, operator-valued dielectric expansion, small eigenvalue analysis, modulation projections and time-integrated damping proof cited. Local pendulum geometry is not a proof of the stability sign criterion."
+        },
+        {
+          "notes": [
+            "4H1D",
+            "4H1E"
+          ],
+          "source": "small-bgk-v2",
+          "scope": "Elementary energy/Abel identities proved locally; full smooth BGK manifold parametrization and all endpoint compatibility/positivity conditions are not reproduced."
+        }
+      ],
+      "metadata": {
+        "node_count": 64,
+        "atomic_count": 63,
+        "reference_count": 1,
+        "language": "zh",
+        "model_conventions": "E=grad phi; Delta phi=int Mdv-background; lambda+1 repulsive, -1 attractive. Bracket=xavb-vaxb, opposite0I85. Vacuum uses M=mu². Periodic domain2pi and background1. Poisson research theorem uses a1, survey a=sqrt2 explicitly distinguished. Static/dynamic/Galilei BGK components distinguished.",
+        "coverage": "All report sections represented, with 63 atoms, integrated narrative and elementary proofs. Exact research contracts quoted, full deep proofs deferred as itemized.",
+        "status": "frozen-author-repairs-ready-for-independent-recheck",
+        "shared_integration": "Parent-owned; no shared files, registry, navigation, theme, full build, git or publication action.",
+        "reference_directory": "trees/references",
+        "review_round": 2,
+        "repaired_findings": [
+          "PR04",
+          "PR05"
+        ]
+      }
+    },
+    {
+      "prefix": "4I",
+      "outline": "4I00",
+      "reference": "icm2026-perez-garcia",
+      "doi": "10.1137/25M1804728",
+      "speaker": "David Pérez-García",
+      "title": "The Quest for a Classification of 2D Quantum Phases of Matter",
+      "pages": "534–550",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+      "license": "CC BY 4.0",
+      "question": "有限程二维量子模型为何无法普遍算法分类，而张量网络的体边结构又如何支持从平面基态恢复拓扑激发？",
+      "reading_scope": "perez-garcia-icm2026: Entire publisher HTML: abstract, mathematical §§1–6, every displayed formula, all bibliography entries [1]–[64], acknowledgments and copyright/publication metadata, read in overlapping section-sized passes. All 15 inline tensor-diagram images were opened and visually inspected individually in the browser. No report PDF edition was read. §§2–3 were rechecked during final authoring. For revision 2, reread Theorem 2.3 clauses 2–3 and the following undecidability consequence, and §§5.1.1–5.2 including Definitions 5.2, 5.3, 5.5 and equations (5.1)–(5.3); checked the corresponding note locators against those passages.\nhaag-duality-v2: v2 abstract and §1; all §2.1 including Lemma 2.1.4 proof; §2.2 Assumption 2.2.1, Remark 2.2.2 and Lemma 2.2.3 statement plus selected proof paragraphs, not the whole proof; §3.1 definitions through dual/trivial representations; §3.4 Definitions 3.4.1–3.4.5; §3.5 Theorem 3.5.3 and selected proof text; §3.6 main theorem, Lemma 3.6.3 uses and proof conclusion; §3.7 Theorem 3.7.1 and beginning of its proof; §4.1 theorem statements and finite-map formulas through Corollary 4.1.6, plus beginning of §4.2. Earlier v1 was also read for these themes and §3.4 tensor conventions, but final theorem contracts are bound to v2. The 70-page paper and its 166 figures were not read in full; no full appendix reading claimed.\ncubitt-gap-v5: Version metadata/abstract; PDF introductory definitions of strong gapped/gapless and initial Theorem 3 (printed pp.5–6); restatement and final assembly excerpt in §6.2 (printed pp.140–142). Independently read publisher PDF pages 4 and 96 via text extraction from existing parent-provided /tmp/cubitt-undecidability-2022.pdf to verify alpha≤beta versus alpha≤2beta. Not the full 150-page proof. Web PDF screenshot calls failed; no visual-PDF inspection by this author is claimed.\nlevin-wen-v2: Abstract/version metadata and introduction excerpt; HTML §IV.B fixed-point Hamiltonians, equations (10)–(14), coefficient choice d_s/sum d_i^2 and listed commuting-projector consequences. Full appendices, F-symbol graphical proofs and generalized models were not read.\nogata-sectors-v1: Version metadata and license; PDF text of §1.3 Definition 1.5 and following main-result summary (printed p.5), §2 Setting 2.1 and equations (2.1)–(2.2) (printed p.6), Lemma 2.2 and beginning of Definition 2.3. These selected passages were read independently for revision 2. Not the full 50-page paper, later category-construction proofs or appendices.\negno-2015-author-final: Title/copyright pages; Definition 4.1.1 and Examples 4.1.2–4.1.3, printed p.65 (PDF page 82); Proposition 4.2.1 and Remark 4.2.2, p.66 (PDF page 83); Remark 9.4.7 on Hermitian and unitary fusion categories, pp.283–284 (PDF pages 300–301). Selected PDF text read independently, not the entire book. The numbered item 4.2.2 is a Remark, not an Example.\nlocal-calculations: Local proofs in the notes: finite spectral/projection identities, halting diagonal reduction, restricted binary Busy Beaver simulation, GNS, finite tensor commutants, MPS/PEPS annihilation, pseudoinverse image projection, cut-rank bound, four-leg regular-group contractions on finite square-lattice regions, boundary rank, polarization, conditional plane uniqueness, decreasing projections, Pauli toric-code counting, string endpoints, and intertwiner tensor composition. Revision 2 recomputes physical Z2 four-leg tensor contractions for path3 and square4 with all eight boundary legs, rather than the superseded two-boundary group-label expansion.",
+      "proof_scope": {
+        "4I01": {
+          "status": "definition",
+          "scope": "固定 d、图距离、平移不变及均匀有界；区分粒子数和几何程。"
+        },
+        "4I02": {
+          "status": "definition",
+          "scope": "有限体积不同能级间隔；允许简并，标量 Hamiltonian 取无穷；一致体积下界。"
+        },
+        "4I03": {
+          "status": "definition-and-local-proof",
+          "scope": "固定共同程和连续性约定，谱隙同时对 L 与 s 一致；常值、反向、拼接证明等价关系。"
+        },
+        "4I04": {
+          "status": "local-proof",
+          "scope": "有限维谱分解证明零期望迫使每个正项湮灭；给出无挫折的零能约定。"
+        },
+        "4I05": {
+          "status": "local-proof",
+          "scope": "明确有限维空间；共同投影、同时特征基、正权重下界；简并允许。"
+        },
+        "4I06": {
+          "status": "local-proof",
+          "scope": "停机对角论证完整；通用模拟和空白输入编码的构造说明，不重建通用机完整转移表。"
+        },
+        "4I07": {
+          "status": "cited-theorem",
+          "scope": "Theorem 2.3 的整数矩阵、代数 alpha≤beta、相位因子、局部范数≤1；停机仅最终有隙，非停机为强谱稠密。"
+        },
+        "4I08": {
+          "status": "conditional-local-proof",
+          "scope": "以引用构造为输入，完整证明可计算归约；不停机输入属于强无隙分支，不对分支比例作断言；不将有隙承诺分类猜想当成结论。"
+        },
+        "4I09": {
+          "status": "local-proof-and-cited-numerical-bound",
+          "scope": "二符号、仅左右移动、单一停机态、空白输入模型；有限字母编码、有效状态数、模拟上界矛盾。BB(6) 塔界仅作为报告历史下界。"
+        },
+        "4I0A": {
+          "status": "cited-theorem",
+          "scope": "d=10、R=2、L0≥BB(6)，两侧 gap≥1；尺寸转换与参数路径分开；不把此有限边界模型等同于周期四维例子。"
+        },
+        "4I0B": {
+          "status": "conjecture",
+          "scope": "逐输入有隙且两种固定相由停机二分，保留为 Conjecture 3.1。"
+        },
+        "4I0C": {
+          "status": "construction-and-local-proof",
+          "scope": "局部矩阵代数嵌入、范数完成；不交支撑的交换性由有限级及范数极限证明。"
+        },
+        "4I0D": {
+          "status": "local-proof",
+          "scope": "复用 2V0L 偏迹，证明正性、归一化、迹配对；最大纠缠例子区分完整基与子空间投影。"
+        },
+        "4I0E": {
+          "status": "definition",
+          "scope": "抽象极点定义和凸组合正性；与完整矩阵秩一刻画分为独立页面。"
+        },
+        "4I0F": {
+          "status": "local-proof",
+          "scope": "Schwarz 给出零空间线性和商内积；抽象 C* 二项式正元界给左理想、有界表示；内积完成与循环酉唯一性。"
+        },
+        "4I0G": {
+          "status": "definition-and-local-proof",
+          "scope": "纯态 GNS 中锥及补区；先证明局域性给一个包含方向，再定义反向等式。"
+        },
+        "4I0H": {
+          "status": "local-proof",
+          "scope": "有限维块矩阵、矩阵单位的完整计算；只作无限锥的比较，不代替无限证明。"
+        },
+        "4I0I": {
+          "status": "definition-and-local-proof",
+          "scope": "局部给出纯态 GNS 及所有几何、误差函数量词；精确对偶蕴含近似的直接证明。"
+        },
+        "4I0J": {
+          "status": "definition-and-local-calculation",
+          "scope": "未归一化 trace convention，矩阵单位给边界振幅，维数≤D²，D=1 乘积例。"
+        },
+        "4I0K": {
+          "status": "local-proof",
+          "scope": "固定块外指标、迹循环性证明局部像包含及零能性；不推断交性质或有隙。"
+        },
+        "4I0L": {
+          "status": "construction-and-local-proof",
+          "scope": "显式虚拟边、未归一化纠缠对和映射；有限和独立收缩顺序及母项湮灭。"
+        },
+        "4I0M": {
+          "status": "local-proof",
+          "scope": "谱逆 T+、Q=Gamma T+ Gamma*；GammaGamma* 仅在 Gram 为投影时成立，cP 的缩放完整计算。"
+        },
+        "4I0N": {
+          "status": "local-proof",
+          "scope": "明确跨割边界输入不另引入纠缠的假设；逐切割指标展开证明 rank≤D^b。"
+        },
+        "4I0O": {
+          "status": "construction-and-local-proof",
+          "scope": "正则群平均、对偶腿、d=D^4；逆元经转置变成共轭表示，避免非交换群反表示错误。"
+        },
+        "4I0P": {
+          "status": "local-proof",
+          "scope": "平均不变、纠缠边的双端不变、内部消去和 Gamma U_boundary=Gamma。"
+        },
+        "4I0Q": {
+          "status": "local-proof",
+          "scope": "非空有限连通方格顶点区域，最近邻内部边，每点四腿、所有未收缩腿保留边界，4n=2m+b且b≥1；内部边正则迹强迫同一群元，Gram=D^(m-n+1)P；树和方格环归一化。"
+        },
+        "4I0R": {
+          "status": "cited-theorem-and-local-consequences",
+          "scope": "梳形且由方格组成；交换性和交等式引用，零能核和乘积投影推论本地证明。一般有权族仅指原文构造。"
+        },
+        "4I0S": {
+          "status": "local-proof",
+          "scope": "四腿方格区域保留全部边界，4n=2m+b且b≥1；trace(P)=D^(b-1)，由 Gram 得 rankGamma。路径3点与方格4点均b=8、秩D^7；开放区域与无边界环面严格分开。"
+        },
+        "4I0T": {
+          "status": "local-proof-and-cited-model-theorem",
+          "scope": "极化公式完整证明等价；模型应用仅内部矩形且边界边属于大矩形内部，biconnected 适用性引用。"
+        },
+        "4I0U": {
+          "status": "conditional-local-proof",
+          "scope": "假定全部有限矩形非空零能空间与内部不可区分，密度矩阵紧性、对角子列、支撑、唯一性和纯性完整证明。"
+        },
+        "4I0V": {
+          "status": "local-proof",
+          "scope": "有限谱多项式与递减投影强收敛；交空间、强闭性及 P Omega=Omega。"
+        },
+        "4I0W": {
+          "status": "cited-theorem-and-local-example",
+          "scope": "Rieffel–van Daele 精确含幺、包含、循环假设；有限最大纠缠例子，本地不证明一般算子代数定理。"
+        },
+        "4I0X": {
+          "status": "cited-theorem-and-local-reduction",
+          "scope": "完整陈述 Lemma 2.1.4；证明 ibOmega 的交换子分解，压缩提升及因子忠实性引用。"
+        },
+        "4I0Y": {
+          "status": "cited-theorem",
+          "scope": "完整实线性 S、复线性 Theta、双极限、公共有界 f 和四个误差项；可作用的大窗口与共同嵌入约定；不把逐态等式当算子估计。"
+        },
+        "4I0Z": {
+          "status": "definition-and-local-examples",
+          "scope": "方向、格段、不相邻、唯一前驱、其他前驱距离≥3；方格并是附加条件。"
+        },
+        "4I10": {
+          "status": "cited-theorem",
+          "scope": "有限群明确模型；原格近似、2x2 分块精确。一般推广明确为原文 §3.4 biconnected weak-C*-Hopf 固定点族。"
+        },
+        "4I11": {
+          "status": "local-proof",
+          "scope": "逐指标证明转置恒等式、复线性、保伴随和反乘法；不把它等同一般二维转移证明。"
+        },
+        "4I12": {
+          "status": "cited-theorem-and-conditional-reduction",
+          "scope": "精确 6ell 窗口、两侧梳形缓冲、边界包含/基数；复线性保*映射，整个 Gamma_L 像上的恒等式；S和Theta公式只是引用定理后的代数归约。"
+        },
+        "4I13": {
+          "status": "local-proof",
+          "scope": "群 Hopf 的 Delta³(h) 逐项计算；反向腿、普通和弱 Hopf 之间的限制明确。"
+        },
+        "4I14": {
+          "status": "local-proof",
+          "scope": "L≥3 周期边、Pauli 约定、星面交换、两组各一关系、独立稳定子迹投影完整证明；本归一化 gap=2。"
+        },
+        "4I15": {
+          "status": "local-proof",
+          "scope": "简单路径偶奇交点，电磁两弦交叉反交换的直接证明；不代替完整任意子分类。"
+        },
+        "4I16": {
+          "status": "definition",
+          "scope": "固定参考纯态表示；每个锥外表示酉等价的选择准则、不可约类；明确与原文同一 Hilbert 空间约定酉等价；自同态实现和编织构造引用框架。"
+        },
+        "4I17": {
+          "status": "local-proof-and-cited-context",
+          "scope": "对象复合、T tensor S=T rho(S)，交织类型、交换律、结合和伴随完整验证；编织独立性研究证明保留。"
+        },
+        "4I18": {
+          "status": "construction-and-cited-theorem",
+          "scope": "无多重度蜂窝构造及原文相容酉数据；保留 d_s/sum d_i²；顶点和面投影的交换性引用，不给全部 F 符号证明。"
+        },
+        "4I19": {
+          "status": "conjecture",
+          "scope": "两项猜想、非手性定义尚待固定、代表存在性与不变量完备性区别；不声称一般分类已完成。"
+        },
+        "4I1A": {
+          "status": "definition",
+          "scope": "余代数、弱单位/余单位、反向对极、对偶和平凡表示；双连通是两侧平凡表示不可分解，非普通 Hopf 同义。"
+        },
+        "4I1B": {
+          "status": "definition",
+          "scope": "有限维箭头、有限简单同构类、有限半单加性 C* 范畴，全部有限双积含零对象，复合与张量分别复双线性、简单单位、刚性及酉结构；融合重数、结合子 F 与正维数的意义，维数结构定理作为标准输入。"
+        },
+        "4I1C": {
+          "status": "local-proof",
+          "scope": "矩阵单位构造密度矩阵；谱凸分解与正性支撑证明两向；明确不能推广为任意有限维子代数的射线对应。"
+        }
+      },
+      "claim_sources": {
+        "4I01": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§1.1 (1.1)–(1.2)"
+          }
+        ],
+        "4I02": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Definition 1.1"
+          }
+        ],
+        "4I03": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Definition 1.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "固定共同程和连续性约定，谱隙同时对 L 与 s 一致；常值、反向、拼接证明等价关系。"
+          }
+        ],
+        "4I04": [
+          {
+            "source": "local-calculations",
+            "locator": "finite positive-sum kernel calculation"
+          }
+        ],
+        "4I05": [
+          {
+            "source": "local-calculations",
+            "locator": "finite commuting-projector calculation"
+          }
+        ],
+        "4I06": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§2.1 Proposition 2.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "停机对角论证完整；通用模拟和空白输入编码的构造说明，不重建通用机完整转移表。"
+          }
+        ],
+        "4I07": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Theorem 2.3; Cubitt v5 initial Theorem 3"
+          },
+          {
+            "source": "cubitt-gap-v5",
+            "locator": "initial Theorem 3, printed arXiv p.6; Definitions 1–2; compare restated theorem printed p.141 (different alpha bound). Publisher PDF pp.4 and 96 checked independently."
+          }
+        ],
+        "4I08": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§2.2 Theorem 2.3, clauses 2–3, and following undecidability consequence"
+          }
+        ],
+        "4I09": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§2.2 before Theorem 2.5"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "二符号、仅左右移动、单一停机态、空白输入模型；有限字母编码、有效状态数、模拟上界矛盾。BB(6) 塔界仅作为报告历史下界。"
+          }
+        ],
+        "4I0A": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Theorem 2.5"
+          }
+        ],
+        "4I0B": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Conjecture 3.1"
+          }
+        ],
+        "4I0C": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§4 operator-algebraic framework"
+          }
+        ],
+        "4I0D": [
+          {
+            "source": "local-calculations",
+            "locator": "finite partial-trace restriction"
+          }
+        ],
+        "4I0E": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§4 states"
+          }
+        ],
+        "4I0F": [
+          {
+            "source": "local-calculations",
+            "locator": "GNS construction with abstract order justification"
+          }
+        ],
+        "4I0G": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Definition 4.1"
+          }
+        ],
+        "4I0H": [
+          {
+            "source": "local-calculations",
+            "locator": "finite factor commutant"
+          }
+        ],
+        "4I0I": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "§1 (2)–(4)"
+          }
+        ],
+        "4I0J": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5.1.1 Definition 5.2; tensor diagram (5.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "未归一化 trace convention，矩阵单位给边界振幅，维数≤D²，D=1 乘积例。"
+          }
+        ],
+        "4I0K": [
+          {
+            "source": "local-calculations",
+            "locator": "MPS local annihilation"
+          },
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5.1.1, parent-Hamiltonian construction following Definition 5.2"
+          }
+        ],
+        "4I0L": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5.1.2 Definition 5.3; tensor diagram (5.2)"
+          }
+        ],
+        "4I0M": [
+          {
+            "source": "local-calculations",
+            "locator": "finite image projection"
+          }
+        ],
+        "4I0N": [
+          {
+            "source": "local-calculations",
+            "locator": "finite PEPS cut-rank bound"
+          },
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5.1.2 Definition 5.3 and diagram (5.2), for boundary-map context; cut-rank proof is local"
+          }
+        ],
+        "4I0O": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5.2 Definition 5.5; equation (5.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "正则群平均、对偶腿、d=D^4；逆元经转置变成共轭表示，避免非交换群反表示错误。"
+          }
+        ],
+        "4I0P": [
+          {
+            "source": "local-calculations",
+            "locator": "finite-group pulling-through identity"
+          }
+        ],
+        "4I0Q": [
+          {
+            "source": "local-calculations",
+            "locator": "four-leg regular-representation network on a square-lattice vertex region"
+          }
+        ],
+        "4I0R": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Theorem 3.6.1; Lemma 3.6.3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "梳形且由方格组成；交换性和交等式引用，零能核和乘积投影推论本地证明。一般有权族仅指原文构造。"
+          }
+        ],
+        "4I0S": [
+          {
+            "source": "local-calculations",
+            "locator": "four-leg square-lattice boundary regular-character calculation"
+          }
+        ],
+        "4I0T": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Theorem 3.7.1 (95)–(96)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "极化公式完整证明等价；模型应用仅内部矩形且边界边属于大矩形内部，biconnected 适用性引用。"
+          }
+        ],
+        "4I0U": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Corollary 3.7.3; local proof from stated hypotheses"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "假定全部有限矩形非空零能空间与内部不可区分，密度矩阵紧性、对角子列、支撑、唯一性和纯性完整证明。"
+          }
+        ],
+        "4I0V": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Lemma 2.1.3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "有限谱多项式与递减投影强收敛；交空间、强闭性及 P Omega=Omega。"
+          }
+        ],
+        "4I0W": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Theorem 2.1.1"
+          }
+        ],
+        "4I0X": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Setting 2.1.2; Lemma 2.1.4 (11)–(29)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "完整陈述 Lemma 2.1.4；证明 ibOmega 的交换子分解，压缩提升及因子忠实性引用。"
+          }
+        ],
+        "4I0Y": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Assumption 2.2.1; Remark 2.2.2; Lemma 2.2.3"
+          }
+        ],
+        "4I0Z": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Definitions 3.4.2–3.4.3"
+          }
+        ],
+        "4I10": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Corollaries 4.1.5–4.1.6; report Theorems 3.3–3.4"
+          }
+        ],
+        "4I11": [
+          {
+            "source": "local-calculations",
+            "locator": "maximally-entangled transpose identity"
+          }
+        ],
+        "4I12": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Theorem 4.1.3; (107)–(114)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "精确 6ell 窗口、两侧梳形缓冲、边界包含/基数；复线性保*映射，整个 Gamma_L 像上的恒等式；S和Theta公式只是引用定理后的代数归约。"
+          }
+        ],
+        "4I13": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5 (5.6)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "群 Hopf 的 Delta³(h) 逐项计算；反向腿、普通和弱 Hopf 之间的限制明确。"
+          }
+        ],
+        "4I14": [
+          {
+            "source": "local-calculations",
+            "locator": "finite periodic toric code"
+          }
+        ],
+        "4I15": [
+          {
+            "source": "local-calculations",
+            "locator": "finite Pauli string calculation"
+          }
+        ],
+        "4I16": [
+          {
+            "source": "ogata-sectors-v1",
+            "locator": "§1.3 Definition 1.5, printed p.5; Setting 2.1 and equation (2.2), printed p.6"
+          },
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§3, contextual discussion of operator-algebraic sectors, not the explicit selection criterion"
+          }
+        ],
+        "4I17": [
+          {
+            "source": "local-calculations",
+            "locator": "endomorphism intertwiner tensor category"
+          }
+        ],
+        "4I18": [
+          {
+            "source": "levin-wen-v2",
+            "locator": "§IV.B (10)–(14), especially fixed-point coefficient"
+          }
+        ],
+        "4I19": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "Conjecture 3.2"
+          }
+        ],
+        "4I1A": [
+          {
+            "source": "haag-duality-v2",
+            "locator": "Definitions 3.1.1,3.1.3,3.1.7; Remark 3.1.4"
+          },
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§5 algebraic extension context, not a complete weak-Hopf construction"
+          }
+        ],
+        "4I1B": [
+          {
+            "source": "egno-2015-author-final",
+            "locator": "Definition 4.1.1, printed p.65; Remark 4.2.2, p.66; Remark 9.4.7, pp.283–284 (author-final 2015 edition)"
+          }
+        ],
+        "4I1C": [
+          {
+            "source": "local-calculations",
+            "locator": "full M_N(C) pure-state characterization"
+          }
+        ]
+      },
+      "remaining_branches": [
+        {
+          "branch": "General nonchiral classification",
+          "scope": "Conjectures 3.1 and 3.2 remain conjectural. No formal resolution of nonchirality, generic representative existence or completeness of anyon invariants is asserted."
+        },
+        {
+          "branch": "Full weighted weak-Hopf construction",
+          "scope": "Axioms and biconnectedness are defined; the §3.4 family is identified by its exact primary source, not reconstructed coefficient by coefficient. General MPO tensors, weights, integral elements, faithful representation choices and tensor-diagram manipulations remain a research branch."
+        },
+        {
+          "branch": "Phase invariance and quantum-double sector identification",
+          "scope": "The report discussion of approximate duality invariance, full braided C* categories, equivalence with representations of D(G), and same-category string-net phase equivalence is contextual. Exact contracts and proofs of report references [9], [35], [44] are not independently developed here."
+        },
+        {
+          "branch": "Other applications and algorithmic variants",
+          "scope": "Rotationally symmetric and 1D spectral undecidability, quantum-hardness of phase recognition, symmetry-protected classifications, entanglement bootstrap and Hall conductance are contextual, not separate fully developed branches."
+        },
+        {
+          "branch": "Numerical record",
+          "scope": "Busy Beaver height-10^7 decimal tower is attributed to the report as a historical lower bound in its exact binary model, not a current-record claim."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4I07",
+            "4I0A"
+          ],
+          "source": "perez-garcia-icm2026; cubitt-gap-v5",
+          "scope": "Undecidable Hamiltonian construction, quantum phase estimation/history Hamiltonians, tiling hierarchy, explicit d=10 size-driven model and perturbative stability are quoted research results. Only halting and reduction logic is proved locally."
+        },
+        {
+          "notes": [
+            "4I0R",
+            "4I0T",
+            "4I10",
+            "4I12"
+          ],
+          "source": "haag-duality-v2",
+          "scope": "General weighted weak-Hopf bulk-boundary, intersection, local indistinguishability, two-dimensional operator transfer and cone geometry proofs are cited. One-dimensional diagrams are illustrations, never the full general proof."
+        },
+        {
+          "notes": [
+            "4I0W",
+            "4I0X",
+            "4I0Y"
+          ],
+          "source": "haag-duality-v2",
+          "scope": "Rieffel–van Daele theorem, factor compression faithfulness/lifting, and finite-to-infinite error analysis are cited. All usable hypotheses are recorded, and elementary decomposition is separately proved."
+        },
+        {
+          "notes": [
+            "4I16",
+            "4I17",
+            "4I18",
+            "4I1B"
+          ],
+          "source": "perez-garcia-icm2026; ogata-sectors-v1; levin-wen-v2; egno-2015-author-final",
+          "scope": "Sector selection and elementary intertwiner tensor structure are explicit; transport-independent braiding, rigidity/semisimplicity of physical sectors, categorical dimension theory and general F-symbol pentagon/projector calculations are not reconstructed."
+        }
+      ],
+      "metadata": {
+        "node_count": 49,
+        "atomic_count": 48,
+        "reference_count": 1,
+        "language": "zh",
+        "coverage": "All six report sections have developed mathematical entries, with 48 atomic questions. Three additional foundational atoms distinguish weak Hopf structure, fusion categories and rank-one purity. Entire report read independently; selected research supplements version-bound. EGNO author-final 2015 book passages additionally support the fusion definition.",
+        "model_conventions": "Open finite boxes for general spin definitions; excitation gap above full ground eigenspace. Path gap uniform in s and L. Regular-group networks use four legs at each vertex of a finite connected square-lattice region, every unused leg retained as boundary, 4n=2m+b, unnormalized bonds and Gram factor D^(m-n+1). Path3 and square4 both have b=8. Toric code separately L≥3 periodic with edge qubits and penalty (I-stabilizer)/2, ground dimension4 and gap2. Approximate original-lattice versus exact 2x2-blocked Haag duality distinguished.",
+        "status": "author-repairs-frozen-pending-independent-recheck",
+        "shared_integration": "Parent-owned; no shared registries/navigation/theme/tests/build/git edits.",
+        "reference_directory": "trees/references",
+        "review_responses": [
+          {
+            "id": "PG-F01",
+            "status": "author-repaired-awaiting-independent-recheck",
+            "response": "4I1B now requires all finite biproducts including the zero object, finite semisimple additive C* structure, finite-dimensional Hom spaces, and a complex-bilinear tensor bifunctor. Reused 0AI1 and existing reference 013X. Exact source rereading binds EGNO Definition 4.1.1, Remark 4.2.2 (not Example), and Remark 9.4.7; selected reading/license recorded."
+          },
+          {
+            "id": "PG-F02",
+            "status": "author-repaired-awaiting-independent-recheck",
+            "response": "Re-read the report passages and corrected public metadata and packet locators: 4I0J/0K to §5.1.1 Definition 5.2 and following parent construction; 4I0L/0N to §5.1.2 Definition 5.3 and (5.2); 4I0O metadata and body to §5.2 Definition 5.5 and (5.3). 4I16 now cites Ogata 2106.15741v1 Definition 1.5 and Setting 2.1/(2.2), with common-Hilbert-space identification explicit. Report §3 is contextual only."
+          },
+          {
+            "id": "PG-F03",
+            "status": "author-repaired-awaiting-independent-recheck",
+            "response": "4I0Q/0S now specify finite connected square-lattice vertex regions, four-leg tensors and every unused leg retained, so 4n=2m+b. Replaced b=2 records with actual physical Z2 tensor contractions: path3 (n,m,b)=(3,2,8), square4 (4,4,8), all 256 columns and 65536 Gram entries per example, factors 1 and 2, rank 128 by elimination. Exact parent-authored test block also rerun without editing shared files. Old tests are not claimed to cover the four-leg model."
+          },
+          {
+            "id": "PG-F04",
+            "status": "author-repaired-awaiting-independent-recheck",
+            "response": "Re-read report Theorem 2.3 clauses 2–3 and its reduction consequence. 4I08 replaces the unsupported half-of-instances assertion with the precise nonhalting-input branch; no measure or density claim remains."
+          },
+          {
+            "id": "PG-P01",
+            "response": "Parent repaired shared 0Z1C by direct polarization and an abstract binomial-series norm argument. Author re-read the repaired shared page and retains its link; no shared file edited."
+          },
+          {
+            "id": "PG-P02",
+            "response": "4I0D requires D=dim H_A≥2 and a complete A basis for I_A/D; for a proper span K it gives P_K/D."
+          },
+          {
+            "id": "PG-P03",
+            "response": "4I09 specifies exactly binary tape, only L/R, one halting state excluded from n, blank input and step count. Effective block coding, stationary-step replacement and finite input hardcoding give the restricted undecidability reduction; numerical BB(6) values are not transported across models."
+          },
+          {
+            "id": "PG-P04",
+            "response": "4I1C confines the rank-one/ray correspondence to full M_N(C), with a diagonal-algebra counterexample to the broader formulation."
+          },
+          {
+            "id": "PG-P06",
+            "response": "Pure-state definition remains 4I0E; rank-one characterization and proof moved to independent 4I1C. 4I0I locally specifies quasi-local A, pure state and GNS H,pi,Omega."
+          },
+          {
+            "id": "parent-GNS",
+            "response": "4I0F explicitly proves null-space linearity using Schwarz, extends the inner product to completion, and proves the abstract C* order inequality without a concrete representation."
+          },
+          {
+            "id": "parent-finite-projectors",
+            "response": "4I05 explicitly assumes a common finite-dimensional Hilbert space; its joint-eigenbasis proof is scoped accordingly."
+          },
+          {
+            "id": "parent-source-format",
+            "response": "normalizeFormat applied only to all 50 owned trees before hashing. Scoped editorial/source-form, formula, bracket/half-open and prerequisite checks pass."
+          }
+        ],
+        "source_errata": [
+          {
+            "source": "perez-garcia-icm2026",
+            "locator": "§1.1 finite range",
+            "resolution": "4I01 uses diameter in graph distance, not cardinality of support; a two-site arbitrarily-separated counterexample is explicit."
+          },
+          {
+            "source": "cubitt-gap-v5",
+            "locator": "initial Theorem 3 vs §6.2 restatement",
+            "resolution": "Initial/report alpha≤beta and restatement alpha≤2beta both recorded. No global reconciliation or changed theorem constant claimed."
+          },
+          {
+            "source": "haag-duality-v2",
+            "locator": "Definition 4.1.1 (105)",
+            "resolution": "Printed cone sandwich repeats C_kappa-prime on both sides and paths are described as disjoint despite a common apex. Notes avoid supplying an unverified corrected general definition; use exact blocked-cone case and refer broader stepped-cone domain to the primary theorem."
+          },
+          {
+            "source": "haag-duality-v2",
+            "locator": "Assumption 2.2.1 and (111)",
+            "resolution": "4I0Y retains the bounded common error requirement and uniform operator-input estimates. 4I12 states the verified large-N zero-error identities; it does not infer a global bounded error from growing finite-map norms or claim to reconstruct the limiting proof."
+          }
+        ]
+      }
+    },
+    {
+      "prefix": "4J",
+      "outline": "4J00",
+      "reference": "icm2026-rhodes-vargas",
+      "doi": "10.1137/25M1803632",
+      "speaker": "Rémi Rhodes and Vincent Vargas",
+      "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "pages": "551–574",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+      "license": "CC BY 4.0",
+      "question": "如何把分布值随机场的指数面积构造成严格 Liouville 相关函数，并通过边界拼接、连续谱和 DOZZ 三点数据重建曲面振幅？",
+      "reading_scope": "rhodes-vargas-icm2026: Entire publisher HTML mathematical body §§1–9, every displayed formula and all figure captions, in overlapping section-sized reads (lines 90–602); acknowledgments 603–604 and footnote 609. Selected relevant bibliography entries only, not the complete bibliography. Metadata/title/authors/DOI/pages/license and online date verified, lines 59–65 and 1196–1246. No publisher PDF or figure-pixel inspection. Subsequent checks re-read §§3–8 normalization, hypotheses and typographical discrepancies.\nreport-preprint-v1: Metadata/abstract and opening §§1–2 only. Not the full version; publisher HTML is the authoritative full-content source.\ndozz-v3: Selected full text: §2.2–2.4 (extracted lines 470–585), §4.2 (830–890), §5.2 (1230–1295, including start of §6 only), Appendix §12.1 and Corollary 12.2 (3548–3600). PDF p.13 rendered and visually inspected for both negative degenerate weights. RV-F09 repair additionally read §1.2, (1.11) and following continuation/zeros paragraph (lines 248–292, PDF p.5), and §12.5, (12.7) and following zeros paragraph (lines 3763–3797, PDF p.53); both pages rendered and visually inspected for the integral, shifts, powers and zero sets. Remaining sections not read in full.\nbootstrap-v2: Selected §§1.3–1.5 (lines 342–488), §2.3 (587–627), Proposition 5.5 statement and opening proof (2110–2155), §7.5 formula (7.36) and Proposition 7.12 (5072–5103), §8.1 and start of §8.2 (5198–5234). Searches additionally checked reversed descendant convention at lines 750–753 and 1524. RV-F08 repair additionally read §4.1 through the opening of Proposition 4.1 proof (1165–1235, PDF p.20), §4.2 including Proposition 4.3 proof (1238–1295, PDF pp.21–22), and the ensuing dynamics excerpt through Remark 4.6 (1296–1375); §5.2 opening through Proposition 5.3 statement (1790–1850, PDF p.28) checked for the all-derivatives polynomial-growth domain. Full spectral proof §6, full §5 and full Ward proof §9 were not read.\nsegal-v2: Selected §2.1.1–2.1.3 (760–850), §3.1.2–3.1.3 (1040–1098), Theorem 4.4 and bound (1860–1915), Propositions 5.1/5.2 and gluing constants (2190–2260), §10.1 selected local Green proof excerpt (4350–4400), Appendix C statement and proof excerpt (6371–6465). No full proof of Segal axioms or high-genus bootstrap read. §10.1 planar/sphere excerpt is not used as authority for arbitrary closed-surface smooth Green remainder.\nzelditch-v1: Introduction eigenbasis/positive Laplacian convention (text lines 120–175, PDF pp.3–4); §8 Weyl law (2340–2410, pp.45–46). Not the whole survey or microlocal proof. Spectral frequency squared is converted to the present Laplace eigenvalue.\npolyakov-v5-consulted: Selected §3 excerpt lines 1720–1785 and searches of Green-kernel statements. Hyperbolic scope identified; not used to infer all-metric circle averages or arbitrary-surface Green regularity.\nreview-v1-consulted: Abstract/contents and selected §3 excerpt lines 900–980. Used to compare conventions, not treated as fully read. Report covariance normalization remains authoritative.\nlocal-calculations: Explicit local derivations are given in the authored atoms and distinguished from quoted elliptic/GMC/LCFT research theorems.",
+      "proof_scope": {
+        "4J01": {
+          "status": "local-proof",
+          "scope": "等温坐标推导曲率变换；Gauss–Bonnet 复用，明确标量曲率为高斯曲率两倍。"
+        },
+        "4J02": {
+          "status": "local-proof",
+          "scope": "闭曲面变分、曲率代入及两解相减的能量唯一性；经典 Q=2/gamma。"
+        },
+        "4J03": {
+          "status": "local-proof",
+          "scope": "完成平方，含协方差因子及指数归一化。"
+        },
+        "4J04": {
+          "status": "local-construction-from-cited-spectrum",
+          "scope": "引用一般闭曲面谱基与 Weyl 定律，逐项二阶矩和 Tonelli 证明负阶收敛及 covariance=2pi G。"
+        },
+        "4J05": {
+          "status": "definition-with-cited-continuation",
+          "scope": "谱 zeta 的全平面亚纯延拓和零点正则性引用；有限乘积类比直接计算。"
+        },
+        "4J06": {
+          "status": "local-proof",
+          "scope": "高斯矩恒等式与两种正则化的有限方差密度；不丢确定性因子。"
+        },
+        "4J07": {
+          "status": "cited-theorem-and-definition",
+          "scope": "0<gamma<2，固定测地圆平均，弱收敛、非退化和唯一性引用 GMC 理论；圆平均单独构造。"
+        },
+        "4J08": {
+          "status": "local-proof",
+          "scope": "高斯两点矩和二维极坐标可积性给出 gamma^2<2；不以此证明整个次临界区间。"
+        },
+        "4J09": {
+          "status": "local-proof",
+          "scope": "gamma,mu,Z>0，a>0 时精确换元；a<=0 的负尾发散；随机 Z 段再次明确 a>0。"
+        },
+        "4J0A": {
+          "status": "definition",
+          "scope": "参数、曲率线性项、自由场行列式和 GMC 势的完整概率定义；不假设总质量自动有限。"
+        },
+        "4J0B": {
+          "status": "definition-and-cited-singular-limit",
+          "scope": "共同正则化定义；固定尺度应用场级 Cameron–Martin，奇异混沌极限引用严格 Seiberg 区域的研究定理。"
+        },
+        "4J0C": {
+          "status": "cited-theorem-with-local-zero-mode-proof",
+          "scope": "所有 alpha_j<Q、sum alpha>Q chi；全局条件由 Gamma 积分证明，局部混沌与负矩界引用；零与发散分开。"
+        },
+        "4J0D": {
+          "status": "cited-theorem-with-local-check",
+          "scope": "完整 c_L/(96pi) 反常、点权与微分同胚自然性引用；常数缩放直接计算。"
+        },
+        "4J0E": {
+          "status": "local-calculation",
+          "scope": "Delta_alpha=alpha(2Q-alpha)/4，Delta_gamma=1、谱线值及 c_L>25 直接计算。"
+        },
+        "4J0F": {
+          "status": "local-proof-with-fixed-metric",
+          "scope": "明确圆度量，Möbius 距离恒等式与三重传递性；C=C0*C_DOZZ 仅用于此度量，常数缩放反常显式。"
+        },
+        "4J0G": {
+          "status": "local-proof-and-definition",
+          "scope": "零端抵消、无穷端指数衰减、紧子集全纯性、中心归一化；全局结果移至 1G。"
+        },
+        "4J0H": {
+          "status": "cited-research-theorem",
+          "scope": "保持全部 Upsilon 参数、幂指数、mu 因子与报告 C0；证明所需 BPZ/解析延拓/反射识别明确引用。"
+        },
+        "4J0I": {
+          "status": "local-proof",
+          "scope": "抽屉原理产生趋零周期，再用整数倍逼近任意位移和连续性。"
+        },
+        "4J0J": {
+          "status": "definition-and-local-check",
+          "scope": "Witt 交换子直接计算，中心项和 Jacobi 多项式核验。"
+        },
+        "4J0K": {
+          "status": "definition-and-local-proof",
+          "scope": "最高权/Verma/分拆定义及 L0 交换计算；共同双主态权为 h,k，只有 h=k 才有 2h。"
+        },
+        "4J0L": {
+          "status": "local-proof",
+          "scope": "按第二变量线性约定逐交换子计算一级、二级所有元素与行列式。"
+        },
+        "4J0M": {
+          "status": "local-proof-and-source-correction",
+          "scope": "L1,L2 及更高模式消去计算；商模中向量可以已为零；-gamma/2,-2/gamma 的出处与报告符号差异明确。"
+        },
+        "4J0N": {
+          "status": "conditional-local-proof",
+          "scope": "完整列明 L-1、L-2 插入和消去假设，代入得二阶方程；未声称代数关系自动证明概率 BPZ。"
+        },
+        "4J0O": {
+          "status": "local-construction-and-proof",
+          "scope": "Fourier 规范、负阶均方收敛、对数弦长协方差以及 dc 乘积边界测度。"
+        },
+        "4J0P": {
+          "status": "local-proof",
+          "scope": "平滑边界 Fourier 延拓与 2pi sum |n||f_n|^2 能量；粗糙高斯边界不具有限能量。"
+        },
+        "4J0Q": {
+          "status": "local-proof-and-definition",
+          "scope": "证明 G 可测 L² 子空间闭，引用投影定理，给积分刻画；条件独立移至 1J。"
+        },
+        "4J0R": {
+          "status": "cited-theorem-with-local-energy-calculation",
+          "scope": "平滑有界 D 与内区域 U，独立 Dirichlet 场加随机调和部分；有限能量正交计算不充当连续场存在性证明。"
+        },
+        "4J0S": {
+          "status": "definition-with-local-check",
+          "scope": "In/Out 方向、精确圆柱 collar 度量、反演相容性与 Euler 数。"
+        },
+        "4J0T": {
+          "status": "cited-research-theorem",
+          "scope": "连通可容许曲面、每点 alpha<Q、sum alpha>Q chi；报告归一化的拼接，未标记圆环明确排除在 HS 结论外。"
+        },
+        "4J0U": {
+          "status": "local-proof",
+          "scope": "Cauchy–Schwarz 与 Fubini 给乘积范数界，说明复内积的共轭约定。"
+        },
+        "4J0V": {
+          "status": "cited-construction-and-local-composition",
+          "scope": "规范化有界圆环算子及强连续性引用；长度相加、生成元定义与 H 非中心的交换计算。"
+        },
+        "4J0W": {
+          "status": "local-form-calculation-and-closability-proof",
+          "scope": "初始稠密定义域为 C_c∞(c) 与有限高斯坐标多项式的代数张量积；Hermite 完备性引用，导数平方可积、边界项消失、分部积分能量恒等式和形式可闭性局部证明；闭形式表示定理指定自伴实现。"
+        },
+        "4J0X": {
+          "status": "cited-thresholds-with-local-second-moment-proof",
+          "scope": "随机变量阈值与 L² 阈值分开；更大耦合改用场配置空间的奇异势形式。"
+        },
+        "4J0Y": {
+          "status": "cited-standard-theorem-and-application",
+          "scope": "形式定义域、闭性、D(H) 与作用完整列明；Liouville 全 0<gamma<2 的构造引用 Proposition 5.5。"
+        },
+        "4J0Z": {
+          "status": "cited-research-theorem",
+          "scope": "谱区间、能量、p>0 和 1/(2pi)、两套逆 Gram、广义系数与第二变量线性约定；散射完整性引用。"
+        },
+        "4J10": {
+          "status": "local-proof",
+          "scope": "有限维系数 b=Fa 与正定性；推广到子空间投影，未由此推出连续谱完整性。"
+        },
+        "4J11": {
+          "status": "cited-construction-and-analytic-bridge",
+          "scope": "alpha<Q 的精确公式，Pphi 已含零模态；加权解析延拓和后裔定理引用；非 HS 与内积全纯性约定明确。"
+        },
+        "4J12": {
+          "status": "cited-formula-with-local-proof",
+          "scope": "精确 Gamma 比、正底数幂、排除集合引用；共轭 Gamma 与两次反射恒等式证明；(7.12)按解析延拓理解。"
+        },
+        "4J13": {
+          "status": "cited-identity-with-local-recursion",
+          "scope": "引用 Ward 分析定理；单次微分、无穷远归一化和 W_nu 乘积直接证明；源文两种乘积次序明确换算。"
+        },
+        "4J14": {
+          "status": "definition-and-local-coefficient-proof",
+          "scope": "每层双指标收缩、一级系数、二级向量、q=z/2 与报告幂因子；不把形式定义等同收敛。"
+        },
+        "4J15": {
+          "status": "cited-research-theorem",
+          "scope": "严格成对条件、0<|z|<1、0,z,2,infinity、平坦插入邻域、圆柱 collar、inversion 对称、g(0)=1；C(g)保留，度量指数据 Theorem 8.1。"
+        },
+        "4J16": {
+          "status": "local-consequence-of-cited-bootstrap",
+          "scope": "四个成对不等式、0<q<1；在原论文去度量的 1/(8pi) 规范中比较两次定理，不混用报告 C(g)。"
+        },
+        "4J17": {
+          "status": "local-proof",
+          "scope": "给定裤子分解后的 Euler 加法与边界计数；不另证明曲面分类。"
+        },
+        "4J18": {
+          "status": "cited-research-theorem-with-factor-explanation",
+          "scope": "(2pi)^-3、R_+³、DOZZ 绝对值平方、三组逆 Gram 与几何 Cprime；只断言几乎处处块收敛。"
+        },
+        "4J19": {
+          "status": "local-proof-and-source-context",
+          "scope": "系数指数界充分条件与 n! 反例；报告中的环面 AGT 仅作为形式结果，不升级为解析收敛。"
+        },
+        "4J1A": {
+          "status": "local-proof",
+          "scope": "正形状参数、有限正负矩假设下联合换元证明独立性，面积均值方差及 mu 缩放。"
+        },
+        "4J1B": {
+          "status": "cited-construction-with-local-radial-check",
+          "scope": "报告 (6.1) 的 v/fprime、复共轭系数及共同定义域限制；沿 r=e^-t 的链式法则直接计算。"
+        },
+        "4J1C": {
+          "status": "conditional-local-proof",
+          "scope": "以 C² 解及函数和导数两端渐近为假设，证明 Im(conj(psi)psi prime) 守恒；不证明散射解存在性。"
+        },
+        "4J1D": {
+          "status": "cited-standard-theorem-with-local-consequences",
+          "scope": "一般闭连通光滑二维范围，lambda不是sqrt(lambda)，A/(4pi)计数常数；反演、级数阈值和分布配对局部推导。"
+        },
+        "4J1E": {
+          "status": "local-proof-from-cited-spectrum",
+          "scope": "谱 L² 核构造、唯一性、二维基本解通量；在共形坐标对两变量用四维局部正则性，证明一般闭曲面共同光滑余项。"
+        },
+        "4J1F": {
+          "status": "local-proof",
+          "scope": "局部分布定义、径向平滑与球面平均的 Weyl 引理、二维/四维基本解及平滑右端的卷积。"
+        },
+        "4J1G": {
+          "status": "cited-standard-theorem",
+          "scope": "两种步长、Gamma商、正底数幂、完整零点集合和无理b²简单性；不伪称从条带积分已证明全部延拓。"
+        },
+        "4J1H": {
+          "status": "local-construction-and-proof",
+          "scope": "一般光滑度量、注入半径内嵌入圆，平滑概率密度的统一球质量界控制对数能量，证明高斯 L² 极限。"
+        },
+        "4J1I": {
+          "status": "local-proof",
+          "scope": "显式平方可和高斯级数和线性高斯 Y，有界连续 F；权重 L² 收敛控制极限，无界 GMC 负矩另引用。"
+        },
+        "4J1J": {
+          "status": "definition-and-local-consequence",
+          "scope": "有界变量条件期望定义、全期望拼接恒等式及非负截断版本。"
+        }
+      },
+      "claim_sources": {
+        "4J01": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§§1,3; (1.2),(3.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "等温坐标推导曲率变换；Gauss–Bonnet 复用，明确标量曲率为高斯曲率两倍。"
+          }
+        ],
+        "4J02": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "闭曲面变分、曲率代入及两解相减的能量唯一性；经典 Q=2/gamma。"
+          }
+        ],
+        "4J03": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3; Gaussian background"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "完成平方，含协方差因子及指数归一化。"
+          }
+        ],
+        "4J04": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "引用一般闭曲面谱基与 Weyl 定律，逐项二阶矩和 Tonelli 证明负阶收敛及 covariance=2pi G。"
+          }
+        ],
+        "4J05": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.3)"
+          },
+          {
+            "source": "segal-v2",
+            "locator": "§2.1.1"
+          }
+        ],
+        "4J06": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "高斯矩恒等式与两种正则化的有限方差密度；不丢确定性因子。"
+          }
+        ],
+        "4J07": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.4)-(3.5)"
+          }
+        ],
+        "4J08": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3; GMC second-moment calculation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "高斯两点矩和二维极坐标可积性给出 gamma^2<2；不以此证明整个次临界区间。"
+          }
+        ],
+        "4J09": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3; zero-mode integral"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "gamma,mu,Z>0，a>0 时精确换元；a<=0 的负尾发散；随机 Z 段再次明确 a>0。"
+          }
+        ],
+        "4J0A": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.5)"
+          }
+        ],
+        "4J0B": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, (3.6)-(3.7)"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "§2.2 (2.9)-(2.14); Theorem 12.1"
+          }
+        ],
+        "4J0C": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Proposition 3.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "所有 alpha_j<Q、sum alpha>Q chi；全局条件由 Gamma 积分证明，局部混沌与负矩界引用；零与发散分开。"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "§2.2 ordinary and extended Seiberg bounds"
+          }
+        ],
+        "4J0D": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Proposition 3.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "完整 c_L/(96pi) 反常、点权与微分同胚自然性引用；常数缩放直接计算。"
+          }
+        ],
+        "4J0E": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§§3,7; (7.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "Delta_alpha=alpha(2Q-alpha)/4，Delta_gamma=1、谱线值及 c_L>25 直接计算。"
+          }
+        ],
+        "4J0F": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§4, (4.1)-(4.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "明确圆度量，Möbius 距离恒等式与三重传递性；C=C0*C_DOZZ 仅用于此度量，常数缩放反常显式。"
+          }
+        ],
+        "4J0G": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§4, (4.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "零端抵消、无穷端指数衰减、紧子集全纯性、中心归一化；全局结果移至 1G。"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "§1.2, (1.11), PDF p.5: strip integral; following paragraph: entire continuation and zeros"
+          }
+        ],
+        "4J0H": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Theorem 4.1, (4.1)-(4.5)"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "Theorem 2.4"
+          }
+        ],
+        "4J0I": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§4, uniqueness discussion"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "抽屉原理产生趋零周期，再用整数倍逼近任意位移和连续性。"
+          }
+        ],
+        "4J0J": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§6, (6.2)-(6.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "Witt 交换子直接计算，中心项和 Jacobi 多项式核验。"
+          }
+        ],
+        "4J0K": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7, (7.6),(7.9)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "最高权/Verma/分拆定义及 L0 交换计算；共同双主态权为 h,k，只有 h=k 才有 2h。"
+          }
+        ],
+        "4J0L": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7, Shapovalov form"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "按第二变量线性约定逐交换子计算一级、二级所有元素与行列式。"
+          }
+        ],
+        "4J0M": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§4, degenerate insertions"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "L1,L2 及更高模式消去计算；商模中向量可以已为零；-gamma/2,-2/gamma 的出处与报告符号差异明确。"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "§4.2 p.13, negative degenerate weights"
+          }
+        ],
+        "4J0N": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§4; BPZ mechanism"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "完整列明 L-1、L-2 插入和消去假设，代入得二阶方程；未声称代数关系自动证明概率 BPZ。"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "§4.2; probability statement not reproduced beyond its cited scope"
+          }
+        ],
+        "4J0O": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.2, (5.6)-(5.7)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "Fourier 规范、负阶均方收敛、对数弦长协方差以及 dc 乘积边界测度。"
+          }
+        ],
+        "4J0P": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.2; harmonic extension"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "平滑边界 Fourier 延拓与 2pi sum |n||f_n|^2 能量；粗糙高斯边界不具有限能量。"
+          }
+        ],
+        "4J0Q": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.1; conditional expectation background"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "证明 G 可测 L² 子空间闭，引用投影定理，给积分刻画；条件独立移至 1J。"
+          }
+        ],
+        "4J0R": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.1-5.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "平滑有界 D 与内区域 U，独立 Dirichlet 场加随机调和部分；有限能量正交计算不充当连续场存在性证明。"
+          },
+          {
+            "source": "segal-v2",
+            "locator": "Appendix C, Proposition C.1(1), proof first part"
+          }
+        ],
+        "4J0S": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.2, footnote 1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "In/Out 方向、精确圆柱 collar 度量、反演相容性与 Euler 数。"
+          },
+          {
+            "source": "segal-v2",
+            "locator": "§3.1.2-3.1.3"
+          }
+        ],
+        "4J0T": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Theorem 5.1, (5.5)"
+          },
+          {
+            "source": "segal-v2",
+            "locator": "Theorem 4.4; Propositions 5.1 and 5.2 gluing"
+          }
+        ],
+        "4J0U": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.2; kernel composition"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "Cauchy–Schwarz 与 Fubini 给乘积范数界，说明复内积的共轭约定。"
+          }
+        ],
+        "4J0V": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§6, (6.1) and dilation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "规范化有界圆环算子及强连续性引用；长度相加、生成元定义与 H 非中心的交换计算。"
+          }
+        ],
+        "4J0W": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7, (7.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "初始稠密定义域为 C_c∞(c) 与有限高斯坐标多项式的代数张量积；Hermite 完备性引用，导数平方可积、边界项消失、分部积分能量恒等式和形式可闭性局部证明；闭形式表示定理指定自伴实现。"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "§4.1, PDF p.20: polynomial cylinder space P, derivative growth class S, (4.1)-(4.7), Hermite completeness; §4.2, (4.9)-(4.10), Proposition 4.3, PDF pp.21-22: free-form closure"
+          }
+        ],
+        "4J0X": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7 after (7.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "随机变量阈值与 L² 阈值分开；更大耦合改用场配置空间的奇异势形式。"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "§2.3 and cited §5 construction"
+          }
+        ],
+        "4J0Y": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7; form realization"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "Proposition 5.5, statement and opening proof pp.32-33"
+          }
+        ],
+        "4J0Z": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Theorem 7.1, (7.4),(7.6)-(7.7)"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "§1.4 spectral statement; (2.9), and cited Theorem 6.25 not fully read"
+          }
+        ],
+        "4J10": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7, finite-dimensional background to (7.7)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "有限维系数 b=Fa 与正定性；推广到子空间投影，未由此推出连续谱完整性。"
+          }
+        ],
+        "4J11": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "(7.8), Theorem 7.1, Proposition 7.2"
+          }
+        ],
+        "4J12": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "(7.10)-(7.12)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "精确 Gamma 比、正底数幂、排除集合引用；共轭 Gamma 与两次反射恒等式证明；(7.12)按解析延拓理解。"
+          }
+        ],
+        "4J13": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Lemma 8.2, (8.5)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "引用 Ward 分析定理；单次微分、无穷远归一化和 W_nu 乘积直接证明；源文两种乘积次序明确换算。"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "§7.5 (7.36)-(7.37), reversed descendant order"
+          }
+        ],
+        "4J14": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "(8.2)-(8.5)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "每层双指标收缩、一级系数、二级向量、q=z/2 与报告幂因子；不把形式定义等同收敛。"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "§8.1 (8.1)-(8.2), explicitly summed two partitions"
+          }
+        ],
+        "4J15": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Theorem 8.1, (8.3)"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "Theorem 1.1 and §1.5, almost-everywhere block convergence"
+          }
+        ],
+        "4J16": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§8; crossing through alternate decomposition"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "四个成对不等式、0<q<1；在原论文去度量的 1/(8pi) 规范中比较两次定理，不混用报告 C(g)。"
+          },
+          {
+            "source": "bootstrap-v2",
+            "locator": "§1.3 (1.16)-(1.17), 1/(8pi) convention"
+          }
+        ],
+        "4J17": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§8, genus-two example"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "给定裤子分解后的 Euler 加法与边界计数；不另证明曲面分类。"
+          }
+        ],
+        "4J18": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "Theorem 8.3, (8.6)-(8.9)"
+          }
+        ],
+        "4J19": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§9, conformal blocks and AGT"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "系数指数界充分条件与 n! 反例；报告中的环面 AGT 仅作为形式结果，不升级为解析收敛。"
+          }
+        ],
+        "4J1A": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3; zero-mode consequence"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "正形状参数、有限正负矩假设下联合换元证明独立性，面积均值方差及 mu 缩放。"
+          }
+        ],
+        "4J1B": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§6, (6.1)-(6.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "报告 (6.1) 的 v/fprime、复共轭系数及共同定义域限制；沿 r=e^-t 的链式法则直接计算。"
+          }
+        ],
+        "4J1C": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§7, toy-model motivation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "以 C² 解及函数和导数两端渐近为假设，证明 Im(conj(psi)psi prime) 守恒；不证明散射解存在性。"
+          }
+        ],
+        "4J1D": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, background to (3.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "一般闭连通光滑二维范围，lambda不是sqrt(lambda)，A/(4pi)计数常数；反演、级数阈值和分布配对局部推导。"
+          },
+          {
+            "source": "segal-v2",
+            "locator": "§2.1.1-2.1.3, spectral basis and space"
+          },
+          {
+            "source": "zelditch-v1",
+            "locator": "Introduction pp.3-4; §8 (68), p.45"
+          }
+        ],
+        "4J1E": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, covariance normalization"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "谱 L² 核构造、唯一性、二维基本解通量；在共形坐标对两变量用四维局部正则性，证明一般闭曲面共同光滑余项。"
+          },
+          {
+            "source": "segal-v2",
+            "locator": "§2.1.2 (2.1), normalization only; general smooth remainder proved locally"
+          }
+        ],
+        "4J1F": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, analytic background"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "局部分布定义、径向平滑与球面平均的 Weyl 引理、二维/四维基本解及平滑右端的卷积。"
+          }
+        ],
+        "4J1G": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§4, (4.4) and zero set"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "§1.2 following (1.11), PDF p.5: extension and zeros; Appendix §12.5, (12.7) and following paragraph, PDF p.53: shifts and zeros"
+          }
+        ],
+        "4J1H": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, circle-average regularization"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "一般光滑度量、注入半径内嵌入圆，平滑概率密度的统一球质量界控制对数能量，证明高斯 L² 极限。"
+          }
+        ],
+        "4J1I": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§3, Gaussian shifts"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "显式平方可和高斯级数和线性高斯 Y，有界连续 F；权重 L² 收敛控制极限，无界 GMC 负矩另引用。"
+          },
+          {
+            "source": "dozz-v3",
+            "locator": "Theorem 12.1, here proved for explicit square-summable Gaussian expansions"
+          }
+        ],
+        "4J1J": [
+          {
+            "source": "rhodes-vargas-icm2026",
+            "locator": "§5.1, factorization"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "有界变量条件期望定义、全期望拼接恒等式及非负截断版本。"
+          }
+        ]
+      },
+      "remaining_branches": [
+        {
+          "branch": "Boundary LCFT and exact one-dimensional GMC formulas",
+          "scope": "Report §9 context retained; full boundary structure constants, Fyodorov–Bouchaud and interval laws, and annulus random modulus not developed as additional theorem pages."
+        },
+        {
+          "branch": "Random geometry and SLE/CLE couplings",
+          "scope": "Introductory motivation and §9 directions acknowledged; no full planar-map scaling, mating-of-trees or percolation-exponent proofs claimed."
+        },
+        {
+          "branch": "Global geometry of conformal blocks",
+          "scope": "Local geometric factor and almost-everywhere block convergence retained. Full Teichmuller line bundle, Schwarzian cocycle, projective mapping-class representation and Verlinde equivalence not constructed. Correspondence remains conjectural in the report."
+        },
+        {
+          "branch": "AGT, JT gravity, Toda, H3-WZW and imaginary Liouville",
+          "scope": "Report §9 is a dated source survey. Formal/analytic distinction expanded in 4J19; JT semiclassical claims and general bootstrap extensions are not promoted to proved universal statements or current-status surveys."
+        },
+        {
+          "branch": "Beyond ordinary strict Seiberg bounds",
+          "scope": "Extended analytic continuation and critical renormalizations not developed; fourpoint formula restricted to stated pair-charge inequalities."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4J1D",
+            "4J05"
+          ],
+          "source": "zelditch-v1; segal-v2",
+          "scope": "Compact elliptic spectral basis, Weyl law, and spectral-zeta meromorphic continuation are precisely quoted standard theorems. Green local remainder and Gaussian Sobolev convergence are separately proved."
+        },
+        {
+          "notes": [
+            "4J07",
+            "4J0B",
+            "4J0C",
+            "4J0D"
+          ],
+          "source": "rhodes-vargas-icm2026; dozz-v3",
+          "scope": "Full subcritical GMC existence/nondegeneracy, singular negative moments, simultaneous vertex limits and general Weyl anomaly are cited. Circle averages, finite/Gaussian-field shifts and zero-mode calculation are local."
+        },
+        {
+          "notes": [
+            "4J0H",
+            "4J0N",
+            "4J1G"
+          ],
+          "source": "dozz-v3",
+          "scope": "DOZZ integrability, probabilistic BPZ decoupling, reflection identification, parameter analytic continuation and global Upsilon theorem not reproved. Algebraic null-vector calculation and conditional BPZ implication are local."
+        },
+        {
+          "notes": [
+            "4J0R",
+            "4J0T",
+            "4J0V",
+            "4J1B"
+          ],
+          "source": "segal-v2; rhodes-vargas-icm2026",
+          "scope": "Continuous domain Markov construction, determinant gluing, full Segal amplitudes, projective annulus representation and operator differentiability are cited. Conditional expectation, kernel contraction and radial calculation are local."
+        },
+        {
+          "notes": [
+            "4J0X",
+            "4J0Y",
+            "4J0Z",
+            "4J11",
+            "4J12"
+          ],
+          "source": "bootstrap-v2; rhodes-vargas-icm2026",
+          "scope": "Singular interaction form at larger coupling, self-adjoint realization, scattering completeness, weighted analytic continuation and exact reflection coefficient are cited; bounded self-adjoint spectral theorem is not substituted."
+        },
+        {
+          "notes": [
+            "4J13",
+            "4J15",
+            "4J18"
+          ],
+          "source": "bootstrap-v2; segal-v2; rhodes-vargas-icm2026",
+          "scope": "Analytic Ward identities, holomorphic factorization, block convergence almost everywhere and justified spectral integrals are cited. Ward coefficient arithmetic, inverse Gram algebra, topology counts and conditional crossing consequence are local."
+        }
+      ],
+      "metadata": {
+        "node_count": 56,
+        "atomic_count": 55,
+        "reference_count": 1,
+        "language": "zh",
+        "coverage": "All main mathematical report sections §§3–8 developed; §§1–2 motivation and §9 context integrated, with specialized side branches explicitly deferred.",
+        "status": "author-repairs-frozen-pending-independent-recheck",
+        "shared_integration": "Parent-owned; no shared registry, navigation, theme, tests, build, commit or push performed.",
+        "reference_directory": "trees/references",
+        "conventions": [
+          "Positive Laplacian -div grad; scalar curvature twice Gaussian curvature; covariance 2pi G in report, whereas Segal G already includes 2pi.",
+          "Existing forest second-variable-linear convention used throughout; bra/ket holomorphic dependence translated rather than copied from the report.",
+          "Report descending descendant product differs from bootstrap v2 reversed product. Ward polynomial and Gram basis are changed together; the scalar contraction is basis-invariant.",
+          "Round metric fixed for C0 in threepoint formula. Constant metric rescaling multiplies the stripped constant by exp(c_L t/6).",
+          "Report fourpoint geometric C(g) and genus-two Cprime are retained, not assigned invented numerical values; the separate bootstrap 1/(8pi) convention is labeled.",
+          "No unmarked annulus HS claim. No bounded spectral theorem substituted for unbounded H. Surface GMC threshold2, circle L2 threshold1 and circle variable thresholdsqrt2 separated.",
+          "General smooth Green remainder uses a local 4D Laplace regularity proof, not the planar/sphere scope of Segal §10.1 or hyperbolic-only GRV lemma."
+        ]
+      }
+    }
+  ],
+  "prerequisites": {
+    "4H00": [],
+    "4H01": [
+      "4101",
+      "00Q5",
+      "4509"
+    ],
+    "4H02": [
+      "4H01",
+      "4501",
+      "0A34",
+      "4502",
+      "00Q6"
+    ],
+    "4H03": [
+      "4H01",
+      "0BL1",
+      "0I85"
+    ],
+    "4H04": [
+      "4H01",
+      "4301"
+    ],
+    "4H05": [
+      "130A",
+      "4509",
+      "4H01"
+    ],
+    "4H06": [
+      "4H01",
+      "4H03"
+    ],
+    "4H07": [
+      "4H01",
+      "4H03"
+    ],
+    "4H08": [
+      "4H07",
+      "00M1",
+      "450K"
+    ],
+    "4H09": [
+      "4503",
+      "4305",
+      "450F"
+    ],
+    "4H0A": [
+      "0H4F",
+      "0H53",
+      "4H09"
+    ],
+    "4H0B": [
+      "4H07",
+      "0A34"
+    ],
+    "4H0C": [
+      "00Q6",
+      "4H01"
+    ],
+    "4H0D": [
+      "0H4F",
+      "4H09",
+      "0I8I",
+      "4H01",
+      "4H1R"
+    ],
+    "4H0E": [
+      "0A3C",
+      "4H02"
+    ],
+    "4H0F": [
+      "4H01",
+      "4H1R",
+      "00Q6",
+      "4H1Q",
+      "4H1O",
+      "4H0E"
+    ],
+    "4H0G": [
+      "4H0F",
+      "4H1R",
+      "4H1Q"
+    ],
+    "4H0H": [
+      "4H0F",
+      "4H1R",
+      "4H1Q",
+      "4H0G"
+    ],
+    "4H0I": [
+      "0BL1",
+      "00OA",
+      "4H03"
+    ],
+    "4H0J": [
+      "4H03",
+      "00OB"
+    ],
+    "4H0K": [
+      "4H0I"
+    ],
+    "4H0L": [
+      "4H01",
+      "0BAC"
+    ],
+    "4H0M": [
+      "4H0L"
+    ],
+    "4H0N": [
+      "4H01",
+      "4101",
+      "0A3C"
+    ],
+    "4H0O": [
+      "0H4G"
+    ],
+    "4H0P": [
+      "4H0N",
+      "4503",
+      "0H4G"
+    ],
+    "4H0Q": [
+      "4H0P",
+      "0H53",
+      "4H0N",
+      "0W01"
+    ],
+    "4H0R": [
+      "4H0Q"
+    ],
+    "4H0S": [
+      "0H4G",
+      "0H53",
+      "0I80"
+    ],
+    "4H0T": [
+      "4H0S",
+      "4H0P",
+      "0H53",
+      "4H0Q"
+    ],
+    "4H0U": [
+      "4H0S"
+    ],
+    "4H0V": [
+      "4H0S",
+      "0H4F",
+      "4305",
+      "4H0T"
+    ],
+    "4H0W": [
+      "0A3C",
+      "4H0V"
+    ],
+    "4H0X": [
+      "4101",
+      "0H4G"
+    ],
+    "4H0Y": [
+      "4H0X"
+    ],
+    "4H0Z": [
+      "4H0N",
+      "4H0Q",
+      "4H0X",
+      "4H0B"
+    ],
+    "4H10": [
+      "4H0Z",
+      "4H0X"
+    ],
+    "4H11": [
+      "4H0B",
+      "4H0X"
+    ],
+    "4H12": [
+      "4H06"
+    ],
+    "4H13": [
+      "4H0N",
+      "4H0Q",
+      "4H12"
+    ],
+    "4H14": [
+      "4H03",
+      "4H12"
+    ],
+    "4H15": [
+      "4H14"
+    ],
+    "4H16": [
+      "4H03",
+      "4H15"
+    ],
+    "4H17": [
+      "4H12",
+      "4101",
+      "0F68",
+      "4H0Q"
+    ],
+    "4H18": [
+      "4H17",
+      "4H07",
+      "4H08",
+      "4H14"
+    ],
+    "4H19": [
+      "4H17",
+      "4H07",
+      "4H1A",
+      "4H1B"
+    ],
+    "4H1A": [
+      "4H12",
+      "4H07"
+    ],
+    "4H1B": [
+      "00Q6",
+      "00M1",
+      "0F40"
+    ],
+    "4H1C": [
+      "0H53",
+      "4H0I"
+    ],
+    "4H1D": [
+      "4H12"
+    ],
+    "4H1E": [
+      "0H53",
+      "0A3C",
+      "4H1D"
+    ],
+    "4H1F": [
+      "4H0N",
+      "4H0Q"
+    ],
+    "4H1G": [
+      "4H0O"
+    ],
+    "4H1H": [
+      "0H4F",
+      "4H0F",
+      "4H0G"
+    ],
+    "4H1I": [
+      "4H01",
+      "4H0E"
+    ],
+    "4H1J": [
+      "4H0U",
+      "4H0O",
+      "4H0V"
+    ],
+    "4H1K": [
+      "4H17",
+      "4H19",
+      "4H07",
+      "4H14",
+      "4H15"
+    ],
+    "4H1L": [
+      "4H03",
+      "4H0J"
+    ],
+    "4H1M": [
+      "0H4G",
+      "4H0R"
+    ],
+    "4H1N": [
+      "0H4G"
+    ],
+    "4H1O": [
+      "4H01",
+      "0A34"
+    ],
+    "4H1P": [
+      "4H0Z",
+      "4H0X",
+      "4H10"
+    ],
+    "4H1Q": [
+      "2J0C",
+      "00Q6",
+      "0H4F"
+    ],
+    "4H1R": [
+      "00Q6",
+      "4H0C",
+      "0H53"
+    ],
+    "icm2026-pausader": [],
+    "4I00": [],
+    "4I01": [
+      "004N",
+      "0F4E",
+      "0N0B",
+      "00M4"
+    ],
+    "4I02": [
+      "4I01",
+      "0N0B"
+    ],
+    "4I03": [
+      "4I01",
+      "4I02"
+    ],
+    "4I04": [
+      "00MQ",
+      "0Z02",
+      "0N0B"
+    ],
+    "4I05": [
+      "00MS",
+      "4I02",
+      "4I04"
+    ],
+    "4I06": [
+      "0AC3",
+      "00QP"
+    ],
+    "4I07": [
+      "4I06",
+      "4I01",
+      "0F4F",
+      "4I02"
+    ],
+    "4I08": [
+      "4I07",
+      "4I06",
+      "00QR"
+    ],
+    "4I09": [
+      "0AC3",
+      "4I06"
+    ],
+    "4I0A": [
+      "4I01",
+      "4I09",
+      "0F4F",
+      "4I02",
+      "4I14"
+    ],
+    "4I0B": [
+      "4I01",
+      "4I03",
+      "4I06",
+      "4I07"
+    ],
+    "4I0C": [
+      "4I01",
+      "00M4",
+      "0Z01"
+    ],
+    "4I0D": [
+      "00MQ",
+      "4F02",
+      "2V0L",
+      "0F4F"
+    ],
+    "4I0E": [
+      "0Z03"
+    ],
+    "4I0F": [
+      "0Z01",
+      "0Z03",
+      "0Z1C",
+      "0Z02",
+      "00EW"
+    ],
+    "4I0G": [
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "004V",
+      "004X"
+    ],
+    "4I0H": [
+      "0F4E",
+      "004V",
+      "4I0G"
+    ],
+    "4I0I": [
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "4I0G",
+      "00M4"
+    ],
+    "4I0J": [
+      "0F4E",
+      "00JZ",
+      "0F0F",
+      "0F4F"
+    ],
+    "4I0K": [
+      "4I0J",
+      "00MS",
+      "4I04"
+    ],
+    "4I0L": [
+      "4I0J",
+      "0F4E"
+    ],
+    "4I0M": [
+      "4I0L",
+      "0N0B",
+      "00MS"
+    ],
+    "4I0N": [
+      "4I0L",
+      "4I0D",
+      "2V0L"
+    ],
+    "4I0O": [
+      "0Z05",
+      "0H4M",
+      "4I0L"
+    ],
+    "4I0P": [
+      "4I0O"
+    ],
+    "4I0Q": [
+      "4I0O",
+      "4I0M",
+      "4I1A"
+    ],
+    "4I0R": [
+      "4I0O",
+      "4I0M",
+      "4I0Z",
+      "4I04",
+      "4I05",
+      "4I0Q",
+      "4I1A"
+    ],
+    "4I0S": [
+      "4I0Q",
+      "4I0R"
+    ],
+    "4I0T": [
+      "4I0M",
+      "4I0D",
+      "4I0O",
+      "4I1A"
+    ],
+    "4I0U": [
+      "4I01",
+      "4I0T",
+      "4I0C",
+      "4I0E",
+      "4F02",
+      "0A39"
+    ],
+    "4I0V": [
+      "4I0C",
+      "4I0F",
+      "4I04",
+      "00MW",
+      "004X"
+    ],
+    "4I0W": [
+      "00N0",
+      "004V",
+      "4I0H"
+    ],
+    "4I0X": [
+      "4I0E",
+      "4I0F",
+      "4I0V",
+      "4I0G",
+      "4I0W"
+    ],
+    "4I0Y": [
+      "4I01",
+      "4I0G",
+      "4I0X",
+      "00M4"
+    ],
+    "4I0Z": [
+      "4I01"
+    ],
+    "4I10": [
+      "4I0O",
+      "4I0R",
+      "4I0U",
+      "4I0I",
+      "4I0G",
+      "4I1A",
+      "4I0Z",
+      "4I12"
+    ],
+    "4I11": [
+      "00MU",
+      "4I0L"
+    ],
+    "4I12": [
+      "4I0O",
+      "4I1A",
+      "4I0G",
+      "4I0Z",
+      "4I0M",
+      "4I0Y",
+      "4I11"
+    ],
+    "4I13": [
+      "014T",
+      "0143",
+      "4I0O",
+      "4I1A"
+    ],
+    "4I14": [
+      "4I05"
+    ],
+    "4I15": [
+      "4I14",
+      "4I16"
+    ],
+    "4I16": [
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "4I0G"
+    ],
+    "4I17": [
+      "0Z01",
+      "012G",
+      "4I16",
+      "012H"
+    ],
+    "4I18": [
+      "4I1B",
+      "4I05"
+    ],
+    "4I19": [
+      "4I18",
+      "4I03",
+      "4I16",
+      "4I17",
+      "4I10"
+    ],
+    "4I1A": [
+      "0Z01",
+      "0143",
+      "014T"
+    ],
+    "4I1B": [
+      "0AI1",
+      "0Z01",
+      "012G",
+      "014W"
+    ],
+    "4I1C": [
+      "0Z03",
+      "4F02",
+      "4I0E",
+      "0N0B",
+      "00JZ"
+    ],
+    "icm2026-perez-garcia": [],
+    "4J00": [],
+    "4J01": [
+      "00FR",
+      "00NI",
+      "00O3",
+      "0U14",
+      "00O4",
+      "2G06",
+      "00FG"
+    ],
+    "4J02": [
+      "4J01",
+      "0U14"
+    ],
+    "4J03": [
+      "00L3",
+      "0N0R"
+    ],
+    "4J04": [
+      "00FR",
+      "4J1D",
+      "4J01",
+      "0A6A",
+      "0N0R",
+      "0H53",
+      "4J1E"
+    ],
+    "4J05": [
+      "4J1D"
+    ],
+    "4J06": [
+      "4J03"
+    ],
+    "4J07": [
+      "4J04",
+      "4J1H",
+      "00Q2",
+      "0K12",
+      "4J06"
+    ],
+    "4J08": [
+      "4J06",
+      "0H53"
+    ],
+    "4J09": [
+      "0H4Z",
+      "00L0",
+      "0H53"
+    ],
+    "4J0A": [
+      "4J04",
+      "4J07",
+      "4J05",
+      "4J01"
+    ],
+    "4J0B": [
+      "4J0A",
+      "4J06",
+      "4J1I",
+      "4J1E"
+    ],
+    "4J0C": [
+      "4J0B",
+      "4J01",
+      "4J09",
+      "00FG"
+    ],
+    "4J0D": [
+      "4J0C",
+      "4J01",
+      "00NI"
+    ],
+    "4J0E": [
+      "4J0D"
+    ],
+    "4J0F": [
+      "00FR",
+      "4J0C",
+      "4J0D"
+    ],
+    "4J0G": [
+      "0H4Z",
+      "0A3G"
+    ],
+    "4J0H": [
+      "4J0F",
+      "4J0G",
+      "4J1G",
+      "4J0C",
+      "4J0I"
+    ],
+    "4J0I": [
+      "00E2"
+    ],
+    "4J0J": [
+      "0F00"
+    ],
+    "4J0K": [
+      "4J0J",
+      "0F5A"
+    ],
+    "4J0L": [
+      "4J0K",
+      "004M"
+    ],
+    "4J0M": [
+      "4J0K",
+      "4J0J"
+    ],
+    "4J0N": [
+      "4J13",
+      "4J0M"
+    ],
+    "4J0O": [
+      "0N0R",
+      "4101",
+      "0H53",
+      "0A6B",
+      "0A6A"
+    ],
+    "4J0P": [
+      "270F",
+      "4101",
+      "4J0O"
+    ],
+    "4J0Q": [
+      "00Q3",
+      "00MS",
+      "0A6A",
+      "004S",
+      "0H53"
+    ],
+    "4J0R": [
+      "270F",
+      "4J0P",
+      "4J1J"
+    ],
+    "4J0S": [
+      "00FR",
+      "00FG"
+    ],
+    "4J0T": [
+      "4J0S",
+      "4J0O",
+      "0X02",
+      "0F4E",
+      "4J0R"
+    ],
+    "4J0U": [
+      "004S",
+      "0H53",
+      "0X02"
+    ],
+    "4J0V": [
+      "4J0O",
+      "4J0S",
+      "4J0J"
+    ],
+    "4J0W": [
+      "4J0O",
+      "4J0Y",
+      "0GSN"
+    ],
+    "4J0X": [
+      "4J0O",
+      "4J06",
+      "4J08",
+      "4J07"
+    ],
+    "4J0Y": [
+      "00MQ",
+      "0GSN"
+    ],
+    "4J0Z": [
+      "4J0Y",
+      "4J0O",
+      "4J0K",
+      "4J0L",
+      "4J10"
+    ],
+    "4J10": [
+      "004M",
+      "00MS"
+    ],
+    "4J11": [
+      "4J0R",
+      "4J07",
+      "4J0O",
+      "4J0P",
+      "4J0B",
+      "4J0Z",
+      "4J0T"
+    ],
+    "4J12": [
+      "0H4Z",
+      "4J11",
+      "4J0C"
+    ],
+    "4J13": [
+      "4J0E",
+      "4J0F",
+      "4J0K"
+    ],
+    "4J14": [
+      "4J0L",
+      "4J0K",
+      "4J13",
+      "4J10"
+    ],
+    "4J15": [
+      "4J0H",
+      "4J14",
+      "4J0D",
+      "4J0T",
+      "4J0Z"
+    ],
+    "4J16": [
+      "4J0H",
+      "4J14",
+      "4J15"
+    ],
+    "4J17": [
+      "00FG",
+      "4J0S"
+    ],
+    "4J18": [
+      "4J17",
+      "4J0S",
+      "4J0H",
+      "4J10",
+      "4J0K",
+      "4J13",
+      "4J0T",
+      "0F4E",
+      "4J0Z"
+    ],
+    "4J19": [
+      "0AL0"
+    ],
+    "4J1A": [
+      "4J09",
+      "0H4Z"
+    ],
+    "4J1B": [
+      "4J0V",
+      "4J0D",
+      "4J0J",
+      "0GSN"
+    ],
+    "4J1C": [],
+    "4J1D": [
+      "00NI",
+      "4J01",
+      "0GSN",
+      "0A6A",
+      "4607"
+    ],
+    "4J1E": [
+      "00FR",
+      "4J01",
+      "4607",
+      "4J1D",
+      "4J1F"
+    ],
+    "4J1F": [
+      "00MH"
+    ],
+    "4J1G": [
+      "4J0G"
+    ],
+    "4J1H": [
+      "4J04",
+      "2P0Y",
+      "4J1E"
+    ],
+    "4J1I": [
+      "00MQ",
+      "4J03"
+    ],
+    "4J1J": [
+      "00Q3",
+      "4J0Q",
+      "0A7A"
+    ],
+    "icm2026-rhodes-vargas": []
+  },
+  "navigation_checks": [
+    "2B00",
+    "4900"
+  ],
+  "source_errata": [
+    {
+      "id": "PAU-SIGN",
+      "notes": [
+        "4H03",
+        "4H07"
+      ],
+      "scope": "Report (2.1) reaction sign disagrees with (1.1)/(1.4). Direct expansion with bracket=xavb-vaxb gives -lambda{Ms,psi} on left and +lambda{f,psi} on right. Existing0I85 uses the opposite bracket convention, explicitly negated, not edited."
+    },
+    {
+      "id": "PAU-BACKGROUND",
+      "notes": [
+        "4H0N",
+        "4H12"
+      ],
+      "scope": "Report (5.2) omits neutralizing -1. Periodic nonnegative mass1 BGK uses phi_xx=int M dv-1, as primary2601.10030v2§1.1; otherwise integration over torus is incompatible."
+    },
+    {
+      "id": "PAU-MASS",
+      "notes": [
+        "4H1F"
+      ],
+      "scope": "Report(4.15) prefactor2/[pi(1-alpha)] has mass2. PrimaryB.1 prefactor1/[pi(1-alpha)] has mass1. Both calculated explicitly; source convention not silently changed. Parent independently confirmed and added both regression cases."
+    },
+    {
+      "source": "perez-garcia-icm2026",
+      "locator": "§1.1 finite range",
+      "resolution": "4I01 uses diameter in graph distance, not cardinality of support; a two-site arbitrarily-separated counterexample is explicit."
+    },
+    {
+      "source": "cubitt-gap-v5",
+      "locator": "initial Theorem 3 vs §6.2 restatement",
+      "resolution": "Initial/report alpha≤beta and restatement alpha≤2beta both recorded. No global reconciliation or changed theorem constant claimed."
+    },
+    {
+      "source": "haag-duality-v2",
+      "locator": "Definition 4.1.1 (105)",
+      "resolution": "Printed cone sandwich repeats C_kappa-prime on both sides and paths are described as disjoint despite a common apex. Notes avoid supplying an unverified corrected general definition; use exact blocked-cone case and refer broader stepped-cone domain to the primary theorem."
+    },
+    {
+      "source": "haag-duality-v2",
+      "locator": "Assumption 2.2.1 and (111)",
+      "resolution": "4I0Y retains the bounded common error requirement and uniform operator-input estimates. 4I12 states the verified large-N zero-error identities; it does not infer a global bounded error from growing finite-map norms or claim to reconstruct the limiting proof."
+    },
+    {
+      "id": "degenerate-sign",
+      "notes": [
+        "4J0M",
+        "4J0N"
+      ],
+      "printed": "Report §4: -gamma/2 and +2/gamma.",
+      "adopted": "-gamma/2 and -2/gamma.",
+      "basis": "DOZZ v3 §4.2 PDF p.13 (published p.100), visually inspected; direct null-vector calculation."
+    },
+    {
+      "id": "fourpoint-metric-power",
+      "notes": [
+        "4J15"
+      ],
+      "printed": "Unnumbered intermediate line before (8.3): g(z)^(-4 Delta_2).",
+      "adopted": "Theorem 8.1 (8.3): g(z)^(-Delta_2).",
+      "basis": "Formal theorem and Proposition 3.2 Weyl point weight agree."
+    },
+    {
+      "id": "unsummed-descendant",
+      "notes": [
+        "4J14"
+      ],
+      "printed": "Report (8.4) displays only sum over nu while nu-prime remains free.",
+      "adopted": "Sum over both nu and nu-prime at equal level.",
+      "basis": "Report preceding (7.7)/(8.1) expansion and bootstrap v2 (8.2) explicitly contain both indices."
+    }
+  ],
+  "review": {
+    "packet_files": [
+      "research/mathematical-physics-pausader-packet.json",
+      "research/mathematical-physics-perez-garcia-packet.json",
+      "research/mathematical-physics-rhodes-vargas-packet.json"
+    ],
+    "terminology": "Reuse established forest terminology; individual packets retain terminology and source checks.",
+    "mathematical_scope": "Atomic prerequisites, worked calculations and deductions, with cited research inputs and conjectures distinguished. Topic coverage does not assert that all cited proofs are reproduced."
+  },
+  "shared_revisions": [
+    {
+      "id": "0Z1C",
+      "path": "trees/math/analysis/operator-boundaries/0Z1C.tree",
+      "sha256": "6168e0894cf45abdee2f064a0e4f2fcaae56d8f50547e797874a245474260a3d",
+      "reason": "用正半定形式的极化直接证明抽象 C* 代数上的 Schwarz 不等式；以代数内绝对收敛级数证明状态范数界。",
+      "review": "research/mathematical-physics-perez-garcia-review.json"
+    }
+  ]
+}

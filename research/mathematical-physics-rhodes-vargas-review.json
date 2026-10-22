@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "review_type": "independent-final-whole-branch",
+  "report_id": "icm2026-rhodes-vargas",
+  "reviewed_on": "2026-10-22",
+  "result": "pass",
+  "acceptance": true,
+  "summary": "All 57 owned trees and the complete packet were reviewed, together with 42 actually implicated shared notes. Revision 2 changed only 4J0W, 4J0G, 4J1G and the packet; these were re-read and checked against the pinned primary sources. RV-P01 through RV-P07, RV-F08 and RV-F09 are resolved. Acceptance is limited to the exact hash-bound mathematical review scope, not build or publication verification.",
+  "input_packet": {
+    "id": "mathematical-physics-rhodes-vargas-packet",
+    "path": "research/mathematical-physics-rhodes-vargas-packet.json",
+    "expected_sha256": "cd70ca4e15d221828e62c831d8a5ace9248662fe8f2ba6c73b3926850e290572",
+    "reviewed_sha256": "cd70ca4e15d221828e62c831d8a5ace9248662fe8f2ba6c73b3926850e290572",
+    "matched_expected": true
+  },
+  "scope": {
+    "owned_trees_read": 57,
+    "atoms_read": 55,
+    "outlines_read": 1,
+    "references_read": 1,
+    "shared_trees_read": 42,
+    "packet_read_in_full": true,
+    "all_owned_packet_hashes_matched": true,
+    "all_reviewed_repo_inputs_unchanged_at_final_check": true,
+    "public_notes_edited": false,
+    "builds_run": false,
+    "git_commands_run": false,
+    "proof_boundary": "Local elementary proofs were checked directly; quoted elliptic, GMC, LCFT, spectral, sewing and bootstrap results were checked as source contracts, not re-proved or promoted to independently certified full research proofs.",
+    "review_method": "Cumulative whole-branch review followed by revision-2 targeted re-reading of all three changed notes and the complete revised packet. The remaining 54 owned trees and all 42 previously reviewed shared notes were verified byte-identical to the reviewed versions. No unchanged note was represented as newly re-read."
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "RV-P01",
+      "aliases": [
+        "RV01"
+      ],
+      "status": "resolved",
+      "notes": [
+        "4J0F"
+      ],
+      "verification": "The round reference metric is fixed before asserting C0 times C_DOZZ. Constant metric rescaling is separately accounted for by exp(c_L t/6)."
+    },
+    {
+      "id": "RV-P02",
+      "aliases": [
+        "RV02"
+      ],
+      "status": "resolved",
+      "notes": [
+        "4J0K"
+      ],
+      "verification": "The common primary has independent left/right weights h,k; the energy is h+k plus the two levels. The expression 2h is confined to the diagonal case."
+    },
+    {
+      "id": "RV-P03",
+      "aliases": [
+        "RV03"
+      ],
+      "status": "resolved",
+      "notes": [
+        "0Z1C",
+        "4I0F",
+        "0Z01",
+        "0Z02",
+        "0Z03",
+        "0A38",
+        "00EW"
+      ],
+      "verification": "Read the parent's current abstract polarization proof and binomial Banach-algebra norm bound. It does not assume a Hilbert-space representation. The GNS quotient, left ideal, bounded representation and completion argument are consistent with second-variable linearity."
+    },
+    {
+      "id": "RV-P04",
+      "aliases": [
+        "RV04"
+      ],
+      "status": "resolved",
+      "notes": [
+        "4J07",
+        "4J1D",
+        "4J1E",
+        "4J1F",
+        "4J1H"
+      ],
+      "verification": "The circle average is constructed as an L2 Gaussian limit using finite logarithmic energy, rather than pairing the distribution with an undefined pointwise restriction. The local argument applies to any smooth closed metric below the injectivity radius."
+    },
+    {
+      "id": "RV-P05",
+      "aliases": [
+        "RV05"
+      ],
+      "status": "resolved",
+      "notes": [
+        "4J0B",
+        "4J1I"
+      ],
+      "verification": "The Hilbert-valued Gaussian shift proof has square-summable field/shift coefficients and bounded continuous test functionals. Passing to singular insertions and unbounded negative GMC moments is explicitly left to the cited research theorem."
+    },
+    {
+      "id": "RV-P06",
+      "aliases": [
+        "RV06"
+      ],
+      "status": "resolved",
+      "notes": [
+        "4J0M"
+      ],
+      "verification": "The null-vector computation no longer asserts nonvanishing in an arbitrary quotient; singular-vector terminology is conditional on the descendant being nonzero."
+    },
+    {
+      "id": "RV-P07",
+      "aliases": [
+        "RV07"
+      ],
+      "status": "resolved",
+      "notes": [
+        "4J0G",
+        "4J1G"
+      ],
+      "verification": "The strip-integral construction is separated from the quoted global extension, shift and zero theorem. The associated locator defect RV-F09 was separately resolved and rechecked in revision 2."
+    },
+    {
+      "id": "RV-F08",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "operator-domain",
+      "notes": [
+        "4J0W"
+      ],
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0W.tree",
+      "line": 7,
+      "title": "Specify a genuine finite-energy cylinder core",
+      "finding": "Smoothness, finite Gaussian-coordinate dependence and compact support in c do not ensure that the derivatives in lines 9-10 belong to L2, or that the displayed operator and energy identity are defined.",
+      "counterexample": "For a nonzero chi in C_c^infinity(R), F(c,x_1)=chi(c) exp(i exp(x_1^2)) belongs to H and satisfies the stated smooth-cylinder conditions, but its x_1 derivative is not in Gaussian L2: its squared modulus is 4 |chi(c)|^2 x_1^2 exp(2x_1^2).",
+      "correction": "Use an explicit dense core, such as finite Gaussian-coordinate polynomials with C_c^infinity(c) coefficients, or the source's cylinder class whose function and every derivative have at most polynomial growth. State the integration-by-parts identity on that core before taking the form closure.",
+      "evidence": [
+        {
+          "source": "bootstrap-v2",
+          "url": "https://arxiv.org/pdf/2005.11530v2",
+          "locator": "Section 4.1, PDF p.20; Section 5.2, PDF p.28",
+          "detail": "The source defines S using polynomial growth for all derivatives; the Gaussian creation/annihilation operators and quadratic form are defined on the resulting domain."
+        }
+      ],
+      "acceptance_condition": "Satisfied: repaired core, integration by parts, form closability, closed-form realization and precise source binding were re-read; current note and packet hashes match.",
+      "resolved_in_packet_sha256": "cd70ca4e15d221828e62c831d8a5ace9248662fe8f2ba6c73b3926850e290572",
+      "resolution": "4J0W now uses the algebraic span of C_c^infinity(c) times finite-coordinate Gaussian polynomials. Its stated density follows from Hermite completeness and the scalar test-function density. Every derivative used is square integrable, and Gaussian polynomial boundary terms vanish. For a q_0-Cauchy sequence tending to zero in H, the weighted derivative vector converges strongly in the Hilbert direct sum; pairing each component with the dense core and integrating by parts gives zero for every limit component, hence q_0(F_k) tends to zero. The closed-form theorem therefore applies.",
+      "current_source_verification": {
+        "source": "bootstrap-v2",
+        "url": "https://arxiv.org/pdf/2005.11530v2",
+        "locator": "Section 4.1, equations (4.1)-(4.7), PDF p.20; Section 4.2, equations (4.9)-(4.10) and Proposition 4.3 with proof, PDF pp.21-22",
+        "detail": "Read the primary text and visually inspected pp.20-21. Polynomial density, Hermite completeness, adjoints and free-form closure support the repaired note. The note uses the smaller polynomial domain and supplies its own valid derivative-vector closability argument rather than falsely identifying it with the source's larger cylinder class."
+      }
+    },
+    {
+      "id": "RV-F09",
+      "priority": "P3",
+      "status": "resolved",
+      "category": "source-binding",
+      "notes": [
+        "4J1G",
+        "4J0G"
+      ],
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1G.tree",
+      "line": 5,
+      "title": "Correct the DOZZ Upsilon source locators",
+      "finding": "4J1G and packet report.claim_sources entries for 4J0G and 4J1G assign the Upsilon integral/shift theorem to DOZZ v3 Section 2.3. That section concerns structure constants, not these Upsilon statements. The mathematical formulas themselves agree with the inspected source.",
+      "correction": "Bind the integral and extension/zeros to Section 1.2, equation (1.11), PDF p.5, and the shifts/zeros to Appendix Section 12.5, equation (12.7), PDF p.53. Correct the note and both packet locators; update the author's source_records.actual_reading only after actually inspecting these locations.",
+      "evidence": [
+        {
+          "source": "dozz-v3",
+          "url": "https://arxiv.org/pdf/1707.08785v3",
+          "locator": "Section 1.2 (1.11), p.5; Section 2.3, p.9; Appendix Section 12.5 (12.7), p.53",
+          "detail": "Direct comparison establishes the locator mismatch; the original packet's declared reading scope does not include Sections 1.2 or 12.5."
+        }
+      ],
+      "acceptance_condition": "Satisfied: both changed Upsilon notes, revised citation entries and complete packet were re-read; refreshed hashes match.",
+      "resolved_in_packet_sha256": "cd70ca4e15d221828e62c831d8a5ace9248662fe8f2ba6c73b3926850e290572",
+      "resolution": "4J0G and 4J1G now cite Section 1.2 (1.11), PDF p.5, and Section 12.5 (12.7), PDF p.53, as applicable. Both packet claim-source entries and the DOZZ actual_reading record include the corrected locations and the author's added text/rendered-page reading. Independent text and rendered-page inspection confirmed the formulas and locator content. No full DOZZ or global special-function proof is claimed to have been independently reconstructed.",
+      "current_source_verification": {
+        "source": "dozz-v3",
+        "url": "https://arxiv.org/pdf/1707.08785v3",
+        "locator": "Section 1.2, (1.11) and following paragraph, PDF p.5; Appendix Section 12.5, (12.7) and following paragraph, PDF p.53",
+        "detail": "Both pages read in extracted text and inspected as rendered pages. The section/equation locations, shifts and zero-set qualifications match the revised note and packet."
+      }
+    }
+  ],
+  "additional_checks": [
+    {
+      "id": "general-green-regularity",
+      "notes": [
+        "4J1D",
+        "4J1E",
+        "4J1F"
+      ],
+      "status": "checked",
+      "detail": "Weyl frequency/eigenvalue conversion is correct. The spectral Green kernel converges in L2 of the product. In conformal coordinates the symmetric remainder solves a four-dimensional constant-coefficient Laplace equation with smooth right-hand side; the accompanying local regularity proof closes the general-surface gap without using a sphere/planar-only citation."
+    },
+    {
+      "id": "inner-products-and-domains",
+      "notes": [
+        "004M",
+        "0A6A",
+        "00MQ",
+        "0GSN",
+        "0Z1C",
+        "4I0F",
+        "4J0L",
+        "4J0U",
+        "4J0Y",
+        "4J0Z",
+        "4J11"
+      ],
+      "status": "checked",
+      "detail": "Second-variable-linear conventions agree across adjoints, Gram matrices, kernel composition, GNS and generalized spectral pairings. Revision 2 supplies a valid polynomial free-Hamiltonian core and closability proof, resolving RV-F08."
+    },
+    {
+      "id": "gmc-regimes",
+      "notes": [
+        "4J07",
+        "4J08",
+        "4J0O",
+        "4J0X",
+        "4J0Y"
+      ],
+      "status": "checked",
+      "detail": "Surface subcriticality, the surface second-moment range, the circle random-variable range, the circle L2 range and the singular configuration-space potential are distinguished. See bootstrap v2 Section 2.3 and Proposition 5.5."
+    },
+    {
+      "id": "dozz-and-bpz",
+      "notes": [
+        "4J0F",
+        "4J0G",
+        "4J0H",
+        "4J0M",
+        "4J0N",
+        "4J12"
+      ],
+      "status": "checked",
+      "detail": "Checked powers, Gamma/Upsilon arguments, the round-metric normalization, both negative degenerate charges, and the distinction between probabilistic equality and meromorphic continuation. Revision 2 corrects and verifies the Upsilon source locations, resolving RV-F09."
+    },
+    {
+      "id": "segal-contract",
+      "notes": [
+        "4J0R",
+        "4J0S",
+        "4J0T",
+        "4J0U",
+        "4J0V"
+      ],
+      "status": "checked",
+      "detail": "The exact analytic collar metric and strict total/local charges agree with the inspected Segal source. The unmarked annulus is excluded from the Hilbert-Schmidt assertion. The report's composition convention is distinguished from the original paper's explicit gluing constants."
+    },
+    {
+      "id": "spectral-and-fourpoint-contracts",
+      "notes": [
+        "4J0Z",
+        "4J11",
+        "4J12",
+        "4J13",
+        "4J14",
+        "4J15",
+        "4J16"
+      ],
+      "status": "checked",
+      "detail": "Checked physical-line versus analytically continued states, generalized rather than Hilbert-space eigenvectors, inverse Gram contractions and ordering conventions, strict pair-charge hypotheses, integration ranges and normalization conventions. The corrected double partition sum and metric exponent are supported."
+    },
+    {
+      "id": "high-genus-and-open-problems",
+      "notes": [
+        "4J17",
+        "4J18",
+        "4J19"
+      ],
+      "status": "checked",
+      "detail": "Geometric normalization factors are retained; analytic convergence is not inferred merely from a formal block series. Report-dated conjectures and open problems are not stated as proved results."
+    },
+    {
+      "id": "parent-editorial-and-atomic-coverage",
+      "notes": [
+        "4J00",
+        "4J04",
+        "4J09",
+        "4J15",
+        "4J1D",
+        "4J1E",
+        "4J1F",
+        "4J1G",
+        "4J1H",
+        "4J1I",
+        "4J1J"
+      ],
+      "status": "checked",
+      "detail": "Reviewed the added spectral, local regularity, circle-average, Gaussian-shift and conditional-independence atoms and their actual shared dependencies. The random-Z identity repeats a>0. The split Upsilon notes preserve separate local and global proof obligations. No additional substantive atomicity or hidden-prerequisite blocker was found within this reviewed scope."
+    }
+  ],
+  "source_checks": [
+    {
+      "id": "rhodes-vargas-icm2026",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1803632",
+      "reading_scope": "Publisher HTML mathematical body Sections 1-9, displayed formulas and captions, plus relevant metadata and boundary footnote. Used as the authoritative report; exact selected research-source versions checked separately. No full bibliography, publisher PDF, or figure-pixel review claimed.",
+      "sha256": null,
+      "hash_note": "Live publisher HTML accessed through the web reader; no byte-identical local snapshot was available."
+    },
+    {
+      "id": "dozz-v3",
+      "url": "https://arxiv.org/pdf/1707.08785v3",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-dozz-v3.pdf",
+      "sha256": "9c9262c4a87d5e2b8a34a364dc230dc9cf64b798972f7005cce7f4ad022875b5",
+      "reading_scope": "Selected Section 1.2 (1.11)-(1.12), Sections 2.2-2.4, Section 4.2, Appendix 12.1 and 12.5; PDF p.13 rendered and visually checked for both negative degenerate charges. No claim to have reviewed the full DOZZ proof. Revision-2 recheck re-read Section 1.2 (1.11) and Section 12.5 (12.7), including following zero-set statements, and rendered and visually inspected PDF pp.5 and 53."
+    },
+    {
+      "id": "bootstrap-v2",
+      "url": "https://arxiv.org/pdf/2005.11530v2",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-bootstrap-v2.pdf",
+      "sha256": "d21df3b580b1370604494878fbc4fda1a2d186938ad25ed0591e37e3a4927bad",
+      "reading_scope": "Selected Sections 1.3-1.5 and 2.3; Section 4.1 core; Section 5.2 and Proposition 5.5 statement/opening argument; Theorem 6.25 statement/opening argument; Section 7.5 (7.36), Proposition 7.12; Section 8.1 (8.2). No full spectral, bootstrap or Ward proof review. Revision-2 recheck additionally read Section 4.2 (4.9)-(4.10), Proposition 4.3 and its proof, plus the continuation at the start of p.22. Sections 4.1-4.2 on pp.20-21 were rendered and visually inspected."
+    },
+    {
+      "id": "segal-v2",
+      "url": "https://arxiv.org/pdf/2112.14859v2",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-segal-v2.pdf",
+      "sha256": "dd364401400731011347da8df703acddd17af01995cc10f311d139b8cc013c3f",
+      "reading_scope": "Selected introduction/Theorem 1.2; Sections 2.1.1-2.1.3 and 3.1.2-3.1.3; Definition 4.2, Remark 4.3, Theorem 4.4 and ensuing bound; Propositions 5.1/5.2; Appendix C.1 statement and proof excerpt. No full Segal or high-genus bootstrap proof review."
+    },
+    {
+      "id": "zelditch-v1",
+      "url": "https://arxiv.org/pdf/0903.3420v1",
+      "local_pdf": "/tmp/mathphysics-rhodes-vargas-weyl-v1.pdf",
+      "sha256": "5439caa6afda938e977b6f68db697a25c0a761fde26551af2ceb12e2935d749d",
+      "reading_scope": "Introduction eigenbasis, positive-Laplacian and regularity conventions; Section 8 equation (68). No full microlocal proof review."
+    }
+  ],
+  "guidance_files": [
+    {
+      "id": "NOTES_STYLE_GUIDE",
+      "path": "NOTES_STYLE_GUIDE.md",
+      "sha256": "a72c61c33b088b8fc87755b980755c3eca1d7a96fd9612d4264917dbfd52ea47"
+    },
+    {
+      "id": "EVERGREEN_ATOMIC_NOTES_SKILL",
+      "path": "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+      "sha256": "741e9cc486f79cb5b6f814c30ff9f02219705f082dcd3778d678bbf94bf8945c"
+    }
+  ],
+  "reviewed_files": [
+    {
+      "id": "4J00",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J00.tree",
+      "sha256": "090218599c37fd6360e1e6428c80987e0ff72393c548948260700fe9a158a970"
+    },
+    {
+      "id": "4J01",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J01.tree",
+      "sha256": "49177b9c302963eafd565da541306958c2ee1a98a0b5ccf87b0f8aa0d1981b7f"
+    },
+    {
+      "id": "4J02",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J02.tree",
+      "sha256": "dffd9cad770fe8ee98f275c30962ad4be56ec7d78d55ff762f8eb847542f9269"
+    },
+    {
+      "id": "4J03",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J03.tree",
+      "sha256": "a588cf645e7a24f871c0966a71a862b0fbe9eac291cb2e534d17dad1ade2a2d8"
+    },
+    {
+      "id": "4J04",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J04.tree",
+      "sha256": "1048f6565f884670a55dbba66eee6ec121426c61e0ee5d709861f777607dcb17"
+    },
+    {
+      "id": "4J05",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J05.tree",
+      "sha256": "22a0f0fc929303f6279b416c617417a82f775216de5a1dceb859440a2d515cec"
+    },
+    {
+      "id": "4J06",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J06.tree",
+      "sha256": "8faff359659be63212fee220b3b2b22ee9d90b404429c2e518e8c60d9d83fdb1"
+    },
+    {
+      "id": "4J07",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J07.tree",
+      "sha256": "8414a3049138dc5f9650e67383de31cf6129962ede6680aa53e97812eaf5fe37"
+    },
+    {
+      "id": "4J08",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J08.tree",
+      "sha256": "8d430825c3347c1734038d7059cec8bbbba02044531759dfe04624c40e0f757b"
+    },
+    {
+      "id": "4J09",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J09.tree",
+      "sha256": "dc15a843228086b13f88581b6f88277c8a9febcf0d9587010040a7ee186d50b2"
+    },
+    {
+      "id": "4J0A",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0A.tree",
+      "sha256": "e07c891489413c407ab9786aa3aef438198eb3796535fde674c8a16635942143"
+    },
+    {
+      "id": "4J0B",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0B.tree",
+      "sha256": "11c3562491d691f703942e82ca6b528906e1f8a43e4ff5083844e2ec34e1dd03"
+    },
+    {
+      "id": "4J0C",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0C.tree",
+      "sha256": "241989a45f0cf7dad458649b5e7897d4ce3217eb9194e4ac0b7791243d3942c7"
+    },
+    {
+      "id": "4J0D",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0D.tree",
+      "sha256": "d1070b1a470928747e171f3c04286392e50cdc2e82872213097565d42f494971"
+    },
+    {
+      "id": "4J0E",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0E.tree",
+      "sha256": "9f1ce10b15abc9a2a58e58270f641c2cff3d2f5649fbc69f3f2df52946fb0b55"
+    },
+    {
+      "id": "4J0F",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0F.tree",
+      "sha256": "046fd555744bc0bca2ac581b3dafeba44e16211bbd43504570184fab23e17ffb"
+    },
+    {
+      "id": "4J0G",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0G.tree",
+      "sha256": "9346779b5e572738a1391fc427cd39fe0170dadf2c3c3005e7caddff3ec13b2e"
+    },
+    {
+      "id": "4J0H",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0H.tree",
+      "sha256": "4dfe7bfb7acb15172e47863d804c28f52429964834da07d34a056fcac178bf8b"
+    },
+    {
+      "id": "4J0I",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0I.tree",
+      "sha256": "7e4bd7d4882df42a7416e6b08c47257291d8fb30b00a227f4ba34b0a6385c6e9"
+    },
+    {
+      "id": "4J0J",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0J.tree",
+      "sha256": "4536417a3ce3aa3acdfaaa72d0e96bc9b42367228f862825ef50c5b5c0b8a9f1"
+    },
+    {
+      "id": "4J0K",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0K.tree",
+      "sha256": "6082906f6afc372b2d6b9bc80fc8582e2bce984cbe57895fd913edf35e2655ef"
+    },
+    {
+      "id": "4J0L",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0L.tree",
+      "sha256": "7f1e5efaf75e12bc6ee8dce0cffa3afd183b8248748947aacffa114aa2c51b7b"
+    },
+    {
+      "id": "4J0M",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0M.tree",
+      "sha256": "e7f18ef66937dbd201b94c5a4a003f72737574cf14bb136e01608b22f8352b1f"
+    },
+    {
+      "id": "4J0N",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0N.tree",
+      "sha256": "25d2364b425ecc428ed7c31e90dacdb931c4cd5e52bf2c75b89c2138721cc1bd"
+    },
+    {
+      "id": "4J0O",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0O.tree",
+      "sha256": "411fbbd7b0bb63fee1d234b480673bac90fe27b8a8ea6d84dbbc7c9a3f8a5c18"
+    },
+    {
+      "id": "4J0P",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0P.tree",
+      "sha256": "a78889f98e8f5b105415d6f1d464383b51e340e3ad9059d9c6149e6dc2945ee2"
+    },
+    {
+      "id": "4J0Q",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Q.tree",
+      "sha256": "af28900de4dbfa57f15126b2cd623008078138c6c10ce24be44960fa7d6cb22d"
+    },
+    {
+      "id": "4J0R",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0R.tree",
+      "sha256": "04b180ffdc8d56501bba8e150d914bdbecaaf3b9ead30af376380a8c506e894b"
+    },
+    {
+      "id": "4J0S",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0S.tree",
+      "sha256": "d490b3f808cbf27d1780c9857c87de895be085ba3c79cd745fbebc4d02bd13ad"
+    },
+    {
+      "id": "4J0T",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0T.tree",
+      "sha256": "35aba19b8c1f7f2acaa31821eeccfdb9f86ca35cf8240ef9d319c11f71f0ce8b"
+    },
+    {
+      "id": "4J0U",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0U.tree",
+      "sha256": "6344c5dc61a971f90a643cda173d7a0acbf84d46d9682dfd56fb91fc42755291"
+    },
+    {
+      "id": "4J0V",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0V.tree",
+      "sha256": "d9b5b5be52ca8b96feb1cbbc5be905f981608f0851ec0ba0c465a561bd333782"
+    },
+    {
+      "id": "4J0W",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0W.tree",
+      "sha256": "6803c6943909cf9b403aae13e65f2e794327584fedf2f028a92df59a48af61af"
+    },
+    {
+      "id": "4J0X",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0X.tree",
+      "sha256": "9ca2c404db03336b5269dd6b0d829651fa190f26a01869f0466c2727c30c420b"
+    },
+    {
+      "id": "4J0Y",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Y.tree",
+      "sha256": "aee78be6e07b3dda4c1caa06430afba45e56527314f7ac05d55a3efb6d1fae6f"
+    },
+    {
+      "id": "4J0Z",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Z.tree",
+      "sha256": "09f3b726d76888ff6166d35827b4047f9844cc49fc912267d05e60bac60d4ae7"
+    },
+    {
+      "id": "4J10",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J10.tree",
+      "sha256": "19f719182bc222f5de3303f5865e2f2a0f7c166a0fe72708d27c7b381e19a2bc"
+    },
+    {
+      "id": "4J11",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J11.tree",
+      "sha256": "4ab5adc31cdfa6256574121ea6ff4815475e6e0fffe47c585badaadc1c494429"
+    },
+    {
+      "id": "4J12",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J12.tree",
+      "sha256": "2fff2f21c13e1b3535807a8b1fef41edfca05dea487ecb5048096c7a35628967"
+    },
+    {
+      "id": "4J13",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J13.tree",
+      "sha256": "ad787bfe283e7bf2ff1238b97d2c8533b3001ed4e582888b63b869fc6864ee4e"
+    },
+    {
+      "id": "4J14",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J14.tree",
+      "sha256": "89d02a11d1ee828640c6026c0fa63e3db08c53667fcacf0b226bdc2d6575eef9"
+    },
+    {
+      "id": "4J15",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J15.tree",
+      "sha256": "1a31a6dad865ec6b479b26ac324e1f722420d725584dcc406a07d09979185bcc"
+    },
+    {
+      "id": "4J16",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J16.tree",
+      "sha256": "f83562585dfed0c89d2a4e7e2fa229d3204b6fc55382fb69387e1c8b6725ad92"
+    },
+    {
+      "id": "4J17",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J17.tree",
+      "sha256": "cd91504601a7af3750ec6e1756cc707dd41b6a5f4ef6e74d5f2ed19870e1e714"
+    },
+    {
+      "id": "4J18",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J18.tree",
+      "sha256": "0cec9046f572d3fdfa4a6b7cf294aa46b2ee98bbb671550c5cae9a7b86a67d3e"
+    },
+    {
+      "id": "4J19",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J19.tree",
+      "sha256": "602a3e21c113b53ef7e4aa9cd60d7955672c37f8d01482ca9c0e76877c22e3ba"
+    },
+    {
+      "id": "4J1A",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1A.tree",
+      "sha256": "eaf79eb0ded65021162e6ccea47c127ca531bd7f60b2124382867f44bc44264c"
+    },
+    {
+      "id": "4J1B",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1B.tree",
+      "sha256": "0fadbf28976a02b5825f91ebf8e753af03159af237022f99f898acd067100b44"
+    },
+    {
+      "id": "4J1C",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1C.tree",
+      "sha256": "8b917f217855d4f7ac4cec81b7f85915764443a416bbc11c672739f22bee8152"
+    },
+    {
+      "id": "4J1D",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1D.tree",
+      "sha256": "656aa8a35f9b1ac15ff629864a6d7327bc62115c3cf70fa110d9f8bff93b382d"
+    },
+    {
+      "id": "4J1E",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1E.tree",
+      "sha256": "73e65c973d4397b7f513702e84d6f5e3e4e85907d4d04b51c526889b6b83880e"
+    },
+    {
+      "id": "4J1F",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1F.tree",
+      "sha256": "8e972c06f4fb6b556757f03eef01193a11a6348e7dcd336d130758cca963c5ba"
+    },
+    {
+      "id": "4J1G",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1G.tree",
+      "sha256": "2c580c178aaabf55837686ae7abca3435ea08af9f1e4cdb09d302508ac640c4e"
+    },
+    {
+      "id": "4J1H",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1H.tree",
+      "sha256": "8969e4572bd733ec6ad5d6f7ed1369ba96b9fc81fd13b1d6bb76842bc5defcba"
+    },
+    {
+      "id": "4J1I",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1I.tree",
+      "sha256": "884791e977e0340fbad34ad0548d1bb91c0328acc48dab9033752db507db7398"
+    },
+    {
+      "id": "4J1J",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J1J.tree",
+      "sha256": "893e37eb08ac9028748fd6cc55f800be025724e5e6abd5044225c7e43185d824"
+    },
+    {
+      "id": "icm2026-rhodes-vargas",
+      "path": "trees/references/icm2026-rhodes-vargas.tree",
+      "sha256": "080682b846c89a21f7e9ab7eed052a861d77d9c48447e75fab96b20c0e2a8895"
+    },
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba"
+    },
+    {
+      "id": "00FG",
+      "path": "trees/math/topology/atomic/00FG.tree",
+      "sha256": "d7d3a044d2b74c54ff0b1969be77f229fbcc70f7de355a6ba637fec172d27854"
+    },
+    {
+      "id": "00FR",
+      "path": "trees/math/topology/atomic/00FR.tree",
+      "sha256": "99e9e8debfbd37aca8a05823fe544a0a5cc66105b928333bc8534a3cab4409dd"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769"
+    },
+    {
+      "id": "00MH",
+      "path": "trees/math/analysis/atomic/00MH.tree",
+      "sha256": "87539a2ae6f7b46a02abbb40fbe4f676d2397cde571a09a7cc9f693d81d42cd8"
+    },
+    {
+      "id": "00MQ",
+      "path": "trees/math/analysis/atomic/00MQ.tree",
+      "sha256": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37"
+    },
+    {
+      "id": "00MS",
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260"
+    },
+    {
+      "id": "00NI",
+      "path": "trees/math/geometry/atomic/00NI.tree",
+      "sha256": "ff87c6bc1af3aae11c2e4878816631aad0368040a4394352ac9831e6152dd80c"
+    },
+    {
+      "id": "00O3",
+      "path": "trees/math/geometry/atomic/00O3.tree",
+      "sha256": "54bd85a64ce95af66d4564002e24e541ca4aee6cc969a7528c613e342be657b4"
+    },
+    {
+      "id": "00O4",
+      "path": "trees/math/geometry/atomic/00O4.tree",
+      "sha256": "aedc206891c40ef5a15366044fb4d51844fcc7f97a3e0c1cf7c934fb557166dc"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1"
+    },
+    {
+      "id": "0A3G",
+      "path": "trees/math/analysis/atomic/0A3G.tree",
+      "sha256": "731854bc58c584422f1ece86b8da8192bbfc15e58089a2a74488c5f8865daad9"
+    },
+    {
+      "id": "0A6A",
+      "path": "trees/math/logic/research/atomic/0A6A.tree",
+      "sha256": "c4c9673cbf76ee86cc9396e886bb800f1decfefc4c943140a5f4e0b4c05f9aa1"
+    },
+    {
+      "id": "0A6B",
+      "path": "trees/math/logic/research/atomic/0A6B.tree",
+      "sha256": "5693f635e82eb6556c668128012930441c1f96212da3f1e39a467c3645cbc4c8"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree",
+      "sha256": "fc9fd9db793237c02165a5b40db7e6bf854fb810a195573e761818bee338f49c"
+    },
+    {
+      "id": "0AL0",
+      "path": "trees/math/algebra/research/0AL0.tree",
+      "sha256": "6c3c372ace9152ead31c43d7df8d6c0175f4d1113f3554bb77a31ac34d44f660"
+    },
+    {
+      "id": "0F00",
+      "path": "trees/math/geometry/algebraic/0F00.tree",
+      "sha256": "cebcb9728b6082658d91dfbd9bd82ab6583011278155c47549e756bec64bccba"
+    },
+    {
+      "id": "0F4E",
+      "path": "trees/math/category/quantum/atomic/0F4E.tree",
+      "sha256": "a325c75c71d8f15dbeed0eeec43c303a4fd89cc422842263e16719a1bad41397"
+    },
+    {
+      "id": "0F5A",
+      "path": "trees/math/number-theory/0F5A.tree",
+      "sha256": "891a191fc664249f1d20f87afa3f970450e4da2d792fccce83f651cb518db5be"
+    },
+    {
+      "id": "0GSN",
+      "path": "trees/math/number-theory/reports/0GSN.tree",
+      "sha256": "a5f5e14e959db59ebd57334b3222bac8b3ac49aa863e97188901e915c3033017"
+    },
+    {
+      "id": "0H4Z",
+      "path": "trees/math/number-theory/reports/0H4Z.tree",
+      "sha256": "857c3fd822acc69dee2542721ae76d4d028d8fe3eee8bb609847312c913702dc"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b"
+    },
+    {
+      "id": "0K12",
+      "path": "trees/math/geometry/algebraic/0K12.tree",
+      "sha256": "159d760f5c2b5abf484470cc94e097b0a9f81490ef53bf5ee2098729a4d68380"
+    },
+    {
+      "id": "0N0R",
+      "path": "trees/math/geometry/bourbaki/0N0R.tree",
+      "sha256": "afc97ce9792ec340ab6f24c01766f7927c95aa5cff958bad4f146502779894db"
+    },
+    {
+      "id": "0U14",
+      "path": "trees/math/analysis/multi-bubbles/0U14.tree",
+      "sha256": "7de36fb9ff564155238c237f496739d10a8b64781d801b934d5bb143b3882b0a"
+    },
+    {
+      "id": "0X02",
+      "path": "trees/math/analysis/schur-multipliers/0X02.tree",
+      "sha256": "d3a3d26d2d3d94439c192f31d8a1a85bae6747d55f151337c6e9aeebdaca4ac5"
+    },
+    {
+      "id": "270F",
+      "path": "trees/math/analysis/rectifiability/270F.tree",
+      "sha256": "688dda7bb6d81752c33c15a4db34c0f9a95c3df7230593a208ddac95942ba086"
+    },
+    {
+      "id": "2G06",
+      "path": "trees/math/geometry/minimal-comparison/2G06.tree",
+      "sha256": "6e6659f0e50ff6914ca6701f65e88ec5f301817cb31d49579f244247bf9316fe"
+    },
+    {
+      "id": "2P0Y",
+      "path": "trees/math/geometry/finite-genus-minimal/2P0Y.tree",
+      "sha256": "cd31048eb7530875664cf2fafbe6469a8807a7183a707893e9be65448c1ccefb"
+    },
+    {
+      "id": "4101",
+      "path": "trees/math/pde/berti/4101.tree",
+      "sha256": "9fe3ad1309109320516976629031538d9a524a2cc57a24cbc2a3266a887760e0"
+    },
+    {
+      "id": "4607",
+      "path": "trees/math/pde/faure/4607.tree",
+      "sha256": "4334a218db056c4df5b851cb05d0313c978cadfadf5c3b93e30c8d73e939bd4b"
+    },
+    {
+      "id": "0Z1C",
+      "path": "trees/math/analysis/operator-boundaries/0Z1C.tree",
+      "sha256": "6168e0894cf45abdee2f064a0e4f2fcaae56d8f50547e797874a245474260a3d"
+    },
+    {
+      "id": "4I0F",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0F.tree",
+      "sha256": "c83e8db13706a37b8d91c7f4d813d784b759219b16717a6bd890b7d824909aee"
+    },
+    {
+      "id": "0Z01",
+      "path": "trees/math/analysis/operator-boundaries/0Z01.tree",
+      "sha256": "bd049c98d37243ec00e0dd766785d6b3fc8501d51afb1c18af0de15d4c2e5589"
+    },
+    {
+      "id": "0Z02",
+      "path": "trees/math/analysis/operator-boundaries/0Z02.tree",
+      "sha256": "55ea45f930abb2cb24eecea84e98d0ba23d70ed490badaab92126ed924675950"
+    },
+    {
+      "id": "0Z03",
+      "path": "trees/math/analysis/operator-boundaries/0Z03.tree",
+      "sha256": "054350a7d05577e3e830efc90a2a78f7b70a892e86b69ffec16d997c0bfc9f6a"
+    },
+    {
+      "id": "00EW",
+      "path": "trees/math/topology/atomic/00EW.tree",
+      "sha256": "be3f45510d200fc767fec670a2d933731373848a083433a0161d3beaeca134a9"
+    },
+    {
+      "id": "0A38",
+      "path": "trees/math/analysis/atomic/0A38.tree",
+      "sha256": "5549822368c709b807074bd0031939d3840dcef0781612f8ca085da85a3da34b"
+    },
+    {
+      "id": "mathematical-physics-rhodes-vargas-packet",
+      "path": "research/mathematical-physics-rhodes-vargas-packet.json",
+      "sha256": "cd70ca4e15d221828e62c831d8a5ace9248662fe8f2ba6c73b3926850e290572"
+    }
+  ],
+  "limitations": [
+    "This review does not certify full research proofs in the cited articles.",
+    "No build, rendered-site review, git operation or publication check was performed, as instructed.",
+    "The hash manifest binds only the exact reviewed bytes; it does not approve subsequent edits."
+  ],
+  "required_followup": null,
+  "review_revision": 2,
+  "revision_history": [
+    {
+      "revision": 1,
+      "packet_sha256": "90a9c93042ed2a156b845a422ec52a9c060918561a958dc6f205a71c73e8aab6",
+      "review_sha256": "86ff3eb5b5454b54d89463196d9695c081afa5fd5a3d56ac1eb1d33976ea2647",
+      "result": "needs_changes",
+      "open_finding_ids": [
+        "RV-F08",
+        "RV-F09"
+      ]
+    },
+    {
+      "revision": 2,
+      "packet_sha256": "cd70ca4e15d221828e62c831d8a5ace9248662fe8f2ba6c73b3926850e290572",
+      "result": "pass",
+      "open_finding_ids": [],
+      "changed_reviewed_ids": [
+        "4J0W",
+        "4J0G",
+        "4J1G",
+        "mathematical-physics-rhodes-vargas-packet"
+      ],
+      "integrity": "Exactly these four reviewed inputs changed. All 57 current owned-tree hashes match the packet, all 35 packet-listed shared hashes match, all 42 reviewed shared notes are unchanged, and the two guidance files and four actually reviewed primary PDFs retain their verified hashes."
+    }
+  ]
+}

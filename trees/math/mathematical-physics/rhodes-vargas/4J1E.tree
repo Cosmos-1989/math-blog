@@ -1,0 +1,14 @@
+\title{二维零均值 Green 核为何带对数奇性}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (3.2) 后；[Segal 原论文，v2](https://arxiv.org/abs/2112.14859v2)，§2.1.2 式 (2.1) 的谱归一化；一般闭曲面的局部余项由下述证明给出。}
+
+\p{设 #{(\Sigma,g)} 为闭连通光滑 [Riemann 曲面](00FR)，#{A=\operatorname{Area}_g(\Sigma)}，采用[非负 Laplace 算子](4J01)。零均值 Green 核是满足下式的对称实[分布核](4607)：}
+##{\Delta_{g,x}G_g(x,y)=\delta_y(x)-A^{-1},\qquad \int_\Sigma G_g(x,y)\,dv_g(x)=0.}
+\p{这里 #{\delta_y} 相对于 #{dv_g} 配对，即 #{\int\delta_y(x)f(x)dv_g(x)=f(y)}。此核存在、唯一，在非对角处光滑；在同一局部共形坐标 #{z} 内，}
+##{G_g(x,y)=-\frac 1{2\pi}\log|z(x)-z(y)|+H_g(x,y),}
+\p{其中 #{H_g} 在较小坐标邻域中光滑。因此 #{2\pi G_g(x,y)=\log(1/d_g(x,y))+O(1)}。所引 Segal 论文的核记号是本页的 #{2\pi G_g}：该文方程右端是 #{2\pi(\delta_y-A^{-1})}。}
+\p{\strong{谱表示。}由[闭曲面谱基](4J1D)，#{G_g(x,y)=\sum_{j\ge 1}e_j(x)e_j(y)/\lambda_j} 在 #{L^2(\Sigma\times\Sigma)} 收敛，因为各乘积函数正交且 #{\sum\lambda_j^{-2}<\infty}。逐项与光滑测试函数配对即得核方程。两解之差由下述局部正则性光滑，关于 #{x} 调和；分部积分给出其梯度为零，零均值再消去常数。}
+\p{\strong{奇性系数。}在平面令 #{F(r)=-(2\pi)^{-1}\log r}。当 #{r>0} 时，#{F''+F'/r=0}；包围原点的圆上，#{-\int_{|x|=r}\partial_rF\,ds=1}。将分部积分作用于挖去半径 #{r} 圆盘的测试函数，再令 #{r\downarrow 0}，边界值趋向测试函数在原点的值，故 #{-(\partial_x^2+\partial_y^2)F=\delta_0}。在 #{g=e^\omega|dz|^2} 中，#{\Delta_g=e^{-\omega}(-\partial_x^2-\partial_y^2)} 与 #{dv_g=e^\omega dxdy} 的因子抵消，这解释了相同的 #{1/(2\pi)} 系数。}
+\p{\strong{余项光滑。}在坐标内记 Euclidean 非负 Laplace 算子为 #{L_x}，令 #{H(x,y)=G_g(x,y)-F(|x-y|)}。把核方程乘以 #{e^{\omega(x)}}，得到 #{L_xH=-e^{\omega(x)}/A}；由核对称性，同样有 #{L_yH=-e^{\omega(y)}/A}。于是四维算子 #{L_x+L_y} 的右端光滑，[局部正则性引理](4J1F)给出 #{H} 关于两个变量共同光滑。远离对角线时直接对 #{G_g} 使用同一论证。此证明只需要光滑共形坐标，不限制亏格或曲率。}

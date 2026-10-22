@@ -1,0 +1,11 @@
+\title{Vlasov 特征线保持粒子密度与相空间体积}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§1.2；特征线的直接计算}
+
+\p{设 [Vlasov–Poisson 系统](4H01)的场 #{E} 在所考虑时间段光滑，特征线不逃向无穷远。以 #{(X(s;t,x,v),V(s;t,x,v))} 表示在时刻 #{t} 经过 #{(x,v)} 的[流](4501)，即}
+##{\frac{dX}{ds}=V,\qquad \frac{dV}{ds}=\lambda E(s,X),\qquad (X(t;t,x,v),V(t;t,x,v))=(x,v).}
+\p{则经典解满足 #{M(t,x,v)=M(0,X(0;t,x,v),V(0;t,x,v))}，并且特征流保持 #{dx\,dv}。因此，只要积分有限，#{\iint G(M(t))\,dx\,dv=\iint G(M(0))\,dx\,dv}，其中 #{G} 连续；非紧相空间上要求 #{G(M(0))} 可积。}
+\p{\strong{证明。}[链式法则](0A34)给出 #{dM(s,X(s),V(s))/ds=\partial_tM+V\cdot\nabla_xM+\lambda E\cdot\nabla_vM=0}，积分得到特征线公式。相空间速度 #{b=(v,\lambda E(x))} 满足 #{\operatorname{div}_{x,v}b=0}，因为 #{v} 与 #{x} 无关，#{E} 与 #{v} 无关。由[无散度流的 Jacobian 公式](4502)，流的行列式恒为一；换元即给积分恒等式。}
+\p{取 #{G(s)=s} 得粒子总数守恒；取 #{G(s)=|s|^p} 得 [#{L^p} 范数](00Q6)守恒。密度在相空间内保持大小，并不阻止其对速度的积分随时间衰减。}

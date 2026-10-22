@@ -1,0 +1,11 @@
+\title{正相互作用之和的零空间}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§5.1](icm2026-perez-garcia)的无挫折条件；有限维直接证明}
+
+\p{设有限维 [Hilbert 空间](00MQ)上有[正算子](0Z02) #{h_1,\ldots,h_m}。对 #{H=\sum_jh_j}，有}
+##{\ker H=\bigcap_{j=1}^m\ker h_j.}
+\p{\strong{证明。}若 #{Hv=0}，则 #{0=\langle v,Hv\rangle=\sum_j\langle v,h_jv\rangle}。每项非负，所以每项为零。用[谱分解](0N0B)写 #{h_j=\sum_\lambda\lambda P_\lambda}，便有 #{\sum_{\lambda>0}\lambda\|P_\lambda v\|^2=0}，从而 #{h_jv=0}。反向包含由求和立即得到。}
+\p{若交集非零，则 #{H} 的基态能量为零，而且每个基态同时最小化所有局部能量。这样的正项 Hamiltonian 称为无挫折。一般局部项可先减去各自最小特征值，再检验这个条件；减去总常数只平移所有能级。}
+\p{这个结论不要求各 #{h_j} 交换，也不提供与体积无关的谱隙。它只把共同满足局部约束与全局零能条件相联系。}

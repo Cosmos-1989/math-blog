@@ -1,0 +1,15 @@
+\title{球面共形块的逐层逆 Gram 定义}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (8.2)–(8.5)；[bootstrap 原论文，v2](https://arxiv.org/abs/2005.11530v2)，§1.3、§8.1。}
+
+\p{固定 Virasoro 中心荷 #{c_L}、外权 #{h_1,h_2,h_3,h_4} 与中间权 #{h}。假设各层 [Shapovalov 矩阵](4J0L) #{F_h^{(N)}} 可逆。对[分拆](4J0K) #{\nu}，取 [Ward 系数](4J13) #{A_\nu=W_\nu(h;h_2,h_1)} 与 #{B_\nu=W_\nu(h;h_3,h_4)}。定义形式级数}
+##{\mathcal B_h(q)=\sum_{N\ge 0}\beta_Nq^N,\qquad \beta_N=\sum_{|\nu|=|\nu'|=N}A_\nu(F_h^{(N)})^{-1}(\nu,\nu')B_{\nu'},\qquad \beta_0=1.}
+\p{每层只有有限个分拆，因此每个系数由有限运算给出。[逆 Gram 恒等式](4J10)说明两侧后裔必须成对收缩。报告式 (8.4) 的印刷求和只写 #{\nu}，却仍出现 #{\nu'}；这里依照其前一 Plancherel 展开及原论文逐层定义，明确对满足相同层级的两个指标求和。}
+\p{\strong{一级计算。}#{F_h^{(1)}=2h}，所以当 #{h\ne 0} 时，}
+##{\beta_1=\frac{(h+h_2-h_1)(h+h_3-h_4)}{2h}.}
+\p{二级则取向量 #{(h+2h_2-h_1,\ (h+h_2-h_1)(h+h_2-h_1+1))} 与相应右向量，中间插入已知二级矩阵的逆。它给出有限、可直接核算的下一项。}
+\p{对报告的点配置 #{(0,z,2,\infty)}，取 #{q=z/2}，包括主态幂因子的块为}
+##{\mathcal F_{p,\boldsymbol\alpha}(z)=2^{h_4-h_3-h}z^{h-h_1-h_2}\mathcal B_h(z/2),\qquad h_j=\Delta_{\alpha_j},\quad h=\Delta_{Q+ip}.}
+\p{其中选定 #{z} 的对数分支；绝对值平方消除实权时的分支相位。#{\mathcal B_h} 的形式定义自身不证明收敛；Liouville [四点定理](4J15)另给几乎处处中间动量的解析结论。}

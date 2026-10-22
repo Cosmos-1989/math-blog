@@ -1,0 +1,12 @@
+\title{自由平均中两个空间导数带来额外衰减}
+\date{2026-10-22}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (4.13)；分部积分证明}
+
+\p{设 #{\varphi,\chi} 是 #{\mathbb R^d} 上的 [Schwartz 函数](0H4F)，#{t>0}。对坐标指标 #{i,j} 定义}
+##{R_{ij}(t,x)=\int(\partial_i\partial_j\varphi)(x-tv)\chi(v)\,dv.}
+\p{则 #{\|R_{ij}(t)\|_\infty\leq t^{-d-2}\|\varphi\|_1\|\partial_i\partial_j\chi\|_\infty}，且 #{\|R_{ij}(t)\|_1\leq t^{-2}\|\varphi\|_1\|\partial_i\partial_j\chi\|_1}。}
+\p{\strong{证明。}换元 #{y=x-tv} 后得到 #{t^{-d}\int\partial_i\partial_j\varphi(y)\chi((x-y)/t)\,dy}。两次分部积分把两个导数移到 #{\chi}，每次链式求导贡献 #{-t^{-1}}；两个符号相乘为正。因此}
+##{R_{ij}(t,x)=t^{-d-2}\int\varphi(y)(\partial_i\partial_j\chi)((x-y)/t)\,dy.}
+\p{取上确界得到第一式。对 #{x} 积分并使用 [Fubini 定理](0H53)，内层换元贡献 #{t^d}，得到第二式。与[没有导数的稀释](4H09)比较，额外的两个时间幂来自导数转移所揭示的消去。}

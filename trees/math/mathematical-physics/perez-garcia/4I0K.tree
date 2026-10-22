@@ -1,0 +1,10 @@
+\title{矩阵乘积态为何被母哈密顿量湮灭}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§5.1.1，Definition 5.2 后的母哈密顿量构造](icm2026-perez-garcia)；有限指标展开}
+
+\p{对[矩阵乘积态](4I0J)，固定长度 #{r}，记 #{V_r=\operatorname{Im}\Gamma_r}，令 #{h_r} 为 #{V_r^\perp} 上的[正交投影](00MS)。在长度 #{N\geq r} 的开链上，将 #{h_r} 放到每个连续 #{r} 点区间，得到 #{H_N=\sum_{j=1}^{N-r+1}(h_r)_j}。则}
+##{\operatorname{Im}\Gamma_N\subseteq\ker H_N.}
+\p{\strong{证明。}固定某一连续块，并固定块外物理指标。将这些指标对应的矩阵乘积记为 #{L,R}，块内振幅是 #{\operatorname{tr}(XL A_{i_1}\cdots A_{i_r}R)}。迹的循环性将其写成 #{\operatorname{tr}((RXL)A_{i_1}\cdots A_{i_r})}，故块内向量属于 #{V_r}，被 #{h_r} 湮灭。对块外指标求和，仍被该局部项湮灭。每个块如此，所以被所有项之和湮灭。}
+\p{若 #{\Gamma_N} 的像非零，[正项之和的核](4I04)表明该哈密顿量无挫折。称它为相应张量态的母哈密顿量，是因为局域零能约束由态的局部像空间反向定义。仅由构造得到的是上述包含关系；等号需要另行证明交性质，且谱隙也需要额外论证。}

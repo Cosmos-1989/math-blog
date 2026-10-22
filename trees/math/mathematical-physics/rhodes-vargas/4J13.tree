@@ -1,0 +1,17 @@
+\title{Ward 恒等式怎样计算三点后裔系数}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，Lemma 8.2、式 (8.5)；以下递推为 Ward 恒等式的代数推论。}
+
+\p{设三个[共形权](4J0E)为 #{h,h_a,h_b}，场位于 #{0,x_a,x_b}，点两两不同。去掉结构常数及度量因子后，[三点函数](4J0F)的全纯部分可写成}
+##{T(x_a,x_b)=x_a^{h_b-h-h_a}x_b^{h_a-h-h_b}(x_b-x_a)^{h-h_a-h_b},}
+\p{在一个单连通的非碰撞坐标区域中固定各幂的分支。Ward 恒等式把原点的 #{L_{-n}} 插入实现为}
+##{D_n=\sum_{j=a,b}\left((n-1)h_jx_j^{-n}-x_j^{1-n}\partial_{x_j}\right),\qquad n\ge 1.}
+\p{这是对概率振幅引用的分析定理；报告在标记点附近平坦的度量与指定边界参数下推导它。一般点 #{z} 处的 #{L_{-2}} 插入是 #{\sum_j[h_j/(z-x_j)^2+(z-x_j)^{-1}\partial_{x_j}]}，在 #{z=0} 恢复上式。对[后裔](4J0K) #{L_{-m_1}\cdots L_{-m_k}v_h}，按此顺序迭代 #{D_{m_1}\cdots D_{m_k}}。反全纯部分取相应共轭算子。}
+\p{\strong{一点移到无穷远。}按 #{\lim_{x_b\to\infty}x_b^{2h_b}} 的全纯归一化，#{T(x_a,\infty)=x_a^{h_b-h-h_a}}。包含 #{x_b} 的项在此极限消失。若前面已经产生总层级 #{r}，则}
+##{\left((n-1)h_ax^{-n}-x^{1-n}\partial_x\right)x^{h_b-h-h_a-r}=(h+nh_a-h_b+r)x^{h_b-h-h_a-r-n}.}
+\p{由归纳，在 #{x_a=1} 处的归一化后裔系数为}
+##{W_\nu(h;h_a,h_b)=\prod_{j=1}^k\left(h+m_jh_a-h_b+\sum_{\ell>j}m_\ell\right),\qquad W_\varnothing=1.}
+\p{例如 #{W_{(1)}=h+h_a-h_b}，#{W_{(2)}=h+2h_a-h_b}，#{W_{(1,1)}=(h+h_a-h_b)(h+h_a-h_b+1)}。这些系数由共形对称性决定，不含 Liouville 的宇宙学常数 #{\mu}。}
+\p{本页采用报告的后裔次序 #{L_{-m_1}\cdots L_{-m_k}}。bootstrap 原论文式 (7.36) 采用反向乘积 #{L_{-m_k}\cdots L_{-m_1}}，其相应和为 #{\sum_{\ell<j}m_\ell}；换基时必须同时变换后裔系数与 Gram 矩阵，最终收缩不变。}

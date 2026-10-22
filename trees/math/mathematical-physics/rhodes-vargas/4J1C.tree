@@ -1,0 +1,11 @@
+\title{一维反射波的单位模长来自流量守恒}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§7 的指数势玩具模型；条件式常微分方程计算。}
+
+\p{设 #{V:\mathbb R\to\mathbb R} 连续、#{p>0}，且 #{\psi\in C^2(\mathbb R;\mathbb C)} 满足 #{-\psi''/2+V\psi=p^2\psi /2}。假设 #{c\to+\infty} 时 #{\psi(c),\psi'(c)\to 0}，而 #{c\to -\infty} 时}
+##{\psi(c)=e^{ipc}+Re^{-ipc}+o(1),\qquad\psi'(c)=ip e^{ipc}-ipRe^{-ipc}+o(1).}
+\p{则反射系数 #{R} 满足 #{|R|=1}。}
+\p{\strong{证明。}定义流量 #{J(c)=\operatorname{Im}(\overline\psi\psi')}。求导得 #{J'=\operatorname{Im}(|\psi'|^2+\overline\psi\psi'')}。方程给出 #{\psi''=(2V-p^2)\psi}，系数为实，所以 #{J'=0}。右端衰减条件使常数 #{J=0}。左端的两个平面波代入后，交叉项为实数，故 #{J=p(1-|R|^2)+o(1)}；令 #{c\to -\infty} 即得结论。}
+\p{报告的玩具模型取 #{V(c)=e^{\gamma c}}，并给 Hamiltonian 加常数 #{Q^2/2}。上面的证明以解及两端渐近为假设，未证明该散射解的存在。完整 Liouville 理论的[反射系数](4J12)具有同样模长，但其精确 Gamma 表达式还需要概率方法识别。}

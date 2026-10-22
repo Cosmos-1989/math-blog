@@ -1,0 +1,10 @@
+\title{吸收边界的入流条件与质量损失}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§3.2；边界通量计算}
+
+\p{设 #{D\subset\mathbb R^3} 有光滑边界，#{n_{out}} 为外法向量。对非负 [Vlasov 密度](4H01)，吸收且无外部注入的条件是 #{M(t,x,v)=0} 在入流集合 #{x\in\partial D,\ v\cdot n_{out}<0} 上；导体边界的势满足 #{\phi|_{\partial D}=0}。若解足够光滑、速度衰减充分，并且质量与边界通量可积，则}
+##{\frac d{dt}\int_D\int M\,dv\,dx=-\int_{\partial D}\int_{v\cdot n_{out}>0}(v\cdot n_{out})M\,dv\,dS\leq 0.}
+\p{\strong{证明。}将方程写成 #{\partial_tM+\operatorname{div}_x(vM)+\operatorname{div}_v(\lambda EM)=0}。速度无穷远边界项为零，空间积分应用[Stokes 公式](0BAC)的散度形式，得到总边界通量；无界域先截断并令截断半径趋于无穷，要求外截断通量趋零。入流部分因边界值为零消失，出流部分非负。}
+\p{报告使用内法向量 #{n_{in}=-n_{out}}，因此把入流写成 #{v\cdot n_{in}>0}。镜面反射则把出流与反射后的入流相配，速度变为 #{v-2(v\cdot n_{out})n_{out}}；它通常保留质量，与上述吸收条件不同。报告 §3.2 的凸域结果采用吸收边界。}

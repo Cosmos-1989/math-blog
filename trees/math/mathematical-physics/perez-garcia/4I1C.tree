@@ -1,0 +1,10 @@
+\title{完整矩阵代数的纯状态恰对应秩一密度矩阵}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pérez-García，§4 的状态背景](icm2026-perez-garcia)；有限维直接证明}
+
+\p{在完整矩阵代数 #{M_N(\mathbb C)} 上，每个[状态](0Z03)唯一写成 #{\omega(a)=\operatorname{tr}(\rho a)}，其中 #{\rho} 为[密度矩阵](4F02)；它是[纯状态](4I0E)当且仅当 #{\operatorname{rank}\rho=1}。}
+\p{\strong{表示。}在矩阵单位 #{E_{ij}} 上令 #{\rho_{ji}=\omega(E_{ij})}，由线性即得迹配对公式及唯一性。代入 #{a=|v\rangle\langle v|} 可知 #{\rho\geq 0}，代入 #{I} 得 #{\operatorname{tr}\rho=1}；反之密度矩阵当然定义状态。}
+\p{\strong{纯性刻画。}若至少两个特征值正，[谱分解](0N0B)将 #{\rho} 分成两个不同密度矩阵的非平凡凸组合，因此不是纯态。反之，设 #{\rho=|\psi\rangle\langle\psi|=t\rho_1+(1-t)\rho_2}、#{0<t<1}。对 #{v\perp\psi}，正性迫使 #{\langle v,\rho_jv\rangle=0}，谱分解继而给出 #{\rho_jv=0}。所以两个 #{\rho_j} 都支撑于同一条射线，迹为一迫使它们等于 #{\rho}。}
+\p{于是完整矩阵代数的纯状态与 [Hilbert 空间射线](00JZ)一一对应。这句话依赖可观测代数是全部 #{M_N(\mathbb C)}：例如只保留对角矩阵时，状态仅记录对角概率，极点只有单坐标点质量，任意射线不再与纯状态一一对应。}

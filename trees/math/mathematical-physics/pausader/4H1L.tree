@@ -1,0 +1,11 @@
+\title{中心力下角动量怎样提供能量之外的稳态参数}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§2 的能量与角动量定常态、§6 问题 4、8；中心力计算}
+
+\p{设 #{x,v\in\mathbb R^d}、#{d\geq 2}，Hamilton 函数为 #{H=|v|^2/2+U(|x|)}，势足够光滑。对每个 #{i<j} 定义角动量分量 #{L_{ij}=x_iv_j-x_jv_i}。沿 [Hamilton 轨道](4H03)，所有 #{L_{ij}} 都守恒。}
+\p{\strong{证明。}#{\dot x=v}，#{\dot v=-U'(|x|)x/|x|}，所以}
+##{\dot L_{ij}=v_iv_j-v_jv_i-\frac{U'(|x|)}{|x|}(x_ix_j-x_jx_i)=0.}
+\p{因此只要 #{F} 可微，#{M(x,v)=F(H,(L_{ij})_{i<j})} 满足固定势的定常输运方程。要得到自洽 Vlasov–Poisson 稳态，还必须让 #{U} 与由 #{M} 积分得到的密度满足 Poisson 方程；守恒量并不替代该椭圆条件。}
+\p{这解释了高维定常分布可以依赖能量以外的轨道标签。该欧氏中心力构造不能直接搬到环面：坐标 #{x_i} 在周期识别下不是全局函数。报告提出的高维环面 BGK 类比仍是开放问题。吸引点质量附近还存在有界轨道，与[排斥 Kepler 散射](4H0J)的能量几何不同。}

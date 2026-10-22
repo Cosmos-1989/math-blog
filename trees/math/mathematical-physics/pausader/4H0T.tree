@@ -1,0 +1,13 @@
+\title{Poisson 平衡的显式因果响应核}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§4.2.1；Poisson equilibrium v2，式 (1.15)–(1.16)}
+
+\p{对[单位质量 Poisson 平衡](4H0S) #{P_a}，固定空间频率 #{\xi}，记 #{b=a|\xi|}。若连续函数 #{r,N} 满足[Volterra 方程](4H0P)}
+##{r(t)+\int_0^t(t-s)e^{-b(t-s)}r(s)ds=N(t),}
+\p{则唯一解为 #{r(t)=N(t)-\int_0^te^{-b(t-s)}\sin(t-s)N(s)ds}。对应因果核为 #{\delta_0(t)-\mathbf 1_{t\geq 0}e^{-bt}\sin t}，其中 #{\delta_0*N=N}。}
+\p{\strong{直接验证。}令 #{k(t)=te^{-bt}}、#{q(t)=e^{-bt}\sin t}。计算}
+##{(k*q)(t)=e^{-bt}\int_0^t(t-s)\sin s\,ds=e^{-bt}(t-\sin t)=k(t)-q(t).}
+\p{因此 #{(I+k*)(I-q*)=I}，由 [Fubini 定理](0H53)的卷积结合律，显示公式确为解。对齐次方程，任意有限区间上 #{|r(t)|\leq C_T\int_0^t|r(s)|ds}；迭代 #{n} 次得 #{\sup|r|\leq\sup|r|(C_TT)^n/n!}，令 #{n\to\infty} 得唯一性。}
+\p{用[时间变换](4H0Q)则 #{K=(b+i\theta)^{-2}}，解析延拓后的零点为 #{\theta=\pm 1+ib}。时间因子 #{e^{it\theta}} 对应振荡 #{e^{\pm it}} 及衰减 #{e^{-bt}}。#{a=\sqrt 2} 时衰减系数为 #{\sqrt 2|\xi|}。}

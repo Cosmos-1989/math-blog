@@ -1,0 +1,13 @@
+\title{一维双 Poisson 组合的单位质量与中心曲率}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (4.15)；2601.10030v2，附录 B.1；归一化计算}
+
+\p{对 #{0\leq\alpha\leq 1 /2}，采用 BGK 原论文附录 B.1 的单位质量分布}
+##{F_\alpha(e)=\frac 1{\pi(1-\alpha)}\frac{1-2\alpha+2e}{(1+2e)^2},\qquad M_\alpha(v)=F_\alpha(v^2/2).}
+\p{则 #{M_\alpha\geq 0}，#{\int_\mathbb R M_\alpha(v)dv=1}，且 #{F'_\alpha(0)=2(4\alpha -1)/[\pi(1-\alpha)]}。}
+\p{\strong{证明。}非负性由分子 #{1-2\alpha+v^2\geq 0} 得到。分解}
+##{M_\alpha(v)=\frac 1{\pi(1-\alpha)}\left(\frac 1{1+v^2}-\frac{2\alpha}{(1+v^2)^2}\right).}
+\p{令 #{v=\tan u}，两项的全实轴积分分别为 #{\pi} 与 #{\int_{-\pi /2}^{\pi /2}\cos^2u\,du=\pi /2}，所以质量为一。再直接求导，#{F'_\alpha(0)=[2-4(1-2\alpha)]/[\pi(1-\alpha)]}，即所述公式。由于 #{M''_\alpha(0)=F'_\alpha(0)}，#{\alpha>1/4} 时中心是局部极小点。}
+\p{报告式 (4.15) 的前因子为 #{2/[\pi(1-\alpha)]}，相同积分给质量二。上述单位质量约定来自原论文式 (B.1)，与[背景一的 Poisson 方程](4H0N)相配；两种前因子不可混用。中心曲率的符号本身不等价于 [Penrose 判据](4H0Q)，后者还依赖空间频率集合和速度缩放。}

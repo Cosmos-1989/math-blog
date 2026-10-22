@@ -1,0 +1,14 @@
+\title{有限群 PEPS 的边界像有多少维}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§5 的有限群模型](icm2026-perez-garcia)；正则字符直接计算}
+
+\p{在[四腿方格区域群网络](4I0Q)的约定下，所有未收缩的腿均作为边界，故顶点数 #{n}、内部边数 #{m} 与边界腿数 #{b\geq 1} 满足 #{4n=2m+b}。此时}
+##{\dim\operatorname{Im}\Gamma=|G|^{b-1}.}
+\p{\strong{证明。}写 #{D=|G|}。由 #{\Gamma^*\Gamma=cP_\partial} 且 #{c>0}，两个算子的核相同，所以 #{\operatorname{rank}\Gamma=\operatorname{rank}P_\partial}。投影的秩等于迹，于是}
+##{\operatorname{tr}P_\partial=\frac 1D\sum_{g\in G}\operatorname{tr}U_\partial(g)
+=\frac 1D D^b=D^{b-1}.}
+\p{最后一步中，单位元的边界作用是维数 #{D^b} 空间上的恒等算子；每个非单位元在每条正则腿上的迹为零，张量积的迹为各腿迹的乘积。对偶腿也有同样的迹。}
+\p{三个共线顶点组成的路径有 #{n=3,m=2,b=8}，一个方格的四个顶点有 #{n=4,m=4,b=8}。两者的边界像维数都是 #{D^7}，Gram 因子却分别为 #{1} 和 #{D}。特别地，#{G=\mathbb Z/2\mathbb Z} 时两者均从 #{256} 维边界空间映到 #{128} 维像空间。}
+\p{若区域还满足[母哈密顿量交性质](4I0R)，这个数就是其开放边界基态维数。它依赖边界长度；不能将它用于没有悬挂边的环面，也不能用它否定无限平面上无挫折态的唯一性。}

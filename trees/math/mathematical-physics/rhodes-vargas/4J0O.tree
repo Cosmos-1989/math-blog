@@ -1,0 +1,12 @@
+\title{圆周高斯场的 Fourier 级数与对数协方差}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (5.6)–(5.7)。}
+
+\p{令 #{x_n,y_n} 为相互独立的[标准正态变量](0N0R)，在 #{\mathbb T=\mathbb R/(2\pi\mathbb Z)} 上定义实随机分布}
+##{\widetilde\varphi(\theta)=\sum_{n\ge 1}\frac{x_n\cos(n\theta)-y_n\sin(n\theta)}{\sqrt n}=\sum_{n\ne 0}\varphi_ne^{in\theta},\qquad\varphi_n=\frac{x_n+iy_n}{2\sqrt n}\ (n>0).}
+\p{#{\varphi_{-n}=\overline{\varphi_n}}。其[周期 Sobolev](4101)范数满足 #{\mathbb E\|\widetilde\varphi\|_{H^s}^2=\sum_{n\ge 1}(1+n^2)^s/n<\infty}，故对每个 #{s<0}，级数在该空间几乎处处收敛；证明与非负级数的 [Tonelli 论证](0H53)相同。}
+\p{\strong{协方差。}有限截断的协方差为 #{\sum_{n\le N}\cos(n(\theta -\eta))/n}。对 #{0<r<1}，将几何级数积分得 #{\sum_{n\ge 1}r^ne^{int}/n=-\log(1-re^{it})}，取实部并令 #{r\uparrow 1} 得}
+##{\mathbb E[\widetilde\varphi(\theta)\widetilde\varphi(\eta)]=-\log|e^{i\theta}-e^{i\eta}|\quad(\theta\ne\eta).}
+\p{等式按正则化或分布解释。加回实常数 #{c}，令 #{\varphi=c+\widetilde\varphi}，边界测度为 #{\mu_0=dc\otimes\mathbb P_{\mathbb T}}，其中 #{\mathbb P_{\mathbb T}} 为上述[可数独立乘积](0A6B)的像测度。边界状态空间取 #{\mathcal H=L^2(\mu_0)}，其 [Hilbert 结构](0A6A)采用第二变量线性内积。}

@@ -1,0 +1,11 @@
+\title{时间平方可积与逐点衰减之间需要连续性控制}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (5.4)；初等反例与充分条件}
+
+\p{时间平方可积的连续函数未必趋零。取光滑函数 #{b}，支撑于 #{(-1/4,1/4)}，#{0\leq b\leq 1}、#{b(0)=1}。置 #{a(t)=\sum_{n\geq 1}b(2^n(t-n))}。各支撑不交，和局部有限，故 #{a} 光滑，且}
+##{\int_0^\infty|a(t)|^2dt=\|b\|_2^2\sum_{n\geq 1}2^{-n}<\infty,\qquad a(n)=1.}
+\p{因此仅有 [#{L^2_t}](00Q6) 信息不能推出 #{a(t)\to 0}。乘以固定单位 #{L^2_x} 函数也给出相同的场值反例。}
+\p{若另外假设 #{a:\lbrack 0,\infty\rparen\to X} 在[赋范空间](00M1) #{X} 中[一致连续](0F40)，则 #{\int_0^\infty\|a(t)\|_X^2dt<\infty} 推出 #{\|a(t)\|_X\to 0}。\strong{证明。}若不趋零，存在 #{\epsilon>0} 和 #{t_n\to\infty} 使 #{\|a(t_n)\|\geq\epsilon}。一致连续性给固定 #{r>0}，在 #{|t-t_n|<r} 上 #{\|a(t)\|\geq\epsilon /2}。取两两不交的子列区间，平方积分至少为无穷多个固定正数之和，矛盾。}
+\p{对 BGK 线性稳定定理的动力学场，逐点衰减需要类似的额外控制，或者可作 Fourier 反演的频率正则性。}

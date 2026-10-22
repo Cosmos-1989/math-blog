@@ -1,0 +1,1817 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "prefix": "4I",
+    "outline": "4I00",
+    "reference": "icm2026-perez-garcia",
+    "doi": "10.1137/25M1804728",
+    "speaker": "David Pérez-García",
+    "title": "The Quest for a Classification of 2D Quantum Phases of Matter",
+    "pages": "534–550",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+    "license": "CC BY 4.0",
+    "question": "有限程二维量子模型为何无法普遍算法分类，而张量网络的体边结构又如何支持从平面基态恢复拓扑激发？",
+    "reading_scope": "perez-garcia-icm2026: Entire publisher HTML: abstract, mathematical §§1–6, every displayed formula, all bibliography entries [1]–[64], acknowledgments and copyright/publication metadata, read in overlapping section-sized passes. All 15 inline tensor-diagram images were opened and visually inspected individually in the browser. No report PDF edition was read. §§2–3 were rechecked during final authoring. For revision 2, reread Theorem 2.3 clauses 2–3 and the following undecidability consequence, and §§5.1.1–5.2 including Definitions 5.2, 5.3, 5.5 and equations (5.1)–(5.3); checked the corresponding note locators against those passages.\nhaag-duality-v2: v2 abstract and §1; all §2.1 including Lemma 2.1.4 proof; §2.2 Assumption 2.2.1, Remark 2.2.2 and Lemma 2.2.3 statement plus selected proof paragraphs, not the whole proof; §3.1 definitions through dual/trivial representations; §3.4 Definitions 3.4.1–3.4.5; §3.5 Theorem 3.5.3 and selected proof text; §3.6 main theorem, Lemma 3.6.3 uses and proof conclusion; §3.7 Theorem 3.7.1 and beginning of its proof; §4.1 theorem statements and finite-map formulas through Corollary 4.1.6, plus beginning of §4.2. Earlier v1 was also read for these themes and §3.4 tensor conventions, but final theorem contracts are bound to v2. The 70-page paper and its 166 figures were not read in full; no full appendix reading claimed.\ncubitt-gap-v5: Version metadata/abstract; PDF introductory definitions of strong gapped/gapless and initial Theorem 3 (printed pp.5–6); restatement and final assembly excerpt in §6.2 (printed pp.140–142). Independently read publisher PDF pages 4 and 96 via text extraction from existing parent-provided /tmp/cubitt-undecidability-2022.pdf to verify alpha≤beta versus alpha≤2beta. Not the full 150-page proof. Web PDF screenshot calls failed; no visual-PDF inspection by this author is claimed.\nlevin-wen-v2: Abstract/version metadata and introduction excerpt; HTML §IV.B fixed-point Hamiltonians, equations (10)–(14), coefficient choice d_s/sum d_i^2 and listed commuting-projector consequences. Full appendices, F-symbol graphical proofs and generalized models were not read.\nogata-sectors-v1: Version metadata and license; PDF text of §1.3 Definition 1.5 and following main-result summary (printed p.5), §2 Setting 2.1 and equations (2.1)–(2.2) (printed p.6), Lemma 2.2 and beginning of Definition 2.3. These selected passages were read independently for revision 2. Not the full 50-page paper, later category-construction proofs or appendices.\negno-2015-author-final: Title/copyright pages; Definition 4.1.1 and Examples 4.1.2–4.1.3, printed p.65 (PDF page 82); Proposition 4.2.1 and Remark 4.2.2, p.66 (PDF page 83); Remark 9.4.7 on Hermitian and unitary fusion categories, pp.283–284 (PDF pages 300–301). Selected PDF text read independently, not the entire book. The numbered item 4.2.2 is a Remark, not an Example.\nlocal-calculations: Local proofs in the notes: finite spectral/projection identities, halting diagonal reduction, restricted binary Busy Beaver simulation, GNS, finite tensor commutants, MPS/PEPS annihilation, pseudoinverse image projection, cut-rank bound, four-leg regular-group contractions on finite square-lattice regions, boundary rank, polarization, conditional plane uniqueness, decreasing projections, Pauli toric-code counting, string endpoints, and intertwiner tensor composition. Revision 2 recomputes physical Z2 four-leg tensor contractions for path3 and square4 with all eight boundary legs, rather than the superseded two-boundary group-label expansion.",
+    "proof_scope": {
+      "4I01": {
+        "status": "definition",
+        "scope": "固定 d、图距离、平移不变及均匀有界；区分粒子数和几何程。"
+      },
+      "4I02": {
+        "status": "definition",
+        "scope": "有限体积不同能级间隔；允许简并，标量 Hamiltonian 取无穷；一致体积下界。"
+      },
+      "4I03": {
+        "status": "definition-and-local-proof",
+        "scope": "固定共同程和连续性约定，谱隙同时对 L 与 s 一致；常值、反向、拼接证明等价关系。"
+      },
+      "4I04": {
+        "status": "local-proof",
+        "scope": "有限维谱分解证明零期望迫使每个正项湮灭；给出无挫折的零能约定。"
+      },
+      "4I05": {
+        "status": "local-proof",
+        "scope": "明确有限维空间；共同投影、同时特征基、正权重下界；简并允许。"
+      },
+      "4I06": {
+        "status": "local-proof",
+        "scope": "停机对角论证完整；通用模拟和空白输入编码的构造说明，不重建通用机完整转移表。"
+      },
+      "4I07": {
+        "status": "cited-theorem",
+        "scope": "Theorem 2.3 的整数矩阵、代数 alpha≤beta、相位因子、局部范数≤1；停机仅最终有隙，非停机为强谱稠密。"
+      },
+      "4I08": {
+        "status": "conditional-local-proof",
+        "scope": "以引用构造为输入，完整证明可计算归约；不停机输入属于强无隙分支，不对分支比例作断言；不将有隙承诺分类猜想当成结论。"
+      },
+      "4I09": {
+        "status": "local-proof-and-cited-numerical-bound",
+        "scope": "二符号、仅左右移动、单一停机态、空白输入模型；有限字母编码、有效状态数、模拟上界矛盾。BB(6) 塔界仅作为报告历史下界。"
+      },
+      "4I0A": {
+        "status": "cited-theorem",
+        "scope": "d=10、R=2、L0≥BB(6)，两侧 gap≥1；尺寸转换与参数路径分开；不把此有限边界模型等同于周期四维例子。"
+      },
+      "4I0B": {
+        "status": "conjecture",
+        "scope": "逐输入有隙且两种固定相由停机二分，保留为 Conjecture 3.1。"
+      },
+      "4I0C": {
+        "status": "construction-and-local-proof",
+        "scope": "局部矩阵代数嵌入、范数完成；不交支撑的交换性由有限级及范数极限证明。"
+      },
+      "4I0D": {
+        "status": "local-proof",
+        "scope": "复用 2V0L 偏迹，证明正性、归一化、迹配对；最大纠缠例子区分完整基与子空间投影。"
+      },
+      "4I0E": {
+        "status": "definition",
+        "scope": "抽象极点定义和凸组合正性；与完整矩阵秩一刻画分为独立页面。"
+      },
+      "4I0F": {
+        "status": "local-proof",
+        "scope": "Schwarz 给出零空间线性和商内积；抽象 C* 二项式正元界给左理想、有界表示；内积完成与循环酉唯一性。"
+      },
+      "4I0G": {
+        "status": "definition-and-local-proof",
+        "scope": "纯态 GNS 中锥及补区；先证明局域性给一个包含方向，再定义反向等式。"
+      },
+      "4I0H": {
+        "status": "local-proof",
+        "scope": "有限维块矩阵、矩阵单位的完整计算；只作无限锥的比较，不代替无限证明。"
+      },
+      "4I0I": {
+        "status": "definition-and-local-proof",
+        "scope": "局部给出纯态 GNS 及所有几何、误差函数量词；精确对偶蕴含近似的直接证明。"
+      },
+      "4I0J": {
+        "status": "definition-and-local-calculation",
+        "scope": "未归一化 trace convention，矩阵单位给边界振幅，维数≤D²，D=1 乘积例。"
+      },
+      "4I0K": {
+        "status": "local-proof",
+        "scope": "固定块外指标、迹循环性证明局部像包含及零能性；不推断交性质或有隙。"
+      },
+      "4I0L": {
+        "status": "construction-and-local-proof",
+        "scope": "显式虚拟边、未归一化纠缠对和映射；有限和独立收缩顺序及母项湮灭。"
+      },
+      "4I0M": {
+        "status": "local-proof",
+        "scope": "谱逆 T+、Q=Gamma T+ Gamma*；GammaGamma* 仅在 Gram 为投影时成立，cP 的缩放完整计算。"
+      },
+      "4I0N": {
+        "status": "local-proof",
+        "scope": "明确跨割边界输入不另引入纠缠的假设；逐切割指标展开证明 rank≤D^b。"
+      },
+      "4I0O": {
+        "status": "construction-and-local-proof",
+        "scope": "正则群平均、对偶腿、d=D^4；逆元经转置变成共轭表示，避免非交换群反表示错误。"
+      },
+      "4I0P": {
+        "status": "local-proof",
+        "scope": "平均不变、纠缠边的双端不变、内部消去和 Gamma U_boundary=Gamma。"
+      },
+      "4I0Q": {
+        "status": "local-proof",
+        "scope": "非空有限连通方格顶点区域，最近邻内部边，每点四腿、所有未收缩腿保留边界，4n=2m+b且b≥1；内部边正则迹强迫同一群元，Gram=D^(m-n+1)P；树和方格环归一化。"
+      },
+      "4I0R": {
+        "status": "cited-theorem-and-local-consequences",
+        "scope": "梳形且由方格组成；交换性和交等式引用，零能核和乘积投影推论本地证明。一般有权族仅指原文构造。"
+      },
+      "4I0S": {
+        "status": "local-proof",
+        "scope": "四腿方格区域保留全部边界，4n=2m+b且b≥1；trace(P)=D^(b-1)，由 Gram 得 rankGamma。路径3点与方格4点均b=8、秩D^7；开放区域与无边界环面严格分开。"
+      },
+      "4I0T": {
+        "status": "local-proof-and-cited-model-theorem",
+        "scope": "极化公式完整证明等价；模型应用仅内部矩形且边界边属于大矩形内部，biconnected 适用性引用。"
+      },
+      "4I0U": {
+        "status": "conditional-local-proof",
+        "scope": "假定全部有限矩形非空零能空间与内部不可区分，密度矩阵紧性、对角子列、支撑、唯一性和纯性完整证明。"
+      },
+      "4I0V": {
+        "status": "local-proof",
+        "scope": "有限谱多项式与递减投影强收敛；交空间、强闭性及 P Omega=Omega。"
+      },
+      "4I0W": {
+        "status": "cited-theorem-and-local-example",
+        "scope": "Rieffel–van Daele 精确含幺、包含、循环假设；有限最大纠缠例子，本地不证明一般算子代数定理。"
+      },
+      "4I0X": {
+        "status": "cited-theorem-and-local-reduction",
+        "scope": "完整陈述 Lemma 2.1.4；证明 ibOmega 的交换子分解，压缩提升及因子忠实性引用。"
+      },
+      "4I0Y": {
+        "status": "cited-theorem",
+        "scope": "完整实线性 S、复线性 Theta、双极限、公共有界 f 和四个误差项；可作用的大窗口与共同嵌入约定；不把逐态等式当算子估计。"
+      },
+      "4I0Z": {
+        "status": "definition-and-local-examples",
+        "scope": "方向、格段、不相邻、唯一前驱、其他前驱距离≥3；方格并是附加条件。"
+      },
+      "4I10": {
+        "status": "cited-theorem",
+        "scope": "有限群明确模型；原格近似、2x2 分块精确。一般推广明确为原文 §3.4 biconnected weak-C*-Hopf 固定点族。"
+      },
+      "4I11": {
+        "status": "local-proof",
+        "scope": "逐指标证明转置恒等式、复线性、保伴随和反乘法；不把它等同一般二维转移证明。"
+      },
+      "4I12": {
+        "status": "cited-theorem-and-conditional-reduction",
+        "scope": "精确 6ell 窗口、两侧梳形缓冲、边界包含/基数；复线性保*映射，整个 Gamma_L 像上的恒等式；S和Theta公式只是引用定理后的代数归约。"
+      },
+      "4I13": {
+        "status": "local-proof",
+        "scope": "群 Hopf 的 Delta³(h) 逐项计算；反向腿、普通和弱 Hopf 之间的限制明确。"
+      },
+      "4I14": {
+        "status": "local-proof",
+        "scope": "L≥3 周期边、Pauli 约定、星面交换、两组各一关系、独立稳定子迹投影完整证明；本归一化 gap=2。"
+      },
+      "4I15": {
+        "status": "local-proof",
+        "scope": "简单路径偶奇交点，电磁两弦交叉反交换的直接证明；不代替完整任意子分类。"
+      },
+      "4I16": {
+        "status": "definition",
+        "scope": "固定参考纯态表示；每个锥外表示酉等价的选择准则、不可约类；明确与原文同一 Hilbert 空间约定酉等价；自同态实现和编织构造引用框架。"
+      },
+      "4I17": {
+        "status": "local-proof-and-cited-context",
+        "scope": "对象复合、T tensor S=T rho(S)，交织类型、交换律、结合和伴随完整验证；编织独立性研究证明保留。"
+      },
+      "4I18": {
+        "status": "construction-and-cited-theorem",
+        "scope": "无多重度蜂窝构造及原文相容酉数据；保留 d_s/sum d_i²；顶点和面投影的交换性引用，不给全部 F 符号证明。"
+      },
+      "4I19": {
+        "status": "conjecture",
+        "scope": "两项猜想、非手性定义尚待固定、代表存在性与不变量完备性区别；不声称一般分类已完成。"
+      },
+      "4I1A": {
+        "status": "definition",
+        "scope": "余代数、弱单位/余单位、反向对极、对偶和平凡表示；双连通是两侧平凡表示不可分解，非普通 Hopf 同义。"
+      },
+      "4I1B": {
+        "status": "definition",
+        "scope": "有限维箭头、有限简单同构类、有限半单加性 C* 范畴，全部有限双积含零对象，复合与张量分别复双线性、简单单位、刚性及酉结构；融合重数、结合子 F 与正维数的意义，维数结构定理作为标准输入。"
+      },
+      "4I1C": {
+        "status": "local-proof",
+        "scope": "矩阵单位构造密度矩阵；谱凸分解与正性支撑证明两向；明确不能推广为任意有限维子代数的射线对应。"
+      }
+    },
+    "claim_sources": {
+      "4I01": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§1.1 (1.1)–(1.2)"
+        }
+      ],
+      "4I02": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Definition 1.1"
+        }
+      ],
+      "4I03": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Definition 1.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "固定共同程和连续性约定，谱隙同时对 L 与 s 一致；常值、反向、拼接证明等价关系。"
+        }
+      ],
+      "4I04": [
+        {
+          "source": "local-calculations",
+          "locator": "finite positive-sum kernel calculation"
+        }
+      ],
+      "4I05": [
+        {
+          "source": "local-calculations",
+          "locator": "finite commuting-projector calculation"
+        }
+      ],
+      "4I06": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§2.1 Proposition 2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "停机对角论证完整；通用模拟和空白输入编码的构造说明，不重建通用机完整转移表。"
+        }
+      ],
+      "4I07": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Theorem 2.3; Cubitt v5 initial Theorem 3"
+        },
+        {
+          "source": "cubitt-gap-v5",
+          "locator": "initial Theorem 3, printed arXiv p.6; Definitions 1–2; compare restated theorem printed p.141 (different alpha bound). Publisher PDF pp.4 and 96 checked independently."
+        }
+      ],
+      "4I08": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§2.2 Theorem 2.3, clauses 2–3, and following undecidability consequence"
+        }
+      ],
+      "4I09": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§2.2 before Theorem 2.5"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "二符号、仅左右移动、单一停机态、空白输入模型；有限字母编码、有效状态数、模拟上界矛盾。BB(6) 塔界仅作为报告历史下界。"
+        }
+      ],
+      "4I0A": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Theorem 2.5"
+        }
+      ],
+      "4I0B": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Conjecture 3.1"
+        }
+      ],
+      "4I0C": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§4 operator-algebraic framework"
+        }
+      ],
+      "4I0D": [
+        {
+          "source": "local-calculations",
+          "locator": "finite partial-trace restriction"
+        }
+      ],
+      "4I0E": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§4 states"
+        }
+      ],
+      "4I0F": [
+        {
+          "source": "local-calculations",
+          "locator": "GNS construction with abstract order justification"
+        }
+      ],
+      "4I0G": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Definition 4.1"
+        }
+      ],
+      "4I0H": [
+        {
+          "source": "local-calculations",
+          "locator": "finite factor commutant"
+        }
+      ],
+      "4I0I": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "§1 (2)–(4)"
+        }
+      ],
+      "4I0J": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5.1.1 Definition 5.2; tensor diagram (5.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "未归一化 trace convention，矩阵单位给边界振幅，维数≤D²，D=1 乘积例。"
+        }
+      ],
+      "4I0K": [
+        {
+          "source": "local-calculations",
+          "locator": "MPS local annihilation"
+        },
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5.1.1, parent-Hamiltonian construction following Definition 5.2"
+        }
+      ],
+      "4I0L": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5.1.2 Definition 5.3; tensor diagram (5.2)"
+        }
+      ],
+      "4I0M": [
+        {
+          "source": "local-calculations",
+          "locator": "finite image projection"
+        }
+      ],
+      "4I0N": [
+        {
+          "source": "local-calculations",
+          "locator": "finite PEPS cut-rank bound"
+        },
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5.1.2 Definition 5.3 and diagram (5.2), for boundary-map context; cut-rank proof is local"
+        }
+      ],
+      "4I0O": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5.2 Definition 5.5; equation (5.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "正则群平均、对偶腿、d=D^4；逆元经转置变成共轭表示，避免非交换群反表示错误。"
+        }
+      ],
+      "4I0P": [
+        {
+          "source": "local-calculations",
+          "locator": "finite-group pulling-through identity"
+        }
+      ],
+      "4I0Q": [
+        {
+          "source": "local-calculations",
+          "locator": "four-leg regular-representation network on a square-lattice vertex region"
+        }
+      ],
+      "4I0R": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Theorem 3.6.1; Lemma 3.6.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "梳形且由方格组成；交换性和交等式引用，零能核和乘积投影推论本地证明。一般有权族仅指原文构造。"
+        }
+      ],
+      "4I0S": [
+        {
+          "source": "local-calculations",
+          "locator": "four-leg square-lattice boundary regular-character calculation"
+        }
+      ],
+      "4I0T": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Theorem 3.7.1 (95)–(96)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "极化公式完整证明等价；模型应用仅内部矩形且边界边属于大矩形内部，biconnected 适用性引用。"
+        }
+      ],
+      "4I0U": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Corollary 3.7.3; local proof from stated hypotheses"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "假定全部有限矩形非空零能空间与内部不可区分，密度矩阵紧性、对角子列、支撑、唯一性和纯性完整证明。"
+        }
+      ],
+      "4I0V": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Lemma 2.1.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有限谱多项式与递减投影强收敛；交空间、强闭性及 P Omega=Omega。"
+        }
+      ],
+      "4I0W": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Theorem 2.1.1"
+        }
+      ],
+      "4I0X": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Setting 2.1.2; Lemma 2.1.4 (11)–(29)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "完整陈述 Lemma 2.1.4；证明 ibOmega 的交换子分解，压缩提升及因子忠实性引用。"
+        }
+      ],
+      "4I0Y": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Assumption 2.2.1; Remark 2.2.2; Lemma 2.2.3"
+        }
+      ],
+      "4I0Z": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Definitions 3.4.2–3.4.3"
+        }
+      ],
+      "4I10": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Corollaries 4.1.5–4.1.6; report Theorems 3.3–3.4"
+        }
+      ],
+      "4I11": [
+        {
+          "source": "local-calculations",
+          "locator": "maximally-entangled transpose identity"
+        }
+      ],
+      "4I12": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Theorem 4.1.3; (107)–(114)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "精确 6ell 窗口、两侧梳形缓冲、边界包含/基数；复线性保*映射，整个 Gamma_L 像上的恒等式；S和Theta公式只是引用定理后的代数归约。"
+        }
+      ],
+      "4I13": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5 (5.6)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "群 Hopf 的 Delta³(h) 逐项计算；反向腿、普通和弱 Hopf 之间的限制明确。"
+        }
+      ],
+      "4I14": [
+        {
+          "source": "local-calculations",
+          "locator": "finite periodic toric code"
+        }
+      ],
+      "4I15": [
+        {
+          "source": "local-calculations",
+          "locator": "finite Pauli string calculation"
+        }
+      ],
+      "4I16": [
+        {
+          "source": "ogata-sectors-v1",
+          "locator": "§1.3 Definition 1.5, printed p.5; Setting 2.1 and equation (2.2), printed p.6"
+        },
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§3, contextual discussion of operator-algebraic sectors, not the explicit selection criterion"
+        }
+      ],
+      "4I17": [
+        {
+          "source": "local-calculations",
+          "locator": "endomorphism intertwiner tensor category"
+        }
+      ],
+      "4I18": [
+        {
+          "source": "levin-wen-v2",
+          "locator": "§IV.B (10)–(14), especially fixed-point coefficient"
+        }
+      ],
+      "4I19": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "Conjecture 3.2"
+        }
+      ],
+      "4I1A": [
+        {
+          "source": "haag-duality-v2",
+          "locator": "Definitions 3.1.1,3.1.3,3.1.7; Remark 3.1.4"
+        },
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§5 algebraic extension context, not a complete weak-Hopf construction"
+        }
+      ],
+      "4I1B": [
+        {
+          "source": "egno-2015-author-final",
+          "locator": "Definition 4.1.1, printed p.65; Remark 4.2.2, p.66; Remark 9.4.7, pp.283–284 (author-final 2015 edition)"
+        }
+      ],
+      "4I1C": [
+        {
+          "source": "local-calculations",
+          "locator": "full M_N(C) pure-state characterization"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "General nonchiral classification",
+        "scope": "Conjectures 3.1 and 3.2 remain conjectural. No formal resolution of nonchirality, generic representative existence or completeness of anyon invariants is asserted."
+      },
+      {
+        "branch": "Full weighted weak-Hopf construction",
+        "scope": "Axioms and biconnectedness are defined; the §3.4 family is identified by its exact primary source, not reconstructed coefficient by coefficient. General MPO tensors, weights, integral elements, faithful representation choices and tensor-diagram manipulations remain a research branch."
+      },
+      {
+        "branch": "Phase invariance and quantum-double sector identification",
+        "scope": "The report discussion of approximate duality invariance, full braided C* categories, equivalence with representations of D(G), and same-category string-net phase equivalence is contextual. Exact contracts and proofs of report references [9], [35], [44] are not independently developed here."
+      },
+      {
+        "branch": "Other applications and algorithmic variants",
+        "scope": "Rotationally symmetric and 1D spectral undecidability, quantum-hardness of phase recognition, symmetry-protected classifications, entanglement bootstrap and Hall conductance are contextual, not separate fully developed branches."
+      },
+      {
+        "branch": "Numerical record",
+        "scope": "Busy Beaver height-10^7 decimal tower is attributed to the report as a historical lower bound in its exact binary model, not a current-record claim."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4I07",
+          "4I0A"
+        ],
+        "source": "perez-garcia-icm2026; cubitt-gap-v5",
+        "scope": "Undecidable Hamiltonian construction, quantum phase estimation/history Hamiltonians, tiling hierarchy, explicit d=10 size-driven model and perturbative stability are quoted research results. Only halting and reduction logic is proved locally."
+      },
+      {
+        "notes": [
+          "4I0R",
+          "4I0T",
+          "4I10",
+          "4I12"
+        ],
+        "source": "haag-duality-v2",
+        "scope": "General weighted weak-Hopf bulk-boundary, intersection, local indistinguishability, two-dimensional operator transfer and cone geometry proofs are cited. One-dimensional diagrams are illustrations, never the full general proof."
+      },
+      {
+        "notes": [
+          "4I0W",
+          "4I0X",
+          "4I0Y"
+        ],
+        "source": "haag-duality-v2",
+        "scope": "Rieffel–van Daele theorem, factor compression faithfulness/lifting, and finite-to-infinite error analysis are cited. All usable hypotheses are recorded, and elementary decomposition is separately proved."
+      },
+      {
+        "notes": [
+          "4I16",
+          "4I17",
+          "4I18",
+          "4I1B"
+        ],
+        "source": "perez-garcia-icm2026; ogata-sectors-v1; levin-wen-v2; egno-2015-author-final",
+        "scope": "Sector selection and elementary intertwiner tensor structure are explicit; transport-independent braiding, rigidity/semisimplicity of physical sectors, categorical dimension theory and general F-symbol pentagon/projector calculations are not reconstructed."
+      }
+    ],
+    "metadata": {
+      "node_count": 49,
+      "atomic_count": 48,
+      "reference_count": 1,
+      "language": "zh",
+      "coverage": "All six report sections have developed mathematical entries, with 48 atomic questions. Three additional foundational atoms distinguish weak Hopf structure, fusion categories and rank-one purity. Entire report read independently; selected research supplements version-bound. EGNO author-final 2015 book passages additionally support the fusion definition.",
+      "model_conventions": "Open finite boxes for general spin definitions; excitation gap above full ground eigenspace. Path gap uniform in s and L. Regular-group networks use four legs at each vertex of a finite connected square-lattice region, every unused leg retained as boundary, 4n=2m+b, unnormalized bonds and Gram factor D^(m-n+1). Path3 and square4 both have b=8. Toric code separately L≥3 periodic with edge qubits and penalty (I-stabilizer)/2, ground dimension4 and gap2. Approximate original-lattice versus exact 2x2-blocked Haag duality distinguished.",
+      "status": "author-repairs-frozen-pending-independent-recheck",
+      "shared_integration": "Parent-owned; no shared registries/navigation/theme/tests/build/git edits.",
+      "reference_directory": "trees/references",
+      "review_responses": [
+        {
+          "id": "PG-F01",
+          "status": "author-repaired-awaiting-independent-recheck",
+          "response": "4I1B now requires all finite biproducts including the zero object, finite semisimple additive C* structure, finite-dimensional Hom spaces, and a complex-bilinear tensor bifunctor. Reused 0AI1 and existing reference 013X. Exact source rereading binds EGNO Definition 4.1.1, Remark 4.2.2 (not Example), and Remark 9.4.7; selected reading/license recorded."
+        },
+        {
+          "id": "PG-F02",
+          "status": "author-repaired-awaiting-independent-recheck",
+          "response": "Re-read the report passages and corrected public metadata and packet locators: 4I0J/0K to §5.1.1 Definition 5.2 and following parent construction; 4I0L/0N to §5.1.2 Definition 5.3 and (5.2); 4I0O metadata and body to §5.2 Definition 5.5 and (5.3). 4I16 now cites Ogata 2106.15741v1 Definition 1.5 and Setting 2.1/(2.2), with common-Hilbert-space identification explicit. Report §3 is contextual only."
+        },
+        {
+          "id": "PG-F03",
+          "status": "author-repaired-awaiting-independent-recheck",
+          "response": "4I0Q/0S now specify finite connected square-lattice vertex regions, four-leg tensors and every unused leg retained, so 4n=2m+b. Replaced b=2 records with actual physical Z2 tensor contractions: path3 (n,m,b)=(3,2,8), square4 (4,4,8), all 256 columns and 65536 Gram entries per example, factors 1 and 2, rank 128 by elimination. Exact parent-authored test block also rerun without editing shared files. Old tests are not claimed to cover the four-leg model."
+        },
+        {
+          "id": "PG-F04",
+          "status": "author-repaired-awaiting-independent-recheck",
+          "response": "Re-read report Theorem 2.3 clauses 2–3 and its reduction consequence. 4I08 replaces the unsupported half-of-instances assertion with the precise nonhalting-input branch; no measure or density claim remains."
+        },
+        {
+          "id": "PG-P01",
+          "response": "Parent repaired shared 0Z1C by direct polarization and an abstract binomial-series norm argument. Author re-read the repaired shared page and retains its link; no shared file edited."
+        },
+        {
+          "id": "PG-P02",
+          "response": "4I0D requires D=dim H_A≥2 and a complete A basis for I_A/D; for a proper span K it gives P_K/D."
+        },
+        {
+          "id": "PG-P03",
+          "response": "4I09 specifies exactly binary tape, only L/R, one halting state excluded from n, blank input and step count. Effective block coding, stationary-step replacement and finite input hardcoding give the restricted undecidability reduction; numerical BB(6) values are not transported across models."
+        },
+        {
+          "id": "PG-P04",
+          "response": "4I1C confines the rank-one/ray correspondence to full M_N(C), with a diagonal-algebra counterexample to the broader formulation."
+        },
+        {
+          "id": "PG-P06",
+          "response": "Pure-state definition remains 4I0E; rank-one characterization and proof moved to independent 4I1C. 4I0I locally specifies quasi-local A, pure state and GNS H,pi,Omega."
+        },
+        {
+          "id": "parent-GNS",
+          "response": "4I0F explicitly proves null-space linearity using Schwarz, extends the inner product to completion, and proves the abstract C* order inequality without a concrete representation."
+        },
+        {
+          "id": "parent-finite-projectors",
+          "response": "4I05 explicitly assumes a common finite-dimensional Hilbert space; its joint-eigenbasis proof is scoped accordingly."
+        },
+        {
+          "id": "parent-source-format",
+          "response": "normalizeFormat applied only to all 50 owned trees before hashing. Scoped editorial/source-form, formula, bracket/half-open and prerequisite checks pass."
+        }
+      ],
+      "source_errata": [
+        {
+          "source": "perez-garcia-icm2026",
+          "locator": "§1.1 finite range",
+          "resolution": "4I01 uses diameter in graph distance, not cardinality of support; a two-site arbitrarily-separated counterexample is explicit."
+        },
+        {
+          "source": "cubitt-gap-v5",
+          "locator": "initial Theorem 3 vs §6.2 restatement",
+          "resolution": "Initial/report alpha≤beta and restatement alpha≤2beta both recorded. No global reconciliation or changed theorem constant claimed."
+        },
+        {
+          "source": "haag-duality-v2",
+          "locator": "Definition 4.1.1 (105)",
+          "resolution": "Printed cone sandwich repeats C_kappa-prime on both sides and paths are described as disjoint despite a common apex. Notes avoid supplying an unverified corrected general definition; use exact blocked-cone case and refer broader stepped-cone domain to the primary theorem."
+        },
+        {
+          "source": "haag-duality-v2",
+          "locator": "Assumption 2.2.1 and (111)",
+          "resolution": "4I0Y retains the bounded common error requirement and uniform operator-input estimates. 4I12 states the verified large-N zero-error identities; it does not infer a global bounded error from growing finite-map norms or claim to reconstruct the limiting proof."
+        }
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4I00",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I00.tree",
+      "title": "二维量子相的分类：从不可判定性到 Haag 对偶",
+      "taxon": "Outline",
+      "sha256": "76e37aa7c4cb37aecbee7a6a81ebbbb90ee33b8e630177daf7a2e4793b5022d1"
+    },
+    {
+      "id": "4I01",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I01.tree",
+      "title": "有限程量子自旋相互作用",
+      "taxon": "Definition",
+      "sha256": "f8bb36895bf59773d3aa73cdcbd9e08b8721fa5fb457af118160e97f98d341bf"
+    },
+    {
+      "id": "4I02",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I02.tree",
+      "title": "简并基态之上的一致谱隙",
+      "taxon": "Definition",
+      "sha256": "80e43a85d601b4ac2490dd58261d82d091250a1d1d6d7d802cf9d8cf62df4965"
+    },
+    {
+      "id": "4I03",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I03.tree",
+      "title": "有隙相由一致有隙的相互作用路径定义",
+      "taxon": "Definition",
+      "sha256": "d792c7a8e621bc419d239ba0eed1d9ffaa79b91a200ec109319e34151d6bd336"
+    },
+    {
+      "id": "4I04",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I04.tree",
+      "title": "正相互作用之和的零空间",
+      "taxon": "Proposition",
+      "sha256": "31744684e003dfec146365f5d0fbd48454913e40988d3a9507014d744003b935"
+    },
+    {
+      "id": "4I05",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I05.tree",
+      "title": "交换投影 Hamiltonian 的谱隙至少为一",
+      "taxon": "Proposition",
+      "sha256": "e5c53ca82224aa0eb386254f7e3b696f9891b8968f8ce0fb2f0f16bdc272b22a"
+    },
+    {
+      "id": "4I06",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I06.tree",
+      "title": "停机问题的对角论证",
+      "taxon": "Theorem",
+      "sha256": "aa65418f609d5cfeadafef5d2157303d26349ab127c587af48dca7c306879245"
+    },
+    {
+      "id": "4I07",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I07.tree",
+      "title": "谱隙不可判定构造的精确二分",
+      "taxon": "Theorem",
+      "sha256": "e0c17714fbceaad6056af2198ddc0bb1058240f2b958205212876345f08b513f"
+    },
+    {
+      "id": "4I08",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I08.tree",
+      "title": "从停机归约到谱隙不可判定",
+      "taxon": "Corollary",
+      "sha256": "96ae70fd13f5a55c74cdfdb1307af5a896d81229003420c537a84ee490644e65"
+    },
+    {
+      "id": "4I09",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I09.tree",
+      "title": "Busy Beaver 数为何没有可计算上界",
+      "taxon": "Proposition",
+      "sha256": "95dd9e74a1af54d6c1d879a1f193b40705ad84f7ade994fc5213262015ed95ba"
+    },
+    {
+      "id": "4I0A",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0A.tree",
+      "title": "极大尺寸之后才显现的拓扑基态",
+      "taxon": "Theorem",
+      "sha256": "95f3726d8ed14542f7a7544a223055e1cb506216ef39474f3019297ceb7a0728"
+    },
+    {
+      "id": "4I0B",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0B.tree",
+      "title": "承诺有隙时的相识别不可判定猜想",
+      "taxon": "Conjecture",
+      "sha256": "4aa0670ec7e8f122f9687f3107aefdeefe9ecd1aaade21302c7618e7e6c32006"
+    },
+    {
+      "id": "4I0C",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0C.tree",
+      "title": "无限自旋格的准局域可观测代数",
+      "taxon": "Construction",
+      "sha256": "b699785b193579253b951e9a1ea319df55478662a0109c3f77dc2295a8da6d08"
+    },
+    {
+      "id": "4I0D",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0D.tree",
+      "title": "约化态为何等于可观测代数上的限制",
+      "taxon": "Proposition",
+      "sha256": "febc14a5420a97137601eddf47881b1ddf136419a576e2aeb16cb2cf334e5c64"
+    },
+    {
+      "id": "4I0E",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0E.tree",
+      "title": "纯状态是状态凸集的极点",
+      "taxon": "Definition",
+      "sha256": "b8589932847147f04f0e1646277a82056461683f752384cf0432a9849761f1ab"
+    },
+    {
+      "id": "4I0F",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0F.tree",
+      "title": "状态的 GNS 表示",
+      "taxon": "Construction",
+      "sha256": "c83e8db13706a37b8d91c7f4d813d784b759219b16717a6bd890b7d824909aee"
+    },
+    {
+      "id": "4I0G",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0G.tree",
+      "title": "锥区域的 Haag 对偶性",
+      "taxon": "Definition",
+      "sha256": "2163fc7c682313a568e44dea0cae960158d1d3f5ec54eb6b9ad667d95f91ad72"
+    },
+    {
+      "id": "4I0H",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0H.tree",
+      "title": "有限张量因子的交换子恰为另一因子",
+      "taxon": "Proposition",
+      "sha256": "a4c4398786baa535c06ccac3ed6d9c49efd38d43ba67a88d08e8165f582751af"
+    },
+    {
+      "id": "4I0I",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0I.tree",
+      "title": "近似 Haag 对偶性的锥扩张条件",
+      "taxon": "Definition",
+      "sha256": "858b28e39d763bd974242c584a1d7dcd90affd08a68b20d35b8f2e3de28f4ca0"
+    },
+    {
+      "id": "4I0J",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0J.tree",
+      "title": "矩阵乘积态如何编码链的边界",
+      "taxon": "Definition",
+      "sha256": "6df4b5c91e897d1d35e0163f02620fd5c697aca08a6a70575140ae16f43d624d"
+    },
+    {
+      "id": "4I0K",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0K.tree",
+      "title": "矩阵乘积态为何被母哈密顿量湮灭",
+      "taxon": "Proposition",
+      "sha256": "5e5f4b8248d64cf860fd6f40c8ff1d4bdedd4bd145d39de188f370f8e93c146c"
+    },
+    {
+      "id": "4I0L",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0L.tree",
+      "title": "PEPS 的虚拟边与边界映射",
+      "taxon": "Construction",
+      "sha256": "1b417bf73985b4b4f0369b64da8a4a73468eba8be9b090eb5f4e2eadd80a1940"
+    },
+    {
+      "id": "4I0M",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0M.tree",
+      "title": "边界映射怎样给出正交基态投影",
+      "taxon": "Proposition",
+      "sha256": "6561d46cd551970b6227ab4708b7d145fb39e8ce4a13d911994718b5e8328672"
+    },
+    {
+      "id": "4I0N",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0N.tree",
+      "title": "切断虚拟边怎样限制约化态的秩",
+      "taxon": "Proposition",
+      "sha256": "12fce5f9dee52431df17eb88e85c0026503249f5f18663763f1363fc889a3e1e"
+    },
+    {
+      "id": "4I0O",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0O.tree",
+      "title": "有限群等距 PEPS 的局部张量",
+      "taxon": "Construction",
+      "sha256": "7224e45bf2489d27c6c7e6ab4c00dd164cc12f338463ce234e7bffd9997a96ea"
+    },
+    {
+      "id": "4I0P",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0P.tree",
+      "title": "有限群对称性为何能穿过 PEPS 张量",
+      "taxon": "Proposition",
+      "sha256": "13fb68654dae93a82edb1db10c19eaaf06c241dfb52e9466dc668adc1e45d87d"
+    },
+    {
+      "id": "4I0Q",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0Q.tree",
+      "title": "有限群网络的 Gram 算子归一化",
+      "taxon": "Proposition",
+      "sha256": "4857b16a6caac226b4bacc8e3884ae7e7431f1cdd717ee20c02d97b840cbdd29"
+    },
+    {
+      "id": "4I0R",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0R.tree",
+      "title": "梳形区域上的母哈密顿量交性质",
+      "taxon": "Theorem",
+      "sha256": "9f02bf984caafabe2b6c0877471436a6620143b801f232738ab6aa84f00606ad"
+    },
+    {
+      "id": "4I0S",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0S.tree",
+      "title": "有限群 PEPS 的边界像有多少维",
+      "taxon": "Proposition",
+      "sha256": "82ead156309d81d251340e015d7140cc4b199409880d84e39355d457696e07e7"
+    },
+    {
+      "id": "4I0T",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0T.tree",
+      "title": "内部局部不可区分性等价于什么算子恒等式",
+      "taxon": "Proposition",
+      "sha256": "b33b1c94855b718d03fd5a7dbd03cf61f471501b71a18d9d274321099daec736"
+    },
+    {
+      "id": "4I0U",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0U.tree",
+      "title": "内部不可区分性为何给出唯一平面无挫折态",
+      "taxon": "Theorem",
+      "sha256": "88b0a9d026b67ff7895f85790b7777b2af0b0a5a93d594a5e38510a287467ff4"
+    },
+    {
+      "id": "4I0V",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0V.tree",
+      "title": "无限区域的零能投影为何属于局部代数",
+      "taxon": "Proposition",
+      "sha256": "b349210f02d425280ea409dbeec56a4e310aeb24fa2cedaad74701491f2e0e92"
+    },
+    {
+      "id": "4I0W",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0W.tree",
+      "title": "Rieffel–van Daele 的实线性稠密判据",
+      "taxon": "Theorem",
+      "sha256": "a305a8338b6b52e8a216532516b57305eab16605d91b90b58937849c8240634f"
+    },
+    {
+      "id": "4I0X",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0X.tree",
+      "title": "将 Haag 对偶归约到零能子空间的判据",
+      "taxon": "Theorem",
+      "sha256": "84ec52cb8da0aab15cbb5b19786df13a7c21c577430980c02824633f84037ea3"
+    },
+    {
+      "id": "4I0Y",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0Y.tree",
+      "title": "有限体积哪些一致估计足以推出 Haag 对偶",
+      "taxon": "Theorem",
+      "sha256": "18e4df8272694d1bbc2d64528ef45834cc43f3f608fcd62b0ceb37f7b17e58e9"
+    },
+    {
+      "id": "4I0Z",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0Z.tree",
+      "title": "梳形区域的逐层几何条件",
+      "taxon": "Definition",
+      "sha256": "18fdcee212edfb1e8e204272a0243b5c7e0ce721799474a285e80cd97e553961"
+    },
+    {
+      "id": "4I10",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I10.tree",
+      "title": "固定点 PEPS 的 Haag 对偶定理",
+      "taxon": "Theorem",
+      "sha256": "bf0cec4e060c7aee1f519584d99c3bb8c978e216783adb7a3bf0a652d257e3d9"
+    },
+    {
+      "id": "4I11",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I11.tree",
+      "title": "最大纠缠对如何将算子移到另一端",
+      "taxon": "Proposition",
+      "sha256": "5c3ae99788092e91fd51eeb1d3242c2483eb390578673699a27b924cc119b05e"
+    },
+    {
+      "id": "4I12",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I12.tree",
+      "title": "二维固定点网络的算子转移恒等式",
+      "taxon": "Theorem",
+      "sha256": "521b543c93f0d6f155af6ba69ede3a0f7621f39ce853e030c9376633f694826b"
+    },
+    {
+      "id": "4I13",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I13.tree",
+      "title": "群平均张量如何用 Hopf 代数表达",
+      "taxon": "Proposition",
+      "sha256": "7b9c95d9598a7501b09aa725e2a8da4b584e0191c08e881cf35bde255879f649"
+    },
+    {
+      "id": "4I14",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I14.tree",
+      "title": "周期方格 toric code 为何有四维基态空间",
+      "taxon": "Theorem",
+      "sha256": "4c60dc26078fce43ee7c46f8aa330a6ef9ebfeb2f4e6436708c18c83c38ef219"
+    },
+    {
+      "id": "4I15",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I15.tree",
+      "title": "toric code 的弦算子为何只在端点产生缺陷",
+      "taxon": "Proposition",
+      "sha256": "8fa4a322ec8c1662ce5373bab6e630b6b56ec4a32f6b035ffbcb9320678281b9"
+    },
+    {
+      "id": "4I16",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I16.tree",
+      "title": "锥局域化与可输运的超选择扇区",
+      "taxon": "Definition",
+      "sha256": "1e10e20961dac8c520782051d65dd7f473cb5ae77c1360d491afef4fbd392584"
+    },
+    {
+      "id": "4I17",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I17.tree",
+      "title": "局域自同态为何自然形成张量范畴",
+      "taxon": "Proposition",
+      "sha256": "bcf89e590c7d9058c463e3765f2223473225a030269ff55aff9f615a43893aef"
+    },
+    {
+      "id": "4I18",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I18.tree",
+      "title": "弦网模型怎样将融合数据变成局部约束",
+      "taxon": "Construction",
+      "sha256": "28f95dee8b75fcb3ef62b61b9bb3a2dbf84fe38a2749e31aa143e2861d6e148d"
+    },
+    {
+      "id": "4I19",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I19.tree",
+      "title": "非手性二维相的弦网分类猜想",
+      "taxon": "Conjecture",
+      "sha256": "a994aaa471cb824080599f270ad7de929b73c1b0a4e8f697a6db35ea36381549"
+    },
+    {
+      "id": "4I1A",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I1A.tree",
+      "title": "弱 C* Hopf 代数与双连通条件",
+      "taxon": "Definition",
+      "sha256": "2f665c7694124fa2f96ca9f77d94231633178072490b04d74ffaa88c3c114280"
+    },
+    {
+      "id": "4I1B",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I1B.tree",
+      "title": "酉融合范畴编码哪些有限融合数据",
+      "taxon": "Definition",
+      "sha256": "73395ab0ea8ef51c6bd518f0814c938b0ed9112f492c3bfd7e120cf9fd1a2e05"
+    },
+    {
+      "id": "4I1C",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I1C.tree",
+      "title": "完整矩阵代数的纯状态恰对应秩一密度矩阵",
+      "taxon": "Theorem",
+      "sha256": "c49e47b1c1ddc360148c95905c2888cac848db26a6d9eaa9d439e124f8d6e1e2"
+    },
+    {
+      "id": "icm2026-perez-garcia",
+      "path": "trees/references/icm2026-perez-garcia.tree",
+      "title": "Pérez-García：The Quest for a Classification of 2D Quantum Phases of Matter",
+      "taxon": "Reference",
+      "sha256": "eb1ea97dd7606b2ee761764b93c9041694e6a4b31a019963eb22c5ace6009074"
+    }
+  ],
+  "prerequisites": {
+    "4I00": [],
+    "4I01": [
+      "004N",
+      "0F4E",
+      "0N0B",
+      "00M4"
+    ],
+    "4I02": [
+      "4I01",
+      "0N0B"
+    ],
+    "4I03": [
+      "4I01",
+      "4I02"
+    ],
+    "4I04": [
+      "00MQ",
+      "0Z02",
+      "0N0B"
+    ],
+    "4I05": [
+      "00MS",
+      "4I02",
+      "4I04"
+    ],
+    "4I06": [
+      "0AC3",
+      "00QP"
+    ],
+    "4I07": [
+      "4I06",
+      "4I01",
+      "0F4F",
+      "4I02"
+    ],
+    "4I08": [
+      "4I07",
+      "4I06",
+      "00QR"
+    ],
+    "4I09": [
+      "0AC3",
+      "4I06"
+    ],
+    "4I0A": [
+      "4I01",
+      "4I09",
+      "0F4F",
+      "4I02",
+      "4I14"
+    ],
+    "4I0B": [
+      "4I01",
+      "4I03",
+      "4I06",
+      "4I07"
+    ],
+    "4I0C": [
+      "4I01",
+      "00M4",
+      "0Z01"
+    ],
+    "4I0D": [
+      "00MQ",
+      "4F02",
+      "2V0L",
+      "0F4F"
+    ],
+    "4I0E": [
+      "0Z03"
+    ],
+    "4I0F": [
+      "0Z01",
+      "0Z03",
+      "0Z1C",
+      "0Z02",
+      "00EW"
+    ],
+    "4I0G": [
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "004V",
+      "004X"
+    ],
+    "4I0H": [
+      "0F4E",
+      "004V",
+      "4I0G"
+    ],
+    "4I0I": [
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "4I0G",
+      "00M4"
+    ],
+    "4I0J": [
+      "0F4E",
+      "00JZ",
+      "0F0F",
+      "0F4F"
+    ],
+    "4I0K": [
+      "4I0J",
+      "00MS",
+      "4I04"
+    ],
+    "4I0L": [
+      "4I0J",
+      "0F4E"
+    ],
+    "4I0M": [
+      "4I0L",
+      "0N0B",
+      "00MS"
+    ],
+    "4I0N": [
+      "4I0L",
+      "4I0D",
+      "2V0L"
+    ],
+    "4I0O": [
+      "0Z05",
+      "0H4M",
+      "4I0L"
+    ],
+    "4I0P": [
+      "4I0O"
+    ],
+    "4I0Q": [
+      "4I0O",
+      "4I0M",
+      "4I1A"
+    ],
+    "4I0R": [
+      "4I0O",
+      "4I0M",
+      "4I0Z",
+      "4I04",
+      "4I05",
+      "4I0Q",
+      "4I1A"
+    ],
+    "4I0S": [
+      "4I0Q",
+      "4I0R"
+    ],
+    "4I0T": [
+      "4I0M",
+      "4I0D",
+      "4I0O",
+      "4I1A"
+    ],
+    "4I0U": [
+      "4I01",
+      "4I0T",
+      "4I0C",
+      "4I0E",
+      "4F02",
+      "0A39"
+    ],
+    "4I0V": [
+      "4I0C",
+      "4I0F",
+      "4I04",
+      "00MW",
+      "004X"
+    ],
+    "4I0W": [
+      "00N0",
+      "004V",
+      "4I0H"
+    ],
+    "4I0X": [
+      "4I0E",
+      "4I0F",
+      "4I0V",
+      "4I0G",
+      "4I0W"
+    ],
+    "4I0Y": [
+      "4I01",
+      "4I0G",
+      "4I0X",
+      "00M4"
+    ],
+    "4I0Z": [
+      "4I01"
+    ],
+    "4I10": [
+      "4I0O",
+      "4I0R",
+      "4I0U",
+      "4I0I",
+      "4I0G",
+      "4I1A",
+      "4I0Z",
+      "4I12"
+    ],
+    "4I11": [
+      "00MU",
+      "4I0L"
+    ],
+    "4I12": [
+      "4I0O",
+      "4I1A",
+      "4I0G",
+      "4I0Z",
+      "4I0M",
+      "4I0Y",
+      "4I11"
+    ],
+    "4I13": [
+      "014T",
+      "0143",
+      "4I0O",
+      "4I1A"
+    ],
+    "4I14": [
+      "4I05"
+    ],
+    "4I15": [
+      "4I14",
+      "4I16"
+    ],
+    "4I16": [
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "4I0G"
+    ],
+    "4I17": [
+      "0Z01",
+      "012G",
+      "4I16",
+      "012H"
+    ],
+    "4I18": [
+      "4I1B",
+      "4I05"
+    ],
+    "4I19": [
+      "4I18",
+      "4I03",
+      "4I16",
+      "4I17",
+      "4I10"
+    ],
+    "4I1A": [
+      "0Z01",
+      "0143",
+      "014T"
+    ],
+    "4I1B": [
+      "0AI1",
+      "0Z01",
+      "012G",
+      "014W"
+    ],
+    "4I1C": [
+      "0Z03",
+      "4F02",
+      "4I0E",
+      "0N0B",
+      "00JZ"
+    ],
+    "icm2026-perez-garcia": []
+  },
+  "atomic_questions": {
+    "4I01": "有限程为何必须控制支撑直径？",
+    "4I02": "简并基态上方的谱隙如何定义？",
+    "4I03": "一致有隙路径为何定义相等价关系？",
+    "4I04": "正项之和的核为何是各项核的交？",
+    "4I05": "交换投影 Hamiltonian 为何有整数能谱？",
+    "4I06": "停机判定为何导致对角矛盾？",
+    "4I07": "固定局部维数的构造怎样区分停机与不停机？",
+    "4I08": "谱隙算法怎样变成停机算法？",
+    "4I09": "Busy Beaver 数为何没有可计算上界？",
+    "4I0A": "拓扑低能结构能否只在不可计算大尺寸后出现？",
+    "4I0B": "已承诺有隙时相识别仍可能不可判定吗？",
+    "4I0C": "无限格点的可观测代数如何由有限区域组成？",
+    "4I0D": "约化态为何等于可观测代数上的限制？",
+    "4I0E": "纯状态为何定义为状态凸集的极点？",
+    "4I0F": "状态如何构造循环 Hilbert 表示？",
+    "4I0G": "锥的 Haag 对偶要求哪个交换子等式？",
+    "4I0H": "有限张量因子的交换子为何恰是另一因子？",
+    "4I0I": "近似 Haag 对偶允许怎样扩大和移动锥？",
+    "4I0J": "矩阵乘积态怎样编码有限链边界？",
+    "4I0K": "母哈密顿量为何湮灭矩阵乘积态？",
+    "4I0L": "PEPS 的内部收缩如何留下边界映射？",
+    "4I0M": "如何从边界映射得到正交像投影？",
+    "4I0N": "虚拟切割边如何控制约化态的秩？",
+    "4I0O": "有限群等距张量的方向约定是什么？",
+    "4I0P": "群作用为何能从内部传到 PEPS 边界？",
+    "4I0Q": "未归一化有限群网络的 Gram 因子是多少？",
+    "4I0R": "何时局部母项的核恰是全区域边界像？",
+    "4I0S": "有限群网络的边界像有多少维？",
+    "4I0T": "局部不可区分性怎样等价为压缩算子标量？",
+    "4I0U": "内部不可区分为何推出唯一平面无挫折纯态？",
+    "4I0V": "无限区域零能投影为何在区域 von Neumann 代数内？",
+    "4I0W": "哪一个实线性稠密条件识别互为交换子的代数？",
+    "4I0X": "哪两个零能子空间条件推出 Haag 对偶？",
+    "4I0Y": "哪些有限体积一致估计足以推出 Haag 对偶？",
+    "4I0Z": "梳形区域的逐层粘合要满足哪些几何条件？",
+    "4I10": "固定点 PEPS 在哪种晶格上满足精确 Haag 对偶？",
+    "4I11": "最大纠缠对怎样把矩阵移到另一端？",
+    "4I12": "二维算子转移恒等式需要哪些几何和线性条件？",
+    "4I13": "群平均 PEPS 如何写成余乘法与对极公式？",
+    "4I14": "周期方格 toric code 为何有四维基态？",
+    "4I15": "弦算子为何只在路径端点产生缺陷？",
+    "4I16": "什么是锥局域化且可输运的超选择扇区？",
+    "4I17": "局域自同态的交织子为何形成张量范畴？",
+    "4I18": "弦网怎样把融合数据变为局域投影？",
+    "4I19": "弦网覆盖与任意子不变量能否完整分类非手性相？",
+    "4I1A": "弱 C* Hopf 的双连通要求什么？",
+    "4I1B": "酉融合范畴编码哪些数据？",
+    "4I1C": "完整矩阵代数的纯状态为何恰好秩一？"
+  },
+  "reused_pages": [
+    "004N",
+    "004V",
+    "004X",
+    "00EW",
+    "00JZ",
+    "00M4",
+    "00MQ",
+    "00MS",
+    "00MU",
+    "00MW",
+    "00N0",
+    "00QP",
+    "00QR",
+    "012G",
+    "012H",
+    "0143",
+    "014T",
+    "014W",
+    "0A39",
+    "0AC3",
+    "0AI1",
+    "0F0F",
+    "0F4E",
+    "0F4F",
+    "0H4M",
+    "0N0B",
+    "0Z01",
+    "0Z02",
+    "0Z03",
+    "0Z05",
+    "0Z1C",
+    "2V0L",
+    "4F02"
+  ],
+  "terminology_evidence": {
+    "method": "Systematic whole-forest title and scoped content searches for density matrices, partial traces, C* states and GNS, tensor products, matrix spectral theory, commutants, group averaging, Hopf/weak Hopf, fusion/string nets, finite range/gaps, computability, PEPS/MPS, Haag duality and comb domains. Existing candidate bodies read before use; no Outline used as prerequisite.",
+    "canonical_reuse": "Existing 0Z01–03/0Z1C, 004V/004X, 0F4E/0F4F, 0AC3/00QP/00QR, 2V0L, 012G/012H/0143/014T/014W, 0H4M/0Z05 and published 4F02 reused. 4I0D is an application of 2V0L, not a competing partial-trace definition. Weak C* Hopf and fusion-definition searches found no existing atomic definition. Revision 2 retains 0AI1 for finite biproducts and reuses existing EGNO reference 013X; no new foundational atom added.",
+    "new_foundations": [
+      "4I01",
+      "4I02",
+      "4I03",
+      "4I0C",
+      "4I0E",
+      "4I0F",
+      "4I0G",
+      "4I0I",
+      "4I0J",
+      "4I0L",
+      "4I0O",
+      "4I0Z",
+      "4I16",
+      "4I1A",
+      "4I1B"
+    ],
+    "shared_repairs": "Shared Schwarz proof issue notified by reviewer and repaired by parent; repaired 0Z1C independently re-read. No other essential shared repair currently identified."
+  },
+  "source_records": [
+    {
+      "id": "perez-garcia-icm2026",
+      "authors": [
+        "David Pérez-García"
+      ],
+      "title": "The Quest for a Classification of 2D Quantum Phases of Matter",
+      "doi": "10.1137/25M1804728",
+      "pages": "534–550",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1804728",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML: abstract, mathematical §§1–6, every displayed formula, all bibliography entries [1]–[64], acknowledgments and copyright/publication metadata, read in overlapping section-sized passes. All 15 inline tensor-diagram images were opened and visually inspected individually in the browser. No report PDF edition was read. §§2–3 were rechecked during final authoring. For revision 2, reread Theorem 2.3 clauses 2–3 and the following undecidability consequence, and §§5.1.1–5.2 including Definitions 5.2, 5.3, 5.5 and equations (5.1)–(5.3); checked the corresponding note locators against those passages.",
+      "proof_boundary": "Full report reading does not imply full proofs of imported research theorems. Notes explicitly separate local finite proofs, quoted research statements, conditional reductions and conjectures. No source diagrams are reproduced."
+    },
+    {
+      "id": "haag-duality-v2",
+      "authors": [
+        "Yoshiko Ogata",
+        "David Pérez-García",
+        "Alberto Ruiz-de-Alarcón"
+      ],
+      "title": "Haag Duality for 2D Quantum Spin Systems",
+      "version": "arXiv:2509.23734v2",
+      "version_date": "2025-11-23",
+      "url": "https://arxiv.org/abs/2509.23734v2",
+      "version_url": "https://arxiv.org/html/2509.23734v2",
+      "license": "arXiv non-exclusive distribution license, not CC BY",
+      "actual_reading": "v2 abstract and §1; all §2.1 including Lemma 2.1.4 proof; §2.2 Assumption 2.2.1, Remark 2.2.2 and Lemma 2.2.3 statement plus selected proof paragraphs, not the whole proof; §3.1 definitions through dual/trivial representations; §3.4 Definitions 3.4.1–3.4.5; §3.5 Theorem 3.5.3 and selected proof text; §3.6 main theorem, Lemma 3.6.3 uses and proof conclusion; §3.7 Theorem 3.7.1 and beginning of its proof; §4.1 theorem statements and finite-map formulas through Corollary 4.1.6, plus beginning of §4.2. Earlier v1 was also read for these themes and §3.4 tensor conventions, but final theorem contracts are bound to v2. The 70-page paper and its 166 figures were not read in full; no full appendix reading claimed.",
+      "proof_boundary": "Research tensor-network and operator-algebra proofs remain cited; readable definitions, finite linear algebra, GNS, projection limits and conditional uniqueness proof are supplied locally."
+    },
+    {
+      "id": "cubitt-gap-v5",
+      "authors": [
+        "Toby Cubitt",
+        "David Pérez-García",
+        "Michael M. Wolf"
+      ],
+      "title": "Undecidability of the Spectral Gap (full version)",
+      "doi": "10.1017/fmp.2021.15",
+      "version": "arXiv:1502.04573v5",
+      "version_date": "2022-07-26",
+      "url": "https://arxiv.org/abs/1502.04573v5",
+      "version_url": "https://arxiv.org/pdf/1502.04573v5",
+      "license": "CC BY-NC-SA 4.0 on the arXiv v5 page",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "actual_reading": "Version metadata/abstract; PDF introductory definitions of strong gapped/gapless and initial Theorem 3 (printed pp.5–6); restatement and final assembly excerpt in §6.2 (printed pp.140–142). Independently read publisher PDF pages 4 and 96 via text extraction from existing parent-provided /tmp/cubitt-undecidability-2022.pdf to verify alpha≤beta versus alpha≤2beta. Not the full 150-page proof. Web PDF screenshot calls failed; no visual-PDF inspection by this author is claimed.",
+      "publisher_pdf_sha256": "a59cd6a0945217c2a9ec6aaf9fa898a690e4d1d4702d6412fb0331b9178c3a46",
+      "proof_boundary": "Used for theorem normalization/version discrepancy only; local theorem statement follows the report and initial theorem. No unsupported reconciliation of the later bound."
+    },
+    {
+      "id": "levin-wen-v2",
+      "authors": [
+        "Michael A. Levin",
+        "Xiao-Gang Wen"
+      ],
+      "title": "String-net condensation: A physical mechanism for topological phases",
+      "doi": "10.1103/PhysRevB.71.045110",
+      "version": "arXiv:cond-mat/0404617v2",
+      "version_date": "2004-04-27",
+      "url": "https://arxiv.org/abs/cond-mat/0404617v2",
+      "version_url": "https://arxiv.org/html/cond-mat/0404617v2",
+      "license": "arXiv assumed non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/assumed-1991-2003/license.html",
+      "actual_reading": "Abstract/version metadata and introduction excerpt; HTML §IV.B fixed-point Hamiltonians, equations (10)–(14), coefficient choice d_s/sum d_i^2 and listed commuting-projector consequences. Full appendices, F-symbol graphical proofs and generalized models were not read.",
+      "proof_boundary": "Used for the normalized construction and research projector statement, not as a locally proved general string-net theorem. No figures or long prose copied."
+    },
+    {
+      "id": "ogata-sectors-v1",
+      "authors": [
+        "Yoshiko Ogata"
+      ],
+      "title": "A derivation of braided C*-tensor categories from gapped ground states satisfying the approximate Haag duality",
+      "version": "arXiv:2106.15741v1",
+      "version_date": "2021-06-29",
+      "url": "https://arxiv.org/abs/2106.15741v1",
+      "version_url": "https://arxiv.org/pdf/2106.15741v1",
+      "related_doi": "10.1063/5.0061785",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "actual_reading": "Version metadata and license; PDF text of §1.3 Definition 1.5 and following main-result summary (printed p.5), §2 Setting 2.1 and equations (2.1)–(2.2) (printed p.6), Lemma 2.2 and beginning of Definition 2.3. These selected passages were read independently for revision 2. Not the full 50-page paper, later category-construction proofs or appendices.",
+      "proof_boundary": "Used for the exact every-cone restricted unitary-equivalence selection criterion. The note explains the unitary identification with the common-Hilbert-space convention; no proof of transport-independent braiding, phase invariance or closure under subobjects is claimed."
+    },
+    {
+      "id": "egno-2015-author-final",
+      "authors": [
+        "Pavel Etingof",
+        "Shlomo Gelaki",
+        "Dmitri Nikshych",
+        "Victor Ostrik"
+      ],
+      "title": "Tensor Categories",
+      "series": "Mathematical Surveys and Monographs 205",
+      "publisher": "American Mathematical Society",
+      "year": 2015,
+      "isbn": "978-1-4704-2024-6",
+      "reference": "013X",
+      "url": "https://math.mit.edu/~etingof/egnobookfinal.pdf",
+      "version_url": "https://math.mit.edu/~etingof/egnobookfinal.pdf",
+      "version": "2015 author-final book PDF, printed pagination; URL is not an arXiv-version identifier",
+      "license": "Copyright 2015 American Mathematical Society, all rights reserved; author-final version made available with publisher permission. Not a Creative Commons license.",
+      "actual_reading": "Title/copyright pages; Definition 4.1.1 and Examples 4.1.2–4.1.3, printed p.65 (PDF page 82); Proposition 4.2.1 and Remark 4.2.2, p.66 (PDF page 83); Remark 9.4.7 on Hermitian and unitary fusion categories, pp.283–284 (PDF pages 300–301). Selected PDF text read independently, not the entire book. The numbered item 4.2.2 is a Remark, not an Example.",
+      "proof_boundary": "4I1B states the finite semisimple C*-category form, explicitly including all finite biproducts and a complex-bilinear tensor bifunctor. Standard rigidity/dimension theory is not proved locally; no book pages or long prose are reproduced."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Local proofs in the notes: finite spectral/projection identities, halting diagonal reduction, restricted binary Busy Beaver simulation, GNS, finite tensor commutants, MPS/PEPS annihilation, pseudoinverse image projection, cut-rank bound, four-leg regular-group contractions on finite square-lattice regions, boundary rank, polarization, conditional plane uniqueness, decreasing projections, Pauli toric-code counting, string endpoints, and intertwiner tensor composition. Revision 2 recomputes physical Z2 four-leg tensor contractions for path3 and square4 with all eight boundary legs, rather than the superseded two-boundary group-label expansion.",
+      "proof_boundary": "Exhaustive finite checks corroborate examples but do not establish general research theorems. The prior b=2 numerical examples do not test the four-leg model and are withdrawn as evidence for it."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "General nonchiral classification",
+      "scope": "Conjectures 3.1 and 3.2 remain conjectural. No formal resolution of nonchirality, generic representative existence or completeness of anyon invariants is asserted."
+    },
+    {
+      "branch": "Full weighted weak-Hopf construction",
+      "scope": "Axioms and biconnectedness are defined; the §3.4 family is identified by its exact primary source, not reconstructed coefficient by coefficient. General MPO tensors, weights, integral elements, faithful representation choices and tensor-diagram manipulations remain a research branch."
+    },
+    {
+      "branch": "Phase invariance and quantum-double sector identification",
+      "scope": "The report discussion of approximate duality invariance, full braided C* categories, equivalence with representations of D(G), and same-category string-net phase equivalence is contextual. Exact contracts and proofs of report references [9], [35], [44] are not independently developed here."
+    },
+    {
+      "branch": "Other applications and algorithmic variants",
+      "scope": "Rotationally symmetric and 1D spectral undecidability, quantum-hardness of phase recognition, symmetry-protected classifications, entanglement bootstrap and Hall conductance are contextual, not separate fully developed branches."
+    },
+    {
+      "branch": "Numerical record",
+      "scope": "Busy Beaver height-10^7 decimal tower is attributed to the report as a historical lower bound in its exact binary model, not a current-record claim."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4I07",
+        "4I0A"
+      ],
+      "source": "perez-garcia-icm2026; cubitt-gap-v5",
+      "scope": "Undecidable Hamiltonian construction, quantum phase estimation/history Hamiltonians, tiling hierarchy, explicit d=10 size-driven model and perturbative stability are quoted research results. Only halting and reduction logic is proved locally."
+    },
+    {
+      "notes": [
+        "4I0R",
+        "4I0T",
+        "4I10",
+        "4I12"
+      ],
+      "source": "haag-duality-v2",
+      "scope": "General weighted weak-Hopf bulk-boundary, intersection, local indistinguishability, two-dimensional operator transfer and cone geometry proofs are cited. One-dimensional diagrams are illustrations, never the full general proof."
+    },
+    {
+      "notes": [
+        "4I0W",
+        "4I0X",
+        "4I0Y"
+      ],
+      "source": "haag-duality-v2",
+      "scope": "Rieffel–van Daele theorem, factor compression faithfulness/lifting, and finite-to-infinite error analysis are cited. All usable hypotheses are recorded, and elementary decomposition is separately proved."
+    },
+    {
+      "notes": [
+        "4I16",
+        "4I17",
+        "4I18",
+        "4I1B"
+      ],
+      "source": "perez-garcia-icm2026; ogata-sectors-v1; levin-wen-v2; egno-2015-author-final",
+      "scope": "Sector selection and elementary intertwiner tensor structure are explicit; transport-independent braiding, rigidity/semisimplicity of physical sectors, categorical dimension theory and general F-symbol pentagon/projector calculations are not reconstructed."
+    }
+  ],
+  "source_errata": [
+    {
+      "source": "perez-garcia-icm2026",
+      "locator": "§1.1 finite range",
+      "resolution": "4I01 uses diameter in graph distance, not cardinality of support; a two-site arbitrarily-separated counterexample is explicit."
+    },
+    {
+      "source": "cubitt-gap-v5",
+      "locator": "initial Theorem 3 vs §6.2 restatement",
+      "resolution": "Initial/report alpha≤beta and restatement alpha≤2beta both recorded. No global reconciliation or changed theorem constant claimed."
+    },
+    {
+      "source": "haag-duality-v2",
+      "locator": "Definition 4.1.1 (105)",
+      "resolution": "Printed cone sandwich repeats C_kappa-prime on both sides and paths are described as disjoint despite a common apex. Notes avoid supplying an unverified corrected general definition; use exact blocked-cone case and refer broader stepped-cone domain to the primary theorem."
+    },
+    {
+      "source": "haag-duality-v2",
+      "locator": "Assumption 2.2.1 and (111)",
+      "resolution": "4I0Y retains the bounded common error requirement and uniform operator-input estimates. 4I12 states the verified large-N zero-error identities; it does not infer a global bounded error from growing finite-map norms or claim to reconstruct the limiting proof."
+    }
+  ],
+  "validation": {
+    "source_links": "223 body links checked in 50 owned files; no missing local targets or math-contained links.",
+    "format": "normalizeFormat applied ONLY to owned 4I*.tree and icm2026-perez-garcia.tree; all subsequently equal to normalizer output; zero scoped editorial-rule errors; zero mixed literal half-open interval errors.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.8",
+      "count": 777,
+      "errors": 0,
+      "scope": "All owned Forester math groups; brace balance and source-form checks separate from KaTeX. No site build/render performed."
+    },
+    "prerequisite_check": "170 explicit atomic prerequisite edges, all direct body links to existing genuine knowledge pages; 240 nodes recursively visited using shared prerequisite graph plus this branch; acyclic. All 48 atoms directly linked by narrative outline.",
+    "elementary_checks": {
+      "toric": [
+        {
+          "L": 3,
+          "star_rank": 8,
+          "plaquette_rank": 8,
+          "ground_dimension": 4
+        },
+        {
+          "L": 4,
+          "star_rank": 15,
+          "plaquette_rank": 15,
+          "ground_dimension": 4
+        }
+      ],
+      "gram": [
+        {
+          "name": "path3",
+          "D": 2,
+          "n": 3,
+          "m": 2,
+          "b": 8,
+          "half_edge_identity": "12=4+8",
+          "physical_dimension": 4096,
+          "boundary_columns": 256,
+          "gram_entries_checked": 65536,
+          "gram_factor": 1,
+          "boundary_rank": 128,
+          "normalized_gram_trace": 128,
+          "max_entry_error": 0,
+          "method": "Sum all unnormalized bond indices and apply (I+X^tensor4)/2 at every vertex; form every Gram entry from physical amplitudes; Gaussian elimination for rank."
+        },
+        {
+          "name": "square4",
+          "D": 2,
+          "n": 4,
+          "m": 4,
+          "b": 8,
+          "half_edge_identity": "16=8+8",
+          "physical_dimension": 65536,
+          "boundary_columns": 256,
+          "gram_entries_checked": 65536,
+          "gram_factor": 2,
+          "boundary_rank": 128,
+          "normalized_gram_trace": 128,
+          "max_entry_error": 0,
+          "method": "Sum all unnormalized bond indices and apply (I+X^tensor4)/2 at every vertex; form every Gram entry from physical amplitudes; Gaussian elimination for rank."
+        }
+      ],
+      "errors": 0
+    },
+    "regression_test_candidates": [
+      {
+        "id": "toric-code-gf2",
+        "notes": [
+          "4I14"
+        ],
+        "scope": "Periodic L=3,4 edge-qubit toric code. Every star-face overlap even; each binary incidence rank L²-1; 2^(2L²-2(L²-1))=4. No open-boundary or size-driven model inferred.",
+        "expected": [
+          {
+            "L": 3,
+            "star_rank": 8,
+            "plaquette_rank": 8,
+            "ground_dimension": 4
+          },
+          {
+            "L": 4,
+            "star_rank": 15,
+            "plaquette_rank": 15,
+            "ground_dimension": 4
+          }
+        ]
+      },
+      {
+        "id": "four-leg-z2-gram",
+        "notes": [
+          "4I0Q",
+          "4I0S"
+        ],
+        "scope": "Actual four-leg Z2 tensors (I+X^tensor4)/2 on the three-collinear-vertex path and the four vertices of one square; every unused leg is boundary. Path3: n=3,m=2,b=8; square4: n=4,m=4,b=8. Enumerate all bond indices and physical tensor terms for all 256 boundary columns, then all 65536 Gram entries per example. Factors 1 and 2; Gaussian-elimination rank 128 in both. No D=3 test of the four-leg model is claimed.",
+        "expected": [
+          {
+            "name": "path3",
+            "D": 2,
+            "n": 3,
+            "m": 2,
+            "b": 8,
+            "half_edge_identity": "12=4+8",
+            "physical_dimension": 4096,
+            "boundary_columns": 256,
+            "gram_entries_checked": 65536,
+            "gram_factor": 1,
+            "boundary_rank": 128,
+            "normalized_gram_trace": 128,
+            "max_entry_error": 0,
+            "method": "Sum all unnormalized bond indices and apply (I+X^tensor4)/2 at every vertex; form every Gram entry from physical amplitudes; Gaussian elimination for rank."
+          },
+          {
+            "name": "square4",
+            "D": 2,
+            "n": 4,
+            "m": 4,
+            "b": 8,
+            "half_edge_identity": "16=8+8",
+            "physical_dimension": 65536,
+            "boundary_columns": 256,
+            "gram_entries_checked": 65536,
+            "gram_factor": 2,
+            "boundary_rank": 128,
+            "normalized_gram_trace": 128,
+            "max_entry_error": 0,
+            "method": "Sum all unnormalized bond indices and apply (I+X^tensor4)/2 at every vertex; form every Gram entry from physical amplitudes; Gaussian elimination for rank."
+          }
+        ]
+      }
+    ],
+    "superseded_checks": {
+      "packet_revision": 1,
+      "packet_sha256": "d7f3346d64eaad7df394625d050346ae0cb57e95d5836b24daf1e7cde5270762",
+      "withdrawn_scope": "The old D=2,3 group-label expansion with (n,m,b)=(3,2,2) and (4,4,2) did not satisfy 4n=2m+b. Its results are withdrawn as evidence for the four-leg tensor model; they were not physical four-leg contractions.",
+      "replacement": "Revision 2 records only the actual b=8 physical contractions under elementary_checks.gram and four-leg-z2-gram."
+    },
+    "parent_regression": {
+      "source": "tests/mathematical-physics-third-reports.test.mjs",
+      "test": "four-leg Z2 tensor networks have the stated boundary Gram factor",
+      "source_sha256": "0b1447cff2df172d1297ab8ab0c6165c6dfc5ff063093a08b339ff346abb0a6b",
+      "test_block_sha256": "cc9198f176b84ce64c3b9a845fcc3ec2fadfd85a009b848dd51eebca8a7c0670",
+      "status": "exact extracted parent test passed",
+      "method": "Run the unmodified named test block in an isolated Node context, with node:assert/strict; no shared file is modified.",
+      "integration_attempt": {
+        "command": "node --test --test-name-pattern='four-leg Z2 tensor networks' tests/mathematical-physics-third-reports.test.mjs",
+        "result": "Blocked during module preload by ENOENT research/icm2026-mathematical-physics-third-reports.json; named test did not run through the whole shared module.",
+        "scope": "Parent integration remains pending; the successful isolated test is not a shared-suite pass."
+      }
+    },
+    "computation_provenance": "The physical-amplitude contraction method follows the inspected parent regression, with coordinates generating the bond/unused-leg domain and an added numerical rank calculation. This is a recomputation plus an exact parent-block rerun, not a claim of wholly independent implementations.",
+    "review_input": {
+      "path": "research/mathematical-physics-perez-garcia-review.json",
+      "sha256": "c5bc3e51e58c71a168fef089a011b1826bbc1921df5c3f029be14eca25e5cd6e",
+      "result": "changes-required",
+      "packet_sha256": "d7f3346d64eaad7df394625d050346ae0cb57e95d5836b24daf1e7cde5270762",
+      "findings_addressed": [
+        "PG-F01",
+        "PG-F02",
+        "PG-F03",
+        "PG-F04"
+      ]
+    },
+    "build": "Not run. Parent owns whole-site tests/build/render/registration/git/publication. The named shared-module attempt stopped at missing registry preload; only its isolated mathematical test block passed.",
+    "independent_review": "All four open findings in the revision-1 changes-required review have author responses and repairs. This revision is frozen for independent recheck; the reviewer-owned JSON has not been changed and no independent pass is claimed."
+  },
+  "freeze": {
+    "status": "frozen-ready-for-independent-review",
+    "date": "2026-10-22",
+    "revision": 2,
+    "previous_packet_sha256": "d7f3346d64eaad7df394625d050346ae0cb57e95d5836b24daf1e7cde5270762",
+    "paths": [
+      "trees/math/mathematical-physics/perez-garcia/4I*.tree",
+      "trees/references/icm2026-perez-garcia.tree",
+      "research/mathematical-physics-perez-garcia-packet.json"
+    ],
+    "hashes": "notes[].sha256 freezes each of 50 owned tree sources after format validation. Packet digest sent separately to avoid self-hashing.",
+    "mutation_boundary": "Only owned sources/reference/packet. Further edits only on reviewer-requested repairs; shared files, tests and registry hashes remain parent-owned."
+  }
+}

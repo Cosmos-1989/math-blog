@@ -1,0 +1,11 @@
+\title{自由稀释后的渐近电场在速度空间求解 Poisson 方程}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，式 (3.4)；自由模型的极限证明}
+
+\p{设 #{h_0\geq 0} 属于 #{\mathbb R^6} 上的 [Schwartz 空间](0H4F)，#{h(t,x,v)=h_0(x-tv,v)}。令 #{r(t,x)=\int h(t,x,v)dv}、#{E(t)=\nabla\Delta^{-1}r(t)}。则对每个 #{p\in\mathbb R^3}，}
+##{t^2E(t,tp)\longrightarrow E_\infty(p)=\frac 1{4\pi}\int\frac{p-w}{|p-w|^3}m(w)\,dw,\qquad m(w)=\int h_0(y,w)\,dy.}
+\p{\strong{密度缩放。}[自由平均换元](4H09)给 #{R_t(w):=t^3r(t,tw)=\int h_0(y,w-y/t)dy}。对 #{t\geq 1}，#{R_t} 一致有界且有一致可积的多项式衰减；这由 #{1+|w|\leq(1+|w-y/t|)(1+|y|)} 与 Schwartz 界得到。[支配收敛](0I8I)给出逐点 #{R_t\to m} 以及 #{L^1} 收敛。}
+\p{\strong{奇核极限。}在 [Coulomb 积分](4H01)中令 #{x'=tw}，得 #{t^2E(t,tp)=(4\pi)^{-1}\int(p-w)|p-w|^{-3}R_t(w)dw}。把积分分成 #{|p-w|<\eta} 与其补集。近处由一致有界性估为 #{C\eta}；远处的差由 #{C\eta^{-2}\|R_t-m\|_1} 控制。先令 #{t\to\infty}，再令 #{\eta\to 0}。}
+\p{写 #{\Psi_\infty=-(4\pi)^{-1}\int |p-w|^{-1}m(w)dw}，便有 #{E_\infty=\nabla_p\Psi_\infty}、#{\Delta_p\Psi_\infty=m}。上述结论证明自由 Schwartz 模型的极限。一般终态采用同一核定义的[速度边缘电场](4H1R)，不要求终态属于 Schwartz 空间；非线性散射的极限还需要相应的动力学估计。}

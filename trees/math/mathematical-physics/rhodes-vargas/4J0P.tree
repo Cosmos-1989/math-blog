@@ -1,0 +1,11 @@
+\title{圆盘调和延拓的 Fourier 能量公式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§5.1、式 (7.8) 所用调和延拓。}
+
+\p{设圆周上的实三角多项式 #{f(\theta)=\sum_{n\in\mathbb Z}f_ne^{in\theta}}，#{f_{-n}=\overline{f_n}}。单位圆盘内的[调和](270F)延拓为 #{Pf(re^{i\theta})=\sum_nf_nr^{|n|}e^{in\theta}}，且}
+##{\int_{\mathbb D}|\nabla Pf|^2dx\,dy=2\pi\sum_{n\ne 0}|n||f_n|^2.}
+\p{\strong{证明。}极坐标 Laplacian 为 #{\partial_r^2+r^{-1}\partial_r+r^{-2}\partial_\theta^2}，代入 #{r^{|n|}e^{in\theta}} 得零。角向正交性消去不同频率交叉项；第 #{n} 项的径向与角向导数平方之和积分为 #{2\pi|f_n|^2\int_0^1 2n^2r^{2|n|-1}dr=2\pi|n||f_n|^2}。常数项能量为零。}
+\p{对一般 #{f\in H^{1/2}(\mathbb T)}，由[周期 Sobolev 范数](4101)和截断极限得到有限能量延拓。若边界是[圆周随机分布](4J0O)，同一 Fourier 式在每个较小圆盘内平滑收敛，仍可定义 #{P\varphi}，但其全圆盘能量一般无穷。}
+\p{对于有限能量边界值，若 #{u=Pf+v} 且 #{v} 具有零边界值，则分部积分给出 #{\int\nabla Pf\cdot\nabla v=0}。于是 #{E(u)=E(Pf)+E(v)\ge E(Pf)}，说明调和延拓是 Dirichlet 能量的唯一极小元。}

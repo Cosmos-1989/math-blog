@@ -1,0 +1,10 @@
+\title{非线性回声中的频率组合 kt−ℓs}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§4.3；2405.04473v1，§2.1 的轮廓方程}
+
+\p{在 #{\mathbb T^d_x\times\mathbb R^d_v}，令 #{g(t,x,v)=f(t,x+tv,v)} 是[移动轮廓](4H0B)。为避免 Fourier 乘积常数，记 #{\widetilde g_k(\eta)=(2\pi)^{-d}\widehat g(k,\eta)}，其中 #{\widehat g} 采用[未归一化约定](4H0X)；空间 Fourier 系数 #{E_\ell} 也含 #{(2\pi)^{-d}}。则非线性项在第 #{(k,\eta)} 频率上为}
+##{\partial_t\widetilde g_k(\eta)\big|_{nonlinear}=-i\sum_{\ell\ne 0}E_\ell(t)\cdot(\eta -tk)\widetilde g_{k-\ell}(\eta -t\ell).}
+\p{\strong{计算。}#{E(t,x+tv)=\sum_\ell E_\ell(t)e^{i\ell\cdot x+it\ell\cdot v}}，故乘法把频率移为 #{(k-\ell,\eta -t\ell)}。算子 #{\nabla_v-t\nabla_x} 在该频率处的因子是 #{i[(\eta -t\ell)-t(k-\ell)]=i(\eta -tk)}，连同方程负号得到公式。}
+\p{为了求时刻 #{t} 的密度，须积分轮廓方程至 #{t} 再取 #{\eta=tk}。过去时刻 #{s} 的贡献包含 #{\widetilde g_{k-\ell}(s,tk-s\ell)}。即使 #{t,s} 都很大，也可能有 #{tk\approx s\ell}，使该速度频率很小；先前被混合到高频的扰动可以重新作用于宏观密度，这称等离子体回声的共振机制。公式展示可能的共振位置，并不单独构造一个非线性回声解。}

@@ -1,0 +1,770 @@
+{
+  "id": "mathematical-physics-pausader-review",
+  "packet_id": "mathematical-physics-pausader-packet",
+  "packet_path": "research/mathematical-physics-pausader-packet.json",
+  "packet_sha256": "c62d182405566eacc26e2f919b656ba1b18e9951168095edfd1053225e5e15ea",
+  "date": "2026-10-22",
+  "role": "independent mathematical reviewer",
+  "result": "pass",
+  "review_scope": {
+    "owned_tree_files": 65,
+    "atomic_notes": 63,
+    "outlines": 1,
+    "references": 1,
+    "packet_files": 1,
+    "direct_shared_dependencies_read": 29,
+    "description": "Initial full reading of all 65 owned tree files, the packet and 29 direct shared prerequisites, followed by a targeted re-read after refreeze. The three revised trees were read in full; every semantic packet change was read against the preserved previous packet. Unchanged files retain the prior substantive review only after their current hashes were verified.",
+    "exclusions": [
+      "No reconstruction or certification of the complete research-paper proofs.",
+      "No claim of a full recursive audit of the packet's 299-node prerequisite closure.",
+      "No build, rendering, git, integration, or publication checks.",
+      "No author-note edits."
+    ],
+    "snapshot_policy": "Hashes bind the exact file versions actually read. At refreeze, all 95 current file hashes were compared with the previous review: only the packet, 4H0N, 4H1L and 4H1M changed. All four were read before accepting their replacement hashes. A subsequent current-file comparison matched the newly read bytes and all 65 packet-owned tree hashes."
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "PR01",
+      "previous_id": "PR-01",
+      "status": "resolved",
+      "notes": [
+        "4H0D",
+        "4H0F",
+        "4H0G",
+        "4H0H",
+        "4H1R"
+      ],
+      "verification": "4H1R now supplies a general field definition and an absolute-convergence estimate under m in L1 intersect Linfinity. Its weighted sufficient condition r>3/2 is correct. 4H0D is confined to its Schwartz free model; 4H0G checks its fifth spatial weight, and 4H0F attributes the nonlinear limiting field to the cited theorem."
+    },
+    {
+      "id": "PR02",
+      "previous_id": "PR-02",
+      "status": "resolved",
+      "notes": [
+        "4H0F",
+        "4H0G",
+        "4H0H",
+        "4H1O"
+      ],
+      "verification": "The circular strong-solution wording is replaced by weighted gamma and terminal sigma classes. The local-uniform limit is distinguished from the extra-moment global-uniform statement. Direct composition of primary (4.3), (4.6), and (1.11) confirms 4H0G's formula: p=z+lambda log(s)E0(w), q=w+sp, v=q-sp=w. Theorem 4.2 states the weighted time-derivative continuity used here; no unweighted endpoint derivative or arbitrary weak-solution uniqueness is claimed.",
+      "source": {
+        "url": "https://arxiv.org/html/2101.01390v1",
+        "locator": "Theorems 1.1, 3.1, 4.2; Remark 3.2(2); equations (1.11), (4.3)-(4.10)."
+      }
+    },
+    {
+      "id": "PR03",
+      "previous_id": "PR-03",
+      "status": "resolved",
+      "notes": [
+        "4H0G",
+        "4H0H",
+        "4H1Q"
+      ],
+      "verification": "The integer W^{m,infinity} definition is now an independent atom. Its links to 2J0C, 00Q6 and 0H4F supply weak derivatives, essential-supremum spaces and multiindices; the wave-operator and scattering notes use the new definition."
+    },
+    {
+      "id": "PR04",
+      "priority": "P3",
+      "category": "source-ledger",
+      "status": "resolved",
+      "notes": [
+        "4H03",
+        "4H04",
+        "4H0A",
+        "4H0O",
+        "4H0R",
+        "4H0T",
+        "4H1L",
+        "4H1M"
+      ],
+      "verification": "All eight corrected locators were independently checked against the publisher HTML. The source metadata in 4H1L and 4H1M now agrees, and these two tree changes are metadata-only. The 4H0A scope now matches the two Schwartz functions in its unchanged body. Both truncated 4H0T descriptions now contain the full causal response kernel, convolution identity and uniqueness scope. Section coverage moves the cancellation and wake material to section 4 and includes the energy/angular-momentum discussion in sections 1-2.",
+      "source": {
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+        "locators": {
+          "4H03": "Section 1.3, (1.4)",
+          "4H04": "Section 1.4.1, (1.5)",
+          "4H0A": "Section 4.2, (4.13)",
+          "4H0O": "Section 4 opening, (4.1)",
+          "4H0R": "Section 4.2 before (4.10)",
+          "4H0T": "Section 4.2.1; the explicit kernel is independently proved in the note",
+          "4H1L": "Section 2; section 6 questions 4 and 8 retained",
+          "4H1M": "Section 1.4 Boltzmann-electron background"
+        }
+      }
+    },
+    {
+      "id": "PR05",
+      "priority": "P2",
+      "category": "dimension-hypothesis",
+      "status": "resolved",
+      "notes": [
+        "4H0N"
+      ],
+      "verification": "Read the full revised note. The non-neutral decaying-field example is now restricted to smooth compactly supported density in R^3. With support in the origin-centered ball of radius R, |x|>2R gives |x-y|>=|x|/2; the 1/(4*pi) Newton normalization from 4H01 therefore yields ||rho||_1/(pi*|x|^2), as stated. In R^1 the note correctly states E'=rho and E(+infinity)-E(-infinity)=Q, with endpoint limits justified by constancy off the support. It no longer claims two-ended decay when Q is nonzero.",
+      "prerequisite_verification": "Re-read 0A3C. Its continuous-integrand fundamental theorem applies on any finite interval containing the compact support. The constant tails then give the displayed endpoint identity. The new body link and packet edge 4H0N -> 0A3C agree; 0A3C was already among the 29 reviewed shared pages.",
+      "source": {
+        "url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+        "locator": "Equation (1.1), with E=grad(phi); section 4.2 is explicitly three-dimensional. The decay bound and one-dimensional obstruction are direct calculations."
+      }
+    }
+  ],
+  "additional_checks": [
+    {
+      "id": "PARENT-SIGMA",
+      "status": "no_mismatch",
+      "notes": [
+        "4H0G",
+        "4H1O"
+      ],
+      "conclusion": "No additional field-gradient factor belongs in the displayed coordinates. Such factors appear in the Jacobian. The opposite literal sign in primary Remark 4.1 does not override the explicit map and its algebraic composition.",
+      "source": {
+        "url": "https://arxiv.org/html/2101.01390v1",
+        "locator": "Equations (1.11), (4.3), (4.4), (4.6); Remark 4.1."
+      }
+    },
+    {
+      "id": "LOCAL-CALCULATIONS",
+      "status": "checked",
+      "notes": "All 63 atoms were read, including their proof or cited-proof paragraphs.",
+      "checks": [
+        "Hamilton and linearization signs; transport Jacobians and moments; Coulomb constants and near/far estimates; logarithmic ODE correction under its stated remainder.",
+        "Kepler energy bounds, canonical transformations, boundary-flux sign, and necessary blowdown constraints.",
+        "Volterra convolution sign and explicit inverse; continuous-frequency obstruction; Poisson normalization and velocity-scale distinction; tail-moment endpoint.",
+        "Fourier sampling and echo frequencies; pendulum area and period; action derivative; Galilei drift; time-L2 counterexample; Abel constants and normalization.",
+        "Conditional relativistic frequency gap, dimensional scaling, screening, and fractional dissipative bound."
+      ],
+      "qualification": "PR05's dimensional issue is resolved in the refrozen version. Cited deep nonlinear and spectral arguments were checked at the contract level, not reconstructed."
+    }
+  ],
+  "source_contract_checks": [
+    {
+      "source_id": "pausader-icm2026",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1805825",
+      "scope": "Mathematical body read in source preparation and relevant passages rechecked against every final topic; footnote 6, reference 4, publication metadata and source-erratum locations checked.",
+      "outcome": "Reported theorems, conditional calculations and open problems remain distinguished. Source-location corrections are listed in PR04.",
+      "limits": "No publisher PDF or figure-pixel inspection; no byte hash of remote HTML."
+    },
+    {
+      "source_id": "vacuum-scattering-v1",
+      "url": "https://arxiv.org/html/2101.01390v1",
+      "scope": "Main theorem, transformed solution classes and coordinate equations; details recorded under PR02.",
+      "outcome": "Small initial data, finite terminal data and small incoming data are distinct. No full nonlinear-bootstrap proof claim."
+    },
+    {
+      "source_id": "poisson-equilibrium-v2",
+      "url": "https://arxiv.org/html/2205.04540v2",
+      "scope": "Theorem 1.1 and equations (1.5)-(1.8).",
+      "outcome": "4H0V retains dimension three, P1, C1 data, velocity weight 9/2, both mixed norms, delta=10^-4, linear-scattering rate 1/2 and the two field rates. It adds no neutrality requirement. P_sqrt(2) in the report is not substituted silently."
+    },
+    {
+      "source_id": "sharp-gevrey-v1",
+      "url": "https://arxiv.org/html/2405.04473v1",
+      "scope": "Equations (1.4)-(1.18), Theorems 1.1-1.3, compared with report footnote 6.",
+      "outcome": "The equilibrium bound, Penrose margin, n=floor(d/2+1), neutrality, smallness dependence and all radius losses are retained. Finite-sum norm equivalence changes constants, not the Gevrey radius. Forward, terminal and two-sided limits use their respective source topologies."
+    },
+    {
+      "source_id": "small-bgk-v2",
+      "url": "https://arxiv.org/html/2601.10030v2",
+      "scope": "Definitions and equations in sections 1.1-1.4; Definition 1.1, Theorem 1.2, Remark 1.3, Lemma 1.4; Abel formulas and Appendix B.1.",
+      "outcome": "4H17-4H19 retain the C2 bifurcation, nonzero tangent, marginality, uniform ED/H8 control, global energy function and co-periodic setting. The stable result keeps weighted initial data, static and Galilei components, and only the stated time-L2 field conclusion. The tangent-completion assertion is explicitly not imported as an undefined exact characterization.",
+      "limits": "The v2 identifier is binding; the HTML's later internal date is disclosed. No full spectral or modulation-proof reconstruction."
+    }
+  ],
+  "prerequisite_review": {
+    "declared_direct_shared_ids": [
+      "00M1",
+      "00OA",
+      "00OB",
+      "00Q5",
+      "00Q6",
+      "0A34",
+      "0A3C",
+      "0BAC",
+      "0BL1",
+      "0F40",
+      "0F68",
+      "0H4F",
+      "0H4G",
+      "0H53",
+      "0I80",
+      "0I85",
+      "0I8I",
+      "0W01",
+      "130A",
+      "2J0C",
+      "4101",
+      "4301",
+      "4305",
+      "4501",
+      "4502",
+      "4503",
+      "4509",
+      "450F",
+      "450K"
+    ],
+    "all_declared_direct_shared_pages_read": true,
+    "checked_contracts": [
+      "00Q5/00Q6/00M1: integration and norm conventions.",
+      "0H4G/0I80/0W01/4101: Fourier sign, normalization and zero modes.",
+      "4501/4502/4503/450F/450K: smooth-flow, passive-transport, mixing and stability scopes.",
+      "4509/4301/0BAC: Newton normalization, tensor divergence and boundary orientation.",
+      "0BL1/00OA/0I85: symplectic convention and explicitly opposite Poisson bracket.",
+      "0H53/0I8I/0A34/0A3C: integration and calculus tools.",
+      "2J0C/0H4F/4305/0F40/0F68/00OB/130A: derivative, weight, continuity, ODE and comparison conventions."
+    ],
+    "limits": "Only the 29 listed shared bodies and their use by this branch were semantically reviewed here. Their further linked trees are not included or claimed reviewed merely because they are reachable.",
+    "prerequisite_edges": 163,
+    "refreeze_edge_check": {
+      "previous_edges": 162,
+      "current_edges": 163,
+      "added_edges": [
+        {
+          "from": "4H0N",
+          "to": "0A3C"
+        }
+      ],
+      "all_declared_edges_have_body_links": true,
+      "new_shared_pages": 0,
+      "shared_dependency_count": 29,
+      "scope": "Read-only checks confined to packet edges and already reviewed files; no recursive shared-site re-audit."
+    }
+  },
+  "snapshot_verification": {
+    "packet_sha256": "c62d182405566eacc26e2f919b656ba1b18e9951168095edfd1053225e5e15ea",
+    "previous_packet_sha256": "d718e770fe8a947fec2cd24011f49d69dc10a570c7be8c458f0169688cd4cf11",
+    "previous_review_sha256": "76a62832a91cd95e28b0c5386f17c1be704f3c16f55fd0c1a9d15131bbcdf832",
+    "branch_tree_count": 64,
+    "owned_tree_count": 65,
+    "reviewed_count": 95,
+    "unchanged_file_count": 91,
+    "changed_files_re_read": [
+      {
+        "id": "mathematical-physics-pausader-packet",
+        "path": "research/mathematical-physics-pausader-packet.json",
+        "previous_sha256": "d718e770fe8a947fec2cd24011f49d69dc10a570c7be8c458f0169688cd4cf11",
+        "current_sha256": "c62d182405566eacc26e2f919b656ba1b18e9951168095edfd1053225e5e15ea"
+      },
+      {
+        "id": "4H0N",
+        "path": "trees/math/mathematical-physics/pausader/4H0N.tree",
+        "previous_sha256": "121622858055aab4157d14fc087a77e30d340e755b5621e49c1c500e68a7b908",
+        "current_sha256": "6f7462e4133df7feb38766ca6621cdb8d17e4a62849600a7acc754036005d264"
+      },
+      {
+        "id": "4H1L",
+        "path": "trees/math/mathematical-physics/pausader/4H1L.tree",
+        "previous_sha256": "0f787bb36c4b2691a4349e8a4e5a5249cc43a4eccfe85156527d878a685a8b9b",
+        "current_sha256": "ab70618e507e50418fcc34eca0945d584443dbbcd49b5bd5b0d5edff12bdc35d"
+      },
+      {
+        "id": "4H1M",
+        "path": "trees/math/mathematical-physics/pausader/4H1M.tree",
+        "previous_sha256": "076b319c88999c00064dd51bd20af82a347431fd5734681435af7473f1710fe0",
+        "current_sha256": "1b150c57c6cf17fc2b7b0d289cd22108ed51ab48bf2e7fd7d630a5eef3df50d9"
+      }
+    ],
+    "all_current_hashes_verified": true,
+    "all_owned_hashes_match_packet": true,
+    "changes_since_re_read": [],
+    "errors": []
+  },
+  "reviewed_files": [
+    {
+      "id": "mathematical-physics-pausader-packet",
+      "path": "research/mathematical-physics-pausader-packet.json",
+      "sha256": "c62d182405566eacc26e2f919b656ba1b18e9951168095edfd1053225e5e15ea"
+    },
+    {
+      "id": "4H00",
+      "path": "trees/math/mathematical-physics/pausader/4H00.tree",
+      "sha256": "6a6dfac0edf0f4872a11a4a10fdc4381289e9841d69d283683e395c5a000af7a"
+    },
+    {
+      "id": "4H01",
+      "path": "trees/math/mathematical-physics/pausader/4H01.tree",
+      "sha256": "d012a79b737398b2c98c5e9606c05b2760aaf2526178e952dce958c637dc6bf2"
+    },
+    {
+      "id": "4H02",
+      "path": "trees/math/mathematical-physics/pausader/4H02.tree",
+      "sha256": "7e914fd98812896575f7b1b451cfddc4a28e32513485ed86f259acae93924954"
+    },
+    {
+      "id": "4H03",
+      "path": "trees/math/mathematical-physics/pausader/4H03.tree",
+      "sha256": "acacfbc60b1c591a81b1707e69a8712f881607dda8f991500834327d0c87c657"
+    },
+    {
+      "id": "4H04",
+      "path": "trees/math/mathematical-physics/pausader/4H04.tree",
+      "sha256": "e0b2ada2050deb961f008b5a5d1380206d7ded1bb8b82ff12c3f6bd4b2709d67"
+    },
+    {
+      "id": "4H05",
+      "path": "trees/math/mathematical-physics/pausader/4H05.tree",
+      "sha256": "3fd579345905a5ea2f7b73b2942fe3d9c786dbe986f1afd98fa027ac1128582a"
+    },
+    {
+      "id": "4H06",
+      "path": "trees/math/mathematical-physics/pausader/4H06.tree",
+      "sha256": "883701036cee0472433aa8b5ac22404e20007afe8aa352703ad571215cc98fe3"
+    },
+    {
+      "id": "4H07",
+      "path": "trees/math/mathematical-physics/pausader/4H07.tree",
+      "sha256": "95328e5646365b77e5f4d886f9799b606e9316a45458a231bf5bd82d03ae2885"
+    },
+    {
+      "id": "4H08",
+      "path": "trees/math/mathematical-physics/pausader/4H08.tree",
+      "sha256": "9a8b054723d0bbca5199d85182f68a76168fadf635ceb0c02d34bdd0bea084af"
+    },
+    {
+      "id": "4H09",
+      "path": "trees/math/mathematical-physics/pausader/4H09.tree",
+      "sha256": "cb1a06801fb38c9fb04731438965d1a252e661ce35f78394c0aa7e99b0f8c41f"
+    },
+    {
+      "id": "4H0A",
+      "path": "trees/math/mathematical-physics/pausader/4H0A.tree",
+      "sha256": "2033edfe1711729efae794963aed15e2f41db3e05fcc64ac4828095c8ebe2c47"
+    },
+    {
+      "id": "4H0B",
+      "path": "trees/math/mathematical-physics/pausader/4H0B.tree",
+      "sha256": "9320eba1f1b4c6d91649c6ddebaf197b7f425d821b060957b901ee9ec73d0bd7"
+    },
+    {
+      "id": "4H0C",
+      "path": "trees/math/mathematical-physics/pausader/4H0C.tree",
+      "sha256": "5fa247d1887c6cc5ae4ca94cbd718ec834f02477e29bb5729fe6d54ec9babd0d"
+    },
+    {
+      "id": "4H0D",
+      "path": "trees/math/mathematical-physics/pausader/4H0D.tree",
+      "sha256": "93e4e57a50c6513d68cea2964c065e44f1db76102a47a5485067571793277824"
+    },
+    {
+      "id": "4H0E",
+      "path": "trees/math/mathematical-physics/pausader/4H0E.tree",
+      "sha256": "d6695c1c1451a9f3ea26d12c15b0e2d28978f60648eb63a3a10444e224d66bda"
+    },
+    {
+      "id": "4H0F",
+      "path": "trees/math/mathematical-physics/pausader/4H0F.tree",
+      "sha256": "29d4b4ac0199cb9d5aa3c67a86da4caebb88afc8c6df6238f8c4320bc8c7bf7f"
+    },
+    {
+      "id": "4H0G",
+      "path": "trees/math/mathematical-physics/pausader/4H0G.tree",
+      "sha256": "92ecc0893159a2670415b8bac6e107705f978938ea9eeb82b82e8de72fddf29c"
+    },
+    {
+      "id": "4H0H",
+      "path": "trees/math/mathematical-physics/pausader/4H0H.tree",
+      "sha256": "178dc7d0472e0dad70374829691059894dc8305104027cf33d4197077dd93392"
+    },
+    {
+      "id": "4H0I",
+      "path": "trees/math/mathematical-physics/pausader/4H0I.tree",
+      "sha256": "eaa0baba2bd8b18708e6bc64444a6dc10acdb2fe0fc6c504b7320928992000e2"
+    },
+    {
+      "id": "4H0J",
+      "path": "trees/math/mathematical-physics/pausader/4H0J.tree",
+      "sha256": "7a61523dfae01bbd334fce499a534fe08eaa93579a217d3bec1e61b5d9ead074"
+    },
+    {
+      "id": "4H0K",
+      "path": "trees/math/mathematical-physics/pausader/4H0K.tree",
+      "sha256": "92db1d7606641791c8b2bbdd1c201113c108c746dd9db30d624fc0f3698598a3"
+    },
+    {
+      "id": "4H0L",
+      "path": "trees/math/mathematical-physics/pausader/4H0L.tree",
+      "sha256": "d0d2f5b00467a617e52a698ae037f7cd66283facf832fed887c632a25180e124"
+    },
+    {
+      "id": "4H0M",
+      "path": "trees/math/mathematical-physics/pausader/4H0M.tree",
+      "sha256": "922804c15c4eedd9bcd99732b165689a774fc8d9074a6d7464c97b2b442b1465"
+    },
+    {
+      "id": "4H0N",
+      "path": "trees/math/mathematical-physics/pausader/4H0N.tree",
+      "sha256": "6f7462e4133df7feb38766ca6621cdb8d17e4a62849600a7acc754036005d264"
+    },
+    {
+      "id": "4H0O",
+      "path": "trees/math/mathematical-physics/pausader/4H0O.tree",
+      "sha256": "160067aedfb8b3c5396576afe130acb49800c5df4c3fade12ed86eb24ad0077c"
+    },
+    {
+      "id": "4H0P",
+      "path": "trees/math/mathematical-physics/pausader/4H0P.tree",
+      "sha256": "a5e4fb4361ebfc69dd44e13673945c028838ae73606eeb448b8e7e8f91da4af0"
+    },
+    {
+      "id": "4H0Q",
+      "path": "trees/math/mathematical-physics/pausader/4H0Q.tree",
+      "sha256": "fc38fd0bfa85a632cf61f4c5f5d555dd1e40282cb98e2c875ff2f9f4fe6d8875"
+    },
+    {
+      "id": "4H0R",
+      "path": "trees/math/mathematical-physics/pausader/4H0R.tree",
+      "sha256": "8a152093e55cf8b97fd0e5ae9fcb044f7d02662319b8772a3f7d0283b049e1e8"
+    },
+    {
+      "id": "4H0S",
+      "path": "trees/math/mathematical-physics/pausader/4H0S.tree",
+      "sha256": "96f727b4ddaeb4d2b16c05742e9faabc302469030ed5c9d4c3a464bb381c2dfa"
+    },
+    {
+      "id": "4H0T",
+      "path": "trees/math/mathematical-physics/pausader/4H0T.tree",
+      "sha256": "b831134519361d508d6314a4fdc8e28a9056c356b48214c93026bbc7ed441859"
+    },
+    {
+      "id": "4H0U",
+      "path": "trees/math/mathematical-physics/pausader/4H0U.tree",
+      "sha256": "cf3686b1b4a35372dc1184ea3597eb7356d89fa34f0530bc0ae54ad173c55690"
+    },
+    {
+      "id": "4H0V",
+      "path": "trees/math/mathematical-physics/pausader/4H0V.tree",
+      "sha256": "b05d93765ce52c45b2b48c8750d1ae00c22cb3bf93b7fd5449884fcb2d4dcc04"
+    },
+    {
+      "id": "4H0W",
+      "path": "trees/math/mathematical-physics/pausader/4H0W.tree",
+      "sha256": "b48da5a880472f5fa10de8077e4959db6d4b4336e0913d712f0990f73714ec33"
+    },
+    {
+      "id": "4H0X",
+      "path": "trees/math/mathematical-physics/pausader/4H0X.tree",
+      "sha256": "65a0aa3677357e5f6b3525e260e7f955c4a7cf4fd846b825c0935a34aab00788"
+    },
+    {
+      "id": "4H0Y",
+      "path": "trees/math/mathematical-physics/pausader/4H0Y.tree",
+      "sha256": "ca71a8af863873bc66509010d7fdb986cc4e950ffbf3b9cac13ad63a62a69dc5"
+    },
+    {
+      "id": "4H0Z",
+      "path": "trees/math/mathematical-physics/pausader/4H0Z.tree",
+      "sha256": "2f3122c385ebc9cf864733c49f13f3e968cc8d51a00c15a77ab45295b542a954"
+    },
+    {
+      "id": "4H10",
+      "path": "trees/math/mathematical-physics/pausader/4H10.tree",
+      "sha256": "e905a2bb78c26a0f8b340fd9971c3696ff2b601a046120466d33294aa8d0c4ee"
+    },
+    {
+      "id": "4H11",
+      "path": "trees/math/mathematical-physics/pausader/4H11.tree",
+      "sha256": "3c5a8d452bfda92418bf612a07f0dd1f019eb75063713ab5f81e0ca0e94676f4"
+    },
+    {
+      "id": "4H12",
+      "path": "trees/math/mathematical-physics/pausader/4H12.tree",
+      "sha256": "ae78d75f980f577c1bbcb79055601be87a898ff82c9fa6087a2208fca041f4bf"
+    },
+    {
+      "id": "4H13",
+      "path": "trees/math/mathematical-physics/pausader/4H13.tree",
+      "sha256": "7c7bbd5428726c42c9fe1707964019e849bc5714c608ff8ac8f75c7eee97fefb"
+    },
+    {
+      "id": "4H14",
+      "path": "trees/math/mathematical-physics/pausader/4H14.tree",
+      "sha256": "8ab18aef427d62392fc19a8189fd902688972f3dd33ffa80f40e88924635da07"
+    },
+    {
+      "id": "4H15",
+      "path": "trees/math/mathematical-physics/pausader/4H15.tree",
+      "sha256": "ca90fd358934532b4723e7e464bb6bdc3a4838e35d1ab4eaf03a99f97aa392a4"
+    },
+    {
+      "id": "4H16",
+      "path": "trees/math/mathematical-physics/pausader/4H16.tree",
+      "sha256": "7fb69eac7c1d1e407b42c5aaf2327cd768d496b93ced8133d843d90bbefaac03"
+    },
+    {
+      "id": "4H17",
+      "path": "trees/math/mathematical-physics/pausader/4H17.tree",
+      "sha256": "d1628ad6863a25d44bed4d6ddbe2b062b3b6633c6f4298c20bc347eb239a9b83"
+    },
+    {
+      "id": "4H18",
+      "path": "trees/math/mathematical-physics/pausader/4H18.tree",
+      "sha256": "5690ad3c65c9d5f55832cb33e7f37be2a24d6a59636b606d9d46be0e87465082"
+    },
+    {
+      "id": "4H19",
+      "path": "trees/math/mathematical-physics/pausader/4H19.tree",
+      "sha256": "6f2cee183b1b39ae030ddd1d14d177d25a2130b3dedbd50633473555bd245fd0"
+    },
+    {
+      "id": "4H1A",
+      "path": "trees/math/mathematical-physics/pausader/4H1A.tree",
+      "sha256": "192d1735f9ec4c068f08badb186e5896952753c813f66b2777f01e206ea562f6"
+    },
+    {
+      "id": "4H1B",
+      "path": "trees/math/mathematical-physics/pausader/4H1B.tree",
+      "sha256": "eb5d4a66318583c0094d2721f5736ba7fabd8b56312ef4768afc9a6cf074576f"
+    },
+    {
+      "id": "4H1C",
+      "path": "trees/math/mathematical-physics/pausader/4H1C.tree",
+      "sha256": "cc25d81425e0173cc6fcc60b58ba499f1346926d9c184d02f7802eda45612ae0"
+    },
+    {
+      "id": "4H1D",
+      "path": "trees/math/mathematical-physics/pausader/4H1D.tree",
+      "sha256": "7c70c50fcb4d6d144378fc434067cc5731b36db4084b04f7e369e33bf63e5348"
+    },
+    {
+      "id": "4H1E",
+      "path": "trees/math/mathematical-physics/pausader/4H1E.tree",
+      "sha256": "09f4009452231bbef323de2ba8006f4f9269bdd4b97c8587a5d56e61e1a44db5"
+    },
+    {
+      "id": "4H1F",
+      "path": "trees/math/mathematical-physics/pausader/4H1F.tree",
+      "sha256": "e2d2ecdbd4a72e65f36ce239587cfdea192790fad7a0120c92f2fc357c87d0f9"
+    },
+    {
+      "id": "4H1G",
+      "path": "trees/math/mathematical-physics/pausader/4H1G.tree",
+      "sha256": "7ef1bf7fb5a04680f525d1583dd01641cf2b5f6d6b627540a6fd649714e0e3cb"
+    },
+    {
+      "id": "4H1H",
+      "path": "trees/math/mathematical-physics/pausader/4H1H.tree",
+      "sha256": "5b533a3b23d055f67b3b953d80b486f406d15632ea019ef4dfeeb67b2a02e8cf"
+    },
+    {
+      "id": "4H1I",
+      "path": "trees/math/mathematical-physics/pausader/4H1I.tree",
+      "sha256": "e87c67b0f0a29e35e117437e0063adb480f58fd089c7fb84a5388e1797cb1612"
+    },
+    {
+      "id": "4H1J",
+      "path": "trees/math/mathematical-physics/pausader/4H1J.tree",
+      "sha256": "e9d6d24952331cad34db532fa46ffc9e6bc3e1bc15ce8d4e93549de19204be2e"
+    },
+    {
+      "id": "4H1K",
+      "path": "trees/math/mathematical-physics/pausader/4H1K.tree",
+      "sha256": "84655db1ebecb3a0c7887e3b11ebd1290e9af1ecb51f3b1440badb528a52aa95"
+    },
+    {
+      "id": "4H1L",
+      "path": "trees/math/mathematical-physics/pausader/4H1L.tree",
+      "sha256": "ab70618e507e50418fcc34eca0945d584443dbbcd49b5bd5b0d5edff12bdc35d"
+    },
+    {
+      "id": "4H1M",
+      "path": "trees/math/mathematical-physics/pausader/4H1M.tree",
+      "sha256": "1b150c57c6cf17fc2b7b0d289cd22108ed51ab48bf2e7fd7d630a5eef3df50d9"
+    },
+    {
+      "id": "4H1N",
+      "path": "trees/math/mathematical-physics/pausader/4H1N.tree",
+      "sha256": "3eb83b4af4162434128e3f3df14253f8936d140f15a283505aee236d06f025a3"
+    },
+    {
+      "id": "4H1O",
+      "path": "trees/math/mathematical-physics/pausader/4H1O.tree",
+      "sha256": "74bbf1d73c629bfaf864a0daa8fdc9d98fcf578e1899a3dc274a71aa872e0895"
+    },
+    {
+      "id": "4H1P",
+      "path": "trees/math/mathematical-physics/pausader/4H1P.tree",
+      "sha256": "899eb3429da7d072d0ab70e834c081091e46beb04c5cad1401e2a71045101f21"
+    },
+    {
+      "id": "4H1Q",
+      "path": "trees/math/mathematical-physics/pausader/4H1Q.tree",
+      "sha256": "c2eb21b575a998a9aa61d763777b8f22aa5652e53ca8f2e3fe77da6d00394106"
+    },
+    {
+      "id": "4H1R",
+      "path": "trees/math/mathematical-physics/pausader/4H1R.tree",
+      "sha256": "27fbd6ff547f185da291f59404acb5b7bb60cc23244c1b06ca7906bf8426214e"
+    },
+    {
+      "id": "icm2026-pausader",
+      "path": "trees/references/icm2026-pausader.tree",
+      "sha256": "578d5c483a8693f76bdb76bad21435ea6be7fcd1807a11f17213669133a8c2c7"
+    },
+    {
+      "id": "00M1",
+      "path": "trees/math/analysis/atomic/00M1.tree",
+      "sha256": "e8077b2cfccf1f76276d3bef999e7fac06492dc419b03f11beb7a21fa4d357a0"
+    },
+    {
+      "id": "00OA",
+      "path": "trees/math/geometry/atomic/00OA.tree",
+      "sha256": "93a54a64d917a4adf107958641d27946aa784b633efbb7510892ac281e563284"
+    },
+    {
+      "id": "00OB",
+      "path": "trees/math/analysis/atomic/00OB.tree",
+      "sha256": "f393494827e96a03309bee7dffc58adcd447bae6d1a023bb6a3e61e6b1aaf2ce"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260"
+    },
+    {
+      "id": "00Q6",
+      "path": "trees/math/logic/research/atomic/00Q6.tree",
+      "sha256": "3d004eaf65deaa5e219da8e790e33c13c441d8009202b7074ba4a03b9e15f643"
+    },
+    {
+      "id": "0A34",
+      "path": "trees/math/analysis/atomic/0A34.tree",
+      "sha256": "e828bca1acac95821c34a87f2cf59ab4fe3298928bbd2680d5acd356aae91557"
+    },
+    {
+      "id": "0A3C",
+      "path": "trees/math/analysis/atomic/0A3C.tree",
+      "sha256": "0ce7de7269b74ee6540bf0a8be0eb8ef32da4c53248d1a3eda6750becbfa2bb1"
+    },
+    {
+      "id": "0BAC",
+      "path": "trees/math/geometry/algebraic/0BAC.tree",
+      "sha256": "15c0ad09f982e80b5fe294c90b4707ce42b6503650871cb7bca801e9214dd233"
+    },
+    {
+      "id": "0BL1",
+      "path": "trees/math/geometry/algebraic/0BL1.tree",
+      "sha256": "05d0cba46893e148e74a058d305d7dfd032e3e7baa5e6e7d9e589661d3122dbf"
+    },
+    {
+      "id": "0F40",
+      "path": "trees/math/topology/atomic/0F40.tree",
+      "sha256": "40802ed0f82b749ef73f0f6909c2cb4939fc923103e0e8cc528246fbe360c87b"
+    },
+    {
+      "id": "0F68",
+      "path": "trees/math/analysis/atomic/0F68.tree",
+      "sha256": "624f77432c0842d4912313685d6ce3860415d0b7f137d8c79d27625733538ac3"
+    },
+    {
+      "id": "0H4F",
+      "path": "trees/math/number-theory/reports/0H4F.tree",
+      "sha256": "bd9d958269eb81249a92be33d8c0e31cf4fce1597b6dde54c5213a92ba0baa20"
+    },
+    {
+      "id": "0H4G",
+      "path": "trees/math/number-theory/reports/0H4G.tree",
+      "sha256": "6f3129cdea227f7f647f0a005f526b127584e70c3dc9f2f22319b9dbe708be66"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b"
+    },
+    {
+      "id": "0I80",
+      "path": "trees/math/number-theory/reports/0I80.tree",
+      "sha256": "05352f1e4236707582e7f30abf652efcad044bf35a1d3d92c8124ddc0e08ef00"
+    },
+    {
+      "id": "0I85",
+      "path": "trees/math/number-theory/reports/0I85.tree",
+      "sha256": "cc682f922ec34a845ac5c1f61ba593d45950e1776313c6f125f46982d1e861f4"
+    },
+    {
+      "id": "0I8I",
+      "path": "trees/math/number-theory/reports/0I8I.tree",
+      "sha256": "9797c9f25f9dc8650f08f81b9dadac651aa6137dd1c241bac3e341dcbcca42ca"
+    },
+    {
+      "id": "0W01",
+      "path": "trees/math/analysis/fourier-extremal/0W01.tree",
+      "sha256": "81921455f7e1fa936679d21b3deb25638190f52d1b1e3b58df0fa48aefb78d31"
+    },
+    {
+      "id": "130A",
+      "path": "trees/math/analysis/fourier-restriction/130A.tree",
+      "sha256": "e45d746efa8cade772f903a1d7b64766cbfe18eb4292c129c41b5f7c8cf35f9e"
+    },
+    {
+      "id": "2J0C",
+      "path": "trees/math/geometry/harmonic-rigidity/2J0C.tree",
+      "sha256": "d8bd7434ee5511668e0d55d05bdcef2e60a25503f27badbb631027585b0c0fdb"
+    },
+    {
+      "id": "4101",
+      "path": "trees/math/pde/berti/4101.tree",
+      "sha256": "9fe3ad1309109320516976629031538d9a524a2cc57a24cbc2a3266a887760e0"
+    },
+    {
+      "id": "4301",
+      "path": "trees/math/pde/colombo/4301.tree",
+      "sha256": "47fc0a3249d6c31a5a2256d9ddf5742dde4a91d81482274bc412987ea47224e0"
+    },
+    {
+      "id": "4305",
+      "path": "trees/math/pde/colombo/4305.tree",
+      "sha256": "8673b702683bb4c93ad21c3225295d196fc9f8e29a02c391d29cff2fcb939570"
+    },
+    {
+      "id": "4501",
+      "path": "trees/math/pde/elgindi/4501.tree",
+      "sha256": "082f7d79860ecd1c656ecc8cd1cc3a27f5ec6feb225cb440fb6ad61c08f30e37"
+    },
+    {
+      "id": "4502",
+      "path": "trees/math/pde/elgindi/4502.tree",
+      "sha256": "e2b44e39e9b506ecec3e58787c2265ab3fa02a0e0ca3bbed5e7ba136b5fbba38"
+    },
+    {
+      "id": "4503",
+      "path": "trees/math/pde/elgindi/4503.tree",
+      "sha256": "c76e7fca51810626238f3100457bac1413b75635d4087b86e74cd0eda3e25ca3"
+    },
+    {
+      "id": "4509",
+      "path": "trees/math/pde/elgindi/4509.tree",
+      "sha256": "60a56a66434e711f16f4f9c833728df42d628cd2403761f841eef6af90b98ee8"
+    },
+    {
+      "id": "450F",
+      "path": "trees/math/pde/elgindi/450F.tree",
+      "sha256": "fff84b1485a94422543de135837f1bfc82f7282c8dbdff4ae1845bced45d91c9"
+    },
+    {
+      "id": "450K",
+      "path": "trees/math/pde/elgindi/450K.tree",
+      "sha256": "0b62b5aaad478ae5700193734c1563f3f6dbc8d12d7d90effa5088ee6fca9804"
+    }
+  ],
+  "next_review": "No open finding remains for this exact frozen snapshot. Any later content change requires a targeted re-read and updated file hashes before this pass applies to it.",
+  "targeted_recheck": {
+    "date": "2026-10-22",
+    "packet_revision": 2,
+    "packet_change_comparison": "Every changed JSON leaf was read, including metadata, proof scopes, claim-source locators, note hashes, the new prerequisite, source-reading records, section coverage, review responses, validation and freeze records. Unchanged packet content remains covered by the earlier full reading.",
+    "changed_trees_read_in_full": [
+      "4H0N",
+      "4H1L",
+      "4H1M"
+    ],
+    "unchanged_files_re_read_for_repair": [
+      "0A3C",
+      "4H01",
+      "4H0A",
+      "4H0T"
+    ],
+    "historical_review_input": "The packet pins the previous needs_revision review by SHA-256. That historical digest was verified before replacing the reviewer-owned JSON; the frozen packet was not modified.",
+    "validation_boundary": "Author-reported formula, parser and closure checks are not represented as reviewer-run builds. No build, rendering, git or publication check was run. Parent owns integration and build checks.",
+    "acceptance_scope": "Independent mathematical/source-contract review of this exact frozen branch and the listed direct prerequisites. No full reconstruction of external research proofs is claimed."
+  }
+}

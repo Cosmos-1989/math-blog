@@ -1,0 +1,12 @@
+\title{Liouville Hamiltonian 的连续谱分解}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，Theorem 7.1、式 (7.4)、(7.7)；bootstrap 原论文 v2 §2.4、§6。}
+
+\p{设 #{0<\gamma<2}、#{\mu>0}，#{Q=2/\gamma+\gamma /2}，#{H} 为[闭形式构造的 Liouville Hamiltonian](4J0Y)，作用于[边界空间](4J0O) #{\mathcal H}。它的谱为 #{\lbrack Q^2/2,\infty\rparen}，由连续谱的广义状态 #{\Psi_{Q+ip,\nu,\widetilde\nu}} 描述，其中 #{p>0}、#{\nu,\widetilde\nu} 为[整数分拆](4J0K)，且}
+##{H\Psi_{Q+ip,\nu,\widetilde\nu}=\left(\frac{Q^2+p^2}{2}+|\nu|+|\widetilde\nu|\right)\Psi_{Q+ip,\nu,\widetilde\nu}.}
+\p{引用谱定理的 Plancherel 形式：对 #{u,v\in\mathcal H}，}
+##{\langle u,v\rangle=\frac 1{2\pi}\int_0^\infty\sum_{\substack{|\nu|=|\nu'|\\|\widetilde\nu|=|\widetilde\nu'|}}\langle u,\Psi_{Q+ip,\nu,\widetilde\nu}\rangle F_{Q+ip}^{-1}(\nu,\nu')F_{Q+ip}^{-1}(\widetilde\nu,\widetilde\nu')\langle\Psi_{Q+ip,\nu',\widetilde\nu'},v\rangle\,dp.}
+\p{#{F_\alpha} 为 [Shapovalov Gram 矩阵](4J0L)，按每个固定层级求逆；谱线上的矩阵可取实对称。配对使用第二变量线性约定，且一般 L² 向量的谱系数按 Plancherel 延拓定义。显示式中的广义状态不属于 #{\mathcal H}，不能理解成 Hilbert 空间内的离散基向量。}
+\p{其证明使用无界自伴算子的散射理论、加权空间中的解析延拓和完整性，不由有限维谱定理推出。因子 #{1/(2\pi)} 与只在 #{p>0} 积分均属于这里的归一化。[逆 Gram 的有限维恒等式](4J10)解释矩阵因子，却不证明连续谱的完整性。}

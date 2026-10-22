@@ -1,0 +1,12 @@
+\title{高斯场的指数加权怎样平移其分布}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[DOZZ 原论文，v3](https://arxiv.org/abs/1707.08785v3)，Theorem 12.1；以下给出谱截断证明。}
+
+\p{设 #{E} 为实可分 [Hilbert 空间](00MQ)，#{a_j} 为独立标准正态变量。给定 #{x_j\in E}、#{\beta_j\in\mathbb R}，满足 #{\sum_j\|x_j\|^2<\infty}、#{\sum_j\beta_j^2<\infty}，按均方收敛定义 #{X=\sum_ja_jx_j} 与 #{Y=\sum_j\beta_ja_j}。令 #{h=\mathbb E[XY]=\sum_j\beta_jx_j\in E}。则对每个有界连续 #{F:E\to\mathbb R}，}
+##{\mathbb E\left[e^{Y-\mathbb E[Y^2]/2}F(X)\right]=\mathbb E[F(X+h)].}
+\p{例如可取 #{E=H_g^s}、#{s<0} 的[谱式高斯自由场](4J04)，而 #{Y} 是有限个[圆平均](4J1H)的实线性组合。平移向量满足 #{h(f)=\mathbb E[X(f)Y]}，这正是协方差决定的均值改变量。}
+\p{\strong{证明。}取相同的前 #{N} 个高斯坐标，得到截断 #{X_N,Y_N}。平方可和条件给出它们各自在 L² 中收敛；Cauchy–Schwarz 又给出 #{h_N=\sum_{j\le N}\beta_jx_j\to h}。有限维[高斯平移公式](4J03)给出所需等式的截断版本。}
+\p{令 #{W_N=e^{Y_N-\mathbb E[Y_N^2]/2}}。联合高斯矩公式给出 #{\mathbb E[W_NW_M]=e^{\mathbb E[Y_NY_M]}}，故 #{W_N} 是 L² Cauchy 列，极限为 #{e^{Y-\mathbb E[Y^2]/2}}。由 #{F} 有界连续，#{F(X_N)\to F(X)} 在 L² 中；用 Cauchy–Schwarz 处理乘积即可取左侧极限，右侧同理由 #{X_N+h_N\to X+h} 得到。}
+\p{应用于 GMC 的无界负矩时，还需要截断与一致可积性；这部分由 [Seiberg 条件下的相关函数定理](4J0C)控制。仅有此有界连续泛函公式，不足以交换所有插入极限。}

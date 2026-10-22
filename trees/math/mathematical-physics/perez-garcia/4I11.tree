@@ -1,0 +1,11 @@
+\title{最大纠缠对如何将算子移到另一端}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，§6 的一维示意](icm2026-perez-garcia)；逐指标证明}
+
+\p{固定 #{V=\mathbb C^D} 的标准正交基，令 #{\Omega_D=\sum_j|j\rangle\otimes|j\rangle}。对任意矩阵 #{X}，有}
+##{(X\otimes I)\Omega_D=(I\otimes X^{\mathsf T})\Omega_D.}
+\p{\strong{证明。}左侧为 #{\sum_{a,j}X_{aj}|a\rangle\otimes|j\rangle}，右侧为 #{\sum_{j,b}X_{jb}|j\rangle\otimes|b\rangle}，重命名指标即可。这也说明转移的是转置，而非[伴随](00MU)。若改用归一化向量，两边同乘 #{D^{-1/2}}，等式不变。}
+\p{映射 #{X\mapsto X^{\mathsf T}} 复线性、保持伴随，因为 #{(X^*)^{\mathsf T}=(X^{\mathsf T})^*}。但它反转乘法顺序：#{(XY)^{\mathsf T}=Y^{\mathsf T}X^{\mathsf T}}。它依赖所选基，或等价地应被理解为通往对偶空间的操作。}
+\p{在[PEPS 收缩](4I0L)中，可逐边使用该等式；再配合虚拟对称性穿越局部张量，才能把物理算子移到远侧。单独这个等式没有规定二维区域的大小、投影或权重，因而只是算子转移中的一条局部恒等式。}

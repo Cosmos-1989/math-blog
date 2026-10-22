@@ -1,0 +1,10 @@
+\title{生成函数怎样给出正则坐标变换}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§3.1；局部微分计算}
+
+\p{设 #{S(x,a)} 为 #{C^2} 函数，#{x,a\in\mathbb R^d}，并假设关系 #{v=\nabla_xS(x,a)} 在所考虑的开集上有 #{C^1} 反解 #{a=a(x,v)}。定义 #{\theta=\nabla_aS(x,a(x,v))}。则变换 #{(x,v)\mapsto(\theta,a)} 保持[辛形式](0BL1)：}
+##{\sum_jdx_j\wedge dv_j=\sum_jd\theta_j\wedge da_j.}
+\p{\strong{证明。}由 #{dS=\sum_jv_jdx_j+\sum_j\theta_jda_j}，再取[外微分](00OA)，有 #{0=\sum_jdv_j\wedge dx_j+\sum_jd\theta_j\wedge da_j}，移项即得结论。辛形式非退化，故该变换的微分亦可逆。这里已经把存在局部反解列为假设，计算所证明的是正则性。}
+\p{若同时满足 Hamilton–Jacobi 等式 #{H(x,\nabla_xS(x,a))=|a|^2/2}，采用 [Hamilton 约定](4H03)，新坐标中的方程成为 #{\dot\theta=a}、#{\dot a=0}。#{a} 给出守恒速度型参数，#{\theta} 作线性运动。局部生成函数的存在不保证整个相空间有单一无奇点坐标，尤其要避开无法解散射边值问题的区域。}

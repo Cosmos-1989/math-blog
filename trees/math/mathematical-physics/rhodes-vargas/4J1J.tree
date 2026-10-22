@@ -1,0 +1,10 @@
+\title{条件独立如何把两侧权重分解为乘积}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§5.1 的概率拼接机制。}
+
+\p{设 #{(\Omega,\mathcal F,\mathbb P)} 为[概率空间](00Q3)，#{\mathcal G,\mathcal F_1,\mathcal F_2} 为子 σ-代数。称 #{\mathcal F_1,\mathcal F_2} 在给定 #{\mathcal G} 时条件独立，如果对每个有界 #{\mathcal F_1} 可测变量 #{U} 与有界 #{\mathcal F_2} 可测变量 #{V}，其[条件期望](4J0Q)满足}
+##{\mathbb E[UV\mid\mathcal G]=\mathbb E[U\mid\mathcal G]\mathbb E[V\mid\mathcal G]\quad\text{几乎处处}.}
+\p{由全期望公式立即得到 #{\mathbb E[UV]=\mathbb E[\mathbb E[U\mid\mathcal G]\mathbb E[V\mid\mathcal G]]}。这表示先给定共享边界，分别计算两侧权重，再对边界数据积分。无条件独立不要求这项共享数据。}
+\p{若 #{U,V\ge 0} 不必有界，先取 #{U\wedge n,V\wedge n}。条件期望的保序性使两侧都递增；由[单调收敛](0A7A)取极限，等式继续成立，允许值为无穷。为了得到有限振幅，仍须另证相应可积性。}

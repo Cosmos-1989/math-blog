@@ -1,0 +1,13 @@
+\title{Liouville 零模态积分化为 Gamma 积分}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，§3；DOZZ 原论文 v3 式 (2.9)–(2.10)。}
+
+\p{设 #{\gamma,\mu,Z>0}，#{a\in\mathbb R}。则}
+##{I(a,Z)=\int_\mathbb R e^{ac-\mu Ze^{\gamma c}}dc<\infty\quad\Longleftrightarrow\quad a>0.}
+\p{当 #{a>0}，令 #{s=a/\gamma}，有 #{I(a,Z)=\gamma^{-1}(\mu Z)^{-s}\Gamma(s)}，其中 #{\Gamma} 为 [Gamma 函数](0H4Z)。}
+\p{\strong{证明。}令 #{t=\mu Ze^{\gamma c}}，则 #{dc=dt/(\gamma t)}、#{e^{ac}=(t/(\mu Z))^{a/\gamma}}，因而}
+##{I(a,Z)=\frac{(\mu Z)^{-a/\gamma}}\gamma\int_0^\infty t^{a/\gamma -1}e^{-t}dt.}
+\p{无穷远处指数衰减保证可积；零附近可积当且仅当 #{a/\gamma>0}。也可直接看 #{c\to -\infty}：若 #{a=0} 被积函数趋一，若 #{a<0} 则趋无穷。}
+\p{若 #{Z} 是几乎处处有限且严格正的[随机变量](00L0)，并且 #{a>0}、#{s=a/\gamma}，则 [Tonelli 定理](0H53)仍给出 #{\int\mathbb E[e^{ac-\mu Ze^{\gamma c}}]dc=\gamma^{-1}\mu^{-s}\Gamma(s)\mathbb E[Z^{-s}]}，允许右侧无穷。若 #{a\le 0}，逐个 #{Z>0} 的积分均为无穷，Tonelli 定理给出随机积分同样发散。因此零模态积分要求 #{a>0}，随机负矩有限性则是另一项要求。}

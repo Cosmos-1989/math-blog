@@ -1,0 +1,12 @@
+\title{Wick 指数如何消去高斯自方差}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Rhodes–Vargas](icm2026-rhodes-vargas)，式 (3.5)、(3.6) 的高斯计算。}
+
+\p{设 #{Y_1,\ldots,Y_m} 为[中心高斯向量](4J03)，协方差 #{C_{ij}}。对实数 #{\alpha_j} 定义 Wick 指数 #{:e^{\alpha_jY_j}:=\exp(\alpha_jY_j-\alpha_j^2C_{jj}/2)}。则}
+##{\mathbb E\prod_{j=1}^m:e^{\alpha_jY_j}:=\exp\left(\sum_{i<j}\alpha_i\alpha_jC_{ij}\right).}
+\p{\strong{证明。}高斯指数矩为 #{\exp(\frac 12\sum_{i,j}\alpha_i\alpha_jC_{ij})}。减掉全部对角项后，#{i,j} 与 #{j,i} 的两项相等，正好留下显示的交叉和。特别地单个 Wick 指数的期望为一。}
+\p{若正则化场满足 #{\mathbb E X_\epsilon(x)^2=\log(1/\epsilon)+h_\epsilon(x)}，则}
+##{\epsilon^{\gamma^2/2}e^{\gamma X_\epsilon(x)}=e^{\gamma^2h_\epsilon(x)/2}:e^{\gamma X_\epsilon(x)}:.}
+\p{所以减去完整方差与只乘 #{\epsilon^{\gamma^2/2}} 相差有限的确定性密度。固定正则化及这个密度，是比较不同文献中面积测度与结构常数的必要步骤。}

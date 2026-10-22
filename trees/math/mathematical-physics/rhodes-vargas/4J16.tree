@@ -1,0 +1,14 @@
+\title{四点函数的交叉对称为何比较两种缝合}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[bootstrap 原论文，v2](https://arxiv.org/abs/2005.11530v2)，式 (1.16)–(1.17)、Theorem 1.1；[Rhodes–Vargas](icm2026-rhodes-vargas)，§8。}
+
+\p{设 #{0<\gamma<2}，#{\mu>0}，#{Q=2/\gamma+\gamma /2}，#{\alpha_i<Q} 均为实数，并要求}
+##{\alpha_1+\alpha_2>Q,\quad\alpha_3+\alpha_4>Q,\quad\alpha_2+\alpha_3>Q,\quad\alpha_1+\alpha_4>Q.}
+\p{对 #{0<q<1}，令 #{h_i=\Delta_{\alpha_i}}、#{h_p=\Delta_{Q+ip}}，定义}
+##{I_{12|34}(q)=\int_0^\infty C^{\mathrm{DOZZ}}(\alpha_1,\alpha_2,Q-ip)C^{\mathrm{DOZZ}}(Q+ip,\alpha_3,\alpha_4)q^{2(h_p-h_1-h_2)}|\mathcal B_{h_p}(q)|^2\,dp.}
+\p{其中 [DOZZ 常数](4J0H)与[单位常数项的共形块](4J14)按给定权重取值。用 #{(\alpha_3,\alpha_2,\alpha_1,\alpha_4)} 替换四元组定义 #{I_{32|14}}。交叉对称断言}
+##{I_{12|34}(q)=I_{32|14}(1-q).}
+\p{\strong{由自举定理推出。}在原论文归一化下，同一个去度量因子的四点函数 #{\langle V_{\alpha_1}(0)V_{\alpha_2}(q)V_{\alpha_3}(1)V_{\alpha_4}(\infty)\rangle} 等于 #{I_{12|34}(q)/(8\pi)}。变换 #{x\mapsto 1-x} 交换零与一，导数的模为一；对变换后的配置再次应用[四点自举定理](4J15)，得到 #{I_{32|14}(1-q)/(8\pi)}。两个成对条件分别保障每种切割都适用。}
+\p{因子 #{1/(8\pi)} 与这里的 #{(0,q,1,\infty)}、去度量相关函数属于原论文约定；报告的 #{(0,z,2,\infty)} 公式另含 #{C(g)}，两套常数不能混写。等式是概率相关函数及其协变性的结果，不依赖逐项比较两个不同展开中心的幂级数。}

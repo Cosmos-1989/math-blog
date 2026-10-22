@@ -1,0 +1,11 @@
+\title{BGK 密度分解为自由能量与陷获能量积分}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§5.2；2601.10030v2，式 (1.18)–(1.21)}
+
+\p{设 [BGK 分布](4H12)为 #{M(x,v)=F(v^2/2-\phi(x))}，#{\min\phi=0}。固定 #{y=\phi(x)\geq 0}，并假设积分绝对收敛。记 #{F_f(e)=F(e)} 对 #{e\geq 0}，#{F_t(u)=F(-u)} 对 #{0\leq u\leq\max\phi}。则}
+##{\rho(x)=\sqrt 2\int_0^\infty\frac{F_f(e)}{\sqrt{e+y}}de+\sqrt 2\int_0^y\frac{F_t(u)}{\sqrt{y-u}}du.}
+\p{\strong{证明。}分布对速度偶对称，故 #{\rho=2\int_0^\infty F(v^2/2-y)dv}。令 #{e=v^2/2-y}，则 #{dv=de/\sqrt{2(e+y)}}，得到 #{\sqrt 2\int_{-y}^\infty F(e)(e+y)^{-1/2}de}。将能量分为负、正两段，负段令 #{u=-e} 即得公式。}
+\p{自由部分 #{F_f} 和势给定后，Poisson 方程要求密度等于 #{1+\phi''(x)}。在单调半周期中以 #{x=\phi^{-1}(y)} 表示位置，得到 #{N(y)=1+\phi''(\phi^{-1}(y))}，于是陷获分布必须解 #{\sqrt 2\int_0^yF_t(u)(y-u)^{-1/2}du=N(y)-J(F_f)(y)}，其中 #{J} 是显示式的第一项。}
+\p{在 #{y=0} 处，连续陷获分布的积分为零，故必要相容条件为 #{1+\phi''(\pi)=\int_{\mathbb R}F_f(v^2/2)dv}。重建得到的函数是否非负、能否在零能量处光滑拼接，是额外条件。}

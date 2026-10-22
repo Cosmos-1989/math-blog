@@ -1,0 +1,13 @@
+\title{闭 Riemann 曲面的 Laplace 谱与 Weyl 计数律}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Zelditch，[Local and global analysis of eigenfunctions，v1](https://arxiv.org/abs/0903.3420v1)，Introduction、§8 式 (68)；[Segal 原论文，v2](https://arxiv.org/abs/2112.14859v2)，§2.1.1–2.1.3。}
+
+\p{设 #{(\Sigma,g)} 是闭、连通、光滑二维 [Riemann 流形](00NI)，#{A=\operatorname{Area}_g(\Sigma)}。取[非负 Laplace 算子](4J01) #{\Delta_g=-\operatorname{div}_g\nabla_g}。紧流形椭圆谱定理给出它在 [L² 空间](0A6A) #{L^2(\Sigma,dv_g)} 上的[自伴实现](0GSN)及光滑实特征函数的正交归一基 #{(e_j)_{j\ge 0}}；这表示 #{\langle e_i,e_j\rangle=\delta_{ij}} 且其有限线性组合在 L² 中稠密。它们满足}
+##{\Delta_ge_j=\lambda_je_j,\qquad 0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\longrightarrow\infty,\qquad e_0=A^{-1/2}.}
+\p{特征值按重数排列。二维 Weyl 定律为}
+##{N(\Lambda):=\#\{j:\lambda_j\le\Lambda\}=\frac{A}{4\pi}\Lambda+O(\Lambda^{1/2})\qquad(\Lambda\to\infty).}
+\p{这两个存在性与渐近结论采用所引标准定理。Zelditch 的 #{\lambda_j} 表示本页的 #{\sqrt{\lambda_j}}，所以其 #{n=2} 的计数式须先作平方变量替换；不要求曲率恒定或为负。}
+\p{\strong{推论。}有 #{\lambda_j\sim 4\pi j/A}。事实上，给定 #{\varepsilon>0}，充分大 #{\Lambda} 时，计数函数夹在 #{(A/(4\pi)\pm\varepsilon)\Lambda} 之间。以单调性反演这两个不等式，再令 #{\varepsilon\downarrow 0} 即得结论；重数导致的阶梯不影响极限。特别地，#{\sum_{j\ge 1}(1+\lambda_j)^s/\lambda_j} 在且仅在 #{s<0} 时收敛。}
+\p{由此可在本曲面上直接定义谱式空间 #{H^s_g}：它是有限特征函数和按 #{\|f\|_{H^s_g}^2=\sum_j(1+\lambda_j)^s|f_j|^2} 的完备化，其中 #{f_j=\langle e_j,f\rangle}。对 #{s<0}，元素与光滑测试函数的配对给出[流形上的分布](4607)：由分部积分，测试函数系数满足 #{|\langle e_j,\psi\rangle|\le\lambda_j^{-k}\|\Delta_g^k\psi\|_2}，故任意负阶元素均可配对。这里直接使用谱定义，无需先把欧氏 Sobolev 范数移到流形上。}

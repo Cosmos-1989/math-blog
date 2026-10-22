@@ -1,0 +1,11 @@
+\title{Vlasov 方程的前两阶矩与 Euler–Poisson 闭合}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§1.4.1，式 (1.5)；矩方程推导}
+
+\p{设 #{M} 是光滑 [Vlasov 解](4H01)，对速度充分衰减，使以下积分及分部积分成立。定义 #{\rho=\int M\,dv}、#{j=\int vM\,dv}；在 #{\rho>0} 处置 #{u=j/\rho} 和压力张量 #{P_{ij}=\int(v_i-u_i)(v_j-u_j)M\,dv}。则}
+##{\partial_t\rho+\operatorname{div}_x(\rho u)=0,\qquad \rho(\partial_t+u\cdot\nabla_x)u+\operatorname{div}_xP=\lambda\rho E.}
+\p{\strong{质量方程。}对速度积分，#{\int E\cdot\nabla_vM\,dv=0}，得到 #{\partial_t\rho+\operatorname{div}j=0}，其中[散度](4301)作用于位置变量。}
+\p{\strong{动量方程。}乘以 #{v_i} 后积分，速度分部积分给 #{\int v_iE_j\partial_{v_j}M\,dv=-E_i\rho}。另一方面 #{\int v_iv_jM\,dv=\rho u_iu_j+P_{ij}}，因为中心化的一阶矩为零。展开 #{\partial_t(\rho u_i)+\partial_{x_j}(\rho u_iu_j)}，再用质量方程消去含 #{u_i} 的项，即得结论。}
+\p{只有额外假设 #{P=p(\rho)I}，其中 #{p} 是给定密度函数，才能得到压强为标量的 Euler–Poisson 系统。矩方程本身没有证明这种闭合；一般分布的压力可以各向异性。}

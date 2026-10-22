@@ -1,0 +1,11 @@
+\title{时间振荡怎样使临界位移积分收敛}
+\date{2026-10-22}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§4.2.1；条件性分部积分模型}
+
+\p{设 #{a:\lbrack 1,\infty\rparen\to\mathbb C} 为 #{C^1} 函数，#{0\leq\delta<1}，满足 #{|a(t)|\leq Ct^{-2+\delta}}、#{|a'(t)|\leq Ct^{-3+\delta}}。则积分 #{\int_1^\infty te^{-it}a(t)dt} 收敛，尾部绝对值至多 #{C' T^{-1+\delta}}。}
+\p{\strong{证明。}令 #{b(t)=ta(t)}。有 #{b(t)=O(t^{-1+\delta})\to 0}、#{b'(t)=a(t)+ta'(t)=O(t^{-2+\delta})}。[分部积分](0A3C)给}
+##{\int_T^Re^{-it}b(t)dt=\left[ie^{-it}b(t)\right]_T^R-i\int_T^Re^{-it}b'(t)dt.}
+\p{令 #{R\to\infty}，边界项收敛，第二项由 #{\int_T^\infty t^{-2+\delta}dt} 控制。若没有振荡，#{a(t)=t^{-2}} 给出的 #{\int_1^Tta(t)dt=\log T} 发散。}
+\p{这说明[Poisson 阻尼定理](4H0V)的慢衰减振荡场可能仍允许线性散射。沿真实粒子轨道使用此引理还需控制复合振幅的时间导数；只知道电场的逐时上确界不足以验证假设。}

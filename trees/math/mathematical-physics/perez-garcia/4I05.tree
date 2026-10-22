@@ -1,0 +1,10 @@
+\title{交换投影 Hamiltonian 的谱隙至少为一}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pérez-García，Theorem 5.6](icm2026-perez-garcia)的有限维推论}
+
+\p{设 #{q_1,\ldots,q_m} 为同一有限维 Hilbert 空间上两两交换的[正交投影](00MS)，且 #{\bigcap_j\operatorname{im}q_j\ne\{0\}}。令 #{H=\sum_j(I-q_j)}。则其基态投影为 #{Q=\prod_jq_j}，每个非零能级是正整数，因而按[激发谱隙约定](4I02)有 #{\gamma(H)\geq 1}。}
+\p{\strong{证明。}因子交换且各自自伴幂等，#{Q^*=Q=Q^2}。每个 #{q_jQ=Q}，所以 #{\operatorname{im}Q} 落在共同像中；共同像内的向量被所有因子固定，故像正好相等。[正项零空间公式](4I04)给出 #{\ker H=\operatorname{im}Q}。}
+\p{先将 #{q_1} 的空间按特征值 #{0,1} 分解。其他投影与它交换，因而保持这两个空间。依次限制并分解，得到所有投影的共同特征基。对这样的基向量，#{H} 的特征值等于取值为零的 #{q_j} 个数。于是非零能级至少为一。}
+\p{这个常数采用每个惩罚项系数为一的归一化。改成 #{H=\sum_j a_j(I-q_j)} 且 #{a_j\geq a>0}，同一证明给出间隔至少 #{a}。共同零空间可以高度简并。}

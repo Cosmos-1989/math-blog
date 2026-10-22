@@ -1,0 +1,10 @@
+\title{环面自由输运把速度频率衰减变为时间衰减}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Pausader](icm2026-pausader)，§4.3；Fourier 恒等式的直接证明}
+
+\p{设 #{f(t,x,v)=f_0(x-tv,v)}，定义 #{\rho(t,x)=\int f(t,x,v)dv}。使用[动力学 Fourier 约定](4H0X)，对 #{k\in\mathbb Z^d} 有 #{\widehat\rho(t,k)=\widehat f_0(k,tk)}。若点态频率界 #{|\widehat f_0(k,\eta)|\leq A e^{-\lambda\langle k,\eta\rangle^s}} 成立，其中 #{0<s\leq 1}，则对 #{k\ne 0}，}
+##{|\widehat\rho(t,k)|\leq A e^{-\lambda(1+(1+t^2)|k|^2)^{s/2}}\leq A e^{-\lambda\langle t\rangle^s}.}
+\p{\strong{证明。}在 Fourier 积分中令 #{y=x-tv}，周期平移保持积分，指数变成 #{e^{-ik\cdot y-itk\cdot v}}。这正是 #{\widehat f_0(k,tk)}。当 #{k\ne 0} 时 #{|k|\geq 1}，代入假设即得估计。零模始终是总扰动质量，中性条件使其为零。}
+\p{这里的假设是明确的点态 Fourier 界，不把加权平方积分范数直接当作点态界。非线性 [Landau 阻尼](4H0Z)还需控制反应和模态间相互作用；自由公式只解释正则性如何提供时间衰减。}

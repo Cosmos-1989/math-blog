@@ -1,0 +1,11 @@
+\title{PEPS 的虚拟边与边界映射}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Pérez-García，§5.1.2，Definition 5.3、式 (5.2)](icm2026-perez-garcia)}
+
+\p{在方格每个顶点放置线性映射 #{A:(\mathbb C^D)^{\otimes 4}\to\mathbb C^d}，四个输入指标分别属于四条相邻边，输出是物理指标。这是[矩阵乘积态](4I0J)的二维推广，称投影纠缠对态，简称 PEPS。指标求和用[Hilbert 张量积](0F4E)解释；方向相反的腿也可记作互为对偶的空间。}
+\p{有限顶点区域 #{S} 的内部边两端放置未归一化向量 #{\Omega_D=\sum_{a=1}^D|a\rangle\otimes|a\rangle}。将内部边求和，而把恰有一个端点在 #{S} 的边保留为边界输入，得到}
+##{\Gamma_S:(\mathbb C^D)^{\otimes|\partial S|}\longrightarrow(\mathbb C^d)^{\otimes|S|}.}
+\p{完全展开时，#{\Gamma_S} 的每个矩阵元都是内部边指标所有取值上的有限和，每个求和项是各顶点 #{A} 的相应分量之积。因此定义与收缩顺序无关，只需固定输入、输出的次序。任意非零 #{\Gamma_S(v)} 经归一化给出一个边界条件下的态。}
+\p{边界像空间 #{V_S=\operatorname{Im}\Gamma_S} 的维数至多 #{D^{|\partial S|}}。在每个小区域 #{p} 上取 #{h_p} 为 #{V_p^\perp} 的投影，则 #{h_p\Gamma_S=0}：固定 #{p} 外的全部指标后，剩余向量属于 #{V_p}，再对外部指标求和即可。这给出母哈密顿量的零能向量；是否穷尽全部零能向量是独立的交性质问题。}
