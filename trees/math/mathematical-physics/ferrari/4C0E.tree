@@ -1,0 +1,11 @@
+\title{Poisson 高度面的有限维中心极限}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§2.4，式 (2.16)–(2.17)；有限种的有限维分布收敛，Poisson 特征函数直接证明}
+
+\p{在[高度面大数律](4C0D)的有限种设定下，令 #{Z_\varepsilon(b)=\varepsilon^{-1/2}(H_\varepsilon(b)-h(b))}。对任意有限个点 #{b_1,\ldots,b_q}，向量 #{(Z_\varepsilon(b_\ell))_{\ell=1}^q} [依分布收敛](00LA)于[有向 Gaussian 场](4C0C) #{(G(b_\ell))_{\ell=1}^q}。向量情形按每个有界连续测试函数的期望收敛理解；这称为有限维分布收敛。}
+\p{\strong{证明。}固定实数 #{\theta_1,\ldots,\theta_q}，置 #{F=a\sum_\ell\theta_\ell K_{b_\ell}}。它有有限测度的支撑且有界。将支撑按全部端点分成不交区间，利用独立 Poisson 计数的生成函数，得到}
+##{\mathbb E\exp\bigl(i\sum_\ell\theta_\ell Z_\varepsilon(b_\ell)\bigr)=\exp\left(\varepsilon^{-1}\int(e^{i\sqrt\varepsilon F}-1-i\sqrt\varepsilon F)\,d\mu\right).}
+\p{由 Taylor 展开，指数趋于 #{-\tfrac 12\int F^2\,d\mu}；不等式 #{|e^{iu}-1-iu|\leq u^2/2} 亦允许用[控制收敛](0I8I)。这正是目标 Gaussian 向量的特征函数。由 [Gaussian 极限判据](4C2A)得到结论。}
+\p{所证的是有限个点的联合极限。对整张随机面在某个函数空间中的收敛，还需要控制时空模量或选择合适的拓扑。}

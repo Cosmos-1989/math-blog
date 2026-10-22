@@ -1,0 +1,12 @@
+\title{二粒子 Toda 散射的对数位移}
+\date{2026-10-22}
+\taxon{Example}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §3 的散射位移；二粒子显式计算。}
+
+\p{对二粒子[开链 Toda](4B01)，写 #{q_1=s-r/2}、#{q_2=s+r/2}。固定 #{\Delta>0} 与 #{v,c,t_0\in\mathbb R}，则}
+##{s(t)=vt+c,\qquad r(t)=2\log\left(\frac 2\Delta\cosh\frac{\Delta(t-t_0)}2\right)}
+\p{给出解。事实上 #{\ddot s=0}、#{\ddot r=(\Delta^2/2)\operatorname{sech}^2(\Delta(t-t_0)/2)=2e^{-r}}，恰是两条方程相减与相加；#{\cosh x=(e^x+e^{-x})/2}。动量为 #{p_1=v-(\Delta /2)\tanh(\Delta(t-t_0)/2)}、#{p_2=v+(\Delta /2)\tanh(\Delta(t-t_0)/2)}。}
+\p{[Lax 矩阵](4B05)的两个特征值是 #{\lambda_\pm=v\pm\Delta /2}，因为 #{((p_1-p_2)/2)^2+a_1^2=\Delta^2/4}。利用 #{\log(2\cosh x)=|x|+o(1)}，快谱标签的入射直线是 #{q_1(t)} 在 #{t\to -\infty} 的渐近线，出射直线是 #{q_2(t)} 在 #{t\to+\infty} 的渐近线，其截距分别为}
+##{c-\Delta t_0/2+\log\Delta,\qquad c-\Delta t_0/2-\log\Delta.}
+\p{所以快标签的出射减入射位移为 #{-2\log\Delta}，慢标签为 #{+2\log\Delta}。这解释散射关系中的核 #{2\log|\lambda_+-\lambda_-|} 及穿越方向的符号。位移可正可负，不能一概称为正延迟。有限二粒子的远时间散射尚不包含稠密随机多体极限。}

@@ -1,0 +1,12 @@
+\title{硬杆坐标变换导出的连续性方程}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§2.6，式 (2.29)–(2.31)；固定正杆长、光滑有限种密度的确定性坐标推导}
+
+\p{固定 #{a>0}，令 #{f_i^0} 为非负紧支撑 [C¹ 函数](0A32)。取[宏观伸长坐标](4C0F) #{D_t(z)}、自由密度 #{f_i(z,t)=f_i^0(z-v_it)} 和物理密度 #{\rho_i(D_t(z),t)=f_i(z,t)/(1+a\sum_jf_j(z,t))}。则}
+##{\partial_t\rho_i+\partial_y(\rho_iV_i)=0,\qquad V_i=\frac{v_i-a\sum_j\rho_jv_j}{1-a\sum_j\rho_j}.}
+\p{\strong{证明。}记 #{n=\sum_j f_j}、#{j=\sum_jv_j f_j}。对定义的积分求导，#{\partial_zD=1+an}、#{\partial_tD=-aj}。沿第 #{i} 类自由特征线，利用[链式法则](0A34)，}
+##{\frac{d}{dt}D_t(x+v_it)=v_i(1+an)-aj=V_i(D_t(x+v_it),t).}
+\p{最后一步是[自由密度换算](4C09)。任取紧支撑 C¹ 函数 #{\varphi}，变量替换给出 #{\int\varphi(y)\rho_i(y,t)\,dy=\int\varphi(D_t(x+v_it))f_i^0(x)\,dx}。求导后右边为 #{\int\varphi'(y)V_i(y,t)\rho_i(y,t)\,dy}；分部积分并用密度的连续可微性，得逐点的连续性方程。}
+\p{这是一条在给定光滑自由密度下的确定性恒等式。[Poisson Euler 极限](4C0F)另说明一类随机微观初值确实收敛于该密度；两项结论的假设各自明确。}

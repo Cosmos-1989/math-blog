@@ -1,0 +1,12 @@
+\title{按孤子高度加权的连续游程分布}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§3.1；Armendáriz–Blanc–Ferrari–Gabrielli，§3.1.1}
+
+\p{令 #{\mathcal E_n} 为从零开始、在零结束且非负的[连续游程](4C1D)，有 #{n} 个极大点。用极值坐标 #{0=a_1<b_1<a_2<\cdots<a_n<b_n} 表示，并要求由斜率 #{\pm 1} 得到的路径在终点前非负。终点为 #{2\sum_j(b_j-a_j)}。取坐标上的 [Lebesgue 测度](00XV) #{de=da_2\cdots da_n\,db_1\cdots db_n}，限制在该游程域内。}
+\p{对非负可测权函数 #{\alpha:(0,\infty)\to\lbrack 0,\infty\rparen}，以[消去算法](4C1E)得到高度 #{\ell_1,\ldots,\ell_n}，定义配分函数和概率分布}
+##{Z_\alpha=\sum_{n\geq 1}\int_{\mathcal E_n}\prod_{j=1}^n\alpha(\ell_j)\,de,\qquad \nu_\alpha(de)=Z_\alpha^{-1}\prod_j\alpha(\ell_j)\,de,\qquad 0<Z_\alpha<\infty.}
+\p{平均游程长度为[期望](00L1)}
+##{L_\alpha=\frac 1{Z_\alpha}\sum_{n\geq 1}\int_{\mathcal E_n}\left(2\sum_j\ell_j\right)\prod_j\alpha(\ell_j)\,de.}
+\p{有限配分函数保证总概率归一化；额外条件 #{L_\alpha<\infty} 才保证有限平均空间长度。被积的长度因子是 #{2\sum_j\ell_j}，由游程长度可加性决定。}

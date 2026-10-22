@@ -1,0 +1,12 @@
+\title{Jacobi 递推把端点坐标写成谱行列式}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 §3.4；标量递推形式。}
+
+\p{设 #{L} 是指标 #{1,\ldots,N} 的[Jacobi 矩阵](4B07)，#{Lu=\lambda u}。令 #{D_0(\lambda)=1}、#{D_m(\lambda)=\det(\lambda I_m-L_{\{1,\ldots,m\}})}，则对 #{1\leq m<N} 有}
+##{u_{m+1}=\frac{D_m(\lambda)}{a_1\cdots a_m}u_1.}
+\p{\strong{证明。}沿三对角[行列式](0A40)末行展开，得 #{D_1=\lambda -b_1} 及 #{D_m=(\lambda -b_m)D_{m-1}-a_{m-1}^2D_{m-2}}。#{u_{m+1}} 的三项递推具有相同关系和初值，逐阶归纳即得公式。}
+\p{若 #{u_{m+1}\ne 0}，主子矩阵的特征值为 #{\mu_1,\ldots,\mu_m}，取绝对值的对数可得}
+##{\log|u_1|=\log|u_{m+1}|+\sum_{i=1}^m\log a_i-\sum_{h=1}^m\log|\lambda -\mu_h|.}
+\p{这里 #{D_m(\lambda)\ne 0} 由前式和 #{u_1\ne 0} 保证。要将截断谱 #{\mu_h} 替换为全矩阵中中心位于左侧的谱，必须控制对数在小谱间距处的奇性；仅有[邻近特征值的存在](4B0H)还不足够。}

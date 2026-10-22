@@ -1,0 +1,12 @@
+\title{随机 Jacobi 特征向量的指数相关衰减}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 Lemma 3.16、Corollary 3.17，引用 Schenker 与 Aizenman 等。}
+
+\p{固定 #{\beta,\theta>0}，令 #{L_N} 为初始[热平衡 Jacobi 矩阵](4B08)，#{u_k} 为其按特征值排序的实单位特征向量。所引随机矩阵局域化定理给出只依赖 #{\beta,\theta} 的 #{c,C>0}，使所有 #{N,k,i,j} 满足}
+##{\mathbb E|u_k(i)u_k(j)|\leq Ce^{-c|i-j|}.}
+\p{它来自预解矩阵 #{(L_N-zI)^{-1}} 元素的分数次矩估计。该随机算子定理在这里作为引用输入；不把任意相关三对角矩阵都包含在假设中。}
+\p{一个直接的有限矩阵推论可明确量化局域化。对上式用 [Markov 不等式](0A02)并对至多 #{N^3} 个三元组求和，以至少 #{1-CN^3e^{-(\log N)^2}} 的概率，同时有}
+##{|u_k(i)u_k(j)|\leq e^{(\log N)^2-c|i-j|/2}.}
+\p{于是若 #{\varphi} 是[阈值中心](4B0D)，则 #{|u_k(i)|\leq\zeta^{-1}e^{(\log N)^2-c|i-\varphi|/2}}。这里前因子依赖 #{N,\zeta}，不能省略为对所有特征向量统一的固定常数。正时间开链不再是独立乘积矩阵，须经内部比较才能得到相应结论。}

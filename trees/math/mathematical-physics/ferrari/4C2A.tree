@@ -1,0 +1,11 @@
+\title{Gaussian 极限的特征函数判据}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Poisson 中心极限计算所需的概率分析引理}
+
+\p{随机向量 #{X\in\mathbb R^d} 的特征函数是 #{\chi_X(u)=\mathbb E e^{i\langle u,X\rangle}}。向量依分布收敛意指每个有界连续 #{f} 的[期望](00L1)收敛，此定义推广[实随机变量的分布收敛](00LA)。设 #{\sup_n\mathbb E|X_n|^2<\infty}，且 #{\chi_{X_n}(u)\to\exp(-\langle u,Qu\rangle /2)} 对每个 #{u} 成立，其中 #{Q} 是对称半正定矩阵。则 #{X_n} 依分布收敛于均值零、协方差 #{Q} 的 Gaussian 向量 #{G}。这种向量定义为若干独立[标准正态变量](0N0R)的线性像；#{Q} 可以退化。}
+\p{\strong{证明。}取独立标准 Gaussian 向量 #{Z} 和 #{\delta>0}。#{X_n+\delta Z} 有密度}
+##{p_{n,\delta}(x)=(2\pi)^{-d}\int e^{-i\langle u,x\rangle}\chi_{X_n}(u)e^{-\delta^2|u|^2/2}\,du.}
+\p{此式可直接将 Gaussian 密度的 Fourier 积分对 #{X_n} 取期望得到；绝对可积性允许交换积分。一维 Gaussian Fourier 公式由分部积分给出的微分方程 #{h'(u)=-uh(u)} 及 #{h(0)=1} 得到，多维情形取乘积。[控制收敛](0I8I)使 #{p_{n,\delta}} 在全空间一致收敛于 #{G+\delta Z} 的密度。}
+\p{一致二阶矩界给出 #{\mathbb P(|X_n+\delta Z|>R)\leq C_\delta /R^2}，故积分在大球外的质量一致趋零。球内的密度一致收敛遂给出所有有界连续测试函数的期望收敛。若 #{f} 还具有 Lipschitz 常数 #{L}，则加入或删去 #{\delta Z} 对期望的影响至多 #{L\delta\mathbb E|Z|}。先令 #{n\to\infty}，再令 #{\delta\downarrow 0}，得到此类 #{f} 的收敛。最后在大球上把连续函数一致逼近为分片线性函数，并用同一尾界控制球外，便得到一般有界连续 #{f} 的结论。}

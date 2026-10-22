@@ -1,0 +1,1645 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "prefix": "4C",
+    "outline": "4C00",
+    "reference": "icm2026-ferrari",
+    "doi": "10.1137/25M1806867",
+    "speaker": "Pablo A. Ferrari",
+    "title": "Hard Rods and Box-ball Systems",
+    "pages": "426–441",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1806867",
+    "version_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1806867",
+    "license": "CC BY 4.0",
+    "question": "一维硬杆与箱球系统如何由自由坐标解释碰撞位移、平稳分布以及不同尺度的宏观极限？",
+    "reading_scope": "ferrari-icm2026: Entire publisher HTML mathematical body §§1–3.2, all displayed formulas, acknowledgments and bibliography [1]–[44], by overlapping section-sized retrievals. HTML lines 101–635 mathematical body; 636–880 acknowledgments/bibliography. PDF first-page bibliographic and license text checked. No complete PDF pixel inspection.\nfnrw-v6: Overview and §1.1–1.5, all main contracts through Theorem 1.5, plus §2 opening and §2.1 slot definitions (HTML approximately lines 59–240). Proof locations §§2–7 identified; those proof sections not read in full.\ncs-v2: §1 mathematical setup, Omega/Omega_I, empirical measures, effective velocity matrix, D_density, Theorems 1.1 and 1.3, integrated scattering coordinates, Corollary 1.4 and associated remarks (HTML lines 51–188).\nabfg-v1: Full mathematical body §§1–4 including the appendix on ties/multiplicities, all displayed mathematics and figure captions, in overlapping reads (HTML lines 68–738). Bibliography only partly read. No figure-pixel inspection claimed.\nfo-diffusive-v4: §1 and §2.1 through the static/initial-field discussion (HTML through line 207); additionally §3.1 equations (3.1)–(3.26), including tagged-motion variance and same-velocity covariance, read during review repair. Full §3.2 and full paper not read.\nfo-multitime-v1: Introduction, §II, and selected §VIII passages including tagged limits and effective-velocity equation (142), not the entire paper.\nlocal-calculations: Not a bibliographic source. Elementary calculations and Gaussian-smoothing lemma proved in the notes; existing forest probability/analysis definitions supply prerequisites.",
+    "proof_scope": {
+      "4C01": {
+        "status": "definition-and-local-counterexample",
+        "scope": "定义空间局部有限与有限穿越，证明有界速度充分，并给出聚集反例。"
+      },
+      "4C02": {
+        "status": "definition-and-local-proof",
+        "scope": "由独立 Poisson 计数定义；以有限强度窗口包络和可数交给出同一概率一事件上的全时刻局部有限与全部有界线段有限穿越。"
+      },
+      "4C03": {
+        "status": "local-proof",
+        "scope": "先计算简单函数矩，再由 0A7A 单调收敛建立所有非负可测函数的期望恒等式；L1 保证几乎必然绝对收敛，随后以 L1 与中心化 L2 逼近延拓协方差公式。"
+      },
+      "4C04": {
+        "status": "local-proof",
+        "scope": "原像保持不交，逐标记平移保持强度；区分锚定伸长与空间平稳性。"
+      },
+      "4C05": {
+        "status": "local-proof",
+        "scope": "有限构形收缩、伸长互逆；排序连续并交换斜率。位置相等先按速度，位置与速度均相等按固定标签排序，保留接触杆与永久重合自由轨迹。"
+      },
+      "4C06": {
+        "status": "local-calculation",
+        "scope": "完整排序序号含位置、速度与固定标签顺序；永久重合例子重建不同物理左端点，孤立二体交叉位移为正负 a，多重交叉按完整序号变化计算。"
+      },
+      "4C07": {
+        "status": "definition-and-local-proof",
+        "scope": "对有向指标差积分；绝对收敛或有限穿越条件；望远镜相消。"
+      },
+      "4C08": {
+        "status": "local-proof",
+        "scope": "相邻间距、沿轨迹跳跃与锚定原点的整体平移。"
+      },
+      "4C09": {
+        "status": "local-proof",
+        "scope": "空间长度伸长比与边界杆长误差；反解空隙比例。"
+      },
+      "4C0A": {
+        "status": "local-proof",
+        "scope": "物理密度条件 a sum rho<1；双重和抵消、唯一解及 Poisson 穿越数均方大数律。"
+      },
+      "4C0B": {
+        "status": "local-calculation",
+        "scope": "双速度例子的两条平衡式逐项验证；密度加权通量为 1/5，除以总密度 3/10 的平均速度为 2/3。"
+      },
+      "4C0C": {
+        "status": "definition-and-local-construction",
+        "scope": "从双边 Brownian 增量经 L2 延拓构造；极化给出协方差。共同原点核乘积非负，一般增量可负。"
+      },
+      "4C0D": {
+        "status": "local-proof",
+        "scope": "对应报告 §2.4 式 (2.15) 的有限种局部版本：均值、方差直接积分，仅证固定点及有限点集的均方与概率收敛，不主张无指定耦合的几乎处处极限。"
+      },
+      "4C0E": {
+        "status": "local-proof",
+        "scope": "对应报告 §2.4 式 (2.16)–(2.17) 的有限种有限维版本：Poisson 特征函数、控制收敛与 Gaussian 连续性判据；未证函数空间紧性。"
+      },
+      "4C0F": {
+        "status": "local-proof",
+        "scope": "报告 §2.6 命题 2.2、式 (2.27)–(2.29) 的有限种紧支撑直接证明：非负连续自由密度、固定时刻；网格夹逼累计计数，得到概率意义的伸长一致收敛及经验密度测试收敛。"
+      },
+      "4C10": {
+        "status": "local-proof",
+        "scope": "报告 §2.6 式 (2.29)–(2.31) 对应的独立确定性推导：固定正杆长、有限种 C1 紧支撑自由密度；链式法则和分部积分给出连续性方程，不把形式方程当作额外随机极限定理。"
+      },
+      "4C11": {
+        "status": "local-proof",
+        "scope": "报告 §2.7 定理 2.3、式 (2.32)–(2.33) 仅作背景；独立证明有限符号测度扰动的两项确定性一阶变分，统一 Taylor 余项；不是完整随机经验场中心极限定理。"
+      },
+      "4C12": {
+        "status": "local-proof",
+        "scope": "Ferrari–Olla arXiv:2305.13037v4 §3.1 式 (3.1)–(3.26) 对应的固定正杆长、有限种直接计算；中心化标签有限维 Brownian 极限与同速标签对称差方差估计。ICM §1 仅作扩散尺度背景；未证路径紧性或完整涨落场。"
+      },
+      "4C13": {
+        "status": "definition-and-local-proof",
+        "scope": "定义二值占据与负载递推，望远镜求和守恒；区分 b 与 eta。"
+      },
+      "4C14": {
+        "status": "definition-and-local-consequence",
+        "scope": "两端路径条件、双侧亚临界密度的充分性及临界周期反例。"
+      },
+      "4C15": {
+        "status": "local-proof",
+        "scope": "三种负载和占据状态穷尽验证。"
+      },
+      "4C16": {
+        "status": "local-proof",
+        "scope": "拾取与放下 k 个球，平移后归纳。"
+      },
+      "4C17": {
+        "status": "definition-and-cited-tracking-theorem",
+        "scope": "定义 TS 消去与头尾；头尾时间匹配存在性引用 FNRW Proposition 1.4，未重建 §7。"
+      },
+      "4C18": {
+        "status": "local-calculation",
+        "scope": "逐步搬运至分离，消去标签核对，算出 +2/-2。"
+      },
+      "4C19": {
+        "status": "definition-cited-theorems-and-local-count",
+        "scope": "槽定义和密度代数；编码逆与单侧刚性平移引用 FNRW Theorems 1.3/1.4，双侧原点校正保留。"
+      },
+      "4C1A": {
+        "status": "cited-theorem",
+        "scope": "FNRW Theorem 1.5 全部独立性、可和性、非空与记录条件；完整 Palm 重建证明未展开。"
+      },
+      "4C1B": {
+        "status": "cited-theorem",
+        "scope": "FNRW Theorem 1.1：X 亚临界支撑、T 不变、平移遍历；物理密度、实际标签、无限系统唯一性边界均保留。"
+      },
+      "4C1C": {
+        "status": "local-calculation",
+        "scope": "两式相减求速度差并恢复速度，检查亚临界正性与有理数例子。"
+      },
+      "4C1D": {
+        "status": "definition",
+        "scope": "右连续分段常值斜率、两端条件、首次到达记录与可能内触基线的游程。"
+      },
+      "4C1E": {
+        "status": "construction-and-local-proof",
+        "scope": "最短段对称删除，剩余压缩路径，有限极值递减与长度2 sum ell。"
+      },
+      "4C1F": {
+        "status": "definition-and-local-count",
+        "scope": "压缩距离、带方向槽坐标、多重集和2 sum(ell-h)+长度计算。"
+      },
+      "4C20": {
+        "status": "definition-and-cited-theorem",
+        "scope": "精确 T-finite 固定点条件；ABFG Theorem 11 静态双射及重建概要，平面局部有限反例。"
+      },
+      "4C21": {
+        "status": "definition",
+        "scope": "极值坐标积分域、0<Z<infinity 和长度期望的不同条件。"
+      },
+      "4C22": {
+        "status": "cited-theorem-with-proof-mechanism",
+        "scope": "从 q 出发的 ABFG Proposition 17, Theorem 18 与 Corollary 16；精确因子2，原点两指数间隔；反向 ODE 全局性另列。"
+      },
+      "4C23": {
+        "status": "local-proof",
+        "scope": "有限均值周期的长度偏置积分；平移不变性与两指数间隔密度完整计算。"
+      },
+      "4C24": {
+        "status": "conditional-local-proof-and-report-announcement",
+        "scope": "抽象可测共轭传递完整证明；连续动态线性化与不变性保留报告宣布状态，静态预印本不作动态证明。"
+      },
+      "4C25": {
+        "status": "local-calculation-and-cited-return-result",
+        "scope": "定义指数交替过程，流量平衡与极值密度乘积计算；返回与归一化引用 ABFG Example 12。"
+      },
+      "4C26": {
+        "status": "local-proof",
+        "scope": "显式解 ODE、验证初值、积分强度及临界一阶矩发散。"
+      },
+      "4C27": {
+        "status": "definition-and-local-proof",
+        "scope": "准确 D_density 双条件及 C1 零延拓；逆坐标正下界，速度矩阵用 min 核正定化证明可逆。"
+      },
+      "4C28": {
+        "status": "cited-theorem",
+        "scope": "CS Theorem 1.1 与 Corollary 1.4：单侧 Omega_I 支撑、初值概率测试收敛、D_density 与经典解唯一性类；深证明 §§2–6 未重建。"
+      },
+      "4C29": {
+        "status": "conjecture",
+        "scope": "明确连续高度式 (3.29)–(3.30) 是猜想；列出可积性与物理密度含义，不推出连续流体定理。"
+      },
+      "4C2A": {
+        "status": "local-proof",
+        "scope": "Gaussian 平滑、密度积分、控制收敛与尾界，先 Lipschitz 后有界连续测试函数。"
+      }
+    },
+    "claim_sources": {
+      "4C01": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.1"
+        }
+      ],
+      "4C02": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "由独立 Poisson 计数定义；以有限强度窗口包络和可数交给出同一概率一事件上的全时刻局部有限与全部有界线段有限穿越。"
+        }
+      ],
+      "4C03": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§§2.3–2.5"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "先计算简单函数矩，再由 0A7A 单调收敛建立所有非负可测函数的期望恒等式；L1 保证几乎必然绝对收敛，随后以 L1 与中心化 L2 逼近延拓协方差公式。"
+        }
+      ],
+      "4C04": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.1"
+        }
+      ],
+      "4C05": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有限构形收缩、伸长互逆；排序连续并交换斜率。位置相等先按速度，位置与速度均相等按固定标签排序，保留接触杆与永久重合自由轨迹。"
+        }
+      ],
+      "4C06": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "完整排序序号含位置、速度与固定标签顺序；永久重合例子重建不同物理左端点，孤立二体交叉位移为正负 a，多重交叉按完整序号变化计算。"
+        }
+      ],
+      "4C07": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§§2.2–2.4"
+        }
+      ],
+      "4C08": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§§2.2–2.3"
+        }
+      ],
+      "4C09": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.6"
+        }
+      ],
+      "4C0A": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.6, equation (2.31) interpreted through signed crossings"
+        },
+        {
+          "source": "fo-multitime-v1",
+          "locator": "§VIII, equation (142), finite constant-mark convention"
+        }
+      ],
+      "4C0B": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.6"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "双速度例子的两条平衡式逐项验证；密度加权通量为 1/5，除以总密度 3/10 的平均速度为 2/3。"
+        }
+      ],
+      "4C0C": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.4"
+        }
+      ],
+      "4C0D": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.4, equation (2.15); finite-species mean-square/probability specialization, not the survey's almost-sure assertion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4C0D: fixed-point Poisson variance proof and finite-union bound"
+        }
+      ],
+      "4C0E": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.4, equations (2.16)–(2.17); finite-dimensional surface CLT"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4C0E: finite-species characteristic-function proof, with 4C2A; no path-space tightness"
+        }
+      ],
+      "4C0F": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.6, Proposition 2.2, equations (2.27)–(2.29)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4C0F: finite-species nonnegative continuous compact-support initial densities; fixed-time convergence in probability by cumulative-count grid bounds"
+        }
+      ],
+      "4C10": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.6, equations (2.29)–(2.31); effective velocity checked by the signed-crossing convention in 4C0A"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4C10: deterministic C1 compact-support finite-species coordinate derivation; hydrodynamic convergence separately in 4C0F"
+        }
+      ],
+      "4C11": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§2.7, Theorem 2.3, equations (2.32)–(2.33), context only"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4C11: deterministic sampling-plus-displacement first variation for finite signed measures; no full empirical-field CLT claimed"
+        }
+      ],
+      "4C12": [
+        {
+          "source": "fo-diffusive-v4",
+          "locator": "§3.1, equations (3.1)–(3.26): tagged diffusion and same-velocity common noise"
+        },
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§1: diffusive-scaling context only"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4C12: fixed-positive-length finite-species tagged finite-dimensional limits and same-speed covariance estimate; no path-space or density-field limit"
+        }
+      ],
+      "4C13": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§1, §3"
+        }
+      ],
+      "4C14": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        }
+      ],
+      "4C15": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        }
+      ],
+      "4C16": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§1"
+        }
+      ],
+      "4C17": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        },
+        {
+          "source": "fnrw-v6",
+          "locator": "§1.1, Proposition 1.4; proof located in §7"
+        }
+      ],
+      "4C18": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.2"
+        }
+      ],
+      "4C19": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        },
+        {
+          "source": "fnrw-v6",
+          "locator": "§1.4, Theorems 1.3 and 1.4; §2.1 slot definition"
+        }
+      ],
+      "4C1A": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§1"
+        },
+        {
+          "source": "fnrw-v6",
+          "locator": "§1.5, Theorem 1.5; proof locations §§4–5"
+        }
+      ],
+      "4C1B": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "Theorem 3.10"
+        },
+        {
+          "source": "fnrw-v6",
+          "locator": "§1.3, Theorem 1.1, Proposition 1.12; proof location §6"
+        }
+      ],
+      "4C1C": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "Theorem 3.10"
+        }
+      ],
+      "4C1D": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "§2.1"
+        }
+      ],
+      "4C1E": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "§2.2"
+        }
+      ],
+      "4C1F": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "§2.3, equations (2.23)–(2.30)"
+        }
+      ],
+      "4C20": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "Theorem 3.1"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "§2.3 equations (2.33)–(2.35); §2.5 Theorem 11"
+        }
+      ],
+      "4C21": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.1, equations (3.17)–(3.19)"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "§3.1.1 equations (3.1)–(3.4)"
+        }
+      ],
+      "4C22": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.1"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "Corollary 16, Proposition 17, Theorem 18"
+        }
+      ],
+      "4C23": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.1, Palm construction"
+        }
+      ],
+      "4C24": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "Theorems 3.2, 3.6, 3.9"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "Abstract and §1: dynamics explicitly deferred"
+        }
+      ],
+      "4C25": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.1, equation (3.25)"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "Example 12"
+        }
+      ],
+      "4C26": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.1, equations (3.26)–(3.27)"
+        },
+        {
+          "source": "abfg-v1",
+          "locator": "§3.2.1"
+        }
+      ],
+      "4C27": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.2"
+        },
+        {
+          "source": "cs-v2",
+          "locator": "§1 equations (1.6)–(1.10), (1.13)–(1.16); Lemma 5.1 statement location"
+        }
+      ],
+      "4C28": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "Theorem 3.11"
+        },
+        {
+          "source": "cs-v2",
+          "locator": "§1 Theorems 1.1 and 1.3, Corollary 1.4"
+        }
+      ],
+      "4C29": [
+        {
+          "source": "ferrari-icm2026",
+          "locator": "§3.2, equations (3.29)–(3.30)"
+        }
+      ],
+      "4C2A": [
+        {
+          "source": "local-calculations",
+          "locator": "Local Gaussian smoothing lemma"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "Generalized hard rods",
+        "scope": "Variable or signed rod marks, noncompact/unbounded velocity laws and full invariant-state classification are not developed beyond the report's conventions; local theorems use fixed positive a and finite species."
+      },
+      {
+        "branch": "Full Euler and diffusive fluctuation fields",
+        "scope": "Finite-dimensional surface and tagged-rod limits and a deterministic empirical-field first variation are proved locally. Function-space tightness, the full random empirical field and multivelocity diffusion field are deferred."
+      },
+      {
+        "branch": "Continuous dynamics",
+        "scope": "Report Theorems 3.2, 3.6 and 3.9 are recorded as announcements requiring hierarchical record correction and Palm compatibility; the fixed June 2026 preprint proves static results and defers dynamics."
+      },
+      {
+        "branch": "Continuous effective velocity and hydrodynamics",
+        "scope": "Report §3.2 equations (3.29)–(3.30) remain conjectural. No general continuous-height hydrodynamic convergence theorem is asserted."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4C17",
+          "4C19",
+          "4C1A",
+          "4C1B"
+        ],
+        "source": "fnrw-v6",
+        "scope": "Tracking Proposition 1.4, slot inverse/dynamics, invariant-measure Palm reconstruction and almost-sure soliton-speed proof; cited, not reproduced."
+      },
+      {
+        "notes": [
+          "4C20",
+          "4C22"
+        ],
+        "source": "abfg-v1",
+        "scope": "Full infinite reconstruction, multiplicity/tie cases, Poisson exploration, Jacobian partition and finite-mean criterion; statements and mechanisms given, not all proofs reproduced."
+      },
+      {
+        "notes": [
+          "4C28"
+        ],
+        "source": "cs-v2",
+        "scope": "Microscopic-to-scattering convergence, inverse-map continuity, regularity preservation and uniqueness; exact main hypotheses cited, §§2–6 not read in full or reconstructed."
+      },
+      {
+        "notes": [
+          "4C24"
+        ],
+        "source": "ferrari-icm2026",
+        "scope": "Continuous dynamic linearization and invariant-measure proof announced in the report; no complete proof supplied by the fixed static supplement."
+      }
+    ],
+    "metadata": {
+      "node_count": 43,
+      "atomic_count": 42,
+      "reference_count": 1,
+      "language": "zh",
+      "model_conventions": "Fixed positive rod length a; physical rho versus ideal n; finite species local rod theorems. Physical rods, velocity quasiparticles, discrete solitons and continuous solitons have separate labels. Finite ranks sort position, then velocity, then fixed labels for permanent coincidences; +/-a shifts are stated for isolated binary crossings. Density-weighted flux and normalized mean velocity are distinguished.",
+      "coverage": "All report main mathematical branches represented, not introduction-only.",
+      "status": "author-repairs-frozen-pending-independent-recheck",
+      "shared_integration": "Parent-owned; no shared navigation, registries, tests, build or git edited.",
+      "reference_directory": "trees/references, per parent correction",
+      "review_round": 2,
+      "repaired_findings": [
+        "FER-02",
+        "FER-03",
+        "FER-04",
+        "FER-05",
+        "FER-06"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4C00",
+      "path": "trees/math/mathematical-physics/ferrari/4C00.tree",
+      "title": "硬杆与箱球系统：自由坐标、碰撞位移与流体极限",
+      "taxon": "Outline",
+      "sha256": "c611407d60c5721ebaa3e6daaca73d091882317187ccc53669e7a3f09b77d063"
+    },
+    {
+      "id": "4C01",
+      "path": "trees/math/mathematical-physics/ferrari/4C01.tree",
+      "title": "理想气体的有限穿越条件",
+      "taxon": "Definition",
+      "sha256": "bf4146f4e6db132250272a5420e7de23c2522b228260497f1b0d8a6572e4957c"
+    },
+    {
+      "id": "4C02",
+      "path": "trees/math/mathematical-physics/ferrari/4C02.tree",
+      "title": "带标记的 Poisson 点过程",
+      "taxon": "Definition",
+      "sha256": "8f18c3852ad1ba45e090dac936a0cc8013d5c639d42ffe7b25fa8e8ef76076b6"
+    },
+    {
+      "id": "4C03",
+      "path": "trees/math/mathematical-physics/ferrari/4C03.tree",
+      "title": "Poisson 积分的均值与协方差",
+      "taxon": "Theorem",
+      "sha256": "f283e132a04c56334acdea9c4d568bb9da080df3f28e8b3798e01f8d2d5afb87"
+    },
+    {
+      "id": "4C04",
+      "path": "trees/math/mathematical-physics/ferrari/4C04.tree",
+      "title": "Poisson 理想气体的平稳性",
+      "taxon": "Theorem",
+      "sha256": "6358dfa816323a3e2e551e0d00f68812b925d2331c183aff8bf3b63bc2c0d6ba"
+    },
+    {
+      "id": "4C05",
+      "path": "trees/math/mathematical-physics/ferrari/4C05.tree",
+      "title": "等长硬杆的收缩与排序构造",
+      "taxon": "Construction",
+      "sha256": "25584ec1c533739c796db480e25e57bfacfd8719cfd6d7eeee6150e040750e2e"
+    },
+    {
+      "id": "4C06",
+      "path": "trees/math/mathematical-physics/ferrari/4C06.tree",
+      "title": "碰撞时保持速度标签的准粒子位移",
+      "taxon": "Example",
+      "sha256": "a36227a1a50e0ae82717664b9134284b6549ad92f8cfa7b1a4c8091cac4c4dae"
+    },
+    {
+      "id": "4C07",
+      "path": "trees/math/mathematical-physics/ferrari/4C07.tree",
+      "title": "有向穿越核与硬杆高度面",
+      "taxon": "Definition",
+      "sha256": "409813c5ed2b3fb785c113f720ab1cd2d9dbdbf6907c9eaf7fab7a45854be9ba"
+    },
+    {
+      "id": "4C08",
+      "path": "trees/math/mathematical-physics/ferrari/4C08.tree",
+      "title": "高度面给出的无限硬杆演化",
+      "taxon": "Theorem",
+      "sha256": "12a296c169bdebf021c1dde9219777c622644407b40070962b3255a7ded3b534"
+    },
+    {
+      "id": "4C09",
+      "path": "trees/math/mathematical-physics/ferrari/4C09.tree",
+      "title": "自由密度与物理杆密度的换算",
+      "taxon": "Theorem",
+      "sha256": "11a7a67f8a63f23ee8ddb493f659f7119aa000051b091fa7bccf9a6076181ac0"
+    },
+    {
+      "id": "4C0A",
+      "path": "trees/math/mathematical-physics/ferrari/4C0A.tree",
+      "title": "有限种等长硬杆的有效速度方程",
+      "taxon": "Theorem",
+      "sha256": "add33a31d3ef26a34c463ffd0632e7bc98dc114ed520e1615d8ff2211aeca111"
+    },
+    {
+      "id": "4C0B",
+      "path": "trees/math/mathematical-physics/ferrari/4C0B.tree",
+      "title": "双速度硬杆气体的碰撞修正",
+      "taxon": "Example",
+      "sha256": "b7b29d0a39c7dc33b60c6fb7a83b8f80210f58a14e29874c7b4f2680b84e37ed"
+    },
+    {
+      "id": "4C0C",
+      "path": "trees/math/mathematical-physics/ferrari/4C0C.tree",
+      "title": "有向穿越的 Gaussian 白噪声场",
+      "taxon": "Definition",
+      "sha256": "af4bd27152b9f2ebc37c1514c4a88bfd41105c4e5c827a191659927e82759fcc"
+    },
+    {
+      "id": "4C0D",
+      "path": "trees/math/mathematical-physics/ferrari/4C0D.tree",
+      "title": "Poisson 高度面的 Euler 大数律",
+      "taxon": "Theorem",
+      "sha256": "8fe3de5a43ede946823f977293d3dea16420b1e98f68eb1ab78451f06f33d4e3"
+    },
+    {
+      "id": "4C0E",
+      "path": "trees/math/mathematical-physics/ferrari/4C0E.tree",
+      "title": "Poisson 高度面的有限维中心极限",
+      "taxon": "Theorem",
+      "sha256": "38ef0582a86a50e2f94845a89958c48a60043b702f440592a5f751b24812fbd3"
+    },
+    {
+      "id": "4C0F",
+      "path": "trees/math/mathematical-physics/ferrari/4C0F.tree",
+      "title": "紧支撑非齐次硬杆气体的 Euler 密度极限",
+      "taxon": "Theorem",
+      "sha256": "392ddf9dc171650e608227b0cd28258beb329d831569a293fe0cdfd31fb0a460"
+    },
+    {
+      "id": "4C10",
+      "path": "trees/math/mathematical-physics/ferrari/4C10.tree",
+      "title": "硬杆坐标变换导出的连续性方程",
+      "taxon": "Theorem",
+      "sha256": "64613485a264852f8e1e591d9a3ea983969ee7fa26d72c142c5ef38e9bc50699"
+    },
+    {
+      "id": "4C11",
+      "path": "trees/math/mathematical-physics/ferrari/4C11.tree",
+      "title": "经验场一阶变分的采样项与位移项",
+      "taxon": "Theorem",
+      "sha256": "382eb356a638236709f53ab46ea83f674e493e4fc76b3ea6fbfb80d46464579c"
+    },
+    {
+      "id": "4C12",
+      "path": "trees/math/mathematical-physics/ferrari/4C12.tree",
+      "title": "标记硬杆的扩散尺度与共同噪声",
+      "taxon": "Theorem",
+      "sha256": "7318709e5fec1654f7f1fd284d2e77be2fd28a86388cb8ae20bad16f6a59d3af"
+    },
+    {
+      "id": "4C13",
+      "path": "trees/math/mathematical-physics/ferrari/4C13.tree",
+      "title": "有限箱球构形的搬运规则",
+      "taxon": "Definition",
+      "sha256": "1fa5830eb1905c6ee1ce6c0d7ed48a2d2c73cdc467f07524519c71160cac5842"
+    },
+    {
+      "id": "4C14",
+      "path": "trees/math/mathematical-physics/ferrari/4C14.tree",
+      "title": "双无限箱球构形的记录点条件",
+      "taxon": "Definition",
+      "sha256": "7c98c09d606b27e2b9de05d600abb2758291df37f037b41f81d04ed733c7f60f"
+    },
+    {
+      "id": "4C15",
+      "path": "trees/math/mathematical-physics/ferrari/4C15.tree",
+      "title": "搬运器与 Pitman 反射的恒等式",
+      "taxon": "Theorem",
+      "sha256": "ac172511b4ed4401235327840199be0628a8f59f73f5873a2ba99c090c7a2b9a"
+    },
+    {
+      "id": "4C16",
+      "path": "trees/math/mathematical-physics/ferrari/4C16.tree",
+      "title": "孤立箱球脉冲的速度",
+      "taxon": "Example",
+      "sha256": "d5ccd661dfd509c687229104d7318d78ba4469d644dc1ef62634a1ed434408b3"
+    },
+    {
+      "id": "4C17",
+      "path": "trees/math/mathematical-physics/ferrari/4C17.tree",
+      "title": "离散孤子的分解与时间标签",
+      "taxon": "Definition",
+      "sha256": "9fbd20ce458d3e74093d0f7f7d6994ed8d2ed7d58c154573bc05566c6310106b"
+    },
+    {
+      "id": "4C18",
+      "path": "trees/math/mathematical-physics/ferrari/4C18.tree",
+      "title": "三孤子与一孤子的二格相位位移",
+      "taxon": "Example",
+      "sha256": "bf288c5025360b36d08f12a5ae88a61fa85887344f788fd63bd4ed6a15878068"
+    },
+    {
+      "id": "4C19",
+      "path": "trees/math/mathematical-physics/ferrari/4C19.tree",
+      "title": "离散槽坐标的计数与平移",
+      "taxon": "Construction",
+      "sha256": "1c9086545267c95670f384458275c648803c90b7ccfff7a63395c48727bbe851"
+    },
+    {
+      "id": "4C1A",
+      "path": "trees/math/mathematical-physics/ferrari/4C1A.tree",
+      "title": "独立槽分量生成的箱球不变测度",
+      "taxon": "Theorem",
+      "sha256": "7b928aa66951ba3c5f3b9d57e7d4adfe0143e0e1633eb6c23b63720f23aa7527"
+    },
+    {
+      "id": "4C1B",
+      "path": "trees/math/mathematical-physics/ferrari/4C1B.tree",
+      "title": "离散箱球孤子的几乎处处有效速度",
+      "taxon": "Theorem",
+      "sha256": "97e834ed69e82ef436e0c94ca7ac3a8f90b18762ee207a54ae680a06758d4d53"
+    },
+    {
+      "id": "4C1C",
+      "path": "trees/math/mathematical-physics/ferrari/4C1C.tree",
+      "title": "一阶与二阶箱球孤子的速度解",
+      "taxon": "Example",
+      "sha256": "49281a47e0c02f415d13b659a34f389bebb9206371671428db56822dd3e4b501"
+    },
+    {
+      "id": "4C1D",
+      "path": "trees/math/mathematical-physics/ferrari/4C1D.tree",
+      "title": "连续箱球路径与记录游程",
+      "taxon": "Definition",
+      "sha256": "53df77ba604cdfe0c95de59cc672871c6ac53fe127898be0f9ce2ff8704f793a"
+    },
+    {
+      "id": "4C1E",
+      "path": "trees/math/mathematical-physics/ferrari/4C1E.tree",
+      "title": "连续孤子的最短段消去",
+      "taxon": "Construction",
+      "sha256": "7e4fa6544e1107f18fee57f7b4f126d796aa9260b9fe3c78f9a3c9bdef63e0a6"
+    },
+    {
+      "id": "4C1F",
+      "path": "trees/math/mathematical-physics/ferrari/4C1F.tree",
+      "title": "连续槽空间及其有向坐标",
+      "taxon": "Definition",
+      "sha256": "3d93f53a163b5ff24822bb23c4af2a5da2777257983378402fd1365556c7eefa"
+    },
+    {
+      "id": "4C20",
+      "path": "trees/math/mathematical-physics/ferrari/4C20.tree",
+      "title": "连续槽构形的有限探索条件",
+      "taxon": "Theorem",
+      "sha256": "eb56504bd4f816e2eea08f79241ccb6cb5f3b49ff61e87cdb0b8849055621a18"
+    },
+    {
+      "id": "4C21",
+      "path": "trees/math/mathematical-physics/ferrari/4C21.tree",
+      "title": "按孤子高度加权的连续游程分布",
+      "taxon": "Definition",
+      "sha256": "db99f35f161e138f88ffceed01ba6055123f48af919e8fb7e48fdb51946fa682"
+    },
+    {
+      "id": "4C22",
+      "path": "trees/math/mathematical-physics/ferrari/4C22.tree",
+      "title": "Poisson 槽强度与游程权的关系",
+      "taxon": "Theorem",
+      "sha256": "d31651971bf4391624c493e7085c848b493bae18c1db54c543ee1c9f17c4bf10"
+    },
+    {
+      "id": "4C23",
+      "path": "trees/math/mathematical-physics/ferrari/4C23.tree",
+      "title": "记录条件分布的空间平稳化",
+      "taxon": "Construction",
+      "sha256": "ec88b24520c7ce561f8e57c563e62591d40e133e9f213efb9c89173efc87f632"
+    },
+    {
+      "id": "4C24",
+      "path": "trees/math/mathematical-physics/ferrari/4C24.tree",
+      "title": "连续槽线性化与不变性的条件传递",
+      "taxon": "Proposition",
+      "sha256": "3136d5260f60e8d8b956a9ee47d89343405de8036cc231f3127ed47eeb3457f9"
+    },
+    {
+      "id": "4C25",
+      "path": "trees/math/mathematical-physics/ferrari/4C25.tree",
+      "title": "电报过程的连续箱球游程权",
+      "taxon": "Example",
+      "sha256": "02e7d02f9641dc77e9ce81f6f1524054dbb6e2e1f2329098bb90c0204fe32e28"
+    },
+    {
+      "id": "4C26",
+      "path": "trees/math/mathematical-physics/ferrari/4C26.tree",
+      "title": "电报游程的显式 Poisson 槽强度",
+      "taxon": "Theorem",
+      "sha256": "c3e1ff560887746bc7f6d2a95d5afc24423ad31b2132a49bfafb096c32113f91"
+    },
+    {
+      "id": "4C27",
+      "path": "trees/math/mathematical-physics/ferrari/4C27.tree",
+      "title": "有限尺寸箱球流体的可容许密度",
+      "taxon": "Definition",
+      "sha256": "e753d259c99bbe691927f79f7d6c368e203d21c0d019a7a3ab545b0d632fed9b"
+    },
+    {
+      "id": "4C28",
+      "path": "trees/math/mathematical-physics/ferrari/4C28.tree",
+      "title": "单侧有限尺寸箱球系统的流体极限",
+      "taxon": "Theorem",
+      "sha256": "f77ebf5f28ccd8e384447d6362e48ef2dd7e5c3a25f8bb15999e428fc93e32dd"
+    },
+    {
+      "id": "4C29",
+      "path": "trees/math/mathematical-physics/ferrari/4C29.tree",
+      "title": "连续箱球有效速度的积分方程猜想",
+      "taxon": "Conjecture",
+      "sha256": "7ebb853f17aa37fd3e0329c4632c38814825a03ff1c583a12dca86b921532beb"
+    },
+    {
+      "id": "4C2A",
+      "path": "trees/math/mathematical-physics/ferrari/4C2A.tree",
+      "title": "Gaussian 极限的特征函数判据",
+      "taxon": "Theorem",
+      "sha256": "622eced1a2cc3279dae872853a050495dd0137a6a2b6451294accc1d3f6a552f"
+    },
+    {
+      "id": "icm2026-ferrari",
+      "path": "trees/references/icm2026-ferrari.tree",
+      "title": "Ferrari：Hard Rods and Box-ball Systems",
+      "taxon": "Reference",
+      "sha256": "3348e5ba87592d660ab9351f45b1deabdb7c36503c638413b416ff932e9589bb"
+    }
+  ],
+  "prerequisites": {
+    "4C01": [
+      "00Q2"
+    ],
+    "4C02": [
+      "00Q0",
+      "00Q2",
+      "00L6",
+      "00L3",
+      "00XV",
+      "4C01"
+    ],
+    "4C03": [
+      "4C02",
+      "00Q5",
+      "0A6A",
+      "00L6",
+      "0A7A",
+      "00L1",
+      "00L2"
+    ],
+    "4C04": [
+      "4C02",
+      "4C01",
+      "00Q3",
+      "00RR",
+      "00Q1"
+    ],
+    "4C05": [
+      "4C01"
+    ],
+    "4C06": [
+      "4C05"
+    ],
+    "4C07": [
+      "4C01",
+      "4C02"
+    ],
+    "4C08": [
+      "4C01",
+      "4C07",
+      "4C06"
+    ],
+    "4C09": [
+      "4C05"
+    ],
+    "4C0A": [
+      "4C06",
+      "4C09",
+      "4C02",
+      "4C03"
+    ],
+    "4C0B": [
+      "4C0A"
+    ],
+    "4C0C": [
+      "00L3",
+      "0N0S",
+      "0A6A",
+      "0N0R",
+      "4C07"
+    ],
+    "4C0D": [
+      "4C02",
+      "4C07",
+      "00L9",
+      "4C03"
+    ],
+    "4C0E": [
+      "4C0D",
+      "00LA",
+      "4C0C",
+      "0I8I",
+      "4C2A"
+    ],
+    "4C0F": [
+      "4C02",
+      "4C08",
+      "00L9",
+      "4C03"
+    ],
+    "4C10": [
+      "0A32",
+      "4C0F",
+      "0A34",
+      "4C09"
+    ],
+    "4C11": [
+      "00Q2",
+      "4C07"
+    ],
+    "4C12": [
+      "4C02",
+      "4C06",
+      "0N0S",
+      "4C0E",
+      "4C2A"
+    ],
+    "4C13": [
+      "00Q2"
+    ],
+    "4C14": [
+      "4C13"
+    ],
+    "4C15": [
+      "4C14",
+      "4C13"
+    ],
+    "4C16": [
+      "4C13"
+    ],
+    "4C17": [
+      "4C13",
+      "4C14"
+    ],
+    "4C18": [
+      "4C17",
+      "4C13",
+      "4C16"
+    ],
+    "4C19": [
+      "4C17",
+      "0V17"
+    ],
+    "4C1A": [
+      "00L3",
+      "00Q3",
+      "4C14",
+      "4C19",
+      "00RR",
+      "00RW"
+    ],
+    "4C1B": [
+      "4C14",
+      "00RR",
+      "00RW",
+      "4C17"
+    ],
+    "4C1C": [
+      "4C1B"
+    ],
+    "4C1D": [
+      "00XV"
+    ],
+    "4C1E": [
+      "4C1D",
+      "00XV"
+    ],
+    "4C1F": [
+      "4C1E"
+    ],
+    "4C20": [
+      "4C1F",
+      "4C1D"
+    ],
+    "4C21": [
+      "4C1D",
+      "00XV",
+      "4C1E",
+      "00L1"
+    ],
+    "4C22": [
+      "4C02",
+      "4C20",
+      "4C21",
+      "4C1F"
+    ],
+    "4C23": [
+      "00L3",
+      "4C21",
+      "00RR"
+    ],
+    "4C24": [
+      "00Q1",
+      "00RR",
+      "4C1D",
+      "4C1F",
+      "4C23",
+      "4C22",
+      "4C04"
+    ],
+    "4C25": [
+      "00L3",
+      "4C1D",
+      "4C21"
+    ],
+    "4C26": [
+      "4C25",
+      "4C22",
+      "4C23"
+    ],
+    "4C27": [
+      "4C17",
+      "0A32",
+      "4C19"
+    ],
+    "4C28": [
+      "4C13",
+      "4C17",
+      "4C27",
+      "00L9"
+    ],
+    "4C29": [
+      "00RW",
+      "4C24",
+      "4C1E",
+      "4C22",
+      "4C1B"
+    ],
+    "4C2A": [
+      "00L1",
+      "00LA",
+      "0N0R",
+      "0I8I"
+    ]
+  },
+  "atomic_questions": {
+    "4C01": "何种无限自由粒子构形允许有限的时空穿越计算？",
+    "4C02": "带速度标记的 Poisson 随机计数测度如何定义？",
+    "4C03": "Poisson 积分为何具有不减均值平方的方差？",
+    "4C04": "自由平移为何保持空间齐次 Poisson 气体？",
+    "4C05": "排序自由粒子如何给出等长物理杆的碰撞演化？",
+    "4C06": "保持速度标签为何在碰撞时跳跃正负一个杆长？",
+    "4C07": "无限高度面如何避免两个无穷计数相减？",
+    "4C08": "无限硬杆演化为何需要保留原点通量平移？",
+    "4C09": "自由粒子密度如何换成物理杆密度？",
+    "4C0A": "固定正杆长的有限种有效速度方程为何有唯一显式解？",
+    "4C0B": "裸速度为零的标签为何能有负有效速度？",
+    "4C0C": "有向穿越如何产生 Gaussian 白噪声场？",
+    "4C0D": "高度面在 Euler 尺度下趋于什么确定性函数？",
+    "4C0E": "Poisson 高度涨落的有限维 Gaussian 极限如何证明？",
+    "4C0F": "哪类非齐次微观杆气体可直接证明 Euler 密度极限？",
+    "4C10": "光滑自由输运在伸长坐标下满足什么守恒方程？",
+    "4C11": "经验场的一阶变分为何同时有采样与位移两项？",
+    "4C12": "标记杆的扩散时间尺度及同速空间相关如何确定？",
+    "4C13": "有限箱球搬运器如何守恒球数？",
+    "4C14": "无限箱球系统何时能从记录点确定搬运器？",
+    "4C15": "搬运规则为何等价于过去最小值的 Pitman 反射？",
+    "4C16": "孤立 k 孤子的裸速度为何等于 k？",
+    "4C17": "离散孤子如何在碰撞中保留时间标签？",
+    "4C18": "大小三与一的孤子碰撞后各有多少相移？",
+    "4C19": "槽计数为何产生尺寸相关的自由坐标？",
+    "4C1A": "哪些独立槽分量可恢复为空间和时间不变的球分布？",
+    "4C1B": "离散随机孤子的确定速度定理需要哪些条件？",
+    "4C1C": "只有一阶和二阶孤子时如何显式解速度？",
+    "4C1D": "连续箱球路径的记录与游程如何定义？",
+    "4C1E": "连续最短段消去为何终止且给出总长度？",
+    "4C1F": "连续槽空间给每个孤子留下多少可插入长度？",
+    "4C20": "哪种无限槽构形具有可重建的连续路径？",
+    "4C21": "游程乘积权的概率归一化与有限平均长度有什么区别？",
+    "4C22": "Poisson 槽强度如何决定连续游程权？",
+    "4C23": "记录条件下的游程链如何恢复空间平稳分布？",
+    "4C24": "动态共轭在什么条件下传递不变测度？",
+    "4C25": "电报过程的转移率如何决定球密度与游程权？",
+    "4C26": "电报游程的槽强度为何是双曲正弦平方的倒数？",
+    "4C27": "有限尺寸箱球流体需要什么密度条件才能使用散射坐标？",
+    "4C28": "哪一个离散箱球流体极限已在明确假设下证明？",
+    "4C29": "连续高度箱球速度方程的哪些部分仍属猜想？",
+    "4C2A": "有界二阶矩下如何从特征函数得到 Gaussian 分布极限？"
+  },
+  "navigation_only": [
+    "4C00",
+    "icm2026-ferrari"
+  ],
+  "reused_pages": [
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L6",
+    "00L9",
+    "00LA",
+    "00Q0",
+    "00Q1",
+    "00Q2",
+    "00Q3",
+    "00Q5",
+    "00RR",
+    "00RW",
+    "00XV",
+    "0A32",
+    "0A34",
+    "0A6A",
+    "0A7A",
+    "0I8I",
+    "0N0R",
+    "0N0S",
+    "0V17"
+  ],
+  "terminology_evidence": {
+    "method": "Whole-forest search for existing probability, dynamics and analysis definitions; actual selected bodies read. Poisson point-process and continuous slot definitions are distinct local 4C atoms. No newly authored Aggarwal dependency used.",
+    "canonical_definition_repairs": [
+      "4C0E distribution-convergence link uses 00LA; Gaussian criterion separately links 4C2A.",
+      "4C24 labels 4C04 as Poisson translation invariance, not Poisson distribution.",
+      "4C04 probability-space link uses 00Q3.",
+      "4C03 uses the existing monotone-convergence theorem 0A7A before the L1/L2 extension."
+    ],
+    "external_terminology_site": "No separate external Chinese terminology verification claimed."
+  },
+  "source_records": [
+    {
+      "id": "ferrari-icm2026",
+      "authors": [
+        "Pablo A. Ferrari"
+      ],
+      "title": "Hard Rods and Box-ball Systems",
+      "doi": "10.1137/25M1806867",
+      "pages": "426–441",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1806867",
+      "version_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1806867",
+      "license": "CC BY 4.0",
+      "copyright": "International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1–3.2, all displayed formulas, acknowledgments and bibliography [1]–[44], by overlapping section-sized retrievals. HTML lines 101–635 mathematical body; 636–880 acknowledgments/bibliography. PDF first-page bibliographic and license text checked. No complete PDF pixel inspection.",
+      "proof_boundary": "Survey is not treated as a full proof of research results. Formula conventions independently checked; published primary sources sharpen omitted hypotheses.",
+      "review_recheck": "§2.4 equations (2.15)–(2.17), §2.6 Proposition 2.2 and equations (2.27)–(2.31), and §2.7 Theorem 2.3 and equations (2.32)–(2.33) rechecked in full publisher HTML for FER-02."
+    },
+    {
+      "id": "fnrw-v6",
+      "authors": [
+        "Pablo A. Ferrari",
+        "Chi Nguyen",
+        "Leonardo T. Rolla",
+        "Minmin Wang"
+      ],
+      "title": "Soliton decomposition of the Box-Ball System",
+      "version": "arXiv:1806.02798v6",
+      "version_date": "2021-04-13",
+      "url": "https://arxiv.org/abs/1806.02798v6",
+      "html": "https://arxiv.org/html/1806.02798v6",
+      "doi": "10.1017/fms.2021.49",
+      "publication": "Forum of Mathematics, Sigma 9 (2021), e60",
+      "license": "arXiv non-exclusive distribution license; not relabeled CC",
+      "actual_reading": "Overview and §1.1–1.5, all main contracts through Theorem 1.5, plus §2 opening and §2.1 slot definitions (HTML approximately lines 59–240). Proof locations §§2–7 identified; those proof sections not read in full.",
+      "proof_boundary": "Cited theorem hypotheses verified in full; deep proofs not reproduced."
+    },
+    {
+      "id": "cs-v2",
+      "authors": [
+        "David A. Croydon",
+        "Makiko Sasada"
+      ],
+      "title": "Generalized hydrodynamic limit for the box-ball system",
+      "version": "arXiv:2003.06526v2",
+      "version_date": "2022-05-14",
+      "url": "https://arxiv.org/abs/2003.06526v2",
+      "html": "https://arxiv.org/html/2003.06526v2",
+      "doi": "10.1007/s00220-020-03914-x",
+      "publication": "Communications in Mathematical Physics 383 (2021), 427–463",
+      "license": "arXiv non-exclusive distribution license; not relabeled CC",
+      "actual_reading": "§1 mathematical setup, Omega/Omega_I, empirical measures, effective velocity matrix, D_density, Theorems 1.1 and 1.3, integrated scattering coordinates, Corollary 1.4 and associated remarks (HTML lines 51–188).",
+      "proof_boundary": "Exact theorem contract used; §§2–6 deep proof not read in full. Finite matrix invertibility given by an independent local proof."
+    },
+    {
+      "id": "abfg-v1",
+      "authors": [
+        "Inés Armendáriz",
+        "Pablo Blanc",
+        "Pablo A. Ferrari",
+        "Davide Gabrielli"
+      ],
+      "title": "Slot decomposition of continuous Box-Ball Systems",
+      "version": "arXiv:2606.20948v1",
+      "version_date": "2026-06-18",
+      "url": "https://arxiv.org/abs/2606.20948v1",
+      "html": "https://arxiv.org/html/2606.20948v1",
+      "license": "CC BY 4.0",
+      "actual_reading": "Full mathematical body §§1–4 including the appendix on ties/multiplicities, all displayed mathematics and figure captions, in overlapping reads (HTML lines 68–738). Bibliography only partly read. No figure-pixel inspection claimed.",
+      "proof_boundary": "Static inverse and Poisson decomposition are primary results. Abstract explicitly defers dynamics. Proposition 17's printed converse argument assumes global ODE existence; notes state q-to-alpha direction and retain the converse global-existence obligation."
+    },
+    {
+      "id": "fo-diffusive-v4",
+      "authors": [
+        "Pablo A. Ferrari",
+        "Stefano Olla"
+      ],
+      "title": "Macroscopic diffusive fluctuations for generalized hard rods dynamics",
+      "version": "arXiv:2305.13037v4",
+      "version_date": "2024-11-19",
+      "url": "https://arxiv.org/abs/2305.13037v4",
+      "html": "https://arxiv.org/html/2305.13037v4",
+      "doi": "10.1214/24-AAP2137",
+      "publication": "Annals of Applied Probability 35 (2025), 1125–1142",
+      "license": "CC BY 4.0",
+      "actual_reading": "§1 and §2.1 through the static/initial-field discussion (HTML through line 207); additionally §3.1 equations (3.1)–(3.26), including tagged-motion variance and same-velocity covariance, read during review repair. Full §3.2 and full paper not read.",
+      "proof_boundary": "Section 3.1 supplies the precise tagged-diffusion and shared-noise source. 4C12 independently proves only its fixed-positive-length finite-species finite-dimensional specialization, not path-space tightness or the full diffusive density-field theorem."
+    },
+    {
+      "id": "fo-multitime-v1",
+      "authors": [
+        "Pablo A. Ferrari",
+        "Stefano Olla"
+      ],
+      "title": "Multitime fields and hard rod scaling limits",
+      "version": "arXiv:2511.05230v1",
+      "version_date": "2025-11-07",
+      "url": "https://arxiv.org/abs/2511.05230v1",
+      "html": "https://arxiv.org/html/2511.05230v1",
+      "license": "arXiv non-exclusive distribution license",
+      "actual_reading": "Introduction, §II, and selected §VIII passages including tagged limits and effective-velocity equation (142), not the entire paper.",
+      "proof_boundary": "Convention cross-check; local Poisson means, covariances, LLN and CLT derived independently rather than importing malformed printed formulas."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Not a bibliographic source. Elementary calculations and Gaussian-smoothing lemma proved in the notes; existing forest probability/analysis definitions supply prerequisites.",
+      "proof_boundary": "Numerical/enumerative checks are corroboration, not substitutes for the local proofs."
+    }
+  ],
+  "source_clarifications": [
+    {
+      "location": "Publisher metadata",
+      "resolution": "HTML identifies Volume 5 (Sections 9–11), PDF first-page header prints Vol. 6. Reference preserves both and binds by DOI/pages."
+    },
+    {
+      "location": "§2.2 model conventions",
+      "resolution": "Fixed a>0: physical ordered rods exchange velocities; velocity-label rank sorts position, then velocity, then a fixed label order for permanently identical trajectories. Isolated binary crossings give +/-a; multiple crossings use the full rank change. Variable lengths in the report swap both length and velocity and are not silently treated as equal-length physical rods."
+    },
+    {
+      "location": "§2.3 Poisson jump rates",
+      "resolution": "Unsigned jump rates use n_j|v-v_j|, while displacement sign is sgn(v-v_j). No signed probability used."
+    },
+    {
+      "location": "§2.6 equation (2.31)",
+      "resolution": "Parent contract explicitly implemented: physical densities rho_i, a sum rho_i<1, V_i=(v_i-a sum rho_j v_j)/(1-a sum rho_j). Signed-crossing derivation and equivalent balance equation supplied in 4C0A."
+    },
+    {
+      "location": "§2.7 equation (2.33)",
+      "resolution": "General empirical fluctuations require direct sampling and coordinate-displacement terms. 4C11 proves the deterministic first variation; does not identify the report's abbreviated expression with a proved full empirical-field CLT."
+    },
+    {
+      "location": "§3 record condition and slot domain",
+      "resolution": "Records are first downward level hits, with all earlier path heights strictly larger. Continuous inverse domain uses ABFG T-finiteness, not mere planar local finiteness."
+    },
+    {
+      "location": "§3 equations (3.19), (3.22), (3.25)",
+      "resolution": "Excursion length is 2 sum ell; q-alpha exponential has factor 2; telegraph Z_alpha=+lambda_-. All checked against ABFG and local calculations."
+    },
+    {
+      "location": "§3.1 origin law",
+      "resolution": "Typical record-location gap consists of two independent exponentials. Ordinary spatial stationarity reconstructed separately by finite-mean length bias; anchored law is not called spatially stationary."
+    },
+    {
+      "location": "§3.2 Theorem 3.10 versus (3.29)–(3.30)",
+      "resolution": "Discrete theorem uses primary X subcritical support, T invariance and spatial ergodicity. Continuous height effective velocity remains an explicit conjecture on 4C29."
+    },
+    {
+      "location": "§3.2 Theorem 3.11 and (3.31), (3.34)",
+      "resolution": "Use b=(eta+1)/2 for ball measure, derivative of entire flux rho_i V_i, fixed-time convergence in probability, one-sided finite-I support and exact CS D_density assumptions."
+    },
+    {
+      "location": "§2.4, §2.6, §2.7 and Ferrari–Olla arXiv:2305.13037v4 §3.1",
+      "resolution": "Surface LLN/CLT: §2.4 (2.15)–(2.17); density limit and continuity equation: §2.6 Proposition 2.2, (2.27)–(2.31); empirical-field fluctuation context: §2.7 Theorem 2.3, (2.32)–(2.33). Tagged diffusion/common noise: Ferrari–Olla v4 §3.1 (3.1)–(3.26), with ICM §1 as context only. Local direct proofs retain their stated narrower scopes."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§§1–2.2",
+      "notes": [
+        "4C01",
+        "4C02",
+        "4C04",
+        "4C05",
+        "4C06"
+      ],
+      "scope": "Ideal gas, one common admissibility event, rods and permanent/transient label ties."
+    },
+    {
+      "section": "§§2.3–2.5",
+      "notes": [
+        "4C03",
+        "4C07",
+        "4C08",
+        "4C0C",
+        "4C0D",
+        "4C0E",
+        "4C2A"
+      ],
+      "scope": "Poisson moments, signed Chentsov surface, §2.4 surface LLN/finite-dimensional CLT and §2.5 surface-to-rod relation. Gaussian criterion proved locally."
+    },
+    {
+      "section": "§2.6",
+      "notes": [
+        "4C09",
+        "4C0A",
+        "4C0B",
+        "4C0F",
+        "4C10"
+      ],
+      "scope": "Density conversion, effective velocity, flux versus mean, Proposition 2.2 density scaling and deterministic continuity equation. Compact-support finite-species proofs have explicit probability and regularity scopes."
+    },
+    {
+      "section": "§2.7",
+      "notes": [
+        "4C11"
+      ],
+      "scope": "Theorem 2.3 is empirical-fluctuation context; the local result is only the deterministic two-term first variation."
+    },
+    {
+      "section": "Supplement: Ferrari–Olla arXiv:2305.13037v4 §3.1, equations (3.1)–(3.26)",
+      "notes": [
+        "4C12"
+      ],
+      "scope": "Tagged diffusion and same-speed common noise; ICM §1 provides context, not the proof. Local finite-species finite-dimensional derivation only."
+    },
+    {
+      "section": "§1 and §3 discrete background",
+      "notes": [
+        "4C13",
+        "4C14",
+        "4C15",
+        "4C16",
+        "4C17",
+        "4C18",
+        "4C19",
+        "4C1A"
+      ],
+      "scope": "Finite/infinite carrier, records, soliton labels, collision calculation, slots and invariant measures."
+    },
+    {
+      "section": "§3 continuous construction",
+      "notes": [
+        "4C1D",
+        "4C1E",
+        "4C1F",
+        "4C20",
+        "4C24"
+      ],
+      "scope": "Continuous paths, deletion, slot measure, precise inverse domain and dynamic-announcement boundary."
+    },
+    {
+      "section": "§3.1",
+      "notes": [
+        "4C21",
+        "4C22",
+        "4C23",
+        "4C25",
+        "4C26"
+      ],
+      "scope": "Weighted excursions, Poisson decomposition, Palm/ordinary origin distinction and explicit telegraph intensity."
+    },
+    {
+      "section": "§3.2",
+      "notes": [
+        "4C1B",
+        "4C1C",
+        "4C27",
+        "4C28",
+        "4C29"
+      ],
+      "scope": "Discrete speed theorem, finite density contracts, proved single-sided hydrodynamics and continuous conjecture."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Generalized hard rods",
+      "scope": "Variable or signed rod marks, noncompact/unbounded velocity laws and full invariant-state classification are not developed beyond the report's conventions; local theorems use fixed positive a and finite species."
+    },
+    {
+      "branch": "Full Euler and diffusive fluctuation fields",
+      "scope": "Finite-dimensional surface and tagged-rod limits and a deterministic empirical-field first variation are proved locally. Function-space tightness, the full random empirical field and multivelocity diffusion field are deferred."
+    },
+    {
+      "branch": "Continuous dynamics",
+      "scope": "Report Theorems 3.2, 3.6 and 3.9 are recorded as announcements requiring hierarchical record correction and Palm compatibility; the fixed June 2026 preprint proves static results and defers dynamics."
+    },
+    {
+      "branch": "Continuous effective velocity and hydrodynamics",
+      "scope": "Report §3.2 equations (3.29)–(3.30) remain conjectural. No general continuous-height hydrodynamic convergence theorem is asserted."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4C17",
+        "4C19",
+        "4C1A",
+        "4C1B"
+      ],
+      "source": "fnrw-v6",
+      "scope": "Tracking Proposition 1.4, slot inverse/dynamics, invariant-measure Palm reconstruction and almost-sure soliton-speed proof; cited, not reproduced."
+    },
+    {
+      "notes": [
+        "4C20",
+        "4C22"
+      ],
+      "source": "abfg-v1",
+      "scope": "Full infinite reconstruction, multiplicity/tie cases, Poisson exploration, Jacobian partition and finite-mean criterion; statements and mechanisms given, not all proofs reproduced."
+    },
+    {
+      "notes": [
+        "4C28"
+      ],
+      "source": "cs-v2",
+      "scope": "Microscopic-to-scattering convergence, inverse-map continuity, regularity preservation and uniqueness; exact main hypotheses cited, §§2–6 not read in full or reconstructed."
+    },
+    {
+      "notes": [
+        "4C24"
+      ],
+      "source": "ferrari-icm2026",
+      "scope": "Continuous dynamic linearization and invariant-measure proof announced in the report; no complete proof supplied by the fixed static supplement."
+    }
+  ],
+  "review_responses": [
+    {
+      "reviewer": "parent-draft-scanner",
+      "status": "addressed",
+      "items": [
+        "Canonical definition links corrected for 4C0E, 4C24, 4C04.",
+        "normalizeFormat applied only to owned notes/reference.",
+        "Reference moved by apply_patch to trees/references per parent correction."
+      ]
+    },
+    {
+      "reviewer": "Singer",
+      "finding_id": "FER-02",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4C0D",
+        "4C0E",
+        "4C0F",
+        "4C10",
+        "4C11",
+        "4C12"
+      ],
+      "repair": "Corrected exact section/equation pins, separated contextual citations from direct local proofs, and synchronized reading scope, proof scope, claim sources and section coverage."
+    },
+    {
+      "reviewer": "Singer",
+      "finding_id": "FER-03",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4C02"
+      ],
+      "repair": "Finite-intensity compact-window envelope followed by a countable intersection gives one probability-one event for all bounded windows and segments."
+    },
+    {
+      "reviewer": "Singer",
+      "finding_id": "FER-04",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4C03"
+      ],
+      "repair": "Canonical 0A7A monotone convergence establishes the general nonnegative expectation identity before absolute integrability and L1/L2 extension."
+    },
+    {
+      "reviewer": "Singer",
+      "finding_id": "FER-05",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4C0B"
+      ],
+      "repair": "1/5 is labeled flux; the normalized mean velocity 2/3 is computed separately."
+    },
+    {
+      "reviewer": "Singer",
+      "finding_id": "FER-06",
+      "status": "author-repaired-pending-reviewer-recheck",
+      "pages": [
+        "4C05",
+        "4C06"
+      ],
+      "repair": "Stable fixed-label ordering resolves permanent coincidences; velocity tie-breaking gives right-time order at transient crossings. General finite touching-rod configurations remain admissible; binary versus multiple collision shifts are distinguished."
+    }
+  ],
+  "cross_topic_requests": [],
+  "validation": {
+    "source_links": "44 normalized owned trees checked after repairs; no missing local target, duplicate target, link inside math or editorial-rule error.",
+    "format": "normalizeFormat rerun only on owned 4C trees and canonical Ferrari reference; zero remaining differences.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.22",
+      "count": 830,
+      "errors": 0,
+      "scope": "Source formula groups; does not substitute for Forester build or browser rendering."
+    },
+    "elementary_checks": {
+      "rod_balance_cases": 600,
+      "tie_order_cases": 4050,
+      "permanent_tie_counterexample": "passed",
+      "isolated_binary_collision": "passed",
+      "flux_and_normalized_mean": "passed",
+      "errors": 0,
+      "unchanged_prior_freeze_checks": {
+        "finite_words_carrier_pitman_and_conservation": 511,
+        "three_one_collision_steps": 5,
+        "scope": "Previously passed; unchanged discrete branch, not rerun during this source/rod repair round."
+      }
+    },
+    "prerequisite_check": "Passed: 44 normalized tree hashes and canonical paths; 42 atomic questions/proof/source records; 130 genuine body-link prerequisite edges; 196 recursively visited nodes in the combined shared-plus-local DAG; no cycles, missing targets or navigation prerequisites. Overview directly reaches all 42 atoms.",
+    "build": "Not run; parent owns registration/build. No live/publication claim.",
+    "independent_review": "Singer requested five repairs (FER-02 through FER-06); all author repairs recorded. Frozen for independent recheck; no reviewer pass claimed.",
+    "review_input": {
+      "path": "research/mathematical-physics-ferrari-review.json",
+      "sha256": "1b6c3b006d96b9e1969a22da617a7da85f55252a4994244a6d262ced10da761b",
+      "status": "Read only; reviewer-owned file not edited."
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-22",
+    "paths": [
+      "trees/math/mathematical-physics/ferrari/4C*.tree",
+      "trees/references/icm2026-ferrari.tree",
+      "research/mathematical-physics-ferrari-packet.json"
+    ],
+    "hashes": "notes[].sha256 records normalized owned tree content; packet digest supplied separately to parent.",
+    "mutation_boundary": "Only owned files; parent handles shared registration, build and review relays.",
+    "revision": 2,
+    "previous_packet_sha256": "1680264ffb7044dce9b9adbba4be140dc4e864302b3547eae20f3459d5cc1bcb"
+  }
+}

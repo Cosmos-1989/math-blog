@@ -248,6 +248,7 @@
       <xsl:when test="$label = 'Context'">上下文</xsl:when>
       <xsl:when test="$label = 'Definition'">定义</xsl:when>
       <xsl:when test="$label = 'Theorem'">定理</xsl:when>
+      <xsl:when test="$label = 'Research result'">研究结论</xsl:when>
       <xsl:when test="$label = 'Proposition'">命题</xsl:when>
       <xsl:when test="$label = 'Proof'">证明</xsl:when>
       <xsl:when test="$label = 'Proof route'">证明路线</xsl:when>

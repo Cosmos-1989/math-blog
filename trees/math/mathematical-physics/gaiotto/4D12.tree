@@ -1,0 +1,16 @@
+\title{变形对象之间的态射微分}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§1 categorical deformation principle; DG special case}
+
+\p{设 #{R} 为有限维增广交换复代数，增广核 #{\mathfrak m} 对某个整数 #{L\geq 0} 满足 #{\mathfrak m^{L+1}=0}，采用[幂零参数约定](4D0E)。设 #{\mathcal C} 是复 [DG 范畴](0BJO)，#{X,Y} 为其对象，#{a\in\operatorname{End}^1(X)\otimes\mathfrak m}、#{b\in\operatorname{End}^1(Y)\otimes\mathfrak m} 满足 #{da+a^2=db+b^2=0}。对 #{f\in\operatorname{Hom}_{\mathcal C}(X,Y)\otimes R} 的齐次态射定义}
+##{D_{b,a}(f)=df+bf-(-1)^{|f|}fa.}
+\p{\strong{证明。}令 #{|f|=r}。分别对三项再次应用 #{D}，得}
+##{\begin{aligned}
+D^2f={}&db\,f-b\,df-(-1)^r df\,a-f\,da\\
+&+b\,df+b^2f-(-1)^rbfa\\
+&+(-1)^rdf\,a+(-1)^rbfa-fa^2\\
+={}&(db+b^2)f-f(da+a^2)=0.
+\end{aligned}}
+\p{再取对象 #{Z} 及满足同一 Maurer–Cartan 方程的 #{c\in\operatorname{End}^1(Z)\otimes\mathfrak m}。对齐次态射 #{g:Y\to Z}，展开得到 #{D_{c,a}(gf)=D_{c,b}(g)f+(-1)^{|g|}gD_{b,a}(f)}，中间对象的两项 #{gbf} 正好相消。故对象变形不仅产生参数空间，也产生它们之间的态射复形与相容复合。这是范畴结构的 DG 特例。}

@@ -1,0 +1,11 @@
+\title{有限种等长硬杆的有效速度方程}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§2.6；固定正杆长特例的代数推导}
+
+\p{固定 #{a>0}，有限种裸速度 #{v_1,\ldots,v_m\in\mathbb R}，物理空间密度 #{\rho_i\geq 0}，令 #{\rho=\sum_i\rho_i}，假设 #{a\rho<1}。准粒子按[速度标签](4C06)追踪。其有效速度方程及唯一解为}
+##{v_i^{\mathrm{eff}}=v_i+a\sum_j\rho_j(v_i^{\mathrm{eff}}-v_j^{\mathrm{eff}}),\qquad v_i^{\mathrm{eff}}=\frac{v_i-a\sum_j\rho_jv_j}{1-a\rho}.}
+\p{\strong{代数证明。}将第一式乘 #{\rho_i} 后求和，双重和由交换 #{i,j} 抵消，故 #{\sum_i\rho_iv_i^{\mathrm{eff}}=\sum_i\rho_iv_i=:J}。原式于是化为 #{(1-a\rho)v_i^{\mathrm{eff}}=v_i-aJ}，给出唯一解；反代验证亦成立。}
+\p{在自由坐标中，若沿速度 #{v_i} 的轨迹对第 #{j} 类粒子的有向穿越数除以时间趋于 #{n_j(v_i-v_j)}，则每次穿越带来的位移 #{a} 给出 #{v_i^{\mathrm{eff}}=v_i+a\sum_j n_j(v_i-v_j)}。利用[密度换算](4C09)即得同一公式。对齐次有限种 [Poisson 气体](4C02)，穿越计数的均值为 #{n_j|v_i-v_j|t}，由[方差公式](4C03)，除以 #{t} 后的方差为 #{n_j|v_i-v_j|/t\to 0}，故带符号的计数在均方意义下满足此极限。}
+\p{同一流量 #{J} 也等于物理杆的速度标签通量。速度差满足 #{v_i^{\mathrm{eff}}-v_j^{\mathrm{eff}}=(v_i-v_j)/(1-a\rho)}，故排序保持。方程讨论准粒子，而非终身保持排序编号的物理杆。}

@@ -1,0 +1,12 @@
+\title{电报过程的连续箱球游程权}
+\date{2026-10-22}
+\taxon{Example}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§3.1；Armendáriz–Blanc–Ferrari–Gabrielli，例 12}
+
+\p{取 #{0<\lambda_-<\lambda_+}。电报过程是取值 #{\{-1,1\}} 的随机函数 #{\eta(x)}：处于状态 #{+1} 时，以尾概率 #{e^{-\lambda_+s}} 的指数时间后跳为 #{-1}；处于 #{-1} 时以参数 #{\lambda_-} 的指数时间后跳为 #{+1}。各次停留时间[独立](00L3)，未来转移只依赖当前状态。选择空间平稳的初始状态后，#{\eta} 给出[连续箱球构形](4C1D)。}
+\p{平稳状态概率由流量平衡 #{p\lambda_+=(1-p)\lambda_-} 与总概率为一确定：}
+##{p=\mathbb P(\eta=1)=\frac{\lambda_-}{\lambda_-+\lambda_+}<\frac 12,\qquad \mathbb E\eta=\frac{\lambda_--\lambda_+}{\lambda_-+\lambda_+}<0.}
+\p{其记录游程具有[孤子乘积权](4C21)}
+##{\alpha(\ell)=\lambda_-\lambda_+e^{-(\lambda_-+\lambda_+)\ell},\qquad Z_\alpha=\lambda_->0.}
+\p{\strong{权的计算。}含 #{n} 个峰的游程有 #{n} 次结束上升的跳跃、#{n-1} 次内部结束下降的跳跃；最后下降到基线只需要尚未跳跃。总上升长度与总下降长度均为 #{\sum_j\ell_j}，故极值坐标的密度为 #{\lambda_+^n\lambda_-^{n-1}\exp(- (\lambda_++\lambda_-)\sum_j\ell_j)=\lambda_-^{-1}\prod_j\alpha(\ell_j)}。例 12 的返回与归一化结论给出 #{Z_\alpha=\lambda_-} 以及有限平均游程长度。记录间隔的参数也是 #{\lambda_-}。}

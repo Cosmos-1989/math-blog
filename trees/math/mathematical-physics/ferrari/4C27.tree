@@ -1,0 +1,11 @@
+\title{有限尺寸箱球流体的可容许密度}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{Croydon–Sasada，§1、引理 5.1；[Ferrari](icm2026-ferrari)，§3.2}
+
+\p{固定最大[孤子尺寸](4C17) #{I<\infty}。Croydon–Sasada 的密度类 #{\mathcal D_{\mathrm{density}}} 由非负函数 #{\rho_i:\lbrack 0,\infty\rparen\to\lbrack 0,\infty\rparen} 组成；每个函数在负半轴延为零后属于 [C¹](0A32)，并满足}
+##{\sum_{i=1}^I2i\rho_i(u)<1,\qquad \sum_{i=1}^Ii\sup_{u\geq 0}\frac{\rho_i(u)}{s_i(u)}<\frac 12,\qquad s_i(u)=1-\sum_{j=1}^I2\min(i,j)\rho_j(u).}
+\p{零延拓的要求包括 #{\rho_i(0)=\rho_i'(0)=0}。#{s_i} 是[槽空间比例](4C19)的宏观表达。令 #{\psi_i(u)=\int_0^u\rho_i(w)dw}，#{\phi_i(u)=u-\sum_j2\min(i,j)\psi_j(u)}。则 #{\phi_i'=s_i>0}，且第二个条件给出一致的正下界：因 #{s_i\leq 1}，有 #{\sum_i2i\rho_i\leq 2\sum_i i\sup(\rho_i /s_i)<1}。因此 #{\phi_i} 有定义在整个正半轴的逆，散射坐标为 #{\bar\psi_i=\psi_i\circ\phi_i^{-1}}，其导数为 #{\rho_i /s_i}。}
+\p{对任一满足 #{\sum_i2i\rho_i<1} 的密度向量，有效速度由 #{MV=v} 确定，其中 #{v_i=i}，#{M_{ij}=s_i\delta_{ij}+2\min(i,j)\rho_j}。该矩阵可逆。}
+\p{\strong{可逆性证明。}先设所有 #{\rho_i>0}，以对角矩阵 #{D=\operatorname{diag}(\sqrt{\rho_i})} 共轭，得到 #{DMD^{-1}=\operatorname{diag}(s_i)+DAD}，#{A_{ij}=2\min(i,j)}。矩阵 #{A} 半正定，因为 #{z^TAz=2\int_0^I(\sum_{i\geq r}z_i)^2dr\geq 0}。又 #{s_i>0}，故共轭矩阵正定。若有零密度，先在正密度指标上解方程，再由各个 #{s_iV_i} 方程唯一求出零密度指标的速度。}

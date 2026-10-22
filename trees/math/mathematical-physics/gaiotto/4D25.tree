@@ -1,0 +1,13 @@
+\title{固定秩投影的复模空间}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§3.1, after (3.8)}
+
+\p{固定 #{t\in\mathbb C^\times} 和整数 #{0\leq n\leq m}，定义}
+##{\mathcal P_{m,n}(t)=
+\{\mu\in M_m(\mathbb C):\mu^2=t\mu,\ \operatorname{Tr}\mu=nt\}.}
+\p{这是[参考态期望](4D24)所在的空间。每个元素唯一确定一对互补[线性子空间](00D7) #{\mathbb C^m=U\oplus K}，其中 #{\dim U=n}，#{\mu} 在 #{U} 上为 #{t}，在 #{K} 上为零。}
+\p{\strong{证明。}令 #{P=\mu /t}。任意 #{x} 可分成 #{Px+(x-Px)}，前项在 #{\operatorname{im}P}、后项在 #{\ker P}。若 #{y=Pz} 且 #{Py=0}，则 #{y=P^2z=Py=0}，故是直和。取适应该分解的基，#{P=\operatorname{diag}(1_r,0)}；迹条件给 #{r=n}。逆向给定互补对，投影唯一存在。}
+\p{选 #{W:\mathbb C^n\to U} 为基同构，令 #{V:\mathbb C^m\to\mathbb C^n} 在 #{U} 上为 #{W^{-1}}、在 #{K} 上为零，则 #{VW=1_n}、#{P=WV}，恢复[矩阵公式](4D24)。这些都是[线性映射](00GC)。}
+\p{#{t=0} 时方程变成 #{\mu^2=0}，迹条件不再固定秩；上面的除法和互补分解失效。这是参数退化处必须单独处理的边界情形。}

@@ -1,0 +1,12 @@
+\title{热平衡随机 Jacobi 矩阵的极限态密度}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §4.3；有效速度论文 v4 Definition 1.2、Lemma 3.14、Remark 3.15，引用 Mazzuca。}
+
+\p{固定 #{\beta,\theta>0} 且[平均伸长](4B09) #{\alpha\ne 0}，取[热平衡](4B08)下的 #{N\times N} [Jacobi 矩阵](4B07) #{L_N}，对角独立服从 #{N(0,\beta^{-1})}，副对角平方独立服从 #{\operatorname{Gamma}(\theta,\beta)}。记其经验谱测度 #{\nu_N=N^{-1}\sum_{j=1}^N\delta_{\lambda_j}}，其中 #{\delta_x} 是在 #{x} 处质量为一的测度。对每个有界连续实函数 #{f}，}
+##{\lim_{N\to\infty}\mathbb E\int f\,d\nu_N=\int_{\mathbb R}f(x)\rho(x)\,dx.}
+\p{这是平均经验谱测度的弱收敛，即用所有有界连续函数测试后收敛。极限的精确归一化为}
+##{F_\theta(x)=\sqrt{\frac{\theta}{\Gamma(\theta)}}\int_0^\infty y^{\theta -1}e^{ixy-y^2/2}\,dy,}
+##{h_{\beta,\theta}(x)=\sqrt{\frac{\beta}{2\pi}}\frac{e^{-\beta x^2/2}}{|F_\theta(\sqrt\beta x)|^2},\qquad\rho(x)=\partial_\theta\big(\theta h_{\beta,\theta}(x)\big).}
+\p{所引随机矩阵定理保证分母不为零，#{\rho} 为总质量一的非负密度，并允许多项式测试函数。这里 #{h_{\beta,\theta}} 是辅助高温谱密度，Toda 的态密度为其参数导数 #{\partial_\theta(\theta h_{\beta,\theta})}。此陈述保持平均收敛的量词；局部谱统计与轨迹浓缩还需另外的估计。}

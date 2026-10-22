@@ -1,0 +1,10 @@
+\title{周期热平衡不变性与开链端点漂移}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 Lemma 3.4；密度与端点计算。}
+
+\p{固定 #{\beta,\theta>0}。[周期 Toda](4B03)在 #{(r_i,p_i)_{i=1}^N} 上保持[热平衡](4B08)的[乘积概率测度](00QB)。它的密度为}
+##{Z^{-1}\exp\left(-\beta\sum_i(p_i^2/2+e^{-r_i})-\theta\sum_i r_i\right).}
+\p{\strong{证明。}坐标向量场为 #{F_{r_i}=p_{i+1}-p_i}、#{F_{p_i}=e^{-r_{i-1}}-e^{-r_i}}，故 #{\sum_i(\partial_{r_i}F_{r_i}+\partial_{p_i}F_{p_i})=0}。总能量与 #{\sum_i r_i} 都守恒，因此密度沿轨道不变。流的导数矩阵 #{J} 满足 #{\dot J=DF\,J}，行列式求导给 #{(\det J)'=(\operatorname{div}F)\det J=0}，所以变量替换保持体积，也就保持此概率密度。这里用到[行列式](0A40)与[ODE 的光滑依赖](00OB)。能量界控制 #{p}，再积分 #{\dot r}，保证流全局存在。}
+\p{固定 #{\Upsilon} 时须取此测度在 #{\sum r_i=\Upsilon} 上的条件分布，伸长变量不再独立。对至少含两个粒子的[有限开链](4B01)，左端满足 #{\dot p_{n_-}=-a_{n_-}^2}；[Gamma 均值](4B09)给 #{\left.\frac{d}{dt}\mathbb E p_{n_-}(t)\right|_{t=0}=-\theta /\beta}。初始动量均值为零，所以开链乘积测度不严格不变。积分与导数交换由能量控制和有限初始能量期望保证。}

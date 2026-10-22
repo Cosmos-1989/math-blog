@@ -1,0 +1,17 @@
+\title{一般线性 Yangian 的 RTT 定义}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Molev–Nazarov–Olshanski](https://arxiv.org/pdf/hep-th/9409025v2)，引言公式 (1)，PDF 第 2–3 页}
+
+\p{固定正整数 #{m}，令 #{V=\mathbb C^m}。在[线性映射](00GC)空间 #{\operatorname{End}(V)} 中，#{E_{ij}} 为矩阵单位。置换算子 #{P\in\operatorname{End}(V\otimes V)} 由 #{P(x\otimes y)=y\otimes x} 给出，即 #{P=\sum_{i,j}E_{ij}\otimes E_{ji}}。}
+\p{令 #{u,v} 为独立形式谱变量，采用无量纲约定 #{R(u-v)=1-P/(u-v)}。一般线性 [Lie 代数](0F00) #{\mathfrak{gl}_m} 的 Yangian 是由 #{t_{ij}^{(r)}}（#{1\leq i,j\leq m,r\geq 1}）生成的含幺结合代数，定义生成级数}
+##{t_{ij}(u)=\delta_{ij}+\sum_{r\geq 1}t_{ij}^{(r)}u^{-r},\qquad
+T(u)=\sum_{i,j}t_{ij}(u)\otimes E_{ij}.}
+\p{在“系数代数、第一辅助空间、第二辅助空间”的顺序下，令}
+##{T_1(u)=\sum_{i,j}t_{ij}(u)\otimes E_{ij}\otimes 1,\qquad
+T_2(v)=\sum_{i,j}t_{ij}(v)\otimes 1\otimes E_{ij}.}
+\p{定义关系为 #{R_{12}(u-v)T_1(u)T_2(v)=T_2(v)T_1(u)R_{12}(u-v)}，其中 #{R_{12}=1\otimes R}。先乘 #{u-v} 消去分母，再逐项比较 #{u^{-1},v^{-1}} 的系数；这样无需为 #{(u-v)^{-1}} 另选展开区域。所得系数关系也可写成}
+##{(u-v)[t_{ij}(u),t_{kl}(v)]
+=t_{kj}(u)t_{il}(v)-t_{kj}(v)t_{il}(u).}
+\p{这给出一个精确的 RTT 约定。把物理介子预解式实现为这个代数的表示，还须补入单位常数项并核对缩放、符号和量子约化关系；RTT 的定义本身并不作这种识别。}

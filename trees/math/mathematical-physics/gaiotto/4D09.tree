@@ -1,0 +1,15 @@
+\title{积分掉向量得到逆行列式}
+\date{2026-10-22}
+\taxon{Example}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§1, (1.6); independent Gaussian calculation}
+
+\p{固定 Hermitian 矩阵 #{M}，令 #{A=1+\mu M^2} 正定，例如实数 #{\mu\geq 0}。在[向量修饰](4D07)中，归一化复高斯积分为}
+##{\frac{\int_{\mathbb C^N} e^{-\bar vAv/\hbar}\,dv}
+{\int_{\mathbb C^N} e^{-\bar vv/\hbar}\,dv}
+=\frac 1{\det A}.}
+\p{\strong{证明。}酉对角化 #{A}，设其正特征值为 #{a_1,\ldots,a_N}。变换保持实体积，每个复坐标的积分由极坐标计算为 #{\pi\hbar /a_i}；除以 #{(\pi\hbar)^N}，乘积即为 [#{\det A}](0A40) 的倒数。}
+\p{在形式参数 #{\mu} 下，对每个特征值应用 #{\log(1+x)=\sum_{r\geq 1}(-1)^{r+1}x^r/r}，得到}
+##{-\log\det(1+\mu M^2)
+=\sum_{r\geq 1}\frac{(-1)^r\mu^r}{r}\operatorname{Tr}M^{2r}.}
+\p{这些新顶点没有原矩阵作用量的 #{\hbar^{-1}} 因子，恰保留一条边界应有的额外 #{\hbar}。解析公式要求正定或另选积分轮廓；形式公式只要求常数矩阵为单位。}

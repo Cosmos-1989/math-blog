@@ -1,0 +1,12 @@
+\title{平滑误差与速度误差的平方根平衡}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §5.3；条件性误差合成。}
+
+\p{设 #{Q:[0,T]\to\mathbb R^N} 为任意轨迹，#{x} 为可微轨迹，#{v\in\mathbb R^N} 固定。假设某个 #{M>0}、#{K>0} 满足 #{\sup_{t\leq T}\|Q(t)-x(t)\|_\infty\leq K\sqrt M}。又假设一族矩阵 #{S(t)} 的[逆范数](4B0X)至多 #{K}，并满足}
+##{S(t)\dot x(t)=\lambda,\qquad\|S(t)v-\lambda\|_\infty\leq K M^{-1/2}.}
+\p{则}
+##{\sup_{t\leq T}\|Q(t)-Q(0)-tv\|_\infty\leq 2K\sqrt M+K^2TM^{-1/2}.}
+\p{\strong{证明。}两矩阵等式相减并乘逆，得 #{\|\dot x-v\|_\infty\leq K^2M^{-1/2}}。积分给 #{\|x(t)-x(0)-tv\|_\infty\leq K^2tM^{-1/2}}。加上时刻零与时刻 #{t} 的两项比较误差即可。取 #{M=T} 得 #{O(\sqrt T)}，若 #{K} 是 #{\log N} 的幂便得到多对数修正。}
+\p{在 Toda 应用中，速度向量为 #{v_k=v_{\mathrm{eff}}(\lambda_k)}。对 #{\chi_M'} 用[浓缩定理](4B0V)时，其振幅 #{M^{-1}} 把原本 #{M^{1/2}} 的误差改为 #{M^{-1/2}}；[碰撞率方程](4B0S)消去主项。建立这些假设及同时控制所有时间属于有效速度定理的深证明，这个误差合成只说明平方根尺度如何出现。}

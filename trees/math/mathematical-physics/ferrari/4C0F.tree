@@ -1,0 +1,12 @@
+\title{紧支撑非齐次硬杆气体的 Euler 密度极限}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§2.6，命题 2.2，式 (2.27)–(2.29)；有限种紧支撑初值、固定时刻的概率收敛直接证明}
+
+\p{固定 #{m<\infty}、#{a>0} 和速度 #{v_i}。设 #{f_i^0\geq 0} 为紧支撑连续函数，独立 [Poisson 测度](4C02) #{N_{\varepsilon,i}} 的强度为 #{\varepsilon^{-1}f_i^0(x)\,dx}。杆长为 #{\varepsilon a}。按[高度面构造](4C08)定义 #{D_{\varepsilon,t}(z)=z+\varepsilon a\sum_jN_{\varepsilon,j}K_{(z,t)}(\cdot,v_j)}，并置}
+##{f_i(z,t)=f_i^0(z-v_it),\quad D_t(z)=z+a\sum_j\int K_{(z,t)}(x,v_j)f_j^0(x)\,dx.}
+\p{此时 #{D_t'(z)=1+a\sum_jf_j(z,t)\geq 1}。定义物理密度 #{\rho_i(D_t(z),t)=f_i(z,t)/D_t'(z)}。对固定 #{t} 及任意紧支撑连续测试函数 #{\varphi_i}，经验测度满足[概率收敛](00L9)}
+##{\varepsilon\sum_i\int\varphi_i(D_{\varepsilon,t}(x+v_it))\,N_{\varepsilon,i}(dx)\longrightarrow\sum_i\int\varphi_i(y)\rho_i(y,t)\,dy.}
+\p{\strong{证明。}各类缩放累计计数在有限网格点上由 [Poisson 方差公式](4C03)收敛于其累计强度。累计函数单调，极限连续；先取使极限在每格振幅小于 #{\delta} 的网格，再夹逼格内值，得到全空间一致的概率收敛。因此固定 #{t} 下 #{\sup_z|D_{\varepsilon,t}(z)-D_t(z)|\to 0}。}
+\p{缩放总点数收敛于有限总质量。测试函数在包含全部相关点像的紧集上一致连续，故以 #{D_t} 替换 #{D_{\varepsilon,t}} 的误差趋于零。替换后测试函数确定，再用 Poisson 方差公式得到极限 #{\sum_i\int\varphi_i(D_t(x+v_it))f_i^0(x)\,dx}。依次换元 #{z=x+v_it} 与 #{y=D_t(z)} 即为所述密度。}

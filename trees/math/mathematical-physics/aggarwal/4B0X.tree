@@ -1,0 +1,12 @@
+\title{严格对角占优给出最大范数逆估计}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §5.3；有限矩阵基本估计。}
+
+\p{设实或复 #{N\times N} 矩阵 #{S} 满足 #{|S_{kk}|-\sum_{i\ne k}|S_{ki}|\geq\delta>0}，称为具有间隙 #{\delta} 的严格行对角占优。则 #{S} 可逆，且对最大坐标范数 #{\|w\|_\infty=\max_i|w_i|} 有}
+##{\|S^{-1}r\|_\infty\leq\delta^{-1}\|r\|_\infty.}
+\p{\strong{证明。}选 #{k} 使 #{|w_k|=\|w\|_\infty}。三角不等式给}
+##{|(Sw)_k|\geq |S_{kk}||w_k|-\sum_{i\ne k}|S_{ki}||w_i|\geq\delta\|w\|_\infty.}
+\p{所以核为零，#{S} 作为[线性映射](00GC)是单射。设 #{e_1,\ldots,e_N} 为实或复坐标空间的标准基。若 #{\sum_i c_iSe_i=0}，则 #{S(\sum_i c_ie_i)=0}；单射性给 #{\sum_i c_ie_i=0}，进而所有 #{c_i=0}。因此 #{Se_1,\ldots,Se_N} 线性无关，由[有限基交换定理](00GN)，这 #{N} 个向量可替换全部标准基并张成该空间。故 #{S} 也是满射，从而可逆。将 #{w=S^{-1}r} 代入前面的下界，即得所示逆范数估计。}
+\p{在[比较动力学](4B0W)中，非对角元为 #{-2\operatorname{sgn}(\alpha)\chi_M'(x_k-x_i)\ell_d(\lambda_k-\lambda_i)}，其符号不固定。每行和为一只给 #{S\mathbf 1=\mathbf 1}，不足以保证逆的控制。有效速度论文 v4 Lemma 6.6 在小 #{\theta} 下证明所需随机矩阵的对角占优；一般 #{\theta} 的可逆性仍是单独问题。}

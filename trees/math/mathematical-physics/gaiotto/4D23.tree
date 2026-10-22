@@ -1,0 +1,22 @@
+\title{介子双线性子的矩阵交换关系}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§3.1, (3.3), (3.7)}
+
+\p{设有 #{m} 个味、#{N} 个颜色的[费米振子](4D22)，满足 #{\{\psi_i^\alpha,\bar\psi_\beta^j\}=\hbar\delta_i^j\delta^\alpha_\beta}，同类反交换子为零。取 #{\hbar\ne 0}，定义偶算符}
+##{M^i_j=\hbar^{-1}\sum_{\alpha=1}^N\bar\psi^i_\alpha\psi_j^\alpha.}
+\p{这些算符满足[矩阵 Lie 代数](0F00)的关系}
+##{[M^i_j,M^k_l]=\delta_j^kM^i_l-\delta_l^iM^k_j.}
+\p{\strong{证明。}先不除以 #{\hbar^2}。把两个乘积中相邻的湮灭、产生算子换序：}
+##{\begin{aligned}
+\bar\psi^i_\alpha\psi_j^\alpha\bar\psi^k_\beta\psi_l^\beta
+&=\hbar\delta_j^k\delta^\alpha_\beta
+\bar\psi^i_\alpha\psi_l^\beta
+-\bar\psi^i_\alpha\bar\psi^k_\beta\psi_j^\alpha\psi_l^\beta,\\
+\bar\psi^k_\beta\psi_l^\beta\bar\psi^i_\alpha\psi_j^\alpha
+&=\hbar\delta_l^i\delta^\beta_\alpha
+\bar\psi^k_\beta\psi_j^\alpha
+-\bar\psi^k_\beta\bar\psi^i_\alpha\psi_l^\beta\psi_j^\alpha.
+\end{aligned}}
+\p{第二式四次项中交换两个产生算子和两个湮灭算子，两个负号相乘为正，故与第一式四次项相同。相减、求颜色和并除 #{\hbar^2}，即得结论。这个恒等式在有限 #{N} 精确成立，无须先取大 #{N} 极限。}

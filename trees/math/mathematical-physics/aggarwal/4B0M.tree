@@ -1,0 +1,13 @@
+\title{开链端点谱权重的精确指数演化}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 Lemma 3.6；报告 (5.3)。}
+
+\p{对[开链 Lax 对](4B05)，选 #{\dot u_j=Bu_j} 的实单位特征向量，其[端点坐标非零](4B07)。令 #{w_j(t)=|u_j(n_-;t)|^2}，则}
+##{w_j(t)=\frac{w_j(0)e^{-\lambda_jt}}{\sum_k w_k(0)e^{-\lambda_kt}}.}
+\p{\strong{证明。}[正交共轭](4B06)保证这一特征向量演化保持特征方程与归一性。首行给 #{a_{n_-}u_j(n_-+1)=(\lambda_j-p_{n_-})u_j(n_-)}，而 #{\dot u_j(n_-)=-a_{n_-}u_j(n_-+1)/2}，所以}
+##{\frac{d}{dt}\log w_j(t)=p_{n_-}(t)-\lambda_j.}
+\p{积分后各 #{w_j(t)} 只有共同乘子；由正交基的完备性 #{\sum_jw_j(t)=1} 固定该乘子即得公式。特别地，共同对数归一项恰为}
+##{C(t)=-\log\sum_k w_k(0)e^{-\lambda_kt}=\int_0^tp_{n_-}(s)\,ds=q_{n_-}(t)-q_{n_-}(0).}
+\p{端点坐标本身衰减而不作匀速平移；将其对数转为准粒子空间位置，是散射论证的另一部分。}

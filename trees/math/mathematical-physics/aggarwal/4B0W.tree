@@ -1,0 +1,12 @@
+\title{用光滑比较动力学替代跳跃的中心轨迹}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §5.3；有效速度论文 v4 §2.2、§7 的证明机制。}
+
+\p{固定非零实数 #{\alpha}、正实数 #{M,d>0} 及互异实谱参数 #{\lambda_1,\ldots,\lambda_N}。在 Toda 应用中，#{\alpha} 取[平均伸长](4B09)。采用尺度 #{M} 的[平滑次序函数](4B0U) #{\chi_M} 与正则化参数 #{d} 的核 #{\ell_d}。对 #{x\in\mathbb R^N}，定义矩阵作用}
+##{(S(x)w)_k=w_k+2\operatorname{sgn}(\alpha)\sum_{i\ne k}(w_k-w_i)\chi_M'(x_k-x_i)\ell_d(\lambda_k-\lambda_i).}
+\p{在 #{S(x)} 可逆的开区域中，方程 #{\dot x=S(x)^{-1}\lambda} 是光滑的有限维[ODE](00OB)。其等价形式是}
+##{\frac{d}{dt}\left[x_k+2\operatorname{sgn}(\alpha)\sum_{i\ne k}\chi_M(x_k-x_i)\ell_d(\lambda_k-\lambda_i)\right]=\lambda_k.}
+\p{这个等价式由链式法则逐项求导得到。故光滑比较动力学对正则化散射坐标给出精确线性演化。局部存在并不保证整段时间存在，也不保证它接近实际[中心轨迹](4B0D)。}
+\p{\strong{证明概要。}有效速度论文 §7 构造并控制带内部区域处理的比较动力学，先用正则化散射误差比较两者，再用[空间谱浓缩](4B0V)识别速度。真正的 #{Q_j(t)} 可能跳跃，#{R(t)=O(M^{1/2}(\log N)^C)} 也不能直接求导成小误差。本处的矩阵方程说明比较构造的代数作用；随机比较与延拓估计是所引证明的额外部分。}

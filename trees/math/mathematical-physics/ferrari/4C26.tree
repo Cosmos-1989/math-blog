@@ -1,0 +1,12 @@
+\title{电报游程的显式 Poisson 槽强度}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，式 (3.26)–(3.27)；Armendáriz–Blanc–Ferrari–Gabrielli，§3.2.1}
+
+\p{对[电报游程权](4C25)，令 #{d=(\lambda_+-\lambda_-)/2>0}、#{c=(\lambda_++\lambda_-)/2}、#{K=\log(\lambda_+/\lambda_-)/(2d)}。则其 [Poisson 槽强度](4C22)为}
+##{q(\ell)=\frac{d^2}{\sinh^2(d(\ell+K))},\qquad \int_0^\infty q(\ell)\,d\ell=\lambda_-.}
+\p{\strong{证明。}置 #{Q(\ell)=\int_0^\ell(\ell -h)q(h)dh}、#{A=Q-c\ell}。权关系要求 #{A''=\lambda_-\lambda_+e^{2A}}、#{A(0)=0,A'(0)=-c}。取}
+##{A(\ell)=\log\frac{d}{\sqrt{\lambda_-\lambda_+}\sinh(d(\ell+K))}.}
+\p{由于 #{d\coth(dK)=c} 及 #{d^2/\sinh^2(dK)=\lambda_-\lambda_+}，初值成立。直接求导得到 #{A''=d^2/\sinh^2(d(\ell+K))=\lambda_-\lambda_+e^{2A}}，故 #{Q''=q} 满足权关系。积分利用 #{(\coth u)'=-1/\sinh^2u}，得 #{\int q=d(\coth(dK)-1)=c-d=\lambda_-}。指数尾衰减同时给出 #{\int\ell q(\ell)d\ell<\infty}。}
+\p{临界情形 #{\lambda_+=\lambda_-=\lambda>0} 对应 #{A(\ell)=-\log(1+\lambda\ell)}、#{q(\ell)=\lambda^2/(1+\lambda\ell)^2}。此时 #{\int q=\lambda}，而 #{\int\ell q(\ell)d\ell=\infty}。由有限平均长度判据，[空间周期归一化](4C23)所需的平均长度发散；临界强度不能据此构造具有正记录密度的空间概率分布。}

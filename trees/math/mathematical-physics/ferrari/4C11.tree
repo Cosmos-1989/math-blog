@@ -1,0 +1,12 @@
+\title{经验场一阶变分的采样项与位移项}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§2.7，定理 2.3，式 (2.32)–(2.33) 为背景；经验场泛函的确定性一阶变分直接证明}
+
+\p{固定有限种速度、#{a>0} 和时刻 #{t}。设 #{\mu_i} 为紧支撑有限正[测度](00Q2)，#{\nu_i} 为紧支撑有限符号测度，即两个有限正测度之差。用[穿越核](4C07)定义}
+##{D_\mu(z)=z+a\sum_j\int K_{(z,t)}(u,v_j)\,d\mu_j(u),\qquad F(\mu)=\sum_i\int\varphi_i(D_\mu(x+v_it))\,d\mu_i(x),}
+\p{其中 #{\varphi_i} 为具有有界二阶导数的 C² 测试函数。令 #{A_\nu(z)=a\sum_j\int K_{(z,t)}(u,v_j)\,d\nu_j(u)}。则}
+##{\left.\frac{d}{ds}F(\mu+s\nu)\right|_{s=0}=\sum_i\int\varphi_i(D_\mu(x+v_it))\,d\nu_i(x)+\sum_i\int\varphi_i'(D_\mu(x+v_it))A_\nu(x+v_it)\,d\mu_i(x).}
+\p{\strong{证明。}由于 #{|K|\leq 1}，#{|A_\nu|\leq a\sum_j|\nu_j|(\mathbb R)}；这里 #{|\nu_j|} 为正负部分质量之和。又 #{D_{\mu+s\nu}=D_\mu+sA_\nu}。Taylor 公式的余项一致为 #{O(s^2)}，分别对 #{\mu_i+s\nu_i} 积分，保留一次项即得结论。即使 #{\mu+s\nu} 不是正测度，所用积分泛函仍按符号测度定义。}
+\p{第一项来自点数采样，第二项来自坐标伸长。仅对位置映射线性化会漏去第一项；例如 #{a=0} 时第二项消失，而普通经验测度仍有采样涨落。将这一确定性变分用于随机场的中心极限定理，还须证明随机余项在所选测试函数空间中可控。}

@@ -1,0 +1,11 @@
+\title{截断局域特征向量产生邻近特征值}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §5.1 的确定性机制；有限维残差证明。}
+
+\p{设 #{L} 为[Jacobi 矩阵](4B07)，#{Lu=\lambda u}、#{\|u\|_2=1}，#{J=\{l,\ldots,r\}} 为指标子区间。记 #{L_J} 为主子矩阵，#{v=(u_l,\ldots,u_r)}，假设 #{\|v\|_2>0}。则}
+##{\operatorname{dist}(\lambda,\operatorname{spec}L_J)\leq\frac{|a_{l-1}u_{l-1}|+|a_ru_{r+1}|}{\|v\|_2},}
+\p{缺少的端点项取零。\strong{证明。}内部各行满足特征方程，残差 #{(L_J-\lambda I)v} 只在两端有项 #{-a_{l-1}u_{l-1}}、#{-a_ru_{r+1}}，其范数不超过分子，单点区间也成立。按[正交特征基](0N0B)展开 #{v=\sum c_jw_j}，有}
+##{\|(L_J-\lambda I)v\|_2^2=\sum_j|c_j|^2|\mu_j-\lambda|^2\geq\operatorname{dist}(\lambda,\operatorname{spec}L_J)^2\|v\|_2^2.}
+\p{若 #{|u_i|\leq Ae^{-c|i-\varphi|}}，端点距 #{\varphi} 至少 #{\ell}，边权至多 #{M} 且 #{\|v\|_2\geq 1 /2}，便得到至多 #{4MAe^{-c\ell}} 的谱误差。此结论只给邻近特征值的存在；逐个匹配、唯一性及对数谱间距估计需要更强的随机输入。}

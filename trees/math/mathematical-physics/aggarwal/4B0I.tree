@@ -1,0 +1,12 @@
+\title{Lax 矩阵幂的局部守恒律}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 Definition 2.3；Lax 方程的逐项推导。}
+
+\p{对[开链 Lax 矩阵](4B05)，整数 #{m\geq 0} 的谱局部荷定义为 #{k_i^{(m)}=(L^m)_{ii}}。它只依赖距 #{i} 至多 #{m} 的矩阵条目，因为矩阵乘法中的每一步只能保持指标或移动一格。定义 #{j_i^{(m)}=a_i(L^m)_{i,i+1}}，端点流取零，则}
+##{\dot k_i^{(m)}=j_{i-1}^{(m)}-j_i^{(m)}.}
+\p{\strong{证明。}乘积法则使 #{\frac{d}{dt}L^m=\sum_{r=0}^{m-1}L^r[B,L]L^{m-1-r}=[B,L^m]}，中间项相消。取对角元，#{B} 的上下副对角及 #{L^m} 的对称性给出所示差分。#{m=0} 时两边皆零。}
+\p{对指标区间 #{l\leq i\leq r} 求和得到 #{\frac{d}{dt}\sum_{i=l}^rk_i^{(m)}=j_{l-1}^{(m)}-j_r^{(m)}}。整链的总荷为[谱矩](4B06) #{\sum_j\lambda_j^m}。前三个荷是}
+##{k_i^{(0)}=1,\qquad k_i^{(1)}=p_i,\qquad k_i^{(2)}=p_i^2+a_{i-1}^2+a_i^2.}
+\p{指标边上的流与穿过固定空间位置的流是不同观测量；后者还涉及粒子位置 #{q_i(t)} 的变化。}

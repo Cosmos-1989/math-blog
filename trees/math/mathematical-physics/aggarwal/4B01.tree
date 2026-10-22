@@ -1,0 +1,12 @@
+\title{有限开链 Toda 系统的 Hamilton 方程}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §2；散射论文 v4 §2.1.1。}
+
+\p{设整数区间 #{I=\{n_-,\ldots,n_+\}} 有 #{N=n_+-n_-+1} 个指标。位置 #{q_i\in\mathbb R}、动量 #{p_i\in\mathbb R} 的有限开链 Toda Hamilton 函数为}
+##{H(p,q)=\frac 12\sum_{i=n_-}^{n_+}p_i^2+\sum_{i=n_-}^{n_+-1}e^{q_i-q_{i+1}}.}
+\p{Hamilton 方程在这些坐标中定义为 #{\dot q_i=\partial H/\partial p_i}、#{\dot p_i=-\partial H/\partial q_i}，偏导数见[全微分](0A33)。因此}
+##{\dot q_i=p_i,\qquad \ddot q_i=\dot p_i=e^{q_{i-1}-q_i}-e^{q_i-q_{i+1}}.}
+\p{左端 #{i=n_-} 的第一项及右端 #{i=n_+} 的第二项取零；它们表示缺少相应的弹簧。也可形式地写 #{q_{n_--1}=-\infty}、#{q_{n_++1}=+\infty}。相邻指的是指标相邻，初值不要求 #{q_i<q_{i+1}}，运动中也不施加硬核不穿越条件。}
+\p{这是位置的二阶方程，初值须给出 #{q_i(0)} 和 #{p_i(0)}。[一阶 Toda 调制系统](4911)则只给位置变量的一阶演化，两者的相空间与渐近问题不同。}

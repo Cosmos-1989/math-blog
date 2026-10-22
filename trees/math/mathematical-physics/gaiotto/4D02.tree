@@ -1,0 +1,13 @@
+\title{Hermitian 高斯矩的双指标配对}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§1, (1.1)–(1.2)}
+
+\p{对[高斯矩阵](4D01)，#{1\leq i,j,k,l\leq N}，协方差为}
+##{\langle M_{ij}M_{kl}\rangle_0=\hbar\delta_{il}\delta_{jk}.}
+\p{\strong{证明。}对角元方差为 #{\hbar}，不同对角元独立。若 #{i\ne j}，则 #{M_{ji}=\overline{M_{ij}}}，故 #{\langle M_{ij}M_{ji}\rangle_0=\hbar}；同向的 #{\langle M_{ij}^2\rangle_0=0} 由复高斯圆对称性得到。其余组合因独立且均值为零而消失。}
+\p{任取偶数个矩阵元 #{X_a=M_{i_a j_a}}，其矩为所有两两配对的协方差乘积之和。可直接证明这个版本的 Wick 公式：把全部独立实高斯坐标记为 #{x_r}，写 #{X_a=\sum_r c_{ar}x_r}；一维配方给出}
+##{\left\langle e^{\sum_a s_aX_a}\right\rangle_0
+=\exp\left(\frac 12\sum_{a,b}s_as_b\langle X_aX_b\rangle_0\right).}
+\p{取 #{s_1\cdots s_{2m}} 的系数。指数展开只有二次项的第 #{m} 次幂有贡献，#{2^m m!} 种排序恰被分母消去，余下每个配对一次。奇数矩为零。这也与[复高斯 Wick 公式](441B)相容。两个 Kronecker 符号分别连接两侧指标，因而一条传播子自然画成一条带。}

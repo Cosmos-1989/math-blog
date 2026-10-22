@@ -1,0 +1,12 @@
+\title{Poisson 积分的均值与协方差}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§§2.3–2.5；Poisson 积分的直接计算}
+
+\p{设 #{N} 是强度 #{\mu} 的 [Poisson 随机测度](4C02)。对实值 #{f,g\in L^1(\mu)\cap L^2(\mu)}，记 #{Nf=\int f\,dN}、#{\mu f=\int f\,d\mu}，这里使用 [Lebesgue 积分](00Q5)与 [L² 范数](0A6A)。则}
+##{\mathbb E(Nf)=\mu f,\qquad \operatorname{Cov}(Nf,Ng)=\int fg\,d\mu.}
+\p{\strong{证明。}先令 #{f=\sum_jc_j1_{A_j}}，其中 #{A_j} 两两不交且测度有限。由 [Poisson 分布](00L6)的均值和方差，#{\mathbb ENf=\sum_jc_j\mu(A_j)}，#{\operatorname{Var}(Nf)=\sum_jc_j^2\mu(A_j)}。对两个简单函数取共同分割即得协方差公式。}
+\p{对任意非负可测函数 #{h}，利用 #{\mu} 的可数有限测度覆盖，取具有有限测度支撑的非负简单函数 #{h_n\uparrow h}。分别对随机测度 #{N}、期望和强度测度 #{\mu} 应用[单调收敛定理](0A7A)，得到 #{\mathbb E Nh=\lim_n\mathbb E Nh_n=\lim_n\mu h_n=\mu h}，允许两边为无穷。特别地，若 #{f\in L^1(\mu)}，则 #{\mathbb E N|f|=\mu|f|<\infty}，故 #{N|f|<\infty} 几乎必然成立，#{Nf} 因而绝对收敛。}
+\p{取同时在 #{L^1} 与 #{L^2} 中收敛于 #{f} 的简单函数 #{f_n}。[期望](00L1)估计 #{\mathbb E N|f_n-f|=\mu|f_n-f|} 给出积分的 #{L^1} 收敛；已证的等距式使 #{Nf_n-\mu f_n} 在 #{L^2} 中收敛。两种极限一致，遂得一般公式；对 #{f+g} 作极化得到[协方差](00L2)。}
+\p{特别地，#{\operatorname{Var}(Nf)=\mu(f^2)}。即使 #{\mu(E)=1}，此式也没有减去 #{(\mu f)^2}；随机点数自身的涨落已包括在内。}

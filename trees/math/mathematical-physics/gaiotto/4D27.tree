@@ -1,0 +1,24 @@
+\title{双 Howe 对偶的两个 Fock 表示}
+\date{2026-10-22}
+\taxon{Research result}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§3.1, (3.4), (3.8)–(3.11)}
+
+\p{固定正整数 #{m,N}。报告引用斜 Howe 对偶给出有限维表示分解}
+##{\left(\Lambda^\bullet(\mathbb C^m\otimes\mathbb C^N)\right)^{SU(N)}
+=\bigoplus_{n=0}^m R_{N,n}.}
+\p{其中 #{R_{N,n}} 是 #{U(m)} 的最高权 #{(\underbrace{N,\ldots,N}_{n},0,\ldots,0)} 表示，等价于宽 #{N}、高 #{n} 的矩形 Young 图。#{n} 称重子数；#{m=1} 退化为[真空与满占据态](4D22)。这条分解是引用的表示论定理，证明需完整的 Schur 函子分解。}
+\p{第二次 Howe 对偶将同一个 #{R_{N,n}} 写为 #{mn} 个玻色振子的对称 Fock 空间中、在 #{U(n)} 一侧按 #{\det^N} 变换的子空间。指标的对偶选择须与最高权约定一致。这时 #{N} 从颜色维数变成量子约化的权参数，#{n,m} 保持固定。}
+\p{在[介子归一化](4D23)下，报告还给出该扇区上的有限 #{N} 关系}
+##{M^i_jM^j_k=(N+m-n)M^i_k,\qquad\operatorname{Tr}M=Nn.}
+\p{\strong{二次关系的验证。}在 #{\hbar>0} 的 Fock 模型中，置 #{a_i^\alpha=\psi_i^\alpha /\sqrt\hbar}、#{\bar a_\alpha^i=\bar\psi_\alpha^i/\sqrt\hbar}。令颜色算符 #{G^\beta_\alpha=\sum_j\bar a_\beta^j a_j^\alpha}。在 #{Nn} 粒子的规范不变扇区上，其迹零部分作用为零，总迹为 #{Nn}，所以 #{G^\beta_\alpha=n\delta^\beta_\alpha}。对该扇区中的态 #{v}，反交换关系给}
+##{\begin{aligned}
+\sum_jM^i_jM^j_k
+&=mM^i_k-\sum_{\alpha,\beta}\bar a_\alpha^iG^\beta_\alpha a_k^\beta,\\
+[G^\beta_\alpha,a_k^\gamma]&=-\delta^\gamma_\beta a_k^\alpha,\\
+\sum_\beta G^\beta_\alpha a_k^\beta v
+&=\sum_\beta(a_k^\beta G^\beta_\alpha -a_k^\alpha)v
+=(n-N)a_k^\alpha v.
+\end{aligned}}
+\p{代回即得 #{(M^2)^i_kv=(N+m-n)M^i_kv}；#{\operatorname{Tr}M=Nn} 是总粒子数。关键是先把 #{G} 移到右边再使用规范约束，因为单个 #{a_k^\beta v} 不在规范不变扇区。这也说明该关系只在约化扇区成立。}
+\p{重标度为 #{\hbar M} 后，固定 #{t=N\hbar} 的极限给出 #{\mu^2=t\mu}。它联系到[Grassmann 余切丛的箭图模型](2T0Y)，并将原来的大秩问题转成固定维相空间的半经典问题。}

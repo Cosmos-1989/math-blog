@@ -1,0 +1,12 @@
+\title{有限随机 Toda 的离散 Thouless 估计}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 Proposition 6.1；报告 §5.2。}
+
+\p{采用[散射尺度假设](4B12)，固定 #{t\in[0,T]}。以至少 #{1-c^{-1}e^{-c(\log N)^2}} 的概率，对所有满足}
+##{n_-+T(\log N)^5+N^{1/100}\leq\varphi_t(k)\leq n_+-T(\log N)^5-N^{1/100}}
+\p{的谱标签 #{k}，有}
+##{\left|\log|u_k(n_-;t)|-\sum_{i=n_-}^{\varphi_t(k)-1}\log a_i(t)+\sum_{j:\varphi_t(j)<\varphi_t(k)}\log|\lambda_j-\lambda_k|\right|\leq(\log N)^6.}
+\p{由[位置与边权的关系](4B05)，第一串边权对数的两倍等于 #{q_{n_-}(t)-Q_k(t)}。于是端点特征向量的衰减被写成位置差与离散对数相互作用。此处求和内部始终是 #{\lambda_j-\lambda_k}，与所加总的标签 #{j} 一致。}
+\p{这是引用的随机矩阵估计，其证明以[谱行列式恒等式](4B0N)为起点，需双向谱匹配、传递矩阵及小间距控制。报告 §5.2 用连续 Thouless 公式解释这一结构：若把每指标的对数衰减记作非正数 #{\gamma(\lambda)}，采用[热平衡态密度](4B0B)，则对应符号为 #{2\gamma(\lambda)=-\alpha -2\int\log|\lambda -x|\rho(x)\,dx}。该连续公式只描述平均指数；上面的有限和保留了构成散射位移的局部谱信息。}

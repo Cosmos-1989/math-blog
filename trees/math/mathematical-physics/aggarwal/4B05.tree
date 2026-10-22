@@ -1,0 +1,11 @@
+\title{Toda 的 Flaschka 变量与 Lax 归一化}
+\date{2026-10-22}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §2；散射论文 v4 (2.3)–(2.4)、Definition 2.1。}
+
+\p{对[开链 Toda](4B01)，设 #{a_i=e^{(q_i-q_{i+1})/2}>0}、#{b_i=p_i}，并令 #{a_{n_--1}=a_{n_+}=0}。其 Flaschka 方程为}
+##{\dot a_i=\tfrac 12a_i(b_i-b_{i+1}),\qquad\dot b_i=a_{i-1}^2-a_i^2.}
+\p{第一式由[指数函数](0A46)的导数及链式法则得到，第二式是原动量方程。定义实对称三对角矩阵 #{L}，令 #{L_{ii}=b_i}、#{L_{i,i+1}=L_{i+1,i}=a_i}，其余项为零。再定义反对称矩阵 #{B}，其上副对角为 #{-a_i/2}，下副对角为 #{a_i/2}。则}
+##{\dot L=[B,L]=BL-LB.}
+\p{对角元为 #{a_{i-1}^2-a_i^2}，上副对角元为 #{a_i(b_i-b_{i+1})/2}；第二副对角的两项 #{-a_ia_{i+1}/2} 相消，更远的项为零。这逐项验证了 Lax 方程。此处对角元是 #{p_i}，没有额外的 #{-1/2}；时间与谱参数均沿用这套归一化。}

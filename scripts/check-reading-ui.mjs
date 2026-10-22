@@ -14,7 +14,7 @@ const css = fs.readFileSync(path.join(root, 'theme-overrides/reading.css'), 'utf
 assert(css.includes('--heading-font: var(--body-font)'), 'Page headings must share the body font family');
 assert(css.includes('font-size: clamp(26px, 2.2vw, 32px)'), 'Desktop heading scale changed');
 assert(css.includes('h1 { font-size: 24px; }'), 'Mobile heading scale changed');
-const pages = ['index', '0062', '013Z', '004M', '004R', '003J', '009E', '4817'];
+const pages = ['index', '0062', '013Z', '004M', '004R', '003J', '009E', '4817', '4D19'];
 for (const id of pages) {
   const html = fs.readFileSync(path.join(output, id, 'index.html'), 'utf8');
   for (const marker of ['lang="zh-CN"', 'reading.css?v=', 'reading.js?v=', 'id="main-content"', 'class="tree-content"', 'class="search-trigger"']) {
@@ -29,6 +29,10 @@ for (const id of pages) {
   if (id === '4817') {
     assert(/class="taxon">\s*计算/.test(html), 'Calculation labels must be localized');
     assert(!/class="taxon">\s*Calculation/.test(html), 'Unlocalized Calculation label');
+  }
+  if (id === '4D19') {
+    assert(/class="taxon">\s*研究结论/.test(html), 'Research-result labels must be localized');
+    assert(!/class="taxon">\s*Research result/.test(html), 'Unlocalized research-result label');
   }
 }
 console.log(`Reading theme: generated assets, heading typography and ${pages.length} representative static HTML pages passed.`);

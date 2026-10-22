@@ -1,0 +1,10 @@
+\title{有限二分关系的 Hall 匹配判据}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Hall 匹配判据；[Aggarwal](icm2026-aggarwal)，散射论文 v4 Lemma 2.7 的组合前提。}
+
+\p{设有限集合 #{A,B} 等势，关系 #{E\subseteq A\times B}。对 #{S\subseteq A}，记邻集 #{\mathcal N(S)=\{b\in B:\exists a\in S,(a,b)\in E\}}。存在双射 #{\sigma:A\to B} 满足 #{(a,\sigma(a))\in E}，当且仅当每个 #{S\subseteq A} 都满足 #{|\mathcal N(S)|\geq|S|}。这样的双射称完美匹配。}
+\p{\strong{证明。}必要性来自 #{\sigma(S)\subseteq\mathcal N(S)}。充分性对 #{n=|A|} 归纳，#{n=0,1} 直接成立。若存在非空真子集 #{S\subset A} 满足 #{|\mathcal N(S)|=|S|}，则 #{S,\mathcal N(S)} 的限制关系仍满足判据。余下两集合也满足判据：对 #{U\subseteq A\setminus S}，应用原条件于 #{U\cup S} 得}
+##{|\mathcal N(U)\setminus\mathcal N(S)|=|\mathcal N(U\cup S)|-|\mathcal N(S)|\geq |U|.}
+\p{归纳分别匹配这两个较小关系，再合并。若没有这样的 #{S}，所有非空真子集均有 #{|\mathcal N(S)|\geq|S|+1}。任取一条边 #{(a,b)}，删除其两端。对余下任何非空子集，删除 #{b} 至多损失一个邻点，所以仍满足判据。归纳得到余下匹配，加回 #{(a,b)} 即可。}

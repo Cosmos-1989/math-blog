@@ -1,0 +1,12 @@
+\title{谱权重的边界泄漏控制局部荷误差}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §5.1 的有限维解释；精确谱分解计算。}
+
+\p{设 #{L} 实对称，#{u_j} 为[正交单位特征基](0N0B)，#{\lambda_j} 为其特征值。任取指标集合 #{I} 和[中心双射](4B0D) #{\varphi}，记 #{w_j(I)=\sum_{i\in I}|u_j(i)|^2}。则对整数 #{m\geq 0}，}
+##{\sum_{i\in I}(L^m)_{ii}-\sum_{j:\varphi(j)\in I}\lambda_j^m=\sum_j\lambda_j^m\big(w_j(I)-1_{\varphi(j)\in I}\big).}
+\p{\strong{证明。}矩阵对角化给 #{(L^m)_{ii}=\sum_j\lambda_j^m|u_j(i)|^2}，对 #{i\in I} 求和并减去中心项即可。约定 #{\lambda^0=1}，包括 #{\lambda=0}。}
+\p{若 #{|\lambda_j|\leq\Lambda}，除至多 #{B} 个标签外，所有中心在 #{I} 内的向量满足 #{1-w_j(I)\leq\varepsilon}，所有中心在外的向量满足 #{w_j(I)\leq\varepsilon}，则}
+##{\left|\sum_{i\in I}(L^m)_{ii}-\sum_{\varphi(j)\in I}\lambda_j^m\right|\leq\max\{1,\Lambda^m\}(B+N\varepsilon).}
+\p{这是有限和的三角不等式。对区间 #{I}，[局域化](4B0F)使远离两端的谱权重泄漏很小；双射把近边界的标签数控制为边界层的指标数。由此可看见[局部荷](4B0I)为什么能由附近准粒子恢复。随机一致估计与空间区间的转换仍是荷比较定理的额外内容。}

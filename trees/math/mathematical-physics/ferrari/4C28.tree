@@ -1,0 +1,13 @@
+\title{单侧有限尺寸箱球系统的流体极限}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Croydon–Sasada，定理 1.1、1.3、推论 1.4；[Ferrari](icm2026-ferrari)，定理 3.11}
+
+\p{固定 #{I<\infty}。令 #{\Omega_I} 为单侧[箱球构形](4C13)的集合：#{b(x)=0} 对 #{x\leq 0} 成立，#{\limsup_{x\to\infty}\sum_{y=1}^x(1-2b(y))=\infty}，且所有[孤子](4C17)尺寸至多为 #{I}。对各 #{N} 取支撑在 #{\Omega_I} 的任意初始概率律 #{\mathbb P_N}，并定义}
+##{\pi_i^{N,t}=\frac 1N\sum_{x\geq 1}\sigma_i(x,\lfloor Nt\rfloor)\delta_{x/N},}
+\p{其中 #{\sigma_i(x,k)=1} 表示第 #{k} 步有一个尺寸 #{i} 的孤子以 #{x} 为最左格点，否则为零。设 #{\rho^0\in\mathcal D_{\mathrm{density}}}，其中[可容许密度类](4C27)包含光滑性、边界与两项密度条件。假设对每组连续紧支撑函数 #{F_i}，初始时 #{\max_{i\leq I}|\int F_i\,d\pi_i^{N,0}-\int F_i\rho_i^0\,du|\to 0} [依概率](00L9)成立。}
+\p{Croydon–Sasada 定理 1.1 断言：对每个固定 #{t>0}，同样的测试函数收敛成立，极限密度是以下方程的唯一经典解，即各偏导连续且逐点满足方程的解；唯一性限于 #{\rho\in C^1(\lbrack 0,\infty\rparen^2)^I} 且每时刻 #{\rho(\cdot,t)\in\mathcal D_{\mathrm{density}}} 的类：}
+##{\partial_t\rho_i+\partial_u(\rho_iV_i)=0,\qquad V_i=i+\sum_{j=1}^I2\min(i,j)\rho_j(V_i-V_j),\qquad \rho_i(\cdot,0)=\rho_i^0.}
+\p{其定理 1.3 先在[散射坐标](4C27)中给出累计密度演化：#{\bar\psi_i(z,t)=\bar\psi_i((z-it)_+,0)}，再逆变换恢复 #{\psi}。离散槽计数到连续散射映射的收敛、逆映射连续性以及光滑性保持是深层证明的内容，见原文 §§2–6。这里的结论是每个固定宏观时刻的收敛，时间为 #{\lfloor Nt\rfloor}、空间为 #{x/N}。}
+\p{推论 1.4 给出球经验测度的极限密度 #{\sum_{i=1}^Ii\rho_i}。球经验测度使用 #{b\in\{0,1\}}，即 #{N^{-1}\sum_xT^{\lfloor Nt\rfloor}b(x)\delta_{x/N}}；使用 #{\eta=2b-1} 会额外减去空箱背景。通量导数作用于整个乘积 #{\rho_iV_i}。无限尺寸或真正双无限的初始构形不在上述定理范围内。}

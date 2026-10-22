@@ -1,0 +1,11 @@
+\title{Toda 热平衡的高斯与平方根 Gamma 变量}
+\date{2026-10-22}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 §4；散射论文 v4 Definition 2.4。}
+
+\p{给定 #{\beta,\theta>0}，在整数区间 #{I=\{n_-,\ldots,n_+\}} 上[相互独立](00L3)地抽取 #{p_i\sim N(0,\beta^{-1})} 及 #{Y_i\sim\operatorname{Gamma}(\theta,\beta)}，后者使用形状参数 #{\theta}、速率参数 #{\beta}，密度为}
+##{\mathbb P(Y_i\in dy)=\frac{\beta^\theta}{\Gamma(\theta)}y^{\theta -1}e^{-\beta y}\,dy,\qquad y>0.}
+\p{这里 #{p_i} 的[正态分布](0N0R)密度是 #{\sqrt{\beta /(2\pi)}e^{-\beta p_i^2/2}}，[Gamma 函数](0H4Z)保证 #{Y_i} 的密度归一。开链只抽取 #{N-1} 个 #{Y_i}，令 #{a_i=\sqrt{Y_i}}，再置 #{a_{n_+}=0}。变量替换给出}
+##{\mathbb P(a_i\in da)=\frac{2\beta^\theta}{\Gamma(\theta)}a^{2\theta -1}e^{-\beta a^2}\,da,\qquad a>0.}
+\p{故服从 Gamma 分布的是 #{a_i^2}，而非 #{a_i}。当 #{0\in I}，用 #{q_0(0)=0}、#{q_{i+1}(0)-q_i(0)=-2\log a_i} 恢复位置。这固定初始共同平移，不要求 #{q_0(t)=0}。该[乘积测度](00QB)定义的是初始随机性，之后的[Toda 演化](4B01)完全确定。周期情形抽取 #{N} 条边，全直线情形用[可数乘积概率测度](0A6B)。}

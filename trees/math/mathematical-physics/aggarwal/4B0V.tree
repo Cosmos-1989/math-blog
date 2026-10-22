@@ -1,0 +1,15 @@
+\title{空间与谱的局部联合浓缩}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，有效速度论文 v4 Assumption 4.1、Propositions 4.3–4.4。}
+
+\p{采用[散射尺度假设](4B12)，固定时刻 #{s\in[0,T]}、尺度 #{1\leq S\leq T} 及常数 #{A,B\geq 0}。设连续函数 #{F:\mathbb R\to\mathbb R} 满足 #{|F(x)|\leq Ae^{|x|^{1/2}}}，在 #{[-\log N,\log N]} 上满足 #{|F|\leq A}，且该区间中 #{|x-y|\leq e^{-(\log N)^{5/2}}} 蕴含 #{|F(x)-F(y)|\leq Ae^{-(\log N)^2}}。设 #{G} 支撑于 #{[-S,S]}，并对 #{x\geq y} 满足}
+##{|G(x)-G(y)|\leq BS^{-1}(x-y)+B1_{x\geq 0\geq y}.}
+\p{以至少 #{1-c^{-1}e^{-c(\log N)^2}} 的概率，对时刻 #{s} 的中心距两端至少 #{T(\log N)^5} 的标签 #{j}，有}
+##{\left|\sum_iF(\lambda_i)G(Q_i(s)-Q_j(s))-\left(\int F(\lambda)\rho(\lambda)\,d\lambda\right)\left(\int G(\alpha q)\,dq\right)\right|\leq ABS^{1/2}(\log N)^{12}.}
+\p{#{\rho} 是[态密度](4B0B)。这是固定时刻的浓缩定理，不自动成为对所有时间与所有测试函数的共同事件。空间积分为 #{|\alpha|^{-1}\int G}；只有 #{\alpha>0} 时可直接写 #{\alpha^{-1}}。}
+\p{若另有连续函数 #{f} 和 #{D\geq 1} 满足}
+##{\sup_{x\in\mathbb R,\ |y|\leq\log N}e^{-|x|^{1/2}}|F(x)f(x-y)|\leq AD,\qquad\sup_{|x|\leq 2\log N}|f(x)|\leq D,}
+##{|f(x)-f(y)|\leq D|x-y|\min\{e^{100(\log N)^2},|x|^{-1}+|y|^{-1}\}\quad(|x|,|y|\leq 2\log N),}
+\p{则将求和与积分中的 #{F(\lambda)} 都换成 #{F(\lambda)f(\lambda -\lambda_j)} 后，误差可取 #{ABDS^{1/2}(\log N)^{13}}。零点处的倒数按 #{+\infty} 理解。这一扩展处理随机中心谱参数，不能直接将随机测试函数代入前一个定理。#{f=\ell_d} 的应用利用[正则化](4B0U)及允许的 #{D}。两个浓缩结论均作为引用输入。}

@@ -1,0 +1,11 @@
+\title{反对称 Lax 演化保持谱与全部谱矩}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 Lemma 2.1；正交共轭证明。}
+
+\p{若实矩阵 #{L(t),B(t)} 满足 #{\dot L=[B,L]}、#{B^{\mathsf T}=-B}，且系数连续，则 #{L(t)} 与 #{L(0)} 正交共轭。因此[特征值](0F0B)及每个 #{\operatorname{tr}L^m} 保持不变。特别适用于[Toda 的 Lax 对](4B05)。}
+\p{\strong{证明。}解线性[ODE](00OB) #{\dot U=BU}、#{U(0)=I}。直接求导得 #{(U^{\mathsf T}U)'=U^{\mathsf T}(B^{\mathsf T}+B)U=0}，故 #{U} 正交。再次求导，}
+##{\frac{d}{dt}(U^{\mathsf T}LU)=U^{\mathsf T}(-BL+[B,L]+LB)U=0.}
+\p{故 #{L(t)=U(t)L(0)U(t)^{\mathsf T}}。若 #{L(0)v=\lambda v}，则 #{L(t)U(t)v=\lambda U(t)v}，重数也保持。由[迹的循环性](0F0F)，所有谱矩守恒。开链中特别有 #{\operatorname{tr}L=P}、#{\operatorname{tr}L^2=\sum_i p_i^2+2\sum_i a_i^2=2H}。}
+\p{谱守恒本身不证明各积分函数独立且 Poisson 对易；这些是 Liouville 完全可积性中另外的条件。此处仅使用已证的等谱性。}

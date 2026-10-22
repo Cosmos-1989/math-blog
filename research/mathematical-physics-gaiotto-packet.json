@@ -1,0 +1,3891 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "report": {
+    "speaker": "Davide Gaiotto",
+    "prefix": "4D",
+    "outline": "4D00",
+    "reference": "icm2026-gaiotto",
+    "title": "The Categorical ’t Hooft Expansion",
+    "outline_title": "矩阵图怎样记住弦的边界：范畴化 't Hooft 展开",
+    "doi": "10.1137/25M1824641",
+    "pages": "442–461",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1824641",
+    "version_url": "https://epubs.siam.org/doi/10.1137/25M1824641",
+    "version_role": "Publisher full HTML, Proceedings of ICM 2026 volume 5, pp442–461",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "International Mathematical Union; published by SIAM",
+    "question": "矩阵图的曲面计数如何通过向量探针及其形式变形，进一步组织为弦世界面的边界范畴？",
+    "reading_scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected.\nFixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper.\nAdditional precise inputs: Costello v7 §§1.1–1.3/Theorem A; Gaiotto–Zeng v2 §3 through (47) for affine-level/coset correction; Molev–Nazarov–Olshanski v2 PDF introduction through RTT (1). Full details and exclusions are in source_records.",
+    "coverage_status": "One narrative overview, 49 atomic notes 4D01–4D31 (hexadecimal IDs), one canonical reference; source freeze awaiting independent recheck and parent integration.",
+    "proof_scope": {
+      "4D01": {
+        "status": "definition",
+        "scope": "定义概率归一化与形式耦合展开，分开实积分存在性和形式级数。"
+      },
+      "4D02": {
+        "status": "local-proof",
+        "scope": "逐项计算 Hermitian 协方差，用高斯生成函数证明全部 Wick 配对。"
+      },
+      "4D03": {
+        "status": "local-proof",
+        "scope": "逐图欧拉计数及 hbar、N 次幂；紧曲面分类作为已有输入。"
+      },
+      "4D04": {
+        "status": "local-calculation",
+        "scope": "枚举三个配对，计算面循环、指标约束、Tr M^4 及四次耦合一阶项。"
+      },
+      "4D05": {
+        "status": "local-proof",
+        "scope": "由带标号连通分量的集合分拆完整证明指数公式；保留顶点符号和归一化。"
+      },
+      "4D06": {
+        "status": "formal-construction",
+        "scope": "逐耦合次数有限的形式重排；不推出真实积分余项估计。"
+      },
+      "4D07": {
+        "status": "definition",
+        "scope": "定义向量作用、规范变换和高斯归一化；D-brane 解释另列物理提案。"
+      },
+      "4D08": {
+        "status": "local-proof",
+        "scope": "固定味数下逐图证明有边界曲面的 hbar^(2g-2+b) 权重。"
+      },
+      "4D09": {
+        "status": "local-proof",
+        "scope": "正定矩阵的归一化复高斯积分与形式 log det 展开逐步计算。"
+      },
+      "4D0A": {
+        "status": "conditional-formal-proof",
+        "scope": "单迹模型固定 t 的逐耦合形式连通估计；不作真实概率的一致误差声明。"
+      },
+      "4D0B": {
+        "status": "definition",
+        "scope": "按报告 Definition 1.2 区分大 N 鞍点、圆盘阶细化及经典临界点。"
+      },
+      "4D0C": {
+        "status": "local-calculation",
+        "scope": "双阱临界点和有限块变换计算；未重建规范零模处理或量子鞍点分析。"
+      },
+      "4D0D": {
+        "status": "definition",
+        "scope": "定义 BRST 上同调、鬼数、幂零性反常；不建立任意场论的重整化。"
+      },
+      "4D0E": {
+        "status": "definition-with-local-identity",
+        "scope": "有限增广 Artinian 系数上的 MC 方程、有限逆和换基符号。"
+      },
+      "4D0F": {
+        "status": "local-proof",
+        "scope": "完整计算 H1 切空间与 H2 二阶障碍，验证障碍的换基不变性。"
+      },
+      "4D10": {
+        "status": "local-proof",
+        "scope": "矩阵单位交换子显式计算；不由孤立的交换李代数恢复乘法。"
+      },
+      "4D11": {
+        "status": "conditional-algebraic-construction",
+        "scope": "在完整形式反常映射、全部矩阵大小、分次幂零测试和 q^2=0 假设下读取有序高阶操作；不是仅从零点集重构的定理。"
+      },
+      "4D12": {
+        "status": "local-proof",
+        "scope": "完整展开变形态射微分平方，并验证带第三对象的复合 Leibniz 律。"
+      },
+      "4D13": {
+        "status": "definition",
+        "scope": "有限维严格循环迹的定义与外代数例子；区分 proper、smooth 和非紧 Calabi-Yau 结构。"
+      },
+      "4D14": {
+        "status": "cited-theorem-scope",
+        "scope": "准确引用 Costello Theorem A 的设定和结论；没有重建胞腔证明或弦模空间积分。"
+      },
+      "4D15": {
+        "status": "physical-proposal",
+        "scope": "以 Conjecture 陈述报告 Claim 1.1；一般矩阵场论、普遍 AdS/CFT、全亏格等价均不作为已证定理。"
+      },
+      "4D16": {
+        "status": "source-model-definition",
+        "scope": "给出奇偶场、OPE、BRST 归一化与相对复形，明确规范不变及排除未求导 c 零模。"
+      },
+      "4D17": {
+        "status": "local-calculation-and-cited-planar-structure",
+        "scope": "球面 K^(1-Delta) 截面的换图和模式数计算；wedge 投影的闭合性为模型中的引用结构。"
+      },
+      "4D18": {
+        "status": "cited-planar-construction",
+        "scope": "给出 I,J 权重与正反 OPE、总奇偶矩阵乘法，明确非对角介子和单迹混合限制。"
+      },
+      "4D19": {
+        "status": "cited-relations-and-conditional-formality",
+        "scope": "引用四个零次类的交换与行列式关系；完整模型识别显式要求无对角混合、上同调集中、生成性和无额外关系。"
+      },
+      "4D1A": {
+        "status": "local-proof",
+        "scope": "显式构造 t 非零的代数簇同构，逐图验证光滑，计算 t=0 锥顶的 Zariski 切空间。"
+      },
+      "4D1B": {
+        "status": "local-proof-from-cited-transfer",
+        "scope": "以已有含幺极小模型定理为输入，完整证明上同调集中于零次时高阶操作消失。"
+      },
+      "4D1C": {
+        "status": "comparison-of-existing-results",
+        "scope": "比较既有对象 H1/H2 与代数 Hochschild HH2 变形理论；不把闭开作用认成无条件拟同构。"
+      },
+      "4D1D": {
+        "status": "local-proof",
+        "scope": "一变量 Koszul 分解、Ext 次数及 DG 模型映射的完整局部计算。"
+      },
+      "4D1E": {
+        "status": "definition-with-local-identity",
+        "scope": "固定 BV 奇括号、指数符号及形式完备化约定；经典和量子主方程的代数恒等式。"
+      },
+      "4D1F": {
+        "status": "cited-BV-construction",
+        "scope": "引用 BV/Dolbeault 源构造，解释源导数插入；不建立高亏格解析理论。"
+      },
+      "4D20": {
+        "status": "cited-conditional-construction",
+        "scope": "引用有限维二维循环代数、迹权二、增广及一圈平面反常条件；一般三维 CY 回作用保留猜想地位。"
+      },
+      "4D21": {
+        "status": "open-problem",
+        "scope": "列出 BCOV 量子构造、边界非重整化和连续族唯一性的条件路线，保留全亏格问题。"
+      },
+      "4D22": {
+        "status": "local-proof",
+        "scope": "用对角环面权重完整证明 SU(N) 不变外幂只有真空与满占据态。"
+      },
+      "4D23": {
+        "status": "local-proof",
+        "scope": "展开费米反交换关系，逐项消去四次项，证明有限 N 的 gl_m 介子括号。"
+      },
+      "4D24": {
+        "status": "local-proof",
+        "scope": "行列式配对求和、归一化消去和余子式插入，得到 t W(VW)^(-1)V。"
+      },
+      "4D25": {
+        "status": "local-proof",
+        "scope": "非零 t 下投影与互补子空间双射的完整线性代数证明，说明零参数的例外。"
+      },
+      "4D26": {
+        "status": "local-proof-with-physical-interpretation",
+        "scope": "一阶块矩阵方程与非退化切空间配对；不由此声称已构造全局辛形式或全部态射。"
+      },
+      "4D27": {
+        "status": "cited-representation-theorem-and-local-quadratic-proof",
+        "scope": "两次 Howe 表示识别作为深输入引用；独立展开颜色约束证明量子二次介子关系 (3.8)。"
+      },
+      "4D28": {
+        "status": "local-algebraic-construction",
+        "scope": "非零矩映射参数的轨道商与投影数据双射；零参数另引用稳定 Nakajima 模型。"
+      },
+      "4D29": {
+        "status": "physical-proposal-with-elementary-operator-fact",
+        "scope": "粒子数变化是直接算符事实；拉格朗日对应与范畴层解释是报告的物理构造提案。"
+      },
+      "4D2A": {
+        "status": "cited-physical-proposal",
+        "scope": "仅按报告引用量子 Howe/特征簇构造，不代替未读的 [35] 全文或一般三流形对偶证明。"
+      },
+      "4D2B": {
+        "status": "cited-algebraic-identification-and-physical-proposal",
+        "scope": "形式预解式几何级数计算；RTT 定义另链接，费米实现保留归一化及约化条件，几何对偶保留提案地位。"
+      },
+      "4D2C": {
+        "status": "local-proof",
+        "scope": "对截面完整展开曲率，证明 MC 方程及分次括号的 1/2 因子。"
+      },
+      "4D2D": {
+        "status": "physical-proposal-with-propagator-caveat",
+        "scope": "传播子图与量子平坦性的物理提案；明确全局零模投影及重整化需要。"
+      },
+      "4D2E": {
+        "status": "physical-proposal",
+        "scope": "一般一维振子模型的回作用问题；Weyl 共轭生成元保留非零量子交换关系。"
+      },
+      "4D2F": {
+        "status": "cited-example-and-physical-proposal",
+        "scope": "区分未修饰与有物质的水平平衡；用额外 primary source 固定正整数水平 coset，保留 Heisenberg/格扩张；全息解释仍按报告列猜想。"
+      },
+      "4D30": {
+        "status": "definition-with-local-sign-identity",
+        "scope": "补足超局部性、反向简单极点和总奇偶矩阵乘法定义，无新增物理等价性。"
+      },
+      "4D31": {
+        "status": "definition",
+        "scope": "按固定 primary source 定义普通 gl_m Yangian 的 RTT 表示，不宣称任意预解式为其表示。"
+      }
+    },
+    "claim_sources": {
+      "4D01": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.1)",
+          "role": "report source/context"
+        }
+      ],
+      "4D02": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.1)–(1.2)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D03": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.2)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D04": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.2); independent one-vertex calculation",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D05": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.3)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D06": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.2)–(1.4)",
+          "role": "report source/context"
+        }
+      ],
+      "4D07": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.6)",
+          "role": "report source/context"
+        }
+      ],
+      "4D08": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.6) and following paragraph",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D09": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.6); independent Gaussian calculation",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D0A": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§§1 and 3.1; normalization made explicit",
+          "role": "report source/context"
+        }
+      ],
+      "4D0B": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1.1, Definition 1.2",
+          "role": "report source/context"
+        }
+      ],
+      "4D0C": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1.1, (1.7); stationary point corrected explicitly",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D0D": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.1)–(2.4)",
+          "role": "report source/context"
+        }
+      ],
+      "4D0E": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.4); formal coefficient convention",
+          "role": "report source/context"
+        }
+      ],
+      "4D0F": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.4); elementary deformation calculation",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D10": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, after (2.15)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D11": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1 and §2.1; supplement Appendix E",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "Appendix E",
+          "role": "primary clarification"
+        }
+      ],
+      "4D12": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1 categorical deformation principle; DG special case",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D13": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§§1,2.3; compact cyclic model",
+          "role": "report source/context"
+        }
+      ],
+      "4D14": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1; Costello Theorem A",
+          "role": "report source/context"
+        },
+        {
+          "source": "costello-0412149v7",
+          "locator": "§§1.1–1.3, Theorem A",
+          "role": "primary clarification"
+        }
+      ],
+      "4D15": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "Claim 1.1 and §1.1",
+          "role": "report source/context"
+        }
+      ],
+      "4D16": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.1)–(2.2)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§6.1 final paragraphs and footnote 29",
+          "role": "primary clarification"
+        }
+      ],
+      "4D17": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.3)–(2.9)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D18": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, (2.10)–(2.14)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§§2.5–2.6, (40)–(46)",
+          "role": "primary clarification"
+        }
+      ],
+      "4D19": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, (2.13)–(2.15)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§§2.5–2.6 and §12.2",
+          "role": "primary clarification"
+        }
+      ],
+      "4D1A": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, (2.15); independent geometry",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D1B": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1; supplement §2.6",
+          "role": "report context; proof independently supplied"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§2.6 cohomology-concentration assumption",
+          "role": "primary clarification"
+        }
+      ],
+      "4D1C": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, deformation discussion",
+          "role": "report source/context"
+        }
+      ],
+      "4D1D": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.3; elementary Koszul model",
+          "role": "report context; proof independently supplied"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "Appendix D; local one-variable illustration independently calculated",
+          "role": "primary clarification"
+        }
+      ],
+      "4D1E": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.2 and §4",
+          "role": "report source/context"
+        }
+      ],
+      "4D1F": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.2, (2.16)–(2.17)",
+          "role": "report source/context"
+        }
+      ],
+      "4D20": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.3, (2.18), footnote 7",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§11 opening, especially (281), Appendix D",
+          "role": "primary clarification"
+        }
+      ],
+      "4D21": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.4 and footnote 5",
+          "role": "report source/context"
+        }
+      ],
+      "4D22": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.1)–(3.2)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D23": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.3), (3.7)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D24": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.5)–(3.7)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D25": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, after (3.8)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D26": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, after (3.11)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D27": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.4), (3.8)–(3.11)",
+          "role": "report source/context"
+        }
+      ],
+      "4D28": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, quiver candidate following (3.11)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D29": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.12)–(3.17)",
+          "role": "report source/context"
+        }
+      ],
+      "4D2A": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.2",
+          "role": "report source/context"
+        }
+      ],
+      "4D2B": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.3, (3.18)–(3.19), footnote 10",
+          "role": "report source/context"
+        }
+      ],
+      "4D2C": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§4, (4.2)–(4.3)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "4D2D": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§4, (4.1)–(4.4), §4.1",
+          "role": "report source/context"
+        }
+      ],
+      "4D2E": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.4, (3.20)–(3.21)",
+          "role": "report source/context"
+        }
+      ],
+      "4D2F": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.5",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-zeng-2603v2",
+          "locator": "§3, (36)–(39), (47), U(1)/lattice paragraph",
+          "role": "primary clarification"
+        }
+      ],
+      "4D30": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1; supplement §2.5, (40)–(46)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§2.5, (40)–(46)",
+          "role": "primary clarification"
+        }
+      ],
+      "4D31": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.3 context; Molev–Nazarov–Olshanski v2, introduction (1), PDF pp2–3",
+          "role": "report source/context"
+        },
+        {
+          "source": "mno-yangians-v2",
+          "locator": "Introduction equation (1), PDF pp2–3",
+          "role": "primary clarification"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "topic": "General categorical 't Hooft duality",
+        "nodes": [
+          "4D15"
+        ],
+        "status": "physical conjecture",
+        "scope": "Construction of the correct worldsheet category, its Calabi-Yau structure and recovery of all genera for arbitrary matrix QFT; no universal AdS/CFT theorem asserted."
+      },
+      {
+        "topic": "Analytic large-N asymptotics",
+        "nodes": [
+          "4D06",
+          "4D0A",
+          "4D0B",
+          "4D0C"
+        ],
+        "status": "not expanded",
+        "scope": "Uniform remainder estimates, saddle choice, contours, gauge zero modes and nonperturbative completion."
+      },
+      {
+        "topic": "Full planar chiral category",
+        "nodes": [
+          "4D18",
+          "4D19",
+          "4D20"
+        ],
+        "status": "conditional/open beyond cited calculation",
+        "scope": "Relative BRST cohomology generation and concentration, diagonal meson/single-trace mixing, smooth three-Calabi-Yau structure and geometric conifold transition."
+      },
+      {
+        "topic": "Higher genera and BCOV",
+        "nodes": [
+          "4D21"
+        ],
+        "status": "conditional program",
+        "scope": "Boundary nonrenormalization, continuous chiral-family uniqueness, finite-N simple quotients and moduli-boundary renormalization."
+      },
+      {
+        "topic": "General one- and three-dimensional systems",
+        "nodes": [
+          "4D29",
+          "4D2A",
+          "4D2B",
+          "4D2D",
+          "4D2E",
+          "4D2F"
+        ],
+        "status": "research proposals",
+        "scope": "Global correspondences, quantum-group and Yangian realization conventions, zero-mode-compatible propagators, full categorical and holographic identifications."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "topic": "Costello open/closed TCFT equivalence",
+        "nodes": [
+          "4D14"
+        ],
+        "source": "costello-0412149v7",
+        "locator": "Theorem A; deep proof §7",
+        "status": "cited theorem, full proof not reconstructed"
+      },
+      {
+        "topic": "BRST/OPE and planar algebra computations",
+        "nodes": [
+          "4D17",
+          "4D18",
+          "4D19",
+          "4D20"
+        ],
+        "source": "gaiotto-et-al-2411v2",
+        "locator": "§§2.5–2.7, §11, §12.2, Appendices D/E",
+        "status": "selected source passages read; full research calculation not reconstructed"
+      },
+      {
+        "topic": "Homotopy transfer",
+        "nodes": [
+          "4D1B"
+        ],
+        "source": "existing forest 01BG",
+        "status": "existing theorem reused; only the degree-concentration consequence proved locally"
+      },
+      {
+        "topic": "Skew and symmetric Howe decomposition",
+        "nodes": [
+          "4D27"
+        ],
+        "source": "gaiotto-icm2026",
+        "locator": "§3.1, (3.4), (3.9)–(3.11)",
+        "status": "deep representation theorems cited; elementary quadratic relation (3.8) proved locally"
+      },
+      {
+        "topic": "Quantum-group, BF/Yangian and interface coset identifications",
+        "nodes": [
+          "4D2A",
+          "4D2B",
+          "4D2F"
+        ],
+        "source": "gaiotto-icm2026 and gaiotto-zeng-2603v2",
+        "status": "report-level citations plus exact selected coset clarification; no reconstruction of complete representation/quantum-field-theory proofs"
+      }
+    ],
+    "metadata": {
+      "canonical_root": "/Users/sunzy/claude_test/forester2",
+      "tree_directory": "trees/math/mathematical-physics/gaiotto",
+      "reference_path": "trees/references/icm2026-gaiotto.tree",
+      "packet_path": "research/mathematical-physics-gaiotto-packet.json",
+      "publication_binding": "Publisher edition and report-relative numbering, not a silently substituted preprint.",
+      "status_policy": "Formal/Wick calculations, cited mathematical results, conditional constructions and physical proposals are separately labelled.",
+      "ownership": "Only 4D*.tree, canonical icm2026-gaiotto.tree and this packet; parent correction authorized moving refs to references. No shared navigation, registries, review JSON, tests, build, commit or push edited/run.",
+      "source_pdfs": "No publisher PDF inspection; only RTT supplement PDF text pp1–3 inspected. No visual-render QA claimed."
+    }
+  },
+  "notes": [
+    {
+      "id": "4D00",
+      "path": "trees/math/mathematical-physics/gaiotto/4D00.tree",
+      "title": "矩阵图怎样记住弦的边界：范畴化 't Hooft 展开",
+      "taxon": "Outline",
+      "prerequisites": [],
+      "question": "矩阵图如何引出边界范畴及弦对偶问题？",
+      "proof_scope": {
+        "status": "navigation-only",
+        "scope": "Narrative overview or reference record; not used as a mathematical prerequisite."
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "whole report"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D15",
+        "4D01",
+        "4D02",
+        "4D03",
+        "4D04",
+        "4D05",
+        "4D06",
+        "4D07",
+        "4D08",
+        "4D09",
+        "4D0A",
+        "4D0B",
+        "4D0C",
+        "4D0D",
+        "4D0E",
+        "4D0F",
+        "4D10",
+        "4D11",
+        "4D12",
+        "4D13",
+        "4D14",
+        "4D16",
+        "4D17",
+        "4D18",
+        "4D19",
+        "4D1A",
+        "4D1B",
+        "4D1C",
+        "4D1D",
+        "4D1E",
+        "4D1F",
+        "4D20",
+        "4D21",
+        "4D2F",
+        "4D22",
+        "4D23",
+        "4D24",
+        "4D25",
+        "4D26",
+        "4D27",
+        "4D28",
+        "4D29",
+        "4D2A",
+        "4D2B",
+        "4D2C",
+        "4D2D",
+        "4D2E"
+      ]
+    },
+    {
+      "id": "4D01",
+      "path": "trees/math/mathematical-physics/gaiotto/4D01.tree",
+      "title": "四次 Hermitian 矩阵模型",
+      "taxon": "Definition",
+      "prerequisites": [
+        "0N0R",
+        "4411"
+      ],
+      "question": "矩阵积分的形式展开究竟以哪些量为参数？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "定义概率归一化与形式耦合展开，分开实积分存在性和形式级数。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.1)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "0N0R",
+        "4411",
+        "4D06"
+      ]
+    },
+    {
+      "id": "4D02",
+      "path": "trees/math/mathematical-physics/gaiotto/4D02.tree",
+      "title": "Hermitian 高斯矩的双指标配对",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D01",
+        "441B"
+      ],
+      "question": "为什么矩阵传播子有两条指标线？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "逐项计算 Hermitian 协方差，用高斯生成函数证明全部 Wick 配对。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.1)–(1.2)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D01",
+        "441B"
+      ]
+    },
+    {
+      "id": "4D03",
+      "path": "trees/math/mathematical-physics/gaiotto/4D03.tree",
+      "title": "指标回路与曲面亏格",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "019J",
+        "0F46",
+        "4D02"
+      ],
+      "question": "带状费曼图为什么产生欧拉示性数？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "逐图欧拉计数及 hbar、N 次幂；紧曲面分类作为已有输入。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.2)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "019J",
+        "0F46",
+        "4D02",
+        "4D15"
+      ]
+    },
+    {
+      "id": "4D04",
+      "path": "trees/math/mathematical-physics/gaiotto/4D04.tree",
+      "title": "一个四次顶点的三个曲面",
+      "taxon": "Example",
+      "prerequisites": [
+        "4D02",
+        "4D03"
+      ],
+      "question": "三个 Wick 配对怎样分别给出球面、球面和环面？",
+      "proof_scope": {
+        "status": "local-calculation",
+        "scope": "枚举三个配对，计算面循环、指标约束、Tr M^4 及四次耦合一阶项。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.2); independent one-vertex calculation",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D02",
+        "4D03"
+      ]
+    },
+    {
+      "id": "4D05",
+      "path": "trees/math/mathematical-physics/gaiotto/4D05.tree",
+      "title": "对数配分函数只留下连通图",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D01",
+        "019J"
+      ],
+      "question": "为何亏格展开应用于 log Z？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "由带标号连通分量的集合分拆完整证明指数公式；保留顶点符号和归一化。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.3)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D01",
+        "019J"
+      ]
+    },
+    {
+      "id": "4D06",
+      "path": "trees/math/mathematical-physics/gaiotto/4D06.tree",
+      "title": "固定 t 的形式亏格展开",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D03",
+        "4D05",
+        "4D04"
+      ],
+      "question": "大 N 极限与微扰级数怎样相互重排？",
+      "proof_scope": {
+        "status": "formal-construction",
+        "scope": "逐耦合次数有限的形式重排；不推出真实积分余项估计。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.2)–(1.4)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D05",
+        "4D03",
+        "4D04"
+      ]
+    },
+    {
+      "id": "4D07",
+      "path": "trees/math/mathematical-physics/gaiotto/4D07.tree",
+      "title": "基本表示修饰",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4D01",
+        "00DD"
+      ],
+      "question": "给矩阵模型加入向量自由度具体改变什么？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "定义向量作用、规范变换和高斯归一化；D-brane 解释另列物理提案。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.6)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D01",
+        "00DD",
+        "4D08",
+        "4D15"
+      ]
+    },
+    {
+      "id": "4D08",
+      "path": "trees/math/mathematical-physics/gaiotto/4D08.tree",
+      "title": "向量回路给出边界幂次",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D07",
+        "4D03"
+      ],
+      "question": "有 b 条边界时为何出现 hbar 的 2g−2+b 次方？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "固定味数下逐图证明有边界曲面的 hbar^(2g-2+b) 权重。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.6) and following paragraph",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D07",
+        "4D03"
+      ]
+    },
+    {
+      "id": "4D09",
+      "path": "trees/math/mathematical-physics/gaiotto/4D09.tree",
+      "title": "积分掉向量得到逆行列式",
+      "taxon": "Example",
+      "prerequisites": [
+        "4D07",
+        "0A40"
+      ],
+      "question": "基本表示修饰如何变成迹相互作用？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "正定矩阵的归一化复高斯积分与形式 log det 展开逐步计算。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1, (1.6); independent Gaussian calculation",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D07",
+        "0A40"
+      ]
+    },
+    {
+      "id": "4D0A",
+      "path": "trees/math/mathematical-physics/gaiotto/4D0A.tree",
+      "title": "归一化迹的平面因子化",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D06",
+        "4D08"
+      ],
+      "question": "连通双迹为何比两个单迹的乘积小 N 的平方？",
+      "proof_scope": {
+        "status": "conditional-formal-proof",
+        "scope": "单迹模型固定 t 的逐耦合形式连通估计；不作真实概率的一致误差声明。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§§1 and 3.1; normalization made explicit",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D06",
+        "4D08"
+      ]
+    },
+    {
+      "id": "4D0B",
+      "path": "trees/math/mathematical-physics/gaiotto/4D0B.tree",
+      "title": "大 N 鞍点的选择",
+      "taxon": "Definition",
+      "prerequisites": [
+        "4D06",
+        "4D08",
+        "4D07"
+      ],
+      "question": "同一个场论为什么可以产生不同的亏格展开？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "按报告 Definition 1.2 区分大 N 鞍点、圆盘阶细化及经典临界点。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1.1, Definition 1.2",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D06",
+        "4D08",
+        "4D07"
+      ]
+    },
+    {
+      "id": "4D0C",
+      "path": "trees/math/mathematical-physics/gaiotto/4D0C.tree",
+      "title": "有限矩阵块变成基本表示",
+      "taxon": "Example",
+      "prerequisites": [
+        "4D0B",
+        "4D07"
+      ],
+      "question": "一个小特征值块怎样产生向量型自由度？",
+      "proof_scope": {
+        "status": "local-calculation",
+        "scope": "双阱临界点和有限块变换计算；未重建规范零模处理或量子鞍点分析。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1.1, (1.7); stationary point corrected explicitly",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D0B",
+        "4D07"
+      ]
+    },
+    {
+      "id": "4D0D",
+      "path": "trees/math/mathematical-physics/gaiotto/4D0D.tree",
+      "title": "BRST 微分与物理上同调",
+      "taxon": "Definition",
+      "prerequisites": [
+        "012A",
+        "012B",
+        "019A"
+      ],
+      "question": "BRST 闭与 BRST 恰当分别意味着什么？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "定义 BRST 上同调、鬼数、幂零性反常；不建立任意场论的重整化。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.1)–(2.4)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "012A",
+        "012B",
+        "019A"
+      ]
+    },
+    {
+      "id": "4D0E",
+      "path": "trees/math/mathematical-physics/gaiotto/4D0E.tree",
+      "title": "幂零参数上的微分变形",
+      "taxon": "Definition",
+      "prerequisites": [
+        "019A",
+        "01L8",
+        "4D0D",
+        "012A"
+      ],
+      "question": "形式 Maurer–Cartan 方程在哪个系数环中有意义？",
+      "proof_scope": {
+        "status": "definition-with-local-identity",
+        "scope": "有限增广 Artinian 系数上的 MC 方程、有限逆和换基符号。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.4); formal coefficient convention",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "019A",
+        "012A",
+        "4D0D",
+        "01L8"
+      ]
+    },
+    {
+      "id": "4D0F",
+      "path": "trees/math/mathematical-physics/gaiotto/4D0F.tree",
+      "title": "微分变形的一阶空间与二阶障碍",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D0E",
+        "012B"
+      ],
+      "question": "为什么切空间是 H¹，而延拓障碍落在 H²？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "完整计算 H1 切空间与 H2 二阶障碍，验证障碍的换基不变性。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.4); elementary deformation calculation",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D0E",
+        "012B"
+      ]
+    },
+    {
+      "id": "4D10",
+      "path": "trees/math/mathematical-physics/gaiotto/4D10.tree",
+      "title": "矩阵单位恢复有序乘法",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "019A",
+        "4D0E"
+      ],
+      "question": "为什么加入多个探针能从 Lie 括号看出结合乘法？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "矩阵单位交换子显式计算；不由孤立的交换李代数恢复乘法。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, after (2.15)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "019A",
+        "4D0E"
+      ]
+    },
+    {
+      "id": "4D11",
+      "path": "trees/math/mathematical-physics/gaiotto/4D11.tree",
+      "title": "有序形式变形与高阶复合",
+      "taxon": "Construction",
+      "prerequisites": [
+        "01BF",
+        "0BLC",
+        "4D0E",
+        "4D10",
+        "012A"
+      ],
+      "question": "怎样从所有矩阵值形式变形读取 A∞ 运算？",
+      "proof_scope": {
+        "status": "conditional-algebraic-construction",
+        "scope": "在完整形式反常映射、全部矩阵大小、分次幂零测试和 q^2=0 假设下读取有序高阶操作；不是仅从零点集重构的定理。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1 and §2.1; supplement Appendix E",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "Appendix E",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "01BF",
+        "012A",
+        "4D0E",
+        "0BLC",
+        "4D10"
+      ]
+    },
+    {
+      "id": "4D12",
+      "path": "trees/math/mathematical-physics/gaiotto/4D12.tree",
+      "title": "变形对象之间的态射微分",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0BJO",
+        "4D0E"
+      ],
+      "question": "两个 Maurer–Cartan 解如何给出对象之间的复形？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "完整展开变形态射微分平方，并验证带第三对象的复合 Leibniz 律。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1 categorical deformation principle; DG special case",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D0E",
+        "0BJO"
+      ]
+    },
+    {
+      "id": "4D13",
+      "path": "trees/math/mathematical-physics/gaiotto/4D13.tree",
+      "title": "圆盘迹的循环配对",
+      "taxon": "Definition",
+      "prerequisites": [
+        "019A",
+        "01BF",
+        "019E",
+        "019F",
+        "012A",
+        "01AG"
+      ],
+      "question": "Calabi–Yau 的次数在边界代数中如何出现？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "有限维严格循环迹的定义与外代数例子；区分 proper、smooth 和非紧 Calabi-Yau 结构。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§§1,2.3; compact cyclic model",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "019A",
+        "012A",
+        "01BF",
+        "01AG",
+        "019E",
+        "019F"
+      ]
+    },
+    {
+      "id": "4D14",
+      "path": "trees/math/mathematical-physics/gaiotto/4D14.tree",
+      "title": "从边界代数到世界面理论",
+      "taxon": "Construction",
+      "prerequisites": [
+        "0BJO",
+        "4D11",
+        "4D13",
+        "01L1",
+        "01L0"
+      ],
+      "question": "范畴重构到哪一步仍不足以得到弦振幅？",
+      "proof_scope": {
+        "status": "cited-theorem-scope",
+        "scope": "准确引用 Costello Theorem A 的设定和结论；没有重建胞腔证明或弦模空间积分。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§1; Costello Theorem A",
+          "role": "report source/context"
+        },
+        {
+          "source": "costello-0412149v7",
+          "locator": "§§1.1–1.3, Theorem A",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "costello-0412149v7",
+          "scope": "Read §§1.1–1.3 including Theorem A and category/h-split conventions; neighboring §1.4–1.7 introductory discussion also inspected. Deep proof in §7 not fully read or reconstructed."
+        }
+      ],
+      "body_links": [
+        "0BJO",
+        "4D11",
+        "4D13",
+        "01L1",
+        "01L0"
+      ]
+    },
+    {
+      "id": "4D15",
+      "path": "trees/math/mathematical-physics/gaiotto/4D15.tree",
+      "title": "范畴化大 N 弦对偶猜想",
+      "taxon": "Conjecture",
+      "prerequisites": [
+        "4D0B",
+        "4D07",
+        "4D11",
+        "4D13",
+        "4D14",
+        "019J"
+      ],
+      "question": "Claim 1.1 预测了什么，哪些数据还须构造？",
+      "proof_scope": {
+        "status": "physical-proposal",
+        "scope": "以 Conjecture 陈述报告 Claim 1.1；一般矩阵场论、普遍 AdS/CFT、全亏格等价均不作为已证定理。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "Claim 1.1 and §1.1",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D0B",
+        "4D07",
+        "4D13",
+        "4D11",
+        "4D14",
+        "019J"
+      ]
+    },
+    {
+      "id": "4D16",
+      "path": "trees/math/mathematical-physics/gaiotto/4D16.tree",
+      "title": "矩阵 βγ 系统的 BRST 约化",
+      "taxon": "Definition",
+      "prerequisites": [
+        "2Z10",
+        "4D0D",
+        "4D30"
+      ],
+      "question": "报告的手征场论由哪些场和微分组成？",
+      "proof_scope": {
+        "status": "source-model-definition",
+        "scope": "给出奇偶场、OPE、BRST 归一化与相对复形，明确规范不变及排除未求导 c 零模。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.1)–(2.2)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§6.1 final paragraphs and footnote 29",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "2Z10",
+        "4D30",
+        "4D0D"
+      ]
+    },
+    {
+      "id": "4D17",
+      "path": "trees/math/mathematical-physics/gaiotto/4D17.tree",
+      "title": "球面上的全局模式",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D16",
+        "0BF3"
+      ],
+      "question": "为什么共形权限制可用的变形模式数？",
+      "proof_scope": {
+        "status": "local-calculation-and-cited-planar-structure",
+        "scope": "球面 K^(1-Delta) 截面的换图和模式数计算；wedge 投影的闭合性为模型中的引用结构。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, (2.3)–(2.9)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D16",
+        "0BF3"
+      ]
+    },
+    {
+      "id": "4D18",
+      "path": "trees/math/mathematical-physics/gaiotto/4D18.tree",
+      "title": "介子模式与味指标",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D16",
+        "4D07",
+        "4D10",
+        "4D11",
+        "4D30"
+      ],
+      "question": "手征模型的基本表示修饰怎样产生边界代数？",
+      "proof_scope": {
+        "status": "cited-planar-construction",
+        "scope": "给出 I,J 权重与正反 OPE、总奇偶矩阵乘法，明确非对角介子和单迹混合限制。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, (2.10)–(2.14)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§§2.5–2.6, (40)–(46)",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "4D16",
+        "4D07",
+        "4D30",
+        "4D10",
+        "4D11"
+      ]
+    },
+    {
+      "id": "4D19",
+      "path": "trees/math/mathematical-physics/gaiotto/4D19.tree",
+      "title": "平面介子代数的行列式关系",
+      "taxon": "Research result",
+      "prerequisites": [
+        "4D18",
+        "019A",
+        "01B4",
+        "4D1B"
+      ],
+      "question": "SL₂ 的坐标关系如何出现在手征模型中？",
+      "proof_scope": {
+        "status": "cited-relations-and-conditional-formality",
+        "scope": "引用四个零次类的交换与行列式关系；完整模型识别显式要求无对角混合、上同调集中、生成性和无额外关系。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, (2.13)–(2.15)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§§2.5–2.6 and §12.2",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "4D18",
+        "019A",
+        "4D1B",
+        "4D1A",
+        "01B4",
+        "4D15"
+      ]
+    },
+    {
+      "id": "4D1A",
+      "path": "trees/math/mathematical-physics/gaiotto/4D1A.tree",
+      "title": "行列式纤维的光滑性与退化",
+      "taxon": "Example",
+      "prerequisites": [
+        "4D19",
+        "01Q1",
+        "0A32",
+        "0F04"
+      ],
+      "question": "为什么 t≠0 给出 SL₂，而 t=0 出现锥顶奇点？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "显式构造 t 非零的代数簇同构，逐图验证光滑，计算 t=0 锥顶的 Zariski 切空间。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1, (2.15); independent geometry",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D19",
+        "01Q1",
+        "0A32",
+        "0F04"
+      ]
+    },
+    {
+      "id": "4D1B",
+      "path": "trees/math/mathematical-physics/gaiotto/4D1B.tree",
+      "title": "零次上同调迫使高阶乘法消失",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "01BG",
+        "01BF",
+        "012B"
+      ],
+      "question": "何时 DG 代数的极小模型只有普通乘法？",
+      "proof_scope": {
+        "status": "local-proof-from-cited-transfer",
+        "scope": "以已有含幺极小模型定理为输入，完整证明上同调集中于零次时高阶操作消失。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1; supplement §2.6",
+          "role": "report context; proof independently supplied"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§2.6 cohomology-concentration assumption",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "012B",
+        "01BG",
+        "01BF"
+      ]
+    },
+    {
+      "id": "4D1C",
+      "path": "trees/math/mathematical-physics/gaiotto/4D1C.tree",
+      "title": "对象变形与代数变形的不同次数",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D0F",
+        "01L4",
+        "01L8",
+        "01LD",
+        "01L6",
+        "01L7"
+      ],
+      "question": "H¹ 与 HH² 为何在同一讨论中同时出现？",
+      "proof_scope": {
+        "status": "comparison-of-existing-results",
+        "scope": "比较既有对象 H1/H2 与代数 Hochschild HH2 变形理论；不把闭开作用认成无条件拟同构。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2, deformation discussion",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D0F",
+        "01L8",
+        "01LD",
+        "01L4",
+        "01L6",
+        "01L7"
+      ]
+    },
+    {
+      "id": "4D1D",
+      "path": "trees/math/mathematical-physics/gaiotto/4D1D.tree",
+      "title": "一个点的导出自同态",
+      "taxon": "Example",
+      "prerequisites": [
+        "0F14",
+        "01BE",
+        "012D",
+        "012B"
+      ],
+      "question": "最简单的 Koszul 对偶怎样把坐标变成奇生成元？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "一变量 Koszul 分解、Ext 次数及 DG 模型映射的完整局部计算。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.3; elementary Koszul model",
+          "role": "report context; proof independently supplied"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "Appendix D; local one-variable illustration independently calculated",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "0F14",
+        "012D",
+        "01BE",
+        "012B"
+      ]
+    },
+    {
+      "id": "4D1E",
+      "path": "trees/math/mathematical-physics/gaiotto/4D1E.tree",
+      "title": "BV 主方程的代数约定",
+      "taxon": "Definition",
+      "prerequisites": [
+        "019A",
+        "4D0D"
+      ],
+      "question": "BV 方程怎样组织经典与量子反常？",
+      "proof_scope": {
+        "status": "definition-with-local-identity",
+        "scope": "固定 BV 奇括号、指数符号及形式完备化约定；经典和量子主方程的代数恒等式。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.2 and §4",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D0D",
+        "019A"
+      ]
+    },
+    {
+      "id": "4D1F",
+      "path": "trees/math/mathematical-physics/gaiotto/4D1F.tree",
+      "title": "非全纯源把相关函数纳入变形",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D16",
+        "4D1E",
+        "00NK"
+      ],
+      "question": "为什么要让手征耦合取值于 Dolbeault 形式？",
+      "proof_scope": {
+        "status": "cited-BV-construction",
+        "scope": "引用 BV/Dolbeault 源构造，解释源导数插入；不建立高亏格解析理论。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.2, (2.16)–(2.17)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D16",
+        "4D1E",
+        "00NK"
+      ]
+    },
+    {
+      "id": "4D20",
+      "path": "trees/math/mathematical-physics/gaiotto/4D20.tree",
+      "title": "树级循环代数与平面回作用",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D06",
+        "4D13",
+        "0F14",
+        "4D18",
+        "4D07"
+      ],
+      "question": "为什么树级背景还不能代替固定 t 的平面背景？",
+      "proof_scope": {
+        "status": "cited-conditional-construction",
+        "scope": "引用有限维二维循环代数、迹权二、增广及一圈平面反常条件；一般三维 CY 回作用保留猜想地位。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.3, (2.18), footnote 7",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§11 opening, especially (281), Appendix D",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "4D06",
+        "4D13",
+        "0F14",
+        "4D07",
+        "4D18"
+      ]
+    },
+    {
+      "id": "4D21",
+      "path": "trees/math/mathematical-physics/gaiotto/4D21.tree",
+      "title": "从平面一致到全亏格对偶",
+      "taxon": "Open problem",
+      "prerequisites": [
+        "4D19",
+        "4D14",
+        "4D15"
+      ],
+      "question": "平面代数相同以后还有哪些数学问题？",
+      "proof_scope": {
+        "status": "open-problem",
+        "scope": "列出 BCOV 量子构造、边界非重整化和连续族唯一性的条件路线，保留全亏格问题。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.4 and footnote 5",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D19",
+        "4D14",
+        "4D15"
+      ]
+    },
+    {
+      "id": "4D22",
+      "path": "trees/math/mathematical-physics/gaiotto/4D22.tree",
+      "title": "费米 Fock 空间的两个规范不变态",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0AI8",
+        "01AG",
+        "00DD"
+      ],
+      "question": "单个基本费米子族为什么留下真空与满占据态？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "用对角环面权重完整证明 SU(N) 不变外幂只有真空与满占据态。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.1)–(3.2)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "01AG",
+        "0AI8",
+        "00DD"
+      ]
+    },
+    {
+      "id": "4D23",
+      "path": "trees/math/mathematical-physics/gaiotto/4D23.tree",
+      "title": "介子双线性子的矩阵交换关系",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D22",
+        "0F00"
+      ],
+      "question": "费米子双线性子为什么生成 gl_m？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "展开费米反交换关系，逐项消去四次项，证明有限 N 的 gl_m 介子括号。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.3), (3.7)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D22",
+        "0F00"
+      ]
+    },
+    {
+      "id": "4D24",
+      "path": "trees/math/mathematical-physics/gaiotto/4D24.tree",
+      "title": "参考态重叠与行列式幂",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D23",
+        "0A40"
+      ],
+      "question": "为什么参考态重叠是一个小行列式的 N 次幂？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "行列式配对求和、归一化消去和余子式插入，得到 t W(VW)^(-1)V。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.5)–(3.7)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D23",
+        "0A40"
+      ]
+    },
+    {
+      "id": "4D25",
+      "path": "trees/math/mathematical-physics/gaiotto/4D25.tree",
+      "title": "固定秩投影的复模空间",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D24",
+        "00D7",
+        "00GC"
+      ],
+      "question": "μ²=tμ 与迹条件怎样参数化互补子空间？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "非零 t 下投影与互补子空间双射的完整线性代数证明，说明零参数的例外。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, after (3.8)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D24",
+        "00D7",
+        "00GC"
+      ]
+    },
+    {
+      "id": "4D26",
+      "path": "trees/math/mathematical-physics/gaiotto/4D26.tree",
+      "title": "投影模空间的切向量与交叉态射",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "4D25",
+        "4D12"
+      ],
+      "question": "直和对象之间的信息如何出现在切空间的非对角块？",
+      "proof_scope": {
+        "status": "local-proof-with-physical-interpretation",
+        "scope": "一阶块矩阵方程与非退化切空间配对；不由此声称已构造全局辛形式或全部态射。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, after (3.11)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D25",
+        "4D12"
+      ]
+    },
+    {
+      "id": "4D27",
+      "path": "trees/math/mathematical-physics/gaiotto/4D27.tree",
+      "title": "双 Howe 对偶的两个 Fock 表示",
+      "taxon": "Research result",
+      "prerequisites": [
+        "4D22",
+        "4D23",
+        "2T0Y"
+      ],
+      "question": "如何把大 N 规范不变量改写成固定秩量子系统？",
+      "proof_scope": {
+        "status": "cited-representation-theorem-and-local-quadratic-proof",
+        "scope": "两次 Howe 表示识别作为深输入引用；独立展开颜色约束证明量子二次介子关系 (3.8)。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.4), (3.8)–(3.11)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D22",
+        "4D23",
+        "2T0Y"
+      ]
+    },
+    {
+      "id": "4D28",
+      "path": "trees/math/mathematical-physics/gaiotto/4D28.tree",
+      "title": "非零矩映射参数的箭图模型",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D25",
+        "2T0X",
+        "2T0Y"
+      ],
+      "question": "投影模空间如何成为余切 Grassmann 簇的变形？",
+      "proof_scope": {
+        "status": "local-algebraic-construction",
+        "scope": "非零矩映射参数的轨道商与投影数据双射；零参数另引用稳定 Nakajima 模型。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, quiver candidate following (3.11)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "2T0X",
+        "4D25",
+        "2T0Y"
+      ]
+    },
+    {
+      "id": "4D29",
+      "path": "trees/math/mathematical-physics/gaiotto/4D29.tree",
+      "title": "重子插入与相空间对应",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D22",
+        "4D27",
+        "4D28"
+      ],
+      "question": "改变重子数的算符为何需要连接不同相空间？",
+      "proof_scope": {
+        "status": "physical-proposal-with-elementary-operator-fact",
+        "scope": "粒子数变化是直接算符事实；拉格朗日对应与范畴层解释是报告的物理构造提案。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.1, (3.12)–(3.17)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D22",
+        "4D27",
+        "4D28"
+      ]
+    },
+    {
+      "id": "4D2A",
+      "path": "trees/math/mathematical-physics/gaiotto/4D2A.tree",
+      "title": "Chern–Simons 线算符的量子 Howe 图景",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D27",
+        "4D29",
+        "0BL2"
+      ],
+      "question": "量子群版本怎样改变一维探针的几何？",
+      "proof_scope": {
+        "status": "cited-physical-proposal",
+        "scope": "仅按报告引用量子 Howe/特征簇构造，不代替未读的 [35] 全文或一般三流形对偶证明。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.2",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D27",
+        "0BL2",
+        "4D29"
+      ]
+    },
+    {
+      "id": "4D2B",
+      "path": "trees/math/mathematical-physics/gaiotto/4D2B.tree",
+      "title": "BF 界面的介子与 Yangian",
+      "taxon": "Construction",
+      "prerequisites": [
+        "0B86",
+        "4D23",
+        "0F5A",
+        "4D31"
+      ],
+      "question": "二维平坦性理论为何出现一族矩阵生成函数？",
+      "proof_scope": {
+        "status": "cited-algebraic-identification-and-physical-proposal",
+        "scope": "形式预解式几何级数计算；RTT 定义另链接，费米实现保留归一化及约化条件，几何对偶保留提案地位。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.3, (3.18)–(3.19), footnote 10",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "0B86",
+        "0F5A",
+        "4D23",
+        "4D31"
+      ]
+    },
+    {
+      "id": "4D2C",
+      "path": "trees/math/mathematical-physics/gaiotto/4D2C.tree",
+      "title": "平坦联络的形式变形方程",
+      "taxon": "Proposition",
+      "prerequisites": [
+        "0B86",
+        "019A",
+        "4D0E",
+        "4D1E"
+      ],
+      "question": "Chern–Simons 探针的经典相容性怎样成为 Maurer–Cartan 方程？",
+      "proof_scope": {
+        "status": "local-proof",
+        "scope": "对截面完整展开曲率，证明 MC 方程及分次括号的 1/2 因子。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§4, (4.2)–(4.3)",
+          "role": "report context; proof independently supplied"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "0B86",
+        "019A",
+        "4D0E",
+        "4D1E"
+      ]
+    },
+    {
+      "id": "4D2D",
+      "path": "trees/math/mathematical-physics/gaiotto/4D2D.tree",
+      "title": "一般三维流形上的变形平坦性",
+      "taxon": "Open problem",
+      "prerequisites": [
+        "4D2C",
+        "4D08",
+        "4D1E",
+        "4D11"
+      ],
+      "question": "平面传播子修正能否重构一般 Chern–Simons 的 D-brane 范畴？",
+      "proof_scope": {
+        "status": "physical-proposal-with-propagator-caveat",
+        "scope": "传播子图与量子平坦性的物理提案；明确全局零模投影及重整化需要。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§4, (4.1)–(4.4), §4.1",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D2C",
+        "4D08",
+        "4D1E",
+        "4D11"
+      ]
+    },
+    {
+      "id": "4D2E",
+      "path": "trees/math/mathematical-physics/gaiotto/4D2E.tree",
+      "title": "一般一维矩阵系统的回作用问题",
+      "taxon": "Open problem",
+      "prerequisites": [
+        "4D13",
+        "4D20",
+        "4D27",
+        "4D28"
+      ],
+      "question": "去掉手征坐标后，范畴化方法还有什么输入？",
+      "proof_scope": {
+        "status": "physical-proposal",
+        "scope": "一般一维振子模型的回作用问题；Weyl 共轭生成元保留非零量子交换关系。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.4, (3.20)–(3.21)",
+          "role": "report source/context"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D13",
+        "4D20",
+        "4D27",
+        "4D28"
+      ]
+    },
+    {
+      "id": "4D2F",
+      "path": "trees/math/mathematical-physics/gaiotto/4D2F.tree",
+      "title": "闭扇区平凡仍可有非平凡探针",
+      "taxon": "Construction",
+      "prerequisites": [
+        "4D16",
+        "4D18",
+        "4D14"
+      ],
+      "question": "为何只看未修饰理论会漏掉边界信息？",
+      "proof_scope": {
+        "status": "cited-example-and-physical-proposal",
+        "scope": "区分未修饰与有物质的水平平衡；用额外 primary source 固定正整数水平 coset，保留 Heisenberg/格扩张；全息解释仍按报告列猜想。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.5",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-zeng-2603v2",
+          "locator": "§3, (36)–(39), (47), U(1)/lattice paragraph",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-zeng-2603v2",
+          "scope": "Read §3 from equations (36)–(47), including footnote 4 / BRST levels (39), coset definition and residual U(1)/lattice-extension paragraph. Neighboring §2.5 inspected. Not a full-paper reading."
+        }
+      ],
+      "body_links": [
+        "4D16",
+        "4D18",
+        "4D14"
+      ]
+    },
+    {
+      "id": "4D30",
+      "path": "trees/math/mathematical-physics/gaiotto/4D30.tree",
+      "title": "手征超局部性与味矩阵的符号",
+      "taxon": "Definition",
+      "prerequisites": [
+        "01K8",
+        "2Z10",
+        "019A"
+      ],
+      "question": "奇场的 OPE 与混合味矩阵怎样一致地携带符号？",
+      "proof_scope": {
+        "status": "definition-with-local-sign-identity",
+        "scope": "补足超局部性、反向简单极点和总奇偶矩阵乘法定义，无新增物理等价性。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§2.1; supplement §2.5, (40)–(46)",
+          "role": "report source/context"
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "locator": "§2.5, (40)–(46)",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "gaiotto-et-al-2411v2",
+          "scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper."
+        }
+      ],
+      "body_links": [
+        "01K8",
+        "2Z10",
+        "019A"
+      ]
+    },
+    {
+      "id": "4D31",
+      "path": "trees/math/mathematical-physics/gaiotto/4D31.tree",
+      "title": "一般线性 Yangian 的 RTT 定义",
+      "taxon": "Definition",
+      "prerequisites": [
+        "00GC",
+        "0F00"
+      ],
+      "question": "RTT 关系中的辅助空间、R 矩阵和形式级数分别是什么？",
+      "proof_scope": {
+        "status": "definition",
+        "scope": "按固定 primary source 定义普通 gl_m Yangian 的 RTT 表示，不宣称任意预解式为其表示。"
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "§3.3 context; Molev–Nazarov–Olshanski v2, introduction (1), PDF pp2–3",
+          "role": "report source/context"
+        },
+        {
+          "source": "mno-yangians-v2",
+          "locator": "Introduction equation (1), PDF pp2–3",
+          "role": "primary clarification"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        },
+        {
+          "source": "mno-yangians-v2",
+          "scope": "PDF text extraction: title and introduction through equation (1), PDF pp1–3; includes generators, tensor legs and R=1-P/(u-v). Later material incidentally returned but no full Section 1 or paper reading claimed. No pixel inspection."
+        }
+      ],
+      "body_links": [
+        "00GC",
+        "0F00"
+      ]
+    },
+    {
+      "id": "icm2026-gaiotto",
+      "path": "trees/references/icm2026-gaiotto.tree",
+      "title": "Davide Gaiotto：The Categorical 't Hooft Expansion",
+      "taxon": "Reference",
+      "prerequisites": [],
+      "question": "哪些版本和来源界定本专题的陈述？",
+      "proof_scope": {
+        "status": "navigation-only",
+        "scope": "Narrative overview or reference record; not used as a mathematical prerequisite."
+      },
+      "refs": [
+        {
+          "source": "gaiotto-icm2026",
+          "locator": "whole report"
+        }
+      ],
+      "source_reading": [
+        {
+          "source": "gaiotto-icm2026",
+          "scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected."
+        }
+      ],
+      "body_links": [
+        "4D00"
+      ]
+    }
+  ],
+  "prerequisites": {
+    "4D01": [
+      "0N0R",
+      "4411"
+    ],
+    "4D02": [
+      "4D01",
+      "441B"
+    ],
+    "4D03": [
+      "019J",
+      "0F46",
+      "4D02"
+    ],
+    "4D04": [
+      "4D02",
+      "4D03"
+    ],
+    "4D05": [
+      "4D01",
+      "019J"
+    ],
+    "4D06": [
+      "4D03",
+      "4D05",
+      "4D04"
+    ],
+    "4D07": [
+      "4D01",
+      "00DD"
+    ],
+    "4D08": [
+      "4D07",
+      "4D03"
+    ],
+    "4D09": [
+      "4D07",
+      "0A40"
+    ],
+    "4D0A": [
+      "4D06",
+      "4D08"
+    ],
+    "4D0B": [
+      "4D06",
+      "4D08",
+      "4D07"
+    ],
+    "4D0C": [
+      "4D0B",
+      "4D07"
+    ],
+    "4D0D": [
+      "012A",
+      "012B",
+      "019A"
+    ],
+    "4D0E": [
+      "019A",
+      "01L8",
+      "4D0D",
+      "012A"
+    ],
+    "4D0F": [
+      "4D0E",
+      "012B"
+    ],
+    "4D10": [
+      "019A",
+      "4D0E"
+    ],
+    "4D11": [
+      "01BF",
+      "0BLC",
+      "4D0E",
+      "4D10",
+      "012A"
+    ],
+    "4D12": [
+      "0BJO",
+      "4D0E"
+    ],
+    "4D13": [
+      "019A",
+      "01BF",
+      "019E",
+      "019F",
+      "012A",
+      "01AG"
+    ],
+    "4D14": [
+      "0BJO",
+      "4D11",
+      "4D13",
+      "01L1",
+      "01L0"
+    ],
+    "4D15": [
+      "4D0B",
+      "4D07",
+      "4D11",
+      "4D13",
+      "4D14",
+      "019J"
+    ],
+    "4D16": [
+      "2Z10",
+      "4D0D",
+      "4D30"
+    ],
+    "4D17": [
+      "4D16",
+      "0BF3"
+    ],
+    "4D18": [
+      "4D16",
+      "4D07",
+      "4D10",
+      "4D11",
+      "4D30"
+    ],
+    "4D19": [
+      "4D18",
+      "019A",
+      "01B4",
+      "4D1B"
+    ],
+    "4D1A": [
+      "4D19",
+      "01Q1",
+      "0A32",
+      "0F04"
+    ],
+    "4D1B": [
+      "01BG",
+      "01BF",
+      "012B"
+    ],
+    "4D1C": [
+      "4D0F",
+      "01L4",
+      "01L8",
+      "01LD",
+      "01L6",
+      "01L7"
+    ],
+    "4D1D": [
+      "0F14",
+      "01BE",
+      "012D",
+      "012B"
+    ],
+    "4D1E": [
+      "019A",
+      "4D0D"
+    ],
+    "4D1F": [
+      "4D16",
+      "4D1E",
+      "00NK"
+    ],
+    "4D20": [
+      "4D06",
+      "4D13",
+      "0F14",
+      "4D18",
+      "4D07"
+    ],
+    "4D21": [
+      "4D19",
+      "4D14",
+      "4D15"
+    ],
+    "4D22": [
+      "0AI8",
+      "01AG",
+      "00DD"
+    ],
+    "4D23": [
+      "4D22",
+      "0F00"
+    ],
+    "4D24": [
+      "4D23",
+      "0A40"
+    ],
+    "4D25": [
+      "4D24",
+      "00D7",
+      "00GC"
+    ],
+    "4D26": [
+      "4D25",
+      "4D12"
+    ],
+    "4D27": [
+      "4D22",
+      "4D23",
+      "2T0Y"
+    ],
+    "4D28": [
+      "4D25",
+      "2T0X",
+      "2T0Y"
+    ],
+    "4D29": [
+      "4D22",
+      "4D27",
+      "4D28"
+    ],
+    "4D2A": [
+      "4D27",
+      "4D29",
+      "0BL2"
+    ],
+    "4D2B": [
+      "0B86",
+      "4D23",
+      "0F5A",
+      "4D31"
+    ],
+    "4D2C": [
+      "0B86",
+      "019A",
+      "4D0E",
+      "4D1E"
+    ],
+    "4D2D": [
+      "4D2C",
+      "4D08",
+      "4D1E",
+      "4D11"
+    ],
+    "4D2E": [
+      "4D13",
+      "4D20",
+      "4D27",
+      "4D28"
+    ],
+    "4D2F": [
+      "4D16",
+      "4D18",
+      "4D14"
+    ],
+    "4D30": [
+      "01K8",
+      "2Z10",
+      "019A"
+    ],
+    "4D31": [
+      "00GC",
+      "0F00"
+    ]
+  },
+  "atomic_questions": {
+    "4D01": "矩阵积分的形式展开究竟以哪些量为参数？",
+    "4D02": "为什么矩阵传播子有两条指标线？",
+    "4D03": "带状费曼图为什么产生欧拉示性数？",
+    "4D04": "三个 Wick 配对怎样分别给出球面、球面和环面？",
+    "4D05": "为何亏格展开应用于 log Z？",
+    "4D06": "大 N 极限与微扰级数怎样相互重排？",
+    "4D07": "给矩阵模型加入向量自由度具体改变什么？",
+    "4D08": "有 b 条边界时为何出现 hbar 的 2g−2+b 次方？",
+    "4D09": "基本表示修饰如何变成迹相互作用？",
+    "4D0A": "连通双迹为何比两个单迹的乘积小 N 的平方？",
+    "4D0B": "同一个场论为什么可以产生不同的亏格展开？",
+    "4D0C": "一个小特征值块怎样产生向量型自由度？",
+    "4D0D": "BRST 闭与 BRST 恰当分别意味着什么？",
+    "4D0E": "形式 Maurer–Cartan 方程在哪个系数环中有意义？",
+    "4D0F": "为什么切空间是 H¹，而延拓障碍落在 H²？",
+    "4D10": "为什么加入多个探针能从 Lie 括号看出结合乘法？",
+    "4D11": "怎样从所有矩阵值形式变形读取 A∞ 运算？",
+    "4D12": "两个 Maurer–Cartan 解如何给出对象之间的复形？",
+    "4D13": "Calabi–Yau 的次数在边界代数中如何出现？",
+    "4D14": "范畴重构到哪一步仍不足以得到弦振幅？",
+    "4D15": "Claim 1.1 预测了什么，哪些数据还须构造？",
+    "4D16": "报告的手征场论由哪些场和微分组成？",
+    "4D17": "为什么共形权限制可用的变形模式数？",
+    "4D18": "手征模型的基本表示修饰怎样产生边界代数？",
+    "4D19": "SL₂ 的坐标关系如何出现在手征模型中？",
+    "4D1A": "为什么 t≠0 给出 SL₂，而 t=0 出现锥顶奇点？",
+    "4D1B": "何时 DG 代数的极小模型只有普通乘法？",
+    "4D1C": "H¹ 与 HH² 为何在同一讨论中同时出现？",
+    "4D1D": "最简单的 Koszul 对偶怎样把坐标变成奇生成元？",
+    "4D1E": "BV 方程怎样组织经典与量子反常？",
+    "4D1F": "为什么要让手征耦合取值于 Dolbeault 形式？",
+    "4D20": "为什么树级背景还不能代替固定 t 的平面背景？",
+    "4D21": "平面代数相同以后还有哪些数学问题？",
+    "4D22": "单个基本费米子族为什么留下真空与满占据态？",
+    "4D23": "费米子双线性子为什么生成 gl_m？",
+    "4D24": "为什么参考态重叠是一个小行列式的 N 次幂？",
+    "4D25": "μ²=tμ 与迹条件怎样参数化互补子空间？",
+    "4D26": "直和对象之间的信息如何出现在切空间的非对角块？",
+    "4D27": "如何把大 N 规范不变量改写成固定秩量子系统？",
+    "4D28": "投影模空间如何成为余切 Grassmann 簇的变形？",
+    "4D29": "改变重子数的算符为何需要连接不同相空间？",
+    "4D2A": "量子群版本怎样改变一维探针的几何？",
+    "4D2B": "二维平坦性理论为何出现一族矩阵生成函数？",
+    "4D2C": "Chern–Simons 探针的经典相容性怎样成为 Maurer–Cartan 方程？",
+    "4D2D": "平面传播子修正能否重构一般 Chern–Simons 的 D-brane 范畴？",
+    "4D2E": "去掉手征坐标后，范畴化方法还有什么输入？",
+    "4D2F": "为何只看未修饰理论会漏掉边界信息？",
+    "4D30": "奇场的 OPE 与混合味矩阵怎样一致地携带符号？",
+    "4D31": "RTT 关系中的辅助空间、R 矩阵和形式级数分别是什么？"
+  },
+  "navigation_only": [
+    "4D00",
+    "icm2026-gaiotto"
+  ],
+  "reused_pages": [
+    {
+      "id": "00GC",
+      "path": "trees/math/algebra/atomic/00GC.tree",
+      "title": "线性映射",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0F14",
+      "path": "trees/math/algebra/atomic/0F14.tree",
+      "title": "多对象增广 DG 代数的 Koszul 对偶",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "012A",
+      "path": "trees/math/algebra/research/012A.tree",
+      "title": "模的链复形",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "012B",
+      "path": "trees/math/algebra/research/012B.tree",
+      "title": "链复形的同调",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "012D",
+      "path": "trees/math/algebra/research/012D.tree",
+      "title": "模的投射分解",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "019A",
+      "path": "trees/math/algebra/research/019A.tree",
+      "title": "微分分次代数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "019E",
+      "path": "trees/math/algebra/research/019E.tree",
+      "title": "dg 代数的 proper 性",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "019F",
+      "path": "trees/math/algebra/research/019F.tree",
+      "title": "dg 代数的同调光滑性",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "019J",
+      "path": "trees/math/algebra/research/019J.tree",
+      "title": "带状图",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01AG",
+      "path": "trees/math/algebra/research/01AG.tree",
+      "title": "模的外代数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01B4",
+      "path": "trees/math/algebra/research/01B4.tree",
+      "title": "Noether 概形上的凝聚模层",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01BE",
+      "path": "trees/math/algebra/research/01BE.tree",
+      "title": "导出自同态 DG 代数",
+      "taxon": "Construction",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01BF",
+      "path": "trees/math/algebra/research/01BF.tree",
+      "title": "严格含幺极小 A∞ 代数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01BG",
+      "path": "trees/math/algebra/research/01BG.tree",
+      "title": "含幺 DG 代数的极小模型",
+      "taxon": "Theorem",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01K8",
+      "path": "trees/math/algebra/research/01K8.tree",
+      "title": "非负分次交换代数的偶次子环",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01L0",
+      "path": "trees/math/algebra/research/01L0.tree",
+      "title": "普通代数的双模与包络代数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01L1",
+      "path": "trees/math/algebra/research/01L1.tree",
+      "title": "普通代数的增广 bar 复形",
+      "taxon": "Construction",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01L4",
+      "path": "trees/math/algebra/research/01L4.tree",
+      "title": "Hochschild 上链与微分",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01L6",
+      "path": "trees/math/algebra/research/01L6.tree",
+      "title": "零次 Hochschild 上同调是中心",
+      "taxon": "Theorem",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01L7",
+      "path": "trees/math/algebra/research/01L7.tree",
+      "title": "一次 Hochschild 上同调是外导子空间",
+      "taxon": "Theorem",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01L8",
+      "path": "trees/math/algebra/research/01L8.tree",
+      "title": "固定单位的一阶结合代数变形",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01LD",
+      "path": "trees/math/algebra/research/01LD.tree",
+      "title": "二次 Hochschild 上同调分类一阶结合变形",
+      "taxon": "Theorem",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "01Q1",
+      "path": "trees/math/algebra/research/01Q1.tree",
+      "title": "交换环上的一般线性群与特殊线性群",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0AI8",
+      "path": "trees/math/algebra/research/0AI8.tree",
+      "title": "二次型的 Clifford 代数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0A32",
+      "path": "trees/math/analysis/atomic/0A32.tree",
+      "title": "偏导数与高阶偏导数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0B86",
+      "path": "trees/math/geometry/algebraic/0B86.tree",
+      "title": "向量丛上的联络与平坦性",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0BF3",
+      "path": "trees/math/geometry/algebraic/0BF3.tree",
+      "title": "典范丛与典范除子",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0BJO",
+      "path": "trees/math/geometry/algebraic/0BJO.tree",
+      "title": "微分分次范畴",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0BL2",
+      "path": "trees/math/geometry/algebraic/0BL2.tree",
+      "title": "余切丛的典范辛形式",
+      "taxon": "Construction",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0BLC",
+      "path": "trees/math/geometry/algebraic/0BLC.tree",
+      "title": "Floer 运算的弯曲 A∞ 关系",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0F00",
+      "path": "trees/math/geometry/algebraic/0F00.tree",
+      "title": "Lie 代数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0F04",
+      "path": "trees/math/geometry/algebraic/0F04.tree",
+      "title": "仿射代数集合的 Zariski 切空间",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "00NK",
+      "path": "trees/math/geometry/atomic/00NK.tree",
+      "title": "光滑微分形式",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0A40",
+      "path": "trees/math/geometry/atomic/0A40.tree",
+      "title": "行列式的交替多线性刻画",
+      "taxon": "Theorem",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0N0R",
+      "path": "trees/math/geometry/bourbaki/0N0R.tree",
+      "title": "标准正态分布与高斯尾函数",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "2T0X",
+      "path": "trees/math/lie/bps/2T0X.tree",
+      "title": "Nakajima 箭图簇与预投射 CoHA 的表示",
+      "taxon": "Construction",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "2T0Y",
+      "path": "trees/math/lie/bps/2T0Y.tree",
+      "title": "无箭头 Nakajima 簇是 Grassmann 簇的余切丛",
+      "taxon": "Example",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "2Z10",
+      "path": "trees/math/lie/loop-automorphic/2Z10.tree",
+      "title": "顶点代数的真空平移与局部性",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "00D7",
+      "path": "trees/math/logic/research/00D7.tree",
+      "title": "线性子空间",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "00DD",
+      "path": "trees/math/logic/research/00DD.tree",
+      "title": "一般线性群",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0F5A",
+      "path": "trees/math/number-theory/0F5A.tree",
+      "title": "Lie 代数的泛包络代数",
+      "taxon": "Construction",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "4411",
+      "path": "trees/math/pde/deng/4411.tree",
+      "title": "标准复高斯随机变量",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "441B",
+      "path": "trees/math/pde/deng/441B.tree",
+      "title": "独立复高斯的 Wick 配对公式",
+      "taxon": "Proposition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    },
+    {
+      "id": "0F46",
+      "path": "trees/math/topology/atomic/0F46.tree",
+      "title": "紧连通曲面的亏格",
+      "taxon": "Definition",
+      "role": "Existing substantive body-linked definition, theorem, construction or example; not recreated."
+    }
+  ],
+  "source_records": [
+    {
+      "id": "gaiotto-icm2026",
+      "title": "The Categorical ’t Hooft Expansion",
+      "authors": [
+        "Davide Gaiotto"
+      ],
+      "doi": "10.1137/25M1824641",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1824641",
+      "version": "Publisher full HTML, Proceedings of ICM 2026 volume 5, pp442–461",
+      "published_online": "2026-07-13",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "copyright": "International Mathematical Union; published by SIAM",
+      "role": "Binding report edition",
+      "reading_scope": "Read the publisher HTML abstract and complete mathematical body §§1–4.1 corresponding to printed pp442–461, displayed formulas, footnotes 1–10 and acknowledgments in overlapping section-sized retrievals. Bibliography consulted for source identification, not claimed exhaustively read. Figure captions were read; publisher PDF and figure pixels were not inspected.",
+      "reproduction": "Attributed Chinese adaptation and independent elementary calculations; no copied figures or extended verbatim passages."
+    },
+    {
+      "id": "gaiotto-et-al-2411v2",
+      "title": "Categorical 't Hooft expansion and chiral algebras",
+      "authors": [
+        "Davide Gaiotto",
+        "Adrián López-Raven",
+        "Hanne Silverans",
+        "Keyou Zeng"
+      ],
+      "url": "https://arxiv.org/abs/2411.00760v2",
+      "full_text_url": "https://arxiv.org/html/2411.00760v2",
+      "version": "v2, 2025-09-22, 120 pages",
+      "license": "arXiv perpetual non-exclusive distribution license; not the report's CC BY license",
+      "role": "Primary supplement [37]",
+      "reading_scope": "Fixed arXiv:2411.00760v2: introduction; §§2.5–2.7; §§3.5–3.6; §11 opening and planar anomaly equations (276)–(281); Appendices D and E. Review repairs additionally read §6.1 final relative-BRST paragraphs/footnote 29 and §12.2, and reread §§2.5–2.6. These selected ranges are not a full reading of the 120-page paper.",
+      "not_read": "No complete §12 calculation, full BRST/OPE proof, or complete 120-page reading is claimed."
+    },
+    {
+      "id": "costello-0412149v7",
+      "title": "Topological conformal field theories and Calabi-Yau categories",
+      "authors": [
+        "Kevin Costello"
+      ],
+      "url": "https://arxiv.org/abs/math/0412149v7",
+      "full_text_url": "https://arxiv.org/html/math/0412149v7",
+      "version": "v7, 2006-01-16",
+      "license": "HTML marks arXiv non-exclusive distribution license as assumed; no separate CC reuse grant asserted",
+      "role": "Primary theorem input",
+      "reading_scope": "Read §§1.1–1.3 including Theorem A and category/h-split conventions; neighboring §1.4–1.7 introductory discussion also inspected. Deep proof in §7 not fully read or reconstructed.",
+      "hypotheses": [
+        "Characteristic-zero field",
+        "Fixed brane/object set",
+        "Unital extended Calabi-Yau A-infinity structure",
+        "h-split open TCFT",
+        "Determinant local system and allowed incoming/free-boundary restrictions"
+      ]
+    },
+    {
+      "id": "gaiotto-zeng-2603v2",
+      "title": "Interface Minimal Model Holography and Topological String Theory",
+      "authors": [
+        "Davide Gaiotto",
+        "Keyou Zeng"
+      ],
+      "url": "https://arxiv.org/abs/2603.08783v2",
+      "full_text_url": "https://arxiv.org/html/2603.08783v2",
+      "version": "v2, 2026-09-15, 68 pages",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "role": "Additional primary clarification prompted by independent review; not substituted for the ICM edition",
+      "reading_scope": "Read §3 from equations (36)–(47), including footnote 4 / BRST levels (39), coset definition and residual U(1)/lattice-extension paragraph. Neighboring §2.5 inspected. Not a full-paper reading.",
+      "hypotheses": [
+        "Positive integer kappa for the explicit simple-integrable coset example",
+        "N complex fundamental fermions contribute affine level +1",
+        "Second BRST affine level is -kappa-1-2N",
+        "The complete fermion coset retains a U(1) current and possible lattice extension"
+      ]
+    },
+    {
+      "id": "mno-yangians-v2",
+      "title": "Yangians and Classical Lie Algebras",
+      "authors": [
+        "Alexander Molev",
+        "Maxim Nazarov",
+        "Grigori Olshanski"
+      ],
+      "url": "https://arxiv.org/abs/hep-th/9409025v2",
+      "full_text_url": "https://arxiv.org/pdf/hep-th/9409025v2",
+      "version": "v2, 1994-09-26, 80-page PDF",
+      "license": "Not independently verified; no extended text or figures reproduced, report license not applied",
+      "role": "Primary prerequisite for an exact RTT convention",
+      "reading_scope": "PDF text extraction: title and introduction through equation (1), PDF pp1–3; includes generators, tensor legs and R=1-P/(u-v). Later material incidentally returned but no full Section 1 or paper reading claimed. No pixel inspection."
+    }
+  ],
+  "source_reading": {
+    "authoritative_report_read": true,
+    "full_report_math_body_read": true,
+    "full_bibliography_read": false,
+    "publisher_pdf_read": false,
+    "publisher_figure_pixels_read": false,
+    "supplement_whole_papers_read": false,
+    "precise_scope_in": "source_records",
+    "read_date": "2026-10-22"
+  },
+  "clarifications": [
+    {
+      "id": "formal-versus-asymptotic",
+      "nodes": [
+        "4D01",
+        "4D06",
+        "4D0A"
+      ],
+      "detail": "All N-power computations are coefficientwise formal unless a positive Gaussian integral is explicitly specified."
+    },
+    {
+      "id": "one-quartic-vertex",
+      "nodes": [
+        "4D04"
+      ],
+      "detail": "sigma=(0123); alpha=(01)(23),(03)(12),(02)(13); faces=3,3,1; Euler=2,2,0; Tr M^4=hbar^2(2N^3+N). Parent supplied numerical regression; local page includes full independent index calculation."
+    },
+    {
+      "id": "double-well-normalization",
+      "nodes": [
+        "4D0C"
+      ],
+      "detail": "Publisher (1.7) display has a lambda exponent inconsistent with the potential and adjacent prose. Derivative of -x^2/2+lambda*x^4/4 explicitly fixes stationary points at +/-lambda^(-1/2)."
+    },
+    {
+      "id": "global-mode-convention",
+      "nodes": [
+        "4D17"
+      ],
+      "detail": "Use coordinate-consistent polynomial section basis 0<=r<=2Delta-2; do not silently identify the report's printed Laurent-mode index expression with that basis."
+    },
+    {
+      "id": "relative-and-super",
+      "nodes": [
+        "4D16",
+        "4D18",
+        "4D30"
+      ],
+      "detail": "Relative local-operator complex imposes gauge invariance and excludes undifferentiated c; ghost number is distinguished from intrinsic parity. I,J have weight 1/2, ghost number zero and parity p_A."
+    },
+    {
+      "id": "conditional-meson-model",
+      "nodes": [
+        "4D18",
+        "4D19",
+        "4D1B"
+      ],
+      "detail": "Four commutative coordinate classes and their determinant relation first yield C_t -> H0(B_t). Full A-infinity model identification requires controlled diagonal mixing, cohomology concentrated in degree zero, generation and absence of further relations."
+    },
+    {
+      "id": "small-resolution",
+      "nodes": [
+        "4D1A",
+        "4D20"
+      ],
+      "detail": "Unused small-resolution aside removed from elementary fiber page; general conifold transition remains an attributed proposal, not an unproved local geometric equivalence."
+    },
+    {
+      "id": "cy-model-scope",
+      "nodes": [
+        "4D13",
+        "4D14",
+        "4D20"
+      ],
+      "detail": "Finite-dimensional proper cyclic trace model is not the same as a smooth/noncompact Calabi-Yau category; Costello hypotheses retained."
+    },
+    {
+      "id": "weyl-and-zero-modes",
+      "nodes": [
+        "4D2D",
+        "4D2E"
+      ],
+      "detail": "Conjugate Weyl generators are not declared commuting; global propagator identity retains 1-Pi for cohomology zero modes."
+    },
+    {
+      "id": "historical-reference-41",
+      "nodes": [
+        "4D2F"
+      ],
+      "detail": "ICM report [41] is described only as in preparation at the time of the report. The later selected Gaiotto–Zeng v2 source is separately identified and actually read for level/coset clarification; no full-paper reading or comprehensive holographic proof claimed."
+    },
+    {
+      "id": "report-only-sources",
+      "nodes": [
+        "4D2A",
+        "4D2B",
+        "4D2D"
+      ],
+      "detail": "Other report references, including [35] and broader higher-operation/Chern–Simons/BF literature, were not independently read in full. Their claims remain attributed to report-level discussion; no synthetic theorem contracts invented."
+    },
+    {
+      "id": "ownership-and-style",
+      "nodes": [
+        "4D03",
+        "4D08",
+        "4D12",
+        "4D13",
+        "4D20",
+        "4D2F"
+      ],
+      "detail": "Local Artinian R and nilpotent m bound in 4D12, shift definition linked in 4D13, index/vector loops use 回路. Access and workflow records remain here rather than in public mathematical prose."
+    }
+  ],
+  "coverage": {
+    "atomic_count": 49,
+    "overview_count": 1,
+    "reference_count": 1,
+    "tree_count": 51,
+    "existing_substantive_pages_reused": 44,
+    "forest_trees_searched": 6822,
+    "body_sections": [
+      "Matrix/Wick/ribbon genus counting",
+      "Fundamental modifications and saddle data",
+      "BRST/MC/A-infinity/cyclic/TCFT",
+      "Relative and super chiral models, mesons and backreaction",
+      "Howe, Fock, projector/quiver and baryon examples",
+      "Chern–Simons/BF/general one- and three-dimensional proposals"
+    ],
+    "new_prerequisite_additions": "Only 4D30 super-locality/signs and 4D31 RTT were added in response to independent review; neither duplicate existed in the searched forest."
+  },
+  "review_response": {
+    "review_file": "research/mathematical-physics-gaiotto-review.json",
+    "review_file_edited": false,
+    "status": "author_repairs_complete_pending_independent_recheck",
+    "findings": [
+      {
+        "id": "G4D-F01",
+        "nodes": [
+          "4D2F"
+        ],
+        "resolution": "Explicit k1+k2+k_matter=-2N and k_matter=1; second level -kappa-1-2N; positive-integral simple affine coset, residual Heisenberg and lattice-extension distinction."
+      },
+      {
+        "id": "G4D-F02",
+        "nodes": [
+          "4D16"
+        ],
+        "resolution": "Point-of-use §6.1/footnote29 citation, gauge invariance and no undifferentiated c; subsequent chiral nodes use relative version."
+      },
+      {
+        "id": "G4D-F03",
+        "nodes": [
+          "4D19"
+        ],
+        "resolution": "Coordinate relations separated from conditional full DG/A-infinity model identification, with all concentration/generation/mixing/kernel hypotheses."
+      },
+      {
+        "id": "G4D-F04",
+        "nodes": [
+          "4D16",
+          "4D18",
+          "4D30"
+        ],
+        "resolution": "Dedicated super-locality/total-parity prerequisite; I,J weights, direct/reversed OPE and signs; ordinary matrix-unit case distinguished."
+      },
+      {
+        "id": "G4D-F05",
+        "nodes": [
+          "4D2B",
+          "4D31"
+        ],
+        "resolution": "Dedicated exact ordinary RTT definition with auxiliary space, permutation R, two spectral variables, tensor legs, unit term and denominator-cleared meaning; physical resolvent realization remains conditional."
+      }
+    ],
+    "nonblocking_quadratic_identity": "4D27 now cites (3.8) precisely and proves it locally by moving the color constraint past an annihilator before restriction."
+  },
+  "validation": {
+    "scope": "Author source-only checks on owned files, not the parent's shared test/build suite",
+    "prerequisite_bodylinks": true,
+    "prerequisite_dag": true,
+    "all_atomic_pages_reachable_from_overview": true,
+    "prerequisites_exclude_navigation": true,
+    "all_links_resolve": true,
+    "owned_ids_unique": true,
+    "balanced_braces_and_editorial_scan": true,
+    "normalization": "scripts/note-editorial-lib.mjs normalizeFormat applied only to owned .tree files; idempotence checked before hashing",
+    "shared_tests_run": false,
+    "build_run": false,
+    "rendered_pages_checked": false,
+    "independent_review_pass_claimed": false
+  },
+  "freeze": {
+    "status": "source-frozen-awaiting-independent-recheck",
+    "date": "2026-10-22",
+    "hash_algorithm": "SHA-256",
+    "tree_files": [
+      {
+        "id": "4D00",
+        "path": "trees/math/mathematical-physics/gaiotto/4D00.tree",
+        "sha256": "ae2070000cdd882f1aeae75decb0fbb76c636c0a24100f5c94747e003840d5a5",
+        "bytes": 6149
+      },
+      {
+        "id": "4D01",
+        "path": "trees/math/mathematical-physics/gaiotto/4D01.tree",
+        "sha256": "6502bde25377abb83491189b1f6f85c97cfff1daf4482f22e4fec9614bd4acbe",
+        "bytes": 1201
+      },
+      {
+        "id": "4D02",
+        "path": "trees/math/mathematical-physics/gaiotto/4D02.tree",
+        "sha256": "b8d3f48edb5364a8d5fa61517a1b13c21f2bad59342d822f0d646dc6778d5768",
+        "bytes": 1282
+      },
+      {
+        "id": "4D03",
+        "path": "trees/math/mathematical-physics/gaiotto/4D03.tree",
+        "sha256": "053d467d1534e1560fe92958378ff037ab865a334a50abdaa730d6baf45fc3bd",
+        "bytes": 1175
+      },
+      {
+        "id": "4D04",
+        "path": "trees/math/mathematical-physics/gaiotto/4D04.tree",
+        "sha256": "bd3b80b84d9a244c5a3f6953395cb846313ddc4727c7cdf50e6069de37841ae6",
+        "bytes": 1619
+      },
+      {
+        "id": "4D05",
+        "path": "trees/math/mathematical-physics/gaiotto/4D05.tree",
+        "sha256": "13c280d730a9cbdc0e5160b5c0d1d311e3f6c231e5e666e201fe2a2fd5201fe4",
+        "bytes": 1157
+      },
+      {
+        "id": "4D06",
+        "path": "trees/math/mathematical-physics/gaiotto/4D06.tree",
+        "sha256": "4b3040e46fc765bb91714b706aa233f678ae95f5300e5486a9c0adb100128c2e",
+        "bytes": 1006
+      },
+      {
+        "id": "4D07",
+        "path": "trees/math/mathematical-physics/gaiotto/4D07.tree",
+        "sha256": "5696fcf0f89e51c2fc82e38d7ee69d4645a77727398437ec80d7d5adb06921e8",
+        "bytes": 1152
+      },
+      {
+        "id": "4D08",
+        "path": "trees/math/mathematical-physics/gaiotto/4D08.tree",
+        "sha256": "466f7b98153598fc507d1246628e1f82f47a03bba952c4c223e7b8d6af3ae42e",
+        "bytes": 1094
+      },
+      {
+        "id": "4D09",
+        "path": "trees/math/mathematical-physics/gaiotto/4D09.tree",
+        "sha256": "da5f80ddcfe84a479939ec7df712b9e6dede70679c78d759e48603d247ee4687",
+        "bytes": 1103
+      },
+      {
+        "id": "4D0A",
+        "path": "trees/math/mathematical-physics/gaiotto/4D0A.tree",
+        "sha256": "346e5cc6022e7847414f72701c5fd2772130725bb3e9ea9bdadf3d0879a7e90a",
+        "bytes": 1089
+      },
+      {
+        "id": "4D0B",
+        "path": "trees/math/mathematical-physics/gaiotto/4D0B.tree",
+        "sha256": "db30214fa8e67c9ddef243b1475d52c7590123bb83cdbc1349d4134d112bf527",
+        "bytes": 1126
+      },
+      {
+        "id": "4D0C",
+        "path": "trees/math/mathematical-physics/gaiotto/4D0C.tree",
+        "sha256": "162b447f0accce7eb226cec557aa6616f16aeb67b957733d5fefd230a7417a4c",
+        "bytes": 1200
+      },
+      {
+        "id": "4D0D",
+        "path": "trees/math/mathematical-physics/gaiotto/4D0D.tree",
+        "sha256": "9f9e9ac29eaa7745dc58746b87c4d915210d2e6e6522d541ee0606243f3e6dbc",
+        "bytes": 1016
+      },
+      {
+        "id": "4D0E",
+        "path": "trees/math/mathematical-physics/gaiotto/4D0E.tree",
+        "sha256": "28f5c1952d632b09c564d380647b34fbe33c658a16fa52a5bdb5942101f6298a",
+        "bytes": 1161
+      },
+      {
+        "id": "4D0F",
+        "path": "trees/math/mathematical-physics/gaiotto/4D0F.tree",
+        "sha256": "1a5358fbff1bf0ff631946e2991a135b1d8ce156105f34a5669f5a99ae14a74f",
+        "bytes": 969
+      },
+      {
+        "id": "4D10",
+        "path": "trees/math/mathematical-physics/gaiotto/4D10.tree",
+        "sha256": "661d1ccc63aa4a585d47116edb3f3272fa42d8c2bf719d1619875ecc0cc37bb7",
+        "bytes": 1034
+      },
+      {
+        "id": "4D11",
+        "path": "trees/math/mathematical-physics/gaiotto/4D11.tree",
+        "sha256": "96716da2bc1db4c5451fba2634661baa62c1bbd390741e554d823991975c08bc",
+        "bytes": 2050
+      },
+      {
+        "id": "4D12",
+        "path": "trees/math/mathematical-physics/gaiotto/4D12.tree",
+        "sha256": "58dbb623005c297fa77d52fe3828963c48e3dcabaa5e150d4f74cf1b8e9c874f",
+        "bytes": 1298
+      },
+      {
+        "id": "4D13",
+        "path": "trees/math/mathematical-physics/gaiotto/4D13.tree",
+        "sha256": "47b486a77d339cd220dd0df717fa41971386bc4ddd1677d2dca30ffb2a1fc360",
+        "bytes": 1450
+      },
+      {
+        "id": "4D14",
+        "path": "trees/math/mathematical-physics/gaiotto/4D14.tree",
+        "sha256": "422bbb334d7ebd420c6b0dcf36ea73cbb61ddc508385a50903b667bbc61ce343",
+        "bytes": 1571
+      },
+      {
+        "id": "4D15",
+        "path": "trees/math/mathematical-physics/gaiotto/4D15.tree",
+        "sha256": "070235c71bfab46fcd157acf6c71065bcbabf262435bc7108ebafdd8334a8f00",
+        "bytes": 1284
+      },
+      {
+        "id": "4D16",
+        "path": "trees/math/mathematical-physics/gaiotto/4D16.tree",
+        "sha256": "e2f47245f7068a56c9e36be7f24398cb6d918e2efaaea7fc1487c280b709a4ec",
+        "bytes": 1884
+      },
+      {
+        "id": "4D17",
+        "path": "trees/math/mathematical-physics/gaiotto/4D17.tree",
+        "sha256": "45f77b0437f4f9e43dd9ba609f4484f8dfb9bde478a3c990aef790c05aa43cb1",
+        "bytes": 1358
+      },
+      {
+        "id": "4D18",
+        "path": "trees/math/mathematical-physics/gaiotto/4D18.tree",
+        "sha256": "57619c346a266d297c7157a8b62bc33bdc4410a3b916c2884f073902cfae919c",
+        "bytes": 1974
+      },
+      {
+        "id": "4D19",
+        "path": "trees/math/mathematical-physics/gaiotto/4D19.tree",
+        "sha256": "9fb901e64679ef6410d81d031995834558849e8f542350af4925f74a4276467f",
+        "bytes": 1668
+      },
+      {
+        "id": "4D1A",
+        "path": "trees/math/mathematical-physics/gaiotto/4D1A.tree",
+        "sha256": "f9487d42ffab6247bb1411cfdb2570c6e2c39ce58369223ce861fb7d9b780276",
+        "bytes": 1190
+      },
+      {
+        "id": "4D1B",
+        "path": "trees/math/mathematical-physics/gaiotto/4D1B.tree",
+        "sha256": "b1e6994fc4838b93c6f9b607d71218476aa763645bab535a08d85a8d0488fafc",
+        "bytes": 899
+      },
+      {
+        "id": "4D1C",
+        "path": "trees/math/mathematical-physics/gaiotto/4D1C.tree",
+        "sha256": "972389c8e74bf737aac88db070054e3811bb918b8aadd4598426b58b0e94d9f1",
+        "bytes": 1133
+      },
+      {
+        "id": "4D1D",
+        "path": "trees/math/mathematical-physics/gaiotto/4D1D.tree",
+        "sha256": "b8483158b484c5a738eae203f5a0f79ad0dae6049864a7795e7effa260624f04",
+        "bytes": 1286
+      },
+      {
+        "id": "4D1E",
+        "path": "trees/math/mathematical-physics/gaiotto/4D1E.tree",
+        "sha256": "9ee118cac04838b3eef7ae3b57d91924aca0511fb9a2d2620ddeaac09bc6c837",
+        "bytes": 1397
+      },
+      {
+        "id": "4D1F",
+        "path": "trees/math/mathematical-physics/gaiotto/4D1F.tree",
+        "sha256": "d8f46866aea7fd3fffb5d9390c3f581a30581200118a34d28436d7233b456e2b",
+        "bytes": 1357
+      },
+      {
+        "id": "4D20",
+        "path": "trees/math/mathematical-physics/gaiotto/4D20.tree",
+        "sha256": "30309df5ac9e06156e7bb936f084de85c46d675da6d70697fca162d082ba232a",
+        "bytes": 1474
+      },
+      {
+        "id": "4D21",
+        "path": "trees/math/mathematical-physics/gaiotto/4D21.tree",
+        "sha256": "fa72914f2dc6ca7e302e75313f5ba378da23f91ccebeff9a54f69fa3ed740147",
+        "bytes": 1228
+      },
+      {
+        "id": "4D22",
+        "path": "trees/math/mathematical-physics/gaiotto/4D22.tree",
+        "sha256": "902f0a7783c39f3d1e4df35a47c7ff6782c881ea73c90f020bf67a9efdc83634",
+        "bytes": 1472
+      },
+      {
+        "id": "4D23",
+        "path": "trees/math/mathematical-physics/gaiotto/4D23.tree",
+        "sha256": "ec24c3c5fdc19788a8404a2e7332ec722845c2f1ef2911b35d8e5a85546b7a0b",
+        "bytes": 1342
+      },
+      {
+        "id": "4D24",
+        "path": "trees/math/mathematical-physics/gaiotto/4D24.tree",
+        "sha256": "1b7b53b0c5eaae8d9b8faba46224dabdf8a9403c29b5e915557e79d76dbae92e",
+        "bytes": 1459
+      },
+      {
+        "id": "4D25",
+        "path": "trees/math/mathematical-physics/gaiotto/4D25.tree",
+        "sha256": "fd472e5c284e54d37cd6c20aa7940972bfeb42bfeb71e61c16c9a0d3874bf8d3",
+        "bytes": 1243
+      },
+      {
+        "id": "4D26",
+        "path": "trees/math/mathematical-physics/gaiotto/4D26.tree",
+        "sha256": "3de59bc4141a1ac2e455a0e9a26ab008d400d58402622b0e09e22c3be1754ce9",
+        "bytes": 1226
+      },
+      {
+        "id": "4D27",
+        "path": "trees/math/mathematical-physics/gaiotto/4D27.tree",
+        "sha256": "9b259835de3b992c5a8a2a227ce21f1b8457408cba96eab08f7b069ee7ade1dc",
+        "bytes": 2289
+      },
+      {
+        "id": "4D28",
+        "path": "trees/math/mathematical-physics/gaiotto/4D28.tree",
+        "sha256": "7563e99a068a3c7d533bed3f8a0aed7bfd4bcc8ef1e2db2b8d24183e8d5743c2",
+        "bytes": 1297
+      },
+      {
+        "id": "4D29",
+        "path": "trees/math/mathematical-physics/gaiotto/4D29.tree",
+        "sha256": "9e6a42b15f585a2bfb48291de2b4ce7b82d040c5a76b1185e0141646640e34c9",
+        "bytes": 1339
+      },
+      {
+        "id": "4D2A",
+        "path": "trees/math/mathematical-physics/gaiotto/4D2A.tree",
+        "sha256": "c51da258a97e5ee0113458b4658b02aa2b5032d0312d6f641268bf8e319abfee",
+        "bytes": 1380
+      },
+      {
+        "id": "4D2B",
+        "path": "trees/math/mathematical-physics/gaiotto/4D2B.tree",
+        "sha256": "7695edbb470c81dfd23d6f365212843d97d01c865f274ac7d0ed420016561494",
+        "bytes": 1448
+      },
+      {
+        "id": "4D2C",
+        "path": "trees/math/mathematical-physics/gaiotto/4D2C.tree",
+        "sha256": "bf3c0e3da2efb56bdc80a0c25649b38dfeee4ca8e9a4ec4cd2463432c3c21bd2",
+        "bytes": 1208
+      },
+      {
+        "id": "4D2D",
+        "path": "trees/math/mathematical-physics/gaiotto/4D2D.tree",
+        "sha256": "b50fda5a71d6d31b7c5d0686e3cf56ec782482cf8fef6695b0eda4d89e5919a4",
+        "bytes": 1472
+      },
+      {
+        "id": "4D2E",
+        "path": "trees/math/mathematical-physics/gaiotto/4D2E.tree",
+        "sha256": "6522e0a1429b1d2221d9d8477839bbbb8b4d78b71f76c50e1616abc87bc42c6d",
+        "bytes": 1427
+      },
+      {
+        "id": "4D2F",
+        "path": "trees/math/mathematical-physics/gaiotto/4D2F.tree",
+        "sha256": "f686614cfce20672296659dd40cee8a7ed05950cc48dfc48b50116135f85798f",
+        "bytes": 2148
+      },
+      {
+        "id": "4D30",
+        "path": "trees/math/mathematical-physics/gaiotto/4D30.tree",
+        "sha256": "6ee1650d2ba1edaad26690ea2e5b742d5725b3cfbad2da17f26440f85f3a5079",
+        "bytes": 1620
+      },
+      {
+        "id": "4D31",
+        "path": "trees/math/mathematical-physics/gaiotto/4D31.tree",
+        "sha256": "2cf6534896a97772413838c8de285ad87d51737ec1e77218167990b81ce19e03",
+        "bytes": 1600
+      },
+      {
+        "id": "icm2026-gaiotto",
+        "path": "trees/references/icm2026-gaiotto.tree",
+        "sha256": "c7ca53698c2b31a9c3843a4867bdbd8e025de6bbe99b73d11f477ddafdc7928b",
+        "bytes": 1907
+      }
+    ],
+    "packet_hash_policy": "This packet excludes its own self-referential hash. Its complete-file SHA-256 is computed after writing and reported in the handoff.",
+    "ownership_files": [
+      "trees/math/mathematical-physics/gaiotto/4D00.tree",
+      "trees/math/mathematical-physics/gaiotto/4D01.tree",
+      "trees/math/mathematical-physics/gaiotto/4D02.tree",
+      "trees/math/mathematical-physics/gaiotto/4D03.tree",
+      "trees/math/mathematical-physics/gaiotto/4D04.tree",
+      "trees/math/mathematical-physics/gaiotto/4D05.tree",
+      "trees/math/mathematical-physics/gaiotto/4D06.tree",
+      "trees/math/mathematical-physics/gaiotto/4D07.tree",
+      "trees/math/mathematical-physics/gaiotto/4D08.tree",
+      "trees/math/mathematical-physics/gaiotto/4D09.tree",
+      "trees/math/mathematical-physics/gaiotto/4D0A.tree",
+      "trees/math/mathematical-physics/gaiotto/4D0B.tree",
+      "trees/math/mathematical-physics/gaiotto/4D0C.tree",
+      "trees/math/mathematical-physics/gaiotto/4D0D.tree",
+      "trees/math/mathematical-physics/gaiotto/4D0E.tree",
+      "trees/math/mathematical-physics/gaiotto/4D0F.tree",
+      "trees/math/mathematical-physics/gaiotto/4D10.tree",
+      "trees/math/mathematical-physics/gaiotto/4D11.tree",
+      "trees/math/mathematical-physics/gaiotto/4D12.tree",
+      "trees/math/mathematical-physics/gaiotto/4D13.tree",
+      "trees/math/mathematical-physics/gaiotto/4D14.tree",
+      "trees/math/mathematical-physics/gaiotto/4D15.tree",
+      "trees/math/mathematical-physics/gaiotto/4D16.tree",
+      "trees/math/mathematical-physics/gaiotto/4D17.tree",
+      "trees/math/mathematical-physics/gaiotto/4D18.tree",
+      "trees/math/mathematical-physics/gaiotto/4D19.tree",
+      "trees/math/mathematical-physics/gaiotto/4D1A.tree",
+      "trees/math/mathematical-physics/gaiotto/4D1B.tree",
+      "trees/math/mathematical-physics/gaiotto/4D1C.tree",
+      "trees/math/mathematical-physics/gaiotto/4D1D.tree",
+      "trees/math/mathematical-physics/gaiotto/4D1E.tree",
+      "trees/math/mathematical-physics/gaiotto/4D1F.tree",
+      "trees/math/mathematical-physics/gaiotto/4D20.tree",
+      "trees/math/mathematical-physics/gaiotto/4D21.tree",
+      "trees/math/mathematical-physics/gaiotto/4D22.tree",
+      "trees/math/mathematical-physics/gaiotto/4D23.tree",
+      "trees/math/mathematical-physics/gaiotto/4D24.tree",
+      "trees/math/mathematical-physics/gaiotto/4D25.tree",
+      "trees/math/mathematical-physics/gaiotto/4D26.tree",
+      "trees/math/mathematical-physics/gaiotto/4D27.tree",
+      "trees/math/mathematical-physics/gaiotto/4D28.tree",
+      "trees/math/mathematical-physics/gaiotto/4D29.tree",
+      "trees/math/mathematical-physics/gaiotto/4D2A.tree",
+      "trees/math/mathematical-physics/gaiotto/4D2B.tree",
+      "trees/math/mathematical-physics/gaiotto/4D2C.tree",
+      "trees/math/mathematical-physics/gaiotto/4D2D.tree",
+      "trees/math/mathematical-physics/gaiotto/4D2E.tree",
+      "trees/math/mathematical-physics/gaiotto/4D2F.tree",
+      "trees/math/mathematical-physics/gaiotto/4D30.tree",
+      "trees/math/mathematical-physics/gaiotto/4D31.tree",
+      "trees/references/icm2026-gaiotto.tree",
+      "research/mathematical-physics-gaiotto-packet.json"
+    ],
+    "handoff": "Parent owns registration, navigation, shared tests, build, render review, git and publication."
+  }
+}

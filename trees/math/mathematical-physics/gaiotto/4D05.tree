@@ -1,0 +1,13 @@
+\title{对数配分函数只留下连通图}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Gaiotto 报告](icm2026-gaiotto)，§1, (1.3)}
+
+\p{在[形式矩阵模型](4D01)中令 #{W_v} 为带 #{v} 个已标号顶点的全部 Wick 图权重之和，令 #{C_v} 为其中连通图的权重之和。每个顶点计入 #{-1/(4\hbar)}，暂不计入耦合 #{\lambda} 和顶点标号因子 #{1/v!}；#{\hbar} 是传播子参数。图可以有自环和重边，[带状结构](019J)由迹确定。}
+\p{每个图唯一分解成连通分量。若其顶点集的集合分拆为 #{\pi}，不同块上的权重相乘，因而}
+##{W_v=\sum_{\pi\text{ 为 }\{1,\ldots,v\}\text{ 的分拆}}\prod_{B\in\pi}C_{|B|}.}
+\p{展开 #{\exp(\sum_{r\geq 1}C_r\lambda^r/r!)} 时，选择 #{k} 个非空块的分母 #{k!} 去掉块排序，#{r!} 去掉块内标号排序；乘 #{v!} 后正好枚举上述集合分拆。因此}
+##{\sum_{v\geq 0}\frac{W_v}{v!}\lambda^v
+=\exp\left(\sum_{r\geq 1}\frac{C_r}{r!}\lambda^r\right).}
+\p{常数项为 #{1}，形式对数有定义，故 #{\log Z_N} 恰枚举连通图。该结论逐次有限，不需要图级数收敛。}

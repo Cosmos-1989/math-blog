@@ -1,0 +1,13 @@
+\title{局部荷和空间流的准粒子表示}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，散射论文 v4 Proposition 2.10；报告 Proposition 4.2。}
+
+\p{采用[散射尺度假设](4B12)、[谱局部荷](4B0I) #{k_i^{(m)}} 与[准粒子位置](4B0D) #{Q_j(t)}。令 #{A=(T+|n_-|^{1/2})(\log N)^5}、#{B=(T+|n_+|^{1/2})(\log N)^5}，定义空间内部区间}
+##{J_* =\begin{cases}[\alpha n_-+A,\alpha n_+-B],&\alpha>0,\\\bigl[\alpha n_++B,\alpha n_--A\bigr],&\alpha<0.\end{cases}}
+\p{以至少 #{1-c^{-1}e^{-c(\log N)^2}} 的概率，同时对整数 #{0\leq m\leq\log N}、#{0\leq t\leq T}、任意区间 #{J\subseteq J_*}，有}
+##{\left|\sum_{q_i(t)\in J}k_i^{(m)}(t)-\sum_{Q_j(t)\in J}\lambda_j^m\right|\leq(\log N)^{m+6}.}
+\p{对任意 #{x\in J_*}，定义左半线的净荷变化 #{\mathcal I_m(x,t)=\sum_{q_i(t)<x}k_i^{(m)}(t)-\sum_{q_i(0)<x}k_i^{(m)}(0)}。同一事件上还有}
+##{\left|\mathcal I_m(x,t)-\sum_j\lambda_j^m\big(1_{Q_j(t)<x}-1_{Q_j(0)<x}\big)\right|\leq(\log N)^{m+6}.}
+\p{#{J_*} 是实位置区间，#{I=\{n_-,\ldots,n_+\}} 才是指标区间。空的 #{J_*} 只给空泛结论，典型选择 #{N\asymp T^2} 可使原点附近的大区间位于其中。#{m=0} 的区间计数在选定双射后实际精确相等。一般 #{m} 的估计是引用定理，其证明需要局域化和空间近有序性。}

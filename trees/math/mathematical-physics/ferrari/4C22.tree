@@ -1,0 +1,12 @@
+\title{Poisson 槽强度与游程权的关系}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Armendáriz–Blanc–Ferrari–Gabrielli，命题 17、定理 18、推论 16；[Ferrari](icm2026-ferrari)，§3.1}
+
+\p{设 #{q\geq 0} 可测，#{0<Z:=\int_0^\infty q(\ell)\,d\ell<\infty}，定义}
+##{\alpha(\ell)=q(\ell)\exp\left(-2\int_0^\ell(\ell -h)q(h)\,dh\right).}
+\p{Armendáriz–Blanc–Ferrari–Gabrielli 的命题 17 与定理 18 给出：强度 #{du\,q(\ell)d\ell} 的 [Poisson 槽测度](4C02)几乎必然满足[有限探索条件](4C20)；其逆构造是原点为记录的路径。两侧游程独立且服从[权分布](4C21) #{\nu_\alpha}，#{Z_\alpha=Z}；游程之间的记录间隔独立，尾概率为 #{\mathbb P(G>s)=e^{-Zs}}。含原点的记录间隔由原点左、右两个独立的同参数指数长度组成。}
+\p{推论 16 进一步给出 #{L_\alpha<\infty} 当且仅当 #{\int_0^\infty\ell q(\ell)\,d\ell<\infty}。这一步区分有限游程的几乎处处存在与游程长度的有限期望。}
+\p{\strong{权因子的由来。}一个高度 #{\ell} 的孤子在高度 #{h<\ell} 创造 #{2(\ell -h)} 的[槽长度](4C1F)。Poisson 构形要求指定探索区之外没有额外点，其空集概率贡献 #{\exp(-2\int_0^\ell(\ell -h)q(h)\,dh)}；指定点自身贡献 #{q(\ell)}。从槽参数到极值参数的分片线性变换，其 Jacobian 绝对值为一。严格探索与变量变换的证明见该文 §§3.1.2–3.3。}
+\p{若从 #{\alpha} 反求 #{q}，令 #{Q(\ell)=\int_0^\ell(\ell -h)q(h)\,dh}，则须求解 #{Q''=\alpha e^{2Q}}、#{Q(0)=Q'(0)=0}。此反向步骤需控制解在整个正半轴的存在性；局部微分方程本身不保证全局的可积 Poisson 强度。}

@@ -1,0 +1,14 @@
+\title{Toda 态密度的二阶矩与温度缩放}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，有效速度论文 v4 §1.3、Remark 3.15；迹计算。}
+
+\p{[热平衡态密度](4B0B) #{\rho_{\beta,\theta}} 满足}
+##{\int\rho_{\beta,\theta}=1,\qquad\int x\rho_{\beta,\theta}(x)\,dx=0,\qquad\int x^2\rho_{\beta,\theta}(x)\,dx=\frac{1+2\theta}{\beta}.}
+\p{\strong{证明。}对角化与[迹](0F0F)给出 #{\int x\,d\nu_N=N^{-1}\sum_i p_i}，其期望为零。又 #{\operatorname{tr}L_N^2=\sum_i p_i^2+2\sum_{i=1}^{N-1}a_i^2}，由[热平衡矩](4B09)，}
+##{\frac 1N\mathbb E\operatorname{tr}L_N^2=\frac 1\beta+\frac{2(N-1)\theta}{N\beta}.}
+\p{利用态密度定理允许二次多项式测试，令 #{N\to\infty} 即得结论。}
+\p{此外 #{\sqrt\beta L_{\beta,\theta}} 与 #{L_{1,\theta}} 同分布，因为对角高斯和副对角平方 Gamma 都有相应缩放。因此变量替换给}
+##{\rho_{\beta,\theta}(x)=\sqrt\beta\,\rho_{1,\theta}(\sqrt\beta x).}
+\p{此公式也可由 #{F_\theta} 的显式表达式直接验证。这些矩与缩放共同固定谱参数的单位，排除把 Lax 矩阵误乘 #{1/2} 后仍沿用原速度的混淆。}

@@ -1,0 +1,1973 @@
+{
+  "date": "2026-10-22",
+  "report": {
+    "speaker": "Amol Aggarwal",
+    "prefix": "4B",
+    "outline": "4B00",
+    "reference": "icm2026-aggarwal",
+    "title": "Many-Body Asymptotics for the Toda Lattice",
+    "outline_title": "Toda 多体渐近：从随机谱局域化到有效速度",
+    "doi": "10.1137/25M1805175",
+    "pages": "411–425",
+    "source_url": "https://epubs.siam.org/doi/10.1137/25M1805175",
+    "version_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1805175",
+    "version_role": "Publisher chapter is the binding report edition. Precise research contracts use arXiv:2503.08018v4 and arXiv:2503.11407v4, both solely authored by Amol Aggarwal. Report and research-paper numbering are distinguished.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "© 2026 International Mathematical Union, published by SIAM. Attributed Chinese adaptation with explicit elementary derivations; no source figures copied.",
+    "question": "如何从确定性的指数相互作用与随机热平衡初值，得到正密度 Toda 准粒子的散射关系、有效速度和空间流的大数律？",
+    "reading_scope": "Read the entire publisher HTML mathematical body, §§1–5.3, all displayed mathematics, footnotes 1–5, acknowledgments and bibliography [1]–[68], in overlapping section-sized retrievals. The binding chapter occupies pp411–425. The publisher PDF was located and its opening copyright/license text checked; no complete PDF pixel inspection is claimed.\nRead selected primary research material, not both full papers: S-v4 introduction and §2 theorem contracts, selected §3.1–3.5 statements/arguments, §4.1 comparison opening, and Proposition 6.1 statement with its opening proof context; E-v4 introduction, §§1.2–1.5, selected §2 proof-outline material, §3.1, selected §3.2–3.4 contracts, §4.1 and the opening of §4.2. Exact locations and limitations are recorded in source_records. Unread deep proof sections are not treated as locally verified proofs.",
+    "coverage_status": "One narrative overview, 39 atomic notes, and one reference. All main mathematical report branches are represented, with locally proved elementary steps, precisely cited research inputs and conjectures separated. Revision 2 passed independent mathematical review. Revision 3 repairs only the 4B0K cases-row interval delimiter syntax and awaits an independent refreshed-hash review and parent whole-site validation.",
+    "proof_scope": {
+      "4B01": {
+        "status": "definition",
+        "scope": "定义有限开链、二阶初值及缺边约定；不将它与一阶 Toda 调制方程混同。"
+      },
+      "4B02": {
+        "status": "local-proof",
+        "scope": "链式法则证明能量守恒，望远镜求和证明动量守恒，再由紧集内轨道延拓给出全局解。"
+      },
+      "4B03": {
+        "status": "definition-and-local-proof",
+        "scope": "定义扭曲周期边界，计算总伸长守恒，并区分固定伸长层与其混合。"
+      },
+      "4B04": {
+        "status": "local-proof",
+        "scope": "周期向量场散度、能量和总伸长守恒、流 Jacobian 与密度不变性完整计算；开链左端均值导数为负。"
+      },
+      "4B05": {
+        "status": "local-calculation",
+        "scope": "a=exp((q_i-q_(i+1))/2)、b=p；B 上副对角为 -a/2；逐条验证 L'=[B,L]。"
+      },
+      "4B06": {
+        "status": "local-proof",
+        "scope": "解 U'=BU，证明 U 正交及 U^T L U 恒定，推出谱和迹不变。"
+      },
+      "4B07": {
+        "status": "local-proof",
+        "scope": "三项递推决定所有坐标，结合实对称矩阵正交对角化得到简单谱，倒序得到另一端非零。"
+      },
+      "4B08": {
+        "status": "definition-and-local-calculation",
+        "scope": "明确形状/速率约定、平方根 Gamma 密度、独立性、初始平移锚点及有限/周期/无限的边数。"
+      },
+      "4B09": {
+        "status": "local-proof",
+        "scope": "Mellin 矩的两次微分给伸长均值与方差；证明求导合法，给 Gamma 均值及弱大数估计。"
+      },
+      "4B0A": {
+        "status": "cited-theorem",
+        "scope": "准确陈述无限体积极限、定时不变性与统一内部比较，明确缓冲参数 K 为正整数；不重建随机传播和无限体积构造。"
+      },
+      "4B0B": {
+        "status": "cited-theorem",
+        "scope": "给出 Fθ、hβθ 及 ρ=∂θ(θh) 的精确归一化；仅陈述平均弱收敛及来源明确允许的多项式测试。"
+      },
+      "4B0C": {
+        "status": "local-calculation-with-cited-input",
+        "scope": "有限矩阵迹计算与 Gamma/高斯缩放完整展开；极限中的二次测试由引用态密度定理保证。"
+      },
+      "4B0D": {
+        "status": "definition",
+        "scope": "定义阈值中心、逐时双射和位置 Q=q_phi；明确谱标签恒定而中心可跳跃。"
+      },
+      "4B0E": {
+        "status": "local-proof",
+        "scope": "用行列平方和验证 Hall 条件，给出阈值 (2N)^−1 的中心双射。"
+      },
+      "4B0F": {
+        "status": "cited-theorem-and-local-consequence",
+        "scope": "引用初始随机矩阵特征向量相关衰减；用 Markov 和有限并集给出带 N、ζ 前因子的显式高概率包络。"
+      },
+      "4B0G": {
+        "status": "cited-theorem",
+        "scope": "逐时近唯一性及两时刻位置控制采用原文缓冲与对数幂；不将近连续性改成可微性。"
+      },
+      "4B0H": {
+        "status": "local-proof",
+        "scope": "计算两端残差并按截断矩阵正交特征基展开，证明残差除以范数的谱距离界。"
+      },
+      "4B0I": {
+        "status": "local-proof",
+        "scope": "乘积法则给 (L^m)'=[B,L^m]，取对角元得到 j_(i−1)−j_i；写明前三个荷及整链谱矩。"
+      },
+      "4B0J": {
+        "status": "local-proof",
+        "scope": "直接相减与望远镜求和；任意指标集合用边界指示函数表达差，不把空间筛选误当指标区间。"
+      },
+      "4B0K": {
+        "status": "cited-theorem",
+        "scope": "完整陈述指标/空间区间区别、α 两个符号、次数范围与 log^(m+6) 误差；一般次数的证明保留为引用。"
+      },
+      "4B0L": {
+        "status": "local-calculation",
+        "scope": "验证显式 cosh 解、谱值 λ±、两端渐近直线及快慢标签的截距变化。"
+      },
+      "4B0M": {
+        "status": "local-proof",
+        "scope": "用 u'=Bu 和首行特征方程计算 log w 的导数，再由完整正交基固定共同归一因子。"
+      },
+      "4B0N": {
+        "status": "local-proof",
+        "scope": "证明行列式递推与坐标递推相同，得到乘积式；中心坐标非零时才取对数。"
+      },
+      "4B0O": {
+        "status": "cited-theorem",
+        "scope": "准确陈述固定时刻 Proposition 6.1，保留额外 N^(1/100) 缓冲；连续 Thouless 公式只作报告中的平均指数解释。"
+      },
+      "4B0P": {
+        "status": "cited-theorem",
+        "scope": "陈述 Theorem 2.11 的 ζ、时间、初始缓冲、sgnα 与 log^15N 误差；全部深证明不在此重建。"
+      },
+      "4B0Q": {
+        "status": "conditional-local-proof",
+        "scope": "在两个时刻的离散衰减关系假设下完整代数推导散射形式，误差≤2E；区分指标次序到位置次序的额外步骤。"
+      },
+      "4B0R": {
+        "status": "construction-with-cited-theorems",
+        "scope": "定义加权 L²、积分与乘法算子、d0,d1 和商；引用有界可逆性、分母非零性及 ρ=αd0h。"
+      },
+      "4B0S": {
+        "status": "conditional-local-proof",
+        "scope": "由两条修饰恒等式消元，证明积分方程与指定函数类唯一性；用反射对易性证明速度奇性。"
+      },
+      "4B0T": {
+        "status": "cited-theorem",
+        "scope": "采用 E 原文 T≤Nlog^−6N 的范围、Tlog⁵N 初始缓冲和 sqrt(T)log^35N 统一误差；说明大数律推论。"
+      },
+      "4B0U": {
+        "status": "local-construction-and-proof",
+        "scope": "积分偶的光滑核构造 χ；证明 χ(−x)=1−χ(x)、χ−H 奇和积分零；计算对数正则化误差。"
+      },
+      "4B0V": {
+        "status": "cited-theorem",
+        "scope": "完整列出 F、G、f 的增长、局部模连续、支撑、跃变和 Lipschitz 条件；保留固定时间量词及 log^12/log^13 误差。"
+      },
+      "4B0W": {
+        "status": "conditional-construction-and-proof-outline",
+        "scope": "局部定义非零实参数 α、正参数 M,d 及互异实谱；定义光滑矩阵 ODE 并证明其等价于正则化散射坐标线性演化；实际随机比较及内部区域延拓仅说明来源。"
+      },
+      "4B0X": {
+        "status": "local-proof-with-cited-application",
+        "scope": "最大坐标和三角不等式证明下界与单射；证明标准基的像线性无关，并用有限基交换定理推出满射和可逆性；代入 w=S^−1r 得逆范数界。Toda 的随机占优仍是引用应用。"
+      },
+      "4B0Y": {
+        "status": "conditional-local-proof",
+        "scope": "在明确比较、逆界及速度残差假设下积分，给 2K sqrtM+K²T/sqrtM；M=T 得平方根量级。"
+      },
+      "4B0Z": {
+        "status": "cited-corollary-and-proof-outline",
+        "scope": "陈述报告在终止时刻 T 的流推论；解释荷表示、速度近似、联合浓缩及对称性各自作用，不声称已经完成阈值计数的深估计。"
+      },
+      "4B10": {
+        "status": "conjectural-and-open",
+        "scope": "保留高斯扩散/过程极限为预测；在 N→∞、T=T(N)、T/(logN)^70→∞ 且满足速度定理全部假设时，由归一化误差界推出大数律；多对数扩散界不能证明紧性或 CLT。"
+      },
+      "4B11": {
+        "status": "conditional-local-proof",
+        "scope": "谱分解给精确泄漏恒等式；有界谱、异常标签数及泄漏假设下用三角不等式给显式误差。"
+      },
+      "4B12": {
+        "status": "definition-and-local-consequence",
+        "scope": "集中列出 S 的共同假设，明确保证中心存在的阈值上界是所选特例；证明压倒性概率强于任意固定多项式尾。"
+      },
+      "4BZ0": {
+        "status": "local-proof",
+        "scope": "局部定义邻集与匹配，用存在紧子集/不存在紧子集的归纳完整证明 Hall 判据。"
+      }
+    },
+    "claim_sources": {
+      "4B01": {
+        "status": "definition",
+        "source_id": "S-v4",
+        "location": "§2.1.1; report §2",
+        "source_hypotheses": [
+          "有限整数区间，全部初始位置和动量为实数；端点缺边；无位置排序假设。"
+        ]
+      },
+      "4B02": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "§2.1.1; elementary continuation argument",
+        "source_hypotheses": [
+          "任意有限链及有限实初值，含 N=1；使用既有光滑 ODE 定理。"
+        ]
+      },
+      "4B03": {
+        "status": "definition-and-local-proof",
+        "source_id": "S-v4",
+        "location": "§3.1",
+        "source_hypotheses": [
+          "N≥3；q_(i+N)=q_i+Υ，p_(i+N)=p_i；固定层中伸长不独立。"
+        ]
+      },
+      "4B04": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "Lemma 3.4; §2.1.3",
+        "source_hypotheses": [
+          "β,θ>0；周期 (r,p) 变量的未条件化乘积测度；固定 Υ 时改用条件分布；开链端点漂移对至少两粒子成立。"
+        ]
+      },
+      "4B05": {
+        "status": "local-calculation",
+        "source_id": "S-v4",
+        "location": "(2.3)–(2.4), Definition 2.1; report §2",
+        "source_hypotheses": [
+          "有限开链，内部 a>0，缺边 a=0；不采用另一套常见的 -p/2 归一化。"
+        ]
+      },
+      "4B06": {
+        "status": "local-proof",
+        "source_id": "R",
+        "location": "Lemma 2.1",
+        "source_hypotheses": [
+          "实矩阵、反对称 B、L'=[B,L]，在系数定义的时间区间上；不据此单独推出 Liouville 完全可积性。"
+        ]
+      },
+      "4B07": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "§3.4; elementary recurrence",
+        "source_hypotheses": [
+          "有限实对称 Jacobi 矩阵，所有内部副对角严格为正；N=1 单独直接处理。"
+        ]
+      },
+      "4B08": {
+        "status": "definition-and-local-calculation",
+        "source_id": "S-v4",
+        "location": "Definition 2.4; report §4",
+        "source_hypotheses": [
+          "β,θ>0；开链 N 个高斯变量和 N−1 个 Gamma 边权平方；q_0(0)=0，不固定 q_0(t)。"
+        ]
+      },
+      "4B09": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "Lemma 3.11; report (4.1)",
+        "source_hypotheses": [
+          "独立初始 Gamma 边权平方，β,θ>0；有限链中取两个不同指标；密度尺度解释排除 α=0。"
+        ]
+      },
+      "4B0A": {
+        "status": "cited-theorem",
+        "source_id": "S-v4",
+        "location": "Proposition 2.5(3), including positive-integer K; proof in §4.3",
+        "source_hypotheses": [
+          "固定 β,θ>0、η∈(0,1)；同一全直线初值限制耦合；K 为正整数，T≥0，R≥max(1,logN)，RT≤K≤N^η，n_-≤−K≤K≤n_+；不要求 α≠0。"
+        ]
+      },
+      "4B0B": {
+        "status": "cited-theorem",
+        "source_id": "E-v4",
+        "location": "Definition 1.2, Lemma 3.14, Remark 3.15",
+        "source_hypotheses": [
+          "独立初始高斯对角和 Gamma 平方副对角，参数固定；保留所读来源的 α≠0 共同设定，不主张该条件对态密度公式必要；不升级为几乎必然谱收敛。"
+        ]
+      },
+      "4B0C": {
+        "status": "local-calculation-with-cited-input",
+        "source_id": "E-v4",
+        "location": "§1.3, Remark 3.15",
+        "source_hypotheses": [
+          "采用 4B0B 的密度和多项式测试；β,θ 固定；谱参数与 L 的归一化一致。"
+        ]
+      },
+      "4B0D": {
+        "status": "definition",
+        "source_id": "S-v4",
+        "location": "Definition 2.6; report Definition 4.1",
+        "source_hypotheses": [
+          "开链实单位特征向量；阈值 ζ>0；位置定义要求为整个特征基选择中心双射。"
+        ]
+      },
+      "4B0E": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "Lemma 2.7",
+        "source_hypotheses": [
+          "任意 N×N 实对称矩阵的正交单位特征基；不要求随机性或简单谱。"
+        ]
+      },
+      "4B0F": {
+        "status": "cited-theorem-and-local-consequence",
+        "source_id": "S-v4",
+        "location": "Lemma 3.16, Corollary 3.17",
+        "source_hypotheses": [
+          "固定 β,θ>0；独立初始热平衡矩阵；按特征值排序的单位特征向量；指数常数只依赖参数；正时间开链须另作比较。"
+        ]
+      },
+      "4B0G": {
+        "status": "cited-theorem",
+        "source_id": "S-v4",
+        "location": "Proposition 2.9; E-v4 Lemma 3.22",
+        "source_hypotheses": [
+          "4B12 共同假设；同时 t,t'∈[0,T]；同刻指标缓冲 Tlog³N，两时刻缓冲 Tlog⁴N；共同阈值比 E Lemma 3.22 的下界更强。"
+        ]
+      },
+      "4B0H": {
+        "status": "local-proof",
+        "source_id": "R",
+        "location": "§5.1; deterministic residual argument",
+        "source_hypotheses": [
+          "有限 Jacobi 矩阵；非零截断向量；指数误差推论另要求端点小、边权有界及截断范数≥1/2；不推出唯一谱匹配。"
+        ]
+      },
+      "4B0I": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "Definition 2.3; Lax equation",
+        "source_hypotheses": [
+          "有限开链，整数 m≥0，L^0=I；j_i=a_i(L^m)_(i,i+1)，缺边流为零。"
+        ]
+      },
+      "4B0J": {
+        "status": "local-proof",
+        "source_id": "R",
+        "location": "§4.2 compared with S-v4 Definition 2.3",
+        "source_hypotheses": [
+          "同一开链及缺边约定；报告 p_i²+2a_i² 与研究论文 (L²)_ii 的局部约定分开。"
+        ]
+      },
+      "4B0K": {
+        "status": "cited-theorem",
+        "source_id": "S-v4",
+        "location": "Proposition 2.10; report Proposition 4.2",
+        "source_hypotheses": [
+          "4B12；0≤m≤logN 整数；所有 t∈[0,T]；J 位于正文 J_*；左半线使用严格 <x；荷为 (L^m)_ii。"
+        ]
+      },
+      "4B0L": {
+        "status": "local-calculation",
+        "source_id": "R",
+        "location": "§3; explicit two-particle calculation",
+        "source_hypotheses": [
+          "二粒子开链；Δ>0、v,c,t0 为实数；跟踪谱标签而非固定原粒子标签；不等同于多体稠密定理。"
+        ]
+      },
+      "4B0M": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "Lemma 3.6; report (5.3)",
+        "source_hypotheses": [
+          "有限开链、正内部边权、左端权重；C(t)=q_left(t)−q_left(0) 在此未修改模型中是精确等式。"
+        ]
+      },
+      "4B0N": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "§3.4; scalar recurrence form",
+        "source_hypotheses": [
+          "有限正副对角 Jacobi 矩阵；1≤m<N；取对数时 u_(m+1)≠0；截断谱替换为全谱需另加随机估计。"
+        ]
+      },
+      "4B0O": {
+        "status": "cited-theorem",
+        "source_id": "S-v4",
+        "location": "Proposition 6.1; report §5.2",
+        "source_hypotheses": [
+          "4B12；固定 t；中心距端点至少 Tlog⁵N+N^(1/100)；按中心指标次序求和；γ 用非正对数衰减约定。"
+        ]
+      },
+      "4B0P": {
+        "status": "cited-theorem",
+        "source_id": "S-v4",
+        "location": "Assumption 2.8, Theorem 2.11; report Theorem 4.3",
+        "source_hypotheses": [
+          "4B12；β,θ>0 任意固定且 α≠0；初始中心缓冲 Tlog⁶N；全体 t∈[0,T] 及内部标签的共同高概率事件。"
+        ]
+      },
+      "4B0Q": {
+        "status": "conditional-local-proof",
+        "source_id": "R",
+        "location": "(5.3)–(5.7)",
+        "source_hypotheses": [
+          "给定开链解与谱标签；两个时刻均有指定误差 E 的离散衰减式；全时间与错序控制不包含在代数论证内。"
+        ]
+      },
+      "4B0R": {
+        "status": "construction-with-cited-theorems",
+        "source_id": "E-v4",
+        "location": "Definitions 1.3, 1.6, 1.8; Lemmas 1.4–1.7; Corollary 3.4; §3.1 and Appendix A",
+        "source_hypotheses": [
+          "β,θ>0 且 α≠0；H=L²(ρdx)；A=θ^−1−T M_h；无小 θ 要求；完整算子证明未重建。"
+        ]
+      },
+      "4B0S": {
+        "status": "conditional-local-proof",
+        "source_id": "E-v4",
+        "location": "Lemma 3.5, Corollary 3.4; report (4.4)",
+        "source_hypotheses": [
+          "采用 4B0R 的引用算子结论；候选速度要求 d0v∈H 且积分按该算子意义存在；不主张任意函数类的唯一性。"
+        ]
+      },
+      "4B0T": {
+        "status": "cited-theorem",
+        "source_id": "E-v4",
+        "location": "Assumption 1.12, Theorem 1.13; report Theorem 4.4",
+        "source_hypotheses": [
+          "β 固定；存在 θ0(β)，0<θ<θ0、α≠0；热平衡开链，中心双射存在，ζ≥exp(−100(logN)^(3/2))；参数不随 N 变化。"
+        ]
+      },
+      "4B0U": {
+        "status": "local-construction-and-proof",
+        "source_id": "R",
+        "location": "§5.3; E-v4 §2.1",
+        "source_hypotheses": [
+          "M,d>0；归一偶非负光滑核；H(0)=1/2；对数误差只在 x≠0 使用；自相互作用另作处理。"
+        ]
+      },
+      "4B0V": {
+        "status": "cited-theorem",
+        "source_id": "E-v4",
+        "location": "Assumption 4.1, Propositions 4.3–4.4",
+        "source_hypotheses": [
+          "4B12 的较强共同时间范围；固定 s∈[0,T]，S∈[1,T]，A,B≥0；f 扩展另取 D≥1；中心缓冲 Tlog⁵N；空间密度因子是 |α|^−1。"
+        ]
+      },
+      "4B0W": {
+        "status": "conditional-construction-and-proof-outline",
+        "source_id": "E-v4",
+        "location": "§2.2; §§7–8 proof location; report §5.3",
+        "source_hypotheses": [
+          "固定非零实数 α、正实数 M,d 及互异实谱参数；Toda 中 α 为 4B09 的平均伸长；平滑核采用 4B0U 的 χ_M 与 ℓ_d；S(x) 可逆区域上局部 ODE；没有从局部存在推出全时存在或与跳跃中心轨迹的接近。"
+        ]
+      },
+      "4B0X": {
+        "status": "local-proof-with-cited-application",
+        "source_id": "R",
+        "location": "R §5.3; E-v4 Lemma 6.6; existing finite basis exchange theorem 00GN for the elementary surjectivity step",
+        "source_hypotheses": [
+          "有限实或复方阵各行 |Skk|−sum|Ski|≥δ>0；范数为最大范数；从单射到满射使用标准基的像及 00GN 有限基交换定理；行和为一不能替代严格占优。"
+        ]
+      },
+      "4B0Y": {
+        "status": "conditional-local-proof",
+        "source_id": "R",
+        "location": "§5.3; E-v4 §2.2",
+        "source_hypotheses": [
+          "Q 可不连续，x 可微；K、M>0；所有时间的比较和逆界须另获证明；Toda 应用使用浓缩与碰撞率方程。"
+        ]
+      },
+      "4B0Z": {
+        "status": "cited-corollary-and-proof-outline",
+        "source_id": "R",
+        "location": "§4.3, two consequences following Theorem 4.4",
+        "source_hypotheses": [
+          "β 固定且 θ 在小参数定理范围；α≠0；零中心区间 N≈T²、q0(0)=0、T→∞；右半线采用严格 >0；常数 cβθ 未显式计算。"
+        ]
+      },
+      "4B10": {
+        "status": "conjectural-and-open",
+        "source_id": "R",
+        "location": "R §§1, 4.3; E-v4 §2.3 and Theorem 1.13 with discussion after (1.17); local normalization of the error bound",
+        "source_hypotheses": [
+          "热平衡宏观解释；具体随机谱标签取样、协方差和退化条件尚需规定；KPZ 与其他模型结果不迁移为 Toda 定理。",
+          "由有效速度界推出大数律时，保留 4B0T 的全部假设，并取 N→∞、T=T(N)，1≤T≤N(logN)^−6，且 T/(logN)^70→∞；不据此推出扩散尺度的紧性或高斯极限。"
+        ]
+      },
+      "4B11": {
+        "status": "conditional-local-proof",
+        "source_id": "R",
+        "location": "§5.1; finite-dimensional spectral identity",
+        "source_hypotheses": [
+          "实对称矩阵、完整正交基、任意指标集合及中心双射；整数 m≥0；推论另要求 |λ|≤Λ、异常数≤B、其余泄漏≤ε。"
+        ]
+      },
+      "4B12": {
+        "status": "definition-and-local-consequence",
+        "source_id": "S-v4",
+        "location": "Assumption 2.8, §2.5",
+        "source_hypotheses": [
+          "β,θ 固定、α≠0、q0(0)=0；两端跨越 ±N/logN；1≤T≤Nlog^−7N；exp(−100(logN)^(3/2))≤ζ≤(2N)^−1，N充分大。"
+        ]
+      },
+      "4BZ0": {
+        "status": "local-proof",
+        "source_id": "S-v4",
+        "location": "Combinatorial prerequisite for Lemma 2.7; elementary Hall proof",
+        "source_hypotheses": [
+          "等势有限集合与任意二分关系；空集与单点归纳起点均包括；不依赖新增图论目录页。"
+        ]
+      }
+    },
+    "remaining_branches": [
+      {
+        "branch": "Liouville integrability and other Toda applications",
+        "source": "R §2",
+        "status": "context-only",
+        "scope": "The overview identifies algebraic geometry, QR and random-growth connections; no independent/involutive-integrals theorem or separate application tree is imported."
+      },
+      {
+        "branch": "Comparative soliton gases and other integrable systems",
+        "source": "R §§1,3",
+        "status": "context-only",
+        "scope": "Dilute gases, finite-gap solutions, tracer solitons, hard rods and box-ball models remain comparison context, not extra Toda theorem hypotheses or additional nodes."
+      },
+      {
+        "branch": "All-shape-parameter effective velocities and non-equilibrium hydrodynamics",
+        "source": "R §4.3; E-v4 §2.2",
+        "status": "open-extension",
+        "scope": "The small-θ condition is retained. Non-equilibrium evolution requires additional long-time localization and stability theory."
+      },
+      {
+        "branch": "Diffusive fluctuations",
+        "source": "R §§1,4.3; E-v4 §2.3",
+        "status": "conjectural",
+        "scope": "Gaussian fluctuations and process limits remain conjectures; no CLT, tightness or nondegeneracy follows from the proved polylogarithmic error bound alone."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "ids": [
+          "4B0A"
+        ],
+        "source": "S-v4 Proposition 2.5, §§4.1–4.3",
+        "status": "cited-not-reproduced",
+        "scope": "Infinite-volume construction, invariant law and quantitative random finite-propagation estimates."
+      },
+      {
+        "ids": [
+          "4B0B",
+          "4B0F",
+          "4B0G"
+        ],
+        "source": "E-v4 Lemma 3.14; S-v4 §§3.5,5; E-v4 Appendix B",
+        "status": "cited-not-reproduced",
+        "scope": "Mean density of states, random Jacobi fractional moments, spacing, dynamic localization and center comparison. Original Mazzuca/Schenker/Aizenman papers were not separately read."
+      },
+      {
+        "ids": [
+          "4B0K"
+        ],
+        "source": "S-v4 Proposition 2.10 and §7",
+        "status": "cited-not-reproduced",
+        "scope": "Random uniform local-charge estimates and conversion from index boundaries to physical-space intervals and half-lines."
+      },
+      {
+        "ids": [
+          "4B0O",
+          "4B0P"
+        ],
+        "source": "S-v4 Proposition 6.1, Theorem 2.11 and §§6–8",
+        "status": "cited-not-reproduced",
+        "scope": "Discrete Thouless estimate, two-way spectral matching, small-gap logarithms, wrong-order errors and uniform time/boundary refinements."
+      },
+      {
+        "ids": [
+          "4B0R",
+          "4B0S"
+        ],
+        "source": "E-v4 §3.1, Appendix A",
+        "status": "cited-not-reproduced",
+        "scope": "Weighted-Hilbert-space boundedness/invertibility, pointwise representatives, density identities and nonvanishing d0. The subsequent elimination/uniqueness argument is local."
+      },
+      {
+        "ids": [
+          "4B0V"
+        ],
+        "source": "E-v4 §§4–5",
+        "status": "cited-not-reproduced",
+        "scope": "Joint spatial/spectral concentration and random-parameter logarithmic tests; only selected opening proof material read."
+      },
+      {
+        "ids": [
+          "4B0T",
+          "4B0W",
+          "4B0X",
+          "4B0Y"
+        ],
+        "source": "E-v4 §§6–8 and supporting appendices",
+        "status": "cited-not-reproduced",
+        "scope": "Small-θ random diagonal dominance, internal-region proxy construction, global continuation/comparison and simultaneous-time estimates. Generic matrix and error-combination lemmas are proved locally."
+      },
+      {
+        "ids": [
+          "4B0Z"
+        ],
+        "source": "R §4.3 after Theorem 4.4",
+        "status": "cited-corollary-proof-outline",
+        "scope": "Threshold crossing errors in the current consequences are not reconstructed merely by summing trajectory bounds; cβθ is retained as unspecified in the report."
+      }
+    ],
+    "metadata": {
+      "source_binding": "SIAM DOI 10.1137/25M1805175, pp411–425, online publication 2026-07-13",
+      "language": "zh-CN",
+      "reference_location": "trees/references/icm2026-aggarwal.tree",
+      "reference_location_reason": "Existing forest uses trees/references; no trees/refs directory was introduced.",
+      "owned_paths": [
+        "trees/math/mathematical-physics/aggarwal/4B*.tree",
+        "trees/references/icm2026-aggarwal.tree",
+        "research/mathematical-physics-aggarwal-packet.json"
+      ],
+      "atomic_count": 39,
+      "overview_count": 1,
+      "reference_count": 1,
+      "local_prerequisite_ids": [
+        "4BZ0"
+      ],
+      "existing_direct_reuses": [
+        "004N",
+        "00GC",
+        "00GN",
+        "00L1",
+        "00L2",
+        "00L3",
+        "00OB",
+        "00QB",
+        "0A02",
+        "0A33",
+        "0A34",
+        "0A3C",
+        "0A40",
+        "0A46",
+        "0A6A",
+        "0A6B",
+        "0F0B",
+        "0F0F",
+        "0H4Z",
+        "0I8I",
+        "0N0B",
+        "0N0R"
+      ],
+      "recursive_existing_prerequisite_count": 136,
+      "recursive_check_scope": "Read-only graph traversal against existing site-evergreen-audit.json after the review repairs; every traversed registered edge resolved to an existing non-outline knowledge page and a real body link, with no cycle. This is structural reuse validation, not a new mathematical review of all 136 inherited atoms.",
+      "first_order_toda_comparison": {
+        "id": "4911",
+        "role": "contrast of models only; excluded from prerequisites; no duplicate first-order Toda definition"
+      },
+      "diagrams": {
+        "status": "not-added",
+        "reason": "The Lax, spectral-weight and proxy-dynamics formulas express the necessary relations directly; no diagram was required for these atoms."
+      },
+      "public_prose": "Mathematical definitions, claims, proofs, source attributions and limitations only; source-reading/process records are in this packet.",
+      "normalization": {
+        "function": "normalizeFormat",
+        "module": "scripts/note-editorial-lib.mjs",
+        "scope": "Only 40 owned 4B tree files plus the Aggarwal reference",
+        "initial_changed_files": 30,
+        "final_idempotent": true,
+        "revision_scope": "Revision 3 changes only 4B0K via apply_patch. normalizeFormat was checked read-only and is already idempotent; no bulk formatting or other tree edit was performed."
+      },
+      "source_freeze_status": "frozen-for-independent-recheck",
+      "independent_review_status": "Revision 2 passed the independent review recorded for packet a64852d3f55bb4b81268ac6ce3ba3bcb13472a343765b8da079bb0fad8e34fc8; revision 3 changes only the 4B0K interval delimiters and awaits an independent refreshed-hash review. No pass is claimed for revision 3.",
+      "integration_status": "not-performed-by-branch-author",
+      "shared_files_edited": false,
+      "shared_tests_run": false,
+      "build_run": false,
+      "commit_created": false,
+      "push_performed": false,
+      "revision": 3
+    }
+  },
+  "prerequisites": {
+    "4B01": [
+      "0A33"
+    ],
+    "4B02": [
+      "4B01",
+      "00OB",
+      "0A34"
+    ],
+    "4B03": [
+      "4B01"
+    ],
+    "4B04": [
+      "4B03",
+      "4B08",
+      "0A40",
+      "00OB",
+      "4B01",
+      "4B09",
+      "00QB"
+    ],
+    "4B05": [
+      "4B01",
+      "0A46"
+    ],
+    "4B06": [
+      "0F0B",
+      "4B05",
+      "00OB",
+      "0F0F"
+    ],
+    "4B07": [
+      "0F0B",
+      "0N0B"
+    ],
+    "4B08": [
+      "00L3",
+      "0N0R",
+      "0H4Z",
+      "4B01",
+      "0A6B",
+      "00QB"
+    ],
+    "4B09": [
+      "4B08",
+      "00L1",
+      "00L2",
+      "0I8I",
+      "0A02"
+    ],
+    "4B0A": [
+      "4B08",
+      "4B01",
+      "4B05",
+      "0A6B"
+    ],
+    "4B0B": [
+      "4B09",
+      "4B08",
+      "4B07"
+    ],
+    "4B0C": [
+      "4B0B",
+      "0F0F",
+      "4B09"
+    ],
+    "4B0D": [
+      "4B05",
+      "004N",
+      "4B06"
+    ],
+    "4B0E": [
+      "0N0B",
+      "4B0D",
+      "4BZ0"
+    ],
+    "4B0F": [
+      "4B08",
+      "0A02",
+      "4B0D"
+    ],
+    "4B0G": [
+      "4B12",
+      "4B0D",
+      "4B0F"
+    ],
+    "4B0H": [
+      "4B07",
+      "0N0B"
+    ],
+    "4B0I": [
+      "4B05",
+      "4B06"
+    ],
+    "4B0J": [
+      "4B01",
+      "4B0I"
+    ],
+    "4B0K": [
+      "4B12",
+      "4B0I",
+      "4B0D"
+    ],
+    "4B0L": [
+      "4B01",
+      "4B05"
+    ],
+    "4B0M": [
+      "4B05",
+      "4B07",
+      "4B06"
+    ],
+    "4B0N": [
+      "4B07",
+      "0A40"
+    ],
+    "4B0O": [
+      "4B12",
+      "4B05",
+      "4B0N",
+      "4B0B"
+    ],
+    "4B0P": [
+      "4B12",
+      "4B0D",
+      "4B07",
+      "4B0L"
+    ],
+    "4B0Q": [
+      "4B01",
+      "4B0O",
+      "4B0M"
+    ],
+    "4B0R": [
+      "4B09",
+      "4B0B",
+      "0A6A"
+    ],
+    "4B0S": [
+      "4B0R"
+    ],
+    "4B0T": [
+      "4B08",
+      "4B0D",
+      "4B0R"
+    ],
+    "4B0U": [
+      "0A3C"
+    ],
+    "4B0V": [
+      "4B12",
+      "4B0B",
+      "4B0U"
+    ],
+    "4B0W": [
+      "4B0U",
+      "00OB",
+      "4B0D",
+      "4B0V",
+      "4B09"
+    ],
+    "4B0X": [
+      "00GC",
+      "00GN"
+    ],
+    "4B0Y": [
+      "4B0X",
+      "4B0V",
+      "4B0S"
+    ],
+    "4B0Z": [
+      "4B0T",
+      "4B08",
+      "4B0K",
+      "4B0V",
+      "4B0S"
+    ],
+    "4B10": [
+      "4B0D",
+      "4B0T"
+    ],
+    "4B11": [
+      "0N0B",
+      "4B0D",
+      "4B0F",
+      "4B0I"
+    ],
+    "4B12": [
+      "4B09",
+      "4B08",
+      "4B0D",
+      "4B0E"
+    ],
+    "4BZ0": []
+  },
+  "atomic_questions": {
+    "4B01": "有限开链的二阶 Toda 方程如何由 Hamilton 函数和缺边条件确定？",
+    "4B02": "有限初值的开链解为何不会在有限时间爆破？",
+    "4B03": "周期边界怎样约束总伸长及热平衡的独立性？",
+    "4B04": "热平衡乘积测度为何在周期链不变而在开链漂移？",
+    "4B05": "哪套 Flaschka 与 Lax 归一化对应原始时间和动量？",
+    "4B06": "反对称 Lax 演化为何保持全部特征值与谱矩？",
+    "4B07": "正副对角三对角矩阵为何有简单谱与非零端点？",
+    "4B08": "Toda 热平衡究竟把哪一个变量设为 Gamma 分布？",
+    "4B09": "平均伸长和波动怎样由 Gamma 参数确定？",
+    "4B0A": "无限热平衡流怎样由有限开链内部逼近？",
+    "4B0B": "随机 Lax 矩阵的平均谱极限密度是什么？",
+    "4B0C": "态密度的二阶矩和温度缩放如何校准谱单位？",
+    "4B0D": "如何从一个局域特征向量定义准粒子的实际位置？",
+    "4B0E": "正交特征基为何能同时选择互异的大坐标？",
+    "4B0F": "热平衡特征向量的局域化能以什么准确量词表达？",
+    "4B0G": "更换局域中心或短时演化会改变准粒子位置多少？",
+    "4B0H": "局域特征向量截断后怎样产生邻近谱值？",
+    "4B0I": "矩阵幂的对角元为何满足局部连续性方程？",
+    "4B0J": "单边和对称能量密度究竟相差哪些边界项？",
+    "4B0K": "何时可把局部荷与空间流换成准粒子的谱和？",
+    "4B0L": "二体碰撞为什么产生带方向的对数散射位移？",
+    "4B0M": "端点谱权重为何具有精确的归一化指数演化？",
+    "4B0N": "三项递推如何把端点坐标变成特征多项式乘积？",
+    "4B0O": "哪一个离散 Thouless 估计保留了散射所需的局部谱信息？",
+    "4B0P": "定量散射关系对哪些参数、内部标签与时间同时成立？",
+    "4B0Q": "端点权重与离散衰减相减时如何消去共同平移？",
+    "4B0R": "有效速度的修饰算子、函数空间与分母如何确定？",
+    "4B0S": "修饰速度为何解碰撞率方程，并在何种类中唯一？",
+    "4B0T": "小形状参数的有效速度定理究竟给出多强的轨迹控制？",
+    "4B0U": "空间阶跃与奇异对数应怎样平滑而保持正确对称性？",
+    "4B0V": "哪些测试函数允许空间谱和集中到密度积分？",
+    "4B0W": "为何必须构造光滑比较动力学而不能直接微分准粒子误差？",
+    "4B0X": "严格对角占优如何控制离散线性系统的逆？",
+    "4B0Y": "平方根时间误差如何由两种相反的平滑误差平衡得到？",
+    "4B0Z": "粒子流与动量流的大数律主项有什么差别？",
+    "4B10": "哪些扩散与非平衡结论仍属于预测或开放问题？",
+    "4B11": "局域特征向量越过区间边界的质量如何控制局部荷误差？",
+    "4B12": "多体散射中热平衡、时间、中心阈值与高概率各指什么？",
+    "4BZ0": "有限二分关系什么时候有完美匹配？"
+  },
+  "source_hypotheses": {
+    "4B01": {
+      "status": "definition",
+      "hypotheses": [
+        "有限整数区间，全部初始位置和动量为实数；端点缺边；无位置排序假设。"
+      ]
+    },
+    "4B02": {
+      "status": "local-proof",
+      "hypotheses": [
+        "任意有限链及有限实初值，含 N=1；使用既有光滑 ODE 定理。"
+      ]
+    },
+    "4B03": {
+      "status": "definition-and-local-proof",
+      "hypotheses": [
+        "N≥3；q_(i+N)=q_i+Υ，p_(i+N)=p_i；固定层中伸长不独立。"
+      ]
+    },
+    "4B04": {
+      "status": "local-proof",
+      "hypotheses": [
+        "β,θ>0；周期 (r,p) 变量的未条件化乘积测度；固定 Υ 时改用条件分布；开链端点漂移对至少两粒子成立。"
+      ]
+    },
+    "4B05": {
+      "status": "local-calculation",
+      "hypotheses": [
+        "有限开链，内部 a>0，缺边 a=0；不采用另一套常见的 -p/2 归一化。"
+      ]
+    },
+    "4B06": {
+      "status": "local-proof",
+      "hypotheses": [
+        "实矩阵、反对称 B、L'=[B,L]，在系数定义的时间区间上；不据此单独推出 Liouville 完全可积性。"
+      ]
+    },
+    "4B07": {
+      "status": "local-proof",
+      "hypotheses": [
+        "有限实对称 Jacobi 矩阵，所有内部副对角严格为正；N=1 单独直接处理。"
+      ]
+    },
+    "4B08": {
+      "status": "definition-and-local-calculation",
+      "hypotheses": [
+        "β,θ>0；开链 N 个高斯变量和 N−1 个 Gamma 边权平方；q_0(0)=0，不固定 q_0(t)。"
+      ]
+    },
+    "4B09": {
+      "status": "local-proof",
+      "hypotheses": [
+        "独立初始 Gamma 边权平方，β,θ>0；有限链中取两个不同指标；密度尺度解释排除 α=0。"
+      ]
+    },
+    "4B0A": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "固定 β,θ>0、η∈(0,1)；同一全直线初值限制耦合；K 为正整数，T≥0，R≥max(1,logN)，RT≤K≤N^η，n_-≤−K≤K≤n_+；不要求 α≠0。"
+      ]
+    },
+    "4B0B": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "独立初始高斯对角和 Gamma 平方副对角，参数固定；保留所读来源的 α≠0 共同设定，不主张该条件对态密度公式必要；不升级为几乎必然谱收敛。"
+      ]
+    },
+    "4B0C": {
+      "status": "local-calculation-with-cited-input",
+      "hypotheses": [
+        "采用 4B0B 的密度和多项式测试；β,θ 固定；谱参数与 L 的归一化一致。"
+      ]
+    },
+    "4B0D": {
+      "status": "definition",
+      "hypotheses": [
+        "开链实单位特征向量；阈值 ζ>0；位置定义要求为整个特征基选择中心双射。"
+      ]
+    },
+    "4B0E": {
+      "status": "local-proof",
+      "hypotheses": [
+        "任意 N×N 实对称矩阵的正交单位特征基；不要求随机性或简单谱。"
+      ]
+    },
+    "4B0F": {
+      "status": "cited-theorem-and-local-consequence",
+      "hypotheses": [
+        "固定 β,θ>0；独立初始热平衡矩阵；按特征值排序的单位特征向量；指数常数只依赖参数；正时间开链须另作比较。"
+      ]
+    },
+    "4B0G": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "4B12 共同假设；同时 t,t'∈[0,T]；同刻指标缓冲 Tlog³N，两时刻缓冲 Tlog⁴N；共同阈值比 E Lemma 3.22 的下界更强。"
+      ]
+    },
+    "4B0H": {
+      "status": "local-proof",
+      "hypotheses": [
+        "有限 Jacobi 矩阵；非零截断向量；指数误差推论另要求端点小、边权有界及截断范数≥1/2；不推出唯一谱匹配。"
+      ]
+    },
+    "4B0I": {
+      "status": "local-proof",
+      "hypotheses": [
+        "有限开链，整数 m≥0，L^0=I；j_i=a_i(L^m)_(i,i+1)，缺边流为零。"
+      ]
+    },
+    "4B0J": {
+      "status": "local-proof",
+      "hypotheses": [
+        "同一开链及缺边约定；报告 p_i²+2a_i² 与研究论文 (L²)_ii 的局部约定分开。"
+      ]
+    },
+    "4B0K": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "4B12；0≤m≤logN 整数；所有 t∈[0,T]；J 位于正文 J_*；左半线使用严格 <x；荷为 (L^m)_ii。"
+      ]
+    },
+    "4B0L": {
+      "status": "local-calculation",
+      "hypotheses": [
+        "二粒子开链；Δ>0、v,c,t0 为实数；跟踪谱标签而非固定原粒子标签；不等同于多体稠密定理。"
+      ]
+    },
+    "4B0M": {
+      "status": "local-proof",
+      "hypotheses": [
+        "有限开链、正内部边权、左端权重；C(t)=q_left(t)−q_left(0) 在此未修改模型中是精确等式。"
+      ]
+    },
+    "4B0N": {
+      "status": "local-proof",
+      "hypotheses": [
+        "有限正副对角 Jacobi 矩阵；1≤m<N；取对数时 u_(m+1)≠0；截断谱替换为全谱需另加随机估计。"
+      ]
+    },
+    "4B0O": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "4B12；固定 t；中心距端点至少 Tlog⁵N+N^(1/100)；按中心指标次序求和；γ 用非正对数衰减约定。"
+      ]
+    },
+    "4B0P": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "4B12；β,θ>0 任意固定且 α≠0；初始中心缓冲 Tlog⁶N；全体 t∈[0,T] 及内部标签的共同高概率事件。"
+      ]
+    },
+    "4B0Q": {
+      "status": "conditional-local-proof",
+      "hypotheses": [
+        "给定开链解与谱标签；两个时刻均有指定误差 E 的离散衰减式；全时间与错序控制不包含在代数论证内。"
+      ]
+    },
+    "4B0R": {
+      "status": "construction-with-cited-theorems",
+      "hypotheses": [
+        "β,θ>0 且 α≠0；H=L²(ρdx)；A=θ^−1−T M_h；无小 θ 要求；完整算子证明未重建。"
+      ]
+    },
+    "4B0S": {
+      "status": "conditional-local-proof",
+      "hypotheses": [
+        "采用 4B0R 的引用算子结论；候选速度要求 d0v∈H 且积分按该算子意义存在；不主张任意函数类的唯一性。"
+      ]
+    },
+    "4B0T": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "β 固定；存在 θ0(β)，0<θ<θ0、α≠0；热平衡开链，中心双射存在，ζ≥exp(−100(logN)^(3/2))；参数不随 N 变化。"
+      ]
+    },
+    "4B0U": {
+      "status": "local-construction-and-proof",
+      "hypotheses": [
+        "M,d>0；归一偶非负光滑核；H(0)=1/2；对数误差只在 x≠0 使用；自相互作用另作处理。"
+      ]
+    },
+    "4B0V": {
+      "status": "cited-theorem",
+      "hypotheses": [
+        "4B12 的较强共同时间范围；固定 s∈[0,T]，S∈[1,T]，A,B≥0；f 扩展另取 D≥1；中心缓冲 Tlog⁵N；空间密度因子是 |α|^−1。"
+      ]
+    },
+    "4B0W": {
+      "status": "conditional-construction-and-proof-outline",
+      "hypotheses": [
+        "固定非零实数 α、正实数 M,d 及互异实谱参数；Toda 中 α 为 4B09 的平均伸长；平滑核采用 4B0U 的 χ_M 与 ℓ_d；S(x) 可逆区域上局部 ODE；没有从局部存在推出全时存在或与跳跃中心轨迹的接近。"
+      ]
+    },
+    "4B0X": {
+      "status": "local-proof-with-cited-application",
+      "hypotheses": [
+        "有限实或复方阵各行 |Skk|−sum|Ski|≥δ>0；范数为最大范数；从单射到满射使用标准基的像及 00GN 有限基交换定理；行和为一不能替代严格占优。"
+      ]
+    },
+    "4B0Y": {
+      "status": "conditional-local-proof",
+      "hypotheses": [
+        "Q 可不连续，x 可微；K、M>0；所有时间的比较和逆界须另获证明；Toda 应用使用浓缩与碰撞率方程。"
+      ]
+    },
+    "4B0Z": {
+      "status": "cited-corollary-and-proof-outline",
+      "hypotheses": [
+        "β 固定且 θ 在小参数定理范围；α≠0；零中心区间 N≈T²、q0(0)=0、T→∞；右半线采用严格 >0；常数 cβθ 未显式计算。"
+      ]
+    },
+    "4B10": {
+      "status": "conjectural-and-open",
+      "hypotheses": [
+        "热平衡宏观解释；具体随机谱标签取样、协方差和退化条件尚需规定；KPZ 与其他模型结果不迁移为 Toda 定理。",
+        "由有效速度界推出大数律时，保留 4B0T 的全部假设，并取 N→∞、T=T(N)，1≤T≤N(logN)^−6，且 T/(logN)^70→∞；不据此推出扩散尺度的紧性或高斯极限。"
+      ]
+    },
+    "4B11": {
+      "status": "conditional-local-proof",
+      "hypotheses": [
+        "实对称矩阵、完整正交基、任意指标集合及中心双射；整数 m≥0；推论另要求 |λ|≤Λ、异常数≤B、其余泄漏≤ε。"
+      ]
+    },
+    "4B12": {
+      "status": "definition-and-local-consequence",
+      "hypotheses": [
+        "β,θ 固定、α≠0、q0(0)=0；两端跨越 ±N/logN；1≤T≤Nlog^−7N；exp(−100(logN)^(3/2))≤ζ≤(2N)^−1，N充分大。"
+      ]
+    },
+    "4BZ0": {
+      "status": "local-proof",
+      "hypotheses": [
+        "等势有限集合与任意二分关系；空集与单点归纳起点均包括；不依赖新增图论目录页。"
+      ]
+    }
+  },
+  "source_records": [
+    {
+      "id": "R",
+      "author": "Amol Aggarwal",
+      "title": "Many-Body Asymptotics for the Toda Lattice",
+      "doi": "10.1137/25M1805175",
+      "pages": "411–425",
+      "version": "SIAM published ICM2026 chapter, online 2026-07-13",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1805175",
+      "pdf_url": "https://epubs.siam.org/doi/epdf/10.1137/25M1805175",
+      "license": "CC BY 4.0",
+      "license_evidence": "Publisher HTML metadata and opening PDF copyright/license text",
+      "copyright": "© 2026 International Mathematical Union",
+      "read_status": "full-mathematical-html-body-read",
+      "read_locations": [
+        "§1 Introduction",
+        "§2 Toda lattice and Lax formulation",
+        "§3 Soliton/quasiparticle interpretation and comparative context",
+        "§4.1 Quasiparticle definition",
+        "§4.2 Local charges and asymptotic scattering",
+        "§4.3 Effective velocities and flow consequences",
+        "§5.1 Random matrix estimates and localization mechanism",
+        "§5.2 Discrete Thouless relation and scattering proof strategy",
+        "§5.3 Regularization, concentration and effective-velocity proof strategy",
+        "Footnotes 1–5; acknowledgments; bibliography [1]–[68]; publication and rights metadata"
+      ],
+      "limitations": [
+        "No full PDF visual inspection.",
+        "The report expressly simplifies theorem assumptions; precise applicable forms are drawn from S-v4 and E-v4.",
+        "Its physics predictions are not converted to proved results."
+      ]
+    },
+    {
+      "id": "S-v4",
+      "author": "Amol Aggarwal",
+      "title": "Asymptotic Scattering Relation for the Toda Lattice",
+      "arxiv": "2503.08018v4",
+      "version_date": "2026-04-12",
+      "url": "https://arxiv.org/abs/2503.08018v4",
+      "html_url": "https://arxiv.org/html/2503.08018v4",
+      "license": "CC BY 4.0",
+      "license_evidence": "Fixed-version arXiv HTML license header",
+      "read_status": "selected-primary-contracts-and-arguments-read",
+      "read_locations": [
+        "Introduction: model, quasiparticle and many-body scattering context",
+        "§2.1–2.5 and opening organizational material: Definition 2.1/2.3/2.4, Proposition 2.5, Definition 2.6, Lemma 2.7, Assumption 2.8, Propositions 2.9–2.10, Theorem 2.11",
+        "§3.1 periodic model/invariance opening and associated remarks",
+        "§3.2 endpoint spectral weights, Lemma 3.6",
+        "Selected §3.4 scalar/transfer-matrix context",
+        "§3.5 statements, including Lemma 3.16, Corollary 3.17 and spacing Lemma 3.18",
+        "§4.1 comparison proposition opening",
+        "Proposition 6.1 statement and opening proof context"
+      ],
+      "used_contracts": [
+        "Finite open chain and square-root Gamma normalization",
+        "Infinite-volume existence/invariance and quantitative bulk comparison",
+        "Center existence and near uniqueness",
+        "Local-charge and half-line-current comparison",
+        "Quantitative scattering with exact boundary/time/threshold assumptions",
+        "Initial eigenvector localization",
+        "Fixed-time discrete Thouless estimate"
+      ],
+      "limitations": [
+        "Not a complete reading of the research paper.",
+        "Full random localization, uniform-time, matching and scattering proofs in §§4–8 are not reproduced.",
+        "Classical works cited by this primary paper were not all separately retrieved."
+      ],
+      "review_recheck_locations": [
+        "Proposition 2.5(3), positive-integer K and the unchanged comparison quantifiers."
+      ]
+    },
+    {
+      "id": "E-v4",
+      "author": "Amol Aggarwal",
+      "title": "Effective Velocities in the Toda Lattice",
+      "arxiv": "2503.11407v4",
+      "version_date": "2026-03-27",
+      "url": "https://arxiv.org/abs/2503.11407v4",
+      "html_url": "https://arxiv.org/html/2503.11407v4",
+      "license": "CC BY 4.0",
+      "license_evidence": "Fixed-version arXiv HTML license header",
+      "read_status": "selected-primary-contracts-and-arguments-read",
+      "read_locations": [
+        "Introduction context and §§1.2–1.5 in full, including Definitions 1.2–1.8, Assumption 1.12 and Theorem 1.13",
+        "Selected §2 proof-outline material, regularization/proxy mechanism and §2.3 fluctuation heuristics",
+        "§3.1 operator statement sequence, Lemmas 3.1–3.9 and Corollary 3.4",
+        "Selected §3.2 including Lemma 3.14 and Remark 3.15",
+        "§§3.3–3.4 comparison and center contracts, including Lemma 3.22",
+        "§4.1 in full, Assumption 4.1, Propositions 4.3–4.4 and proof of Proposition 4.4",
+        "Opening §4.2 reduction through the first proof steps"
+      ],
+      "used_contracts": [
+        "Exact density of states and mean spectral convergence",
+        "Dressing operator space, invertibility and denominator sign",
+        "Small-θ effective-velocity theorem",
+        "Two-time center bounds",
+        "Fixed-time concentration with deterministic and random-parameter tests"
+      ],
+      "limitations": [
+        "Not a complete reading of the research paper.",
+        "Full §§5–8 and appendices are cited proof locations, not fully read or reproduced.",
+        "Mazzuca's original density-of-states paper was not separately read; its theorem is used through this primary paper's explicit Lemma 3.14/Remark 3.15 statement."
+      ],
+      "review_recheck_locations": [
+        "Assumption 1.12, Theorem 1.13 and discussion after (1.17); the additional LLN growth condition is obtained by dividing the stated error by T."
+      ]
+    },
+    {
+      "id": "Mazzuca-via-E",
+      "author": "Guido Mazzuca",
+      "title": "On the mean density of states of some matrices related to the beta ensembles and an application to the Toda lattice",
+      "doi": "10.1063/5.0076539",
+      "url": "https://doi.org/10.1063/5.0076539",
+      "read_status": "bibliographic-attribution-only-not-separately-read",
+      "binding_contract_source": "E-v4 Lemma 3.14 and Remark 3.15",
+      "license": "not-independently-checked; no text or figures copied"
+    }
+  ],
+  "source_errata": [
+    {
+      "source": "R §4.2 compared with S-v4 Definition 2.3",
+      "type": "normalization-difference",
+      "ids": [
+        "4B0I",
+        "4B0J",
+        "4B0K"
+      ],
+      "resolution": "Report p_i²+2a_i² differs from (L²)_ii by a_i²−a_(i−1)². Exact local-charge theorem uses the matrix-power convention; physical-space subsets need more than a two-endpoint correction."
+    },
+    {
+      "source": "R §5.2, (5.6)–(5.7)",
+      "type": "summation-index-clarification",
+      "ids": [
+        "4B0O",
+        "4B0Q"
+      ],
+      "resolution": "Use λ_j−λ_k when summing over j; preserve center-index order before estimating conversion to physical position order."
+    },
+    {
+      "source": "R §5.3 cutoff description",
+      "type": "symmetry-correction",
+      "ids": [
+        "4B0U"
+      ],
+      "resolution": "A function equal to the Heaviside step outside a symmetric window cannot itself be odd. Use χ(−x)=1−χ(x), or equivalently χ−H odd with H(0)=1/2."
+    },
+    {
+      "source": "R §4.3 flow display",
+      "type": "time-quantifier-restriction",
+      "ids": [
+        "4B0Z"
+      ],
+      "resolution": "State the displayed cT current consequence at terminal t=T; do not assert cT as the main term for arbitrary t."
+    },
+    {
+      "source": "R introductory localization description and S-v4 Corollary 3.17",
+      "type": "quantifier-and-prefactor-clarification",
+      "ids": [
+        "4B0F"
+      ],
+      "resolution": "State pointwise expected eigenvector correlator decay, then derive an explicit simultaneous envelope with N- and ζ-dependent prefactors; do not assert a uniform fixed prefactor for every eigenvector or all evolved open-chain matrices."
+    },
+    {
+      "source": "R §5.3 differentiation heuristic",
+      "type": "proof-boundary-clarification",
+      "ids": [
+        "4B0W",
+        "4B0Y"
+      ],
+      "resolution": "The center trajectory can jump, and a small O(error) cannot be differentiated. A smooth proxy with additional comparison and continuation estimates is essential."
+    },
+    {
+      "source": "R §5.2 continuous Thouless explanation",
+      "type": "sign-convention",
+      "ids": [
+        "4B0O"
+      ],
+      "resolution": "γ denotes a nonpositive logarithmic decay per index; then 2γ=−α−2∫log|λ−x|ρ(x)dx. This is distinct from the positive transfer-matrix Lyapunov convention."
+    }
+  ],
+  "report_branch_map": [
+    {
+      "source": "R §1",
+      "ids": [
+        "4B00",
+        "4B10"
+      ],
+      "coverage": "Positive-density deterministic statistical question and physical prediction status."
+    },
+    {
+      "source": "R §2",
+      "ids": [
+        "4B01",
+        "4B02",
+        "4B03",
+        "4B04",
+        "4B05",
+        "4B06",
+        "4B07",
+        "4B08",
+        "4B09",
+        "4B0A"
+      ],
+      "coverage": "Hamiltonian, boundary models, Lax normalization, thermal variables and invariant infinite/periodic comparison."
+    },
+    {
+      "source": "R §3",
+      "ids": [
+        "4B0D",
+        "4B0L",
+        "4B0P",
+        "4B10"
+      ],
+      "coverage": "Quasiparticle interpretation, exact two-body shift and dense-scattering distinction; other systems remain contextual."
+    },
+    {
+      "source": "R §4",
+      "ids": [
+        "4B0B",
+        "4B0C",
+        "4B0D",
+        "4B0E",
+        "4B0G",
+        "4B0I",
+        "4B0J",
+        "4B0K",
+        "4B0P",
+        "4B0R",
+        "4B0S",
+        "4B0T",
+        "4B0Z",
+        "4B10",
+        "4B12"
+      ],
+      "coverage": "Precise quasiparticle, local-charge, scattering, effective-velocity and current contracts, plus open claims."
+    },
+    {
+      "source": "R §5.1",
+      "ids": [
+        "4B0F",
+        "4B0H",
+        "4B11",
+        "4BZ0"
+      ],
+      "coverage": "Localization input, deterministic truncation and leakage mechanisms, Hall prerequisite."
+    },
+    {
+      "source": "R §5.2",
+      "ids": [
+        "4B0M",
+        "4B0N",
+        "4B0O",
+        "4B0Q"
+      ],
+      "coverage": "Endpoint dynamics, scalar determinant recurrence, discrete Thouless estimate and conditional algebraic combination."
+    },
+    {
+      "source": "R §5.3",
+      "ids": [
+        "4B0U",
+        "4B0V",
+        "4B0W",
+        "4B0X",
+        "4B0Y"
+      ],
+      "coverage": "Correct smoothing, precise concentration tests, proxy dynamics, inverse bounds and error balance."
+    }
+  ],
+  "prerequisite_review": {
+    "map_scope": "Exactly all 39 atomic IDs, no Outline or Reference keys. Only genuine prerequisite uses are registered; downstream applications and the 4911 model comparison remain ordinary links.",
+    "new_local_prerequisite": "4BZ0 supplies a full finite Hall proof after whole-forest search found no suitable canonical generic Hall atom.",
+    "recursive_external_ids": [
+      "0001",
+      "004M",
+      "004N",
+      "004P",
+      "004Q",
+      "004R",
+      "004S",
+      "00CS",
+      "00CY",
+      "00D0",
+      "00D3",
+      "00D7",
+      "00D8",
+      "00D9",
+      "00DC",
+      "00E0",
+      "00E1",
+      "00E2",
+      "00E4",
+      "00E5",
+      "00E7",
+      "00E8",
+      "00EA",
+      "00EC",
+      "00ED",
+      "00EE",
+      "00EF",
+      "00EG",
+      "00EI",
+      "00EJ",
+      "00EK",
+      "00EL",
+      "00EM",
+      "00EN",
+      "00EP",
+      "00EQ",
+      "00ER",
+      "00ET",
+      "00EX",
+      "00F3",
+      "00FP",
+      "00FU",
+      "00G0",
+      "00G1",
+      "00G2",
+      "00G3",
+      "00GC",
+      "00GK",
+      "00GL",
+      "00GM",
+      "00GN",
+      "00I0",
+      "00L0",
+      "00L1",
+      "00L2",
+      "00L3",
+      "00M1",
+      "00M4",
+      "00M6",
+      "00MA",
+      "00MH",
+      "00MI",
+      "00MK",
+      "00MQ",
+      "00MR",
+      "00MS",
+      "00MT",
+      "00MU",
+      "00N8",
+      "00O9",
+      "00OB",
+      "00OC",
+      "00Q0",
+      "00Q1",
+      "00Q2",
+      "00Q3",
+      "00Q4",
+      "00Q5",
+      "00Q6",
+      "00Q9",
+      "00QA",
+      "00QB",
+      "00QD",
+      "00SO",
+      "00TV",
+      "00XV",
+      "0120",
+      "0121",
+      "0127",
+      "0136",
+      "01D2",
+      "0A02",
+      "0A30",
+      "0A31",
+      "0A32",
+      "0A33",
+      "0A34",
+      "0A35",
+      "0A36",
+      "0A37",
+      "0A39",
+      "0A3A",
+      "0A3B",
+      "0A3C",
+      "0A3G",
+      "0A3K",
+      "0A3L",
+      "0A3T",
+      "0A3Z",
+      "0A40",
+      "0A44",
+      "0A45",
+      "0A46",
+      "0A47",
+      "0A66",
+      "0A67",
+      "0A68",
+      "0A69",
+      "0A6A",
+      "0A6B",
+      "0A7A",
+      "0A87",
+      "0ALH",
+      "0ALW",
+      "0ALX",
+      "0F0B",
+      "0F0C",
+      "0F0F",
+      "0F40",
+      "0H4Z",
+      "0H53",
+      "0I8I",
+      "0I8L",
+      "0N0A",
+      "0N0B",
+      "0N0R"
+    ],
+    "structural_checks": {
+      "all_registered_edges_are_body_links": true,
+      "all_targets_exist": true,
+      "no_outline_reference_person_chapter_targets": true,
+      "no_reachable_cycle": true
+    },
+    "limitations": "Existing predecessor statements and conventions are reused. Structural closure is not a claim of a fresh full semantic review of every inherited atom."
+  },
+  "files": [
+    {
+      "id": "4B00",
+      "path": "trees/math/mathematical-physics/aggarwal/4B00.tree",
+      "title": "Toda 多体渐近：从随机谱局域化到有效速度",
+      "taxon": "Outline",
+      "sha256": "ba4d4564f5757f4840da76afac39b8eb127de49338c5f8696cde12801bb6e566"
+    },
+    {
+      "id": "4B01",
+      "path": "trees/math/mathematical-physics/aggarwal/4B01.tree",
+      "title": "有限开链 Toda 系统的 Hamilton 方程",
+      "taxon": "Definition",
+      "sha256": "8d2456561f9d95a337b6d68153c5d9d8212db1c816131c22648248a6632e91c1"
+    },
+    {
+      "id": "4B02",
+      "path": "trees/math/mathematical-physics/aggarwal/4B02.tree",
+      "title": "开链 Toda 的能量守恒排除有限时间爆破",
+      "taxon": "Theorem",
+      "sha256": "7bf6173e5593273edcf0873cc0bc0a9686544dfaf43d91fadbd1006869ec1aea"
+    },
+    {
+      "id": "4B03",
+      "path": "trees/math/mathematical-physics/aggarwal/4B03.tree",
+      "title": "周期 Toda 的总伸长约束",
+      "taxon": "Definition",
+      "sha256": "e0eb6f80c0a2e381d64df5e62ce596fdd612629426d5497eb9193742b28157ec"
+    },
+    {
+      "id": "4B04",
+      "path": "trees/math/mathematical-physics/aggarwal/4B04.tree",
+      "title": "周期热平衡不变性与开链端点漂移",
+      "taxon": "Theorem",
+      "sha256": "36488661d79cd59b4f57f556e1959129b4445ae319b3e1b490640a07598b035b"
+    },
+    {
+      "id": "4B05",
+      "path": "trees/math/mathematical-physics/aggarwal/4B05.tree",
+      "title": "Toda 的 Flaschka 变量与 Lax 归一化",
+      "taxon": "Construction",
+      "sha256": "21b6f720b36fa4818c78a88cb5218255eb463157830604154d63b7a1c4f61b66"
+    },
+    {
+      "id": "4B06",
+      "path": "trees/math/mathematical-physics/aggarwal/4B06.tree",
+      "title": "反对称 Lax 演化保持谱与全部谱矩",
+      "taxon": "Theorem",
+      "sha256": "d1a258ccf6135ad414969d95035c2ca6169cd77e120c752c3da50b2c64b2b4bb"
+    },
+    {
+      "id": "4B07",
+      "path": "trees/math/mathematical-physics/aggarwal/4B07.tree",
+      "title": "正副对角 Jacobi 矩阵的谱简单性",
+      "taxon": "Theorem",
+      "sha256": "ddcb2f7994d8998ab69d004ec9663ae67312efb7d264b88635a5f68db0a481d8"
+    },
+    {
+      "id": "4B08",
+      "path": "trees/math/mathematical-physics/aggarwal/4B08.tree",
+      "title": "Toda 热平衡的高斯与平方根 Gamma 变量",
+      "taxon": "Definition",
+      "sha256": "c4f529496a94e535af19e3081ce9baae4e687f0cfa49439f2c9c2f22a3438198"
+    },
+    {
+      "id": "4B09",
+      "path": "trees/math/mathematical-physics/aggarwal/4B09.tree",
+      "title": "热平衡伸长的均值、方差与方向",
+      "taxon": "Theorem",
+      "sha256": "b04d0c521e761341d3b2cc855ca163a3f2eed29f76ecc18532ec84a3856f63ab"
+    },
+    {
+      "id": "4B0A",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0A.tree",
+      "title": "无限热平衡 Toda 与有限开链的内部比较",
+      "taxon": "Theorem",
+      "sha256": "9462b3bd5d6c75ae20bad50463efe5a6ed788e95d79b41703c68b02f4936c4ad"
+    },
+    {
+      "id": "4B0B",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0B.tree",
+      "title": "热平衡随机 Jacobi 矩阵的极限态密度",
+      "taxon": "Theorem",
+      "sha256": "96262a9de5d1b9e2697504c2b24ada44aa10d7559b57dfe4dbf9fcd3e086c8b5"
+    },
+    {
+      "id": "4B0C",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0C.tree",
+      "title": "Toda 态密度的二阶矩与温度缩放",
+      "taxon": "Theorem",
+      "sha256": "fbfb496fa6ea956a271351ebf7f7184c9b325713aa9a4a5b1604a1730b9d9c38"
+    },
+    {
+      "id": "4B0D",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0D.tree",
+      "title": "谱局域中心定义 Toda 准粒子位置",
+      "taxon": "Definition",
+      "sha256": "4cc1974657b5e843325ea31011a72373244600fa0de9c021c8721c5b73139a93"
+    },
+    {
+      "id": "4B0E",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0E.tree",
+      "title": "正交特征基总能选出互异的局域中心",
+      "taxon": "Theorem",
+      "sha256": "4c6a445b1b8b515c4986798a8cbd2992b3f43a1838794694d3a088f967d822bd"
+    },
+    {
+      "id": "4B0F",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0F.tree",
+      "title": "随机 Jacobi 特征向量的指数相关衰减",
+      "taxon": "Theorem",
+      "sha256": "b7bfbaac347fa4469430c4d00e52ab1589ba4dd0a27002b9ceabb0784eda2441"
+    },
+    {
+      "id": "4B0G",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0G.tree",
+      "title": "内部准粒子中心的近唯一性",
+      "taxon": "Theorem",
+      "sha256": "33d2f7781b21ba574f9948e5163a58598ee891cd000a7f3379a130384fb0b97e"
+    },
+    {
+      "id": "4B0H",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0H.tree",
+      "title": "截断局域特征向量产生邻近特征值",
+      "taxon": "Theorem",
+      "sha256": "fddce313b508e208bc90443903baa5e1f7d0d56b2068a83b0b30e5495e87e7a9"
+    },
+    {
+      "id": "4B0I",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0I.tree",
+      "title": "Lax 矩阵幂的局部守恒律",
+      "taxon": "Theorem",
+      "sha256": "71100d0ac9e1fc08288e40fbb8fe095372f72d66da5e4890da6af66ea88274f2"
+    },
+    {
+      "id": "4B0J",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0J.tree",
+      "title": "两种 Toda 能量密度相差边界项",
+      "taxon": "Theorem",
+      "sha256": "39b8d5102e40d9a314a55ea2fd474fda062fb291f0661dc98c2be6b2b8e22b89"
+    },
+    {
+      "id": "4B0K",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0K.tree",
+      "title": "局部荷和空间流的准粒子表示",
+      "taxon": "Theorem",
+      "sha256": "25c141e158240942dc98476c41336f9aa5c04d2cd195ebe0f851bfb47d32d8cc"
+    },
+    {
+      "id": "4B0L",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0L.tree",
+      "title": "二粒子 Toda 散射的对数位移",
+      "taxon": "Example",
+      "sha256": "500d0d1650d9d53128646152d376028c1e47581f0084af058fa8fba95b334407"
+    },
+    {
+      "id": "4B0M",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0M.tree",
+      "title": "开链端点谱权重的精确指数演化",
+      "taxon": "Theorem",
+      "sha256": "e3094eadda15f2bee280aa3f7c79d9c31003b99789cfdbd230264f95fb2bd637"
+    },
+    {
+      "id": "4B0N",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0N.tree",
+      "title": "Jacobi 递推把端点坐标写成谱行列式",
+      "taxon": "Theorem",
+      "sha256": "e72e98094e5e7fe1a55ec55da848dfd1e11f0c4a636770312be56ac3bdddf1f4"
+    },
+    {
+      "id": "4B0O",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0O.tree",
+      "title": "有限随机 Toda 的离散 Thouless 估计",
+      "taxon": "Theorem",
+      "sha256": "7cc8bfd3c77a36651d31e43691192daafad1cb850e87f81cdcc4868760b8690e"
+    },
+    {
+      "id": "4B0P",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0P.tree",
+      "title": "热平衡 Toda 的定量渐近散射关系",
+      "taxon": "Theorem",
+      "sha256": "e10fa0be8de41c9e3687b5e63c228e15bbb98847ac783cf8a82248ce12d28aaa"
+    },
+    {
+      "id": "4B0Q",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0Q.tree",
+      "title": "端点谱权重与离散衰减如何合成散射",
+      "taxon": "Proposition",
+      "sha256": "ef690f2fc0b66a269a5b53ec272e99bd53257e8a5ec762b5f3956763da50ca9c"
+    },
+    {
+      "id": "4B0R",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0R.tree",
+      "title": "Toda 的修饰算子与有效速度",
+      "taxon": "Construction",
+      "sha256": "ed7367e2af2ec061aad06dd6e911961a68345b3dca85b3c9d3539f76ab15326f"
+    },
+    {
+      "id": "4B0S",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0S.tree",
+      "title": "修饰速度满足碰撞率积分方程",
+      "taxon": "Proposition",
+      "sha256": "43efff150f7b16d2ce4c99ece31948ec3370ff7a9c44490ebbc89037883713f3"
+    },
+    {
+      "id": "4B0T",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0T.tree",
+      "title": "小形状参数下准粒子的有效速度定理",
+      "taxon": "Theorem",
+      "sha256": "15104036e75a3bfceb1ef46dfb3c613b0b1a15d717c4e4cf1ace9c945a67954c"
+    },
+    {
+      "id": "4B0U",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0U.tree",
+      "title": "平滑空间次序与正则化对数核",
+      "taxon": "Construction",
+      "sha256": "6c58edf730c9052b04f2c69af2aabe92849d36c494a4f3048e1f101b6dbd6deb"
+    },
+    {
+      "id": "4B0V",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0V.tree",
+      "title": "空间与谱的局部联合浓缩",
+      "taxon": "Theorem",
+      "sha256": "6c85463389a3b2b404464607305ea3442d001792f16f19a00ed4c752ed21d84b"
+    },
+    {
+      "id": "4B0W",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0W.tree",
+      "title": "用光滑比较动力学替代跳跃的中心轨迹",
+      "taxon": "Construction",
+      "sha256": "325be9fcf926309ba1efa09eee11b5055fa60797b86f29396ef18aa6c6b55a18"
+    },
+    {
+      "id": "4B0X",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0X.tree",
+      "title": "严格对角占优给出最大范数逆估计",
+      "taxon": "Theorem",
+      "sha256": "1cb6bffc1a95125201e93b96bdf4dacbe9cc532a021897084f47edc4ae32de5b"
+    },
+    {
+      "id": "4B0Y",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0Y.tree",
+      "title": "平滑误差与速度误差的平方根平衡",
+      "taxon": "Proposition",
+      "sha256": "60c2f80b411e269db19440f7102a84d20d7cf7e7b2346b41e5f07a28768d3ab3"
+    },
+    {
+      "id": "4B0Z",
+      "path": "trees/math/mathematical-physics/aggarwal/4B0Z.tree",
+      "title": "穿过原点的粒子流与动量流",
+      "taxon": "Theorem",
+      "sha256": "4408ca43fb43f7fd7500116bac29e10b23b37ea08ba1fa6ee175079dc1808883"
+    },
+    {
+      "id": "4B10",
+      "path": "trees/math/mathematical-physics/aggarwal/4B10.tree",
+      "title": "Toda 的扩散涨落仍是猜想",
+      "taxon": "Conjecture",
+      "sha256": "3c4fcb7415e9014847497e26239d77b84b35fbca0fb6043ae5f573d968437be8"
+    },
+    {
+      "id": "4B11",
+      "path": "trees/math/mathematical-physics/aggarwal/4B11.tree",
+      "title": "谱权重的边界泄漏控制局部荷误差",
+      "taxon": "Proposition",
+      "sha256": "d4920ae2dc5e3200efb31789cba6b680a2c62a3ebb6505b5cd2cb76a9cd9bc6f"
+    },
+    {
+      "id": "4B12",
+      "path": "trees/math/mathematical-physics/aggarwal/4B12.tree",
+      "title": "多体散射的热平衡尺度与概率约定",
+      "taxon": "Definition",
+      "sha256": "fe245f0a3857080f6aeb57b42e0b148811831d3f2de017b63d924cbd5de4a9a2"
+    },
+    {
+      "id": "4BZ0",
+      "path": "trees/math/mathematical-physics/aggarwal/4BZ0.tree",
+      "title": "有限二分关系的 Hall 匹配判据",
+      "taxon": "Theorem",
+      "sha256": "3a7c7b141cda1539a3cee7e5147ed923c0a047bcce73e285c52c7a8a2fe49b7c"
+    },
+    {
+      "id": "icm2026-aggarwal",
+      "path": "trees/references/icm2026-aggarwal.tree",
+      "title": "Amol Aggarwal：Many-Body Asymptotics for the Toda Lattice",
+      "taxon": "Reference",
+      "sha256": "20a42fadfcbb216c5a09479585697c591a6bacec9ce410f8e068f45498d4706a"
+    }
+  ],
+  "freeze": {
+    "status": "frozen-for-independent-recheck",
+    "date": "2026-10-22",
+    "tree_file_count": 41,
+    "atomic_count": 39,
+    "hash_algorithm": "sha256",
+    "hash_scope": "Every owned tree file after normalizeFormat. The packet has no embedded self-hash; hash it externally after writing.",
+    "format_idempotent": true,
+    "style_findings": [],
+    "links_inside_math": [],
+    "independent_review": "Revision 2 independently passed; revision 3 is pending independent refreshed-hash review after the delimiter-only 4B0K change.",
+    "shared_integration_build_tests": "Parent-owned, not run by branch author",
+    "revision": 3,
+    "previous_packet_sha256": "a64852d3f55bb4b81268ac6ce3ba3bcb13472a343765b8da079bb0fad8e34fc8",
+    "changed_tree_ids": [
+      "4B0K"
+    ],
+    "parent_whole_site_validation_required": true,
+    "current_xml_formula_matches_source": true
+  },
+  "review_response": {
+    "review_file": "research/mathematical-physics-aggarwal-review.json",
+    "review_file_sha256": "5913e34408107ae5c7fa3843f6c969e017854c65e4f820d76636d88b74e6eb51",
+    "previous_packet_sha256": "ae80a1e98d61e6a489fc9b115b8f1bb27cbadfcda6e5f6c19077756ff3ea1a14",
+    "reviewer_result": "changes_requested",
+    "status": "repairs-independently-rechecked-on-revision-2",
+    "review_record_modified": false,
+    "findings": [
+      {
+        "id": "AGG-M01",
+        "note": "4B0A",
+        "status": "implemented-pending-independent-recheck",
+        "repair": "Added K as a positive integer before the quantitative hypotheses; synchronized both hypothesis maps. All other quantifiers and constants remain unchanged."
+      },
+      {
+        "id": "AGG-M03",
+        "note": "4B10",
+        "status": "implemented-pending-independent-recheck",
+        "repair": "Stated N→∞ and T=T(N) with 1≤T≤N(logN)^−6 and T/(logN)^70→∞; showed the normalized bound equals (T/(logN)^70)^−1/2→0."
+      },
+      {
+        "id": "AGG-L01",
+        "note": "4B0W",
+        "status": "implemented-pending-independent-recheck",
+        "repair": "Defined fixed nonzero real α and M,d>0 locally; linked the Toda interpretation to 4B09 and registered that real body link as a prerequisite."
+      },
+      {
+        "id": "AGG-D01",
+        "note": "4B0X",
+        "status": "implemented-pending-independent-recheck",
+        "repair": "Proved the images of the standard basis are independent by injectivity; applied finite basis exchange 00GN to obtain spanning and surjectivity. Added 00GN as a genuine prerequisite and retained 00GC as the definition link."
+      }
+    ],
+    "scope": "Exactly four existing atomic notes and this packet; no new notes, shared-file edits, build, tests or Git operations.",
+    "independent_recheck_result": {
+      "result": "pass",
+      "review_file": "research/mathematical-physics-aggarwal-review.json",
+      "review_file_sha256": "b97a91760c88dad29c79d46a50552db4eab173c6899cc6db6820ab32412203f7",
+      "reviewed_packet_sha256": "a64852d3f55bb4b81268ac6ce3ba3bcb13472a343765b8da079bb0fad8e34fc8",
+      "scope": "External review record for revision 2 only; it does not certify the new revision 3 hash."
+    },
+    "changed_tree_ids": [
+      "4B0A",
+      "4B0W",
+      "4B0X",
+      "4B10"
+    ],
+    "revision": 2
+  },
+  "render_syntax_repair": {
+    "revision": 3,
+    "status": "implemented-frozen-pending-independent-refreshed-hash-review",
+    "changed_tree_ids": [
+      "4B0K"
+    ],
+    "source_path": "trees/math/mathematical-physics/aggarwal/4B0K.tree",
+    "source_sha256_before": "3b24ef71e2988f58480de5d409ab504463c605b1fdf26cd0f5e063865d1d03b1",
+    "source_sha256_after": "25c141e158240942dc98476c41336f9aa5c04d2cd195ebe0f851bfb47d32d8cc",
+    "previous_packet_sha256": "a64852d3f55bb4b81268ac6ce3ba3bcb13472a343765b8da079bb0fad8e34fc8",
+    "diagnosis": "The cases row break is immediately followed by a raw opening interval bracket, so KaTeX reads the interval contents as an optional row-height argument.",
+    "repair": "Only the second-row interval delimiters were changed from [...] to \\bigl[...\\bigr]. Endpoints, orientation cases, assumptions, conclusions and prerequisites are unchanged.",
+    "source_formula_before": "J_* =\\begin{cases}[\\alpha n_-+A,\\alpha n_+-B],&\\alpha>0,\\\\[\\alpha n_++B,\\alpha n_--A],&\\alpha<0.\\end{cases}",
+    "source_formula_after": "J_* =\\begin{cases}[\\alpha n_-+A,\\alpha n_+-B],&\\alpha>0,\\\\\\bigl[\\alpha n_++B,\\alpha n_--A\\bigr],&\\alpha<0.\\end{cases}",
+    "built_xml_inspection": {
+      "path": "output/4B0K/index.xml",
+      "sha256": "e5e15bb5a0a2831bfafa5a054c98970b47ec76ca570b87bf1901ccdd781c7b68",
+      "formula": "J_* =\\begin {cases}[\\alpha  n_-+A,\\alpha  n_+-B],&\\alpha >0,\\\\[\\alpha  n_++B,\\alpha  n_--A],&\\alpha <0.\\end {cases}",
+      "compared_with": "The actual pre-repair 4B0K source formula, not a reconstructed or assumed build.",
+      "equal_ignoring_forester_whitespace": true,
+      "source_parse_before": {
+        "status": "fail",
+        "error": "KaTeX parse error: Invalid size: '\\alphan_++B,\\alphan_--A' at position 59: …B],&\\alpha>0,\\\\[̲\\̲a̲l̲p̲h̲a̲ ̲n̲_̲+̲+̲B̲,̲\\̲a̲l̲p̲h̲a̲ ̲n̲_̲-̲-̲A̲]̲,&\\alpha<0.\\end…"
+      },
+      "actual_built_xml_parse": {
+        "status": "fail",
+        "error": "KaTeX parse error: Invalid size: '\\alphan_++B,\\alphan_--A' at position 63: …],&\\alpha >0,\\\\[̲\\̲a̲l̲p̲h̲a̲ ̲ ̲n̲_̲+̲+̲B̲,̲\\̲a̲l̲p̲h̲a̲ ̲ ̲n̲_̲-̲-̲A̲]̲,&\\alpha <0.\\en…"
+      },
+      "conclusion": "The actual built XML and the original source both reproduce the same invalid optional row-height error. Their only observed formula difference is whitespace inserted around TeX commands.",
+      "after_source_repair": "The first inspection after the source edit still found the old failing XML. During the final hash check the actual XML changed externally; it was read again, and the updated formula now matches the repaired source modulo Forester whitespace and parses successfully. This author did not run a build.",
+      "artifact_modified_by_this_author": false,
+      "artifact_regenerated_by_this_author": false
+    },
+    "local_validation": {
+      "katex_version": "0.16.11",
+      "katex_runtime": "/tmp/math-blog-katex-0.16.11.cjs",
+      "scope": "Read-only parsing of all 19 native formula groups in 4B0K, with throwOnError:true and strict:error; not a site build.",
+      "source_formula_count": 19,
+      "source_parse_errors": [],
+      "mathematical_tokens_unchanged_after_removing_only_bigl_bigr": true,
+      "normalizeFormat_idempotent": true,
+      "other_40_owned_tree_hashes_unchanged": true,
+      "prerequisite_maps_unchanged": true,
+      "review_record_unchanged": true
+    },
+    "manual_edits": "apply_patch only; 4B0K source and this packet",
+    "build_run": false,
+    "git_operations_run": false,
+    "independent_review_result": null,
+    "updated_built_xml_observation": {
+      "path": "output/4B0K/index.xml",
+      "sha256": "a3510169c8975c87a9c3b6e5019888dd4d388cf210440395afeff0ae892c7d03",
+      "modified_at_utc": "2026-10-21T18:23:45.613Z",
+      "formula": "J_* =\\begin {cases}[\\alpha  n_-+A,\\alpha  n_+-B],&\\alpha >0,\\\\\\bigl [\\alpha  n_++B,\\alpha  n_--A\\bigr ],&\\alpha <0.\\end {cases}",
+      "source_xml_equal_ignoring_whitespace": true,
+      "formula_parse": {
+        "status": "pass"
+      },
+      "provenance": "Actual existing XML reread after an external update detected during the final consistency check; not generated or modified by this author.",
+      "scope": "Only the affected formula was parsed in the updated XML. This does not claim whole-site build, browser, deployment or independent-review completion."
+    }
+  }
+}

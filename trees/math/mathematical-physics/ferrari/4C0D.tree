@@ -1,0 +1,12 @@
+\title{Poisson 高度面的 Euler 大数律}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ferrari](icm2026-ferrari)，§2.4，式 (2.15)；有限种、固定时空点的均方与概率收敛证明}
+
+\p{设 #{N_\varepsilon} 为强度 #{\varepsilon^{-1}\mu} 的 [Poisson 测度](4C02)，#{\mu(dx,i)=n_i\,dx}，种类有限、杆长为 #{\varepsilon a}。对 #{b=(z,t)} 令 #{H_\varepsilon(b)=\varepsilon aN_\varepsilon K_b}，其中 #{K_b} 为[有向穿越核](4C07)。则在每个固定点，}
+##{H_\varepsilon(z,t)\longrightarrow h(z,t)=a\sum_i n_i(z-v_it)}
+\p{在均方及[概率意义](00L9)下成立。这里 #{z,t} 都已是宏观坐标；等价的微观观察是空间与时间同时乘 #{\varepsilon}。}
+\p{\strong{证明。}对每个速度，#{\int K_b(x,v_i)\,dx=z-v_it}，#{\int K_b(x,v_i)^2\,dx=|z-v_it|}。由 [Poisson 均值方差](4C03)，}
+##{\mathbb EH_\varepsilon=h,\qquad \mathbb E|H_\varepsilon -h|^2=\varepsilon a^2\sum_i n_i|z-v_it|\longrightarrow 0.}
+\p{再由 #{\mathbb P(|H_\varepsilon -h|>\delta)\leq\delta^{-2}\mathbb E|H_\varepsilon -h|^2} 得概率收敛。对有限多个时空点用并集界即可同时收敛；未指定不同 #{\varepsilon} 之间的联合构造时，这一论证不给出几乎处处收敛。}

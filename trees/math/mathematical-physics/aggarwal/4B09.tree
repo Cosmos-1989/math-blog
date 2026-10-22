@@ -1,0 +1,12 @@
+\title{热平衡伸长的均值、方差与方向}
+\date{2026-10-22}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 (4.1)；散射论文 v4 Lemma 3.11。}
+
+\p{在[热平衡](4B08)下，#{r_i=q_{i+1}-q_i=-\log Y_i} 的[期望](00L1)与[方差](00L2)满足}
+##{\alpha:=\mathbb E r_i=\log\beta -\psi(\theta),\qquad\operatorname{Var}(r_i)=\psi'(\theta),\qquad\mathbb E Y_i=\theta /\beta,}
+\p{其中 #{\psi=\Gamma'/\Gamma}。\strong{证明。}对 #{s>-\theta}，变量替换 #{z=\beta y} 给 #{\mathbb E Y_i^s=\beta^{-s}\Gamma(\theta+s)/\Gamma(\theta)}。在零附近两次求导，其对数的一、二阶导数分别是 #{\mathbb E\log Y_i} 与 #{\operatorname{Var}(\log Y_i)}。求导可由[支配收敛](0I8I)验证：零附近用 #{y^{\theta /2-1}(1+|\log y|^2)} 控制，无穷远用指数衰减控制。取 #{s=1} 并用 Gamma 递推得到最后一式。}
+\p{独立性给 #{\mathbb E(q_j-q_i)=\alpha(j-i)} 及 #{\operatorname{Var}(q_j-q_i)=|j-i|\psi'(\theta)}。对中心化平方用 [Markov 不等式](0A02)，得到}
+##{\mathbb P\left(\left|\frac{q_j-q_i}{j-i}-\alpha\right|>\varepsilon\right)\leq\frac{\psi'(\theta)}{|j-i|\varepsilon^2}.}
+\p{因此远距离的指标方向由 #{\operatorname{sgn}\alpha} 决定，平均空间尺度为 #{|\alpha|} 每个指标，密度尺度为 #{|\alpha|^{-1}}。单个 #{r_i} 仍可正可负。#{\alpha=0} 时这一有限密度空间尺度失效；多体散射与有效速度定理均排除此情形。}

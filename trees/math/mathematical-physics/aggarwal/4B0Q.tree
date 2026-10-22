@@ -1,0 +1,12 @@
+\title{端点谱权重与离散衰减如何合成散射}
+\date{2026-10-22}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Aggarwal](icm2026-aggarwal)，报告 (5.3)–(5.7)；条件性代数推导。}
+
+\p{固定一个[开链 Toda 解](4B01)、标签 #{k} 与时刻 #{t}，记 #{S_k(s)=\sum_{j:\varphi_s(j)<\varphi_s(k)}\log|\lambda_k-\lambda_j|}。假设在 #{s=0,t} 两个时刻有[离散衰减关系](4B0O)}
+##{2\log|u_k(n_-;s)|=q_{n_-}(s)-Q_k(s)-2S_k(s)+\varepsilon_k(s),\qquad|\varepsilon_k(s)|\leq E.}
+\p{则精确的[端点权重演化](4B0M)给出}
+##{Q_k(t)-Q_k(0)=\lambda_kt-2\big(S_k(t)-S_k(0)\big)+\varepsilon_k(t)-\varepsilon_k(0).}
+\p{\strong{证明。}将假设在两时刻相减，左边等于 #{-\lambda_kt+q_{n_-}(t)-q_{n_-}(0)}。两端的 #{q_{n_-}} 差完全相消，移项即得公式，误差绝对值至多 #{2E}。}
+\p{这一步的次序是中心指标次序。若 #{\alpha>0} 且两个时刻指标与位置严格同序，可直接改为空间次序；随机热平衡只有近有序性，错序项必须另行估计。#{\alpha<0} 时改用右侧次序，配合全部 #{j\ne k} 的谱和不随时间变化，产生 #{\operatorname{sgn}(\alpha)}。将固定时刻估计变成统一时间事件、消除额外的端点缓冲，同样属于[定量散射定理](4B0P)的深层证明。}
