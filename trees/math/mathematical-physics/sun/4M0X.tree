@@ -1,0 +1,10 @@
+\title{投影经验分布统一表示感知机能量}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§3.4；Huang–Sellke–Sun v1，式 (1.1)–(1.6)。}
+
+\p{设 #{G} 为 #{M\times N} 实矩阵，行向量为 #{g^a}，#{M\ge 1}，#{x\in\mathbb R^N}。定义投影经验概率与绝对值投影经验概率}
+##{\mu_G(x)=\frac 1M\sum_{a=1}^M\delta_{g^a\cdot x/\sqrt N},\qquad \mu_{G,\mathrm{abs}}(x)=\frac 1M\sum_{a=1}^M\delta_{|g^a\cdot x|/\sqrt N},}
+\p{其中 #{\delta_t(B)=1_{\{t\in B\}}} 是点质量。第二个是第一个经绝对值映射得到的[分布](00L0)，文献称之为 symmetrized projection pursuit；这里的“对称化”明确指取绝对值。}
+\p{给定实函数 #{\phi}，令 #{H_G(x)=\sum_a\phi(g^a\cdot x/\sqrt N)}，则 #{H_G(x)/M=\int\phi\,d\mu_G(x)}。特别地，[感知机可行性](4M0P)等价于 #{\mu_G(x)(I)=1}。投影追踪让方向 #{x} 依赖数据 #{G}，以寻找指定的经验分布；固定方向的高斯分布计算不能直接描述这种数据依赖的选择。}

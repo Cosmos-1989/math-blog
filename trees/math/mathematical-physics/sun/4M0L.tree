@@ -1,0 +1,10 @@
+\title{NAE-SAT 的倾斜消息分布递推}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{Sly–Sun–Zhang v3，§1.6 式 (10)；[Sun](icm2026-sun)，§2.4。}
+
+\p{固定 #{k,d\ge 2}、#{\lambda\in[0,1]}。[BP 消息](4M0C)在二元字母表上是概率向量，可由取一的概率 #{x\in[0,1]} 编码。现在考虑消息本身的[概率分布](00L0)。对输入 #{x_1,\ldots,x_{k-1}} 与 #{y_1,\ldots,y_{d-1}}，记}
+##{A=\prod_i x_i,\quad B=\prod_i(1-x_i),\quad C=\prod_i y_i,\quad D=\prod_i(1-y_i).}
+\p{约束更新把输入[独立](00L3)按 #{\mu} 抽取，将输出 #{(1-A)/(2-A-B)} 的分布按权重 #{(2-A-B)^\lambda} 重新归一化，所得测度记为 #{\widehat R_\lambda\mu}。变量更新把输入独立按 #{\nu} 抽取，将输出 #{C/(C+D)} 的分布按权重 #{(C+D)^\lambda} 重新归一化，记为 #{\dot R_\lambda\nu}。只有总权重正时才作归一化。}
+\p{当 #{C+D=0} 时规定该输入权重为零，输出任取；在 #{\lambda=0} 时也按此规则排除不相容输入，即此处约定 #{0^0=0}。这是倾斜消息模型的约定，不改变普通幂函数的其他用法。}

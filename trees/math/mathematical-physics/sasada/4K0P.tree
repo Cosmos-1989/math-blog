@@ -1,0 +1,16 @@
+\title{离散 Toda 的 Gamma 乘积不变律}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，命题 4.6 与定理 4.8}
+
+\p{取 #{a,b,c>0}，初态全体 #{I_n,J_n} 独立，且}
+##{I_n\sim\operatorname{Gamma}(a+b,c),\qquad
+J_n\sim\operatorname{Gamma}(a,c),\qquad n\in\mathbb Z.}
+\p{Gamma 的第二参数为速率，密度与加法性质见[和与比例的独立性](4K0N)。Croydon–Sasada 定理 4.8 保证：[离散 Toda 方程](4K0I)具有相应的正线性路径全时解，此初态的[乘积律](0A6B)在时间演化下不变；载流子边缘为 #{\operatorname{Gamma}(b,c)}。}
+\p{\strong{局部独立性证明。}令 #{A,B,C} 独立，分别服从 #{\operatorname{Gamma}(a+b,c),\operatorname{Gamma}(a,c),\operatorname{Gamma}(b,c)}。局部映射为}
+##{F(A,B,C)=\left(B+C,\frac{AB}{B+C},\frac{AC}{B+C}\right).}
+\p{写 #{S=B+C,R=B/(B+C)}。和与比例的独立性说明 #{A,S,R} 独立，且 #{A,S} 同分布。因此将 #{A,S} 交换，再把 #{(A,R)} 还原为 #{(AR,A(1-R))}，得到三个相互独立的输出，其分布与输入逐项相同。}
+\p{漂移条件也可直接检查。用独立的 #{B\sim\operatorname{Gamma}(a,c)} 与 #{C\sim\operatorname{Gamma}(b,c)} 耦合 #{I=B+C,J=B}，有 #{\log I>\log J}。对任意形状参数 #{r>0}，零点附近密度中的幂指数为 #{r-1>-1}；令 #{x=e^{-u}} 得}
+##{\int_0^1x^{r-1}|\log x|\,dx=\int_0^\infty u e^{-ru}\,du=\frac 1{r^2}<\infty.}
+\p{无穷远的指数衰减也保证对数可积。分别取 #{r=a} 与 #{r=a+b}，得到 #{\mathbb E|\log J|,\mathbb E|\log I|<\infty}，故 #{\mathbb E\log I-\mathbb E\log J>0}。这正是[交错对数路径](4K0J)的两步平均增量。全局不变律采用原定理的双无限构造。}

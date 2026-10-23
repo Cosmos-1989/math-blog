@@ -1,0 +1,2900 @@
+{
+  "date": "2026-10-24",
+  "report": {
+    "prefix": "4M",
+    "outline": "4M00",
+    "reference": "icm2026-sun",
+    "doi": "10.1137/25M1805801",
+    "speaker": "Nike Sun",
+    "title": "Randomized Combinatorial Problems, in Sparse and Mean-Field Settings",
+    "pages": "616-635",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+    "license": "CC BY 4.0",
+    "question": "随机局部约束与高维高斯约束的解数、解簇和重叠如何影响可满足阈值，并如何在明确的稳定算法类内刻画可达投影？",
+    "reading_scope": "sun-icm2026: Entire publisher HTML mathematical body §§1-3.4, all displayed equations, four figure captions and Table 1: lines 88-571, read in overlapping section-sized windows. Acknowledgments 572-574 and selected bibliography entries read; not a full bibliography audit. Metadata/title/author/pages/DOI/license/date checked at lines 59-65 and 1085-1102. No publisher PDF or figure-pixel inspection.\nssz-v3: PDF introduction §§1.1-1.8, extracted lines 1-475, printed pp.1-8, including Theorem 1, Proposition 1.2, Definition 1.3, Proposition 1.4 and equations (1)-(17); opening §2 (before §2.1), lines 480-525, including Definition 2.1, p.9. PDF p.6 rendered and visually inspected. Additional v3 correction notice and start Appendix F lines 4478-4535, p.73; Appendix G introduction and corrected domain definition (154), Propositions G.1-G.3 and start G.1 lines 4876-4970, pp.79-80. Abstract metadata records correction; no complete reading of Appendices B,F,G.\nnss-ii-v2: HTML abstract and introduction §§1,1.1,1.2, lines 45-147; start §1.3 lines 151-158. Recheck extended §1.3 through line 168 for explanation of short-cycle effects. Theorems 1.1 and 1.4 and Definition 1.3 read in full; no full proof sections.\nding-sun-v1: HTML abstract and §1 lines 44-128: Theorem 1.1, Condition 1.2, Proposition 1.3, Theorem 1.4 and beginning of its conditional-moment consequence. No complete proof body.\nhuang-v2: HTML §1 lines 67-121; selected §2.6 lines 249-323; §§3.1-3.3 lines 324-435 and opening at 437. Theorem 1.2, Condition 1.3, equations (6)-(8), Proposition 3.2 checked. Full proof and numerical validation not read.\nhss-v1: PDF pp.1-6, extracted lines 1-290: abstract, model, §1.1 definitions/control equations and informal results. Separate read lines 485-750, pp.10-16: end §1.3, complete §1.4 definitions 1.8/1.11/1.12/1.15, Theorems 1.13/1.16, Corollary 1.14, §1.5 organization, and beginning §2.1. PDF p.13 rendered and visually inspected for Theorem 1.16 quantifiers, q<2, and oracle-cost condition. Remaining mathematical proof body not read; pp.6-10 between listed excerpts not fully read.\nshmalo-v1-consulted: Only abstract and introduction lines 25-70, including Theorem 1.1 and Remark 1.2; versioned abstract metadata independently rechecked. Proof/computer code not audited.\nlocal-calculations: All owned atomic source bodies re-read while authoring and repairing; finite computations checked directly. Existing reusable definitions inspected separately.",
+    "proof_scope": {
+      "4M01": {
+        "status": "definition",
+        "scope": "有限字母表、二部多重因子图与局部指标乘积；图着色和独立集作为实例。"
+      },
+      "4M02": {
+        "status": "definition",
+        "scope": "半边均匀配对、允许平行关联边、逐边独立文字标签和 nd=mk 的整除条件。"
+      },
+      "4M03": {
+        "status": "definition-and-local-calculation",
+        "scope": "独立子句使用不同变量的 k 子集；SAT 与 NAE 单子句概率及一阶矩直接计算，不转移正则模型定理。"
+      },
+      "4M04": {
+        "status": "definition",
+        "scope": "固定密度的阈值、规模依赖的尖锐阈值序列、正概率和高概率，以及搜索任务的不同量词。"
+      },
+      "4M05": {
+        "status": "local-construction-and-proof",
+        "scope": "有限配置集的违反数能量、Gibbs 权重及固定实例的零温极限；不交换温度和规模极限。"
+      },
+      "4M06": {
+        "status": "local-proof",
+        "scope": "log t<=t-1 给 Jensen 上界；Markov 给典型指数率上界；硬约束 log0 与 ElogZ 单独处理。"
+      },
+      "4M07": {
+        "status": "local-proof",
+        "scope": "条件于任意配对后由逐边独立标签求精确一阶矩，再用 Markov；平行边不破坏计算。"
+      },
+      "4M08": {
+        "status": "local-proof",
+        "scope": "在几乎处处商 L2 中用 Schwarz 逐步证明 Paley-Zygmund，包括 theta=0。"
+      },
+      "4M09": {
+        "status": "local-counterexample",
+        "scope": "2^n 倍公平 Bernoulli 的矩比值恒为二，非零概率恒为二分之一。"
+      },
+      "4M0A": {
+        "status": "definition-and-local-calculation",
+        "scope": "自旋编码、Hamming 距离与重叠恒等式；带符号与绝对重叠分开。"
+      },
+      "4M0B": {
+        "status": "local-counterexample",
+        "scope": "2-NAE 路径只有两个交替解；均匀单点分布不推出独立。"
+      },
+      "4M0C": {
+        "status": "local-proof",
+        "scope": "有限树的分支权重递推、叶子归纳和根配分函数；邻居记号在本页定义。"
+      },
+      "4M0D": {
+        "status": "local-proof",
+        "scope": "Z>0 的有限树中未归一化局部因子均为 Z；叶子删去计数与消息缩放抵消。"
+      },
+      "4M0E": {
+        "status": "local-counterexample",
+        "scope": "三角不等约束无解，均匀 BP 不动点却给 Bethe 乘除式为一。"
+      },
+      "4M0F": {
+        "status": "conditional-local-proof",
+        "scope": "两项精确计数比值；额外明确旧坐标独立均匀、子句变量不交时才导出 RS 局部因子。"
+      },
+      "4M0G": {
+        "status": "definition-and-local-counterexample",
+        "scope": "解簇按单坐标翻转连通；冻结坐标与局部可翻转区分；三点子集反例。"
+      },
+      "4M0H": {
+        "status": "local-proof",
+        "scope": "有限混合的协方差展开及两单点簇例子。"
+      },
+      "4M0I": {
+        "status": "local-proof",
+        "scope": "n>=1、非空有限解集，倾斜配分函数的两次导数；仅推出均值随 lambda 单调。"
+      },
+      "4M0J": {
+        "status": "local-proof",
+        "scope": "最大项与项数的上下界；次指数层数、统一误差与负计数指数的作用。"
+      },
+      "4M0K": {
+        "status": "local-proof",
+        "scope": "每个固定赋值具有同一正可满足概率时，有限 Bayes 计算植入实例的 Z 偏置。"
+      },
+      "4M0L": {
+        "status": "construction",
+        "scope": "两个倾斜消息算子的输入、输出、权重、归一化及 lambda=0 的排零约定；收敛另见 4M18。"
+      },
+      "4M0M": {
+        "status": "definition-from-cited-selection",
+        "scope": "三类 z 因子、A 和 ell、F、s_lambda 与 Sigma；适定性沿所引论文，未误用对参数依赖分布的形式求导。"
+      },
+      "4M0N": {
+        "status": "cited-research-theorem",
+        "scope": "大 k、正则密度、严格可满足区间的对数自由能与凝聚阈值；不展开深层证明，不插值密度格点。"
+      },
+      "4M0O": {
+        "status": "cited-research-theorem",
+        "scope": "只引用 Theorem 1.1(a) 的 epsilon/K 大簇质量保证；不声称全部簇数有限，不导入(b)的簇尺寸细项。"
+      },
+      "4M0P": {
+        "status": "definition",
+        "scope": "高斯矩阵、N^-1/2 投影、球面与立方体、半空间与对称区间分别定义。"
+      },
+      "4M0Q": {
+        "status": "local-proof",
+        "scope": "明确补成正交基、行列式绝对值一与线性换元；联合高斯表示及端点。"
+      },
+      "4M0R": {
+        "status": "local-proof",
+        "scope": "精确一阶矩和按 Hamming 距离分组的有序配置对二阶矩；一般 I 及零裕量的一阶矩上界。"
+      },
+      "4M0S": {
+        "status": "local-proof",
+        "scope": "有界非负 X 的条件二次多项式判别式；v=0 约定及 0<C<infinity 条件。"
+      },
+      "4M0T": {
+        "status": "local-proof",
+        "scope": "固定非空有限自旋解集，独立均匀抽样后平均重叠等于重心范数平方/N。"
+      },
+      "4M0U": {
+        "status": "definition-with-cited-existence",
+        "scope": "固定点和势函数定义候选常数；参数矩形、唯一性与下降性引用 DS Proposition 1.3/Huang Proposition 3.2，未复现数值认证。"
+      },
+      "4M0V": {
+        "status": "conditional-cited-research-theorem",
+        "scope": "完整写出 S_*(u,v)<=0 的全局假设与 Gaussian Ising 零裕量容量上界；分母正性直接证明；下界不同条件未混同。"
+      },
+      "4M0W": {
+        "status": "local-proof",
+        "scope": "kappa>0 的球内到球面缩放；kappa=0 的确定性反例；不转移到负裕量。"
+      },
+      "4M0X": {
+        "status": "definition-and-local-identity",
+        "scope": "经验测度、绝对值推前、能量积分及精确支撑条件。"
+      },
+      "4M0Y": {
+        "status": "definition-and-local-bound",
+        "scope": "实线有限 p 矩测度的耦合运输距离、点到集合距离和 W2 闭包；同下标经验耦合界，不证明一般运输对偶。"
+      },
+      "4M0Z": {
+        "status": "definition",
+        "scope": "全输入 Euclidean/Frobenius Lipschitz 条件、E norm^2=N、独立 Gaussian 种子和松弛域。"
+      },
+      "4M10": {
+        "status": "local-proof",
+        "scope": "连接两个实输入的线段及逐坐标介值定理，精确立方体值连续映射必常数。"
+      },
+      "4M11": {
+        "status": "local-proof",
+        "scope": "同一行配对加确定性算子范数界；绝对值版本及近域舍入；不声称随机矩阵范数定理。"
+      },
+      "4M12": {
+        "status": "conditional-local-proof",
+        "scope": "固定参考配置、确定性重叠间隙和 Hamming 小步长的不可穿越命题；不是 branching OGP 的证明。"
+      },
+      "4M13": {
+        "status": "local-construction-and-proof",
+        "scope": "简单过去可测过程的正交交叉项、Ito 等距与 L2 完备延拓；4M19/4M1D 完整证明矩形稠密及时间平均逼近；本页用截断、参数积分可测性和显式 2K delta/h 阶梯误差证明所有渐进可测平方可积过程属于闭包。只构造每个固定时刻的 L2 积分，不证明 Brownian 存在性、连续版本或研究算法定理。"
+      },
+      "4M14": {
+        "status": "definition",
+        "scope": "仅对称球面控制类：独立初始均匀种子、渐进性、非负波动和逐时刻预算，取绝对终点律的 W2 闭包。"
+      },
+      "4M15": {
+        "status": "cited-preprint-theorem",
+        "scope": "只陈述 Theorem 1.16 球面对称特例；可达 W2，排除 Wq with 1<=q<2；量词顺序及 Markov 控制查询前提保留。"
+      },
+      "4M16": {
+        "status": "local-proof",
+        "scope": "L2 三角不等式、Ito 等距、W2 二阶矩连续性给界；常数控制达到上下界。"
+      },
+      "4M17": {
+        "status": "local-counterexample",
+        "scope": "单个离群约束的经验测度 W2 趋零却始终不精确可行。"
+      },
+      "4M18": {
+        "status": "cited-research-theorem",
+        "scope": "大 k、指定区间及初值，离散概率质量的 l1 收敛、不动点、对称性和内部质量界；Appendix B 深证引用。"
+      },
+      "4M1A": {
+        "status": "local-proof",
+        "scope": "Gaussian 方向旋转不变与有理弧长逼近，得到相关正象限概率；端点单独算。"
+      },
+      "4M1B": {
+        "status": "cited-research-theorem",
+        "scope": "原始 spin 重叠的绝对值，嵌套概率、两个 n^-1/3 窗与 C n^-1/4 外部质量界；未展开几何研究证明。"
+      },
+      "4M1C": {
+        "status": "local-proof",
+        "scope": "二项分布众数给熵下界，F(0)=0,Fprime(0)=2alpha/pi>0 给原始矩比值指数下界；不是普遍算法障碍。"
+      },
+      "4M19": {
+        "status": "local-proof",
+        "scope": "有限时间区间上以矩形网格生成集合代数，用正负部定义有限测度并应用唯一性，再以 Hilbert 正交投影推出矩形函数稠密；时间截断及支配收敛推广到整条实线。"
+      },
+      "4M1D": {
+        "status": "local-proof",
+        "scope": "时间矩形的对称差估计、稠密性与平移等距性给乘积 L2 平移连续；Fubini-Tonelli 和 Schwarz 给过去时间平均的 L2 收敛。"
+      }
+    },
+    "claim_sources": {
+      "4M01": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§§1,2.1"
+        }
+      ],
+      "4M02": [
+        {
+          "source": "ssz-v3",
+          "locator": "Opening §2, Definition 2.1, printed p.9, before §2.1; extracted lines 494-518"
+        }
+      ],
+      "4M03": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.2, model distinction immediately following Theorem 2.2, HTML line 289"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "独立子句使用不同变量的 k 子集；SAT 与 NAE 单子句概率及一阶矩直接计算，不转移正则模型定理。"
+        }
+      ],
+      "4M04": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.1 threshold discussion; §2.2 high-probability convention, HTML line 200; §2.3 Theorem 2.3(1) for large-k random regular NAE-SAT; §3.3 sharp-threshold discussion"
+        }
+      ],
+      "4M05": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§1 and §3.1, equations (3.2)-(3.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有限配置集的违反数能量、Gibbs 权重及固定实例的零温极限；不交换温度和规模极限。"
+        }
+      ],
+      "4M06": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.2, equations (2.3)-(2.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "log t<=t-1 给 Jensen 上界；Markov 给典型指数率上界；硬约束 log0 与 ElogZ 单独处理。"
+        }
+      ],
+      "4M07": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.2, equation (2.4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "条件于任意配对后由逐边独立标签求精确一阶矩，再用 Markov；平行边不破坏计算。"
+        }
+      ],
+      "4M08": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.2, inequality immediately after (2.12), HTML lines 277-279"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "在几乎处处商 L2 中用 Schwarz 逐步证明 Paley-Zygmund，包括 theta=0。"
+        }
+      ],
+      "4M09": [
+        {
+          "source": "local-calculations",
+          "locator": "Explicit two-point distribution"
+        }
+      ],
+      "4M0A": [
+        {
+          "source": "nss-ii-v2",
+          "locator": "Definition 1.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "自旋编码、Hamming 距离与重叠恒等式；带符号与绝对重叠分开。"
+        }
+      ],
+      "4M0B": [
+        {
+          "source": "local-calculations",
+          "locator": "Finite path enumeration"
+        }
+      ],
+      "4M0C": [
+        {
+          "source": "ssz-v3",
+          "locator": "§1.4, BP recursions"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有限树的分支权重递推、叶子归纳和根配分函数；邻居记号在本页定义。"
+        }
+      ],
+      "4M0D": [
+        {
+          "source": "local-calculations",
+          "locator": "Finite-tree factorization underlying report (2.18)"
+        }
+      ],
+      "4M0E": [
+        {
+          "source": "local-calculations",
+          "locator": "Three-variable odd cycle"
+        }
+      ],
+      "4M0F": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.2, equations (2.7)-(2.11)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "两项精确计数比值；额外明确旧坐标独立均匀、子句变量不交时才导出 RS 局部因子。"
+        }
+      ],
+      "4M0G": [
+        {
+          "source": "nss-ii-v2",
+          "locator": "Introduction before Theorem 1.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "解簇按单坐标翻转连通；冻结坐标与局部可翻转区分；三点子集反例。"
+        }
+      ],
+      "4M0H": [
+        {
+          "source": "local-calculations",
+          "locator": "Finite total-covariance identity"
+        }
+      ],
+      "4M0I": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.4, equation (2.17)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "n>=1、非空有限解集，倾斜配分函数的两次导数；仅推出均值随 lambda 单调。"
+        }
+      ],
+      "4M0J": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.3, equations (2.15)-(2.16)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "最大项与项数的上下界；次指数层数、统一误差与负计数指数的作用。"
+        }
+      ],
+      "4M0K": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§2.5, planted-model discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "每个固定赋值具有同一正可满足概率时，有限 Bayes 计算植入实例的 Z 偏置。"
+        }
+      ],
+      "4M0L": [
+        {
+          "source": "ssz-v3",
+          "locator": "§1.6, equation (10)"
+        }
+      ],
+      "4M0M": [
+        {
+          "source": "ssz-v3",
+          "locator": "§1.6, equations (11)-(14)"
+        }
+      ],
+      "4M0N": [
+        {
+          "source": "ssz-v3",
+          "locator": "Theorem 1, Definition 1.3, Proposition 1.4; compare NSS II introduction"
+        },
+        {
+          "source": "nss-ii-v2",
+          "locator": "Introduction, lines 88-99, quoting regular-model threshold and free-energy theorems"
+        }
+      ],
+      "4M0O": [
+        {
+          "source": "nss-ii-v2",
+          "locator": "Theorem 1.1(a)"
+        }
+      ],
+      "4M0P": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§3.1, equation (3.1)"
+        }
+      ],
+      "4M0Q": [
+        {
+          "source": "local-calculations",
+          "locator": "Orthogonal invariance and finite covariance expansion"
+        }
+      ],
+      "4M0R": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§§3.2-3.3, first/second moment discussion"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "精确一阶矩和按 Hamming 距离分组的有序配置对二阶矩；一般 I 及零裕量的一阶矩上界。"
+        }
+      ],
+      "4M0S": [
+        {
+          "source": "ding-sun-v1",
+          "locator": "Argument following Theorem 1.4"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "有界非负 X 的条件二次多项式判别式；v=0 约定及 0<C<infinity 条件。"
+        }
+      ],
+      "4M0T": [
+        {
+          "source": "local-calculations",
+          "locator": "Finite double sum"
+        }
+      ],
+      "4M0U": [
+        {
+          "source": "ding-sun-v1",
+          "locator": "Equations (2)-(5), Proposition 1.3; Huang v2 Proposition 3.2"
+        },
+        {
+          "source": "huang-v2",
+          "locator": "Proposition 3.2, parameter rectangle and monotonicity"
+        }
+      ],
+      "4M0V": [
+        {
+          "source": "huang-v2",
+          "locator": "Equations (6)-(8), Condition 1.3, Theorem 1.2"
+        }
+      ],
+      "4M0W": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§3.2, convex/nonconvex spherical distinction"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "kappa>0 的球内到球面缩放；kappa=0 的确定性反例；不转移到负裕量。"
+        }
+      ],
+      "4M0X": [
+        {
+          "source": "hss-v1",
+          "locator": "Equations (1.1),(1.3),(1.5),(1.6)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "经验测度、绝对值推前、能量积分及精确支撑条件。"
+        }
+      ],
+      "4M0Y": [
+        {
+          "source": "hss-v1",
+          "locator": "Equations (1.21)-(1.22), Definition 1.12"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "实线有限 p 矩测度的耦合运输距离、点到集合距离和 W2 闭包；同下标经验耦合界，不证明一般运输对偶。"
+        }
+      ],
+      "4M0Z": [
+        {
+          "source": "hss-v1",
+          "locator": "Definitions 1.8,1.11,1.15"
+        }
+      ],
+      "4M10": [
+        {
+          "source": "local-calculations",
+          "locator": "Intermediate-value obstruction"
+        }
+      ],
+      "4M11": [
+        {
+          "source": "local-calculations",
+          "locator": "Deterministic same-index coupling estimate; HSS Remark 3.6 context"
+        }
+      ],
+      "4M12": [
+        {
+          "source": "sun-icm2026",
+          "locator": "§3.4, OGP discussion; local first-crossing proof"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "固定参考配置、确定性重叠间隙和 Hamming 小步长的不可穿越命题；不是 branching OGP 的证明。"
+        }
+      ],
+      "4M13": [
+        {
+          "source": "local-calculations",
+          "locator": "4M13 simple-process isometry, truncation and explicit left-step bound; 4M19 rectangle-density proof; 4M1D translation/time-average proof. Supports, but is not quoted from, HSS Definition 1.1."
+        }
+      ],
+      "4M14": [
+        {
+          "source": "hss-v1",
+          "locator": "Definition 1.1, spherical case"
+        }
+      ],
+      "4M15": [
+        {
+          "source": "hss-v1",
+          "locator": "Definitions 1.8,1.11,1.15; Theorem 1.16 and ensuing algorithm-cost paragraph, PDF pp.11-13"
+        }
+      ],
+      "4M16": [
+        {
+          "source": "local-calculations",
+          "locator": "Direct consequence of HSS Definition 1.1"
+        }
+      ],
+      "4M17": [
+        {
+          "source": "local-calculations",
+          "locator": "Two-atom measure computation"
+        }
+      ],
+      "4M18": [
+        {
+          "source": "ssz-v3",
+          "locator": "Proposition 1.2, PDF pp.6-7"
+        }
+      ],
+      "4M1A": [
+        {
+          "source": "local-calculations",
+          "locator": "Planar angular argument"
+        }
+      ],
+      "4M1B": [
+        {
+          "source": "nss-ii-v2",
+          "locator": "Definition 1.3 and Theorem 1.4"
+        }
+      ],
+      "4M1C": [
+        {
+          "source": "local-calculations",
+          "locator": "Exact pair moment plus elementary entropy bound"
+        }
+      ],
+      "4M19": [
+        {
+          "source": "local-calculations",
+          "locator": "有限时间区间上以矩形网格生成集合代数，用正负部定义有限测度并应用唯一性，再以 Hilbert 正交投影推出矩形函数稠密；时间截断及支配收敛推广到整条实线。"
+        }
+      ],
+      "4M1D": [
+        {
+          "source": "local-calculations",
+          "locator": "时间矩形的对称差估计、稠密性与平移等距性给乘积 L2 平移连续；Fubini-Tonelli 和 Schwarz 给过去时间平均的 L2 收敛。"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "随机图着色、最大独立集、独立子句 SAT/NAE 的精确阈值与局部算法只保留模型背景，未展开其研究定理。",
+      "正则 NAE-SAT 的自由树编码、插值上界、截断二阶矩、短环条件化和 2023 年勘误证明未重建；所引主结论保持大 k 和正则密度假设。",
+      "Ding-Sun 的筛选变量、具体一变量条件及条件矩计算，尖锐阈值提升，以及 Huang 全局二参数条件的数值验证未重建。",
+      "Shmalo 2026 预印本的计算机辅助验证仅作为截至日期的研究动态检查；没有独立复现或采纳其无条件容量结论。",
+      "一般非对称投影和 Ising 控制类、IAMP 的递推和状态演化、branching OGP 的完整下界均未展开；4M15 只引球面对称特例。",
+      "报告 Table 1 的十二种渐近算法阈值、Gardner 转变与更高层 RSB 结构没有逐项导入。"
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4M18",
+          "4M0M",
+          "4M0N"
+        ],
+        "source": "ssz-v3",
+        "scope": "Appendix B and full main proof, including corrected second-moment maximizer analysis in Appendices F-G; only listed statements/selected correction text read."
+      },
+      {
+        "notes": [
+          "4M0O",
+          "4M1B"
+        ],
+        "source": "nss-ii-v2",
+        "scope": "Variance decomposition, short-cycle conditioning and overlap geometry proof; statements and opening proof organization only."
+      },
+      {
+        "notes": [
+          "4M0U",
+          "4M0V"
+        ],
+        "source": "ding-sun-v1/huang-v2",
+        "scope": "Numerical fixed-point estimates and conditional capacity research proofs; no independent numerical verification."
+      },
+      {
+        "notes": [
+          "4M15"
+        ],
+        "source": "hss-v1",
+        "scope": "295-page paper full proof, limiting processes, budget constraint, IAMP, equivalence of controls, and Wq confinement are cited, not reconstructed."
+      }
+    ],
+    "metadata": {
+      "mathematical_body_fully_read": true,
+      "full_primary_proofs_read": false,
+      "atomic_count": 49,
+      "outline_count": 1,
+      "reference_count": 1,
+      "primary_report_version": "Published SIAM HTML, 2026-07-13",
+      "status": "author-complete-ready-for-independent-recheck",
+      "publication_status": "not integrated or published by this branch"
+    }
+  },
+  "notes": [
+    {
+      "id": "4M00",
+      "path": "trees/math/mathematical-physics/sun/4M00.tree",
+      "title": "随机组合问题：解的数量、簇结构与稳定算法",
+      "taxon": "Outline",
+      "sha256": "575a3ff63a148e4ad459f792ca2d1d96226a6e529eb09fee25c3b1e2a5c6721c"
+    },
+    {
+      "id": "4M01",
+      "path": "trees/math/mathematical-physics/sun/4M01.tree",
+      "title": "因子图把约束满足问题写成局部乘积",
+      "taxon": "Definition",
+      "sha256": "5adc9341af70f61cf3411989e3ee794a4681be113dc3eebcf103657eb372eb6f"
+    },
+    {
+      "id": "4M02",
+      "path": "trees/math/mathematical-physics/sun/4M02.tree",
+      "title": "随机正则 NAE-SAT 的半边配对模型",
+      "taxon": "Definition",
+      "sha256": "3917e801cde5e709019c80833376e1fdabf68bd4845a2dd010bd2be150f4193d"
+    },
+    {
+      "id": "4M03",
+      "path": "trees/math/mathematical-physics/sun/4M03.tree",
+      "title": "独立子句模型与正则布尔公式的区别",
+      "taxon": "Definition",
+      "sha256": "55b3450098b801159ee8b74adda7ee550ac39429654dbeb0de0b9928408c7fc7"
+    },
+    {
+      "id": "4M04",
+      "path": "trees/math/mathematical-physics/sun/4M04.tree",
+      "title": "可满足阈值中的概率量词",
+      "taxon": "Definition",
+      "sha256": "a9becb38a892071d07bf26a04620d7384eda2b76eee1e768f8ef043412cf0216"
+    },
+    {
+      "id": "4M05",
+      "path": "trees/math/mathematical-physics/sun/4M05.tree",
+      "title": "约束违反数的 Gibbs 权重与零温极限",
+      "taxon": "Construction",
+      "sha256": "78a456a2d382b9f36cfb92657775c8be0dc994ddfb63bf233903fba133212ab4"
+    },
+    {
+      "id": "4M06",
+      "path": "trees/math/mathematical-physics/sun/4M06.tree",
+      "title": "退火平均与淬火对数为何不同",
+      "taxon": "Theorem",
+      "sha256": "2ed17b8f6181ffe4f11a2777ae2b135296f30b386812456de55c94897e78513a"
+    },
+    {
+      "id": "4M07",
+      "path": "trees/math/mathematical-physics/sun/4M07.tree",
+      "title": "正则 NAE-SAT 的一阶矩不可满足界",
+      "taxon": "Theorem",
+      "sha256": "b7abfc109d3ac0e72fdf3d569bd6159a3b62ca94e9bbddf821f804d593b604dd"
+    },
+    {
+      "id": "4M08",
+      "path": "trees/math/mathematical-physics/sun/4M08.tree",
+      "title": "二阶矩给出非负变量的下尾概率界",
+      "taxon": "Theorem",
+      "sha256": "2b2507c1654209045ab664c051d10d40d441f478b60cc13e02df2d95100f71c9"
+    },
+    {
+      "id": "4M09",
+      "path": "trees/math/mathematical-physics/sun/4M09.tree",
+      "title": "有界二阶矩比值仍只保证正概率",
+      "taxon": "Example",
+      "sha256": "51f0d3197a3e92f1212003e5a3d4c84bfcaef2e3f6a3c1570b0f0470d67aad70"
+    },
+    {
+      "id": "4M0A",
+      "path": "trees/math/mathematical-physics/sun/4M0A.tree",
+      "title": "布尔赋值的自旋重叠与 Hamming 距离",
+      "taxon": "Definition",
+      "sha256": "ee5a4f935ff761a6d30ed3d6830ed194fb7cb727a731a56ef0a002decd6c2261"
+    },
+    {
+      "id": "4M0B",
+      "path": "trees/math/mathematical-physics/sun/4M0B.tree",
+      "title": "NAE 翻转对称性不保证远处变量独立",
+      "taxon": "Example",
+      "sha256": "29105ae881850237b3781e3746d2974e1d55007339ff0b0bc00379c1646456d8"
+    },
+    {
+      "id": "4M0C",
+      "path": "trees/math/mathematical-physics/sun/4M0C.tree",
+      "title": "树上信念传播是逐支求和",
+      "taxon": "Theorem",
+      "sha256": "950a130a3a816777dc8a071dbf702a68f99a9086f887545ce284e8083bd792af"
+    },
+    {
+      "id": "4M0D",
+      "path": "trees/math/mathematical-physics/sun/4M0D.tree",
+      "title": "树的配分函数等于顶点因子除以边因子",
+      "taxon": "Theorem",
+      "sha256": "bf49441a8148fc0025a101912ebd917d37b801673affca97ccf1ca26d653cb04"
+    },
+    {
+      "id": "4M0E",
+      "path": "trees/math/mathematical-physics/sun/4M0E.tree",
+      "title": "奇环上的 BP 不动点可以对应零个解",
+      "taxon": "Example",
+      "sha256": "745f2cf179000e6986ceb3486de06ade65d8fe7c8d658dbc55c4af3e123a98cf"
+    },
+    {
+      "id": "4M0F",
+      "path": "trees/math/mathematical-physics/sun/4M0F.tree",
+      "title": "添加约束的空腔比值是一个条件概率",
+      "taxon": "Theorem",
+      "sha256": "29c84c942b79cb0d6e51f72441eddb397fbdf7da2fd61867c43fe2148da59d9a"
+    },
+    {
+      "id": "4M0G",
+      "path": "trees/math/mathematical-physics/sun/4M0G.tree",
+      "title": "解簇是单坐标翻转图的连通分支",
+      "taxon": "Definition",
+      "sha256": "ca49bc1bf40a47abf4bf15121fc8666e566a8e7251d7243fd8da6464b9116de9"
+    },
+    {
+      "id": "4M0H",
+      "path": "trees/math/mathematical-physics/sun/4M0H.tree",
+      "title": "簇的混合能产生簇内没有的相关性",
+      "taxon": "Theorem",
+      "sha256": "bf4ed72c6ded0ee717d14f03fddc772714b9fdb61e94dbadfea64340215a1944"
+    },
+    {
+      "id": "4M0I",
+      "path": "trees/math/mathematical-physics/sun/4M0I.tree",
+      "title": "簇大小倾斜的对数导数记录熵与方差",
+      "taxon": "Theorem",
+      "sha256": "9a698ce9ab7900827dfc046fee9a7c60e0e3de473ec0c30e79e65b900a6eca75"
+    },
+    {
+      "id": "4M0J",
+      "path": "trees/math/mathematical-physics/sun/4M0J.tree",
+      "title": "次指数多个计数层的指数率取最大值",
+      "taxon": "Theorem",
+      "sha256": "73990a69c49362c7aa3a65cddae27cb4749e160b01bf93d376c399c5ad630a96"
+    },
+    {
+      "id": "4M0K",
+      "path": "trees/math/mathematical-physics/sun/4M0K.tree",
+      "title": "植入一个解使实例分布按解数偏置",
+      "taxon": "Theorem",
+      "sha256": "6f6499901aad0756112541f5439b517ba8090d9dcf3b9f9460d550630cace1e2"
+    },
+    {
+      "id": "4M0L",
+      "path": "trees/math/mathematical-physics/sun/4M0L.tree",
+      "title": "NAE-SAT 的倾斜消息分布递推",
+      "taxon": "Construction",
+      "sha256": "ac1d35f67fce590b226be56f73b9c5a4edd2c92acacb5a6897f3bbb567d59442"
+    },
+    {
+      "id": "4M0M",
+      "path": "trees/math/mathematical-physics/sun/4M0M.tree",
+      "title": "1RSB 泛函由三类倾斜局部因子组成",
+      "taxon": "Definition",
+      "sha256": "6f4f6c958baef9bdb5298149567ffe697f08928a6267358588c576c9f06080f2"
+    },
+    {
+      "id": "4M0N",
+      "path": "trees/math/mathematical-physics/sun/4M0N.tree",
+      "title": "大子句正则 NAE-SAT 的自由能与凝聚阈值",
+      "taxon": "Theorem",
+      "sha256": "af5755d92baca31c7a584104f85fc4f9efc26077b822f435f7e04317fe0d9333"
+    },
+    {
+      "id": "4M0O",
+      "path": "trees/math/mathematical-physics/sun/4M0O.tree",
+      "title": "凝聚区间的大簇携带几乎全部解质量",
+      "taxon": "Theorem",
+      "sha256": "bc227189f04f1172bb445bc3738cd229322eb307e5912ce18e794fba2da411b7"
+    },
+    {
+      "id": "4M0P",
+      "path": "trees/math/mathematical-physics/sun/4M0P.tree",
+      "title": "球面与 Ising 感知机的可行域",
+      "taxon": "Definition",
+      "sha256": "d0e525a4c09f3c1a6e2f93642fb63489ea0086a4117a8c236d6af67ec2fd8005"
+    },
+    {
+      "id": "4M0Q",
+      "path": "trees/math/mathematical-physics/sun/4M0Q.tree",
+      "title": "感知机的高斯场协方差等于配置重叠",
+      "taxon": "Theorem",
+      "sha256": "2d3ff59c1f17301b411cd8337a15612100f66b4ccd2cc26671751dc01d10a6ad"
+    },
+    {
+      "id": "4M0R",
+      "path": "trees/math/mathematical-physics/sun/4M0R.tree",
+      "title": "Ising 感知机的一二阶矩按重叠分组",
+      "taxon": "Theorem",
+      "sha256": "683efd6ea93262e73447e0bc957a633b10af469112abd50abe954e4f9f92ec5a"
+    },
+    {
+      "id": "4M0S",
+      "path": "trees/math/mathematical-physics/sun/4M0S.tree",
+      "title": "条件二阶矩如何保留环境信息",
+      "taxon": "Theorem",
+      "sha256": "b09ae7fe70a98341686bed7a9b1c750d7c94b620db0f22177df2f7e056a849c8"
+    },
+    {
+      "id": "4M0T",
+      "path": "trees/math/mathematical-physics/sun/4M0T.tree",
+      "title": "解集重心决定平均重叠",
+      "taxon": "Theorem",
+      "sha256": "60b043ff89f94b30a21b7d2c6db314e1e49ec5f52cbf4556099279f9cba9858f"
+    },
+    {
+      "id": "4M0U",
+      "path": "trees/math/mathematical-physics/sun/4M0U.tree",
+      "title": "零裕量 Ising 容量的 Krauth–Mézard 候选常数",
+      "taxon": "Definition",
+      "sha256": "49bc52db9c836fc3f1888009d641b3fd27b77c572a339f1974664ea45c535ba9"
+    },
+    {
+      "id": "4M0V",
+      "path": "trees/math/mathematical-physics/sun/4M0V.tree",
+      "title": "Ising 容量上界所需的全局二参数条件",
+      "taxon": "Theorem",
+      "sha256": "f21d9aa65b9c72707fc3c9934c0c0e8ac305f8aef78b084243328d5de4f0d8af"
+    },
+    {
+      "id": "4M0W",
+      "path": "trees/math/mathematical-physics/sun/4M0W.tree",
+      "title": "正裕量球面可行性化为球内凸可行性",
+      "taxon": "Theorem",
+      "sha256": "9fb6f9c6d61f21ad92a5eb8272ad9770bdad05c6d7b7b70c52d7fb6ac0b45006"
+    },
+    {
+      "id": "4M0X",
+      "path": "trees/math/mathematical-physics/sun/4M0X.tree",
+      "title": "投影经验分布统一表示感知机能量",
+      "taxon": "Definition",
+      "sha256": "ea6c0ede9b04904f545f2328bb7e42f582e773f5b3ddb893468365c001390c03"
+    },
+    {
+      "id": "4M0Y",
+      "path": "trees/math/mathematical-physics/sun/4M0Y.tree",
+      "title": "实直线上的 Wasserstein 运输距离",
+      "taxon": "Definition",
+      "sha256": "45ab2fba2e1b45bb67503d2543e7940504543fb32529b1cccbc5e7d9d62a240d"
+    },
+    {
+      "id": "4M0Z",
+      "path": "trees/math/mathematical-physics/sun/4M0Z.tree",
+      "title": "投影追踪的维数无关 Lipschitz 算法类",
+      "taxon": "Definition",
+      "sha256": "c59b593947b94da3c74fabab0ef20215d7fe0a3764c3e971b803d3dae84ebeb9"
+    },
+    {
+      "id": "4M10",
+      "path": "trees/math/mathematical-physics/sun/4M10.tree",
+      "title": "连续算法若始终输出布尔向量便只能为常数",
+      "taxon": "Theorem",
+      "sha256": "f898986ef4ee107b181ef01e18e882341fa610e7f01d5dabb5c7457410f87f1a"
+    },
+    {
+      "id": "4M11",
+      "path": "trees/math/mathematical-physics/sun/4M11.tree",
+      "title": "向量舍入误差控制投影经验分布的运输距离",
+      "taxon": "Theorem",
+      "sha256": "bdba77c1b8e6aa74732bc62535c0ce15273a9391e8f3f5252d42e3afb7a4db1b"
+    },
+    {
+      "id": "4M12",
+      "path": "trees/math/mathematical-physics/sun/4M12.tree",
+      "title": "重叠间隙阻止小步长路径穿越两个解区",
+      "taxon": "Theorem",
+      "sha256": "e18827d327441ec48113073d86c3da1f6fe35d5d5ae71f6c633c113468472cb5"
+    },
+    {
+      "id": "4M13",
+      "path": "trees/math/mathematical-physics/sun/4M13.tree",
+      "title": "布朗随机积分由平方均值等距延拓定义",
+      "taxon": "Construction",
+      "sha256": "14d79c4ba36cc9d9b62cd6fbf02857c54fd702d801d5cb00e3e98f9c11b3a40a"
+    },
+    {
+      "id": "4M14",
+      "path": "trees/math/mathematical-physics/sun/4M14.tree",
+      "title": "对称球面投影的控制预算与终点分布",
+      "taxon": "Definition",
+      "sha256": "667ed86df618320fc807fc5e8ee692b62e06b20fcf244920c624bc4f9de9b970"
+    },
+    {
+      "id": "4M15",
+      "path": "trees/math/mathematical-physics/sun/4M15.tree",
+      "title": "对称球面投影的 Lipschitz 可达分布定理",
+      "taxon": "Theorem",
+      "sha256": "b3581f5fa4f8ea18e7f881f4042c98df343b365f844bf84a4d37b665234528a3"
+    },
+    {
+      "id": "4M16",
+      "path": "trees/math/mathematical-physics/sun/4M16.tree",
+      "title": "球面控制预算给出终点二阶矩的范围",
+      "taxon": "Theorem",
+      "sha256": "acada21d629efb8a5e1da5d3f1a5f6f28f7e1ab38104068a104b0dee57173013"
+    },
+    {
+      "id": "4M17",
+      "path": "trees/math/mathematical-physics/sun/4M17.tree",
+      "title": "经验分布逼近可行支撑不保证所有约束满足",
+      "taxon": "Example",
+      "sha256": "cf37513f17343dc331b2166c2b46a84ae216047802d96409f7fbe7f2c9fa9920"
+    },
+    {
+      "id": "4M18",
+      "path": "trees/math/mathematical-physics/sun/4M18.tree",
+      "title": "大子句 NAE 消息递推选出收敛分布",
+      "taxon": "Theorem",
+      "sha256": "5bfefbce8dedca81beb928c7bc0319da74cf947634f928f79721f66dd87ecb5f"
+    },
+    {
+      "id": "4M19",
+      "path": "trees/math/mathematical-physics/sun/4M19.tree",
+      "title": "时间区间矩形函数在乘积 L² 中稠密",
+      "taxon": "Theorem",
+      "sha256": "bcc0a3d7e9d69580776f515a7ba02fa6c36af19fe1cea86c288900736f564ead"
+    },
+    {
+      "id": "4M1A",
+      "path": "trees/math/mathematical-physics/sun/4M1A.tree",
+      "title": "相关高斯对的正象限概率是一个角度",
+      "taxon": "Theorem",
+      "sha256": "f34d57d8e0e3e7c1c600dd46a3d0966e7f05fd57389e1f3b9115380068135856"
+    },
+    {
+      "id": "4M1B",
+      "path": "trees/math/mathematical-physics/sun/4M1B.tree",
+      "title": "凝聚 NAE-SAT 的绝对重叠集中于两处",
+      "taxon": "Theorem",
+      "sha256": "860913e5ff98157840bdc1e41bca18410dd7bf59cc935d2e6a73e4539147785e"
+    },
+    {
+      "id": "4M1C",
+      "path": "trees/math/mathematical-physics/sun/4M1C.tree",
+      "title": "零裕量 Ising 感知机的原始二阶矩比值指数增长",
+      "taxon": "Theorem",
+      "sha256": "6f5f5ca9734b4081bace29bbff6f3a31e4e9fdf0bbf6449e4565a88e2e875edb"
+    },
+    {
+      "id": "4M1D",
+      "path": "trees/math/mathematical-physics/sun/4M1D.tree",
+      "title": "过去时间平均在乘积 L² 中逼近原过程",
+      "taxon": "Theorem",
+      "sha256": "8575b2f118e155377b87809c306e497f31bd04ab14987fdbf8a79fe2d090029d"
+    },
+    {
+      "id": "icm2026-sun",
+      "path": "trees/references/icm2026-sun.tree",
+      "title": "Sun：Randomized Combinatorial Problems, in Sparse and Mean-Field Settings",
+      "taxon": "Reference",
+      "sha256": "6eaed193e927df92d1fc54906971f5d91dc191ac3b727036c1732a27572d0d72"
+    }
+  ],
+  "prerequisites": {
+    "4M01": [
+      "00LB"
+    ],
+    "4M02": [
+      "4M01",
+      "00L3"
+    ],
+    "4M03": [
+      "4M01",
+      "00L1",
+      "00L3"
+    ],
+    "4M04": [
+      "4M01",
+      "00L0"
+    ],
+    "4M05": [
+      "4M01"
+    ],
+    "4M06": [
+      "00L1",
+      "0A45",
+      "00L9",
+      "4M05",
+      "0A02"
+    ],
+    "4M07": [
+      "4M02",
+      "00L1",
+      "0A02",
+      "4M04"
+    ],
+    "4M08": [
+      "00L0",
+      "0A6A",
+      "004S"
+    ],
+    "4M09": [
+      "00L4",
+      "4M08",
+      "4M04"
+    ],
+    "4M0A": [
+      "00L0"
+    ],
+    "4M0B": [
+      "4M02",
+      "00L3"
+    ],
+    "4M0C": [
+      "4M01",
+      "0A03"
+    ],
+    "4M0D": [
+      "4M0C"
+    ],
+    "4M0E": [
+      "4M0C",
+      "4M0D"
+    ],
+    "4M0F": [
+      "4M01"
+    ],
+    "4M0G": [
+      "4M0A",
+      "00LC"
+    ],
+    "4M0H": [
+      "4M0G",
+      "00L1"
+    ],
+    "4M0I": [
+      "4M0G",
+      "0A45",
+      "00L2"
+    ],
+    "4M0J": [
+      "0A45",
+      "4M0G",
+      "0A02"
+    ],
+    "4M0K": [
+      "0A00",
+      "00L1"
+    ],
+    "4M0L": [
+      "4M0C",
+      "00L0",
+      "00L3"
+    ],
+    "4M0M": [
+      "4M18",
+      "4M0D",
+      "4M0I"
+    ],
+    "4M0N": [
+      "4M02",
+      "00L9",
+      "4M0M",
+      "4M0J"
+    ],
+    "4M0O": [
+      "4M0N",
+      "4M02",
+      "4M0G"
+    ],
+    "4M0P": [
+      "00L3",
+      "0N0R",
+      "00QD"
+    ],
+    "4M0Q": [
+      "00L3",
+      "0N0R",
+      "4M0A",
+      "004P",
+      "01Q1",
+      "0N12"
+    ],
+    "4M0R": [
+      "4M0P",
+      "4M0Q",
+      "0A02"
+    ],
+    "4M0S": [
+      "4J0Q"
+    ],
+    "4M0T": [
+      "4M0A",
+      "4M0P"
+    ],
+    "4M0U": [
+      "0N0R",
+      "4M0P"
+    ],
+    "4M0V": [
+      "4M0U",
+      "004S",
+      "4M0P"
+    ],
+    "4M0W": [
+      "4M0P",
+      "00TK"
+    ],
+    "4M0X": [
+      "00L0",
+      "4M0P"
+    ],
+    "4M0Y": [
+      "0F63"
+    ],
+    "4M0Z": [
+      "00FU",
+      "4M0X",
+      "4M0Y"
+    ],
+    "4M10": [
+      "4M0Z",
+      "0A44"
+    ],
+    "4M11": [
+      "4M0X",
+      "0F63",
+      "4M0Y",
+      "4M0Z"
+    ],
+    "4M12": [
+      "4M0A"
+    ],
+    "4M13": [
+      "0N0S",
+      "00QB",
+      "00QD",
+      "4J0Q",
+      "0A6A",
+      "0A67",
+      "0I8I",
+      "4M1D",
+      "0H53",
+      "0A69"
+    ],
+    "4M14": [
+      "4M13",
+      "4M0Y"
+    ],
+    "4M15": [
+      "4M0Z",
+      "4M0X",
+      "4M14"
+    ],
+    "4M16": [
+      "4M14",
+      "0A69",
+      "4M13"
+    ],
+    "4M17": [
+      "4M0Y",
+      "4M0X"
+    ],
+    "4M18": [
+      "4M0L"
+    ],
+    "4M1A": [
+      "4M0Q"
+    ],
+    "4M1B": [
+      "4M0N",
+      "4M02",
+      "4M0A"
+    ],
+    "4M1C": [
+      "4M0R",
+      "4M1A"
+    ],
+    "4M19": [
+      "00XV",
+      "00QB",
+      "0A6A",
+      "004S",
+      "0A87",
+      "00MS",
+      "0I8I"
+    ],
+    "4M1D": [
+      "00XV",
+      "0A69",
+      "4M19",
+      "0H53",
+      "004S"
+    ]
+  },
+  "atomic_questions": {
+    "4M01": "因子图把约束满足问题写成局部乘积：其精确定义、假设或所述结论为何成立？",
+    "4M02": "随机正则 NAE-SAT 的半边配对模型：其精确定义、假设或所述结论为何成立？",
+    "4M03": "独立子句模型与正则布尔公式的区别：其精确定义、假设或所述结论为何成立？",
+    "4M04": "可满足阈值中的概率量词：其精确定义、假设或所述结论为何成立？",
+    "4M05": "约束违反数的 Gibbs 权重与零温极限：其精确定义、假设或所述结论为何成立？",
+    "4M06": "退火平均与淬火对数为何不同：其精确定义、假设或所述结论为何成立？",
+    "4M07": "正则 NAE-SAT 的一阶矩不可满足界：其精确定义、假设或所述结论为何成立？",
+    "4M08": "二阶矩给出非负变量的下尾概率界：其精确定义、假设或所述结论为何成立？",
+    "4M09": "有界二阶矩比值仍只保证正概率：其精确定义、假设或所述结论为何成立？",
+    "4M0A": "布尔赋值的自旋重叠与 Hamming 距离：其精确定义、假设或所述结论为何成立？",
+    "4M0B": "NAE 翻转对称性不保证远处变量独立：其精确定义、假设或所述结论为何成立？",
+    "4M0C": "树上信念传播是逐支求和：其精确定义、假设或所述结论为何成立？",
+    "4M0D": "树的配分函数等于顶点因子除以边因子：其精确定义、假设或所述结论为何成立？",
+    "4M0E": "奇环上的 BP 不动点可以对应零个解：其精确定义、假设或所述结论为何成立？",
+    "4M0F": "添加约束的空腔比值是一个条件概率：其精确定义、假设或所述结论为何成立？",
+    "4M0G": "解簇是单坐标翻转图的连通分支：其精确定义、假设或所述结论为何成立？",
+    "4M0H": "簇的混合能产生簇内没有的相关性：其精确定义、假设或所述结论为何成立？",
+    "4M0I": "簇大小倾斜的对数导数记录熵与方差：其精确定义、假设或所述结论为何成立？",
+    "4M0J": "次指数多个计数层的指数率取最大值：其精确定义、假设或所述结论为何成立？",
+    "4M0K": "植入一个解使实例分布按解数偏置：其精确定义、假设或所述结论为何成立？",
+    "4M0L": "NAE-SAT 的倾斜消息分布递推：其精确定义、假设或所述结论为何成立？",
+    "4M0M": "1RSB 泛函由三类倾斜局部因子组成：其精确定义、假设或所述结论为何成立？",
+    "4M0N": "大子句正则 NAE-SAT 的自由能与凝聚阈值：其精确定义、假设或所述结论为何成立？",
+    "4M0O": "凝聚区间的大簇携带几乎全部解质量：其精确定义、假设或所述结论为何成立？",
+    "4M0P": "球面与 Ising 感知机的可行域：其精确定义、假设或所述结论为何成立？",
+    "4M0Q": "感知机的高斯场协方差等于配置重叠：其精确定义、假设或所述结论为何成立？",
+    "4M0R": "Ising 感知机的一二阶矩按重叠分组：其精确定义、假设或所述结论为何成立？",
+    "4M0S": "条件二阶矩如何保留环境信息：其精确定义、假设或所述结论为何成立？",
+    "4M0T": "解集重心决定平均重叠：其精确定义、假设或所述结论为何成立？",
+    "4M0U": "零裕量 Ising 容量的 Krauth–Mézard 候选常数：其精确定义、假设或所述结论为何成立？",
+    "4M0V": "Ising 容量上界所需的全局二参数条件：其精确定义、假设或所述结论为何成立？",
+    "4M0W": "正裕量球面可行性化为球内凸可行性：其精确定义、假设或所述结论为何成立？",
+    "4M0X": "投影经验分布统一表示感知机能量：其精确定义、假设或所述结论为何成立？",
+    "4M0Y": "实直线上的 Wasserstein 运输距离：其精确定义、假设或所述结论为何成立？",
+    "4M0Z": "投影追踪的维数无关 Lipschitz 算法类：其精确定义、假设或所述结论为何成立？",
+    "4M10": "连续算法若始终输出布尔向量便只能为常数：其精确定义、假设或所述结论为何成立？",
+    "4M11": "向量舍入误差控制投影经验分布的运输距离：其精确定义、假设或所述结论为何成立？",
+    "4M12": "重叠间隙阻止小步长路径穿越两个解区：其精确定义、假设或所述结论为何成立？",
+    "4M13": "为何每个渐进可测平方可积过程都能由简单过去可测过程逼近，并据此定义等距的随机积分？",
+    "4M14": "对称球面投影的控制预算与终点分布：其精确定义、假设或所述结论为何成立？",
+    "4M15": "对称球面投影的 Lipschitz 可达分布定理：其精确定义、假设或所述结论为何成立？",
+    "4M16": "球面控制预算给出终点二阶矩的范围：其精确定义、假设或所述结论为何成立？",
+    "4M17": "经验分布逼近可行支撑不保证所有约束满足：其精确定义、假设或所述结论为何成立？",
+    "4M18": "大子句 NAE 消息递推选出收敛分布：其精确定义、假设或所述结论为何成立？",
+    "4M1A": "相关高斯对的正象限概率是一个角度：其精确定义、假设或所述结论为何成立？",
+    "4M1B": "凝聚 NAE-SAT 的绝对重叠集中于两处：其精确定义、假设或所述结论为何成立？",
+    "4M1C": "零裕量 Ising 感知机的原始二阶矩比值指数增长：其精确定义、假设或所述结论为何成立？",
+    "4M19": "为何时间区间与概率事件的矩形指标函数足以在乘积 L2 中逼近任意函数？",
+    "4M1D": "为何过去时间平均在乘积 L2 中趋于原函数？"
+  },
+  "entries": [
+    [
+      "4M01",
+      [
+        "00LB"
+      ],
+      "有限字母表、二部多重因子图与局部指标乘积；图着色和独立集作为实例。"
+    ],
+    [
+      "4M02",
+      [
+        "4M01",
+        "00L3"
+      ],
+      "半边均匀配对、允许平行关联边、逐边独立文字标签和 nd=mk 的整除条件。"
+    ],
+    [
+      "4M03",
+      [
+        "4M01",
+        "00L1",
+        "00L3"
+      ],
+      "独立子句使用不同变量的 k 子集；SAT 与 NAE 单子句概率及一阶矩直接计算，不转移正则模型定理。"
+    ],
+    [
+      "4M04",
+      [
+        "4M01",
+        "00L0"
+      ],
+      "固定密度的阈值、规模依赖的尖锐阈值序列、正概率和高概率，以及搜索任务的不同量词。"
+    ],
+    [
+      "4M05",
+      [
+        "4M01"
+      ],
+      "有限配置集的违反数能量、Gibbs 权重及固定实例的零温极限；不交换温度和规模极限。"
+    ],
+    [
+      "4M06",
+      [
+        "00L1",
+        "0A45",
+        "00L9",
+        "4M05",
+        "0A02"
+      ],
+      "log t<=t-1 给 Jensen 上界；Markov 给典型指数率上界；硬约束 log0 与 ElogZ 单独处理。"
+    ],
+    [
+      "4M07",
+      [
+        "4M02",
+        "00L1",
+        "0A02",
+        "4M04"
+      ],
+      "条件于任意配对后由逐边独立标签求精确一阶矩，再用 Markov；平行边不破坏计算。"
+    ],
+    [
+      "4M08",
+      [
+        "00L0",
+        "0A6A",
+        "004S"
+      ],
+      "在几乎处处商 L2 中用 Schwarz 逐步证明 Paley-Zygmund，包括 theta=0。"
+    ],
+    [
+      "4M09",
+      [
+        "00L4",
+        "4M08",
+        "4M04"
+      ],
+      "2^n 倍公平 Bernoulli 的矩比值恒为二，非零概率恒为二分之一。"
+    ],
+    [
+      "4M0A",
+      [
+        "00L0"
+      ],
+      "自旋编码、Hamming 距离与重叠恒等式；带符号与绝对重叠分开。"
+    ],
+    [
+      "4M0B",
+      [
+        "4M02",
+        "00L3"
+      ],
+      "2-NAE 路径只有两个交替解；均匀单点分布不推出独立。"
+    ],
+    [
+      "4M0C",
+      [
+        "4M01",
+        "0A03"
+      ],
+      "有限树的分支权重递推、叶子归纳和根配分函数；邻居记号在本页定义。"
+    ],
+    [
+      "4M0D",
+      [
+        "4M0C"
+      ],
+      "Z>0 的有限树中未归一化局部因子均为 Z；叶子删去计数与消息缩放抵消。"
+    ],
+    [
+      "4M0E",
+      [
+        "4M0C",
+        "4M0D"
+      ],
+      "三角不等约束无解，均匀 BP 不动点却给 Bethe 乘除式为一。"
+    ],
+    [
+      "4M0F",
+      [
+        "4M01"
+      ],
+      "两项精确计数比值；额外明确旧坐标独立均匀、子句变量不交时才导出 RS 局部因子。"
+    ],
+    [
+      "4M0G",
+      [
+        "4M0A",
+        "00LC"
+      ],
+      "解簇按单坐标翻转连通；冻结坐标与局部可翻转区分；三点子集反例。"
+    ],
+    [
+      "4M0H",
+      [
+        "4M0G",
+        "00L1"
+      ],
+      "有限混合的协方差展开及两单点簇例子。"
+    ],
+    [
+      "4M0I",
+      [
+        "4M0G",
+        "0A45",
+        "00L2"
+      ],
+      "n>=1、非空有限解集，倾斜配分函数的两次导数；仅推出均值随 lambda 单调。"
+    ],
+    [
+      "4M0J",
+      [
+        "0A45",
+        "4M0G",
+        "0A02"
+      ],
+      "最大项与项数的上下界；次指数层数、统一误差与负计数指数的作用。"
+    ],
+    [
+      "4M0K",
+      [
+        "0A00",
+        "00L1"
+      ],
+      "每个固定赋值具有同一正可满足概率时，有限 Bayes 计算植入实例的 Z 偏置。"
+    ],
+    [
+      "4M0L",
+      [
+        "4M0C",
+        "00L0",
+        "00L3"
+      ],
+      "两个倾斜消息算子的输入、输出、权重、归一化及 lambda=0 的排零约定；收敛另见 4M18。"
+    ],
+    [
+      "4M0M",
+      [
+        "4M18",
+        "4M0D",
+        "4M0I"
+      ],
+      "三类 z 因子、A 和 ell、F、s_lambda 与 Sigma；适定性沿所引论文，未误用对参数依赖分布的形式求导。"
+    ],
+    [
+      "4M0N",
+      [
+        "4M02",
+        "00L9",
+        "4M0M",
+        "4M0J"
+      ],
+      "大 k、正则密度、严格可满足区间的对数自由能与凝聚阈值；不展开深层证明，不插值密度格点。"
+    ],
+    [
+      "4M0O",
+      [
+        "4M0N",
+        "4M02",
+        "4M0G"
+      ],
+      "只引用 Theorem 1.1(a) 的 epsilon/K 大簇质量保证；不声称全部簇数有限，不导入(b)的簇尺寸细项。"
+    ],
+    [
+      "4M0P",
+      [
+        "00L3",
+        "0N0R",
+        "00QD"
+      ],
+      "高斯矩阵、N^-1/2 投影、球面与立方体、半空间与对称区间分别定义。"
+    ],
+    [
+      "4M0Q",
+      [
+        "00L3",
+        "0N0R",
+        "4M0A",
+        "004P",
+        "01Q1",
+        "0N12"
+      ],
+      "明确补成正交基、行列式绝对值一与线性换元；联合高斯表示及端点。"
+    ],
+    [
+      "4M0R",
+      [
+        "4M0P",
+        "4M0Q",
+        "0A02"
+      ],
+      "精确一阶矩和按 Hamming 距离分组的有序配置对二阶矩；一般 I 及零裕量的一阶矩上界。"
+    ],
+    [
+      "4M0S",
+      [
+        "4J0Q"
+      ],
+      "有界非负 X 的条件二次多项式判别式；v=0 约定及 0<C<infinity 条件。"
+    ],
+    [
+      "4M0T",
+      [
+        "4M0A",
+        "4M0P"
+      ],
+      "固定非空有限自旋解集，独立均匀抽样后平均重叠等于重心范数平方/N。"
+    ],
+    [
+      "4M0U",
+      [
+        "0N0R",
+        "4M0P"
+      ],
+      "固定点和势函数定义候选常数；参数矩形、唯一性与下降性引用 DS Proposition 1.3/Huang Proposition 3.2，未复现数值认证。"
+    ],
+    [
+      "4M0V",
+      [
+        "4M0U",
+        "004S",
+        "4M0P"
+      ],
+      "完整写出 S_*(u,v)<=0 的全局假设与 Gaussian Ising 零裕量容量上界；分母正性直接证明；下界不同条件未混同。"
+    ],
+    [
+      "4M0W",
+      [
+        "4M0P",
+        "00TK"
+      ],
+      "kappa>0 的球内到球面缩放；kappa=0 的确定性反例；不转移到负裕量。"
+    ],
+    [
+      "4M0X",
+      [
+        "00L0",
+        "4M0P"
+      ],
+      "经验测度、绝对值推前、能量积分及精确支撑条件。"
+    ],
+    [
+      "4M0Y",
+      [
+        "0F63"
+      ],
+      "实线有限 p 矩测度的耦合运输距离、点到集合距离和 W2 闭包；同下标经验耦合界，不证明一般运输对偶。"
+    ],
+    [
+      "4M0Z",
+      [
+        "00FU",
+        "4M0X",
+        "4M0Y"
+      ],
+      "全输入 Euclidean/Frobenius Lipschitz 条件、E norm^2=N、独立 Gaussian 种子和松弛域。"
+    ],
+    [
+      "4M10",
+      [
+        "4M0Z",
+        "0A44"
+      ],
+      "连接两个实输入的线段及逐坐标介值定理，精确立方体值连续映射必常数。"
+    ],
+    [
+      "4M11",
+      [
+        "4M0X",
+        "0F63",
+        "4M0Y",
+        "4M0Z"
+      ],
+      "同一行配对加确定性算子范数界；绝对值版本及近域舍入；不声称随机矩阵范数定理。"
+    ],
+    [
+      "4M12",
+      [
+        "4M0A"
+      ],
+      "固定参考配置、确定性重叠间隙和 Hamming 小步长的不可穿越命题；不是 branching OGP 的证明。"
+    ],
+    [
+      "4M13",
+      [
+        "0N0S",
+        "00QB",
+        "00QD",
+        "4J0Q",
+        "0A6A",
+        "0A67",
+        "0I8I",
+        "4M1D",
+        "0H53",
+        "0A69"
+      ],
+      "简单过去可测过程的正交交叉项、Ito 等距与 L2 完备延拓；4M19/4M1D 完整证明矩形稠密及时间平均逼近；本页用截断、参数积分可测性和显式 2K delta/h 阶梯误差证明所有渐进可测平方可积过程属于闭包。只构造每个固定时刻的 L2 积分，不证明 Brownian 存在性、连续版本或研究算法定理。"
+    ],
+    [
+      "4M14",
+      [
+        "4M13",
+        "4M0Y"
+      ],
+      "仅对称球面控制类：独立初始均匀种子、渐进性、非负波动和逐时刻预算，取绝对终点律的 W2 闭包。"
+    ],
+    [
+      "4M15",
+      [
+        "4M0Z",
+        "4M0X",
+        "4M14"
+      ],
+      "只陈述 Theorem 1.16 球面对称特例；可达 W2，排除 Wq with 1<=q<2；量词顺序及 Markov 控制查询前提保留。"
+    ],
+    [
+      "4M16",
+      [
+        "4M14",
+        "0A69",
+        "4M13"
+      ],
+      "L2 三角不等式、Ito 等距、W2 二阶矩连续性给界；常数控制达到上下界。"
+    ],
+    [
+      "4M17",
+      [
+        "4M0Y",
+        "4M0X"
+      ],
+      "单个离群约束的经验测度 W2 趋零却始终不精确可行。"
+    ],
+    [
+      "4M18",
+      [
+        "4M0L"
+      ],
+      "大 k、指定区间及初值，离散概率质量的 l1 收敛、不动点、对称性和内部质量界；Appendix B 深证引用。"
+    ],
+    [
+      "4M19",
+      [
+        "00XV",
+        "00QB",
+        "0A6A",
+        "004S",
+        "0A87",
+        "00MS",
+        "0I8I"
+      ],
+      "有限时间区间上以矩形网格生成集合代数，用正负部定义有限测度并应用唯一性，再以 Hilbert 正交投影推出矩形函数稠密；时间截断及支配收敛推广到整条实线。"
+    ],
+    [
+      "4M1A",
+      [
+        "4M0Q"
+      ],
+      "Gaussian 方向旋转不变与有理弧长逼近，得到相关正象限概率；端点单独算。"
+    ],
+    [
+      "4M1B",
+      [
+        "4M0N",
+        "4M02",
+        "4M0A"
+      ],
+      "原始 spin 重叠的绝对值，嵌套概率、两个 n^-1/3 窗与 C n^-1/4 外部质量界；未展开几何研究证明。"
+    ],
+    [
+      "4M1C",
+      [
+        "4M0R",
+        "4M1A"
+      ],
+      "二项分布众数给熵下界，F(0)=0,Fprime(0)=2alpha/pi>0 给原始矩比值指数下界；不是普遍算法障碍。"
+    ],
+    [
+      "4M1D",
+      [
+        "00XV",
+        "0A69",
+        "4M19",
+        "0H53",
+        "004S"
+      ],
+      "时间矩形的对称差估计、稠密性与平移等距性给乘积 L2 平移连续；Fubini-Tonelli 和 Schwarz 给过去时间平均的 L2 收敛。"
+    ]
+  ],
+  "reused_pages": [
+    "004P",
+    "004S",
+    "00FU",
+    "00L0",
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L4",
+    "00L9",
+    "00LB",
+    "00LC",
+    "00LD",
+    "00MS",
+    "00QB",
+    "00QD",
+    "00TK",
+    "00XV",
+    "01Q1",
+    "0A00",
+    "0A02",
+    "0A03",
+    "0A44",
+    "0A45",
+    "0A67",
+    "0A69",
+    "0A6A",
+    "0A87",
+    "0F63",
+    "0H53",
+    "0I8I",
+    "0N0R",
+    "0N0S",
+    "0N12",
+    "310S",
+    "4J0Q"
+  ],
+  "reused_page_records": [
+    {
+      "id": "004P",
+      "path": "trees/math/analysis/004P.tree",
+      "title": "内积空间中的正交与标准正交集",
+      "taxon": "Definition",
+      "sha256": "8c604510dca9a827c0f692eb717b189367cd6a4839a8d459c74ce947fcb057ba",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "title": "Schwarz 不等式",
+      "taxon": "Corollary",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00FU",
+      "path": "trees/math/topology/atomic/00FU.tree",
+      "title": "Lipschitz 映射",
+      "taxon": "Definition",
+      "sha256": "af827855f17c52ea219b1d83ec0ef06d4104f6c13032192943e21a950f3848ef",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "title": "实随机变量与分布",
+      "taxon": "Definition",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "title": "随机变量的期望",
+      "taxon": "Definition",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00L2",
+      "path": "trees/math/network/atomic/00L2.tree",
+      "title": "方差",
+      "taxon": "Definition",
+      "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "title": "事件与随机变量的独立性",
+      "taxon": "Definition",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00L4",
+      "path": "trees/math/network/atomic/00L4.tree",
+      "title": "Bernoulli 分布",
+      "taxon": "Definition",
+      "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00L9",
+      "path": "trees/math/network/atomic/00L9.tree",
+      "title": "依概率收敛与随机阶",
+      "taxon": "Definition",
+      "sha256": "64b62cd8e4dfe86989f410ecc38b6729f80a9e6f1a1f3f7e53a6dff365416456",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00LB",
+      "path": "trees/math/network/atomic/00LB.tree",
+      "title": "有限简单无向图",
+      "taxon": "Definition",
+      "sha256": "6096935638db64c694caeb47a215bcd82345ee6ee6c1516f9c984554d15a22b9",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00LC",
+      "path": "trees/math/network/atomic/00LC.tree",
+      "title": "图的道路、距离与连通分支",
+      "taxon": "Definition",
+      "sha256": "10a445d88348a7efe9115bb909555039c5a5192db1b1e0985824d336f8fcd233",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00LD",
+      "path": "trees/math/network/atomic/00LD.tree",
+      "title": "Erdős–Rényi–Gilbert 随机图 G(n,p)",
+      "taxon": "Definition",
+      "sha256": "82e00e376f218218f25fc70ae4f8b35ba45c82ddbf67087ab8de7c80c274170a",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Random-graph model comparison; not a prerequisite for regular NAE counting."
+    },
+    {
+      "id": "00MS",
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "title": "Hilbert 空间的正交投影定理",
+      "taxon": "Theorem",
+      "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260",
+      "reading_scope": "Entire linked body read during SUN-F10 repair, 2026-10-24; canonical theorem/definition reused without editing.",
+      "role": "Actual measure-theoretic or Hilbert-space prerequisite in the rectangle-density, time-average or Ito approximation proof."
+    },
+    {
+      "id": "00QB",
+      "path": "trees/math/logic/research/atomic/00QB.tree",
+      "title": "乘积测度",
+      "taxon": "Definition",
+      "sha256": "6861ea2adaa4342f9317db0e49967521cdf4e2b0173d77fe263b2e0c5d18fbd5",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree",
+      "title": "Borel σ-代数",
+      "taxon": "Definition",
+      "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00TK",
+      "path": "trees/math/logic/research/atomic/00TK.tree",
+      "title": "凸集与凸包",
+      "taxon": "Definition",
+      "sha256": "ac0917f64f900fff469605310fd29232120d184ee585f3c590a356205c8e497e",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "title": "欧氏空间的 Lebesgue 测度",
+      "taxon": "Definition",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1",
+      "reading_scope": "Entire linked body read during SUN-F10 repair, 2026-10-24; canonical theorem/definition reused without editing.",
+      "role": "Actual measure-theoretic or Hilbert-space prerequisite in the rectangle-density, time-average or Ito approximation proof."
+    },
+    {
+      "id": "01Q1",
+      "path": "trees/math/algebra/research/01Q1.tree",
+      "title": "交换环上的一般线性群与特殊线性群",
+      "taxon": "Definition",
+      "sha256": "0c38c5a92dbbefbfef0fe380e5a0189a7d45ab23a3fb8e1687396521f2536700",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A00",
+      "path": "trees/math/network/atomic/0A00.tree",
+      "title": "事件的条件概率",
+      "taxon": "Definition",
+      "sha256": "c326c3c96b57793471b8a4b80defd4108f6a9f17e36a4a670c6356528db92759",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A02",
+      "path": "trees/math/network/atomic/0A02.tree",
+      "title": "Markov 不等式",
+      "taxon": "Theorem",
+      "sha256": "e623166be9f5fff1c79d8ce9f22c533cedae843a50d5c5740f376e499265595a",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A03",
+      "path": "trees/math/network/atomic/0A03.tree",
+      "title": "有限或可数的有根树",
+      "taxon": "Definition",
+      "sha256": "950632931f74a4223798f1ab1a44f1129461daf0e617a3e994684fcee3e51308",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A44",
+      "path": "trees/math/analysis/atomic/0A44.tree",
+      "title": "连续实函数的介值定理",
+      "taxon": "Theorem",
+      "sha256": "aba935ec9003feb06ed056b12122d5ae3ea2b361e521ae9dc1bfb19258709834",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "title": "由积分定义的自然对数",
+      "taxon": "Definition",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A67",
+      "path": "trees/math/logic/research/atomic/0A67.tree",
+      "title": "Lp 空间的完备性",
+      "taxon": "Theorem",
+      "sha256": "3fb56ed8c3db28423a557191cb0712bb314f41fb7da89a7492778412b7719cfe",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A69",
+      "path": "trees/math/logic/research/atomic/0A69.tree",
+      "title": "积分形式的 Minkowski 不等式",
+      "taxon": "Theorem",
+      "sha256": "01cce7dd029c2a04d84f8ec8f0186dece9898e33f3de04fd1ae864ee78ef7855",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A6A",
+      "path": "trees/math/logic/research/atomic/0A6A.tree",
+      "title": "L² 空间的 Hilbert 结构",
+      "taxon": "Theorem",
+      "sha256": "c4c9673cbf76ee86cc9396e886bb800f1decfefc4c943140a5f4e0b4c05f9aa1",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0A87",
+      "path": "trees/math/logic/research/atomic/0A87.tree",
+      "title": "有限测度由生成集合代数唯一确定",
+      "taxon": "Theorem",
+      "sha256": "e56575ccc4e7c52a7ebd5899e9d47158ca661357cf77e304a8658bf851f7bf5b",
+      "reading_scope": "Entire linked body read during SUN-F10 repair, 2026-10-24; canonical theorem/definition reused without editing.",
+      "role": "Actual measure-theoretic or Hilbert-space prerequisite in the rectangle-density, time-average or Ito approximation proof."
+    },
+    {
+      "id": "0F63",
+      "path": "trees/math/network/atomic/0F63.tree",
+      "title": "随机对象分布的耦合",
+      "taxon": "Definition",
+      "sha256": "223582dcf9ad25175e42fbd8d0a6cc31edc13d5cbcb7c9e506e98fc92d965fe0",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "title": "Fubini–Tonelli 积分定理",
+      "taxon": "Theorem",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b",
+      "reading_scope": "Entire linked body read during SUN-F10 repair, 2026-10-24; canonical theorem/definition reused without editing.",
+      "role": "Actual measure-theoretic or Hilbert-space prerequisite in the rectangle-density, time-average or Ito approximation proof."
+    },
+    {
+      "id": "0I8I",
+      "path": "trees/math/number-theory/reports/0I8I.tree",
+      "title": "支配收敛定理",
+      "taxon": "Theorem",
+      "sha256": "9797c9f25f9dc8650f08f81b9dadac651aa6137dd1c241bac3e341dcbcca42ca",
+      "reading_scope": "Entire linked body read during SUN-F10 repair, 2026-10-24; canonical theorem/definition reused without editing.",
+      "role": "Actual measure-theoretic or Hilbert-space prerequisite in the rectangle-density, time-average or Ito approximation proof."
+    },
+    {
+      "id": "0N0R",
+      "path": "trees/math/geometry/bourbaki/0N0R.tree",
+      "title": "标准正态分布与高斯尾函数",
+      "taxon": "Definition",
+      "sha256": "afc97ce9792ec340ab6f24c01766f7927c95aa5cff958bad4f146502779894db",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0N0S",
+      "path": "trees/math/geometry/bourbaki/0N0S.tree",
+      "title": "欧氏空间中的标准布朗运动",
+      "taxon": "Definition",
+      "sha256": "d8dbcbc414b2900d0d1fd05c03ca5b2c2211fe12df7f6547fb31544e4609b07e",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "0N12",
+      "path": "trees/math/geometry/bourbaki/0N12.tree",
+      "title": "可逆线性变换的体积因子",
+      "taxon": "Theorem",
+      "sha256": "656a80bd8e186adc0c49d46b4b8b55bb4fce9f31c897d890964092bb75a33140",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    },
+    {
+      "id": "310S",
+      "path": "trees/math/dynamics/berger/310S.tree",
+      "title": "概率测度的 Kantorovich–Wasserstein 距离",
+      "taxon": "Definition",
+      "sha256": "418fd32b1a17c69a12ed632a4e385e03fbe6faf71dfc77ccb357c1861ed512d0",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Comparison only: compact W1 dual definition is not the noncompact Wp construction."
+    },
+    {
+      "id": "4J0Q",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Q.tree",
+      "title": "平方可积条件期望是正交投影",
+      "taxon": "Construction",
+      "sha256": "af28900de4dbfa57f15126b2cd623008078138c6c10ce24be44960fa7d6cb22d",
+      "reading_scope": "Actual linked body inspected; canonical definition or theorem reused without editing.",
+      "role": "Definition/result actually used in linked mathematical body."
+    }
+  ],
+  "navigation_only": {
+    "4M01": [
+      "00LD"
+    ],
+    "4M02": [],
+    "4M03": [
+      "4M02"
+    ],
+    "4M04": [],
+    "4M05": [],
+    "4M06": [],
+    "4M07": [],
+    "4M08": [],
+    "4M09": [],
+    "4M0A": [],
+    "4M0B": [],
+    "4M0C": [],
+    "4M0D": [],
+    "4M0E": [],
+    "4M0F": [
+      "4M0B"
+    ],
+    "4M0G": [
+      "4M0C"
+    ],
+    "4M0H": [],
+    "4M0I": [],
+    "4M0J": [],
+    "4M0K": [],
+    "4M0L": [],
+    "4M0M": [],
+    "4M0N": [],
+    "4M0O": [
+      "4M08"
+    ],
+    "4M0P": [
+      "4M02"
+    ],
+    "4M0Q": [],
+    "4M0R": [],
+    "4M0S": [],
+    "4M0T": [],
+    "4M0U": [],
+    "4M0V": [
+      "4M0S"
+    ],
+    "4M0W": [],
+    "4M0X": [],
+    "4M0Y": [
+      "310S"
+    ],
+    "4M0Z": [],
+    "4M10": [],
+    "4M11": [],
+    "4M12": [],
+    "4M13": [],
+    "4M14": [],
+    "4M15": [],
+    "4M16": [],
+    "4M17": [],
+    "4M18": [
+      "4M0E"
+    ],
+    "4M1A": [],
+    "4M1B": [],
+    "4M1C": [
+      "4M0S"
+    ],
+    "4M19": [],
+    "4M1D": []
+  },
+  "terminology_evidence": {
+    "checked_on": "2026-10-24",
+    "requested_reference": "https://www.bananaspace.org/wiki/首页",
+    "referenceStatus": "unavailable",
+    "verifiedTerms": [],
+    "attempts": [
+      {
+        "url": "https://www.bananaspace.org/wiki/随机变量",
+        "result": "403 Forbidden via web open"
+      },
+      {
+        "url": "https://www.bananaspace.org/wiki/条件期望",
+        "result": "403 Forbidden via web open"
+      },
+      {
+        "url": "https://www.bananaspace.org/wiki/布朗运动",
+        "result": "URL not accessible via web tool"
+      }
+    ],
+    "policy": "No Banana-space terminology agreement claimed. Existing site terminology retained; quenched/annealed, BP, NAE, spin overlap and progressive measurability decoded locally. Earlier wrong-host banana-space.com attempt was not treated as terminology evidence."
+  },
+  "source_records": [
+    {
+      "id": "sun-icm2026",
+      "authors": [
+        "Nike Sun"
+      ],
+      "title": "Randomized Combinatorial Problems, in Sparse and Mean-Field Settings",
+      "doi": "10.1137/25M1805801",
+      "pages": "616-635",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+      "license": "CC BY 4.0",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1-3.4, all displayed equations, four figure captions and Table 1: lines 88-571, read in overlapping section-sized windows. Acknowledgments 572-574 and selected bibliography entries read; not a full bibliography audit. Metadata/title/author/pages/DOI/license/date checked at lines 59-65 and 1085-1102. No publisher PDF or figure-pixel inspection.",
+      "proof_boundary": "Full survey mathematical body read. Deep cited research proofs are not thereby read or reproduced. Original Chinese exposition and local proofs; no figures or long passages copied.",
+      "local_snapshot_sha256": null,
+      "hash_note": "Publisher HTML read via web tool; direct download returned 403. No local publisher snapshot hash claimed."
+    },
+    {
+      "id": "ssz-v3",
+      "authors": [
+        "Allan Sly",
+        "Nike Sun",
+        "Yumeng Zhang"
+      ],
+      "title": "The number of solutions for random regular NAE-SAT",
+      "doi": "10.1007/s00440-021-01029-5",
+      "journal": "Probability Theory and Related Fields 182 (2022), 1-109",
+      "version": "arXiv:1604.08546v3",
+      "version_date": "2023-11-07",
+      "url": "https://arxiv.org/abs/1604.08546v3",
+      "version_url": "https://arxiv.org/pdf/1604.08546v3",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "Versioned abstract page view-license link",
+      "actual_reading": "PDF introduction §§1.1-1.8, extracted lines 1-475, printed pp.1-8, including Theorem 1, Proposition 1.2, Definition 1.3, Proposition 1.4 and equations (1)-(17); opening §2 (before §2.1), lines 480-525, including Definition 2.1, p.9. PDF p.6 rendered and visually inspected. Additional v3 correction notice and start Appendix F lines 4478-4535, p.73; Appendix G introduction and corrected domain definition (154), Propositions G.1-G.3 and start G.1 lines 4876-4970, pp.79-80. Abstract metadata records correction; no complete reading of Appendices B,F,G.",
+      "proof_boundary": "Message selection/free energy quoted at exact contracts; finite BP/cavity/tilt calculations rederived locally. Corrected version used, full deep proof not reconstructed.",
+      "local_snapshot": "/tmp/sun-naesat-v3.pdf",
+      "extracted_text": "/tmp/sun-naesat-v3.txt",
+      "sha256": "3b7fc52c3eeaed25a34ac0140bfca334bd6f8e3e7bfe344971dfa870f25d230a",
+      "local_snapshot_sha256": "3b7fc52c3eeaed25a34ac0140bfca334bd6f8e3e7bfe344971dfa870f25d230a",
+      "extracted_text_sha256": "69160199c2f7ddc997398e08bf9190ab6122748e61a0978907e29fe9ed9071f7"
+    },
+    {
+      "id": "nss-ii-v2",
+      "authors": [
+        "Danny Nam",
+        "Allan Sly",
+        "Youngtak Sohn"
+      ],
+      "title": "One-step replica symmetry breaking of random regular NAE-SAT II",
+      "version": "arXiv:2112.00152v2",
+      "version_date": "2023-12-17",
+      "url": "https://arxiv.org/abs/2112.00152v2",
+      "version_url": "https://arxiv.org/html/2112.00152v2",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "HTML line 45",
+      "actual_reading": "HTML abstract and introduction §§1,1.1,1.2, lines 45-147; start §1.3 lines 151-158. Recheck extended §1.3 through line 168 for explanation of short-cycle effects. Theorems 1.1 and 1.4 and Definition 1.3 read in full; no full proof sections.",
+      "proof_boundary": "Only Theorem 1.1(a) cluster-mass and Theorem 1.4 absolute-overlap conclusions imported, with all displayed probability quantifiers. Part 1.1(b) not imported.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "ding-sun-v1",
+      "authors": [
+        "Jian Ding",
+        "Nike Sun"
+      ],
+      "title": "Capacity lower bound for the Ising perceptron",
+      "version": "arXiv:1809.07742v1",
+      "version_date": "2018-09-20",
+      "url": "https://arxiv.org/abs/1809.07742v1",
+      "version_url": "https://arxiv.org/html/1809.07742v1",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "HTML license banner",
+      "actual_reading": "HTML abstract and §1 lines 44-128: Theorem 1.1, Condition 1.2, Proposition 1.3, Theorem 1.4 and beginning of its conditional-moment consequence. No complete proof body.",
+      "proof_boundary": "Candidate-constant formula and conditional-moment mechanism; no unconditional lower-capacity claim. The one-variable condition itself and its numerical proof are deferred.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "huang-v2",
+      "authors": [
+        "Brice Huang"
+      ],
+      "title": "Capacity threshold for the Ising perceptron",
+      "version": "arXiv:2404.18902v2",
+      "version_date": "2025-04-22",
+      "url": "https://arxiv.org/abs/2404.18902v2",
+      "version_url": "https://arxiv.org/html/2404.18902v2",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "HTML license banner",
+      "actual_reading": "HTML §1 lines 67-121; selected §2.6 lines 249-323; §§3.1-3.3 lines 324-435 and opening at 437. Theorem 1.2, Condition 1.3, equations (6)-(8), Proposition 3.2 checked. Full proof and numerical validation not read.",
+      "proof_boundary": "Complete global S_*(u,v)<=0 assumption retained in the upper-capacity theorem. Candidate existence uses cited proposition. Formula (14) sign discrepancy resolved against DS equation (4), not copied blindly.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "hss-v1",
+      "authors": [
+        "Brice Huang",
+        "Mark Sellke",
+        "Nike Sun"
+      ],
+      "title": "Algorithmic threshold for high-dimensional projection pursuit I: general theory",
+      "version": "arXiv:2608.29416v1",
+      "version_date": "2026-08-29",
+      "pdf_internal_date": "2026-09-01",
+      "pages": 295,
+      "url": "https://arxiv.org/abs/2608.29416v1",
+      "version_url": "https://arxiv.org/pdf/2608.29416v1",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "Versioned abstract page view-license link",
+      "actual_reading": "PDF pp.1-6, extracted lines 1-290: abstract, model, §1.1 definitions/control equations and informal results. Separate read lines 485-750, pp.10-16: end §1.3, complete §1.4 definitions 1.8/1.11/1.12/1.15, Theorems 1.13/1.16, Corollary 1.14, §1.5 organization, and beginning §2.1. PDF p.13 rendered and visually inspected for Theorem 1.16 quantifiers, q<2, and oracle-cost condition. Remaining mathematical proof body not read; pp.6-10 between listed excerpts not fully read.",
+      "proof_boundary": "Formal theorem imported only for symmetric spherical setting. General and Ising controlled laws were compared, not imported as full atoms. Full algorithm/state-evolution/hardness proofs deferred.",
+      "local_snapshot": "/tmp/sun-projection-v1.pdf",
+      "extracted_text": "/tmp/sun-projection-v1.txt",
+      "sha256": "c1ee59c140ea7f92750cc016cac7b96c272141316bf2e58907f5c1079455c645",
+      "local_snapshot_sha256": "c1ee59c140ea7f92750cc016cac7b96c272141316bf2e58907f5c1079455c645",
+      "extracted_text_sha256": "66a9f151c40a547537da73e37f09a679a9a89cae2aa162bd18b50a42eefa587d"
+    },
+    {
+      "id": "shmalo-v1-consulted",
+      "authors": [
+        "Yitzchak Shmalo"
+      ],
+      "title": "The storage capacity of the Ising perceptron: verification of the outstanding numerical conditions",
+      "version": "arXiv:2607.11010v1",
+      "version_date": "2026-07-13",
+      "url": "https://arxiv.org/abs/2607.11010v1",
+      "version_url": "https://arxiv.org/html/2607.11010v1",
+      "license": "CC BY 4.0",
+      "actual_reading": "Only abstract and introduction lines 25-70, including Theorem 1.1 and Remark 1.2; versioned abstract metadata independently rechecked. Proof/computer code not audited.",
+      "proof_boundary": "Consulted to avoid treating old conditional status as a complete survey of 2026 claims. The claimed verification was not independently reproduced or adopted; owned capacity theorem remains explicitly conditional.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "local-calculations",
+      "authors": [
+        "author"
+      ],
+      "title": "Original finite and elementary probabilistic derivations for the Sun branch",
+      "version": "2026-10-24",
+      "version_date": "2026-10-24",
+      "url": null,
+      "version_url": null,
+      "license": "Original exposition; site licensing not changed",
+      "actual_reading": "All owned atomic source bodies re-read while authoring and repairing; finite computations checked directly. Existing reusable definitions inspected separately.",
+      "proof_boundary": "Only the precisely listed proof_scope entries are local proofs; no research theorem or numerical computer-assisted proof is promoted to a local proof."
+    }
+  ],
+  "sources": [
+    {
+      "id": "sun-icm2026",
+      "authors": [
+        "Nike Sun"
+      ],
+      "title": "Randomized Combinatorial Problems, in Sparse and Mean-Field Settings",
+      "doi": "10.1137/25M1805801",
+      "pages": "616-635",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+      "license": "CC BY 4.0",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1-3.4, all displayed equations, four figure captions and Table 1: lines 88-571, read in overlapping section-sized windows. Acknowledgments 572-574 and selected bibliography entries read; not a full bibliography audit. Metadata/title/author/pages/DOI/license/date checked at lines 59-65 and 1085-1102. No publisher PDF or figure-pixel inspection.",
+      "proof_boundary": "Full survey mathematical body read. Deep cited research proofs are not thereby read or reproduced. Original Chinese exposition and local proofs; no figures or long passages copied.",
+      "local_snapshot_sha256": null,
+      "hash_note": "Publisher HTML read via web tool; direct download returned 403. No local publisher snapshot hash claimed."
+    },
+    {
+      "id": "ssz-v3",
+      "authors": [
+        "Allan Sly",
+        "Nike Sun",
+        "Yumeng Zhang"
+      ],
+      "title": "The number of solutions for random regular NAE-SAT",
+      "doi": "10.1007/s00440-021-01029-5",
+      "journal": "Probability Theory and Related Fields 182 (2022), 1-109",
+      "version": "arXiv:1604.08546v3",
+      "version_date": "2023-11-07",
+      "url": "https://arxiv.org/abs/1604.08546v3",
+      "version_url": "https://arxiv.org/pdf/1604.08546v3",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "Versioned abstract page view-license link",
+      "actual_reading": "PDF introduction §§1.1-1.8, extracted lines 1-475, printed pp.1-8, including Theorem 1, Proposition 1.2, Definition 1.3, Proposition 1.4 and equations (1)-(17); opening §2 (before §2.1), lines 480-525, including Definition 2.1, p.9. PDF p.6 rendered and visually inspected. Additional v3 correction notice and start Appendix F lines 4478-4535, p.73; Appendix G introduction and corrected domain definition (154), Propositions G.1-G.3 and start G.1 lines 4876-4970, pp.79-80. Abstract metadata records correction; no complete reading of Appendices B,F,G.",
+      "proof_boundary": "Message selection/free energy quoted at exact contracts; finite BP/cavity/tilt calculations rederived locally. Corrected version used, full deep proof not reconstructed.",
+      "local_snapshot": "/tmp/sun-naesat-v3.pdf",
+      "extracted_text": "/tmp/sun-naesat-v3.txt",
+      "sha256": "3b7fc52c3eeaed25a34ac0140bfca334bd6f8e3e7bfe344971dfa870f25d230a",
+      "local_snapshot_sha256": "3b7fc52c3eeaed25a34ac0140bfca334bd6f8e3e7bfe344971dfa870f25d230a",
+      "extracted_text_sha256": "69160199c2f7ddc997398e08bf9190ab6122748e61a0978907e29fe9ed9071f7"
+    },
+    {
+      "id": "nss-ii-v2",
+      "authors": [
+        "Danny Nam",
+        "Allan Sly",
+        "Youngtak Sohn"
+      ],
+      "title": "One-step replica symmetry breaking of random regular NAE-SAT II",
+      "version": "arXiv:2112.00152v2",
+      "version_date": "2023-12-17",
+      "url": "https://arxiv.org/abs/2112.00152v2",
+      "version_url": "https://arxiv.org/html/2112.00152v2",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "HTML line 45",
+      "actual_reading": "HTML abstract and introduction §§1,1.1,1.2, lines 45-147; start §1.3 lines 151-158. Recheck extended §1.3 through line 168 for explanation of short-cycle effects. Theorems 1.1 and 1.4 and Definition 1.3 read in full; no full proof sections.",
+      "proof_boundary": "Only Theorem 1.1(a) cluster-mass and Theorem 1.4 absolute-overlap conclusions imported, with all displayed probability quantifiers. Part 1.1(b) not imported.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "ding-sun-v1",
+      "authors": [
+        "Jian Ding",
+        "Nike Sun"
+      ],
+      "title": "Capacity lower bound for the Ising perceptron",
+      "version": "arXiv:1809.07742v1",
+      "version_date": "2018-09-20",
+      "url": "https://arxiv.org/abs/1809.07742v1",
+      "version_url": "https://arxiv.org/html/1809.07742v1",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "HTML license banner",
+      "actual_reading": "HTML abstract and §1 lines 44-128: Theorem 1.1, Condition 1.2, Proposition 1.3, Theorem 1.4 and beginning of its conditional-moment consequence. No complete proof body.",
+      "proof_boundary": "Candidate-constant formula and conditional-moment mechanism; no unconditional lower-capacity claim. The one-variable condition itself and its numerical proof are deferred.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "huang-v2",
+      "authors": [
+        "Brice Huang"
+      ],
+      "title": "Capacity threshold for the Ising perceptron",
+      "version": "arXiv:2404.18902v2",
+      "version_date": "2025-04-22",
+      "url": "https://arxiv.org/abs/2404.18902v2",
+      "version_url": "https://arxiv.org/html/2404.18902v2",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "HTML license banner",
+      "actual_reading": "HTML §1 lines 67-121; selected §2.6 lines 249-323; §§3.1-3.3 lines 324-435 and opening at 437. Theorem 1.2, Condition 1.3, equations (6)-(8), Proposition 3.2 checked. Full proof and numerical validation not read.",
+      "proof_boundary": "Complete global S_*(u,v)<=0 assumption retained in the upper-capacity theorem. Candidate existence uses cited proposition. Formula (14) sign discrepancy resolved against DS equation (4), not copied blindly.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "hss-v1",
+      "authors": [
+        "Brice Huang",
+        "Mark Sellke",
+        "Nike Sun"
+      ],
+      "title": "Algorithmic threshold for high-dimensional projection pursuit I: general theory",
+      "version": "arXiv:2608.29416v1",
+      "version_date": "2026-08-29",
+      "pdf_internal_date": "2026-09-01",
+      "pages": 295,
+      "url": "https://arxiv.org/abs/2608.29416v1",
+      "version_url": "https://arxiv.org/pdf/2608.29416v1",
+      "license": "arXiv.org perpetual non-exclusive license to distribute",
+      "license_locator": "Versioned abstract page view-license link",
+      "actual_reading": "PDF pp.1-6, extracted lines 1-290: abstract, model, §1.1 definitions/control equations and informal results. Separate read lines 485-750, pp.10-16: end §1.3, complete §1.4 definitions 1.8/1.11/1.12/1.15, Theorems 1.13/1.16, Corollary 1.14, §1.5 organization, and beginning §2.1. PDF p.13 rendered and visually inspected for Theorem 1.16 quantifiers, q<2, and oracle-cost condition. Remaining mathematical proof body not read; pp.6-10 between listed excerpts not fully read.",
+      "proof_boundary": "Formal theorem imported only for symmetric spherical setting. General and Ising controlled laws were compared, not imported as full atoms. Full algorithm/state-evolution/hardness proofs deferred.",
+      "local_snapshot": "/tmp/sun-projection-v1.pdf",
+      "extracted_text": "/tmp/sun-projection-v1.txt",
+      "sha256": "c1ee59c140ea7f92750cc016cac7b96c272141316bf2e58907f5c1079455c645",
+      "local_snapshot_sha256": "c1ee59c140ea7f92750cc016cac7b96c272141316bf2e58907f5c1079455c645",
+      "extracted_text_sha256": "66a9f151c40a547537da73e37f09a679a9a89cae2aa162bd18b50a42eefa587d"
+    },
+    {
+      "id": "shmalo-v1-consulted",
+      "authors": [
+        "Yitzchak Shmalo"
+      ],
+      "title": "The storage capacity of the Ising perceptron: verification of the outstanding numerical conditions",
+      "version": "arXiv:2607.11010v1",
+      "version_date": "2026-07-13",
+      "url": "https://arxiv.org/abs/2607.11010v1",
+      "version_url": "https://arxiv.org/html/2607.11010v1",
+      "license": "CC BY 4.0",
+      "actual_reading": "Only abstract and introduction lines 25-70, including Theorem 1.1 and Remark 1.2; versioned abstract metadata independently rechecked. Proof/computer code not audited.",
+      "proof_boundary": "Consulted to avoid treating old conditional status as a complete survey of 2026 claims. The claimed verification was not independently reproduced or adopted; owned capacity theorem remains explicitly conditional.",
+      "local_snapshot_sha256": null
+    },
+    {
+      "id": "local-calculations",
+      "authors": [
+        "author"
+      ],
+      "title": "Original finite and elementary probabilistic derivations for the Sun branch",
+      "version": "2026-10-24",
+      "version_date": "2026-10-24",
+      "url": null,
+      "version_url": null,
+      "license": "Original exposition; site licensing not changed",
+      "actual_reading": "All owned atomic source bodies re-read while authoring and repairing; finite computations checked directly. Existing reusable definitions inspected separately.",
+      "proof_boundary": "Only the precisely listed proof_scope entries are local proofs; no research theorem or numerical computer-assisted proof is promoted to a local proof."
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "SUN-S01",
+      "source": "sun-icm2026",
+      "locator": "Equation (2.13) and Theorem 2.3(3)",
+      "issue": "Uncentered 0/1 inner product and absence of absolute-value qualifier do not match the cited overlap theorem.",
+      "resolution": "4M0A and 4M1B use spin coding 2x-1 and absolute overlap per NSS II Definition 1.3 and Theorem 1.4.",
+      "affected": [
+        "4M0A",
+        "4M1B"
+      ]
+    },
+    {
+      "id": "SUN-S02",
+      "source": "sun-icm2026",
+      "locator": "§2.4 Poisson-Dirichlet display before tilted cavity calculation, HTML line 377",
+      "issue": "Displayed identity omits a logarithm on its moment expression; constant positive marks already contradict the printed equality.",
+      "resolution": "Not imported. Constant-mark check separates log z from z; no Poisson-Dirichlet theorem or proof claimed.",
+      "affected": []
+    },
+    {
+      "id": "SUN-S03",
+      "source": "sun-icm2026",
+      "locator": "§2.4, HTML lines 380-385",
+      "issue": "Message hat/dot naming and orientation of a tilted cavity ratio appear inconsistent with the original primary formula.",
+      "resolution": "4M0L-4M0M use SSZ v3 equations (10)-(14); 4M0F states exact deterministic ratios rather than adopting the inconsistent orientation.",
+      "affected": [
+        "4M0F",
+        "4M0L",
+        "4M0M"
+      ]
+    },
+    {
+      "id": "SUN-S04",
+      "source": "huang-v2",
+      "locator": "Equation (14), HTML line 341",
+      "issue": "Printed negative sign before alpha ElogPsi differs from DS equation (4) and the constraint cost convention.",
+      "resolution": "4M0U uses the positive alpha ElogPsi term from DS; since logPsi<=0, this term decreases the potential.",
+      "affected": [
+        "4M0U"
+      ]
+    },
+    {
+      "id": "SUN-S05",
+      "source": "hss-v1",
+      "locator": "Equation (1.7), PDF p.4",
+      "issue": "Integration upper limit and integrand index are swapped in the printed stochastic integral.",
+      "resolution": "4M13-4M14 use X_t=integral_0^t sigma_s dB_s, consistent with the SDE interpretation and subsequent equations.",
+      "affected": [
+        "4M13",
+        "4M14"
+      ]
+    }
+  ],
+  "source_clarifications": [
+    {
+      "topic": "Free-energy normalization",
+      "resolution": "SSZ v3 writes the exponential rate lim Z^(1/n); owned notes use the logarithmic rate lim n^-1 log Z. Unsatisfiable instances take log0=-infinity. No unqualified convergence of ElogZ is asserted."
+    },
+    {
+      "topic": "Primary correction version",
+      "resolution": "SSZ v3 includes the 2023 correction beginning p.73. Read corrected domain (154) and Propositions G.1-G.3; obsolete interior-maximizer arguments are not reproduced."
+    },
+    {
+      "topic": "Cavity graph collisions",
+      "resolution": "4M0F makes disjoint old-variable assumptions explicit for the elementary calculation; it is not asserted to be an exact coupling of random regular ensembles."
+    },
+    {
+      "topic": "Published preview versus later preprint",
+      "resolution": "Report Theorem 3.1 is informal and previews upcoming work. The exact closure, normalization, auxiliary seed, relaxation, W2/Wq and quantifiers in 4M15 come from HSS v1 dated after publication, explicitly identified as a preprint."
+    },
+    {
+      "topic": "Algorithmic hardness",
+      "resolution": "All rigorous exclusion claims refer to dimension-free globally Lipschitz maps. General polynomial-time hardness and exact satisfiability from mere Wasserstein approximation are not inferred."
+    },
+    {
+      "topic": "Capacity conditions as of requested date",
+      "resolution": "Shmalo v1 claims verification in 2026 but was read only at abstract/introduction level. Its computation was not audited. Conditional DS/Huang formulations therefore remain the exact imported contracts, not a claim that no later verification claim exists."
+    },
+    {
+      "topic": "Existing Gaussian tail convention",
+      "resolution": "0N0R names the tail Phi; the Sun branch explicitly uses Psi for the tail and never silently identifies Phi with a CDF."
+    },
+    {
+      "topic": "Search and reuse",
+      "resolution": "Searched all available tree paths/titles and relevant bodies in the shared inventory (baseline user estimate 7130; observed scoped-check inventory recorded below). Reused probability, random graph, Gaussian, Brownian, Hilbert and coupling pages. Existing quantum/spin-dynamics pages do not define the present quenched random-constraint geometry; no unrelated spin-glass topic was inserted as a prerequisite."
+    }
+  ],
+  "review_responses": [
+    {
+      "finding": "SUN-F01",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M08"
+      ],
+      "response": "明确平方可积随机变量按几乎处处相等取商，并链接 0A6A。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F02",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M0C",
+        "4M0D"
+      ],
+      "response": "定义两类邻居集合；乘除公式页重述有限树、V/F/E 及记号来源。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F03",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M0I"
+      ],
+      "response": "声明非空 S subset {0,1}^n、n>=1；结论限于导数单调，去掉无链接凸性断言。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F04",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M0K"
+      ],
+      "response": "条件概率首次计算处链接 0A00，保留 p>0。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F05",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M0S"
+      ],
+      "response": "比较常数改为 0<C<infinity。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F06",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M09",
+        "4M0N",
+        "4M0O"
+      ],
+      "response": "删除非必要的高级方法名称列表；保留精确外引结论与正概率/高概率区分。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F07",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M0Q"
+      ],
+      "response": "增加正交补基步骤、行列式绝对值及密度换元论证，链接 004P、01Q1、0N12。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F08",
+      "status": "independently-resolved-in-review-revision-2",
+      "notes": [
+        "4M0L",
+        "4M18",
+        "4M0M"
+      ],
+      "response": "消息更新与研究收敛定理分开；4M18 独立陈述收敛，1RSB 泛函改链该页。",
+      "verified_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "finding": "SUN-F09",
+      "status": "author-addressed-awaiting-independent-recheck",
+      "notes": [
+        "4M02",
+        "4M03",
+        "4M04",
+        "4M06",
+        "4M07",
+        "4M08",
+        "4M0F",
+        "4M0J",
+        "icm2026-sun"
+      ],
+      "response": "逐项纠正正式报告节号、式号与 Theorem 2.3(3)；SSZ 配置模型定位到第 9 页 §2 开头，定义 2.1 在 §2.1 之前。packet 两份 source 数组、report.reading_scope 与 reference 同步；section_coverage 按实际 §2.2/2.3/2.4 重排。未扩大 primary-paper 已读范围。"
+    },
+    {
+      "finding": "SUN-F10",
+      "status": "author-addressed-awaiting-independent-recheck",
+      "notes": [
+        "4M13",
+        "4M19",
+        "4M1D",
+        "4M00"
+      ],
+      "response": "新增矩形函数稠密性和时间平均逼近的逐步证明；有限测度唯一性先在实际生成集合代数上使用。4M13 保留简单过程等距证明，补充截断、适应性及 2K delta/h 阶梯误差，闭合一般渐进可测 L2 过程的逼近。真实前置正文、对应元数据与哈希均已检查；不声称连续版本定理。"
+    }
+  ],
+  "existing_note_fixes_for_parent": [],
+  "remaining_branches": [
+    "随机图着色、最大独立集、独立子句 SAT/NAE 的精确阈值与局部算法只保留模型背景，未展开其研究定理。",
+    "正则 NAE-SAT 的自由树编码、插值上界、截断二阶矩、短环条件化和 2023 年勘误证明未重建；所引主结论保持大 k 和正则密度假设。",
+    "Ding-Sun 的筛选变量、具体一变量条件及条件矩计算，尖锐阈值提升，以及 Huang 全局二参数条件的数值验证未重建。",
+    "Shmalo 2026 预印本的计算机辅助验证仅作为截至日期的研究动态检查；没有独立复现或采纳其无条件容量结论。",
+    "一般非对称投影和 Ising 控制类、IAMP 的递推和状态演化、branching OGP 的完整下界均未展开；4M15 只引球面对称特例。",
+    "报告 Table 1 的十二种渐近算法阈值、Gardner 转变与更高层 RSB 结构没有逐项导入。"
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4M18",
+        "4M0M",
+        "4M0N"
+      ],
+      "source": "ssz-v3",
+      "scope": "Appendix B and full main proof, including corrected second-moment maximizer analysis in Appendices F-G; only listed statements/selected correction text read."
+    },
+    {
+      "notes": [
+        "4M0O",
+        "4M1B"
+      ],
+      "source": "nss-ii-v2",
+      "scope": "Variance decomposition, short-cycle conditioning and overlap geometry proof; statements and opening proof organization only."
+    },
+    {
+      "notes": [
+        "4M0U",
+        "4M0V"
+      ],
+      "source": "ding-sun-v1/huang-v2",
+      "scope": "Numerical fixed-point estimates and conditional capacity research proofs; no independent numerical verification."
+    },
+    {
+      "notes": [
+        "4M15"
+      ],
+      "source": "hss-v1",
+      "scope": "295-page paper full proof, limiting processes, budget constraint, IAMP, equivalence of controls, and Wq confinement are cited, not reconstructed."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§1 and §2.1",
+      "notes": [
+        "4M01",
+        "4M04",
+        "4M05"
+      ],
+      "scope": "Random-constraint background and threshold questions, with local model/temperature definitions. Model-specific threshold statements are located separately in claim_sources; no nonexistent numbered conjecture is cited."
+    },
+    {
+      "section": "§2.2",
+      "notes": [
+        "4M02",
+        "4M03",
+        "4M06",
+        "4M07",
+        "4M08",
+        "4M09",
+        "4M0B",
+        "4M0F"
+      ],
+      "scope": "Regular model and independent-clause distinction; first/second moments, RS correlation assumption and cavity calculation. Local examples and proofs supplement, rather than replace, research statements."
+    },
+    {
+      "section": "§2.3",
+      "notes": [
+        "4M0A",
+        "4M0C",
+        "4M0D",
+        "4M0E",
+        "4M0G",
+        "4M0H",
+        "4M0J",
+        "4M0N",
+        "4M0O",
+        "4M1B"
+      ],
+      "scope": "RSB, clustering, complexity (2.15)-(2.16), and exact large-k regular-model theorem contracts. Tree belief-propagation motivation occurs at HTML line 329; the finite-tree calculations and failure examples are local proofs."
+    },
+    {
+      "section": "§2.4",
+      "notes": [
+        "4M0I",
+        "4M0L",
+        "4M18",
+        "4M0M"
+      ],
+      "scope": "Tilted cluster partition function (2.17), distributional messages and 1RSB functional. Precise message-selection and functional formulas are pinned to SSZ v3; Poisson-Dirichlet heuristic not imported."
+    },
+    {
+      "section": "§2.5",
+      "notes": [
+        "4M0K"
+      ],
+      "scope": "Planted-model discussion and elementary solution-count bias identity; deep auxiliary-model analysis deferred."
+    },
+    {
+      "section": "§§3.1-3.3",
+      "notes": [
+        "4M0P",
+        "4M0Q",
+        "4M0R",
+        "4M0S",
+        "4M0T",
+        "4M0U",
+        "4M0V",
+        "4M0W",
+        "4M1A",
+        "4M1C"
+      ],
+      "scope": "Gaussian perceptron, overlap moments, convex-margin distinction, conditional capacity interface and elementary raw-second-moment failure."
+    },
+    {
+      "section": "§3.4",
+      "notes": [
+        "4M0X",
+        "4M0Y",
+        "4M0Z",
+        "4M10",
+        "4M11",
+        "4M12",
+        "4M13",
+        "4M14",
+        "4M15",
+        "4M16",
+        "4M17",
+        "4M19",
+        "4M1D"
+      ],
+      "scope": "Projection distributions and precise symmetric spherical Lipschitz theorem, with foundations and obstruction examples. General/Ising formal theorem and Table 1 not fully imported. The Ito construction and its product-L2 approximation lemmas are original foundations for the later HSS v1 theorem, not attributed as proofs in the survey."
+    }
+  ],
+  "validation": {
+    "source_links": "All local links in the 51 owned trees resolve in the inspected inventory; no shared tree modified.",
+    "format": "normalizeFormat from scripts/note-editorial-lib.mjs applied through apply_patch only to owned trees; final comparison clean. Literal bracket pairing checked separately.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.8",
+      "count": 832,
+      "errors": 0,
+      "scope": "Source math groups only; no Forester build or rendered-site verification claimed."
+    },
+    "prerequisite_check": {
+      "owned_atomic_count": 49,
+      "edges": 132,
+      "recursive_nodes": 189,
+      "cycles": 0,
+      "cycle_details": [],
+      "all_edges_in_body": true,
+      "errors": [],
+      "outline_prerequisites": 0,
+      "outline_directly_reaches_all_atoms": true,
+      "scope": "Current read-only shared audit prerequisites plus this packet; traversal only from owned atoms. Graph traversal is not a claim that all recursive pages were newly read."
+    },
+    "inventory_at_check": 7253,
+    "build": "Not run; parent owns integration, global tests, Forester/render verification and publication.",
+    "independent_review": "Review revision 2 independently resolved SUN-F01 through SUN-F08 on the prior packet. SUN-F09 and SUN-F10 are author-addressed in this revision; final independent reread of changed files and frozen hashes pending. Review file not modified; no whole-branch pass claimed.",
+    "review_input": {
+      "path": "research/mathematical-physics-sun-review.json",
+      "sha256": "0bedfcda012253863ab11bf510d32752b35f149360e0b1ec47abdc9a7628fce4",
+      "review_revision": 2,
+      "result": "revise",
+      "open_findings": [
+        "SUN-F10",
+        "SUN-F09"
+      ]
+    },
+    "elementary_checks": {
+      "cases": 29,
+      "issues": [],
+      "tree_cases": 16,
+      "max_tree_relative_error": 4.2851277063739343e-16,
+      "parallel_nae_mean": 2.25,
+      "positiveRate": [
+        {
+          "alpha": 0.01,
+          "r": 0.002,
+          "F": 0.000010724303770585552
+        },
+        {
+          "alpha": 0.1,
+          "r": 0.01,
+          "F": 0.0005846116185646123
+        },
+        {
+          "alpha": 1,
+          "r": 0.01,
+          "F": 0.006296123685946453
+        },
+        {
+          "alpha": 5,
+          "r": 0.01,
+          "F": 0.03168062176319908
+        }
+      ],
+      "max_angular_quadrature_error": 0.0000021084244874736147,
+      "scope": "Finite identities and deterministic angular quadrature only; no research-capacity numerical certification or random-model theorem verification.",
+      "retained_from_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f",
+      "rerun_during_locator_and_approximation_repair": false
+    },
+    "command_scope": [
+      "node /tmp/sun-check.mjs",
+      "Read-only targeted packet repair and graph/hash validation in /tmp/sun-repair-packet.mjs",
+      "Previous 29 finite checks retained unchanged; not newly run for this analytic repair"
+    ],
+    "errors": [],
+    "source_rechecks": [
+      {
+        "source": "sun-icm2026",
+        "locator": "Publisher HTML lines 171-218, 241-315, 329-360",
+        "scope": "Targeted rechecks inside the already recorded full survey reading: section/equation numbering, model distinction after Theorem 2.2, Theorem 2.3(3), complexity equations and tilted partition function. No new full-primary-proof reading claimed."
+      },
+      {
+        "source": "ssz-v3",
+        "locator": "Printed p.9, extracted lines 475-529; §2 begins at 494, Definition 2.1 at 514-518, §2.1 begins at 528",
+        "scope": "Reread the configuration-model passage and surrounding headings to repair the earlier section label; does not expand to a full reading of §2.1."
+      }
+    ],
+    "repair_proof_check": {
+      "notes": [
+        "4M19",
+        "4M1D",
+        "4M13"
+      ],
+      "method": "Direct author proof check of finite rectangle algebra, positive/negative finite-measure uniqueness, Hilbert orthogonal complement, time truncation, translation continuity, Fubini-Schwarz averaging, progressive truncation and the uniform left-step bound.",
+      "new_shared_bodies_read": [
+        "00XV",
+        "0A87",
+        "00MS",
+        "0H53",
+        "0I8I"
+      ],
+      "scope": "Local analytic argument only; no numerical test is claimed to certify density or Ito construction."
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-complete-ready-for-independent-recheck",
+    "date": "2026-10-24",
+    "revision": 3,
+    "paths": [
+      "trees/math/mathematical-physics/sun/4M*.tree",
+      "trees/references/icm2026-sun.tree",
+      "research/mathematical-physics-sun-packet.json"
+    ],
+    "hashes": "notes[].sha256 freezes all 51 owned trees; source_records[] hashes pin downloaded PDFs and text. Packet digest reported separately to avoid self-hashing.",
+    "mutation_boundary": "No further author edits after final ready signal except explicitly requested reviewer repairs. Shared navigation/manifests/audits/scripts/tests/theme/existing notes remain untouched; no commit or push.",
+    "previous_packet_sha256": "ee9146f59e900e94abf03286e0a1f0c8d620af483dcb04c916bd097cb76f5aef"
+  }
+}

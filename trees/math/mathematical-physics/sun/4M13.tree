@@ -1,0 +1,19 @@
+\title{布朗随机积分由平方均值等距延拓定义}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{Huang–Sellke–Sun v1，定义 1.1 所用随机积分；平方可积构造。}
+
+\p{设 #{B_t} 为一维[标准布朗运动](0N0S)，#{\mathcal F_t} 为递增的 σ-代数族，使 #{B_t} 对 #{\mathcal F_t} 可测，且 #{B_t-B_s} 与 #{\mathcal F_s} 独立。称过程 #{\sigma} 渐进可测，如果对每个 #{t}，限制到 #{[0,t]\times\Omega} 的映射 #{(s,\omega)\mapsto\sigma_s(\omega)} 对[乘积 σ-代数](00QB) #{\mathcal B([0,t])\otimes\mathcal F_t} 可测，其中 #{\mathcal B} 为[Borel σ-代数](00QD)。假设 #{\mathbb E\int_0^1\sigma_t^2dt<\infty}。}
+\p{先取简单的过去可测过程 #{\sigma_t=\sum_{j=0}^{m-1}\xi_j1_{\lparen t_j,t_{j+1}\rbrack}(t)}，其中 #{0=t_0<\cdots<t_m=1}，#{\xi_j} 有界且对 #{\mathcal F_{t_j}} 可测。定义}
+##{I(\sigma)=\sum_{j=0}^{m-1}\xi_j(B_{t_{j+1}}-B_{t_j}).}
+\p{由独立增量及[条件期望](4J0Q)，每项均值为零。当 #{i<j} 时，交叉乘积中除第 #{j} 个增量外的因子在 #{\mathcal F_{t_j}} 中可测，条件均值为零；平方项的条件均值为 #{\xi_j^2(t_{j+1}-t_j)}。因此}
+##{\mathbb E I(\sigma)=0,\qquad \mathbb E I(\sigma)^2=\mathbb E\int_0^1\sigma_t^2dt.}
+\p{这也适用于两个简单过程之差，故 #{I} 保持 [L² 范数](0A6A)。[L² 完备性](0A67)允许把它唯一延拓到简单过去可测过程的均方闭包，记为 #{\int_0^1\sigma_t\,dB_t}，同一等距公式继续成立。}
+\p{\strong{一般渐进可测过程的逼近。}以下 #{\|\cdot\|_2} 指 #{[0,1]\times\Omega} 上的乘积 L² 范数。对 #{K>0}，截断过程 #{\sigma^K=\max(-K,\min(\sigma,K))} 仍渐进可测。误差平方逐点趋零且由 #{\sigma^2} 控制，[支配收敛定理](0I8I)给 #{\|\sigma -\sigma^K\|_2\to 0}。把 #{\sigma^K} 在时间区间 #{[0,1]} 外延为零，令}
+##{\sigma_t^{K,h}=\frac 1h\int_{(t-h)\vee 0}^t\sigma_s^K\,ds,\qquad 0\le t\le 1,\quad h>0.}
+\p{[过去时间平均的 L² 逼近](4M1D)给出固定 #{K} 时 #{\|\sigma^{K,h}-\sigma^K\|_2\to 0}。对每个 #{t}，渐进可测性使积分中的函数对 #{\mathcal B([0,t])\otimes\mathcal F_t} 可测；[参数积分的可测性](0H53)使 #{\sigma_t^{K,h}} 对 #{\mathcal F_t} 可测。又因 #{|\sigma_s^K|\le K}，两个平移时间区间的对称差长度至多为 #{2|t-u|}，从而逐条轨道都有}
+##{|\sigma_t^{K,h}|\le K,\qquad |\sigma_t^{K,h}-\sigma_u^{K,h}|\le\frac{2K}{h}|t-u|.}
+\p{现在选取最大间距为 #{\delta} 的确定性分割 #{0=t_0<\cdots<t_m=1}，并令 #{\eta_t=\sum_{j=0}^{m-1}\sigma_{t_j}^{K,h}1_{\lparen t_j,t_{j+1}\rbrack}(t)}。各系数有界且对 #{\mathcal F_{t_j}} 可测，所以 #{\eta} 是前述简单过程。上述逐点估计给 #{\|\eta -\sigma^{K,h}\|_2\le\frac{2K\delta}{h}}。[三角不等式](0A69)于是给出}
+##{\|\eta -\sigma\|_2\le\frac{2K\delta}{h}+\|\sigma^{K,h}-\sigma^K\|_2+\|\sigma^K-\sigma\|_2.}
+\p{给定正误差，依次选择足够大的 #{K}、足够小的 #{h} 和足够细的分割，使右端三项各小于该误差的三分之一。因此每个渐进可测平方可积过程确实属于简单过去可测过程的均方闭包。对每个固定 #{t}，把同一构造用于 #{1_{[0,t]}\sigma}，即定义 #{X_t=\int_0^t\sigma_s\,dB_s}。}

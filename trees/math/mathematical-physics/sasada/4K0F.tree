@@ -1,0 +1,15 @@
+\title{离散 KdV 的指数和搬运器}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.2(b)；Croydon–Sasada–Tsujimoto，定理 2.2}
+
+\p{固定 #{\delta>0}，给定正构形 #{\omega_n>0}，编码为 #{S_0=0}、#{S_n-S_{n-1}=-\log\delta -2\log\omega_n}。假设 #{S\in\mathcal S^{\mathrm{lin}}_0}。用[中点指数和](4K0D)定义 #{Z_n=\sum_{m\le n}\exp((S_m+S_{m-1})/2)}，并令 #{U_n=\delta^{-1/2}Z_ne^{-S_n}}。则}
+##{\omega_n'=\frac{U_{n-1}}{1+\delta\omega_nU_{n-1}},\qquad
+U_n=\omega_n(1+\delta\omega_nU_{n-1}).}
+\p{这组正变量满足离散 KdV 方程，输出路径为 #{T^\Sigma S}。相应局部映射为 #{F_\delta(x,y)=(y/(1+\delta xy),x(1+\delta xy))}。}
+\p{\strong{证明。}由 #{Z_n=Z_{n-1}+\exp((S_n+S_{n-1})/2)} 及 #{e^{-(S_n-S_{n-1})}=\delta\omega_n^2}，直接得到 #{U_n=\delta\omega_n^2U_{n-1}+\omega_n}。设 #{\omega_n'=\omega_nU_{n-1}/U_n}，便得第一式。最后}
+##{\log U_n-\log U_{n-1}
+=\log Z_n-\log Z_{n-1}-(S_n-S_{n-1})}
+\p{代入 #{\log\omega_n'=\log\omega_n+\log U_{n-1}-\log U_n}，即得 #{-\log\delta -2\log\omega_n'=(T^\Sigma S)_n-(T^\Sigma S)_{n-1}}。}
+\p{局部乘积 #{\omega_n'U_n=\omega_nU_{n-1}} 保持。再次应用 #{F_\delta} 会恢复原输入，因为输入输出具有相同乘积。因此 #{F_\delta} 是对合。双无限全时解的唯一性另见[路径存在定理](4K0K)。}

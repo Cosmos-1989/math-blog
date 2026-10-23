@@ -1,6 +1,44 @@
 # ICM2026 Section 11 数学物理名册与覆盖核查
 
-核查日期：2026-10-22，Asia/Shanghai。官方名册与出版身份的核查先于本轮写作。以下先记录本轮整合结果，其后保留增补前的冻结基线，便于区别既有内容与新增专题。
+最近整合日期：2026-10-24，Asia/Shanghai。官方名册基线核查于 2026-10-22；本轮再次核对三篇出版章节。以下先记录本轮整合结果，其后保留各批发布与增补前的冻结基线。
+
+## 第四批本地整合
+
+按论文集页码继续整合 Sasada、Staffilani 与 Sun 三场报告。分组报告共 15 场，本批接入后，本站对应专题达到 13 场；Feng Xu 与 Wojciech De Roeck 仍未整理。Yau 的全会报告和 Sabin 的 Bourbaki 报告另行计数。
+
+| 报告 | 专题 | 原子页 |
+|---|---|---|
+| Makiko Sasada | 随机初态的箱球系统，`4K00` | 33 |
+| Gigliola Staffilani | 波湍流，`4L00` | 35 |
+| Nike Sun | 随机组合问题，`4M00` | 49 |
+
+本批新增 117 个原子页、3 篇叙事综述和 3 个文献页。Sasada 分支复用 Ferrari 的箱球规则、孤子分解与宏观演化；Staffilani 分支复用 Deng 的随机 Fourier 模态与波动力学极限；Sun 分支复用已有概率、图论与凸性基础。新条目之间的前置关系与导航关系分别登记。随机积分构造所需的乘积 L² 稠密性与过去时间平均各自独立成页，保留适应性的分步逼近在积分定义页证明。
+
+逐格搬运与独立性、密度变换、共振恒等式、有限维稳定估计、矩方法、树上的消息恒等式和高斯计算在相应页面展开证明。无限可积系统的一般全时构造、孤子扩散极限、凝聚定理、稀疏模型的凝聚与重叠定理以及稳定算法的精确刻画，保留研究文献的适用条件与证明定位。条件容量结论仍明确写出其未验证的数值假设。
+
+每篇的阅读位置、前置边、证明范围、未展开分支和术语核对情况分别记录于 `research/mathematical-physics-{sasada,staffilani,sun}-packet.json`。香蕉空间本轮访问受阻，因此未宣称全部术语已完成该站核对。独立复核和构建验收状态见各自记录；线上发布由第四批 release 记录另行确定。
+
+三份独立复核全部通过，并按源码哈希绑定所读的原子页、共享前置与研究包。44 项全站源码检查、静态 HTML 构建及公式解析均通过。全站 7,253 页均可达，93,989 个公式与 50 个图像引用检查无误；本批及学科首页共 124 页在 1440 与 390 像素宽度完成 248 项显示检查，另核对旧路径、搜索及 320 像素阅读界面。人工查看了三篇综述及五张证明页截图。完整本地验收记录为 `research/icm2026-mathematical-physics-fourth-validation.json`，该记录不替代后续的线上发布确认。
+
+## 第三批推送与剩余目录复核
+
+第三批已以提交 `d10caeebf775449b0b2368b846ccbd886ad62516` 推送至 GitHub，部署任务 [39752513854](https://github.com/Cosmos-1989/math-blog/actions/runs/39752513854) 于 **2026-10-22 10:37:00 UTC** 成功完成。本地 43 项源码检查重新通过；从该提交与固定主题版本独立构建，28,522 个 HTML/XML 文件与先前验收版本逐字节相同。177 个正式页面、9 条兼容路径和 5 项资源均以严格 TLS 获取，完整内容与独立构建比对通过，仅忽略标签及显示公式边界间的排版空白。发布证据见 `research/icm2026-mathematical-physics-third-release.json`。
+
+已发布专题为 [Pausader 的无碰撞动力学](https://opetope.cc/4H00/)、[Pérez-García 的二维量子相](https://opetope.cc/4I00/) 和 [Rhodes–Vargas 的 Liouville 共形场论](https://opetope.cc/4J00/)，均已列于[数学物理首页](https://opetope.cc/006B/)。下文各批本地整合状态保留为历史记录。
+
+重新获取官方完整讲者页并核对全部 Section 11 主列和明确跨列记录，16 位讲者的姓名、ID、归属与联合报告字段均未改变，仍为去重后的 15 场报告。本站已建立 10 场对应专题，剩余以下 5 场。Yau 的全会专题与 Sabin 的 Bourbaki 专题均单独计数。
+
+| 讲者 | 尚未整理的专题 | 可用来源 |
+|---|---|---|
+| Makiko Sasada | 随机初态的箱球系统与相关离散可积系统 | [论文集，575–595 页](https://epubs.siam.org/doi/abs/10.1137/25M1806715) |
+| Gigliola Staffilani | 波湍流理论的新旧数学结果 | [论文集，596–615 页](https://epubs.siam.org/doi/abs/10.1137/25M1803309) |
+| Nike Sun | 稀疏与平均场情形的随机组合问题 | [论文集，616–635 页](https://epubs.siam.org/doi/abs/10.1137/25M1805801) |
+| Feng Xu | 量子场论中的熵 | [论文集，636–649 页](https://epubs.siam.org/doi/abs/10.1137/25M1774094) |
+| Wojciech De Roeck | 强无序相互作用量子链中的局域化 | [Simons Foundation 原始录像](https://www.youtube.com/watch?v=y3S1ZBeJ9gc)；[相关研究论文 v2](https://arxiv.org/abs/2408.04338v2) |
+
+本次新核实了 De Roeck 的报告题名 *Localization for Strongly Disordered Interacting Quantum Chains*。原始录像页的发布者为 Simons Foundation，说明首行给出题名，视频标题明确标注 ICM 2026。此前的“出版身份未识别”仍适用于论文集章节，不再表示报告题名未知。关联论文由 De Roeck、Giacomin、Huveneers、Prosniak 合著，作者与录像说明的合作团队相符；该研究论文不标作 ICM 论文集文章。本次只核对录像页面元数据与论文摘要，未观看完整报告或通读该论文。
+
+全站 7,130 个树文件重新按精确 DOI、完整题名及去重音的完整作者名检索，剩余五场均无独立专题。Sasada 仅在 Ferrari 的文献页中出现；Ferrari 的箱球专题、Deng 的波动力学专题和既有算子代数页面分别可以复用，但不抵消尚未收录的报告。详细记录见 `research/icm2026-mathematical-physics-remaining-2026-10-22.json`。以下保留此前各次整合和冻结核查，时间状态以本节及后续 release 记录为准。
 
 ## 已发布的两批专题
 

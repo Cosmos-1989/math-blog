@@ -1,0 +1,11 @@
+\title{1RSB 泛函由三类倾斜局部因子组成}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{Sly–Sun–Zhang v3，§1.6 式 (11)–(14)；[Sun](icm2026-sun)，式 (2.18)。}
+
+\p{固定足够大的 #{k} 和整数 #{d}，令 #{\alpha=d/k} 位于[消息递推收敛定理](4M18)的密度区间。对每个 #{\lambda\in[0,1]} 采用该定理选出的 #{\dot\mu_\lambda,\widehat\mu_\lambda}。在以下三个表达式中，所有 #{X_i,X} 独立服从 #{\dot\mu_\lambda}，所有 #{Y_i,Y} 独立服从 #{\widehat\mu_\lambda}，且两组之间也独立：}
+##{z_v=\prod_{i=1}^dY_i+\prod_{i=1}^d(1-Y_i),\quad z_a=1-\prod_{i=1}^kX_i-\prod_{i=1}^k(1-X_i),\quad z_e=XY+(1-X)(1-Y).}
+\p{对 #{b\in\{v,a,e\}}，令 #{A_b(\lambda)=\mathbb E[z_b^\lambda]}、#{\ell_b(\lambda)=\mathbb E[z_b^\lambda\log z_b]/A_b(\lambda)}。零权重处两种被积函数均规定为零，包括 #{\lambda=0}。由所引递推定理保证这些量适定。定义}
+##{\mathfrak F(\lambda;\alpha)=\log A_v+\alpha\log A_a-d\log A_e,\qquad s_\lambda=\ell_v+\alpha\ell_a-d\ell_e,\qquad \Sigma(s_\lambda;\alpha)=\mathfrak F(\lambda;\alpha)-\lambda s_\lambda.}
+\p{符号 #{s_\lambda} 表示簇大小的候选对数率，#{\Sigma} 表示相应簇数的候选对数率。顶点、约束、边的系数来自[树配分函数的乘除恒等式](4M0D)，而 #{\lambda} 来自[簇大小的倾斜](4M0I)。测度自身依赖 #{\lambda}，因此不能仅对显式幂求导就宣称整个 #{\mathfrak F} 的导数公式；这些极限对象的关系由所引研究结果确定。}

@@ -1,0 +1,15 @@
+\title{跳跃轨迹的 Skorokhod 收敛}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，定理 4.6；Olla–Sasada–Suda 定理 2.1 所用路径空间的定义}
+
+\p{固定 #{A>0}。#{D([0,A],\mathbb R)} 是所有右连续且在每个 #{t>0} 具有有限左极限的实函数组成的空间。右连续指 #{f(s)\to f(t)} 当 #{s\downarrow t}；有限左极限指 #{\lim_{s\uparrow t}f(s)\in\mathbb R} 存在。离散时间轨迹按整步常值延拓便属于此空间。}
+\p{在 Skorokhod #{J_1} 拓扑下，#{f_n\to f} 的含义是：存在严格递增的[连续](00E2)双射 #{\lambda_n:[0,A]\to[0,A]}，使}
+##{\sup_{0\leq t\leq A}|\lambda_n(t)-t|\longrightarrow 0,\qquad
+\sup_{0\leq t\leq A}|f_n(\lambda_n(t))-f(t)|\longrightarrow 0.}
+\p{允许很小的时间重排，使相近时刻的跳跃能够对齐。对取值于此空间的随机轨迹，弱收敛指：对每个有界连续实泛函 #{\Phi}，其[期望](00L1)满足 #{\mathbb E\Phi(Z_n)\to\mathbb E\Phi(Z)}。这与[实随机变量依分布收敛](00LA)一样只比较概率律，并不要求各轨迹处于同一个样本空间。}
+\p{\strong{连续极限的特例。}若确定性极限轨迹 #{f} 连续，则上述 #{J_1} 收敛等价于一致收敛。事实上，[闭区间上的有限覆盖论证](0A3K)说明 #{f} [一致连续](0F40)；令 #{s=\lambda_n(t)}，有}
+##{|f_n(s)-f(s)|\leq
+|f_n(\lambda_n(t))-f(t)|+|f(t)-f(\lambda_n(t))|.}
+\p{两项分别由定义和一致连续性趋于零，对 #{s} 取上确界即得结论。逆向取 #{\lambda_n(t)=t}。此确定性事实没有把随机轨迹的弱收敛改成原概率空间上的逐样本一致收敛。}

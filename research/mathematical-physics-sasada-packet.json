@@ -1,0 +1,2326 @@
+{
+  "date": "2026-10-24",
+  "report": {
+    "prefix": "4K",
+    "outline": "4K00",
+    "reference": "icm2026-sasada",
+    "doi": "10.1137/25M1806715",
+    "speaker": "Makiko Sasada",
+    "title": "Box-ball System and Related Discrete Integrable Systems with Random Initial Conditions",
+    "pages": "575–595",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+    "license": "CC BY 4.0",
+    "question": "双无限随机初态的箱球演化怎样由路径反射严格定义，哪些局部独立性恒等式产生不变律，又如何延伸至孤子涨落及离散 KdV/Toda？",
+    "reading_scope": "sasada-icm2026: Entire mathematical HTML body §§1–7, lines 101–570, in overlapping section-sized reads; displayed equations and text figure captions. Bibliography [1]–[63], lines 576–920, and metadata/licensing lines 928–976 read. Re-read §§3.1–3.4, §§5.1–5.3 and §6 in proof/parameter checks. Image-only figures and diagrams were not pixel-inspected; no figures reproduced.\nckst-bbs-v1: Selected HTML: introduction/path framework and Theorems 1.2, 1.4, 1.6–1.8, lines 214–304; targeted Theorem 3.23 checks. Subsequently read §3.2.4 and §3.3.1 through the independence proof of Theorem 3.23, lines 1710–1773, including Lemma 3.25 and its proof. The next Cramer-rate calculation was not completed and is not reproduced. Not the full paper or all of §2/§3.2.2.\ncs-balance-v3: Selected introduction/type I–II setting and Theorem 1.1, PDF pp.3–5 (text lines 140–205 re-read); selected Theorem 2.1/Lemma 2.2 statements. §3.2.2 Proposition 3.9 and its proof, §3.2.3 Lemmas 3.10–3.11 and Theorem 3.12, pp.22–24 (lines 1070–1215). Selected §4.1 Proposition 4.1/4.2 and §4.1.3 Theorem 4.4; §4.2.1–4.2.3, Propositions 4.5–4.6 and Theorem 4.8, pp.26–29 (lines 1320–1505). §5.1 opening ultra-discretization formulas (5.1)–(5.2). Appendix A density conventions, text lines 2400–2490, pp.47–48. PDF p.29 rendered and visually inspected for Theorem 4.8 and its printed rate parameter. Not the whole paper, characterization proofs or general ergodicity proof.\ncst-paths-v2: Selected introduction/table 1 and all four model statements/encodings in §2, extracted lines 205–905, PDF pp.5–16. Theorem 4.19 forward-time and Theorem 4.20 all-time statements, pp.30–31; re-read lines 1590–1710 including Proposition 4.18 proof and reversal convention. Corollary 4.29 and opening Remark 4.30, lines 2084–2125, p.37. Not all intermediate §§3–5 lemmas or whole-source proofs.\noss-solitons-v2: §§2.1–2.3 textual definitions, natural labeling, tail/head evolution and Theorem 2.1/Remark 2.2; PDF pp.7–11, with re-read text lines 420–590. §3 opening context only, not full seat-number construction. Theorem 4.7(1), equation (4.16), selected pp.22–23, lines 1230–1275, to bind the coefficient locator. PDF p.11 rendered and visually inspected for the positive adjacent-11 assumption, both mu/nu laws, diffusive scale and (4.16). No full reading or proof certification of §§4–11/appendices.\nforest-reuse: Whole-forest title/content searches and selected actual note bodies read. Ferrari 4C13/14/15/17/19/1A/1B/27/28 are reused unchanged, alongside probability, measure, calculus and Brownian foundations listed in reused_page_records. These local records are not a claim to have newly read all of their primary sources.\nlocal-calculations: Direct mathematical arguments written in owned notes: carrier extrema, parity counterexamples, product-law induction, elementary density substitutions, finite-capacity fibers, log-sum-exp bound and rational Yang–Baxter compositions.",
+    "proof_scope": {
+      "4K01": {
+        "status": "local-proof",
+        "scope": "由有限整数上确界取到、递推比较和左端零点证明存在、最小性、唯一性；复用有限 Pitman 恒等式。补明上确界与下极限，左端指 W_{-k} 的下极限。"
+      },
+      "4K02": {
+        "status": "local-proof",
+        "scope": "在两端分别趋于负、正无穷的最近邻路径上，以首次到达旧最大值证明 I(2M-S)=M；归零常数与反射负号均计算。"
+      },
+      "4K03": {
+        "status": "local-proof",
+        "scope": "双端斜率可不同；分别估计过去最大值的两端斜率，再用反射与 4K02 得全时可逆。"
+      },
+      "4K04": {
+        "status": "worked-counterexample",
+        "scope": "逐格给出拼接交替构形、负载、输出及逆输出，唯一丢失格点为 0。"
+      },
+      "4K05": {
+        "status": "local-proof-from-reused-theorem",
+        "scope": "用 0HS1 对中心化变量取 epsilon=1/4，分别处理两端；p>1/2 的左端发散与 p=1/2 的推论边界明确。"
+      },
+      "4K06": {
+        "status": "definition-and-local-calculation",
+        "scope": "指定比率 r 与成功参数 1-r 的换算，含 r=0；尾和计算均值及二阶矩。"
+      },
+      "4K07": {
+        "status": "local-proof",
+        "scope": "先由过去可测性得未来独立，再由空间平稳性作层间概率流平衡；没有预先使用时间不变性。"
+      },
+      "4K08": {
+        "status": "local-proof",
+        "scope": "可测映射下的推前分布局部定义；逐步证明输出和末端载流子仍联合独立。仅断言有限行。"
+      },
+      "4K09": {
+        "status": "local-proof",
+        "scope": "把全部状态分解为一个不动点和二元交换对，以点质量相等证明完整联合律而非只证明边缘。"
+      },
+      "4K0A": {
+        "status": "local-proof",
+        "scope": "真实左负载的分布与未来独立性、有限窗口归纳、柱集唯一性共同给出全局不变律；全时定义域先由漂移证明。"
+      },
+      "4K0B": {
+        "status": "cited-research-theorem-and-local-density",
+        "scope": "不变性和全时可逆引用 Theorem 1.8(b)；平稳向量与密度阈值直接算出。条件概率仅用于正概率历史；p1=0 保留。"
+      },
+      "4K0C": {
+        "status": "local-proof-of-source-argument",
+        "scope": "以未来最小值把旧负载写成新路径右半轴函数；新路径左半轴决定未来负载。用两半独立与时间平稳逐次证明双侧 iid，随后计算累计流矩。"
+      },
+      "4K0D": {
+        "status": "local-construction-and-proof",
+        "scope": "定义归零的两种路径变换；分别以几何尾和及线性上下界证明有限性和两端斜率保持，允许不同正斜率。"
+      },
+      "4K0E": {
+        "status": "local-proof",
+        "scope": "在给定正漂移路径上推出载流子 max 递推、输出 min 递推及新路径增量；L=1 二值特例还原 BBS。全时唯一性另引 4K0K。"
+      },
+      "4K0F": {
+        "status": "local-proof",
+        "scope": "保持 delta^(-1/2) 的载流子归一化；逐格指数和推出正数局部方程、输出路径与对合性。全时唯一性另引 4K0K。"
+      },
+      "4K0G": {
+        "status": "local-proof",
+        "scope": "对所有实输入建立每坐标 epsilon log 2 一致误差；仅有限维局部映射的超离散极限，不交换无限尾和。"
+      },
+      "4K0H": {
+        "status": "definition-and-local-algebra",
+        "scope": "定义全部局部变量、三元映射以及 min/difference 可逆分解；正整数长度解释与一般实值方程区分。"
+      },
+      "4K0I": {
+        "status": "definition-and-local-algebra",
+        "scope": "给出正变量方程、三元对合与 sum/proportion 分解；x/y 与 x/(x+y) 的互换明确。"
+      },
+      "4K0J": {
+        "status": "cited-construction-with-local-finiteness",
+        "scope": "奇偶增量、奇数最大值/对数和、偶数插值、真实载流子及归零左平移全部明确；尾部有限性复用 4K0D，完整编码与全时对应引 4K0K。"
+      },
+      "4K0K": {
+        "status": "cited-research-theorem",
+        "scope": "精确引用正双端线性路径上的全部整数时刻存在唯一性与变换迭代；不把单步局部解当作全时唯一解，不重证 §§4–5 全部引理。"
+      },
+      "4K0L": {
+        "status": "cited-research-theorem",
+        "scope": "Type I Polish-space measurable-involution theorem; retain mu^Z(X*)=1 where X* means unique all-time lattice solution. Necessity and infinite construction are cited, not inferred from finite rows alone."
+      },
+      "4K0M": {
+        "status": "local-proof",
+        "scope": "局部密度定义含 Borel 集、Lebesgue 测度与积分；分两区域作一维换元和 Tonelli，得到归一化联合密度及逆变换。"
+      },
+      "4K0N": {
+        "status": "local-proof",
+        "scope": "逐次一维换元与 Tonelli 给出 s 因子；Gamma 积分确定 Beta 归一化，逆变换也明确。不引用或证明唯一性刻画。"
+      },
+      "4K0O": {
+        "status": "local-triple-proof-and-cited-global-law",
+        "scope": "通过独立的最小值与差、交换两个同分布变量证明三元局部律；全局不变性和存在性引用 Theorem 4.4(a) 的无平移特例。"
+      },
+      "4K0P": {
+        "status": "local-triple-proof-and-cited-global-law",
+        "scope": "Gamma/Beta 分解交换证明局部律；对数可积性以 integral_0^1 x^(r-1)|log x|dx=1/r^2 覆盖全部 r>0，耦合得严格正漂移。全局律引 Theorem 4.8。"
+      },
+      "4K0Q": {
+        "status": "definition-and-local-integrability-proof",
+        "scope": "采用 x^(-lambda-1)；两端指数尾保证 a,b>0 时任意 lambda，a=0 时 lambda>0，并以 Gamma 换元给出归一化和对数矩。"
+      },
+      "4K0R": {
+        "status": "local-proof",
+        "scope": "同时证明乘积保持、密度指数保持、对合性和面积保持；面积在 (s=xy,z=log x) 坐标中为纤维反射，使用逐次一维换元。不宣称分类唯一性。"
+      },
+      "4K0S": {
+        "status": "conditional-local-proof-using-cited-theorems",
+        "scope": "保留 delta,lambda,c>0 及 2E log omega<-log delta；用有限二阶矩与正交和界检验双端漂移，再调用全时解与 Type I 判据。"
+      },
+      "4K0T": {
+        "status": "local-proof",
+        "scope": "对每个固定总数纤维把更新写成整数区间反射，以同质量证明局部乘积律；K→infinity 仅作固定输入和边缘分布极限。"
+      },
+      "4K0U": {
+        "status": "local-rational-identity-proof",
+        "scope": "逐次列出两种复合的中间三元组及四个多项式恒等式，得到相同终态；所有参数和输入正，分母无零。没有从 YB 推出一般 IP。"
+      },
+      "4K0V": {
+        "status": "cited-research-theorem",
+        "scope": "精确限定 Bernoulli p>0 或 Markov p0,p1>0、和<1；原律与记录条件律、固定初始自然标签、X=min gamma-1、diffusive n²/n scaling 和 D[0,A] 弱收敛均明确。深层座位/消除证明未重证。"
+      },
+      "4K0W": {
+        "status": "definition-and-local-proof",
+        "scope": "定义 cadlag、J1 时间重排与有界连续泛函弱收敛；证明确定性连续极限时 J1 等价一致收敛，不把弱收敛当原样本空间逐点收敛。"
+      },
+      "4K0X": {
+        "status": "worked-example",
+        "scope": "显式算交替构形负载与二周期，证明两点均匀律时间和空间均不变。"
+      }
+    },
+    "claim_sources": {
+      "4K01": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§§2.2, 3.1; Proposition 3.1, Remark 3.2"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "§1.1 path/carrier formulation; local proof supplied in note"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K01: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K02": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.2"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "§2, Theorem 2.14 identity; statement and the cited use in §3.3.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K02: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K03": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K03 two-sided maximum estimates"
+        }
+      ],
+      "4K04": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.2, explicit counterexample"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K04 exact parity and future-infimum calculation"
+        }
+      ],
+      "4K05": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.3"
+        },
+        {
+          "source": "forest-reuse",
+          "locator": "0HS1 orthogonal partial-sum theorem; 00L3, 00L4, 0A6B"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K05: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K06": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.4 geometric convention"
+        },
+        {
+          "source": "forest-reuse",
+          "locator": "4E05 tail moment sum; 00L1 and 00L2"
+        }
+      ],
+      "4K07": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.4"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "§3.2.1, Lemma 3.13; local level-crossing derivation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K07: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K08": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "§2 finite-row mechanism, introductory detailed-balance definitions"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K08: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K09": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.4 IP identity"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K09 exchange pairs and equality of their probabilities"
+        }
+      ],
+      "4K0A": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Proposition 3.4"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "Theorem 1.8(a); alternative finite-window proof supplied"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0A: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0B": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Proposition 3.5"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "Theorem 1.8(b), §3.2.2, §3.2.4"
+        }
+      ],
+      "4K0C": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.4 Burke property paragraph"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "§3.3.1, Theorem 3.23, Lemma 3.25 and independence proof"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0C: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0D": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.1"
+        },
+        {
+          "source": "cst-paths-v2",
+          "locator": "Table 1, §2.1–2.2"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0D: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0E": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.2(a)"
+        },
+        {
+          "source": "cst-paths-v2",
+          "locator": "§2.1, Theorem 2.1 and carrier formula"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0E: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0F": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.2(b)"
+        },
+        {
+          "source": "cst-paths-v2",
+          "locator": "§2.2, Theorem 2.2 and carrier rescaling"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0F: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0G": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Remark 5.5"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "§5.1, equation (5.1)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0G: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0H": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.2(c), equation (5.2)"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "§4.1.1"
+        }
+      ],
+      "4K0I": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.2(d)"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "§4.2.1"
+        }
+      ],
+      "4K0J": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§§5.1–5.2(c,d)"
+        },
+        {
+          "source": "cst-paths-v2",
+          "locator": "§§2.3–2.4, equations (2.11)–(2.15), Table 1"
+        }
+      ],
+      "4K0K": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Theorem 5.3"
+        },
+        {
+          "source": "cst-paths-v2",
+          "locator": "Theorems 2.1, 2.2, 2.3, 2.5, 4.20; Corollary 4.29; 4.19 is forward-time only"
+        }
+      ],
+      "4K0L": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Theorem 5.4(i), informal statement"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Theorem 1.1(a), §§1–2"
+        }
+      ],
+      "4K0M": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3 Toda distribution paragraphs"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Proposition 4.1(a), Appendix A"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0M: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0N": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3 Toda distribution paragraphs"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Proposition 4.5(a), Appendix A"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0N: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0O": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Propositions 4.1–4.2; Theorem 4.4(a), shift parameter zero"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0O: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0P": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Propositions 4.5–4.6; Theorem 4.8; Appendix A (rate c>0)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0P: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0Q": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Appendix A, generalized inverse Gaussian and inverse gamma distributions"
+        }
+      ],
+      "4K0R": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3, equation (5.3)"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Proposition 3.9(a)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0R: displayed derivation; scope as recorded in proof_scope"
+        }
+      ],
+      "4K0S": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3"
+        },
+        {
+          "source": "cs-balance-v3",
+          "locator": "Theorem 3.12(b), Lemma 3.10 and Theorem 1.1(a)"
+        }
+      ],
+      "4K0T": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§5.3, BBS(J,K) and equation (5.3)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0T exact finite-fiber proof; no classification or global dynamics claim"
+        }
+      ],
+      "4K0U": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§§6.1–6.2, H_III^B family"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4K0U composition calculation; SymPy exact rational check corroborates"
+        }
+      ],
+      "4K0V": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Theorem 4.6"
+        },
+        {
+          "source": "oss-solitons-v2",
+          "locator": "§§2.1–2.3, Theorem 2.1(1), equation (4.16); proof located in §§4–11"
+        }
+      ],
+      "4K0W": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "Theorem 4.6 path-space notation"
+        },
+        {
+          "source": "oss-solitons-v2",
+          "locator": "Theorem 2.1(1); local definition and continuous-limit argument supplied"
+        }
+      ],
+      "4K0X": [
+        {
+          "source": "sasada-icm2026",
+          "locator": "§3.3 boundary of sufficient condition"
+        },
+        {
+          "source": "ckst-bbs-v1",
+          "locator": "Remark 1.5; §3.2.4 critical alternating example"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "Full invariant-domain and invariant-measure classifications",
+        "scope": "§3 positive drift is developed as a sufficient class, with a critical example; the complete critical path classification, every reflected-process criterion and all ergodicity results are not reproduced. Independent slot measures are reused, not claimed to classify all invariant measures."
+      },
+      {
+        "branch": "q-statistics, generalized Gibbs states and local equilibration",
+        "scope": "§§3.4 and 7 identify mathematical formulation/justification questions. No established identification of every q-statistics law with a rigorously constructed local GGE is asserted."
+      },
+      {
+        "branch": "Macroscopic extensions and finer soliton fluctuations",
+        "scope": "§4 finite-size one-sided GHD and speed results reused from Ferrari; no extension to arbitrary double-infinite/infinite-size initial data. The tagged CLT is stated, while the full LDP rate, explicit diffusion-coefficient recursion and multi-tag common-Brownian correlations are deferred."
+      },
+      {
+        "branch": "All product-law characterizations and generalized capacities",
+        "scope": "§5 representative exponential, Gamma, GIG and finite integer-capacity geometric laws are developed. Shifted/scaled/bipartite variants, all necessity classifications, continuous-capacity cases and colored BBS are not added."
+      },
+      {
+        "branch": "Other quadrirational Yang–Baxter families",
+        "scope": "§6 H_III^B is treated by a direct proof; H_I^+, H_II^+, H_III^A, generalized beta-prime/Kummer laws, classification uniqueness and distribution-level ultradiscretization are not expanded."
+      },
+      {
+        "branch": "Continuous scaling and stochastic-polymer/random-matrix connections",
+        "scope": "§7 directions are retained as questions; no continuum Pitman limit, arbitrary Weyl-group theory, polymer construction or KdV/Toda hydrodynamic derivation claimed."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4K0B"
+        ],
+        "source": "ckst-bbs-v1",
+        "scope": "Markov invariant law and its all-time support are precisely cited; only stationary density arithmetic is local."
+      },
+      {
+        "notes": [
+          "4K0J",
+          "4K0K"
+        ],
+        "source": "cst-paths-v2",
+        "scope": "Toda path/dynamics correspondence and general four-model all-time existence/uniqueness rely on the primary theorem; full §§4–5 proof not reproduced."
+      },
+      {
+        "notes": [
+          "4K0L",
+          "4K0O",
+          "4K0P",
+          "4K0S"
+        ],
+        "source": "cs-balance-v3; cst-paths-v2",
+        "scope": "Abstract local/global necessity, construction of a full infinite lattice solution and Toda global stationarity are cited. Local density algebra and the conditional dKdV deduction are provided."
+      },
+      {
+        "notes": [
+          "4K0V"
+        ],
+        "source": "oss-solitons-v2",
+        "scope": "Functional CLT relies on seat-number/soliton-elimination decompositions and probabilistic limit theorems in §§4–11. No proof sketch is labeled a full proof."
+      },
+      {
+        "notes": [
+          "4K00"
+        ],
+        "source": "forest-reuse",
+        "scope": "Ferrari slot reconstruction, effective-speed theorem and finite-size hydrodynamic theorem remain the exact external contracts in 4C1A, 4C1B and 4C28."
+      }
+    ],
+    "metadata": {
+      "node_count": 34,
+      "atomic_count": 33,
+      "reference_count": 1,
+      "language": "zh",
+      "coverage": "Main §§3 and 5 developed with local proofs; §2 BBS and §4 slots/effective speeds/GHD reused from Ferrari; §4 tagged CLT stated with exact primary hypotheses; §6 explicit H_III^B Yang–Baxter proof; §§1 and 7 narrative. Specialized unexpanded branches recorded.",
+      "status": "author-repairs-frozen-pending-independent-recheck",
+      "shared_integration": "Parent-owned. No shared navigation, manifest, audit, scripts, tests, theme or existing notes edited; no build, commit or push performed.",
+      "reference_directory": "trees/references",
+      "conventions": [
+        "Path sign S increments 1-2eta is opposite Ferrari xi increments 2eta-1; extrema and carriers converted explicitly.",
+        "All path transforms are normalized at zero. Toda requires a one-site left shift before subtracting H_1; carrier is computed from unnormalized extrema, not an arbitrary difference of normalized paths.",
+        "The positive slopes at the two ends may be distinct. Statements of probability-one domains are concentration statements, not assertions about topological support of Bernoulli measures.",
+        "Geometric parameter r is the ratio, supported on nonnegative integers; the report's success parameter is 1-r.",
+        "Gamma second parameter is positive rate c; GIG convention is x^(-lambda-1). Density definitions and measure/integration links are explicit.",
+        "Type I detailed balance retains mu^Z(X*)=1. A local IP identity alone is not an infinite-volume existence theorem.",
+        "Tagged soliton position is min gamma-1 in OSS, while Ferrari uses min gamma; displacements and asymptotic speeds are unaffected. Initial natural labels are propagated, not reassigned at later times.",
+        "Report §4.6 simplification is read through the primary's adjacent-double-occupation condition. The Markov p1=0 invariant law is not included in the all-size functional CLT.",
+        "Probability laws and hypotheses are fixed to the listed source versions; later classification references in the survey are not inferred to resolve every global-dynamics question."
+      ]
+    }
+  },
+  "notes": [
+    {
+      "id": "4K00",
+      "path": "trees/math/mathematical-physics/sasada/4K00.tree",
+      "title": "随机初态的箱球系统：路径、平衡律与离散可积演化",
+      "taxon": "Outline",
+      "sha256": "cfacafd26d8c05e284bf8fe218782879fc1d1a7fe27c246c4c0fd64e19595c1d"
+    },
+    {
+      "id": "4K01",
+      "path": "trees/math/mathematical-physics/sasada/4K01.tree",
+      "title": "双无限箱球路径的最小搬运器",
+      "taxon": "Theorem",
+      "sha256": "1cb90764abac60952c37de7a8d46aee1f3fb4d57cd59bf12e88d852bf7843eb6"
+    },
+    {
+      "id": "4K02",
+      "path": "trees/math/mathematical-physics/sasada/4K02.tree",
+      "title": "未来最小值恢复箱球路径",
+      "taxon": "Theorem",
+      "sha256": "6c3661cfa0316dd238ea3db3b7ef4383472bf26e8f6a0b668bd2f29e3972ec6f"
+    },
+    {
+      "id": "4K03",
+      "path": "trees/math/mathematical-physics/sasada/4K03.tree",
+      "title": "正线性漂移保持箱球演化的可逆性",
+      "taxon": "Theorem",
+      "sha256": "6bf4f9151e1d6715097e706f7f9fe550c7b7577a42ceb6839f5910ef87f71d7a"
+    },
+    {
+      "id": "4K04",
+      "path": "trees/math/mathematical-physics/sasada/4K04.tree",
+      "title": "临界箱球构形中不能卸下的球",
+      "taxon": "Example",
+      "sha256": "c905791a15f3e9696538e60e99e319395db5919b3aa162ab1ee1d79fc4282fef"
+    },
+    {
+      "id": "4K05",
+      "path": "trees/math/mathematical-physics/sasada/4K05.tree",
+      "title": "Bernoulli 箱球初态的双侧漂移",
+      "taxon": "Theorem",
+      "sha256": "3e0004d6f5859045d7b547e12d9a2156cd8ba86697edff6786c2f9d78f2b4410"
+    },
+    {
+      "id": "4K06",
+      "path": "trees/math/mathematical-physics/sasada/4K06.tree",
+      "title": "从零开始的几何分布",
+      "taxon": "Definition",
+      "sha256": "db1a094b2159865f66db03d7e59243365ac477aad7b952d70198d103a8e70ec5"
+    },
+    {
+      "id": "4K07",
+      "path": "trees/math/mathematical-physics/sasada/4K07.tree",
+      "title": "Bernoulli 初态的搬运负载分布",
+      "taxon": "Theorem",
+      "sha256": "ab10a5ba3c0370fe772e97be82cb0918d1a27224c556d97f0269a08a02e4851c"
+    },
+    {
+      "id": "4K08",
+      "path": "trees/math/mathematical-physics/sasada/4K08.tree",
+      "title": "局部独立性沿有限搬运行传递",
+      "taxon": "Theorem",
+      "sha256": "eb6942cd567e46ac70f2493e71d359ec37e30cfbd56357ac233cda970b992cf5"
+    },
+    {
+      "id": "4K09",
+      "path": "trees/math/mathematical-physics/sasada/4K09.tree",
+      "title": "Bernoulli 与几何分布的局部平衡",
+      "taxon": "Theorem",
+      "sha256": "6bf1300aef1779068ba770f5f19529ad8cbfb4455dd045e6ff4b6259f927b919"
+    },
+    {
+      "id": "4K0A",
+      "path": "trees/math/mathematical-physics/sasada/4K0A.tree",
+      "title": "亚临界 Bernoulli 乘积律的箱球不变性",
+      "taxon": "Theorem",
+      "sha256": "66d4efd7fe337d0f194ca3321e17ad30938791b1f84e264be643470417b96031"
+    },
+    {
+      "id": "4K0B",
+      "path": "trees/math/mathematical-physics/sasada/4K0B.tree",
+      "title": "两态 Markov 箱球初态的不变律",
+      "taxon": "Theorem",
+      "sha256": "1978a986a39e3619bca77c55bc18751fe36217f2d0a271728117eb0fde6f0292"
+    },
+    {
+      "id": "4K0C",
+      "path": "trees/math/mathematical-physics/sasada/4K0C.tree",
+      "title": "固定截面的箱球载流满足 Burke 性质",
+      "taxon": "Theorem",
+      "sha256": "9185afdcceb20221d3eb40e79f7ed0b6951c320e119a7b1966c8eeae8f995188"
+    },
+    {
+      "id": "4K0D",
+      "path": "trees/math/mathematical-physics/sasada/4K0D.tree",
+      "title": "中点最大值与指数和的路径变换",
+      "taxon": "Construction",
+      "sha256": "b234c7c2bb7c96ce11a59a2a2bdf6ae7a5b7c24f00a0ebc8a803510d364b6aa5"
+    },
+    {
+      "id": "4K0E",
+      "path": "trees/math/mathematical-physics/sasada/4K0E.tree",
+      "title": "超离散 KdV 的中点反射公式",
+      "taxon": "Theorem",
+      "sha256": "0ad5960243969c779a88b8cb231a7d7c55a33c01b902458b9b8ef1a06cd8e63f"
+    },
+    {
+      "id": "4K0F",
+      "path": "trees/math/mathematical-physics/sasada/4K0F.tree",
+      "title": "离散 KdV 的指数和搬运器",
+      "taxon": "Theorem",
+      "sha256": "7ad6dcde55e59bb89b7774971aa35025bcddae0255ebe62378bb0bf247007d55"
+    },
+    {
+      "id": "4K0G",
+      "path": "trees/math/mathematical-physics/sasada/4K0G.tree",
+      "title": "离散 KdV 局部映射的超离散极限",
+      "taxon": "Theorem",
+      "sha256": "f3545f5a487f032a0952b35b36e1ce616a7731fa1274a4554c3086125ae6a276"
+    },
+    {
+      "id": "4K0H",
+      "path": "trees/math/mathematical-physics/sasada/4K0H.tree",
+      "title": "超离散 Toda 的块长与空隙更新",
+      "taxon": "Definition",
+      "sha256": "3cdb998f545f6c6845447bce46357819bd9cdf04d2133d416754b83edfd6e8dc"
+    },
+    {
+      "id": "4K0I",
+      "path": "trees/math/mathematical-physics/sasada/4K0I.tree",
+      "title": "离散 Toda 的和与比例更新",
+      "taxon": "Definition",
+      "sha256": "96b6259252eca88b41bdc1778983413f5720a5029a973c0cf35cd70df85b4380"
+    },
+    {
+      "id": "4K0J",
+      "path": "trees/math/mathematical-physics/sasada/4K0J.tree",
+      "title": "Toda 路径的交替编码与一格平移",
+      "taxon": "Construction",
+      "sha256": "a90085ddccf34db76ab3df1d6cf641627af2ccf6b4241f839ad10ae9d9e3b33f"
+    },
+    {
+      "id": "4K0K",
+      "path": "trees/math/mathematical-physics/sasada/4K0K.tree",
+      "title": "正线性路径上的离散可积系统全时解",
+      "taxon": "Theorem",
+      "sha256": "e75b3c74c27bf2c298fe55aa2f2ce1531cecbbafe9c99ef8ec517a96bcac0054"
+    },
+    {
+      "id": "4K0L",
+      "path": "trees/math/mathematical-physics/sasada/4K0L.tree",
+      "title": "全时唯一性下乘积不变律的局部判据",
+      "taxon": "Theorem",
+      "sha256": "5dc1289ef72acb6a09060403890bd7a2c8ceabbb7b83d3e63355b2ffd424905d"
+    },
+    {
+      "id": "4K0M",
+      "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+      "title": "独立指数变量的最小值与差独立",
+      "taxon": "Theorem",
+      "sha256": "99a1f137920249f810c1582b2ff335099e2c0aa3ac16985d999d6c6c697ff476"
+    },
+    {
+      "id": "4K0N",
+      "path": "trees/math/mathematical-physics/sasada/4K0N.tree",
+      "title": "独立 Gamma 变量的和与比例独立",
+      "taxon": "Theorem",
+      "sha256": "efb29d4d705382f9b88e445a1d90a231540829701985a2785f995445c20f1b68"
+    },
+    {
+      "id": "4K0O",
+      "path": "trees/math/mathematical-physics/sasada/4K0O.tree",
+      "title": "超离散 Toda 的指数乘积不变律",
+      "taxon": "Theorem",
+      "sha256": "2391cda18a296a9761782fb3dcbf70257781ffe704b4e3faf8c4f0ff9b947065"
+    },
+    {
+      "id": "4K0P",
+      "path": "trees/math/mathematical-physics/sasada/4K0P.tree",
+      "title": "离散 Toda 的 Gamma 乘积不变律",
+      "taxon": "Theorem",
+      "sha256": "01fe7eaa4b259eb2a4a3df60880e13f3def4c6ca6b60f06c428a620b9d91f2a8"
+    },
+    {
+      "id": "4K0Q",
+      "path": "trees/math/mathematical-physics/sasada/4K0Q.tree",
+      "title": "广义逆高斯分布的参数约定",
+      "taxon": "Definition",
+      "sha256": "99acef54454cba3ff317add92269d90535cacd3122ac0aba10e849e23ce154f3"
+    },
+    {
+      "id": "4K0R",
+      "path": "trees/math/mathematical-physics/sasada/4K0R.tree",
+      "title": "两参数 KdV 映射保持 GIG 独立律",
+      "taxon": "Theorem",
+      "sha256": "0d321830a6cf385525cca5ce983183a3916046b754bd522843c58360116e049b"
+    },
+    {
+      "id": "4K0S",
+      "path": "trees/math/mathematical-physics/sasada/4K0S.tree",
+      "title": "正漂移条件下离散 KdV 的 GIG 不变初态",
+      "taxon": "Theorem",
+      "sha256": "9cf6ffa3fb7bd877075a24b95a821bcddac7bd535714e73f44aac37c0e0361a5"
+    },
+    {
+      "id": "4K0T",
+      "path": "trees/math/mathematical-physics/sasada/4K0T.tree",
+      "title": "有限容量载流子的截断几何平衡",
+      "taxon": "Theorem",
+      "sha256": "7aee6fd7621b493e9e476377df9d745814124d27b4d773b5c198d8ca7af02adf"
+    },
+    {
+      "id": "4K0U",
+      "path": "trees/math/mathematical-physics/sasada/4K0U.tree",
+      "title": "两参数 KdV 映射满足集合论杨–巴克斯特方程",
+      "taxon": "Theorem",
+      "sha256": "eb2ac7356994615dea5e5ea415f5a8f6837883dfab747afffc14927b3f1aaabd"
+    },
+    {
+      "id": "4K0V",
+      "path": "trees/math/mathematical-physics/sasada/4K0V.tree",
+      "title": "标记箱球孤子的扩散尺度极限",
+      "taxon": "Theorem",
+      "sha256": "0decc930d76e74eaa036992650fbccb050875dd34fa36bcd78aa093cb2533da9"
+    },
+    {
+      "id": "4K0W",
+      "path": "trees/math/mathematical-physics/sasada/4K0W.tree",
+      "title": "跳跃轨迹的 Skorokhod 收敛",
+      "taxon": "Definition",
+      "sha256": "cec35ac73b1881476f499d2357301a8d13306d06a0c6bc1afc4b0ae9aad7cd7a"
+    },
+    {
+      "id": "4K0X",
+      "path": "trees/math/mathematical-physics/sasada/4K0X.tree",
+      "title": "密度二分之一的交替箱球不变律",
+      "taxon": "Example",
+      "sha256": "2c4d37466a397036828d206da4b6e24e48470f7361b84553806132a38faec296"
+    },
+    {
+      "id": "icm2026-sasada",
+      "path": "trees/references/icm2026-sasada.tree",
+      "title": "Sasada：Box-ball System and Related Discrete Integrable Systems with Random Initial Conditions",
+      "taxon": "Reference",
+      "sha256": "86811242535d6359fc42314b565493d043004582455b446f9e1a270875c6d582"
+    }
+  ],
+  "prerequisites": {
+    "4K01": [
+      "4C13",
+      "4C14",
+      "4C15",
+      "0A37",
+      "0F61"
+    ],
+    "4K02": [
+      "4K01"
+    ],
+    "4K03": [
+      "4K01",
+      "4K02",
+      "4C14"
+    ],
+    "4K04": [
+      "4C13",
+      "4K01",
+      "4K02"
+    ],
+    "4K05": [
+      "00L3",
+      "00L4",
+      "0A6B",
+      "00L1",
+      "0HS1",
+      "4K03",
+      "4K01"
+    ],
+    "4K06": [
+      "00L0",
+      "4E05",
+      "00L1",
+      "00L2"
+    ],
+    "4K07": [
+      "4K05",
+      "4K01",
+      "4K06",
+      "0A6B"
+    ],
+    "4K08": [
+      "00Q1",
+      "00Q3",
+      "00L3"
+    ],
+    "4K09": [
+      "4C13",
+      "00L3",
+      "4K06",
+      "4K08",
+      "00L4"
+    ],
+    "4K0A": [
+      "0A6B",
+      "4K01",
+      "00RR",
+      "4K05",
+      "4K07",
+      "4K09",
+      "4K08"
+    ],
+    "4K0B": [
+      "00Q3",
+      "4K01"
+    ],
+    "4K0C": [
+      "4K0A",
+      "4K01",
+      "00L1",
+      "00L2",
+      "4K06",
+      "4K07",
+      "4K02"
+    ],
+    "4K0D": [
+      "0A45",
+      "0A46"
+    ],
+    "4K0E": [
+      "4K0D",
+      "4K01"
+    ],
+    "4K0F": [
+      "4K0D"
+    ],
+    "4K0G": [
+      "4K0F",
+      "4K0E"
+    ],
+    "4K0H": [
+      "4C13",
+      "4C17"
+    ],
+    "4K0I": [],
+    "4K0J": [
+      "4K0H",
+      "4K0I",
+      "4K0D"
+    ],
+    "4K0K": [
+      "4K0E",
+      "4K0F",
+      "4K0H",
+      "4K0I",
+      "4K0J"
+    ],
+    "4K0L": [
+      "00QC",
+      "00Q1",
+      "0A6B",
+      "4K08"
+    ],
+    "4K0M": [
+      "00L0",
+      "0A46",
+      "00L3",
+      "0H53",
+      "00XV",
+      "00Q5"
+    ],
+    "4K0N": [
+      "4B08",
+      "00L3",
+      "0H4Z",
+      "0H53"
+    ],
+    "4K0O": [
+      "4K0M",
+      "4K0H",
+      "0A6B",
+      "4K0J"
+    ],
+    "4K0P": [
+      "4K0N",
+      "4K0I",
+      "0A6B",
+      "4K0J"
+    ],
+    "4K0Q": [
+      "00L0",
+      "0H4Z",
+      "4K0M"
+    ],
+    "4K0R": [
+      "00L3",
+      "4K0Q",
+      "0H53"
+    ],
+    "4K0S": [
+      "4K0Q",
+      "0A6B",
+      "4K0F",
+      "0HS1",
+      "4K05",
+      "4K0K",
+      "4K0R",
+      "4K0L"
+    ],
+    "4K0T": [
+      "00L3",
+      "4K06",
+      "4K09"
+    ],
+    "4K0U": [
+      "4K0R"
+    ],
+    "4K0V": [
+      "4K0A",
+      "4K0B",
+      "4C14",
+      "4C17",
+      "4C1B",
+      "4K0W",
+      "0N0S"
+    ],
+    "4K0W": [
+      "00E2",
+      "00L1",
+      "00LA",
+      "0A3K",
+      "0F40"
+    ],
+    "4K0X": [
+      "4K01",
+      "00RR"
+    ]
+  },
+  "entries": [
+    [
+      "4K01",
+      [
+        "4C13",
+        "4C14",
+        "4C15",
+        "0A37",
+        "0F61"
+      ],
+      "双无限箱球构形何时有左端反复清空的唯一搬运器？ 由有限整数上确界取到、递推比较和左端零点证明存在、最小性、唯一性；复用有限 Pitman 恒等式。补明上确界与下极限，左端指 W_{-k} 的下极限。"
+    ],
+    [
+      "4K02",
+      [
+        "4K01"
+      ],
+      "过去最大值反射为何能由未来最小值逆转？ 在两端分别趋于负、正无穷的最近邻路径上，以首次到达旧最大值证明 I(2M-S)=M；归零常数与反射负号均计算。"
+    ],
+    [
+      "4K03",
+      [
+        "4K01",
+        "4K02",
+        "4C14"
+      ],
+      "怎样保证箱球正反演化任意多次仍可定义？ 双端斜率可不同；分别估计过去最大值的两端斜率，再用反射与 4K02 得全时可逆。"
+    ],
+    [
+      "4K04",
+      [
+        "4C13",
+        "4K01",
+        "4K02"
+      ],
+      "过去最大值有限为何还不保证可逆？ 逐格给出拼接交替构形、负载、输出及逆输出，唯一丢失格点为 0。"
+    ],
+    [
+      "4K05",
+      [
+        "00L3",
+        "00L4",
+        "0A6B",
+        "00L1",
+        "0HS1",
+        "4K03",
+        "4K01"
+      ],
+      "Bernoulli 构形怎样满足双侧漂移条件？ 用 0HS1 对中心化变量取 epsilon=1/4，分别处理两端；p>1/2 的左端发散与 p=1/2 的推论边界明确。"
+    ],
+    [
+      "4K06",
+      [
+        "00L0",
+        "4E05",
+        "00L1",
+        "00L2"
+      ],
+      "零起点几何分布怎样归一化并计算矩？ 指定比率 r 与成功参数 1-r 的换算，含 r=0；尾和计算均值及二阶矩。"
+    ],
+    [
+      "4K07",
+      [
+        "4K05",
+        "4K01",
+        "4K06",
+        "0A6B"
+      ],
+      "Bernoulli 初态的真实负载为何是几何分布？ 先由过去可测性得未来独立，再由空间平稳性作层间概率流平衡；没有预先使用时间不变性。"
+    ],
+    [
+      "4K08",
+      [
+        "00Q1",
+        "00Q3",
+        "00L3"
+      ],
+      "局部乘积律怎样沿有限格点行传播？ 可测映射下的推前分布局部定义；逐步证明输出和末端载流子仍联合独立。仅断言有限行。"
+    ],
+    [
+      "4K09",
+      [
+        "4C13",
+        "00L3",
+        "4K06",
+        "4K08",
+        "00L4"
+      ],
+      "为什么箱球局部更新保持 Bernoulli–几何乘积律？ 把全部状态分解为一个不动点和二元交换对，以点质量相等证明完整联合律而非只证明边缘。"
+    ],
+    [
+      "4K0A",
+      [
+        "0A6B",
+        "4K01",
+        "00RR",
+        "4K05",
+        "4K07",
+        "4K09",
+        "4K08"
+      ],
+      "怎样从局部平衡得到整条 Bernoulli 初态不变？ 真实左负载的分布与未来独立性、有限窗口归纳、柱集唯一性共同给出全局不变律；全时定义域先由漂移证明。"
+    ],
+    [
+      "4K0B",
+      [
+        "00Q3",
+        "4K01"
+      ],
+      "相邻位相关的两态 Markov 初态何时不变？ 不变性和全时可逆引用 Theorem 1.8(b)；平稳向量与密度阈值直接算出。条件概率仅用于正概率历史；p1=0 保留。"
+    ],
+    [
+      "4K0C",
+      [
+        "4K0A",
+        "4K01",
+        "00L1",
+        "00L2",
+        "4K06",
+        "4K07",
+        "4K02"
+      ],
+      "固定截面的载流为何在时间上独立？ 以未来最小值把旧负载写成新路径右半轴函数；新路径左半轴决定未来负载。用两半独立与时间平稳逐次证明双侧 iid，随后计算累计流矩。"
+    ],
+    [
+      "4K0D",
+      [
+        "0A45",
+        "0A46"
+      ],
+      "中点最大值和指数和为何定义有限且保持漂移？ 定义归零的两种路径变换；分别以几何尾和及线性上下界证明有限性和两端斜率保持，允许不同正斜率。"
+    ],
+    [
+      "4K0E",
+      [
+        "4K0D",
+        "4K01"
+      ],
+      "超离散 KdV 如何由中点反射读出？ 在给定正漂移路径上推出载流子 max 递推、输出 min 递推及新路径增量；L=1 二值特例还原 BBS。全时唯一性另引 4K0K。"
+    ],
+    [
+      "4K0F",
+      [
+        "4K0D"
+      ],
+      "离散 KdV 如何由指数和读出？ 保持 delta^(-1/2) 的载流子归一化；逐格指数和推出正数局部方程、输出路径与对合性。全时唯一性另引 4K0K。"
+    ],
+    [
+      "4K0G",
+      [
+        "4K0F",
+        "4K0E"
+      ],
+      "离散 KdV 的局部有理式如何趋于 min 规则？ 对所有实输入建立每坐标 epsilon log 2 一致误差；仅有限维局部映射的超离散极限，不交换无限尾和。"
+    ],
+    [
+      "4K0H",
+      [
+        "4C13",
+        "4C17"
+      ],
+      "超离散 Toda 怎样更新球块和空隙？ 定义全部局部变量、三元映射以及 min/difference 可逆分解；正整数长度解释与一般实值方程区分。"
+    ],
+    [
+      "4K0I",
+      [],
+      "离散 Toda 如何把总量与比例拆开再重组？ 给出正变量方程、三元对合与 sum/proportion 分解；x/y 与 x/(x+y) 的互换明确。"
+    ],
+    [
+      "4K0J",
+      [
+        "4K0H",
+        "4K0I",
+        "4K0D"
+      ],
+      "Toda 路径为什么交替编码并平移一格？ 奇偶增量、奇数最大值/对数和、偶数插值、真实载流子及归零左平移全部明确；尾部有限性复用 4K0D，完整编码与全时对应引 4K0K。"
+    ],
+    [
+      "4K0K",
+      [
+        "4K0E",
+        "4K0F",
+        "4K0H",
+        "4K0I",
+        "4K0J"
+      ],
+      "四个 KdV/Toda 模型何时存在唯一全时解？ 精确引用正双端线性路径上的全部整数时刻存在唯一性与变换迭代；不把单步局部解当作全时唯一解，不重证 §§4–5 全部引理。"
+    ],
+    [
+      "4K0L",
+      [
+        "00QC",
+        "00Q1",
+        "0A6B",
+        "4K08"
+      ],
+      "在什么全局假设下局部平衡等价于乘积律不变？ Type I Polish-space measurable-involution theorem; retain mu^Z(X*)=1 where X* means unique all-time lattice solution. Necessity and infinite construction are cited, not inferred from finite rows alone."
+    ],
+    [
+      "4K0M",
+      [
+        "00L0",
+        "0A46",
+        "00L3",
+        "0H53",
+        "00XV",
+        "00Q5"
+      ],
+      "两个独立指数变量的最小值与差为何独立？ 局部密度定义含 Borel 集、Lebesgue 测度与积分；分两区域作一维换元和 Tonelli，得到归一化联合密度及逆变换。"
+    ],
+    [
+      "4K0N",
+      [
+        "4B08",
+        "00L3",
+        "0H4Z",
+        "0H53"
+      ],
+      "两个同速率 Gamma 变量的和与占比为何独立？ 逐次一维换元与 Tonelli 给出 s 因子；Gamma 积分确定 Beta 归一化，逆变换也明确。不引用或证明唯一性刻画。"
+    ],
+    [
+      "4K0O",
+      [
+        "4K0M",
+        "4K0H",
+        "0A6B",
+        "4K0J"
+      ],
+      "超离散 Toda 为什么保持一类指数乘积律？ 通过独立的最小值与差、交换两个同分布变量证明三元局部律；全局不变性和存在性引用 Theorem 4.4(a) 的无平移特例。"
+    ],
+    [
+      "4K0P",
+      [
+        "4K0N",
+        "4K0I",
+        "0A6B",
+        "4K0J"
+      ],
+      "离散 Toda 为什么保持一类 Gamma 乘积律？ Gamma/Beta 分解交换证明局部律；对数可积性以 integral_0^1 x^(r-1)|log x|dx=1/r^2 覆盖全部 r>0，耦合得严格正漂移。全局律引 Theorem 4.8。"
+    ],
+    [
+      "4K0Q",
+      [
+        "00L0",
+        "0H4Z",
+        "4K0M"
+      ],
+      "GIG 与逆 Gamma 的参数和可积范围是什么？ 采用 x^(-lambda-1)；两端指数尾保证 a,b>0 时任意 lambda，a=0 时 lambda>0，并以 Gamma 换元给出归一化和对数矩。"
+    ],
+    [
+      "4K0R",
+      [
+        "00L3",
+        "4K0Q",
+        "0H53"
+      ],
+      "两参数 KdV 映射为何保持 GIG 乘积律？ 同时证明乘积保持、密度指数保持、对合性和面积保持；面积在 (s=xy,z=log x) 坐标中为纤维反射，使用逐次一维换元。不宣称分类唯一性。"
+    ],
+    [
+      "4K0S",
+      [
+        "4K0Q",
+        "0A6B",
+        "4K0F",
+        "0HS1",
+        "4K05",
+        "4K0K",
+        "4K0R",
+        "4K0L"
+      ],
+      "怎样把 GIG 局部平衡提升到离散 KdV 的全局不变性？ 保留 delta,lambda,c>0 及 2E log omega<-log delta；用有限二阶矩与正交和界检验双端漂移，再调用全时解与 Type I 判据。"
+    ],
+    [
+      "4K0T",
+      [
+        "00L3",
+        "4K06",
+        "4K09"
+      ],
+      "有限箱容量和载流子容量为何保持截断几何律？ 对每个固定总数纤维把更新写成整数区间反射，以同质量证明局部乘积律；K→infinity 仅作固定输入和边缘分布极限。"
+    ],
+    [
+      "4K0U",
+      [
+        "4K0R"
+      ],
+      "两参数 KdV 为什么满足集合论杨–巴克斯特方程？ 逐次列出两种复合的中间三元组及四个多项式恒等式，得到相同终态；所有参数和输入正，分母无零。没有从 YB 推出一般 IP。"
+    ],
+    [
+      "4K0V",
+      [
+        "4K0A",
+        "4K0B",
+        "4C14",
+        "4C17",
+        "4C1B",
+        "4K0W",
+        "0N0S"
+      ],
+      "平衡态中标记孤子的中心化轨迹如何趋于布朗运动？ 精确限定 Bernoulli p>0 或 Markov p0,p1>0、和<1；原律与记录条件律、固定初始自然标签、X=min gamma-1、diffusive n²/n scaling 和 D[0,A] 弱收敛均明确。深层座位/消除证明未重证。"
+    ],
+    [
+      "4K0W",
+      [
+        "00E2",
+        "00L1",
+        "00LA",
+        "0A3K",
+        "0F40"
+      ],
+      "跳跃轨迹的路径弱收敛是什么意思？ 定义 cadlag、J1 时间重排与有界连续泛函弱收敛；证明确定性连续极限时 J1 等价一致收敛，不把弱收敛当原样本空间逐点收敛。"
+    ],
+    [
+      "4K0X",
+      [
+        "4K01",
+        "00RR"
+      ],
+      "临界密度是否可能仍有可逆不变初态？ 显式算交替构形负载与二周期，证明两点均匀律时间和空间均不变。"
+    ]
+  ],
+  "atomic_questions": {
+    "4K01": "双无限箱球构形何时有左端反复清空的唯一搬运器？",
+    "4K02": "过去最大值反射为何能由未来最小值逆转？",
+    "4K03": "怎样保证箱球正反演化任意多次仍可定义？",
+    "4K04": "过去最大值有限为何还不保证可逆？",
+    "4K05": "Bernoulli 构形怎样满足双侧漂移条件？",
+    "4K06": "零起点几何分布怎样归一化并计算矩？",
+    "4K07": "Bernoulli 初态的真实负载为何是几何分布？",
+    "4K08": "局部乘积律怎样沿有限格点行传播？",
+    "4K09": "为什么箱球局部更新保持 Bernoulli–几何乘积律？",
+    "4K0A": "怎样从局部平衡得到整条 Bernoulli 初态不变？",
+    "4K0B": "相邻位相关的两态 Markov 初态何时不变？",
+    "4K0C": "固定截面的载流为何在时间上独立？",
+    "4K0D": "中点最大值和指数和为何定义有限且保持漂移？",
+    "4K0E": "超离散 KdV 如何由中点反射读出？",
+    "4K0F": "离散 KdV 如何由指数和读出？",
+    "4K0G": "离散 KdV 的局部有理式如何趋于 min 规则？",
+    "4K0H": "超离散 Toda 怎样更新球块和空隙？",
+    "4K0I": "离散 Toda 如何把总量与比例拆开再重组？",
+    "4K0J": "Toda 路径为什么交替编码并平移一格？",
+    "4K0K": "四个 KdV/Toda 模型何时存在唯一全时解？",
+    "4K0L": "在什么全局假设下局部平衡等价于乘积律不变？",
+    "4K0M": "两个独立指数变量的最小值与差为何独立？",
+    "4K0N": "两个同速率 Gamma 变量的和与占比为何独立？",
+    "4K0O": "超离散 Toda 为什么保持一类指数乘积律？",
+    "4K0P": "离散 Toda 为什么保持一类 Gamma 乘积律？",
+    "4K0Q": "GIG 与逆 Gamma 的参数和可积范围是什么？",
+    "4K0R": "两参数 KdV 映射为何保持 GIG 乘积律？",
+    "4K0S": "怎样把 GIG 局部平衡提升到离散 KdV 的全局不变性？",
+    "4K0T": "有限箱容量和载流子容量为何保持截断几何律？",
+    "4K0U": "两参数 KdV 为什么满足集合论杨–巴克斯特方程？",
+    "4K0V": "平衡态中标记孤子的中心化轨迹如何趋于布朗运动？",
+    "4K0W": "跳跃轨迹的路径弱收敛是什么意思？",
+    "4K0X": "临界密度是否可能仍有可逆不变初态？"
+  },
+  "reused_pages": [
+    "00E2",
+    "00L0",
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L4",
+    "00LA",
+    "00Q1",
+    "00Q3",
+    "00Q5",
+    "00QC",
+    "00RR",
+    "00XV",
+    "0A37",
+    "0A3K",
+    "0A45",
+    "0A46",
+    "0A6B",
+    "0F40",
+    "0F61",
+    "0H4Z",
+    "0H53",
+    "0HS1",
+    "0N0S",
+    "4B01",
+    "4B08",
+    "4C13",
+    "4C14",
+    "4C15",
+    "4C17",
+    "4C19",
+    "4C1A",
+    "4C1B",
+    "4C27",
+    "4C28",
+    "4E05"
+  ],
+  "reused_page_records": [
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "title": "连续映射",
+      "taxon": "Definition",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "title": "实随机变量与分布",
+      "taxon": "Definition",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "title": "随机变量的期望",
+      "taxon": "Definition",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af"
+    },
+    {
+      "id": "00L2",
+      "path": "trees/math/network/atomic/00L2.tree",
+      "title": "方差",
+      "taxon": "Definition",
+      "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "title": "事件与随机变量的独立性",
+      "taxon": "Definition",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769"
+    },
+    {
+      "id": "00L4",
+      "path": "trees/math/network/atomic/00L4.tree",
+      "title": "Bernoulli 分布",
+      "taxon": "Definition",
+      "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5"
+    },
+    {
+      "id": "00LA",
+      "path": "trees/math/network/atomic/00LA.tree",
+      "title": "依分布收敛",
+      "taxon": "Definition",
+      "sha256": "164baae821c5bc243aebbf5b8a02971576b60b54ea616eddbea5e9b557ab511b"
+    },
+    {
+      "id": "00Q1",
+      "path": "trees/math/logic/research/atomic/00Q1.tree",
+      "title": "可测映射",
+      "taxon": "Definition",
+      "sha256": "29efd7a8c18263294c150b171392e3f44b4fa95e7fe1c715b8e0150b63fb4464"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "title": "概率空间",
+      "taxon": "Definition",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "title": "Lebesgue 积分",
+      "taxon": "Definition",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260"
+    },
+    {
+      "id": "00QC",
+      "path": "trees/math/logic/research/atomic/00QC.tree",
+      "title": "Polish 空间",
+      "taxon": "Definition",
+      "sha256": "ceefcd4519d75ceef29b9fbc2686c6f4fa5d553d76142c6452d3be20c8e743a1"
+    },
+    {
+      "id": "00RR",
+      "path": "trees/math/logic/research/atomic/00RR.tree",
+      "title": "保测映射",
+      "taxon": "Definition",
+      "sha256": "4fabc901b69cb3265d68f0584a0eca1efad6b04049898bbfb17d905bcabcc895"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "title": "欧氏空间的 Lebesgue 测度",
+      "taxon": "Definition",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1"
+    },
+    {
+      "id": "0A37",
+      "path": "trees/math/analysis/atomic/0A37.tree",
+      "title": "实数的上确界完备性",
+      "taxon": "Axiom",
+      "sha256": "e212fde4ae3219df6893b832515641e403a16af323e431575bbb86df7f837b29"
+    },
+    {
+      "id": "0A3K",
+      "path": "trees/math/analysis/atomic/0A3K.tree",
+      "title": "闭区间上的连续函数 Riemann 可积",
+      "taxon": "Theorem",
+      "sha256": "44a600983869d653cb925def052599779d03a03213e048a23a787ddfca35b5b6"
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "title": "由积分定义的自然对数",
+      "taxon": "Definition",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297"
+    },
+    {
+      "id": "0A46",
+      "path": "trees/math/analysis/atomic/0A46.tree",
+      "title": "指数函数及其导数",
+      "taxon": "Definition",
+      "sha256": "f10c39159cbfd27ea1e1e4798af44066c0c601fbd13853bfa36eb3f63031a335"
+    },
+    {
+      "id": "0A6B",
+      "path": "trees/math/logic/research/atomic/0A6B.tree",
+      "title": "可数概率空间的乘积测度",
+      "taxon": "Theorem",
+      "sha256": "5693f635e82eb6556c668128012930441c1f96212da3f1e39a467c3645cbc4c8"
+    },
+    {
+      "id": "0F40",
+      "path": "trees/math/topology/atomic/0F40.tree",
+      "title": "度量空间之间的一致连续映射",
+      "taxon": "Definition",
+      "sha256": "40802ed0f82b749ef73f0f6909c2cb4939fc923103e0e8cc528246fbe360c87b"
+    },
+    {
+      "id": "0F61",
+      "path": "trees/math/analysis/atomic/0F61.tree",
+      "title": "实数列的上极限与下极限",
+      "taxon": "Definition",
+      "sha256": "c73ffc16ae619346dc9ec3ac57588ec682cd0af4f4736d8989755f1d8a9199bf"
+    },
+    {
+      "id": "0H4Z",
+      "path": "trees/math/number-theory/reports/0H4Z.tree",
+      "title": "Gamma 函数的积分与递推",
+      "taxon": "Definition",
+      "sha256": "857c3fd822acc69dee2542721ae76d4d028d8fe3eee8bb609847312c913702dc"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "title": "Fubini–Tonelli 积分定理",
+      "taxon": "Theorem",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b"
+    },
+    {
+      "id": "0HS1",
+      "path": "trees/math/number-theory/reports/0HS1.tree",
+      "title": "正交性怎样给出几乎处处的平方根加 ε 部分和界",
+      "taxon": "Theorem",
+      "sha256": "4ec5e42e90e9a31dfc7b4c7f81ac9202fbbabda48d37663a4ca0d56d67cae36e"
+    },
+    {
+      "id": "0N0S",
+      "path": "trees/math/geometry/bourbaki/0N0S.tree",
+      "title": "欧氏空间中的标准布朗运动",
+      "taxon": "Definition",
+      "sha256": "d8dbcbc414b2900d0d1fd05c03ca5b2c2211fe12df7f6547fb31544e4609b07e"
+    },
+    {
+      "id": "4B01",
+      "path": "trees/math/mathematical-physics/aggarwal/4B01.tree",
+      "title": "有限开链 Toda 系统的 Hamilton 方程",
+      "taxon": "Definition",
+      "sha256": "8d2456561f9d95a337b6d68153c5d9d8212db1c816131c22648248a6632e91c1"
+    },
+    {
+      "id": "4B08",
+      "path": "trees/math/mathematical-physics/aggarwal/4B08.tree",
+      "title": "Toda 热平衡的高斯与平方根 Gamma 变量",
+      "taxon": "Definition",
+      "sha256": "c4f529496a94e535af19e3081ce9baae4e687f0cfa49439f2c9c2f22a3438198"
+    },
+    {
+      "id": "4C13",
+      "path": "trees/math/mathematical-physics/ferrari/4C13.tree",
+      "title": "有限箱球构形的搬运规则",
+      "taxon": "Definition",
+      "sha256": "1fa5830eb1905c6ee1ce6c0d7ed48a2d2c73cdc467f07524519c71160cac5842"
+    },
+    {
+      "id": "4C14",
+      "path": "trees/math/mathematical-physics/ferrari/4C14.tree",
+      "title": "双无限箱球构形的记录点条件",
+      "taxon": "Definition",
+      "sha256": "7c98c09d606b27e2b9de05d600abb2758291df37f037b41f81d04ed733c7f60f"
+    },
+    {
+      "id": "4C15",
+      "path": "trees/math/mathematical-physics/ferrari/4C15.tree",
+      "title": "搬运器与 Pitman 反射的恒等式",
+      "taxon": "Theorem",
+      "sha256": "ac172511b4ed4401235327840199be0628a8f59f73f5873a2ba99c090c7a2b9a"
+    },
+    {
+      "id": "4C17",
+      "path": "trees/math/mathematical-physics/ferrari/4C17.tree",
+      "title": "离散孤子的分解与时间标签",
+      "taxon": "Definition",
+      "sha256": "9fbd20ce458d3e74093d0f7f7d6994ed8d2ed7d58c154573bc05566c6310106b"
+    },
+    {
+      "id": "4C19",
+      "path": "trees/math/mathematical-physics/ferrari/4C19.tree",
+      "title": "离散槽坐标的计数与平移",
+      "taxon": "Construction",
+      "sha256": "1c9086545267c95670f384458275c648803c90b7ccfff7a63395c48727bbe851"
+    },
+    {
+      "id": "4C1A",
+      "path": "trees/math/mathematical-physics/ferrari/4C1A.tree",
+      "title": "独立槽分量生成的箱球不变测度",
+      "taxon": "Theorem",
+      "sha256": "7b928aa66951ba3c5f3b9d57e7d4adfe0143e0e1633eb6c23b63720f23aa7527"
+    },
+    {
+      "id": "4C1B",
+      "path": "trees/math/mathematical-physics/ferrari/4C1B.tree",
+      "title": "离散箱球孤子的几乎处处有效速度",
+      "taxon": "Theorem",
+      "sha256": "97e834ed69e82ef436e0c94ca7ac3a8f90b18762ee207a54ae680a06758d4d53"
+    },
+    {
+      "id": "4C27",
+      "path": "trees/math/mathematical-physics/ferrari/4C27.tree",
+      "title": "有限尺寸箱球流体的可容许密度",
+      "taxon": "Definition",
+      "sha256": "e753d259c99bbe691927f79f7d6c368e203d21c0d019a7a3ab545b0d632fed9b"
+    },
+    {
+      "id": "4C28",
+      "path": "trees/math/mathematical-physics/ferrari/4C28.tree",
+      "title": "单侧有限尺寸箱球系统的流体极限",
+      "taxon": "Theorem",
+      "sha256": "f77ebf5f28ccd8e384447d6362e48ef2dd7e5c3a25f8bb15999e428fc93e32dd"
+    },
+    {
+      "id": "4E05",
+      "path": "trees/math/mathematical-physics/hutchcroft/4E05.tree",
+      "title": "整数随机变量的尾和矩公式",
+      "taxon": "Theorem",
+      "sha256": "b02c754b8300bfb08b1720b1288db766ffd6eab6ac3a1a1b316327c00be32de1"
+    }
+  ],
+  "navigation_only": {
+    "4K01": [],
+    "4K02": [
+      "4K03"
+    ],
+    "4K03": [],
+    "4K04": [],
+    "4K05": [
+      "4K0X"
+    ],
+    "4K06": [],
+    "4K07": [],
+    "4K08": [
+      "4K07"
+    ],
+    "4K09": [],
+    "4K0A": [],
+    "4K0B": [
+      "4K0A",
+      "4K0V"
+    ],
+    "4K0C": [],
+    "4K0D": [
+      "4K01"
+    ],
+    "4K0E": [
+      "4K0K"
+    ],
+    "4K0F": [
+      "4K0K"
+    ],
+    "4K0G": [],
+    "4K0H": [
+      "4K0O"
+    ],
+    "4K0I": [
+      "4K0N",
+      "4B01"
+    ],
+    "4K0J": [
+      "4K0K"
+    ],
+    "4K0K": [],
+    "4K0L": [
+      "4K0K"
+    ],
+    "4K0M": [
+      "4K0O"
+    ],
+    "4K0N": [
+      "4K0I"
+    ],
+    "4K0O": [],
+    "4K0P": [],
+    "4K0Q": [
+      "4K0S"
+    ],
+    "4K0R": [
+      "4K0F"
+    ],
+    "4K0S": [],
+    "4K0T": [
+      "4K0L"
+    ],
+    "4K0U": [],
+    "4K0V": [],
+    "4K0W": [],
+    "4K0X": []
+  },
+  "terminology_evidence": {
+    "method": "Whole-forest searches for carrier/box-ball, extrema and drift, geometric/exponential/Gamma/GIG densities, path/Pitman transforms, independence, Skorokhod and Yang–Baxter. Selected note bodies read before reuse. Final read-only inventory contained 7251 trees; baseline request mentioned 7130 before concurrent authoring.",
+    "reuse_decisions": [
+      "Reused Ferrari carrier, records, Pitman formula, soliton labels, slots, independent slot law, speed and one-sided finite-size GHD without editing or cloning their statements.",
+      "No generic geometric-law or Skorokhod definition found by title/content searches; new entries fix zero-based support and path-topology convention.",
+      "Gamma density convention reused from 4B08 and Gamma integral 0H4Z; new atom concerns sum/proportion independence rather than another generic Gamma definition.",
+      "Existing 2V0M concerns linear/quantum Yang–Baxter and transfer matrices; new 4K0U proves a set-theoretical positive rational family instead.",
+      "00L0 defines random variables, not densities: 4K0M supplies the local density contract and links 00XV/00Q5.",
+      "Extrema and left lower limit reuse 0A37/0F61; uniform continuity reuses 0F40 with the proof in 0A3K."
+    ],
+    "banana_space": {
+      "checked_on": "2026-10-24",
+      "attempted_urls": [
+        "https://banana-space.com/wiki/几何分布",
+        "https://banana-space.com/wiki/概率分布",
+        "https://banana-space.com/wiki/杨-Baxter方程"
+      ],
+      "result": "Direct web access returned inaccessible; search did not deliver usable definitions. No verified match claimed.",
+      "verified_terms": [],
+      "pending_terms": [
+        "几何分布",
+        "概率密度",
+        "广义逆高斯分布",
+        "Skorokhod 拓扑",
+        "集合论杨–巴克斯特方程"
+      ]
+    }
+  },
+  "source_records": [
+    {
+      "id": "sasada-icm2026",
+      "authors": [
+        "Makiko Sasada"
+      ],
+      "title": "Box-ball System and Related Discrete Integrable Systems with Random Initial Conditions",
+      "doi": "10.1137/25M1806715",
+      "pages": "575–595",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+      "version": "Published proceedings HTML, accessed 2026-10-24",
+      "license": "CC BY 4.0",
+      "copyright": "© 2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire mathematical HTML body §§1–7, lines 101–570, in overlapping section-sized reads; displayed equations and text figure captions. Bibliography [1]–[63], lines 576–920, and metadata/licensing lines 928–976 read. Re-read §§3.1–3.4, §§5.1–5.3 and §6 in proof/parameter checks. Image-only figures and diagrams were not pixel-inspected; no figures reproduced.",
+      "access_gap": "Web tool delivered full HTML; direct terminal request returned HTTP 403, so no local publisher HTML/PDF or hash is claimed.",
+      "proof_boundary": "Survey supplies narrative and research contracts; elementary proofs are newly written and distinguished per atom. No assertion that every cited research proof was read or reproduced."
+    },
+    {
+      "id": "ckst-bbs-v1",
+      "authors": [
+        "David A. Croydon",
+        "Tsuyoshi Kato",
+        "Makiko Sasada",
+        "Satoshi Tsujimoto"
+      ],
+      "title": "Dynamics of the box-ball system with random initial conditions via Pitman's transformation",
+      "version": "arXiv:1806.02147v1",
+      "version_date": "2018-06-06",
+      "doi": "10.1090/memo/1398",
+      "journal": "Memoirs of the American Mathematical Society 283(1398), 2023",
+      "url": "https://arxiv.org/abs/1806.02147v1",
+      "version_url": "https://arxiv.org/html/1806.02147v1",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "Selected HTML: introduction/path framework and Theorems 1.2, 1.4, 1.6–1.8, lines 214–304; targeted Theorem 3.23 checks. Subsequently read §3.2.4 and §3.3.1 through the independence proof of Theorem 3.23, lines 1710–1773, including Lemma 3.25 and its proof. The next Cramer-rate calculation was not completed and is not reproduced. Not the full paper or all of §2/§3.2.2.",
+      "proof_boundary": "Markov invariance is cited. BBS carrier, inversion, Bernoulli invariance and Burke independence are explicitly proved locally, using the selected source argument for the last."
+    },
+    {
+      "id": "cs-balance-v3",
+      "authors": [
+        "David A. Croydon",
+        "Makiko Sasada"
+      ],
+      "title": "Detailed balance and invariant measures for discrete KdV- and Toda-type systems",
+      "version": "arXiv:2007.06203v3",
+      "version_date": "2021-12-09",
+      "url": "https://arxiv.org/abs/2007.06203v3",
+      "version_url": "https://arxiv.org/pdf/2007.06203v3",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "Selected introduction/type I–II setting and Theorem 1.1, PDF pp.3–5 (text lines 140–205 re-read); selected Theorem 2.1/Lemma 2.2 statements. §3.2.2 Proposition 3.9 and its proof, §3.2.3 Lemmas 3.10–3.11 and Theorem 3.12, pp.22–24 (lines 1070–1215). Selected §4.1 Proposition 4.1/4.2 and §4.1.3 Theorem 4.4; §4.2.1–4.2.3, Propositions 4.5–4.6 and Theorem 4.8, pp.26–29 (lines 1320–1505). §5.1 opening ultra-discretization formulas (5.1)–(5.2). Appendix A density conventions, text lines 2400–2490, pp.47–48. PDF p.29 rendered and visually inspected for Theorem 4.8 and its printed rate parameter. Not the whole paper, characterization proofs or general ergodicity proof.",
+      "local_pdf": "/tmp/sasada-balance-v3.pdf",
+      "sha256": "79a1f83ab60eae6a4639e1a859958eb56f942dbb23d4c7c864fa181c8b529d6a",
+      "proof_boundary": "Type I criterion and Toda global laws are external theorems. Selected exponential/Gamma/GIG existence identities are proved, not full uniqueness classifications. The positive-alpha, positive-beta global dynamics are not asserted from the local GIG identity."
+    },
+    {
+      "id": "cst-paths-v2",
+      "authors": [
+        "David A. Croydon",
+        "Makiko Sasada",
+        "Satoshi Tsujimoto"
+      ],
+      "title": "Bi-infinite solutions for KdV- and Toda-type discrete integrable systems based on path encodings",
+      "version": "arXiv:2011.00690v2",
+      "version_date": "2022-05-17",
+      "doi": "10.1007/s11040-022-09435-4",
+      "journal": "Mathematical Physics, Analysis and Geometry 25, 27 (2022)",
+      "url": "https://arxiv.org/abs/2011.00690v2",
+      "version_url": "https://arxiv.org/pdf/2011.00690v2",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "Selected introduction/table 1 and all four model statements/encodings in §2, extracted lines 205–905, PDF pp.5–16. Theorem 4.19 forward-time and Theorem 4.20 all-time statements, pp.30–31; re-read lines 1590–1710 including Proposition 4.18 proof and reversal convention. Corollary 4.29 and opening Remark 4.30, lines 2084–2125, p.37. Not all intermediate §§3–5 lemmas or whole-source proofs.",
+      "local_pdf": "/tmp/sasada-paths-v2.pdf",
+      "sha256": "7dbfb7e5730a236402509323a5b196eb2d1f2a991bf1fb5c7dc115998ab3a0ef",
+      "proof_boundary": "General all-time existence and uniqueness cited exactly; KdV one-step algebra and finiteness estimates proved locally. Two slopes may differ; normalized paths use explicit subtract-origin constants."
+    },
+    {
+      "id": "oss-solitons-v2",
+      "authors": [
+        "Stefano Olla",
+        "Makiko Sasada",
+        "Hayate Suda"
+      ],
+      "title": "Scaling limits of solitons in the box-ball system",
+      "version": "arXiv:2411.14818v2",
+      "version_date": "2025-05-06",
+      "pages": "81",
+      "url": "https://arxiv.org/abs/2411.14818v2",
+      "version_url": "https://arxiv.org/pdf/2411.14818v2",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "§§2.1–2.3 textual definitions, natural labeling, tail/head evolution and Theorem 2.1/Remark 2.2; PDF pp.7–11, with re-read text lines 420–590. §3 opening context only, not full seat-number construction. Theorem 4.7(1), equation (4.16), selected pp.22–23, lines 1230–1275, to bind the coefficient locator. PDF p.11 rendered and visually inspected for the positive adjacent-11 assumption, both mu/nu laws, diffusive scale and (4.16). No full reading or proof certification of §§4–11/appendices.",
+      "local_pdf": "/tmp/sasada-solitons-v2.pdf",
+      "sha256": "1ab2e4daa25caea8ec4ffb48c49f4195494f8cfbb63e45360a86d9f53fd13f36",
+      "proof_boundary": "Functional CLT stated with actual hypotheses; LDP, explicit coefficient derivation, all Lp results and multi-tag joint limits are not expanded."
+    },
+    {
+      "id": "forest-reuse",
+      "type": "existing-repository-notes",
+      "actual_reading": "Whole-forest title/content searches and selected actual note bodies read. Ferrari 4C13/14/15/17/19/1A/1B/27/28 are reused unchanged, alongside probability, measure, calculus and Brownian foundations listed in reused_page_records. These local records are not a claim to have newly read all of their primary sources.",
+      "proof_boundary": "Shared existing notes are immutable in this task. No confirmed existing-note fix request arose. Existing finite-size one-sided hydrodynamic contract remains bounded by 4C27/28."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Direct mathematical arguments written in owned notes: carrier extrema, parity counterexamples, product-law induction, elementary density substitutions, finite-capacity fibers, log-sum-exp bound and rational Yang–Baxter compositions.",
+      "proof_boundary": "Symbolic and finite enumeration checks corroborate these displayed arguments; they are not substitutes for the cited global existence or limit theorems."
+    }
+  ],
+  "sources": [
+    {
+      "id": "sasada-icm2026",
+      "authors": [
+        "Makiko Sasada"
+      ],
+      "title": "Box-ball System and Related Discrete Integrable Systems with Random Initial Conditions",
+      "doi": "10.1137/25M1806715",
+      "pages": "575–595",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+      "version": "Published proceedings HTML, accessed 2026-10-24",
+      "license": "CC BY 4.0",
+      "copyright": "© 2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire mathematical HTML body §§1–7, lines 101–570, in overlapping section-sized reads; displayed equations and text figure captions. Bibliography [1]–[63], lines 576–920, and metadata/licensing lines 928–976 read. Re-read §§3.1–3.4, §§5.1–5.3 and §6 in proof/parameter checks. Image-only figures and diagrams were not pixel-inspected; no figures reproduced.",
+      "access_gap": "Web tool delivered full HTML; direct terminal request returned HTTP 403, so no local publisher HTML/PDF or hash is claimed.",
+      "proof_boundary": "Survey supplies narrative and research contracts; elementary proofs are newly written and distinguished per atom. No assertion that every cited research proof was read or reproduced."
+    },
+    {
+      "id": "ckst-bbs-v1",
+      "authors": [
+        "David A. Croydon",
+        "Tsuyoshi Kato",
+        "Makiko Sasada",
+        "Satoshi Tsujimoto"
+      ],
+      "title": "Dynamics of the box-ball system with random initial conditions via Pitman's transformation",
+      "version": "arXiv:1806.02147v1",
+      "version_date": "2018-06-06",
+      "doi": "10.1090/memo/1398",
+      "journal": "Memoirs of the American Mathematical Society 283(1398), 2023",
+      "url": "https://arxiv.org/abs/1806.02147v1",
+      "version_url": "https://arxiv.org/html/1806.02147v1",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "Selected HTML: introduction/path framework and Theorems 1.2, 1.4, 1.6–1.8, lines 214–304; targeted Theorem 3.23 checks. Subsequently read §3.2.4 and §3.3.1 through the independence proof of Theorem 3.23, lines 1710–1773, including Lemma 3.25 and its proof. The next Cramer-rate calculation was not completed and is not reproduced. Not the full paper or all of §2/§3.2.2.",
+      "proof_boundary": "Markov invariance is cited. BBS carrier, inversion, Bernoulli invariance and Burke independence are explicitly proved locally, using the selected source argument for the last."
+    },
+    {
+      "id": "cs-balance-v3",
+      "authors": [
+        "David A. Croydon",
+        "Makiko Sasada"
+      ],
+      "title": "Detailed balance and invariant measures for discrete KdV- and Toda-type systems",
+      "version": "arXiv:2007.06203v3",
+      "version_date": "2021-12-09",
+      "url": "https://arxiv.org/abs/2007.06203v3",
+      "version_url": "https://arxiv.org/pdf/2007.06203v3",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "Selected introduction/type I–II setting and Theorem 1.1, PDF pp.3–5 (text lines 140–205 re-read); selected Theorem 2.1/Lemma 2.2 statements. §3.2.2 Proposition 3.9 and its proof, §3.2.3 Lemmas 3.10–3.11 and Theorem 3.12, pp.22–24 (lines 1070–1215). Selected §4.1 Proposition 4.1/4.2 and §4.1.3 Theorem 4.4; §4.2.1–4.2.3, Propositions 4.5–4.6 and Theorem 4.8, pp.26–29 (lines 1320–1505). §5.1 opening ultra-discretization formulas (5.1)–(5.2). Appendix A density conventions, text lines 2400–2490, pp.47–48. PDF p.29 rendered and visually inspected for Theorem 4.8 and its printed rate parameter. Not the whole paper, characterization proofs or general ergodicity proof.",
+      "local_pdf": "/tmp/sasada-balance-v3.pdf",
+      "sha256": "79a1f83ab60eae6a4639e1a859958eb56f942dbb23d4c7c864fa181c8b529d6a",
+      "proof_boundary": "Type I criterion and Toda global laws are external theorems. Selected exponential/Gamma/GIG existence identities are proved, not full uniqueness classifications. The positive-alpha, positive-beta global dynamics are not asserted from the local GIG identity."
+    },
+    {
+      "id": "cst-paths-v2",
+      "authors": [
+        "David A. Croydon",
+        "Makiko Sasada",
+        "Satoshi Tsujimoto"
+      ],
+      "title": "Bi-infinite solutions for KdV- and Toda-type discrete integrable systems based on path encodings",
+      "version": "arXiv:2011.00690v2",
+      "version_date": "2022-05-17",
+      "doi": "10.1007/s11040-022-09435-4",
+      "journal": "Mathematical Physics, Analysis and Geometry 25, 27 (2022)",
+      "url": "https://arxiv.org/abs/2011.00690v2",
+      "version_url": "https://arxiv.org/pdf/2011.00690v2",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "Selected introduction/table 1 and all four model statements/encodings in §2, extracted lines 205–905, PDF pp.5–16. Theorem 4.19 forward-time and Theorem 4.20 all-time statements, pp.30–31; re-read lines 1590–1710 including Proposition 4.18 proof and reversal convention. Corollary 4.29 and opening Remark 4.30, lines 2084–2125, p.37. Not all intermediate §§3–5 lemmas or whole-source proofs.",
+      "local_pdf": "/tmp/sasada-paths-v2.pdf",
+      "sha256": "7dbfb7e5730a236402509323a5b196eb2d1f2a991bf1fb5c7dc115998ab3a0ef",
+      "proof_boundary": "General all-time existence and uniqueness cited exactly; KdV one-step algebra and finiteness estimates proved locally. Two slopes may differ; normalized paths use explicit subtract-origin constants."
+    },
+    {
+      "id": "oss-solitons-v2",
+      "authors": [
+        "Stefano Olla",
+        "Makiko Sasada",
+        "Hayate Suda"
+      ],
+      "title": "Scaling limits of solitons in the box-ball system",
+      "version": "arXiv:2411.14818v2",
+      "version_date": "2025-05-06",
+      "pages": "81",
+      "url": "https://arxiv.org/abs/2411.14818v2",
+      "version_url": "https://arxiv.org/pdf/2411.14818v2",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "actual_reading": "§§2.1–2.3 textual definitions, natural labeling, tail/head evolution and Theorem 2.1/Remark 2.2; PDF pp.7–11, with re-read text lines 420–590. §3 opening context only, not full seat-number construction. Theorem 4.7(1), equation (4.16), selected pp.22–23, lines 1230–1275, to bind the coefficient locator. PDF p.11 rendered and visually inspected for the positive adjacent-11 assumption, both mu/nu laws, diffusive scale and (4.16). No full reading or proof certification of §§4–11/appendices.",
+      "local_pdf": "/tmp/sasada-solitons-v2.pdf",
+      "sha256": "1ab2e4daa25caea8ec4ffb48c49f4195494f8cfbb63e45360a86d9f53fd13f36",
+      "proof_boundary": "Functional CLT stated with actual hypotheses; LDP, explicit coefficient derivation, all Lp results and multi-tag joint limits are not expanded."
+    },
+    {
+      "id": "forest-reuse",
+      "type": "existing-repository-notes",
+      "actual_reading": "Whole-forest title/content searches and selected actual note bodies read. Ferrari 4C13/14/15/17/19/1A/1B/27/28 are reused unchanged, alongside probability, measure, calculus and Brownian foundations listed in reused_page_records. These local records are not a claim to have newly read all of their primary sources.",
+      "proof_boundary": "Shared existing notes are immutable in this task. No confirmed existing-note fix request arose. Existing finite-size one-sided hydrodynamic contract remains bounded by 4C27/28."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Direct mathematical arguments written in owned notes: carrier extrema, parity counterexamples, product-law induction, elementary density substitutions, finite-capacity fibers, log-sum-exp bound and rational Yang–Baxter compositions.",
+      "proof_boundary": "Symbolic and finite enumeration checks corroborate these displayed arguments; they are not substitutes for the cited global existence or limit theorems."
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "path-reflection-sign",
+      "notes": [
+        "4K02"
+      ],
+      "printed": "Report §3.2: path reflection written R S_n=S_{-n} for (R eta)_n=eta_{1-n}.",
+      "adopted": "Normalized path reflection is -S_{-n}.",
+      "basis": "Direct increment calculation in 4K02; primary cst-paths-v2 p.31 has the negative path reversal."
+    },
+    {
+      "id": "forward-versus-alltime-reference",
+      "notes": [
+        "4K0K"
+      ],
+      "printed": "Report Theorem 5.3 refers to primary Theorem 4.19 while stating an all-integer-time result.",
+      "adopted": "Bind all-time result to primary Theorem 4.20, model Theorems 2.1/2.2/2.3/2.5 and Corollary 4.29.",
+      "basis": "Primary PDF pp.30–31 and p.37 read; 4.19 is forward time."
+    },
+    {
+      "id": "tagged-clt-adjacent-condition",
+      "notes": [
+        "4K0V"
+      ],
+      "printed": "Report Theorem 4.6 abbreviates the Bernoulli/Markov assumptions.",
+      "adopted": "Retain primary mu(eta_0=eta_1=1)>0; explicit selected parameter ranges enforce it.",
+      "basis": "oss-solitons-v2 Theorem 2.1, PDF p.11 rendered and inspected."
+    },
+    {
+      "id": "gamma-rate-positivity",
+      "notes": [
+        "4K0P"
+      ],
+      "printed": "cs-balance-v3 Theorem 4.8 says c in R.",
+      "adopted": "c>0 for the Gamma rate.",
+      "basis": "Appendix A density and Propositions 4.5/4.6 require c>0; PDF p.29 printed line visually inspected; normalization fails for nonpositive rate."
+    }
+  ],
+  "source_clarifications": [
+    "Path sign S increments 1-2eta is opposite Ferrari xi increments 2eta-1; extrema and carriers converted explicitly.",
+    "All path transforms are normalized at zero. Toda requires a one-site left shift before subtracting H_1; carrier is computed from unnormalized extrema, not an arbitrary difference of normalized paths.",
+    "The positive slopes at the two ends may be distinct. Statements of probability-one domains are concentration statements, not assertions about topological support of Bernoulli measures.",
+    "Geometric parameter r is the ratio, supported on nonnegative integers; the report's success parameter is 1-r.",
+    "Gamma second parameter is positive rate c; GIG convention is x^(-lambda-1). Density definitions and measure/integration links are explicit.",
+    "Type I detailed balance retains mu^Z(X*)=1. A local IP identity alone is not an infinite-volume existence theorem.",
+    "Tagged soliton position is min gamma-1 in OSS, while Ferrari uses min gamma; displacements and asymptotic speeds are unaffected. Initial natural labels are propagated, not reassigned at later times.",
+    "Report §4.6 simplification is read through the primary's adjacent-double-occupation condition. The Markov p1=0 invariant law is not included in the all-size functional CLT.",
+    "Probability laws and hypotheses are fixed to the listed source versions; later classification references in the survey are not inferred to resolve every global-dynamics question."
+  ],
+  "review_responses": [
+    {
+      "finding": "SA-F01",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K01"
+      ],
+      "change": "Added genuine sup/inf and liminf prerequisites 0A37/0F61 and explained left lower limit through W_{-k}; distinguishes recurring zeros from convergence."
+    },
+    {
+      "finding": "SA-F02",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K0B"
+      ],
+      "change": "Markov rule limited to positive-probability finite histories; P(B)>0 explicit beside the ratio, p1=0 retained."
+    },
+    {
+      "finding": "SA-F03",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K0M"
+      ],
+      "change": "Reviewer revision 2 already resolved the local density definition. Further added genuine Lebesgue measure/integral links 00XV/00Q5 and Borel-set qualification; no false density label to 00L0."
+    },
+    {
+      "finding": "SA-F04",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K0P"
+      ],
+      "change": "Replaced incorrect positive-power explanation with exponent r-1>-1 and exact integral 1/r^2, valid for shapes a and a+b even below one."
+    },
+    {
+      "finding": "SA-F05",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K0M",
+        "4K0N",
+        "4K0O",
+        "4K0P",
+        "4K0Q",
+        "4K0R",
+        "4K0S",
+        "4K0T"
+      ],
+      "change": "Distribution metadata and this packet consistently use report §5.3, retaining exact primary theorem/proposition locators. Reviewer revision 2 resolved note-level source binding."
+    },
+    {
+      "finding": "SA-F06",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K00"
+      ],
+      "change": "Removed optional quadrirational/GGE/relaxation jargon list; closing paragraph now describes local-window equilibrium, approach to equilibrium and microscopic-to-macroscopic questions in plain mathematical language."
+    },
+    {
+      "finding": "SA-F07",
+      "status": "author-addressed-pending-independent-recheck",
+      "notes": [
+        "4K0Q"
+      ],
+      "change": "Linked probability density in the opening paragraph to the existing complete definition in 4K0M; added the matching prerequisite to prerequisites and entries. No mathematical statement, proof or source scope changed."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Full invariant-domain and invariant-measure classifications",
+      "scope": "§3 positive drift is developed as a sufficient class, with a critical example; the complete critical path classification, every reflected-process criterion and all ergodicity results are not reproduced. Independent slot measures are reused, not claimed to classify all invariant measures."
+    },
+    {
+      "branch": "q-statistics, generalized Gibbs states and local equilibration",
+      "scope": "§§3.4 and 7 identify mathematical formulation/justification questions. No established identification of every q-statistics law with a rigorously constructed local GGE is asserted."
+    },
+    {
+      "branch": "Macroscopic extensions and finer soliton fluctuations",
+      "scope": "§4 finite-size one-sided GHD and speed results reused from Ferrari; no extension to arbitrary double-infinite/infinite-size initial data. The tagged CLT is stated, while the full LDP rate, explicit diffusion-coefficient recursion and multi-tag common-Brownian correlations are deferred."
+    },
+    {
+      "branch": "All product-law characterizations and generalized capacities",
+      "scope": "§5 representative exponential, Gamma, GIG and finite integer-capacity geometric laws are developed. Shifted/scaled/bipartite variants, all necessity classifications, continuous-capacity cases and colored BBS are not added."
+    },
+    {
+      "branch": "Other quadrirational Yang–Baxter families",
+      "scope": "§6 H_III^B is treated by a direct proof; H_I^+, H_II^+, H_III^A, generalized beta-prime/Kummer laws, classification uniqueness and distribution-level ultradiscretization are not expanded."
+    },
+    {
+      "branch": "Continuous scaling and stochastic-polymer/random-matrix connections",
+      "scope": "§7 directions are retained as questions; no continuum Pitman limit, arbitrary Weyl-group theory, polymer construction or KdV/Toda hydrodynamic derivation claimed."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4K0B"
+      ],
+      "source": "ckst-bbs-v1",
+      "scope": "Markov invariant law and its all-time support are precisely cited; only stationary density arithmetic is local."
+    },
+    {
+      "notes": [
+        "4K0J",
+        "4K0K"
+      ],
+      "source": "cst-paths-v2",
+      "scope": "Toda path/dynamics correspondence and general four-model all-time existence/uniqueness rely on the primary theorem; full §§4–5 proof not reproduced."
+    },
+    {
+      "notes": [
+        "4K0L",
+        "4K0O",
+        "4K0P",
+        "4K0S"
+      ],
+      "source": "cs-balance-v3; cst-paths-v2",
+      "scope": "Abstract local/global necessity, construction of a full infinite lattice solution and Toda global stationarity are cited. Local density algebra and the conditional dKdV deduction are provided."
+    },
+    {
+      "notes": [
+        "4K0V"
+      ],
+      "source": "oss-solitons-v2",
+      "scope": "Functional CLT relies on seat-number/soliton-elimination decompositions and probabilistic limit theorems in §§4–11. No proof sketch is labeled a full proof."
+    },
+    {
+      "notes": [
+        "4K00"
+      ],
+      "source": "forest-reuse",
+      "scope": "Ferrari slot reconstruction, effective-speed theorem and finite-size hydrodynamic theorem remain the exact external contracts in 4C1A, 4C1B and 4C28."
+    }
+  ],
+  "section_coverage": {
+    "1": [
+      "4K00"
+    ],
+    "2": [
+      "4K01",
+      "4K09",
+      "4K0H",
+      "4C13",
+      "4C17"
+    ],
+    "3": [
+      "4K01",
+      "4K02",
+      "4K03",
+      "4K04",
+      "4K05",
+      "4K06",
+      "4K07",
+      "4K08",
+      "4K09",
+      "4K0A",
+      "4K0B",
+      "4K0C",
+      "4K0X",
+      "4C1A"
+    ],
+    "4": [
+      "4K0V",
+      "4K0W",
+      "4C19",
+      "4C1B",
+      "4C27",
+      "4C28"
+    ],
+    "5": [
+      "4K0D",
+      "4K0E",
+      "4K0F",
+      "4K0G",
+      "4K0H",
+      "4K0I",
+      "4K0J",
+      "4K0K",
+      "4K0L",
+      "4K0M",
+      "4K0N",
+      "4K0O",
+      "4K0P",
+      "4K0Q",
+      "4K0R",
+      "4K0S",
+      "4K0T"
+    ],
+    "6": [
+      "4K0U",
+      "4K0R"
+    ],
+    "7": [
+      "4K00"
+    ]
+  },
+  "cross_topic_requests": [],
+  "validation": {
+    "source_links": "All 35 owned trees' local body links resolve; exact paths and hashes in notes[].",
+    "format": "normalizeFormat comparisons clean for all owned trees; manual edits performed with apply_patch, including normalizer-generated patches.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.11",
+      "count": 673,
+      "errors": 0,
+      "scope": "All owned math groups. Literal parentheses/brackets, math-link collisions, local body links and editorial rules checked. Not Forester parsing or rendered-site QA."
+    },
+    "prerequisite_check": {
+      "owned_atomic_count": 33,
+      "edges": 122,
+      "recursive_nodes": 171,
+      "cycles": 0,
+      "all_edges_in_body": true,
+      "outline_prerequisites": 0,
+      "outline_directly_reaches_all_atoms": true,
+      "scope": "Current shared site-evergreen-audit prerequisites plus packet, traversed read-only from owned atoms; navigation/application edges kept separately."
+    },
+    "elementary_checks": {
+      "finite_capacity_cells": 1936,
+      "finite_bbs_configurations": 1024,
+      "errors": 0,
+      "yang_baxter": "SymPy exact rational differences [0,0,0] for both three-map compositions; readable intermediate-factor proof is in 4K0U.",
+      "gamma_log_integral": "Symbolic integral_0^infinity u exp(-r u) du = r^(-2) for r>0; change of variables and analytic formula written in 4K0P.",
+      "scope": "Read-only inline calculations, not edited tests/scripts and not proofs of cited research theorems."
+    },
+    "build": "Not run. Parent owns global integration, Forester build, rendered QA and publication.",
+    "independent_review": "Revision 3 independently verified SA-F01 through SA-F06 resolved and left only SA-F07 open. The density link and prerequisite repair for SA-F07 is author-addressed here; changed 4K0Q and the complete refreshed packet await the same independent reviewer's frozen re-read. Revision 3 is revise, not pass.",
+    "review_input": {
+      "path": "research/mathematical-physics-sasada-review.json",
+      "sha256": "3d7f07db15e3d825678086955d820d4da4dd19b56bd40da6a8145aaa2134eded",
+      "revision": 3,
+      "result": "revise",
+      "open": [
+        "SA-F07"
+      ]
+    }
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-24",
+    "revision": 2,
+    "previous_packet_sha256": "561a98303cb040937137656ecf0fbb0c066ca874bbf331febd55692fa425b1d6",
+    "paths": [
+      "trees/math/mathematical-physics/sasada/4K*.tree",
+      "trees/references/icm2026-sasada.tree",
+      "research/mathematical-physics-sasada-packet.json"
+    ],
+    "hashes": "notes[].sha256 binds every owned tree; source_records[].sha256 binds downloaded primary PDFs. Packet hash reported separately to avoid self-hashing.",
+    "mutation_boundary": "No further author edits except explicitly requested reviewer repairs; no shared file edits, builds, commits or pushes."
+  }
+}

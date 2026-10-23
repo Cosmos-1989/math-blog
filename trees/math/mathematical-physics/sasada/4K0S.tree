@@ -1,0 +1,15 @@
+\title{正漂移条件下离散 KdV 的 GIG 不变初态}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，定理 3.12(b)}
+
+\p{取 #{\delta,\lambda,c>0}，令 #{\mu=\operatorname{GIG}(\lambda,c\delta,c)}，其密度采用[负幂约定](4K0Q)。假设}
+##{2\int_0^\infty\log x\,\mu(dx)<-\log\delta.}
+\p{若双无限初态 #{(\omega_n)_{n\in\mathbb Z}} 具有[独立同分布乘积律](0A6B) #{\mu^{\mathbb Z}}，则[离散 KdV](4K0F)的全时演化几乎处处唯一，并保持此初态分布；载流子边缘是 #{\operatorname{IG}(\lambda,c)}。}
+\p{\strong{证明。}GIG 的两端指数衰减保证 #{\log\omega_n} 有有限二阶矩。对中心化的对数变量应用[正交和的几乎处处估计](0HS1)，与[Bernoulli 路径的双侧极限证明](4K05)相同，可在两端同时得到}
+##{\lim_{n\to\pm\infty}\frac{S_n}{n}
+=-\log\delta -2\mathbb E\log\omega_0>0,\qquad
+S_n-S_{n-1}=-\log\delta -2\log\omega_n.}
+\p{若方差非零，先除以标准差应用该估计，再乘回；零方差情形直接成立。因此[正线性路径定理](4K0K)给出乘积律集中于唯一全时解的初态集合。}
+\p{取 #{\nu=\operatorname{IG}(\lambda,c)}。[局部 GIG 独立性](4K0R)在 #{\alpha=\delta,\beta=0} 时给出 #{F_*(\mu\otimes\nu)=\mu\otimes\nu}。[全时局部平衡判据](4K0L)遂给出结论。对数矩不等式是这里检验全局定义域的假设；局部密度恒等式本身对更大的参数范围成立。}

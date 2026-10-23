@@ -1,0 +1,12 @@
+\title{三维径向谱的频率能量变量}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，(3.7)；极坐标换元}
+
+\p{设 #{h} 为非负可测函数，#{f(k)=h(|k|)}，#{k\in\mathbb R^3}；取 #{\omega} 在非负半轴连续严格递增，在正半轴上属于 #{C^1}，且 #{\omega(0)=0}、#{\omega'(r)>0}、#{\lim_{r\to\infty}\omega(r)=\infty}。于是 #{x=\omega(r)} 遍历整个非负半轴，逆函数记为 #{r=r(x)}。对 #{x>0} 定义}
+##{\Gamma(x)=\frac{r(x)^2}{\omega'(r(x))},\qquad F(x)=h(r(x))\Gamma(x).}
+\p{对径向被积函数，角变量积分给出体积因子 #{4\pi r^2dr}，而 #{dx=\omega'(r)dr}。因此对非负可测 #{\varphi}，或绝对积分有限的 #{\varphi}，有}
+##{\int_{\mathbb R^3}\varphi(\omega(|k|))f(k)dk=4\pi\int_0^\infty\varphi(x)F(x)dx.}
+\p{因此 #{\nu(dx)=F(x)dx} 是去掉球面积因子 #{4\pi} 后的径向质量[测度](00Q2)。以它记质量与能量时，#{M=\int d\nu}、#{E=\int x\,d\nu}；三维总量分别为 #{4\pi M,4\pi E}。无密度时，也可对径向测度 #{\mu} 定义 #{\nu(A)=\mu(\{k:\omega(|k|)\in A\})/(4\pi)}，称沿色散关系的推前。}
+\p{对幂次色散 #{\omega(r)=r^\gamma}，#{\gamma>1}，有 #{\Gamma(x)=\gamma^{-1}x^{3/\gamma -1}}。特别是 #{\gamma=2} 时 #{F(x)=\tfrac 12x^{1/2}h(\sqrt x)}。在变量 #{k} 上有界的密度，与在变量 #{x} 上有界的密度，是不同条件。}

@@ -1,0 +1,13 @@
+\title{Ising 容量上界所需的全局二参数条件}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Huang，Capacity threshold for the Ising perceptron v2，式 (6)–(8)、条件 1.3、定理 1.2。}
+
+\p{取[候选常数](4M0U) #{\alpha_*} 及其参数 #{q_*,\psi_*}。令 #{H\sim N(0,\psi_*)}、#{K\sim N(0,q_*)}，#{m(H)=\tanh H}、#{n(K)=T_{q_*}(K)}，两种高斯期望分别计算。对实数 #{u,v} 定义 #{\Lambda(H)=\tanh(uH+v\tanh H)}，以及}
+##{a=\mathbb E[m(H)\Lambda(H)],\quad b=\mathbb E[H\Lambda(H)],\quad h(t)=-t\log t-(1-t)\log(1-t).}
+\p{约定 #{0\log 0=0}。定义二参数函数}
+##{S_*(u,v)=\inf_{s\ge 0}\left\{\frac{s^2\psi_*}2+\mathbb E h\left(\frac{1+\Lambda(H)}2\right)+\alpha_*\mathbb E\log\Psi\left(\frac{-aK/q_*-bn(K)/\psi_*}{\sqrt{1-a^2/q_*}}+sn(K)\right)\right\}.}
+\p{有限 #{u,v} 下 #{|\Lambda|<1}；由 [Schwarz 不等式](004S)和 #{\mathbb E m(H)^2=q_*}，有 #{a^2<q_*}，分母为正。所引定理假设 #{S_*(u,v)\le 0} 对所有 #{(u,v)\in\mathbb R^2} 成立。则对零裕量、高斯无序的 [Ising 感知机](4M0P)，每个固定 #{\alpha>\alpha_*} 都有}
+##{\mathbb P\left(S(G;\lbrack 0,\infty\rparen,\{-1,+1\}^N)\ne\varnothing\right)\longrightarrow 0,\qquad M=\lfloor\alpha N\rfloor.}
+\p{全局条件比检查 #{(1,0)} 处的局部极大值严格得多。Ding–Sun 的相应下界带有另一项一变量条件，最初给出正概率保证；[条件矩方法](4M0S)和适用的尖锐阈值定理分别承担矩估计与概率提升。上下界调用的条件不同，验证其中一个条件不足以同时解除两项假设。}

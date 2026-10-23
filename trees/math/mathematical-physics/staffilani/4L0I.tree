@@ -1,0 +1,16 @@
+\title{径向测度解的测试函数与碰撞约定}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[文献](icm2026-staffilani)：凝聚论文正式版，Definition 1；2512.19525v1、2512.19531v1，Definition 1}
+
+\p{令 #{X=\lbrack 0,\infty\rparen}，#{\mathcal M_+(X)} 为有限非负 [Radon 测度](0K12)，即内外正则的 [Borel 测度](00QD)。在[径向能量变量](4L0H)中，原文的 #{F(t,x)dx} 或 #{G(t,x)dx} 统一记为 #{\nu_t}。其原点质量为 #{m_0(t)=\nu_t(\{0\})}，故 #{\nu_t=m_0(t)\delta_0+\nu_t^{\rm rest}}，#{\nu_t^{\rm rest}(\{0\})=0}。[Dirac 质量](4426)可以承载凝聚；可积密度则不能承载单点质量。}
+\p{以下是三个所引研究定理各自的解类约定。共同的时间要求在原文均写为 #{\nu\in C^1(X;\mathcal M_+(X))}，且对规定的测试函数成立}
+##{\langle\nu_t,\varphi\rangle -\langle\nu_0,\varphi\rangle
+=\int_0^t\mathcal C_\varphi(\nu_s)\,ds,\qquad
+\langle\nu,\varphi\rangle=\int_X\varphi\,d\nu.}
+\p{#{C_c^2(X)} 表示在端点具有右导数、二次连续可微且紧支撑的函数。右端是相应论文指定的碰撞泛函，要求每个测试函数的碰撞配对有定义，并在每个有界时间区间可积。密度情形为 #{(4\pi)^{-1}\int Q\lbrack f\rbrack(k)\varphi(\omega(|k|))dk}。原定义用总质量记 #{\|\nu\|_{\mathcal M_+}}，但没有在 Definition 1 另行区分强、弱可微拓扑；此处保留其原记号，具体使用的是上述测试配对恒等式。}
+\p{\strong{纯四波。}采用 [2026 年正式论文](https://link.springer.com/article/10.1007/s00205-026-02217-0) Definition 1、(13)，#{\nu=F=f\,r^2/\omega'(r)}，测试类为全部 #{C_c^2(X)}。碰撞泛函由 §3.2 的 (35)–(36) 指定：径向核为 #{\Lambda=\Theta_0\Theta_1\Theta_2\Theta_3\min(r_0,r_1,r_2,r_3)}，#{\Theta_j=r_j/\omega'(r_j)}，并以 #{x_3=x_0+x_1-x_2} 消去能量约束。原文把非正的补足频率对应项置零；其定义中没有单独列出任意原子测度上的全部边界值公式。因此引用的是该文构造的解类，不把密度公式中各个奇异因子分别代入原点。}
+\p{\strong{混合凝聚。}采用 [2512.19525v1](https://arxiv.org/abs/2512.19525v1) Definition 1、(32)，#{\nu=fA=G}，#{A=r^2/\omega'(r)}；测试函数还须满足 #{\varphi'(0)=0}。其碰撞泛函为 §5 的 #{R_1[\varphi]+R_2[\varphi]+R_3[\varphi]}，准确积分形式是 (81)–(83)，核见 (84)–(86)。积分中的 #{G_jdx_j} 按产品测度解释；零频率采用该节 Step 1 对“核乘测试差”整体的连续延拓，再用 Step 2 的截断构造。二次色散特例仅保留 #{R_1,R_2}。}
+\p{\strong{混合能量逸出。}采用 [2512.19531v1](https://arxiv.org/abs/2512.19531v1) Definition 1、(34)，#{\nu=f\Gamma=F}，#{\Gamma=r^2/\omega'(r)}，测试类仍有 #{\varphi'(0)=0}。泛函为 §4 (77)–(83)、(85) 中的 #{L_1+L_2+L_3}，其中 #{P=\Gamma\overline P}、#{Q=\Gamma\overline Q}、#{R=\Gamma\overline R/r}。负补足频率由指标函数排除，零端采用该节 Step 1 的组合核解释，随后按 (97)–(100) 截断。该预印本 (79) 保留了最大频率因子 #{\overline R_o}，但重写的 (82) 漏印了它；指定方程仍以 (1)–(7)、(79) 的核为准。}
+\p{三种解类的存在性、碰撞积分收敛和截断极限均是所引研究结果的一部分。测试恒等式只准许规定的紧支撑函数；质量测试 #{1} 与能量测试 #{x} 的使用还需各定理另外给出的尾估计。}

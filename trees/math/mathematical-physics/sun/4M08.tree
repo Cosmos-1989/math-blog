@@ -1,0 +1,11 @@
+\title{二阶矩给出非负变量的下尾概率界}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，式 (2.12) 后的估计；Paley–Zygmund 不等式。}
+
+\p{设 #{X\ge 0} 为[随机变量](00L0)，#{0<\mathbb E X<\infty}，#{\mathbb E X^2<\infty}。对 #{0\le\theta<1}，有}
+##{\mathbb P(X>\theta\mathbb E X)\ge (1-\theta)^2\frac{(\mathbb E X)^2}{\mathbb E X^2}.}
+\p{\strong{证明。}记 #{A=\{X>\theta\mathbb E X\}}。在补集上，#{X\le\theta\mathbb E X}，故 #{\mathbb E(X1_A)\ge(1-\theta)\mathbb E X}。将几乎处处相等的随机变量视为同一元素，便得到实 [L² 内积空间](0A6A)，其内积为 #{\langle U,V\rangle=\mathbb E(UV)}。对 #{X,1_A} 用 [Schwarz 不等式](004S)，得到}
+##{(\mathbb E(X1_A))^2\le\mathbb E X^2\,\mathbb P(A).}
+\p{合并两式并除以正数 #{\mathbb E X^2}，即得结论。特别地，#{\theta=0} 时给出 #{\mathbb P(X>0)\ge(\mathbb E X)^2/\mathbb E X^2}。控制二阶矩与均值平方的比值，可以排除平均数完全由极少数巨大取值造成的情形。}

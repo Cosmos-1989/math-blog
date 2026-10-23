@@ -1,0 +1,10 @@
+\title{投影追踪的维数无关 Lipschitz 算法类}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{Huang–Sellke–Sun v1，定义 1.8、1.11、1.15；[Sun](icm2026-sun)，§3.4。}
+
+\p{设 #{G} 为 #{M\times N} 独立标准高斯矩阵，#{g^{\rm aux}\in\mathbb R^{N_{\rm aux}}} 为独立标准高斯随机种子。算法视为映射 #{A:(G,g^{\rm aux})\mapsto x\in\mathbb R^N}。称其为 #{L}-Lipschitz 算法，如果对所有输入满足[Lipschitz 条件](00FU)}
+##{\|A(G,g)-A(G',g')\|_2\le L\sqrt{\|G-G'\|_F^2+\|g-g'\|_2^2},\qquad \mathbb E\|A(G,g^{\rm aux})\|_2^2=N.}
+\p{其中 #{\|G\|_F^2=\sum_{a,i}g_{ai}^2}。讨论规模渐近时，#{L} 可以依赖目标精度和密度，但不依赖 #{N}。它是输入扰动稳定性条件，定义本身没有规定图灵运行时间或算术运算次数。}
+\p{对球面或立方体域 #{D_N}，令 #{D_N(\eta)=\{x:\inf_{y\in D_N}\|x-y\|_2\le\eta\sqrt N\}}。给定目标测度 #{\nu}，绝对值投影成功事件为 #{x\in D_N(\eta)} 且 #{W_2(\mu_{G,\mathrm{abs}}(x),\nu)\le\eta}，其中使用[投影经验分布](4M0X)与[运输距离](4M0Y)。成功概率对矩阵和随机种子共同计算。}

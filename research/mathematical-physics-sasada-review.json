@@ -1,0 +1,2978 @@
+{
+  "schema_version": 1,
+  "review_type": "independent-frozen-whole-branch",
+  "report_id": "icm2026-sasada",
+  "reviewed_on": "2026-10-24",
+  "review_revision": 4,
+  "result": "pass",
+  "acceptance": true,
+  "summary": "Accepted the writer-frozen 34-page Sasada branch, its reference and the complete refreshed packet at the exact hashes recorded below. SA-F01 through SA-F07 are verified resolved; no open findings remain. All 171 nodes of the declared recursive prerequisite graph and the additional reused/navigation/candidate pages were actually read. The final density-definition repair is present in both the note and packet, with 122 owned prerequisite edges and no cycle. The unchanged-hash checkpoint covers all 182 reviewed files. Acceptance is for the recorded mathematical, editorial and source-contract scope, not a build or publication certification.",
+  "input_packet": {
+    "id": "mathematical-physics-sasada-packet",
+    "path": "research/mathematical-physics-sasada-packet.json",
+    "present": true,
+    "read_in_full": true,
+    "expected_sha256": "0fe820ce2282a5b479340a3d313228f0a926cef2d29deb93bf28087c63844a48",
+    "reviewed_sha256": "0fe820ce2282a5b479340a3d313228f0a926cef2d29deb93bf28087c63844a48",
+    "matched_expected": true
+  },
+  "scope": {
+    "owned_trees_read": 35,
+    "atoms_read": 33,
+    "outlines_read": 1,
+    "references_read": 1,
+    "shared_or_candidate_trees_read": 146,
+    "packet_read_in_full": true,
+    "writer_freeze_confirmed": true,
+    "parent_ready_received": true,
+    "all_owned_packet_hashes_matched": true,
+    "all_reviewed_repo_inputs_unchanged_at_checkpoint": true,
+    "public_notes_edited": false,
+    "builds_run": false,
+    "git_commands_run": false,
+    "subagents_used": false,
+    "only_written_path": "research/mathematical-physics-sasada-review.json",
+    "proof_boundary": "Local arguments were checked directly. Research results were checked as quoted contracts at the specifically listed original-source locations, not as complete independent re-proofs.",
+    "review_method": "Full-text reading of every owned page across the initial and frozen phases, complete re-reading of all repaired owned pages, complete reading of both frozen packets, actual reading of every page in the declared recursive prerequisite closure, scoped primary-source contract checks, and unchanged-hash verification. The final repair changed only 4K0Q and the packet; both were re-read in full. Reading shared pages does not certify all unrelated examples/applications or their entire source papers.",
+    "all_declared_recursive_prerequisites_read": true,
+    "declared_recursive_node_count": 171,
+    "semantic_prerequisite_closure_pass": true
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "SA-F01",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "prerequisite",
+      "notes": [
+        "4K01"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K01.tree",
+      "line": 7,
+      "title": "Link the lower-limit boundary condition to its actual definition",
+      "finding": "The theorem selects its unique carrier by liminf as n tends to minus infinity, but neither defines liminf nor links to a definition. Its current box-ball prerequisite destinations 4C13, 4C14 and 4C15 do not define it. The site's declared baseline is elementary sets and arithmetic, not analysis terminology.",
+      "correction": "Link the lower-limit terminology to the already existing 0F61, with a brief indication that the left-hand limit is the ordinary limit of W_{-k}. The sup/inf definition can use 0A37. Do not create duplicate definitions.",
+      "acceptance_condition": "Re-read the changed note and verify that its actual destinations decode both the boundary condition and the infinite extrema.",
+      "resolution": "4K01 links sup to 0A37 and liminf to 0F61, explicitly interpreting the left limit through W_{-k}. Both actual destinations were read. The theorem and proof remain valid.",
+      "verified_files": [
+        {
+          "id": "4K01",
+          "path": "trees/math/mathematical-physics/sasada/4K01.tree",
+          "sha256": "1cb90764abac60952c37de7a8d46aee1f3fb4d57cd59bf12e88d852bf7843eb6"
+        }
+      ]
+    },
+    {
+      "id": "SA-F02",
+      "priority": "P3",
+      "status": "resolved",
+      "category": "hypothesis",
+      "notes": [
+        "4K0B"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K0B.tree",
+      "line": 9,
+      "title": "Restrict conditional-probability ratios to positive-probability histories",
+      "finding": "The phrase 'any finite past' and P(A|B)=P(A intersect B)/P(B) omit P(B)>0. This matters in an explicitly allowed boundary case: when p1=0, histories containing adjacent 1s have probability zero.",
+      "correction": "State the Markov conditional-probability rule only for finite histories of positive probability, and put P(B)>0 next to the displayed ratio. The cylinder-probability construction and the invariant-law theorem can otherwise remain unchanged.",
+      "acceptance_condition": "The zero-probability qualification appears locally, while p1=0 remains allowed.",
+      "resolution": "4K0B now restricts the Markov rule to positive-probability finite histories and explicitly requires P(B)>0 for its ratio. The allowed p1=0 case is retained.",
+      "verified_files": [
+        {
+          "id": "4K0B",
+          "path": "trees/math/mathematical-physics/sasada/4K0B.tree",
+          "sha256": "1978a986a39e3619bca77c55bc18751fe36217f2d0a271728117eb0fde6f0292"
+        }
+      ]
+    },
+    {
+      "id": "SA-F03",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "wrong-prerequisite-destination",
+      "notes": [
+        "4K0M",
+        "00L0"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+      "line": 7,
+      "title": "The probability-density link does not define a density",
+      "finding": "The link labelled probability density leads to 00L0. That page defines a real random variable, its push-forward distribution and discrete point masses; it gives no density definition. Thus the continuous-density calculations begin with an unresolved foundational term.",
+      "correction": "Supply the short local contract P(X in A)=integral_A f(x) dx with f nonnegative and integral f=1, linking Lebesgue measure/integration as needed; or reuse a genuinely suitable canonical density definition. Do not link to 4401 merely by its title: its setting is particle phase space, although its first paragraph was inspected as a possible reusable formulation.",
+      "acceptance_condition": "The labelled destination actually defines the term, or the local definition makes the link unnecessary; recheck the subsequent exponential/Gamma/GIG density usage.",
+      "resolution": "4K0M now defines probability density via Borel-set probabilities, nonnegativity and normalization, with genuine Lebesgue measure/integration destinations 00XV and 00Q5. The incorrect label to 00L0 is gone.",
+      "verified_files": [
+        {
+          "id": "4K0M",
+          "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+          "sha256": "99a1f137920249f810c1582b2ff335099e2c0aa3ac16985d999d6c6c697ff476"
+        },
+        {
+          "id": "00L0",
+          "path": "trees/math/network/atomic/00L0.tree",
+          "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce"
+        }
+      ]
+    },
+    {
+      "id": "SA-F04",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "proof-explanation",
+      "notes": [
+        "4K0P"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K0P.tree",
+      "line": 14,
+      "title": "Gamma densities need not have a positive power at zero",
+      "finding": "The logarithmic-integrability argument says the Gamma density has a positive power at zero. A shape a in (0,1) is allowed, and then its leading factor is x^{a-1} with a negative exponent. The claimed logarithmic integrability and positive drift are true, but the stated reason excludes part of the theorem's parameter range.",
+      "counterexample": "For a=1/2, the density behaves as a positive constant times x^{-1/2} near zero.",
+      "correction": "Use exponent a-1>-1 and show integral_0^1 x^{a-1}|log x| dx=1/a^2<infinity (or the equivalent substitution x=e^{-u}); exponential decay handles infinity. Apply the same reasoning to shape a+b.",
+      "acceptance_condition": "The local proof covers every a,b,c>0 without claiming boundedness or vanishing of the density at zero.",
+      "resolution": "4K0P now uses r-1>-1 and the exact integral integral_0^1 x^(r-1)|log x| dx=1/r^2 for every r>0, then applies it to a and a+b. This covers shapes below one and validates the strict logarithmic drift.",
+      "verified_files": [
+        {
+          "id": "4K0P",
+          "path": "trees/math/mathematical-physics/sasada/4K0P.tree",
+          "sha256": "01fe7eaa4b259eb2a4a3df60880e13f3def4c6ca6b60f06c428a620b9d91f2a8"
+        }
+      ]
+    },
+    {
+      "id": "SA-F05",
+      "priority": "P3",
+      "status": "resolved",
+      "category": "source-binding",
+      "notes": [
+        "4K0M",
+        "4K0N",
+        "4K0O",
+        "4K0P",
+        "4K0Q",
+        "4K0R",
+        "4K0S"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+      "line": 5,
+      "title": "Correct the survey section for stationary distribution claims",
+      "finding": "The distribution notes cite Sasada Section 5.2, which describes the models. The stationary distributions and independence-preserving discussion is Section 5.3. The more precise Croydon-Sasada theorem/proposition citations provide the actual detailed results.",
+      "correction": "Use survey Section 5.3 for this material and preserve the specific original-paper locators. Apply the same correction to the eventual packet's claim-source and actual-reading entries only for locations the writer actually inspected.",
+      "evidence": [
+        {
+          "source": "sasada-icm2026",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1806715",
+          "locator": "Sections 5.2 and 5.3; Theorem 5.4 and following model-specific distribution paragraphs"
+        }
+      ],
+      "acceptance_condition": "The affected notes and final packet give matching, accurate source locations.",
+      "resolution": "All affected frozen note metadata and the packet claim-source records use survey Section 5.3 and retain the precise original-paper locators. The model/distribution distinction is accurate.",
+      "verified_files": [
+        {
+          "id": "4K0M",
+          "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+          "sha256": "99a1f137920249f810c1582b2ff335099e2c0aa3ac16985d999d6c6c697ff476"
+        },
+        {
+          "id": "4K0N",
+          "path": "trees/math/mathematical-physics/sasada/4K0N.tree",
+          "sha256": "efb29d4d705382f9b88e445a1d90a231540829701985a2785f995445c20f1b68"
+        },
+        {
+          "id": "4K0O",
+          "path": "trees/math/mathematical-physics/sasada/4K0O.tree",
+          "sha256": "2391cda18a296a9761782fb3dcbf70257781ffe704b4e3faf8c4f0ff9b947065"
+        },
+        {
+          "id": "4K0P",
+          "path": "trees/math/mathematical-physics/sasada/4K0P.tree",
+          "sha256": "01fe7eaa4b259eb2a4a3df60880e13f3def4c6ca6b60f06c428a620b9d91f2a8"
+        },
+        {
+          "id": "4K0Q",
+          "path": "trees/math/mathematical-physics/sasada/4K0Q.tree",
+          "sha256": "99acef54454cba3ff317add92269d90535cacd3122ac0aba10e849e23ce154f3"
+        },
+        {
+          "id": "4K0R",
+          "path": "trees/math/mathematical-physics/sasada/4K0R.tree",
+          "sha256": "0d321830a6cf385525cca5ce983183a3916046b754bd522843c58360116e049b"
+        },
+        {
+          "id": "4K0S",
+          "path": "trees/math/mathematical-physics/sasada/4K0S.tree",
+          "sha256": "9cf6ffa3fb7bd877075a24b95a821bcddac7bd535714e73f44aac37c0e0361a5"
+        }
+      ]
+    },
+    {
+      "id": "SA-F06",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "outline-terminology",
+      "notes": [
+        "4K00"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K00.tree",
+      "line": 29,
+      "title": "Explain or remove the specialized terms in the outline's closing paragraph",
+      "finding": "The closing paragraph introduces quadrirational maps, generalized Gibbs equilibrium states and local relaxation without a local explanation or a definition destination. These are not in the site's elementary baseline, and NOTES_STYLE_GUIDE requires an outline's first specialist terminology to be understandable without outsourcing the whole paragraph to links.",
+      "correction": "Remove the unneeded terminology list, or give concise plain-language meanings and genuine existing prerequisite destinations where available. Keep local generalized Gibbs states and relaxation framed as research questions; the survey's Section 7 does not provide an established general construction.",
+      "acceptance_condition": "The final paragraph can be understood without prior knowledge of these three specialist terms; do not create duplicate definitions just to support an optional coda.",
+      "resolution": "4K00 replaces the unexplained closing terminology list with plain-language local-window equilibrium and microscopic-to-macroscopic questions, without turning open questions into established results.",
+      "verified_files": [
+        {
+          "id": "4K00",
+          "path": "trees/math/mathematical-physics/sasada/4K00.tree",
+          "sha256": "cfacafd26d8c05e284bf8fe218782879fc1d1a7fe27c246c4c0fd64e19595c1d"
+        }
+      ]
+    },
+    {
+      "id": "SA-F07",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "semantic-prerequisite-closure",
+      "notes": [
+        "4K0Q"
+      ],
+      "path": "trees/math/mathematical-physics/sasada/4K0Q.tree",
+      "line": 7,
+      "title": "Connect the GIG density definition to the existing probability-density contract",
+      "finding": "4K0Q defines its law by a probability density but neither explains that term nor links to its definition. Its registered prerequisites are only 00L0 and 0H4Z; the actual pages and their full declared prerequisite closure define random variables/distributions and Gamma integration, not the density contract. The now-correct local contract in 4K0M is unreachable from this note's prerequisite graph. A graph with no missing targets or cycles therefore still leaves this non-elementary term hidden.",
+      "correction": "Link the word density in the first paragraph of 4K0Q to 4K0M, which already supplies the complete definition. Add 4K0M to prerequisites[4K0Q] and the corresponding entries record, refresh the owned-note hash and validation counts, then report the new frozen packet hash. Do not create a duplicate density definition.",
+      "acceptance_condition": "Re-read the changed 4K0Q and complete updated packet; verify the existing definition is reachable without a prerequisite cycle and all frozen hashes match. Recheck any other changes, if present.",
+      "proof_impact": "No counterexample to the GIG formulas, normalizing ranges or local invariance proofs was found; this is a required foundational navigation/definition gap.",
+      "resolution": "The opening paragraph of 4K0Q now links probability density to 4K0M. The actual 4K0M contract gives probabilities of Borel sets by integration of a nonnegative normalized density and links 00XV/00Q5. The same edge is present in both packet prerequisite records, the note hash and edge count are refreshed, and the full 171-node graph remains acyclic. Re-read the entire changed note and refreshed packet; no mathematical formula, proof or source contract changed.",
+      "verified_files": [
+        {
+          "id": "4K0Q",
+          "path": "trees/math/mathematical-physics/sasada/4K0Q.tree",
+          "sha256": "99acef54454cba3ff317add92269d90535cacd3122ac0aba10e849e23ce154f3"
+        },
+        {
+          "id": "4K0M",
+          "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+          "sha256": "99a1f137920249f810c1582b2ff335099e2c0aa3ac16985d999d6c6c697ff476"
+        },
+        {
+          "id": "mathematical-physics-sasada-packet",
+          "path": "research/mathematical-physics-sasada-packet.json",
+          "sha256": "0fe820ce2282a5b479340a3d313228f0a926cef2d29deb93bf28087c63844a48"
+        }
+      ]
+    }
+  ],
+  "additional_checks": [
+    {
+      "id": "box-ball-carrier-and-inversion",
+      "notes": [
+        "4K01",
+        "4K02",
+        "4K03",
+        "4K04"
+      ],
+      "status": "checked",
+      "detail": "Checked the integer-supremum attainment argument, minimality and uniqueness from left-unbounded zeroes, normalized future-minimum inverse, reflection sign, unequal left/right positive slopes, and the explicit lost-ball example. SA-F01 is resolved by the actual extrema/lower-limit destinations. The minus sign in the path reflection is correct even though the survey HTML's accompanying sentence omits it."
+    },
+    {
+      "id": "bernoulli-invariance",
+      "notes": [
+        "4K05",
+        "4K06",
+        "4K07",
+        "4K08",
+        "4K09",
+        "4K0A"
+      ],
+      "status": "checked",
+      "detail": "Checked the two-sided orthogonal-partial-sum argument through 0HS1 and 0HS0, geometric normalization and moments through 4E05, past/future independence, adjacent-level flux balance, finite-row induction and cylinder-law uniqueness. The finite-row proof does not assume global stationarity circularly."
+    },
+    {
+      "id": "markov-and-burke-contracts",
+      "notes": [
+        "4K0B",
+        "4K0C"
+      ],
+      "status": "checked",
+      "detail": "The Markov range, including p1=0, matches Theorem 1.8(b) and Section 3.2.2. The newly supplied local Burke proof was checked: recover W_0^0 from the new right half-path, separate it from the new left half-path and all future loads, then use temporal stationarity and finite induction. The geometric moments are correct. SA-F02 is resolved by explicit positive-probability qualifications."
+    },
+    {
+      "id": "path-transforms-and-local-limits",
+      "notes": [
+        "4K0D",
+        "4K0E",
+        "4K0F",
+        "4K0G",
+        "4K0H",
+        "4K0I",
+        "4K0J"
+      ],
+      "status": "checked",
+      "detail": "Checked midpoint extrema/log-sums, tail convergence and two-sided slopes, KdV carrier factors, uniform epsilon log(2) error, Toda three-variable maps, alternating encoding, odd-indexed carriers and the one-site shift. The local limit is not claimed to imply an infinite-orbit limit."
+    },
+    {
+      "id": "global-source-contracts",
+      "notes": [
+        "4K0K",
+        "4K0L"
+      ],
+      "status": "checked",
+      "detail": "Checked the four model-specific existence/uniqueness statements and their path encoding against the source, and checked that the local-balance equivalence retains the full-measure global-uniqueness assumption. These external research proofs were not independently reconstructed."
+    },
+    {
+      "id": "continuous-local-balance",
+      "notes": [
+        "4K0M",
+        "4K0N",
+        "4K0O",
+        "4K0P",
+        "4K0Q",
+        "4K0R",
+        "4K0S"
+      ],
+      "status": "checked",
+      "detail": "Checked the exponential, Beta-Gamma, Toda and GIG calculations directly, including density factors, parameter ranges, area preservation and global drift assumptions. SA-F03, SA-F04, SA-F05 and SA-F07 are resolved. The GIG density definition now reaches the genuine probability-density contract in 4K0M and its measure/integration destinations."
+    },
+    {
+      "id": "finite-capacity-balance",
+      "notes": [
+        "4K0T"
+      ],
+      "status": "checked",
+      "detail": "The fixed-total-particle fiber is the stated integer interval, the update reflects its x coordinate, and every point on that fiber has the same product-law mass. The J=1, K-to-infinity local limit is correctly separated from global existence."
+    },
+    {
+      "id": "atomicity-and-duplication",
+      "notes": [
+        "4K00",
+        "4K01",
+        "4K02",
+        "4K03",
+        "4K04",
+        "4K05",
+        "4K06",
+        "4K07",
+        "4K08",
+        "4K09",
+        "4K0A",
+        "4K0B",
+        "4K0C",
+        "4K0D",
+        "4K0E",
+        "4K0F",
+        "4K0G",
+        "4K0H",
+        "4K0I",
+        "4K0J",
+        "4K0K",
+        "4K0L",
+        "4K0M",
+        "4K0N",
+        "4K0O",
+        "4K0P",
+        "4K0Q",
+        "4K0R",
+        "4K0S",
+        "4K0T",
+        "4K0U",
+        "4K0V",
+        "4K0W",
+        "4K0X"
+      ],
+      "status": "checked",
+      "detail": "All 33 atoms, the outline and packet were read. The local questions and local/cited proof boundaries match their content; the quantum transfer-matrix Yang-Baxter page 2V0M was read and is not a duplicate of the set-theoretical identity in 4K0U. No remaining atomicity, duplicate-definition or semantic prerequisite defect was found within the stated scope. The declared graph is acyclic, every listed page was read, and the final density edge reuses an existing definition rather than duplicating it."
+    },
+    {
+      "id": "yang-baxter-local-algebra",
+      "notes": [
+        "4K0U"
+      ],
+      "status": "checked",
+      "detail": "Checked the two threefold compositions and their explicit rational expressions. The source's H_III^B map matches the stated parameterized map. This is a direct local identity, not a general classification theorem."
+    },
+    {
+      "id": "tagged-soliton-scaling-contract",
+      "notes": [
+        "4K0V",
+        "4K0W"
+      ],
+      "status": "checked",
+      "detail": "Compared record conditioning, the natural labels and position convention, the double-ball hypothesis, diffusive centering, path-space convergence and variance locator with arXiv:2411.14818v2 Theorem 2.1(1), Section 2 and equation (4.16). Checked the deterministic continuous-limit J1/uniform equivalence. The long research proof was not reconstructed."
+    },
+    {
+      "id": "critical-periodic-example",
+      "notes": [
+        "4K0X"
+      ],
+      "status": "checked",
+      "detail": "The alternating configurations have density one half, minimal load W=eta, and swap under evolution. Uniform mass on the two phases is invariant; this does not assert Bernoulli half-density is admissible."
+    },
+    {
+      "id": "outline-and-reference",
+      "notes": [
+        "4K00",
+        "icm2026-sasada"
+      ],
+      "status": "checked",
+      "detail": "Checked the outline against all destinations actually used, including slot construction and finite-size one-sided hydrodynamics. Verified reference authors, fixed arXiv version dates, available journal metadata, and the distinct displayed publisher/arXiv licenses. This is bibliographic verification, not a new rights declaration. SA-F06 is resolved in the frozen outline."
+    },
+    {
+      "id": "frozen-packet-integrity-and-contracts",
+      "notes": [
+        "4K00",
+        "4K01",
+        "4K02",
+        "4K03",
+        "4K04",
+        "4K05",
+        "4K06",
+        "4K07",
+        "4K08",
+        "4K09",
+        "4K0A",
+        "4K0B",
+        "4K0C",
+        "4K0D",
+        "4K0E",
+        "4K0F",
+        "4K0G",
+        "4K0H",
+        "4K0I",
+        "4K0J",
+        "4K0K",
+        "4K0L",
+        "4K0M",
+        "4K0N",
+        "4K0O",
+        "4K0P",
+        "4K0Q",
+        "4K0R",
+        "4K0S",
+        "4K0T",
+        "4K0U",
+        "4K0V",
+        "4K0W",
+        "4K0X",
+        "icm2026-sasada"
+      ],
+      "status": "checked",
+      "detail": "The new supplied packet hash matches. All 35 owned records and 36 reused-page records match the actual files and read versions. All 122 registered prerequisite edges occur in note bodies; prerequisite/navigation roles are disjoint and cover every atomic-body link. Entries agree exactly with prerequisite arrays and question/proof-scope fields. Duplicated source/coverage arrays agree exactly as JSON values. Source-reading logs are treated as writer attestations, not independently observed reading activity. Explicit research-proof and incomplete-coverage boundaries remain accurate. All seven findings are resolved."
+    }
+  ],
+  "source_records": [
+    {
+      "id": "sasada-icm2026",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1806715",
+      "format": "publisher HTML",
+      "actual_reading": [
+        "Sections 3.1-3.4: carrier, reversibility, invariant domains, Bernoulli/Markov laws and Burke discussion",
+        "Section 4.2 Theorem 4.3 and its finite-size/one-sided restrictions; Section 4.3 Theorems 4.5-4.6",
+        "Section 5.1 path transforms, Section 5.2 model formulas and Theorem 5.3, Section 5.3 Theorem 5.4 and distribution/model paragraphs",
+        "Sections 6.1-6.2: Yang-Baxter identity and explicit H_III^B map; Section 7 future directions",
+        "Publisher bibliographic information, publication date and displayed CC BY license"
+      ],
+      "scope": "Targeted passages only, not whole-report reading."
+    },
+    {
+      "id": "ckst-bbs-v1",
+      "url": "https://arxiv.org/pdf/1806.02147v1",
+      "format": "web-extracted PDF text",
+      "actual_reading": [
+        "Theorem 1.8 and parameter statement, PDF pp.10-11",
+        "Section 3.2.4 proof of Theorem 1.8, PDF p.58",
+        "Section 3.3.1, Theorem 3.23, Lemma 3.25 and the temporal-independence proof, PDF pp.59-60",
+        "Section 3.2.2, Lemma 3.15 and Corollary 3.16, PDF pp.49-50; arXiv v1 metadata and displayed license link"
+      ],
+      "scope": "Markov and Bernoulli invariance contracts and the Burke claim; no full research-proof certification."
+    },
+    {
+      "id": "cst-paths-v2",
+      "url": "https://arxiv.org/pdf/2011.00690v2",
+      "format": "web-extracted PDF text",
+      "actual_reading": [
+        "Theorem 2.1 and the carrier/path definitions (2.3)-(2.7), PDF pp.10-11",
+        "Theorem 2.2 and the carrier rescaling, PDF p.12",
+        "Section 2.3, (2.11)-(2.12), Theorem 2.3 and Remark 2.4, PDF pp.14-15",
+        "Section 2.4, alternating maximum/log-sum construction, (2.14)-(2.15) and Theorem 2.5, PDF p.16",
+        "Theorem 4.20 and Corollary 4.29, PDF pp.31 and 37; inspected their references in the model-specific proofs",
+        "arXiv v2 metadata, journal reference and displayed license link",
+        "Frozen-packet source clarification: rechecked the forward/all-time distinction at Theorems 4.19/4.20 and the negative path-reversal sign."
+      ],
+      "scope": "Encoding and existence/uniqueness contracts, not all intermediate lemmas or Sections 4-5 in full."
+    },
+    {
+      "id": "cs-balance-v3",
+      "url": "https://arxiv.org/pdf/2007.06203v3",
+      "format": "web-extracted PDF text",
+      "actual_reading": [
+        "Type I/II setting, X* definition and Theorem 1.1, PDF pp.3-5",
+        "Proposition 3.9 and its direct density computation, PDF p.22; Theorem 3.12(b), PDF p.24",
+        "Lemma 4.3, Theorem 4.4(a) and its proof, PDF pp.26-27",
+        "Section 4.2.1 maps; Proposition 4.5, Proposition 4.6, Lemma 4.7 and Theorem 4.8, PDF pp.27-29",
+        "arXiv v3 metadata and displayed license link",
+        "Frozen-packet cross-check: re-read the Type I X* definition and Theorem 4.8's printed rate domain in web-extracted PDF text. A web screenshot request for PDF p.29 failed with a cache miss; no successful reviewer visual inspection is claimed."
+      ],
+      "scope": "Only the listed model laws and abstract criterion; characterization uniqueness and general ergodicity proofs were not reviewed."
+    },
+    {
+      "id": "oss-scaling-v2",
+      "url": "https://arxiv.org/pdf/2411.14818v2",
+      "format": "web-extracted PDF text",
+      "actual_reading": [
+        "Sections 2.1-2.3: records, Takahashi-Satsuma decomposition, positions, natural labeling and record-conditioned law, PDF pp.7-11",
+        "Theorem 2.1(1), PDF p.11; Theorem 4.7(1) and equation (4.16), PDF p.23; inspected the associated positivity discussion",
+        "arXiv v2 metadata and displayed license link"
+      ],
+      "scope": "The specific tagged-soliton functional limit contract and variance locator only; not a complete reading or re-proof of Sections 4-11."
+    }
+  ],
+  "reviewed_files": [
+    {
+      "id": "4K01",
+      "path": "trees/math/mathematical-physics/sasada/4K01.tree",
+      "sha256": "1cb90764abac60952c37de7a8d46aee1f3fb4d57cd59bf12e88d852bf7843eb6"
+    },
+    {
+      "id": "4K02",
+      "path": "trees/math/mathematical-physics/sasada/4K02.tree",
+      "sha256": "6c3661cfa0316dd238ea3db3b7ef4383472bf26e8f6a0b668bd2f29e3972ec6f"
+    },
+    {
+      "id": "4K03",
+      "path": "trees/math/mathematical-physics/sasada/4K03.tree",
+      "sha256": "6bf4f9151e1d6715097e706f7f9fe550c7b7577a42ceb6839f5910ef87f71d7a"
+    },
+    {
+      "id": "4K04",
+      "path": "trees/math/mathematical-physics/sasada/4K04.tree",
+      "sha256": "c905791a15f3e9696538e60e99e319395db5919b3aa162ab1ee1d79fc4282fef"
+    },
+    {
+      "id": "4K05",
+      "path": "trees/math/mathematical-physics/sasada/4K05.tree",
+      "sha256": "3e0004d6f5859045d7b547e12d9a2156cd8ba86697edff6786c2f9d78f2b4410"
+    },
+    {
+      "id": "4K06",
+      "path": "trees/math/mathematical-physics/sasada/4K06.tree",
+      "sha256": "db1a094b2159865f66db03d7e59243365ac477aad7b952d70198d103a8e70ec5"
+    },
+    {
+      "id": "4K07",
+      "path": "trees/math/mathematical-physics/sasada/4K07.tree",
+      "sha256": "ab10a5ba3c0370fe772e97be82cb0918d1a27224c556d97f0269a08a02e4851c"
+    },
+    {
+      "id": "4K08",
+      "path": "trees/math/mathematical-physics/sasada/4K08.tree",
+      "sha256": "eb6942cd567e46ac70f2493e71d359ec37e30cfbd56357ac233cda970b992cf5"
+    },
+    {
+      "id": "4K09",
+      "path": "trees/math/mathematical-physics/sasada/4K09.tree",
+      "sha256": "6bf1300aef1779068ba770f5f19529ad8cbfb4455dd045e6ff4b6259f927b919"
+    },
+    {
+      "id": "4K0A",
+      "path": "trees/math/mathematical-physics/sasada/4K0A.tree",
+      "sha256": "66d4efd7fe337d0f194ca3321e17ad30938791b1f84e264be643470417b96031"
+    },
+    {
+      "id": "4K0B",
+      "path": "trees/math/mathematical-physics/sasada/4K0B.tree",
+      "sha256": "1978a986a39e3619bca77c55bc18751fe36217f2d0a271728117eb0fde6f0292"
+    },
+    {
+      "id": "4K0C",
+      "path": "trees/math/mathematical-physics/sasada/4K0C.tree",
+      "sha256": "9185afdcceb20221d3eb40e79f7ed0b6951c320e119a7b1966c8eeae8f995188"
+    },
+    {
+      "id": "4K0D",
+      "path": "trees/math/mathematical-physics/sasada/4K0D.tree",
+      "sha256": "b234c7c2bb7c96ce11a59a2a2bdf6ae7a5b7c24f00a0ebc8a803510d364b6aa5"
+    },
+    {
+      "id": "4K0E",
+      "path": "trees/math/mathematical-physics/sasada/4K0E.tree",
+      "sha256": "0ad5960243969c779a88b8cb231a7d7c55a33c01b902458b9b8ef1a06cd8e63f"
+    },
+    {
+      "id": "4K0F",
+      "path": "trees/math/mathematical-physics/sasada/4K0F.tree",
+      "sha256": "7ad6dcde55e59bb89b7774971aa35025bcddae0255ebe62378bb0bf247007d55"
+    },
+    {
+      "id": "4K0G",
+      "path": "trees/math/mathematical-physics/sasada/4K0G.tree",
+      "sha256": "f3545f5a487f032a0952b35b36e1ce616a7731fa1274a4554c3086125ae6a276"
+    },
+    {
+      "id": "4K0H",
+      "path": "trees/math/mathematical-physics/sasada/4K0H.tree",
+      "sha256": "3cdb998f545f6c6845447bce46357819bd9cdf04d2133d416754b83edfd6e8dc"
+    },
+    {
+      "id": "4K0I",
+      "path": "trees/math/mathematical-physics/sasada/4K0I.tree",
+      "sha256": "96b6259252eca88b41bdc1778983413f5720a5029a973c0cf35cd70df85b4380"
+    },
+    {
+      "id": "4K0J",
+      "path": "trees/math/mathematical-physics/sasada/4K0J.tree",
+      "sha256": "a90085ddccf34db76ab3df1d6cf641627af2ccf6b4241f839ad10ae9d9e3b33f"
+    },
+    {
+      "id": "4K0K",
+      "path": "trees/math/mathematical-physics/sasada/4K0K.tree",
+      "sha256": "e75b3c74c27bf2c298fe55aa2f2ce1531cecbbafe9c99ef8ec517a96bcac0054"
+    },
+    {
+      "id": "4K0L",
+      "path": "trees/math/mathematical-physics/sasada/4K0L.tree",
+      "sha256": "5dc1289ef72acb6a09060403890bd7a2c8ceabbb7b83d3e63355b2ffd424905d"
+    },
+    {
+      "id": "4K0M",
+      "path": "trees/math/mathematical-physics/sasada/4K0M.tree",
+      "sha256": "99a1f137920249f810c1582b2ff335099e2c0aa3ac16985d999d6c6c697ff476"
+    },
+    {
+      "id": "4K0N",
+      "path": "trees/math/mathematical-physics/sasada/4K0N.tree",
+      "sha256": "efb29d4d705382f9b88e445a1d90a231540829701985a2785f995445c20f1b68"
+    },
+    {
+      "id": "4K0O",
+      "path": "trees/math/mathematical-physics/sasada/4K0O.tree",
+      "sha256": "2391cda18a296a9761782fb3dcbf70257781ffe704b4e3faf8c4f0ff9b947065"
+    },
+    {
+      "id": "4K0P",
+      "path": "trees/math/mathematical-physics/sasada/4K0P.tree",
+      "sha256": "01fe7eaa4b259eb2a4a3df60880e13f3def4c6ca6b60f06c428a620b9d91f2a8"
+    },
+    {
+      "id": "4K0Q",
+      "path": "trees/math/mathematical-physics/sasada/4K0Q.tree",
+      "sha256": "99acef54454cba3ff317add92269d90535cacd3122ac0aba10e849e23ce154f3"
+    },
+    {
+      "id": "4K0R",
+      "path": "trees/math/mathematical-physics/sasada/4K0R.tree",
+      "sha256": "0d321830a6cf385525cca5ce983183a3916046b754bd522843c58360116e049b"
+    },
+    {
+      "id": "4K0S",
+      "path": "trees/math/mathematical-physics/sasada/4K0S.tree",
+      "sha256": "9cf6ffa3fb7bd877075a24b95a821bcddac7bd535714e73f44aac37c0e0361a5"
+    },
+    {
+      "id": "4K0T",
+      "path": "trees/math/mathematical-physics/sasada/4K0T.tree",
+      "sha256": "7aee6fd7621b493e9e476377df9d745814124d27b4d773b5c198d8ca7af02adf"
+    },
+    {
+      "id": "4K0U",
+      "path": "trees/math/mathematical-physics/sasada/4K0U.tree",
+      "sha256": "eb2ac7356994615dea5e5ea415f5a8f6837883dfab747afffc14927b3f1aaabd"
+    },
+    {
+      "id": "4K0V",
+      "path": "trees/math/mathematical-physics/sasada/4K0V.tree",
+      "sha256": "0decc930d76e74eaa036992650fbccb050875dd34fa36bcd78aa093cb2533da9"
+    },
+    {
+      "id": "4K0W",
+      "path": "trees/math/mathematical-physics/sasada/4K0W.tree",
+      "sha256": "cec35ac73b1881476f499d2357301a8d13306d06a0c6bc1afc4b0ae9aad7cd7a"
+    },
+    {
+      "id": "4K0X",
+      "path": "trees/math/mathematical-physics/sasada/4K0X.tree",
+      "sha256": "2c4d37466a397036828d206da4b6e24e48470f7361b84553806132a38faec296"
+    },
+    {
+      "id": "4K00",
+      "path": "trees/math/mathematical-physics/sasada/4K00.tree",
+      "sha256": "cfacafd26d8c05e284bf8fe218782879fc1d1a7fe27c246c4c0fd64e19595c1d"
+    },
+    {
+      "id": "icm2026-sasada",
+      "path": "trees/references/icm2026-sasada.tree",
+      "sha256": "86811242535d6359fc42314b565493d043004582455b446f9e1a270875c6d582"
+    },
+    {
+      "id": "4C13",
+      "path": "trees/math/mathematical-physics/ferrari/4C13.tree",
+      "sha256": "1fa5830eb1905c6ee1ce6c0d7ed48a2d2c73cdc467f07524519c71160cac5842"
+    },
+    {
+      "id": "4C14",
+      "path": "trees/math/mathematical-physics/ferrari/4C14.tree",
+      "sha256": "7c98c09d606b27e2b9de05d600abb2758291df37f037b41f81d04ed733c7f60f"
+    },
+    {
+      "id": "4C15",
+      "path": "trees/math/mathematical-physics/ferrari/4C15.tree",
+      "sha256": "ac172511b4ed4401235327840199be0628a8f59f73f5873a2ba99c090c7a2b9a"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769"
+    },
+    {
+      "id": "00L4",
+      "path": "trees/math/network/atomic/00L4.tree",
+      "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5"
+    },
+    {
+      "id": "0A6B",
+      "path": "trees/math/logic/research/atomic/0A6B.tree",
+      "sha256": "5693f635e82eb6556c668128012930441c1f96212da3f1e39a467c3645cbc4c8"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af"
+    },
+    {
+      "id": "0HS1",
+      "path": "trees/math/number-theory/reports/0HS1.tree",
+      "sha256": "4ec5e42e90e9a31dfc7b4c7f81ac9202fbbabda48d37663a4ca0d56d67cae36e"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce"
+    },
+    {
+      "id": "4E05",
+      "path": "trees/math/mathematical-physics/hutchcroft/4E05.tree",
+      "sha256": "b02c754b8300bfb08b1720b1288db766ffd6eab6ac3a1a1b316327c00be32de1"
+    },
+    {
+      "id": "00L2",
+      "path": "trees/math/network/atomic/00L2.tree",
+      "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d"
+    },
+    {
+      "id": "00Q1",
+      "path": "trees/math/logic/research/atomic/00Q1.tree",
+      "sha256": "29efd7a8c18263294c150b171392e3f44b4fa95e7fe1c715b8e0150b63fb4464"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1"
+    },
+    {
+      "id": "00RR",
+      "path": "trees/math/logic/research/atomic/00RR.tree",
+      "sha256": "4fabc901b69cb3265d68f0584a0eca1efad6b04049898bbfb17d905bcabcc895"
+    },
+    {
+      "id": "4C17",
+      "path": "trees/math/mathematical-physics/ferrari/4C17.tree",
+      "sha256": "9fbd20ce458d3e74093d0f7f7d6994ed8d2ed7d58c154573bc05566c6310106b"
+    },
+    {
+      "id": "4B01",
+      "path": "trees/math/mathematical-physics/aggarwal/4B01.tree",
+      "sha256": "8d2456561f9d95a337b6d68153c5d9d8212db1c816131c22648248a6632e91c1"
+    },
+    {
+      "id": "00QC",
+      "path": "trees/math/logic/research/atomic/00QC.tree",
+      "sha256": "ceefcd4519d75ceef29b9fbc2686c6f4fa5d553d76142c6452d3be20c8e743a1"
+    },
+    {
+      "id": "0HS0",
+      "path": "trees/math/number-theory/reports/0HS0.tree",
+      "sha256": "510287eb653afc3807bfc7c4d57fb4bf9e3f38095a9867d934c2e2f06d41dc43"
+    },
+    {
+      "id": "0A02",
+      "path": "trees/math/network/atomic/0A02.tree",
+      "sha256": "e623166be9f5fff1c79d8ce9f22c533cedae843a50d5c5740f376e499265595a"
+    },
+    {
+      "id": "00QB",
+      "path": "trees/math/logic/research/atomic/00QB.tree",
+      "sha256": "6861ea2adaa4342f9317db0e49967521cdf4e2b0173d77fe263b2e0c5d18fbd5"
+    },
+    {
+      "id": "00Q0",
+      "path": "trees/math/logic/research/atomic/00Q0.tree",
+      "sha256": "cda032eb0847cfda578b0c62a0eb74b679ad10cba0ef4963614d64d2de89dc4f"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260"
+    },
+    {
+      "id": "00QA",
+      "path": "trees/math/logic/research/atomic/00QA.tree",
+      "sha256": "455bf6a03201a02715b54b866d2f81c3a89f4d46929af732d5785b5e9316b21a"
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree",
+      "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree",
+      "sha256": "fc9fd9db793237c02165a5b40db7e6bf854fb810a195573e761818bee338f49c"
+    },
+    {
+      "id": "00E0",
+      "path": "trees/math/topology/atomic/00E0.tree",
+      "sha256": "a3ddabe5504d33013264b6363fde033ade0a0cebb7f7ae2a0c7dc8b43745bcaf"
+    },
+    {
+      "id": "00ET",
+      "path": "trees/math/topology/atomic/00ET.tree",
+      "sha256": "6357be9faeffcf933649b7d12f4acf95d3422ad648ea381d9fb5a2f14da9cb3e"
+    },
+    {
+      "id": "00EB",
+      "path": "trees/math/topology/atomic/00EB.tree",
+      "sha256": "8e22829c4894ba74d1a0a09594179ef3d0820f1800176c1e54dc0a41bb80e0b5"
+    },
+    {
+      "id": "00EO",
+      "path": "trees/math/topology/atomic/00EO.tree",
+      "sha256": "c890e252ededf57c3f11a1dc8120179f7bf72fe1303f65968b490d982854cfc2"
+    },
+    {
+      "id": "0A37",
+      "path": "trees/math/analysis/atomic/0A37.tree",
+      "sha256": "e212fde4ae3219df6893b832515641e403a16af323e431575bbb86df7f837b29"
+    },
+    {
+      "id": "0F61",
+      "path": "trees/math/analysis/atomic/0F61.tree",
+      "sha256": "c73ffc16ae619346dc9ec3ac57588ec682cd0af4f4736d8989755f1d8a9199bf"
+    },
+    {
+      "id": "00EP",
+      "path": "trees/math/topology/atomic/00EP.tree",
+      "sha256": "a7f03d2ff9ecd62c6a8ec9422e6a505dc9a64291fae4305bf676e59d8eeda4fc"
+    },
+    {
+      "id": "4B08",
+      "path": "trees/math/mathematical-physics/aggarwal/4B08.tree",
+      "sha256": "c4f529496a94e535af19e3081ce9baae4e687f0cfa49439f2c9c2f22a3438198"
+    },
+    {
+      "id": "0H4Z",
+      "path": "trees/math/number-theory/reports/0H4Z.tree",
+      "sha256": "857c3fd822acc69dee2542721ae76d4d028d8fe3eee8bb609847312c913702dc"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b"
+    },
+    {
+      "id": "0A46",
+      "path": "trees/math/analysis/atomic/0A46.tree",
+      "sha256": "f10c39159cbfd27ea1e1e4798af44066c0c601fbd13853bfa36eb3f63031a335"
+    },
+    {
+      "id": "00Q9",
+      "path": "trees/math/logic/research/atomic/00Q9.tree",
+      "sha256": "ecf8c8c13c018dc8ef21425639d62b0d2fe6ea3f80050af1169bae38eda24efa"
+    },
+    {
+      "id": "00Q4",
+      "path": "trees/math/logic/research/atomic/00Q4.tree",
+      "sha256": "196b410809c5bf0228550afb01e72b58cb623b6ad59d57da14a3b6c2590986dc"
+    },
+    {
+      "id": "00EK",
+      "path": "trees/math/topology/atomic/00EK.tree",
+      "sha256": "4448c8affbb92de46dc87e1fba269199feddd08122511e6bf65a9ede717b63c0"
+    },
+    {
+      "id": "00ER",
+      "path": "trees/math/topology/atomic/00ER.tree",
+      "sha256": "10fd11ea8002fc8a9dfb7765b1eeb84366e14b6fc4f4f011f58daa094f54f5b4"
+    },
+    {
+      "id": "00EN",
+      "path": "trees/math/topology/atomic/00EN.tree",
+      "sha256": "f582447ca6067c0f9fee70a37296fc3f522693c9c045a3fd15dc198c7fd348ed"
+    },
+    {
+      "id": "00EA",
+      "path": "trees/math/topology/atomic/00EA.tree",
+      "sha256": "751d0834bac8d124b7c04df2d43d589b1198ad2bf1cd831bb6c47cb464793572"
+    },
+    {
+      "id": "0A3M",
+      "path": "trees/math/analysis/atomic/0A3M.tree",
+      "sha256": "d71d3351c688606e249fad4f9ad4654c4cf0656c64e1005226b2e3f8068657f1"
+    },
+    {
+      "id": "4401",
+      "path": "trees/math/pde/deng/4401.tree",
+      "sha256": "82f6fb503646aab64f6e80e57f6ef7505291c94c2b35980dcab14736b580a27e"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1"
+    },
+    {
+      "id": "0A87",
+      "path": "trees/math/logic/research/atomic/0A87.tree",
+      "sha256": "e56575ccc4e7c52a7ebd5899e9d47158ca661357cf77e304a8658bf851f7bf5b"
+    },
+    {
+      "id": "00EM",
+      "path": "trees/math/topology/atomic/00EM.tree",
+      "sha256": "86cce42169b3ad12bd528d6095e95a62b67c2a325754e7e01f346279acffead6"
+    },
+    {
+      "id": "00E1",
+      "path": "trees/math/topology/atomic/00E1.tree",
+      "sha256": "7bbb1798f7d4bad94bdcbed42410eb0e524a66de532d1169d9416ae21c9bfc94"
+    },
+    {
+      "id": "00E7",
+      "path": "trees/math/topology/atomic/00E7.tree",
+      "sha256": "fb5f5364a8ec8ad39d40a589c44140032110f7bd89b24ed82a5b8dadf06c8462"
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297"
+    },
+    {
+      "id": "0A31",
+      "path": "trees/math/analysis/atomic/0A31.tree",
+      "sha256": "917071dcc498019765220ade13f80216cfdcc5177a2f8bc905343f40c97948d2"
+    },
+    {
+      "id": "0A3L",
+      "path": "trees/math/analysis/atomic/0A3L.tree",
+      "sha256": "c0a9e31b41a9fa3ceff943542906dcb44aab729c8fb4e27c5c4a7abe080fa68f"
+    },
+    {
+      "id": "4C1B",
+      "path": "trees/math/mathematical-physics/ferrari/4C1B.tree",
+      "sha256": "97e834ed69e82ef436e0c94ca7ac3a8f90b18762ee207a54ae680a06758d4d53"
+    },
+    {
+      "id": "0N0S",
+      "path": "trees/math/geometry/bourbaki/0N0S.tree",
+      "sha256": "d8dbcbc414b2900d0d1fd05c03ca5b2c2211fe12df7f6547fb31544e4609b07e"
+    },
+    {
+      "id": "00LA",
+      "path": "trees/math/network/atomic/00LA.tree",
+      "sha256": "164baae821c5bc243aebbf5b8a02971576b60b54ea616eddbea5e9b557ab511b"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba"
+    },
+    {
+      "id": "0A3K",
+      "path": "trees/math/analysis/atomic/0A3K.tree",
+      "sha256": "44a600983869d653cb925def052599779d03a03213e048a23a787ddfca35b5b6"
+    },
+    {
+      "id": "00RW",
+      "path": "trees/math/logic/research/atomic/00RW.tree",
+      "sha256": "3663e3163ef4822a20ac78064ef3d38a87103a413c076f8c6e29d2e52c4f6869"
+    },
+    {
+      "id": "0N0R",
+      "path": "trees/math/geometry/bourbaki/0N0R.tree",
+      "sha256": "afc97ce9792ec340ab6f24c01766f7927c95aa5cff958bad4f146502779894db"
+    },
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325"
+    },
+    {
+      "id": "0F40",
+      "path": "trees/math/topology/atomic/0F40.tree",
+      "sha256": "40802ed0f82b749ef73f0f6909c2cb4939fc923103e0e8cc528246fbe360c87b"
+    },
+    {
+      "id": "4C19",
+      "path": "trees/math/mathematical-physics/ferrari/4C19.tree",
+      "sha256": "1c9086545267c95670f384458275c648803c90b7ccfff7a63395c48727bbe851"
+    },
+    {
+      "id": "4C1A",
+      "path": "trees/math/mathematical-physics/ferrari/4C1A.tree",
+      "sha256": "7b928aa66951ba3c5f3b9d57e7d4adfe0143e0e1633eb6c23b63720f23aa7527"
+    },
+    {
+      "id": "4C27",
+      "path": "trees/math/mathematical-physics/ferrari/4C27.tree",
+      "sha256": "e753d259c99bbe691927f79f7d6c368e203d21c0d019a7a3ab545b0d632fed9b"
+    },
+    {
+      "id": "4C28",
+      "path": "trees/math/mathematical-physics/ferrari/4C28.tree",
+      "sha256": "f77ebf5f28ccd8e384447d6362e48ef2dd7e5c3a25f8bb15999e428fc93e32dd"
+    },
+    {
+      "id": "00G0",
+      "path": "trees/math/algebra/atomic/00G0.tree",
+      "sha256": "76dc4be29be763e244cb0a503ea8412c28ab6abc5a133b9b0d78ef3e62ea4e0e"
+    },
+    {
+      "id": "00G2",
+      "path": "trees/math/algebra/atomic/00G2.tree",
+      "sha256": "01199f95ad11226ffdb16888ee7292375ab175a16b7b51ae6044091b0178f9be"
+    },
+    {
+      "id": "00EL",
+      "path": "trees/math/topology/atomic/00EL.tree",
+      "sha256": "c8b9aa9adb511ff37d0dc9c721919f4445b4ba32c723461e2695d897bfca6e7f"
+    },
+    {
+      "id": "00ED",
+      "path": "trees/math/topology/atomic/00ED.tree",
+      "sha256": "9c7e7161495578bc212eabf228407461b232d0f59a0f2f48ef213d70fd2d69f1"
+    },
+    {
+      "id": "00E8",
+      "path": "trees/math/topology/atomic/00E8.tree",
+      "sha256": "d14050ec5e41f57c8a659b1b779c38a2842e7cf62cbb3ab7e5fd2dca3d5c68ff"
+    },
+    {
+      "id": "00EQ",
+      "path": "trees/math/topology/atomic/00EQ.tree",
+      "sha256": "e2290059ebf1bc9985d6e8aa66174c2133fbd79e611b655c458c181631d2c29f"
+    },
+    {
+      "id": "0001",
+      "path": "trees/math/algebra/0001.tree",
+      "sha256": "840f871f9dc917757c082aacbc7efc3832ee3647b52e7c234d020183fd4089b8"
+    },
+    {
+      "id": "00G3",
+      "path": "trees/math/algebra/atomic/00G3.tree",
+      "sha256": "2d397fd9103f28936fdb11b9c8754b7b4fc73de05c4eb8bc96878eb9d4fd54c7"
+    },
+    {
+      "id": "00CS",
+      "path": "trees/math/logic/research/00CS.tree",
+      "sha256": "862d9d3373c74e2173b8a41375b9b30b260e468c7ee1966e4c5b145069118cb2"
+    },
+    {
+      "id": "00CY",
+      "path": "trees/math/logic/research/00CY.tree",
+      "sha256": "81bbd50c462de0b3facbc855a291dce1b846e0d4f29c5c6fec89cbef9d5b0076"
+    },
+    {
+      "id": "00D0",
+      "path": "trees/math/logic/research/00D0.tree",
+      "sha256": "cb2fac15a062605ac3f19c049bd89d6d79c038616f85e82a307149828b32d810"
+    },
+    {
+      "id": "00D3",
+      "path": "trees/math/logic/research/00D3.tree",
+      "sha256": "8df12ff71a7daed42b0451d26d903a1f66e9ae37657cc1c4aa63803a7002ca0e"
+    },
+    {
+      "id": "00M1",
+      "path": "trees/math/analysis/atomic/00M1.tree",
+      "sha256": "e8077b2cfccf1f76276d3bef999e7fac06492dc419b03f11beb7a21fa4d357a0"
+    },
+    {
+      "id": "00EC",
+      "path": "trees/math/topology/atomic/00EC.tree",
+      "sha256": "5b6725afe7bdf8bed92ef8dea01ab137a77c44e5749cc57e727ad2d29fc203a2"
+    },
+    {
+      "id": "0A30",
+      "path": "trees/math/analysis/atomic/0A30.tree",
+      "sha256": "3264013b740d67f6a125f260e96c9354377d8b1a7c0822460414bafe12455ead"
+    },
+    {
+      "id": "00FP",
+      "path": "trees/math/topology/atomic/00FP.tree",
+      "sha256": "d8ebcccb928263127fadd50f948647d39c1a9976157464ac2111052cfe5be156"
+    },
+    {
+      "id": "00E4",
+      "path": "trees/math/topology/atomic/00E4.tree",
+      "sha256": "e1b0e50815783f1a224b10e47195b64ab55d4ba2a03bfaf21c6a6fbc7e72ff60"
+    },
+    {
+      "id": "00E5",
+      "path": "trees/math/topology/atomic/00E5.tree",
+      "sha256": "2d6167b8e561456daf431ee0750406bc26d89ddf18c0f2c6c17f443aff5287fc"
+    },
+    {
+      "id": "00EE",
+      "path": "trees/math/topology/atomic/00EE.tree",
+      "sha256": "e7eb24fcabbc9a2b7ec0eab4247195699f86f621c7767e39403f9df65d531f97"
+    },
+    {
+      "id": "00EF",
+      "path": "trees/math/topology/atomic/00EF.tree",
+      "sha256": "ce3e05f51854c65c180528f2ea7fb6ab9011e970ada9f8ccadf71efdb6ba7817"
+    },
+    {
+      "id": "00EG",
+      "path": "trees/math/topology/atomic/00EG.tree",
+      "sha256": "766549dd9066123b3244ab5aacca765e0c9b79b65b8e517e0563e5f30eee7c3c"
+    },
+    {
+      "id": "00EJ",
+      "path": "trees/math/topology/atomic/00EJ.tree",
+      "sha256": "e9959f3c22f0b72531b4535bb246a2c4102de3cf24af21f1268bf4944d22c96a"
+    },
+    {
+      "id": "00F3",
+      "path": "trees/math/topology/atomic/00F3.tree",
+      "sha256": "d3033309a25d191fc4a27847f03dc2f5128c6780a506f6483ca026b6a3ce4706"
+    },
+    {
+      "id": "0A39",
+      "path": "trees/math/topology/atomic/0A39.tree",
+      "sha256": "952607bf21fbdb930f4b92345c6545d3bba550588512f36581f3e3d6465c4f5d"
+    },
+    {
+      "id": "0A3T",
+      "path": "trees/math/topology/atomic/0A3T.tree",
+      "sha256": "fcb637f20543690e2ce64d9074c8985f1902d8a8c26eef061cd90ccdd5f0e13e"
+    },
+    {
+      "id": "0A3A",
+      "path": "trees/math/analysis/atomic/0A3A.tree",
+      "sha256": "4c47befef5ed2494953e59817991fa7d251b0fd5fdf2933613add3b08121923b"
+    },
+    {
+      "id": "0A35",
+      "path": "trees/math/analysis/atomic/0A35.tree",
+      "sha256": "a87f1c9fab8bfc263775ef0f9179fc5dc06a477daf453df5e107de5e6e3d6de0"
+    },
+    {
+      "id": "0A3B",
+      "path": "trees/math/analysis/atomic/0A3B.tree",
+      "sha256": "cfdf7c6bc8c5270d1153897bbb1ca3f699e8ea0e392439eb70d2674755cb3ae5"
+    },
+    {
+      "id": "00EX",
+      "path": "trees/math/topology/atomic/00EX.tree",
+      "sha256": "aef2d2e58100586647151d5736d69b70db72f744ea1b4692841b0dccc1888819"
+    },
+    {
+      "id": "0A3C",
+      "path": "trees/math/analysis/atomic/0A3C.tree",
+      "sha256": "0ce7de7269b74ee6540bf0a8be0eb8ef32da4c53248d1a3eda6750becbfa2bb1"
+    },
+    {
+      "id": "00G1",
+      "path": "trees/math/algebra/atomic/00G1.tree",
+      "sha256": "88772229ae15cf23173451c20932194cd22b0c5da5dafd3be0f273e6ac08163c"
+    },
+    {
+      "id": "00GC",
+      "path": "trees/math/algebra/atomic/00GC.tree",
+      "sha256": "996d480e73e1b22e0aa6b8ee814d1bbe5e55fdedf4cb7a91de6a576d4e50e348"
+    },
+    {
+      "id": "00D9",
+      "path": "trees/math/logic/research/00D9.tree",
+      "sha256": "346b0469756db7156a59408cd63de08ac61213d8b7a5843c9861af4fd1c32286"
+    },
+    {
+      "id": "00D7",
+      "path": "trees/math/logic/research/00D7.tree",
+      "sha256": "f996859dd596668f70bd3d898c5ebd10812a359690710139ddb64a29037b16eb"
+    },
+    {
+      "id": "00D8",
+      "path": "trees/math/logic/research/00D8.tree",
+      "sha256": "77d670fd0b12d13e63eea486f0f572dde9d35d32f6afad63aa22a055c4108be7"
+    },
+    {
+      "id": "00GL",
+      "path": "trees/math/algebra/atomic/00GL.tree",
+      "sha256": "81cb43f10c55be151315de7536e1fc063f0e6ad515b35a21ecc41f1d8a6dcc6b"
+    },
+    {
+      "id": "0A32",
+      "path": "trees/math/analysis/atomic/0A32.tree",
+      "sha256": "0147b81b379a3f40d3298afdf9968162581a5ed262efc2a417804059ffc9815b"
+    },
+    {
+      "id": "00GK",
+      "path": "trees/math/algebra/atomic/00GK.tree",
+      "sha256": "6b348745323fb65053e8c2b920b8abeed762344b56db55afa92c67516f64ac8b"
+    },
+    {
+      "id": "00GN",
+      "path": "trees/math/algebra/atomic/00GN.tree",
+      "sha256": "317a39f7e8763e8543e710b53a8aff0af26e9693d082a68468b7de6ba8a52ed8"
+    },
+    {
+      "id": "00GM",
+      "path": "trees/math/algebra/atomic/00GM.tree",
+      "sha256": "0d12b6def14f1a7b127630a2436a1bb88c7e0216eea271e13be759ef219c18f7"
+    },
+    {
+      "id": "00MH",
+      "path": "trees/math/analysis/atomic/00MH.tree",
+      "sha256": "87539a2ae6f7b46a02abbb40fbe4f676d2397cde571a09a7cc9f693d81d42cd8"
+    },
+    {
+      "id": "00MI",
+      "path": "trees/math/analysis/atomic/00MI.tree",
+      "sha256": "56f30d7635592fcffa7004c10eaa18c12c8b6dabc2c926117509b2c98f6ff545"
+    },
+    {
+      "id": "004N",
+      "path": "trees/math/analysis/004N.tree",
+      "sha256": "dcdb81e51a6a4e76da31d63bd44e9ab22faa8dc5e9da2b525fde7774cff09fec"
+    },
+    {
+      "id": "004P",
+      "path": "trees/math/analysis/004P.tree",
+      "sha256": "8c604510dca9a827c0f692eb717b189367cd6a4839a8d459c74ce947fcb057ba"
+    },
+    {
+      "id": "004Q",
+      "path": "trees/math/analysis/004Q.tree",
+      "sha256": "d917c8fe0cac2c0ee2c6085eb0e80d2da90993f57a0f240ac097d556d40089b6"
+    },
+    {
+      "id": "004R",
+      "path": "trees/math/analysis/004R.tree",
+      "sha256": "6104895187a559521f81dc8d9549edbab4661da86450abc423796df83bc2aba0"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b"
+    },
+    {
+      "id": "00OC",
+      "path": "trees/math/analysis/atomic/00OC.tree",
+      "sha256": "88297ff48084d2213604da1e741739c8862a8612eeaf696121385246eb04dd4a"
+    },
+    {
+      "id": "0A33",
+      "path": "trees/math/analysis/atomic/0A33.tree",
+      "sha256": "1f30b534d81b5bd042a30c0bb1f125a1f289b2d1a24afd1d07331ee389512e7e"
+    },
+    {
+      "id": "00M4",
+      "path": "trees/math/analysis/atomic/00M4.tree",
+      "sha256": "70300ca09bf8107f544ae2d1467bbc30224143bd8d5ad886255e2962ff292636"
+    },
+    {
+      "id": "0A34",
+      "path": "trees/math/analysis/atomic/0A34.tree",
+      "sha256": "e828bca1acac95821c34a87f2cf59ab4fe3298928bbd2680d5acd356aae91557"
+    },
+    {
+      "id": "0A44",
+      "path": "trees/math/analysis/atomic/0A44.tree",
+      "sha256": "aba935ec9003feb06ed056b12122d5ae3ea2b361e521ae9dc1bfb19258709834"
+    },
+    {
+      "id": "0A47",
+      "path": "trees/math/analysis/atomic/0A47.tree",
+      "sha256": "382e6170d2e28a54af1db22edff741b5a489bcd56c2ba1a9c199bc79c0d43337"
+    },
+    {
+      "id": "0I8L",
+      "path": "trees/math/number-theory/reports/0I8L.tree",
+      "sha256": "308d9708a8742655d28ebd9d2952826de90a7470f12c53e3bc5ea7e78be85d4d"
+    },
+    {
+      "id": "0A3G",
+      "path": "trees/math/analysis/atomic/0A3G.tree",
+      "sha256": "731854bc58c584422f1ece86b8da8192bbfc15e58089a2a74488c5f8865daad9"
+    },
+    {
+      "id": "0ALW",
+      "path": "trees/math/algebra/research/0ALW.tree",
+      "sha256": "c8b28517ce2885b2d7c9e27aae4bf18e02707b772f50ee72980810503ec9906b"
+    },
+    {
+      "id": "00QE",
+      "path": "trees/math/logic/research/atomic/00QE.tree",
+      "sha256": "8e28bfda8b97f39b4d81df2d1d6f37de1c49e92f187ee0b54aa49ef83dea794f"
+    },
+    {
+      "id": "00E3",
+      "path": "trees/math/topology/atomic/00E3.tree",
+      "sha256": "e5b6c0f31bae2f6f3e3c1211662bd7a9ebdc6de4bd351376e6869060b4adeeb2"
+    },
+    {
+      "id": "00Q8",
+      "path": "trees/math/logic/research/atomic/00Q8.tree",
+      "sha256": "92b4085ae1d106f8aa73c3b0714fd11b29ecfabd21cb763938213745bf56c3f6"
+    },
+    {
+      "id": "00RS",
+      "path": "trees/math/logic/research/atomic/00RS.tree",
+      "sha256": "7955231608f8183c98cdf97127bb649dc68e8b250903ad53518c7ba383f584d6"
+    },
+    {
+      "id": "00DC",
+      "path": "trees/math/logic/research/00DC.tree",
+      "sha256": "f46bcafac2b4212c2d49634a05d4be8e12edbb58d7f856cbb75c588680240800"
+    },
+    {
+      "id": "01D2",
+      "path": "trees/math/algebra/research/01D2.tree",
+      "sha256": "766213f754516ff9efbc4d38f619bf9f2fc834d774ebd7a2bae186bf2f474b11"
+    },
+    {
+      "id": "0A3Z",
+      "path": "trees/math/geometry/atomic/0A3Z.tree",
+      "sha256": "1b46109b1f5341136b2addce303076299b89e1c1351bf0d835023a68d8d3bd76"
+    },
+    {
+      "id": "0A40",
+      "path": "trees/math/geometry/atomic/0A40.tree",
+      "sha256": "a145ea6ffadacce5ce24bbf15473e1b109580df05d2794693bde88a552fe14eb"
+    },
+    {
+      "id": "0F0B",
+      "path": "trees/math/geometry/algebraic/0F0B.tree",
+      "sha256": "5ac75961806df0ab1eb2875f3b6852ce72adaac4845cef97b7737077351f831d"
+    },
+    {
+      "id": "0120",
+      "path": "trees/math/algebra/research/0120.tree",
+      "sha256": "17520e9bca7ad579c295e16db4284c729d00f7667bc7a00257957eee8efe951c"
+    },
+    {
+      "id": "0136",
+      "path": "trees/math/algebra/research/0136.tree",
+      "sha256": "b58420f6271b2c3d714416881e3d332497493e1e94f8440cf9f1a9ba4c4e2d3a"
+    },
+    {
+      "id": "00I0",
+      "path": "trees/math/category/atomic/00I0.tree",
+      "sha256": "2bb7c735089d25514095f4d5cfd370d4a20fb2696c167aec9bd162c7a2e5d5d3"
+    },
+    {
+      "id": "0121",
+      "path": "trees/math/algebra/research/0121.tree",
+      "sha256": "664cf70cc4317b8425b28a7ef90a9be2fe172f8939aee0009105b5a7b3ecb516"
+    },
+    {
+      "id": "0127",
+      "path": "trees/math/algebra/research/0127.tree",
+      "sha256": "d023e9f9121ba027b19fce9bac29ae782150efad2493f6ef0244c885cbc8464b"
+    },
+    {
+      "id": "0F0C",
+      "path": "trees/math/geometry/algebraic/0F0C.tree",
+      "sha256": "42cb78facae6ea474f55902d88e319f05f46cd98f2af41268bffd1f6f02c6cc3"
+    },
+    {
+      "id": "0ALX",
+      "path": "trees/math/algebra/research/0ALX.tree",
+      "sha256": "198fa2e9808610ccb8044a15676023eccf448ca57710d71c5558c7aee12e270f"
+    },
+    {
+      "id": "0ALH",
+      "path": "trees/math/algebra/research/0ALH.tree",
+      "sha256": "05e4fd61963d430cb063aaa6b675d77cbd42a13d52b65f5888fd0d9f56c3a93f"
+    },
+    {
+      "id": "00TV",
+      "path": "trees/math/logic/research/atomic/00TV.tree",
+      "sha256": "e9f2559ac5a9e30d141eab603b4fdf64d6c42f878ce34b7831cec925ba3e99d2"
+    },
+    {
+      "id": "00SO",
+      "path": "trees/math/logic/research/atomic/00SO.tree",
+      "sha256": "4d5dfcae2db1e113444cda8aefc5d8ac866792040d668fabe0df20a09fe38d6d"
+    },
+    {
+      "id": "0F0F",
+      "path": "trees/math/geometry/algebraic/0F0F.tree",
+      "sha256": "6f0154249461062a074a9e1ec67bfb06d9fd3445e71f2f8e17a57a0b321ef528"
+    },
+    {
+      "id": "0N0A",
+      "path": "trees/math/geometry/bourbaki/0N0A.tree",
+      "sha256": "bf8faf7f9f971f425ad8933bf0a4ccf9cd683cc2a1b6350e69589f69cbdfde7d"
+    },
+    {
+      "id": "00L9",
+      "path": "trees/math/network/atomic/00L9.tree",
+      "sha256": "64b62cd8e4dfe86989f410ecc38b6729f80a9e6f1a1f3f7e53a6dff365416456"
+    },
+    {
+      "id": "2V0M",
+      "path": "trees/math/lie/quantum-affine/2V0M.tree",
+      "sha256": "45bffac5d20c21d3ad599d3dc1b70f8c6e23c21f334f2a4d98a16a0aa452e540"
+    },
+    {
+      "id": "0V17",
+      "path": "trees/math/analysis/polynomial-ergodic/0V17.tree",
+      "sha256": "619b3540a28aae6f18f49653ea452dfe4339a41e876a789c314e707088dab657"
+    },
+    {
+      "id": "mathematical-physics-sasada-packet",
+      "path": "research/mathematical-physics-sasada-packet.json",
+      "sha256": "0fe820ce2282a5b479340a3d313228f0a926cef2d29deb93bf28087c63844a48"
+    }
+  ],
+  "reviewed_guidance_files": [
+    {
+      "id": "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+      "path": "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+      "sha256": "741e9cc486f79cb5b6f814c30ff9f02219705f082dcd3778d678bbf94bf8945c"
+    },
+    {
+      "id": "NOTES_STYLE_GUIDE.md",
+      "path": "NOTES_STYLE_GUIDE.md",
+      "sha256": "a72c61c33b088b8fc87755b980755c3eca1d7a96fd9612d4264917dbfd52ea47"
+    }
+  ],
+  "read_page_roles": {
+    "direct_link_destinations_initial_slice": [
+      "4C13",
+      "4C14",
+      "4C15",
+      "00L3",
+      "00L4",
+      "0A6B",
+      "00L1",
+      "0HS1",
+      "00L0",
+      "4E05",
+      "00L2",
+      "00Q1",
+      "00Q3",
+      "00RR",
+      "4C17",
+      "4B01",
+      "00QC"
+    ],
+    "additional_direct_link_destinations": [
+      "4B08",
+      "0H4Z",
+      "0H53",
+      "0A46",
+      "4C1B",
+      "0N0S",
+      "00LA",
+      "00E2",
+      "0A3K",
+      "0F40",
+      "0A45",
+      "4C19",
+      "4C1A",
+      "4C27",
+      "4C28",
+      "0F61",
+      "00XV",
+      "00Q5",
+      "0A37"
+    ],
+    "candidate_prerequisite_destinations": [
+      "4401",
+      "2V0M"
+    ],
+    "remaining_entries": "All actually read recursive prerequisite pages, plus explicitly marked candidate and actual outline-support pages, are included by exact id/path/hash. No unvisited link target is claimed read."
+  },
+  "pending_acceptance_gates": [],
+  "limitations": [
+    "No builds, rendered-site QA, git operations, public-page edits or shared-manifest edits were performed.",
+    "Acceptance is limited to the mathematical/editorial/source-contract scope of the owned branch; quoted research theorems were not all re-proved.",
+    "The exact shared pages and hash-bound scope are recorded; unrelated claims/applications and complete primary papers are not certified.",
+    "This pass binds only the exact frozen file hashes recorded here. Later note, packet or relevant prerequisite changes require a delta review. The writer's unavailable external terminology lookup remains transparently reported; no successful external match is claimed."
+  ],
+  "required_followup": "No mathematical repair remains open for this frozen snapshot. Parent-owned integration, build/render validation and publication remain outside this review.",
+  "hash_checkpoint": {
+    "checked_at_utc": "2026-10-23T17:47:39.385Z",
+    "timezone": "Asia/Shanghai",
+    "changed_since_read": [],
+    "reviewed_file_count": 182,
+    "owned_inventory": [
+      "4K00.tree",
+      "4K01.tree",
+      "4K02.tree",
+      "4K03.tree",
+      "4K04.tree",
+      "4K05.tree",
+      "4K06.tree",
+      "4K07.tree",
+      "4K08.tree",
+      "4K09.tree",
+      "4K0A.tree",
+      "4K0B.tree",
+      "4K0C.tree",
+      "4K0D.tree",
+      "4K0E.tree",
+      "4K0F.tree",
+      "4K0G.tree",
+      "4K0H.tree",
+      "4K0I.tree",
+      "4K0J.tree",
+      "4K0K.tree",
+      "4K0L.tree",
+      "4K0M.tree",
+      "4K0N.tree",
+      "4K0O.tree",
+      "4K0P.tree",
+      "4K0Q.tree",
+      "4K0R.tree",
+      "4K0S.tree",
+      "4K0T.tree",
+      "4K0U.tree",
+      "4K0V.tree",
+      "4K0W.tree",
+      "4K0X.tree"
+    ],
+    "packet_present": true,
+    "meaning": "All 182 exact file versions actually reviewed, including the re-read 4K0Q and refreshed packet, matched at this checkpoint. Acceptance also rests on the mathematical and semantic checks recorded here, not hashes alone.",
+    "final_delta_from_revision_3": [
+      {
+        "id": "4K0Q",
+        "path": "trees/math/mathematical-physics/sasada/4K0Q.tree",
+        "before": "4225be65e9171f3d20f2dcd5d8567be23ef69e9835bf5f88c29febe349f373d4",
+        "sha256": "99acef54454cba3ff317add92269d90535cacd3122ac0aba10e849e23ce154f3"
+      },
+      {
+        "id": "mathematical-physics-sasada-packet",
+        "path": "research/mathematical-physics-sasada-packet.json",
+        "before": "561a98303cb040937137656ecf0fbb0c066ca874bbf331febd55692fa425b1d6",
+        "sha256": "0fe820ce2282a5b479340a3d313228f0a926cef2d29deb93bf28087c63844a48"
+      }
+    ]
+  },
+  "prerequisite_review": {
+    "result": "pass",
+    "declared_graph_nodes": 171,
+    "owned_prerequisite_edges": 122,
+    "cycles": [],
+    "all_declared_graph_pages_actually_read": true,
+    "all_packet_reused_records_actually_read": true,
+    "structural_checks": {
+      "unregistered": [],
+      "overlap": [],
+      "bodyMissing": [],
+      "all_recursive_nodes_read": true,
+      "recursive_nodes": 171,
+      "probability_density_contract_reachable_from_4K0Q": true,
+      "density_prerequisite_repair_creates_cycle": false,
+      "density_contract_measure_and_integration_reachable": true
+    },
+    "read_only_graph_input": {
+      "path": "research/site-evergreen-audit.json",
+      "initial_sha256": "188de263c365ec759e02c486c2057e3587edc0399d66cb9aa4429820b2edc6d1",
+      "final_sha256": "0690dc1f64b0d9133d7f803e7a824f8e5231df442763e894feb1eb568a1e5108",
+      "relevant_subgraph_unchanged": false,
+      "relevant_subgraph_sha256": "b6422c695b48eaf4c72a94b609bc5989a5d9739f0aa6da2eaad2c9661ccadaab",
+      "scope": "Only prerequisite metadata needed for the Sasada closure was inspected. The whole shared manifest was not reviewed or edited. Its shared-page prerequisite projection is unchanged; the sole relevant combined-graph change is the authorized packet edge 4K0Q -> 4K0M.",
+      "shared_prerequisite_projection_unchanged": true,
+      "authorized_packet_edge_change": [
+        {
+          "id": "4K0Q",
+          "before": [
+            "00L0",
+            "0H4Z"
+          ],
+          "after": [
+            "00L0",
+            "0H4Z",
+            "4K0M"
+          ]
+        }
+      ]
+    },
+    "declared_closure": [
+      {
+        "id": "00Q0",
+        "prerequisites": []
+      },
+      {
+        "id": "00Q2",
+        "prerequisites": [
+          "00Q0"
+        ]
+      },
+      {
+        "id": "4C13",
+        "prerequisites": [
+          "00Q2"
+        ]
+      },
+      {
+        "id": "4C14",
+        "prerequisites": [
+          "4C13"
+        ]
+      },
+      {
+        "id": "4C15",
+        "prerequisites": [
+          "4C14",
+          "4C13"
+        ]
+      },
+      {
+        "id": "00EK",
+        "prerequisites": []
+      },
+      {
+        "id": "00ER",
+        "prerequisites": [
+          "00EK"
+        ]
+      },
+      {
+        "id": "00G0",
+        "prerequisites": []
+      },
+      {
+        "id": "00G2",
+        "prerequisites": [
+          "00G0"
+        ]
+      },
+      {
+        "id": "00EL",
+        "prerequisites": [
+          "00EK",
+          "00G2"
+        ]
+      },
+      {
+        "id": "00E0",
+        "prerequisites": []
+      },
+      {
+        "id": "00E1",
+        "prerequisites": [
+          "00E0"
+        ]
+      },
+      {
+        "id": "00E7",
+        "prerequisites": [
+          "00E0"
+        ]
+      },
+      {
+        "id": "00EA",
+        "prerequisites": [
+          "00E0",
+          "00E1",
+          "00E7"
+        ]
+      },
+      {
+        "id": "00EM",
+        "prerequisites": [
+          "00EK",
+          "00EA"
+        ]
+      },
+      {
+        "id": "00ED",
+        "prerequisites": [
+          "00E0"
+        ]
+      },
+      {
+        "id": "00E8",
+        "prerequisites": [
+          "00E0",
+          "00E7"
+        ]
+      },
+      {
+        "id": "00EN",
+        "prerequisites": [
+          "00EK",
+          "00EL",
+          "00EM",
+          "00ED",
+          "00E8"
+        ]
+      },
+      {
+        "id": "00EQ",
+        "prerequisites": [
+          "00E0",
+          "00E7",
+          "00E8"
+        ]
+      },
+      {
+        "id": "00EP",
+        "prerequisites": [
+          "00EK",
+          "00EN",
+          "00EQ",
+          "00EM",
+          "00E8"
+        ]
+      },
+      {
+        "id": "0A37",
+        "prerequisites": [
+          "00ER",
+          "00EP"
+        ]
+      },
+      {
+        "id": "0F61",
+        "prerequisites": [
+          "0A37",
+          "00EP"
+        ]
+      },
+      {
+        "id": "4K01",
+        "prerequisites": [
+          "4C13",
+          "4C14",
+          "4C15",
+          "0A37",
+          "0F61"
+        ]
+      },
+      {
+        "id": "4K02",
+        "prerequisites": [
+          "4K01"
+        ]
+      },
+      {
+        "id": "4K03",
+        "prerequisites": [
+          "4K01",
+          "4K02",
+          "4C14"
+        ]
+      },
+      {
+        "id": "4K04",
+        "prerequisites": [
+          "4C13",
+          "4K01",
+          "4K02"
+        ]
+      },
+      {
+        "id": "00Q3",
+        "prerequisites": [
+          "00Q2"
+        ]
+      },
+      {
+        "id": "00Q1",
+        "prerequisites": [
+          "00Q0"
+        ]
+      },
+      {
+        "id": "00QD",
+        "prerequisites": [
+          "00E0",
+          "00Q0"
+        ]
+      },
+      {
+        "id": "00L0",
+        "prerequisites": [
+          "00Q3",
+          "00Q1",
+          "00QD"
+        ]
+      },
+      {
+        "id": "00L3",
+        "prerequisites": [
+          "00Q3",
+          "00L0",
+          "00QD"
+        ]
+      },
+      {
+        "id": "00Q5",
+        "prerequisites": [
+          "00Q2",
+          "00Q1",
+          "0A37",
+          "00QD"
+        ]
+      },
+      {
+        "id": "00L1",
+        "prerequisites": [
+          "00L0",
+          "00Q5"
+        ]
+      },
+      {
+        "id": "00L2",
+        "prerequisites": [
+          "00L1",
+          "00L3",
+          "00L0"
+        ]
+      },
+      {
+        "id": "00L4",
+        "prerequisites": [
+          "00L0",
+          "00L1",
+          "00L2"
+        ]
+      },
+      {
+        "id": "00Q4",
+        "prerequisites": [
+          "00Q2"
+        ]
+      },
+      {
+        "id": "00QA",
+        "prerequisites": [
+          "00Q2",
+          "00Q4",
+          "00QD"
+        ]
+      },
+      {
+        "id": "00XV",
+        "prerequisites": [
+          "00Q2",
+          "00QD",
+          "00QA"
+        ]
+      },
+      {
+        "id": "00Q9",
+        "prerequisites": [
+          "00Q2",
+          "00XV"
+        ]
+      },
+      {
+        "id": "00QB",
+        "prerequisites": [
+          "00Q9",
+          "00Q0",
+          "00QA"
+        ]
+      },
+      {
+        "id": "0A6B",
+        "prerequisites": [
+          "00Q3",
+          "00Q0",
+          "00QB",
+          "00QA"
+        ]
+      },
+      {
+        "id": "00E2",
+        "prerequisites": [
+          "00E0"
+        ]
+      },
+      {
+        "id": "0001",
+        "prerequisites": [
+          "00G0"
+        ]
+      },
+      {
+        "id": "00G3",
+        "prerequisites": [
+          "0001"
+        ]
+      },
+      {
+        "id": "00CS",
+        "prerequisites": [
+          "00G3"
+        ]
+      },
+      {
+        "id": "00CY",
+        "prerequisites": [
+          "00CS"
+        ]
+      },
+      {
+        "id": "00D0",
+        "prerequisites": [
+          "00CS",
+          "00CY",
+          "0001"
+        ]
+      },
+      {
+        "id": "00D3",
+        "prerequisites": [
+          "00D0",
+          "00G3"
+        ]
+      },
+      {
+        "id": "00M1",
+        "prerequisites": [
+          "00D3",
+          "00EK",
+          "00EN"
+        ]
+      },
+      {
+        "id": "00EC",
+        "prerequisites": [
+          "00E0",
+          "00E7",
+          "00EA"
+        ]
+      },
+      {
+        "id": "0A30",
+        "prerequisites": [
+          "00M1",
+          "00EC",
+          "00E2"
+        ]
+      },
+      {
+        "id": "0A31",
+        "prerequisites": [
+          "0A30",
+          "00E2"
+        ]
+      },
+      {
+        "id": "00FP",
+        "prerequisites": [
+          "00E0"
+        ]
+      },
+      {
+        "id": "00E4",
+        "prerequisites": [
+          "00E0",
+          "00E2"
+        ]
+      },
+      {
+        "id": "00E5",
+        "prerequisites": [
+          "00E4",
+          "00E2",
+          "00E1",
+          "00E0"
+        ]
+      },
+      {
+        "id": "00EE",
+        "prerequisites": [
+          "00E0",
+          "00E5",
+          "00E4"
+        ]
+      },
+      {
+        "id": "00EF",
+        "prerequisites": [
+          "00E0",
+          "00EE",
+          "00ED"
+        ]
+      },
+      {
+        "id": "00EG",
+        "prerequisites": [
+          "00E0",
+          "00EF",
+          "00E2",
+          "00E4"
+        ]
+      },
+      {
+        "id": "00EJ",
+        "prerequisites": [
+          "00E0",
+          "00EG",
+          "00E2",
+          "00E1"
+        ]
+      },
+      {
+        "id": "00F3",
+        "prerequisites": [
+          "00E0",
+          "00FP",
+          "00EJ"
+        ]
+      },
+      {
+        "id": "0A39",
+        "prerequisites": [
+          "00EN",
+          "00F3",
+          "00E1",
+          "0A37",
+          "00FP"
+        ]
+      },
+      {
+        "id": "0A3T",
+        "prerequisites": [
+          "00F3",
+          "00E2",
+          "00EJ",
+          "00FP"
+        ]
+      },
+      {
+        "id": "0A3A",
+        "prerequisites": [
+          "00F3",
+          "00E2",
+          "0A39",
+          "0A37",
+          "0A3T"
+        ]
+      },
+      {
+        "id": "0A35",
+        "prerequisites": [
+          "00E2",
+          "0A31",
+          "0A39",
+          "0A3A"
+        ]
+      },
+      {
+        "id": "0A3B",
+        "prerequisites": [
+          "0A37"
+        ]
+      },
+      {
+        "id": "00EX",
+        "prerequisites": [
+          "00EK",
+          "00EP",
+          "00EN",
+          "00E2",
+          "00EM",
+          "00E8"
+        ]
+      },
+      {
+        "id": "0F40",
+        "prerequisites": [
+          "00EK",
+          "00EX"
+        ]
+      },
+      {
+        "id": "0A3K",
+        "prerequisites": [
+          "00E2",
+          "0A3B",
+          "0A3A",
+          "0A39",
+          "0F40"
+        ]
+      },
+      {
+        "id": "0A3C",
+        "prerequisites": [
+          "0A3B",
+          "0A3K",
+          "0A31",
+          "0A35",
+          "00E2"
+        ]
+      },
+      {
+        "id": "00G1",
+        "prerequisites": [
+          "00G0"
+        ]
+      },
+      {
+        "id": "00GC",
+        "prerequisites": [
+          "00D3",
+          "00G1",
+          "00D0",
+          "00G0"
+        ]
+      },
+      {
+        "id": "00D9",
+        "prerequisites": [
+          "00D3"
+        ]
+      },
+      {
+        "id": "00D7",
+        "prerequisites": [
+          "00D3"
+        ]
+      },
+      {
+        "id": "00D8",
+        "prerequisites": [
+          "00D3",
+          "00D7"
+        ]
+      },
+      {
+        "id": "00GL",
+        "prerequisites": [
+          "00D3",
+          "00D9",
+          "00D8",
+          "00D0"
+        ]
+      },
+      {
+        "id": "0A32",
+        "prerequisites": [
+          "0A31",
+          "00E0",
+          "00GL",
+          "00E2"
+        ]
+      },
+      {
+        "id": "00GK",
+        "prerequisites": [
+          "00GL",
+          "00GC",
+          "00G1",
+          "00D0",
+          "00D3"
+        ]
+      },
+      {
+        "id": "00GN",
+        "prerequisites": [
+          "00D3",
+          "00D8",
+          "00D9",
+          "00GL",
+          "00D0",
+          "00D7"
+        ]
+      },
+      {
+        "id": "00GM",
+        "prerequisites": [
+          "00GL",
+          "00GN",
+          "00D0",
+          "00D3"
+        ]
+      },
+      {
+        "id": "00MH",
+        "prerequisites": [
+          "00GC",
+          "00D0",
+          "00D3",
+          "00GL"
+        ]
+      },
+      {
+        "id": "00MI",
+        "prerequisites": [
+          "00D0",
+          "00MH",
+          "00D3"
+        ]
+      },
+      {
+        "id": "004M",
+        "prerequisites": [
+          "00D3",
+          "00GM",
+          "00MI"
+        ]
+      },
+      {
+        "id": "004N",
+        "prerequisites": [
+          "004M",
+          "00D3"
+        ]
+      },
+      {
+        "id": "004P",
+        "prerequisites": [
+          "004M"
+        ]
+      },
+      {
+        "id": "004Q",
+        "prerequisites": [
+          "004M",
+          "004P"
+        ]
+      },
+      {
+        "id": "004R",
+        "prerequisites": [
+          "004M",
+          "004P",
+          "004Q"
+        ]
+      },
+      {
+        "id": "004S",
+        "prerequisites": [
+          "004M",
+          "004R",
+          "004P"
+        ]
+      },
+      {
+        "id": "00OC",
+        "prerequisites": [
+          "004M",
+          "00M1",
+          "004S"
+        ]
+      },
+      {
+        "id": "0A33",
+        "prerequisites": [
+          "00GC",
+          "0A30",
+          "0A32",
+          "00E0",
+          "00GK",
+          "004N",
+          "00OC"
+        ]
+      },
+      {
+        "id": "00M4",
+        "prerequisites": [
+          "00GC",
+          "00M1",
+          "0A37"
+        ]
+      },
+      {
+        "id": "0A34",
+        "prerequisites": [
+          "0A33",
+          "0A30",
+          "00M4"
+        ]
+      },
+      {
+        "id": "0A44",
+        "prerequisites": [
+          "00E2",
+          "0A37"
+        ]
+      },
+      {
+        "id": "0A45",
+        "prerequisites": [
+          "0A3B",
+          "0A3C",
+          "0A34",
+          "0A35",
+          "0A44"
+        ]
+      },
+      {
+        "id": "0A46",
+        "prerequisites": [
+          "0A45",
+          "0A31"
+        ]
+      },
+      {
+        "id": "0A47",
+        "prerequisites": [
+          "0A46",
+          "0A45",
+          "0A34"
+        ]
+      },
+      {
+        "id": "0A3L",
+        "prerequisites": [
+          "0A35",
+          "0A47"
+        ]
+      },
+      {
+        "id": "0A3M",
+        "prerequisites": [
+          "0A3L"
+        ]
+      },
+      {
+        "id": "0HS0",
+        "prerequisites": [
+          "00Q3",
+          "0A3M",
+          "00L1"
+        ]
+      },
+      {
+        "id": "0A02",
+        "prerequisites": [
+          "00L0",
+          "00L1"
+        ]
+      },
+      {
+        "id": "0HS1",
+        "prerequisites": [
+          "0HS0",
+          "0A02"
+        ]
+      },
+      {
+        "id": "4K05",
+        "prerequisites": [
+          "00L3",
+          "00L4",
+          "0A6B",
+          "00L1",
+          "0HS1",
+          "4K03",
+          "4K01"
+        ]
+      },
+      {
+        "id": "0A7A",
+        "prerequisites": [
+          "00Q2",
+          "00Q5"
+        ]
+      },
+      {
+        "id": "4E05",
+        "prerequisites": [
+          "00L0",
+          "00L1",
+          "0A7A",
+          "0A35"
+        ]
+      },
+      {
+        "id": "4K06",
+        "prerequisites": [
+          "00L0",
+          "4E05",
+          "00L1",
+          "00L2"
+        ]
+      },
+      {
+        "id": "4K07",
+        "prerequisites": [
+          "4K05",
+          "4K01",
+          "4K06",
+          "0A6B"
+        ]
+      },
+      {
+        "id": "4K08",
+        "prerequisites": [
+          "00Q1",
+          "00Q3",
+          "00L3"
+        ]
+      },
+      {
+        "id": "4K09",
+        "prerequisites": [
+          "4C13",
+          "00L3",
+          "4K06",
+          "4K08",
+          "00L4"
+        ]
+      },
+      {
+        "id": "00RR",
+        "prerequisites": [
+          "00Q2",
+          "00Q1"
+        ]
+      },
+      {
+        "id": "4K0A",
+        "prerequisites": [
+          "0A6B",
+          "4K01",
+          "00RR",
+          "4K05",
+          "4K07",
+          "4K09",
+          "4K08"
+        ]
+      },
+      {
+        "id": "4K0B",
+        "prerequisites": [
+          "00Q3",
+          "4K01"
+        ]
+      },
+      {
+        "id": "4K0C",
+        "prerequisites": [
+          "4K0A",
+          "4K01",
+          "00L1",
+          "00L2",
+          "4K06",
+          "4K07",
+          "4K02"
+        ]
+      },
+      {
+        "id": "4K0D",
+        "prerequisites": [
+          "0A45",
+          "0A46"
+        ]
+      },
+      {
+        "id": "4K0E",
+        "prerequisites": [
+          "4K0D",
+          "4K01"
+        ]
+      },
+      {
+        "id": "4K0F",
+        "prerequisites": [
+          "4K0D"
+        ]
+      },
+      {
+        "id": "4K0G",
+        "prerequisites": [
+          "4K0F",
+          "4K0E"
+        ]
+      },
+      {
+        "id": "4C17",
+        "prerequisites": [
+          "4C13",
+          "4C14"
+        ]
+      },
+      {
+        "id": "4K0H",
+        "prerequisites": [
+          "4C13",
+          "4C17"
+        ]
+      },
+      {
+        "id": "4K0I",
+        "prerequisites": []
+      },
+      {
+        "id": "4K0J",
+        "prerequisites": [
+          "4K0H",
+          "4K0I",
+          "4K0D"
+        ]
+      },
+      {
+        "id": "4K0K",
+        "prerequisites": [
+          "4K0E",
+          "4K0F",
+          "4K0H",
+          "4K0I",
+          "4K0J"
+        ]
+      },
+      {
+        "id": "00ET",
+        "prerequisites": [
+          "00EK",
+          "00ER",
+          "00EP"
+        ]
+      },
+      {
+        "id": "00EB",
+        "prerequisites": [
+          "00E0",
+          "00EA"
+        ]
+      },
+      {
+        "id": "00EO",
+        "prerequisites": [
+          "00E0",
+          "00EK",
+          "00EN"
+        ]
+      },
+      {
+        "id": "00QC",
+        "prerequisites": [
+          "00ET",
+          "00EB",
+          "00EO",
+          "00E0"
+        ]
+      },
+      {
+        "id": "4K0L",
+        "prerequisites": [
+          "00QC",
+          "00Q1",
+          "0A6B",
+          "4K08"
+        ]
+      },
+      {
+        "id": "0A87",
+        "prerequisites": [
+          "00Q2",
+          "00Q0"
+        ]
+      },
+      {
+        "id": "0H53",
+        "prerequisites": [
+          "00Q9",
+          "00QB",
+          "0A7A",
+          "0A87",
+          "00Q5"
+        ]
+      },
+      {
+        "id": "4K0M",
+        "prerequisites": [
+          "00L0",
+          "0A46",
+          "00L3",
+          "0H53",
+          "00XV",
+          "00Q5"
+        ]
+      },
+      {
+        "id": "0I8L",
+        "prerequisites": [
+          "0H53",
+          "0A3C"
+        ]
+      },
+      {
+        "id": "0N0R",
+        "prerequisites": [
+          "00L0",
+          "0I8L"
+        ]
+      },
+      {
+        "id": "0A3G",
+        "prerequisites": [
+          "0A30",
+          "0A33",
+          "00GC"
+        ]
+      },
+      {
+        "id": "0ALW",
+        "prerequisites": [
+          "0A3G"
+        ]
+      },
+      {
+        "id": "0H4Z",
+        "prerequisites": [
+          "0A3G",
+          "0ALW"
+        ]
+      },
+      {
+        "id": "4B01",
+        "prerequisites": [
+          "0A33"
+        ]
+      },
+      {
+        "id": "4B08",
+        "prerequisites": [
+          "00L3",
+          "0N0R",
+          "0H4Z",
+          "4B01",
+          "0A6B",
+          "00QB"
+        ]
+      },
+      {
+        "id": "4K0N",
+        "prerequisites": [
+          "4B08",
+          "00L3",
+          "0H4Z",
+          "0H53"
+        ]
+      },
+      {
+        "id": "4K0O",
+        "prerequisites": [
+          "4K0M",
+          "4K0H",
+          "0A6B",
+          "4K0J"
+        ]
+      },
+      {
+        "id": "4K0P",
+        "prerequisites": [
+          "4K0N",
+          "4K0I",
+          "0A6B",
+          "4K0J"
+        ]
+      },
+      {
+        "id": "4K0Q",
+        "prerequisites": [
+          "00L0",
+          "0H4Z",
+          "4K0M"
+        ]
+      },
+      {
+        "id": "4K0R",
+        "prerequisites": [
+          "00L3",
+          "4K0Q",
+          "0H53"
+        ]
+      },
+      {
+        "id": "4K0S",
+        "prerequisites": [
+          "4K0Q",
+          "0A6B",
+          "4K0F",
+          "0HS1",
+          "4K05",
+          "4K0K",
+          "4K0R",
+          "4K0L"
+        ]
+      },
+      {
+        "id": "4K0T",
+        "prerequisites": [
+          "00L3",
+          "4K06",
+          "4K09"
+        ]
+      },
+      {
+        "id": "4K0U",
+        "prerequisites": [
+          "4K0R"
+        ]
+      },
+      {
+        "id": "00QE",
+        "prerequisites": [
+          "00Q0",
+          "00QC",
+          "00Q1",
+          "00QD"
+        ]
+      },
+      {
+        "id": "00E3",
+        "prerequisites": [
+          "00E0",
+          "00E2"
+        ]
+      },
+      {
+        "id": "00Q8",
+        "prerequisites": [
+          "00Q3",
+          "00QE",
+          "00QA",
+          "00Q1",
+          "00Q4",
+          "00E3"
+        ]
+      },
+      {
+        "id": "00RS",
+        "prerequisites": [
+          "00Q8",
+          "00Q4",
+          "00RR"
+        ]
+      },
+      {
+        "id": "00RW",
+        "prerequisites": [
+          "00RS",
+          "00Q3"
+        ]
+      },
+      {
+        "id": "4C1B",
+        "prerequisites": [
+          "4C14",
+          "00RR",
+          "00RW",
+          "4C17"
+        ]
+      },
+      {
+        "id": "00LA",
+        "prerequisites": [
+          "00L0",
+          "00E2",
+          "00Q3"
+        ]
+      },
+      {
+        "id": "4K0W",
+        "prerequisites": [
+          "00E2",
+          "00L1",
+          "00LA",
+          "0A3K",
+          "0F40"
+        ]
+      },
+      {
+        "id": "00DC",
+        "prerequisites": [
+          "00G1",
+          "0001"
+        ]
+      },
+      {
+        "id": "01D2",
+        "prerequisites": [
+          "00CS",
+          "00DC",
+          "00GK"
+        ]
+      },
+      {
+        "id": "0A3Z",
+        "prerequisites": [
+          "00DC",
+          "01D2"
+        ]
+      },
+      {
+        "id": "0A40",
+        "prerequisites": [
+          "01D2",
+          "0A3Z"
+        ]
+      },
+      {
+        "id": "0F0B",
+        "prerequisites": [
+          "00GC",
+          "00D7",
+          "00GM",
+          "0A40"
+        ]
+      },
+      {
+        "id": "0120",
+        "prerequisites": [
+          "00G3"
+        ]
+      },
+      {
+        "id": "0136",
+        "prerequisites": [
+          "0120",
+          "00G3"
+        ]
+      },
+      {
+        "id": "00I0",
+        "prerequisites": [
+          "00G1"
+        ]
+      },
+      {
+        "id": "0121",
+        "prerequisites": [
+          "0136",
+          "00I0",
+          "0120",
+          "00G3"
+        ]
+      },
+      {
+        "id": "0127",
+        "prerequisites": [
+          "0136",
+          "0121"
+        ]
+      },
+      {
+        "id": "0F0C",
+        "prerequisites": [
+          "00D3",
+          "00GC",
+          "0F0B",
+          "00GL",
+          "0127",
+          "00D9"
+        ]
+      },
+      {
+        "id": "0ALX",
+        "prerequisites": [
+          "00CS",
+          "0120",
+          "0136"
+        ]
+      },
+      {
+        "id": "0ALH",
+        "prerequisites": [
+          "00CS",
+          "0ALX"
+        ]
+      },
+      {
+        "id": "00TV",
+        "prerequisites": [
+          "00D0"
+        ]
+      },
+      {
+        "id": "00SO",
+        "prerequisites": [
+          "00D0",
+          "0ALH",
+          "00TV"
+        ]
+      },
+      {
+        "id": "0F0F",
+        "prerequisites": [
+          "00GM",
+          "00GC",
+          "00GL",
+          "0F0C",
+          "0F0B",
+          "00SO"
+        ]
+      },
+      {
+        "id": "0N0A",
+        "prerequisites": [
+          "00D3",
+          "0F0F",
+          "004M",
+          "00M4"
+        ]
+      },
+      {
+        "id": "0N0S",
+        "prerequisites": [
+          "004M",
+          "00Q3",
+          "00L3",
+          "0N0R",
+          "0N0A"
+        ]
+      },
+      {
+        "id": "4K0V",
+        "prerequisites": [
+          "4K0A",
+          "4K0B",
+          "4C14",
+          "4C17",
+          "4C1B",
+          "4K0W",
+          "0N0S"
+        ]
+      },
+      {
+        "id": "4K0X",
+        "prerequisites": [
+          "4K01",
+          "00RR"
+        ]
+      }
+    ],
+    "semantic_gap": null,
+    "scope_boundary": "The declared 171-node closure was read in full. Additional actual outline prerequisites 00L9 and 0V17 and the duplicate candidate 2V0M were read. The borrowed Birkhoff theorem is used at its stated contract; its separate proof dependency campaign is outside this Sasada review.",
+    "semantic_gap_resolution": "SA-F07 closed by 4K0Q -> 4K0M -> 00XV/00Q5; all actual destination contents were read."
+  },
+  "packet_review": {
+    "read_in_full": true,
+    "duplicate_fields_verified": [
+      "sources/source_records",
+      "remaining_branches/report.remaining_branches",
+      "unexpanded_deep_proofs/report.unexpanded_deep_proofs",
+      "source_clarifications/report.metadata.conventions"
+    ],
+    "metadata_checks": {
+      "packet_record_count": 71,
+      "read_hash_mismatch": [],
+      "edge_count": 122,
+      "body_edge_mismatches": [],
+      "owned_inventory_matches": true,
+      "all_reused_read": true
+    },
+    "source_reading_scope": "The review's source_records describe this reviewer's actual reading. The packet's broader author reading and visual-inspection logs are not represented as reviewer observations.",
+    "primary_pdf_asset_hashes": "All three packet-listed local primary PDFs exist and their SHA-256 values match source_records. This verifies the assets, not full-paper reading.",
+    "validation_boundary": "The writer's KaTeX, symbolic and finite-enumeration results were read as reported evidence. This reviewer did not run builds, git, Forester parsing or rendered-site QA.",
+    "historical_review_input": "The refreshed packet records revision 3's review hash 3d7f07db15e3d825678086955d820d4da4dd19b56bd40da6a8145aaa2134eded as the author's repair input. This matched the review file before the present revision 4 update; it is intentionally historical and is not expected to equal the new review hash.",
+    "freeze_revision": 2,
+    "final_re_read": "The complete refreshed packet was re-read after SA-F07, including all proof/source boundaries, notes/reused records, prerequisites, entries, terminology evidence, responses, coverage, validation and freeze fields. Duplicate arrays were also checked for exact JSON equality."
+  }
+}

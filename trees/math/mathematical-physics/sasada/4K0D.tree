@@ -1,0 +1,12 @@
+\title{中点最大值与指数和的路径变换}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.1；Croydon–Sasada–Tsujimoto，表 1、§2}
+
+\p{设 #{S:\mathbb Z\to\mathbb R}、#{S_0=0}，两端分别满足 #{S_n/n\to c_\pm>0}。记这一类路径为 #{\mathcal S^{\mathrm{lin}}_0}，并定义中点高度 #{A_m=(S_m+S_{m-1})/2} 及}
+##{M_n^\vee=\sup_{m\le n}A_m,\qquad
+M_n^\Sigma=\log\left(\sum_{m\le n}e^{A_m}\right).}
+\p{这里使用[自然对数](0A45)与[指数函数](0A46)。相应的归零变换为 #{T^\vee S=2M^\vee -S-2M_0^\vee} 与 #{T^\Sigma S=2M^\Sigma -S-2M_0^\Sigma}。前者取最大的中点高度；后者将所有过去高度的指数相加。它们与[箱球 Pitman 变换](4K01)使用的格点最大值有所区别。}
+\p{\strong{有限性。}当 #{m\to -\infty} 时，#{A_m/m\to c_->0}。对充分负的 #{m}，#{A_m\le(c_-/2)m}。所以左尾指数和被收敛的等比级数控制，最大值也有限。余下到 #{n} 为止仅有有限项。指数和严格为正，故对数有定义。}
+\p{\strong{双侧斜率。}固定小的 #{\varepsilon>0}。负端的 #{A_m} 夹在 #{(c_-+\varepsilon)m} 与 #{(c_--\varepsilon)m} 之间；取最大值或指数和后，#{M_n^\vee}、#{M_n^\Sigma} 均夹在相应线性项之间，指数和的上界另多一个与 #{n} 无关的常数。正端，左侧固定尾和有限，余下至多 #{n+C} 项且每项不超过 #{e^{(c_++\varepsilon)n}}；下界取第 #{n} 项。取对数产生的 #{\log(n+C)} 除以 #{n} 趋于零。因此两种 #{M_n/n} 都趋于 #{c_\pm}，两种变换也保持相应斜率。}

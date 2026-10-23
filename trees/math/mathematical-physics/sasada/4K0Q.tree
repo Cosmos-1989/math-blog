@@ -1,0 +1,14 @@
+\title{广义逆高斯分布的参数约定}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，附录 A}
+
+\p{给定 #{\lambda\in\mathbb R} 与 #{a,b>0}，定义广义逆高斯[分布](00L0) #{\operatorname{GIG}(\lambda,a,b)} 的[概率密度](4K0M)为}
+##{f(x)=Z^{-1}x^{-\lambda -1}\exp(-ax-b/x),\qquad
+Z=\int_0^\infty x^{-\lambda -1}e^{-ax-b/x}\,dx.}
+\p{这里 #{x>0}；幂指数采用 #{-\lambda -1}，必须连同符号一起指定。无穷远的 #{e^{-ax}} 控制任意幂次；零点附近令 #{y=1/x}，同样由 #{e^{-by}} 控制。因此 #{0<Z<\infty}，所有实数阶矩和对数的各阶绝对矩都有限。}
+\p{当 #{a=0,b>0} 时，归一化要求 #{\lambda>0}。令 #{y=b/x} 并用 [Gamma 积分](0H4Z)，得到逆 Gamma 分布}
+##{\operatorname{GIG}(\lambda,0,b)=\operatorname{IG}(\lambda,b),\qquad
+f(x)=\frac{b^\lambda}{\Gamma(\lambda)}x^{-\lambda -1}e^{-b/x}.}
+\p{若 #{\lambda\leq 0}，此时无穷远的积分发散。#{\lambda>0} 时，对数的各阶绝对矩仍有限，因为 #{x^{-\lambda -1}(\log x)^m} 可积。这个退化参数范围正好出现在[离散 KdV 的载流子分布](4K0S)中。}

@@ -1,0 +1,12 @@
+\title{双无限箱球路径的最小搬运器}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§3.1，命题 3.1、注记 3.2}
+
+\p{对[箱球构形](4C13) #{\eta\in\{0,1\}^{\mathbb Z}}，定义 #{S_0=0}、#{S_n-S_{n-1}=1-2\eta_n}。它与[记录点路径](4C14)的符号相反。令 #{M_n=\sup_{m\le n}S_m}，其中 #{\sup} 是[上确界](0A37)，无上界时取 #{+\infty}。存在有限非负整数序列 #{W} 满足搬运递推且 #{\liminf_{n\to -\infty}W_n=0}，当且仅当 #{M_0<\infty}；此时这样的序列唯一，等于 #{W_n=M_n-S_n}。左端的[下极限](0F61)条件指 #{\liminf_{k\to+\infty}W_{-k}=0}；它允许负载反复回到零而不收敛。}
+##{W_n=\max\{W_{n-1}+2\eta_n-1,0\},\qquad
+(T\eta)_n=\min\{1-\eta_n,W_{n-1}\}.}
+\p{\strong{存在性。}#{M_0<\infty} 等价于每个 #{M_n<\infty}。由 #{M_n=\max(M_{n-1},S_n)} 可直接得到递推。整数值路径的有限上确界必能取到；对任意 #{N}，取 #{m\le N} 使 #{S_m=M_N}，则 #{M_m=S_m}，所以 #{W_m=0}。这给出向左任意远处的零负载。}
+\p{\strong{必要性与唯一性。}任一非负解 #{V} 都满足 #{V_n\ge V_m+S_m-S_n\ge S_m-S_n}（#{m\le n}），故 #{V_n\ge M_n-S_n}，特别地 #{M_n} 有限。若 #{\liminf_{m\to -\infty}V_m=0}，整数性给出向左无界的零点 #{k}。从 #{V_k=0} 迭代到 #{n}，得到 #{V_n=\max_{k\le m\le n}(S_m-S_n)}，从而 #{V_n\le M_n-S_n}。两侧不等式证明唯一性。}
+\p{[Pitman 恒等式](4C15)的逐格计算同样适用，更新后的归零路径为 #{(TS)_n=2M_n-S_n-2M_0}。#{W} 也是所有非负递推解中逐点最小的解；左端的零负载条件选出了它。}

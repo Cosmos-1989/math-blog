@@ -1,0 +1,12 @@
+\title{从零开始的几何分布}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§3.4 的几何分布约定}
+
+\p{对 #{0\le r<1}，记 #{G_r} 为非负整数值[随机变量](00L0)的分布}
+##{\mathbb P(W=k)=(1-r)r^k,\qquad k=0,1,2,\ldots.}
+\p{当 #{r=0} 时规定 #{W=0}。有限等比和及其极限说明总概率为一。#{G_r} 从零开始计数；若以成功概率 #{q} 记几何分布，则这里 #{q=1-r}。}
+\p{尾概率为 #{\mathbb P(W\ge k)=r^k}。由[尾和矩公式](4E05)或对等比级数求导，可得[期望](00L1)与[方差](00L2)}
+##{\mathbb EW=\frac r{1-r},\qquad\operatorname{Var}(W)=\frac r{(1-r)^2}.}
+\p{具体地，#{\mathbb EW=\sum_{k\ge 1}r^k}，而 #{\mathbb EW^2=\sum_{k\ge 1}(2k-1)r^k=r(1+r)/(1-r)^2}；再减去均值的平方即得方差。}

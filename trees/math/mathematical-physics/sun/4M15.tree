@@ -1,0 +1,12 @@
+\title{对称球面投影的 Lipschitz 可达分布定理}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Huang–Sellke–Sun，arXiv:2608.29416v1，定义 1.15、定理 1.16 的球面情形。}
+
+\p{固定 #{\alpha>0}，取 #{M=\lfloor\alpha N\rfloor}，矩阵 #{G\in\mathbb R^{M\times N}} 的元素独立标准正态。以 #{S_N=\{x:\|x\|_2=\sqrt N\}} 表示球面，以 #{S_N(\eta)} 表示其[松弛域](4M0Z)，以 #{\mu_{G,\mathrm{abs}}(x)} 表示[绝对值投影经验分布](4M0X)。Huang–Sellke–Sun 的预印本给出以下定理，其中 #{\overline{\mathcal C}_\alpha} 是[控制终点分布集合](4M14)。}
+\p{对任意 #{\nu\in\overline{\mathcal C}_\alpha} 和 #{\eta>0}，存在与 #{N} 无关的 #{L<\infty,c>0}，使充分大的 #{N} 都有一个 #{L}-Lipschitz 算法 #{A_N}，其输出 #{x} 满足}
+##{\mathbb P\left(x\in S_N(\eta),\ W_2(\mu_{G,\mathrm{abs}}(x),\nu)\le\eta\right)\ge 1-e^{-cN}.}
+\p{反方向，对每个 #{1\le q<2} 和 #{\eta_{\rm msr}>0}，存在 #{\eta_{\rm sol}>0}，使对每个固定 #{L<\infty}，都存在 #{c>0}，当 #{N} 充分大时，所有 #{L}-Lipschitz 算法的输出均满足}
+##{\mathbb P\left(x\in S_N(\eta_{\rm sol}),\ W_q(\mu_{G,\mathrm{abs}}(x),\overline{\mathcal C}_\alpha)\ge\eta_{\rm msr}\right)\le e^{-cN}.}
+\p{第二式使用 #{q<2}，量词中先选择测度精度，再选输出域精度，之后才任取维数无关的 Lipschitz 常数。定理刻画的是这一稳定算法类；它没有把所有多项式时间算法等同于 Lipschitz 映射。原论文的可达构造在可查询合适的 Lipschitz Markov 控制函数这一附加前提下需 #{O(N^2)} 次算术运算，其中 Markov 指控制只依赖当前时刻和当前状态。控制函数的求解成本另计。}

@@ -1,0 +1,13 @@
+\title{离散 Toda 的和与比例更新}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.2(d)；Croydon–Sasada，§4.2.1}
+
+\p{令 #{I_n^t,J_n^t,U_n^t>0}，#{n,t\in\mathbb Z}。离散 Toda 的局部更新为}
+##{I_n^{t+1}=J_n^t+U_n^t,\qquad
+J_n^{t+1}=\frac{I_{n+1}^tJ_n^t}{J_n^t+U_n^t},\qquad
+U_{n+1}^t=\frac{I_{n+1}^tU_n^t}{J_n^t+U_n^t}.}
+\p{若 #{(a,b,c)=(I_{n+1}^t,J_n^t,U_n^t)}，则局部映射为 #{F_{\mathrm{dT}}(a,b,c)=(b+c,ab/(b+c),ac/(b+c))}。输出的后两项之和为 #{a}，二者之比为 #{b/c}；因此再次应用同一映射恢复 #{(a,b,c)}。}
+\p{定义 #{G(x,y)=(x+y,x/(x+y))}，它把正象限双射到 #{(0,\infty)\times(0,1)}，逆为 #{G^{-1}(s,r)=(sr,s(1-r))}。三个变量的更新可写成 #{(G_1(b,c),G^{-1}(a,G_2(b,c)))}。报告使用比例 #{x/y}，这里使用占比 #{x/(x+y)}；比例 #{r} 对应占比 #{r/(1+r)}，占比 #{u} 对应比例 #{u/(1-u)}，两种选择给出相同的三变量更新。}
+\p{这一分解使[Gamma 和与占比的独立性](4K0N)直接对应局部不变律。与连续时间的[Toda 链](4B01)相比，此处时间 #{t} 是整数，使用的演化方程也不同。}

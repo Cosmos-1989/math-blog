@@ -1,0 +1,10 @@
+\title{次指数多个计数层的指数率取最大值}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，式 (2.15)–(2.16) 的有限和原理。}
+
+\p{设 #{r_n\ge 1} 为整数，#{\log r_n/n\to 0}，且 #{a_{n,j}\ge 0} 中至少一个为正。取 #{\log 0=-\infty}，则}
+##{\max_{1\le j\le r_n}\frac{\log a_{n,j}}n\le\frac 1n\log\sum_{j=1}^{r_n}a_{n,j}\le\max_{1\le j\le r_n}\frac{\log a_{n,j}}n+\frac{\log r_n}n.}
+\p{\strong{证明。}总和至少是最大项，至多是项数乘最大项；取[自然对数](0A45)并除以 #{n} 即得。因此只要最大项的指数率收敛，总和具有相同极限。}
+\p{把[解簇](4M0G)按大小分箱，若某箱有约 #{e^{n\Sigma(s)}} 个簇，每簇约有 #{e^{ns}} 个解，那么该箱贡献约 #{e^{n(s+\Sigma(s))}}。把这转为极限定理还需对所有箱统一控制误差、空箱和随机波动。尤其若某类簇的期望个数趋零，[Markov 不等式](0A02)说明典型实例中根本没有这类簇；不能把负的簇数指数当成实际存在的分数个簇。}

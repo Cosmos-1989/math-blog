@@ -1,0 +1,11 @@
+\title{约束违反数的 Gibbs 权重与零温极限}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§1 与式 (3.2)–(3.3)；有限求和推导。}
+
+\p{设 #{\mathcal X^V} 为有限赋值空间，#{\psi_a} 为[约束指示函数](4M01)。定义能量 #{E(x)=\sum_{a\in F}(1-\psi_a(x))}，即违反的约束个数。逆温度 #{\beta\ge 0} 下的配分函数和 Gibbs 概率为}
+##{Z_\beta=\sum_x e^{-\beta E(x)},\qquad \mu_\beta(x)=Z_\beta^{-1}e^{-\beta E(x)}.}
+\p{令 #{e_*=\min_xE(x)}，#{g_*=|\{x:E(x)=e_*\}|}。这些能量最小的赋值称基态。逐项提取 #{e^{-\beta e_*}} 得}
+##{e^{\beta e_*}Z_\beta=g_*+\sum_{E(x)>e_*}e^{-\beta(E(x)-e_*)}\longrightarrow g_*.}
+\p{因此固定有限实例时，#{\mu_\beta} 趋于基态上的均匀概率。若 #{Z=|S|>0}，则 #{e_*=0} 且 #{Z_\beta\to Z}；若实例不可满足，则 #{Z_\beta\to 0}，但重标度后的基态计数仍存在。这里先固定规模再令温度趋零；这一步有限求和不提供与热力学极限交换的结论。}

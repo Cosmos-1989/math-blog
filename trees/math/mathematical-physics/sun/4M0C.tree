@@ -1,0 +1,11 @@
+\title{树上信念传播是逐支求和}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§2.3；Sly–Sun–Zhang v3，§1.4；有限树递推。}
+
+\p{设[因子图](4M01)为有限[树](0A03)，每个变量取值于有限集 #{\mathcal X}，约束权重 #{\psi_a\ge 0}。记 #{\partial v} 为与变量 #{v} 相邻的约束集合，#{\partial a} 为与约束 #{a} 相邻的变量集合。删去边 #{va} 后，将变量侧分支在 #{x_v=t} 条件下的权重和记为 #{M_{v\to a}(t)}；将约束侧分支连同约束 #{a} 的权重和记为 #{\widehat M_{a\to v}(t)}。则}
+##{M_{v\to a}(t)=\prod_{b\in\partial v\setminus\{a\}}\widehat M_{b\to v}(t),}
+##{\widehat M_{a\to v}(t)=\sum_{x_{\partial a\setminus\{v\}}}\psi_a(x_{\partial a})\prod_{u\in\partial a\setminus\{v\}}M_{u\to a}(x_u),\qquad x_v=t.}
+\p{\strong{证明。}在变量 #{v} 处分开后，剩余分支的变量集不交；固定 #{t} 后有限求和可逐支相乘。在约束 #{a} 处，先固定其余相邻变量，再乘各支权重，最后对这些变量求和，得到第二式。由叶子向内归纳，消息恰等于上述分支权重。}
+\p{任选变量 #{r} 为根，即得 #{Z=\sum_t\prod_{a\in\partial r}\widehat M_{a\to r}(t)}。这称信念传播（belief propagation，BP）。在树上它是精确的动态规划；固定字母表和约束度数时，每条有向边只需处理有限次。出现环时，分支不再分离，此证明便不适用。}

@@ -1,0 +1,12 @@
+\title{三次 NLS 的相互作用表示与共振截取}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，Definition 2.4、(2.6)；直接计算}
+
+\p{设 #{u} 满足[散焦三次 NLS](4L02)，令 #{a_k(t)=e^{it\omega_\beta(k)}u_k(t)}，其中[色散关系](4L01)为 #{\omega_\beta(k)=\beta_1k_1^2+\beta_2k_2^2}。先假设 Fourier 求和绝对收敛。代入方程得到}
+##{i\dot a_k=\sum_{k_1-k_2+k_3=k}e^{-it\Omega}a_{k_1}\overline{a_{k_2}}a_{k_3},\qquad \Omega=\omega_\beta(k_1)-\omega_\beta(k_2)+\omega_\beta(k_3)-\omega_\beta(k).}
+\p{只保留 #{\Omega=0} 的项，定义共振系统 #{i\dot a_k=R_\beta(a)_k}。它同时要求动量匹配与频率匹配。各向同性情形 #{\beta_1=\beta_2} 的匹配几何是[频率矩形](4414)。}
+\p{对固定振幅，非共振因子的时间平均消失：当 #{\Omega\ne 0} 时，}
+##{\frac 1T\int_0^Te^{-it\Omega}dt=\frac{1-e^{-iT\Omega}}{iT\Omega},\qquad \left|\frac 1T\int_0^Te^{-it\Omega}dt\right|\leq\frac 2{T|\Omega|}.}
+\p{这个计算说明了截取的动机。真实振幅随时间变化，无穷多个频率还可能产生很小的 #{|\Omega|}；从截取系统回到 NLS 需要[有限时间稳定估计](4L0A)或其他控制余项的定理。共振系统本身没有随机初值假设。}

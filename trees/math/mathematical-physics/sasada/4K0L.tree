@@ -1,0 +1,14 @@
+\title{全时唯一性下乘积不变律的局部判据}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，定理 5.4(i)；Croydon–Sasada，定理 1.1(a)}
+
+\p{设 #{X,U} 是 [Polish 空间](00QC)，#{F:X\times U\to X\times U} 为[可测](00Q1)对合，即 #{F\circ F} 为恒等映射。考虑格点方程}
+##{(x_n^{t+1},u_n^t)=F(x_n^t,u_{n-1}^t),\qquad n,t\in\mathbb Z.}
+\p{记 #{X^*} 为使上述双无限初值问题有唯一解的初态 #{x^0\in X^{\mathbb Z}} 的集合，并令 #{Tx^0=x^1}。给定 #{X} 上的概率测度 #{\mu}，假设[乘积测度](0A6B)满足 #{\mu^{\mathbb Z}(X^*)=1}。则}
+##{T_*\mu^{\mathbb Z}=\mu^{\mathbb Z}
+\quad\Longleftrightarrow\quad
+\exists\nu\text{，使 }F_*(\mu\otimes\nu)=\mu\otimes\nu.}
+\p{右端是[局部独立性保持条件](4K08)。条件成立时，#{\nu} 必为唯一全时解中每个 #{u_n^0} 的分布。此为 Croydon–Sasada 定理 1.1(a)，证明见原论文 §§2.1–2.2。}
+\p{有限行上的归纳说明局部平衡怎样传递。一般的必要性以及从有限边界拼成双无限解，还需要全时唯一性与相应可测性的论证。[正线性路径定理](4K0K)正是 KdV 应用中保证 #{\mu^{\mathbb Z}(X^*)=1} 的输入。因此，这个判据保留了一个全局假设。}

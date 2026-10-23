@@ -1,0 +1,11 @@
+\title{实直线上的 Wasserstein 运输距离}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{Huang–Sellke–Sun v1，式 (1.21)–(1.22)。}
+
+\p{设 #{1\le p<\infty}。记 #{\mathcal P_p(\mathbb R)} 为满足 #{\int|x|^p\,d\mu(x)<\infty} 的 Borel 概率测度。#{\mu,\nu} 的[耦合](0F63)是实随机变量对 #{(X,Y)} 的联合分布，其两个边缘分别为 #{\mu,\nu}。定义}
+##{W_p(\mu,\nu)=\inf\{(\mathbb E|X-Y|^p)^{1/p}:X\sim\mu,\ Y\sim\nu\}.}
+\p{任意一个耦合都给出上界。例如同一指标配对两个经验测度，可得}
+##{W_p\left(\frac 1M\sum_a\delta_{u_a},\frac 1M\sum_a\delta_{v_a}\right)^p\le\frac 1M\sum_a|u_a-v_a|^p.}
+\p{对集合 #{\mathcal C\subseteq\mathcal P_p(\mathbb R)}，记 #{W_p(\mu,\mathcal C)=\inf_{\nu\in\mathcal C}W_p(\mu,\nu)}；其闭包是可被集合中测度以此距离逼近的测度全体。这是非紧实直线上的运输定义；站内[紧空间的一阶 Wasserstein 距离](310S)采用对偶公式，不能在未说明矩条件时直接代入这里的二阶问题。}

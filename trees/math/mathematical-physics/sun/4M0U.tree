@@ -1,0 +1,11 @@
+\title{零裕量 Ising 容量的 Krauth–Mézard 候选常数}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{Ding–Sun v1，式 (2)–(5)、命题 1.3；Huang v2，命题 3.2。}
+
+\p{令 #{U} 服从[标准正态分布](0N0R)，密度记为 #{\varphi}，尾概率另记 #{\Psi(t)=\int_t^\infty\varphi(u)\,du}。对 #{0\le q<1}、#{t\in\mathbb R} 定义 #{T_q(t)=\varphi(-t/\sqrt{1-q})/(\sqrt{1-q}\,\Psi(-t/\sqrt{1-q}))}。对 #{\psi\ge 0} 和 #{\alpha>0} 令}
+##{P(\psi)=\mathbb E\tanh^2(\sqrt\psi U),\qquad R_\alpha(q)=\alpha\mathbb E T_q(\sqrt q U)^2,}
+##{\mathcal G(\alpha,q,\psi)=-\frac{\psi(1-q)}2+\mathbb E\log(2\cosh(\sqrt\psi U))+\alpha\mathbb E\log\Psi\left(\frac{-\sqrt q U}{\sqrt{1-q}}\right).}
+\p{其中 #{\cosh t=(e^t+e^{-t})/2}、#{\tanh t=(e^t-e^{-t})/(e^t+e^{-t})}。所引命题给出：对 #{\alpha\in(0.833078599,0.833078600)}，在 #{q\in(0.56394907949,0.56394908030)} 内存在唯一解 #{q=P(R_\alpha(q))}。令 #{\psi=R_\alpha(q)} 后，#{\mathcal G} 随 #{\alpha} 严格下降，并有唯一零点 #{\alpha_*}。这定义了零裕量 [Ising 感知机](4M0P)的 Krauth–Mézard 候选容量。}
+\p{最后一个高斯尾对数项带正号，尾概率小于一，所以该项为负，表示增加约束的代价。定义这个常数与证明它等于随机模型的容量极限是两个不同结论。}

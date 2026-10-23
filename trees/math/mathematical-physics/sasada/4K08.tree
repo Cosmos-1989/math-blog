@@ -1,0 +1,11 @@
+\title{局部独立性沿有限搬运行传递}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，§2 的有限行机制}
+
+\p{设 #{F:X\times U\to X\times U} 是[可测映射](00Q1)，#{\mu,\nu} 为相应空间的[概率测度](00Q3)。写 #{F_*(\mu\otimes\nu)} 表示输出分布，即集合 #{A} 的概率为 #{(\mu\otimes\nu)(F^{-1}A)}。若}
+##{F_*(\mu\otimes\nu)=\mu\otimes\nu,}
+\p{则 #{F} 保持这对输入的[独立性](00L3)及边缘分布。取相互独立的 #{X_1,\ldots,X_N,U_0}，其中 #{X_i\sim\mu}、#{U_0\sim\nu}，递推 #{(X_i',U_i)=F(X_i,U_{i-1})}。结论是 #{X_1',\ldots,X_N',U_N} 仍相互独立，分布为 #{\mu^{\otimes N}\otimes\nu}。}
+\p{\strong{证明。}在第 #{i} 次更新前，归纳假设为 #{X_1',\ldots,X_{i-1}',U_{i-1},X_i,\ldots,X_N} 相互独立。对中间两项 #{(X_i,U_{i-1})} 应用 #{F}，它们的联合律仍是 #{\mu\otimes\nu}。其余变量未改变，且原本与这对变量独立，故归纳假设推进到 #{i+1}。初始独立性启动归纳，#{i=N} 给出结论。}
+\p{这里的负载 #{U_0} 是独立抽取的边界数据。把有限行推到双无限系统时，还必须确认真实负载具有该分布及对未来的独立性；[Bernoulli 搬运器](4K07)提供了一个直接可检验的例子。}

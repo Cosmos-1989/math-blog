@@ -1,0 +1,1854 @@
+{
+  "schema_version": 1,
+  "review_type": "independent-final-whole-branch",
+  "report_id": "icm2026-sun",
+  "reviewed_on": "2026-10-24",
+  "result": "pass",
+  "acceptance": true,
+  "summary": "Accepted on the author revision-3 frozen snapshot: all 51 owned trees (49 atoms, one outline, one reference), the complete packet and 83 actually read shared pages have been cumulatively reviewed. SUN-F01 through SUN-F10 are independently resolved. The final packet correction places the Hamiltonian/Gibbs formulas in published Section 3.1, equations (3.2)-(3.3). No open mathematical, local-proof, prerequisite-contract, atomicity or source-binding finding remains within the explicitly recorded review scope. All 137 listed repository inputs match their reviewed hashes.",
+  "input_packet": {
+    "id": "mathematical-physics-sun-packet",
+    "path": "research/mathematical-physics-sun-packet.json",
+    "present": true,
+    "expected_sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8",
+    "reviewed_sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8",
+    "matched_expected": true
+  },
+  "freeze": {
+    "parent_ready_received": true,
+    "writer_frozen": true,
+    "parent_declared_atoms": 49,
+    "parent_packet_sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8",
+    "acceptance_gate": "Satisfied: writer-frozen author revision 3 received; entire branch and packet cumulatively read; final changed packet fields read; all 137 reviewed-input hashes rechecked; no open findings.",
+    "parent_declared_trees": 51,
+    "author_revision": 3,
+    "reviewer_snapshot_status": "frozen-pass"
+  },
+  "scope": {
+    "owned_trees_read": 51,
+    "atoms_read": 49,
+    "outlines_read": 1,
+    "references_read": 1,
+    "shared_trees_read": 83,
+    "packet_read_in_full": true,
+    "all_owned_packet_hashes_matched": true,
+    "all_reviewed_repo_inputs_unchanged_at_final_check": true,
+    "public_notes_edited": false,
+    "builds_run": false,
+    "git_commands_run": false,
+    "subagents_used": false,
+    "only_written_path": "research/mathematical-physics-sun-review.json",
+    "proof_boundary": "Local finite/probabilistic and analytic arguments checked directly, including general progressive L2-integrand approximation. Deep NAE, capacity and projection-pursuit results checked only as cited theorem contracts; no numerical certificate or full research proof reconstructed. The Ito note constructs each fixed-time L2 integral, not a continuous-modification theorem.",
+    "review_method": "Cumulative review: reviewer revision 2 already read all 49 prior owned trees and its complete packet. For author revision 2, fully reread changed 4M00, 4M13 and icm2026-sun, and fully read new 4M19 and 4M1D. The other 46 owned trees are byte-identical to their prior full-text review. Read every field of the new packet, including both identical source arrays, proof scopes, all claim locators and review responses. All 35 declared reused-page bodies have actually been read; 48 further foundation/comparison bodies were read selectively. Rechecked the 13 shared prerequisites actually supporting the repaired analytic chain, including full rereading of 00MS, 00XV, 0A87, 0H53 and 0I8I. A traversal count is not full reading of every recursively reachable page. Final author revision-3 acceptance: compared the complete parsed packet against the fully read revision-2 packet; reread its only three changed fields (4M05 locator, freeze revision, previous-packet digest). All other fields are identical and retain their prior complete reading. All 51 owned trees and all 83 shared pages retain unchanged hashes; no fresh full rereading of unchanged text is claimed.",
+    "claimed_full_recursive_forest_review": false
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "SUN-F01",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "proof-interface",
+      "notes": [
+        "4M08"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M08.tree",
+      "line": 9,
+      "title": "Identify the L2 quotient used by Schwarz",
+      "finding": "The proof calls E(UV) an inner product on square-integrable random variables without identifying variables equal almost surely. On literal measurable functions this is only semidefinite; the linked Schwarz theorem requires an inner product space.",
+      "correction": "Link 0A6A/00Q6 and state the almost-sure quotient, or prove the required inequality directly from E(X-t 1_A)^2 >= 0. The displayed Paley-Zygmund inequality itself is correct.",
+      "verification": "The proof now explicitly uses almost-sure equivalence classes in L2 and links 0A6A; 00Q6 and the real-inner-product convention were also checked.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F02",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "prerequisite-completeness",
+      "notes": [
+        "4M0C",
+        "4M0D"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M0C.tree",
+      "line": 7,
+      "title": "Define the BP neighbor notation locally",
+      "finding": "The recurrence introduces partial v and partial a without defining them. Neither 4M01 nor the linked tree definition 0A03 supplies this notation; the simple-graph page uses N(v).",
+      "correction": "State that partial v is the set of adjacent constraints and partial a the set of adjacent variables. Recall finite-tree context in 4M0D or explicitly inherit the newly defined notation.",
+      "verification": "4M0C now defines both neighbor sets; 4M0D locally binds V,F,E and inherits that notation explicitly. Branch sum and normalization cancellation remain valid.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F03",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "prerequisite-completeness",
+      "notes": [
+        "4M0I"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M0I.tree",
+      "line": 7,
+      "title": "Bind n and the convexity assertion",
+      "finding": "The note divides by n without locally defining the configuration length or assuming n>0. Its concluding convex-function assertion has no local definition or canonical definition link.",
+      "correction": "Begin with nonempty S subset {0,1}^n, n>=1; link the existing convex-function definition 0R06 and briefly justify convexity from the nonnegative second derivative, or state only the nondecreasing derivative conclusion.",
+      "verification": "4M0I now assumes n>=1 and nonempty S subset {0,1}^n; the conclusion is monotonicity of F_n', supported by the variance calculation.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F04",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "prerequisite-completeness",
+      "notes": [
+        "4M0K"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M0K.tree",
+      "line": 9,
+      "title": "Link the conditional-probability definition actually used",
+      "finding": "The proof explicitly invokes the definition of conditional probability, but its only mathematical prerequisite link is expectation 00L1. The existing canonical page 0A00 states the ratio formula and positive-conditioning-probability hypothesis.",
+      "correction": "Link 0A00 at the first conditioning step. Keep the hypothesis p>0, which is correctly present.",
+      "verification": "4M0K now links 0A00 at the conditional-probability calculation and retains p>0. Both distributions and their normalization were checked.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F05",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "hypothesis",
+      "notes": [
+        "4M0S"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M0S.tree",
+      "line": 9,
+      "title": "Require a positive second-moment comparison constant",
+      "finding": "Only C<infinity is assumed before concluding P(X>0)>=P(A)/C. If A is empty, C=0 satisfies the written hypotheses but the displayed conclusion contains 0/0.",
+      "correction": "Require 0<C<infinity (or C>=1). The conditional quadratic-polynomial argument is otherwise valid for bounded X.",
+      "verification": "4M0S now requires 0<C<infinity, eliminating the empty-event 0/0 case. Bounded X and the rational-parameter quadratic argument are retained.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F06",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "prerequisite-completeness",
+      "notes": [
+        "4M09",
+        "4M0N",
+        "4M0O"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M09.tree",
+      "line": 9,
+      "title": "Decode advanced proof-method names",
+      "finding": "These pages invoke small-subgraph conditioning; 4M0N also invokes interpolation and a controlled-free-tree auxiliary model. The actual prerequisite destinations currently read do not define these techniques. A short research-proof outline may cite results without reproducing proofs, but unexplained method names do not satisfy the root no-hidden-advanced-terms rule.",
+      "correction": "Give accurate local one-sentence meanings or link genuine atomic definitions. It is also acceptable to omit optional proof-method name lists while keeping exact external theorem citations and scope. Do not replace this by a demand to re-prove the research papers.",
+      "verification": "Optional unexplained research-method names were removed from 4M09, 4M0N and 4M0O. The cited theorem scope and positive-probability distinction remain explicit.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F07",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "proof-interface",
+      "notes": [
+        "4M0Q"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M0Q.tree",
+      "line": 10,
+      "title": "Expose prerequisites in the Gaussian rotation argument",
+      "finding": "The local proof uses orthogonal change of variables, extension of orthonormal vectors to coordinates, and volume invariance, but links only independence and the scalar normal law. Those destinations do not provide the change-of-variables or orthogonal-basis result.",
+      "correction": "Link exact existing definitions/results for orthogonal coordinates and linear change of variables, or provide the needed finite-dimensional argument (orthogonal matrix determinant has absolute value one, and the product density is unchanged). No new duplicate definitions are needed.",
+      "verification": "4M0Q supplies the finite orthogonal-basis extension and links actual determinant multiplicativity in 01Q1 and linear volume change in 0N12, whose bodies were read. Rotation, endpoints and covariance agree.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F08",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "atomicity",
+      "notes": [
+        "4M0L"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M0L.tree",
+      "line": 12,
+      "title": "Separate the message construction from the research convergence theorem",
+      "finding": "The Construction page defines two generic weighted update operators and also states a large-k convergence theorem for a distinguished initial law. These are independently reusable objects with different hypotheses, precisely the definition/theorem combination the atomic-note rule asks to split.",
+      "correction": "Keep generic operators and the zero-weight convention in a construction note; move the cited convergence/selection contract into its own theorem note and link it from the 1RSB functional.",
+      "verification": "4M0L now contains only weighted message construction. 4M18 separately states SSZ Proposition 1.2, with initial law, density interval, l1 convergence and symmetry; 4M0M links the selected-law theorem.",
+      "resolved_in_packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f"
+    },
+    {
+      "id": "SUN-F09",
+      "priority": "P3",
+      "status": "resolved",
+      "category": "source-binding",
+      "notes": [
+        "4M05"
+      ],
+      "path": "research/mathematical-physics-sun-packet.json",
+      "line": 246,
+      "title": "Correct the remaining Gibbs/Hamiltonian section locator",
+      "finding": "report.claim_sources.4M05[0].locator still reads 'Section 1 and Section 3.2, equation (3.2)'. In the pinned published report, the Hamiltonian (3.2) and Gibbs partition function (3.3) are both in Section 3.1; Section 3.2 starts afterwards. The mathematical content of 4M05 is correct. All corrections explicitly enumerated in the preceding SUN-F09 finding have now been independently verified.",
+      "correction": "Change this locator to Section 1 and Section 3.1, equations (3.2)-(3.3); have the writer freeze the corrected packet and report its new SHA256. No tree edit is required for this remaining finding.",
+      "evidence": [
+        {
+          "url": "https://epubs.siam.org/doi/10.1137/25M1805801",
+          "locator": "Publisher HTML lines 439-458: Section 3.1 heading; (3.2) at 448-450; (3.3) at 454-456; Section 3.2 heading at 458."
+        }
+      ],
+      "verified_repairs": [
+        {
+          "field": "report.claim_sources.4M02; SSZ actual_reading copies; icm2026-sun.tree:9",
+          "replace": "SSZ v3 opening Section 2, Definition 2.1, p.9 (before Section 2.1)."
+        },
+        {
+          "field": "report.claim_sources.4M03",
+          "replace": "Sun Section 2.2, model distinction immediately following Theorem 2.2, not Theorem 2.3."
+        },
+        {
+          "field": "report.claim_sources.4M04",
+          "replace": "Remove nonexistent Conjecture 2.1; use the actual threshold discussion and applicable model-specific theorem."
+        },
+        {
+          "field": "report.claim_sources.4M06",
+          "replace": "Sun Section 2.2, equations (2.3)-(2.4), rather than Section 2.1, (2.2)-(2.3)."
+        },
+        {
+          "field": "report.claim_sources.4M07",
+          "replace": "Sun Section 2.2, equation (2.4), not (2.2)."
+        },
+        {
+          "field": "report.claim_sources.4M08",
+          "replace": "Sun Section 2.2, inequality immediately after (2.12), as the tree already states."
+        },
+        {
+          "field": "report.claim_sources.4M0F",
+          "replace": "Sun Section 2.2, (2.7)-(2.11), not Section 2.3."
+        },
+        {
+          "field": "report.claim_sources.4M0J",
+          "replace": "Sun Section 2.3, (2.15)-(2.16), not Section 2.2, (2.6)."
+        },
+        {
+          "field": "source_errata.SUN-S01",
+          "replace": "The overlap statement is Theorem 2.3(3), not (4)."
+        },
+        {
+          "field": "section_coverage",
+          "replace": "Realign first-moment/RS and clustering/RSB groups with Sections 2.2 and 2.3; cavity belongs to 2.2, while tree-BP motivation also appears in 2.3."
+        }
+      ],
+      "acceptance_condition": "Read the changed packet field and any other changed bytes, verify the renewed packet freeze and all previously reviewed input hashes, and leave no remaining finding before setting pass.",
+      "verification": "The final frozen packet reads 'Section 1 and Section 3.1, equations (3.2)-(3.3)', matching the published primary-source passage already inspected (HTML lines 439-458). The only other packet changes are freeze.revision 2 to 3 and freeze.previous_packet_sha256 to the exact revision-2 digest. No tree or other reviewed-input change occurred. All earlier SUN-F09 locator corrections remain verified.",
+      "resolved_in_packet_sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8"
+    },
+    {
+      "id": "SUN-F10",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "local-proof-prerequisite-completeness",
+      "notes": [
+        "4M13",
+        "4M19",
+        "4M1D"
+      ],
+      "path": "trees/math/mathematical-physics/sun/4M13.tree",
+      "line": 13,
+      "title": "Supply the product-L2 approximation step for general progressive integrands",
+      "finding": "The Ito isometry and extension on the closure of simple past-measurable processes are valid. The last paragraph then asserts that every progressive square-integrable process is in that closure, relying on density of finite sums 1_(a,b](t)Y(omega) in product L2 and convergence of left-step approximations. Neither this density result nor the required convergence theorem is proved or accurately linked. 0A67 is completeness, not density; 00QB only constructs product measure. Thus the declared local construction/proof still hides an essential approximation input.",
+      "correction": "Keep the valid simple-process argument. Supply or link a precise product-space rectangle-density/time-translation lemma and justify the final bounded left-step limit, using actual measure-theoretic prerequisites such as 0F62, 0A87, 0H53 and 0I8I as applicable. Alternatively state the general progressive-integrand extension as a precisely sourced theorem and narrow packet proof_scope. Merely linking general simple-function density does not by itself establish density of time-rectangle tensor functions.",
+      "evidence": [
+        {
+          "id": "0F62",
+          "detail": "Actually read: arbitrary measurable simple functions are Lp-dense. An additional rectangle approximation argument is needed for the specific tensor class."
+        },
+        {
+          "id": "0A67",
+          "detail": "Actually read: Riesz-Fischer completeness; no product-rectangle density theorem."
+        },
+        {
+          "id": "00QB",
+          "detail": "Actually read: product sigma-algebra and measure construction, not the approximation result."
+        },
+        {
+          "id": "0I8I",
+          "detail": "Actually read: dominated convergence, available to justify bounded pathwise step convergence."
+        }
+      ],
+      "acceptance_condition": "Revised 4M13 and packet accurately supply or cite the missing approximation contract; actual new prerequisite destinations must be read and hashes refreshed.",
+      "verification": "4M19 proves finite-interval rectangle density by a concrete generating algebra, finite positive/negative measures, 0A87 uniqueness and 00MS orthogonal decomposition; 0I8I handles time truncation. 4M1D proves translation continuity from the explicit rectangle symmetric-difference estimate and density, then time-average convergence by Fubini-Tonelli and Schwarz. 4M13 truncates progressive integrands, preserves adaptation under past averaging, proves the pathwise 2K/h Lipschitz bound, and obtains the explicit left-step error 2K delta/h. Choosing K, h, delta in order closes the simple-process density step. The original isometry and fixed-time L2 extension remain valid. Actual prerequisite contracts were read, not inferred from titles.",
+      "resolved_in_packet_sha256": "ee9146f59e900e94abf03286e0a1f0c8d620af483dcb04c916bd097cb76f5aef"
+    }
+  ],
+  "page_checks": [
+    {
+      "id": "4M00",
+      "one_question": "随机组合问题：解的数量、簇结构与稳定算法",
+      "status": "checked",
+      "detail": "Revised narrative connects all 49 atoms, including rectangle density and time averaging, and preserves model, probability, cited-proof and algorithm-class boundaries.",
+      "proof_scope": "narrative"
+    },
+    {
+      "id": "4M01",
+      "one_question": "因子图把约束满足问题写成局部乘积",
+      "status": "checked",
+      "detail": "One local-factor encoding; examples correctly instantiate coloring and independent sets.",
+      "proof_scope": "definition"
+    },
+    {
+      "id": "4M02",
+      "one_question": "随机正则 NAE-SAT 的半边配对模型",
+      "status": "checked",
+      "detail": "Configuration-model law, independent edge literals, repeated variables and admissible n agree with SSZ Section 2.",
+      "proof_scope": "definition"
+    },
+    {
+      "id": "4M03",
+      "one_question": "独立子句模型与正则布尔公式的区别",
+      "status": "checked",
+      "detail": "Independent-clause model and its two first moments checked; not transferred to the regular model.",
+      "proof_scope": "definition-and-local-calculation"
+    },
+    {
+      "id": "4M04",
+      "one_question": "可满足阈值中的概率量词",
+      "status": "checked",
+      "detail": "Fixed-density threshold and moving sharp-threshold sequence distinguished; equality not included.",
+      "proof_scope": "definition"
+    },
+    {
+      "id": "4M05",
+      "one_question": "约束违反数的 Gibbs 权重与零温极限",
+      "status": "checked",
+      "detail": "Finite nonnegative integer-energy sum and fixed-instance zero-temperature limit checked; no exchange of limits asserted.",
+      "proof_scope": "local-construction-and-proof"
+    },
+    {
+      "id": "4M06",
+      "one_question": "退火平均与淬火对数为何不同",
+      "status": "checked",
+      "detail": "Log tangent inequality, annealed upper tail and the hard-constraint log-zero issue checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M07",
+      "one_question": "正则 NAE-SAT 的一阶矩不可满足界",
+      "status": "checked",
+      "detail": "First moment remains valid with parallel incidences because literals are edge-independent.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M08",
+      "one_question": "二阶矩给出非负变量的下尾概率界",
+      "status": "checked",
+      "detail": "Almost-sure L2 quotient repaired; Paley-Zygmund proof checked, including theta=0.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M09",
+      "one_question": "有界二阶矩比值仍只保证正概率",
+      "status": "checked",
+      "detail": "Bernoulli example gives exact ratio 2 and probability 1/2; unexplained optional technique removed.",
+      "proof_scope": "local-counterexample"
+    },
+    {
+      "id": "4M0A",
+      "one_question": "布尔赋值的自旋重叠与 Hamming 距离",
+      "status": "checked",
+      "detail": "Spin/Hamming identity and flip-symmetric signed overlap checked; distinct from normalized orbit-name Hamming distance.",
+      "proof_scope": "definition-and-local-calculation"
+    },
+    {
+      "id": "4M0B",
+      "one_question": "NAE 翻转对称性不保证远处变量独立",
+      "status": "checked",
+      "detail": "Two alternating path solutions give long-range dependence despite uniform marginals.",
+      "proof_scope": "local-counterexample"
+    },
+    {
+      "id": "4M0C",
+      "one_question": "树上信念传播是逐支求和",
+      "status": "checked",
+      "detail": "Neighbors defined locally; finite-tree branch factorization and leaf induction checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0D",
+      "one_question": "树的配分函数等于顶点因子除以边因子",
+      "status": "checked",
+      "detail": "Positive Z ensures normalizable branch messages; all raw local factors equal Z and individual rescalings cancel.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0E",
+      "one_question": "奇环上的 BP 不动点可以对应零个解",
+      "status": "checked",
+      "detail": "Odd-cycle local BP fixed point gives Bethe product 1 although actual solution count is 0.",
+      "proof_scope": "local-counterexample"
+    },
+    {
+      "id": "4M0F",
+      "one_question": "添加约束的空腔比值是一个条件概率",
+      "status": "checked",
+      "detail": "Both exact cavity ratios checked; extra independent-uniform old-coordinate assumptions suffice for the idealized NAE factors.",
+      "proof_scope": "conditional-local-proof"
+    },
+    {
+      "id": "4M0G",
+      "one_question": "解簇是单坐标翻转图的连通分支",
+      "status": "checked",
+      "detail": "Single-flip clusters, globally frozen coordinates and locally feasible flips distinguished; the three-state example is not a subcube.",
+      "proof_scope": "definition-and-local-counterexample"
+    },
+    {
+      "id": "4M0H",
+      "one_question": "簇的混合能产生簇内没有的相关性",
+      "status": "checked",
+      "detail": "Finite covariance-mixture expansion and two-singleton example checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0I",
+      "one_question": "簇大小倾斜的对数导数记录熵与方差",
+      "status": "checked",
+      "detail": "Nonempty set and positive n bound; both derivatives and monotonicity checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0J",
+      "one_question": "次指数多个计数层的指数率取最大值",
+      "status": "checked",
+      "detail": "Maximum-term bounds checked; subexponential bin count and uniform-error caveats correctly separated from random cluster theorem.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0K",
+      "one_question": "植入一个解使实例分布按解数偏置",
+      "status": "checked",
+      "detail": "Common positive solution probability and conditional-probability link support exact size bias.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0L",
+      "one_question": "NAE-SAT 的倾斜消息分布递推",
+      "status": "checked",
+      "detail": "Weighted operators, positive normalizers and zero-weight convention checked. Research convergence moved to 4M18.",
+      "proof_scope": "construction"
+    },
+    {
+      "id": "4M0M",
+      "one_question": "1RSB 泛函由三类倾斜局部因子组成",
+      "status": "checked",
+      "detail": "Selected-law reference now 4M18. Three factors, signs and lambda-dependent-law caveat agree with SSZ (11)-(14).",
+      "proof_scope": "definition-from-cited-selection"
+    },
+    {
+      "id": "4M0N",
+      "one_question": "大子句正则 NAE-SAT 的自由能与凝聚阈值",
+      "status": "checked",
+      "detail": "Large-k regular density and logarithmic normalization agree with cited contracts; optional unexplained proof-method list removed.",
+      "proof_scope": "cited-research-theorem"
+    },
+    {
+      "id": "4M0O",
+      "one_question": "凝聚区间的大簇携带几乎全部解质量",
+      "status": "checked",
+      "detail": "NSS II Theorem 1.1(a) epsilon/K quantifiers and largest-cluster mass, not total cluster count, checked.",
+      "proof_scope": "cited-research-theorem"
+    },
+    {
+      "id": "4M0P",
+      "one_question": "球面与 Ising 感知机的可行域",
+      "status": "checked",
+      "detail": "Gaussian disorder normalization, two domains and constraint sets checked.",
+      "proof_scope": "definition"
+    },
+    {
+      "id": "4M0Q",
+      "one_question": "感知机的高斯场协方差等于配置重叠",
+      "status": "checked",
+      "detail": "Basis extension, determinant, density invariance and degenerate endpoints checked against actual prerequisite bodies.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0R",
+      "one_question": "Ising 感知机的一二阶矩按重叠分组",
+      "status": "checked",
+      "detail": "First moment and ordered-pair Hamming-bin second moment checked, with q_I(+/-1) included.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0S",
+      "one_question": "条件二阶矩如何保留环境信息",
+      "status": "checked",
+      "detail": "Positive C repaired; conditional quadratic proof and v=0 convention checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0T",
+      "one_question": "解集重心决定平均重叠",
+      "status": "checked",
+      "detail": "Independent-replica barycenter identity and distinction between zero mean and overlap concentration checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0U",
+      "one_question": "零裕量 Ising 容量的 Krauth–Mézard 候选常数",
+      "status": "checked",
+      "detail": "Ding-Sun (2)-(5), (153) and Huang Proposition 3.2 support the explicit parameter rectangle and candidate constant; no numerical reproduction performed.",
+      "proof_scope": "definition-with-cited-existence"
+    },
+    {
+      "id": "4M0V",
+      "one_question": "Ising 容量上界所需的全局二参数条件",
+      "status": "checked",
+      "detail": "Huang (6)-(8), Condition 1.3 and Theorem 1.2 checked, including denominator and sign of the tail term. This remains conditional; Shmalo verification not independently audited.",
+      "proof_scope": "conditional-cited-research-theorem"
+    },
+    {
+      "id": "4M0W",
+      "one_question": "正裕量球面可行性化为球内凸可行性",
+      "status": "checked",
+      "detail": "Positive-margin scaling equivalence and kappa=0 counterexample checked.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M0X",
+      "one_question": "投影经验分布统一表示感知机能量",
+      "status": "checked",
+      "detail": "Empirical projection identities and absolute-value symmetrization agree with the HSS definitions.",
+      "proof_scope": "definition-and-local-identity"
+    },
+    {
+      "id": "4M0Y",
+      "one_question": "实直线上的 Wasserstein 运输距离",
+      "status": "checked",
+      "detail": "Noncompact P_p transport definition is distinct from existing compact W1 duality note 310S; same-index coupling bound checked.",
+      "proof_scope": "definition-and-local-bound"
+    },
+    {
+      "id": "4M0Z",
+      "one_question": "投影追踪的维数无关 Lipschitz 算法类",
+      "status": "checked",
+      "detail": "HSS Definitions 1.8, 1.11 and 1.15 match normalization, dimension-free Lipschitz constant, relaxation and probability space; no general polynomial-time claim.",
+      "proof_scope": "definition"
+    },
+    {
+      "id": "4M10",
+      "one_question": "连续算法若始终输出布尔向量便只能为常数",
+      "status": "checked",
+      "detail": "Line segment and coordinate IVT prove any continuous exact-cube-valued map is constant.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M11",
+      "one_question": "向量舍入误差控制投影经验分布的运输距离",
+      "status": "checked",
+      "detail": "Same-row coupling gives op-norm/sqrt(MN) bound; absolute values contract and relaxed-domain rounding is deterministic.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M12",
+      "one_question": "重叠间隙阻止小步长路径穿越两个解区",
+      "status": "checked",
+      "detail": "First-crossing argument gives contradiction when 2epsilon<b-a. No generic algorithm-hardness conclusion imported.",
+      "proof_scope": "conditional-local-proof"
+    },
+    {
+      "id": "4M13",
+      "one_question": "布朗随机积分由平方均值等距延拓定义",
+      "status": "checked",
+      "detail": "Simple adapted isometry, cross-term cancellation, L2 extension, truncation, progressive parameter-integral measurability, past-average convergence and explicit 2K delta/h step error checked. Every progressive square-integrable integrand lies in the required closure. Only fixed-time integrals are claimed.",
+      "proof_scope": "local-construction-and-proof"
+    },
+    {
+      "id": "4M14",
+      "one_question": "对称球面投影的控制预算与终点分布",
+      "status": "checked",
+      "detail": "HSS Definition 1.1 spherical specialization matches independent initial uniform seed, progressive nonnegative sigma, all-time budget and absolute-terminal W2 closure.",
+      "proof_scope": "definition"
+    },
+    {
+      "id": "4M15",
+      "one_question": "对称球面投影的 Lipschitz 可达分布定理",
+      "status": "checked",
+      "detail": "HSS Definitions 1.8/1.11/1.15 and Theorem 1.16: W2 achievement, q<2 confinement, quantifier order and oracle-query complexity match.",
+      "proof_scope": "cited-preprint-theorem"
+    },
+    {
+      "id": "4M16",
+      "one_question": "球面控制预算给出终点二阶矩的范围",
+      "status": "checked",
+      "detail": "L2 triangle inequalities, Ito isometry and W2 continuity of square-root second moment give the bounds; constant controls attain both.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M17",
+      "one_question": "经验分布逼近可行支撑不保证所有约束满足",
+      "status": "checked",
+      "detail": "The two-atom empirical law has W2^2=4/M but one violated constraint at every M.",
+      "proof_scope": "local-counterexample"
+    },
+    {
+      "id": "4M18",
+      "one_question": "大子句 NAE 消息递推选出收敛分布",
+      "status": "checked",
+      "detail": "SSZ Proposition 1.2 checked with selected initial law, large k, admissible density, l1 convergence, fixed point, reflection symmetry and mass bound.",
+      "proof_scope": "cited-research-theorem"
+    },
+    {
+      "id": "4M19",
+      "one_question": "时间区间矩形函数在乘积 L² 中稠密",
+      "status": "checked",
+      "detail": "Finite rectangle-grid algebra generates the actual product sigma-algebra; orthogonality gives equality of finite positive/negative measures and hence a trivial orthogonal complement. Hilbert projection and dominated time truncation prove the stated real product-L2 density.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M1A",
+      "one_question": "相关高斯对的正象限概率是一个角度",
+      "status": "checked",
+      "detail": "Rotational invariance gives uniform direction; sector angle and r=+/-1 endpoints yield the stated arcsine formula.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M1B",
+      "one_question": "凝聚 NAE-SAT 的绝对重叠集中于两处",
+      "status": "checked",
+      "detail": "NSS II Definition 1.3 and Theorem 1.4 checked: spin coding, absolute overlap, inner/outer probabilities and both n-dependent rates.",
+      "proof_scope": "cited-research-theorem"
+    },
+    {
+      "id": "4M1C",
+      "one_question": "零裕量 Ising 感知机的原始二阶矩比值指数增长",
+      "status": "checked",
+      "detail": "Binomial modal-term entropy bound checked; F(0)=0 and F'(0)=2alpha/pi>0 give an exponentially large raw moment ratio for every fixed alpha>0.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "4M1D",
+      "one_question": "过去时间平均在乘积 L² 中逼近原过程",
+      "status": "checked",
+      "detail": "Translation isometry, the 2|s| rectangle symmetric-difference bound and 4M19 imply strong time-translation continuity. Joint measurability, Fubini-Tonelli and Schwarz establish the past-average integral and its L2 convergence.",
+      "proof_scope": "local-proof"
+    },
+    {
+      "id": "icm2026-sun",
+      "one_question": "Sun：Randomized Combinatorial Problems, in Sparse and Mean-Field Settings",
+      "status": "checked",
+      "detail": "Metadata and pinned versions reread; SSZ configuration model is now correctly located in opening Section 2, Definition 2.1, before Section 2.1. No reference-page finding remains.",
+      "proof_scope": "reference-metadata"
+    }
+  ],
+  "source_checks": [
+    {
+      "id": "sun-icm-published",
+      "url": "https://epubs.siam.org/doi/10.1137/25M1805801",
+      "actual_reading": "Published HTML: Section 1; Section 2.1-2.3; opening of 2.4 through (2.17); Section 3.4 theorem/algorithm definitions excerpt. Section 2.2 equations (2.4), (2.7)-(2.12) specifically compared. Final reread of published lines 171-218, 270-346 to resolve equation/section/theorem locators. Reviewer did not independently read the entire survey; the packet author's full-reading declaration is not adopted as reviewer scope. Revision-3 targeted checks also read published lines 378-475 (end 2.4, Section 2.5, Section 3.1 and opening 3.2) and 492-524 (end 3.3 and part of 3.4). These establish the planting locator and the remaining 4M05 mismatch. The entire survey is still not claimed as reviewer reading.",
+      "scope": "Partial source reading, not full-paper proof verification."
+    },
+    {
+      "id": "ssz-v3",
+      "url": "https://arxiv.org/pdf/1604.08546v3",
+      "actual_reading": "Section 1.5; Section 1.6 equations (10)-(16), Proposition 1.2, Definition 1.3 and Proposition 1.4; opening Section 1.7; Section 2 model and Definition 2.1. Read as extracted web PDF text. At final review, reread extracted local text lines 230-475 (Sections 1.4-1.8), correction notice/Appendix F opening lines 4478-4535, and Appendix G opening through start G.1, lines 4876-4970; not the full corrected proofs. Configuration-model location specifically rechecked at extracted lines 475-529, printed p.9, before Section 2.1.",
+      "scope": "NAE model, message recursion, functional and free-energy contracts; Appendix B convergence proof not re-proved."
+    },
+    {
+      "id": "nss-ii-v2",
+      "url": "https://arxiv.org/pdf/2112.00152v2",
+      "actual_reading": "Introduction through Theorem 1.1(a,b), Remark 1.2, Definition 1.3 and Theorem 1.4. Final HTML recheck of Theorems 1.1 and 1.4 and Definition 1.3, plus surrounding introduction/proof-organization text through Section 1.3.",
+      "scope": "Condensation and absolute-overlap contracts only; full small-subgraph-conditioning proof not reviewed."
+    },
+    {
+      "id": "ding-sun-v1",
+      "url": "https://arxiv.org/pdf/1809.07742v1",
+      "actual_reading": "Introduction, Theorem 1.1, Condition 1.2, equations (2)-(7), Proposition 1.3; Section 7 equation (153). Revision-3 locator check reread the versioned HTML introduction through Theorem 1.4 and the following conditional-second-moment derivation, lines 110-135.",
+      "scope": "Candidate constant and conditional lower-bound status; full analytic/numerical verification not performed."
+    },
+    {
+      "id": "huang-v2",
+      "url": "https://arxiv.org/pdf/2404.18902v2",
+      "actual_reading": "Introduction Theorems 1.1-1.2 and Condition 1.3; Section 2.6 equations (6)-(8); Section 3.1 equations (12)-(13), Condition 3.1 and Proposition 3.2; Appendix B introductory scope statement.",
+      "scope": "Exact conditional upper-bound contract and global versus local condition. No interval-arithmetic reproduction."
+    },
+    {
+      "id": "hss-v1",
+      "url": "https://arxiv.org/pdf/2608.29416v1",
+      "actual_reading": "Initial selected introductory algorithm/model passages; final local extracted-text read lines 155-295 (Definition 1.1 in full, Definitions 1.3-1.4 and adjacent explanation) and 485-727 (end 1.3, complete formal Section 1.4, organization and Section 2 opening). Versioned abstract metadata checked. Definitions 1.8,1.11,1.12,1.15, Theorem 1.16 and cost paragraph compared in full. Revision-3 locator check read extracted lines 2256-2265, the deterministic coupling estimate and Remark 3.6 rounding discussion.",
+      "scope": "Exact symmetric spherical control-law and algorithm-class contract checked. General/Ising controls read for comparison only. None of the 295-page deep algorithm/state-evolution/confinement proofs independently reconstructed."
+    },
+    {
+      "id": "shmalo-v1-status-only",
+      "url": "https://arxiv.org/abs/2607.11010v1",
+      "actual_reading": "Versioned abstract and submission metadata only.",
+      "scope": "Source asserts computer-assisted closure of the remaining conditions; proof/code/certificates not reviewed and no correctness endorsement given."
+    }
+  ],
+  "reuse_checks": {
+    "comparison_pages_read": [
+      "100P",
+      "380H",
+      "0R06",
+      "310S",
+      "0GGD"
+    ],
+    "findings": "No duplicate existing definition established in examined candidates. New 4M19 and 4M1D prove the needed product-L2 approximation statements and reuse canonical Lebesgue measure, finite-measure uniqueness, Hilbert projection, Fubini-Tonelli and dominated convergence rather than duplicating their definitions. The 0F62 arbitrary-simple-function result alone was not mistaken for rectangle density.",
+    "actual_shared_read_ids": [
+      "00LB",
+      "00LD",
+      "00L3",
+      "00L1",
+      "00L0",
+      "0A45",
+      "00L9",
+      "0A02",
+      "004S",
+      "00L4",
+      "0A03",
+      "00LC",
+      "00L2",
+      "0A00",
+      "100P",
+      "380H",
+      "0R06",
+      "00Q3",
+      "00QD",
+      "00Q1",
+      "00Q5",
+      "0A3B",
+      "0A3C",
+      "0A34",
+      "0A35",
+      "0A44",
+      "0F61",
+      "004M",
+      "004P",
+      "004R",
+      "00G2",
+      "0N0R",
+      "4J0Q",
+      "0F63",
+      "310S",
+      "00FU",
+      "00Q2",
+      "00E0",
+      "00Q0",
+      "0A37",
+      "00G0",
+      "004Q",
+      "0A6A",
+      "00MS",
+      "0H53",
+      "0I8L",
+      "00D3",
+      "00MI",
+      "00TK",
+      "0A46",
+      "00EK",
+      "00EP",
+      "00ER",
+      "00EX",
+      "00E2",
+      "0A31",
+      "0A3K",
+      "0A39",
+      "0A3A",
+      "0A33",
+      "00M4",
+      "0A30",
+      "00QB",
+      "01Q1",
+      "0A67",
+      "0A69",
+      "0N0S",
+      "0N12",
+      "0F62",
+      "0I8I",
+      "0GGD",
+      "00GK",
+      "01D2",
+      "00Q9",
+      "00Q4",
+      "0A7A",
+      "00XV",
+      "0A87",
+      "0A68",
+      "00Q6",
+      "00EB",
+      "00MQ",
+      "00M6"
+    ],
+    "declared_reused_pages_all_actually_read": true,
+    "actual_reused_page_records": [
+      {
+        "id": "004P",
+        "path": "trees/math/analysis/004P.tree",
+        "sha256": "8c604510dca9a827c0f692eb717b189367cd6a4839a8d459c74ce947fcb057ba",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "004S",
+        "path": "trees/math/analysis/004S.tree",
+        "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00FU",
+        "path": "trees/math/topology/atomic/00FU.tree",
+        "sha256": "af827855f17c52ea219b1d83ec0ef06d4104f6c13032192943e21a950f3848ef",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00L0",
+        "path": "trees/math/network/atomic/00L0.tree",
+        "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00L1",
+        "path": "trees/math/network/atomic/00L1.tree",
+        "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00L2",
+        "path": "trees/math/network/atomic/00L2.tree",
+        "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00L3",
+        "path": "trees/math/network/atomic/00L3.tree",
+        "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00L4",
+        "path": "trees/math/network/atomic/00L4.tree",
+        "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00L9",
+        "path": "trees/math/network/atomic/00L9.tree",
+        "sha256": "64b62cd8e4dfe86989f410ecc38b6729f80a9e6f1a1f3f7e53a6dff365416456",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00LB",
+        "path": "trees/math/network/atomic/00LB.tree",
+        "sha256": "6096935638db64c694caeb47a215bcd82345ee6ee6c1516f9c984554d15a22b9",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00LC",
+        "path": "trees/math/network/atomic/00LC.tree",
+        "sha256": "10a445d88348a7efe9115bb909555039c5a5192db1b1e0985824d336f8fcd233",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00LD",
+        "path": "trees/math/network/atomic/00LD.tree",
+        "sha256": "82e00e376f218218f25fc70ae4f8b35ba45c82ddbf67087ab8de7c80c274170a",
+        "role": "Random-graph model comparison; not a prerequisite for regular NAE counting."
+      },
+      {
+        "id": "00MS",
+        "path": "trees/math/analysis/atomic/00MS.tree",
+        "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260",
+        "role": "Closed-subspace orthogonal decomposition, used after proving the orthogonal complement trivial in 4M19."
+      },
+      {
+        "id": "00QB",
+        "path": "trees/math/logic/research/atomic/00QB.tree",
+        "sha256": "6861ea2adaa4342f9317db0e49967521cdf4e2b0173d77fe263b2e0c5d18fbd5",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00QD",
+        "path": "trees/math/logic/research/atomic/00QD.tree",
+        "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00TK",
+        "path": "trees/math/logic/research/atomic/00TK.tree",
+        "sha256": "ac0917f64f900fff469605310fd29232120d184ee585f3c590a356205c8e497e",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "00XV",
+        "path": "trees/math/logic/research/atomic/00XV.tree",
+        "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1",
+        "role": "Borel Lebesgue measure and its uniqueness, used for time intervals and translation isometry."
+      },
+      {
+        "id": "01Q1",
+        "path": "trees/math/algebra/research/01Q1.tree",
+        "sha256": "0c38c5a92dbbefbfef0fe380e5a0189a7d45ab23a3fb8e1687396521f2536700",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A00",
+        "path": "trees/math/network/atomic/0A00.tree",
+        "sha256": "c326c3c96b57793471b8a4b80defd4108f6a9f17e36a4a670c6356528db92759",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A02",
+        "path": "trees/math/network/atomic/0A02.tree",
+        "sha256": "e623166be9f5fff1c79d8ce9f22c533cedae843a50d5c5740f376e499265595a",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A03",
+        "path": "trees/math/network/atomic/0A03.tree",
+        "sha256": "950632931f74a4223798f1ab1a44f1129461daf0e617a3e994684fcee3e51308",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A44",
+        "path": "trees/math/analysis/atomic/0A44.tree",
+        "sha256": "aba935ec9003feb06ed056b12122d5ae3ea2b361e521ae9dc1bfb19258709834",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A45",
+        "path": "trees/math/analysis/atomic/0A45.tree",
+        "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A67",
+        "path": "trees/math/logic/research/atomic/0A67.tree",
+        "sha256": "3fb56ed8c3db28423a557191cb0712bb314f41fb7da89a7492778412b7719cfe",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A69",
+        "path": "trees/math/logic/research/atomic/0A69.tree",
+        "sha256": "01cce7dd029c2a04d84f8ec8f0186dece9898e33f3de04fd1ae864ee78ef7855",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A6A",
+        "path": "trees/math/logic/research/atomic/0A6A.tree",
+        "sha256": "c4c9673cbf76ee86cc9396e886bb800f1decfefc4c943140a5f4e0b4c05f9aa1",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0A87",
+        "path": "trees/math/logic/research/atomic/0A87.tree",
+        "sha256": "e56575ccc4e7c52a7ebd5899e9d47158ca661357cf77e304a8658bf851f7bf5b",
+        "role": "Uniqueness for finite measures agreeing on a generating set algebra; 4M19 explicitly constructs that algebra."
+      },
+      {
+        "id": "0F63",
+        "path": "trees/math/network/atomic/0F63.tree",
+        "sha256": "223582dcf9ad25175e42fbd8d0a6cc31edc13d5cbcb7c9e506e98fc92d965fe0",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0H53",
+        "path": "trees/math/number-theory/reports/0H53.tree",
+        "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b",
+        "role": "Sigma-finite Fubini-Tonelli and parameter-integral measurability for 4M1D and the adapted time averages in 4M13."
+      },
+      {
+        "id": "0I8I",
+        "path": "trees/math/number-theory/reports/0I8I.tree",
+        "sha256": "9797c9f25f9dc8650f08f81b9dadac651aa6137dd1c241bac3e341dcbcca42ca",
+        "role": "Dominated convergence for time truncation in 4M19 and bounded-integrand truncation in 4M13."
+      },
+      {
+        "id": "0N0R",
+        "path": "trees/math/geometry/bourbaki/0N0R.tree",
+        "sha256": "afc97ce9792ec340ab6f24c01766f7927c95aa5cff958bad4f146502779894db",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0N0S",
+        "path": "trees/math/geometry/bourbaki/0N0S.tree",
+        "sha256": "d8dbcbc414b2900d0d1fd05c03ca5b2c2211fe12df7f6547fb31544e4609b07e",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "0N12",
+        "path": "trees/math/geometry/bourbaki/0N12.tree",
+        "sha256": "656a80bd8e186adc0c49d46b4b8b55bb4fce9f31c897d890964092bb75a33140",
+        "role": "Definition/result actually used in linked mathematical body."
+      },
+      {
+        "id": "310S",
+        "path": "trees/math/dynamics/berger/310S.tree",
+        "sha256": "418fd32b1a17c69a12ed632a4e385e03fbe6faf71dfc77ccb357c1861ed512d0",
+        "role": "Comparison only: compact W1 dual definition is not the noncompact Wp construction."
+      },
+      {
+        "id": "4J0Q",
+        "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Q.tree",
+        "sha256": "af28900de4dbfa57f15126b2cd623008078138c6c10ce24be44960fa7d6cb22d",
+        "role": "Definition/result actually used in linked mathematical body."
+      }
+    ],
+    "additional_read_pages_not_claimed_as_branch_reuse": [
+      "100P",
+      "380H",
+      "0R06",
+      "00Q3",
+      "00Q1",
+      "00Q5",
+      "0A3B",
+      "0A3C",
+      "0A34",
+      "0A35",
+      "0F61",
+      "004M",
+      "004R",
+      "00G2",
+      "00Q2",
+      "00E0",
+      "00Q0",
+      "0A37",
+      "00G0",
+      "004Q",
+      "0I8L",
+      "00D3",
+      "00MI",
+      "0A46",
+      "00EK",
+      "00EP",
+      "00ER",
+      "00EX",
+      "00E2",
+      "0A31",
+      "0A3K",
+      "0A39",
+      "0A3A",
+      "0A33",
+      "00M4",
+      "0A30",
+      "0F62",
+      "0GGD",
+      "00GK",
+      "01D2",
+      "00Q9",
+      "00Q4",
+      "0A7A",
+      "0A68",
+      "00Q6",
+      "00EB",
+      "00MQ",
+      "00M6"
+    ],
+    "recursive_chain_complete": false,
+    "recursive_scope": "All 35 declared reuse destinations actually read; selected actually needed recursive foundations followed, 83 shared bodies in total. No claim to read all 189 author-reported mechanically reachable nodes or certify unrelated examples in shared pages."
+  },
+  "reviewed_files": [
+    {
+      "id": "4M00",
+      "path": "trees/math/mathematical-physics/sun/4M00.tree",
+      "sha256": "575a3ff63a148e4ad459f792ca2d1d96226a6e529eb09fee25c3b1e2a5c6721c"
+    },
+    {
+      "id": "4M01",
+      "path": "trees/math/mathematical-physics/sun/4M01.tree",
+      "sha256": "5adc9341af70f61cf3411989e3ee794a4681be113dc3eebcf103657eb372eb6f"
+    },
+    {
+      "id": "4M02",
+      "path": "trees/math/mathematical-physics/sun/4M02.tree",
+      "sha256": "3917e801cde5e709019c80833376e1fdabf68bd4845a2dd010bd2be150f4193d"
+    },
+    {
+      "id": "4M03",
+      "path": "trees/math/mathematical-physics/sun/4M03.tree",
+      "sha256": "55b3450098b801159ee8b74adda7ee550ac39429654dbeb0de0b9928408c7fc7"
+    },
+    {
+      "id": "4M04",
+      "path": "trees/math/mathematical-physics/sun/4M04.tree",
+      "sha256": "a9becb38a892071d07bf26a04620d7384eda2b76eee1e768f8ef043412cf0216"
+    },
+    {
+      "id": "4M05",
+      "path": "trees/math/mathematical-physics/sun/4M05.tree",
+      "sha256": "78a456a2d382b9f36cfb92657775c8be0dc994ddfb63bf233903fba133212ab4"
+    },
+    {
+      "id": "4M06",
+      "path": "trees/math/mathematical-physics/sun/4M06.tree",
+      "sha256": "2ed17b8f6181ffe4f11a2777ae2b135296f30b386812456de55c94897e78513a"
+    },
+    {
+      "id": "4M07",
+      "path": "trees/math/mathematical-physics/sun/4M07.tree",
+      "sha256": "b7abfc109d3ac0e72fdf3d569bd6159a3b62ca94e9bbddf821f804d593b604dd"
+    },
+    {
+      "id": "4M08",
+      "path": "trees/math/mathematical-physics/sun/4M08.tree",
+      "sha256": "2b2507c1654209045ab664c051d10d40d441f478b60cc13e02df2d95100f71c9"
+    },
+    {
+      "id": "4M09",
+      "path": "trees/math/mathematical-physics/sun/4M09.tree",
+      "sha256": "51f0d3197a3e92f1212003e5a3d4c84bfcaef2e3f6a3c1570b0f0470d67aad70"
+    },
+    {
+      "id": "4M0A",
+      "path": "trees/math/mathematical-physics/sun/4M0A.tree",
+      "sha256": "ee5a4f935ff761a6d30ed3d6830ed194fb7cb727a731a56ef0a002decd6c2261"
+    },
+    {
+      "id": "4M0B",
+      "path": "trees/math/mathematical-physics/sun/4M0B.tree",
+      "sha256": "29105ae881850237b3781e3746d2974e1d55007339ff0b0bc00379c1646456d8"
+    },
+    {
+      "id": "4M0C",
+      "path": "trees/math/mathematical-physics/sun/4M0C.tree",
+      "sha256": "950a130a3a816777dc8a071dbf702a68f99a9086f887545ce284e8083bd792af"
+    },
+    {
+      "id": "4M0D",
+      "path": "trees/math/mathematical-physics/sun/4M0D.tree",
+      "sha256": "bf49441a8148fc0025a101912ebd917d37b801673affca97ccf1ca26d653cb04"
+    },
+    {
+      "id": "4M0E",
+      "path": "trees/math/mathematical-physics/sun/4M0E.tree",
+      "sha256": "745f2cf179000e6986ceb3486de06ade65d8fe7c8d658dbc55c4af3e123a98cf"
+    },
+    {
+      "id": "4M0F",
+      "path": "trees/math/mathematical-physics/sun/4M0F.tree",
+      "sha256": "29c84c942b79cb0d6e51f72441eddb397fbdf7da2fd61867c43fe2148da59d9a"
+    },
+    {
+      "id": "4M0G",
+      "path": "trees/math/mathematical-physics/sun/4M0G.tree",
+      "sha256": "ca49bc1bf40a47abf4bf15121fc8666e566a8e7251d7243fd8da6464b9116de9"
+    },
+    {
+      "id": "4M0H",
+      "path": "trees/math/mathematical-physics/sun/4M0H.tree",
+      "sha256": "bf4ed72c6ded0ee717d14f03fddc772714b9fdb61e94dbadfea64340215a1944"
+    },
+    {
+      "id": "4M0I",
+      "path": "trees/math/mathematical-physics/sun/4M0I.tree",
+      "sha256": "9a698ce9ab7900827dfc046fee9a7c60e0e3de473ec0c30e79e65b900a6eca75"
+    },
+    {
+      "id": "4M0J",
+      "path": "trees/math/mathematical-physics/sun/4M0J.tree",
+      "sha256": "73990a69c49362c7aa3a65cddae27cb4749e160b01bf93d376c399c5ad630a96"
+    },
+    {
+      "id": "4M0K",
+      "path": "trees/math/mathematical-physics/sun/4M0K.tree",
+      "sha256": "6f6499901aad0756112541f5439b517ba8090d9dcf3b9f9460d550630cace1e2"
+    },
+    {
+      "id": "4M0L",
+      "path": "trees/math/mathematical-physics/sun/4M0L.tree",
+      "sha256": "ac1d35f67fce590b226be56f73b9c5a4edd2c92acacb5a6897f3bbb567d59442"
+    },
+    {
+      "id": "4M0M",
+      "path": "trees/math/mathematical-physics/sun/4M0M.tree",
+      "sha256": "6f4f6c958baef9bdb5298149567ffe697f08928a6267358588c576c9f06080f2"
+    },
+    {
+      "id": "4M0N",
+      "path": "trees/math/mathematical-physics/sun/4M0N.tree",
+      "sha256": "af5755d92baca31c7a584104f85fc4f9efc26077b822f435f7e04317fe0d9333"
+    },
+    {
+      "id": "4M0O",
+      "path": "trees/math/mathematical-physics/sun/4M0O.tree",
+      "sha256": "bc227189f04f1172bb445bc3738cd229322eb307e5912ce18e794fba2da411b7"
+    },
+    {
+      "id": "4M0P",
+      "path": "trees/math/mathematical-physics/sun/4M0P.tree",
+      "sha256": "d0e525a4c09f3c1a6e2f93642fb63489ea0086a4117a8c236d6af67ec2fd8005"
+    },
+    {
+      "id": "4M0Q",
+      "path": "trees/math/mathematical-physics/sun/4M0Q.tree",
+      "sha256": "2d3ff59c1f17301b411cd8337a15612100f66b4ccd2cc26671751dc01d10a6ad"
+    },
+    {
+      "id": "4M0R",
+      "path": "trees/math/mathematical-physics/sun/4M0R.tree",
+      "sha256": "683efd6ea93262e73447e0bc957a633b10af469112abd50abe954e4f9f92ec5a"
+    },
+    {
+      "id": "4M0S",
+      "path": "trees/math/mathematical-physics/sun/4M0S.tree",
+      "sha256": "b09ae7fe70a98341686bed7a9b1c750d7c94b620db0f22177df2f7e056a849c8"
+    },
+    {
+      "id": "4M0T",
+      "path": "trees/math/mathematical-physics/sun/4M0T.tree",
+      "sha256": "60b043ff89f94b30a21b7d2c6db314e1e49ec5f52cbf4556099279f9cba9858f"
+    },
+    {
+      "id": "4M0U",
+      "path": "trees/math/mathematical-physics/sun/4M0U.tree",
+      "sha256": "49bc52db9c836fc3f1888009d641b3fd27b77c572a339f1974664ea45c535ba9"
+    },
+    {
+      "id": "4M0V",
+      "path": "trees/math/mathematical-physics/sun/4M0V.tree",
+      "sha256": "f21d9aa65b9c72707fc3c9934c0c0e8ac305f8aef78b084243328d5de4f0d8af"
+    },
+    {
+      "id": "4M0W",
+      "path": "trees/math/mathematical-physics/sun/4M0W.tree",
+      "sha256": "9fb6f9c6d61f21ad92a5eb8272ad9770bdad05c6d7b7b70c52d7fb6ac0b45006"
+    },
+    {
+      "id": "4M0X",
+      "path": "trees/math/mathematical-physics/sun/4M0X.tree",
+      "sha256": "ea6c0ede9b04904f545f2328bb7e42f582e773f5b3ddb893468365c001390c03"
+    },
+    {
+      "id": "4M0Y",
+      "path": "trees/math/mathematical-physics/sun/4M0Y.tree",
+      "sha256": "45ab2fba2e1b45bb67503d2543e7940504543fb32529b1cccbc5e7d9d62a240d"
+    },
+    {
+      "id": "4M0Z",
+      "path": "trees/math/mathematical-physics/sun/4M0Z.tree",
+      "sha256": "c59b593947b94da3c74fabab0ef20215d7fe0a3764c3e971b803d3dae84ebeb9"
+    },
+    {
+      "id": "4M10",
+      "path": "trees/math/mathematical-physics/sun/4M10.tree",
+      "sha256": "f898986ef4ee107b181ef01e18e882341fa610e7f01d5dabb5c7457410f87f1a"
+    },
+    {
+      "id": "4M11",
+      "path": "trees/math/mathematical-physics/sun/4M11.tree",
+      "sha256": "bdba77c1b8e6aa74732bc62535c0ce15273a9391e8f3f5252d42e3afb7a4db1b"
+    },
+    {
+      "id": "4M12",
+      "path": "trees/math/mathematical-physics/sun/4M12.tree",
+      "sha256": "e18827d327441ec48113073d86c3da1f6fe35d5d5ae71f6c633c113468472cb5"
+    },
+    {
+      "id": "4M13",
+      "path": "trees/math/mathematical-physics/sun/4M13.tree",
+      "sha256": "14d79c4ba36cc9d9b62cd6fbf02857c54fd702d801d5cb00e3e98f9c11b3a40a"
+    },
+    {
+      "id": "4M14",
+      "path": "trees/math/mathematical-physics/sun/4M14.tree",
+      "sha256": "667ed86df618320fc807fc5e8ee692b62e06b20fcf244920c624bc4f9de9b970"
+    },
+    {
+      "id": "4M15",
+      "path": "trees/math/mathematical-physics/sun/4M15.tree",
+      "sha256": "b3581f5fa4f8ea18e7f881f4042c98df343b365f844bf84a4d37b665234528a3"
+    },
+    {
+      "id": "4M16",
+      "path": "trees/math/mathematical-physics/sun/4M16.tree",
+      "sha256": "acada21d629efb8a5e1da5d3f1a5f6f28f7e1ab38104068a104b0dee57173013"
+    },
+    {
+      "id": "4M17",
+      "path": "trees/math/mathematical-physics/sun/4M17.tree",
+      "sha256": "cf37513f17343dc331b2166c2b46a84ae216047802d96409f7fbe7f2c9fa9920"
+    },
+    {
+      "id": "4M18",
+      "path": "trees/math/mathematical-physics/sun/4M18.tree",
+      "sha256": "5bfefbce8dedca81beb928c7bc0319da74cf947634f928f79721f66dd87ecb5f"
+    },
+    {
+      "id": "4M19",
+      "path": "trees/math/mathematical-physics/sun/4M19.tree",
+      "sha256": "bcc0a3d7e9d69580776f515a7ba02fa6c36af19fe1cea86c288900736f564ead"
+    },
+    {
+      "id": "4M1A",
+      "path": "trees/math/mathematical-physics/sun/4M1A.tree",
+      "sha256": "f34d57d8e0e3e7c1c600dd46a3d0966e7f05fd57389e1f3b9115380068135856"
+    },
+    {
+      "id": "4M1B",
+      "path": "trees/math/mathematical-physics/sun/4M1B.tree",
+      "sha256": "860913e5ff98157840bdc1e41bca18410dd7bf59cc935d2e6a73e4539147785e"
+    },
+    {
+      "id": "4M1C",
+      "path": "trees/math/mathematical-physics/sun/4M1C.tree",
+      "sha256": "6f5f5ca9734b4081bace29bbff6f3a31e4e9fdf0bbf6449e4565a88e2e875edb"
+    },
+    {
+      "id": "4M1D",
+      "path": "trees/math/mathematical-physics/sun/4M1D.tree",
+      "sha256": "8575b2f118e155377b87809c306e497f31bd04ab14987fdbf8a79fe2d090029d"
+    },
+    {
+      "id": "icm2026-sun",
+      "path": "trees/references/icm2026-sun.tree",
+      "sha256": "6eaed193e927df92d1fc54906971f5d91dc191ac3b727036c1732a27572d0d72"
+    },
+    {
+      "id": "00LB",
+      "path": "trees/math/network/atomic/00LB.tree",
+      "sha256": "6096935638db64c694caeb47a215bcd82345ee6ee6c1516f9c984554d15a22b9"
+    },
+    {
+      "id": "00LD",
+      "path": "trees/math/network/atomic/00LD.tree",
+      "sha256": "82e00e376f218218f25fc70ae4f8b35ba45c82ddbf67087ab8de7c80c274170a"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce"
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297"
+    },
+    {
+      "id": "00L9",
+      "path": "trees/math/network/atomic/00L9.tree",
+      "sha256": "64b62cd8e4dfe86989f410ecc38b6729f80a9e6f1a1f3f7e53a6dff365416456"
+    },
+    {
+      "id": "0A02",
+      "path": "trees/math/network/atomic/0A02.tree",
+      "sha256": "e623166be9f5fff1c79d8ce9f22c533cedae843a50d5c5740f376e499265595a"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b"
+    },
+    {
+      "id": "00L4",
+      "path": "trees/math/network/atomic/00L4.tree",
+      "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5"
+    },
+    {
+      "id": "0A03",
+      "path": "trees/math/network/atomic/0A03.tree",
+      "sha256": "950632931f74a4223798f1ab1a44f1129461daf0e617a3e994684fcee3e51308"
+    },
+    {
+      "id": "00LC",
+      "path": "trees/math/network/atomic/00LC.tree",
+      "sha256": "10a445d88348a7efe9115bb909555039c5a5192db1b1e0985824d336f8fcd233"
+    },
+    {
+      "id": "00L2",
+      "path": "trees/math/network/atomic/00L2.tree",
+      "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d"
+    },
+    {
+      "id": "0A00",
+      "path": "trees/math/network/atomic/0A00.tree",
+      "sha256": "c326c3c96b57793471b8a4b80defd4108f6a9f17e36a4a670c6356528db92759"
+    },
+    {
+      "id": "100P",
+      "path": "trees/math/analysis/asymptotic-banach/100P.tree",
+      "sha256": "9ae489ed3f3f3daa21d44a841216216b4b9fc74771cbfd44bf07185855bfcba7"
+    },
+    {
+      "id": "380H",
+      "path": "trees/math/dynamics/kanigowski/380H.tree",
+      "sha256": "e709ab963ef3cacb7e2f8d015531b0207160d7e8d2f24abdd2b0848d226777fd"
+    },
+    {
+      "id": "0R06",
+      "path": "trees/math/analysis/convex-duality/0R06.tree",
+      "sha256": "7f0928284e71c623ff5bb688bf0bc76c68f6a5a6f56167979741265741954119"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1"
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree",
+      "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e"
+    },
+    {
+      "id": "00Q1",
+      "path": "trees/math/logic/research/atomic/00Q1.tree",
+      "sha256": "29efd7a8c18263294c150b171392e3f44b4fa95e7fe1c715b8e0150b63fb4464"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260"
+    },
+    {
+      "id": "0A3B",
+      "path": "trees/math/analysis/atomic/0A3B.tree",
+      "sha256": "cfdf7c6bc8c5270d1153897bbb1ca3f699e8ea0e392439eb70d2674755cb3ae5"
+    },
+    {
+      "id": "0A3C",
+      "path": "trees/math/analysis/atomic/0A3C.tree",
+      "sha256": "0ce7de7269b74ee6540bf0a8be0eb8ef32da4c53248d1a3eda6750becbfa2bb1"
+    },
+    {
+      "id": "0A34",
+      "path": "trees/math/analysis/atomic/0A34.tree",
+      "sha256": "e828bca1acac95821c34a87f2cf59ab4fe3298928bbd2680d5acd356aae91557"
+    },
+    {
+      "id": "0A35",
+      "path": "trees/math/analysis/atomic/0A35.tree",
+      "sha256": "a87f1c9fab8bfc263775ef0f9179fc5dc06a477daf453df5e107de5e6e3d6de0"
+    },
+    {
+      "id": "0A44",
+      "path": "trees/math/analysis/atomic/0A44.tree",
+      "sha256": "aba935ec9003feb06ed056b12122d5ae3ea2b361e521ae9dc1bfb19258709834"
+    },
+    {
+      "id": "0F61",
+      "path": "trees/math/analysis/atomic/0F61.tree",
+      "sha256": "c73ffc16ae619346dc9ec3ac57588ec682cd0af4f4736d8989755f1d8a9199bf"
+    },
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325"
+    },
+    {
+      "id": "004P",
+      "path": "trees/math/analysis/004P.tree",
+      "sha256": "8c604510dca9a827c0f692eb717b189367cd6a4839a8d459c74ce947fcb057ba"
+    },
+    {
+      "id": "004R",
+      "path": "trees/math/analysis/004R.tree",
+      "sha256": "6104895187a559521f81dc8d9549edbab4661da86450abc423796df83bc2aba0"
+    },
+    {
+      "id": "00G2",
+      "path": "trees/math/algebra/atomic/00G2.tree",
+      "sha256": "01199f95ad11226ffdb16888ee7292375ab175a16b7b51ae6044091b0178f9be"
+    },
+    {
+      "id": "0N0R",
+      "path": "trees/math/geometry/bourbaki/0N0R.tree",
+      "sha256": "afc97ce9792ec340ab6f24c01766f7927c95aa5cff958bad4f146502779894db"
+    },
+    {
+      "id": "4J0Q",
+      "path": "trees/math/mathematical-physics/rhodes-vargas/4J0Q.tree",
+      "sha256": "af28900de4dbfa57f15126b2cd623008078138c6c10ce24be44960fa7d6cb22d"
+    },
+    {
+      "id": "0F63",
+      "path": "trees/math/network/atomic/0F63.tree",
+      "sha256": "223582dcf9ad25175e42fbd8d0a6cc31edc13d5cbcb7c9e506e98fc92d965fe0"
+    },
+    {
+      "id": "310S",
+      "path": "trees/math/dynamics/berger/310S.tree",
+      "sha256": "418fd32b1a17c69a12ed632a4e385e03fbe6faf71dfc77ccb357c1861ed512d0"
+    },
+    {
+      "id": "00FU",
+      "path": "trees/math/topology/atomic/00FU.tree",
+      "sha256": "af827855f17c52ea219b1d83ec0ef06d4104f6c13032192943e21a950f3848ef"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1"
+    },
+    {
+      "id": "00E0",
+      "path": "trees/math/topology/atomic/00E0.tree",
+      "sha256": "a3ddabe5504d33013264b6363fde033ade0a0cebb7f7ae2a0c7dc8b43745bcaf"
+    },
+    {
+      "id": "00Q0",
+      "path": "trees/math/logic/research/atomic/00Q0.tree",
+      "sha256": "cda032eb0847cfda578b0c62a0eb74b679ad10cba0ef4963614d64d2de89dc4f"
+    },
+    {
+      "id": "0A37",
+      "path": "trees/math/analysis/atomic/0A37.tree",
+      "sha256": "e212fde4ae3219df6893b832515641e403a16af323e431575bbb86df7f837b29"
+    },
+    {
+      "id": "00G0",
+      "path": "trees/math/algebra/atomic/00G0.tree",
+      "sha256": "76dc4be29be763e244cb0a503ea8412c28ab6abc5a133b9b0d78ef3e62ea4e0e"
+    },
+    {
+      "id": "004Q",
+      "path": "trees/math/analysis/004Q.tree",
+      "sha256": "d917c8fe0cac2c0ee2c6085eb0e80d2da90993f57a0f240ac097d556d40089b6"
+    },
+    {
+      "id": "0A6A",
+      "path": "trees/math/logic/research/atomic/0A6A.tree",
+      "sha256": "c4c9673cbf76ee86cc9396e886bb800f1decfefc4c943140a5f4e0b4c05f9aa1"
+    },
+    {
+      "id": "00MS",
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b"
+    },
+    {
+      "id": "0I8L",
+      "path": "trees/math/number-theory/reports/0I8L.tree",
+      "sha256": "308d9708a8742655d28ebd9d2952826de90a7470f12c53e3bc5ea7e78be85d4d"
+    },
+    {
+      "id": "00D3",
+      "path": "trees/math/logic/research/00D3.tree",
+      "sha256": "8df12ff71a7daed42b0451d26d903a1f66e9ae37657cc1c4aa63803a7002ca0e"
+    },
+    {
+      "id": "00MI",
+      "path": "trees/math/analysis/atomic/00MI.tree",
+      "sha256": "56f30d7635592fcffa7004c10eaa18c12c8b6dabc2c926117509b2c98f6ff545"
+    },
+    {
+      "id": "00TK",
+      "path": "trees/math/logic/research/atomic/00TK.tree",
+      "sha256": "ac0917f64f900fff469605310fd29232120d184ee585f3c590a356205c8e497e"
+    },
+    {
+      "id": "0A46",
+      "path": "trees/math/analysis/atomic/0A46.tree",
+      "sha256": "f10c39159cbfd27ea1e1e4798af44066c0c601fbd13853bfa36eb3f63031a335"
+    },
+    {
+      "id": "00EK",
+      "path": "trees/math/topology/atomic/00EK.tree",
+      "sha256": "4448c8affbb92de46dc87e1fba269199feddd08122511e6bf65a9ede717b63c0"
+    },
+    {
+      "id": "00EP",
+      "path": "trees/math/topology/atomic/00EP.tree",
+      "sha256": "a7f03d2ff9ecd62c6a8ec9422e6a505dc9a64291fae4305bf676e59d8eeda4fc"
+    },
+    {
+      "id": "00ER",
+      "path": "trees/math/topology/atomic/00ER.tree",
+      "sha256": "10fd11ea8002fc8a9dfb7765b1eeb84366e14b6fc4f4f011f58daa094f54f5b4"
+    },
+    {
+      "id": "00EX",
+      "path": "trees/math/topology/atomic/00EX.tree",
+      "sha256": "aef2d2e58100586647151d5736d69b70db72f744ea1b4692841b0dccc1888819"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba"
+    },
+    {
+      "id": "0A31",
+      "path": "trees/math/analysis/atomic/0A31.tree",
+      "sha256": "917071dcc498019765220ade13f80216cfdcc5177a2f8bc905343f40c97948d2"
+    },
+    {
+      "id": "0A3K",
+      "path": "trees/math/analysis/atomic/0A3K.tree",
+      "sha256": "44a600983869d653cb925def052599779d03a03213e048a23a787ddfca35b5b6"
+    },
+    {
+      "id": "0A39",
+      "path": "trees/math/topology/atomic/0A39.tree",
+      "sha256": "952607bf21fbdb930f4b92345c6545d3bba550588512f36581f3e3d6465c4f5d"
+    },
+    {
+      "id": "0A3A",
+      "path": "trees/math/analysis/atomic/0A3A.tree",
+      "sha256": "4c47befef5ed2494953e59817991fa7d251b0fd5fdf2933613add3b08121923b"
+    },
+    {
+      "id": "0A33",
+      "path": "trees/math/analysis/atomic/0A33.tree",
+      "sha256": "1f30b534d81b5bd042a30c0bb1f125a1f289b2d1a24afd1d07331ee389512e7e"
+    },
+    {
+      "id": "00M4",
+      "path": "trees/math/analysis/atomic/00M4.tree",
+      "sha256": "70300ca09bf8107f544ae2d1467bbc30224143bd8d5ad886255e2962ff292636"
+    },
+    {
+      "id": "0A30",
+      "path": "trees/math/analysis/atomic/0A30.tree",
+      "sha256": "3264013b740d67f6a125f260e96c9354377d8b1a7c0822460414bafe12455ead"
+    },
+    {
+      "id": "00QB",
+      "path": "trees/math/logic/research/atomic/00QB.tree",
+      "sha256": "6861ea2adaa4342f9317db0e49967521cdf4e2b0173d77fe263b2e0c5d18fbd5"
+    },
+    {
+      "id": "01Q1",
+      "path": "trees/math/algebra/research/01Q1.tree",
+      "sha256": "0c38c5a92dbbefbfef0fe380e5a0189a7d45ab23a3fb8e1687396521f2536700"
+    },
+    {
+      "id": "0A67",
+      "path": "trees/math/logic/research/atomic/0A67.tree",
+      "sha256": "3fb56ed8c3db28423a557191cb0712bb314f41fb7da89a7492778412b7719cfe"
+    },
+    {
+      "id": "0A69",
+      "path": "trees/math/logic/research/atomic/0A69.tree",
+      "sha256": "01cce7dd029c2a04d84f8ec8f0186dece9898e33f3de04fd1ae864ee78ef7855"
+    },
+    {
+      "id": "0N0S",
+      "path": "trees/math/geometry/bourbaki/0N0S.tree",
+      "sha256": "d8dbcbc414b2900d0d1fd05c03ca5b2c2211fe12df7f6547fb31544e4609b07e"
+    },
+    {
+      "id": "0N12",
+      "path": "trees/math/geometry/bourbaki/0N12.tree",
+      "sha256": "656a80bd8e186adc0c49d46b4b8b55bb4fce9f31c897d890964092bb75a33140"
+    },
+    {
+      "id": "0F62",
+      "path": "trees/math/analysis/atomic/0F62.tree",
+      "sha256": "817fe362ed090532f3e654cf390fe761fb2c4309a924b8cbcc4fd7e049f8e769"
+    },
+    {
+      "id": "0I8I",
+      "path": "trees/math/number-theory/reports/0I8I.tree",
+      "sha256": "9797c9f25f9dc8650f08f81b9dadac651aa6137dd1c241bac3e341dcbcca42ca"
+    },
+    {
+      "id": "0GGD",
+      "path": "trees/math/number-theory/reports/0GGD.tree",
+      "sha256": "17a9e2e4c1d8257411f57b3bfb0582ffec59426f320d357f722248470e2fb446"
+    },
+    {
+      "id": "00GK",
+      "path": "trees/math/algebra/atomic/00GK.tree",
+      "sha256": "6b348745323fb65053e8c2b920b8abeed762344b56db55afa92c67516f64ac8b"
+    },
+    {
+      "id": "01D2",
+      "path": "trees/math/algebra/research/01D2.tree",
+      "sha256": "766213f754516ff9efbc4d38f619bf9f2fc834d774ebd7a2bae186bf2f474b11"
+    },
+    {
+      "id": "00Q9",
+      "path": "trees/math/logic/research/atomic/00Q9.tree",
+      "sha256": "ecf8c8c13c018dc8ef21425639d62b0d2fe6ea3f80050af1169bae38eda24efa"
+    },
+    {
+      "id": "00Q4",
+      "path": "trees/math/logic/research/atomic/00Q4.tree",
+      "sha256": "196b410809c5bf0228550afb01e72b58cb623b6ad59d57da14a3b6c2590986dc"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree",
+      "sha256": "fc9fd9db793237c02165a5b40db7e6bf854fb810a195573e761818bee338f49c"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1"
+    },
+    {
+      "id": "0A87",
+      "path": "trees/math/logic/research/atomic/0A87.tree",
+      "sha256": "e56575ccc4e7c52a7ebd5899e9d47158ca661357cf77e304a8658bf851f7bf5b"
+    },
+    {
+      "id": "0A68",
+      "path": "trees/math/logic/research/atomic/0A68.tree",
+      "sha256": "c144e465bb42f04d14cefca339608f744fd3620c36e29bfae42639b16c2df85b"
+    },
+    {
+      "id": "00Q6",
+      "path": "trees/math/logic/research/atomic/00Q6.tree",
+      "sha256": "3d004eaf65deaa5e219da8e790e33c13c441d8009202b7074ba4a03b9e15f643"
+    },
+    {
+      "id": "00EB",
+      "path": "trees/math/topology/atomic/00EB.tree",
+      "sha256": "8e22829c4894ba74d1a0a09594179ef3d0820f1800176c1e54dc0a41bb80e0b5"
+    },
+    {
+      "id": "00MQ",
+      "path": "trees/math/analysis/atomic/00MQ.tree",
+      "sha256": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37"
+    },
+    {
+      "id": "00M6",
+      "path": "trees/math/analysis/atomic/00M6.tree",
+      "sha256": "9637d52da027ea636100ab4df5f6c92170a8db2cd62e1f0d8a8a329206c154b5"
+    },
+    {
+      "id": "EVERGREEN_ATOMIC_NOTES_SKILL",
+      "path": "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+      "sha256": "741e9cc486f79cb5b6f814c30ff9f02219705f082dcd3778d678bbf94bf8945c"
+    },
+    {
+      "id": "NOTES_STYLE_GUIDE",
+      "path": "NOTES_STYLE_GUIDE.md",
+      "sha256": "a72c61c33b088b8fc87755b980755c3eca1d7a96fd9612d4264917dbfd52ea47"
+    },
+    {
+      "id": "mathematical-physics-sun-packet",
+      "path": "research/mathematical-physics-sun-packet.json",
+      "sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8"
+    }
+  ],
+  "limitations": [
+    "Acceptance is restricted to the listed frozen branch, its packet, the actual prerequisite contracts and recorded primary-source excerpts. It is not whole-forest, full research-proof, numerical-certificate, build, rendered-site or publication acceptance.",
+    "Only listed repository inputs are hash-bound; search hits and unread recursive nodes are not counted as read.",
+    "No public-page edit, build, git command, subagent, shared-manifest edit, rendered-site check or publication check.",
+    "Primary-source checks use readable HTML/PDF extracted text. No screenshot evidence or blanket full-paper proof verification is claimed.",
+    "Author reading logs, source snapshots and numerical validations were not treated as independently reproduced reviewer work."
+  ],
+  "required_followup": "No mathematical-review repair remains for this frozen snapshot. Integration, build/render checks and publication remain outside this review and are not represented as completed. Any later input mutation requires review of the changed content and refreshed hashes.",
+  "review_revision": 4,
+  "packet_checks": {
+    "all_top_level_fields_read": true,
+    "sources_duplicate_of_source_records_confirmed": true,
+    "source_scope_vs_local_proof_scope": "Local analytic proof scope is accurate and complete for the stated fixed-time Ito construction. Research-theorem and numerical-proof exclusions remain explicit. The last locator mismatch is corrected in author revision 3; no source-scope finding remains.",
+    "author_validation_not_reproduced": [
+      "KaTeX",
+      "elementary-check script",
+      "shared prerequisite traversal"
+    ],
+    "packet_inventory_matches_owned_glob": true,
+    "claim_source_entries_checked": 49,
+    "claim_locator_check": "All 49 report.claim_sources entries were read and compared with the stated selected primary-source reading or the actual local calculations. The sole remaining mismatch, 4M05, is now corrected to published Section 3.1, equations (3.2)-(3.3). Local-calculations entries are not represented as quotations from a research paper.",
+    "review_response_check": "SUN-F01 through SUN-F10 are now independently resolved. The packet author's pending-review status and review_input digest describe the prior reviewer snapshot and were not mistaken for current independent acceptance. This review supplies the final decision for the renewed freeze.",
+    "final_packet_delta": {
+      "previous_packet_sha256": "ee9146f59e900e94abf03286e0a1f0c8d620af483dcb04c916bd097cb76f5aef",
+      "current_packet_sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8",
+      "changed_fields": [
+        {
+          "path": "report.claim_sources.4M05.0.locator",
+          "old": "§1 and §3.2, equation (3.2)",
+          "new": "§1 and §3.1, equations (3.2)-(3.3)"
+        },
+        {
+          "path": "freeze.revision",
+          "old": 2,
+          "new": 3
+        },
+        {
+          "path": "freeze.previous_packet_sha256",
+          "old": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f",
+          "new": "ee9146f59e900e94abf03286e0a1f0c8d620af483dcb04c916bd097cb76f5aef"
+        }
+      ],
+      "unchanged_owned_trees": 51,
+      "all_other_packet_fields_identical": true,
+      "reading_method": "Read all changed values; retain the prior full reading of exactly unchanged fields. This is cumulative complete-packet review, not a claim to have independently reread all unchanged prose in the final locator-only turn."
+    }
+  },
+  "review_history": [
+    {
+      "revision": 1,
+      "status": "provisional-revise",
+      "atoms_read": 35,
+      "shared_read": 62,
+      "open_findings": [
+        "SUN-F01",
+        "SUN-F02",
+        "SUN-F03",
+        "SUN-F04",
+        "SUN-F05",
+        "SUN-F06",
+        "SUN-F07",
+        "SUN-F08"
+      ],
+      "packet_present": false
+    },
+    {
+      "revision": 2,
+      "status": "frozen-revise",
+      "atoms_read": 47,
+      "owned_trees_read": 49,
+      "shared_read": 83,
+      "reviewed_file_count": 135,
+      "packet_sha256": "0ed4bcdf00069f71aaaea41286e1c8853aa98ec9a73d5c8a9c17d4656cce9b8f",
+      "open_findings": [
+        "SUN-F10",
+        "SUN-F09"
+      ],
+      "resolved_findings": [
+        "SUN-F01",
+        "SUN-F02",
+        "SUN-F03",
+        "SUN-F04",
+        "SUN-F05",
+        "SUN-F06",
+        "SUN-F07",
+        "SUN-F08"
+      ]
+    },
+    {
+      "revision": 3,
+      "status": "frozen-revise",
+      "atoms_read": 49,
+      "owned_trees_read": 51,
+      "shared_read": 83,
+      "reviewed_file_count": 137,
+      "packet_sha256": "ee9146f59e900e94abf03286e0a1f0c8d620af483dcb04c916bd097cb76f5aef",
+      "open_findings": [
+        "SUN-F09"
+      ],
+      "resolved_findings": [
+        "SUN-F01",
+        "SUN-F02",
+        "SUN-F03",
+        "SUN-F04",
+        "SUN-F05",
+        "SUN-F06",
+        "SUN-F07",
+        "SUN-F08",
+        "SUN-F10"
+      ],
+      "review_sha256": "11f3e50f881c5c8761c190cb67bc98b678935a9bc5fad7f91318a9762dd9b0fb"
+    }
+  ],
+  "final_integrity_check": {
+    "reviewed_file_count": 137,
+    "all_listed_hashes_unchanged": true,
+    "all_owned_and_declared_reuse_hashes_match_packet": true,
+    "packet_sha256": "cad7ea7238408c297e5ff5543c57d1c11d598a2c9cdb65e35416f45e2d15ccd8",
+    "owned_glob_matches_packet": true,
+    "is_final_frozen_snapshot_check": true,
+    "acceptance": true,
+    "reason": "All ten findings resolved. Exact final packet delta inspected; all 137 listed input hashes match, including 51 owned trees and all 35 declared reuse records."
+  }
+}

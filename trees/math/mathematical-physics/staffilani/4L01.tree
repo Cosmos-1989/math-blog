@@ -1,0 +1,11 @@
+\title{矩形环面的色散参数}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，§2；坐标与谱参数直接计算}
+
+\p{在周期坐标 #{x\in\mathbb T^2=(\mathbb R/(2\pi\mathbb Z))^2} 上，取 #{\beta_1,\beta_2>0}，定义 #{\Delta_\beta=\beta_1\partial_{x_1}^2+\beta_2\partial_{x_2}^2}。对[周期 Fourier 展开](4101) #{u=\sum_{k\in\mathbb Z^2}u_ke^{ik\cdot x}}，有}
+##{\Delta_\beta e^{ik\cdot x}=-\omega_\beta(k)e^{ik\cdot x},\qquad \omega_\beta(k)=\beta_1k_1^2+\beta_2k_2^2.}
+\p{#{\omega_\beta} 称色散关系，即线性演化中每个空间频率的振荡频率。称这个二次谱为有理型，是指 #{\beta_1 /\beta_2\in\mathbb Q}；否则称无理型。这一约定直接作用于谱的系数。}
+\p{若几何环面的边长为 #{\ell_1,\ell_2}，令 #{y_j=\ell_jx_j /(2\pi)}，则 #{\partial_{y_j}^2=(2\pi /\ell_j)^2\partial_{x_j}^2}，所以 #{\beta_j=(2\pi /\ell_j)^2}。应检验的比值为 #{\ell_2^2/\ell_1^2}。例如边长比 #{\sqrt 2} 虽是无理数，相应二次谱的系数比仍为有理数。}
+\p{对 #{s\in\mathbb R}，记 #{\|u\|_{H^s_\beta}^2=\sum_k(1+\omega_\beta(k))^s|u_k|^2}。固定 #{\beta} 后，它与[周期 Sobolev 范数](4101)等价；这是因为 #{\min(1,\beta_1,\beta_2)(1+|k|^2)\leq 1+\omega_\beta(k)\leq\max(1,\beta_1,\beta_2)(1+|k|^2)}。}

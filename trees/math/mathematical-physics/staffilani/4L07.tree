@@ -1,0 +1,13 @@
+\title{坐标可分离权重给出无理共振系统的一致界}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，Theorem 2.6 的守恒机制；直接证明}
+
+\p{设 #{\beta_1 /\beta_2} 无理，#{a} 解[共振系统](4L04)。对实权重 #{w(k)=A(k_1)+B(k_2)}，在下述求和、求导及重新编号均绝对收敛的区间内，#{I_w=\sum_kw(k)|a_k|^2} 保持不变。有限模态的共振截断总满足这些代数计算的条件。}
+\p{\strong{证明。}把四元组写为 #{p+q=r+s}、#{\omega_p+\omega_q=\omega_r+\omega_s}，并记 #{Z=\overline a_p\overline a_qa_ra_s}。#{I_w'} 是 #{2\Im\sum w(p)Z}。交换 #{p,q}，以及交换两对 #{(p,q)} 与 #{(r,s)} 后取共轭，得到}
+##{I_w'=\frac 12\Im\sum_{\rm res}(w(p)+w(q)-w(r)-w(s))\overline a_p\overline a_qa_ra_s.}
+\p{由[逐坐标多重集合匹配](4L06)，括号为零。因此每个可分离权重都给出守恒量。}
+\p{取 #{s>1}，#{A(m)=(1+m^2)^s}、#{B(n)=(1+n^2)^s}。对非负 #{X,Y}，#{X^s+Y^s\leq(X+Y)^s\leq 2^{s-1}(X^s+Y^s)}。应用于 #{X=1+m^2,Y=n^2} 并调整常数，得到}
+##{\|a(t)\|_{h^s}^2\leq C_sI_w(t)=C_sI_w(0)\leq C_s'\|a(0)\|_{h^s}^2,\qquad \|a\|_{h^s}^2=\sum_k(1+|k|^2)^s|a_k|^2.}
+\p{这控制[通常的 Sobolev 范数](4101)。若截断解在每个固定时刻满足 #{\|a^{(N)}(t)-a(t)\|_{h^s}\to 0}，初值也如此，则范数等价与平方范数的连续性使上述非负权重的守恒式传到极限。只有无权 #{\ell^2} 收敛及一致 #{h^s} 界时，通常仅能得到加权矩的下半连续性。无限维全局适定性仍是另一项分析输入。}

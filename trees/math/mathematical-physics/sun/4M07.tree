@@ -1,0 +1,12 @@
+\title{正则 NAE-SAT 的一阶矩不可满足界}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，式 (2.4)；Sly–Sun–Zhang v3，式 (2)。}
+
+\p{在[随机正则 NAE-SAT](4M02)中固定 #{k,d}，令 #{\alpha=d/k}、#{p_k=1-2^{1-k}}。解数 #{Z_n} 满足}
+##{\mathbb E Z_n=2^np_k^{\alpha n},\qquad f^{\rm a}(\alpha)=\log 2+\alpha\log p_k.}
+\p{\strong{证明。}先固定半边配对和一个赋值 #{x}。每条边的 #{L_e\oplus x_{v(e)}} 仍是独立均匀位，即使同一变量在一个子句中重复出现也如此。一个子句有 #{2^k} 种等可能文字串，其中恰有两个不满足 NAE 条件。不同子句使用不同的边符号，所以 #{\mathbb P(x\in S)=p_k^m}。对全部 #{2^n} 个赋值求和，使用[期望线性性](00L1)即得公式。}
+\p{因为 #{Z_n} 为非负整数，[Markov 不等式](0A02)给 #{\mathbb P(Z_n>0)\le\mathbb E Z_n}。故当}
+##{\alpha>\alpha_{\rm 1M}:=\frac{\log 2}{-\log(1-2^{1-k})}}
+\p{时，不可满足以高概率发生。这个结论是[阈值](4M04)的上界；#{f^{\rm a}(\alpha)>0} 时仅凭平均解数还不能推出可满足。}

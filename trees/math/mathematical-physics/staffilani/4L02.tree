@@ -1,0 +1,13 @@
+\title{散焦三次 NLS 的质量与能量守恒}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，(1.1)、(2.2)；直接证明}
+
+\p{设 #{u(t,x)} 是[矩形环面](4L01)上的光滑复值解，满足 #{i\partial_tu+\Delta_\beta u=|u|^2u}。积分采用归一化周期测度 #{dm=(2\pi)^{-2}dx}。定义}
+##{M(u)=\int|u|^2dm,\qquad E(u)=\int\left(\beta_1|\partial_1u|^2+\beta_2|\partial_2u|^2+\frac 12|u|^4\right)dm.}
+\p{这两个量在解存在的时间区间内保持不变，并有 #{\|u(t)\|_{H^1_\beta}^2\leq M(u(0))+E(u(0))}。方程中的正四次能量对应[散焦符号](470T)。}
+\p{\strong{证明。}写 #{u_t=i\Delta_\beta u-i|u|^2u}。质量的导数为 #{2\Re\int u_t\overline u\,dm}。周期分部积分给出 #{\int\Delta_\beta u\overline u\,dm=-\sum_j\beta_j\int|\partial_ju|^2dm}，它与 #{\int|u|^4dm} 都是实数，故导数为零。}
+\p{对能量求导并把空间导数移到 #{u} 上，得}
+##{\frac{dE}{dt}=2\Re\int(-\Delta_\beta u+|u|^2u)\overline{u_t}\,dm=2\Re\int i|u_t|^2dm=0.}
+\p{最后由 [Parseval 等式](4101)，#{\|u\|_{H^1_\beta}^2=M(u)+\sum_j\beta_j\|\partial_ju\|_2^2}，且能量中的四次项非负，即得所述界。这里的论证对光滑解成立；低正则解的存在与守恒延拓需要相应的适定性定理。}

@@ -1,0 +1,11 @@
+\title{一维三次共振只改变模态相位}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，Theorem 2.6 后的一维计算}
+
+\p{在一维取 #{\omega(k)=k^2}，考虑[共振系统](4L04)的序列版本。若 #{a(0)\in\ell^2(\mathbb Z)}，记 #{M=\sum_k|a_k(0)|^2}，则其显式解为}
+##{a_k(t)=a_k(0)\exp\left(-it(2M-|a_k(0)|^2)\right).}
+\p{\strong{证明。}把动量关系写为 #{k_2=k_1+k_3-k}，能量关系化为 #{-2(k_1-k)(k_3-k)=0}。因此或者 #{k_1=k,k_2=k_3}，或者 #{k_3=k,k_2=k_1}。两族各贡献 #{Ma_k}，交集 #{k_1=k_2=k_3=k} 被算了两次，须减去一次 #{|a_k|^2a_k}。于是}
+##{i\dot a_k=(2M-|a_k|^2)a_k.}
+\p{乘以 #{\overline a_k} 并取虚部，得到 #{d|a_k|^2/dt=0}。故 #{M} 也不变，逐模态积分即得公式。对每个实数 #{s}，只要初始[加权平方和](4101)有限，#{\sum_k(1+k^2)^s|a_k(t)|^2} 就保持初值。}

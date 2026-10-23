@@ -1,0 +1,14 @@
+\title{Bernoulli 与几何分布的局部平衡}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§3.4 的独立性保持恒等式}
+
+\p{设 #{0<p<1/2}，#{r=p/(1-p)}。在 #{\{0,1\}\times\mathbb Z_{\ge 0}} 上定义[箱球局部更新](4C13)}
+##{F(a,b)=(\min(1-a,b),\ a+b-\min(1-a,b)).}
+\p{若 #{A\sim\operatorname{Ber}(p)}、#{B\sim G_r} [相互独立](00L3)，其中 #{\operatorname{Ber}(p)} 是[Bernoulli 分布](00L4)，#{G_r} 为[从零开始的几何分布](4K06)，则 #{F(A,B)} 的两个分量仍独立，分布仍为 #{\operatorname{Ber}(p)} 与 #{G_r}。}
+\p{\strong{证明。}#{F(0,0)=(0,0)}，而对每个 #{k\ge 0}，}
+##{F(1,k)=(0,k+1),\qquad F(0,k+1)=(1,k).}
+\p{因此 #{F} 把状态分成一个不动点与一族二元交换对。每一对的输入质量相等，因为}
+##{p(1-r)r^k=(1-p)(1-r)r^{k+1}.}
+\p{所有点概率保持，故联合分布保持。#{p=0} 时取 #{A=B=0} 也成立。乘积律的保持正是[局部独立性条件](4K08)，它比单独验证两个边缘分布更强。}

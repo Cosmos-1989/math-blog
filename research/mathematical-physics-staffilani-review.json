@@ -1,0 +1,1002 @@
+{
+  "schema_version": 1,
+  "review_revision": 3,
+  "review_type": "independent-final-whole-branch",
+  "report_id": "icm2026-staffilani",
+  "reviewed_on": "2026-10-24",
+  "result": "pass",
+  "acceptance": true,
+  "summary": "All 37 owned trees and the complete revision-2 packet were reviewed, together with 42 actually read shared prerequisite/comparison pages. ST-F01 through ST-F07 are resolved within the cited-theorem review boundary. The four parser-only edits and revised packet fields were re-read. Following the parent's replacement-freeze confirmation, all 80 reviewed input hashes, the complete owned inventory and every packet note hash matched. Acceptance applies only to these exact bytes and this mathematical review scope, not the papers' full research proofs, a build or publication.",
+  "input_packet": {
+    "id": "mathematical-physics-staffilani-packet",
+    "path": "research/mathematical-physics-staffilani-packet.json",
+    "present": true,
+    "expected_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+    "reviewed_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+    "matched_expected": true,
+    "previous_confirmed_sha256": "2778a6349cab12474fea6d3e2fa7c89486244a6f2739ae10429b0954b1036739",
+    "freeze_revision": 2,
+    "confirmation_status": "Parent explicitly confirmed the revision-2 packet freeze and exact SHA-256 on 2026-10-24; closing integrity check matched."
+  },
+  "scope": {
+    "owned_trees_read": 37,
+    "atoms_read": 35,
+    "outlines_read": 1,
+    "references_read": 1,
+    "shared_trees_read": 42,
+    "packet_read_in_full": true,
+    "writer_frozen": true,
+    "all_owned_packet_hashes_matched": true,
+    "all_reviewed_repo_inputs_unchanged_at_final_check": true,
+    "all_reviewed_repo_inputs_unchanged_at_interim_check": true,
+    "public_notes_edited": false,
+    "builds_run": false,
+    "git_commands_run": false,
+    "subagents_used": false,
+    "proof_boundary": "Directly checked the local algebra, estimates, examples and parameter substitutions. Research theorems were checked at their selected source statements, definitions and hypotheses; their full proofs were not independently reconstructed.",
+    "prerequisite_boundary": "Read all 22 immediate reused destinations listed by the packet and 20 supporting/comparison pages, identified below. Checked the actual definitions used by the owned branch; this is not a semantic certification of the author's entire 251-node structural closure or of unrelated applications on shared pages.",
+    "review_method": "Cumulative independent review followed by full re-reading of all 37 current owned trees and every field of the revision-1 packet. Re-read all four subsequent parser-edited pages and every revision-2 packet delta; remaining packet fields verified identical. Re-read ten critical shared measure/Fourier destinations and read seven further topology prerequisites. The other 25 previously read shared pages were verified byte-identical, not represented as newly read. No build, git, source-proof completion or publication claim. Closing pass: parent-confirmed packet digest, all 80 reviewed input hashes, the complete 37-tree inventory and packet note hashes were verified unchanged. No file was promoted to read status solely by hashing.",
+    "author_packet_declares_frozen": true
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "ST-F01",
+      "priority": "P3",
+      "status": "resolved",
+      "category": "displayed-estimate",
+      "notes": [
+        "4L0D"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L0D.tree",
+      "line": 8,
+      "title": "Correct the malformed near-resonance integral",
+      "finding": "The first read contained an integral upper limit written as int_0^t Big|_(t=T).",
+      "resolution": "The writer changed it to the required integral from 0 to T of |Omega|s. The current display was re-read and yields |Omega|T^2/2.",
+      "reviewed_sha256": "01a407fb2f194b265a460efacd4f42ff7df59d400bd79cd6e53c170a5bbe5743"
+    },
+    {
+      "id": "ST-F02",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "frequency-geometry",
+      "notes": [
+        "4L06"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L06.tree",
+      "line": 10,
+      "title": "Qualify rectangles by the anisotropic metric",
+      "finding": "The final sentence says rational spectra allow tilted rectangles without changing from the ordinary integer-frequency coordinates. For unequal beta coefficients, resonance gives weighted orthogonality, not Euclidean orthogonality. The irrational axis-parallel proof itself is correct.",
+      "counterexample": "For beta=(1,2), choose k=(0,0), k1=(2,1), k3=(1,-1), k2=(3,0). Momentum and frequency sums agree: 6+3=9. The adjacent edge vectors have Euclidean dot product 1, not 0. In fact a non-axis Euclidean rectangle cannot be resonant for unequal beta1,beta2.",
+      "correction": "Use the inner product beta1*a1*b1+beta2*a2*b2, or rescale frequencies by diag(sqrt(beta1),sqrt(beta2)); call the unscaled configuration a parallelogram. Alternatively restrict the comparison sentence to the square torus.",
+      "acceptance_condition": "Satisfied: correction, cited-source scope and actual prerequisite destinations reviewed; parent-confirmed packet and all reviewed hashes unchanged at final acceptance.",
+      "resolution": "4L06 now gives weighted orthogonality beta1*v1*w1+beta2*v2*w2=0 and diagonal square-root rescaling. Non-axis Euclidean rectangles are asserted only for the square torus.",
+      "resolved_in_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "reviewed_sha256": "ccec79e1ca4f5d47144df05caf9de11915d642c91f44df947723b38839e83cc4"
+    },
+    {
+      "id": "ST-F03",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "prerequisite-destination",
+      "notes": [
+        "4L0E",
+        "4L0Q",
+        "4L0X"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L0E.tree",
+      "line": 9,
+      "title": "Retarget measure and convergence labels to the actual definitions and theorems",
+      "finding": "4L0E and 4L0Q link the label Lebesgue measure to 00Q4, whose actual content defines null sets and almost-everywhere statements. 4L0X links Lebesgue convergence theorems to 00Q5, which defines the integral but contains neither convergence theorem.",
+      "correction": "Use 00XV for Lebesgue measure; retain 00Q4 only under a null-set label. In 4L0X use 0I8I for dominated convergence and 0A7A for monotone convergence. These exact destinations were read. Also link the mixed-channel energy cancellation to 4L0T when discussing all three channels, rather than only the two-to-two identity 4L0G.",
+      "acceptance_condition": "Satisfied: correction, cited-source scope and actual prerequisite destinations reviewed; parent-confirmed packet and all reviewed hashes unchanged at final acceptance.",
+      "resolution": "4L0E uses 00Q4 for null sets and 00XV for Lebesgue measure; 4L0Q uses 00XV. 4L0X uses the actual DCT and MCT pages 0I8I and 0A7A and includes the mixed-channel cancellation link 4L0T. Destinations and packet edges were re-read.",
+      "resolved_in_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "reviewed_sha256": "0ba3caae493ee8a622a790e0fe6535513a22b2803367eb5be61a9ff1b43345e7"
+    },
+    {
+      "id": "ST-F04",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "missing-hypothesis",
+      "notes": [
+        "4L0H"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L0H.tree",
+      "line": 7,
+      "title": "Require an unbounded dispersion or restrict the inverse variable to its range",
+      "finding": "Strict increase, continuity, omega(0)=0 and omega'(r)>0 do not imply that omega maps onto [0,infinity). Nevertheless r(x), Gamma(x), F(x) and the displayed integral are used on that whole half-line.",
+      "counterexample": "omega(r)=r/(1+r) satisfies every listed hypothesis, but r(x) exists only for 0<=x<1.",
+      "correction": "Add omega(r)->infinity as r->infinity (and preferably a clear C1 change-of-variable hypothesis), or integrate over the actual range and explicitly extend the pushed-forward density by zero.",
+      "acceptance_condition": "Satisfied: correction, cited-source scope and actual prerequisite destinations reviewed; parent-confirmed packet and all reviewed hashes unchanged at final acceptance.",
+      "resolution": "4L0H adds unboundedness at infinity, continuity, positive-half-line C1 regularity and strictly positive derivative. Its inverse therefore has the full declared range; Gamma is initially defined only for x>0.",
+      "resolved_in_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "reviewed_sha256": "eaa2fbb183f21e2008426a10510ff26154d23f5efd9b6c3df7436ba6cba19366"
+    },
+    {
+      "id": "ST-F05",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "cited-solution-contract",
+      "notes": [
+        "4L0I",
+        "4L0M",
+        "4L0O",
+        "4L0V",
+        "4L0X",
+        "4L0Z"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L0I.tree",
+      "line": 10,
+      "title": "Specify the measure-solution contract instead of leaving its defining functional implicit",
+      "finding": "The displayed identity contains an undefined C_phi on measures with atoms. The following sentence delegates both its boundary interpretation and all time regularity to the papers. Consequently this Definition does not yet specify the solution class used in the condensation and energy-loss theorems, and different pure/mixed models are folded into one unnamed functional.",
+      "correction": "State the exact imported solution class separately for each model, including the source's time regularity, test class, collision functional, integrability and zero-frequency convention. Give local formulas or a precise, model-specific source definition and equation interface; if the paper leaves a point implicit, disclose that limitation rather than inventing an extension. A full existence or condensation proof is not requested. Link Borel/Radon terminology to the actual definitions.",
+      "evidence": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s00205-026-02217-0",
+          "locator": "Definition 1, equation (13)",
+          "detail": "The definition explicitly specifies C1 time dependence of the radial measure and its test identity."
+        },
+        {
+          "url": "https://arxiv.org/html/2512.19525v1",
+          "locator": "Definition 1, equation (32)",
+          "detail": "The mixed model adds the condition phi'(0)=0 and explicit time regularity."
+        },
+        {
+          "url": "https://arxiv.org/pdf/2512.19531v1",
+          "locator": "Definition 1 (34), PDF p.8; Section 4 (81)-(85), pp.24-25",
+          "detail": "The source identifies the mixed functional through model-specific integral terms; the note currently leaves that interface implicit."
+        }
+      ],
+      "acceptance_condition": "Satisfied: correction, cited-source scope and actual prerequisite destinations reviewed; parent-confirmed packet and all reviewed hashes unchanged at final acceptance.",
+      "resolution": "4L0I now names each source Definition 1, compact test class, original C1 notation, collision-integrability requirement, and model-specific weak-functional/boundary/cutoff interface. The pure-four-wave topology and arbitrary-atom extension are explicitly left as source limitations; the note quotes the constructed class instead of defining a new extension. Mixed-energy (79)/(82) inconsistency is disclosed and the model is bound to its original kernel. Affected theorem and flux pages retain these source boundaries. This resolves the citation-contract finding, not the papers' deep existence proofs.",
+      "resolved_in_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "reviewed_sha256": "bb4fd4206f6127742fa9b309e7ecbbc3b317eee449e459192350dedd6412850b"
+    },
+    {
+      "id": "ST-F06",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "limit-topology",
+      "notes": [
+        "4L07"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L07.tree",
+      "line": 13,
+      "title": "Name the weighted topology needed to pass conservation to a truncation limit",
+      "finding": "Strong convergence together with a uniform weighted bound is not, without specifying the topology or a uniform tail condition, sufficient to pass equality of weighted moments to the limit. The finite-system algebra and norm comparison are correct.",
+      "counterexample": "For s>1, a^(N)=(1+N^2)^(-s/2)e_(N,0) converges strongly to zero in ell2 and has uniformly bounded hs norm, but its separable weighted moment tends to 1 whereas the limit's moment is 0.",
+      "correction": "Require strong convergence in the relevant weighted ell2 space (hs for the displayed nonnegative weight), or uniform weighted-tail control. If only unweighted strong convergence and a bounded hs moment are available, assert the lower-semicontinuity inequality, not equality. Name or link the convergence notion used.",
+      "acceptance_condition": "Satisfied: correction, cited-source scope and actual prerequisite destinations reviewed; parent-confirmed packet and all reviewed hashes unchanged at final acceptance.",
+      "resolution": "4L07 explicitly requires strong hs convergence at each tested time and at the initial time to pass weighted conservation to a limit. It distinguishes the lower-semicontinuity conclusion available from unweighted convergence plus a uniform hs bound.",
+      "resolved_in_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "reviewed_sha256": "0a8ee4cc197e724be2f3e79f528779a2008ee7a047f92be94ad8be1e8781b333"
+    },
+    {
+      "id": "ST-F07",
+      "priority": "P3",
+      "status": "resolved",
+      "category": "time-domain",
+      "notes": [
+        "4L0A"
+      ],
+      "path": "trees/math/mathematical-physics/staffilani/4L0A.tree",
+      "line": 7,
+      "title": "State the forward time interval in the stability lemma",
+      "finding": "No time interval is specified, but the integral inequality and exponential bound are only written for t>=0. They are false as displayed for negative time.",
+      "counterexample": "F=0, u(t)=0, v(t)=t, r=1, delta=0 and L=0 give |t|<=t in the stated L=0 conclusion, which fails for t<0.",
+      "correction": "State that the curves and residual bound are given on [0,T] and that the conclusion holds for 0<=t<=T; use |t| and reversed integration if a two-sided version is intended.",
+      "acceptance_condition": "Satisfied: correction, cited-source scope and actual prerequisite destinations reviewed; parent-confirmed packet and all reviewed hashes unchanged at final acceptance.",
+      "resolution": "4L0A fixes T>0, assumes both curves and residual estimates on [0,T], and restricts the conclusion to 0<=t<=T.",
+      "resolved_in_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "reviewed_sha256": "2d041bf1028bc83b0dc1369c989fb8f0fae67c310c55193acf62f9ae0524ad3e"
+    }
+  ],
+  "additional_checks": [
+    {
+      "id": "deterministic-slice",
+      "notes": [
+        "4L01",
+        "4L02",
+        "4L03",
+        "4L04",
+        "4L05",
+        "4L06",
+        "4L07",
+        "4L08",
+        "4L09",
+        "4L0A",
+        "4L0B",
+        "4L0C",
+        "4L0D",
+        "4L0E"
+      ],
+      "status": "reviewed",
+      "detail": "Checked spectral coefficients rather than side-length ratios, signs of the interaction representation, mass/energy derivatives, the weighted-tail argument, one-dimensional degeneracy subtraction, the separable invariant symmetrization, and the four-mode derivative (-4,4,4,-4) giving h2-moment derivative -8. Finite amplification, a single resonant infinite-growth orbit, and the waveguide conclusion are distinguished."
+    },
+    {
+      "id": "kinetic-slice",
+      "notes": [
+        "4L0F",
+        "4L0G",
+        "4L0H",
+        "4L0I",
+        "4L0J",
+        "4L0K",
+        "4L0L",
+        "4L0M",
+        "4L0N",
+        "4L0O",
+        "4L0P",
+        "4L0Q"
+      ],
+      "status": "reviewed",
+      "detail": "Checked truncated versus conditional expectation, fixed regular kinetic intervals, the factor 1/4 in the symmetric weak form, the radial Jacobian and 4*pi normalization, first-time quantifiers, the compact-cutoff proof, two-point measure example, lower mass exponents, separated-pair lemma and conditional time-measure bound. The support and two concentration hypotheses were retained in the selected pure-four-wave contracts."
+    },
+    {
+      "id": "mixed-model-slice",
+      "notes": [
+        "4L0R",
+        "4L0S",
+        "4L0T",
+        "4L0U",
+        "4L0V",
+        "4L0W",
+        "4L0X",
+        "4L0Y",
+        "4L0Z"
+      ],
+      "status": "reviewed",
+      "detail": "Checked channel polynomial expansions, the 1-m number-test factor, quadratic-model parameter substitutions, and energy cutoffs respecting phi'(0)=0. For the quartic model, R'=x^(-3/4)/16, all nine listed Assumption X sign tests, and the thresholds 3/4 and 1/120 check arithmetically. The model-specific citation contract in 4L0I now addresses ST-F05, with source ambiguities explicitly disclosed."
+    },
+    {
+      "id": "atomicity-and-reuse",
+      "notes": [
+        "4L01",
+        "4L02",
+        "4L03",
+        "4L04",
+        "4L05",
+        "4L06",
+        "4L07",
+        "4L08",
+        "4L09",
+        "4L0A",
+        "4L0B",
+        "4L0C",
+        "4L0D",
+        "4L0E",
+        "4L0F",
+        "4L0G",
+        "4L0H",
+        "4L0I",
+        "4L0J",
+        "4L0K",
+        "4L0L",
+        "4L0M",
+        "4L0N",
+        "4L0O",
+        "4L0P",
+        "4L0Q",
+        "4L0R",
+        "4L0S",
+        "4L0T",
+        "4L0U",
+        "4L0V",
+        "4L0W",
+        "4L0X",
+        "4L0Y",
+        "4L0Z"
+      ],
+      "status": "reviewed",
+      "detail": "All 35 atoms answer identified single questions. The paired growth/condensation ranges serve explicit hypothesis comparisons; 4L0I has the single role of specifying three imported solution interfaces. The new 4L00 explains the deterministic/statistical distinction, motivating examples, obstructions, time regimes and model boundaries, with all atoms reachable. Existing Fourier, Sobolev, Gaussian, measure and convergence definitions are reused. No duplicate foundational definition or newly hidden prerequisite was found in the reviewed scope. 4L0Q is a specialized time-budget application of the existing Markov argument."
+    },
+    {
+      "id": "revision2-parser-and-packet",
+      "notes": [
+        "4L0G",
+        "4L0I",
+        "4L0R",
+        "4L0T"
+      ],
+      "status": "reviewed",
+      "detail": "All five changes are exactly literal [f] before parentheses replaced by TeX lbrack/rbrack; mathematical content unchanged. report.remaining_branches and report.unexpanded_deep_proofs exactly duplicate their retained top-level arrays. All 37 note hashes match read bytes, all 95 prerequisite edges are actual links, and the owned prerequisite graph is acyclic. Author KaTeX/build claims were not adopted as independent verification."
+    }
+  ],
+  "source_checks": [
+    {
+      "id": "staffilani-icm2026",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+      "reading_scope": "Selected introduction, Definition 1.1, Section 2 definitions and statements 2.3-2.7, conservation formulas and the adjacent one-dimensional discussion. Not a full report reading. Final recheck: publisher title, author, pages, DOI, online date and CC BY metadata. Author's full-report reading claim is not adopted as the reviewer's scope.",
+      "sha256": null
+    },
+    {
+      "id": "ckstt-v2",
+      "url": "https://arxiv.org/pdf/0808.1742v2",
+      "reading_scope": "Abstract and introduction through Theorem 1.1, PDF pp.1-3. Checked smoothness, finite-growth quantifiers, square-torus setting and sign conversion; no diffusion proof review.",
+      "sha256": null
+    },
+    {
+      "id": "hptv-v2",
+      "url": "https://arxiv.org/pdf/1311.2275v2",
+      "reading_scope": "Section 1.2, Theorems 1.1-1.2, Corollary 1.3 and surrounding discussion, pp.3-5; Proposition 4.8 and its neighboring explanation, p.29, plus displayed opening of its construction. No full modified-scattering or resonant construction proof review.",
+      "sha256": null
+    },
+    {
+      "id": "giuliani-guardia-v2",
+      "url": "https://arxiv.org/html/2110.15845v2",
+      "reading_scope": "Section 2 setup, Theorems 2.1-2.2 and selected Section 2.1 parameter descriptions; selected introductory context. Checked the full-measure multiplicative-growth claim separately from small-to-large growth on a thinner set.",
+      "sha256": null
+    },
+    {
+      "id": "deng-hani-v2",
+      "url": "https://arxiv.org/pdf/2311.10082v2",
+      "reading_scope": "Theorem 1.1 and collision operator, PDF p.4; selected Section 3.7 final theorem argument, p.32, verifying truncated expectations. No full cumulant, graph or kinetic-limit proof review.",
+      "sha256": null
+    },
+    {
+      "id": "pure-four-wave-transfer-v1",
+      "url": "https://arxiv.org/html/2407.18508v1",
+      "reading_scope": "Selected introduction, Definition 1 and Theorem 3. Compared the older L1 solution statement and conservation claims with the later condensation article's explicit restatement. No full Sections 3-5 proof review.",
+      "sha256": null
+    },
+    {
+      "id": "pure-condensation-published",
+      "url": "https://link.springer.com/article/10.1007/s00205-026-02217-0",
+      "reading_scope": "Equation (1); Section 2.1 assumptions (2)-(6), power-dispersion example, radial notation, Definition 1 and Theorems 3-4 including (19)-(20). No full multiscale condensation proof review. Final recheck: Definition 1 (13), Theorem 3, Section 3.2 (35)-(36) and the nonpositive-complement convention. No arbitrary-atom extension or full existence proof certified.",
+      "sha256": null
+    },
+    {
+      "id": "mixed-condensation-v1",
+      "url": "https://arxiv.org/html/2512.19525v1",
+      "reading_scope": "Selected Sections 1.1-1.2 channel formulas, Assumptions A-B and Remark 1; Section 2 Definition 1, Theorem 3 and (38). The quadratic specialization gives finite-time c<1/2 and immediate c<1/40. No full existence or condensation proof review. Final recheck: Definition 1 (32), Proposition 11, (77)-(91), selected Step 1 boundary discussion and Step 2 cutoff setup (97)-(103). Pinned v1 PDF checked against HTML for Definition 1, (81)-(86), and Step 1. No full existence proof certified.",
+      "sha256": null,
+      "additional_url": "https://arxiv.org/pdf/2512.19525v1"
+    },
+    {
+      "id": "mixed-energy-v1",
+      "url": "https://arxiv.org/pdf/2512.19531v1",
+      "reading_scope": "Channel formulas; Assumption X (5)-(18), pp.2-3; Assumption Y; Definition 1, Theorem 2 (37)-(39) and Remark 3, pp.8-9; selected Proposition 10 statement and radial-functional formulas (81)-(85), pp.23-25. Read selected proof excerpts returned by search, not the complete existence or cascade proof. PDF screenshot requests failed, so no visual-PDF check is claimed. Final recheck: Definition 1, Theorem 2, Proposition 10, (77)-(88), selected Step 1 boundary estimates and cutoff definitions (97)-(100). Confirmed the missing maximum-frequency factor in (82) relative to (79), and incomplete printed (84). The declared model and quoted theorem are reviewed; the source proof is not repaired or certified.",
+      "sha256": null
+    },
+    {
+      "id": "ckstt-v1",
+      "url": "https://arxiv.org/pdf/0808.1742v1",
+      "reading_scope": "Final recheck of the actually cited version: abstract, equation (1.1), introductory conservation discussion, Theorem 1.1 and following finite-versus-single-orbit distinction, PDF pp.1-4. No diffusion proof review.",
+      "sha256": null
+    }
+  ],
+  "guidance_files": [
+    {
+      "id": "EVERGREEN_ATOMIC_NOTES_SKILL",
+      "path": "EVERGREEN_ATOMIC_NOTES_SKILL.md",
+      "sha256": "741e9cc486f79cb5b6f814c30ff9f02219705f082dcd3778d678bbf94bf8945c"
+    },
+    {
+      "id": "NOTES_STYLE_GUIDE",
+      "path": "NOTES_STYLE_GUIDE.md",
+      "sha256": "a72c61c33b088b8fc87755b980755c3eca1d7a96fd9612d4264917dbfd52ea47"
+    }
+  ],
+  "schema_example": {
+    "path": "research/mathematical-physics-rhodes-vargas-review.json",
+    "use": "Inspected schema and review-boundary fields only; no Rhodes-Vargas re-review."
+  },
+  "reviewed_files": [
+    {
+      "id": "00E0",
+      "path": "trees/math/topology/atomic/00E0.tree",
+      "sha256": "a3ddabe5504d33013264b6363fde033ade0a0cebb7f7ae2a0c7dc8b43745bcaf"
+    },
+    {
+      "id": "00EJ",
+      "path": "trees/math/topology/atomic/00EJ.tree",
+      "sha256": "e9959f3c22f0b72531b4535bb246a2c4102de3cf24af21f1268bf4944d22c96a"
+    },
+    {
+      "id": "00EK",
+      "path": "trees/math/topology/atomic/00EK.tree",
+      "sha256": "4448c8affbb92de46dc87e1fba269199feddd08122511e6bf65a9ede717b63c0"
+    },
+    {
+      "id": "00EM",
+      "path": "trees/math/topology/atomic/00EM.tree",
+      "sha256": "86cce42169b3ad12bd528d6095e95a62b67c2a325754e7e01f346279acffead6"
+    },
+    {
+      "id": "00EN",
+      "path": "trees/math/topology/atomic/00EN.tree",
+      "sha256": "f582447ca6067c0f9fee70a37296fc3f522693c9c045a3fd15dc198c7fd348ed"
+    },
+    {
+      "id": "00F3",
+      "path": "trees/math/topology/atomic/00F3.tree",
+      "sha256": "d3033309a25d191fc4a27847f03dc2f5128c6780a506f6483ca026b6a3ce4706"
+    },
+    {
+      "id": "00FP",
+      "path": "trees/math/topology/atomic/00FP.tree",
+      "sha256": "d8ebcccb928263127fadd50f948647d39c1a9976157464ac2111052cfe5be156"
+    },
+    {
+      "id": "00FU",
+      "path": "trees/math/topology/atomic/00FU.tree",
+      "sha256": "af827855f17c52ea219b1d83ec0ef06d4104f6c13032192943e21a950f3848ef"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af"
+    },
+    {
+      "id": "00OB",
+      "path": "trees/math/analysis/atomic/00OB.tree",
+      "sha256": "f393494827e96a03309bee7dffc58adcd447bae6d1a023bb6a3e61e6b1aaf2ce"
+    },
+    {
+      "id": "00Q0",
+      "path": "trees/math/logic/research/atomic/00Q0.tree",
+      "sha256": "cda032eb0847cfda578b0c62a0eb74b679ad10cba0ef4963614d64d2de89dc4f"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1"
+    },
+    {
+      "id": "00Q4",
+      "path": "trees/math/logic/research/atomic/00Q4.tree",
+      "sha256": "196b410809c5bf0228550afb01e72b58cb623b6ad59d57da14a3b6c2590986dc"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260"
+    },
+    {
+      "id": "00QA",
+      "path": "trees/math/logic/research/atomic/00QA.tree",
+      "sha256": "455bf6a03201a02715b54b866d2f81c3a89f4d46929af732d5785b5e9316b21a"
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree",
+      "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1"
+    },
+    {
+      "id": "0A02",
+      "path": "trees/math/network/atomic/0A02.tree",
+      "sha256": "e623166be9f5fff1c79d8ce9f22c533cedae843a50d5c5740f376e499265595a"
+    },
+    {
+      "id": "0A3B",
+      "path": "trees/math/analysis/atomic/0A3B.tree",
+      "sha256": "cfdf7c6bc8c5270d1153897bbb1ca3f699e8ea0e392439eb70d2674755cb3ae5"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree",
+      "sha256": "fc9fd9db793237c02165a5b40db7e6bf854fb810a195573e761818bee338f49c"
+    },
+    {
+      "id": "0H4F",
+      "path": "trees/math/number-theory/reports/0H4F.tree",
+      "sha256": "bd9d958269eb81249a92be33d8c0e31cf4fce1597b6dde54c5213a92ba0baa20"
+    },
+    {
+      "id": "0H4G",
+      "path": "trees/math/number-theory/reports/0H4G.tree",
+      "sha256": "6f3129cdea227f7f647f0a005f526b127584e70c3dc9f2f22319b9dbe708be66"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b"
+    },
+    {
+      "id": "0I80",
+      "path": "trees/math/number-theory/reports/0I80.tree",
+      "sha256": "05352f1e4236707582e7f30abf652efcad044bf35a1d3d92c8124ddc0e08ef00"
+    },
+    {
+      "id": "0I8I",
+      "path": "trees/math/number-theory/reports/0I8I.tree",
+      "sha256": "9797c9f25f9dc8650f08f81b9dadac651aa6137dd1c241bac3e341dcbcca42ca"
+    },
+    {
+      "id": "0K12",
+      "path": "trees/math/geometry/algebraic/0K12.tree",
+      "sha256": "159d760f5c2b5abf484470cc94e097b0a9f81490ef53bf5ee2098729a4d68380"
+    },
+    {
+      "id": "0W01",
+      "path": "trees/math/analysis/fourier-extremal/0W01.tree",
+      "sha256": "81921455f7e1fa936679d21b3deb25638190f52d1b1e3b58df0fa48aefb78d31"
+    },
+    {
+      "id": "0X09",
+      "path": "trees/math/analysis/schur-multipliers/0X09.tree",
+      "sha256": "e1816f07e11408afe7198444c5dc40d950c7dfc45f13859801878be0d9e038b6"
+    },
+    {
+      "id": "130F",
+      "path": "trees/math/analysis/fourier-restriction/130F.tree",
+      "sha256": "3fc1a2f592adaf3c6ae1217a87f59bd402422c8c7c82989a7d182909e23b426b"
+    },
+    {
+      "id": "132B",
+      "path": "trees/math/analysis/fourier-restriction/132B.tree",
+      "sha256": "8cbc8806d8644a3702ab9f8376971e9df4e5104a7ea061e43eb39529bb3d21fc"
+    },
+    {
+      "id": "2J0C",
+      "path": "trees/math/geometry/harmonic-rigidity/2J0C.tree",
+      "sha256": "d8bd7434ee5511668e0d55d05bdcef2e60a25503f27badbb631027585b0c0fdb"
+    },
+    {
+      "id": "4101",
+      "path": "trees/math/pde/berti/4101.tree",
+      "sha256": "9fe3ad1309109320516976629031538d9a524a2cc57a24cbc2a3266a887760e0"
+    },
+    {
+      "id": "4411",
+      "path": "trees/math/pde/deng/4411.tree",
+      "sha256": "1186a41eccb72a9814cd16d1ce1d38800255c7cc1b6b0153283a06d3ad20cc2f"
+    },
+    {
+      "id": "4412",
+      "path": "trees/math/pde/deng/4412.tree",
+      "sha256": "65a5b644b67169315c0321e204ec4fc64c4358f00ef8bc6d1bff6acb6daa7999"
+    },
+    {
+      "id": "4413",
+      "path": "trees/math/pde/deng/4413.tree",
+      "sha256": "90d1e3a3e859ab4e4e092006196f2160103e6ea4833fa701ade30d72ed585975"
+    },
+    {
+      "id": "4414",
+      "path": "trees/math/pde/deng/4414.tree",
+      "sha256": "75e91276cc6d91d7472e6331251f8c3ace56eeaffa8896baabda4697437bd3d5"
+    },
+    {
+      "id": "4415",
+      "path": "trees/math/pde/deng/4415.tree",
+      "sha256": "d39121e47b11eab7454f73649c780bbf4a6b0e6b67636d65496b81c2c6d6a24f"
+    },
+    {
+      "id": "4419",
+      "path": "trees/math/pde/deng/4419.tree",
+      "sha256": "642be41313764f5bdd6b526d71dcc53ee937ef2b5f1474aa3c16dd630d789752"
+    },
+    {
+      "id": "4426",
+      "path": "trees/math/pde/deng/4426.tree",
+      "sha256": "2f846568d60f1fc739bf92f714d7c75bb0a786d3dfe1c6b8ec8629f6155fdc74"
+    },
+    {
+      "id": "4427",
+      "path": "trees/math/pde/deng/4427.tree",
+      "sha256": "38b3c6a1c1f011d75d5f6d758f7d5f041cc56f6501d60761e2cc7171072aff52"
+    },
+    {
+      "id": "470T",
+      "path": "trees/math/pde/killip-visan/470T.tree",
+      "sha256": "92ab35720630f6e62d6c5532602e25a0d63cf2abbc1fcceb713b432a64b96c5c"
+    },
+    {
+      "id": "4E24",
+      "path": "trees/math/mathematical-physics/hutchcroft/4E24.tree",
+      "sha256": "e73c3e9b8d136076b6e0347b3308459290f8de2c1fe2ffa09a57f4fa9f213b26"
+    },
+    {
+      "id": "4L00",
+      "path": "trees/math/mathematical-physics/staffilani/4L00.tree",
+      "sha256": "a8d4c9a2d177c471b912ad7b582ff0e13e45ee8b8b74ee2e91d44e2315b6d9b9"
+    },
+    {
+      "id": "4L01",
+      "path": "trees/math/mathematical-physics/staffilani/4L01.tree",
+      "sha256": "5eda807300cd47e214520b0016541f3331a1ff96284c2843c24d6a8aa973aafe"
+    },
+    {
+      "id": "4L02",
+      "path": "trees/math/mathematical-physics/staffilani/4L02.tree",
+      "sha256": "c089cc7f4a34fff1f2495e8225652964202574bcc2e0eda90d088ab2b8636edc"
+    },
+    {
+      "id": "4L03",
+      "path": "trees/math/mathematical-physics/staffilani/4L03.tree",
+      "sha256": "6aace6ad78df6286bfb225af08d2d1ec37b1e4800a8cdd168a7f319b05b2ffd2"
+    },
+    {
+      "id": "4L04",
+      "path": "trees/math/mathematical-physics/staffilani/4L04.tree",
+      "sha256": "4acda48e0905fe7c8d44d71f9754907d108b71de648cad8c92257accc8960ad6"
+    },
+    {
+      "id": "4L05",
+      "path": "trees/math/mathematical-physics/staffilani/4L05.tree",
+      "sha256": "00b9ab4c244073f960071f1bf322486aabeccf74c586d9113e4381d894cf3bc3"
+    },
+    {
+      "id": "4L06",
+      "path": "trees/math/mathematical-physics/staffilani/4L06.tree",
+      "sha256": "ccec79e1ca4f5d47144df05caf9de11915d642c91f44df947723b38839e83cc4"
+    },
+    {
+      "id": "4L07",
+      "path": "trees/math/mathematical-physics/staffilani/4L07.tree",
+      "sha256": "0a8ee4cc197e724be2f3e79f528779a2008ee7a047f92be94ad8be1e8781b333"
+    },
+    {
+      "id": "4L08",
+      "path": "trees/math/mathematical-physics/staffilani/4L08.tree",
+      "sha256": "4a9bff4eff554e6ca3ecf9767fd2b1899e2751adf18a72c5e847b947d0a0c1e1"
+    },
+    {
+      "id": "4L09",
+      "path": "trees/math/mathematical-physics/staffilani/4L09.tree",
+      "sha256": "6e50dd36197a91a62d48dfc18de090747c34fb8014f367ca48002cf6193264c3"
+    },
+    {
+      "id": "4L0A",
+      "path": "trees/math/mathematical-physics/staffilani/4L0A.tree",
+      "sha256": "2d041bf1028bc83b0dc1369c989fb8f0fae67c310c55193acf62f9ae0524ad3e"
+    },
+    {
+      "id": "4L0B",
+      "path": "trees/math/mathematical-physics/staffilani/4L0B.tree",
+      "sha256": "8417e3cd7fe496deaf89df5fae1a76a91521b4f26bc58c3e528317effba86d04"
+    },
+    {
+      "id": "4L0C",
+      "path": "trees/math/mathematical-physics/staffilani/4L0C.tree",
+      "sha256": "01d9d5ab05ad62107bd995c1b1ef968f1700aec53455ac8f394f17146f176b2e"
+    },
+    {
+      "id": "4L0D",
+      "path": "trees/math/mathematical-physics/staffilani/4L0D.tree",
+      "sha256": "01a407fb2f194b265a460efacd4f42ff7df59d400bd79cd6e53c170a5bbe5743"
+    },
+    {
+      "id": "4L0E",
+      "path": "trees/math/mathematical-physics/staffilani/4L0E.tree",
+      "sha256": "0ba3caae493ee8a622a790e0fe6535513a22b2803367eb5be61a9ff1b43345e7"
+    },
+    {
+      "id": "4L0F",
+      "path": "trees/math/mathematical-physics/staffilani/4L0F.tree",
+      "sha256": "1f79a24aff83caae8dc1bc5fce1f7a5e2d197685e0faf76bb6909197eac35a3e"
+    },
+    {
+      "id": "4L0G",
+      "path": "trees/math/mathematical-physics/staffilani/4L0G.tree",
+      "sha256": "1b9af8685b98dae316db3a0ad61a46f2f5019f2a14e18068ada84f288dcee33c"
+    },
+    {
+      "id": "4L0H",
+      "path": "trees/math/mathematical-physics/staffilani/4L0H.tree",
+      "sha256": "eaa2fbb183f21e2008426a10510ff26154d23f5efd9b6c3df7436ba6cba19366"
+    },
+    {
+      "id": "4L0I",
+      "path": "trees/math/mathematical-physics/staffilani/4L0I.tree",
+      "sha256": "bb4fd4206f6127742fa9b309e7ecbbc3b317eee449e459192350dedd6412850b"
+    },
+    {
+      "id": "4L0J",
+      "path": "trees/math/mathematical-physics/staffilani/4L0J.tree",
+      "sha256": "259109c615ad52e03ca786b52ef1af9f68cb211c837651e86c27c4045e5e52d2"
+    },
+    {
+      "id": "4L0K",
+      "path": "trees/math/mathematical-physics/staffilani/4L0K.tree",
+      "sha256": "cbbbc1217d803823eef610a6b475a04c4964c6f341cd8aace9675925086b18a5"
+    },
+    {
+      "id": "4L0L",
+      "path": "trees/math/mathematical-physics/staffilani/4L0L.tree",
+      "sha256": "45f5be8275c9b8af2fe1baac69ead87aac0809e6225652e0231c5d29377ae67d"
+    },
+    {
+      "id": "4L0M",
+      "path": "trees/math/mathematical-physics/staffilani/4L0M.tree",
+      "sha256": "518aa7ced34c3bff8768b4504c3f1e65bab7706aad399ceecf3c2146e5ccfe20"
+    },
+    {
+      "id": "4L0N",
+      "path": "trees/math/mathematical-physics/staffilani/4L0N.tree",
+      "sha256": "b7ec25750565ab5cc26f1c5a19c7e43dd4aef4c4a1a20c1b86e30c876c56db8b"
+    },
+    {
+      "id": "4L0O",
+      "path": "trees/math/mathematical-physics/staffilani/4L0O.tree",
+      "sha256": "e9b176afbadb890f2d534f478732695954779e44a1e0b55e9414898b47fe9171"
+    },
+    {
+      "id": "4L0P",
+      "path": "trees/math/mathematical-physics/staffilani/4L0P.tree",
+      "sha256": "449fe1c8e259281d8089c559baa873c15768c8792825a4a42c5899839846fc12"
+    },
+    {
+      "id": "4L0Q",
+      "path": "trees/math/mathematical-physics/staffilani/4L0Q.tree",
+      "sha256": "ea35496a2adab50696a8328b7ee5a3e088495bc0f0fcde52a59d10d843986ecc"
+    },
+    {
+      "id": "4L0R",
+      "path": "trees/math/mathematical-physics/staffilani/4L0R.tree",
+      "sha256": "c5dabbd148fab11ccce319cf827cc85701218bfdbce059203c6c05f8ab52c6f1"
+    },
+    {
+      "id": "4L0S",
+      "path": "trees/math/mathematical-physics/staffilani/4L0S.tree",
+      "sha256": "876e4691f57943edb90cf11716c96da31cdc8b8b76bb527738e0c6a8a635d485"
+    },
+    {
+      "id": "4L0T",
+      "path": "trees/math/mathematical-physics/staffilani/4L0T.tree",
+      "sha256": "f7347f4809ce93bd261898f51b96812cd55e0d3e482587dd51f04a714733ad3b"
+    },
+    {
+      "id": "4L0U",
+      "path": "trees/math/mathematical-physics/staffilani/4L0U.tree",
+      "sha256": "54b5174860dc49a9db685e40a212b5fd4c49ad95df1f5fc1db9485cc3abedfcf"
+    },
+    {
+      "id": "4L0V",
+      "path": "trees/math/mathematical-physics/staffilani/4L0V.tree",
+      "sha256": "b155e1aeb55783bddba6d9783623fff1a1b3c2f8a1e4ac8a81afdabfcef37649"
+    },
+    {
+      "id": "4L0W",
+      "path": "trees/math/mathematical-physics/staffilani/4L0W.tree",
+      "sha256": "fbc32e3d148698a357ba3f269455fa90c1cdfdf8944d5639f274e90a895e3431"
+    },
+    {
+      "id": "4L0X",
+      "path": "trees/math/mathematical-physics/staffilani/4L0X.tree",
+      "sha256": "24354ac540109bd6ceb1864048aeb271e104096276e521f315b3c57b6215b4ab"
+    },
+    {
+      "id": "4L0Y",
+      "path": "trees/math/mathematical-physics/staffilani/4L0Y.tree",
+      "sha256": "e0348663445029637ca4684f55d2b3d0234ae065d590c70b19e5a51cc8cb56d2"
+    },
+    {
+      "id": "4L0Z",
+      "path": "trees/math/mathematical-physics/staffilani/4L0Z.tree",
+      "sha256": "ffba4b0c996ea4fb2db8f4fa99da4a2eabe51d955b322fb69e04a9a54d858503"
+    },
+    {
+      "id": "icm2026-staffilani",
+      "path": "trees/references/icm2026-staffilani.tree",
+      "sha256": "04ffc0b167d0f508afc5c980912537dba192ab6e60c220617b708040e06e0b8a"
+    },
+    {
+      "id": "mathematical-physics-staffilani-packet",
+      "path": "research/mathematical-physics-staffilani-packet.json",
+      "sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8"
+    }
+  ],
+  "reused_prerequisite_pages_actually_read": [
+    {
+      "id": "00E0",
+      "path": "trees/math/topology/atomic/00E0.tree"
+    },
+    {
+      "id": "00EJ",
+      "path": "trees/math/topology/atomic/00EJ.tree"
+    },
+    {
+      "id": "00EK",
+      "path": "trees/math/topology/atomic/00EK.tree"
+    },
+    {
+      "id": "00EM",
+      "path": "trees/math/topology/atomic/00EM.tree"
+    },
+    {
+      "id": "00EN",
+      "path": "trees/math/topology/atomic/00EN.tree"
+    },
+    {
+      "id": "00F3",
+      "path": "trees/math/topology/atomic/00F3.tree"
+    },
+    {
+      "id": "00FP",
+      "path": "trees/math/topology/atomic/00FP.tree"
+    },
+    {
+      "id": "00FU",
+      "path": "trees/math/topology/atomic/00FU.tree"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree"
+    },
+    {
+      "id": "00OB",
+      "path": "trees/math/analysis/atomic/00OB.tree"
+    },
+    {
+      "id": "00Q0",
+      "path": "trees/math/logic/research/atomic/00Q0.tree"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree"
+    },
+    {
+      "id": "00Q4",
+      "path": "trees/math/logic/research/atomic/00Q4.tree"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree"
+    },
+    {
+      "id": "00QA",
+      "path": "trees/math/logic/research/atomic/00QA.tree"
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree"
+    },
+    {
+      "id": "0A02",
+      "path": "trees/math/network/atomic/0A02.tree"
+    },
+    {
+      "id": "0A3B",
+      "path": "trees/math/analysis/atomic/0A3B.tree"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree"
+    },
+    {
+      "id": "0H4F",
+      "path": "trees/math/number-theory/reports/0H4F.tree"
+    },
+    {
+      "id": "0H4G",
+      "path": "trees/math/number-theory/reports/0H4G.tree"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree"
+    },
+    {
+      "id": "0I80",
+      "path": "trees/math/number-theory/reports/0I80.tree"
+    },
+    {
+      "id": "0I8I",
+      "path": "trees/math/number-theory/reports/0I8I.tree"
+    },
+    {
+      "id": "0K12",
+      "path": "trees/math/geometry/algebraic/0K12.tree"
+    },
+    {
+      "id": "0W01",
+      "path": "trees/math/analysis/fourier-extremal/0W01.tree"
+    },
+    {
+      "id": "0X09",
+      "path": "trees/math/analysis/schur-multipliers/0X09.tree"
+    },
+    {
+      "id": "130F",
+      "path": "trees/math/analysis/fourier-restriction/130F.tree"
+    },
+    {
+      "id": "132B",
+      "path": "trees/math/analysis/fourier-restriction/132B.tree"
+    },
+    {
+      "id": "2J0C",
+      "path": "trees/math/geometry/harmonic-rigidity/2J0C.tree"
+    },
+    {
+      "id": "4101",
+      "path": "trees/math/pde/berti/4101.tree"
+    },
+    {
+      "id": "4411",
+      "path": "trees/math/pde/deng/4411.tree"
+    },
+    {
+      "id": "4412",
+      "path": "trees/math/pde/deng/4412.tree"
+    },
+    {
+      "id": "4413",
+      "path": "trees/math/pde/deng/4413.tree"
+    },
+    {
+      "id": "4414",
+      "path": "trees/math/pde/deng/4414.tree"
+    },
+    {
+      "id": "4415",
+      "path": "trees/math/pde/deng/4415.tree"
+    },
+    {
+      "id": "4419",
+      "path": "trees/math/pde/deng/4419.tree"
+    },
+    {
+      "id": "4426",
+      "path": "trees/math/pde/deng/4426.tree"
+    },
+    {
+      "id": "4427",
+      "path": "trees/math/pde/deng/4427.tree"
+    },
+    {
+      "id": "470T",
+      "path": "trees/math/pde/killip-visan/470T.tree"
+    },
+    {
+      "id": "4E24",
+      "path": "trees/math/mathematical-physics/hutchcroft/4E24.tree"
+    }
+  ],
+  "pending_acceptance_gates": [],
+  "limitations": [
+    "Only the designated review JSON was written; no public notes, shared manifests, builds, git commands or subagents.",
+    "Local proofs, hypotheses, parameter checks and source contracts were reviewed. Full research proofs were not reconstructed, and source-level ambiguities disclosed by 4L0I are not silently certified.",
+    "Web reading was selective and is recorded separately from the author's reading log. No locally hashed source PDF, independent source-PDF pixel audit or build/render verification is claimed.",
+    "All 80 reviewed repository input hashes matched at the closing check after the parent's freeze confirmation. Acceptance is invalidated by later changes to any reviewed input; source-proof and rendering limitations above remain."
+  ],
+  "required_followup": "None for this frozen mathematical review. Any later edit to a reviewed input requires a fresh scope-appropriate review and hash check; build and publication remain outside this acceptance.",
+  "review_history": [
+    {
+      "revision": 1,
+      "result": "revise",
+      "review_sha256": "389b4b73e2bf2302473db980ce619d450f254311c50440f0f82bfa05fcca599c",
+      "scope": "35 atoms and 35 shared pages; six open findings; overview/reference/packet absent."
+    },
+    {
+      "revision": 2,
+      "result": "revise",
+      "status": "mathematical-recheck-complete-awaiting-parent-refreeze",
+      "packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "scope": "37 owned trees, complete packet, 42 shared pages; all seven findings resolved.",
+      "review_sha256": "d0aa5ca8f1e37ae3edad68377d3a919eca74cd0126603e0c6c6be95352d086b7"
+    },
+    {
+      "revision": 3,
+      "result": "pass",
+      "status": "parent-confirmed-freeze-and-closing-integrity-verified",
+      "packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+      "scope": "37 owned trees, complete revision-2 packet, 42 actually read shared pages. All 80 hashes unchanged; no open findings."
+    }
+  ],
+  "closing_integrity": {
+    "checked_on": "2026-10-24",
+    "confirmed_packet_sha256": "389f9f3bbe812a99532c2e4f3215a6bbe25050a3d246b729909a12024e23ffb8",
+    "packet_matched_expected": true,
+    "reviewed_input_count": 80,
+    "unique_reviewed_paths": 80,
+    "owned_tree_count": 37,
+    "owned_inventory_matches": true,
+    "packet_inventory_matches": true,
+    "all_packet_note_hashes_match": true,
+    "report_scope_arrays_match": true,
+    "mismatches": [],
+    "reviewed_files_manifest_unchanged_from_revision_2": true
+  }
+}

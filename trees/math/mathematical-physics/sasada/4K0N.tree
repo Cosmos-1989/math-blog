@@ -1,0 +1,16 @@
+\title{独立 Gamma 变量的和与比例独立}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，命题 4.5}
+
+\p{取 #{a,b,c>0}。沿用 [Gamma 密度的形状与速率约定](4B08)，令 #{X,Y} [独立](00L3)，其密度分别为}
+##{f_X(x)=\frac{c^a}{\Gamma(a)}x^{a-1}e^{-cx},\qquad
+f_Y(y)=\frac{c^b}{\Gamma(b)}y^{b-1}e^{-cy},\qquad x,y>0.}
+\p{这里 #{\Gamma} 是 [Gamma 积分](0H4Z)。令 #{S=X+Y}、#{R=X/(X+Y)}，则 #{S,R} 独立，#{S\sim\operatorname{Gamma}(a+b,c)}，而 #{R} 具有 Beta 密度}
+##{f_R(r)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}r^{a-1}(1-r)^{b-1},\qquad 0<r<1.}
+\p{\strong{证明。}对非负可测测试函数 #{h}，先令 #{s=x+y}，再交换积分次序，在固定 #{s} 的内积分中令 #{x=sr}。由 [Fubini–Tonelli 定理](0H53)，}
+##{\mathbb Eh(S,R)=\frac{c^{a+b}}{\Gamma(a)\Gamma(b)}
+\int_0^\infty\int_0^1 h(s,r)s^{a+b-1}e^{-cs}r^{a-1}(1-r)^{b-1}\,dr\,ds.}
+\p{其中 #{dx=s\,dr} 提供了额外的 #{s} 因子。取 #{h=1}，再用 Gamma 积分，便得到 Beta 密度的归一化；一般 #{h} 的积分于是按两边缘密度分解，证明独立性。}
+\p{逆变换为 #{X=SR,Y=S(1-R)}。因而独立的 #{S\sim\operatorname{Gamma}(a+b,c)} 与上述 #{R} 又产生独立的 #{X\sim\operatorname{Gamma}(a,c)}、#{Y\sim\operatorname{Gamma}(b,c)}。[离散 Toda](4K0I)正是通过这个可逆分解传递独立性。}

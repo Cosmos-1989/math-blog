@@ -1,0 +1,10 @@
+\title{重叠间隙阻止小步长路径穿越两个解区}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§3.4 的重叠障碍思想；确定性的单参考配置命题。}
+
+\p{设 #{S\subseteq\{-1,+1\}^n}，固定 #{\sigma\in\{-1,+1\}^n}，并记[重叠](4M0A) #{R(\sigma,\tau)=n^{-1}\sum_i\sigma_i\tau_i}。假设存在 #{-1<a<b<1}，使所有 #{\tau\in S} 都满足 #{R(\sigma,\tau)\notin(a,b)}。若 #{2\varepsilon<b-a}，则不存在路径 #{\tau_0,\ldots,\tau_T\in S} 同时满足}
+##{R(\sigma,\tau_0)\le a,\quad R(\sigma,\tau_T)\ge b,\quad d_H(\tau_{j-1},\tau_j)\le\varepsilon n.}
+\p{\strong{证明。}每次改变一个坐标，重叠改变的绝对值至多 #{2/n}，故每一步改变至多 #{2\varepsilon}。取重叠第一次达到 #{b} 的时刻 #{j}。前一时刻小于 #{b}，又避开 #{(a,b)}，所以至多 #{a}。这一步改变至少 #{b-a}，矛盾。}
+\p{应用到算法还须证明算法产生这种小步长路径，并保证沿途输出都处于受控的解集。随机实例的重叠间隙、实例间的耦合以及算法稳定性是各自独立的假设。单个解集有间隙，并不直接给出所有多项式时间算法的下界。}

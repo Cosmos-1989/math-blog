@@ -1,0 +1,12 @@
+\title{四波碰撞的对称弱式与碰撞不变量}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，(3.1)；交换变量的直接证明}
+
+\p{设 #{f:\mathbb R^3\to\lbrack 0,\infty\rparen}，#{\omega:\mathbb R^3\to\lbrack 0,\infty\rparen} 是给定色散关系。记 #{f_j=f(k_j)}、#{\omega_j=\omega(k_j)}，并定义[约束积分测度](4426)}
+##{d\Sigma=\delta(k_0+k_1-k_2-k_3)\delta(\omega_0+\omega_1-\omega_2-\omega_3)\,dk_0dk_1dk_2dk_3.}
+\p{假设该测度有定义，且所写积分绝对收敛。令 #{B=f_2f_3(f_0+f_1)-f_0f_1(f_2+f_3)}，#{Q\lbrack f\rbrack(k_0)} 是固定 #{k_0} 后的碰撞积分。这是[Schrödinger 四波算子](4415)在一般色散下的同一代数结构，配对编号改为 #{0+1\leftrightarrow 2+3}。对测试函数 #{\varphi}，有}
+##{\int\varphi(k)Q\lbrack f\rbrack(k)dk=\frac 14\int B(\varphi_0+\varphi_1-\varphi_2-\varphi_3)d\Sigma.}
+\p{\strong{证明。}原积分为 #{I=\int B\varphi_0d\Sigma}。交换 #{0,1} 得 #{I=\int B\varphi_1d\Sigma}；交换两对 #{(0,1)} 与 #{(2,3)} 时，#{B} 变号而测度不变，故 #{I=-\int B\varphi_2d\Sigma}；再交换 #{2,3} 得第四种表示。四式相加即得。}
+\p{若 #{\varphi_0+\varphi_1=\varphi_2+\varphi_3} 在共振集上成立，称 #{\varphi} 为碰撞不变量。#{1}、每个坐标 #{k^{(j)}}、#{\omega(k)} 都满足此条件，分别对应质量、动量、频率能量。对实际解使用这些无界测试函数，还必须验证求导及积分的合法性；测度解的能量问题见[截断通量](4L0X)。}

@@ -1,0 +1,11 @@
+\title{簇大小倾斜的对数导数记录熵与方差}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，式 (2.17)；有限求和求导。}
+
+\p{设 #{n\ge 1}，非空解集 #{S\subseteq\{0,1\}^n} 的[簇](4M0G)为 #{\gamma}，记 #{a_\gamma=|\gamma|\ge 1}。对实参数 #{\lambda} 定义倾斜簇配分函数及其归一化对数}
+##{\overline Z_\lambda=\sum_\gamma a_\gamma^\lambda,\qquad F_n(\lambda)=\frac 1n\log\overline Z_\lambda,\qquad \pi_\lambda(\gamma)=\frac{a_\gamma^\lambda}{\overline Z_\lambda}.}
+\p{#{\lambda=0} 时数簇，#{\lambda=1} 时数全部解。用[自然对数的导数](0A45)和有限和的求导法则，得到}
+##{F_n'(\lambda)=\frac 1n\sum_\gamma\pi_\lambda(\gamma)\log a_\gamma,\qquad F_n''(\lambda)=\frac 1n\operatorname{Var}_{\pi_\lambda}(\log a_\gamma)\ge 0.}
+\p{这里[方差](00L2)为平方偏差的期望。第二式来自对归一化权重求导：#{\pi_\lambda'(\gamma)=\pi_\lambda(\gamma)(\log a_\gamma -\sum_\eta\pi_\lambda(\eta)\log a_\eta)}。因此 #{F_n'} 单调不减，提高 #{\lambda} 会增加倾斜分布下对数簇大小的均值。这个精确有限恒等式说明，倾斜参数为什么能用来探测不同大小的簇。}

@@ -1,0 +1,11 @@
+\title{近似轨道的误差为何依赖观察时间}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，Theorem 2.7 后的稳定性问题；有限维直接证明}
+
+\p{固定 #{T>0}。设 #{F:\mathbb C^N\to\mathbb C^N} 在包含两条轨道的区域满足 #{|F(z)-F(w)|\leq L|z-w|}，#{L\geq 0}。设连续可微曲线在 #{[0,T]} 上满足 #{\dot u=F(u)}、#{\dot v=F(v)+r}，#{|r(t)|\leq\eta}，#{|u(0)-v(0)|\leq\delta}。这里 #{|\cdot|} 是欧氏范数。对每个 #{0\leq t\leq T}，[常微分方程](00OB)的积分形式给出}
+##{|u(t)-v(t)|\leq\delta+\int_0^tL|u(s)-v(s)|ds+\eta t.}
+\p{令右端为 #{h(t)}，则 #{h(0)=\delta}，#{h'(t)\leq Lh(t)+\eta}。乘以 #{e^{-Lt}} 并积分，当 #{L>0} 时得到}
+##{|u(t)-v(t)|\leq\delta e^{Lt}+\frac\eta L(e^{Lt}-1).}
+\p{#{L=0} 时直接得到 #{\delta+\eta t}。因此“小余项”能否保证整个区间内轨道接近，取决于余项大小与区间长度的共同关系。把有限时间共振近似推广到全部正时间，需要可积误差、衰减或其他额外结构；上述估计单独不能完成这一推广。}

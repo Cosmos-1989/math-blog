@@ -1,0 +1,16 @@
+\title{超离散 Toda 的指数乘积不变律}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，命题 4.1 与定理 4.4(a)}
+
+\p{取 #{a,b>0}，初态中全体 #{Q_n,E_n} 相互独立，且}
+##{Q_n\sim\operatorname{Exp}(a+b),\qquad E_n\sim\operatorname{Exp}(a),\qquad n\in\mathbb Z.}
+\p{这里指数分布见[最小值与差的独立性](4K0M)。Croydon–Sasada 定理 4.4(a)保证：[超离散 Toda 方程](4K0H)的正线性路径全时解存在，此初态的[乘积律](0A6B)在时间演化下不变；其载流子边缘为 #{U_n\sim\operatorname{Exp}(b)}。}
+\p{\strong{局部独立性证明。}令 #{A,B,C} 独立，分别服从 #{\operatorname{Exp}(a+b),\operatorname{Exp}(a),\operatorname{Exp}(b)}。局部映射为}
+##{F(A,B,C)=\bigl(M,A+B-M,A+C-M\bigr),\qquad M=\min(B,C).}
+\p{设 #{D=B-C}。由最小值与差的独立性，#{M,D} 独立，且 #{M} 与 #{A} 同分布。又 #{A} 独立于 #{(M,D)}，故交换 #{A,M} 不改变三元分布。再用逆变换，}
+##{A+B-M=A+\max(D,0),\qquad
+A+C-M=A+\max(-D,0),}
+\p{后两变量独立，分别服从 #{\operatorname{Exp}(a),\operatorname{Exp}(b)}，并与第一变量 #{M} 独立。因此 #{F} 保持此三重乘积律。}
+\p{全局不变性还使用双无限方程的唯一性。其漂移条件在这里有明确方向：#{\mathbb EE_n-\mathbb EQ_n=1/a-1/(a+b)>0}；对应[交错路径](4K0J)每两个格点的平均增量为正。由局部平衡通向全局分布的结论引用上述定理，其中包含无限系统存在性的论证。}

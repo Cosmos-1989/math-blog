@@ -1,0 +1,26 @@
+\title{两参数 KdV 映射满足集合论杨–巴克斯特方程}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§§6.1–6.2；有理恒等式的直接计算}
+
+\p{取 #{a,b,c>0}，以[两参数 KdV 映射](4K0R) #{F_{a,b}} 作用于正数对。记 #{F_{12}^{a,b}} 为它在三元组的第一、第二坐标上的作用，其余坐标不变；#{F_{13}^{a,c},F_{23}^{b,c}} 类似。则}
+##{F_{12}^{a,b}\circ F_{13}^{a,c}\circ F_{23}^{b,c}
+=F_{23}^{b,c}\circ F_{13}^{a,c}\circ F_{12}^{a,b}.}
+\p{复合按从右至左实施。这称为带参数的集合论杨–巴克斯特方程：三次两体更新的两种次序产生同一三元组。}
+\p{\strong{证明。}固定输入 #{(x,y,z)\in(0,\infty)^3}，定义四个正数}
+##{\begin{aligned}
+P&=1+axy+cyz+bcxy^2z,&Q&=1+axy+ayz+abxy^2z,\\
+R&=1+axy+cyz+abxy^2z,&S&=1+cxy+cyz+bcxy^2z.
+\end{aligned}}
+\p{左边先作用 #{F_{23}^{b,c}}，得到 #{(x,z(1+cyz)/(1+byz),y(1+byz)/(1+cyz))}。再作用 #{F_{13}^{a,c}}，得到}
+##{\left(\frac{y(1+byz)S}{(1+cyz)R},\frac{z(1+cyz)}{1+byz},\frac{xR}{S}\right).}
+\p{最后两个待更新坐标的乘积为 #{yzS/R}。利用可逐项展开验证的恒等式}
+##{R+byzS=(1+byz)P,\qquad R+ayzS=(1+cyz)Q,}
+\p{左边的最终结果为 #{(zP/Q,yQS/(PR),xR/S)}。右边先后作用 #{F_{12}^{a,b}} 与 #{F_{13}^{a,c}}，得到}
+##{\left(\frac{zP}{Q},\frac{x(1+axy)}{1+bxy},
+\frac{y(1+bxy)Q}{(1+axy)P}\right).}
+\p{待更新的后两坐标乘积为 #{xyQ/P}，而}
+##{P+cxyQ=(1+axy)S,\qquad P+bxyQ=(1+bxy)R.}
+\p{再作用 #{F_{23}^{b,c}}，同样得到 #{(zP/Q,yQS/(PR),xR/S)}。所有分母严格为正，因此每一步都合法，恒等式得证。}
+\p{同一映射还保持一族 GIG 独立律；那个结论使用密度与面积元，本结论使用有理恒等式。这两个性质在此家族中并存，并不构成任意杨–巴克斯特映射都保持某种非退化乘积概率律的一般定理。}

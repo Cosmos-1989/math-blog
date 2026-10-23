@@ -1,0 +1,9 @@
+\title{有界耗散预算限制非集中时间集合}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，§3.1；条件积分论证}
+
+\p{设 #{D:\lbrack 0,\infty\rparen\to\lbrack 0,\infty\rparen} 可测，且 #{\int_0^\infty D(t)dt\leq B<\infty}。给定可测时间集合 #{S\subseteq\lbrack 0,\infty\rparen}，若 #{D(t)\geq c>0} 在 #{S} 上成立，则 #{|S|\leq B/c}，其中 #{|S|} 表示 [Lebesgue 测度](00XV)。}
+\p{\strong{证明。}有 #{c|S|\leq\int_SD(t)dt\leq B}。例如某个非负函数 #{H(t)} 满足 #{H(T)+\int_0^TD(t)dt\leq H(0)}，就可取 #{B=H(0)}。}
+\p{在凝聚分析中，[区间质量分解](4L0P)用于区分集中与非集中时刻。若能证明非集中时 #{D} 有正下界，同时某个测试函数给出有限预算，则非集中状态不能占据无限长时间。若还证明所有 #{0<t<T_0} 都属于测度至多 #{B/c} 的集合，才可进一步推出 #{T_0\leq B/c}。这里最后一步明确以这样的覆盖为假设；碰撞方程中构造 #{H,D} 及证明覆盖是额外的研究内容。}

@@ -1,0 +1,10 @@
+\title{对称球面投影的控制预算与终点分布}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{Huang–Sellke–Sun v1，定义 1.1；[Sun](icm2026-sun)，§3.4 的球面特例。}
+
+\p{固定密度 #{\alpha>0}。取一维标准布朗运动 #{B} 和与它独立的 #{[0,1]} 上均匀变量 #{U}，即 #{\mathbb P(U\in[a,b])=b-a} 对 #{0\le a\le b\le 1} 成立。令 #{\mathcal F_t=\sigma(U,B_s:0\le s\le t)}。考虑非负、对这族 σ-代数渐进可测的控制 #{\sigma_t}，满足}
+##{\mathbb E(\sigma_t-1)^2\le\frac 1\alpha\qquad(0\le t\le 1).}
+\p{用[布朗随机积分](4M13)定义 #{X_t=\int_0^t\sigma_s\,dB_s}。上述预算给出 #{\mathbb E\sigma_t^2\le 2+2/\alpha}，故积分有定义。记 #{\mathcal C_\alpha} 为所有 #{|X_1|} 的分布组成的集合，再以[二阶 Wasserstein 距离](4M0Y)取闭包，记为 #{\overline{\mathcal C}_\alpha}。原论文以 #{\overline{\mathcal M}^{\rm sph,sy}(\alpha)} 表示同一集合。}
+\p{初始种子 #{U} 允许控制在布朗运动开始前随机化；控制又可以根据已观察到的轨道调整，不能使用未来增量。这里预算在每个时刻限制均方偏离 #{1} 的程度，不是对整个时间区间只施加一次总预算。}

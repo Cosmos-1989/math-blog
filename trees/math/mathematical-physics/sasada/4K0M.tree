@@ -1,0 +1,16 @@
+\title{独立指数变量的最小值与差独立}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，命题 4.1 的连续情形}
+
+\p{参数为 #{a>0} 的指数分布 #{\operatorname{Exp}(a)}，指[随机变量](00L0)的概率满足 #{\mathbb P(X\in B)=\int_{B\cap(0,\infty)}ae^{-ax}\,dx}，对任意 Borel 集 #{B} 成立。这里 #{dx} 为实线上的 [Lebesgue 测度](00XV)，积分采用 [Lebesgue 积分](00Q5)；非负且总积分为一的被积函数称概率密度。此处归一化由[指数函数](0A46)的原函数直接算出。设 #{X\sim\operatorname{Exp}(a)}、#{Y\sim\operatorname{Exp}(b)} [独立](00L3)，其中 #{a,b>0}。则 #{M=\min(X,Y)} 与 #{D=X-Y} 独立，且}
+##{M\sim\operatorname{Exp}(a+b),\qquad
+f_D(d)=\frac{ab}{a+b}\begin{cases}e^{-ad},&d\geq 0,\\ e^{bd},&d<0.\end{cases}}
+\p{\strong{证明。}在 #{x\geq y} 的区域写 #{m=y,d=x-y}；在 #{x<y} 的区域写 #{m=x,d=x-y}。分别固定较小变量作一维平移换元，再用 [Fubini–Tonelli 定理](0H53)交换积分，得到联合密度}
+##{f_{M,D}(m,d)=ab e^{-(a+b)m}
+\begin{cases}e^{-ad},&d\geq 0,\\e^{bd},&d<0,\end{cases}\qquad m>0.}
+\p{对 #{d} 的括号项积分为 #{a^{-1}+b^{-1}}，故这个密度恰为 #{(a+b)e^{-(a+b)m}f_D(d)}。密度分解证明独立性，也确定了两个边缘分布。}
+\p{反过来，从具有上述分布的独立 #{M,D} 可恢复原来的独立变量：}
+##{X=M+\max(D,0),\qquad Y=M+\max(-D,0).}
+\p{这对正向与反向变换把两种独立分解联系起来，是[超离散 Toda 指数不变律](4K0O)的局部机制。}

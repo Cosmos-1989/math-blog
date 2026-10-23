@@ -1,0 +1,12 @@
+\title{Ising 感知机的一二阶矩按重叠分组}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§§3.2–3.3；独立有限计数。}
+
+\p{在 [Ising 感知机](4M0P)中令 #{Z=|S(G;I,\{-1,+1\}^N)|}，#{p=\mathbb P(U\in I)}，其中 #{U} 标准正态。对 #{r\in[-1,1]} 定义}
+##{q_I(r)=\mathbb P\left(U\in I,\ rU+\sqrt{1-r^2}V\in I\right),}
+\p{其中 #{U,V} 独立标准正态。则}
+##{\mathbb E Z=2^Np^M,\qquad \mathbb E Z^2=2^N\sum_{h=0}^N\binom Nh\,q_I(1-2h/N)^M.}
+\p{\strong{证明。}固定配置每一行以概率 #{p} 满足，行之间独立，求和得到第一式。固定第一个配置后，恰有 #{\binom Nh} 个第二配置与它相差 #{h} 个坐标，其中二项式系数表示选取这些坐标的方式数。[高斯场表示](4M0Q)给出一行同时满足的概率 #{q_I(1-2h/N)}，再对全部行和配置对求和。}
+\p{当 #{0<p<1} 时，[Markov 不等式](0A02)给可满足阈值上界 #{\log 2 /(-\log p)}。特别地，零裕量半空间 #{I=\lbrack 0,\infty\rparen} 有 #{p=1/2}，一阶矩上界为一。该界没有利用不同配置之间的相关性。}

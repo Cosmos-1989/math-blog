@@ -1,0 +1,12 @@
+\title{树的配分函数等于顶点因子除以边因子}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，式 (2.18) 的树上原型；独立有限树证明。}
+
+\p{设有限树因子图的变量集、约束集、边集分别为 #{V,F,E}，采用[树上 BP](4M0C)的邻居集合记号 #{\partial v,\partial a}。假设配分函数 #{Z>0}，把每条消息除以其坐标和，得到概率向量 #{m_{v\to a}}、#{\widehat m_{a\to v}}。定义}
+##{z_v=\sum_t\prod_{a\in\partial v}\widehat m_{a\to v}(t),\quad z_a=\sum_{x_{\partial a}}\psi_a(x_{\partial a})\prod_{v\in\partial a}m_{v\to a}(x_v),\quad z_{va}=\sum_t m_{v\to a}(t)\widehat m_{a\to v}(t).}
+\p{则所有这些量均为正，且}
+##{Z=\frac{\prod_{v\in V}z_v\prod_{a\in F}z_a}{\prod_{va\in E}z_{va}}.}
+\p{\strong{证明。}先使用未归一化消息。沿任一变量、约束或边切开整棵树，分支求和说明相应的三个局部量都等于 #{Z}。因树满足 #{|V|+|F|-|E|=1}，其乘除式等于 #{Z}。这个顶点边数关系由每次删去一个叶子和其唯一边归纳得到。}
+\p{再考察缩放一个消息 #{M_{v\to a}}。它使约束因子 #{z_a} 和边因子 #{z_{va}} 乘上同一个数，在商中抵消。缩放 #{\widehat M_{a\to v}} 同样在 #{z_v} 与 #{z_{va}} 间抵消。因此把全部消息归一化不改变乘除式。}

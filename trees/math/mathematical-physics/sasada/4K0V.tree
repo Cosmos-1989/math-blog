@@ -1,0 +1,13 @@
+\title{标记箱球孤子的扩散尺度极限}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，定理 4.6；Olla–Sasada–Suda，arXiv:2411.14818v2，定理 2.1(1)}
+
+\p{设初态分布 #{\mu} 是参数 #{0<p<1/2} 的[Bernoulli 不变律](4K0A)，或参数 #{p_0,p_1>0,p_0+p_1<1} 的[双侧平稳 Markov 不变律](4K0B)。两类均满足 #{\mu(\eta_0=\eta_1=1)>0}。令 #{\nu=\mu(\,\cdot\mid 0\text{ 是记录点})}，[记录点](4C14)事件有正概率。}
+\p{固定孤子大小 #{k\geq 1}。对[孤子分解](4C17)中的 #{\gamma} 取位置 #{X(\gamma)=\min\gamma -1}。设 #{r} 为不大于原点的最后一个记录点，把 #{X<r} 的最右 #{k} 孤子标为 #{0}，其余按空间顺序标为 #{i\in\mathbb Z}。以尾部变为下一时刻头部的规则追踪同一孤子；演化后不重新按原点编号。记它在时刻 #{m} 的位置为 #{X_k^i(m)}，位移为 #{Y_k^i(m)=X_k^i(m)-X_k^i(0)}。}
+\p{令 #{v_k^{\mathrm{eff}}} 为[几乎处处速度定理](4C1B)给出的速度。Olla–Sasada–Suda 定理 2.1(1)断言：对任意固定 #{i\in\mathbb Z} 和 #{A>0}，在 #{\mu} 或 #{\nu} 下，}
+##{\left(\frac{Y_k^i(\lfloor n^2t\rfloor)}{n}-ntv_k^{\mathrm{eff}}\right)_{0\leq t\leq A}
+\ \Longrightarrow\ (B_k(t))_{0\leq t\leq A}.}
+\p{收敛采用 [Skorokhod 路径空间中的弱收敛](4K0W)。#{B_k} 是均值为零的[布朗运动](0N0S)，满足 #{\mathbb EB_k(t)^2=D_kt}；扩散系数 #{D_k} 由原论文式 (4.16)给出，依赖 #{\mu,k} 而不依赖标签 #{i}。}
+\p{这是标记孤子轨迹的函数型极限定理。证明见原论文 §§4–11，以座位编号和孤子消除把碰撞造成的等待时间分解，再建立相应的不变性原理。逐次碰撞位移或有效速度方程本身不足以推出这个尺度的随机涨落。参数 #{p_1=0} 的 Markov 不变律虽仍有定义，却不在这里的双球正概率假设内。}

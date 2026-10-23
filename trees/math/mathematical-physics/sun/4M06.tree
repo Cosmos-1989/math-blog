@@ -1,0 +1,13 @@
+\title{退火平均与淬火对数为何不同}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§§2.2、3.3；有限概率与对数不等式。}
+
+\p{设随机实例的正配分函数为 #{Z_n>0}，并假设 #{\mathbb E Z_n<\infty}、#{\mathbb E|\log Z_n|<\infty}。[期望](00L1)在对数之外或之内给出两种量}
+##{f_n^{\rm q}=\frac 1n\mathbb E\log Z_n,\qquad f_n^{\rm a}=\frac 1n\log\mathbb E Z_n.}
+\p{前者称淬火平均，先固定无序计算对数，再对无序平均；后者称退火平均。由[自然对数](0A45)的导数，#{\log t\le t-1} 对 #{t>0} 成立。取 #{t=Z_n/\mathbb E Z_n} 后求期望，得到 #{f_n^{\rm q}\le f_n^{\rm a}}。}
+\p{对硬约束解数允许 #{Z_n=0}，约定 #{\log 0=-\infty}。即使不可满足概率很小，只要它为正，#{\mathbb E\log Z_n} 也可能等于 #{-\infty}。因此研究典型解数通常直接表述 #{n^{-1}\log Z_n} [依概率收敛](00L9)，或先使用[正温配分函数](4M05)。}
+\p{还有不需对数可积性的上尾控制：由 [Markov 不等式](0A02)，}
+##{\mathbb P\left(Z_n\ge e^{n(f_n^{\rm a}+\varepsilon)}\right)\le e^{-n\varepsilon}\qquad(\varepsilon>0).}
+\p{这给典型指数率的上界。罕见实例可能显著抬高 #{\mathbb E Z_n}，所以该上界一般不等于典型指数率。}

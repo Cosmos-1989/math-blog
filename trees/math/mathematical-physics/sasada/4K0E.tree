@@ -1,0 +1,14 @@
+\title{超离散 KdV 的中点反射公式}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.2(a)；Croydon–Sasada–Tsujimoto，定理 2.1}
+
+\p{固定 #{L\in\mathbb R}。给定实数构形 #{\eta_n}，定义 #{S_0=0}、#{S_n-S_{n-1}=L-2\eta_n}，假设 #{S\in\mathcal S^{\mathrm{lin}}_0}。取[中点最大值](4K0D) #{M^\vee}，令}
+##{U_n=M_n^\vee -S_n+L/2,\qquad
+\eta_n'=\min(L-\eta_n,U_{n-1}).}
+\p{则 #{(\eta',U)} 满足超离散 KdV 的局部方程 #{U_n=\eta_n+U_{n-1}-\eta_n'}，且 #{\eta'} 的归零编码正是 #{T^\vee S}。这里所有变量可取实值，未假设非负。}
+\p{\strong{搬运递推。}最大值的逐格关系为 #{M_n^\vee=\max(M_{n-1}^\vee,(S_n+S_{n-1})/2)}。代入 #{U} 得}
+##{U_n=\max(U_{n-1}+2\eta_n-L,\eta_n).}
+\p{因此 #{\eta_n+U_{n-1}-U_n=\min(L-\eta_n,U_{n-1})=\eta_n'}。再由 #{M_n^\vee -M_{n-1}^\vee=U_n-U_{n-1}+L-2\eta_n}，得到 #{(T^\vee S)_n-(T^\vee S)_{n-1}=L-2\eta_n'}。}
+\p{当 #{L=1}、#{\eta_n\in\{0,1\}} 时，每个中点高度是相邻两个整数高度的平均。在正漂移路径中，过去最高格点之前已有一次从其下一格上升的步，故 #{M_n^\vee=M_n-1/2}，于是 #{U_n=M_n-S_n}。这恢复[箱球搬运器](4K01)。全时解唯一性由[路径存在定理](4K0K)给出。}

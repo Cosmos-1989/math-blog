@@ -1,0 +1,2038 @@
+{
+  "date": "2026-10-24",
+  "report": {
+    "prefix": "4L",
+    "outline": "4L00",
+    "reference": "icm2026-staffilani",
+    "doi": "10.1137/25M1803309",
+    "speaker": "Gigliola Staffilani",
+    "title": "New and Old Mathematical Results on Wave Turbulence Theory",
+    "pages": "596–615",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+    "license": "CC BY 4.0",
+    "question": "确定性NLS的共振如何导致高阶频率矩增长，而波动力学方程又如何在各自的初值、缩放与解类中产生原点凝聚或高频能量逸出？",
+    "reading_scope": "staffilani-icm2026: Entire publisher HTML mathematical body §§1–3, every displayed formula and both figure captions, in overlapping reads (lines 84–536); acknowledgments 537–539 and footnotes 540–548. Selected relevant bibliography entries, not the whole bibliography. Title/DOI/pages/online date/license verified. Publisher PDF retrieval returned HTTP 403; no publisher-PDF or figure-pixel inspection.\nckstt-v1: §1 opening through Theorem 1.1 and its following comparison (pdftotext -layout lines 85–175, PDF pp.2–4); contents viewed. No §§2–4 diffusion or frequency-set proof read. Latest arXiv v2 exists; statements here are explicitly bound to v1. Formal publication title/DOI/pages checked from publisher metadata only.\nhptv-v2: §1.2 Theorems 1.1–1.2 and Corollary 1.3 (extracted lines 85–190); §4.2.3 Proposition 4.8 and opening gauge/finite-set discussion (1585–1640, PDF pp.29–30). Not full modified scattering or infinite-cascade construction. Latest v3 dated 2014-10-08 exists and was not substituted for this read version.\ngiuliani-guardia-v2: Selected §1 context and §2 through Theorems 2.1–2.2 (lines 75–265); complete §2.1 statements and arithmetic-set descriptions plus opening §2.2 (260–345). No toy-model/PDE approximation proofs read.\ndeng-hani-v2: §1.1 Fourier/DAT/scaling/COL and Theorem 1.1, through Remarks 1.3–1.4 (lines 130–230, PDF pp.3–5); §3.7 final proof of Theorem 1.1 and preceding paragraph (1733–1768, PDF p.32), verifying indicator-truncated expectations. No full layered-graph proof or Appendix C read. Forest 4411–4419 reused rather than rewritten.\npure-four-wave-transfer-v1: Opening abstract/introduction, §2 notation and Theorem 3, start of §3.1 geometry (extracted lines 1–350; follow-up 280–355). Not full geometric spreading/long-time proof. The later published condensation article's Theorem 3 is the authority for the measure formulation and the narrower no-extra-energy-conservation statement.\npure-condensation-v1: Opening through main Theorem 4, §3.1 domain definitions and opening Lemma 8 (lines 1–380). Compared both concentration conditions with the 2026 formal version. No full multiscale proof.\npure-condensation-published: Publisher HTML §§1–2.1 (lines 59–275), including Definition 1 and Theorems 3–4; later read §2.2 and §3.1 discussion (278–394), §3.2 opening weak identities (395–423) and displayed remainder of Lemma 10 proof (425–449) as source-interface check. Rights/metadata lines 1512–1531 verified. No full §§3.3–4 proof, no publisher PDF or figures read as pixels.\nmixed-condensation-v1: Model, Assumptions A–B, physical-context formulas and Definition 1/Theorem 3 (lines 60–470); §11 proof map 3960–3980. ST-F05 follow-up read §5 Proposition 11, (77)–(91), and boundary-kernel discussion through start of two-zero case (1310–1495); A/Theta definitions 190–248 and Definition 1 rechecked 410–423. PDF p.9 rendered to /tmp/staffilani-growth-p9.png and visually inspected for (38). Full existence and condensation proof not read.\nmixed-energy-v1: Model, Assumptions X–Y and physical context (lines 55–330); Definition 1, Theorem 2, Remark 3 (375–453); §9 proof map 3935–3943. ST-F05 follow-up: §4 Proposition 10, (77)–(88) and beginning kernel estimates (1290–1425), boundary estimates/cutoff setup (1510–1605), final existence-step excerpt (1667–1728). PDF p.3 rendered to /tmp/staffilani-cascade-p3.png and visually inspected for Assumption X. Full energy-loss proof not read. Detected missing maximum-frequency factor between (79) and (82); the model is bound to (1)–(7), (79).\npure-transfer-published-metadata-only: Abstract and publisher bibliographic/access metadata only; mathematical body paywalled and not read. Not used as a full-text proof authority.\nlocal-calculations: Original local algebra, inequalities, measure examples, oscillatory integrals and parameter substitutions are written explicitly in the 4L atoms. Existing Fourier, Sobolev, probability, measure and integration notes are linked.",
+    "proof_scope": {
+      "4L01": {
+        "status": "local-calculation",
+        "scope": "谱参数与几何边长平方关系及固定参数 Sobolev 范数等价。"
+      },
+      "4L02": {
+        "status": "local-proof",
+        "scope": "光滑周期解的分部积分守恒证明；不证明低正则适定性。"
+      },
+      "4L03": {
+        "status": "local-proof-and-example",
+        "scope": "固定频率球加权界及单模态函数族；例子不是演化轨道。"
+      },
+      "4L04": {
+        "status": "local-calculation",
+        "scope": "相互作用表示精确符号和固定振幅振荡平均；不主张无穷时间平均定理。"
+      },
+      "4L05": {
+        "status": "local-proof",
+        "scope": "一维整数匹配因式分解、对角重复扣除和显式相位解。"
+      },
+      "4L06": {
+        "status": "local-proof",
+        "scope": "无理谱逐坐标匹配；加权正交与缩放后的欧氏矩形区别。"
+      },
+      "4L07": {
+        "status": "conditional-local-proof",
+        "scope": "绝对收敛条件下加权四次对称化；有限截断成立，传极限明确要求hs强收敛，不证明全局无限维解构造。"
+      },
+      "4L08": {
+        "status": "local-counterexample",
+        "scope": "闭合四频率集合的导数(-4,4,4,-4)，通常h2平方范数导数为-8。"
+      },
+      "4L09": {
+        "status": "cited-research-theorem",
+        "scope": "引用CKSTT小到大有限时间结论；频率族构造、toy model轨道与PDE稳定证明未重建。"
+      },
+      "4L0A": {
+        "status": "local-proof",
+        "scope": "[0,T]上有限维非齐次Gronwall估计，L=0分开；不推出无限时间PDE逼近。"
+      },
+      "4L0B": {
+        "status": "cited-theorem-with-local-comparison",
+        "scope": "引用Proposition4.8；增长率与对数幂、多项式的比较为局部计算。"
+      },
+      "4L0C": {
+        "status": "cited-theorem-with-local-time-change",
+        "scope": "引用s为整数且s>=30的Corollary1.3；pi log t时间变换直接计算；不声称任意小Hs初值都有修正散射。"
+      },
+      "4L0D": {
+        "status": "local-proof",
+        "scope": "振荡积分与常数T之差上界|Omega|T²/2；可微振幅分部积分。"
+      },
+      "4L0E": {
+        "status": "cited-research-theorems",
+        "scope": "固定s>1引用满测度倍数增长与较薄集合的小到大结论；不重建算术集合与准共振轨道。"
+      },
+      "4L0F": {
+        "status": "cited-limit-with-local-counterexample",
+        "scope": "复用4411–4419，核读主定理与截断期望；一致误差不推出积分误差的球例子直接计算。"
+      },
+      "4L0G": {
+        "status": "conditional-local-proof",
+        "scope": "约束测度存在且积分绝对收敛时的1/4对称弱式；不把形式能量消去升级为任意测度解守恒。"
+      },
+      "4L0H": {
+        "status": "local-change-of-variables",
+        "scope": "连续、正半轴C1、严格递增且无界色散下换元，4pi因子和密度幂次。"
+      },
+      "4L0I": {
+        "status": "imported-model-specific-solution-contracts",
+        "scope": "分别指定三篇论文Definition1、测试类、C1原记号、模型弱泛函与边界解释；纯四波任意原子边界公式及C1拓扑未在源定义单独给出，公开说明此来源限制。无存在或延拓证明。"
+      },
+      "4L0J": {
+        "status": "definition-and-local-logic",
+        "scope": "首次凝聚时间的上确界与任意短区间量词；有限测度递减连续性。"
+      },
+      "4L0K": {
+        "status": "local-proof",
+        "scope": "Cb弱收敛到Mdelta0蕴含紧频段能量趋零；尾能量结论额外假设总能量守恒。"
+      },
+      "4L0L": {
+        "status": "local-counterexample",
+        "scope": "显式两点正测度计算质量、能量与弱极限；不声称满足碰撞方程。"
+      },
+      "4L0M": {
+        "status": "cited-theorem-and-local-corollary",
+        "scope": "正式凝聚论文Theorem3的纯幂特例，保留支集条件、质量守恒和局部能量消失，不附加总能量守恒；远离零的质量界直接证明。"
+      },
+      "4L0N": {
+        "status": "local-proof-and-examples",
+        "scope": "c>0必要性、幂密度积分及具有间隙的反例；累积下界不推出逐点密度下界。"
+      },
+      "4L0O": {
+        "status": "cited-research-theorem",
+        "scope": "正式Theorem4(i)的纯幂特例，保留两项集中条件和给定质量守恒全局解；N0/CF*阈值源定理仅定性。"
+      },
+      "4L0P": {
+        "status": "local-proof",
+        "scope": "有限区间网格及Fubini给出分离对质量>=eta M²；不声称是源文全部三重碰撞区域引理。"
+      },
+      "4L0Q": {
+        "status": "conditional-local-proof",
+        "scope": "非负积分预算给集合测度界；时间区间覆盖明确另作假设，未将其充当凝聚证明。"
+      },
+      "4L0R": {
+        "status": "definition-and-local-reindexing",
+        "scope": "1↔m多项式与弱式，强式的-m来自重新编号；同一通道的系数乘全项。"
+      },
+      "4L0S": {
+        "status": "local-polynomial-proof",
+        "scope": "Bose因子完整展开，保留-f0 sumfj二次项；仅占据多项式代数极限，不是方程解极限。"
+      },
+      "4L0T": {
+        "status": "conditional-local-proof",
+        "scope": "一对多测试差对频率能量为零、对常数为1-m，未推断质量导数有固定符号。"
+      },
+      "4L0U": {
+        "status": "model-specialization-and-local-check",
+        "scope": "二次色散、mu=0,c12=c22=1,c31=0，核与AssumptionsA–B参数直接核对；不等同完整量子耦合系统。"
+      },
+      "4L0V": {
+        "status": "cited-theorem-with-local-thresholds",
+        "scope": "引用Theorem3存在至少一个构造解及其凝聚结论；有限c<1/2、即时c<1/40及幂初值直接计算。"
+      },
+      "4L0W": {
+        "status": "definition-and-local-logic",
+        "scope": "按源(21)定义能量保持初始区间的上确界；严格下降解释额外假设E(t)<=E0。"
+      },
+      "4L0X": {
+        "status": "conditional-local-proof",
+        "scope": "可用的双重截断测试尊重phi'(0)=0；先epsilon后R，DCT/MCT只作用于端点积分；不交换碰撞极限。"
+      },
+      "4L0Y": {
+        "status": "local-parameter-construction",
+        "scope": "独立选择quartic模型，R'幂次-3/4，九项AssumptionX约束逐项算出；源深定理证明仍外引。"
+      },
+      "4L0Z": {
+        "status": "cited-theorem-with-local-thresholds",
+        "scope": "引用Theorem2，四次模型下finite c<3/4、instant c<1/120直接代入；不推回二次NLS，不重建能量逸出证明。"
+      }
+    },
+    "claim_sources": {
+      "4L01": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "§2 setup; local coordinate calculation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L01 body calculation with explicit assumptions"
+        }
+      ],
+      "4L02": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "(1.1), (2.2)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L02 body calculation with explicit assumptions"
+        }
+      ],
+      "4L03": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "§§1–2 motivation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L03 body calculation with explicit assumptions"
+        }
+      ],
+      "4L04": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "Definition 2.4, (2.6)–(2.7)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L04 body calculation with explicit assumptions"
+        }
+      ],
+      "4L05": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "Discussion after Theorem 2.6"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L05 body calculation with explicit assumptions"
+        }
+      ],
+      "4L06": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "Theorem 2.6 and preceding setup"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L06 body calculation with explicit assumptions"
+        }
+      ],
+      "4L07": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "Theorem 2.6; local correction of following norm claim"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L07 body calculation with explicit assumptions"
+        }
+      ],
+      "4L08": [
+        {
+          "source": "local-calculations",
+          "locator": "4L08 four-mode calculation"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L08 body calculation with explicit assumptions"
+        }
+      ],
+      "4L09": [
+        {
+          "source": "ckstt-v1",
+          "locator": "§1 Theorem 1.1"
+        }
+      ],
+      "4L0A": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0A integral-inequality proof"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0A body calculation with explicit assumptions"
+        }
+      ],
+      "4L0B": [
+        {
+          "source": "hptv-v2",
+          "locator": "§4.2.3 Proposition 4.8, (4.13)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0B body calculation with explicit assumptions"
+        }
+      ],
+      "4L0C": [
+        {
+          "source": "hptv-v2",
+          "locator": "§1.2 Theorems 1.1–1.2, Corollary 1.3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0C body calculation with explicit assumptions"
+        }
+      ],
+      "4L0D": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0D two elementary oscillatory estimates"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0D body calculation with explicit assumptions"
+        }
+      ],
+      "4L0E": [
+        {
+          "source": "giuliani-guardia-v2",
+          "locator": "§2 Theorems 2.1–2.2 and §2.1"
+        }
+      ],
+      "4L0F": [
+        {
+          "source": "deng-hani-v2",
+          "locator": "§1.1 DAT/COL/Theorem 1.1; §3.7 proof of Theorem 1.1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0F body calculation with explicit assumptions"
+        }
+      ],
+      "4L0G": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "(3.1); local exchange-of-variables proof"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0G body calculation with explicit assumptions"
+        }
+      ],
+      "4L0H": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "(3.7); elementary polar coordinates"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0H body calculation with explicit assumptions"
+        }
+      ],
+      "4L0I": [
+        {
+          "source": "pure-condensation-published",
+          "locator": "Definition 1 (13); §3.2 (35)–(36)"
+        },
+        {
+          "source": "mixed-condensation-v1",
+          "locator": "Definition 1 (32); §5 (77)–(91), Step 1, Step 2"
+        },
+        {
+          "source": "mixed-energy-v1",
+          "locator": "Definition 1 (34); §4 (77)–(100), Step 1 and cutoff construction"
+        }
+      ],
+      "4L0J": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "(3.6)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0J body calculation with explicit assumptions"
+        }
+      ],
+      "4L0K": [
+        {
+          "source": "staffilani-icm2026",
+          "locator": "(3.4)–(3.5); mass-factor correction"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0K body calculation with explicit assumptions"
+        }
+      ],
+      "4L0L": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0L two-point measures"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0L body calculation with explicit assumptions"
+        }
+      ],
+      "4L0M": [
+        {
+          "source": "pure-condensation-published",
+          "locator": "Theorem 3, (14)–(16)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0M body calculation with explicit assumptions"
+        },
+        {
+          "source": "pure-four-wave-transfer-v1",
+          "locator": "Theorem 3 compared with later published restatement"
+        }
+      ],
+      "4L0N": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0N elementary finite-measure arguments"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0N body calculation with explicit assumptions"
+        }
+      ],
+      "4L0O": [
+        {
+          "source": "pure-condensation-published",
+          "locator": "Theorem 4(i), (17)–(20)"
+        },
+        {
+          "source": "pure-condensation-v1",
+          "locator": "Theorem 4 compared with published Theorem 4(i)"
+        }
+      ],
+      "4L0P": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0P finite-grid two-variable lemma"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0P body calculation with explicit assumptions"
+        }
+      ],
+      "4L0Q": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0Q Chebyshev-type integral estimate"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0Q body calculation with explicit assumptions"
+        }
+      ],
+      "4L0R": [
+        {
+          "source": "mixed-condensation-v1",
+          "locator": "(1)–(4); §3 weak forms"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0R body calculation with explicit assumptions"
+        }
+      ],
+      "4L0S": [
+        {
+          "source": "mixed-condensation-v1",
+          "locator": "§1.2 (18)–(29), checked against strong forms (2)–(4)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0S body calculation with explicit assumptions"
+        }
+      ],
+      "4L0T": [
+        {
+          "source": "local-calculations",
+          "locator": "4L0T weak-form tests"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0T body calculation with explicit assumptions"
+        }
+      ],
+      "4L0U": [
+        {
+          "source": "mixed-condensation-v1",
+          "locator": "Assumptions A–B (5)–(16), Remark 1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0U body calculation with explicit assumptions"
+        }
+      ],
+      "4L0V": [
+        {
+          "source": "mixed-condensation-v1",
+          "locator": "Definition 1 (32); Theorem 3 (33)–(38)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0V body calculation with explicit assumptions"
+        }
+      ],
+      "4L0W": [
+        {
+          "source": "mixed-energy-v1",
+          "locator": "(21); Remark 3"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0W body calculation with explicit assumptions"
+        }
+      ],
+      "4L0X": [
+        {
+          "source": "mixed-energy-v1",
+          "locator": "Definition 1 (34); Remark 3 (40)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0X body calculation with explicit assumptions"
+        }
+      ],
+      "4L0Y": [
+        {
+          "source": "mixed-energy-v1",
+          "locator": "Assumption X (5)–(18), corrected derivative relative to Remark 1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0Y body calculation with explicit assumptions"
+        }
+      ],
+      "4L0Z": [
+        {
+          "source": "mixed-energy-v1",
+          "locator": "Theorem 2 (37)–(39), Remark 3; 4L0Y specialization"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4L0Z body calculation with explicit assumptions"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "Report Theorem 2.10 and work with Nicolas Camps",
+        "scope": "Read in full report; ongoing/unpublished waveguide/irrational-torus work is not promoted to a primary-paper theorem or expanded proof."
+      },
+      {
+        "branch": "General dispersion and non-condensation estimates",
+        "scope": "Pure four-wave theorems specialized to 1<gamma<=2 powers; general convex dispersion and full quantitative Theorem4(ii) constants not developed. N0/CF* thresholds are qualitative in the cited finite-condensation statement."
+      },
+      {
+        "branch": "Nonradial solutions, numerical domain decomposition, physical experiments",
+        "scope": "Report context read; these are not independent fully developed mathematical branches here."
+      },
+      {
+        "branch": "Exact source measure-class completion",
+        "scope": "Source C1 topology and pure-four-wave arbitrary-atom zero-frequency boundary values remain implicit at the cited definition. 4L0I discloses this source limitation and provides model-specific equation interfaces. No unique extension to every finite measure is claimed."
+      },
+      {
+        "branch": "Research-proof consistency",
+        "scope": "Mixed-energy preprint internal dropped-factor/derivative errors are recorded. No claim that the entire existence/cascade proof has been independently checked or repaired."
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      "CKSTT resonant-generation combinatorics, toy-model diffusion and PDE approximation.",
+      "HPTV infinitely growing resonant construction, modified scattering and modified wave operators.",
+      "Giuliani–Guardia arithmetic-set construction, quasi-resonant normal form and time estimates.",
+      "Deng–Hani layered cumulants and graph estimates establishing the kinetic limit.",
+      "Pure/mixed kinetic measure-solution existence, boundary collision construction, multi-scale condensation and finite-time energy loss.",
+      "Formal-vs-actual conservation requires model-specific integrability; local identities do not establish missing moment bounds."
+    ],
+    "metadata": {
+      "volume": "5",
+      "section": "11 Mathematical Physics",
+      "published_online": "2026-07-13",
+      "copyright": "2026 International Mathematical Union; SIAM",
+      "report_body_fully_read": true,
+      "full_primary_proofs_read": false,
+      "version_policy": "Formal proceedings HTML authoritative for report; primary excerpts are version-bound. Pure-condensation formal 2026 theorem contracts supersede the older density shorthand."
+    }
+  },
+  "notes": [
+    {
+      "id": "4L00",
+      "path": "trees/math/mathematical-physics/staffilani/4L00.tree",
+      "title": "波湍流：共振、凝聚与频率两端的迁移",
+      "taxon": "Outline",
+      "sha256": "a8d4c9a2d177c471b912ad7b582ff0e13e45ee8b8b74ee2e91d44e2315b6d9b9"
+    },
+    {
+      "id": "4L01",
+      "path": "trees/math/mathematical-physics/staffilani/4L01.tree",
+      "title": "矩形环面的色散参数",
+      "taxon": "Definition",
+      "sha256": "5eda807300cd47e214520b0016541f3331a1ff96284c2843c24d6a8aa973aafe"
+    },
+    {
+      "id": "4L02",
+      "path": "trees/math/mathematical-physics/staffilani/4L02.tree",
+      "title": "散焦三次 NLS 的质量与能量守恒",
+      "taxon": "Proposition",
+      "sha256": "c089cc7f4a34fff1f2495e8225652964202574bcc2e0eda90d088ab2b8636edc"
+    },
+    {
+      "id": "4L03",
+      "path": "trees/math/mathematical-physics/staffilani/4L03.tree",
+      "title": "高阶 Sobolev 范数怎样检测高频尾",
+      "taxon": "Proposition",
+      "sha256": "6aace6ad78df6286bfb225af08d2d1ec37b1e4800a8cdd168a7f319b05b2ffd2"
+    },
+    {
+      "id": "4L04",
+      "path": "trees/math/mathematical-physics/staffilani/4L04.tree",
+      "title": "三次 NLS 的相互作用表示与共振截取",
+      "taxon": "Construction",
+      "sha256": "4acda48e0905fe7c8d44d71f9754907d108b71de648cad8c92257accc8960ad6"
+    },
+    {
+      "id": "4L05",
+      "path": "trees/math/mathematical-physics/staffilani/4L05.tree",
+      "title": "一维三次共振只改变模态相位",
+      "taxon": "Proposition",
+      "sha256": "00b9ab4c244073f960071f1bf322486aabeccf74c586d9113e4381d894cf3bc3"
+    },
+    {
+      "id": "4L06",
+      "path": "trees/math/mathematical-physics/staffilani/4L06.tree",
+      "title": "无理二次谱的共振矩形平行于坐标轴",
+      "taxon": "Proposition",
+      "sha256": "ccec79e1ca4f5d47144df05caf9de11915d642c91f44df947723b38839e83cc4"
+    },
+    {
+      "id": "4L07",
+      "path": "trees/math/mathematical-physics/staffilani/4L07.tree",
+      "title": "坐标可分离权重给出无理共振系统的一致界",
+      "taxon": "Proposition",
+      "sha256": "0a8ee4cc197e724be2f3e79f528779a2008ee7a047f92be94ad8be1e8781b333"
+    },
+    {
+      "id": "4L08",
+      "path": "trees/math/mathematical-physics/staffilani/4L08.tree",
+      "title": "轴平行共振并不保持通常的四阶频率矩",
+      "taxon": "Example",
+      "sha256": "4a9bff4eff554e6ca3ecf9767fd2b1899e2751adf18a72c5e847b947d0a0c1e1"
+    },
+    {
+      "id": "4L09",
+      "path": "trees/math/mathematical-physics/staffilani/4L09.tree",
+      "title": "正方环面上三次 NLS 的任意有限范数增长",
+      "taxon": "Theorem",
+      "sha256": "6e50dd36197a91a62d48dfc18de090747c34fb8014f367ca48002cf6193264c3"
+    },
+    {
+      "id": "4L0A",
+      "path": "trees/math/mathematical-physics/staffilani/4L0A.tree",
+      "title": "近似轨道的误差为何依赖观察时间",
+      "taxon": "Lemma",
+      "sha256": "2d041bf1028bc83b0dc1369c989fb8f0fae67c310c55193acf62f9ae0524ad3e"
+    },
+    {
+      "id": "4L0B",
+      "path": "trees/math/mathematical-physics/staffilani/4L0B.tree",
+      "title": "正方环面共振系统的无限增长轨道",
+      "taxon": "Theorem",
+      "sha256": "8417e3cd7fe496deaf89df5fae1a76a91521b4f26bc58c3e528317effba86d04"
+    },
+    {
+      "id": "4L0C",
+      "path": "trees/math/mathematical-physics/staffilani/4L0C.tree",
+      "title": "波导上三次 NLS 的无限 Sobolev 增长",
+      "taxon": "Theorem",
+      "sha256": "01d9d5ab05ad62107bd995c1b1ef968f1700aec53455ac8f394f17146f176b2e"
+    },
+    {
+      "id": "4L0D",
+      "path": "trees/math/mathematical-physics/staffilani/4L0D.tree",
+      "title": "近共振项在有限时间内仍可相干累积",
+      "taxon": "Lemma",
+      "sha256": "01a407fb2f194b265a460efacd4f42ff7df59d400bd79cd6e53c170a5bbe5743"
+    },
+    {
+      "id": "4L0E",
+      "path": "trees/math/mathematical-physics/staffilani/4L0E.tree",
+      "title": "无理环面的倍数增长与小初值增长有不同假设",
+      "taxon": "Theorem",
+      "sha256": "0ba3caae493ee8a622a790e0fe6535513a22b2803367eb5be61a9ff1b43345e7"
+    },
+    {
+      "id": "4L0F",
+      "path": "trees/math/mathematical-physics/staffilani/4L0F.tree",
+      "title": "随机谱的动力学极限与长时间极限的次序",
+      "taxon": "Remark",
+      "sha256": "1f79a24aff83caae8dc1bc5fce1f7a5e2d197685e0faf76bb6909197eac35a3e"
+    },
+    {
+      "id": "4L0G",
+      "path": "trees/math/mathematical-physics/staffilani/4L0G.tree",
+      "title": "四波碰撞的对称弱式与碰撞不变量",
+      "taxon": "Proposition",
+      "sha256": "1b9af8685b98dae316db3a0ad61a46f2f5019f2a14e18068ada84f288dcee33c"
+    },
+    {
+      "id": "4L0H",
+      "path": "trees/math/mathematical-physics/staffilani/4L0H.tree",
+      "title": "三维径向谱的频率能量变量",
+      "taxon": "Construction",
+      "sha256": "eaa2fbb183f21e2008426a10510ff26154d23f5efd9b6c3df7436ba6cba19366"
+    },
+    {
+      "id": "4L0I",
+      "path": "trees/math/mathematical-physics/staffilani/4L0I.tree",
+      "title": "径向测度解的测试函数与碰撞约定",
+      "taxon": "Definition",
+      "sha256": "bb4fd4206f6127742fa9b309e7ecbbc3b317eee449e459192350dedd6412850b"
+    },
+    {
+      "id": "4L0J",
+      "path": "trees/math/mathematical-physics/staffilani/4L0J.tree",
+      "title": "首次凝聚时间的量词",
+      "taxon": "Definition",
+      "sha256": "259109c615ad52e03ca786b52ef1af9f68cb211c837651e86c27c4045e5e52d2"
+    },
+    {
+      "id": "4L0K",
+      "path": "trees/math/mathematical-physics/staffilani/4L0K.tree",
+      "title": "质量趋向原点推出有界频段能量消失",
+      "taxon": "Proposition",
+      "sha256": "cbbbc1217d803823eef610a6b475a04c4964c6f341cd8aace9675925086b18a5"
+    },
+    {
+      "id": "4L0L",
+      "path": "trees/math/mathematical-physics/staffilani/4L0L.tree",
+      "title": "少量高频质量可以承载固定能量",
+      "taxon": "Example",
+      "sha256": "45f5be8275c9b8af2fe1baac69ead87aac0809e6225652e0231c5d29377ae67d"
+    },
+    {
+      "id": "4L0M",
+      "path": "trees/math/mathematical-physics/staffilani/4L0M.tree",
+      "title": "纯四波方程的长时间局部能量衰减",
+      "taxon": "Theorem",
+      "sha256": "518aa7ced34c3bff8768b4504c3f1e65bab7706aad399ceecf3c2146e5ccfe20"
+    },
+    {
+      "id": "4L0N",
+      "path": "trees/math/mathematical-physics/staffilani/4L0N.tree",
+      "title": "原点附近的累积质量下界",
+      "taxon": "Proposition",
+      "sha256": "b7ec25750565ab5cc26f1c5a19c7e43dd4aef4c4a1a20c1b86e30c876c56db8b"
+    },
+    {
+      "id": "4L0O",
+      "path": "trees/math/mathematical-physics/staffilani/4L0O.tree",
+      "title": "纯四波有限时间凝聚的两项集中条件",
+      "taxon": "Theorem",
+      "sha256": "e9b176afbadb890f2d534f478732695954779e44a1e0b55e9414898b47fe9171"
+    },
+    {
+      "id": "4L0P",
+      "path": "trees/math/mathematical-physics/staffilani/4L0P.tree",
+      "title": "区间内不集中迫使分离频率对占有质量",
+      "taxon": "Lemma",
+      "sha256": "449fe1c8e259281d8089c559baa873c15768c8792825a4a42c5899839846fc12"
+    },
+    {
+      "id": "4L0Q",
+      "path": "trees/math/mathematical-physics/staffilani/4L0Q.tree",
+      "title": "有界耗散预算限制非集中时间集合",
+      "taxon": "Lemma",
+      "sha256": "ea35496a2adab50696a8328b7ee5a3e088495bc0f0fcde52a59d10d843986ecc"
+    },
+    {
+      "id": "4L0R",
+      "path": "trees/math/mathematical-physics/staffilani/4L0R.tree",
+      "title": "一对二、一对三与二对二的碰撞通道",
+      "taxon": "Definition",
+      "sha256": "c5dabbd148fab11ccce319cf827cc85701218bfdbce059203c6c05f8ab52c6f1"
+    },
+    {
+      "id": "4L0S",
+      "path": "trees/math/mathematical-physics/staffilani/4L0S.tree",
+      "title": "高占据近似保留哪些 Bose 碰撞项",
+      "taxon": "Proposition",
+      "sha256": "876e4691f57943edb90cf11716c96da31cdc8b8b76bb527738e0c6a8a635d485"
+    },
+    {
+      "id": "4L0T",
+      "path": "trees/math/mathematical-physics/staffilani/4L0T.tree",
+      "title": "三波通道保持能量却不以粒子数为碰撞不变量",
+      "taxon": "Proposition",
+      "sha256": "f7347f4809ce93bd261898f51b96812cd55e0d3e482587dd51f04a714733ad3b"
+    },
+    {
+      "id": "4L0U",
+      "path": "trees/math/mathematical-physics/staffilani/4L0U.tree",
+      "title": "二次色散的三波与四波混合模型",
+      "taxon": "Definition",
+      "sha256": "54b5174860dc49a9db685e40a212b5fd4c49ad95df1f5fc1db9485cc3abedfcf"
+    },
+    {
+      "id": "4L0V",
+      "path": "trees/math/mathematical-physics/staffilani/4L0V.tree",
+      "title": "二次色散混合模型的即时与有限时间凝聚",
+      "taxon": "Theorem",
+      "sha256": "b155e1aeb55783bddba6d9783623fff1a1b3c2f8a1e4ac8a81afdabfcef37649"
+    },
+    {
+      "id": "4L0W",
+      "path": "trees/math/mathematical-physics/staffilani/4L0W.tree",
+      "title": "能量守恒的首次失效时间",
+      "taxon": "Definition",
+      "sha256": "fbc32e3d148698a357ba3f269455fa90c1cdfdf8944d5639f274e90a895e3431"
+    },
+    {
+      "id": "4L0X",
+      "path": "trees/math/mathematical-physics/staffilani/4L0X.tree",
+      "title": "截断能量通量与无穷远处的损失",
+      "taxon": "Proposition",
+      "sha256": "24354ac540109bd6ceb1864048aeb271e104096276e521f315b3c57b6215b4ab"
+    },
+    {
+      "id": "4L0Y",
+      "path": "trees/math/mathematical-physics/staffilani/4L0Y.tree",
+      "title": "四次色散下一个可核算的混合碰撞核",
+      "taxon": "Construction",
+      "sha256": "e0348663445029637ca4684f55d2b3d0234ae065d590c70b19e5a51cc8cb56d2"
+    },
+    {
+      "id": "4L0Z",
+      "path": "trees/math/mathematical-physics/staffilani/4L0Z.tree",
+      "title": "四次色散混合模型的有限时间能量逸出",
+      "taxon": "Theorem",
+      "sha256": "ffba4b0c996ea4fb2db8f4fa99da4a2eabe51d955b322fb69e04a9a54d858503"
+    },
+    {
+      "id": "icm2026-staffilani",
+      "path": "trees/references/icm2026-staffilani.tree",
+      "title": "Staffilani：New and Old Mathematical Results on Wave Turbulence Theory",
+      "taxon": "Reference",
+      "sha256": "04ffc0b167d0f508afc5c980912537dba192ab6e60c220617b708040e06e0b8a"
+    }
+  ],
+  "prerequisites": {
+    "4L01": [
+      "4101"
+    ],
+    "4L02": [
+      "4L01",
+      "470T",
+      "4101"
+    ],
+    "4L03": [
+      "4101",
+      "4L02"
+    ],
+    "4L04": [
+      "4L02",
+      "4L01",
+      "4414"
+    ],
+    "4L05": [
+      "4L04",
+      "4101"
+    ],
+    "4L06": [
+      "4L01",
+      "4L04",
+      "4L05"
+    ],
+    "4L07": [
+      "4L04",
+      "4L06",
+      "4101"
+    ],
+    "4L08": [
+      "4L06",
+      "00OB",
+      "4L07"
+    ],
+    "4L09": [
+      "4L02",
+      "4414",
+      "4L03"
+    ],
+    "4L0A": [
+      "00OB"
+    ],
+    "4L0B": [
+      "4L04",
+      "4101"
+    ],
+    "4L0C": [
+      "0H4G",
+      "4101",
+      "4L04",
+      "4L0B"
+    ],
+    "4L0D": [
+      "4L04",
+      "4L06"
+    ],
+    "4L0E": [
+      "4L01",
+      "00Q4",
+      "00XV",
+      "4L0D",
+      "4L07"
+    ],
+    "4L0F": [
+      "4412",
+      "4411",
+      "00L1",
+      "4413",
+      "4419",
+      "4415"
+    ],
+    "4L0G": [
+      "4426",
+      "4415"
+    ],
+    "4L0H": [
+      "00Q2"
+    ],
+    "4L0I": [
+      "0K12",
+      "00QD",
+      "4L0H",
+      "4426"
+    ],
+    "4L0J": [
+      "4L0I"
+    ],
+    "4L0K": [
+      "4E24"
+    ],
+    "4L0L": [
+      "00Q2",
+      "4426",
+      "4E24"
+    ],
+    "4L0M": [
+      "4L0G",
+      "4L0H",
+      "0K12",
+      "4L0I"
+    ],
+    "4L0N": [
+      "00Q2",
+      "4L0H"
+    ],
+    "4L0O": [
+      "4L0G",
+      "4L0H",
+      "4L0I",
+      "4L0J"
+    ],
+    "4L0P": [
+      "00Q2",
+      "0H53"
+    ],
+    "4L0Q": [
+      "00XV",
+      "4L0P"
+    ],
+    "4L0R": [
+      "4426",
+      "4L0G"
+    ],
+    "4L0S": [
+      "4L0R",
+      "4427"
+    ],
+    "4L0T": [
+      "4L0R",
+      "4L0G"
+    ],
+    "4L0U": [
+      "4L0R",
+      "4L0I",
+      "4L0S"
+    ],
+    "4L0V": [
+      "4L0U",
+      "4L0H",
+      "4L0J",
+      "4L0N"
+    ],
+    "4L0W": [
+      "4L0H",
+      "4L0J",
+      "4L0L"
+    ],
+    "4L0X": [
+      "4L0I",
+      "0I8I",
+      "0A7A",
+      "4L0G",
+      "4L0T"
+    ],
+    "4L0Y": [
+      "4L0R",
+      "4L0H"
+    ],
+    "4L0Z": [
+      "4L0Y",
+      "4L0H",
+      "4L0W"
+    ]
+  },
+  "atomic_questions": {
+    "4L01": "矩形环面的几何边长如何决定共振所用的谱系数？",
+    "4L02": "散焦三次 NLS 为何控制 H1 而允许更高阶矩变化？",
+    "4L03": "高阶范数增长怎样迫使高频加权尾变大？",
+    "4L04": "共振截取从何种相位公式产生？",
+    "4L05": "一维共振为何不改变模态强度？",
+    "4L06": "无理二次谱为什么只允许轴平行非退化共振？",
+    "4L07": "哪些权重在无理共振系统中守恒？",
+    "4L08": "轴平行共振是否保证通常各向同性Sobolev范数恒定？",
+    "4L09": "任意小初值能否在有限时间达到任意大高阶范数？",
+    "4L0A": "近似轨道误差如何依赖正向观察时间？",
+    "4L0B": "正方环面的共振系统能否有同一轨道的无限增长？",
+    "4L0C": "非紧方向怎样使共振的无限增长传到波导NLS？",
+    "4L0D": "小的非零失配可在多长时间内近似共振？",
+    "4L0E": "无理环面两种增长定理的量词和算术范围如何区分？",
+    "4L0F": "随机数据的固定慢时间极限能否直接传递凝聚和无限时间行为？",
+    "4L0G": "四波碰撞的形式不变量来自什么对称性？",
+    "4L0H": "径向谱如何变成非负能量半轴上的质量测度？",
+    "4L0I": "引用凝聚和能量逸出定理时究竟采用哪个测度解类？",
+    "4L0J": "首次凝聚时间为零究竟表示什么？",
+    "4L0K": "质量弱收敛到原点如何控制局部能量？",
+    "4L0L": "质量趋向原点能否与总能量不变同时发生？",
+    "4L0M": "纯四波方程在哪些支集假设下失去每个有界频段的能量？",
+    "4L0N": "累积低频质量下界比逐点密度假设弱在哪里？",
+    "4L0O": "纯四波有限时间凝聚需要哪两项集中条件？",
+    "4L0P": "不集中如何迫使分离频率对具有正质量？",
+    "4L0Q": "耗散预算如何限制非集中时间集合？",
+    "4L0R": "三种碰撞通道的波模态数和测试差是什么？",
+    "4L0S": "高占据数展开为什么留下不同次数的波算子？",
+    "4L0T": "一对多通道为何守恒能量却不守恒热云粒子数？",
+    "4L0U": "哪个明确的混合模型适用低频凝聚定理？",
+    "4L0V": "二次色散混合模型中多强的低频尾会导致即时凝聚？",
+    "4L0W": "能量守恒失效时间与凝聚时间为何不同？",
+    "4L0X": "形式能量抵消怎样与无穷远能量损失相容？",
+    "4L0Y": "能否给出实际满足能量逸出论文假设的具体核？",
+    "4L0Z": "四次色散混合模型的重高频尾何时迫使能量逸出？"
+  },
+  "navigation_only": [
+    "4L00",
+    "icm2026-staffilani"
+  ],
+  "reused_pages": [
+    "00L1",
+    "00OB",
+    "00Q2",
+    "00Q4",
+    "00QD",
+    "00XV",
+    "0A7A",
+    "0H4G",
+    "0H53",
+    "0I8I",
+    "0K12",
+    "4101",
+    "4411",
+    "4412",
+    "4413",
+    "4414",
+    "4415",
+    "4419",
+    "4426",
+    "4427",
+    "470T",
+    "4E24"
+  ],
+  "entries": [
+    [
+      "4L01",
+      [
+        "4101"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；谱参数与几何边长平方关系及固定参数 Sobolev 范数等价。"
+    ],
+    [
+      "4L02",
+      [
+        "4L01",
+        "470T",
+        "4101"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；光滑周期解的分部积分守恒证明；不证明低正则适定性。"
+    ],
+    [
+      "4L03",
+      [
+        "4101",
+        "4L02"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；固定频率球加权界及单模态函数族；例子不是演化轨道。"
+    ],
+    [
+      "4L04",
+      [
+        "4L02",
+        "4L01",
+        "4414"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；相互作用表示精确符号和固定振幅振荡平均；不主张无穷时间平均定理。"
+    ],
+    [
+      "4L05",
+      [
+        "4L04",
+        "4101"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；一维整数匹配因式分解、对角重复扣除和显式相位解。"
+    ],
+    [
+      "4L06",
+      [
+        "4L01",
+        "4L04",
+        "4L05"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；无理谱逐坐标匹配；加权正交与缩放后的欧氏矩形区别。"
+    ],
+    [
+      "4L07",
+      [
+        "4L04",
+        "4L06",
+        "4101"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；绝对收敛条件下加权四次对称化；有限截断成立，传极限明确要求hs强收敛，不证明全局无限维解构造。"
+    ],
+    [
+      "4L08",
+      [
+        "4L06",
+        "00OB",
+        "4L07"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；闭合四频率集合的导数(-4,4,4,-4)，通常h2平方范数导数为-8。"
+    ],
+    [
+      "4L09",
+      [
+        "4L02",
+        "4414",
+        "4L03"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；引用CKSTT小到大有限时间结论；频率族构造、toy model轨道与PDE稳定证明未重建。"
+    ],
+    [
+      "4L0A",
+      [
+        "00OB"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；[0,T]上有限维非齐次Gronwall估计，L=0分开；不推出无限时间PDE逼近。"
+    ],
+    [
+      "4L0B",
+      [
+        "4L04",
+        "4101"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；引用Proposition4.8；增长率与对数幂、多项式的比较为局部计算。"
+    ],
+    [
+      "4L0C",
+      [
+        "0H4G",
+        "4101",
+        "4L04",
+        "4L0B"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；引用s为整数且s>=30的Corollary1.3；pi log t时间变换直接计算；不声称任意小Hs初值都有修正散射。"
+    ],
+    [
+      "4L0D",
+      [
+        "4L04",
+        "4L06"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；振荡积分与常数T之差上界|Omega|T²/2；可微振幅分部积分。"
+    ],
+    [
+      "4L0E",
+      [
+        "4L01",
+        "00Q4",
+        "00XV",
+        "4L0D",
+        "4L07"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；固定s>1引用满测度倍数增长与较薄集合的小到大结论；不重建算术集合与准共振轨道。"
+    ],
+    [
+      "4L0F",
+      [
+        "4412",
+        "4411",
+        "00L1",
+        "4413",
+        "4419",
+        "4415"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；复用4411–4419，核读主定理与截断期望；一致误差不推出积分误差的球例子直接计算。"
+    ],
+    [
+      "4L0G",
+      [
+        "4426",
+        "4415"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；约束测度存在且积分绝对收敛时的1/4对称弱式；不把形式能量消去升级为任意测度解守恒。"
+    ],
+    [
+      "4L0H",
+      [
+        "00Q2"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；连续、正半轴C1、严格递增且无界色散下换元，4pi因子和密度幂次。"
+    ],
+    [
+      "4L0I",
+      [
+        "0K12",
+        "00QD",
+        "4L0H",
+        "4426"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；分别指定三篇论文Definition1、测试类、C1原记号、模型弱泛函与边界解释；纯四波任意原子边界公式及C1拓扑未在源定义单独给出，公开说明此来源限制。无存在或延拓证明。"
+    ],
+    [
+      "4L0J",
+      [
+        "4L0I"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；首次凝聚时间的上确界与任意短区间量词；有限测度递减连续性。"
+    ],
+    [
+      "4L0K",
+      [
+        "4E24"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；Cb弱收敛到Mdelta0蕴含紧频段能量趋零；尾能量结论额外假设总能量守恒。"
+    ],
+    [
+      "4L0L",
+      [
+        "00Q2",
+        "4426",
+        "4E24"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；显式两点正测度计算质量、能量与弱极限；不声称满足碰撞方程。"
+    ],
+    [
+      "4L0M",
+      [
+        "4L0G",
+        "4L0H",
+        "0K12",
+        "4L0I"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；正式凝聚论文Theorem3的纯幂特例，保留支集条件、质量守恒和局部能量消失，不附加总能量守恒；远离零的质量界直接证明。"
+    ],
+    [
+      "4L0N",
+      [
+        "00Q2",
+        "4L0H"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；c>0必要性、幂密度积分及具有间隙的反例；累积下界不推出逐点密度下界。"
+    ],
+    [
+      "4L0O",
+      [
+        "4L0G",
+        "4L0H",
+        "4L0I",
+        "4L0J"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；正式Theorem4(i)的纯幂特例，保留两项集中条件和给定质量守恒全局解；N0/CF*阈值源定理仅定性。"
+    ],
+    [
+      "4L0P",
+      [
+        "00Q2",
+        "0H53"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；有限区间网格及Fubini给出分离对质量>=eta M²；不声称是源文全部三重碰撞区域引理。"
+    ],
+    [
+      "4L0Q",
+      [
+        "00XV",
+        "4L0P"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；非负积分预算给集合测度界；时间区间覆盖明确另作假设，未将其充当凝聚证明。"
+    ],
+    [
+      "4L0R",
+      [
+        "4426",
+        "4L0G"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；1↔m多项式与弱式，强式的-m来自重新编号；同一通道的系数乘全项。"
+    ],
+    [
+      "4L0S",
+      [
+        "4L0R",
+        "4427"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；Bose因子完整展开，保留-f0 sumfj二次项；仅占据多项式代数极限，不是方程解极限。"
+    ],
+    [
+      "4L0T",
+      [
+        "4L0R",
+        "4L0G"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；一对多测试差对频率能量为零、对常数为1-m，未推断质量导数有固定符号。"
+    ],
+    [
+      "4L0U",
+      [
+        "4L0R",
+        "4L0I",
+        "4L0S"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；二次色散、mu=0,c12=c22=1,c31=0，核与AssumptionsA–B参数直接核对；不等同完整量子耦合系统。"
+    ],
+    [
+      "4L0V",
+      [
+        "4L0U",
+        "4L0H",
+        "4L0J",
+        "4L0N"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；引用Theorem3存在至少一个构造解及其凝聚结论；有限c<1/2、即时c<1/40及幂初值直接计算。"
+    ],
+    [
+      "4L0W",
+      [
+        "4L0H",
+        "4L0J",
+        "4L0L"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；按源(21)定义能量保持初始区间的上确界；严格下降解释额外假设E(t)<=E0。"
+    ],
+    [
+      "4L0X",
+      [
+        "4L0I",
+        "0I8I",
+        "0A7A",
+        "4L0G",
+        "4L0T"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；可用的双重截断测试尊重phi'(0)=0；先epsilon后R，DCT/MCT只作用于端点积分；不交换碰撞极限。"
+    ],
+    [
+      "4L0Y",
+      [
+        "4L0R",
+        "4L0H"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；独立选择quartic模型，R'幂次-3/4，九项AssumptionX约束逐项算出；源深定理证明仍外引。"
+    ],
+    [
+      "4L0Z",
+      [
+        "4L0Y",
+        "4L0H",
+        "4L0W"
+      ],
+      "所列链接给出本页直接使用的对象、记号或结论；引用Theorem2，四次模型下finite c<3/4、instant c<1/120直接代入；不推回二次NLS，不重建能量逸出证明。"
+    ]
+  ],
+  "non_prerequisite_links": [
+    {
+      "from": "4L04",
+      "to": "4L0A",
+      "reason": "application: stability needed for returning to PDE"
+    },
+    {
+      "from": "4L0B",
+      "to": "4L0A",
+      "reason": "limitation comparison: finite approximation versus infinite resonant orbit"
+    },
+    {
+      "from": "4L0F",
+      "to": "4L09",
+      "reason": "comparison: fixed 2D deterministic data versus random large boxes"
+    },
+    {
+      "from": "4L0G",
+      "to": "4L0X",
+      "reason": "application: flux limits beyond absolutely convergent identity"
+    },
+    {
+      "from": "4L0L",
+      "to": "4L0K",
+      "reason": "application: measure example illustrates local energy lemma"
+    },
+    {
+      "from": "4L0T",
+      "to": "4L0X",
+      "reason": "application: energy tests on singular solutions"
+    },
+    {
+      "from": "4L0Y",
+      "to": "4L0U",
+      "reason": "comparison: quadratic versus quartic model"
+    }
+  ],
+  "terminology_evidence": {
+    "date": "2026-10-24",
+    "method": "Whole-forest file/title/body searches across the existing tree inventory for Fourier, periodic Sobolev, resonance, NLS, Gaussian, expectation, kinetic scaling, measures, weak convergence, monotone/dominated convergence and Radon terminology. Selected actual destinations read; no claim to have semantically read all 7130 existing trees.",
+    "canonical_definition_reuse": [
+      "4101 periodic Fourier and Sobolev; 0H4G Euclidean transform; 00OB ODE; 470T defocusing convention.",
+      "4411/4412/4413/4414/4415/4419/4426/4427 reused for random data, scaling, resonance, collision, kinetic-limit and quantum-expansion prerequisites.",
+      "00Q2/00QD/00Q4/00XV, 0K12, 4E24, 0H53, 0I8I and 0A7A provide actual measure/integration/weak-convergence destinations."
+    ],
+    "banana_space": {
+      "attempted_urls": [
+        "https://www.bananaspace.org/wiki/傅里叶级数"
+      ],
+      "search_queries": [
+        "site:bananaspace.org \"共振\""
+      ],
+      "result": "Direct page request returned InternalError; scoped search yielded no usable terminology match. No Banana-space terminology verified.",
+      "verified_terms": [],
+      "access_gap": true
+    },
+    "terminology_choices": [
+      "波动力学方程 follows existing 44xx kinetic notes; the report's weak turbulence and deterministic Sobolev growth are not collapsed into one theorem.",
+      "凝聚 refers to a nonzero atom of the radial mass measure at zero; 能量逸出 refers to failure of total frequency energy conservation on finite frequencies, not merely local-energy decay.",
+      "谱参数无理 is used instead of raw side-length irrationality; weighted and Euclidean rectangles are distinguished."
+    ]
+  },
+  "source_records": [
+    {
+      "id": "staffilani-icm2026",
+      "authors": [
+        "Gigliola Staffilani"
+      ],
+      "title": "New and Old Mathematical Results on Wave Turbulence Theory",
+      "doi": "10.1137/25M1803309",
+      "pages": "596–615",
+      "published_online": "2026-07-13",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+      "license": "CC BY 4.0",
+      "copyright": "2026 International Mathematical Union; published by SIAM",
+      "actual_reading": "Entire publisher HTML mathematical body §§1–3, every displayed formula and both figure captions, in overlapping reads (lines 84–536); acknowledgments 537–539 and footnotes 540–548. Selected relevant bibliography entries, not the whole bibliography. Title/DOI/pages/online date/license verified. Publisher PDF retrieval returned HTTP 403; no publisher-PDF or figure-pixel inspection.",
+      "proof_boundary": "Research theorems are quoted with narrowed, source-checked hypotheses. Local algebra and elementary arguments are identified per atom; report heuristics are not represented as complete proofs."
+    },
+    {
+      "id": "ckstt-v1",
+      "title": "Weakly turbulent solutions for the cubic defocusing nonlinear Schrödinger equation",
+      "authors": [
+        "J. Colliander",
+        "M. Keel",
+        "G. Staffilani",
+        "H. Takaoka",
+        "T. Tao"
+      ],
+      "version": "arXiv:0808.1742v1",
+      "version_date": "2008-08-13",
+      "url": "https://arxiv.org/abs/0808.1742v1",
+      "version_url": "https://arxiv.org/pdf/0808.1742v1",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "§1 opening through Theorem 1.1 and its following comparison (pdftotext -layout lines 85–175, PDF pp.2–4); contents viewed. No §§2–4 diffusion or frequency-set proof read. Latest arXiv v2 exists; statements here are explicitly bound to v1. Formal publication title/DOI/pages checked from publisher metadata only.",
+      "local_pdf": "/tmp/staffilani-ckstt-v1.pdf",
+      "sha256": "060069bad55181a039d6cd658a34048b0ac0ceeec67712c5b77ef89b6c7e95f3",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "hptv-v2",
+      "title": "Modified scattering for the cubic Schrödinger equation on product spaces and applications",
+      "authors": [
+        "Zaher Hani",
+        "Benoit Pausader",
+        "Nikolay Tzvetkov",
+        "Nicola Visciglia"
+      ],
+      "version": "arXiv:1311.2275v2",
+      "version_date": "2013-12-19",
+      "url": "https://arxiv.org/abs/1311.2275v2",
+      "version_url": "https://arxiv.org/pdf/1311.2275v2",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "§1.2 Theorems 1.1–1.2 and Corollary 1.3 (extracted lines 85–190); §4.2.3 Proposition 4.8 and opening gauge/finite-set discussion (1585–1640, PDF pp.29–30). Not full modified scattering or infinite-cascade construction. Latest v3 dated 2014-10-08 exists and was not substituted for this read version.",
+      "local_pdf": "/tmp/staffilani-hptv-v2.pdf",
+      "sha256": "bcf70e896ab4e2069f33a80c282df3fc8844035cb671c337231db748bc9f1e63",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "giuliani-guardia-v2",
+      "title": "Sobolev norms explosion for the cubic NLS on irrational tori",
+      "authors": [
+        "Filippo Giuliani",
+        "Marcel Guardia"
+      ],
+      "version": "arXiv:2110.15845v2",
+      "version_date": "2022-03-01",
+      "url": "https://arxiv.org/abs/2110.15845v2",
+      "version_url": "https://arxiv.org/pdf/2110.15845v2",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "Selected §1 context and §2 through Theorems 2.1–2.2 (lines 75–265); complete §2.1 statements and arithmetic-set descriptions plus opening §2.2 (260–345). No toy-model/PDE approximation proofs read.",
+      "local_pdf": "/tmp/staffilani-irrational-v2.pdf",
+      "sha256": "94e440b87fab46a4dfb010c30a77a53bcd500b5c54ebe39b63ce7d05a92546e7",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "deng-hani-v2",
+      "title": "Long time justification of wave turbulence theory",
+      "authors": [
+        "Yu Deng",
+        "Zaher Hani"
+      ],
+      "version": "arXiv:2311.10082v2",
+      "version_date": "2024-04-07",
+      "url": "https://arxiv.org/abs/2311.10082v2",
+      "version_url": "https://arxiv.org/pdf/2311.10082v2",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "actual_reading": "§1.1 Fourier/DAT/scaling/COL and Theorem 1.1, through Remarks 1.3–1.4 (lines 130–230, PDF pp.3–5); §3.7 final proof of Theorem 1.1 and preceding paragraph (1733–1768, PDF p.32), verifying indicator-truncated expectations. No full layered-graph proof or Appendix C read. Forest 4411–4419 reused rather than rewritten.",
+      "local_pdf": "/tmp/staffilani-deng-hani-v2.pdf",
+      "sha256": "424a5539a9edfc183ca236562094673b66ccb87b6fee78160c13e52b5ca23a72",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "pure-four-wave-transfer-v1",
+      "title": "On the energy transfer towards large values of wavenumbers for solutions of 4-wave kinetic equations",
+      "authors": [
+        "Gigliola Staffilani",
+        "Minh-Binh Tran"
+      ],
+      "version": "arXiv:2407.18508v1",
+      "version_date": "2024-07-26",
+      "url": "https://arxiv.org/abs/2407.18508v1",
+      "version_url": "https://arxiv.org/pdf/2407.18508v1",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "Opening abstract/introduction, §2 notation and Theorem 3, start of §3.1 geometry (extracted lines 1–350; follow-up 280–355). Not full geometric spreading/long-time proof. The later published condensation article's Theorem 3 is the authority for the measure formulation and the narrower no-extra-energy-conservation statement.",
+      "local_pdf": "/tmp/staffilani-energy-v1.pdf",
+      "sha256": "bbd6590d88cab795b0cee34b20eae195fae6377cd69727121a7c0f80d0c45cdf",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "pure-condensation-v1",
+      "title": "Condensation and non-condensation times for 4-wave kinetic equations",
+      "authors": [
+        "Gigliola Staffilani",
+        "Minh-Binh Tran"
+      ],
+      "version": "arXiv:2407.18533v1",
+      "version_date": "2024-07-26",
+      "url": "https://arxiv.org/abs/2407.18533v1",
+      "version_url": "https://arxiv.org/pdf/2407.18533v1",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "Opening through main Theorem 4, §3.1 domain definitions and opening Lemma 8 (lines 1–380). Compared both concentration conditions with the 2026 formal version. No full multiscale proof.",
+      "local_pdf": "/tmp/staffilani-condensation-v1.pdf",
+      "sha256": "b393e1ba59424f2ba6b67f9096c4a23da87c51c7205f89151e1405bb2bea285b",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "pure-condensation-published",
+      "authors": [
+        "Gigliola Staffilani",
+        "Minh-Binh Tran"
+      ],
+      "title": "Condensation and Non-condensation Times for 4-Wave Kinetic Equations",
+      "doi": "10.1007/s00205-026-02217-0",
+      "journal": "Archive for Rational Mechanics and Analysis",
+      "volume": "250",
+      "article": "58",
+      "version": "Version of record",
+      "version_date": "2026-06-16",
+      "published_online": "2026-06-16",
+      "url": "https://link.springer.com/article/10.1007/s00205-026-02217-0",
+      "version_url": "https://link.springer.com/article/10.1007/s00205-026-02217-0",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "actual_reading": "Publisher HTML §§1–2.1 (lines 59–275), including Definition 1 and Theorems 3–4; later read §2.2 and §3.1 discussion (278–394), §3.2 opening weak identities (395–423) and displayed remainder of Lemma 10 proof (425–449) as source-interface check. Rights/metadata lines 1512–1531 verified. No full §§3.3–4 proof, no publisher PDF or figures read as pixels.",
+      "proof_boundary": "Used for exact imported mild radial solution contract, both concentration conditions, and Theorem 3 restatement. Source Definition 1 leaves measure-topology and arbitrary-atom boundary details implicit; this is disclosed, not silently supplied."
+    },
+    {
+      "id": "mixed-condensation-v1",
+      "title": "Evolution of finite temperature Bose-Einstein Condensates: Some rigorous studies on condensate growth",
+      "authors": [
+        "Gigliola Staffilani",
+        "Minh-Binh Tran"
+      ],
+      "version": "arXiv:2512.19525v1",
+      "version_date": "2025-12-22",
+      "url": "https://arxiv.org/abs/2512.19525v1",
+      "version_url": "https://arxiv.org/pdf/2512.19525v1",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "Model, Assumptions A–B, physical-context formulas and Definition 1/Theorem 3 (lines 60–470); §11 proof map 3960–3980. ST-F05 follow-up read §5 Proposition 11, (77)–(91), and boundary-kernel discussion through start of two-zero case (1310–1495); A/Theta definitions 190–248 and Definition 1 rechecked 410–423. PDF p.9 rendered to /tmp/staffilani-growth-p9.png and visually inspected for (38). Full existence and condensation proof not read.",
+      "local_pdf": "/tmp/staffilani-growth-v1.pdf",
+      "sha256": "7ae05d1b60f4616772969f8abbb62e00ede8a5cbba398e70a688a7bc9e4701d7",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "mixed-energy-v1",
+      "title": "Finite time energy cascade for mixed 3- and 4-wave kinetic equations",
+      "authors": [
+        "Gigliola Staffilani",
+        "Minh-Binh Tran"
+      ],
+      "version": "arXiv:2512.19531v1",
+      "version_date": "2025-12-22",
+      "url": "https://arxiv.org/abs/2512.19531v1",
+      "version_url": "https://arxiv.org/pdf/2512.19531v1",
+      "license": "arXiv non-exclusive distribution license",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "actual_reading": "Model, Assumptions X–Y and physical context (lines 55–330); Definition 1, Theorem 2, Remark 3 (375–453); §9 proof map 3935–3943. ST-F05 follow-up: §4 Proposition 10, (77)–(88) and beginning kernel estimates (1290–1425), boundary estimates/cutoff setup (1510–1605), final existence-step excerpt (1667–1728). PDF p.3 rendered to /tmp/staffilani-cascade-p3.png and visually inspected for Assumption X. Full energy-loss proof not read. Detected missing maximum-frequency factor between (79) and (82); the model is bound to (1)–(7), (79).",
+      "local_pdf": "/tmp/staffilani-mixed-cascade-v1.pdf",
+      "sha256": "cb19db741d48ce44f885bf0555f4fc6d75674b63bab111ffa69f51c5d4a83c07",
+      "proof_boundary": "Only the specified excerpts were read. Full research proof not reconstructed; local deductions are separately identified."
+    },
+    {
+      "id": "pure-transfer-published-metadata-only",
+      "authors": [
+        "Gigliola Staffilani",
+        "Minh-Binh Tran"
+      ],
+      "title": "On the Energy Transfer towards Large Values of Wavenumbers for Solutions of 4-Wave Kinetic Equations",
+      "doi": "10.1137/25M1748032",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1748032",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1748032",
+      "journal": "SIAM Journal on Mathematical Analysis",
+      "volume": "58",
+      "pages": "4276–4310",
+      "published_online": "2026-08-19",
+      "license": "Copyright SIAM; all rights reserved",
+      "actual_reading": "Abstract and publisher bibliographic/access metadata only; mathematical body paywalled and not read. Not used as a full-text proof authority."
+    },
+    {
+      "id": "local-calculations",
+      "type": "independent-derivation",
+      "actual_reading": "Original local algebra, inequalities, measure examples, oscillatory integrals and parameter substitutions are written explicitly in the 4L atoms. Existing Fourier, Sobolev, probability, measure and integration notes are linked.",
+      "proof_boundary": "Finite enumeration and numerical checks corroborate formulas, not cited infinite-dimensional research theorems."
+    }
+  ],
+  "source_clarifications": [
+    {
+      "id": "ST-C01",
+      "notes": [
+        "4L01",
+        "4L04",
+        "4L0E"
+      ],
+      "detail": "Fixed convention i u_t+Delta_beta u=|u|²u, Delta_beta eigenvalue -omega. Then a=e^{it omega}u and phase e^{-it Omega}. CKSTT/Giuliani–Guardia opposite time convention is converted by complex conjugation, preserving positive-time norm growth."
+    },
+    {
+      "id": "ST-C02",
+      "notes": [
+        "4L0F"
+      ],
+      "detail": "Randomness occurs in initial Fourier coefficients only. E_event means E[1_event X], not conditional expectation divided by event probability. d>=3, alpha=L^{-eta}, 0<eta<1, Tkin=(2alpha²)^{-1}, fixed regular slow-time interval. Neither condensation crossing nor arbitrary L-dependent observation time is imported."
+    },
+    {
+      "id": "ST-C03",
+      "notes": [
+        "4L0H",
+        "4L0I",
+        "4L0V",
+        "4L0Z"
+      ],
+      "detail": "Radial nu=F dx uses F=f r²/omega'; physical 3D mass is 4pi times its mass. Source constants absorb fixed angular normalization. Mixed coefficients multiply whole channels; c31=0 removes the entire channel, matching Assumption B's absent-channel meaning."
+    },
+    {
+      "id": "ST-C04",
+      "notes": [
+        "4L0M",
+        "4L0O"
+      ],
+      "detail": "Pure-power specialization retains all source dispersion assumptions automatically; long-time theorem also retains support hypotheses. The finite-time condensation result is conditional on the given mass-conserving global solution and both concentration conditions."
+    },
+    {
+      "id": "ST-C05",
+      "notes": [
+        "4L0Y",
+        "4L0Z"
+      ],
+      "detail": "An independently checked Assumption X specialization uses omega=r^4, Pbar=Qbar=x^{5/8}, Rbar=x^{3/4}, gamma_kernel=3/4, alpha=7/8. It is not the literal erroneous example in Remark 1 and not a quadratic NLS kinetic limit. The source's deep theorem is quoted, not repaired or reproved."
+    },
+    {
+      "id": "ST-C06",
+      "notes": [
+        "4L0I",
+        "4L0X"
+      ],
+      "detail": "The solution definition is imported model by model with exact equation references and C1 notation. Compact test pairings, locally time-integrable collision pairings and source-specific cutoff/boundary constructions are distinguished from unbounded energy testing. No arbitrary-atom product of distributions is introduced."
+    }
+  ],
+  "source_errata": [
+    {
+      "source": "staffilani-icm2026",
+      "locator": "§2 torus setup",
+      "notes": [
+        "4L01"
+      ],
+      "issue": "Geometric side ratio and printed dispersion coefficients do not consistently include the square needed for Laplace eigenvalues.",
+      "resolution": "Use beta_j=(2pi/ell_j)^2 and the ratio of spectral coefficients."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Remark 2.1 and (2.7)",
+      "notes": [
+        "4L04"
+      ],
+      "issue": "Linear-phase sign is inconsistent with the chosen negative Laplace eigenvalue convention.",
+      "resolution": "Derive interaction phase explicitly from the displayed NLS convention."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Discussion following Theorem 2.6",
+      "notes": [
+        "4L07",
+        "4L08"
+      ],
+      "issue": "Exact constancy of the usual isotropic Hs norm is stronger than coordinate-separable conservation and is false in general.",
+      "resolution": "Prove separable invariants and norm comparability; explicit four-mode h2 squared derivative is -8."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Theorem 2.8 compared with Giuliani–Guardia Theorems 2.1–2.2",
+      "notes": [
+        "4L0E"
+      ],
+      "issue": "Full-measure multiplicative amplification and arbitrary-small-to-large growth require different arithmetic assumptions.",
+      "resolution": "State the two conclusions separately; do not assign both to the full-measure parameter set."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Theorem 3.1, (3.4)",
+      "notes": [
+        "4L0K"
+      ],
+      "issue": "Limit against a test function lacks total-mass multiplier unless mass is normalized to one.",
+      "resolution": "Use M phi(0), checked with phi=1."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "§3.1 solution shorthand and Theorems 3.1–3.2",
+      "notes": [
+        "4L0I",
+        "4L0M",
+        "4L0O"
+      ],
+      "issue": "L1 density cannot carry a zero atom; report omits support and fixed-scale concentration hypotheses found in primary statements.",
+      "resolution": "Use later published measure class and retain source hypotheses; no extra global energy conservation asserted in 4L0M."
+    },
+    {
+      "source": "pure-condensation-published",
+      "locator": "Remark 5 following (22)",
+      "notes": [
+        "4L0N"
+      ],
+      "issue": "Integral lower bounds are described as implying pointwise density bounds/asymptotics.",
+      "resolution": "Keep only cumulative conditions; a density with infinitely many gaps is an explicit counterexample to the stronger implication."
+    },
+    {
+      "source": "mixed-condensation-v1",
+      "locator": "§1.2 high-occupancy triplet expansion",
+      "notes": [
+        "4L0S"
+      ],
+      "issue": "The printed lower-order triplet expansion drops an f0 factor in a quadratic term.",
+      "resolution": "Expand exactly: B3(f)-f0(f1+f2+f3)-f0."
+    },
+    {
+      "source": "mixed-energy-v1",
+      "locator": "(2), (4), (10), Remark 1",
+      "notes": [
+        "4L0R",
+        "4L0H",
+        "4L0Y"
+      ],
+      "issue": "Channel coefficients are printed only before first strong-form summands; R3 polar area printed 2pi²; Remark 1 gives wrong R' exponent.",
+      "resolution": "Use full-channel weak coefficients, 4pi area, and R'=(1/16)x^{-3/4}; all active cascade coefficients set one, all Assumption X signs independently checked."
+    },
+    {
+      "source": "mixed-condensation-v1",
+      "locator": "Radial change of variables in Assumption A",
+      "notes": [
+        "4L0H"
+      ],
+      "issue": "The same 2pi² radial area factor appears.",
+      "resolution": "Physical R3 polar measure uses 4pi; radial F normalization stated separately."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "§3.2 mixed energy-cascade range compared with 2512.19531v1 Assumption X",
+      "notes": [
+        "4L0Y",
+        "4L0Z"
+      ],
+      "issue": "Source Assumption X does not support simply retaining the report's 1<gamma_disp<=2 regime; two of its inequalities imply theta<2/5.",
+      "resolution": "Use an explicit quartic dispersion model satisfying all assumptions."
+    },
+    {
+      "source": "pure-condensation-published",
+      "locator": "Definition 1 (13)",
+      "notes": [
+        "4L0I"
+      ],
+      "issue": "RHS test argument prints phi(|k|), whereas LHS and radial weak formulas use the energy argument. Strong versus weak C1 topology and a full arbitrary-atom boundary formula are not separately specified in Definition 1.",
+      "resolution": "Identify the source's energy-variable weak interface via (35)–(36); disclose implicit points and quote the constructed solution class, without inventing boundary values."
+    },
+    {
+      "source": "mixed-energy-v1",
+      "locator": "§4 (79) versus (82), also (84)",
+      "notes": [
+        "4L0I",
+        "4L0Y",
+        "4L0Z"
+      ],
+      "issue": "Maximum-frequency factor Rbar_o is present in (79) but absent from (82); (84) is printed without the right-hand side.",
+      "resolution": "Bind the model to (1)–(7), (79); source functional is L1+L2+L3 as (77), (85) state. This records a textual inconsistency, not an independent repair of the research proof."
+    }
+  ],
+  "section_coverage": [
+    {
+      "section": "§1 motivation and §2 deterministic NLS",
+      "notes": [
+        "4L01",
+        "4L02",
+        "4L03",
+        "4L04",
+        "4L05",
+        "4L06",
+        "4L07",
+        "4L08"
+      ],
+      "scope": "Fourier weights, correct signs, conserved Hamilton quantities, high-frequency detection, resonance geometry and precise separable invariants."
+    },
+    {
+      "section": "§2 growth theorems and time regimes",
+      "notes": [
+        "4L09",
+        "4L0A",
+        "4L0B",
+        "4L0C",
+        "4L0D",
+        "4L0E"
+      ],
+      "scope": "Finite amplification, infinite resonant orbit, waveguide infinite growth, near-resonance and two irrational-torus parameter sets."
+    },
+    {
+      "section": "§3.1 kinetic scaling and pure four-wave",
+      "notes": [
+        "4L0F",
+        "4L0G",
+        "4L0H",
+        "4L0I",
+        "4L0J",
+        "4L0K",
+        "4L0L",
+        "4L0M",
+        "4L0N",
+        "4L0O",
+        "4L0P",
+        "4L0Q"
+      ],
+      "scope": "Reuse Deng random-data derivation; radial measures, weak forms, local-energy versus total-energy distinction, exact concentration assumptions and two elementary ingredients of domain decomposition."
+    },
+    {
+      "section": "§3.2 mixed three-/four-wave models",
+      "notes": [
+        "4L0R",
+        "4L0S",
+        "4L0T",
+        "4L0U",
+        "4L0V",
+        "4L0W",
+        "4L0X",
+        "4L0Y",
+        "4L0Z"
+      ],
+      "scope": "Three channel weak forms, Bose expansion, particle-number difference, a quadratic condensation model and a separately specified quartic cascade model with verified thresholds."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "Report Theorem 2.10 and work with Nicolas Camps",
+      "scope": "Read in full report; ongoing/unpublished waveguide/irrational-torus work is not promoted to a primary-paper theorem or expanded proof."
+    },
+    {
+      "branch": "General dispersion and non-condensation estimates",
+      "scope": "Pure four-wave theorems specialized to 1<gamma<=2 powers; general convex dispersion and full quantitative Theorem4(ii) constants not developed. N0/CF* thresholds are qualitative in the cited finite-condensation statement."
+    },
+    {
+      "branch": "Nonradial solutions, numerical domain decomposition, physical experiments",
+      "scope": "Report context read; these are not independent fully developed mathematical branches here."
+    },
+    {
+      "branch": "Exact source measure-class completion",
+      "scope": "Source C1 topology and pure-four-wave arbitrary-atom zero-frequency boundary values remain implicit at the cited definition. 4L0I discloses this source limitation and provides model-specific equation interfaces. No unique extension to every finite measure is claimed."
+    },
+    {
+      "branch": "Research-proof consistency",
+      "scope": "Mixed-energy preprint internal dropped-factor/derivative errors are recorded. No claim that the entire existence/cascade proof has been independently checked or repaired."
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    "CKSTT resonant-generation combinatorics, toy-model diffusion and PDE approximation.",
+    "HPTV infinitely growing resonant construction, modified scattering and modified wave operators.",
+    "Giuliani–Guardia arithmetic-set construction, quasi-resonant normal form and time estimates.",
+    "Deng–Hani layered cumulants and graph estimates establishing the kinetic limit.",
+    "Pure/mixed kinetic measure-solution existence, boundary collision construction, multi-scale condensation and finite-time energy loss.",
+    "Formal-vs-actual conservation requires model-specific integrability; local identities do not establish missing moment bounds."
+  ],
+  "review_responses": [
+    {
+      "id": "ST-F01",
+      "status": "author-repaired-and-interim-review-resolved",
+      "notes": [
+        "4L0D"
+      ],
+      "resolution": "Near-resonance estimate integrates |Omega|s from 0 to T, giving |Omega|T²/2."
+    },
+    {
+      "id": "ST-F02",
+      "status": "author-repaired-awaiting-recheck",
+      "notes": [
+        "4L06"
+      ],
+      "resolution": "Added weighted orthogonality and diagonal rescaling; Euclidean non-axis rectangles restricted to square torus."
+    },
+    {
+      "id": "ST-F03",
+      "status": "author-repaired-awaiting-recheck",
+      "notes": [
+        "4L0E",
+        "4L0Q",
+        "4L0X"
+      ],
+      "resolution": "00Q4 now only null-set label; 00XV actual Lebesgue measure; 0I8I and 0A7A convergence; 4L0T linked for one-to-many energy cancellation."
+    },
+    {
+      "id": "ST-F04",
+      "status": "author-repaired-awaiting-recheck",
+      "notes": [
+        "4L0H"
+      ],
+      "resolution": "Added unboundedness at infinity and C1 on the positive half-line; inverse covers entire nonnegative range; Gamma initially defined for x>0."
+    },
+    {
+      "id": "ST-F05",
+      "status": "author-expanded-with-source-limitations-awaiting-recheck",
+      "notes": [
+        "4L0I",
+        "4L0M",
+        "4L0O",
+        "4L0V",
+        "4L0X",
+        "4L0Z"
+      ],
+      "resolution": "Replaced generic undefined functional reference by separate source Definition1/equation interfaces, C1 time notation, Radon/Borel links, tests, integrability, boundary/cutoff conventions and explicit source gaps. Pure boundary values and topology are not invented; newly detected omitted Rbar_o recorded."
+    },
+    {
+      "id": "ST-F06",
+      "status": "author-repaired-awaiting-recheck",
+      "notes": [
+        "4L07"
+      ],
+      "resolution": "Equality through truncations requires strong hs convergence at initial and tested times. Unweighted strong convergence plus bounded hs only yields lower semicontinuity."
+    },
+    {
+      "id": "ST-F07",
+      "status": "author-repaired-awaiting-recheck",
+      "notes": [
+        "4L0A"
+      ],
+      "resolution": "Curves and forcing explicitly defined on [0,T]; estimate only for 0<=t<=T."
+    }
+  ],
+  "cross_topic_requests": [],
+  "integration_repairs": [
+    {
+      "date": "2026-10-24",
+      "freeze_revision": 2,
+      "reported_by": "parent build",
+      "notes": [
+        "4L0G",
+        "4L0I",
+        "4L0R",
+        "4L0T"
+      ],
+      "resolution": "Replaced five literal [f](...) formula occurrences by TeX lbrack/rbrack commands without changing the mathematics. Copied remaining_branches and unexpanded_deep_proofs into report, retaining identical top-level arrays for compatibility.",
+      "verification_boundary": "Scoped read-only syntax, KaTeX, schema, hash and link/graph checks passed. Shared Forester rebuild and independent acceptance remain with parent/reviewer."
+    }
+  ],
+  "validation": {
+    "source_links": "37 owned trees checked against the current forest index (7251 tree IDs at check time): no missing local targets; every registered prerequisite is an actual prose-body link to a knowledge page, not an outline/reference. All 35 atoms are directly linked from the narrative overview.",
+    "format": "37 owned trees match normalizeFormat, no styleRules hits. Source formula literal brackets/parentheses and whole-file delimiters checked; no manual Related section added.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.8",
+      "count": 606,
+      "errors": 0,
+      "scope": "All formula groups in 36 owned 4L trees plus reference; literal parentheses/brackets and ambiguous Markdown/wiki-link syntax checked separately. Not a Forester build."
+    },
+    "forester_math_link_check": {
+      "formula_groups_checked": 606,
+      "ambiguous_patterns": 0,
+      "repaired_occurrences": 5,
+      "scope": "Scanned all owned formula groups for literal closing square bracket followed by an opening parenthesis and for literal double opening square brackets; no matches after repair. This targeted syntax check does not replace the parent Forester build."
+    },
+    "report_schema_check": "Both report.remaining_branches and report.unexpanded_deep_proofs are arrays deeply equal to their retained top-level counterparts; all 35 atomic proof_scope and claim_sources records are present.",
+    "elementary_checks": {
+      "resonanceCases": 2025,
+      "bosePolynomialCases": 256,
+      "fourModeDerivatives": [
+        -4,
+        4,
+        4,
+        -4
+      ],
+      "fourModeH2SquaredDerivative": -8,
+      "quarticConstraintValues": [
+        0.125,
+        0.5,
+        3.625,
+        0.75,
+        0,
+        0,
+        0,
+        0,
+        0.5
+      ],
+      "errors": 0,
+      "scope": "Finite algebra checks only; no substitution for proofs or infinite-dimensional theorems."
+    },
+    "prerequisite_check": "Passed: 37 tree paths/hashes and 35 atomic question/proof/source records; 95 prerequisite edges. Read-only merge with research/site-evergreen-audit.json recursively visited 251 nodes without cycles. This is structural closure, not a new mathematical review of all 251 shared pages.",
+    "build": "Not run. Parent owns shared integration, build, regression tests and publication.",
+    "independent_review": "Interim review revision1 has six open findings; author responses provided, no reviewer acceptance claimed.",
+    "review_input": {
+      "path": "research/mathematical-physics-staffilani-review.json",
+      "sha256": "389b4b73e2bf2302473db980ce619d450f254311c50440f0f82bfa05fcca599c",
+      "status": "Read-only interim revise snapshot; never edited."
+    },
+    "freeze_hash_check": "Revision2: all 37 owned tree hashes verified after the five formula-syntax repairs; the four changed tree digests refreshed. Interim review revision1 bytes unchanged from the recorded input. No independent acceptance inferred."
+  },
+  "freeze": {
+    "status": "frozen-author-repairs-ready-for-independent-recheck",
+    "date": "2026-10-24",
+    "paths": [
+      "trees/math/mathematical-physics/staffilani/4L*.tree",
+      "trees/references/icm2026-staffilani.tree",
+      "research/mathematical-physics-staffilani-packet.json"
+    ],
+    "hashes": "notes[].sha256 records owned tree bytes; packet digest sent separately.",
+    "mutation_boundary": "Only owned new tree/reference/packet paths. Shared navigation, manifest, audit, script/test, theme and existing note files not edited; no commit/push/build.",
+    "revision": 2,
+    "previous_packet_sha256": "2778a6349cab12474fea6d3e2fa7c89486244a6f2739ae10429b0954b1036739",
+    "source_limitations": "4L0I explicitly discloses the source's unspecified C1 topology and pure-four-wave arbitrary-atom boundary interface; mixed-energy preprint dropped-factor inconsistencies remain source-level questions. Frozen author completion is not independent acceptance."
+  }
+}

@@ -1,0 +1,13 @@
+\title{零裕量 Ising 感知机的原始二阶矩比值指数增长}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§3.3 的原始矩方法障碍；二项计数的直接证明。}
+
+\p{在零裕量高斯 Ising 感知机中，设 #{Z_N} 为解数，#{M=\lfloor\alpha N\rfloor}，固定 #{\alpha>0}。则存在 #{c=c(\alpha)>0}，使充分大的 #{N} 满足 #{\mathbb E Z_N^2/(\mathbb E Z_N)^2\ge e^{cN}}。}
+\p{\strong{证明。}由[按重叠分组的矩公式](4M0R)和[正象限概率](4M1A)，}
+##{\frac{\mathbb E Z_N^2}{(\mathbb E Z_N)^2}=2^{-N}\sum_{\ell=0}^N\binom N\ell\left(4q(1-2\ell /N)\right)^M,\qquad q(r)=\frac 14+\frac{\arcsin r}{2\pi}.}
+\p{令 #{h(p)=-p\log p-(1-p)\log(1-p)}。对 #{0<\ell<N}，取 #{p=\ell /N}。在二项概率质量 #{\binom Njp^j(1-p)^{N-j}} 中，第 #{\ell} 项最大：相邻项之比为 #{(N-j)p/((j+1)(1-p))}，跨过 #{j=\ell} 时从大于一变为小于一。总和为一，因此该项至少为 #{1/(N+1)}，即}
+##{\binom N\ell\ge\frac{e^{Nh(\ell /N)}}{N+1}.}
+\p{定义 #{F(r)=h((1-r)/2)-\log 2+\alpha\log(4q(r))}。有 #{F(0)=0} 且 #{F'(0)=2\alpha /\pi>0}，所以存在一个充分小的固定 #{r>0} 使 #{F(r)>0}。选整数 #{\ell_N} 满足 #{\ell_N /N\to(1-r)/2}，只保留矩和中的这一项，其对数除以 #{N} 的下极限至少为 #{F(r)>0}。取 #{0<c<F(r)}，结论成立。}
+\p{因此直接对原始解数使用二阶矩不等式不能给出一致的正概率保证。对配置作筛选或使用[条件二阶矩](4M0S)，需要改变所估计的随机变量或保留实例中的环境信息。该计算没有给出算法困难性结论。}

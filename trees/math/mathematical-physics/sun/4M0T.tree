@@ -1,0 +1,10 @@
+\title{解集重心决定平均重叠}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§3.3；有限独立抽样恒等式。}
+
+\p{设非空集合 #{S\subseteq\{-1,+1\}^N}，其均匀分布为 #{\mu}，重心为 #{m=\sum_{x\in S}\mu(x)x}。从 #{\mu} 独立抽取 #{X,Y}，则[重叠](4M0A)的期望满足}
+##{\mathbb E\left[\frac{X\cdot Y}{N}\right]=\frac{\|m\|_2^2}{N}.}
+\p{\strong{证明。}独立性给 #{\mathbb E(X_iY_i)=\mathbb E X_i\mathbb E Y_i=m_i^2}，对坐标求和即得。若 #{S=-S}，把求和中的 #{x} 与 #{-x} 配对可得 #{m=0}。}
+\p{当[感知机约束集](4M0P)满足 #{I=-I} 且解集非空时，解集具有此对称性。对称性迫使平均重叠为零，但仍允许重叠质量分布在正负两侧；它不推出重叠集中在零。非对称半空间模型的重心则可以非零，条件化于重心附近的信息是改进矩方法的一条途径。}

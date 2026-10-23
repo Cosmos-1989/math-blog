@@ -1,0 +1,18 @@
+\title{有限容量载流子的截断几何平衡}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3 的 BBS(J,K)；直接有限集计算}
+
+\p{箱容量 #{J}、载流子容量 #{K} 为正整数。箱内球数 #{x\in\{0,\ldots,J\}}，载流子球数 #{y\in\{0,\ldots,K\}}。局部更新定义为}
+##{F^{J,K}(x,y)=\bigl(x+\min(y,J-x)-\min(x,K-y),
+y-\min(y,J-x)+\min(x,K-y)\bigr).}
+\p{取任意 #{q>0}，令 #{X,Y} [独立](00L3)，且}
+##{\mathbb P(X=x)=\frac{q^x}{\sum_{j=0}^Jq^j},\qquad
+\mathbb P(Y=y)=\frac{q^y}{\sum_{j=0}^Kq^j}.}
+\p{则 #{F^{J,K}(X,Y)} 具有与 #{(X,Y)} 相同的乘积分布。}
+\p{\strong{证明。}固定总球数 #{s=x+y}。此纤维的可行 #{x} 为整数区间 #{\ell\leq x\leq u}，其中 #{\ell=\max(0,s-K)}、#{u=\min(J,s)}。注意}
+##{\min(y,J-x)=u-x,\qquad
+\min(x,K-y)=x-\ell.}
+\p{所以更新后的 #{x'=\ell+u-x}，恰是该区间的反射；#{y'=s-x'}。它是对合，且纤维内每一点的联合概率都为 #{q^s} 除以同一归一化常数。因此联合律不变。}
+\p{当 #{0<q<1}、#{J=1} 且 #{K\to\infty} 时，箱分布趋于参数 #{p=q/(1+q)<1/2} 的 Bernoulli 分布，载流子分布趋于[零起点几何分布](4K06)。固定 #{x,y} 的局部规则也趋于普通箱球规则，恢复 [Bernoulli–几何局部平衡](4K09)。此有限集证明断言局部律；无限格点的演化仍须另行满足[全局唯一性条件](4K0L)。}

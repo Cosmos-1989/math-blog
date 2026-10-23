@@ -1,0 +1,13 @@
+\title{Bernoulli 初态的搬运负载分布}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§3.4；Croydon–Kato–Sasada–Tsujimoto，§3.2.1}
+
+\p{设 #{0<p<1/2}，#{\eta_n} 独立且服从 #{\operatorname{Ber}(p)}。按[双侧漂移](4K05)构造[最小搬运器](4K01) #{W}，令 #{r=p/(1-p)}。则每个 #{W_n} 服从[几何分布](4K06) #{G_r}。此外 #{W_{n-1}} 与 #{(\eta_m)_{m\ge n}} 独立。}
+\p{\strong{过去依赖。}负载可以写成}
+##{W_n=\sup_{m\le n}\sum_{j=m+1}^{n}(2\eta_j-1).}
+\p{空和为零。它只依赖 #{n} 左侧及该格的坐标；[独立坐标](0A6B)使它与未来独立。该公式也与平移相容，所以 #{W_n} 的分布不随 #{n} 改变。}
+\p{\strong{跨越相邻负载层。}给定 #{W_{n-1}=k}，下一步以概率 #{p} 增至 #{k+1}，以概率 #{1-p} 降至 #{(k-1)_+}。设 #{\pi_k=\mathbb P(W_n=k)}。事件 #{W\ge k+1} 在一步前后的概率相等；进入该集合仅可能由 #{k} 上升，离开仅可能由 #{k+1} 下降。因此}
+##{\pi_kp=\pi_{k+1}(1-p),\qquad k\ge 0.}
+\p{递推得 #{\pi_k=\pi_0r^k}，归一化给 #{\pi_0=1-r}。这只使用空间平稳性，尚未假设箱球时间演化保持初始分布。}

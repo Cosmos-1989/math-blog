@@ -1,0 +1,12 @@
+\title{向量舍入误差控制投影经验分布的运输距离}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Huang–Sellke–Sun v1，备注 3.6 的基本估计；直接耦合证明。}
+
+\p{设 #{G\in\mathbb R^{M\times N}}，#{M,N\ge 1}，#{x,y\in\mathbb R^N}。记 #{\|G\|_{\rm op}=\sup_{\|u\|_2=1}\|Gu\|_2}。对[投影经验分布](4M0X)，有}
+##{W_2(\mu_G(x),\mu_G(y))\le\frac{\|G\|_{\rm op}}{\sqrt{MN}}\|x-y\|_2.}
+\p{\strong{证明。}把同一矩阵行对应的两个投影配在一起，得到合法的[耦合](0F63)。按 [Wasserstein 距离](4M0Y)的定义，}
+##{W_2(\mu_G(x),\mu_G(y))^2\le\frac 1M\sum_{a=1}^M\left(\frac{g_a\cdot(x-y)}{\sqrt N}\right)^2=\frac{\|G(x-y)\|_2^2}{MN}.}
+\p{由算子范数定义得到结论。把投影先取绝对值时，利用 #{||s|-|t||\le|s-t|}，同一估计仍成立。}
+\p{若 #{x} 位于球面或立方体的 [#{\eta}-松弛域](4M0Z)，可以选 #{y} 属于精确域且 #{\|x-y\|_2\le\eta\sqrt N}，于是距离至多 #{\eta\|G\|_{\rm op}/\sqrt M}。这是确定性估计；要得到随维数一致的概率界，还需控制随机矩阵范数。}

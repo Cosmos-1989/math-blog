@@ -1,0 +1,13 @@
+\title{离散 KdV 局部映射的超离散极限}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，注记 5.5；Croydon–Sasada，§5.1}
+
+\p{设 #{\varepsilon>0}、#{L,x,y\in\mathbb R}，在[离散 KdV 局部映射](4K0F)中取 #{\delta=e^{-L/\varepsilon}}、#{\omega=e^{x/\varepsilon}}、#{U=e^{y/\varepsilon}}。写输出为 #{\omega'=e^{x_\varepsilon'/\varepsilon}}、#{U'=e^{y_\varepsilon'/\varepsilon}}。则当 #{\varepsilon\downarrow 0} 时，}
+##{(x_\varepsilon',y_\varepsilon')\longrightarrow
+(\min(L-x,y),\ x+y-\min(L-x,y)).}
+\p{\strong{证明。}对任意实数 #{a}，从 #{e^{\max(0,a)/\varepsilon}\le 1+e^{a/\varepsilon}\le 2e^{\max(0,a)/\varepsilon}} 得}
+##{0\le\varepsilon\log(1+e^{a/\varepsilon})-\max(0,a)\le\varepsilon\log 2.}
+\p{局部方程给出 #{x_\varepsilon'=y-\varepsilon\log(1+e^{(x+y-L)/\varepsilon})}、#{y_\varepsilon'=x+\varepsilon\log(1+e^{(x+y-L)/\varepsilon})}。令 #{a=x+y-L}，并用 #{y-\max(0,x+y-L)=\min(L-x,y)} 即得结论。每个坐标的误差不超过 #{\varepsilon\log 2}，对所有 #{x,y} 一致。}
+\p{极限正是[超离散 KdV 更新](4K0E)。这是一个局部映射的极限；双无限轨道的极限还涉及整个左尾的可和性，不能仅凭逐点的有限变量恒等式交换无穷求和与极限。}

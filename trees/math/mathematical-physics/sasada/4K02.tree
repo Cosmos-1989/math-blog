@@ -1,0 +1,11 @@
+\title{未来最小值恢复箱球路径}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§3.2；Croydon–Kato–Sasada–Tsujimoto，§2}
+
+\p{设 #{S_0=0}、#{|S_n-S_{n-1}|=1}，并且 #{S_n\to -\infty} 当 #{n\to -\infty}、#{S_n\to+\infty} 当 #{n\to+\infty}。令 #{M_n=\max_{m\le n}S_m}，按[最小搬运器](4K01)定义 #{TS=2M-S-2M_0}。对路径 #{H} 记 #{I(H)_n=\inf_{m\ge n}H_m}。则}
+##{2I(TS)_n-(TS)_n-2I(TS)_0=S_n.}
+\p{\strong{证明。}先不归零，写 #{H=2M-S}。对 #{m\ge n}，有 #{H_m\ge M_m\ge M_n}，所以 #{I(H)_n\ge M_n}。从 #{S_n\le M_n} 出发，路径最终趋向正无穷；最近邻步长使它必先到达 #{M_n}。设首次到达时刻为 #{j\ge n}，在此之前没有越过 #{M_n}，故 #{M_j=S_j=M_n}，于是 #{H_j=M_n}。得到 #{I(H)_n=M_n}。}
+\p{因此 #{2I(H)-H=S}。减去 #{2M_0} 时，未来最小值也减去同一常数；最后再在原点归零，即得所述公式。}
+\p{构形反射 #{(R\eta)_n=\eta_{1-n}} 对应路径反射 #{(\mathcal RS)_n=-S_{-n}}。代入增量可得这一负号。因而右向搬运的候选逆变换为 #{T^-=RTR}，其路径表达式正是未来最小值公式。对反射路径应用同一论证，也有 #{TT^-\eta=\eta}。这里证明两次操作互相恢复；任意多次迭代还需[不变的漂移条件](4K03)。}

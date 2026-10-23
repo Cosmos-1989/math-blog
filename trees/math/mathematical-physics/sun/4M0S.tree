@@ -1,0 +1,11 @@
+\title{条件二阶矩如何保留环境信息}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Ding–Sun v1，定理 1.4 后的论证；[Sun](icm2026-sun)，§3.3。}
+
+\p{设 #{X\ge 0} 为有界随机变量，#{\mathcal F} 为子 σ-代数。以[条件期望](4J0Q)记 #{m=\mathbb E(X\mid\mathcal F)}、#{v=\mathbb E(X^2\mid\mathcal F)}。则几乎处处有}
+##{\mathbb P(X>0\mid\mathcal F)\ge\frac{m^2}{v},}
+\p{在 #{v=0} 上将右边规定为零。若某个 #{\mathcal F} 可测事件 #{A} 上有 #{m>0} 且 #{v\le C m^2}，其中 #{0<C<\infty} 为确定常数，则 #{\mathbb P(X>0)\ge\mathbb P(A)/C}。}
+\p{\strong{证明。}令 #{Y=1_{\{X>0\}}}。对每个有理数 #{t}，非负性给 #{\mathbb E((X-tY)^2\mid\mathcal F)\ge 0}。在一个共同的概率一事件上，这个二次多项式对所有实 #{t} 非负，故判别式不正，即 #{m^2\le v\mathbb E(Y\mid\mathcal F)}。在 #{A} 上代入矩界，再用条件期望的全期望公式即可。}
+\p{在感知机中，#{X} 可取某个经过筛选的配置集中的解数，#{\mathcal F} 记录由随机实例构造出的环境信息。难点是选择筛选及条件化，使矩比值受控；这个不等式自身不提供所需的环境。}

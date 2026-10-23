@@ -1,0 +1,2645 @@
+{
+  "date": "2026-10-24",
+  "subject": "006B",
+  "scope": "Sasada, Staffilani and Sun, the next three Section Eleven chapters in proceedings order, pp.575-635.",
+  "source_method": "Published proceedings and versioned primary research; reading locations and local or cited proof scopes are recorded per report.",
+  "reports": [
+    {
+      "prefix": "4K",
+      "outline": "4K00",
+      "reference": "icm2026-sasada",
+      "doi": "10.1137/25M1806715",
+      "speaker": "Makiko Sasada",
+      "title": "Box-ball System and Related Discrete Integrable Systems with Random Initial Conditions",
+      "pages": "575–595",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806715",
+      "license": "CC BY 4.0",
+      "question": "双无限随机初态的箱球演化怎样由路径反射严格定义，哪些局部独立性恒等式产生不变律，又如何延伸至孤子涨落及离散 KdV/Toda？",
+      "reading_scope": "sasada-icm2026: Entire mathematical HTML body §§1–7, lines 101–570, in overlapping section-sized reads; displayed equations and text figure captions. Bibliography [1]–[63], lines 576–920, and metadata/licensing lines 928–976 read. Re-read §§3.1–3.4, §§5.1–5.3 and §6 in proof/parameter checks. Image-only figures and diagrams were not pixel-inspected; no figures reproduced.\nckst-bbs-v1: Selected HTML: introduction/path framework and Theorems 1.2, 1.4, 1.6–1.8, lines 214–304; targeted Theorem 3.23 checks. Subsequently read §3.2.4 and §3.3.1 through the independence proof of Theorem 3.23, lines 1710–1773, including Lemma 3.25 and its proof. The next Cramer-rate calculation was not completed and is not reproduced. Not the full paper or all of §2/§3.2.2.\ncs-balance-v3: Selected introduction/type I–II setting and Theorem 1.1, PDF pp.3–5 (text lines 140–205 re-read); selected Theorem 2.1/Lemma 2.2 statements. §3.2.2 Proposition 3.9 and its proof, §3.2.3 Lemmas 3.10–3.11 and Theorem 3.12, pp.22–24 (lines 1070–1215). Selected §4.1 Proposition 4.1/4.2 and §4.1.3 Theorem 4.4; §4.2.1–4.2.3, Propositions 4.5–4.6 and Theorem 4.8, pp.26–29 (lines 1320–1505). §5.1 opening ultra-discretization formulas (5.1)–(5.2). Appendix A density conventions, text lines 2400–2490, pp.47–48. PDF p.29 rendered and visually inspected for Theorem 4.8 and its printed rate parameter. Not the whole paper, characterization proofs or general ergodicity proof.\ncst-paths-v2: Selected introduction/table 1 and all four model statements/encodings in §2, extracted lines 205–905, PDF pp.5–16. Theorem 4.19 forward-time and Theorem 4.20 all-time statements, pp.30–31; re-read lines 1590–1710 including Proposition 4.18 proof and reversal convention. Corollary 4.29 and opening Remark 4.30, lines 2084–2125, p.37. Not all intermediate §§3–5 lemmas or whole-source proofs.\noss-solitons-v2: §§2.1–2.3 textual definitions, natural labeling, tail/head evolution and Theorem 2.1/Remark 2.2; PDF pp.7–11, with re-read text lines 420–590. §3 opening context only, not full seat-number construction. Theorem 4.7(1), equation (4.16), selected pp.22–23, lines 1230–1275, to bind the coefficient locator. PDF p.11 rendered and visually inspected for the positive adjacent-11 assumption, both mu/nu laws, diffusive scale and (4.16). No full reading or proof certification of §§4–11/appendices.\nforest-reuse: Whole-forest title/content searches and selected actual note bodies read. Ferrari 4C13/14/15/17/19/1A/1B/27/28 are reused unchanged, alongside probability, measure, calculus and Brownian foundations listed in reused_page_records. These local records are not a claim to have newly read all of their primary sources.\nlocal-calculations: Direct mathematical arguments written in owned notes: carrier extrema, parity counterexamples, product-law induction, elementary density substitutions, finite-capacity fibers, log-sum-exp bound and rational Yang–Baxter compositions.",
+      "proof_scope": {
+        "4K01": {
+          "status": "local-proof",
+          "scope": "由有限整数上确界取到、递推比较和左端零点证明存在、最小性、唯一性；复用有限 Pitman 恒等式。补明上确界与下极限，左端指 W_{-k} 的下极限。"
+        },
+        "4K02": {
+          "status": "local-proof",
+          "scope": "在两端分别趋于负、正无穷的最近邻路径上，以首次到达旧最大值证明 I(2M-S)=M；归零常数与反射负号均计算。"
+        },
+        "4K03": {
+          "status": "local-proof",
+          "scope": "双端斜率可不同；分别估计过去最大值的两端斜率，再用反射与 4K02 得全时可逆。"
+        },
+        "4K04": {
+          "status": "worked-counterexample",
+          "scope": "逐格给出拼接交替构形、负载、输出及逆输出，唯一丢失格点为 0。"
+        },
+        "4K05": {
+          "status": "local-proof-from-reused-theorem",
+          "scope": "用 0HS1 对中心化变量取 epsilon=1/4，分别处理两端；p>1/2 的左端发散与 p=1/2 的推论边界明确。"
+        },
+        "4K06": {
+          "status": "definition-and-local-calculation",
+          "scope": "指定比率 r 与成功参数 1-r 的换算，含 r=0；尾和计算均值及二阶矩。"
+        },
+        "4K07": {
+          "status": "local-proof",
+          "scope": "先由过去可测性得未来独立，再由空间平稳性作层间概率流平衡；没有预先使用时间不变性。"
+        },
+        "4K08": {
+          "status": "local-proof",
+          "scope": "可测映射下的推前分布局部定义；逐步证明输出和末端载流子仍联合独立。仅断言有限行。"
+        },
+        "4K09": {
+          "status": "local-proof",
+          "scope": "把全部状态分解为一个不动点和二元交换对，以点质量相等证明完整联合律而非只证明边缘。"
+        },
+        "4K0A": {
+          "status": "local-proof",
+          "scope": "真实左负载的分布与未来独立性、有限窗口归纳、柱集唯一性共同给出全局不变律；全时定义域先由漂移证明。"
+        },
+        "4K0B": {
+          "status": "cited-research-theorem-and-local-density",
+          "scope": "不变性和全时可逆引用 Theorem 1.8(b)；平稳向量与密度阈值直接算出。条件概率仅用于正概率历史；p1=0 保留。"
+        },
+        "4K0C": {
+          "status": "local-proof-of-source-argument",
+          "scope": "以未来最小值把旧负载写成新路径右半轴函数；新路径左半轴决定未来负载。用两半独立与时间平稳逐次证明双侧 iid，随后计算累计流矩。"
+        },
+        "4K0D": {
+          "status": "local-construction-and-proof",
+          "scope": "定义归零的两种路径变换；分别以几何尾和及线性上下界证明有限性和两端斜率保持，允许不同正斜率。"
+        },
+        "4K0E": {
+          "status": "local-proof",
+          "scope": "在给定正漂移路径上推出载流子 max 递推、输出 min 递推及新路径增量；L=1 二值特例还原 BBS。全时唯一性另引 4K0K。"
+        },
+        "4K0F": {
+          "status": "local-proof",
+          "scope": "保持 delta^(-1/2) 的载流子归一化；逐格指数和推出正数局部方程、输出路径与对合性。全时唯一性另引 4K0K。"
+        },
+        "4K0G": {
+          "status": "local-proof",
+          "scope": "对所有实输入建立每坐标 epsilon log 2 一致误差；仅有限维局部映射的超离散极限，不交换无限尾和。"
+        },
+        "4K0H": {
+          "status": "definition-and-local-algebra",
+          "scope": "定义全部局部变量、三元映射以及 min/difference 可逆分解；正整数长度解释与一般实值方程区分。"
+        },
+        "4K0I": {
+          "status": "definition-and-local-algebra",
+          "scope": "给出正变量方程、三元对合与 sum/proportion 分解；x/y 与 x/(x+y) 的互换明确。"
+        },
+        "4K0J": {
+          "status": "cited-construction-with-local-finiteness",
+          "scope": "奇偶增量、奇数最大值/对数和、偶数插值、真实载流子及归零左平移全部明确；尾部有限性复用 4K0D，完整编码与全时对应引 4K0K。"
+        },
+        "4K0K": {
+          "status": "cited-research-theorem",
+          "scope": "精确引用正双端线性路径上的全部整数时刻存在唯一性与变换迭代；不把单步局部解当作全时唯一解，不重证 §§4–5 全部引理。"
+        },
+        "4K0L": {
+          "status": "cited-research-theorem",
+          "scope": "Type I Polish-space measurable-involution theorem; retain mu^Z(X*)=1 where X* means unique all-time lattice solution. Necessity and infinite construction are cited, not inferred from finite rows alone."
+        },
+        "4K0M": {
+          "status": "local-proof",
+          "scope": "局部密度定义含 Borel 集、Lebesgue 测度与积分；分两区域作一维换元和 Tonelli，得到归一化联合密度及逆变换。"
+        },
+        "4K0N": {
+          "status": "local-proof",
+          "scope": "逐次一维换元与 Tonelli 给出 s 因子；Gamma 积分确定 Beta 归一化，逆变换也明确。不引用或证明唯一性刻画。"
+        },
+        "4K0O": {
+          "status": "local-triple-proof-and-cited-global-law",
+          "scope": "通过独立的最小值与差、交换两个同分布变量证明三元局部律；全局不变性和存在性引用 Theorem 4.4(a) 的无平移特例。"
+        },
+        "4K0P": {
+          "status": "local-triple-proof-and-cited-global-law",
+          "scope": "Gamma/Beta 分解交换证明局部律；对数可积性以 integral_0^1 x^(r-1)|log x|dx=1/r^2 覆盖全部 r>0，耦合得严格正漂移。全局律引 Theorem 4.8。"
+        },
+        "4K0Q": {
+          "status": "definition-and-local-integrability-proof",
+          "scope": "采用 x^(-lambda-1)；两端指数尾保证 a,b>0 时任意 lambda，a=0 时 lambda>0，并以 Gamma 换元给出归一化和对数矩。"
+        },
+        "4K0R": {
+          "status": "local-proof",
+          "scope": "同时证明乘积保持、密度指数保持、对合性和面积保持；面积在 (s=xy,z=log x) 坐标中为纤维反射，使用逐次一维换元。不宣称分类唯一性。"
+        },
+        "4K0S": {
+          "status": "conditional-local-proof-using-cited-theorems",
+          "scope": "保留 delta,lambda,c>0 及 2E log omega<-log delta；用有限二阶矩与正交和界检验双端漂移，再调用全时解与 Type I 判据。"
+        },
+        "4K0T": {
+          "status": "local-proof",
+          "scope": "对每个固定总数纤维把更新写成整数区间反射，以同质量证明局部乘积律；K→infinity 仅作固定输入和边缘分布极限。"
+        },
+        "4K0U": {
+          "status": "local-rational-identity-proof",
+          "scope": "逐次列出两种复合的中间三元组及四个多项式恒等式，得到相同终态；所有参数和输入正，分母无零。没有从 YB 推出一般 IP。"
+        },
+        "4K0V": {
+          "status": "cited-research-theorem",
+          "scope": "精确限定 Bernoulli p>0 或 Markov p0,p1>0、和<1；原律与记录条件律、固定初始自然标签、X=min gamma-1、diffusive n²/n scaling 和 D[0,A] 弱收敛均明确。深层座位/消除证明未重证。"
+        },
+        "4K0W": {
+          "status": "definition-and-local-proof",
+          "scope": "定义 cadlag、J1 时间重排与有界连续泛函弱收敛；证明确定性连续极限时 J1 等价一致收敛，不把弱收敛当原样本空间逐点收敛。"
+        },
+        "4K0X": {
+          "status": "worked-example",
+          "scope": "显式算交替构形负载与二周期，证明两点均匀律时间和空间均不变。"
+        }
+      },
+      "claim_sources": {
+        "4K01": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§§2.2, 3.1; Proposition 3.1, Remark 3.2"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "§1.1 path/carrier formulation; local proof supplied in note"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K01: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K02": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.2"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "§2, Theorem 2.14 identity; statement and the cited use in §3.3.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K02: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K03": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K03 two-sided maximum estimates"
+          }
+        ],
+        "4K04": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.2, explicit counterexample"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K04 exact parity and future-infimum calculation"
+          }
+        ],
+        "4K05": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.3"
+          },
+          {
+            "source": "forest-reuse",
+            "locator": "0HS1 orthogonal partial-sum theorem; 00L3, 00L4, 0A6B"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K05: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K06": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.4 geometric convention"
+          },
+          {
+            "source": "forest-reuse",
+            "locator": "4E05 tail moment sum; 00L1 and 00L2"
+          }
+        ],
+        "4K07": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.4"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "§3.2.1, Lemma 3.13; local level-crossing derivation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K07: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K08": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "§2 finite-row mechanism, introductory detailed-balance definitions"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K08: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K09": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.4 IP identity"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K09 exchange pairs and equality of their probabilities"
+          }
+        ],
+        "4K0A": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Proposition 3.4"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "Theorem 1.8(a); alternative finite-window proof supplied"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0A: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0B": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Proposition 3.5"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "Theorem 1.8(b), §3.2.2, §3.2.4"
+          }
+        ],
+        "4K0C": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.4 Burke property paragraph"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "§3.3.1, Theorem 3.23, Lemma 3.25 and independence proof"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0C: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0D": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.1"
+          },
+          {
+            "source": "cst-paths-v2",
+            "locator": "Table 1, §2.1–2.2"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0D: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0E": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.2(a)"
+          },
+          {
+            "source": "cst-paths-v2",
+            "locator": "§2.1, Theorem 2.1 and carrier formula"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0E: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0F": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.2(b)"
+          },
+          {
+            "source": "cst-paths-v2",
+            "locator": "§2.2, Theorem 2.2 and carrier rescaling"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0F: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0G": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Remark 5.5"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "§5.1, equation (5.1)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0G: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0H": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.2(c), equation (5.2)"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "§4.1.1"
+          }
+        ],
+        "4K0I": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.2(d)"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "§4.2.1"
+          }
+        ],
+        "4K0J": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§§5.1–5.2(c,d)"
+          },
+          {
+            "source": "cst-paths-v2",
+            "locator": "§§2.3–2.4, equations (2.11)–(2.15), Table 1"
+          }
+        ],
+        "4K0K": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Theorem 5.3"
+          },
+          {
+            "source": "cst-paths-v2",
+            "locator": "Theorems 2.1, 2.2, 2.3, 2.5, 4.20; Corollary 4.29; 4.19 is forward-time only"
+          }
+        ],
+        "4K0L": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Theorem 5.4(i), informal statement"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Theorem 1.1(a), §§1–2"
+          }
+        ],
+        "4K0M": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3 Toda distribution paragraphs"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Proposition 4.1(a), Appendix A"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0M: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0N": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3 Toda distribution paragraphs"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Proposition 4.5(a), Appendix A"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0N: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0O": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Propositions 4.1–4.2; Theorem 4.4(a), shift parameter zero"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0O: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0P": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Propositions 4.5–4.6; Theorem 4.8; Appendix A (rate c>0)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0P: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0Q": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Appendix A, generalized inverse Gaussian and inverse gamma distributions"
+          }
+        ],
+        "4K0R": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3, equation (5.3)"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Proposition 3.9(a)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0R: displayed derivation; scope as recorded in proof_scope"
+          }
+        ],
+        "4K0S": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3"
+          },
+          {
+            "source": "cs-balance-v3",
+            "locator": "Theorem 3.12(b), Lemma 3.10 and Theorem 1.1(a)"
+          }
+        ],
+        "4K0T": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§5.3, BBS(J,K) and equation (5.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0T exact finite-fiber proof; no classification or global dynamics claim"
+          }
+        ],
+        "4K0U": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§§6.1–6.2, H_III^B family"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4K0U composition calculation; SymPy exact rational check corroborates"
+          }
+        ],
+        "4K0V": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Theorem 4.6"
+          },
+          {
+            "source": "oss-solitons-v2",
+            "locator": "§§2.1–2.3, Theorem 2.1(1), equation (4.16); proof located in §§4–11"
+          }
+        ],
+        "4K0W": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "Theorem 4.6 path-space notation"
+          },
+          {
+            "source": "oss-solitons-v2",
+            "locator": "Theorem 2.1(1); local definition and continuous-limit argument supplied"
+          }
+        ],
+        "4K0X": [
+          {
+            "source": "sasada-icm2026",
+            "locator": "§3.3 boundary of sufficient condition"
+          },
+          {
+            "source": "ckst-bbs-v1",
+            "locator": "Remark 1.5; §3.2.4 critical alternating example"
+          }
+        ]
+      },
+      "remaining_branches": [
+        {
+          "branch": "Full invariant-domain and invariant-measure classifications",
+          "scope": "§3 positive drift is developed as a sufficient class, with a critical example; the complete critical path classification, every reflected-process criterion and all ergodicity results are not reproduced. Independent slot measures are reused, not claimed to classify all invariant measures."
+        },
+        {
+          "branch": "q-statistics, generalized Gibbs states and local equilibration",
+          "scope": "§§3.4 and 7 identify mathematical formulation/justification questions. No established identification of every q-statistics law with a rigorously constructed local GGE is asserted."
+        },
+        {
+          "branch": "Macroscopic extensions and finer soliton fluctuations",
+          "scope": "§4 finite-size one-sided GHD and speed results reused from Ferrari; no extension to arbitrary double-infinite/infinite-size initial data. The tagged CLT is stated, while the full LDP rate, explicit diffusion-coefficient recursion and multi-tag common-Brownian correlations are deferred."
+        },
+        {
+          "branch": "All product-law characterizations and generalized capacities",
+          "scope": "§5 representative exponential, Gamma, GIG and finite integer-capacity geometric laws are developed. Shifted/scaled/bipartite variants, all necessity classifications, continuous-capacity cases and colored BBS are not added."
+        },
+        {
+          "branch": "Other quadrirational Yang–Baxter families",
+          "scope": "§6 H_III^B is treated by a direct proof; H_I^+, H_II^+, H_III^A, generalized beta-prime/Kummer laws, classification uniqueness and distribution-level ultradiscretization are not expanded."
+        },
+        {
+          "branch": "Continuous scaling and stochastic-polymer/random-matrix connections",
+          "scope": "§7 directions are retained as questions; no continuum Pitman limit, arbitrary Weyl-group theory, polymer construction or KdV/Toda hydrodynamic derivation claimed."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4K0B"
+          ],
+          "source": "ckst-bbs-v1",
+          "scope": "Markov invariant law and its all-time support are precisely cited; only stationary density arithmetic is local."
+        },
+        {
+          "notes": [
+            "4K0J",
+            "4K0K"
+          ],
+          "source": "cst-paths-v2",
+          "scope": "Toda path/dynamics correspondence and general four-model all-time existence/uniqueness rely on the primary theorem; full §§4–5 proof not reproduced."
+        },
+        {
+          "notes": [
+            "4K0L",
+            "4K0O",
+            "4K0P",
+            "4K0S"
+          ],
+          "source": "cs-balance-v3; cst-paths-v2",
+          "scope": "Abstract local/global necessity, construction of a full infinite lattice solution and Toda global stationarity are cited. Local density algebra and the conditional dKdV deduction are provided."
+        },
+        {
+          "notes": [
+            "4K0V"
+          ],
+          "source": "oss-solitons-v2",
+          "scope": "Functional CLT relies on seat-number/soliton-elimination decompositions and probabilistic limit theorems in §§4–11. No proof sketch is labeled a full proof."
+        },
+        {
+          "notes": [
+            "4K00"
+          ],
+          "source": "forest-reuse",
+          "scope": "Ferrari slot reconstruction, effective-speed theorem and finite-size hydrodynamic theorem remain the exact external contracts in 4C1A, 4C1B and 4C28."
+        }
+      ],
+      "metadata": {
+        "node_count": 34,
+        "atomic_count": 33,
+        "reference_count": 1,
+        "language": "zh",
+        "coverage": "Main §§3 and 5 developed with local proofs; §2 BBS and §4 slots/effective speeds/GHD reused from Ferrari; §4 tagged CLT stated with exact primary hypotheses; §6 explicit H_III^B Yang–Baxter proof; §§1 and 7 narrative. Specialized unexpanded branches recorded.",
+        "status": "author-repairs-frozen-pending-independent-recheck",
+        "shared_integration": "Parent-owned. No shared navigation, manifest, audit, scripts, tests, theme or existing notes edited; no build, commit or push performed.",
+        "reference_directory": "trees/references",
+        "conventions": [
+          "Path sign S increments 1-2eta is opposite Ferrari xi increments 2eta-1; extrema and carriers converted explicitly.",
+          "All path transforms are normalized at zero. Toda requires a one-site left shift before subtracting H_1; carrier is computed from unnormalized extrema, not an arbitrary difference of normalized paths.",
+          "The positive slopes at the two ends may be distinct. Statements of probability-one domains are concentration statements, not assertions about topological support of Bernoulli measures.",
+          "Geometric parameter r is the ratio, supported on nonnegative integers; the report's success parameter is 1-r.",
+          "Gamma second parameter is positive rate c; GIG convention is x^(-lambda-1). Density definitions and measure/integration links are explicit.",
+          "Type I detailed balance retains mu^Z(X*)=1. A local IP identity alone is not an infinite-volume existence theorem.",
+          "Tagged soliton position is min gamma-1 in OSS, while Ferrari uses min gamma; displacements and asymptotic speeds are unaffected. Initial natural labels are propagated, not reassigned at later times.",
+          "Report §4.6 simplification is read through the primary's adjacent-double-occupation condition. The Markov p1=0 invariant law is not included in the all-size functional CLT.",
+          "Probability laws and hypotheses are fixed to the listed source versions; later classification references in the survey are not inferred to resolve every global-dynamics question."
+        ]
+      }
+    },
+    {
+      "prefix": "4L",
+      "outline": "4L00",
+      "reference": "icm2026-staffilani",
+      "doi": "10.1137/25M1803309",
+      "speaker": "Gigliola Staffilani",
+      "title": "New and Old Mathematical Results on Wave Turbulence Theory",
+      "pages": "596–615",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1803309",
+      "license": "CC BY 4.0",
+      "question": "确定性NLS的共振如何导致高阶频率矩增长，而波动力学方程又如何在各自的初值、缩放与解类中产生原点凝聚或高频能量逸出？",
+      "reading_scope": "staffilani-icm2026: Entire publisher HTML mathematical body §§1–3, every displayed formula and both figure captions, in overlapping reads (lines 84–536); acknowledgments 537–539 and footnotes 540–548. Selected relevant bibliography entries, not the whole bibliography. Title/DOI/pages/online date/license verified. Publisher PDF retrieval returned HTTP 403; no publisher-PDF or figure-pixel inspection.\nckstt-v1: §1 opening through Theorem 1.1 and its following comparison (pdftotext -layout lines 85–175, PDF pp.2–4); contents viewed. No §§2–4 diffusion or frequency-set proof read. Latest arXiv v2 exists; statements here are explicitly bound to v1. Formal publication title/DOI/pages checked from publisher metadata only.\nhptv-v2: §1.2 Theorems 1.1–1.2 and Corollary 1.3 (extracted lines 85–190); §4.2.3 Proposition 4.8 and opening gauge/finite-set discussion (1585–1640, PDF pp.29–30). Not full modified scattering or infinite-cascade construction. Latest v3 dated 2014-10-08 exists and was not substituted for this read version.\ngiuliani-guardia-v2: Selected §1 context and §2 through Theorems 2.1–2.2 (lines 75–265); complete §2.1 statements and arithmetic-set descriptions plus opening §2.2 (260–345). No toy-model/PDE approximation proofs read.\ndeng-hani-v2: §1.1 Fourier/DAT/scaling/COL and Theorem 1.1, through Remarks 1.3–1.4 (lines 130–230, PDF pp.3–5); §3.7 final proof of Theorem 1.1 and preceding paragraph (1733–1768, PDF p.32), verifying indicator-truncated expectations. No full layered-graph proof or Appendix C read. Forest 4411–4419 reused rather than rewritten.\npure-four-wave-transfer-v1: Opening abstract/introduction, §2 notation and Theorem 3, start of §3.1 geometry (extracted lines 1–350; follow-up 280–355). Not full geometric spreading/long-time proof. The later published condensation article's Theorem 3 is the authority for the measure formulation and the narrower no-extra-energy-conservation statement.\npure-condensation-v1: Opening through main Theorem 4, §3.1 domain definitions and opening Lemma 8 (lines 1–380). Compared both concentration conditions with the 2026 formal version. No full multiscale proof.\npure-condensation-published: Publisher HTML §§1–2.1 (lines 59–275), including Definition 1 and Theorems 3–4; later read §2.2 and §3.1 discussion (278–394), §3.2 opening weak identities (395–423) and displayed remainder of Lemma 10 proof (425–449) as source-interface check. Rights/metadata lines 1512–1531 verified. No full §§3.3–4 proof, no publisher PDF or figures read as pixels.\nmixed-condensation-v1: Model, Assumptions A–B, physical-context formulas and Definition 1/Theorem 3 (lines 60–470); §11 proof map 3960–3980. ST-F05 follow-up read §5 Proposition 11, (77)–(91), and boundary-kernel discussion through start of two-zero case (1310–1495); A/Theta definitions 190–248 and Definition 1 rechecked 410–423. PDF p.9 rendered to /tmp/staffilani-growth-p9.png and visually inspected for (38). Full existence and condensation proof not read.\nmixed-energy-v1: Model, Assumptions X–Y and physical context (lines 55–330); Definition 1, Theorem 2, Remark 3 (375–453); §9 proof map 3935–3943. ST-F05 follow-up: §4 Proposition 10, (77)–(88) and beginning kernel estimates (1290–1425), boundary estimates/cutoff setup (1510–1605), final existence-step excerpt (1667–1728). PDF p.3 rendered to /tmp/staffilani-cascade-p3.png and visually inspected for Assumption X. Full energy-loss proof not read. Detected missing maximum-frequency factor between (79) and (82); the model is bound to (1)–(7), (79).\npure-transfer-published-metadata-only: Abstract and publisher bibliographic/access metadata only; mathematical body paywalled and not read. Not used as a full-text proof authority.\nlocal-calculations: Original local algebra, inequalities, measure examples, oscillatory integrals and parameter substitutions are written explicitly in the 4L atoms. Existing Fourier, Sobolev, probability, measure and integration notes are linked.",
+      "proof_scope": {
+        "4L01": {
+          "status": "local-calculation",
+          "scope": "谱参数与几何边长平方关系及固定参数 Sobolev 范数等价。"
+        },
+        "4L02": {
+          "status": "local-proof",
+          "scope": "光滑周期解的分部积分守恒证明；不证明低正则适定性。"
+        },
+        "4L03": {
+          "status": "local-proof-and-example",
+          "scope": "固定频率球加权界及单模态函数族；例子不是演化轨道。"
+        },
+        "4L04": {
+          "status": "local-calculation",
+          "scope": "相互作用表示精确符号和固定振幅振荡平均；不主张无穷时间平均定理。"
+        },
+        "4L05": {
+          "status": "local-proof",
+          "scope": "一维整数匹配因式分解、对角重复扣除和显式相位解。"
+        },
+        "4L06": {
+          "status": "local-proof",
+          "scope": "无理谱逐坐标匹配；加权正交与缩放后的欧氏矩形区别。"
+        },
+        "4L07": {
+          "status": "conditional-local-proof",
+          "scope": "绝对收敛条件下加权四次对称化；有限截断成立，传极限明确要求hs强收敛，不证明全局无限维解构造。"
+        },
+        "4L08": {
+          "status": "local-counterexample",
+          "scope": "闭合四频率集合的导数(-4,4,4,-4)，通常h2平方范数导数为-8。"
+        },
+        "4L09": {
+          "status": "cited-research-theorem",
+          "scope": "引用CKSTT小到大有限时间结论；频率族构造、toy model轨道与PDE稳定证明未重建。"
+        },
+        "4L0A": {
+          "status": "local-proof",
+          "scope": "[0,T]上有限维非齐次Gronwall估计，L=0分开；不推出无限时间PDE逼近。"
+        },
+        "4L0B": {
+          "status": "cited-theorem-with-local-comparison",
+          "scope": "引用Proposition4.8；增长率与对数幂、多项式的比较为局部计算。"
+        },
+        "4L0C": {
+          "status": "cited-theorem-with-local-time-change",
+          "scope": "引用s为整数且s>=30的Corollary1.3；pi log t时间变换直接计算；不声称任意小Hs初值都有修正散射。"
+        },
+        "4L0D": {
+          "status": "local-proof",
+          "scope": "振荡积分与常数T之差上界|Omega|T²/2；可微振幅分部积分。"
+        },
+        "4L0E": {
+          "status": "cited-research-theorems",
+          "scope": "固定s>1引用满测度倍数增长与较薄集合的小到大结论；不重建算术集合与准共振轨道。"
+        },
+        "4L0F": {
+          "status": "cited-limit-with-local-counterexample",
+          "scope": "复用4411–4419，核读主定理与截断期望；一致误差不推出积分误差的球例子直接计算。"
+        },
+        "4L0G": {
+          "status": "conditional-local-proof",
+          "scope": "约束测度存在且积分绝对收敛时的1/4对称弱式；不把形式能量消去升级为任意测度解守恒。"
+        },
+        "4L0H": {
+          "status": "local-change-of-variables",
+          "scope": "连续、正半轴C1、严格递增且无界色散下换元，4pi因子和密度幂次。"
+        },
+        "4L0I": {
+          "status": "imported-model-specific-solution-contracts",
+          "scope": "分别指定三篇论文Definition1、测试类、C1原记号、模型弱泛函与边界解释；纯四波任意原子边界公式及C1拓扑未在源定义单独给出，公开说明此来源限制。无存在或延拓证明。"
+        },
+        "4L0J": {
+          "status": "definition-and-local-logic",
+          "scope": "首次凝聚时间的上确界与任意短区间量词；有限测度递减连续性。"
+        },
+        "4L0K": {
+          "status": "local-proof",
+          "scope": "Cb弱收敛到Mdelta0蕴含紧频段能量趋零；尾能量结论额外假设总能量守恒。"
+        },
+        "4L0L": {
+          "status": "local-counterexample",
+          "scope": "显式两点正测度计算质量、能量与弱极限；不声称满足碰撞方程。"
+        },
+        "4L0M": {
+          "status": "cited-theorem-and-local-corollary",
+          "scope": "正式凝聚论文Theorem3的纯幂特例，保留支集条件、质量守恒和局部能量消失，不附加总能量守恒；远离零的质量界直接证明。"
+        },
+        "4L0N": {
+          "status": "local-proof-and-examples",
+          "scope": "c>0必要性、幂密度积分及具有间隙的反例；累积下界不推出逐点密度下界。"
+        },
+        "4L0O": {
+          "status": "cited-research-theorem",
+          "scope": "正式Theorem4(i)的纯幂特例，保留两项集中条件和给定质量守恒全局解；N0/CF*阈值源定理仅定性。"
+        },
+        "4L0P": {
+          "status": "local-proof",
+          "scope": "有限区间网格及Fubini给出分离对质量>=eta M²；不声称是源文全部三重碰撞区域引理。"
+        },
+        "4L0Q": {
+          "status": "conditional-local-proof",
+          "scope": "非负积分预算给集合测度界；时间区间覆盖明确另作假设，未将其充当凝聚证明。"
+        },
+        "4L0R": {
+          "status": "definition-and-local-reindexing",
+          "scope": "1↔m多项式与弱式，强式的-m来自重新编号；同一通道的系数乘全项。"
+        },
+        "4L0S": {
+          "status": "local-polynomial-proof",
+          "scope": "Bose因子完整展开，保留-f0 sumfj二次项；仅占据多项式代数极限，不是方程解极限。"
+        },
+        "4L0T": {
+          "status": "conditional-local-proof",
+          "scope": "一对多测试差对频率能量为零、对常数为1-m，未推断质量导数有固定符号。"
+        },
+        "4L0U": {
+          "status": "model-specialization-and-local-check",
+          "scope": "二次色散、mu=0,c12=c22=1,c31=0，核与AssumptionsA–B参数直接核对；不等同完整量子耦合系统。"
+        },
+        "4L0V": {
+          "status": "cited-theorem-with-local-thresholds",
+          "scope": "引用Theorem3存在至少一个构造解及其凝聚结论；有限c<1/2、即时c<1/40及幂初值直接计算。"
+        },
+        "4L0W": {
+          "status": "definition-and-local-logic",
+          "scope": "按源(21)定义能量保持初始区间的上确界；严格下降解释额外假设E(t)<=E0。"
+        },
+        "4L0X": {
+          "status": "conditional-local-proof",
+          "scope": "可用的双重截断测试尊重phi'(0)=0；先epsilon后R，DCT/MCT只作用于端点积分；不交换碰撞极限。"
+        },
+        "4L0Y": {
+          "status": "local-parameter-construction",
+          "scope": "独立选择quartic模型，R'幂次-3/4，九项AssumptionX约束逐项算出；源深定理证明仍外引。"
+        },
+        "4L0Z": {
+          "status": "cited-theorem-with-local-thresholds",
+          "scope": "引用Theorem2，四次模型下finite c<3/4、instant c<1/120直接代入；不推回二次NLS，不重建能量逸出证明。"
+        }
+      },
+      "claim_sources": {
+        "4L01": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "§2 setup; local coordinate calculation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L01 body calculation with explicit assumptions"
+          }
+        ],
+        "4L02": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "(1.1), (2.2)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L02 body calculation with explicit assumptions"
+          }
+        ],
+        "4L03": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "§§1–2 motivation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L03 body calculation with explicit assumptions"
+          }
+        ],
+        "4L04": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "Definition 2.4, (2.6)–(2.7)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L04 body calculation with explicit assumptions"
+          }
+        ],
+        "4L05": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "Discussion after Theorem 2.6"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L05 body calculation with explicit assumptions"
+          }
+        ],
+        "4L06": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "Theorem 2.6 and preceding setup"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L06 body calculation with explicit assumptions"
+          }
+        ],
+        "4L07": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "Theorem 2.6; local correction of following norm claim"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L07 body calculation with explicit assumptions"
+          }
+        ],
+        "4L08": [
+          {
+            "source": "local-calculations",
+            "locator": "4L08 four-mode calculation"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L08 body calculation with explicit assumptions"
+          }
+        ],
+        "4L09": [
+          {
+            "source": "ckstt-v1",
+            "locator": "§1 Theorem 1.1"
+          }
+        ],
+        "4L0A": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0A integral-inequality proof"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0A body calculation with explicit assumptions"
+          }
+        ],
+        "4L0B": [
+          {
+            "source": "hptv-v2",
+            "locator": "§4.2.3 Proposition 4.8, (4.13)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0B body calculation with explicit assumptions"
+          }
+        ],
+        "4L0C": [
+          {
+            "source": "hptv-v2",
+            "locator": "§1.2 Theorems 1.1–1.2, Corollary 1.3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0C body calculation with explicit assumptions"
+          }
+        ],
+        "4L0D": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0D two elementary oscillatory estimates"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0D body calculation with explicit assumptions"
+          }
+        ],
+        "4L0E": [
+          {
+            "source": "giuliani-guardia-v2",
+            "locator": "§2 Theorems 2.1–2.2 and §2.1"
+          }
+        ],
+        "4L0F": [
+          {
+            "source": "deng-hani-v2",
+            "locator": "§1.1 DAT/COL/Theorem 1.1; §3.7 proof of Theorem 1.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0F body calculation with explicit assumptions"
+          }
+        ],
+        "4L0G": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "(3.1); local exchange-of-variables proof"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0G body calculation with explicit assumptions"
+          }
+        ],
+        "4L0H": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "(3.7); elementary polar coordinates"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0H body calculation with explicit assumptions"
+          }
+        ],
+        "4L0I": [
+          {
+            "source": "pure-condensation-published",
+            "locator": "Definition 1 (13); §3.2 (35)–(36)"
+          },
+          {
+            "source": "mixed-condensation-v1",
+            "locator": "Definition 1 (32); §5 (77)–(91), Step 1, Step 2"
+          },
+          {
+            "source": "mixed-energy-v1",
+            "locator": "Definition 1 (34); §4 (77)–(100), Step 1 and cutoff construction"
+          }
+        ],
+        "4L0J": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "(3.6)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0J body calculation with explicit assumptions"
+          }
+        ],
+        "4L0K": [
+          {
+            "source": "staffilani-icm2026",
+            "locator": "(3.4)–(3.5); mass-factor correction"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0K body calculation with explicit assumptions"
+          }
+        ],
+        "4L0L": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0L two-point measures"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0L body calculation with explicit assumptions"
+          }
+        ],
+        "4L0M": [
+          {
+            "source": "pure-condensation-published",
+            "locator": "Theorem 3, (14)–(16)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0M body calculation with explicit assumptions"
+          },
+          {
+            "source": "pure-four-wave-transfer-v1",
+            "locator": "Theorem 3 compared with later published restatement"
+          }
+        ],
+        "4L0N": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0N elementary finite-measure arguments"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0N body calculation with explicit assumptions"
+          }
+        ],
+        "4L0O": [
+          {
+            "source": "pure-condensation-published",
+            "locator": "Theorem 4(i), (17)–(20)"
+          },
+          {
+            "source": "pure-condensation-v1",
+            "locator": "Theorem 4 compared with published Theorem 4(i)"
+          }
+        ],
+        "4L0P": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0P finite-grid two-variable lemma"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0P body calculation with explicit assumptions"
+          }
+        ],
+        "4L0Q": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0Q Chebyshev-type integral estimate"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0Q body calculation with explicit assumptions"
+          }
+        ],
+        "4L0R": [
+          {
+            "source": "mixed-condensation-v1",
+            "locator": "(1)–(4); §3 weak forms"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0R body calculation with explicit assumptions"
+          }
+        ],
+        "4L0S": [
+          {
+            "source": "mixed-condensation-v1",
+            "locator": "§1.2 (18)–(29), checked against strong forms (2)–(4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0S body calculation with explicit assumptions"
+          }
+        ],
+        "4L0T": [
+          {
+            "source": "local-calculations",
+            "locator": "4L0T weak-form tests"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0T body calculation with explicit assumptions"
+          }
+        ],
+        "4L0U": [
+          {
+            "source": "mixed-condensation-v1",
+            "locator": "Assumptions A–B (5)–(16), Remark 1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0U body calculation with explicit assumptions"
+          }
+        ],
+        "4L0V": [
+          {
+            "source": "mixed-condensation-v1",
+            "locator": "Definition 1 (32); Theorem 3 (33)–(38)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0V body calculation with explicit assumptions"
+          }
+        ],
+        "4L0W": [
+          {
+            "source": "mixed-energy-v1",
+            "locator": "(21); Remark 3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0W body calculation with explicit assumptions"
+          }
+        ],
+        "4L0X": [
+          {
+            "source": "mixed-energy-v1",
+            "locator": "Definition 1 (34); Remark 3 (40)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0X body calculation with explicit assumptions"
+          }
+        ],
+        "4L0Y": [
+          {
+            "source": "mixed-energy-v1",
+            "locator": "Assumption X (5)–(18), corrected derivative relative to Remark 1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0Y body calculation with explicit assumptions"
+          }
+        ],
+        "4L0Z": [
+          {
+            "source": "mixed-energy-v1",
+            "locator": "Theorem 2 (37)–(39), Remark 3; 4L0Y specialization"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "4L0Z body calculation with explicit assumptions"
+          }
+        ]
+      },
+      "remaining_branches": [
+        {
+          "branch": "Report Theorem 2.10 and work with Nicolas Camps",
+          "scope": "Read in full report; ongoing/unpublished waveguide/irrational-torus work is not promoted to a primary-paper theorem or expanded proof."
+        },
+        {
+          "branch": "General dispersion and non-condensation estimates",
+          "scope": "Pure four-wave theorems specialized to 1<gamma<=2 powers; general convex dispersion and full quantitative Theorem4(ii) constants not developed. N0/CF* thresholds are qualitative in the cited finite-condensation statement."
+        },
+        {
+          "branch": "Nonradial solutions, numerical domain decomposition, physical experiments",
+          "scope": "Report context read; these are not independent fully developed mathematical branches here."
+        },
+        {
+          "branch": "Exact source measure-class completion",
+          "scope": "Source C1 topology and pure-four-wave arbitrary-atom zero-frequency boundary values remain implicit at the cited definition. 4L0I discloses this source limitation and provides model-specific equation interfaces. No unique extension to every finite measure is claimed."
+        },
+        {
+          "branch": "Research-proof consistency",
+          "scope": "Mixed-energy preprint internal dropped-factor/derivative errors are recorded. No claim that the entire existence/cascade proof has been independently checked or repaired."
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        "CKSTT resonant-generation combinatorics, toy-model diffusion and PDE approximation.",
+        "HPTV infinitely growing resonant construction, modified scattering and modified wave operators.",
+        "Giuliani–Guardia arithmetic-set construction, quasi-resonant normal form and time estimates.",
+        "Deng–Hani layered cumulants and graph estimates establishing the kinetic limit.",
+        "Pure/mixed kinetic measure-solution existence, boundary collision construction, multi-scale condensation and finite-time energy loss.",
+        "Formal-vs-actual conservation requires model-specific integrability; local identities do not establish missing moment bounds."
+      ],
+      "metadata": {
+        "volume": "5",
+        "section": "11 Mathematical Physics",
+        "published_online": "2026-07-13",
+        "copyright": "2026 International Mathematical Union; SIAM",
+        "report_body_fully_read": true,
+        "full_primary_proofs_read": false,
+        "version_policy": "Formal proceedings HTML authoritative for report; primary excerpts are version-bound. Pure-condensation formal 2026 theorem contracts supersede the older density shorthand."
+      }
+    },
+    {
+      "prefix": "4M",
+      "outline": "4M00",
+      "reference": "icm2026-sun",
+      "doi": "10.1137/25M1805801",
+      "speaker": "Nike Sun",
+      "title": "Randomized Combinatorial Problems, in Sparse and Mean-Field Settings",
+      "pages": "616-635",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805801",
+      "license": "CC BY 4.0",
+      "question": "随机局部约束与高维高斯约束的解数、解簇和重叠如何影响可满足阈值，并如何在明确的稳定算法类内刻画可达投影？",
+      "reading_scope": "sun-icm2026: Entire publisher HTML mathematical body §§1-3.4, all displayed equations, four figure captions and Table 1: lines 88-571, read in overlapping section-sized windows. Acknowledgments 572-574 and selected bibliography entries read; not a full bibliography audit. Metadata/title/author/pages/DOI/license/date checked at lines 59-65 and 1085-1102. No publisher PDF or figure-pixel inspection.\nssz-v3: PDF introduction §§1.1-1.8, extracted lines 1-475, printed pp.1-8, including Theorem 1, Proposition 1.2, Definition 1.3, Proposition 1.4 and equations (1)-(17); opening §2 (before §2.1), lines 480-525, including Definition 2.1, p.9. PDF p.6 rendered and visually inspected. Additional v3 correction notice and start Appendix F lines 4478-4535, p.73; Appendix G introduction and corrected domain definition (154), Propositions G.1-G.3 and start G.1 lines 4876-4970, pp.79-80. Abstract metadata records correction; no complete reading of Appendices B,F,G.\nnss-ii-v2: HTML abstract and introduction §§1,1.1,1.2, lines 45-147; start §1.3 lines 151-158. Recheck extended §1.3 through line 168 for explanation of short-cycle effects. Theorems 1.1 and 1.4 and Definition 1.3 read in full; no full proof sections.\nding-sun-v1: HTML abstract and §1 lines 44-128: Theorem 1.1, Condition 1.2, Proposition 1.3, Theorem 1.4 and beginning of its conditional-moment consequence. No complete proof body.\nhuang-v2: HTML §1 lines 67-121; selected §2.6 lines 249-323; §§3.1-3.3 lines 324-435 and opening at 437. Theorem 1.2, Condition 1.3, equations (6)-(8), Proposition 3.2 checked. Full proof and numerical validation not read.\nhss-v1: PDF pp.1-6, extracted lines 1-290: abstract, model, §1.1 definitions/control equations and informal results. Separate read lines 485-750, pp.10-16: end §1.3, complete §1.4 definitions 1.8/1.11/1.12/1.15, Theorems 1.13/1.16, Corollary 1.14, §1.5 organization, and beginning §2.1. PDF p.13 rendered and visually inspected for Theorem 1.16 quantifiers, q<2, and oracle-cost condition. Remaining mathematical proof body not read; pp.6-10 between listed excerpts not fully read.\nshmalo-v1-consulted: Only abstract and introduction lines 25-70, including Theorem 1.1 and Remark 1.2; versioned abstract metadata independently rechecked. Proof/computer code not audited.\nlocal-calculations: All owned atomic source bodies re-read while authoring and repairing; finite computations checked directly. Existing reusable definitions inspected separately.",
+      "proof_scope": {
+        "4M01": {
+          "status": "definition",
+          "scope": "有限字母表、二部多重因子图与局部指标乘积；图着色和独立集作为实例。"
+        },
+        "4M02": {
+          "status": "definition",
+          "scope": "半边均匀配对、允许平行关联边、逐边独立文字标签和 nd=mk 的整除条件。"
+        },
+        "4M03": {
+          "status": "definition-and-local-calculation",
+          "scope": "独立子句使用不同变量的 k 子集；SAT 与 NAE 单子句概率及一阶矩直接计算，不转移正则模型定理。"
+        },
+        "4M04": {
+          "status": "definition",
+          "scope": "固定密度的阈值、规模依赖的尖锐阈值序列、正概率和高概率，以及搜索任务的不同量词。"
+        },
+        "4M05": {
+          "status": "local-construction-and-proof",
+          "scope": "有限配置集的违反数能量、Gibbs 权重及固定实例的零温极限；不交换温度和规模极限。"
+        },
+        "4M06": {
+          "status": "local-proof",
+          "scope": "log t<=t-1 给 Jensen 上界；Markov 给典型指数率上界；硬约束 log0 与 ElogZ 单独处理。"
+        },
+        "4M07": {
+          "status": "local-proof",
+          "scope": "条件于任意配对后由逐边独立标签求精确一阶矩，再用 Markov；平行边不破坏计算。"
+        },
+        "4M08": {
+          "status": "local-proof",
+          "scope": "在几乎处处商 L2 中用 Schwarz 逐步证明 Paley-Zygmund，包括 theta=0。"
+        },
+        "4M09": {
+          "status": "local-counterexample",
+          "scope": "2^n 倍公平 Bernoulli 的矩比值恒为二，非零概率恒为二分之一。"
+        },
+        "4M0A": {
+          "status": "definition-and-local-calculation",
+          "scope": "自旋编码、Hamming 距离与重叠恒等式；带符号与绝对重叠分开。"
+        },
+        "4M0B": {
+          "status": "local-counterexample",
+          "scope": "2-NAE 路径只有两个交替解；均匀单点分布不推出独立。"
+        },
+        "4M0C": {
+          "status": "local-proof",
+          "scope": "有限树的分支权重递推、叶子归纳和根配分函数；邻居记号在本页定义。"
+        },
+        "4M0D": {
+          "status": "local-proof",
+          "scope": "Z>0 的有限树中未归一化局部因子均为 Z；叶子删去计数与消息缩放抵消。"
+        },
+        "4M0E": {
+          "status": "local-counterexample",
+          "scope": "三角不等约束无解，均匀 BP 不动点却给 Bethe 乘除式为一。"
+        },
+        "4M0F": {
+          "status": "conditional-local-proof",
+          "scope": "两项精确计数比值；额外明确旧坐标独立均匀、子句变量不交时才导出 RS 局部因子。"
+        },
+        "4M0G": {
+          "status": "definition-and-local-counterexample",
+          "scope": "解簇按单坐标翻转连通；冻结坐标与局部可翻转区分；三点子集反例。"
+        },
+        "4M0H": {
+          "status": "local-proof",
+          "scope": "有限混合的协方差展开及两单点簇例子。"
+        },
+        "4M0I": {
+          "status": "local-proof",
+          "scope": "n>=1、非空有限解集，倾斜配分函数的两次导数；仅推出均值随 lambda 单调。"
+        },
+        "4M0J": {
+          "status": "local-proof",
+          "scope": "最大项与项数的上下界；次指数层数、统一误差与负计数指数的作用。"
+        },
+        "4M0K": {
+          "status": "local-proof",
+          "scope": "每个固定赋值具有同一正可满足概率时，有限 Bayes 计算植入实例的 Z 偏置。"
+        },
+        "4M0L": {
+          "status": "construction",
+          "scope": "两个倾斜消息算子的输入、输出、权重、归一化及 lambda=0 的排零约定；收敛另见 4M18。"
+        },
+        "4M0M": {
+          "status": "definition-from-cited-selection",
+          "scope": "三类 z 因子、A 和 ell、F、s_lambda 与 Sigma；适定性沿所引论文，未误用对参数依赖分布的形式求导。"
+        },
+        "4M0N": {
+          "status": "cited-research-theorem",
+          "scope": "大 k、正则密度、严格可满足区间的对数自由能与凝聚阈值；不展开深层证明，不插值密度格点。"
+        },
+        "4M0O": {
+          "status": "cited-research-theorem",
+          "scope": "只引用 Theorem 1.1(a) 的 epsilon/K 大簇质量保证；不声称全部簇数有限，不导入(b)的簇尺寸细项。"
+        },
+        "4M0P": {
+          "status": "definition",
+          "scope": "高斯矩阵、N^-1/2 投影、球面与立方体、半空间与对称区间分别定义。"
+        },
+        "4M0Q": {
+          "status": "local-proof",
+          "scope": "明确补成正交基、行列式绝对值一与线性换元；联合高斯表示及端点。"
+        },
+        "4M0R": {
+          "status": "local-proof",
+          "scope": "精确一阶矩和按 Hamming 距离分组的有序配置对二阶矩；一般 I 及零裕量的一阶矩上界。"
+        },
+        "4M0S": {
+          "status": "local-proof",
+          "scope": "有界非负 X 的条件二次多项式判别式；v=0 约定及 0<C<infinity 条件。"
+        },
+        "4M0T": {
+          "status": "local-proof",
+          "scope": "固定非空有限自旋解集，独立均匀抽样后平均重叠等于重心范数平方/N。"
+        },
+        "4M0U": {
+          "status": "definition-with-cited-existence",
+          "scope": "固定点和势函数定义候选常数；参数矩形、唯一性与下降性引用 DS Proposition 1.3/Huang Proposition 3.2，未复现数值认证。"
+        },
+        "4M0V": {
+          "status": "conditional-cited-research-theorem",
+          "scope": "完整写出 S_*(u,v)<=0 的全局假设与 Gaussian Ising 零裕量容量上界；分母正性直接证明；下界不同条件未混同。"
+        },
+        "4M0W": {
+          "status": "local-proof",
+          "scope": "kappa>0 的球内到球面缩放；kappa=0 的确定性反例；不转移到负裕量。"
+        },
+        "4M0X": {
+          "status": "definition-and-local-identity",
+          "scope": "经验测度、绝对值推前、能量积分及精确支撑条件。"
+        },
+        "4M0Y": {
+          "status": "definition-and-local-bound",
+          "scope": "实线有限 p 矩测度的耦合运输距离、点到集合距离和 W2 闭包；同下标经验耦合界，不证明一般运输对偶。"
+        },
+        "4M0Z": {
+          "status": "definition",
+          "scope": "全输入 Euclidean/Frobenius Lipschitz 条件、E norm^2=N、独立 Gaussian 种子和松弛域。"
+        },
+        "4M10": {
+          "status": "local-proof",
+          "scope": "连接两个实输入的线段及逐坐标介值定理，精确立方体值连续映射必常数。"
+        },
+        "4M11": {
+          "status": "local-proof",
+          "scope": "同一行配对加确定性算子范数界；绝对值版本及近域舍入；不声称随机矩阵范数定理。"
+        },
+        "4M12": {
+          "status": "conditional-local-proof",
+          "scope": "固定参考配置、确定性重叠间隙和 Hamming 小步长的不可穿越命题；不是 branching OGP 的证明。"
+        },
+        "4M13": {
+          "status": "local-construction-and-proof",
+          "scope": "简单过去可测过程的正交交叉项、Ito 等距与 L2 完备延拓；4M19/4M1D 完整证明矩形稠密及时间平均逼近；本页用截断、参数积分可测性和显式 2K delta/h 阶梯误差证明所有渐进可测平方可积过程属于闭包。只构造每个固定时刻的 L2 积分，不证明 Brownian 存在性、连续版本或研究算法定理。"
+        },
+        "4M14": {
+          "status": "definition",
+          "scope": "仅对称球面控制类：独立初始均匀种子、渐进性、非负波动和逐时刻预算，取绝对终点律的 W2 闭包。"
+        },
+        "4M15": {
+          "status": "cited-preprint-theorem",
+          "scope": "只陈述 Theorem 1.16 球面对称特例；可达 W2，排除 Wq with 1<=q<2；量词顺序及 Markov 控制查询前提保留。"
+        },
+        "4M16": {
+          "status": "local-proof",
+          "scope": "L2 三角不等式、Ito 等距、W2 二阶矩连续性给界；常数控制达到上下界。"
+        },
+        "4M17": {
+          "status": "local-counterexample",
+          "scope": "单个离群约束的经验测度 W2 趋零却始终不精确可行。"
+        },
+        "4M18": {
+          "status": "cited-research-theorem",
+          "scope": "大 k、指定区间及初值，离散概率质量的 l1 收敛、不动点、对称性和内部质量界；Appendix B 深证引用。"
+        },
+        "4M1A": {
+          "status": "local-proof",
+          "scope": "Gaussian 方向旋转不变与有理弧长逼近，得到相关正象限概率；端点单独算。"
+        },
+        "4M1B": {
+          "status": "cited-research-theorem",
+          "scope": "原始 spin 重叠的绝对值，嵌套概率、两个 n^-1/3 窗与 C n^-1/4 外部质量界；未展开几何研究证明。"
+        },
+        "4M1C": {
+          "status": "local-proof",
+          "scope": "二项分布众数给熵下界，F(0)=0,Fprime(0)=2alpha/pi>0 给原始矩比值指数下界；不是普遍算法障碍。"
+        },
+        "4M19": {
+          "status": "local-proof",
+          "scope": "有限时间区间上以矩形网格生成集合代数，用正负部定义有限测度并应用唯一性，再以 Hilbert 正交投影推出矩形函数稠密；时间截断及支配收敛推广到整条实线。"
+        },
+        "4M1D": {
+          "status": "local-proof",
+          "scope": "时间矩形的对称差估计、稠密性与平移等距性给乘积 L2 平移连续；Fubini-Tonelli 和 Schwarz 给过去时间平均的 L2 收敛。"
+        }
+      },
+      "claim_sources": {
+        "4M01": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§§1,2.1"
+          }
+        ],
+        "4M02": [
+          {
+            "source": "ssz-v3",
+            "locator": "Opening §2, Definition 2.1, printed p.9, before §2.1; extracted lines 494-518"
+          }
+        ],
+        "4M03": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.2, model distinction immediately following Theorem 2.2, HTML line 289"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "独立子句使用不同变量的 k 子集；SAT 与 NAE 单子句概率及一阶矩直接计算，不转移正则模型定理。"
+          }
+        ],
+        "4M04": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.1 threshold discussion; §2.2 high-probability convention, HTML line 200; §2.3 Theorem 2.3(1) for large-k random regular NAE-SAT; §3.3 sharp-threshold discussion"
+          }
+        ],
+        "4M05": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§1 and §3.1, equations (3.2)-(3.3)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "有限配置集的违反数能量、Gibbs 权重及固定实例的零温极限；不交换温度和规模极限。"
+          }
+        ],
+        "4M06": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.2, equations (2.3)-(2.4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "log t<=t-1 给 Jensen 上界；Markov 给典型指数率上界；硬约束 log0 与 ElogZ 单独处理。"
+          }
+        ],
+        "4M07": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.2, equation (2.4)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "条件于任意配对后由逐边独立标签求精确一阶矩，再用 Markov；平行边不破坏计算。"
+          }
+        ],
+        "4M08": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.2, inequality immediately after (2.12), HTML lines 277-279"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "在几乎处处商 L2 中用 Schwarz 逐步证明 Paley-Zygmund，包括 theta=0。"
+          }
+        ],
+        "4M09": [
+          {
+            "source": "local-calculations",
+            "locator": "Explicit two-point distribution"
+          }
+        ],
+        "4M0A": [
+          {
+            "source": "nss-ii-v2",
+            "locator": "Definition 1.3"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "自旋编码、Hamming 距离与重叠恒等式；带符号与绝对重叠分开。"
+          }
+        ],
+        "4M0B": [
+          {
+            "source": "local-calculations",
+            "locator": "Finite path enumeration"
+          }
+        ],
+        "4M0C": [
+          {
+            "source": "ssz-v3",
+            "locator": "§1.4, BP recursions"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "有限树的分支权重递推、叶子归纳和根配分函数；邻居记号在本页定义。"
+          }
+        ],
+        "4M0D": [
+          {
+            "source": "local-calculations",
+            "locator": "Finite-tree factorization underlying report (2.18)"
+          }
+        ],
+        "4M0E": [
+          {
+            "source": "local-calculations",
+            "locator": "Three-variable odd cycle"
+          }
+        ],
+        "4M0F": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.2, equations (2.7)-(2.11)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "两项精确计数比值；额外明确旧坐标独立均匀、子句变量不交时才导出 RS 局部因子。"
+          }
+        ],
+        "4M0G": [
+          {
+            "source": "nss-ii-v2",
+            "locator": "Introduction before Theorem 1.1"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "解簇按单坐标翻转连通；冻结坐标与局部可翻转区分；三点子集反例。"
+          }
+        ],
+        "4M0H": [
+          {
+            "source": "local-calculations",
+            "locator": "Finite total-covariance identity"
+          }
+        ],
+        "4M0I": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.4, equation (2.17)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "n>=1、非空有限解集，倾斜配分函数的两次导数；仅推出均值随 lambda 单调。"
+          }
+        ],
+        "4M0J": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.3, equations (2.15)-(2.16)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "最大项与项数的上下界；次指数层数、统一误差与负计数指数的作用。"
+          }
+        ],
+        "4M0K": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§2.5, planted-model discussion"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "每个固定赋值具有同一正可满足概率时，有限 Bayes 计算植入实例的 Z 偏置。"
+          }
+        ],
+        "4M0L": [
+          {
+            "source": "ssz-v3",
+            "locator": "§1.6, equation (10)"
+          }
+        ],
+        "4M0M": [
+          {
+            "source": "ssz-v3",
+            "locator": "§1.6, equations (11)-(14)"
+          }
+        ],
+        "4M0N": [
+          {
+            "source": "ssz-v3",
+            "locator": "Theorem 1, Definition 1.3, Proposition 1.4; compare NSS II introduction"
+          },
+          {
+            "source": "nss-ii-v2",
+            "locator": "Introduction, lines 88-99, quoting regular-model threshold and free-energy theorems"
+          }
+        ],
+        "4M0O": [
+          {
+            "source": "nss-ii-v2",
+            "locator": "Theorem 1.1(a)"
+          }
+        ],
+        "4M0P": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§3.1, equation (3.1)"
+          }
+        ],
+        "4M0Q": [
+          {
+            "source": "local-calculations",
+            "locator": "Orthogonal invariance and finite covariance expansion"
+          }
+        ],
+        "4M0R": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§§3.2-3.3, first/second moment discussion"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "精确一阶矩和按 Hamming 距离分组的有序配置对二阶矩；一般 I 及零裕量的一阶矩上界。"
+          }
+        ],
+        "4M0S": [
+          {
+            "source": "ding-sun-v1",
+            "locator": "Argument following Theorem 1.4"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "有界非负 X 的条件二次多项式判别式；v=0 约定及 0<C<infinity 条件。"
+          }
+        ],
+        "4M0T": [
+          {
+            "source": "local-calculations",
+            "locator": "Finite double sum"
+          }
+        ],
+        "4M0U": [
+          {
+            "source": "ding-sun-v1",
+            "locator": "Equations (2)-(5), Proposition 1.3; Huang v2 Proposition 3.2"
+          },
+          {
+            "source": "huang-v2",
+            "locator": "Proposition 3.2, parameter rectangle and monotonicity"
+          }
+        ],
+        "4M0V": [
+          {
+            "source": "huang-v2",
+            "locator": "Equations (6)-(8), Condition 1.3, Theorem 1.2"
+          }
+        ],
+        "4M0W": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§3.2, convex/nonconvex spherical distinction"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "kappa>0 的球内到球面缩放；kappa=0 的确定性反例；不转移到负裕量。"
+          }
+        ],
+        "4M0X": [
+          {
+            "source": "hss-v1",
+            "locator": "Equations (1.1),(1.3),(1.5),(1.6)"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "经验测度、绝对值推前、能量积分及精确支撑条件。"
+          }
+        ],
+        "4M0Y": [
+          {
+            "source": "hss-v1",
+            "locator": "Equations (1.21)-(1.22), Definition 1.12"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "实线有限 p 矩测度的耦合运输距离、点到集合距离和 W2 闭包；同下标经验耦合界，不证明一般运输对偶。"
+          }
+        ],
+        "4M0Z": [
+          {
+            "source": "hss-v1",
+            "locator": "Definitions 1.8,1.11,1.15"
+          }
+        ],
+        "4M10": [
+          {
+            "source": "local-calculations",
+            "locator": "Intermediate-value obstruction"
+          }
+        ],
+        "4M11": [
+          {
+            "source": "local-calculations",
+            "locator": "Deterministic same-index coupling estimate; HSS Remark 3.6 context"
+          }
+        ],
+        "4M12": [
+          {
+            "source": "sun-icm2026",
+            "locator": "§3.4, OGP discussion; local first-crossing proof"
+          },
+          {
+            "source": "local-calculations",
+            "locator": "固定参考配置、确定性重叠间隙和 Hamming 小步长的不可穿越命题；不是 branching OGP 的证明。"
+          }
+        ],
+        "4M13": [
+          {
+            "source": "local-calculations",
+            "locator": "4M13 simple-process isometry, truncation and explicit left-step bound; 4M19 rectangle-density proof; 4M1D translation/time-average proof. Supports, but is not quoted from, HSS Definition 1.1."
+          }
+        ],
+        "4M14": [
+          {
+            "source": "hss-v1",
+            "locator": "Definition 1.1, spherical case"
+          }
+        ],
+        "4M15": [
+          {
+            "source": "hss-v1",
+            "locator": "Definitions 1.8,1.11,1.15; Theorem 1.16 and ensuing algorithm-cost paragraph, PDF pp.11-13"
+          }
+        ],
+        "4M16": [
+          {
+            "source": "local-calculations",
+            "locator": "Direct consequence of HSS Definition 1.1"
+          }
+        ],
+        "4M17": [
+          {
+            "source": "local-calculations",
+            "locator": "Two-atom measure computation"
+          }
+        ],
+        "4M18": [
+          {
+            "source": "ssz-v3",
+            "locator": "Proposition 1.2, PDF pp.6-7"
+          }
+        ],
+        "4M1A": [
+          {
+            "source": "local-calculations",
+            "locator": "Planar angular argument"
+          }
+        ],
+        "4M1B": [
+          {
+            "source": "nss-ii-v2",
+            "locator": "Definition 1.3 and Theorem 1.4"
+          }
+        ],
+        "4M1C": [
+          {
+            "source": "local-calculations",
+            "locator": "Exact pair moment plus elementary entropy bound"
+          }
+        ],
+        "4M19": [
+          {
+            "source": "local-calculations",
+            "locator": "有限时间区间上以矩形网格生成集合代数，用正负部定义有限测度并应用唯一性，再以 Hilbert 正交投影推出矩形函数稠密；时间截断及支配收敛推广到整条实线。"
+          }
+        ],
+        "4M1D": [
+          {
+            "source": "local-calculations",
+            "locator": "时间矩形的对称差估计、稠密性与平移等距性给乘积 L2 平移连续；Fubini-Tonelli 和 Schwarz 给过去时间平均的 L2 收敛。"
+          }
+        ]
+      },
+      "remaining_branches": [
+        "随机图着色、最大独立集、独立子句 SAT/NAE 的精确阈值与局部算法只保留模型背景，未展开其研究定理。",
+        "正则 NAE-SAT 的自由树编码、插值上界、截断二阶矩、短环条件化和 2023 年勘误证明未重建；所引主结论保持大 k 和正则密度假设。",
+        "Ding-Sun 的筛选变量、具体一变量条件及条件矩计算，尖锐阈值提升，以及 Huang 全局二参数条件的数值验证未重建。",
+        "Shmalo 2026 预印本的计算机辅助验证仅作为截至日期的研究动态检查；没有独立复现或采纳其无条件容量结论。",
+        "一般非对称投影和 Ising 控制类、IAMP 的递推和状态演化、branching OGP 的完整下界均未展开；4M15 只引球面对称特例。",
+        "报告 Table 1 的十二种渐近算法阈值、Gardner 转变与更高层 RSB 结构没有逐项导入。"
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4M18",
+            "4M0M",
+            "4M0N"
+          ],
+          "source": "ssz-v3",
+          "scope": "Appendix B and full main proof, including corrected second-moment maximizer analysis in Appendices F-G; only listed statements/selected correction text read."
+        },
+        {
+          "notes": [
+            "4M0O",
+            "4M1B"
+          ],
+          "source": "nss-ii-v2",
+          "scope": "Variance decomposition, short-cycle conditioning and overlap geometry proof; statements and opening proof organization only."
+        },
+        {
+          "notes": [
+            "4M0U",
+            "4M0V"
+          ],
+          "source": "ding-sun-v1/huang-v2",
+          "scope": "Numerical fixed-point estimates and conditional capacity research proofs; no independent numerical verification."
+        },
+        {
+          "notes": [
+            "4M15"
+          ],
+          "source": "hss-v1",
+          "scope": "295-page paper full proof, limiting processes, budget constraint, IAMP, equivalence of controls, and Wq confinement are cited, not reconstructed."
+        }
+      ],
+      "metadata": {
+        "mathematical_body_fully_read": true,
+        "full_primary_proofs_read": false,
+        "atomic_count": 49,
+        "outline_count": 1,
+        "reference_count": 1,
+        "primary_report_version": "Published SIAM HTML, 2026-07-13",
+        "status": "author-complete-ready-for-independent-recheck",
+        "publication_status": "not integrated or published by this branch"
+      }
+    }
+  ],
+  "prerequisites": {
+    "4K00": [],
+    "4K01": [
+      "4C13",
+      "4C14",
+      "4C15",
+      "0A37",
+      "0F61"
+    ],
+    "4K02": [
+      "4K01"
+    ],
+    "4K03": [
+      "4K01",
+      "4K02",
+      "4C14"
+    ],
+    "4K04": [
+      "4C13",
+      "4K01",
+      "4K02"
+    ],
+    "4K05": [
+      "00L3",
+      "00L4",
+      "0A6B",
+      "00L1",
+      "0HS1",
+      "4K03",
+      "4K01"
+    ],
+    "4K06": [
+      "00L0",
+      "4E05",
+      "00L1",
+      "00L2"
+    ],
+    "4K07": [
+      "4K05",
+      "4K01",
+      "4K06",
+      "0A6B"
+    ],
+    "4K08": [
+      "00Q1",
+      "00Q3",
+      "00L3"
+    ],
+    "4K09": [
+      "4C13",
+      "00L3",
+      "4K06",
+      "4K08",
+      "00L4"
+    ],
+    "4K0A": [
+      "0A6B",
+      "4K01",
+      "00RR",
+      "4K05",
+      "4K07",
+      "4K09",
+      "4K08"
+    ],
+    "4K0B": [
+      "00Q3",
+      "4K01"
+    ],
+    "4K0C": [
+      "4K0A",
+      "4K01",
+      "00L1",
+      "00L2",
+      "4K06",
+      "4K07",
+      "4K02"
+    ],
+    "4K0D": [
+      "0A45",
+      "0A46"
+    ],
+    "4K0E": [
+      "4K0D",
+      "4K01"
+    ],
+    "4K0F": [
+      "4K0D"
+    ],
+    "4K0G": [
+      "4K0F",
+      "4K0E"
+    ],
+    "4K0H": [
+      "4C13",
+      "4C17"
+    ],
+    "4K0I": [],
+    "4K0J": [
+      "4K0H",
+      "4K0I",
+      "4K0D"
+    ],
+    "4K0K": [
+      "4K0E",
+      "4K0F",
+      "4K0H",
+      "4K0I",
+      "4K0J"
+    ],
+    "4K0L": [
+      "00QC",
+      "00Q1",
+      "0A6B",
+      "4K08"
+    ],
+    "4K0M": [
+      "00L0",
+      "0A46",
+      "00L3",
+      "0H53",
+      "00XV",
+      "00Q5"
+    ],
+    "4K0N": [
+      "4B08",
+      "00L3",
+      "0H4Z",
+      "0H53"
+    ],
+    "4K0O": [
+      "4K0M",
+      "4K0H",
+      "0A6B",
+      "4K0J"
+    ],
+    "4K0P": [
+      "4K0N",
+      "4K0I",
+      "0A6B",
+      "4K0J"
+    ],
+    "4K0Q": [
+      "00L0",
+      "0H4Z",
+      "4K0M"
+    ],
+    "4K0R": [
+      "00L3",
+      "4K0Q",
+      "0H53"
+    ],
+    "4K0S": [
+      "4K0Q",
+      "0A6B",
+      "4K0F",
+      "0HS1",
+      "4K05",
+      "4K0K",
+      "4K0R",
+      "4K0L"
+    ],
+    "4K0T": [
+      "00L3",
+      "4K06",
+      "4K09"
+    ],
+    "4K0U": [
+      "4K0R"
+    ],
+    "4K0V": [
+      "4K0A",
+      "4K0B",
+      "4C14",
+      "4C17",
+      "4C1B",
+      "4K0W",
+      "0N0S"
+    ],
+    "4K0W": [
+      "00E2",
+      "00L1",
+      "00LA",
+      "0A3K",
+      "0F40"
+    ],
+    "4K0X": [
+      "4K01",
+      "00RR"
+    ],
+    "icm2026-sasada": [],
+    "4L00": [],
+    "4L01": [
+      "4101"
+    ],
+    "4L02": [
+      "4L01",
+      "470T",
+      "4101"
+    ],
+    "4L03": [
+      "4101",
+      "4L02"
+    ],
+    "4L04": [
+      "4L02",
+      "4L01",
+      "4414"
+    ],
+    "4L05": [
+      "4L04",
+      "4101"
+    ],
+    "4L06": [
+      "4L01",
+      "4L04",
+      "4L05"
+    ],
+    "4L07": [
+      "4L04",
+      "4L06",
+      "4101"
+    ],
+    "4L08": [
+      "4L06",
+      "00OB",
+      "4L07"
+    ],
+    "4L09": [
+      "4L02",
+      "4414",
+      "4L03"
+    ],
+    "4L0A": [
+      "00OB"
+    ],
+    "4L0B": [
+      "4L04",
+      "4101"
+    ],
+    "4L0C": [
+      "0H4G",
+      "4101",
+      "4L04",
+      "4L0B"
+    ],
+    "4L0D": [
+      "4L04",
+      "4L06"
+    ],
+    "4L0E": [
+      "4L01",
+      "00Q4",
+      "00XV",
+      "4L0D",
+      "4L07"
+    ],
+    "4L0F": [
+      "4412",
+      "4411",
+      "00L1",
+      "4413",
+      "4419",
+      "4415"
+    ],
+    "4L0G": [
+      "4426",
+      "4415"
+    ],
+    "4L0H": [
+      "00Q2"
+    ],
+    "4L0I": [
+      "0K12",
+      "00QD",
+      "4L0H",
+      "4426"
+    ],
+    "4L0J": [
+      "4L0I"
+    ],
+    "4L0K": [
+      "4E24"
+    ],
+    "4L0L": [
+      "00Q2",
+      "4426",
+      "4E24"
+    ],
+    "4L0M": [
+      "4L0G",
+      "4L0H",
+      "0K12",
+      "4L0I"
+    ],
+    "4L0N": [
+      "00Q2",
+      "4L0H"
+    ],
+    "4L0O": [
+      "4L0G",
+      "4L0H",
+      "4L0I",
+      "4L0J"
+    ],
+    "4L0P": [
+      "00Q2",
+      "0H53"
+    ],
+    "4L0Q": [
+      "00XV",
+      "4L0P"
+    ],
+    "4L0R": [
+      "4426",
+      "4L0G"
+    ],
+    "4L0S": [
+      "4L0R",
+      "4427"
+    ],
+    "4L0T": [
+      "4L0R",
+      "4L0G"
+    ],
+    "4L0U": [
+      "4L0R",
+      "4L0I",
+      "4L0S"
+    ],
+    "4L0V": [
+      "4L0U",
+      "4L0H",
+      "4L0J",
+      "4L0N"
+    ],
+    "4L0W": [
+      "4L0H",
+      "4L0J",
+      "4L0L"
+    ],
+    "4L0X": [
+      "4L0I",
+      "0I8I",
+      "0A7A",
+      "4L0G",
+      "4L0T"
+    ],
+    "4L0Y": [
+      "4L0R",
+      "4L0H"
+    ],
+    "4L0Z": [
+      "4L0Y",
+      "4L0H",
+      "4L0W"
+    ],
+    "icm2026-staffilani": [],
+    "4M00": [],
+    "4M01": [
+      "00LB"
+    ],
+    "4M02": [
+      "4M01",
+      "00L3"
+    ],
+    "4M03": [
+      "4M01",
+      "00L1",
+      "00L3"
+    ],
+    "4M04": [
+      "4M01",
+      "00L0"
+    ],
+    "4M05": [
+      "4M01"
+    ],
+    "4M06": [
+      "00L1",
+      "0A45",
+      "00L9",
+      "4M05",
+      "0A02"
+    ],
+    "4M07": [
+      "4M02",
+      "00L1",
+      "0A02",
+      "4M04"
+    ],
+    "4M08": [
+      "00L0",
+      "0A6A",
+      "004S"
+    ],
+    "4M09": [
+      "00L4",
+      "4M08",
+      "4M04"
+    ],
+    "4M0A": [
+      "00L0"
+    ],
+    "4M0B": [
+      "4M02",
+      "00L3"
+    ],
+    "4M0C": [
+      "4M01",
+      "0A03"
+    ],
+    "4M0D": [
+      "4M0C"
+    ],
+    "4M0E": [
+      "4M0C",
+      "4M0D"
+    ],
+    "4M0F": [
+      "4M01"
+    ],
+    "4M0G": [
+      "4M0A",
+      "00LC"
+    ],
+    "4M0H": [
+      "4M0G",
+      "00L1"
+    ],
+    "4M0I": [
+      "4M0G",
+      "0A45",
+      "00L2"
+    ],
+    "4M0J": [
+      "0A45",
+      "4M0G",
+      "0A02"
+    ],
+    "4M0K": [
+      "0A00",
+      "00L1"
+    ],
+    "4M0L": [
+      "4M0C",
+      "00L0",
+      "00L3"
+    ],
+    "4M0M": [
+      "4M18",
+      "4M0D",
+      "4M0I"
+    ],
+    "4M0N": [
+      "4M02",
+      "00L9",
+      "4M0M",
+      "4M0J"
+    ],
+    "4M0O": [
+      "4M0N",
+      "4M02",
+      "4M0G"
+    ],
+    "4M0P": [
+      "00L3",
+      "0N0R",
+      "00QD"
+    ],
+    "4M0Q": [
+      "00L3",
+      "0N0R",
+      "4M0A",
+      "004P",
+      "01Q1",
+      "0N12"
+    ],
+    "4M0R": [
+      "4M0P",
+      "4M0Q",
+      "0A02"
+    ],
+    "4M0S": [
+      "4J0Q"
+    ],
+    "4M0T": [
+      "4M0A",
+      "4M0P"
+    ],
+    "4M0U": [
+      "0N0R",
+      "4M0P"
+    ],
+    "4M0V": [
+      "4M0U",
+      "004S",
+      "4M0P"
+    ],
+    "4M0W": [
+      "4M0P",
+      "00TK"
+    ],
+    "4M0X": [
+      "00L0",
+      "4M0P"
+    ],
+    "4M0Y": [
+      "0F63"
+    ],
+    "4M0Z": [
+      "00FU",
+      "4M0X",
+      "4M0Y"
+    ],
+    "4M10": [
+      "4M0Z",
+      "0A44"
+    ],
+    "4M11": [
+      "4M0X",
+      "0F63",
+      "4M0Y",
+      "4M0Z"
+    ],
+    "4M12": [
+      "4M0A"
+    ],
+    "4M13": [
+      "0N0S",
+      "00QB",
+      "00QD",
+      "4J0Q",
+      "0A6A",
+      "0A67",
+      "0I8I",
+      "4M1D",
+      "0H53",
+      "0A69"
+    ],
+    "4M14": [
+      "4M13",
+      "4M0Y"
+    ],
+    "4M15": [
+      "4M0Z",
+      "4M0X",
+      "4M14"
+    ],
+    "4M16": [
+      "4M14",
+      "0A69",
+      "4M13"
+    ],
+    "4M17": [
+      "4M0Y",
+      "4M0X"
+    ],
+    "4M18": [
+      "4M0L"
+    ],
+    "4M19": [
+      "00XV",
+      "00QB",
+      "0A6A",
+      "004S",
+      "0A87",
+      "00MS",
+      "0I8I"
+    ],
+    "4M1A": [
+      "4M0Q"
+    ],
+    "4M1B": [
+      "4M0N",
+      "4M02",
+      "4M0A"
+    ],
+    "4M1C": [
+      "4M0R",
+      "4M1A"
+    ],
+    "4M1D": [
+      "00XV",
+      "0A69",
+      "4M19",
+      "0H53",
+      "004S"
+    ],
+    "icm2026-sun": []
+  },
+  "navigation_checks": [
+    "2B00",
+    "4900"
+  ],
+  "source_errata": [
+    {
+      "id": "path-reflection-sign",
+      "notes": [
+        "4K02"
+      ],
+      "printed": "Report §3.2: path reflection written R S_n=S_{-n} for (R eta)_n=eta_{1-n}.",
+      "adopted": "Normalized path reflection is -S_{-n}.",
+      "basis": "Direct increment calculation in 4K02; primary cst-paths-v2 p.31 has the negative path reversal."
+    },
+    {
+      "id": "forward-versus-alltime-reference",
+      "notes": [
+        "4K0K"
+      ],
+      "printed": "Report Theorem 5.3 refers to primary Theorem 4.19 while stating an all-integer-time result.",
+      "adopted": "Bind all-time result to primary Theorem 4.20, model Theorems 2.1/2.2/2.3/2.5 and Corollary 4.29.",
+      "basis": "Primary PDF pp.30–31 and p.37 read; 4.19 is forward time."
+    },
+    {
+      "id": "tagged-clt-adjacent-condition",
+      "notes": [
+        "4K0V"
+      ],
+      "printed": "Report Theorem 4.6 abbreviates the Bernoulli/Markov assumptions.",
+      "adopted": "Retain primary mu(eta_0=eta_1=1)>0; explicit selected parameter ranges enforce it.",
+      "basis": "oss-solitons-v2 Theorem 2.1, PDF p.11 rendered and inspected."
+    },
+    {
+      "id": "gamma-rate-positivity",
+      "notes": [
+        "4K0P"
+      ],
+      "printed": "cs-balance-v3 Theorem 4.8 says c in R.",
+      "adopted": "c>0 for the Gamma rate.",
+      "basis": "Appendix A density and Propositions 4.5/4.6 require c>0; PDF p.29 printed line visually inspected; normalization fails for nonpositive rate."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "§2 torus setup",
+      "notes": [
+        "4L01"
+      ],
+      "issue": "Geometric side ratio and printed dispersion coefficients do not consistently include the square needed for Laplace eigenvalues.",
+      "resolution": "Use beta_j=(2pi/ell_j)^2 and the ratio of spectral coefficients."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Remark 2.1 and (2.7)",
+      "notes": [
+        "4L04"
+      ],
+      "issue": "Linear-phase sign is inconsistent with the chosen negative Laplace eigenvalue convention.",
+      "resolution": "Derive interaction phase explicitly from the displayed NLS convention."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Discussion following Theorem 2.6",
+      "notes": [
+        "4L07",
+        "4L08"
+      ],
+      "issue": "Exact constancy of the usual isotropic Hs norm is stronger than coordinate-separable conservation and is false in general.",
+      "resolution": "Prove separable invariants and norm comparability; explicit four-mode h2 squared derivative is -8."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Theorem 2.8 compared with Giuliani–Guardia Theorems 2.1–2.2",
+      "notes": [
+        "4L0E"
+      ],
+      "issue": "Full-measure multiplicative amplification and arbitrary-small-to-large growth require different arithmetic assumptions.",
+      "resolution": "State the two conclusions separately; do not assign both to the full-measure parameter set."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "Theorem 3.1, (3.4)",
+      "notes": [
+        "4L0K"
+      ],
+      "issue": "Limit against a test function lacks total-mass multiplier unless mass is normalized to one.",
+      "resolution": "Use M phi(0), checked with phi=1."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "§3.1 solution shorthand and Theorems 3.1–3.2",
+      "notes": [
+        "4L0I",
+        "4L0M",
+        "4L0O"
+      ],
+      "issue": "L1 density cannot carry a zero atom; report omits support and fixed-scale concentration hypotheses found in primary statements.",
+      "resolution": "Use later published measure class and retain source hypotheses; no extra global energy conservation asserted in 4L0M."
+    },
+    {
+      "source": "pure-condensation-published",
+      "locator": "Remark 5 following (22)",
+      "notes": [
+        "4L0N"
+      ],
+      "issue": "Integral lower bounds are described as implying pointwise density bounds/asymptotics.",
+      "resolution": "Keep only cumulative conditions; a density with infinitely many gaps is an explicit counterexample to the stronger implication."
+    },
+    {
+      "source": "mixed-condensation-v1",
+      "locator": "§1.2 high-occupancy triplet expansion",
+      "notes": [
+        "4L0S"
+      ],
+      "issue": "The printed lower-order triplet expansion drops an f0 factor in a quadratic term.",
+      "resolution": "Expand exactly: B3(f)-f0(f1+f2+f3)-f0."
+    },
+    {
+      "source": "mixed-energy-v1",
+      "locator": "(2), (4), (10), Remark 1",
+      "notes": [
+        "4L0R",
+        "4L0H",
+        "4L0Y"
+      ],
+      "issue": "Channel coefficients are printed only before first strong-form summands; R3 polar area printed 2pi²; Remark 1 gives wrong R' exponent.",
+      "resolution": "Use full-channel weak coefficients, 4pi area, and R'=(1/16)x^{-3/4}; all active cascade coefficients set one, all Assumption X signs independently checked."
+    },
+    {
+      "source": "mixed-condensation-v1",
+      "locator": "Radial change of variables in Assumption A",
+      "notes": [
+        "4L0H"
+      ],
+      "issue": "The same 2pi² radial area factor appears.",
+      "resolution": "Physical R3 polar measure uses 4pi; radial F normalization stated separately."
+    },
+    {
+      "source": "staffilani-icm2026",
+      "locator": "§3.2 mixed energy-cascade range compared with 2512.19531v1 Assumption X",
+      "notes": [
+        "4L0Y",
+        "4L0Z"
+      ],
+      "issue": "Source Assumption X does not support simply retaining the report's 1<gamma_disp<=2 regime; two of its inequalities imply theta<2/5.",
+      "resolution": "Use an explicit quartic dispersion model satisfying all assumptions."
+    },
+    {
+      "source": "pure-condensation-published",
+      "locator": "Definition 1 (13)",
+      "notes": [
+        "4L0I"
+      ],
+      "issue": "RHS test argument prints phi(|k|), whereas LHS and radial weak formulas use the energy argument. Strong versus weak C1 topology and a full arbitrary-atom boundary formula are not separately specified in Definition 1.",
+      "resolution": "Identify the source's energy-variable weak interface via (35)–(36); disclose implicit points and quote the constructed solution class, without inventing boundary values."
+    },
+    {
+      "source": "mixed-energy-v1",
+      "locator": "§4 (79) versus (82), also (84)",
+      "notes": [
+        "4L0I",
+        "4L0Y",
+        "4L0Z"
+      ],
+      "issue": "Maximum-frequency factor Rbar_o is present in (79) but absent from (82); (84) is printed without the right-hand side.",
+      "resolution": "Bind the model to (1)–(7), (79); source functional is L1+L2+L3 as (77), (85) state. This records a textual inconsistency, not an independent repair of the research proof."
+    },
+    {
+      "id": "SUN-S01",
+      "source": "sun-icm2026",
+      "locator": "Equation (2.13) and Theorem 2.3(3)",
+      "issue": "Uncentered 0/1 inner product and absence of absolute-value qualifier do not match the cited overlap theorem.",
+      "resolution": "4M0A and 4M1B use spin coding 2x-1 and absolute overlap per NSS II Definition 1.3 and Theorem 1.4.",
+      "affected": [
+        "4M0A",
+        "4M1B"
+      ]
+    },
+    {
+      "id": "SUN-S02",
+      "source": "sun-icm2026",
+      "locator": "§2.4 Poisson-Dirichlet display before tilted cavity calculation, HTML line 377",
+      "issue": "Displayed identity omits a logarithm on its moment expression; constant positive marks already contradict the printed equality.",
+      "resolution": "Not imported. Constant-mark check separates log z from z; no Poisson-Dirichlet theorem or proof claimed.",
+      "affected": []
+    },
+    {
+      "id": "SUN-S03",
+      "source": "sun-icm2026",
+      "locator": "§2.4, HTML lines 380-385",
+      "issue": "Message hat/dot naming and orientation of a tilted cavity ratio appear inconsistent with the original primary formula.",
+      "resolution": "4M0L-4M0M use SSZ v3 equations (10)-(14); 4M0F states exact deterministic ratios rather than adopting the inconsistent orientation.",
+      "affected": [
+        "4M0F",
+        "4M0L",
+        "4M0M"
+      ]
+    },
+    {
+      "id": "SUN-S04",
+      "source": "huang-v2",
+      "locator": "Equation (14), HTML line 341",
+      "issue": "Printed negative sign before alpha ElogPsi differs from DS equation (4) and the constraint cost convention.",
+      "resolution": "4M0U uses the positive alpha ElogPsi term from DS; since logPsi<=0, this term decreases the potential.",
+      "affected": [
+        "4M0U"
+      ]
+    },
+    {
+      "id": "SUN-S05",
+      "source": "hss-v1",
+      "locator": "Equation (1.7), PDF p.4",
+      "issue": "Integration upper limit and integrand index are swapped in the printed stochastic integral.",
+      "resolution": "4M13-4M14 use X_t=integral_0^t sigma_s dB_s, consistent with the SDE interpretation and subsequent equations.",
+      "affected": [
+        "4M13",
+        "4M14"
+      ]
+    }
+  ],
+  "review": {
+    "packet_files": [
+      "research/mathematical-physics-sasada-packet.json",
+      "research/mathematical-physics-staffilani-packet.json",
+      "research/mathematical-physics-sun-packet.json"
+    ],
+    "terminology": "Reuse canonical forest definitions; terminology sources and any unresolved comparisons are recorded in each packet.",
+    "mathematical_scope": "Atomic prerequisites, worked calculations and deductions, with cited research inputs and conjectures distinguished. Topic coverage does not assert that all cited proofs are reproduced."
+  }
+}

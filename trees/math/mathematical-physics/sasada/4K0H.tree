@@ -1,0 +1,14 @@
+\title{超离散 Toda 的块长与空隙更新}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.2(c)，式 (5.2)}
+
+\p{令 #{Q_n^t,E_n^t,U_n^t\in\mathbb R}，#{n,t\in\mathbb Z}。超离散 Toda 方程为}
+##{Q_n^{t+1}=\min(U_n^t,E_n^t),\qquad
+E_n^{t+1}=Q_{n+1}^t+E_n^t-Q_n^{t+1},\qquad
+U_{n+1}^t=U_n^t+Q_{n+1}^t-Q_n^{t+1}.}
+\p{取正整数值时，#{Q_n} 表示第 #{n} 个连续球块的长度，#{E_n} 表示它右侧空隙的长度；#{U_n} 是离开该球块后尚待放下的球数。这是[箱球搬运规则](4C13)的块坐标表达，球块与[孤子](4C17)在相互作用中未必相同。允许一般实数时，方程仍有代数意义，长度解释则限于正值构形。}
+\p{局部三个输入 #{(a,b,c)=(Q_{n+1}^t,E_n^t,U_n^t)} 的输出为}
+##{F_{\mathrm{udT}}(a,b,c)=(d,a+b-d,a+c-d),\qquad d=\min(b,c).}
+\p{令 #{G(x,y)=(\min(x,y),x-y)}，其逆为 #{G^{-1}(m,r)=(m+r_+,m+(-r)_+)}，其中 #{r_+=\max(r,0)}。于是 #{F_{\mathrm{udT}}(a,b,c)=(G_1(b,c),G^{-1}(a,G_2(b,c)))}：先保留差 #{b-c}，把最小值与独立的第一个输入互换，再按相同的差重建。这一分解解释了[指数分布不变律](4K0O)的结构。}

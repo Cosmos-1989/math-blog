@@ -1,0 +1,14 @@
+\title{两态 Markov 箱球初态的不变律}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，命题 3.5；Croydon–Kato–Sasada–Tsujimoto，定理 1.8(b)}
+
+\p{取 #{p_0\in(0,1)}、#{p_1\in\lbrack 0,1\rparen}，且 #{p_0+p_1<1}。设 #{\eta=(\eta_n)_{n\in\mathbb Z}} 是平稳两态 Markov 链：给定任意具有正概率的有限过去，下一位的条件概率只由当前位决定，转移矩阵为}
+##{P=\begin{pmatrix}1-p_0&p_0\\1-p_1&p_1\end{pmatrix}.}
+\p{矩阵的第 #{i} 行给出当前值为 #{i\in\{0,1\}} 时下一位为 #{0,1} 的概率。平稳指任意有限块的联合律在空间平移下不变。具体地，令 #{\pi P=\pi}，连续块 #{a_m,\ldots,a_n} 的概率为 #{\pi_{a_m}\prod_{j=m}^{n-1}P_{a_j,a_{j+1}}}。这里条件概率采用[概率空间](00Q3)上的 #{\mathbb P(A\mid B)=\mathbb P(A\cap B)/\mathbb P(B)}，且仅在 #{\mathbb P(B)>0} 时使用该比值。}
+\p{Croydon–Kato–Sasada–Tsujimoto 定理 1.8(b)断言，这个初态的[箱球演化](4K01)几乎处处可逆地延伸到全部整数时刻，且 #{T\eta\stackrel d=\eta}。不变性证明见原论文 §3.2.2，利用路径与搬运过程的反射对称性。}
+\p{\strong{密度计算。}平稳方程化为 #{\pi_0p_0=\pi_1(1-p_1)}，与 #{\pi_0+\pi_1=1} 联立得}
+##{\pi_1=\frac{p_0}{1+p_0-p_1}<\frac 12
+\quad\Longleftrightarrow\quad p_0+p_1<1.}
+\p{当 #{p_0=p_1=p} 时，两行相同，恢复[Bernoulli 不变律](4K0A)。当 #{p_1=0} 时，相邻两格不能同时有球；这种退化情形仍有不变性，但不满足[所有尺寸标记孤子的扩散定理](4K0V)所需的相邻双球条件。}

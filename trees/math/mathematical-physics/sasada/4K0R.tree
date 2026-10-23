@@ -1,0 +1,18 @@
+\title{两参数 KdV 映射保持 GIG 独立律}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sasada](icm2026-sasada)，§5.3；Croydon–Sasada，命题 3.9}
+
+\p{设 #{c>0}，#{\alpha,\beta\geq 0} 且不同时为零。当两者均正时取任意 #{\lambda\in\mathbb R}；当其中一个为零时要求 #{\lambda>0}。定义}
+##{F_{\alpha,\beta}(x,y)=\left(y\frac{1+\beta xy}{1+\alpha xy},
+x\frac{1+\alpha xy}{1+\beta xy}\right),\qquad x,y>0.}
+\p{若 #{X,Y} [独立](00L3)，分别服从 [GIG 分布](4K0Q) #{\operatorname{GIG}(\lambda,c\alpha,c)}、#{\operatorname{GIG}(\lambda,c\beta,c)}，则 #{F_{\alpha,\beta}(X,Y)} 的联合分布仍是相同的乘积律。}
+\p{\strong{证明。}记 #{(u,v)=F_{\alpha,\beta}(x,y)}。首先 #{uv=xy}，再应用一次同一公式便回到 #{(x,y)}。另外直接通分得到}
+##{\alpha u+\frac 1v=\beta y+\frac 1x,\qquad
+\beta v+\frac 1u=\alpha x+\frac 1y.}
+\p{联合密度正比于}
+##{(xy)^{-\lambda -1}\exp\left[-c\left(\alpha x+\beta y+\frac 1x+\frac 1y\right)\right],}
+\p{所以其数值在变换下不变。还需验证面积元不变。取 #{s=xy,z=\log x}：先固定 #{x} 作 #{y=s/x} 换元，再作 #{x=e^z} 换元，由 [Fubini–Tonelli 定理](0H53)有 #{dx\,dy=ds\,dz}。在此坐标中，变换为}
+##{(s,z)\longmapsto\left(s,\log\left(\frac{s(1+\beta s)}{1+\alpha s}\right)-z\right).}
+\p{固定 #{s} 后只是实线上的反射，故保持 #{dz}，从而保持面积元。结合密度恒等式便证明联合律不变；其分解也证明输出独立。#{\beta=0,\alpha=\delta} 时，此映射就是[离散 KdV 的局部更新](4K0F)。}

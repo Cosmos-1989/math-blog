@@ -1,0 +1,21 @@
+\title{过去时间平均在乘积 L² 中逼近原过程}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{时间矩形逼近与积分不等式；随机积分构造的解析基础。}
+
+\p{设 #{(\Omega,\mathcal F,\mathbb P)} 为概率空间，#{m} 为实线上的 Borel [Lebesgue 测度](00XV)，#{f\in L^2(\mathbb R\times\Omega,m\otimes\mathbb P)} 为实值函数。定义时间平移 #{T_sf(t,\omega)=f(t-s,\omega)}。当 #{s\to 0} 时有 #{\|T_sf-f\|_2\to 0}；因此对 #{h>0}，过去时间平均}
+##{A_hf(t,\omega)=\frac 1h\int_0^h f(t-s,\omega)\,ds}
+\p{满足 #{\|A_hf-f\|_2\to 0}，其中极限取 #{h\downarrow 0}。}
+
+\p{\strong{平移连续性。}平移不改变区间长度，故平移后的 Borel 测度与 #{m} 在半开区间上相同；Lebesgue 测度的唯一性给出平移不变性。于是 #{\|T_sf\|_2=\|f\|_2}。对一个时间矩形函数 #{g=1_{\lparen a,b\rbrack}1_A}，两个时间区间的对称差长度至多为 #{2|s|}，所以}
+##{\|T_sg-g\|_2^2\le 2|s|\,\mathbb P(A)\longrightarrow 0.}
+\p{[L² 三角不等式](0A69)使同一结论适用于有限个矩形函数的线性组合。再用[时间矩形函数的稠密性](4M19)：给定 #{\varepsilon>0}，选这样的组合 #{g} 满足 #{\|f-g\|_2<\varepsilon}，则}
+##{\|T_sf-f\|_2\le\|T_s(f-g)\|_2+\|T_sg-g\|_2+\|g-f\|_2<2\varepsilon+\|T_sg-g\|_2.}
+\p{先令 #{s\to 0}，再令 #{\varepsilon\downarrow 0}，得到所需连续性。}
+
+\p{\strong{时间平均。}映射 #{(t,s,\omega)\mapsto f(t-s,\omega)} 联合可测。[Fubini–Tonelli 定理](0H53)与平移等距性给出}
+##{\int_{\mathbb R\times\Omega}\int_0^h|f(t-s,\omega)|^2\,ds\,d(m\otimes\mathbb P)=h\|f\|_2^2<\infty.}
+\p{故对几乎每个 #{(t,\omega)}，时间截面在 #{[0,h]} 上平方可积；[Schwarz 不等式](004S)保证定义 #{A_hf} 的积分存在。对该积分与 #{f} 之差再用 Schwarz 不等式，然后交换非负积分，得到}
+##{\|A_hf-f\|_2^2\le\frac 1h\int_0^h\|T_sf-f\|_2^2\,ds\le\sup_{0\le s\le h}\|T_sf-f\|_2^2\longrightarrow 0.}
+\p{最后一步正是已证的时间平移连续性。}

@@ -1,0 +1,12 @@
+\title{质量趋向原点推出有界频段能量消失}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，(3.4)–(3.5)；连续截断证明}
+
+\p{设 #{\nu_t} 是 #{\lbrack 0,\infty\rparen} 上的有限非负测度，且对每个有界连续函数 #{\varphi}，#{\int\varphi d\nu_t\to M\varphi(0)}。这与[有限测度弱收敛](4E24)采用同一测试约定，记为 #{\nu_t\Rightarrow M\delta_0}。则对每个有限 #{R>0}，}
+##{\lim_{t\to\infty}\int_{[0,R]}x\,d\nu_t(x)=0.}
+\p{\strong{证明。}取连续函数 #{0\leq\chi_R\leq 1}，使它在 #{[0,R]} 等于一、在 #{\lbrack 2R,\infty\rparen} 等于零。函数 #{x\chi_R(x)} 有界连续且在原点为零，故}
+##{0\leq\int_{[0,R]}x\,d\nu_t\leq\int x\chi_R(x)\,d\nu_t\longrightarrow 0.}
+\p{若 #{\nu_t} 的总质量恒为 #{M}，弱极限前的系数必须是 #{M}，用测试函数 #{\varphi=1} 即可核对。一般质量下的极限为 #{M\delta_0}。}
+\p{若还知道全部时间的总能量 #{\int x\,d\nu_t=E>0}，便有 #{\int_{(R,\infty)}x\,d\nu_t\to E}。总能量守恒是这个最后结论的额外假设；弱收敛本身只控制有界测试函数。}

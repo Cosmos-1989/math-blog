@@ -1,0 +1,10 @@
+\title{簇的混合能产生簇内没有的相关性}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Sun](icm2026-sun)，§2.3；有限混合的协方差分解。}
+
+\p{设非空有限解集分成[簇](4M0G) #{\gamma}，令 #{w_\gamma=|\gamma|/|S|}、#{\mu_\gamma} 为簇内均匀概率，则 #{\mu=\sum_\gamma w_\gamma\mu_\gamma}。对函数 #{A,B:S\to\mathbb R}，记 #{a_\gamma=\mu_\gamma(A)}、#{b_\gamma=\mu_\gamma(B)}。用[期望](00L1)定义 #{\operatorname{Cov}_\nu(A,B)=\nu(AB)-\nu(A)\nu(B)}，得到}
+##{\operatorname{Cov}_\mu(A,B)=\sum_\gamma w_\gamma\operatorname{Cov}_{\mu_\gamma}(A,B)+\sum_\gamma w_\gamma a_\gamma b_\gamma -\left(\sum_\gamma w_\gamma a_\gamma\right)\left(\sum_\gamma w_\gamma b_\gamma\right).}
+\p{\strong{证明。}在 #{\mu(AB)-\mu(A)\mu(B)} 中加减 #{\sum_\gamma w_\gamma a_\gamma b_\gamma}，再将 #{\mu(AB)} 按簇分解，即得公式。}
+\p{例如 #{S=\{0^n,1^n\}}、#{n\ge 2}。两个单点簇内所有协方差都为零；整体均匀概率下，任意不同坐标的协方差却等于 #{1/4}。簇标签提供了共同的随机信息，因此簇内相关衰减与整体相关衰减有不同的含义。}

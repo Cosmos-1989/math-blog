@@ -1,0 +1,11 @@
+\title{球面控制预算给出终点二阶矩的范围}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{Huang–Sellke–Sun v1，定义 1.1 的直接推论。}
+
+\p{设 #{\alpha>0}，#{\nu\in\overline{\mathcal C}_\alpha} 为[对称球面控制分布](4M14)。则}
+##{\bigl(\max\{0,1-\alpha^{-1/2}\}\bigr)^2\le\int x^2\,\nu(dx)\le(1+\alpha^{-1/2})^2.}
+\p{\strong{证明。}先取尚未取闭包的终点分布。用 [L² 范数三角不等式](0A69)及控制预算，对每个时刻有 #{\|\sigma_t\|_2\le 1+\alpha^{-1/2}}，以及 #{\|\sigma_t\|_2\ge 1-\alpha^{-1/2}}。结合范数非负性，平方后对时间积分，再用[随机积分等距式](4M13)，即得到两侧界。}
+\p{若 #{\nu_j\to\nu} 于 #{W_2}，对任意耦合由 L² 三角不等式得 #{|(\int x^2d\nu_j)^{1/2}-(\int y^2d\nu)^{1/2}|\le(\mathbb E|X-Y|^2)^{1/2}}。对耦合取下确界，二阶矩平方根之差至多 #{W_2(\nu_j,\nu)}，故界在闭包中保留。}
+\p{常数控制 #{\sigma_t=c\ge 0} 在 #{|c-1|\le\alpha^{-1/2}} 时可行，终点分布为 #{|cZ|}，其中 #{Z} 标准正态。取 #{c=1+\alpha^{-1/2}} 或 #{c=\max\{0,1-\alpha^{-1/2}\}}，分别达到上下界。}

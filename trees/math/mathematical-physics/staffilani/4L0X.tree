@@ -1,0 +1,12 @@
+\title{截断能量通量与无穷远处的损失}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[文献](icm2026-staffilani)：2512.19531v1，Remark 3；条件弱式计算}
+
+\p{设 #{\nu_t} 满足[弱积分恒等式](4L0I)，且初末时刻的能量有限。取光滑非增函数 #{\chi:\lbrack 0,\infty\rparen\to[0,1]}，在 #{[0,1]} 为一，在 #{\lbrack 2,\infty\rparen} 为零。选 #{\epsilon>0,R>2\epsilon}，再取光滑 #{\zeta_\epsilon}，在原点邻域为零、在 #{\lbrack 2\epsilon,\infty\rparen} 为一，#{0\leq\zeta_\epsilon\leq 1}。令 #{\varphi_{\epsilon,R}(x)=x\zeta_\epsilon(x)\chi(x/R)}，则 #{\varphi_{\epsilon,R}'(0)=0}，适用于混合模型的测试类。}
+\p{由弱式直接得到}
+##{\int\varphi_{\epsilon,R}d\nu_t-\int\varphi_{\epsilon,R}d\nu_0=\int_0^t\mathcal C_{\varphi_{\epsilon,R}}(\nu_s)ds.}
+\p{先令 #{\epsilon\downarrow 0}，由 #{0\leq\varphi_{\epsilon,R}\leq x} 与有限能量，支配收敛给出截断能量 #{E_R(t)=\int x\chi(x/R)d\nu_t}。再令 #{R\to\infty}，非负单调收敛给出 #{E_R(t)\to E(t)}。两个端点的积分都有极限，因此}
+##{E(t)-E(0)=\lim_{R\to\infty}\lim_{\epsilon\downarrow 0}\int_0^t\mathcal C_{\varphi_{\epsilon,R}}(\nu_s)ds.}
+\p{这两步分别使用[支配收敛](0I8I)与[单调收敛](0A7A)。每个固定共振组上，极限测试差满足[二对二能量抵消](4L0G)或[一对多能量抵消](4L0T)；要把零移到碰撞积分之外，仍需能控制全部频率的可积函数。若这种控制失败，右端可以保留非零通量。形式能量守恒与测度解的能量损失由此可以相容。}

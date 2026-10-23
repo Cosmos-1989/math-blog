@@ -1,0 +1,10 @@
+\title{区间内不集中迫使分离频率对占有质量}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Staffilani](icm2026-staffilani)，§3.1 的区域分解；独立二重积分引理}
+
+\p{设 #{N\geq 3} 为整数，#{h>0}，#{R=Nh}。把 #{\lbrack 0,R\rparen} 划为 #{I_j=\lbrack jh,(j+1)h\rparen}，#{0\leq j<N}；令 #{J_j=I_{j-1}\cup I_j\cup I_{j+1}}，越出范围的区间省去。设有限非负[测度](00Q2) #{\nu} 支撑于 #{\lbrack 0,R\rparen}，质量为 #{M>0}，且对某个 #{0<\eta<1}，每个 #{j} 都满足 #{\nu(J_j)\leq(1-\eta)M}。则}
+##{\iint_{|x-y|\geq h}d\nu(x)d\nu(y)\geq\eta M^2.}
+\p{\strong{证明。}若 #{x\in I_j}，所有满足 #{|x-y|<h} 的 #{y\in\lbrack 0,R\rparen} 都属于 #{J_j}。故 #{\nu(\{y:|x-y|\geq h\})\geq M-\nu(J_j)\geq\eta M}。对 #{x} 积分，由非负函数的 [Fubini–Tonelli 定理](0H53)得到结论。}
+\p{这给出区域分解的基本两难：或者某个相邻小区间内聚集了大部分质量，或者相隔一定距离的频率对具有可量化的质量。把这种几何分离转化成碰撞产生率，还需要碰撞核和共振条件的估计。}

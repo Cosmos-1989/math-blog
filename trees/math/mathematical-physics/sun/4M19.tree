@@ -1,0 +1,16 @@
+\title{时间区间矩形函数在乘积 L² 中稠密}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{乘积测度、有限测度唯一性与 Hilbert 正交投影的直接推论。}
+
+\p{设 #{(\Omega,\mathcal F,\mathbb P)} 为概率空间，#{m} 为实线上的 Borel [Lebesgue 测度](00XV)。在[乘积测度](00QB) #{m\otimes\mathbb P} 下，实 [L² 空间](0A6A)中的函数按几乎处处相等取商。形如}
+##{g(t,\omega)=\sum_{j=1}^r c_j1_{\lparen a_j,b_j\rbrack}(t)1_{A_j}(\omega),\qquad r\in\mathbb N,\quad c_j\in\mathbb R,\quad -\infty<a_j<b_j<\infty,\quad A_j\in\mathcal F}
+\p{的函数在该空间中稠密：对每个 #{f\in L^2(m\otimes\mathbb P)} 和 #{\varepsilon>0}，存在这样的 #{g} 使 #{\|f-g\|_2<\varepsilon}。}
+
+\p{\strong{有限时间区间。}先固定 #{T>0}，令 #{J=\lparen -T,T\rbrack}，#{\nu=(m|_J)\otimes\mathbb P}。设 #{H} 是 #{L^2(\nu)} 中由矩形指标函数 #{1_I1_A} 生成的闭线性子空间，其中 #{I=J\cap\lparen a,b\rbrack}，#{A\in\mathcal F}。若 #{f\in H^\perp}，则每个这样的矩形都满足 #{\int_{I\times A}f\,d\nu=0}。由 [Schwarz 不等式](004S)，#{\int|f|\,d\nu\le\sqrt{2T}\|f\|_2<\infty}，所以}
+##{\mu_+(E)=\int_E f_+\,d\nu,\qquad \mu_-(E)=\int_E f_-\,d\nu,\qquad f_+=\max(f,0),\quad f_-=\max(-f,0)}
+\p{是两个有限测度，并且在上述矩形上相等。}
+\p{这些矩形的有限不交并构成集合代数。具体地，对任意有限个矩形，按所有时间端点分割 #{J}，再按所用的有限个 #{A} 及其补集分割 #{\Omega}；所成的有限网格把各矩形、它们的并与补都表示为网格块的不交并。半开区间生成 #{J} 的 Borel σ-代数，故该集合代数生成 #{\mathcal B(J)\otimes\mathcal F}。有限可加性先给出 #{\mu_+=\mu_-} 在集合代数上成立，再由[有限测度唯一性](0A87)推广到整个乘积 σ-代数。取 #{E=\{f>0\}} 和 #{E=\{f<0\}}，分别得到 #{\int f_+\,d\nu=0} 和 #{\int f_-\,d\nu=0}，因而 #{f=0} 几乎处处。于是 #{H^\perp=\{0\}}；[正交投影定理](00MS)给出 #{H=L^2(\nu)}。}
+
+\p{\strong{整条时间轴。}对任意 #{f\in L^2(m\otimes\mathbb P)} 和正整数 #{N}，令 #{f_N=1_{\lparen -N,N\rbrack}f}。因为 #{|f-f_N|^2\le |f|^2} 且逐点趋于零，[支配收敛定理](0I8I)给 #{\|f-f_N\|_2\to 0}。在有限区间上用已证的稠密性逼近 #{f_N}，再把矩形函数延为零，即得整条实线上的结论。}
