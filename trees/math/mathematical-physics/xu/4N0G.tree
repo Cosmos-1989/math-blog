@@ -1,0 +1,12 @@
+\title{有限维互信息的三项熵公式}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\rho_{AB}} 是有限维 [Hilbert 张量积](0F4E)上的密度矩阵，#{\rho_A,\rho_B} 是[约化态](4I0D)。定义互信息为 #{I(A:B)_\rho=D(\rho_{AB}\Vert\rho_A\otimes\rho_B)}。则}
+##{I(A:B)_\rho=H(\rho_A)+H(\rho_B)-H(\rho_{AB})\geq 0.}
+\p{\strong{先检查支撑。}若 #{u\in\ker\rho_A}，对 #{H_B} 的正交基 #{f_j}，有 #{0=\langle u,\rho_Au\rangle=\sum_j\|\rho_{AB}^{1/2}(u\otimes f_j)\|^2}。每项为零，故 #{\ker\rho_A\otimes H_B\subset\ker\rho_{AB}}。另一边同理，得到 #{s(\rho_{AB})\leq s(\rho_A)\otimes s(\rho_B)}。}
+\p{在支撑上，特征向量张量给出 #{\log(\rho_A\otimes\rho_B)=\log\rho_A\otimes I+I\otimes\log\rho_B}。利用偏迹的配对恒等式，}
+##{\operatorname{Tr}\rho_{AB}(\log\rho_A\otimes I)=\operatorname{Tr}\rho_A\log\rho_A,}
+\p{另一项相同。[相对熵定义](4N02)与[熵定义](4N01)随即给出等式，非负性由相对熵非负得到。所有空间有限维，三项均有限。}

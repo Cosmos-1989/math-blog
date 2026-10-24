@@ -1,0 +1,2422 @@
+{
+  "date": "2026-10-24",
+  "report": {
+    "prefix": "4O",
+    "outline": "4O00",
+    "reference": "icm2026-de-roeck",
+    "speaker": "Wojciech De Roeck",
+    "title": "Localization for Strongly Disordered Interacting Quantum Chains",
+    "doi": null,
+    "pages": null,
+    "official_speaker_ids": [
+      "d2f71621-2551-41d4-a7bb-d1a21a2e1cc5"
+    ],
+    "source_type": "verified-invited-talk",
+    "source_url": "https://www.youtube.com/watch?v=y3S1ZBeJ9gc",
+    "version_url": "https://www.youtube.com/watch?v=y3S1ZBeJ9gc",
+    "license": "Talk reuse license unverified; associated arXiv primary sources use the perpetual non-exclusive distribution license, not CC BY.",
+    "question": "强无序如何在相互作用量子链中产生准局部能量坐标，为什么稀有非共振区间就足以排除正常热传导，又为何这仍未证明典型无限链的多体局域化？",
+    "reading_scope": "de-roeck-icm2026-talk: Read original-page metadata in /tmp/de-roeck-icm-video.html: ytInitialData/videoSecondaryInfoRenderer/attributedDescription.content for exact talk title and named collaborators; owner Simons Foundation / channel UCZVjCmJOQRpAQ_EruAIPqXg and page video title. Local HTML supplied by parent after strict-TLS curl; its SHA256 independently recomputed. Player status LOGIN_REQUIRED. No lecture viewing, audio listening or transcript reading. Direct web open returned cache miss.\ndghp-2408.04338v2: Fixed-version PDF arXiv:2408.04338v2 (88 pages), plus live version metadata. Read §§1–3 and §4.1, pp.1–11; §3.3 latter portion separately re-read. Exact model and Theorems 1–2 re-read against §2. §6.2 equations (6.5)–(6.7), p.20; §6.3 and beginning §6.4 equations (6.9)–(6.13), p.21. §9.1 pp.29–31 through Proposition 2 and the initial Corollary 1 derivative bound. §17 opening Proposition 11, p.69, and §17.1 through the statement of Lemma 23, p.70. Entire §18, pp.75–81, including Proposition 13, Theorem 4, Corollaries 5–6, Lemma 29 and (18.12)–(18.15); §18.2–18.3 re-read in smaller ranges. Source PDF pp.4 and 81 rendered and visually inspected. Bibliography [34], p.87 checked. Additionally read the strategy discussion at text lines 2180–2297, pp.39–41 (§10.3 tail); this is not a full reading of §10. No complete reading or proof verification of §§5–17 or all 88 pages.\nnsy-quasilocal-v2: Fixed-version PDF arXiv:1810.02428v2 (106 pages). Read §3.1.1, pp.17–19, and §3.1.2, pp.20–24, including equations (3.1)–(3.48), Theorem 3.1, Lemma 3.2 and both proofs. Text lines 1090–1341 re-read for recursion, chain counting, remainder and constants. Not all of Part I, not unbounded on-site extensions or the spectral-flow proof.\nforest-reuse: Whole-forest Chinese/English searches at the initial 7253-tree snapshot; actual bodies listed in shared_reading read. Direct prerequisite definitions and selected foundational chains read for contracts. Recursive graph closure checked structurally; entries marked structural-only are not claimed as freshly read proofs.\nlocal-calculations: All owned bodies re-read, including the propagation repair and its real prerequisite destinations.",
+    "proof_scope": {
+      "4O01": {
+        "status": "definition",
+        "scope": "定义固定有限自旋链、独立均匀随机场、确定有界对角耦合及任意长度的指数衰减 Hermitian 区间扰动；支撑可为任意位置子集。"
+      },
+      "4O02": {
+        "status": "local-proof",
+        "scope": "纯张量上的作用计算证明不交支撑交换；三角不等式和范数次乘性给出交换子界。"
+      },
+      "4O03": {
+        "status": "local-proof",
+        "scope": "从谱分解和标量指数级数逐项求导，证明 Heisenberg 方程、积分恒等式及固定系统的 2||A||/T 界。"
+      },
+      "4O04": {
+        "status": "definition",
+        "scope": "完整定义允许的有限热浴、耦合范数、按区间左端切分、密度矩阵上确界和最后的时间 limsup；无温差分母，无预先绝对值。"
+      },
+      "4O05": {
+        "status": "local-proof",
+        "scope": "特征基中写成凸组合并用秩一态取到；迹为零推出非负最大值，热流非负性作为应用另列。"
+      },
+      "4O06": {
+        "status": "definition-and-local-proof",
+        "scope": "定义两端支撑扩张与绝对收敛；几何级数给出尾界，不交支撑交换推出远端交换子界。"
+      },
+      "4O07": {
+        "status": "cited-research-theorem-with-proof-outline",
+        "scope": "精确陈述 Theorem 1 的模型、仅依赖 C_kappa 的常数、全体区间算子共同的 U、双向共轭及 exp(-gamma^c' L) 概率下界。多尺度概率和生成元估计引用；有限维传播界另见 4O0L。时间可积延伸引用 §18.2 Corollaries 5–6。"
+      },
+      "4O08": {
+        "status": "local-proof-from-cited-theorem",
+        "scope": "在 4O07 的事件上逐项证明伴随、平方、交换和守恒；显式构造 2^L 个联合秩一投影，不假定能级非简并。"
+      },
+      "4O09": {
+        "status": "local-proof",
+        "scope": "有限矩阵中逐项验证 A_ij 的正号和 [A,D]=-lambda V；求和精确交换子级数并估计余项；维数相关范数界不冒充体积一致估计。"
+      },
+      "4O0A": {
+        "status": "local-proof",
+        "scope": "固定一个翻转自旋之外的场，差值为 ±2 theta_x+b；区间长度和 Fubini–Tonelli 给出 min(1,epsilon)。不把单对估计用于独立乘积或重整化分母。"
+      },
+      "4O0B": {
+        "status": "local-proof",
+        "scope": "按明确递推 U_k=U_(k-1) exp(-A_k) 作望远镜估计；逐坐标完备性、酉性闭合与非对角元极限给出结论；无体积一致空间估计。"
+      },
+      "4O0C": {
+        "status": "local-proof",
+        "scope": "逐比特消去非恒等 Pauli 分量，识别归一化部分迹；证明收缩性、嵌套投影恒等式及远端交换子误差界。"
+      },
+      "4O0D": {
+        "status": "local-proof",
+        "scope": "嵌套投影差分给出壳层；用区间跨边界的距离 r 配对至多 2r，将 4O0L 代入并得到与区间长度和体积无关的指数界；酉对称性给出逆向界。"
+      },
+      "4O0E": {
+        "status": "local-proof",
+        "scope": "不交区间独立性、m=floor(3 log L/4) 的选择及所有失败概率逐步计算；只证明固定 a>0 后充分大 L，尺寸阈值可依赖 a。"
+      },
+      "4O0F": {
+        "status": "local-proof",
+        "scope": "分解 J 为小交换子与 Delta 的全时间导数，得到 eta+2M/T；对热浴一致的 eta,M 才允许先取上确界。"
+      },
+      "4O0G": {
+        "status": "local-proof",
+        "scope": "显式定义长度权重 a_n，计算每点总强度与跨截面区间数；包括端点热浴交换子，得到 2S(Q+1)。"
+      },
+      "4O0H": {
+        "status": "cited-deterministic-estimate-with-local-algebra",
+        "scope": "准确陈述确定性瓶颈估计及浴独立能量差；给出左右重分配和五项交换子恒等式。对角区间范数与空间尾部求和引用 (18.12)–(18.15)，未逐项重建这些研究估计。"
+      },
+      "4O0I": {
+        "status": "cited-research-theorem-with-local-reduction",
+        "scope": "完整陈述 Theorem 2；在固定 gamma、充分大 L 上，利用已引对角化/瓶颈估计和局部概率、切分引理完成归约。全尺寸统一常数的结论采用原定理，不从 gamma 相关尺寸阈值自行推出。"
+      },
+      "4O0J": {
+        "status": "local-proof-from-cited-theorem",
+        "scope": "好坏事件拆分期望；坏事件用对所有样本成立的热流界，最后显式证明 stretched-exponential 项衰减；先固定足够小 gamma，再令 L 趋于无穷。"
+      },
+      "4O0K": {
+        "status": "definitions-and-scope-comparison",
+        "scope": "局部定义线性响应热导及一维热导率的尺度关系，说明 j_L 没有温差分母；区间局域化、传输上界、无限链 MBL 与未建立的极限交换分开。"
+      },
+      "4O0L": {
+        "status": "local-proof-of-finite-continuous-specialization",
+        "scope": "声明有限格点、连续 Hermitian 局部相互作用、F_a、相互作用范数及时间积分；从局部逆演化递推、相交支撑链、卷积和时间单纯形求和证明有限维界。常数 C_F 与 a 和体积无关，体积一致性以时间积分范数一致有界为前提。不是 NSY 的无限格点或无界单点 Hamiltonian 一般定理的全证明。"
+      },
+      "4O0M": {
+        "status": "local-proof",
+        "scope": "时间有序积分级数以 M^n/n! 控制；逐项积分、齐次迭代唯一性和 (U*U)'=0 给出全部结论。仅连续有限矩阵，未在本页推广到可积或无界算子。"
+      },
+      "4O0N": {
+        "status": "local-proof",
+        "scope": "二进分组证明 S=sum_z (1+|z|)^(-3) 可求和；三角不等式与两区域比较给出 C_F=16S，独立于 a 与有限区间。"
+      }
+    },
+    "claim_sources": {
+      "4O01": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.1, equations (2.1)–(2.5)"
+        }
+      ],
+      "4O02": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.1 tensor embedding; §18.3 locality arguments"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O02: local derivation, with exact limits in report.proof_scope.4O02"
+        }
+      ],
+      "4O03": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.3; §18.3 following (18.15)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O03: local derivation, with exact limits in report.proof_scope.4O03"
+        }
+      ],
+      "4O04": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.3, equations (2.7)–(2.11), Remark 1"
+        }
+      ],
+      "4O05": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.3 definition (2.11); linear algebra supplied locally"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O05: local derivation, with exact limits in report.proof_scope.4O05"
+        }
+      ],
+      "4O06": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "Theorem 1 locality clause"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O06: local derivation, with exact limits in report.proof_scope.4O06"
+        }
+      ],
+      "4O07": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "Theorem 1, p.4; §17 Proposition 11; §18.1 Proposition 13; §18.2 Theorem 4 and Corollaries 5–6"
+        }
+      ],
+      "4O08": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.2, discussion following Theorem 1"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O08: local derivation, with exact limits in report.proof_scope.4O08"
+        }
+      ],
+      "4O09": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§3.1; §6.3–6.4, equations (6.9)–(6.13)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O09: local derivation, with exact limits in report.proof_scope.4O09"
+        }
+      ],
+      "4O0A": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§2.1 bare diagonal energy; §3.1 resonance mechanism"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0A: local derivation, with exact limits in report.proof_scope.4O0A"
+        }
+      ],
+      "4O0B": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.1 finite-volume convergence; product convention fixed by H_(k+1)=exp(A_(k+1))H_k exp(-A_(k+1))"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0B: local derivation, with exact limits in report.proof_scope.4O0B"
+        }
+      ],
+      "4O0C": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.2, equation (18.10); finite Pauli twirl in place of Haar integration"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0C: local derivation, with exact limits in report.proof_scope.4O0C"
+        }
+      ],
+      "4O0D": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.2, equations (18.8)–(18.10) and Corollary 6"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0D: local derivation, with exact limits in report.proof_scope.4O0D"
+        }
+      ],
+      "4O0E": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.3, Lemma 29"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0E: local derivation, with exact limits in report.proof_scope.4O0E"
+        }
+      ],
+      "4O0F": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.3, following equation (18.15)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0F: local derivation, with exact limits in report.proof_scope.4O0F"
+        }
+      ],
+      "4O0G": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.3 opening uniform-current claim"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0G: local derivation, with exact limits in report.proof_scope.4O0G"
+        }
+      ],
+      "4O0H": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.3, equations (18.12)–(18.15), pp.80–81"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0H: local derivation, with exact limits in report.proof_scope.4O0H"
+        }
+      ],
+      "4O0I": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "Theorem 2, §2.3; §18.3 full proof"
+        }
+      ],
+      "4O0J": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "Theorem 2, equation (2.12); §18.3 final paragraph"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0J: local derivation, with exact limits in report.proof_scope.4O0J"
+        }
+      ],
+      "4O0K": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§1.3; §2.3 Remark 2"
+        }
+      ],
+      "4O0L": [
+        {
+          "source": "dghp-2408.04338v2",
+          "locator": "§18.2, Theorem 4; nsy-quasilocal-v2 §3.1.2 Theorem 3.1 and Lemma 3.2"
+        },
+        {
+          "source": "nsy-quasilocal-v2",
+          "locator": "§3.1.2, Theorem 3.1, Lemma 3.2 and both proofs, pp.20–24, equations (3.23)–(3.48)"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0L: local derivation, with exact limits in report.proof_scope.4O0L"
+        }
+      ],
+      "4O0M": [
+        {
+          "source": "nsy-quasilocal-v2",
+          "locator": "§3.1.1, equations (3.4)–(3.7), pp.17–18; elementary finite-dimensional construction supplied locally"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0M: local derivation, with exact limits in report.proof_scope.4O0M"
+        }
+      ],
+      "4O0N": [
+        {
+          "source": "nsy-quasilocal-v2",
+          "locator": "§3.1.1, equations (3.8)–(3.13), pp.18–19; explicit one-dimensional constant supplied locally"
+        },
+        {
+          "source": "local-calculations",
+          "locator": "4O0N: local derivation, with exact limits in report.proof_scope.4O0N"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "报告录像及论文集章节身份",
+        "scope": "仅读取原始 Simons 视频页面的 metadata/description，未播放或读取字幕。报告完整数学内容及幻灯片未取得；论文集章节未识别，题名、作者、页码、DOI 均为 null。关联预印本保持独立来源身份。"
+      },
+      {
+        "branch": "多尺度非共振和共振结构",
+        "scope": "主线解释消元、小分母、事件概率与准局部生成元的作用；图/三元组定义、所有类别计数、分母变量选择和簇展开没有分解成站内完整证明网络。"
+      },
+      {
+        "branch": "典型无限系统的多体局域化",
+        "scope": "本文模型类的高概率全链准局部守恒量、无限体积极限、指数型热流长度抑制、高维对应结果未由所引定理解决；这些不是本 packet 的已证结论。"
+      },
+      {
+        "branch": "精确次扩散及线性响应",
+        "scope": "缺少匹配热流下界和精确输运指数；热导/热导率的线性响应极限及与热浴、时间、尺寸极限的交换未建立。"
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4O07"
+        ],
+        "source": "dghp-2408.04338v2",
+        "scope": "Theorem 1 的完整多尺度证明 §§5–17，包含图/三元组的组合控制、共振事件概率、重整化分母及簇展开；已读选段和 §18 不能替代全证明。"
+      },
+      {
+        "notes": [
+          "4O07"
+        ],
+        "source": "dghp-2408.04338v2",
+        "scope": "§18.2 Corollaries 5–6 的时间 L1 逼近延伸作为精确引用的技术输入；4O0L–M 本地证明限于连续有限维相互作用，未重写该逼近步骤。"
+      },
+      {
+        "notes": [
+          "4O0H",
+          "4O0I"
+        ],
+        "source": "dghp-2408.04338v2",
+        "scope": "§18.3 (18.12)–(18.15) 的对角区间算子范数与五项交换子的完整空间尾部求和被引用。4O0H 的切分恒等式、4O0F 的时间积分以及 4O0G 的粗一致界均已局部证明。"
+      },
+      {
+        "notes": [
+          "4O0I"
+        ],
+        "source": "dghp-2408.04338v2",
+        "scope": "Theorem 2 对所有 L≥2 和小 gamma 的统一常数采用原定理；4O0E 本地独立区间证明仅给固定 gamma 后充分大 L 的估计。"
+      }
+    ],
+    "talk_title_provenance": {
+      "source": "de-roeck-icm2026-talk",
+      "field": "ytInitialData.videoSecondaryInfoRenderer.attributedDescription.content",
+      "exact_title": "Localization for Strongly Disordered Interacting Quantum Chains",
+      "video_page_title": "ICM 2026 Invited Section Lecture - Wojciech De Roeck",
+      "owner": "Simons Foundation",
+      "channel_id": "UCZVjCmJOQRpAQ_EruAIPqXg",
+      "association": "Description names the heat-conduction work with Lydia Giacomin, François Huveneers and Oskar Prośniak.",
+      "viewing_status": "not-viewed; LOGIN_REQUIRED; no transcript claim"
+    },
+    "metadata": {
+      "official_roster": "research/icm2026-section-eleven-roster.json",
+      "primary_section": 11,
+      "category": "Section Lectures",
+      "proceedings": {
+        "title": null,
+        "authors": null,
+        "pages": null,
+        "doi": null,
+        "status": "unidentified"
+      },
+      "associated_primary_preprint": "2408.04338v2",
+      "identity_boundary": "The verified invited talk and associated research preprint remain separate sources. No proceedings title, author list, DOI or chapter pages inferred from the preprint.",
+      "parent_responsibility": "Final source identity refresh, shared registries, integration, tests, build and release."
+    },
+    "coverage_status": "Verified invited report; selected transport/localization branches grounded in associated primary preprint 2408.04338v2. Proceedings chapter unidentified; deep proof and reading boundaries recorded."
+  },
+  "notes": [
+    {
+      "id": "4O00",
+      "path": "trees/math/mathematical-physics/de-roeck/4O00.tree",
+      "title": "强无序量子链：从非共振区间到缓慢热传导",
+      "taxon": "Outline",
+      "sha256": "44bc92ba53adf7f6939efb9249b9f0b69bbca98ed822e0af70221fb2666d9dff"
+    },
+    {
+      "id": "4O01",
+      "path": "trees/math/mathematical-physics/de-roeck/4O01.tree",
+      "title": "强无序量子链的随机 Hamiltonian",
+      "taxon": "Definition",
+      "sha256": "faf1e392846c4fd2f48772f1d6bc5bbd391460dea89abeb06067ebd04265671b"
+    },
+    {
+      "id": "4O02",
+      "path": "trees/math/mathematical-physics/de-roeck/4O02.tree",
+      "title": "不交支撑的算子为何交换",
+      "taxon": "Lemma",
+      "sha256": "7dfdc156a7c00178942cca4ab9f720849e5743bf0e442c435ec9cb71989b6bd7"
+    },
+    {
+      "id": "4O03",
+      "path": "trees/math/mathematical-physics/de-roeck/4O03.tree",
+      "title": "Heisenberg 演化与能量差恒等式",
+      "taxon": "Theorem",
+      "sha256": "4736149ac1d4d36718195b9687a4244d1bfb4aff09514981d8ea6deafc3b68aa"
+    },
+    {
+      "id": "4O04",
+      "path": "trees/math/mathematical-physics/de-roeck/4O04.tree",
+      "title": "热浴上确界与非平衡平均热流",
+      "taxon": "Definition",
+      "sha256": "47b82172b5cb60d262f83e3741c1f3d18f39c9d0443900de7e5178c52594a712"
+    },
+    {
+      "id": "4O05",
+      "path": "trees/math/mathematical-physics/de-roeck/4O05.tree",
+      "title": "密度矩阵的最大期望等于最大特征值",
+      "taxon": "Theorem",
+      "sha256": "2fdad74a757d82287c5c4d181f993d5f8f5539ebc31a852087a7743f071d3eae"
+    },
+    {
+      "id": "4O06",
+      "path": "trees/math/mathematical-physics/de-roeck/4O06.tree",
+      "title": "准局部共轭如何控制算子的空间尾部",
+      "taxon": "Definition",
+      "sha256": "586e7674ca8a0ebe02a0bf1ebeb32e1c5432f1945ce9c8dab058b76ad8280d7e"
+    },
+    {
+      "id": "4O07",
+      "path": "trees/math/mathematical-physics/de-roeck/4O07.tree",
+      "title": "非共振量子区间上的准局部对角化定理",
+      "taxon": "Theorem",
+      "sha256": "ed10cea671f2e22531dd8aca365596ddecdf1ec08d17950790efdcc56678095a"
+    },
+    {
+      "id": "4O08",
+      "path": "trees/math/mathematical-physics/de-roeck/4O08.tree",
+      "title": "准局部对角化给出完备的守恒自旋",
+      "taxon": "Theorem",
+      "sha256": "acb20cd09eb78fe3f5d9840d12d3b89f4d4cdfde6e37e6b31b53fec6685b67dd"
+    },
+    {
+      "id": "4O09",
+      "path": "trees/math/mathematical-physics/de-roeck/4O09.tree",
+      "title": "一阶酉消元怎样产生二阶余项",
+      "taxon": "Theorem",
+      "sha256": "2d8df40a299ba6df0a0d143044d03dac109f49b40d44482028d9c7ce6ec4c60e"
+    },
+    {
+      "id": "4O0A",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0A.tree",
+      "title": "裸能量差的单变量小分母估计",
+      "taxon": "Lemma",
+      "sha256": "0c1c635f6f4902abced9a8d6830416474836eb6b0b669415da0abb02a325ca2b"
+    },
+    {
+      "id": "4O0B",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0B.tree",
+      "title": "可求和的酉变换为何收敛",
+      "taxon": "Lemma",
+      "sha256": "7f0734c9f8fc4369a720719a737e00392a51d49d5f5be799bb7ad8d29eca3521"
+    },
+    {
+      "id": "4O0C",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0C.tree",
+      "title": "Pauli 平均给出局部算子的范数收缩投影",
+      "taxon": "Theorem",
+      "sha256": "b63c34d31d0f5f1b108e8923d5855e8dd69b260b127b004c5d0afe3047063257"
+    },
+    {
+      "id": "4O0D",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0D.tree",
+      "title": "远端交换子界怎样给出局部壳层展开",
+      "taxon": "Lemma",
+      "sha256": "85096f14b0cddf61de51bebf796ad2dd3c083081f00812dbf08fb0e6c7f1ebcd"
+    },
+    {
+      "id": "4O0E",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0E.tree",
+      "title": "指数小的区间概率为何足以产生长链瓶颈",
+      "taxon": "Lemma",
+      "sha256": "499cd8221d72d43f87ee6f0ebd62d73afaac28434c0af68d550f4003b53da151"
+    },
+    {
+      "id": "4O0F",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0F.tree",
+      "title": "改变能量切分只改变有界的时间边界项",
+      "taxon": "Lemma",
+      "sha256": "11942856b83a4681ca32a25251617bf7716c341e8da0149d3ab8c45f23a39ee6"
+    },
+    {
+      "id": "4O0G",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0G.tree",
+      "title": "截面热流的范数为何不随链长增长",
+      "taxon": "Lemma",
+      "sha256": "8614526de201b20bad076cca2c00697a47b62532141c3013d6f621a6146357eb"
+    },
+    {
+      "id": "4O0H",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0H.tree",
+      "title": "准局部对角化区间的热流瓶颈估计",
+      "taxon": "Theorem",
+      "sha256": "bc8eca572597bdd4ba3d34d27b2ba4c6a5d11f2b9c75c529d6d985641cb4445c"
+    },
+    {
+      "id": "4O0I",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0I.tree",
+      "title": "强无序相互作用链的非正常热传导定理",
+      "taxon": "Theorem",
+      "sha256": "e27619c82ff1cf8422daa0136c4d7a90eb2a7fe6ab57795614989208c18fd541"
+    },
+    {
+      "id": "4O0J",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0J.tree",
+      "title": "高概率热流界怎样推出无序平均消失",
+      "taxon": "Corollary",
+      "sha256": "302809dd39741582c0c440a8322eb6fd9cba244a90ba9016d8d9b569f171d753"
+    },
+    {
+      "id": "4O0K",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0K.tree",
+      "title": "热导、热导率与多体局域化的不同尺度",
+      "taxon": "Remark",
+      "sha256": "d8ca37e280cb4e2d75a0d53e7e71e05f23f2aad6eee846d2e2b48e08c013a233"
+    },
+    {
+      "id": "4O0L",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0L.tree",
+      "title": "有限量子链的 Lieb–Robinson 传播界",
+      "taxon": "Theorem",
+      "sha256": "e4c07b164424a368d65e8099dabc0a9c34e374e73306e5f2f948ed49007859e8"
+    },
+    {
+      "id": "4O0M",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0M.tree",
+      "title": "连续时变矩阵 Hamiltonian 的酉传播子",
+      "taxon": "Theorem",
+      "sha256": "63946e1ecb6064a8b4f673edfbc645ff54ae78d99c78686780646e5b20ba919b"
+    },
+    {
+      "id": "4O0N",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0N.tree",
+      "title": "指数衰减传播权重的卷积界",
+      "taxon": "Lemma",
+      "sha256": "94f2f6191f4af5f62f5ce7123ddff2b66feaa8515aed23767453bae5533b9264"
+    },
+    {
+      "id": "icm2026-de-roeck",
+      "path": "trees/references/icm2026-de-roeck.tree",
+      "title": "Wojciech De Roeck：强无序相互作用量子链的局域化",
+      "taxon": "Reference",
+      "sha256": "4aca38e9b5a54cd540541e8ed036201c4d79888ccb71be107a781ea903a658df"
+    }
+  ],
+  "prerequisites": {
+    "4O01": [
+      "4F01",
+      "4F05",
+      "4I01",
+      "0N0B",
+      "00M4",
+      "00L3",
+      "00L0"
+    ],
+    "4O02": [
+      "4F01",
+      "4O01",
+      "00M4"
+    ],
+    "4O03": [
+      "0N0B",
+      "4F01",
+      "4O02",
+      "0A38",
+      "0A3C",
+      "00M4"
+    ],
+    "4O04": [
+      "4O01",
+      "4O03",
+      "4F02",
+      "0A37",
+      "0F61"
+    ],
+    "4O05": [
+      "0N0B",
+      "4F02",
+      "0F0F",
+      "00M4"
+    ],
+    "4O06": [
+      "4O01",
+      "4F01",
+      "00M4",
+      "0A38",
+      "4O02"
+    ],
+    "4O07": [
+      "4O01",
+      "4O06",
+      "4O0L",
+      "4O0D",
+      "4O0B"
+    ],
+    "4O08": [
+      "4O07",
+      "4F05",
+      "4O03",
+      "4O06"
+    ],
+    "4O09": [
+      "4O02",
+      "00M4",
+      "0A38",
+      "0N0B",
+      "4O03",
+      "004S"
+    ],
+    "4O0A": [
+      "4O01",
+      "00L3",
+      "00XV",
+      "0H53"
+    ],
+    "4O0B": [
+      "00M4",
+      "4O03",
+      "0A37"
+    ],
+    "4O0C": [
+      "4F01",
+      "4F05",
+      "0F0F",
+      "00M4",
+      "4O02"
+    ],
+    "4O0D": [
+      "4O01",
+      "4O0C",
+      "4O0L"
+    ],
+    "4O0E": [
+      "4O01",
+      "0A45",
+      "00L3",
+      "0A46"
+    ],
+    "4O0F": [
+      "4O03",
+      "4O05"
+    ],
+    "4O0G": [
+      "4O01",
+      "4O04",
+      "0A38",
+      "4O02"
+    ],
+    "4O0H": [
+      "4O04",
+      "4O07",
+      "4O02"
+    ],
+    "4O0I": [
+      "4O01",
+      "4O04",
+      "4O07",
+      "4O0E",
+      "4O0H",
+      "4O0F",
+      "4O05",
+      "4O0G"
+    ],
+    "4O0J": [
+      "4O0I",
+      "00L1",
+      "4O0G",
+      "4O05",
+      "0A46"
+    ],
+    "4O0K": [
+      "4O04",
+      "4O0I",
+      "4O0J",
+      "4O08",
+      "4O07"
+    ],
+    "4O0L": [
+      "4F01",
+      "0N0B",
+      "4O01",
+      "4O0N",
+      "00M4",
+      "4O0M",
+      "0A37",
+      "4O02"
+    ],
+    "4O0M": [
+      "0N0B",
+      "00E2",
+      "0A3A",
+      "00M4",
+      "0A38",
+      "0A3C"
+    ],
+    "4O0N": [
+      "0A38"
+    ]
+  },
+  "entries": [
+    [
+      "4O01",
+      [
+        "4F01",
+        "4F05",
+        "4I01",
+        "0N0B",
+        "00M4",
+        "00L3",
+        "00L0"
+      ],
+      "强无序相互作用量子链的随机模型具体包含哪些数据？ 定义固定有限自旋链、独立均匀随机场、确定有界对角耦合及任意长度的指数衰减 Hermitian 区间扰动；支撑可为任意位置子集。"
+    ],
+    [
+      "4O02",
+      [
+        "4F01",
+        "4O01",
+        "00M4"
+      ],
+      "不交支撑为何使矩阵交换，而一般交换子怎样估计？ 纯张量上的作用计算证明不交支撑交换；三角不等式和范数次乘性给出交换子界。"
+    ],
+    [
+      "4O03",
+      [
+        "0N0B",
+        "4F01",
+        "4O02",
+        "0A38",
+        "0A3C",
+        "00M4"
+      ],
+      "有限维能流的时间积分为何等于两端能量之差？ 从谱分解和标量指数级数逐项求导，证明 Heisenberg 方程、积分恒等式及固定系统的 2||A||/T 界。"
+    ],
+    [
+      "4O04",
+      [
+        "4O01",
+        "4O03",
+        "4F02",
+        "0A37",
+        "0F61"
+      ],
+      "热浴、初态和长时间极限应按什么次序定义最大平均热流？ 完整定义允许的有限热浴、耦合范数、按区间左端切分、密度矩阵上确界和最后的时间 limsup；无温差分母，无预先绝对值。"
+    ],
+    [
+      "4O05",
+      [
+        "0N0B",
+        "4F02",
+        "0F0F",
+        "00M4"
+      ],
+      "为何密度矩阵上的最大期望等于最大特征值？ 特征基中写成凸组合并用秩一态取到；迹为零推出非负最大值，热流非负性作为应用另列。"
+    ],
+    [
+      "4O06",
+      [
+        "4O01",
+        "4F01",
+        "00M4",
+        "0A38",
+        "4O02"
+      ],
+      "准局部共轭如何给出可控的空间截断误差？ 定义两端支撑扩张与绝对收敛；几何级数给出尾界，不交支撑交换推出远端交换子界。"
+    ],
+    [
+      "4O07",
+      [
+        "4O01",
+        "4O06",
+        "4O0L",
+        "4O0D",
+        "4O0B"
+      ],
+      "在哪个概率事件上能用准局部酉变换对角化有限随机链？ 精确陈述 Theorem 1 的模型、仅依赖 C_kappa 的常数、全体区间算子共同的 U、双向共轭及 exp(-gamma^c' L) 概率下界。多尺度概率和生成元估计引用；有限维传播界另见 4O0L。时间可积延伸引用 §18.2 Corollaries 5–6。"
+    ],
+    [
+      "4O08",
+      [
+        "4O07",
+        "4F05",
+        "4O03",
+        "4O06"
+      ],
+      "准局部对角化为何产生完备的守恒自旋？ 在 4O07 的事件上逐项证明伴随、平方、交换和守恒；显式构造 2^L 个联合秩一投影，不假定能级非简并。"
+    ],
+    [
+      "4O09",
+      [
+        "4O02",
+        "00M4",
+        "0A38",
+        "0N0B",
+        "4O03",
+        "004S"
+      ],
+      "一次非共振酉消元为何留下二阶余项？ 有限矩阵中逐项验证 A_ij 的正号和 [A,D]=-lambda V；求和精确交换子级数并估计余项；维数相关范数界不冒充体积一致估计。"
+    ],
+    [
+      "4O0A",
+      [
+        "4O01",
+        "00L3",
+        "00XV",
+        "0H53"
+      ],
+      "固定一对裸构形的小能量差事件为何概率至多 epsilon？ 固定一个翻转自旋之外的场，差值为 ±2 theta_x+b；区间长度和 Fubini–Tonelli 给出 min(1,epsilon)。不把单对估计用于独立乘积或重整化分母。"
+    ],
+    [
+      "4O0B",
+      [
+        "00M4",
+        "4O03",
+        "0A37"
+      ],
+      "可求和的有限维酉变换为何收敛并保留对角化极限？ 按明确递推 U_k=U_(k-1) exp(-A_k) 作望远镜估计；逐坐标完备性、酉性闭合与非对角元极限给出结论；无体积一致空间估计。"
+    ],
+    [
+      "4O0C",
+      [
+        "4F01",
+        "4F05",
+        "0F0F",
+        "00M4",
+        "4O02"
+      ],
+      "Pauli 平均为何是局部算子的范数收缩投影？ 逐比特消去非恒等 Pauli 分量，识别归一化部分迹；证明收缩性、嵌套投影恒等式及远端交换子误差界。"
+    ],
+    [
+      "4O0D",
+      [
+        "4O01",
+        "4O0C",
+        "4O0L"
+      ],
+      "远端交换子估计如何产生局部壳层展开？ 嵌套投影差分给出壳层；用区间跨边界的距离 r 配对至多 2r，将 4O0L 代入并得到与区间长度和体积无关的指数界；酉对称性给出逆向界。"
+    ],
+    [
+      "4O0E",
+      [
+        "4O01",
+        "0A45",
+        "00L3",
+        "0A46"
+      ],
+      "为何指数小的单区间成功概率仍产生长链中的高概率瓶颈？ 不交区间独立性、m=floor(3 log L/4) 的选择及所有失败概率逐步计算；只证明固定 a>0 后充分大 L，尺寸阈值可依赖 a。 格式修订仅删除 Forester 不支持的 TeX 空白命令，数学内容不变。"
+    ],
+    [
+      "4O0F",
+      [
+        "4O03",
+        "4O05"
+      ],
+      "改变左右能量切分为何只增加消失的时间边界项？ 分解 J 为小交换子与 Delta 的全时间导数，得到 eta+2M/T；对热浴一致的 eta,M 才允许先取上确界。"
+    ],
+    [
+      "4O0G",
+      [
+        "4O01",
+        "4O04",
+        "0A38",
+        "4O02"
+      ],
+      "截面热流为何有不依赖链长和热浴的范数上界？ 显式定义长度权重 a_n，计算每点总强度与跨截面区间数；包括端点热浴交换子，得到 2S(Q+1)。"
+    ],
+    [
+      "4O0H",
+      [
+        "4O04",
+        "4O07",
+        "4O02"
+      ],
+      "准局部对角化的长区间如何形成热流瓶颈？ 准确陈述确定性瓶颈估计及浴独立能量差；给出左右重分配和五项交换子恒等式。对角区间范数与空间尾部求和引用 (18.12)–(18.15)，未逐项重建这些研究估计。"
+    ],
+    [
+      "4O0I",
+      [
+        "4O01",
+        "4O04",
+        "4O07",
+        "4O0E",
+        "4O0H",
+        "4O0F",
+        "4O05",
+        "4O0G"
+      ],
+      "强无序时最大长期平均热流满足怎样的高概率长度上界？ 完整陈述 Theorem 2；在固定 gamma、充分大 L 上，利用已引对角化/瓶颈估计和局部概率、切分引理完成归约。全尺寸统一常数的结论采用原定理，不从 gamma 相关尺寸阈值自行推出。 格式修订仅删除 Forester 不支持的 TeX 空白命令，数学内容不变。"
+    ],
+    [
+      "4O0J",
+      [
+        "4O0I",
+        "00L1",
+        "4O0G",
+        "4O05",
+        "0A46"
+      ],
+      "高概率热流上界怎样推出 E(L j_L) 趋于零？ 好坏事件拆分期望；坏事件用对所有样本成立的热流界，最后显式证明 stretched-exponential 项衰减；先固定足够小 gamma，再令 L 趋于无穷。 格式修订仅删除 Forester 不支持的 TeX 空白命令，数学内容不变。"
+    ],
+    [
+      "4O0K",
+      [
+        "4O04",
+        "4O0I",
+        "4O0J",
+        "4O08",
+        "4O07"
+      ],
+      "热流上界、热导率消失与多体局域化有何区别？ 局部定义线性响应热导及一维热导率的尺度关系，说明 j_L 没有温差分母；区间局域化、传输上界、无限链 MBL 与未建立的极限交换分开。"
+    ],
+    [
+      "4O0L",
+      [
+        "4F01",
+        "0N0B",
+        "4O01",
+        "4O0N",
+        "00M4",
+        "4O0M",
+        "0A37",
+        "4O02"
+      ],
+      "有限时变自旋链的局部扰动怎样限制远处交换子？ 声明有限格点、连续 Hermitian 局部相互作用、F_a、相互作用范数及时间积分；从局部逆演化递推、相交支撑链、卷积和时间单纯形求和证明有限维界。常数 C_F 与 a 和体积无关，体积一致性以时间积分范数一致有界为前提。不是 NSY 的无限格点或无界单点 Hamiltonian 一般定理的全证明。"
+    ],
+    [
+      "4O0M",
+      [
+        "0N0B",
+        "00E2",
+        "0A3A",
+        "00M4",
+        "0A38",
+        "0A3C"
+      ],
+      "连续时变有限矩阵 Hamiltonian 为何有唯一酉传播子？ 时间有序积分级数以 M^n/n! 控制；逐项积分、齐次迭代唯一性和 (U*U)'=0 给出全部结论。仅连续有限矩阵，未在本页推广到可积或无界算子。"
+    ],
+    [
+      "4O0N",
+      [
+        "0A38"
+      ],
+      "指数衰减传播权重为何满足体积一致的卷积界？ 二进分组证明 S=sum_z (1+|z|)^(-3) 可求和；三角不等式与两区域比较给出 C_F=16S，独立于 a 与有限区间。"
+    ]
+  ],
+  "atomic_questions": {
+    "4O01": "强无序相互作用量子链的随机模型具体包含哪些数据？",
+    "4O02": "不交支撑为何使矩阵交换，而一般交换子怎样估计？",
+    "4O03": "有限维能流的时间积分为何等于两端能量之差？",
+    "4O04": "热浴、初态和长时间极限应按什么次序定义最大平均热流？",
+    "4O05": "为何密度矩阵上的最大期望等于最大特征值？",
+    "4O06": "准局部共轭如何给出可控的空间截断误差？",
+    "4O07": "在哪个概率事件上能用准局部酉变换对角化有限随机链？",
+    "4O08": "准局部对角化为何产生完备的守恒自旋？",
+    "4O09": "一次非共振酉消元为何留下二阶余项？",
+    "4O0A": "固定一对裸构形的小能量差事件为何概率至多 epsilon？",
+    "4O0B": "可求和的有限维酉变换为何收敛并保留对角化极限？",
+    "4O0C": "Pauli 平均为何是局部算子的范数收缩投影？",
+    "4O0D": "远端交换子估计如何产生局部壳层展开？",
+    "4O0E": "为何指数小的单区间成功概率仍产生长链中的高概率瓶颈？",
+    "4O0F": "改变左右能量切分为何只增加消失的时间边界项？",
+    "4O0G": "截面热流为何有不依赖链长和热浴的范数上界？",
+    "4O0H": "准局部对角化的长区间如何形成热流瓶颈？",
+    "4O0I": "强无序时最大长期平均热流满足怎样的高概率长度上界？",
+    "4O0J": "高概率热流上界怎样推出 E(L j_L) 趋于零？",
+    "4O0K": "热流上界、热导率消失与多体局域化有何区别？",
+    "4O0L": "有限时变自旋链的局部扰动怎样限制远处交换子？",
+    "4O0M": "连续时变有限矩阵 Hamiltonian 为何有唯一酉传播子？",
+    "4O0N": "指数衰减传播权重为何满足体积一致的卷积界？"
+  },
+  "reused_pages": [
+    "004M",
+    "004N",
+    "004S",
+    "00D0",
+    "00D3",
+    "00E2",
+    "00EP",
+    "00ER",
+    "00ET",
+    "00G3",
+    "00GC",
+    "00GL",
+    "00GM",
+    "00L0",
+    "00L1",
+    "00L3",
+    "00M1",
+    "00M4",
+    "00MQ",
+    "00MU",
+    "00Q0",
+    "00Q1",
+    "00Q2",
+    "00Q3",
+    "00Q5",
+    "00QB",
+    "00QD",
+    "00XV",
+    "0122",
+    "0A37",
+    "0A38",
+    "0A3A",
+    "0A3C",
+    "0A45",
+    "0A46",
+    "0F0F",
+    "0F4E",
+    "0F61",
+    "0H53",
+    "0N0B",
+    "4F01",
+    "4F02",
+    "4F05",
+    "4I01"
+  ],
+  "reused_page_records": [
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "title": "内积空间",
+      "taxon": "Definition",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "004N",
+      "path": "trees/math/analysis/004N.tree",
+      "title": "复 Euclidean 空间的标准内积",
+      "taxon": "Example",
+      "sha256": "dcdb81e51a6a4e76da31d63bd44e9ab22faa8dc5e9da2b525fde7774cff09fec",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "title": "Schwarz 不等式",
+      "taxon": "Corollary",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b",
+      "contract": "逐行内积的 Schwarz 不等式，用于维数相关的有限矩阵范数估计。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "00D0",
+      "path": "trees/math/logic/research/00D0.tree",
+      "title": "域",
+      "taxon": "Definition",
+      "sha256": "cb2fac15a062605ac3f19c049bd89d6d79c038616f85e82a307149828b32d810",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00D3",
+      "path": "trees/math/logic/research/00D3.tree",
+      "title": "向量空间",
+      "taxon": "Definition",
+      "sha256": "8df12ff71a7daed42b0451d26d903a1f66e9ae37657cc1c4aa63803a7002ca0e",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "title": "连续映射",
+      "taxon": "Definition",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba",
+      "contract": "实际连续映射定义；有限矩阵逐元素连续采用通常欧氏拓扑。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "00EP",
+      "path": "trees/math/topology/atomic/00EP.tree",
+      "title": "度量收敛",
+      "taxon": "Definition",
+      "sha256": "a7f03d2ff9ecd62c6a8ec9422e6a505dc9a64291fae4305bf676e59d8eeda4fc",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00ER",
+      "path": "trees/math/topology/atomic/00ER.tree",
+      "title": "Cauchy 序列",
+      "taxon": "Definition",
+      "sha256": "10fd11ea8002fc8a9dfb7765b1eeb84366e14b6fc4f4f011f58daa094f54f5b4",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00ET",
+      "path": "trees/math/topology/atomic/00ET.tree",
+      "title": "完备度量空间",
+      "taxon": "Definition",
+      "sha256": "6357be9faeffcf933649b7d12f4acf95d3422ad648ea381d9fb5a2f14da9cb3e",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00G3",
+      "path": "trees/math/algebra/atomic/00G3.tree",
+      "title": "阿贝尔群",
+      "taxon": "Definition",
+      "sha256": "2d397fd9103f28936fdb11b9c8754b7b4fc73de05c4eb8bc96878eb9d4fd54c7",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00GC",
+      "path": "trees/math/algebra/atomic/00GC.tree",
+      "title": "线性映射",
+      "taxon": "Definition",
+      "sha256": "996d480e73e1b22e0aa6b8ee814d1bbe5e55fdedf4cb7a91de6a576d4e50e348",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00GL",
+      "path": "trees/math/algebra/atomic/00GL.tree",
+      "title": "向量空间的基",
+      "taxon": "Definition",
+      "sha256": "81cb43f10c55be151315de7536e1fc063f0e6ad515b35a21ecc41f1d8a6dcc6b",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00GM",
+      "path": "trees/math/algebra/atomic/00GM.tree",
+      "title": "有限维向量空间的维数",
+      "taxon": "Definition",
+      "sha256": "0d12b6def14f1a7b127630a2436a1bb88c7e0216eea271e13be759ef219c18f7",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "title": "实随机变量与分布",
+      "taxon": "Definition",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce",
+      "contract": "实随机变量和分布；均匀分布的区间概率在 4O01 就地给出。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "title": "随机变量的期望",
+      "taxon": "Definition",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af",
+      "contract": "随机变量期望即概率积分；用于好坏事件分解。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "title": "事件与随机变量的独立性",
+      "taxon": "Definition",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+      "contract": "事件、随机变量的独立性与联合乘积分布；用于不交区间和单变量积分。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "00M1",
+      "path": "trees/math/analysis/atomic/00M1.tree",
+      "title": "范数与赋范向量空间",
+      "taxon": "Definition",
+      "sha256": "e8077b2cfccf1f76276d3bef999e7fac06492dc419b03f11beb7a21fa4d357a0",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00M4",
+      "path": "trees/math/analysis/atomic/00M4.tree",
+      "title": "有界线性算子与算子范数",
+      "taxon": "Definition",
+      "sha256": "70300ca09bf8107f544ae2d1467bbc30224143bd8d5ad886255e2962ff292636",
+      "contract": "算子范数、三角不等式、次乘性；有限矩阵情形使用。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "00MQ",
+      "path": "trees/math/analysis/atomic/00MQ.tree",
+      "title": "Hilbert 空间",
+      "taxon": "Definition",
+      "sha256": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00MU",
+      "path": "trees/math/analysis/atomic/00MU.tree",
+      "title": "Hilbert 空间算子的伴随",
+      "taxon": "Definition",
+      "sha256": "b6ab9609e60598f6df2bbbedde82f7fc9ca08e8860665aee730f07ec456b00c8",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00Q0",
+      "path": "trees/math/logic/research/atomic/00Q0.tree",
+      "title": "σ-代数与可测空间",
+      "taxon": "Definition",
+      "sha256": "cda032eb0847cfda578b0c62a0eb74b679ad10cba0ef4963614d64d2de89dc4f",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00Q1",
+      "path": "trees/math/logic/research/atomic/00Q1.tree",
+      "title": "可测映射",
+      "taxon": "Definition",
+      "sha256": "29efd7a8c18263294c150b171392e3f44b4fa95e7fe1c715b8e0150b63fb4464",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "title": "测度",
+      "taxon": "Definition",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "title": "概率空间",
+      "taxon": "Definition",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "title": "Lebesgue 积分",
+      "taxon": "Definition",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00QB",
+      "path": "trees/math/logic/research/atomic/00QB.tree",
+      "title": "乘积测度",
+      "taxon": "Definition",
+      "sha256": "6861ea2adaa4342f9317db0e49967521cdf4e2b0173d77fe263b2e0c5d18fbd5",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree",
+      "title": "Borel σ-代数",
+      "taxon": "Definition",
+      "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "title": "欧氏空间的 Lebesgue 测度",
+      "taxon": "Definition",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1",
+      "contract": "欧氏空间 Lebesgue 测度；均匀场的立方体分布。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0122",
+      "path": "trees/math/algebra/research/0122.tree",
+      "title": "模的平衡张量积",
+      "taxon": "Construction",
+      "sha256": "360012ed2c706f09586b49e5bb24218e59be22f6f67567c7dfb31f6db9a760f1",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "0A37",
+      "path": "trees/math/analysis/atomic/0A37.tree",
+      "title": "实数的上确界完备性",
+      "taxon": "Axiom",
+      "sha256": "e212fde4ae3219df6893b832515641e403a16af323e431575bbb86df7f837b29",
+      "contract": "上确界及实数完备性；用于状态/热浴上确界和矩阵序列收敛。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0A38",
+      "path": "trees/math/analysis/atomic/0A38.tree",
+      "title": "赋范空间中的无穷级数",
+      "taxon": "Definition",
+      "sha256": "5549822368c709b807074bd0031939d3840dcef0781612f8ca085da85a3da34b",
+      "contract": "赋范空间级数及绝对收敛；有限维指数、几何尾及阶乘控制。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0A3A",
+      "path": "trees/math/analysis/atomic/0A3A.tree",
+      "title": "紧空间上连续实函数的极值定理",
+      "taxon": "Theorem",
+      "sha256": "4c47befef5ed2494953e59817991fa7d251b0fd5fdf2933613add3b08121923b",
+      "contract": "连续实函数在紧区间有界并取极值；用于连续矩阵元及范数上界。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0A3C",
+      "path": "trees/math/analysis/atomic/0A3C.tree",
+      "title": "微积分基本定理",
+      "taxon": "Theorem",
+      "sha256": "0ce7de7269b74ee6540bf0a8be0eb8ef32da4c53248d1a3eda6750becbfa2bb1",
+      "contract": "逐实虚矩阵元的微积分基本定理。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "title": "由积分定义的自然对数",
+      "taxon": "Definition",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297",
+      "contract": "自然对数的积分定义；概率区间长度与固定耦合指数。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0A46",
+      "path": "trees/math/analysis/atomic/0A46.tree",
+      "title": "指数函数及其导数",
+      "taxon": "Definition",
+      "sha256": "f10c39159cbfd27ea1e1e4798af44066c0c601fbd13853bfa36eb3f63031a335",
+      "contract": "指数函数及导数；所有失败概率和显式指数尾估计。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0F0F",
+      "path": "trees/math/geometry/algebraic/0F0F.tree",
+      "title": "线性算子的迹",
+      "taxon": "Definition",
+      "sha256": "6f0154249461062a074a9e1ec67bfb06d9fd3445e71f2f8e17a57a0b321ef528",
+      "contract": "基无关的迹、循环性；用于态期望及 Pauli 部分迹。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0F4E",
+      "path": "trees/math/category/quantum/atomic/0F4E.tree",
+      "title": "Hilbert 空间的张量积",
+      "taxon": "Definition",
+      "sha256": "a325c75c71d8f15dbeed0eeec43c303a4fd89cc422842263e16719a1bad41397",
+      "contract": "递归基础正文已读；按其实际定义或定理复用，不扩大适用范围。",
+      "reading_status": "body-read",
+      "role": "recursive-foundation"
+    },
+    {
+      "id": "0F61",
+      "path": "trees/math/analysis/atomic/0F61.tree",
+      "title": "实数列的上极限与下极限",
+      "taxon": "Definition",
+      "sha256": "c73ffc16ae619346dc9ec3ac57588ec682cd0af4f4736d8989755f1d8a9199bf",
+      "contract": "数列上下极限；连续时间版本在 4O04 显式写成 inf_S sup_{T>=S}。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "title": "Fubini–Tonelli 积分定理",
+      "taxon": "Theorem",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b",
+      "contract": "乘积测度下非负函数的 Tonelli 与可积函数的 Fubini；单小分母积分只需非负情形。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "0N0B",
+      "path": "trees/math/geometry/bourbaki/0N0B.tree",
+      "title": "实对称与 Hermitian 矩阵的正交对角化",
+      "taxon": "Theorem",
+      "sha256": "83fb26af0fc669bf0ce10adbf32513bbd3068429fb4cf16583f4472cb73ca7f0",
+      "contract": "有限维 Hermitian 矩阵的实谱、正交特征分解及相应证明。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "4F01",
+      "path": "trees/math/mathematical-physics/mahadev/4F01.tree",
+      "title": "量子寄存器与计算基",
+      "taxon": "Definition",
+      "sha256": "d37b4c946bd197aa1981d6e2c6d069905dbadf4fb8c660c8ab331a304f42eff9",
+      "contract": "有限比特寄存器、计算基、张量积和酉矩阵；作为有限自旋空间的规范定义，不复制。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "4F02",
+      "path": "trees/math/mathematical-physics/mahadev/4F02.tree",
+      "title": "密度矩阵与混合态的测量",
+      "taxon": "Definition",
+      "sha256": "98bd53d86041c99e52d8203cf206b48ea138abc80e8f0d282ba13cd1468d9bc6",
+      "contract": "正半定、迹一的密度矩阵及迹期望；不附加热平衡或乘积态条件。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "4F05",
+      "path": "trees/math/mathematical-physics/mahadev/4F05.tree",
+      "title": "Pauli 算子的反交换与矩阵展开",
+      "taxon": "Theorem",
+      "sha256": "4f9a7a56658cab5e8ed27b9407cae80e2dc996acddc0d9e1368c11e91ffd9ff1",
+      "contract": "Pauli X,Z、反交换关系及矩阵乘积基；用于局部投影和守恒自旋。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    },
+    {
+      "id": "4I01",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I01.tree",
+      "title": "有限程量子自旋相互作用",
+      "taxon": "Definition",
+      "sha256": "f8bb36895bf59773d3aa73cdcbd9e08b8721fa5fb457af118160e97f98d341bf",
+      "contract": "只复用张量因子的局部嵌入和自旋相互作用含义；其二维有限程模型不被当成本分支的指数长程链模型。",
+      "reading_status": "body-read",
+      "role": "direct-prerequisite"
+    }
+  ],
+  "navigation_only": {
+    "4O00": [
+      "4O01",
+      "4O03",
+      "4O04",
+      "4F02",
+      "4O05",
+      "4O0G",
+      "4O09",
+      "4O0A",
+      "4O07",
+      "4O06",
+      "4O08",
+      "4O0B",
+      "4O0L",
+      "4O0N",
+      "4O0M",
+      "4O0C",
+      "4O0D",
+      "4O0E",
+      "4O0H",
+      "4O0F",
+      "4O0I",
+      "4O0J",
+      "4O0K"
+    ],
+    "4O01": [],
+    "4O02": [],
+    "4O03": [],
+    "4O04": [],
+    "4O05": [],
+    "4O06": [],
+    "4O07": [],
+    "4O08": [],
+    "4O09": [],
+    "4O0A": [],
+    "4O0B": [
+      "4O06"
+    ],
+    "4O0C": [],
+    "4O0D": [],
+    "4O0E": [],
+    "4O0F": [],
+    "4O0G": [],
+    "4O0H": [],
+    "4O0I": [],
+    "4O0J": [],
+    "4O0K": [],
+    "4O0L": [],
+    "4O0M": [],
+    "4O0N": [],
+    "icm2026-de-roeck": [
+      "4O00"
+    ]
+  },
+  "applications": {
+    "4O05": [
+      "4O04"
+    ],
+    "4O0A": [
+      "4O09"
+    ],
+    "4O0D": [
+      "4O07"
+    ],
+    "4O0E": [
+      "4O07"
+    ],
+    "4O0F": [
+      "4O04"
+    ],
+    "4O0H": [
+      "4O0F"
+    ]
+  },
+  "shared_reading": {
+    "actual_bodies_read": [
+      "004M",
+      "004N",
+      "004S",
+      "00D0",
+      "00D3",
+      "00E2",
+      "00EP",
+      "00ER",
+      "00ET",
+      "00G3",
+      "00GC",
+      "00GL",
+      "00GM",
+      "00L0",
+      "00L1",
+      "00L3",
+      "00M1",
+      "00M4",
+      "00MQ",
+      "00MU",
+      "00Q0",
+      "00Q1",
+      "00Q2",
+      "00Q3",
+      "00Q5",
+      "00QB",
+      "00QD",
+      "00XV",
+      "0122",
+      "0A37",
+      "0A38",
+      "0A3A",
+      "0A3C",
+      "0A3Y",
+      "0A45",
+      "0A46",
+      "0F0F",
+      "0F4E",
+      "0F61",
+      "0H53",
+      "0N0B",
+      "4F01",
+      "4F02",
+      "4F05",
+      "4I01",
+      "4I0H"
+    ],
+    "read_but_not_in_declared_prerequisite_closure": [
+      {
+        "id": "4I0H",
+        "path": "trees/math/mathematical-physics/perez-garcia/4I0H.tree",
+        "title": "有限张量因子的交换子恰为另一因子",
+        "taxon": "Proposition",
+        "sha256": "a4c4398786baa535c06ccac3ed6d9c49efd38d43ba67a88d08e8165f582751af"
+      },
+      {
+        "id": "0A3Y",
+        "path": "trees/math/geometry/atomic/0A3Y.tree",
+        "title": "向量空间张量积的基",
+        "taxon": "Theorem",
+        "sha256": "e0a2b29c8d6018134d81b90fe88f7e7fb04e77af1150f01726c9c3d831925f9a"
+      }
+    ],
+    "direct_prerequisite_ids": [
+      "004S",
+      "00E2",
+      "00L0",
+      "00L1",
+      "00L3",
+      "00M4",
+      "00XV",
+      "0A37",
+      "0A38",
+      "0A3A",
+      "0A3C",
+      "0A45",
+      "0A46",
+      "0F0F",
+      "0F61",
+      "0H53",
+      "0N0B",
+      "4F01",
+      "4F02",
+      "4F05",
+      "4I01"
+    ],
+    "recursive_closure_ids": [
+      "0001",
+      "004M",
+      "004N",
+      "004P",
+      "004Q",
+      "004R",
+      "004S",
+      "00BA",
+      "00BH",
+      "00CS",
+      "00CY",
+      "00D0",
+      "00D3",
+      "00D7",
+      "00D8",
+      "00D9",
+      "00DC",
+      "00DE",
+      "00E0",
+      "00E1",
+      "00E2",
+      "00E4",
+      "00E5",
+      "00E7",
+      "00E8",
+      "00EA",
+      "00EB",
+      "00EC",
+      "00ED",
+      "00EE",
+      "00EF",
+      "00EG",
+      "00EI",
+      "00EJ",
+      "00EK",
+      "00EL",
+      "00EM",
+      "00EN",
+      "00EP",
+      "00EQ",
+      "00ER",
+      "00ET",
+      "00EV",
+      "00EW",
+      "00EX",
+      "00F3",
+      "00FP",
+      "00G0",
+      "00G1",
+      "00G2",
+      "00G3",
+      "00GC",
+      "00GK",
+      "00GL",
+      "00GM",
+      "00GN",
+      "00I0",
+      "00J0",
+      "00J1",
+      "00J2",
+      "00J3",
+      "00J4",
+      "00J7",
+      "00JC",
+      "00JD",
+      "00JE",
+      "00JG",
+      "00JH",
+      "00JK",
+      "00JO",
+      "00JZ",
+      "00L0",
+      "00L1",
+      "00L2",
+      "00L3",
+      "00L4",
+      "00M1",
+      "00M4",
+      "00M6",
+      "00MA",
+      "00MH",
+      "00MI",
+      "00MK",
+      "00MQ",
+      "00MR",
+      "00MS",
+      "00MT",
+      "00MU",
+      "00O9",
+      "00OC",
+      "00Q0",
+      "00Q1",
+      "00Q2",
+      "00Q3",
+      "00Q4",
+      "00Q5",
+      "00Q9",
+      "00QA",
+      "00QB",
+      "00QD",
+      "00SO",
+      "00TV",
+      "00XV",
+      "0120",
+      "0121",
+      "0122",
+      "0127",
+      "0136",
+      "01D2",
+      "0A0B",
+      "0A0H",
+      "0A30",
+      "0A31",
+      "0A32",
+      "0A33",
+      "0A34",
+      "0A35",
+      "0A37",
+      "0A38",
+      "0A39",
+      "0A3A",
+      "0A3B",
+      "0A3C",
+      "0A3K",
+      "0A3T",
+      "0A3Z",
+      "0A40",
+      "0A44",
+      "0A45",
+      "0A46",
+      "0A7A",
+      "0A87",
+      "0ALH",
+      "0ALX",
+      "0F0B",
+      "0F0C",
+      "0F0F",
+      "0F40",
+      "0F4E",
+      "0F61",
+      "0H53",
+      "0N0A",
+      "0N0B",
+      "4F01",
+      "4F02",
+      "4F04",
+      "4F05",
+      "4I01"
+    ],
+    "recursive_closure_count": 148,
+    "structural_only_not_fresh_body_read": [
+      "0001",
+      "004P",
+      "004Q",
+      "004R",
+      "00BA",
+      "00BH",
+      "00CS",
+      "00CY",
+      "00D7",
+      "00D8",
+      "00D9",
+      "00DC",
+      "00DE",
+      "00E0",
+      "00E1",
+      "00E4",
+      "00E5",
+      "00E7",
+      "00E8",
+      "00EA",
+      "00EB",
+      "00EC",
+      "00ED",
+      "00EE",
+      "00EF",
+      "00EG",
+      "00EI",
+      "00EJ",
+      "00EK",
+      "00EL",
+      "00EM",
+      "00EN",
+      "00EQ",
+      "00EV",
+      "00EW",
+      "00EX",
+      "00F3",
+      "00FP",
+      "00G0",
+      "00G1",
+      "00G2",
+      "00GK",
+      "00GN",
+      "00I0",
+      "00J0",
+      "00J1",
+      "00J2",
+      "00J3",
+      "00J4",
+      "00J7",
+      "00JC",
+      "00JD",
+      "00JE",
+      "00JG",
+      "00JH",
+      "00JK",
+      "00JO",
+      "00JZ",
+      "00L2",
+      "00L4",
+      "00M6",
+      "00MA",
+      "00MH",
+      "00MI",
+      "00MK",
+      "00MR",
+      "00MS",
+      "00MT",
+      "00O9",
+      "00OC",
+      "00Q4",
+      "00Q9",
+      "00QA",
+      "00SO",
+      "00TV",
+      "0120",
+      "0121",
+      "0127",
+      "0136",
+      "01D2",
+      "0A0B",
+      "0A0H",
+      "0A30",
+      "0A31",
+      "0A32",
+      "0A33",
+      "0A34",
+      "0A35",
+      "0A39",
+      "0A3B",
+      "0A3K",
+      "0A3T",
+      "0A3Z",
+      "0A40",
+      "0A44",
+      "0A7A",
+      "0A87",
+      "0ALH",
+      "0ALX",
+      "0F0B",
+      "0F0C",
+      "0F40",
+      "0N0A",
+      "4F04"
+    ],
+    "scope": "Direct prerequisites and selected undergraduate foundation bodies were read to establish actual contracts. The rest of the inherited repository prerequisite closure was checked for existence, body edges, atomic destinations and acyclicity, not claimed as a fresh semantic proof audit.",
+    "shared_edits": [],
+    "needed_shared_fixes": []
+  },
+  "terminology_evidence": {
+    "method": "Whole-forest Chinese and English title/body searches before new atoms; initial inventory 7253 trees, final read-only inventory 7327 trees during concurrent authoring.",
+    "search_terms": [
+      "quantum spin / 量子自旋",
+      "Pauli / 泡利",
+      "quasi-local / 准局部",
+      "localization / 局域化",
+      "many-body localization / 多体局域化",
+      "resonance / 共振",
+      "diagonalization / 对角化",
+      "conductance / 热导",
+      "conductivity / 热导率",
+      "Heisenberg / 海森堡",
+      "Lieb-Robinson",
+      "Schrieffer-Wolff",
+      "partial trace / 部分迹"
+    ],
+    "reuse_decisions": [
+      "复用 4F01、4F02、4F05 和 4I01 的实际有限自旋定义，不另建寄存器、密度矩阵或 Pauli 基础页。",
+      "4I01 的有限程条件不移植为本模型假设；新 4O01 只补随机场和指数区间相互作用模型。",
+      "检索没有发现可复用的 Lieb–Robinson 原子定理契约，按 reviewer DR-F01 补 4O0L–N。",
+      "一阶消元和裸小分母是明确标识的预备引理，不替代重整化分母的研究证明。"
+    ],
+    "banana_space": {
+      "checked_on": "2026-10-24",
+      "attempted_urls": [
+        "https://banana-space.org/wiki/量子力学",
+        "https://banana-space.com/wiki/希尔伯特空间",
+        "https://banana-space.com/wiki/量子力学"
+      ],
+      "result": "Web access unavailable; no usable corresponding definitions obtained. The .org attempt was not treated as verification of the actual .com site.",
+      "verified_terms": [],
+      "pending_terms": [
+        "准局部",
+        "多体局域化",
+        "热导",
+        "热导率",
+        "Lieb–Robinson 界"
+      ]
+    }
+  },
+  "source_records": [
+    {
+      "id": "de-roeck-icm2026-talk",
+      "source_type": "verified-invited-talk-metadata",
+      "authors": [
+        "Wojciech De Roeck"
+      ],
+      "title": "Localization for Strongly Disordered Interacting Quantum Chains",
+      "doi": null,
+      "pages": null,
+      "url": "https://www.youtube.com/watch?v=y3S1ZBeJ9gc",
+      "version_url": "https://www.youtube.com/watch?v=y3S1ZBeJ9gc",
+      "version": "Original Simons Foundation video page metadata retrieved 2026-10-24; content-bound by SHA256",
+      "license": "Video reuse license not verified; metadata attribution only",
+      "actual_reading": "Read original-page metadata in /tmp/de-roeck-icm-video.html: ytInitialData/videoSecondaryInfoRenderer/attributedDescription.content for exact talk title and named collaborators; owner Simons Foundation / channel UCZVjCmJOQRpAQ_EruAIPqXg and page video title. Local HTML supplied by parent after strict-TLS curl; its SHA256 independently recomputed. Player status LOGIN_REQUIRED. No lecture viewing, audio listening or transcript reading. Direct web open returned cache miss.",
+      "proof_boundary": "Metadata supports report identity and association only, not a claim to have read or watched the mathematical lecture.",
+      "local_path": "/tmp/de-roeck-icm-video.html",
+      "sha256": "144722b18282261e7176c4dce84e3b071d20ba400e6b923c8e498fa7e34e3c88"
+    },
+    {
+      "id": "dghp-2408.04338v2",
+      "source_type": "associated-primary-research-preprint",
+      "authors": [
+        "Wojciech De Roeck",
+        "Lydia Giacomin",
+        "François Huveneers",
+        "Oskar Prośniak"
+      ],
+      "title": "Absence of Normal Heat Conduction in Strongly Disordered Interacting Quantum Chains",
+      "arxiv_id": "2408.04338v2",
+      "doi": null,
+      "pages": "1–88",
+      "url": "https://arxiv.org/abs/2408.04338v2",
+      "version_url": "https://arxiv.org/pdf/2408.04338v2",
+      "version": "arXiv:2408.04338v2",
+      "version_date": "2025-07-18",
+      "pdf_title_date": "2025-07-22",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "copyright": "Authors retain rights beyond the arXiv distribution grant; no long quotations or figures reproduced.",
+      "actual_reading": "Fixed-version PDF arXiv:2408.04338v2 (88 pages), plus live version metadata. Read §§1–3 and §4.1, pp.1–11; §3.3 latter portion separately re-read. Exact model and Theorems 1–2 re-read against §2. §6.2 equations (6.5)–(6.7), p.20; §6.3 and beginning §6.4 equations (6.9)–(6.13), p.21. §9.1 pp.29–31 through Proposition 2 and the initial Corollary 1 derivative bound. §17 opening Proposition 11, p.69, and §17.1 through the statement of Lemma 23, p.70. Entire §18, pp.75–81, including Proposition 13, Theorem 4, Corollaries 5–6, Lemma 29 and (18.12)–(18.15); §18.2–18.3 re-read in smaller ranges. Source PDF pp.4 and 81 rendered and visually inspected. Bibliography [34], p.87 checked. Additionally read the strategy discussion at text lines 2180–2297, pp.39–41 (§10.3 tail); this is not a full reading of §10. No complete reading or proof verification of §§5–17 or all 88 pages.",
+      "proof_boundary": "Theorems 1–2 and the deterministic bottleneck are precisely cited. Local elementary calculations and proof reductions are separately identified. No full multiscale proof certification and no proceedings-chapter identity.",
+      "local_path": "/tmp/de-roeck-2408.04338v2.pdf",
+      "text_path": "/tmp/de-roeck-2408.04338v2.txt",
+      "sha256": "a4cdfbea1d1445534a75b271f43f1d5584b432b09810bf03634ee07ee14f97a8"
+    },
+    {
+      "id": "nsy-quasilocal-v2",
+      "source_type": "primary-proof-source",
+      "authors": [
+        "Bruno Nachtergaele",
+        "Robert Sims",
+        "Amanda Young"
+      ],
+      "title": "Quasi-Locality Bounds for Quantum Lattice Systems. Part I. Lieb-Robinson Bounds, Quasi-Local Maps, and Spectral Flow Automorphisms",
+      "arxiv_id": "1810.02428v2",
+      "doi": "10.1063/1.5095769",
+      "journal": "Journal of Mathematical Physics 60 (2019), 061101",
+      "pages": "1–106 (versioned preprint)",
+      "url": "https://arxiv.org/abs/1810.02428v2",
+      "version_url": "https://arxiv.org/pdf/1810.02428v2",
+      "version": "arXiv:1810.02428v2",
+      "version_date": "2019-03-01",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "actual_reading": "Fixed-version PDF arXiv:1810.02428v2 (106 pages). Read §3.1.1, pp.17–19, and §3.1.2, pp.20–24, including equations (3.1)–(3.48), Theorem 3.1, Lemma 3.2 and both proofs. Text lines 1090–1341 re-read for recursion, chain counting, remainder and constants. Not all of Part I, not unbounded on-site extensions or the spectral-flow proof.",
+      "proof_boundary": "Finite continuous Hermitian interaction specialization reconstructed in 4O0L–N. No claim to reproduce the full generality of the original operator-algebraic theorem or later sections.",
+      "local_path": "/tmp/de-roeck-nsy-1810.02428v2.pdf",
+      "text_path": "/tmp/de-roeck-nsy-1810.02428v2.txt",
+      "sha256": "42fc3029fa582f14a01f858463f481d5cacf21ed785791d32c72dd9df97f66cd"
+    },
+    {
+      "id": "forest-reuse",
+      "source_type": "existing-note-bodies",
+      "title": "Existing finite-spin, linear algebra, analysis and probability atomic notes",
+      "version": "Read-only shared-workspace snapshot 2026-10-24",
+      "license": "Existing repository terms unchanged; no license re-assignment",
+      "actual_reading": "Whole-forest Chinese/English searches at the initial 7253-tree snapshot; actual bodies listed in shared_reading read. Direct prerequisite definitions and selected foundational chains read for contracts. Recursive graph closure checked structurally; entries marked structural-only are not claimed as freshly read proofs.",
+      "proof_boundary": "Existing shared source bodies reused, not their primary literature re-read wholesale."
+    },
+    {
+      "id": "local-calculations",
+      "source_type": "local-mathematical-derivations",
+      "title": "Finite-dimensional and elementary probabilistic derivations in the owned 4O notes",
+      "version": "2026-10-24 author freeze",
+      "license": "No externally reproduced text or images; local note authorship follows repository convention",
+      "actual_reading": "All owned bodies re-read, including the propagation repair and its real prerequisite destinations.",
+      "proof_boundary": "Only the explicitly named finite-dimensional, local and elementary probability arguments are supplied as proofs; research inputs remain cited."
+    }
+  ],
+  "sources": [
+    {
+      "id": "de-roeck-icm2026-talk",
+      "source_type": "verified-invited-talk-metadata",
+      "authors": [
+        "Wojciech De Roeck"
+      ],
+      "title": "Localization for Strongly Disordered Interacting Quantum Chains",
+      "doi": null,
+      "pages": null,
+      "url": "https://www.youtube.com/watch?v=y3S1ZBeJ9gc",
+      "version_url": "https://www.youtube.com/watch?v=y3S1ZBeJ9gc",
+      "version": "Original Simons Foundation video page metadata retrieved 2026-10-24; content-bound by SHA256",
+      "license": "Video reuse license not verified; metadata attribution only",
+      "actual_reading": "Read original-page metadata in /tmp/de-roeck-icm-video.html: ytInitialData/videoSecondaryInfoRenderer/attributedDescription.content for exact talk title and named collaborators; owner Simons Foundation / channel UCZVjCmJOQRpAQ_EruAIPqXg and page video title. Local HTML supplied by parent after strict-TLS curl; its SHA256 independently recomputed. Player status LOGIN_REQUIRED. No lecture viewing, audio listening or transcript reading. Direct web open returned cache miss.",
+      "proof_boundary": "Metadata supports report identity and association only, not a claim to have read or watched the mathematical lecture.",
+      "local_path": "/tmp/de-roeck-icm-video.html",
+      "sha256": "144722b18282261e7176c4dce84e3b071d20ba400e6b923c8e498fa7e34e3c88"
+    },
+    {
+      "id": "dghp-2408.04338v2",
+      "source_type": "associated-primary-research-preprint",
+      "authors": [
+        "Wojciech De Roeck",
+        "Lydia Giacomin",
+        "François Huveneers",
+        "Oskar Prośniak"
+      ],
+      "title": "Absence of Normal Heat Conduction in Strongly Disordered Interacting Quantum Chains",
+      "arxiv_id": "2408.04338v2",
+      "doi": null,
+      "pages": "1–88",
+      "url": "https://arxiv.org/abs/2408.04338v2",
+      "version_url": "https://arxiv.org/pdf/2408.04338v2",
+      "version": "arXiv:2408.04338v2",
+      "version_date": "2025-07-18",
+      "pdf_title_date": "2025-07-22",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "copyright": "Authors retain rights beyond the arXiv distribution grant; no long quotations or figures reproduced.",
+      "actual_reading": "Fixed-version PDF arXiv:2408.04338v2 (88 pages), plus live version metadata. Read §§1–3 and §4.1, pp.1–11; §3.3 latter portion separately re-read. Exact model and Theorems 1–2 re-read against §2. §6.2 equations (6.5)–(6.7), p.20; §6.3 and beginning §6.4 equations (6.9)–(6.13), p.21. §9.1 pp.29–31 through Proposition 2 and the initial Corollary 1 derivative bound. §17 opening Proposition 11, p.69, and §17.1 through the statement of Lemma 23, p.70. Entire §18, pp.75–81, including Proposition 13, Theorem 4, Corollaries 5–6, Lemma 29 and (18.12)–(18.15); §18.2–18.3 re-read in smaller ranges. Source PDF pp.4 and 81 rendered and visually inspected. Bibliography [34], p.87 checked. Additionally read the strategy discussion at text lines 2180–2297, pp.39–41 (§10.3 tail); this is not a full reading of §10. No complete reading or proof verification of §§5–17 or all 88 pages.",
+      "proof_boundary": "Theorems 1–2 and the deterministic bottleneck are precisely cited. Local elementary calculations and proof reductions are separately identified. No full multiscale proof certification and no proceedings-chapter identity.",
+      "local_path": "/tmp/de-roeck-2408.04338v2.pdf",
+      "text_path": "/tmp/de-roeck-2408.04338v2.txt",
+      "sha256": "a4cdfbea1d1445534a75b271f43f1d5584b432b09810bf03634ee07ee14f97a8"
+    },
+    {
+      "id": "nsy-quasilocal-v2",
+      "source_type": "primary-proof-source",
+      "authors": [
+        "Bruno Nachtergaele",
+        "Robert Sims",
+        "Amanda Young"
+      ],
+      "title": "Quasi-Locality Bounds for Quantum Lattice Systems. Part I. Lieb-Robinson Bounds, Quasi-Local Maps, and Spectral Flow Automorphisms",
+      "arxiv_id": "1810.02428v2",
+      "doi": "10.1063/1.5095769",
+      "journal": "Journal of Mathematical Physics 60 (2019), 061101",
+      "pages": "1–106 (versioned preprint)",
+      "url": "https://arxiv.org/abs/1810.02428v2",
+      "version_url": "https://arxiv.org/pdf/1810.02428v2",
+      "version": "arXiv:1810.02428v2",
+      "version_date": "2019-03-01",
+      "license": "arXiv perpetual non-exclusive distribution license; not CC BY",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "actual_reading": "Fixed-version PDF arXiv:1810.02428v2 (106 pages). Read §3.1.1, pp.17–19, and §3.1.2, pp.20–24, including equations (3.1)–(3.48), Theorem 3.1, Lemma 3.2 and both proofs. Text lines 1090–1341 re-read for recursion, chain counting, remainder and constants. Not all of Part I, not unbounded on-site extensions or the spectral-flow proof.",
+      "proof_boundary": "Finite continuous Hermitian interaction specialization reconstructed in 4O0L–N. No claim to reproduce the full generality of the original operator-algebraic theorem or later sections.",
+      "local_path": "/tmp/de-roeck-nsy-1810.02428v2.pdf",
+      "text_path": "/tmp/de-roeck-nsy-1810.02428v2.txt",
+      "sha256": "42fc3029fa582f14a01f858463f481d5cacf21ed785791d32c72dd9df97f66cd"
+    },
+    {
+      "id": "forest-reuse",
+      "source_type": "existing-note-bodies",
+      "title": "Existing finite-spin, linear algebra, analysis and probability atomic notes",
+      "version": "Read-only shared-workspace snapshot 2026-10-24",
+      "license": "Existing repository terms unchanged; no license re-assignment",
+      "actual_reading": "Whole-forest Chinese/English searches at the initial 7253-tree snapshot; actual bodies listed in shared_reading read. Direct prerequisite definitions and selected foundational chains read for contracts. Recursive graph closure checked structurally; entries marked structural-only are not claimed as freshly read proofs.",
+      "proof_boundary": "Existing shared source bodies reused, not their primary literature re-read wholesale."
+    },
+    {
+      "id": "local-calculations",
+      "source_type": "local-mathematical-derivations",
+      "title": "Finite-dimensional and elementary probabilistic derivations in the owned 4O notes",
+      "version": "2026-10-24 author freeze",
+      "license": "No externally reproduced text or images; local note authorship follows repository convention",
+      "actual_reading": "All owned bodies re-read, including the propagation repair and its real prerequisite destinations.",
+      "proof_boundary": "Only the explicitly named finite-dimensional, local and elementary probability arguments are supplied as proofs; research inputs remain cited."
+    }
+  ],
+  "source_errata": [
+    {
+      "id": "diagonal-bond-symbol",
+      "source": "dghp-2408.04338v2",
+      "notes": [
+        "4O01"
+      ],
+      "printed": "Equation (2.5) uses J_x for the diagonal bond symbol introduced as kappa_x in (2.2).",
+      "adopted": "Use kappa_x consistently.",
+      "basis": "Comparison within the model statement; author-side reading clarification, not an official erratum."
+    },
+    {
+      "id": "zero-shell-norm",
+      "source": "dghp-2408.04338v2",
+      "notes": [
+        "4O0C",
+        "4O0D"
+      ],
+      "printed": "After (18.9), ||(O_s)_0||=||O|| is printed.",
+      "adopted": "Use the contractive inequality ||(O_s)_0||<=||O||.",
+      "basis": "Normalized partial trace is contractive but can strictly reduce norm; Pauli projection proof in 4O0C."
+    },
+    {
+      "id": "bottleneck-length-index",
+      "source": "dghp-2408.04338v2",
+      "notes": [
+        "4O0H"
+      ],
+      "printed": "Below (18.15), the interval-length expression is printed as ell_2-ell_2.",
+      "adopted": "Use ell_2-ell_1>= (1/2) log L.",
+      "basis": "Lemma 29 and the preceding choice of two distinct endpoints; local notation correction, not official author errata."
+    }
+  ],
+  "source_clarifications": [
+    "Equation (3.2) is read with attention to whether V^(0) already contains the small coupling. 4O09 fixes H=D+lambda V and A_ij=lambda V_ij/(E_i-E_j); no double coupling is inserted.",
+    "The diagonal coefficient bound (2.6), with d_S^2 and d_S=0 for a singleton, is not reused. Interval operator bounds such as (18.13) are not replaced by scalar Pauli-coefficient bounds.",
+    "The ordered product in §18.1 is interpreted through the recursion H_(k+1)=exp(A_(k+1))H_k exp(-A_(k+1)); 4O0B explicitly fixes U_k=U_(k-1)exp(-A_k), so H_k=U_k*HU_k.",
+    "The bath tensor factors suppressed in (18.14) are restored in 4O0H; the energy-split difference is bath independent.",
+    "Theorem 1 has an exponentially small permitted success probability lower bound, not a high-probability full-chain MBL conclusion.",
+    "Theorem 2 controls the maximal heat current j_L, with bath and state suprema before the long-time limsup. The consequence E(Lj_L)->0 does not establish existence or limit interchange for a linear-response conductivity.",
+    "NSY uses an exponential weight convention e^(-ar) in some examples; 4O0L–N use the DGHp convention a^r/(1+r)^3 with 0<a<1. C_F=16 sum_z(1+|z|)^(-3) is uniform in a and finite volume.",
+    "The main preprint v2 submission date is 2025-07-18; PDF title date 2025-07-22 and later HTML rerender metadata are not conflated.",
+    "The video metadata identifies the talk and research association only. No record claims the lecture was watched or that the preprint is a proceedings chapter."
+  ],
+  "review_responses": [
+    {
+      "finding": "DR-F01",
+      "status": "author-addressed-pending-final-independent-recheck",
+      "notes": [
+        "4O00",
+        "4O07",
+        "4O0D",
+        "4O0L",
+        "4O0M",
+        "4O0N"
+      ],
+      "change": "Added an exact finite continuous Hermitian interaction Lieb–Robinson contract, norm/kernel/constants and a finite-dimensional proof adapted from NSY Theorem 3.1/Lemma 3.2; separately proved the propagator and convolution bound. Linked actual uses and showed the interval pair-counting interface. Cited the original L1 extension explicitly. Parent reports reviewer has checked the repair without a new substantive issue; frozen packet review remains pending."
+    }
+  ],
+  "remaining_branches": [
+    {
+      "branch": "报告录像及论文集章节身份",
+      "scope": "仅读取原始 Simons 视频页面的 metadata/description，未播放或读取字幕。报告完整数学内容及幻灯片未取得；论文集章节未识别，题名、作者、页码、DOI 均为 null。关联预印本保持独立来源身份。"
+    },
+    {
+      "branch": "多尺度非共振和共振结构",
+      "scope": "主线解释消元、小分母、事件概率与准局部生成元的作用；图/三元组定义、所有类别计数、分母变量选择和簇展开没有分解成站内完整证明网络。"
+    },
+    {
+      "branch": "典型无限系统的多体局域化",
+      "scope": "本文模型类的高概率全链准局部守恒量、无限体积极限、指数型热流长度抑制、高维对应结果未由所引定理解决；这些不是本 packet 的已证结论。"
+    },
+    {
+      "branch": "精确次扩散及线性响应",
+      "scope": "缺少匹配热流下界和精确输运指数；热导/热导率的线性响应极限及与热浴、时间、尺寸极限的交换未建立。"
+    }
+  ],
+  "unexpanded_deep_proofs": [
+    {
+      "notes": [
+        "4O07"
+      ],
+      "source": "dghp-2408.04338v2",
+      "scope": "Theorem 1 的完整多尺度证明 §§5–17，包含图/三元组的组合控制、共振事件概率、重整化分母及簇展开；已读选段和 §18 不能替代全证明。"
+    },
+    {
+      "notes": [
+        "4O07"
+      ],
+      "source": "dghp-2408.04338v2",
+      "scope": "§18.2 Corollaries 5–6 的时间 L1 逼近延伸作为精确引用的技术输入；4O0L–M 本地证明限于连续有限维相互作用，未重写该逼近步骤。"
+    },
+    {
+      "notes": [
+        "4O0H",
+        "4O0I"
+      ],
+      "source": "dghp-2408.04338v2",
+      "scope": "§18.3 (18.12)–(18.15) 的对角区间算子范数与五项交换子的完整空间尾部求和被引用。4O0H 的切分恒等式、4O0F 的时间积分以及 4O0G 的粗一致界均已局部证明。"
+    },
+    {
+      "notes": [
+        "4O0I"
+      ],
+      "source": "dghp-2408.04338v2",
+      "scope": "Theorem 2 对所有 L≥2 和小 gamma 的统一常数采用原定理；4O0E 本地独立区间证明仅给固定 gamma 后充分大 L 的估计。"
+    }
+  ],
+  "section_coverage": {
+    "talk:original-description-metadata-only": [
+      "4O00",
+      "icm2026-de-roeck"
+    ],
+    "dghp-v2:1-physical-question-and-scope": [
+      "4O00",
+      "4O0K"
+    ],
+    "dghp-v2:2.1-model": [
+      "4O01",
+      "4O02"
+    ],
+    "dghp-v2:2.2-localization-contract": [
+      "4O06",
+      "4O07",
+      "4O08"
+    ],
+    "dghp-v2:2.3-current-and-transport": [
+      "4O03",
+      "4O04",
+      "4O05",
+      "4O0I",
+      "4O0J",
+      "4O0K"
+    ],
+    "dghp-v2:3.1-elementary-elimination-and-resonances": [
+      "4O09",
+      "4O0A"
+    ],
+    "dghp-v2:5-17-multiscale-proof-selected-reading-not-expanded": [
+      "4O07"
+    ],
+    "dghp-v2:18.1-unitary-convergence": [
+      "4O0B",
+      "4O07"
+    ],
+    "dghp-v2:18.2-locality": [
+      "4O0C",
+      "4O0D",
+      "4O0L",
+      "4O0M",
+      "4O0N",
+      "4O07"
+    ],
+    "dghp-v2:18.3-transport-proof": [
+      "4O0E",
+      "4O0F",
+      "4O0G",
+      "4O0H",
+      "4O0I",
+      "4O0J"
+    ],
+    "nsy-v2:3.1.1-propagator-and-weights": [
+      "4O0M",
+      "4O0N"
+    ],
+    "nsy-v2:3.1.2-lieb-robinson-proof": [
+      "4O0L"
+    ]
+  },
+  "cross_topic_requests": [],
+  "validation": {
+    "source_links": "All local body links in 25 owned trees resolve. Every declared prerequisite is a body link to an actual atomic page, not an outline/reference.",
+    "format": "normalizeFormat, control-character scan, literal [[ scan, math-link scan and repository editorial rules passed on all 25 owned trees; all manual edits used apply_patch.",
+    "formula_check": {
+      "engine": "KaTeX 0.16.11",
+      "count": 547,
+      "errors": 0,
+      "scope": "All owned math groups; not a Forester build or rendered-site QA."
+    },
+    "prerequisite_graph": {
+      "new_atomic_nodes": 23,
+      "inherited_shared_closure_count": 148,
+      "acyclic": true,
+      "check_scope": "New logical edges plus inherited shared prerequisite registry; applications/navigation separated. Existing shared closure is not newly re-authored."
+    },
+    "numerical_sanity_checks": {
+      "performed": true,
+      "scope": "Local finite-dimensional sanity checks only; not substitutes for proofs.",
+      "schrieffer_wolff": "36 random Hermitian examples in dimensions 2,3,5; transformed residual satisfied the derived bound, maximum residual/bound about 0.4998691264.",
+      "pauli_projection": "Finite Pauli twirl agreed with normalized partial trace and satisfied norm contraction.",
+      "parent_checks": "Parent separately reported regressions for 4O09 elimination signs and 4O0A one-variable denominator; not run or claimed as this author's tests."
+    },
+    "global_build_run": false,
+    "shared_sync_run": false,
+    "git_commands_run": false,
+    "rendered_site_check": "Reserved to parent after integration.",
+    "release_status": "Not built or deployed by this branch author.",
+    "independent_review": "Pending frozen packet and final hash review; author does not modify reviewer file.",
+    "compatibility_repair": {
+      "date": "2026-10-24",
+      "changed_notes": [
+        "4O0E",
+        "4O0I",
+        "4O0J"
+      ],
+      "change": "Removed exactly one unsupported TeX spacing escape after exp in each of the three notes; no other text changed.",
+      "source_rule": "scripts/check-site-notes.mjs:55",
+      "owned_files_checked": 25,
+      "remaining_unsupported_escapes": 0,
+      "mathematical_content_unchanged": true,
+      "other_owned_trees_unchanged": true,
+      "formula_groups_rechecked": 547,
+      "formula_errors": 0,
+      "entries": "Existing three-element entry tuples preserved; format-only repair annotations added to the three affected descriptions.",
+      "global_build_run": false
+    }
+  },
+  "freeze": {
+    "status": "frozen-ready-for-independent-review",
+    "date": "2026-10-24",
+    "revision": 3,
+    "previous_packet_sha256": "dfb00a0903f6c6ee060ba57612ca146ceff63011de03231526d9020406329e58",
+    "repair_scope": "DR-F02: corrected only the source equation locator introducing kappa_x from (2.1) to (2.2); all public mathematical pages unchanged.",
+    "paths": [
+      "trees/math/mathematical-physics/de-roeck/4O00.tree",
+      "trees/math/mathematical-physics/de-roeck/4O01.tree",
+      "trees/math/mathematical-physics/de-roeck/4O02.tree",
+      "trees/math/mathematical-physics/de-roeck/4O03.tree",
+      "trees/math/mathematical-physics/de-roeck/4O04.tree",
+      "trees/math/mathematical-physics/de-roeck/4O05.tree",
+      "trees/math/mathematical-physics/de-roeck/4O06.tree",
+      "trees/math/mathematical-physics/de-roeck/4O07.tree",
+      "trees/math/mathematical-physics/de-roeck/4O08.tree",
+      "trees/math/mathematical-physics/de-roeck/4O09.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0A.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0B.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0C.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0D.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0E.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0F.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0G.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0H.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0I.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0J.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0K.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0L.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0M.tree",
+      "trees/math/mathematical-physics/de-roeck/4O0N.tree",
+      "trees/references/icm2026-de-roeck.tree",
+      "research/mathematical-physics-de-roeck-packet.json"
+    ],
+    "hashes": {
+      "trees/math/mathematical-physics/de-roeck/4O00.tree": "44bc92ba53adf7f6939efb9249b9f0b69bbca98ed822e0af70221fb2666d9dff",
+      "trees/math/mathematical-physics/de-roeck/4O01.tree": "faf1e392846c4fd2f48772f1d6bc5bbd391460dea89abeb06067ebd04265671b",
+      "trees/math/mathematical-physics/de-roeck/4O02.tree": "7dfdc156a7c00178942cca4ab9f720849e5743bf0e442c435ec9cb71989b6bd7",
+      "trees/math/mathematical-physics/de-roeck/4O03.tree": "4736149ac1d4d36718195b9687a4244d1bfb4aff09514981d8ea6deafc3b68aa",
+      "trees/math/mathematical-physics/de-roeck/4O04.tree": "47b82172b5cb60d262f83e3741c1f3d18f39c9d0443900de7e5178c52594a712",
+      "trees/math/mathematical-physics/de-roeck/4O05.tree": "2fdad74a757d82287c5c4d181f993d5f8f5539ebc31a852087a7743f071d3eae",
+      "trees/math/mathematical-physics/de-roeck/4O06.tree": "586e7674ca8a0ebe02a0bf1ebeb32e1c5432f1945ce9c8dab058b76ad8280d7e",
+      "trees/math/mathematical-physics/de-roeck/4O07.tree": "ed10cea671f2e22531dd8aca365596ddecdf1ec08d17950790efdcc56678095a",
+      "trees/math/mathematical-physics/de-roeck/4O08.tree": "acb20cd09eb78fe3f5d9840d12d3b89f4d4cdfde6e37e6b31b53fec6685b67dd",
+      "trees/math/mathematical-physics/de-roeck/4O09.tree": "2d8df40a299ba6df0a0d143044d03dac109f49b40d44482028d9c7ce6ec4c60e",
+      "trees/math/mathematical-physics/de-roeck/4O0A.tree": "0c1c635f6f4902abced9a8d6830416474836eb6b0b669415da0abb02a325ca2b",
+      "trees/math/mathematical-physics/de-roeck/4O0B.tree": "7f0734c9f8fc4369a720719a737e00392a51d49d5f5be799bb7ad8d29eca3521",
+      "trees/math/mathematical-physics/de-roeck/4O0C.tree": "b63c34d31d0f5f1b108e8923d5855e8dd69b260b127b004c5d0afe3047063257",
+      "trees/math/mathematical-physics/de-roeck/4O0D.tree": "85096f14b0cddf61de51bebf796ad2dd3c083081f00812dbf08fb0e6c7f1ebcd",
+      "trees/math/mathematical-physics/de-roeck/4O0E.tree": "499cd8221d72d43f87ee6f0ebd62d73afaac28434c0af68d550f4003b53da151",
+      "trees/math/mathematical-physics/de-roeck/4O0F.tree": "11942856b83a4681ca32a25251617bf7716c341e8da0149d3ab8c45f23a39ee6",
+      "trees/math/mathematical-physics/de-roeck/4O0G.tree": "8614526de201b20bad076cca2c00697a47b62532141c3013d6f621a6146357eb",
+      "trees/math/mathematical-physics/de-roeck/4O0H.tree": "bc8eca572597bdd4ba3d34d27b2ba4c6a5d11f2b9c75c529d6d985641cb4445c",
+      "trees/math/mathematical-physics/de-roeck/4O0I.tree": "e27619c82ff1cf8422daa0136c4d7a90eb2a7fe6ab57795614989208c18fd541",
+      "trees/math/mathematical-physics/de-roeck/4O0J.tree": "302809dd39741582c0c440a8322eb6fd9cba244a90ba9016d8d9b569f171d753",
+      "trees/math/mathematical-physics/de-roeck/4O0K.tree": "d8ca37e280cb4e2d75a0d53e7e71e05f23f2aad6eee846d2e2b48e08c013a233",
+      "trees/math/mathematical-physics/de-roeck/4O0L.tree": "e4c07b164424a368d65e8099dabc0a9c34e374e73306e5f2f948ed49007859e8",
+      "trees/math/mathematical-physics/de-roeck/4O0M.tree": "63946e1ecb6064a8b4f673edfbc645ff54ae78d99c78686780646e5b20ba919b",
+      "trees/math/mathematical-physics/de-roeck/4O0N.tree": "94f2f6191f4af5f62f5ce7123ddff2b66feaa8515aed23767453bae5533b9264",
+      "trees/references/icm2026-de-roeck.tree": "4aca38e9b5a54cd540541e8ed036201c4d79888ccb71be107a781ea903a658df"
+    },
+    "packet_hash_policy": "The packet SHA256 is supplied out of band after writing; this JSON does not contain its own hash.",
+    "mutation_boundary": "No further changes to public notes, reference or packet unless a revision is requested. Parent owns integration/build/release; reviewer owns research/mathematical-physics-de-roeck-review.json."
+  }
+}

@@ -1,0 +1,12 @@
+\title{Heisenberg 演化与能量差恒等式}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[De Roeck 等，§2.3、§18.3](icm2026-de-roeck)，有限维微积分推导}
+
+\p{设 #{H=H^*}、#{A=A^*} 为同阶有限矩阵。用 [Hermitian 谱分解](0N0B)写 #{H=\sum_jE_jP_j}，定义 #{e^{itH}=\sum_je^{itE_j}P_j}，以及 Heisenberg 演化 #{A(t)=e^{itH}Ae^{-itH}}。这里 #{P_j} 是两两正交且和为恒等矩阵的特征投影，故 #{e^{itH}} 是[酉矩阵](4F01)。设 #{J=i[H,A]}，其中[交换子](4O02)为 #{[H,A]=HA-AH}。则}
+##{\frac{d}{dt}A(t)=i[H,A(t)]=J(t),\qquad \frac 1T\int_0^T J(t)\,dt=\frac{A(T)-A}{T}.}
+\p{\strong{证明。}标量复指数可用[绝对收敛级数](0A38) #{e^z=\sum_{n\geq 0}z^n/n!} 定义。在每个有界圆盘上，级数及逐项导数级数由阶乘控制而一致收敛，故 #{(e^{itE})'=iEe^{itE}}。谱展开是有限和，得到 #{(e^{itH})'=iHe^{itH}}。乘积法则给出导数公式，且 #{H} 与其指数交换，故导数也是 #{e^{itH}Je^{-itH}}。矩阵积分按实部、虚部逐项作积分，[微积分基本定理](0A3C)给出第二式。}
+\p{酉矩阵保持向量长度，所以[算子范数](00M4)满足 #{\|UAU^*\|=\|A\|}。因此}
+##{\left\|\frac 1T\int_0^T J(t)\,dt\right\|\leq\frac{2\|A\|}{T}.}
+\p{固定整个有限系统后，长期平均能流必为零。若允许热浴随 #{T} 改变，右端的 #{\|A\|} 也会改变，不能据此取得对热浴一致的结论。}

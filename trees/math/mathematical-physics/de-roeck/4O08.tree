@@ -1,0 +1,12 @@
+\title{准局部对角化给出完备的守恒自旋}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[De Roeck 等，§2.2，Theorem 1 后](icm2026-de-roeck)，代数推导}
+
+\p{设长度 #{L} 的量子链满足[准局部对角化](4O07)的结论，#{D=U^*HU}。令 #{\mathcal Z_x=UZ_xU^*}，其中 #{Z_x} 是 [Pauli 算子](4F05)。这些算子自伴，满足}
+##{\mathcal Z_x^2=1,\qquad[H,\mathcal Z_x]=0,\qquad[\mathcal Z_x,\mathcal Z_y]=0.}
+\p{\strong{证明。}酉共轭保持乘积与伴随，故自伴性由 #{Z_x^*=Z_x} 得到，平方与相互交换性分别化为 #{Z_x^2=1}、#{[Z_x,Z_y]=0}。#{D} 在乘积基中对角，故 #{[H,\mathcal Z_x]=U[D,Z_x]U^*=0}。守恒的含义由 [Heisenberg 方程](4O03)给出：#{\mathcal Z_x(t)=\mathcal Z_x}。准局部性直接取输入 #{O=Z_x} 应用[空间展开](4O06)。}
+\p{对每个符号构形 #{\sigma\in\{\pm 1\}^L}，联合特征投影为}
+##{P_\sigma=\prod_{x=1}^L\frac{1+\sigma_x\mathcal Z_x}{2}=U|\sigma\rangle\langle\sigma|U^*.}
+\p{在原乘积基逐坐标计算，每个因子筛选一个自旋值，所以右端为秩一投影。这 #{2^L} 个投影两两正交且和为恒等矩阵。于是这组守恒量的联合特征值完整标记一组基；即使 #{H} 的某些能级简并，该结论仍成立。}

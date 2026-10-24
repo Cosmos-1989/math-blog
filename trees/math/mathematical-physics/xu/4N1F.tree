@@ -1,0 +1,24 @@
+\title{二维局部扩张的模不变耦合矩阵}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\mathcal A_L,\mathcal A_R} 为[完全有理](4N0O)的[局部共形网](4N0J)。网的局部表示是一族相容的[正规](0Z09)含幺星同态 #{\pi_I:\mathcal A(I)\to B(H_\pi)}：它们复线性，满足 #{\pi_I(xy)=\pi_I(x)\pi_I(y)}、#{\pi_I(x^*)=\pi_I(x)^*}、#{\pi_I(1)=1}，且 #{I\subset J} 时 #{\pi_J|_{\mathcal A(I)}=\pi_I}。局域化表示要求在某个区间的补区域上与真空表示酉等价，并可通过酉等价移动到任意区间。不可约表示的等价类称扇区；真空扇区记作 #{0}。}
+\p{超选择理论把这些表示及其交织算子组成[酉融合范畴](4I1B)，张量结构可用[局域自同态的复合](4I17)实现，并带有由定向输运确定的[酉编织](012H) #{c_{X,Y}}。完全有理性保证有限多个简单对象且双编织非退化。以下从这些数据明确规定矩阵；该范畴的构造与非退化性是所引用的超选择定理。}
+\p{对简单对象 #{X}，选[对偶](014W) #{\bar X} 及解 #{R_X:1\to\bar X\otimes X}、#{\bar R_X:1\to X\otimes\bar X}，满足}
+##{(\bar R_X^*\otimes 1_X)(1_X\otimes R_X)=1_X,\qquad
+(R_X^*\otimes 1_{\bar X})(1_{\bar X}\otimes\bar R_X)=1_{\bar X},\qquad
+R_X^*R_X=\bar R_X^*\bar R_X=d_X1.}
+\p{正数 #{d_X} 称统计维数。一般对象先作有限简单直和，取上述解的直和，即标准解。对 #{f:X\to X} 定义范畴迹 #{\operatorname{tr}_X(f)=R_X^*(1_{\bar X}\otimes f)R_X}，并定义典范 twist}
+##{\theta_X=(R_X^*\otimes 1_X)(1_{\bar X}\otimes c_{X,X})(R_X\otimes 1_X).}
+\p{结合及单位约束在这些式子中省略。标准解的选择不改变迹或 twist；后者是酉自然同构，在简单对象 #{i} 上为 #{\theta_i1_i}，其中 #{|\theta_i|=1}、#{\theta_0=1}。定义与相容性定理见 [Müger，§2.1，式 (2.4) 及命题 2.4](https://arxiv.org/abs/math/9812040v3)。}
+\p{令 #{\mathcal D=(\sum_i d_i^2)^{1/2}>0}，固定如下归一化：}
+##{S_{ij}=\mathcal D^{-1}\operatorname{tr}_{i\otimes j}(c_{j,i}c_{i,j}),\qquad
+T_{ij}=\delta_{ij}\theta_i.}
+\p{于是 #{S_{0i}=d_i/\mathcal D}、#{T_{00}=1}。这里 #{T} 是范畴 twist 矩阵；模群的射影表示与选定标量相位后的线性表示须加区别。角色变换常用的 #{e^{-2\pi ic/24}\operatorname{diag}(\theta_i)} 含额外相位，下面的判据不采用该相位。若同时把左右 #{S} 换为共轭矩阵，因 #{Z} 实值，判据等价。}
+\p{设 #{\mathcal A_L\otimes\mathcal A_R\subset\mathcal B} 为实际存在的不可约有限指标局部扩张，包含意义同[子网](4N0M)。把 #{\mathcal B} 的真空表示限制到左右乘积网，写成有限直和}
+##{H_{\mathcal B}\cong\bigoplus_{i,j}Z_{ij}\,(H_i^L\otimes H_j^R),\qquad Z_{ij}\in\mathbb Z_{\ge 0},\quad Z_{00}=1.}
+\p{按 #{Z:\mathbb C^{\mathrm{Sect}(\mathcal A_R)}\to\mathbb C^{\mathrm{Sect}(\mathcal A_L)}} 的指标约定，矩阵模不变性是}
+##{S_LZ=ZS_R,\qquad T_LZ=ZT_R.}
+\p{这里左右均取上述正维数归一化及范畴 twist。局部扩张已给出 #{T_LZ=ZT_R}；[Müger，§4](https://arxiv.org/abs/0909.2537v1)所述判据把进一步的 #{S_LZ=ZS_R} 与扩张的平凡超选择范畴相联系。任意满足矩阵等式的 #{Z} 是否能由局部扩张实现，是另一问题；同一来源还区分矩阵条件与带有局部代数对象和编织等价的范畴模不变量。}

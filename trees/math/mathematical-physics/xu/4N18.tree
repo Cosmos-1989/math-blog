@@ -1,0 +1,16 @@
+\title{有质量自由费米子的熵 c 函数单调性}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{S_M(L)=-2\int_{1/2}^\infty u_M(L,\beta)\,d\beta} 为[四项极限中的函数](4N17)，其中 #{u_M} 采用原文 #{\log\tau} 的符号。则 #{c_M(L)=L\,S_M'(L)} 存在、非负，并随 #{L>0} 不增。}
+\p{\strong{证明。}先在[无量纲变形坐标](4N15) #{t=ML} 中写 #{u=u(t,\beta)}。置 #{W(t,\beta)=-t\,\partial_tu(t,\beta)}。由 tau 方程和其无穷远边界，}
+##{\partial_tW=-t\sinh^2\psi\le 0,\qquad \lim_{t\to\infty}W(t,\beta)=0.}
+\p{于是 #{W\ge 0}，所以 #{u_t\le 0}；再由 #{u(\infty,\beta)=0}，得 #{u\ge 0}。}
+\p{还须证明可以对 #{\beta} 积分求导。令 #{s=\log t}、#{v(s,\beta)=u(e^s,\beta)}。则 #{v_s=-W\le 0}，且 #{v_{ss}=t^2\sinh^2\psi\ge 0}。固定 #{s_0>0}，凸函数的割线斜率单调性给出，当 #{0<|h|<s_0/2} 时}
+##{0\le -\frac{v(s+h,\beta)-v(s,\beta)}h
+\le\frac{v(s-s_0,\beta)-v(s,\beta)}{s_0}.}
+\p{右端非负，且由[端点积分估计](4N16)可积。[支配收敛定理](0I8I)允许 #{h\to 0}，故}
+##{c_M(L)=2\int_{1/2}^\infty W(ML,\beta)\,d\beta\ge 0.}
+\p{对 #{L_2>L_1}，逐点有 #{W(ML_2,\beta)\le W(ML_1,\beta)}，积分即得不增性。[链式法则](0A34)给出 #{L\partial_L=t\partial_t}；证明只交换了一阶导数和积分。}

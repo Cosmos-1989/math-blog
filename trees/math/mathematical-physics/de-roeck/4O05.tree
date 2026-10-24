@@ -1,0 +1,9 @@
+\title{密度矩阵的最大期望等于最大特征值}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+
+\p{设 #{A=A^*} 为有限维 [Hermitian 矩阵](0N0B)，#{\lambda_{\max}(A)} 为最大特征值。对全部[密度矩阵](4F02)有}
+##{\sup_\rho\operatorname{tr}(\rho A)=\lambda_{\max}(A),\qquad |\operatorname{tr}(\rho A)|\leq\|A\|.}
+\p{\strong{证明。}在 #{A} 的正交特征基 #{e_j} 中，[迹](0F0F)给出 #{\operatorname{tr}(\rho A)=\sum_j\lambda_j\langle e_j,\rho e_j\rangle}。各权重非负且和为一，因此该数介于最小、最大特征值之间。取最大特征值的单位特征向量 #{e} 及 #{\rho=ee^*} 即达到上界。谱分解又给出[算子范数](00M4) #{\|A\|=\max_j|\lambda_j|}，得到绝对值估计。}
+\p{若 #{\operatorname{tr}A=0}，所有特征值之和为零，故 #{\lambda_{\max}(A)\geq 0}。特别地，[时间平均热流算子](4O04)的迹为零，因为 #{\operatorname{tr}[H_{\rm tot},H_l]=0}，且酉共轭保持迹。于是定义中的 #{j_L\geq 0}；它的定义没有在取上确界之前插入绝对值。}

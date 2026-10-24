@@ -1,0 +1,10 @@
+\title{有限维 von Neumann 熵}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\rho} 是 #{n} 维复 Hilbert 空间上的[密度矩阵](4F02)。由[Hermitian 谱分解](0N0B)，其特征值 #{p_1,\ldots,p_n} 非负且和为一。使用[自然对数](0A45)，定义}
+##{H(\rho)=-\operatorname{Tr}(\rho\log\rho)=-\sum_{j:p_j>0}p_j\log p_j.}
+\p{约定 #{0\log 0=0}，因为 #{t\log t\to 0} 当 #{t\downarrow 0}。这里的公式通过函数 #{-t\log t} 定义，故不要求 #{\log\rho} 在零特征空间上有有限值。}
+\p{每个 #{p_j\leq 1}，所以每项非负。和为零当且仅当所有非零 #{p_j} 都等于一，即 #{\rho} 的秩为一。最大混合态 #{I_n/n} 的熵为 #{\log n}；由[矩阵相对熵的非负性](4N02)，#{0\leq D(\rho\Vert I_n/n)=\log n-H(\rho)}，得到 #{H(\rho)\leq\log n}。}

@@ -1,0 +1,17 @@
+\title{有限量子链的 Lieb–Robinson 传播界}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Nachtergaele–Sims–Young，arXiv:1810.02428v2，Theorem 3.1、Lemma 3.2；De Roeck 等，§18.2，Theorem 4](icm2026-de-roeck)}
+
+\p{固定整数 #{L\geq 1}，在[量子寄存器](4F01) #{\mathcal H_\Lambda=(\mathbb C^2)^{\otimes L}} 上取 #{\Lambda=\{1,\ldots,L\}}。对每个非空子集 #{Z\subset\Lambda}，给定连续时变的 [Hermitian 矩阵](0N0B) #{\Phi_t(Z)}，[支撑](4O01)于 #{Z}，#{0\leq t\leq 1}。固定 #{0<a<1}、[传播权重](4O0N) #{F_a(r)=a^r/(1+r)^3} 及其卷积常数 #{C_F}，用[算子范数](00M4)定义相互作用范数 #{f(t)} 及其时间积分}
+##{f(t)=\sup_{x,y\in\Lambda}\frac{\sum_{Z\ni x,y}\|\Phi_t(Z)\|}{F_a(|x-y|)},\qquad K(t)=\int_0^tf(s)\,ds.}
+\p{令 #{U(t)} 为 #{H(t)=\sum_Z\Phi_t(Z)} 的[酉传播子](4O0M)，#{\tau_t(A)=U(t)^*AU(t)}。若 #{A,B} 分别支撑于不交集合 #{X,Y}，则}
+##{\|[\tau_t(A),B]\|\leq\frac{2\|A\|\|B\|}{C_F}(e^{2C_FK(t)}-1)\sum_{x\in X,y\in Y}F_a(|x-y|).}
+\p{这是 Theorem 3.1 将相互作用边界放大为整个支撑后的有限自旋形式。特别地，右端不超过 #{2\|A\|\|B\|e^{2C_FK(1)}\sum_{x,y}F_a(|x-y|)}，即 De Roeck 等采用的界。}
+\p{\strong{局部递推。}以[上确界](0A37)定义 #{C_B(S,t)=\sup_{A\ne 0,\ \operatorname{supp}A\subset S}\|[\tau_t(A),B]\|/\|A\|}，并令 #{\partial S} 为同时接触 #{S} 及其补集的相互作用支撑 #{Z} 的集合。把只含 #{Z\subset S} 的演化记为 #{\tau_t^S}。对 #{g(t)=[\tau_t((\tau_t^S)^{-1}(A)),B]} 求导，内部项相消；展开矩阵乘积得到 #{\bigl[ [P,Q],B\bigr]=[P,[Q,B]]-[Q,[P,B]]}，从而}
+##{g'(t)=i\left[\sum_{Z\in\partial S}\tau_t(\Phi_t(Z)),g(t)\right]-i\sum_{Z\in\partial S}\left[\tau_t((\tau_t^S)^{-1}(A)),[\tau_t(\Phi_t(Z)),B]\right].}
+\p{第一项生成酉共轭，保持范数；对第二项积分并用[交换子范数界](4O02)，再对 #{A} 取上确界，得到}
+##{C_B(S,t)\leq 2\|B\|1_{S\cap Y\ne\varnothing}+2\sum_{Z\in\partial S}\int_0^t\|\Phi_s(Z)\|C_B(Z,s)\,ds.}
+\p{\strong{相交支撑链。}迭代上式，#{n} 次相互作用只会产生 #{X\cap Z_1\ne\varnothing}、#{Z_j\cap Z_{j+1}\ne\varnothing}、#{Z_n\cap Y\ne\varnothing} 的链。为每个相交处选一个格点并允许重复计数，使用 #{\sum_{Z\ni x,y}\|\Phi_s(Z)\|\leq f(s)F_a(|x-y|)}，再用 #{n-1} 次[卷积界](4O0N)，空间求和至多为 #{C_F^{n-1}\sum_{x\in X,y\in Y}F_a(|x-y|)}。时间有序积分为 #{K(t)^n/n!}，因为被积函数 #{\prod_jf(s_j)} 对变量置换对称，而 #{n!} 个有序区域覆盖立方体，边界的积分为零。}
+\p{在第 #{N} 步余项中，以 #{C_B(Z,s)\leq 2\|B\|} 结束递推。相同的计数和权重可求和性将余项控制为 #{C\|B\||X|(2C_FK(t))^N/N!}，其中 #{C} 与 #{N} 无关，故余项趋于零。因为 #{X\cap Y=\varnothing}，零次项为零；将 #{n\geq 1} 的级数求和即得结论。若 #{K(1)} 对体积一致有界，整个传播估计也对体积一致。}

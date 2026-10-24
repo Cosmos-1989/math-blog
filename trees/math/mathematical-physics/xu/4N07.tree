@@ -1,0 +1,16 @@
+\title{相对模算子还原矩阵相对熵}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\rho,\sigma\in M_n(\mathbb C)} 为正定密度矩阵。在[矩阵标准形式](4N04) #{H=M_n(\mathbb C)} 上明确取未归一化的 Hilbert–Schmidt 内积 #{\langle X,Y\rangle=\operatorname{Tr}(X^*Y)}，其中 #{\operatorname{Tr}} 是[通常矩阵迹](0F0F)。于是 #{\|\rho^{1/2}\|^2=\operatorname{Tr}\rho=1}，且左乘表示实现 #{\langle\rho^{1/2},a\rho^{1/2}\rangle=\operatorname{Tr}(\rho a)}。取 #{\xi_\psi=\rho^{1/2}}、#{\xi_\phi=\sigma^{1/2}}，按[方向约定](4N06)，}
+##{S_{\phi\mid\psi}(X)=\rho^{-1/2}X^*\sigma^{1/2},\qquad
+\Delta_{\phi\mid\psi}(X)=\sigma X\rho^{-1}.}
+\p{\strong{证明。}写 #{X=a\rho^{1/2}}，则 #{a^*=\rho^{-1/2}X^*}，得到第一式。令 #{JX=X^*}，#{T(X)=\sigma^{1/2}X\rho^{-1/2}}，则 #{S=JT}。左右乘作用交换，均为正算子，故 #{T} 正自伴，#{S^*S=T^2}，给出第二式。}
+\p{取 #{\sigma v_i=q_i v_i}、#{\rho u_j=p_j u_j} 的[正交特征基](0N0B)。矩阵单位 #{|v_i\rangle\langle u_j|} 是 #{\Delta} 的特征向量，特征值为 #{q_i/p_j}。因此}
+##{(\log\Delta)(X)=(\log\sigma)X-X\log\rho.}
+\p{代入 #{X=\rho^{1/2}} 并用迹的循环性，得到}
+##{-\langle\rho^{1/2},\log\Delta\,\rho^{1/2}\rangle
+=\operatorname{Tr}\rho(\log\rho -\log\sigma)=D(\rho\Vert\sigma).}
+\p{这与[矩阵定义](4N02)的次序一致。公式未假设 #{\rho\sigma=\sigma\rho}。半正定情形由支撑压缩及极限延拓，支撑不包含时取 #{+\infty}。}

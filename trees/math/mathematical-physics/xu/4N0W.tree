@@ -1,0 +1,13 @@
+\title{二值测量给出相对熵发散判据}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\psi,\phi} 是 #{M} 上的正规态，#{e\in M} 是[投影](00MS)，记 #{p=\psi(e)}、#{q=\phi(e)}，其中 #{0<q<1}。限制到 #{e,1-e} 生成的交换代数，由[单调性](4N09)和[矩阵公式](4N02)得}
+##{D_M(\psi\Vert\phi)\ge p\log\frac pq+(1-p)\log\frac{1-p}{1-q}
+\ge p\log\frac 1q-\log 2.}
+\p{第二步把右侧写为 #{p\log(1/q)+(1-p)\log(1/(1-q))-h(p)}。后一对数项非负，而 #{h(p)=-p\log p-(1-p)\log(1-p)\le\log 2}：这正是两点分布相对于均匀分布的非负相对熵。端点由极限解释；若 #{q=0<p}，相对熵为无穷。}
+\p{此界也可用于[正收缩算子](0Z02)。若 #{0\le a\le 1}、#{\psi(a)\ge\varepsilon>0}，取[谱投影](4N05) #{e=1_{\{\lambda\ge\varepsilon /2\}}(a)}。由 #{a\le e+\varepsilon /2} 和 #{a\ge(\varepsilon /2)e}，得}
+##{\psi(e)\ge\varepsilon /2,\qquad \phi(e)\le 2\phi(a)/\varepsilon.}
+\p{因此只要一列测试算子 #{a_n} 的 #{\psi_n(a_n)} 有正下界，而 #{\phi_n(a_n)\to 0}，相对熵 #{D(\psi_n\Vert\phi_n)\to\infty}。}

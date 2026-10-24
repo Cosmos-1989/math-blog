@@ -1,0 +1,15 @@
+\title{有限互信息下的条件互信息}
+\date{2026-10-24}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{A,B,C} 为三个闭包互不相交区域，真空多区间[互信息](4N0L)有限。定义}
+##{I(B:C\mid A)=I(A\cup B:C)-I(A:C).}
+\p{限制从 #{\mathcal A(A\cup B\cup C)} 到 #{\mathcal A(A\cup C)} 时，真空限制为相应真空，参照态 #{\omega_{A\cup B}\otimes\omega_C} 限制为 #{\omega_A\otimes\omega_C}。由[相对熵单调性](4N09)，故 #{I(B:C\mid A)\ge 0}。}
+\p{若用[正则化函数](4N0Y)记熵，则}
+##{I(B:C\mid A)=G(A\cup B)+G(A\cup C)-G(A)-G(A\cup B\cup C).}
+\p{\strong{证明。}对三个分量的乘积参照态，张量相对熵链恒等式给出}
+##{D(\omega_{ABC}\Vert\omega_A\otimes\omega_B\otimes\omega_C)
+=I(A:B)+I(A\cup B:C).}
+\p{这是[期望链规则](4N0C)同类的相对熵结构性质，准确形式见 Xu 2019 版定理 2.1(5)。分别代入 #{G(AB),G(AC),G(ABC)} 的定义，单区间项全部消去，剩下 #{I(AB:C)-I(A:C)}。接触边界的延拓还需相应极限定理。}

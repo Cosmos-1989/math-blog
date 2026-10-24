@@ -1,0 +1,14 @@
+\title{闭正二次型唯一确定正自伴算子}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{在[Hilbert 空间](00MQ) #{H} 的稠密子空间 #{D(q)} 上，正二次型满足 #{q(\lambda\xi)=|\lambda|^2q(\xi)} 和平行四边形恒等式。用极化得到第二变量线性的形式 #{q(\xi,\eta)}。称 #{q} 闭，若 #{D(q)} 在范数 #{\|\xi\|_q^2=\|\xi\|^2+q(\xi)} 下完备。此时存在唯一[正自伴算子](0GSN) #{A}，使}
+##{D(A^{1/2})=D(q),\qquad q(\xi)=\|A^{1/2}\xi\|^2.}
+\p{\strong{证明。}对 #{\zeta\in H}，泛函 #{\eta\mapsto\langle\zeta,\eta\rangle} 在 #{D(q)} 上连续。由[Riesz 表示](00MT)，存在唯一 #{B\zeta\in D(q)} 满足}
+##{\langle B\zeta,\eta\rangle+q(B\zeta,\eta)=\langle\zeta,\eta\rangle.}
+\p{取 #{\eta=B\zeta} 得 #{\|B\zeta\|_q\le\|\zeta\|}。交换两个 Riesz 等式并取共轭，得 #{B} 自伴；同一等式又给 #{B\ge 0}。若 #{B\zeta=0}，则 #{\zeta} 与稠密的 #{D(q)} 正交，故 #{\zeta=0}。若 #{\eta\in D(q)} 与所有 #{B\zeta} 在型内积下正交，则它与所有 #{\zeta} 在 #{H} 中正交。因此 #{\operatorname{Ran}B} 在型范数中稠密。}
+\p{#{B} 是单射正收缩。以[谱演算](4N05)定义 #{A=B^{-1}-1}，其定义域为 #{\operatorname{Ran}B}；它正自伴。Riesz 等式给出 #{q(\xi,\eta)=\langle A\xi,\eta\rangle} 对 #{\xi\in D(A),\eta\in D(q)} 成立，因而 #{q(\xi)=\|A^{1/2}\xi\|^2}。}
+\p{对 #{\xi\in D(q)}，以 #{\operatorname{Ran}B} 在型范数中的稠密性取 #{\xi_n}。#{A^{1/2}\xi_n} 为 Cauchy 列；由[闭算子性质](0GSM)，#{\xi\in D(A^{1/2})}，且上述等式延拓。反之，谱截断 #{1_{\{A\le n\}}\xi} 把每个 #{\xi\in D(A^{1/2})} 在平方根图范数中逼近到 #{D(A)}；闭型的完备性于是给 #{\xi\in D(q)}。}
+\p{唯一性可从 Riesz 等式看出：任何满足结论的算子都满足 #{(1+A)^{-1}=B}。若原型仅可闭，其闭包的定义域由型范数 Cauchy 列的 #{H}-极限构成。可闭的判据为：#{\xi_n\to 0} 且 #{q(\xi_n-\xi_m)\to 0} 蕴含 #{q(\xi_n)\to 0}；该判据及闭包存在性见 [Hiai，定理 A.11](https://arxiv.org/abs/2004.02383v1)。}

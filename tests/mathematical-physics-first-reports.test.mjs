@@ -51,7 +51,13 @@ test('the first three missing proceedings chapters have distinct report topics',
   assert.equal(sourceGap.length, 1);
   assert.deepEqual(sourceGap[0].speakers, ['Wojciech De Roeck']);
   assert.equal(sourceGap[0].title, null);
-  assert.equal(sourceGap[0].outline, null);
+  // A dedicated invited-talk topic does not invent a proceedings chapter.
+  if (sourceGap[0].outline) {
+    assert.equal(sourceGap[0].outline, '4O00');
+    assert.equal(sourceGap[0].talk_title_verified, true);
+    assert.equal(sourceGap[0].authors, null);
+    assert.equal(sourceGap[0].pages, null);
+  }
   for (const report of reports.filter(row => row.outline)) {
     assert(files.has(report.outline) && files.has(report.reference), report.doi);
     assert.equal(topics.filter(id => id === report.outline).length, 1, report.doi);

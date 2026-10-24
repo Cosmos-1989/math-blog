@@ -1,0 +1,12 @@
+\title{Pauli 平均给出局部算子的范数收缩投影}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[De Roeck 等，§18.2，式 (18.10)](icm2026-de-roeck)的有限自旋实现}
+
+\p{设 #{S\subset\Lambda} 为有限[量子寄存器](4F01)的位置子集，#{r=|S^c|}。令 #{P_{a,b}=Z^aX^b} 遍及补集上的 #{4^r} 个 [Pauli 乘积](4F05)，在 #{S} 上补恒等矩阵。定义}
+##{\mathcal E_S(A)=4^{-r}\sum_{a,b\in\{0,1\}^r}P_{a,b}AP_{a,b}^*.}
+\p{则 #{\mathcal E_S(A)} 支撑于 #{S}，对已支撑于 #{S} 的 #{A} 保持不变，并有 #{\|\mathcal E_S(A)\|\leq\|A\|}。它等于补集上的归一化部分迹再张量恒等矩阵。}
+\p{\strong{证明。}先在补集的一比特上展开为 #{I,X,Z,ZX}。对这四个酉矩阵作共轭平均时，恒等项保持；任何非恒等 Pauli 项都被其中一个 Pauli 反交换，配对的共轭项相消。逐比特重复此计算，补集上的非恒等 Pauli 乘积全部消失，只保留 #{I_{S^c}} 的系数。按[迹](0F0F)的 Pauli 正交公式，该系数是 #{2^{-r}\operatorname{Tr}_{S^c}(A)}。其中部分迹可在补集正交基 #{e_j} 中定义为 #{\sum_j(1\otimes\langle e_j|)A(1\otimes|e_j\rangle)}。}
+\p{共轭平均的每一项都与 #{A} 具有相同的[算子范数](00M4)，三角不等式给出收缩性。若 #{S\subset T}，两次平均消去相应补集坐标，故 #{\mathcal E_S\mathcal E_T=\mathcal E_T\mathcal E_S=\mathcal E_S}。最后由[交换子](4O02)恒等式 #{A-PAP^*=[A,P]P^*} 得到}
+##{\|A-\mathcal E_S(A)\|\leq\sup_{P\,\text{支撑于 }S^c\,\text{且酉}}\|[A,P]\|.}

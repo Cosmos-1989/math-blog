@@ -1,0 +1,15 @@
+\title{有限指标子网的相对熵接触极限}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\mathcal B\subset\mathcal A} 是[共形子网](4N0M)，允许保持奇偶性的分次网；假设指标 #{d=[\mathcal A:\mathcal B]<\infty}，且 #{\mathcal B} [强可加](4N0N)。把区间 #{I} 的一个内点删去，得到 #{I_1,I_2}。取递增区间 #{J_n\subset I_2}，使 #{\bigcup_nJ_n=I_2} 且 #{\overline J_n\cap\overline I_1=\varnothing}。在[分裂](4N0L)的两区间代数上置}
+##{M_n=\mathcal A(I_1)\vee\mathcal A(J_n),\qquad
+E_n(xy)=xE_I(y),\qquad \phi_n=\omega\circ E_n.}
+\p{则}
+##{\lim_{n\to\infty}D_{M_n}(\omega\Vert\phi_n)=\log d.}
+\p{证明中的分析步骤如下。单边期望的指标为 #{d}，故[指标上界](4N0F)给出 #{D_{M_n}\le\log d}。期望在递增代数上相容，[限制单调性](4N09)保证极限存在。令 #{\lambda=d^{-1}}。Longo–Xu 的命题 4.5 用局部 Jones 投影和强可加性构造一列 #{e_j\in M_{n_j}}，其中 #{n_j\to\infty}，满足}
+##{\omega(e_j)\to 1,\qquad\omega(e_j^*e_j)\to 1,\qquad
+\phi_{n_j}(e_je_j^*)\to\lambda.}
+\p{这是此定理所需的子因子近似结论；其构造及压缩计算见 [原文 §4.3.2](https://arxiv.org/abs/1712.07283v1)。Pimsner–Popa 不等式给出 #{\phi_{n_j}\ge\lambda\omega}。应用[饱和引理](4N0U)，子列极限为 #{-\log\lambda=\log d}，因而整个递增序列也取此极限。}

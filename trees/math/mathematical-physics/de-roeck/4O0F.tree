@@ -1,0 +1,10 @@
+\title{改变能量切分只改变有界的时间边界项}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[De Roeck 等，§18.3，式 (18.15) 后](icm2026-de-roeck)}
+
+\p{设有限系统 #{H_{\rm tot}=H_l+H_r=K_l+K_r} 有两种自伴分解。置 #{J=i[H_{\rm tot},H_l]}、#{\Delta=H_l-K_l}。假定 #{\|[K_l,K_r]\|\leq\eta}、#{\|\Delta\|\leq M}。则 [Heisenberg 时间平均](4O03)满足}
+##{\left\|\frac 1T\int_0^TJ(t)\,dt\right\|\leq\eta+\frac{2M}{T}.}
+\p{\strong{证明。}代入 #{H_l=K_l+\Delta}，得到 #{J=i[H_{\rm tot},K_l]+i[H_{\rm tot},\Delta]}。第一项等于 #{i[K_r,K_l]}，其演化后的范数始终至多 #{\eta}。第二项的时间积分由能量差恒等式等于 #{\Delta(T)-\Delta}，范数至多 #{2M}。积分、相加、除以 #{T} 即得所示界。}
+\p{若系统包含[可变热浴](4O04)，而 #{\eta,M} 与热浴数据无关，则[密度矩阵期望界](4O05)允许先对热浴与初态取上确界，再令 #{T\to\infty}，得到 #{j_L\leq\eta}。当两种分解中的热浴项完全相同时，#{\Delta} 只作用于链本身；这正是取得热浴一致界的原因。}

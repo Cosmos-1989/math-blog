@@ -1,0 +1,14 @@
+\title{指数小的区间概率为何足以产生长链瓶颈}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[De Roeck 等，§18.3，Lemma 29](icm2026-de-roeck)，独立区间证明}
+
+\p{在长度 #{L} 的[随机链](4O01)内，对每个区间 #{B} 有仅依赖 #{(\theta_x)_{x\in B}} 的好事件 #{G_B}。假定固定 #{0<a<1}，且 #{\mathbb P(G_B)\geq e^{-a|B|}}。则对充分大的 #{L}，以至少}
+##{1-\exp\left(-\frac{L^{1-a}}{\log L}\right)}
+\p{的概率，存在严格位于两端之间的区间 #{B=\{\ell_1,\ldots,\ell_2\}}，满足 #{\ell_2-\ell_1\geq\tfrac 12\log L} 且 #{G_B} 成立。这里 #{\log} 为[自然对数](0A45)。}
+\p{\strong{证明。}令 #{m=\lfloor(3/4)\log L\rfloor}。在 #{\{2,\ldots,L-1\}} 中顺次取 #{N=\lfloor(L-2)/m\rfloor} 个不交的长度 #{m} 区间。充分大时 #{m-1\geq\tfrac 12\log L} 且 #{N\geq L/(2m)}。不同区间的场[独立](00L3)，所以好事件独立；各自的成功概率至少 #{p=e^{-am}\geq L^{-3a/4}}。}
+\p{由 #{1-p\leq e^{-p}}，所有区间都失败的概率至多 #{(1-p)^N\leq e^{-Np}}。这个标量不等式可由[指数函数的导数](0A46)得到：函数 #{e^{-p}-1+p} 在 #{p\geq 0} 上的导数 #{1-e^{-p}\geq 0}，且在零点取值零。又有}
+##{Np\geq\frac{L^{1-3a/4}}{2m}\geq\frac{2L^{1-3a/4}}{3\log L}\geq\frac{L^{1-a}}{\log L}}
+\p{对充分大的 #{L} 成立，最后一步用 #{(2/3)L^{a/4}\geq 1}。取补事件即得结论。}
+\p{[准局部对角化定理](4O07)中的构造事件可在每个区间的限制 Hamiltonian 上定义，且只依赖该区间的场。取 #{a=\gamma^{c'}} 后，这个引理把单段的指数型概率下界变成长链中至少出现一段的高概率结论。}

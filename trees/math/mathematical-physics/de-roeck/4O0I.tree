@@ -1,0 +1,13 @@
+\title{强无序相互作用链的非正常热传导定理}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[De Roeck–Giacomin–Huveneers–Prośniak，arXiv:2408.04338v2，Theorem 2；证明 §18.3](icm2026-de-roeck)}
+
+\p{固定 #{C_\kappa}，令 #{H} 为[随机量子链](4O01)，#{j_L} 为先对热浴和初态取上确界的[非平衡平均热流](4O04)。取[准局部对角化定理](4O07)中的常数 #{\gamma_0,c,c'>0}，必要时减小 #{\gamma_0}。存在仅依赖 #{C_\kappa} 的 #{C>0}，对固定 #{0<\gamma<\gamma_0<1} 及整数 #{L\geq 2}，有}
+##{\mathbb P\left\{0\leq j_L\leq C L^{-\alpha(\gamma)}\right\}\geq 1-\exp\left(-\frac{L^{1-\gamma^{c'}}}{\log L}\right),\qquad \alpha(\gamma)=\frac c5\log(1/\gamma).}
+\p{\strong{由区间定理推得热流界。}在每个区间限制模型上取对角化定理的构造事件，其概率至少为 #{\exp(-\gamma^{c'}|B|)}，且仅依赖区间内的随机场。因而[独立区间引理](4O0E)给出长度至少为 #{\tfrac 12\log L} 的好区间，概率正是所示下界。}
+\p{在此事件上，[瓶颈估计](4O0H)构造 #{K_l,K_r}，满足 #{\|[K_l,K_r]\|\leq CL^{-\alpha(\gamma)}}、#{\|H_l-K_l\|\leq CL}。于是[改变能量切分](4O0F)给出对热浴一致的界}
+##{\left\|\frac 1T\int_0^TJ(t)\,dt\right\|\leq CL^{-\alpha(\gamma)}+\frac{CL}{T}.}
+\p{用[密度矩阵期望界](4O05)，先取 #{\sup_B\sup_\rho}，再取 #{\limsup_{T\to\infty}}，得到结论；非负性也由该期望界后的迹论证给出。上述区间选择证明适用于固定 #{\gamma} 下充分大的 #{L}；所陈述的统一常数及有限尺寸结论采用原文 Theorem 2。对所有样本另有[一致热流界](4O0G)，用于处理无序平均。}
+\p{该定理同时允许全部初态与能量范围。它给出热流的多项式上界，没有给出与之匹配的下界，因而没有确定一个精确的次扩散指数。}

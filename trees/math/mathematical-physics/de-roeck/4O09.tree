@@ -1,0 +1,12 @@
+\title{一阶酉消元怎样产生二阶余项}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[De Roeck 等，§3.1、式 (6.9)–(6.13)](icm2026-de-roeck)，有限矩阵证明}
+
+\p{设 #{D=\operatorname{diag}(E_1,\ldots,E_N)} 为实对角矩阵，#{V=V^*} 且 #{V_{ii}=0}。假定 #{V_{ij}\ne 0} 时 #{|E_i-E_j|\geq\varepsilon>0}。取实数 #{\lambda}，定义 #{A_{ii}=0}，非零 #{V_{ij}} 对应的 #{A_{ij}=\lambda V_{ij}/(E_i-E_j)}，其余项为零。则 #{A^*=-A}，且}
+##{e^A(D+\lambda V)e^{-A}=D+R,\qquad \|R\|\leq |\lambda|\|V\|(e^{2\|A\|}-1).}
+\p{\strong{消元。}交换 #{i,j} 后，分母变号、分子共轭，故 #{A^*=-A}。逐项计算[交换子](4O02)得 #{[A,D]_{ij}=(E_j-E_i)A_{ij}=-\lambda V_{ij}}。若用 #{V} 本身表示带耦合的扰动，就应删去定义中额外的 #{\lambda}。}
+\p{\strong{余项。}矩阵指数的幂级数由[范数次乘性](00M4)与标量指数级数[绝对收敛](0A38)；#{iA} 自伴，[谱分解](0N0B)还说明 #{e^A} 酉。对 #{F(s)=e^{sA}(D+\lambda V)e^{-sA}} 按[矩阵指数求导](4O03)，得范数收敛展开 #{F(1)=\sum_{n\geq 0}\operatorname{ad}_A^n(D+\lambda V)/n!}，其中 #{\operatorname{ad}_A(B)=[A,B]}。用 #{\operatorname{ad}_A D=-\lambda V} 合并同次项，得到}
+##{R=\lambda\sum_{n\geq 1}\frac{n}{(n+1)!}\operatorname{ad}_A^nV.}
+\p{由 #{\|\operatorname{ad}_A^nV\|\leq(2\|A\|)^n\|V\|} 及 #{n/(n+1)!\leq 1 /n!} 即得所示界。另由逐行的 [Schwarz 不等式](004S)可得 #{\|A\|\leq N|\lambda|\|V\|/\varepsilon}：矩阵元均至多 #{|\lambda|\|V\|/\varepsilon}，先估每一行与单位向量的配对，再对 #{N} 行平方求和。固定 #{N,\varepsilon,V} 时余项为二阶小量；这个含 #{N} 的界不足以控制体积趋于无穷的量子链。}

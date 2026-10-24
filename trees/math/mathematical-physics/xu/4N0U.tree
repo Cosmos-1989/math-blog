@@ -1,0 +1,23 @@
+\title{Kosaki 公式中的指标饱和引理}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{M_j} 是 von Neumann 代数，#{\psi_j,\phi_j} 为正规态，#{0<\lambda\le 1}，且 #{\phi_j\ge\lambda\psi_j}。假设存在 #{e_j\in M_j} 满足}
+##{\psi_j(e_j)\longrightarrow 1,\quad
+\psi_j(e_j^*e_j)\longrightarrow 1,\quad
+\phi_j(e_je_j^*)\longrightarrow\lambda.}
+\p{则 #{D(\psi_j\Vert\phi_j)\to -\log\lambda}。这些矩按 [Kosaki 公式](4N08)的左右次序书写，不能交换两个二次项。}
+\p{\strong{证明。}[支配界](4N0A)给出上界 #{-\log\lambda}。固定整数 #{k\ge 1} 和 #{R>1/k}，在 #{1/k\le t\le R} 上取 #{x_j(t)=1-t e_j/(\lambda+t)}，在 #{t>R} 上取零。每个固定 #{j,k,R} 上，连续段可一致逼近为有限阶梯函数；积分权有界且区间有限，故公式允许用此路径取下界。令 #{a(t)=t/(\lambda+t)}，则}
+##{\psi_j(x_j^*x_j)=1-a(t)\bigl(\psi_j(e_j)+\overline{\psi_j(e_j)}\bigr)+a(t)^2\psi_j(e_j^*e_j)
+\longrightarrow\frac{\lambda^2}{(\lambda+t)^2},}
+##{\phi_j((1-x_j)(1-x_j)^*)=a(t)^2\phi_j(e_je_j^*)
+\longrightarrow\frac{\lambda t^2}{(\lambda+t)^2}.}
+\p{收敛在固定截断上一致。尾部 #{x_j=0}，积分恰为 #{1/R}。由[微积分基本定理](0A3C)积分得}
+##{\begin{aligned}
+\liminf_jD(\psi_j\Vert\phi_j)
+&\ge\log k-\int_{1/k}^R\frac{\lambda}{t(\lambda+t)}\,dt-\frac 1R\\
+&=-\log(\lambda+1/k)-\log\frac{R}{R+\lambda}-\frac 1R.
+\end{aligned}}
+\p{先令 #{R\to\infty}，再令 #{k\to\infty}，得到所需下界。}

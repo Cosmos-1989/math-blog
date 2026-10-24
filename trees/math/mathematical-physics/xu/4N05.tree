@@ -1,0 +1,13 @@
+\title{正自伴算子的对数与谱积分}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{A} 是 [Hilbert 空间](00MQ)上的非负[自伴算子](0GSN)，定义域可为真稠密子空间。谱定理给出唯一的投影值测度 #{P_A}：每个 [Borel 集](00QD) #{B\subset\lbrack 0,\infty\rparen} 对应[正交投影](00MS)，满足 #{P_A(\varnothing)=0}、#{P_A(\lbrack 0,\infty\rparen)=1}，并且对两两不交的 #{B_n} 及每个 #{\xi\in H} 有}
+##{P_A\left(\bigcup_nB_n\right)\xi=\sum_nP_A(B_n)\xi.}
+\p{右侧在 Hilbert 范数中收敛，称强可数可加性；还满足 #{P_A(B)P_A(C)=P_A(B\cap C)}。算子及其定义域由 #{A=\int_0^\infty\lambda\,dP_A(\lambda)}、#{D(A)=\{\xi:\int\lambda^2\,d\mu_\xi<\infty\}} 给出，其中 #{\mu_\xi(B)=\langle\xi,P_A(B)\xi\rangle} 是质量为 #{\|\xi\|^2} 的有限正测度。谱定理作为基础定理使用，谱演算和定义域约定见 [Hiai，附录 A.1，第142页](https://arxiv.org/abs/2004.02383v1)。}
+\p{若 #{A} 的核为零，则 #{\log A} 由谱演算定义，其算子定义域为}
+##{\operatorname{Dom}(\log A)=\{\xi:\int_0^\infty|\log\lambda|^2\,d\mu_\xi(\lambda)<\infty\}.}
+\p{谱期望 #{\int\log\lambda\,d\mu_\xi} 只需一次绝对可积，比属于算子定义域弱。谈相对熵时，允许负对数积分取 #{+\infty}，但必须先排除 #{+\infty -\infty}。这些积分采用[非负函数积分](00Q5)，再分别处理正负部。}
+\p{例如若 #{\|\xi\|=1} 且 #{\int\lambda\,d\mu_\xi=1}，则 #{\int_{\lambda>1}\log\lambda\,d\mu_\xi\leq 1}。因此 #{-\int\log\lambda\,d\mu_\xi} 总有意义，可能为 #{+\infty}。若谱在零点有正质量，同样规定负对数积分为 #{+\infty}。}

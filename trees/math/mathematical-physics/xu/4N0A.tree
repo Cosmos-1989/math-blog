@@ -1,0 +1,13 @@
+\title{状态支配关系给出熵上界}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\psi,\phi} 是 #{M} 上正规态，#{0<\lambda\leq 1}，并且 #{\phi(a)\geq\lambda\psi(a)} 对每个[正元](0Z02) #{a} 成立。则}
+##{D_M(\psi\Vert\phi)\leq -\log\lambda.}
+\p{\strong{证明。}在 [Kosaki 公式](4N08)中置 #{y=1-x}。由[状态的 Schwarz 不等式](0Z1C)，#{\psi(x^*x)\geq|\psi(x)|^2}、#{\psi(yy^*)\geq|\psi(y)|^2}。令 #{z=\psi(x)}，则积分被积函数至少为}
+##{\frac{|z|^2}{t}+\frac{\lambda|1-z|^2}{t^2}
+=\frac{t+\lambda}{t^2}\left|z-\frac{\lambda}{t+\lambda}\right|^2+
+\frac{\lambda}{t(t+\lambda)}.}
+\p{积分最后一项得到 #{\log(1+k\lambda)}。故任意测试函数的变分值至多为 #{\log k-\log(1+k\lambda)=-\log(\lambda+1/k)}。取上确界得到结论。这里只用了正性与 Schwarz 不等式，#{\psi} 无须满足迹的循环性质。}

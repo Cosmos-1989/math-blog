@@ -1,0 +1,10 @@
+\title{不交支撑的算子为何交换}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[De Roeck 等，§2.1、§18.3](icm2026-de-roeck)所用的有限维局部计算}
+
+\p{在有限[量子寄存器](4F01) #{\mathcal H=\bigotimes_{x\in\Lambda}\mathbb C^2} 上，设 #{A} 支撑于 #{S}，#{B} 支撑于 #{T}；[支撑](4O01)表示在补集上作用恒等矩阵。定义矩阵交换子 #{[A,B]=AB-BA}。若 #{S\cap T=\varnothing}，则 #{[A,B]=0}；一般有}
+##{\|[A,B]\|\leq 2\|A\|\|B\|.}
+\p{\strong{证明。}将张量因子按 #{S,T,\Lambda\setminus(S\cup T)} 排列，不交情形下 #{A=A_S\otimes 1\otimes 1}、#{B=1\otimes B_T\otimes 1}。对每个纯张量，两种作用次序都给出 #{A_Su\otimes B_Tv\otimes w}；纯张量张成全空间，故两个乘积相同。一般情形用[算子范数](00M4)的三角不等式及次乘性，得到 #{\|AB-BA\|\leq\|AB\|+\|BA\|\leq 2\|A\|\|B\|}。}
+\p{若 #{A=\sum_S A_S}、#{B=\sum_T B_T}，两个有限和的交换子只需保留 #{S\cap T\ne\varnothing} 的配对。这使空间距离能够进入交换子估计。}

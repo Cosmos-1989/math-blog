@@ -1,0 +1,13 @@
+\title{远端交换子界怎样给出局部壳层展开}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[De Roeck 等，§18.2，式 (18.8)–(18.10)](icm2026-de-roeck)，局部投影步骤}
+
+\p{设 #{I} 是有限[量子链](4O01)中的区间，#{I_n=\{x:\operatorname{dist}(x,I)\leq n\}}。固定矩阵 #{A}，假定存在 #{K\geq 0}、#{0<q<1}，使对每个整数 #{n\geq 0} 及支撑于 #{I_n^c} 的酉矩阵 #{P} 都有 #{\|[A,P]\|\leq Kq^n}。使用[局部收缩投影](4O0C)，定义}
+##{A_0=\mathcal E_I(A),\qquad A_n=\mathcal E_{I_n}(A)-\mathcal E_{I_{n-1}}(A)\quad(n\geq 1).}
+\p{则 #{A=\sum_{n\geq 0}A_n}，每项支撑于 #{I_n}，且 #{\|A_0\|\leq\|A\|}、#{\|A_n\|\leq Kq^{n-1}} 对 #{n\geq 1} 成立。}
+\p{\strong{证明。}投影的支撑性质给出支撑结论。嵌套恒等式给出 #{A_n=\mathcal E_{I_n}(A-\mathcal E_{I_{n-1}}A)}，所以收缩性及远端交换子假设推出 #{\|A_n\|\leq\|A-\mathcal E_{I_{n-1}}A\|\leq Kq^{n-1}}。部分和望远镜相消为 #{\mathcal E_{I_N}(A)}；#{N} 足够大时 #{I_N=\Lambda_L}，该算子恰为 #{A}，此后壳层为零。}
+\p{具体地，设 #{O} 支撑于区间 #{I}，令 #{A=U^*OU}，其中 #{U} 满足 [Lieb–Robinson 估计](4O0L)，其相互作用范数的时间积分至多为 #{M}，传播权重为 #{F_a(r)=a^r/(1+r)^3}。若 #{P} 酉且支撑于 #{I_n^c}，一维区间几何给出：距离为 #{r} 的格点对 #{(x,y)\in I\times I_n^c} 至多有 #{2r} 个，且 #{r\geq n+1}。于是}
+##{\|[A,P]\|\leq 4\|O\|e^{2C_FM}\sum_{r\geq n+1}\frac{ra^r}{(1+r)^3}\leq 4\|O\|e^{2C_FM}a^{n+1}\sum_{r\geq 1}\frac{r}{(1+r)^3}.}
+\p{最后一个级数收敛，所以得到引理的假设，其中 #{q=a}，#{K} 与区间长度及总体积无关。逆向共轭也成立，因为 #{\|[UOU^*,P]\|=\|[O,U^*PU]\|}，对交换后的两个支撑使用同一传播界即可。[准局部对角化](4O07)通过生成元估计控制 #{M} 及 #{a}，再使用这一步得到局部展开。}

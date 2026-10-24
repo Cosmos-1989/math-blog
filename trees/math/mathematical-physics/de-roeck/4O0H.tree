@@ -1,0 +1,15 @@
+\title{准局部对角化区间的热流瓶颈估计}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[De Roeck 等，§18.3，式 (18.12)–(18.15)](icm2026-de-roeck)}
+
+\p{考虑长度 #{L} 的[随机链与热浴](4O04)，设内部区间 #{B=\{\ell_1,\ldots,\ell_2\}} 满足 #{1<\ell_1<\ell_2<L}、#{\ell_2-\ell_1\geq\tfrac 12\log L}。假定限制 Hamiltonian #{H_B=\sum_{I\subset B}H_I} 满足[对角化定理](4O07)的结论，衰减率为 #{\gamma^c}。对充分小的 #{\gamma}、充分大的 #{L}，存在分解 #{H_{\rm tot}=K_l+K_r} 及只依赖 #{C_\kappa} 的 #{C}，使}
+##{\|[K_l,K_r]\|\leq C L^{-\frac c5\log(1/\gamma)},\qquad \|H_l-K_l\|\leq CL.}
+\p{两式对所有热浴一致，而且 #{H_l-K_l} 只作用于链。此为原文§18.3的确定性估计，空间尾部求和见式 (18.12)–(18.15)。}
+\p{\strong{构造与证明概要。}令 #{U^*H_BU=D}。把对角算子 #{D} 按区间写成 #{D=\sum_{I\subset B}D_I}，每个 #{D_I} 对角且支撑于 #{I}，局部范数具有式 (18.13)的指数衰减。这里 #{D_I} 是一个算子，不能用单个 Pauli 展开系数代替其范数。设 #{\ell_*=(\ell_1+\ell_2)/2}，置 #{D_l=\sum_{\min I\leq\ell_*}D_I}、#{D_r=D-D_l}。令}
+##{R_l=\sum_{\min I<\ell_1}H_I,\qquad R_r=\sum_{\min I\geq\ell_1,\ \max I>\ell_2}H_I,}
+##{K_l=H_{B,l}+V_{B,l}\otimes X_1+UD_lU^*+R_l,\qquad K_r=H_{\rm tot}-K_l.}
+\p{因为 #{[D_l,D_r]=0}，展开交换子并用[不交支撑交换](4O02)，只剩}
+##{\begin{aligned}[K_l,K_r]={}&[UD_lU^*,R_r]+[R_l,UD_rU^*]+[R_l,R_r]\\&+V_{B,l}\otimes[X_1,R_r]+[R_l,X_L]\otimes V_{B,r}.\end{aligned}}
+\p{第一项中的 #{D_l} 与右边界隔着约半个区间，第二项相同；非零贡献需依靠长区间项或共轭后的空间尾部。其余三项也必须跨越相应的距离。原文用准局部展开与局部区间求和估计这五项，得到第一式；这一空间估计作为所引研究结果使用。另一方面，#{H_l-K_l=H_{{\rm sys},l}-UD_lU^*-R_l} 中热浴项完全相消，局部相互作用总量及对角展开的可求和性给出第二式。随后可直接应用[改变切分引理](4O0F)。}

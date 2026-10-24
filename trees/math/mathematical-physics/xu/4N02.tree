@@ -1,0 +1,12 @@
+\title{矩阵相对熵的支撑条件与非负性}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\rho,\sigma} 是同一有限维空间上的[密度矩阵](4F02)。正矩阵的支撑 #{s(\rho)} 是其像上的正交投影。若 #{s(\rho)\leq s(\sigma)}，定义}
+##{D(\rho\Vert\sigma)=\operatorname{Tr}(\rho\log\rho)-\operatorname{Tr}(\rho\log\sigma);}
+\p{其中 #{\log\sigma} 只在 #{s(\sigma)H} 上取值，#{0\log 0=0}。若支撑包含关系不成立，规定 #{D=+\infty}。在包含情形，非零谱有限，故 #{D} 有限。}
+\p{\strong{证明非负性。}取[正交特征基](0N0B) #{\rho u_i=p_i u_i}、#{\sigma v_j=q_jv_j}，令 #{w_{ij}=|\langle u_i,v_j\rangle|^2}。正交基展开给出每行、每列之和均为一。于是 #{a_{ij}=p_iw_{ij}}、#{b_{ij}=q_jw_{ij}} 各自总和为一，且}
+##{D(\rho\Vert\sigma)=\sum_{a_{ij}>0}a_{ij}\log\frac{a_{ij}}{b_{ij}}.}
+\p{支撑条件保证 #{a_{ij}>0\Rightarrow b_{ij}>0}。由[对数](0A45)的导数，函数 #{x-1-\log x} 在 #{x=1} 处取最小值零。因此每个求和项至少为 #{a_{ij}-b_{ij}}，相加至少为 #{1-\sum_{a_{ij}>0}b_{ij}\geq 0}。}

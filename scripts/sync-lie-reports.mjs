@@ -9,11 +9,28 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const write = (file, value) => fs.writeFileSync(path.join(root, file), JSON.stringify(value, null, 2) + '\n');
 const hash = text => crypto.createHash('sha256').update(text).digest('hex');
-export function findSectionReport(coverage, doi) {
-  const matches = [...coverage.reports, ...(coverage.cross_listed_reports ?? [])]
-    .filter(row => row.doi === doi);
+export function findSectionReport(coverage, identity) {
+  const doi = typeof identity === 'string' ? identity : identity?.doi;
+  const rows = [...coverage.reports, ...(coverage.cross_listed_reports ?? [])];
+  let matches, label;
+  if (doi != null && (typeof doi !== 'string' || !doi.trim()))
+    throw new Error('A report DOI must be a nonempty string or null');
+  if (typeof doi === 'string' && doi.trim()) {
+    label = doi;
+    matches = rows.filter(row => row.doi === doi);
+  } else {
+    const ids = identity?.official_speaker_ids;
+    if (!Array.isArray(ids) || !ids.length || new Set(ids).size !== ids.length ||
+        ids.some(id => typeof id !== 'string' || !id.trim()))
+      throw new Error('A report needs a DOI or a nonempty, unique official_speaker_ids list');
+    const key = JSON.stringify([...ids].sort());
+    label = `official speakers ${key}`;
+    // A missing publication identifier must never match other null-DOI entries.
+    matches = rows.filter(row => !row.doi && Array.isArray(row.speaker_ids) &&
+      JSON.stringify([...row.speaker_ids].sort()) === key);
+  }
   if (matches.length !== 1)
-    throw new Error(`Expected one primary or cross-listed report for ${doi}; found ${matches.length}`);
+    throw new Error(`Expected one primary or cross-listed report for ${label}; found ${matches.length}`);
   return matches[0];
 }
 
@@ -44,11 +61,11 @@ export function syncSectionReports({date, packetNames, manifest, scope, crossLan
   // Shared registries change only for this batch; older prerequisite judgments survive.
   for (const packet of packets) {
     const report = packet.report;
-    for (const key of ['prefix', 'reference', 'outline', 'doi', 'question', 'reading_scope', 'proof_scope', 'claim_sources'])
+    for (const key of ['prefix', 'reference', 'outline', 'question', 'reading_scope', 'proof_scope', 'claim_sources'])
       if (!report[key]) throw new Error(`Missing report field ${key}`);
     if (subjectTopics.filter(id => id === report.outline).length !== 1)
       throw new Error(`Topic must be listed once: ${report.outline}`);
-    const entry = findSectionReport(coverage, report.doi);
+    const entry = findSectionReport(coverage, report);
     const ids = [...files.keys()].filter(id => id.startsWith(report.prefix) || id === report.reference).sort();
     if (!ids.includes(report.outline) || !ids.includes(report.reference)) throw new Error(`Incomplete branch ${report.prefix}`);
     for (const id of ids) {

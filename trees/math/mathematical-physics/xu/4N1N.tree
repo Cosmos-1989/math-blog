@@ -1,0 +1,32 @@
+\title{预解式差确定 tau 导数的符号}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Xu 2023，定理 5.8、式 (55)–(56)、引理 6.6](https://doi.org/10.1007/s00220-023-04687-9)，编号依正式 PDF}
+
+\p{固定质量 #{M>0}、空间 #{K=L^2(\mathbb R,\mathbb C^2)} 上的[投影协方差](4N13)，以及相接区间 #{A=(b_1,b)}、#{B=(b,c)}、#{C=(c,c_1)}，其中 #{b_1<b<c<c_1}。令 #{T_0(w)} 为[四项算子](4N14)，#{w=\beta^2-1/4}、#{\beta>1/2}，并以[指定的 tau 对数](4N15)定义}
+##{U(\beta)=u_M(c-b_1,\beta)+u_M(c_1-b,\beta)
+-u_M(c-b,\beta)-u_M(c_1-b_1,\beta).}
+\p{则精确的导数关系为}
+##{\partial_\beta U(\beta)=\frac{\beta}{w}\operatorname{Tr}T_0(w).}
+\p{\strong{证明。}先作有界算子的计算。对每个区间 #{I}，令 #{P_I} 为乘以 #{1_I} 的投影，在 #{P_I K} 上置 #{E_I=P_IC_MP_I}、#{D_I=E_I-1/2}，故 #{Q_I=E_I(1-E_I)=1/4-D_I^2}。令}
+##{\mathscr R_I(\beta)=\beta 1_I-w(\beta+D_I)^{-1}.}
+\p{#{D_I} 的谱在 #{[-1/2,1/2]}，故所用逆存在。原文定理 5.8 说明 #{\mathscr R_I} 正是其 Green 积分算子，其中单值参数为 #{\ell=l_1=-l_2}，#{e^{2\pi i\ell}=\frac{\beta -1 /2}{\beta+1/2}}。把 #{\beta} 换为 #{-\beta} 对应 #{\ell} 换为 #{-\ell}。由[谱演算](4N05)，}
+##{(\beta+D_I)^{-1}-(-\beta+D_I)^{-1}
+=2\beta(w+Q_I)^{-1}.}
+\p{代回 Green 算子的归一化，得到}
+##{\begin{aligned}
+\mathscr R_I(\beta)-\mathscr R_I(-\beta)
+&=2\beta 1_I-2\beta w(w+Q_I)^{-1}\\
+&=2\beta Q_I(w+Q_I)^{-1}.
+\end{aligned}}
+\p{将这些差按 #{AB+BC-B-ABC} 组合，延零到同一空间，所得算子记为 #{\mathscr B}。它等于 #{2\beta T_0(w)}，故为[迹类](0X01)。设 #{H=\operatorname{Tr}\mathscr B}，于是 #{H=2\beta\operatorname{Tr}T_0(w)}，这里是正号。}
+\p{剩余的深层输入是 Green 核的端点计算。在原文坐标 #{z=x/2}、#{m=M} 中，其式 (55) 的标量核取 #{\pi /m} 倍的 Green 算子差的第一对角元。这里始终使用该标量核的归一化，亦即命题 5.10 的端点展开和引理 6.6 的证明所用的核。其四项积分 #{R_1} 由式 (56) 满足 #{R_1=\pi H/(2m)}；引理 6.6 给出 #{mR_1=-\frac{i}{2}\partial_\ell U}。两式合起来是}
+##{H=-\frac{i}{\pi}\partial_\ell U.}
+\p{这个输入使用定理 5.8 的 Green 构造和引理 6.6 的端点证明；它先在原文条件 (45) 的小实 #{\ell} 范围成立，再按命题 3.15、推论 6.9 的解析延拓到 #{\beta>1/2}。区间坐标的酉变换保持迹，且区间 #{I} 的变形距离为 #{t=M|I|}，所以这里的 #{U} 与上述物理长度定义相同。}
+\p{最后对单值关系求导，得 #{\frac{d\ell}{d\beta}=\frac 1{2\pi iw}}。此处 #{\ell=l_1}，与微分方程中的 #{\nu=2\ell} 区分。由[链式法则](0A34)，}
+##{\partial_\beta U
+=\frac{\partial_\ell U}{2\pi iw}
+=\frac{H}{2w}
+=\frac{\beta}{w}\operatorname{Tr}T_0(w).}
+\p{这同时固定正熵积分中的符号：#{\frac{2\beta}{\beta+1/2}\operatorname{Tr}T_0(w)=2(\beta -1 /2)\partial_\beta U}。}

@@ -1,0 +1,11 @@
+\title{高概率热流界怎样推出无序平均消失}
+\date{2026-10-24}
+\taxon{Corollary}
+\author{author}
+\meta{source}{[De Roeck 等，Theorem 2，式 (2.12)及§18.3末段](icm2026-de-roeck)，显式期望估计}
+
+\p{对[非正常传导定理](4O0I)，固定 #{\gamma>0} 足够小，使 #{a=\gamma^{c'}<1} 且 #{\alpha=(c/5)\log(1/\gamma)>1}。则对无序的[期望](00L1)满足}
+##{0\leq\mathbb E(Lj_L)\leq C L^{1-\alpha}+C L\exp\left(-\frac{L^{1-a}}{\log L}\right)\longrightarrow 0.}
+\p{\strong{证明。}令 #{G_L} 为该定理的好事件。在 #{G_L} 上有 #{Lj_L\leq CL^{1-\alpha}}；在补集上，[一致热流界](4O0G)及[态期望估计](4O05)给出 #{j_L\leq C}。把 #{Lj_L} 分成 #{Lj_L1_{G_L}} 与 #{Lj_L1_{G_L^c}} 两项并积分，即得不等式。}
+\p{第一项由 #{\alpha>1} 趋于零。置 #{t=\log L}、#{b=1-a>0}，第二项除去常数为 #{\exp(t-e^{bt}/t)}。[指数函数](0A46)满足 #{e^x\geq x^3/6} 对 #{x\geq 0} 成立：从 #{e^x\geq 1} 出发，逐次积分三次即可。因此指数至多 #{t-b^3t^2/6\to -\infty}，第二项也趋于零。}
+\p{这里先固定满足强无序条件的 #{\gamma}，再让 #{L\to\infty}。好事件上的上界未必控制坏事件的贡献；对全部样本成立的热流范数界补足了这一环节。}

@@ -1,0 +1,16 @@
+\title{相对模算子的方向约定}
+\date{2026-10-24}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\psi,\phi} 是 #{M} 的忠实正规态，在[标准形式](4N04)中取锥代表 #{\xi_\psi,\xi_\phi}。定义稠密域 #{M\xi_\psi} 上的共轭线性算子}
+##{S_{\phi\mid\psi}(x\xi_\psi)=x^*\xi_\phi.}
+\p{由[循环分离性质](4N03)，该定义良好。若 #{x_n\xi_\psi\to 0} 且 #{x_n^*\xi_\phi\to\eta}，则对每个 #{y'\in M'}，}
+##{\langle y'\xi_\psi,\eta\rangle=\lim_n\langle x_n y'\xi_\psi,\xi_\phi\rangle
+=\lim_n\langle y'x_n\xi_\psi,\xi_\phi\rangle=0.}
+\p{#{M'\xi_\psi} 稠密，故 #{\eta=0}。这证明图的闭包仍是算子的图，即 #{S_{\phi\mid\psi}} 可闭；[闭算子与图范数](0GSM)中的图定义同样适用于共轭线性算子。记闭包为 #{\overline S_{\phi\mid\psi}}，定义}
+##{\Delta_{\phi\mid\psi}=\overline S_{\phi\mid\psi}^{\,*}\overline S_{\phi\mid\psi},\qquad
+D_M(\psi\Vert\phi)=-\int_0^\infty\log\lambda\,d\mu_{\xi_\psi}^{\Delta_{\phi\mid\psi}}(\lambda).}
+\p{对稠密定义的共轭线性算子 #{S}，定义 #{\eta\in D(S^*)} 当且仅当存在 #{\zeta\in H}，使对所有 #{\xi\in D(S)} 都有 #{\langle\zeta,\xi\rangle=\langle S\xi,\eta\rangle}；稠密性保证 #{\zeta} 唯一，置 #{S^*\eta=\zeta}。这与[无界线性伴随](0GSN)的定义域方法相同，但配对位置适应共轭线性。#{S^*S} 的域为 #{\{\xi\in D(S):S\xi\in D(S^*)\}}。闭算子的极分解定理保证 #{\Delta_{\phi\mid\psi}} 正自伴。又 #{\|\Delta_{\phi\mid\psi}^{1/2}\xi_\psi\|^2=\|\xi_\phi\|^2=1}，所以[谱积分](4N05)没有未定义的无穷相减。}
+\p{当 #{\phi=\psi} 时，极分解写成 #{\overline S_{\psi\mid\psi}=J_\psi\Delta_\psi^{1/2}}。Tomita–Takesaki 定理给出 #{J_\psi M J_\psi=M'} 和 #{\sigma_t^\psi(x)=\Delta_\psi^{it}x\Delta_\psi^{-it}\in M}；#{\sigma^\psi} 称模自同构群。一般理论还保证上述熵与标准形式的选择无关。两项定理的证明采用 [Witten，§§3、4.2](https://arxiv.org/abs/1803.04993v6) 所述模理论。}

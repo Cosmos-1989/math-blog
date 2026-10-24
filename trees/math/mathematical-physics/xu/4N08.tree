@@ -1,0 +1,18 @@
+\title{Kosaki 变分公式定义一般正规态相对熵}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{\psi,\phi} 是[von Neumann 代数](00N0) #{M} 上的[正规](0Z09)[状态](0Z03)，无须忠实。Kosaki 变分公式为}
+##{D_M(\psi\Vert\phi)=
+\sup_{k\in\mathbb N}\ \sup_x\left\{\log k-
+\int_{1/k}^{\infty}\left(\frac{\psi(x(t)^*x(t))}{t}
++\frac{\phi((1-x(t))(1-x(t))^*)}{t^2}\right)dt\right\}.}
+\p{内层遍历有限分段的 #{M} 值阶梯函数 #{x}，在充分大的 #{t} 上恒为零。每个截断积分都按[非负函数积分](00Q5)理解。这个公式给出 #{[0,+\infty]} 值，且对忠实态等于[相对模算子定义](4N06)。等价性是 Kosaki 的定理，见 [Xu，式 (7)](icm2026-xu) 及其参考文献 [22]。}
+\p{非忠实态仍在此定义内。例如矩阵情形 #{s(\psi)\nleq s(\phi)} 时得到 #{+\infty}。这里正规性始终是定义的假设。}
+\p{若 #{\psi} 是正规态，而 #{\varphi} 是非零有界正规正泛函，令 #{m=\varphi(1)>0}，定义}
+##{D_M(\psi\Vert\varphi)=D_M(\psi\Vert m^{-1}\varphi)-\log m.}
+\p{右边使用上述一般正规态定义，因而允许 #{\psi} 非忠实。对任意 #{c>0}，#{(c\varphi)/(c\varphi)(1)=\varphi /m}，故直接得到}
+##{D_M(\psi\Vert c\varphi)=D_M(\psi\Vert\varphi)-\log c.}
+\p{在双忠实情形，这与模算子谱积分一致：代表 #{c\varphi} 的锥向量是代表 #{\varphi} 的向量乘以 #{\sqrt c}，相对 Tomita 算子乘以 #{\sqrt c}，相对模算子乘以 #{c}，于是对数增加 #{\log c}。对一般 #{\varphi}，下界为 #{-\log\varphi(1)}；归一化后才得到非负性。}

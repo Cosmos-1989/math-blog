@@ -1,0 +1,11 @@
+\title{强无序量子链的随机 Hamiltonian}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[De Roeck 等，arXiv:2408.04338v2，§2.1，式 (2.1)–(2.5)](icm2026-de-roeck)}
+
+\p{固定整数 #{L\geq 2}，令 #{\Lambda_L=\{1,\ldots,L\}}。使用 [#{L} 比特寄存器](4F01) #{\mathcal H_L=(\mathbb C^2)^{\otimes L}} 及 [Pauli 矩阵](4F05) #{X_x,Z_x}，下标表示作用位置，其余位置作用恒等矩阵。把计算基的 #{0,1} 改记为 #{+1,-1}，于是 #{Z_x|\sigma\rangle=\sigma_x|\sigma\rangle}。}
+\p{非空离散区间是 #{I=\{a,a+1,\ldots,b\}\subset\Lambda_L}，其长度为 #{|I|=b-a+1}。沿用[自旋相互作用](4I01)的张量嵌入，对任意集合 #{S\subset\Lambda_L}，算子支撑于 #{S} 表示它具有 #{O_S\otimes 1_{S^c}} 的形式。给定与随机场无关的实数 #{\kappa_x} 及[自伴矩阵](0N0B) #{W_I}，要求 #{|\kappa_x|<C_\kappa}、#{\|W_I\|\leq 1} 且 #{W_I} 支撑于 #{I}；范数均为[算子范数](00M4)。常数 #{C_\kappa} 不随 #{L} 变化。}
+\p{令 #{\theta_1,\ldots,\theta_L} 为[独立同分布](00L3)的[实随机变量](00L0)，各自在 #{[0,1]} 上均匀分布，即区间 #{[a,b]\subset[0,1]} 的概率为 #{b-a}。对耦合强度 #{\gamma>0} 定义}
+##{H=\sum_{x=1}^L\theta_xZ_x+\sum_{x=1}^{L-1}\kappa_xZ_xZ_{x+1}+\sum_{I\subset\Lambda_L\,\text{区间}}(\gamma /2)^{|I|}W_I.}
+\p{记 #{H=\sum_I H_I}，其中 #{H_{\{x\}}=\theta_xZ_x+(\gamma /2)W_{\{x\}}}，#{H_{\{x,x+1\}}=\kappa_xZ_xZ_{x+1}+(\gamma /2)^2W_{\{x,x+1\}}}，较长区间只有第三项。随机性仅来自 #{\theta}，概率记为 #{\mathbb P}。强无序在这个归一化下表现为 #{\gamma} 很小；对角相互作用 #{\kappa_x} 只要求一致有界。扰动允许任意区间长度，按长度指数衰减。}

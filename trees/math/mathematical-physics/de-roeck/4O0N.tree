@@ -1,0 +1,12 @@
+\title{指数衰减传播权重的卷积界}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Nachtergaele–Sims–Young，§3.1.1，式 (3.8)–(3.13)](icm2026-de-roeck)，一维权重计算}
+
+\p{固定 #{0<a<1}，对非负整数 #{r} 定义 #{F_a(r)=a^r/(1+r)^3}。存在与 #{a} 无关的常数 #{C_F\geq 1}，使任意整数 #{x,y} 满足}
+##{\sum_{z\in\mathbb Z}F_a(|x-z|)F_a(|z-y|)\leq C_FF_a(|x-y|).}
+\p{\strong{可求和性。}置 #{S=\sum_{z\in\mathbb Z}(1+|z|)^{-3}}。把正整数按 #{2^k\leq z<2^{k+1}} 分组，该组贡献至多 #{2^k2^{-3k}=4^{-k}}。由[非负级数](0A38)的几何求和，#{S<\infty}；同时 #{\sup_x\sum_zF_a(|x-z|)\leq S}。}
+\p{\strong{卷积估计。}记 #{R=|x-y|}、#{r=|x-z|}、#{s=|z-y|}，三角不等式给出 #{r+s\geq R}，故 #{a^{r+s}\leq a^R}。若 #{r\geq R/2}，则 #{(1+R)^3/(1+r)^3\leq 8}；若此条件不成立，则 #{s\geq R/2}，有对应的不等式。因此}
+##{\frac{F_a(r)F_a(s)}{F_a(R)}\leq 8\big((1+r)^{-3}+(1+s)^{-3}\big).}
+\p{对 #{z} 求和，右端等于 #{16S}，可取 #{C_F=16S}。若只在一个有限区间内求和，所有项非负，故同一常数仍然有效。}

@@ -1,0 +1,13 @@
+\title{限制可观测代数不能增加相对熵}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{设 #{N\subset M} 是含同一单位的 von Neumann 子代数，#{\psi,\phi} 为 #{M} 上正规态。则}
+##{D_N(\psi|_N\Vert\phi|_N)\leq D_M(\psi\Vert\phi).}
+\p{\strong{证明。}[Kosaki 公式](4N08)中，每个 #{N} 值阶梯函数也是 #{M} 值阶梯函数，且积分值不变。先取内层上确界，再取 #{k} 的上确界，即得不等式。}
+\p{在 #{N=\mathbb C1} 上，两态相同。对标量 #{z}，配方得}
+##{\frac{|z|^2}{t}+\frac{|1-z|^2}{t^2}
+\geq\frac{1}{t(t+1)},\qquad z=\frac{1}{1+t}\text{ 时取等号}.}
+\p{由[对数积分](0A45)，#{\int_{1/k}^{\infty}dt/(t(t+1))=\log(k+1)}。将极小函数先截断在 #{R} 处，再在 #{[1/k,R]} 上一致阶梯逼近，积分误差趋零；尾部误差至多 #{1/R}。故标量熵为 #{\sup_k\log(k/(k+1))=0}。限制到标量代数便得一般的 #{D_M(\psi\Vert\phi)\geq 0}。}

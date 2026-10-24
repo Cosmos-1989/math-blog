@@ -1,0 +1,23 @@
+\title{有质量自由费米子的四项奇异极限}
+\date{2026-10-24}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{在固定[有质量自由费米子真空](4N13)中，以[分次乘积态相对熵](4N0L)定义分离等时区间的互信息 #{I_M(A:B)}。设 #{b_1<b<c<c_1}，则下述极限存在且有限：}
+##{\begin{aligned}
+&\lim_{\varepsilon\downarrow 0}\bigl[
+I_M((b_1,c):(c+\varepsilon,c_1))
+-I_M((b,c):(c+\varepsilon,c_1))\bigr]\\
+&=S_M(c-b_1)+S_M(c_1-b)-S_M(c_1-b_1)-S_M(c-b),\\
+&S_M(L)=-2\int_{1/2}^{\infty}u_M(L,\beta)\,d\beta.
+\end{aligned}}
+\p{#{u_M} 是[端点 tau 对数](4N15)。这是 [Xu 2023，推论 6.13](https://doi.org/10.1007/s00220-023-04687-9)。两项互信息在每个 #{\varepsilon>0} 时有限；式子先相减再取极限，不使用“无穷减无穷”。}
+\p{准自由态相对熵的预解式表达把差写成 #{\int_{1/2}^\infty\frac{2\beta}{\beta+1/2}\operatorname{Tr}T_\varepsilon\,d\beta}；这里 #{T_\varepsilon} 按[四项算子函数](4N14)的符号定义，正号由该页的标量熵积分确定。[一致迹界](4N14)允许取接触极限。置 #{A=(b_1,b)}、#{B=(b,c)}、#{C=(c,c_1)}，令 #{U} 为四个 #{u_M} 按 #{AB+BC-B-ABC} 的组合，由[预解式与 tau 导数的符号推导](4N1N)，}
+##{\frac{2\beta}{\beta+1/2}\operatorname{Tr}T_0(\beta^2-1/4)
+=2(\beta -1 /2)\partial_\beta U(\beta).}
+\p{在 #{[\alpha,R]} 上先积分分部，得到}
+##{\int_\alpha^R 2(\beta -1 /2)\partial_\beta U\,d\beta
+=\left[2(\beta -1 /2)U(\beta)\right]_\alpha^R-2\int_\alpha^R U(\beta)\,d\beta.}
+\p{由[单区间端点估计](4N16)，四项的边界项分别消失。令 #{\alpha\downarrow 1 /2}、#{R\to\infty}，便得极限 #{-2\int_{1/2}^\infty U\,d\beta}，正是所述 #{S_M} 的四项组合。Green 核端点恒等式是原文的研究输入，其归一化及上述符号计算分别列明。}
+\p{#{S_M} 是有限正则化函数。给 #{S_M} 加常数不改变四项组合；无穷远归一化固定了这里采用的常数。}

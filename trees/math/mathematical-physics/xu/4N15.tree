@@ -1,0 +1,18 @@
+\title{奇异极限所用的等单值变形函数}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{取实数 #{\beta>1/2}，以[自然对数](0A45)定义}
+##{a(\beta)=\frac 1{2\pi}\log\frac{\beta+1/2}{\beta -1 /2},\quad
+l_1=ia(\beta),\quad l_2=-ia(\beta),\quad \nu=l_1-l_2=2ia(\beta).}
+\p{Xu 2023 的等单值变形构造给出实函数 #{\psi(t,\beta)} 和 #{u(t,\beta)=\log\tau(t,\beta)}，其中 #{t>0} 是无量纲端点距离。这里 #{\tau} 指 [原文 §4.1](https://doi.org/10.1007/s00220-023-04687-9) 指定的 Sato–Miwa–Jimbo 函数；#{u} 取原文的 #{\tau_0=\log\tau}，其负数另记作 #{\tau_1}。以下方程固定采用 #{u=\tau_0} 的符号：}
+##{\frac d{dt}(t\psi')=\frac{\nu^2}{t}\tanh\psi(1-\tanh^2\psi)+\frac t2\sinh(2\psi),
+\qquad u''+\frac 1t u'=\sinh^2\psi.}
+\p{注意 #{\nu^2=-4a(\beta)^2}，不是积分变量 #{\beta^2}。该支在 #{t\to\infty} 满足}
+##{\psi(t,\beta)\sim -4\sinh(\pi a)K_{2ia}(t),\qquad u(t,\beta)\to 0,\qquad tu'(t,\beta)\to 0.}
+\p{这里可用[绝对收敛积分](00Q5)定义所需的修正 Bessel 函数 #{K_{2ia}(t)=\int_0^\infty e^{-t\cosh s}\cos(2as)\,ds}。它是实数。全局分支的存在和与费米子预解式的对应来自原构造，不由写出微分方程自动保证。}
+\p{对[物理坐标中的协方差](4N13) #{C_M}，固定定义 #{u_M(L,\beta)=u(ML,\beta)}。原文复坐标为物理坐标的一半，故其 #{2m|a_2-a_1|} 正好等于 #{ML}。[链式法则](0A34)于是给出}
+##{\frac d{dL}\bigl(L\partial_Lu_M(L,\beta)\bigr)
+=M^2L\sinh^2\psi(ML,\beta)\ge 0.}

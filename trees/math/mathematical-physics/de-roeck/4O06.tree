@@ -1,0 +1,12 @@
+\title{准局部共轭如何控制算子的空间尾部}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[De Roeck 等，Theorem 1](icm2026-de-roeck)的局部性条件}
+
+\p{在有限[量子链](4O01)上固定 #{0<q<1} 和[酉矩阵](4F01) #{U}。对区间 #{I} 定义 #{I_n=\{x\in\Lambda_L:\min_{y\in I}|x-y|\leq n\}}。称共轭 #{O\mapsto UOU^*} 满足衰减率 #{q} 的准局部展开，如果每个支撑于 #{I} 的算子 #{O} 都有}
+##{UOU^*=\sum_{n=0}^{\infty}O_n,\qquad \operatorname{supp}(O_n)\subset I_n,\qquad \|O_n\|\leq q^n\|O\|.}
+\p{级数按[算子范数](00M4)[绝对收敛](0A38)。截断到 #{n\leq r} 的算子支撑于 #{I_r}，误差至多 #{\|O\|q^{r+1}/(1-q)}：先对有限尾和用三角不等式，再用 #{\sum_{n=r+1}^{N}q^n=q^{r+1}(1-q^{N-r})/(1-q)} 并令 #{N\to\infty}。}
+\p{若 #{B} 支撑于 #{I_r} 之外，[不交支撑交换](4O02)使截断部分与 #{B} 的交换子为零，因而}
+##{\|[UOU^*,B]\|\leq \frac{2q^{r+1}}{1-q}\|O\|\|B\|.}
+\p{这一估计同时控制所有输入区间；要求 #{U^*OU} 也满足相同展开时，须另加逆向条件。对角化矩阵的存在本身没有这样的空间约束。}

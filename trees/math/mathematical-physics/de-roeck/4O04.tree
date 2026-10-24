@@ -1,0 +1,12 @@
+\title{热浴上确界与非平衡平均热流}
+\date{2026-10-24}
+\taxon{Definition}
+\author{author}
+\meta{source}{[De Roeck 等，§2.3，式 (2.7)–(2.11)及 Remark 1](icm2026-de-roeck)}
+
+\p{给定长度 #{L\geq 2} 的[随机量子链](4O01) #{H=\sum_IH_I}，在左右两端接有限维热浴空间 #{\mathcal H_{B,l},\mathcal H_{B,r}}。热浴数据 #{B} 包含这两个空间及其上的自伴矩阵 #{H_{B,l},V_{B,l},H_{B,r},V_{B,r}}，仅要求 #{\|V_{B,l}\|,\|V_{B,r}\|\leq 1}。所有算子在其余张量因子上补恒等矩阵，定义}
+##{H_{\rm tot}=H_{B,l}+V_{B,l}\otimes X_1+H+H_{B,r}+V_{B,r}\otimes X_L.}
+\p{把一个区间项按其最左端归属左右，置 #{H_{{\rm sys},l}=\sum_{\min I\leq L/2}H_I}，#{H_l=H_{B,l}+V_{B,l}\otimes X_1+H_{{\rm sys},l}}，#{H_r=H_{\rm tot}-H_l}。采用[能量变化率](4O03)的符号约定，#{J=i[H_{\rm tot},H_l]} 为流入左部的热流，#{J(t)=e^{itH_{\rm tot}}Je^{-itH_{\rm tot}}}。}
+\p{令 #{\mathcal R_B} 为总空间上的[密度矩阵](4F02)集合。固定无序样本，定义非平衡最大长期平均热流}
+##{j_L=\limsup_{T\to\infty}\ \sup_B\ \sup_{\rho\in\mathcal R_B}\frac 1T\int_0^T\operatorname{tr}(\rho J(t))\,dt.}
+\p{[上确界](0A37)遍及所有上述有限维热浴，维数与 #{H_{B,l},H_{B,r}} 的范数没有统一上限；#{\rho} 也无温度或乘积态限制。这里连续参数的[上极限](0F61)意为 #{\inf_{S>0}\sup_{T\geq S}}。先对 #{B,\rho} 取上确界，再令 #{T\to\infty}，最后才研究 #{L\to\infty}，并对无序样本求平均。若先固定 #{B} 再取时间极限，[能量差恒等式](4O03)会使结果恒为零。}

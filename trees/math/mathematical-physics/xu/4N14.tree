@@ -1,0 +1,24 @@
+\title{接触极限的可积一致界}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{固定[有质量协方差](4N13) #{C=C_M}，实数 #{b_1<b<c<c_1}，以及 #{0<\varepsilon<c_1-c}。记 #{A=(b_1,b)}、#{B=(b,c)}、#{C_\varepsilon=(c+\varepsilon,c_1)}。此处区间 #{C_\varepsilon} 与算子 #{C} 由下标区别。对可测集 #{E}，令 #{P_E} 为乘以 #{1_E} 的投影，并置}
+##{Q_E=P_EC(1-P_E)CP_E,\qquad g_w(Q)=Q(w+Q)^{-1},\quad w>0.}
+\p{#{Q_E\ge 0}，所以逆由[谱演算](4N05)定义。把各算子延零到整个一粒子空间，令}
+##{T_\varepsilon(w)=g_w(Q_{A\cup B})+g_w(Q_{B\cup C_\varepsilon})
+-g_w(Q_B)-g_w(Q_{A\cup B\cup C_\varepsilon}).}
+\p{这个符号约定对应正的二元熵 #{h(x)=-x\log x-(1-x)\log(1-x)}。对 #{0<x<1}，置 #{q=x(1-x)}、#{u=\beta -1 /2}，直接通分得到}
+##{\frac{2\beta}{\beta+1/2}\frac{q}{\beta^2-1/4+q}
+=\frac{x}{u+x}+\frac{1-x}{u+1-x}-\frac 1{u+1}.}
+\p{由[微积分基本定理](0A3C)从 #{u=0} 积分到 #{R}，上端为 #{x\log(R+x)+(1-x)\log(R+1-x)-\log(R+1)}，随 #{R\to\infty} 趋于零；下端给出 #{h(x)}。端点 #{x=0,1} 两边同为零。因此正二元熵的预解式积分取正号。对压缩算子 #{E=P_ECP_E}，#{E(1-E)=Q_E}；谱演算将此标量恒等式用于算子，而四项组合的可积性由下述估计保证。}
+\p{Xu 的定理 3.10 和命题 3.13 断言：对任意固定 #{1/2<\sigma<1}，当 #{\varepsilon} 足够小时，四项组合属于[迹类](0X01)，并有}
+##{\|T_\varepsilon(w)\|_1\le K w^{-\sigma},\qquad
+\operatorname{Tr}T_\varepsilon(w)\longrightarrow\operatorname{Tr}T_0(w).}
+\p{常数 #{K} 可依赖固定外部长度、#{M,\sigma}，但不依赖 #{\varepsilon,w}。这是利用分离支撑的 Schatten 估计逐项消去边界奇性的结论，见 [原文 pp.2399–2401](https://doi.org/10.1007/s00220-023-04687-9)。各单项不必迹类。}
+\p{因此可以交换下式的极限和积分：}
+##{\lim_{\varepsilon\downarrow 0}\int_{1/2}^\infty
+\frac{2\beta}{\beta+1/2}\operatorname{Tr}T_\varepsilon(\beta^2-1/4)\,d\beta
+=\int_{1/2}^\infty\frac{2\beta}{\beta+1/2}\operatorname{Tr}T_0(\beta^2-1/4)\,d\beta.}
+\p{证明这最后一步只需[支配收敛](0I8I)。当 #{\beta\downarrow 1 /2}，界为 #{O((\beta -1 /2)^{-\sigma})}，因 #{\sigma<1} 可积；当 #{\beta\to\infty}，界为 #{O(\beta^{-2\sigma})}，因 #{2\sigma>1} 可积。}

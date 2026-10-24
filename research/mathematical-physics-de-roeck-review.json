@@ -1,0 +1,1542 @@
+{
+  "schema_version": 1,
+  "review_type": "independent-frozen-whole-branch",
+  "report_id": "icm2026-de-roeck",
+  "reviewed_on": "2026-10-24",
+  "review_revision": 4,
+  "result": "pass",
+  "acceptance": true,
+  "summary": "Accepted the writer-frozen revision 3 at the exact packet SHA recorded below. All 23 atoms, the outline, reference, complete final packet, 148 shared recursive prerequisite bodies and two deduplication comparison pages were actually read. The final checkpoint covers 176 files; all hashes match, and the 171-node prerequisite graph has no cycle or missing destination. DR-F01, DR-F02 and the parent-reported formatting issue are verified resolved. Acceptance covers the stated mathematical, editorial and source-contract scope, not a complete re-proof of the primary papers, a build, rendered-site QA or publication.",
+  "input_packet": {
+    "id": "mathematical-physics-de-roeck-packet",
+    "path": "research/mathematical-physics-de-roeck-packet.json",
+    "present": true,
+    "read_in_full": true,
+    "expected_sha256": "26898063ab26a0f92af4349024008497b779f8e5759b6346ac5f72daef6b92de",
+    "reviewed_sha256": "26898063ab26a0f92af4349024008497b779f8e5759b6346ac5f72daef6b92de",
+    "matched_expected": true,
+    "freeze_revision": 3,
+    "reading_method": "The complete revision-3 packet was re-read field-by-field, including all claim_sources, proof_scope, reading_scope, owned and reuse records, dependency/application/navigation records, source records, errata, coverage, limitations, validation and freeze. The duplicate sources and source_records fields were confirmed identical. Exact comparison with revision 2 found only the equation-number correction and freeze metadata changes."
+  },
+  "scope": {
+    "owned_trees_read": 25,
+    "atoms_read": 23,
+    "outlines_read": 1,
+    "references_read": 1,
+    "shared_recursive_prerequisite_trees_read": 148,
+    "additional_deduplication_comparison_trees_read": 2,
+    "packet_read_in_full": true,
+    "writer_freeze_confirmed": true,
+    "parent_ready_received": true,
+    "all_owned_packet_hashes_matched": true,
+    "all_reviewed_repo_inputs_unchanged_at_checkpoint": true,
+    "public_notes_edited": false,
+    "builds_run": false,
+    "git_commands_run": false,
+    "subagents_used": false,
+    "only_written_path": "research/mathematical-physics-de-roeck-review.json",
+    "proof_boundary": "Local calculations and finite-dimensional proofs were checked directly. Research estimates were checked as precise cited contracts against the specifically listed source statements and proof sections. Neither complete verification of all 88 pages nor a full multiscale proof is claimed.",
+    "review_method": "Complete owned/reference reading at the first freeze, full re-reading of the three spacing-only changed pages at revision 2, complete revision-3 packet re-reading and exact revision diff, actual reading of all 148 shared recursive prerequisite bodies and two comparison pages, exact-source theorem and relevant proof reading, and a final unchanged-hash check. Shared-page reading validates the contracts used here, not every unrelated application or the entire primary literature behind those pages.",
+    "all_declared_recursive_prerequisites_read": true,
+    "declared_recursive_node_count": 171,
+    "semantic_prerequisite_closure_pass": true,
+    "mathematical_content_status": "No open findings remain within the stated mathematical, prerequisite, editorial and source-record review scope.",
+    "publication_status": "Not assessed; build, rendered-site inspection, git and publication were outside the reviewer authorization.",
+    "accepted_freeze_revision": 3
+  },
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "DR-F01",
+      "priority": "P2",
+      "category": "missing-prerequisite-contract",
+      "notes": [
+        "4O00",
+        "4O07",
+        "4O0D"
+      ],
+      "path": "trees/math/mathematical-physics/de-roeck/4O0D.tree",
+      "line": 13,
+      "title": "Provide the Lieb-Robinson estimate used to obtain quasi-locality",
+      "finding": "The outline, quasi-local diagonalization sketch and shell-decomposition note all invoke a Lieb-Robinson bound, but none states its contract or links to a genuine theorem page. A whole-tree search for Lieb-Robinson found only this branch's mentions. In particular, the passage from the summable local generators to a volume-independent distant-commutator bound currently has only a named theorem and an external section pointer.",
+      "correction": "Add a reusable atomic statement corresponding to arXiv:2408.04338v2, section 18.2 Theorem 4, with finite lattice, Hermitian local interaction, time dependence, decay kernel, interaction norm and constant uniformity declared. Link it at the actual uses and explain the interface to 4O0D. A precisely cited deep proof or clearly identified proof outline is acceptable; do not label it as a locally complete proof unless supplied.",
+      "acceptance_condition": "Read the new theorem and its actual prerequisite destinations, compare its estimate and hypotheses with the original Theorem 4, and verify the changed packet dependency and proof-scope records.",
+      "status": "resolved",
+      "resolution": "Read the final 4O0L finite continuous-interaction Lieb-Robinson theorem and proof, the continuous propagator construction 4O0M, and the explicit convolution weight 4O0N; compared with NSY Theorem 3.1 and its complete proof. 4O00, 4O07 and 4O0D link to the actual theorem. 4O0D supplies the volume-independent interval-to-shell estimate and reverse-conjugation argument. 4O07 explicitly cites the L1-time extension in source Corollaries 5-6, so the continuous local propagator proof is not silently extended. Packet prerequisite/application classification and final hashes match.",
+      "verified_files": [
+        {
+          "id": "4O00",
+          "path": "trees/math/mathematical-physics/de-roeck/4O00.tree",
+          "sha256": "44bc92ba53adf7f6939efb9249b9f0b69bbca98ed822e0af70221fb2666d9dff"
+        },
+        {
+          "id": "4O07",
+          "path": "trees/math/mathematical-physics/de-roeck/4O07.tree",
+          "sha256": "ed10cea671f2e22531dd8aca365596ddecdf1ec08d17950790efdcc56678095a"
+        },
+        {
+          "id": "4O0D",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0D.tree",
+          "sha256": "85096f14b0cddf61de51bebf796ad2dd3c083081f00812dbf08fb0e6c7f1ebcd"
+        },
+        {
+          "id": "4O0L",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0L.tree",
+          "sha256": "e4c07b164424a368d65e8099dabc0a9c34e374e73306e5f2f948ed49007859e8"
+        },
+        {
+          "id": "4O0M",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0M.tree",
+          "sha256": "63946e1ecb6064a8b4f673edfbc645ff54ae78d99c78686780646e5b20ba919b"
+        },
+        {
+          "id": "4O0N",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0N.tree",
+          "sha256": "94f2f6191f4af5f62f5ce7123ddff2b66feaa8515aed23767453bae5533b9264"
+        }
+      ]
+    },
+    {
+      "id": "DR-P01",
+      "priority": "P2",
+      "status": "resolved",
+      "category": "forester-compatibility",
+      "origin": "Parent-discovered formatting issue",
+      "notes": [
+        "4O0E",
+        "4O0I",
+        "4O0J"
+      ],
+      "title": "Remove unsupported TeX spacing escapes",
+      "resolution": "Each changed page was re-read in full. The only public changes are removal of the three unsupported spacing escapes after exp; all probability estimates and quantifier statements are unchanged. The revised hashes match packet.notes and freeze.hashes. No build was run by this reviewer.",
+      "verified_files": [
+        {
+          "id": "4O0E",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0E.tree",
+          "sha256": "499cd8221d72d43f87ee6f0ebd62d73afaac28434c0af68d550f4003b53da151"
+        },
+        {
+          "id": "4O0I",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0I.tree",
+          "sha256": "e27619c82ff1cf8422daa0136c4d7a90eb2a7fe6ab57795614989208c18fd541"
+        },
+        {
+          "id": "4O0J",
+          "path": "trees/math/mathematical-physics/de-roeck/4O0J.tree",
+          "sha256": "302809dd39741582c0c440a8322eb6fd9cba244a90ba9016d8d9b569f171d753"
+        }
+      ]
+    },
+    {
+      "id": "DR-F02",
+      "priority": "P3",
+      "category": "source-locator",
+      "status": "resolved",
+      "notes": [],
+      "path": "research/mathematical-physics-de-roeck-packet.json",
+      "json_pointer": "/source_errata/0/printed",
+      "title": "Correct the equation introducing the diagonal coupling symbol",
+      "finding": "The diagonal-bond-symbol entry says kappa_x was introduced in equation (2.1). In arXiv:2408.04338v2, equation (2.1) defines the Hilbert tensor product; the Hamiltonian containing kappa_x is equation (2.2). The public 4O01 model is correct.",
+      "correction": "Replace the final '(2.1)' in source_errata[id=diagonal-bond-symbol].printed by '(2.2)'. Do not change the public mathematical pages. Refresh freeze metadata as needed and provide the replacement frozen packet SHA.",
+      "acceptance_condition": "Read the replacement packet and exact diff, verify that this source locator is corrected, and recheck all frozen and reviewed-file hashes against the new parent-provided SHA.",
+      "mathematical_impact": "None; this is a source-record locator typo only.",
+      "resolution": "The revision-3 packet now correctly locates the Hamiltonian introducing kappa_x at equation (2.2). The original versioned text had already been checked directly: (2.1) is the Hilbert tensor product and (2.2) is the Hamiltonian. Read the complete replacement packet and exact diff. Only source_errata/0/printed and freeze revision/previous SHA/repair scope changed. All 25 public branch/reference hashes, 148 recursive prerequisites and two comparison hashes remain unchanged.",
+      "verified_files": [
+        {
+          "id": "mathematical-physics-de-roeck-packet",
+          "path": "research/mathematical-physics-de-roeck-packet.json",
+          "sha256": "26898063ab26a0f92af4349024008497b779f8e5759b6346ac5f72daef6b92de"
+        }
+      ]
+    }
+  ],
+  "source_reading": [
+    {
+      "source": "https://arxiv.org/abs/2408.04338v2",
+      "method": "Live arXiv abstract metadata and the author's locally downloaded versioned PDF text /private/tmp/de-roeck-2408.04338v2.txt",
+      "actual_scope": "Metadata and abstract; sections 1, 2, 3.1-3.2 and the beginning of 3.3 (local text lines 1-460); exact model and Theorems 1-2 re-read at lines 112-345. Section 6.2 tail, 6.3 and beginning of 6.4 through equations 6.9-6.13 (lines 1025-1118); section 9.1 through Proposition 2, Remark 6 and the Corollary 1 statement (lines 1554-1669). Section 17 opening Proposition 11 and section 17.1 through Lemma 23 and its first estimates (lines 3860-3990). Section 18 in full (lines 4241-4635), including Proposition 13, Theorem 4, Corollaries 5-6, Lemma 29 and equations 18.12-18.15. Existing rendered source pages 4 and 81 visually inspected. No claim to read the writer's additional section 10.3 strategy range or all technical sections.",
+      "not_claimed": "Full independent reading or verification of all technical sections 5-17 or all 88 pages.",
+      "pdf_sha256": "a4cdfbea1d1445534a75b271f43f1d5584b432b09810bf03634ee07ee14f97a8"
+    },
+    {
+      "source": "research/icm2026-mathematical-physics-final-source-check.json",
+      "actual_scope": "Read the parent's official-roster and original-video metadata verification, including exact title, channel, collaborators and separation from the research paper. Re-read this record in full at the final checkpoint. Recomputed the source HTML hash, but did not independently inspect all original HTML, watch or listen to the talk, or read a transcript. No proceedings chapter identity is claimed."
+    },
+    {
+      "source": "https://arxiv.org/abs/1810.02428v2",
+      "method": "Live versioned arXiv metadata, then complete local extracted text of sections 3.1.1-3.1.2 at /private/tmp/de-roeck-nsy-1810.02428v2.txt lines 904-1360.",
+      "actual_scope": "Finite-volume setup, interaction F-norm and time dependence; Theorem 3.1, Lemma 3.2, their complete proofs, convolution over intersecting-support paths, simplex integration and vanishing remainder. Compared with the local finite-qubit proof in 4O0L, the propagator construction in 4O0M and the explicit weight bound in 4O0N.",
+      "not_claimed": "Reading or verification of the full 106-page paper, infinite-volume dynamics, unbounded on-site Hamiltonians, spectral flow, or every theorem in the source.",
+      "pdf_sha256": "42fc3029fa582f14a01f858463f481d5cacf21ed785791d32c72dd9df97f66cd"
+    }
+  ],
+  "actual_scopes": {
+    "checked_contracts": [
+      "Independent uniform [0,1] random fields, deterministic bounded diagonal coupling, arbitrary exponentially decaying Hermitian interval perturbations",
+      "Thermal-bath and initial-state suprema precede the long-time limsup",
+      "No absolute value inserted into the heat-current definition; nonnegativity follows from a traceless time-average operator",
+      "Theorem 1 exponentially small success lower bound is not a high-probability full-chain localization theorem",
+      "Theorem 2 polynomial current bound and fixed-coupling expectation consequence; no claimed exact transport exponent or general MBL",
+      "Fixed C_kappa precedes existence of gamma_0,c,c'; constants are uniform in L, gamma and the permitted deterministic coupling data. Theorem 1 gives one unitary for every interval observable on the event.",
+      "4O0E uses disjoint blocks whose good events depend only on their internal independent fields. The explicit 3/4 log L construction has a sufficiently-large-L threshold depending on fixed a, and does not claim a uniform gamma threshold.",
+      "4O0I distinguishes that elementary large-L proof from the exact uniform finite-size theorem quoted from the primary paper.",
+      "4O0J fixes gamma before L tends to infinity, requires alpha(gamma)>1, and estimates the bad event with the uniform all-sample current bound rather than an unjustified dominated-convergence step.",
+      "4O0L matches the finite-spin weakening of NSY Theorem 3.1; the local interaction-picture derivative, recursive commutator estimate, F-kernel convolution, time simplex and factorial remainder were checked.",
+      "4O0D counts at most 2r pairs at distance r across the boundary of a one-dimensional interval and gets support-size-independent shell bounds; the inverse conjugation uses the swapped-support commutator identity.",
+      "4O0K distinguishes bath-optimized current from linear-response conductance, finite-size conductivity and general infinite-chain MBL.",
+      "4O07 explicitly separates the continuous local Lieb-Robinson proof from the time-integrable extension cited in original Corollaries 5-6.",
+      "Packet claim_sources covers every atom, and each proof_scope distinguishes local proof, cited theorem, proof outline and cited spatial estimate.",
+      "Official invited-talk metadata supports report identity only; 2408.04338v2 is an associated research paper and is never represented as the proceedings chapter.",
+      "All 148 actual recursive prerequisites were read by the reviewer, including pages the writer honestly marked structural-only. This does not imply every unrelated statement or primary source behind them was independently re-proved."
+    ],
+    "pending": [],
+    "shared_read_count": 148,
+    "locally_checked_proofs": [
+      "4O02 disjoint-support commutation and norm bound",
+      "4O03 finite-dimensional Heisenberg derivative and energy boundary identity",
+      "4O05 maximal density-matrix expectation and nonnegative optimized current",
+      "4O06 geometric quasi-local tail and distant commutator estimate",
+      "4O08 conserved spins and rank-one joint projections",
+      "4O09 one-step homological equation and convergent commutator remainder",
+      "4O0A single uniform random-field conditioning estimate",
+      "4O0B norm convergence of ordered unitary products",
+      "4O0C finite Pauli conditional expectation and contraction",
+      "4O0D shell telescoping and Lieb-Robinson application",
+      "4O0E independent logarithmic-block probability estimate",
+      "4O0F bath-uniform time boundary estimate",
+      "4O0G uniform current bound by interval counting",
+      "4O0J explicit expectation decay",
+      "4O0L finite-dimensional Lieb-Robinson estimate",
+      "4O0M continuous time-dependent unitary propagator",
+      "4O0N summable exponential-polynomial weight convolution"
+    ],
+    "honestly_unexpanded_proofs": [
+      {
+        "note": "4O07",
+        "scope": "The all-scale nonresonance probability and summable local generator estimates are cited from 2408.04338v2 sections 5-17 and 18.1-18.2; the local text is explicitly a proof outline. No full MBL or full independent reproduction of that proof is claimed."
+      },
+      {
+        "note": "4O0H",
+        "scope": "The diagonal interval expansion and the spatial summation yielding the exponent c/5 are cited from equations 18.12-18.15. The decomposition and all five commutator terms are checked locally; the detailed spatial estimate is explicitly treated as a research input."
+      },
+      {
+        "note": "4O0I",
+        "scope": "The final time-averaging deduction is checked locally conditional on the two preceding research inputs. Uniform finite-size constants are quoted from source Theorem 2, not inferred from the fixed-gamma elementary block lemma."
+      },
+      {
+        "note": "4O07",
+        "scope": "The L1-in-time extension used for the limiting generator is cited from original section 18.2 Corollaries 5-6. The local 4O0L-4O0M proofs establish the finite continuous case and do not claim a complete local proof of that extension."
+      }
+    ],
+    "duplication_check": "Whole-tree searches for Lieb-Robinson, Pauli averaging, quasi-locality, heat-current bottlenecks and unitary propagators found no prior matching atomic theorem pages outside this branch; existing register, Pauli, Hermitian matrix, operator norm, probability, integration and real-analysis definitions are reused.",
+    "frozen_owned_read": "All final 24 content trees 4O00-4O0N and the reference tree were read in full at revision 1; all revision-2 changed pages 4O0E, 4O0I and 4O0J were re-read in full. At revision 3 all 25 files are hash-identical. The complete final packet was re-read field-by-field, including every recorded claim, source, proof scope, reuse contract and freeze value.",
+    "shared_read_ids": [
+      "0001",
+      "004M",
+      "004N",
+      "004P",
+      "004Q",
+      "004R",
+      "004S",
+      "00BA",
+      "00BH",
+      "00CS",
+      "00CY",
+      "00D0",
+      "00D3",
+      "00D7",
+      "00D8",
+      "00D9",
+      "00DC",
+      "00DE",
+      "00E0",
+      "00E1",
+      "00E2",
+      "00E4",
+      "00E5",
+      "00E7",
+      "00E8",
+      "00EA",
+      "00EB",
+      "00EC",
+      "00ED",
+      "00EE",
+      "00EF",
+      "00EG",
+      "00EI",
+      "00EJ",
+      "00EK",
+      "00EL",
+      "00EM",
+      "00EN",
+      "00EP",
+      "00EQ",
+      "00ER",
+      "00ET",
+      "00EV",
+      "00EW",
+      "00EX",
+      "00F3",
+      "00FP",
+      "00G0",
+      "00G1",
+      "00G2",
+      "00G3",
+      "00GC",
+      "00GK",
+      "00GL",
+      "00GM",
+      "00GN",
+      "00I0",
+      "00J0",
+      "00J1",
+      "00J2",
+      "00J3",
+      "00J4",
+      "00J7",
+      "00JC",
+      "00JD",
+      "00JE",
+      "00JG",
+      "00JH",
+      "00JK",
+      "00JO",
+      "00JZ",
+      "00L0",
+      "00L1",
+      "00L2",
+      "00L3",
+      "00L4",
+      "00M1",
+      "00M4",
+      "00M6",
+      "00MA",
+      "00MH",
+      "00MI",
+      "00MK",
+      "00MQ",
+      "00MR",
+      "00MS",
+      "00MT",
+      "00MU",
+      "00O9",
+      "00OC",
+      "00Q0",
+      "00Q1",
+      "00Q2",
+      "00Q3",
+      "00Q4",
+      "00Q5",
+      "00Q9",
+      "00QA",
+      "00QB",
+      "00QD",
+      "00SO",
+      "00TV",
+      "00XV",
+      "0120",
+      "0121",
+      "0122",
+      "0127",
+      "0136",
+      "01D2",
+      "0A0B",
+      "0A0H",
+      "0A30",
+      "0A31",
+      "0A32",
+      "0A33",
+      "0A34",
+      "0A35",
+      "0A37",
+      "0A38",
+      "0A39",
+      "0A3A",
+      "0A3B",
+      "0A3C",
+      "0A3K",
+      "0A3T",
+      "0A3Z",
+      "0A40",
+      "0A44",
+      "0A45",
+      "0A46",
+      "0A7A",
+      "0A87",
+      "0ALH",
+      "0ALX",
+      "0F0B",
+      "0F0C",
+      "0F0F",
+      "0F40",
+      "0F4E",
+      "0F61",
+      "0H53",
+      "0N0A",
+      "0N0B",
+      "4F01",
+      "4F02",
+      "4F04",
+      "4F05",
+      "4I01"
+    ],
+    "additional_comparison_pages": [
+      "4I0H",
+      "0A3Y"
+    ],
+    "editorial_review": "All owned public bodies read for one mathematical task per atom, locally declared symbols and assumptions, actual prerequisite destinations and separation of applications. Exact source limitations retain necessary mathematical qualifications. A targeted final scan found no unsupported spacing escapes or specified AI-style process vocabulary in the owned bodies. Research source/reading limitations remain in their appropriate source and review records.",
+    "terminology": "Writer's terminology evidence was read. Banana-space lookup was unavailable in the recorded attempt; this reviewer does not certify a successful external terminology comparison.",
+    "acceptance_boundary": "The explicitly identified deep research inputs remain cited or outlined rather than locally re-proved. Passing this branch does not claim a full reading or independent proof verification of the complete 88-page DGHp paper, the complete 106-page NSY paper, or an unidentified proceedings chapter."
+  },
+  "reviewed_files": [
+    {
+      "id": "4O00",
+      "path": "trees/math/mathematical-physics/de-roeck/4O00.tree",
+      "sha256": "44bc92ba53adf7f6939efb9249b9f0b69bbca98ed822e0af70221fb2666d9dff",
+      "role": "owned-outline"
+    },
+    {
+      "id": "4O01",
+      "path": "trees/math/mathematical-physics/de-roeck/4O01.tree",
+      "sha256": "faf1e392846c4fd2f48772f1d6bc5bbd391460dea89abeb06067ebd04265671b",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O02",
+      "path": "trees/math/mathematical-physics/de-roeck/4O02.tree",
+      "sha256": "7dfdc156a7c00178942cca4ab9f720849e5743bf0e442c435ec9cb71989b6bd7",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O03",
+      "path": "trees/math/mathematical-physics/de-roeck/4O03.tree",
+      "sha256": "4736149ac1d4d36718195b9687a4244d1bfb4aff09514981d8ea6deafc3b68aa",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O04",
+      "path": "trees/math/mathematical-physics/de-roeck/4O04.tree",
+      "sha256": "47b82172b5cb60d262f83e3741c1f3d18f39c9d0443900de7e5178c52594a712",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O05",
+      "path": "trees/math/mathematical-physics/de-roeck/4O05.tree",
+      "sha256": "2fdad74a757d82287c5c4d181f993d5f8f5539ebc31a852087a7743f071d3eae",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O06",
+      "path": "trees/math/mathematical-physics/de-roeck/4O06.tree",
+      "sha256": "586e7674ca8a0ebe02a0bf1ebeb32e1c5432f1945ce9c8dab058b76ad8280d7e",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O07",
+      "path": "trees/math/mathematical-physics/de-roeck/4O07.tree",
+      "sha256": "ed10cea671f2e22531dd8aca365596ddecdf1ec08d17950790efdcc56678095a",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O08",
+      "path": "trees/math/mathematical-physics/de-roeck/4O08.tree",
+      "sha256": "acb20cd09eb78fe3f5d9840d12d3b89f4d4cdfde6e37e6b31b53fec6685b67dd",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O09",
+      "path": "trees/math/mathematical-physics/de-roeck/4O09.tree",
+      "sha256": "2d8df40a299ba6df0a0d143044d03dac109f49b40d44482028d9c7ce6ec4c60e",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0A",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0A.tree",
+      "sha256": "0c1c635f6f4902abced9a8d6830416474836eb6b0b669415da0abb02a325ca2b",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0B",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0B.tree",
+      "sha256": "7f0734c9f8fc4369a720719a737e00392a51d49d5f5be799bb7ad8d29eca3521",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0C",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0C.tree",
+      "sha256": "b63c34d31d0f5f1b108e8923d5855e8dd69b260b127b004c5d0afe3047063257",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0D",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0D.tree",
+      "sha256": "85096f14b0cddf61de51bebf796ad2dd3c083081f00812dbf08fb0e6c7f1ebcd",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0E",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0E.tree",
+      "sha256": "499cd8221d72d43f87ee6f0ebd62d73afaac28434c0af68d550f4003b53da151",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0F",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0F.tree",
+      "sha256": "11942856b83a4681ca32a25251617bf7716c341e8da0149d3ab8c45f23a39ee6",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0G",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0G.tree",
+      "sha256": "8614526de201b20bad076cca2c00697a47b62532141c3013d6f621a6146357eb",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0H",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0H.tree",
+      "sha256": "bc8eca572597bdd4ba3d34d27b2ba4c6a5d11f2b9c75c529d6d985641cb4445c",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0I",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0I.tree",
+      "sha256": "e27619c82ff1cf8422daa0136c4d7a90eb2a7fe6ab57795614989208c18fd541",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0J",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0J.tree",
+      "sha256": "302809dd39741582c0c440a8322eb6fd9cba244a90ba9016d8d9b569f171d753",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0K",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0K.tree",
+      "sha256": "d8ca37e280cb4e2d75a0d53e7e71e05f23f2aad6eee846d2e2b48e08c013a233",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0L",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0L.tree",
+      "sha256": "e4c07b164424a368d65e8099dabc0a9c34e374e73306e5f2f948ed49007859e8",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0M",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0M.tree",
+      "sha256": "63946e1ecb6064a8b4f673edfbc645ff54ae78d99c78686780646e5b20ba919b",
+      "role": "owned-atom"
+    },
+    {
+      "id": "4O0N",
+      "path": "trees/math/mathematical-physics/de-roeck/4O0N.tree",
+      "sha256": "94f2f6191f4af5f62f5ce7123ddff2b66feaa8515aed23767453bae5533b9264",
+      "role": "owned-atom"
+    },
+    {
+      "id": "icm2026-de-roeck",
+      "path": "trees/references/icm2026-de-roeck.tree",
+      "sha256": "4aca38e9b5a54cd540541e8ed036201c4d79888ccb71be107a781ea903a658df",
+      "role": "owned-reference"
+    },
+    {
+      "id": "mathematical-physics-de-roeck-packet",
+      "path": "research/mathematical-physics-de-roeck-packet.json",
+      "sha256": "26898063ab26a0f92af4349024008497b779f8e5759b6346ac5f72daef6b92de",
+      "role": "frozen-packet"
+    },
+    {
+      "id": "0001",
+      "path": "trees/math/algebra/0001.tree",
+      "sha256": "840f871f9dc917757c082aacbc7efc3832ee3647b52e7c234d020183fd4089b8",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "004M",
+      "path": "trees/math/analysis/004M.tree",
+      "sha256": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "004N",
+      "path": "trees/math/analysis/004N.tree",
+      "sha256": "dcdb81e51a6a4e76da31d63bd44e9ab22faa8dc5e9da2b525fde7774cff09fec",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "004P",
+      "path": "trees/math/analysis/004P.tree",
+      "sha256": "8c604510dca9a827c0f692eb717b189367cd6a4839a8d459c74ce947fcb057ba",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "004Q",
+      "path": "trees/math/analysis/004Q.tree",
+      "sha256": "d917c8fe0cac2c0ee2c6085eb0e80d2da90993f57a0f240ac097d556d40089b6",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "004R",
+      "path": "trees/math/analysis/004R.tree",
+      "sha256": "6104895187a559521f81dc8d9549edbab4661da86450abc423796df83bc2aba0",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "004S",
+      "path": "trees/math/analysis/004S.tree",
+      "sha256": "14aa523ac3f38eca6e202634b035311e0ad148bce16b2302d4924cf83ea2520b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00BA",
+      "path": "trees/math/logic/research/00BA.tree",
+      "sha256": "e494bb64dc5e3438a28553265b38751c23ddad3a43f7c7e10af672e6b83152d3",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00BH",
+      "path": "trees/math/logic/research/00BH.tree",
+      "sha256": "8612394754bd3ee4e88ada78b4a398cc83c1fb4b3d96aada442a036a7dd8c185",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00CS",
+      "path": "trees/math/logic/research/00CS.tree",
+      "sha256": "862d9d3373c74e2173b8a41375b9b30b260e468c7ee1966e4c5b145069118cb2",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00CY",
+      "path": "trees/math/logic/research/00CY.tree",
+      "sha256": "81bbd50c462de0b3facbc855a291dce1b846e0d4f29c5c6fec89cbef9d5b0076",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00D0",
+      "path": "trees/math/logic/research/00D0.tree",
+      "sha256": "cb2fac15a062605ac3f19c049bd89d6d79c038616f85e82a307149828b32d810",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00D3",
+      "path": "trees/math/logic/research/00D3.tree",
+      "sha256": "8df12ff71a7daed42b0451d26d903a1f66e9ae37657cc1c4aa63803a7002ca0e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00D7",
+      "path": "trees/math/logic/research/00D7.tree",
+      "sha256": "f996859dd596668f70bd3d898c5ebd10812a359690710139ddb64a29037b16eb",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00D8",
+      "path": "trees/math/logic/research/00D8.tree",
+      "sha256": "77d670fd0b12d13e63eea486f0f572dde9d35d32f6afad63aa22a055c4108be7",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00D9",
+      "path": "trees/math/logic/research/00D9.tree",
+      "sha256": "346b0469756db7156a59408cd63de08ac61213d8b7a5843c9861af4fd1c32286",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00DC",
+      "path": "trees/math/logic/research/00DC.tree",
+      "sha256": "f46bcafac2b4212c2d49634a05d4be8e12edbb58d7f856cbb75c588680240800",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00DE",
+      "path": "trees/math/logic/research/00DE.tree",
+      "sha256": "5e00d0b024e373c0df6b3c37f1581f23fbbdb0ea207d520e1990bad3c278cd99",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E0",
+      "path": "trees/math/topology/atomic/00E0.tree",
+      "sha256": "a3ddabe5504d33013264b6363fde033ade0a0cebb7f7ae2a0c7dc8b43745bcaf",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E1",
+      "path": "trees/math/topology/atomic/00E1.tree",
+      "sha256": "7bbb1798f7d4bad94bdcbed42410eb0e524a66de532d1169d9416ae21c9bfc94",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E2",
+      "path": "trees/math/topology/atomic/00E2.tree",
+      "sha256": "25ad02b3d97f062fa9fd4c1dd1395f85a92d4fcabbf57b9e91bf3d1c1a2d13ba",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E4",
+      "path": "trees/math/topology/atomic/00E4.tree",
+      "sha256": "e1b0e50815783f1a224b10e47195b64ab55d4ba2a03bfaf21c6a6fbc7e72ff60",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E5",
+      "path": "trees/math/topology/atomic/00E5.tree",
+      "sha256": "2d6167b8e561456daf431ee0750406bc26d89ddf18c0f2c6c17f443aff5287fc",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E7",
+      "path": "trees/math/topology/atomic/00E7.tree",
+      "sha256": "fb5f5364a8ec8ad39d40a589c44140032110f7bd89b24ed82a5b8dadf06c8462",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00E8",
+      "path": "trees/math/topology/atomic/00E8.tree",
+      "sha256": "d14050ec5e41f57c8a659b1b779c38a2842e7cf62cbb3ab7e5fd2dca3d5c68ff",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EA",
+      "path": "trees/math/topology/atomic/00EA.tree",
+      "sha256": "751d0834bac8d124b7c04df2d43d589b1198ad2bf1cd831bb6c47cb464793572",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EB",
+      "path": "trees/math/topology/atomic/00EB.tree",
+      "sha256": "8e22829c4894ba74d1a0a09594179ef3d0820f1800176c1e54dc0a41bb80e0b5",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EC",
+      "path": "trees/math/topology/atomic/00EC.tree",
+      "sha256": "5b6725afe7bdf8bed92ef8dea01ab137a77c44e5749cc57e727ad2d29fc203a2",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00ED",
+      "path": "trees/math/topology/atomic/00ED.tree",
+      "sha256": "9c7e7161495578bc212eabf228407461b232d0f59a0f2f48ef213d70fd2d69f1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EE",
+      "path": "trees/math/topology/atomic/00EE.tree",
+      "sha256": "e7eb24fcabbc9a2b7ec0eab4247195699f86f621c7767e39403f9df65d531f97",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EF",
+      "path": "trees/math/topology/atomic/00EF.tree",
+      "sha256": "ce3e05f51854c65c180528f2ea7fb6ab9011e970ada9f8ccadf71efdb6ba7817",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EG",
+      "path": "trees/math/topology/atomic/00EG.tree",
+      "sha256": "766549dd9066123b3244ab5aacca765e0c9b79b65b8e517e0563e5f30eee7c3c",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EI",
+      "path": "trees/math/topology/atomic/00EI.tree",
+      "sha256": "c2a82d7c142e69f768510e1d9486e4395b7a865d45d7d5922aff30b755c8ce76",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EJ",
+      "path": "trees/math/topology/atomic/00EJ.tree",
+      "sha256": "e9959f3c22f0b72531b4535bb246a2c4102de3cf24af21f1268bf4944d22c96a",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EK",
+      "path": "trees/math/topology/atomic/00EK.tree",
+      "sha256": "4448c8affbb92de46dc87e1fba269199feddd08122511e6bf65a9ede717b63c0",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EL",
+      "path": "trees/math/topology/atomic/00EL.tree",
+      "sha256": "c8b9aa9adb511ff37d0dc9c721919f4445b4ba32c723461e2695d897bfca6e7f",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EM",
+      "path": "trees/math/topology/atomic/00EM.tree",
+      "sha256": "86cce42169b3ad12bd528d6095e95a62b67c2a325754e7e01f346279acffead6",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EN",
+      "path": "trees/math/topology/atomic/00EN.tree",
+      "sha256": "f582447ca6067c0f9fee70a37296fc3f522693c9c045a3fd15dc198c7fd348ed",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EP",
+      "path": "trees/math/topology/atomic/00EP.tree",
+      "sha256": "a7f03d2ff9ecd62c6a8ec9422e6a505dc9a64291fae4305bf676e59d8eeda4fc",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EQ",
+      "path": "trees/math/topology/atomic/00EQ.tree",
+      "sha256": "e2290059ebf1bc9985d6e8aa66174c2133fbd79e611b655c458c181631d2c29f",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00ER",
+      "path": "trees/math/topology/atomic/00ER.tree",
+      "sha256": "10fd11ea8002fc8a9dfb7765b1eeb84366e14b6fc4f4f011f58daa094f54f5b4",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00ET",
+      "path": "trees/math/topology/atomic/00ET.tree",
+      "sha256": "6357be9faeffcf933649b7d12f4acf95d3422ad648ea381d9fb5a2f14da9cb3e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EV",
+      "path": "trees/math/topology/atomic/00EV.tree",
+      "sha256": "6817205b4e7f259f6f2cc3776f7653af6e1fb7654fb9ec2b870bfece45201741",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EW",
+      "path": "trees/math/topology/atomic/00EW.tree",
+      "sha256": "be3f45510d200fc767fec670a2d933731373848a083433a0161d3beaeca134a9",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00EX",
+      "path": "trees/math/topology/atomic/00EX.tree",
+      "sha256": "aef2d2e58100586647151d5736d69b70db72f744ea1b4692841b0dccc1888819",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00F3",
+      "path": "trees/math/topology/atomic/00F3.tree",
+      "sha256": "d3033309a25d191fc4a27847f03dc2f5128c6780a506f6483ca026b6a3ce4706",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00FP",
+      "path": "trees/math/topology/atomic/00FP.tree",
+      "sha256": "d8ebcccb928263127fadd50f948647d39c1a9976157464ac2111052cfe5be156",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00G0",
+      "path": "trees/math/algebra/atomic/00G0.tree",
+      "sha256": "76dc4be29be763e244cb0a503ea8412c28ab6abc5a133b9b0d78ef3e62ea4e0e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00G1",
+      "path": "trees/math/algebra/atomic/00G1.tree",
+      "sha256": "88772229ae15cf23173451c20932194cd22b0c5da5dafd3be0f273e6ac08163c",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00G2",
+      "path": "trees/math/algebra/atomic/00G2.tree",
+      "sha256": "01199f95ad11226ffdb16888ee7292375ab175a16b7b51ae6044091b0178f9be",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00G3",
+      "path": "trees/math/algebra/atomic/00G3.tree",
+      "sha256": "2d397fd9103f28936fdb11b9c8754b7b4fc73de05c4eb8bc96878eb9d4fd54c7",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00GC",
+      "path": "trees/math/algebra/atomic/00GC.tree",
+      "sha256": "996d480e73e1b22e0aa6b8ee814d1bbe5e55fdedf4cb7a91de6a576d4e50e348",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00GK",
+      "path": "trees/math/algebra/atomic/00GK.tree",
+      "sha256": "6b348745323fb65053e8c2b920b8abeed762344b56db55afa92c67516f64ac8b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00GL",
+      "path": "trees/math/algebra/atomic/00GL.tree",
+      "sha256": "81cb43f10c55be151315de7536e1fc063f0e6ad515b35a21ecc41f1d8a6dcc6b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00GM",
+      "path": "trees/math/algebra/atomic/00GM.tree",
+      "sha256": "0d12b6def14f1a7b127630a2436a1bb88c7e0216eea271e13be759ef219c18f7",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00GN",
+      "path": "trees/math/algebra/atomic/00GN.tree",
+      "sha256": "317a39f7e8763e8543e710b53a8aff0af26e9693d082a68468b7de6ba8a52ed8",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00I0",
+      "path": "trees/math/category/atomic/00I0.tree",
+      "sha256": "2bb7c735089d25514095f4d5cfd370d4a20fb2696c167aec9bd162c7a2e5d5d3",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00J0",
+      "path": "trees/math/category/quantum/atomic/00J0.tree",
+      "sha256": "d7bea0653051a4b252f0b39dc83df0322eaf5a80525ba139292a35b3ca01e0b2",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00J1",
+      "path": "trees/math/category/quantum/atomic/00J1.tree",
+      "sha256": "fcd98b27adb3559e8173f6c0b402276226284d29f8103935cccf028b7b00aec2",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00J2",
+      "path": "trees/math/category/quantum/atomic/00J2.tree",
+      "sha256": "a638e4569e1432133c9145b90d2595cc9456d71f76e79113307ff01cd51d96f4",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00J3",
+      "path": "trees/math/category/quantum/atomic/00J3.tree",
+      "sha256": "7ddf868c5230f9427826083f1bb8902726827151f7df49cdfe2757a51c9b42a7",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00J4",
+      "path": "trees/math/category/quantum/atomic/00J4.tree",
+      "sha256": "86715d2f011124a1acca541a050fffa759aafb45629a84cec0a396b05f8be198",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00J7",
+      "path": "trees/math/category/quantum/atomic/00J7.tree",
+      "sha256": "4d92d917d431f18abc0438e64117f346d5e9bdd0de6d4c6ee7dd4afd1ac3eb26",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JC",
+      "path": "trees/math/category/quantum/atomic/00JC.tree",
+      "sha256": "82db9e5dee23322666322496c90be719aecf369e31ea7cc87bef481c2a077391",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JD",
+      "path": "trees/math/category/quantum/atomic/00JD.tree",
+      "sha256": "55018f7dbb17fdc6dd2e1c73b7eb6409b94633b634d67014e014f28dd18be727",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JE",
+      "path": "trees/math/category/quantum/atomic/00JE.tree",
+      "sha256": "028c5acb9a6417e79e3bef724d5289be531371ee63e8a60e441c7527f8a42850",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JG",
+      "path": "trees/math/category/quantum/atomic/00JG.tree",
+      "sha256": "4f40a9c9a34958c1ddd562991d1524f6fea489764edde14a6df223397bac8ed8",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JH",
+      "path": "trees/math/category/quantum/atomic/00JH.tree",
+      "sha256": "f5dc2924cc5a2a8cc1fdebbaca2bafc9c2f1f43c1eb2263ca4d5b5234d59afcb",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JK",
+      "path": "trees/math/category/quantum/atomic/00JK.tree",
+      "sha256": "d954302702810cea75b903075ecd5fede72ab82d1e8b707028cadcacd9e109cb",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JO",
+      "path": "trees/math/category/quantum/atomic/00JO.tree",
+      "sha256": "053261d5bcb0f9f4297dbb3d3def7fbfa1a98bd6414ea352845ad9d84b02295e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00JZ",
+      "path": "trees/math/category/quantum/atomic/00JZ.tree",
+      "sha256": "77592cd15a34241b4f775a0e542a708b02906c01ee915e33c11a9dd1c8410948",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00L0",
+      "path": "trees/math/network/atomic/00L0.tree",
+      "sha256": "0c6b1ac0bb5f2549273f4049dc99dadfb1365242dfce8e66bdd1c04fabe7e4ce",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00L1",
+      "path": "trees/math/network/atomic/00L1.tree",
+      "sha256": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00L2",
+      "path": "trees/math/network/atomic/00L2.tree",
+      "sha256": "29230e3975beb88cfde20897ae5e94603dc7743d65089c96ce131c48fad8ad8d",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00L3",
+      "path": "trees/math/network/atomic/00L3.tree",
+      "sha256": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00L4",
+      "path": "trees/math/network/atomic/00L4.tree",
+      "sha256": "bcf884c82f00d4646c3dc8552bfb62b60dd0728b5f9d43049f5c84d661a144e5",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00M1",
+      "path": "trees/math/analysis/atomic/00M1.tree",
+      "sha256": "e8077b2cfccf1f76276d3bef999e7fac06492dc419b03f11beb7a21fa4d357a0",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00M4",
+      "path": "trees/math/analysis/atomic/00M4.tree",
+      "sha256": "70300ca09bf8107f544ae2d1467bbc30224143bd8d5ad886255e2962ff292636",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00M6",
+      "path": "trees/math/analysis/atomic/00M6.tree",
+      "sha256": "9637d52da027ea636100ab4df5f6c92170a8db2cd62e1f0d8a8a329206c154b5",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MA",
+      "path": "trees/math/analysis/atomic/00MA.tree",
+      "sha256": "a1e69eb01812a22011d30da2c26f7a0eb48a8fabe88f0db093d30d433aee5233",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MH",
+      "path": "trees/math/analysis/atomic/00MH.tree",
+      "sha256": "87539a2ae6f7b46a02abbb40fbe4f676d2397cde571a09a7cc9f693d81d42cd8",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MI",
+      "path": "trees/math/analysis/atomic/00MI.tree",
+      "sha256": "56f30d7635592fcffa7004c10eaa18c12c8b6dabc2c926117509b2c98f6ff545",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MK",
+      "path": "trees/math/analysis/atomic/00MK.tree",
+      "sha256": "f0a6bc8393b81429dd35324a387fd09013e1c28092d460d74541a8d58e68c9bf",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MQ",
+      "path": "trees/math/analysis/atomic/00MQ.tree",
+      "sha256": "eee77d2032e1b9cf4c4bb7a2df33c6c40704f658608f05239983b7ca201bee37",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MR",
+      "path": "trees/math/analysis/atomic/00MR.tree",
+      "sha256": "55561e3d75d7c90cda4751ac28095dec78042424592fd4a5c10eacfb7c801f47",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MS",
+      "path": "trees/math/analysis/atomic/00MS.tree",
+      "sha256": "744e1365a338de00532003be12f627d4df94d81d799fa9a4bc6311469bc31260",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MT",
+      "path": "trees/math/analysis/atomic/00MT.tree",
+      "sha256": "fbcf8d38d2ab17bab0f44cb22fd2a0f788851099b561fa2df05aeaacfa9fe2c9",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00MU",
+      "path": "trees/math/analysis/atomic/00MU.tree",
+      "sha256": "b6ab9609e60598f6df2bbbedde82f7fc9ca08e8860665aee730f07ec456b00c8",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00O9",
+      "path": "trees/math/analysis/atomic/00O9.tree",
+      "sha256": "7c00adf62dd9bffa7c82e512feda59b8d4f6b5b4a1c6c8a93993c1942869d2a4",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00OC",
+      "path": "trees/math/analysis/atomic/00OC.tree",
+      "sha256": "88297ff48084d2213604da1e741739c8862a8612eeaf696121385246eb04dd4a",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q0",
+      "path": "trees/math/logic/research/atomic/00Q0.tree",
+      "sha256": "cda032eb0847cfda578b0c62a0eb74b679ad10cba0ef4963614d64d2de89dc4f",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q1",
+      "path": "trees/math/logic/research/atomic/00Q1.tree",
+      "sha256": "29efd7a8c18263294c150b171392e3f44b4fa95e7fe1c715b8e0150b63fb4464",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q2",
+      "path": "trees/math/logic/research/atomic/00Q2.tree",
+      "sha256": "b889abf48efb26f8d01d86a49941f9d4dec1d1a4b2e505b84bf1101829c956d1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q3",
+      "path": "trees/math/logic/research/atomic/00Q3.tree",
+      "sha256": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q4",
+      "path": "trees/math/logic/research/atomic/00Q4.tree",
+      "sha256": "196b410809c5bf0228550afb01e72b58cb623b6ad59d57da14a3b6c2590986dc",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q5",
+      "path": "trees/math/logic/research/atomic/00Q5.tree",
+      "sha256": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00Q9",
+      "path": "trees/math/logic/research/atomic/00Q9.tree",
+      "sha256": "ecf8c8c13c018dc8ef21425639d62b0d2fe6ea3f80050af1169bae38eda24efa",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00QA",
+      "path": "trees/math/logic/research/atomic/00QA.tree",
+      "sha256": "455bf6a03201a02715b54b866d2f81c3a89f4d46929af732d5785b5e9316b21a",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00QB",
+      "path": "trees/math/logic/research/atomic/00QB.tree",
+      "sha256": "6861ea2adaa4342f9317db0e49967521cdf4e2b0173d77fe263b2e0c5d18fbd5",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00QD",
+      "path": "trees/math/logic/research/atomic/00QD.tree",
+      "sha256": "e375d77c7a373713548341a56dc0177297662830dbf1ed746235c501e8d9508e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00SO",
+      "path": "trees/math/logic/research/atomic/00SO.tree",
+      "sha256": "4d5dfcae2db1e113444cda8aefc5d8ac866792040d668fabe0df20a09fe38d6d",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00TV",
+      "path": "trees/math/logic/research/atomic/00TV.tree",
+      "sha256": "e9f2559ac5a9e30d141eab603b4fdf64d6c42f878ce34b7831cec925ba3e99d2",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "00XV",
+      "path": "trees/math/logic/research/atomic/00XV.tree",
+      "sha256": "fcbb0489e5a0b2795c3f6cc607a15ae6428db92c2dd58ab4910fb890a3a98bd1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0120",
+      "path": "trees/math/algebra/research/0120.tree",
+      "sha256": "17520e9bca7ad579c295e16db4284c729d00f7667bc7a00257957eee8efe951c",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0121",
+      "path": "trees/math/algebra/research/0121.tree",
+      "sha256": "664cf70cc4317b8425b28a7ef90a9be2fe172f8939aee0009105b5a7b3ecb516",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0122",
+      "path": "trees/math/algebra/research/0122.tree",
+      "sha256": "360012ed2c706f09586b49e5bb24218e59be22f6f67567c7dfb31f6db9a760f1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0127",
+      "path": "trees/math/algebra/research/0127.tree",
+      "sha256": "d023e9f9121ba027b19fce9bac29ae782150efad2493f6ef0244c885cbc8464b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0136",
+      "path": "trees/math/algebra/research/0136.tree",
+      "sha256": "b58420f6271b2c3d714416881e3d332497493e1e94f8440cf9f1a9ba4c4e2d3a",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "01D2",
+      "path": "trees/math/algebra/research/01D2.tree",
+      "sha256": "766213f754516ff9efbc4d38f619bf9f2fc834d774ebd7a2bae186bf2f474b11",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A0B",
+      "path": "trees/math/category/quantum/atomic/0A0B.tree",
+      "sha256": "d7f685ad92f90e6dedfd667025bccf7d9884bd913158f4ec01b8f647f16c2ddc",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A0H",
+      "path": "trees/math/category/quantum/atomic/0A0H.tree",
+      "sha256": "49051cbc31efec75473c406563eb0aca0bc2f1d45de6f728add8465c6972ebb7",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A30",
+      "path": "trees/math/analysis/atomic/0A30.tree",
+      "sha256": "3264013b740d67f6a125f260e96c9354377d8b1a7c0822460414bafe12455ead",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A31",
+      "path": "trees/math/analysis/atomic/0A31.tree",
+      "sha256": "917071dcc498019765220ade13f80216cfdcc5177a2f8bc905343f40c97948d2",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A32",
+      "path": "trees/math/analysis/atomic/0A32.tree",
+      "sha256": "0147b81b379a3f40d3298afdf9968162581a5ed262efc2a417804059ffc9815b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A33",
+      "path": "trees/math/analysis/atomic/0A33.tree",
+      "sha256": "1f30b534d81b5bd042a30c0bb1f125a1f289b2d1a24afd1d07331ee389512e7e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A34",
+      "path": "trees/math/analysis/atomic/0A34.tree",
+      "sha256": "e828bca1acac95821c34a87f2cf59ab4fe3298928bbd2680d5acd356aae91557",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A35",
+      "path": "trees/math/analysis/atomic/0A35.tree",
+      "sha256": "a87f1c9fab8bfc263775ef0f9179fc5dc06a477daf453df5e107de5e6e3d6de0",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A37",
+      "path": "trees/math/analysis/atomic/0A37.tree",
+      "sha256": "e212fde4ae3219df6893b832515641e403a16af323e431575bbb86df7f837b29",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A38",
+      "path": "trees/math/analysis/atomic/0A38.tree",
+      "sha256": "5549822368c709b807074bd0031939d3840dcef0781612f8ca085da85a3da34b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A39",
+      "path": "trees/math/topology/atomic/0A39.tree",
+      "sha256": "952607bf21fbdb930f4b92345c6545d3bba550588512f36581f3e3d6465c4f5d",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A3A",
+      "path": "trees/math/analysis/atomic/0A3A.tree",
+      "sha256": "4c47befef5ed2494953e59817991fa7d251b0fd5fdf2933613add3b08121923b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A3B",
+      "path": "trees/math/analysis/atomic/0A3B.tree",
+      "sha256": "cfdf7c6bc8c5270d1153897bbb1ca3f699e8ea0e392439eb70d2674755cb3ae5",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A3C",
+      "path": "trees/math/analysis/atomic/0A3C.tree",
+      "sha256": "0ce7de7269b74ee6540bf0a8be0eb8ef32da4c53248d1a3eda6750becbfa2bb1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A3K",
+      "path": "trees/math/analysis/atomic/0A3K.tree",
+      "sha256": "44a600983869d653cb925def052599779d03a03213e048a23a787ddfca35b5b6",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A3T",
+      "path": "trees/math/topology/atomic/0A3T.tree",
+      "sha256": "fcb637f20543690e2ce64d9074c8985f1902d8a8c26eef061cd90ccdd5f0e13e",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A3Z",
+      "path": "trees/math/geometry/atomic/0A3Z.tree",
+      "sha256": "1b46109b1f5341136b2addce303076299b89e1c1351bf0d835023a68d8d3bd76",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A40",
+      "path": "trees/math/geometry/atomic/0A40.tree",
+      "sha256": "a145ea6ffadacce5ce24bbf15473e1b109580df05d2794693bde88a552fe14eb",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A44",
+      "path": "trees/math/analysis/atomic/0A44.tree",
+      "sha256": "aba935ec9003feb06ed056b12122d5ae3ea2b361e521ae9dc1bfb19258709834",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A45",
+      "path": "trees/math/analysis/atomic/0A45.tree",
+      "sha256": "115e0a47bd1dbf9c7a5ba20e095865381458b67f543ac18dbb74ec0d64dcc297",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A46",
+      "path": "trees/math/analysis/atomic/0A46.tree",
+      "sha256": "f10c39159cbfd27ea1e1e4798af44066c0c601fbd13853bfa36eb3f63031a335",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A7A",
+      "path": "trees/math/logic/research/atomic/0A7A.tree",
+      "sha256": "fc9fd9db793237c02165a5b40db7e6bf854fb810a195573e761818bee338f49c",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0A87",
+      "path": "trees/math/logic/research/atomic/0A87.tree",
+      "sha256": "e56575ccc4e7c52a7ebd5899e9d47158ca661357cf77e304a8658bf851f7bf5b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0ALH",
+      "path": "trees/math/algebra/research/0ALH.tree",
+      "sha256": "05e4fd61963d430cb063aaa6b675d77cbd42a13d52b65f5888fd0d9f56c3a93f",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0ALX",
+      "path": "trees/math/algebra/research/0ALX.tree",
+      "sha256": "198fa2e9808610ccb8044a15676023eccf448ca57710d71c5558c7aee12e270f",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0F0B",
+      "path": "trees/math/geometry/algebraic/0F0B.tree",
+      "sha256": "5ac75961806df0ab1eb2875f3b6852ce72adaac4845cef97b7737077351f831d",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0F0C",
+      "path": "trees/math/geometry/algebraic/0F0C.tree",
+      "sha256": "42cb78facae6ea474f55902d88e319f05f46cd98f2af41268bffd1f6f02c6cc3",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0F0F",
+      "path": "trees/math/geometry/algebraic/0F0F.tree",
+      "sha256": "6f0154249461062a074a9e1ec67bfb06d9fd3445e71f2f8e17a57a0b321ef528",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0F40",
+      "path": "trees/math/topology/atomic/0F40.tree",
+      "sha256": "40802ed0f82b749ef73f0f6909c2cb4939fc923103e0e8cc528246fbe360c87b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0F4E",
+      "path": "trees/math/category/quantum/atomic/0F4E.tree",
+      "sha256": "a325c75c71d8f15dbeed0eeec43c303a4fd89cc422842263e16719a1bad41397",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0F61",
+      "path": "trees/math/analysis/atomic/0F61.tree",
+      "sha256": "c73ffc16ae619346dc9ec3ac57588ec682cd0af4f4736d8989755f1d8a9199bf",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0H53",
+      "path": "trees/math/number-theory/reports/0H53.tree",
+      "sha256": "bbdd511045ab4f80cc0b3d0b8bff09048e02c537a808b95c16f97c5da179b59b",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0N0A",
+      "path": "trees/math/geometry/bourbaki/0N0A.tree",
+      "sha256": "bf8faf7f9f971f425ad8933bf0a4ccf9cd683cc2a1b6350e69589f69cbdfde7d",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "0N0B",
+      "path": "trees/math/geometry/bourbaki/0N0B.tree",
+      "sha256": "83fb26af0fc669bf0ce10adbf32513bbd3068429fb4cf16583f4472cb73ca7f0",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "4F01",
+      "path": "trees/math/mathematical-physics/mahadev/4F01.tree",
+      "sha256": "d37b4c946bd197aa1981d6e2c6d069905dbadf4fb8c660c8ab331a304f42eff9",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "4F02",
+      "path": "trees/math/mathematical-physics/mahadev/4F02.tree",
+      "sha256": "98bd53d86041c99e52d8203cf206b48ea138abc80e8f0d282ba13cd1468d9bc6",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "4F04",
+      "path": "trees/math/mathematical-physics/mahadev/4F04.tree",
+      "sha256": "4edf3facf9d6826cfe61cac0fbe1ba56ecfc7dbfbd63b15159b7ec0896215979",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "4F05",
+      "path": "trees/math/mathematical-physics/mahadev/4F05.tree",
+      "sha256": "4f9a7a56658cab5e8ed27b9407cae80e2dc996acddc0d9e1368c11e91ffd9ff1",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "4I01",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I01.tree",
+      "sha256": "f8bb36895bf59773d3aa73cdcbd9e08b8721fa5fb457af118160e97f98d341bf",
+      "role": "recursive-prerequisite"
+    },
+    {
+      "id": "4I0H",
+      "path": "trees/math/mathematical-physics/perez-garcia/4I0H.tree",
+      "sha256": "a4c4398786baa535c06ccac3ed6d9c49efd38d43ba67a88d08e8165f582751af",
+      "role": "deduplication-comparison"
+    },
+    {
+      "id": "0A3Y",
+      "path": "trees/math/geometry/atomic/0A3Y.tree",
+      "sha256": "e0a2b29c8d6018134d81b90fe88f7e7fb04e77af1150f01726c9c3d831925f9a",
+      "role": "deduplication-comparison"
+    }
+  ],
+  "hash_checkpoint": {
+    "scope": "Writer-frozen revision 3, the complete final packet and all actually read repository inputs listed in reviewed_files",
+    "files_checked": 176,
+    "changed_files": [],
+    "owned_packet_hash_mismatches": [],
+    "reuse_hash_mismatches": [],
+    "final_freeze_verified": true,
+    "packet_sha256": "26898063ab26a0f92af4349024008497b779f8e5759b6346ac5f72daef6b92de",
+    "registry_sha256": "7edf4ab71bf0491fbc96781db6bc6393f26e3617de0c41d50f3a89b44f31b8e8",
+    "source_hashes": [
+      {
+        "id": "de-roeck-icm2026-talk",
+        "sha256": "144722b18282261e7176c4dce84e3b071d20ba400e6b923c8e498fa7e34e3c88",
+        "matches": true
+      },
+      {
+        "id": "dghp-2408.04338v2",
+        "sha256": "a4cdfbea1d1445534a75b271f43f1d5584b432b09810bf03634ee07ee14f97a8",
+        "matches": true
+      },
+      {
+        "id": "nsy-quasilocal-v2",
+        "sha256": "42fc3029fa582f14a01f858463f481d5cacf21ed785791d32c72dd9df97f66cd",
+        "matches": true
+      }
+    ]
+  },
+  "packet_contract_review": {
+    "claim_source_atoms": 23,
+    "proof_scope_atoms": 23,
+    "reading_scope_reviewed": true,
+    "source_records_reviewed": true,
+    "reuse_hashes_reviewed": true,
+    "all_source_file_hashes_match": true,
+    "sources_and_source_records_identical": true,
+    "remaining_source_locator_finding": null,
+    "reader_scope_distinction": "Writer and reviewer source-reading scopes are recorded independently; no uninspected range is adopted merely because it is listed in the writer packet.",
+    "final_packet_read_in_full": true,
+    "final_revision_diff": {
+      "compared_against": "dfb00a0903f6c6ee060ba57612ca146ceff63011de03231526d9020406329e58",
+      "changed_fields": [
+        "/source_errata/0/printed",
+        "/freeze/revision",
+        "/freeze/previous_packet_sha256",
+        "/freeze/repair_scope"
+      ],
+      "public_tree_hashes_unchanged": true,
+      "proof_and_dependency_records_unchanged": true
+    }
+  },
+  "dependency_review": {
+    "packet_sha256": "26898063ab26a0f92af4349024008497b779f8e5759b6346ac5f72daef6b92de",
+    "packetMatchesExpected": true,
+    "files_checked": 175,
+    "changed_files": [],
+    "ownedMismatch": [],
+    "reuseMismatch": [],
+    "sourceHashes": [
+      {
+        "id": "de-roeck-icm2026-talk",
+        "sha256": "144722b18282261e7176c4dce84e3b071d20ba400e6b923c8e498fa7e34e3c88",
+        "matches": true
+      },
+      {
+        "id": "dghp-2408.04338v2",
+        "sha256": "a4cdfbea1d1445534a75b271f43f1d5584b432b09810bf03634ee07ee14f97a8",
+        "matches": true
+      },
+      {
+        "id": "nsy-quasilocal-v2",
+        "sha256": "42fc3029fa582f14a01f858463f481d5cacf21ed785791d32c72dd9df97f66cd",
+        "matches": true
+      }
+    ],
+    "counts": {
+      "owned": 25,
+      "atoms": 23,
+      "closure": 171,
+      "shared": 148
+    },
+    "cycles": [],
+    "missing": [],
+    "nonAtomic": [],
+    "missingBodyLinks": [],
+    "unclassified": [],
+    "sharedMissingInPacket": [],
+    "sharedExtraInPacket": [],
+    "registry_sha256": "7edf4ab71bf0491fbc96781db6bc6393f26e3617de0c41d50f3a89b44f31b8e8",
+    "edges_checked": 538,
+    "method": "Used the frozen packet for owned atom prerequisite edges and the current site-evergreen-audit registry for shared edges. Independently recomputed recursive closure, exact shared-ID equality, graph acyclicity, actual destination existence, absence of outline/reference prerequisites, body-link coverage and navigation/application classification. Semantic checks were based on actual full-body reading.",
+    "same_edges_as_previous_frozen_review": true
+  },
+  "acceptance_condition": "Valid for the exact reviewed_files hashes and cited reading/proof scopes. Any subsequent change to the accepted packet, owned/reference content or actually used prerequisite content requires a corresponding recheck. No further review-record changes until notified."
+}

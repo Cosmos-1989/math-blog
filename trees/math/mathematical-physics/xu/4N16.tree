@@ -1,0 +1,23 @@
+\title{tau 积分的端点项为何消失}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Xu](icm2026-xu)，正文及所引证明来源}
+
+\p{固定 #{L=c-b>0}，令 #{u(\beta)=u_M(L,\beta)} 为[指定的 tau 对数](4N15)。记 #{r_L(w)} 为[四项预解式的迹](4N14)在 #{b_1\to -\infty}、#{c_1\to\infty} 后的极限，#{B=(b,c)} 保持固定。原文命题 3.13 保证此极限存在，定理 3.10 给出 #{|r_L(w)|\le K w^{-\sigma}}，其中 #{1/2<\sigma<1}。}
+\p{在[四项 tau 导数恒等式](4N1N)中，另外三个区间长度趋于无穷。原文引理 4.11 使其 tau 对数及参数导数趋于零，故 #{U\to -u_M(L,\beta)}；同一解析延拓固定单区间关系}
+##{\partial_\beta u_M(L,\beta)=-\frac{\beta}{\beta^2-1/4}\,r_L(\beta^2-1/4).}
+\p{由此得到端点估计的输入}
+##{|\partial_\beta u(\beta)|\le K\frac{\beta}{(\beta^2-1/4)^{1+\sigma}},
+\qquad \lim_{\beta\to\infty}u(\beta)=0.}
+\p{后一极限是原文引理 4.11 的零单值参数归一化。特别地，带符号的积分关系为}
+##{u_M(L,\alpha)=\int_\alpha^\infty
+\frac{\beta}{\beta^2-1/4}\,r_L(\beta^2-1/4)\,d\beta,\qquad \alpha>1/2.}
+\p{则 #{u} 在 #{(1/2,\infty)} 可积，并且两端均有 #{(\beta -1 /2)u(\beta)\to 0}。}
+\p{\strong{证明。}由[基本定理](0A3C)，先在有限区间积分再令上端趋于无穷，得到}
+##{|u(\beta)|\le K\int_\beta^\infty\frac{s}{(s^2-1/4)^{1+\sigma}}\,ds
+=\frac K{2\sigma}(\beta^2-1/4)^{-\sigma}.}
+\p{近 #{1/2} 时这是 #{O((\beta -1 /2)^{-\sigma})}，远处是 #{O(\beta^{-2\sigma})}，两者均可积。乘以 #{\beta -1 /2}，分别得到趋零的阶 #{1-\sigma>0} 和 #{1-2\sigma<0}。所以}
+##{\int_{1/2}^\infty 2(\beta -1 /2)\partial_\beta u(\beta)\,d\beta
+=-2\int_{1/2}^\infty u(\beta)\,d\beta.}
+\p{这一步在截断区间上先做分部积分，再利用刚证明的边界估计。}

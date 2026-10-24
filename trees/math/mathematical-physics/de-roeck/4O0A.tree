@@ -1,0 +1,10 @@
+\title{裸能量差的单变量小分母估计}
+\date{2026-10-24}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[De Roeck 等，§2.1、§3.1](icm2026-de-roeck)的小分母机制；裸能量的直接计算}
+
+\p{对[随机链](4O01)的对角部分，构形 #{\sigma\in\{\pm 1\}^L} 的裸能量为 #{E(\sigma)=\sum_x\theta_x\sigma_x+\sum_x\kappa_x\sigma_x\sigma_{x+1}}。固定两个不同构形 #{\sigma,\tau}，选 #{x} 使 #{\sigma_x\ne\tau_x}。对 #{\varepsilon>0} 有}
+##{\mathbb P\{|E(\sigma)-E(\tau)|<\varepsilon\}\leq\min(1,\varepsilon).}
+\p{\strong{证明。}固定所有 #{y\ne x} 的场，能量差写为 #{\pm 2\theta_x+b}，其中 #{b} 与 #{\theta_x} 无关。不等式 #{|\pm 2t+b|<\varepsilon} 在实轴上确定长度 #{\varepsilon} 的区间；与 #{[0,1]} 相交后的长度至多 #{\min(1,\varepsilon)}。#{\theta_x} 均匀分布且与其余场[独立](00L3)，联合分布是立方体上的 [Lebesgue 概率测度](00XV)。对事件的非负指示函数应用 [Fubini–Tonelli 定理](0H53)，先对此变量积分再对其余场平均，即得结论。}
+\p{把 #{|E(\sigma)-E(\tau)|<\varepsilon} 称为这对构形在阈值 #{\varepsilon} 下的裸共振。它会使[一阶消元](4O09)中的分母很小。不同构形对通常共享随机变量；上述单对估计不能相乘来控制许多分母。多尺度变换还会改变能量及其空间依赖，原文的两类非共振事件需另外控制这些效应。}
