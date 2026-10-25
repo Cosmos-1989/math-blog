@@ -1,0 +1,14 @@
+\title{平滑性控制粗相关均衡的社会成本}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Theorem 1 及证明}
+
+\p{设非负成本的[有限博弈](4Q01)对于固定的最优组合 #{a^*} 满足参数 #{\lambda>0}、#{0\le\mu<1} 的[平滑性不等式](4Q0D)。若 #{q} 是[粗相关均衡](4Q04)，则}
+##{\mathbb E_q C(a)\le\frac{\lambda}{1-\mu}C(a^*).}
+\p{\strong{证明。}在玩家 #{i} 的均衡不等式中选固定偏离 #{a_i^*}，再对 #{i} 相加。由[期望的有限线性性](00L1)以及对每个 #{a} 成立的平滑性，}
+##{\begin{aligned}
+\mathbb E_q C(a)&\le\mathbb E_q\sum_i c_i(a_i^*,a_{-i})\\
+&\le\lambda C(a^*)+\mu\mathbb E_q C(a).
+\end{aligned}}
+\p{把最后一项移到左边，并除以正数 #{1-\mu}，即得所求。最优成本为正时，[无政府价格](4Q0C)不超过 #{\lambda /(1-\mu)}；最优成本为零时，非负性与此式共同迫使均衡成本为零。}

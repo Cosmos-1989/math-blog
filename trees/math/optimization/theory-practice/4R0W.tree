@@ -1,0 +1,12 @@
+\title{光滑凸函数的梯度插值不等式}
+\date{2026-10-25}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.2 性能估计问题所用的光滑凸插值条件}
+
+\p{若 #{f:\mathbb R^n\to\mathbb R} [凸](4R06)且为 [#{L} 光滑函数](4R03)，则对任意 #{x,y}，}
+##{f(x)\ge f(y)+\langle\nabla f(y),x-y\rangle+\frac 1{2L}\|\nabla f(x)-\nabla f(y)\|^2.}
+\p{\strong{证明。}令 #{h(z)=f(z)-\langle\nabla f(y),z\rangle}。它仍凸且为 #{L} 光滑函数，并且 #{\nabla h(y)=0}，所以 #{y} 是其全局极小点。在 #{x} 处作一步[梯度下降](4R04)，可得}
+##{h(y)\le h(x-L^{-1}\nabla h(x))\le h(x)-\frac 1{2L}\|\nabla h(x)\|^2.}
+\p{展开 #{h} 与 #{\nabla h} 即得结论。}
+\p{给定算法访问的有限组点、函数值和梯度，这个不等式对每一对点都必须成立。因此它将函数类的限制转化为有限数据的约束，可用于分析算法在固定步数后的最大误差。充分插值条件以及由此产生的半正定优化表述见原报告 §5.2 所引 Taylor–Hendrickx–Glineur 的工作。}

@@ -1,0 +1,10 @@
+\title{协方差谱尾的两种有效秩}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§3.2 中 r_k、R_k 的定义}
+
+\p{设[协方差矩阵](4P0F) #{\Sigma} 的[特征值](0N0B)为 #{\lambda_1\ge\cdots\ge\lambda_p\ge 0}。对满足 #{0\le k<p}、#{\lambda_{k+1}>0} 的截断点，记 #{S_k=\sum_{j>k}\lambda_j}、#{Q_k=\sum_{j>k}\lambda_j^2}，定义}
+##{r_k(\Sigma)=\frac{S_k}{\lambda_{k+1}},\qquad R_k(\Sigma)=\frac{S_k^2}{Q_k}.}
+\p{#{r_k} 把谱尾总量与其中最大单项比较；#{R_k} 把总量平方与平方和比较。两者在整体缩放 #{\Sigma\mapsto a\Sigma}、#{a>0} 下不变。若谱尾的 #{m} 个非零特征值均等，则 #{r_k=R_k=m}。谱尾全零时上式分母为零，本定义不赋值。}
+\p{给定样本量 #{n} 和常数 #{b>0}，有效截断点记为 #{k_* =\min\{k:r_k(\Sigma)\ge bn\}}，候选只遍历上述分母非零的指标；集合为空时规定 #{k_*=\infty}。它表示需要移去多少个大特征值，剩余谱才足够分散。}

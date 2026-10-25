@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-25",
+  "report": {
+    "speaker": "Peter L. Bartlett",
+    "title": "Modern Machine Learning Methods: Implicit Bias, Benign Overfitting, and Unstable Optimization",
+    "outline": "4P00",
+    "prefix": "4P",
+    "reference": "icm2026-bartlett",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+    "doi": "10.1137/25M1807617",
+    "pages": "1-24",
+    "license": "CC BY 4.0",
+    "question": "训练算法为何在众多拟合解中选择特定方向或最小范数解，这种选择在什么协方差谱条件下能够插值噪声而保持小的预测超额风险？",
+    "reading_scope": "已读正式 HTML 的完整数学主体 §§1.1-1.3、2.1-2.9、3.1-3.4、4，含定义、定理及显示公式；使用重叠窗口覆盖 HTML lines 99-1028。另核对作者、标题、页码、DOI、2026-07-13 发布日期、版权和 CC BY 4.0，以及参考文献 [3]、[4]、[28]-[30]。未读取 SIAM PDF、附属 Saint Flour 讲义或报告所引研究论文的全部证明。补读 BLLT 2020 正式论文 PMC HTML 的 Definitions and Notation（定义 1-3、假设 1-5）、Main Results 定理 1 与 Effective Ranks 小节至 Lemma 1（lines 137-225），并核对文章元数据和 PNAS license。4P0M 采用其假设明确的有限维高斯特例，不将报告定理 3.4 中未写出的结论概率自行补齐。4P0P-4P0Q 对报告引理 3.7 的训练/测试响应区别给出独立修正与反例。",
+    "proof_scope": {
+      "4P00": {
+        "status": "narrative-outline",
+        "scope": "八段数学叙述，连接全部 27 个原子条目；区分算法选解、预测风险、损失与参数化。没有给未读的不稳定优化讲义赋予定理。"
+      },
+      "4P01": {
+        "status": "definition",
+        "scope": "决策空间与响应空间可不同；风险对独立测试样本积分，随机估计固定训练样本后求风险。"
+      },
+      "4P02": {
+        "status": "definition-and-local-proof",
+        "scope": "经验风险、固定规则的无偏性、平方损失零值与样本插值；有限逻辑和指数损失不取零。"
+      },
+      "4P03": {
+        "status": "local-proof",
+        "scope": "有限风险下的四项望远镜分解与一致双边偏差的 2 epsilon 推论。"
+      },
+      "4P04": {
+        "status": "local-proof",
+        "scope": "有限矩阵的正规方程必要充分性、投影存在性及解集为 theta0+ker X。"
+      },
+      "4P05": {
+        "status": "local-proof",
+        "scope": "满行秩下 XX^T 正定、插值存在、正交分解给最小范数唯一性及行空间投影公式。"
+      },
+      "4P06": {
+        "status": "local-proof",
+        "scope": "线性预测损失的梯度在行空间、任意步长更新保持核分量；收敛时仍保持该分量。"
+      },
+      "4P07": {
+        "status": "local-proof",
+        "scope": "平方损失、满行秩、固定 0<eta<2n/lambda_max(X^TX)；谱收缩给极限，投影给离初始化最近的唯一插值解。仅应用型隐式偏置，不另立梯度或稳定性基础定义。"
+      },
+      "4P08": {
+        "status": "conditional-local-proof",
+        "scope": "报告定理 2.11 的固定步长、零初始化、满行秩、迭代点收敛及导数序列条件；用有限维左逆避免额外假设导数连续。"
+      },
+      "4P09": {
+        "status": "definition-and-local-proof",
+        "scope": "无截距线性分类的严格可分性、函数间隔、Euclidean 几何间隔及一般范数单位球最大间隔；紧性给达到性。"
+      },
+      "4P0A": {
+        "status": "local-proof",
+        "scope": "可分有限样本硬间隔问题的存在唯一性，缩放证明与最大 Euclidean 间隔等价。"
+      },
+      "4P0B": {
+        "status": "cited-research-theorem",
+        "scope": "严格采用报告定理 2.12：指数损失、连续梯度流、几乎所有 X、可分标签、每个固定初值；有界余项及方向极限。不移植到任意数据或任意步长 GD。"
+      },
+      "4P0C": {
+        "status": "local-proof-from-cited-theorem",
+        "scope": "以 4P0B 有界余项为输入，证明参数 Theta(log t)、损失 Theta(1/t)、方向 O(1/log t)；用最优约束必有活跃项得到损失下界。"
+      },
+      "4P0D": {
+        "status": "local-proof",
+        "scope": "有限严格可分数据的逻辑风险下确界为零且不取到；趋零损失迫使参数范数发散；没有宣称算法方向收敛。"
+      },
+      "4P0E": {
+        "status": "local-proof",
+        "scope": "报告引理 2.29 的逐坐标乘积参数化：AM-GM 下界与显式达到者；全局变分最优值等式，不把非凸 KKT 点升级为全局最优解。"
+      },
+      "4P0F": {
+        "status": "local-proof",
+        "scope": "二阶矩、中心化设计与条件均值正确指定下，平方超额风险等于协方差半范数；对随机估计使用独立测试样本。"
+      },
+      "4P0G": {
+        "status": "local-proof",
+        "scope": "固定满行秩设计、条件均值零且条件噪声协方差 sigma^2 I 的精确偏差方差分解；不声称单样本高概率界。"
+      },
+      "4P0H": {
+        "status": "definition",
+        "scope": "正特征值谱尾上的 r_k、R_k、k_*；分母零时不定义有效秩，最小集合为空时 k_*=infinity。"
+      },
+      "4P0I": {
+        "status": "local-proof",
+        "scope": "有效秩全部比较、乘法恒等式及 R_k<=尾部非零特征值个数；Cauchy-Schwarz 给必要维数增长。"
+      },
+      "4P0J": {
+        "status": "definition-and-local-calculation",
+        "scope": "矩母函数版本次高斯定义、中心化、配方验证标准高斯、独立坐标矩母函数乘积。"
+      },
+      "4P0K": {
+        "status": "cited-research-theorem-with-local-corollary",
+        "scope": "报告引理 3.2：有限维正定对角协方差、iid 行、独立参数一的次高斯白化坐标、固定 k、明确置信概率。浓缩界引用，r_k>=bn 导出的双边正定次序界本地证明。"
+      },
+      "4P0L": {
+        "status": "local-proof",
+        "scope": "确定性假设 BB^T=gamma I 下，最小范数插值主块等于岭回归、尾块补残差及各向同性尾部预测平方量上界；不将有界条件数当作精确标量等式。"
+      },
+      "4P0M": {
+        "status": "cited-research-theorem",
+        "scope": "BLLT 2020 定义 1、定理 1 的有限维高斯设计、独立同方差高斯噪声特例；保留 k_* 空集约定、概率与期望量词及两种 k_* 情形。置信参数限制为 0<delta<=1/2，以免 log(1/delta) 在 delta 趋近 1 时错误地消去噪声项；绝对常数允许扩大。未导入额外最坏信号偏差下界。"
+      },
+      "4P0N": {
+        "status": "local-proof-from-cited-theorem",
+        "scope": "p_n=n^2+1，协方差 diag(1,n^-2,...,n^-2)，固定单位首坐标信号与噪声；精确计算 r0=2、r1=R1=n^2、k_*=1，应用 delta=1/n 得依概率一致性。"
+      },
+      "4P0O": {
+        "status": "local-proof",
+        "scope": "有限高斯各向同性设计，旋转不变性与迹给 E P=(n/p)I，从而平均平方偏差 (1-n/p)||theta_*||^2；没有计算逆 Wishart 方差。"
+      },
+      "4P0P": {
+        "status": "local-proof-with-corrected-risk-quantity",
+        "scope": "报告引理 3.7 的代数推导对应固定设计预测误差或独立测试响应；明确训练噪声条件和归一化，逐项计算偏差与方差。"
+      },
+      "4P0Q": {
+        "status": "local-counterexample",
+        "scope": "n=p=1、X=1、theta_*=0，逐项算出训练残差差为负而预测误差为正，定位报告引理 3.7 的响应重复使用问题。"
+      },
+      "4P0R": {
+        "status": "local-proof",
+        "scope": "报告命题 2.19 所涉统计区别的固定方向有限维特例：正定高斯逻辑模型、非零固定 v、a>0；分类决策不变而逻辑风险至少 a c_v，c_v>0。未复述校准误差全定理或早停一致性。"
+      },
+      "icm2026-bartlett": {
+        "status": "bibliographic-reference",
+        "scope": "正式书章的作者、DOI、页码、日期、CC BY 4.0 及中文改编署名；BLLT 2020 的独立 PNAS 许可；报告引理 3.7 数学修正说明。"
+      }
+    },
+    "claim_sources": {
+      "4P00": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§§1.1-1.3, 2.2-2.3, 2.6-2.8.1, 3.1-3.4, 4; unstable optimization is referred to reference [3] at end §1.3"
+        }
+      ],
+      "4P01": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§1.1 population risk; §2.1 decision space and loss examples"
+        }
+      ],
+      "4P02": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§1.1 empirical risk; §1.3 overfitting; §3.2 interpolation"
+        }
+      ],
+      "4P03": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§1.2 four-term decomposition and discussion of uniform convergence"
+        }
+      ],
+      "4P04": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§2.2 squared empirical risk; §3.2 Definition 3.1 and normal equations"
+        }
+      ],
+      "4P05": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Theorem 2.4, equation (2.1), Definition 3.1 and equation (3.1)"
+        }
+      ],
+      "4P06": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Theorem 2.11 proof, gradient updates in image X^T"
+        }
+      ],
+      "4P07": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Theorem 2.4; explicit finite-dimensional spectral sufficient stepsize added locally"
+        }
+      ],
+      "4P08": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Theorem 2.11 statement and proof; derivative-sequence assumption and convergence conditional"
+        }
+      ],
+      "4P09": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Theorem 2.12 separability; equation (2.6) and subsequent maximum margin interpretation; equation (2.9)"
+        }
+      ],
+      "4P0A": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Equation (2.6) and equivalent unit-ball margin problem immediately following Theorem 2.12"
+        }
+      ],
+      "4P0B": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Theorem 2.12, attributed there to reference [28]"
+        }
+      ],
+      "4P0C": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Immediately after equations (2.7)-(2.8): consequences of Theorem 2.12"
+        }
+      ],
+      "4P0D": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "End §2.2.2, losses minimized at infinity; §2.6 logistic loss"
+        }
+      ],
+      "4P0E": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§2.8.1 Lemma 2.29, equation (2.17), explicit balanced-factor construction"
+        }
+      ],
+      "4P0F": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.1 excess square risk; start §3.2 covariance-weighted parameter error"
+        }
+      ],
+      "4P0G": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.2 after Lemma 3.3: definitions of B and V and conditional bias-variance formulas"
+        }
+      ],
+      "4P0H": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.2 effective rank r_k before Lemma 3.2 and R_k before Theorem 3.4"
+        }
+      ],
+      "4P0I": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.4 Lemma 3.6; R_k<=tail rank is a local Cauchy-Schwarz consequence"
+        }
+      ],
+      "4P0J": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Definition of sigma^2-sub-Gaussian immediately before Lemma 3.2"
+        }
+      ],
+      "4P0K": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Lemma 3.2 and the r_k>=bn corollary immediately following it"
+        }
+      ],
+      "4P0L": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.2 head-tail split and exact hypothetical X_tail X_tail^T=gamma I"
+        }
+      ],
+      "4P0M": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+          "location": "Definitions and Notation: Definition 1 assumptions 1-5, Definition 3; Main Results: Theorem 1, first two cases and expected variance lower bound (HTML lines 137-210). Gaussian specialization only."
+        },
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3 opening cites reference [4]; precise theorem imported from that original paper, not relabelled as report Theorem 3.4"
+        }
+      ],
+      "4P0N": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.4 effective-rank interpretation; specific growing finite-dimensional spectrum is a local example"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+          "location": "Theorem 1 upper bound, substituted with delta=1/n and spectrum (1,n^-2 repeated n^2 times); computation done locally."
+        }
+      ],
+      "4P0O": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.2 formula for B; §3.4 isotropic covariance example; rotational averaging is a local calculation"
+        }
+      ],
+      "4P0P": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.4 Lemma 3.7 and its parameter-error calculation; left risk quantity corrected to prediction error"
+        }
+      ],
+      "4P0Q": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§3.4 Lemma 3.7: local one-dimensional check of its same-response training-residual expression"
+        }
+      ],
+      "4P0R": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "§2.6 Assumption 2.18 and Proposition 2.19(6); local fixed-direction finite-dimensional result"
+        }
+      ],
+      "icm2026-bartlett": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+          "location": "Title/author/pages/DOI; Information & Authors: copyright and history; references [3], [4], [28]; Lemma 3.7"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+          "location": "Article metadata and license; Definition 1 and Theorem 1."
+        }
+      ]
+    },
+    "remaining_branches": [
+      "不稳定大步长优化：报告 §1.3 仅给实践动机并指向 [3] Saint Flour lecture notes, in preparation (2025)；该讲义未读，未建立相应算法或定理页。",
+      "§2.2.1 一般约束优化、切锥、极锥、约束规范与 KKT 理论：数学正文已读；不重复父任务优化基础，此批只用有限维线性代数证明所需特殊情形。",
+      "§2.4 AdaBoost/坐标下降与一范数间隔：正文已读；精确 shrinkage 更新条件需回查引用 [29]，不导入定理 2.13。",
+      "§2.5 Rademacher 复杂度、对称化、收缩及大间隔泛化界：正文已读，尚未建立原子页。",
+      "§2.6 早停梯度下降的定量风险界与校准误差：正文已读；仅展开逻辑损失有限极小点缺失及固定方向总体风险发散，不导入定理 2.20。",
+      "§§2.7-2.8 齐次参数化、Clarke 次微分、o-minimal 可定义性与 KKT 方向收敛：正文已读；只展开引理 2.29 的对角乘积变分恒等式，不导入非光滑方向收敛定理。",
+      "§2.9 近齐次化、近似多项式与定理 2.33：正文已读，尚未展开。",
+      "§§3.2-3.3 小球假设、重尾推广、报告定理 3.4 的精细信号方向偏差界及定理 3.5 下界：正文已读，需回查 Tsigler-Bartlett 2023 的原始概率和分布条件；本批采用独立原文可核实的 BLLT 高斯界。",
+      "§4 非线性模型的简单/插值分解、蒸馏、过参数化的计算收益：保留为研究问题，没有声称普遍定理。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4P0B：报告定理 2.12 的指数损失梯度流有界余项与方向收敛证明；此处引用报告，未独立读取 Soudry 等 [28] 全部原始证明。",
+      "4P0K：报告引理 3.2 的随机 Gram 矩阵浓缩估计；只证明由它到条件数界的推论。",
+      "4P0M：BLLT 2020 定理 1 的非渐近风险上界与平均噪声下界；原始长证明未全部展开。独立复核读取作者版本附录 A、J 的置信参数估计，但不据此称全证明已核定。4P0N 证明该引用定理的具体谱推论。"
+    ],
+    "subject_ids": [
+      "0071",
+      "006E",
+      "0070"
+    ]
+  },
+  "prerequisites": {
+    "4P00": [],
+    "4P01": [
+      "00Q3",
+      "00L0",
+      "00L1"
+    ],
+    "4P02": [
+      "00L3",
+      "4P01"
+    ],
+    "4P03": [
+      "4P01",
+      "4P02"
+    ],
+    "4P04": [
+      "00GK",
+      "00M2",
+      "00MS"
+    ],
+    "4P05": [
+      "4P02",
+      "00M2",
+      "4P04",
+      "00MS",
+      "00D9"
+    ],
+    "4P06": [
+      "4R04",
+      "4R01",
+      "00MS",
+      "4P05"
+    ],
+    "4P07": [
+      "4R04",
+      "4P05",
+      "0N0B",
+      "4P06"
+    ],
+    "4P08": [
+      "4R04",
+      "4P05",
+      "4P06"
+    ],
+    "4P09": [
+      "00M2",
+      "0A39",
+      "0A3A"
+    ],
+    "4P0A": [
+      "4P09",
+      "0A39",
+      "0A3A"
+    ],
+    "4P0B": [
+      "4P02",
+      "4R01",
+      "4P09",
+      "4P0A",
+      "00XV"
+    ],
+    "4P0C": [
+      "4P0B",
+      "4P0A",
+      "004S"
+    ],
+    "4P0D": [
+      "4P09",
+      "4P02",
+      "0A39"
+    ],
+    "4P0E": [
+      "00M2"
+    ],
+    "4P0F": [
+      "4J0Q",
+      "4P01",
+      "0N0A",
+      "0N0B",
+      "00MD"
+    ],
+    "4P0G": [
+      "4P0F",
+      "4P05",
+      "0F0F"
+    ],
+    "4P0H": [
+      "4P0F",
+      "0N0B"
+    ],
+    "4P0I": [
+      "4P0H",
+      "004S"
+    ],
+    "4P0J": [
+      "00L1",
+      "0N0R",
+      "00L3"
+    ],
+    "4P0K": [
+      "00L3",
+      "4P0F",
+      "4P0J",
+      "4P0H",
+      "0N0A",
+      "0N0B"
+    ],
+    "4P0L": [
+      "4P05",
+      "4P0F",
+      "0N0B"
+    ],
+    "4P0M": [
+      "0N0B",
+      "0N0R",
+      "00L3",
+      "4P05",
+      "4P0F",
+      "4P0H"
+    ],
+    "4P0N": [
+      "4P0M",
+      "4P0H",
+      "4P05"
+    ],
+    "4P0O": [
+      "00L3",
+      "0N0R",
+      "4P0G",
+      "4P05",
+      "0F0F"
+    ],
+    "4P0P": [
+      "4P0L",
+      "0N0B",
+      "0F0F"
+    ],
+    "4P0Q": [
+      "4P0P"
+    ],
+    "4P0R": [
+      "0N0B",
+      "00L3",
+      "0N0R",
+      "4P01"
+    ],
+    "icm2026-bartlett": []
+  },
+  "reviewed_reused_ids": [
+    "00Q3",
+    "00L0",
+    "00L1",
+    "00L3",
+    "00GK",
+    "00M2",
+    "00MS",
+    "004S",
+    "0N0A",
+    "0N0B",
+    "0N0R",
+    "0F0F",
+    "0A39",
+    "0A3A",
+    "4J0Q",
+    "4R01",
+    "4R04",
+    "00XV",
+    "00D9",
+    "00MD"
+  ],
+  "source_readings": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "scope": "正式 24 页书章 HTML：数学主体 §§1-4，定义 2.1-2.3、定理 2.4-2.13、定义 2.14、定理/引理 2.15-2.17、假设 2.18、命题 2.19、定理 2.20、定义/命题 2.21-2.27、定理 2.28、引理 2.29、定义/命题/定理 2.30-2.33、定义 3.1、引理 3.2-3.3、定理 3.4-3.5、引理 3.6-3.7；元数据与所选参考文献。完整主体阅读不等于所有引用结果的证明审查。"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+      "scope": "正式 PNAS 论文 PMC HTML：元数据与许可，Definitions and Notation 定义 1-3，完整 Theorem 1，Effective Ranks and Overparameterization 至 Lemma 1 及紧随解释。交叉复核另核对 Lemma 2 和 Theorem 1 的证明概要。未读 Supplementary Information；未声称完成原始证明。"
+    }
+  ],
+  "independent_review_readings": [
+    {
+      "url": "https://arxiv.org/pdf/1906.11300v3",
+      "scope": "独立复核员针对 4P0M 阅读附录 A、J，与正式正文 Lemma 6 对照；delta/4 分配时 4t+2、sqrt(t) 和 7exp(-n/c0) 可在 delta<=1/2 下吸收为常数及更强样本量条件。不是全部原始证明的阅读记录。"
+    }
+  ],
+  "source_findings": [
+    {
+      "id": "confidence-range-in-bllt-theorem-1",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+      "location": "Theorem 1 and Lemma 2",
+      "finding": "原印 0<delta<1 与噪声项纯 log(1/delta) 因子在 delta 趋近 1 时不相容。4P0M 限定 0<delta<=1/2；分配失败概率 delta/4 后 log(4/delta)<=3log(1/delta)，常数及样本量条件相应扩大。n=4、Sigma=I、theta_*=0 的纯噪声风险近零小球概率给出原全范围表述的反例。"
+    },
+    {
+      "id": "same-response-risk-in-lemma-3.7",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§3.4 Lemma 3.7 statement and first equality in its proof",
+      "finding": "同一训练响应 y 的残差之差不等于参数预测误差；交叉项与训练估计相关。4P0P 改写为预测误差或独立测试响应，4P0Q 给 n=p=1 的符号相反反例。"
+    },
+    {
+      "id": "theorem-3.4-omitted-conclusion-probability",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§3.2 Theorem 3.4",
+      "finding": "可见 HTML 的定理列出尾 Gram 条件数事件及 B,V 上界，但没有明确陈述这些上界成立的结论概率，分布假设依赖上下文。未自行补足，改以已核读的 BLLT 2020 定理 1 高斯特例作 4P0M。"
+    },
+    {
+      "id": "dimension-in-theorem-2.11-proof",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§2.2.2 Theorem 2.11 proof after r_t tends to zero",
+      "finding": "原 HTML 写 X^T theta 趋于 y，按 X 为 n by p 的定义应为 X theta。4P08 采用维数一致的预测向量及左逆证明。"
+    },
+    {
+      "id": "unstable-optimization-not-in-mathematical-body",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§1.3 final roadmap and reference [3]",
+      "finding": "标题含不稳定优化，正式正文的数学展开为隐式正则化与良性过拟合；不稳定优化进一步内容指向在准备中的 Saint Flour 讲义。本批不按标题虚构覆盖。"
+    }
+  ],
+  "validation": {
+    "scope": "Only owned 4P notes, reference, and this packet. No full build, shared navigation/register edits, commit, or push.",
+    "status": "passed-targeted-source-checks",
+    "checked_at": "2026-10-25",
+    "tree_files": 29,
+    "atomic_pages": 27,
+    "outline_paragraphs": 8,
+    "katex_formulas": 466,
+    "prerequisite_edges": 90,
+    "reviewed_reused_count": 20,
+    "structural_findings": [],
+    "checks": [
+      "All owned tree IDs unique; all internal links resolve; all 27 atoms reachable from 4P00.",
+      "Every registered prerequisite appears as a body link; owned prerequisite graph acyclic; outline/reference prerequisites empty.",
+      "Source metadata, claim_sources, and proof_scope cover all 29 tree files; subject_ids exactly 0071/006E/0070.",
+      "466 extracted formulas accepted by local KaTeX; braces balanced; canonical formatting and editorial rules passed.",
+      "Exact rational checks passed for row-space projection, conditional bias-variance decomposition, ridge prediction risk, block inverse identity, flat-tail ranks, and training-risk counterexample.",
+      "2000-step finite-dimensional GD example matched the proved nearest-initialization limit with maximum coordinate error 6.661338147750939e-16.",
+      "No full build or rendered-page inspection performed in this bounded task; parent owns global integration and build."
+    ]
+  }
+}

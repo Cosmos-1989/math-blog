@@ -1,0 +1,13 @@
+\title{球形谱尾使插值的主块成为岭回归}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§3.2 中 X 的分块与岭回归解释；精确代数模型}
+
+\p{设 #{X=(A\ B)}，其中 #{A\in\mathbb R^{n\times k}}、#{B\in\mathbb R^{n\times m}}，并假设 #{BB^\top=\gamma I_n}、#{\gamma>0}。对响应 #{y}，[最小范数插值解](4P05)的前 #{k} 个坐标为}
+##{\hat\theta_A=A^\top(AA^\top+\gamma I_n)^{-1}y=(A^\top A+\gamma I_k)^{-1}A^\top y.}
+\p{因此 #{\hat\theta_A} 唯一最小化 #{\|Au-y\|^2+\gamma\|u\|^2}，这称为岭回归问题。}
+\p{\strong{证明。}#{XX^\top=AA^\top+\gamma I_n} 正定，故最小范数公式适用。恒等式 #{(A^\top A+\gamma I_k)A^\top=A^\top(AA^\top+\gamma I_n)} 两侧乘逆即给出第二种表达。对岭目标展开增量，驻点满足 #{(A^\top A+\gamma I_k)u=A^\top y}，在该点的增量为 #{\|Ah\|^2+\gamma\|h\|^2}，正定性给出唯一最小值。}
+\p{尾块为 #{\hat\theta_B=B^\top(AA^\top+\gamma I_n)^{-1}y}，所以 #{B\hat\theta_B=y-A\hat\theta_A}，它恰好补足主块的训练残差。若尾块的测试协方差为 #{aI_m}，则其单独的[预测平方量](4P0F)满足}
+##{a\|\hat\theta_B\|^2=a\gamma y^\top(AA^\top+\gamma I_n)^{-2}y\le\frac a\gamma\|y\|^2.}
+\p{最后一步用[谱分解](0N0B)及 #{AA^\top+\gamma I_n} 的特征值至少为 #{\gamma}。当 #{\gamma=ma} 时系数为 #{1/m}。真实随机样本的谱尾可由[Gram 矩阵估计](4P0K)控制；上述等式只在精确假设 #{BB^\top=\gamma I_n} 下成立。}

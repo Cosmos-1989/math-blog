@@ -1,0 +1,11 @@
+\title{指数损失梯度流趋向最大间隔方向}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.12，归于 Soudry 等文献 [28]}
+
+\p{设 #{X=(x_1,\ldots,x_n)^\top\in\mathbb R^{n\times p}}、#{y_i\in\{-1,1\}}，[经验风险](4P02)取指数损失 #{F(\theta)=n^{-1}\sum_i e^{-y_ix_i^\top\theta}}。这里的梯度流是满足 #{\dot\theta(t)=-\nabla F(\theta(t))} 的连续时间轨道，#{\nabla F} 使用 [Euclidean 梯度](4R01)。}
+\p{Bartlett 定理 2.12 断言：对几乎所有 #{X}，对使数据[严格线性可分](4P09)的所有标签向量，以及每个初值 #{\theta(0)\in\mathbb R^p}，有}
+##{\theta(t)=\theta_*\log(t+n)+\rho(t),\qquad \sup_{t\ge 0}\|\rho(t)\|<\infty.}
+\p{这里“几乎所有”相对于矩阵空间的 [Lebesgue 测度](00XV)，#{\theta_*} 是[硬间隔问题](4P0A)的唯一解；余项界可以依赖固定的数据与初值。特别地，#{\theta(t)/\|\theta(t)\|\to\theta_*/\|\theta_*\|}。}
+\p{这是所引文献的渐近定理。它要求指数损失、连续时间梯度流以及上述可分性和几乎处处限定。其有界余项结论不能直接用于每一个退化数据集，也不能直接用于任意步长的离散迭代。参数的范数发散与其方向收敛同时发生。}

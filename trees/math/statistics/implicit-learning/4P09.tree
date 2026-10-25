@@ -1,0 +1,10 @@
+\title{线性分类的间隔与严格可分性}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.12、式 (2.6)、式 (2.9)}
+
+\p{给定 #{x_i\in\mathbb R^p}、#{y_i\in\{-1,1\}}，用 #{x\mapsto\operatorname{sign}(x^\top v)} 分类，分界面通过原点。向量 #{v} 的样本函数间隔为 #{\min_i y_ix_i^\top v}。若存在 #{v} 使每个 #{y_ix_i^\top v>0}，称数据严格线性可分。}
+\p{对非零 #{v}，除以 [Euclidean 范数](00M2)得到几何间隔 #{\min_i y_ix_i^\top v/\|v\|_2}。严格可分时它是样本到分界超平面的最小距离。对任意选定的范数 #{\|\cdot\|}，也可定义最大归一化间隔}
+##{\gamma_*=\max_{\|v\|\le 1}\min_i y_ix_i^\top v.}
+\p{有限维闭单位球由 [Heine–Borel 定理](0A39)紧，目标连续，故[最大值存在](0A3A)。严格可分性等价于 #{\gamma_*>0}。范数是定义的一部分：#{\ell_1} 单位球与 #{\ell_2} 单位球通常给出不同最优方向。}

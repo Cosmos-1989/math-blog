@@ -1,0 +1,11 @@
+\title{正定二次函数上梯度下降的谱公式}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.5) 与 §5.1}
+
+\p{设 #{H} 为实对称[正定矩阵](0N0A)，#{f(x)=\tfrac 12x^{\mathsf T}Hx+g^{\mathsf T}x}。唯一极小点是 #{x_*=-H^{-1}g}。固定步长 #{\alpha} 的[梯度下降](4R04)满足 #{x_{k+1}-x_*=(I-\alpha H)(x_k-x_*)}。}
+\p{由[正交对角化](0N0B)，设 #{Hu_i=\lambda_i u_i} 为标准正交本征基，#{x_0-x_*=\sum_i a_i u_i}，则}
+##{x_k-x_*=\sum_i a_i(1-\alpha\lambda_i)^k u_i.}
+\p{因此，对每个初值都收敛到极小点的充要条件为 #{0<\alpha<2/\lambda_{\max}}。必要性由只沿相应本征向量取初值看出，充分性由各因子模小于一得到。}
+\p{若谱在 #{[\mu,L]} 内，选择 #{\alpha=2/(L+\mu)}，每个方向的收缩因子至多为 #{(L-\mu)/(L+\mu)}。条件数 #{\kappa=L/\mu} 越大，这个最坏因子越接近一；狭长二次曲面的几何由此直接表现为迭代缓慢。}

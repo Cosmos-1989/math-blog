@@ -1,0 +1,1756 @@
+{
+  "date": "2026-10-25",
+  "subject": "006E",
+  "scope": "第一批应用与计算全会报告；专题归属为编辑分类，不冒充官方分组。",
+  "reports": [
+    {
+      "speaker": "Peter L. Bartlett",
+      "title": "Modern Machine Learning Methods: Implicit Bias, Benign Overfitting, and Unstable Optimization",
+      "outline": "4P00",
+      "prefix": "4P",
+      "reference": "icm2026-bartlett",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "doi": "10.1137/25M1807617",
+      "pages": "1-24",
+      "license": "CC BY 4.0",
+      "question": "训练算法为何在众多拟合解中选择特定方向或最小范数解，这种选择在什么协方差谱条件下能够插值噪声而保持小的预测超额风险？",
+      "reading_scope": "已读正式 HTML 的完整数学主体 §§1.1-1.3、2.1-2.9、3.1-3.4、4，含定义、定理及显示公式；使用重叠窗口覆盖 HTML lines 99-1028。另核对作者、标题、页码、DOI、2026-07-13 发布日期、版权和 CC BY 4.0，以及参考文献 [3]、[4]、[28]-[30]。未读取 SIAM PDF、附属 Saint Flour 讲义或报告所引研究论文的全部证明。补读 BLLT 2020 正式论文 PMC HTML 的 Definitions and Notation（定义 1-3、假设 1-5）、Main Results 定理 1 与 Effective Ranks 小节至 Lemma 1（lines 137-225），并核对文章元数据和 PNAS license。4P0M 采用其假设明确的有限维高斯特例，不将报告定理 3.4 中未写出的结论概率自行补齐。4P0P-4P0Q 对报告引理 3.7 的训练/测试响应区别给出独立修正与反例。",
+      "proof_scope": {
+        "4P00": {
+          "status": "narrative-outline",
+          "scope": "八段数学叙述，连接全部 27 个原子条目；区分算法选解、预测风险、损失与参数化。没有给未读的不稳定优化讲义赋予定理。"
+        },
+        "4P01": {
+          "status": "definition",
+          "scope": "决策空间与响应空间可不同；风险对独立测试样本积分，随机估计固定训练样本后求风险。"
+        },
+        "4P02": {
+          "status": "definition-and-local-proof",
+          "scope": "经验风险、固定规则的无偏性、平方损失零值与样本插值；有限逻辑和指数损失不取零。"
+        },
+        "4P03": {
+          "status": "local-proof",
+          "scope": "有限风险下的四项望远镜分解与一致双边偏差的 2 epsilon 推论。"
+        },
+        "4P04": {
+          "status": "local-proof",
+          "scope": "有限矩阵的正规方程必要充分性、投影存在性及解集为 theta0+ker X。"
+        },
+        "4P05": {
+          "status": "local-proof",
+          "scope": "满行秩下 XX^T 正定、插值存在、正交分解给最小范数唯一性及行空间投影公式。"
+        },
+        "4P06": {
+          "status": "local-proof",
+          "scope": "线性预测损失的梯度在行空间、任意步长更新保持核分量；收敛时仍保持该分量。"
+        },
+        "4P07": {
+          "status": "local-proof",
+          "scope": "平方损失、满行秩、固定 0<eta<2n/lambda_max(X^TX)；谱收缩给极限，投影给离初始化最近的唯一插值解。仅应用型隐式偏置，不另立梯度或稳定性基础定义。"
+        },
+        "4P08": {
+          "status": "conditional-local-proof",
+          "scope": "报告定理 2.11 的固定步长、零初始化、满行秩、迭代点收敛及导数序列条件；用有限维左逆避免额外假设导数连续。"
+        },
+        "4P09": {
+          "status": "definition-and-local-proof",
+          "scope": "无截距线性分类的严格可分性、函数间隔、Euclidean 几何间隔及一般范数单位球最大间隔；紧性给达到性。"
+        },
+        "4P0A": {
+          "status": "local-proof",
+          "scope": "可分有限样本硬间隔问题的存在唯一性，缩放证明与最大 Euclidean 间隔等价。"
+        },
+        "4P0B": {
+          "status": "cited-research-theorem",
+          "scope": "严格采用报告定理 2.12：指数损失、连续梯度流、几乎所有 X、可分标签、每个固定初值；有界余项及方向极限。不移植到任意数据或任意步长 GD。"
+        },
+        "4P0C": {
+          "status": "local-proof-from-cited-theorem",
+          "scope": "以 4P0B 有界余项为输入，证明参数 Theta(log t)、损失 Theta(1/t)、方向 O(1/log t)；用最优约束必有活跃项得到损失下界。"
+        },
+        "4P0D": {
+          "status": "local-proof",
+          "scope": "有限严格可分数据的逻辑风险下确界为零且不取到；趋零损失迫使参数范数发散；没有宣称算法方向收敛。"
+        },
+        "4P0E": {
+          "status": "local-proof",
+          "scope": "报告引理 2.29 的逐坐标乘积参数化：AM-GM 下界与显式达到者；全局变分最优值等式，不把非凸 KKT 点升级为全局最优解。"
+        },
+        "4P0F": {
+          "status": "local-proof",
+          "scope": "二阶矩、中心化设计与条件均值正确指定下，平方超额风险等于协方差半范数；对随机估计使用独立测试样本。"
+        },
+        "4P0G": {
+          "status": "local-proof",
+          "scope": "固定满行秩设计、条件均值零且条件噪声协方差 sigma^2 I 的精确偏差方差分解；不声称单样本高概率界。"
+        },
+        "4P0H": {
+          "status": "definition",
+          "scope": "正特征值谱尾上的 r_k、R_k、k_*；分母零时不定义有效秩，最小集合为空时 k_*=infinity。"
+        },
+        "4P0I": {
+          "status": "local-proof",
+          "scope": "有效秩全部比较、乘法恒等式及 R_k<=尾部非零特征值个数；Cauchy-Schwarz 给必要维数增长。"
+        },
+        "4P0J": {
+          "status": "definition-and-local-calculation",
+          "scope": "矩母函数版本次高斯定义、中心化、配方验证标准高斯、独立坐标矩母函数乘积。"
+        },
+        "4P0K": {
+          "status": "cited-research-theorem-with-local-corollary",
+          "scope": "报告引理 3.2：有限维正定对角协方差、iid 行、独立参数一的次高斯白化坐标、固定 k、明确置信概率。浓缩界引用，r_k>=bn 导出的双边正定次序界本地证明。"
+        },
+        "4P0L": {
+          "status": "local-proof",
+          "scope": "确定性假设 BB^T=gamma I 下，最小范数插值主块等于岭回归、尾块补残差及各向同性尾部预测平方量上界；不将有界条件数当作精确标量等式。"
+        },
+        "4P0M": {
+          "status": "cited-research-theorem",
+          "scope": "BLLT 2020 定义 1、定理 1 的有限维高斯设计、独立同方差高斯噪声特例；保留 k_* 空集约定、概率与期望量词及两种 k_* 情形。置信参数限制为 0<delta<=1/2，以免 log(1/delta) 在 delta 趋近 1 时错误地消去噪声项；绝对常数允许扩大。未导入额外最坏信号偏差下界。"
+        },
+        "4P0N": {
+          "status": "local-proof-from-cited-theorem",
+          "scope": "p_n=n^2+1，协方差 diag(1,n^-2,...,n^-2)，固定单位首坐标信号与噪声；精确计算 r0=2、r1=R1=n^2、k_*=1，应用 delta=1/n 得依概率一致性。"
+        },
+        "4P0O": {
+          "status": "local-proof",
+          "scope": "有限高斯各向同性设计，旋转不变性与迹给 E P=(n/p)I，从而平均平方偏差 (1-n/p)||theta_*||^2；没有计算逆 Wishart 方差。"
+        },
+        "4P0P": {
+          "status": "local-proof-with-corrected-risk-quantity",
+          "scope": "报告引理 3.7 的代数推导对应固定设计预测误差或独立测试响应；明确训练噪声条件和归一化，逐项计算偏差与方差。"
+        },
+        "4P0Q": {
+          "status": "local-counterexample",
+          "scope": "n=p=1、X=1、theta_*=0，逐项算出训练残差差为负而预测误差为正，定位报告引理 3.7 的响应重复使用问题。"
+        },
+        "4P0R": {
+          "status": "local-proof",
+          "scope": "报告命题 2.19 所涉统计区别的固定方向有限维特例：正定高斯逻辑模型、非零固定 v、a>0；分类决策不变而逻辑风险至少 a c_v，c_v>0。未复述校准误差全定理或早停一致性。"
+        },
+        "icm2026-bartlett": {
+          "status": "bibliographic-reference",
+          "scope": "正式书章的作者、DOI、页码、日期、CC BY 4.0 及中文改编署名；BLLT 2020 的独立 PNAS 许可；报告引理 3.7 数学修正说明。"
+        }
+      },
+      "claim_sources": {
+        "4P00": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§§1.1-1.3, 2.2-2.3, 2.6-2.8.1, 3.1-3.4, 4; unstable optimization is referred to reference [3] at end §1.3"
+          }
+        ],
+        "4P01": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§1.1 population risk; §2.1 decision space and loss examples"
+          }
+        ],
+        "4P02": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§1.1 empirical risk; §1.3 overfitting; §3.2 interpolation"
+          }
+        ],
+        "4P03": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§1.2 four-term decomposition and discussion of uniform convergence"
+          }
+        ],
+        "4P04": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§2.2 squared empirical risk; §3.2 Definition 3.1 and normal equations"
+          }
+        ],
+        "4P05": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Theorem 2.4, equation (2.1), Definition 3.1 and equation (3.1)"
+          }
+        ],
+        "4P06": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Theorem 2.11 proof, gradient updates in image X^T"
+          }
+        ],
+        "4P07": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Theorem 2.4; explicit finite-dimensional spectral sufficient stepsize added locally"
+          }
+        ],
+        "4P08": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Theorem 2.11 statement and proof; derivative-sequence assumption and convergence conditional"
+          }
+        ],
+        "4P09": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Theorem 2.12 separability; equation (2.6) and subsequent maximum margin interpretation; equation (2.9)"
+          }
+        ],
+        "4P0A": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Equation (2.6) and equivalent unit-ball margin problem immediately following Theorem 2.12"
+          }
+        ],
+        "4P0B": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Theorem 2.12, attributed there to reference [28]"
+          }
+        ],
+        "4P0C": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Immediately after equations (2.7)-(2.8): consequences of Theorem 2.12"
+          }
+        ],
+        "4P0D": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "End §2.2.2, losses minimized at infinity; §2.6 logistic loss"
+          }
+        ],
+        "4P0E": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§2.8.1 Lemma 2.29, equation (2.17), explicit balanced-factor construction"
+          }
+        ],
+        "4P0F": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.1 excess square risk; start §3.2 covariance-weighted parameter error"
+          }
+        ],
+        "4P0G": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.2 after Lemma 3.3: definitions of B and V and conditional bias-variance formulas"
+          }
+        ],
+        "4P0H": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.2 effective rank r_k before Lemma 3.2 and R_k before Theorem 3.4"
+          }
+        ],
+        "4P0I": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.4 Lemma 3.6; R_k<=tail rank is a local Cauchy-Schwarz consequence"
+          }
+        ],
+        "4P0J": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Definition of sigma^2-sub-Gaussian immediately before Lemma 3.2"
+          }
+        ],
+        "4P0K": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Lemma 3.2 and the r_k>=bn corollary immediately following it"
+          }
+        ],
+        "4P0L": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.2 head-tail split and exact hypothetical X_tail X_tail^T=gamma I"
+          }
+        ],
+        "4P0M": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+            "location": "Definitions and Notation: Definition 1 assumptions 1-5, Definition 3; Main Results: Theorem 1, first two cases and expected variance lower bound (HTML lines 137-210). Gaussian specialization only."
+          },
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3 opening cites reference [4]; precise theorem imported from that original paper, not relabelled as report Theorem 3.4"
+          }
+        ],
+        "4P0N": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.4 effective-rank interpretation; specific growing finite-dimensional spectrum is a local example"
+          },
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+            "location": "Theorem 1 upper bound, substituted with delta=1/n and spectrum (1,n^-2 repeated n^2 times); computation done locally."
+          }
+        ],
+        "4P0O": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.2 formula for B; §3.4 isotropic covariance example; rotational averaging is a local calculation"
+          }
+        ],
+        "4P0P": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.4 Lemma 3.7 and its parameter-error calculation; left risk quantity corrected to prediction error"
+          }
+        ],
+        "4P0Q": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§3.4 Lemma 3.7: local one-dimensional check of its same-response training-residual expression"
+          }
+        ],
+        "4P0R": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "§2.6 Assumption 2.18 and Proposition 2.19(6); local fixed-direction finite-dimensional result"
+          }
+        ],
+        "icm2026-bartlett": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+            "location": "Title/author/pages/DOI; Information & Authors: copyright and history; references [3], [4], [28]; Lemma 3.7"
+          },
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+            "location": "Article metadata and license; Definition 1 and Theorem 1."
+          }
+        ]
+      },
+      "remaining_branches": [
+        "不稳定大步长优化：报告 §1.3 仅给实践动机并指向 [3] Saint Flour lecture notes, in preparation (2025)；该讲义未读，未建立相应算法或定理页。",
+        "§2.2.1 一般约束优化、切锥、极锥、约束规范与 KKT 理论：数学正文已读；不重复父任务优化基础，此批只用有限维线性代数证明所需特殊情形。",
+        "§2.4 AdaBoost/坐标下降与一范数间隔：正文已读；精确 shrinkage 更新条件需回查引用 [29]，不导入定理 2.13。",
+        "§2.5 Rademacher 复杂度、对称化、收缩及大间隔泛化界：正文已读，尚未建立原子页。",
+        "§2.6 早停梯度下降的定量风险界与校准误差：正文已读；仅展开逻辑损失有限极小点缺失及固定方向总体风险发散，不导入定理 2.20。",
+        "§§2.7-2.8 齐次参数化、Clarke 次微分、o-minimal 可定义性与 KKT 方向收敛：正文已读；只展开引理 2.29 的对角乘积变分恒等式，不导入非光滑方向收敛定理。",
+        "§2.9 近齐次化、近似多项式与定理 2.33：正文已读，尚未展开。",
+        "§§3.2-3.3 小球假设、重尾推广、报告定理 3.4 的精细信号方向偏差界及定理 3.5 下界：正文已读，需回查 Tsigler-Bartlett 2023 的原始概率和分布条件；本批采用独立原文可核实的 BLLT 高斯界。",
+        "§4 非线性模型的简单/插值分解、蒸馏、过参数化的计算收益：保留为研究问题，没有声称普遍定理。"
+      ],
+      "unexpanded_deep_proofs": [
+        "4P0B：报告定理 2.12 的指数损失梯度流有界余项与方向收敛证明；此处引用报告，未独立读取 Soudry 等 [28] 全部原始证明。",
+        "4P0K：报告引理 3.2 的随机 Gram 矩阵浓缩估计；只证明由它到条件数界的推论。",
+        "4P0M：BLLT 2020 定理 1 的非渐近风险上界与平均噪声下界；原始长证明未全部展开。独立复核读取作者版本附录 A、J 的置信参数估计，但不据此称全证明已核定。4P0N 证明该引用定理的具体谱推论。"
+      ],
+      "subject_ids": [
+        "0071",
+        "006E",
+        "0070"
+      ]
+    },
+    {
+      "speaker": "Éva Tardos",
+      "title": "Learning and the Price of Anarchy in Games",
+      "outline": "4Q00",
+      "prefix": "4Q",
+      "reference": "icm2026-tardos",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+      "doi": "10.1137/25M1808064",
+      "pages": "302–312",
+      "license": "CC BY 4.0; © 2026 International Mathematical Union, published by SIAM. Chinese adaptation with attribution and explicit local elaborations; no source figures reproduced.",
+      "question": "个体使用无遗憾学习时，社会成本为何仍可由最优成本控制；行动改变未来状态后，效率与队列稳定性还需要哪些额外条件？",
+      "reading_scope": "2026-10-25：阅读 SIAM 正式 HTML 的全部数学正文，从 Introduction、式(1)–(7)、Theorems 1–9 到 Repeated auctions with budgets；核对 Figure 1–2 的文字说明，未读取图像像素或 PDF 分页。核对页首302–312页、DOI、Copyright CC BY4.0、2026-07-13出版日期与相关参考文献。补读 arXiv:2502.08898v1 §§1–3 后改以 v2（2025-07-19）为规范补充来源，重读其作者/许可、§2全部模型与§3至 Theorem 1 证明结束；未把实验部分或下界证明列为整段审读。根树全局题名/术语搜索未找到有限博弈、Nash、CCE、外部遗憾或算法乘法权重的已有规范定义；实际阅读并复用 reviewed_reused_ids 的概率、微积分及箭图条目。4P/Bartlett、4R/Wright 和共享凸分析未编辑。",
+      "proof_scope": {
+        "4Q01": {
+          "status": "definition",
+          "scope": "有限玩家、有限非空行动集、成本、单边偏离和效用转成本；无均衡存在性断言。"
+        },
+        "4Q02": {
+          "status": "definition",
+          "scope": "有限概率分布与乘积分布复用既有概率、独立性、期望；不新增通用概率定义。"
+        },
+        "4Q03": {
+          "status": "definition-and-local-proof",
+          "scope": "纳什均衡定义；对纯偏离条件加权证明它等价于允许混合偏离。未证明 Nash 存在性。"
+        },
+        "4Q04": {
+          "status": "definition",
+          "scope": "CCE 与玩家分量误差版本；明确事先固定偏离与看推荐后偏离的差别。"
+        },
+        "4Q05": {
+          "status": "local-proof",
+          "scope": "逐个固定行动核算石头剪刀布六项分布，证明 CCE 且非乘积；不声称具体学习算法必收敛于它。"
+        },
+        "4Q06": {
+          "status": "definition",
+          "scope": "实际与混合损失的外部遗憾、正部归一化定义无遗憾；有界成本归一化。"
+        },
+        "4Q07": {
+          "status": "construction",
+          "scope": "全信息指数更新、正权重、展开式及与 bandit 反馈的差别。"
+        },
+        "4Q08": {
+          "status": "local-proof",
+          "scope": "利用已有微积分与指数/对数定义，在证明内推导两个标量不等式，再比较总权重上下界；所有 eta>0 有效；不创建共享凸性条目。"
+        },
+        "4Q09": {
+          "status": "local-proof",
+          "scope": "倍增重启、末期不足计划长度的处理、对同一固定行动比较及等比求和，给出任意终止时间的平方根界。"
+        },
+        "4Q0A": {
+          "status": "local-proof",
+          "scope": "有限/可数历史的条件期望；非预知本轮随机抽样的损失下，对每个固定行动的期望比较。无交换 E 与 min，无高概率或路径保证。"
+        },
+        "4Q0B": {
+          "status": "local-proof",
+          "scope": "频数归组给出确定路径上的近似 CCE；逐坐标收敛子序列的极限满足 CCE；随机版本只对平均经验分布。未证明唯一极限或 Nash 收敛。"
+        },
+        "4Q0C": {
+          "status": "definition",
+          "scope": "非负社会成本、最优组合、均衡类的 PoA；最优成本为零时改用不等式避免除零。"
+        },
+        "4Q0D": {
+          "status": "definition",
+          "scope": "对所有比较组合的标准平滑性，以及只对固定最优组合验证即可用于效率界的较弱假设。"
+        },
+        "4Q0E": {
+          "status": "local-proof",
+          "scope": "相加 CCE 偏离、取期望、使用平滑性并移项；包含零最优成本边界。"
+        },
+        "4Q0F": {
+          "status": "local-proof",
+          "scope": "直接时间求和得到显式平均遗憾项，不借策略收敛；期望版本条件明确。"
+        },
+        "4Q0G": {
+          "status": "definition",
+          "scope": "有限可用简单路径、需求、路径流与边流、连续非负非减延迟、Wardrop 条件和社会成本；图路径复用 0190。"
+        },
+        "4Q0H": {
+          "status": "local-proof",
+          "scope": "最短路加权推出变分不等式；在较慢正流路径上挪动少量流量证明逆命题。"
+        },
+        "4Q0I": {
+          "status": "local-proof",
+          "scope": "平方非负给出逐边仿射延迟不等式，代入 Wardrop 比较并移项，得到对每个可行比较流的 4/3 界。"
+        },
+        "4Q0J": {
+          "status": "local-proof",
+          "scope": "原文 Figure 1 的三路径流全部写明，证明增加边前后的唯一均衡及最优成本分解；未复用原图。"
+        },
+        "4Q0K": {
+          "status": "local-proof",
+          "scope": "单调延迟逐边分两种情形；两倍需求流除二后使用 Wardrop 比较，证明容量余量结果。"
+        },
+        "4Q0L": {
+          "status": "definition",
+          "scope": "有限出价、固定估值、禁止过度出价、固定同价规则、准线性效用、收入与配置福利。"
+        },
+        "4Q0M": {
+          "status": "local-proof",
+          "scope": "效用型 CCE 求和并抵消收入；附同一证明的有限时间遗憾形式。"
+        },
+        "4Q0N": {
+          "status": "local-proof",
+          "scope": "出价集含半估值时，获胜/未获胜分情况，包含同价未胜的非严格不等式，再给出 1/2 福利下界。"
+        },
+        "4Q0O": {
+          "status": "definition-and-scope-comparison",
+          "scope": "状态、转移、历史策略及实际状态固定比较和重新运行比较；不导入强化学习定理。"
+        },
+        "4Q0P": {
+          "status": "local-proof",
+          "scope": "自行构造两状态例，逐轮算出零外部遗憾与线性政策差距；未归因于原文的具体反例。"
+        },
+        "4Q0Q": {
+          "status": "definition",
+          "scope": "依据 v2 §2 固定到达、接纳、服务次序；缓冲位于服务器；奖励为接纳而非处理；独立性和守恒递推显式。"
+        },
+        "4Q0R": {
+          "status": "definition-and-local-proof",
+          "scope": "稳定性为时间一致的总包数期望界；守恒式只证明总到达率严格大于总服务率必不稳定，不错误推断临界点。"
+        },
+        "4Q0S": {
+          "status": "local-proof-of-simple-model",
+          "scope": "直接服务、无单独服务器缓冲的 Bernoulli 单队列；指数矩递推、零边界修正项、几何求和及具体数值全部推导。与竞争网络严格分开。"
+        },
+        "4Q0T": {
+          "status": "cited-research-result-with-scope-note",
+          "scope": "在 v2 §3 Theorem 1 的容量条件上，显式补强对每个块起点历史统一的条件高概率遗憾假设，并设初始队列/缓冲为空。引用 Lemmas 2–3 的分块下降及 Pemantle–Rosenthal 矩定理；本地写明 c_delta、失败概率 q 和 (-(1-q)c_delta+qn)T 的条件漂移计算。不是仅凭无条件高概率或前缀遗憾推出稳定性。"
+        },
+        "4Q0U": {
+          "status": "definition",
+          "scope": "预算状态和跨轮可加估值下液态福利；只给截断例及原报告的定性研究方向，不引入预算学习效率定理。"
+        },
+        "4Q00": {
+          "status": "narrative-survey",
+          "scope": "九段综述覆盖全部30个原子条目；明确动态网络结论为引用输入。"
+        },
+        "icm2026-tardos": {
+          "status": "bibliographic-reference",
+          "scope": "正式章节元数据与 CC BY 4.0 署名；固定 v2 队列论文作者、日期及许可；其他研究出处仅沿章节参考文献列出，未声称读过其全文。"
+        }
+      },
+      "claim_sources": {
+        "4Q01": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Introduction，式(1)前"
+          }
+        ],
+        "4Q02": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Introduction，式(1)"
+          }
+        ],
+        "4Q03": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Introduction，式(1)"
+          }
+        ],
+        "4Q04": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Course correlated equilibria，式(1)"
+          }
+        ],
+        "4Q05": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Course correlated equilibria 中石头剪刀布例"
+          }
+        ],
+        "4Q06": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "No-regret learning，式(2)"
+          }
+        ],
+        "4Q07": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "No-regret learning；有限行动算法的展开；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q08": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "No-regret learning；乘法权重的初等推导；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q09": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "No-regret learning；局部有限时间界的推论；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q0A": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "No-regret learning；随机实施的局部说明；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q0B": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Course correlated equilibria；式(2)的直接推论"
+          }
+        ],
+        "4Q0C": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "The price of anarchy"
+          }
+        ],
+        "4Q0D": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Smooth games，式(3)"
+          }
+        ],
+        "4Q0E": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Theorem 1 及证明"
+          }
+        ],
+        "4Q0F": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Theorem 1 的有限时间形式"
+          }
+        ],
+        "4Q0G": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Smoothness of routing games"
+          }
+        ],
+        "4Q0H": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Smoothness of routing games，Theorem 4 证明中的最短路比较"
+          }
+        ],
+        "4Q0I": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Smoothness of routing games；仿射情形的局部推导；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q0J": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Introduction，Figure 1"
+          }
+        ],
+        "4Q0K": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Lemma 3、Theorem 4"
+          }
+        ],
+        "4Q0L": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Smoothness of auction games"
+          }
+        ],
+        "4Q0M": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "式(6)、Theorem 5"
+          }
+        ],
+        "4Q0N": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Lemma 6 及其后推论；同价情形作非严格比较"
+          }
+        ],
+        "4Q0O": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Learning outcomes in dynamic games"
+          }
+        ],
+        "4Q0P": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Learning outcomes in dynamic games；自行构造的两状态例；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q0Q": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Packet routing as a dynamic game；Abel 等 v2，§2"
+          },
+          {
+            "url": "https://arxiv.org/html/2502.08898v2",
+            "location": "§2 Model, steps 1–3 and feedback footnote"
+          }
+        ],
+        "4Q0R": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Theorem 8；Abel 等 v2，§2 Definition 1"
+          },
+          {
+            "url": "https://arxiv.org/html/2502.08898v2",
+            "location": "§2 Definition 1 and conservation argument"
+          }
+        ],
+        "4Q0S": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "动态队列的自行推导例；区别于单包缓冲网络；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+          }
+        ],
+        "4Q0T": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Theorem 8；Abel 等 v2，§3 Theorem 1、Conditions 1–3、Lemmas 2–5"
+          },
+          {
+            "url": "https://arxiv.org/html/2502.08898v2",
+            "location": "§3 Theorem 1; Conditions 1–3; Lemmas 2–5; potential preceding Condition 1; deep proof cited, not reconstructed"
+          }
+        ],
+        "4Q0U": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "Repeated auctions with budgets"
+          }
+        ],
+        "4Q00": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "全文正文 Introduction 至 Repeated auctions with budgets；九段中文改编"
+          }
+        ],
+        "icm2026-tardos": [
+          {
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+            "location": "页首、Information & Authors、Copyright、History、References [2], [33], [39]"
+          },
+          {
+            "url": "https://arxiv.org/html/2502.08898v2",
+            "location": "作者栏、版本日期、License、§§2–3"
+          }
+        ]
+      },
+      "remaining_branches": [
+        {
+          "branch": "均衡存在性与更强遗憾",
+          "scope": "Nash 存在性、不动点与复杂性、内部/交换遗憾和相关均衡未展开；当前主线不调用 Nash 存在性。"
+        },
+        {
+          "branch": "贝叶斯和复杂拍卖",
+          "scope": "原章节 Theorem 7 的私有估值/独立类型推广、随机偏离的 1-1/e 福利比例、组合拍卖及动态参与者未分拆成证明条目。"
+        },
+        {
+          "branch": "预算动态效率",
+          "scope": "液态福利已定义；第二价格反例、特定学习算法保证及第一价格 2.41 界只保留为研究方向，未引为本地定理。"
+        },
+        {
+          "branch": "队列精确阈值与反馈算法",
+          "scope": "三倍容量是否最优、一般网络/无缓冲模型、bandit 算法高概率与分块重启细节未重建。"
+        }
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4Q0T"
+          ],
+          "url": "https://arxiv.org/html/2502.08898v2",
+          "scope": "§3 Theorem 1 的竞争网络分块下降引理、服务/到达集中估计和随机过程矩定理采用原文。页面显式加入比 Lemma 5 字面形式更强的、对任意块起点历史统一的条件概率假设，并修正好事件贡献必须乘 1-q 的漂移估计。没有从无条件高概率界或普通前缀无遗憾推导该假设。"
+        },
+        {
+          "notes": [
+            "4Q0T"
+          ],
+          "url": "https://doi.org/10.1016/S0304-4149(99)00012-5",
+          "scope": "Pemantle–Rosenthal 矩定理只按 Tardos Theorem 9 及 Abel 等 Theorem 2 识别为深输入，未直接阅读原论文，未自行声明其省略初值条件的完整定理。"
+        }
+      ],
+      "subject_ids": [
+        "006E",
+        "0070",
+        "0072"
+      ]
+    },
+    {
+      "speaker": "Stephen J. Wright",
+      "title": "Optimization in Theory and Practice",
+      "outline": "4R00",
+      "prefix": "4R",
+      "reference": "icm2026-wright",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806831",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806831",
+      "doi": "10.1137/25M1806831",
+      "pages": "363–393",
+      "license": "CC BY 4.0, SIAM / International Mathematical Union, 2026-07-13. Attributed Chinese adaptation and independently expanded mathematical arguments; no source figures reproduced.",
+      "question": "优化问题的几何结构怎样决定算法的信息需求、误差界与实际计算代价？",
+      "reading_scope": "阅读正式 SIAM HTML 的摘要、§§2–5 和结语，重点逐段核对 §§4.1–4.3、5.1–5.2、5.4–5.6；§5.2 后半段的有限插值与性能估计思路已读，未复现其 SDP 算法设计。核对题名、页码、日期及许可。未检查原文图片像素、未逐项阅读参考文献中的论文。新增初等引理与复杂度计算均在本地重新推导，研究性最优界与算法的全部变体没有当作已重建证明。",
+      "proof_scope": {
+        "4R01": {
+          "status": "definition-and-local-proof",
+          "scope": "梯度的内积表示、最速方向与局部极小的必要条件。"
+        },
+        "4R02": {
+          "status": "definition-and-local-proof",
+          "scope": "C2 Hessian、局部极小的半正定必要条件和正定充分条件。"
+        },
+        "4R03": {
+          "status": "local-proof",
+          "scope": "沿线段积分得到下降引理及双边余项界。"
+        },
+        "4R04": {
+          "status": "local-proof",
+          "scope": "固定步长的单步下降与步长范围。"
+        },
+        "4R05": {
+          "status": "local-proof",
+          "scope": "函数有下界时寻找梯度范数小于 epsilon 的 O(epsilon^-2) 迭代界。"
+        },
+        "4R06": {
+          "status": "local-proof",
+          "scope": "可微凸性与全局支撑超平面不等式等价。"
+        },
+        "4R07": {
+          "status": "local-proof",
+          "scope": "极小点存在时距离递减求和给 O(1/T) 函数误差。"
+        },
+        "4R08": {
+          "status": "definition-and-local-proof",
+          "scope": "强凸一阶下界、唯一极小点存在与梯度控制误差。"
+        },
+        "4R09": {
+          "status": "local-proof",
+          "scope": "强凸与光滑假设下的固定步长几何收敛率。"
+        },
+        "4R0A": {
+          "status": "definition",
+          "scope": "线性规划标准形、可行性、无界性及标准化。"
+        },
+        "4R0B": {
+          "status": "local-proof",
+          "scope": "原对偶可行点的目标差恒等式及互补松弛充分性。"
+        },
+        "4R0C": {
+          "status": "local-proof",
+          "scope": "有限生成锥闭性、最近点分离以及 Farkas 二择一。"
+        },
+        "4R0D": {
+          "status": "local-proof",
+          "scope": "满行秩下基本可行解与顶点等价，允许退化。"
+        },
+        "4R0E": {
+          "status": "construction-and-local-proof",
+          "scope": "约化成本、换基方向与比值检验；没有证明防循环规则的有限终止。"
+        },
+        "4R0F": {
+          "status": "local-proof",
+          "scope": "原、对偶严格可行和满行秩下，障碍问题解存在唯一，中心路径及目标差 n mu。"
+        },
+        "4R0G": {
+          "status": "local-proof",
+          "scope": "严格可行点不必位于中心路径；证明 Newton 方程的 Schur 补正定与方向正交。"
+        },
+        "4R0H": {
+          "status": "local-proof",
+          "scope": "原始对偶方向的平均互补间隙精确递推。"
+        },
+        "4R0I": {
+          "status": "local-proof",
+          "scope": "给出显式保守步长，证明保持中心邻域与 O(n log(mu0/epsilon)) 次数界；每次步长均须保持该邻域，不只保持严格可行。不包含严格可行初值的构造和每步成本。"
+        },
+        "4R0J": {
+          "status": "local-proof",
+          "scope": "标准形线性规划的鞍点与原对偶互补条件等价。"
+        },
+        "4R0K": {
+          "status": "construction-and-local-proof",
+          "scope": "PDHG 更新与不动点的最优性证明；明确鞍点存在及 tau sigma ||A||^2<1，定义遍历平均并指向 §4.3 的逼近分析。不将该段的遍历平均结论升级为未引用的单点序列收敛定理。"
+        },
+        "4R0L": {
+          "status": "definition-and-comparison",
+          "scope": "区分迭代、算术、信息调用与位复杂度。"
+        },
+        "4R0M": {
+          "status": "construction",
+          "scope": "凸光滑 Nesterov 外推的具体参数递推。"
+        },
+        "4R0N": {
+          "status": "local-proof",
+          "scope": "完整递减量证明 O(1/k^2)，不调用研究性下界。"
+        },
+        "4R0O": {
+          "status": "local-proof",
+          "scope": "正定二次函数的谱公式、固定步长稳定区间与最优收缩因子。"
+        },
+        "4R0P": {
+          "status": "local-proof",
+          "scope": "极小点 Hessian 正定、局部 Hessian Lipschitz 下 Newton 局部二次收敛。"
+        },
+        "4R0Q": {
+          "status": "local-proof",
+          "scope": "Hessian Lipschitz 时函数和梯度的积分余项。"
+        },
+        "4R0R": {
+          "status": "local-proof",
+          "scope": "精确解三次子问题且正则参数大于 Hessian Lipschitz 常数时，近似一阶驻点 O(epsilon^-3/2) 界。未把二阶驻点或子问题求解成本并入。"
+        },
+        "4R0S": {
+          "status": "local-proof",
+          "scope": "给定完整共轭方向组时至多 n 步终止；未构造共轭梯度短递推。"
+        },
+        "4R0T": {
+          "status": "local-proof",
+          "scope": "Sherman–Morrison 公式及适用的非零分母条件。"
+        },
+        "4R0U": {
+          "status": "local-proof",
+          "scope": "逆 BFGS 的割线条件和正定保持；没有一般超线性收敛证明。"
+        },
+        "4R0V": {
+          "status": "local-proof",
+          "scope": "带秩约束的半正定矩阵与矩形因子的等价；未断言非凸问题无伪极小点。"
+        },
+        "4R0W": {
+          "status": "local-proof",
+          "scope": "光滑凸函数的梯度插值必要不等式；完整插值充分性和性能估计 SDP 未证明。"
+        },
+        "4R0X": {
+          "status": "local-proof",
+          "scope": "Armijo 回溯有限终止及具体步长下界。"
+        },
+        "4R0Y": {
+          "status": "local-proof",
+          "scope": "有限生成锥证明 LP 有限最优值取得；活跃约束分离证明强对偶。"
+        },
+        "4R0Z": {
+          "status": "definition-and-local-proof",
+          "scope": "自协调条件及正交象限对数障碍的参数 n；未证明一般障碍复杂度定理。"
+        },
+        "4R10": {
+          "status": "local-proof",
+          "scope": "二维正定二次函数中先增后降、两步终止的显式算例。"
+        }
+      },
+      "claim_sources": {
+        "4R01": [
+          {
+            "location": "§5.1 的梯度记法；本地微积分前置展开",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R02": [
+          {
+            "location": "§5.4 的 Hessian；本地二阶判别展开",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R03": [
+          {
+            "location": "§5，式(5.1)及§5.1，式(5.9)",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R04": [
+          {
+            "location": "§5.1，式(5.7)–(5.11)",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R05": [
+          {
+            "location": "§5.1，式(5.13)及其后复杂度；修正 epsilon 的指数符号",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R06": [
+          {
+            "location": "§2.1、§5.1 凸函数假设；本地一阶刻画证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R07": [
+          {
+            "location": "§5.1 凸函数误差分析；本地距离递减证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R08": [
+          {
+            "location": "§2.1、§5.1 强凸假设；本地存在性与误差下界证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R09": [
+          {
+            "location": "§5.1，式(5.15)",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0A": [
+          {
+            "location": "§§2.2、4.1",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0B": [
+          {
+            "location": "§2.2，式(2.2)–(2.5)",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0C": [
+          {
+            "location": "§4.2 对偶性的前置，本地闭锥分离证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0D": [
+          {
+            "location": "§4.1 顶点与基本解，本地等价证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0E": [
+          {
+            "location": "§4.1 单纯形方向的本地展开",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0F": [
+          {
+            "location": "§4.2 中心路径及其障碍解释",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0G": [
+          {
+            "location": "§4.2，式(4.6)–(4.9)",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0H": [
+          {
+            "location": "§4.2，算法4.1及式(4.6)的直接展开",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0I": [
+          {
+            "location": "§4.2 算法4.1；本地给定保守步长完整证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0J": [
+          {
+            "location": "§4.3 原始对偶鞍点形式",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0K": [
+          {
+            "location": "§4.3 PDHG；不动点计算为本地展开",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0L": [
+          {
+            "location": "§3、§4.2–4.3、§6",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0M": [
+          {
+            "location": "§5.2 Nesterov 加速，使用本地统一参数形式",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0N": [
+          {
+            "location": "§5.2，凸情形 O(1/k^2)；本地完整递减量证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0O": [
+          {
+            "location": "§5.1–5.2，正定二次函数的本地谱计算",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0P": [
+          {
+            "location": "§5.4 Newton 局部二次收敛；补足 Hessian 正定及 Lipschitz 假设",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0Q": [
+          {
+            "location": "§5.4 三次正则化的本地 Taylor 余项前置",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0R": [
+          {
+            "location": "§5.4 三次正则化；本地一阶驻点界",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0S": [
+          {
+            "location": "§5.2 共轭梯度；给定共轭方向组的本地终止证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0T": [
+          {
+            "location": "§4.2 线性代数更新；本地秩一求逆证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0U": [
+          {
+            "location": "§5.5 BFGS；采用标准逆更新与一致割线记号",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0V": [
+          {
+            "location": "§5.6 半正定规划的低秩重参数化",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0W": [
+          {
+            "location": "§5.2，Accelerated methods: Recent developments for convex f；本地插值必要条件证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0X": [
+          {
+            "location": "§5.1 对未知常数的回溯选步长；本地有限终止证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0Y": [
+          {
+            "location": "§4.2 对偶前置；本地完整闭锥证明",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R0Z": [
+          {
+            "location": "§4.2 障碍推广；本地对数障碍验证",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ],
+        "4R10": [
+          {
+            "location": "§5.1 允许非单调步长的讨论；自行构造的二维例",
+            "url": "https://epubs.siam.org/doi/full/10.1137/25M1806831"
+          }
+        ]
+      },
+      "remaining_branches": [
+        "单纯形最坏情形与平滑分析、强多项式算法问题",
+        "短步内点法、初始化与病态线性系统求解",
+        "PDHG 的完整收敛分析、预条件与重启",
+        "共轭梯度短递推、Chebyshev 误差界与一阶信息下界",
+        "性能估计 SDP 的插值充分性和最优算法设计",
+        "BFGS 超线性收敛、低秩半正定重参数化的全局性质"
+      ],
+      "unexpanded_deep_proofs": [
+        {
+          "notes": [
+            "4R0K"
+          ],
+          "scope": "PDHG 一般收敛定理未重建；本地证明限定为不动点最优性。"
+        },
+        {
+          "notes": [
+            "4R0W"
+          ],
+          "scope": "完整光滑凸插值充分性与性能估计只作为研究方向。"
+        }
+      ],
+      "subject_ids": [
+        "0070",
+        "006F",
+        "006E"
+      ]
+    }
+  ],
+  "prerequisites": {
+    "4P00": [],
+    "4P01": [
+      "00Q3",
+      "00L0",
+      "00L1"
+    ],
+    "4P02": [
+      "00L3",
+      "4P01"
+    ],
+    "4P03": [
+      "4P01",
+      "4P02"
+    ],
+    "4P04": [
+      "00GK",
+      "00M2",
+      "00MS"
+    ],
+    "4P05": [
+      "4P02",
+      "00M2",
+      "4P04",
+      "00MS",
+      "00D9"
+    ],
+    "4P06": [
+      "4R04",
+      "4R01",
+      "00MS",
+      "4P05"
+    ],
+    "4P07": [
+      "4R04",
+      "4P05",
+      "0N0B",
+      "4P06"
+    ],
+    "4P08": [
+      "4R04",
+      "4P05",
+      "4P06"
+    ],
+    "4P09": [
+      "00M2",
+      "0A39",
+      "0A3A"
+    ],
+    "4P0A": [
+      "4P09",
+      "0A39",
+      "0A3A"
+    ],
+    "4P0B": [
+      "4P02",
+      "4R01",
+      "4P09",
+      "4P0A",
+      "00XV"
+    ],
+    "4P0C": [
+      "4P0B",
+      "4P0A",
+      "004S"
+    ],
+    "4P0D": [
+      "4P09",
+      "4P02",
+      "0A39"
+    ],
+    "4P0E": [
+      "00M2"
+    ],
+    "4P0F": [
+      "4J0Q",
+      "4P01",
+      "0N0A",
+      "0N0B",
+      "00MD"
+    ],
+    "4P0G": [
+      "4P0F",
+      "4P05",
+      "0F0F"
+    ],
+    "4P0H": [
+      "4P0F",
+      "0N0B"
+    ],
+    "4P0I": [
+      "4P0H",
+      "004S"
+    ],
+    "4P0J": [
+      "00L1",
+      "0N0R",
+      "00L3"
+    ],
+    "4P0K": [
+      "00L3",
+      "4P0F",
+      "4P0J",
+      "4P0H",
+      "0N0A",
+      "0N0B"
+    ],
+    "4P0L": [
+      "4P05",
+      "4P0F",
+      "0N0B"
+    ],
+    "4P0M": [
+      "0N0B",
+      "0N0R",
+      "00L3",
+      "4P05",
+      "4P0F",
+      "4P0H"
+    ],
+    "4P0N": [
+      "4P0M",
+      "4P0H",
+      "4P05"
+    ],
+    "4P0O": [
+      "00L3",
+      "0N0R",
+      "4P0G",
+      "4P05",
+      "0F0F"
+    ],
+    "4P0P": [
+      "4P0L",
+      "0N0B",
+      "0F0F"
+    ],
+    "4P0Q": [
+      "4P0P"
+    ],
+    "4P0R": [
+      "0N0B",
+      "00L3",
+      "0N0R",
+      "4P01"
+    ],
+    "icm2026-bartlett": [],
+    "4Q00": [],
+    "4Q01": [],
+    "4Q02": [
+      "4Q01",
+      "00Q3",
+      "00L3",
+      "00L1"
+    ],
+    "4Q03": [
+      "4Q01",
+      "4Q02"
+    ],
+    "4Q04": [
+      "4Q01",
+      "4Q02",
+      "4Q03"
+    ],
+    "4Q05": [
+      "4Q01",
+      "4Q02",
+      "4Q04",
+      "4Q03"
+    ],
+    "4Q06": [
+      "4Q01",
+      "4Q02"
+    ],
+    "4Q07": [
+      "4Q02",
+      "0A46",
+      "4Q06"
+    ],
+    "4Q08": [
+      "4Q07",
+      "0A35",
+      "0A45"
+    ],
+    "4Q09": [
+      "4Q07",
+      "4Q06",
+      "4Q08"
+    ],
+    "4Q0A": [
+      "4Q02",
+      "0A00",
+      "0A01",
+      "4Q09"
+    ],
+    "4Q0B": [
+      "4Q01",
+      "4Q02",
+      "4Q06",
+      "4Q04",
+      "4Q0A"
+    ],
+    "4Q0C": [
+      "4Q01",
+      "4Q02",
+      "4Q03",
+      "4Q04"
+    ],
+    "4Q0D": [
+      "4Q01",
+      "4Q0C"
+    ],
+    "4Q0E": [
+      "4Q01",
+      "4Q0D",
+      "4Q04",
+      "00L1",
+      "4Q0C"
+    ],
+    "4Q0F": [
+      "4Q0D",
+      "4Q06",
+      "4Q0A"
+    ],
+    "4Q0G": [
+      "0190"
+    ],
+    "4Q0H": [
+      "4Q0G"
+    ],
+    "4Q0I": [
+      "4Q0G",
+      "4Q0H"
+    ],
+    "4Q0J": [
+      "4Q0G",
+      "4Q0I"
+    ],
+    "4Q0K": [
+      "4Q0G",
+      "4Q0H"
+    ],
+    "4Q0L": [
+      "4Q01"
+    ],
+    "4Q0M": [
+      "4Q0L",
+      "4Q04"
+    ],
+    "4Q0N": [
+      "4Q0L",
+      "4Q04",
+      "4Q0M"
+    ],
+    "4Q0O": [
+      "4Q06"
+    ],
+    "4Q0P": [
+      "4Q0O",
+      "4Q06"
+    ],
+    "4Q0Q": [
+      "00L3",
+      "4Q07",
+      "4Q0O"
+    ],
+    "4Q0R": [
+      "4Q0Q",
+      "00L1"
+    ],
+    "4Q0S": [
+      "00L3",
+      "00L0",
+      "4Q0R",
+      "0A46",
+      "0A31",
+      "0A01",
+      "0A35"
+    ],
+    "4Q0T": [
+      "4Q0Q",
+      "4Q0R",
+      "4Q06",
+      "0A01"
+    ],
+    "4Q0U": [
+      "4Q0L",
+      "4Q0O"
+    ],
+    "icm2026-tardos": [],
+    "4R00": [],
+    "4R01": [
+      "0A33",
+      "004N",
+      "0A34",
+      "004S"
+    ],
+    "4R02": [
+      "0A32",
+      "4R01",
+      "0A3D",
+      "0N0A",
+      "0I8J"
+    ],
+    "4R03": [
+      "4R01",
+      "0A34",
+      "0A3C",
+      "004S"
+    ],
+    "4R04": [
+      "4R01",
+      "4R03"
+    ],
+    "4R05": [
+      "4R04",
+      "4R01"
+    ],
+    "4R06": [
+      "0R06",
+      "0A33",
+      "4R01"
+    ],
+    "4R07": [
+      "4R06",
+      "4R03",
+      "4R04"
+    ],
+    "4R08": [
+      "0R06",
+      "4R06",
+      "0A39",
+      "0A3A"
+    ],
+    "4R09": [
+      "4R08",
+      "4R03",
+      "4R04"
+    ],
+    "4R0A": [
+      "00GK",
+      "00TK"
+    ],
+    "4R0B": [
+      "4R0A"
+    ],
+    "4R0C": [
+      "00TK",
+      "00D9",
+      "00M9",
+      "0R03"
+    ],
+    "4R0D": [
+      "4R0A",
+      "00TL",
+      "00GM",
+      "00D9"
+    ],
+    "4R0E": [
+      "4R0D",
+      "4R0B"
+    ],
+    "4R0F": [
+      "4R0A",
+      "0A3A",
+      "4R02",
+      "00MR",
+      "4R0B"
+    ],
+    "4R0G": [
+      "4R0F",
+      "0N0A"
+    ],
+    "4R0H": [
+      "4R0G",
+      "4R0B"
+    ],
+    "4R0I": [
+      "4R0B",
+      "4R0H",
+      "4R0G"
+    ],
+    "4R0J": [
+      "4R0A",
+      "4R0B"
+    ],
+    "4R0K": [
+      "4R0J",
+      "0R03",
+      "00M4"
+    ],
+    "4R0L": [],
+    "4R0M": [
+      "4R06",
+      "4R03",
+      "4R04"
+    ],
+    "4R0N": [
+      "4R0M",
+      "4R03",
+      "4R06"
+    ],
+    "4R0O": [
+      "0N0A",
+      "4R04",
+      "0N0B"
+    ],
+    "4R0P": [
+      "4R02",
+      "00M4",
+      "0N0B",
+      "0A3C"
+    ],
+    "4R0Q": [
+      "4R02",
+      "00M4",
+      "0I8J",
+      "0A3C"
+    ],
+    "4R0R": [
+      "4R0Q",
+      "0A3A",
+      "4R0L"
+    ],
+    "4R0S": [
+      "0N0A",
+      "00D9"
+    ],
+    "4R0T": [
+      "00GM"
+    ],
+    "4R0U": [
+      "0N0A",
+      "4R02"
+    ],
+    "4R0V": [
+      "0N0A",
+      "0N0B"
+    ],
+    "4R0W": [
+      "4R06",
+      "4R03",
+      "4R04"
+    ],
+    "4R0X": [
+      "4R03",
+      "4R04"
+    ],
+    "4R0Y": [
+      "4R0A",
+      "4R0B",
+      "4R0C"
+    ],
+    "4R0Z": [
+      "0R06",
+      "004S"
+    ],
+    "4R10": [
+      "4R0O"
+    ],
+    "icm2026-wright": []
+  },
+  "leading_topics": {
+    "006E": [
+      "4P00",
+      "4Q00",
+      "4R00"
+    ],
+    "006F": [
+      "4R00"
+    ],
+    "0070": [
+      "4R00",
+      "4P00",
+      "4Q00"
+    ],
+    "0071": [
+      "4P00"
+    ],
+    "0072": [
+      "4Q00"
+    ]
+  },
+  "preserved_topics": {
+    "006E": [
+      "0079",
+      "007C",
+      "003A"
+    ],
+    "006F": [],
+    "0070": [],
+    "0071": [
+      "007D"
+    ],
+    "0072": [
+      "005C"
+    ]
+  },
+  "cross_subject_landings": [
+    {
+      "subject": "006E",
+      "outline": "4P00"
+    },
+    {
+      "subject": "006E",
+      "outline": "4Q00"
+    },
+    {
+      "subject": "006E",
+      "outline": "4R00"
+    },
+    {
+      "subject": "006F",
+      "outline": "4R00"
+    },
+    {
+      "subject": "0070",
+      "outline": "4R00"
+    },
+    {
+      "subject": "0070",
+      "outline": "4P00"
+    },
+    {
+      "subject": "0070",
+      "outline": "4Q00"
+    },
+    {
+      "subject": "0071",
+      "outline": "4P00"
+    },
+    {
+      "subject": "0072",
+      "outline": "4Q00"
+    }
+  ],
+  "navigation_checks": [
+    "4P00",
+    "4Q00",
+    "4R00"
+  ],
+  "source_errata": [
+    {
+      "id": "confidence-range-in-bllt-theorem-1",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7720150/",
+      "location": "Theorem 1 and Lemma 2",
+      "finding": "原印 0<delta<1 与噪声项纯 log(1/delta) 因子在 delta 趋近 1 时不相容。4P0M 限定 0<delta<=1/2；分配失败概率 delta/4 后 log(4/delta)<=3log(1/delta)，常数及样本量条件相应扩大。n=4、Sigma=I、theta_*=0 的纯噪声风险近零小球概率给出原全范围表述的反例。"
+    },
+    {
+      "id": "same-response-risk-in-lemma-3.7",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§3.4 Lemma 3.7 statement and first equality in its proof",
+      "finding": "同一训练响应 y 的残差之差不等于参数预测误差；交叉项与训练估计相关。4P0P 改写为预测误差或独立测试响应，4P0Q 给 n=p=1 的符号相反反例。"
+    },
+    {
+      "id": "theorem-3.4-omitted-conclusion-probability",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§3.2 Theorem 3.4",
+      "finding": "可见 HTML 的定理列出尾 Gram 条件数事件及 B,V 上界，但没有明确陈述这些上界成立的结论概率，分布假设依赖上下文。未自行补足，改以已核读的 BLLT 2020 定理 1 高斯特例作 4P0M。"
+    },
+    {
+      "id": "dimension-in-theorem-2.11-proof",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§2.2.2 Theorem 2.11 proof after r_t tends to zero",
+      "finding": "原 HTML 写 X^T theta 趋于 y，按 X 为 n by p 的定义应为 X theta。4P08 采用维数一致的预测向量及左逆证明。"
+    },
+    {
+      "id": "unstable-optimization-not-in-mathematical-body",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807617",
+      "location": "§1.3 final roadmap and reference [3]",
+      "finding": "标题含不稳定优化，正式正文的数学展开为隐式正则化与良性过拟合；不稳定优化进一步内容指向在准备中的 Saint Flour 讲义。本批不按标题虚构覆盖。"
+    },
+    {
+      "id": "history-conditional-queue-regret",
+      "source_url": "https://arxiv.org/html/2502.08898v2",
+      "location": "Lemma 5 and proof of Theorem 1 using Theorem 2",
+      "finding": "4Q0T 明确采用对每个时间块起点历史统一的条件高概率低遗憾假设，强于 Lemma 5 字面的无条件表述。该加强条件和空初态给出条件漂移；失败概率 q 必须满足 q<c_delta/(n+c_delta)，好事件概率因子 1-q 不能省略。"
+    },
+    {
+      "location": "§5.1，(5.13)后",
+      "printed": "O(epsilon^2)",
+      "used": "O(epsilon^-2)",
+      "reason": "由梯度平方的平均下降界直接求解步数。"
+    },
+    {
+      "location": "§4.2 复杂度的对数项",
+      "used": "log(mu0/epsilon)",
+      "reason": "明确目标小于初值时的正对数。"
+    },
+    {
+      "location": "§5.4 严格凸性与 Hessian 的讨论",
+      "used": "显式要求极小点 Hessian 正定且局部 Lipschitz",
+      "reason": "严格凸性本身不保证 Hessian 正定。"
+    },
+    {
+      "location": "§5.5 逆更新割线记号",
+      "used": "H_+ y=s",
+      "reason": "统一逆近似与割线方向，不沿用下标不一致的印刷记号。"
+    }
+  ],
+  "review": {
+    "packet_files": [
+      "research/plenary-bartlett-packet.json",
+      "research/plenary-tardos-packet.json",
+      "research/plenary-wright-packet.json"
+    ],
+    "status": "local-source-integrated",
+    "publication": "not-pushed",
+    "scope": "局部完整证明与引用研究结论分开记录；三篇报告均为选定分支，不能据此宣称全部深层证明展开。"
+  }
+}

@@ -1,0 +1,9 @@
+\title{非原子路由与 Wardrop 均衡}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Smoothness of routing games}
+
+\p{设 #{G} 是有限[有向图](0190)，边集为 #{E}。对每种起终点对 #{k}，固定非空有限的可用简单路径集 #{\mathcal P_k} 和需求量 #{r_k\ge 0}。可行路径流是数族 #{f_{kP}\ge 0}，满足 #{\sum_{P\in\mathcal P_k}f_{kP}=r_k}；边流为 #{x_e=\sum_{k,P:e\in P}f_{kP}}。}
+\p{边 #{e} 的延迟函数 #{d_e:\lbrack 0,\infty\rparen\to\lbrack 0,\infty\rparen} 连续且非减。路径延迟为 #{d_P(x)=\sum_{e\in P}d_e(x_e)}。所谓非原子，是把每个使用者看成对总流量没有可见影响的个体，单个使用者改路时保持 #{x} 不变来比较延迟。}
+\p{若每个 #{f_{kP}>0} 的路径都使 #{d_P(x)} 在 #{\mathcal P_k} 中最小，就称 #{f} 为 Wardrop 均衡。社会总延迟为 #{C(f)=\sum_{k,P}f_{kP}d_P(x)=\sum_e x_ed_e(x_e)}，后一个等式通过有限求和换序得到。}

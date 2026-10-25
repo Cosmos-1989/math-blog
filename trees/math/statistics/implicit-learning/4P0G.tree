@@ -1,0 +1,11 @@
+\title{最小范数插值的条件偏差方差分解}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§3.2 中 B、V 的定义与分解}
+
+\p{固定满行秩 #{X\in\mathbb R^{n\times p}}，设训练响应 #{y=X\theta_*+\varepsilon}，条件于 #{X} 有 #{\mathbb E[\varepsilon\mid X]=0}、#{\mathbb E[\varepsilon\varepsilon^\top\mid X]=\sigma^2I_n}。独立测试分布满足[线性回归条件](4P0F)，协方差为 #{\Sigma}。记 #{G=XX^\top}、#{A=X^\top G^{-1}}、#{P=AX}。对[最小范数插值解](4P05) #{\hat\theta=Ay}，有}
+##{\mathbb E_\varepsilon[L(\hat\theta)-L(\theta_*)\mid X]=B+\sigma^2V,\qquad B=\|(I-P)\theta_*\|_\Sigma^2,\quad V=\operatorname{tr}(G^{-1}X\Sigma X^\top G^{-1}).}
+\p{\strong{证明。}误差分解为 #{\hat\theta -\theta_*=-(I-P)\theta_*+A\varepsilon}。展开协方差二次型并取条件期望，交叉项为零，确定性项为 #{B}。利用[迹](0F0F)的循环性质，随机项为}
+##{\mathbb E_\varepsilon[\varepsilon^\top A^\top\Sigma A\varepsilon\mid X]=\operatorname{tr}(A^\top\Sigma A\,\sigma^2I_n)=\sigma^2V.}
+\p{#{B} 测量真实参数在训练行空间之外留下的预测误差；#{V} 测量拟合标签噪声的代价。这是条件平均恒等式。若只假设各点噪声方差不同，应以其条件协方差矩阵代替 #{\sigma^2I_n}，不能仍提出同一个标量 #{\sigma^2}。}

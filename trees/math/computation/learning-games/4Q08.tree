@@ -1,0 +1,18 @@
+\title{乘法权重的势函数遗憾界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，No-regret learning；乘法权重的初等推导}
+
+\p{对 #{m\ge 2} 个行动执行[乘法权重更新](4Q07)。无论损失向量 #{\ell_t\in[0,1]^m} 如何产生，对每个固定行动 #{a} 和每个 #{T\ge 1}，}
+##{\sum_{t=1}^T\widehat\ell_t-\sum_{t=1}^T\ell_t(a)
+\le \frac{\log m}{\eta}+\frac{\eta T}{2}.}
+\p{\strong{证明。}先验证用到的标量界。对 #{x\ge 0}，函数 #{g(x)=1-x+x^2/2-e^{-x}} 满足 #{g(0)=g'(0)=0}、#{g''(x)=1-e^{-x}\ge 0}；由[中值定理](0A35)先后推出 #{g'\ge 0}、#{g\ge 0}。此外，[自然对数](0A45)给出 #{h(y)=y-\log(1+y)} 在 #{y>-1} 的导数 #{y/(1+y)}，所以 #{h} 在零处取得最小值零。}
+\p{令 #{W_t} 为总权重。利用 #{\ell_t(a)^2\le 1}，得到}
+##{\frac{W_{t+1}}{W_t}
+=\sum_a p_t(a)e^{-\eta\ell_t(a)}
+\le 1-\eta\widehat\ell_t+\frac{\eta^2}{2}.}
+\p{右边至少为 #{1-\eta+\eta^2/2>0}，故可取对数并使用刚证的对数界。对时间求和，消去相邻项，得}
+##{\log W_{T+1}-\log W_1
+\le -\eta\sum_{t=1}^T\widehat\ell_t+\frac{\eta^2T}{2}.}
+\p{另一方面，#{W_1=m} 且 #{W_{T+1}\ge w_{T+1}(a)=e^{-\eta\sum_t\ell_t(a)}}。把这个下界代入并除以 #{\eta}，即得结论。取 #{\eta=\sqrt{2\log m/T}} 后，上界为 #{\sqrt{2T\log m}}。这是对实际出现的损失向量逐项成立的计算，不需要各轮独立。}

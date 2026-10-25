@@ -1,0 +1,10 @@
+\title{Farkas 引理与有限生成锥的分离}
+\date{2026-10-25}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§2.2 对偶性所需的有限维分离引理}
+
+\p{给定 #{A\in\mathbb R^{m\times n}}、#{b\in\mathbb R^m}，以下两种情形恰有一种成立。其一是存在 #{x\ge 0} 使 #{Ax=b}；其二是存在 #{y\in\mathbb R^m} 使 #{A^{\mathsf T}y\ge 0} 而 #{b^{\mathsf T}y<0}。}
+\p{\strong{锥的闭性。}记 #{a_i} 为 #{A} 的列。集合 #{K=\{\sum_i x_i a_i:x_i\ge 0\}} 是[凸集](00TK)。每个向量都能选取正系数对应的列[线性无关](00D9)的表示。若当前列相关，取关系 #{\sum_i d_i a_i=0}，改变符号使某个 #{d_i>0}，再从系数减去 #{td_i}，其中 #{t=\min_{d_i>0}x_i/d_i}。所有系数仍非负，并至少消去一列。重复即可。}
+\p{若 #{z_j\in K} 且 #{z_j\to z}，由于列子集只有有限个，可取子列使上述无关列集合固定。该固定列映射在其像上有连续的逆，故系数收敛到非负系数，得到 #{z\in K}。逆的连续性可由[有限维范数等价](00M9)得到。因此 #{K} 闭。}
+\p{\strong{分离。}若 #{b\notin K}，由[闭凸集最近点分离](0R03)取最近点 #{p}，令 #{u=b-p}。支撑不等式对 #{0,2p\in K} 给出 #{\langle u,p\rangle=0}，从而 #{\langle u,z\rangle\le 0} 对所有 #{z\in K} 成立，而 #{\langle u,b\rangle=\|u\|^2>0}。取 #{y=-u} 得第二种情形。两种情形不能同时成立，因为此时 #{b^{\mathsf T}y=x^{\mathsf T}A^{\mathsf T}y\ge 0}。}

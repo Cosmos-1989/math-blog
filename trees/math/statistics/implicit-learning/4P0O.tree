@@ -1,0 +1,11 @@
+\title{各向同性设计仍会丢失未观测的信号}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§3.2 的偏差投影式、§3.4 的各向同性谱例；局部高斯计算}
+
+\p{设 #{p>n}，#{X\in\mathbb R^{n\times p}} 的所有元素为[相互独立](00L3)的[标准正态变量](0N0R)，固定 #{\theta_*\in\mathbb R^p}，测试协方差为 #{I_p}。记行空间投影 #{P=X^\top(XX^\top)^{-1}X}。则[条件平方偏差](4P0G) #{B=\|(I-P)\theta_*\|^2} 满足}
+##{\mathbb E_X B=\left(1-\frac np\right)\|\theta_*\|^2.}
+\p{\strong{证明。}高斯联合密度正比于 #{\exp(-\operatorname{tr}(XX^\top)/2)}，所以对任意正交矩阵 #{Q}，#{XQ} 与 #{X} 同分布，投影相应变为 #{Q^\top PQ}。因此 #{\mathbb EP} 与所有坐标变号及置换矩阵交换：变号消去非对角元，置换迫使所有对角元相等。故 #{\mathbb EP=aI_p}。}
+\p{逐行条件于已有行向量，高斯密度赋予它们张成的真子空间概率零，故 #{X} 几乎必然满行秩。[投影公式](4P05)给出 #{\operatorname{tr}P=\operatorname{tr}((XX^\top)^{-1}XX^\top)=n}，迹的换序见[迹](0F0F)。所以 #{a=n/p}。再由 #{(I-P)^2=I-P}，取期望便得等式。}
+\p{若 #{\|\theta_*\|=1} 且 #{p/n\to\infty}，平均平方偏差趋于一。即使噪声项因许多方向而变小，信号也可能留在未观测子空间中；控制良性过拟合须同时控制偏差与方差。}

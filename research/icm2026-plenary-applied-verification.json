@@ -1,0 +1,1642 @@
+{
+  "date": "2026-10-25",
+  "scope": "First applied/computational plenary batch in root math-blog",
+  "status": "local-validation-passed",
+  "publication": {
+    "commit_created": false,
+    "pushed": false,
+    "deployment_triggered": false
+  },
+  "counts": {
+    "reports": 3,
+    "new_pages": 99,
+    "atomic_pages": 93,
+    "outlines": 3,
+    "references": 3,
+    "changed_subject_landings": 5,
+    "subject_cross_listings": 9
+  },
+  "records": {
+    "manifest": "research/icm2026-plenary-applied-reports.json",
+    "manifest_sha256": "3241796ef057114f9f1495bc780367f2b1a072ef7f26598d2ef344d76fbcb733",
+    "snapshots": "research/icm2026-plenary-applied-reports-snapshots.json",
+    "snapshots_sha256": "2d436d1d66051612b575920e25e186b2d80fba607ffcfa9383d1fde3efc9b6ea",
+    "queue": "research/icm2026-plenary-batch-plan.json",
+    "queue_sha256": "3c95705618ad6216d8f3b574aaec3b6cfa631586d83478149fdc54905b2e3617"
+  },
+  "independent_review": {
+    "method": "Three writers/researchers cross-reviewed different branches. Parent applied and integrated corrections; reviewers rechecked the substantive fixes.",
+    "scope": "Selected mathematical statements, proofs, prerequisites and cited-theorem hypotheses. This is not verification of every external research proof.",
+    "findings": [
+      {
+        "note": "4P0M",
+        "reviewer": "Faraday",
+        "issue": "Pure log(1/delta) noise bound cannot hold up to delta approaching one.",
+        "resolution": "Restricted to 0<delta<=1/2; constants and sample threshold enlarged. Author-version appendices A and J and Lemma 6 checked for confidence allocation.",
+        "status": "resolved"
+      },
+      {
+        "note": "4P0R",
+        "reviewer": "Faraday",
+        "issue": "Binary label domain was implicit.",
+        "resolution": "Added y in {-1,1}.",
+        "status": "resolved"
+      },
+      {
+        "note": "4Q0T",
+        "reviewer": "Boyle",
+        "issue": "Conditional drift needs uniform conditional failure probabilities given each block-start history.",
+        "resolution": "Added explicit stronger history-conditional regret hypothesis and empty initial state; c_delta and q give drift [-(1-q)c_delta+qn]T<0. Source lemmas and moment theorem remain cited inputs.",
+        "status": "resolved"
+      },
+      {
+        "note": "4R0G",
+        "reviewer": "Gibbs",
+        "issue": "Wording unnecessarily limited Newton equations to the central path.",
+        "resolution": "Stated strict primal/dual feasibility without equal coordinate products.",
+        "status": "resolved"
+      },
+      {
+        "note": "4R0I",
+        "reviewer": "Gibbs",
+        "issue": "Feasible steps alone do not ensure the central-neighborhood estimate on later iterations.",
+        "resolution": "Required every accepted step to stay in N_gamma.",
+        "status": "resolved"
+      },
+      {
+        "note": "4R0K",
+        "reviewer": "Gibbs",
+        "issue": "Convergence context needed a saddle-existence hypothesis; cited section discusses ergodic averages.",
+        "resolution": "Added saddle existence, defined arithmetic averages and aligned attribution with the report's ergodic discussion; local proof covers fixed-point optimality.",
+        "status": "resolved"
+      },
+      {
+        "notes": [
+          "4R0G",
+          "4R0H",
+          "4R0W",
+          "4R10"
+        ],
+        "reviewer": "Gibbs and parent",
+        "issue": "A few source equation/section labels were stale or incorrect.",
+        "resolution": "Checked against publisher HTML and regenerated manifest.",
+        "status": "resolved"
+      }
+    ],
+    "reused_prerequisite_judgments_preserved": 6814
+  },
+  "checks": [
+    {
+      "command": "node --test tests/plenary-coverage.test.mjs tests/plenary-math.test.mjs tests/plenary-applied-reports.test.mjs",
+      "result": "pass",
+      "tests": 24,
+      "new_tests": 8,
+      "log_sha256": "f77fddb258d6630155aba7b0d955b25be7e9bb61b5a5348e4e1072a73d01d198"
+    },
+    {
+      "command": "node scripts/check-note-prerequisites.mjs",
+      "result": "pass",
+      "scanned_pages": 7438,
+      "required_pages": 6223
+    },
+    {
+      "command": "node scripts/check-note-editorial.mjs --strict-format",
+      "result": "pass",
+      "errors": 0,
+      "format_errors": 0,
+      "unchanged_candidates": 2
+    },
+    {
+      "command": "node scripts/check-site-notes.mjs --source-only",
+      "result": "pass",
+      "reachable_pages": 7438
+    },
+    {
+      "command": "node scripts/check-subject-navigation.mjs",
+      "result": "pass",
+      "subjects": 20
+    },
+    {
+      "command": "node scripts/check-topic-narratives.mjs",
+      "result": "pass",
+      "surveys": 155
+    },
+    {
+      "command": "node scripts/check-topic-introductions.mjs",
+      "result": "pass",
+      "snapshots": 176
+    },
+    {
+      "command": "node scripts/check-icm-section-coverage.mjs",
+      "result": "pass",
+      "scope": "existing recorded logic, algebra, number theory and algebraic geometry coverage"
+    },
+    {
+      "command": "node scripts/sync-plenary-applied-reports.mjs",
+      "result": "pass",
+      "idempotent": true,
+      "scope": "99 notes and five subject snapshots only"
+    },
+    {
+      "command": "git diff --check",
+      "result": "pass"
+    },
+    {
+      "command": "node scripts/build-site.mjs",
+      "result": "pass",
+      "static_html_pages": 7438,
+      "internal_links": 1069686,
+      "anchors": 7456,
+      "resource_references": 52764,
+      "log_sha256": "d4fc0b4af9b92360836518af1a794cf59da0d42ff34593c843305314bf5d9f91"
+    }
+  ],
+  "browser": {
+    "command": "TOPOLOGY_RECORD=research/icm2026-plenary-applied-reports.json node tests/topology-report-render.test.mjs",
+    "result": "pass",
+    "unique_pages": 104,
+    "viewport_checks": 208,
+    "widths": [
+      1440,
+      390
+    ],
+    "max_page_overflow": 0,
+    "xslt_disabled": true,
+    "assertions": [
+      "nonempty content",
+      "no KaTeX errors",
+      "no failed HTTP responses or page errors",
+      "long formulas scroll horizontally",
+      "search selects the topic rather than its reference",
+      "legacy XML query and fragment preserved",
+      "all nine cross-listed links work"
+    ],
+    "screenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/topology-render-lymvsQ",
+    "inspected_screenshots": [
+      "0070-1440.png",
+      "4Q00-390.png"
+    ],
+    "pages": [
+      {
+        "id": "006E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "006F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "0070",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "0071",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "0072",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4P00",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4P01",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P02",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4P03",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4P04",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P05",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4P06",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4P07",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4P08",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P09",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4P0A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4P0B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4P0C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4P0D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4P0E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4P0F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P0G",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4P0H",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P0I",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P0J",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4P0K",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4P0L",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 23
+      },
+      {
+        "id": "4P0M",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 27
+      },
+      {
+        "id": "4P0N",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4P0O",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4P0P",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4P0Q",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4P0R",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 26
+      },
+      {
+        "id": "icm2026-bartlett",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 2
+      },
+      {
+        "id": "4Q00",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 5
+      },
+      {
+        "id": "4Q01",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4Q02",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4Q03",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4Q04",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4Q05",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4Q06",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4Q07",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4Q08",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 25
+      },
+      {
+        "id": "4Q09",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4Q0A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4Q0D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4Q0E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4Q0F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4Q0G",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4Q0H",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4Q0I",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0J",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 26
+      },
+      {
+        "id": "4Q0K",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4Q0L",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4Q0M",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0N",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4Q0O",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 7
+      },
+      {
+        "id": "4Q0P",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4Q0Q",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0R",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4Q0S",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 31
+      },
+      {
+        "id": "4Q0T",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4Q0U",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "icm2026-tardos",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4R00",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4R01",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4R02",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4R03",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4R04",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4R05",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4R06",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R07",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4R08",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R09",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4R0A",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 7
+      },
+      {
+        "id": "4R0B",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4R0C",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4R0D",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4R0E",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0F",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4R0G",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4R0H",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R0I",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 32
+      },
+      {
+        "id": "4R0J",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0K",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0L",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 2
+      },
+      {
+        "id": "4R0M",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4R0N",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 24
+      },
+      {
+        "id": "4R0O",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4R0P",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4R0Q",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4R0R",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4R0S",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4R0T",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R0U",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4R0V",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4R0W",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R0X",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0Y",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4R0Z",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4R10",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "icm2026-wright",
+        "width": 1440,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "006E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "006F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "0070",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "0071",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "0072",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4P00",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4P01",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P02",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4P03",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 10
+      },
+      {
+        "id": "4P04",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4P05",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4P06",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4P07",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 19
+      },
+      {
+        "id": "4P08",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P09",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4P0A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 15
+      },
+      {
+        "id": "4P0B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 10
+      },
+      {
+        "id": "4P0C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4P0D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4P0E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4P0F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P0G",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 18
+      },
+      {
+        "id": "4P0H",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4P0I",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 17
+      },
+      {
+        "id": "4P0J",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4P0K",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 20
+      },
+      {
+        "id": "4P0L",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 23
+      },
+      {
+        "id": "4P0M",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 27
+      },
+      {
+        "id": "4P0N",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4P0O",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4P0P",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 20
+      },
+      {
+        "id": "4P0Q",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 13
+      },
+      {
+        "id": "4P0R",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 26
+      },
+      {
+        "id": "icm2026-bartlett",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 2
+      },
+      {
+        "id": "4Q00",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 5
+      },
+      {
+        "id": "4Q01",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4Q02",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4Q03",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4Q04",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4Q05",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4Q06",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4Q07",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 8
+      },
+      {
+        "id": "4Q08",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 25
+      },
+      {
+        "id": "4Q09",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4Q0A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4Q0D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4Q0E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4Q0F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4Q0G",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4Q0H",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 19
+      },
+      {
+        "id": "4Q0I",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0J",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 26
+      },
+      {
+        "id": "4Q0K",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 14
+      },
+      {
+        "id": "4Q0L",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 9
+      },
+      {
+        "id": "4Q0M",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0N",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 11
+      },
+      {
+        "id": "4Q0O",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 7
+      },
+      {
+        "id": "4Q0P",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 22
+      },
+      {
+        "id": "4Q0Q",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4Q0R",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 8
+      },
+      {
+        "id": "4Q0S",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 31
+      },
+      {
+        "id": "4Q0T",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 3,
+        "formulas": 21
+      },
+      {
+        "id": "4Q0U",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "icm2026-tardos",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4R00",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      },
+      {
+        "id": "4R01",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 16
+      },
+      {
+        "id": "4R02",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4R03",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 9
+      },
+      {
+        "id": "4R04",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 11
+      },
+      {
+        "id": "4R05",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "4R06",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R07",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 11
+      },
+      {
+        "id": "4R08",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 12
+      },
+      {
+        "id": "4R09",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 16
+      },
+      {
+        "id": "4R0A",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 7
+      },
+      {
+        "id": "4R0B",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4R0C",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4R0D",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 21
+      },
+      {
+        "id": "4R0E",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0F",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 21
+      },
+      {
+        "id": "4R0G",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 14
+      },
+      {
+        "id": "4R0H",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R0I",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 32
+      },
+      {
+        "id": "4R0J",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0K",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0L",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 2
+      },
+      {
+        "id": "4R0M",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 9
+      },
+      {
+        "id": "4R0N",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 24
+      },
+      {
+        "id": "4R0O",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 13
+      },
+      {
+        "id": "4R0P",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 18
+      },
+      {
+        "id": "4R0Q",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 10
+      },
+      {
+        "id": "4R0R",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 14
+      },
+      {
+        "id": "4R0S",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 1,
+        "formulas": 21
+      },
+      {
+        "id": "4R0T",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 12
+      },
+      {
+        "id": "4R0U",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 18
+      },
+      {
+        "id": "4R0V",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 17
+      },
+      {
+        "id": "4R0W",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 2,
+        "formulas": 12
+      },
+      {
+        "id": "4R0X",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 15
+      },
+      {
+        "id": "4R0Y",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 28
+      },
+      {
+        "id": "4R0Z",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 20
+      },
+      {
+        "id": "4R10",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 10
+      },
+      {
+        "id": "icm2026-wright",
+        "width": 390,
+        "overflow": 0,
+        "scrollableDisplays": 0,
+        "formulas": 0
+      }
+    ]
+  },
+  "remaining": {
+    "queued_reports_or_upgrades": 10,
+    "coverage": "Each new topic covers selected branches. Full statements, locally proved results, cited research inputs and deferred deep branches are recorded separately in each report packet."
+  }
+}

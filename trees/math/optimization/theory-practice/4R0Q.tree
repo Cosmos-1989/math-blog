@@ -1,0 +1,12 @@
+\title{Lipschitz Hessian 的三次余项估计}
+\date{2026-10-25}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.2)、(5.27)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为 #{C^2} 函数，其 [Hessian](4R02) 以[算子范数](00M4)满足 #{\|\nabla^2f(x)-\nabla^2f(y)\|\le M\|x-y\|}。则}
+##{\begin{aligned}
+\left|f(x+s)-f(x)-\langle\nabla f(x),s\rangle -\tfrac 12s^{\mathsf T}\nabla^2f(x)s\right|&\le\tfrac M6\|s\|^3,\\
+\|\nabla f(x+s)-\nabla f(x)-\nabla^2f(x)s\|&\le\tfrac M2\|s\|^2.
+\end{aligned}}
+\p{\strong{证明。}由 [Taylor 积分余项](0I8J)，第一个差值为 #{\int_0^1(1-t)s^{\mathsf T}(\nabla^2f(x+ts)-\nabla^2f(x))s\,dt}，其绝对值至多 #{M\|s\|^3\int_0^1t(1-t)\,dt}。对梯度应用[微积分基本定理](0A3C)，第二个差值为 #{\int_0^1(\nabla^2f(x+ts)-\nabla^2f(x))s\,dt}，其范数至多 #{M\|s\|^2\int_0^1t\,dt}。两个积分分别为 #{1/6} 和 #{1/2}。}

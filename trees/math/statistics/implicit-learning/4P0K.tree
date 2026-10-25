@@ -1,0 +1,12 @@
+\title{大谱尾有效秩控制样本 Gram 矩阵}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，引理 3.2 及紧随其后的推论，来源为文献 [4]}
+
+\p{设 #{x_1,\ldots,x_n\in\mathbb R^p} [独立同分布](00L3)，均值为零，[协方差](4P0F) #{\Sigma=\operatorname{diag}(\lambda_1,\ldots,\lambda_p)}，其中 #{\lambda_1\ge\cdots\ge\lambda_p>0}。假设白化向量 #{z=\Sigma^{-1/2}x} 的各坐标相互独立且为参数一的[次高斯变量](4P0J)。固定 #{0\le k<p}，以每行 #{(x_i)_{>k}^\top} 组成 #{X_{>k}}。}
+\p{Bartlett 引理 3.2 给出绝对常数 #{c\ge 1}，使得以至少 #{1-2e^{-n/c}} 的概率，矩阵 #{K=X_{>k}X_{>k}^\top} 满足}
+##{\frac{S_k}{c}-cn\lambda_{k+1}\le\lambda_{\min}(K)\le\lambda_{\max}(K)\le cS_k+cn\lambda_{k+1},\qquad S_k=\sum_{j>k}\lambda_j.}
+\p{这是所引随机矩阵估计。其一个直接推论是：存在绝对常数 #{b,C>0}，若[有效秩](4P0H) #{r_k(\Sigma)\ge bn}，则在同一事件上}
+##{\frac{S_k}{C}I_n\preceq K\preceq CS_kI_n.}
+\p{\strong{推论的证明。}取 #{b\ge 2c^2}，则 #{n\lambda_{k+1}\le S_k/(2c^2)}。代入下界得到 #{S_k/(2c)}，代入上界得到 #{(c+1/(2c))S_k}，再取合适的 #{C}。矩阵[正定次序](0N0A)由[谱分解](0N0B)与特征值界等价。这里得到条件数有界，即最大与最小特征值的比值有界；没有断言 #{K/S_k} 趋于单位矩阵。}

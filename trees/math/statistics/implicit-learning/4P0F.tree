@@ -1,0 +1,10 @@
+\title{线性回归的超额风险由协方差加权}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§3.1、§3.2 的超额风险恒等式}
+
+\p{设 #{x\in\mathbb R^p} 二阶可积、#{\mathbb Ex=0}，且 #{y=x^\top\theta_*+\varepsilon}，其中 #{\mathbb E\varepsilon^2<\infty}、#{\mathbb E[\varepsilon\mid x]=0}，条件期望采用 [L² 投影定义](4J0Q)。定义协方差矩阵 #{\Sigma=\mathbb E[xx^\top]} 和 #{\|v\|_\Sigma^2=v^\top\Sigma v}。对平方损失的[风险](4P01)，有}
+##{L(\theta)-L(\theta_*)=\|\theta -\theta_*\|_\Sigma^2.}
+\p{\strong{证明。}令 #{d=\theta -\theta_*}，展开平方得 #{L(\theta)=\mathbb E(x^\top d)^2-2\mathbb E[\varepsilon x^\top d]+\mathbb E\varepsilon^2}。条件期望的正交性使中间项为零，首项等于 #{d^\top\Sigma d}，最后一项为 #{L(\theta_*)}。}
+\p{#{\Sigma} 为[半正定矩阵](0N0A)，故此量非负。依[正交谱分解](0N0B)，若 #{\Sigma=\sum_j\lambda_jv_jv_j^\top}，则 #{\|d\|_\Sigma^2=\sum_j\lambda_j(v_j^\top d)^2}。小特征值方向中的参数误差对预测的影响较小；#{\Sigma} 有零特征值时该表达式只是[半范数](00MD)的平方。随机估计 #{\hat\theta} 也满足此等式，只需先固定训练数据，再对独立测试样本求期望。}

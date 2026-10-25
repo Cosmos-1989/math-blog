@@ -1,0 +1,10 @@
+\title{训练残差不能替代预测风险的一个反例}
+\date{2026-10-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，引理 3.7 的训练与测试响应区别；独立一维计算}
+
+\p{取 #{n=p=1}、#{X=1}、#{\theta_*=0}，训练响应 #{y=\varepsilon}，其中 #{\mathbb E\varepsilon=0}、#{\mathbb E\varepsilon^2=\sigma^2>0}。正则系数 #{a>0} 的[岭回归估计](4P0P)为 #{\hat\theta_a=\varepsilon /(1+a)}。}
+\p{训练残差减去真实参数的训练残差，其期望为}
+##{\mathbb E[(y-\hat\theta_a)^2]-\mathbb E[y^2]=\sigma^2\left(\frac{a^2}{(1+a)^2}-1\right)=-\sigma^2\frac{1+2a}{(1+a)^2}<0.}
+\p{而参数预测误差为 #{\mathbb E\hat\theta_a^2=\sigma^2/(1+a)^2>0}。两者符号相反。独立测试响应 #{y'=\varepsilon'} 满足 #{\mathbb E[y'\hat\theta_a]=0}，于是测试残差之差才等于这个正的预测误差。对同一噪声拟合后再计算训练误差，会保留交叉项 #{-2\mathbb E[\varepsilon\hat\theta_a]}。}

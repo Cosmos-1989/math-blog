@@ -1,0 +1,1473 @@
+{
+  "checked_on": "2026-10-25",
+  "scope": {
+    "site": "root math-blog",
+    "workspace": "/Users/sunzy/claude_test/forester2",
+    "deliverables": [
+      "research/icm2026-plenary-batch-plan.json",
+      "ICM2026_PLENARY_BATCHES.md",
+      "research/icm2026-plenary-applied-reports.json",
+      "research/icm2026-plenary-applied-verification.json"
+    ],
+    "statement": "完整保留官方名录中的 19 场普通全会和 3 场特别全会，按报告内容分批增补到第 1-20 模块，包括第 12-20 模块。全部 20 个模块均在范围内，但没有匹配报告时不强制填满。",
+    "placement": "subject_ids 是内容驱动的编辑归属，不是官方分组。批次 1 的入口已经接入，existing_subject_ids 记录现有入口；其余批次仍是规划，pending_subject_ids 须另行核实或决定。跨学科入口须有实质内容。",
+    "title_policy": "17 篇书面材料的 title 是正式出版章名，不擅称与现场口头题名完全相同；5 项无卷 2 章节者的 title 据原始官方视频说明核实。作者姓名、题名、DOI 和来源链接按材料保留。",
+    "completion_boundary": "九篇既有专题保留原有覆盖等级；首批三篇已在本地加入选定分支，共 93 个原子页、3 篇综述及3个来源页。还有10项增补或升级未实施。各报告的待补分支和引用证明另记，不把专题入口视作全报告完成；本轮未提交或推送。构建与浏览器验证另见验证记录。",
+    "outline_policy": "沿用已有十个专题编号，首批经全树查重后分配 4P00、4Q00、4R00；其余 planned_outline 为 null，实施前检查全树编号冲突后分配。"
+  },
+  "sources": {
+    "official_directory": {
+      "url": "https://www.icm2026.org/event/ac193975-5d24-4628-8c30-ddb23de19a8b/speakers",
+      "snapshot": "/tmp/icm2026-all-speakers-20261024.html",
+      "snapshot_date": "2026-10-24",
+      "sha256": "ef1006dd3c3ca5bd060c3328e6a1a4d6bb5310c1d83749dfa4fa9036bfb7050a",
+      "verified_public_roster_records": 22,
+      "method": "重读完整 React 原始载荷，仅取公开报告人姓名、ID 和类别；不以个人职衔 title 字段充当报告题名，不输出内部字段。",
+      "live_fetch": "本次网页检索超时；名录按项目已有的 2026-10-24 完整快照与既有审计交叉核对。"
+    },
+    "previous_audit": {
+      "json": "research/icm2026-first-eleven-coverage-20261024.json",
+      "markdown": "research/icm2026-first-eleven-coverage-20261024.md",
+      "site_commit": "0c30c2cabc2faa2e781dd99e332d576a92e89505"
+    },
+    "existing_manifest": "research/icm2026-plenary.json",
+    "proceedings": {
+      "url": "https://epubs.siam.org/doi/book/10.1137/1.9781611978636",
+      "checked_on": "2026-10-25",
+      "chapters": 17,
+      "ordinary_chapters": 16,
+      "special_chapters": 1,
+      "special_speaker": "Alex Kontorovich",
+      "not_in_checked_volume2": [
+        "Annalisa Buffa",
+        "Felix Otto",
+        "Tamar Ziegler",
+        "Peter Sarnak",
+        "Yurii Nesterov"
+      ]
+    },
+    "official_video_metadata": {
+      "channel": "https://www.youtube.com/@SimonsFoundation",
+      "method": "YouTube oEmbed 核对讲者及 Simons Foundation 频道；公开页面 attributedDescription 核对确切题名。未把自动生成摘要、自动章节或字幕当作已核实的数学内容。",
+      "verified_speakers": [
+        "Annalisa Buffa",
+        "Felix Otto",
+        "Tamar Ziegler",
+        "Peter Sarnak",
+        "Yurii Nesterov"
+      ]
+    },
+    "excluded_evidence": "az9713.github.io 及其他 AI 派生摘要不作为题名、内容、作者或结论的证据；检索出现的线索一律回到出版社、机构、作者或官方频道独立核实。",
+    "counting_caveat": {
+      "url": "https://www.mathunion.org/imu-news/archive/2026/imu-news-138-july-2026",
+      "note": "IMU 会后新闻统计 21 场 plenary lectures，并将 prize lectures 另列。本计划固定采用官方 speakers 名录的类别口径 19+3，Nesterov 同时是 Gauss Prize Lecture，不据新闻总数删人，也不另加一次奖项报告。"
+    }
+  },
+  "counts": {
+    "roster_total": 22,
+    "ordinary": 19,
+    "special": 3,
+    "modules_in_scope": 20,
+    "existing_source_bound_outlines_kept": 9,
+    "new_selected_branch_topics": 3,
+    "source_bound_topics_now": 12,
+    "existing_background_outlines_to_upgrade": 1,
+    "new_report_outlines_needed": 9,
+    "outstanding_reports": 10,
+    "queued_after_batch1": 10,
+    "outstanding_written_chapters_available": 5,
+    "outstanding_official_videos_requiring_content_reading": 5,
+    "written_chapters_in_volume2": 17,
+    "written_chapters_not_in_checked_volume2": 5,
+    "unresolved_roster_identities": 0,
+    "unresolved_title_identities_for_declared_source_role": 0
+  },
+  "subject_modules": [
+    {
+      "number": 1,
+      "id": "0061",
+      "title": "逻辑",
+      "eligible": true
+    },
+    {
+      "number": 2,
+      "id": "0062",
+      "title": "代数",
+      "eligible": true
+    },
+    {
+      "number": 3,
+      "id": "0063",
+      "title": "数论",
+      "eligible": true
+    },
+    {
+      "number": 4,
+      "id": "0064",
+      "title": "代数与复几何",
+      "eligible": true
+    },
+    {
+      "number": 5,
+      "id": "0065",
+      "title": "几何",
+      "eligible": true
+    },
+    {
+      "number": 6,
+      "id": "0066",
+      "title": "拓扑",
+      "eligible": true
+    },
+    {
+      "number": 7,
+      "id": "0067",
+      "title": "Lie 理论及其推广",
+      "eligible": true
+    },
+    {
+      "number": 8,
+      "id": "0068",
+      "title": "分析",
+      "eligible": true
+    },
+    {
+      "number": 9,
+      "id": "0069",
+      "title": "动力系统",
+      "eligible": true
+    },
+    {
+      "number": 10,
+      "id": "006A",
+      "title": "偏微分方程",
+      "eligible": true
+    },
+    {
+      "number": 11,
+      "id": "006B",
+      "title": "数学物理",
+      "eligible": true
+    },
+    {
+      "number": 12,
+      "id": "006C",
+      "title": "概率",
+      "eligible": true
+    },
+    {
+      "number": 13,
+      "id": "006D",
+      "title": "组合学",
+      "eligible": true
+    },
+    {
+      "number": 14,
+      "id": "006E",
+      "title": "计算机科学中的数学",
+      "eligible": true
+    },
+    {
+      "number": 15,
+      "id": "006F",
+      "title": "数值分析与科学计算",
+      "eligible": true
+    },
+    {
+      "number": 16,
+      "id": "0070",
+      "title": "控制理论与优化",
+      "eligible": true
+    },
+    {
+      "number": 17,
+      "id": "0071",
+      "title": "统计与数据分析",
+      "eligible": true
+    },
+    {
+      "number": 18,
+      "id": "0072",
+      "title": "随机与微分建模",
+      "eligible": true
+    },
+    {
+      "number": 19,
+      "id": "0073",
+      "title": "数学教育与数学传播",
+      "eligible": true
+    },
+    {
+      "number": 20,
+      "id": "0074",
+      "title": "数学史",
+      "eligible": true
+    }
+  ],
+  "status_definitions": {
+    "keep_existing": "九篇既有源文专题原位保留；沿用其覆盖和外部引用边界，不等于全报告完成。",
+    "in_progress": "正在核读和整理，尚未完成本批选定内容与本地验证。",
+    "queued": "待实施或待核读原始材料；不是完成。",
+    "written_chapter_available": "出处已明确，未处理的原因是内容工作尚未开展；不能标成无来源。",
+    "official_video_identified_not_read": "已确认官方录像身份与题名；书面章未列于已核卷 2，录像的数学内容尚未逐段核读。",
+    "selected-branches-integrated-local": "选定分支已写入本地页面并接入导航；不代表全篇及全部研究证明已完成，也不代表已发布。"
+  },
+  "reports": [
+    {
+      "speaker": "Peter Bartlett",
+      "speaker_id": "a5037afb-dc38-42df-babd-5f788556eb08",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Modern Machine Learning Methods: Implicit Bias, Benign Overfitting, and Unstable Optimization",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Peter L. Bartlett"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1807617",
+      "pages": "1-24",
+      "existing_outline": "4P00",
+      "planned_outline": "4P00",
+      "planned_reference": "icm2026-bartlett",
+      "existing_subject_ids": [
+        "0071",
+        "006E",
+        "0070"
+      ],
+      "subject_ids": [
+        "0071",
+        "006E",
+        "0070"
+      ],
+      "status": "selected-branches-integrated-local",
+      "batch": 1,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "selected_chapter_branches_integrated",
+      "subject_basis": "风险与泛化对应统计，学习算法对应计算机科学，梯度选解与最大间隔对应优化；正文和实际写入分支均已核对。",
+      "notes": [
+        "综述、原子条目、前置依赖和来源范围已接入；完整证明与引用研究结果分开记录，未展开分支保留在报告 manifest 中。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1807617",
+          "doi": "10.1137/25M1807617",
+          "authors": [
+            "Peter L. Bartlett"
+          ],
+          "pages": "1-24",
+          "identity_status": "verified",
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
+        }
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-applied-reports.json",
+      "verification": "research/icm2026-plenary-applied-verification.json",
+      "publication": "not-pushed"
+    },
+    {
+      "speaker": "Simon Brendle",
+      "speaker_id": "d34d8d28-6449-42f3-8abd-773a73e7b977",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Hamilton’s Ricci Flow",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Simon Brendle"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1799052",
+      "pages": "25–34",
+      "existing_outline": "2C00",
+      "planned_outline": "2C00",
+      "planned_reference": "icm2026-brendle",
+      "existing_subject_ids": [
+        "0065",
+        "0066",
+        "006A"
+      ],
+      "subject_ids": [
+        "0065",
+        "0066",
+        "006A"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "Ricci 流的几何、拓扑及几何 PDE；保留现有专题及其已声明的有限覆盖。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "§§1–2 selected background and §§4–6 ancient kappa definition and noncompact classification.",
+        "deferred": [
+          "Compact classification shorthand is not imported. Perelman noncollapse and ancient-solution classification proofs remain external."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1799052",
+          "authors": [
+            "Simon Brendle"
+          ],
+          "pages": "25–34",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Annalisa Buffa",
+      "speaker_id": "648cc27f-35d7-4390-9f5f-c7c5285c7a8c",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "On New Challenges in Numerical Approximation of Partial Differential Equations",
+      "title_status": "verified_primary_video_description",
+      "title_role": "lecture_title",
+      "citation_authors": [
+        "Annalisa Buffa"
+      ],
+      "source_url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+      "pages": null,
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-buffa",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "006F",
+        "006A",
+        "0072"
+      ],
+      "status": "queued",
+      "batch": 4,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "official_video_identified_not_read",
+      "subject_basis": "官方录像说明直接讨论 PDE 数值逼近、科学应用中的建模与新计算方法；可安排数值分析/PDE，0072 入口须以实际整理的建模分支为条件。",
+      "notes": [
+        "准确题名含开头 On，且写全 Partial Differential Equations；不采用二手站的缩略题名或网格技术细节。"
+      ],
+      "materials": [
+        {
+          "type": "official_video",
+          "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+          "video_id": "D2_RHzeWcgk",
+          "channel": "https://www.youtube.com/@SimonsFoundation",
+          "channel_name": "Simons Foundation",
+          "oembed_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DD2_RHzeWcgk&format=json",
+          "video_label": "ICM 2026 Plenary Lecture - Annalisa Buffa",
+          "identity_status": "verified_oembed_and_public_description",
+          "content_reading_status": "not_watched_or_transcribed_in_this_task"
+        }
+      ],
+      "source_gap": {
+        "written_chapter": "not_in_checked_volume2",
+        "meaning": "本次所核卷 2 未列章；不声称所有渠道都不存在书面稿。题名和官方录像身份已核实，缺逐段阅读及可追溯的数学内容整理。",
+        "next_step": "先核读原始录像/作者幻灯片，记录时间戳与定理边界；若找到书面稿，核实版本和对应关系后再补入。"
+      }
+    },
+    {
+      "speaker": "Dmitry Dolgopyat",
+      "speaker_id": "0671e49d-46b3-4d7c-825b-363f6ccdd2a3",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Randomness, Rotations, Renormalization, and Resonances",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Dmitry Dolgopyat"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1806971",
+      "pages": "35-50",
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-dolgopyat",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "0069",
+        "006C",
+        "0063"
+      ],
+      "status": "queued",
+      "batch": 2,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "written_chapter_available",
+      "subject_basis": "环面平移动力系统、随机和的极限分布、差异度与丢番图近似；出版摘要及 MSC 60F05、11K06、11J13、37A17、37A45、37C55 支撑归属。",
+      "notes": [
+        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1806971",
+          "doi": "10.1137/25M1806971",
+          "authors": [
+            "Dmitry Dolgopyat"
+          ],
+          "pages": "35-50",
+          "identity_status": "verified",
+          "content_reading_status": "pending_batch_reading"
+        }
+      ]
+    },
+    {
+      "speaker": "Dennis Gaitsgory",
+      "speaker_id": "1a7edf5c-eda2-4444-922c-d80adc219048",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Local and Global Langlands Conjecture(s) over Function Fields",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Dennis Gaitsgory"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804935",
+      "pages": "51–80",
+      "existing_outline": "2400",
+      "planned_outline": "2400",
+      "planned_reference": "icm2026-gaitsgory",
+      "existing_subject_ids": [
+        "0062",
+        "0063",
+        "0064",
+        "0067"
+      ],
+      "subject_ids": [
+        "0062",
+        "0063",
+        "0064",
+        "0067"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "函数域 Langlands 的表示论、数论和代数几何；保留原有猜想状态与引用边界。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "arXiv:2509.24902v1 introduction and §1.1–1.2; selected conjectures in §2 and §3.1.",
+        "deferred": [
+          "Ramified local/global categorical correspondences remain conjectural; AGCat and spectral action foundations are not reconstructed."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1804935",
+          "authors": [
+            "Dennis Gaitsgory"
+          ],
+          "pages": "51–80",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Patrick Gérard",
+      "speaker_id": "fb8d5dcb-da5c-414b-b119-5d768468479f",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Hardy Spaces of Holomorphic Functions and Explicit Formulae for a Class of Integrable Partial Differential Equations",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Patrick Gérard"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805497",
+      "pages": "81–101",
+      "existing_outline": "2A00",
+      "planned_outline": "2A00",
+      "planned_reference": "icm2026-gerard",
+      "existing_subject_ids": [
+        "0068",
+        "006A"
+      ],
+      "subject_ids": [
+        "0068",
+        "006A"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "Hardy 空间及可积非局部 PDE；保留分析和 PDE 入口。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "§1.2–1.3; §2.1–2.2; §3.1–3.2 and Theorem1.2.",
+        "deferred": [
+          "Unbounded Lax domain analysis, explicit BO resolvent formula and half-wave global flow proof remain deferred. Theorem1.1 marked work in progress in source."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805497",
+          "authors": [
+            "Patrick Gérard"
+          ],
+          "pages": "81–101",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Alex Kontorovich",
+      "speaker_id": "96c46545-4c2c-4214-a6dd-3c494f4bb860",
+      "kind": "special",
+      "official_category": "Special Plenary Lectures",
+      "title": "The Shape of Math To Come",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Alex Kontorovich"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1806764",
+      "pages": "102-123",
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-kontorovich",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "006E",
+        "0061",
+        "0073"
+      ],
+      "status": "queued",
+      "batch": 3,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "written_chapter_available",
+      "subject_basis": "AI、交互式证明与形式化；§7 的 Lean/Mathlib、§10 Teaching 和 §11 Understanding and communication 支撑计算、逻辑、数学教育与传播。不得因作者是数论学者将本报告主归为数论。",
+      "notes": [
+        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。",
+        "特别全会，且已收入全会卷；不可把 17 个章节都算成普通全会。展望和教学经验应保持为作者意见，不能改写成已证结论。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1806764",
+          "doi": "10.1137/25M1806764",
+          "authors": [
+            "Alex Kontorovich"
+          ],
+          "pages": "102-123",
+          "identity_status": "verified",
+          "content_reading_status": "pending_batch_reading"
+        }
+      ]
+    },
+    {
+      "speaker": "Jacob Lurie",
+      "speaker_id": "c619a290-7611-4053-9d39-96554ca4b9ee",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Prismatic Stable Homotopy Theory",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Jacob Lurie"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1827177",
+      "pages": "124–153",
+      "existing_outline": "2500",
+      "planned_outline": "2500",
+      "planned_reference": "icm2026-lurie",
+      "existing_subject_ids": [
+        "0062",
+        "0063",
+        "0064",
+        "0066"
+      ],
+      "subject_ids": [
+        "0062",
+        "0063",
+        "0064",
+        "0066"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "棱镜稳定同伦、代数及算术几何；保留尚属猜想的构造状态。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "Introduction, §§1–2 overview, §3 Conjecture3.5/Warning3.11; selected §5 and §9 passages.",
+        "deferred": [
+          "General prismatic stable homotopy category is conjectural. Full F-gauge and special-base constructions are not supplied."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1827177",
+          "authors": [
+            "Jacob Lurie"
+          ],
+          "pages": "124–153",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Ciprian Manolescu",
+      "speaker_id": "ad6b1034-e8e2-408f-b242-be8eac214ceb",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "From Knots to Four-Manifolds",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Ciprian Manolescu"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806703",
+      "pages": "154–179",
+      "existing_outline": "2800",
+      "planned_outline": "2800",
+      "planned_reference": "icm2026-manolescu",
+      "existing_subject_ids": [
+        "0066"
+      ],
+      "subject_ids": [
+        "0066"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "结、四维流形及其不变量；保留拓扑专题，不把引用定理视为本站证明。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "Introduction, §5.4–5.5 algorithmic results and §6.1–6.4 Khovanov/lasagna definitions.",
+        "deferred": [
+          "Reidemeister invariance, coherent framed cobordism maps, Floer constructions and diagram-by-diagram Kirby verification are not proved here."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806703",
+          "authors": [
+            "Ciprian Manolescu"
+          ],
+          "pages": "154–179",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Ngaiming Mok",
+      "speaker_id": "08a4949d-6cb0-4a73-94c3-e18a5aca677c",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Uniformization Theorems and Related Results in Higher-Dimensional Complex Geometry",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Ngaiming Mok"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805722",
+      "pages": "180–209",
+      "existing_outline": "2600",
+      "planned_outline": "2600",
+      "planned_reference": "icm2026-mok",
+      "existing_subject_ids": [
+        "0064",
+        "0065"
+      ],
+      "subject_ids": [
+        "0064",
+        "0065"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "高维复几何的一致化与刚性；保留代数与复几何、几何入口。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "Introduction and §2.1 Theorem2.1 with hypotheses; selected subsequent remarks.",
+        "deferred": [
+          "Full uniformization proof, VMRT rigidity and Ax–Lindemann branches remain cited or deferred. Reuse 0BAE for compact holomorphic functions."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805722",
+          "authors": [
+            "Ngaiming Mok"
+          ],
+          "pages": "180–209",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Robert Morris",
+      "speaker_id": "0c1dc5bd-780d-4c57-9349-6b41e66d2a42",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Some Recent Results in Ramsey Theory",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Robert Morris"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1833369",
+      "pages": "210-239",
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-morris",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "006D"
+      ],
+      "status": "queued",
+      "batch": 3,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "written_chapter_available",
+      "subject_basis": "图 Ramsey 数及其上下界；本批只安排组合学，不因证明中使用随机方法就自动扩为独立概率专题。",
+      "notes": [
+        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1833369",
+          "doi": "10.1137/25M1833369",
+          "authors": [
+            "Robert Morris"
+          ],
+          "pages": "210-239",
+          "identity_status": "verified",
+          "content_reading_status": "pending_batch_reading"
+        }
+      ]
+    },
+    {
+      "speaker": "Hee Oh",
+      "speaker_id": "f2824364-8e01-4b7d-8026-994a802dc53e",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Dynamics and Rigidity through the Lens of Circles",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Hee Oh"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1810726",
+      "pages": "240-271",
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-hee-oh",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "0069",
+        "0065",
+        "0067"
+      ],
+      "status": "queued",
+      "batch": 2,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "written_chapter_available",
+      "subject_basis": "圆堆积、无限体积齐性空间的动力学与刚性，关联几何及 Lie 群齐性空间。目录摘要与章节链接已核实；本次单章请求超时，不表示材料不存在。",
+      "notes": [
+        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。",
+        "不得复用 icm2026-oh：现有引用属于分组报告人 Sung-Jin Oh。使用独立 icm2026-hee-oh。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1810726",
+          "doi": "10.1137/25M1810726",
+          "authors": [
+            "Hee Oh"
+          ],
+          "pages": "240-271",
+          "identity_status": "verified",
+          "content_reading_status": "pending_batch_reading"
+        }
+      ]
+    },
+    {
+      "speaker": "Felix Otto",
+      "speaker_id": "c78344a2-3895-4af2-b8da-14fd891eb5f4",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Geometric Concepts in Partial Differential Equations",
+      "title_status": "verified_primary_video_description",
+      "title_role": "lecture_title",
+      "citation_authors": [
+        "Felix Otto"
+      ],
+      "source_url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+      "pages": null,
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-otto",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "006A",
+        "0065",
+        "006C",
+        "0072"
+      ],
+      "status": "queued",
+      "batch": 4,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "official_video_identified_not_read",
+      "subject_basis": "机构摘要和官方录像说明均列出输运度量下的多相流、含噪拟线性抛物方程、漂移扩散与 SL(n) 几何 Brownian 运动，支持 PDE、几何、概率和建模。",
+      "notes": [
+        "机构页面与官方录像说明交叉核实题名、报告人及摘要；不能把摘要核实写成已读完报告。"
+      ],
+      "materials": [
+        {
+          "type": "official_video",
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "video_id": "K8-O-FdUzGs",
+          "channel": "https://www.youtube.com/@SimonsFoundation",
+          "channel_name": "Simons Foundation",
+          "oembed_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DK8-O-FdUzGs&format=json",
+          "video_label": "ICM 2026 Plenary Lecture - Felix Otto",
+          "identity_status": "verified_oembed_and_public_description",
+          "content_reading_status": "not_watched_or_transcribed_in_this_task"
+        },
+        {
+          "type": "author_institution_title_and_abstract",
+          "url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+          "identity_status": "verified"
+        }
+      ],
+      "source_gap": {
+        "written_chapter": "not_in_checked_volume2",
+        "meaning": "本次所核卷 2 未列章；不声称所有渠道都不存在书面稿。题名和官方录像身份已核实，缺逐段阅读及可追溯的数学内容整理。",
+        "next_step": "先核读原始录像/作者幻灯片，记录时间戳与定理边界；若找到书面稿，核实版本和对应关系后再补入。"
+      }
+    },
+    {
+      "speaker": "Jeremy Quastel",
+      "speaker_id": "b11841e5-0cf5-412b-8711-150e1e492fc5",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "The KPZ Fixed Point",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Jeremy Quastel"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1805643",
+      "pages": "272-301",
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-quastel",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "006C",
+        "006B",
+        "006A",
+        "0072"
+      ],
+      "status": "queued",
+      "batch": 2,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "written_chapter_available",
+      "subject_basis": "随机界面增长、KPZ 普适类与统计物理；出版 §1.1 的 KPZ/Burgers 随机偏微分方程支持 PDE 和随机建模入口。",
+      "notes": [
+        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1805643",
+          "doi": "10.1137/25M1805643",
+          "authors": [
+            "Jeremy Quastel"
+          ],
+          "pages": "272-301",
+          "identity_status": "verified",
+          "content_reading_status": "pending_batch_reading"
+        }
+      ]
+    },
+    {
+      "speaker": "Peter Sarnak",
+      "speaker_id": "47720343-7c39-42d3-b26f-397764c71721",
+      "kind": "special",
+      "official_category": "Special Plenary Lectures",
+      "title": "Maestro Jean Pierre Serre",
+      "title_status": "verified_primary_video_description",
+      "title_role": "lecture_title",
+      "citation_authors": [
+        "Peter Sarnak"
+      ],
+      "source_url": "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+      "pages": null,
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-sarnak",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "0074"
+      ],
+      "status": "queued",
+      "batch": 5,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "official_video_identified_not_read",
+      "subject_basis": "官方视频说明是回顾 Serre 数学工作的特别报告，先归数学史；代数、数论、代数几何或拓扑的具体交叉入口须逐段核读后决定，不依据 Sarnak 的研究履历猜测。",
+      "notes": [
+        "用户提供的 NK7r4nnZ2Mg 返回 Not Found；大小写敏感的有效 ID 为 NK7R4Nnz2mg，oEmbed 已核实 Simons Foundation 频道及 Peter Sarnak。",
+        "准确题名据视频 attributedDescription，保留 Jean Pierre 的原始写法。"
+      ],
+      "materials": [
+        {
+          "type": "official_video",
+          "url": "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+          "video_id": "NK7R4Nnz2mg",
+          "channel": "https://www.youtube.com/@SimonsFoundation",
+          "channel_name": "Simons Foundation",
+          "oembed_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DNK7R4Nnz2mg&format=json",
+          "video_label": "ICM 2026 Plenary Lecture - Peter Sarnak",
+          "identity_status": "verified_oembed_and_public_description",
+          "content_reading_status": "not_watched_or_transcribed_in_this_task"
+        }
+      ],
+      "source_gap": {
+        "written_chapter": "not_in_checked_volume2",
+        "meaning": "本次所核卷 2 未列章；不声称所有渠道都不存在书面稿。题名和官方录像身份已核实，缺逐段阅读及可追溯的数学内容整理。",
+        "next_step": "先核读原始录像/作者幻灯片，记录时间戳与定理边界；若找到书面稿，核实版本和对应关系后再补入。"
+      },
+      "rejected_provisional_video": {
+        "url": "https://www.youtube.com/watch?v=NK7r4nnZ2Mg",
+        "reason": "YouTube oEmbed returned Not Found; replaced only after verifying the differently cased official video."
+      }
+    },
+    {
+      "speaker": "Éva Tardos",
+      "speaker_id": "fa05e5ac-58fc-43d9-a7ff-d8ca32579b58",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Learning and the Price of Anarchy in Games",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Éva Tardos"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1808064",
+      "pages": "302-312",
+      "existing_outline": "4Q00",
+      "planned_outline": "4Q00",
+      "planned_reference": "icm2026-tardos",
+      "existing_subject_ids": [
+        "006E",
+        "0070",
+        "0072"
+      ],
+      "subject_ids": [
+        "006E",
+        "0070",
+        "0072"
+      ],
+      "status": "selected-branches-integrated-local",
+      "batch": 1,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "selected_chapter_branches_integrated",
+      "subject_basis": "有限博弈、无遗憾学习和社会效率对应计算与优化；动态状态、单缓冲队列与稳定性分支支持建模入口。",
+      "notes": [
+        "综述、原子条目、前置依赖和来源范围已接入；完整证明与引用研究结果分开记录，未展开分支保留在报告 manifest 中。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1808064",
+          "doi": "10.1137/25M1808064",
+          "authors": [
+            "Éva Tardos"
+          ],
+          "pages": "302-312",
+          "identity_status": "verified",
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
+        }
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-applied-reports.json",
+      "verification": "research/icm2026-plenary-applied-verification.json",
+      "publication": "not-pushed"
+    },
+    {
+      "speaker": "Xavier Tolsa",
+      "speaker_id": "b972903d-0747-41c1-87ce-c340c55693fc",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Interactions between Quantitative Rectifiability, Singular Integrals, and Boundary Value Problems for Harmonic Functions",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Xavier Tolsa"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1804054",
+      "pages": "313–340",
+      "existing_outline": "2700",
+      "planned_outline": "2700",
+      "planned_reference": "icm2026-tolsa",
+      "existing_subject_ids": [
+        "0068",
+        "006A"
+      ],
+      "subject_ids": [
+        "0068",
+        "006A"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "定量可求长性、奇异积分与调和边值问题；保留分析/PDE 入口。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "§§1–3 selected definitions and square-function statements; §4.7 and §6.1 statements; §6 harmonic measure construction.",
+        "deferred": [
+          "Corona decompositions, Riesz/rectifiability equivalence, Riesz representation existence and rough-domain boundary theory remain external results."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1804054",
+          "authors": [
+            "Xavier Tolsa"
+          ],
+          "pages": "313–340",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Jacob Tsimerman",
+      "speaker_id": "9eaf6ae7-c0b6-4534-a402-01df5d041eb9",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Baily–Borel Compactifications for Period Images",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Jacob Tsimerman"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1807368",
+      "pages": "341–362",
+      "existing_outline": "2300",
+      "planned_outline": "2300",
+      "planned_reference": "icm2026-tsimerman",
+      "existing_subject_ids": [
+        "0061",
+        "0063",
+        "0064"
+      ],
+      "subject_ids": [
+        "0061",
+        "0063",
+        "0064"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "周期映像、可定义解析空间及 Hodge 应用；保留逻辑、数论、代数与复几何入口。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "§2 definitions and GAGA; §§3–5 period maps and positivity; selected §6 proof strategy and §7 introduction.",
+        "deferred": [
+          "Full boundary construction and b-semiampleness proofs are not reconstructed."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1807368",
+          "authors": [
+            "Jacob Tsimerman"
+          ],
+          "pages": "341–362",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ]
+    },
+    {
+      "speaker": "Stephen Wright",
+      "speaker_id": "a451eb54-b2de-4c8a-962c-2fe0ebfa6909",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Optimization in Theory and Practice",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Stephen J. Wright"
+      ],
+      "source_url": "https://epubs.siam.org/doi/10.1137/25M1806831",
+      "pages": "363-393",
+      "existing_outline": "4R00",
+      "planned_outline": "4R00",
+      "planned_reference": "icm2026-wright",
+      "existing_subject_ids": [
+        "0070",
+        "006F",
+        "006E"
+      ],
+      "subject_ids": [
+        "0070",
+        "006F",
+        "006E"
+      ],
+      "status": "selected-branches-integrated-local",
+      "batch": 1,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "selected_chapter_branches_integrated",
+      "subject_basis": "线性规划、梯度和二阶方法对应优化；迭代误差、矩阵计算及复杂度支持数值分析与计算入口。",
+      "notes": [
+        "综述、原子条目、前置依赖和来源范围已接入；完整证明与引用研究结果分开记录，未展开分支保留在报告 manifest 中。"
+      ],
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/10.1137/25M1806831",
+          "doi": "10.1137/25M1806831",
+          "authors": [
+            "Stephen J. Wright"
+          ],
+          "pages": "363-393",
+          "identity_status": "verified",
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
+        }
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-applied-reports.json",
+      "verification": "research/icm2026-plenary-applied-verification.json",
+      "publication": "not-pushed"
+    },
+    {
+      "speaker": "Horng-Tzer Yau",
+      "speaker_id": "81e538d6-c347-40c1-8f18-0d19e8b163dc",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Random Matrices: Wigner Universality, Anderson Delocalization, and Beyond",
+      "title_status": "verified_proceedings_chapter",
+      "title_role": "proceedings_chapter",
+      "citation_authors": [
+        "Horng-Tzer Yau"
+      ],
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806028",
+      "pages": "394–423",
+      "existing_outline": "2B00",
+      "planned_outline": "2B00",
+      "planned_reference": "icm2026-yau",
+      "existing_subject_ids": [
+        "0068",
+        "006B"
+      ],
+      "subject_ids": [
+        "0068",
+        "006B"
+      ],
+      "status": "keep_existing",
+      "batch": 0,
+      "action": "reuse_existing_outline",
+      "baseline_coverage": "selected-branches",
+      "source_status": "written_chapter_available",
+      "subject_basis": "随机矩阵谱统计与 Anderson 模型；保留现有分析/数学物理专题。概率入口可后续基于现有随机矩阵分支复用，不需重建专题。",
+      "notes": [
+        "原位复用，不重复创建；keep_existing 仅表示保留既有源文绑定专题，不表示报告全文、所有分支或证明均已完成。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "Introduction and selected §2.1–2.3 definitions/resolvent identities; band-matrix scope from introduction/§3.",
+        "deferred": [
+          "Local laws, universality comparison, band-matrix estimates and weak-disorder Anderson delocalization are not proved by the finite-dimensional identities."
+        ]
+      },
+      "materials": [
+        {
+          "type": "proceedings_chapter",
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806028",
+          "authors": [
+            "Horng-Tzer Yau"
+          ],
+          "pages": "394–423",
+          "identity_status": "verified_against_volume2_and_existing_manifest",
+          "content_reading_status": "retain_existing_selected_branches"
+        }
+      ],
+      "pending_subject_ids": [
+        "006C"
+      ]
+    },
+    {
+      "speaker": "Tamar Ziegler",
+      "speaker_id": "6903181b-288d-46a0-b183-14733111dee7",
+      "kind": "ordinary",
+      "official_category": "Plenary Lectures",
+      "title": "Structure of Sets with an Unexpected Number of Arithmetic Pattern",
+      "title_status": "verified_primary_video_description",
+      "title_role": "lecture_title",
+      "citation_authors": [
+        "Tamar Ziegler"
+      ],
+      "source_url": "https://math.huji.ac.il/~tamarz/video.html",
+      "pages": null,
+      "existing_outline": "2900",
+      "planned_outline": "2900",
+      "planned_reference": "icm2026-ziegler",
+      "existing_subject_ids": [
+        "0063",
+        "0068"
+      ],
+      "subject_ids": [
+        "0063",
+        "0068",
+        "0069",
+        "006D"
+      ],
+      "status": "queued",
+      "batch": 4,
+      "action": "upgrade_existing_outline",
+      "baseline_coverage": "background-only",
+      "source_status": "official_video_identified_not_read",
+      "subject_basis": "官方说明明确为遍历论、加性组合及高阶 Fourier 分析；保留原有数论/分析入口，升级时补足动力系统/组合学分支。",
+      "notes": [
+        "作者目录及官方视频说明均用单数 Pattern；旧清单用 Patterns。这里保留一手来源原文，并记录旧题名，不静默覆盖旧文件。",
+        "必须原位升级 2900；2014 年 arXiv 背景不能算作已处理 2026 年报告。"
+      ],
+      "existing_source_scope": {
+        "manifest": "research/icm2026-plenary.json",
+        "reading_scope": "Author video directory confirms 2026 lecture title only. Mathematical background read from arXiv:1404.0775v1 §§1–2,3.3,4, a 2014 text.",
+        "deferred": [
+          "No verified 2026 written chapter or full-video reading. Background-only integration, not complete lecture coverage."
+        ]
+      },
+      "materials": [
+        {
+          "type": "official_video",
+          "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+          "video_id": "czHiX0pYTDg",
+          "channel": "https://www.youtube.com/@SimonsFoundation",
+          "channel_name": "Simons Foundation",
+          "oembed_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DczHiX0pYTDg&format=json",
+          "video_label": "ICM 2026 Plenary Lecture - Tamar Ziegler",
+          "identity_status": "verified_oembed_and_public_description",
+          "content_reading_status": "not_watched_or_transcribed_in_this_task"
+        },
+        {
+          "type": "author_video_directory",
+          "url": "https://math.huji.ac.il/~tamarz/video.html",
+          "identity_status": "verified"
+        }
+      ],
+      "source_gap": {
+        "written_chapter": "not_in_checked_volume2",
+        "meaning": "本次所核卷 2 未列章；不声称所有渠道都不存在书面稿。题名和官方录像身份已核实，缺逐段阅读及可追溯的数学内容整理。",
+        "next_step": "先核读原始录像/作者幻灯片，记录时间戳与定理边界；若找到书面稿，核实版本和对应关系后再补入。"
+      },
+      "previous_title": "Structure of Sets with an Unexpected Number of Arithmetic Patterns",
+      "background_material": {
+        "authors": [
+          "Tamar Ziegler"
+        ],
+        "title": "Linear Equations in Primes and Dynamics of Nilmanifolds",
+        "url": "https://arxiv.org/abs/1404.0775v1",
+        "year": 2014,
+        "role": "background_only_not_2026_report"
+      }
+    },
+    {
+      "speaker": "Yurii Nesterov",
+      "speaker_id": "e6381e8f-9dae-49d1-a1f9-1c6f12187df6",
+      "kind": "special",
+      "official_category": "Special Plenary Lectures",
+      "title": "Towards Higher-Order Optimization",
+      "title_status": "verified_primary_video_description",
+      "title_role": "lecture_title",
+      "citation_authors": [
+        "Yurii Nesterov"
+      ],
+      "source_url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+      "pages": null,
+      "existing_outline": null,
+      "planned_outline": null,
+      "planned_reference": "icm2026-nesterov",
+      "existing_subject_ids": [],
+      "subject_ids": [
+        "0070"
+      ],
+      "status": "queued",
+      "batch": 5,
+      "action": "create_outline",
+      "baseline_coverage": "no-dedicated-topic",
+      "source_status": "official_video_identified_not_read",
+      "subject_basis": "官方录像说明明确为高阶优化；先安排控制理论与优化。数值分析/计算复杂度入口在核读实际算法及复杂度内容后再决定，不能用获奖引文代替报告内容。",
+      "notes": [
+        "官方名录列 Special Plenary Lectures；官方录像标为 Carl Friedrich Gauss Prize Lecture，两项均保留，仅计一个人、一项队列工作。",
+        "第三方转发只用于找到录像链接；题名及报告身份独立以官方频道 oEmbed 和视频说明核实。"
+      ],
+      "materials": [
+        {
+          "type": "official_video",
+          "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+          "video_id": "m86Emt6GO8I",
+          "channel": "https://www.youtube.com/@SimonsFoundation",
+          "channel_name": "Simons Foundation",
+          "oembed_url": "https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dm86Emt6GO8I&format=json",
+          "video_label": "ICM 2026 Carl Friedrich Gauss Prize Lecture - Yurii Nesterov",
+          "identity_status": "verified_oembed_and_public_description",
+          "content_reading_status": "not_watched_or_transcribed_in_this_task"
+        }
+      ],
+      "source_gap": {
+        "written_chapter": "not_in_checked_volume2",
+        "meaning": "本次所核卷 2 未列章；不声称所有渠道都不存在书面稿。题名和官方录像身份已核实，缺逐段阅读及可追溯的数学内容整理。",
+        "next_step": "先核读原始录像/作者幻灯片，记录时间戳与定理边界；若找到书面稿，核实版本和对应关系后再补入。"
+      },
+      "pending_subject_ids": [
+        "006F",
+        "006E"
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "batch": 0,
+      "status": "keep_existing",
+      "speakers": [
+        "Simon Brendle",
+        "Dennis Gaitsgory",
+        "Patrick Gérard",
+        "Jacob Lurie",
+        "Ciprian Manolescu",
+        "Ngaiming Mok",
+        "Xavier Tolsa",
+        "Jacob Tsimerman",
+        "Horng-Tzer Yau"
+      ],
+      "purpose": "保留九篇源文专题，不重复建设，不提升覆盖等级。"
+    },
+    {
+      "batch": 1,
+      "status": "selected-branches-integrated-local",
+      "speakers": [
+        "Peter Bartlett",
+        "Éva Tardos",
+        "Stephen Wright"
+      ],
+      "planned_outlines": [
+        "4P00",
+        "4Q00",
+        "4R00"
+      ],
+      "purpose": "先补统计学习、算法博弈和优化，实际纳入计算/应用模块。",
+      "acceptance": "分别核读出版章，保留准确作者名与章名；每个学科入口对应实际完成的分支。Tardos 的 0072 入口以动态/排队内容已写入为前提。",
+      "manifest": "research/icm2026-plenary-applied-reports.json"
+    },
+    {
+      "batch": 2,
+      "status": "queued",
+      "speakers": [
+        "Dmitry Dolgopyat",
+        "Hee Oh",
+        "Jeremy Quastel"
+      ],
+      "purpose": "动力系统、齐性几何、概率与随机增长；三篇已有正式书面来源。",
+      "acceptance": "先复用既有基础页，再分配新专题编号；Hee Oh 不得与 Sung-Jin Oh 合并。Quastel 的 KPZ 固定点须与 KPZ 方程区分。"
+    },
+    {
+      "batch": 3,
+      "status": "queued",
+      "speakers": [
+        "Robert Morris",
+        "Alex Kontorovich"
+      ],
+      "purpose": "Ramsey 理论及 AI/形式化/教学传播；两篇均已有书面来源。",
+      "acceptance": "Morris 保留结果原作者与引用归属；Kontorovich 保持特别全会类别，依据 §§7、10、11 分配入口，区分定理、实例和展望。"
+    },
+    {
+      "batch": 4,
+      "status": "queued",
+      "speakers": [
+        "Felix Otto",
+        "Annalisa Buffa",
+        "Tamar Ziegler"
+      ],
+      "purpose": "机构/官方录像材料核读后建设；2900 原位升级。",
+      "acceptance": "先建立时间戳或幻灯片页码与数学断言对应，再写正文；不得把摘要或 2014 年背景当作 2026 年讲稿全文。"
+    },
+    {
+      "batch": 5,
+      "status": "queued",
+      "speakers": [
+        "Peter Sarnak",
+        "Yurii Nesterov"
+      ],
+      "purpose": "两场特别报告；已核实官方录像及准确题名，仍待内容阅读。",
+      "acceptance": "Sarnak 以 Serre 工作回顾安排数学史入口，具体数学分支待核读；Nesterov 以高阶优化为起点，保持奖项录像与名录类别的单次计数。"
+    }
+  ],
+  "acceptance_policy": [
+    "所有 22 人始终保留唯一记录；普通/特别类别与官方名录一致，19+3=22。",
+    "初始待办13项中，3篇已加入选定分支；余10项由9个新专题及2900升级组成。选定分支接入不等于全报告或全部证明完成。",
+    "每批先核读原始章/录像，再在既有基础页上增补；不因已有题名、摘要、网址或空目录就标记完成。",
+    "来源未列于已核卷、网页访问失败、材料存在但尚未处理、正文完成、发布完成是不同状态。",
+    "数学与来源审阅、前置依赖、导航、构建及渲染检查分别记录；发布须另有提交、GitHub Actions和线上核验依据。"
+  ],
+  "baseline_counts": {
+    "existing_source_bound_outlines": 9,
+    "background_outlines_to_upgrade": 1,
+    "new_outlines_needed": 12,
+    "outstanding_reports": 13,
+    "written_chapters_pending": 8,
+    "official_videos_pending_content_reading": 5
+  }
+}

@@ -1,0 +1,10 @@
+\title{线性规划的弱对偶与互补松弛}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (2.2)–(2.5)}
+
+\p{对[标准形线性规划](4R0A)，其对偶问题定义为 #{\max\{b^{\mathsf T}y:A^{\mathsf T}y+s=c,\ s\ge 0\}}，其中 #{y\in\mathbb R^m} 无符号约束。若 #{x} 为原问题可行点，#{(y,s)} 为对偶可行点，则}
+##{c^{\mathsf T}x-b^{\mathsf T}y=x^{\mathsf T}s\ge 0.}
+\p{\strong{证明。}代入 #{c=A^{\mathsf T}y+s} 与 #{Ax=b}，有 #{c^{\mathsf T}x=y^{\mathsf T}Ax+s^{\mathsf T}x=b^{\mathsf T}y+s^{\mathsf T}x}。各坐标非负，故差值非负。}
+\p{差值为零当且仅当每个 #{x_is_i=0}，这个条件称为互补松弛。一旦原、对偶可行点满足互补松弛，弱对偶便保证它们分别最优。反过来，最优点存在时相应对偶点的存在由[强对偶定理](4R0Y)给出。}

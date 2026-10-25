@@ -1,0 +1,11 @@
+\title{Hessian 矩阵与二阶变化}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§2.1、§5}
+
+\p{设 #{f:U\to\mathbb R} 为开集上的 [#{C^2} 函数](0A32)。其 Hessian 矩阵定义为 #{\nabla^2f(x)=(\partial_i\partial_jf(x))_{i,j=1}^n}。它是[梯度](4R01)的微分矩阵；[混合偏导交换](0A3D)保证它对称。沿向量 #{v} 的二阶变化为}
+##{\left.\frac{d^2}{dt^2}f(x+tv)\right|_{t=0}=v^{\mathsf T}\nabla^2f(x)v.}
+\p{若 #{x} 为局部极小点，一元函数 #{f(x+tv)} 的二阶导数非负，故 Hessian [半正定](0N0A)。若同时 #{\nabla f(x)=0} 且 #{\nabla^2f(x)\succeq mI}，其中 #{m>0}，则由 [Taylor 公式](0I8J)}
+##{f(x+h)-f(x)=\tfrac 12h^{\mathsf T}\nabla^2f(x)h+o(\|h\|^2)>0}
+\p{对充分小的非零 #{h} 成立，因而 #{x} 是严格局部极小点。这里最后一步取余项绝对值小于 #{m\|h\|^2/4}。}

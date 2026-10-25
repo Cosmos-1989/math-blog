@@ -1,0 +1,11 @@
+\title{对角深线性参数化诱导的幂次惩罚}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，引理 2.29、式 (2.17)}
+
+\p{设整数 #{L\ge 1}，参数为 #{L} 个向量 #{\theta_1,\ldots,\theta_L\in\mathbb R^p}，有效线性系数定义为 #{\beta_j=\prod_{l=1}^L\theta_{lj}}。固定 #{\beta\in\mathbb R^p}，则}
+##{\min_{\prod_l\theta_{lj}=\beta_j}\sum_{l=1}^L\|\theta_l\|_2^2=L\sum_{j=1}^p|\beta_j|^{2/L}.}
+\p{\strong{证明。}对每个坐标，算术几何平均不等式给出 #{\sum_l|\theta_{lj}|^2\ge L(\prod_l|\theta_{lj}|^2)^{1/L}=L|\beta_j|^{2/L}}。此不等式可直接从 #{\log u\le u-1} 得到：将正数除以其算术平均后取对数求和；存在零项时由非负性成立。}
+\p{逐坐标取 #{\theta_{1j}=\operatorname{sign}(\beta_j)|\beta_j|^{1/L}}，其余各层取 #{|\beta_j|^{1/L}}，零坐标全部取零，便同时达到下界。}
+\p{所以在分类约束 #{y_ix_i^\top\beta\ge 1} 下，参数空间最小平方范数问题的全局最优值等于 #{L\sum_j|\beta_j|^{2/L}} 的最小值。#{L=2} 时得到 [#{\ell_1} 范数](00M2)；#{L>2} 时指数小于一，该表达式不再是凸范数。这个变分恒等式本身没有断言非凸梯度轨道达到全局极小点。}

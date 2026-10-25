@@ -1,0 +1,15 @@
+\title{Newton 法的局部二次收敛}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.4 的局部收敛结论；明确补入 Hessian 的 Lipschitz 条件}
+
+\p{设 #{f} 为 #{x_*} 附近的 #{C^2} 函数，#{\nabla f(x_*)=0}，且 #{\nabla^2f(x_*)\succeq mI}，其中 #{m>0}。假设 [Hessian](4R02) 在该邻域中以[算子范数](00M4)满足 #{\|\nabla^2f(x)-\nabla^2f(y)\|\le M\|x-y\|}。Newton 迭代定义为}
+##{x_{k+1}=x_k-\nabla^2f(x_k)^{-1}\nabla f(x_k).}
+\p{存在 #{r>0}，使 #{\|x_0-x_*\|\le r} 时迭代始终有定义，且 #{\|x_{k+1}-x_*\|\le(M/m)\|x_k-x_*\|^2}。}
+\p{\strong{证明。}缩小闭球，使其位于给定邻域内，且球上 Hessian 至少为 #{(m/2)I}。由[对角化](0N0B)，逆的范数不超过 #{2/m}。令 #{e=x-x_*}。对梯度应用[微积分基本定理](0A3C)，得到}
+##{\begin{aligned}
+x^+-x_*&=\nabla^2f(x)^{-1}\int_0^1\bigl(\nabla^2f(x)-\nabla^2f(x_*+te)\bigr)e\,dt,\\
+\|x^+-x_*\|&\le\frac 2m\int_0^1M(1-t)\|e\|^2\,dt=\frac Mm\|e\|^2.
+\end{aligned}}
+\p{再选 #{Mr/m\le 1 /2}，便使下一步误差不超过当前误差的一半，归纳保证不离开球并趋于零。若 #{M=0}，Hessian 在球内为常矩阵，上式直接给出一步到达 #{x_*}。}

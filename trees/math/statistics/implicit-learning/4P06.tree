@@ -1,0 +1,10 @@
+\title{线性预测的梯度更新保持核分量}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.11 的行空间论证}
+
+\p{给定 #{X\in\mathbb R^{n\times p}}，其行记为 #{x_i^\top}，以及可微函数 #{\ell_i:\mathbb R\to\mathbb R}。设 #{F(\theta)=n^{-1}\sum_i\ell_i(x_i^\top\theta)}。任意步长的[梯度下降](4R04)都满足}
+##{\theta_t-\theta_0\in\operatorname{im}X^\top.}
+\p{\strong{证明。}按[梯度](4R01)的定义逐坐标求导，得 #{\nabla F(\theta)=X^\top g(\theta)/n}，其中 #{g_i(\theta)=\ell_i'(x_i^\top\theta)}。每步增量在行空间，有限步相加仍在其中。对于 #{h\in\ker X}，#{h^\top X^\top g=(Xh)^\top g=0}，故 #{h^\top\theta_t=h^\top\theta_0}。}
+\p{由[正交投影](00MS)，这等价于 #{P_{\ker X}\theta_t=P_{\ker X}\theta_0}。若迭代收敛，有限维行空间的闭性保证极限也具有相同核分量。特别地，零初始化强制极限在行空间中；满行秩时，若极限插值，它便是[最小范数插值解](4P05)。}

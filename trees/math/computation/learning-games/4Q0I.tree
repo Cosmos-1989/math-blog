@@ -1,0 +1,12 @@
+\title{仿射延迟路由的最坏效率界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Smoothness of routing games；仿射情形的局部推导}
+
+\p{在[非原子路由模型](4Q0G)中，设 #{d_e(z)=a_ez+b_e}，其中 #{a_e,b_e\ge 0}。若 #{f} 是 Wardrop 均衡，则对任意同需求可行流 #{g}，}
+##{C(f)\le\frac 43 C(g).}
+\p{因此均衡总延迟至多为最优总延迟的 #{4/3}。这也可说成最优成本至少占均衡成本的 #{3/4}。}
+\p{\strong{证明。}记 #{x,y} 分别为两流的边流。平方非负给出 #{(y-x/2)^2\ge 0}，即 #{xy\le y^2+x^2/4}。逐边乘以 #{a_e} 并加上 #{b_ey_e}，得}
+##{y_ed_e(x_e)\le y_ed_e(y_e)+\frac 14 x_ed_e(x_e).}
+\p{其中常数项右边还多出非负量 #{b_ex_e/4}。对边求和，再用[Wardrop 变分不等式](4Q0H)，得到 #{C(f)\le C(g)+C(f)/4}。移项即得结论。这是路由中参数为 #{(1,1/4)} 的平滑性估计。}

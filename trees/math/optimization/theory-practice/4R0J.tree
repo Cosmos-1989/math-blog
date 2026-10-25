@@ -1,0 +1,10 @@
+\title{线性规划的鞍点表示}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (4.10)}
+
+\p{对[标准形线性规划](4R0A)，定义 #{\mathcal L(x,y)=c^{\mathsf T}x+y^{\mathsf T}(b-Ax)}，其中 #{x\ge 0}、#{y\in\mathbb R^m}。称 #{(x_*,y_*)} 为鞍点，如果对所有允许的 #{x,y}，}
+##{\mathcal L(x_*,y)\le\mathcal L(x_*,y_*)\le\mathcal L(x,y_*).}
+\p{这样的鞍点恰好对应[互补松弛](4R0B)的最优原、对偶对，其中 #{s_*=c-A^{\mathsf T}y_*}。}
+\p{\strong{证明。}左侧不等式对所有 #{y} 成立迫使 #{Ax_*=b}，否则沿 #{b-Ax_*} 放大 #{y} 会使左端无界。右侧不等式表示 #{x_*} 在非负正交象限上极小化线性函数 #{s_*^{\mathsf T}x}；这等价于 #{s_*\ge 0} 且 #{x_*^{\mathsf T}s_*=0}。反过来，这些条件直接给出两个不等式。}

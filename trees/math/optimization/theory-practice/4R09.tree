@@ -1,0 +1,10 @@
+\title{强凸梯度下降的线性收敛}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.15)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为 [#{\mu} 强凸](4R08)、[#{L} 光滑](4R03)函数，其中 #{0<\mu\le L}。记唯一极小点为 #{x_*}，并令 #{\kappa=L/\mu}。步长 #{1/L} 的[梯度下降](4R04)满足}
+##{f(x_k)-f(x_*)\le(1-\mu /L)^k\bigl(f(x_0)-f(x_*)\bigr).}
+\p{\strong{证明。}强凸性给出 #{\|\nabla f(x_k)\|^2\ge 2\mu(f(x_k)-f(x_*))}。代入单步下降估计，得到函数值误差每步至多乘 #{1-\mu /L}；归纳即得结论。}
+\p{当 #{\mu<L} 且初始误差大于 #{\varepsilon>0} 时，由 #{1-u\le e^{-u}}，取 #{k\ge\kappa\log((f(x_0)-f(x_*))/\varepsilon)} 即可将误差降到 #{\varepsilon}。当 #{\mu=L} 时，一步已到达最优值。这里的线性收敛指误差按几何数列衰减。}

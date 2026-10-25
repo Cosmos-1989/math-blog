@@ -1,0 +1,10 @@
+\title{线性规划的最优解存在与强对偶}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§2.2；由有限生成锥分离补出证明}
+
+\p{若[标准形线性规划](4R0A)有可行点且目标有有限下确界 #{p}，则原问题与[对偶问题](4R0B)都有最优解，最优值均为 #{p}。}
+\p{\strong{原问题取得最优值。}集合 #{K=\{(Ax,c^{\mathsf T}x+r):x\ge 0,r\ge 0\}} 是有限生成锥，由 [Farkas 引理证明中的闭性](4R0C)可知它闭。取可行序列 #{x_j} 使 #{c^{\mathsf T}x_j\to p}，得到 #{(b,p)\in K}。因此存在 #{x_*,r\ge 0}，满足 #{Ax_*=b,c^{\mathsf T}x_*+r=p}。下确界定义迫使 #{r=0,c^{\mathsf T}x_*=p}。}
+\p{\strong{构造对偶解。}令 #{I=\{i:(x_*)_i=0\}}。考虑有限生成锥 #{C=\operatorname{im}A^{\mathsf T}+\operatorname{cone}\{e_i:i\in I\}}；像空间可由 #{A^{\mathsf T}} 的各列及其相反向量非负生成。若 #{c\notin C}，Farkas 分离给出 #{d}，使 #{c^{\mathsf T}d<0}，同时 #{Ad=0}、#{d_i\ge 0} 对所有 #{i\in I} 成立。}
+\p{对不在 #{I} 中的有限多个坐标，#{(x_*)_i>0}，故充分小的 #{t>0} 使 #{x_*+td\ge 0}。它仍可行且目标严格变小，与最优性矛盾。故 #{c=A^{\mathsf T}y+s}，其中 #{s_i\ge 0} 在 #{I} 上成立，#{s_i=0} 在其补集上成立。于是 #{x_*^{\mathsf T}s=0}，由互补松弛得到 #{b^{\mathsf T}y=c^{\mathsf T}x_*=p}。}

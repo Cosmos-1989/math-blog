@@ -1,0 +1,10 @@
+\title{Euclidean 空间中实函数的梯度}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§2.1 所用的微分记号}
+
+\p{设 #{U\subseteq\mathbb R^n} 为开集，实函数 #{f:U\to\mathbb R} 在 #{x} [可微](0A33)。梯度是满足 #{Df_x(v)=\langle\nabla f(x),v\rangle} 的唯一向量，其中 #{\langle u,v\rangle=\sum_i u_iv_i} 为[标准内积](004N)。取标准坐标向量可知}
+##{\nabla f(x)=(\partial_1 f(x),\ldots,\partial_n f(x))^{\mathsf T}.}
+\p{由[链式法则](0A34)，沿方向 #{v} 的变化率是 #{\left.\frac{d}{dt}f(x+tv)\right|_{t=0}=\langle\nabla f(x),v\rangle}。当梯度非零时，[Cauchy–Schwarz 不等式](004S)表明单位向量中使这一变化率最小的是 #{v=-\nabla f(x)/\|\nabla f(x)\|}，最小值为 #{-\|\nabla f(x)\|}。}
+\p{称 #{\nabla f(x)=0} 的点为驻点。若 #{x} 是开集内部的局部极小点，则对每个 #{v}，一元函数 #{t\mapsto f(x+tv)} 在零处有极小值，其导数为零，故 #{x} 为驻点。反方向一般不成立，例如 #{f(t)=t^3} 在零处驻定但没有极小值。}

@@ -1,0 +1,12 @@
+\title{满行秩数据的最小范数插值解}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.4、式 (2.1)、定义 3.1；有限维证明}
+
+\p{设 #{X\in\mathbb R^{n\times p}} 的 #{n} 行[线性无关](00D9)，#{y\in\mathbb R^n}。在线性[插值](4P02)条件 #{X\theta=y} 下，唯一的最小 [Euclidean 范数](00M2)解为}
+##{\hat\theta=X^\top(XX^\top)^{-1}y.}
+\p{\strong{证明。}对非零 #{a\in\mathbb R^n}，行无关性给出 #{X^\top a\ne 0}，从而 #{a^\top XX^\top a=\|X^\top a\|^2>0}。因此 #{XX^\top} 可逆，并且上述 #{\hat\theta} 满足插值条件。}
+\p{任一其他插值解可写成 #{\hat\theta+h}，#{Xh=0}。因 #{\hat\theta} 在 #{X} 的行空间 #{\operatorname{im}X^\top} 中，有 #{h^\top\hat\theta=0}，故}
+##{\|\hat\theta+h\|^2=\|\hat\theta\|^2+\|h\|^2.}
+\p{这证明最小性与唯一性。它也是[正规方程](4P04)解中范数最小者。矩阵 #{P=X^\top(XX^\top)^{-1}X} 满足 #{P^\top=P}、#{P^2=P}，像为行空间；故它是该空间的[正交投影](00MS)，而 #{I-P} 投影到 #{\ker X}。}

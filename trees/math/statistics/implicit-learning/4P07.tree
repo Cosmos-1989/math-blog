@@ -1,0 +1,13 @@
+\title{平方损失梯度下降选择离初值最近的插值解}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.4 的满行秩情形；补充显式收敛条件}
+
+\p{设 #{X\in\mathbb R^{n\times p}} 满行秩，#{F(\theta)=\|X\theta -y\|^2/(2n)}。对固定步长 #{0<\eta<2n/\lambda_{\max}(X^\top X)}，从任意 #{\theta_0} 开始的[梯度下降](4R04)收敛到}
+##{\theta_\infty=\hat\theta+(I-P)\theta_0,\qquad \hat\theta=X^\top(XX^\top)^{-1}y,\quad P=X^\top(XX^\top)^{-1}X.}
+\p{其中 #{\hat\theta,P} 来自[最小范数插值公式](4P05)。#{\theta_\infty} 是所有插值解中离 #{\theta_0} 最近者；零初始化时即为 #{\hat\theta}。}
+\p{\strong{证明。}记 #{e_t=\theta_t-\hat\theta}。因 #{X\hat\theta=y}，递推为 #{e_{t+1}=(I-\eta X^\top X/n)e_t}。用[实对称矩阵的正交对角化](0N0B)，每个正特征值 #{\mu} 对应的坐标乘以 #{1-\eta\mu /n}，其绝对值小于一，故趋于零。零特征空间就是 #{\ker X}，其中坐标不变。这也符合[核分量不变性](4P06)，并给出所述极限。}
+\p{任一插值解为 #{\hat\theta+h}，#{h\in\ker X}。正交分解给出}
+##{\|\hat\theta+h-\theta_0\|^2=\|\hat\theta -P\theta_0\|^2+\|h-(I-P)\theta_0\|^2.}
+\p{第二项唯一在 #{h=(I-P)\theta_0} 时为零，故最近解唯一。步长条件保证这里确有收敛；它不是仅由行空间不变性推出的。}

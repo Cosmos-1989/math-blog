@@ -1,0 +1,12 @@
+\title{Lipschitz 梯度的下降引理}
+\date{2026-10-25}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.1)、(5.9)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 可微，#{L>0}。若[梯度](4R01)满足 #{\|\nabla f(y)-\nabla f(x)\|\le L\|y-x\|}，则称 #{f} 为 #{L} 光滑函数。对任意 #{x,s\in\mathbb R^n}，有}
+##{\left|f(x+s)-f(x)-\langle\nabla f(x),s\rangle\right|\le\frac L2\|s\|^2.}
+\p{\strong{证明。}沿线段使用[链式法则](0A34)及[微积分基本定理](0A3C)，得到}
+##{f(x+s)-f(x)-\langle\nabla f(x),s\rangle
+=\int_0^1\langle\nabla f(x+ts)-\nabla f(x),s\rangle\,dt.}
+\p{由 [Cauchy–Schwarz 不等式](004S)，被积函数的绝对值不超过 #{Lt\|s\|^2}。积分即得结论。这个估计以一阶信息给出全局有效的二次上下界。}

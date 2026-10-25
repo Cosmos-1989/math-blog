@@ -1,0 +1,13 @@
+\title{光滑凸函数的 Nesterov 外推迭代}
+\date{2026-10-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.2，式 (5.22)–(5.23)；采用凸情形的标准参数}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} [凸](4R06)且为 [#{L} 光滑函数](4R03)。从 #{x_0} 出发，令 #{t_1=1,y_1=x_0}，对 #{k\ge 1} 定义}
+##{\begin{aligned}
+x_k&=y_k-L^{-1}\nabla f(y_k),\\
+t_{k+1}&=\frac{1+\sqrt{1+4t_k^2}}2,\\
+y_{k+1}&=x_k+\frac{t_k-1}{t_{k+1}}(x_k-x_{k-1}).
+\end{aligned}}
+\p{与[梯度下降](4R04)相比，梯度在外推位置 #{y_k} 计算；外推由前后两个迭代点决定。参数满足 #{t_{k+1}^2-t_{k+1}=t_k^2}，这一恒等式使相邻两步的误差可以放入同一个递减量。具体的 [#{k^{-2}} 误差估计](4R0N)由此得到。}

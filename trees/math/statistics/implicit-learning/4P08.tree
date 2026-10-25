@@ -1,0 +1,9 @@
+\title{哪些回归损失保留最小范数隐式偏置}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.11；改用有限维左逆证明}
+
+\p{设 #{X\in\mathbb R^{n\times p}} 满行秩。对每个标签 #{y}，可微损失 #{\ell_y} 满足如下序列条件：对任意实数列 #{a_t}，若 #{\ell_y'(a_t)\to 0}，则 #{a_t\to y}。令 #{F(\theta)=n^{-1}\sum_i\ell_{y_i}(x_i^\top\theta)}。从零初始化、固定步长 #{\eta>0} 的[梯度下降](4R04)若收敛，则极限等于[最小范数插值解](4P05)。}
+\p{\strong{证明。}记 #{g_{t,i}=\ell_{y_i}'(x_i^\top\theta_t)}，递推给出 #{X^\top g_t=n(\theta_t-\theta_{t+1})/\eta\to 0}。左乘 #{(XX^\top)^{-1}X} 得 #{g_t\to 0}。损失条件逐坐标推出 #{x_i^\top\theta_t\to y_i}，故极限满足 #{X\theta_\infty=y}。}
+\p{由[行空间不变性](4P06)，#{\theta_\infty\in\operatorname{im}X^\top}。最小范数公式的唯一性遂给出结论。这个论证不需要对损失导数假设连续性，但确实使用固定非零步长和迭代点收敛。平方损失 #{\ell_y(a)=(a-y)^2/2} 满足条件，因为 #{\ell_y'(a)=a-y}；[可分分类中的逻辑损失](4P0D)不满足这一条件。}

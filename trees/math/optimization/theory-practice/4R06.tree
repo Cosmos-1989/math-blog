@@ -1,0 +1,11 @@
+\title{可微凸函数的一阶刻画}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.3)}
+
+\p{可微函数 #{f:\mathbb R^n\to\mathbb R} 为[凸函数](0R06)，当且仅当对任意 #{x,y} 都有}
+##{f(y)\ge f(x)+\langle\nabla f(x),y-x\rangle.}
+\p{\strong{证明。}由凸性，#{f(x+t(y-x))-f(x)\le t(f(y)-f(x))}。除以 #{t>0} 并令 #{t\downarrow 0}，利用[全微分](0A33)与[梯度](4R01)的定义便得不等式。}
+\p{反之，给定 #{0<t<1}，令 #{z=(1-t)x+ty}。在 #{z} 处分别对 #{x,y} 应用该不等式，以 #{1-t,t} 加权相加，梯度项抵消，得到 #{f(z)\le(1-t)f(x)+tf(y)}。}
+\p{特别地，凸函数的驻点就是全局极小点。由此，凸性把一个局部可检验的微分条件变成全局最优性条件。}

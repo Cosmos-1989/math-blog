@@ -1,0 +1,12 @@
+\title{线性规划的对数障碍与中心路径}
+\date{2026-10-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§4.2，式 (4.5)}
+
+\p{设[标准形线性规划](4R0A)的 #{A} 行满秩，并且原、对偶问题各有严格可行点，即存在 #{x^0>0} 满足 #{Ax^0=b}，存在 #{s^0>0,y^0} 满足 #{A^{\mathsf T}y^0+s^0=c}。对 #{\mu>0}，考虑障碍函数}
+##{\phi_\mu(x)=c^{\mathsf T}x-\mu\sum_{i=1}^n\log x_i,\qquad Ax=b,\ x>0.}
+\p{由于 #{c^{\mathsf T}x=b^{\mathsf T}y^0+(s^0)^{\mathsf T}x}，当 #{\|x\|\to\infty} 时正的线性项压过对数项；在有界集合内趋近 #{x_i=0} 的边界时，障碍趋于正无穷。因此非空下水平集远离边界且有界，由[极值定理](0A3A)取得极小值。其 [Hessian](4R02) 为正定对角矩阵 #{\mu\operatorname{diag}(x_i^{-2})}，故沿任意非平凡线段严格凸，极小点唯一。}
+\p{在可行仿射空间上极小等价于 #{c-\mu(x_i^{-1})_i} 与 #{\ker A} 正交，因而属于 #{\operatorname{im}A^{\mathsf T}}。这由[正交补](00MR)和行满秩的维数公式得到。令 #{s_i=\mu /x_i}，得到中心路径方程}
+##{Ax=b,\qquad A^{\mathsf T}y+s=c,\qquad x_is_i=\mu,\qquad x,s>0.}
+\p{#{x} 的唯一性决定 #{s}，行满秩又决定 #{y}。由[弱对偶](4R0B)，路径上的原、对偶目标差恒为 #{n\mu}，所以 #{\mu\downarrow 0} 给出任意精度的最优值逼近。}

@@ -59,7 +59,9 @@ try {
       const title = snapshots.notes.find(note => note.id === report.outline).title;
       await page.locator('.search-trigger:not([disabled])').click();
       await page.keyboard.type(title);
-      const result = page.locator('ninja-action').filter({hasText: title}).first();
+      // A bibliography entry can contain the complete topic title too.
+      const result = page.locator('ninja-action').filter({hasText: title})
+        .filter({hasText: `[${report.outline}]`});
       await result.waitFor({state: 'visible'});
       await result.click();
       await page.waitForURL(`${base}${report.outline}/`);

@@ -1,0 +1,11 @@
+\title{共轭方向法的有限步终止}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.2 共轭梯度法的代数基础}
+
+\p{设 #{H} 为实对称[正定矩阵](0N0A)，#{f(x)=\tfrac 12x^{\mathsf T}Hx+g^{\mathsf T}x}。若非零方向 #{p_0,\ldots,p_{n-1}} 两两满足 #{p_i^{\mathsf T}Hp_j=0}，称它们关于 #{H} 共轭。从任意 #{x_0} 出发，令}
+##{\alpha_k=-\frac{p_k^{\mathsf T}(Hx_k+g)}{p_k^{\mathsf T}Hp_k},\qquad x_{k+1}=x_k+\alpha_kp_k.}
+\p{则 #{x_k} 在 #{x_0+\operatorname{span}\{p_0,\ldots,p_{k-1}\}} 上极小化 #{f}，并且 #{x_n=-H^{-1}g}。}
+\p{\strong{证明。}令 #{r_k=Hx_k+g}。步长公式使 #{p_k^{\mathsf T}r_{k+1}=0}。若 #{j<k}，则 #{p_j^{\mathsf T}r_{k+1}=p_j^{\mathsf T}r_k+\alpha_kp_j^{\mathsf T}Hp_k=p_j^{\mathsf T}r_k}。归纳得到 #{r_k} 正交于全部已用方向。对其张成空间内任意 #{v}，有 #{f(x_k+v)-f(x_k)=\tfrac 12v^{\mathsf T}Hv\ge 0}。}
+\p{共轭的非零方向[线性无关](00D9)，因为将线性关系与 #{Hp_j} 内积就能逐项消去系数。故 #{n} 步后它们张成全空间，#{r_n=0}。实际共轭梯度法利用残差递推生成这些方向；这里的有限步结论按精确算术理解。}

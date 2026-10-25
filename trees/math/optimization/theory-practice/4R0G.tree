@@ -1,0 +1,13 @@
+\title{原始对偶 Newton 方程的唯一可解性}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (4.6)–(4.9)}
+
+\p{设 #{A\in\mathbb R^{m\times n}} 行满秩，#{X=\operatorname{diag}(x_i)}、#{S=\operatorname{diag}(s_i)} 的对角元全正。在[原、对偶严格可行点](4R0F)处，不要求各坐标乘积 #{x_is_i} 相等。给定右端 #{r\in\mathbb R^n}，线性系统}
+##{A\Delta x=0,\qquad A^{\mathsf T}\Delta y+\Delta s=0,\qquad S\Delta x+X\Delta s=r}
+\p{有唯一解。这是将乘积 #{x_is_i} 线性化所得的 Newton 方程。}
+\p{\strong{证明。}代入 #{\Delta s=-A^{\mathsf T}\Delta y} 与 #{\Delta x=S^{-1}r+S^{-1}XA^{\mathsf T}\Delta y}，得到}
+##{(AXS^{-1}A^{\mathsf T})\Delta y=-AS^{-1}r.}
+\p{若 #{v\ne 0}，行满秩保证 #{A^{\mathsf T}v\ne 0}，故 #{v^{\mathsf T}AXS^{-1}A^{\mathsf T}v=\sum_i(x_i/s_i)(A^{\mathsf T}v)_i^2>0}。由[正定性](0N0A)，此矩阵可逆；依次求出三个未知量即得唯一解。}
+\p{此外 #{\Delta x^{\mathsf T}\Delta s=-(A\Delta x)^{\mathsf T}\Delta y=0}。这个正交恒等式使[路径跟踪中的对偶间隙](4R0H)可以精确计算。}

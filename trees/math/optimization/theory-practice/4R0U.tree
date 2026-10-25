@@ -1,0 +1,12 @@
+\title{BFGS 逆更新保持正定性与割线条件}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.29)}
+
+\p{给定实对称[正定矩阵](0N0A) #{H} 与向量 #{s,y}，假设 #{s^{\mathsf T}y>0}，记 #{\rho=(s^{\mathsf T}y)^{-1}}。BFGS 逆更新为}
+##{H^+=(I-\rho sy^{\mathsf T})H(I-\rho ys^{\mathsf T})+\rho ss^{\mathsf T}.}
+\p{它仍对称正定，并满足割线条件 #{H^+y=s}。在优化中取 #{s=x_{k+1}-x_k}、#{y=\nabla f(x_{k+1})-\nabla f(x_k)}，#{H} 用来近似 [Hessian](4R02) 的逆。}
+\p{\strong{证明。}因 #{(I-\rho ys^{\mathsf T})y=0}，直接得到 #{H^+y=\rho s(s^{\mathsf T}y)=s}。对非零 #{v}，令 #{w=(I-\rho ys^{\mathsf T})v}，则}
+##{v^{\mathsf T}H^+v=w^{\mathsf T}Hw+\rho(s^{\mathsf T}v)^2.}
+\p{若右侧为零，先有 #{s^{\mathsf T}v=0}，从而 #{w=v}；再由 #{H} 正定得到 #{v=0}，矛盾。故更新正定。这个代数性质解释了其下降方向的来源；收敛结论还依赖步长选择及函数的正则性。}

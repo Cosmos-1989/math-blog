@@ -1,0 +1,12 @@
+\title{单物品第一价格拍卖}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Smoothness of auction games}
+
+\p{有 #{n} 位竞买者，每人对一件物品的固定估值为 #{v_i\ge 0}。为得到[有限博弈](4Q01)，令出价集 #{B_i} 是 #{[0,v_i]} 的非空有限子集，包含零；出价最高者获胜，同价时按预先固定的玩家顺序决定胜者。胜者支付自己的出价，其他人不支付。}
+\p{记 #{x_i(b)\in\{0,1\}} 为玩家 #{i} 是否获胜。效用、卖方收入和社会福利分别为}
+##{u_i(b)=(v_i-b_i)x_i(b),\qquad
+\operatorname{Rev}(b)=\sum_i b_ix_i(b),\qquad
+W(b)=\sum_i u_i(b)+\operatorname{Rev}(b)=\sum_i v_ix_i(b).}
+\p{这种“价值减支付”的效用称为准线性效用。收入在社会福利中与玩家支付相抵消，所以福利等于获胜者的估值，最优可实现分配的福利为 #{W^*=\max_i v_i}。限制 #{b_i\le v_i} 保证效用非负；若讨论其他出价空间，需重新核查相应假设。}

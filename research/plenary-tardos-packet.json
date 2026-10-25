@@ -1,0 +1,579 @@
+{
+  "report": {
+    "speaker": "Éva Tardos",
+    "title": "Learning and the Price of Anarchy in Games",
+    "outline": "4Q00",
+    "prefix": "4Q",
+    "reference": "icm2026-tardos",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+    "doi": "10.1137/25M1808064",
+    "pages": "302–312",
+    "license": "CC BY 4.0; © 2026 International Mathematical Union, published by SIAM. Chinese adaptation with attribution and explicit local elaborations; no source figures reproduced.",
+    "question": "个体使用无遗憾学习时，社会成本为何仍可由最优成本控制；行动改变未来状态后，效率与队列稳定性还需要哪些额外条件？",
+    "reading_scope": "2026-10-25：阅读 SIAM 正式 HTML 的全部数学正文，从 Introduction、式(1)–(7)、Theorems 1–9 到 Repeated auctions with budgets；核对 Figure 1–2 的文字说明，未读取图像像素或 PDF 分页。核对页首302–312页、DOI、Copyright CC BY4.0、2026-07-13出版日期与相关参考文献。补读 arXiv:2502.08898v1 §§1–3 后改以 v2（2025-07-19）为规范补充来源，重读其作者/许可、§2全部模型与§3至 Theorem 1 证明结束；未把实验部分或下界证明列为整段审读。根树全局题名/术语搜索未找到有限博弈、Nash、CCE、外部遗憾或算法乘法权重的已有规范定义；实际阅读并复用 reviewed_reused_ids 的概率、微积分及箭图条目。4P/Bartlett、4R/Wright 和共享凸分析未编辑。",
+    "proof_scope": {
+      "4Q01": {
+        "status": "definition",
+        "scope": "有限玩家、有限非空行动集、成本、单边偏离和效用转成本；无均衡存在性断言。"
+      },
+      "4Q02": {
+        "status": "definition",
+        "scope": "有限概率分布与乘积分布复用既有概率、独立性、期望；不新增通用概率定义。"
+      },
+      "4Q03": {
+        "status": "definition-and-local-proof",
+        "scope": "纳什均衡定义；对纯偏离条件加权证明它等价于允许混合偏离。未证明 Nash 存在性。"
+      },
+      "4Q04": {
+        "status": "definition",
+        "scope": "CCE 与玩家分量误差版本；明确事先固定偏离与看推荐后偏离的差别。"
+      },
+      "4Q05": {
+        "status": "local-proof",
+        "scope": "逐个固定行动核算石头剪刀布六项分布，证明 CCE 且非乘积；不声称具体学习算法必收敛于它。"
+      },
+      "4Q06": {
+        "status": "definition",
+        "scope": "实际与混合损失的外部遗憾、正部归一化定义无遗憾；有界成本归一化。"
+      },
+      "4Q07": {
+        "status": "construction",
+        "scope": "全信息指数更新、正权重、展开式及与 bandit 反馈的差别。"
+      },
+      "4Q08": {
+        "status": "local-proof",
+        "scope": "利用已有微积分与指数/对数定义，在证明内推导两个标量不等式，再比较总权重上下界；所有 eta>0 有效；不创建共享凸性条目。"
+      },
+      "4Q09": {
+        "status": "local-proof",
+        "scope": "倍增重启、末期不足计划长度的处理、对同一固定行动比较及等比求和，给出任意终止时间的平方根界。"
+      },
+      "4Q0A": {
+        "status": "local-proof",
+        "scope": "有限/可数历史的条件期望；非预知本轮随机抽样的损失下，对每个固定行动的期望比较。无交换 E 与 min，无高概率或路径保证。"
+      },
+      "4Q0B": {
+        "status": "local-proof",
+        "scope": "频数归组给出确定路径上的近似 CCE；逐坐标收敛子序列的极限满足 CCE；随机版本只对平均经验分布。未证明唯一极限或 Nash 收敛。"
+      },
+      "4Q0C": {
+        "status": "definition",
+        "scope": "非负社会成本、最优组合、均衡类的 PoA；最优成本为零时改用不等式避免除零。"
+      },
+      "4Q0D": {
+        "status": "definition",
+        "scope": "对所有比较组合的标准平滑性，以及只对固定最优组合验证即可用于效率界的较弱假设。"
+      },
+      "4Q0E": {
+        "status": "local-proof",
+        "scope": "相加 CCE 偏离、取期望、使用平滑性并移项；包含零最优成本边界。"
+      },
+      "4Q0F": {
+        "status": "local-proof",
+        "scope": "直接时间求和得到显式平均遗憾项，不借策略收敛；期望版本条件明确。"
+      },
+      "4Q0G": {
+        "status": "definition",
+        "scope": "有限可用简单路径、需求、路径流与边流、连续非负非减延迟、Wardrop 条件和社会成本；图路径复用 0190。"
+      },
+      "4Q0H": {
+        "status": "local-proof",
+        "scope": "最短路加权推出变分不等式；在较慢正流路径上挪动少量流量证明逆命题。"
+      },
+      "4Q0I": {
+        "status": "local-proof",
+        "scope": "平方非负给出逐边仿射延迟不等式，代入 Wardrop 比较并移项，得到对每个可行比较流的 4/3 界。"
+      },
+      "4Q0J": {
+        "status": "local-proof",
+        "scope": "原文 Figure 1 的三路径流全部写明，证明增加边前后的唯一均衡及最优成本分解；未复用原图。"
+      },
+      "4Q0K": {
+        "status": "local-proof",
+        "scope": "单调延迟逐边分两种情形；两倍需求流除二后使用 Wardrop 比较，证明容量余量结果。"
+      },
+      "4Q0L": {
+        "status": "definition",
+        "scope": "有限出价、固定估值、禁止过度出价、固定同价规则、准线性效用、收入与配置福利。"
+      },
+      "4Q0M": {
+        "status": "local-proof",
+        "scope": "效用型 CCE 求和并抵消收入；附同一证明的有限时间遗憾形式。"
+      },
+      "4Q0N": {
+        "status": "local-proof",
+        "scope": "出价集含半估值时，获胜/未获胜分情况，包含同价未胜的非严格不等式，再给出 1/2 福利下界。"
+      },
+      "4Q0O": {
+        "status": "definition-and-scope-comparison",
+        "scope": "状态、转移、历史策略及实际状态固定比较和重新运行比较；不导入强化学习定理。"
+      },
+      "4Q0P": {
+        "status": "local-proof",
+        "scope": "自行构造两状态例，逐轮算出零外部遗憾与线性政策差距；未归因于原文的具体反例。"
+      },
+      "4Q0Q": {
+        "status": "definition",
+        "scope": "依据 v2 §2 固定到达、接纳、服务次序；缓冲位于服务器；奖励为接纳而非处理；独立性和守恒递推显式。"
+      },
+      "4Q0R": {
+        "status": "definition-and-local-proof",
+        "scope": "稳定性为时间一致的总包数期望界；守恒式只证明总到达率严格大于总服务率必不稳定，不错误推断临界点。"
+      },
+      "4Q0S": {
+        "status": "local-proof-of-simple-model",
+        "scope": "直接服务、无单独服务器缓冲的 Bernoulli 单队列；指数矩递推、零边界修正项、几何求和及具体数值全部推导。与竞争网络严格分开。"
+      },
+      "4Q0T": {
+        "status": "cited-research-result-with-scope-note",
+        "scope": "在 v2 §3 Theorem 1 的容量条件上，显式补强对每个块起点历史统一的条件高概率遗憾假设，并设初始队列/缓冲为空。引用 Lemmas 2–3 的分块下降及 Pemantle–Rosenthal 矩定理；本地写明 c_delta、失败概率 q 和 (-(1-q)c_delta+qn)T 的条件漂移计算。不是仅凭无条件高概率或前缀遗憾推出稳定性。"
+      },
+      "4Q0U": {
+        "status": "definition",
+        "scope": "预算状态和跨轮可加估值下液态福利；只给截断例及原报告的定性研究方向，不引入预算学习效率定理。"
+      },
+      "4Q00": {
+        "status": "narrative-survey",
+        "scope": "九段综述覆盖全部30个原子条目；明确动态网络结论为引用输入。"
+      },
+      "icm2026-tardos": {
+        "status": "bibliographic-reference",
+        "scope": "正式章节元数据与 CC BY 4.0 署名；固定 v2 队列论文作者、日期及许可；其他研究出处仅沿章节参考文献列出，未声称读过其全文。"
+      }
+    },
+    "claim_sources": {
+      "4Q01": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Introduction，式(1)前"
+        }
+      ],
+      "4Q02": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Introduction，式(1)"
+        }
+      ],
+      "4Q03": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Introduction，式(1)"
+        }
+      ],
+      "4Q04": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Course correlated equilibria，式(1)"
+        }
+      ],
+      "4Q05": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Course correlated equilibria 中石头剪刀布例"
+        }
+      ],
+      "4Q06": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "No-regret learning，式(2)"
+        }
+      ],
+      "4Q07": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "No-regret learning；有限行动算法的展开；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q08": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "No-regret learning；乘法权重的初等推导；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q09": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "No-regret learning；局部有限时间界的推论；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q0A": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "No-regret learning；随机实施的局部说明；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q0B": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Course correlated equilibria；式(2)的直接推论"
+        }
+      ],
+      "4Q0C": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "The price of anarchy"
+        }
+      ],
+      "4Q0D": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Smooth games，式(3)"
+        }
+      ],
+      "4Q0E": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Theorem 1 及证明"
+        }
+      ],
+      "4Q0F": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Theorem 1 的有限时间形式"
+        }
+      ],
+      "4Q0G": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Smoothness of routing games"
+        }
+      ],
+      "4Q0H": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Smoothness of routing games，Theorem 4 证明中的最短路比较"
+        }
+      ],
+      "4Q0I": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Smoothness of routing games；仿射情形的局部推导；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q0J": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Introduction，Figure 1"
+        }
+      ],
+      "4Q0K": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Lemma 3、Theorem 4"
+        }
+      ],
+      "4Q0L": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Smoothness of auction games"
+        }
+      ],
+      "4Q0M": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "式(6)、Theorem 5"
+        }
+      ],
+      "4Q0N": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Lemma 6 及其后推论；同价情形作非严格比较"
+        }
+      ],
+      "4Q0O": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Learning outcomes in dynamic games"
+        }
+      ],
+      "4Q0P": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Learning outcomes in dynamic games；自行构造的两状态例；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q0Q": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Packet routing as a dynamic game；Abel 等 v2，§2"
+        },
+        {
+          "url": "https://arxiv.org/html/2502.08898v2",
+          "location": "§2 Model, steps 1–3 and feedback footnote"
+        }
+      ],
+      "4Q0R": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Theorem 8；Abel 等 v2，§2 Definition 1"
+        },
+        {
+          "url": "https://arxiv.org/html/2502.08898v2",
+          "location": "§2 Definition 1 and conservation argument"
+        }
+      ],
+      "4Q0S": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "动态队列的自行推导例；区别于单包缓冲网络；该页具体构造/推导为本地数学展开，章节不含此处逐步证明。"
+        }
+      ],
+      "4Q0T": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Theorem 8；Abel 等 v2，§3 Theorem 1、Conditions 1–3、Lemmas 2–5"
+        },
+        {
+          "url": "https://arxiv.org/html/2502.08898v2",
+          "location": "§3 Theorem 1; Conditions 1–3; Lemmas 2–5; potential preceding Condition 1; deep proof cited, not reconstructed"
+        }
+      ],
+      "4Q0U": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "Repeated auctions with budgets"
+        }
+      ],
+      "4Q00": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "全文正文 Introduction 至 Repeated auctions with budgets；九段中文改编"
+        }
+      ],
+      "icm2026-tardos": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+          "location": "页首、Information & Authors、Copyright、History、References [2], [33], [39]"
+        },
+        {
+          "url": "https://arxiv.org/html/2502.08898v2",
+          "location": "作者栏、版本日期、License、§§2–3"
+        }
+      ]
+    },
+    "remaining_branches": [
+      {
+        "branch": "均衡存在性与更强遗憾",
+        "scope": "Nash 存在性、不动点与复杂性、内部/交换遗憾和相关均衡未展开；当前主线不调用 Nash 存在性。"
+      },
+      {
+        "branch": "贝叶斯和复杂拍卖",
+        "scope": "原章节 Theorem 7 的私有估值/独立类型推广、随机偏离的 1-1/e 福利比例、组合拍卖及动态参与者未分拆成证明条目。"
+      },
+      {
+        "branch": "预算动态效率",
+        "scope": "液态福利已定义；第二价格反例、特定学习算法保证及第一价格 2.41 界只保留为研究方向，未引为本地定理。"
+      },
+      {
+        "branch": "队列精确阈值与反馈算法",
+        "scope": "三倍容量是否最优、一般网络/无缓冲模型、bandit 算法高概率与分块重启细节未重建。"
+      }
+    ],
+    "unexpanded_deep_proofs": [
+      {
+        "notes": [
+          "4Q0T"
+        ],
+        "url": "https://arxiv.org/html/2502.08898v2",
+        "scope": "§3 Theorem 1 的竞争网络分块下降引理、服务/到达集中估计和随机过程矩定理采用原文。页面显式加入比 Lemma 5 字面形式更强的、对任意块起点历史统一的条件概率假设，并修正好事件贡献必须乘 1-q 的漂移估计。没有从无条件高概率界或普通前缀无遗憾推导该假设。"
+      },
+      {
+        "notes": [
+          "4Q0T"
+        ],
+        "url": "https://doi.org/10.1016/S0304-4149(99)00012-5",
+        "scope": "Pemantle–Rosenthal 矩定理只按 Tardos Theorem 9 及 Abel 等 Theorem 2 识别为深输入，未直接阅读原论文，未自行声明其省略初值条件的完整定理。"
+      }
+    ],
+    "subject_ids": [
+      "006E",
+      "0070",
+      "0072"
+    ]
+  },
+  "prerequisites": {
+    "4Q00": [],
+    "icm2026-tardos": [],
+    "4Q01": [],
+    "4Q02": [
+      "4Q01",
+      "00Q3",
+      "00L3",
+      "00L1"
+    ],
+    "4Q03": [
+      "4Q01",
+      "4Q02"
+    ],
+    "4Q04": [
+      "4Q01",
+      "4Q02",
+      "4Q03"
+    ],
+    "4Q05": [
+      "4Q01",
+      "4Q02",
+      "4Q04",
+      "4Q03"
+    ],
+    "4Q06": [
+      "4Q01",
+      "4Q02"
+    ],
+    "4Q07": [
+      "4Q02",
+      "0A46",
+      "4Q06"
+    ],
+    "4Q08": [
+      "4Q07",
+      "0A35",
+      "0A45"
+    ],
+    "4Q09": [
+      "4Q07",
+      "4Q06",
+      "4Q08"
+    ],
+    "4Q0A": [
+      "4Q02",
+      "0A00",
+      "0A01",
+      "4Q09"
+    ],
+    "4Q0B": [
+      "4Q01",
+      "4Q02",
+      "4Q06",
+      "4Q04",
+      "4Q0A"
+    ],
+    "4Q0C": [
+      "4Q01",
+      "4Q02",
+      "4Q03",
+      "4Q04"
+    ],
+    "4Q0D": [
+      "4Q01",
+      "4Q0C"
+    ],
+    "4Q0E": [
+      "4Q01",
+      "4Q0D",
+      "4Q04",
+      "00L1",
+      "4Q0C"
+    ],
+    "4Q0F": [
+      "4Q0D",
+      "4Q06",
+      "4Q0A"
+    ],
+    "4Q0G": [
+      "0190"
+    ],
+    "4Q0H": [
+      "4Q0G"
+    ],
+    "4Q0I": [
+      "4Q0G",
+      "4Q0H"
+    ],
+    "4Q0J": [
+      "4Q0G",
+      "4Q0I"
+    ],
+    "4Q0K": [
+      "4Q0G",
+      "4Q0H"
+    ],
+    "4Q0L": [
+      "4Q01"
+    ],
+    "4Q0M": [
+      "4Q0L",
+      "4Q04"
+    ],
+    "4Q0N": [
+      "4Q0L",
+      "4Q04",
+      "4Q0M"
+    ],
+    "4Q0O": [
+      "4Q06"
+    ],
+    "4Q0P": [
+      "4Q0O",
+      "4Q06"
+    ],
+    "4Q0Q": [
+      "00L3",
+      "4Q07",
+      "4Q0O"
+    ],
+    "4Q0R": [
+      "4Q0Q",
+      "00L1"
+    ],
+    "4Q0S": [
+      "00L3",
+      "00L0",
+      "4Q0R",
+      "0A46",
+      "0A31",
+      "0A01",
+      "0A35"
+    ],
+    "4Q0T": [
+      "4Q0Q",
+      "4Q0R",
+      "4Q06",
+      "0A01"
+    ],
+    "4Q0U": [
+      "4Q0L",
+      "4Q0O"
+    ]
+  },
+  "reviewed_reused_ids": [
+    "00Q3",
+    "00L0",
+    "00L1",
+    "00L3",
+    "0A00",
+    "0A01",
+    "0A31",
+    "0A35",
+    "0A45",
+    "0A46",
+    "0190"
+  ],
+  "source_errata": [
+    {
+      "id": "history-conditional-queue-regret",
+      "source_url": "https://arxiv.org/html/2502.08898v2",
+      "location": "Lemma 5 and proof of Theorem 1 using Theorem 2",
+      "finding": "4Q0T 明确采用对每个时间块起点历史统一的条件高概率低遗憾假设，强于 Lemma 5 字面的无条件表述。该加强条件和空初态给出条件漂移；失败概率 q 必须满足 q<c_delta/(n+c_delta)，好事件概率因子 1-q 不能省略。"
+    }
+  ],
+  "source_readings": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1808064",
+      "scope": "正文全部；式(1)–(7)、Theorems 1–9、Figures 1–2 captions、预算末段；页面元数据/许可与相关参考文献。未做PDF逐页或图像像素检查。改编时把原文 course 更正为 coarse；拍卖同价未胜使用非严格比较。队列草图末段的截断量缺少 T，且省略遗憾、集中事件误差；Theorem 9 的初始条件/常数表述亦未独立核定。因此不转录这些草图为完整证明，以 v2 的模型和含误差势函数定位引用结果。Lemma 6 后的 1-1/e 按福利比例理解，未作为小于一的 PoA 引入。"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.08898v1",
+      "scope": "§§1–3至Theorem 1证明及Remark 1附近用于版本比对；v1的lambda_i^2截断未作为规范版本。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.08898v1",
+      "scope": "版本记录确认存在2025-07-19的v2，随后以v2为主要补充来源。"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.08898v2",
+      "scope": "作者、日期、CC BY4.0、§1相关模型解释、§2模型及Definition1、§3 Theorem1至证明结束，包括Conditions1–3、Lemmas2–5；v2使用(lambda_i/2+2delta)T截断。未宣称独立验证该研究证明的全部概率/自适应细节。"
+    }
+  ]
+}

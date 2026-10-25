@@ -1,0 +1,10 @@
+\title{队列稳定性与总包数守恒}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Theorem 8；Abel 等 v2，§2 Definition 1}
+
+\p{对[单包缓冲队列模型](4Q0Q)，总包数为 #{L_t=\sum_iN_i(t)+\sum_jH_j(t)}。固定有限初态及调度或学习规则，若存在有限常数 #{M}，使所有 #{t\ge 0} 都有 #{\mathbb E L_t\le M}，则称系统在期望意义下稳定。常数可依赖初态、系统大小、到达率、服务率和规则，但不能随时间增长。这里的[期望](00L1)同时包括到达、服务和学习的随机性。}
+\p{把队列与缓冲的递推相加，内部转移项恰好抵消，得到 #{L_{t+1}-L_t=\sum_iA_i(t)-\sum_jD_j(t)}。每个服务器每轮的成功处理概率至多为 #{\mu_j}，故}
+##{\mathbb E L_T\ge L_0+T\left(\sum_i\lambda_i-\sum_j\mu_j\right).}
+\p{因此 #{\sum_i\lambda_i>\sum_j\mu_j} 时，任何规则都不稳定。这个论证在两边相等时只给出非负下界，不能排除或保证稳定；总到达率小于总服务率也不能单凭此式推出稳定。}

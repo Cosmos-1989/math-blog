@@ -1,0 +1,11 @@
+\title{非负正交象限的自协调对数障碍}
+\date{2026-10-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§4.2、§5.4}
+
+\p{定义在开凸域上的 #{C^3} [凸函数](0R06) #{\phi} 称为自协调函数，如果任意位置 #{x} 与方向 #{h} 都满足}
+##{|D^3\phi(x)[h,h,h]|\le 2\bigl(D^2\phi(x)[h,h]\bigr)^{3/2}.}
+\p{这里 #{D^j\phi(x)[h,\ldots,h]} 是一元函数 #{t\mapsto\phi(x+th)} 在零点的第 #{j} 阶导数。若函数趋近域的边界时发散到正无穷，并且 #{|D\phi(x)[h]|\le\sqrt\nu\sqrt{D^2\phi(x)[h,h]}}，则称为参数 #{\nu} 的自协调障碍。}
+\p{在 #{x_i>0} 的正交象限上，#{\phi(x)=-\sum_{i=1}^n\log x_i} 是参数 #{n} 的自协调障碍。令 #{a_i=h_i/x_i}，直接微分得 #{D\phi[h]=-\sum_i a_i}，#{D^2\phi[h,h]=\sum_i a_i^2}，#{D^3\phi[h,h,h]=-2\sum_i a_i^3}。}
+\p{\strong{验证。}由 #{|a_i|\le(\sum_j a_j^2)^{1/2}}，有 #{|\sum_i a_i^3|\le(\sum_i a_i^2)^{3/2}}；由 [Schwarz 不等式](004S)，有 #{|\sum_i a_i|\le\sqrt n(\sum_i a_i^2)^{1/2}}。趋近有限边界点时至少一个坐标趋零，故障碍发散。它正是[线性规划中心路径](4R0F)中的障碍项。}

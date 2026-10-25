@@ -1,0 +1,14 @@
+\title{光滑凸函数的梯度下降误差界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.14) 及其推导}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} [凸](4R06)且为 [#{L} 光滑函数](4R03)，并有极小点 #{x_*}。步长 #{1/L} 的[梯度下降](4R04)满足}
+##{f(x_T)-f(x_*)\le\frac{L\|x_0-x_*\|^2}{2T}\qquad(T\ge 1).}
+\p{\strong{证明。}记 #{g_k=\nabla f(x_k)}。凸性与单步下降量合起来给出}
+##{\begin{aligned}
+f(x_{k+1})-f(x_*)&\le\langle g_k,x_k-x_*\rangle -\frac{\|g_k\|^2}{2L}\\
+&=\frac L2\bigl(\|x_k-x_*\|^2-\|x_{k+1}-x_*\|^2\bigr).
+\end{aligned}}
+\p{求和后右侧抵消为至多 #{L\|x_0-x_*\|^2/2}。函数值逐步不增，所以左侧的 #{T} 项都不小于 #{f(x_T)-f(x_*)}。除以 #{T} 即得结论。}

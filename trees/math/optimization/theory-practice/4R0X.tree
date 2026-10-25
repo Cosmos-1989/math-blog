@@ -1,0 +1,11 @@
+\title{Armijo 回溯的有限终止与步长下界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.1，式 (5.8)–(5.9)}
+
+\p{设 #{f} 为 [#{L} 光滑函数](4R03)，在 #{x} 处记 #{g=\nabla f(x)}。给定 #{0<c<1}、#{0<\beta<1}、初始步长 #{\alpha_0>0}。依次测试 #{\alpha=\alpha_0,\beta\alpha_0,\ldots}，直到}
+##{f(x-\alpha g)\le f(x)-c\alpha\|g\|^2.}
+\p{这个回溯过程有限终止，接受的步长至少为 #{\min\{\alpha_0,2\beta(1-c)/L\}}。}
+\p{\strong{证明。}[梯度下降量](4R04)保证任何 #{\alpha\le 2(1-c)/L} 都满足条件。几何数列最终低于这个正阈值，故测试有限。如果第一步被接受，步长就是 #{\alpha_0}；否则上一候选值 #{\alpha /\beta} 被拒绝，必大于该阈值，从而 #{\alpha>2\beta(1-c)/L}。}
+\p{因此不预先知道 #{L} 也能获得显著下降。回溯可能在同一次外层迭代中计算多次函数值，须与[信息调用次数](4R0L)区别。}

@@ -1,0 +1,12 @@
+\title{高斯线性回归的良性过拟合风险界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett 等](icm2026-bartlett)，Benign overfitting in linear regression，定义 1 与定理 1 的有限维高斯特例；报告 §3 的文献 [4]}
+
+\p{设 #{p>n\ge 1}，#{\Sigma} 为 #{p\times p} 正定矩阵，特征值 #{\lambda_1\ge\cdots\ge\lambda_p>0}。设 #{x\sim N(0,\Sigma)}，即在[正交特征基](0N0B)中坐标为 #{\sqrt{\lambda_j}z_j}，其中 #{z_j} 为独立[标准正态变量](0N0R)。响应满足 #{y=x^\top\theta_*+\varepsilon}，#{\theta_*\in\mathbb R^p} 固定，#{\varepsilon\sim N(0,\sigma^2)}、#{\sigma>0}，且噪声与 #{x} 独立。训练集由 #{n} 个[独立同分布](00L3)的样本对组成。}
+\p{令 #{\hat\theta=X^\top(XX^\top)^{-1}y} 为[最小范数插值解](4P05)，其[超额风险](4P0F)为 #{\mathcal R(\hat\theta)=\|\hat\theta -\theta_*\|_\Sigma^2}。存在绝对常数 #{b,c,c_1>1}，定义[有效截断点](4P0H) #{k_*=\min\{k:r_k(\Sigma)\ge bn\}}，空集时取无穷。}
+\p{若 #{k_*\ge n/c_1}，则 #{\mathbb E\mathcal R(\hat\theta)\ge\sigma^2/c}。若 #{k_*<n/c_1}，则对每个 #{0<\delta\le 1/2} 且 #{\log(1/\delta)<n/c}，以至少 #{1-\delta} 的概率有}
+##{\begin{aligned}\mathcal R(\hat\theta)\le{}&c\|\theta_*\|^2\lambda_1\max\left\{\sqrt{\frac{r_0(\Sigma)}n},\frac{r_0(\Sigma)}n,\sqrt{\frac{\log(1/\delta)}n}\right\}\\&+c\sigma^2\log(1/\delta)\left(\frac{k_*}n+\frac n{R_{k_*}(\Sigma)}\right).\end{aligned}}
+\p{同一情形还有平均风险下界 #{\mathbb E\mathcal R(\hat\theta)\ge(\sigma^2/c)(k_*/n+n/R_{k_*}(\Sigma))}。这里的概率与外层期望均针对全部训练数据；高概率上界和平均下界是不同的量词。}
+\p{这是 Bartlett、Long、Lugosi、Tsigler 定理 1 的引用。高斯设计与独立高斯噪声满足原文定义 1 的中心化、白化坐标独立次高斯、条件噪声方差下界和条件次高斯假设；#{p>n} 保证删去任一预先固定的协方差特征方向后，样本仍以概率一具有行秩 #{n}。此处不使用原定理允许的无穷维或非高斯推广。}

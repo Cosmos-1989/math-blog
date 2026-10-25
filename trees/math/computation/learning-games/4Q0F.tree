@@ -1,0 +1,12 @@
+\title{无遗憾过程的有限时间效率界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Theorem 1 的有限时间形式}
+
+\p{设非负成本博弈对固定最优组合 #{a^*} 满足参数 #{\lambda>0}、#{0\le\mu<1} 的[平滑性](4Q0D)，记总成本 #{C(a)=\sum_i c_i(a)}。重复博弈的成本函数每轮相同，行动组合为 #{a^t}。若玩家 #{i} 截至 #{T} 轮的[外部遗憾](4Q06)不超过 #{r_i(T)\ge 0}，则}
+##{\frac 1T\sum_{t=1}^T C(a^t)
+\le \frac{\lambda}{1-\mu}C(a^*)+
+\frac{\sum_i r_i(T)}{(1-\mu)T}.}
+\p{\strong{证明。}对每位玩家都以 #{a_i^*} 为比较行动，遗憾界相加给出 #{\sum_t C(a^t)\le\sum_t\sum_i c_i(a_i^*,a_{-i}^t)+\sum_i r_i(T)}。逐轮使用平滑性，右侧至多为 #{T\lambda C(a^*)+\mu\sum_t C(a^t)+\sum_i r_i(T)}。移项并除以 #{(1-\mu)T} 即得。}
+\p{只要各玩家的平均遗憾趋于零，平均社会成本就满足同样的渐近界，无须行动或经验分布收敛。若玩家只有[期望比较界](4Q0A)，对各玩家比较式取期望后作同一计算，得到平均社会成本的期望界。}

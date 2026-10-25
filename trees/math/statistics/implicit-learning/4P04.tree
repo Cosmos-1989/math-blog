@@ -1,0 +1,12 @@
+\title{最小二乘解满足正规方程}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§2.2、定义 3.1；有限维证明}
+
+\p{给定[矩阵](00GK) #{X\in\mathbb R^{n\times p}} 与 #{y\in\mathbb R^n}，使用 [Euclidean 范数](00M2)。向量 #{\theta} 最小化 #{\|X\theta -y\|^2} 当且仅当}
+##{X^\top X\theta=X^\top y.}
+\p{\strong{证明。}对任意 #{h\in\mathbb R^p} 展开得}
+##{\|X(\theta+h)-y\|^2-\|X\theta -y\|^2=2h^\top X^\top(X\theta -y)+\|Xh\|^2.}
+\p{正规方程成立时右边非负，故充分。反之，用 #{th} 代替 #{h}；若一次项不为零，选择相反符号且足够小的 #{t} 就会降低目标，故最优点必满足正规方程。}
+\p{解确实存在：#{\operatorname{im}X=\{Xv:v\in\mathbb R^p\}} 为有限维闭子空间，[正交投影定理](00MS)给出 #{y} 在该空间中的最近点，再取其任一原像。若 #{\theta_0} 是一个解，全部解为 #{\theta_0+\ker X}，其中 #{\ker X=\{h:Xh=0\}}；因为两解之差 #{h} 满足 #{0=h^\top X^\top Xh=\|Xh\|^2}。}

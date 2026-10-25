@@ -1,0 +1,15 @@
+\title{三次正则化寻找近似驻点的迭代界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.4；采用比 Hessian 常数更大的正则化系数，给出一阶精度的直接证明}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 有下界 #{f_{\mathrm{low}}}，且 Hessian 满足 [#{M} Lipschitz 条件](4R0Q)。固定 #{\sigma>M}。每步取下列函数的全局极小点 #{s_k}，再令 #{x_{k+1}=x_k+s_k}，}
+##{m_k(s)=f(x_k)+\langle\nabla f(x_k),s\rangle+\tfrac 12s^{\mathsf T}\nabla^2f(x_k)s+\tfrac\sigma 6\|s\|^3.}
+\p{模型的三次项在无穷远压过其余各项，故由[极值定理](0A3A)存在极小点。迭代满足}
+##{\min_{1\le j\le T}\|\nabla f(x_j)\|
+\le\left(\frac{6(f(x_0)-f_{\mathrm{low}})}{(\sigma -M)T}\right)^{2/3}\frac{M+\sigma}{2}.}
+\p{\strong{证明。}模型最优性给出 #{m_k(s_k)\le m_k(0)=f(x_k)}。真实函数与模型的[余项比较](4R0Q)于是给出}
+##{f(x_k)-f(x_{k+1})\ge\frac{\sigma -M}{6}\|s_k\|^3.}
+\p{模型的一阶条件是 #{\nabla f(x_k)+\nabla^2f(x_k)s_k+\frac\sigma 2\|s_k\|s_k=0}。与梯度余项估计合并，有 #{\|\nabla f(x_{k+1})\|\le(M+\sigma)\|s_k\|^2/2}。求和下降量，取最小梯度，再解出其上界，即得结论。}
+\p{因此达到梯度范数不超过 #{\varepsilon} 所需的外层迭代次数为 #{O(\varepsilon^{-3/2})}。这里每步要求全局求解一个三次子问题，其代价另计；这一计数采用[迭代复杂度](4R0L)。}

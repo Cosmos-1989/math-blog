@@ -1,0 +1,10 @@
+\title{梯度下降寻找近似驻点的迭代界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.11)–(5.13)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 的梯度为 #{L} Lipschitz，且 #{f(x)\ge f_{\mathrm{low}}}。从任意 #{x_0} 作步长 #{1/L} 的[梯度下降](4R04)。对每个正整数 #{T}，}
+##{\min_{0\le k<T}\|\nabla f(x_k)\|^2\le\frac{2L(f(x_0)-f_{\mathrm{low}})}{T}.}
+\p{\strong{证明。}将单步下降量相加，中间函数值抵消，得到 #{\sum_{k=0}^{T-1}\|\nabla f(x_k)\|^2\le 2L(f(x_0)-f(x_T))}。以最小项不超过平均值，再用下界假设，即得结论。}
+\p{要得到 #{\|\nabla f(x_k)\|\le\varepsilon}，取 #{T\ge 2L(f(x_0)-f_{\mathrm{low}})/\varepsilon^2} 即可。[驻点](4R01)可能是鞍点，因此该界衡量一阶条件的满足程度，不保证全局最优。}

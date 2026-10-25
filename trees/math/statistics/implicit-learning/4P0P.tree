@@ -1,0 +1,10 @@
+\title{固定设计岭回归的预测偏差与方差}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，引理 3.7 的参数误差计算；风险取独立测试响应}
+
+\p{固定 #{X\in\mathbb R^{n\times p}}、#{\theta_*\in\mathbb R^p}，令 #{y=X\theta_*+\varepsilon}，其中噪声均值为零、协方差为 #{\sigma^2I_n}。记 #{H=X^\top X/n}，#{a>0}。由[岭回归公式](4P0L)的同样正规方程计算，估计为 #{\hat\theta_a=(H+aI_p)^{-1}X^\top y/n}。在 #{H} 的[正交特征基](0N0B)中，设特征值为 #{\mu_j\ge 0}，真实参数坐标为 #{\theta_{*,j}}。则}
+##{\mathbb E\frac 1n\|X\hat\theta_a-X\theta_*\|^2=\sum_j\theta_{*,j}^2\frac{\mu_j a^2}{(\mu_j+a)^2}+\frac{\sigma^2}{n}\sum_j\frac{\mu_j^2}{(\mu_j+a)^2}.}
+\p{\strong{证明。}记 #{A=(H+aI_p)^{-1}}，则 #{\hat\theta_a-\theta_*=-aA\theta_*+AX^\top\varepsilon /n}。均值零使交叉项消去。确定性项为 #{a^2\theta_*^\top AHA\theta_*}，随机项由[迹](0F0F)计算为 #{\sigma^2\operatorname{tr}(AH^2A)/n}。在特征基逐项求和即得公式。}
+\p{若 #{y'=X\theta_*+\varepsilon'} 是同一设计上独立生成的测试响应，#{\varepsilon'} 与训练噪声独立、均值零且协方差相同，则左边也等于 #{\mathbb E\|y'-X\hat\theta_a\|^2/n-\mathbb E\|y'-X\theta_*\|^2/n}，因为测试交叉项为零。用训练响应 #{y} 代替 #{y'} 时，此交叉项一般不为零。}

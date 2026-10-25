@@ -1,0 +1,10 @@
+\title{强凸函数的二次下界}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，式 (5.4)}
+
+\p{设 #{\mu>0}。可微函数 #{f:\mathbb R^n\to\mathbb R} 称为 #{\mu} 强凸函数，如果 #{x\mapsto f(x)-\mu\|x\|^2/2} 为[凸函数](0R06)。由[凸函数的一阶刻画](4R06)，等价条件为}
+##{f(y)\ge f(x)+\langle\nabla f(x),y-x\rangle+\frac\mu 2\|y-x\|^2.}
+\p{固定 #{x=0}，右侧的二次项保证 #{f(y)\to+\infty} 当 #{\|y\|\to\infty}。因此可将极小化限制在一个闭球中，由 [Heine–Borel 定理](0A39)和[极值定理](0A3A)取得极小点 #{x_*}。其梯度为零，故 #{f(y)-f(x_*)\ge\mu\|y-x_*\|^2/2}，极小点唯一。}
+\p{对二次下界中 #{y-x} 配方，得到 #{f(x_*)\ge f(x)-\|\nabla f(x)\|^2/(2\mu)}。这个估计把函数值误差控制为梯度平方的倍数。}

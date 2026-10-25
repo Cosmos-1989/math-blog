@@ -1,0 +1,698 @@
+{
+  "date": "2026-10-25",
+  "notes": [
+    {
+      "id": "4P00",
+      "path": "trees/math/statistics/implicit-learning/4P00.tree",
+      "title": "隐式偏置与良性过拟合：算法选择与协方差谱尾",
+      "taxon": "Outline",
+      "sha256": "0aeeed26a36f1e82ef40ebfe0f5a341cf9894cceee0957dabbf1f4e8f0606221"
+    },
+    {
+      "id": "4P01",
+      "path": "trees/math/statistics/implicit-learning/4P01.tree",
+      "title": "预测规则的风险",
+      "taxon": "Definition",
+      "sha256": "3ea53805d570bf92b4b5342a43416686a401ade0c3c0955a8b44ab6c7e7f7a21"
+    },
+    {
+      "id": "4P02",
+      "path": "trees/math/statistics/implicit-learning/4P02.tree",
+      "title": "经验风险与样本插值",
+      "taxon": "Definition",
+      "sha256": "c961008eccea78c37faf0fa9c83bafd92b052bfbe18eaa83cf99c68fb4f857ad"
+    },
+    {
+      "id": "4P03",
+      "path": "trees/math/statistics/implicit-learning/4P03.tree",
+      "title": "比较规则给出的超额风险分解",
+      "taxon": "Theorem",
+      "sha256": "d3346749bc80d250750fb8c05c916c4f56c7ecb14d46bb39cb069af195ed03d7"
+    },
+    {
+      "id": "4P04",
+      "path": "trees/math/statistics/implicit-learning/4P04.tree",
+      "title": "最小二乘解满足正规方程",
+      "taxon": "Theorem",
+      "sha256": "bdb29d8eb2c93a6b228e24b1750c2989ff60bff61c472f0ffc49cbc21126b5e8"
+    },
+    {
+      "id": "4P05",
+      "path": "trees/math/statistics/implicit-learning/4P05.tree",
+      "title": "满行秩数据的最小范数插值解",
+      "taxon": "Theorem",
+      "sha256": "1708af31173e155e72ae49420e79b1324700fb95e12d372ed42c4f486f1ed885"
+    },
+    {
+      "id": "4P06",
+      "path": "trees/math/statistics/implicit-learning/4P06.tree",
+      "title": "线性预测的梯度更新保持核分量",
+      "taxon": "Theorem",
+      "sha256": "8e902ea1b536df387cee6baa80c8fee8aa27f3382c4305b922374f29aac2f712"
+    },
+    {
+      "id": "4P07",
+      "path": "trees/math/statistics/implicit-learning/4P07.tree",
+      "title": "平方损失梯度下降选择离初值最近的插值解",
+      "taxon": "Theorem",
+      "sha256": "72e4d23d0ab9a90d31c5fda36fc003e2aac59d3a8b145e0a8ee03ca6bca5fde7"
+    },
+    {
+      "id": "4P08",
+      "path": "trees/math/statistics/implicit-learning/4P08.tree",
+      "title": "哪些回归损失保留最小范数隐式偏置",
+      "taxon": "Theorem",
+      "sha256": "2b7bef1fc32b0e7742088e6e3128135cfa2460119171bdf4c66a89e3f582b7bd"
+    },
+    {
+      "id": "4P09",
+      "path": "trees/math/statistics/implicit-learning/4P09.tree",
+      "title": "线性分类的间隔与严格可分性",
+      "taxon": "Definition",
+      "sha256": "94779954d3f7fac9a869496acd03678ab02f45b9ae2cd8f05f44960afa0b7ec7"
+    },
+    {
+      "id": "4P0A",
+      "path": "trees/math/statistics/implicit-learning/4P0A.tree",
+      "title": "硬间隔最小范数问题等价于最大几何间隔",
+      "taxon": "Theorem",
+      "sha256": "84e77d3cf9077817b1a2d9f5ef89bea5966f1305d356beeb0936b3290fa68627"
+    },
+    {
+      "id": "4P0B",
+      "path": "trees/math/statistics/implicit-learning/4P0B.tree",
+      "title": "指数损失梯度流趋向最大间隔方向",
+      "taxon": "Theorem",
+      "sha256": "bf87480b60909b446cb29bb2f23f5d121709102c3970c4433caa7e2759721d4e"
+    },
+    {
+      "id": "4P0C",
+      "path": "trees/math/statistics/implicit-learning/4P0C.tree",
+      "title": "有界方向余项给出指数损失的收敛速率",
+      "taxon": "Theorem",
+      "sha256": "fa3f0ede07d4ed7598a22a565155b9a3dda9cb7ba0849484131433c85ea1f2df"
+    },
+    {
+      "id": "4P0D",
+      "path": "trees/math/statistics/implicit-learning/4P0D.tree",
+      "title": "可分数据的逻辑损失只有无穷远下确界",
+      "taxon": "Theorem",
+      "sha256": "7fc1ed1c1bbbe5923b3e8a1c60aa392373152b98797f5b2e8bc274ba31c0d819"
+    },
+    {
+      "id": "4P0E",
+      "path": "trees/math/statistics/implicit-learning/4P0E.tree",
+      "title": "对角深线性参数化诱导的幂次惩罚",
+      "taxon": "Theorem",
+      "sha256": "5047c9e6d7dee94e18c4a570bab481549d951deca7b3905cc99fa7c991eee0f5"
+    },
+    {
+      "id": "4P0F",
+      "path": "trees/math/statistics/implicit-learning/4P0F.tree",
+      "title": "线性回归的超额风险由协方差加权",
+      "taxon": "Theorem",
+      "sha256": "9bc6275b0d738d28a61f9ff207e4c26ecff8ae82c3071c0f92619b4adbde1160"
+    },
+    {
+      "id": "4P0G",
+      "path": "trees/math/statistics/implicit-learning/4P0G.tree",
+      "title": "最小范数插值的条件偏差方差分解",
+      "taxon": "Theorem",
+      "sha256": "d9f720d2c693dfcac942d89183e32dc782f6514f8be5e9e92e08cf79e107348c"
+    },
+    {
+      "id": "4P0H",
+      "path": "trees/math/statistics/implicit-learning/4P0H.tree",
+      "title": "协方差谱尾的两种有效秩",
+      "taxon": "Definition",
+      "sha256": "04115bfc63e165512cf769728dad93fdc8bf76e32ff051ff6d29f5a3172d9b73"
+    },
+    {
+      "id": "4P0I",
+      "path": "trees/math/statistics/implicit-learning/4P0I.tree",
+      "title": "两种谱尾有效秩的比较",
+      "taxon": "Theorem",
+      "sha256": "79c37d10c43fa1e14d8762cd67357340a5159e607522092f8f3e8c975529cfca"
+    },
+    {
+      "id": "4P0J",
+      "path": "trees/math/statistics/implicit-learning/4P0J.tree",
+      "title": "次高斯随机变量的矩母函数条件",
+      "taxon": "Definition",
+      "sha256": "38228afbee6f13f8e5a443f22b53948e86feb4c3e677952ce4ffc5fa7b535c4e"
+    },
+    {
+      "id": "4P0K",
+      "path": "trees/math/statistics/implicit-learning/4P0K.tree",
+      "title": "大谱尾有效秩控制样本 Gram 矩阵",
+      "taxon": "Theorem",
+      "sha256": "c4d9efa6de9f769cdfd3cee20677430e3c4ce94c5c1ec520b1c4871663dd41a2"
+    },
+    {
+      "id": "4P0L",
+      "path": "trees/math/statistics/implicit-learning/4P0L.tree",
+      "title": "球形谱尾使插值的主块成为岭回归",
+      "taxon": "Theorem",
+      "sha256": "2089b434d20cd4f82a8b1af6693f18c7f6933c920dfe3ad96a0d49f8730f4565"
+    },
+    {
+      "id": "4P0M",
+      "path": "trees/math/statistics/implicit-learning/4P0M.tree",
+      "title": "高斯线性回归的良性过拟合风险界",
+      "taxon": "Theorem",
+      "sha256": "7f4001d3b881211012199ee5095571e26225c4ba0358233a24f3664eba431a11"
+    },
+    {
+      "id": "4P0N",
+      "path": "trees/math/statistics/implicit-learning/4P0N.tree",
+      "title": "一个尖峰加平坦谱尾的良性过拟合例子",
+      "taxon": "Example",
+      "sha256": "020a083f0e4628a2c896f54b2761c67235190a6f6990342604e360904a4ff9bf"
+    },
+    {
+      "id": "4P0O",
+      "path": "trees/math/statistics/implicit-learning/4P0O.tree",
+      "title": "各向同性设计仍会丢失未观测的信号",
+      "taxon": "Theorem",
+      "sha256": "510d86944484222042b8371a290c13c328c87d0465774e0eb25a7e0a09d5bf1e"
+    },
+    {
+      "id": "4P0P",
+      "path": "trees/math/statistics/implicit-learning/4P0P.tree",
+      "title": "固定设计岭回归的预测偏差与方差",
+      "taxon": "Theorem",
+      "sha256": "357b838a632526dc58f436d6b37c11ad935c366d63efe9055d949951617519b1"
+    },
+    {
+      "id": "4P0Q",
+      "path": "trees/math/statistics/implicit-learning/4P0Q.tree",
+      "title": "训练残差不能替代预测风险的一个反例",
+      "taxon": "Example",
+      "sha256": "cb94c161a543098fc162ebef4b9a96a7f0781fbd2233ef507ca8b2ab79c405cd"
+    },
+    {
+      "id": "4P0R",
+      "path": "trees/math/statistics/implicit-learning/4P0R.tree",
+      "title": "逻辑损失发散可以伴随分类规则不变",
+      "taxon": "Theorem",
+      "sha256": "893ad102086b41aa9410c12e13f16a5d6ccf5add2d5abced292eb3c92ba5eb0d"
+    },
+    {
+      "id": "icm2026-bartlett",
+      "path": "trees/references/icm2026-bartlett.tree",
+      "title": "Bartlett：Modern Machine Learning Methods: Implicit Bias, Benign Overfitting, and Unstable Optimization",
+      "taxon": "Reference",
+      "sha256": "134229e35018930f36287feb603c67dffd0f9d9259c26a427887c38d183d4e8f"
+    },
+    {
+      "id": "4Q00",
+      "path": "trees/math/computation/learning-games/4Q00.tree",
+      "title": "博弈中的学习与无政府价格",
+      "taxon": "Outline",
+      "sha256": "8393fff6af42b0fa117deef728847639ebd8fcab2fa3f0f6fe4dce6e2034cdb6"
+    },
+    {
+      "id": "4Q01",
+      "path": "trees/math/computation/learning-games/4Q01.tree",
+      "title": "有限博弈的行动与成本",
+      "taxon": "Definition",
+      "sha256": "e7d066961bcd0ec199bcc6400a3b5b235acf4ee29a059fc8e5bbc7da8c8d2051"
+    },
+    {
+      "id": "4Q02",
+      "path": "trees/math/computation/learning-games/4Q02.tree",
+      "title": "混合策略与联合行动分布",
+      "taxon": "Definition",
+      "sha256": "69495dfc39b6465b3c360d354da6bbad6696f8a3428882f467c7da1e96d0772c"
+    },
+    {
+      "id": "4Q03",
+      "path": "trees/math/computation/learning-games/4Q03.tree",
+      "title": "纳什均衡的单边偏离条件",
+      "taxon": "Definition",
+      "sha256": "8db6af34d2df404eab0620e78b2321a1c5fc6d6d315401c7f265bbfb4927ca27"
+    },
+    {
+      "id": "4Q04",
+      "path": "trees/math/computation/learning-games/4Q04.tree",
+      "title": "粗相关均衡",
+      "taxon": "Definition",
+      "sha256": "ea9a2d7fe8ca69e06ca6dee61383e65ce56f4c305d580396f917f0c6846e345a"
+    },
+    {
+      "id": "4Q05",
+      "path": "trees/math/computation/learning-games/4Q05.tree",
+      "title": "石头剪刀布中的相关而无遗憾分布",
+      "taxon": "Example",
+      "sha256": "cd6540dc410f88e9380e415924a22bb4d5140bc0b5a5ba98159345b6c4efe3bf"
+    },
+    {
+      "id": "4Q06",
+      "path": "trees/math/computation/learning-games/4Q06.tree",
+      "title": "外部遗憾与固定行动比较",
+      "taxon": "Definition",
+      "sha256": "96d006a2e9710bf6dbc1cba0245c9d4c35d11f7de9d83b77831e60b0fe02b53e"
+    },
+    {
+      "id": "4Q07",
+      "path": "trees/math/computation/learning-games/4Q07.tree",
+      "title": "全信息乘法权重更新",
+      "taxon": "Construction",
+      "sha256": "f0c36f314ca9f739ab935f0aaff80e9fa5bfd8333674f1ebe7ce9812e22963ab"
+    },
+    {
+      "id": "4Q08",
+      "path": "trees/math/computation/learning-games/4Q08.tree",
+      "title": "乘法权重的势函数遗憾界",
+      "taxon": "Theorem",
+      "sha256": "ab0896656360b986fb77e719218126f1e034c3a9625a68226cc6d8af59f87398"
+    },
+    {
+      "id": "4Q09",
+      "path": "trees/math/computation/learning-games/4Q09.tree",
+      "title": "倍增分期使学习不依赖终止时间",
+      "taxon": "Theorem",
+      "sha256": "47c8863aefdcdfb31fef27db89693505847c9e3428be631ed067fff0f91cda89"
+    },
+    {
+      "id": "4Q0A",
+      "path": "trees/math/computation/learning-games/4Q0A.tree",
+      "title": "从混合损失到随机行动的期望比较",
+      "taxon": "Theorem",
+      "sha256": "6b2f295e9d7695e02a60bdbbde8f9b33270ab54d048a0f1a96bcb0b889c02eb1"
+    },
+    {
+      "id": "4Q0B",
+      "path": "trees/math/computation/learning-games/4Q0B.tree",
+      "title": "经验分布把外部遗憾化为均衡误差",
+      "taxon": "Theorem",
+      "sha256": "b74d90a031cc709eb862d47b8360141b0dc95c9dee67eba6fffad4468cd7b4c5"
+    },
+    {
+      "id": "4Q0C",
+      "path": "trees/math/computation/learning-games/4Q0C.tree",
+      "title": "社会成本与无政府价格",
+      "taxon": "Definition",
+      "sha256": "dd92f6668747f71f9665ed77ab904d9d91de10b4184bf707c46ad853af10d8ea"
+    },
+    {
+      "id": "4Q0D",
+      "path": "trees/math/computation/learning-games/4Q0D.tree",
+      "title": "成本博弈的平滑性不等式",
+      "taxon": "Definition",
+      "sha256": "db18a9c44dfdef88cf933c31f57b5d108d3d1b639250d9f642e1c0c912303fde"
+    },
+    {
+      "id": "4Q0E",
+      "path": "trees/math/computation/learning-games/4Q0E.tree",
+      "title": "平滑性控制粗相关均衡的社会成本",
+      "taxon": "Theorem",
+      "sha256": "054b811c4a7b4e49638d1026237aa9ae66a48a464bdce0ccfb958d365095cd22"
+    },
+    {
+      "id": "4Q0F",
+      "path": "trees/math/computation/learning-games/4Q0F.tree",
+      "title": "无遗憾过程的有限时间效率界",
+      "taxon": "Theorem",
+      "sha256": "194eb378064c954439251311bdbd5bf46274b410d987de6192d264844f4e9582"
+    },
+    {
+      "id": "4Q0G",
+      "path": "trees/math/computation/learning-games/4Q0G.tree",
+      "title": "非原子路由与 Wardrop 均衡",
+      "taxon": "Definition",
+      "sha256": "5f6d56424341d2674daef86b9326b9ad8f41722b2aa51c9c91f5e152c3b1fb5f"
+    },
+    {
+      "id": "4Q0H",
+      "path": "trees/math/computation/learning-games/4Q0H.tree",
+      "title": "Wardrop 均衡的变分不等式",
+      "taxon": "Theorem",
+      "sha256": "77c93eb0298e391bf81dc922f713ac12963073a8936df757197690430c9ca431"
+    },
+    {
+      "id": "4Q0I",
+      "path": "trees/math/computation/learning-games/4Q0I.tree",
+      "title": "仿射延迟路由的最坏效率界",
+      "taxon": "Theorem",
+      "sha256": "3fdc8128bc373f581b2fc1ee8b789ecabd9d5ffeb79b1ea683018fb6d1ecf2cb"
+    },
+    {
+      "id": "4Q0J",
+      "path": "trees/math/computation/learning-games/4Q0J.tree",
+      "title": "Braess 网络增加道路后变慢",
+      "taxon": "Example",
+      "sha256": "729b4164d819fd2b38ed9ad98aebdfa3a054db9470e00e645bafa21a49f7cd84"
+    },
+    {
+      "id": "4Q0K",
+      "path": "trees/math/computation/learning-games/4Q0K.tree",
+      "title": "两倍需求的最优路由控制原需求均衡",
+      "taxon": "Theorem",
+      "sha256": "cbc99df42fabf77e6517664d7148e82af314b65882ec6d96b77aec6472ba57be"
+    },
+    {
+      "id": "4Q0L",
+      "path": "trees/math/computation/learning-games/4Q0L.tree",
+      "title": "单物品第一价格拍卖",
+      "taxon": "Definition",
+      "sha256": "a7079ae11fb59d8b2fcb90c3896e997d478633e0fa282e74cac6a29f4f3306eb"
+    },
+    {
+      "id": "4Q0M",
+      "path": "trees/math/computation/learning-games/4Q0M.tree",
+      "title": "收入项抵消得到拍卖福利界",
+      "taxon": "Theorem",
+      "sha256": "c17c49905fca5efa4db7227a2e60d5e51687771d9fae7846730b425dc69a7e37"
+    },
+    {
+      "id": "4Q0N",
+      "path": "trees/math/computation/learning-games/4Q0N.tree",
+      "title": "半估值出价保证最优福利的一半",
+      "taxon": "Theorem",
+      "sha256": "43c75055f1b70a2f2670bdeacc867d3b566beab6f923de738e46a8f642fe39c9"
+    },
+    {
+      "id": "4Q0O",
+      "path": "trees/math/computation/learning-games/4Q0O.tree",
+      "title": "跨轮状态改变偏离的比较对象",
+      "taxon": "Definition",
+      "sha256": "9c17304cde3c05617b0f57605fea596ddf82dc48394417bf725f12e1799d5393"
+    },
+    {
+      "id": "4Q0P",
+      "path": "trees/math/computation/learning-games/4Q0P.tree",
+      "title": "逐轮零遗憾仍可能毁坏未来状态",
+      "taxon": "Example",
+      "sha256": "52d586905c8a046ec1a97754b02d08d5b6d0d641532029eeb695608563b691a5"
+    },
+    {
+      "id": "4Q0Q",
+      "path": "trees/math/computation/learning-games/4Q0Q.tree",
+      "title": "单包缓冲的策略队列模型",
+      "taxon": "Definition",
+      "sha256": "ce3ccf1e93962d71d3272cf8ff760fba5f38374b0ca934aa9196177c7a2fb74f"
+    },
+    {
+      "id": "4Q0R",
+      "path": "trees/math/computation/learning-games/4Q0R.tree",
+      "title": "队列稳定性与总包数守恒",
+      "taxon": "Definition",
+      "sha256": "7c86e24751b1ddfc9ca1c4487ff57ae216fabad18349519055587d5a40242f30"
+    },
+    {
+      "id": "4Q0S",
+      "path": "trees/math/computation/learning-games/4Q0S.tree",
+      "title": "Bernoulli 单队列的指数矩稳定性",
+      "taxon": "Theorem",
+      "sha256": "cee4f26952dc9fb38bed12ce26ac0aa13c60a62acb2a039f861f0a4fcdcd605e"
+    },
+    {
+      "id": "4Q0T",
+      "path": "trees/math/computation/learning-games/4Q0T.tree",
+      "title": "小缓冲网络的三倍容量稳定性结果",
+      "taxon": "Remark",
+      "sha256": "11387fa7cc91e9312ead33e84076a0d370504bfb4710ec61a4a380b1673baccc"
+    },
+    {
+      "id": "4Q0U",
+      "path": "trees/math/computation/learning-games/4Q0U.tree",
+      "title": "预算随时间消耗与液态福利",
+      "taxon": "Definition",
+      "sha256": "f619283b3b25ca3b17d187d72e7794c17ba8fb3693467a522dbcaff702f29ebf"
+    },
+    {
+      "id": "icm2026-tardos",
+      "path": "trees/references/icm2026-tardos.tree",
+      "title": "Éva Tardos：博弈中的学习与无政府价格",
+      "taxon": "Reference",
+      "sha256": "b00c4fba2b79dbfb355186f3ccf56a68c868e5ce4dc85627b50136883c2cd0c7"
+    },
+    {
+      "id": "4R00",
+      "path": "trees/math/optimization/theory-practice/4R00.tree",
+      "title": "优化的理论与实践",
+      "taxon": "Outline",
+      "sha256": "6187eb57b7ada2cfb7e3868f2e1742a1751cd2209d3148bc33e76c5d0eff3fac"
+    },
+    {
+      "id": "4R01",
+      "path": "trees/math/optimization/theory-practice/4R01.tree",
+      "title": "Euclidean 空间中实函数的梯度",
+      "taxon": "Definition",
+      "sha256": "68f132d7254e6c6c744c91c884c224617e7e619e4911cca6842de77215bd1498"
+    },
+    {
+      "id": "4R02",
+      "path": "trees/math/optimization/theory-practice/4R02.tree",
+      "title": "Hessian 矩阵与二阶变化",
+      "taxon": "Definition",
+      "sha256": "6afaa399047e67cecaa813238d131e39be5caf52667493a9c26c6f758c6c2124"
+    },
+    {
+      "id": "4R03",
+      "path": "trees/math/optimization/theory-practice/4R03.tree",
+      "title": "Lipschitz 梯度的下降引理",
+      "taxon": "Lemma",
+      "sha256": "131e3782dc1181caa64812c31bfdce79859555a30ad3bfb12be05dc2f08e0577"
+    },
+    {
+      "id": "4R04",
+      "path": "trees/math/optimization/theory-practice/4R04.tree",
+      "title": "梯度下降的步长与单步下降量",
+      "taxon": "Construction",
+      "sha256": "97744e8d640eb9f61d6e7212252793c8c788567e2ba8a009c5a6afe372b09d51"
+    },
+    {
+      "id": "4R05",
+      "path": "trees/math/optimization/theory-practice/4R05.tree",
+      "title": "梯度下降寻找近似驻点的迭代界",
+      "taxon": "Theorem",
+      "sha256": "176b501c73f22fd7ace9572b11411af48cc3f66fe55576f3b459ce90b6b5fe22"
+    },
+    {
+      "id": "4R06",
+      "path": "trees/math/optimization/theory-practice/4R06.tree",
+      "title": "可微凸函数的一阶刻画",
+      "taxon": "Theorem",
+      "sha256": "9684205fdd2140b03cf8f6bb74e1aa8ee7d645b34d022c247feb5ff2bd9a9a57"
+    },
+    {
+      "id": "4R07",
+      "path": "trees/math/optimization/theory-practice/4R07.tree",
+      "title": "光滑凸函数的梯度下降误差界",
+      "taxon": "Theorem",
+      "sha256": "380dec0d84d6b779d6ed6b789b9edae02293b1ae8138e2dac18794e889e91e2f"
+    },
+    {
+      "id": "4R08",
+      "path": "trees/math/optimization/theory-practice/4R08.tree",
+      "title": "强凸函数的二次下界",
+      "taxon": "Definition",
+      "sha256": "a36b73cad395dc444cd289b294b6a276ef836ee33f15f295d2fa2540d589721b"
+    },
+    {
+      "id": "4R09",
+      "path": "trees/math/optimization/theory-practice/4R09.tree",
+      "title": "强凸梯度下降的线性收敛",
+      "taxon": "Theorem",
+      "sha256": "2b2d1219d107f782b71a368977b50097ee7bf885ad8b89726e4b802e20a9d562"
+    },
+    {
+      "id": "4R0A",
+      "path": "trees/math/optimization/theory-practice/4R0A.tree",
+      "title": "标准形线性规划",
+      "taxon": "Definition",
+      "sha256": "35be903dc87bc4f46c210fd28208d689a984c32f82775ff2f931cdb8bb3525dc"
+    },
+    {
+      "id": "4R0B",
+      "path": "trees/math/optimization/theory-practice/4R0B.tree",
+      "title": "线性规划的弱对偶与互补松弛",
+      "taxon": "Theorem",
+      "sha256": "b8fbd7c21db1650a1d314432c86f41210c0f840f98ef2e9020ee2771643d147f"
+    },
+    {
+      "id": "4R0C",
+      "path": "trees/math/optimization/theory-practice/4R0C.tree",
+      "title": "Farkas 引理与有限生成锥的分离",
+      "taxon": "Lemma",
+      "sha256": "3a8ba1fd5e0615e5d2577544f3481aec7077540d139ab15f1bdf6f152d9e0630"
+    },
+    {
+      "id": "4R0D",
+      "path": "trees/math/optimization/theory-practice/4R0D.tree",
+      "title": "线性规划的基本可行解与顶点",
+      "taxon": "Theorem",
+      "sha256": "4cb9021b961d6a26048abe437f4e341073abf3efc0009bff4b0f8105309151b7"
+    },
+    {
+      "id": "4R0E",
+      "path": "trees/math/optimization/theory-practice/4R0E.tree",
+      "title": "单纯形法的入基方向与比值检验",
+      "taxon": "Construction",
+      "sha256": "f7e62ac1700e347ff8d3080d85fc7a1238ca7312a6e4eedd2401b7ef8e3533b5"
+    },
+    {
+      "id": "4R0F",
+      "path": "trees/math/optimization/theory-practice/4R0F.tree",
+      "title": "线性规划的对数障碍与中心路径",
+      "taxon": "Construction",
+      "sha256": "714c0921b23618e82b321336b1964f7419b55503f1bf33e2a208d3f019f80cd1"
+    },
+    {
+      "id": "4R0G",
+      "path": "trees/math/optimization/theory-practice/4R0G.tree",
+      "title": "原始对偶 Newton 方程的唯一可解性",
+      "taxon": "Theorem",
+      "sha256": "6ec4cc3d183974291344d98942b7f65396cb5a7b0c0ebff21d320382e663ab34"
+    },
+    {
+      "id": "4R0H",
+      "path": "trees/math/optimization/theory-practice/4R0H.tree",
+      "title": "路径跟踪一步中的对偶间隙恒等式",
+      "taxon": "Lemma",
+      "sha256": "25e9661b586d1f6baff7ed5fde51af12061df89af239a8ca1328e295cbc8e6ec"
+    },
+    {
+      "id": "4R0I",
+      "path": "trees/math/optimization/theory-practice/4R0I.tree",
+      "title": "长步路径跟踪的迭代次数界",
+      "taxon": "Theorem",
+      "sha256": "fda7d0f6c99dadf4761ed823a076caad78888a580691c4724dc8d61ff86bbc9c"
+    },
+    {
+      "id": "4R0J",
+      "path": "trees/math/optimization/theory-practice/4R0J.tree",
+      "title": "线性规划的鞍点表示",
+      "taxon": "Theorem",
+      "sha256": "b1da20b613cd4b9e204775aa958b9801be10df041b7233710cbf2be5c31bf037"
+    },
+    {
+      "id": "4R0K",
+      "path": "trees/math/optimization/theory-practice/4R0K.tree",
+      "title": "线性规划的原始对偶混合梯度迭代",
+      "taxon": "Construction",
+      "sha256": "26dc7a11c0178961aa60bcaae693bcbabb0cd0c57b8777393042fa96661a39b5"
+    },
+    {
+      "id": "4R0L",
+      "path": "trees/math/optimization/theory-practice/4R0L.tree",
+      "title": "优化算法的迭代次数与计算代价",
+      "taxon": "Definition",
+      "sha256": "9b06e5fba64db5653a5c3e95e678bca1687644cc377098568ef25a6367e19971"
+    },
+    {
+      "id": "4R0M",
+      "path": "trees/math/optimization/theory-practice/4R0M.tree",
+      "title": "光滑凸函数的 Nesterov 外推迭代",
+      "taxon": "Construction",
+      "sha256": "a44b9733edbdc4dde0a5a93ed3be60c32160d5b8ee86bba953ae465591f2952d"
+    },
+    {
+      "id": "4R0N",
+      "path": "trees/math/optimization/theory-practice/4R0N.tree",
+      "title": "Nesterov 外推的二次衰减误差界",
+      "taxon": "Theorem",
+      "sha256": "3a1c26cf751d2658ac6ad0485eb4562a43cd54031ec8cbed0dce76c19c516bd6"
+    },
+    {
+      "id": "4R0O",
+      "path": "trees/math/optimization/theory-practice/4R0O.tree",
+      "title": "正定二次函数上梯度下降的谱公式",
+      "taxon": "Theorem",
+      "sha256": "fa2e03dbae72c08da3e2315d97a18551266a017068ee2a0a0d47c015b33b6bcc"
+    },
+    {
+      "id": "4R0P",
+      "path": "trees/math/optimization/theory-practice/4R0P.tree",
+      "title": "Newton 法的局部二次收敛",
+      "taxon": "Theorem",
+      "sha256": "eb974fafa4a45461b1c045bf88d010b0b6fd38b66bc3b15c4064af994af064b1"
+    },
+    {
+      "id": "4R0Q",
+      "path": "trees/math/optimization/theory-practice/4R0Q.tree",
+      "title": "Lipschitz Hessian 的三次余项估计",
+      "taxon": "Lemma",
+      "sha256": "380bff7463e05b167547c606f7f673ca7d361cbe7f1cddef984fc4840cf5f195"
+    },
+    {
+      "id": "4R0R",
+      "path": "trees/math/optimization/theory-practice/4R0R.tree",
+      "title": "三次正则化寻找近似驻点的迭代界",
+      "taxon": "Theorem",
+      "sha256": "bd544e6cba99ed0ebe7fcc1754d4e883ef6d1a004020dc66169e29e60ffb477c"
+    },
+    {
+      "id": "4R0S",
+      "path": "trees/math/optimization/theory-practice/4R0S.tree",
+      "title": "共轭方向法的有限步终止",
+      "taxon": "Theorem",
+      "sha256": "bc3a710db98133e96653c6925ad8b0ca029ce48c021f732cbf59bfe7c3db9a00"
+    },
+    {
+      "id": "4R0T",
+      "path": "trees/math/optimization/theory-practice/4R0T.tree",
+      "title": "秩一更新的逆矩阵公式",
+      "taxon": "Theorem",
+      "sha256": "b26a946f8816ac0307f2a3bcd07be31eb94dca9622d0a9a51b0257373d7ccb56"
+    },
+    {
+      "id": "4R0U",
+      "path": "trees/math/optimization/theory-practice/4R0U.tree",
+      "title": "BFGS 逆更新保持正定性与割线条件",
+      "taxon": "Theorem",
+      "sha256": "cf9431bca808fdc6bda42ee7195178093113b6cf9496cecbe1e7e0586f6c155e"
+    },
+    {
+      "id": "4R0V",
+      "path": "trees/math/optimization/theory-practice/4R0V.tree",
+      "title": "半正定规划的低秩因子表示",
+      "taxon": "Construction",
+      "sha256": "23bf45c9421a6412e2f7e066f84c1f25725f0a44edf160638bc83283c2c9e449"
+    },
+    {
+      "id": "4R0W",
+      "path": "trees/math/optimization/theory-practice/4R0W.tree",
+      "title": "光滑凸函数的梯度插值不等式",
+      "taxon": "Lemma",
+      "sha256": "b4eadf47a150e2b81ee5fe6faf3452ae5912146eaa153147cbb71b38289e19b7"
+    },
+    {
+      "id": "4R0X",
+      "path": "trees/math/optimization/theory-practice/4R0X.tree",
+      "title": "Armijo 回溯的有限终止与步长下界",
+      "taxon": "Theorem",
+      "sha256": "e5e5ce69053acad894ad1beb4f0fb93b58c733080e1dcfe518e13fa79ded57ee"
+    },
+    {
+      "id": "4R0Y",
+      "path": "trees/math/optimization/theory-practice/4R0Y.tree",
+      "title": "线性规划的最优解存在与强对偶",
+      "taxon": "Theorem",
+      "sha256": "ec8f9c637e325780ad824e688776533b3d538d28fa15143291431803b8e4d0aa"
+    },
+    {
+      "id": "4R0Z",
+      "path": "trees/math/optimization/theory-practice/4R0Z.tree",
+      "title": "非负正交象限的自协调对数障碍",
+      "taxon": "Example",
+      "sha256": "0b41df2aa74b64ea6e98a08ea3f752d1b6201c5733b00fa2de5ccde5d02ad9b5"
+    },
+    {
+      "id": "4R10",
+      "path": "trees/math/optimization/theory-practice/4R10.tree",
+      "title": "先增后降的二次函数梯度迭代",
+      "taxon": "Example",
+      "sha256": "159b2f54ea3d2216109496b4c82a1270d73ad9559bde94dd1c4661b663d95d54"
+    },
+    {
+      "id": "icm2026-wright",
+      "path": "trees/references/icm2026-wright.tree",
+      "title": "Stephen Wright：优化的理论与实践",
+      "taxon": "Reference",
+      "sha256": "4d7308b0cb46bd0424040385535d94dbd32eef634dd4dc1bb26642edae080d5d"
+    }
+  ]
+}

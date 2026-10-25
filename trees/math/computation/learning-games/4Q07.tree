@@ -1,0 +1,11 @@
+\title{全信息乘法权重更新}
+\date{2026-10-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，No-regret learning；有限行动算法的展开}
+
+\p{设有 #{m\ge 2} 个行动，每轮损失为 #{\ell_t(a)\in[0,1]}。全信息反馈表示一轮结束后知道所有行动的损失。固定学习率 #{\eta>0}，令 #{w_1(a)=1}，在第 #{t} 轮使用[混合策略](4Q02)}
+##{W_t=\sum_{a=1}^m w_t(a),\qquad p_t(a)=\frac{w_t(a)}{W_t},\qquad
+w_{t+1}(a)=w_t(a)\exp(-\eta\ell_t(a)).}
+\p{这里的[指数函数](0A46)保证权重始终为正。重复代入得到 #{w_{T+1}(a)=\exp(-\eta\sum_{t=1}^T\ell_t(a))}，累计损失较大的行动获得较小权重。}
+\p{此规则针对[外部遗憾](4Q06)，逐轮混合损失为 #{\widehat\ell_t=\sum_a p_t(a)\ell_t(a)}。若只知道选中行动的损失，便无法直接执行上述更新；这种只观察所选行动结果的反馈通常称为 bandit 反馈。}

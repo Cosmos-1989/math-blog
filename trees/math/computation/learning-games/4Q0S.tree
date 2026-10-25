@@ -1,0 +1,14 @@
+\title{Bernoulli 单队列的指数矩稳定性}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，动态队列的自行推导例；区别于单包缓冲网络}
+
+\p{考虑一个简化的单队列，无单独服务器缓冲：先到达，再尝试直接服务一个包。设 #{Q_0=q_0\in\mathbb N}，#{A_t,S_t} 为彼此及跨时间[独立](00L3)的零一[随机变量](00L0)，且 #{\mathbb P(A_t=1)=\lambda}、#{\mathbb P(S_t=1)=\mu}，其中 #{0<\lambda<\mu<1}。递推为 #{Q_{t+1}=\max\{Q_t+A_t-S_t,0\}}。则 #{\sup_t\mathbb E Q_t<\infty}，即满足[期望稳定性](4Q0R)。}
+\p{\strong{证明。}令 #{\rho(\theta)=(1-\lambda+\lambda e^\theta)(1-\mu+\mu e^{-\theta})}。由[指数函数的导数](0A46)，#{\rho(0)=1}、#{\rho'(0)=\lambda -\mu<0}；按[导数定义](0A31)，可取充分小的 #{\theta>0} 使 #{0<\rho(\theta)<1}，以下简记为 #{\rho}。}
+\p{当 #{Q_t=q\ge 1} 时，反射截断不起作用，独立性给出 #{\mathbb E[e^{\theta Q_{t+1}}\mid Q_t=q]=\rho e^{\theta q}}。当 #{q=0} 时，唯一需要截断的情况是 #{A_t=0,S_t=1}；因此该条件期望等于 #{\rho+c}，其中 #{c=(1-\lambda)\mu(1-e^{-\theta})>0}。用[全期望公式](0A01)，对 #{M_t=\mathbb E e^{\theta Q_t}} 得到}
+##{M_{t+1}=\rho M_t+c\,\mathbb P(Q_t=0)\le\rho M_t+c,\qquad
+M_t\le\rho^t e^{\theta q_0}+c\frac{1-\rho^t}{1-\rho}.}
+\p{最后的式子由逐次代入递推及有限等比求和得到。函数 #{e^x-1-x} 在零处为零，导数 #{e^x-1} 对 #{x\ge 0} 非负，[中值定理](0A35)因而给出 #{e^x\ge 1+x}。所以}
+##{\mathbb E Q_t\le\frac{\max\{e^{\theta q_0},c/(1-\rho)\}-1}{\theta}.}
+\p{例如 #{q_0=0,\lambda=1/4,\mu=1/2}，取 #{e^\theta=3/2}，则 #{\rho=15/16}、#{c=1/8}，从而所有时刻均有 #{\mathbb E Q_t\le 1/\log(3/2)}。这个计算依赖单队列直接服务的递推；多队列竞争及服务器缓冲需要另行分析。}

@@ -1,0 +1,10 @@
+\title{外部遗憾与固定行动比较}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，No-regret learning，式(2)}
+
+\p{设学习者的行动集 #{A} 非空且有限，第 #{t} 轮面对损失向量 #{\ell_t:A\to[0,1]}，实际选择 #{a_t}。其截至 #{T} 轮的外部遗憾定义为}
+##{R_T=\sum_{t=1}^T\ell_t(a_t)-\min_{a\in A}\sum_{t=1}^T\ell_t(a).}
+\p{比较者在全部轮次使用同一个行动，允许在看完损失序列后选出这个行动。遗憾可能为负，因为随时间改变行动可能胜过任何固定行动。无外部遗憾指 #{\max(R_T,0)/T\to 0}：即对任意 #{\varepsilon>0}，充分大的 #{T} 都有 #{R_T\le\varepsilon T}。}
+\p{在[有限博弈](4Q01)中，玩家 #{i} 使用 #{\ell_t(b_i)=c_i(b_i,a_{-i}^t)}，将其他玩家本轮行动保持不变。若成本位于 #{[L,U]} 且 #{U>L}，先减 #{L} 再除以 #{U-L} 可化为单位区间，原成本遗憾是归一化遗憾的 #{U-L} 倍。若选择[概率分布](4Q02) #{p_t}，把实际损失改为 #{\sum_a p_t(a)\ell_t(a)}，得到混合损失的遗憾。}

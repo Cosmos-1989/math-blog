@@ -1,0 +1,11 @@
+\title{两倍需求的最优路由控制原需求均衡}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Lemma 3、Theorem 4}
+
+\p{在具有连续非负非减延迟的[非原子路由模型](4Q0G)中，令 #{f} 为需求 #{(r_k)} 下的 Wardrop 均衡，#{g} 为需求 #{(2r_k)} 下的任意可行流。则 #{C(f)\le C(g)}。特别地，右侧可取两倍需求的最优总延迟。}
+\p{\strong{证明。}记边流为 #{x,y}。对每条边，若 #{y_e\ge x_e}，单调性给出 #{y_ed_e(x_e)\le y_ed_e(y_e)}；若 #{y_e<x_e}，非负性给出 #{y_ed_e(x_e)\le x_ed_e(x_e)}。故总有}
+##{\sum_e y_ed_e(x_e)\le C(g)+C(f).}
+\p{流 #{g/2} 与 #{f} 的需求相同。[变分不等式](4Q0H)给出 #{2C(f)\le\sum_e y_ed_e(x_e)}，结合前式即得结论。}
+\p{这里只使用单调性，无须仿射延迟。比较对象的需求不同，所以它是容量余量的保证，不给出同一需求下统一的乘法效率比。}

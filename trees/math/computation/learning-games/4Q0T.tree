@@ -1,0 +1,18 @@
+\title{小缓冲网络的三倍容量稳定性结果}
+\date{2026-10-25}
+\taxon{Remark}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Theorem 8；Abel 等 v2，§3 Theorem 1、Conditions 1–3、Lemmas 2–5}
+
+\p{在[单包缓冲队列模型](4Q0Q)中，Abel、Kolumbus、Martín Duque、Foster 与 Tardos 研究学习规则下的[期望稳定性](4Q0R)。[原论文](https://arxiv.org/html/2502.08898v2)§3 Theorem 1 给出的容量条件为 #{\lambda_i<1/2} 对所有队列成立，且 #{3\sum_i\lambda_i<\sum_j\mu_j}。以下采用显式补强了历史条件的版本，初始队列及服务器缓冲均为空。}
+\p{记 #{\mathcal F_{kT}} 为第 #{k} 块开始前的全部历史，#{R_{i,k,T}} 为队列 #{i} 在此块内的[外部遗憾](4Q06)，以接纳奖励比较，且仅计有包可发送的轮次。要求对任意 #{\delta,\eta>0}，存在不依赖 #{k} 和过去历史的块长 #{T}，使所有队列在每个块上满足}
+##{\Pr\{R_{i,k,T}>\delta T\mid\mathcal F_{kT}\}\le\eta\quad\text{几乎处处}.}
+\p{这是为条件漂移论证补明的统一条件概率假设，比原文 Lemma 5 字面陈述的无条件概率保证更强。原文 Condition 3 对应块内遗憾至多 #{\delta T}；到达和服务的独立随机性同时给出 Lemma 4 所需的条件概率界。仅有从初始时刻开始的平均遗憾趋零，不足以得到此处的块控制。}
+\p{证明采用的势函数为}
+##{\Phi_T(N)=\sum_i\left(N_i-\left(\frac{\lambda_i}{2}+2\delta\right)T\right)^+,\qquad x^+=\max\{x,0\}.}
+\p{原文把服务器经常有包可处理、以及存在经常空闲的服务器两种情况分开。Lemmas 2–3 给出，当 #{\Phi_T>nT} 且三个块控制事件都成立时，势函数至少下降 #{c_\delta T}，其中}
+##{c_\delta=\min\left\{\min_i(1/2-\lambda_i-2\delta),\ \frac 12\sum_j\mu_j-\frac 32\sum_i\lambda_i-(3n+m)\delta\right\}>0}
+\p{可由充分小的 #{\delta} 保证，#{n,m} 分别是队列数与服务器数。合并失败概率至多 #{q=(m+2n)\eta}，失败时势函数最多增加 #{nT}，所以[条件期望](0A01)满足}
+##{\mathbb E[\Phi_T(N_{(k+1)T})-\Phi_T(N_{kT})\mid\mathcal F_{kT}]\le\bigl(-(1-q)c_\delta+qn\bigr)T<0}
+\p{只需再选 #{q<c_\delta /(n+c_\delta)}。每块增量绝对值有界，故可调用原文 Theorem 2 所引的 Pemantle–Rosenthal 矩估计，将大状态上的条件负漂移转为时间一致的矩控制。原文的分块下降引理和该随机过程定理是这里引用的研究输入。}
+\p{[单队列指数矩计算](4Q0S)展示了稳定性的一种机制，但不包含上述网络的竞争和学习。三倍总容量是该研究的充分条件；最优容量倍数仍有待确定。}

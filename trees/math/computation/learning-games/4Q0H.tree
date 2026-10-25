@@ -1,0 +1,10 @@
+\title{Wardrop 均衡的变分不等式}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Tardos](icm2026-tardos)，Smoothness of routing games，Theorem 4 证明中的最短路比较}
+
+\p{在[非原子路由模型](4Q0G)中，路径流 #{f} 及其边流 #{x} 为 Wardrop 均衡，当且仅当对每个同需求的可行路径流 #{g} 及其边流 #{y} 都有}
+##{\sum_e x_ed_e(x_e)\le\sum_e y_ed_e(x_e).}
+\p{\strong{证明。}若 #{f} 为均衡，令 #{L_k=\min_{P\in\mathcal P_k}d_P(x)}。其使用路径的延迟全为 #{L_k}，所以 #{\sum_P f_{kP}d_P(x)=r_kL_k\le\sum_P g_{kP}d_P(x)}。对 #{k} 求和并按边重排，得到不等式。}
+\p{反之，若某条正流量路径 #{P} 比同一类中的路径 #{Q} 严格更慢，取 #{0<\delta\le f_{kP}}，把 #{\delta} 的流量从 #{P} 转到 #{Q} 得到可行 #{g}。在固定延迟 #{d_e(x_e)} 下，总成本改变 #{\delta(d_Q(x)-d_P(x))<0}，与假设矛盾。因此每条被使用的路径都最短。}

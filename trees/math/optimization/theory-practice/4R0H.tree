@@ -1,0 +1,10 @@
+\title{路径跟踪一步中的对偶间隙恒等式}
+\date{2026-10-25}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，算法 4.1 的间隙计算}
+
+\p{设 #{(x,y,s)} 原、对偶严格可行，#{\mu=x^{\mathsf T}s/n}。给定 #{0<\sigma<1}，在[原始对偶 Newton 方程](4R0G)中取 #{r=\sigma\mu\mathbf 1-XS\mathbf 1}。沿所求方向走长度 #{\alpha}，记 #{x^+=x+\alpha\Delta x}、#{s^+=s+\alpha\Delta s}。若新点仍正，则}
+##{\mu^+:=\frac{(x^+)^{\mathsf T}s^+}{n}=(1-\alpha(1-\sigma))\mu.}
+\p{\strong{证明。}展开内积，常数项为 #{n\mu}，一次项由 Newton 方程求和得到 #{n(\sigma -1)\mu}，二次项由 #{\Delta x^{\mathsf T}\Delta s=0} 消失。等式约束在整个直线上保持，因而[弱对偶](4R0B)仍将 #{n\mu^+} 解释为目标差。}
+\p{关键在于选取统一可保证的正步长。[长步路径跟踪的迭代界](4R0I)通过控制每个坐标乘积，完成这一步。}

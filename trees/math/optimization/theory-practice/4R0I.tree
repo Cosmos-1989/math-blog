@@ -1,0 +1,21 @@
+\title{长步路径跟踪的迭代次数界}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，算法 4.1；下文给出保守步长的完整估计}
+
+\p{设 #{A} 行满秩，固定 #{0<\gamma<1} 与 #{0<\sigma_{\min}\le\sigma_{\max}<1}。令 #{\mathcal N_\gamma} 为[原、对偶](4R0B)严格可行且 #{x_is_i\ge\gamma\mu} 的点集，其中 #{\mu=x^{\mathsf T}s/n}。从其中一点出发，在[路径跟踪一步](4R0H)中取 #{\sigma\in[\sigma_{\min},\sigma_{\max}]}。设}
+##{a=\min\left\{1,\frac{\sigma_{\min}(1-\gamma)}{1+1/\gamma}\right\},\qquad\bar\alpha=\frac an.}
+\p{步长 #{\bar\alpha} 保持点在 #{\mathcal N_\gamma} 内。若每次选择使新点仍属于 #{\mathcal N_\gamma} 的步长，且该步长至少为 #{\bar\alpha}、不超过一，则}
+##{\mu_k\le\exp\left(-\frac{a(1-\sigma_{\max})k}{n}\right)\mu_0.}
+\p{\strong{方向估计。}令 #{D=X^{1/2}S^{-1/2}}，#{p=D^{-1}\Delta x}、#{q=D\Delta s}。[Newton 方程](4R0G)给出 #{p^{\mathsf T}q=0} 和 #{p+q=(XS)^{-1/2}(\sigma\mu\mathbf 1-XS\mathbf 1)}，故}
+##{\begin{aligned}
+\|p\|^2+\|q\|^2
+&=\sum_i\frac{(\sigma\mu -x_is_i)^2}{x_is_i}\\
+&\le 2\sigma^2\mu^2\sum_i\frac 1{x_is_i}+2\sum_i x_is_i
+\le 2(1+1/\gamma)n\mu.
+\end{aligned}}
+\p{因而 #{|\Delta x_i\Delta s_i|=|p_iq_i|\le(1+1/\gamma)n\mu}。记 #{z_i=x_is_i}。用[间隙恒等式](4R0H)展开可得}
+##{z_i^+-\gamma\mu^+=(1-\alpha)(z_i-\gamma\mu)+\alpha\sigma(1-\gamma)\mu+\alpha^2\Delta x_i\Delta s_i.}
+\p{对所有 #{0\le\alpha\le\bar\alpha}，右侧非负。又 #{\mu^+=(1-\alpha(1-\sigma))\mu>0}，每个新坐标乘积严格为正。沿这段连续直线，#{x_i} 或 #{s_i} 若由正变为非正，乘积必先经过零；因此两者始终为正。等式可行性由 Newton 方程保持。}
+\p{\strong{累积下降。}每一步 #{\mu^+\le(1-a(1-\sigma_{\max})/n)\mu}，再用 #{1-u\le e^{-u}} 得结论。若 #{\mu_0>\varepsilon}，最多取 #{\left\lceil n\log(\mu_0 /\varepsilon)/(a(1-\sigma_{\max}))\right\rceil} 步即可保证平均互补间隙不超过 #{\varepsilon}。总目标差为 #{n\mu}。此计数不包含求严格可行初值以及每步线性系统的计算代价。}

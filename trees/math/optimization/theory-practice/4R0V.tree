@@ -1,0 +1,9 @@
+\title{半正定规划的低秩因子表示}
+\date{2026-10-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.6，式 (5.30)–(5.31)}
+
+\p{设 #{C,A_1,\ldots,A_m} 为实对称矩阵，#{b_i\in\mathbb R}。半正定规划以对称矩阵 #{X} 为变量，极小化 #{\langle C,X\rangle}，约束为 #{\langle A_i,X\rangle=b_i} 和 #{X\succeq 0}。这里 #{\langle A,X\rangle=\operatorname{tr}(AX)}，正定次序和矩阵内积见[实对称矩阵](0N0A)。这些约束给出一个凸问题。}
+\p{固定整数 #{1\le r\le n}。由[谱分解](0N0B)，矩阵 #{X} 半正定且秩至多为 #{r}，当且仅当存在 #{Z\in\mathbb R^{n\times r}} 使 #{X=ZZ^{\mathsf T}}。具体地，将非零本征值的平方根吸收到相应正交本征向量中，再补零列即可。反方向由 #{v^{\mathsf T}ZZ^{\mathsf T}v=\|Z^{\mathsf T}v\|^2\ge 0} 得到。}
+\p{代入后目标与约束分别变为 #{\langle C,ZZ^{\mathsf T}\rangle} 和 #{\langle A_i,ZZ^{\mathsf T}\rangle=b_i}。半正定约束自动满足，但新的约束通常非凸。若原问题有秩至多 #{r} 的最优解，两种表述具有相同最优值；对任意小 #{r} 都存在这样的最优解，则需要额外假设，不能从因子分解本身推出。}

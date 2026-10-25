@@ -1,0 +1,13 @@
+\title{有界方向余项给出指数损失的收敛速率}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，定理 2.12 后的速率；逐项推导}
+
+\p{在[指数损失梯度流定理](4P0B)的假设下，固定数据与初值，有 #{\|\theta(t)\|=\Theta(\log t)}、#{F(\theta(t))=\Theta(t^{-1})}，以及}
+##{\left\|\frac{\theta(t)}{\|\theta(t)\|}-\frac{\theta_*}{\|\theta_*\|}\right\|=O((\log t)^{-1}).}
+\p{此处 #{a(t)=\Theta(b(t))} 表示充分大 #{t} 时由两个正的固定常数夹住 #{a(t)/b(t)}；#{O} 只要求上界。}
+\p{\strong{证明。}令 #{s=\log(t+n)}、#{\|\rho(t)\|\le M}。三角不等式给出 #{s\|\theta_*\|-M\le\|\theta(t)\|\le s\|\theta_*\|+M}。又由归一化的三角估计，#{\|a/\|a\|-b/\|b\|\|\le 2\|a-b\|/\|b\|}，取 #{a=\theta(t)}、#{b=s\theta_*}，便得方向误差不超过 #{2M/(s\|\theta_*\|)}。}
+\p{记 #{m_i=y_ix_i^\top\theta_*\ge 1}。[硬间隔最优性](4P0A)保证至少一个 #{m_i=1}，否则缩小 #{\theta_*} 仍可行。由 [Cauchy–Schwarz 不等式](004S)，#{|y_ix_i^\top\rho(t)|\le\|x_i\|M}，所以}
+##{F(\theta(t))=\frac 1n\sum_i(t+n)^{-m_i}e^{-y_ix_i^\top\rho(t)}.}
+\p{所有指数因子被固定正数上下夹住，#{m_i\ge 1} 给出 #{O(t^{-1})} 上界，任一 #{m_i=1} 的项给出同阶下界。}

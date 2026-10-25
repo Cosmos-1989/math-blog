@@ -1,0 +1,10 @@
+\title{一个尖峰加平坦谱尾的良性过拟合例子}
+\date{2026-10-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§3.4 谱尾解释；由 Bartlett 等定理 1 推出的具体序列}
+
+\p{对样本量 #{n}，取维数 #{p_n=n^2+1}，协方差 #{\Sigma_n=\operatorname{diag}(1,n^{-2},\ldots,n^{-2})}，其中小特征值重复 #{n^2} 次。令 #{\theta_*=e_1}，使用[高斯回归风险界](4P0M)中的设计与独立噪声，#{\sigma^2>0} 固定。则最小范数估计插值所有训练响应，而超额风险依概率趋于零。}
+\p{\strong{证明。}按[有效秩定义](4P0H)，#{r_0(\Sigma_n)=2}，#{r_1(\Sigma_n)=R_1(\Sigma_n)=n^2}。对定理中的固定常数 #{b}，充分大 #{n} 时 #{2<bn\le n^2}，故 #{k_*=1}，且 #{k_*<n/c_1}。取 #{\delta=1/n}，则 #{\log n<n/c} 也最终成立。定理给出以至少 #{1-1/n} 的概率}
+##{\mathcal R(\hat\theta)\le C\sqrt{\frac{\log n}{n}}+C\sigma^2\frac{\log n}{n}\longrightarrow 0.}
+\p{正定高斯设计且 #{p_n>n} 保证满行秩，故[插值公式](4P05)适用，训练平方损失恰为零。测试风险则趋于不可约噪声水平 #{\sigma^2}。这个例子中分布与维数随 #{n} 改变；它不涉及在一个固定有限维模型里令样本量无限增加。}

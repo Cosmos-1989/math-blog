@@ -1,0 +1,10 @@
+\title{梯度下降的步长与单步下降量}
+\date{2026-10-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Wright](icm2026-wright)，§5.1，式 (5.7)–(5.11)}
+
+\p{给定可微函数 #{f:\mathbb R^n\to\mathbb R}、初值 #{x_0} 和正步长 #{\alpha_k}，梯度下降迭代定义为 #{x_{k+1}=x_k-\alpha_k\nabla f(x_k)}。[梯度](4R01)决定移动方向，步长决定移动距离。}
+\p{若 #{f} 的梯度满足 [#{L} 光滑条件](4R03)，把 #{s=-\alpha_k\nabla f(x_k)} 代入下降引理，得到}
+##{f(x_{k+1})\le f(x_k)-\alpha_k\left(1-\frac{L\alpha_k}{2}\right)\|\nabla f(x_k)\|^2.}
+\p{因此 #{0<\alpha_k<2/L} 时非驻点处严格下降。常用的固定步长 #{\alpha_k=1/L} 给出 #{f(x_{k+1})\le f(x_k)-\|\nabla f(x_k)\|^2/(2L)}。这只是函数值的下降性质，迭代点本身的收敛还需要进一步条件。}

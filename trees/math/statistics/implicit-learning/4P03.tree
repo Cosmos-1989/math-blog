@@ -1,0 +1,11 @@
+\title{比较规则给出的超额风险分解}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Bartlett](icm2026-bartlett)，§1.2 的四项分解}
+
+\p{设 #{\mathcal F} 为预测规则类，#{f_0\in\mathcal F} 为固定比较规则，#{\hat f\in\mathcal F} 可依赖样本，所有下式中的[风险](4P01)与[经验风险](4P02)有限。记 #{L_*=\inf_{f\in\mathcal F}L(f)}。则}
+##{\begin{aligned}L(\hat f)-L_*={}&[L(\hat f)-\widehat L_S(\hat f)]+[\widehat L_S(\hat f)-\widehat L_S(f_0)]\\&+[\widehat L_S(f_0)-L(f_0)]+[L(f_0)-L_*].\end{aligned}}
+\p{\strong{证明。}展开四个方括号，三个中间量成对抵消，留下左边。若进一步有 #{\sup_{f\in\mathcal F}|L(f)-\widehat L_S(f)|\le\varepsilon}，且 #{\widehat L_S(\hat f)\le\widehat L_S(f_0)+a}，逐项上界给出}
+##{L(\hat f)-L_*\le 2\varepsilon+a+L(f_0)-L_*.}
+\p{一致偏差控制可以用于由样本选择的 #{\hat f}。单个固定 #{f_0} 的无偏性并不能代替这个条件；插值时经验风险为零，也仍须估计新样本上的风险。}
