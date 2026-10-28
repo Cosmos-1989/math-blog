@@ -1,0 +1,568 @@
+{
+  "date": "2026-10-25",
+  "report": {
+    "speaker": "Dmitry Dolgopyat",
+    "title": "Randomness, Rotations, Renormalization, and Resonances",
+    "outline": "4S00",
+    "prefix": "4S",
+    "reference": "icm2026-dolgopyat",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+    "doi": "10.1137/25M1806971",
+    "pages": "35-50",
+    "license": "CC BY 4.0",
+    "question": "等距的环面旋转为何仍有概率极限，随机化变量、区域边界和小除数怎样决定高斯、柯西或随机标记格极限的尺度？",
+    "reading_scope": "已阅读全文正式HTML的数学主体§§1–5（lines 102–571），含1.1–1.12、2.1–2.4、3.1、两个编号3.2、3.3、4.1–4.3、猜想及证明概要；阅读脚注1–3，核对参考文献[4],[6],[29]–[33],[38]–[43],[59]–[60]及作者、页码、出版日期、许可。使用重叠窗口覆盖全文，非只读摘要。未读取SIAM PDF及所引研究论文的完整证明；各研究结果的直接来源为这份报告，不将阅读报告等同于独立复核原论文深证明。",
+    "module_rationale": [
+      "以20个知识页构成可独立递归理解的分支：中心化差异度与有限Fourier计算、连分数障碍和时间极限、球形共振与标记格、概率端的格点及原子障碍。",
+      "复用已有格/余体积/随机格/齐性商空间、CLT、特征函数、Fejer逼近、连分数、上同调及概率基础；只增补中心化差异度、柯西分布和标记格截断求和三个必要定义。",
+      "将一般凸体的驻相论证缩为可精确积分的三维球例，将完整Denjoy–Koksma缩为区间的非最优常数网格证明；这样得到实际可验证的基础命题，而不以概要伪装深证明。",
+      "LLT不另建通用基础定义，以有理区间的时间局部极限定理明确事件、格距、随机化方式与中心序列。"
+    ],
+    "proof_scope": {
+      "4S00": {
+        "status": "narrative-outline",
+        "scope": "八段叙述连接20个知识页；区分随机时间、随机初相位、随机参数及区域几何；报告研究定理均明确引用。"
+      },
+      "4S01": {
+        "status": "definition-and-local-proof",
+        "scope": "定义体积一环面、N步中心化计数及三种随机化；平移不变性证明中心项为Nm(A)。"
+      },
+      "4S02": {
+        "status": "local-proof",
+        "scope": "几何级数、整数处连续延拓、min(N,1/(2||t||))上界及||t||<=1/(2N)时2N/pi下界。"
+      },
+      "4S03": {
+        "status": "local-proof",
+        "scope": "用有限模态和132B的任意维乘积Fejer核逼近，证明连续函数一致平均与无非零整数共振等价。"
+      },
+      "4S04": {
+        "status": "local-proof",
+        "scope": "有限三角多项式的遍历和及平方范数恒等式，另直接积分区间的单个Fourier系数；没有无条件交换无限和。"
+      },
+      "4S05": {
+        "status": "local-proof",
+        "scope": "均匀独立(x,alpha)下不同时刻两两独立、差异度方差Nv(1-v)，并说明三个点的确定性关系。"
+      },
+      "4S06": {
+        "status": "local-proof",
+        "scope": "收敛分母q的区间差异度<=8，来自轨道与q网格比较；排除仅随机x且b_N趋于无穷的全序列非退化极限。未导入完整Denjoy–Koksma定理。"
+      },
+      "4S07": {
+        "status": "cited-research-theorem",
+        "scope": "二次无理alpha、有理0<r<1、x=0、均匀随机时间J_N，中心a log N及sigma sqrt(log N)。报告Beck定理及两个漂移示例，深证明未展开。"
+      },
+      "4S08": {
+        "status": "definition-and-local-proof",
+        "scope": "直接积分确认柯西密度、CDF中的1/pi及两端归一化；证明绝对一阶矩与二阶矩发散。"
+      },
+      "4S09": {
+        "status": "cited-research-theorem",
+        "scope": "仅取Kesten的r=1/2特例：固定N、均匀独立(x,alpha)、log N尺度；不声称固定alpha极限或任意r的统一常数。"
+      },
+      "4S0A": {
+        "status": "local-proof",
+        "scope": "半圆指示增量的整数斜积；高度=2D_N及奇偶约束。阶梯曲面实现仅按报告说明，不宣称已证明几何构造。"
+      },
+      "4S0B": {
+        "status": "local-calculation",
+        "scope": "显式A=[[1,2],[2,5]]、beta=sqrt(2)-1、lambda=3+2sqrt(2)；计算特征向量和log T重整化次数。不从该代数计算推出CLT。"
+      },
+      "4S0C": {
+        "status": "cited-research-theorem",
+        "scope": "d>=2球形模型，x和alpha均匀独立，r独立光滑紧支撑于(a,b)且0<a<b<1/2；N^((d-1)/(2d))尺度的非退化极限。未声称半径分布无关或高斯性。"
+      },
+      "4S0D": {
+        "status": "local-proof",
+        "scope": "三维球非零Fourier系数的精确球坐标积分，含正确半径与频率相位；带额外cos相位下界时给单个共振项N^(1/3)尺度，不证明全级数余项可忽略。"
+      },
+      "4S0E": {
+        "status": "local-proof",
+        "scope": "明确(x,z)坐标次序，格基行列式一、整数对双射、最近整数唯一性以及加权幂次(d+1)/2的精确变换。"
+      },
+      "4S0F": {
+        "status": "definition-and-local-proof",
+        "scope": "标记格与空间支撑远离零的有限截断Siegel求和，证明有限项；不导入完整奇性级数的收敛断言。"
+      },
+      "4S0G": {
+        "status": "local-proof",
+        "scope": "用均匀基坐标定义字符标记，证明各边际均匀、整数倍相关和换基不变；说明原始方向标记与全格点iid不同。"
+      },
+      "4S0H": {
+        "status": "local-proof",
+        "scope": "固定非零频率特征函数模一当且仅当支撑于平移格；通过复随机变量的平方偏差证明，独立和给乘积公式。"
+      },
+      "4S0I": {
+        "status": "local-proof",
+        "scope": "用二项方差、Markov及鸽巢法证明d+1原子之和存在至少c N^(-d/2)质量的原子，再证明任何连续近似的一致误差下界。不把移动跳跃当作固定点态失败证明。"
+      },
+      "4S0J": {
+        "status": "local-proof-from-existing-theorem",
+        "scope": "3415取两平移相同、两右端相同，核对兼容条件后得到单平移光滑解，再以余边界望远镜给有界遍历和。"
+      },
+      "4S0K": {
+        "status": "cited-research-theorem-with-local-check",
+        "scope": "二次无理alpha、固定任意x、有理r=a/b；使用报告A_N，给有限z窗口的单点LLT，核对格距1/b及半开端点常数位移。"
+      },
+      "icm2026-dolgopyat": {
+        "status": "bibliographic-reference",
+        "scope": "作者、正式HTML版本、DOI、页码、日期、CC BY 4.0和中文改编；区分两个Theorem 3.2与报告所引in preparation文献。"
+      }
+    },
+    "claim_sources": {
+      "4S00": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§§1–5，特别是 §2.3、§3、§4.2"
+        }
+      ],
+      "4S01": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§2.3 D_n 定义；§3 Conjecture 3.1 前后；纠正漏乘N的中心项"
+        }
+      ],
+      "4S02": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 equation (3.3)及其后共振频率讨论"
+        }
+      ],
+      "4S03": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 Kronecker序列背景；独立基础证明，非报告新增研究定理"
+        }
+      ],
+      "4S04": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 equation (3.3)，有限谱特例"
+        }
+      ],
+      "4S05": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 随机旋转模型；二阶矩结论为独立计算"
+        }
+      ],
+      "4S06": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§2.3 Theorem 2.4前的Denjoy–Koksma障碍；360V尾数公式"
+        }
+      ],
+      "4S07": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "Theorem 2.1、其后r=1/2漂移表、§2.3证明概要"
+        }
+      ],
+      "4S08": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 Theorems 3.1–3.2，修正HTML中CDF的归一化遗漏"
+        }
+      ],
+      "4S09": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 第一个Theorem 3.2（Kesten），区别于随后重复编号的cube定理"
+        }
+      ],
+      "4S0A": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§2.3 staircase return recurrence，HTML lines 407–418"
+        }
+      ],
+      "4S0B": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§2.3 quadratic direction and Gamma(2) renormalization，HTML lines 413–419"
+        }
+      ],
+      "4S0C": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "Theorem 3.3及equation (3.3)前明述的random-radius ball model，HTML lines 460–480"
+        }
+      ],
+      "4S0D": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 equation (3.3)之后的球系数与共振尺度；用独立精确积分替代可疑渐近式"
+        }
+      ],
+      "4S0E": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 equations (3.4)–(3.5)后Dani correspondence；修正坐标括号和幂次不一致"
+        }
+      ],
+      "4S0F": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 equation (3.1)，与(3.2)后的非绝对收敛讨论分开"
+        }
+      ],
+      "4S0G": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§3 marked lattice law，HTML lines 475–479"
+        }
+      ],
+      "4S0H": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§1 Theorem 1.1后的lattice obstruction与Lemma 1.12后的共振解释"
+        }
+      ],
+      "4S0I": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§4.2 Theorem 4.3前的finite-atom obstruction；独立一致范数版本"
+        }
+      ],
+      "4S0J": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "§§2.3–3旋转背景；站内3414、3415、0AP9、3808的直接推论"
+        }
+      ],
+      "4S0K": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "Theorem 2.2(a)，HTML lines 342–350"
+        }
+      ],
+      "icm2026-dolgopyat": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+          "location": "Information & Authors；references [4],[6],[29],[32],[33],[38],[42],[59],[60]；§3归一化"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "§1非平稳Markov链的corange、CLT/LLT障碍分类及Edgeworth展开：全文已读，未建立新的Markov基础和深证明页面。",
+      "§2.3有界型推广、偶连分数的局部/整体偏置及定理2.3：需进一步审查所引[42]，报告将其列为in preparation；未作为已展开定理导入。",
+      "§2.3定理2.4的空间随机化子列CLT与§3定理3.1的quenched/annealed时间极限：本批用收敛分母障碍、Beck与Kesten的明确模型构成主线，其余未建页。",
+      "§3第二个Theorem3.2的盒子模型及一般解析严格凸体：球模型之外的参数分布、曲率和重叠计数约定需回查原始文献；一般半代数集合极限仍是报告猜想3.1。",
+      "§3球形标记格的完整条件收敛级数、相位联合极限与格空间等分布：这里只写有限截断和标记相关性，未规定无限级数的求和方式。",
+      "§4.1线性形式差异度及Corollary4.2：文献[32]标作in preparation，HTML中心项、立方体范围及除法归一化有需回查之处；不按现有简式导入研究定理。",
+      "§4.2定理4.3的光滑归一化Lambda、Edgeworth误差的普适随机格极限：这里只证明一致连续近似的原子障碍，未导入完整极限核或证明。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4S07：Beck时间CLT；仅引用报告Theorem2.1，阶梯曲面几何、符号编码与条件CLT均未完整展开。",
+      "4S0K：报告Theorem2.2(a)的时间LLT；只本地核对格距、归一化与端点约定，未阅读其原始论文全证明。",
+      "4S09：Kesten半圆柯西极限；仅引用报告第一个Theorem3.2，未以数值模拟替代证明。",
+      "4S0C：Dolgopyat–Fayad球形差异度极限；共振截断余项、格空间等分布和标记联合极限均为引用的深层输入。",
+      "4S0F/4S0G仅为截断定义和字符计算；没有证明报告完整标记格级数的条件收敛。",
+      "4S0J使用已存在3415的已写出Fourier证明；该页的两平移兼容条件在本页特化核对，不重新宣称KAM定理。"
+    ],
+    "subject_ids": [
+      "0069",
+      "006C",
+      "0063"
+    ]
+  },
+  "prerequisites": {
+    "4S00": [],
+    "4S01": [
+      "00XV",
+      "00T1",
+      "00L0",
+      "00L1",
+      "00LA"
+    ],
+    "4S02": [
+      "4S01"
+    ],
+    "4S03": [
+      "4S01",
+      "4S02",
+      "132B"
+    ],
+    "4S04": [
+      "4S01",
+      "4S02",
+      "00L2"
+    ],
+    "4S05": [
+      "00L3",
+      "4S01",
+      "00L4",
+      "00L2",
+      "0GKM"
+    ],
+    "4S06": [
+      "360V",
+      "4S01",
+      "00LA"
+    ],
+    "4S07": [
+      "4S01",
+      "0N0R",
+      "00LA"
+    ],
+    "4S08": [
+      "00L0",
+      "00L1"
+    ],
+    "4S09": [
+      "4S01",
+      "4S08",
+      "00LA"
+    ],
+    "4S0A": [
+      "380B",
+      "380C",
+      "4S01"
+    ],
+    "4S0B": [
+      "00GK"
+    ],
+    "4S0C": [
+      "4S01",
+      "00L3",
+      "00LA"
+    ],
+    "4S0D": [
+      "0H53",
+      "4S04",
+      "4S02"
+    ],
+    "4S0E": [
+      "0N01",
+      "0N02"
+    ],
+    "4S0F": [
+      "0N0F",
+      "00EK",
+      "00F3",
+      "0N0G"
+    ],
+    "4S0G": [
+      "0N01",
+      "00L3",
+      "00T1",
+      "0N0F",
+      "4S0F"
+    ],
+    "4S0H": [
+      "4C2A",
+      "00L3"
+    ],
+    "4S0I": [
+      "00L5",
+      "0A02"
+    ],
+    "4S0J": [
+      "4S01",
+      "3415",
+      "3414",
+      "0AP9",
+      "3808"
+    ],
+    "4S0K": [
+      "4S01",
+      "0N0R"
+    ],
+    "icm2026-dolgopyat": []
+  },
+  "reviewed_reused_ids": [
+    "00XV",
+    "00T1",
+    "00L0",
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L4",
+    "00L5",
+    "00LA",
+    "00Q3",
+    "00GK",
+    "00EK",
+    "00F3",
+    "0A02",
+    "0AP9",
+    "0GKM",
+    "0H53",
+    "0N01",
+    "0N02",
+    "0N0F",
+    "0N0G",
+    "0N0R",
+    "132B",
+    "3414",
+    "3415",
+    "360V",
+    "360W",
+    "3806",
+    "3808",
+    "380B",
+    "380C",
+    "380I",
+    "4C2A"
+  ],
+  "source_readings": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "version": "formal HTML, published 2026-07-13",
+      "read_at": "2026-10-25",
+      "scope": "完整数学主体§§1–5，HTML lines102–571；脚注1–3；相关参考文献与正式元数据。报告正文阅读完整，所引原始研究论文未全部读取或验证。",
+      "full_mathematical_body": true
+    }
+  ],
+  "reuse_review_notes": [
+    "132B已阅读全文：设定为R^n上每坐标一周期函数，证明中显式使用乘积核K_N(x)=prod_j K_N(x_j)并证明任意维一致逼近，故4S03确实可用于d维环面。",
+    "360V给出收敛分数互素性和保留尾数的误差式；4S06只用小于1/q^2的结果。",
+    "3415的联合条件对两个相同平移仍成立；两右端相同自动满足兼容关系，得到4S0J。",
+    "0N0F现有定义已包含SL_n(R)/SL_n(Z)、有限不变测度和Haar随机格，不重复创建齐性空间或随机格基础。",
+    "4C2A首段已有一般向量特征函数定义；4S0H只复用定义，不调用其Gaussian收敛判据。"
+  ],
+  "source_findings": [
+    {
+      "id": "cauchy-cdf-normalization",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§3 Theorem3.1(a)、两个Theorem3.2及§4.1",
+      "finding": "正式HTML写1/2+arctan(t/c)，缺少1/pi，端点将不在0与1。4S08用密度积分确定正确CDF，其余引用随之改正。"
+    },
+    {
+      "id": "duplicate-theorem-3.2",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§3 HTML lines443及457",
+      "finding": "Kesten区间定理与cube定理同号3.2；4S09和reference明确限定第一个，claim_sources保留具体位置。"
+    },
+    {
+      "id": "discrepancy-centering-and-overlap",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§3 Conjecture3.1前的D_n定义，HTML line452",
+      "finding": "HTML中心项漏迭代次数n；一般C+L若发生重叠，还需区分并集指标和按格平移重数的周期化。4S01定义环面可测集差异度，4S0C限定r<1/2避免重叠，采用Nm(A)。"
+    },
+    {
+      "id": "dani-coordinate-parentheses-and-powers",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§3 equations(3.4)–(3.5)后，HTML lines496–501",
+      "finding": "HTML格向量T^d(k0+(k,alpha),k/T)括号易把水平坐标也乘T^d，且带权条件先后出现(d+1)/2、(d-1)/2和1。4S0E固定(x,z)=(N^(-1/d)k,N(k.alpha+ell))，直接证明det=1与|k|^s|k.alpha+ell|=N^(-(d-1)/(2d))|x|^s|z|，s=(d+1)/2。"
+    },
+    {
+      "id": "ball-fourier-asymptotic",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§3 equation(3.3)后，HTML line485",
+      "finding": "所见球系数渐近的振荡相位缺少|k|，半径幂也与三维直接积分不符。4S0D不照录，证明c_k=(sin(s)-s cos(s))/(2pi^2|k|^3)，s=2pi r|k|。"
+    },
+    {
+      "id": "kesten-endpoints-and-common-constant",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§3 第一个Theorem3.2及其后Borda[15]说明",
+      "finding": "HTML写r属于[0,1]但r=0,1差异度退化；并宣称统一尺度常数。未阅读全文Borda原始论文，因此仅采用r=1/2，不导入端点或r一致性断言。"
+    },
+    {
+      "id": "atomic-jump-uniform-versus-pointwise",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§4.2 equation(4.2)与Theorem4.3前段",
+      "finding": "源文用O(n^(-d/2))原子与逐点Edgeworth定义相联系。4S0I独立证明存在至少c n^(-d/2)原子，只推出一致连续近似误差下界；未以移动原子位置证明任意固定z处的失败。"
+    },
+    {
+      "id": "half-open-endpoints",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "§2.3 interval[0,r]与本批[0,r)约定",
+      "finding": "无理旋转每个端点至多命中一次；时间极限最终只产生固定整数位移，可吸收到LLT中心序列中，CLT在发散尺度下不变。随机(x,alpha)的端点事件为零测。"
+    },
+    {
+      "id": "unpublished-inputs",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806971",
+      "location": "references[32]与[42]",
+      "finding": "Discrepancy of linear forms和Generic points on the staircase在报告中为in preparation；保持该版本状态，不宣称这些原始证明已公开核读。"
+    }
+  ],
+  "terminology_checks": [
+    {
+      "url": "https://www.bananaspace.org/wiki/遍历论",
+      "attempted_at": "2026-10-25",
+      "status": "unavailable",
+      "result": "web工具报告not accessible；未读取条目，不宣称术语已经与香蕉空间核对。"
+    },
+    {
+      "url": "https://www.bananaspace.org/wiki/傅里叶级数",
+      "attempted_at": "2026-10-25",
+      "status": "unavailable",
+      "result": "web工具报告not accessible；继续使用站内Fourier称谓，待核。"
+    },
+    {
+      "url": "https://www.bananaspace.org/wiki/中心极限定理",
+      "attempted_at": "2026-10-25",
+      "status": "unavailable",
+      "result": "HTTP403；复用既有3806，未声称成功访问。"
+    }
+  ],
+  "coordination": {
+    "scope": "Only trees/math/dynamics/rotations-resonances/4S*.tree, trees/references/icm2026-dolgopyat.tree, research/plenary-dolgopyat-packet.json.",
+    "shared_registers_navigation_queue": "Parent owned; untouched.",
+    "prewrite_notice": "Sent via commentary with planned definitions/reused IDs before writing. send_message_to_thread rejected native ancestor target; no native collaboration messaging tool exposed.",
+    "commit_push_sync_full_build": "Not run."
+  },
+"validation": {
+    "status": "passed-targeted-source-checks",
+    "scope": "Only owned sources; no all-site build, source synchronization, navigation/register edits, commit, push or rendered-page QA.",
+    "checked_at": "2026-10-25",
+    "tree_files": 22,
+    "atomic_pages": 20,
+    "katex_formulas": 431,
+    "prerequisite_edges": 60,
+    "reviewed_reused_count": 33,
+    "structural_findings": [],
+    "source_sha256": {
+      "4S00": "5ef26da0866d9c619ba1728bf8abe7b1ffa858fe18021564a65f9ca1331ab73f",
+      "4S01": "4dd0975c986485a9096d33b00fa20c61193a0ac664a687ca034de3b6fea3ca5a",
+      "4S02": "77a976f47e4a0afb04e8a4ea4f87f246b1b68a1f9e197425ae7902d959fbae3f",
+      "4S03": "821ed7832929657bde8a90d9acc1e285d5b3e7e4f498e67aeaf8f9b073137d53",
+      "4S04": "dfd66486b1f2f610f24d6cd6122465ef8dc3da3e591af849c519251cdc30c084",
+      "4S05": "e55114cc84290b6b0d78bf8414fade85c8eb3b828e4fc11dddd03c38d69c0a1c",
+      "4S06": "be6ce2ebfacbf860e54613bd7c8717cddc43d9e086e7339fd1fe968c4276f023",
+      "4S07": "9dafdcc1717ee61bea07bc07580ae5778b5dab5f13330fe9729d39af182cb3c9",
+      "4S08": "6bb528157b78c290559d4fc1146ed76bf263a2600233930500c9e273d5844703",
+      "4S09": "d1062c294e4161a2cc36682159c5c7f214dd77536cefc884b68466b1176417e0",
+      "4S0A": "e47bdf01dec7c5456476e9fe39144f739102cb48c85830a5828e36db1c55f1b2",
+      "4S0B": "1e8a978e0e04e0c72c31ced7d368613e48b2c4a8ebb50c1140d10250942f0947",
+      "4S0C": "6b567425f450ed92361bda40c1d1916981b64ed2dfa805a04f37b273dbb10459",
+      "4S0D": "2e87c72d86b56c5954fa4c05b82dbdf1fbdddb2551b7a025576eb06c86a0cf0b",
+      "4S0E": "d9503aae259e71f192c092f45f0ad3a1e4a8abf116d2131c257f289e1a60c711",
+      "4S0F": "8209cf3e387884b7ffa00a6d1ae5da33f9042e7578530807636a7d16393d0025",
+      "4S0G": "d65a5d2550582da08477523351f4ef47d55fa39a4c28e722b8ddd045c7f04262",
+      "4S0H": "c3b8fc95503299203fe45ed04b4a2d2549a1fee758112cf252499cdaf859d7f6",
+      "4S0I": "1098997ca3a079ea7051400b8af41cc8d883305648f10e1ec1b98f64d2c6d6a3",
+      "4S0J": "8581e36137a7fe9f34958ffae22f3b5caeaa43eaee47a2d779e5779d18591e7f",
+      "4S0K": "1bd6768b48d185dc9fb71fe39770b05494205f443eb046a8a94bc7ea1aad707c",
+      "icm2026-dolgopyat": "f4b6e375136576a2eae6914271516fa9a639ed1c5445433ebaf9c1ad21f06822"
+    },
+    "outline_paragraphs": 8,
+    "katex_version": "0.16.11",
+    "checks": [
+      "22 tree IDs unique within root trees; all internal links resolve; 20 atoms and reference reachable from 4S00.",
+      "Metadata, proof_scope, claim_sources and prerequisites cover all 22 tree files; subject_ids exactly 0069/006C/0063; outline/reference prerequisites empty.",
+      "All 60 prerequisite edges have body links; owned prerequisite graph acyclic; 33 reused pages read.",
+      "431 balanced math groups pass KaTeX with strict error mode; metadata order, editorial rules, control bytes and literal half-open interval scan pass.",
+      "4S0B half-open interval uses lparen/rbrack. 132B explicitly proves arbitrary-dimensional product-Fejer uniform approximation.",
+      "500 finite geometric-sum checks, 20 finite Fourier energy checks, 1920 convergent-denominator interval checks, 12 ball-integral quadratures, 240 Dani rescaling checks and 45 finite-atom enumerations pass.",
+      "Explicit quadratic matrix identities checked exactly in Q(sqrt(2)); numerical checks do not certify any cited research-level limit theorem.",
+      "No full Forester build, Forester parser invocation or rendered-page inspection; parent owns integration and global validation."
+    ],
+    "mathematical_recomputation": {
+      "seed": 20261025,
+      "geometric_sum_checks": 500,
+      "finite_fourier_energy_checks": 20,
+      "convergent_interval_checks": 1920,
+      "ball_integral_checks": 12,
+      "dani_checks": 240,
+      "finite_atom_checks": 45,
+      "quadratic_field_exact": true,
+      "max_geometric_error": 4.662337102147155e-12,
+      "max_fourier_energy_error": 8.029132914089132e-13,
+      "max_ball_integral_error": 4.3021142204224816e-16,
+      "max_dani_relative_error": 6.10056303648861e-16,
+      "max_sampled_convergent_discrepancy": 1.5595881915651262
+    }
+  }
+}

@@ -1,0 +1,18 @@
+\title{无限体积标架流的局部混合}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hee Oh 报告](icm2026-hee-oh)，定理7.2、§7.3、定理7.5；测度次序按正向流统一}
+
+\p{设 #{\Gamma<G=\operatorname{PSL}_2(\mathbb C)} 无挠、[几何有限](4T05)、实 Zariski 稠密，且不是[格](2D01)。令 #{X=\Gamma\backslash G}，#{dx} 为由[Haar 测度](00T1)诱导的右不变商测度，#{a_t=\operatorname{diag}(e^{t/2},e^{-t/2})} 作用为标架流。此时[临界指数](4T07) #{\delta<2}。}
+\p{取基点 #{o} 的视觉球面概率测度 #{m_o} 和[Patterson–Sullivan 测度](4T09) #{\nu_o}。Burger–Roblin 测度由 Hopf 坐标中的}
+##{d\widetilde m^{\mathrm{BR}}(v)
+=e^{\delta\beta_{v^+}(o,p(v))+2\beta_{v^-}(o,p(v))}
+d\nu_o(v^+)\,dm_o(v^-)\,ds}
+\p{诱导；#{m^{\mathrm{BR}*}} 交换正、负端点的角色。把这些测度与[BMS 测度](4T0K)用旋转纤维上的概率 Haar 测度提升到标架丛；#{dx} 采用与双视觉测度 Hopf 公式相容的归一化。}
+\p{Roblin–Winter 局部混合定理断言，对任意实值连续紧支撑函数 #{f_1,f_2\in C_c(X)}，}
+##{\lim_{t\to\infty}e^{(2-\delta)t}\int_X f_1(xa_t)f_2(x)\,dx
+=\frac{m^{\mathrm{BR}*}(f_1)m^{\mathrm{BR}}(f_2)}{|m^{\mathrm{BMS}}|}.}
+\p{记号 #{m(f)} 表示 #{\int f\,dm}。紧支撑保证右侧积分有限，即使 Burger–Roblin 测度总体积无穷。因 #{2-\delta>0}，未重标的相关函数趋零；乘以明确的指数因子后，极限仍记录非平凡的位置分布。}
+\p{\strong{时间平移核对。}记 #{R_{a_s}(x)=xa_s}、#{k=2-\delta}。正向移动使正端点的 Busemann 值增加 #{s}，负端点的值减少 #{s}，故上述密度给出 #{m^{\mathrm{BR}}(f\circ R_{a_s})=e^{ks}m^{\mathrm{BR}}(f)}，而 #{m^{\mathrm{BR}*}(f\circ R_{a_s})=e^{-ks}m^{\mathrm{BR}*}(f)}。左侧极限在把 #{f_1} 换成 #{f_1\circ R_{a_s}} 时也乘 #{e^{-ks}}，因此 #{f_1} 必须与 #{m^{\mathrm{BR}*}} 配对。}
+\p{\strong{定理出处。}报告定理7.2引用 Roblin 的测地流结果及 Winter 的标架流推广；此处采用与§7.3测度定义及定理7.5一致的次序。研究证明由有限 BMS 测度的混合及横截交会论证导出；该极限式本身不包含指数误差项。}

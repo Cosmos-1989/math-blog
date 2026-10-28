@@ -48,8 +48,11 @@ try {
       checks.push({id, width, overflow, scrollableDisplays: displayScrolls.length,
         formulas: await body.locator('.katex').count()});
     }
-    for (const id of [...record.reports.map(report => report.outline), ...(record.navigation_checks ?? ['0BL0'])]) {
-      await page.goto(`${base}${record.subject}/`);
+    const routes = [...record.reports.map(report => ({id: report.outline,
+      subject: record.report_landings?.[report.outline] ?? record.subject})),
+      ...(record.navigation_checks ?? ['0BL0']).map(id => ({id, subject: record.subject}))];
+    for (const {id, subject} of routes) {
+      await page.goto(`${base}${subject}/`);
       await page.locator(`article > section > details > .tree-content a[href="/${id}/"]`).click();
       await page.waitForURL(`${base}${id}/`);
       await page.goto(`${base}${id}/index.xml?reading=topology#top`);

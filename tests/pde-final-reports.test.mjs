@@ -38,10 +38,11 @@ test('all fourteen official PDE reports have topics without double-counting Zaag
   assert.equal(coverage.counts.reports_without_dedicated_topic, 0);
   assert.equal(coverage.counts.dedicated_topics_total, 14);
   const topics = listedTopics(note('006A'));
-  assert.deepEqual(topics.slice(0, 17), [
-    '2A00', '2700', '2C00', '4000', '4100', '4200', '4300', '4400', '4500', '4600',
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline),
+    '4000', '4100', '4200', '4300', '4400', '4500', '4600',
     '4700', '4800', '4900', '4A00', '2G00', '1200', '2I00',
-  ]);
+  ];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   for (const report of reports) {
     assert(files.has(report.outline) && files.has(report.reference), report.doi);
     assert.equal(topics.filter(id => id === report.outline).length, 1, report.doi);

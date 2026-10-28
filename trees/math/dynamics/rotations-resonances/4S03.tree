@@ -1,0 +1,14 @@
+\title{无整数共振的环面旋转具有一致时间平均}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§3 的 Kronecker 序列背景；独立 Fourier 证明}
+
+\p{设 #{T_\alpha:x\mapsto x+\alpha} 为[环面旋转](4S01)，#{m} 为体积一的 Haar 测度。以下条件等价：每个非零 #{k\in\mathbb Z^d} 都满足 #{k\cdot\alpha\notin\mathbb Z}；对每个连续 #{f:\mathbb T^d\to\mathbb C}，都有}
+##{\sup_{x\in\mathbb T^d}\left|\frac 1N\sum_{j=0}^{N-1}f(x+j\alpha)-\int f\,dm\right|\longrightarrow 0.}
+
+\p{\strong{充分性。}先取单个模态 #{f(x)=e^{2\pi ik\cdot x}}。#{k=0} 时等式恒成立；#{k\ne 0} 时积分为零，而时间平均的模由[指数和公式](4S02)至多为 #{1/(2N\|k\cdot\alpha\|_{\mathbb R/\mathbb Z})}，与 #{x} 无关并趋于零。线性相加便得到所有有限三角多项式的结论。}
+
+\p{[乘积 Fejér 核的一致逼近](132B)保证：给定 #{\varepsilon>0}，存在有限三角多项式 #{P}，使 #{\sup|f-P|<\varepsilon}。将时间平均和空间积分中的 #{f} 都换成 #{P}，总误差至多 #{2\varepsilon}。先令 #{N\to\infty}，再令 #{\varepsilon\downarrow 0}，得到结论。}
+
+\p{\strong{必要性。}若非零 #{k} 满足 #{k\cdot\alpha\in\mathbb Z}，取 #{f(x)=e^{2\pi ik\cdot x}}。它的空间积分为零，而沿每条轨道恒定，时间平均为 #{f(x)}，模长为一，不能趋于零。}

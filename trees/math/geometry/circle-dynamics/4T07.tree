@@ -1,0 +1,12 @@
+\title{双曲轨道增长指数不依赖基点}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Hee Oh 报告](icm2026-hee-oh)，定理2.6及其前后定义}
+
+\p{设 #{\Gamma} 是无挠非初等[Kleinian 群](2F07)。对 #{o\in\mathbb H^3} 定义 #{N_o(T)=\#\{\gamma\in\Gamma:d(o,\gamma o)\le T\}}，以及临界指数}
+##{\delta_\Gamma=\limsup_{T\to\infty}\frac{\log N_o(T)}T.}
+\p{离散作用使每个计数有限。该指数不依赖 #{o}，且等于 Poincaré 级数 #{\sum_{\gamma\in\Gamma}e^{-s d(o,\gamma o)}} 的收敛临界值。}
+\p{\strong{基点不变性。}若 #{D=d(o,o')}，三角不等式和等距性给出 #{|d(o,\gamma o)-d(o',\gamma o')|\le 2D}，故 #{N_o(T-2D)\le N_{o'}(T)\le N_o(T+2D)}。取对数、除以 #{T} 并令 #{T\to\infty}，上下界给出相同指数。}
+\p{\strong{级数判据。}按整数区间 #{m\le d(o,\gamma o)<m+1} 分组。若 #{s>\delta_\Gamma}，选 #{\delta_\Gamma<b<s}，尾和不超过 #{\sum_m e^{-sm}e^{b(m+1)}}，所以收敛。若 #{0<s<\delta_\Gamma}，选 #{s<b<\delta_\Gamma}，存在任意大的 #{T} 使部分和至少 #{e^{-sT}N_o(T)\ge e^{(b-s)T}}，所以发散。这个论证也用于[简单根临界指数](2F0E)；临界点本身的敛散性另需判断。}
+\p{当 #{\Gamma} [几何有限](4T05)时，Sullivan 的维数定理给出 #{\delta_\Gamma=\dim_H\Lambda}，右端为极限集的[Hausdorff 维数](1202)。这是将内部轨道增长与边界分形大小联系起来的研究定理，见报告定理2.6；上述初等论证只证明基点不变性与级数判据。}

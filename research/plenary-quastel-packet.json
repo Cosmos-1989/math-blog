@@ -1,0 +1,609 @@
+{
+  "date": "2026-10-25",
+  "report": {
+    "speaker": "Jeremy Quastel",
+    "title": "The KPZ Fixed Point",
+    "outline": "4U00",
+    "prefix": "4U",
+    "reference": "icm2026-quastel",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+    "doi": "10.1137/25M1805643",
+    "pages": "272-301",
+    "license": "CC BY 4.0",
+    "question": "不同一维随机增长模型在减去平均漂移、采用1:2:3尺度并正确变换初值后，何时趋于同一个高度函数Markov过程；其共同随机核、路径几何与分布的KP方程如何联系？",
+    "reading_scope": "完整读取正式HTML数学主体§§1.1-1.4、2.1-2.7、3.1-3.2、4.1-4.2、5.1-5.4、§6全部21项FAQ及两条脚注；重叠窗口覆盖HTML lines 87-914。核对页码272-301、作者、DOI、2026-07-13发布日期与CC BY 4.0。未读取原PDF，也未将报告所引MQR、景观、KPZ方程收敛等原始论文登记为已阅读全文。本批直接研究来源只有这篇完整报告，基础页面另作站内复用。",
+    "proof_scope": {
+      "4U00": {
+        "status": "narrative-outline",
+        "scope": "问题、尺度、两个微观模型、初值拓扑、共同环境、几何与可积概率八段叙述；覆盖全部24个原子页，区分已证模型与一般普适性。"
+      },
+      "4U01": {
+        "status": "definition-and-local-calculation",
+        "scope": "实L2(dt dx)上的中心Gaussian族及协方差定义；确定性积分等距。未将已有有限种有向穿越白噪声4C0C误当成时空噪声。"
+      },
+      "4U02": {
+        "status": "local-proof",
+        "scope": "用测试函数换元逐项计算缩放协方差，得到sqrt(ab)及epsilon^((z+1)/2)；等式只在广义随机场分布意义成立。"
+      },
+      "4U03": {
+        "status": "definition-with-cited-existence",
+        "scope": "有界连续h0、nu,D>0、lambda非零；写出乘性热方程及mild积分、正性和适定性作为引用输入；光滑链式法则不替代Itô重整化。"
+      },
+      "4U04": {
+        "status": "local-scaling-proof",
+        "scope": "一般chi,z所有幂次、中心化项、布朗增量方差、chi=1/2与z=3/2；配平不作为概率收敛证明。"
+      },
+      "4U05": {
+        "status": "definition-and-local-proof",
+        "scope": "UC含负无穷、不恒负无穷、上半连续、线性上界；指数竖坐标闭下图集，闭性与上半连续的等价，序列收敛准则；共同上界另列。"
+      },
+      "4U06": {
+        "status": "definition-and-local-proof",
+        "scope": "窄楔定义和b-n|x-y|的下图集收敛；区分负无穷高度与随机热方程点质量初值。"
+      },
+      "4U07": {
+        "status": "definition-and-local-calculation",
+        "scope": "独立边Poisson时钟定义TASEP，斜率2eta-1、右跳降2、h(t,0)=h(0,0)-2J0；ASEP仅比较参数，不导入广义极限定理。"
+      },
+      "4U08": {
+        "status": "local-proof",
+        "scope": "a,b属于正负一时的指示函数恒等式；四种局部配置和峰谷翻转漂移。"
+      },
+      "4U09": {
+        "status": "definition-and-local-construction",
+        "scope": "成核速率2、横向速度1、有限影响锥、共同Poisson环境与最大路径递归；不将模型构造当成不动点收敛证明。"
+      },
+      "4U0A": {
+        "status": "local-proof",
+        "scope": "菱形面积t²/2、Jacobian2、Poisson(t²)、坐标偏序与均匀排列秩的对应；未证明BDJ渐近。"
+      },
+      "4U0B": {
+        "status": "cited-research-construction",
+        "scope": "用PNG有限窄楔近似固定漂移2epsilon^-1t，明确有限空间点联合分布层次；一般UC初值的共同上界与下图集连续延拓、概率核及Chapman-Kolmogorov为引用构造，不声称路径空间收敛。"
+      },
+      "4U0C": {
+        "status": "cited-scaling-with-local-corollary",
+        "scope": "引用过程的精确缩放；逐项证明初值f_a(y)=a f(a^-2y)及窄楔/平坦时t^(1/3)、t^(-2/3)；布朗平稳定理已拆至4U0O。"
+      },
+      "4U0D": {
+        "status": "cited-research-construction",
+        "scope": "有向景观的特定共同环境联合极限、独立时间区间、拼接和变分表示作为引用；Airy薄片为单个时间切片；没有以所列性质宣称唯一刻画。"
+      },
+      "4U0E": {
+        "status": "local-proof-from-explicit-kernel-axiom",
+        "scope": "在实值拼接核及有限传播值假设下，上确界交换、max保持、次序、常数平移与有界差估计；强调共同耦合。"
+      },
+      "4U0F": {
+        "status": "local-proof",
+        "scope": "usc初值线性上界、连续A、A<=C+eta x²且eta<1/t；二次强制上界、紧性和上半连续取最大值；a>1/t的爆炸反例。"
+      },
+      "4U0G": {
+        "status": "conditional-local-proof",
+        "scope": "显式假定连续最优路径存在，介值交点、交换后段、四点不等式及差值单调性；不导入局部常数性或维数1/2。"
+      },
+      "4U0H": {
+        "status": "local-proof-with-source-correction",
+        "scope": "方差参数2的Brownian核；两个窄楔的命中是并事件，分别写两个单命中核及双命中核，再容斥；联合密度与条件密度区分。"
+      },
+      "4U0I": {
+        "status": "local-proof",
+        "scope": "可逆实方阵加theta uv^T的行列式公式，用交替多线性逐列展开；应用于PNG秩一跳跃；无限维迹类和方程唯一性不在此证明。"
+      },
+      "4U0J": {
+        "status": "cited-local-PDE-and-conditional-potential-proof",
+        "scope": "确定性UC初值；引用核心为phi=partial_r²logF的局部KP-II。令E为势方程左侧，证明E_rr=0；仅在四项导数上尾趋零时消去ar+b。F趋1本身不够。"
+      },
+      "4U0K": {
+        "status": "conditional-local-proof",
+        "scope": "明确假设平滑插值的局部C4收敛及缩放Toda恒等式，Taylor对称展开和指数展开推出无积分常数的势方程；不以概率收敛代替导数收敛。"
+      },
+      "4U0L": {
+        "status": "local-counterexample",
+        "scope": "f_n=max(0,1-n²|x-1/n|)逐点趋0，但下图集趋于原点高1的函数；说明有限维分布与函数空间弱收敛、局部一致收敛不可混淆。"
+      },
+      "4U0M": {
+        "status": "local-proof",
+        "scope": "零初值EW随机卷积的热核L²积分及时间积分，方差D/sqrt(2pi nu)*sqrt(t)、标准差t^(1/4)。"
+      },
+      "4U0N": {
+        "status": "local-example-proof",
+        "scope": "确定性抛物线核配方求最优中间点、拼接与1:2:3齐次；平坦和窄楔演化无随机涨落，故尺度不充分。"
+      },
+      "4U0O": {
+        "status": "cited-stationarity-with-normalization-check",
+        "scope": "独立于未来环境的sqrt2双边标准Brownian初值；每固定时间减去原点高度后的整个空间过程同分布；绝对高度与跨时间独立性不在结论中。"
+      },
+      "icm2026-quastel": {
+        "status": "bibliographic-reference",
+        "scope": "正式版本、30页、发布日期、DOI、CC BY 4.0及中文改编署名；双窄楔勘误与GOE冲突说明。"
+      }
+    },
+    "claim_sources": {
+      "4U00": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§§1-6, including §5.4 and all 21 FAQ entries"
+        }
+      ],
+      "4U01": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§1.1 equation (1.1), white noise definition; L2 formulation supplied locally"
+        }
+      ],
+      "4U02": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§1.3 equation (1.11), covariance calculation behind noise scaling"
+        }
+      ],
+      "4U03": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§§1.1-1.2 equations (1.1), (1.4), (1.6); equation (1.6) typesetting repaired"
+        }
+      ],
+      "4U04": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§§1.3-1.4 equations (1.9)-(1.13)"
+        }
+      ],
+      "4U05": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.1 state space and topology; end §3.1 linear upper bound and continuity"
+        }
+      ],
+      "4U06": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.1 narrow wedges; §3.2 narrow wedge examples; local approximation proof"
+        }
+      ],
+      "4U07": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§5 opening and §5.1 height/current convention"
+        }
+      ],
+      "4U08": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§5.1 equation (5.1)"
+        }
+      ],
+      "4U09": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.1 PNG dynamics and equation (2.3); §2.2 path representation"
+        }
+      ],
+      "4U0A": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.2 PNG droplet and longest increasing subsequence"
+        }
+      ],
+      "4U0B": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§3.1 equations (3.1)-(3.3), C_epsilon=2epsilon^-1, end §3.1; §3.2 equation (3.17) and following paragraph"
+        }
+      ],
+      "4U0C": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§3.2 property (1), paragraph following equation (3.18)"
+        }
+      ],
+      "4U0D": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§3.2 equations (3.20), (3.22), (3.26)-(3.27); FAQ 14"
+        }
+      ],
+      "4U0E": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.1 equation (2.3); §3.2 equations (3.19), (3.22), (3.27)"
+        }
+      ],
+      "4U0F": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "End §3.1 explosion example and linear upper bound; equation (3.22); deterministic lemma added locally"
+        }
+      ],
+      "4U0G": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§3.2 equations (3.28)-(3.29) and their proof"
+        }
+      ],
+      "4U0H": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§3.1 after equation (3.12), two narrow wedges example; equations (3.13)-(3.14)"
+        }
+      ],
+      "4U0I": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.5 equation (2.12); finite-dimensional algebra supplied locally"
+        }
+      ],
+      "4U0J": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "Theorem 4.1 and equation (4.3); potential equation normalization proved locally, not inferred solely from formal equation (4.6)"
+        }
+      ],
+      "4U0K": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§4.1 equations (4.4)-(4.6); explicit C4 hypothesis added locally"
+        }
+      ],
+      "4U0L": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§2.1 hypograph topology; counterexample and bounded-continuous-functional explanation supplied locally"
+        }
+      ],
+      "4U0M": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§1.1 equations (1.3)-(1.4)"
+        }
+      ],
+      "4U0N": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "Equations (3.22), (3.27); FAQ 4, local deterministic comparison"
+        }
+      ],
+      "4U0O": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "§3.2 property (2), compared with property (1)"
+        }
+      ],
+      "icm2026-quastel": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+          "location": "Title/author/pages; Information & Authors copyright and history; §3.1 and §4.1 normalization comparison"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "§§2.4-2.7完整PNG命中核、Fredholm行列式、Kolmogorov方程唯一性、Bessel/Gessel公式、多线PNG及非交换Toda。已读报告的数学主体，仅展开容斥与有限秩一代数；原始长证明及迹类估计待专项读取。",
+      "§3.1 Brownian散射算子的完整定义、半轴分裂和扩展核。报告明确裸T^h不是可直接操作的独立算子；本批不把形式共轭冒充有界算子等式。",
+      "§3.2窄楔/平坦/平稳的Tracy-Widom与Baik-Rains精确常数、Airy线族Brownian Gibbs刻画、测地线局部合并及异常集维数1/2。已读，未展开；GOE前后常数冲突需与原始公式交叉核定。",
+      "§§4.1-4.2矩阵KP、Painleve II约化、KPZ方程的特殊初值Laplace变换以及Baik-Rains反导数。已读，未建立同义分布与特殊函数定义，未引用未经独立核定的常数。",
+      "§§5.2-5.3 TASEP有限粒子公式、Hirota微观方程、半空间Pfaffian转移与边界参数alpha。已读，未展开；学位论文中宣布的结果未升格为本批自证结论。",
+      "§5.4 KPZ方程、一般ASEP及六顶点模型收敛的精确初值和路径空间假设，需逐篇阅读全文。此批只按报告注明已有结果及其范围，不给全模型统一拓扑定理，也不把含错误位移论证的[90]作为识别极限的依据。",
+      "§6周期、高维、淬火增长、无向模型和真实系统实验。完整阅读，不作定理化导入；普适性猜想与已证弱噪声/弱非对称结果分开。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4U03：乘性随机热方程在有界连续h0下的mild解适定性、严格正性、Hopf-Cole与重整化解释的一致性。只引用报告§1.2；局部光滑计算不替代该理论。",
+      "4U0B：PNG精确核渐近、有限窄楔与一般UC初值的连续延拓、概率核及Chapman-Kolmogorov一致性。没有展开原始MQR构造证明，没有宣称时间路径空间收敛。",
+      "4U0C与4U0O：不动点的过程缩放不变性和Brownian空间增量平稳性来自报告§3.2；本地只复算初值及方差归一化。",
+      "4U0D：有向景观和Airy薄片的联合随机场存在、增长界、变分表示及最优路径存在。4U0E-F-G-N的证明分别在明确核、增长和路径假设下成立，不反过来证明随机景观存在。",
+      "4U0J：研究定理的Fredholm核微分、迹类估计和KP-II推导。引用局部KP式；本地只证明势方程积分常数怎样在显式上尾条件下消失。",
+      "4U0A未证明BDJ的最长递增子序列渐近；4U0I未证明Fredholm行列式的无限维延拓；4U0K不证明PNG对数分布具有所假设C4收敛。"
+    ],
+    "subject_ids": [
+      "006C",
+      "006B",
+      "006A",
+      "0072"
+    ]
+  },
+  "prerequisites": {
+    "4U00": [],
+    "4U01": [
+      "00XV",
+      "00Q3",
+      "0A6A",
+      "0N0R",
+      "00L2",
+      "00L3"
+    ],
+    "4U02": [
+      "4U01"
+    ],
+    "4U03": [
+      "4U01",
+      "0A32",
+      "4M13"
+    ],
+    "4U04": [
+      "4U03",
+      "4U02",
+      "0N0S"
+    ],
+    "4U05": [
+      "00FN"
+    ],
+    "4U06": [
+      "4U05",
+      "00MG",
+      "4U03"
+    ],
+    "4U07": [
+      "4C02",
+      "4G01"
+    ],
+    "4U08": [
+      "4U07"
+    ],
+    "4U09": [
+      "4U05",
+      "4C02",
+      "0F63",
+      "4U06"
+    ],
+    "4U0A": [
+      "4U09",
+      "4U06",
+      "00L6"
+    ],
+    "4U0B": [
+      "4U05",
+      "00QD",
+      "4U09",
+      "4U06"
+    ],
+    "4U0C": [
+      "4U0B",
+      "4U06"
+    ],
+    "4U0D": [
+      "0F63",
+      "4U09",
+      "4U04",
+      "4U05",
+      "4U0B"
+    ],
+    "4U0E": [
+      "4U0D"
+    ],
+    "4U0F": [
+      "4U05",
+      "4U0D",
+      "0A3A"
+    ],
+    "4U0G": [
+      "4U0D",
+      "0A44"
+    ],
+    "4U0H": [
+      "0N0S",
+      "4U05",
+      "4U06"
+    ],
+    "4U0I": [
+      "00GK",
+      "0A40"
+    ],
+    "4U0J": [
+      "4U0B",
+      "0A32",
+      "0A3D"
+    ],
+    "4U0K": [
+      "0A32",
+      "0I8J"
+    ],
+    "4U0L": [
+      "4U05",
+      "00LA",
+      "00MG"
+    ],
+    "4U0M": [
+      "4U01",
+      "4U03",
+      "0I8L"
+    ],
+    "4U0N": [
+      "4U0D"
+    ],
+    "4U0O": [
+      "0N0S",
+      "00L3",
+      "4U0B"
+    ],
+    "icm2026-quastel": []
+  },
+  "reviewed_reused_ids": [
+    "00Q0",
+    "00Q1",
+    "00Q2",
+    "00Q3",
+    "00QD",
+    "00XV",
+    "00L0",
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L6",
+    "00LA",
+    "0N0R",
+    "0N0S",
+    "4C02",
+    "4C0C",
+    "4G01",
+    "4M13",
+    "00FN",
+    "00MG",
+    "0A32",
+    "0A3D",
+    "0A6A",
+    "0A3A",
+    "0A44",
+    "0F63",
+    "00GK",
+    "0A40",
+    "0I8J",
+    "0I8L",
+    "4R0T",
+    "0S0R"
+  ],
+  "source_readings": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1805643",
+      "read_at": "2026-10-25",
+      "status": "full-mathematical-body-read",
+      "scope": "正式HTML §§1-6及全部21项FAQ与脚注；数学主体lines87-914，元数据lines54-65和1541-1565。正文的定理与推导已通读；所引外部研究论文只保留报告级归属，未计作读取。"
+    }
+  ],
+  "coordination": {
+    "new_foundation_ids": {
+      "4U01": "时空 Gaussian 白噪声；L2(dt dx)，已有 4C0C 限于有向穿越的有限种空间噪声",
+      "4U02": "时空白噪声的缩放等式",
+      "4U03": "KPZ 方程的 Hopf-Cole 解释",
+      "4U04": "KPZ 的 1:2:3 缩放系数计算",
+      "4U05": "上半连续高度函数、下图集与局部闭集收敛",
+      "4U06": "窄楔初值与其逼近",
+      "4U07": "TASEP 及高度编码",
+      "4U08": "TASEP 高度生成元的四种局部情形",
+      "4U09": "PNG 动态"
+    },
+    "reuse_ids": [
+      "00Q0",
+      "00Q2",
+      "00Q3",
+      "00L0",
+      "00L1",
+      "00L3",
+      "00L6",
+      "00LA",
+      "0N0R",
+      "0N0S",
+      "4C02",
+      "4G01",
+      "00FN",
+      "00MG",
+      "0A32",
+      "0A6A",
+      "0A3A",
+      "0F63"
+    ],
+    "not_creating": [
+      "一般随机过程",
+      "一般分布收敛",
+      "中心极限定理",
+      "抽象格点模型"
+    ],
+    "message_attempt": "用户授权后尝试向 math-blog 父代理发送此清单；send_message_to_thread 拒绝向原生祖先发送；当前工具未开放 native collaboration messaging。此专属 packet 即供主代理读取的去重清单。",
+    "status": "final-owned-packet",
+    "final_foundation_note": "4U0O从4U0C拆出，缩放与Brownian平稳性分为两页；4U0I查过4R0T与0S0R，前者为逆矩阵公式，后者有嵌入的Sylvester降维恒等式，均非同义独立原子。保留4U0I并复用0A40的交替多线性基础。"
+  },
+  "module_decisions": [
+    "按数学问题组织为尺度与模型、初值与拓扑、共同核与变分几何、分布方程四组；不按原报告章节逐节建目录。",
+    "新增一般时空白噪声，因为4C0C仅定义有限种有向穿越的空间噪声；复用其L2和Brownian基础，不挪动旧页。",
+    "没有建立一般随机过程、一般分布收敛、中心极限定理或抽象格点模型，以免与Dolgopyat工作重复；4U0L只承担KPZ高度拓扑的具体反例及所需弱收敛说明。",
+    "4U0C与4U0O按父代理建议拆分，后者专门承担引用的平稳性定理；0C到0O及0O到0C的相关链接不登记为循环前置。",
+    "KP势方程不从形式Toda计算升级为已证概率结论；4U0J引用局部KP式，4U0K给明确C4假设的条件极限。"
+  ],
+  "source_findings": [
+    {
+      "location": "Equation (1.6)",
+      "finding": "正式HTML的随机热方程右端显示为nu partial_x²-beta Z，遗漏作用对象Z及噪声xi。4U03按§1.2的Hopf-Cole含义和beta定义写成nu Z_xx+(lambda sqrt(D)/nu)Z xi，mild形式明确给出。"
+    },
+    {
+      "location": "§3.1 two narrow wedges paragraph following (3.12)",
+      "finding": "原投影乘积只表示两处都命中，而hit hypograph对两个窄楔是至少一处命中。4U0H以事件容斥给修正式；4U0D未使用这个错误乘积。"
+    },
+    {
+      "location": "§3.1 flat-data paragraph, equation (3.23), versus §4.1 before (4.12)",
+      "finding": "前者F_GOE(2^(-1/3)r)，后者F_GOE(4^(1/3)t^(-1/3)r)归一化冲突。正文不引入GOE常数定理；需要原始源进一步核定，未凭印象选一个值。"
+    },
+    {
+      "location": "§2.5 after equation (2.13)",
+      "finding": "由I减去正整数区间上u<=h-r的投影，其行列式在h<=r时为1；可见HTML解释写成r<=h，方向与定理2.1分布事件相反。本批未转录该无限维推导。"
+    },
+    {
+      "location": "§5.1 paragraph before (5.1)",
+      "finding": "斜率2eta-1时每次右跳使h(j)降2，原点高度变化应为-2倍跨边通量。4U07显式固定锚点和因子，不沿用未注明因子的net flux文字。"
+    },
+    {
+      "location": "Theorem 4.1, equation (4.3), formal equation (4.6)",
+      "finding": "4U0J以phi的局部KP为引用核心；G势方程左侧E满足E_rr=0，只在列明导数上尾趋零时消去ar+b。避免仅凭F趋1或形式Toda极限移除积分常数。"
+    },
+    {
+      "location": "§5.4 and §6 FAQ 1,3,4",
+      "finding": "已证的可积模型与KPZ方程不能概括成所有随机增长模型；[90]位移识别有错但有紧性。4U00和packet保留此边界。"
+    }
+  ],
+  "terminology_review": {
+    "checked_at": "2026-10-25",
+    "url": "https://www.bananaspace.org/wiki/布朗运动",
+    "status": "unavailable",
+    "result": "web工具返回URL不可访问。未宣称香蕉空间术语一致；沿用已核读站内Brownian/Poisson定义，并给KPZ、PNG、TASEP、directed landscape英文名。",
+    "verified_terms": []
+  },
+  "parent_review": {
+    "date": "2026-10-25",
+    "note": "4U05",
+    "finding": "The closed-set upper-limit condition must quantify over every subsequence, not only full point sequences.",
+    "resolution": "Quantified over n_k for the upper limit; retained full-sequence approximation for the lower limit. Added the alternating constant-height counterexample to the regression tests.",
+    "snapshot_boundary": "The agent validation hashes below describe its pre-review handoff. Final source hashes and validation belong to the integrated manifest snapshots and parent verification record."
+  },
+  "validation": {
+    "status": "passed-targeted-source-checks",
+    "checked_at": "2026-10-25",
+    "scope": "Only owned 4U notes, reference and packet. No shared registry/navigation/theme/workflow changes, sync, full-site build, commit or push.",
+    "tree_files": 26,
+    "atomic_pages": 24,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "katex_formulas": 439,
+    "prerequisite_edges": 64,
+    "reviewed_reused_count": 32,
+    "structural_findings": [],
+    "checks": [
+      "26 owned tree IDs unique; internal links resolve; all 24 atoms reachable from 4U00.",
+      "All 64 prerequisite edges appear in body links, target non-outline pages, and form an acyclic owned dependency graph; outline/reference prerequisites empty.",
+      "proof_scope, claim_sources and prerequisites cover every owned page; subject_ids exactly 006C/006B/006A/0072.",
+      "439 brace-aware extracted formulas passed local KaTeX; canonical format, editorial rules, metadata, control-byte scan and Forester slash-path scan passed.",
+      "Actual Forester parser: forester query all forest.toml on an isolated temporary copy containing exactly these 26 trees, exit 0; no site build or output generation. Only notice: default forest.home used.",
+      "Exact rational checks: all four TASEP states; 1:2:3 coefficient powers; 1875 rank-one determinant cases; parabolic square completion; Toda coefficients; PNG area/Jacobian; 873 permutations of sizes 1 through 6 matched longest-chain and LIS counts; Boolean inclusion-exclusion.",
+      "Formal differential-polynomial computation in G jets verified E_rr equals the local KP expression; EW variance constant independently checked.",
+      "SymPy was unavailable; symbolic KP check was instead implemented directly using exact rational differential polynomials.",
+      "No full-site build or rendered-page inspection; parent owns integration and rendered QA."
+    ],
+    "source_sha256": {
+      "trees/math/probability/kpz-fixed-point/4U00.tree": "ecd11a91e7b6922bcff8d21b4244b0dfeac00a4f278aacc76f86832794b05a2f",
+      "trees/math/probability/kpz-fixed-point/4U01.tree": "f93b363ab743d13d088111d63a1b9617ee96b2903c5b46d3649bd8fa1bd39b00",
+      "trees/math/probability/kpz-fixed-point/4U02.tree": "159e6e778835a24283843fd0ae0da3eb3b7007ba4ac7d31f20060b2a90da06d6",
+      "trees/math/probability/kpz-fixed-point/4U03.tree": "9690f7d1253bd5a4c19e73156205400e70b07efef51b58c400241bee46c48624",
+      "trees/math/probability/kpz-fixed-point/4U04.tree": "97f8a5cbe9773ac4c25e2c342f15124cbe2063e7aa83a93df1116061d81ee8f0",
+      "trees/math/probability/kpz-fixed-point/4U05.tree": "5646416fe7b4065fc58fa85bc2d00ff795be3179d0347cbeaa1031e3378f92eb",
+      "trees/math/probability/kpz-fixed-point/4U06.tree": "621b5f49dd4f8b848e12ad70a96fa9864895c91ce26484a88e78295d81efa672",
+      "trees/math/probability/kpz-fixed-point/4U07.tree": "6b7a2f75865eec2eb1a1f4c4dd1579eba56b1938431ee0dfe72e08902b038527",
+      "trees/math/probability/kpz-fixed-point/4U08.tree": "85cfbf1a028c4945bfad4c55a7630e2a9e68ec8f5f3e4da5f0b778651c341081",
+      "trees/math/probability/kpz-fixed-point/4U09.tree": "d79dc5205672dfed7c9e1a2f01005ab17402de97dc37c2e213ceb134a3c1f9db",
+      "trees/math/probability/kpz-fixed-point/4U0A.tree": "353a4abd92beeecebce12e3bd3f37bf1ef21633e14cc1072abd083f11b88e843",
+      "trees/math/probability/kpz-fixed-point/4U0B.tree": "3e3cd7d306c076b556e34cf785d4463839c4d21118d53a381a3d56b816299bbf",
+      "trees/math/probability/kpz-fixed-point/4U0C.tree": "e74e6af78e0bcd6299605b06d56f70f937caf30070ebb5592e1602e162b92eef",
+      "trees/math/probability/kpz-fixed-point/4U0D.tree": "3740c4546a2301daedfd6df1031ce9ef1bd631aa48c69d474cc4618b09f2918c",
+      "trees/math/probability/kpz-fixed-point/4U0E.tree": "4cea5f1c546e1b4fe01140b5f4caa5c4b293d473b66cf0361931cd48bb318a94",
+      "trees/math/probability/kpz-fixed-point/4U0F.tree": "d194aa8755a2f973d6fbd92115a7f958027a6f2b6683674a5a3c3be0a41190f4",
+      "trees/math/probability/kpz-fixed-point/4U0G.tree": "c17a366db0c31dd1356f12861ef2c62c27dda4cb5d74bb2a52a23d138114fb08",
+      "trees/math/probability/kpz-fixed-point/4U0H.tree": "f3ecb02202305fd9808205bfe9ca48c132205068c1fb208593585b49980b5176",
+      "trees/math/probability/kpz-fixed-point/4U0I.tree": "dbd14bab33b35e11094899ff7fb42e9cba3ec4611d566d1c3a9c5e8be0e1ccae",
+      "trees/math/probability/kpz-fixed-point/4U0J.tree": "3928fa3b68c5d2727d7fce7fa7353735effd1b1c9f1698561afa409c6d1c9234",
+      "trees/math/probability/kpz-fixed-point/4U0K.tree": "eb730a2e9200a1444d6927800a8c9d3ccb2981622b857badc320fbc2a19edd4a",
+      "trees/math/probability/kpz-fixed-point/4U0L.tree": "cbd9310e6b371341a35cdd8f1677f8d6698bc305aaff3b3e8669ed36818d33c1",
+      "trees/math/probability/kpz-fixed-point/4U0M.tree": "ad8671ba0dd5a1d30e4cbac7e52883e6a033bd513d7dfe546af6b724c0ec5bf6",
+      "trees/math/probability/kpz-fixed-point/4U0N.tree": "9d0b2e1df82c40e3721a4b423aa2fd7bb8886f317edc4609d04efd1b5d037dd6",
+      "trees/math/probability/kpz-fixed-point/4U0O.tree": "3bdd014b1f0f6d6fc27fa9fcb4753f9d0ea3f6fd82722c53940466e7a639ae2b",
+      "trees/references/icm2026-quastel.tree": "674703429de69eed823371f51182a1186cb17ad9c5517c4c8ed338db742edca7"
+    },
+    "rendered_full_site": false
+  }
+}

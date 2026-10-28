@@ -1,0 +1,15 @@
+\title{二次无理方向的对数重整化时间}
+\date{2026-10-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§2.3；独立矩阵计算}
+
+\p{取 #{\beta=\sqrt 2-1}、#{v=(\beta,1)^T}，并令[矩阵](00GK)及常数为}
+##{A=\begin{pmatrix}1&2\\2&5\end{pmatrix},\qquad\lambda=3+2\sqrt 2.}
+\p{则 #{\det A=1}、#{A\equiv I\pmod 2}，且 #{Av=\lambda v}。另一个特征值为 #{\lambda^{-1}=3-2\sqrt 2}，严格介于零和一之间。因此这个整数矩阵沿 #{v} 扩张、沿另一特征方向收缩。}
+
+\p{\strong{计算。}由 #{\beta^2+2\beta=1}，有 #{\lambda\beta=1+\sqrt 2=\beta+2}，#{\lambda=2\beta+5}，即得特征向量等式。行列式 #{5-4=1} 给出两个特征值的乘积为一。}
+
+\p{设一条平行于 #{v} 的线段长为 #{T\geq 1}，令 #{m=\lceil\log T/\log\lambda\rceil}。施加 #{A^{-m}} 后，其长度为 #{T\lambda^{-m}}，落在 #{\lparen\lambda^{-1},1\rbrack} 内。因此观察很长轨道所需的重整化次数为 #{m=(\log T)/(\log\lambda)+O(1)}。与[半圆返回斜积](4S0A)相应的旋转角为 #{\alpha=(\beta+1)/2=\sqrt 2 /2}。}
+
+\p{这项计算只确立尺度变化。要从中推出 #{\sqrt{\log N}} 的高斯涨落，还要证明重整化后的高度增量满足相应的概率极限定理，正如[时间高斯极限](4S07)所引用的曲面与符号动力学论证。}

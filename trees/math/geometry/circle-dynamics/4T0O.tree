@@ -1,0 +1,11 @@
+\title{多项式局部混合的回归积分阈值}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Hee Oh 报告](icm2026-hee-oh)，§8.3–8.4；积分检验补充}
+
+\p{设 #{\phi_t} 是测度空间 #{(X,m)} 上的[保测](00RR)流，即 #{\phi_0=\operatorname{id}}、#{\phi_{t+s}=\phi_t\phi_s}，且每个 #{\phi_t} 保持 #{m}。取有界可测函数 #{f\ge 0}，满足 #{0<m(f)<\infty}。假设相关函数 #{C_f(t)=\int_X f(\phi_t x)f(x)\,dm(x)} 局部可积，并存在整数 #{n\ge 1} 与 #{c>0} 使}
+##{C_f(t)\sim c\,t^{-(n-1)/2}\qquad(t\to\infty).}
+\p{则 #{\int_1^\infty C_f(t)\,dt} 发散恰当且仅当 #{n\le 3}。}
+\p{\strong{证明。}由渐近等价，充分大 #{t} 时有 #{(c/2)t^{-(n-1)/2}\le C_f(t)\le 2c\,t^{-(n-1)/2}}。令 #{p=(n-1)/2}。若 #{p\ne 1}，#{\int_1^T t^{-p}dt=(T^{1-p}-1)/(1-p)}；若 #{p=1}，积分为 #{\log T}。因此尾积分发散恰当且仅当 #{p\le 1}，即 #{n\le 3}。}
+\p{报告定理8.3在凸余紧、实 Zariski 稠密、各表示两两不共轭的[自联结](4T0N)中，对极限锥内部方向的高秩 BMS 测度给出上述幂次。其几何来源是紧流空间上一个 #{\mathbb R^{n-1}} 方向的扩散。定理8.4再用 Hopf–Tsuji–Sullivan 型判据得到方向流的遍历性阈值。单独的积分检验只给出相关质量的可积性；从它到遍历性还需要那一动力学判据及平衡性假设。}

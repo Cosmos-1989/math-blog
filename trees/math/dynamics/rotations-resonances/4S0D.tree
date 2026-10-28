@@ -1,0 +1,14 @@
+\title{三维球的 Fourier 系数与共振尺度}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，式 (3.3) 后的球系数；独立三维精确积分}
+
+\p{设 #{0<r<1/2}，#{B_r\subseteq\mathbb T^3} 为原点的小球。对 #{k\in\mathbb Z^3\setminus\{0\}}，定义 Fourier 系数 #{c_k(r)=\int_{B_r}e^{-2\pi ik\cdot y}\,dy}，其中积分可在 Euclidean 球内进行。令 #{s=2\pi r|k|}，则}
+##{c_k(r)=\frac{\sin s-s\cos s}{2\pi^2|k|^3}=-\frac{r\cos(2\pi r|k|)}{\pi|k|^2}+\frac{\sin(2\pi r|k|)}{2\pi^2|k|^3}.}
+
+\p{\strong{球坐标积分。}令 #{\kappa=2\pi|k|}，把极轴取为 #{k} 的方向。半径为 #{\rho} 时，角向积分为 #{2\pi\int_{-1}^1e^{-i\kappa\rho u}\,du=4\pi\sin(\kappa\rho)/(\kappa\rho)}。再沿半径积分，得到}
+##{c_k(r)=\frac{4\pi}{\kappa}\int_0^r\rho\sin(\kappa\rho)\,d\rho=\frac{4\pi}{\kappa^3}\bigl(\sin(\kappa r)-\kappa r\cos(\kappa r)\bigr).}
+\p{分部积分给出最后一步，代入 #{\kappa} 即得公式。所有积分在有界区域上绝对可积，可以用 [Fubini 定理](0H53)逐次计算。}
+
+\p{[旋转有限谱公式](4S04)中这一模态的系数为 #{c_k(r)G_N(k\cdot\alpha)}。[指数和界](4S02)给出它的模至多为 #{C_r|k|^{-2}\min\{N,\|k\cdot\alpha\|_{\mathbb R/\mathbb Z}^{-1}\}}。若 #{|k|} 与 #{N^{1/3}} 同阶且小除数不超过 #{1/(2N)}，则指数和与 #{N} 同阶；当另有 #{|\cos(2\pi r|k|)|\geq\delta>0} 时，充分大频率的球系数与 #{|k|^{-2}} 同阶。因此这些单项可达到 #{N^{1/3}} 阶。余下频率的总和估计属于[球形极限定理](4S0C)的额外内容。}

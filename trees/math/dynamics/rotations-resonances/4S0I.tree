@@ -1,0 +1,16 @@
+\title{有限原子之和限制连续分布近似的精度}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§4.2 的原子障碍；独立一致误差下界}
+
+\p{设 #{X_1,X_2,\ldots} 独立同分布，取值于 #{d+1} 个实数 #{a_1,\ldots,a_{d+1}}，相应概率 #{p_i>0}，#{\sum_i p_i=1}，#{d\geq 1}。令 #{S_N=\sum_{j=1}^NX_j}，#{F_N(t)=\mathbb P(S_N\leq t)}。存在只依赖 #{d} 的常数 #{c_d>0}，使每个连续函数 #{H:\mathbb R\to\mathbb R} 都满足}
+##{\sup_t|F_N(t)-H(t)|\geq c_dN^{-d/2}.}
+
+\p{\strong{找到一个足够大的原子。}令 #{K_i} 为前 #{N} 次抽样中取值 #{a_i} 的次数。各 #{K_i} 为[二项变量](00L5)，故 #{\mathbb EK_i=Np_i}、#{\operatorname{Var}(K_i)\leq N/4}。对 #{i\leq d}，将 [Markov 不等式](0A02)用于平方偏差，得到}
+##{\mathbb P\bigl(|K_i-Np_i|>\sqrt{dN}\bigr)\leq\frac 1{4d}.}
+\p{取并集上界，概率至少 #{3/4} 落在各坐标均满足 #{|K_i-Np_i|\leq\sqrt{dN}} 的集合内。前 #{d} 个整数坐标至多有 #{(2\sqrt{dN}+2)^d\leq(2\sqrt d+2)^dN^{d/2}} 种取值，最后一个坐标由总和 #{N} 决定。于是某个计数向量的概率至少为 #{c'_dN^{-d/2}}，其中 #{c'_d=3/(4(2\sqrt d+2)^d)}。对应的 #{S_N} 取值至少有同样大的概率；不同计数向量相撞只会增加质量。}
+
+\p{\strong{用跳跃排除连续近似。}若 #{F_N} 在 #{t_0} 有质量为 #{m} 的跳跃，则 #{F_N(t_0)-F_N(t_0-)=m}。连续性使 #{H(t_0-)=H(t_0)}，故三角不等式给出 #{m\leq 2\sup_t|F_N(t)-H(t)|}。取 #{c_d=c'_d/2} 即得。对 #{S_N} 作任意非零仿射归一化，原子质量不变，所以同一下界仍成立。}
+
+\p{这是关于全体 #{t} 的一致误差结论。它限制由连续函数组成的 Edgeworth 近似，却不能仅凭移动跳跃的位置，推出每个固定 #{t} 处的逐点近似都失败。}

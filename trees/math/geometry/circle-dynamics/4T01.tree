@@ -1,0 +1,13 @@
+\title{广义圆的 Hermitian 方程}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Hee Oh 报告](icm2026-hee-oh)，§2.2；矩阵计算补充}
+
+\p{Riemann 球面 #{\widehat{\mathbb C}=\mathbb C\cup\{\infty\}} 上的广义圆指通常的欧氏圆，或欧氏直线连同 #{\infty}。在[射影坐标](00ZB) #{[u:v]} 下，它们恰是方程}
+##{w^*Qw=0,\qquad w=\begin{pmatrix}u\\v\end{pmatrix},\qquad Q=\begin{pmatrix}A&B\\\overline B&D\end{pmatrix},\quad A,D\in\mathbb R,\quad \det Q<0}
+\p{的零集，其中 #{w^*} 表示共轭转置，#{Q} 乘非零实数不改变零集。}
+\p{\strong{证明。}在 #{v=1} 的坐标中，方程为 #{A|z|^2+2\operatorname{Re}(\overline Bz)+D=0}。若 #{A\ne 0}，配方得到}
+##{\left|z+\frac BA\right|^2=\frac{|B|^2-AD}{A^2}>0.}
+\p{这是中心为 #{-B/A} 的圆；齐次方程在 #{[1:0]} 不成立。若 #{A=0}，负行列式保证 #{B\ne 0}，方程是一条直线，并包含 #{[1:0]}。反过来，圆和直线的通常方程均可写成上述形式。}
+\p{若 #{g\in\operatorname{SL}_2(\mathbb C)} 以 [Möbius 变换](00ZB)作用，则令 #{w'=gw}，像圆的方程矩阵为 #{Q'=(g^{-1})^*Qg^{-1}}。它仍为 Hermitian 矩阵，且 #{\det Q'=\det Q<0}。所以 Möbius 变换保持广义圆，包括经过无穷远点的情形。}

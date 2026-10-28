@@ -1,0 +1,14 @@
+\title{有限 Fourier 和的旋转方差公式}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，式 (3.3) 的有限谱形式；独立正交计算}
+
+\p{在[环面旋转](4S01)上取有限三角多项式 #{f(x)=\sum_{k\in F}c_ke^{2\pi ik\cdot x}}，其中 #{F\subset\mathbb Z^d\setminus\{0\}} 有限，故 #{\int f\,dm=0}。记 #{S_Nf=\sum_{j=0}^{N-1}f\circ T_\alpha^j}。用[指数和](4S02) #{G_N} 可得}
+##{S_Nf(x)=\sum_{k\in F}c_ke^{2\pi ik\cdot x}G_N(k\cdot\alpha),\qquad \int|S_Nf|^2\,dm=\sum_{k\in F}|c_k|^2|G_N(k\cdot\alpha)|^2.}
+
+\p{\strong{证明。}第一式只需交换两个有限求和。对其绝对值平方展开，频率 #{k,\ell} 的交叉项含 #{e^{2\pi i(k-\ell)\cdot x}}。若 #{k\ne\ell}，选一个非零坐标，在该坐标从零到一积分即为零；#{k=\ell} 时积分为一。于是仅剩对角项。若 #{f} 为实值，左侧就是初相位均匀分布时的[方差](00L2)。}
+
+\p{对圆周区间 #{I_r=\lbrack 0,r\rparen}，中心化指示函数的非零 Fourier 系数可直接积分为}
+##{\int_0^1(1_{I_r}(x)-r)e^{-2\pi ikx}\,dx=\frac{1-e^{-2\pi ikr}}{2\pi ik}\qquad(k\ne 0).}
+\p{所以区间带来 #{|k|^{-1}} 衰减与分子中的额外相消。有限 Fourier 多项式的恒等式无需收敛假设；将它用于完整指示函数级数时，还须说明所采用的截断及收敛方式。}

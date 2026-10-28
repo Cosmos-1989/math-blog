@@ -1,0 +1,13 @@
+\title{旋转的指数和与有限时间共振}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，式 (3.3) 附近；独立几何级数计算}
+
+\p{令 #{e(t)=\exp(2\pi it)}，#{\|t\|_{\mathbb R/\mathbb Z}=\min_{\ell\in\mathbb Z}|t-\ell|}。对整数 #{N\geq 1}，定义 #{G_N(t)=\sum_{j=0}^{N-1}e(jt)}。则}
+##{G_N(t)=\begin{cases}e((N-1)t/2)\dfrac{\sin(\pi Nt)}{\sin(\pi t)},&t\notin\mathbb Z,\\N,&t\in\mathbb Z.\end{cases}}
+##{|G_N(t)|\leq\min\left\{N,\frac{1}{2\|t\|_{\mathbb R/\mathbb Z}}\right\}\quad(t\notin\mathbb Z).}
+
+\p{\strong{证明。}把 #{G_N} 乘以 #{1-e(t)}，相邻项相消，得到 #{1-e(Nt)}。用 #{1-e(s)=-2ie(s/2)\sin(\pi s)} 改写商即得第一式。逐项取绝对值得 #{N} 的上界；又因 #{|\sin(\pi t)|\geq 2\|t\|_{\mathbb R/\mathbb Z}}，而分子不超过一，得到第二个上界。整数处每项都为一。}
+
+\p{反过来，若 #{\|t\|_{\mathbb R/\mathbb Z}\leq 1 /(2N)}，则 #{|G_N(t)|\geq 2N /\pi}。非整数时令 #{s} 为最近整数偏差，用 #{|\sin(\pi Ns)|\geq 2N|s|} 和 #{|\sin(\pi s)|\leq\pi|s|} 即得；整数情形也满足。因而有限时间内的共振宽度为 #{N^{-1}}。在[环面旋转](4S01)中，第 #{k\in\mathbb Z^d} 个模态对应 #{t=k\cdot\alpha}；精确共振指 #{k\cdot\alpha\in\mathbb Z}。}

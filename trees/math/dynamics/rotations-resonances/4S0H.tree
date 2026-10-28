@@ -1,0 +1,13 @@
+\title{特征函数的精确共振等价于格点支撑}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§1 的格点障碍及共振解释；独立证明}
+
+\p{设 #{X} 为实随机变量，#{\varphi(t)=\mathbb E e^{itX}} 为其[特征函数](4C2A)。固定 #{t\ne 0}。则 #{|\varphi(t)|=1} 当且仅当存在 #{a\in\mathbb R}，使}
+##{\mathbb P\left(X\in a+\frac{2\pi}{|t|}\mathbb Z\right)=1.}
+\p{这里支撑在等距点列上的分布称为格点分布；不要求在点列的每个位置都有正质量。}
+
+\p{\strong{必要性。}令 #{Z=e^{itX}}，则 #{|Z|=1}。若 #{|\mathbb EZ|=1}，直接展开得到 #{\mathbb E|Z-\mathbb EZ|^2=1-|\mathbb EZ|^2=0}，所以 #{Z=\mathbb EZ} 几乎处处。选 #{a} 使 #{e^{ita}=\mathbb EZ}，便有 #{t(X-a)\in 2\pi\mathbb Z} 几乎处处。}
+
+\p{\strong{充分性。}若 #{X=a+2\pi m/|t|}，其中 #{m} 几乎处处为整数，则 #{e^{itX}=e^{ita}} 几乎处处，故特征函数模长为一。若 #{X_1,\ldots,X_N} 独立同分布，[独立性](00L3)还给出 #{\varphi_{X_1+\cdots+X_N}(t)=\varphi(t)^N}。因此模长严格小于一的固定频率随 #{N} 指数衰减，精确共振频率则保留。}

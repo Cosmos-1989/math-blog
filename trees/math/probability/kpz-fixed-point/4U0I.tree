@@ -1,0 +1,12 @@
+\title{秩一扰动的行列式公式}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§2.5、式 (2.12)；有限矩阵代数部分}
+
+\p{设 #{A} 为可逆 #{n\times n} 实[矩阵](00GK)，#{u,v\in\mathbb R^n}，#{\theta\in\mathbb R}。则[行列式](0A40)满足}
+##{\det(A+\theta uv^{\mathsf T})=\det(A)\bigl(1+\theta v^{\mathsf T}A^{-1}u\bigr).}
+\p{\strong{证明。}先写成 #{\det(A)\det(I+\theta wv^{\mathsf T})}，其中 #{w=A^{-1}u}。按列作多线性展开。选取两个以上扰动列的项为零，因为那些列都与 #{w} 成比例；选取第 #{j} 个扰动列、其他列保持标准基时，行列式为 #{\theta v_jw_j}。再加上完全未扰动的项一，得 #{1+\theta\sum_jv_jw_j}，即所需公式。}
+\p{特别地，有限差 #{\det(A+uv^{\mathsf T})-\det(A)} 等于沿此秩一方向在零点的导数。若 #{A=I-K} 且一次跳跃使 #{K} 增加 #{uv^{\mathsf T}}，则}
+##{\det(I-K-uv^{\mathsf T})-\det(I-K)=-\det(I-K)\,v^{\mathsf T}(I-K)^{-1}u.}
+\p{这解释了 PNG 精确转移公式中的一个代数机制：跳跃生成元原本作用于非线性的行列式，但秩一增量不产生高阶项。报告使用的无限维 Fredholm 行列式还要求相应算子的迹类性质、极限控制及方程唯一性；有限矩阵恒等式只承担其中的代数步骤。}

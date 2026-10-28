@@ -29,7 +29,8 @@ test('the second mathematical-physics batch follows proceedings order without du
     '10.1137/25M180679X', '10.1137/25M1811549', '10.1137/25M180425X',
   ]);
   const topics = listedTopics(note('006B'));
-  assert.deepEqual(topics.slice(0, 7), ['2B00', '4B00', '4C00', '4D00', '4E00', '4F00', '4G00']);
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline), '4B00', '4C00', '4D00', '4E00', '4F00', '4G00'];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   for (const id of ['4900', '0Q00']) assert.equal(topics.filter(x => x === id).length, 1);
   for (const report of record.reports) {
     const entry = coverage.reports.find(row => row.doi === report.doi);

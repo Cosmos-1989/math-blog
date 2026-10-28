@@ -7,13 +7,15 @@
       "research/icm2026-plenary-batch-plan.json",
       "ICM2026_PLENARY_BATCHES.md",
       "research/icm2026-plenary-applied-reports.json",
-      "research/icm2026-plenary-applied-verification.json"
+      "research/icm2026-plenary-applied-verification.json",
+      "research/icm2026-plenary-dynamics-probability.json",
+      "research/icm2026-plenary-dynamics-probability-verification.json"
     ],
     "statement": "完整保留官方名录中的 19 场普通全会和 3 场特别全会，按报告内容分批增补到第 1-20 模块，包括第 12-20 模块。全部 20 个模块均在范围内，但没有匹配报告时不强制填满。",
-    "placement": "subject_ids 是内容驱动的编辑归属，不是官方分组。批次 1 的入口已经接入，existing_subject_ids 记录现有入口；其余批次仍是规划，pending_subject_ids 须另行核实或决定。跨学科入口须有实质内容。",
+    "placement": "subject_ids 是内容驱动的编辑归属，不是官方分组。批次 1、2 已接入；existing_subject_ids 记录实际入口，其余批次仍是规划，pending_subject_ids 须另行核实。",
     "title_policy": "17 篇书面材料的 title 是正式出版章名，不擅称与现场口头题名完全相同；5 项无卷 2 章节者的 title 据原始官方视频说明核实。作者姓名、题名、DOI 和来源链接按材料保留。",
-    "completion_boundary": "九篇既有专题保留原有覆盖等级；首批三篇已在本地加入选定分支，共 93 个原子页、3 篇综述及3个来源页。还有10项增补或升级未实施。各报告的待补分支和引用证明另记，不把专题入口视作全报告完成；本轮未提交或推送。构建与浏览器验证另见验证记录。",
-    "outline_policy": "沿用已有十个专题编号，首批经全树查重后分配 4P00、4Q00、4R00；其余 planned_outline 为 null，实施前检查全树编号冲突后分配。"
+    "completion_boundary": "九篇既有专题保持原有覆盖等级；两批六篇新增专题已写入所选分支，共161个原子页、6篇综述及6个来源页。还有7项增补或升级待处理。待补分支与引用证明分别登记，不把专题入口视作全报告完成。批次1已经推送，发布结果另见发布记录；批次2尚未推送。",
+    "outline_policy": "沿用已有专题编号，首批为4P00、4Q00、4R00，第二批经全树查重分配4S00、4T00、4U00；其余planned_outline为null，实施前检查编号冲突。"
   },
   "sources": {
     "official_directory": {
@@ -69,18 +71,19 @@
     "special": 3,
     "modules_in_scope": 20,
     "existing_source_bound_outlines_kept": 9,
-    "new_selected_branch_topics": 3,
-    "source_bound_topics_now": 12,
+    "new_selected_branch_topics": 6,
+    "source_bound_topics_now": 15,
     "existing_background_outlines_to_upgrade": 1,
-    "new_report_outlines_needed": 9,
-    "outstanding_reports": 10,
+    "new_report_outlines_needed": 6,
+    "outstanding_reports": 7,
     "queued_after_batch1": 10,
-    "outstanding_written_chapters_available": 5,
+    "outstanding_written_chapters_available": 2,
     "outstanding_official_videos_requiring_content_reading": 5,
     "written_chapters_in_volume2": 17,
     "written_chapters_not_in_checked_volume2": 5,
     "unresolved_roster_identities": 0,
-    "unresolved_title_identities_for_declared_source_role": 0
+    "unresolved_title_identities_for_declared_source_role": 0,
+    "queued_after_batch2": 7
   },
   "subject_modules": [
     {
@@ -264,7 +267,14 @@
       "coverage_scope": "selected-branches",
       "manifest": "research/icm2026-plenary-applied-reports.json",
       "verification": "research/icm2026-plenary-applied-verification.json",
-      "publication": "not-pushed"
+      "publication": {
+        "status": "published-content-verified",
+        "commit": "b48ab7f3954d66ad27ce9d0c56d0e384f5326eb8",
+        "run_id": 40190055185,
+        "run_url": "https://github.com/Cosmos-1989/math-blog/actions/runs/40190055185",
+        "canonical_url": "https://opetope.cc/4P00/",
+        "release_record": "research/icm2026-plenary-applied-release.json"
+      }
     },
     {
       "speaker": "Simon Brendle",
@@ -384,23 +394,27 @@
       ],
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1806971",
       "pages": "35-50",
-      "existing_outline": null,
-      "planned_outline": null,
+      "existing_outline": "4S00",
+      "planned_outline": "4S00",
       "planned_reference": "icm2026-dolgopyat",
-      "existing_subject_ids": [],
+      "existing_subject_ids": [
+        "0069",
+        "006C",
+        "0063"
+      ],
       "subject_ids": [
         "0069",
         "006C",
         "0063"
       ],
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "batch": 2,
       "action": "create_outline",
       "baseline_coverage": "no-dedicated-topic",
-      "source_status": "written_chapter_available",
+      "source_status": "selected_chapter_branches_integrated",
       "subject_basis": "环面平移动力系统、随机和的极限分布、差异度与丢番图近似；出版摘要及 MSC 60F05、11K06、11J13、37A17、37A45、37C55 支撑归属。",
       "notes": [
-        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。"
+        "所选分支已分解为原子页并接入对应模块；阅读范围、原文问题、本地证明与未展开研究证明见第二批清单。"
       ],
       "materials": [
         {
@@ -412,9 +426,13 @@
           ],
           "pages": "35-50",
           "identity_status": "verified",
-          "content_reading_status": "pending_batch_reading"
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
         }
-      ]
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-dynamics-probability.json",
+      "verification": "research/icm2026-plenary-dynamics-probability-verification.json",
+      "publication": "not-pushed"
     },
     {
       "speaker": "Dennis Gaitsgory",
@@ -789,24 +807,27 @@
       ],
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1810726",
       "pages": "240-271",
-      "existing_outline": null,
-      "planned_outline": null,
+      "existing_outline": "4T00",
+      "planned_outline": "4T00",
       "planned_reference": "icm2026-hee-oh",
-      "existing_subject_ids": [],
+      "existing_subject_ids": [
+        "0069",
+        "0065",
+        "0067"
+      ],
       "subject_ids": [
         "0069",
         "0065",
         "0067"
       ],
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "batch": 2,
       "action": "create_outline",
       "baseline_coverage": "no-dedicated-topic",
-      "source_status": "written_chapter_available",
+      "source_status": "selected_chapter_branches_integrated",
       "subject_basis": "圆堆积、无限体积齐性空间的动力学与刚性，关联几何及 Lie 群齐性空间。目录摘要与章节链接已核实；本次单章请求超时，不表示材料不存在。",
       "notes": [
-        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。",
-        "不得复用 icm2026-oh：现有引用属于分组报告人 Sung-Jin Oh。使用独立 icm2026-hee-oh。"
+        "所选分支已分解为原子页并接入对应模块；阅读范围、原文问题、本地证明与未展开研究证明见第二批清单。"
       ],
       "materials": [
         {
@@ -818,9 +839,21 @@
           ],
           "pages": "240-271",
           "identity_status": "verified",
-          "content_reading_status": "pending_batch_reading"
+          "content_reading_status": "publisher_identity_verified_arxiv_v2_body_read_selected_branches_integrated"
+        },
+        {
+          "type": "author_preprint",
+          "url": "https://arxiv.org/html/2510.10771v2",
+          "version": "v2",
+          "identity_status": "verified_title_author_and_abstract",
+          "content_reading_status": "full_mathematical_body_read_selected_branches_integrated",
+          "note": "正式SIAM全文读取超时，数学内容依arXiv v2；不声称逐字核读出版版。"
         }
-      ]
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-dynamics-probability.json",
+      "verification": "research/icm2026-plenary-dynamics-probability-verification.json",
+      "publication": "not-pushed"
     },
     {
       "speaker": "Felix Otto",
@@ -891,24 +924,29 @@
       ],
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1805643",
       "pages": "272-301",
-      "existing_outline": null,
-      "planned_outline": null,
+      "existing_outline": "4U00",
+      "planned_outline": "4U00",
       "planned_reference": "icm2026-quastel",
-      "existing_subject_ids": [],
+      "existing_subject_ids": [
+        "006C",
+        "006B",
+        "006A",
+        "0072"
+      ],
       "subject_ids": [
         "006C",
         "006B",
         "006A",
         "0072"
       ],
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "batch": 2,
       "action": "create_outline",
       "baseline_coverage": "no-dedicated-topic",
-      "source_status": "written_chapter_available",
+      "source_status": "selected_chapter_branches_integrated",
       "subject_basis": "随机界面增长、KPZ 普适类与统计物理；出版 §1.1 的 KPZ/Burgers 随机偏微分方程支持 PDE 和随机建模入口。",
       "notes": [
-        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。"
+        "所选分支已分解为原子页并接入对应模块；阅读范围、原文问题、本地证明与未展开研究证明见第二批清单。"
       ],
       "materials": [
         {
@@ -920,9 +958,13 @@
           ],
           "pages": "272-301",
           "identity_status": "verified",
-          "content_reading_status": "pending_batch_reading"
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
         }
-      ]
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-dynamics-probability.json",
+      "verification": "research/icm2026-plenary-dynamics-probability-verification.json",
+      "publication": "not-pushed"
     },
     {
       "speaker": "Peter Sarnak",
@@ -1028,7 +1070,14 @@
       "coverage_scope": "selected-branches",
       "manifest": "research/icm2026-plenary-applied-reports.json",
       "verification": "research/icm2026-plenary-applied-verification.json",
-      "publication": "not-pushed"
+      "publication": {
+        "status": "published-content-verified",
+        "commit": "b48ab7f3954d66ad27ce9d0c56d0e384f5326eb8",
+        "run_id": 40190055185,
+        "run_url": "https://github.com/Cosmos-1989/math-blog/actions/runs/40190055185",
+        "canonical_url": "https://opetope.cc/4Q00/",
+        "release_record": "research/icm2026-plenary-applied-release.json"
+      }
     },
     {
       "speaker": "Xavier Tolsa",
@@ -1189,7 +1238,14 @@
       "coverage_scope": "selected-branches",
       "manifest": "research/icm2026-plenary-applied-reports.json",
       "verification": "research/icm2026-plenary-applied-verification.json",
-      "publication": "not-pushed"
+      "publication": {
+        "status": "published-content-verified",
+        "commit": "b48ab7f3954d66ad27ce9d0c56d0e384f5326eb8",
+        "run_id": 40190055185,
+        "run_url": "https://github.com/Cosmos-1989/math-blog/actions/runs/40190055185",
+        "canonical_url": "https://opetope.cc/4R00/",
+        "release_record": "research/icm2026-plenary-applied-release.json"
+      }
     },
     {
       "speaker": "Horng-Tzer Yau",
@@ -1410,18 +1466,26 @@
       ],
       "purpose": "先补统计学习、算法博弈和优化，实际纳入计算/应用模块。",
       "acceptance": "分别核读出版章，保留准确作者名与章名；每个学科入口对应实际完成的分支。Tardos 的 0072 入口以动态/排队内容已写入为前提。",
-      "manifest": "research/icm2026-plenary-applied-reports.json"
+      "manifest": "research/icm2026-plenary-applied-reports.json",
+      "publication": "published-content-verified",
+      "release_record": "research/icm2026-plenary-applied-release.json"
     },
     {
       "batch": 2,
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "speakers": [
         "Dmitry Dolgopyat",
         "Hee Oh",
         "Jeremy Quastel"
       ],
       "purpose": "动力系统、齐性几何、概率与随机增长；三篇已有正式书面来源。",
-      "acceptance": "先复用既有基础页，再分配新专题编号；Hee Oh 不得与 Sung-Jin Oh 合并。Quastel 的 KPZ 固定点须与 KPZ 方程区分。"
+      "acceptance": "先复用既有基础页，再分配新专题编号；Hee Oh 不得与 Sung-Jin Oh 合并。Quastel 的 KPZ 固定点须与 KPZ 方程区分。",
+      "planned_outlines": [
+        "4S00",
+        "4T00",
+        "4U00"
+      ],
+      "manifest": "research/icm2026-plenary-dynamics-probability.json"
     },
     {
       "batch": 3,
@@ -1457,7 +1521,7 @@
   ],
   "acceptance_policy": [
     "所有 22 人始终保留唯一记录；普通/特别类别与官方名录一致，19+3=22。",
-    "初始待办13项中，3篇已加入选定分支；余10项由9个新专题及2900升级组成。选定分支接入不等于全报告或全部证明完成。",
+    "初始待办13项中，6篇已加入选定分支；余7项由6个新专题及2900升级组成。选定分支接入不等于全报告或全部证明完成。",
     "每批先核读原始章/录像，再在既有基础页上增补；不因已有题名、摘要、网址或空目录就标记完成。",
     "来源未列于已核卷、网页访问失败、材料存在但尚未处理、正文完成、发布完成是不同状态。",
     "数学与来源审阅、前置依赖、导航、构建及渲染检查分别记录；发布须另有提交、GitHub Actions和线上核验依据。"

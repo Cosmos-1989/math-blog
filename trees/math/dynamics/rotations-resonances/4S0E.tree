@@ -1,0 +1,19 @@
+\title{Dani 对应把小除数变成固定区域内的格点}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§3 式 (3.4)–(3.5) 后；独立重标度计算}
+
+\p{设 #{d\geq 1}、#{\alpha\in\mathbb R^d}、#{N>0}，按坐标次序 #{(x,z)\in\mathbb R^d\times\mathbb R} 定义}
+##{\Lambda_N(\alpha)=\left\{\bigl(N^{-1/d}k,\ N(k\cdot\alpha+\ell)\bigr):k\in\mathbb Z^d,\ \ell\in\mathbb Z\right\}.}
+\p{它是[余体积](0N02)一的[满秩格](0N01)。给定 #{0<\varepsilon<1}、#{c>0}，整数对 #{(k,\ell)} 满足}
+##{\varepsilon N^{1/d}<|k|<\varepsilon^{-1}N^{1/d},\qquad |k\cdot\alpha+\ell|<c/N}
+\p{当且仅当对应格点位于固定区域 #{\{(x,z):\varepsilon<|x|<\varepsilon^{-1},\ |z|<c\}}。}
+
+\p{\strong{证明。}格的基矩阵为}
+##{B_N=\begin{pmatrix}N^{-1/d}I_d&0\\N\alpha^T&N\end{pmatrix},\qquad\det B_N=(N^{-1/d})^dN=1.}
+\p{矩阵可逆，所以整数对与格点一一对应。将 #{x=N^{-1/d}k}、#{z=N(k\cdot\alpha+\ell)} 代入两个不等式，就得到固定区域。若 #{N>2c}，对于固定 #{k} 至多有一个整数 #{\ell} 满足第二式，而且它实现距离最近整数的范数。}
+
+\p{带权共振条件也可精确变换。设 #{s=(d+1)/2}，则}
+##{|k|^s|k\cdot\alpha+\ell|=N^{-(d-1)/(2d)}|x|^s|z|.}
+\p{这是因为 #{|k|^s=N^{s/d}|x|^s}、#{|k\cdot\alpha+\ell|=|z|/N}，总幂为 #{s/d-1=-(d-1)/(2d)}。所以条件 #{|k|^{(d+1)/2}|k\cdot\alpha+\ell|<\varepsilon^{-1}N^{-(d-1)/(2d)}} 等价于 #{|x|^{(d+1)/2}|z|<\varepsilon^{-1}}。这个带权区域与无权圆柱不同，换元并不改变 #{|x|} 的指数。}

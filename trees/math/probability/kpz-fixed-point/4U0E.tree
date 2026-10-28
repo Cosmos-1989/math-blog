@@ -1,0 +1,13 @@
+\title{变分传播保持最大值并满足拼接律}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，式 (2.3)、(3.19)、(3.22)、(3.27)；确定性代数证明}
+
+\p{固定一个满足[变分拼接律](4U0D)的实值核 #{L(s,x;t,y)}，定义 #{U_{s,t}f(y)=\sup_x\{f(x)+L(s,x;t,y)\}}。允许 #{f=-\infty}，但要求所用的传播值有限。则 #{U_{s,t}} 保持函数的逐点最大值、常数平移与逐点次序，并且}
+##{U_{s,t}=U_{u,t}U_{s,u}\qquad(s<u<t).}
+\p{\strong{证明。}对 #{f\vee g=\max(f,g)}，将常数 #{L(s,x;t,y)} 加入后仍有 #{\max(f(x),g(x))+L=\max(f(x)+L,g(x)+L)}。取上确界得到 #{U_{s,t}(f\vee g)=U_{s,t}f\vee U_{s,t}g}。同样，上确界与加有限常数交换；#{f\leq g} 时逐项比较即可得到 #{U_{s,t}f\leq U_{s,t}g}。}
+\p{再利用拼接律及两个上确界可交换，}
+##{\begin{aligned}U_{u,t}(U_{s,u}f)(y)&=\sup_z\sup_x\{f(x)+L(s,x;u,z)+L(u,z;t,y)\}\\&=\sup_x\{f(x)+L(s,x;t,y)\}=U_{s,t}f(y).\end{aligned}}
+\p{交换上确界只是在同一集合 #{\mathbb R^2} 上取上确界，不要求最优点先存在。若 #{|f-g|\leq M}，次序与常数平移还给出 #{|U_{s,t}f-U_{s,t}g|\leq M}。}
+\p{对随机景观，这些是固定同一环境后的逐样本关系。对两个独立实现的增长过程取最大值，并不满足这里的结论；共同核是必要的耦合条件。}

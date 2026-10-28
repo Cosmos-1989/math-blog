@@ -1,0 +1,268 @@
+{
+  "date": "2026-10-25",
+  "report": {
+    "speaker": "Hee Oh",
+    "title": "Dynamics and Rigidity through the Lens of Circles",
+    "outline": "4T00",
+    "prefix": "4T",
+    "reference": "icm2026-hee-oh",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1810726",
+    "version_url": "https://arxiv.org/html/2510.10771v2",
+    "doi": "10.1137/25M1810726",
+    "pages": "240-271",
+    "license": "Published chapter: CC BY 4.0, International Mathematical Union, published by SIAM. Read arXiv v2: arXiv perpetual non-exclusive license; the published license is not transferred to the preprint file.",
+    "question": "圆的半径计数、轨道闭包和保圆切片的表示刚性如何转化为无限体积双曲商上的流动力学，多个变形的自联结又如何产生不同的计数指数与高秩回归现象？",
+    "reading_scope": "实际阅读 arXiv:2510.10771v2，2026-04-13，33页，数学主体 §§1-8 全部，包括定义、公式、定理、给出的证明、反例说明、猜想与结语；正文结束于§8.6，另核对全部参考文献清单。使用官方 arXiv HTML 与版本化 PDF，PDF 经 pdftotext 提取全文；图中的大量曲率数字未作逐个辨认，未复制插图。SIAM /doi/full/10.1137/25M1810726 两次超时；/doi/abs/10.1137/25M1810726 可读，核对作者、题名、卷名、页码、DOI、2026-07-13出版日期及CC BY 4.0。未声称读取正式版数学正文，也未声称逐一读完本报告所引研究论文。所有数学转述以版本化报告为直接来源，原研究文献仅按报告注明归属。",
+    "module_rationale": [
+      {
+        "ids": ["4T01", "4T02", "4T03", "4T04", "4T05", "4T06"],
+        "reason": "从欧氏圆到双曲平面及双商动力学是报告共同机制。复用1719、00ZB、2F07、2F08、2D01，不再建立双曲空间、Kleinian群、凸余紧、格、离散群或一般齐性空间定义。仅补圆特有的方程、稳定子、闭包对偶和计数有限性。"
+      },
+      {
+        "ids": ["4T07", "4T08", "4T09", "4T0A", "4T0B", "4T0K", "4T0L", "4T0M"],
+        "reason": "以轨道指数、边界测度和局部混合解释圆计数，不把研究计数证明写成几行形式推导。4T0A选择delta>1且实Zariski稠密的非退化子情形，避免略写的低维与无限圆束例外。"
+      },
+      {
+        "ids": ["4T0C", "4T0D", "4T0E"],
+        "reason": "只把能明确陈述条件的圆形Sierpinski刚性情形做成定理页。穿过凸核内部的凸几何判据和厚回归反例独立可证；一般无柱拓扑和高维避免奇异集的证明留待后续。"
+      },
+      {
+        "ids": ["4T0F", "4T0G", "4T0H"],
+        "reason": "用实交比判据解释圆切片刚性，把等变映射编码为图像子群。研究刚性定理与初等交比/离散性证明分别标记，保留不连续域分支和非Fuchsian条件。"
+      },
+      {
+        "ids": ["4T0I", "4T0J", "4T0N", "4T0O"],
+        "reason": "以半径乘积的归一化、位移和指数、凸余紧自联结和回归积分阈值说明高秩变化。采用既有Anosov定义，不新增完整增长指示函数/高秩测度课程，也不将积分发散当作遍历性的完整证明。"
+      }
+    ],
+    "proof_scope": {
+      "4T00": {"status": "narrative-outline", "scope": "八段叙述连接全部24知识页，说明圆计数、平面闭包、圆切片刚性、环面计数的共同机制、代表例子、几何限制及公开问题。"},
+      "4T01": {"status": "local-proof", "scope": "Hermitian二次方程配方给出圆或直线，负行列式排除退化；逆合同变换证明Möbius保持广义圆。"},
+      "4T02": {"status": "local-proof-with-classical-geometric-input", "scope": "球反演同时缩放欧氏长度与高度，证明双曲等距性；用00NU测地初值唯一性证明固定平面全测地。平面分类使用报告的Poincare延拓及双曲等距群标架传递性，不将这两个经典输入算成本页独立证明。"},
+      "4T03": {"status": "local-proof", "scope": "三点归一化识别无向圆稳定子为PGL2(R)，说明两连通分支及有向圆的二重覆盖；用局部三点连续选择识别商拓扑。"},
+      "4T04": {"status": "local-proof", "scope": "开放商映射的闭包原像恒等式，分别应用于G/H与Gamma\\G；明确三种闭包空间，不混写双商。标架丛识别是报告§3.6的几何输入。"},
+      "4T05": {"status": "definition", "scope": "几何有限按凸核一邻域体积有限定义，区别凸余紧、格及低维凸核的零三维体积。"},
+      "4T06": {"status": "definition-and-local-proof", "scope": "圆族局部有限性，截断计数有限，使用极限圆上的两点排除非退化积聚并得到闭离散性；点退化不属圆空间。"},
+      "4T07": {"status": "local-proof-with-cited-dimension-theorem", "scope": "三角不等式给基点改变的2D误差；指数分层给Poincare级数临界值。delta等于极限集Hausdorff维数只在几何有限下引用Sullivan定理。"},
+      "4T08": {"status": "local-proof", "scope": "采用报告的Busemann符号，给上半空间公式、垂直轴符号检验、望远镜余循环与等距协变；以标准双曲距离公式作模型输入。"},
+      "4T09": {"status": "definition-with-cited-existence-and-local-check", "scope": "几何有限条件下共形概率测度存在唯一性引用Patterson-Sullivan；明确推前/Radon-Nikodym含义，证明欧氏权重在有界集上有限，说明缩放归一化。"},
+      "4T0A": {"status": "cited-research-theorem", "scope": "报告定理2.7的无挠、几何有限、实Zariski稠密、delta>1、非空局部有限圆族、有限轨道数、有界Borel区域且omega边界零特例。将零质量区域写成归一化计数极限，不写与零渐近等价。"},
+      "4T0B": {"status": "cited-research-example-with-local-calculation", "scope": "有界Apollonian圆堆积的幂次计数和维数常数引用报告定理2.1-2.2；精确推导相似缩放N_aP(t)=N_P(at)。计数定理不被当作Apollonian闭包猜想的证明。"},
+      "4T0C": {"status": "local-proof", "scope": "在Klein模型中用凸组合构造平面两侧的凸包内点，证明分隔极限集等价于平面穿过三维凸包内部；保留内部非空条件。"},
+      "4T0D": {"status": "cited-research-theorem", "scope": "仅引用几何有限、圆形Sierpinski地毯且补圆盘闭包两两不交、分隔圆的闭或稠密及不变集合二分。闭性取整个圆空间，稠密性取C_Lambda；一般无柱的相对闭性没有升级为绝对闭性。"},
+      "4T0E": {"status": "definition-and-local-counterexamples", "scope": "乘法尺度厚性的定义；阶乘时间无界但不厚，双向二次幂时间厚却Lebesgue测度零。报告中几何紧集的构造及统一厚回归只作研究输入。"},
+      "4T0F": {"status": "local-proof", "scope": "归一化前三点到infinity,0,1，证明实交比等价四点共广义圆，并推导保实交比单射保持每个圆切片。包括含无穷远点的约定。"},
+      "4T0G": {"status": "cited-research-theorem-with-local-corollary", "scope": "报告定理5.5：Omega至少两分支、忠实离散表示、连续等变嵌入、源像均不含于圆；Lambda_f为全部保圆切片的并。研究二分引用；推论5.6由4T0F及三点唯一性逐步导出。方向约定明确允许反Mobius。"},
+      "4T0H": {"status": "local-proof", "scope": "投影给图像子群离散性和同构，逐点等价给边界图像不变性；代数共轭蕴含自联结非实Zariski稠密。反方向未用未证的代数群分类替代。"},
+      "4T0I": {"status": "local-proof", "scope": "正权位移指数的基点不变性和权重缩放；l1/l2比较给delta_prod/sqrt(n)<=delta_sum<=delta_prod；对角例子精确计算两指数；区分归一化半径乘积与(2pi)^n倍的欧氏乘积体积。"},
+      "4T0J": {"status": "cited-research-theorem", "scope": "报告定理6.3的n>=2、无挠、所有表示忠实凸余紧且实Zariski稠密、两两不由Mobius或反Mobius共轭、局部有限、有限轨道数及f可容许等式子情形；额外限制切片至少三点、有界实代数分片边界且正测度。未导入报告的指数严格上界。"},
+      "4T0K": {"status": "local-proof-with-cited-finiteness", "scope": "写明Hopf坐标，用正负端点增量相消证明测地流不变；用共形变换律和Busemann余循环证明Gamma不变及下降。一般几何有限的有限总质量引用Sullivan，凸余紧情形由紧支撑解释。"},
+      "4T0L": {"status": "cited-research-theorem-with-local-sign-check", "scope": "报告定理7.2的三维非格情形；明确BMS/BR/BR*与Haar归一化、紧支撑实测试函数及exp((2-delta)t)因子。用独立时间平移计算核定测度次序，并与定理7.5交叉核对。不添加指数误差项。"},
+      "4T0M": {"status": "local-proof-from-cited-theorem", "scope": "非负连续紧支撑观测和两项正质量假设下，分子分母同重标并消去常数；不越过连续函数逼近而直接声称所有集合的体积比值结论。"},
+      "4T0N": {"status": "local-proof-from-reused-geometric-theorem", "scope": "以既有凸余紧轨道准等距性质为输入，有限因子取统一最小常数证明每个简单根下界；单因子增长反例说明乘积范数增长不足。"},
+      "4T0O": {"status": "conditional-local-proof", "scope": "假设相关渐近c*t^{-(n-1)/2}，直接积分证明n<=3的发散阈值。报告8.3的高秩局部混合和8.4的遍历性只作来源解释，不把积分检验等同动力学判据。"},
+      "icm2026-hee-oh": {"status": "bibliographic-reference", "scope": "区分2026-07-13正式书章pp240-271与实际读取的2026-04-13 arXiv v2 33页；分别记录出版许可与预印本许可，不复制原图；明确Mobius/反Mobius方向约定。"}
+    },
+    "claim_sources": {
+      "4T00": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Full mathematical body §§1-8, especially §§1.2, 2.3-2.4, 3.1-3.7, 5.4-5.5, 6.2-6.4, 7.2-7.3, 8.3-8.5."}],
+      "4T01": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§2.2 circle-preserving Mobius action; Hermitian equation and inverse-congruence proof supplied locally."}],
+      "4T02": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§2.2 upper-half-space metric, geodesic planes and Poincare extension; §2.4.2 circle-plane correspondence."}],
+      "4T03": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§2.2 Hausdorff topology of circles; §3.6 PSL2(R) orbits in the frame bundle; full unoriented stabilizer clarified by local three-point proof."}],
+      "4T04": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§3.5-3.6 passage from circle orbits to geodesic planes and frame-bundle subgroup orbits; open-quotient closure proof supplied locally."}],
+      "4T05": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Definition 2.5 and discussion of convex core, geometrically finite groups, convex cocompact groups and lattices."}],
+      "4T06": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§2.3 local finiteness preceding Theorem 2.7; footnote 1 explains unrestricted countable circle-family convention."}],
+      "4T07": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Theorem 2.6 and critical-exponent display; basepoint and convergence-abscissa arguments supplied locally using the same shell argument as existing 2F0E."}],
+      "4T08": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§2.4 Busemann definition between (2.1) and (2.2); local explicit model calculations and cocycle proof."}],
+      "4T09": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Equation (2.2), Theorem 2.8, and d omega_Gamma(z)=(|z|^2+1)^delta d nu_o(z); Hausdorff comparison paragraph."}],
+      "4T0A": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Theorem 2.7 and footnote 2 allowing omega_Gamma(boundary R)=0; §2.4.2 explains the skinning-measure input. Statement specialized to delta>1 and real-Zariski-dense groups."}],
+      "4T0B": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§1.1 Apollonian construction; Theorems 2.1-2.2 and discussion of delta_A; §3.4 Conjecture 3.6."}],
+      "4T0C": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§3.1 definition of C_Lambda^*; §3.5 equivalence with a plane meeting the convex-core interior. Klein-model proof supplied locally."}],
+      "4T0D": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Theorem 3.1, Theorem 3.3(3), and preceding round-carpet hypotheses; Remark 3.4 separates relative/absolute closedness; §3.7 quasi-Fuchsian counterexamples."}],
+      "4T0E": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§3.6 thick recurrence and uniformly perfect circular slices; factorial/dyadic examples supplied locally."}],
+      "4T0F": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Paragraph immediately before Corollary 5.6; exact cross-ratio convention, infinity cases and three-point proof supplied locally."}],
+      "4T0G": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Equation (5.1) defines Lambda_f using all circular slices; §5.4 boundary-map definition; Theorem 5.5 and Corollary 5.6; §2.2 and §5.2 fix the broad Mobius convention."}],
+      "4T0H": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§5.5, equations (5.3)-(5.4), and graph limit set; local proof establishes discreteness and only the easy direction of (5.4)."}],
+      "4T0I": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§6.1 normalized torus volume; Theorem 6.3 displacement-sum exponent; §6.3 positive weighted exponents. Norm comparison and diagonal example supplied locally."}],
+      "4T0J": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§6.2 hypotheses before Theorem 6.3, exact f-admissibility equality, and Theorem 6.3; §6.4 geometrically finite extension remains open."}],
+      "4T0K": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§2.4.1 equation (2.3), BMS formula and finiteness; direct invariance calculation supplied locally."}],
+      "4T0L": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Theorem 7.2 specialized to d=3 and infinite volume; §7.3 BR/BR* definitions. The two factors are ordered as in Theorem 7.5, checked independently under time translation."}],
+      "4T0M": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§7.1 equations (7.1)-(7.2); continuous-test-function ratio deduced locally from Theorem 7.2."}],
+      "4T0N": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "§6.4 and §8.5, product simple-root formulation and convex-cocompact self-joinings. Uses already-read 2F08 quasi-isometric orbit theorem and 2F0B gap definition."}],
+      "4T0O": [{"url": "https://arxiv.org/html/2510.10771v2", "location": "Theorem 8.3 polynomial factor, vector-bundle interpretation after it, and Theorem 8.4 with u-balanced criterion; only the elementary integral threshold is proved locally."}],
+      "icm2026-hee-oh": [
+        {"url": "https://epubs.siam.org/doi/abs/10.1137/25M1810726", "location": "Author/title/volume/pages/DOI; Information and Authors copyright and publication history."},
+        {"url": "https://arxiv.org/html/2510.10771v2", "location": "Version heading, arXiv license link, §§2.2 and 5.2 generalized Mobius convention; full references."}
+      ]
+    },
+    "remaining_branches": [
+      "§2.3 delta<=1圆计数的无限相切圆束排除条件；本批采用delta>1子情形，未绘制或定义bouquet的全部变体。",
+      "§2.4.2 skinning测度的规范化常数、有限性及平面法向流的等分布；未把报告中的常数显示式作为已独立核准的精确归一化。",
+      "§3.1不分隔极限集的圆的闭包分类；§3.2一般无柱紧核、不可压缩边界、边界平行圆柱及拟共形参数化。正文只解释这些条件的作用，没有为其建立完整基础课程。",
+      "§3.3一般几何有限无柱情形的相对闭性、闭轨道可数性；§3.6统一厚回归紧集的构造；§3.7弯折产生混沌平面闭包的具体构造。",
+      "§3.4 Apollonian圆轨道闭包二分在报告中为猜想，本批未改为定理。",
+      "§4有限体积Ratner定理与高维Fuchsian端的相对齐性、奇异集避免原理、倾斜horocycle闭包和中间维数球面。",
+      "§5.2 Mostow-Prasad、Ahlfors测度及Sullivan刚性的完整陈述与证明；定理5.7的测度论刚性条件要求几何有限、保类型的几何有限表示及Patterson-Sullivan零测集，本批仅导入拓扑条件。",
+      "§5.5自联结非Zariski稠密到代数性的反向结构定理、方向流拓扑传递性；§5.6高秩共形测度奇异性证明Mostow刚性。",
+      "§6.1由非代数拟共形变形产生有限闭轨道环面族的定理及证明；§6.3的数值指数上界。本批使用一般f可容许计数定理的明确非退化子情形。",
+      "§7.4-7.5谱隙、带尖点指数混合、同余覆盖的一致性和仿射筛。特别是报告文献[72]为in preparation，未据此制作已证统一尖点定理页。",
+      "§8.1-8.3极限锥、增长指示函数、切线形式、方向性高秩PS/BR/BMS测度及横向高斯一致估计；§8.4完整Hopf-Tsuji-Sullivan判据；§8.6 L2谱与temperedness。已阅读，未展开为知识页。",
+      "全站共享登记、导航、完整构建、渲染与发布由主代理负责；本批没有执行。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4T02：Poincare延拓与标架传递性作为经典双曲几何输入；局部反演/反射计算不能替代它们的完整证明。",
+      "4T07、4T09：Sullivan维数定理及Patterson-Sullivan概率测度存在唯一性；原始论文未单独全文阅读。",
+      "4T0A、4T0B：Oh-Shah一般圆计数与Kontorovich-Oh Apollonian计数的混合、skinning有限性、误差与逼近论证。",
+      "4T0D：McMullen-Mohammadi-Oh及Benoist-Oh圆轨道闭包定理；4T0E没有构造所需的几何回归紧集。",
+      "4T0G：Kim-Oh拓扑刚性定理5.5，报告给出的高秩动力学机制不是完整研究证明；本地只证明交比推论。",
+      "4T0J：Edwards-Lee-Oh环面计数，包含方向一致的局部混合和计数区域分析。",
+      "4T0K：有尖点几何有限商的BMS有限性；4T0L：Roblin-Winter局部混合及横截交会；4T0M只为引用定理的代数推论。",
+      "4T0N：凸余紧轨道映射的准等距性质由既有2F08引用；本地证明仅把各因子的下界合并。",
+      "4T0O：报告8.3的高秩BMS局部混合及8.4的遍历性判据未证明；只证明给定多项式渐近下的积分可积性阈值。"
+    ],
+    "subject_ids": ["0069", "0065", "0067"]
+  },
+  "prerequisites": {
+    "4T00": [],
+    "4T01": ["00ZB"],
+    "4T02": ["1719", "4T01", "00NX", "00NU"],
+    "4T03": ["4T01", "00F8", "00ZB", "00FN"],
+    "4T04": ["2F07", "4T03", "00F8", "4T02"],
+    "4T05": ["2F07", "2F08", "2D01"],
+    "4T06": ["4T03"],
+    "4T07": ["2F07", "2F0E", "4T05", "1202"],
+    "4T08": ["1719"],
+    "4T09": ["4T05", "4T07", "4T08", "00QD", "1202"],
+    "4T0A": ["4T05", "4T07", "4T06", "4T09", "4T02"],
+    "4T0B": ["1202"],
+    "4T0C": ["4T01", "4T02", "00TK", "2F07", "2F08"],
+    "4T0D": ["4T05", "4T03", "4T0C"],
+    "4T0E": ["00XV"],
+    "4T0F": ["4T01", "00ZB"],
+    "4T0G": ["2F07", "0F43", "4T01", "4T0F", "00ZB"],
+    "4T0H": ["2D01", "2F07"],
+    "4T0I": ["2F08", "4T07"],
+    "4T0J": ["2F08", "2F0D", "4T0H", "4T0I"],
+    "4T0K": ["4T05", "4T09", "4T08"],
+    "4T0L": ["4T05", "2D01", "00T1", "4T07", "4T09", "4T0K"],
+    "4T0M": ["4T0L"],
+    "4T0N": ["2F08", "00D4", "2F0B"],
+    "4T0O": ["00RR"],
+    "icm2026-hee-oh": []
+  },
+  "reviewed_reused_ids": [
+    "00ZB", "1719", "00NX", "00NU", "00F8", "2F07", "2F08", "2D01",
+    "2F0E", "1202", "00QD", "00TK", "2Q02", "0F43", "2F0D", "00T1",
+    "2F0B", "00D4", "00RR", "00FN", "00XV"
+  ],
+  "source_readings": [
+    {
+      "url": "https://arxiv.org/html/2510.10771v2",
+      "pdf_url": "https://arxiv.org/pdf/2510.10771v2",
+      "version": "2510.10771v2, 2026-04-13",
+      "local_pdf": "/tmp/hee-oh-icm2026-v2.pdf",
+      "local_text": "/tmp/hee-oh-icm2026-v2.txt",
+      "sha256": "52f08a735b4ade9592c8ba5036a99d1a9d54346656aa66225d3e0fa78279fe6e",
+      "pages": 33,
+      "scope": "全文数学主体§§1-8及参考文献已读，非摘要阅读。定义2.3-2.5、定理2.1-2.8，定理3.1-3.3、注3.4、定理3.5、猜想3.6、定理3.7，定理4.1、定义4.2、定理4.3、推论4.4-4.5、注4.6、推论4.7，定理5.1-5.5、推论5.6、定理5.7，定理6.1及其证明、定理6.2-6.3，定义7.1、定理7.2-7.7、推论7.8，定理8.1-8.4及§8.5-8.6均在实际读取范围。未把报告引用的深证明算作已独立核读。"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/abs/10.1137/25M1810726",
+      "scope": "仅出版身份、作者、题名、卷名、页码、DOI、许可、日期与参考文献清单；该页面不提供数学主体。正式全文地址两次超时，使用版本化arXiv完成内容阅读。"
+    }
+  ],
+  "source_findings": [
+    {
+      "id": "br-factor-order-under-forward-flow",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Theorems 7.2 and 7.5, BR definitions in §7.3",
+      "finding": "The displayed factor order in Theorem 7.2 conflicts with §7.3 and the stated correlation f1(xa_t)f2(x). Time translation forces BR* on f1 and BR on f2, as displayed in Theorem 7.5. Local notes 4T0L and 4T0M use this consistent order; no exponential error estimate is inferred."
+    },
+    {
+      "id": "published-source-vs-read-version",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Version heading and license; compare SIAM abstract-page metadata",
+      "finding": "正式书章pp240-271与预印本33页分别记录。版本化arXiv是实际数学依据，所有定理编号据v2；没有假称读过超时的正式HTML。"
+    },
+    {
+      "id": "unoriented-circle-stabilizer",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "§2.2 circle space and §3.6 PSL2(R)-orbit description",
+      "finding": "无向圆的完整稳定子是PGL2(R)在PSL2(C)中的像，有两个分支；PSL2(R)只稳定所选一侧。4T03/4T04显式使用完整稳定子，平面定向标架机制另用恒等分支。"
+    },
+    {
+      "id": "mobius-orientation-convention",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "§2.2 Mob(C-hat) generated by circle inversions; §5.2 algebraic representations; Theorem 5.5 and Corollary 5.6",
+      "finding": "报告的广义Mobius群包含圆反演，等于Isom(H3)，而PSL2(C)=Isom+(H3)。实交比和保圆条件均不能排除复共轭。因此4T0G与文献页在狭义分式线性用语下明确写Mobius或反Mobius；这不是扩大研究定理。未另行假称读取Kim-Oh原文的Aut(G)分类。"
+    },
+    {
+      "id": "relative-and-absolute-orbit-closure",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Theorems 3.1 and 3.3; Remark 3.4",
+      "finding": "4T0D只取圆形地毯/刚性情形，分隔圆的闭性可在C_Lambda乃至圆空间C中陈述；C_Lambda对C闭。一般无柱情形只给C_Lambda^*中的相对闭性，Zhang反例说明不能无条件升级。"
+    },
+    {
+      "id": "circular-slice-union-not-differentiable-conformality",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Equation (5.1), Theorem 5.5",
+      "finding": "Lambda_f取所有满足f(C交Lambda)包含于某圆的切片的并，不额外限制圆分隔Lambda，也不改成整个圆被f映为圆。4T0G保留这个定义，保圆切片不能被解释为分形上的点态导数共形性。"
+    },
+    {
+      "id": "nondegenerate-circle-counting-specialization",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Theorem 2.7 and §2.4.2",
+      "finding": "报告简述没有显式排除Fuchsian群及有限圆族的退化：取余紧Fuchsian群与唯一极限圆构成的圆族，计数恒为1，不能有正的t^delta主项。4T0A采用实Zariski稠密且delta>1的非退化子情形；非空局部有限且有限轨道数均保留。delta<=1的圆束条件留在remaining_branches。"
+    },
+    {
+      "id": "zero-measure-asymptotic-notation",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Theorem 2.7 and footnote 2",
+      "finding": "渐近等价于零没有比值含义。4T0A使用t^{-delta}N趋于c*omega(R)，只在omega(R)>0时用波浪号；4T0J的波浪号陈述明确限制omega_rho(R)>0。"
+    },
+    {
+      "id": "product-radius-is-normalized-volume",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "§6.1-6.3",
+      "finding": "报告vol(T)定义为半径乘积，真实欧氏乘积体积还差(2pi)^n；4T0I明确归一化，并证明位移和指数与乘积Riemann位移指数不同。4T0J保留精确f可容许等式和各表示两两不共轭。"
+    },
+    {
+      "id": "avoid-unverified-higher-rank-normalizations",
+      "source_url": "https://arxiv.org/html/2510.10771v2",
+      "location": "Theorems 7.4-7.7, 8.1-8.2 and §8.6",
+      "finding": "v2的若干指数误差式将lim与仍含t的O项并列；7.5与7.2显示的BR/BR*顺序不同；8.1在SO(d,1)^n背景下写sigma=sum u_i，需要核对根重数归一化；8.6文字必须结合无限体积背景。未将这些速率式、高秩精确常数或谱概括导入定理页。"
+    }
+  ],
+  "terminology_review": {
+    "date": "2026-10-25",
+    "attempted_urls": ["https://banana-space.com/wiki/双曲空间"],
+    "status": "unavailable",
+    "result": "浏览工具返回URL不可访问。没有宣称已成功访问香蕉空间或核准术语。",
+    "verified_terms": [],
+    "local_policy": "沿用既有Kleinian、凸余紧、几何有限、准Fuchsian、Anosov等词；Sierpinski与Busemann保留人名。"
+  },
+  "parent_review": {
+    "date": "2026-10-25",
+    "changes": ["4T04: torsion-free hypothesis added for the manifold/frame-bundle interpretation only.", "4T0L and 4T0M: BR factor order corrected and a local time-translation check supplied."],
+    "snapshot_boundary": "Agent validation hashes below describe its handoff before the parent corrections. Final hashes and checks are recorded in the integrated snapshots and verification."
+  },
+  "validation": {
+    "scope": "Only 4T*.tree, icm2026-hee-oh.tree and this packet are authored in the repository. Scratch downloads/configuration are under /tmp. No shared JSON, subject landing page, theme, workflow, sync, commit, push or full-site build.",
+    "status": "passed-targeted-source-checks",
+    "checked_at": "2026-10-25",
+    "tree_files": 26,
+    "atomic_pages": 24,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "katex_formulas": 432,
+    "prerequisite_edges": 71,
+    "checks": [
+      "All 26 owned tree files parsed by forester query all using an isolated /tmp configuration pointed only at the owned source directory and a symlink to the owned reference; no build was run.",
+      "Final 26-file checks cover canonical formatting, editorial rules, balanced groups, control bytes, all formula rendering, unique IDs, resolving links, all owned pages reachable from 4T00, and exact per-page proof/source/prerequisite coverage.",
+      "All registered prerequisites occur as body links. The owned dependency graph and its merge with the existing read-only prerequisite registry are acyclic; outline/reference prerequisites are empty. Reviewed reused IDs: 21.",
+      "Exact rational arithmetic checked Hermitian inverse-congruence transport and radius completion; numerical complex arithmetic checked cross-ratio invariance and a nonconcyclic quadruple.",
+      "Busemann cocycle/sign, l1/l2 count comparison, factorial non-thickness, dyadic thickness and n<=3 integral threshold were independently recomputed.",
+      "Rendered-page inspection, site navigation/registration and global build are explicitly deferred to the parent."
+    ],
+    "structural_findings": []
+  }
+}

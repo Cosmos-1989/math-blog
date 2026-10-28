@@ -27,7 +27,8 @@ test('the fourth batch retains report identity and the existing leading topics',
   assert.deepEqual(record.reports.map(r => r.outline), ['4K00', '4L00', '4M00']);
   assert.deepEqual(record.reports.map(r => r.doi), ['10.1137/25M1806715', '10.1137/25M1803309', '10.1137/25M1805801']);
   const topics = listedTopics(note('006B'));
-  assert.deepEqual(topics.slice(0, 13), ['2B00', '4B00', '4C00', '4D00', '4E00', '4F00', '4G00', '4H00', '4I00', '4J00', '4K00', '4L00', '4M00']);
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline), '4B00', '4C00', '4D00', '4E00', '4F00', '4G00', '4H00', '4I00', '4J00', '4K00', '4L00', '4M00'];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   for (const report of record.reports) {
     const rows = coverage.reports.filter(r => r.doi === report.doi);
     assert.equal(rows.length, 1);

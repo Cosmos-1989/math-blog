@@ -30,9 +30,10 @@ test('the second PDE batch follows the published order and preserves first-batch
   ]);
   assert.deepEqual(coverage.reports.slice(4, 7).map(row => row.doi), record.reports.map(row => row.doi));
   const topics = listedTopics(note('006A'));
-  assert.deepEqual(topics.slice(0, 10), [
-    '2A00', '2700', '2C00', '4000', '4100', '4200', '4300', '4400', '4500', '4600',
-  ]);
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline),
+    '4000', '4100', '4200', '4300', '4400', '4500', '4600',
+  ];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   for (const id of ['2G00', '1200', '2I00']) assert.equal(topics.filter(x => x === id).length, 1);
   for (const report of record.reports) {
     const entry = coverage.reports.find(row => row.doi === report.doi);

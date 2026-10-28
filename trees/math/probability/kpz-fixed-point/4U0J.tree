@@ -1,0 +1,13 @@
+\title{KPZ 不动点的单点分布满足 KP-II 方程}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，定理 4.1 及式 (4.3)；局部微分形式和势的积分常数}
+
+\p{令 #{\mathfrak h} 为 [KPZ 不动点](4U0B)，初态 #{f\in\mathrm{UC}} 确定且不恒为 #{-\infty}。写 #{F(t,x,r)=\mathbb P(\mathfrak h(t,x;f)\leq r)}。报告定理 4.1 的标量结论给出：在 #{t>0}、#{F>0} 的光滑区域，#{\phi=\partial_r^2\log F} 满足局部 KP-II 方程}
+##{\partial_r\left(\partial_t\phi+\frac 12\partial_r(\phi^2)+\frac 1{12}\partial_r^3\phi\right)+\frac 14\partial_x^2\phi=0.}
+\p{此式由报告式 (4.3) 对 #{r} 求导得到，因而无须选择其中 #{\partial_r^{-1}} 的积分常数。它是引用的研究定理，系数对应报告 #{\lambda=\nu=1/4,D=1} 及速率二 PNG 的尺度。各[偏导数](0A32)作用于时间 #{t}、空间观察点 #{x} 和高度阈值 #{r}，初始函数 #{f} 固定。}
+\p{\strong{势方程的归一条件。}置 #{G=\log F} 及 #{E=G_{tr}+(G_{rr})^2/2+G_{rrrr}/12+G_{xx}/4}。代入 #{\phi=G_{rr}} 并[交换混合偏导数](0A3D)，局部 KP 式恰为 #{E_{rr}=0}。故在连通的高度区间上，#{E=a(t,x)r+b(t,x)}。若区间延伸至 #{+\infty}，并且 #{G_{tr},G_{rr},G_{rrrr},G_{xx}} 随 #{r\to+\infty} 均趋零，则 #{E\to 0}，迫使 #{a=b=0}，从而得到归一的势方程}
+##{G_{tr}+\frac 12(G_{rr})^2+\frac 1{12}G_{rrrr}+\frac 14G_{xx}=0.}
+\p{仅有分布函数 #{F\to 1} 不足以推出这些导数的上尾条件。[光滑 Toda 极限](4U0K)是在另外明确给出的导数收敛假设下直接得到此势方程。}
+\p{方程控制的是确定性分布函数的对数导数。随机高度轨道本身没有因此成为经典 KP-II 解；它与驱动高度的[KPZ 随机方程](4U03)属于不同层次。对随机初值先取平均，也不能直接将上述非线性方程移到平均后的分布函数上。}

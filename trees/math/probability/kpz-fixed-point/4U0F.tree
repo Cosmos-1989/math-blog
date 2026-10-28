@@ -1,0 +1,13 @@
+\title{抛物线惩罚使增长变分问题取到最大值}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§3.1 末段及式 (3.22)；确定性充分条件}
+
+\p{固定 #{t>0,y\in\mathbb R}。设 #{f\in\mathrm{UC}} 是[上半连续高度函数](4U05)，#{A:\mathbb R\to\mathbb R} 连续。假设存在 #{C\in\mathbb R} 和 #{0\leq\eta<1/t}，使 #{A(x)\leq C+\eta x^2}。则}
+##{M=\sup_{x\in\mathbb R}\left\{f(x)+A(x)-\frac{(x-y)^2}{t}\right\}}
+\p{为有限实数，且在某个有限 #{x} 处达到。这里 #{A} 可作为[景观变分式](4U0D)中固定终点的随机薄片截面；命题本身只要求所列确定性条件。}
+\p{\strong{证明。}写 #{f(x)\leq A_0+B|x|}。大括号内的函数 #{G(x)} 满足}
+##{G(x)\leq A_0+C-\frac{y^2}{t}+\left(B+\frac{2|y|}{t}\right)|x|-\left(\frac 1t-\eta\right)x^2.}
+\p{二次项系数严格为负，所以右端随 #{|x|\to\infty} 趋于 #{-\infty}。又因 #{f} 不恒为 #{-\infty}，存在 #{x_0} 使 #{G(x_0)} 有限。取足够大的 #{R}，使 #{|x|>R} 时 #{G(x)<G(x_0)-1}。于是上确界可限制到紧区间 #{[-R,R]}，且有有限上界。}
+\p{取其中趋向上确界的点列，紧性给收敛子列 #{x_n\to x_*}。#{G} 上半连续，所以 #{G(x_*)\geq\limsup G(x_n)=M}，达到性得证。这与[连续函数极值定理](0A3A)使用相同的紧性论证，但容许 #{-\infty} 值。若没有适当上界，例如 #{f(x)=a x^2} 且 #{a>1/t,A=0,y=0}，上确界就是 #{+\infty}。}

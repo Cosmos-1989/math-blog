@@ -39,7 +39,14 @@ for (const id of subjects) {
 
 const coverage = {};
 const plenaries = JSON.parse(read("research/icm2026-plenary.json"));
-for (const [id, leading] of Object.entries(plenaries.subjects)) {
+const plenaryTopics = structuredClone(plenaries.subjects);
+for (const file of ["research/icm2026-plenary-applied-reports.json", "research/icm2026-plenary-dynamics-probability.json"]) {
+  if (!fs.existsSync(path.join(root, file))) continue;
+  for (const [id, topics] of Object.entries(JSON.parse(read(file)).leading_topics)) {
+    plenaryTopics[id] = [...new Set([...(plenaryTopics[id] ?? []), ...topics])];
+  }
+}
+for (const [id, leading] of Object.entries(plenaryTopics)) {
   const text = trees.get(id) ?? "";
   const research = listed(text.split("\\strong{研究专题}")[1]?.split("\\strong{其他专题}")[0] ?? "");
   if (JSON.stringify(research.slice(0, leading.length)) !== JSON.stringify(leading)) {
@@ -49,7 +56,7 @@ for (const [id, leading] of Object.entries(plenaries.subjects)) {
 for (const [id, slug] of [["0061", "logic"], ["0062", "algebra"], ["0063", "number-theory"], ["0064", "geometry"]]) {
   const manifest = JSON.parse(read(`research/icm2026-${slug}.json`));
   const section = [...manifest.papers, ...(manifest.cross_listed_reports ?? [])].map(paper => paper.outline);
-  const leading = plenaries.subjects[id] ?? [];
+  const leading = plenaryTopics[id] ?? [];
   const expected = [...leading, ...section];
   const text = trees.get(id) ?? "";
   const heading = "\\strong{研究专题}";

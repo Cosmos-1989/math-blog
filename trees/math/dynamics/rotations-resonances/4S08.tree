@@ -1,0 +1,13 @@
+\title{中心柯西分布及其尾部}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§3 的柯西极限；直接积分确定归一化}
+
+\p{设 #{c>0}。中心为零、尺度为 #{c} 的柯西分布，是具有下列密度的[实随机变量分布](00L0)：}
+##{p_c(t)=\frac{c}{\pi(c^2+t^2)},\qquad F_c(t)=\frac 12+\frac 1\pi\arctan(t/c).}
+\p{第二式是从负无穷到 #{t} 积分所得的分布函数。因为 #{\arctan(t/c)} 在两端趋于 #{\pm\pi /2}，总质量恰为一；系数 #{1/\pi} 不能省略。}
+
+\p{若 #{Y} 服从此分布，则 #{\mathbb E|Y|=\infty}，且 #{\mathbb EY^2=\infty}。事实上，对 #{t\geq c}，#{p_c(t)\geq c/(2\pi t^2)}，故 #{\int_c^R tp_c(t)\,dt} 至少为 #{(c/(2\pi))\log(R/c)}，而 #{\int_c^R t^2p_c(t)\,dt} 至少为 #{c(R-c)/(2\pi)}。两者随 #{R\to\infty} 发散。}
+
+\p{密度关于零对称，但正负部分的[期望](00L1)分别发散，因此普通的期望不存在；对称截断积分为零只是一种主值约定。}

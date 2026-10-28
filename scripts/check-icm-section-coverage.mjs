@@ -8,6 +8,12 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const catalogue = JSON.parse(read('research/icm2026-section-coverage.json'));
 const plenaries = JSON.parse(read('research/icm2026-plenary.json'));
+const plenaryTopics = structuredClone(plenaries.subjects);
+for (const file of ['research/icm2026-plenary-applied-reports.json', 'research/icm2026-plenary-dynamics-probability.json']) {
+  if (!fs.existsSync(path.join(root, file))) continue;
+  for (const [id, topics] of Object.entries(JSON.parse(read(file)).leading_topics))
+    plenaryTopics[id] = [...new Set([...(plenaryTopics[id] ?? []), ...topics])];
+}
 const trees = new Map();
 for (const file of fs.readdirSync(path.join(root, 'trees'), {recursive: true})) {
   if (!file.endsWith('.tree')) continue;
@@ -41,7 +47,7 @@ for (const section of catalogue.sections) {
   assert(start >= 0, `Missing research heading ${section.landing}`);
   const end = landing.indexOf('\n\\strong{', start + heading.length);
   const links = listedTopics(landing.slice(start + heading.length, end < 0 ? undefined : end));
-  const leading = plenaries.subjects[section.landing] ?? [];
+  const leading = plenaryTopics[section.landing] ?? [];
   assert.deepEqual(links.slice(0, leading.length), leading, `${section.landing}: plenary order`);
   assert.deepEqual(sorted(links.slice(leading.length)), sorted(expected.map(report => report.outline)),
     `${section.landing}: missing, duplicated or incorrectly grouped report`);

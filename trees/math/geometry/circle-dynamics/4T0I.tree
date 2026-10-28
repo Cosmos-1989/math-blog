@@ -1,0 +1,16 @@
+\title{半径乘积与双曲乘积度量给出不同指数}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Hee Oh 报告](icm2026-hee-oh)，§6.2–6.3；指数比较补充}
+
+\p{设 #{\Gamma} 有有限生成集，#{\rho_i:\Gamma\to\operatorname{PSL}_2(\mathbb C)} 是忠实[凸余紧表示](2F08)，#{1\le i\le n}。固定 #{o\in\mathbb H^3}，记 #{\ell_i(\gamma)=d(o,\rho_i(\gamma)o)}。对正权重 #{\kappa_i} 定义}
+##{\delta_\kappa=\limsup_{T\to\infty}\frac{1}{T}
+\log\#\{\gamma:\textstyle\sum_{i=1}^n\kappa_i\ell_i(\gamma)\le T\}.}
+\p{与[双曲临界指数](4T07)相同，基点变化只给截断量增加有界误差，所以不改变指数。整体缩放权重满足 #{\delta_{a\kappa}=\delta_\kappa /a}，因为相应计数恰为原计数在 #{T/a} 处的值。}
+\p{取全部 #{\kappa_i=1}，记指数为 #{\delta_{\mathrm{sum}}}；用乘积 Riemann 度量的位移 #{\ell_{\mathrm{prod}}=(\sum_i\ell_i^2)^{1/2}} 定义指数 #{\delta_{\mathrm{prod}}}。由}
+##{\ell_{\mathrm{prod}}\le\sum_i\ell_i\le\sqrt n\,\ell_{\mathrm{prod}}}
+\p{得到 #{N_{\mathrm{prod}}(T/\sqrt n)\le N_{\mathrm{sum}}(T)\le N_{\mathrm{prod}}(T)}，故}
+##{\frac{\delta_{\mathrm{prod}}}{\sqrt n}\le\delta_{\mathrm{sum}}\le\delta_{\mathrm{prod}}.}
+\p{区别在对角例子中已出现。若全部表示相同，则 #{\delta_{\mathrm{sum}}=\delta_\Gamma /n}，而 #{\delta_{\mathrm{prod}}=\delta_\Gamma /\sqrt n}。此例只检验两种指数，不能用于要求表示互不共轭的计数定理。}
+\p{对欧氏圆的乘积 #{T=C_1\times\cdots\times C_n}，报告定义的归一化体积为 #{\operatorname{vol}(T)=\prod_i r(C_i)}，是通常欧氏乘积体积除以 #{(2\pi)^n}。其负对数是各半径负对数之和，解释了[环面计数](4T0J)为何使用 #{\delta_{\mathrm{sum}}}。}

@@ -29,7 +29,8 @@ test('the third batch follows proceedings order and counts Rhodes-Vargas as one 
     '10.1137/25M1805825', '10.1137/25M1804728', '10.1137/25M1803632',
   ]);
   const topics = listedTopics(note('006B'));
-  assert.deepEqual(topics.slice(0, 10), ['2B00', '4B00', '4C00', '4D00', '4E00', '4F00', '4G00', '4H00', '4I00', '4J00']);
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline), '4B00', '4C00', '4D00', '4E00', '4F00', '4G00', '4H00', '4I00', '4J00'];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   for (const id of ['4900', '0Q00']) assert.equal(topics.filter(x => x === id).length, 1);
   for (const report of record.reports) {
     const rows = coverage.reports.filter(row => row.doi === report.doi);

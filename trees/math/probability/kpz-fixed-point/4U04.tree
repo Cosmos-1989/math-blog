@@ -1,0 +1,11 @@
+\title{KPZ 的 1:2:3 缩放怎样配平系数}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§§1.3–1.4、式 (1.9)–(1.13)；尺度恒等式}
+
+\p{对[KPZ 方程](4U03)，设 #{\varepsilon>0}、#{\chi,z\in\mathbb R}，并以常数 #{c} 减去线性增长。定义 #{h_\varepsilon(t,x)=\varepsilon^\chi[h(\varepsilon^{-z}t,\varepsilon^{-1}x)-c\varepsilon^{-z}t]}。在光滑近似层次的链式法则与[白噪声缩放](4U02)给出系数}
+##{\partial_t h_\varepsilon=\lambda\varepsilon^{2-\chi -z}(\partial_xh_\varepsilon)^2+\nu\varepsilon^{2-z}\partial_x^2h_\varepsilon+\sqrt D\,\varepsilon^{\chi+(1-z)/2}\xi -c\varepsilon^{\chi -z}.}
+\p{\strong{证明。}一次时间导数带来 #{\varepsilon^{\chi -z}}，一次空间导数带来 #{\varepsilon^{\chi -1}}。把原来的 #{h_x,h_{xx}} 分别换成 #{\varepsilon^{1-\chi}(h_\varepsilon)_x}、#{\varepsilon^{2-\chi}(h_\varepsilon)_{xx}}，即得前两项；噪声再乘 #{\varepsilon^{(z+1)/2}}，得到第三项。确定性中心化直接求导给最后一项。重整化漂移也须随同变换。}
+\p{如果要求保留空间[布朗运动](0N0S)的非零增量方差，#{\varepsilon^\chi B(\varepsilon^{-1}x)} 的增量方差是原来的 #{\varepsilon^{2\chi -1}} 倍，故取 #{\chi=1/2}。若二次项系数也保持非零有限，则 #{2-\chi -z=0}，即 #{z=3/2}。此时扩散系数为 #{\nu\varepsilon^{1/2}}，噪声系数为 #{\sqrt D\,\varepsilon^{1/4}}。}
+\p{令 #{a=\varepsilon^{-1/2}}，所观测的高度、空间、时间尺度分别为 #{a,a^2,a^3}，这就是 1:2:3。等价地，时间 #{T} 的高度和相关长度分别取 #{T^{1/3}} 与 #{T^{2/3}}。这是指定两项平衡要求后的计算；极限存在、非退化及其分布仍需收敛定理。系数趋零也不允许直接删掉粗糙随机解中的噪声和扩散项。}

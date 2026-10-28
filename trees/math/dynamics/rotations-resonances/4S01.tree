@@ -1,0 +1,13 @@
+\title{环面旋转的中心化差异度}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§2.3、§3；采用半开区间约定}
+
+\p{设 #{\mathbb T^d=\mathbb R^d/\mathbb Z^d}，用单位立方体的 [Lebesgue 测度](00XV)定义其体积一的 [Haar 测度](00T1) #{m}。向量 #{\alpha\in\mathbb T^d} 定义旋转，也称平移，#{T_\alpha x=x+\alpha}。给定可测集 #{A\subseteq\mathbb T^d}，其中心化差异度为}
+##{D_N(x,\alpha;A)=\sum_{j=0}^{N-1}1_A(x+j\alpha)-Nm(A),\qquad N\geq 1.}
+\p{这里 #{1_A} 是[指示函数](00L0)。一般可积函数 #{f} 的遍历和为 #{S_Nf(x)=\sum_{j=0}^{N-1}f(x+j\alpha)}，所以 #{D_N=S_N(1_A-m(A))}。差异度是未除以 #{N} 的计数误差；经验比例的误差为 #{D_N/N}。}
+
+\p{固定 #{\alpha}，若 #{x} 按 #{m} 分布，平移不变性和[期望的线性性](00L1)给出 #{\mathbb E_xD_N=0}。中心项因此必须是 #{Nm(A)}。在圆周上取 #{I_r=\lbrack 0,r\rparen}、#{0<r<1}，简记 #{D_N(x,\alpha,r)=D_N(x,\alpha;I_r)}，此时 #{m(I_r)=r}。}
+
+\p{改变随机变量便改变问题：可以固定 #{N,\alpha} 随机取 #{x}，固定 #{x,\alpha} 随机取时间 #{J_N\in\{1,\ldots,N\}}，也可以固定 #{N} 随机取 #{(x,\alpha)}。只有明确这些选择后，归一化后的[依分布收敛](00LA)才有确定含义。}

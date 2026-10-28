@@ -27,8 +27,9 @@ test('all fifteen official mathematical-physics reports have distinct topic entr
   assert.equal(record.subject, '006B');
   assert.deepEqual(record.reports.map(r => r.outline), ['4N00', '4O00']);
   const topics = listedTopics(note('006B'));
-  assert.deepEqual(topics.slice(0, 16), ['2B00', '4B00', '4C00', '4D00', '4E00', '4F00', '4G00',
-    '4H00', '4I00', '4J00', '4K00', '4L00', '4M00', '4N00', '4O00', '4900']);
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline), '4B00', '4C00', '4D00', '4E00', '4F00', '4G00',
+    '4H00', '4I00', '4J00', '4K00', '4L00', '4M00', '4N00', '4O00', '4900'];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   const all = [...coverage.reports, ...coverage.cross_listed_reports];
   assert.equal(all.length, 15);
   assert.equal(new Set(all.map(r => r.outline)).size, 15);

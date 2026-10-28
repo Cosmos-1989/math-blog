@@ -1,0 +1,14 @@
+\title{时空白噪声的缩放因子}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§1.3、式 (1.11)；协方差复算}
+
+\p{设 #{\xi} 为[时空白噪声](4U01)，#{a,b>0}。在随机广义函数意义下，#{\sqrt{ab}\,\xi(at,bx)} 与 #{\xi(t,x)} 同分布。这里同分布指对任意有限族 L² 测试函数配对所得向量具有相同分布。}
+\p{\strong{证明。}按变量替换定义缩放后的配对}
+##{W_{a,b}(f)=(ab)^{-1/2}W\bigl(f(\cdot /a,\cdot /b)\bigr).}
+\p{它仍为中心 Gaussian 族，其协方差为}
+##{\mathbb E[W_{a,b}(f)W_{a,b}(g)]=(ab)^{-1}\int f(s/a,y/b)g(s/a,y/b)\,ds\,dy=\int fg\,dt\,dx.}
+\p{中心 Gaussian 向量的分布由协方差决定，故所有有限配对的联合分布相同。取 #{a=\varepsilon^{-z}}、#{b=\varepsilon^{-1}}，得到}
+##{\xi(\varepsilon^{-z}t,\varepsilon^{-1}x)\overset{\mathrm d}=\varepsilon^{(z+1)/2}\xi(t,x).}
+\p{最后一个等式仍是测试函数配对后的分布等式，不能对某个点的噪声值使用。}

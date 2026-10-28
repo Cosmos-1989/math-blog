@@ -1,0 +1,14 @@
+\title{随机旋转的访问时刻两两独立}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§3 的随机参数模型；独立 Haar 测度计算}
+
+\p{设 #{x,\alpha} 在 #{\mathbb T^d} 上独立均匀分布，#{A\subseteq\mathbb T^d} 可测，#{v=m(A)}。对不同非负整数 #{j,\ell}，轨道点 #{U_j=x+j\alpha} 与 #{U_\ell=x+\ell\alpha} 两两[独立](00L3)且均匀分布。因此[差异度](4S01)满足}
+##{\mathbb E D_N=0,\qquad \operatorname{Var}(D_N)=Nv(1-v).}
+
+\p{\strong{两两独立。}变量代换 #{(x,\alpha)\mapsto(u=x+j\alpha,\alpha)} 保持乘积 Haar 测度，故 #{u} 与 #{\alpha} 独立均匀。整数 #{q=\ell -j\ne 0} 的乘法映射 #{\alpha\mapsto q\alpha} 仍将均匀测度送到均匀测度：每个坐标的单位区间分成 #{|q|} 段，各段线性覆盖圆周。于是给定 #{u}，#{U_\ell=u+q\alpha} 仍均匀，且其分布不依赖 #{u}。}
+
+\p{各 #{1_A(U_j)} 是参数 #{v} 的 [Bernoulli 变量](00L4)，两两独立使非对角协方差为零。[和的方差公式](00L2)给出 #{Nv(1-v)}。三个以上的轨道点并非相互独立，因为 #{U_0-2U_1+U_2=0}。}
+
+\p{对半圆 #{v=1/2}，二阶矩为 #{N/4}。它与[对数尺度的柯西极限](4S09)相容，因为[依分布收敛不能直接传递无界矩](0GKM)；上述计算没有给出独立同分布变量和的中心极限定理。}

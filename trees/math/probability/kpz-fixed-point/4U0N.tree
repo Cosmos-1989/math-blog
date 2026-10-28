@@ -1,0 +1,11 @@
+\title{抛物线核已有 1:2:3 拼接而没有随机涨落}
+\date{2026-10-25}
+\taxon{Example}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，式 (3.22)、(3.27) 与 FAQ 4；确定性对照}
+
+\p{对 #{s<t} 定义确定性核 #{L_0(s,x;t,y)=-(y-x)^2/(t-s)}。它满足[变分核的拼接律](4U0D)，也满足 #{a^{-1}L_0(a^3s,a^2x;a^3t,a^2y)=L_0(s,x;t,y)}。因而拼接和 1:2:3 齐次性本身不能识别 KPZ 的随机极限。}
+\p{\strong{证明。}令 #{\alpha=u-s>0,\beta=t-u>0}。配方得}
+##{\frac{(z-x)^2}{\alpha}+\frac{(y-z)^2}{\beta}=\frac{(y-x)^2}{\alpha+\beta}+\frac{\alpha+\beta}{\alpha\beta}\left(z-\frac{\beta x+\alpha y}{\alpha+\beta}\right)^2.}
+\p{右端在 #{z=(\beta x+\alpha y)/(\alpha+\beta)} 取最小值。加负号便得 #{\sup_z\{L_0(s,x;u,z)+L_0(u,z;t,y)\}=L_0(s,x;t,y)}。尺度式则由分子乘 #{a^4}、分母乘 #{a^3}，最后高度再乘 #{a^{-1}} 得到。}
+\p{从零平坦初态出发，#{\sup_x L_0(0,x;t,y)=0}；从原点窄楔出发，得到 #{-y^2/t}。这两者均无随机涨落。KPZ 不动点的变分式还含相关的 Airy 薄片，不能用这个确定性抛物线核替代。}

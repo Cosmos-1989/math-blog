@@ -69,7 +69,7 @@ test('the first four reports follow proceedings order and preserve the rest of t
   assert.deepEqual(topics.filter(id => expected.includes(id)), expected);
   const leading = coverage.editorial_leading_topics.map(row => row.outline);
   assert.deepEqual(topics.slice(0, leading.length), leading);
-  assert.deepEqual(leading, ['2A00', '2700', '2C00']);
+  assert.deepEqual(leading.slice(0, 3), ['2A00', '2700', '2C00']);
   for (const id of ['2G00', '1200', '2I00']) assert(topics.includes(id), id);
   for (const report of [...coverage.reports, ...coverage.cross_listed_reports]) {
     if (!report.outline) {

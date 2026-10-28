@@ -1,0 +1,14 @@
+\title{KPZ 方程的 Hopf–Cole 解释}
+\date{2026-10-25}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§§1.1–1.2、式 (1.1)、(1.6)}
+
+\p{设 #{t\geq 0} 为时间、#{x\in\mathbb R} 为空间，#{\nu,D>0}、#{\lambda\ne 0}。一维 Kardar–Parisi–Zhang 方程通常写作}
+##{\partial_t h=\nu\partial_x^2h+\lambda(\partial_xh)^2+\sqrt D\,\xi,}
+\p{其中 #{\xi} 是[时空白噪声](4U01)，导数记号见[偏导数](0A32)。粗糙解的平方梯度需要重整化。Hopf–Cole 解通过乘性随机热方程定义：令 #{\beta=\lambda\sqrt D/\nu}，求 Itô 意义的正解 #{Z}，再置}
+##{\partial_tZ=\nu\partial_x^2Z+\beta Z\xi,\qquad h=\frac{\nu}{\lambda}\log Z.}
+\p{例如对有界连续初值 #{h_0}，取 #{Z_0(x)=\exp(\lambda h_0(x)/\nu)}。随机热方程的含义是积分关系}
+##{Z(t,x)=\int_{\mathbb R}p_\nu(t,x-y)Z_0(y)\,dy+\beta\int_0^t\int_{\mathbb R}p_\nu(t-s,x-y)Z(s,y)\,W(ds,dy),\qquad p_\nu(t,x)=\frac{e^{-x^2/(4\nu t)}}{\sqrt{4\pi\nu t}}.}
+\p{后项由适应的阶梯被积函数延拓：每段时间所用随机系数只依赖该段开始前的噪声，平方均值等距为 #{\mathbb E|\int G\,dW|^2=\mathbb E\int|G|^2\,dt\,dx}。这与[布朗随机积分](4M13)采用的 Itô 次序一致。此初值类的解的存在、唯一性和严格正性是所引随机热方程理论的结论。}
+\p{光滑且为正的 #{Z} 满足 #{Z_{xx}/Z=(\lambda /\nu)h_{xx}+(\lambda /\nu)^2h_x^2}，解释了二次项系数。对空间平滑的白噪声再作 Itô 变换，还产生随平滑尺度发散的确定性漂移；所以光滑链式法则本身不定义白噪声方程。KPZ 方程保留扩散和噪声参数，其长期[缩放](4U04)才与 KPZ 不动点相联系。}

@@ -1,0 +1,14 @@
+\title{半圆差异度是整数斜积的高度位移}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§2.3 阶梯曲面的返回递推}
+
+\p{设 #{\alpha\in\mathbb T}，#{\psi(x)=2\,1_{\lbrack 0,1/2\rparen}(x)-1}。在 #{\mathbb T\times\mathbb Z} 上取[斜积](380B)}
+##{F_\alpha(x,z)=(x+\alpha,z+\psi(x)).}
+\p{它的高度增量只取 #{1,-1}。若 #{F_\alpha^N(x,z)=(x_N,z_N)}，则}
+##{x_N=x+N\alpha\pmod 1,\qquad z_N-z=2D_N(x,\alpha,1/2).}
+
+\p{\strong{证明。}使用[斜积的迭代公式](380C)，得到 #{z_N-z=\sum_{j=0}^{N-1}\psi(x+j\alpha)}。代入 #{\psi} 的定义，右侧是 #{2\sum_{j=0}^{N-1}1_{\lbrack 0,1/2\rparen}(x+j\alpha)-N}，恰为两倍[差异度](4S01)。}
+
+\p{尤其 #{2D_N\equiv N\pmod 2}。固定时间的高度有奇偶限制；随机抽取时间时两种奇偶类都会出现。报告用阶梯曲面上的直线流实现这个返回系统，其中方向参数满足 #{\beta=2\alpha -1}。上述代数恒等式解释计数如何成为高度，但曲面仿射对称的存在性是额外的几何输入。}

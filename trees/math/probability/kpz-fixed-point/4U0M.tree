@@ -1,0 +1,12 @@
+\title{Edwards–Wilkinson 方程的高度标准差为四分之一次幂}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§1.1、式 (1.3)–(1.4)；热核方差复算}
+
+\p{设 #{\nu,D>0}，零初值的线性 Edwards–Wilkinson 方程为 #{\partial_t h=\nu\partial_x^2h+\sqrt D\,\xi}，其中 #{\xi} 是[时空白噪声](4U01)。以 [KPZ 页中的热核](4U03) #{p_\nu} 定义它的随机卷积解。对每个 #{t>0,x\in\mathbb R}，#{h(t,x)} 为中心 Gaussian 变量，并且}
+##{\operatorname{Var}(h(t,x))=\frac{D}{\sqrt{2\pi\nu}}\,t^{1/2}.}
+\p{\strong{证明。}被积函数确定，白噪声的等距式给出}
+##{\operatorname{Var}(h(t,x))=D\int_0^t\int_{\mathbb R}p_\nu(s,y)^2\,dy\,ds.}
+\p{平方热核的空间积分为 #{(4\pi\nu s)^{-1}\int e^{-y^2/(2\nu s)}dy=(8\pi\nu s)^{-1/2}}，这里使用[高斯积分](0I8L)。再对时间积分，得到 #{D(8\pi\nu)^{-1/2}2\sqrt t}，即所需方差。其标准差是 #{\sqrt D(2\pi\nu)^{-1/4}t^{1/4}}。}
+\p{因此讨论高度涨落时，线性模型的比较尺度是 #{t^{1/4}}；[KPZ 的 #{t^{1/3}} 尺度](4U04)比它大。横向位移的扩散尺度 #{t^{1/2}} 是另一种量，不能仅比较指数就把高度涨落误判为次扩散。}

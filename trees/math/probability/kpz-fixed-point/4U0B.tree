@@ -1,0 +1,14 @@
+\title{KPZ 不动点的 PNG 归一化}
+\date{2026-10-25}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§§3.1–3.2、式 (3.1)、(3.17)；引用不动点构造}
+
+\p{KPZ 不动点 #{\mathfrak h(t,\cdot;f)} 是取值于[上半连续高度空间](4U05) #{\mathrm{UC}} 的 Markov 过程，初态 #{f} 为确定性高度函数。Markov 性指给定当前整个高度函数后，未来的条件分布只由该高度和时间间隔决定。记其转移概率为 #{P_t(f,A)}，其中 #{A} 为高度空间的 [Borel 集](00QD)；它满足}
+##{P_{s+t}(f,A)=\int_{\mathrm{UC}}P_s(f,dg)P_t(g,A),\qquad P_0(f,\cdot)=\delta_f.}
+\p{这里 #{\delta_f} 表示集中在初始函数 #{f} 的点质量。}
+\p{可通过速率二、横向速度一的 [PNG](4U09)固定它的尺度常数。先取有限[窄楔](4U06)初态 #{f=\max_{1\leq i\leq m}(b_i+\mathfrak d_{y_i})}，其中 #{y_i} 不同、#{b_i\in\mathbb R}。PNG 初态 #{h_0^\varepsilon} 在 #{\varepsilon^{-1}y_i} 取 #{\lfloor\varepsilon^{-1/2}b_i\rfloor}，其他位置为 #{-\infty}。对每个固定 #{t>0} 及有限个空间点，中心化高度}
+##{H_\varepsilon(t,x)=\varepsilon^{1/2}h^{\mathrm{PNG}}(\varepsilon^{-3/2}t,\varepsilon^{-1}x;h_0^\varepsilon)-2\varepsilon^{-1}t}
+\p{的联合分布收敛到 #{\mathfrak h(t,x;f)} 的联合分布。这个缩放极限及其与一般初态的相容性是引用的构造结果。一般 #{f\in\mathrm{UC}} 的转移规律由有限窄楔逼近及下图集连续延拓确定；在使用初态逼近时须共同控制线性上界，防止远处高度逃逸。有限窄楔的高度也要缩放，不能始终固定为零。}
+\p{Quastel §3.2 以 Fredholm 行列式给出这些转移概率，并引用其确为概率核且满足拼接关系的证明。这里选用 PNG 来说明同一过程的归一化：减去的是原始速度 #{2} 经缩放所得的 #{2\varepsilon^{-1}t}。TASEP 使用下降的高度约定时有不同的原始漂移，不能直接照搬此项。}
+\p{上述有限空间点的分布极限只陈述有限维分布；[函数空间收敛](4U0L)还需要指定下图集或紧收敛等拓扑。对一般模型，存在相同尺度并不足以识别极限为此 Markov 过程。}

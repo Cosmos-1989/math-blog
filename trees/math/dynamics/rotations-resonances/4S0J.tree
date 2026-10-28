@@ -1,0 +1,13 @@
+\title{丢番图旋转的光滑零平均函数具有有界遍历和}
+\date{2026-10-25}
+\taxon{Corollary}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§§2.3、3 的旋转对照；复用平移上同调方程}
+
+\p{设 #{\alpha\in\mathbb T^d}，并有常数 #{\gamma,\tau>0}，使所有非零 #{k\in\mathbb Z^d} 满足}
+##{|e^{2\pi ik\cdot\alpha}-1|\geq\gamma|k|^{-\tau}.}
+\p{若 #{f:\mathbb T^d\to\mathbb R} 光滑且 #{\int f\,dm=0}，则[遍历和](4S01) #{S_Nf} 对 #{x,N} 一致有界。}
+
+\p{\strong{证明。}在[两个平移的兼容上同调方程](3415)中取两个平移都为 #{\alpha}、两个右端都为 #{f}。此时[联合丢番图条件](3414)恰为所给下界，兼容关系两侧相同。该定理给出光滑实函数 #{u}，满足 #{u(x+\alpha)-u(x)=f(x)}；实值性也可通过取解的实部保证。}
+##{S_Nf(x)=u(x+N\alpha)-u(x),\qquad\sup_x|S_Nf(x)|\leq 2\sup_x|u(x)|.}
+\p{等式由[余边界的望远镜相消](0AP9)得到，右侧有限是因为 #{u} 连续而环面紧。于是对任意 #{b_N\to\infty}，都有 #{S_Nf/b_N\to 0} 一致成立，与[余边界的零极限方差](3808)一致。区间指示函数不光滑，因此其非退化极限没有违反此结论。}

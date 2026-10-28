@@ -41,7 +41,8 @@ test('the first three missing proceedings chapters have distinct report topics',
   assert.equal(coverage.sources.speakers_html_sha256, roster.source_sha256);
   assert(roster.speakers.every(row => row.primary_section === 11 || row.additional_sections.includes(11)));
   const topics = listedTopics(note('006B'));
-  assert.deepEqual(topics.slice(0, 4), ['2B00', '4B00', '4C00', '4D00']);
+  const leadingAndBatch = [...coverage.editorial_leading_topics.map(row => row.outline), '4B00', '4C00', '4D00'];
+  assert.deepEqual(topics.slice(0, leadingAndBatch.length), leadingAndBatch);
   assert(topics.indexOf('4900') > topics.indexOf('4D00'), 'Retain the cross-listed topic after the proceedings topics');
   const names = reports.flatMap(row => row.speaker_ids);
   assert.equal(names.length, 16);

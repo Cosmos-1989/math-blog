@@ -1,0 +1,14 @@
+\title{字符标记保持格点之间的整数关系}
+\date{2026-10-25}
+\taxon{Proposition}
+\author{author}
+\meta{source}{[Dolgopyat](icm2026-dolgopyat)，§3 随机标记的分布；独立字符计算}
+
+\p{设 #{\Lambda=B\mathbb Z^n} 为[满秩格](0N01)。取[独立](00L3)均匀的圆周变量 #{\theta_1,\ldots,\theta_n}，令 #{\theta=(\theta_1,\ldots,\theta_n)}，并对 #{k\in\mathbb Z^n} 定义标记 #{\chi(Bk)=k\cdot\theta\pmod 1}。它是一个加法字符，即到 #{\mathbb T=\mathbb R/\mathbb Z} 的群同态，满足}
+##{\chi(v+w)=\chi(v)+\chi(w),\qquad\chi(qv)=q\chi(v)\quad(q\in\mathbb Z).}
+
+\p{\strong{证明与分布。}两个等式来自整数坐标的加法。对非零 #{v=Bk}，选 #{k_j\ne 0}，固定其他坐标。映射 #{\theta_j\mapsto k_j\theta_j\pmod 1} 把均匀测度送到均匀测度，故每个 #{\chi(v)} 都均匀。可是 #{\chi(2v)=2\chi(v)}，因此不同格点的标记并非独立。}
+
+\p{这个定义不依赖所选格基：换基 #{B'=BU}，其中 #{U} 是可逆整数矩阵时，字符的新坐标为 #{U^T\theta}，仍按 [Haar 概率测度](00T1)分布。于是可以先选[随机格](0N0F)，再选均匀字符，得到一种自然的[标记格](4S0F)。}
+
+\p{旋转 Fourier 相位 #{k\cdot x\pmod 1} 具有同样的整数关系。报告对球形极限的另一组标记按原始格点方向取样，再沿整数倍延拓；原始格点指不能写成 #{q w}、#{q\in\mathbb Z}、#{|q|>1}、#{w\in\Lambda} 的非零点。把这种结构换成全部格点上的独立相位，会丢掉整数倍之间的关联。}

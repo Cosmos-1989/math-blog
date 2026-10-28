@@ -1,0 +1,15 @@
+\title{光滑 Toda 缩放怎样产生 KP 势方程}
+\date{2026-10-25}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Quastel](icm2026-quastel)，§4.1、式 (4.4)–(4.6)；附明确光滑性假设的计算}
+
+\p{设 #{\varepsilon\downarrow 0}，实函数 #{G_\varepsilon(t,x,r)} 在某个开区域及所需小平移上定义，并在紧集上连同所有至多四阶[偏导数](0A32)一致收敛到 #{G}。假设它们满足以下缩放后的标量 Toda 恒等式：}
+##{\varepsilon(G_\varepsilon)_{rr}-\varepsilon^2(G_\varepsilon)_{tr}-\frac{\varepsilon^2}{4}(G_\varepsilon)_{xx}+\frac{\varepsilon^3}{4}(G_\varepsilon)_{tt}=\exp\bigl(G_\varepsilon(r+\sqrt\varepsilon)+G_\varepsilon(r-\sqrt\varepsilon)-2G_\varepsilon(r)\bigr)-1.}
+\p{式中未显示的 #{t,x} 坐标不变。则 #{G} 满足 [KP 势方程](4U0J)。}
+\p{\strong{证明。}记 #{\delta=\sqrt\varepsilon}。在 #{r} 上用 [Taylor 公式](0I8J)作对称四阶展开；奇数阶项抵消，局部四阶一致收敛保证余项为一致的 #{o(\varepsilon^2)}，所以指数中的量为}
+##{\varepsilon(G_\varepsilon)_{rr}+\frac{\varepsilon^2}{12}(G_\varepsilon)_{rrrr}+o(\varepsilon^2).}
+\p{再展开指数，右端等于}
+##{\varepsilon(G_\varepsilon)_{rr}+\varepsilon^2\left(\frac 1{12}(G_\varepsilon)_{rrrr}+\frac 12((G_\varepsilon)_{rr})^2\right)+o(\varepsilon^2).}
+\p{两边的一阶项抵消。除以 #{\varepsilon^2} 后，#{\varepsilon(G_\varepsilon)_{tt}/4\to 0}，其余导数按假设收敛，移项即得 #{G_{tr}+G_{xx}/4+G_{rrrr}/12+(G_{rr})^2/2=0}。}
+\p{在 PNG 中，原始高度阈值只取整数，#{G_\varepsilon} 是对数分布的候选平滑插值；上述四阶收敛并不由分布收敛自动给出。因此这证明了一个条件性的连续极限恒等式，PNG 到不动点的概率收敛与导数估计仍是另外的问题。}
