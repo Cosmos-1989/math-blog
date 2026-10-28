@@ -1,0 +1,676 @@
+{
+  "date": "2026-10-28",
+  "report": {
+    "speaker": "Alex Kontorovich",
+    "title": "The Shape of Math To Come",
+    "category": "special",
+    "lecture_type": "special",
+    "outline": "4W00",
+    "prefix": "4W",
+    "reference": "icm2026-kontorovich",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+    "doi": "10.1137/25M1806764",
+    "pages": "102-123",
+    "license": "CC BY 4.0",
+    "question": "如何把机器提出的候选论证变成忠实表达原问题、可核验和可复用的数学知识，并用于教学及同行交流？",
+    "reading_scope": "完整读取SIAM正式HTML §§1-12的全部正文，含§§7.1-7.3、8.1.1-8.1.4、8.2、8.3.1-8.3.3、9.1-9.3、致谢及三条脚注与标题脚注；重叠窗口覆盖lines91-450。参考文献27项lines451-598已读为书目，所引论文未因此登记全文读取；元数据lines54-65及599-623核对。SIAM epdf因工具13MB上限未打开；另外下载arXiv:2510.15924v1 PDF，提取文本作图页定位，实际视觉核读仅p6、10、11、12、13、14、17、18，检查证明状态、sqrt2分解/骨架/代码示例、ZetaBlowsUp目标、ArchimedeanProperty三段、Verbose、Real Analysis Game及blueprint。未逐行审验截图全部Lean代码，也未执行Lean/Sage/AlphaProof。arXiv HTML只读初始§§1-3与版本元数据，正文主依据始终为正式章；没有声称两版本全文相同。",
+    "proof_scope": {
+      "4W00": {
+        "status": "narrative-outline",
+        "scope": "围绕候选论证的可靠接受、翻译、局部求解、库复用、教学与交流组织；25原子均直接可达；保留2025-09观点时间基准。"
+      },
+      "4W01": {
+        "status": "definition",
+        "scope": "有限词元表、下一词元分布与采样/贪心生成区分；不讲网络训练。"
+      },
+      "4W02": {
+        "status": "local-proof",
+        "scope": "条件成功率乘积的逐步证明；零概率前缀单列；相互独立只是充分条件；0.99^1000单位换算。"
+      },
+      "4W03": {
+        "status": "local-counterexamples",
+        "scope": "100个事件边际均0.99，交概率分别0.99与0；与独立模型比较，区分风险/经验风险/条件错误率。"
+      },
+      "4W04": {
+        "status": "definition-with-source-qualified-trust",
+        "scope": "检查接受蕴含形式判断的约定；形式系统的可靠性和语义翻译另列；sorryAx及公理依赖按官方说明。"
+      },
+      "4W05": {
+        "status": "definition-and-local-rule",
+        "scope": "语境、待填证明项和目标；通过函数抽象解除临时假设，复用依赖积规则。"
+      },
+      "4W06": {
+        "status": "local-proof",
+        "scope": "有限有向无环依赖局部定义；反向追溯证明有无前置节点，逐次取出排序，再代入局部推导；共同语境保留。"
+      },
+      "4W07": {
+        "status": "definition",
+        "scope": "实数倒数补零与除法全函数化；补值与极点处解析性质分开。"
+      },
+      "4W08": {
+        "status": "local-proof",
+        "scope": "任意实数分配律；(a /_0 b)b=a当且仅当b非零或a=0；必要性取b=0。"
+      },
+      "4W09": {
+        "status": "local-counterexample",
+        "scope": "N=0使所译存在命题空洞成立；N=0,n=1否定无条件倒数单调。"
+      },
+      "4W0A": {
+        "status": "local-proof",
+        "scope": "从实数上确界完备性证明自然数无上界，再选择正自然数N>max(1,1/epsilon)。"
+      },
+      "4W0B": {
+        "status": "local-proof",
+        "scope": "a0任意，n>=1时an=1/n；由正阈值及差式证明epsilon-N收敛。"
+      },
+      "4W0C": {
+        "status": "local-example-proof",
+        "scope": "答案集存在的同义反复；整数n²=1候选{-1,1}的双向证明及漏解反例。"
+      },
+      "4W0D": {
+        "status": "local-proof-from-explicit-limit",
+        "scope": "假定(z-a)f(z)->r非零，以eta和|r|/(2M)给出严格模长下界；一阶极点留数局部解释。"
+      },
+      "4W0E": {
+        "status": "cited-analytic-input-and-local-corollary",
+        "scope": "zeta定义复用欧拉乘积页；(s-1)zeta(s)->1引用报告；下界由4W0D自证。AlphaProof成功与实际Mathlib补值非零仅按作者报告/其所引Loeffler-Stoll归属。"
+      },
+      "4W0F": {
+        "status": "author-proposed-construction",
+        "scope": "四角色方案、人工介入、失败分类；骨架未闭合与证明接受区分。"
+      },
+      "4W0G": {
+        "status": "source-example-with-canonical-reuse",
+        "scope": "sqrt2的分解粒度与查库；复用既有无有理根例子和互素定义，不另造重复无理性定理。"
+      },
+      "4W0H": {
+        "status": "local-example-and-library-design-discussion",
+        "scope": "正阈值应用与epsilon=min(1/4,eta/2)满足两个参数范围的直接证明；Mathlib兼容性按作者讨论。"
+      },
+      "4W0I": {
+        "status": "author-proposed-metric",
+        "scope": "形式化因子的总时间定义；de Bruijn长度比区别；测量范围与学习效应；采用阈值为作者设想。"
+      },
+      "4W0J": {
+        "status": "conditional-local-proof",
+        "scope": "固定建库A、每项a和b、无维护成本的假设下计算F_n及n>A/(b-a)；a>=b时不能靠摊销跨阈值。"
+      },
+      "4W0K": {
+        "status": "conditional-local-proof",
+        "scope": "同一工作量单位、固定指数增长假设下覆盖比和追平时间；追平后模型需要调整。"
+      },
+      "4W0L": {
+        "status": "local-example-proof",
+        "scope": "常数列epsilon-N证明分解为语境/目标；N=0为何可用，与倒数正阈值比较。"
+      },
+      "4W0M": {
+        "status": "attributed-pedagogical-proposal",
+        "scope": "具体极限定义与通用抽象的课程选择；Verbose及Real Analysis Game为原章教学实践，不作为效果试验。"
+      },
+      "4W0N": {
+        "status": "attributed-expository-construction",
+        "scope": "多层次说明连接想法、依赖和形式声明；以正阈值/倒数为本地实例；blueprint按报告介绍。"
+      },
+      "4W0O": {
+        "status": "attributed-viewpoint-comparison",
+        "scope": "Szegedy的长期纠错看法与Kontorovich的当前语义责任分开；零阈值具体说明使用暴露错配。"
+      },
+      "4W0P": {
+        "status": "source-reported-anecdote-and-evidence-distinction",
+        "scope": "代码、实际执行与核验分层；亏格轶事按作者转述，不写作本批实验。"
+      },
+      "icm2026-kontorovich": {
+        "status": "bibliographic-reference",
+        "scope": "正式章作者、页码、DOI、发布日期、CC BY4.0、改编署名、特别类别及预印本版本区分。"
+      }
+    },
+    "claim_sources": {
+      "4W00": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§§1-12, HTML lines91-430"
+        }
+      ],
+      "4W01": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§3 lines112-130"
+        }
+      ],
+      "4W02": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§4 lines131-139; conditional-probability formulation supplied locally"
+        }
+      ],
+      "4W03": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§4 and §12 reliability discussion; finite counterexamples supplied locally"
+        }
+      ],
+      "4W04": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§§6-7; supplemented by Lean reference Printing Axioms"
+        },
+        {
+          "url": "https://lean-lang.org/doc/reference/latest/ValidatingProofs/",
+          "location": "lines60-121, theorem meaning versus proof validity; Printing Axioms"
+        }
+      ],
+      "4W05": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§7.1 Figure5; §10"
+        }
+      ],
+      "4W06": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.1 and §11 dependency graphs; finite DAG proof supplied locally"
+        }
+      ],
+      "4W07": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.2 lines307-313"
+        }
+      ],
+      "4W08": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.2 lines307-309; exact iff supplied locally"
+        }
+      ],
+      "4W09": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.3 inline statements lines324-335; arXiv v1 p14"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.15924v1",
+          "location": "p14, three inline Lean examples"
+        }
+      ],
+      "4W0A": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.3 repaired positive-threshold statement; proof supplied locally"
+        }
+      ],
+      "4W0B": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.3 OneOverN target; proof supplied locally"
+        }
+      ],
+      "4W0C": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.1 lines293-300; n²=1 example supplied locally"
+        }
+      ],
+      "4W0D": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.2 lines277-283; general elementary lemma supplied locally"
+        }
+      ],
+      "4W0E": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.2 Figure13; §8.3.2 lines301-313; cited ref19 DOI10.46298/afm.15328"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.15924v1",
+          "location": "pp10-13, Figure8.7 and residue input"
+        }
+      ],
+      "4W0F": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8 and §§8.1.1-8.1.4"
+        }
+      ],
+      "4W0G": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§§8.1.1-8.1.4 Figures8-12"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.15924v1",
+          "location": "pp10-12, Figures8.3-8.6"
+        }
+      ],
+      "4W0H": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§1, §7.2, §9.3; parameter-intersection example supplied locally"
+        }
+      ],
+      "4W0I": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§§9.1-9.3"
+        }
+      ],
+      "4W0J": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§9.3 library reuse motivation; cost model supplied locally"
+        }
+      ],
+      "4W0K": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§1 and §7.3; exact exponential-model consequences supplied locally"
+        }
+      ],
+      "4W0L": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§7.1 Figure5; §10"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.15924v1",
+          "location": "p6, Figure7.2"
+        }
+      ],
+      "4W0M": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§10 Figures14-15"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.15924v1",
+          "location": "pp17-18, Figures10.1-10.2"
+        }
+      ],
+      "4W0N": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§11 Figure16"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2510.15924v1",
+          "location": "p18, Figure11.1"
+        }
+      ],
+      "4W0O": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.3 lines315-339; §11"
+        }
+      ],
+      "4W0P": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "§8.3.3 lines336-339"
+        }
+      ],
+      "icm2026-kontorovich": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+          "location": "Title/author/pages lines54-65; bibliography and publication/license lines451-623"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "§2及§12所引Gowers/Thurston原文、数学史具体归属和原话上下文未专项阅读全文；只按Kontorovich归属其讨论，不将转引登记为原始文献阅读。",
+      "§3的网络架构、训练、采样温度、工具代理训练机制未扩写；已有学习风险4P01/4P02仅在实际需要时复用；词元分布接口不支撑真实错误独立性。",
+      "§5的2023-2025 IMO成绩、系统比例、银牌与金牌比较未逐系统重建评分、时间限制、工具和人工参与条件；2026竞赛预测及§9五至十年采用时间表属于作者2025-09展望，未用现时结果改写。",
+      "§7 Lean的元理论可靠性/一致性、完整Curry-Howard对应、Mathlib规模统计与响应延迟未展开；4W04只是明确检查契约并引用官方公理依赖说明，不提供Lean内核可靠性证明。",
+      "§8.2 AlphaProof、Gauss及PNT+工程没有检出指定历史版本，也没有复跑代码或验证公告的全部素数定理误差项依赖。只记录作者的具体经历和分工。",
+      "§8.3.2式(8.1) theta/Mellin积分归一化可能需要核对变量与指数；未转录。zeta延拓、留数一、Mathlib在s=1的具体补值及RH精确形式需进一步阅读Loeffler-Stoll DOI10.46298/afm.15328和对应版本代码。",
+      "§8.3.3曲线亏格工具轶事缺少可重建的曲线、提示和日志，只作为作者转述说明证据层次；Szegedy长期自纠观点不转写为保证。",
+      "§9采用成本、增长率delta与epsilon和形式化因子在不同学科的实证估计未给出；本批的固定成本/指数模型仅为显式假设下的本地推论。",
+      "§10 Verbose、Real Analysis Game、Natural Number Game的原始教学研究与效果测量未专项读取或运行；课程收益保留为作者经验和建议。",
+      "§11 blueprint项目的运行、节点状态含义和图与代码的自动一致性未测试；多层次传播作为作者设想与本地可核对例子。",
+      "§12 Dvir有限域Kakeya定理复用已存在的1314/1316及其证明，不另建副本；本轮未阅读全文Dvir原论文，AI发现隐蔽易解问题仍是作者展望。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4W04：Lean依赖类型论的可靠性、一致性及内核实现正确性未证明；一阶逻辑可靠性0A6Y仅作概念区分，不用来证明Lean可靠。",
+      "4W0E：zeta亚纯延拓与lim_(s->1)(s-1)zeta(s)=1作为报告§8.2的引用输入；4W0D完整证明输入到模长下界的局部推论。",
+      "4W0E：Mathlib中zeta(1)非零按报告§8.3.2所引Loeffler-Stoll归属；未给出具体补值计算或RH形式化证明。",
+      "原章涉及PNT经典误差项、Dirichlet定理、Chebotarev密度定理仅作为项目目标/公告背景，未导入这些深层定理的证明。"
+    ],
+    "subject_ids": [
+      "006E",
+      "0061",
+      "0073"
+    ]
+  },
+  "prerequisites": {
+    "4W00": [],
+    "4W01": [
+      "00Q3"
+    ],
+    "4W02": [
+      "00Q3",
+      "0A00",
+      "00L3"
+    ],
+    "4W03": [
+      "00Q3",
+      "4W02",
+      "4P02",
+      "4P01"
+    ],
+    "4W04": [
+      "0500",
+      "0A6Y"
+    ],
+    "4W05": [
+      "0500",
+      "0505"
+    ],
+    "4W06": [
+      "0500",
+      "0505"
+    ],
+    "4W07": [],
+    "4W08": [
+      "4W07"
+    ],
+    "4W09": [
+      "4W07"
+    ],
+    "4W0A": [
+      "0A37"
+    ],
+    "4W0B": [
+      "00EP",
+      "4W0A"
+    ],
+    "4W0C": [],
+    "4W0D": [
+      "0A30",
+      "0ALW"
+    ],
+    "4W0E": [
+      "0H4R",
+      "4W0D"
+    ],
+    "4W0F": [
+      "4W05",
+      "4W06",
+      "4W04"
+    ],
+    "4W0G": [
+      "4W0F",
+      "0C11",
+      "0AF0"
+    ],
+    "4W0H": [
+      "4W0B"
+    ],
+    "4W0I": [],
+    "4W0J": [
+      "4W0I"
+    ],
+    "4W0K": [
+      "0A46"
+    ],
+    "4W0L": [
+      "00EP",
+      "4W05"
+    ],
+    "4W0M": [
+      "00EP",
+      "4W0L"
+    ],
+    "4W0N": [
+      "4W06",
+      "4W0B",
+      "4W0A"
+    ],
+    "4W0O": [
+      "4W04",
+      "4W09"
+    ],
+    "4W0P": [
+      "4W04"
+    ],
+    "icm2026-kontorovich": []
+  },
+  "reviewed_reused_ids": [
+    "00Q3",
+    "0A00",
+    "00L3",
+    "4P01",
+    "4P02",
+    "0500",
+    "0505",
+    "0A6Y",
+    "0A37",
+    "00EP",
+    "0A30",
+    "0ALW",
+    "0A3G",
+    "0H4R",
+    "0C11",
+    "0AF0",
+    "0A46",
+    "1314",
+    "1316"
+  ],
+  "source_readings": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+      "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1806764",
+      "read_at": "2026-10-28",
+      "status": "full-body-read",
+      "scope": "正式HTML正文lines91-430，致谢及脚注431-450，参考文献451-598，元数据54-65及599-623。阅读全文与所有下级小节；图中代码另用预印本指定页核看。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.15924v1",
+      "version_url": "https://arxiv.org/abs/2510.15924v1",
+      "read_at": "2026-10-28",
+      "status": "metadata-read",
+      "scope": "v1提交2025-10-03；22页、16图；不把摘要页当正文阅读。"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2510.15924v1",
+      "version_url": "https://arxiv.org/pdf/2510.15924v1",
+      "read_at": "2026-10-28",
+      "status": "selected-pages-visually-read",
+      "scope": "仅p6、10、11、12、13、14、17、18；图7.1-7.2、8.3-8.7、10.1-10.2、11.1及p14三段Lean陈述。PDF全体文本提取仅作定位，不能计为全PDF阅读；未逐行审验所有截图代码。"
+    },
+    {
+      "url": "https://lean-lang.org/doc/reference/latest/ValidatingProofs/",
+      "version_url": "https://lean-lang.org/doc/reference/latest/ValidatingProofs/",
+      "read_at": "2026-10-28",
+      "status": "selected-sections-read",
+      "scope": "lines52-121的声明含义/证明有效性、蓝勾与公理依赖；同次返回的122-212核验层次仅作背景，不导入具体新工具命令。latest为读取日快照，非固定版本；没有运行核验工具。"
+    },
+    {
+      "url": "https://lean-lang.org/doc/reference/latest/The-Type-System/Propositions/",
+      "version_url": "https://lean-lang.org/doc/reference/latest/The-Type-System/Propositions/",
+      "read_at": "2026-10-28",
+      "status": "background-section-read",
+      "scope": "lines55-90，Prop和证明无关性；仅辅助区分依赖类型论与已有站内同伦类型材料。"
+    },
+    {
+      "url": "https://lean-lang.org/theorem_proving_in_lean4/Axioms-and-Computation/",
+      "version_url": "https://lean-lang.org/theorem_proving_in_lean4/Axioms-and-Computation/",
+      "read_at": "2026-10-28",
+      "status": "partial-background-read",
+      "scope": "lines34-96，公理与计算开头及外延性；未将全章或Diaconescu等证明登记为已读。"
+    }
+  ],
+  "coordination": {
+    "new_foundation_ids": {
+      "4W01": "有限词元分布接口；不复制监督学习基础",
+      "4W04": "形式检查契约，复用0500及0A6Y作区分",
+      "4W05": "证明状态，复用0500/0505",
+      "4W07": "倒数零补值约定",
+      "4W0A": "正的阿基米德阈值，复用0A37",
+      "4W0D": "一般加权非零极限的去心邻域模长界",
+      "4W0I": "作者提出的形式化因子"
+    },
+    "reuse_ids": [
+      "00Q3",
+      "0A00",
+      "00L3",
+      "4P01",
+      "4P02",
+      "0500",
+      "0505",
+      "0A6Y",
+      "0A37",
+      "00EP",
+      "0A30",
+      "0ALW",
+      "0A3G",
+      "0H4R",
+      "0C11",
+      "0AF0",
+      "0A46",
+      "1314",
+      "1316"
+    ],
+    "not_creating": [
+      "一般逻辑/一阶可靠性",
+      "Curry-Howard全套基础",
+      "一般机器学习/训练算法",
+      "重复sqrt2无理性页",
+      "重复zeta定义/延拓理论",
+      "重复有限域Kakeya证明",
+      "共享学科入口或发布脚本"
+    ],
+    "message_attempt": "未调用跨chat消息工具；父代理直接在本对话给出审查意见。本packet作为独占文件交接。",
+    "status": "final-owned-packet",
+    "final_foundation_note": "引用目标已逐个实际读取；0A47并非指数函数定义，已改为0A46；00GP为真滤子而非Lean一般Filter，已从教学页撤去泛称链接。"
+  },
+  "module_decisions": [
+    "特别全会category保持special；subject_ids以006E为主，0061由形式陈述/核验/类型规则支撑，0073由§§10-11教学与传播支撑；学科首页未编辑。",
+    "综述围绕数学问题叙述，25原子均直接链接；阅读边界和未复跑记录集中在packet，不在综述逐段添加防御性声明。",
+    "0.99^1000只作为独立或恒定条件成功率模型的计算；补出边际正确率相同但整体成功率不同的有限反例。",
+    "4W09反例、4W0A正阈值、4W0B收敛分别建页，避免把定义/反例/推论压在一页。",
+    "4W0D采用一般极限证明，4W0E另记录引用的zeta事实及工具经历；不转录式8.1。",
+    "4W0J和4W0K仅形式化原章已有成本/增长论点，不引入不属于报告的AI基础；符号/模型假设在各页给出。",
+    "数学证明、原章实际经历、作者采用/教学/传播观点和未来预测以不同proof_scope记录；未编造软件实验。"
+  ],
+  "source_findings": [
+    {
+      "location": "§3 lines127-130",
+      "finding": "原章同时允许贪心选择，随后以逐步随机选择概述生成；4W01明确区分模型分布与解码规则，避免把所有文本生成一概当成随机。"
+    },
+    {
+      "location": "§4 line133 and §12 line420",
+      "finding": "独立概率乘积是模型而非真实LLM误差实证；4W02给更一般条件概率乘积，4W03给依赖反例。99.99%连1000步为约90.48%，连10000步为约36.79%；不用笼统措辞把任意千步成功率写成几乎零。"
+    },
+    {
+      "location": "§5 line156, §9 line368, §1 line93",
+      "finding": "2026年竞赛及五至十年采用时间是2025-09作者预测；正式出版日期2026-07-13不改变观点时间基准。"
+    },
+    {
+      "location": "§7.1 line187 and §8.1",
+      "finding": "No goals只显示当前目标；sorry和自定义公理可传入依赖。4W04按Lean官方文档补充公理依赖范围，同时把命题语义保真分开。"
+    },
+    {
+      "location": "§8.2 Figure13",
+      "finding": "目标为s在1的去心邻域中最终满足范数>=1；4W0D从非零加权极限得到严格>M，因此足够推出原目标。图示代码仅视觉核看，不称本批运行。"
+    },
+    {
+      "location": "§8.3.2 equation8.1",
+      "finding": "未转录theta/Mellin表达式，待独立核对变量归一化；极点处补值非零与留数非零不作等同。"
+    },
+    {
+      "location": "§8.3.3 inline ArchimedeanProperty, arXiv v1 p14",
+      "finding": "显式N=0见证核实；修复版要求N>=1，实数除法与自然数转实数在正文明确。"
+    },
+    {
+      "location": "§10 and §11",
+      "finding": "教学实践与多层次传播为作者建议/经验/展望；没有将截图、课程尝试或blueprint图当作教学效果对照实验。"
+    }
+  ],
+  "terminology_review": {
+    "checked_at": "2026-10-28",
+    "url": "https://www.bananaspace.org/wiki/形式化证明",
+    "status": "unavailable",
+    "result": "web返回不可访问；未宣称与香蕉空间术语逐项一致。用现有语境、依赖积、度量收敛等站内术语并核对实际定义。",
+    "verified_terms": []
+  },
+  "parent_review": {
+    "date": "2026-10-28",
+    "note": "4W00、4W02、4W0E、4W0M",
+    "finding": "父代理要求模型概率、作者2025-09预测、语义保真分离；避免式8.1与教学效果外推；清除公开综述防御性审查话术。",
+    "resolution": "按以上意见修订；综述重组为问题叙事，条件和观点归属在正文正面陈述，未复跑/未展开转入packet。",
+    "snapshot_boundary": "最终交接hash由本批targeted validation生成；父代理后续编辑或同步后的快照需另记。"
+  },
+  "validation": {
+    "status": "passed-targeted-source-checks",
+    "checked_at": "2026-10-28",
+    "scope": "仅独占4W、文献页和packet；不运行共享sync、全站build、git、提交或推送。",
+    "tree_files": 27,
+    "atomic_pages": 25,
+    "outline_pages": 1,
+    "reference_pages": 1,
+    "checks": [
+      "27个独占tree ID与标题无冲突；所有内部链接解析；4W00直接或递归可达全部25原子，本批共26个4W页面。",
+      "42条前置边全部出现在对应正文链接中，目标均非导航页；与已有共享前置记录合并后的168节点可达闭包无环。只读共享记录，未运行共享sync。",
+      "proof_scope、claim_sources及prerequisites覆盖全部27页，claim_sources每项有https url和location；参考Quastel的全部顶层/report字段齐备；category为special，subject_ids为006E/0061/0073。",
+      "229个按花括号层级提取的公式通过已有KaTeX；元数据顺序、日期、编辑规则、控制字符与Forester反斜杠/斜线路径检查通过。",
+      "在/tmp/kontorovich-parser隔离复制27页，使用绝对路径/Users/sunzy/.opam/5.3.0/bin/forester query all forest.toml，退出0；只报告url/assets/home默认配置。首次裸forester因临时目录PATH未包含opam而退出127，改绝对路径后通过。未执行任何build。",
+      "225组整数a,b的全函数除法约分充要条件作数值回归；概率数值0.99^1000=0.00004317124741065786，百分比0.004317124741065786。数学证明由正文给出，枚举/浮点检查不替代证明。",
+      "逐页审查模型假设、去心邻域、非零分母、正阈值、语义翻译和作者观点归属；父代理在本对话报告已读全部4W初稿及直接基础链接，未见实质数学错误。",
+      "最后只将4W03的整条链全对改为全部步骤正确；此后42条前置边及页面ID未变。source_sha256为该修改后的最终交接快照。",
+      "未运行全站build、未渲染网站、未编辑共享导航/清单、未执行git、提交或推送。父代理负责同步、站点渲染与发布。"
+    ],
+    "structural_findings": [],
+    "source_sha256": {
+      "trees/math/computation/mathematical-ai/4W00.tree": "e49ddc4a51b3c29b2c5b6bf9a73e6afc902b68036fb900556eed4d13d9475642",
+      "trees/math/computation/mathematical-ai/4W01.tree": "18c9925bfdbec0d1f859322a06e0787ebff2a160a428075746e6f66362a24a06",
+      "trees/math/computation/mathematical-ai/4W02.tree": "4043edeba01403ce5efb36478aa09c04e665116a7dbe5fcf4d9fad4271d8ea02",
+      "trees/math/computation/mathematical-ai/4W03.tree": "01d18073b804f994785a20f54a08d686eb90cff44128b7039750f3d1b63c3d6e",
+      "trees/math/computation/mathematical-ai/4W04.tree": "8d61de78100a1490ef7a77017ef76f194e4160d269f46738dbaef0e0b05d7e2e",
+      "trees/math/computation/mathematical-ai/4W05.tree": "e75f6e76304ff991b37f50815e95bef76e6daedbe675271ebe6ddca979c6cb75",
+      "trees/math/computation/mathematical-ai/4W06.tree": "02b365124a3bce6b2bcc676f793ac472b8d23a0e29150fc4968873512c28a6d4",
+      "trees/math/computation/mathematical-ai/4W07.tree": "7decac6fcfe8247e60e0a3fc9739e9b2848453b1ee00921b2f0eb077be2fe146",
+      "trees/math/computation/mathematical-ai/4W08.tree": "e0beaf06724a998fb744721ba36de034d825b22590a48613d35a24668e40e8a9",
+      "trees/math/computation/mathematical-ai/4W09.tree": "2ac8fec25acc611f558fcc91969fd9af1158878d0ae1364a26658157d42ed94c",
+      "trees/math/computation/mathematical-ai/4W0A.tree": "d65dfd165259394d6e9e828095e3124d268005b65ff3a33554ad9be7f86fc98b",
+      "trees/math/computation/mathematical-ai/4W0B.tree": "66564da8c7accc04b4341024568167779a3d6ff9a4a390a4b026e6c93b69b01f",
+      "trees/math/computation/mathematical-ai/4W0C.tree": "08779c4690628485ec6ce63c17119c6dea374ffaece652db9401fafca64dfc11",
+      "trees/math/computation/mathematical-ai/4W0D.tree": "fdcd5a507f8a4d27ef98f1bd230fbfbac286accd9c1b89e3f35a7a64257d9d08",
+      "trees/math/computation/mathematical-ai/4W0E.tree": "78f2745deee4a953cf2c10f3fe1838d4838dd3bbc980b5940f3448e9943dccf5",
+      "trees/math/computation/mathematical-ai/4W0F.tree": "08cbf4a6f6aeeeb81c3a8a34a134de9b383089f4bd9457387b8511f9dd384c88",
+      "trees/math/computation/mathematical-ai/4W0G.tree": "fa9dd8900512d1a2deb73aead162aa3b22080953eaa72a0f10d7656c018fb884",
+      "trees/math/computation/mathematical-ai/4W0H.tree": "6cebbc790c1d121a3f0b232500b1ad05630cd7ee161f45ccf3e80f05a18cfd5f",
+      "trees/math/computation/mathematical-ai/4W0I.tree": "1106c51d36d43bdb4f5ca376066ce48fa77fd2cfe16df7a8b870e097d51cf024",
+      "trees/math/computation/mathematical-ai/4W0J.tree": "e8550e3d58a640363a93dac99fdc9dd421e8872220e686836e69cd4a8976f477",
+      "trees/math/computation/mathematical-ai/4W0K.tree": "aa131625874026b9d0b07ce129cea6c9919398308e7d3eb6bb6e39c805578cef",
+      "trees/math/computation/mathematical-ai/4W0L.tree": "8e4afb41794e91c94cb06838e769a01244c7a6117ddf5b3dade5ab2f2a053826",
+      "trees/math/computation/mathematical-ai/4W0M.tree": "a1c020210d17a833a5168838f71c61f65f2a2beac6c17aae085e8d0baeda2a98",
+      "trees/math/computation/mathematical-ai/4W0N.tree": "79d5a6fcbd167b38840a04a17290f3159f53e6d545d13a67054a66a1f85e6b0d",
+      "trees/math/computation/mathematical-ai/4W0O.tree": "959a97916e736b30a26fcca424d58581d88f4cbe0fc4aeb2224bd6aa4b613f33",
+      "trees/math/computation/mathematical-ai/4W0P.tree": "bfc1224ccbc3ac0af52bc04da5d08841e4a2b0c5bdeb6d0eb70b0cec5ecb03ee",
+      "trees/references/icm2026-kontorovich.tree": "496e2c495c44062d51def1649615ea42c475a8035c6f6c23aebab8ba2b1b0dc9"
+    },
+    "rendered_full_site": false,
+    "katex_formulas": 229,
+    "prerequisite_edges": 42,
+    "dependency_closure_nodes": 168,
+    "reviewed_reused_count": 19,
+    "numeric_checks": {
+      "p99_1000": 0.00004317124741065786,
+      "percent99_1000": 0.004317124741065786,
+      "p9999_1000": 0.9048328935585562,
+      "p9999_10000": 0.36786104643297046
+    }
+  },
+  "parent_render_followup": {
+    "date": "2026-10-28",
+    "issue": "Forester consumes the escape before percent inside math, leaving a TeX comment character and omitting the visible percent sign.",
+    "correction": "Move percent outside math in 4W00 and 4W02. Numerical values, assumptions and prerequisites unchanged.",
+    "author_snapshot": "validation.source_sha256 remains the original author handoff snapshot; the current parent-verified note hashes are below and in the batch snapshots.",
+    "current_hashes": {
+      "4W00": "8a8b73437071eed2b647cfb339e9a477df57c77446762d85a22e3d295d5c7cd7",
+      "4W02": "104c85016f08267a9a009f3edec0d21b02012532d45d39aa98b7e737bb121519"
+    },
+    "regression": "Manifest render_text_checks requires visible 0.0043% and 0.0043171% on both desktop and mobile."
+  }
+}

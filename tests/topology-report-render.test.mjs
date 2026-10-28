@@ -27,6 +27,10 @@ try {
       await page.evaluate(() => document.fonts.ready);
       const body = page.locator('article > section > details > .tree-content');
       assert((await body.innerText()).length > 50, `${id}: missing body`);
+      for (const expected of record.render_text_checks?.[id] ?? []) {
+        const visible = (await body.innerText()).replace(/\s+/g, '');
+        assert(visible.includes(expected), `${id}/${width}: missing visible text ${expected}`);
+      }
       assert.equal(await page.locator('.katex-error').count(), 0, `${id}: invalid formula`);
       assert.equal(await page.evaluate(() => typeof XSLTProcessor), 'undefined');
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);

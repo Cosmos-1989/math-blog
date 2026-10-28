@@ -1,0 +1,12 @@
+\title{独立同分布向量的混合内积矩非负}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§9，式 (9.3) 后，p. 231；混合矩的坐标展开}
+
+\p{设 #{U,U'} 为取值于有限集合 #{X} 的[独立同分布](00L3)随机变量，#{f_i:X\to\mathbb R^n}，#{1\le i\le r}。使用实[内积](004M) #{\langle x,y\rangle=\sum_{j=1}^nx_jy_j}，定义 #{Z_i=\langle f_i(U),f_i(U')\rangle}。则任意非负整数 #{a_1,\ldots,a_r} 都满足}
+##{\mathbb E\prod_{i=1}^r Z_i^{a_i}\ge 0.}
+\p{\strong{证明。}把每个内积按坐标求和，再展开其整数次幂。对每个 #{i}，用 #{j_{i,1},\ldots,j_{i,a_i}\in\{1,\ldots,n\}} 表示所选坐标，所有此类坐标组的集合记为 #{\mathcal J}。定义 #{F_J(u)=\prod_{i=1}^r\prod_{h=1}^{a_i}f_{i,j_{i,h}}(u)}，空乘积取一。有限求和及[期望](00L1)的线性性给出}
+##{\mathbb E\prod_iZ_i^{a_i}=\sum_{J\in\mathcal J}\mathbb E(F_J(U)F_J(U'))=\sum_{J\in\mathcal J}\bigl(\mathbb EF_J(U)\bigr)^2\ge 0.}
+\p{第二个等号同时用到了两变量独立和同分布；各个 #{Z_i} 之间无需独立。单独知道 #{\mathbb EZ_i^m\ge 0} 并不能替代这个混合矩结论。}
+\p{例如令 #{\psi(x)=\sum_{m=0}^{\infty}x^m/(2m)!}，并令 #{g(x_1,\ldots,x_r)=\sum_{j=1}^r x_j\prod_{i\ne j}(2+\psi(x_i))}。每个单项式的系数非负，因此 #{\mathbb E g(Z_1,\ldots,Z_r)\ge 0}。级数对所有实数绝对收敛，而 #{(Z_1,\ldots,Z_r)} 只有有限种取值，所以可逐项取期望。对 #{x\ge 0}，#{\psi(x)=\cosh\sqrt x}；对负数仍以实系数级数定义，不使用实数平方根。}

@@ -1,0 +1,11 @@
+\title{Erdős–Szekeres 的 Ramsey 递推界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，定理 2.1，p. 213}
+
+\p{对整数 #{s,t\ge 2}，[二色 Ramsey 数](4V02)满足}
+##{R(s,t)\le R(s-1,t)+R(s,t-1),\qquad R(s,t)\le\binom{s+t-2}{s-1}.}
+\p{其中 #{\binom ab=a!/(b!(a-b)!)} 计数 #{a} 元集合的 #{b} 元子集，#{0!=1}。}
+\p{\strong{证明。}对 #{s+t} 归纳，同时证明这些数有限。边界 #{R(1,t)=R(s,1)=1} 已知。设 #{a=R(s-1,t)}、#{b=R(s,t-1)}，考虑 #{K_{a+b}} 的任意二色边染色及顶点 #{v}。若红邻居至少 #{a} 个，其中有蓝色 #{K_t}，或有红色 #{K_{s-1}} 可与 #{v} 合并。否则红邻居至多 #{a-1} 个，蓝邻居至少 #{b} 个；交换颜色得到同样结论。}
+\p{递推与归纳假设给出 #{R(s,t)\le\binom{s+t-3}{s-2}+\binom{s+t-3}{s-1}=\binom{s+t-2}{s-1}}。最后一步把子集按是否含指定元素分类。特别地，#{R(k)\le\binom{2k-2}{k-1}\le 2^{2k-2}<4^k}，因为所有大小的子集总数为 #{2^{2k-2}}。}

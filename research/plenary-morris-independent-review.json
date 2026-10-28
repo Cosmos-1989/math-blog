@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "report": "Robert Morris: Some Recent Results in Ramsey Theory",
+  "primary_doi": "10.1137/25M1833369",
+  "review_type": "Independent mathematical review of local proofs, hypotheses, attributions and direct prerequisite definitions",
+  "status": "completed_with_minor_findings",
+  "reviewed_on": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "snapshot_at": "2026-10-28T01:21:53.122Z",
+  "packet_followup_at": "2026-10-28T01:26:36.724Z",
+  "conclusion": "No P0, P1 or P2 mathematical finding in the reviewed 4V material. All written local arguments were checked step by step. Two P3 boundary/editorial findings remain for the parent or author. The cited research theorems were checked against the formal SIAM survey, not independently proved from their original research papers.",
+  "counts": {
+    "outline_pages": 1,
+    "atomic_pages": 31,
+    "reference_pages": 1,
+    "direct_external_prerequisite_pages": 11,
+    "packet_prerequisite_edges_checked": 85,
+    "blocking_findings": 0,
+    "open_minor_findings": 2,
+    "mathematical_tests": 18,
+    "tests_passed": 18
+  },
+  "scope": {
+    "source_root": "trees/math/combinatorics/ramsey-plenary",
+    "read_in_full": "4V00 through 4V0V, trees/references/icm2026-morris.tree, all eleven direct non-4V prerequisite pages, and the author packet available at the snapshot time.",
+    "allowed_writes": [
+      "research/plenary-morris-independent-review.json",
+      "tests/plenary-ramsey-math.test.mjs"
+    ],
+    "not_performed": [
+      "No edits to author pages, shared research data, navigation or CI configuration.",
+      "No git operations, synchronization, build, deployment or rendered-page QA.",
+      "No full verification of the original HHKP, Mattheus-Verstraete, multicolour-book or induced-Ramsey research proofs.",
+      "No independent audit of the survey's unimported Sections 5-8 or of all assertions in the author's source_findings list.",
+      "No PDF page-image check; formal HTML supplied the theorem and section comparisons. Printed page references in the packet were not independently revalidated against PDF images.",
+      "No assertion that finite enumeration proves an infinite-family theorem or that these standalone model tests automatically detect arbitrary edits to prose."
+    ],
+    "snapshot_policy": "The 32 author 4V files had identical hashes at first reading and final snapshot. Hashes below identify the exact reviewed bytes. Later parent normalization or author edits require a new comparison; this record must not be silently treated as reviewing later bytes."
+  },
+  "sources": [
+    {
+      "id": "SIAM-FORMAL",
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "retrieved_on": "2026-10-28",
+      "actually_checked": [
+        "Section 1: Theorems 1.1-1.5 and the distinction between ordinary and induced Ramsey numbers.",
+        "Section 2: Shearer Theorem 2.2 and its calculation, the upper-bound deduction, Problem 2.5, Theorem 2.6 and its triangle-free context.",
+        "Sections 3.2 and 3.6-3.8: vertex alteration, blow-ups, Lemma 3.2, HHKP result and footnote 4.",
+        "Section 4: Theorem 4.1, Lemmas 4.2-4.5, the log-power discrepancy in the simplified parameters, Definition 4.6 and the distinction from Lemma 4.9.",
+        "Section 9: Theorem 9.1, book extension, equation (9.3), mixed-moment argument and Conjecture 9.4.",
+        "Section 10: induced-arrow definition and Theorems 10.2-10.3, including all-colourings quantification and failure probability."
+      ],
+      "proof_verification_limit": "Original research papers were not read in full. Source theorem agreement is not a claim that their long proofs have been independently verified."
+    }
+  ],
+  "findings": [
+    {
+      "id": "M-01",
+      "priority": "P3",
+      "severity": "minor boundary-definition omission",
+      "status": "open",
+      "file": "trees/math/combinatorics/ramsey-plenary/4V05.tree",
+      "line": 7,
+      "title": "State the nonempty-vertex condition for the maximum degree",
+      "observed_text": "设 #{G} 是 #{n} 点[简单图](00LB)，最大度数为 #{\\Delta=\\max_v|N(v)|}。",
+      "issue": "The linked finite-simple-graph definition permits V to be empty. The displayed maximum then has no value unless a convention is declared. The greedy inequality and its nonempty applications are correct.",
+      "boundary_case": "V=E=empty gives n=0 and alpha=0, but max over the empty vertex set is undefined as written.",
+      "suggested_edit": "Write n>=1 in the opening hypothesis, or explicitly define Delta(empty)=0 and cover the zero-vertex graph separately.",
+      "blocking": false,
+      "fix_applied_by_reviewer": false
+    },
+    {
+      "id": "M-02",
+      "priority": "P3",
+      "severity": "bibliographic direction typo",
+      "status": "open",
+      "file": "trees/references/icm2026-morris.tree",
+      "line": 11,
+      "title": "Shearer supplies an independence-number lower bound",
+      "observed_text": "独立数上界的原始文献为 J. B. Shearer",
+      "issue": "The cited result bounds alpha(G) from below, whereas the resulting Ramsey-number bound is an upper bound. The theorem and proof in 4V08-4V09 themselves have the correct directions.",
+      "suggested_edit": "Replace 独立数上界 by 独立数下界, optionally explaining that it yields a Ramsey-number upper bound.",
+      "source": "SIAM-FORMAL, Theorem 2.2 and the subsequent proof of the upper bound in Theorem 1.2.",
+      "blocking": false,
+      "fix_applied_by_reviewer": false
+    }
+  ],
+  "verified_checks": [
+    {
+      "ids": ["4V00", "4V01", "4V02", "4V03", "4V05"],
+      "status": "pass_except_M-01",
+      "checked": "Independent-set/clique/complement dictionary; maximal versus maximum; R(1,t)=1 and R(2,t)=t; simultaneous existence and recurrence induction; Pascal bound; greedy closed-neighbourhood deletion; alpha>=Delta for triangle-free graphs. In the overview, cited deep results are linked rather than presented as locally proved."
+    },
+    {
+      "ids": ["4V04", "4V0D", "4V0E"],
+      "status": "pass",
+      "checked": "Exact first moments, strict expectation-below-one criterion, factorial-ratio limit, p=0 and p=1, and the direction of 1-p<=exp(-p). In alteration, a=ceil(4 n^(2/3) log n) is <=n for large n; the two bad-event probabilities sum to less than one; deleting original triangles cannot create new ones or increase alpha. The stated n(k) gives 4 n^(2/3) log n<=3k/8, and the floor costs only an absolute constant."
+    },
+    {
+      "ids": ["4V06"],
+      "lines": [7, 13],
+      "status": "pass",
+      "checked": "Computed the integral, including f(0)=1 and f(1)=1/2. Differentiation under the integral is legitimate locally for x>0; f'<0 and f''>0. The tangent inequality at x=0 follows by continuity, not by assuming a finite derivative at zero. Substitution verifies (d+1)f(d)=1+(d-d^2)f'(d); d=1 is treated separately. The asymptotic ratio is one."
+    },
+    {
+      "ids": ["4V07", "4V08", "4V09"],
+      "lines": [7, 13],
+      "status": "pass",
+      "checked": "Each removed edge has exactly one endpoint in N(v) in a triangle-free graph. Double counting yields E[e(G_v)]=e-sum(deg^2)/n. Multiplying the tangent inequality by n_v avoids division by zero when G_v is empty. The variance term is bounded above by d-d^2, and f'<0 reverses its contribution in the needed direction. The differential identity closes induction. Monotonicity f(d)>=f(k-1) gives the finite ceiling bound without assuming d tends to infinity."
+    },
+    {
+      "ids": ["4V0A", "4V0B", "4V0C"],
+      "status": "pass",
+      "checked": "Uniform sampling is over all independent sets including the empty set. Conditioning is restricted to positive-probability outside configurations. The centre plus all subsets of unblocked neighbours yield exactly 2^m+1 extensions; at m=0 both probabilities and the zero numerator are valid. For real d>=16 the two-case lower bound and sum_v X_v<=2d|S| give n log_2(d)/(12d). The complete-graph obstruction correctly rejects a hypothesis-free reading of SIAM Theorem 2.6."
+    },
+    {
+      "ids": ["4V0F", "4V0G", "4V0H", "4V0I"],
+      "status": "pass",
+      "checked": "An independent set projects to an independent support, giving alpha(H^(s))=s alpha(H) and P_blowup(z)=P_H((1+z)^s-1). Multicolour finite existence uses N=2+sum(a_i-1), not an incorrect two-colour recurrence. Independent uniform permutations give the exact union expectation i_k^2/binom(n,k). Overlapping edges are assigned to only one colour; each coloured graph remains triangle-free although the union need not be."
+    },
+    {
+      "ids": ["4V0J"],
+      "status": "statement_and_local_calculation_pass",
+      "checked": "The cited HHKP lower constant is 1/2. For any fixed 0<c<1/2, n=floor(c k^2/log k) gives log n/log k->2 and sqrt(n log n)/k->sqrt(2c)<1, absorbing the o(1). The construction is described as the survey's outline, consistently with footnote 4. The independent-set stability estimate is an external input, not locally proved."
+    },
+    {
+      "ids": ["4V0K"],
+      "status": "pass",
+      "checked": "The combined expectation X-Y supplies a single simultaneous witness. Choosing one vertex from each original independent k-set and deleting their union destroys every such set. Negative right-hand sides, p=0, p=1, and k>n cause no failure; empty graphs are permitted here without using a maximum degree."
+    },
+    {
+      "ids": ["4V0L", "4V0M"],
+      "lines": [7, 12],
+      "status": "pass",
+      "checked": "The remainder container is disjoint from T and has size at most R, so the second factor is binom(R,k-s). In 4V0M all three counting parameters are integers with 1<=s<=k<=n and 1<=R<=n. Fixed global tie-breaking makes choices deterministic. Selected vertices themselves are deleted along with neighbours. Every unchosen vertex of I survives, so s selections are possible. While |A|>=R, maximum degree is at least 2 beta |A|; beta<1/2 follows from the full-graph hypothesis. At or below the threshold the set cannot grow. Final T alone replays every decision before the s-th selection, proving deterministic reconstruction and the counting injection."
+    },
+    {
+      "ids": ["4V0N", "4V0O"],
+      "status": "local_lemma_and_cited_statement_pass",
+      "checked": "Edge-disjointness makes each retained edge belong to its unique block. A K4 meeting a block in three vertices would leave a forbidden triangle in that block. SIAM Theorem 4.1 gives c k^3/(log k)^4; its introduction also records the distinct upper bound C k^3/(log k)^2. The local page states only the lower bound and does not conflate authorship. The survey's illustrative p=q^-1, k=q(log q)^3 gives the ninth log power, explicitly distinguished from the fourth power in the cited theorem. Hermitian-unital existence and supersaturation remain external."
+    },
+    {
+      "ids": ["4V0P", "4V0Q"],
+      "lines": [7, 12],
+      "status": "pass",
+      "checked": "Uses the single-subset jumbled convention with p binom(u,2). Cancellation for a nonempty independent set gives alpha<=1+2 beta/p. The exact threshold for e(U)>=p u^2/4 is u>=2+4 beta/p, including the additive 2. Applying the container theorem uses p/4, not p. For R<n the ceiling of (4/p)log(n/R) is positive and ensures the exponential condition; s<=k remains explicitly required. This is a direct container corollary, not a claimed proof of the sharper Alon-Rodl Lemma 4.9."
+    },
+    {
+      "ids": ["4V0R", "4V0S"],
+      "status": "definition_local_extension_and_cited_statement_pass",
+      "checked": "A and Y are disjoint; no restriction is imposed inside Y. The red K_(k-t) or blue K_k dichotomy extends the book correctly for 1<=t<k. Theorem 9.1 has fixed r, delta(r)>0 and a threshold depending on r. Eight-author attribution is separate from the original four-author two-colour breakthrough. A uniform absolute positive delta is not inferred; the survey lists it as Conjecture 9.4. Lemma 9.2's abbreviated quantifiers are not imported as a precise local theorem."
+    },
+    {
+      "ids": ["4V0T", "4V0U"],
+      "status": "definition_local_identity_and_cited_statement_pass",
+      "checked": "The embedding preserves host nonedges, not merely differently coloured edges. The two directions of R_ind,r(K_k)=R_r(k) are valid, including restriction of an avoiding complete-graph colouring to any smaller host. Theorem 10.2 has an absolute C for every r>=2 and every k-vertex H. Theorem 10.3 uses n>=r^(Crk), delta=r^(-Crk) and success probability at least 1-exp(-delta n^2). All colourings are quantified after the random host is chosen. No false independence of an adversarial colouring is introduced."
+    },
+    {
+      "ids": ["4V0V"],
+      "lines": [7, 12],
+      "status": "pass",
+      "checked": "Coordinate tuples are ordered, so expansion includes the required multinomial multiplicities automatically. For every multi-index of nonnegative integers, independence and identical laws give a sum of squared real expectations. Zero exponents use the empty product; the Z_i themselves need not be independent. The entire series for psi is valid also on negative inputs; finite support and absolute convergence justify termwise expectation. Marginal moment positivity alone would not suffice for g. This proves the written algebraic lemma, not the full geometric dichotomy or book iteration."
+    }
+  ],
+  "source_caveats_checked": [
+    {
+      "location": "SIAM Theorem 2.6",
+      "resolution": "The surrounding text requires triangle-free graphs although the theorem sentence omits that hypothesis. Local 4V0B-4V0C include it. Tests include K3's wrong extension count and K_8193 violating even the weaker constant-factor bound without the hypothesis."
+    },
+    {
+      "location": "SIAM after equation (9.3)",
+      "resolution": "Local 4V0V repairs the malformed inner-product notation and explicitly proves all mixed moments, not merely marginal ones."
+    },
+    {
+      "location": "SIAM after Lemma 4.4",
+      "resolution": "The local definition deliberately bounds the remainder container C(T), not necessarily the full set T union C(T). The replay proof explicitly removes the chosen vertex."
+    },
+    {
+      "location": "SIAM after Lemma 4.3",
+      "resolution": "The difference between the illustrative log^9 bound and the cited log^4 theorem is preserved rather than erased."
+    }
+  ],
+  "dependency_and_packet_review": {
+    "status": "pass_at_snapshot",
+    "packet_validation_status_observed": "passed-targeted-source-and-math-checks",
+    "packet_scope": "Checked proof_scope for all 32 4V pages, research-theorem boundaries, claim_sources for the represented results, and all 85 declared prerequisite edges. At follow-up the author's validation fields had been populated; proof scopes and prerequisite lists were reread and remained unchanged. The author's separate KaTeX checks, other mathematical recomputations and claimed reading history are not independently certified by this review.",
+    "packet_history": {
+      "initial_sha256": "cc1f26b50bac20427cb86764e9834be04f3f0509c694fc94cb1832c87f2174ec",
+      "initial_validation_status": "pending-targeted-checks",
+      "followup_sha256": "5e2bb67ba7f6215d530f03a94f7e89477e363ad85ff17c297b4ce5bbea9d420c",
+      "followup_scope": "Reread report identity, all proof scopes, all prerequisite lists and the populated validation record. The 33 author tree hashes still match the independently read snapshot."
+    },
+    "checks": [
+      "All declared prerequisite targets exist and occur as body links; declared prerequisite graph is acyclic.",
+      "4V02->4V03 is a forward existence link rather than a prerequisite edge, avoiding a false prerequisite cycle.",
+      "00LB defines finite simple graphs, neighbourhoods, degree, induced subgraphs and complete graphs; 00LD supplies the independent-edge random graph model.",
+      "00Q3, 00L1, 00L3, 0A00 and 0A02 provide finite probability, expectation linearity, independence/i.i.d., positive-probability conditioning and Markov's inequality. No independence is needed for expectation linearity.",
+      "00Q5, 0R06 and 0A33 cover the integration, convexity and differential concepts used by the explicit one-dimensional Shearer calculation.",
+      "004M includes the real-inner-product convention; 4V0V additionally writes the real coordinate formula, so complex conjugation conventions do not leak into the square-sum proof.",
+      "The packet correctly distinguishes the constant-factor occupancy proof, the direct jumbled corollary, and the mixed-moment lemma from stronger external results."
+    ],
+    "not_checked": "Transitive closure of all reused foundation pages was not fully re-audited; the eleven direct dependencies were read in full."
+  },
+  "test_validation": {
+    "file": "tests/plenary-ramsey-math.test.mjs",
+    "command": "node --test tests/plenary-ramsey-math.test.mjs",
+    "node_version": "v22.22.3",
+    "exit_code": 0,
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "sha256": "95787d8616b0a16ca219521ee946da9651b1c7a3ea59ea6b392f75275aedd6eb",
+    "model_coverage": [
+      "All labelled graphs on six vertices for R(3,3), and exact first moments on four vertices including p=0 and p=1.",
+      "All labelled graphs with one through five vertices for the triangle correction; all 439 triangle-free graphs in that range for Shearer finite checks and every positive-probability local outside condition.",
+      "Coefficient-by-coefficient blow-up polynomials for all base graphs on at most four vertices with blow-up factors one and two.",
+      "All permutations of three explicit small triangle-free graphs for superposition, including overlapping-edge colour allocation.",
+      "All graphs on zero through four vertices for the combined-expectation alteration lemma, including empty graphs and k>n.",
+      "All graphs on at most five vertices for deterministic final-fingerprint replay, valid supersaturation instances, and exact jumbled subset discrepancies.",
+      "Counterexamples to arbitrary tie-breaking, replacing all-subset density by global density, dropping the jumbled additive threshold or using floor instead of ceiling, and omitting the K4 block-intersection premise.",
+      "Exact rational-weight mixed moments and coordinate-square sums, plus counterexamples without i.i.d. hypotheses or with only marginal moment information.",
+      "Induced-versus-noninduced red paths and the vacuous colour condition for edgeless targets."
+    ],
+    "numeric_limitations": "Shearer evaluations, local logarithmic estimates and exponential threshold checks use floating-point arithmetic only as small-model regressions. Counting identities and weighted mixed-moment identities use exact safe integer arithmetic. General inequalities were checked by the handwritten mathematical audit above, not inferred from the test grid.",
+    "first_run_note": "The first run exposed an incorrect test-only coverage constant (447 instead of 439 triangle-free labelled graphs on one through five vertices). Corrected that test constant; no author proof was changed. Final run passes all 18 tests."
+  },
+  "inspected_files": [
+    {"id":"4V00","path":"trees/math/combinatorics/ramsey-plenary/4V00.tree","sha256":"9f62999fc6bbe8c773f05b27b5bb1602702dcbc5152e3b3ec2a84da35139398e"},
+    {"id":"4V01","path":"trees/math/combinatorics/ramsey-plenary/4V01.tree","sha256":"16b693696c3c9a2f4d1788ce85b2f463fd5d3cdf55208ad5a0ced57adba9ce56"},
+    {"id":"4V02","path":"trees/math/combinatorics/ramsey-plenary/4V02.tree","sha256":"f9c216886590a9bb72a0b22fb9a5b92560f2b5b5b096a4cc6f876811cc013fa2"},
+    {"id":"4V03","path":"trees/math/combinatorics/ramsey-plenary/4V03.tree","sha256":"b414933313b36a960ac4600ec16440569a244caf5ef507dd95b4481279996183"},
+    {"id":"4V04","path":"trees/math/combinatorics/ramsey-plenary/4V04.tree","sha256":"e5e28f7383fc31259a6921bbe40831dff3521e2bad0ef36ba345b1818c92ba73"},
+    {"id":"4V05","path":"trees/math/combinatorics/ramsey-plenary/4V05.tree","sha256":"651175ece57d602abf590e1890a3080e8c0eeff604f19c5d78103985e96aa598"},
+    {"id":"4V06","path":"trees/math/combinatorics/ramsey-plenary/4V06.tree","sha256":"9bc7ce49be77cfab693addee61253776b98c0dc5dbfeb7bf25e1f5c445140328"},
+    {"id":"4V07","path":"trees/math/combinatorics/ramsey-plenary/4V07.tree","sha256":"1a945b29f9f254592b96a7957e575d595e98c0419d798f70757d7c7be511be9b"},
+    {"id":"4V08","path":"trees/math/combinatorics/ramsey-plenary/4V08.tree","sha256":"3bc94e2237305d792481a747d32fa6fab44183c1672995f35298e2a1800e0638"},
+    {"id":"4V09","path":"trees/math/combinatorics/ramsey-plenary/4V09.tree","sha256":"2e91a14533244b189b7909313d82e10e6ab5616ff168a10092129970f9a0e5d1"},
+    {"id":"4V0A","path":"trees/math/combinatorics/ramsey-plenary/4V0A.tree","sha256":"9153fbd8bb2bbf2f11c23cda0951c1913ebea3e057384ea1a2ebca634742143a"},
+    {"id":"4V0B","path":"trees/math/combinatorics/ramsey-plenary/4V0B.tree","sha256":"d389795406ff0a9ba61bb6e32198aa1c28bdda6364829c5b908ee17a9a0719bd"},
+    {"id":"4V0C","path":"trees/math/combinatorics/ramsey-plenary/4V0C.tree","sha256":"9db8c93d400283563fe494c6cc923e2aa4d7c39b72504d4a19351e3bf39e9c74"},
+    {"id":"4V0D","path":"trees/math/combinatorics/ramsey-plenary/4V0D.tree","sha256":"d3bbf106f596c19a4038c99209a456f0fd6a4ee29676d808417ca2fb8ae7dfd5"},
+    {"id":"4V0E","path":"trees/math/combinatorics/ramsey-plenary/4V0E.tree","sha256":"2245432f6400640b209cca032b64e6caf11eff936b5d0e3bdec301b3a366c29e"},
+    {"id":"4V0F","path":"trees/math/combinatorics/ramsey-plenary/4V0F.tree","sha256":"37233aab6dbd32f3993c1baa744f925f8a6a60f8b78d1f630f9413fed3ef9099"},
+    {"id":"4V0G","path":"trees/math/combinatorics/ramsey-plenary/4V0G.tree","sha256":"bda41cefdbeedb9ec050e29e638b2504b8042c4ff07317ba7a6c1c0c34b77e1a"},
+    {"id":"4V0H","path":"trees/math/combinatorics/ramsey-plenary/4V0H.tree","sha256":"4b25dc2511fc1948a93311891344540ffde4f7b07e79216cf2995ffdb5831da9"},
+    {"id":"4V0I","path":"trees/math/combinatorics/ramsey-plenary/4V0I.tree","sha256":"42f99d4401a28260647091894331b836d15f87d4bd827bebb7f9cc2c71e35030"},
+    {"id":"4V0J","path":"trees/math/combinatorics/ramsey-plenary/4V0J.tree","sha256":"234e80e8dcb65c19242f27ed6ac577fdc6a671bc1d5964cdab841b2bcdb428dd"},
+    {"id":"4V0K","path":"trees/math/combinatorics/ramsey-plenary/4V0K.tree","sha256":"54b299bd34f286ba97511683cc739c3f9b14c5d765677d90a003ea20e710640b"},
+    {"id":"4V0L","path":"trees/math/combinatorics/ramsey-plenary/4V0L.tree","sha256":"e3d08e7270ef897af9892725b1486ac39d9f69bbff665d9a32d2cfa38cd5860e"},
+    {"id":"4V0M","path":"trees/math/combinatorics/ramsey-plenary/4V0M.tree","sha256":"09d060261cab039b9898a47e77042ea64c5046312a5eaf0fd75856608fdf1a11"},
+    {"id":"4V0N","path":"trees/math/combinatorics/ramsey-plenary/4V0N.tree","sha256":"5c0d88531784c60eeb0bf133b58f01c5e112a397a1510bd2fba12b00cd5bc71c"},
+    {"id":"4V0O","path":"trees/math/combinatorics/ramsey-plenary/4V0O.tree","sha256":"738deea53c33c0b4e66505465cf2eab4b66c2c82764b0d494b54cbb02ba8c530"},
+    {"id":"4V0P","path":"trees/math/combinatorics/ramsey-plenary/4V0P.tree","sha256":"c833d1cdf9b22b3d95c10a31742201d97ade6d0c8265659775a50cd0ca9c1f85"},
+    {"id":"4V0Q","path":"trees/math/combinatorics/ramsey-plenary/4V0Q.tree","sha256":"3eb201cf9707dfc17fbf3eb2feb8255c059f6d7f065befd26ff1d7eb51cbda1d"},
+    {"id":"4V0R","path":"trees/math/combinatorics/ramsey-plenary/4V0R.tree","sha256":"a47e6dc1bf222b31e3613532900fe5ceb97ffa14b6721c65ee5d85331d3fdf09"},
+    {"id":"4V0S","path":"trees/math/combinatorics/ramsey-plenary/4V0S.tree","sha256":"3f200d3ba2293de2eef40f3131af1436aab7ba6a09ae8b19dc290e0d83f64060"},
+    {"id":"4V0T","path":"trees/math/combinatorics/ramsey-plenary/4V0T.tree","sha256":"a860c02d8ee9d7e8700ecdcb793c36c3ba7ceb130b379d05d6632c91c6d2eb5b"},
+    {"id":"4V0U","path":"trees/math/combinatorics/ramsey-plenary/4V0U.tree","sha256":"7fc1153c98f61790df151e7e3291a288195afc572f96952f90ccaf6b1d22fe1b"},
+    {"id":"4V0V","path":"trees/math/combinatorics/ramsey-plenary/4V0V.tree","sha256":"92d72f767bb5cdae18d83a75d9c63fa87642c178d6b568b8e5e801f118c0839e"},
+    {"id":"icm2026-morris","path":"trees/references/icm2026-morris.tree","sha256":"618016b30d7a3d5e5cfe3f5b1b7096d5797b86253e249724abea28282eaa3f19"}
+  ],
+  "supporting_file_hashes": {
+    "trees/math/network/atomic/00LB.tree": "6096935638db64c694caeb47a215bcd82345ee6ee6c1516f9c984554d15a22b9",
+    "trees/math/network/atomic/00L3.tree": "39ed5b62db9dd421edcf018930aa2dd968a16053a4d4ca608342ffa00c944769",
+    "trees/math/network/atomic/00LD.tree": "82e00e376f218218f25fc70ae4f8b35ba45c82ddbf67087ab8de7c80c274170a",
+    "trees/math/network/atomic/00L1.tree": "3b50931d0c04e488dd3168ad7ab3b0c3ba595a13da9187c4adc02abaa608e3af",
+    "trees/math/network/atomic/0A02.tree": "e623166be9f5fff1c79d8ce9f22c533cedae843a50d5c5740f376e499265595a",
+    "trees/math/logic/research/atomic/00Q5.tree": "9267c72f84426525a8d4c7e6ec114b50e358d11e65bc30debc89d1a781908260",
+    "trees/math/analysis/convex-duality/0R06.tree": "7f0928284e71c623ff5bb688bf0bc76c68f6a5a6f56167979741265741954119",
+    "trees/math/analysis/atomic/0A33.tree": "1f30b534d81b5bd042a30c0bb1f125a1f289b2d1a24afd1d07331ee389512e7e",
+    "trees/math/logic/research/atomic/00Q3.tree": "b3383b2c3aeecca95c8c584321dd057b95b1e8effc1cec29c9fb92e3ace1ddc1",
+    "trees/math/network/atomic/0A00.tree": "c326c3c96b57793471b8a4b80defd4108f6a9f17e36a4a670c6356528db92759",
+    "trees/math/analysis/004M.tree": "1ea82a9e51d970e17bd12a1d81b00b7d87a5539b04b8f407f8fdd3c5f47a6325",
+    "research/plenary-morris-packet.json": "5e2bb67ba7f6215d530f03a94f7e89477e363ad85ff17c297b4ce5bbea9d420c"
+  },
+  "followup_review": {
+    "checked_at": "2026-10-28T01:28:27.840Z",
+    "status": "completed_no_open_findings",
+    "scope": "Only the parent-applied M-01 and M-02 corrections were rechecked. No other source files, packet fields, tests or research proofs were re-reviewed or rerun.",
+    "original_evidence_policy": "All pre-existing review fields, findings, counts and inspected-file hashes are preserved unchanged as the original snapshot. This follow-up supersedes the open status of M-01 and M-02 for the two current file hashes recorded below; it does not update the review snapshot for any other file.",
+    "original_review_canonical_sha256": "f55d3c473e65c615b467eaab58eb80bbd6bcceb96d077f5bed2733ce23fa616c",
+    "original_review_hash_method": "SHA256 of UTF-8 JSON.stringify(parsed original review), before adding followup_review.",
+    "resolved_findings": [
+      {
+        "id": "M-01",
+        "priority": "P3",
+        "status": "resolved",
+        "file": "trees/math/combinatorics/ramsey-plenary/4V05.tree",
+        "line": 7,
+        "fix_applied_by": "parent",
+        "verified_text": "设 #{G} 是 #{n\\ge 1} 点[简单图](00LB)",
+        "verification": "The hypothesis now makes the vertex set nonempty, so the maximum degree is defined. Replacing the unique corrected substring '#{n\\ge 1} 点' back by '#{n} 点' reproduces the original file SHA256 exactly; there are no other byte changes relative to that snapshot.",
+        "original_sha256": "651175ece57d602abf590e1890a3080e8c0eeff604f19c5d78103985e96aa598",
+        "verified_sha256": "170533227b3c191c94258164dc96ee02f161de5e226498cdcd82770fa0ddc51f"
+      },
+      {
+        "id": "M-02",
+        "priority": "P3",
+        "status": "resolved",
+        "file": "trees/references/icm2026-morris.tree",
+        "line": 11,
+        "fix_applied_by": "parent",
+        "verified_text": "独立数下界的原始文献为 J. B. Shearer",
+        "verification": "The attribution now correctly describes an independence-number lower bound. Replacing the unique corrected substring '独立数下界的原始文献' back by '独立数上界的原始文献' reproduces the original file SHA256 exactly; there are no other byte changes relative to that snapshot.",
+        "original_sha256": "618016b30d7a3d5e5cfe3f5b1b7096d5797b86253e249724abea28282eaa3f19",
+        "verified_sha256": "bff848e47d17af0aa211314a26c1899887c0eae42a1d97c548357ce3133ca1df"
+      }
+    ],
+    "resolved_count": 2,
+    "remaining_open_findings": 0,
+    "tests_rerun": false,
+    "reviewer_writes": ["research/plenary-morris-independent-review.json"]
+  },
+  "coordination": {
+    "notification": "Progress and both minor findings were reported in commentary. The desktop send_message_to_thread tool refused native-ancestor messaging; final return is the explicit completion notification to the parent.",
+    "parent_followup": "Apply M-01 and M-02 if accepted, rerun the standalone mathematical tests, and register new source hashes after any corrections or normalization. Shared source audits, full synchronization, rendering and build remain the parent's responsibility."
+  }
+}

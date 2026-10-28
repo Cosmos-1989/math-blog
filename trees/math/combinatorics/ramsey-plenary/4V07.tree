@@ -1,0 +1,11 @@
+\title{无三角形图删除闭邻域的边数恒等式}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，定理 2.2 证明，p. 214}
+
+\p{设 #{G=(V,E)} 为非空顶点集上的无三角形[简单图](00LB)，#{n=|V|}、#{e=|E|}、#{d(v)=|N(v)|}，平均度 #{d=n^{-1}\sum_vd(v)=2e/n}。令 #{G_v=G[V\setminus(\{v\}\cup N(v))]}。若 #{v} 在 #{V} 中均匀选取，则}
+##{\mathbb E|V(G_v)|=n-d-1,\qquad \mathbb E|E(G_v)|=e-\frac 1n\sum_{u\in V}d(u)^2.}
+\p{\strong{证明。}顶点数公式由 #{|V(G_v)|=n-d(v)-1} 直接取[期望](00L1)得到。固定 #{v} 时，删除的每条边恰有一个端点属于 #{N(v)}：邻域内部没有边，接到 #{v} 的边也恰好被计一次。因此删除边数为 #{\sum_{u\in N(v)}d(u)}。对 #{v} 求和并交换有限求和次序，得到}
+##{\sum_v\sum_{u\in N(v)}d(u)=\sum_ud(u)\,|N(u)|=\sum_ud(u)^2.}
+\p{无三角形假设保证了“恰好一次”；一般图的邻域内部边会在右侧计两次。平均度公式中的 #{\sum_vd(v)=2e} 则只用每条边有两个端点。}

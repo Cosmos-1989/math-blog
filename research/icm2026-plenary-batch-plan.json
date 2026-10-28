@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-10-25",
+  "checked_on": "2026-10-28",
   "scope": {
     "site": "root math-blog",
     "workspace": "/Users/sunzy/claude_test/forester2",
@@ -9,13 +9,16 @@
       "research/icm2026-plenary-applied-reports.json",
       "research/icm2026-plenary-applied-verification.json",
       "research/icm2026-plenary-dynamics-probability.json",
-      "research/icm2026-plenary-dynamics-probability-verification.json"
+      "research/icm2026-plenary-dynamics-probability-verification.json",
+      "research/icm2026-plenary-ramsey-formalization.json",
+      "research/icm2026-plenary-ramsey-formalization-verification.json",
+      "research/icm2026-plenary-dynamics-probability-release.json"
     ],
     "statement": "完整保留官方名录中的 19 场普通全会和 3 场特别全会，按报告内容分批增补到第 1-20 模块，包括第 12-20 模块。全部 20 个模块均在范围内，但没有匹配报告时不强制填满。",
-    "placement": "subject_ids 是内容驱动的编辑归属，不是官方分组。批次 1、2 已接入；existing_subject_ids 记录实际入口，其余批次仍是规划，pending_subject_ids 须另行核实。",
+    "placement": "subject_ids 是内容驱动的编辑归属，不是官方分组。批次1至3已接入；existing_subject_ids记录实际入口，其余批次仍是规划，pending_subject_ids须另行核实。",
     "title_policy": "17 篇书面材料的 title 是正式出版章名，不擅称与现场口头题名完全相同；5 项无卷 2 章节者的 title 据原始官方视频说明核实。作者姓名、题名、DOI 和来源链接按材料保留。",
-    "completion_boundary": "九篇既有专题保持原有覆盖等级；两批六篇新增专题已写入所选分支，共161个原子页、6篇综述及6个来源页。还有7项增补或升级待处理。待补分支与引用证明分别登记，不把专题入口视作全报告完成。批次1已经推送，发布结果另见发布记录；批次2尚未推送。",
-    "outline_policy": "沿用已有专题编号，首批为4P00、4Q00、4R00，第二批经全树查重分配4S00、4T00、4U00；其余planned_outline为null，实施前检查编号冲突。"
+    "completion_boundary": "九篇既有专题保持原有覆盖等级；三批八篇新增专题已写入所选分支，余五项官方录像内容待逐段整理。待补分支与引用证明分别登记，不把专题入口视作全报告完成。批次1已发布核验；批次2已发布核验；批次3尚未推送。",
+    "outline_policy": "沿用已有专题编号；新增4P00至4W00经全树查重分配，其余planned_outline为null，实施前检查冲突。"
   },
   "sources": {
     "official_directory": {
@@ -71,19 +74,20 @@
     "special": 3,
     "modules_in_scope": 20,
     "existing_source_bound_outlines_kept": 9,
-    "new_selected_branch_topics": 6,
-    "source_bound_topics_now": 15,
+    "new_selected_branch_topics": 8,
+    "source_bound_topics_now": 17,
     "existing_background_outlines_to_upgrade": 1,
-    "new_report_outlines_needed": 6,
-    "outstanding_reports": 7,
+    "new_report_outlines_needed": 4,
+    "outstanding_reports": 5,
     "queued_after_batch1": 10,
-    "outstanding_written_chapters_available": 2,
+    "outstanding_written_chapters_available": 0,
     "outstanding_official_videos_requiring_content_reading": 5,
     "written_chapters_in_volume2": 17,
     "written_chapters_not_in_checked_volume2": 5,
     "unresolved_roster_identities": 0,
     "unresolved_title_identities_for_declared_source_role": 0,
-    "queued_after_batch2": 7
+    "queued_after_batch2": 7,
+    "queued_after_batch3": 5
   },
   "subject_modules": [
     {
@@ -432,7 +436,8 @@
       "coverage_scope": "selected-branches",
       "manifest": "research/icm2026-plenary-dynamics-probability.json",
       "verification": "research/icm2026-plenary-dynamics-probability-verification.json",
-      "publication": "not-pushed"
+      "publication": "published-content-verified",
+      "release_record": "research/icm2026-plenary-dynamics-probability-release.json"
     },
     {
       "speaker": "Dennis Gaitsgory",
@@ -557,24 +562,27 @@
       ],
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1806764",
       "pages": "102-123",
-      "existing_outline": null,
-      "planned_outline": null,
+      "existing_outline": "4W00",
+      "planned_outline": "4W00",
       "planned_reference": "icm2026-kontorovich",
-      "existing_subject_ids": [],
+      "existing_subject_ids": [
+        "006E",
+        "0061",
+        "0073"
+      ],
       "subject_ids": [
         "006E",
         "0061",
         "0073"
       ],
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "batch": 3,
       "action": "create_outline",
       "baseline_coverage": "no-dedicated-topic",
-      "source_status": "written_chapter_available",
+      "source_status": "selected_chapter_branches_integrated",
       "subject_basis": "AI、交互式证明与形式化；§7 的 Lean/Mathlib、§10 Teaching 和 §11 Understanding and communication 支撑计算、逻辑、数学教育与传播。不得因作者是数论学者将本报告主归为数论。",
       "notes": [
-        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。",
-        "特别全会，且已收入全会卷；不可把 17 个章节都算成普通全会。展望和教学经验应保持为作者意见，不能改写成已证结论。"
+        "所选分支已分解为原子页并接入对应模块；阅读范围、本地证明、作者观点及未展开研究证明见第三批清单。"
       ],
       "materials": [
         {
@@ -586,9 +594,13 @@
           ],
           "pages": "102-123",
           "identity_status": "verified",
-          "content_reading_status": "pending_batch_reading"
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
         }
-      ]
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-ramsey-formalization.json",
+      "verification": "research/icm2026-plenary-ramsey-formalization-verification.json",
+      "publication": "not-pushed"
     },
     {
       "speaker": "Jacob Lurie",
@@ -764,21 +776,23 @@
       ],
       "source_url": "https://epubs.siam.org/doi/10.1137/25M1833369",
       "pages": "210-239",
-      "existing_outline": null,
-      "planned_outline": null,
+      "existing_outline": "4V00",
+      "planned_outline": "4V00",
       "planned_reference": "icm2026-morris",
-      "existing_subject_ids": [],
+      "existing_subject_ids": [
+        "006D"
+      ],
       "subject_ids": [
         "006D"
       ],
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "batch": 3,
       "action": "create_outline",
       "baseline_coverage": "no-dedicated-topic",
-      "source_status": "written_chapter_available",
+      "source_status": "selected_chapter_branches_integrated",
       "subject_basis": "图 Ramsey 数及其上下界；本批只安排组合学，不因证明中使用随机方法就自动扩为独立概率专题。",
       "notes": [
-        "已有书面来源但尚未建立全会专题；材料未处理，不是来源缺失。新专题编号留待实施时检查冲突后分配。"
+        "所选分支已分解为原子页并接入对应模块；阅读范围、本地证明、作者观点及未展开研究证明见第三批清单。"
       ],
       "materials": [
         {
@@ -790,9 +804,13 @@
           ],
           "pages": "210-239",
           "identity_status": "verified",
-          "content_reading_status": "pending_batch_reading"
+          "content_reading_status": "chapter_body_read_selected_branches_integrated"
         }
-      ]
+      ],
+      "coverage_scope": "selected-branches",
+      "manifest": "research/icm2026-plenary-ramsey-formalization.json",
+      "verification": "research/icm2026-plenary-ramsey-formalization-verification.json",
+      "publication": "not-pushed"
     },
     {
       "speaker": "Hee Oh",
@@ -853,7 +871,8 @@
       "coverage_scope": "selected-branches",
       "manifest": "research/icm2026-plenary-dynamics-probability.json",
       "verification": "research/icm2026-plenary-dynamics-probability-verification.json",
-      "publication": "not-pushed"
+      "publication": "published-content-verified",
+      "release_record": "research/icm2026-plenary-dynamics-probability-release.json"
     },
     {
       "speaker": "Felix Otto",
@@ -964,7 +983,8 @@
       "coverage_scope": "selected-branches",
       "manifest": "research/icm2026-plenary-dynamics-probability.json",
       "verification": "research/icm2026-plenary-dynamics-probability-verification.json",
-      "publication": "not-pushed"
+      "publication": "published-content-verified",
+      "release_record": "research/icm2026-plenary-dynamics-probability-release.json"
     },
     {
       "speaker": "Peter Sarnak",
@@ -1485,17 +1505,24 @@
         "4T00",
         "4U00"
       ],
-      "manifest": "research/icm2026-plenary-dynamics-probability.json"
+      "manifest": "research/icm2026-plenary-dynamics-probability.json",
+      "publication": "published-content-verified",
+      "release_record": "research/icm2026-plenary-dynamics-probability-release.json"
     },
     {
       "batch": 3,
-      "status": "queued",
+      "status": "selected-branches-integrated-local",
       "speakers": [
         "Robert Morris",
         "Alex Kontorovich"
       ],
       "purpose": "Ramsey 理论及 AI/形式化/教学传播；两篇均已有书面来源。",
-      "acceptance": "Morris 保留结果原作者与引用归属；Kontorovich 保持特别全会类别，依据 §§7、10、11 分配入口，区分定理、实例和展望。"
+      "acceptance": "Morris 保留结果原作者与引用归属；Kontorovich 保持特别全会类别，依据 §§7、10、11 分配入口，区分定理、实例和展望。",
+      "planned_outlines": [
+        "4V00",
+        "4W00"
+      ],
+      "manifest": "research/icm2026-plenary-ramsey-formalization.json"
     },
     {
       "batch": 4,
@@ -1521,7 +1548,7 @@
   ],
   "acceptance_policy": [
     "所有 22 人始终保留唯一记录；普通/特别类别与官方名录一致，19+3=22。",
-    "初始待办13项中，6篇已加入选定分支；余7项由6个新专题及2900升级组成。选定分支接入不等于全报告或全部证明完成。",
+    "初始待办13项中，8篇已加入选定分支；余5项由4个新专题及2900升级组成。选定分支接入不等于全报告或全部证明完成。",
     "每批先核读原始章/录像，再在既有基础页上增补；不因已有题名、摘要、网址或空目录就标记完成。",
     "来源未列于已核卷、网页访问失败、材料存在但尚未处理、正文完成、发布完成是不同状态。",
     "数学与来源审阅、前置依赖、导航、构建及渲染检查分别记录；发布须另有提交、GitHub Actions和线上核验依据。"

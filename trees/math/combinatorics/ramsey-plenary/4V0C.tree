@@ -1,0 +1,13 @@
+\title{均匀独立集大小的对数下界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，定理 2.6 后的常数因子证明，pp. 215–216；Shearer–Alon 方法}
+
+\p{设 #{G} 为 #{n} 点无三角形图，最大度数不超过实数 #{d\ge 16}。对[均匀随机独立集](4V0A) #{S}，有}
+##{\mathbb E|S|\ge\frac{n\log_2d}{12d}.}
+\p{\strong{局部估计。}令 #{X_v=|N(v)\cap S|+d1_{\{v\in S\}}}。在[闭邻域外的条件分布](4V0B)下，若可选邻居有 #{m} 个，则}
+##{\mathbb E(X_v\mid T)=\frac{m2^{m-1}+d}{2^m+1}.}
+\p{若 #{m\ge\tfrac 12\log_2d}，则 #{m\ge 1} 且第一项至少 #{m/3\ge(\log_2d)/6}。若 #{m<\tfrac 12\log_2d}，则第二项至少 #{d/(\sqrt d+1)\ge\sqrt d/2\ge(\log_2d)/2}。末步用 #{\sqrt d\ge\log_2d} 对 #{d\ge 16} 成立；令 #{x=\sqrt d\ge 4}，函数 #{x-2\log_2x} 在 #{4} 为零且其[导数](0A33)为正即可验证。}
+\p{对所有可能的 #{T} 按其概率加权，得到 #{\mathbb EX_v\ge(\log_2d)/6}。另一方面逐点有 #{\sum_v|N(v)\cap S|=\sum_{u\in S}\deg(u)\le d|S|}，故由[期望的线性性](00L1)，#{\sum_v\mathbb EX_v\le 2d\mathbb E|S|}。合并即得结论。}
+\p{无三角形条件不可省去。完全图 #{K_{d+1}} 的独立集只有空集及 #{d+1} 个单点，故平均大小为 #{(d+1)/(d+2)<1}；而 #{n\log d/d} 随 #{d\to\infty} 发散。}

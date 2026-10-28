@@ -1,0 +1,11 @@
+\title{Hefty–Horn–King–Pfender 的 R(3,k) 下界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，定理 1.2 及 §3.8，式 (3.7)，pp. 219–220；所引文献 [56]}
+
+\p{Hefty、Horn、King、Pfender 证明：对每个 #{\varepsilon>0}，所有充分大的整数 #{k} 满足 [Ramsey 下界](4V02)}
+##{R(3,k)\ge\left(\frac 12-\varepsilon\right)\frac{k^2}{\log k}.}
+\p{该研究定理引用自 [Morris 报告](icm2026-morris) §3.8 及其中所引 Improving R(3,k) in just two bites。报告给出的构造概要取两个稀疏随机图，先删边消去三角形，再作[独立集膨胀](4V0F)，随机重标号后叠加，最后消去混合三角形。[Alon–Rödl 引理](4V0I)说明为什么要控制独立集的数量，而膨胀使若干混合三角形共享可一次删除的边。独立集计数及删边后的稳定性是该研究证明的关键估计。}
+\p{报告中相应图族具有 #{n} 个顶点及 #{\alpha(G)\le(1+o(1))\sqrt{n\log n}}，其中 #{o(1)\to 0}。这个独立数界如何产生常数 #{1/2}，可以直接核算：固定 #{0<c<1/2}，取 #{n=\lfloor ck^2/\log k\rfloor}，则 #{\log n/\log k\to 2}，所以 #{\sqrt{n\log n}/k\to\sqrt{2c}<1}。因此大 #{k} 时 #{\alpha(G)<k}，于是 #{R(3,k)>n}；再令 #{c} 任意接近 #{1/2}。}
+\p{结合 [Shearer 上界](4V09)，两端的主常数分别为 #{1/2} 与 #{1}。报告 §2 的问题 2.5 询问能否把最大度为 #{d} 的无三角形图独立数下界提高到 #{(2-o(1))n\log d/d}；这一更强结论在该报告中仍为开放问题。}

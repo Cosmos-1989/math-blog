@@ -1,0 +1,10 @@
+\title{独立集的指纹与余集容器}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§4，引理 4.4 后，p. 221}
+
+\p{设 #{G} 为有限图。给每个[独立集](4V01) #{I} 指定一个小子集 #{T(I)\subseteq I}，称为指纹；再由 #{T} 单独确定集合 #{C(T)\subseteq V(G)\setminus T}，使 #{I\setminus T(I)\subseteq C(T(I))}，则称 #{C(T)} 为相应的余集容器。关键要求是容器只能由指纹确定，不能额外依赖未知的 #{I\setminus T}。}
+\p{若对每个大小为 #{k} 的独立集都能选择大小恰为 #{s} 的指纹，并保证 #{|C(T)|\le R}，则}
+##{i_k(G)\le\binom{|V(G)|}{s}\binom R{k-s}.}
+\p{因为先选指纹，再从其容器中选剩余 #{k-s} 个点，已经覆盖全部独立集；容许重复计数只会增大上界。这里限制大小的是余集容器 #{C(T)}，整个独立集包含于 #{T\cup C(T)}，后者的大小上界是 #{s+R}。}

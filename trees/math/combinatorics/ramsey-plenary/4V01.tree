@@ -1,0 +1,10 @@
+\title{图的独立集与独立数}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，p. 213}
+
+\p{设 #{G=(V,E)} 为有限[简单图](00LB)。若 #{I\subseteq V} 内任意两个不同顶点都不相邻，称 #{I} 为独立集。独立集族、独立数及固定大小的独立集数分别记为}
+##{\mathcal I(G)=\{I\subseteq V:E(G[I])=\varnothing\},\qquad \alpha(G)=\max_{I\in\mathcal I(G)}|I|,\qquad i_k(G)=|\{I\in\mathcal I(G):|I|=k\}|.}
+\p{空集也是独立集，故 #{i_0(G)=1}，空图的独立数为零。与独立集相对，内部任意两点都相邻的顶点集称为团，#{k} 点团诱导完全图 #{K_k}。补图 #{\overline G} 保留顶点集，把每对不同顶点的邻接关系取反；于是 #{G} 的独立集恰是 #{\overline G} 的团。}
+\p{极大独立集指不能再加入顶点的独立集，最大独立集则要求大小等于 #{\alpha(G)}。三点路径的中间单点集是极大的，但两个端点才构成最大的独立集。大小与数量也不同：#{i_k(G)>0} 等价于 #{\alpha(G)\ge k}，而 #{i_k(G)} 还记录这样的集合有多少个。}

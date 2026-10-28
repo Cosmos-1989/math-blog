@@ -1,0 +1,12 @@
+\title{从 jumbled 条件到独立集数量界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§4.1，定义 4.6 与引理 4.9，pp. 222–223；图容器的直接推论}
+
+\p{设 #{G} 是 #{n} 点、满足 [#{(p,\beta)}-jumbled 条件](4V0P)的图，#{0<p\le 1}。取整数 #{R,s,k}，满足}
+##{2+\frac{4\beta}{p}\le R\le n,\qquad 1\le s\le k\le n,\qquad R\ge ne^{-ps/4}.}
+\p{则其[独立集数](4V01)满足 #{i_k(G)\le\binom ns\binom R{k-s}}。}
+\p{\strong{证明。}对 #{u=|U|\ge R}，偏差条件给出}
+##{e(G[U])\ge\frac p2u(u-1)-\beta u=\frac p2u^2-\left(\frac p2+\beta\right)u\ge\frac p4u^2.}
+\p{最后一步等价于 #{u\ge 2+4\beta /p}。因此 [图容器计数定理](4V0M)可取超饱和参数 #{p/4}，得到结论。例如当 #{R<n} 时，取 #{s=\lceil(4/p)\log(n/R)\rceil} 自动满足指数条件，只要还满足 #{s\le k}。此界刻画的是独立集的数量，比单独排除超过某个大小的独立集含有更多信息。}

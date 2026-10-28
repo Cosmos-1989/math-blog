@@ -1,0 +1,10 @@
+\title{随机图中独立集数的第一矩}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§3.2，p. 217；§3.8，p. 219 的计数思想}
+
+\p{设 #{G\sim G(n,p)} 为 [Erdős–Rényi–Gilbert 随机图](00LD)，#{0\le p\le 1}，#{2\le k\le n}。其 #{k} 元[独立集数](4V01)满足}
+##{\mathbb E i_k(G)=\binom nk(1-p)^{\binom k2}\le n^k\exp\left(-\frac{pk(k-1)}2\right).}
+\p{\strong{证明。}固定 #{k} 元顶点集独立，等价于内部 #{\binom k2} 条边全部缺失；边的独立性给出其概率。对所有顶点集使用[期望的线性性](00L1)，再用 #{\binom nk\le n^k} 及 #{1-p\le e^{-p}} 即得估计。后一个不等式来自 #{e^x\ge 1+x}，取 #{x=-p}。}
+\p{由 [Markov 不等式](0A02)，#{\mathbb P(\alpha(G)\ge k)\le\mathbb E i_k(G)}。例如若 #{p(k-1)\ge 4\log n}，则该概率至多 #{n^{-k}}。这一结论只给上尾和不存在性的保证；不能仅从期望很大推出典型图中必有 #{k} 元独立集。}

@@ -1,0 +1,849 @@
+{
+  "date": "2026-10-28",
+  "report": {
+    "speaker": "Robert Morris",
+    "title": "Some Recent Results in Ramsey Theory",
+    "outline": "4V00",
+    "prefix": "4V",
+    "reference": "icm2026-morris",
+    "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+    "version_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+    "doi": "10.1137/25M1833369",
+    "pages": "210-239",
+    "license": "CC BY 4.0",
+    "question": "独立集的大小、数量及相关性怎样决定禁团图的构造，并连接非对角Ramsey界、单色书和诱导Ramsey指数界？",
+    "reading_scope": "实际核读SIAM正式HTML数学主体§§1–10（lines90–1093），含证明、概要、问题、脚注1–8；核对正式书目信息、许可和相关参考文献。另以SIAM正式PDF文本定位pp.210–211、213–215、217–223、229–233的关键结果。全文阅读指HTML数学主体，不表示所引研究论文已全部核读。PDF截图请求失败（cache miss），直接curl PDF返回403；没有完成PDF图像核对。arXiv:2601.05221v1只核对摘要与版本元数据，未冒用其37页分页。研究原论文2510.19718v1、2509.22629v1只读摘要/版本页。",
+    "module_rationale": [
+      "31个原子页；核心完整证明链为Shearer有限形式和Ramsey上界、随机删点、独立集膨胀计数、Alon–Rodl随机叠加、图容器及混合矩。",
+      "在root trees中搜索Ramsey/拉姆齐/拉姆塞，仅发现006D综述用语，未发现已有专门定义；复用00LB、00LD及概率/分析定义，不从其他站点复制同名页面。",
+      "以独立集的数量衔接R(3,k)与R(4,k)，用单色书和诱导条件作研究出口；没有为了覆盖全篇而把每个研究分支都做成未展开目录。",
+      "基础局部定义、完整本地证明与外部研究定理分别登记；不把来源报告的证明概要升级为本站完整深证明。"
+    ],
+    "proof_scope": {
+      "4V00": {
+        "status": "narrative-outline",
+        "scope": "以独立集大小与数量组织31个原子页，连接三角形上界、随机叠加、四点团容器、单色书和诱导问题。"
+      },
+      "4V01": {
+        "status": "definition-and-local-proof",
+        "scope": "独立集、独立数、i_k、补图与团的字典；极大与最大独立集区别。"
+      },
+      "4V02": {
+        "status": "definition-and-local-proof",
+        "scope": "二色Ramsey数及禁团图等价；边界值与R(3,3)示例。存在性链接是后继结果，非前置。"
+      },
+      "4V03": {
+        "status": "local-proof",
+        "scope": "同时归纳证明有限性、二参数递推、二项式上界；给二项式系数局部定义。"
+      },
+      "4V04": {
+        "status": "local-proof",
+        "scope": "随机二染色第一矩；精确有限判据及floor(2^(k/2))的渐近存在性。"
+      },
+      "4V05": {
+        "status": "local-proof",
+        "scope": "最大度贪心下界及无三角形邻域独立性。"
+      },
+      "4V06": {
+        "status": "local-proof",
+        "scope": "Shearer函数积分表示、d=0/1端点、导数符号、切线不等式、微分恒等式与渐近式。"
+      },
+      "4V07": {
+        "status": "local-proof",
+        "scope": "闭邻域删除的边数双计数恒等式；说明无三角形假设的计数作用。"
+      },
+      "4V08": {
+        "status": "local-proof",
+        "scope": "补全Shearer有限形式alpha>=nf(d)的归纳；包含空残图、d=0、度数平方和及负导数方向。"
+      },
+      "4V09": {
+        "status": "local-proof",
+        "scope": "有限函数单调性推出ceil(k/f(k-1))上界；不假设平均度必须发散。"
+      },
+      "4V0A": {
+        "status": "definition-and-local-proof",
+        "scope": "全部独立集上的均匀有限概率模型；单边例子说明入选事件不独立。"
+      },
+      "4V0B": {
+        "status": "local-proof",
+        "scope": "条件于闭邻域外的精确2^m+1个扩张及两个条件平均公式。"
+      },
+      "4V0C": {
+        "status": "local-proof",
+        "scope": "d>=16时均匀独立集均值>=n log_2(d)/(12d)；完全图反例。没有导入DJPR尖锐主常数定理的证明。"
+      },
+      "4V0D": {
+        "status": "local-proof",
+        "scope": "G(n,p)的i_k期望及Markov上尾，给明确参数条件。"
+      },
+      "4V0E": {
+        "status": "local-proof",
+        "scope": "n^(-2/3)随机图删点消三角形；同时控制两个坏事件并以明确n(k)得到(k/log k)^(3/2)下界。"
+      },
+      "4V0F": {
+        "status": "definition-and-local-proof",
+        "scope": "等大小独立集膨胀；禁团保持、顶点与边计数及alpha=s alpha(H)。"
+      },
+      "4V0G": {
+        "status": "local-proof",
+        "scope": "独立集多项式P_blowup(z)=P_H((1+z)^s-1)与K_s,s核算；仅有限多项式。"
+      },
+      "4V0H": {
+        "status": "definition-and-local-proof",
+        "scope": "一般多色Ramsey数；顶点分支递推同时证明有限性。"
+      },
+      "4V0I": {
+        "status": "local-proof",
+        "scope": "Alon–Rodl叠加的精确期望i_k^2/binom(n,k)，重叠边分配及混合三角形边界。"
+      },
+      "4V0J": {
+        "status": "cited-research-theorem-with-local-calculation",
+        "scope": "HHKP的1/2常数下界为引用；本地仅核算alpha~sqrt(n log n)到常数1/2的参数反演。"
+      },
+      "4V0K": {
+        "status": "local-proof",
+        "scope": "随机顶点抽样后删除每个独立k集的一点，得到阶>=pn-p^k i_k(H)，不依赖高概率独立性。"
+      },
+      "4V0L": {
+        "status": "definition-and-local-proof",
+        "scope": "指纹和不含指纹的余集容器；组合计数公式。"
+      },
+      "4V0M": {
+        "status": "local-proof",
+        "scope": "超饱和假设下的最大度指纹算法、候选集缩减、停止与确定性重构。"
+      },
+      "4V0N": {
+        "status": "local-proof",
+        "scope": "边不交团块且每个K4含同块三点时，替换各块为无三角形图后K4-free。"
+      },
+      "4V0O": {
+        "status": "cited-research-theorem",
+        "scope": "Mattheus–Verstraete的k^3/log^4 k下界及几何结构/随机超饱和输入为引用；未把简化参数的log^9推导冒充log^4证明。"
+      },
+      "4V0P": {
+        "status": "definition-and-local-proof",
+        "scope": "Thomason的单集合jumbled定义；alpha<=1+2beta/p的直接推论。"
+      },
+      "4V0Q": {
+        "status": "local-proof",
+        "scope": "由jumbled偏差推出e(U)>=p|U|^2/4，再用图容器给精确参数的计数界；非Lemma4.9完整版本。"
+      },
+      "4V0R": {
+        "status": "definition-and-local-proof",
+        "scope": "互不相交的书脊与页集合；m>=R(k-t,k)时延伸出单色K_k。"
+      },
+      "4V0S": {
+        "status": "cited-research-theorem",
+        "scope": "八作者多色上界及CGMS二色归属；delta依赖r；未转写Lemma9.2的含混量词。"
+      },
+      "4V0T": {
+        "status": "definition-and-local-proof",
+        "scope": "诱导Ramsey箭头保留宿主非边；对完全图等于普通多色Ramsey数的双向证明。"
+      },
+      "4V0U": {
+        "status": "cited-research-theorem",
+        "scope": "ACDFM的r^(Crk)诱导界与1-exp(-delta n^2)随机宿主保证，所有染色在宿主生成后量化。"
+      },
+      "4V0V": {
+        "status": "local-proof",
+        "scope": "所有非负整数多重指标的混合内积矩为坐标多重指标平方和；非负系数整函数g的期望推论。未证明完整Lemma9.3。"
+      },
+      "icm2026-morris": {
+        "status": "bibliographic-reference",
+        "scope": "正式版书目信息、许可与中文改编署名；主定理作者及报告所引文献。"
+      }
+    },
+    "claim_sources": {
+      "4V00": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§§1–4、9–10；全文数学主体§§1–10"
+        }
+      ],
+      "4V01": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，p.213及脚注2"
+        }
+      ],
+      "4V02": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§1.1，pp.210–211；§2，p.213"
+        }
+      ],
+      "4V03": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，Theorem2.1，p.213"
+        }
+      ],
+      "4V04": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§1，equation(1.1)，p.210；Erdos1947背景"
+        }
+      ],
+      "4V05": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，equation(2.2)，p.213"
+        }
+      ],
+      "4V06": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，Theorem2.2 proof sketch，pp.213–214；积分补证为本地推导"
+        }
+      ],
+      "4V07": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，Theorem2.2 proof，p.214"
+        }
+      ],
+      "4V08": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，Theorem2.2，pp.213–214；原报告概要扩成逐步证明"
+        }
+      ],
+      "4V09": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，upper bound of Theorem1.2，p.214"
+        }
+      ],
+      "4V0A": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，Theorem2.6，pp.215–216"
+        }
+      ],
+      "4V0B": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，equation(2.4) proof，pp.215–216"
+        }
+      ],
+      "4V0C": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§2，constant-factor proof after Theorem2.6，pp.215–216；Shearer1995/Alon1996"
+        }
+      ],
+      "4V0D": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§3.2，p.217；§3.8，p.219的计数思想"
+        }
+      ],
+      "4V0E": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§3.2，p.217"
+        }
+      ],
+      "4V0F": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§3.6，p.218"
+        }
+      ],
+      "4V0G": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§§3.6–3.8，pp.218–220；独立补充计数"
+        }
+      ],
+      "4V0H": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§3.7，pp.218–219；§9，p.229"
+        }
+      ],
+      "4V0I": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§3.7，Lemma3.2，p.219"
+        }
+      ],
+      "4V0J": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "Theorem1.2；§3.8，equation(3.7)，pp.219–220；reference[56]及footnote4"
+        }
+      ],
+      "4V0K": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4，Lemma4.3后，p.221；独立期望改写"
+        }
+      ],
+      "4V0L": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4，Lemma4.4后，p.221；区分T并C与C"
+        }
+      ],
+      "4V0M": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4，Lemma4.4，p.221"
+        }
+      ],
+      "4V0N": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4，Lemma4.2后，pp.220–221"
+        }
+      ],
+      "4V0O": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4，Theorem4.1、Lemmas4.2–4.5，pp.220–221；reference[65]"
+        }
+      ],
+      "4V0P": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4.1，Definition4.6，p.222"
+        }
+      ],
+      "4V0Q": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§4.1，Definition4.6、Lemma4.9，pp.222–223；Lemma4.4的本地推论"
+        }
+      ],
+      "4V0R": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§9，Theorem9.1后、Lemma9.2前，pp.229–230"
+        }
+      ],
+      "4V0S": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§1，Theorem1.1，p.210；§9，Theorem9.1，p.229；Conjecture9.4，p.231"
+        }
+      ],
+      "4V0T": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§1.3，p.212；§10，pp.232–233"
+        }
+      ],
+      "4V0U": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§10，Theorems10.2–10.3，p.233；reference[10]"
+        }
+      ],
+      "4V0V": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "§9，equation(9.3)及其后，p.231；补充混合矩而非仅边际矩论证"
+        }
+      ],
+      "icm2026-morris": [
+        {
+          "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+          "location": "Information & Authors；references[5],[8],[10],[11],[22],[56],[65],[75],[80],[81]"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "§2 Theorems2.3–2.4（小共度及三色数禁子图推广）、DJPR尖锐平均独立集界、Problems2.5与2.7：阅读后未建研究定理页；4V0C仅完整证明常数1/12的版本。",
+      "§3.1超立方体几何构造与Kleitman直径定理；§§3.3–3.6的局部引理、Kim nibble、三角形自由过程和种子正则化：未展开深证明。",
+      "§3.8双重随机膨胀的独立集计数、重合点控制与混合三角形删边稳定性：4V0J引用最终结果，不宣称报告的简化构造等同于原论文算法。",
+      "§4 Hermitian unital的有限域/射影几何构造、O'Nan性质、随机超饱和鞅估计及log^4优化；§4.1最优拟随机构造、Mubayi–Verstraete条件定理与Lemma4.9完整界：未展开。4V0Q只是Lemma4.4的精确参数推论。",
+      "§5 AKS方法与Lemma5.2抽样的集中细节；§6Rodl路径计数；§7GNNW近对角优化及猜想7.3：已读而未建页。",
+      "§8Ma–Shen–Xie随机几何下界：公式(8.3)的符号与改进方向需回查原论文，未导入研究断言。",
+      "§9完整书算法、Lemma9.2精确量词、Lemma9.3几何二分及常数/迭代控制；多色三角形与Schur数分支：未展开。4V0V只证明混合矩和g期望非负。",
+      "§10(p,R)-Janson超图、广义容器、诱导副本扩张与最终概率估计的深证明：仅引用Theorems10.2–10.3，未把简化Lemma10.5或10.6转写成精确定理。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4V0J：Hefty–Horn–King–Pfender的研究构造和稳定计数；已写出的仅为主常数参数反演。",
+      "4V0O：Mattheus–Verstraete的有限几何存在性、随机超饱和与log^4参数优化。",
+      "4V0S：CGMS及八作者多色指数界的整体算法和量化估计；4V0V不等于完整Lemma9.3。",
+      "4V0U：Aragao–Campos–Dahia–Filipe–Marciano的Janson集合、容器和诱导扩张证明。",
+      "4V0C：不宣称证明DJPR的(1+o(1))尖锐平均界；只证明明确的log_2(d)/(12d)版本。",
+      "4V0Q：不宣称证明Alon–Rodl的Lemma4.9精细计数界，也不证明最优拟随机图存在。"
+    ],
+    "subject_ids": [
+      "006D"
+    ]
+  },
+  "prerequisites": {
+    "4V00": [],
+    "4V01": [
+      "00LB"
+    ],
+    "4V02": [
+      "00LB",
+      "4V01"
+    ],
+    "4V03": [
+      "4V02"
+    ],
+    "4V04": [
+      "4V02",
+      "00L3",
+      "00LD",
+      "00L1",
+      "0A02"
+    ],
+    "4V05": [
+      "00LB",
+      "4V01"
+    ],
+    "4V06": [
+      "00Q5",
+      "0R06",
+      "0A33"
+    ],
+    "4V07": [
+      "00LB",
+      "00L1"
+    ],
+    "4V08": [
+      "4V01",
+      "4V06",
+      "4V07"
+    ],
+    "4V09": [
+      "4V02",
+      "4V06",
+      "4V05",
+      "4V08"
+    ],
+    "4V0A": [
+      "4V01",
+      "00Q3",
+      "00L1",
+      "00L3"
+    ],
+    "4V0B": [
+      "00LB",
+      "4V0A",
+      "0A00"
+    ],
+    "4V0C": [
+      "4V0A",
+      "4V0B",
+      "00L1",
+      "0A33"
+    ],
+    "4V0D": [
+      "00LD",
+      "4V01",
+      "00L1",
+      "0A02"
+    ],
+    "4V0E": [
+      "4V02",
+      "00LD",
+      "0A02",
+      "4V0D"
+    ],
+    "4V0F": [
+      "00LB",
+      "4V01"
+    ],
+    "4V0G": [
+      "4V01",
+      "4V0F"
+    ],
+    "4V0H": [
+      "00LB",
+      "4V02"
+    ],
+    "4V0I": [
+      "4V01",
+      "4V0H",
+      "00L3",
+      "00L1",
+      "0A02"
+    ],
+    "4V0J": [
+      "4V02",
+      "4V0F",
+      "4V0I"
+    ],
+    "4V0K": [
+      "4V01",
+      "00L3",
+      "00L1"
+    ],
+    "4V0L": [
+      "4V01"
+    ],
+    "4V0M": [
+      "00LB",
+      "4V01",
+      "4V0L"
+    ],
+    "4V0N": [
+      "4V01"
+    ],
+    "4V0O": [
+      "4V02",
+      "4V0N",
+      "4V0M",
+      "4V0K"
+    ],
+    "4V0P": [
+      "00LB",
+      "4V01"
+    ],
+    "4V0Q": [
+      "4V0P",
+      "4V01",
+      "4V0M"
+    ],
+    "4V0R": [
+      "4V01",
+      "4V02"
+    ],
+    "4V0S": [
+      "4V0H",
+      "4V0R",
+      "4V0V"
+    ],
+    "4V0T": [
+      "00LB",
+      "4V0H"
+    ],
+    "4V0U": [
+      "4V0T",
+      "00LD"
+    ],
+    "4V0V": [
+      "00L3",
+      "004M",
+      "00L1"
+    ],
+    "icm2026-morris": []
+  },
+  "reviewed_reused_ids": [
+    "00LB",
+    "00LD",
+    "00Q3",
+    "00L0",
+    "00L1",
+    "00L2",
+    "00L3",
+    "00L4",
+    "00L8",
+    "0A00",
+    "0A02",
+    "00Q5",
+    "0R06",
+    "0A33",
+    "4R06",
+    "004M",
+    "004N"
+  ],
+  "source_readings": [
+    {
+      "url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "version": "formal HTML, published 2026-07-13",
+      "read_at": "2026-10-28",
+      "scope": "数学主体§§1–10，HTML lines90–1093；脚注1–8；相关书目与Information & Authors。使用重叠窗口阅读全文，§2、§3.7–3.8、§4、§9重点重读。",
+      "full_mathematical_body": true
+    },
+    {
+      "url": "https://epubs.siam.org/doi/pdf/10.1137/25M1833369",
+      "version": "formal PDF, 30 pages, printed pp.210–239",
+      "read_at": "2026-10-28",
+      "scope": "只读工具解析的关键定位与上下文：pp.210–211、213–215、217–223、229–233；不是整份PDF逐页图像检查。截图pageno4、5、11、18均cache miss。",
+      "full_mathematical_body": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.05221v1",
+      "version": "v1, 2026-01-08, 37 pages",
+      "read_at": "2026-10-28",
+      "scope": "摘要、作者、版本和页数；不作为全文阅读记录。",
+      "full_mathematical_body": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.19718v1",
+      "version": "v1, 2025-10-22; listing reports v3 2026-02-19",
+      "read_at": "2026-10-28",
+      "scope": "摘要及版本列表核对1/2主常数；未读原论文全文，最终定理来源仍为Morris正式报告。",
+      "full_mathematical_body": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.22629v1",
+      "version": "v1, 2025-09-26; listing reports v2 2025-11-13",
+      "read_at": "2026-10-28",
+      "scope": "摘要及作者/版本列表；未读原论文全文，采用Morris正式定理10.2–10.3。",
+      "full_mathematical_body": false
+    }
+  ],
+  "reuse_review_notes": [
+    "00LB实际定义有限简单图、邻域、度、诱导子图和完全图；均复用，不另造图论基础副本。",
+    "00LD定义独立Bernoulli边的G(n,p)；00L1显式证明有限期望线性性无需独立；0A02给Markov证明。",
+    "0A00提供有限事件条件化与全概率公式；4V0B在有限条件分布中自行求平均，不误用未定义的抽象条件期望。",
+    "004N虽写出标准坐标公式，但taxon为Example且首先定义复内积；4V0V改链004M的内积定义并显式给实坐标公式，不把例子登记成必要定义。",
+    "4R06的一阶凸性定理已读，但其全空间版本不直接用作[0,infty)端点定理；4V06自行证明一维切线并处理x=0。",
+    "4V02到4V03是存在性后继链接；4V05到4V09、4V0J到4V09为应用/比较链接。它们不作为反向前置边，前置图与普通链接图分开。",
+    "本地定义只需有限集合、实数算术和有限代数为基线；概率与微积分具名对象链接到既有定义。既有页的全森林语义复审不在本批范围。"
+  ],
+  "source_findings": [
+    {
+      "id": "missing-triangle-free-2.6",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§2 Theorem2.6, p.215; HTML lines276–307",
+      "finding": "定理正文缺triangle-free，前段和证明需要它。完全图K_(d+1)的均匀独立集平均=(d+1)/(d+2)<1，反证一般图版本。4V0C明确无三角形且仅证明较弱常数界。"
+    },
+    {
+      "id": "mixed-moments-not-marginals",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§9 equation(9.3)后, p.231; HTML lines944–947",
+      "finding": "g含多个内积变量的乘积，需所有混合矩非负而非只验证每个变量的单独矩。4V0V用坐标多重指标平方和证明；修正f_i(U,U')为<f_i(U),f_i(U')>。"
+    },
+    {
+      "id": "book-lemma-quantifiers",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§9 Lemma9.2, p.230",
+      "finding": "t出现在前提中又由存在量词指定，delta依赖与t范围未在简式中完整固定。未核读原论文精确引理，因此4V0S仅说明用途，4V0R单独定义书并证明延伸。"
+    },
+    {
+      "id": "container-remainder",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§4 Lemma4.4及其后, p.221",
+      "finding": "报告用g(S)包含I且大小<=R的措辞解释binom(R,k-s)计数；算法直接控制的是去掉指纹后的余集。4V0L/4V0M明确I subset T union C(T), C(T) disjoint T, |C(T)|<=R，完整重构由T决定。"
+    },
+    {
+      "id": "r4-logarithm-gap",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§4 Lemma4.3后, p.221",
+      "finding": "p=q^-1与k=q(log q)^3直接得到log^9而非定理log^4。4V0O保留这一边界，不以简化参数证明更强结果。"
+    },
+    {
+      "id": "near-diagonal-gamma",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§7 Lemma7.2后; HTML line826",
+      "finding": "所见gamma=1-(sqrt5+1)/2为负，与0<gamma<q不符；未自行猜补参数或导入该优化证明。"
+    },
+    {
+      "id": "near-diagonal-signs",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§8 equation(8.2)后及Theorem8.1 equation(8.3); HTML lines851,857",
+      "finding": "对角特化写2^(-k/2)，应由p^(-k/2)在p=1/2得2^(k/2)；(p+epsilon)^(-ell/2)反而小于旧下界，不能据此宣称改进。该支未导入，正确的基础下界由4V04独立证明。"
+    },
+    {
+      "id": "sampling-edges-not-independent",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§5 Lemma5.2 proof; HTML lines640–641",
+      "finding": "顶点抽样后的边指标共享端点，不能不加说明直接调用独立Bernoulli的Chernoff界。未导入这一证明；4V0K采用期望差与删点，不作此集中性断言。"
+    },
+    {
+      "id": "jumbled-regime",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§4.1 Definition4.6后; HTML line573",
+      "finding": "无图能有beta=o(sqrt(pn))的简述需密度范围等限定，例如p=1完整图的beta=0。4V0P仅采用精确定义及直接推论，未导入无条件最优性断言。"
+    },
+    {
+      "id": "simplified-hhkp-construction",
+      "source_url": "https://epubs.siam.org/doi/full/10.1137/25M1833369",
+      "location": "§3.8 footnote4",
+      "finding": "报告明确其双膨胀流程并非原论文完全相同的构造；引用结果与启发式流程分开，不以流程文字冒充原论文证明。"
+    }
+  ],
+  "terminology_checks": [
+    {
+      "url": "https://www.bananaspace.org/wiki/拉姆齐定理",
+      "attempted_at": "2026-10-28",
+      "status": "unavailable",
+      "result": "web报告not accessible；保留站内Ramsey称谓，未宣称术语核对成功。"
+    },
+    {
+      "url": "https://www.bananaspace.org/wiki/独立集",
+      "attempted_at": "2026-10-28",
+      "status": "unavailable",
+      "result": "web报告not accessible；按有限图明确定义，术语外站核对待补。"
+    }
+  ],
+  "coordination": {
+    "scope": "Only trees/math/combinatorics/ramsey-plenary/4V*.tree, trees/references/icm2026-morris.tree, research/plenary-morris-packet.json.",
+    "shared_registers_navigation_queue": "Parent owned; untouched. Only requested subject entry 006D is registered in this packet.",
+    "prewrite_notice": "Commentary before first apply_patch listed selected branches, reused foundations and research proof boundaries. Parent warning on Theorem2.6, mixed moments and Lemma9.2 incorporated.",
+    "commit_push_sync_full_build": "Not run. No git commands, publication, shared-register writes or whole-site build."
+  },
+  "validation": {
+    "status": "passed-targeted-source-and-math-checks",
+    "scope": "Owned tree sources and packet checked. No Forester parser/build, output rendering, site publication or git operations.",
+    "checked_at": "2026-10-28",
+    "tree_files": 33,
+    "atomic_pages": 31,
+    "katex_formulas": 611,
+    "prerequisite_edges": 85,
+    "reviewed_reused_count": 17,
+    "structural_findings": [],
+    "source_sha256": {
+      "4V00": "9f62999fc6bbe8c773f05b27b5bb1602702dcbc5152e3b3ec2a84da35139398e",
+      "4V01": "16b693696c3c9a2f4d1788ce85b2f463fd5d3cdf55208ad5a0ced57adba9ce56",
+      "4V02": "f9c216886590a9bb72a0b22fb9a5b92560f2b5b5b096a4cc6f876811cc013fa2",
+      "4V03": "b414933313b36a960ac4600ec16440569a244caf5ef507dd95b4481279996183",
+      "4V04": "e5e28f7383fc31259a6921bbe40831dff3521e2bad0ef36ba345b1818c92ba73",
+      "4V05": "170533227b3c191c94258164dc96ee02f161de5e226498cdcd82770fa0ddc51f",
+      "4V06": "9bc7ce49be77cfab693addee61253776b98c0dc5dbfeb7bf25e1f5c445140328",
+      "4V07": "1a945b29f9f254592b96a7957e575d595e98c0419d798f70757d7c7be511be9b",
+      "4V08": "3bc94e2237305d792481a747d32fa6fab44183c1672995f35298e2a1800e0638",
+      "4V09": "2e91a14533244b189b7909313d82e10e6ab5616ff168a10092129970f9a0e5d1",
+      "4V0A": "9153fbd8bb2bbf2f11c23cda0951c1913ebea3e057384ea1a2ebca634742143a",
+      "4V0B": "d389795406ff0a9ba61bb6e32198aa1c28bdda6364829c5b908ee17a9a0719bd",
+      "4V0C": "9db8c93d400283563fe494c6cc923e2aa4d7c39b72504d4a19351e3bf39e9c74",
+      "4V0D": "d3bbf106f596c19a4038c99209a456f0fd6a4ee29676d808417ca2fb8ae7dfd5",
+      "4V0E": "2245432f6400640b209cca032b64e6caf11eff936b5d0e3bdec301b3a366c29e",
+      "4V0F": "37233aab6dbd32f3993c1baa744f925f8a6a60f8b78d1f630f9413fed3ef9099",
+      "4V0G": "bda41cefdbeedb9ec050e29e638b2504b8042c4ff07317ba7a6c1c0c34b77e1a",
+      "4V0H": "4b25dc2511fc1948a93311891344540ffde4f7b07e79216cf2995ffdb5831da9",
+      "4V0I": "42f99d4401a28260647091894331b836d15f87d4bd827bebb7f9cc2c71e35030",
+      "4V0J": "234e80e8dcb65c19242f27ed6ac577fdc6a671bc1d5964cdab841b2bcdb428dd",
+      "4V0K": "54b299bd34f286ba97511683cc739c3f9b14c5d765677d90a003ea20e710640b",
+      "4V0L": "e3d08e7270ef897af9892725b1486ac39d9f69bbff665d9a32d2cfa38cd5860e",
+      "4V0M": "09d060261cab039b9898a47e77042ea64c5046312a5eaf0fd75856608fdf1a11",
+      "4V0N": "5c0d88531784c60eeb0bf133b58f01c5e112a397a1510bd2fba12b00cd5bc71c",
+      "4V0O": "738deea53c33c0b4e66505465cf2eab4b66c2c82764b0d494b54cbb02ba8c530",
+      "4V0P": "c833d1cdf9b22b3d95c10a31742201d97ade6d0c8265659775a50cd0ca9c1f85",
+      "4V0Q": "3eb201cf9707dfc17fbf3eb2feb8255c059f6d7f065befd26ff1d7eb51cbda1d",
+      "4V0R": "a47e6dc1bf222b31e3613532900fe5ceb97ffa14b6721c65ee5d85331d3fdf09",
+      "4V0S": "3f200d3ba2293de2eef40f3131af1436aab7ba6a09ae8b19dc290e0d83f64060",
+      "4V0T": "a860c02d8ee9d7e8700ecdcb793c36c3ba7ceb130b379d05d6632c91c6d2eb5b",
+      "4V0U": "7fc1153c98f61790df151e7e3291a288195afc572f96952f90ccaf6b1d22fe1b",
+      "4V0V": "92d72f767bb5cdae18d83a75d9c63fa87642c178d6b568b8e5e801f118c0839e",
+      "icm2026-morris": "bff848e47d17af0aa211314a26c1899887c0eae42a1d97c548357ce3133ca1df"
+    },
+    "outline_paragraphs": 10,
+    "katex_version": "0.16.8",
+    "checks": [
+      "33 tree files: 31 atoms, one outline and one reference. IDs unique in root trees; all internal links resolve; all owned pages reachable from 4V00.",
+      "Complete per-page proof_scope, claim_sources and prerequisite maps; subject_ids exactly [006D].",
+      "85 prerequisite edges have explicit prose links and Definition/Construction/Theorem destinations. Combined with the current shared prerequisite register, the 104-node reachable closure has no cycle.",
+      "611 balanced math groups pass KaTeX 0.16.8 with strict error mode. Metadata ordering, editorial rules, braces, control characters and math-link placement pass.",
+      "All 31 atomic pages manually reviewed for local hypotheses, notation, conclusion, proof or explicit cited-result status. Four research-result pages remain cited, with boundaries recorded.",
+      "Exhaustive finite graph checks and algebraic recomputations passed. Finite tests supplement, not replace, proofs and do not validate cited research constructions.",
+      "Read and ran reviewer-owned tests/plenary-ramsey-math.test.mjs: 18 tests passed, 0 failed. This file was not created or edited by this worker.",
+      "After parent announced shared synchronization, this worker made no tree content or prerequisite edits. Parent subsequently fixed two P3 findings in 4V05 and icm2026-morris; this worker refreshed only the two source hashes and validation record.",
+      "PDF images unavailable: SIAM screenshot cache miss and direct PDF HTTP403. No rendered-page QA claimed."
+    ],
+    "mathematical_recomputation": {
+      "seed": "deterministic",
+      "graphs": 33867,
+      "triangle_free_graphs": 6228,
+      "neighborhood_deletion_checks": 36864,
+      "conditional_distribution_checks": 272634,
+      "container_parameter_cases": 48256,
+      "fingerprint_reconstructions": 48022,
+      "thinning_checks": 12918,
+      "star_checks": 41069,
+      "blowup_polynomial_checks": 225,
+      "overlay_exact_expectation_checks": 274,
+      "mixed_moment_checks": 36,
+      "scope": "Graphs up to 6 vertices for Shearer and neighborhood identities; up to 5 for container/thinning tests. Integer count identities exact; real-function inequalities use floating-point tolerances."
+    },
+    "semantic_reviewed_ids": [
+      "4V01",
+      "4V02",
+      "4V03",
+      "4V04",
+      "4V05",
+      "4V06",
+      "4V07",
+      "4V08",
+      "4V09",
+      "4V0A",
+      "4V0B",
+      "4V0C",
+      "4V0D",
+      "4V0E",
+      "4V0F",
+      "4V0G",
+      "4V0H",
+      "4V0I",
+      "4V0J",
+      "4V0K",
+      "4V0L",
+      "4V0M",
+      "4V0N",
+      "4V0O",
+      "4V0P",
+      "4V0Q",
+      "4V0R",
+      "4V0S",
+      "4V0T",
+      "4V0U",
+      "4V0V"
+    ],
+    "external_independent_tests": {
+      "path": "tests/plenary-ramsey-math.test.mjs",
+      "command": "node --test tests/plenary-ramsey-math.test.mjs",
+      "passed": 18,
+      "failed": 0,
+      "ownership": "Independent reviewer; read and executed without modification.",
+      "review_json_status": "research/plenary-morris-independent-review.json was present with status completed_with_minor_findings, zero blocking findings and two P3 findings when checked. Both parent-applied source fixes were observed; the independent reviewer owns the separate resolution verification record."
+    },
+    "post_review_refresh": {
+      "checked_at": "2026-10-28",
+      "scope": "Only validation in this packet updated; no tree, prerequisite, shared navigation, test or independent review files edited by this worker.",
+      "parent_applied_fixes": {
+        "4V05": "M-01: explicitly assumes n >= 1 before using maximum degree.",
+        "icm2026-morris": "M-02: describes the cited independence-number estimates as lower bounds."
+      },
+      "source_hashes_checked": 33,
+      "source_hashes_refreshed": [
+        "4V05",
+        "icm2026-morris"
+      ],
+      "katex_formulas_checked": 611,
+      "katex_version": "0.16.8",
+      "static_findings": [],
+      "static_checks": "Unique source IDs, internal links, balanced braces, normalized formatting and editorial rules passed for all 33 tree sources.",
+      "mathematical_tests_passed": 18,
+      "mathematical_tests_failed": 0,
+      "prerequisite_edges_unchanged": 85,
+      "independent_resolution_record": "Maintained separately by the independent reviewer; no claim of completed resolution verification at this refresh.",
+      "build_and_release": "No Forester build, publication, commit or git operations."
+    },
+    "source_scope_paths": [
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V00.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V01.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V02.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V03.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V04.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V05.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V06.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V07.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V08.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V09.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0A.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0B.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0C.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0D.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0E.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0F.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0G.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0H.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0I.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0J.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0K.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0L.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0M.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0N.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0O.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0P.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0Q.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0R.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0S.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0T.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0U.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/combinatorics/ramsey-plenary/4V0V.tree",
+      "/Users/sunzy/claude_test/forester2/trees/references/icm2026-morris.tree",
+      "/Users/sunzy/claude_test/forester2/research/plenary-morris-packet.json"
+    ]
+  }
+}

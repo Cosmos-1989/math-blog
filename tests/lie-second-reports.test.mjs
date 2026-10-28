@@ -29,7 +29,9 @@ test('the second Lie batch has three distinct reports and preserves cross-subjec
   for (const speaker of coverage.reports.filter(row => !row.outline).flatMap(row => row.speakers))
     assert(['Anton Mellit', 'Yongchang Zhu'].includes(speaker));
   assert.equal(listedTopics(note('0067'))[0], '2400');
-  assert.equal(listedTopics(note('006D'))[0], '0N00');
+  const combinatorics = listedTopics(note('006D'));
+  assert.equal(combinatorics.filter(id => id === '0N00').length, 1);
+  assert(combinatorics.indexOf('0N00') < combinatorics.indexOf('2X00'));
   assert.deepEqual(record.cross_subject_landings, [{subject: '006D', outline: '2X00'}]);
   for (const {subject, outline} of record.cross_subject_landings)
     assert.equal(listedTopics(note(subject)).filter(id => id === outline).length, 1);

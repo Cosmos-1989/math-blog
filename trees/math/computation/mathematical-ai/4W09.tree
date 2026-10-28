@@ -1,0 +1,10 @@
+\title{允许零阈值会使倒数小量命题空洞成立}
+\date{2026-10-28}
+\taxon{Example}
+\author{author}
+\meta{source}{[Kontorovich](icm2026-kontorovich)，§8.3.3 的 ArchimedeanProperty 例子}
+
+\p{令 #{\mathbb N=\{0,1,2,\ldots\}}，将自然数视为实数，并使用[零补值除法](4W07)。考虑命题}
+##{\forall\varepsilon>0\quad\exists N\in\mathbb N:\quad 1\mathbin{/_{0}}N<\varepsilon.}
+\p{对每个 #{\varepsilon>0}，选 #{N=0} 即得 #{1\mathbin{/_{0}}N=0<\varepsilon}。这个证明完全没有利用自然数可以任意大的事实。}
+\p{若想从此继续推出 #{n\ge N} 时 #{1\mathbin{/_{0}}n\le 1\mathbin{/_{0}}N}，取 #{N=0,n=1} 就得到错误的不等式 #{1\le 0}。缺少正阈值使原本想用的倒数单调性不适用。错误发生在命题与预期用途不匹配，而非检查器接受了一个在所给定义下为假的命题。}

@@ -1,0 +1,9 @@
+\title{随机二染色给出的对角 Ramsey 下界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§1，式 (1.1)，p. 210；Erdős 的第一矩方法}
+
+\p{若整数 #{n\ge k\ge 2} 满足 #{\binom nk2^{1-\binom k2}<1}，则 [Ramsey 数](4V02)满足 #{R(k)>n}。特别地，对所有充分大的 #{k}，有 #{R(k)>\lfloor 2^{k/2}\rfloor}。}
+\p{\strong{证明。}令每条边[独立](00L3)地以概率 #{1/2} 染红或染蓝。这与[随机图](00LD) #{G(n,1/2)} 作为红边图相同。固定 #{k} 点集成为单色团的概率是 #{2\cdot 2^{-\binom k2}}。若 #{Z} 为单色 #{k} 点集数，[期望的线性性](00L1)给出 #{\mathbb EZ=\binom nk2^{1-\binom k2}}。由 [Markov 不等式](0A02)，#{\mathbb P(Z\ge 1)\le\mathbb EZ<1}，故存在没有单色 #{K_k} 的染色。}
+\p{取 #{n=\lfloor 2^{k/2}\rfloor}，利用 #{\binom nk\le n^k/k!}，得 #{\mathbb EZ\le 2^{1+k/2}/k!}。这一上界趋于零：相邻项之比为 #{\sqrt 2 /(k+1)}，最终小于 #{1/2}。因而所取 #{n} 对充分大的 #{k} 满足条件。期望小于一产生的是确定存在性，并不要求给出具体染色算法。}

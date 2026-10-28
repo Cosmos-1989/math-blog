@@ -1,0 +1,11 @@
+\title{zeta 局部下界作为形式求解的具体目标}
+\date{2026-10-28}
+\taxon{Example}
+\author{author}
+\meta{source}{[Kontorovich](icm2026-kontorovich)，§8.2 图13、§8.3.2；解析输入按报告引用}
+
+\p{黎曼 zeta 函数在 #{\operatorname{Re}s>1} 由 #{\sum_{n\ge 1}n^{-s}} 给出，其[欧拉乘积](0H4R)有既有说明。对其亚纯延拓，采用原章 §8.2 引用的解析事实}
+##{\lim_{s\to 1}(s-1)\zeta(s)=1,\qquad s\ne 1.}
+\p{由[非零一阶极点的下界](4W0D)，取 #{M=1}，立即得到某个 #{\delta>0}，使 #{0<|s-1|<\delta} 时 #{|\zeta(s)|>1}，从而满足原章求解目标中的 #{|\zeta(s)|\ge 1}。zeta 的延拓及上述留数等式是这里的引用输入；局部下界只需极限定义和三角不等式。}
+\p{Kontorovich 报告，他在 2025 年 5 月与 AlphaProof 团队交流时，将这个 PNT+ 局部目标交给系统，系统生成了被 Lean 接受的证明；正式章图13展示了目标和代码。这是一个具体工具使用经历，不能从中推得任意研究目标的成功率。}
+\p{§8.3.2 另讨论全函数的极点补值。若把函数在 #{s=1} 补为零，再把关于零点的命题错误地量化到该点，就会引入一个与解析零点无关的例外。对 zeta 的实际 Mathlib 定义，原章转引 Loeffler–Stoll，Formalizing zeta and L-functions in Lean，Annals of Formalized Mathematics 1 (2025)，[DOI 10.46298/afm.15328](https://doi.org/10.46298/afm.15328)，说明其补值非零。这个实现事实与留数非零是两个不同命题。}

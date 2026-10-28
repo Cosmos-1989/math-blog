@@ -1,0 +1,10 @@
+\title{证明候选与检查器的可靠性约定}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Kontorovich](icm2026-kontorovich)，§§6–7；[Lean 核验说明](https://lean-lang.org/doc/reference/latest/ValidatingProofs/)}
+
+\p{固定一个形式系统及其允许的公理环境 #{\mathcal A}。用[语境中的类型判断](0500) #{\mathcal A\vdash t:P} 表示 #{t} 是命题 #{P} 的证明项。检查程序 #{C(\mathcal A,P,t)} 的可靠性约定是}
+##{C(\mathcal A,P,t)=\mathrm{accept}\quad\Longrightarrow\quad\mathcal A\vdash t:P.}
+\p{候选 #{t} 可以来自人工、穷举或随机搜索。接受之后得到的仍是同一个形式判断；生成方法影响找到候选的时间与成功机会，不改变检查条件。这里不假定搜索完备，也不假定它必在给定时间内找到证明。形式可推导与语义成立之间还需要系统的可靠性；[一阶演算的可靠性](0A6Y)是这种区别的一个已有例子，并不代替 Lean 类型论的元理论。}
+\p{Lean 的公理依赖检查可以发现经由其他定理传入的未完成证明。出现 sorryAx 表示仍依赖占位证明；自定义公理也须纳入信任范围。界面没有活动目标，只描述当前证明状态，不能单独保证所有依赖都已完成。更外层的问题是 #{P} 是否忠实表达了原来的数学要求；检查 #{t:P} 不会自动回答这个问题。}

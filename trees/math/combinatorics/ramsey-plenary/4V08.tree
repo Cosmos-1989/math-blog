@@ -1,0 +1,13 @@
+\title{Shearer 的无三角形图独立数界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，定理 2.2，pp. 213–214；Shearer，1983}
+
+\p{设 #{G} 为 #{n\ge 1} 点无三角形图，平均度为 #{d}。令 #{f} 为 [Shearer 函数](4V06)。则其[独立数](4V01)满足 #{\alpha(G)\ge nf(d)}，从而当 #{d\to\infty} 时有 #{\alpha(G)\ge(1+o(1))n\log d/d}，其中 #{o(1)} 趋于零。}
+\p{\strong{归纳。}对 #{n} 归纳。#{d=0} 时所有顶点独立，结论为 #{n=nf(0)}。设 #{d>0}。对顶点 #{v}，删掉闭邻域，得到[图 #{G_v}](4V07)，记其顶点数为 #{n_v}、边数为 #{e_v}；非空时平均度为 #{d_v=2e_v/n_v}。独立集可再添上 #{v}，所以归纳假设给 #{\alpha(G)\ge 1+n_vf(d_v)}。若 #{n_v=0}，右侧第二项约定为零。}
+\p{由切线不等式，对每个 #{v} 都有 #{n_vf(d_v)\ge n_vf(d)+f'(d)(2e_v-dn_v)}；空图时等式两边均为零。均匀平均并使用[闭邻域删除恒等式](4V07)，得}
+##{\alpha(G)\ge 1+(n-d-1)f(d)+f'(d)\left(d^2+d-\frac 2n\sum_vd(v)^2\right).}
+\p{因为 #{n^{-1}\sum_v(d(v)-d)^2\ge 0}，括号不超过 #{d-d^2}。而 #{f'(d)<0}，乘积的下界方向反转，故}
+##{\alpha(G)\ge nf(d)+1-(d+1)f(d)+(d-d^2)f'(d)=nf(d).}
+\p{末项由 Shearer 函数的微分恒等式抵消。其渐近式立即给出所述对数增益；有限形式 #{\alpha(G)\ge nf(d)} 不要求平均度趋于无穷。}

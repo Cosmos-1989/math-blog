@@ -1,0 +1,11 @@
+\title{指数增长假设下形式化覆盖比例的变化}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Kontorovich](icm2026-kontorovich)，§1、§7.3；假设增长模型的推论}
+
+\p{用同一工作量单位计量，设未区分是否形式化的数学总量为 #{M(t)=M_0e^{\delta t}}，已形式化的部分为 #{L(t)=L_0e^{\varepsilon t}}，其中 #{M_0\ge L_0>0}、#{t\ge 0}。这些是模型假设。两者的比为}
+##{R(t)=\frac{L(t)}{M(t)}=\frac{L_0}{M_0}e^{(\varepsilon -\delta)t}.}
+\p{由[指数函数](0A46)的乘除法则，#{\delta>\varepsilon} 时 #{R(t)} 递减并趋于零；#{\delta=\varepsilon} 时比例不变。若 #{\varepsilon>\delta} 且 #{L_0<M_0}，形式上的首次追平时间为}
+##{t_* = \frac{\log(M_0/L_0)}{\varepsilon -\delta}.}
+\p{解方程 #{R(t)=1} 即得此式。追平后应修正“已形式化部分”的增长模型，以保持 #{L(t)\le M(t)}。原章以增长率比较表达作者对库缺口的判断；代码行数与非形式论文数具有不同单位，须先定义可比较的工作量，才能把这个模型用于数据。}

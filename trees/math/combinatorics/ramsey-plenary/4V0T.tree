@@ -1,0 +1,10 @@
+\title{诱导 Ramsey 数}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§1.3，p. 212；§10，pp. 232–233}
+
+\p{设 #{G,H} 为有限[简单图](00LB)，#{r\ge 2}。记 #{G\xrightarrow{\mathrm{ind},r}H}，若每种 #{G} 的 #{r} 色边染色，都存在一个单射 #{\phi:V(H)\to V(G)}，使 #{uv\in E(H)} 当且仅当 #{\phi(u)\phi(v)\in E(G)}，且这些像中的边全同色。定义}
+##{R_r^{\mathrm{ind}}(H)=\min\{|V(G)|:G\xrightarrow{\mathrm{ind},r}H\}.}
+\p{诱导条件相对于宿主图 #{G}，所以 #{H} 的非边必须映到宿主的非边，不能映到“另一种颜色的边”。例如路径的两个端点在诱导副本中不能相邻；完整三角形即使只把其中两边染红，也不是诱导红路径。若 #{H} 无边，同色条件为空条件。}
+\p{对完全图有 #{R_r^{\mathrm{ind}}(K_k)=R_r(k)}，右边为[多色 Ramsey 数](4V0H)。上界取宿主 #{K_{R_r(k)}}；下界则在任意较小宿主的顶点集上，先选一个避免单色 #{K_k} 的完全图染色，再限制到宿主边集。对一般 #{H}，宿主不能总取完全图，因为完整宿主的诱导子图仍是完全图。}

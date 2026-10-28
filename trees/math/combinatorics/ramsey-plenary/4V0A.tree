@@ -1,0 +1,9 @@
+\title{均匀随机独立集}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，定理 2.6，pp. 215–216}
+
+\p{设 #{G} 为有限图，#{\mathcal I(G)} 为其[独立集族](4V01)。均匀随机独立集 #{S} 是以 #{\mathcal I(G)} 为样本空间、每个独立集具有概率 #{1/|\mathcal I(G)|} 的[有限概率模型](00Q3)。记 #{Z_G=|\mathcal I(G)|}，则其大小的[期望](00L1)为}
+##{\mathbb E|S|=\frac{\sum_{I\in\mathcal I(G)}|I|}{Z_G}=\sum_{v\in V(G)}\mathbb P(v\in S)\le\alpha(G).}
+\p{独立的是集合内部的顶点关系，顶点是否被抽中的事件通常并不[独立](00L3)。例如单条边只有三个独立集 #{\varnothing,\{u\},\{v\}}，故两端各以概率 #{1/3} 入选，却不可能同时入选。这种分布也不同于贪心算法输出的分布，更不等于在所有最大独立集中均匀选取。}

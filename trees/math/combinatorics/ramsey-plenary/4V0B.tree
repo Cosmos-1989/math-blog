@@ -1,0 +1,12 @@
+\title{无三角形图的局部独立集条件分布}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Morris](icm2026-morris)，§2，式 (2.4) 的证明，pp. 215–216}
+
+\p{设 #{G} 为无三角形[简单图](00LB)，#{S} 为[均匀随机独立集](4V0A)，固定顶点 #{v}，记 #{N[v]=\{v\}\cup N(v)}。给定正概率事件 #{S\setminus N[v]=T}，令}
+##{Y=\{u\in N(v):N(u)\cap T=\varnothing\},\qquad m=|Y|.}
+\p{在这一[条件概率](0A00)下，#{S} 恰有 #{2^m+1} 种等可能取值：#{T\cup\{v\}}，以及所有 #{T\cup Z}，其中 #{Z\subseteq Y}。因此}
+##{\mathbb P(v\in S\mid T)=\frac 1{2^m+1},\qquad \mathbb E(|N(v)\cap S|\mid T)=\frac{m2^{m-1}}{2^m+1}.}
+\p{当 #{m=0} 时第二式的分子取零。这里条件期望指在所给有限条件分布下求平均。}
+\p{\strong{证明。}若 #{v\in S}，其邻居全部不入选；若 #{v\notin S}，允许入选的邻居恰为 #{Y}。无三角形保证 #{N(v)} 内部没有边，所以 #{Y} 的任意子集都可加入 #{T}。原分布均匀，条件化后这些合法扩张仍等可能。#{Y} 的每个元素出现于恰好一半的子集中，故 #{\sum_{Z\subseteq Y}|Z|=m2^{m-1}}，得到公式。}
