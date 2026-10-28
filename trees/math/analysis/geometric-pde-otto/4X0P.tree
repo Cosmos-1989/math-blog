@@ -1,0 +1,14 @@
+\title{正阶局部近似决定分布的唯一性}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 44:59–48:04；重构唯一性的基本引理}
+
+\p{设每个 #{x\in\mathbb R^d} 对应一个分布 #{F_x}。固定光滑紧支偶函数 #{\varphi}，满足 #{\int\varphi=1}，并令 #{\varphi_x^\varepsilon(y)=\varepsilon^{-d}\varphi((y-x)/\varepsilon)}。分布及其测试配对按[分布定义](0W0Z)在 #{\mathbb R^d} 上理解。设 #{R,S} 是两个分布，存在 #{\gamma>0}，使每个紧集 #{K} 都有常数 #{C_K} 满足}
+##{|\langle R-F_x,\varphi_x^\varepsilon\rangle|
++|\langle S-F_x,\varphi_x^\varepsilon\rangle|
+\le C_K\varepsilon^\gamma
+\quad(x\in K,\ 0<\varepsilon\le 1).}
+\p{则 #{R=S}。}
+\p{\strong{证明。}相减后，#{|(R-S)*\varphi^\varepsilon(x)|\le C_K\varepsilon^\gamma}，所以卷积在每个紧集上一致趋零。另一方面，对任意光滑紧支测试函数 #{\psi}，有 #{\varphi^\varepsilon*\psi\to\psi}，其所有阶导数在一个固定紧集上一致收敛。因此按分布的连续性，#{(R-S)*\varphi^\varepsilon\to R-S} 于分布意义。两个极限相同，故 #{R-S=0}。}
+\p{正指数不可去掉：取 #{F_x=0}，任意两个不同常数分布都满足 #{\gamma=0} 的有界估计。相同证明适用于[抛物缩放](4X0E)的近似恒等核。这个唯一性引理只要求已有候选分布；从局部数据构造候选者需要另外的相容性估计和重构存在定理。}

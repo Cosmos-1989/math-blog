@@ -1,0 +1,13 @@
+\title{Lipschitz 高阶导数的 Taylor 余项界}
+\date{2026-10-28}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.160–161，式 (1.5)–(1.7)；积分论证展开}
+
+\p{设 #{p\ge 2}，#{f:\mathbb R^n\to\mathbb R} 为 #{C^p}，且 [#{D^pf} 为 #{L_p} Lipschitz](5001)。对 #{j=0,1,2}，把 #{D^0f=f} 及零阶范数理解为绝对值，则}
+##{\|D^jf(x+s)-D_s^jT_{x,p}(s)\|\le\frac{L_p}{(p+1-j)!}\|s\|^{p+1-j}.}
+\p{特别地，函数值、梯度和 Hessian 的余项分别含分母 #{(p+1)!}、#{p!} 和 #{(p-1)!}。当 #{p=2} 时，前两个结论与已有的 [Hessian 三次余项估计](4R0Q)一致。}
+
+\p{\strong{证明。}固定长度不超过一的向量 #{u_1,\ldots,u_j}，令 #{q=p-j}，并沿线段考虑标量函数 #{G(t)=D^jf(x+ts)[u_1,\ldots,u_j]}；#{j=0} 时省去输入向量。若 #{q=0}，所求估计就是 Lipschitz 假设。若 #{q\ge 1}，对 #{G} 使用 [Taylor 积分余项](0I8J)，并从积分中减去最高阶导数在零点的值，得到}
+##{G(1)-\sum_{r=0}^q\frac{G^{(r)}(0)}{r!}=\frac{1}{(q-1)!}\int_0^1(1-t)^{q-1}\bigl(G^{(q)}(t)-G^{(q)}(0)\bigr)\,dt.}
+\p{被积差为 #{(D^pf(x+ts)-D^pf(x))[s]^q[u_1,\ldots,u_j]}，绝对值至多 #{L_pt\|s\|^{q+1}}。由于 #{\int_0^1t(1-t)^{q-1}\,dt=1/(q(q+1))}，积分的绝对值至多 #{L_p\|s\|^{q+1}/(q+1)!}。对所有单位输入向量取上确界，即得结论。证明只用到 #{C^p} 与 #{D^pf} 的 Lipschitz 性，无须假定 #{f} 为 #{C^{p+1}}。}

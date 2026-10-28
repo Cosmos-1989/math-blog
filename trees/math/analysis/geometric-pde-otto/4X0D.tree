@@ -1,0 +1,11 @@
+\title{低于一阶正则性时非线性二阶项的不连续性}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 22:53–25:20；振荡反例的直接证明}
+
+\p{在周期区间 #{\mathbb R/(2\pi\mathbb Z)} 上，给定 #{0<\alpha<1}，定义 #{\|u\|_{C^\alpha}=\|u\|_\infty+\sup_{x\ne y}|u(x)-u(y)|/d(x,y)^\alpha}，其中 #{d} 为周期距离。映射 #{u\mapsto u\,u''} 在光滑函数上有定义，却不能连续延拓成 #{C^\alpha} 到分布空间的映射。分布收敛是指对每个光滑测试函数的积分配对收敛；[分布导数](0W0Z)由分部积分定义。}
+\p{\strong{证明。}令 #{u_n(x)=n^{-1}\sin(nx)}。因为 #{|u_n(x)-u_n(y)|\le\min(2/n,d(x,y))}，分两种距离大小可得 #{\|u_n\|_{C^\alpha}\le C_\alpha n^{\alpha -1}\to 0}。但}
+##{u_nu_n''=-\sin^2(nx)=-\frac 12+\frac 12\cos(2nx)\longrightarrow -\frac 12}
+\p{在分布意义下成立：对光滑周期 #{f}，一次分部积分给出 #{|\int f\cos(2nx)|\le(2n)^{-1}\int|f'|\to 0}。零函数对应的乘积却为零，矛盾。}
+\p{线性二阶项没有这个障碍：#{\int u_n''f=\int u_nf''\to 0}。即使取正的光滑本构函数 #{a(u)=1+u}，也有 #{a(u_n)u_n''\to -1 /2}，而 #{a(0)0''=0}；当 #{n\ge 2} 时系数均至少为 #{1/2}。一致椭圆性不能修补这种乘积的不连续性。}

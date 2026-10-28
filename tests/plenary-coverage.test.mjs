@@ -22,10 +22,14 @@ test('ordinary plenaries, special lectures and source gaps are distinguished', (
   assert.equal(record.special_plenaries.length, 3);
   for (const row of record.special_plenaries) assert(!record.ordinary_plenary_speakers.includes(row.speaker));
   const ziegler = record.reports.find(row => row.speaker === 'Tamar Ziegler');
-  assert.equal(ziegler.coverage_status, 'background-only');
+  assert.equal(ziegler.coverage_status, 'preliminary-selected-branches');
   assert.equal(ziegler.pages, null);
   assert.match(note(ziegler.reference), /2014/);
-  assert.match(note(ziegler.reference), /尚待/);
+  assert.match(note(ziegler.reference), /czHiX0pYTDg/);
+  assert.equal(ziegler.full_video_read, false);
+  assert.equal(ziegler.full_transcript_read, false);
+  assert.equal(ziegler.report_complete, false);
+  assert.match(ziegler.reading_scope, /抽点|离散/);
   assert.match(note('2505'), /猜想/);
 });
 

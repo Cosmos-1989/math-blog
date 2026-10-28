@@ -1,0 +1,13 @@
+\title{细层状特征函数如何产生体积分数}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 14:20–17:34；一维弱混合例子的直接证明}
+
+\p{固定 #{0<\theta<1}。把单位区间分成 #{n} 个等长小格，并令 #{\chi_n} 在第 #{k} 格的前 #{\theta /n} 长度上等于 #{1}，其余等于 #{0}，其中 #{k=0,\ldots,n-1}。则正[测度](00Q2) #{\chi_n\,dx} 对连续测试函数弱收敛到 #{\theta\,dx}，但 #{\chi_n} 不在[#{L^1}](00Q6)中收敛到常数 #{\theta}。}
+\p{\strong{证明。}每个小格上 #{\int(\chi_n-\theta)=0}。对连续 #{f:[0,1]\to\mathbb R}，在第 #{k} 格减去 #{f(k/n)}，并记 #{\omega_f(r)=\sup_{|x-y|\le r}|f(x)-f(y)|}，得到}
+##{\left|\int_0^1 f(\chi_n-\theta)\,dx\right|
+\le \omega_f(1/n)\int_0^1|\chi_n-\theta|\,dx
+=2\theta(1-\theta)\omega_f(1/n)\longrightarrow 0.}
+\p{另一方面 #{\|\chi_n-\theta\|_{L^1}=2\theta(1-\theta)>0} 恒定。弱极限记录每格中的相比例，不能恢复格内界面。}
+\p{在两相流中，#{\chi=1} 表示重相，#{\chi=0} 表示轻相，弱极限 #{0\le\theta\le 1} 称为体积分数。这个例子说明将状态集合从特征函数扩充到分数值函数的必要性；具体的能量及输运代价在此扩充下如何松弛，仍取决于模型的约束。}

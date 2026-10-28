@@ -1,0 +1,229 @@
+{
+  "date": "2026-10-28",
+  "kind": "bounded-primary-source-reading-followup",
+  "scope": {
+    "reports": ["Buffa D2_RHzeWcgk", "Tamar Ziegler czHiX0pYTDg"],
+    "only_repository_write": "research/plenary-buffa-ziegler-reading-followup.json",
+    "pages_and_shared_packets_modified": false,
+    "build_commit_push_run": false,
+    "full_video_or_audio_downloaded": false,
+    "new_video_frames_sampled": false,
+    "purpose": "尝试取得连续报告正文，并对照现有 4Y、2900 与 4Z 的选定分支；不重复数学终审或发布。"
+  },
+  "result": {
+    "new_report_continuous_read_ranges": [],
+    "full_transcript_obtained": false,
+    "full_report_slides_obtained": false,
+    "recommendation_for_both_reports": "preliminary-selected-branches",
+    "report_complete": false,
+    "summary": "两场字幕下载均遇 YouTube 登录/反机器人限制；浏览器入口不可用。检查作者网站未找到本场完整讲稿或幻灯片。补读的是作者研究论文的连续节段，不能替代 2026 报告全文。尚不能确认所有主要报告分支已经覆盖。"
+  },
+  "retrieval_attempts": [
+    {
+      "method": "yt-dlp captions only, no media download",
+      "video_ids": ["D2_RHzeWcgk", "czHiX0pYTDg"],
+      "options": "--skip-download --write-auto-subs --sub-langs en-orig --sub-format json3 --no-cache-dir --no-playlist --socket-timeout 10 --retries 0 --extractor-retries 0",
+      "temporary_output_template": "/tmp/plenary-buffa-ziegler-followup/%(id)s.%(ext)s",
+      "first_attempt": "沙箱网络 DNS 解析失败。",
+      "network_enabled_retry": "两场均返回 Sign in to confirm you are not a bot；未得到字幕文件。",
+      "boundary": "未导出浏览器 cookies、未使用账户凭据、未绕过验证；该失败不证明视频没有字幕。"
+    },
+    {
+      "method": "official YouTube transcript UI fallback",
+      "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+      "result": "创建后台浏览器标签时返回 Browser is not available: iab；本轮没有进入字幕面板，也没有新的视频正文阅读。"
+    },
+    {
+      "method": "primary author websites and bounded web search",
+      "queries": [
+        "\"Annalisa Buffa\" \"New Challenges\" slides",
+        "\"Tamar Ziegler\" \"ICM 2026\" slides",
+        "\"D2_RHzeWcgk\" transcript",
+        "\"czHiX0pYTDg\" transcript",
+        "\"Buffa\" \"ICM\" \"2026\" filetype:pdf",
+        "\"Ziegler\" \"Structure of sets\" slides"
+      ],
+      "result": "找到作者目录、公告及研究论文，未找到可确认为两场 2026 报告的完整公开讲稿或幻灯片。不是对材料不存在的断言。",
+      "excluded": "搜索结果偶然出现 az9713 和 PostSingularity AI 摘要；未打开、未用于推断内容或时间线。"
+    }
+  ],
+  "reports": {
+    "buffa": {
+      "official_video_url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+      "existing_outline": "4Y00",
+      "existing_packet": "research/plenary-buffa-packet.json",
+      "new_report_read_ranges": [],
+      "prior_report_evidence": {
+        "provenance": "本轮读取既有 packet 中的抽样记录，没有重新播放或扩大时间范围。",
+        "isolated_timestamps": ["approximately 14:11", "19:57", "25:42", "26:52"],
+        "continuous_ranges": [],
+        "boundary": "14:11 后播放器到 14:14/14:40 不是已连续阅读 14:11-14:40 的证据。"
+      },
+      "primary_sites_checked": [
+        {
+          "url": "https://www.epfl.ch/labs/mns/",
+          "actual_reading": "可见主页文字及 Buffa ICM 公告链接；不是报告正文。"
+        },
+        {
+          "url": "https://www.epfl.ch/labs/mns/page-138520-en-html/",
+          "actual_reading": "本轮显示的书目列表 lines13-448；全文文本检索 ICM 与 Challenges 均无匹配。未逐项打开所有论文。",
+          "result": "该次检查未发现本场讲稿或幻灯片条目；作者其他研究方向不能据此加入报告范围。"
+        }
+      ],
+      "readable_primary_material": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "title": "PDE-Based Parameterisation Techniques for Planar Multipatch Domains",
+          "authors": ["Jochen Hinz", "Annalisa Buffa"],
+          "version": "v2, 2023-07-21",
+          "role": "background-author-paper-not-2026-report-manuscript",
+          "license_observed": "arXiv perpetual non-exclusive license; not relabelled CC BY",
+          "actual_read_ranges_this_followup": [
+            "HTML lines45-91：摘要、引言和记号开头。",
+            "HTML lines284-366：旋度约束方法末段、完整 §3.1.5、§§3.2-3.4，以及 §3.5 开头。",
+            "HTML lines396-442：数值实验讨论末段及 §4.1 开头；与上一段之间存在未读间隔。"
+          ],
+          "new_continuous_section_reading": "完整 §§3.2-3.4，HTML lines317-354。此前 packet 在 §3.2 只记到式(35)。",
+          "not_read": "未补齐 §3.5 全部实验、§4.1 后半与 §§4.2-4.5；未在本轮视觉核对图表或全文 PDF。",
+          "mathematical_scope_findings": [
+            "§3.2 用正则化 Jacobian 分母构造弱式；其中收敛、解缠及唯一性讨论含经验或启发性判断，不是一般定理。",
+            "§3.3 明确不提供正式证明；内部可逆性不能直接升级为闭域统一非退化。",
+            "§3.4 区分前向调和初值与用 NDF 解初始化弱式；§4.1 开头提出可变扩散与控制映射两种参数控制路线。"
+          ]
+        },
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "local_pdf": "/private/tmp/icm2026-buffa-research/smears-suli2013.pdf",
+          "role": "previously-read-background-theorem-source",
+          "reading_provenance": "沿用既有 packet：Smears-Suli 2013 pp.2089-2091；本轮未重读或扩大范围。"
+        }
+      ],
+      "comparison": [
+        {
+          "topic": "逆调和映射、度量余因子与非散度型方程",
+          "existing_ids": ["4Y01", "4Y02", "4Y03", "4Y04", "4Y05"],
+          "report_evidence": "既有约14:11原片抽样；本轮没有连续时间段。",
+          "status": "已选取核心数学分支；不是报告全部内容。"
+        },
+        {
+          "topic": "Cordes / Miranda-Talenti / 冻结系数 H2 分析",
+          "existing_ids": ["4Y06", "4Y07", "4Y08", "4Y09", "4Y0A", "4Y0B", "4Y0C", "4Y0D", "4Y0I"],
+          "report_evidence": "既有19:57原片涉及离散 Miranda-Talenti 与 HCT enrichment。",
+          "status": "现有线性 H2 相容理论不能替代该离散非相容方法的完整稳定性/收敛理论。"
+        },
+        {
+          "topic": "多片接口、弱 Hessian、迭代与几何有效性",
+          "existing_ids": ["4Y0E", "4Y0F", "4Y0G", "4Y0H"],
+          "report_evidence": "既有25:42及26:52抽样只有局部问题/实验背景。",
+          "status": "局部基础已写；多值图册、局部化机制及图中实验不能据此算作已完整整合。"
+        },
+        {
+          "topic": "正则化弱式、边界对应、控制映射",
+          "existing_ids": [],
+          "paper_locations": ["2307.06265v2 §§3.2-3.4", "2307.06265v2 §4.1 opening"],
+          "report_evidence": null,
+          "status": "作者论文中可读而当前4Y未独立展开的候选分支；本轮不能确认它们在2026报告中的篇幅或是否属于主要遗漏。"
+        }
+      ]
+    },
+    "ziegler": {
+      "official_video_url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+      "existing_outline": "2900",
+      "existing_packet": "research/plenary-ziegler-packet.json",
+      "new_report_read_ranges": [],
+      "prior_report_evidence": {
+        "provenance": "本轮读取既有 packet 中的抽样记录，没有重新播放或将点位连成连续区间。",
+        "isolated_timestamps": ["00:00", "22:27", "22:42", "25:03", "30:03", "40:05", "40:18", "42:18", "45:05"],
+        "continuous_ranges": []
+      },
+      "primary_sites_checked": [
+        {
+          "url": "https://math.huji.ac.il/~tamarz/video.html",
+          "actual_reading": "完整可见作者视频目录，lines0-25。",
+          "result": "2026 ICM 条目链接到指定官方视频，没有在该条目提供讲稿或幻灯片。"
+        },
+        {
+          "url": "https://math.huji.ac.il/~tamarz/research.html",
+          "actual_reading": "完整可见研究/演讲材料目录，lines0-87。",
+          "result": "有 GTZ、MRTTZ 和 ICM2014 论文链接；Presentations 部分列 AGM、EMS 讲义，未找到本场2026完整幻灯片。未将其他演讲材料替代本场。"
+        }
+      ],
+      "readable_primary_material": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "title": "Higher uniformity of bounded multiplicative functions in short intervals on average",
+          "authors": ["Kaisa Matomaki", "Maksym Radziwill", "Terence Tao", "Joni Teravainen", "Tamar Ziegler"],
+          "version": "v3, 2022-06-09",
+          "role": "primary-research-not-2026-report-manuscript",
+          "license_observed": "arXiv perpetual non-exclusive license; not relabelled CC BY",
+          "actual_read_ranges_this_followup": [
+            "HTML lines44-150：摘要及引言前部至 Theorem1.3 后。",
+            "HTML lines152-316：连续重读 Theorem1.5、Corollary1.6、完整 §1.1 与 §1.2，以及 §1.3.1 开头。line151未计入本轮连续范围。"
+          ],
+          "new_content_beyond_prior_packet": "此前范围止于 Corollary1.11；本轮还读到 Theorem1.12 的陈述及紧邻说明，lines292-299。其余主要是边界复核，不虚增首次阅读范围。",
+          "not_read": "没有阅读全文或 §§3-7 的研究证明；未独立核对 Tao 等价性原论文、Frantzikinakis-Host 原论文或报告后续进展。",
+          "mathematical_scope_findings": [
+            "§1.1 将慢增长短区间与 log-Chowla/log-Sarnak 联系起来；Proposition1.7 是条件蕴含，不是猜想的证明。",
+            "Theorem1.8 缩短的是弱 Gowers / 多项式相位范围，不能直接替换4Z0B中完整 Gowers 量的区间范围。",
+            "Theorems1.10与1.12另处理多项式平均和Liouville扭曲的von Mangoldt平均；4Z0D只选取线性平均公差推论。"
+          ]
+        },
+        {
+          "url": "https://arxiv.org/html/1009.3998v5",
+          "role": "previously-read-primary-research",
+          "reading_provenance": "沿用既有 packet：§1与§2至HTML line263；本轮作者目录确认该论文链接，未重新阅读全文。"
+        },
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "role": "previously-read-2014-background-not-2026-report",
+          "reading_provenance": "沿用既有 packet：数学正文 §§1-8；本轮未重新全文阅读，也没有把它升级为2026讲稿。"
+        }
+      ],
+      "comparison": [
+        {
+          "topic": "计数异常、高阶 Fourier/Gowers 结构与幂零序列",
+          "existing_ids": ["2901", "2902", "2903", "4Z01", "4Z02", "4Z03", "4Z04", "4Z05"],
+          "report_evidence": "既有22:27、22:42、25:03离散原片；非连续阅读。",
+          "status": "已有实质选定分支，不能据此确认整段报告已经完整覆盖。"
+        },
+        {
+          "topic": "素数线性配置应用",
+          "existing_ids": ["2900"],
+          "report_evidence": "既有30:03 slide22：素数线性方程及固定长度素数等差数列渐近式。",
+          "status": "已知报告涉及、但目前只作叙述背景的分支；局部因子、渐近公式和转移机制未在本批独立展开。"
+        },
+        {
+          "topic": "log-Sarnak/log-Chowla 等价性及动力系统进展",
+          "existing_ids": ["4Z08", "4Z09", "4Z0A"],
+          "report_evidence": "既有40:05 slide30、40:18 slide31。",
+          "status": "现有页处理平均、相关与符号块的局部机制，没有给出Tao等价性或Frantzikinakis-Host定理；仍是已知未完整展开的报告分支。",
+          "source_boundary": "MRTTZ §1.1 对等价性作引述；本轮没有补齐被引原论文的精确定理及证明。"
+        },
+        {
+          "topic": "Liouville 符号块及平均短区间均匀性",
+          "existing_ids": ["4Z06", "4Z07", "4Z0B", "4Z0C", "4Z0D"],
+          "report_evidence": "既有42:18 slide32、45:05 slide34。",
+          "status": "已覆盖超多项式块数和选定平均抵消结论；未完整展开报告末段缩短区间及后续进展，不能从2022论文推断2026报告的最新结果。"
+        },
+        {
+          "topic": "多项式及 Liouville 扭曲 von Mangoldt 平均",
+          "existing_ids": [],
+          "paper_locations": ["2007.15644v3 Theorem1.10", "2007.15644v3 Theorem1.12"],
+          "report_evidence": null,
+          "status": "原论文可读候选分支，未确认2026报告实际讲授范围，不标为已证实的报告遗漏。"
+        }
+      ]
+    }
+  },
+  "comparison_snapshot_sha256": {
+    "research/plenary-buffa-packet.json": "bfecfc69f41461dd0ac5ca81e0fd6a09ec56ff78b40393003577e9bc8ed34fe1",
+    "research/plenary-ziegler-packet.json": "9bc90e3c1d6637f0fcc6c44b9547dc87c6a4b925f7bc6b8a635a5e0d111e7eb1",
+    "trees/math/numerical-analysis/pde-approximation-buffa/4Y00.tree": "28b401c308780949987498f2a8e2426abcee1553b12b96e0e027c6184e84a1c4",
+    "trees/math/number-theory/arithmetic-pattern-structure/2900.tree": "a3d09ebf51d992710fc114a6657315d2b958160aa6c943c640c51b5914ace504"
+  },
+  "handoff": {
+    "release_decision": "可以发布已经严格限定来源和证明范围的选定分支，但本次核查不支持把两场标记为全报告完成。",
+    "needed_for_full_report_review": "可实际读取的完整官方字幕、作者本场完整幻灯片或对应讲稿；到手后仍需逐段核对，不能只检查文件存在。",
+    "stop_reason": "按本轮限定的来源核查范围，在字幕认证阻碍和浏览器不可用后停止重复抓取；未为补全文而下载大视频或扩展无关作者研究。"
+  }
+}

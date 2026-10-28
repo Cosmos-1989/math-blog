@@ -1,0 +1,10 @@
+\title{二阶 Sobolev 空间与零边界子空间}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，§2.1 所用空间}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为开集。沿用 [一阶弱导数与 #{H^1_0}](2J0C) 的定义，令 #{H^2(\Omega)} 为满足 #{u,\partial_i u,\partial_{ij}u\in L^2(\Omega)} 的函数等价类组成的空间，所有导数均按分布意义理解。例如 #{\partial_{ij}u=w} 意味着对每个 #{\phi\in C_c^\infty(\Omega)} 有 #{\int u\,\partial_{ij}\phi=\int w\phi}。取范数}
+##{\|u\|_{H^2}^2=\|u\|_2^2+\sum_i\|\partial_i u\|_2^2+\sum_{i,j}\|\partial_{ij}u\|_2^2.}
+\p{这里二阶项按有序对 #{(i,j)} 求和，故混合导数出现两次；相应 Hessian 范数为 #{\|D^2u\|_2^2=\sum_{i,j}\|\partial_{ij}u\|_2^2}。零边界空间定义为 #{V=H^2(\Omega)\cap H^1_0(\Omega)}。#{H^1_0} 指紧支集光滑函数在 #{H^1} 范数中的闭包，因此只约束函数的零边界值，不要求法向导数为零。}
+\p{\strong{完备性。}若 #{u_k} 为 #{H^2} 中的 Cauchy 列，由 [#{L^2} 完备性](0A6A)，它及所有一、二阶弱导数各有 #{L^2} 极限 #{u,v_i,w_{ij}}。在弱导数等式中取极限，利用 [积分 Hölder 不等式](0A68) 即得 #{\partial_i u=v_i}、#{\partial_{ij}u=w_{ij}}，故 #{u_k\to u} 于 #{H^2}。上述平方和范数来自各导数的 #{L^2} 内积之和，因此 #{H^2} 是 [Hilbert 空间](00MQ)。若所有 #{u_k\in V}，其 #{H^1} 极限仍在闭子空间 #{H^1_0} 中，所以 #{V} 也完备。}

@@ -4,7 +4,7 @@
 \author{author}
 \meta{source}{[Ziegler](icm2026-ziegler)，背景综述 §2}
 
-\p{设 #{N} 为奇数，#{f=1_A} 为 #{\mathbb Z / N\mathbb Z} 上的示性函数，#{\delta=|A|/N}。采用[归一化 Fourier 变换](0Y01) #{\widehat f(r)=\mathbb E_x f(x)e^{-2\pi irx/N}}，则}
+\p{设 #{N\geq 3} 为奇数，#{f=1_A} 为 #{\mathbb Z / N\mathbb Z} 上的示性函数，#{\delta=|A|/N}。采用[归一化 Fourier 变换](0Y01) #{\widehat f(r)=\mathbb E_x f(x)e^{-2\pi irx/N}}，则}
 ##{\mathbb E_{x,d}f(x)f(x+d)f(x+2d)=\sum_r\widehat f(r)^2\widehat f(-2r).}
 \p{\strong{证明。}由[Fourier 反演](0Y02)展开三因子，平均 #{x} 迫使频率满足 #{r_0+r_1+r_2=0}，平均 #{d} 迫使 #{r_1+2r_2=0}。因此三频率为 #{(r,-2r,r)}，代回得公式。}
 \p{零频项等于 #{\delta^3}。由 Parseval 等式，非零项的绝对值和不超过 #{\max_{s\ne 0}|\widehat f(s)|\sum_{r\ne 0}|\widehat f(r)|^2\leq\delta\max_{s\ne 0}|\widehat f(s)|}；这里用了乘二置换非零频率。若计数偏差至少为 #{\eta} 且 #{\delta>0}，便有非零 Fourier 系数至少为 #{\frac{\eta}{\delta}}。}

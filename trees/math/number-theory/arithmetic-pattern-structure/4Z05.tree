@@ -1,0 +1,13 @@
+\title{第一坐标平均消去不了斜移位的四点相关}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ziegler，2014 年背景综述](icm2026-ziegler)，§4}
+
+\p{在 #{\mathbb T^2} 上取归一化 [Haar 测度](00T1)，令 #{T(z,w)=(z+\alpha,w+2z+\alpha)}，其中 #{\alpha\in\mathbb T} 任意。它是[齐性空间仿射映射](340C)的例子；迭代给出 #{T^m(z,w)=(z+m\alpha,w+2mz+m^2\alpha)}，也可逐次代入验证。设 #{e(t)=e^{2\pi it}}，#{(c_0,c_1,c_2,c_3)=(-1,3,-3,1)}，#{f_j(z,w)=e(c_jw)}。则对每个整数 #{n\geq 0}，}
+##{\int_{\mathbb T^2}\prod_{j=0}^3 f_j(T^{jn}(z,w))\,dz\,dw=1,}
+\p{但每个函数在固定第一坐标后的平均都是零：#{\int_{\mathbb T}f_j(z,w)\,dw=0}。}
+\p{\strong{证明。}因 #{c_j} 是非零整数，直接积分 #{e(c_jw)} 得零；用 [Fubini 定理](0H53)也可知 #{f_j} 与每个只依赖 #{z} 的有界可测函数正交。另一方面，乘积的指数为}
+##{\sum_{j=0}^3 c_j(w+2jnz+j^2n^2\alpha)
+=w\sum_jc_j+2nz\sum_jjc_j+n^2\alpha\sum_jj^2c_j=0,}
+\p{因为三个系数和分别为 #{0,0,0}。因此乘积逐点等于一，积分亦等于一。把四个函数各自换成沿 #{w} 的平均，则相关变成零，故第一坐标投影不足以保留这个四点相关。}

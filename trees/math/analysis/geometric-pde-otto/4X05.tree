@@ -1,0 +1,14 @@
+\title{熵的输运梯度流是 Fokker–Planck 方程}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[JKO](icm2026-otto)，作者稿 §§1–2；报告 19:26–20:15}
+
+\p{在 #{\mathbb T^d} 上，令 #{\rho>0} 为光滑概率密度，#{V} 为光滑周期势，#{\beta>0}。自由能定义为}
+##{\mathcal F(\rho)=\int V\rho+\beta^{-1}\int\rho\log\rho.}
+\p{沿质量为零的光滑变化 #{\sigma}，第一变分为 #{d\mathcal F_\rho(\sigma)=\int f\sigma}，其中 #{f=V+\beta^{-1}(1+\log\rho)}。若用[连续性方程](4X03)表示 #{\sigma=-\operatorname{div}(\rho v)}，便有 #{d\mathcal F_\rho(\sigma)=\int\rho\nabla f\cdot v}。}
+\p{依据[最小动能](4X04)和[最陡下降的配方](4X01)，最小化 #{\frac 12\int\rho|v|^2+d\mathcal F_\rho(\sigma)} 得到 #{v=-\nabla f}。代回连续性方程，得到 Fokker–Planck 方程}
+##{\partial_t\rho=\operatorname{div}(\rho\nabla V)+\beta^{-1}\Delta\rho.}
+\p{沿任一光滑正解，周期分部积分严格给出}
+##{\frac{d}{dt}\mathcal F(\rho_t)=-\int\rho_t\left|\nabla V+\beta^{-1}\nabla\log\rho_t\right|^2.}
+\p{当 #{V=0} 时，右侧为 #{-\beta^{-2}\int|\nabla\rho|^2/\rho}，熵的下降由密度相对梯度控制。这一光滑计算解释了能量与速度的对应；在 #{\mathbb R^d} 上从离散变分问题构造解，需要[JKO 收敛定理](4X07)。}

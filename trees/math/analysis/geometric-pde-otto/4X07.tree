@@ -1,0 +1,15 @@
+\title{JKO 离散自由能极小化的收敛定理}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Jordan–Kinderlehrer–Otto](icm2026-otto)，1999-02-04 作者稿 §4、§5，pp.9–14}
+
+\p{设 #{\beta>0}，#{\Psi\in C^\infty(\mathbb R^d)}，#{\Psi\ge 0}，且存在 #{C<\infty} 使 #{|\nabla\Psi|\le C(\Psi+1)}。记 #{K} 为满足 #{\int|x|^2\rho(x)\,dx<\infty} 的概率密度全体，定义}
+##{M(\rho)=\int|x|^2\rho,\quad E(\rho)=\int\Psi\rho,\quad
+\mathcal F(\rho)=E(\rho)+\beta^{-1}\int\rho\log\rho.}
+\p{采用 #{0\log 0=0}。设 #{\rho_0\in K} 且 #{\mathcal F(\rho_0)<\infty}。用[二次 Wasserstein 距离](4X02)作[极小移动](4X06)：#{\rho_h^{(0)}=\rho_0}，并令 #{\rho_h^{(k)}} 是}
+##{\rho\longmapsto \frac 12W_2(\rho_h^{(k-1)},\rho)^2+h\mathcal F(\rho)}
+\p{在 #{K} 上的极小点。JKO 定理断言：每一步极小点存在且唯一；令 #{\rho_h(t)=\rho_h^{(k)}} 当 #{t\in\lbrack kh,(k+1)h\rparen}，则对每个固定 #{t>0}，当 #{h\downarrow 0} 时，#{\rho_h(t)} 在[#{L^1}](00Q6)中弱收敛到一个光滑密度 #{\rho(t)}。这里的[弱拓扑](00MJ)是 #{\sigma(L^1,L^\infty)}：对每个[本质有界](0A66)可测函数 #{f}，都有 #{\int f\rho_h(t)\to\int f\rho(t)}；测试函数不局限于连续函数。极限满足}
+##{\partial_t\rho=\operatorname{div}(\rho\nabla\Psi)+\beta^{-1}\Delta\rho,\qquad
+\rho(t)\longrightarrow\rho_0\quad\text{在 }L^1\text{ 中，当 }t\downarrow 0.}
+\p{并且每个 #{T<\infty} 都有 #{M(\rho),E(\rho)\in L^\infty((0,T))}。[光滑熵耗散计算](4X05)说明方程的变分动机；上述存在、唯一离散极小点及收敛结论引用 JKO 的分析定理。其证明涉及矩估计、熵的下半连续性和离散 Euler 方程的极限，单独的耗散不等式不足以推出全部结论。这里的页码属于作者稿，正式刊本页码为 SIAM Journal on Mathematical Analysis 29 (1998)，1–17。}

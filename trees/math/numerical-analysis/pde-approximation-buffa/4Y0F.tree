@@ -1,0 +1,12 @@
+\title{用质量矩阵恢复离散 Hessian}
+\date{2026-10-28}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Hinz–Buffa](icm2026-buffa)，arXiv:2307.06265v2，§3.1.3}
+
+\p{设多边形 #{\Omega\subset\mathbb R^2} 被有限个三角形组成的相容网格 #{\mathcal T_h} 剖分。“相容”指不同三角形的交集为空、公共顶点或整条公共边。令 #{S_h\subset H^1(\Omega)} 为有限维连续逐片多项式空间，#{v_h\in S_h}。其 [Hessian](4R02) 在单元内存在，跨边界的弱二阶导数却可能如 [折线反例](4Y0E) 一样不属于 #{L^2}。定义 #{H_{h,ij}(v_h)\in S_h} 满足}
+##{\int_\Omega H_{h,ij}(v_h)\phi_h=-\int_\Omega\partial_i v_h\partial_j\phi_h+\int_{\partial\Omega}(\partial_i v_h)n_j\phi_h\qquad(\phi_h\in S_h).}
+\p{其中 #{n} 为外单位法向，边界上的 #{\partial_i v_h} 取相邻单元的迹；有限个顶点不影响边积分。体积分采用 [一阶弱导数](2J0C)，这里等于单元内导数。每个分量的定义只需一阶导数与边界项。}
+\p{\strong{存在唯一性。}取 #{S_h} 的基 #{\psi_1,\ldots,\psi_N}。定义质量矩阵 #{M_{ab}=\int_\Omega\psi_a\psi_b}，右端相应记为 #{b_a}。若 #{H_{h,ij}=\sum_b c_b\psi_b}，方程就是 #{Mc=b}。对任意非零系数向量 #{c}，线性无关性给出 #{c^TMc=\|\sum_b c_b\psi_b\|_2^2>0}，故 #{M} 正定可逆，定义唯一。}
+\p{\strong{一致性。}同一公式也可用于 #{v\in C^2(\overline\Omega)}。逐单元应用 [Stokes 定理](0BAC) 的分部积分形式，因 #{\phi_h} 连续且 #{\partial_i v} 没有接口跳跃，内部边界项相消，得到 #{\int H_{h,ij}(v)\phi_h=\int\partial_{ij}v\phi_h}。因此恢复量恰是经典 Hessian 分量的 #{L^2} 正交投影，尤其在 #{\partial_{ij}v\in S_h} 时完全一致。}
+\p{对逐片光滑的 #{v_h}，若公共边 #{e} 相邻单元的外法向分别为 #{n^+,n^-}，定义 #{j_{ij,e}=\partial_i v_h^+n_j^++\partial_i v_h^-n_j^-}。逐片分部积分给出右端等于 #{\sum_K\int_K\partial_{ij}v_h\phi_h-\sum_e\int_e j_{ij,e}\phi_h}，故此构造包含梯度跳跃贡献。质量矩阵可逆只保证恢复量有定义，耦合后的椭圆方程还需额外的稳定性分析。}

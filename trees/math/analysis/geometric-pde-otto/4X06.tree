@@ -1,0 +1,15 @@
+\title{极小移动的离散耗散与时间控制}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[JKO](icm2026-otto)，作者稿 §4；报告 13:49–17:34}
+
+\p{设 #{(X,d)} 是[度量空间](00EK)，#{E:X\to\mathbb R\cup\{+\infty\}} 有下界 #{E_*}，且 #{E(x_0)<\infty}。给定步长 #{h>0}，假设每一步都存在极小点}
+##{x_k\in\operatorname*{arg\,min}_{x\in X}\left\{E(x)+\frac{d(x,x_{k-1})^2}{2h}\right\}.}
+\p{这种离散构造称为极小移动。取竞争者 #{x=x_{k-1}}，立即得到}
+##{E(x_k)+\frac{d(x_k,x_{k-1})^2}{2h}\le E(x_{k-1}),\qquad
+\sum_{k=1}^N\frac{d(x_k,x_{k-1})^2}{h}\le 2(E(x_0)-E_*).}
+\p{第一式逐步求和即得第二式。对整数 #{0\le i<j}，三角不等式与有限和的 Cauchy–Schwarz 不等式进一步给出}
+##{d(x_j,x_i)\le\sum_{k=i+1}^j d(x_k,x_{k-1})
+\le\sqrt{2(j-i)h(E(x_0)-E_*)}.}
+\p{因此在离散时间点上，能量下降控制 #{1/2} 阶时间模。这个结论只用极小性及能量下界；极小点的存在和离散曲线的紧性需要另行证明。若 #{X=\mathbb R^n} 且 #{E} 可微，极小点还满足 #{(x_k-x_{k-1})/h=-\nabla E(x_k)}，即隐式 Euler 公式；相应的连续下降结构见[度量梯度](4X01)。}

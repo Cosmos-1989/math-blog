@@ -1,0 +1,16 @@
+\title{超限直径是有限点距离乘积的递减极限}
+\date{2026-10-28}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Serre，arXiv:1807.11700v3](https://arxiv.org/abs/1807.11700v3)，附录 A.1，印刷页 1146–26；单调性证明在此展开}
+
+\p{设 #{K\subset\mathbb C} 为非空紧集，#{n\ge 2}。定义}
+##{D_n(K)=\max_{z_1,\ldots,z_n\in K}\prod_{1\le i<j\le n}|z_i-z_j|,\qquad
+d_n(K)=D_n(K)^{2/(n(n-1))}.}
+\p{最大值由[紧空间上的极值定理](0A3A)存在，允许点重复；若 #{K} 少于 #{n} 个点，则 #{D_n(K)=0}。#{d_2(K)} 是普通直径。}
+
+\p{\strong{单调性。}从 #{n+1} 个点中每次删去一个，所得 #{n+1} 个距离乘积均不超过 #{D_n(K)}。把这些不等式相乘，每一对点的距离恰好出现 #{n-1} 次，故}
+##{\left(\prod_{1\le i<j\le n+1}|z_i-z_j|\right)^{n-1}\le D_n(K)^{n+1}.}
+\p{取左边最大值，再取正的 #{2/(n(n+1)(n-1))} 次幂，得到 #{d_{n+1}(K)\le d_n(K)}。因此存在非负极限}
+##{\operatorname{cap}(K):=\lim_{n\to\infty}d_n(K)=\inf_{n\ge 2}d_n(K).}
+\p{这一定义称为超限直径；它与对数势论中容量的等价性见 Serre 附录 A。由有限点公式立即可知，#{K\subseteq L} 时 #{\operatorname{cap}(K)\le\operatorname{cap}(L)}，且对 #{a,b\in\mathbb C}，有 #{\operatorname{cap}(aK+b)=|a|\operatorname{cap}(K)}。有限集的容量为零。}

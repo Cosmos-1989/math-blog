@@ -4,8 +4,8 @@
 \author{author}
 \meta{source}{[Ziegler](icm2026-ziegler)，背景综述 §4}
 
-\p{令 #{\mathbb T=\mathbb R / \mathbb Z}，固定 #{\alpha\in\mathbb T}，定义 #{T(z,w)=(z+\alpha,w+2z+\alpha)}。它是二维圆环上的可逆[保测变换](00RS)，因为线性部分的整数矩阵行列式为一。}
+\p{令 #{\mathbb T=\mathbb R / \mathbb Z}，固定 #{\alpha\in\mathbb T}，定义 #{T(z,w)=(z+\alpha,w+2z+\alpha)}。它的逆为 #{T^{-1}(z,w)=(z-\alpha,w-2z+\alpha)}。二维圆环取归一化 [Haar 测度](00T1) #{dz\,dw}。对有界可测函数 #{F}，由 [Fubini 定理](0H53)，先将内层变量 #{w} 平移 #{2z+\alpha}，再将 #{z} 平移 #{\alpha}，得到 #{\int F(T(z,w))\,dz\,dw=\int F(z,w)\,dz\,dw}。所以 #{T} 是可逆[保测变换](00RS)。}
 \p{归纳可得 #{T^n(z,w)=(z+n\alpha,w+2nz+n^2\alpha)}。从 #{n} 到 #{n+1} 的第二坐标变化为 #{2(z+n\alpha)+\alpha}，恰给出平方差，完成归纳。}
 \p{二次多项式的三阶差分为零，所以在圆环的加法群中}
 ##{(z,w)-3T^n(z,w)+3T^{2n}(z,w)-T^{3n}(z,w)=0.}
-\p{这是一条四时刻的精确依赖关系，即使只观察第一坐标时只看到旋转。它说明研究四项配置需要保留二次结构，并与[二次相位的高阶一致性](0Y05)相呼应。}
+\p{这是一条四时刻的精确依赖关系，即使只观察第一坐标时只看到旋转。公式对任意 #{\alpha} 都成立，无须无理性假设。它给出[四函数相关](4Z05)的显式例子，并与[二次相位的高阶一致性](0Y05)相呼应。}

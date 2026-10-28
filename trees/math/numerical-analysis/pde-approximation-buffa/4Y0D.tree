@@ -1,0 +1,13 @@
+\title{H² 相容 Galerkin 逼近的准最优界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，§2.1 变分型的相容离散推论}
+
+\p{在 [Cordes 强解定理](4Y0C) 的假设下，令 #{u\in V=H^2(\Omega)\cap H^1_0(\Omega)} 为解，#{V_h\subset V} 为任意有限维线性子空间，#{q=\sqrt{1-\varepsilon}}，#{B(w,v)=\int\gamma L_Aw\Delta v}。离散解由}
+##{u_h\in V_h,\qquad B(u_h,v_h)=\int_\Omega\gamma f\Delta v_h\quad(v_h\in V_h)}
+\p{确定，且唯一存在。对 #{\|w\|_\Delta=\|\Delta w\|_2}，有}
+##{\|u-u_h\|_\Delta\leq\frac{1+q}{1-q}\inf_{v_h\in V_h}\|u-v_h\|_\Delta.}
+\p{\strong{证明。}由 [有限维范数等价](00M9)，#{V_h} 的 Cauchy 列可在基的坐标中取极限，所以 #{V_h} 完备。限制到 #{V_h} 的 [有界性与强制性](4Y0B) 因而仍可使用 [Lax–Milgram 定理](4003)。连续与离散等式相减得 Galerkin 正交关系 #{B(u-u_h,w_h)=0}，#{w_h\in V_h}。记 #{e=u-u_h}。对任意 #{v_h\in V_h}，由于 #{v_h-u_h\in V_h}，有}
+##{(1-q)\|e\|_\Delta^2\leq B(e,e)=B(e,u-v_h)\leq(1+q)\|e\|_\Delta\|u-v_h\|_\Delta.}
+\p{若 #{e\neq 0}，约去 #{\|e\|_\Delta} 后取下确界；零误差情形直接成立。估计中没有网格尺寸的幂次，具体收敛阶需由空间 #{V_h} 的逼近性质提供。只有逐片 #{H^2} 或跨接口 #{C^0} 的离散空间，未必包含在 #{V} 中，因而不满足本定理的相容性假设。}

@@ -1,0 +1,11 @@
+\title{Bregman 散度是参考函数的切平面误差}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 p.178，Bregman distance；采用目标点在前的记号}
+
+\p{设 #{\rho:\mathbb R^n\to\mathbb R} 为可微[凸函数](4R06)。以 #{u} 为基点、#{v} 为目标点，定义 Bregman 散度}
+##{D_\rho(v,u)=\rho(v)-\rho(u)-\langle\nabla\rho(u),v-u\rangle.}
+\p{凸函数的一阶不等式直接给出 #{D_\rho(v,u)\ge 0}。若 #{\rho} 为 #{C^2}，由 [Taylor 积分余项](0I8J)有}
+##{D_\rho(v,u)=\int_0^1(1-t)(v-u)^{\mathsf T}\nabla^2\rho(u+t(v-u))(v-u)\,dt.}
+\p{对 #{\rho(v)=\|v\|^2/2}，这就是平方距离的一半。一般的 Bregman 散度可以不对称，例如一维 #{\rho(t)=t^4/4} 给出 #{D_\rho(1,0)=1/4}、#{D_\rho(0,1)=3/4}，所以“散度”不包含度量公理。文献记号 #{\beta_\rho(u,v)} 与这里的 #{D_\rho(v,u)} 相同，两个输入的显示次序相反。}

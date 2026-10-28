@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-28",
+  "reviewer": "Independent mathematical review, separate from parent and authors",
+  "workspace": "/Users/sunzy/claude_test/forester2",
+  "status": "selected-scope-review-completed-all-findings-resolved",
+  "scope": {
+    "requested": [
+      "5000-500D",
+      "5100-510B",
+      "two reference pages",
+      "two packets"
+    ],
+    "authorized_addition": "510C, requested by parent during review",
+    "tree_file_count": 29,
+    "packet_file_count": 2,
+    "source_edits": false,
+    "only_written_file": "research/plenary-final-independent-review.json",
+    "global_build_run": false,
+    "tests_run_by_this_reviewer": false,
+    "commit_or_push": false
+  },
+  "summary": {
+    "nesterov": "稳定源码逐式复核未发现数学错误。",
+    "sarnak": "局部证明包括510C未发现数学错误；三项开放修订已定向复核：5106显式要求权一尖点形式在所有尖点消失，Cartan exposé题名与所链原文一致，5107及packet的推论4.2印刷页为514。连同此前两项错链，五项发现均已解决。",
+    "open_findings": 0,
+    "resolved_findings": 5,
+    "report_completeness": "两组均仅selected范围；来源覆盖不足不记作证明错误，也不据此宣称报告全文完整核读。"
+  },
+  "findings": [
+    {
+      "id": "SAR-01",
+      "severity": "P2",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5106.tree",
+      "line": 11,
+      "title": "将尖点条件显式绑定到所取特征形式",
+      "detail": "正文先定义一般模形式和尖点形式，随后只设 f=Σ(n>=1)a_n q^n、a1=1 和 Hecke 特征性；这只明写无穷远尖点的常数项为零，未明写 f 在所有尖点消失。标题和小标题虽表明意图，但正文定理应显式假设 f 为上述尖点形式，才能无歧义地断言表示不可约。packet 的 theorem_source_checks 已列此条件，正文没有同步。",
+      "remedy": "第11行改为设 f 为上述权一尖点形式，再写 Fourier 展开与归一化；或明确 f∈S1(Γ0(N),ε)。",
+      "source": "Deligne–Serre (1974), §1.2 p.508; Theorem 4.1 pp.513–514 explicitly makes irreducibility equivalent to cuspidality.",
+      "status": "resolved-and-rechecked",
+      "reviewed_sha256": "b8fde460aca5cdf9693ac6a9e7ee6b85ed977efe8a1e2a0fb3569e388f9e9c23",
+      "original_observed_sha256": "215f95f6c74106e2a1f45b9a21ed7333dbe821932d3a3e1f7ce1e3543e5c0522",
+      "resolution": {
+        "checked_at": "2026-10-28T09:56:47.733Z",
+        "detail": "5106第11行现明写 f 为上述权一尖点形式且在所有尖点消失；与packet已有cuspidal假设一致，原不可约性结论的条件完整。",
+        "original_finding_preserved": true
+      }
+    },
+    {
+      "id": "SAR-02",
+      "severity": "P3",
+      "path": "/Users/sunzy/claude_test/forester2/trees/references/icm2026-sarnak.tree",
+      "line": 9,
+      "title": "Cartan exposé 10 的书名错误",
+      "detail": "链接和卷、exposé、页码指向 La suite spectrale des espaces fibrés. Applications，而当前书目写 Homologie singulière des espaces fibrés. Applications；两者不是同一书名。5101 使用的谱序列与 Euler 特征数学内容可由所链 exposé 支持。",
+      "remedy": "按所链原刊首页改为 La suite spectrale des espaces fibrés. Applications；不改成另篇论文的链接。",
+      "source": "https://www.numdam.org/item/SHC_1950-1951__3__A10_0.pdf, cover and printed 10-01.",
+      "status": "resolved-and-rechecked",
+      "reviewed_sha256": "233eb1cce243fa8e4f81723613f418830f2fefdd82170429cf8a42d04eb65654",
+      "original_observed_sha256": "4d992c7a879002b50a32fa45fa51155e7c1759fc0f88d4cd48d801b3f84e41a6",
+      "resolution": {
+        "checked_at": "2026-10-28T09:56:47.733Z",
+        "detail": "引用页第9行改为 La suite spectrale des espaces fibrés. Applications，所链Cartan exposé10及卷页不变；与此前实际读过的原刊首页一致。",
+        "original_finding_preserved": true
+      }
+    },
+    {
+      "id": "SAR-03",
+      "severity": "P3",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5107.tree",
+      "line": 5,
+      "title": "推论4.2的印刷页定位错误",
+      "detail": "Deligne–Serre 推论4.2在印刷页514（带封面的PDF第9页，零基索引8），不是512。packet.report.claim_sources.5107也写512；这不影响本页单位根迹界的证明。",
+      "remedy": "同步将页面和packet的推论4.2定位改为印刷页514。",
+      "source": "https://publications.ias.edu/sites/default/files/Number24.pdf, p.514, Corollary 4.2.",
+      "status": "resolved-and-rechecked",
+      "reviewed_sha256": "a27c32c53a66626dbaa3e2c166b5f9d89c495e67179f335cecd4337a19fc5298",
+      "related_paths": [
+        "/Users/sunzy/claude_test/forester2/research/plenary-sarnak-packet.json"
+      ],
+      "original_observed_sha256": "08c3a9757145d4a5c05e877ad7a0f7835828378ba4898134136bfbf6e8408434",
+      "resolution": {
+        "checked_at": "2026-10-28T09:56:47.733Z",
+        "detail": "5107第5行与packet.report.claim_sources.5107均改为印刷页514；单位根迹界证明未改。",
+        "original_finding_preserved": true,
+        "packet_sha256": "c1567efbba612022df15608c48340a7eec2c59752abcef41cb111b690696786d"
+      }
+    },
+    {
+      "id": "SAR-04",
+      "severity": "P2",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5109.tree",
+      "line": 7,
+      "title": "代数整数误链到Brauer块页",
+      "detail": "初审版本将代数整数作为017K的定义前置；017K的主题为有限群的Brauer p块，附带词汇解释不足以作为这个原子的基础入口。后续已改引510C，510C的定义及整系数证明已完整复核；packet也已撤去017K。",
+      "remedy": "已通过510C解决；保留原发现用于审计。",
+      "source": "Local semantic reading: 017K, 0D04, 0102, 5109, 510C.",
+      "status": "resolved-and-rechecked",
+      "reviewed_sha256": "bb841521730b1787e4b09f53ca4ba48395de311de08ffc2a60240ceb99822aac",
+      "original_observed_sha256": "946c9bfa7b33457fecb8dfbccf9490ef2cca156aa6794946f77ac10393f24b86"
+    },
+    {
+      "id": "SAR-05",
+      "severity": "P2",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5104.tree",
+      "line": 7,
+      "title": "复乘误链到模曲线有理点定理",
+      "detail": "初审版本把复乘链接及必要前置登记为0C0S。该页核心是Xns+(17)的七个有理点，不是独立复乘定义。最新5104已在本地完整写明End(E_Qbar)=Z并移除该错链，改用椭圆曲线0C0P；packet同步。",
+      "remedy": "已通过就地定义解决，无需额外新建CM原子页。",
+      "source": "Local semantic reading: 0C0S, 0C0P, 5104.",
+      "status": "resolved-and-rechecked",
+      "reviewed_sha256": "9150c25c84f04fa81c44a0aaea8e989656f779625d82aee1685b8eda6f3066d2",
+      "original_observed_sha256": "55396fb0790f8154c67993aa79a7908662f1c6b09d1ca6f1c18c4fe44dcc1565"
+    }
+  ],
+  "mathematical_checks": [
+    {
+      "id": "5000",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5000.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "综述区分凸函数值误差、非凸驻点、内外层复杂度；未发现数学混用。"
+    },
+    {
+      "id": "5001",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5001.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "逐项核对高阶导数多线性形式、对称性、算子范数、固定基点Taylor系数及全局Lipschitz假设。"
+    },
+    {
+      "id": "5002",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5002.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "j=0,1,2余项常数Lp/(p+1-j)!正确；q=p-j=0单独处理，积分权重给出正确阶乘，无额外C^(p+1)假设。"
+    },
+    {
+      "id": "5003",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5003.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "t^3+a t^4在t=-1/(4a)处二阶导数=-3/(4a)，正确区分强制增长与凸性。"
+    },
+    {
+      "id": "5004",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5004.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "H>=pLp与H/p!径向Hessian及Lp/(p-1)!负曲率界相容；原点连续延拓和偶数p的非多项式径向项处理正确。"
+    },
+    {
+      "id": "5005",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5005.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "H>0保证模型强制增长及极小点；比较系数(H+Lp)/(p+1)!、梯度系数(H+Lp)/p!与下降性正确。"
+    },
+    {
+      "id": "5006",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5006.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "初始子水平集半径D、A、alpha选择、倒数递推常数及零误差边界逐式核过；稍松O(k^-p)常数正确。"
+    },
+    {
+      "id": "5007",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5007.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "由x±th的半正定Hessian得到双边矩阵约束，优化a/t+bt得到sqrt(2L3 u^T A u)||h||||u||；退化方向正确。"
+    },
+    {
+      "id": "5008",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5008.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "Bregman目标点在前，积分余项权重1-t正确；四次函数不对称例1/4与3/4正确。"
+    },
+    {
+      "id": "5009",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/5009.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "rho系数、kappa=(tau+1)/(tau-1)、Q=||h||^2I+2hh^T的Hessian夹逼正确；允许A奇异，不偷加全局强凸。"
+    },
+    {
+      "id": "5100",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5100.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "数学叙事与所选分支对应；未将历史背景论文当2026报告完整讲稿。"
+    },
+    {
+      "id": "5101",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5101.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "有限支撑第一象限下b_(r+1,n)=b_(r,n)-a_(r,n)-a_(r,n+1)，总次数差-1，交错和抵消和终端有限滤过正确；纤维应用保留平凡局部系数假设。"
+    },
+    {
+      "id": "5102",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5102.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "射影、复数、凝聚层及q>=0条件与GAGA定理1–3吻合；仿射直线e^z反例正确，不推广为任意仿射等价。"
+    },
+    {
+      "id": "5103",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5103.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "半线性逆映射及像基论证正确；光滑射影、任意复域自同构、GAGA/Hodge比较与命题12吻合；不推出同胚。"
+    },
+    {
+      "id": "5104",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5104.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "固定非CM曲线的adelic开像/有限指数及所有有限层的C(E)界正确；无跨曲线统一常数或有效算法主张。错链已修。"
+    },
+    {
+      "id": "5105",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5105.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "紧开陪集覆盖、有限商陪集满射、含约化核时单射及GL2逐素数提升论证正确。"
+    },
+    {
+      "id": "5106",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5106.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "Hecke权一系数、算术Frobenius、离散目标有限像、奇性、唯一性和新形式/精确导子边界与原文相符；本次已显式补齐f为在所有尖点消失的权一尖点形式，SAR-01解决。"
+    },
+    {
+      "id": "5107",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5107.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "有限阶矩阵由无重根零化多项式对角化，单位根迹界及紧群到离散群像有限正确；推论4.2页码已与packet同步更正为514。"
+    },
+    {
+      "id": "5108",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5108.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "删去每个点后每一对距离出现n-1次，d_n递减、容量极限、单调性、缩放及有限集零容量正确。"
+    },
+    {
+      "id": "5109",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/5109.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "P'乘法整数矩阵的非零行列式与判别式乘积给出d_n>=1；容量<1限制次数，根界限制整数系数，有限性正确；Robinson实区间/复邻域逆向结论区分准确。"
+    },
+    {
+      "id": "500A",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/500A.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "三点恒等式符号、(kappa-1)D(z,u)-kappa D(z,v)以及E收缩1-1/kappa正确；精确固定模型内层与外层总复杂度分开。"
+    },
+    {
+      "id": "500B",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/500B.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "c=0和c!=0分情形；r=gamma||h||^2的正根方程严格单调、两端符号及重构正确，A奇异可用。"
+    },
+    {
+      "id": "500C",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/500C.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "梯度中心二阶差分截断误差L3 eta||h||^3/3以及4delta/eta^2噪声放大正确，不冒称全算法oracle复杂度。"
+    },
+    {
+      "id": "500D",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/optimization/higher-order-nesterov/500D.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "正式论文p.170算法(3.12)/Theorem3，M=2Lp即H=2pLp；常数仅依赖p的O(k^-(p+1))上界与Lp>0、极小点存在、精确子问题假设相符。"
+    },
+    {
+      "id": "510A",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/510A.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "按重数归一化，P^aQ^b权重ad/(ad+be)，取a=ue,b=vd实现有理权并传到弱闭包正确；P^m不制造新轨道。"
+    },
+    {
+      "id": "510B",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/510B.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "不同首一不可约P_n与固定Q最终互素；非零整数resultant给出积分下界，先固定epsilon弱收敛再单调收敛的顺序正确；常值轨道反例正确。"
+    },
+    {
+      "id": "510C",
+      "path": "/Users/sunzy/claude_test/forester2/trees/math/history/serre-sarnak/510C.tree",
+      "status": "no-error-found-in-selected-scope",
+      "detail": "本原乘积模p证明完整；清分母再除内容所得a,b因首一而为正整数；PQ=abF两边内容给ab=1，整性及sqrt2/1/2例子均正确。"
+    }
+  ],
+  "source_readings": [
+    {
+      "source": "Nesterov, Implementable tensor methods in unconstrained convex optimization",
+      "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+      "version": "Mathematical Programming 186 (2021),157-183",
+      "method": "Local pdftotext layout text and publisher PDF text; no full-proof claim",
+      "actual_scope": "pp.159-165 selected definitions, equations(1.1)-(1.7), Theorem1, model(2.6)/(2.9), Lemma1 and Theorem2 recurrence; p.170 algorithm(3.12), Theorem3 statement and terminal estimate; pp.176-180 Lemmas3-4, Bregman implementation, quartic auxiliary problem(5.10)-(5.11) and computational discussion.",
+      "boundary": "未连续核读§3的加速证明或§4下界；5006/500A/500B/500C的本地证明独立逐式复算。",
+      "full_paper_read": false
+    },
+    {
+      "source": "Serre, La suite spectrale des espaces fibrés. Applications",
+      "url": "https://www.numdam.org/item/SHC_1950-1951__3__A10_0.pdf",
+      "version": "Séminaire Henri Cartan 3 (1950-1951),exposé10,1-9",
+      "method": "Primary PDF extracted text",
+      "actual_scope": "Cover/title; §§1-4, printed10-01 through10-05, trivial local coefficient second page, Betti comparison and Euler characteristic proposition.",
+      "boundary": "扫描OCR有缺式；5101有限维逐页推导另行手工核算。未声称核读后续§§5-8。",
+      "full_paper_read": false
+    },
+    {
+      "source": "Serre, GAGA",
+      "url": "https://www.numdam.org/article/AIF_1956__6__1_0.pdf",
+      "version": "Annales de l'Institut Fourier6 (1956),1-42",
+      "method": "Primary PDF extracted text",
+      "actual_scope": "§3 no12 Theorems1-3,printed19-20; §4 no18 Proposition12,printed28, semilinear cohomology comparison and Hodge-number conclusion.",
+      "boundary": "未重建凝聚层代数化或GAGA全部证明。",
+      "full_paper_read": false
+    },
+    {
+      "source": "Serre, Propriétés galoisiennes des points d'ordre fini des courbes elliptiques",
+      "url": "https://www.college-de-france.fr/media/jean-pierre-serre/UPL5874918517843398173_Serre_proprie_te_s_galoisiennes_des_courbes_elliptiques.pdf",
+      "version": "Inventiones Mathematicae15 (1972),259-331",
+      "method": "Actually viewed local rendered page images /private/tmp/sarnak-serre1972-02.png and -03.png",
+      "actual_scope": "Printed259-260, number-field/non-CM hypotheses and assertions(1)-(3), finite adelic index versus uniform finite-level indices.",
+      "boundary": "作者packet声明还读p261；本独立审阅没有将该页计入自己的实际图像阅读，更未读整篇深证明。",
+      "full_paper_read": false
+    },
+    {
+      "source": "Deligne–Serre, Formes modulaires de poids1",
+      "url": "https://publications.ias.edu/sites/default/files/Number24.pdf",
+      "version": "Annales ENS(4)7 (1974),507-530",
+      "method": "Primary PDF extracted text",
+      "actual_scope": "§1.2-1.6 pp508-509; §3.1-3.4 pp512-513; Theorem4.1 pp513-514, arithmetic Frobenius footnote, Corollary4.2 and Remarks4.3-4.5 p514; Theorem4.6 hypotheses/conclusions p514.",
+      "boundary": "未核读表示构造的§§5-9深证明。",
+      "full_paper_read": false
+    },
+    {
+      "source": "Serre, Distribution asymptotique des valeurs propres des endomorphismes de Frobenius",
+      "url": "https://arxiv.org/abs/1807.11700v3",
+      "version": "arXiv1807.11700v3 (2019-07-07),Bourbaki exposé1146",
+      "method": "Local PDF text /tmp/sarnak-serre-2018v3.txt; versioned HTML crosscheck",
+      "actual_scope": "Introduction, §§1.1-1.2 including Proposition1.2.2 and Corollary1.2.10; §1.3 through Lemmas1.3.1,1.3.3,1.3.4; §1.6 Theorems1.6.1-1.6.2 and Fekete–Szego neighborhood remark; AppendixA.1 printed1146-26.",
+      "boundary": "未读§2 Robinson完整证明，也未核读所有附录。1.3.2是公式编号。510C整性证明作为本地基础证明独立核算。",
+      "full_paper_read": false
+    }
+  ],
+  "report_video_boundary": {
+    "videos_reopened_by_this_reviewer": false,
+    "video_downloaded": false,
+    "continuous_report_reading": false,
+    "transcript_read": false,
+    "author_declared_observations": "Nesterov packet列11个离散视频点，Sarnak packet列18个离散视频点；本审阅读取该记录但不冒充独立重看这些画面。",
+    "metadata_not_mathematical_proof": true,
+    "background_not_report_manuscript": true
+  },
+  "duplication_review": {
+    "method": "全库trees关键词/同义词检索，随后实际打开候选页比较数学结论，不把含词匹配当重复定理或定义。",
+    "results": [
+      {
+        "id": "5008",
+        "comparison": "未找到此前独立Bregman定义节点；已有优化/凸对偶页不等于此三点框架。"
+      },
+      {
+        "id": "5002/5004",
+        "comparison": "4R0Q是p=2 Hessian余项，4R0R是非凸驻点复杂度；本组一般p/凸函数值分支是扩展，已显式复用。"
+      },
+      {
+        "id": "5102",
+        "comparison": "2304是可定义GAGA，全忠实/子商封闭不等于经典射影凝聚范畴等价，不能合并成同一定理。"
+      },
+      {
+        "id": "5104",
+        "comparison": "0C0Q是扭点表示构造，0C0T是跨曲线一致性问题，不是固定曲线开像定理。"
+      },
+      {
+        "id": "510C",
+        "comparison": "0D04给域上最小多项式，0102给一般整性/整闭包定义，但均无此首一最小多项式整系数证明。未发现已有独立代数整数节点；017K仅附带词汇，不可代替。"
+      }
+    ],
+    "limitation": "检索及候选页语义比较，不声称排除了全库所有未命名公式的逻辑等价重写。"
+  },
+  "prerequisite_review": {
+    "method": "实际阅读直接目的页的定义/定理内容；仅图节点存在不算语义通过。未对全站递归依赖闭包作完整数学认证。",
+    "resolved_semantic_findings": [
+      "SAR-04",
+      "SAR-05"
+    ],
+    "accepted_specific_reuse": [
+      "5103→0112只标一阶Cech背景，不冒作所有次数的Cech构造。",
+      "5103→0BG1第三段确实陈述紧Kahler Hodge分解；不声称该节点证明深定理。",
+      "5105→01I8实际含完整整数CRT构造，不借SLn满射冒充GL2提升；GL2步骤在5105本地给出。",
+      "5106已就地定义分解群/惯性/算术Frobenius，0G84只作局部作用背景。",
+      "510A→4E24确实定义有限测度弱收敛且510A重述紧集测试约定。"
+    ],
+    "structural_checks": {
+      "checked_at": "2026-10-28T09:50:39.864Z",
+      "owned_page_keys": 29,
+      "prerequisite_edges": 94,
+      "missing_targets": [],
+      "prerequisites_without_body_links": [],
+      "foreign_prerequisite_keys": [],
+      "owned_prerequisite_cycles": [],
+      "broken_owned_links": [],
+      "note": "只沿packet声明的自有前置边检测环；导航/相关链接不当作前置。"
+    }
+  },
+  "hash_policy": {
+    "algorithm": "SHA-256",
+    "binding": "source_sha256对应本次实际核读快照；终稿写入后再次比对。",
+    "nesterov": "用户报告源已稳定；本轮仍观察到packet的5000前置列表改为空，该差异已审读，页面无新数学变化。",
+    "sarnak": "父代理完成三项修订并要求作者停止修改；本次只复核三处源和对应packet差异。source_sha256已刷新，后续变化仍须另行比较。"
+  },
+  "source_sha256": {
+    "trees/math/optimization/higher-order-nesterov/5000.tree": "55613985e4684cac7800180bd9dd2648d47dc07413a24a5308080aa1900cf0b8",
+    "trees/math/optimization/higher-order-nesterov/5001.tree": "d2d73250072b5743dbb40f3997c95b146136050383b7dae08625d1d0aa0f0d07",
+    "trees/math/optimization/higher-order-nesterov/5002.tree": "24b825cc5136a68a6caaf23965d16ab091019e56b75642624f56f12c8b8e5f70",
+    "trees/math/optimization/higher-order-nesterov/5003.tree": "5192c55de77c2624e64122cca2aef653f469129ca31689c198dc3ab80e6bced2",
+    "trees/math/optimization/higher-order-nesterov/5004.tree": "e6c7ca0963bac68ccbbecf1a5ad316e0dd346a5820c8f5b10520d61d55901bb8",
+    "trees/math/optimization/higher-order-nesterov/5005.tree": "33e6df5e0672b86394f2125e01b34c269b58a4ab120226c27c6c9573d90fc6d2",
+    "trees/math/optimization/higher-order-nesterov/5006.tree": "79b1f4ed6c8ad6dbadfbd877f53430d6c5ea652f4f66743e4d89e76f082da121",
+    "trees/math/optimization/higher-order-nesterov/5007.tree": "24fe7c24e08e36b47ea2c07f7e7ee284e186447ad3b9d537d8f3e75a63d376d9",
+    "trees/math/optimization/higher-order-nesterov/5008.tree": "f5acd06aa55fb8a80948de4a42ba7fab783d915b390664cc1ce95e02959dd800",
+    "trees/math/optimization/higher-order-nesterov/5009.tree": "46bca5d7110a343d8d4c5169907d79ed5c32c16b4ba545e5d47b89ad3a160238",
+    "trees/math/optimization/higher-order-nesterov/500A.tree": "8fc5edc713daabc88b33f877669b8e34a19975d1fe91db3f77d97c232abab293",
+    "trees/math/optimization/higher-order-nesterov/500B.tree": "a7b6c5663bdf15f6ae14666181e10b6e151433aa878b38d779748224711638fb",
+    "trees/math/optimization/higher-order-nesterov/500C.tree": "75bff1fc9785d666eece41455a7a02bed1c82309ca4c5a369545a191219393dc",
+    "trees/math/optimization/higher-order-nesterov/500D.tree": "d8cc80a646ebe573a82cc390101309711975e1e3e2e163ca6cecc87485363a3e",
+    "trees/math/history/serre-sarnak/5100.tree": "8e4164e02a9d38eb018aa61139b16c3993b6c2a7f63e43264883823202833152",
+    "trees/math/history/serre-sarnak/5101.tree": "0f273f515c761810d0faf1c9d2261be7a81ac4be228e52724740023bb3eeb474",
+    "trees/math/history/serre-sarnak/5102.tree": "100bb2483f9ea2562b8ab59f36ed192fe6f2cb58fdb237c93a995cce499c36d0",
+    "trees/math/history/serre-sarnak/5103.tree": "c70b1c88fc120ce51c4145196f3874fa4c4a3c6a84debdbf5dbb1706455d6164",
+    "trees/math/history/serre-sarnak/5104.tree": "9150c25c84f04fa81c44a0aaea8e989656f779625d82aee1685b8eda6f3066d2",
+    "trees/math/history/serre-sarnak/5105.tree": "b661f2ecb2bea94fd8dcaf865c53a08a912e11c89760fd558cfbb434945b1d02",
+    "trees/math/history/serre-sarnak/5106.tree": "b8fde460aca5cdf9693ac6a9e7ee6b85ed977efe8a1e2a0fb3569e388f9e9c23",
+    "trees/math/history/serre-sarnak/5107.tree": "a27c32c53a66626dbaa3e2c166b5f9d89c495e67179f335cecd4337a19fc5298",
+    "trees/math/history/serre-sarnak/5108.tree": "10524764e8c82eebe63c228da90827474eaeccc29697f14764c8caa6391383cf",
+    "trees/math/history/serre-sarnak/5109.tree": "bb841521730b1787e4b09f53ca4ba48395de311de08ffc2a60240ceb99822aac",
+    "trees/math/history/serre-sarnak/510A.tree": "61d862436135b9e04f4806f1af5b1e2bcf43bd466e57c6d1f2d5698eafb672b7",
+    "trees/math/history/serre-sarnak/510B.tree": "a3b0f8b634c9021e15b51d5de23c455eadc022beb604e2b79c7b8172a8c59347",
+    "trees/references/icm2026-nesterov.tree": "6592f5b124ed966e349ca7b312ccef50d3077b53828c2b783ef9dfe0adb5c7cb",
+    "trees/references/icm2026-sarnak.tree": "233eb1cce243fa8e4f81723613f418830f2fefdd82170429cf8a42d04eb65654",
+    "research/plenary-nesterov-packet.json": "8516c364a6e7e022644470df4b113bd53456b2458059cf4f153c97e95c5e967e",
+    "research/plenary-sarnak-packet.json": "c1567efbba612022df15608c48340a7eec2c59752abcef41cb111b690696786d",
+    "trees/math/history/serre-sarnak/510C.tree": "2f2b17bf5dc8dd3a2211545d864adedf9b80e002464b08ef0994cd991878e60f"
+  },
+  "source_change_log": [
+    {
+      "path": "trees/math/optimization/higher-order-nesterov/5000.tree",
+      "initial_sha256": "61f6bbde1ba6a926fe963c672d828de4744327ab11bf853ae4cd8e4bd14487eb",
+      "reviewed_sha256": "55613985e4684cac7800180bd9dd2648d47dc07413a24a5308080aa1900cf0b8",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/optimization/higher-order-nesterov/5006.tree",
+      "initial_sha256": "3de6a36f4593a90d2b0ba1bbb386f811ce1f256576f9f5cc9118aad551bb46c8",
+      "reviewed_sha256": "79b1f4ed6c8ad6dbadfbd877f53430d6c5ea652f4f66743e4d89e76f082da121",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/optimization/higher-order-nesterov/500D.tree",
+      "initial_sha256": "fda0244cf47c511451c1d10638f9621761d4e02a1c89eec29e0911cbb07272b5",
+      "reviewed_sha256": "d8cc80a646ebe573a82cc390101309711975e1e3e2e163ca6cecc87485363a3e",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5100.tree",
+      "initial_sha256": "05318020e736ba5e0f50db573a3bc3db56c64fe56e2ce94345d9a840b290959c",
+      "reviewed_sha256": "8e4164e02a9d38eb018aa61139b16c3993b6c2a7f63e43264883823202833152",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5101.tree",
+      "initial_sha256": "6cbfeab04083b9a2caf55842da23d1e2c3b6a8930e6d7eb21e5fe839b11a4ea5",
+      "reviewed_sha256": "0f273f515c761810d0faf1c9d2261be7a81ac4be228e52724740023bb3eeb474",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5103.tree",
+      "initial_sha256": "67bda1f474efd83e63d3be75107ddf3448fa9d71423b40811cafde232894917c",
+      "reviewed_sha256": "c70b1c88fc120ce51c4145196f3874fa4c4a3c6a84debdbf5dbb1706455d6164",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5104.tree",
+      "initial_sha256": "8db722715e202f4d90f64fb3c7eededcb21736f8ff1612ee91926412192fee22",
+      "reviewed_sha256": "9150c25c84f04fa81c44a0aaea8e989656f779625d82aee1685b8eda6f3066d2",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5105.tree",
+      "initial_sha256": "7b72545631a0856b90784f4b7e5cb198aa1a9117277debdbc5b0476f6ccb1815",
+      "reviewed_sha256": "b661f2ecb2bea94fd8dcaf865c53a08a912e11c89760fd558cfbb434945b1d02",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5106.tree",
+      "initial_sha256": "285587746532f7996150fce3724a08aa12fb938f61ba9bb9bed2a21f04f4b9d3",
+      "reviewed_sha256": "215f95f6c74106e2a1f45b9a21ed7333dbe821932d3a3e1f7ce1e3543e5c0522",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5107.tree",
+      "initial_sha256": "dd3781acd18d6e49fc6b4a6c20c384756a22febdb2857ff853d406fdfa967b61",
+      "reviewed_sha256": "08c3a9757145d4a5c05e877ad7a0f7835828378ba4898134136bfbf6e8408434",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5108.tree",
+      "initial_sha256": "6651ae1fc9275f47ad4a29b744c6a86a6c2d37d30a89ab07847b613a56fa2c39",
+      "reviewed_sha256": "10524764e8c82eebe63c228da90827474eaeccc29697f14764c8caa6391383cf",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/5109.tree",
+      "initial_sha256": "29ba4eb4dad74786f88f8ddcefd345c592f013b43de5304809c0f94698c6b32f",
+      "reviewed_sha256": "bb841521730b1787e4b09f53ca4ba48395de311de08ffc2a60240ceb99822aac",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/510B.tree",
+      "initial_sha256": "d8b2aeb4685829a8f9ae2c0b8e8ce3e4b582728132cb86ba3820d42ab0335847",
+      "reviewed_sha256": "a3b0f8b634c9021e15b51d5de23c455eadc022beb604e2b79c7b8172a8c59347",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "trees/references/icm2026-nesterov.tree",
+      "initial_sha256": "adcae8046cd4815c9f7d34075e0ced76657da7e1a6da5feafaea7c7f51549547",
+      "reviewed_sha256": "6592f5b124ed966e349ca7b312ccef50d3077b53828c2b783ef9dfe0adb5c7cb",
+      "status": "changed-lines-or-new-page-reread"
+    },
+    {
+      "path": "research/plenary-nesterov-packet.json",
+      "initial_sha256": "b202e9e646f852d1cafb063273445e2927c00183dbe8ee60c5c81b8391da7d3b",
+      "reviewed_sha256": "8516c364a6e7e022644470df4b113bd53456b2458059cf4f153c97e95c5e967e",
+      "status": "packet-content-read-and-compared"
+    },
+    {
+      "path": "research/plenary-sarnak-packet.json",
+      "initial_sha256": null,
+      "reviewed_sha256": "b6e3d0961cd6c817b49ec5ec170d9903e9b8da1e358bfa03b4cf536052ebdfec",
+      "status": "packet-content-read-and-compared"
+    },
+    {
+      "path": "trees/math/history/serre-sarnak/510C.tree",
+      "initial_sha256": null,
+      "reviewed_sha256": "2f2b17bf5dc8dd3a2211545d864adedf9b80e002464b08ef0994cd991878e60f",
+      "status": "changed-lines-or-new-page-reread"
+    }
+  ],
+  "limitations": [
+    "未运行全局构建、Forester编译、渲染或作者专项测试；作者packet的测试结果仅作为作者记录读取，不冒称本审阅执行。",
+    "引用研究定理只核对已声明选段的条件与结论，未补写或宣称证明GAGA、开像、Deligne–Serre、加速估计函数全部深证明。",
+    "不编辑作者页、引用页、两packet或共享文件；本轮只交独立审阅JSON。"
+  ],
+  "reviewed_at": "2026-10-28T09:56:47.733Z",
+  "packet_hash_checks": [
+    {
+      "path": "research/plenary-nesterov-packet.json",
+      "status": "passed-local-tests-ready-for-parent-integration",
+      "entries": 15,
+      "disagreements": []
+    },
+    {
+      "path": "research/plenary-sarnak-packet.json",
+      "status": "passed-targeted-checks",
+      "entries": 14,
+      "disagreements": []
+    }
+  ],
+  "postwrite_drift": {
+    "status": "no-source-drift-at-followup-postwrite-check",
+    "checked_at": "2026-10-28T09:58:12.543Z",
+    "test_hash_matches_packet": true,
+    "changed_paths": []
+  },
+  "initial_reviewed_at": "2026-10-28T09:50:39.864Z",
+  "followup_recheck": {
+    "checked_at": "2026-10-28T09:56:47.733Z",
+    "scope": "仅SAR-01/SAR-02/SAR-03、对应packet差异及已有31项源码hash一致性；未重复全库审阅、未新增原文阅读、未改作者源。",
+    "changes": [
+      {
+        "path": "trees/math/history/serre-sarnak/5106.tree",
+        "before_sha256": "215f95f6c74106e2a1f45b9a21ed7333dbe821932d3a3e1f7ce1e3543e5c0522",
+        "after_sha256": "b8fde460aca5cdf9693ac6a9e7ee6b85ed977efe8a1e2a0fb3569e388f9e9c23",
+        "status": "targeted-correction-reread-and-confirmed"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5107.tree",
+        "before_sha256": "08c3a9757145d4a5c05e877ad7a0f7835828378ba4898134136bfbf6e8408434",
+        "after_sha256": "a27c32c53a66626dbaa3e2c166b5f9d89c495e67179f335cecd4337a19fc5298",
+        "status": "targeted-correction-reread-and-confirmed"
+      },
+      {
+        "path": "trees/references/icm2026-sarnak.tree",
+        "before_sha256": "4d992c7a879002b50a32fa45fa51155e7c1759fc0f88d4cd48d801b3f84e41a6",
+        "after_sha256": "233eb1cce243fa8e4f81723613f418830f2fefdd82170429cf8a42d04eb65654",
+        "status": "targeted-correction-reread-and-confirmed"
+      },
+      {
+        "path": "research/plenary-sarnak-packet.json",
+        "before_sha256": "b6e3d0961cd6c817b49ec5ec170d9903e9b8da1e358bfa03b4cf536052ebdfec",
+        "after_sha256": "c1567efbba612022df15608c48340a7eec2c59752abcef41cb111b690696786d",
+        "status": "targeted-correction-reread-and-confirmed"
+      }
+    ],
+    "resolved_finding_ids": [
+      "SAR-01",
+      "SAR-02",
+      "SAR-03"
+    ],
+    "new_open_findings": [],
+    "original_findings_and_previous_hashes_preserved": true,
+    "original_change_log": "source_change_log保留首次审阅历史；本次新旧hash见本节changes，最终hash见source_sha256。",
+    "tests": {
+      "test_path": "tests/plenary-sarnak-math.test.mjs",
+      "assertions_read_at_lines": [
+        249,
+        250,
+        251,
+        252
+      ],
+      "coverage": "显式全尖点条件、原刊题名、页面514、packet514的四条断言已实际阅读。",
+      "executed_by_this_reviewer": false,
+      "parent_reported_passed": 17,
+      "parent_reported_failed": 0,
+      "test_sha256_recorded_by_packet": "8fe01dbe416bc395b25fb9aebfe46ae410fa295b259b6a0e9a720b3af7664c60"
+    },
+    "publication_scope": "selected branches only; no full-report/full-video approval"
+  },
+  "postwrite_check_history": [
+    {
+      "status": "no-source-drift-at-postwrite-check",
+      "checked_at": "2026-10-28T09:51:18.018Z",
+      "future_changes": "Any later source or packet change requires a new hash comparison and parent review; this is not a perpetual approval.",
+      "changed_paths": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+\title{基本凸张量法的函数值误差衰减}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.164–166，Theorem 2；采用稍松常数并展开倒数递推}
+
+\p{设 #{p\ge 2}，凸函数 #{f:\mathbb R^n\to\mathbb R} 为 #{C^p}，#{D^pf} 的 Lipschitz 常数为 #{L_p}，且存在极小点 #{x_*}。固定 #{H>0}、#{H\ge pL_p}，反复应用[张量极小化步](5005)得到 #{x_{k+1}}。假设存在 #{D>0}，使 #{f(x)\le f(x_0)} 时 #{\|x-x_*\|\le D}。记}
+##{\delta_k=f(x_k)-f(x_*),\qquad A=\frac{(H+L_p)D^{p+1}}{(p+1)!}.}
+\p{则对 #{k\ge 1} 有}
+##{\delta_k\le A\left(1+\frac{k-1}{(p+1)^{1+1/p}}\right)^{-p}.}
+\p{特别地，固定问题参数后函数值误差为 #{O(k^{-p})}，达到 #{\delta_k\le\varepsilon} 的外层步数为 #{O(\varepsilon^{-1/p})}。精度标准采用[函数值差](4R0L)。}
+
+\p{\strong{证明。}下降性保证所有迭代点位于初始下水平集。以 #{z=x_*} 代入单步比较，得到 #{\delta_1\le A}。对 #{k\ge 1}，取 #{z=(1-\alpha)x_k+\alpha x_*}，其中 #{0\le\alpha\le 1}。由[凸性](0R06)与距离界，}
+##{\delta_{k+1}\le(1-\alpha)\delta_k+A\alpha^{p+1}.}
+\p{若 #{\delta_k=0}，此后始终为零。否则取 #{\alpha=(\delta_k /((p+1)A))^{1/p}}；因 #{\delta_k\le\delta_1\le A}，该选择位于 #{(0,1)}。代入可得}
+##{\delta_{k+1}\le\delta_k-c\delta_k^{1+1/p},\qquad c=\frac{p}{p+1}\bigl((p+1)A\bigr)^{-1/p}.}
+\p{函数 #{t\mapsto t^{-1/p}} 在正半轴上凸；其切线不等式给出，只要下一项仍为正，}
+##{\delta_{k+1}^{-1/p}-\delta_k^{-1/p}\ge\frac{\delta_k-\delta_{k+1}}{p\delta_k^{1+1/p}}\ge\frac{c}{p}.}
+\p{从 #{1} 到 #{k-1} 求和，再用 #{\delta_1^{-1/p}\ge A^{-1/p}}，便得陈述中的上界。若中途达到零，则该上界自动成立。}

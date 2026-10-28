@@ -1,0 +1,14 @@
+\title{逆调和映射的非散度型方程}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hinz–Buffa](icm2026-buffa)，arXiv:2307.06265v2，§2.1}
+
+\p{设 #{x:\hat\Omega\to\Omega} 是平面开集间的 #{C^2} 微分同胚，其逆为 #{y}。令 #{J=Dx}，#{G=J^TJ} 为 [度量矩阵](4Y01)，并定义对称矩阵}
+##{A=\operatorname{cof}G=\begin{pmatrix}g_{22}&-g_{12}\\-g_{12}&g_{11}\end{pmatrix}=(\det G)G^{-1}.}
+\p{对于对称矩阵，#{B:C=\sum_{j,k}B_{jk}C_{jk}} 是 [Frobenius 内积](0N0A)。#{D^2x_i} 表示分量 #{x_i} 的 [Hessian](4R02)。逆映射 #{y} 的两个分量调和，当且仅当}
+##{A(Dx):D^2x_i=0\qquad(i=1,2).}
+\p{\strong{证明。}对恒等式 #{x(y(z))=z} 使用 [链式法则](0A34)，得到 #{D_zy=J^{-1}}，其中右侧在 #{\xi=y(z)} 处取值。再对 #{z_\ell} 求一次导数并对 #{\ell} 求和：}
+##{0=\sum_a J_{ia}\Delta_z y_a+\sum_{a,b}(\partial_{\xi_a\xi_b}x_i)\sum_\ell(\partial_{z_\ell}y_a)(\partial_{z_\ell}y_b).}
+\p{第二项中矩阵 #{D_zy(D_zy)^T=J^{-1}J^{-T}=(J^TJ)^{-1}=G^{-1}}。若 #{h_i=G^{-1}:D^2x_i}，上式成为 #{J\Delta_z y+h=0}。#{J} 可逆，所以 #{\Delta_z y=0} 等价于 #{h=0}；乘以正数 #{\det G} 即得结论。}
+\p{这一等价关系只使用微分同胚假设，不要求区域凸。凸目标域在 [调和延拓的可逆性定理](4Y02)中提供构造这种映射的条件，二者的作用不同。}

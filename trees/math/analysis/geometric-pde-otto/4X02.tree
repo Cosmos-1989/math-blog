@@ -1,0 +1,11 @@
+\title{二次输运代价与 Wasserstein 距离}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[JKO](icm2026-otto)，作者稿 §3，pp.7–8；平移代价的直接证明}
+
+\p{设 #{\mu,\nu} 是 #{\mathbb R^d} 上的[概率测度](00Q3)，满足 #{\int|x|^2\,d\mu+\int|y|^2\,d\nu<\infty}。记 #{\Gamma(\mu,\nu)} 为边缘测度分别为 #{\mu,\nu} 的[耦合](0F63)。二次 Wasserstein 距离定义为}
+##{W_2(\mu,\nu)^2=\inf_{\pi\in\Gamma(\mu,\nu)}\int_{\mathbb R^d\times\mathbb R^d}|x-y|^2\,d\pi(x,y).}
+\p{有限二阶矩的概率测度全体记为 #{\mathcal P_2(\mathbb R^d)}。当 #{d=1} 时，这就是已有[实直线上的 #{W_p}](4M0Y)在 #{p=2} 时的定义；这里将同一耦合构造用于多维空间。乘积测度提供一个有限代价的耦合；#{W_2} 在此集合上的度量性质采用 JKO §3 引述的标准输运定理。[一阶 Wasserstein 距离](310S)采用线性位移代价，不能直接替代这里的平方代价。}
+\p{若 #{\mu,\nu} 是共同质量 #{M>0} 的有限正测度，仍用同一耦合公式定义 #{W_2^2}，于是 #{W_2(\mu,\nu)^2=M W_2(\mu /M,\nu /M)^2}。质量为零时两者都是零测度，约定代价为零。密度 #{\rho} 与测度 #{\rho\,dx} 在记号中可互换。}
+\p{\strong{平移例子。}设 #{\nu=(x\mapsto x+a)_\#\mu}，其中推前表示 #{T_\#\mu(B)=\mu(T^{-1}B)}。耦合 #{(x,x+a)_\#\mu} 的代价为 #{M|a|^2}。任意耦合都满足 #{\int(y-x)\,d\pi=Ma}；[积分 Hölder 不等式](0A68)给出 #{M^2|a|^2\le M\int|y-x|^2\,d\pi}。故 #{W_2^2=M|a|^2}，特别地 #{W_2(\delta_x,\delta_y)=|x-y|}。}

@@ -1,0 +1,16 @@
+\title{LOTT 的一致随机模型构造定理}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Linares–Otto–Tempelmayr–Tsatsoulis](icm2026-otto)，arXiv:2112.10739v3，Theorem 2.2，pp.12–13}
+
+\p{假设随机缓增分布 #{\xi} 满足[Assumption 2.1](4X0H)：中心化、时空平移及空间反射不变、归一化谱隙、噪声导数可闭，并取无理数 #{\alpha\in(1/4,1/2)}。使用[多重指标与齐次度](4X0K)，对每个平滑尺度 #{\tau>0} 采用[中心化模型的系数方程](4X0M)。}
+\p{LOTT 定理断言，存在确定性反项系数 #{c_\beta}，对每个基点 #{x} 存在随机函数 #{\Pi_{x\beta}}，并存在满足[全部基点变换公理](4X0N)的随机行有限矩阵 #{G_{xy}}。这些对象满足规定的纯多项式部分、反项支撑条件与非多项式系数方程，且模型系数具有方程所需的连续二阶空间导数及连续一阶时间导数。}
+\p{对每个允许指标 #{\beta}、每个 #{1\le p<\infty}，以及所有 #{x,y\in\mathbb R^2}，有}
+##{\left(\mathbb E|\Pi_{x\beta}(y)|^p\right)^{1/p}
+\le C_{\alpha,\beta,p}\,d_{\mathrm p}(x,y)^{|\beta|}.}
+\p{对每个允许指标 #{\gamma}，当 #{x\ne y} 时还有}
+##{\left(\mathbb E|(G_{xy})_\beta^\gamma|^p\right)^{1/p}
+\le C_{\alpha,\beta,p}\,d_{\mathrm p}(x,y)^{|\beta|-|\gamma|}.}
+\p{常数不依赖平滑尺度 #{\tau}，也不依赖满足归一化假设的噪声分布律。对角情形由 #{G_{xx}=I} 处理。反项 #{c_\beta} 可以依赖 #{\tau} 并随 #{\tau\downarrow 0} 发散；一致性陈述针对上面两个模型估计。}
+\p{这是关于无限系数族及其基点变换结构的存在定理，证明引用原论文。将模型送到去平滑极限、证明对正则化选择的独立性，以及从模型求解具体非线性初值问题，还需要进一步定理。形式展开 #{\sum_\beta\Pi_{x\beta}z^\beta} 本身也没有被断言数值收敛。}

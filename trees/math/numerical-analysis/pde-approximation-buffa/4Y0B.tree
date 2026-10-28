@@ -1,0 +1,13 @@
+\title{Cordes 变分型的强制性}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，p. 2091，Theorem 3 证明}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为有界凸域，#{V=H^2(\Omega)\cap H^1_0(\Omega)}，范数 #{\|u\|_\Delta=\|\Delta u\|_2}。令对称一致椭圆矩阵场 #{A} 满足 Cordes 条件，#{\gamma=(\operatorname{tr}A)/|A|_F^2}，#{q=\sqrt{1-\varepsilon}<1}。定义}
+##{B(u,v)=\int_\Omega\gamma(A:D^2u)\Delta v.}
+\p{则 #{B} 为有界双线性型，并且}
+##{|B(u,v)|\leq(1+q)\|u\|_\Delta\|v\|_\Delta,\qquad B(u,u)\geq(1-q)\|u\|_\Delta^2.}
+\p{\strong{证明。}令 #{Ru=\gamma L_Au-\Delta u}。由 [Cordes 缩放估计](4Y08) 和 [凸域 Miranda–Talenti 估计](4Y0A)，有 #{\|Ru\|_2\leq q\|D^2u\|_2\leq q\|u\|_\Delta}。将双线性型分解为}
+##{B(u,v)=\int_\Omega\Delta u\Delta v+\int_\Omega Ru\Delta v,}
+\p{对两项应用 [积分 Hölder 不等式](0A68) 即得有界性。取 #{v=u} 并估计第二项的下界，得到 #{B(u,u)\geq\|u\|_\Delta^2-\|Ru\|_2\|u\|_\Delta\geq(1-q)\|u\|_\Delta^2}。这里无需假定 #{B} 对称。}

@@ -1,0 +1,15 @@
+\title{半线性复形同构保持上同调维数}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Serre，GAGA](https://www.numdam.org/article/AIF_1956__6__1_0.pdf)，§4，no 18，命题 12，印刷页 28；线性代数步骤在此证明}
+
+\p{设 #{\sigma:k\to k} 为域自同构，#{C^\bullet,D^\bullet} 是 #{k} 上的上链复形。设每个次数有加法双射 #{T^q:C^q\to D^q}，满足}
+##{T^q(av)=\sigma(a)T^q(v),\qquad T^{q+1}d_C^q=d_D^qT^q.}
+\p{第一式称为半线性；当 #{\sigma} 不是恒等时，它不是通常的[线性映射](00GC)。这些映射诱导[上同调](012B)的半线性同构；若上同调有限维，则 #{\dim_kH^q(C)=\dim_kH^q(D)}。}
+
+\p{\strong{证明。}与微分交换保证 #{T^q} 把闭元送到闭元，把边界送到边界；逆映射也具有此性质，故诱导商空间的双射。取 #{H^q(C)} 的一组基 #{v_1,\ldots,v_m}。若 #{\sum_i a_iT(v_i)=0}，则应用 #{T^{-1}} 得 #{\sum_i\sigma^{-1}(a_i)v_i=0}，从而全部 #{a_i=0}。任意 #{w=T(v)}，把 #{v} 按该基展开，便知 #{w} 是 #{T(v_i)} 的线性组合。因此像基仍是基，维数相同。}
+
+\p{\strong{共轭代数簇中的应用。}若 #{X/\mathbb C} 光滑射影，#{X^\sigma} 是把定义方程的系数逐一施以 #{\sigma} 所得的共轭簇。Serre 的命题 12 用代数微分形式层的 Čech 复形构造上述半线性比较，其低次情形由[一阶 Čech 闭链与边界](0112)描述，得到}
+##{\dim_{\mathbb C}H^q(X,\Omega_X^p)=\dim_{\mathbb C}H^q(X^\sigma,\Omega_{X^\sigma}^p).}
+\p{其中 #{\Omega_X^p} 是代数微分 #{p} 形式层，由仿射开集上 [Kähler 微分模](0E80)的外幂粘合而成。结合[射影 GAGA](5102)以及[紧 Kähler 流形的 Hodge 分解](0BG1)，便得到每个次数的 Betti 数相同；此几何比较见 Serre 命题 12。任意 #{\sigma\in\operatorname{Aut}(\mathbb C)} 不必连续，故不能由“对坐标施以 #{\sigma}”推断两者同胚。}

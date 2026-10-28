@@ -1,0 +1,11 @@
+\title{Cordes 方程的零边界强解适定性}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，p. 2091，Theorem 3；依赖所引凸域正则性}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为有界凸域，#{A} 为对称一致椭圆矩阵场并满足参数 #{\varepsilon>0} 的 Cordes 条件。令 #{\gamma=(\operatorname{tr}A)/|A|_F^2}、#{q=\sqrt{1-\varepsilon}}。对任意 #{f\in L^2(\Omega)}，存在唯一 [强解](4Y05) #{u\in V=H^2(\Omega)\cap H^1_0(\Omega)} 满足 #{A:D^2u=f}，且}
+##{\|\Delta u\|_2\leq\frac{\|\gamma f\|_2}{1-q},\qquad \|u\|_{H^2}\leq\frac{C\|\gamma\|_\infty}{1-q}\|f\|_2.}
+\p{\strong{证明。}采用 [凸域正则性定理](4Y0A) 给出的 Hilbert 范数 #{\|\cdot\|_\Delta}，以及 [有界强制双线性型](4Y0B) #{B(u,v)=\int\gamma L_Au\Delta v}。线性泛函 #{F(v)=\int\gamma f\Delta v} 满足 #{|F(v)|\leq\|\gamma f\|_2\|v\|_\Delta}。由 [Lax–Milgram 定理](4003)，存在唯一 #{u\in V}，使 #{B(u,v)=F(v)} 对所有 #{v\in V} 成立。}
+\p{令 #{r=\gamma(L_Au-f)\in L^2(\Omega)}。由 #{\Delta:V\to L^2} 的满射性，可取 #{v\in V} 使 #{\Delta v=r}。将其代入变分等式得 #{\int r^2=0}，故 #{r=0}。又因 #{\gamma\geq 1/\Lambda>0}，可得 #{L_Au=f} 几乎处处成立。反之，每个强解都满足同一变分等式，因此唯一性随 Lax–Milgram 定理成立。}
+\p{最后取测试函数 #{v=u}，强制性给出 #{(1-q)\|u\|_\Delta^2\leq\|\gamma f\|_2\|u\|_\Delta}。当 #{u=0} 时估计显然；否则约去一因子。再应用凸域的 #{H^2} 范数估计即得结论。}

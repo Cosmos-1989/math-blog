@@ -1,0 +1,13 @@
+\title{张量极小化步的候选点比较}
+\date{2026-10-28}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.162–163，式 (2.6)、Lemma 1 的 (2.11)–(2.12)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 满足[正则化凸模型定理](5004)的假设，#{p\ge 2}，#{H\ge pL_p} 且 #{H>0}。取 #{s_x\in\operatorname*{arg\,min}_s m_{x,H}(s)}，记 #{x^+=x+s_x}。则对每个 #{z\in\mathbb R^n} 有}
+##{f(x^+)\le f(z)+\frac{H+L_p}{(p+1)!}\|z-x\|^{p+1},\qquad f(x^+)\le f(x).}
+\p{同时，#{\|\nabla f(x^+)\|\le(H+L_p)\|s_x\|^p/p!}。本页的极小化步按精确求解理解，其[内层计算代价](4R0L)另计。}
+
+\p{\strong{证明。}模型的正 #{p+1} 次径向项在无穷远压过次数不超过 #{p} 的 Taylor 多项式，所以模型趋于正无穷。可把极小化限制在一个充分大的闭球，再由[极值定理](0A3A)取得极小点。模型上界、极小性及[余项界](5002)依次给出}
+##{f(x^+)\le m_{x,H}(s_x)\le m_{x,H}(z-x)\le f(z)+\frac{H+L_p}{(p+1)!}\|z-x\|^{p+1}.}
+\p{取 #{z=x} 得到单调性。模型的[一阶极小条件](4R06)为 #{\nabla_sT_{x,p}(s_x)+(H/p!)\|s_x\|^{p-1}s_x=0}。将它与梯度余项界相加，再用三角不等式，即得梯度估计。}

@@ -1,0 +1,11 @@
+\title{正定度量如何把能量微分变成下降速度}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 10:30–13:46；有限维计算}
+
+\p{设 #{E:U\to\mathbb R} 光滑，#{U\subset\mathbb R^n} 开，#{G(x)} 是光滑对称正定矩阵。它定义[黎曼度量](00NI) #{g_x(v,w)=v^{\mathsf T}G(x)w}。[全微分](0A33) #{dE_x} 是线性泛函；相对于此度量的梯度由 #{g_x(\operatorname{grad}_gE,v)=dE_x(v)} 对所有 #{v} 成立而确定。因此}
+##{\operatorname{grad}_gE=G^{-1}\nabla E,\qquad \dot x=-G^{-1}\nabla E.}
+\p{这里 #{\nabla E} 是[欧氏梯度](4R01)。正定性保证 #{G} 可逆，代入定义即验证梯度公式。沿任一满足上述常微分方程的光滑曲线，[链式法则](0A34)给出}
+##{\frac{d}{dt}E(x(t))=-\nabla E^{\mathsf T}G^{-1}\nabla E=-g_x(\dot x,\dot x)\le 0.}
+\p{等价地，下降速度是 #{v\mapsto \frac 12g_x(v,v)+dE_x(v)} 的唯一极小点：配方后，该表达式等于 #{\frac 12g_x(v+\operatorname{grad}_gE,v+\operatorname{grad}_gE)-\frac 12g_x(\operatorname{grad}_gE,\operatorname{grad}_gE)}。例如一维迁移率 #{m>0} 对应 #{G=1/m}，速度为 #{-mE'}；迁移率越大，相同能量斜率引起的速度越大。}

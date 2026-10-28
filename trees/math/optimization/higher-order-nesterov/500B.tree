@@ -1,0 +1,15 @@
+\title{凸四次径向子问题化为一个标量方程}
+\date{2026-10-28}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.179–180，式 (5.10)–(5.11)；采用一阶条件直接约化}
+
+\p{设 #{A} 是实对称[半正定矩阵](0N0A)，#{c\in\mathbb R^n}，#{\gamma>0}。考虑}
+##{Q(h)=\langle c,h\rangle+\tfrac 12h^{\mathsf T}Ah+\tfrac\gamma 4\|h\|^4.}
+\p{若 #{c=0}，唯一极小点为零。若 #{c\ne 0}，取[正交对角化](0N0B) #{A=U\operatorname{diag}(\lambda_1,\ldots,\lambda_n)U^{\mathsf T}}，记 #{\widetilde c=U^{\mathsf T}c}。唯一的正数 #{r} 满足}
+##{r=\gamma\sum_{i=1}^n\frac{\widetilde c_i^2}{(\lambda_i+r)^2},}
+\p{极小点由 #{h_*=-(A+rI)^{-1}c} 给出。允许 #{A} 有零特征值。}
+
+\p{\strong{证明。}四次项保证 #{Q(h)\to+\infty}，由[极值定理](0A3A)存在极小点。[一阶凸性刻画](4R06)使驻点等价于全局极小点。驻点方程是 #{(A+\gamma\|h\|^2I)h=-c}。当 #{c\ne 0} 时必有 #{h\ne 0}，令 #{r=\gamma\|h\|^2>0}，即可消去 #{h} 并得到所示方程。}
+\p{方程右侧关于 #{r>0} 连续且严格递减，左侧严格递增。在 #{r\downarrow 0} 时，右侧或趋于正数、或趋于正无穷；在 #{r\to\infty} 时趋于零。由[介值定理](0A44)存在唯一交点。所得 #{h_*} 确实满足驻点方程，且每个极小点都必须对应这个交点，故唯一。}
+\p{一次矩阵分解后，计算标量方程右侧只需有限求和。但分解、坐标变换和根求解的精度仍有代价。该约化解释了固定矩阵的复用方式，不把外层一次迭代记成一次标量运算。}

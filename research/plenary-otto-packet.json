@@ -1,0 +1,908 @@
+{
+  "date": "2026-10-28",
+  "report": {
+    "speaker": "Felix Otto",
+    "title": "Geometric Concepts in Partial Differential Equations",
+    "outline": "4X00",
+    "prefix": "4X",
+    "reference": "icm2026-otto",
+    "source_url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+    "source_url_role": "Official title/abstract identity only; not a mathematical text or transcript.",
+    "version_url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+    "doi": null,
+    "pages": null,
+    "license": "逐源状态：官方报告视频、自动字幕及MPI题名页未核得可再利用许可；JKO正式刊本标示SIAM版权，大学托管作者稿未核得额外许可；LOTT与BOT所用arXiv版本未核得明确再利用许可；Oberwolfach Report33/2025标示CC BY-SA 4.0（另有声明者除外）。不把任何单一来源许可扩展到其他来源。",
+    "integration_status": "caption-grounded-selected-branches",
+    "question": "耗散度量怎样组织密度演化与两相混合，噪声方向微分和基点变换怎样组织奇异随机方程的局部模型？",
+    "reading_scope": "报告正文实际通过官方视频的en-orig自动英语字幕JSON3逐段阅读：00:12.160至最后文字事件55:30.319（持续至55:34.698），1321个非空事件；未播放或核验全部音画、未下载全量视频，未把视频说明当正文。已读两条实际讲述主线；第三个SL(n)例子只在官方摘要中宣布，字幕未展开。未取得正式ICM报告书面全文；没有给它分配SIAM章节或DOI。背景实际读取JKO作者稿pp.1–15（26页稿，p.9/p.14另作图像核对）、LOTT v3 pp.1–14（数学主体§§1–2.4，p.14的§2.5仅起首）、Otto OWR贡献pp.1765–1768全文、BOT v3 pp.1–5。深证明章节未读，未声称原论文全文核读。",
+    "mathematical_body_sources": [
+      "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+      "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+      "https://arxiv.org/pdf/2112.10739v3",
+      "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+      "https://arxiv.org/pdf/2401.05935v3"
+    ],
+    "module_rationale": [
+      "25个原子页，分别建立质量输运和耗散的本科计算链、粗糙乘积和随机系数模型的定义链；数量由所选问题及必要前置决定。",
+      "实际报告用两条vignette；第一支展开光滑梯度与分层混合，第二支用LOTT精确定理支撑报告的几何语言。",
+      "4M0Y已经定义实线W_p，4X02明确p=2的一致性并扩展多维和相同有限质量；310S仅作W1比较。复用4513、4501、4502、4U01、4U02及既有分析/概率/形式代数基础。",
+      "JKO及LOTT构造定理明确引用；局部的变分、缩放、振荡、谱隙和基点变换证明独立展开；未将报告口述升级为深定理完整证明。"
+    ],
+    "proof_scope": {
+      "4X00": {
+        "status": "narrative-outline",
+        "scope": "两条实际报告主线：耗散度量与混合、粗糙随机模型及基点变换结构。"
+      },
+      "4X01": {
+        "status": "local-proof",
+        "scope": "正定矩阵度量下梯度、下降方程、能量恒等式及速度极小化。"
+      },
+      "4X02": {
+        "status": "definition-with-local-example-and-cited-metric-property",
+        "scope": "复用4M0Y的实线p=2定义，扩展至R^d与相同有限质量；平移最优代价本地证明，普遍度量性引用JKO §3。"
+      },
+      "4X03": {
+        "status": "local-proof",
+        "scope": "光滑环面推前的连续性方程及Jacobian补偿；复用4501/4502。"
+      },
+      "4X04": {
+        "status": "conditional-local-proof",
+        "scope": "假设光滑势函数已存在；正交分解证明约束最小动能和唯一速度，不证明椭圆可解性。"
+      },
+      "4X05": {
+        "status": "local-proof",
+        "scope": "光滑正周期密度的第一变分、最陡下降、Fokker–Planck方程和熵耗散。"
+      },
+      "4X06": {
+        "status": "conditional-local-proof",
+        "scope": "假设逐步极小点存在，证明离散耗散、行动量界和离散1/2阶时间模；不给一般存在性。"
+      },
+      "4X07": {
+        "status": "cited-research-theorem",
+        "scope": "JKO作者稿§4假设与极小点存在唯一性、§5主定理；固定时刻sigma(L1,Linf)收敛、初值强L1、矩和势能局部时间有界。未展开收敛深证明。"
+      },
+      "4X08": {
+        "status": "local-proof",
+        "scope": "周期细格特征函数对连续测试弱收敛、L1不强收敛；不是原始微结构松弛定理。"
+      },
+      "4X09": {
+        "status": "definition-and-conditional-energy-bound",
+        "scope": "饱和两相等质量加权输运步；假设极小点存在时的旧状态竞争比较。"
+      },
+      "4X0A": {
+        "status": "conditional-local-proof",
+        "scope": "域内严格混合、边界可纯相，假设压力产生可行光滑通量；在有限耗散类中配方证明唯一最小耗散及能量恒等式。不证明压力可解性。"
+      },
+      "4X0B": {
+        "status": "local-proof",
+        "scope": "零总通量分层模型的有效迁移率、端点斜率和严格凸性。"
+      },
+      "4X0C": {
+        "status": "local-proof",
+        "scope": "约化标量模型的连续自相似稀疏波、弱方程、初值L1loc及熵关系；不证明原始流体松弛极限或熵解一般唯一性。"
+      },
+      "4X0D": {
+        "status": "local-proof",
+        "scope": "C^alpha振荡反例：u_n趋零而u_n u_n''趋-1/2；包括正系数a(u)=1+u。"
+      },
+      "4X0E": {
+        "status": "local-proof",
+        "scope": "抛物缩放、本构重标度、D=3及白噪声形式指数；不以缩放代替解的存在。"
+      },
+      "4X0F": {
+        "status": "definition-and-local-calculation",
+        "scope": "实Hilbert等距高斯族、柱状噪声方向导数、有限维表示无关性及二次例子。"
+      },
+      "4X0G": {
+        "status": "local-proof",
+        "scope": "有限维光滑紧支函数的高斯谱隙，由显式OU算子、分部积分和时间积分证明；闭包推广需可闭性。"
+      },
+      "4X0H": {
+        "status": "source-assumption-definition",
+        "scope": "完整转述LOTT Assumption2.1，包括无理alpha范围、时空平移/空间反射、双范数、谱隙及可闭性。"
+      },
+      "4X0I": {
+        "status": "conditional-local-proof",
+        "scope": "OWR半线性椭圆背景：给定可微光滑参数族时的两种方向线性化；不构造粗糙图册或拓扑流形。"
+      },
+      "4X0J": {
+        "status": "local-proof",
+        "scope": "二维多项式基点变换的二项式展开、复合律、行列三角条件和常数商；Gamma_yx-I在基空间T上降阶，其代数转置G_xy作用于系数族时低次输入可贡献到高次输出，给出1到2的系数2例。"
+      },
+      "4X0K": {
+        "status": "definition-and-local-proof",
+        "scope": "两组指标、populated条件、齐次度；不同齐次度局部有限、整数齐次度的判别，明确z0造成同层无限指标。"
+      },
+      "4X0L": {
+        "status": "local-proof",
+        "scope": "平移导子的链式公式、逐系数有限性、本构权重增加和形式指数；不容许任意形式级数的固定非零实数平移。"
+      },
+      "4X0M": {
+        "status": "source-model-definition",
+        "scope": "平滑、模型系数、反项支撑、右端方程及逐系数有限性；存在性在4X0O引用。"
+      },
+      "4X0N": {
+        "status": "source-model-definition",
+        "scope": "行有限基点变换矩阵、常数商、复合律、三角条件及纯多项式行；明确G_xy=(Gamma_yx)^*以及LOTT转置记号交换下标的约定。有限维原型仅指多项式模型的有限次数截断，未截断部分无限维。"
+      },
+      "4X0O": {
+        "status": "cited-research-theorem",
+        "scope": "LOTT Theorem2.2：指定假设下构造模型/反项/基点变换矩阵，所有有限p矩估计与平滑尺度无关；不扩张成去平滑极限、全形式级数收敛或非线性解定理。"
+      },
+      "4X0P": {
+        "status": "local-proof",
+        "scope": "正阶一致局部近似的重构唯一性，使用近似恒等卷积；不证明重构存在。"
+      },
+      "icm2026-otto": {
+        "status": "bibliographic-reference",
+        "scope": "报告官方身份及视频定位、独立背景论文版本/页码、必要版权；阅读方法与限制在packet。"
+      }
+    },
+    "claim_sources": {
+      "4X00": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "04:38–20:17；20:18–55:30；英语自动字幕的实际正文"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§§1–2.4，pp.2–14"
+        },
+        {
+          "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+          "location": "§§1–5，实际读pp.1–15"
+        }
+      ],
+      "4X01": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "10:30–13:46；度量将能量微分转为速度。有限维证明为本地推导。"
+        }
+      ],
+      "4X02": [
+        {
+          "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+          "location": "§3，pp.7–8；平移例子本地推导"
+        }
+      ],
+      "4X03": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "04:38–09:00、13:49–17:34；推前计算本地展开"
+        }
+      ],
+      "4X04": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "11:00–17:34；带权正交最小化本地证明"
+        }
+      ],
+      "4X05": [
+        {
+          "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+          "location": "§§1–2，pp.1–7"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "19:26–20:15；JKO与Fokker–Planck"
+        }
+      ],
+      "4X06": [
+        {
+          "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+          "location": "§4，pp.9–13；离散比较法"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "13:49–17:34"
+        }
+      ],
+      "4X07": [
+        {
+          "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+          "location": "§4 p.9的假设；pp.10–13的离散极小点命题；§5 p.14主定理，式(30)–(33)"
+        }
+      ],
+      "4X08": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "14:20–17:34；特征函数向体积分数的松弛动机；细格例子本地证明"
+        }
+      ],
+      "4X09": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "13:49–17:34；两个加权Wasserstein平方代价及饱和约束；公式按本地定义核算"
+        }
+      ],
+      "4X0A": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "09:03–13:46；迁移率及Darcy耗散；光滑混合态模型本地推导"
+        }
+      ],
+      "4X0B": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "17:38–19:22；分层、迁移率依赖及混合传播。具体约化通量本地推导，非字幕公式转录"
+        }
+      ],
+      "4X0C": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "17:38–19:22；线性扩张的分层混合。稀疏波是本地标量模型证明"
+        }
+      ],
+      "4X0D": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "22:53–25:20；非线性二阶乘积障碍。振荡序列本地证明"
+        }
+      ],
+      "4X0E": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§1 pp.2–5；§2.2.5 p.11"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "29:59–34:11"
+        }
+      ],
+      "4X0F": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§2.1 pp.6–7，(2.3)–(2.6)"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "34:13–36:39"
+        }
+      ],
+      "4X0G": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§2.1 pp.6–7提供谱隙背景；有限维高斯半群证明为本地推导"
+        }
+      ],
+      "4X0H": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "Assumption2.1 pp.6–8；(2.1)–(2.7)及低频截断说明"
+        }
+      ],
+      "4X0I": [
+        {
+          "url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+          "location": "pp.1765–1768，(1)、(2)及线性化公式；半线性背景"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "36:43–44:54"
+        }
+      ],
+      "4X0J": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§2.2.6 p.12，(2.30)–(2.33)及脚注40–41；多项式复合、基空间与对偶作用方向和1到2系数例的本地计算"
+        }
+      ],
+      "4X0K": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§§2.2.1–2.2.5 pp.8–11；(2.8)、(2.15)、(2.19)–(2.29)"
+        }
+      ],
+      "4X0L": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§2.2.1 pp.8–9；(2.10)–(2.13)，形式代入限制另行澄清"
+        }
+      ],
+      "4X0M": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§2.2 pp.8–12；(2.17)–(2.25)、(2.34)–(2.35)"
+        }
+      ],
+      "4X0N": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "§2.2.6 p.12；(2.30)–(2.33)、行有限性脚注40、转置记号交换下标的脚注41；有限维描述限于多项式有限次数截断"
+        }
+      ],
+      "4X0O": [
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "Theorem2.2 pp.12–13；依赖Assumption2.1及§2.2；p.8明确去平滑极限在后续工作"
+        }
+      ],
+      "4X0P": [
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "44:59–48:04；重构与正指数。仅重构唯一性基本引理为本地证明"
+        }
+      ],
+      "icm2026-otto": [
+        {
+          "url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+          "location": "官方题名与摘要身份，非数学正文"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+          "location": "频道、视频题名、时长、上传日期及两主线时间定位"
+        },
+        {
+          "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+          "location": "首页、§4 p.9、§5 p.14"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2112.10739v3",
+          "location": "首页版本；§§2.1–2.3"
+        },
+        {
+          "url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+          "location": "作者贡献pp.1765–1768及文集版权"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2401.05935v3",
+          "location": "首页与§§1.1–1.2，pp.1–5"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "Arnold/Euler/Brenier最小作用量与松弛的独立证明链未扩展；复用既有流映射和IPM页面。",
+      "Otto1999微结构松弛、真实界面模型到混合模型的收敛、完整多相模型未核读全文，未导入其深定理。",
+      "报告关于噪声微分的高阶局部模型化、二次冻结、重构存在及BPHZ归纳的完整证明未展开。",
+      "官方摘要第三例：临界无散漂移扩散与SL(n)上的Brownian运动，仅为宣布内容，本次报告字幕未实际讲述，未建数学节点。"
+    ],
+    "unexpanded_deep_proofs": [
+      "W2的一般度量性和最优耦合存在理论",
+      "JKO离散极小点存在/唯一性及连续时间收敛",
+      "LOTT Theorem2.2模型构造、非高斯谱隙估计及BPHZ归纳",
+      "去平滑极限、普适性、非线性解理论、重构存在定理"
+    ],
+    "subject_ids": [
+      "006A",
+      "0065",
+      "006C",
+      "0072"
+    ],
+    "subject_rationale": {
+      "006A": "连续性方程、Fokker–Planck、Darcy、守恒律、奇异拟线性热方程。",
+      "0065": "正定耗散度量、密度切向最小动能、图册动机与基点变换复合律；不宣称拓扑流形存在。",
+      "006C": "白噪声缩放、柱状Malliavin导数、高斯谱隙、一般噪声假设与随机模型矩估计。",
+      "0072": "两相饱和、相迁移率、分层约化、混合带传播及模型/极限的区分。"
+    }
+  },
+  "prerequisites": {
+    "4X00": [],
+    "4X01": [
+      "00NI",
+      "0A33",
+      "4R01",
+      "0A34"
+    ],
+    "4X02": [
+      "00Q3",
+      "0F63",
+      "4M0Y",
+      "0A68"
+    ],
+    "4X03": [
+      "4501",
+      "4X02",
+      "4301",
+      "4502"
+    ],
+    "4X04": [
+      "4X03",
+      "4X01"
+    ],
+    "4X05": [
+      "4X03",
+      "4X04",
+      "4X01"
+    ],
+    "4X06": [
+      "00EK",
+      "4X01"
+    ],
+    "4X07": [
+      "4X02",
+      "4X06",
+      "00Q6",
+      "00MJ",
+      "0A66",
+      "4X05"
+    ],
+    "4X08": [
+      "00Q2",
+      "00Q6"
+    ],
+    "4X09": [
+      "4X08",
+      "4X02",
+      "4X01",
+      "4X06"
+    ],
+    "4X0A": [
+      "4X09",
+      "4X01"
+    ],
+    "4X0B": [
+      "4X0A"
+    ],
+    "4X0C": [
+      "4X0B",
+      "00Q6"
+    ],
+    "4X0D": [
+      "0W0Z"
+    ],
+    "4X0E": [
+      "0A34",
+      "4U02"
+    ],
+    "4X0F": [
+      "00MQ",
+      "4U01",
+      "0A34"
+    ],
+    "4X0G": [
+      "00L3",
+      "0N0R",
+      "00L2",
+      "4X0F"
+    ],
+    "4X0H": [
+      "0H4G",
+      "0W01",
+      "0H4F",
+      "4X0F",
+      "4X0G"
+    ],
+    "4X0I": [
+      "0A33",
+      "0A34"
+    ],
+    "4X0J": [
+      "4X0E"
+    ],
+    "4X0K": [
+      "0AL0"
+    ],
+    "4X0L": [
+      "4X0K",
+      "0AL1",
+      "0AL0"
+    ],
+    "4X0M": [
+      "4X0H",
+      "4X0K",
+      "4X0L"
+    ],
+    "4X0N": [
+      "4X0K",
+      "4X0M",
+      "4X0J"
+    ],
+    "4X0O": [
+      "4X0H",
+      "4X0K",
+      "4X0M",
+      "4X0N"
+    ],
+    "4X0P": [
+      "0W0Z",
+      "4X0E"
+    ],
+    "icm2026-otto": []
+  },
+  "reviewed_reused_ids": [
+    "00EK",
+    "00L2",
+    "00L3",
+    "00MJ",
+    "00MQ",
+    "00NI",
+    "00Q2",
+    "00Q3",
+    "00Q6",
+    "0A33",
+    "0A34",
+    "0A66",
+    "0A68",
+    "0AL0",
+    "0AL1",
+    "0F63",
+    "0H4F",
+    "0H4G",
+    "0N0R",
+    "0W01",
+    "0W0Z",
+    "310S",
+    "4301",
+    "4501",
+    "4502",
+    "4513",
+    "4M0Y",
+    "4R01",
+    "4U01",
+    "4U02"
+  ],
+  "source_readings": [
+    {
+      "url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+      "version": "MPI MiS official news page",
+      "read_at": "2026-10-28",
+      "scope": "题名、讲者及三例摘要；身份及宣布范围。",
+      "full_mathematical_body": false,
+      "method": "Official HTML text read; metadata only."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+      "version": "Simons Foundation upload 2026-08-17; automatic English en-orig JSON3",
+      "read_at": "2026-10-28",
+      "scope": "全部1321个非空英语自动字幕事件，分0–20min、20–40min、40min–end读取；原视频55:45。",
+      "full_mathematical_body": false,
+      "full_caption_track_read": true,
+      "method": "yt-dlp --skip-download --write-auto-subs --sub-langs en-orig --sub-format json3 --write-info-json; node解析并逐段打印字幕正文。没有用视频description或AI摘要代替正文。未播放全片或逐帧核查公式。",
+      "first_event_ms": 12160,
+      "last_event_ms": 3330319,
+      "last_event_end_ms": 3334698,
+      "nonempty_events": 1321,
+      "local_file": "/tmp/otto-icm2026-source/K8-O-FdUzGs.en-orig.json3",
+      "sha256": "11197de436fbdd8f9e4a9752340e435a0f41b363d56b07575662835b76f33347",
+      "read_content": [
+        {
+          "range": "01:39–04:35",
+          "content": "报告开场明确两个vignettes，梯度流与重整化的几何观点。"
+        },
+        {
+          "range": "04:38–09:00",
+          "content": "Euler/Arnold体积保持流、L2几何及Brenier松弛动机。"
+        },
+        {
+          "range": "09:03–13:46",
+          "content": "Darcy力速度关系、迁移率倒数、重力两相能量，能量微分需度量转为速度。"
+        },
+        {
+          "range": "13:49–17:34",
+          "content": "隐式时间离散、特征函数松弛为分数、两个加权Wasserstein平方代价与饱和。"
+        },
+        {
+          "range": "17:38–20:17",
+          "content": "分层重相在上、混合带线性增长、迁移率依赖；随后JKO熵与Fokker–Planck。"
+        },
+        {
+          "range": "20:18–29:55",
+          "content": "粗糙方程、局部图册动机、常系数分布算子与非线性乘积障碍、平稳噪声及谱隙。"
+        },
+        {
+          "range": "29:59–36:39",
+          "content": "尺度指数、白噪声及较规则的Cameron–Martin方向、噪声导数控制方差。"
+        },
+        {
+          "range": "36:43–44:54",
+          "content": "解析参数、线性解的仿射结构、基点图册与转移；噪声导数只能局部近似参数导数。"
+        },
+        {
+          "range": "44:59–49:55",
+          "content": "二次冻结、正指数重构、相容性与确定性局部反项。"
+        },
+        {
+          "range": "49:58–55:30",
+          "content": "逐项三角构造、多重指标与树、谱隙路线；几何语言的动机性及结语。"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+      "version": "26-page author manuscript, title-page date 1999-02-04; distinct from published 1998 pp.1–17",
+      "read_at": "2026-10-28",
+      "scope": "pp.1–15：摘要、§§1–3、§4假设与极小点证明、§5主定理及证明起首；未读pp.16–26。主定理固定t的weakly in L1按sigma(L1,Linf)解码；原稿p.14式(30)明确此空间。",
+      "full_mathematical_body": false,
+      "method": "pdftotext -layout按页读取；p.9与p.14以PNG图像查看核对增长假设、beta和L1/时间Linf指数。",
+      "local_file": "/tmp/otto-icm2026-source/jko-author-manuscript.pdf",
+      "sha256": "b8b52c6bdc8aa63499819e2f355197e12955e8057975f2345abe646361741e14"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2112.10739v3",
+      "version": "arXiv:2112.10739v3, 2024-05-30, 76 pages",
+      "read_at": "2026-10-28",
+      "scope": "p.1标题/摘要/目录，pp.2–14数学内容：§1、§§2.1–2.4、§2.5起首。pp.6–14关键假设、模型定义、Theorem2.2及Proposition2.3另复读。§§3–8的深证明未读。",
+      "full_mathematical_body": false,
+      "method": "versioned arXiv PDF下载至/tmp；pdftotext -layout分段逐页读取，截断部分另以更小页段复读。",
+      "local_file": "/tmp/otto-icm2026-source/lott-2112.10739v3.pdf",
+      "sha256": "0d6f5896cb8f00006c85ea361317e87636b0df45e426b10438c72f74be41217e"
+    },
+    {
+      "url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+      "version": "Oberwolfach Report33/2025; Otto contribution pp.1765–1768",
+      "read_at": "2026-10-28",
+      "scope": "该4页贡献全文（文集PDF第13–16页）；不指70页文集全部。含半线性椭圆假设、图册方程、两种线性化、转移与形式级数不预期收敛的说明。",
+      "full_mathematical_body": true,
+      "full_mathematical_body_unit": "Otto four-page contribution only",
+      "method": "MFO原始PDF；pdftotext -layout -f13 -l16阅读全文；排除页首前篇结尾与末页下一篇开头。",
+      "local_file": "/tmp/otto-icm2026-source/owr2025-33.pdf",
+      "sha256": "f5f1047cfe6b0d8a18d740e1df3459232ee102f38e99178845a535625781b7a9"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2401.05935v3",
+      "version": "arXiv:2401.05935v3, 2025-10-07",
+      "read_at": "2026-10-28",
+      "scope": "只读pp.1–5：摘要、目录、§§1.1–1.2；用于识别半线性模型和manifold一词的非拓扑定理含义。未核读其主定理与证明。",
+      "full_mathematical_body": false,
+      "method": "版本PDF正文pdftotext -layout；首次下载因空间不足截断，重新下载成功后读取。",
+      "local_file": "/tmp/otto-icm2026-source/bot-2401.05935v3.pdf",
+      "sha256": "976d9f2a49a3176647372b8a4700db60a5f6d00e0e750570a71341a1b2deb7a0"
+    },
+    {
+      "url": "https://www.mis.mpg.de/de/people/felix-otto/publications",
+      "version": "author institute bibliography",
+      "read_at": "2026-10-28",
+      "scope": "题名、作者、刊物与DOI交叉核对；未从书目页推断已读论文。",
+      "full_mathematical_body": false,
+      "method": "作者所在机构出版目录HTML。"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291097-0312%28199907%2952%3A7%3C873%3A%3AAID-CPA5%3E3.0.CO%3B2-T",
+      "version": "Otto1999 publisher abstract",
+      "read_at": "2026-10-28",
+      "scope": "只读摘要/书目信息，全文未取得；未用于认证松弛深定理。",
+      "full_mathematical_body": false,
+      "method": "出版摘要与作者书目。"
+    }
+  ],
+  "reuse_review_notes": [
+    "packet.prerequisites只以27个自有tree页为键；引用页和总纲为空数组。依赖可指向全站既有原子页。普通比较/导航链接不强行变为前置。",
+    "实际阅读4M0Y后确认其已定义实线W_p；4X02交叉复用p=2并明确扩展R^d与非单位质量。先前只发现310S的W1检索不充分，已由父代理提示修正。",
+    "实际阅读00MJ与0A66，并在4X07解码sigma(L1,Linf)；不与4X08仅连续测试的测度弱收敛混用。",
+    "4501/4502提供流映射和Jacobian；4513提供单速度IPM作比较，4X0A定义的是光滑混合态两通量问题。",
+    "4U01定义在R_+×R的白噪声；4X0F重新给实Hilbert高斯族定义，可取L2(R²)，不偷换原页定义域。4U02复用缩放公式。",
+    "0W0Z定义一维缓增分布；4X0D/4X0P就地说明周期/多维测试配对。0H4F/0H4G与0W01支持R² Schwartz/Fourier及Plancherel。",
+    "0AL0/0AL1提供有限变量形式级数和形式偏导；4X0K/0L明确可数变量的逐系数有限性，避免固定非零常数平移任意形式级数。",
+    "4X05到4X07、4X0M到4X0O、4X0E到4X0H为后继结果链接，不登记反向前置；4X0J到4X0N为行列约定的比较链接，不增加导致循环的前置边；共享前置记录只读不改。"
+  ],
+  "source_findings": [
+    {
+      "id": "report-body-vs-identity",
+      "source_url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+      "location": "官方摘要与视频开场03:13",
+      "finding": "官方摘要宣布三个例子；完整字幕实际明确两个vignettes且只讲前两条。SL(n)支未整合。source_url只身份；数学正文来源在reading_scope及source_readings。"
+    },
+    {
+      "id": "asr-not-formula-verification",
+      "source_url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+      "location": "完整自动字幕，尤其人名和公式段",
+      "finding": "读取的是en-orig自动字幕，不是人工校订逐字稿或音画核验。没有复制字幕公式；定理来自作者正文，局部公式独立推导。视频metadata的标题/日期不作证明。"
+    },
+    {
+      "id": "jko-manuscript-pagination",
+      "source_url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+      "location": "首页、p.9、p.14",
+      "finding": "26页作者稿首页日期1999-02-04，正式刊本1998共17页；稿中出现[?]/(??)交叉引用占位，主定理按§5 p.14定位不猜编号。文字提取指数失真，以p.9/p.14图像确认。"
+    },
+    {
+      "id": "owr-model-boundary",
+      "source_url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+      "location": "pp.1765–1768",
+      "finding": "半线性椭圆模型的奇异范围alpha<0、subcritical条件(m-1)alpha+2>0，与报告/LOTT拟线性alpha>0不同。短文的paraphrased theorem未冒充精确定理；4X0I只作给定光滑参数族的线性化。"
+    },
+    {
+      "id": "owr-measure-shift",
+      "source_url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+      "location": "p.1766 Cameron–Martin说明",
+      "finding": "原文measure is preserved措辞不精确；Cameron–Martin平移对应测度类等价，不是概率测度不变。数学页未沿用该句。"
+    },
+    {
+      "id": "owr-formal-and-degree",
+      "source_url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+      "location": "p.1767局部近似；p.1768",
+      "finding": "多项式次数是严格小于2+s；形式级数不预期收敛。式(3)右端f/p次序疑似笔误，未导入。"
+    },
+    {
+      "id": "lott-formal-translation",
+      "source_url": "https://arxiv.org/pdf/2112.10739v3",
+      "location": "§2.2.1 p.8",
+      "finding": "任意形式幂级数不能无条件作固定非零实常数平移。4X0L限制为多项式验证或形式参数平移；导子逐系数定义有独立有限性证明。"
+    },
+    {
+      "id": "lott-exact-theorem-range",
+      "source_url": "https://arxiv.org/pdf/2112.10739v3",
+      "location": "Assumption2.1 pp.7–8；Theorem2.2 pp.12–13",
+      "finding": "无理alpha∈(1/4,1/2)、空间反射和可闭性不能省；低频未截断白噪声不能直接作全尺度例子。模型矩估计不等于去平滑极限或非线性解理论。"
+    },
+    {
+      "id": "graded-not-finite-dimensional",
+      "source_url": "https://arxiv.org/pdf/2112.10739v3",
+      "location": "§2.2.5 p.11",
+      "finding": "不同齐次度局部有限；z0任意幂给同一alpha层无限多个指标。4X0K保留这个区别。"
+    },
+    {
+      "id": "porous-paper-access",
+      "source_url": "https://www.mis.mpg.de/de/people/felix-otto/publications",
+      "location": "Otto1999条目",
+      "finding": "原论文全文未取得。4X0B/C是自足约化模型推导；未声称证明其界面松弛/极限选择。"
+    }
+  ],
+  "terminology_checks": [
+    {
+      "url": "https://www.bananaspace.org/wiki/Wasserstein距离",
+      "attempted_at": "2026-10-28",
+      "status": "unavailable",
+      "result": "直接web打开不可访问；保留既有4M0Y/310S的Wasserstein名称，未宣称外站核对成功。"
+    },
+    {
+      "url": "https://www.bananaspace.org/wiki/Malliavin导数",
+      "attempted_at": "2026-10-28",
+      "status": "unavailable",
+      "result": "直接web打开不可访问；定义按作者正文，采用Malliavin导数/谱隙/基点变换并给出具体公式。搜索未提供可用香蕉空间正文，未采用其他摘要来源。"
+    }
+  ],
+  "coordination": {
+    "scope": "Only trees/math/analysis/geometric-pde-otto/4X*.tree, trees/references/icm2026-otto.tree, research/plenary-otto-packet.json, tests/plenary-otto-math.test.mjs.",
+    "write_gate": "User released after prior commit 7432503f; credible source reading completed before first repo edit.",
+    "shared_registers_navigation_queue": "Parent owned and untouched; four subject_ids justified by actual pages. prerequisites keys owned pages only.",
+    "source_policy": "Primary video captions and author/publication texts only. No az9713 AI summary used. No full video download.",
+    "disk_policy": "After no-space incident, limited to small source files and text. Downloads in /tmp only; no unrelated deletion.",
+    "build_release": "No global build, shared nav/manifest/audit edits, commit or push. git status/diff read-only checks only.",
+    "parent_review": "Parent read 4X01–0H with no initial mathematical finding; requested 00MJ weak-L1 decoding and explicit 4M0Y reuse, both applied after source recheck. Requested public-reference process prose moved here."
+  },
+  "validation": {
+    "status": "passed-targeted-source-and-math-checks",
+    "scope": "Only 27 owned tree sources, this packet and tests/plenary-otto-math.test.mjs checked; shared prerequisite graph read for the owned reachable closure. No Forester build/parser, rendered-page QA, global audit, publication, commit or push.",
+    "checked_at": "2026-10-28",
+    "tree_files": 27,
+    "atomic_pages": 25,
+    "source_sha256": {
+      "4X00": "126f0a8aaf996792cab8463ac4f5fc8100fd3c104e461fdd002284e2d0df2c92",
+      "4X01": "e48d8d0bb6230fb692246e935718eab6d4ff0290bbca6862245c9499628fb493",
+      "4X02": "7bc424effb2b6c92eba6b9e2f27b31c566e355941e11cf03eb905b82c9065ab8",
+      "4X03": "f4205226694c587e34c4ae00c0a3143607e24ebdd228c1e69be4458e744fd6b8",
+      "4X04": "8ff7317824da404cef2de6d5aae1310bcfa4c3501521bedf0689a50f04dbd2a2",
+      "4X05": "484e94deff42f80154dc0d0027cf4025469431917eefa4c16501ca55949ff296",
+      "4X06": "aee768fec1adceaea2101b64f82d705c5edc93ec203f19260f5375655e067f04",
+      "4X07": "0a8100a4fefb89c6ba57ac46b892f789f8847751bb245adb42c519ce0ef2d1c5",
+      "4X08": "8deb16c22da1116a301f8d59ad4fe8ec957038f505ad9682f8b39127d5f7da86",
+      "4X09": "309ada1eee5f3a833b3cf38ba235748d512683aad4a7fc5375efc8dbddc7c118",
+      "4X0A": "9807c898eef8708db044c7706d076df54d937fe5fd5953130fde8829d0db8e5c",
+      "4X0B": "56fcafb17c86be839fffe550b32987273f161a47a1e360cbffa2b1921d4dd143",
+      "4X0C": "21172162fef2c2a742accd9d15d674244db4bc37af3a5e8a9a26da0e93583129",
+      "4X0D": "55b5e9a504056b09277f37d7d2609e926103f70d78635c71ea304ad011dc4d01",
+      "4X0E": "4bb9e5dc3cbb01532dec5cc64c0564a242b3f4a610e6194f9ae20eb3d5796b6b",
+      "4X0F": "27b7eddcfd47e421e93969a2edf092788b94c6ab07805323a3feba9eff071699",
+      "4X0G": "80e4cc20e3facece96d8959ae7d5954c0d1fde71216d1181f789a6e94c6662be",
+      "4X0H": "9233e4c0cce403206e6580f45691c2ba9ad0b847244de3ad6f28041f8291f2f0",
+      "4X0I": "1aa4c398738bb6bf59959738c60185de37e605bd0b4668c6fa9c94f419cb3663",
+      "4X0J": "765f435b60f6bf38c0772e021f8465662bf8b2a941fa59623bc7c39311b9d127",
+      "4X0K": "497d67fc3a2d055a55caa3f9d7022ab0c9f5f18b8115bc04792fb808c2ffbb95",
+      "4X0L": "aeca23db20a9b5f1cbe4ec19c56c7ad5f62e771e8241d89edbab388e2642150f",
+      "4X0M": "c5c28d6786429664cfe6f3bd8d1b617f65fa397bab14529fd0100c0e90116857",
+      "4X0N": "4b4efcf78e0903efb0beec9363671184ce1bb5b583c78dbb6287256e8dde798e",
+      "4X0O": "439ebf37349451e13a197d9a4b74f5dd06c704586372b3ad3b9edd1ac3c91c9f",
+      "4X0P": "be4b4bc8ca1354a71be01ab098049483d67fa46c2660fc43907d7a1d3e1e9d45",
+      "icm2026-otto": "5afd216022379d3574d60e083b2d094ad412d433666834ad75d775303fb184df"
+    },
+    "checks": [
+      "27 tree sources: 25 atoms, one narrative outline and one reference. Unique source IDs, all owned internal links resolve, and all owned sources reachable from 4X00 by body links, without relying on metadata links.",
+      "prerequisites, proof_scope and claim_sources have exactly the 27 owned keys. 70 prerequisite edges have explicit body links and atomic targets. 30 reused IDs read. The reachable combined prerequisite graph has 214 nodes and no cycle.",
+      "All owned trees normalized with scripts/note-editorial-lib.mjs normalizeFormat; targeted strict-format/styleRules and brace check found zero findings.",
+      "524 current balanced math groups pass KaTeX0.16.8 with throwOnError=true and strict=error after the parent corrections.",
+      "16 current dedicated tests passed with KATEX_PATH set, zero failed and zero skipped, including the parent-added basis-versus-dual-action regression.",
+      "Finite checks cover positive metrics, translation costs, discrete energy/time estimates, layered weak mixing, mobility/curvature/rarefaction, oscillatory product, Gaussian moments, recentering cocycle/constants quotient and formal derivations. They supplement proofs and do not validate the cited deep constructions.",
+      "27 SHA256 tree hashes refreshed after all normalization and parent-requested body-link fixes. Packet and test paths included in source_scope_paths; tests carry their own SHA256 field.",
+      "Final local proof review allows pure phases at the boundary in 4X0A, requires strict mixture only inside the domain and finite dissipation, and retains the explicit existence assumption for a feasible pressure.",
+      "Parent-requested 4M0Y reuse and sigma(L1,Linf) decoding applied after actual source reread. Public reference retains bibliography/version/location/copyright; source-reading procedure and limitations recorded in this packet.",
+      "No full video downloaded. No whole-site build, rendered-output claim, shared navigation/manifest/audit edit, commit or push by this worker.",
+      "Historical URL/terminology-only correction: all then-existing 508 raw math groups were byte-identical during that earlier step. Parent's later mathematical clarification adds groups; see current katex_formulas and parent_math_correction."
+    ],
+    "katex_formulas": 524,
+    "prerequisite_edges": 70,
+    "reachable_prerequisite_nodes": 214,
+    "reviewed_reused_count": 30,
+    "source_scope_paths": [
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X00.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X01.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X02.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X03.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X04.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X05.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X06.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X07.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X08.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X09.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0A.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0B.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0C.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0D.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0E.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0F.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0G.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0H.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0I.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0J.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0K.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0L.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0M.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0N.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0O.tree",
+      "/Users/sunzy/claude_test/forester2/trees/math/analysis/geometric-pde-otto/4X0P.tree",
+      "/Users/sunzy/claude_test/forester2/trees/references/icm2026-otto.tree",
+      "/Users/sunzy/claude_test/forester2/research/plenary-otto-packet.json",
+      "/Users/sunzy/claude_test/forester2/tests/plenary-otto-math.test.mjs"
+    ],
+    "katex_version": "0.16.8",
+    "test_command": "KATEX_PATH=/tmp/otto-icm2026-source/katex-0.16.8.cjs node --test tests/plenary-otto-math.test.mjs",
+    "tests_passed": 16,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "test_sha256": "40a1c519b0753461c2bc4e17e07ae89175724efc67375cf56fc0992d896ef0ec",
+    "structural_findings": [],
+    "semantic_reviewed_ids": [
+      "4X01",
+      "4X02",
+      "4X03",
+      "4X04",
+      "4X05",
+      "4X06",
+      "4X07",
+      "4X08",
+      "4X09",
+      "4X0A",
+      "4X0B",
+      "4X0C",
+      "4X0D",
+      "4X0E",
+      "4X0F",
+      "4X0G",
+      "4X0H",
+      "4X0I",
+      "4X0J",
+      "4X0K",
+      "4X0L",
+      "4X0M",
+      "4X0N",
+      "4X0O",
+      "4X0P"
+    ],
+    "parent_review_status": "Parent cross-review identified and corrected the basis/dual action-direction statement in 4X0J and the finite-dimensional description in 4X0N, then clarified G_xy=(Gamma_yx)^* and LOTT footnote41's index convention. Worker read the frozen sources and parent-added regression, without editing either source or test. Broader independent review is not inferred from these corrections.",
+    "normalization_final": "All 27 current frozen tree sources compared read-only with normalizeFormat; zero differences. No source formatting writes during this packet refresh.",
+    "post_build_source_fix": {
+      "reason": "Parent's actual Forester build reported parse_error EOF at the percent-encoded Wiley URL.",
+      "reference_url_fix": "Preserved the verified Wiley target; escaped every percent sign as backslash-percent in the Forester reference source. Packet URL remains the actual unescaped web URL.",
+      "terminology": "All owned pages and packet use 基点变换 / 基点变换矩阵 for re-centering. No barycenter interpretation. Parent owns shared navigation wording.",
+      "regressions": "Dedicated tests reject unescaped percent signs, reject the previous Chinese terminology in owned pages, and compare the decoded reference URL with the unchanged primary-source URL.",
+      "formula_comparison": {
+        "pages": 27,
+        "groups": 508,
+        "changed_groups": 0,
+        "method": "Exact per-page hash comparison of the ordered raw math groups before and after this correction.",
+        "scope": "Historical URL/terminology-only correction, before the later parent mathematical correction. Not a claim that the currently frozen sources still have only 508 groups."
+      },
+      "worker_build_scope": "No build run by this worker; actual Forester compilation and rendered HTML href verification remain with parent.",
+      "source_hashes_refreshed": 27,
+      "test_hash_refreshed": true
+    },
+    "parent_math_correction": {
+      "pages": [
+        "4X0J",
+        "4X0N"
+      ],
+      "basis_action": "Gamma_yx e_n=sum_m G_xy(n,m)e_m; Gamma_yx-I strictly lowers degree on T.",
+      "dual_action": "(G_xy c)_n=sum_m G_xy(n,m)c_m; lower-degree coefficients can contribute to higher-degree output. At y-x=(1,0), G(2,1)=2 and G(1,2)=0.",
+      "notation": "G_xy is the ordinary algebraic transpose (Gamma_yx)^*. LOTT denotes this by Gamma_xy^*, swapping the displayed indices upon transposition; §2.2.6 footnote41.",
+      "dimension": "Only finite-degree truncations of the polynomial sector are finite-dimensional. The full polynomial sector and random model are infinite-dimensional.",
+      "ownership": "Parent edited both tree sources and added the degree-lowering-versus-dual-action regression. This worker edits only this packet in this refresh.",
+      "frozen_source_hashes_checked": 27,
+      "changed_tree_hashes": [
+        "4X0J",
+        "4X0N"
+      ],
+      "test_file": "tests/plenary-otto-math.test.mjs",
+      "test_count": 16,
+      "regression_status": "passed: all 16 tests, zero failed and zero skipped"
+    }
+  }
+}

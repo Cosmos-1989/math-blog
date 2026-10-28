@@ -1,0 +1,16 @@
+\title{凸函数的正则化高阶 Taylor 上界模型}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，官方录像 12:24；背景论文 pp.161–162，Theorem 1，改用系数 H=pM}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为凸 #{C^p} 函数，#{p\ge 2}，且 [#{D^pf} 为 #{L_p} Lipschitz](5001)。固定 #{x}，取 #{H\ge pL_p}，定义}
+##{m_{x,H}(s)=T_{x,p}(s)+\frac{H}{(p+1)!}\|s\|^{p+1}.}
+\p{则 #{m_{x,H}} 为凸函数，且 #{f(x+s)\le m_{x,H}(s)} 对所有 #{s} 成立。}
+
+\p{\strong{证明。}先由[函数值余项](5002)得到 #{f(x+s)\le T_{x,p}(s)+L_p\|s\|^{p+1}/(p+1)!}，这在 #{H\ge L_p} 时已给出上界。凸性需要再控制 Hessian。凸函数限制在每条直线上仍凸，二阶差商取极限给出 #{\nabla^2f(x+s)\succeq 0}；这里使用[半正定矩阵的序](0N0A)。[Hessian 余项](5002)于是给出}
+##{\nabla_s^2T_{x,p}(s)\succeq -\frac{L_p}{(p-1)!}\|s\|^{p-1}I.}
+\p{令 #{r=\|s\|>0}。径向项的二阶导数为}
+##{\nabla_s^2\left(\frac{H}{(p+1)!}r^{p+1}\right)=\frac{H}{p!}\left(r^{p-1}I+(p-1)r^{p-3}ss^{\mathsf T}\right)\succeq\frac{H}{p!}r^{p-1}I.}
+\p{因 #{H/p!\ge L_p/(p-1)!}，两项相加半正定。在 #{s=0} 处，径向项的 Hessian 连续延拓为零，而模型 Hessian 等于 #{\nabla^2f(x)\succeq 0}。最后把模型限制在任一直线上，其二阶导数非负；积分一次说明一阶导数单调，积分两次给出[一阶凸性不等式](4R06)。所以模型凸。}
+\p{#{H\ge pL_p} 是统一的充分条件，具体函数可能允许更小系数。#{p=3} 时正则项为 #{H\|s\|^4/24}；偶数 #{p} 的正则项一般不是多项式。}

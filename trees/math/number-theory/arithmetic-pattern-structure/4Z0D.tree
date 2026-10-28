@@ -1,0 +1,16 @@
+\title{对短范围公差平均的 Chowla 型抵消}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Matomäki 等](icm2026-ziegler)，arXiv:2007.15644v3，Corollary 1.11；报告录像 45:05}
+
+\p{固定整数 #{r\geq 1}、两两不同的非负整数 #{a_1,\ldots,a_r} 及 #{\varepsilon>0}。令 #{\lambda} 为 [Liouville 函数](4Z06)，#{H=\lfloor X^\varepsilon\rfloor}，并记}
+##{C_X(h)=\frac 1{\lfloor X\rfloor}\sum_{n=1}^{\lfloor X\rfloor}
+\prod_{j=1}^r\lambda(n+a_jh).}
+\p{Matomäki、Radziwiłł、Tao、Teräväinen 与 Ziegler 的推论给出}
+##{\frac 1H\sum_{h=1}^H|C_X(h)|=o(1)\qquad(X\to\infty).}
+\p{绝对值在 #{h} 平均内部，因而结论排除了只靠不同公差之间相互抵消的情形。它是原论文 Corollary 1.11；其研究证明由短区间高阶均匀性推出，见原论文。}
+\p{\strong{坏公差的比例。}对每个固定 #{\eta>0}，逐项估计 #{1_{\{|C_X(h)|\geq\eta\}}\leq|C_X(h)|/\eta}，得到}
+##{\frac{|\{1\leq h\leq H:|C_X(h)|\geq\eta\}|}{H}
+\leq\frac 1{\eta H}\sum_{h=1}^H|C_X(h)|\longrightarrow 0.}
+\p{取 #{a_j=j-1} 时，相关沿等差数列取值。外层平均包含随 #{X} 增长的公差集合；一个指定公差占比趋零，故此估计不推出该公差下的[固定移位 Chowla 抵消](4Z08)。}

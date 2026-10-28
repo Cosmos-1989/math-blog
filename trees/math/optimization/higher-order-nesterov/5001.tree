@@ -1,0 +1,13 @@
+\title{导数张量表示的高阶 Taylor 模型}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.159–160，式 (1.1)–(1.4)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为 [#{C^p} 函数](0A32)。对 #{1\le j\le p}，其 #{j} 阶导数可视为[多线性形式](0A48)，定义为}
+##{D^jf(x)[u_1,\ldots,u_j]=\sum_{i_1,\ldots,i_j=1}^n\partial_{i_1}\cdots\partial_{i_j}f(x)(u_1)_{i_1}\cdots(u_j)_{i_j}.}
+\p{反复使用[混合偏导交换](0A3D)，可知这一形式对输入向量对称。记 #{D^jf(x)[s]^j=D^jf(x)[s,\ldots,s]}。一次和二次形式分别为[梯度](4R01)配对与 [Hessian](4R02)二次型。固定基点 #{x} 后，以位移 #{s} 为变量的 #{p} 阶 Taylor 模型是}
+##{T_{x,p}(s)=f(x)+\sum_{j=1}^p\frac{1}{j!}D^jf(x)[s]^j.}
+\p{在 Euclidean 范数下，对一个 #{j} 线性形式 #{A} 定义 #{\|A\|=\sup_{\|u_1\|,\ldots,\|u_j\|\le 1}|A[u_1,\ldots,u_j]|}。这是[算子范数](00M4)的多线性对应物，并直接给出 #{|A[u_1,\ldots,u_j]|\le\|A\|\prod_i\|u_i\|}。称 #{D^pf} 为 #{L_p} Lipschitz，若对所有 #{x,y} 有}
+##{\|D^pf(x)-D^pf(y)\|\le L_p\|x-y\|.}
+\p{该条件控制最高阶导数的变化，并不要求所有较低阶导数全局有界。模型的梯度和 Hessian 总是对位移 #{s} 求导，基点 #{x} 保持固定。}

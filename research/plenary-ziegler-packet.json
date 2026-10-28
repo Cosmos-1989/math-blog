@@ -1,0 +1,750 @@
+{
+  "date": "2026-10-28",
+  "report": {
+    "speaker": "Tamar Ziegler",
+    "title": "Structure of Sets with an Unexpected Number of Arithmetic Pattern",
+    "title_aliases": [
+      "Structure of Sets with an Unexpected Number of Arithmetic Patterns"
+    ],
+    "outline": "2900",
+    "prefix": "4Z",
+    "reference": "icm2026-ziegler",
+    "kind": "plenary",
+    "source_url": "https://math.huji.ac.il/~tamarz/video.html",
+    "source_url_role": "official-author-listing-identity-only",
+    "version_url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+    "mathematical_source_urls": [
+      "https://www.youtube.com/watch?v=czHiX0pYTDg",
+      "https://arxiv.org/html/1009.3998v5",
+      "https://arxiv.org/html/2007.15644v3"
+    ],
+    "background_source_urls": [
+      "https://arxiv.org/html/1404.0775v1"
+    ],
+    "doi": null,
+    "pages": null,
+    "license": "原录像与各论文分别引用；未核定重用许可，不套用其他报告 CC BY 许可。",
+    "coverage_status": "preliminary-selected-branches",
+    "report_complete": false,
+    "full_video_read": false,
+    "full_transcript_read": false,
+    "question": "配置计数偏离随机预测时会出现什么高阶结构，这种结构怎样控制 Liouville 的短区间相关与符号块数量？",
+    "reading_scope": "官方作者目录只用于身份与题名。实际观看官方录像的离散原幻灯片点位：0:00、22:27、22:42、25:03、30:03、40:05、40:18、42:18、45:05；无连续时间段或全文字幕阅读。视频抽点证据支持高阶结构和 Liouville 分支；精确定理来自 GTZ 1009.3998v5 §1（陈述）和 §2（证明路线至 HTML line263），MRTTZ 2007.15644v3 §1 至 Corollary 1.11（HTML lines89–292）。2014 的 1404.0775v1 §§1–8 仅作背景，不能作为 2026 报告书面稿。未确认该报告有对应 Proceedings 章；卷2的17章计数沿用父代理核查，不由本 packet 改动。",
+    "module_rationale": [
+      "只升级 2900，不创建 4Z00；保留并增强 2901–2903，复用已存在 Fourier/Gowers 与幂零流形定义。",
+      "13 个新原子页构成有限计数至逆理论、Liouville 至符号块的两条相连阅读线。",
+      "全报告整合仍属初步；不将原幻灯片抽点当作连续报告阅读，也不将研究原论文引言当成深证明已读。",
+      "数论 0063 对应算术函数，分析 0068 对应 Fourier/Gowers 控制，动力 0069 对应幂零轨道与多重相关，组合 006D 对应配置及符号块计数。入口是否升级由父代理决定。"
+    ],
+    "proof_scope": {
+      "2900": {
+        "status": "narrative-outline",
+        "scope": "保留旧主题；连接有限计数、逆定理、斜移位和 Liouville 所选应用。"
+      },
+      "2901": {
+        "status": "local-proof",
+        "scope": "保留随机集合与子群的精确三项计数，补独立性和期望前置。"
+      },
+      "2902": {
+        "status": "local-proof",
+        "scope": "保留 Fourier 展开与偏差界；明确 N>=3，避免空的非零频率最大值。"
+      },
+      "2903": {
+        "status": "local-proof",
+        "scope": "保留二次轨道与三阶差分证明；补逆变换和 Haar 保测计算。"
+      },
+      "4Z01": {
+        "status": "local-proof",
+        "scope": "三次 Cauchy–Schwarz、线性换元和四项计数偏差；有限素数群 p>3。"
+      },
+      "4Z02": {
+        "status": "definition-and-local-proof",
+        "scope": "整数区间能量比归一化；正分母、1-bounded 上界及有限循环群嵌入的无绕回证明。"
+      },
+      "4Z03": {
+        "status": "definition-and-local-proof",
+        "scope": "基本幂零序列及线性相位例子；幂零流形复用 340C。"
+      },
+      "4Z04": {
+        "status": "cited-research-theorem",
+        "scope": "GTZ 精确有限流形族、Lipschitz 和相关下界量词；深层证明外引。"
+      },
+      "4Z05": {
+        "status": "local-proof",
+        "scope": "四个观测函数各自沿第二坐标平均为零，但沿斜移位的乘积恒为一；不声称已识别最大 Kronecker 因子。"
+      },
+      "4Z06": {
+        "status": "definition-and-local-proof",
+        "scope": "Liouville 定义、完全乘法性及与 Möbius 的区别。"
+      },
+      "4Z07": {
+        "status": "definition-and-local-proof",
+        "scope": "符号块复杂度、起点约定、单调性和次乘性。"
+      },
+      "4Z08": {
+        "status": "definition-and-local-proof",
+        "scope": "普通/对数平均及密度、调和归一化；固定移位 Chowla 只作为猜想定义。"
+      },
+      "4Z09": {
+        "status": "local-proof",
+        "scope": "有限分部求和恒等式和普通抵消推出对数抵消。"
+      },
+      "4Z0A": {
+        "status": "local-proof",
+        "scope": "符号块指标展开；普通和对数相关分别推出各自频率，不混同密度。"
+      },
+      "4Z0B": {
+        "status": "cited-research-theorem-with-local-consequence",
+        "scope": "Corollary 1.6 的 H=X^theta 特例为引用；例外起点比例的积分估计在本站证明。"
+      },
+      "4Z0C": {
+        "status": "cited-research-theorem-with-local-consequence",
+        "scope": "Theorem 1.9 为引用；增长超过每个固定多项式阶的推论和非指数边界为本地计算。"
+      },
+      "4Z0D": {
+        "status": "cited-research-theorem-with-local-consequence",
+        "scope": "Corollary 1.11 为引用；绝对值位置与固定参数完整保留；坏公差比例为本地推论。"
+      },
+      "icm2026-ziegler": {
+        "status": "bibliographic-reference",
+        "scope": "官方身份、录像原片时间戳、2014 背景及两个研究原论文版本分别列明。"
+      }
+    },
+    "claim_sources": {
+      "2900": [
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "location": "§§2–8，背景线索；不是 2026 报告书面稿"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+          "location": "抽点核读 25:03、42:18、45:05 原幻灯片，非完整录像"
+        }
+      ],
+      "2901": [
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "location": "§2；有限 N 的退化项为本地精确计算"
+        }
+      ],
+      "2902": [
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "location": "§2；Fourier 计数与 Parseval 估计"
+        }
+      ],
+      "2903": [
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "location": "§4；斜移位"
+        }
+      ],
+      "4Z05": [
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "location": "§4；四时刻相关例子"
+        }
+      ],
+      "4Z01": [
+        {
+          "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+          "location": "25:03 slide 18；一般机制的报告证据，本文 p>3 四项特例另作局部证明"
+        },
+        {
+          "url": "https://arxiv.org/html/1404.0775v1",
+          "location": "§5；Cauchy–Schwarz 与 Gowers 量背景"
+        }
+      ],
+      "4Z02": [
+        {
+          "url": "https://arxiv.org/html/1009.3998v5",
+          "location": "§1，区间范数定义（式 1.1 后）"
+        },
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "§1，式 (8)"
+        }
+      ],
+      "4Z03": [
+        {
+          "url": "https://arxiv.org/html/1009.3998v5",
+          "location": "§1，Conjecture 1.2 前幂零流形与线性幂零序列"
+        }
+      ],
+      "4Z04": [
+        {
+          "url": "https://arxiv.org/html/1009.3998v5",
+          "location": "§1，Conjecture 1.2、Theorem 1.3 与低阶结果；仅读陈述及 §2 证明路线，不宣称阅读全文证明"
+        }
+      ],
+      "4Z06": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "§1，Liouville 函数约定"
+        }
+      ],
+      "4Z07": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "§1.2.1，式 (14)"
+        }
+      ],
+      "4Z08": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "§1.1；调和归一化与移位特例为本地写法"
+        }
+      ],
+      "4Z09": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "§1.1 普通/对数区别；分部求和是本地补证"
+        }
+      ],
+      "4Z0A": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "§1.2.1，Chowla 与符号块；普通/对数密度分开证明"
+        }
+      ],
+      "4Z0B": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "Corollary 1.6，取 k=s-1、H=X^theta、0<theta<1"
+        }
+      ],
+      "4Z0C": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "Theorem 1.9；其后对频率问题的说明"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+          "location": "42:18 slide 32，S_lambda(k) >>_A k^A"
+        }
+      ],
+      "4Z0D": [
+        {
+          "url": "https://arxiv.org/html/2007.15644v3",
+          "location": "Corollary 1.11，绝对值在 h 平均内"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+          "location": "45:05 slide 34，局部均匀性至平均 Chowla 的应用路线；精确强形式来自原论文"
+        }
+      ],
+      "icm2026-ziegler": [
+        {
+          "url": "https://math.huji.ac.il/~tamarz/video.html",
+          "location": "ICM Plenary talk, Philadelphia 2026 条目，身份/单数题名而非数学正文"
+        },
+        {
+          "url": "https://annals.math.princeton.edu/2012/176-2/p11",
+          "location": "作者、刊物、页码及 DOI 元数据；未读取该出版版全文"
+        },
+        {
+          "url": "https://arxiv.org/abs/2007.15644v3",
+          "location": "作者、期刊、DOI 及版本日期"
+        }
+      ]
+    },
+    "proofs_written": [
+      "2901",
+      "2902",
+      "2903",
+      "4Z01",
+      "4Z02",
+      "4Z03",
+      "4Z05",
+      "4Z06",
+      "4Z07",
+      "4Z08",
+      "4Z09",
+      "4Z0A"
+    ],
+    "proofs_with_external_inputs": [
+      "4Z0B",
+      "4Z0C",
+      "4Z0D"
+    ],
+    "research_results_cited": [
+      "4Z04",
+      "4Z0B",
+      "4Z0C",
+      "4Z0D"
+    ],
+    "remaining_branches": [
+      "报告全程或作者完整幻灯片/逐字稿尚未取得；目前仅为抽点核读。",
+      "素数线性方程的局部因子与 transference 未新增定理页；保留原背景导航。",
+      "Log-Sarnak、Tao 的等价性及 Walsh 条件结果未核读相应原论文，故不导入精确定理。",
+      "MRTTZ 一般非伪装乘法函数、滤过幂零序列、量化改进及多项式平均未展开。"
+    ],
+    "unexpanded_deep_proofs": [
+      "GTZ Gowers 逆定理的 nilcharacter、对称与积分论证。",
+      "MRTTZ 非阿贝尔短区间均匀性证明。",
+      "MRTTZ §5 符号块超多项式下界研究证明。",
+      "MRTTZ Corollary 1.11 的研究推导；本站只证明其坏公差比例推论。"
+    ],
+    "subject_ids": [
+      "0063",
+      "0068",
+      "0069",
+      "006D"
+    ]
+  },
+  "prerequisites": {
+    "2900": [],
+    "2901": [
+      "00BA",
+      "00G3",
+      "00L1",
+      "00L3"
+    ],
+    "2902": [
+      "0Y01",
+      "0Y02"
+    ],
+    "2903": [
+      "00RS",
+      "00T1",
+      "0H53"
+    ],
+    "4Z01": [
+      "0Y03",
+      "0A3M"
+    ],
+    "4Z02": [
+      "0GOB",
+      "0Y03"
+    ],
+    "4Z03": [
+      "340C",
+      "00BP"
+    ],
+    "4Z04": [
+      "340C",
+      "00NI",
+      "4Z02",
+      "00FU",
+      "4Z03"
+    ],
+    "4Z05": [
+      "00T1",
+      "340C",
+      "0H53"
+    ],
+    "4Z06": [
+      "0H4X",
+      "0GG1"
+    ],
+    "4Z07": [],
+    "4Z08": [
+      "0A45",
+      "4Z06"
+    ],
+    "4Z09": [
+      "4Z08"
+    ],
+    "4Z0A": [
+      "4Z08",
+      "4Z07"
+    ],
+    "4Z0B": [
+      "4Z06",
+      "4Z02",
+      "00Q5",
+      "00XV"
+    ],
+    "4Z0C": [
+      "4Z06",
+      "4Z07"
+    ],
+    "4Z0D": [
+      "4Z06",
+      "4Z08"
+    ],
+    "icm2026-ziegler": []
+  },
+  "reviewed_reused_ids": [
+    "00BA",
+    "00G3",
+    "00L1",
+    "00L3",
+    "0Y01",
+    "0Y02",
+    "0Y03",
+    "0Y04",
+    "0Y05",
+    "00RS",
+    "00T1",
+    "0H53",
+    "0A3M",
+    "0GO8",
+    "0GOB",
+    "0GOC",
+    "340C",
+    "00BP",
+    "0H48",
+    "2D01",
+    "00NI",
+    "00FU",
+    "0H4X",
+    "0GG1",
+    "0GGI",
+    "0A45",
+    "00Q5",
+    "00XV"
+  ],
+  "source_readings": [
+    {
+      "url": "https://math.huji.ac.il/~tamarz/video.html",
+      "version": "author video listing",
+      "read_at": "2026-10-28",
+      "scope": "完整可见目录；只核对 ICM2026 身份、题名和录像链接。",
+      "full_mathematical_body": false,
+      "role": "identity"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+      "version": "Simons Foundation upload 2026-08-18; 50:06",
+      "read_at": "2026-10-28",
+      "scope": "仅离散原片画面，见 video_observations；非连续听读，不把视频元数据、自动章节、自动字幕当作数学证明。",
+      "full_mathematical_body": false,
+      "role": "report-specific-original-slides"
+    },
+    {
+      "url": "https://arxiv.org/html/1404.0775v1",
+      "version": "v1, 2014-04-03",
+      "read_at": "2026-10-28",
+      "scope": "HTML 数学主体 §§1–8，lines49–475，重叠窗口实际阅读；未声称逐页核对 PDF 图像或完整参考书目。",
+      "full_mathematical_body": true,
+      "role": "background-2014-not-report"
+    },
+    {
+      "url": "https://arxiv.org/html/1009.3998v5",
+      "version": "v5, 2026-04-23",
+      "read_at": "2026-10-28",
+      "scope": "§1 与 §2 证明路线的 HTML lines75–263；重点重复核对 Conjecture 1.2、Theorem 1.3；非全文/深证明阅读。另核对版本页说明 v5 修正 Lemma13.2 滤过错误及两个排字误。",
+      "full_mathematical_body": false,
+      "role": "primary-research"
+    },
+    {
+      "url": "https://arxiv.org/html/2007.15644v3",
+      "version": "v3, 2022-06-09; journal 2023",
+      "read_at": "2026-10-28",
+      "scope": "§1 HTML lines89–292，至 Corollary1.11；重点式(8)、Corollary1.6、Theorem1.9。另读 §1.3.1 lines305–342、§1.3.2 lines373–380 的路线片段及 Theorem5.1 陈述 lines2321–2328；中间工具截断未计作连续阅读，未读 §5 深证明。",
+      "full_mathematical_body": false,
+      "role": "primary-research"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2012/176-2/p11",
+      "version": "publisher record",
+      "read_at": "2026-10-28",
+      "scope": "出版元数据与摘要；DOI、页码、作者；不作为出版版全文阅读。",
+      "full_mathematical_body": false,
+      "role": "bibliography"
+    }
+  ],
+  "theorem_source_checks": {
+    "4Z04": {
+      "source_url": "https://arxiv.org/html/1009.3998v5",
+      "location": "§1, Conjecture 1.2 + Theorem 1.3; HTML lines105–155",
+      "reading_method": "原论文 HTML 陈述逐项重读；§2 仅证明路线至 line263；未核读深证明全文。",
+      "hypotheses": [
+        "固定 s>=1 和 0<delta<=1。",
+        "有限族的每个 G/Gamma 是至多 s 步紧幂零流形，G 连通单连通；各自预先给定光滑 Riemann 度量。",
+        "N>=1；f:[N]->C；|f|<=1；U^(s+1)[N]>=delta，区间归一化按 §1 定义。"
+      ],
+      "quantifiers": "M_(s,delta)、C(s,delta)>0 和 c(s,delta)>0 先于 N,f 选定；之后选择族中流形、g、x 和 |F|<=1、Lip(F)<=C，使 |E f(n) conjugate(F(g^n x))|>=c。",
+      "adopted_scope": "保留有限族/度量/量词次序；Theorem1.3 是 s>=3，s=1,2 的先前结果由同节说明合并。无定量复杂度公式，无普通多项式相位替换。"
+    },
+    "4Z0B": {
+      "source_url": "https://arxiv.org/html/2007.15644v3",
+      "location": "§1, equation (8) and Corollary 1.6; HTML lines172–198",
+      "reading_method": "原论文精确陈述及定义逐项重读；非研究证明全文。",
+      "hypotheses": [
+        "原文固定整数 k>=0、0<theta<=1，H>=X^theta；lambda 在非正整数延拓为零。",
+        "U^(k+1)([x,x+H]) 用整数无归一能量与区间指标能量之比。"
+      ],
+      "quantifiers": "固定 k,theta 后 X->infinity；积分对实起点 x in [X,2X]，结论为 o(X)。",
+      "adopted_scope": "采用较窄的 s=k+1>=1、0<theta<1、H=X^theta；不把弱多项式相位范数当作 U^s，不声称每个区间。例外集测度界为本地推论。"
+    },
+    "4Z0C": {
+      "source_url": "https://arxiv.org/html/2007.15644v3",
+      "location": "§1.2.1, equation (14), Theorem 1.9; HTML lines252–267",
+      "reading_method": "原论文定义、定理和邻接限定说明逐项重读；录像42:18为原幻灯片视觉抽点，不是字幕或全文听读。",
+      "hypotheses": [
+        "s(k) 数的是存在 n in N={1,2,...} 的 (lambda(n+1),...,lambda(n+k)) 符号元组，重数不计。",
+        "每个实 A>=1 固定，k 为正整数。"
+      ],
+      "quantifiers": "对每个 A 存在 c_A>0；s(k)>=c_A k^A。渐近形式可通过调小 c_A 覆盖所有正整数 k，因为 s(k)>=1。",
+      "adopted_scope": "同一定义记 S_lambda(k)。不交换 A 与常数量词；不声称指数下界、全部2^k块或出现频率。深证明 §5 未读，只引用定位。"
+    },
+    "4Z0D": {
+      "source_url": "https://arxiv.org/html/2007.15644v3",
+      "location": "§1.2.2, Corollary 1.11; HTML lines285–292",
+      "reading_method": "原论文推论逐项重读；录像45:05仅核原片应用路线，较强绝对值形式来自原论文。",
+      "hypotheses": [
+        "固定整数 k>=1 和两两不同的非负整数 a_1,...,a_k。",
+        "epsilon>0 任意但固定；X->infinity。",
+        "n,h 为正整数，n<=X，h<=X^epsilon。"
+      ],
+      "quantifiers": "E_(h<=X^epsilon) |E_(n<=X) product_j lambda(n+a_j h)| = o(1)。绝对值必须在 h 平均内部。",
+      "adopted_scope": "记 r=k、H=floor(X^epsilon)，内外平均均明确除以整数点数。不使用 Theorem1.10 的 epsilon<1/d 限制去误缩 Corollary1.11，也不移除不同系数条件。固定公差结论不随之成立。"
+    }
+  },
+  "video_observations": [
+    {
+      "time": "00:00",
+      "read_method": "original-video-frame",
+      "content": "开场原幻灯片题名采用复数 Patterns；目录和说明采用单数。",
+      "used_for": "title-alias-only"
+    },
+    {
+      "time": "22:27",
+      "read_method": "original-video-frame",
+      "content": "Higher Order Fourier Analysis / The combinatorial analogue 标题原片。",
+      "used_for": "section-location-only"
+    },
+    {
+      "time": "22:42",
+      "read_method": "original-video-frame",
+      "slide": 17,
+      "content": "有限阿贝尔群上的乘法差分 Delta_h f(x)=f(x+h) conjugate(f(x))。",
+      "used_for": "notation-check; site conjugate convention kept consistently"
+    },
+    {
+      "time": "25:03",
+      "read_method": "original-video-frame",
+      "slide": 18,
+      "content": "Counting anomalies force large norms；(k+1)项配置异常与 ||1_E-delta||_Uk 大，提出逆结构问题。",
+      "used_for": [
+        "2900",
+        "4Z01"
+      ]
+    },
+    {
+      "time": "30:03",
+      "read_method": "original-video-frame",
+      "slide": 22,
+      "content": "First application: linear equation in primes；Green–Tao–Z 2012，固定长度素数等差数列渐近式。",
+      "used_for": "topic-context-only; singular-series formula not imported"
+    },
+    {
+      "time": "40:05",
+      "read_method": "original-video-frame",
+      "slide": 30,
+      "content": "log-Sarnak/log-Chowla 的 1/n 权平均式及 Tao 2016 等价性。",
+      "used_for": "distinguish averages; equivalence not imported"
+    },
+    {
+      "time": "40:18",
+      "read_method": "original-video-frame",
+      "slide": 31,
+      "content": "Progress on Log-Sarnak，Frantzikinakis–Host 2018 与 uniquely ergodic systems 的说明。",
+      "used_for": "deferred; exact hypotheses not verified in original paper"
+    },
+    {
+      "time": "42:18",
+      "read_method": "original-video-frame",
+      "slide": 32,
+      "content": "Sign patterns of Liouville function；S_lambda(k) >>_A k^A，MRTTZ 2022。",
+      "used_for": [
+        "4Z0C"
+      ]
+    },
+    {
+      "time": "45:05",
+      "read_method": "original-video-frame",
+      "slide": 34,
+      "content": "平均 Liouville 多点乘积=o(N^(1+theta))；局部 Gowers 至局部幂零相关的路线，及缩短区间的后续问题。",
+      "used_for": [
+        "4Z0B",
+        "4Z0D"
+      ]
+    }
+  ],
+  "access_obstacles": [
+    "官方 YouTube 页面原片可抽点读取；Show transcript 面板持续加载，未取得全文字幕。",
+    "公开字幕列表访问缺少提供者 token；公开 timedtext 请求返回空内容，未绕过验证或使用账户凭据。",
+    "中断恢复后原临时浏览器已失效；保留此前已见原片记录，不把未完成的 27:03 定位记为已读。",
+    "磁盘曾 ENOSPC；遵守用户要求未下载全量视频。后续仅小型源文本和本地写作。",
+    "没有使用 az9713 AI 总结；偶然搜索结果不作为来源。"
+  ],
+  "reuse_review_notes": [
+    "0Y01–0Y05 已有 normalized Fourier、Parseval、Gowers 定义与二次相位例子，全部复用，不造副本。",
+    "0GOB 已有整数无约束能量及非负性；4Z02 仅补区间归一化和无绕回识别。",
+    "340C 已定义紧幂零流形并证明仿射映射下降，4Z03 只新增沿轨道的观测序列。",
+    "0GG1、0H4X、0GGI 分别提供乘法函数、唯一分解和 Möbius；Liouville 函数定义未发现既有等价页。",
+    "有限 Hölder 的 Theorem 0A3M 用作 Cauchy–Schwarz 前置，未将 Example/Corollary 当作定义注册。",
+    "4Z03->4Z04、4Z07->4Z0C、4Z0C->4Z0A 是应用或比较链接，不是反向前置；2900 导航边不登记为知识依赖。",
+    "本批基线为有限集合、整数/实数算术和有限代数；具名的分析、概率、群论对象均复用原子页。"
+  ],
+  "source_findings": [
+    {
+      "id": "2014-report-boundary",
+      "source_url": "https://arxiv.org/html/1404.0775v1",
+      "location": "版本页及全文",
+      "finding": "2014 综述不是 2026 报告或 Proceedings。"
+    },
+    {
+      "id": "ordinary-log-density",
+      "source_url": "https://arxiv.org/html/2007.15644v3",
+      "location": "§1.2.1，式(14)后",
+      "finding": "原文将 ordinary/log Chowla 连写后提 positive lower density；本站用指标展开分别得到普通密度与对数密度，不把后者提升为普通正下密度。"
+    },
+    {
+      "id": "gowers-domain",
+      "source_url": "https://arxiv.org/html/1009.3998v5",
+      "location": "§1",
+      "finding": "有限群范数和整数区间范数需不同归一化；采用 4Z02 能量比以匹配两篇论文。"
+    },
+    {
+      "id": "gtz-version-correction",
+      "source_url": "https://arxiv.org/abs/1009.3998v5",
+      "location": "Comments / submission history",
+      "finding": "出版年2012与所读修订稿2026分别标注；v5修正 Lemma13.2，未用老版证明冒称核定新版全文。"
+    },
+    {
+      "id": "fixed-versus-averaged-shift",
+      "source_url": "https://arxiv.org/html/2007.15644v3",
+      "location": "Corollary1.11",
+      "finding": "绝对值在 h 平均内；a_j固定且不同；不可把平均公差结论写成任意固定公差 Chowla。"
+    },
+    {
+      "id": "superpolynomial-not-exponential",
+      "source_url": "https://arxiv.org/html/2007.15644v3",
+      "location": "Theorem1.9",
+      "finding": "c_A依赖A，未给指数下界或所有符号块及其频率。"
+    },
+    {
+      "id": "skew-shift-assumptions",
+      "source_url": "https://arxiv.org/html/1404.0775v1",
+      "location": "§4",
+      "finding": "轨道公式与四函数恒等式对任意alpha成立；识别最大Kronecker因子需要额外论证，未混入局部例子。"
+    }
+  ],
+  "terminology_checks": [
+    {
+      "url": "https://www.bananaspace.org/wiki/幂零群",
+      "attempted_at": "2026-10-28",
+      "status": "unavailable",
+      "result": "网页不可访问；复用本站00BP的既有术语，不宣称外站核对成功。"
+    },
+    {
+      "url": "https://www.bananaspace.org/wiki/刘维尔函数",
+      "attempted_at": "2026-10-28",
+      "status": "unavailable",
+      "result": "网页不可访问；采用Liouville原名与精确定义，避免与其他Liouville对象混淆。"
+    }
+  ],
+  "coordination": {
+    "scope": "Only existing 2900–2903, new 4Z01–4Z0D in arithmetic-pattern-structure, icm2026-ziegler reference, this packet, and tests/plenary-ziegler-math.test.mjs.",
+    "write_release": "User released writes after prior batch pushed as7432503f; no writes before source reading.",
+    "shared_registers_navigation_queue": "Parent-owned; untouched.",
+    "commit_push_sync_full_build": "Not run; no global build or shared synchronization.",
+    "agents": "User authorized parallel agents; no subagent tool was available, so no user-owned task was created as a workaround."
+  },
+  "parent_handoff": {
+    "legacy_proofs_written_preserved": [
+      "2901",
+      "2902",
+      "2903"
+    ],
+    "legacy_hash_refresh_ids": [
+      "2900",
+      "2901",
+      "2902",
+      "2903",
+      "icm2026-ziegler"
+    ],
+    "legacy_hash_manifests": [
+      "research/icm2026-plenary-snapshots.json",
+      "research/prerequisite-required-links.json"
+    ],
+    "legacy_hashes": {
+      "2900": "1ae6956c7cce3c605b305131d1983a4e0b4ae3ab4853509635517adf6d45ca25",
+      "2901": "f1ceeb5951f252a8cc8e8ccbea2b4881510a2190a2df18aa46ba3dd44e896b41",
+      "2902": "88fbdbd263a6c9937c3e455eb32bdae8b78255d9d1f5b06cf7afed8fd8b80846",
+      "2903": "54e94ce7762607575f5d09dda8321e2cef44d0b6e7086655ee40592cfe18d322",
+      "icm2026-ziegler": "6c03d7e6cd6c42ba9f17fe71d8b78427b61605f88adf1d7a3ab0b0e91278764b"
+    },
+    "narrow_semantic_updates": [
+      "research/icm2026-plenary.json: preserve old proof declarations, add selected video evidence and preliminary status; avoid counting this as a new topic.",
+      "research/site-evergreen-audit.json: only owned pages' editorial/prerequisite records.",
+      "research/narrative-review-2026-10-13-other.json and consolidated research/narrative-review-2026-10-13.json: 2900 record if parent refreshes review.",
+      "research/topic-narratives.json: retain 2900 ID; no topic duplication."
+    ],
+    "legacy_test_boundary": "tests/plenary-coverage.test.mjs hardcodes background-only and reference /尚待/. Not edited or gamed by inserting defensive prose. Parent may upgrade test alongside honest preliminary source status.",
+    "release_boundary": "No publication claim. Shared integration, Forester parsing/render QA and independent review remain parent gates. Do not rewrite historical release snapshots indiscriminately."
+  },
+  "validation": {
+    "status": "passed-targeted-source-and-math-checks",
+    "scope": "Source and finite mathematics only; no global build/render/release.",
+    "checked_at": "2026-10-28",
+    "tree_files": 18,
+    "atomic_pages": 16,
+    "new_atomic_pages": 13,
+    "outline_paragraphs": 9,
+    "prerequisite_edges": 38,
+    "reachable_prerequisite_closure": 152,
+    "reviewed_reused_count": 28,
+    "katex_formulas": 334,
+    "katex_version": "0.16.8",
+    "strict_format": {
+      "normalized_at": "2026-10-28",
+      "normalizer": "scripts/note-editorial-lib.mjs:normalizeFormat",
+      "changed_ids": ["2900", "2901", "2902", "4Z01", "4Z02", "4Z04", "4Z05", "4Z06", "4Z07", "4Z08", "4Z09", "4Z0A", "4Z0B", "4Z0C", "4Z0D"],
+      "scope": "只调用既有normalizeFormat处理本packet的18个自有源页；15页产生TeX命令分隔等格式变化，未改数学主张。",
+      "regression": "定向测试新增normalizeFormat幂等检查；15/15通过，334个公式仍通过strict KaTeX；source_sha256已按规范后源码更新。",
+      "shared_sync": "未运行；父代理后续重跑。"
+    },
+    "tests": {
+      "command": "env KATEX_PATH=/tmp/ziegler-katex-0.16.8.cjs node --test tests/plenary-ziegler-math.test.mjs",
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "without_katex_path": "Finite/source tests still run; optional KaTeX case is explicitly skipped.",
+      "limits": "有限模型检查补充局部证明；不验证引用的深层研究定理。"
+    },
+    "parent_review_reported": {
+      "source": "User message in this task, 2026-10-28",
+      "scope": "父代理已读2900–2903及4Z01–4Z0D，检查三次CS、整数立方体提升、逆定理量词、分部求和、符号块指标，报告暂未发现本地推导错误。",
+      "limits": "此为父代理告知的审阅结果；本任务未另行启动独立子代理，也未把它扩写为全文报告或深证明审阅。"
+    },
+    "source_sha256": {
+      "2900": "a3d09ebf51d992710fc114a6657315d2b958160aa6c943c640c51b5914ace504",
+      "2901": "1d3389de15784cd6aff946287c568a4dd0d545f1460ea20a4bd95503fae5b564",
+      "2902": "129b272e2131793b3d419d7b96b1dafe74dc5a32d4af626672634beeee05da69",
+      "2903": "905a63ef9415a468fa9b2ac38a45630288634e1ca42deeea56ae6caca24d10d7",
+      "4Z01": "b8aa32b3de62a923584ca22f15828928c08f630c9cdd6793f5e4a772f4802cbd",
+      "4Z02": "851eb7155032ff079b143d99778bf0d43553313470ccf92db02cc06c6e4f3439",
+      "4Z03": "cab2f5b22b14c9ebd55a2179c2d406b149f8e76b8fec713b073a2f5903f56b32",
+      "4Z04": "d9a621acd8d8a43d7b2b12feca7c67aadf47803a0e8b7216405bff2eb631eb5e",
+      "4Z05": "de5bc9b3a40eed3ca78ae8e4fc5b33205e372dbe271e3acc4b0db444b2e0b8fb",
+      "4Z06": "6dd7f704579713c3ccba94c4b9003113699068a2d73864e07a8d6905e58458ca",
+      "4Z07": "0d6e08f45b55f4fc104f3e50ca9e929cf45a65959bd2a2b55c02229a3ca5fda4",
+      "4Z08": "41b2c4b0a5ea88bf02b94c0eabcb7129bf6645deaf46d37ea9cdf770cd1ccb34",
+      "4Z09": "b10fa866b281b93e40cd3cd6462056d280dd67fe384b73a66d60e661fe88a596",
+      "4Z0A": "01751d9202137803ac5c1005e3f087339cf65c1349bc6588283d2fd1fc7f023c",
+      "4Z0B": "a60916bcf9bea9f9d6e0d7faa21871dbede9e0ed31212e9e7a155f1d9a944433",
+      "4Z0C": "fc35494abfa3722998e3bd50e71fc998b6720dc51f5c9c35acf6c177c2fed915",
+      "4Z0D": "06c66024f5b4986f436c079991fcd45dd921b8e9bc331d4cfc21e8b51654fc87",
+      "icm2026-ziegler": "cd43496af8aaa6eb5f5c041f8b971ebfc0da9d18a7ced5be46ca7962cfcbabcb"
+    },
+    "checks": [
+      "18 个源页：原主题提纲1、旧原子3、新原子13、引用1；唯一ID、所有本范围站内链接、从2900的可达性通过；无4Z00。",
+      "prerequisites、proof_scope、claim_sources 的键完整一致；38条直接前置边均有正文链接且目标为Definition/Construction/Theorem。",
+      "覆盖本packet后，与当前共享前置清单组成的152节点可达闭包无环；未编辑共享清单。",
+      "334个公式用KaTeX0.16.8 strict:error通过；数学组平衡、元数据顺序、控制字符和Forester命令路径风险检查通过。",
+      "三项计数含退化项、Fourier恒等式、三次CS的每个阶段和四种目标位置、整数/循环立方体能量、斜移位、完全乘法性、词复杂度、分部求和、指标展开及阈值推论通过有限模型回归。",
+      "原有2901、2902、2903的证明声明保留；四项研究结果的versioned精确假设另列theorem_source_checks。",
+      "仅范围内git diff --check通过；未执行旧plenary-coverage全局测试、全站构建、导航同步、提交或推送。",
+      "公式检查器为270KB的公开KaTeX文件，临时置于/tmp；没有全量视频下载或大文件写入。"
+    ],
+    "remaining_checks": [
+      "父代理按preliminary-selected-branches更新共享身份/覆盖清单与旧background-only测试。",
+      "Forester实际解析、全站导航及渲染核验按父代理发布流程单独执行；KaTeX不能替代Forester构建。"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+\title{相对曲率控制 Bregman 迭代的几何衰减}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 p.178，式 (5.8)–(5.9)；局部三点恒等式证明，常数界另行给出}
+
+\p{令 #{F,\rho} 及 #{\kappa>1} 是[三阶模型的相对曲率界](5009)中的对象，#{h_*} 为 #{F} 的极小点。从任意 #{h_0} 出发，精确求解}
+##{h_{k+1}=\operatorname*{arg\,min}_h\left\{\langle\nabla F(h_k),h-h_k\rangle+\kappa D_\rho(h,h_k)\right\}.}
+\p{以[目标点在前的 Bregman 记号](5008)，令 #{E_k=D_\rho(h_*,h_k)}、#{q=1-1/\kappa\in(0,1)}。则对 #{k\ge 0} 有}
+##{E_{k+1}\le qE_k,\qquad F(h_{k+1})-F(h_*)\le(\kappa -1)q^kE_0.}
+\p{由于 #{q=2/(\tau+1)}，固定 #{\tau>1} 后内层误差几何衰减。该结论只针对固定外层基点的模型求解。}
+
+\p{\strong{极小点存在性。}#{F} 的正四次项压过其余项，故由[极值定理](0A3A)取得极小值。#{\rho} 的正四次项严格凸：对不同的 #{u,v}，平方范数的严格凸性与正半轴上平方函数的单调凸性给出 #{\|(1-t)u+tv\|^4<(1-t)\|u\|^4+t\|v\|^4}，#{0<t<1}。相对 Hessian 下界说明 #{F-\rho} 凸，所以 #{F} 也严格凸。每个内层问题是线性项加 #{\kappa\rho}，其唯一极小点也可用[四次子问题的标量方程](500B)描述。}
+
+\p{\strong{一步估计。}记 #{u=h_k}、#{v=h_{k+1}}。相对上下界分别给出 #{F(v)\le F(u)+\langle\nabla F(u),v-u\rangle+\kappa D_\rho(v,u)} 和 #{F(z)\ge F(u)+\langle\nabla F(u),z-u\rangle+D_\rho(z,u)}。一阶条件为 #{\nabla F(u)+\kappa(\nabla\rho(v)-\nabla\rho(u))=0}。展开散度定义得到}
+##{\langle\nabla\rho(v)-\nabla\rho(u),z-v\rangle=D_\rho(z,u)-D_\rho(z,v)-D_\rho(v,u).}
+\p{把一阶条件和三点恒等式代入两个函数值不等式之差，得到}
+##{F(v)-F(z)\le(\kappa -1)D_\rho(z,u)-\kappa D_\rho(z,v).}
+\p{取 #{z=h_*}。左侧非负，故 #{E_{k+1}\le qE_k}；归纳得 #{E_k\le q^kE_0}。再丢弃右侧最后一个非正项，就得到函数值误差界。所有内层极小化在这里均按精确算术与精确求解理解。}

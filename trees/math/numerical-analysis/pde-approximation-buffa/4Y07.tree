@@ -1,0 +1,13 @@
+\title{Cordes 条件与二维椭圆比}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，§2，条件 (2.5)}
+
+\p{设 #{A(\xi)} 为 #{n\geq 2} 维的对称 [一致椭圆矩阵场](4Y05)。记 #{\operatorname{tr}A=\sum_i a_{ii}}，#{|A|_F^2=\sum_{i,j}a_{ij}^2}。若存在统一常数 #{\varepsilon\in\lparen 0,1\rbrack}，使几乎处处有}
+##{\frac{|A|_F^2}{(\operatorname{tr}A)^2}\leq\frac{1}{n-1+\varepsilon},}
+\p{则称 #{A} 满足 Cordes 条件。#{\varepsilon} 衡量经标量缩放后矩阵离单位矩阵的距离。}
+\p{二维时，若椭圆上下界为 #{\lambda,\Lambda}，可取 #{\varepsilon=\frac{2\lambda\Lambda}{\lambda^2+\Lambda^2}}。事实上，由 [谱分解](0N0B)，设特征值 #{a,b\in[\lambda,\Lambda]}，则}
+##{\frac{(a+b)^2}{a^2+b^2}=1+\frac{2ab}{a^2+b^2}.}
+\p{令 #{r=\max(a,b)/\min(a,b)\in[1,\frac{\Lambda}{\lambda}]}。函数 #{2r/(1+r^2)} 的导数为 #{2(1-r^2)/(1+r^2)^2\leq 0}，故 #{2ab/(a^2+b^2)\geq\frac{2\lambda\Lambda}{\lambda^2+\Lambda^2}}，即得所需不等式。这也说明椭圆比变坏时，Cordes 参数可能趋于零。}
+\p{三维一致椭圆性不再自动给出 Cordes 条件。例如常矩阵 #{\operatorname{diag}(1,1,10)} 的比值为 #{102/144>1/2}，但任意 #{\varepsilon>0} 均有 #{1/(2+\varepsilon)<1/2}。}

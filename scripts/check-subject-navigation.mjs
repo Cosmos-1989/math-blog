@@ -40,7 +40,7 @@ for (const id of subjects) {
 const coverage = {};
 const plenaries = JSON.parse(read("research/icm2026-plenary.json"));
 const plenaryTopics = structuredClone(plenaries.subjects);
-for (const file of ["research/icm2026-plenary-applied-reports.json", "research/icm2026-plenary-dynamics-probability.json", "research/icm2026-plenary-ramsey-formalization.json"]) {
+for (const file of ["research/icm2026-plenary-applied-reports.json", "research/icm2026-plenary-dynamics-probability.json", "research/icm2026-plenary-ramsey-formalization.json", "research/icm2026-plenary-geometric-approximation.json", "research/icm2026-plenary-final-reports.json"]) {
   if (!fs.existsSync(path.join(root, file))) continue;
   for (const [id, topics] of Object.entries(JSON.parse(read(file)).leading_topics)) {
     plenaryTopics[id] = [...new Set([...(plenaryTopics[id] ?? []), ...topics])];

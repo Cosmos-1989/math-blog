@@ -1,0 +1,12 @@
+\title{普通平均与对数平均的相关}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Matomäki 等](icm2026-ziegler)，§1.1}
+
+\p{设 #{a:\mathbb N\to\mathbb C} 有界。对正整数 #{N}，令 #{H_N=\sum_{n=1}^N1/n}，定义普通平均与对数平均}
+##{A_N(a)=\frac 1N\sum_{n=1}^Na(n),\qquad
+L_N(a)=\frac 1{H_N}\sum_{n=1}^N\frac{a(n)}n.}
+\p{两者都是总权重为一的正权平均。由[自然对数的积分定义](0A45)及函数 #{1/t} 的单调性，#{\log(N+1)\leq H_N\leq 1+\log N}，从而 #{H_N/\log N\to 1}。因此 #{L_N(a)\to 0} 等价于 #{\sum_{n\leq N}a(n)/n=o(\log N)}。记号 #{b_N=o(c_N)} 表示 #{b_N/c_N\to 0}。}
+\p{对二元序列 #{u} 和固定的两两不同非负整数 #{h_1,\ldots,h_r}，取 #{a(n)=\prod_{j=1}^r u(n+h_j)}，便得到这些移位的普通相关与对数相关。对 [Liouville 函数](4Z06)，要求每组非空、不同移位的普通相关都趋零，是移位形式的 Chowla 猜想；换成对数平均便得到其对数形式。二者都以固定移位后令 #{N\to\infty} 为量词次序。}
+\p{对集合 #{B\subseteq\mathbb N}，若 #{A_N(1_B)} 或 #{L_N(1_B)} 的极限存在，就分别称该极限为普通密度或对数密度。后者对早期区间赋予更大的相对权重。[符号块指标的展开](4Z0A)可以分别应用于这两种平均。}

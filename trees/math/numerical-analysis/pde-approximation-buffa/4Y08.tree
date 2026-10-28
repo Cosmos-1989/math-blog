@@ -1,0 +1,12 @@
+\title{Cordes 缩放给出 Laplace 小扰动}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，p. 2090，Lemma 1 与公式 (2.6)–(2.7)}
+
+\p{设对称一致椭圆矩阵场 #{A} 满足参数为 #{\varepsilon\in\lparen 0,1\rbrack} 的 [Cordes 条件](4Y07)。定义 #{\gamma=(\operatorname{tr}A)/|A|_F^2} 及 #{q=\sqrt{1-\varepsilon}<1}，记 #{\Delta u=\sum_i\partial_{ii}u}。对任意 #{u\in H^2(\Omega)}，几乎处处有}
+##{|\gamma L_Au-\Delta u|\leq q|D^2u|_F,\qquad L_Au=A:D^2u.}
+\p{\strong{证明。}用 #{A:I=\operatorname{tr}A} 展开平方得}
+##{|\gamma A-I|_F^2=\gamma^2|A|_F^2-2\gamma\operatorname{tr}A+n=n-\frac{(\operatorname{tr}A)^2}{|A|_F^2}\leq 1-\varepsilon.}
+\p{对矩阵各项使用 [有限和 Hölder 不等式](0A3M)的平方情形，得到 #{| (\gamma A-I):D^2u|\leq|\gamma A-I|_F|D^2u|_F}，结论随即成立。}
+\p{若椭圆界为 #{\lambda,\Lambda}，由特征值 #{a_i\in[\lambda,\Lambda]} 可得 #{\lambda\sum_i a_i\leq\sum_i a_i^2\leq\Lambda\sum_i a_i}，故 #{1/\Lambda\leq\gamma\leq 1/\lambda}。缩放因子因而严格正且有界。这里控制的是全部二阶弱导数；要换成 #{\|\Delta u\|_2}，还需要区域与边界条件提供的估计。}

@@ -1,0 +1,14 @@
+\title{梯度中心差分近似三阶导数收缩}
+\date{2026-10-28}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，官方录像 27:22 的信息阶数问题；背景论文式 (1.6)、§5 的张量收缩；中心差分估计为背景推导}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为 #{C^3}，#{D^3f} 为 #{L_3} Lipschitz；本命题不需要凸性。固定 #{x,h} 和 #{\eta>0}。向量 #{w=D^3f(x)[h,h]} 由 #{\langle w,u\rangle=D^3f(x)[h,h,u]} 定义，使用[导数张量](5001)约定。令}
+##{w_\eta=\frac{\nabla f(x+\eta h)-2\nabla f(x)+\nabla f(x-\eta h)}{\eta^2}.}
+\p{则 #{\|w_\eta -w\|\le(L_3/3)\eta\|h\|^3}。因此可以用梯度值近似这个收缩向量，而不必输出全部三阶导数的坐标。}
+
+\p{\strong{证明。}将[三阶 Taylor 梯度余项](5002)用于位移 #{\pm\eta h}，得到}
+##{\nabla f(x\pm\eta h)=\nabla f(x)\pm\eta\nabla^2f(x)h+\tfrac{\eta^2}{2}w+R_\pm,\qquad\|R_\pm\|\le\tfrac{L_3}{6}\eta^3\|h\|^3.}
+\p{两式相加，减去 #{2\nabla f(x)} 再除以 #{\eta^2}，即得误差界。这里只保证关于 #{\eta} 的一阶误差；更高阶抵消需要额外正则性。}
+\p{若三次梯度计算各自含范数不超过 #{\delta} 的误差，则差分总误差至多 #{(L_3/3)\eta\|h\|^3+4\delta /\eta^2}。因此有限精度下不能任意缩小 #{\eta}。把这种近似用于优化算法，还需协调差分误差与内层求解容差；[信息调用复杂度](4R0L)必须计入这些工作。}

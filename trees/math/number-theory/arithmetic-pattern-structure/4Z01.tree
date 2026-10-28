@@ -1,0 +1,23 @@
+\title{四项等差数列的 Gowers 控制}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Ziegler](icm2026-ziegler)，录像 25:03 的计数与范数关系；下述有限模型用三次 Cauchy–Schwarz 推导}
+
+\p{设 #{p>3} 为素数，#{G=\mathbb Z/p\mathbb Z}，#{f_0,\ldots,f_3:G\to\mathbb C} 满足 #{|f_j|\leq 1}。所有平均均为有限集合上的均匀平均。采用[有限循环群的 Gowers 量](0Y03)，有}
+##{\left|\mathbb E_{x,d\in G}\prod_{j=0}^3f_j(x+jd)\right|\leq\min_{0\leq j\leq 3}\|f_j\|_{U^3(G)}.}
+\p{\strong{消去三个因子。}先证明右端取 #{f_3} 的情形。置 #{x=-t_1-2t_2}、#{d=t_0+t_1+t_2}。这个从 #{G^3} 到 #{G^2} 的满射每个纤维有 #{p} 个元素，故保持均匀平均。于是 #{x+jd=\sum_{i=0}^2(j-i)t_i}，第 #{j} 个因子在 #{j<3} 时不依赖 #{t_j}。记 #{F_j=f_j(x+jd)}，#{B(t_0,t_1,t_2)=f_3(3t_0+2t_1+t_2)}，原平均记为 #{\Lambda}。}
+\p{对三变量函数定义复制差分 #{D_iB=B(\ldots,t_i,\ldots)\overline{B(\ldots,t_i',\ldots)}}，后续复制只作用于尚未复制的变量。应用[有限 Hölder 不等式](0A3M)的指数 #{2,2} 情形，先消去不依赖 #{t_0} 且模不超过一的 #{F_0}，得}
+##{|\Lambda|^2\leq\mathbb E_{t_1,t_2}\left|\mathbb E_{t_0}F_1F_2B\right|^2
+=\mathbb E_{t_0,t_0',t_1,t_2}(D_0F_1)(D_0F_2)D_0B.}
+\p{这里 #{D_0F_1} 不依赖 #{t_1}。再用同一不等式消去它，得}
+##{|\Lambda|^4\leq
+\mathbb E_{t_0,t_0',t_2}\left|\mathbb E_{t_1}(D_0F_2)D_0B\right|^2
+=\mathbb E_{t_0,t_0',t_1,t_1',t_2}(D_1D_0F_2)D_1D_0B.}
+\p{最后 #{D_1D_0F_2} 不依赖 #{t_2}，第三次应用不等式给出}
+##{|\Lambda|^8\leq
+\mathbb E_{t_0,t_0',t_1,t_1'}\left|\mathbb E_{t_2}D_1D_0B\right|^2
+=\mathbb E_{t_0,t_0',t_1,t_1',t_2,t_2'}D_2D_1D_0B.}
+\p{令 #{y=3t_0+2t_1+t_2}、#{h_0=3(t_0'-t_0)}、#{h_1=2(t_1'-t_1)}、#{h_2=t_2'-t_2}。因 #{1,2,3} 在 #{G} 上可逆，这四个变量联合均匀；末项恰为 #{\|f_3\|_{U^3}^8}。若指定另一目标 #{f_j}，把其余三个指标记为 #{i_0,i_1,i_2}，改用 #{x=-\sum i_rt_r}、#{d=\sum t_r}；目标系数为三个非零数 #{j-i_r}，相同计算适用。}
+\p{\strong{计数偏差。}设 #{A\subseteq G} 密度为 #{\delta}，#{g=1_A-\delta}。把四个 #{1_A} 因子依次替换为常数 #{\delta}，相邻乘积之差含一个 #{g}，其余因子模至多一。逐项应用刚证明的估计，得到}
+##{\left|\mathbb E_{x,d}\prod_{j=0}^3 1_A(x+jd)-\delta^4\right|\leq 4\|g\|_{U^3(G)}.}

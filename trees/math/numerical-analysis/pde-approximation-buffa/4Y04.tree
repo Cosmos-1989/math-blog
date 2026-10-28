@@ -1,0 +1,12 @@
+\title{参数度量的余因子何时一致椭圆}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hinz–Buffa](icm2026-buffa)，arXiv:2307.06265v2，§2 的参数度量与椭圆性问题}
+
+\p{设 #{J} 是实 #{2\times 2} 矩阵，#{G=J^TJ} 为 [度量矩阵](4Y01)。假设对所有 #{v\in\mathbb R^2} 有 #{m|v|\leq|Jv|\leq M|v|}，其中 #{0<m\leq M<\infty}。则 #{A=\operatorname{cof}G} 满足}
+##{m^2|v|^2\leq v^TAv\leq M^2|v|^2.}
+\p{\strong{证明。}由 [实对称矩阵的谱分解](0N0B)，#{G=Q\operatorname{diag}(s_1^2,s_2^2)Q^T}，其中 #{Q} 正交。取单位特征向量代入假设得 #{m\leq s_i\leq M}。于是}
+##{A=(\det G)G^{-1}=Q\operatorname{diag}(s_2^2,s_1^2)Q^T,}
+\p{从而两个特征值都在 #{[m^2,M^2]} 内。对空间依赖的 #{J(\xi)}，若同一对 #{m,M} 在所有点成立，便得到统一椭圆性。}
+\p{只有行列式上下界并不足够。取 #{J_t=\operatorname{diag}(t,t^{-1})}，#{t\geq 1}，则 #{\det J_t=1}，而 #{\operatorname{cof}(J_t^TJ_t)=\operatorname{diag}(t^{-2},t^2)}，其最小特征值趋于零。若另外已知 #{\det J\geq d>0} 和 #{|Jv|\leq M|v|}，则 #{s_1s_2\geq d} 给出 #{s_i\geq d/M}；这才提供可量化的下界。}

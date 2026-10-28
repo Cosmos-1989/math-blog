@@ -1,0 +1,14 @@
+\title{中心化随机模型与局部反项的系数方程}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[LOTT](icm2026-otto)，§2.2，pp.8–12，式 (2.17)–(2.25)、(2.34)–(2.35)}
+
+\p{取[各向异性谱隙设定](4X0H)中的 #{\xi,\alpha}，并固定 #{\tau>0}。用 Fourier 乘子 #{e^{-\tau(k_1^4+k_2^2)}} 平滑噪声，记为 #{\xi_\tau}。对基点 #{x\in\mathbb R^2}，中心化模型是按[允许多重指标](4X0K)编号的函数族 #{\Pi_{x\beta}(y)}；非允许指标的系数约定为零，且 #{\Pi_{x\beta}(x)=0}。把它记作形式级数 #{\Pi_x=\sum_\beta\Pi_{x\beta}z^\beta}。}
+\p{纯多项式部分固定为 #{\Pi_{x,e_n}(y)=(y-x)^n}。反项 #{c=\sum_\beta c_\beta z^\beta} 是确定性的本构变量形式级数，满足}
+##{c_\beta=0\quad\text{除非}\quad|\beta|<2\ \text{且所有 }n\ne 0\text{ 都有 }\beta(n)=0.}
+\p{用[平移导子](4X0L)定义右端形式级数}
+##{\Pi_x^-=\sum_{k\ge 0}z_k\Pi_x^k\partial_1^2\Pi_x
+-\sum_{\ell\ge 0}\frac{\Pi_x^\ell}{\ell!}(D^{(0)})^\ell c+\xi_\tau\,1.}
+\p{这里 #{1} 是形式代数的单位，#{(\xi_\tau 1)_\beta} 只在零多重指标处非零。第一项在固定输出指标处只涉及有限个 #{k}；第二项因导子增加本构权重而只涉及有限个 #{\ell}。乘法也按有限的指标拆分定义，所以公式有逐系数意义。}
+\p{模型要求每个非纯多项式的允许指标满足 #{(\partial_2-\partial_1^2)\Pi_{x\beta}=\Pi_{x\beta}^-}。反项把本构函数在解值处的平移编码为局部修正，其形式来源于 #{(\partial_2-\partial_1^2)u+h(u)=a(u)\partial_1^2u+\xi_\tau}。这些定义给出系数方程；函数族的存在及一致估计属于[模型构造定理](4X0O)。}

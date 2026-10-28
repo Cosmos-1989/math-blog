@@ -1,0 +1,15 @@
+\title{整数区间上的归一化 Gowers 量}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Green–Tao–Ziegler，§1；Matomäki 等，式 (8)](icm2026-ziegler)}
+
+\p{设 #{I=\{a+1,\ldots,a+N\}\subseteq\mathbb Z}，其中 #{N\geq 1}，#{s\geq 1} 为整数。对 #{f:I\to\mathbb C}，以零延拓到整数，仍记为 #{f1_I}。用[整数序列的 Gowers 能量](0GOB)定义}
+##{\|f\|_{U^s(I)}
+=\left(\frac{E_s(f1_I)}{E_s(1_I)}\right)^{1/2^s}.}
+\p{分母等于所有顶点都落在 #{I} 内的 #{s} 维离散立方体的数量，至少有 #{N} 个零增量立方体，因而为正。能量的非负性保证根号有意义；若 #{|f|\leq 1}，逐项取绝对值即得 #{0\leq\|f\|_{U^s(I)}\leq 1}。当 #{s=1} 时它就是 #{|\frac 1N\sum_{n\in I}f(n)|}。}
+\p{将区间平移至 #{[N]=\{1,\ldots,N\}} 不改变量值。也可以取 #{M\geq 2^sN}，把 #{f} 零延拓为 #{\mathbb Z/M\mathbb Z} 上的 #{\widetilde f}，然后用[有限群归一化](0Y03)写成}
+##{\|f\|_{U^s([N])}
+=\frac{\|\widetilde f\|_{U^s(\mathbb Z/M\mathbb Z)}}{\|1_{[N]}\|_{U^s(\mathbb Z/M\mathbb Z)}}.}
+\p{\strong{两种计数相同。}非零项的每个顶点都有唯一的整数代表 #{y_\omega\in[N]}。当 #{s\geq 2} 时，每个二维面的交错和模 #{M} 为零，其绝对值至多 #{2(N-1)<M}，所以整数交错和本身为零。因此 #{y_\omega=y_0+\sum_i\omega_i(y_{e_i}-y_0)}，它唯一提升为整数立方体。#{s=1} 时只需提升两个端点。反过来整数立方体约化后给出原顶点；有限群平均产生的公共因子 #{M^{-(s+1)}} 在比值中消去。}
+\p{对实区间 #{[x,x+H]}，符号 #{U^s([x,x+H])} 指其整数点集上的同一定义。若 #{H\geq 1}，该集合非空。这一约定保留端点取整，无须把实数长度当成整数点数。}

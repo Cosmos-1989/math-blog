@@ -1,0 +1,11 @@
+\title{导数扰动如何保持正雅可比}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hinz–Buffa](icm2026-buffa)，§1 的参数化非退化问题}
+
+\p{设 #{x,x_h:\hat\Omega\to\mathbb R^2} 为 #{C^1} 映射。假设处处 #{\det Dx>0}，存在统一常数 #{m>0} 使 #{|Dx(\xi)v|\geq m|v|}，并且 [算子范数](00M4) 误差满足 #{\sup_\xi\|Dx_h(\xi)-Dx(\xi)\|_{\mathrm{op}}<m}。则 #{x_h} 也处处具有正雅可比行列式，即 [严格局部定向保持](4Y01)。}
+\p{\strong{证明。}固定 #{\xi}，写 #{J=Dx(\xi)}、#{E=Dx_h(\xi)-J}。对 #{0\leq t\leq 1}，三角不等式给出}
+##{|(J+tE)v|\geq(m-t\|E\|_{\mathrm{op}})|v|>0\quad(v\neq 0).}
+\p{所以矩阵路径 #{J+tE} 始终可逆。行列式是矩阵项的多项式，故沿此路径连续且不为零；从 #{\det J>0} 可知终点 #{\det(J+E)>0}。对每一点重复便得结论。}
+\p{这一充分条件需要导数的一致控制；只给函数值误差或积分误差不能直接套用。结论也只涉及局部几何，须与 [全局可逆性](3101) 分开。例如 #{x(s,t)=(e^s\cos t,e^s\sin t)} 在 #{\mathbb R\times(0,4\pi)} 上行列式为 #{e^{2s}>0}，但相隔 #{2\pi} 的参数点可能有相同像，故不单射。}

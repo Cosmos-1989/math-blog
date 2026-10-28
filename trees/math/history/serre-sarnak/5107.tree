@@ -1,0 +1,14 @@
+\title{有限像复表示的迹由单位根控制}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Deligne–Serre，1974](https://publications.ias.edu/sites/default/files/Number24.pdf)，推论 4.2，印刷页 514；线性代数证明在此展开}
+
+\p{设 #{\rho:G\to\operatorname{GL}_d(\mathbb C)} 为有限像[线性表示](0124)。则对每个 #{g\in G}，#{\rho(g)} 可对角化，全部特征值均为单位根，因而}
+##{|\operatorname{tr}\rho(g)|\le d.}
+
+\p{\strong{证明。}#{\rho(g)} 在有限群 #{\rho(G)} 中有有限阶，故存在 #{m\ge 1} 使 #{\rho(g)^m=I}。多项式 #{t^m-1} 在复数域上没有重根：其导数 #{mt^{m-1}} 与它没有公共根。[无重根零化多项式的特征空间分解](0M00)说明 #{\rho(g)} 可对角化。每个特征值 #{\lambda_j} 满足 #{\lambda_j^m=1}，所以 #{|\lambda_j|=1}；于是 #{|\sum_j\lambda_j|\le\sum_j|\lambda_j|=d}。}
+
+\p{有限像也可以由拓扑直接得到：若 #{G} 是紧群，#{\rho} 连续且目标取[离散拓扑](00E5)，则像是紧的离散空间。单点[开覆盖](00FP)有有限子覆盖，因此像有限。这里“离散”不能省略，一般紧群可以在复矩阵群通常拓扑下具有无限像。}
+
+\p{把此结论用于[权一形式的表示](5106)，对 #{p\nmid N} 得 #{a_p=\lambda_1+\lambda_2}，其中两者是单位根，并得到 #{|a_p|\le 2}。这个界不含 #{\sqrt p} 因子，使用的是权一、有限像这一具体结构。}

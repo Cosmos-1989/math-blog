@@ -1,0 +1,14 @@
+\title{光滑方程中噪声方向与参数方向的线性化}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto，Oberwolfach 短文](icm2026-otto)，pp.1765–1768；报告 36:43–44:54 的光滑背景}
+
+\p{取整数 #{m\ge 1}、实数 #{\lambda}，令 #{L_\lambda(u)=-\Delta u+\lambda u^m}。设一族光滑函数 #{U(f,p)} 对变量 #{f,p} 可微，并满足}
+##{L_\lambda(U(f,p))=f+L_\lambda(p).}
+\p{这里 #{f} 是驱动项，#{p} 是光滑参数函数；假设参数微分可与空间微分交换。用[全微分](0A33)分别沿 #{\delta f} 和 #{\delta p} 求导，得到}
+##{(-\Delta+m\lambda U^{m-1})D_fU[\delta f]=\delta f,}
+##{(-\Delta+m\lambda U^{m-1})D_pU[\delta p]
+=(-\Delta+m\lambda p^{m-1})\delta p.}
+\p{证明就是对 #{U^m} 应用[链式法则](0A34)。两种方向经过同一个线性化算子，但右端不同；驱动方向的导数不会自动等于参数方向的导数。在 #{\lambda=0} 时，若 #{-\Delta u_f=f}，则 #{U(f,p)=u_f+p} 满足原恒等式；固定 #{f} 后，真正解集 #{-\Delta u=f} 的差属于调和函数空间 #{\ker\Delta}。}
+\p{Oberwolfach 短文以这种参数化解释奇异方程中的“图册”。在粗糙随机情形，必须另外构造局部模型、控制基点变换并处理[非线性乘积障碍](4X0D)。这里的线性化结论以光滑参数族存在为前提；上述半线性椭圆模型也不同于报告所用的拟线性抛物模型。}

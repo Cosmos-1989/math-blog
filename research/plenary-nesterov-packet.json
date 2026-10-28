@@ -1,0 +1,452 @@
+{
+  "date": "2026-10-28",
+  "report": {
+    "speaker": "Yurii Nesterov",
+    "title": "Towards Higher-Order Optimization",
+    "kind": "special",
+    "official_category": "Special Plenary Lectures",
+    "video_label": "ICM 2026 Carl Friedrich Gauss Prize Lecture - Yurii Nesterov",
+    "outline": "5000",
+    "prefix": "50",
+    "reference": "icm2026-nesterov",
+    "source_url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+    "source_url_role": "official-video-original-slide-frame-reading",
+    "doi": null,
+    "pages": null,
+    "license": "官方录像未核得额外再利用许可，仅链接和数学转述，不复制视频或幻灯片图片。独立背景论文为 The Author(s) 2019，CC BY 4.0；中文笔记改写、证明展开及参数 H=pM 的改变已在引用页标明。论文许可不扩展到视频。",
+    "subject_ids": [
+      "0070",
+      "006F",
+      "006E"
+    ],
+    "subject_basis": {
+      "0070": "凸高阶模型、张量法及函数值收敛是优化主题。",
+      "006F": "三阶子问题的 Bregman 内层迭代、固定矩阵标量约化与差分误差直接涉及数值计算；原幻灯片 3/13、8/13。",
+      "006E": "原幻灯片 3/13、5/13、9/13 明确讨论 oracle 信息阶数、信息输出规模和复杂度；复用 4R0L 区分信息、外层及算术代价。"
+    },
+    "question": "凸性怎样使高阶 Taylor 模型既具有更好的函数值收敛率，又能通过相对曲率结构得到可实现的子问题求解？",
+    "integration_status": "frame-grounded-selected-branches",
+    "coverage_status": "preliminary-selected-branches",
+    "report_complete": false,
+    "full_video_read": false,
+    "full_transcript_read": false,
+    "reading_scope": "官方视频通过 IAB 实际暂停读取原幻灯片：09:22、11:37、12:24、14:44、19:52、22:52、25:05、27:22、32:36、41:43；13:03 还读到同页未展开的首行。没有连续时间段观看或全文字幕阅读。转写面板一直 loading，未把摘要、自动章节或局部字幕当成完整正文。未下载视频。独立背景论文正式刊本实际读取 pp.157–166，p.170 的算法(3.12)/Theorem 3 陈述和结尾估计，pp.176–180 的 Lemmas 3–4/Bregman 实现/四次子问题及计算讨论；没有核读 §3 全部证明或 §4 下界证明，也没有把此论文当作 ICM2026 书面稿。",
+    "mathematical_body_sources": [
+      "https://www.youtube.com/watch?v=m86Emt6GO8I",
+      "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf"
+    ],
+    "module_rationale": [
+      "13 个原子页分别承担模型定义、余项、反例、凸化、单步比较、基本收敛、三阶约束、Bregman 定义、相对曲率、内层收敛、标量约化、差分误差、加速引用定理；综述 5000 组织其数学关系。",
+      "4R0Q 与 4R0R 原文保持不变；不复制 Hessian 三次余项或非凸驻点 O(epsilon^-3/2) 证明。",
+      "一般高阶公式以 p>=2 表述，新增推导重心是 p>=3 与凸函数值精度。5006 采用独立展开的稍松显式常数；500A 使用三点恒等式给出几何界。",
+      "500C 中心差分是对报告信息阶数问题的局部背景推导，不冒称录像中已经展示此公式，也不据它宣称超快全算法复杂度。"
+    ],
+    "proof_scope": {
+      "5000": {
+        "status": "narrative-outline",
+        "scope": "凸模型、函数值界、三阶可实现性及信息代价的所选主线。"
+      },
+      "5001": {
+        "status": "definition",
+        "scope": "高阶导数的多线性形式、算子范数与固定基点 Taylor 模型；复用高阶偏导/混合偏导交换/有限维张量。"
+      },
+      "5002": {
+        "status": "local-proof",
+        "scope": "只假设 C^p 和 D^p Lipschitz 的 j=0,1,2 统一积分余项；p=j 边界单独处理。"
+      },
+      "5003": {
+        "status": "local-example-proof",
+        "scope": "t^3+a t^4 的负二阶导数反例；不从正最高次项推断凸性。"
+      },
+      "5004": {
+        "status": "local-proof",
+        "scope": "H>=pL_p 的凸性与上界，含原点处 Hessian 连续延拓；不声称系数最优或偶数 p 的径向项是多项式。"
+      },
+      "5005": {
+        "status": "local-proof-exact-subproblem",
+        "scope": "H>0 的极小点存在、候选点比较、下降性及梯度余项；精确子问题。"
+      },
+      "5006": {
+        "status": "local-proof-exact-subproblem",
+        "scope": "有界初始下水平集、最优点存在下的 O(k^-p) 函数值误差；递推倒数法、稍松常数、零误差边界。"
+      },
+      "5007": {
+        "status": "local-proof",
+        "scope": "凸三阶函数的矩阵双边界及三阶收缩估计，含 Hessian 零方向及 L3=0 边界。"
+      },
+      "5008": {
+        "status": "definition-and-local-calculation",
+        "scope": "目标点在前的 Bregman 散度、积分形式与不对称例；注明文献 beta 的反向输入约定。"
+      },
+      "5009": {
+        "status": "local-proof",
+        "scope": "L3>0、tau>1 下三阶模型与二次加四次参考函数的双边相对曲率；允许 Hessian 奇异。"
+      },
+      "500A": {
+        "status": "local-proof-exact-inner-iteration",
+        "scope": "极小点存在唯一性、三点恒等式与几何衰减；不把固定模型的内层速率视作外层总复杂度。"
+      },
+      "500B": {
+        "status": "local-proof",
+        "scope": "半正定二次加正径向四次问题的标量根约化，含 c=0 与矩阵奇异情况；计数不含免费分解假设。"
+      },
+      "500C": {
+        "status": "local-background-proof",
+        "scope": "梯度中心差分近似 D3[h,h] 的一阶截断误差及 4delta/eta^2 噪声项；不证明全算法低阶 oracle 实现。"
+      },
+      "500D": {
+        "status": "cited-research-theorem",
+        "scope": "Nesterov 正式刊本 Theorem 3、算法(3.12)固定 M=2L_p 的 O(k^(-(p+1))) 上界；未重建 §3 估计函数证明，不宣称最优。"
+      },
+      "icm2026-nesterov": {
+        "status": "bibliographic-reference",
+        "scope": "官方视频身份、上传日期、原幻灯片定位、独立论文版本/页码/许可；不分配未核实的 ICM DOI。"
+      }
+    },
+    "claim_sources": {
+      "5000": [
+        {
+          "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+          "location": "原幻灯片抽点 09:22、11:37、12:24、14:44、19:52、22:52、25:05、27:22、32:36、41:43"
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.157–166、170、176–180"
+        }
+      ],
+      "5001": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.159–160，式 (1.1)–(1.4)；仅用多线性算子范数定义，不调用对角范数等式"
+        }
+      ],
+      "5002": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.160–161，式 (1.5)–(1.7)，本地展开积分证明"
+        }
+      ],
+      "5003": [
+        {
+          "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+          "location": "11:37，幻灯片 4/13，x^3+Lx^4 反例；导数计算为本地展开"
+        }
+      ],
+      "5004": [
+        {
+          "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+          "location": "12:24，幻灯片 4/13，Theorem 1 (N.2019)，L>=p L_p"
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.161–162，Theorem 1，H=pM 参数转换"
+        }
+      ],
+      "5005": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.162–163，式 (2.6)、(2.9)，Lemma 1 的 (2.11)–(2.12)"
+        }
+      ],
+      "5006": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.164–166，Theorem 2；本文给稍松显式常数的递推证明"
+        }
+      ],
+      "5007": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.176–177，Lemma 3，式 (5.2)–(5.3)"
+        }
+      ],
+      "5008": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "p.178，Bregman distance 定义；交换输入记号；积分形式和非对称例本地计算"
+        }
+      ],
+      "5009": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.177–178，Lemma 4，式 (5.4)–(5.7)"
+        }
+      ],
+      "500A": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "p.178，式 (5.8)–(5.9)；本地三点恒等式证明使用稍松函数值几何界"
+        }
+      ],
+      "500B": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "pp.179–180，式 (5.10)–(5.11)；本地通过 r=gamma||h||^2 直接约化，不照抄对偶参数"
+        }
+      ],
+      "500C": [
+        {
+          "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+          "location": "27:22，幻灯片 9/13，仅提供方法阶数与 oracle 阶数可分离的问题背景"
+        },
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "p.161 式 (1.6)，pp.178–179 的张量收缩需求；中心差分与噪声估计本地推导，不归为作者在此处的算法"
+        }
+      ],
+      "500D": [
+        {
+          "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+          "location": "p.170，算法 (3.12)、Theorem 3 与式 (3.13)，M=2L_p"
+        }
+      ],
+      "icm2026-nesterov": [
+        {
+          "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+          "location": "Simons Foundation 频道、视频题名及展开说明：2026-08-14，45:24"
+        },
+        {
+          "url": "https://doi.org/10.1007/s10107-019-01449-1",
+          "location": "出版社题名、正式卷页、在线日期与 Rights and permissions"
+        }
+      ]
+    },
+    "proofs_written": [
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5009",
+      "500A",
+      "500B",
+      "500C"
+    ],
+    "remaining_branches": [
+      "官方录像其余未抽读画面与连续口头论证",
+      "更尖锐 k^(-(3p+1)/2) 的上界、下界及精确 oracle 模型",
+      "以二阶或更低阶信息实现高阶方法的完整容差安排",
+      "高阶近端点算子与双层优化框架",
+      "Doikov–Mishchenko–Nesterov super-universal 正则化 Newton 方法的问题类和复杂度"
+    ],
+    "unexpanded_deep_proofs": [
+      "500D 引用的估计函数加速算法 §3 全部归纳不变量",
+      "原论文 §4 下界构造",
+      "非精确内层求解与外层加速合并后的总 oracle/算术复杂度"
+    ]
+  },
+  "prerequisites": {
+    "5000": [],
+    "5001": [
+      "0A32",
+      "0A48",
+      "0A3D",
+      "4R01",
+      "4R02",
+      "00M4"
+    ],
+    "5002": [
+      "5001",
+      "0I8J"
+    ],
+    "5003": [
+      "0R06",
+      "0A32",
+      "0I8J"
+    ],
+    "5004": [
+      "5001",
+      "5002",
+      "0N0A",
+      "4R06"
+    ],
+    "5005": [
+      "5004",
+      "5002",
+      "0A3A",
+      "4R06",
+      "4R0L"
+    ],
+    "5006": [
+      "5005",
+      "0R06",
+      "4R0L"
+    ],
+    "5007": [
+      "5001",
+      "5002",
+      "0N0A"
+    ],
+    "5008": [
+      "4R06",
+      "0I8J"
+    ],
+    "5009": [
+      "5001",
+      "5007",
+      "5008"
+    ],
+    "500A": [
+      "5009",
+      "5008",
+      "0A3A",
+      "500B"
+    ],
+    "500B": [
+      "0N0A",
+      "0N0B",
+      "0A3A",
+      "4R06",
+      "0A44"
+    ],
+    "500C": [
+      "5001",
+      "5002",
+      "4R0L"
+    ],
+    "500D": [
+      "5001",
+      "5004",
+      "4R0N",
+      "4R0L"
+    ],
+    "icm2026-nesterov": []
+  },
+  "video_observations": [
+    {
+      "time": "09:22",
+      "slide": "3/13",
+      "read_method": "original-video-frame",
+      "content": "oracle 输出及正则化 Taylor 模型"
+    },
+    {
+      "time": "11:37",
+      "slide": "4/13",
+      "read_method": "original-video-frame",
+      "content": "三次多项式加正四次项的非凸反例"
+    },
+    {
+      "time": "12:24",
+      "slide": "4/13",
+      "read_method": "original-video-frame",
+      "content": "Theorem 1：凸 f，L>=pL_p"
+    },
+    {
+      "time": "13:03",
+      "slide": "5/13",
+      "read_method": "original-video-frame",
+      "content": "First Impressions 首行的阶数对应；该点尚未展示后续复杂度式"
+    },
+    {
+      "time": "14:44",
+      "slide": "5/13",
+      "read_method": "original-video-frame",
+      "content": "问题类、oracle 和复杂度指数；未补全最优性定理"
+    },
+    {
+      "time": "19:52",
+      "slide": "6/13",
+      "read_method": "original-video-frame",
+      "content": "三阶函数值/梯度/Hessian 余项"
+    },
+    {
+      "time": "22:52",
+      "slide": "8/13",
+      "read_method": "original-video-frame",
+      "content": "二次加四次参考函数与 Bregman 迭代"
+    },
+    {
+      "time": "25:05",
+      "slide": "8/13",
+      "read_method": "original-video-frame",
+      "content": "内层几何率及带对数因素的基本三阶外层率；Question 后续未读"
+    },
+    {
+      "time": "27:22",
+      "slide": "9/13",
+      "read_method": "original-video-frame",
+      "content": "方法阶数与 oracle 阶数可分离"
+    },
+    {
+      "time": "32:36",
+      "slide": "10/13",
+      "read_method": "original-video-frame",
+      "content": "经典近端公式和高阶近端标题；高阶公式在此点尚未展开"
+    },
+    {
+      "time": "41:43",
+      "slide": "12/13",
+      "read_method": "original-video-frame",
+      "content": "Super-Universal Method，Doikov/Mishchenko/N.2024，线搜索 Newton 步；复杂度证明未读"
+    }
+  ],
+  "source_readings": [
+    {
+      "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+      "role": "actual-report-body-selected-original-frames",
+      "scope": "video_observations 中 11 个离散点；非连续观看、非全文字幕",
+      "downloaded_video": false
+    },
+    {
+      "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+      "role": "independent-background-paper-not-icm-chapter",
+      "version": "正式刊本 Mathematical Programming 186 (2021), 157–183",
+      "scope": "pp.157–166，p.170 算法及定理陈述，pp.176–180；§3 其余证明与 §4 未读",
+      "local_pdf": "/tmp/nesterov-tensor-2021.pdf",
+      "local_text": "/tmp/nesterov-tensor-2021.txt"
+    }
+  ],
+  "validation": {
+    "status": "passed-local-tests-ready-for-parent-integration",
+    "tests_passed": 16,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "formula_groups_checked": 306,
+    "katex_version": "0.16.8",
+    "prerequisite_closure_nodes": 128,
+    "format_findings": [],
+    "test_command": "KATEX_PATH=/tmp/ziegler-katex-0.16.8.cjs node --test tests/plenary-nesterov-math.test.mjs",
+    "source_sha256": {
+      "5000": "55613985e4684cac7800180bd9dd2648d47dc07413a24a5308080aa1900cf0b8",
+      "5001": "d2d73250072b5743dbb40f3997c95b146136050383b7dae08625d1d0aa0f0d07",
+      "5002": "24b825cc5136a68a6caaf23965d16ab091019e56b75642624f56f12c8b8e5f70",
+      "5003": "5192c55de77c2624e64122cca2aef653f469129ca31689c198dc3ab80e6bced2",
+      "5004": "e6c7ca0963bac68ccbbecf1a5ad316e0dd346a5820c8f5b10520d61d55901bb8",
+      "5005": "33e6df5e0672b86394f2125e01b34c269b58a4ab120226c27c6c9573d90fc6d2",
+      "5006": "79b1f4ed6c8ad6dbadfbd877f53430d6c5ea652f4f66743e4d89e76f082da121",
+      "5007": "24fe7c24e08e36b47ea2c07f7e7ee284e186447ad3b9d537d8f3e75a63d376d9",
+      "5008": "f5acd06aa55fb8a80948de4a42ba7fab783d915b390664cc1ce95e02959dd800",
+      "5009": "46bca5d7110a343d8d4c5169907d79ed5c32c16b4ba545e5d47b89ad3a160238",
+      "500A": "8fc5edc713daabc88b33f877669b8e34a19975d1fe91db3f77d97c232abab293",
+      "500B": "a7b6c5663bdf15f6ae14666181e10b6e151433aa878b38d779748224711638fb",
+      "500C": "75bff1fc9785d666eece41455a7a02bed1c82309ca4c5a369545a191219393dc",
+      "500D": "d8cc80a646ebe573a82cc390101309711975e1e3e2e163ca6cecc87485363a3e",
+      "icm2026-nesterov": "6592f5b124ed966e349ca7b312ccef50d3077b53828c2b783ef9dfe0adb5c7cb"
+    },
+    "semantic_reviewed_ids": [
+      "5000",
+      "5001",
+      "5002",
+      "5003",
+      "5004",
+      "5005",
+      "5006",
+      "5007",
+      "5008",
+      "5009",
+      "500A",
+      "500B",
+      "500C",
+      "500D",
+      "icm2026-nesterov"
+    ],
+    "independent_review": "用户本轮告知父审已读 5000–500D，递推常数、矩阵方向、三点恒等与差分推导未见错误；此处记录为用户转达的父审结论，不扩展为全文录像或全部研究定理的独立验证。",
+    "parent_editorial_followup": "按父审意见删除 5006 尾句、5000 正文的反复时间码、500D 待补分支说明；保留精确内层、上界与最优性区分、5009 无强凸要求等数学限制。时间码与分支定位集中在引用页和 packet。",
+    "build": "not-run-by-this-worker",
+    "rendered_page_qa": "not-run-by-this-worker; strict source KaTeX is not Forester compilation",
+    "publication": "not-pushed; parent integration and release required",
+    "scope": "仅独占 50 系列、引用页、packet 和专项测试；没有修改共享导航/总清单/工作流或 4R 页面",
+    "test_sha256": "e344aae3c093f662f97d2c1727031b50c0c4c7e019a4cf1e80604517d4950450"
+  }
+}

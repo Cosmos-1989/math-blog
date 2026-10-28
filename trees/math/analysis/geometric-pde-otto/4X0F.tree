@@ -1,0 +1,12 @@
+\title{柱状随机泛函的噪声方向导数}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[LOTT](icm2026-otto)，§2.1，pp.6–7；报告 34:13–36:39}
+
+\p{设 #{H} 是实[Hilbert 空间](00MQ)，#{W(h)} 是以 #{h\in H} 为指标的中心高斯线性族，满足 #{\mathbb E[W(h)W(k)]=\langle h,k\rangle_H}。这是[白噪声](4U01)的 Hilbert 空间写法；例如取 #{H=L^2(\mathbb R^2)}。固定 #{h_1,\ldots,h_N\in H} 和光滑函数 #{f:\mathbb R^N\to\mathbb R}，柱状泛函为 #{F=f(W(h_1),\ldots,W(h_N))}。}
+\p{沿确定方向 #{v\in H} 扰动噪声，即把每个 #{W(h)} 替换为 #{W(h)+\varepsilon\langle v,h\rangle_H}。由[链式法则](0A34)，其导数为}
+##{D_vF=\sum_{i=1}^N\partial_if(W(h_1),\ldots,W(h_N))\langle h_i,v\rangle_H
+=\langle DF,v\rangle_H,\quad DF=\sum_{i=1}^N\partial_if\,h_i.}
+\p{这个 #{H} 值随机变量称为柱状泛函的 Malliavin 导数。以 #{\operatorname{span}\{h_i\}} 的任一正交基改写同一函数时，方向导数对所有 #{v} 不变，故代表向量 #{DF} 也不变。这里的扰动方向属于 #{H}，噪声样本本身一般不属于 #{H}。}
+\p{若 #{\|h\|_H=1}，#{Z=W(h)}，则 #{F=Z^2-1} 满足 #{DF=2Zh}，所以 #{\mathbb E\|DF\|_H^2=4}。导数控制的是泛函对噪声的敏感性；泛函的常数部分不可由导数恢复。}

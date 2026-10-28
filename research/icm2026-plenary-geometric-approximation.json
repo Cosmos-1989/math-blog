@@ -1,0 +1,1523 @@
+{
+  "date": "2026-10-28",
+  "subject": "006A",
+  "scope": "Otto、Buffa 与 Ziegler 专题增补；报告身份与实际核读材料分别登记。",
+  "reports": [
+    {
+      "speaker": "Felix Otto",
+      "title": "Geometric Concepts in Partial Differential Equations",
+      "outline": "4X00",
+      "prefix": "4X",
+      "reference": "icm2026-otto",
+      "source_url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+      "source_url_role": "Official title/abstract identity only; not a mathematical text or transcript.",
+      "version_url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+      "doi": null,
+      "pages": null,
+      "license": "逐源状态：官方报告视频、自动字幕及MPI题名页未核得可再利用许可；JKO正式刊本标示SIAM版权，大学托管作者稿未核得额外许可；LOTT与BOT所用arXiv版本未核得明确再利用许可；Oberwolfach Report33/2025标示CC BY-SA 4.0（另有声明者除外）。不把任何单一来源许可扩展到其他来源。",
+      "integration_status": "caption-grounded-selected-branches",
+      "question": "耗散度量怎样组织密度演化与两相混合，噪声方向微分和基点变换怎样组织奇异随机方程的局部模型？",
+      "reading_scope": "报告正文实际通过官方视频的en-orig自动英语字幕JSON3逐段阅读：00:12.160至最后文字事件55:30.319（持续至55:34.698），1321个非空事件；未播放或核验全部音画、未下载全量视频，未把视频说明当正文。已读两条实际讲述主线；第三个SL(n)例子只在官方摘要中宣布，字幕未展开。未取得正式ICM报告书面全文；没有给它分配SIAM章节或DOI。背景实际读取JKO作者稿pp.1–15（26页稿，p.9/p.14另作图像核对）、LOTT v3 pp.1–14（数学主体§§1–2.4，p.14的§2.5仅起首）、Otto OWR贡献pp.1765–1768全文、BOT v3 pp.1–5。深证明章节未读，未声称原论文全文核读。",
+      "mathematical_body_sources": [
+        "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+        "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+        "https://arxiv.org/pdf/2112.10739v3",
+        "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+        "https://arxiv.org/pdf/2401.05935v3"
+      ],
+      "module_rationale": [
+        "25个原子页，分别建立质量输运和耗散的本科计算链、粗糙乘积和随机系数模型的定义链；数量由所选问题及必要前置决定。",
+        "实际报告用两条vignette；第一支展开光滑梯度与分层混合，第二支用LOTT精确定理支撑报告的几何语言。",
+        "4M0Y已经定义实线W_p，4X02明确p=2的一致性并扩展多维和相同有限质量；310S仅作W1比较。复用4513、4501、4502、4U01、4U02及既有分析/概率/形式代数基础。",
+        "JKO及LOTT构造定理明确引用；局部的变分、缩放、振荡、谱隙和基点变换证明独立展开；未将报告口述升级为深定理完整证明。"
+      ],
+      "proof_scope": {
+        "4X00": {
+          "status": "narrative-outline",
+          "scope": "两条实际报告主线：耗散度量与混合、粗糙随机模型及基点变换结构。"
+        },
+        "4X01": {
+          "status": "local-proof",
+          "scope": "正定矩阵度量下梯度、下降方程、能量恒等式及速度极小化。"
+        },
+        "4X02": {
+          "status": "definition-with-local-example-and-cited-metric-property",
+          "scope": "复用4M0Y的实线p=2定义，扩展至R^d与相同有限质量；平移最优代价本地证明，普遍度量性引用JKO §3。"
+        },
+        "4X03": {
+          "status": "local-proof",
+          "scope": "光滑环面推前的连续性方程及Jacobian补偿；复用4501/4502。"
+        },
+        "4X04": {
+          "status": "conditional-local-proof",
+          "scope": "假设光滑势函数已存在；正交分解证明约束最小动能和唯一速度，不证明椭圆可解性。"
+        },
+        "4X05": {
+          "status": "local-proof",
+          "scope": "光滑正周期密度的第一变分、最陡下降、Fokker–Planck方程和熵耗散。"
+        },
+        "4X06": {
+          "status": "conditional-local-proof",
+          "scope": "假设逐步极小点存在，证明离散耗散、行动量界和离散1/2阶时间模；不给一般存在性。"
+        },
+        "4X07": {
+          "status": "cited-research-theorem",
+          "scope": "JKO作者稿§4假设与极小点存在唯一性、§5主定理；固定时刻sigma(L1,Linf)收敛、初值强L1、矩和势能局部时间有界。未展开收敛深证明。"
+        },
+        "4X08": {
+          "status": "local-proof",
+          "scope": "周期细格特征函数对连续测试弱收敛、L1不强收敛；不是原始微结构松弛定理。"
+        },
+        "4X09": {
+          "status": "definition-and-conditional-energy-bound",
+          "scope": "饱和两相等质量加权输运步；假设极小点存在时的旧状态竞争比较。"
+        },
+        "4X0A": {
+          "status": "conditional-local-proof",
+          "scope": "域内严格混合、边界可纯相，假设压力产生可行光滑通量；在有限耗散类中配方证明唯一最小耗散及能量恒等式。不证明压力可解性。"
+        },
+        "4X0B": {
+          "status": "local-proof",
+          "scope": "零总通量分层模型的有效迁移率、端点斜率和严格凸性。"
+        },
+        "4X0C": {
+          "status": "local-proof",
+          "scope": "约化标量模型的连续自相似稀疏波、弱方程、初值L1loc及熵关系；不证明原始流体松弛极限或熵解一般唯一性。"
+        },
+        "4X0D": {
+          "status": "local-proof",
+          "scope": "C^alpha振荡反例：u_n趋零而u_n u_n''趋-1/2；包括正系数a(u)=1+u。"
+        },
+        "4X0E": {
+          "status": "local-proof",
+          "scope": "抛物缩放、本构重标度、D=3及白噪声形式指数；不以缩放代替解的存在。"
+        },
+        "4X0F": {
+          "status": "definition-and-local-calculation",
+          "scope": "实Hilbert等距高斯族、柱状噪声方向导数、有限维表示无关性及二次例子。"
+        },
+        "4X0G": {
+          "status": "local-proof",
+          "scope": "有限维光滑紧支函数的高斯谱隙，由显式OU算子、分部积分和时间积分证明；闭包推广需可闭性。"
+        },
+        "4X0H": {
+          "status": "source-assumption-definition",
+          "scope": "完整转述LOTT Assumption2.1，包括无理alpha范围、时空平移/空间反射、双范数、谱隙及可闭性。"
+        },
+        "4X0I": {
+          "status": "conditional-local-proof",
+          "scope": "OWR半线性椭圆背景：给定可微光滑参数族时的两种方向线性化；不构造粗糙图册或拓扑流形。"
+        },
+        "4X0J": {
+          "status": "local-proof",
+          "scope": "二维多项式基点变换的二项式展开、复合律、行列三角条件和常数商；Gamma_yx-I在基空间T上降阶，其代数转置G_xy作用于系数族时低次输入可贡献到高次输出，给出1到2的系数2例。"
+        },
+        "4X0K": {
+          "status": "definition-and-local-proof",
+          "scope": "两组指标、populated条件、齐次度；不同齐次度局部有限、整数齐次度的判别，明确z0造成同层无限指标。"
+        },
+        "4X0L": {
+          "status": "local-proof",
+          "scope": "平移导子的链式公式、逐系数有限性、本构权重增加和形式指数；不容许任意形式级数的固定非零实数平移。"
+        },
+        "4X0M": {
+          "status": "source-model-definition",
+          "scope": "平滑、模型系数、反项支撑、右端方程及逐系数有限性；存在性在4X0O引用。"
+        },
+        "4X0N": {
+          "status": "source-model-definition",
+          "scope": "行有限基点变换矩阵、常数商、复合律、三角条件及纯多项式行；明确G_xy=(Gamma_yx)^*以及LOTT转置记号交换下标的约定。有限维原型仅指多项式模型的有限次数截断，未截断部分无限维。"
+        },
+        "4X0O": {
+          "status": "cited-research-theorem",
+          "scope": "LOTT Theorem2.2：指定假设下构造模型/反项/基点变换矩阵，所有有限p矩估计与平滑尺度无关；不扩张成去平滑极限、全形式级数收敛或非线性解定理。"
+        },
+        "4X0P": {
+          "status": "local-proof",
+          "scope": "正阶一致局部近似的重构唯一性，使用近似恒等卷积；不证明重构存在。"
+        },
+        "icm2026-otto": {
+          "status": "bibliographic-reference",
+          "scope": "报告官方身份及视频定位、独立背景论文版本/页码、必要版权；阅读方法与限制在packet。"
+        }
+      },
+      "claim_sources": {
+        "4X00": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "04:38–20:17；20:18–55:30；英语自动字幕的实际正文"
+          },
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§§1–2.4，pp.2–14"
+          },
+          {
+            "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+            "location": "§§1–5，实际读pp.1–15"
+          }
+        ],
+        "4X01": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "10:30–13:46；度量将能量微分转为速度。有限维证明为本地推导。"
+          }
+        ],
+        "4X02": [
+          {
+            "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+            "location": "§3，pp.7–8；平移例子本地推导"
+          }
+        ],
+        "4X03": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "04:38–09:00、13:49–17:34；推前计算本地展开"
+          }
+        ],
+        "4X04": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "11:00–17:34；带权正交最小化本地证明"
+          }
+        ],
+        "4X05": [
+          {
+            "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+            "location": "§§1–2，pp.1–7"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "19:26–20:15；JKO与Fokker–Planck"
+          }
+        ],
+        "4X06": [
+          {
+            "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+            "location": "§4，pp.9–13；离散比较法"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "13:49–17:34"
+          }
+        ],
+        "4X07": [
+          {
+            "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+            "location": "§4 p.9的假设；pp.10–13的离散极小点命题；§5 p.14主定理，式(30)–(33)"
+          }
+        ],
+        "4X08": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "14:20–17:34；特征函数向体积分数的松弛动机；细格例子本地证明"
+          }
+        ],
+        "4X09": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "13:49–17:34；两个加权Wasserstein平方代价及饱和约束；公式按本地定义核算"
+          }
+        ],
+        "4X0A": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "09:03–13:46；迁移率及Darcy耗散；光滑混合态模型本地推导"
+          }
+        ],
+        "4X0B": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "17:38–19:22；分层、迁移率依赖及混合传播。具体约化通量本地推导，非字幕公式转录"
+          }
+        ],
+        "4X0C": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "17:38–19:22；线性扩张的分层混合。稀疏波是本地标量模型证明"
+          }
+        ],
+        "4X0D": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "22:53–25:20；非线性二阶乘积障碍。振荡序列本地证明"
+          }
+        ],
+        "4X0E": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§1 pp.2–5；§2.2.5 p.11"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "29:59–34:11"
+          }
+        ],
+        "4X0F": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§2.1 pp.6–7，(2.3)–(2.6)"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "34:13–36:39"
+          }
+        ],
+        "4X0G": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§2.1 pp.6–7提供谱隙背景；有限维高斯半群证明为本地推导"
+          }
+        ],
+        "4X0H": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "Assumption2.1 pp.6–8；(2.1)–(2.7)及低频截断说明"
+          }
+        ],
+        "4X0I": [
+          {
+            "url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+            "location": "pp.1765–1768，(1)、(2)及线性化公式；半线性背景"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "36:43–44:54"
+          }
+        ],
+        "4X0J": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§2.2.6 p.12，(2.30)–(2.33)及脚注40–41；多项式复合、基空间与对偶作用方向和1到2系数例的本地计算"
+          }
+        ],
+        "4X0K": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§§2.2.1–2.2.5 pp.8–11；(2.8)、(2.15)、(2.19)–(2.29)"
+          }
+        ],
+        "4X0L": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§2.2.1 pp.8–9；(2.10)–(2.13)，形式代入限制另行澄清"
+          }
+        ],
+        "4X0M": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§2.2 pp.8–12；(2.17)–(2.25)、(2.34)–(2.35)"
+          }
+        ],
+        "4X0N": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "§2.2.6 p.12；(2.30)–(2.33)、行有限性脚注40、转置记号交换下标的脚注41；有限维描述限于多项式有限次数截断"
+          }
+        ],
+        "4X0O": [
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "Theorem2.2 pp.12–13；依赖Assumption2.1及§2.2；p.8明确去平滑极限在后续工作"
+          }
+        ],
+        "4X0P": [
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "44:59–48:04；重构与正指数。仅重构唯一性基本引理为本地证明"
+          }
+        ],
+        "icm2026-otto": [
+          {
+            "url": "https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress",
+            "location": "官方题名与摘要身份，非数学正文"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=K8-O-FdUzGs",
+            "location": "频道、视频题名、时长、上传日期及两主线时间定位"
+          },
+          {
+            "url": "https://www.ceremade.dauphine.fr/~carlier/JorKinOtto",
+            "location": "首页、§4 p.9、§5 p.14"
+          },
+          {
+            "url": "https://arxiv.org/pdf/2112.10739v3",
+            "location": "首页版本；§§2.1–2.3"
+          },
+          {
+            "url": "https://publications.mfo.de/bitstream/handle/mfo/4374/OWR_2025_33.pdf?isAllowed=y&sequence=1",
+            "location": "作者贡献pp.1765–1768及文集版权"
+          },
+          {
+            "url": "https://arxiv.org/pdf/2401.05935v3",
+            "location": "首页与§§1.1–1.2，pp.1–5"
+          }
+        ]
+      },
+      "remaining_branches": [
+        "Arnold/Euler/Brenier最小作用量与松弛的独立证明链未扩展；复用既有流映射和IPM页面。",
+        "Otto1999微结构松弛、真实界面模型到混合模型的收敛、完整多相模型未核读全文，未导入其深定理。",
+        "报告关于噪声微分的高阶局部模型化、二次冻结、重构存在及BPHZ归纳的完整证明未展开。",
+        "官方摘要第三例：临界无散漂移扩散与SL(n)上的Brownian运动，仅为宣布内容，本次报告字幕未实际讲述，未建数学节点。"
+      ],
+      "unexpanded_deep_proofs": [
+        "W2的一般度量性和最优耦合存在理论",
+        "JKO离散极小点存在/唯一性及连续时间收敛",
+        "LOTT Theorem2.2模型构造、非高斯谱隙估计及BPHZ归纳",
+        "去平滑极限、普适性、非线性解理论、重构存在定理"
+      ],
+      "subject_ids": [
+        "006A",
+        "0065",
+        "006C",
+        "0072"
+      ],
+      "subject_rationale": {
+        "006A": "连续性方程、Fokker–Planck、Darcy、守恒律、奇异拟线性热方程。",
+        "0065": "正定耗散度量、密度切向最小动能、图册动机与基点变换复合律；不宣称拓扑流形存在。",
+        "006C": "白噪声缩放、柱状Malliavin导数、高斯谱隙、一般噪声假设与随机模型矩估计。",
+        "0072": "两相饱和、相迁移率、分层约化、混合带传播及模型/极限的区分。"
+      }
+    },
+    {
+      "speaker": "Annalisa Buffa",
+      "title": "On New Challenges in Numerical Approximation of Partial Differential Equations",
+      "outline": "4Y00",
+      "prefix": "4Y",
+      "reference": "icm2026-buffa",
+      "integration_status": "preliminary-selected-branches",
+      "license": "逐来源：官方视频未核定独立开放再利用许可；Hinz–Buffa arXiv:2307.06265v2 为 arXiv perpetual non-exclusive license；Hinz–Buffa 2024 正式出版版本为 CC BY 4.0；Smears–Süli 2013 论文版权属 SIAM，未断言开放再利用许可。各来源不统一标为 CC BY。",
+      "source_url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+      "version_url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+      "source_url_role": "官方视频题名与报告身份；其中有限画面另列为局部报告正文证据，元数据不作为数学定理或全文证据。",
+      "mathematical_source_urls": [
+        "https://arxiv.org/html/2307.06265v2",
+        "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+        "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s"
+      ],
+      "question": "怎样从逆调和参数化得到非散度型椭圆方程，并在 Cordes 条件下控制冻结系数逼近误差，同时识别跨片低正则性与局部非退化的障碍？",
+      "reading_scope": "官方报告只实际读取抽样画面：约14:11 的逆调和映射、19:57 的离散 Miranda–Talenti 与 HCT 增广、25:42 的非正则系数局部化提纲、26:52 的数值图。并非连续观看这些区间，也未取得完整字幕/逐字稿。数学正文主要来自独立背景论文：Hinz–Buffa arXiv:2307.06265v2 的摘要、§1、§2、§3.1及§4.6选段；正式版本核对书目、§2.1–§3.1.1和许可；Smears–Süli 实读 pp.2089–2091，p.2091另核对版面。没有将作者背景论文认定为报告原稿，未认定任何论文集章节。",
+      "module_rationale": [
+        "18个原子页、1个叙事提纲及1个引用页；围绕已见逆调和/非散度逼近分支，实质数学来自读到的原始论文及明确的局部推导。",
+        "006F 对应实际报告画面中的离散估计、HCT 增广、求解方法与数值验证；006A 对应逆调和方程和非散度型椭圆估计。",
+        "不因作者另有流体/医学应用论文而增列0072；未将自动章节、官方描述或背景论文的研究范围替代报告范围。",
+        "报告整合维持 preliminary；所写页面可作为独立背景分支使用，整场报告和 C0-DG 深收敛结论尚未获得充分正文证据。"
+      ],
+      "subject_ids": [
+        "006F",
+        "006A"
+      ],
+      "subject_membership_status": "内容支持的候选入口，由父代理决定共享导航；不是报告完成标记",
+      "proof_scope": {
+        "4Y00": {
+          "status": "narrative-outline",
+          "scope": "从逆调和几何构造到冻结系数稳定性，再到跨接口障碍；不是整场报告综述。"
+        },
+        "4Y01": {
+          "status": "definition-and-local-calculation",
+          "scope": "参数导数、度量矩阵、严格正雅可比与全局同胚区别。"
+        },
+        "4Y02": {
+          "status": "cited-research-theorem",
+          "scope": "引用平面 Radó–Kneser–Choquet 内部微分同胚定理；未证明深定理、未给边界导数界。"
+        },
+        "4Y03": {
+          "status": "local-proof",
+          "scope": "逐分量二次链式法则，严格推出逆调和与 cofactor(J^T J):D²x_i=0 的等价。"
+        },
+        "4Y04": {
+          "status": "local-proof",
+          "scope": "显式最小/最大伸缩界推出余因子椭圆界；det=1 仍可畸变的反例。"
+        },
+        "4Y05": {
+          "status": "definition-and-local-calculation",
+          "scope": "可测对称一致椭圆系数与 H² 强解；乘积法则及非散度/散度差异的反例。"
+        },
+        "4Y06": {
+          "status": "definition-and-local-proof",
+          "scope": "二阶弱导数、H²∩H¹_0 与有序 Hessian 范数；由 L² 完备性证明闭子空间完备。"
+        },
+        "4Y07": {
+          "status": "definition-and-local-proof",
+          "scope": "Cordes 条件；二维参数 2λΛ/(λ²+Λ²) 推导及三维反例。"
+        },
+        "4Y08": {
+          "status": "local-proof",
+          "scope": "gamma 缩放恒等式、点态扰动界和 gamma 上下界。"
+        },
+        "4Y09": {
+          "status": "local-proof",
+          "scope": "仅 C² 边界平面域、C³ 零边界函数的曲率恒等式；一般凸域推广另引定理。"
+        },
+        "4Y0A": {
+          "status": "cited-analytic-input-with-local-consequence",
+          "scope": "一般有界凸域 Miranda–Talenti/H² 正则性及 Dirichlet Laplacian 满射性为引用；范数等价与 Hilbert 结论本地推导。"
+        },
+        "4Y0B": {
+          "status": "local-proof-with-cited-analytic-input",
+          "scope": "Cordes 点态估计与引用的凸域估计推出连续性 1+q 及强制性 1-q。"
+        },
+        "4Y0C": {
+          "status": "local-proof-with-cited-analytic-input",
+          "scope": "Lax–Milgram 构造变分解，再用 Laplacian 满射性测试残差以恢复强方程；引用正则性不冒充本地证明。"
+        },
+        "4Y0D": {
+          "status": "local-proof-with-cited-analytic-input",
+          "scope": "有限维 H² 相容空间唯一解、Galerkin 正交性与准最优界；不是 C0-DG 或样条网格收敛阶定理。"
+        },
+        "4Y0E": {
+          "status": "local-proof",
+          "scope": "|s| 的接口分布二阶导数及缩放测试函数证明不属于 L²。"
+        },
+        "4Y0F": {
+          "status": "construction-and-local-proof",
+          "scope": "分量弱 Hessian 恢复、质量矩阵正定唯一性、光滑一致性、接口跳跃符号；未证明耦合方法稳定性。"
+        },
+        "4Y0G": {
+          "status": "local-proof",
+          "scope": "移位迭代的固定点抵消与线性系数正定；直接移位残差一般改变非线性方程。"
+        },
+        "4Y0H": {
+          "status": "local-proof",
+          "scope": "严格小于最小伸缩的导数算子范数误差保持正雅可比；指数极坐标例子区分局部与全局。"
+        },
+        "4Y0I": {
+          "status": "local-proof-with-cited-analytic-input",
+          "scope": "H²∩H¹_0 近似函数的双边加权残差估计，不外推至逐片空间。"
+        },
+        "icm2026-buffa": {
+          "status": "bibliographic-reference",
+          "scope": "官方报告身份与两篇背景论文分列；版本、分页、许可与深定理引用范围分开。"
+        }
+      },
+      "claim_sources": {
+        "4Y00": [
+          {
+            "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+            "location": "画面抽样约14:11、19:57；不是连续观看或整场转录",
+            "role": "sampled-report-slides"
+          },
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§§2.1–2.2、3.1.1–3.1.3",
+            "role": "background-paper"
+          },
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "pp.2090–2091",
+            "role": "background-paper"
+          }
+        ],
+        "4Y01": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§§1.1–1.2、2.1；采用严格 det>0 的局部定义",
+            "role": "background-paper"
+          }
+        ],
+        "4Y02": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§2.1，Theorem 1",
+            "role": "background-paper"
+          },
+          {
+            "url": "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+            "location": "§2.1，Theorem 1",
+            "role": "background-paper"
+          }
+        ],
+        "4Y03": [
+          {
+            "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+            "location": "约14:11 逆调和映射画面中的系数矩阵与方程",
+            "role": "sampled-report-slides"
+          },
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§2.1，公式(11)；二次链式法则为本地展开",
+            "role": "background-paper"
+          }
+        ],
+        "4Y04": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§2 对一致非退化与系数的讨论；显式导数界和矩阵反例为本地推导",
+            "role": "background-paper"
+          }
+        ],
+        "4Y05": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "§2，pp.2089–2090，公式(2.1)–(2.4)",
+            "role": "background-paper"
+          }
+        ],
+        "4Y06": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2091，H²∩H¹_0；空间完备性为本地补足",
+            "role": "background-paper"
+          }
+        ],
+        "4Y07": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2090，公式(2.5)；二维计算与三维反例为本地推导",
+            "role": "background-paper"
+          }
+        ],
+        "4Y08": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2090，Lemma 1，公式(2.6)–(2.7)",
+            "role": "background-paper"
+          }
+        ],
+        "4Y09": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2091，Theorem 2 的光滑平面特例；曲率证明为独立推导",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0A": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2091，Theorem 2；Theorem 3 证明中明确使用 Δ:H²∩H¹_0→L² 满射",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0B": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2091，Theorem 3 证明",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0C": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2091，Theorem 3 及证明",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0D": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "p.2091，连续变分型；相容离散为本地推论，不归为本文 DG 定理",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0E": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§3.1 的 H¹/H² 跨片障碍；具体折线反例为本地补足",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0F": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§3.1.3，分部积分及公式(25)；质量矩阵与接口展开为本地推导",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0G": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§§3.1.1–3.1.2，公式(20)–(24)",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0H": [
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "§1 的非退化验证问题；具体扰动命题及反例为本地推导",
+            "role": "background-paper"
+          }
+        ],
+        "4Y0I": [
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "pp.2090–2091，Lemma 1 和 Theorem 2 的直接推论",
+            "role": "background-paper"
+          }
+        ],
+        "icm2026-buffa": [
+          {
+            "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+            "location": "官方题名、讲者、发布账号及视频身份",
+            "role": "official-identity"
+          },
+          {
+            "url": "https://arxiv.org/html/2307.06265v2",
+            "location": "题名、v2 版本及 arXiv 许可",
+            "role": "background-paper"
+          },
+          {
+            "url": "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+            "location": "正式书目信息、§2.1–§3.1.1、Rights and permissions",
+            "role": "background-paper"
+          },
+          {
+            "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+            "location": "题名、刊物分页、版权页及所读 pp.2089–2091",
+            "role": "background-paper"
+          }
+        ]
+      },
+      "remaining_branches": [
+        "取得可核对的整场视频字幕、讲者幻灯片或报告正文；目前 transcript 面板未加载。",
+        "核对19:57离散 Miranda–Talenti/HCT 增广引理的完整空间、网格及常数假设，再决定是否实现该深分支。",
+        "25:42 非正则系数分区论证只读到提纲，未识别完整定理及证明。",
+        "不由自动章节标题展开最优输运或应用分支；26:52的数值图也不替代收敛证明。"
+      ],
+      "unexpanded_deep_proofs": [
+        "4Y02：Radó–Kneser–Choquet 定理。",
+        "4Y0A：一般有界凸域的 Miranda–Talenti 估计、Poisson H² 正则性及 Laplacian 满射性。",
+        "未实现报告的 HCT 增广与离散 Miranda–Talenti 完整定理、C0-DG 稳定性或多片求解器收敛证明。",
+        "未证明非线性迭代从一般初值收敛，也未由局部正雅可比推断全局几何有效性。"
+      ]
+    },
+    {
+      "speaker": "Tamar Ziegler",
+      "title": "Structure of Sets with an Unexpected Number of Arithmetic Pattern",
+      "title_aliases": [
+        "Structure of Sets with an Unexpected Number of Arithmetic Patterns"
+      ],
+      "outline": "2900",
+      "prefix": "4Z",
+      "reference": "icm2026-ziegler",
+      "kind": "plenary",
+      "source_url": "https://math.huji.ac.il/~tamarz/video.html",
+      "source_url_role": "official-author-listing-identity-only",
+      "version_url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+      "mathematical_source_urls": [
+        "https://www.youtube.com/watch?v=czHiX0pYTDg",
+        "https://arxiv.org/html/1009.3998v5",
+        "https://arxiv.org/html/2007.15644v3"
+      ],
+      "background_source_urls": [
+        "https://arxiv.org/html/1404.0775v1"
+      ],
+      "doi": null,
+      "pages": null,
+      "license": "原录像与各论文分别引用；未核定重用许可，不套用其他报告 CC BY 许可。",
+      "coverage_status": "preliminary-selected-branches",
+      "report_complete": false,
+      "full_video_read": false,
+      "full_transcript_read": false,
+      "question": "配置计数偏离随机预测时会出现什么高阶结构，这种结构怎样控制 Liouville 的短区间相关与符号块数量？",
+      "reading_scope": "官方作者目录只用于身份与题名。实际观看官方录像的离散原幻灯片点位：0:00、22:27、22:42、25:03、30:03、40:05、40:18、42:18、45:05；无连续时间段或全文字幕阅读。视频抽点证据支持高阶结构和 Liouville 分支；精确定理来自 GTZ 1009.3998v5 §1（陈述）和 §2（证明路线至 HTML line263），MRTTZ 2007.15644v3 §1 至 Corollary 1.11（HTML lines89–292）。2014 的 1404.0775v1 §§1–8 仅作背景，不能作为 2026 报告书面稿。未确认该报告有对应 Proceedings 章；卷2的17章计数沿用父代理核查，不由本 packet 改动。",
+      "module_rationale": [
+        "只升级 2900，不创建 4Z00；保留并增强 2901–2903，复用已存在 Fourier/Gowers 与幂零流形定义。",
+        "13 个新原子页构成有限计数至逆理论、Liouville 至符号块的两条相连阅读线。",
+        "全报告整合仍属初步；不将原幻灯片抽点当作连续报告阅读，也不将研究原论文引言当成深证明已读。",
+        "数论 0063 对应算术函数，分析 0068 对应 Fourier/Gowers 控制，动力 0069 对应幂零轨道与多重相关，组合 006D 对应配置及符号块计数。入口是否升级由父代理决定。"
+      ],
+      "proof_scope": {
+        "2900": {
+          "status": "narrative-outline",
+          "scope": "保留旧主题；连接有限计数、逆定理、斜移位和 Liouville 所选应用。"
+        },
+        "2901": {
+          "status": "local-proof",
+          "scope": "保留随机集合与子群的精确三项计数，补独立性和期望前置。"
+        },
+        "2902": {
+          "status": "local-proof",
+          "scope": "保留 Fourier 展开与偏差界；明确 N>=3，避免空的非零频率最大值。"
+        },
+        "2903": {
+          "status": "local-proof",
+          "scope": "保留二次轨道与三阶差分证明；补逆变换和 Haar 保测计算。"
+        },
+        "4Z01": {
+          "status": "local-proof",
+          "scope": "三次 Cauchy–Schwarz、线性换元和四项计数偏差；有限素数群 p>3。"
+        },
+        "4Z02": {
+          "status": "definition-and-local-proof",
+          "scope": "整数区间能量比归一化；正分母、1-bounded 上界及有限循环群嵌入的无绕回证明。"
+        },
+        "4Z03": {
+          "status": "definition-and-local-proof",
+          "scope": "基本幂零序列及线性相位例子；幂零流形复用 340C。"
+        },
+        "4Z04": {
+          "status": "cited-research-theorem",
+          "scope": "GTZ 精确有限流形族、Lipschitz 和相关下界量词；深层证明外引。"
+        },
+        "4Z05": {
+          "status": "local-proof",
+          "scope": "四个观测函数各自沿第二坐标平均为零，但沿斜移位的乘积恒为一；不声称已识别最大 Kronecker 因子。"
+        },
+        "4Z06": {
+          "status": "definition-and-local-proof",
+          "scope": "Liouville 定义、完全乘法性及与 Möbius 的区别。"
+        },
+        "4Z07": {
+          "status": "definition-and-local-proof",
+          "scope": "符号块复杂度、起点约定、单调性和次乘性。"
+        },
+        "4Z08": {
+          "status": "definition-and-local-proof",
+          "scope": "普通/对数平均及密度、调和归一化；固定移位 Chowla 只作为猜想定义。"
+        },
+        "4Z09": {
+          "status": "local-proof",
+          "scope": "有限分部求和恒等式和普通抵消推出对数抵消。"
+        },
+        "4Z0A": {
+          "status": "local-proof",
+          "scope": "符号块指标展开；普通和对数相关分别推出各自频率，不混同密度。"
+        },
+        "4Z0B": {
+          "status": "cited-research-theorem-with-local-consequence",
+          "scope": "Corollary 1.6 的 H=X^theta 特例为引用；例外起点比例的积分估计在本站证明。"
+        },
+        "4Z0C": {
+          "status": "cited-research-theorem-with-local-consequence",
+          "scope": "Theorem 1.9 为引用；增长超过每个固定多项式阶的推论和非指数边界为本地计算。"
+        },
+        "4Z0D": {
+          "status": "cited-research-theorem-with-local-consequence",
+          "scope": "Corollary 1.11 为引用；绝对值位置与固定参数完整保留；坏公差比例为本地推论。"
+        },
+        "icm2026-ziegler": {
+          "status": "bibliographic-reference",
+          "scope": "官方身份、录像原片时间戳、2014 背景及两个研究原论文版本分别列明。"
+        }
+      },
+      "claim_sources": {
+        "2900": [
+          {
+            "url": "https://arxiv.org/html/1404.0775v1",
+            "location": "§§2–8，背景线索；不是 2026 报告书面稿"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+            "location": "抽点核读 25:03、42:18、45:05 原幻灯片，非完整录像"
+          }
+        ],
+        "2901": [
+          {
+            "url": "https://arxiv.org/html/1404.0775v1",
+            "location": "§2；有限 N 的退化项为本地精确计算"
+          }
+        ],
+        "2902": [
+          {
+            "url": "https://arxiv.org/html/1404.0775v1",
+            "location": "§2；Fourier 计数与 Parseval 估计"
+          }
+        ],
+        "2903": [
+          {
+            "url": "https://arxiv.org/html/1404.0775v1",
+            "location": "§4；斜移位"
+          }
+        ],
+        "4Z05": [
+          {
+            "url": "https://arxiv.org/html/1404.0775v1",
+            "location": "§4；四时刻相关例子"
+          }
+        ],
+        "4Z01": [
+          {
+            "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+            "location": "25:03 slide 18；一般机制的报告证据，本文 p>3 四项特例另作局部证明"
+          },
+          {
+            "url": "https://arxiv.org/html/1404.0775v1",
+            "location": "§5；Cauchy–Schwarz 与 Gowers 量背景"
+          }
+        ],
+        "4Z02": [
+          {
+            "url": "https://arxiv.org/html/1009.3998v5",
+            "location": "§1，区间范数定义（式 1.1 后）"
+          },
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "§1，式 (8)"
+          }
+        ],
+        "4Z03": [
+          {
+            "url": "https://arxiv.org/html/1009.3998v5",
+            "location": "§1，Conjecture 1.2 前幂零流形与线性幂零序列"
+          }
+        ],
+        "4Z04": [
+          {
+            "url": "https://arxiv.org/html/1009.3998v5",
+            "location": "§1，Conjecture 1.2、Theorem 1.3 与低阶结果；仅读陈述及 §2 证明路线，不宣称阅读全文证明"
+          }
+        ],
+        "4Z06": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "§1，Liouville 函数约定"
+          }
+        ],
+        "4Z07": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "§1.2.1，式 (14)"
+          }
+        ],
+        "4Z08": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "§1.1；调和归一化与移位特例为本地写法"
+          }
+        ],
+        "4Z09": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "§1.1 普通/对数区别；分部求和是本地补证"
+          }
+        ],
+        "4Z0A": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "§1.2.1，Chowla 与符号块；普通/对数密度分开证明"
+          }
+        ],
+        "4Z0B": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "Corollary 1.6，取 k=s-1、H=X^theta、0<theta<1"
+          }
+        ],
+        "4Z0C": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "Theorem 1.9；其后对频率问题的说明"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+            "location": "42:18 slide 32，S_lambda(k) >>_A k^A"
+          }
+        ],
+        "4Z0D": [
+          {
+            "url": "https://arxiv.org/html/2007.15644v3",
+            "location": "Corollary 1.11，绝对值在 h 平均内"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=czHiX0pYTDg",
+            "location": "45:05 slide 34，局部均匀性至平均 Chowla 的应用路线；精确强形式来自原论文"
+          }
+        ],
+        "icm2026-ziegler": [
+          {
+            "url": "https://math.huji.ac.il/~tamarz/video.html",
+            "location": "ICM Plenary talk, Philadelphia 2026 条目，身份/单数题名而非数学正文"
+          },
+          {
+            "url": "https://annals.math.princeton.edu/2012/176-2/p11",
+            "location": "作者、刊物、页码及 DOI 元数据；未读取该出版版全文"
+          },
+          {
+            "url": "https://arxiv.org/abs/2007.15644v3",
+            "location": "作者、期刊、DOI 及版本日期"
+          }
+        ]
+      },
+      "proofs_written": [
+        "2901",
+        "2902",
+        "2903",
+        "4Z01",
+        "4Z02",
+        "4Z03",
+        "4Z05",
+        "4Z06",
+        "4Z07",
+        "4Z08",
+        "4Z09",
+        "4Z0A"
+      ],
+      "proofs_with_external_inputs": [
+        "4Z0B",
+        "4Z0C",
+        "4Z0D"
+      ],
+      "research_results_cited": [
+        "4Z04",
+        "4Z0B",
+        "4Z0C",
+        "4Z0D"
+      ],
+      "remaining_branches": [
+        "报告全程或作者完整幻灯片/逐字稿尚未取得；目前仅为抽点核读。",
+        "素数线性方程的局部因子与 transference 未新增定理页；保留原背景导航。",
+        "Log-Sarnak、Tao 的等价性及 Walsh 条件结果未核读相应原论文，故不导入精确定理。",
+        "MRTTZ 一般非伪装乘法函数、滤过幂零序列、量化改进及多项式平均未展开。"
+      ],
+      "unexpanded_deep_proofs": [
+        "GTZ Gowers 逆定理的 nilcharacter、对称与积分论证。",
+        "MRTTZ 非阿贝尔短区间均匀性证明。",
+        "MRTTZ §5 符号块超多项式下界研究证明。",
+        "MRTTZ Corollary 1.11 的研究推导；本站只证明其坏公差比例推论。"
+      ],
+      "subject_ids": [
+        "0063",
+        "0068",
+        "0069",
+        "006D"
+      ]
+    }
+  ],
+  "prerequisites": {
+    "2900": [],
+    "2901": [
+      "00BA",
+      "00G3",
+      "00L1",
+      "00L3"
+    ],
+    "2902": [
+      "0Y01",
+      "0Y02"
+    ],
+    "2903": [
+      "00RS",
+      "00T1",
+      "0H53"
+    ],
+    "4X00": [],
+    "4X01": [
+      "00NI",
+      "0A33",
+      "4R01",
+      "0A34"
+    ],
+    "4X02": [
+      "00Q3",
+      "0F63",
+      "4M0Y",
+      "0A68"
+    ],
+    "4X03": [
+      "4501",
+      "4X02",
+      "4301",
+      "4502"
+    ],
+    "4X04": [
+      "4X03",
+      "4X01"
+    ],
+    "4X05": [
+      "4X03",
+      "4X04",
+      "4X01"
+    ],
+    "4X06": [
+      "00EK",
+      "4X01"
+    ],
+    "4X07": [
+      "4X02",
+      "4X06",
+      "00Q6",
+      "00MJ",
+      "0A66",
+      "4X05"
+    ],
+    "4X08": [
+      "00Q2",
+      "00Q6"
+    ],
+    "4X09": [
+      "4X08",
+      "4X02",
+      "4X01",
+      "4X06"
+    ],
+    "4X0A": [
+      "4X09",
+      "4X01"
+    ],
+    "4X0B": [
+      "4X0A"
+    ],
+    "4X0C": [
+      "4X0B",
+      "00Q6"
+    ],
+    "4X0D": [
+      "0W0Z"
+    ],
+    "4X0E": [
+      "0A34",
+      "4U02"
+    ],
+    "4X0F": [
+      "00MQ",
+      "4U01",
+      "0A34"
+    ],
+    "4X0G": [
+      "00L3",
+      "0N0R",
+      "00L2",
+      "4X0F"
+    ],
+    "4X0H": [
+      "0H4G",
+      "0W01",
+      "0H4F",
+      "4X0F",
+      "4X0G"
+    ],
+    "4X0I": [
+      "0A33",
+      "0A34"
+    ],
+    "4X0J": [
+      "4X0E"
+    ],
+    "4X0K": [
+      "0AL0"
+    ],
+    "4X0L": [
+      "4X0K",
+      "0AL1",
+      "0AL0"
+    ],
+    "4X0M": [
+      "4X0H",
+      "4X0K",
+      "4X0L"
+    ],
+    "4X0N": [
+      "4X0K",
+      "4X0M",
+      "4X0J"
+    ],
+    "4X0O": [
+      "4X0H",
+      "4X0K",
+      "4X0M",
+      "4X0N"
+    ],
+    "4X0P": [
+      "0W0Z",
+      "4X0E"
+    ],
+    "icm2026-otto": [],
+    "4Y00": [],
+    "4Y01": [
+      "0A33",
+      "01D2",
+      "0N0A",
+      "00E3",
+      "0A3F"
+    ],
+    "4Y02": [
+      "0052",
+      "00TK",
+      "00E3",
+      "270F",
+      "0A3F"
+    ],
+    "4Y03": [
+      "4Y01",
+      "0N0A",
+      "4R02",
+      "0A34"
+    ],
+    "4Y04": [
+      "4Y01",
+      "0N0B"
+    ],
+    "4Y05": [
+      "4Y06",
+      "4001"
+    ],
+    "4Y06": [
+      "2J0C",
+      "0A6A",
+      "0A68",
+      "00MQ"
+    ],
+    "4Y07": [
+      "4Y05",
+      "0N0B"
+    ],
+    "4Y08": [
+      "4Y07",
+      "0A3M"
+    ],
+    "4Y09": [
+      "4R02",
+      "0A34",
+      "0BAC"
+    ],
+    "4Y0A": [
+      "00TK",
+      "4Y06",
+      "0A3M"
+    ],
+    "4Y0B": [
+      "4Y08",
+      "4Y0A",
+      "0A68"
+    ],
+    "4Y0C": [
+      "4Y05",
+      "4Y0A",
+      "4Y0B",
+      "4003"
+    ],
+    "4Y0D": [
+      "4Y0C",
+      "00M9",
+      "4Y0B",
+      "4003"
+    ],
+    "4Y0E": [
+      "2J0C",
+      "4Y06",
+      "0A68"
+    ],
+    "4Y0F": [
+      "4R02",
+      "4Y0E",
+      "2J0C",
+      "0BAC"
+    ],
+    "4Y0G": [
+      "4Y03",
+      "0N0B"
+    ],
+    "4Y0H": [
+      "00M4",
+      "4Y01",
+      "3101"
+    ],
+    "4Y0I": [
+      "4Y0C",
+      "4Y08",
+      "4Y0A"
+    ],
+    "icm2026-buffa": [],
+    "4Z01": [
+      "0Y03",
+      "0A3M"
+    ],
+    "4Z02": [
+      "0GOB",
+      "0Y03"
+    ],
+    "4Z03": [
+      "340C",
+      "00BP"
+    ],
+    "4Z04": [
+      "340C",
+      "00NI",
+      "4Z02",
+      "00FU",
+      "4Z03"
+    ],
+    "4Z05": [
+      "00T1",
+      "340C",
+      "0H53"
+    ],
+    "4Z06": [
+      "0H4X",
+      "0GG1"
+    ],
+    "4Z07": [],
+    "4Z08": [
+      "0A45",
+      "4Z06"
+    ],
+    "4Z09": [
+      "4Z08"
+    ],
+    "4Z0A": [
+      "4Z08",
+      "4Z07"
+    ],
+    "4Z0B": [
+      "4Z06",
+      "4Z02",
+      "00Q5",
+      "00XV"
+    ],
+    "4Z0C": [
+      "4Z06",
+      "4Z07"
+    ],
+    "4Z0D": [
+      "4Z06",
+      "4Z08"
+    ],
+    "icm2026-ziegler": []
+  },
+  "leading_topics": {
+    "006A": [
+      "2A00",
+      "2700",
+      "2C00",
+      "4U00",
+      "4X00",
+      "4Y00"
+    ],
+    "0065": [
+      "2C00",
+      "2600",
+      "4T00",
+      "4X00"
+    ],
+    "006C": [
+      "4U00",
+      "4S00",
+      "4X00"
+    ],
+    "0072": [
+      "4Q00",
+      "4U00",
+      "4X00"
+    ],
+    "006F": [
+      "4R00",
+      "4Y00"
+    ],
+    "0063": [
+      "2400",
+      "2900",
+      "2500",
+      "2300",
+      "4S00"
+    ],
+    "0068": [
+      "2700",
+      "2A00",
+      "2B00",
+      "2900"
+    ],
+    "0069": [
+      "4S00",
+      "4T00",
+      "2900"
+    ],
+    "006D": [
+      "4V00",
+      "2900"
+    ]
+  },
+  "preserved_topics": {
+    "006A": [
+      "2A00",
+      "2700",
+      "2C00",
+      "4U00",
+      "4000",
+      "4100",
+      "4200",
+      "4300",
+      "4400",
+      "4500",
+      "4600",
+      "4700",
+      "4800",
+      "4900",
+      "4A00",
+      "2G00",
+      "1200",
+      "2I00"
+    ],
+    "0065": [
+      "2C00",
+      "2600",
+      "4T00",
+      "0BL0",
+      "2D00",
+      "2E00",
+      "2M00",
+      "2F00",
+      "2Q00",
+      "2G00",
+      "2L00",
+      "2P00",
+      "2J00",
+      "2K00",
+      "2H00",
+      "2I00",
+      "2N00",
+      "2R00",
+      "0U00",
+      "0N00",
+      "0GS0",
+      "007C",
+      "014Z",
+      "0056",
+      "0040"
+    ],
+    "006C": [
+      "4U00",
+      "4S00",
+      "0N00",
+      "0GS0",
+      "0079",
+      "007B",
+      "005C"
+    ],
+    "0072": [
+      "4Q00",
+      "4U00",
+      "005C"
+    ],
+    "006F": [
+      "4R00"
+    ],
+    "0063": [
+      "2400",
+      "2500",
+      "2300",
+      "4S00",
+      "0C00",
+      "0C80",
+      "0GC0",
+      "0G80",
+      "0GG0",
+      "0H00",
+      "0GS0",
+      "0H40",
+      "0GO0",
+      "0GK0",
+      "0G00",
+      "0G40",
+      "007C",
+      "007A",
+      "007D",
+      "0160",
+      "01A0"
+    ],
+    "0068": [
+      "2700",
+      "2A00",
+      "2B00",
+      "0R00",
+      "0S00",
+      "0T00",
+      "0U00",
+      "0V00",
+      "0W00",
+      "0X00",
+      "0GO0",
+      "0Z00",
+      "1000",
+      "1100",
+      "1200",
+      "1300",
+      "4900",
+      "0GS0",
+      "0Q00",
+      "007C",
+      "007A",
+      "004U",
+      "0039",
+      "0038",
+      "004T"
+    ],
+    "0069": [
+      "4S00",
+      "4T00",
+      "3000",
+      "3100",
+      "3200",
+      "3300",
+      "3400",
+      "3500",
+      "3600",
+      "3700",
+      "3800",
+      "3900",
+      "2D00",
+      "2H00",
+      "007C",
+      "0V00",
+      "0P00",
+      "007B"
+    ],
+    "006D": [
+      "4V00",
+      "0N00",
+      "2X00",
+      "01C0",
+      "01C2",
+      "0079",
+      "007C",
+      "005C",
+      "00AU"
+    ]
+  },
+  "cross_subject_landings": [
+    {
+      "subject": "006A",
+      "outline": "4X00"
+    },
+    {
+      "subject": "0065",
+      "outline": "4X00"
+    },
+    {
+      "subject": "006C",
+      "outline": "4X00"
+    },
+    {
+      "subject": "0072",
+      "outline": "4X00"
+    },
+    {
+      "subject": "006F",
+      "outline": "4Y00"
+    },
+    {
+      "subject": "006A",
+      "outline": "4Y00"
+    },
+    {
+      "subject": "0063",
+      "outline": "2900"
+    },
+    {
+      "subject": "0068",
+      "outline": "2900"
+    },
+    {
+      "subject": "0069",
+      "outline": "2900"
+    },
+    {
+      "subject": "006D",
+      "outline": "2900"
+    }
+  ],
+  "navigation_checks": [],
+  "report_landings": {
+    "2900": "0063",
+    "4X00": "006A",
+    "4Y00": "006F"
+  },
+  "review": {
+    "packet_files": [
+      "research/plenary-otto-packet.json",
+      "research/plenary-buffa-packet.json",
+      "research/plenary-ziegler-packet.json"
+    ],
+    "status": "local-source-integrated",
+    "publication": "not-pushed",
+    "scope": "核读范围、背景材料、局部证明、引用定理和待展开分支逐篇记录。"
+  }
+}

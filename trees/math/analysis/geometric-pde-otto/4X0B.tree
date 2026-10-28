@@ -1,0 +1,16 @@
+\title{分层两相流的有效迁移率}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 17:38–19:22；分层零总通量模型的计算}
+
+\p{设两相只随竖直坐标 #{z} 变化，总竖直通量为零。在[两相 Darcy 模型](4X0A)中写重相通量为 #{j}、轻相为 #{-j}，迁移率 #{a,b>0}，重力系数 #{A>0}。当 #{0<s<1} 时，瞬时耗散极小化化为}
+##{\min_{j\in\mathbb R}
+\left\{\frac 12\left(\frac 1{as}+\frac 1{b(1-s)}\right)j^2+Aj\right\}.}
+\p{对 #{j} 求导，得到 #{j=F(s)=-AM(s)}，其中}
+##{M(s)=\frac{ab\,s(1-s)}{b+(a-b)s},\qquad
+\partial_ts+\partial_zF(s)=0.}
+\p{分母始终至少为 #{\min(a,b)>0}，所以 #{M} 光滑延拓到 #{[0,1]} 且两端为零。直接用商法则计算得}
+##{M'(0)=a,\quad M'(1)=-b,\quad
+M''(s)=-\frac{2a^2b^2}{(b+(a-b)s)^3}.}
+\p{因而 #{F''>0}，#{F'(0)=-Aa}，#{F'(1)=Ab}。重相向下运动对应 #{j<0}；体积分数趋近零时有效迁移率约为 #{as}，趋近一时约为 #{b(1-s)}，稀少的那一相控制通量。等迁移率 #{a=b=m} 时，#{M(s)=ms(1-s)}。}

@@ -1,0 +1,19 @@
+\title{有限第一象限谱序列控制维数与交错和}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Serre，1950–1951 年 Cartan 讨论班第 10 讲](https://www.numdam.org/item/SHC_1950-1951__3__A10_0.pdf)，§§1–4；下述维数推导在此展开}
+
+\p{与[滤过谱序列](160B)的逐页构造相同，设 #{E_r^{p,q}} 是域 #{k} 上的同调型谱序列，#{r\ge 2}，微分为}
+##{d_r:E_r^{p,q}\longrightarrow E_r^{p-r,q+r-1},\qquad E_{r+1}=H(E_r,d_r).}
+\p{这里的 #{H} 是[复形同调](012B)。假设 #{E_2^{p,q}} 在 #{p,q\ge 0} 之外为零，所有项有限维，而且只有有限多个非零项。再假设谱序列收敛到分次向量空间 #{H_*}，具体指每个 #{H_n} 有有限滤过，其相伴分次为 #{E_\infty^{p,n-p}}。则}
+##{\dim_k H_n\le\sum_{p+q=n}\dim_k E_2^{p,q},\qquad
+\sum_n(-1)^n\dim_k H_n=\sum_{p,q}(-1)^{p+q}\dim_k E_2^{p,q}.}
+
+\p{\strong{证明。}令 #{V_{r,n}=\bigoplus_{p+q=n}E_r^{p,q}}，并记 #{b_{r,n}=\dim V_{r,n}}、#{a_{r,n}=\operatorname{rank}(d_r:V_{r,n}\to V_{r,n-1})}。因 #{d_r^2=0}，[商空间维数公式](0A0L)应用于核与像后给出}
+##{b_{r+1,n}=b_{r,n}-a_{r,n}-a_{r,n+1}.}
+\p{各页总次数 #{n} 上的维数因此不增加。把等式乘以 #{(-1)^n} 后求和，两个秩的和因移位而抵消，所以交错和逐页不变。有限支撑保证所有和有限，并保证大 #{r} 时微分全为零。有限滤过的维数等于相伴分次维数之和，故终页给出所述两式。}
+
+\p{\strong{纤维空间中的应用。}对纤维化 #{F\to E\to B}，若 Serre 同调谱序列适用，且底空间基本群在 #{H_*(F;k)} 上的作用平凡，则其第二页为 #{E_2^{p,q}\cong H_p(B;k)\otimes_k H_q(F;k)}。例如底空间单连通时没有这项局部系数扭曲。在底空间与纤维同调有限维且有限支撑的条件下，写 #{b_j(X)=\dim_kH_j(X;k)}，上式成为}
+##{b_n(E)\le\sum_{p+q=n}b_p(B)b_q(F),\qquad \chi(E)=\chi(B)\chi(F).}
+\p{纤维空间谱序列的存在、收敛及第二页的识别见所引 Serre 文献。无限支撑时，交错无穷和的移项需要另行验证收敛条件。}

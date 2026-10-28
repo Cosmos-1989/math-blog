@@ -1,0 +1,18 @@
+\title{不同共轭轨道的弱极限满足对数积分非负条件}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Serre，arXiv:1807.11700v3](https://arxiv.org/abs/1807.11700v3)，§1.1 与引理 1.3.1–1.3.4，印刷页 1146–03、1146–05；截断步骤在此展开}
+
+\p{设 #{K\subset\mathbb C} 紧，#{P_n\in\mathbb Z[T]} 是两两不同的首一不可约多项式，所有根均在 #{K} 中。假设其[根测度](510A)弱收敛到概率测度 #{\mu}。则对每个非零 #{Q\in\mathbb Z[T]}，有}
+##{\int_K\log|Q(z)|\,d\mu(z)\ge 0,}
+\p{其中约定 #{\log 0=-\infty}。因 #{\log|Q|} 在紧集上有上界，积分预先允许取 #{-\infty}；结论说明它实际上是有限实数且非负。}
+
+\p{\strong{整数行列式。}固定 #{Q}。它只有有限多个不可约因子，故除去有限多个 #{n} 后，#{P_n} 与 #{Q} 互素。设 #{d_n=\deg P_n}，根为 #{\alpha_{n,j}}。在 #{\mathbb Z[T]/(P_n)} 上乘以 #{Q(T)} 的整矩阵，扩张到复数后按根处取值对角化。其行列式因而是非零整数}
+##{R_n=\prod_{j=1}^{d_n}Q(\alpha_{n,j}),\qquad
+\int_K\log|Q|\,d\mu_{P_n}=\frac{\log|R_n|}{d_n}\ge 0.}
+
+\p{\strong{处理对数奇性。}对 #{0<\varepsilon\le 1} 定义连续函数 #{F_\varepsilon(z)=\log\max\{\varepsilon,|Q(z)|\}}。它逐点不小于 #{\log|Q|}，所以对充分大的 #{n}，#{\int F_\varepsilon\,d\mu_{P_n}\ge 0}。固定 #{\varepsilon} 后才能用弱收敛，得到 #{\int F_\varepsilon\,d\mu\ge 0}。}
+\p{取常数 #{C\ge\log\max\{1,\sup_K|Q|\}}。沿 #{\varepsilon\downarrow 0}，非负函数 #{C-F_\varepsilon} 单调增加到 #{C-\log|Q|}。由[单调收敛定理](0A7A)，}
+##{\int_K\log|Q|\,d\mu=\lim_{\varepsilon\downarrow 0}\int_K F_\varepsilon\,d\mu\ge 0.}
+\p{对数本身在 #{Q} 的零点不连续，所以上述截断不能省略。轨道互异也不能省略：常数序列 #{P_n=T} 给出 #{\mu=\delta_0}，取 #{Q=T} 时积分为 #{-\infty}。}

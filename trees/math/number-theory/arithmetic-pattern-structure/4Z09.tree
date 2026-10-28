@@ -1,0 +1,15 @@
+\title{普通平均抵消推出对数平均抵消}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Matomäki 等](icm2026-ziegler)，§1.1 的两种平均；分部求和推导}
+
+\p{设 #{a:\mathbb N\to\mathbb C} 有界，采用[普通平均与对数平均](4Z08)的记号。若 #{A_N(a)\to 0}，则 #{L_N(a)\to 0}。}
+\p{\strong{证明。}记 #{B_m=\sum_{n=1}^ma(n)}、#{B_0=0}。将 #{a(n)=B_n-B_{n-1}} 代入有限和，得到精确恒等式}
+##{\sum_{n=1}^N\frac{a(n)}n
+=\frac{B_N}N+\sum_{m=1}^{N-1}B_m\left(\frac 1m-\frac 1{m+1}\right).}
+\p{给定 #{\varepsilon>0}，假设保证存在 #{M}，使 #{m\geq M} 时 #{|B_m|\leq\varepsilon m}。因此当 #{N\geq M}，}
+##{\left|\sum_{n=1}^N\frac{a(n)}n\right|
+\leq C_M+\varepsilon+\varepsilon\sum_{m=M}^{N-1}\frac 1{m+1}
+\leq C_M+\varepsilon+\varepsilon H_N,}
+\p{其中 #{C_M=\sum_{m=1}^{M-1}|B_m|(1/m-1/(m+1))} 与 #{N} 无关。除以 #{H_N\to\infty} 后取上极限，得 #{\limsup_N|L_N(a)|\leq\varepsilon}。令 #{\varepsilon\downarrow 0} 即得结论。}

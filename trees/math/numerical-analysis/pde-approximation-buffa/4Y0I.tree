@@ -1,0 +1,10 @@
+\title{Cordes 强解的加权残差界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，§2.1 估计的直接推论}
+
+\p{在 [Cordes 强解定理](4Y0C) 的假设下，令 #{u\in V=H^2(\Omega)\cap H^1_0(\Omega)} 满足 #{L_Au=f}，#{w\in V} 为任意近似函数。设 #{\gamma=(\operatorname{tr}A)/|A|_F^2}、#{q=\sqrt{1-\varepsilon}<1}，并记加权残差 #{r=\gamma(f-L_Aw)}。则}
+##{(1-q)\|\Delta(u-w)\|_2\leq\|r\|_2\leq(1+q)\|\Delta(u-w)\|_2.}
+\p{\strong{证明。}记 #{e=u-w\in V}，则 #{r=\gamma L_Ae}。由 [Cordes 缩放](4Y08) 及 [凸域估计](4Y0A)，有 #{\|r-\Delta e\|_2\leq q\|D^2e\|_2\leq q\|\Delta e\|_2}。三角不等式和反三角不等式分别给出上、下界。}
+\p{该估计无需 #{w} 满足 Galerkin 方程，但要求 #{w\in V}。若近似函数只有逐片二阶导数，单独计算单元内部残差会遗漏接口贡献，不能直接代入此式。}

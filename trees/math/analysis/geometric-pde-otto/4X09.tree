@@ -1,0 +1,14 @@
+\title{饱和两相密度的加权输运时间步}
+\date{2026-10-28}
+\taxon{Construction}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 13:49–17:34；两相离散模型}
+
+\p{设 #{\Omega\subset\mathbb R^d} 有界，#{0<M<|\Omega|}。以[体积分数](4X08) #{s:\Omega\to[0,1]} 表示重相，轻相分数为 #{1-s}；饱和条件就是两者之和为 #{1}。固定 #{\int_\Omega s=M}，两相迁移率分别为 #{a,b>0}。在两个状态 #{r,s} 间定义}
+##{\mathsf D(r,s)^2=\frac 1aW_2(r\,dx,s\,dx)^2+
+\frac 1bW_2((1-r)\,dx,(1-s)\,dx)^2.}
+\p{这里的[二次输运代价](4X02)允许任意相同有限质量；两项分别具有质量 #{M} 和 #{|\Omega|-M}，不能先各自归一化却遗漏质量因子。系数为迁移率的倒数，与[速度的耗散度量](4X01)一致。}
+\p{取竖直坐标 #{z=x_d}，重轻相密度差为 #{\Delta\rho>0}，重力加速度大小为 #{g>0}，记 #{A=\Delta\rho\,g}。略去与状态无关的轻相势能后，#{E(s)=A\int_\Omega zs}。给定 #{s_{k-1}} 和步长 #{h>0}，以}
+##{s_k\in\operatorname*{arg\,min}_{0\le s\le 1,\ \int s=M}
+\left\{E(s)+\frac{\mathsf D(s,s_{k-1})^2}{2h}\right\}}
+\p{定义一个两相时间步，只要该极小点存在。以旧状态为竞争者，[极小移动的耗散计算](4X06)给出 #{E(s_k)+\mathsf D(s_k,s_{k-1})^2/(2h)\le E(s_{k-1})}。饱和约束把两个输运问题耦合起来；两个相各自独立最优的终态一般不能同时满足该约束。}

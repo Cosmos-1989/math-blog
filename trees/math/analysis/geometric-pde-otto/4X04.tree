@@ -1,0 +1,12 @@
+\title{密度切向速度的最小动能}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 11:00–17:34；光滑正密度的局部变分计算}
+
+\p{在 #{\mathbb T^d} 上，设 #{\rho>0} 光滑，#{\sigma} 光滑且 #{\int\sigma=0}。把 #{\sigma} 看作密度的瞬时变化，[连续性方程](4X03)要求速度满足 #{-\operatorname{div}(\rho v)=\sigma}。假设已有光滑周期解 #{\phi} 满足 #{-\operatorname{div}(\rho\nabla\phi)=\sigma}。则在满足该约束的光滑速度中，}
+##{\inf_v\int\rho|v|^2=\int\rho|\nabla\phi|^2,}
+\p{且极小速度唯一等于 #{\nabla\phi}。这里把[正定度量](4X01)的平方范数具体化为带权动能；结论适用于已存在上述光滑势函数的情形。}
+\p{\strong{证明。}写 #{v=\nabla\phi+w}。约束相减得到 #{\operatorname{div}(\rho w)=0}，于是 #{\int\rho\nabla\phi\cdot w=-\int\phi\,\operatorname{div}(\rho w)=0}。故}
+##{\int\rho|v|^2=\int\rho|\nabla\phi|^2+\int\rho|w|^2.}
+\p{因 #{\rho>0}，等号成立恰当且仅当 #{w=0}。此外 #{\int\rho|\nabla\phi|^2=\int\phi\sigma}，所以给 #{\phi} 加常数不改变这个量。密度的同一个变化可由许多速度实现；约束中的无散度余量只增加动能。}

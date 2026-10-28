@@ -1,0 +1,2121 @@
+{
+  "verified_at": "2026-10-28T10:07:04.196Z",
+  "status": "local-validation-passed",
+  "publication": "not-yet-pushed",
+  "base_commit": "7432503ff85d7f6427f817c417e5cd7cf76cae4e",
+  "scope": "Both unpublished batches: Otto, Buffa, Ziegler, Nesterov and Sarnak. Mathematical scope remains the selected branches recorded in each packet.",
+  "counts": {
+    "reports_in_release": 5,
+    "roster_topics": 22,
+    "ordinary": 19,
+    "special": 3,
+    "new_pages": 89,
+    "updated_existing_pages": 5,
+    "owned_notes": 94,
+    "new_atomic_pages": 81,
+    "static_content_pages": 7661
+  },
+  "records": [
+    {
+      "file": "research/icm2026-plenary-geometric-approximation.json",
+      "sha256": "a6483d33179cea7442cb9bca3263e9fe690dcf86fd258c6aeac430798b1c5db3"
+    },
+    {
+      "file": "research/icm2026-plenary-final-reports.json",
+      "sha256": "d97bc4a664e4fec9c2b9811a9687be3a85add50f60eecf0032fb97eb80c4bb07"
+    },
+    {
+      "file": "research/icm2026-plenary-geometric-approximation-snapshots.json",
+      "sha256": "047744d52b586ab98756f7f4a4b9535f7fc69d9ef32b42a27f8523d9ab9fa174"
+    },
+    {
+      "file": "research/icm2026-plenary-final-reports-snapshots.json",
+      "sha256": "d2c003c83c58faddf7379d2a50430a421c04ae9a94a0304ddfa4e41029817d36"
+    },
+    {
+      "file": "research/plenary-otto-packet.json",
+      "sha256": "0a6c41a6efe7592e1e71407fc4f8e825a271fba693a69116fd264f9376f2cd9c"
+    },
+    {
+      "file": "research/plenary-buffa-packet.json",
+      "sha256": "4c16db096b172b83f2a7a58359a2d4e2595eda804755abf78940cf1cfcbc57d6"
+    },
+    {
+      "file": "research/plenary-ziegler-packet.json",
+      "sha256": "9bc90e3c1d6637f0fcc6c44b9547dc87c6a4b925f7bc6b8a635a5e0d111e7eb1"
+    },
+    {
+      "file": "research/plenary-nesterov-packet.json",
+      "sha256": "8516c364a6e7e022644470df4b113bd53456b2458059cf4f153c97e95c5e967e"
+    },
+    {
+      "file": "research/plenary-sarnak-packet.json",
+      "sha256": "c1567efbba612022df15608c48340a7eec2c59752abcef41cb111b690696786d"
+    },
+    {
+      "file": "research/plenary-final-mathematical-review.json",
+      "sha256": "4d20bac1405a720ea185ae3588222e3ecd9b60c051812784c67a001b8efaa32a"
+    }
+  ],
+  "checks": {
+    "source": [
+      {
+        "command": "node scripts/test-note-editorial.mjs",
+        "result": "pass",
+        "seconds": 0.036
+      },
+      {
+        "command": "node scripts/test-note-prerequisites.mjs",
+        "result": "pass",
+        "seconds": 0.035
+      },
+      {
+        "command": "node scripts/test-subject-navigation.mjs",
+        "result": "pass",
+        "seconds": 0.036
+      },
+      {
+        "command": "node scripts/check-note-prerequisites.mjs",
+        "result": "pass",
+        "seconds": 2.413
+      },
+      {
+        "command": "node scripts/check-note-editorial.mjs --strict-format",
+        "result": "pass",
+        "seconds": 0.97
+      },
+      {
+        "command": "node scripts/check-subject-navigation.mjs",
+        "result": "pass",
+        "seconds": 0.218
+      },
+      {
+        "command": "node scripts/check-icm-section-coverage.mjs",
+        "result": "pass",
+        "seconds": 0.252
+      },
+      {
+        "command": "node scripts/check-topic-narratives.mjs",
+        "result": "pass",
+        "seconds": 0.944
+      },
+      {
+        "command": "node scripts/check-topic-introductions.mjs",
+        "result": "pass",
+        "seconds": 0.253
+      },
+      {
+        "command": "node scripts/check-geometry-notes.mjs",
+        "result": "pass",
+        "seconds": 0.109
+      },
+      {
+        "command": "node scripts/check-bourbaki-notes.mjs",
+        "result": "pass",
+        "seconds": 0.304
+      },
+      {
+        "command": "node scripts/check-analysis-notes.mjs",
+        "result": "pass",
+        "seconds": 0.798
+      },
+      {
+        "command": "node tests/analysis-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.053
+      },
+      {
+        "command": "node --test tests/topology-report-math.test.mjs tests/topology-fibring-discs-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.144
+      },
+      {
+        "command": "node --test tests/topology-coverage.test.mjs",
+        "result": "pass",
+        "seconds": 0.31
+      },
+      {
+        "command": "node --test tests/plenary-coverage.test.mjs tests/plenary-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.554
+      },
+      {
+        "command": "node --test tests/plenary-applied-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.554
+      },
+      {
+        "command": "node --test tests/plenary-dynamics-probability.test.mjs",
+        "result": "pass",
+        "seconds": 0.569
+      },
+      {
+        "command": "node --test tests/plenary-ramsey-formalization.test.mjs tests/plenary-ramsey-math.test.mjs tests/plenary-formalization-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.484
+      },
+      {
+        "command": "node --test tests/plenary-geometric-approximation.test.mjs tests/plenary-otto-math.test.mjs tests/plenary-buffa-math.test.mjs tests/plenary-ziegler-math.test.mjs",
+        "result": "pass",
+        "seconds": 2.496
+      },
+      {
+        "command": "node --test tests/plenary-final-reports.test.mjs tests/plenary-nesterov-math.test.mjs tests/plenary-sarnak-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.494
+      },
+      {
+        "command": "node --test tests/geometry-oct16.test.mjs",
+        "result": "pass",
+        "seconds": 0.235
+      },
+      {
+        "command": "node --test tests/geometry-closing-kakeya.test.mjs",
+        "result": "pass",
+        "seconds": 0.259
+      },
+      {
+        "command": "node --test tests/geometry-harmonic-contact.test.mjs",
+        "result": "pass",
+        "seconds": 0.223
+      },
+      {
+        "command": "node --test tests/geometry-stability-flow-kahler.test.mjs",
+        "result": "pass",
+        "seconds": 0.53
+      },
+      {
+        "command": "node --test tests/geometry-final-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.534
+      },
+      {
+        "command": "node --test tests/lie-first-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.556
+      },
+      {
+        "command": "node --test tests/lie-second-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.624
+      },
+      {
+        "command": "node --test tests/lie-third-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.573
+      },
+      {
+        "command": "node --test tests/dynamics-first-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.634
+      },
+      {
+        "command": "node --test tests/dynamics-second-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.623
+      },
+      {
+        "command": "node --test tests/dynamics-final-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.684
+      },
+      {
+        "command": "node --test tests/pde-first-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.767
+      },
+      {
+        "command": "node --test tests/pde-second-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.605
+      },
+      {
+        "command": "node --test tests/pde-final-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.674
+      },
+      {
+        "command": "node --test tests/mathematical-physics-first-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.596
+      },
+      {
+        "command": "node --test tests/mathematical-physics-second-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.598
+      },
+      {
+        "command": "node --test tests/mathematical-physics-third-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.699
+      },
+      {
+        "command": "node --test tests/mathematical-physics-fourth-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.62
+      },
+      {
+        "command": "node --test tests/section-report-identity.test.mjs tests/mathematical-physics-final-reports.test.mjs",
+        "result": "pass",
+        "seconds": 0.568
+      },
+      {
+        "command": "node --test tests/topology-exotic-stems-graphs-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.096
+      },
+      {
+        "command": "node tests/bourbaki-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.038
+      },
+      {
+        "command": "node tests/geometry-expansion-math.test.mjs",
+        "result": "pass",
+        "seconds": 0.044
+      },
+      {
+        "command": "node scripts/check-number-theory-notes.mjs",
+        "result": "pass",
+        "seconds": 0.075
+      },
+      {
+        "command": "node tests/number-theory-computation.test.mjs",
+        "result": "pass",
+        "seconds": 0.459
+      },
+      {
+        "command": "node tests/number-theory-computation-expansion.test.mjs",
+        "result": "pass",
+        "seconds": 0.489
+      },
+      {
+        "command": "node tests/number-theory-microlocal.test.mjs",
+        "result": "pass",
+        "seconds": 0.058
+      },
+      {
+        "command": "node scripts/check-site-notes.mjs --source-only",
+        "result": "pass",
+        "seconds": 0.375
+      },
+      {
+        "command": "node scripts/check-algebra-notes.mjs --source-only",
+        "result": "pass",
+        "seconds": 0.058
+      },
+      {
+        "command": "node scripts/check-riehl-notes.mjs",
+        "result": "pass",
+        "seconds": 0.268
+      }
+    ],
+    "build": [
+      {
+        "command": "node scripts/apply-theme.mjs",
+        "result": "pass",
+        "seconds": 0.038
+      },
+      {
+        "command": "/Users/sunzy/.opam/5.3.0/bin/forester build forest.toml",
+        "result": "pass",
+        "seconds": 43.024
+      },
+      {
+        "command": "node tests/static-html.test.mjs",
+        "result": "pass",
+        "seconds": 0.172
+      },
+      {
+        "command": "node scripts/build-static-html.mjs",
+        "result": "pass",
+        "seconds": 444.683
+      }
+    ],
+    "generated": [
+      {
+        "command": "node scripts/check-site-domain.mjs",
+        "result": "pass",
+        "seconds": 8.72
+      },
+      {
+        "command": "node scripts/check-static-html.mjs",
+        "result": "pass",
+        "seconds": 8.09
+      },
+      {
+        "command": "node scripts/check-reading-ui.mjs",
+        "result": "pass",
+        "seconds": 0.045
+      },
+      {
+        "command": "node scripts/check-site-notes.mjs",
+        "result": "pass",
+        "seconds": 9.107
+      },
+      {
+        "command": "node scripts/check-logic-notes.mjs",
+        "result": "pass",
+        "seconds": 0.423
+      },
+      {
+        "command": "node scripts/check-algebra-notes.mjs",
+        "result": "pass",
+        "seconds": 0.151
+      }
+    ],
+    "browsers": [
+      {
+        "result": "pass",
+        "checks": [
+          {
+            "id": "006A",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0065",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006C",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0072",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006F",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0063",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0068",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0069",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006D",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "4X00",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "4X01",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 16
+          },
+          {
+            "id": "4X02",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 25
+          },
+          {
+            "id": "4X03",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4X04",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4X05",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4X06",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 14
+          },
+          {
+            "id": "4X07",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "4X08",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 23
+          },
+          {
+            "id": "4X09",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "4X0A",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4X0B",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4X0C",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 27
+          },
+          {
+            "id": "4X0D",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4X0E",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4X0F",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 23
+          },
+          {
+            "id": "4X0G",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 21
+          },
+          {
+            "id": "4X0H",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 25
+          },
+          {
+            "id": "4X0I",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4X0J",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 27
+          },
+          {
+            "id": "4X0K",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 26
+          },
+          {
+            "id": "4X0L",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4X0M",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4X0N",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4X0O",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "4X0P",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "icm2026-otto",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 3
+          },
+          {
+            "id": "4Y00",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 8
+          },
+          {
+            "id": "4Y01",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 21
+          },
+          {
+            "id": "4Y02",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 12
+          },
+          {
+            "id": "4Y03",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 24
+          },
+          {
+            "id": "4Y04",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 23
+          },
+          {
+            "id": "4Y05",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4Y06",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "4Y07",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "4Y08",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 15
+          },
+          {
+            "id": "4Y09",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 23
+          },
+          {
+            "id": "4Y0A",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 14
+          },
+          {
+            "id": "4Y0B",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 15
+          },
+          {
+            "id": "4Y0C",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "4Y0D",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4Y0E",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "4Y0F",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 29
+          },
+          {
+            "id": "4Y0G",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4Y0H",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4Y0I",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 12
+          },
+          {
+            "id": "icm2026-buffa",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "2900",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 10
+          },
+          {
+            "id": "2901",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "2902",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 16
+          },
+          {
+            "id": "2903",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4Z01",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 48
+          },
+          {
+            "id": "4Z02",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 29
+          },
+          {
+            "id": "4Z03",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4Z04",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4Z05",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4Z06",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 14
+          },
+          {
+            "id": "4Z07",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4Z08",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4Z09",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4Z0A",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4Z0B",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4Z0C",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4Z0D",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 13
+          },
+          {
+            "id": "icm2026-ziegler",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 1
+          },
+          {
+            "id": "006A",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0065",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006C",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0072",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006F",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0063",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0068",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0069",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006D",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "4X00",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "4X01",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 16
+          },
+          {
+            "id": "4X02",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 25
+          },
+          {
+            "id": "4X03",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 17
+          },
+          {
+            "id": "4X04",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "4X05",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 17
+          },
+          {
+            "id": "4X06",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 14
+          },
+          {
+            "id": "4X07",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 28
+          },
+          {
+            "id": "4X08",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 23
+          },
+          {
+            "id": "4X09",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 20
+          },
+          {
+            "id": "4X0A",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 3,
+            "formulas": 18
+          },
+          {
+            "id": "4X0B",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 22
+          },
+          {
+            "id": "4X0C",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 27
+          },
+          {
+            "id": "4X0D",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 18
+          },
+          {
+            "id": "4X0E",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "4X0F",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 23
+          },
+          {
+            "id": "4X0G",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 21
+          },
+          {
+            "id": "4X0H",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 25
+          },
+          {
+            "id": "4X0I",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "4X0J",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 27
+          },
+          {
+            "id": "4X0K",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 26
+          },
+          {
+            "id": "4X0L",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4X0M",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 18
+          },
+          {
+            "id": "4X0N",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "4X0O",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "4X0P",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "icm2026-otto",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 3
+          },
+          {
+            "id": "4Y00",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 8
+          },
+          {
+            "id": "4Y01",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 21
+          },
+          {
+            "id": "4Y02",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 12
+          },
+          {
+            "id": "4Y03",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 24
+          },
+          {
+            "id": "4Y04",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 23
+          },
+          {
+            "id": "4Y05",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4Y06",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "4Y07",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "4Y08",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 15
+          },
+          {
+            "id": "4Y09",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 23
+          },
+          {
+            "id": "4Y0A",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 14
+          },
+          {
+            "id": "4Y0B",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 15
+          },
+          {
+            "id": "4Y0C",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 28
+          },
+          {
+            "id": "4Y0D",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 22
+          },
+          {
+            "id": "4Y0E",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 20
+          },
+          {
+            "id": "4Y0F",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 29
+          },
+          {
+            "id": "4Y0G",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 17
+          },
+          {
+            "id": "4Y0H",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "4Y0I",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 12
+          },
+          {
+            "id": "icm2026-buffa",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "2900",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 10
+          },
+          {
+            "id": "2901",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "2902",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 16
+          },
+          {
+            "id": "2903",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 18
+          },
+          {
+            "id": "4Z01",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 3,
+            "formulas": 48
+          },
+          {
+            "id": "4Z02",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 29
+          },
+          {
+            "id": "4Z03",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4Z04",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "4Z05",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 17
+          },
+          {
+            "id": "4Z06",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 14
+          },
+          {
+            "id": "4Z07",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "4Z08",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 18
+          },
+          {
+            "id": "4Z09",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 18
+          },
+          {
+            "id": "4Z0A",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 17
+          },
+          {
+            "id": "4Z0B",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 17
+          },
+          {
+            "id": "4Z0C",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "4Z0D",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 13
+          },
+          {
+            "id": "icm2026-ziegler",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 1
+          }
+        ],
+        "screenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/topology-render-e670du"
+      },
+      {
+        "result": "pass",
+        "checks": [
+          {
+            "id": "0070",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006F",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006E",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0074",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "5000",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "5001",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "5002",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "5003",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 8
+          },
+          {
+            "id": "5004",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 24
+          },
+          {
+            "id": "5005",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 14
+          },
+          {
+            "id": "5006",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 34
+          },
+          {
+            "id": "5007",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "5008",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 14
+          },
+          {
+            "id": "5009",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "500A",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 30
+          },
+          {
+            "id": "500B",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "500C",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 18
+          },
+          {
+            "id": "500D",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "icm2026-nesterov",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 2
+          },
+          {
+            "id": "5100",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 1
+          },
+          {
+            "id": "5101",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 24
+          },
+          {
+            "id": "5102",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 11
+          },
+          {
+            "id": "5103",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 26
+          },
+          {
+            "id": "5104",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "5105",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 27
+          },
+          {
+            "id": "5106",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 29
+          },
+          {
+            "id": "5107",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 21
+          },
+          {
+            "id": "5108",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "5109",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "510A",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 19
+          },
+          {
+            "id": "510B",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 35
+          },
+          {
+            "id": "510C",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "icm2026-sarnak",
+            "width": 1440,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0070",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006F",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "006E",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "0074",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          },
+          {
+            "id": "5000",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 22
+          },
+          {
+            "id": "5001",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 20
+          },
+          {
+            "id": "5002",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 28
+          },
+          {
+            "id": "5003",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 8
+          },
+          {
+            "id": "5004",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 24
+          },
+          {
+            "id": "5005",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 14
+          },
+          {
+            "id": "5006",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 34
+          },
+          {
+            "id": "5007",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 28
+          },
+          {
+            "id": "5008",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 14
+          },
+          {
+            "id": "5009",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 22
+          },
+          {
+            "id": "500A",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 4,
+            "formulas": 30
+          },
+          {
+            "id": "500B",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "500C",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 18
+          },
+          {
+            "id": "500D",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 20
+          },
+          {
+            "id": "icm2026-nesterov",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 2
+          },
+          {
+            "id": "5100",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 1
+          },
+          {
+            "id": "5101",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 3,
+            "formulas": 24
+          },
+          {
+            "id": "5102",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 11
+          },
+          {
+            "id": "5103",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 26
+          },
+          {
+            "id": "5104",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 22
+          },
+          {
+            "id": "5105",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 27
+          },
+          {
+            "id": "5106",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 2,
+            "formulas": 29
+          },
+          {
+            "id": "5107",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 21
+          },
+          {
+            "id": "5108",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "5109",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 28
+          },
+          {
+            "id": "510A",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 19
+          },
+          {
+            "id": "510B",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 1,
+            "formulas": 35
+          },
+          {
+            "id": "510C",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 28
+          },
+          {
+            "id": "icm2026-sarnak",
+            "width": 390,
+            "overflow": 0,
+            "scrollableDisplays": 0,
+            "formulas": 0
+          }
+        ],
+        "screenshots": "/var/folders/dq/cjvbtm8n0hq7mt28gvz8z8fc0000gn/T/topology-render-8RVXK5"
+      }
+    ],
+    "navigation_preservation": [
+      {
+        "id": "006A",
+        "previous_topics": 18,
+        "current_topics": 20,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0065",
+        "previous_topics": 25,
+        "current_topics": 26,
+        "old_order_preserved": true
+      },
+      {
+        "id": "006C",
+        "previous_topics": 7,
+        "current_topics": 8,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0072",
+        "previous_topics": 3,
+        "current_topics": 4,
+        "old_order_preserved": true
+      },
+      {
+        "id": "006F",
+        "previous_topics": 1,
+        "current_topics": 3,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0063",
+        "previous_topics": 22,
+        "current_topics": 22,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0068",
+        "previous_topics": 26,
+        "current_topics": 26,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0069",
+        "previous_topics": 18,
+        "current_topics": 19,
+        "old_order_preserved": true
+      },
+      {
+        "id": "006D",
+        "previous_topics": 9,
+        "current_topics": 10,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0070",
+        "previous_topics": 3,
+        "current_topics": 4,
+        "old_order_preserved": true
+      },
+      {
+        "id": "006E",
+        "previous_topics": 7,
+        "current_topics": 8,
+        "old_order_preserved": true
+      },
+      {
+        "id": "0074",
+        "previous_topics": 0,
+        "current_topics": 1,
+        "old_order_preserved": true
+      }
+    ]
+  },
+  "preservation": {
+    "previous_prerequisite_records": 7087,
+    "revised_previous_prerequisites": []
+  },
+  "mathematical_review": {
+    "status": "reviewed",
+    "reviewed_at": "2026-10-28T10:01:02.488Z",
+    "scope": "Parent review of the 29 new Nesterov and Sarnak pages, followed by independent review and targeted correction checks. The preceding 65-page batch retains its separately recorded review.",
+    "reviewed_files": [
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5000.tree",
+        "sha256": "55613985e4684cac7800180bd9dd2648d47dc07413a24a5308080aa1900cf0b8"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5001.tree",
+        "sha256": "d2d73250072b5743dbb40f3997c95b146136050383b7dae08625d1d0aa0f0d07"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5002.tree",
+        "sha256": "24b825cc5136a68a6caaf23965d16ab091019e56b75642624f56f12c8b8e5f70"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5003.tree",
+        "sha256": "5192c55de77c2624e64122cca2aef653f469129ca31689c198dc3ab80e6bced2"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5004.tree",
+        "sha256": "e6c7ca0963bac68ccbbecf1a5ad316e0dd346a5820c8f5b10520d61d55901bb8"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5005.tree",
+        "sha256": "33e6df5e0672b86394f2125e01b34c269b58a4ab120226c27c6c9573d90fc6d2"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5006.tree",
+        "sha256": "79b1f4ed6c8ad6dbadfbd877f53430d6c5ea652f4f66743e4d89e76f082da121"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5007.tree",
+        "sha256": "24fe7c24e08e36b47ea2c07f7e7ee284e186447ad3b9d537d8f3e75a63d376d9"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5008.tree",
+        "sha256": "f5acd06aa55fb8a80948de4a42ba7fab783d915b390664cc1ce95e02959dd800"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/5009.tree",
+        "sha256": "46bca5d7110a343d8d4c5169907d79ed5c32c16b4ba545e5d47b89ad3a160238"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/500A.tree",
+        "sha256": "8fc5edc713daabc88b33f877669b8e34a19975d1fe91db3f77d97c232abab293"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/500B.tree",
+        "sha256": "a7b6c5663bdf15f6ae14666181e10b6e151433aa878b38d779748224711638fb"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/500C.tree",
+        "sha256": "75bff1fc9785d666eece41455a7a02bed1c82309ca4c5a369545a191219393dc"
+      },
+      {
+        "path": "trees/math/optimization/higher-order-nesterov/500D.tree",
+        "sha256": "d8cc80a646ebe573a82cc390101309711975e1e3e2e163ca6cecc87485363a3e"
+      },
+      {
+        "path": "trees/references/icm2026-nesterov.tree",
+        "sha256": "6592f5b124ed966e349ca7b312ccef50d3077b53828c2b783ef9dfe0adb5c7cb"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5100.tree",
+        "sha256": "8e4164e02a9d38eb018aa61139b16c3993b6c2a7f63e43264883823202833152"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5101.tree",
+        "sha256": "0f273f515c761810d0faf1c9d2261be7a81ac4be228e52724740023bb3eeb474"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5102.tree",
+        "sha256": "100bb2483f9ea2562b8ab59f36ed192fe6f2cb58fdb237c93a995cce499c36d0"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5103.tree",
+        "sha256": "c70b1c88fc120ce51c4145196f3874fa4c4a3c6a84debdbf5dbb1706455d6164"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5104.tree",
+        "sha256": "9150c25c84f04fa81c44a0aaea8e989656f779625d82aee1685b8eda6f3066d2"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5105.tree",
+        "sha256": "b661f2ecb2bea94fd8dcaf865c53a08a912e11c89760fd558cfbb434945b1d02"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5106.tree",
+        "sha256": "b8fde460aca5cdf9693ac6a9e7ee6b85ed977efe8a1e2a0fb3569e388f9e9c23"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5107.tree",
+        "sha256": "a27c32c53a66626dbaa3e2c166b5f9d89c495e67179f335cecd4337a19fc5298"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5108.tree",
+        "sha256": "10524764e8c82eebe63c228da90827474eaeccc29697f14764c8caa6391383cf"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/5109.tree",
+        "sha256": "bb841521730b1787e4b09f53ca4ba48395de311de08ffc2a60240ceb99822aac"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/510A.tree",
+        "sha256": "61d862436135b9e04f4806f1af5b1e2bcf43bd466e57c6d1f2d5698eafb672b7"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/510B.tree",
+        "sha256": "a3b0f8b634c9021e15b51d5de23c455eadc022beb604e2b79c7b8172a8c59347"
+      },
+      {
+        "path": "trees/math/history/serre-sarnak/510C.tree",
+        "sha256": "2f2b17bf5dc8dd3a2211545d864adedf9b80e002464b08ef0994cd991878e60f"
+      },
+      {
+        "path": "trees/references/icm2026-sarnak.tree",
+        "sha256": "233eb1cce243fa8e4f81723613f418830f2fefdd82170429cf8a42d04eb65654"
+      }
+    ],
+    "review_records": [
+      {
+        "path": "research/plenary-final-independent-review.json",
+        "sha256": "91f7dde9782fc949f966de0f2473a298f7dbae98ae876b3fd3d48f63d1f16159"
+      },
+      {
+        "path": "research/plenary-geometric-approximation-review.json",
+        "sha256": "09159ea72803458d93df6b92d0565e06be2b6b6293c8c82a3bd7c73a6b755df7"
+      },
+      {
+        "path": "research/plenary-buffa-ziegler-reading-followup.json",
+        "sha256": "daa127351a9093e71eb9e5b484d2110292deba56493fd2fa16511ed31881b830"
+      }
+    ],
+    "parent_mathematical_checks": {
+      "nesterov": [
+        "Taylor integral remainders for j=0,1,2, including p-j=0.",
+        "Convexification H>=pLp, coercivity and reciprocal-error convergence.",
+        "Third-derivative Hessian bounds including degenerate directions.",
+        "Bregman orientation, relative Hessian bounds, scalar subproblem root and finite-difference noise.",
+        "Published accelerated-rate theorem checked against the specified algorithm and source p.170, not treated as a local complete proof."
+      ],
+      "sarnak": [
+        "Finite spectral-sequence rank and Euler-characteristic identities.",
+        "Semilinear dimension argument and open-subgroup finite-index calculations.",
+        "Weight-one cuspidality, Frobenius convention and finite-image trace bound.",
+        "Transfinite-diameter monotonicity and integer-discriminant finiteness proof.",
+        "Conjugate-root measures, resultant inequality and logarithmic truncation limit.",
+        "Primitive-polynomial lemma and integrality of the monic minimal polynomial."
+      ]
+    },
+    "corrections": [
+      "Replaced the Brauer-block link for algebraic integers with the new foundational page 510C.",
+      "Removed the modular-curve application link used as a definition of complex multiplication; the exact endomorphism condition is stated locally.",
+      "Explicitly required the weight-one form to vanish at all cusps.",
+      "Corrected the Cartan exposé title and Deligne-Serre Corollary 4.2 page number."
+    ],
+    "evidence_boundary": "Selected primary-source passages and original video frames support the included branches. No full-video, full-transcript or complete deep-research-proof claim is made. Unit tests and builds are separate evidence, not mathematical certification.",
+    "independent_open_findings": 0
+  },
+  "scope_boundary": "All 22 roster entries have topic addresses. This is not a claim that all lectures were continuously read or that every cited research proof is written locally."
+}

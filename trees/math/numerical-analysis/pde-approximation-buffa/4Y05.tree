@@ -1,0 +1,12 @@
+\title{非散度型椭圆方程的强解}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，§2，pp. 2089–2090}
+
+\p{设 #{\Omega\subset\mathbb R^n} 为有界开集，#{A=(a_{ij})} 是对称可测矩阵场，且存在常数 #{0<\lambda\leq\Lambda<\infty}，使几乎处处及对所有 #{v\in\mathbb R^n} 有 #{\lambda|v|^2\leq v^TAv\leq\Lambda|v|^2}。称 #{A} 一致椭圆。对具有 [二阶平方可积弱导数](4Y06) 的 #{u}，定义}
+##{L_Au=A:D^2u=\sum_{i,j=1}^n a_{ij}\partial_{ij}u.}
+\p{由于 #{A} 有界，#{L_Au\in L^2(\Omega)}。给定 #{f\in L^2(\Omega)}，齐次 Dirichlet 问题的强解指 #{u\in H^2(\Omega)\cap H^1_0(\Omega)}，使 #{L_Au=f} 几乎处处成立。这里“强解”允许二阶导数仅为弱导数；它不要求 #{u\in C^2}。}
+\p{与 [散度型弱方程](4001)比较，当 #{A,u} 光滑时乘积法则给出}
+##{\operatorname{div}(A\nabla u)=A:D^2u+\sum_{i,j}(\partial_i a_{ij})\partial_j u.}
+\p{故不能省去最后一项。譬如在 #{(0,1)^2} 上取 #{A=\operatorname{diag}(1+x_1,1)}、#{u=x_1}，则 #{L_Au=0}，而 #{\operatorname{div}(A\nabla u)=1}。对仅可测的 #{A}，上述系数导数甚至未必是函数；非散度型方程需要相应的适定性分析。}

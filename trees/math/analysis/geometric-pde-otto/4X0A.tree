@@ -1,0 +1,18 @@
+\title{两相 Darcy 通量的受约束最陡下降}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 09:03–13:46；光滑混合密度的变分计算}
+
+\p{设 #{\Omega} 是光滑有界域，#{s:\overline\Omega\to[0,1]} 光滑且在域内满足 #{0<s<1}，#{a,b,A>0}。边界允许纯相。重、轻相通量记为 #{j_1,j_0}，其连续性方程分别为 #{\partial_ts+\operatorname{div}j_1=0}、#{-\partial_ts+\operatorname{div}j_0=0}，所以饱和约束要求 #{\operatorname{div}(j_1+j_0)=0}。两相在边界均无通量，只比较下述耗散积分有限的光滑通量。对[重力能量](4X09) #{E(s)=A\int_\Omega zs}，能量变化率为 #{A\int_\Omega e_d\cdot j_1}。}
+\p{考虑[耗散加能量斜率](4X01)的泛函}
+##{\mathcal J(j_1,j_0)=\frac 12\int_\Omega
+\left(\frac{|j_1|^2}{as}+\frac{|j_0|^2}{b(1-s)}\right)
++A\int_\Omega e_d\cdot j_1.}
+\p{假设存在光滑压力 #{p}，使以下通量满足上述散度和边界约束：}
+##{j_1^*=-as(Ae_d+\nabla p),\qquad
+j_0^*=-b(1-s)\nabla p.}
+\p{则它们是 #{\mathcal J} 的唯一光滑极小点。确实，任一其他可行通量写成 #{j_i^*+k_i}。展开二次式后，线性项为 #{-\int\nabla p\cdot(k_1+k_0)=0}，因为总扰动无散度且边界通量为零。因此}
+##{\mathcal J(j_1^*+k_1,j_0^*+k_0)-\mathcal J(j_1^*,j_0^*)
+=\frac 12\int_\Omega\left(\frac{|k_1|^2}{as}+\frac{|k_0|^2}{b(1-s)}\right).}
+\p{沿满足这些关系的光滑演化，取通量与力的内积并消去压力项，得到 #{\frac d{dt}E=-\int(|j_1^*|^2/(as)+|j_0^*|^2/(b(1-s)))}。它与[单速度 IPM 的重力耗散](4513)共享 Darcy 机制，但允许两相以不同速度穿过同一点。压力方程的可解性是这里的显式假设。}

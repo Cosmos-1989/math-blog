@@ -1,0 +1,14 @@
+\title{凸性对三阶导数与 Hessian 的联合约束}
+\date{2026-10-28}
+\taxon{Lemma}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.176–177，Lemma 3，式 (5.2)–(5.3)}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为凸 #{C^3} 函数，#{D^3f} 的 Lipschitz 常数为 #{L_3}。固定 #{x}，记 #{A=\nabla^2f(x)}。用[导数张量记号](5001)，令对称矩阵 #{B_h} 由 #{u^{\mathsf T}B_hv=D^3f(x)[h,u,v]} 定义。对任意 #{t>0}，有[矩阵序](0N0A)不等式}
+##{-\frac{1}{t}A-\frac{tL_3}{2}\|h\|^2I\preceq B_h\preceq\frac{1}{t}A+\frac{tL_3}{2}\|h\|^2I.}
+\p{因而对所有 #{h,u}，}
+##{|D^3f(x)[h,u,u]|\le\sqrt{2L_3u^{\mathsf T}Au}\,\|h\|\,\|u\|.}
+
+\p{\strong{证明。}凸性给出 #{\nabla^2f(x\pm th)\succeq 0}。[三阶 Hessian 余项](5002)给出 #{\nabla^2f(x\pm th)=A\pm tB_h+R_{\pm}}，且 #{\|R_{\pm}\|\le L_3t^2\|h\|^2/2}。因此 #{A\pm tB_h+(L_3t^2/2)\|h\|^2I\succeq 0}。分别除以 #{t} 并移项，即得矩阵不等式。}
+\p{在两边与 #{u} 配对，记 #{a=u^{\mathsf T}Au\ge 0}、#{b=(L_3/2)\|h\|^2\|u\|^2\ge 0}，得到 #{|D^3f(x)[h,u,u]|\le a/t+bt}。若 #{a,b>0}，取 #{t=\sqrt{a/b}} 得 #{2\sqrt{ab}}；若其中一个为零，分别令 #{t\downarrow 0} 或 #{t\to\infty} 得到零。}
+\p{特别地，若 #{u^{\mathsf T}Au=0}，则 #{D^3f(x)[h,u,u]=0}。零曲率方向上不能出现任意三次扰动，这解释了为何来自凸目标的 Taylor 数据比任意三次多项式更受约束。}

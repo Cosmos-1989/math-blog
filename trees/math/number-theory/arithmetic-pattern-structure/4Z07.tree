@@ -1,0 +1,13 @@
+\title{二元序列的符号块复杂度}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[Matomäki 等](icm2026-ziegler)，§1.2.1、式 (14)}
+
+\p{设 #{u:\mathbb N\to\{-1,1\}}，其中 #{\mathbb N=\{1,2,\ldots\}}。对 #{k\geq 1}，定义长度 #{k} 的符号块集合及其复杂度}
+##{\mathcal W_u(k)=\{(u(n+1),\ldots,u(n+k)):n\geq 1\},
+\qquad S_u(k)=|\mathcal W_u(k)|.}
+\p{这是在整个无限序列中出现过的不同块的数量，同一块出现多次只计一次。这里从 #{n+1\geq 2} 开始的约定与所引 Liouville 定理一致；若允许 #{n=0}，每个长度至多再增加一个块。}
+\p{直接有 #{1\leq S_u(k)\leq 2^k}。把每个实际出现的 #{k} 块向右延长一位，说明 #{(k+1)} 块的前缀映射覆盖所有 #{k} 块，所以 #{S_u(k)\leq S_u(k+1)}。把 #{(k+\ell)} 块分成长度 #{k} 的前缀和长度 #{\ell} 的后缀，得到到 #{\mathcal W_u(k)\times\mathcal W_u(\ell)} 的单射，故}
+##{S_u(k+\ell)\leq S_u(k)S_u(\ell).}
+\p{例如交替序列 #{u(n)=(-1)^n} 在每个长度上恰有两个块。对 [Liouville 函数](4Z06)，记 #{S_\lambda(k)}；[超多项式下界](4Z0C)讨论的是这个数量。}

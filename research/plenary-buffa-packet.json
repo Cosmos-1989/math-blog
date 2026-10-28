@@ -1,0 +1,581 @@
+{
+  "date": "2026-10-28",
+  "report": {
+    "speaker": "Annalisa Buffa",
+    "title": "On New Challenges in Numerical Approximation of Partial Differential Equations",
+    "outline": "4Y00",
+    "prefix": "4Y",
+    "reference": "icm2026-buffa",
+    "integration_status": "preliminary-selected-branches",
+    "license": "逐来源：官方视频未核定独立开放再利用许可；Hinz–Buffa arXiv:2307.06265v2 为 arXiv perpetual non-exclusive license；Hinz–Buffa 2024 正式出版版本为 CC BY 4.0；Smears–Süli 2013 论文版权属 SIAM，未断言开放再利用许可。各来源不统一标为 CC BY。",
+    "source_url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+    "version_url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+    "source_url_role": "官方视频题名与报告身份；其中有限画面另列为局部报告正文证据，元数据不作为数学定理或全文证据。",
+    "mathematical_source_urls": [
+      "https://arxiv.org/html/2307.06265v2",
+      "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+      "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s"
+    ],
+    "question": "怎样从逆调和参数化得到非散度型椭圆方程，并在 Cordes 条件下控制冻结系数逼近误差，同时识别跨片低正则性与局部非退化的障碍？",
+    "reading_scope": "官方报告只实际读取抽样画面：约14:11 的逆调和映射、19:57 的离散 Miranda–Talenti 与 HCT 增广、25:42 的非正则系数局部化提纲、26:52 的数值图。并非连续观看这些区间，也未取得完整字幕/逐字稿。数学正文主要来自独立背景论文：Hinz–Buffa arXiv:2307.06265v2 的摘要、§1、§2、§3.1及§4.6选段；正式版本核对书目、§2.1–§3.1.1和许可；Smears–Süli 实读 pp.2089–2091，p.2091另核对版面。没有将作者背景论文认定为报告原稿，未认定任何论文集章节。",
+    "module_rationale": [
+      "18个原子页、1个叙事提纲及1个引用页；围绕已见逆调和/非散度逼近分支，实质数学来自读到的原始论文及明确的局部推导。",
+      "006F 对应实际报告画面中的离散估计、HCT 增广、求解方法与数值验证；006A 对应逆调和方程和非散度型椭圆估计。",
+      "不因作者另有流体/医学应用论文而增列0072；未将自动章节、官方描述或背景论文的研究范围替代报告范围。",
+      "报告整合维持 preliminary；所写页面可作为独立背景分支使用，整场报告和 C0-DG 深收敛结论尚未获得充分正文证据。"
+    ],
+    "subject_ids": [
+      "006F",
+      "006A"
+    ],
+    "subject_membership_status": "内容支持的候选入口，由父代理决定共享导航；不是报告完成标记",
+    "proof_scope": {
+      "4Y00": {
+        "status": "narrative-outline",
+        "scope": "从逆调和几何构造到冻结系数稳定性，再到跨接口障碍；不是整场报告综述。"
+      },
+      "4Y01": {
+        "status": "definition-and-local-calculation",
+        "scope": "参数导数、度量矩阵、严格正雅可比与全局同胚区别。"
+      },
+      "4Y02": {
+        "status": "cited-research-theorem",
+        "scope": "引用平面 Radó–Kneser–Choquet 内部微分同胚定理；未证明深定理、未给边界导数界。"
+      },
+      "4Y03": {
+        "status": "local-proof",
+        "scope": "逐分量二次链式法则，严格推出逆调和与 cofactor(J^T J):D²x_i=0 的等价。"
+      },
+      "4Y04": {
+        "status": "local-proof",
+        "scope": "显式最小/最大伸缩界推出余因子椭圆界；det=1 仍可畸变的反例。"
+      },
+      "4Y05": {
+        "status": "definition-and-local-calculation",
+        "scope": "可测对称一致椭圆系数与 H² 强解；乘积法则及非散度/散度差异的反例。"
+      },
+      "4Y06": {
+        "status": "definition-and-local-proof",
+        "scope": "二阶弱导数、H²∩H¹_0 与有序 Hessian 范数；由 L² 完备性证明闭子空间完备。"
+      },
+      "4Y07": {
+        "status": "definition-and-local-proof",
+        "scope": "Cordes 条件；二维参数 2λΛ/(λ²+Λ²) 推导及三维反例。"
+      },
+      "4Y08": {
+        "status": "local-proof",
+        "scope": "gamma 缩放恒等式、点态扰动界和 gamma 上下界。"
+      },
+      "4Y09": {
+        "status": "local-proof",
+        "scope": "仅 C² 边界平面域、C³ 零边界函数的曲率恒等式；一般凸域推广另引定理。"
+      },
+      "4Y0A": {
+        "status": "cited-analytic-input-with-local-consequence",
+        "scope": "一般有界凸域 Miranda–Talenti/H² 正则性及 Dirichlet Laplacian 满射性为引用；范数等价与 Hilbert 结论本地推导。"
+      },
+      "4Y0B": {
+        "status": "local-proof-with-cited-analytic-input",
+        "scope": "Cordes 点态估计与引用的凸域估计推出连续性 1+q 及强制性 1-q。"
+      },
+      "4Y0C": {
+        "status": "local-proof-with-cited-analytic-input",
+        "scope": "Lax–Milgram 构造变分解，再用 Laplacian 满射性测试残差以恢复强方程；引用正则性不冒充本地证明。"
+      },
+      "4Y0D": {
+        "status": "local-proof-with-cited-analytic-input",
+        "scope": "有限维 H² 相容空间唯一解、Galerkin 正交性与准最优界；不是 C0-DG 或样条网格收敛阶定理。"
+      },
+      "4Y0E": {
+        "status": "local-proof",
+        "scope": "|s| 的接口分布二阶导数及缩放测试函数证明不属于 L²。"
+      },
+      "4Y0F": {
+        "status": "construction-and-local-proof",
+        "scope": "分量弱 Hessian 恢复、质量矩阵正定唯一性、光滑一致性、接口跳跃符号；未证明耦合方法稳定性。"
+      },
+      "4Y0G": {
+        "status": "local-proof",
+        "scope": "移位迭代的固定点抵消与线性系数正定；直接移位残差一般改变非线性方程。"
+      },
+      "4Y0H": {
+        "status": "local-proof",
+        "scope": "严格小于最小伸缩的导数算子范数误差保持正雅可比；指数极坐标例子区分局部与全局。"
+      },
+      "4Y0I": {
+        "status": "local-proof-with-cited-analytic-input",
+        "scope": "H²∩H¹_0 近似函数的双边加权残差估计，不外推至逐片空间。"
+      },
+      "icm2026-buffa": {
+        "status": "bibliographic-reference",
+        "scope": "官方报告身份与两篇背景论文分列；版本、分页、许可与深定理引用范围分开。"
+      }
+    },
+    "claim_sources": {
+      "4Y00": [
+        {
+          "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+          "location": "画面抽样约14:11、19:57；不是连续观看或整场转录",
+          "role": "sampled-report-slides"
+        },
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§§2.1–2.2、3.1.1–3.1.3",
+          "role": "background-paper"
+        },
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "pp.2090–2091",
+          "role": "background-paper"
+        }
+      ],
+      "4Y01": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§§1.1–1.2、2.1；采用严格 det>0 的局部定义",
+          "role": "background-paper"
+        }
+      ],
+      "4Y02": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§2.1，Theorem 1",
+          "role": "background-paper"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+          "location": "§2.1，Theorem 1",
+          "role": "background-paper"
+        }
+      ],
+      "4Y03": [
+        {
+          "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+          "location": "约14:11 逆调和映射画面中的系数矩阵与方程",
+          "role": "sampled-report-slides"
+        },
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§2.1，公式(11)；二次链式法则为本地展开",
+          "role": "background-paper"
+        }
+      ],
+      "4Y04": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§2 对一致非退化与系数的讨论；显式导数界和矩阵反例为本地推导",
+          "role": "background-paper"
+        }
+      ],
+      "4Y05": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "§2，pp.2089–2090，公式(2.1)–(2.4)",
+          "role": "background-paper"
+        }
+      ],
+      "4Y06": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2091，H²∩H¹_0；空间完备性为本地补足",
+          "role": "background-paper"
+        }
+      ],
+      "4Y07": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2090，公式(2.5)；二维计算与三维反例为本地推导",
+          "role": "background-paper"
+        }
+      ],
+      "4Y08": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2090，Lemma 1，公式(2.6)–(2.7)",
+          "role": "background-paper"
+        }
+      ],
+      "4Y09": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2091，Theorem 2 的光滑平面特例；曲率证明为独立推导",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0A": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2091，Theorem 2；Theorem 3 证明中明确使用 Δ:H²∩H¹_0→L² 满射",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0B": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2091，Theorem 3 证明",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0C": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2091，Theorem 3 及证明",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0D": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "p.2091，连续变分型；相容离散为本地推论，不归为本文 DG 定理",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0E": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§3.1 的 H¹/H² 跨片障碍；具体折线反例为本地补足",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0F": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§3.1.3，分部积分及公式(25)；质量矩阵与接口展开为本地推导",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0G": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§§3.1.1–3.1.2，公式(20)–(24)",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0H": [
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "§1 的非退化验证问题；具体扰动命题及反例为本地推导",
+          "role": "background-paper"
+        }
+      ],
+      "4Y0I": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "pp.2090–2091，Lemma 1 和 Theorem 2 的直接推论",
+          "role": "background-paper"
+        }
+      ],
+      "icm2026-buffa": [
+        {
+          "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+          "location": "官方题名、讲者、发布账号及视频身份",
+          "role": "official-identity"
+        },
+        {
+          "url": "https://arxiv.org/html/2307.06265v2",
+          "location": "题名、v2 版本及 arXiv 许可",
+          "role": "background-paper"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+          "location": "正式书目信息、§2.1–§3.1.1、Rights and permissions",
+          "role": "background-paper"
+        },
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+          "location": "题名、刊物分页、版权页及所读 pp.2089–2091",
+          "role": "background-paper"
+        }
+      ]
+    },
+    "remaining_branches": [
+      "取得可核对的整场视频字幕、讲者幻灯片或报告正文；目前 transcript 面板未加载。",
+      "核对19:57离散 Miranda–Talenti/HCT 增广引理的完整空间、网格及常数假设，再决定是否实现该深分支。",
+      "25:42 非正则系数分区论证只读到提纲，未识别完整定理及证明。",
+      "不由自动章节标题展开最优输运或应用分支；26:52的数值图也不替代收敛证明。"
+    ],
+    "unexpanded_deep_proofs": [
+      "4Y02：Radó–Kneser–Choquet 定理。",
+      "4Y0A：一般有界凸域的 Miranda–Talenti 估计、Poisson H² 正则性及 Laplacian 满射性。",
+      "未实现报告的 HCT 增广与离散 Miranda–Talenti 完整定理、C0-DG 稳定性或多片求解器收敛证明。",
+      "未证明非线性迭代从一般初值收敛，也未由局部正雅可比推断全局几何有效性。"
+    ]
+  },
+  "prerequisites": {
+    "4Y00": [],
+    "4Y01": [
+      "0A33",
+      "01D2",
+      "0N0A",
+      "00E3",
+      "0A3F"
+    ],
+    "4Y02": [
+      "0052",
+      "00TK",
+      "00E3",
+      "270F",
+      "0A3F"
+    ],
+    "4Y03": [
+      "4Y01",
+      "0N0A",
+      "4R02",
+      "0A34"
+    ],
+    "4Y04": [
+      "4Y01",
+      "0N0B"
+    ],
+    "4Y05": [
+      "4Y06",
+      "4001"
+    ],
+    "4Y06": [
+      "2J0C",
+      "0A6A",
+      "0A68",
+      "00MQ"
+    ],
+    "4Y07": [
+      "4Y05",
+      "0N0B"
+    ],
+    "4Y08": [
+      "4Y07",
+      "0A3M"
+    ],
+    "4Y09": [
+      "4R02",
+      "0A34",
+      "0BAC"
+    ],
+    "4Y0A": [
+      "00TK",
+      "4Y06",
+      "0A3M"
+    ],
+    "4Y0B": [
+      "4Y08",
+      "4Y0A",
+      "0A68"
+    ],
+    "4Y0C": [
+      "4Y05",
+      "4Y0A",
+      "4Y0B",
+      "4003"
+    ],
+    "4Y0D": [
+      "4Y0C",
+      "00M9",
+      "4Y0B",
+      "4003"
+    ],
+    "4Y0E": [
+      "2J0C",
+      "4Y06",
+      "0A68"
+    ],
+    "4Y0F": [
+      "4R02",
+      "4Y0E",
+      "2J0C",
+      "0BAC"
+    ],
+    "4Y0G": [
+      "4Y03",
+      "0N0B"
+    ],
+    "4Y0H": [
+      "00M4",
+      "4Y01",
+      "3101"
+    ],
+    "4Y0I": [
+      "4Y0C",
+      "4Y08",
+      "4Y0A"
+    ],
+    "icm2026-buffa": []
+  },
+  "reviewed_reused_ids": [
+    "0052",
+    "00E3",
+    "00M4",
+    "00M9",
+    "00MQ",
+    "00TK",
+    "01D2",
+    "0A33",
+    "0A34",
+    "0A3F",
+    "0A3M",
+    "0A68",
+    "0A6A",
+    "0BAC",
+    "0N0A",
+    "0N0B",
+    "270F",
+    "2J0C",
+    "3101",
+    "4001",
+    "4003",
+    "4R02"
+  ],
+  "source_readings": [
+    {
+      "url": "https://www.youtube.com/watch?v=D2_RHzeWcgk",
+      "version": "官方 Simons Foundation 视频 D2_RHzeWcgk",
+      "read_at": "2026-10-28",
+      "role": "official-identity-and-partial-report-content",
+      "full_mathematical_body": false,
+      "scope": "官方题名、讲者、账号及播放器身份；抽样读取视频画面，不作连续时间段阅读声明。",
+      "samples": [
+        {
+          "timestamp": "约14:11",
+          "evidence": "逆调和映射画面：平面 RKC 定理、A(Dx):D²x=0、A=[[g22,-g12],[-g12,g11]]。播放器随后显示14:14，暂停时14:40；不能据此声称连续读完该区间。"
+        },
+        {
+          "timestamp": "19:57",
+          "evidence": "Solution methods, convergence results - I：离散 Miranda–Talenti 的逐片 Hessian、Laplacian、梯度跳跃惩罚及 HCT enrichment。底部细节部分不可读，不转写完整定理假设。"
+        },
+        {
+          "timestamp": "25:42",
+          "evidence": "Solution methods, convergence results - II：非正则系数的局部化/多取值 charts 提纲；未读取完整结论。"
+        },
+        {
+          "timestamp": "26:52",
+          "evidence": "Numerical validation - academic tests：Puzzle2 几何与不同方法的数值收敛图；只作实验画面证据。"
+        }
+      ],
+      "obstacle": "官方页面含 English auto-generated ASR track；signed timedtext GET 返回200空正文，youtubei get_transcript 请求400，浏览器 transcript 面板持续加载。零散可见字幕不是完整转录。未全量下载视频，未声称视频不存在字幕。"
+    },
+    {
+      "url": "https://arxiv.org/html/2307.06265v2",
+      "version": "arXiv:2307.06265v2, 21 Jul 2023",
+      "read_at": "2026-10-28",
+      "role": "background-paper",
+      "full_mathematical_body": false,
+      "scope": "HTML lines45–137：元数据、摘要、引言、§1.1–1.2；lines137–323：§1.3、§2、§3.1.1–3.1.5、§3.2开头(34)–(35)；lines732–797：§4.6及邻近文字。未读全文数值实验或全部控制机制；只将§2与§3.1的相关内容用于页面。",
+      "license": "arXiv perpetual non-exclusive license"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00366-024-01997-x",
+      "version": "Version of Record, 17 May 2024; Engineering with Computers 40,3735–3764",
+      "read_at": "2026-10-28",
+      "role": "background-paper-published-version",
+      "full_mathematical_body": false,
+      "scope": "元数据与摘要、引言选段；HTML lines147–304，涵盖§1.3、§2.1–2.2及§3.1.1；Rights and permissions lines1013–1016。未将预印本全部阅读范围迁移为正式版全文阅读。",
+      "doi": "10.1007/s00366-024-01997-x",
+      "license": "CC BY 4.0"
+    },
+    {
+      "url": "https://ora.ox.ac.uk/objects/uuid:2a5d4bbb-4d35-43eb-85f9-83be2d3b8324/files/r0k225b65s",
+      "version": "SIAM J. Numer. Anal.51(4),2088–2106(2013); Oxford author institutional repository PDF",
+      "read_at": "2026-10-28",
+      "role": "background-paper",
+      "full_mathematical_body": false,
+      "scope": "实际读 pp.2089–2091：系数/强解设定、Cordes条件、Lemma1及其证明、Theorem2陈述、Theorem3陈述和证明。p.2091渲染图另行视觉核对；未读后续DG方法的完整理论。p.2088摘要及p.2092网格开头仅邻近查看，不计为完整阅读。",
+      "doi": "10.1137/120899613",
+      "license": "Copyright SIAM; no open reuse license asserted"
+    },
+    {
+      "url": "https://arxiv.org/html/2501.12965v2",
+      "version": "arXiv:2501.12965v2, 10 Jul 2025",
+      "read_at": "2026-10-28",
+      "role": "discovery-only-not-integrated",
+      "full_mathematical_body": false,
+      "scope": "只读作者元数据、摘要与引言lines44–117，未读算法与流体模型；未用此文推断报告内容或0072成员关系。"
+    }
+  ],
+  "reuse_review_notes": [
+    "仅在root trees搜索与复用；没有从small4等兄弟站点复制数学页面。关键词检索Buffa/Hinz/Cordes/Miranda–Talenti/逆调和/等几何/非散度未发现已有专门条目，4Y范围初始为空。",
+    "复用2J0C的H¹/弱导数，4001的散度型弱问题，4003的Lax–Milgram及其既有Hilbert前置；不重新创建这些基本定义。",
+    "0A33确为全微分及Jacobian矩阵说明；01D2为矩阵子式页，正文链接明确称全阶子式，并就地给出2×2行列式，避免冒称独立行列式定义页。",
+    "0N0A定义对称矩阵内积，0N0B给谱分解；4R02给Hessian，0A34给链式法则，0BAC给Stokes，00M9给有限维范数等价，00M4给算子范数。",
+    "4Y03→4Y02、4Y09→4Y0A为解释性后继链接，不登记为前置；提纲和引用页的导航也不登记为数学前置。",
+    "prerequisites仅以自有4Y页面与icm2026-buffa为键；既有站点页面只作为依赖目标，未修改它们。"
+  ],
+  "source_findings": [
+    "完整报告正文获取受阻，整合为preliminary。实际报告画面支持一个有限的逆调和/非散度数值分析分支，而非纯元数据推断。",
+    "作者论文及Smears–Süli论文是独立背景正文，不是已找到的ICM2026报告原稿。没有用az9713或其他AI摘要。",
+    "父代理2026-10-28告知重读SIAM卷2目录仍17章、无本报告章节；本任务未据此虚构章节DOI/页码，也不把该转述登记为本任务独立阅读。",
+    "Hinz–Buffa预印本页面的Journal字段与正式刊物信息不一致；书目按正式出版页Engineering with Computers核对，两个版本的题名与定位分列。",
+    "严格局部非退化采用det>0；源文部分定义使用非负行列式，未将det≥0与可逆性混同。",
+    "仅有行列式上下界不足以对一族映射给出统一椭圆常数；本地定理加入明确最大/最小伸缩假设。对固定光滑离散映射可能另有导数有界性，不能把它隐去。",
+    "相容H²离散推论不是原文DG定理；Hessian恢复的质量矩阵可逆也不是耦合算法稳定性。",
+    "正式版CC BY4许可经出版页核读；arXiv v2和SIAM论文分别保留各自许可，不统一标成CC BY。"
+  ],
+  "terminology_checks": [
+    {
+      "terms": [
+        "非散度型",
+        "强解",
+        "Cordes条件",
+        "弱Hessian恢复",
+        "参数化"
+      ],
+      "status": "primary-source-meaning-checked; Chinese-terminology-site-unverified",
+      "note": "按原文nondivergence form、strong solution、Cordes condition、Hessian recovery、parameterisation核对数学含义；未宣称与香蕉空间术语逐条核实。"
+    }
+  ],
+  "coordination": {
+    "scope": "仅trees/math/numerical-analysis/pde-approximation-buffa/、trees/references/icm2026-buffa.tree、research/plenary-buffa-packet.json、tests/plenary-buffa-math.test.mjs。",
+    "shared_registers_navigation_queue": "不修改；父代理按实际来源和preliminary状态整合。subject_ids是有实质证据的候选入口。",
+    "prewrite_notice": "先研究来源与重复项；收到7432503f已推送及小型写作恢复授权后才写自有源码；无全量视频下载。",
+    "commit_push_sync_full_build": "未执行commit、push、共享同步或全局构建；保留所有无关脏工作。",
+    "parallelism": "用户授权并行代理，但当前工具无可用子代理接口，未另建用户线程。"
+  },
+  "validation": {
+    "status": "passed-targeted-source-and-finite-math-checks",
+    "commands": [
+      "node --test tests/plenary-buffa-math.test.mjs"
+    ],
+    "test_count": 16,
+    "passed": 16,
+    "failed": 0,
+    "owned_tree_count": 20,
+    "atomic_page_count": 18,
+    "formula_count": 372,
+    "formula_check": "全部自有页面的372个公式通过KaTeX；另查Forester命令紧邻除号/数字、字面半开区间及双括号风险。未运行Forester解析或渲染。",
+    "structural_check": "仅以自有20页为核查对象：ID唯一、链接可解析、packet键与自有页对应、前置在正文可见且指向数学页；从自有根沿共享前置登记读取闭包无环；4Y00可达全部新增原子页及引用页。未检查整个站点为合格。",
+    "arithmetic_check": "6016个可逆整数Jacobian矩阵核对度量余因子恒等式，338350组二维特征值核对Cordes常数；另查逆映射二阶链式符号、面积保持畸变、散度区别、圆盘曲率恒等式、质量矩阵接口项、移位抵消、正雅可比扰动和非对称有限维Galerkin/残差模型。",
+    "manual_review": "逐页检查局部对象、假设和证明依赖；明确RKC与一般凸域正则性为引用。按父代理意见删去公共正文及引用页的过程性自述；逐来源许可与阅读障碍保留本packet。H²相容估计未提升为C0-DG结果。",
+    "source_adaptation_note": "中文数学页重新组织定义并补充局部论证；没有转载视频帧、论文原图、版面或大段原文。公开引用页仅保留书目、版本、章节、许可及来源主题。",
+    "parser_regression": {
+      "reported_by": "parent agent; actual Forester build",
+      "failure": "Oxford URL percent-encoded colon began a Forester line comment and caused EOF parse error",
+      "repair": "Only the owned reference page changed: Oxford uuid: spelling and 全会报告 terminology. Packet Oxford source URLs use the equivalent raw-colon spelling.",
+      "verification": "Added reference-percent/terminology/packet-URL regression and source/test SHA-256 consistency checks. Parent owns the actual Forester rebuild; no local parser/build success asserted."
+    },
+    "source_sha256": {
+      "4Y00": "28b401c308780949987498f2a8e2426abcee1553b12b96e0e027c6184e84a1c4",
+      "4Y01": "bb651e324dbef5d9d34536e83b154ca31c2df4db05855143eba087e1b060ebf7",
+      "4Y02": "38aae82b30e3674f3ed36d90cd62c6367f347e328e623dfb92d67576eea6d3db",
+      "4Y03": "7c5c5cb4bccdcd61834f68a2e276d0ba31ac1f9568256c10cc8650c15b8c0383",
+      "4Y04": "3e7ad50121fe6f5ad247c37aeb97f96b102cd1c7f579ff15062ded50c094d988",
+      "4Y05": "6496babb4f5165edc8b36ea51176d45f655f31ffa06a5117ced7a75e7b9576bf",
+      "4Y06": "665d769b22667e090c7a046ec94606074c4682aa2ef67421c02a3eaa388a2a59",
+      "4Y07": "fb27db01b3dea2328fb853cd8d86ae7c7cea62e48af938d7ad98e5ea7e009523",
+      "4Y08": "625a2302a7c1a80830187f0298ea1c706fa7101b02731df56da4713bca4039e8",
+      "4Y09": "82096dc755c4937a5e65efb6d6e6b226814e37d37ada188578c730c4bee811a0",
+      "4Y0A": "40e43ae201f9537c5351db2144c43473e1b884461da559e4578342eacf3ab22c",
+      "4Y0B": "fc230de2e74b7c5253d604c35999b0348e9d102b10b9caad01dda35279cd72f2",
+      "4Y0C": "89b1c46d5f89932f4bb98b33e166d1442b137824866969506b02a1e08d65d4b0",
+      "4Y0D": "a1c9672c6e6d36c201839acb19dbc41db6542e4371b2810f9a3cbf2ea699afee",
+      "4Y0E": "a09cfa31a4e7d928bfc0d460465b355b9b47e0478cd57030802c680d4031f786",
+      "4Y0F": "50b40aeeacb6f2d6f811ab32af995cf8bf14b2250ea8babb8024841331da2ca0",
+      "4Y0G": "071eaa8a6f4d6a39bce028226ef14630a5e21adf89848a07eef148e44cf64c09",
+      "4Y0H": "6b27730299266b32ff3a2aec60505e9d7d56ec8414375ea9950d349bf6f9f234",
+      "4Y0I": "878d8e82cc459d6b573a803a8fef74fa7f94f9ad2b544c4e67c02e1950bca33f",
+      "icm2026-buffa": "faced0b667dbf9d3c07272043bc1624877dcfd5750dd140a1d12951620dc0571"
+    },
+    "test_sha256": "45ac2493ab99d27b4fc4a9679ccca9c05ccb42884e6a4504d9767b52a2fbb0c1",
+    "global_build": false,
+    "rendered_forester_pages_checked": false,
+    "numerical_solver_claim": false,
+    "limits": "定向测试只能检查离散算例、符号恒等式及源码结构，不证明外部深定理、非线性求解器收敛或整场报告覆盖。",
+    "test_command": "KATEX_PATH=/path/to/katex-0.16.8.cjs node --test tests/plenary-buffa-math.test.mjs"
+  }
+}

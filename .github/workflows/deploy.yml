@@ -29,6 +29,12 @@ jobs:
           ocaml-compiler: "5.3.0"
           opam-depext: false
 
+      - name: Install pinned formula checker
+        run: |
+          curl --fail --location --retry 3 https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js --output "$RUNNER_TEMP/katex.cjs"
+          printf '%s  %s\n' d4f0ea25c4ccb7986b229d6427794b7063cf3209b0376cf5a64bfc4dd7918c95 "$RUNNER_TEMP/katex.cjs" | sha256sum --check
+          echo "KATEX_PATH=$RUNNER_TEMP/katex.cjs" >> "$GITHUB_ENV"
+
       - name: Check note sources and prerequisite graph
         run: |
           node scripts/test-note-editorial.mjs
@@ -50,6 +56,8 @@ jobs:
           node --test tests/plenary-applied-reports.test.mjs
           node --test tests/plenary-dynamics-probability.test.mjs
           node --test tests/plenary-ramsey-formalization.test.mjs tests/plenary-ramsey-math.test.mjs tests/plenary-formalization-math.test.mjs
+          node --test tests/plenary-geometric-approximation.test.mjs tests/plenary-otto-math.test.mjs tests/plenary-buffa-math.test.mjs tests/plenary-ziegler-math.test.mjs
+          node --test tests/plenary-final-reports.test.mjs tests/plenary-nesterov-math.test.mjs tests/plenary-sarnak-math.test.mjs
           node --test tests/geometry-oct16.test.mjs
           node --test tests/geometry-closing-kakeya.test.mjs
           node --test tests/geometry-harmonic-contact.test.mjs
@@ -140,6 +148,8 @@ jobs:
           TOPOLOGY_RECORD=research/icm2026-plenary-applied-reports.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-plenary-dynamics-probability.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-plenary-ramsey-formalization.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-plenary-geometric-approximation.json node tests/topology-report-render.test.mjs
+          TOPOLOGY_RECORD=research/icm2026-plenary-final-reports.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-geometry-oct16.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-geometry-closing-kakeya.json node tests/topology-report-render.test.mjs
           TOPOLOGY_RECORD=research/icm2026-geometry-harmonic-contact.json node tests/topology-report-render.test.mjs

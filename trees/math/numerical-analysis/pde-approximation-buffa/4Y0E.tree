@@ -1,0 +1,12 @@
+\title{连续的逐片光滑函数未必属于 H²}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Hinz–Buffa](icm2026-buffa)，§3.1 的跨片正则性问题}
+
+\p{在 #{\Omega=(-1,1)^2} 上，函数 #{v(s,t)=|s|} 连续且在两半区域 #{s<0}、#{s>0} 分别仿射，但 #{v\in H^1(\Omega)\setminus H^2(\Omega)}。此处的空间采用 [弱导数定义](2J0C) 和 [二阶 Sobolev 定义](4Y06)。}
+\p{\strong{证明。}将测试函数的积分在 #{s=0} 两侧分开做一维分部积分，得到 #{\partial_s v=\operatorname{sgn}(s)}、#{\partial_t v=0}。这些函数均平方可积，故 #{v\in H^1}。再次分部积分，对 #{\phi\in C_c^\infty(\Omega)} 得}
+##{\langle\partial_{ss}v,\phi\rangle=-\int_\Omega\operatorname{sgn}(s)\partial_s\phi(s,t)\,ds\,dt=2\int_{-1}^1\phi(0,t)\,dt.}
+\p{若该分布由某个 #{w\in L^2(\Omega)} 表示，取 #{\eta,\psi\in C_c^\infty((-1,1))}，使 #{\eta(0)=1}、#{\int\psi=1}，再令 #{\phi_\delta(s,t)=\eta(s/\delta)\psi(t)}，#{0<\delta<1}。则上式恒等于 #{2}，而由 [积分 Hölder 不等式](0A68)，}
+##{|\int_\Omega w\phi_\delta|\leq\|w\|_2\|\phi_\delta\|_2=\|w\|_2\delta^{1/2}\|\eta\|_2\|\psi\|_2\longrightarrow 0,}
+\p{矛盾。因此逐片为零的经典 Hessian 没有表示全局二阶弱导数；遗漏的是接口 #{s=0} 上的集中项。}

@@ -1,0 +1,718 @@
+{
+  "date": "2026-10-28",
+  "subject": "0070",
+  "scope": "高阶优化与 Serre 数学的特别全会专题；保留报告来源和逐页证明范围。",
+  "reports": [
+    {
+      "speaker": "Yurii Nesterov",
+      "title": "Towards Higher-Order Optimization",
+      "kind": "special",
+      "official_category": "Special Plenary Lectures",
+      "video_label": "ICM 2026 Carl Friedrich Gauss Prize Lecture - Yurii Nesterov",
+      "outline": "5000",
+      "prefix": "50",
+      "reference": "icm2026-nesterov",
+      "source_url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+      "source_url_role": "official-video-original-slide-frame-reading",
+      "doi": null,
+      "pages": null,
+      "license": "官方录像未核得额外再利用许可，仅链接和数学转述，不复制视频或幻灯片图片。独立背景论文为 The Author(s) 2019，CC BY 4.0；中文笔记改写、证明展开及参数 H=pM 的改变已在引用页标明。论文许可不扩展到视频。",
+      "subject_ids": [
+        "0070",
+        "006F",
+        "006E"
+      ],
+      "subject_basis": {
+        "0070": "凸高阶模型、张量法及函数值收敛是优化主题。",
+        "006F": "三阶子问题的 Bregman 内层迭代、固定矩阵标量约化与差分误差直接涉及数值计算；原幻灯片 3/13、8/13。",
+        "006E": "原幻灯片 3/13、5/13、9/13 明确讨论 oracle 信息阶数、信息输出规模和复杂度；复用 4R0L 区分信息、外层及算术代价。"
+      },
+      "question": "凸性怎样使高阶 Taylor 模型既具有更好的函数值收敛率，又能通过相对曲率结构得到可实现的子问题求解？",
+      "integration_status": "frame-grounded-selected-branches",
+      "coverage_status": "preliminary-selected-branches",
+      "report_complete": false,
+      "full_video_read": false,
+      "full_transcript_read": false,
+      "reading_scope": "官方视频通过 IAB 实际暂停读取原幻灯片：09:22、11:37、12:24、14:44、19:52、22:52、25:05、27:22、32:36、41:43；13:03 还读到同页未展开的首行。没有连续时间段观看或全文字幕阅读。转写面板一直 loading，未把摘要、自动章节或局部字幕当成完整正文。未下载视频。独立背景论文正式刊本实际读取 pp.157–166，p.170 的算法(3.12)/Theorem 3 陈述和结尾估计，pp.176–180 的 Lemmas 3–4/Bregman 实现/四次子问题及计算讨论；没有核读 §3 全部证明或 §4 下界证明，也没有把此论文当作 ICM2026 书面稿。",
+      "mathematical_body_sources": [
+        "https://www.youtube.com/watch?v=m86Emt6GO8I",
+        "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf"
+      ],
+      "module_rationale": [
+        "13 个原子页分别承担模型定义、余项、反例、凸化、单步比较、基本收敛、三阶约束、Bregman 定义、相对曲率、内层收敛、标量约化、差分误差、加速引用定理；综述 5000 组织其数学关系。",
+        "4R0Q 与 4R0R 原文保持不变；不复制 Hessian 三次余项或非凸驻点 O(epsilon^-3/2) 证明。",
+        "一般高阶公式以 p>=2 表述，新增推导重心是 p>=3 与凸函数值精度。5006 采用独立展开的稍松显式常数；500A 使用三点恒等式给出几何界。",
+        "500C 中心差分是对报告信息阶数问题的局部背景推导，不冒称录像中已经展示此公式，也不据它宣称超快全算法复杂度。"
+      ],
+      "proof_scope": {
+        "5000": {
+          "status": "narrative-outline",
+          "scope": "凸模型、函数值界、三阶可实现性及信息代价的所选主线。"
+        },
+        "5001": {
+          "status": "definition",
+          "scope": "高阶导数的多线性形式、算子范数与固定基点 Taylor 模型；复用高阶偏导/混合偏导交换/有限维张量。"
+        },
+        "5002": {
+          "status": "local-proof",
+          "scope": "只假设 C^p 和 D^p Lipschitz 的 j=0,1,2 统一积分余项；p=j 边界单独处理。"
+        },
+        "5003": {
+          "status": "local-example-proof",
+          "scope": "t^3+a t^4 的负二阶导数反例；不从正最高次项推断凸性。"
+        },
+        "5004": {
+          "status": "local-proof",
+          "scope": "H>=pL_p 的凸性与上界，含原点处 Hessian 连续延拓；不声称系数最优或偶数 p 的径向项是多项式。"
+        },
+        "5005": {
+          "status": "local-proof-exact-subproblem",
+          "scope": "H>0 的极小点存在、候选点比较、下降性及梯度余项；精确子问题。"
+        },
+        "5006": {
+          "status": "local-proof-exact-subproblem",
+          "scope": "有界初始下水平集、最优点存在下的 O(k^-p) 函数值误差；递推倒数法、稍松常数、零误差边界。"
+        },
+        "5007": {
+          "status": "local-proof",
+          "scope": "凸三阶函数的矩阵双边界及三阶收缩估计，含 Hessian 零方向及 L3=0 边界。"
+        },
+        "5008": {
+          "status": "definition-and-local-calculation",
+          "scope": "目标点在前的 Bregman 散度、积分形式与不对称例；注明文献 beta 的反向输入约定。"
+        },
+        "5009": {
+          "status": "local-proof",
+          "scope": "L3>0、tau>1 下三阶模型与二次加四次参考函数的双边相对曲率；允许 Hessian 奇异。"
+        },
+        "500A": {
+          "status": "local-proof-exact-inner-iteration",
+          "scope": "极小点存在唯一性、三点恒等式与几何衰减；不把固定模型的内层速率视作外层总复杂度。"
+        },
+        "500B": {
+          "status": "local-proof",
+          "scope": "半正定二次加正径向四次问题的标量根约化，含 c=0 与矩阵奇异情况；计数不含免费分解假设。"
+        },
+        "500C": {
+          "status": "local-background-proof",
+          "scope": "梯度中心差分近似 D3[h,h] 的一阶截断误差及 4delta/eta^2 噪声项；不证明全算法低阶 oracle 实现。"
+        },
+        "500D": {
+          "status": "cited-research-theorem",
+          "scope": "Nesterov 正式刊本 Theorem 3、算法(3.12)固定 M=2L_p 的 O(k^(-(p+1))) 上界；未重建 §3 估计函数证明，不宣称最优。"
+        },
+        "icm2026-nesterov": {
+          "status": "bibliographic-reference",
+          "scope": "官方视频身份、上传日期、原幻灯片定位、独立论文版本/页码/许可；不分配未核实的 ICM DOI。"
+        }
+      },
+      "claim_sources": {
+        "5000": [
+          {
+            "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+            "location": "原幻灯片抽点 09:22、11:37、12:24、14:44、19:52、22:52、25:05、27:22、32:36、41:43"
+          },
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.157–166、170、176–180"
+          }
+        ],
+        "5001": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.159–160，式 (1.1)–(1.4)；仅用多线性算子范数定义，不调用对角范数等式"
+          }
+        ],
+        "5002": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.160–161，式 (1.5)–(1.7)，本地展开积分证明"
+          }
+        ],
+        "5003": [
+          {
+            "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+            "location": "11:37，幻灯片 4/13，x^3+Lx^4 反例；导数计算为本地展开"
+          }
+        ],
+        "5004": [
+          {
+            "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+            "location": "12:24，幻灯片 4/13，Theorem 1 (N.2019)，L>=p L_p"
+          },
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.161–162，Theorem 1，H=pM 参数转换"
+          }
+        ],
+        "5005": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.162–163，式 (2.6)、(2.9)，Lemma 1 的 (2.11)–(2.12)"
+          }
+        ],
+        "5006": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.164–166，Theorem 2；本文给稍松显式常数的递推证明"
+          }
+        ],
+        "5007": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.176–177，Lemma 3，式 (5.2)–(5.3)"
+          }
+        ],
+        "5008": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "p.178，Bregman distance 定义；交换输入记号；积分形式和非对称例本地计算"
+          }
+        ],
+        "5009": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.177–178，Lemma 4，式 (5.4)–(5.7)"
+          }
+        ],
+        "500A": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "p.178，式 (5.8)–(5.9)；本地三点恒等式证明使用稍松函数值几何界"
+          }
+        ],
+        "500B": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "pp.179–180，式 (5.10)–(5.11)；本地通过 r=gamma||h||^2 直接约化，不照抄对偶参数"
+          }
+        ],
+        "500C": [
+          {
+            "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+            "location": "27:22，幻灯片 9/13，仅提供方法阶数与 oracle 阶数可分离的问题背景"
+          },
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "p.161 式 (1.6)，pp.178–179 的张量收缩需求；中心差分与噪声估计本地推导，不归为作者在此处的算法"
+          }
+        ],
+        "500D": [
+          {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10107-019-01449-1.pdf",
+            "location": "p.170，算法 (3.12)、Theorem 3 与式 (3.13)，M=2L_p"
+          }
+        ],
+        "icm2026-nesterov": [
+          {
+            "url": "https://www.youtube.com/watch?v=m86Emt6GO8I",
+            "location": "Simons Foundation 频道、视频题名及展开说明：2026-08-14，45:24"
+          },
+          {
+            "url": "https://doi.org/10.1007/s10107-019-01449-1",
+            "location": "出版社题名、正式卷页、在线日期与 Rights and permissions"
+          }
+        ]
+      },
+      "proofs_written": [
+        "5002",
+        "5003",
+        "5004",
+        "5005",
+        "5006",
+        "5007",
+        "5009",
+        "500A",
+        "500B",
+        "500C"
+      ],
+      "remaining_branches": [
+        "官方录像其余未抽读画面与连续口头论证",
+        "更尖锐 k^(-(3p+1)/2) 的上界、下界及精确 oracle 模型",
+        "以二阶或更低阶信息实现高阶方法的完整容差安排",
+        "高阶近端点算子与双层优化框架",
+        "Doikov–Mishchenko–Nesterov super-universal 正则化 Newton 方法的问题类和复杂度"
+      ],
+      "unexpanded_deep_proofs": [
+        "500D 引用的估计函数加速算法 §3 全部归纳不变量",
+        "原论文 §4 下界构造",
+        "非精确内层求解与外层加速合并后的总 oracle/算术复杂度"
+      ]
+    },
+    {
+      "speaker": "Peter Sarnak",
+      "title": "Maestro Jean Pierre Serre",
+      "outline": "5100",
+      "prefix": "51",
+      "reference": "icm2026-sarnak",
+      "kind": "special",
+      "official_category": "Special Plenary Lectures",
+      "source_url": "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+      "version_url": "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+      "source_url_role": "官方录像题名与说明用于身份；数学正文证据仅为video_observations逐点列出的原始幻灯片画面，说明文字不是正文。",
+      "doi": null,
+      "pages": null,
+      "license": "官方录像及机构页面未核得额外再利用许可；Numdam/IAS扫描件保留原刊版权，1972刊本标示Springer-Verlag版权，1974刊本标示Gauthier-Villars版权；1807.11700v3未核得明确再利用许可。本批为独立中文数学说明与引文定位，不复制整套幻灯片或全文。",
+      "integration_status": "preliminary-selected-branches",
+      "coverage_status": "preliminary-selected-branches",
+      "report_complete": false,
+      "full_transcript_read": false,
+      "full_video_read": false,
+      "full_report_manuscript_read": false,
+      "question": "分层、代数与解析比较、有限层Galois作用和根测度，怎样把几何与算术对象变成可计算的不变量及分布约束？",
+      "reading_scope": "官方画面支撑的选段整理。实际视觉阅读18个离散画面：05:52、08:24、10:04、11:44、17:36、20:16、23:28、26:48、29:20、32:20、35:12、41:04、44:56、46:56、48:48、50:48、52:48、55:48；不是这些时间之间的连续音画核读。未取得连续字幕、完整2026讲稿或独立完整幻灯片文件。Chrome转录面板持续加载，字幕下载遇站点登录检查；未导出cookies、未绕过登录、未下载全量视频。历史原文阅读：1951讨论班§§1–4/印刷页10-01至10-05；GAGA引言pp.1–2、§3 pp.16–23及§4命题12 p.28，定理3存在性完整证明未读；Serre1972 pp.259–261扫描图像；Deligne–Serre1974 pp.507–514；Serre1807.11700v3 pp.1146-01至07、08起始部分、§1.6开头p.09、附录A.1 p.26及A.2开头p.27。背景论文不等于2026报告全文；数学源与官方身份元数据分别记录。",
+      "mathematical_body_sources": [
+        "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+        "https://www.numdam.org/item/SHC_1950-1951__3__A10_0.pdf",
+        "https://www.numdam.org/article/AIF_1956__6__1_0.pdf",
+        "https://www.college-de-france.fr/media/jean-pierre-serre/UPL5874918517843398173_Serre_proprie_te_s_galoisiennes_des_courbes_elliptiques.pdf",
+        "https://publications.ias.edu/sites/default/files/Number24.pdf",
+        "https://arxiv.org/abs/1807.11700v3"
+      ],
+      "subject_ids": [
+        "0074"
+      ],
+      "subject_rationale": {
+        "0074": "数学史为唯一入口：依照Sarnak对Serre工作的实际选段，以谱序列、GAGA、表示和共轭分布组织数学叙事；跨学科基础不自动升级为科目跨列。"
+      },
+      "subject_membership_status": "Parent requested 0074 as the only landing; no subject/navigation file edited by this worker.",
+      "module_rationale": [
+        "一篇数学叙事总览、12个单问题原子页和一篇参考页。父审要求撤除017K的跨域定义链接后，新增必要基础510C；不扩展报告分支。",
+        "复用层、同调、Hodge、Kahler微分、预有限群、p进整数、Galois、同余子群及测度基础；局部计算与引用深定理分开登记。",
+        "经典射影GAGA不同于2304的可定义GAGA，固定曲线开像不同于0C0T的跨曲线一致性问题；未发现同结论重复原子页。"
+      ],
+      "proof_scope": {
+        "5100": {
+          "status": "narrative-outline",
+          "scope": "分层、代数/解析比较、有限商与Galois表示、共轭根分布的数学叙事；不宣称报告全部内容已整理。"
+        },
+        "5101": {
+          "status": "conditional-local-proof",
+          "scope": "给定有限支撑第一象限谱序列及有限滤过收敛，证明维数上界和交错和恒等式；纤维空间谱序列的存在与第二页识别引用Serre。"
+        },
+        "5102": {
+          "status": "cited-research-theorem-with-local-counterexample",
+          "scope": "引用1956年射影GAGA定理1–3；仿射直线上e^z说明H0比较不满射的反例本地展开。"
+        },
+        "5103": {
+          "status": "local-proof-with-cited-geometric-application",
+          "scope": "半线性复形同构诱导上同调同构并保持维数；光滑射影共轭簇的Čech比较、GAGA/Hodge应用引用原文命题12。"
+        },
+        "5104": {
+          "status": "cited-research-theorem",
+          "scope": "引用1972年开像定理的Q上非复乘情形；常数依赖固定曲线，不给出有效算法或跨曲线一致性。"
+        },
+        "5105": {
+          "status": "local-proof",
+          "scope": "紧开陪集覆盖、有限商陪集映射的满射/单射、包含约化核时指数相等及GL2逐素数提升。"
+        },
+        "5106": {
+          "status": "cited-research-theorem",
+          "scope": "1974年定理4.1的归一化权一尖点Hecke特征形式情形，连同注4.3–4.5；不将定理4.6的精确导子结论移用于旧形式。"
+        },
+        "5107": {
+          "status": "local-proof",
+          "scope": "有限阶矩阵的单位根特征值、迹界，以及紧群到离散群的连续像有限。"
+        },
+        "5108": {
+          "status": "local-proof-and-definition",
+          "scope": "删点乘积计数证明d_n单调，定义极限容量并证明集合单调性、仿射缩放和有限集容量为零；与势论容量等价性引用。"
+        },
+        "5109": {
+          "status": "local-proof",
+          "scope": "整数乘法矩阵给出判别式下界，以次数界和系数界证明有限性；最小多项式整性由510C的独立证明供给。"
+        },
+        "510A": {
+          "status": "definition-and-local-proof",
+          "scope": "根测度按重数归一化、乘积的凸组合公式、有理权逼近及弱闭包凸性；区分不同轨道与同一多项式的幂。"
+        },
+        "510B": {
+          "status": "local-proof",
+          "scope": "固定Q后排除有限个公因子，整数行列式给出对数积分非负；连续截断后先取弱极限，再用单调收敛；保留重复轨道反例。"
+        },
+        "icm2026-sarnak": {
+          "status": "bibliographic-reference",
+          "scope": "报告题名和官方录像链接；五项历史原文的书目信息、版本及数学定位。"
+        },
+        "510C": {
+          "status": "definition-and-local-proof",
+          "scope": "代数整数定义；模素数约化证明本原多项式乘积本原，清分母和首项系数证明首一最小多项式整系数，附sqrt2及1/2例子。"
+        }
+      },
+      "proofs_written": [
+        "5101",
+        "5103",
+        "5105",
+        "5107",
+        "5108",
+        "5109",
+        "510A",
+        "510B",
+        "510C"
+      ],
+      "claim_sources": {
+        "5100": [
+          {
+            "url": "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+            "location": "离散画面：05:52、08:24、10:04、11:44、17:36、20:16、23:28、26:48、29:20、32:20、35:12、48:48、50:48、52:48",
+            "role": "report-original-slide-frames"
+          }
+        ],
+        "5101": [
+          {
+            "url": "https://www.numdam.org/item/SHC_1950-1951__3__A10_0.pdf",
+            "location": "§§1–4，印刷页10-01至10-05；维数恒等式为本地推导",
+            "role": "historical-primary-background"
+          }
+        ],
+        "5102": [
+          {
+            "url": "https://www.numdam.org/article/AIF_1956__6__1_0.pdf",
+            "location": "§3 no12，定理1–3，印刷页19–20；仿射失败说明及本地e^z例子",
+            "role": "published-primary-theorem"
+          }
+        ],
+        "5103": [
+          {
+            "url": "https://www.numdam.org/article/AIF_1956__6__1_0.pdf",
+            "location": "§4 no18，命题12，印刷页28；半线性维数证明本地展开",
+            "role": "published-primary-theorem-and-local-proof"
+          }
+        ],
+        "5104": [
+          {
+            "url": "https://www.college-de-france.fr/media/jean-pierre-serre/UPL5874918517843398173_Serre_proprie_te_s_galoisiennes_des_courbes_elliptiques.pdf",
+            "location": "引言，印刷页259–260，断言(1)–(3)；Q上特例",
+            "role": "published-primary-theorem"
+          }
+        ],
+        "5105": [
+          {
+            "url": "https://www.college-de-france.fr/media/jean-pierre-serre/UPL5874918517843398173_Serre_proprie_te_s_galoisiennes_des_courbes_elliptiques.pdf",
+            "location": "引言，印刷页260，有限层指数与开像的表述；陪集论证本地展开",
+            "role": "historical-primary-background"
+          }
+        ],
+        "5106": [
+          {
+            "url": "https://publications.ias.edu/sites/default/files/Number24.pdf",
+            "location": "§§1、3；定理4.1、注4.3–4.5，印刷页508–514；与定理4.6本原性假设区分",
+            "role": "published-primary-theorem"
+          }
+        ],
+        "5107": [
+          {
+            "url": "https://publications.ias.edu/sites/default/files/Number24.pdf",
+            "location": "推论4.2，印刷页514；单位根迹界本地证明",
+            "role": "published-primary-corollary"
+          }
+        ],
+        "5108": [
+          {
+            "url": "https://arxiv.org/abs/1807.11700v3",
+            "location": "附录A.1，印刷页1146-26；删点计数证明本地展开",
+            "role": "versioned-primary-background"
+          }
+        ],
+        "5109": [
+          {
+            "url": "https://arxiv.org/abs/1807.11700v3",
+            "location": "推论1.2.10、§1.6的定理1.6.1及其后Fekete–Szego说明、附录A.1；判别式证明本地展开",
+            "role": "versioned-primary-background"
+          }
+        ],
+        "510A": [
+          {
+            "url": "https://arxiv.org/abs/1807.11700v3",
+            "location": "§§1.1–1.2、命题1.2.2，印刷页1146-02至1146-03",
+            "role": "versioned-primary-background"
+          }
+        ],
+        "510B": [
+          {
+            "url": "https://arxiv.org/abs/1807.11700v3",
+            "location": "§1.1及引理1.3.1–1.3.4，印刷页1146-03和1146-05；连续截断证明本地展开",
+            "role": "versioned-primary-background"
+          }
+        ],
+        "icm2026-sarnak": [
+          {
+            "url": "https://www.youtube.com/watch?v=NK7R4Nnz2mg",
+            "location": "官方题名/说明仅用于报告身份；数学正文证据另列video_observations",
+            "role": "identity-only-metadata"
+          },
+          {
+            "url": "https://www.numdam.org/item/SHC_1950-1951__3__A10_0.pdf",
+            "location": "原刊首页或versioned arXiv书目；实际数学阅读范围见source_readings",
+            "role": "primary-bibliography"
+          },
+          {
+            "url": "https://www.numdam.org/article/AIF_1956__6__1_0.pdf",
+            "location": "原刊首页或versioned arXiv书目；实际数学阅读范围见source_readings",
+            "role": "primary-bibliography"
+          },
+          {
+            "url": "https://www.college-de-france.fr/media/jean-pierre-serre/UPL5874918517843398173_Serre_proprie_te_s_galoisiennes_des_courbes_elliptiques.pdf",
+            "location": "原刊首页或versioned arXiv书目；实际数学阅读范围见source_readings",
+            "role": "primary-bibliography"
+          },
+          {
+            "url": "https://publications.ias.edu/sites/default/files/Number24.pdf",
+            "location": "原刊首页或versioned arXiv书目；实际数学阅读范围见source_readings",
+            "role": "primary-bibliography"
+          },
+          {
+            "url": "https://arxiv.org/abs/1807.11700v3",
+            "location": "原刊首页或versioned arXiv书目；实际数学阅读范围见source_readings",
+            "role": "primary-bibliography"
+          }
+        ],
+        "510C": [
+          {
+            "url": "https://arxiv.org/abs/1807.11700v3",
+            "location": "§1.2，印刷页1146-03的代数整数/首一整系数多项式设定；本原多项式与首一因子整性证明本地展开，非报告中逐字证明。",
+            "role": "historical-primary-background-with-local-foundation-proof"
+          }
+        ]
+      },
+      "remaining_branches": [
+        "未逐帧读完整37页，也未核听全部讲话；未读画面之间的连续内容不推断为已覆盖。",
+        "球面同伦群有限性、一般同余子群问题、Serre模性猜想、Galois上同调猜想I/II、有限域阿贝尔簇容量刻画及分布充分性未展开为新深定理页。",
+        "结尾文集/quaquaversal群和人物轶事未构成新增数学分支。"
+      ],
+      "unexpanded_deep_proofs": [
+        "Serre纤维空间谱序列的构造与收敛，球面同伦群有限性。",
+        "GAGA范畴等价、解析凝聚层代数化及上同调比较；共轭簇的几何比较与Hodge分解。",
+        "非复乘椭圆曲线开像定理的数论证明。",
+        "Deligne–Serre表示的构造、唯一性和奇性。",
+        "超限直径与势论容量等价；Robinson/Fekete–Szego逆向存在；对数积分条件的充分性。"
+      ]
+    }
+  ],
+  "prerequisites": {
+    "5000": [],
+    "5001": [
+      "0A32",
+      "0A48",
+      "0A3D",
+      "4R01",
+      "4R02",
+      "00M4"
+    ],
+    "5002": [
+      "5001",
+      "0I8J"
+    ],
+    "5003": [
+      "0R06",
+      "0A32",
+      "0I8J"
+    ],
+    "5004": [
+      "5001",
+      "5002",
+      "0N0A",
+      "4R06"
+    ],
+    "5005": [
+      "5004",
+      "5002",
+      "0A3A",
+      "4R06",
+      "4R0L"
+    ],
+    "5006": [
+      "5005",
+      "0R06",
+      "4R0L"
+    ],
+    "5007": [
+      "5001",
+      "5002",
+      "0N0A"
+    ],
+    "5008": [
+      "4R06",
+      "0I8J"
+    ],
+    "5009": [
+      "5001",
+      "5007",
+      "5008"
+    ],
+    "5100": [],
+    "5101": [
+      "160B",
+      "012B",
+      "0A0L"
+    ],
+    "5102": [
+      "01B2",
+      "0B99",
+      "01B4",
+      "0F53"
+    ],
+    "5103": [
+      "00GC",
+      "012B",
+      "0112",
+      "0E80",
+      "5102",
+      "0BG1"
+    ],
+    "5104": [
+      "0C0P",
+      "0C0Q",
+      "0F0H",
+      "0F0G",
+      "5105"
+    ],
+    "5105": [
+      "0F0G",
+      "00E8",
+      "00BD",
+      "0168",
+      "01I8",
+      "00SM"
+    ],
+    "5106": [
+      "0E85",
+      "0A3G",
+      "013B",
+      "0124",
+      "0F0H",
+      "00E5"
+    ],
+    "5107": [
+      "0124",
+      "0M00",
+      "00E5",
+      "00FP",
+      "5106"
+    ],
+    "5108": [
+      "0A3A"
+    ],
+    "5109": [
+      "510C",
+      "0D04",
+      "5108",
+      "0HC0"
+    ],
+    "500A": [
+      "5009",
+      "5008",
+      "0A3A",
+      "500B"
+    ],
+    "500B": [
+      "0N0A",
+      "0N0B",
+      "0A3A",
+      "4R06",
+      "0A44"
+    ],
+    "500C": [
+      "5001",
+      "5002",
+      "4R0L"
+    ],
+    "500D": [
+      "5001",
+      "5004",
+      "4R0N",
+      "4R0L"
+    ],
+    "icm2026-nesterov": [],
+    "510A": [
+      "00Q2",
+      "4E24"
+    ],
+    "510B": [
+      "510A",
+      "0A7A"
+    ],
+    "510C": [
+      "0D04",
+      "00GF",
+      "0ALH"
+    ],
+    "icm2026-sarnak": []
+  },
+  "leading_topics": {
+    "0070": [
+      "4R00",
+      "4P00",
+      "4Q00",
+      "5000"
+    ],
+    "006F": [
+      "4R00",
+      "4Y00",
+      "5000"
+    ],
+    "006E": [
+      "4P00",
+      "4Q00",
+      "4R00",
+      "4W00",
+      "5000"
+    ],
+    "0074": [
+      "5100"
+    ]
+  },
+  "preserved_topics": {
+    "0070": [
+      "4R00",
+      "4P00",
+      "4Q00"
+    ],
+    "006F": [
+      "4R00",
+      "4Y00"
+    ],
+    "006E": [
+      "4P00",
+      "4Q00",
+      "4R00",
+      "4W00",
+      "0079",
+      "007C",
+      "003A"
+    ],
+    "0074": []
+  },
+  "cross_subject_landings": [
+    {
+      "subject": "0070",
+      "outline": "5000"
+    },
+    {
+      "subject": "006F",
+      "outline": "5000"
+    },
+    {
+      "subject": "006E",
+      "outline": "5000"
+    },
+    {
+      "subject": "0074",
+      "outline": "5100"
+    }
+  ],
+  "navigation_checks": [],
+  "report_landings": {
+    "5000": "0070",
+    "5100": "0074"
+  },
+  "review": {
+    "packet_files": [
+      "research/plenary-nesterov-packet.json",
+      "research/plenary-sarnak-packet.json"
+    ],
+    "status": "local-source-integrated",
+    "publication": "not-pushed",
+    "scope": "报告来源、数学背景、局部证明、引用定理和未展开分支分别记录。"
+  }
+}

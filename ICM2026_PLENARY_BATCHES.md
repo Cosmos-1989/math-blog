@@ -2,11 +2,13 @@
 
 核查日期：2026-10-28。仅针对根目录 math-blog。机器可读记录见 [批次 JSON](research/icm2026-plenary-batch-plan.json)。
 
+本轮重访官方讲者目录时，页面已显示归档提示；此前保存 HTML 的临时路径也已不存在。以下名录沿用 2026-10-24 已记录的逐人身份及来源核查，不作为本轮重新取得实时完整目录的声明。
+
 ## 范围与计数
 
-按[官方讲者名录](https://www.icm2026.org/event/ac193975-5d24-4628-8c30-ddb23de19a8b/speakers)及 2026-10-24 完整快照，保留 **19 场普通全会 + 3 场特别全会 = 22 场**。九篇已有一手文献支撑的专题原位保留，三批再加入八篇报告的选定分支。尚待新增或升级的 **5 项 = 4 个新专题 + Ziegler 的 2900 升级**。已有专题的深层分支和引用证明不计为全部完成。
+按此前[官方讲者名录](https://www.icm2026.org/event/ac193975-5d24-4628-8c30-ddb23de19a8b/speakers)的核查记录，保留 **19 场普通全会 + 3 场特别全会 = 22 场**。九篇已有一手文献支撑的专题原位保留，五批再加入十三项所选内容，其中十二个新专题、一个原位扩充。22 场均有专题入口。Buffa、Ziegler、Sarnak 与 Nesterov 目前只核读部分录像幻灯片及对应研究论文，仍需补全报告内容；专题入口齐备不表示报告全文与全部研究证明均已完成。
 
-**第 1–20 模块全部纳入，包括第 12–20 模块；没有内容匹配的报告时，不强制给每个模块填充。** 以下归属是编辑分类，不是官方分组。首批三个专题接入五个学科首页，第二批三个专题接入八个学科首页，第三批两个专题接入四个学科首页，均放在分组专题之前；后续批次的归属仍是规划。只按报告实际内容安排，不按作者履历归类。
+**第 1–20 模块全部纳入，包括第 12–20 模块；没有内容匹配的报告时，不强制给每个模块填充。** 以下归属是编辑分类，不是官方分组。首批三个专题接入五个学科首页，第二批三个专题接入八个学科首页，第三批两个专题接入四个学科首页，第四批三个专题共享九个入口，均放在分组专题之前。只按报告实际内容安排，不按作者履历归类。
 
 | 模块 | 既有标题与编号 |
 | --- | --- |
@@ -59,15 +61,15 @@
 | 2 / 已发布所选分支 | Dmitry Dolgopyat | `4S00` | 动力 `0069`、概率 `006C`、数论 `0063` |
 | 2 / 已发布所选分支 | Hee Oh | `4T00` | 动力 `0069`、几何 `0065`、Lie 理论 `0067` |
 | 2 / 已发布所选分支 | Jeremy Quastel | `4U00` | 概率 `006C`、数学物理 `006B`、PDE `006A`、建模 `0072` |
-| 3 / 本地已整理所选分支 | Robert Morris | `4V00` | 组合 `006D` |
-| 3 / 本地已整理所选分支 | Alex Kontorovich（特别） | `4W00` | 计算 `006E`、逻辑 `0061`、教育传播 `0073` |
-| 4 / 待核读原始材料 | Felix Otto | 待分配 | PDE `006A`、几何 `0065`、概率 `006C`、建模 `0072` |
-| 4 / 待核读原始材料 | Annalisa Buffa | 待分配 | 数值 `006F`、PDE `006A`、建模 `0072` |
-| 4 / 待核读原始材料 | Tamar Ziegler | **原位升级 `2900`** | 数论 `0063`、分析 `0068`、动力 `0069`、组合 `006D` |
-| 5 / 待核读原始材料 | Peter Sarnak（特别） | 待分配 | 数学史 `0074`；具体数学分支待核读 |
-| 5 / 待核读原始材料 | Yurii Nesterov（特别） | 待分配 | 优化 `0070`；数值/计算入口待核读 |
+| 3 / 已发布所选分支 | Robert Morris | `4V00` | 组合 `006D` |
+| 3 / 已发布所选分支 | Alex Kontorovich（特别） | `4W00` | 计算 `006E`、逻辑 `0061`、教育传播 `0073` |
+| 4 / 所选分支本地核验通过 | Felix Otto | `4X00` | PDE `006A`、几何 `0065`、概率 `006C`、建模 `0072` |
+| 4 / 部分分支本地核验通过 | Annalisa Buffa | `4Y00` | 数值 `006F`、PDE `006A` |
+| 4 / 部分分支本地核验通过 | Tamar Ziegler | **原位扩充 `2900`** | 数论 `0063`、分析 `0068`、动力 `0069`、组合 `006D` |
+| 5 / 部分分支本地核验通过 | Peter Sarnak（特别） | `5100` | 数学史 `0074` |
+| 5 / 部分分支本地核验通过 | Yurii Nesterov（特别） | `5000` | 优化 `0070`、数值 `006F`、计算 `006E` |
 
-Tardos 的动态状态、跨轮影响和排队模型分支已写入，支持建模入口；Buffa 将来同样须有实质建模内容。Kontorovich 的教育传播入口来自原章 §10 Teaching、§11 Understanding and communication，不因作者的数论背景归为数论。Hee Oh 须新设 `icm2026-hee-oh` 引用，现有 `icm2026-oh` 属于 **Sung-Jin Oh**，不能混用。
+Tardos 的动态状态、跨轮影响和排队模型分支已写入，支持建模入口；Buffa 这次只接入数值分析与 PDE，不加入尚无对应内容的建模入口。Kontorovich 的教育传播入口来自原章 §10 Teaching、§11 Understanding and communication，不因作者的数论背景归为数论。Hee Oh 使用 `icm2026-hee-oh` 引用，现有 `icm2026-oh` 属于 **Sung-Jin Oh**。
 
 首批题名与署名按出版版：[Peter L. Bartlett](https://epubs.siam.org/doi/10.1137/25M1807617)、[Éva Tardos](https://epubs.siam.org/doi/10.1137/25M1808064)、[Stephen J. Wright](https://epubs.siam.org/doi/10.1137/25M1806831)。名录中的 Peter Bartlett、Stephen Wright 仍原样保留为报告人姓名。
 
@@ -79,15 +81,31 @@ Tardos 的动态状态、跨轮影响和排队模型分支已写入，支持建�
 
 | 报告人 | 一手来源中的准确题名 | 身份证据与仍待工作 |
 | --- | --- | --- |
-| Felix Otto | Geometric Concepts in Partial Differential Equations | [MPI MiS 题名与摘要](https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress)和[官方录像](https://www.youtube.com/watch?v=K8-O-FdUzGs)一致；待逐段核读 |
-| Annalisa Buffa | On New Challenges in Numerical Approximation of Partial Differential Equations | [官方录像](https://www.youtube.com/watch?v=D2_RHzeWcgk)说明直接给出题名；待逐段核读 |
-| Tamar Ziegler | Structure of Sets with an Unexpected Number of Arithmetic Pattern | [作者目录](https://math.huji.ac.il/~tamarz/video.html)与[官方录像](https://www.youtube.com/watch?v=czHiX0pYTDg)均为单数 Pattern；旧清单 Patterns 留作别名，2900 仍是背景页 |
-| Peter Sarnak | Maestro Jean Pierre Serre | [官方录像](https://www.youtube.com/watch?v=NK7R4Nnz2mg)说明确认是 Serre 工作回顾；不是依据 Sarnak 履历猜测的专题 |
-| Yurii Nesterov | Towards Higher-Order Optimization | [官方 Gauss Prize 录像](https://www.youtube.com/watch?v=m86Emt6GO8I)说明给出题名；待逐段核读 |
+| Felix Otto | Geometric Concepts in Partial Differential Equations | [MPI MiS](https://www.mis.mpg.de/news/icm-2026-mpi-mis-at-the-worlds-leading-mathematics-congress)核实身份；[官方录像](https://www.youtube.com/watch?v=K8-O-FdUzGs)自动英语字幕逐段核读至 55:30，数学细节另据 JKO、LOTT 与作者短文；未核验全部音画 |
+| Annalisa Buffa | On New Challenges in Numerical Approximation of Partial Differential Equations | [官方录像](https://www.youtube.com/watch?v=D2_RHzeWcgk)抽样幻灯片与 Hinz–Buffa、Smears–Süli 原文支撑已写分支；未读取完整字幕或连续全程 |
+| Tamar Ziegler | Structure of Sets with an Unexpected Number of Arithmetic Pattern | [作者目录](https://math.huji.ac.il/~tamarz/video.html)与[录像](https://www.youtube.com/watch?v=czHiX0pYTDg)说明使用单数 Pattern；原幻灯片复数作别名。抽点原片及 GTZ、MRTTZ 原文用于扩充 2900，尚未连续核读全程 |
+| Peter Sarnak | Maestro Jean Pierre Serre | [官方录像](https://www.youtube.com/watch?v=NK7R4Nnz2mg)原幻灯片选段及 Serre、Deligne–Serre 原文支持上同调比较、开像、权一表示与共轭根分布；未连续核读整场 |
+| Yurii Nesterov | Towards Higher-Order Optimization | [官方 Gauss Prize 录像](https://www.youtube.com/watch?v=m86Emt6GO8I)原幻灯片选段及作者 2021 年正式论文支持凸张量模型与实现；未连续核读整场 |
 
 五条录像均通过 YouTube oEmbed 核实为 **Simons Foundation** 频道，并核对公开视频说明；没有以自动摘要或自动章节代替原始内容。Sarnak 的暂定 ID `NK7r4nnZ2Mg` 返回 Not Found，核实有效 ID 是大小写不同的 **`NK7R4Nnz2mg`**。Ziegler 的 [2014 年背景文献](https://arxiv.org/abs/1404.0775v1)不能冒充 2026 年报告。
 
-[IMU 会后新闻](https://www.mathunion.org/imu-news/archive/2026/imu-news-138-july-2026)将 plenary 与 prize lectures 分开统计；本计划固定采用 speakers 名录类别，Nesterov 的特别全会与 Gauss Prize 录像只算同一项。22 人身份及本计划所声明来源类型的题名均已明确；五项录像的逐段内容、可能存在的作者书面稿，以及尚未核定的跨学科分支仍待处理。17 篇出版章与现场口头题名是否逐字一致，未作额外断言。
+[IMU 会后新闻](https://www.mathunion.org/imu-news/archive/2026/imu-news-138-july-2026)将 plenary 与 prize lectures 分开统计；本计划固定采用 speakers 名录类别，Nesterov 的特别全会与 Gauss Prize 录像只算同一项。22 人身份及本计划所声明来源类型的题名均已明确。四场仅核读选段的录像与各专题未展开分支仍待处理。17 篇出版章与现场口头题名是否逐字一致，未作额外断言。
+
+## 第四批实施范围
+
+Otto 新增 25 个原子条目，连接输运度量、两相混合、噪声导数和随机局部模型；Buffa 新增 18 个原子条目，连接逆调和参数化、Cordes 条件、强解适定性和离散逼近；Ziegler 沿用 `2900` 及三个旧条目，增加 13 个原子条目，连接四项配置、幂零序列与 Liouville 短区间相关。加上两个新综述和两个引用页，本批新增 60 页，另扩充 5 个已有页面。
+
+原始资料、实际阅读位置、逐页前置依赖和证明范围见[第四批清单](research/icm2026-plenary-geometric-approximation.json)。Buffa 和 Ziegler 的整体报告覆盖仍为初步；引用的研究定理与本站推导分开标明。本批尚未推送。
+
+49 组源码与数学检查、6 组生成页面检查、148 项桌面和手机页面检查通过。全站生成 7,632 个静态知识页面，另保留旧路径兼容入口。人工查看三篇综述及关键公式截图；独立复核后修正基点变换的基空间与对偶作用方向，以及多项式模型的有限截断范围。原有 7,031 项前置记录中，7,029 项未变，`2901`、`2903` 按新增正文链接更新；已有学科导航顺序保留。详见[验证记录](research/icm2026-plenary-geometric-approximation-verification.json)与[数学复核记录](research/plenary-geometric-approximation-review.json)。
+
+## 第五批实施范围
+
+Nesterov 专题 `5000` 以凸高阶 Taylor 模型为主线，分别建立余项估计、凸化、基本收敛率、三阶曲率约束、Bregman 内层收敛、四次子问题约化与差分误差。复用 Wright 专题的基础与非凸三次正则化，不重复建页。Sarnak 专题 `5100` 组织 Serre 数学中的上同调比较、预有限像与代数整数分布，分别给出维数、指数、迹、判别式及对数积分的局部证明。
+
+两篇共新增 25 个原子条目、2 篇叙事综述及 2 个来源页。四个学科首页共享这些专题。新增的代数整数条目给出首一最小多项式整性的证明，容量论中的论证可以直接引用该基础结果。原始来源、实际阅读范围和未展开分支见[第五批清单](research/icm2026-plenary-final-reports.json)。GAGA、Serre 开像、Deligne–Serre 与加速张量法等研究定理保留精确引用，并不计为本站已重写其完整证明。本批与第四批合并发布；推送和线上验证另记。
+
+两批合并验收通过：50 组源码与数学检查、6 组生成页面检查、214 项桌面和手机页面检查。全站生成 7,661 个静态知识页面。人工查看新增综述的桌面与手机截图；独立复核修正两处前置错链、权一模形式定理的尖点假设及两处文献定位，开放问题为零。此前的前置记录和导航相对顺序保留。合并新增 89 页，其中 81 页是原子条目，另更新 5 页。详见[本地验证记录](research/icm2026-plenary-final-verification.json)和[独立数学复核](research/plenary-final-independent-review.json)。这些记录不代替 GitHub Pages 的部署及线上核验。
 
 ## 每批完成条件
 
@@ -115,4 +133,4 @@ Tardos 的动态状态、跨轮影响和排队模型分支已写入，支持建�
 
 Ramsey 专题展开 Shearer 界、条件抽样、随机叠加、图容器计数和混合矩平方和证明；研究突破的陈述保留来源及其未展开证明的界限。数学形式化专题区分概率模型、证明核验、语义保真与作者观点，补入零的逆元、参数假设、极限和证明重用的具体推导。两篇的引用来源分别为 [Morris 正式报告](https://epubs.siam.org/doi/full/10.1137/25M1833369)与 [Kontorovich 特别全会报告](https://epubs.siam.org/doi/full/10.1137/25M1806764)。
 
-第三批本地验收通过：48 组源码与数学测试、6 组生成页面检查、128 项桌面和手机页面检查。人工查看截图后修复两处百分号显示，加入可见文本回归；原有 6,975 项前置依赖判断保留。详见[验证记录](research/icm2026-plenary-ramsey-formalization-verification.json)。本批暂留本地，尚未提交或推送。
+第三批本地验收通过：48 组源码与数学测试、6 组生成页面检查、128 项桌面和手机页面检查。人工查看截图后修复两处百分号显示，加入可见文本回归；原有 6,975 项前置依赖判断保留。详见[验证记录](research/icm2026-plenary-ramsey-formalization-verification.json)。提交 `7432503ff85d7f6427f817c417e5cd7cf76cae4e` 的[发布工作流](https://github.com/Cosmos-1989/math-blog/actions/runs/40647795083)已成功。65 个公开页面、6 条兼容路径及 5 个资源与该提交的干净构建一致，128 项线上桌面和手机检查通过；已人工查看两篇综述的代表截图。实际部署和线上核验见[发布记录](research/icm2026-plenary-ramsey-formalization-release.json)。

@@ -1,0 +1,22 @@
+\title{三阶正则化模型的相对曲率界}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Nesterov](icm2026-nesterov)，背景论文 pp.177–178，Lemma 4；官方录像 22:52、25:05}
+
+\p{设 #{f:\mathbb R^n\to\mathbb R} 为凸 #{C^3} 函数，#{D^3f} 为 #{L_3} Lipschitz，且 #{L_3>0}。固定 #{x}，记 #{g=\nabla f(x)}、#{A=\nabla^2f(x)}，取 #{\tau>1}。省去常数 #{f(x)} 后定义模型及参考函数}
+##{\begin{aligned}
+F(h)&=\langle g,h\rangle+\tfrac 12h^{\mathsf T}Ah+\tfrac 16D^3f(x)[h]^3+\frac{\tau^2L_3}{8}\|h\|^4,\\
+\rho(h)&=\frac{\tau -1}{2\tau}h^{\mathsf T}Ah+\frac{\tau(\tau -1)L_3}{8}\|h\|^4,\qquad \kappa=\frac{\tau+1}{\tau -1}.
+\end{aligned}}
+\p{这里使用[导数张量](5001)记号。两者的 Hessian 满足}
+##{\nabla^2\rho(h)\preceq\nabla^2F(h)\preceq\kappa\nabla^2\rho(h).}
+\p{等价的积分结论是 #{D_\rho(v,u)\le D_F(v,u)\le\kappa D_\rho(v,u)}，其中 #{D} 是 [Bregman 散度](5008)。比较常数与维数及 #{A} 的特征值比无关。}
+
+\p{\strong{证明。}记 #{d(h)=\|h\|^4/4}，则 #{Q(h)=\nabla^2d(h)=\|h\|^2I+2hh^{\mathsf T}\succeq\|h\|^2I}。以 #{t=\tau} 代入[三阶导数的矩阵界](5007)，得到}
+##{\begin{aligned}
+\nabla^2F(h)&=A+B_h+\tfrac{\tau^2L_3}{2}Q(h)\\
+&\succeq(1-\tau^{-1})A+\tfrac{\tau(\tau -1)L_3}{2}Q(h)=\nabla^2\rho(h),\\
+\nabla^2F(h)&\preceq(1+\tau^{-1})A+\tfrac{\tau(\tau+1)L_3}{2}Q(h)=\kappa\nabla^2\rho(h).
+\end{aligned}}
+\p{下界中用 #{-\|h\|^2I\succeq -Q(h)}，上界中用相反方向的正号比较。沿连接 #{u,v} 的线段积分两次，利用散度的积分表示，得到最后的结论。#{A} 可以奇异；相对比较仍成立，不需要假设原函数强凸。}

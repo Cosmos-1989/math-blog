@@ -1,0 +1,14 @@
+\title{LOTT 模型构造的各向异性谱隙假设}
+\date{2026-10-28}
+\taxon{Definition}
+\author{author}
+\meta{source}{[LOTT](icm2026-otto)，Assumption 2.1，pp.6–8，式 (2.1)–(2.7)}
+
+\p{在时空 #{x=(x_1,x_2)\in\mathbb R^2} 中，#{x_1} 是空间、#{x_2} 是时间。固定无理数 #{\alpha\in(1/4,1/2)}，定义抛物距离 #{d_{\mathrm p}(x,y)=|x_1-y_1|+|x_2-y_2|^{1/2}}。令 #{A=\partial_1^4-\partial_2^2}，以[Fourier 变换](0H4G)定义 #{A^\theta} 的乘子为 #{(k_1^4+k_2^2)^\theta}。相应的扰动范数和对偶范数为}
+##{\|v\|_H=\|A^{(\alpha -1 /2)/4}v\|_{L^2},\qquad
+\|q\|_*=\|A^{(1/2-\alpha)/4}q\|_{L^2}.}
+\p{这些是定义域上有限的齐次范数，#{H} 由该范数完备化理解；对偶关系来自[Plancherel 恒等式](0W01)。设 #{\xi} 是随机缓增分布，即每个样本为[Schwartz 空间](0H4F)上的连续线性泛函。要求 #{\mathbb E\langle\xi,\zeta\rangle=0}，其分布律在时空平移及空间反射 #{x_1\mapsto -x_1} 下不变。}
+\p{对柱状泛函 #{F[\xi]=f(\langle\xi,\zeta_1\rangle,\ldots,\langle\xi,\zeta_N\rangle)}，其中 #{\zeta_i} 为 Schwartz 函数、#{f} 光滑，按[噪声方向导数](4X0F)定义 #{D_\xi F=\sum_i\partial_if\,\zeta_i}。要求所有可积柱状泛函满足归一化[谱隙不等式](4X0G)}
+##{\mathbb E|F-\mathbb EF|^2\le\mathbb E\|D_\xi F\|_*^2.}
+\p{此外要求导数算子在这两个平方可积范数下可闭：若柱状 #{F_n\to 0} 于 #{L^2(\Omega)}，且 #{D_\xi F_n\to G} 于 #{L^2(\Omega;H^*)}，则 #{G=0}。这确保对泛函作极限后，导数不依赖近似序列。}
+\p{白噪声的形式指数是 #{\alpha=1/2}，处于这里排除的端点。LOTT 指出，适当截去低频后，白噪声可满足某个 #{\alpha<1/2} 的上述假设；未经低频处理的整空间白噪声不能直接用作此处全尺度假设的例子。}

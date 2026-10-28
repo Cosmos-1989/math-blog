@@ -49,7 +49,8 @@ test('new plenaries follow existing plenaries and preserve every former subject 
   }
   for (const [slug, subject] of [['lie','0067'], ['dynamics','0069'], ['pde','006A'], ['mathematical-physics','006B']]) {
     const coverage = json(`research/icm2026-${slug}-section-coverage.json`);
-    assert.deepEqual(coverage.editorial_leading_topics.map(row => row.outline), record.leading_topics[subject]);
+    const previousLeading = record.leading_topics[subject];
+    assert.deepEqual(coverage.editorial_leading_topics.map(row => row.outline).slice(0, previousLeading.length), previousLeading);
     for (const row of coverage.editorial_leading_topics.filter(row => ['4S00','4T00','4U00'].includes(row.outline)))
       assert.equal(row.counts_as_section_report, false);
   }

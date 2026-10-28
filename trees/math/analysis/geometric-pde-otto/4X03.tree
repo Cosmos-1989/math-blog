@@ -1,0 +1,12 @@
+\title{密度推前产生连续性方程}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Otto](icm2026-otto)，报告 04:38–09:00、13:49–17:34；光滑输运计算}
+
+\p{在平坦环面 #{\mathbb T^d=\mathbb R^d/\mathbb Z^d} 上，设 #{v_t} 是光滑周期向量场，#{\Phi_t} 是其[流映射](4501)，满足 #{\partial_t\Phi_t(x)=v_t(\Phi_t(x))}、#{\Phi_0(x)=x}。给定光滑初始密度 #{\rho_0}，以[推前测度](4X02)定义 #{\rho_t\,dx=(\Phi_t)_\#(\rho_0\,dx)}。则}
+##{\partial_t\rho_t+\operatorname{div}(\rho_t v_t)=0.}
+\p{\strong{证明。}对任意光滑周期测试函数 #{f}，推前的定义给出 #{\int f\rho_t=\int f(\Phi_t(x))\rho_0(x)\,dx}。微分并作变量替换，得}
+##{\frac{d}{dt}\int f\rho_t=\int\nabla f\cdot v_t\,\rho_t=-\int f\,\operatorname{div}(\rho_t v_t).}
+\p{最后一步是周期分部积分；[散度](4301)按坐标取 #{\operatorname{div}w=\sum_i\partial_iw_i}。光滑性把测试函数意义下的等式提升为逐点等式。取 #{f=1} 即得总质量守恒。}
+\p{若 #{\operatorname{div}v=0}，[Jacobian 演化公式](4502)说明 #{\det D\Phi_t=1}，所以 #{\rho_t(\Phi_t(x))=\rho_0(x)}。一般可压缩速度则满足 #{\rho_t(\Phi_t(x))\det D\Phi_t(x)=\rho_0(x)}；密度变化正是局部体积变化的补偿。}

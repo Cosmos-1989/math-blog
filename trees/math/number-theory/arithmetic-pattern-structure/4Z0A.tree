@@ -1,0 +1,15 @@
+\title{移位相关决定符号块的频率}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Matomäki 等](icm2026-ziegler)，§1.2.1 的 Chowla 与符号块关系；有限展开推导}
+
+\p{设 #{u:\mathbb N\to\{-1,1\}}，固定 #{k\geq 1} 和 #{\varepsilon=(\varepsilon_1,\ldots,\varepsilon_k)\in\{-1,1\}^k}。令 #{I_\varepsilon(n)} 表示 #{(u(n+1),\ldots,u(n+k))=\varepsilon} 的指标。对每个 #{n\geq 1}，有}
+##{I_\varepsilon(n)=2^{-k}\prod_{j=1}^k(1+\varepsilon_ju(n+j))
+=2^{-k}\sum_{J\subseteq\{1,\ldots,k\}}
+\left(\prod_{j\in J}\varepsilon_j\right)\prod_{j\in J}u(n+j).}
+\p{第一式成立，因为每个因子 #{(1+\varepsilon_ju(n+j))/2} 恰是第 #{j} 个符号匹配的指标；第二式是有限乘积的展开，空乘积取一。}
+\p{从[两种平均](4Z08)中固定选择 #{M_N=A_N} 或 #{M_N=L_N}。若对每个非空 #{J\subseteq\{1,\ldots,k\}} 都有 #{M_N(\prod_{j\in J}u(n+j))\to 0}，则将上述恒等式取平均，有限项逐项取极限，得}
+##{M_N(I_\varepsilon)\longrightarrow 2^{-k}\qquad
+(\varepsilon\in\{-1,1\}^k).}
+\p{因而普通相关的假设给出普通密度 #{2^{-k}}，对数相关的假设给出对数密度 #{2^{-k}}。任一结论都保证每个块出现无穷多次：有限多个起点对两种平均的贡献都趋零。于是[符号块复杂度](4Z07)达到 #{S_u(k)=2^k}。对数密度结论本身不赋予普通密度的存在性。}

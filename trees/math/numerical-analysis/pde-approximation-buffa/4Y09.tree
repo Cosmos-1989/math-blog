@@ -1,0 +1,14 @@
+\title{Miranda–Talenti 估计的平面边界恒等式}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[Smears–Süli](icm2026-buffa)，p. 2091，Theorem 2 的光滑平面情形}
+
+\p{设 #{\Omega\subset\mathbb R^2} 是边界 #{C^2} 的有界区域，#{u\in C^3(\overline\Omega)} 且 #{u=0} 于边界。记 #{\Delta u=\partial_{11}u+\partial_{22}u}，#{n} 为外单位法向，#{t} 为单位切向；曲率约定为弧长参数曲线 #{c} 满足 #{c''=-\kappa n}。以 [Hessian](4R02) 的 Frobenius 范数计，有}
+##{\int_\Omega(\Delta u)^2-\int_\Omega|D^2u|_F^2=\int_{\partial\Omega}\kappa(\partial_nu)^2\,ds.}
+\p{\strong{证明。}令 #{Z=(\Delta u)\nabla u-D^2u\nabla u}。逐项乘积求导时，三阶导数项相消，因而}
+##{\operatorname{div}Z=(\Delta u)^2-|D^2u|_F^2.}
+\p{由边界恒等式 #{u(c(s))=0}，一次求导给出 #{\nabla u\cdot t=0}，所以 #{\nabla u=(\partial_nu)n}。二次求导并使用 [链式法则](0A34) 得 #{D^2u(t,t)+\nabla u\cdot c''=0}，即 #{D^2u(t,t)=\kappa\partial_nu}。因此}
+##{Z\cdot n=(\partial_nu)(\Delta u-D^2u(n,n))=(\partial_nu)D^2u(t,t)=\kappa(\partial_nu)^2.}
+\p{应用 [Stokes 定理](0BAC) 的平面散度形式 #{\int_\Omega\operatorname{div}Z=\int_{\partial\Omega}Z\cdot n}，便得恒等式。}
+\p{若 #{\Omega} 凸，则此曲率约定下 #{\kappa\geq 0}，从而 #{\|D^2u\|_2\leq\|\Delta u\|_2}。将结论推广到非光滑凸域和 #{H^2\cap H^1_0} 函数，需要另一个 [正则性定理](4Y0A)；边界曲率计算本身只覆盖上述光滑情形。}

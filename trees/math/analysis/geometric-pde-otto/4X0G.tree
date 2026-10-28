@@ -1,0 +1,14 @@
+\title{高斯谱隙由噪声导数控制方差}
+\date{2026-10-28}
+\taxon{Theorem}
+\author{author}
+\meta{source}{[LOTT](icm2026-otto)，§2.1 的高斯背景；有限维半群证明}
+
+\p{设 #{Z\in\mathbb R^N} 的坐标为[独立](00L3)[标准正态](0N0R)变量，#{f\in C_c^\infty(\mathbb R^N)}。记 #{\gamma_N} 为其分布，则}
+##{\operatorname{Var}(f(Z))\le\mathbb E|\nabla f(Z)|^2.}
+\p{这里[方差](00L2)为 #{\mathbb E(f-\mathbb Ef)^2}。证明采用显式算子 #{P_tf(x)=\mathbb E f(e^{-t}x+\sqrt{1-e^{-2t}}\,Z)}。正态变量的线性组合仍为正态，故 #{\int P_tg\,d\gamma_N=\int g\,d\gamma_N}，且 #{\nabla P_tf=e^{-t}P_t\nabla f}。}
+\p{\strong{生成元计算。}令 #{r=e^{-t}}、#{s=\sqrt{1-r^2}}。对 #{t>0} 求导，并对标准高斯密度分部积分，#{\mathbb E[Z_i\partial_if(rx+sZ)]=s\mathbb E[\partial_i^2f(rx+sZ)]}，得到 #{\partial_tP_tf=(\Delta -x\cdot\nabla)P_tf}。同一分部积分恒等式给出 #{\int g(\Delta -x\cdot\nabla)g\,d\gamma_N=-\int|\nabla g|^2\,d\gamma_N}。}
+\p{因 #{P_tf\to\mathbb Ef(Z)} 当 #{t\to\infty}，且 #{f} 有界，微分再积分得到}
+##{\operatorname{Var}(f(Z))=2\int_0^\infty\int|\nabla P_tf|^2\,d\gamma_N\,dt
+\le 2\int_0^\infty e^{-2t}\,dt\int|\nabla f|^2\,d\gamma_N.}
+\p{不等式使用 #{|P_t\nabla f|^2\le P_t|\nabla f|^2}，这是 Cauchy–Schwarz 不等式；最后时间积分等于 #{1}。对[柱状泛函](4X0F)，在其有限维指标空间选正交基，同样得到 #{\operatorname{Var}F\le\mathbb E\|DF\|_H^2}，先对上述光滑紧支柱状函数成立。推广到导数算子的闭包需相应可闭性。}
